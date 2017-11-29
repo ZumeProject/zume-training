@@ -1,0 +1,139 @@
+/******************************************************************
+
+Stylesheet: Login Stylesheet
+
+This stylesheet is loaded is only on the login page. This way you can style
+the login page. It won't affect any other page, admin or front-end.
+
+Make sure functions/admin.php is activated in your functions.php file.
+
+This stylesheet is turned off by default.
+
+For more info, check out the codex:
+http://codex.wordpress.org/Creating_Admin_Themes
+
+******************************************************************/
+@import "settings";
+
+
+body.login {
+	background: none;
+}
+
+
+#login {
+  width: 550px;
+  max-width: 90%;
+  form {
+    border: 1px solid $primary-color;
+  }
+}
+
+p {
+
+  #nav {
+    padding: 0 !important;
+  }
+}
+
+
+// Login Button Style
+#wp-submit {
+
+  background: $white;
+  border: 0;
+  color: $primary-color;
+  font-size: medium;
+  cursor: pointer;
+  outline: $primary-color solid 1px;
+  padding: $global-button-padding;
+  text-align: center;
+  text-decoration: none;
+  -webkit-border-radius: $global-radius;
+  -moz-border-radius: $global-radius;
+  border-radius: $global-radius;
+  margin: 2px;
+  height:inherit;
+  text-shadow: none;
+
+  &:hover {
+    background: $primary-color;
+    border: 0;
+    color: $white;
+    font-size: medium;
+    cursor: pointer;
+    outline: $primary-color solid 1px;
+    padding: $global-button-padding;
+    text-align: center;
+    text-decoration: none;
+    -webkit-border-radius: $global-radius;
+    -moz-border-radius: $global-radius;
+    border-radius: $global-radius;
+    margin: 2px;
+    height:inherit;
+  }
+
+
+}
+
+
+// Change the login logo
+.login  {
+  h1 a {
+    background: url(../images/zume-logo-white.png) no-repeat top center;
+    width: 326px;
+    height: 67px;
+    text-indent: -9999px;
+    overflow: hidden;
+    padding-bottom: 15px;
+    display: block;
+  }
+
+  #nav {
+
+    a {
+      background: $white;
+      border: 0;
+      color: $primary-color;
+      font-size: medium;
+      cursor: pointer;
+      outline: $primary-color solid 1px;
+      padding: 5px;
+      text-align: center;
+      text-decoration: none;
+      -webkit-border-radius: $global-radius;
+      -moz-border-radius: $global-radius;
+      border-radius: $global-radius;
+      margin: 2px;
+
+      &:hover {
+        background: $primary-color;
+        border: 0;
+        color: $white;
+        font-size: medium;
+        cursor: pointer;
+        outline: $primary-color solid 1px;
+        padding: 5px;
+        text-align: center;
+        text-decoration: none;
+        -webkit-border-radius: $global-radius;
+        -moz-border-radius: $global-radius;
+        border-radius: $global-radius;
+        margin: 2px;
+      }
+    }
+
+    @media only screen and (min-width: 640px) {
+      a {
+        padding: $global-button-padding !important;
+        &:hover {
+          padding: $global-button-padding !important;
+        }
+      }
+
+    }
+
+  }
+}
+
+

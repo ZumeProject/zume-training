@@ -1,0 +1,55 @@
+.max-width-1024-wrapper {
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+.laptop {
+    text-align: center;
+    position: relative;
+    margin: 0 auto;
+    background-image: url('../images/zume-laptop-1024x606.jpg');
+    background-size: 100%;
+
+    // This matches the laptop aspect ratio, while being responsive
+    width: 100%;
+    padding-bottom: 59%;
+}
+
+.laptop__screen {
+    /* background-color: #22336B; */
+    background-color: black;
+    position: absolute;
+    // These values match the laptop screen bezel in the image of the parent
+    top: percentage(56 / 606);
+    bottom: percentage(56 / 606);
+    left: percentage(135 / 1024);
+    right: percentage(135 / 1024);
+}
+
+.laptop__video-wrapper {
+    // This matches the video aspect ratio, while being responsive
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+}
+
+.laptop__iframe,
+.fluid-width-video-wrapper iframe.laptop__iframe
+{
+    // The little top value centers the video vertically in the laptop screen
+    position: absolute;
+    top: 8%;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.front-page-header {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 32px;
+    font-weight: 600;
+    @media only screen and (max-width: 1199px) {
+        font-size: 20px;
+    }
+}

@@ -1,0 +1,15 @@
+language: node_js
+dist: trusty # Required to get a more up-to-date g++ for node-sass
+node_js:
+  - "node" # Always use the latest node version
+before_script:
+  - npm install -g gulp-cli
+cache:
+  directories:
+    - "node_modules"
+script:
+  - gulp
+  - git diff --exit-code assets/
+  # If the previous command returns a non-zero exit code, that means gulp has
+  # modified some files in version control. This shouldn't happen, developers
+  # should remember to run gulp before committing.
