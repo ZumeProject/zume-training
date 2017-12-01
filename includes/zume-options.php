@@ -16,7 +16,7 @@ function zume_plugin_admin_menu() {
 function zume_options_page() {
     ?>
     <div class="wrap">
-        <h1><?php _e("Zúme Project Plugin"); ?></h1>
+        <h1><?php _e("Zúme Project"); ?></h1>
         <form method="post" action="options.php">
             <?php
             settings_fields(SECTION_ID);

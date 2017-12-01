@@ -2,7 +2,7 @@
 /*
 Template Name: Full Width Home
 */
-if( is_user_logged_in() ) { wp_redirect('/dashboard'); }
+//if( is_user_logged_in() ) { wp_redirect('/dashboard'); }
 ?>
 <?php get_header(); ?>
 
