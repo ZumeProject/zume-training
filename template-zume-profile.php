@@ -10,15 +10,18 @@ Template Name: Full Width (No Sidebar)
 
         <div id="inner-content" class="row">
 
-            <main id="main" class="large-12 medium-12 columns" role="main">
+            <div id="main" class="large-12 medium-12 columns" role="main">
 
-                <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+                <?php
+                /* Profile Page */
 
-                    <?php get_template_part( 'parts/loop', 'page' ); ?>
 
-                <?php endwhile; endif; ?>
+                echo 'Current user id ' . get_current_user_id();
 
-            </main> <!-- end #main -->
+
+                ?>
+
+            </div> <!-- end #main -->
 
         </div> <!-- end #inner-content -->
 

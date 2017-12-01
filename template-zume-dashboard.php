@@ -11,11 +11,19 @@ get_header();
 
     <div id="inner-content" class="row">
 
-        <main id="main" class="large-12 medium-12 columns" role="main">
+        <div id="main" class="large-12 medium-12 columns" role="main">
 
-            <?php echo 'Current User ID is: ' . get_current_user_id(); ?>
+	        <?php
+            /* Load Dashboard */
 
-        </main> <!-- end #main -->
+
+            echo 'Current User ID is: ' . get_current_user_id();
+
+
+
+            ?>
+
+        </div> <!-- end #main -->
 
     </div> <!-- end #inner-content -->
 
