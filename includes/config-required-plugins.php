@@ -48,15 +48,6 @@ function dt_register_required_plugins() {
             'is_callable'       => 'Psalm_119',
         ),
         array(
-            'name'              => 'Buddy Press',
-            'slug'              => 'buddypress',
-            'required'          => true,
-            'version'            => '2.9.2',
-            'force_activation'  => true,
-            'force_deactivation' => false,
-            'is_callable'       => 'buddypress',
-        ),
-        array(
             'name' => 'Host Header Injection Fix',
             'slug' => 'host-header-injection-fix',
             'version' => '1.1',
@@ -98,13 +89,6 @@ function dt_register_required_plugins() {
             'version' => '1.13.12',
             'required' => false,
         ),
-        array(
-            'name' => 'Peter\'s Login Redirect',
-            'slug' => 'peters-login-redirect',
-            'version' => '2.9.1',
-            'required' => false,
-        ),
-
     );
 
     /*
