@@ -1,7 +1,7 @@
 <?php
 
 if ( ! function_exists( 'post_exists' ) ) {
-    require_once(ABSPATH . 'wp-admin/includes/post.php');
+    require_once( ABSPATH . 'wp-admin/includes/post.php' );
 }
 /**
  * New Email Template to copy
@@ -24,7 +24,7 @@ function email(){
       'post_content'  => $email_html,
       'post_excerpt'  => $email_content,
       'post_status'   => 'publish',
-      'post_type' => bp_get_email_post_type() // this is the post type for emails
+      'post_type' => bp_get_email_post_type() // this is the post type for email
     );
 
     // Insert the email post into the database
@@ -75,7 +75,7 @@ Fantastic! Your Zúme Training Group, {{group.name}}, now has at least four peop
       'post_content'  => $email_html,
       'post_excerpt'  => $email_content,
       'post_status'   => 'publish',
-      'post_type' => bp_get_email_post_type() // this is the post type for emails
+      'post_type' => bp_get_email_post_type() // this is the post type for email
     );
 
     // Insert the email post into the database
@@ -127,7 +127,7 @@ Zúme. Multiplying disciples. It\'s who we are. It\'s what we do.', 'zume_projec
 		'post_content'  => $email_html,
 		'post_excerpt'  => $email_content,
 		'post_status'   => 'publish',
-		'post_type' => bp_get_email_post_type() // this is the post type for emails
+		'post_type' => bp_get_email_post_type() // this is the post type for email
 	);
 
 	// Insert the email post into the database
@@ -184,7 +184,7 @@ Return to {{{site.url}}} to:
 		'post_content'  => $post_content,
 		'post_excerpt'  => $post_excerpt,
 		'post_status'   => 'publish',
-		'post_type' => bp_get_email_post_type() // this is the post type for emails
+		'post_type' => bp_get_email_post_type() // this is the post type for email
 	);
 
 	// Insert the email post into the database
@@ -253,7 +253,7 @@ Join the movement of ordinary people who God could use to change the world.
 		'post_content'  => $post_content,  // HTML email content.
 		'post_excerpt'  => $post_exerpt,
 		'post_status'   => 'publish',
-		'post_type' => bp_get_email_post_type() // this is the post type for emails
+		'post_type' => bp_get_email_post_type() // this is the post type for email
 	);
 
 	// Insert the email post into the database

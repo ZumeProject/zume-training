@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Disciple Tools Admin Menus
+ * Zume Overview
  *
  * @class Disciple_Tools_Admin_Menus
  * @version	0.1
