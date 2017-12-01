@@ -36,7 +36,7 @@ get_header();
                         $group_id = '';
                         $next_session = '';
                         $session = '';
-                        Zume_Overview::instance()->zume_sessions_overview($group_id, $next_session, $session);
+                        Zume_Overview::instance()->zume_sessions_overview($session);
 
 
 

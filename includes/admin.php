@@ -59,11 +59,3 @@ add_action('admin_menu', 'disable_default_dashboard_widgets');
 // adding any custom widgets
 add_action('wp_dashboard_setup', 'joints_custom_dashboard_widgets');
 
-/************* CUSTOMIZE ADMIN *******************/
-// Custom Backend Footer
-function joints_custom_admin_footer() {
-	_e('<span id="footer-thankyou">Developed by <a href="https://chasm.solutions" target="_blank">Chasm.Solutions</a></span>.', 'zume');
-}
-
-// adding it to the admin area
-add_filter('admin_footer_text', 'joints_custom_admin_footer');

@@ -11,7 +11,7 @@ if ( ! defined( 'ABSPATH' ) ) { exit; } // Exit if accessed directly
  * Include the TGM_Plugin_Activation class. This class makes other plugins required for the Disciple_Tools system.
  * @see https://github.com/TGMPA/TGM-Plugin-Activation
  */
-require_once('class-tgm-plugin-activation.php');
+require_once( 'class-tgm-plugin-activation.php' );
 
 /**
  * Register the required plugins for this theme.
