@@ -45,7 +45,6 @@ class Zume_Course {
 	 * @since   0.1
 	 */
 	public function __construct () {
-		add_action( 'wp_enqueue_scripts', array($this, 'zume_scripts_enqueue' ) );
 		add_shortcode('session_nine_plan', array($this, 'session_nine_plan'));
 		add_action("admin_post_session_nine_plan", array($this, "session_nine_plan_submit"));
 		$this->session_nine_labels = array(
@@ -250,8 +249,8 @@ class Zume_Course {
 	 * @return mixed
 	 */
 	public function zume_scripts_enqueue () {
-		wp_register_script( 'jquery-steps', get_stylesheet_directory_uri() . '/includes/js/jquery.steps.js', array('jquery'), NULL, true );
-		wp_enqueue_script( 'jquery-steps' );
+//		wp_register_script( 'jquery-steps', get_stylesheet_directory_uri() . '/includes/js/jquery.steps.js', array('jquery'), NULL, true );
+//		wp_enqueue_script( 'jquery-steps' );
 	}
 
     /**
