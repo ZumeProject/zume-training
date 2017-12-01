@@ -88,7 +88,7 @@ function dt_register_required_plugins() {
             'slug' => 'updraftplus',
             'version' => '1.13.12',
             'required' => false,
-        ),
+        )
     );
 
     /*
