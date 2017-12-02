@@ -1,9 +1,12 @@
 <?php
-function site_scripts() {
+/**
+ * Standard Enqueue
+ */
+function zume_site_scripts() {
   global $wp_styles; // Call global $wp_styles variable to add conditional wrapper around ie stylesheet the WordPress way
 
     // Load What-Input files in footer
-    wp_enqueue_script( 'what-input', get_template_directory_uri() . '/vendor/what-input/dist/what-input.min.js', array(), '', true );
+//    wp_enqueue_script( 'what-input', get_template_directory_uri() . '/vendor/what-input/dist/what-input.min.js', array(), '', true );
 
     // Load fitvids script https://github.com/rosszurowski/fitvids
     wp_enqueue_script('fitvids', get_template_directory_uri() . '/assets/js/fitvids.min.js', array(), '', false);
@@ -32,5 +35,15 @@ function site_scripts() {
 
     wp_register_style( 'zume_dashboard_style', get_template_directory_uri() . '/assets/css/zume-dashboard.css' ); // Relocated to the _main.scss in the theme
     wp_enqueue_style( 'zume_dashboard_stylesheet', get_template_directory_uri() . '/assets/css/zume-dashboard.css');
+
+
 }
-add_action('wp_enqueue_scripts', 'site_scripts', 999);
+add_action('wp_enqueue_scripts', 'zume_site_scripts', 999);
+
+/**
+ * Login Enqueue
+ */
+function zume_login_css() {
+	wp_enqueue_style( 'zume_login_css', get_template_directory_uri() . '/assets/css/login.min.css', false );
+}
+add_action( 'login_enqueue_scripts', 'zume_login_css', 999 );

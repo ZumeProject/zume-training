@@ -20,11 +20,10 @@ get_header();
                  * @param 'id' in the url the id and session number is used to call the correct session.
                  */
 
-                $user_id = get_current_user_id();
-                $meta_key = 'zume_active_group';
 
-                $session = '';
-                Zume_Overview::instance()->zume_sessions_overview($session);
+                $session = 1; // TODO get session from url and create session number for pre-selection
+
+                Zume_Overview::load_sessions( $session );
 
                 ?>
 

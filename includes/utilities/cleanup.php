@@ -1,33 +1,38 @@
 <?php
 
 // Fire all our initial functions at the start
-add_action('after_setup_theme', 'joints_start', 16);
-
-function joints_start()
+function zume_start()
 {
 
     // launching operation cleanup
-    add_action('init', 'joints_head_cleanup');
+    add_action('init', 'zume_head_cleanup');
 
     // remove pesky injected css for recent comments widget
-    add_filter('wp_head', 'joints_remove_wp_widget_recent_comments_style', 1);
+    add_filter('wp_head', 'zume_remove_wp_widget_recent_comments_style', 1);
 
     // clean up comment styles in the head
-    add_action('wp_head', 'joints_remove_recent_comments_style', 1);
+    add_action('wp_head', 'zume_remove_recent_comments_style', 1);
 
     // clean up gallery output in wp
-    add_filter('gallery_style', 'joints_gallery_style');
+    add_filter('gallery_style', 'zume_gallery_style');
 
     // adding sidebars to Wordpress
-    add_action('widgets_init', 'joints_register_sidebars');
+    add_action('widgets_init', 'zume_register_sidebars');
 
     // cleaning up excerpt
-    add_filter('excerpt_more', 'joints_excerpt_more');
+    add_filter('excerpt_more', 'zume_excerpt_more');
+
+    // remove conflicting sticky class from wp
+	add_filter('post_class', 'remove_sticky_class');
+
+	// removing the dashboard widgets
+	add_action('admin_menu', 'disable_default_dashboard_widgets');
 
 } /* end joints start */
+add_action('after_setup_theme', 'zume_start', 16);
 
 //The default wordpress head is a mess. Let's clean it up by removing all the junk we don't need.
-function joints_head_cleanup()
+function zume_head_cleanup()
 {
     // Remove category feeds
     remove_action('wp_head', 'feed_links_extra', 3);
@@ -47,10 +52,10 @@ function joints_head_cleanup()
     remove_action('wp_head', 'adjacent_posts_rel_link_wp_head', 10, 0);
     // Remove WP version
     remove_action('wp_head', 'wp_generator');
-} /* end Joints head cleanup */
+} /* end Zume head cleanup */
 
 // Remove injected CSS for recent comments widget
-function joints_remove_wp_widget_recent_comments_style()
+function zume_remove_wp_widget_recent_comments_style()
 {
     if ( has_filter('wp_head', 'wp_widget_recent_comments_style') ) {
         remove_filter('wp_head', 'wp_widget_recent_comments_style');
@@ -58,7 +63,7 @@ function joints_remove_wp_widget_recent_comments_style()
 }
 
 // Remove injected CSS from recent comments widget
-function joints_remove_recent_comments_style()
+function zume_remove_recent_comments_style()
 {
     global $wp_widget_factory;
     if ( isset($wp_widget_factory->widgets['WP_Widget_Recent_Comments']) ) {
@@ -67,13 +72,13 @@ function joints_remove_recent_comments_style()
 }
 
 // Remove injected CSS from gallery
-function joints_gallery_style($css)
+function zume_gallery_style($css)
 {
     return preg_replace("!<style type='text/css'>(.*?)</style>!s", '', $css);
 }
 
 // This removes the annoying […] to a Read More link
-function joints_excerpt_more($more)
+function zume_excerpt_more($more)
 {
     global $post;
     // edit here if you like
@@ -91,10 +96,8 @@ function remove_sticky_class($classes)
     return $classes;
 }
 
-add_filter('post_class', 'remove_sticky_class');
-
 //This is a modified the_author_posts_link() which just returns the link. This is necessary to allow usage of the usual l10n process with printf()
-function joints_get_the_author_posts_link()
+function zume_get_the_author_posts_link()
 {
     global $authordata;
     if ( !is_object($authordata) )
@@ -106,4 +109,45 @@ function joints_get_the_author_posts_link()
         get_the_author()
     );
     return $link;
+}
+
+// Disable default dashboard widgets
+function disable_default_dashboard_widgets() {
+	// Remove_meta_box('dashboard_right_now', 'dashboard', 'core');    // Right Now Widget
+	remove_meta_box('dashboard_recent_comments', 'dashboard', 'core'); // Comments Widget
+	remove_meta_box('dashboard_incoming_links', 'dashboard', 'core');  // Incoming Links Widget
+	remove_meta_box('dashboard_plugins', 'dashboard', 'core');         // Plugins Widget
+
+	// Remove_meta_box('dashboard_quick_press', 'dashboard', 'core');  // Quick Press Widget
+	remove_meta_box('dashboard_recent_drafts', 'dashboard', 'core');   // Recent Drafts Widget
+	remove_meta_box('dashboard_primary', 'dashboard', 'core');         //
+	remove_meta_box('dashboard_secondary', 'dashboard', 'core');       //
+
+	// Removing plugin dashboard boxes
+	remove_meta_box('yoast_db_widget', 'dashboard', 'normal');         // Yoast's SEO Plugin Widget
+
+}
+
+function disable_wp_emoji() {
+
+	// all actions related to emojis
+	remove_action( 'admin_print_styles', 'print_emoji_styles' );
+	remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
+	remove_action( 'admin_print_scripts', 'print_emoji_detection_script' );
+	remove_action( 'wp_print_styles', 'print_emoji_styles' );
+	remove_filter( 'wp_mail', 'wp_staticize_emoji_for_email' );
+	remove_filter( 'the_content_feed', 'wp_staticize_emoji' );
+	remove_filter( 'comment_text_rss', 'wp_staticize_emoji' );
+
+	// filter to remove TinyMCE emojis
+	add_filter( 'tiny_mce_plugins', 'disable_emoji_tinymce' );
+}
+add_action( 'init', 'disable_wp_emoji' );
+
+function disable_emoji_tinymce( $plugins ) {
+	if ( is_array( $plugins ) ) {
+		return array_diff( $plugins, array( 'wpemoji' ) );
+	} else {
+		return array();
+	}
 }
