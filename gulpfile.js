@@ -1,161 +1,185 @@
-require('dotenv').config();
-
-// Grab our gulp packages
+// GULP PACKAGES
+// Most packages are lazy loaded
 var gulp  = require('gulp'),
     gutil = require('gulp-util'),
-    sass = require('gulp-sass'),
-    cssnano = require('gulp-cssnano'),
-    autoprefixer = require('gulp-autoprefixer'),
-    sourcemaps = require('gulp-sourcemaps'),
-    jshint = require('gulp-jshint'),
-    stylish = require('jshint-stylish'),
-    uglify = require('gulp-uglify'),
-    concat = require('gulp-concat'),
-    rename = require('gulp-rename'),
-    plumber = require('gulp-plumber'),
-    bower = require('gulp-bower'),
-    babel = require('gulp-babel'),
-    browserSync = require('browser-sync').create();
+    browserSync = require('browser-sync').create(),
+    filter = require('gulp-filter'),
+    plugin = require('gulp-load-plugins')();
+    
+ 
+// GULP VARIABLES   
+// Modify these variables to match your project needs   
 
-// Compile Sass, Autoprefix and minify
-gulp.task('styles', function() {
-    return gulp.src('./assets/scss/**/*.scss')
-        .pipe(plumber(function(error) {
+// Set local URL if using Browser-Sync
+const LOCAL_URL = 'http://jointswp-github.dev/';
+
+// Set path to Foundation files
+const FOUNDATION = 'node_modules/foundation-sites';
+
+// Select Foundation components, remove components project will not use
+const SOURCE = {
+	scripts: [
+		// Lets grab what-input first
+	    'node_modules/what-input/dist/what-input.js',
+
+		// Foundation core - needed if you want to use any of the components below
+		FOUNDATION + '/dist/js/plugins/foundation.core.js',
+		FOUNDATION + '/dist/js/plugins/foundation.util.*.js',
+		
+		// Pick the components you need in your project
+		FOUNDATION + '/dist/js/plugins/foundation.abide.js',
+		FOUNDATION + '/dist/js/plugins/foundation.accordion.js',
+		FOUNDATION + '/dist/js/plugins/foundation.accordionMenu.js',
+		FOUNDATION + '/dist/js/plugins/foundation.drilldown.js',
+		FOUNDATION + '/dist/js/plugins/foundation.dropdown.js',
+		FOUNDATION + '/dist/js/plugins/foundation.dropdownMenu.js',
+		FOUNDATION + '/dist/js/plugins/foundation.equalizer.js',
+		FOUNDATION + '/dist/js/plugins/foundation.interchange.js',
+		FOUNDATION + '/dist/js/plugins/foundation.magellan.js',
+		FOUNDATION + '/dist/js/plugins/foundation.offcanvas.js',
+		FOUNDATION + '/dist/js/plugins/foundation.orbit.js',
+		FOUNDATION + '/dist/js/plugins/foundation.responsiveAccordionTabs.js',
+		FOUNDATION + '/dist/js/plugins/foundation.responsiveMenu.js',
+		FOUNDATION + '/dist/js/plugins/foundation.responsiveToggle.js',
+		FOUNDATION + '/dist/js/plugins/foundation.reveal.js',
+		FOUNDATION + '/dist/js/plugins/foundation.slider.js',
+		FOUNDATION + '/dist/js/plugins/foundation.smoothScroll.js',
+		FOUNDATION + '/dist/js/plugins/foundation.sticky.js',
+		FOUNDATION + '/dist/js/plugins/foundation.tabs.js',
+		FOUNDATION + '/dist/js/plugins/foundation.toggler.js',
+		FOUNDATION + '/dist/js/plugins/foundation.tooltip.js',
+
+		// Place custom JS here, files will be concantonated, minified if ran with --production
+		'assets/scripts/js/**/*.js',	
+    ],
+   
+	// Scss files will be concantonated, minified if ran with --production
+	styles: 'assets/styles/scss/**/*.scss',
+		
+	// Images placed here will be optimized
+	images: 'assets/images/**/*',
+	
+	php: '**/*.php'
+};
+
+const ASSETS = {
+	styles: 'assets/styles/',
+	scripts: 'assets/scripts/',
+	images: 'assets/images/',
+	all: 'assets/'
+};
+
+const JSHINT_CONFIG = {
+	"node": true,
+	"globals": {
+		"document": true,
+		"jQuery": true
+	}
+};
+
+// GULP FUNCTIONS
+// JSHint, concat, and minify JavaScript 
+gulp.task('scripts', function() {
+	
+	// Use a custom filter so we only lint custom JS
+	const CUSTOMFILTER = filter(ASSETS.scripts + 'js/**/*.js', {restore: true});
+	
+	return gulp.src(SOURCE.scripts)
+		.pipe(plugin.plumber(function(error) {
             gutil.log(gutil.colors.red(error.message));
             this.emit('end');
         }))
-        .pipe(sourcemaps.init()) // Start Sourcemaps
-        .pipe(sass())
-        .pipe(autoprefixer({
-            browsers: ['last 2 versions'],
-            cascade: false
+		.pipe(plugin.sourcemaps.init())
+		.pipe(plugin.babel({
+			presets: ['es2015'],
+			compact: true,
+			ignore: ['what-input.js']
+		}))
+		.pipe(CUSTOMFILTER)
+			.pipe(plugin.jshint(JSHINT_CONFIG))
+			.pipe(plugin.jshint.reporter('jshint-stylish'))
+			.pipe(CUSTOMFILTER.restore)
+		.pipe(plugin.concat('scripts.js'))
+		.pipe(plugin.uglify())
+		.pipe(plugin.sourcemaps.write('.')) // Creates sourcemap for minified JS
+		.pipe(gulp.dest(ASSETS.scripts))
+});
+
+// Compile Sass, Autoprefix and minify
+gulp.task('styles', function() {
+	return gulp.src(SOURCE.styles)
+		.pipe(plugin.plumber(function(error) {
+            gutil.log(gutil.colors.red(error.message));
+            this.emit('end');
         }))
-        .pipe(rename({suffix: '.min'}))
-        .pipe(cssnano())
-        .pipe(sourcemaps.write('.')) // Creates sourcemaps for minified styles
-        .pipe(gulp.dest('./assets/css/'))
+		.pipe(plugin.sourcemaps.init())
+		.pipe(plugin.sass())
+		.pipe(plugin.autoprefixer({
+		    browsers: [
+		    	'last 2 versions',
+		    	'ie >= 9',
+				'ios >= 7'
+		    ],
+		    cascade: false
+		}))
+		.pipe(plugin.cssnano())
+		.pipe(plugin.sourcemaps.write('.'))
+		.pipe(gulp.dest(ASSETS.styles))
+		.pipe(browserSync.reload({
+          stream: true
+        }));
 });
 
-// JSHint, concat, and minify JavaScript
-gulp.task('site-js', function() {
-  return gulp.src([
-
-           // Grab your custom scripts
-  		  './assets/js/scripts/*.js'
-
-  ])
-    .pipe(plumber())
-    .pipe(sourcemaps.init())
-    .pipe(jshint())
-    .pipe(jshint.reporter('jshint-stylish'))
-    .pipe(concat('scripts.js'))
-    .pipe(rename({suffix: '.min'}))
-    .pipe(uglify())
-    .pipe(sourcemaps.write('.')) // Creates sourcemap for minified JS
-    .pipe(gulp.dest('./assets/js'))
+// Optimize images, move into assets directory
+gulp.task('images', function() {
+	return gulp.src(SOURCE.images)
+		.pipe(plugin.imagemin())
+		.pipe(gulp.dest(ASSETS.images))
 });
 
-// JSHint, concat, and minify Foundation JavaScript
-gulp.task('foundation-js', function() {
-  return gulp.src([
-
-  		  // Foundation core - needed if you want to use any of the components below
-          './vendor/foundation-sites/js/foundation.core.js',
-          './vendor/foundation-sites/js/foundation.util.*.js',
-
-          /* We do not want to load foundation.util.timerAndImageLoader.js .
-           * This is because it appends a question mark and a timestamp to
-           * image URLs, which causes images hosted on Gravatar to fail. In a
-           * comment, it says that it is trying to follow this technique:
-           *
-           * https://css-tricks.com/snippets/jquery/fixing-load-in-ie-for-cached-images/
-           *
-           * Newer versions of foundation-sites don't have this file any more,
-           * and I presume they don't have this bug any more, we should
-           * probably update foundation-sites at some point.
-           *
-           * https://github.com/zurb/foundation-sites
-           *
-           * Note the exclamation point, which indicates negation.
-           */
-          '!./vendor/foundation-sites/js/foundation.util.timerAndImageLoader.js',
-
-          // Pick the components you need in your project
-          './vendor/foundation-sites/js/foundation.abide.js',
-          './vendor/foundation-sites/js/foundation.accordion.js',
-          './vendor/foundation-sites/js/foundation.accordionMenu.js',
-          './vendor/foundation-sites/js/foundation.drilldown.js',
-          './vendor/foundation-sites/js/foundation.dropdown.js',
-          './vendor/foundation-sites/js/foundation.dropdownMenu.js',
-          './vendor/foundation-sites/js/foundation.equalizer.js',
-          './vendor/foundation-sites/js/foundation.interchange.js',
-          './vendor/foundation-sites/js/foundation.magellan.js',
-          './vendor/foundation-sites/js/foundation.offcanvas.js',
-          './vendor/foundation-sites/js/foundation.orbit.js',
-          './vendor/foundation-sites/js/foundation.responsiveMenu.js',
-          './vendor/foundation-sites/js/foundation.responsiveToggle.js',
-          './vendor/foundation-sites/js/foundation.reveal.js',
-          './vendor/foundation-sites/js/foundation.slider.js',
-          './vendor/foundation-sites/js/foundation.sticky.js',
-          './vendor/foundation-sites/js/foundation.tabs.js',
-          './vendor/foundation-sites/js/foundation.toggler.js',
-          './vendor/foundation-sites/js/foundation.tooltip.js',
-  ])
-  .pipe(sourcemaps.init())
-	.pipe(babel({
-		presets: ['es2015'],
-	    compact: true
-	}))
-    .pipe(concat('foundation.js'))
-    .pipe(rename({suffix: '.min'}))
-    .pipe(uglify())
-    .pipe(sourcemaps.write('.')) // Creates sourcemap for minified Foundation JS
-    .pipe(gulp.dest('./assets/js'))
-});
-
-// Update Foundation with Bower and save to /vendor
-gulp.task('bower', function() {
-  return bower({ cmd: 'update'})
-    .pipe(gulp.dest('vendor/'))
-});
+ gulp.task( 'translate', function () {
+     return gulp.src( SOURCE.php )
+         .pipe(plugin.wpPot( {
+             domain: 'zume',
+             package: 'Zume Project'
+         } ))
+        .pipe(gulp.dest('file.pot'));
+ });
 
 // Browser-Sync watch files and inject changes
-gulp.task('browsersync', ['styles', 'site-js', 'foundation-js'], function() {
-    // Watch files
+gulp.task('browsersync', function() {
+    
+    // Watch these files
     var files = [
-    	'./assets/css/*.css',
-    	'./assets/js/*.js',
-      './assets/js/scripts/*.js',
-    	'./assets/scss/*.scss',
-    	'**/*.php',
-    	'assets/images/**/*.{png,jpg,gif,svg,webp}',
+    	SOURCE.styles, 
+    	SOURCE.scripts,
+    	SOURCE.images,
+    	SOURCE.php,
     ];
 
     browserSync.init(files, {
-	    // Replace with URL of your local site
-	    proxy: process.env.BROWSERSYNC_PROXIED_SITE || "http://zume:8888/",
+	    proxy: LOCAL_URL,
     });
-
-    gulp.watch('./assets/scss/**/*.scss', ['styles']);
-    gulp.watch('./assets/js/scripts/*.js', ['site-js']).on('change', browserSync.reload);
+    
+    gulp.watch(SOURCE.styles, gulp.parallel('styles'));
+    gulp.watch(SOURCE.scripts, gulp.parallel('scripts')).on('change', browserSync.reload);
+    gulp.watch(SOURCE.images, gulp.parallel('images'));
 
 });
 
 // Watch files for changes (without Browser-Sync)
 gulp.task('watch', function() {
 
-  // Watch .scss files
-  gulp.watch('./assets/scss/**/*.scss', ['styles']);
+	// Watch .scss files
+	gulp.watch(SOURCE.styles, gulp.parallel('styles'));
+	
+	// Watch scripts files
+	gulp.watch(SOURCE.scripts, gulp.parallel('scripts'));
+	
+	// Watch images files
+	gulp.watch(SOURCE.images, gulp.parallel('images'));
+  
+}); 
 
-  // Watch site-js files
-  gulp.watch('./assets/js/scripts/*.js', ['site-js']);
-
-  // Watch foundation-js files
-  gulp.watch('./vendor/foundation-sites/js/*.js', ['foundation-js']);
-
-});
-
-// Run styles, site-js and foundation-js
-gulp.task('default', function() {
-  gulp.start('styles', 'site-js', 'foundation-js');
-});
+// Run styles, scripts and foundation-js
+gulp.task('default', gulp.parallel('styles', 'scripts', 'images'));

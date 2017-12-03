@@ -1,5 +1,4 @@
 jQuery(function($) {
-  "use strict";
 
   $(".js-congratulations-more-button").on("click", function() {
     $(".js-congratulations-more-button").removeClass("active");

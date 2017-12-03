@@ -2,7 +2,7 @@
 
 define('ZUME_DOMAIN', 'zume_project');
 define('ZUME_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
-require_once('includes/utilities/debugger-log.php'); // debug logger used for development. Use z_write_log();
+require_once('functions/utilities/debugger-log.php'); // debug logger used for development. Use z_write_log();
 
 
 /**
@@ -10,43 +10,43 @@ require_once('includes/utilities/debugger-log.php'); // debug logger used for de
  */
 
 // Language Files
-require_once( 'assets/translation/translation.php'); // Adds support for multiple languages
+require_once( 'functions/translation/translation.php'); // Adds support for multiple languages
 
 // Zume Theme Files
-require_once( 'includes/enqueue-scripts.php'); // Register scripts and stylesheets
-require_once( 'includes/utilities/config-required-plugins.php' ); // monitors required plugin dependencies
-require_once( 'includes/utilities/theme-support.php' ); // Theme support options
-require_once( 'includes/utilities/cleanup.php'); // WP Head and other cleanup functions
-require_once( 'includes/utilities/menu.php' ); // Register custom menus and menu walkers
-require_once( 'includes/utilities/comments.php' ); // Makes WordPress comments suck less
-require_once( 'includes/login/login.php' ); // Customize the WordPress login menu
-require_once( 'includes/login/wplogin_redirect.php' ); // login redirect
+require_once( 'functions/enqueue-scripts.php'); // Register scripts and stylesheets
+require_once( 'functions/utilities/config-required-plugins.php' ); // monitors required plugin dependencies
+require_once( 'functions/utilities/theme-support.php' ); // Theme support options
+require_once( 'functions/utilities/cleanup.php'); // WP Head and other cleanup functions
+require_once( 'functions/utilities/menu.php' ); // Register custom menus and menu walkers
+require_once( 'functions/utilities/comments.php' ); // Makes WordPress comments suck less
+require_once( 'functions/login/login.php' ); // Customize the WordPress login menu
+require_once( 'functions/login/wplogin_redirect.php' ); // login redirect
 
 // Zume Core Files
-require_once( 'includes/zume-course.php' ); // zume course
+require_once( 'functions/zume-course.php' ); // zume course
 $zume_course = Zume_Course::instance();
-require_once( 'includes/zume-overview.php' ); // zume overview page
+require_once( 'functions/zume-overview.php' ); // zume overview page
 $zume_overview = Zume_Overview::instance();
-require_once ('includes/zume-functions.php'); // general zume functions
-require_once( 'includes/zume-dashboard.php' ); // zume dashboard
-require_once( 'includes/location/group-js-maps.php' ); // loads the group address meta fields
+require_once ('functions/zume-functions.php'); // general zume functions
+require_once( 'functions/zume-dashboard.php' ); // zume dashboard
+require_once( 'functions/location/group-js-maps.php' ); // loads the group address meta fields
 
-require_once( 'includes/rest-api.php' );
+require_once( 'functions/rest-api.php' );
 $zume_rest = Zume_REST_API::instance();
 
-require_once( 'includes/location/class-census-geolocation-api.php' );
-require_once( 'includes/location/class-google-geolocation-api.php' );
-require_once( 'includes/location/class-coordinates-db.php' );
+require_once( 'functions/location/class-census-geolocation-api.php' );
+require_once( 'functions/location/class-google-geolocation-api.php' );
+require_once( 'functions/location/class-coordinates-db.php' );
 
-require_once( 'includes/location/locations-rest-controller.php' );
-require_once( 'includes/location/locations-rest-api.php' );
+require_once( 'functions/location/locations-rest-controller.php' );
+require_once( 'functions/location/locations-rest-api.php' );
 $location_api = Location_Lookup_REST_API::instance();
 
 
-include_once( 'includes/utilities/zume-mailchimp-settings.php' ); // Creates the options page for mailchimp automation
-include_once( 'includes/login/user-register.php' );
+include_once( 'functions/utilities/zume-mailchimp-settings.php' ); // Creates the options page for mailchimp automation
+include_once( 'functions/login/user-register.php' );
 
-require_once( 'includes/email/class-zume-emails.php' );
+require_once( 'functions/email/class-zume-emails.php' );
 
 
 /**
@@ -75,7 +75,7 @@ add_action('init', function() {
 });
 
 function initialize_custom_emails(){
-    require_once( 'includes/email/class-zume-emails.php' );
+    require_once( 'functions/email/class-zume-emails.php' );
     your_three_month_plan_email();
     group_enough_members_email();
     invite_to_group_email();
