@@ -1,6 +1,9 @@
 <?php
+/**
+ * Zume Project functions root
+ */
 
-define('ZUME_DOMAIN', 'zume_project');
+define('ZUME_DOMAIN', 'zume');
 define('ZUME_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
 require_once('functions/utilities/debugger-log.php'); // debug logger used for development. Use z_write_log();
 
