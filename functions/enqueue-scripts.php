@@ -9,7 +9,7 @@ function zume_site_scripts() {
 //    wp_enqueue_script( 'what-input', get_template_directory_uri() . '/vendor/what-input/dist/what-input.min.js', array(), '', true );
 
     // Load fitvids script https://github.com/rosszurowski/fitvids
-    wp_enqueue_script('fitvids', get_template_directory_uri() . '/assets/scripts/fitvids.min.js', array(), '', false);
+//    wp_enqueue_script('fitvids', get_template_directory_uri() . '/assets/scripts/fitvids.min.js', array(), '', false);
 
     // Adding Foundation scripts file in the footer
     wp_enqueue_script( 'foundation-js', get_template_directory_uri() . '/assets/scripts/foundation.min.js', array( 'jquery' ), '6.2.3', true );

@@ -29,13 +29,7 @@
 
 		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
 
-
 		<?php wp_head(); ?>
-
-		<script>jQuery(function() { fitvids(); });</script>
-
-		<!-- Drop Google Analytics here -->
-		<!-- end analytics -->
 
 	</head>
 
