@@ -46,8 +46,5 @@
     "globals": {
       "jQuery": true
     }
-  },
-  "dependencies": {
-    "gulp-cli": "^1.4.0"
   }
 }
