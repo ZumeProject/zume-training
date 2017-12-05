@@ -12,10 +12,10 @@ function zume_site_scripts() {
 //    wp_enqueue_script('fitvids', get_template_directory_uri() . '/assets/scripts/fitvids.min.js', array(), '', false);
 
     // Adding Foundation scripts file in the footer
-    wp_enqueue_script( 'foundation-js', get_template_directory_uri() . '/assets/scripts/foundation.min.js', array( 'jquery' ), '6.2.3', true );
+//    wp_enqueue_script( 'foundation-js', get_template_directory_uri() . '/assets/scripts/foundation.min.js', array( 'jquery' ), '6.4.3', true );
 
     // Adding scripts file in the footer
-    wp_enqueue_script( 'site-js', get_template_directory_uri() . '/assets/scripts/scripts.min.js', array( 'jquery' ), '', true );
+    wp_enqueue_script( 'site-js', get_template_directory_uri() . '/assets/scripts/scripts.js', array( 'jquery' ), '', true );
 
 //    wp_enqueue_style( 'buddypress-css', get_template_directory_uri() . '/assets/css/buddypress.css', array(), '', 'all' );
 
