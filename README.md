@@ -1,5 +1,3 @@
-[![Build Status](https://travis-ci.org/ChasmSolutions/zume-project-theme.svg?branch=master)](https://travis-ci.org/ChasmSolutions/zume-project-theme)
+[![Build Status](https://travis-ci.org/ChasmSolutions/zume-project-multilingual.svg?branch=master)](https://travis-ci.org/ChasmSolutions/zume-project-multilingual)
 
-Zúme Project Theme
-
-version 1.1.1
+Zúme Project Theme for the multilingual site
