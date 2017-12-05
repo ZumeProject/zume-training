@@ -95,6 +95,13 @@ function dt_register_required_plugins() {
 		    'version' => '2.2.7',
 		    'required' => true,
 		    'force_activation'  => true,
+	    ),
+	    array(
+		    'name' => 'Nav Menu Roles',
+		    'slug' => 'nav-menu-roles',
+		    'version' => '1.9.1',
+		    'required' => true,
+		    'force_activation'  => true,
 	    )
     );
 
