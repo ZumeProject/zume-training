@@ -16,9 +16,6 @@ function zume_start()
     // clean up gallery output in wp
     add_filter('gallery_style', 'zume_gallery_style');
 
-    // adding sidebars to Wordpress
-    add_action('widgets_init', 'zume_register_sidebars');
-
     // cleaning up excerpt
     add_filter('excerpt_more', 'zume_excerpt_more');
 
@@ -45,11 +42,11 @@ function zume_head_cleanup()
     // Remove index link
     remove_action('wp_head', 'index_rel_link');
     // Remove previous link
-    remove_action('wp_head', 'parent_post_rel_link', 10, 0);
+    remove_action('wp_head', 'parent_post_rel_link', 10);
     // Remove start link
-    remove_action('wp_head', 'start_post_rel_link', 10, 0);
+    remove_action('wp_head', 'start_post_rel_link', 10);
     // Remove links for adjacent posts
-    remove_action('wp_head', 'adjacent_posts_rel_link_wp_head', 10, 0);
+    remove_action('wp_head', 'adjacent_posts_rel_link_wp_head', 10);
     // Remove WP version
     remove_action('wp_head', 'wp_generator');
 } /* end Zume head cleanup */
