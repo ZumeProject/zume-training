@@ -88,7 +88,14 @@ function dt_register_required_plugins() {
             'slug' => 'updraftplus',
             'version' => '1.13.12',
             'required' => false,
-        )
+        ),
+	    array(
+		    'name' => 'PolyLang',
+		    'slug' => 'polylang',
+		    'version' => '2.2.7',
+		    'required' => true,
+		    'force_activation'  => false,
+	    )
     );
 
     /*

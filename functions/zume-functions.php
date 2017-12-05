@@ -20,7 +20,7 @@ function zume_force_login() {
         'Resources'
     );
 
-    if(is_page($exception_pages) || $GLOBALS['pagenow'] === 'wp-login.php' || $GLOBALS['pagenow'] === 'index.php' ) {
+    if( is_page($exception_pages) || $GLOBALS['pagenow'] === 'wp-login.php' || $GLOBALS['pagenow'] === 'index.php' ) {
         return;
     }
 
@@ -34,18 +34,45 @@ function zume_force_login() {
         auth_redirect();
     }
 
-    // If user is logged in, check that key plugins exist for the course.
-    if (! class_exists('Zume_Course') ) {
-        echo 'Zúme Course plugin is disabled or otherwise unreachable. Please, check with administrator to verify course availability.';
-        return;
+
+}
+
+/**
+ * Tests if polylang plugin is installed.
+ * Must check for plugin existence, because when the polylang plugin is updated, it will be deleted and reinstalled, which
+ * could create an error on update if dependent functions are not protected.
+ * @return bool
+ */
+function zume_has_polylang() {
+	if( function_exists( 'pll_the_languages' ) ) {
+		return true;
+	} else {
+		return false;
+	}
+}
+
+function zume_get_user_language() {
+    if( is_user_logged_in() ) {
+        // get user language preference
+        $user_language = get_user_meta( get_current_user_id(), 'preferred_language', true );
+        if ( ! $user_language ) {
+
+        }
+        // if no user preference, create preference with site default
+
+    } else {
+        // check for cookie
+
+        // load session language preference
+
+        // create default language cookie
+
+        // load session language preference
     }
-
-
 }
 
 /*
  * Redirects logged on users from home page requests to dashboard.
- *
  */
 function zume_dashboard_redirect () {
     global $post;

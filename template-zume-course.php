@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Zúme Training
+Template Name: Zúme Course
 */
 
 get_header();
