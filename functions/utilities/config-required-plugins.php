@@ -94,7 +94,7 @@ function dt_register_required_plugins() {
 		    'slug' => 'polylang',
 		    'version' => '2.2.7',
 		    'required' => true,
-		    'force_activation'  => false,
+		    'force_activation'  => true,
 	    )
     );
 

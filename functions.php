@@ -10,7 +10,7 @@ require_once('functions/utilities/debugger-log.php'); // debug logger used for d
  */
 
 // Language Files
-require_once( 'functions/translation/translation.php'); // Adds support for multiple languages
+require_once( 'assets/translation/translation.php' ); // Adds support for multiple languages
 require_once( 'functions/zume-polylang-integration.php'); // Adds support for multiple languages
 
 // Zume Theme Files
@@ -29,49 +29,23 @@ $zume_course = Zume_Course::instance();
 require_once( 'functions/zume-overview.php' ); // zume overview page
 require_once ('functions/zume-functions.php'); // general zume functions
 require_once( 'functions/zume-dashboard.php' ); // zume dashboard
+
+// Locations System
 require_once( 'functions/location/group-js-maps.php' ); // loads the group address meta fields
-
 require_once( 'functions/rest-api.php' );
-$zume_rest = Zume_REST_API::instance();
-
+Zume_REST_API::instance();
 require_once( 'functions/location/class-census-geolocation-api.php' );
 require_once( 'functions/location/class-google-geolocation-api.php' );
 require_once( 'functions/location/class-coordinates-db.php' );
-
 require_once( 'functions/location/locations-rest-controller.php' );
 require_once( 'functions/location/locations-rest-api.php' );
-$location_api = Location_Lookup_REST_API::instance();
+Location_Lookup_REST_API::instance();
 
-
+// Email System
 /** TODO: Maybe remove. Language specific emails? */
 include_once( 'functions/utilities/zume-mailchimp-settings.php' ); // Creates the options page for mailchimp automation
 include_once( 'functions/login/user-register.php' );
 require_once( 'functions/email/class-zume-emails.php' );
-
-
-/**
- * CATCH URL AND LOAD CUSTOM TEMPLATE
- */
-//add_action('init', function() {
-//    $template_for_url = array(
-//	    'about'     => 'template-zume-about.php',
-//	    'course'    => 'template-zume-course.php',
-//	    'dashboard' => 'template-zume-dashboard.php',
-//	    'overview'  => 'template-zume-overview.php',
-//	    'profile'   => 'template-zume-profile.php',
-//	    'resources' => 'template-zume-resources.php',
-//    );
-//    $url_path = trim( parse_url( add_query_arg( array() ), PHP_URL_PATH ), '/' );
-//
-//    if ( isset( $template_for_url[ $url_path ] ) ) {
-//        $template_filename = locate_template( $template_for_url[ $url_path ], true );
-//        if ( $template_filename ) {
-//            exit(); // just exit if template was found and loaded
-//        } else {
-//            throw new Error( "Expected to find template " . $template_for_url[ $url_path ] );
-//        }
-//    }
-//});
 
 function initialize_custom_emails(){
     require_once( 'functions/email/class-zume-emails.php' );
