@@ -37,19 +37,7 @@ function zume_force_login() {
 
 }
 
-/**
- * Tests if polylang plugin is installed.
- * Must check for plugin existence, because when the polylang plugin is updated, it will be deleted and reinstalled, which
- * could create an error on update if dependent functions are not protected.
- * @return bool
- */
-function zume_has_polylang() {
-	if( function_exists( 'pll_the_languages' ) ) {
-		return true;
-	} else {
-		return false;
-	}
-}
+
 
 function zume_get_user_language() {
     if( is_user_logged_in() ) {
