@@ -1,13 +1,21 @@
-language: node_js
-dist: trusty # Required to get a more up-to-date g++ for node-sass
-node_js:
-  - "node" # Always use the latest node version
-before_script:
-  - npm install -g gulp-cli
+language: php
+php:
+    - '5.6'
+    - '7.0'
+    - '7.1'
+dist: trusty
 cache:
   directories:
     - "node_modules"
+    - $HOME/.composer/cache/files
+before_install:
+  - npm install -g gulp-cli
+  - npm install
+before_script:
+  - composer install --no-interaction
 script:
+  - ./test/test_for_syntax_errors.sh
+  - ./test/test_phpcs.sh
   - gulp
   - git diff --exit-code assets/
   # If the previous command returns a non-zero exit code, that means gulp has
