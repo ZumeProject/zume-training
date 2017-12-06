@@ -4,7 +4,8 @@ var gulp  = require('gulp'),
     gutil = require('gulp-util'),
     browserSync = require('browser-sync').create(),
     filter = require('gulp-filter'),
-    plugin = require('gulp-load-plugins')();
+    plugin = require('gulp-load-plugins')(),
+    chmod = require('gulp-chmod');
 
 
 // GULP VARIABLES
@@ -102,6 +103,7 @@ gulp.task('scripts', function() {
     .pipe(plugin.concat('scripts.js'))
     .pipe(plugin.uglify())
     .pipe(plugin.sourcemaps.write('.')) // Creates sourcemap for minified JS
+    .pipe(chmod(0o644))
     .pipe(gulp.dest(ASSETS.scripts))
 });
 
