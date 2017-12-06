@@ -94,8 +94,8 @@ class rulRedirectFunctionCollection
         $rul_settings['rul_allow_post_redirect_override_logout'] = false;
 
         // Set this to true if you're using a plugin such as Gigya that bypasses the regular WordPress redirect process (and only allow one fixed redirect URL)
-        // Then, set that plugin to redirect to http://www.yoursite.com/wp-content/plugins/peters-login-redirect/wplogin_redirect_control.php
-        // For more troubleshooting with this setting, make sure the paths are set correctly in wplogin_redirect_control.php
+        // Then, set that plugin to redirect to http://www.yoursite.com/wp-content/plugins/peters-login-redirect/wplogin-redirect-control.php
+        // For more troubleshooting with this setting, make sure the paths are set correctly in wplogin-redirect-control.php
         $rul_settings['rul_use_redirect_controller'] = false;
 
         // To edit the redirect settings in the WordPress admin panel, users need this capability
@@ -1406,7 +1406,7 @@ if ( is_admin() )
 
         <tr>
             <td>
-                <p><strong><?php print sprintf( __( 'Use external redirect file. Set this to &#34;Yes&#34; if you are using a plugin such as Gigya that bypasses the regular WordPress redirect process (and allows only one fixed redirect URL). Then, set the redirect URL in the other plugin to %s', 'peters-login-redirect' ), '<br />http://www.yoursite.com/wp-content/plugins/peters-login-redirect/wplogin_redirect_control.php' ); ?></strong></p>
+                <p><strong><?php print sprintf( __( 'Use external redirect file. Set this to &#34;Yes&#34; if you are using a plugin such as Gigya that bypasses the regular WordPress redirect process (and allows only one fixed redirect URL). Then, set the redirect URL in the other plugin to %s', 'peters-login-redirect' ), '<br />http://www.yoursite.com/wp-content/plugins/peters-login-redirect/wplogin-redirect-control.php' ); ?></strong></p>
             </td>
             <td>
                 <select name="rul_use_redirect_controller">
