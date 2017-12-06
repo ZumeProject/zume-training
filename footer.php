@@ -7,7 +7,7 @@
                         </div>
                         <div class="large-12 medium-12 columns">
                             <p class="source-org copyright">
-                                &copy; <?php echo date( 'Y' ); ?> <?php bloginfo( 'name' ); ?>.
+                                &copy; <?php echo esc_html( date( 'Y' ) ); ?> <?php bloginfo( 'name' ); ?>.
 
                             </p>
                         </div>

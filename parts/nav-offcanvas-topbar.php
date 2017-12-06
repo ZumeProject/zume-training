@@ -2,13 +2,13 @@
 	 and a topbar for medium-up -->
 
 <?php
-    $is_logged_in = is_user_logged_in();
+    $zume_is_logged_in = is_user_logged_in();
 
     // adds the current language to the nav url
 if ( zume_has_polylang() ) {
-    $current_language_slug = pll_current_language() . '/';
+    $zume_current_language_slug = pll_current_language() . '/';
 } else {
-    $current_language_slug = '';
+    $zume_current_language_slug = '';
 }
 ?>
 

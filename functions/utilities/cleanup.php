@@ -20,10 +20,10 @@ function zume_start()
     add_filter( 'excerpt_more', 'zume_excerpt_more' );
 
     // remove conflicting sticky class from wp
-    add_filter( 'post_class', 'remove_sticky_class' );
+    add_filter( 'post_class', 'zume_remove_sticky_class' );
 
     // removing the dashboard widgets
-    add_action( 'admin_menu', 'disable_default_dashboard_widgets' );
+    add_action( 'admin_menu', 'zume_disable_default_dashboard_widgets' );
 
 } /* end joints start */
 add_action( 'after_setup_theme', 'zume_start', 16 );
@@ -83,7 +83,7 @@ function zume_excerpt_more($more)
 }
 
 //  Stop WordPress from using the sticky class (which conflicts with Foundation), and style WordPress sticky posts using the .wp-sticky class instead
-function remove_sticky_class($classes)
+function zume_remove_sticky_class($classes)
 {
     if ( in_array( 'sticky', $classes ) ) {
         $classes = array_diff( $classes, array( "sticky" ) );
@@ -110,7 +110,7 @@ function zume_get_the_author_posts_link()
 }
 
 // Disable default dashboard widgets
-function disable_default_dashboard_widgets() {
+function zume_disable_default_dashboard_widgets() {
     // Remove_meta_box('dashboard_right_now', 'dashboard', 'core');    // Right Now Widget
     remove_meta_box( 'dashboard_recent_comments', 'dashboard', 'core' ); // Comments Widget
     remove_meta_box( 'dashboard_incoming_links', 'dashboard', 'core' );  // Incoming Links Widget
@@ -125,7 +125,7 @@ function disable_default_dashboard_widgets() {
 
 }
 
-function disable_wp_emoji() {
+function zume_disable_wp_emoji() {
 
     // all actions related to emojis
     remove_action( 'admin_print_styles', 'print_emoji_styles' );
@@ -137,11 +137,11 @@ function disable_wp_emoji() {
     remove_filter( 'comment_text_rss', 'wp_staticize_emoji' );
 
     // filter to remove TinyMCE emojis
-    add_filter( 'tiny_mce_plugins', 'disable_emoji_tinymce' );
+    add_filter( 'tiny_mce_plugins', 'zume_disable_emoji_tinymce' );
 }
-add_action( 'init', 'disable_wp_emoji' );
+add_action( 'init', 'zume_disable_wp_emoji' );
 
-function disable_emoji_tinymce( $plugins ) {
+function zume_disable_emoji_tinymce( $plugins ) {
     if ( is_array( $plugins ) ) {
         return array_diff( $plugins, array( 'wpemoji' ) );
     } else {

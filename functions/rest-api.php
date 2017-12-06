@@ -57,7 +57,7 @@ class Zume_REST_API {
     public function add_api_routes() {
         $version = '1';
         $namespace = 'zume/v' . $version;
-        register_rest_route( $namespace, '/' . 'attendance/log', array(
+        register_rest_route( $namespace, '/attendance/log', array(
             array(
                 'methods'         => WP_REST_Server::CREATABLE,
                 'callback'        => array( $this, 'log_attendance' ),

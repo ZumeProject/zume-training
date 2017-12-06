@@ -16,7 +16,7 @@ Template Name: Zume Profile
                 /* Profile Page */
 
 
-                echo 'Current user id ' . get_current_user_id();
+                echo 'Current user id ' . esc_html( get_current_user_id() );
 
 
                 ?>

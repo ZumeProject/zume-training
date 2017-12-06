@@ -40,6 +40,7 @@ function zume_theme_support() {
      );
 
     // Set the maximum allowed width for any content in the theme, like oEmbeds and images added to posts.
+    // @codingStandardsIgnoreLine: TODO use zume_ prefix
     $GLOBALS['content_width'] = apply_filters( 'zume_theme_support', 1200 );
 
 } /* end theme support */

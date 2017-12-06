@@ -36,7 +36,7 @@ function zume_get_name_for_email( $name, $recipient ) {
         return $display_name;
     } else {
         if ( isset( $_POST["field_1"] ) ) {
-            return $_POST["field_1"];
+            return sanitize_text_field( wp_unslash( $_POST["field_1"] ) );
         } else {
             return $name;
         }

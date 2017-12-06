@@ -42,7 +42,7 @@ require_once( 'functions/location/class-google-geolocation-api.php' );
 require_once( 'functions/location/class-coordinates-db.php' );
 require_once( 'functions/location/locations-rest-controller.php' );
 require_once( 'functions/location/locations-rest-api.php' );
-Location_Lookup_REST_API::instance();
+Zume_Location_Lookup_REST_API::instance();
 
 // Email System
 /** TODO: Maybe remove. Language specific emails? */
@@ -50,11 +50,11 @@ include_once( 'functions/utilities/zume-mailchimp-settings.php' ); // Creates th
 include_once( 'functions/login/user-register.php' );
 require_once( 'functions/email/class-zume-emails.php' );
 
-function initialize_custom_emails(){
+function zume_initialize_custom_emails(){
     require_once( 'functions/email/class-zume-emails.php' );
     your_three_month_plan_email();
     group_enough_members_email();
     invite_to_group_email();
-    automatically_added_to_group_email();
+    zume_automatically_added_to_group_email();
 }
-register_activation_hook( __FILE__, 'initialize_custom_emails' );
+register_activation_hook( __FILE__, 'zume_initialize_custom_emails' );

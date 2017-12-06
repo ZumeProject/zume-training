@@ -5,7 +5,7 @@
  * @see http://www.wdmac.com/how-to-create-a-po-language-translation#more-631
  *
  */
-add_action( 'after_setup_theme', 'load_translations' );
-function load_translations(){
+add_action( 'after_setup_theme', 'zume_load_translations' );
+function zume_load_translations() {
     load_theme_textdomain( 'zume', get_template_directory() .'/assets/translation' );
 }

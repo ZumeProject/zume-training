@@ -88,7 +88,10 @@ class Zume_Coaches {
     public function check_for_groups_needing_assignment( $user_id, $group_id, $inviter_id) {
         global $wpdb;
 
-        $group = $wpdb->get_results( "SELECT meta_value FROM $wpdb->bp_groups_groupmeta WHERE group_id = '$group_id' AND (meta_key = 'total_member_count' OR meta_key = 'assigned_to')", ARRAY_A );
+        $group = $wpdb->get_results( $wpdb->prepare(
+            "SELECT meta_value FROM $wpdb->bp_groups_groupmeta WHERE group_id = %s AND (meta_key = 'total_member_count' OR meta_key = 'assigned_to')",
+            $group_id
+        ), ARRAY_A );
         $total_member_count = '';
         $assigned_to = '';
         foreach ($group as $key => $value) {
@@ -139,39 +142,28 @@ class Zume_Coaches {
 
 
         if ( !current_user_can( 'coach_tools' ) ) {
-            wp_die( __( 'You do not have sufficient permissions to access this page.' ) );
+            wp_die( esc_html__( 'You do not have sufficient permissions to access this page.' ) );
         }
 
         /**
          * Begin Header & Tab Bar
          */
-        if (isset( $_GET["tab"] )) {$tab = $_GET["tab"];
+        if (isset( $_GET["tab"] )) {$tab = sanitize_key( wp_unslash( $_GET["tab"] ) );
         } else {$tab = 'group_stats';}
 
-        $tab_link_pre = '<a href="admin.php?page=coach_tools&tab=';
-        $tab_link_post = '" class="nav-tab ';
 
-        $html = '<div class="wrap">
+        echo '<div class="wrap">
             <h2>Coach Tools</h2>
             <h2 class="nav-tab-wrapper">';
 
-        $html .= $tab_link_pre . 'group_stats' . $tab_link_post;
-        if ($tab == 'group_stats' || !isset( $tab )) {$html .= 'nav-tab-active';}
-        $html .= '">Group List with Assigned Coach</a>';
+        echo '<a href="admin.php?page=coach_tools&tab=';
+        echo 'group_stats';
+        echo '" class="nav-tab ';
+        if ($tab == 'group_stats' || !isset( $tab )) {echo 'nav-tab-active';}
+        echo '">Group List with Assigned Coach</a>';
 
-//        $html .= $tab_link_pre . 'groups_csv' . $tab_link_post;
-//        if ($tab == 'groups_csv' ) {$html .= 'nav-tab-active';}
-//        $html .= '">Groups CSV</a>';
+        echo '</h2>';
 
-//        $html .= $tab_link_pre . 'coach_list' . $tab_link_post;
-//        if ($tab == 'coach_list' ) {$html .= 'nav-tab-active';}
-//        $html .= '">Coach List</a>';
-
-        $html .= '</h2>';
-
-        echo $html; // Echo tabs
-
-        $html = '';
         // End Tab Bar
 
         /**
@@ -182,7 +174,7 @@ class Zume_Coaches {
             case "coach_list":
                 $list_class = new Zume_Coaches_List();
                 if ( isset( $_POST['s'] ) ){
-                    $list_class->prepare_items( $_POST['s'] );
+                    $list_class->prepare_items( sanitize_text_field( wp_unslash( $_POST['s'] ) ) );
                 } else {
                     $list_class->prepare_items();
                 }
@@ -191,7 +183,9 @@ class Zume_Coaches {
                     <div id="icon-users" class="icon32"></div>
                     <h2>Active Coaches</h2>
                     <form method="post">
-                        <input type="hidden" name="page" value="<?php echo $_REQUEST['page'] ?>" />
+                        <?php if (isset( $_REQUEST['page'] )): ?>
+                        <input type="hidden" name="page" value="<?php echo esc_attr( sanitize_text_field( wp_unslash( $_REQUEST['page'] ) ) ) ?>" />
+                        <?php endif; ?>
                         <?php $list_class->search_box( 'Search Table', 'your-element-id' ); ?>
                     </form>
                     <?php $list_class->display(); ?>
@@ -201,7 +195,7 @@ class Zume_Coaches {
             case "unassigned":
                     $list_class = new Zume_Unassigned_Groups_List();
                 if ( isset( $_POST['s'] ) ){
-                    $list_class->prepare_items( $_POST['s'] );
+                    $list_class->prepare_items( sanitize_text_field( wp_unslash( $_POST['s'] ) ) );
                 } else {
                     $list_class->prepare_items();
                 }
@@ -210,7 +204,7 @@ class Zume_Coaches {
                         <div id="icon-users" class="icon32"></div>
                         <h2>Unassigned Groups</h2>
                         <form method="post">
-                            <input type="hidden" name="page" value="<?php echo $_REQUEST['page'] ?>" />
+                            <input type="hidden" name="page" value="<?php echo esc_attr( sanitize_text_field( wp_unslash( $_REQUEST['page'] ) ) ) ?>" />
                             <?php $list_class->search_box( 'Search Table', 'your-element-id' ); ?>
                         </form>
                         <?php $list_class->display(); ?>
@@ -221,7 +215,7 @@ class Zume_Coaches {
             default:
                 $list_class = new Zume_Group_Stats_List();
                 if ( isset( $_POST['s'] ) ){
-                    $list_class->prepare_items( $_POST['s'] );
+                    $list_class->prepare_items( sanitize_text_field( wp_unslash( $_POST['s'] ) ) );
                 } else {
                     $list_class->prepare_items();
                 }
@@ -230,7 +224,7 @@ class Zume_Coaches {
                     <div id="icon-users" class="icon32"></div>
                     <h2>Group Stats</h2>
                     <form method="post">
-                        <input type="hidden" name="page" value="<?php echo $_REQUEST['page'] ?>" />
+                        <input type="hidden" name="page" value="<?php echo esc_attr( sanitize_text_field( wp_unslash( $_REQUEST['page'] ) ) ) ?>" />
                         <?php $list_class->search_box( 'Search Table', 'your-element-id' ); ?>
                     </form>
                     <?php $list_class->display(); ?>
@@ -239,9 +233,8 @@ class Zume_Coaches {
                 break;
         }
 
-        $html .= '</div>'; // end div class wrap
+        echo '</div>'; // end div class wrap
 
-        echo $html; // Echo contents
     }
 
 }

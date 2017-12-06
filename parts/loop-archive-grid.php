@@ -1,8 +1,8 @@
 <?php
 // Adjust the amount of rows in the grid
-$grid_columns = 4; ?>
+$zume_grid_columns = 4; ?>
 
-<?php if ( 0 === ( $wp_query->current_post ) % $grid_columns ): ?>
+<?php if ( 0 === ( $wp_query->current_post ) % $zume_grid_columns ): ?>
 
     <div class="row archive-grid" data-equalizer> <!--Begin Row:-->
 
@@ -30,7 +30,7 @@ $grid_columns = 4; ?>
 
         </div>
 
-<?php if ( 0 === ( $wp_query->current_post + 1 ) % $grid_columns || ( $wp_query->current_post + 1 ) === $wp_query->post_count ): ?>
+<?php if ( 0 === ( $wp_query->current_post + 1 ) % $zume_grid_columns || ( $wp_query->current_post + 1 ) === $wp_query->post_count ): ?>
 
    </div>  <!--End Row: -->
 

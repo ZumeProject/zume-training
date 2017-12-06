@@ -31,7 +31,7 @@ require_once( 'class-tgm-plugin-activation.php' );
 //        ),
 //
  */
-function dt_register_required_plugins() {
+function zume_register_required_plugins() {
     /*
      * Array of plugin arrays. Required keys are name and slug.
      * If the source is NOT from the .org repo, then source is also required.
@@ -202,4 +202,4 @@ function dt_register_required_plugins() {
 
     tgmpa( $plugins, $config );
 }
-add_action( 'tgmpa_register', 'dt_register_required_plugins' );
+add_action( 'tgmpa_register', 'zume_register_required_plugins' );

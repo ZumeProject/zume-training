@@ -24,7 +24,7 @@ function zume_force_login() {
         return;
     }
 
-    $action = isset( $_REQUEST['action'] ) ? $_REQUEST['action'] : 'login';
+    $action = isset( $_REQUEST['action'] ) ? sanitize_key( $_REQUEST['action'] ) : 'login';
     if ( $action == 'rp' || $action == 'resetpass' ) {
         return;
     }
@@ -81,9 +81,7 @@ function zume_group_highest_session_completed($group_id) {
     global $wpdb;
 
     $where_query = 'group-'.$group_id.'-step-complete%';
-    $querystr = $wpdb->prepare( "SELECT MAX(post_excerpt) as completed FROM $wpdb->posts WHERE post_type = 'steplog' AND post_name LIKE %s", $where_query );
-
-    $result = $wpdb->get_results( $querystr, ARRAY_A );
+    $result = $wpdb->get_results( $wpdb->prepare( "SELECT MAX(post_excerpt) as completed FROM $wpdb->posts WHERE post_type = 'steplog' AND post_name LIKE %s", $where_query ), ARRAY_A );
 
     return (int) $result[0]['completed'];
 }
@@ -209,11 +207,11 @@ function zume_redirect() {
 
 
     ?>
-    <script>window.location.replace('<?php echo home_url( '/' ); ?>');</script>
+    <script>window.location.replace('<?php echo esc_js( home_url( '/' ) ); ?>');</script>
     <noscript>
 
         <div class="awesome-fancy-styling">
-            This site requires JavaScript and directories are not available. I will only be visible if you have javascript disabled and likely you are looking in the wrong part of our site. Please don't hack. You're IP Address is <?php echo $ipaddress; ?>.
+            This site requires JavaScript and directories are not available. I will only be visible if you have javascript disabled and likely you are looking in the wrong part of our site. Please don't hack. You're IP Address is <?php echo esc_html( $ipaddress ); ?>.
         </div>
 
     </noscript>
@@ -235,7 +233,7 @@ function zume_add_next_session_to_group_tabs() {
     }
     if (groups_is_user_member( get_current_user_id(), bp_get_group_id() )){
     ?>
-    <li><a href="<?php echo $link?>">Start Next Session</a></li>
+    <li><a href="<?php echo esc_attr( $link ); ?>">Start Next Session</a></li>
     <?php
     }
 }
@@ -245,10 +243,10 @@ add_action( 'bp_group_options_nav', 'zume_add_next_session_to_group_tabs' );
 add_filter( 'wpmu_welcome_notification', '__return_false' );
 
 //redirect to the dashboard after deleting a group
-function redirect_after_group_delete(){
+function zume_redirect_after_group_delete(){
     bp_core_redirect( "/dashboard" );
 }
-add_action( 'groups_delete_group', "redirect_after_group_delete" );
+add_action( 'groups_delete_group', "zume_redirect_after_group_delete" );
 
 //disable the public message button
 add_filter( 'bp_get_send_public_message_button', '__return_false' );
@@ -257,7 +255,7 @@ add_filter( 'bp_get_send_public_message_button', '__return_false' );
 /**
  * Remove menu items for coaches in the admin dashboard.
  */
-function custom_menu_page_removing() {
+function zume_custom_menu_page_removing() {
 
     if (is_admin() && current_user_can( 'coach' ) && !current_user_can( 'administrator' ) ) {
 
@@ -276,7 +274,7 @@ function custom_menu_page_removing() {
 
     }
 }
-add_action( 'admin_menu', 'custom_menu_page_removing' );
+add_action( 'admin_menu', 'zume_custom_menu_page_removing' );
 
 /**
  * Get User Name from Assigned To Field
@@ -306,7 +304,7 @@ function zume_wp_insert_post( $post_id, $post, $update ) {
         return;
     }
     if ( $post->post_type === 'steplog' && preg_match( '/^group-(\d+)-step-complete-session-(\d+)/i', $post->post_name, $matches ) ) {
-        session_completed_trigger_mailchimp( (int) $matches[1], (int) $matches[2] );
+        zume_session_completed_trigger_mailchimp( (int) $matches[1], (int) $matches[2] );
     }
 }
 add_action( 'wp_insert_post', 'zume_wp_insert_post', 10, 3 );

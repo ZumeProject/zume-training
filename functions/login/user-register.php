@@ -17,11 +17,11 @@ function zume_user_register($user_id) {
      * $display_name = bp_get_profile_field_data('field=Display_Name&user_id=' . $user_id);
      *
      */
-    add_user_to_mailchimp( $email );
+    zume_add_user_to_mailchimp( $email );
 }
 
 
-function add_user_to_mailchimp($email, $name = null) {
+function zume_add_user_to_mailchimp($email, $name = null) {
     $dc      = get_option( "zume_mailchimp_dc" );
     $api_key = get_option( "zume_mailchimp_api_key" );
     $list_id = get_option( "zume_mailchimp_list_id" );
@@ -60,7 +60,7 @@ function add_user_to_mailchimp($email, $name = null) {
 }
 
 
-function session_completed_trigger_mailchimp( $group_id, $session_number ) {
+function zume_session_completed_trigger_mailchimp( $group_id, $session_number ) {
     $group_id = (int) $group_id;
     $session_number = (int) $session_number;
     $api_key = get_option( "zume_mailchimp_api_key" );

@@ -1,6 +1,7 @@
 <?php
 // Comment Layout
 function zume_comments($comment, $args, $depth) {
+    // @codingStandardsIgnoreLine
     $GLOBALS['comment'] = $comment; ?>
     <li <?php comment_class( 'panel' ); ?>>
         <div class="media-object">
@@ -14,13 +15,13 @@ function zume_comments($comment, $args, $depth) {
                             // create variable
                             $bgauthemail = get_comment_author_email();
                         ?>
-                        <?php printf( __( '%s', 'zume' ), get_comment_author_link() ) ?> on
-                        <time datetime="<?php echo comment_time( 'Y-m-j' ); ?>"><a href="<?php echo htmlspecialchars( get_comment_link( $comment->comment_ID ) ) ?>"><?php comment_time( __( ' F jS, Y - g:ia', 'zume' ) ); ?> </a></time>
+                        <?php echo get_comment_author_link(); ?> on
+                        <time datetime="<?php echo comment_time( 'Y-m-j' ); ?>"><a href="<?php echo esc_attr( get_comment_link( $comment->comment_ID ) ) ?>"><?php comment_time( __( ' F jS, Y - g:ia', 'zume' ) ); ?> </a></time>
                         <?php edit_comment_link( __( '(Edit)', 'zume' ), '  ', '' ) ?>
                     </header>
                     <?php if ($comment->comment_approved == '0') : ?>
                         <div class="alert alert-info">
-                            <p><?php _e( 'Your comment is awaiting moderation.', 'zume' ) ?></p>
+                            <p><?php esc_html_e( 'Your comment is awaiting moderation.', 'zume' ) ?></p>
                         </div>
                     <?php endif; ?>
                     <section class="comment_content clearfix">

@@ -17,7 +17,7 @@ get_header();
             /* Load Dashboard */
 
 
-            echo 'Current User ID is: ' . get_current_user_id();
+            echo 'Current User ID is: ' . esc_html( get_current_user_id() );
 
 
 

@@ -20,13 +20,13 @@ get_header();
                  * @param 'id' in the url the id and session number is used to call the correct session.
                  */
 
-                $session = 1;
-                $language = zume_current_language();
-                if ( is_wp_error( $language ) ) {
-                    $language = 'en';
+                $zume_session = 1;
+                $zume_language = zume_current_language();
+                if ( is_wp_error( $zume_language ) ) {
+                    $zume_language = 'en';
                 }
 
-                Zume_Overview::load_sessions( $session, $language );
+                Zume_Overview::load_sessions( $zume_session, $zume_language );
 
                 ?>
 

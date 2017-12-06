@@ -16,13 +16,13 @@ function zume_top_nav() {
          'theme_location' => 'main-nav',                 // Where it's located in the theme
          'depth' => 5,                                   // Limit the depth of the nav
          'fallback_cb' => false,                         // Fallback function (see below)
-         'walker' => new Topbar_Menu_Walker()
+         'walker' => new Zume_Topbar_Menu_Walker()
      ));
 }
 
 // Big thanks to Brett Mason (https://github.com/brettsmason) for the awesome walker
-class Topbar_Menu_Walker extends Walker_Nav_Menu {
-    function start_lvl(&$output, $depth = 0, $args = array() ) {
+class Zume_Topbar_Menu_Walker extends Walker_Nav_Menu {
+    public function start_lvl(&$output, $depth = 0, $args = array() ) {
         $indent = str_repeat( "\t", $depth );
         $output .= "\n$indent<ul class=\"menu\">\n";
     }
@@ -37,12 +37,12 @@ function zume_off_canvas_nav() {
          'theme_location' => 'main-nav',                 // Where it's located in the theme
          'depth' => 5,                                   // Limit the depth of the nav
          'fallback_cb' => false,                         // Fallback function (see below)
-         'walker' => new Off_Canvas_Menu_Walker()
+         'walker' => new Zume_Off_Canvas_Menu_Walker()
      ));
 }
 
-class Off_Canvas_Menu_Walker extends Walker_Nav_Menu {
-    function start_lvl(&$output, $depth = 0, $args = array() ) {
+class Zume_Off_Canvas_Menu_Walker extends Walker_Nav_Menu {
+    public function start_lvl(&$output, $depth = 0, $args = array() ) {
         $indent = str_repeat( "\t", $depth );
         $output .= "\n$indent<ul class=\"vertical menu\">\n";
     }
@@ -79,16 +79,16 @@ function zume_footer_links_fallback() {
 }
 
 // Add Foundation active class to menu
-function required_active_nav_class( $classes, $item ) {
+function zume_required_active_nav_class( $classes, $item ) {
     if ( $item->current == 1 || $item->current_item_ancestor == true ) {
         $classes[] = 'active';
     }
     return $classes;
 }
-add_filter( 'nav_menu_css_class', 'required_active_nav_class', 10, 2 );
+add_filter( 'nav_menu_css_class', 'zume_required_active_nav_class', 10, 2 );
 
 // Numeric Page Navi (built into the theme by default)
-function zume_page_navi($before = '', $after = '') {
+function zume_page_navi() {
     global $wpdb, $wp_query;
     $request = $wp_query->request;
     $posts_per_page = intval( get_query_var( 'posts_per_page' ) );
@@ -118,19 +118,19 @@ function zume_page_navi($before = '', $after = '') {
     if ($start_page <= 0) {
         $start_page = 1;
     }
-    echo $before.'<nav class="page-navigation"><ul class="pagination">'."";
+    echo '<nav class="page-navigation"><ul class="pagination">';
     if ($start_page >= 2 && $pages_to_show < $max_page) {
         $first_page_text = __( 'First', 'zume' );
-        echo '<li><a href="'.get_pagenum_link().'" title="'.$first_page_text.'">'.$first_page_text.'</a></li>';
+        echo '<li><a href="'.esc_attr( get_pagenum_link() ).'" title="'. esc_attr( $first_page_text ) .'">'. esc_html( $first_page_text ) .'</a></li>';
     }
     echo '<li>';
     previous_posts_link( __( 'Previous', 'zume' ) );
     echo '</li>';
     for ($i = $start_page; $i <= $end_page; $i++) {
         if ($i == $paged) {
-            echo '<li class="current"> '.$i.' </li>';
+            echo '<li class="current"> '. esc_html( $i ).' </li>';
         } else {
-            echo '<li><a href="'.get_pagenum_link( $i ).'">'.$i.'</a></li>';
+            echo '<li><a href="'. esc_attr( get_pagenum_link( $i ) ).'">'.esc_html( $i ).'</a></li>';
         }
     }
     echo '<li>';
@@ -138,7 +138,7 @@ function zume_page_navi($before = '', $after = '') {
     echo '</li>';
     if ($end_page < $max_page) {
         $last_page_text = __( 'Last', 'zume' );
-        echo '<li><a href="'.get_pagenum_link( $max_page ).'" title="'.$last_page_text.'">'.$last_page_text.'</a></li>';
+        echo '<li><a href="'. esc_attr( get_pagenum_link( $max_page ) ).'" title="'.esc_attr( $last_page_text ) .'">'. esc_html( $last_page_text ) .'</a></li>';
     }
-    echo '</ul></nav>'.$after."";
+    echo '</ul></nav>';
 } /* End page navi */

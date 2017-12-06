@@ -49,7 +49,7 @@ add_action( 'bp_core_install_emails', 'email' );
 
 
 
-function group_enough_members_email() {
+function zume_group_enough_members_email() {
 
     $title = __( "Your group has enough members to start the first session", 'zume_project' );
     // Do not create if it already exists and is not in the trash
@@ -96,10 +96,10 @@ Fantastic! Your Zúme Training Group, {{group.name}}, now has at least four peop
     }
 
 }
-add_action( 'bp_core_install_emails', 'group_enough_members_email' );
+add_action( 'bp_core_install_emails', 'zume_group_enough_members_email' );
 
 
-function your_three_month_plan_email(){
+function zume_your_three_month_plan_email(){
     $title = __( "Your plan", 'zume_project' );
     // Do not create if it already exists and is not in the trash
     $post_exists = post_exists( '[{{{site.name}}}] ' . $title );
@@ -109,14 +109,14 @@ function your_three_month_plan_email(){
     }
 
     $email_html = __('Hi {{recipient.name}},
-	
+
 Here\'s a copy of the 3-month plan you submitted. A copy was sent to your coach. You can keep it for your personal reference. Feel free to forward it on to your training partner so you can pray for one another and hold each other accountable to these commitments.
 
 {{three_month_plan}}
 
 Zúme. Multiplying disciples. It\'s who we are. It\'s what we do.', 'zume_project');
-    $email_content = __('Hi {{recipient.name}}, 
-	
+    $email_content = __('Hi {{recipient.name}},
+
 Here\'s a copy of the 3-month plan you submitted. A copy was sent to your coach. You can keep it for your personal reference. Feel free to forward it on to your training partner so you can pray for one another and hold each other accountable to these commitments.
 
 {{three_month_plan}}
@@ -149,10 +149,10 @@ Zúme. Multiplying disciples. It\'s who we are. It\'s what we do.', 'zume_projec
     }
 
 }
-add_action( 'bp_core_install_emails', 'your_three_month_plan_email' );
+add_action( 'bp_core_install_emails', 'zume_your_three_month_plan_email' );
 
 
-function automatically_added_to_group_email() {
+function zume_automatically_added_to_group_email() {
 
     $title = __( 'Added to Group', 'zume_project' );
 
@@ -164,7 +164,7 @@ function automatically_added_to_group_email() {
     }
 
     $post_content = 'Congratulations! You are now part of the Zúme group &quot;<a href="{{{group.url}}}">{{group.name}}</a>&quot;
-	
+
 Return to <a href="{{{site.url}}}">ZumeProject.com</a> to:
 <ul>
 	<li>Communicate with your group and begin planning your first session together.</li>
@@ -172,7 +172,7 @@ Return to <a href="{{{site.url}}}">ZumeProject.com</a> to:
 	<li>Check out the "About" page to download the Guidebook and view other resources.</li>
 </ul>
 	';
-    $post_excerpt = 'Congratulations! You are now part of the Zúme group "{{group.name}}" 
+    $post_excerpt = 'Congratulations! You are now part of the Zúme group "{{group.name}}"
 
 To view the group, visit: {{{group.url}}}
 
@@ -212,7 +212,7 @@ add_action( 'bp_core_install_emails', 'automatically_added_to_group' );
 
 
 
-function invite_to_group_email() {
+function zume_invite_to_group_email() {
 
     $title = __( 'Join my training group', "zume_project" );
 
@@ -267,7 +267,7 @@ Join the movement of ordinary people who God could use to change the world.
         // add our email to the taxonomy term 'post_received_comment'
         // Email is a custom post type, therefore use wp_set_object_terms
 
-        $tt_ids = wp_set_object_terms( $post_id, 'invite_to_group_email', bp_get_email_tax_type() );
+        $tt_ids = wp_set_object_terms( $post_id, 'zume_invite_to_group_email', bp_get_email_tax_type() );
         foreach ( $tt_ids as $tt_id ) {
             $term = get_term_by( 'term_taxonomy_id', (int) $tt_id, bp_get_email_tax_type() );
             wp_update_term( (int) $term->term_id, bp_get_email_tax_type(), array(
@@ -277,5 +277,5 @@ Join the movement of ordinary people who God could use to change the world.
     }
 
 }
-add_action( 'bp_core_install_emails', 'invite_to_group_email' );
+add_action( 'bp_core_install_emails', 'zume_invite_to_group_email' );
 

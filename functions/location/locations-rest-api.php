@@ -1,9 +1,9 @@
 <?php
 
 /**
- * Location_Lookup_REST_API
+ * Zume_Location_Lookup_REST_API
  *
- * @class Location_Lookup_REST_API
+ * @class Zume_Location_Lookup_REST_API
  * @version 0.1
  * @since 0.1
  * @package Disciple_Tools
@@ -13,14 +13,14 @@
 if ( ! defined( 'ABSPATH' ) ) { exit; // Exit if accessed directly
 }
 
-class Location_Lookup_REST_API {
+class Zume_Location_Lookup_REST_API {
 
     private $version = 1;
     private $context = "lookup";
     private $namespace;
 
     /**
-     * Location_Lookup_REST_API The single instance of Location_Lookup_REST_API.
+     * Zume_Location_Lookup_REST_API The single instance of Zume_Location_Lookup_REST_API.
      * @var     object
      * @access  private
      * @since   0.1
@@ -28,13 +28,13 @@ class Location_Lookup_REST_API {
     private static $_instance = null;
 
     /**
-     * Main Location_Lookup_REST_API Instance
+     * Main Zume_Location_Lookup_REST_API Instance
      *
-     * Ensures only one instance of Location_Lookup_REST_API is loaded or can be loaded.
+     * Ensures only one instance of Zume_Location_Lookup_REST_API is loaded or can be loaded.
      *
      * @since 0.1
      * @static
-     * @return Location_Lookup_REST_API instance
+     * @return Zume_Location_Lookup_REST_API instance
      */
     public static function instance() {
         if ( is_null( self::$_instance ) ) {
@@ -90,7 +90,7 @@ class Location_Lookup_REST_API {
     public function find_by_address( WP_REST_Request $request){
         $params = $request->get_params();
         if (isset( $params['address'] )){
-            $result = Location_Lookup_Controller::get_tract_by_address( $params['address'] );
+            $result = Zume_Location_Lookup_Controller::get_tract_by_address( $params['address'] );
             if ($result["status"] == 'OK'){
                 return $result["tract"];
             } else {
@@ -111,7 +111,7 @@ class Location_Lookup_REST_API {
     public function get_tract_map( WP_REST_Request $request){
         $params = $request->get_params();
         if (isset( $params['address'] )){
-            $result = Location_Lookup_Controller::get_tract_map( $params['address'] );
+            $result = Zume_Location_Lookup_Controller::get_tract_map( $params['address'] );
             if ($result["status"] == 'OK'){
                 return $result;
             } else {
@@ -132,7 +132,7 @@ class Location_Lookup_REST_API {
     public function get_map_by_geoid( WP_REST_Request $request){
         $params = $request->get_params();
         if (isset( $params['geoid'] )){
-            $result = Location_Lookup_Controller::get_map_by_geoid( $params );
+            $result = Zume_Location_Lookup_Controller::get_map_by_geoid( $params );
             if ($result["status"] == 'OK'){
                 return $result;
             } else {

@@ -23,7 +23,7 @@ function zume_site_scripts() {
     wp_enqueue_style( 'site-css', get_template_directory_uri() . '/assets/styles/style.min.css', array(), '', 'all' );
 
     // Comment reply script for threaded comments
-    if ( is_singular() and comments_open() and ( get_option( 'thread_comments' ) == 1 )) {
+    if ( is_singular() && comments_open() && ( get_option( 'thread_comments' ) == 1 )) {
         wp_enqueue_script( 'comment-reply' );
     }
 

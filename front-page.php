@@ -67,17 +67,17 @@ Template Name: Full Width Home
                         <div class="row">
                             <div class="medium-4 columns center">
                                 <h4 class="center" style="text-transform: uppercase"><span style="font-size:2.4rem;">&#10102</span>  Sign up</h4>
-                                <img class="center" src="<?php echo get_stylesheet_directory_uri() . '/assets/images/'; ?>signup.jpg" alt="" width="100" height="100" />
+                                <img class="center" src="<?php echo esc_attr( get_stylesheet_directory_uri() ) . '/assets/images/'; ?>signup.jpg" alt="" width="100" height="100" />
 
                             </div>
                             <div class="medium-4 columns center">
                                 <h4 class="center" style="text-transform: uppercase"><span style="font-size:2.4rem;">&#10103</span> Invite some friends</h4>
-                                <img class="center" src="<?php echo get_stylesheet_directory_uri() . '/assets/images/'; ?>invite.jpg" alt="" width="100" height="100" />
+                                <img class="center" src="<?php echo esc_attr( get_stylesheet_directory_uri() ) . '/assets/images/'; ?>invite.jpg" alt="" width="100" height="100" />
 
                             </div>
                             <div class="medium-4 columns center">
                                 <h4 class="center" style="text-transform: uppercase"><span style="font-size:2.4rem;">&#10104</span> Host a training</h4>
-                                <img class="center" src="<?php echo get_stylesheet_directory_uri() . '/assets/images/'; ?>training.jpg" alt="" width="100" height="100" />
+                                <img class="center" src="<?php echo esc_attr( get_stylesheet_directory_uri() ) . '/assets/images/'; ?>training.jpg" alt="" width="100" height="100" />
 
                             </div>
                         </div>

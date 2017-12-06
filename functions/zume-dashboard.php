@@ -53,12 +53,11 @@ class Zume_Dashboard {
      * @return mixed
      */
     public function display_your_groups() {
-        echo $this->load_your_groups();
+        $this->load_your_groups(); // prints
     }
 
     /**
      * Loads the display for Dashboard section "Your Groups"
-     * @return mixed
      */
     protected function load_your_groups() {
 
@@ -80,7 +79,7 @@ class Zume_Dashboard {
             $group = groups_get_group( $one_group->group_id ); // gets group object
             $group_name = $group->name;
 
-            echo $group_name . '<br>';
+            echo esc_html( $group_name ) . '<br>';
         }
     }
 
@@ -100,7 +99,7 @@ class Zume_Dashboard {
 
             if ( empty( groups_get_group_mods( $one_group->group_id ) ) ) {
                 echo '<li> ';
-                echo 'No coaches yet for ' . $group_name;
+                echo 'No coaches yet for ' . esc_html( $group_name );
                 echo '</li>';
 
             } else {
@@ -109,9 +108,11 @@ class Zume_Dashboard {
                 foreach ($group_mods as $mod_user) {
                     if (get_current_user_id() != $mod_user->user_id) {
                         echo '<li> ';
+                        // @codingStandardsIgnoreLine
                         echo bp_core_fetch_avatar( array( 'html' => true, 'item_id' => $mod_user->user_id ) ) . '<br>';
+                        // @codingStandardsIgnoreLine
                         echo bp_core_get_userlink( $mod_user->user_id );
-                        echo '<br> coach for ' . $group_name;
+                        echo '<br> coach for ' . esc_html( $group_name );
                         echo '</li>';
 
                     }

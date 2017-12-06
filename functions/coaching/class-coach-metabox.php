@@ -16,7 +16,7 @@ if ( ! defined( 'ABSPATH' ) ) { exit; // Exit if accessed directly
 
 if (function_exists( 'bp_is_active' ) && bp_is_active( 'groups' )) :
 
-    class Coach_Assignment extends BP_Group_Extension
+    class Zume_Coach_Assignment extends BP_Group_Extension
     {
         /**
          * Your __construct() method will contain configuration options for
@@ -56,7 +56,7 @@ if (function_exists( 'bp_is_active' ) && bp_is_active( 'groups' )) :
             foreach ($plain_fields as $field) {
                 $key = $field;
                 if (isset( $_POST[$key] )) {
-                    $value = $_POST[$key];
+                    $value = sanitize_text_field( wp_unslash( $_POST[$key] ) );
                     groups_update_groupmeta( $group_id, $field, $value );
                 }
             }
@@ -69,11 +69,10 @@ if (function_exists( 'bp_is_active' ) && bp_is_active( 'groups' )) :
             $assigned_to = '';
             $exclude_group = '';
             $exclude_user = '';
-            $html = '';
 
 
             // Start drop down
-            $html .= '<select name="assigned_to" id="assigned_to" class="edit-input">';
+            echo '<select name="assigned_to" id="assigned_to" class="edit-input">';
 
             // Set selected state
             if (isset( $group_id )){
@@ -82,7 +81,7 @@ if (function_exists( 'bp_is_active' ) && bp_is_active( 'groups' )) :
 
             if (empty( $assigned_to ) || $assigned_to == 'dispatch' ) {
                 // set default to dispatch
-                $html .= '<option value="dispatch" selected>Dispatch</option>';
+                echo '<option value="dispatch" selected>Dispatch</option>';
             }
             elseif ( !empty( $assigned_to ) ) { // If there is already a record
                 $metadata = groups_get_groupmeta( $group_id, 'assigned_to', true );
@@ -93,24 +92,24 @@ if (function_exists( 'bp_is_active' ) && bp_is_active( 'groups' )) :
                 // Build option for current value
                 if ( $type == 'user') {
                     $value = get_user_by( 'id', $id );
-                    $html .= '<option value="user-'.$id.'" selected>'.$value->display_name.'</option>';
+                    echo '<option value="user-'. esc_attr( $id ) .'" selected>'. esc_html( $value->display_name ).'</option>';
 
                     // exclude the current id from the $results list
                     $exclude_user = "'exclude' => $id";
                 } else {
                     $value = get_term( $id );
-                    $html .= '<option value="team-'.$value->term_id.'" selected>'.$value->name.'</option>';
+                    echo '<option value="team-'. esc_attr( $value->term_id ) .'" selected>'. esc_html( $value->name ) .'</option>';
 
                     // exclude the current id from the $results list
                     $exclude_group = "'exclude' => $id";
                 }
 
-                $html .= '<option value="" disabled> --- Dispatch</option><option value="dispatch">Dispatch</option>'; // add dispatch to top of list
+                echo '<option value="" disabled> --- Dispatch</option><option value="dispatch">Dispatch</option>'; // add dispatch to top of list
 
             }
 
             // Visually separate groups from users
-            $html .= '<option value="" disabled> --- Coaches</option>';
+            echo '<option value="" disabled> --- Coaches</option>';
 
             // Collect user list
             $args = array('role__in' => array( 'coach' ), 'fields' => array( 'ID', 'display_name' ), 'exclude' => $exclude_user );
@@ -118,29 +117,28 @@ if (function_exists( 'bp_is_active' ) && bp_is_active( 'groups' )) :
 
             // Loop user list
             foreach ($results as $value) {
-                $html .= '<option value="user-'.$value->ID.'">'.$value->display_name.'</option>';
+                echo '<option value="user-'. esc_attr( $value->ID ) .'">'. esc_html( $value->display_name ) .'</option>';
             }
 
             // Visually categorize groups
-            $html .= '<option value="" disabled> --- Teams</option>';
+            echo '<option value="" disabled> --- Teams</option>';
 
             // Get groups list excluding current selection
             $results = get_terms( array( 'taxonomy' => 'user-group', 'hide_empty' => true, 'exclude' => $exclude_group ) );
 
             // Loop list of groups list
             foreach ($results as $value) {
-                $html .= '<option value="group-'.$value->term_id.'">'.$value->name.'</option>';
+                echo '<option value="group-'. esc_attr( $value->term_id ) .'">'. esc_html( $value->name ) .'</option>';
             }
 
             // End drop down
-            $html .= '</select>  ';
+            echo '</select>  ';
 
-            $html .= '<button type="submit" name="submit" class="button" value="submit">Save</button>';
+            echo '<button type="submit" name="submit" class="button" value="submit">Save</button>';
 
-            echo $html;
         }
 
     }
-    bp_register_group_extension( 'Coach_Assignment' );
+    bp_register_group_extension( 'Zume_Coach_Assignment' );
 
 endif;

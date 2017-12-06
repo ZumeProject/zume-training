@@ -8,7 +8,7 @@
 if ( ! defined( 'ABSPATH' ) ) { exit; // Exit if accessed directly
 }
 
-class Location_Lookup_Controller {
+class Zume_Location_Lookup_Controller {
 
     /**
      * Returns the tract geoid from an address

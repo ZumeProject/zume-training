@@ -100,7 +100,7 @@ class Zume_Group_Stats_List extends WP_List_Table {
         // Sort order.
         $order = 'DESC';
         if ( !empty( $_REQUEST['order'] ) ) {
-            $order = ( 'desc' == strtolower( $_REQUEST['order'] ) ) ? 'DESC' : 'ASC';
+            $order = ( 'desc' == strtolower( sanitize_key( $_REQUEST['order'] ) ) ) ? 'DESC' : 'ASC';
         }
 
         // Order by - default to newest.
@@ -127,7 +127,7 @@ class Zume_Group_Stats_List extends WP_List_Table {
 
         // Are we doing a search?
         if ( !empty( $_REQUEST['s'] ) ) {
-            $search_terms = $_REQUEST['s'];
+            $search_terms = sanitize_text_field( wp_unslash( $_REQUEST['s'] ) );
         }
 
         // Check if user has clicked on a specific group (if so, fetch only that group).
@@ -136,8 +136,8 @@ class Zume_Group_Stats_List extends WP_List_Table {
         }
 
         // Set the current view.
-        if ( isset( $_GET['group_status'] ) && in_array( $_GET['group_status'], array( 'public', 'private', 'hidden' ) ) ) {
-            $this->view = $_GET['group_status'];
+        if ( isset( $_GET['group_status'] ) && in_array( sanitize_key( $_GET['group_status'] ), array( 'public', 'private', 'hidden' ) ) ) {
+            $this->view = sanitize_key( $_GET['group_status'] );
         }
 
         // We'll use the ids of group status types for the 'include' param.
@@ -157,8 +157,8 @@ class Zume_Group_Stats_List extends WP_List_Table {
 
         // Group types
         $group_type = false;
-        if ( isset( $_GET['bp-group-type'] ) && null !== bp_groups_get_group_type_object( $_GET['bp-group-type'] ) ) {
-            $group_type = $_GET['bp-group-type'];
+        if ( isset( $_GET['bp-group-type'] ) && null !== bp_groups_get_group_type_object( sanitize_key( $_GET['bp-group-type'] ) ) ) {
+            $group_type = sanitize_key( $_GET['bp-group-type'] );
         }
 
         // If we're viewing a specific group, flatten all activities into a single array.
@@ -233,7 +233,7 @@ class Zume_Group_Stats_List extends WP_List_Table {
      * @since 1.7.0
      */
     public function no_items() {
-        _e( 'No groups found.', 'buddypress' );
+        esc_html_e( 'No groups found.', 'buddypress' );
     }
 
     /**
@@ -246,9 +246,10 @@ class Zume_Group_Stats_List extends WP_List_Table {
 
         <h2 class="screen-reader-text"><?php
             /* translators: accessibility text */
-            _e( 'Groups list', 'buddypress' );
+            esc_html_e( 'Groups list', 'buddypress' );
             ?></h2>
 
+        <?php /* @codingStandardsIgnoreLine */ ?>
         <table class="wp-list-table <?php echo implode( ' ', $this->get_table_classes() ); ?>" cellspacing="0">
             <thead>
             <tr>
