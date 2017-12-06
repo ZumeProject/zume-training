@@ -4,16 +4,17 @@
  * Zume Coach Metabox
  *
  * @class Zume_Coach_Metabox
- * @version	0.1
+ * @version 0.1
  * @since 0.1
- * @package	Zume
+ * @package Zume
  * @author Chasm.Solutions & Kingdom.Training
  */
 
-if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
+if ( ! defined( 'ABSPATH' ) ) { exit; // Exit if accessed directly
+}
 
 
-if (function_exists('bp_is_active') && bp_is_active('groups')) :
+if (function_exists( 'bp_is_active' ) && bp_is_active( 'groups' )) :
 
     class Coach_Assignment extends BP_Group_Extension
     {
@@ -36,17 +37,17 @@ if (function_exists('bp_is_active') && bp_is_active('groups')) :
                     )
                 ),
             );
-            parent::init($args);
+            parent::init( $args );
         }
 
-        public function display($group_id = NULL)
+        public function display($group_id = null)
         {
             echo 'display';
 
         }
 
 
-        public function settings_screen_save($group_id = NULL)
+        public function settings_screen_save($group_id = null)
         {
             $plain_fields = array(
                 'assigned_to',
@@ -54,15 +55,15 @@ if (function_exists('bp_is_active') && bp_is_active('groups')) :
             );
             foreach ($plain_fields as $field) {
                 $key = $field;
-                if (isset($_POST[$key])) {
+                if (isset( $_POST[$key] )) {
                     $value = $_POST[$key];
-                    groups_update_groupmeta($group_id, $field, $value);
+                    groups_update_groupmeta( $group_id, $field, $value );
                 }
             }
         }
 
 
-        public function settings_screen($group_id = NULL)
+        public function settings_screen($group_id = null)
         {
 
             $assigned_to = '';
@@ -75,29 +76,29 @@ if (function_exists('bp_is_active') && bp_is_active('groups')) :
             $html .= '<select name="assigned_to" id="assigned_to" class="edit-input">';
 
             // Set selected state
-            if (isset($group_id)){
-                $assigned_to = groups_get_groupmeta( $group_id, 'assigned_to', true);
+            if (isset( $group_id )){
+                $assigned_to = groups_get_groupmeta( $group_id, 'assigned_to', true );
             }
 
-            if(empty( $assigned_to) || $assigned_to == 'dispatch' ) {
+            if (empty( $assigned_to ) || $assigned_to == 'dispatch' ) {
                 // set default to dispatch
                 $html .= '<option value="dispatch" selected>Dispatch</option>';
             }
             elseif ( !empty( $assigned_to ) ) { // If there is already a record
-                $metadata = groups_get_groupmeta($group_id, 'assigned_to', true);
-                $meta_array = explode('-', $metadata); // Separate the type and id
+                $metadata = groups_get_groupmeta( $group_id, 'assigned_to', true );
+                $meta_array = explode( '-', $metadata ); // Separate the type and id
                 $type = $meta_array[0]; // Build variables
                 $id = $meta_array[1];
 
                 // Build option for current value
                 if ( $type == 'user') {
-                    $value = get_user_by( 'id', $id);
+                    $value = get_user_by( 'id', $id );
                     $html .= '<option value="user-'.$id.'" selected>'.$value->display_name.'</option>';
 
                     // exclude the current id from the $results list
                     $exclude_user = "'exclude' => $id";
                 } else {
-                    $value = get_term( $id);
+                    $value = get_term( $id );
                     $html .= '<option value="team-'.$value->term_id.'" selected>'.$value->name.'</option>';
 
                     // exclude the current id from the $results list
@@ -112,8 +113,8 @@ if (function_exists('bp_is_active') && bp_is_active('groups')) :
             $html .= '<option value="" disabled> --- Coaches</option>';
 
             // Collect user list
-            $args = array('role__in' => array('coach'), 'fields' => array('ID', 'display_name'), 'exclude' => $exclude_user );
-            $results = get_users($args);
+            $args = array('role__in' => array( 'coach' ), 'fields' => array( 'ID', 'display_name' ), 'exclude' => $exclude_user );
+            $results = get_users( $args );
 
             // Loop user list
             foreach ($results as $value) {
@@ -140,6 +141,6 @@ if (function_exists('bp_is_active') && bp_is_active('groups')) :
         }
 
     }
-    bp_register_group_extension('Coach_Assignment');
+    bp_register_group_extension( 'Coach_Assignment' );
 
 endif;

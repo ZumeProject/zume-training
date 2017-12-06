@@ -13,7 +13,7 @@ get_header();
 
         <div id="main" class="large-12 medium-12 columns" role="main">
 
-	        <?php
+            <?php
             /* Load Dashboard */
 
 

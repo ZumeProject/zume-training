@@ -4,13 +4,14 @@
  * Zume Overview
  *
  * @class Disciple_Tools_Admin_Menus
- * @version	0.1
+ * @version 0.1
  * @since 0.1
- * @package	Disciple_Tools
+ * @package Disciple_Tools
  * @author Chasm.Solutions & Kingdom.Training
  */
 
-if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
+if ( ! defined( 'ABSPATH' ) ) { exit; // Exit if accessed directly
+}
 
 class Zume_Overview {
 
@@ -78,65 +79,65 @@ class Zume_Overview {
             <h3></h3>
             <section>
                 <h3 style="text-align: center; font-weight: bold">Session 2</h3>
-	            <?php self::get_page_content( '2', $language ) ?>
+                <?php self::get_page_content( '2', $language ) ?>
             </section>
 
             <h3></h3>
             <section>
                 <h3 style="text-align: center; font-weight: bold">Session 3</h3>
-	            <?php self::get_page_content( '3', $language ) ?>
+                <?php self::get_page_content( '3', $language ) ?>
             </section>
 
             <h3></h3>
             <section>
                 <h3 style="text-align: center; font-weight: bold">Session 4</h3>
-	            <?php self::get_page_content( '4', $language ) ?>
+                <?php self::get_page_content( '4', $language ) ?>
             </section>
 
             <h3></h3>
             <section>
                 <h3 style="text-align: center; font-weight: bold">Session 5</h3>
-	            <?php self::get_page_content( '5', $language ) ?>
+                <?php self::get_page_content( '5', $language ) ?>
             </section>
 
             <h3></h3>
             <section>
                 <h3 style="text-align: center; font-weight: bold">Session 6</h3>
-	            <?php self::get_page_content( '6', $language ) ?>
+                <?php self::get_page_content( '6', $language ) ?>
             </section>
 
             <h3></h3>
             <section>
                 <h3 style="text-align: center; font-weight: bold">Session 7</h3>
-	            <?php self::get_page_content( '7', $language ) ?>
+                <?php self::get_page_content( '7', $language ) ?>
             </section>
 
             <h3></h3>
             <section>
                 <h3 style="text-align: center; font-weight: bold">Session 8</h3>
-	            <?php self::get_page_content( '8', $language ) ?>
+                <?php self::get_page_content( '8', $language ) ?>
             </section>
 
             <h3></h3>
             <section>
                 <h3 style="text-align: center; font-weight: bold">Session 9</h3>
-	            <?php self::get_page_content( '9', $language ) ?>
+                <?php self::get_page_content( '9', $language ) ?>
             </section>
 
             <h3></h3>
             <section>
                 <h3 style="text-align: center; font-weight: bold">Session 10 - Advanced Training</h3>
-	            <?php self::get_page_content( '10', $language ) ?>
+                <?php self::get_page_content( '10', $language ) ?>
             </section>
 
         </div>
 
-        <?php if(is_user_logged_in()) { self::next_session_block(); } ?>
+        <?php if (is_user_logged_in()) { self::next_session_block(); } ?>
 
         <?php
     }
 
-    public static function next_session_block () {
+    public static function next_session_block() {
         ?>
         <div class="callout">
             <p class="center padding-bottom">Go to the Dashboard to select your Group and start the next session</p>
@@ -145,26 +146,26 @@ class Zume_Overview {
         <?php
     }
 
-	/**
-	 * Pulls the content from the pages database
-	 */
-	public static function get_page_content( $session, $language = 'en' ) {
+    /**
+     * Pulls the content from the pages database
+     */
+    public static function get_page_content( $session, $language = 'en' ) {
 
-	    $session_title = 'Session ' . $session . ' Overview';
-		$page_object = get_page_by_title( $session_title, OBJECT, 'page' );
+        $session_title = 'Session ' . $session . ' Overview';
+        $page_object = get_page_by_title( $session_title, OBJECT, 'page' );
 
-		if( $language != 'en' ) {
-			$translation_id = zume_get_translation( $page_object->ID, $language );
-			$page_object = get_post( $translation_id, OBJECT );
+        if ( $language != 'en' ) {
+            $translation_id = zume_get_translation( $page_object->ID, $language );
+            $page_object = get_post( $translation_id, OBJECT );
         }
 
-		if ( ! empty( $page_object ) || ! empty( $page_object->post_content )) {
-			$page_content = (string) $page_object->post_content;
+        if ( ! empty( $page_object ) || ! empty( $page_object->post_content )) {
+            $page_content = (string) $page_object->post_content;
 			// @codingStandardsIgnoreLine
 			echo "<div class=\"overview\">$page_content</div>";
-		}
-		else {
-			print 'Please republish "' . esc_html( $session_title ) . '" with content for this section in the pages administration area.';
-		}
-	}
+        }
+        else {
+            print 'Please republish "' . esc_html( $session_title ) . '" with content for this section in the pages administration area.';
+        }
+    }
 }

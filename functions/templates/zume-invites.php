@@ -1,6 +1,6 @@
 <?php
 
-function zume_page_content_zume_invites () {
+function zume_page_content_zume_invites() {
     ?>
 
     <h2 class="center">Join a Group</h2>

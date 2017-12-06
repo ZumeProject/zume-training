@@ -11,9 +11,9 @@
  * @param string $meta_key
  * @return mixed
  */
-function custom_field($meta_key='') {
+function custom_field($meta_key = '') {
     //get current group id and load meta_key value if passed. If not pass it blank
-    return groups_get_groupmeta( bp_get_group_id(), $meta_key) ;
+    return groups_get_groupmeta( bp_get_group_id(), $meta_key );
 }
 
 /**
@@ -23,11 +23,11 @@ function group_edit_fields_markup() {
     global $bp, $wpdb;
     ?>
 
-    <input type="hidden" id="tract" name="tract" value="<?php echo custom_field('tract'); ?>" required/>
-    <input type="hidden" id="lng" name="lng" value="<?php echo custom_field('lng'); ?>"  required/>
-    <input type="hidden" id="lat" name="lat" value="<?php echo custom_field('lat'); ?>"  required/>
-    <input type="hidden" id="state" name="state" value="<?php echo custom_field('state'); ?>"  required/>
-    <input type="hidden" id="county" name="county" value="<?php echo custom_field('county'); ?>"  required/>
+    <input type="hidden" id="tract" name="tract" value="<?php echo custom_field( 'tract' ); ?>" required/>
+    <input type="hidden" id="lng" name="lng" value="<?php echo custom_field( 'lng' ); ?>"  required/>
+    <input type="hidden" id="lat" name="lat" value="<?php echo custom_field( 'lat' ); ?>"  required/>
+    <input type="hidden" id="state" name="state" value="<?php echo custom_field( 'state' ); ?>"  required/>
+    <input type="hidden" id="county" name="county" value="<?php echo custom_field( 'county' ); ?>"  required/>
 
     <style>
         /* Always set the map height explicitly to define the size of the div
@@ -60,14 +60,14 @@ function group_edit_fields_markup() {
         jQuery(document).ready(function() {
 
             jQuery(window).load(function () {
-                var geoid = '<?php echo custom_field('tract'); ?>';
-                var lng = '<?php echo custom_field('lng'); ?>';
-                var lat = '<?php echo custom_field('lat'); ?>';
-                var state = '<?php echo custom_field('state'); ?>';
-                var county = '<?php echo custom_field('county'); ?>';
+                var geoid = '<?php echo custom_field( 'tract' ); ?>';
+                var lng = '<?php echo custom_field( 'lng' ); ?>';
+                var lat = '<?php echo custom_field( 'lat' ); ?>';
+                var state = '<?php echo custom_field( 'state' ); ?>';
+                var county = '<?php echo custom_field( 'county' ); ?>';
 
 
-                var restURL = '<?php echo get_rest_url(null, '/lookup/v1/tract/getmapbygeoid'); ?>';
+                var restURL = '<?php echo get_rest_url( null, '/lookup/v1/tract/getmapbygeoid' ); ?>';
 
                 jQuery.post( restURL, { geoid: geoid })
                     .done(function( data ) {
@@ -106,7 +106,7 @@ function group_edit_fields_markup() {
                 jQuery('#spinner').prepend('<img src="<?php echo get_template_directory_uri(); ?>/assets/images/spinner.svg" style="height:30px;" />');
 
                 var address = jQuery('#address').val();
-                var restURL = '<?php echo get_rest_url(null, '/lookup/v1/tract/gettractmap'); ?>';
+                var restURL = '<?php echo get_rest_url( null, '/lookup/v1/tract/gettractmap' ); ?>';
                 jQuery.post( restURL, { address: address })
                     .done(function( data ) {
                         jQuery('#spinner').html('');
@@ -217,7 +217,7 @@ function group_create_fields_markup() {
                 jQuery('#spinner').prepend('<img src="<?php echo get_template_directory_uri(); ?>/assets/images/spinner.svg" style="height:30px;" />');
 
                 var address = jQuery('#address').val();
-                var restURL = '<?php echo get_rest_url(null, '/lookup/v1/tract/gettractmap'); ?>';
+                var restURL = '<?php echo get_rest_url( null, '/lookup/v1/tract/gettractmap' ); ?>';
                 jQuery.post( restURL, { address: address })
                     .done(function( data ) {
                         jQuery('#spinner').html('');
@@ -278,13 +278,19 @@ function group_header_fields_save($group_id)
 {
     global $bp, $wpdb;
     $plain_fields = array(
-        'address', 'tract', 'lng', 'lat', 'state', 'county', 'assigned_to'
+        'address',
+    'tract',
+    'lng',
+    'lat',
+    'state',
+    'county',
+    'assigned_to'
     );
     foreach ($plain_fields as $field) {
         $key = $field;
-        if (isset($_POST[$key])) {
+        if (isset( $_POST[$key] )) {
             $value = $_POST[$key];
-            groups_update_groupmeta($group_id, $field, $value);
+            groups_update_groupmeta( $group_id, $field, $value );
         }
     }
 }
@@ -292,4 +298,4 @@ function group_header_fields_save($group_id)
 add_filter( 'bp_after_group_details_creation_step', 'group_create_fields_markup' );
 add_filter( 'bp_after_group_details_admin', 'group_edit_fields_markup' );
 add_action( 'groups_group_details_edited', 'group_header_fields_save' );
-add_action( 'groups_created_group',  'group_header_fields_save' );
+add_action( 'groups_created_group', 'group_header_fields_save' );

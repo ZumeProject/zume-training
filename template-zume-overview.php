@@ -22,7 +22,7 @@ get_header();
 
                 $session = 1;
                 $language = zume_current_language();
-                if( is_wp_error( $language ) ) {
+                if ( is_wp_error( $language ) ) {
                     $language = 'en';
                 }
 

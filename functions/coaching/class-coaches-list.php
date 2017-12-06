@@ -22,8 +22,8 @@
  * Since I will be keeping this tutorial up-to-date for the foreseeable future,
  * I am going to work with the copy of the class provided in WordPress core.
  */
-if(!class_exists('WP_List_Table')){
-    require_once(ABSPATH . 'wp-admin/includes/class-wp-list-table.php');
+if ( !class_exists( 'WP_List_Table' )){
+    require_once( ABSPATH . 'wp-admin/includes/class-wp-list-table.php' );
 }
 
 
@@ -146,12 +146,12 @@ class Zume_Coaches_List extends WP_List_Table {
      * @return string Text or HTML to be placed inside the column <td>
      **************************************************************************/
     function column_default($item, $column_name){
-        switch($column_name){
+        switch ($column_name){
             case 'rating':
             case 'director':
                 return $item[$column_name];
             default:
-                return print_r($item,true); //Show the whole array for troubleshooting purposes
+                return print_r( $item, true ); //Show the whole array for troubleshooting purposes
         }
     }
 
@@ -176,15 +176,15 @@ class Zume_Coaches_List extends WP_List_Table {
 
         //Build row actions
         $actions = array(
-            'edit'      => sprintf('<a href="?page=%s&action=%s&movie=%s">Edit</a>',$_REQUEST['page'],'edit',$item['ID']),
-            'delete'    => sprintf('<a href="?page=%s&action=%s&movie=%s">Delete</a>',$_REQUEST['page'],'delete',$item['ID']),
+            'edit'      => sprintf( '<a href="?page=%s&action=%s&movie=%s">Edit</a>', $_REQUEST['page'], 'edit', $item['ID'] ),
+            'delete'    => sprintf( '<a href="?page=%s&action=%s&movie=%s">Delete</a>', $_REQUEST['page'], 'delete', $item['ID'] ),
         );
 
         //Return the title contents
         return sprintf('%1$s <span style="color:silver">(id:%2$s)</span>%3$s',
             /*$1%s*/ $item['title'],
             /*$2%s*/ $item['ID'],
-            /*$3%s*/ $this->row_actions($actions)
+            /*$3%s*/ $this->row_actions( $actions )
         );
     }
 
@@ -247,9 +247,9 @@ class Zume_Coaches_List extends WP_List_Table {
      **************************************************************************/
     function get_sortable_columns() {
         $sortable_columns = array(
-            'title'     => array('title',false),     //true means it's already sorted
-            'rating'    => array('rating',false),
-            'director'  => array('director',false)
+            'title'     => array( 'title',false ),     //true means it's already sorted
+            'rating'    => array( 'rating',false ),
+            'director'  => array( 'director',false )
         );
         return $sortable_columns;
     }
@@ -287,8 +287,8 @@ class Zume_Coaches_List extends WP_List_Table {
     function process_bulk_action() {
 
         //Detect when a bulk action is being triggered...
-        if( 'delete'===$this->current_action() ) {
-            wp_die('Items deleted (or they would be if we had items to delete)!');
+        if ( 'delete' ===$this->current_action() ) {
+            wp_die( 'Items deleted (or they would be if we had items to delete)!' );
         }
 
     }
@@ -336,7 +336,7 @@ class Zume_Coaches_List extends WP_List_Table {
          * 3 other arrays. One for all columns, one for hidden columns, and one
          * for sortable columns.
          */
-        $this->_column_headers = array($columns, $hidden, $sortable);
+        $this->_column_headers = array( $columns, $hidden, $sortable );
 
 
         /**
@@ -357,13 +357,13 @@ class Zume_Coaches_List extends WP_List_Table {
          */
         $data = $this->example_data;
 
-        if( $search != NULL ){ /* If the value is not NULL, do a search for it. */
+        if ( $search != null ){ /* If the value is not NULL, do a search for it. */
 
             // Trim Search Term
-            $search = trim($search);
+            $search = trim( $search );
 
             /* Notice how you can search multiple columns for your search term easily, and return one data set */
-            $data = $wpdb->get_results($wpdb->prepare("SELECT * FROM ".$wpdb->prefix."table_name WHERE `col_one` LIKE '%%%s%%' OR `col_two` LIKE '%%%s%%'", $search, $search), ARRAY_A);
+            $data = $wpdb->get_results( $wpdb->prepare( "SELECT * FROM ".$wpdb->prefix."table_name WHERE `col_one` LIKE '%%%s%%' OR `col_two` LIKE '%%%s%%'", $search, $search ), ARRAY_A );
 
         }
 
@@ -376,13 +376,13 @@ class Zume_Coaches_List extends WP_List_Table {
          * to a custom query. The returned data will be pre-sorted, and this array
          * sorting technique would be unnecessary.
          */
-        function usort_reorder($a,$b){
-            $orderby = (!empty($_REQUEST['orderby'])) ? $_REQUEST['orderby'] : 'title'; //If no sort, default to title
-            $order = (!empty($_REQUEST['order'])) ? $_REQUEST['order'] : 'asc'; //If no order, default to asc
-            $result = strcmp($a[$orderby], $b[$orderby]); //Determine sort order
-            return ($order==='asc') ? $result : -$result; //Send final sort direction to usort
+        function usort_reorder($a, $b){
+            $orderby = ( !empty( $_REQUEST['orderby'] ) ) ? $_REQUEST['orderby'] : 'title'; //If no sort, default to title
+            $order = ( !empty( $_REQUEST['order'] ) ) ? $_REQUEST['order'] : 'asc'; //If no order, default to asc
+            $result = strcmp( $a[$orderby], $b[$orderby] ); //Determine sort order
+            return ( $order ==='asc' ) ? $result : -$result; //Send final sort direction to usort
         }
-        usort($data, 'usort_reorder');
+        usort( $data, 'usort_reorder' );
 
 
         /***********************************************************************
@@ -412,7 +412,7 @@ class Zume_Coaches_List extends WP_List_Table {
          * without filtering. We'll need this later, so you should always include it
          * in your own package classes.
          */
-        $total_items = count($data);
+        $total_items = count( $data );
 
 
         /**
@@ -420,7 +420,7 @@ class Zume_Coaches_List extends WP_List_Table {
          * to ensure that the data is trimmed to only the current page. We can use
          * array_slice() to
          */
-        $data = array_slice($data,(($current_page-1)*$per_page),$per_page);
+        $data = array_slice( $data, ( ( $current_page -1 ) *$per_page ), $per_page );
 
 
 
@@ -437,7 +437,7 @@ class Zume_Coaches_List extends WP_List_Table {
         $this->set_pagination_args( array(
             'total_items' => $total_items,                  //WE have to calculate the total number of items
             'per_page'    => $per_page,                     //WE have to determine how many items to show on a page
-            'total_pages' => ceil($total_items/$per_page)   //WE have to calculate the total number of pages
+            'total_pages' => ceil( $total_items /$per_page )   //WE have to calculate the total number of pages
         ) );
     }
 
