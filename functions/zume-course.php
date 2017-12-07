@@ -11,323 +11,319 @@
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
-	exit;
+    exit;
 } // Exit if accessed directly
 
 class Zume_Course {
 
-	/**
-	 * Disciple_Tools_Admin_Menus The single instance of Disciple_Tools_Admin_Menus.
-	 * @var    object
-	 * @access  private
-	 * @since    0.1
-	 */
-	private static $_instance = null;
+    /**
+     * Disciple_Tools_Admin_Menus The single instance of Disciple_Tools_Admin_Menus.
+     * @var    object
+     * @access  private
+     * @since    0.1
+     */
+    private static $_instance = null;
 
-	/**
-	 * Main Zume_Course Instance
-	 *
-	 * Ensures only one instance of Disciple_Tools_Admin_Menus is loaded or can be loaded.
-	 *
-	 * @since 0.1
-	 * @static
-	 * @return Zume_Course instance
-	 */
-	public static function instance() {
-		if ( is_null( self::$_instance ) ) {
-			self::$_instance = new self();
-		}
+    /**
+     * Main Zume_Course Instance
+     *
+     * Ensures only one instance of Disciple_Tools_Admin_Menus is loaded or can be loaded.
+     *
+     * @since 0.1
+     * @static
+     * @return Zume_Course instance
+     */
+    public static function instance() {
+        if ( is_null( self::$_instance ) ) {
+            self::$_instance = new self();
+        }
 
-		return self::$_instance;
-	} // End instance()
+        return self::$_instance;
+    } // End instance()
 
-	private $session_nine_labels = array();
+    private $session_nine_labels = array();
 
-	/**
-	 * Constructor function.
-	 * @access  public
-	 * @since   0.1
-	 */
-	public function __construct() {
-		add_shortcode( 'session_nine_plan', array( $this, 'session_nine_plan' ) );
-		add_action( "admin_post_session_nine_plan", array( $this, "session_nine_plan_submit" ) );
-		$this->session_nine_labels = array(
-			"I will share My Story [Testimony] and God’s Story [the Gospel] with the following individuals:",
-			"I will invite the following people to begin an Accountability Group with me:",
-			"I will challenge the following people to begin their own Accountability Groups and train them how to do it:",
-			"I will invite the following people to begin a 3/3 Group with me:",
-			"I will challenge the following people to begin their own 3/3 Groups and train them how to do it:",
-			"I will invite the following people to participate in a 3/3 Hope or Discover Group [see Appendix]:",
-			"I will invite the following people to participate in Prayer Walking with me:",
-			"I will equip the following people to share their story and God’s Story and make a List of 100 of the people in their relational network:",
-			"I will challenge the following people to use the Prayer Cycle tool on a periodic basis:",
-			"I will use the Prayer Cycle tool once every [days / weeks / months].",
-			"I will Prayer Walk once every [days / weeks / months].",
-			"I will invite the following people to be part of a Leadership Cell that I will lead:",
-			"I will encourage the following people to go through this Zúme Training course:",
-			"Other commitments:"
-		);
-	} // End __construct()
+    /**
+     * Constructor function.
+     * @access  public
+     * @since   0.1
+     */
+    public function __construct() {
+        add_shortcode( 'session_nine_plan', array( $this, 'session_nine_plan' ) );
+        add_action( "admin_post_session_nine_plan", array( $this, "session_nine_plan_submit" ) );
+        $this->session_nine_labels = array(
+            "I will share My Story [Testimony] and God’s Story [the Gospel] with the following individuals:",
+            "I will invite the following people to begin an Accountability Group with me:",
+            "I will challenge the following people to begin their own Accountability Groups and train them how to do it:",
+            "I will invite the following people to begin a 3/3 Group with me:",
+            "I will challenge the following people to begin their own 3/3 Groups and train them how to do it:",
+            "I will invite the following people to participate in a 3/3 Hope or Discover Group [see Appendix]:",
+            "I will invite the following people to participate in Prayer Walking with me:",
+            "I will equip the following people to share their story and God’s Story and make a List of 100 of the people in their relational network:",
+            "I will challenge the following people to use the Prayer Cycle tool on a periodic basis:",
+            "I will use the Prayer Cycle tool once every [days / weeks / months].",
+            "I will Prayer Walk once every [days / weeks / months].",
+            "I will invite the following people to be part of a Leadership Cell that I will lead:",
+            "I will encourage the following people to go through this Zúme Training course:",
+            "Other commitments:"
+        );
+    } // End __construct()
 
-	/**
-	 * Zúme Pre Content Load
-	 * @access  public
-	 * @since   0.1
-	 */
-	public function zume_pre_content_load() {
+    /**
+     * Zúme Pre Content Load
+     * @access  public
+     * @since   0.1
+     */
+    public function zume_pre_content_load() {
 
-		/*** VARIABLES ***/
+        /*** VARIABLES ***/
 
-		// Set variables
-		$user_id  = get_current_user_id();
-		$meta_key = 'zume_active_group';
+        // Set variables
+        $user_id  = get_current_user_id();
+        $meta_key = 'zume_active_group';
 
-		// Set variable for session
-		if ( isset( $_GET['id'] ) ) {
-			$zume_session = $_GET['id'];
-		} else {
-			$zume_session = '1';
-		}
+        // Set variable for session
+        if ( isset( $_GET['id'] ) ) {
+            $zume_session = sanitize_key( wp_unslash( $_GET['id'] ) );
+        } else {
+            $zume_session = '1';
+        }
 
-		$group_id = '';
+        $group_id = '';
 
-		if ( isset( $_GET['group_id'] ) && ! empty( $_GET['group_id'] ) ) {
-			if ( groups_is_user_member( $user_id, $_GET['group_id'] ) ) {
-				$group_id = $_GET['group_id'];
-			}
-		}
-		if ( empty( $group_id ) && ! empty( $_POST[ $meta_key ] ) ) {
-			if ( groups_is_user_member( $user_id, $_POST[ $meta_key ] ) ) {
-				$group_id = $_POST[ $meta_key ];
-			}
-		}
-		$group_id_user_meta = get_user_meta( $user_id, $meta_key, true );
-		if ( empty( $group_id ) && $group_id_user_meta ) {
-			if ( groups_is_user_member( $user_id, $group_id_user_meta ) ) {
-				$group_id = $group_id_user_meta;
-			}
-		}
+        if ( isset( $_GET['group_id'] ) && ! empty( $_GET['group_id'] ) ) {
+            if ( groups_is_user_member( $user_id, sanitize_key( wp_unslash( $_GET['group_id'] ) ) ) ) {
+                $group_id = sanitize_key( wp_unslash( $_GET['group_id'] ) );
+            }
+        }
+        if ( empty( $group_id ) && ! empty( $_POST[ $meta_key ] ) ) {
+            if ( groups_is_user_member( $user_id, sanitize_key( wp_unslash( $_POST[ $meta_key ] ) ) ) ) {
+                $group_id = sanitize_key( wp_unslash( $_POST[ $meta_key ] ) );
+            }
+        }
+        $group_id_user_meta = get_user_meta( $user_id, $meta_key, true );
+        if ( empty( $group_id ) && $group_id_user_meta ) {
+            if ( groups_is_user_member( $user_id, $group_id_user_meta ) ) {
+                $group_id = $group_id_user_meta;
+            }
+        }
 
-		//look at user's buddy press groups
-		if ( empty( $group_id ) || ( empty( $_POST[ $meta_key ] ) && isset( $_GET["switch_zume_group"] ) ) ) {
-			$user_groups = bp_get_user_groups( $user_id, array( 'is_admin' => null, 'is_mod' => null, ) );
-			if ( count( $user_groups ) == 1 ) {
-				$group_id = $user_groups[0]->group_id;
-			} elseif ( count( $user_groups ) > 1 ) {
-				echo 'More than one group<br>';
-				echo '<form action=""  method="POST" >Which group do you prefer?<br>';
+        //look at user's buddy press groups
+        if ( empty( $group_id ) || ( empty( $_POST[ $meta_key ] ) && isset( $_GET["switch_zume_group"] ) ) ) {
+            $user_groups = bp_get_user_groups( $user_id, array( 'is_admin' => null, 'is_mod' => null, ) );
+            if ( count( $user_groups ) == 1 ) {
+                $group_id = $user_groups[0]->group_id;
+            } elseif ( count( $user_groups ) > 1 ) {
+                echo 'More than one group<br>';
+                echo '<form action=""  method="POST" >Which group do you prefer?<br>';
 
-				foreach ( $user_groups as $agroup ) {
+                foreach ( $user_groups as $agroup ) {
 
-					// Get group name from group id
-					$group_id   = $agroup->group_id;
-					$group      = groups_get_group( $group_id ); // gets group object
-					$group_name = $group->name;
+                    // Get group name from group id
+                    $group_id   = $agroup->group_id;
+                    $group      = groups_get_group( $group_id ); // gets group object
+                    $group_name = $group->name;
 
-					// Create radio button
-					echo '<div class="radio">';
-					echo '<label><input type="radio" name="' . $meta_key . '" value="' . $group_id . '">' . $group_name . ' </label>';
-					echo '</div>';
+                    // Create radio button
+                    echo '<div class="radio">';
+                    echo '<label><input type="radio" name="' . esc_attr( $meta_key ) . '" value="' . esc_attr( $group_id ) . '">' . esc_html( $group_name ) . ' </label>';
+                    echo '</div>';
 
-				}
+                }
 
-				echo '<button type="submit" class="btn button">Select</button>';
-				echo '</form>';
+                echo '<button type="submit" class="btn button">Select</button>';
+                echo '</form>';
 
-				return;
-			}
-		}
+                return;
+            }
+        }
 
-		if ( empty( $group_id ) ) {
-			//user has no group.
-			echo '<h3>You do not have a group selected.</h3> 
-					<p>To create or select one go here: <a href="' . get_site_url() . '/dashboard">Dashboard</a></p>
-					<p>To see the Zúme course overview go here: <a href="' . get_site_url() . '/overview">Overview</a></p>';
-			if ( isset( $_GET['group_id'] ) ) {
-				$group = groups_get_group( $_GET['group_id'] );
-				echo 'To see the page of the group in the link and request membership click: <a href="' . bp_get_group_permalink( $group ) . '">Here</a></p>';
-			}
+        if ( empty( $group_id ) ) {
+            //user has no group.
+            echo '<h3>You do not have a group selected.</h3>
+					<p>To create or select one go here: <a href="' . esc_attr( get_site_url() ) . '/dashboard">Dashboard</a></p>
+					<p>To see the Zúme course overview go here: <a href="' . esc_attr( get_site_url() ) . '/overview">Overview</a></p>';
+            if ( isset( $_GET['group_id'] ) ) {
+                $group = groups_get_group( sanitize_key( wp_unslash( $_GET['group_id'] ) ) );
+                echo 'To see the page of the group in the link and request membership click: <a href="' . esc_attr( bp_get_group_permalink( $group ) ) . '">Here</a></p>';
+            }
 
-			return;
-		} else {
-			// Update or Add meta value with new_group_id
-			update_user_meta( $user_id, $meta_key, $group_id );
+            return;
+        } else {
+            // Update or Add meta value with new_group_id
+            update_user_meta( $user_id, $meta_key, $group_id );
 
-			// Load Zúme content with variables
-			$this->content_loader( $zume_session, $group_id );
-		}
+            // Load Zúme content with variables
+            $this->content_loader( $zume_session, $group_id );
+        }
 
-		/**
-		 * Create switch group link
-		 */
-		$user_groups = bp_get_user_groups( $user_id, array(
-			'is_admin' => null,
-			'is_mod'   => null,
-		) ); // Check for number of groups
+        /**
+         * Create switch group link
+         */
+        $user_groups = bp_get_user_groups( $user_id, array(
+            'is_admin' => null,
+            'is_mod'   => null,
+        ) ); // Check for number of groups
 
-		// Check to select group
-		if ( count( $user_groups ) > 1 ) {
-			if ( get_user_meta( $user_id, $meta_key, true ) ) {
+        // Check to select group
+        if ( count( $user_groups ) > 1 ) {
+            if ( get_user_meta( $user_id, $meta_key, true ) ) {
 
-				$group_id   = get_user_meta( $user_id, $meta_key, true );
-				$group      = groups_get_group( $group_id ); // gets group object
-				$group_name = $group->name;
+                $group_id   = get_user_meta( $user_id, $meta_key, true );
+                $group      = groups_get_group( $group_id ); // gets group object
+                $group_name = $group->name;
 
-				echo '<div class="row columns"><div class="small-centered center"><br><br>(' . $group_name . ')<br><a href="' . get_permalink() . '?id=' . $zume_session . '&switch_zume_group=true" >switch group</a></div></div>';
-			}
-		}
-	}
+                echo '<div class="row columns"><div class="small-centered center"><br><br>(' . esc_html( $group_name ) . ')<br><a href="' . esc_attr( get_permalink() ) . '?id=' . esc_attr( $zume_session ) . '&switch_zume_group=true" >switch group</a></div></div>';
+            }
+        }
+    }
 
-	/**
-	 * Zúme Content Loader
-	 * @return mixed
-	 */
-	public function content_loader( $session = '1', $group_id ) {
+    /**
+     * Zúme Content Loader
+     * @return mixed
+     */
+    public function content_loader( $session = '1', $group_id ) {
 
-		// Check for highest session completed and redirect
-		$next_session = zume_group_next_session( $group_id );
-		if ( ! is_null( $next_session ) && $session > $next_session ) {
-			$session = $next_session;
-		}
+        // Check for highest session completed and redirect
+        $next_session = zume_group_next_session( $group_id );
+        if ( ! is_null( $next_session ) && $session > $next_session ) {
+            $session = $next_session;
+        }
 
-		echo $this->zume_course_loader( $session, $group_id );
+        zume_course_loader( $session, $group_id ); // prints
 
-	}
+    }
 
-	/**
-	 * Pulls the content from the pages database
-	 * @return string
-	 */
-	public function zume_course_loader( $session, $group_id ) {
+    /**
+     * Pulls the content from the pages database and prints
+     */
+    public function zume_course_loader( $session, $group_id ) {
 
-		$session_title = 'Session ' . $session . ' Course';
-		$page_object   = get_page_by_title( $session_title, OBJECT, 'page' );
+        $session_title = 'Session ' . $session . ' Course';
+        $page_object   = get_page_by_title( $session_title, OBJECT, 'page' );
 
-		$session  = (int) $session;
-		$group_id = (int) $group_id;
+        $session  = (int) $session;
+        $group_id = (int) $group_id;
 
-		$prev_link = null;
-		$next_link = null;
-		if ( $session > 1 ) {
-			$prev_link = '?id=' . ( $session - 1 ) . '&group_id=' . $group_id;
-		}
-		$group_next_session = zume_group_next_session( $group_id );
-		if ( ! is_null( $group_next_session ) && ( $session + 1 ) <= $group_next_session ) {
-			$next_link = '?id=' . ( $session + 1 ) . '&group_id=' . $group_id;
-		}
+        $prev_link = null;
+        $next_link = null;
+        if ( $session > 1 ) {
+            $prev_link = '?id=' . ( $session - 1 ) . '&group_id=' . $group_id;
+        }
+        $group_next_session = zume_group_next_session( $group_id );
+        if ( ! is_null( $group_next_session ) && ( $session + 1 ) <= $group_next_session ) {
+            $next_link = '?id=' . ( $session + 1 ) . '&group_id=' . $group_id;
+        }
 
-		if ( ! empty( $page_object ) || ! empty( $page_object->post_content ) ) {
+        if ( ! empty( $page_object ) || ! empty( $page_object->post_content ) ) {
 
-			$session_title = "Session $session";
-			if ( $session == 10 ) {
-				$session_title = "Session 10 — Advanced Training";
-			}
+            $session_title = "Session $session";
+            if ( $session == 10 ) {
+                $session_title = "Session 10 — Advanced Training";
+            }
 
-			$html = '';
-			$html .= $this->jquery_steps( $group_id, $session );
-			$html .= '<div class="row columns center">';
-			if ( ! is_null( $prev_link ) ) {
-				$html .= '<a href="' . esc_attr( $prev_link ) . '" title="Previous session"><span class="chevron chevron--left"><span>Previous session</span></span></a> ';
-			}
-			$html .= '<h2 style="color: #21336A; display: inline">' . $session_title . '</h2>';
-			if ( ! is_null( $next_link ) ) {
-				$html .= ' <a href="' . esc_attr( $next_link ) . '" title="Next session"><span class="chevron chevron--right"><span>Next session</span></span></a>';
-			}
-			$html .= '</div>';
-			$html .= '<br><div id="session' . $session . '-' . $group_id . '" class="course-steps">';
+            $this->jquery_steps( $group_id, $session ); // prints
+            echo '<div class="row columns center">';
+            if ( ! is_null( $prev_link ) ) {
+                echo '<a href="' . esc_attr( $prev_link ) . '" title="Previous session"><span class="chevron chevron--left"><span>Previous session</span></span></a> ';
+            }
+            echo '<h2 style="color: #21336A; display: inline">' . esc_html( $session_title ) . '</h2>';
+            if ( ! is_null( $next_link ) ) {
+                echo ' <a href="' . esc_attr( $next_link ) . '" title="Next session"><span class="chevron chevron--right"><span>Next session</span></span></a>';
+            }
+            echo '</div>';
+            echo '<br><div id="session' . esc_attr( $session . '-' . $group_id ) . '" class="course-steps">';
 
-			if ( zume_group_highest_session_completed( $group_id ) < $session ) {
-				$html .= $this->attendance_step( $group_id, $session );
-			} // add attendance as the first step
+            if ( zume_group_highest_session_completed( $group_id ) < $session ) {
+                $this->attendance_step( $group_id, $session ); // prints
+            } // add attendance as the first step
 
-			$post_content = $page_object->post_content . '';
-			$post_content = str_replace( "[session_nine_plan]", $this->session_nine_plan(), $post_content );
+            $post_content = $page_object->post_content . '';
+            $post_content = str_replace( "[session_nine_plan]", $this->session_nine_plan(), $post_content );
 
-			$html .= $post_content;
-			$html .= '</div>';
+            // @codingStandardsIgnoreLine
+            echo $post_content;
+            echo '</div>';
 
-			$html .= '<div class="js-group-info" data-group-permalink="' . esc_attr( bp_get_group_permalink( groups_get_group( $group_id ) ) ) . '"></div>';
+            echo '<div class="js-group-info" data-group-permalink="' . esc_attr( bp_get_group_permalink( groups_get_group( $group_id ) ) ) . '"></div>';
 
-			return $html;
-		} else {
-			return 'Please republish "' . $session_title . '" with content for this section in the pages administration area.';
-		}
-	}
+        } else {
+            echo 'Please republish "' . esc_html( $session_title ) . '" with content for this section in the pages administration area.';
+        }
+    }
 
-	/**
-	 * Enqueue scripts and styles
-	 * @return mixed
-	 */
-	public function zume_scripts_enqueue() {
+    /**
+     * Enqueue scripts and styles
+     * @return mixed
+     */
+    public function zume_scripts_enqueue() {
 //		wp_register_script( 'jquery-steps', get_stylesheet_directory_uri() . '/includes/js/jquery.steps.js', array('jquery'), NULL, true );
 //		wp_enqueue_script( 'jquery-steps' );
-	}
+    }
 
-	/**
-	 * Get the name of a group by a supplied group id
-	 * @return string
-	 */
-	public function zume_get_group_name( $group_id ) {
-		$group = groups_get_group( $group_id ); // gets group object
+    /**
+     * Get the name of a group by a supplied group id
+     * @return string
+     */
+    public function zume_get_group_name( $group_id ) {
+        $group = groups_get_group( $group_id ); // gets group object
 
-		return $group->name;
-	}
+        return $group->name;
+    }
 
-	/**
-	 * Jquery Steps with configuration
-	 * @return mixed
-	 */
-	public function jquery_steps( $group_id, $session_number ) {
+    /**
+     * Jquery Steps with configuration and prints
+     */
+    public function jquery_steps( $group_id, $session_number ) {
 
-		// Create variables
-		$visited   = true;
-		$completed = false;
-		$last_step = null;
+        // Create variables
+        $visited   = true;
+        $completed = false;
+        $last_step = null;
 
-		$root = home_url( "/wp-json/" );
+        $root = home_url( "/wp-json/" );
 
-		$nonce                   = wp_create_nonce( 'wp_rest' );
-		$dashboard_complete      = home_url( "/dashboard/" );
-		$dashboard_complete_next = home_url( "/zume-training/" ) . '?group_id=' . $group_id . '&id=' . $session_number . '&wp_nonce=' . $nonce;
-		$success                 = __( 'Session Complete! Congratulations!', 'zume' );
-		$failure                 = __( 'Could not track your progress. Yikes. Tell us and we will tell our geeks to get on it!', 'zume' );
+        $nonce                   = wp_create_nonce( 'wp_rest' );
+        $dashboard_complete      = home_url( "/dashboard/" );
+        $dashboard_complete_next = home_url( "/zume-training/" ) . '?group_id=' . $group_id . '&id=' . $session_number . '&wp_nonce=' . $nonce;
+        $success                 = __( 'Session Complete! Congratulations!', 'zume' );
+        $failure                 = __( 'Could not track your progress. Yikes. Tell us and we will tell our geeks to get on it!', 'zume' );
 
-		// Get list of members attending the group
+        // Get list of members attending the group
 //        $group_members_result = groups_get_group_members( $args = array('group_id' => $group_id, 'exclude_admins_mods' => false) );
 //        $group_members_result = '';
-		$group_members = array();
+        $group_members = array();
 //        foreach(  $group_members_result['members'] as $member ) {
 //            $group_members[] = $member->ID;
 //        }
 //        $group_members_ids = implode(", ", $group_members);
-		// end Get list of members
+        // end Get list of members
 
-		// Create Javascript HTML
-		$html = '';
-		$html .= '<script>
+        // Create Javascript HTML
+        echo '<script>
                     jQuery(document).ready(function() {
                         jQuery("';
 
-		$html .= '#session' . $session_number . '-' . $group_id; // Create selector
+        echo '#session' . esc_js( $session_number . '-' . $group_id ); // Create selector
 
-		$html .= '").steps({
+        echo '").steps({
                     headerTag: "h3",
                     bodyTag: "section",
                     transitionEffect: "fade",
                     saveState: true,
                     autofocus: true,';
 
-		if ( $completed ) {
-			$html .= 'enableAllSteps: true,';
-		} elseif ( $visited && $last_step != null ) {
-			$html .= 'startIndex: ' . $last_step . ',';
-		}
+        if ( $completed ) {
+            echo 'enableAllSteps: true,';
+        } elseif ( $visited && $last_step != null ) {
+            echo 'startIndex: ' . esc_js( $last_step ) . ',';
+        }
 
-		// Fire record creation on step change
+        // Fire record creation on step change
 
-		if ( zume_group_highest_session_completed( $group_id ) < $session_number ) {
-			$html .= 'onStepChanging: function (event, currentIndex, newIndex) {
-                       
+        if ( zume_group_highest_session_completed( $group_id ) < $session_number ) {
+            echo 'onStepChanging: function (event, currentIndex, newIndex) {
+
                        if (currentIndex === 0) { /* check attendance requirement */
                             var n = jQuery( "input:checked" ).length;
                             if ( n < 4 ) {
@@ -335,121 +331,119 @@ class Zume_Course {
                             }
                        }
                        return true;
-                       
-                    },
-                    
-                    ';
-		}// end html block
 
-		// Fire record creation on step change
-		$html .= 'onStepChanged: function (event, currentIndex, priorIndex) {
-        
+                    },
+
+                    ';
+        }// end html block
+
+        // Fire record creation on step change
+        echo 'onStepChanged: function (event, currentIndex, priorIndex) {
+
                         if (currentIndex === 1 && priorIndex === 0) { /* record attendance */
-                            
+
                             var members = ' . json_encode( $group_members ) . ';
-                            var session = \'' . $session_number . '\';
-                            var group_id = \'' . $group_id . '\';
-                        
+                            var session = \'' . esc_js( $session_number ) . '\';
+                            var group_id = \'' . esc_js( $group_id ) . '\';
+
                             var data = {
                                 members: members,
                                 session: session,
                                 group_id: group_id
                             };
-                        
+
                             jQuery.ajax({
                             method: "POST",
-                            url: \'' . $root . '\' + \'zume/v1/attendance/log\',
+                            url: \'' . esc_js( $root ) . '\' + \'zume/v1/attendance/log\',
                             data: data,
                             dataType: "json",
                             beforeSend: function ( xhr ) {
-                                xhr.setRequestHeader( \'X-WP-Nonce\', \'' . $nonce . '\' );
+                                xhr.setRequestHeader( \'X-WP-Nonce\', \'' . esc_js( $nonce ) . '\' );
                             },
                             error : function( jqXHR, textStatus, errorThrown ) {
                                 console.log( jqXHR.responseText );
-                                
+
                             }
-                
+
                         });
                         }
-                       
-                       var title = "Group-" + "' . $group_id . '" + " Step-" + currentIndex + " Session-" + "' . $session_number . '" ;
+
+                       var title = "Group-" + "' . esc_js( $group_id ) . '" + " Step-" + currentIndex + " Session-" + "' . esc_js( $session_number ) . '" ;
                        var status = \'publish\';
-                       
+
                        var data = {
                             title: title,
                             status: status
-                        }; 
-                       
+                        };
+
                        jQuery.ajax({
                             method: "POST",
-                            url: \'' . $root . '\' + \'wp/v2/steplog\',
+                            url: \'' . esc_js( $root ) . '\' + \'wp/v2/steplog\',
                             data: data,
                             dataType: "json",
                             beforeSend: function ( xhr ) {
-                                xhr.setRequestHeader( \'X-WP-Nonce\', \'' . $nonce . '\' );
+                                xhr.setRequestHeader( \'X-WP-Nonce\', \'' . esc_js( $nonce ) . '\' );
                             },
                             error : function( jqXHR, textStatus, errorThrown ) {
                                 console.log( jqXHR.responseText );
-                                alert( \'' . $failure . '\' );
+                                alert( \'' . esc_js( $failure ) . '\' );
                             }
-                
+
                         });
                     },
-                    
+
                     '; // end html block
 
-		// Fire a session completed record creation
-		$html .= '  onFinishing: function (event, currentIndex) {
+        // Fire a session completed record creation
+        echo '  onFinishing: function (event, currentIndex) {
 
-                       var title = "Group-" + "' . $group_id . '" + " Step-Complete" + " Session-" + "' . $session_number . '" ;
-                       var excerpt = "' . $session_number . '";
+                       var title = "Group-" + "' . esc_js( $group_id ) . '" + " Step-Complete" + " Session-" + "' . esc_js( $session_number ) . '" ;
+                       var excerpt = "' . esc_js( $session_number ) . '";
                        var status = \'publish\';
-                       
+
                        var data = {
                             title: title,
                             excerpt: excerpt,
                             status: status
-                        }; 
-                       
+                        };
+
                        jQuery.ajax({
                             method: "POST",
-                            url: \'' . $root . '\' + \'wp/v2/steplog\',
+                            url: \'' . esc_js( $root ) . '\' + \'wp/v2/steplog\',
                             data: data,
                             dataType: "json",
                             beforeSend: function ( xhr ) {
-                                xhr.setRequestHeader( \'X-WP-Nonce\', \'' . $nonce . '\' );
+                                xhr.setRequestHeader( \'X-WP-Nonce\', \'' . esc_js( $nonce ) . '\' );
                             },
                             success : function( response ) {
-                                
-                                window.location.replace("' . $dashboard_complete . '"); 
+
+                                window.location.replace("' . esc_js( $dashboard_complete ) . '");
                             },
                             error : function( jqXHR, textStatus, errorThrown ) {
                                 console.log( jqXHR.responseText );
-                                alert( \'' . $failure . '\' );
+                                alert( \'' . esc_js( $failure ) . '\' );
                             }
-                
+
                         });
 
                     },
-                    
+
                     '; // end html block
 
-		$html .= "  titleTemplate: '<span class=\"number\">#index#</span> #title#'";
+        echo "  titleTemplate: '<span class=\"number\">#index#</span> #title#'";
 
 
-		$html .= '    });
+        echo '    });
                     });
-        
+
                 </script>
                 '; // end html block
 
-		return $html;
-	}
+    }
 
-	public function attendance_step( $group_id, $session ) {
+    public function attendance_step( $group_id, $session ) {
 
-		$html = '';
-		$html .= '<h3></h3>
+        echo '<h3></h3>
                     <section>
 
                     <div class="row block">
@@ -459,51 +453,49 @@ class Zume_Course {
                     <div class="row "><div class="small-12 medium-6 small-centered columns">
                         ';
 
-		$html .= $this->get_attendance_list( $group_id, $session );
+        $this->get_attendance_list( $group_id, $session ); // prints
 
-		$html .= '</div></div> <!-- row --> </section>';
+        echo '</div></div> <!-- row --> </section>';
 
-		return $html;
-	}
+    }
 
-	public function get_attendance_list( $group_id, $session ) {
-		$html = '';
-		$html .= '<style>
+    public function get_attendance_list( $group_id, $session ) {
+        echo '<style>
                     li.attendance-list {padding:10px;}
                     li#count {text-align:center;}
         </style>';
 
-		if ( bp_group_has_members( array(
-			'group_id'   => $group_id,
-			'group_role' => array( 'admin', 'mod', 'member' )
-		) ) ) :
-			$html .= '<ul id="attendance-list" style="list-style-type: none;">';
+        if ( bp_group_has_members( array(
+            'group_id'   => $group_id,
+            'group_role' => array( 'admin', 'mod', 'member' )
+        ) ) ) :
+            echo '<ul id="attendance-list" style="list-style-type: none;">';
 
 
-			while ( bp_group_members() ) : bp_group_the_member();
+            while ( bp_group_members() ) : bp_group_the_member();
 
-				$html .= '<li class="attendance-list"><div class="switch" style="width:100px; float:right;">
-                          <input class="switch-input" id="member-' . bp_get_group_member_id() . '" type="checkbox" name="' . bp_get_group_member_id() . '">
-                          <label class="switch-paddle" for="member-' . bp_get_group_member_id() . '">
-                            <span class="show-for-sr">' . bp_get_group_member_name() . '</span>
+                echo '<li class="attendance-list"><div class="switch" style="width:100px; float:right;">
+                          <input class="switch-input" id="member-' . esc_attr( bp_get_group_member_id() ) . '" type="checkbox" name="' . esc_attr( bp_get_group_member_id() ) . '">
+                          <label class="switch-paddle" for="member-' . esc_attr( bp_get_group_member_id() ) . '">
+                            <span class="show-for-sr">' . esc_attr( bp_get_group_member_name() ) . '</span>
                           </label>
-                          </div>' . bp_get_group_member_name() . '</li>';
+                          </div>' . esc_html( bp_get_group_member_name() ) . '</li>';
 
 
-			endwhile;
-			$html .= '<li id="count"></li>';
-			$html .= '</ul>';
-		endif;
+            endwhile;
+            echo '<li id="count"></li>';
+            echo '</ul>';
+        endif;
 
-		$html .= "  <script>
-  
+        echo "  <script>
+
                         jQuery(document).ready(function () {
-                            
+
                             var countChecked = function() {
                                 var n = jQuery( \"input:checked\" ).length;
-                                
-                                if( n < 4 ) { 
-                                    var missing = 4 - n;  
+
+                                if( n < 4 ) {
+                                    var missing = 4 - n;
                                     if (missing === 1) {
                                         jQuery( '#count' ).text( missing + ' more is needed!' );
                                     } else {
@@ -514,107 +506,114 @@ class Zume_Course {
                                 }
                             };
                             countChecked();
- 
+
                             jQuery( \"input[type=checkbox]\" ).on( \"click\", countChecked );
-                            
+
                         });
-    
+
                     </script>
         ";
 
-		return $html;
 
-	}
+    }
 
 
-	function session_nine_plan( $attr = null ) {
-		$form = '<form id="session_nine_plan" action="/wp-admin/admin-post.php" method="post">';
-		foreach ( $this->session_nine_labels as $index => $label ) {
-			$form = $form . '<label style="font-size:16px">' . $label . '</label>';
-			$form = $form . '<textarea name="field_' . $index . '"></textarea>';
-		}
+    public function session_nine_plan( $attr = null ) {
+        $form = '<form id="session_nine_plan" action="/wp-admin/admin-post.php" method="post">';
+        foreach ( $this->session_nine_labels as $index => $label ) {
+            $form = $form . '<label style="font-size:16px">' . $label . '</label>';
+            $form = $form . '<textarea name="field_' . $index . '"></textarea>';
+        }
 
-		$form = $form . wp_nonce_field( 'session_nine_plan' ) . '
+        $form = $form . wp_nonce_field( 'session_nine_plan' ) . '
 		<input type="hidden" name="action" value="session_nine_plan">
 		<input class="button" type="submit" name="submit" value="submit">
 		</form>
 		';
 
-		return $form;
-	}
+        return $form;
+    }
 
 
-	/**
-	 * Gets all coaches in a particular group, returns an array of integers
-	 * @return array
-	 */
-	function zume_get_coach_ids_in_group( $group_id ) {
-		if ( is_numeric( $group_id ) ) {
-			$group_id = (int) $group_id;
-		} else {
-			throw new Exception( "group_id argument should be an integer or pass the is_numeric test: " . $group_id );
-		}
-		global $wpdb;
-		$results = $wpdb->get_results( "SELECT wp_usermeta.user_id FROM wp_bp_groups_members INNER JOIN wp_usermeta ON wp_usermeta.user_id=wp_bp_groups_members.user_id WHERE group_id = '$group_id' AND meta_key = 'wp_capabilities' AND meta_value LIKE '%coach%'", ARRAY_A );
-		$rv      = [];
-		foreach ( $results as $result ) {
-			$rv[] = (int) $result["user_id"];
-		}
+    /**
+     * Gets all coaches in a particular group, returns an array of integers
+     * @return array
+     */
+    public function zume_get_coach_ids_in_group( $group_id ) {
+        if ( is_numeric( $group_id ) ) {
+            $group_id = (int) $group_id;
+        } else {
+            throw new Exception( "group_id argument should be an integer or pass the is_numeric test: " . $group_id );
+        }
+        global $wpdb;
+        $results = $wpdb->get_results( $wpdb->prepare(
+            "SELECT wp_usermeta.user_id FROM wp_bp_groups_members INNER JOIN wp_usermeta ON wp_usermeta.user_id=wp_bp_groups_members.user_id WHERE group_id = %s AND meta_key = 'wp_capabilities' AND meta_value LIKE %s",
+            $group_id,
+            "%coach%"
+        ), ARRAY_A );
+        $rv      = [];
+        foreach ( $results as $result ) {
+            $rv[] = (int) $result["user_id"];
+        }
 
-		return $rv;
-	}
+        return $rv;
+    }
 
-	function session_nine_plan_submit() {
-		if ( isset( $_POST["_wpnonce"] ) && wp_verify_nonce( $_POST["_wpnonce"], 'session_nine_plan' ) ) {
-			$user         = wp_get_current_user();
-			$user_id      = get_current_user_id();
-			$group_id     = get_user_meta( $user_id, "zume_active_group", true );
-			$group        = groups_get_group( $group_id );
-			$fields       = [];
-			$email_fields = "--------------------------------- \n";
-			foreach ( $_POST as $key => $value ) {
-				if ( strpos( $key, 'field_' ) !== false ) {
-					$index            = str_replace( "field_", "", $key );
-					$label            = $this->session_nine_labels[ (int) $index ];
-					$fields[ $label ] = $value;
-					$email_fields     .= '- ' . str_replace( "_", " ", $label ) . "\n";
-					$email_fields     .= '> ' . $value . "\n\n";
-				}
-			}
-
-
-			$key = "group_" . $group_id . "-session_9";
-			update_user_meta( $user_id, $key, $fields );
+    public function session_nine_plan_submit() {
+        if ( isset( $_POST["_wpnonce"] ) && wp_verify_nonce( sanitize_key( $_POST["_wpnonce"] ), 'session_nine_plan' ) ) {
+            $user         = wp_get_current_user();
+            $user_id      = get_current_user_id();
+            $group_id     = get_user_meta( $user_id, "zume_active_group", true );
+            $group        = groups_get_group( $group_id );
+            $fields       = [];
+            $email_fields = "--------------------------------- \n";
+            foreach ( $_POST as $key => $value ) {
+                if ( strpos( $key, 'field_' ) !== false ) {
+                    $index            = str_replace( "field_", "", $key );
+                    $label            = $this->session_nine_labels[ (int) $index ];
+                    $fields[ $label ] = $value;
+                    $email_fields     .= '- ' . str_replace( "_", " ", $label ) . "\n";
+                    $email_fields     .= '> ' . $value . "\n\n";
+                }
+            }
 
 
-			$args = array(
-				'tokens' => array(
-					"three_month_plan" => $email_fields
-				)
-			);
-			bp_send_email( 'your_three_month_plan', $user_id, $args );
+            $key = "group_" . $group_id . "-session_9";
+            update_user_meta( $user_id, $key, $fields );
 
-			$coaches = $this->zume_get_coach_ids_in_group( $group_id );
 
-			$user_plan = "--------------------------------- \n";
-			$user_plan .= "Here is the plan for: " . ( isset( $user->display_name ) ? $user->display_name : "[user]" ) . ", in group: " . $group->name . "\n";
-			$user_plan .= $email_fields;
-			$args      = array(
-				'tokens' => array(
-					"three_month_plan" => $user_plan
-				)
-			);
-			foreach ( $coaches as $coach_id ) {
-				bp_send_email( 'your_three_month_plan', $coach_id, $args );
-			}
-			bp_core_add_message( "Your plan was submitted successfully" );
-		}
+            $args = array(
+                'tokens' => array(
+                    "three_month_plan" => $email_fields
+                )
+            );
+            bp_send_email( 'your_three_month_plan', $user_id, $args );
 
-		return wp_redirect( $_POST["_wp_http_referer"] );
-	}
+            $coaches = $this->zume_get_coach_ids_in_group( $group_id );
 
-	public static function get_course_content_1() {
-		?>
+            $user_plan = "--------------------------------- \n";
+            $user_plan .= "Here is the plan for: " . ( isset( $user->display_name ) ? $user->display_name : "[user]" ) . ", in group: " . $group->name . "\n";
+            $user_plan .= $email_fields;
+            $args      = array(
+                'tokens' => array(
+                    "three_month_plan" => $user_plan
+                )
+            );
+            foreach ( $coaches as $coach_id ) {
+                bp_send_email( 'your_three_month_plan', $coach_id, $args );
+            }
+            bp_core_add_message( "Your plan was submitted successfully" );
+        }
+
+        if (isset( $_POST["_wp_http_referer"] )) {
+            return wp_redirect( sanitize_text_field( wp_unslash( $_POST["_wp_http_referer"] ) ) );
+        } else {
+            return wp_redirect( "/" );
+        }
+    }
+
+    public static function get_course_content_1() {
+        ?>
 
         <h3></h3>
         <section><!-- Step Title -->
@@ -678,8 +677,10 @@ class Zume_Course {
 
             <div class="row block">
                 <div class="small-12 small-centered medium-9 columns">
+                    <?php /* @codingStandardsIgnoreStart */ ?>
                     <script src="//fast.wistia.com/embed/medias/fe3w7ebpl4.jsonp" async></script>
                     <script src="//fast.wistia.com/assets/external/E-v1.js" async></script>
+                    <?php /* @codingStandardsIgnoreEnd */ ?>
                     <div class="wistia_embed wistia_async_fe3w7ebpl4"></div>
                     <p class="center"><a
                                 href="https://zumeproject.com/wp-content/uploads/Zume_Video_Scripts_Welcome.pdf"
@@ -719,8 +720,10 @@ class Zume_Course {
 
             <div class="row block">
                 <div class="small-12 small-centered medium-9 columns">
+                    <?php /* @codingStandardsIgnoreStart */ ?>
                     <script src="//fast.wistia.com/embed/medias/pzq41gvam6.jsonp" async></script>
                     <script src="//fast.wistia.com/assets/external/E-v1.js" async></script>
+                    <?php /* @codingStandardsIgnoreEnd */ ?>
                     <div class="wistia_embed wistia_async_pzq41gvam6"></div>
                     <p class="center"><a
                                 href="https://zumeproject.com/wp-content/uploads/Zume_Video_Scripts_Teach_Them_to_Obey.pdf"
@@ -768,8 +771,10 @@ class Zume_Course {
             <!-- Video block -->
             <div class="row block">
                 <div class="small-12 small-centered medium-9 columns">
+                    <?php /* @codingStandardsIgnoreStart */ ?>
                     <script src="//fast.wistia.com/embed/medias/67sh299w6m.jsonp" async></script>
                     <script src="//fast.wistia.com/assets/external/E-v1.js" async></script>
+                    <?php /* @codingStandardsIgnoreEnd */ ?>
                     <div class="wistia_embed wistia_async_67sh299w6m"></div>
                     <p class="center"><a
                                 href="https://zumeproject.com/wp-content/uploads/Zume_Video_Scripts_Spiritual_Breathing.pdf"
@@ -822,8 +827,10 @@ class Zume_Course {
             <!-- Video block -->
             <div class="row block">
                 <div class="small-12 small-centered medium-9 columns">
+                    <?php /* @codingStandardsIgnoreStart */ ?>
                     <script src="//fast.wistia.com/embed/medias/i5fwo662go.jsonp" async></script>
                     <script src="//fast.wistia.com/assets/external/E-v1.js" async></script>
+                    <?php /* @codingStandardsIgnoreEnd */ ?>
                     <div class="wistia_embed wistia_async_i5fwo662go"></div>
                     <p class="center"><a href="https://zumeproject.com/wp-content/uploads/Zume_Video_Scripts_SOAPS.pdf"
                                          target="_blank"><img
@@ -862,8 +869,10 @@ class Zume_Course {
             <!-- Video block -->
             <div class="row block">
                 <div class="small-12 small-centered medium-9 columns">
+                    <?php /* @codingStandardsIgnoreStart */ ?>
                     <script src="//fast.wistia.com/embed/medias/1zl3h2clam.jsonp" async></script>
                     <script src="//fast.wistia.com/assets/external/E-v1.js" async></script>
+                    <?php /* @codingStandardsIgnoreEnd */ ?>
                     <div class="wistia_embed wistia_async_1zl3h2clam"></div>
                     <p class="center"><a
                                 href="https://zumeproject.com/wp-content/uploads/Zume_Video_Scripts_Accountability_Groups.pdf"
@@ -946,11 +955,11 @@ class Zume_Course {
 
         </section>
 
-		<?php
-	}
+        <?php
+    }
 
-	public static function get_course_content_2() {
-		?>
+    public static function get_course_content_2() {
+        ?>
 
         <!-- Step -->
         <h3></h3>
@@ -1027,8 +1036,10 @@ class Zume_Course {
             <!-- Video block -->
             <div class="row block">
                 <div class="small-12 small-centered medium-9 columns">
+                    <?php /* @codingStandardsIgnoreStart */ ?>
                     <script src="//fast.wistia.com/embed/medias/degdhfsycm.jsonp" async></script>
                     <script src="//fast.wistia.com/assets/external/E-v1.js" async></script>
+                    <?php /* @codingStandardsIgnoreEnd */ ?>
                     <div class="wistia_embed wistia_async_degdhfsycm">&nbsp;</div>
                     <p class="center"><a
                                 href="https://zumeproject.com/wp-content/uploads/Zume_Video_Scripts_Producers_vs_Consumers.pdf"
@@ -1075,8 +1086,10 @@ class Zume_Course {
             <!-- Video block -->
             <div class="row block">
                 <div class="small-12 small-centered medium-9 columns">
+                    <?php /* @codingStandardsIgnoreStart */ ?>
                     <script src="//fast.wistia.com/embed/medias/1995yry849.jsonp" async></script>
                     <script src="//fast.wistia.com/assets/external/E-v1.js" async></script>
+                    <?php /* @codingStandardsIgnoreEnd */ ?>
                     <div class="wistia_embed wistia_async_1995yry849">&nbsp;</div>
                     <p class="center"><a
                                 href="https://zumeproject.com/wp-content/uploads/Zume_Video_Scripts_Prayer_Cycle.pdf"
@@ -1154,8 +1167,10 @@ class Zume_Course {
             <!-- Video block -->
             <div class="row block">
                 <div class="small-12 small-centered medium-9 columns">
+                    <?php /* @codingStandardsIgnoreStart */ ?>
                     <script src="//fast.wistia.com/embed/medias/pzcavp72zy.jsonp" async></script>
                     <script src="//fast.wistia.com/assets/external/E-v1.js" async></script>
+                    <?php /* @codingStandardsIgnoreEnd */ ?>
                     <div class="wistia_embed wistia_async_pzcavp72zy">&nbsp;</div>
                     <p class="center"><a
                                 href="https://zumeproject.com/wp-content/uploads/Zume_Video_Scripts_List_of_100.pdf"
@@ -1221,11 +1236,11 @@ class Zume_Course {
                 </div>
             </div> <!-- row -->
         </section>
-		<?php
-	}
+        <?php
+    }
 
-	public static function get_course_content_3() {
-		?>
+    public static function get_course_content_3() {
+        ?>
 
         <!-- Step -->
         <h3></h3>
@@ -1293,8 +1308,10 @@ class Zume_Course {
             <!-- Video block -->
             <div class="row block">
                 <div class="small-12 small-centered medium-9 columns">
+                    <?php /* @codingStandardsIgnoreStart */ ?>
                     <script src="//fast.wistia.com/embed/medias/63g4lcmbjf.jsonp" async></script>
                     <script src="//fast.wistia.com/assets/external/E-v1.js" async></script>
+                    <?php /* @codingStandardsIgnoreEnd */ ?>
                     <div class="wistia_embed wistia_async_63g4lcmbjf">&nbsp;</div>
                     <p class="center"><a
                                 href="https://zumeproject.com/wp-content/uploads/Zume_Video_Scripts_Spiritual_Economy.pdf"><img
@@ -1374,8 +1391,10 @@ class Zume_Course {
             <!-- Video block -->
             <div class="row block">
                 <div class="small-12 small-centered medium-9 columns">
+                    <?php /* @codingStandardsIgnoreStart */ ?>
                     <script src="//fast.wistia.com/embed/medias/0qq5iq8b2i.jsonp" async></script>
                     <script src="//fast.wistia.com/assets/external/E-v1.js" async></script>
+                    <?php /* @codingStandardsIgnoreEnd */ ?>
                     <div class="wistia_embed wistia_async_0qq5iq8b2i">&nbsp;</div>
                     <p class="center"><a
                                 href="https://zumeproject.com/wp-content/uploads/Zume_Video_Scripts_Creation_to_Judgement.pdf"><img
@@ -1440,8 +1459,10 @@ class Zume_Course {
             <!-- Video block -->
             <div class="row block">
                 <div class="small-12 small-centered medium-9 columns">
+                    <?php /* @codingStandardsIgnoreStart */ ?>
                     <script src="//fast.wistia.com/embed/medias/v8p5mbpdp5.jsonp" async></script>
                     <script src="//fast.wistia.com/assets/external/E-v1.js" async></script>
+                    <?php /* @codingStandardsIgnoreEnd */ ?>
                     <div class="wistia_embed wistia_async_v8p5mbpdp5">&nbsp;</div>
                     <p class="center"><a
                                 href="https://zumeproject.com/wp-content/uploads/Zume_Video_Scripts_Baptism.pdf"><img
@@ -1511,11 +1532,11 @@ class Zume_Course {
                 </div>
             </div>
         </section>
-		<?php
-	}
+        <?php
+    }
 
-	public static function get_course_content_4() {
-		?>
+    public static function get_course_content_4() {
+        ?>
 
         <!-- Step -->
         <h3></h3>
@@ -1587,8 +1608,10 @@ class Zume_Course {
             <!-- Video block -->
             <div class="row block">
                 <div class="small-12 small-centered medium-9 columns">
+                    <?php /* @codingStandardsIgnoreStart */ ?>
                     <script src="//fast.wistia.com/embed/medias/kwhpgugafp.jsonp" async></script>
                     <script src="//fast.wistia.com/assets/external/E-v1.js" async></script>
+                    <?php /* @codingStandardsIgnoreEnd */ ?>
                     <div class="wistia_embed wistia_async_kwhpgugafp">&nbsp;</div>
                     <p class="center"><a
                                 href="https://zumeproject.com/wp-content/uploads/Zume_Video_Scripts_Testimony.pdf"
@@ -1643,8 +1666,10 @@ class Zume_Course {
             <!-- Video block -->
             <div class="row block">
                 <div class="small-12 small-centered medium-9 columns">
+                    <?php /* @codingStandardsIgnoreStart */ ?>
                     <script src="//fast.wistia.com/embed/medias/qbfpcb1ta8.jsonp" async></script>
                     <script src="//fast.wistia.com/assets/external/E-v1.js" async></script>
+                    <?php /* @codingStandardsIgnoreEnd */ ?>
                     <div class="wistia_embed wistia_async_qbfpcb1ta8">&nbsp;</div>
                     <p class="center"><a
                                 href="https://zumeproject.com/wp-content/uploads/Zume_Video_Scripts_Greatest_Blessing.pdf"
@@ -1694,8 +1719,10 @@ class Zume_Course {
             <!-- Video block -->
             <div class="row block">
                 <div class="small-12 small-centered medium-9 columns">
+                    <?php /* @codingStandardsIgnoreStart */ ?>
                     <script src="//fast.wistia.com/embed/medias/5c15dgdv3d.jsonp" async></script>
                     <script src="//fast.wistia.com/assets/external/E-v1.js" async></script>
+                    <?php /* @codingStandardsIgnoreEnd */ ?>
                     <div class="wistia_embed wistia_async_5c15dgdv3d">&nbsp;</div>
                     <p class="center"><a href="https://zumeproject.com/wp-content/uploads/Duckling-discipleship.pdf"
                                          target="_blank"><img
@@ -1744,8 +1771,10 @@ class Zume_Course {
             <!-- Video block -->
             <div class="row block">
                 <div class="small-12 small-centered medium-9 columns">
+                    <?php /* @codingStandardsIgnoreStart */ ?>
                     <script src="//fast.wistia.com/embed/medias/aii2k283nk.jsonp" async></script>
                     <script src="//fast.wistia.com/assets/external/E-v1.js" async></script>
+                    <?php /* @codingStandardsIgnoreEnd */ ?>
                     <div class="wistia_embed wistia_async_aii2k283nk">&nbsp;</div>
                     <p class="center"><a
                                 href="https://zumeproject.com/wp-content/uploads/Zume_Video_Scripts_Eyes_to_See.pdf"
@@ -1793,8 +1822,10 @@ class Zume_Course {
             <!-- Video block -->
             <div class="row block">
                 <div class="small-12 small-centered medium-9 columns">
+                    <?php /* @codingStandardsIgnoreStart */ ?>
                     <script src="//fast.wistia.com/embed/medias/t3xr5w43av.jsonp" async></script>
                     <script src="//fast.wistia.com/assets/external/E-v1.js" async></script>
+                    <?php /* @codingStandardsIgnoreEnd */ ?>
                     <div class="wistia_embed wistia_async_t3xr5w43av">&nbsp;</div>
                     <p class="center"><a
                                 href="https://zumeproject.com/wp-content/uploads/Zume_Video_Scripts_Lord_s_Supper.pdf"
@@ -1861,11 +1892,11 @@ class Zume_Course {
                 </div>
             </div> <!-- row -->
         </section>
-		<?php
-	}
+        <?php
+    }
 
-	public static function get_course_content_5() {
-		?>
+    public static function get_course_content_5() {
+        ?>
 
         <!-- Step -->
         <h3></h3>
@@ -1931,8 +1962,10 @@ class Zume_Course {
             <!-- Video block -->
             <div class="row block">
                 <div class="small-12 small-centered medium-9 columns">
+                    <?php /* @codingStandardsIgnoreStart */ ?>
                     <script src="//fast.wistia.com/embed/medias/ltxoicq440.jsonp" async></script>
                     <script src="//fast.wistia.com/assets/external/E-v1.js" async></script>
+                    <?php /* @codingStandardsIgnoreEnd */ ?>
                     <div class="wistia_embed wistia_async_ltxoicq440">&nbsp;</div>
                     <p class="center"><a
                                 href="https://zumeproject.com/wp-content/uploads/Zume_Video_Scripts_Prayer_Walking.pdf"
@@ -1967,8 +2000,10 @@ class Zume_Course {
             <!-- Video block -->
             <div class="row block">
                 <div class="small-12 small-centered medium-9 columns">
+                    <?php /* @codingStandardsIgnoreStart */ ?>
                     <script src="//fast.wistia.com/embed/medias/zhzf9v1g92.jsonp" async></script>
                     <script src="//fast.wistia.com/assets/external/E-v1.js" async></script>
+                    <?php /* @codingStandardsIgnoreEnd */ ?>
                     <div class="wistia_embed wistia_async_zhzf9v1g92">&nbsp;</div>
                     <p class="center"><a href="https://zumeproject.com/wp-content/uploads/Person-of-Peace.pdf"
                                          target="_blank"><img
@@ -2072,11 +2107,11 @@ class Zume_Course {
                     </div>
                 </div> <!-- row -->
         </section>
-		<?php
-	}
+        <?php
+    }
 
-	public static function get_course_content_6() {
-		?>
+    public static function get_course_content_6() {
+        ?>
 
         <!-- Step -->
         <h3></h3>
@@ -2141,8 +2176,10 @@ class Zume_Course {
             <!-- Video block -->
             <div class="row block">
                 <div class="small-12 small-centered medium-9 columns">
+                    <?php /* @codingStandardsIgnoreStart */ ?>
                     <script src="//fast.wistia.com/embed/medias/yk0i0eserm.jsonp" async></script>
                     <script src="//fast.wistia.com/assets/external/E-v1.js" async></script>
+                    <?php /* @codingStandardsIgnoreEnd */ ?>
                     <div class="wistia_embed wistia_async_yk0i0eserm">&nbsp;</div>
                     <p class="center"><a
                                 href="https://zumeproject.com/wp-content/uploads/Zume_Video_Scripts_Faithfulness.pdf"
@@ -2182,8 +2219,10 @@ class Zume_Course {
             <!-- Video block -->
             <div class="row block">
                 <div class="small-12 small-centered medium-9 columns">
+                    <?php /* @codingStandardsIgnoreStart */ ?>
                     <script src="//fast.wistia.com/embed/medias/xnhyl1o17z.jsonp" async></script>
                     <script src="//fast.wistia.com/assets/external/E-v1.js" async></script>
+                    <?php /* @codingStandardsIgnoreEnd */ ?>
                     <div class="wistia_embed wistia_async_xnhyl1o17z">&nbsp;</div>
                     <p class="center"><a
                                 href="https://zumeproject.com/wp-content/uploads/Zume_Video_Scripts_3_3_Group.pdf"
@@ -2232,8 +2271,10 @@ class Zume_Course {
             <!-- Video block -->
             <div class="row block">
                 <div class="small-12 small-centered medium-9 columns">
+                    <?php /* @codingStandardsIgnoreStart */ ?>
                     <script src="//fast.wistia.com/embed/medias/s4shprhr4l.jsonp" async></script>
                     <script src="//fast.wistia.com/assets/external/E-v1.js" async></script>
+                    <?php /* @codingStandardsIgnoreEnd */ ?>
                     <div class="wistia_embed wistia_async_s4shprhr4l">&nbsp;</div>
                 </div>
             </div> <!-- row -->
@@ -2274,11 +2315,11 @@ class Zume_Course {
                 </div>
             </div> <!-- row -->
         </section>
-		<?php
-	}
+        <?php
+    }
 
-	public static function get_course_content_7() {
-		?>
+    public static function get_course_content_7() {
+        ?>
 
         <!-- Step -->
         <h3></h3>
@@ -2343,8 +2384,10 @@ class Zume_Course {
             <!-- Video block -->
             <div class="row block">
                 <div class="small-12 small-centered medium-9 columns">
+                    <?php /* @codingStandardsIgnoreStart */ ?>
                     <script src="//fast.wistia.com/embed/medias/ziw8qxj7zj.jsonp" async></script>
                     <script src="//fast.wistia.com/assets/external/E-v1.js" async></script>
+                    <?php /* @codingStandardsIgnoreEnd */ ?>
                     <div class="wistia_embed wistia_async_ziw8qxj7zj">&nbsp;</div>
                     <p class="center"><a
                                 href="https://zumeproject.com/wp-content/uploads/Zume_Video_Scripts_Training_Cycle.pdf"
@@ -2446,11 +2489,11 @@ class Zume_Course {
                 </div>
             </div> <!-- row -->
         </section>
-		<?php
-	}
+        <?php
+    }
 
-	public static function get_course_content_8() {
-		?>
+    public static function get_course_content_8() {
+        ?>
         <!-- Step -->
         <h3></h3>
         <section>
@@ -2521,8 +2564,10 @@ class Zume_Course {
             <!-- Video block -->
             <div class="row block">
                 <div class="small-12 small-centered medium-9 columns">
+                    <?php /* @codingStandardsIgnoreStart */ ?>
                     <script src="//fast.wistia.com/embed/medias/lnr64mh2bg.jsonp" async></script>
                     <script src="//fast.wistia.com/assets/external/E-v1.js" async></script>
+                    <?php /* @codingStandardsIgnoreEnd */ ?>
                     <div class="wistia_embed wistia_async_lnr64mh2bg">&nbsp;</div>
                     <p class="center"><a
                                 href="https://zumeproject.com/wp-content/uploads/Zume_Video_Scripts_Leadership_Cells.pdf"
@@ -2615,11 +2660,11 @@ class Zume_Course {
             </div> <!-- row -->
         </section>
 
-		<?php
-	}
+        <?php
+    }
 
-	public static function get_course_content_9() {
-		?>
+    public static function get_course_content_9() {
+        ?>
 
         <!-- Step -->
         <h3></h3>
@@ -2696,8 +2741,10 @@ class Zume_Course {
             <!-- Video block -->
             <div class="row block">
                 <div class="small-12 small-centered medium-9 columns">
+                    <?php /* @codingStandardsIgnoreStart */ ?>
                     <script src="//fast.wistia.com/embed/medias/1rydt7j3ds.jsonp" async></script>
                     <script src="//fast.wistia.com/assets/external/E-v1.js" async></script>
+                    <?php /* @codingStandardsIgnoreEnd */ ?>
                     <div class="wistia_embed wistia_async_1rydt7j3ds"></div>
                 </div>
                 <p class="center"><a
@@ -2745,8 +2792,10 @@ class Zume_Course {
             <!-- Video block -->
             <div class="row block">
                 <div class="small-12 small-centered medium-9 columns">
+                    <?php /* @codingStandardsIgnoreStart */ ?>
                     <script src="//fast.wistia.com/embed/medias/42tm77n9aq.jsonp" async></script>
                     <script src="//fast.wistia.com/assets/external/E-v1.js" async></script>
+                    <?php /* @codingStandardsIgnoreEnd */ ?>
                     <div class="wistia_embed wistia_async_42tm77n9aq"></div>
                 </div>
                 <p class="center"><a href="https://zumeproject.com/wp-content/uploads/Zume_Video_Scripts_Pace.pdf"
@@ -2801,8 +2850,10 @@ class Zume_Course {
             <!-- Video block -->
             <div class="row block">
                 <div class="small-12 small-centered medium-9 columns">
+                    <?php /* @codingStandardsIgnoreStart */ ?>
                     <script src="//fast.wistia.com/embed/medias/nna7r761vo.jsonp" async></script>
                     <script src="//fast.wistia.com/assets/external/E-v1.js" async></script>
+                    <?php /* @codingStandardsIgnoreEnd */ ?>
                     <div class="wistia_embed wistia_async_nna7r761vo"></div>
                 </div>
                 <p class="center"><a
@@ -2985,8 +3036,10 @@ class Zume_Course {
             </div>
             <div class="row block">
                 <div class="small-12 small-centered medium-9 columns">
+                    <?php /* @codingStandardsIgnoreStart */ ?>
                     <script src="//fast.wistia.com/embed/medias/h3znainxm9.jsonp" async></script>
                     <script src="//fast.wistia.com/assets/external/E-v1.js" async></script>
+                    <?php /* @codingStandardsIgnoreEnd */ ?>
                     <div class="wistia_embed wistia_async_h3znainxm9"></div>
                     <p class="center"><a
                                 href="https://zumeproject.com/wp-content/uploads/Zume_Video_Scripts_Completion_of_Training.pdf"
@@ -3047,11 +3100,11 @@ class Zume_Course {
             <!-- Activity Block -->
 
         </section>
-		<?php
-	}
+        <?php
+    }
 
-	public static function get_course_content_10() {
-		?>
+    public static function get_course_content_10() {
+        ?>
 
         <!-- Step -->
         <h3></h3>
@@ -3182,8 +3235,10 @@ class Zume_Course {
             <!-- Video block -->
             <div class="row block">
                 <div class="small-12 small-centered medium-9 columns">
+                    <?php /* @codingStandardsIgnoreStart */ ?>
                     <script src="//fast.wistia.com/embed/medias/h9bg4ij6hs.jsonp" async></script>
                     <script src="//fast.wistia.com/assets/external/E-v1.js" async></script>
+                    <?php /* @codingStandardsIgnoreEnd */ ?>
                     <div class="wistia_embed wistia_async_h9bg4ij6hs">&nbsp;</div>
                     <p class="center"><a
                                 href="https://zumeproject.com/wp-content/uploads/Zume_Video_Scripts_Leadership_in_Networks.pdf"
@@ -3225,8 +3280,10 @@ class Zume_Course {
             <!-- Video block -->
             <div class="row block">
                 <div class="small-12 small-centered medium-9 columns">
+                    <?php /* @codingStandardsIgnoreStart */ ?>
                     <script src="//fast.wistia.com/embed/medias/82s2l4gpq8.jsonp" async></script>
                     <script src="//fast.wistia.com/assets/external/E-v1.js" async></script>
+                    <?php /* @codingStandardsIgnoreEnd */ ?>
                     <div class="wistia_embed wistia_async_82s2l4gpq8">&nbsp;</div>
                     <p class="center"><a
                                 href="https://zumeproject.com/wp-content/uploads/Zume_Video_Scripts_Peer_Mentoring_Groups.pdf"
@@ -3302,8 +3359,10 @@ class Zume_Course {
 
                     <div class="row block">
                         <div class="small-12 small-centered medium-9 columns">
+                    <?php /* @codingStandardsIgnoreStart */ ?>
                             <script src="//fast.wistia.com/embed/medias/h3znainxm9.jsonp" async></script>
                             <script src="//fast.wistia.com/assets/external/E-v1.js" async></script>
+                    <?php /* @codingStandardsIgnoreEnd */ ?>
                             <div class="wistia_embed wistia_async_h3znainxm9">&nbsp;</div>
                             <p class="center"><a
                                         href="https://zumeproject.com/wp-content/uploads/Zume_Video_Scripts_Completion_of_Training.pdf"
@@ -3498,7 +3557,7 @@ class Zume_Course {
                             </div>
                         </div>
         </section>
-		<?php
-	}
+        <?php
+    }
 
 }

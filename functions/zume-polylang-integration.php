@@ -13,46 +13,46 @@
  * @return bool
  */
 function zume_has_polylang() {
-	if( function_exists( 'pll_the_languages' ) ) {
-		return true;
-	} else {
-		return false;
-	}
+    if ( function_exists( 'pll_the_languages' ) ) {
+        return true;
+    } else {
+        return false;
+    }
 }
 
 function zume_the_languages( $args = [] ) {
-	if( function_exists('pll_the_languages' ) ) {
-		return pll_the_languages($args);
-	}
-	else {
-		return new WP_Error('Polylang_missing', 'Polylang plugin missing');
-	}
+    if ( function_exists( 'pll_the_languages' ) ) {
+        return pll_the_languages( $args );
+    }
+    else {
+        return new WP_Error( 'Polylang_missing', 'Polylang plugin missing' );
+    }
 }
 
 function zume_current_language() {
-	if( function_exists('pll_the_languages' ) ) {
-		return pll_current_language();
-	}
-	else {
-		return new WP_Error('Polylang_missing', 'Polylang plugin missing');
-	}
+    if ( function_exists( 'pll_the_languages' ) ) {
+        return pll_current_language();
+    }
+    else {
+        return new WP_Error( 'Polylang_missing', 'Polylang plugin missing' );
+    }
 }
 
 function zume_default_language() {
-	if( function_exists('pll_the_languages' ) ) {
-		return pll_default_language();
-	}
-	else {
-		return new WP_Error('Polylang_missing', 'Polylang plugin missing');
-	}
+    if ( function_exists( 'pll_the_languages' ) ) {
+        return pll_default_language();
+    }
+    else {
+        return new WP_Error( 'Polylang_missing', 'Polylang plugin missing' );
+    }
 }
 
 function zume_get_translation( $post_id, $slug = 'en' ) {
-	if( function_exists('pll_the_languages' ) ) {
-		return pll_get_post($post_id, $slug);
-	}
-	else {
-		return new WP_Error('Polylang_missing', 'Polylang plugin missing');
-	}
+    if ( function_exists( 'pll_the_languages' ) ) {
+        return pll_get_post( $post_id, $slug );
+    }
+    else {
+        return new WP_Error( 'Polylang_missing', 'Polylang plugin missing' );
+    }
 
 }

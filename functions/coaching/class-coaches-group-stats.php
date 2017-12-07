@@ -13,8 +13,8 @@
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
 
-if(!class_exists('WP_List_Table')){
-    require_once(ABSPATH . 'wp-admin/includes/class-wp-list-table.php');
+if ( !class_exists( 'WP_List_Table' )){
+    require_once( ABSPATH . 'wp-admin/includes/class-wp-list-table.php' );
 }
 
 /**
@@ -67,7 +67,7 @@ class Zume_Group_Stats_List extends WP_List_Table {
         // Add Group Type column and bulk change controls.
         if ( bp_groups_get_group_types() ) {
             // Add Group Type column.
-            add_filter( 'bp_groups_list_table_get_columns',        array( $this, 'add_type_column' )                  );
+            add_filter( 'bp_groups_list_table_get_columns', array( $this, 'add_type_column' ) );
             add_filter( 'bp_groups_admin_get_group_custom_column', array( $this, 'column_content_group_type' ), 10, 3 );
             // Add the bulk change select.
             add_action( 'bp_groups_list_table_after_bulk_actions', array( $this, 'add_group_type_bulk_change_select' ) );
@@ -100,7 +100,7 @@ class Zume_Group_Stats_List extends WP_List_Table {
         // Sort order.
         $order = 'DESC';
         if ( !empty( $_REQUEST['order'] ) ) {
-            $order = ( 'desc' == strtolower( $_REQUEST['order'] ) ) ? 'DESC' : 'ASC';
+            $order = ( 'desc' == strtolower( sanitize_key( $_REQUEST['order'] ) ) ) ? 'DESC' : 'ASC';
         }
 
         // Order by - default to newest.
@@ -126,16 +126,18 @@ class Zume_Group_Stats_List extends WP_List_Table {
         }
 
         // Are we doing a search?
-        if ( !empty( $_REQUEST['s'] ) )
-            $search_terms = $_REQUEST['s'];
+        if ( !empty( $_REQUEST['s'] ) ) {
+            $search_terms = sanitize_text_field( wp_unslash( $_REQUEST['s'] ) );
+        }
 
         // Check if user has clicked on a specific group (if so, fetch only that group).
-        if ( !empty( $_REQUEST['gid'] ) )
+        if ( !empty( $_REQUEST['gid'] ) ) {
             $include_id = (int) $_REQUEST['gid'];
+        }
 
         // Set the current view.
-        if ( isset( $_GET['group_status'] ) && in_array( $_GET['group_status'], array( 'public', 'private', 'hidden' ) ) ) {
-            $this->view = $_GET['group_status'];
+        if ( isset( $_GET['group_status'] ) && in_array( sanitize_key( $_GET['group_status'] ), array( 'public', 'private', 'hidden' ) ) ) {
+            $this->view = sanitize_key( $_GET['group_status'] );
         }
 
         // We'll use the ids of group status types for the 'include' param.
@@ -155,8 +157,8 @@ class Zume_Group_Stats_List extends WP_List_Table {
 
         // Group types
         $group_type = false;
-        if ( isset( $_GET['bp-group-type'] ) && null !== bp_groups_get_group_type_object( $_GET['bp-group-type'] ) ) {
-            $group_type = $_GET['bp-group-type'];
+        if ( isset( $_GET['bp-group-type'] ) && null !== bp_groups_get_group_type_object( sanitize_key( $_GET['bp-group-type'] ) ) ) {
+            $group_type = sanitize_key( $_GET['bp-group-type'] );
         }
 
         // If we're viewing a specific group, flatten all activities into a single array.
@@ -231,7 +233,7 @@ class Zume_Group_Stats_List extends WP_List_Table {
      * @since 1.7.0
      */
     public function no_items() {
-        _e( 'No groups found.', 'buddypress' );
+        esc_html_e( 'No groups found.', 'buddypress' );
     }
 
     /**
@@ -244,9 +246,10 @@ class Zume_Group_Stats_List extends WP_List_Table {
 
         <h2 class="screen-reader-text"><?php
             /* translators: accessibility text */
-            _e( 'Groups list', 'buddypress' );
+            esc_html_e( 'Groups list', 'buddypress' );
             ?></h2>
 
+        <?php /* @codingStandardsIgnoreLine */ ?>
         <table class="wp-list-table <?php echo implode( ' ', $this->get_table_classes() ); ?>" cellspacing="0">
             <thead>
             <tr>
@@ -338,10 +341,10 @@ class Zume_Group_Stats_List extends WP_List_Table {
             ?></h2>
 
         <ul class="subsubsub">
-            <li class="all"><a href="<?php echo esc_url( $url_base ); ?>" class="<?php if ( 'all' == $this->view ) echo 'current'; ?>"><?php _e( 'All', 'buddypress' ); ?></a> |</li>
-            <li class="public"><a href="<?php echo esc_url( add_query_arg( 'group_status', 'public', $url_base ) ); ?>" class="<?php if ( 'public' == $this->view ) echo 'current'; ?>"><?php printf( _n( 'Public <span class="count">(%s)</span>', 'Public <span class="count">(%s)</span>', $this->group_counts['public'], 'buddypress' ), number_format_i18n( $this->group_counts['public'] ) ); ?></a> |</li>
-            <li class="private"><a href="<?php echo esc_url( add_query_arg( 'group_status', 'private', $url_base ) ); ?>" class="<?php if ( 'private' == $this->view ) echo 'current'; ?>"><?php printf( _n( 'Private <span class="count">(%s)</span>', 'Private <span class="count">(%s)</span>', $this->group_counts['private'], 'buddypress' ), number_format_i18n( $this->group_counts['private'] ) ); ?></a> |</li>
-            <li class="hidden"><a href="<?php echo esc_url( add_query_arg( 'group_status', 'hidden', $url_base ) ); ?>" class="<?php if ( 'hidden' == $this->view ) echo 'current'; ?>"><?php printf( _n( 'Hidden <span class="count">(%s)</span>', 'Hidden <span class="count">(%s)</span>', $this->group_counts['hidden'], 'buddypress' ), number_format_i18n( $this->group_counts['hidden'] ) ); ?></a></li>
+            <li class="all"><a href="<?php echo esc_url( $url_base ); ?>" class="<?php if ( 'all' == $this->view ) { echo 'current';} ?>"><?php _e( 'All', 'buddypress' ); ?></a> |</li>
+            <li class="public"><a href="<?php echo esc_url( add_query_arg( 'group_status', 'public', $url_base ) ); ?>" class="<?php if ( 'public' == $this->view ) { echo 'current';} ?>"><?php printf( _n( 'Public <span class="count">(%s)</span>', 'Public <span class="count">(%s)</span>', $this->group_counts['public'], 'buddypress' ), number_format_i18n( $this->group_counts['public'] ) ); ?></a> |</li>
+            <li class="private"><a href="<?php echo esc_url( add_query_arg( 'group_status', 'private', $url_base ) ); ?>" class="<?php if ( 'private' == $this->view ) { echo 'current';} ?>"><?php printf( _n( 'Private <span class="count">(%s)</span>', 'Private <span class="count">(%s)</span>', $this->group_counts['private'], 'buddypress' ), number_format_i18n( $this->group_counts['private'] ) ); ?></a> |</li>
+            <li class="hidden"><a href="<?php echo esc_url( add_query_arg( 'group_status', 'hidden', $url_base ) ); ?>" class="<?php if ( 'hidden' == $this->view ) { echo 'current';} ?>"><?php printf( _n( 'Hidden <span class="count">(%s)</span>', 'Hidden <span class="count">(%s)</span>', $this->group_counts['hidden'], 'buddypress' ), number_format_i18n( $this->group_counts['hidden'] ) ); ?></a></li>
 
             <?php
 
@@ -399,12 +402,12 @@ class Zume_Group_Stats_List extends WP_List_Table {
          */
         return apply_filters( 'bp_groups_list_table_get_columns', array(
             'cb'          => '<input name type="checkbox" />',
-            'comment'     => _x( 'Name', 'Groups admin Group Name column header',               'buddypress' ),
+            'comment'     => _x( 'Name', 'Groups admin Group Name column header', 'buddypress' ),
             'description' => _x( 'Description', 'Groups admin Group Description column header', 'buddypress' ),
-            'status'      => _x( 'Status', 'Groups admin Privacy Status column header',         'buddypress' ),
-            'members'     => _x( 'Members', 'Groups admin Members column header',               'buddypress' ),
-            'assigned_to'     => _x( 'Assigned To', 'Assigned To',               'buddypress' ),
-            'last_active' => _x( 'Last Active', 'Groups admin Last Active column header',       'buddypress' )
+            'status'      => _x( 'Status', 'Groups admin Privacy Status column header', 'buddypress' ),
+            'members'     => _x( 'Members', 'Groups admin Members column header', 'buddypress' ),
+            'assigned_to'     => _x( 'Assigned To', 'Assigned To', 'buddypress' ),
+            'last_active' => _x( 'Last Active', 'Groups admin Last Active column header', 'buddypress' )
         ) );
     }
 
@@ -450,8 +453,9 @@ class Zume_Group_Stats_List extends WP_List_Table {
         $action_count = count( $actions );
         $i = 0;
 
-        if ( !$action_count )
+        if ( !$action_count ) {
             return '';
+        }
 
         $out = '<div class="' . ( $always_visible ? 'row-actions visible' : 'row-actions' ) . '">';
         foreach ( $actions as $action => $link ) {
@@ -532,13 +536,13 @@ class Zume_Group_Stats_List extends WP_List_Table {
 
         // Rollover actions.
         // Edit.
-        $actions['edit']   = sprintf( '<a href="%s">%s</a>', esc_url( $edit_url   ), __( 'Edit',   'buddypress' ) );
+        $actions['edit']   = sprintf( '<a href="%s">%s</a>', esc_url( $edit_url ), __( 'Edit', 'buddypress' ) );
 
         // Delete.
         $actions['delete'] = sprintf( '<a href="%s">%s</a>', esc_url( $delete_url ), __( 'Delete', 'buddypress' ) );
 
         // Visit.
-        $actions['view']   = sprintf( '<a href="%s">%s</a>', esc_url( $view_url   ), __( 'View',   'buddypress' ) );
+        $actions['view']   = sprintf( '<a href="%s">%s</a>', esc_url( $view_url ), __( 'View', 'buddypress' ) );
 
         /**
          * Filters the actions that will be shown for the column content.
@@ -802,7 +806,7 @@ class Zume_Group_Stats_List extends WP_List_Table {
             <select name="<?php echo $id_name; ?>" id="<?php echo $id_name; ?>" style="display:inline-block;float:none;">
                 <option value=""><?php _e( 'Change group type to&hellip;', 'buddypress' ) ?></option>
 
-                <?php foreach( $types as $type ) : ?>
+                <?php foreach ( $types as $type ) : ?>
 
                     <option value="<?php echo esc_attr( $type->name ); ?>"><?php echo esc_html( $type->labels['singular_name'] ); ?></option>
 

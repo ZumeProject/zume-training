@@ -31,7 +31,7 @@ require_once( 'tgm-plugin-activation-class.php' );
 //        ),
 //
  */
-function dt_register_required_plugins() {
+function zume_register_required_plugins() {
     /*
      * Array of plugin arrays. Required keys are name and slug.
      * If the source is NOT from the .org repo, then source is also required.
@@ -89,20 +89,20 @@ function dt_register_required_plugins() {
             'version' => '1.13.12',
             'required' => false,
         ),
-	    array(
-		    'name' => 'PolyLang',
-		    'slug' => 'polylang',
-		    'version' => '2.2.7',
-		    'required' => true,
-		    'force_activation'  => true,
-	    ),
-	    array(
-		    'name' => 'Nav Menu Roles',
-		    'slug' => 'nav-menu-roles',
-		    'version' => '1.9.1',
-		    'required' => true,
-		    'force_activation'  => true,
-	    )
+        array(
+            'name' => 'PolyLang',
+            'slug' => 'polylang',
+            'version' => '2.2.7',
+            'required' => true,
+            'force_activation'  => true,
+        ),
+        array(
+            'name' => 'Nav Menu Roles',
+            'slug' => 'nav-menu-roles',
+            'version' => '1.9.1',
+            'required' => true,
+            'force_activation'  => true,
+        )
     );
 
     /*
@@ -202,4 +202,4 @@ function dt_register_required_plugins() {
 
     tgmpa( $plugins, $config );
 }
-add_action( 'tgmpa_register', 'dt_register_required_plugins' );
+add_action( 'tgmpa_register', 'zume_register_required_plugins' );

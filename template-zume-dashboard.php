@@ -13,6 +13,7 @@ get_header();
 
         <div id="main" class="cell" role="main">
 
+
             <!-- First Row -->
             <div class="grid-x grid-margin-x" data-equalizer data-equalize-on="large" id="test-eq">
                 <div class="large-1 cell"></div>
@@ -22,6 +23,7 @@ get_header();
 
 
                             <ul id="groups-list" class="item-list">
+
 
                                     <li>
                                         <div class="grid-x">

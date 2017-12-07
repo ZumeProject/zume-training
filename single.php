@@ -2,25 +2,25 @@
 
 <div id="content">
 
-	<div id="inner-content" class="row">
+    <div id="inner-content" class="row">
 
-		<main id="main" class="large-12 medium-12 columns" role="main">
+        <main id="main" class="large-12 medium-12 columns" role="main">
 
-		    <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+            <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-		    	<?php get_template_part( 'parts/loop', 'single' ); ?>
+                <?php get_template_part( 'parts/loop', 'single' ); ?>
 
-		    <?php endwhile; else : ?>
+            <?php endwhile; else : ?>
 
-		   		<?php get_template_part( 'parts/content', 'missing' ); ?>
+                <?php get_template_part( 'parts/content', 'missing' ); ?>
 
-		    <?php endif; ?>
+            <?php endif; ?>
 
-		</main> <!-- end #main -->
+        </main> <!-- end #main -->
 
-		<?php //get_sidebar(); ?>
+        <?php //get_sidebar(); ?>
 
-	</div> <!-- end #inner-content -->
+    </div> <!-- end #inner-content -->
 
 </div> <!-- end #content -->
 
