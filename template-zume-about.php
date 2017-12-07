@@ -6,122 +6,121 @@ Template Name: Zume About
 
 <?php get_header(); ?>
 
-<style>
-    body {overflow-x: hidden;};
-</style>
+    <div id="content">
 
-<div id="content">
+        <div id="inner-content">
 
-    <div id="inner-content">
+            <div class="grid-x ">
+                <div class="large-2 cell"></div>
 
-        <div class="grid-x ">
+                <div class="large-8 small-12 cell">
 
-            <div class="large-8 large-offset-2 small-12 cell ">
-
-                <!-- Place video here -->
-                <div class="responsive-embed widescreen">
-                    <iframe allowFullScreen frameborder="0" height="564" mozallowfullscreen
-                            src="https://player.vimeo.com/video/245293029" webkitAllowFullScreen
-                            width="640"></iframe>
-                </div>
-
-                <div class="grid-x row">
-                    <div class="cell ">
-                        <p style="font-size: 150%; margin: 20px 0 40px 0; text-align: center;">Zúme Training is an
-                            on-line and in-life learning experience designed for small groups who follow Jesus to learn
-                            how to obey His Great Commission and make disciples who multiply.</p>
+                    <!-- Video -->
+                    <div class="responsive-embed widescreen"><!-- TODO: Add multilanguage video switcher-->
+                        <iframe allowFullScreen frameborder="0" height="564" mozallowfullscreen
+                                src="https://player.vimeo.com/video/245293029" webkitAllowFullScreen
+                                width="640"></iframe>
                     </div>
+
+                    <div class="grid-x row vertical-padding">
+                        <div class="cell ">
+                            <p style="font-size: 150%; margin: 20px 0 40px 0; text-align: center;"><?php echo __( 'Zúme Training is an
+                            on-line and in-life learning experience designed for small groups who follow Jesus to learn
+                            how to obey His Great Commission and make disciples who multiply.', 'zume' ) ?></p>
+                        </div>
+                    </div>
+
                 </div>
-
+                <div class="large-2 cell"></div>
             </div>
-        </div>
 
-        <div class="grid-x row padding-bottom">
-            <div class="cell column" style="background-color:#323A68;">
-                <div class="grid-x grid-margin-x grid-margin-y row">
-                    <div class="large-8 large-offset-2 cell column" style="color: white;">
-                        <h3 style="color: white;">Goals of the Zúme Project:</h3>
-                        <p>Zúme means yeast in Greek. In Matthew 13:33 Jesus is quoted as saying, "The Kingdom of
+            <!-- Goals -->
+            <div class="grid-x">
+                <div class="cell vertical-padding" style="background-color:#323A68;">
+                    <div class="grid-x grid-margin-x grid-margin-y">
+                        <div class="large-2 cell"></div>
+                        <div class="cell large-8" style="color: white;">
+                            <h3 style="color: white;"><?php echo __( 'Goals of the Zúme Project:', 'zume' ) ?></h3>
+                            <p><?php echo __( 'Zúme means yeast in Greek. In Matthew 13:33 Jesus is quoted as saying, "The Kingdom of
                             Heaven is like a woman who took yeast and mixed it into a large amount of flour until it
                             was all leavened." This illustrates how ordinary people, using ordinary resources, can
                             have an extraordinary impact for the Kingdom of God. Zúme aims to equip and empower
-                            ordinary believers to reach every neighborhood.</p>
-                        <p>The initial goal of Zúme is for there to be a training group of four to twelve people in
+                            ordinary believers to reach every neighborhood.', 'zume' ) ?></p>
+                            <p><?php __( 'The initial goal of Zúme is for there to be a training group of four to twelve people in
                             each census tract in the country. Each of these training groups will start two
                             first-generation churches which will then begin to reproduce. There are about 75,000
-                            census tracts in the U.S.</p>
+                            census tracts in the U.S.', 'zume' ) ?></p>
+                        </div>
+                        <div class="large-2 cell"></div>
                     </div>
+
                 </div>
             </div>
-        </div>
 
+            <!-- Description -->
+            <div class="grid-x vertical-padding">
+                <div class="medium-2 cell"></div>
+                <div class="medium-8 cell ">
 
-        <div class="grid-container fluid">
-            <div class="medium-8 medium-offset-2 cell">
-
-                <div class="grid-x ">
-                    <div class="large-4 cell ">
-                        <img src="/wp-content/themes/zume-project-multilingual/assets/images/pages/training2.png"
-                             alt="Zúme in 10 sessions, 2 hours each, cost: free"  height="150" />
+                    <div class="grid-x  vertical-padding">
+                        <div class="large-4 cell ">
+                            <img src="/wp-content/themes/zume-project-multilingual/assets/images/pages/training2.png"
+                                 alt="Zúme in 10 sessions, 2 hours each, cost: free" height="150"/>
+                        </div>
+                        <div class="large-8 cell ">
+                            <h3><?php echo __( 'Zúme Training consists of nine (two-hour) Basic Sessions and includes:', 'zume' ) ?></h3>
+                            <ul>
+                                <li><?php echo __( 'Video and Audio to help your group understand basic principles of multiplying disciples.', 'zume' ) ?></li>
+                                <li><?php echo __( 'Group Discussions to help your group think through what’s being shared.', 'zume' ) ?></li>
+                                <li><?php echo __( 'Simple Exercises to help your group put what you’re learning into practice.', 'zume' ) ?></li>
+                                <li><?php echo __( 'Session Challenges to help your group keep learning and growing between sessions.', 'zume' ) ?></li>
+                                <li><?php echo __( 'There is an optional Session 10 with extra material.', 'zume' ) ?></li>
+                            </ul>
+                        </div>
                     </div>
-                    <div class="large-8 cell ">
-                        <h3>Zúme Training consists of nine (two-hour) Basic Sessions and includes:</h3>
-                        <ul>
-                            <li>Video and Audio to help your group understand basic principles of multiplying
-                                disciples.
-                            </li>
-                            <li>Group Discussions to help your group think through what’s being shared.</li>
-                            <li>Simple Exercises to help your group put what you’re learning into practice.</li>
-                            <li>Session Challenges to help your group keep learning and growing between sessions.
-                            </li>
-                            <li>There is an optional Session 10 with extra material.</li>
-                        </ul>
+
+
+                    <div class="grid-x grid-margin-x grid-margin-y vertical-padding">
+                        <div class="medium-4 cell ">
+                            <img src="/wp-content/themes/zume-project-multilingual/assets/images/pages/getstarted.png"
+                                 alt="" width="230" height="150"/>
+                        </div>
+                        <div class="medium-8 cell ">
+                            <h3><?php echo __( 'How to get started:', 'zume' ) ?></h3>
+                            <ul style="margin-bottom: 1.8rem;">
+                                <li><?php echo __( 'If you haven\'t created a login yet, please do so.', 'zume' ) ?></li>
+                                <li><?php echo __( 'Invite 3-11 friends. You must have at least four people present, who have accepted your
+                                invitation, to start the first session.', 'zume' ) ?>
+                                </li>
+                                <li><?php echo __( 'Schedule a time to get together with your friends.', 'zume' ) ?></li>
+                                <li><?php echo __( 'Make sure you have access to an internet-enabled device.', 'zume' ) ?></li>
+                            </ul>
+                        </div>
                     </div>
+
+                    <div class="grid-x grid-margin-x grid-margin-y vertical-padding">
+                        <div class="medium-4 cell ">
+                            <img src="/wp-content/themes/zume-project-multilingual/assets/images/pages/guidebook.png"
+                                 alt=""
+                                 width="230" height="150"/>
+                        </div>
+                        <div class="medium-8 cell">
+                            <h3><?php echo __( 'Optional prep for your first meeting:', 'zume' ) ?></h3>
+                            <ul>
+                                <li><?php echo __( 'Download the Zúme Guidebook.', 'zume' ) ?></li>
+                                <li><?php echo __( 'If you\'d like, you can print out copies for the members of your group.', 'zume' ) ?></li>
+                                <li><?php echo __( 'Consider connecting to a TV or projector so everyone in your group can view the content.', 'zume' ) ?>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
                 </div>
+                <div class="large-2 cell"></div>
+            </div><!-- end #main -->
 
+        </div> <!-- end #inner-content -->
 
-                <div class="grid-x grid-margin-x grid-margin-y row">
-                    <div class="medium-4 cell column">
-                        <img src="/wp-content/themes/zume-project-multilingual/assets/images/pages/getstarted.png"
-                             alt=""
-                             width="230" height="150"/>
-                    </div>
-                    <div class="medium-8 cell column">
-                        <h3>How to get started:</h3>
-                        <ul style="margin-bottom: 1.8rem;">
-                            <li>If you haven't created a login yet, please do so.</li>
-                            <li>Invite 3-11 friends. You must have at least four people present, who have accepted your
-                                invitation, to start the first session.
-                            </li>
-                            <li>Schedule a time to get together with your friends.</li>
-                            <li>Make sure you have access to an internet-enabled device.</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="grid-x grid-margin-x grid-margin-y row">
-                    <div class="medium-4 cell column">
-                        <img src="/wp-content/themes/zume-project-multilingual/assets/images/pages/guidebook.png" alt=""
-                             width="230" height="150"/>
-                    </div>
-                    <div class="medium-8 cell column">
-                        <h3>Optional prep for your first meeting:</h3>
-                        <ul>
-                            <li>Download the Zúme Guidebook.</li>
-                            <li>If you'd like, you can print out copies for the members of your group.</li>
-                            <li>Consider connecting to a TV or projector so everyone in your group can view the content.
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-
-    </div> <!-- end #main -->
-
-</div> <!-- end #inner-content -->
-
-</div> <!-- end #content -->
+    </div>
 
 <?php get_footer(); ?>

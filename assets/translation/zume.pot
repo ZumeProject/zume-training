@@ -3,14 +3,14 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "Project-Id-Version: Zúme Project\n"
-"POT-Creation-Date: 2017-12-05 06:37-0800\n"
+"POT-Creation-Date: 2017-12-06 06:54-0800\n"
 "PO-Revision-Date: 2017-12-05 06:36-0800\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.0.4\n"
+"X-Generator: Poedit 2.0.5\n"
 "X-Poedit-Basepath: ../..\n"
 "X-Poedit-Flags-xgettext: --add-comments=translators:\n"
 "X-Poedit-WPHeader: style.css\n"
@@ -104,11 +104,6 @@ msgstr[1] ""
 #: functions/coaching/class-coaches-group-stats.php:538
 #: functions/coaching/class-coaches-unassigned-groups.php:371
 #: functions/coaching/class-coaches-unassigned-groups.php:530
-#: functions/login/wplogin_redirect.php:1221
-#: functions/login/wplogin_redirect.php:1239
-#: functions/login/wplogin_redirect.php:1257
-#: functions/login/wplogin_redirect.php:1365
-#: functions/login/wplogin_redirect.php:1373
 msgid "Delete"
 msgstr ""
 
@@ -156,9 +151,6 @@ msgstr ""
 
 #: functions/coaching/class-coaches-group-stats.php:535
 #: functions/coaching/class-coaches-unassigned-groups.php:527
-#: functions/login/wplogin_redirect.php:1221
-#: functions/login/wplogin_redirect.php:1239
-#: functions/login/wplogin_redirect.php:1257
 msgid "Edit"
 msgstr ""
 
@@ -270,726 +262,15 @@ msgstr ""
 msgid "Join my training group"
 msgstr ""
 
-#: functions/login/wplogin_redirect.php:582
-msgid "Register"
-msgstr ""
-
-#: functions/login/wplogin_redirect.php:586
-msgid "Site Admin"
-msgstr ""
-
-#: functions/login/wplogin_redirect.php:708
-msgid "ERROR: Non-existent username submitted "
-msgstr ""
-
-#: functions/login/wplogin_redirect.php:718
-msgid "ERROR: Non-existent role submitted "
-msgstr ""
-
-#: functions/login/wplogin_redirect.php:729
-msgid "ERROR: Non-existent level submitted "
-msgstr ""
-
-#: functions/login/wplogin_redirect.php:746
-#, php-format
-msgid "ERROR: Empty %s submitted "
-msgstr ""
-
-#: functions/login/wplogin_redirect.php:775
-#: functions/login/wplogin_redirect.php:837
-#, php-format
-msgid "ERROR: Non-local or invalid URL submitted for %s %s"
-msgstr ""
-
-#: functions/login/wplogin_redirect.php:801
-#, php-format
-msgid "ERROR: Unknown error adding %s-specific redirect for %s %s"
-msgstr ""
-
-#: functions/login/wplogin_redirect.php:808
-#, php-format
-msgid "Successfully added %s-specific redirect rule for %s"
-msgstr ""
-
-#: functions/login/wplogin_redirect.php:866
-#, php-format
-msgid "ERROR: Unknown error editing %s-specific redirect for %s %s"
-msgstr ""
-
-#: functions/login/wplogin_redirect.php:873
-#, php-format
-msgid "Successfully edited %s-specific redirect rule for %s"
-msgstr ""
-
-#: functions/login/wplogin_redirect.php:901
-#, php-format
-msgid "ERROR: Unknown error deleting %s-specific redirect for %s %s"
-msgstr ""
-
-#: functions/login/wplogin_redirect.php:907
-#, php-format
-msgid "Successfully deleted %s-specific redirect rule for %s"
-msgstr ""
-
-#: functions/login/wplogin_redirect.php:942
-msgid ""
-"ERROR: Unknown database problem removing URL for &#34;all other users&#34; "
-msgstr ""
-
-#: functions/login/wplogin_redirect.php:946
-msgid "Successfully removed URL for &#34;all other users&#34; "
-msgstr ""
-
-#: functions/login/wplogin_redirect.php:957
-#: functions/login/wplogin_redirect.php:1026
-msgid "ERROR: Non-local or invalid URL submitted "
-msgstr ""
-
-#: functions/login/wplogin_redirect.php:970
-msgid ""
-"ERROR: Unknown database problem updating URL for &#34;all other users&#34; "
-msgstr ""
-
-#: functions/login/wplogin_redirect.php:974
-msgid "Successfully updated URL for &#34;all other users&#34;"
-msgstr ""
-
-#: functions/login/wplogin_redirect.php:1013
-msgid ""
-"ERROR: Unknown database problem removing URL for &#34;post-registration&#34; "
-msgstr ""
-
-#: functions/login/wplogin_redirect.php:1016
-msgid "Successfully removed URL for &#34;post-registration&#34; "
-msgstr ""
-
-#: functions/login/wplogin_redirect.php:1039
-msgid ""
-"ERROR: Unknown database problem updating URL for &#34;post-registration&#34; "
-msgstr ""
-
-#: functions/login/wplogin_redirect.php:1043
-msgid "Successfully updated URL for &#34;post-registration&#34;"
-msgstr ""
-
-#: functions/login/wplogin_redirect.php:1069
-msgid "Successfully updated plugin settings"
-msgstr ""
-
-#: functions/login/wplogin_redirect.php:1218
-#: functions/login/wplogin_redirect.php:1236
-#: functions/login/wplogin_redirect.php:1253
-msgid "Login URL"
-msgstr ""
-
-#: functions/login/wplogin_redirect.php:1219
-#: functions/login/wplogin_redirect.php:1237
-#: functions/login/wplogin_redirect.php:1254
-msgid "Logout URL"
-msgstr ""
-
-#: functions/login/wplogin_redirect.php:1280
-msgid "Manage redirect rules"
-msgstr ""
-
-#: functions/login/wplogin_redirect.php:1282
-msgid ""
-"Define custom URLs to which different users, users with specific roles, "
-"users with specific levels, and all other users will be redirected upon "
-"login."
-msgstr ""
-
-#: functions/login/wplogin_redirect.php:1283
-msgid "Define a custom URL to which all users will be redirected upon logout"
-msgstr ""
-
-#: functions/login/wplogin_redirect.php:1284
-msgid ""
-"Note that you can use the syntax <strong>[variable]username[/variable]</"
-"strong> in your URLs so that the system will build a dynamic URL upon each "
-"login, replacing that text with the users username."
-msgstr ""
-
-#: functions/login/wplogin_redirect.php:1286
-msgid "Specific users"
-msgstr ""
-
-#: functions/login/wplogin_redirect.php:1297
-#: functions/login/wplogin_redirect.php:1319
-#: functions/login/wplogin_redirect.php:1349
-msgid "Add:"
-msgstr ""
-
-#: functions/login/wplogin_redirect.php:1299
-msgid "Select a username"
-msgstr ""
-
-#: functions/login/wplogin_redirect.php:1302
-#: functions/login/wplogin_redirect.php:1324
-#: functions/login/wplogin_redirect.php:1355
-#: functions/login/wplogin_redirect.php:1363
-#: functions/login/wplogin_redirect.php:1372
-msgid "URL:"
-msgstr ""
-
-#: functions/login/wplogin_redirect.php:1303
-#: functions/login/wplogin_redirect.php:1325
-#: functions/login/wplogin_redirect.php:1356
-#: functions/login/wplogin_redirect.php:1364
-msgid "Logout URL:"
-msgstr ""
-
-#: functions/login/wplogin_redirect.php:1305
-msgid "Add username rule"
-msgstr ""
-
-#: functions/login/wplogin_redirect.php:1308
-msgid "Specific roles"
-msgstr ""
-
-#: functions/login/wplogin_redirect.php:1321
-msgid "Select a role"
-msgstr ""
-
-#: functions/login/wplogin_redirect.php:1327
-msgid "Add role rule"
-msgstr ""
-
-#: functions/login/wplogin_redirect.php:1330
-msgid "Specific levels"
-msgstr ""
-
-#: functions/login/wplogin_redirect.php:1339
-msgid "Order"
-msgstr ""
-
-#: functions/login/wplogin_redirect.php:1351
-msgid "Select a level"
-msgstr ""
-
-#: functions/login/wplogin_redirect.php:1354
-msgid "Order:"
-msgstr ""
-
-#: functions/login/wplogin_redirect.php:1358
-msgid "Add level rule"
-msgstr ""
-
-#: functions/login/wplogin_redirect.php:1361
-msgid "All other users"
-msgstr ""
-
-#: functions/login/wplogin_redirect.php:1365
-#: functions/login/wplogin_redirect.php:1373
-#: functions/login/wplogin_redirect.php:1450
-#: functions/utilities/class-tgm-plugin-activation.php:2816
-msgid "Update"
-msgstr ""
-
-#: functions/login/wplogin_redirect.php:1370
-msgid "Post-registration"
-msgstr ""
-
-#: functions/login/wplogin_redirect.php:1378
-msgid "Customize plugin settings"
-msgstr ""
-
-#: functions/login/wplogin_redirect.php:1383
-msgid "Redirect restrictions"
-msgstr ""
-
-#: functions/login/wplogin_redirect.php:1387
-msgid "Any http or https URL"
-msgstr ""
-
-#: functions/login/wplogin_redirect.php:1388
-msgid "Any URL"
-msgstr ""
-
-#: functions/login/wplogin_redirect.php:1389
-msgid "Any URL on the same domain"
-msgstr ""
-
-#: functions/login/wplogin_redirect.php:1395
-msgid ""
-"Allow a POST or GET &#34;redirect_to&#34; variable to take redirect "
-"precedence"
-msgstr ""
-
-#: functions/login/wplogin_redirect.php:1399
-#: functions/login/wplogin_redirect.php:1410
-#: functions/login/wplogin_redirect.php:1422
-msgid "Yes"
-msgstr ""
-
-#: functions/login/wplogin_redirect.php:1400
-#: functions/login/wplogin_redirect.php:1411
-#: functions/login/wplogin_redirect.php:1423
-msgid "No"
-msgstr ""
-
-#: functions/login/wplogin_redirect.php:1406
-msgid ""
-"Allow a POST or GET &#34;redirect_to&#34; logout variable to take redirect "
-"precedence"
-msgstr ""
-
-#: functions/login/wplogin_redirect.php:1418
-#, php-format
-msgid ""
-"Use external redirect file. Set this to &#34;Yes&#34; if you are using a "
-"plugin such as Gigya that bypasses the regular WordPress redirect process "
-"(and allows only one fixed redirect URL). Then, set the redirect URL in the "
-"other plugin to %s"
-msgstr ""
-
-#: functions/login/wplogin_redirect.php:1429
-msgid "Permission level required to edit redirect URLs"
-msgstr ""
-
-#: functions/utilities/class-tgm-plugin-activation.php:334
-msgid "Install Required Plugins"
-msgstr ""
-
-#: functions/utilities/class-tgm-plugin-activation.php:335
-msgid "Install Plugins"
-msgstr ""
-
-#. translators: %s: plugin name.
-#: functions/utilities/class-tgm-plugin-activation.php:337
-#, php-format
-msgid "Installing Plugin: %s"
-msgstr ""
-
-#. translators: %s: plugin name.
-#: functions/utilities/class-tgm-plugin-activation.php:339
-#, php-format
-msgid "Updating Plugin: %s"
-msgstr ""
-
-#: functions/utilities/class-tgm-plugin-activation.php:340
-msgid "Something went wrong with the plugin API."
-msgstr ""
-
-#. translators: 1: plugin name(s).
-#: functions/utilities/class-tgm-plugin-activation.php:343
-#, php-format
-msgid "This theme requires the following plugin: %1$s."
-msgid_plural "This theme requires the following plugins: %1$s."
-msgstr[0] ""
-msgstr[1] ""
-
-#. translators: 1: plugin name(s).
-#: functions/utilities/class-tgm-plugin-activation.php:349
-#, php-format
-msgid "This theme recommends the following plugin: %1$s."
-msgid_plural "This theme recommends the following plugins: %1$s."
-msgstr[0] ""
-msgstr[1] ""
-
-#. translators: 1: plugin name(s).
-#: functions/utilities/class-tgm-plugin-activation.php:355
-#, php-format
-msgid ""
-"The following plugin needs to be updated to its latest version to ensure "
-"maximum compatibility with this theme: %1$s."
-msgid_plural ""
-"The following plugins need to be updated to their latest version to ensure "
-"maximum compatibility with this theme: %1$s."
-msgstr[0] ""
-msgstr[1] ""
-
-#. translators: 1: plugin name(s).
-#: functions/utilities/class-tgm-plugin-activation.php:361
-#, php-format
-msgid "There is an update available for: %1$s."
-msgid_plural "There are updates available for the following plugins: %1$s."
-msgstr[0] ""
-msgstr[1] ""
-
-#. translators: 1: plugin name(s).
-#: functions/utilities/class-tgm-plugin-activation.php:367
-#, php-format
-msgid "The following required plugin is currently inactive: %1$s."
-msgid_plural "The following required plugins are currently inactive: %1$s."
-msgstr[0] ""
-msgstr[1] ""
-
-#. translators: 1: plugin name(s).
-#: functions/utilities/class-tgm-plugin-activation.php:373
-#, php-format
-msgid "The following recommended plugin is currently inactive: %1$s."
-msgid_plural "The following recommended plugins are currently inactive: %1$s."
-msgstr[0] ""
-msgstr[1] ""
-
-#: functions/utilities/class-tgm-plugin-activation.php:378
-msgid "Begin installing plugin"
-msgid_plural "Begin installing plugins"
-msgstr[0] ""
-msgstr[1] ""
-
-#: functions/utilities/class-tgm-plugin-activation.php:383
-msgid "Begin updating plugin"
-msgid_plural "Begin updating plugins"
-msgstr[0] ""
-msgstr[1] ""
-
-#: functions/utilities/class-tgm-plugin-activation.php:388
-msgid "Begin activating plugin"
-msgid_plural "Begin activating plugins"
-msgstr[0] ""
-msgstr[1] ""
-
-#: functions/utilities/class-tgm-plugin-activation.php:392
-msgid "Return to Required Plugins Installer"
-msgstr ""
-
-#: functions/utilities/class-tgm-plugin-activation.php:393
-#: functions/utilities/class-tgm-plugin-activation.php:920
-#: functions/utilities/class-tgm-plugin-activation.php:2626
-#: functions/utilities/class-tgm-plugin-activation.php:3675
-msgid "Return to the Dashboard"
-msgstr ""
-
-#: functions/utilities/class-tgm-plugin-activation.php:394
-#: functions/utilities/class-tgm-plugin-activation.php:3252
-msgid "Plugin activated successfully."
-msgstr ""
-
-#: functions/utilities/class-tgm-plugin-activation.php:395
-#: functions/utilities/class-tgm-plugin-activation.php:3045
-msgid "The following plugin was activated successfully:"
-msgid_plural "The following plugins were activated successfully:"
-msgstr[0] ""
-msgstr[1] ""
-
-#. translators: 1: plugin name.
-#: functions/utilities/class-tgm-plugin-activation.php:397
-#, php-format
-msgid "No action taken. Plugin %1$s was already active."
-msgstr ""
-
-#. translators: 1: plugin name.
-#: functions/utilities/class-tgm-plugin-activation.php:399
-#, php-format
-msgid ""
-"Plugin not activated. A higher version of %s is needed for this theme. "
-"Please update the plugin."
-msgstr ""
-
-#. translators: 1: dashboard link.
-#: functions/utilities/class-tgm-plugin-activation.php:401
-#, php-format
-msgid "All plugins installed and activated successfully. %1$s"
-msgstr ""
-
-#: functions/utilities/class-tgm-plugin-activation.php:402
-msgid "Dismiss this notice"
-msgstr ""
-
-#: functions/utilities/class-tgm-plugin-activation.php:403
-msgid ""
-"There are one or more required or recommended plugins to install, update or "
-"activate."
-msgstr ""
-
-#: functions/utilities/class-tgm-plugin-activation.php:404
-msgid "Please contact the administrator of this site for help."
-msgstr ""
-
-#: functions/utilities/class-tgm-plugin-activation.php:607
-msgid "This plugin needs to be updated to be compatible with your theme."
-msgstr ""
-
-#: functions/utilities/class-tgm-plugin-activation.php:608
-msgid "Update Required"
-msgstr ""
-
-#: functions/utilities/class-tgm-plugin-activation.php:725
-msgid "Set the parent_slug config variable instead."
-msgstr ""
-
-#: functions/utilities/class-tgm-plugin-activation.php:1027
-msgid ""
-"The remote plugin package does not contain a folder with the desired slug "
-"and renaming did not work."
-msgstr ""
-
-#: functions/utilities/class-tgm-plugin-activation.php:1027
-#: functions/utilities/class-tgm-plugin-activation.php:1030
-msgid ""
-"Please contact the plugin provider and ask them to package their plugin "
-"according to the WordPress guidelines."
-msgstr ""
-
-#: functions/utilities/class-tgm-plugin-activation.php:1030
-msgid ""
-"The remote plugin package consists of more than one file, but the files are "
-"not packaged in a folder."
-msgstr ""
-
-#: functions/utilities/class-tgm-plugin-activation.php:1214
-#: functions/utilities/class-tgm-plugin-activation.php:3041
-msgctxt "plugin A *and* plugin B"
-msgid "and"
-msgstr ""
-
-#. translators: %s: version number
-#: functions/utilities/class-tgm-plugin-activation.php:2075
-#, php-format
-msgid "TGMPA v%s"
-msgstr ""
-
-#: functions/utilities/class-tgm-plugin-activation.php:2366
-msgid "Required"
-msgstr ""
-
-#: functions/utilities/class-tgm-plugin-activation.php:2369
-msgid "Recommended"
-msgstr ""
-
-#: functions/utilities/class-tgm-plugin-activation.php:2385
-msgid "WordPress Repository"
-msgstr ""
-
-#: functions/utilities/class-tgm-plugin-activation.php:2388
-msgid "External Source"
-msgstr ""
-
-#: functions/utilities/class-tgm-plugin-activation.php:2391
-msgid "Pre-Packaged"
-msgstr ""
-
-#: functions/utilities/class-tgm-plugin-activation.php:2408
-msgid "Not Installed"
-msgstr ""
-
-#: functions/utilities/class-tgm-plugin-activation.php:2412
-msgid "Installed But Not Activated"
-msgstr ""
-
-#: functions/utilities/class-tgm-plugin-activation.php:2414
-msgid "Active"
-msgstr ""
-
-#: functions/utilities/class-tgm-plugin-activation.php:2420
-msgid "Required Update not Available"
-msgstr ""
-
-#: functions/utilities/class-tgm-plugin-activation.php:2423
-msgid "Requires Update"
-msgstr ""
-
-#: functions/utilities/class-tgm-plugin-activation.php:2426
-msgid "Update recommended"
-msgstr ""
-
-#. translators: 1: install status, 2: update status
-#: functions/utilities/class-tgm-plugin-activation.php:2435
-#, php-format
-msgctxt "Install/Update Status"
-msgid "%1$s, %2$s"
-msgstr ""
-
-#. translators: 1: number of plugins.
-#: functions/utilities/class-tgm-plugin-activation.php:2481
-#, php-format
-msgctxt "plugins"
-msgid "All <span class=\"count\">(%s)</span>"
-msgid_plural "All <span class=\"count\">(%s)</span>"
-msgstr[0] ""
-msgstr[1] ""
-
-#. translators: 1: number of plugins.
-#: functions/utilities/class-tgm-plugin-activation.php:2485
-#, php-format
-msgid "To Install <span class=\"count\">(%s)</span>"
-msgid_plural "To Install <span class=\"count\">(%s)</span>"
-msgstr[0] ""
-msgstr[1] ""
-
-#. translators: 1: number of plugins.
-#: functions/utilities/class-tgm-plugin-activation.php:2489
-#, php-format
-msgid "Update Available <span class=\"count\">(%s)</span>"
-msgid_plural "Update Available <span class=\"count\">(%s)</span>"
-msgstr[0] ""
-msgstr[1] ""
-
-#. translators: 1: number of plugins.
-#: functions/utilities/class-tgm-plugin-activation.php:2493
-#, php-format
-msgid "To Activate <span class=\"count\">(%s)</span>"
-msgid_plural "To Activate <span class=\"count\">(%s)</span>"
-msgstr[0] ""
-msgstr[1] ""
-
-#: functions/utilities/class-tgm-plugin-activation.php:2575
-msgctxt "as in: \"version nr unknown\""
-msgid "unknown"
-msgstr ""
-
-#: functions/utilities/class-tgm-plugin-activation.php:2583
-msgid "Installed version:"
-msgstr ""
-
-#: functions/utilities/class-tgm-plugin-activation.php:2591
-msgid "Minimum required version:"
-msgstr ""
-
-#: functions/utilities/class-tgm-plugin-activation.php:2603
-msgid "Available version:"
-msgstr ""
-
-#: functions/utilities/class-tgm-plugin-activation.php:2626
-msgid "No plugins to install, update or activate."
-msgstr ""
-
-#: functions/utilities/class-tgm-plugin-activation.php:2640
-msgid "Plugin"
-msgstr ""
-
-#: functions/utilities/class-tgm-plugin-activation.php:2641
-msgid "Source"
-msgstr ""
-
-#: functions/utilities/class-tgm-plugin-activation.php:2642
-msgid "Type"
-msgstr ""
-
-#: functions/utilities/class-tgm-plugin-activation.php:2646
-msgid "Version"
-msgstr ""
-
-#: functions/utilities/class-tgm-plugin-activation.php:2647
-msgid "Status"
-msgstr ""
-
-#. translators: %2$s: plugin name in screen reader markup
-#: functions/utilities/class-tgm-plugin-activation.php:2696
-#, php-format
-msgid "Install %2$s"
-msgstr ""
-
-#. translators: %2$s: plugin name in screen reader markup
-#: functions/utilities/class-tgm-plugin-activation.php:2701
-#, php-format
-msgid "Update %2$s"
-msgstr ""
-
-#. translators: %2$s: plugin name in screen reader markup
-#: functions/utilities/class-tgm-plugin-activation.php:2707
-#, php-format
-msgid "Activate %2$s"
-msgstr ""
-
-#: functions/utilities/class-tgm-plugin-activation.php:2777
-msgid "Upgrade message from the plugin author:"
-msgstr ""
-
-#: functions/utilities/class-tgm-plugin-activation.php:2810
-msgid "Install"
-msgstr ""
-
-#: functions/utilities/class-tgm-plugin-activation.php:2819
-msgid "Activate"
-msgstr ""
-
-#: functions/utilities/class-tgm-plugin-activation.php:2850
-msgid "No plugins were selected to be installed. No action taken."
-msgstr ""
-
-#: functions/utilities/class-tgm-plugin-activation.php:2852
-msgid "No plugins were selected to be updated. No action taken."
-msgstr ""
-
-#: functions/utilities/class-tgm-plugin-activation.php:2893
-msgid "No plugins are available to be installed at this time."
-msgstr ""
-
-#: functions/utilities/class-tgm-plugin-activation.php:2895
-msgid "No plugins are available to be updated at this time."
-msgstr ""
-
-#: functions/utilities/class-tgm-plugin-activation.php:3001
-msgid "No plugins were selected to be activated. No action taken."
-msgstr ""
-
-#: functions/utilities/class-tgm-plugin-activation.php:3027
-msgid "No plugins are available to be activated at this time."
-msgstr ""
-
-#: functions/utilities/class-tgm-plugin-activation.php:3251
-msgid "Plugin activation failed."
-msgstr ""
-
-#. translators: 1: plugin name, 2: action number 3: total number of actions.
-#: functions/utilities/class-tgm-plugin-activation.php:3593
-#, php-format
-msgid "Updating Plugin %1$s (%2$d/%3$d)"
-msgstr ""
-
-#. translators: 1: plugin name, 2: error message.
-#: functions/utilities/class-tgm-plugin-activation.php:3596
-#, php-format
-msgid "An error occurred while installing %1$s: <strong>%2$s</strong>."
-msgstr ""
-
-#. translators: 1: plugin name.
-#: functions/utilities/class-tgm-plugin-activation.php:3598
-#, php-format
-msgid "The installation of %1$s failed."
-msgstr ""
-
-#: functions/utilities/class-tgm-plugin-activation.php:3602
-msgid ""
-"The installation and activation process is starting. This process may take a "
-"while on some hosts, so please be patient."
-msgstr ""
-
-#. translators: 1: plugin name.
-#: functions/utilities/class-tgm-plugin-activation.php:3604
-#: functions/utilities/class-tgm-plugin-activation.php:3612
-#, php-format
-msgid "%1$s done."
-msgstr ""
-
-#: functions/utilities/class-tgm-plugin-activation.php:3605
-msgid "All installations and activations have been completed."
-msgstr ""
-
-#. translators: 1: plugin name, 2: action number 3: total number of actions.
-#: functions/utilities/class-tgm-plugin-activation.php:3607
-#, php-format
-msgid "Installing and Activating Plugin %1$s (%2$d/%3$d)"
-msgstr ""
-
-#: functions/utilities/class-tgm-plugin-activation.php:3610
-msgid ""
-"The installation process is starting. This process may take a while on some "
-"hosts, so please be patient."
-msgstr ""
-
-#: functions/utilities/class-tgm-plugin-activation.php:3613
-msgid "All installations have been completed."
-msgstr ""
-
-#. translators: 1: plugin name, 2: action number 3: total number of actions.
-#: functions/utilities/class-tgm-plugin-activation.php:3615
-#, php-format
-msgid "Installing Plugin %1$s (%2$d/%3$d)"
-msgstr ""
-
-#: functions/utilities/cleanup.php:85
+#: functions/utilities/cleanup.php:82
 msgid "Read"
 msgstr ""
 
-#: functions/utilities/cleanup.php:85
+#: functions/utilities/cleanup.php:82
 msgid "... Read more &raquo;"
 msgstr ""
 
-#: functions/utilities/cleanup.php:108
+#: functions/utilities/cleanup.php:105
 #, php-format
 msgid "Posts by %s"
 msgstr ""
@@ -1035,20 +316,442 @@ msgstr ""
 msgid "Last"
 msgstr ""
 
-#: functions/utilities/sidebar.php:6
-msgid "Sidebar 1"
+#: functions/utilities/tgm-plugin-activation-class.php:334
+msgid "Install Required Plugins"
 msgstr ""
 
-#: functions/utilities/sidebar.php:7
-msgid "The first (primary) sidebar."
+#: functions/utilities/tgm-plugin-activation-class.php:335
+msgid "Install Plugins"
 msgstr ""
 
-#: functions/utilities/sidebar.php:16
-msgid "Offcanvas"
+#. translators: %s: plugin name.
+#: functions/utilities/tgm-plugin-activation-class.php:337
+#, php-format
+msgid "Installing Plugin: %s"
 msgstr ""
 
-#: functions/utilities/sidebar.php:17
-msgid "The offcanvas sidebar."
+#. translators: %s: plugin name.
+#: functions/utilities/tgm-plugin-activation-class.php:339
+#, php-format
+msgid "Updating Plugin: %s"
+msgstr ""
+
+#: functions/utilities/tgm-plugin-activation-class.php:340
+msgid "Something went wrong with the plugin API."
+msgstr ""
+
+#. translators: 1: plugin name(s).
+#: functions/utilities/tgm-plugin-activation-class.php:343
+#, php-format
+msgid "This theme requires the following plugin: %1$s."
+msgid_plural "This theme requires the following plugins: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: 1: plugin name(s).
+#: functions/utilities/tgm-plugin-activation-class.php:349
+#, php-format
+msgid "This theme recommends the following plugin: %1$s."
+msgid_plural "This theme recommends the following plugins: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: 1: plugin name(s).
+#: functions/utilities/tgm-plugin-activation-class.php:355
+#, php-format
+msgid ""
+"The following plugin needs to be updated to its latest version to ensure "
+"maximum compatibility with this theme: %1$s."
+msgid_plural ""
+"The following plugins need to be updated to their latest version to ensure "
+"maximum compatibility with this theme: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: 1: plugin name(s).
+#: functions/utilities/tgm-plugin-activation-class.php:361
+#, php-format
+msgid "There is an update available for: %1$s."
+msgid_plural "There are updates available for the following plugins: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: 1: plugin name(s).
+#: functions/utilities/tgm-plugin-activation-class.php:367
+#, php-format
+msgid "The following required plugin is currently inactive: %1$s."
+msgid_plural "The following required plugins are currently inactive: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: 1: plugin name(s).
+#: functions/utilities/tgm-plugin-activation-class.php:373
+#, php-format
+msgid "The following recommended plugin is currently inactive: %1$s."
+msgid_plural "The following recommended plugins are currently inactive: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: functions/utilities/tgm-plugin-activation-class.php:378
+msgid "Begin installing plugin"
+msgid_plural "Begin installing plugins"
+msgstr[0] ""
+msgstr[1] ""
+
+#: functions/utilities/tgm-plugin-activation-class.php:383
+msgid "Begin updating plugin"
+msgid_plural "Begin updating plugins"
+msgstr[0] ""
+msgstr[1] ""
+
+#: functions/utilities/tgm-plugin-activation-class.php:388
+msgid "Begin activating plugin"
+msgid_plural "Begin activating plugins"
+msgstr[0] ""
+msgstr[1] ""
+
+#: functions/utilities/tgm-plugin-activation-class.php:392
+msgid "Return to Required Plugins Installer"
+msgstr ""
+
+#: functions/utilities/tgm-plugin-activation-class.php:393
+#: functions/utilities/tgm-plugin-activation-class.php:920
+#: functions/utilities/tgm-plugin-activation-class.php:2626
+#: functions/utilities/tgm-plugin-activation-class.php:3675
+msgid "Return to the Dashboard"
+msgstr ""
+
+#: functions/utilities/tgm-plugin-activation-class.php:394
+#: functions/utilities/tgm-plugin-activation-class.php:3252
+msgid "Plugin activated successfully."
+msgstr ""
+
+#: functions/utilities/tgm-plugin-activation-class.php:395
+#: functions/utilities/tgm-plugin-activation-class.php:3045
+msgid "The following plugin was activated successfully:"
+msgid_plural "The following plugins were activated successfully:"
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: 1: plugin name.
+#: functions/utilities/tgm-plugin-activation-class.php:397
+#, php-format
+msgid "No action taken. Plugin %1$s was already active."
+msgstr ""
+
+#. translators: 1: plugin name.
+#: functions/utilities/tgm-plugin-activation-class.php:399
+#, php-format
+msgid ""
+"Plugin not activated. A higher version of %s is needed for this theme. "
+"Please update the plugin."
+msgstr ""
+
+#. translators: 1: dashboard link.
+#: functions/utilities/tgm-plugin-activation-class.php:401
+#, php-format
+msgid "All plugins installed and activated successfully. %1$s"
+msgstr ""
+
+#: functions/utilities/tgm-plugin-activation-class.php:402
+msgid "Dismiss this notice"
+msgstr ""
+
+#: functions/utilities/tgm-plugin-activation-class.php:403
+msgid ""
+"There are one or more required or recommended plugins to install, update or "
+"activate."
+msgstr ""
+
+#: functions/utilities/tgm-plugin-activation-class.php:404
+msgid "Please contact the administrator of this site for help."
+msgstr ""
+
+#: functions/utilities/tgm-plugin-activation-class.php:607
+msgid "This plugin needs to be updated to be compatible with your theme."
+msgstr ""
+
+#: functions/utilities/tgm-plugin-activation-class.php:608
+msgid "Update Required"
+msgstr ""
+
+#: functions/utilities/tgm-plugin-activation-class.php:725
+msgid "Set the parent_slug config variable instead."
+msgstr ""
+
+#: functions/utilities/tgm-plugin-activation-class.php:1027
+msgid ""
+"The remote plugin package does not contain a folder with the desired slug "
+"and renaming did not work."
+msgstr ""
+
+#: functions/utilities/tgm-plugin-activation-class.php:1027
+#: functions/utilities/tgm-plugin-activation-class.php:1030
+msgid ""
+"Please contact the plugin provider and ask them to package their plugin "
+"according to the WordPress guidelines."
+msgstr ""
+
+#: functions/utilities/tgm-plugin-activation-class.php:1030
+msgid ""
+"The remote plugin package consists of more than one file, but the files are "
+"not packaged in a folder."
+msgstr ""
+
+#: functions/utilities/tgm-plugin-activation-class.php:1214
+#: functions/utilities/tgm-plugin-activation-class.php:3041
+msgctxt "plugin A *and* plugin B"
+msgid "and"
+msgstr ""
+
+#. translators: %s: version number
+#: functions/utilities/tgm-plugin-activation-class.php:2075
+#, php-format
+msgid "TGMPA v%s"
+msgstr ""
+
+#: functions/utilities/tgm-plugin-activation-class.php:2366
+msgid "Required"
+msgstr ""
+
+#: functions/utilities/tgm-plugin-activation-class.php:2369
+msgid "Recommended"
+msgstr ""
+
+#: functions/utilities/tgm-plugin-activation-class.php:2385
+msgid "WordPress Repository"
+msgstr ""
+
+#: functions/utilities/tgm-plugin-activation-class.php:2388
+msgid "External Source"
+msgstr ""
+
+#: functions/utilities/tgm-plugin-activation-class.php:2391
+msgid "Pre-Packaged"
+msgstr ""
+
+#: functions/utilities/tgm-plugin-activation-class.php:2408
+msgid "Not Installed"
+msgstr ""
+
+#: functions/utilities/tgm-plugin-activation-class.php:2412
+msgid "Installed But Not Activated"
+msgstr ""
+
+#: functions/utilities/tgm-plugin-activation-class.php:2414
+msgid "Active"
+msgstr ""
+
+#: functions/utilities/tgm-plugin-activation-class.php:2420
+msgid "Required Update not Available"
+msgstr ""
+
+#: functions/utilities/tgm-plugin-activation-class.php:2423
+msgid "Requires Update"
+msgstr ""
+
+#: functions/utilities/tgm-plugin-activation-class.php:2426
+msgid "Update recommended"
+msgstr ""
+
+#. translators: 1: install status, 2: update status
+#: functions/utilities/tgm-plugin-activation-class.php:2435
+#, php-format
+msgctxt "Install/Update Status"
+msgid "%1$s, %2$s"
+msgstr ""
+
+#. translators: 1: number of plugins.
+#: functions/utilities/tgm-plugin-activation-class.php:2481
+#, php-format
+msgctxt "plugins"
+msgid "All <span class=\"count\">(%s)</span>"
+msgid_plural "All <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: 1: number of plugins.
+#: functions/utilities/tgm-plugin-activation-class.php:2485
+#, php-format
+msgid "To Install <span class=\"count\">(%s)</span>"
+msgid_plural "To Install <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: 1: number of plugins.
+#: functions/utilities/tgm-plugin-activation-class.php:2489
+#, php-format
+msgid "Update Available <span class=\"count\">(%s)</span>"
+msgid_plural "Update Available <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: 1: number of plugins.
+#: functions/utilities/tgm-plugin-activation-class.php:2493
+#, php-format
+msgid "To Activate <span class=\"count\">(%s)</span>"
+msgid_plural "To Activate <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#: functions/utilities/tgm-plugin-activation-class.php:2575
+msgctxt "as in: \"version nr unknown\""
+msgid "unknown"
+msgstr ""
+
+#: functions/utilities/tgm-plugin-activation-class.php:2583
+msgid "Installed version:"
+msgstr ""
+
+#: functions/utilities/tgm-plugin-activation-class.php:2591
+msgid "Minimum required version:"
+msgstr ""
+
+#: functions/utilities/tgm-plugin-activation-class.php:2603
+msgid "Available version:"
+msgstr ""
+
+#: functions/utilities/tgm-plugin-activation-class.php:2626
+msgid "No plugins to install, update or activate."
+msgstr ""
+
+#: functions/utilities/tgm-plugin-activation-class.php:2640
+msgid "Plugin"
+msgstr ""
+
+#: functions/utilities/tgm-plugin-activation-class.php:2641
+msgid "Source"
+msgstr ""
+
+#: functions/utilities/tgm-plugin-activation-class.php:2642
+msgid "Type"
+msgstr ""
+
+#: functions/utilities/tgm-plugin-activation-class.php:2646
+msgid "Version"
+msgstr ""
+
+#: functions/utilities/tgm-plugin-activation-class.php:2647
+msgid "Status"
+msgstr ""
+
+#. translators: %2$s: plugin name in screen reader markup
+#: functions/utilities/tgm-plugin-activation-class.php:2696
+#, php-format
+msgid "Install %2$s"
+msgstr ""
+
+#. translators: %2$s: plugin name in screen reader markup
+#: functions/utilities/tgm-plugin-activation-class.php:2701
+#, php-format
+msgid "Update %2$s"
+msgstr ""
+
+#. translators: %2$s: plugin name in screen reader markup
+#: functions/utilities/tgm-plugin-activation-class.php:2707
+#, php-format
+msgid "Activate %2$s"
+msgstr ""
+
+#: functions/utilities/tgm-plugin-activation-class.php:2777
+msgid "Upgrade message from the plugin author:"
+msgstr ""
+
+#: functions/utilities/tgm-plugin-activation-class.php:2810
+msgid "Install"
+msgstr ""
+
+#: functions/utilities/tgm-plugin-activation-class.php:2816
+msgid "Update"
+msgstr ""
+
+#: functions/utilities/tgm-plugin-activation-class.php:2819
+msgid "Activate"
+msgstr ""
+
+#: functions/utilities/tgm-plugin-activation-class.php:2850
+msgid "No plugins were selected to be installed. No action taken."
+msgstr ""
+
+#: functions/utilities/tgm-plugin-activation-class.php:2852
+msgid "No plugins were selected to be updated. No action taken."
+msgstr ""
+
+#: functions/utilities/tgm-plugin-activation-class.php:2893
+msgid "No plugins are available to be installed at this time."
+msgstr ""
+
+#: functions/utilities/tgm-plugin-activation-class.php:2895
+msgid "No plugins are available to be updated at this time."
+msgstr ""
+
+#: functions/utilities/tgm-plugin-activation-class.php:3001
+msgid "No plugins were selected to be activated. No action taken."
+msgstr ""
+
+#: functions/utilities/tgm-plugin-activation-class.php:3027
+msgid "No plugins are available to be activated at this time."
+msgstr ""
+
+#: functions/utilities/tgm-plugin-activation-class.php:3251
+msgid "Plugin activation failed."
+msgstr ""
+
+#. translators: 1: plugin name, 2: action number 3: total number of actions.
+#: functions/utilities/tgm-plugin-activation-class.php:3593
+#, php-format
+msgid "Updating Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#. translators: 1: plugin name, 2: error message.
+#: functions/utilities/tgm-plugin-activation-class.php:3596
+#, php-format
+msgid "An error occurred while installing %1$s: <strong>%2$s</strong>."
+msgstr ""
+
+#. translators: 1: plugin name.
+#: functions/utilities/tgm-plugin-activation-class.php:3598
+#, php-format
+msgid "The installation of %1$s failed."
+msgstr ""
+
+#: functions/utilities/tgm-plugin-activation-class.php:3602
+msgid ""
+"The installation and activation process is starting. This process may take a "
+"while on some hosts, so please be patient."
+msgstr ""
+
+#. translators: 1: plugin name.
+#: functions/utilities/tgm-plugin-activation-class.php:3604
+#: functions/utilities/tgm-plugin-activation-class.php:3612
+#, php-format
+msgid "%1$s done."
+msgstr ""
+
+#: functions/utilities/tgm-plugin-activation-class.php:3605
+msgid "All installations and activations have been completed."
+msgstr ""
+
+#. translators: 1: plugin name, 2: action number 3: total number of actions.
+#: functions/utilities/tgm-plugin-activation-class.php:3607
+#, php-format
+msgid "Installing and Activating Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#: functions/utilities/tgm-plugin-activation-class.php:3610
+msgid ""
+"The installation process is starting. This process may take a while on some "
+"hosts, so please be patient."
+msgstr ""
+
+#: functions/utilities/tgm-plugin-activation-class.php:3613
+msgid "All installations have been completed."
+msgstr ""
+
+#. translators: 1: plugin name, 2: action number 3: total number of actions.
+#: functions/utilities/tgm-plugin-activation-class.php:3615
+#, php-format
+msgid "Installing Plugin %1$s (%2$d/%3$d)"
 msgstr ""
 
 #: functions/utilities/zume-mailchimp-settings.php:19
@@ -1067,6 +770,47 @@ msgstr ""
 msgid ""
 "Could not track your progress. Yikes. Tell us and we will tell our geeks to "
 "get on it!"
+msgstr ""
+
+#: functions/zume-overview.php:178
+msgid "Concepts:"
+msgstr ""
+
+#: functions/zume-overview.php:180
+msgid ""
+"WELCOME TO ZÚME — You'll see how God uses ordinary people doing simple "
+"things to make a big impact."
+msgstr ""
+
+#: functions/zume-overview.php:181
+msgid ""
+"TEACH THEM TO OBEY — Discover the essence of being a disciple, making a "
+"disciple, and what is the church."
+msgstr ""
+
+#: functions/zume-overview.php:182
+msgid ""
+"SPIRITUAL BREATHING — Being a disciple means we hear from God and we obey "
+"God."
+msgstr ""
+
+#: functions/zume-overview.php:189
+msgid ""
+"S.O.A.P.S. BIBLE READING — a tool for daily Bible study that helps you "
+"understand, obey, and share God’s Word."
+msgstr ""
+
+#: functions/zume-overview.php:190
+msgid ""
+"ACCOUNTABILITY GROUPS — a tool for two or three people of the same gender to "
+"meet weekly and encourage each other in areas that are going well and reveal "
+"areas that need correction."
+msgstr ""
+
+#: functions/zume-overview.php:196
+msgid ""
+"ACCOUNTABILITY GROUPS — Break into groups of two or three people to work "
+"through the Accountability Questions. (45 minutes)"
 msgstr ""
 
 #: parts/content-missing.php:6
@@ -1104,6 +848,113 @@ msgstr ""
 #: parts/nav-offcanvas-topbar.php:36 parts/nav-offcanvas.php:10
 #: parts/nav-title-bar.php:7
 msgid "Menu"
+msgstr ""
+
+#: template-gettext-test.php:34
+msgid ""
+"Zúme Training is an\n"
+"                            on-line and in-life learning experience designed "
+"for small groups who follow Jesus to learn\n"
+"                            how to obey His Great Commission and make "
+"disciples who multiply."
+msgstr ""
+
+#: template-gettext-test.php:47
+msgid "Goals of the Zúme Project:"
+msgstr ""
+
+#: template-gettext-test.php:48
+msgid ""
+"Zúme means yeast in Greek. In Matthew 13:33 Jesus is quoted as saying, \"The "
+"Kingdom of\n"
+"                            Heaven is like a woman who took yeast and mixed "
+"it into a large amount of flour until it\n"
+"                            was all leavened.\" This illustrates how "
+"ordinary people, using ordinary resources, can\n"
+"                            have an extraordinary impact for the Kingdom of "
+"God. Zúme aims to equip and empower\n"
+"                            ordinary believers to reach every neighborhood."
+msgstr ""
+
+#: template-gettext-test.php:53
+msgid ""
+"The initial goal of Zúme is for there to be a training group of four to "
+"twelve people in\n"
+"                            each census tract in the country. Each of these "
+"training groups will start two\n"
+"                            first-generation churches which will then begin "
+"to reproduce. There are about 75,000\n"
+"                            census tracts in the U.S."
+msgstr ""
+
+#: template-gettext-test.php:73
+msgid "Zúme Training consists of nine (two-hour) Basic Sessions and includes:"
+msgstr ""
+
+#: template-gettext-test.php:75
+msgid ""
+"Video and Audio to help your group understand basic principles of "
+"multiplying disciples."
+msgstr ""
+
+#: template-gettext-test.php:76
+msgid "Group Discussions to help your group think through what’s being shared."
+msgstr ""
+
+#: template-gettext-test.php:77
+msgid ""
+"Simple Exercises to help your group put what you’re learning into practice."
+msgstr ""
+
+#: template-gettext-test.php:78
+msgid ""
+"Session Challenges to help your group keep learning and growing between "
+"sessions."
+msgstr ""
+
+#: template-gettext-test.php:79
+msgid "There is an optional Session 10 with extra material."
+msgstr ""
+
+#: template-gettext-test.php:91
+msgid "How to get started:"
+msgstr ""
+
+#: template-gettext-test.php:93
+msgid "If you haven't created a login yet, please do so."
+msgstr ""
+
+#: template-gettext-test.php:94
+msgid ""
+"Invite 3-11 friends. You must have at least four people present, who have "
+"accepted your\n"
+"                                invitation, to start the first session."
+msgstr ""
+
+#: template-gettext-test.php:97
+msgid "Schedule a time to get together with your friends."
+msgstr ""
+
+#: template-gettext-test.php:98
+msgid "Make sure you have access to an internet-enabled device."
+msgstr ""
+
+#: template-gettext-test.php:109
+msgid "Optional prep for your first meeting:"
+msgstr ""
+
+#: template-gettext-test.php:111
+msgid "Download the Zúme Guidebook."
+msgstr ""
+
+#: template-gettext-test.php:112
+msgid "If you'd like, you can print out copies for the members of your group."
+msgstr ""
+
+#: template-gettext-test.php:113
+msgid ""
+"Consider connecting to a TV or projector so everyone in your group can view "
+"the content."
 msgstr ""
 
 #. Theme Name of the plugin/theme
