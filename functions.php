@@ -18,7 +18,7 @@ require_once( 'functions/zume-polylang-integration.php' ); // Adds support for m
 
 // Zume Theme Files
 
-require_once( 'functions/enqueue-scripts.php'); // Register scripts and stylesheets
+require_once( 'functions/enqueue-scripts.php' ); // Register scripts and stylesheets
 require_once( 'functions/utilities/tgm-config.php' ); // monitors required plugin dependencies
 require_once( 'functions/enqueue-scripts.php' ); // Register scripts and stylesheets
 require_once( 'functions/utilities/theme-support.php' ); // Theme support options
@@ -53,9 +53,9 @@ require_once( 'functions/email/class-zume-emails.php' );
 
 function zume_initialize_custom_emails(){
     require_once( 'functions/email/class-zume-emails.php' );
-    your_three_month_plan_email();
-    group_enough_members_email();
-    invite_to_group_email();
+//    your_three_month_plan_email();
+//    group_enough_members_email();
+//    invite_to_group_email();
     zume_automatically_added_to_group_email();
 }
 register_activation_hook( __FILE__, 'zume_initialize_custom_emails' );

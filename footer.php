@@ -4,17 +4,17 @@
 						<div class="medium-10 cell">
 							<nav role="navigation">
 	    						<?php zume_footer_links(); ?>
-	    					</nav>
+                            </nav>
 
-							<p class="source-org copyright">
-							    &copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?>.
+                            <p class="source-org copyright">
+                                &copy; <?php esc_html_e( date( 'Y' ), 'zume' ) ?> <?php bloginfo( 'name' ); ?>.
                             </p>
-						</div>
+                        </div>
                         <div class="medium-1 cell"></div>
-					</div> <!-- end #inner-footer -->
-				</footer> <!-- end .footer -->
-			</div>  <!-- end .main-content -->
-		</div> <!-- end .off-canvas-wrapper -->
-		<?php wp_footer(); ?>
-	</body>
+                    </div> <!-- end #inner-footer -->
+                </footer> <!-- end .footer -->
+            </div>  <!-- end .main-content -->
+        </div> <!-- end .off-canvas-wrapper -->
+        <?php wp_footer(); ?>
+    </body>
 </html> <!-- end page -->

@@ -10,7 +10,8 @@
  * @author Chasm.Solutions & Kingdom.Training
  */
 
-if ( ! defined( 'ABSPATH' ) ) { exit; // Exit if accessed directly
+if ( ! defined( 'ABSPATH' ) ) {
+    exit; // Exit if accessed directly
 }
 
 class Zume_Overview {
@@ -20,15 +21,15 @@ class Zume_Overview {
      * Zume Overview: Primary content section
      * @return mixed
      */
-    public static function load_sessions( $session = 1, $language = 'en') {
+    public static function load_sessions( $session = 1, $language = 'en' ) {
         ?>
         <h2 class="center padding-bottom">Sessions Overview</h2>
 
         <script>
-            jQuery(document).ready(function($) {
+            jQuery(document).ready(function ($) {
                 "use strict";
                 var startIndex = 0;
-                if (! isNaN(parseInt(window.location.hash.substr(2)))) {
+                if (!isNaN(parseInt(window.location.hash.substr(2)))) {
                     startIndex = parseInt(window.location.hash.substr(2)) - 1;
                 }
 
@@ -46,7 +47,7 @@ class Zume_Overview {
                     bodyTag: "section",
                     transitionEffect: "fade",
                     autoFocus: true,
-                    onStepChanged: function(event, currentIndex, priorIndex) {
+                    onStepChanged: function (event, currentIndex, priorIndex) {
                         var newHash = "#s" + (currentIndex + 1);
                         <?php /* Replaces window.location.hash without creating
                         a history entry, and without scrolling or jumping, and
@@ -55,11 +56,11 @@ class Zume_Overview {
                     },
                     titleTemplate: '<span class="number">#index#</span> #title#'
                 });
-                window.addEventListener("hashchange", function(event) {
+                window.addEventListener("hashchange", function (event) {
                     <?php /* This can get triggered when Overview menu items
                     get clicked */ ?>
                     var hash = event.newURL.substr(event.newURL.indexOf("#"));
-                    if (! isNaN(parseInt(hash.substr(2)))) {
+                    if (!isNaN(parseInt(hash.substr(2)))) {
                         var stepIndex = parseInt(hash.substr(2)) - 1;
                         $("#overview .steps a#overview-t-" + stepIndex).click();
                     }
@@ -133,7 +134,9 @@ class Zume_Overview {
 
         </div>
 
-        <?php if (is_user_logged_in()) { self::next_session_block(); } ?>
+        <?php if ( is_user_logged_in() ) {
+            self::next_session_block();
+} ?>
 
         <?php
     }
@@ -153,49 +156,83 @@ class Zume_Overview {
     public static function get_page_content( $session, $language = 'en' ) {
 
         $session_title = 'Session ' . $session . ' Overview';
-        $page_object = get_page_by_title( $session_title, OBJECT, 'page' );
+        $page_object   = get_page_by_title( $session_title, OBJECT, 'page' );
 
         if ( $language != 'en' ) {
             $translation_id = zume_get_translation( $page_object->ID, $language );
-            $page_object = get_post( $translation_id, OBJECT );
+            $page_object    = get_post( $translation_id, OBJECT );
         }
 
-        if ( ! empty( $page_object ) || ! empty( $page_object->post_content )) {
+        if ( ! empty( $page_object ) || ! empty( $page_object->post_content ) ) {
             $page_content = (string) $page_object->post_content;
 			// @codingStandardsIgnoreLine
 			echo "<div class=\"overview\">$page_content</div>";
 
-		}
-		else {
-			print 'Please republish "' . esc_html( $session_title ) . '" with content for this section in the pages administration area.';
-		}
-	}
+        } else {
+            print 'Please republish "' . esc_html( $session_title ) . '" with content for this section in the pages administration area.';
+        }
+    }
 
-	public static function get_overview_content_1() {
-	    ?>
-        <div class="overview-image-bar"><img class="alignnone wp-image-943 size-full" src="/wp-content/themes/zume-project-multilingual/assets/images/overview/1.1.png" alt="" width="400" height="225" /><img class="alignnone wp-image-944 size-full" src="/wp-content/themes/zume-project-multilingual/assets/images/overview/1.2.png" alt="" width="400" height="225" /><img class="alignnone wp-image-945 size-full" src="/wp-content/themes/zume-project-multilingual/assets/images/overview/1.3.png" alt="" width="400" height="225" /></div>
+    public static function get_overview_content_1() {
+        ?>
+        <div class="overview-image-bar"><img class="alignnone wp-image-943 size-full"
+                                             src="/wp-content/themes/zume-project-multilingual/assets/images/overview/1.1.png"
+                                             alt="" width="400" height="225"/><img
+                    class="alignnone wp-image-944 size-full"
+                    src="/wp-content/themes/zume-project-multilingual/assets/images/overview/1.2.png" alt="" width="400"
+                    height="225"/><img class="alignnone wp-image-945 size-full"
+                                       src="/wp-content/themes/zume-project-multilingual/assets/images/overview/1.3.png"
+                                       alt="" width="400" height="225"/></div>
 
         <br>
 
-        <h3><?php echo __('Concepts:', 'zume') ?></h3>
+        <h3><?php esc_html_e( 'Concepts:', 'zume' ) ?></h3>
 
-        <table><tr><td><img src="/wp-content/themes/zume-project-multilingual/assets/images/overview/concept-1-4.png" alt="" width="40" height="40" class="alignnone size-full wp-image-1564" /></td><td><?php echo __('WELCOME TO ZÚME — You\'ll see how God uses ordinary people doing simple things to make a big impact.', 'zume') ?></td></tr>
-            <tr><td><img src="/wp-content/themes/zume-project-multilingual/assets/images/overview/concept-2-2.png" alt="" width="40" height="40" class="alignnone size-full wp-image-1565" /></td><td><?php echo __('TEACH THEM TO OBEY — Discover the essence of being a disciple, making a disciple, and what is the church.', 'zume') ?></td></tr>
-            <tr><td><img src="/wp-content/themes/zume-project-multilingual/assets/images/overview/concept-3-2.png" alt="" width="40" height="40" class="alignnone size-full wp-image-1566" /></td><td><?php echo __('SPIRITUAL BREATHING — Being a disciple means we hear from God and we obey God.', 'zume') ?></td></tr>
+        <table>
+            <tr>
+                <td><img src="/wp-content/themes/zume-project-multilingual/assets/images/overview/concept-1-4.png"
+                         alt="" width="40" height="40" class="alignnone size-full wp-image-1564"/></td>
+                <td><?php esc_html_e( 'WELCOME TO ZÚME — You\'ll see how God uses ordinary people doing simple things to make a big impact.', 'zume' ) ?></td>
+            </tr>
+            <tr>
+                <td><img src="/wp-content/themes/zume-project-multilingual/assets/images/overview/concept-2-2.png"
+                         alt="" width="40" height="40" class="alignnone size-full wp-image-1565"/></td>
+                <td><?php esc_html_e( 'TEACH THEM TO OBEY — Discover the essence of being a disciple, making a disciple, and what is the church.', 'zume' ) ?></td>
+            </tr>
+            <tr>
+                <td><img src="/wp-content/themes/zume-project-multilingual/assets/images/overview/concept-3-2.png"
+                         alt="" width="40" height="40" class="alignnone size-full wp-image-1566"/></td>
+                <td><?php esc_html_e( 'SPIRITUAL BREATHING — Being a disciple means we hear from God and we obey God.', 'zume' ) ?></td>
+            </tr>
         </table>
 
         <br>
 
         <h3>Tools:</h3>
 
-        <table><tr><td><img src="/wp-content/themes/zume-project-multilingual/assets/images/overview/tool-1-2.png" alt="" width="40" height="40" class="alignnone size-full wp-image-1035" /></td><td><?php echo __('S.O.A.P.S. BIBLE READING — a tool for daily Bible study that helps you understand, obey, and share God’s Word.', 'zume') ?></td></tr>
-            <tr><td><img src="/wp-content/themes/zume-project-multilingual/assets/images/overview/tool-2.png" alt="" width="40" height="40" class="alignnone size-full wp-image-1567" /></td><td><?php echo __('ACCOUNTABILITY GROUPS — a tool for two or three people of the same gender to meet weekly and encourage each other in areas that are going well and reveal areas that need correction.', 'zume') ?></td></tr>
+        <table>
+            <tr>
+                <td><img src="/wp-content/themes/zume-project-multilingual/assets/images/overview/tool-1-2.png" alt=""
+                         width="40" height="40" class="alignnone size-full wp-image-1035"/></td>
+                <td><?php esc_html_e( 'S.O.A.P.S. BIBLE READING — a tool for daily Bible study that helps you understand, obey, and share God’s Word.', 'zume' ) ?></td>
+            </tr>
+            <tr>
+                <td><img src="/wp-content/themes/zume-project-multilingual/assets/images/overview/tool-2.png" alt=""
+                         width="40" height="40" class="alignnone size-full wp-image-1567"/></td>
+                <td><?php esc_html_e( 'ACCOUNTABILITY GROUPS — a tool for two or three people of the same gender to meet weekly and encourage each other in areas that are going well and reveal areas that need correction.', 'zume' ) ?></td>
+            </tr>
         </table>
 
         <br>
 
         <h3>Practice:</h3>
-        <table><tr><td><img src="/wp-content/themes/zume-project-multilingual/assets/images/overview/practice-1-5.png" alt="" width="40" height="40" class="alignnone size-full wp-image-1568" /></td><td><?php echo __('ACCOUNTABILITY GROUPS — Break into groups of two or three people to work through the Accountability Questions. (45 minutes)', 'zume') ?></td></tr></table>
+        <table>
+            <tr>
+                <td><img src="/wp-content/themes/zume-project-multilingual/assets/images/overview/practice-1-5.png"
+                         alt="" width="40" height="40" class="alignnone size-full wp-image-1568"/></td>
+                <td><?php esc_html_e( 'ACCOUNTABILITY GROUPS — Break into groups of two or three people to work through the Accountability Questions. (45 minutes)', 'zume' ) ?></td>
+            </tr>
+        </table>
         <?php
 
     }

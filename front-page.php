@@ -3,9 +3,9 @@
 Template Name: Full Width Home
 */
 
-$current_lang = zume_current_language();
+$zume_current_lang = zume_current_language();
 if ( is_user_logged_in() ) {
-	wp_redirect( '/' . $current_lang . '/dashboard' );
+    wp_redirect( '/' . $zume_current_lang . '/dashboard' );
 }
 ?>
 <?php get_header(); ?>
@@ -49,10 +49,10 @@ if ( is_user_logged_in() ) {
                 <div class="medium-2 small-1 cell"></div>
                 <div class="medium-8 small-10 cell center">
                     <h1 class="front-page-header">
-	                    <?php echo __( 'Want to start the training?', 'zume') ?>
+                        <?php esc_html_e( 'Want to start the training?', 'zume' ) ?>
                     </h1>
                     <h1 class="front-page-header">
-	                    <?php echo __( 'Get started below:', 'zume') ?>
+                        <?php esc_html_e( 'Get started below:', 'zume' ) ?>
                     </h1>
                 </div>
                 <div class="medium-2 small-1 cell"></div>
@@ -61,7 +61,7 @@ if ( is_user_logged_in() ) {
             <div class="grid-x grid-margin-x grid-margin-y vertical-padding">
                 <div class="medium-2 small-1 cell"></div>
                 <div class="medium-8 small-10 cell center">
-                    <a href="<?php echo '/' . $current_lang . '/register'; ?>" alt="Register" class="button large center "><?php echo __( 'GET STARTED', 'zume') ?></a>
+                    <a href="<?php echo '/' . esc_url( $zume_current_lang ) . '/register'; ?>" alt="Register" class="button large center "><?php esc_html_e( 'GET STARTED', 'zume' ) ?></a>
                 </div>
                 <div class="medium-2 small-1 cell"></div>
             </div>
@@ -73,9 +73,8 @@ if ( is_user_logged_in() ) {
             <div class="grid-x grid-margin-x grid-margin-y vertical-padding">
                 <div class="medium-2 small-1 cell"></div>
                 <div class="medium-8 small-10 cell center">
-                    <h3 style="text-transform: uppercase"><?php echo __( 'It\'s as easy as 1-2-3', 'zume') ?></h3>
+                    <h3 style="text-transform: uppercase"><?php esc_html_e( 'It\'s as easy as 1-2-3', 'zume' ) ?></h3>
                 </div>
-<<<<<<< HEAD
                 <div class="medium-2 small-1 cell"></div>
             </div>
 
@@ -88,7 +87,7 @@ if ( is_user_logged_in() ) {
                                         style="font-size:2.4rem;">&#10102</span>
                                  Sign up</h4>
                             <img class="center"
-                                 src="<?php echo get_stylesheet_directory_uri() . '/assets/images/pages/'; ?>signup.jpg"
+                                 src="<?php echo esc_url( get_stylesheet_directory_uri() ) . '/assets/images/pages/'; ?>signup.jpg"
                                  alt="" width="100" height="100"/>
 
                         </div>
@@ -97,7 +96,7 @@ if ( is_user_logged_in() ) {
                                         style="font-size:2.4rem;">&#10103</span> Invite
                                 some friends</h4>
                             <img class="center"
-                                 src="<?php echo get_stylesheet_directory_uri() . '/assets/images/pages/'; ?>invite.jpg"
+                                 src="<?php echo esc_url( get_stylesheet_directory_uri() ) . '/assets/images/pages/'; ?>invite.jpg"
                                  alt="" width="100" height="100"/>
 
                         </div>
@@ -106,27 +105,8 @@ if ( is_user_logged_in() ) {
                                         style="font-size:2.4rem;">&#10104</span> Host
                                 a training</h4>
                             <img class="center"
-                                 src="<?php echo get_stylesheet_directory_uri() . '/assets/images/pages/'; ?>training.jpg"
+                                 src="<?php echo esc_url( get_stylesheet_directory_uri() ) . '/assets/images/pages/'; ?>training.jpg"
                                  alt="" width="100" height="100"/>
-=======
-                &nbsp;
-                <div class="row padding-bottom">
-                    <div class="medium-10 small-centered columns">
-                        <div class="row">
-                            <div class="medium-4 columns center">
-                                <h4 class="center" style="text-transform: uppercase"><span style="font-size:2.4rem;">&#10102</span>  Sign up</h4>
-                                <img class="center" src="<?php echo esc_attr( get_stylesheet_directory_uri() ) . '/assets/images/'; ?>signup.jpg" alt="" width="100" height="100" />
-
-                            </div>
-                            <div class="medium-4 columns center">
-                                <h4 class="center" style="text-transform: uppercase"><span style="font-size:2.4rem;">&#10103</span> Invite some friends</h4>
-                                <img class="center" src="<?php echo esc_attr( get_stylesheet_directory_uri() ) . '/assets/images/'; ?>invite.jpg" alt="" width="100" height="100" />
-
-                            </div>
-                            <div class="medium-4 columns center">
-                                <h4 class="center" style="text-transform: uppercase"><span style="font-size:2.4rem;">&#10104</span> Host a training</h4>
-                                <img class="center" src="<?php echo esc_attr( get_stylesheet_directory_uri() ) . '/assets/images/'; ?>training.jpg" alt="" width="100" height="100" />
->>>>>>> 5e9956d77eb1d3004f1b54eea3df708d57989106
 
                         </div>
                     </div>
@@ -141,7 +121,7 @@ if ( is_user_logged_in() ) {
 
                     <div style="color: white; text-align: center; padding: 20px;">
 
-                        <h4 class="padding-bottom" style="text-transform: uppercase"><?php echo __( 'What others are saying?', 'zume' ) ?></h4>
+                        <h4 class="padding-bottom" style="text-transform: uppercase"><?php esc_html_e( 'What others are saying?', 'zume' ) ?></h4>
 
                         <div class="orbit" role="region" aria-label="Favorite Space Pictures" data-orbit>
                             <ul class="orbit-container white">
@@ -149,46 +129,46 @@ if ( is_user_logged_in() ) {
                                 <li class="orbit-slide">
                                     <div>
                                         <h4 class="text-center zume-slider-text"><strong>
-                                                <?php echo __( 'There is a great harvest
+                                                <?php esc_html_e( 'There is a great harvest
                                                 readied in North America not being reached by the status quo. Zúme
                                                 is a biblical wake-up call and tool to empower the everyday believer
                                                 to begin walking in the Lords will to multiply disciples.', 'zume') ?></strong>
                                         </h4>
                                         <h4 class="zume-slider-name" style="text-transform: uppercase">
-                                            <?php echo __( 'Jake Duke — Indiana', 'zume') ?>
+                                            <?php esc_html_e( 'Jake Duke — Indiana', 'zume' ) ?>
                                         </h4>
                                     </div>
                                 </li>
                                 <li class="orbit-slide">
                                     <div>
-                                        <h4 class="text-center zume-slider-text"><strong><?php echo __( 'Do you want to make a
+                                        <h4 class="text-center zume-slider-text"><strong><?php esc_html_e( 'Do you want to make a
                                                 difference in your workplace, neighborhood, or circle of friends?
                                                 The Zúme Project essentially will give you practical rails to run on
                                                 that follow the example of the Church as seen in the New
                                                 Testament.', 'zume') ?></strong></h4>
                                         <h4 class="zume-slider-name" style="text-transform: uppercase">
-                                            <?php echo __( 'Gavin Duerson — Kentucky', 'zume') ?>
+                                            <?php esc_html_e( 'Gavin Duerson — Kentucky', 'zume' ) ?>
                                         </h4>
                                     </div>
                                 </li>
                                 <li class="orbit-slide">
                                     <div>
-                                        <h4 class="text-center zume-slider-text"><strong><?php echo __( 'I am so excited to use this
+                                        <h4 class="text-center zume-slider-text"><strong><?php esc_html_e( 'I am so excited to use this
                                                 Zúme tool to help in training all the soldiers to make and multiply
                                                 disciples in our neighborhood. Jesus can make it a neighborhood
                                                 again.', 'zume') ?></strong></h4>
                                         <h4 class="zume-slider-name" style="text-transform: uppercase">
-                                            <?php echo __( 'Chad Rehnberg', 'zume') ?>
+                                            <?php esc_html_e( 'Chad Rehnberg', 'zume' ) ?>
                                         </h4>
                                     </div>
                                 </li>
                                 <li class="orbit-slide">
                                     <div>
-                                        <h4 class="text-center zume-slider-text"><strong><?php echo __( 'I believe Zúme can be used
+                                        <h4 class="text-center zume-slider-text"><strong><?php esc_html_e( 'I believe Zúme can be used
                                                 by the Lord to reach a huge number of people in our society who
                                                 would never darken the door of a church building.', 'zume') ?></strong></h4>
                                         <h4 class="zume-slider-name" style="text-transform: uppercase">
-                                            <?php echo __( 'Curtis Sergeant — Alabama', 'zume') ?>
+                                            <?php esc_html_e( 'Curtis Sergeant — Alabama', 'zume' ) ?>
                                         </h4>
                                     </div>
                                 </li>
@@ -197,17 +177,17 @@ if ( is_user_logged_in() ) {
                             <nav class="orbit-bullets">
                                 <button class="is-active" data-slide="0"><span
                                             class="show-for-sr">
-                                        <?php echo __( 'First slide details.', 'zume') ?></span><span
+                                        <?php esc_html_e( 'First slide details.', 'zume' ) ?></span><span
                                             class="show-for-sr">
-                                        <?php echo __( 'Current Slide', 'zume') ?></span></button>
+                                        <?php esc_html_e( 'Current Slide', 'zume' ) ?></span></button>
                                 <button data-slide="1"><span class="show-for-sr">
-                                        <?php echo __( 'Second slide details.', 'zume') ?></span>
+                                        <?php esc_html_e( 'Second slide details.', 'zume' ) ?></span>
                                 </button>
                                 <button data-slide="2"><span class="show-for-sr">
-                                        <?php echo __( 'Third slide details.', 'zume') ?></span>
+                                        <?php esc_html_e( 'Third slide details.', 'zume' ) ?></span>
                                 </button>
                                 <button data-slide="3"><span class="show-for-sr">
-                                        <?php echo __( 'Fourth slide details.', 'zume') ?></span>
+                                        <?php esc_html_e( 'Fourth slide details.', 'zume' ) ?></span>
                                 </button>
                             </nav>
                         </div>
@@ -222,8 +202,8 @@ if ( is_user_logged_in() ) {
             <div class="grid-x ">
                 <div class="small-8 medium-3 small-centered cell center vertical-padding">
                     <br>
-                    <a href="<?php echo '/' . $current_lang . '/about'; ?>" class="button large center " style="text-transform: uppercase">
-                        <?php echo __( 'Find out more about Zúme', 'zume') ?></a>
+                    <a href="<?php echo '/' . esc_url( $zume_current_lang ) . '/about'; ?>" class="button large center " style="text-transform: uppercase">
+                        <?php esc_html_e( 'Find out more about Zúme', 'zume' ) ?></a>
                     <br>
                 </div>
             </div>

@@ -8,22 +8,15 @@ Template Name: Zume Guidebook
 
 <div id="content">
 
-	<div id="inner-content" class="row">
+    <div id="inner-content" class="grid-x grid-margin-x">
 
-		<div id="main" class="large-12 medium-12 columns" role="main">
-
-			<?php
-			/* Profile Page */
+        <div id="main" class="cell" role="main">
 
 
-			echo 'Current user id ' . get_current_user_id();
 
+        </div> <!-- end #main -->
 
-			?>
-
-		</div> <!-- end #main -->
-
-	</div> <!-- end #inner-content -->
+    </div> <!-- end #inner-content -->
 
 </div> <!-- end #content -->
 

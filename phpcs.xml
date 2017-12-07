@@ -33,6 +33,7 @@
   <exclude-pattern>functions/coaching/class-coaches-group-stats.php</exclude-pattern>
   <exclude-pattern>functions/coaching/class-coaches.php</exclude-pattern>
   <exclude-pattern>functions/coaching/class-coaches-unassigned-groups.php</exclude-pattern>
+  <exclude-pattern>functions/utilities/tgm-plugin-activation-class.php</exclude-pattern>
 
   <arg name="extensions" value="php,inc,lib"/>
   <arg value="n"/>

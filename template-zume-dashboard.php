@@ -36,7 +36,7 @@ get_header();
                                                         <a href="">group name</a>
                                                     </div>
                                                     <div class="wp-caption-text">
-														description
+                                                        description
                                                     </div>
                                                 </div>
                                             </div>
@@ -113,10 +113,10 @@ get_header();
                                         <div class="coach-item__text">
 
 
-											<?php esc_html_e( "for groups:" ); ?>
+                                            <?php esc_html_e( "for groups:" ); ?>
 
                                             <a href="">
-		                                        Group Name
+                                                Group Name
                                             </a>
 
 
