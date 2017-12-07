@@ -35,26 +35,12 @@ function zume_enqueue_style( $handle, $rel_src, $deps = array(), $media = 'all' 
 function zume_site_scripts() {
     global $wp_styles; // Call global $wp_styles variable to add conditional wrapper around ie stylesheet the WordPress way
 
-    // Load What-Input files in footer
-//  zume_enqueue_script( 'what-input', 'vendor/what-input/dist/what-input.min.js', array(), true );
-
-    // Load fitvids script https://github.com/rosszurowski/fitvids
-//    zume_enqueue_script( 'fitvids', 'assets/scripts/fitvids.min.js', array(), false );
-
-    // Adding Foundation scripts file in the footer
-//    zume_enqueue_script( 'foundation-js', 'assets/scripts/foundation.min.js', array( 'jquery' ), true );
-
     // Adding scripts file in the footer
     zume_enqueue_script( 'site-js', 'assets/scripts/scripts.js', array( 'jquery' ), true );
 
-//    zume_enqueue_style( 'buddypress-css', 'assets/css/buddypress.css', array(), 'all' );
-
     // Register main stylesheet
-<<<<<<< HEAD
-    wp_enqueue_style( 'site-css', get_template_directory_uri() . '/assets/styles/style.css', array(), '', 'all' );
-=======
-    zume_enqueue_style( 'site-css', 'assets/styles/style.min.css', array(), 'all' );
->>>>>>> 5e9956d77eb1d3004f1b54eea3df708d57989106
+    zume_enqueue_style( 'site-css', 'assets/styles/style.css', array(), 'all' );
+
 
     // Comment reply script for threaded comments
     if ( is_singular() && comments_open() && ( get_option( 'thread_comments' ) == 1 )) {

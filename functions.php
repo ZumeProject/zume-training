@@ -17,13 +17,10 @@ require_once( 'assets/translation/translation.php' ); // Adds support for multip
 require_once( 'functions/zume-polylang-integration.php' ); // Adds support for multiple languages
 
 // Zume Theme Files
-<<<<<<< HEAD
+
 require_once( 'functions/enqueue-scripts.php'); // Register scripts and stylesheets
 require_once( 'functions/utilities/tgm-config.php' ); // monitors required plugin dependencies
-=======
 require_once( 'functions/enqueue-scripts.php' ); // Register scripts and stylesheets
-require_once( 'functions/utilities/config-required-plugins.php' ); // monitors required plugin dependencies
->>>>>>> 5e9956d77eb1d3004f1b54eea3df708d57989106
 require_once( 'functions/utilities/theme-support.php' ); // Theme support options
 require_once( 'functions/utilities/cleanup.php' ); // WP Head and other cleanup functions
 require_once( 'functions/utilities/menu.php' ); // Register custom menus and menu walkers

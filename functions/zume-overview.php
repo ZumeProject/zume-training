@@ -164,6 +164,7 @@ class Zume_Overview {
             $page_content = (string) $page_object->post_content;
 			// @codingStandardsIgnoreLine
 			echo "<div class=\"overview\">$page_content</div>";
+
 		}
 		else {
 			print 'Please republish "' . esc_html( $session_title ) . '" with content for this section in the pages administration area.';
@@ -196,11 +197,6 @@ class Zume_Overview {
         <h3>Practice:</h3>
         <table><tr><td><img src="/wp-content/themes/zume-project-multilingual/assets/images/overview/practice-1-5.png" alt="" width="40" height="40" class="alignnone size-full wp-image-1568" /></td><td><?php echo __('ACCOUNTABILITY GROUPS — Break into groups of two or three people to work through the Accountability Questions. (45 minutes)', 'zume') ?></td></tr></table>
         <?php
-=======
-        }
-        else {
-            print 'Please republish "' . esc_html( $session_title ) . '" with content for this section in the pages administration area.';
-        }
->>>>>>> 5e9956d77eb1d3004f1b54eea3df708d57989106
+
     }
 }
