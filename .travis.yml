@@ -14,8 +14,8 @@ before_install:
 before_script:
   - composer install --no-interaction
 script:
-  - ./test/test_for_syntax_errors.sh
-  - ./test/test_phpcs.sh
+  - ./functions/test/test_for_syntax_errors.sh
+  - ./functions/test/test_phpcs.sh
   - gulp
   - git diff --exit-code assets/
   # If the previous command returns a non-zero exit code, that means gulp has

@@ -176,7 +176,7 @@ class Zume_Overview {
 		?>
         <div class="grid-x grid-margin-x">
             <div class="large-2 cell"></div>
-            <div class="large-8 cell">
+             <div class="large-8 cell">
 
                 <div class="overview-image-bar grid-x grid-margin-x">
                     <div class="small-4 cell">
