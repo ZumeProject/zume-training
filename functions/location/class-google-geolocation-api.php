@@ -98,4 +98,8 @@ class Zume_Google_Geolocation
         return $output;
     }
 
+    public static function geocode_ip_address( $ip_address ) {
+	    return [ 'lng' => '', 'lat' => '', 'formatted_address' => $ip_address ];
+    }
+
 }

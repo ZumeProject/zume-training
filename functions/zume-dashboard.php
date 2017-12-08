@@ -44,119 +44,83 @@ class Zume_Dashboard {
      * @access  public
      * @since   0.1
      */
-    public function __construct() {
-    } // End __construct()
+    public function __construct() { } // End __construct()
+
+    public static function create_group( $args ) {
+
+    	// Validate post data
+	    $defaults = array(
+		    'group_name' => false,
+		    'group_members' => false,
+		    'group_meeting_time' => '',
+		    'group_address' => false,
+		    'ip_address' => zume_get_real_ip_address(),
+	    );
+	    $args = wp_parse_args( $args, $defaults );
+	    zume_write_log($args);
+
+	    if( ! $args['group_name'] ) {
+	    	return new WP_Error('missing_info', 'You are missing the group name' );
+	    }
+	    if( ! $args['group_members'] ) {
+		    return new WP_Error('missing_info', 'You are missing number of group members' );
+	    }
+	    if( ! $args['group_address'] ) {
+		    return new WP_Error('missing_info', 'You are missing the group address' );
+	    }
+
+	    // Geo lookup address
+	    $google_result = Zume_Google_Geolocation::query_google_api( $args['group_address'], $type = 'core' ); // get google api info
+	    if ($google_result == 'ZERO_RESULTS') {
+		    $results = Zume_Google_Geolocation::geocode_ip_address( $args['ip_address'] );// TODO: Need to still wire up the api to get ip address location
+		    $lng = $results['lng'];
+		    $lat = $results['lat'];
+		    $formatted_address = $args['group_address'];
+	    } else {
+		    $lng = $google_result['lng'];
+		    $lat = $google_result['lat'];
+		    $formatted_address = $google_result['formatted_address'];
+	    }
+
+	    // Prepare record array
+	    $current_user_id = get_current_user_id();
+	    $group_key = uniqid ('zume_group_');
+	    $group_values = [
+		    'owner' => $current_user_id,
+		    'name' => $args['group_name'],
+		    'members' => $args['group_members'],
+		    'meeting_time' => $args['group_meeting_time'],
+		    'address' => $formatted_address,
+		    'last_modified_date' => current_time( 'mysql'),
+		    'created_date' => current_time( 'mysql'),
+		    'lng' => $lng,
+		    'lat' => $lat,
+		    'next_session' => '1',
+		    'session_1' => false,
+		    'session_2' => false,
+		    'session_3' => false,
+		    'session_4' => false,
+		    'session_5' => false,
+		    'session_6' => false,
+		    'session_7' => false,
+		    'session_8' => false,
+		    'session_9' => false,
+		    'session_10' => false,
+		    'ip_address' => $args['ip_address'],
+	    ];
+	    zume_write_log($group_values);
+	    zume_write_log($group_key);
 
 
-    /**
-     * Loads the display for Dashboard section "Your Groups"
-     * @return mixed
-     */
-    public function display_your_groups() {
-        $this->load_your_groups(); // prints
-    }
-
-    /**
-     * Loads the display for Dashboard section "Your Groups"
-     */
-    protected function load_your_groups() {
-
-        // Check for number of groups
-        $user_groups = $this->zume_get_groups_of_user();
-
-        // if user has no groups, then invite them to find a group or start a group
-        if (empty( $user_groups )) {
-            echo '<p>Welcome! It looks like you have no group(s). </p>
-                    <ul><li>If you are the first of your friends, try starting a group and then inviting friends. </li>
-                    <li>If you were invited to Zúme, look to find your friend in our directory and connect with them. Then they can invite you to a group.</li>
-                    </ul>
-                    ';
-            return;
-        }
-
-        foreach ($user_groups as $one_group) {
-
-            $group = groups_get_group( $one_group->group_id ); // gets group object
-            $group_name = $group->name;
-
-            echo esc_html( $group_name ) . '<br>';
-        }
-    }
-
-    /**
-     * Loads the display for Dashboard section "Your Groups"
-     * @return mixed
-     */
-    public function display_your_coach() {
-        // Check for number of groups
-        $user_groups = $this->zume_get_groups_of_user();
-
-
-        foreach ($user_groups as $one_group) {
-
-            $group = groups_get_group( $one_group->group_id ); // gets group object
-            $group_name = $group->name;
-
-            if ( empty( groups_get_group_mods( $one_group->group_id ) ) ) {
-                echo '<li> ';
-                echo 'No coaches yet for ' . esc_html( $group_name );
-                echo '</li>';
-
-            } else {
-                $group_mods = groups_get_group_mods( $one_group->group_id );
-
-                foreach ($group_mods as $mod_user) {
-                    if (get_current_user_id() != $mod_user->user_id) {
-                        echo '<li> ';
-                        // @codingStandardsIgnoreLine
-                        echo bp_core_fetch_avatar( array( 'html' => true, 'item_id' => $mod_user->user_id ) ) . '<br>';
-                        // @codingStandardsIgnoreLine
-                        echo bp_core_get_userlink( $mod_user->user_id );
-                        echo '<br> coach for ' . esc_html( $group_name );
-                        echo '</li>';
-
-                    }
-                }
-            }
-        }
+	    $result = add_user_meta( $current_user_id, $group_key, $group_values, true );
+	    zume_write_log('User meta submitted');
+	    zume_write_log($result);
 
     }
-
-    /**
-     * Loads the display for Dashboard section "Your Groups"
-     * @return mixed
-     */
-    public function get_coach_ids() {
-        // Check for number of groups
-        $user_groups = $this->zume_get_groups_of_user();
-        $coaches = '';
-        $i = 0;
-
-        foreach ($user_groups as $one_group) {
-
-            $group_mods = groups_get_group_mods( $one_group->group_id );
-
-            foreach ($group_mods as $mod_user) {
-                if ( !empty( $mod_user->user_id )) {
-                    $coaches .= $mod_user->user_id;
-
-                }
-            }
-        }
-
-
-        return $coaches;
-
+    public static function edit_group( $args ) {
+	    zume_write_log($args);
     }
-
-    /**
-     * Builds the display for Dashboard section "Your Groups"
-     * @return mixed
-     */
-    protected function zume_get_groups_of_user() {
-        return bp_get_user_groups( bp_loggedin_user_id(), array( 'is_admin' => null, 'is_mod' => null, ) );
+    public static function delete_group( $args ) {
+	    zume_write_log($args);
     }
-
-
-
 }

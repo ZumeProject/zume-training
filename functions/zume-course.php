@@ -67,7 +67,10 @@ class Zume_Course {
             "I will encourage the following people to go through this Zúme Training course:",
             "Other commitments:"
         );
+
+
     } // End __construct()
+
 
     /**
      * Zúme Pre Content Load

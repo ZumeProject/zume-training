@@ -26,14 +26,14 @@
  * $an_object = new An_Object
  * write_log($an_object);
  */
-if ( !function_exists( 'z_write_log' ) ) {
+if ( !function_exists( 'zume_write_log' ) ) {
     /**
      * A function to assist development only.
      * This function allows you to post a string, array, or object to the WP_DEBUG log.
      *
      * @param $log
      */
-    function z_write_log( $log )
+    function zume_write_log( $log )
     {
         if ( true === WP_DEBUG ) {
             if ( is_array( $log ) || is_object( $log ) ) {
