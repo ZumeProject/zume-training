@@ -3,6 +3,8 @@
 Template Name: Zúme Dashboard
 */
 
+$zume_current_lang = zume_current_language();
+
 get_header();
 
 ?>
@@ -21,15 +23,15 @@ get_header();
                     <div class="callout" data-equalizer-watch>
 
                         <ul id="groups-list" class="item-list">
-                            <li>
+                            <li class="block">
                                 <h2 class="center">Your Groups</h2>
                             </li>
 
                             <!-- Group Row -->
-                            <li>
+                            <li class="block">
                                 <div class="grid-x grid-margin-x">
-                                    <div class="large-10 cell">
-                                        <h3><a href="">Group Name 1</a></h3>
+                                    <div class="large-6 cell">
+                                        <h3><a data-open="group1">Group Name 1</a></h3>
                                         <p class="text-gray">
                                             Meeting Time: Monday at 6pm<br>
                                             Members: 6<br>
@@ -39,19 +41,33 @@ get_header();
 
                                         <button class="small" data-open="group1"><i class="fi-pencil hollow"></i> edit</button>
                                     </div>
-                                    <div class="large-2 cell">
+                                    <div class="large-6 cell">
+                                        <ul class="pagination" role="navigation" aria-label="Pagination">
+                                            <li class="current"><a href="<?php echo zume_get_posts_translation_url( 'course', $zume_current_lang ) . '/?group=23&session=1'; ?>">1</a></li>
+                                            <li class="current"><a href="<?php echo zume_get_posts_translation_url( 'course', $zume_current_lang ) . '/?group=23&session=2'; ?>">2</a></li>
+                                            <li class="current"><a href="<?php echo zume_get_posts_translation_url( 'course', $zume_current_lang ) . '/?group=23&session=3'; ?>">3</a></li>
+                                            <li class="current"><a href="<?php echo zume_get_posts_translation_url( 'course', $zume_current_lang ) . '/?group=23&session=4'; ?>">4</a></li>
+                                            <li class=""><a href="<?php echo zume_get_posts_translation_url( 'course', $zume_current_lang ) . '/?group=23&session=5'; ?>">5</a></li>
+                                            <li class=""><a href="<?php echo zume_get_posts_translation_url( 'course', $zume_current_lang ) . '/?group=23&session=6'; ?>">6</a></li>
+                                            <li class=""><a href="<?php echo zume_get_posts_translation_url( 'course', $zume_current_lang ) . '/?group=23&session=7'; ?>">7</a></li>
+                                            <li class=""><a href="<?php echo zume_get_posts_translation_url( 'course', $zume_current_lang ) . '/?group=23&session=8'; ?>">8</a></li>
+                                            <li class=""><a href="<?php echo zume_get_posts_translation_url( 'course', $zume_current_lang ) . '/?group=23&session=9'; ?>">9</a></li>
+                                            <li class=""><a href="<?php echo zume_get_posts_translation_url( 'course', $zume_current_lang ) . '/?group=23&session=10'; ?>">10</a></li>
+                                        </ul>
+
                                         <div class="button-group">
-                                            <a href="" class="button hollow">Start Session #</a>
+                                            <a href="" class="button hollow">Start Next Session #</a>
                                         </div>
+
                                     </div>
                                 </div>
                             </li>
 
                             <!-- Group Row -->
-                            <li>
+                            <li class="block">
                                 <div class="grid-x grid-margin-x">
-                                    <div class="large-10 cell">
-                                        <h3><a href="">Group Name 2</a></h3>
+                                    <div class="large-6 cell">
+                                        <h3><a data-open="group2">Group Name 2</a></h3>
                                         <p class="text-gray">
                                             Meeting Time: <i class="fi-x warning"></i><br>
                                             Members: <i class="fi-x warning"></i> <br>
@@ -60,10 +76,24 @@ get_header();
                                         </p>
                                         <button class="small" data-open="group2"><i class="fi-pencil hollow"></i> edit</button>
                                     </div>
-                                    <div class="large-2 cell">
+                                    <div class="large-6 cell">
+                                        <ul class="pagination" role="navigation" aria-label="Pagination">
+                                            <li class="current"><a href="<?php echo zume_get_posts_translation_url( 'course', $zume_current_lang ) . '/?group=23&session=1'; ?>">1</a></li>
+                                            <li class="current"><a href="<?php echo zume_get_posts_translation_url( 'course', $zume_current_lang ) . '/?group=23&session=2'; ?>">2</a></li>
+                                            <li class="current"><a href="<?php echo zume_get_posts_translation_url( 'course', $zume_current_lang ) . '/?group=23&session=3'; ?>">3</a></li>
+                                            <li class="current"><a href="<?php echo zume_get_posts_translation_url( 'course', $zume_current_lang ) . '/?group=23&session=4'; ?>">4</a></li>
+                                            <li class="current"><a href="<?php echo zume_get_posts_translation_url( 'course', $zume_current_lang ) . '/?group=23&session=5'; ?>">5</a></li>
+                                            <li class="current"><a href="<?php echo zume_get_posts_translation_url( 'course', $zume_current_lang ) . '/?group=23&session=6'; ?>">6</a></li>
+                                            <li class="current"><a href="<?php echo zume_get_posts_translation_url( 'course', $zume_current_lang ) . '/?group=23&session=7'; ?>">7</a></li>
+                                            <li class=""><a href="<?php echo zume_get_posts_translation_url( 'course', $zume_current_lang ) . '/?group=23&session=8'; ?>">8</a></li>
+                                            <li class=""><a href="<?php echo zume_get_posts_translation_url( 'course', $zume_current_lang ) . '/?group=23&session=9'; ?>">9</a></li>
+                                            <li class=""><a href="<?php echo zume_get_posts_translation_url( 'course', $zume_current_lang ) . '/?group=23&session=10'; ?>">10</a></li>
+                                        </ul>
+
                                         <div class="button-group">
-                                            <a href="" class="button hollow">Start Session #</a>
+                                            <a href="" class="button hollow">Start Next Session #</a>
                                         </div>
+
                                     </div>
                                 </div>
                             </li>
@@ -100,6 +130,7 @@ get_header();
 
 </div>
 
+<!-- Create a New Group Modal -->
 <div class="small reveal" id="create" data-reveal>
     <h1>Create Group</h1>
     <form action="" method="post" >
@@ -121,11 +152,11 @@ get_header();
                 <input type="text" value="" name="group_address" id="group_address" required/>
             </div>
             <div class="cell">
-                <p class="text-small">Do you like me?</p>
+                <p class="text-small">Is this group active?</p>
                 <div class="switch large">
                     <input class="switch-input" id="yes-no" type="checkbox" name="exampleSwitch">
                     <label class="switch-paddle" for="yes-no">
-                        <span class="show-for-sr">Do you like me?</span>
+                        <span class="show-for-sr">Is this group active?</span>
                         <span class="switch-active" aria-hidden="true">Yes</span>
                         <span class="switch-inactive" aria-hidden="true">No</span>
                     </label>
@@ -143,12 +174,13 @@ get_header();
     </form>
 </div>
 
+<!-- Edit current groups section -->
 <div class="small reveal" id="group1" data-reveal>
-    <h1>Create Group</h1>
+    <h1>Edit Group</h1>
     <form action="" method="post" >
         <div class="grid-x grid-margin-x">
             <div class="cell">
-                <label for="group_name">Group Name 1</label>
+                <label for="group_name">Group Name</label>
                 <input type="text" value="Group Name 1" name="group_name" id="group_name" required/>
             </div>
             <div class="cell">
@@ -180,12 +212,12 @@ get_header();
 </div>
 
 <div class="small reveal" id="group2" data-reveal>
-    <h1>Create Group</h1>
+    <h1>Edit Group</h1>
     <form action="" method="post" >
         <div class="grid-x grid-margin-x">
             <div class="cell">
                 <label for="group_name">Group Name</label>
-                <input type="text" value="" name="group_name" id="group_name" required/>
+                <input type="text" value="Group 2" name="group_name" id="group_name" required/>
             </div>
             <div class="cell">
                 <label for="group_members">Number of Participants</label>
@@ -197,7 +229,7 @@ get_header();
             </div>
             <div class="cell">
                 <label for="group_address">Address</label>
-                <input type="text" value="" name="group_address" id="group_address" required/>
+                <input type="text" value="Hollywood Blvd, CA" name="group_address" id="group_address" required/>
             </div>
             <div class="cell">
                 <label for="group_status">Is this group active?</label>

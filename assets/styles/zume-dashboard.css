@@ -221,11 +221,12 @@ div#item-header div#message.info {
 ul.item-list {
     width: 100%;
 }
-ul.item-list li {
+ul.item-list li.block {
     border-bottom: 1px solid #eaeaea;
     padding: 15px 0;
     position: relative;
 }
+
 ul.item-list.activity-list li {
     padding-bottom: 0;
 }
@@ -372,13 +373,29 @@ div.item-list-tabs ul li.feed a {
 
 div.pagination {
     background: none;
-    /*border: none;*/
-    /*color: inherit;*/
-    /*font-size: inherit;*/
-    /*height: inherit;*/
-    margin: 0;
+
     padding: 5px;
     position: relative;
+
+}
+
+.pagination a {
+    color:black;
+}
+.pagination a:hover {
+    color:black;
+    background: #eaeaea;
+}
+.pagination .current {
+    padding:0;
+}
+.pagination .current a {
+    color:white;
+
+}
+.pagination .current a:hover {
+    color:black;
+    background: #eaeaea;
 }
 
 ul#groups-list.item-list {
