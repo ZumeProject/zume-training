@@ -116,7 +116,9 @@ Template Name: Zume Resources
                     global $post;
                     if ( ! empty( $post ) && ! empty( $post->post_content ) ) {
                         echo '<hr>';
+                        // @codingStandardsIgnoreStart
                         esc_html_e( $post->post_content, 'zume' );
+	                    // @codingStandardsIgnoreEnd
                     }
                     ?>
 

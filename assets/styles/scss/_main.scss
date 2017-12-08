@@ -29,6 +29,10 @@ a, a:visited {
 	padding-bottom: 20px;
 }
 
+.align-right {
+	float:right;
+}
+
 /*********************
 H1, H2, H3, H4, H5 P STYLES
 *********************/
@@ -414,9 +418,7 @@ COMMENT STYLES
 				&:hover {
 					text-decoration: underline;
 				}
-
 			}
-
 		}
 
 		img.photo {}
