@@ -158,21 +158,21 @@ get_header();
         <input type="hidden" name="ip_address" value="<?php echo zume_get_real_ip_address(); ?>"/>
         <div class="grid-x grid-margin-x">
             <div class="cell">
-                <label for="group_name">Group Name</label>
-                <input type="text" value="" name="group_name" id="group_name" required/>
+                <label for="name">Group Name</label>
+                <input type="text" value="" name="name" id="name" required/>
             </div>
             <div class="cell">
-                <label for="group_members">Number of Participants</label>
-                <input type="text" value="" name="group_members" id="group_members" required/>
+                <label for="members">Number of Participants</label>
+                <input type="text" value="" name="members" id="members" required/>
             </div>
             <div class="cell">
-                <label for="group_meeting_time">Planned Meeting Time</label>
-                <input type="text" value="" name="group_meeting_time" id="group_meeting_time" required/>
+                <label for="meeting_time">Planned Meeting Time</label>
+                <input type="text" value="" name="meeting_time" id="meeting_time" required/>
             </div>
             <div class="cell">
-                <label for="group_address">Address</label>
+                <label for="address">Address</label>
                 <input type="text" value="" placeholder="Please enter the full address for the group meeting"
-                       name="group_address" id="group_address" required/>
+                       name="address" id="address" required/>
             </div>
             <div class="cell">
                 <br>
@@ -202,21 +202,21 @@ foreach ( $zume_user_meta as $key => $v ) {
                 <input type="hidden" name="key" value="<?php echo $key; ?>"/>
                 <div class="grid-x grid-margin-x">
                     <div class="cell">
-                        <label for="group_name">Group Name</label>
-                        <input type="text" value="<?php echo $value['name']; ?>" name="group_name" id="group_name" required/>
+                        <label for="name">Group Name</label>
+                        <input type="text" value="<?php echo $value['name']; ?>" name="name" id="name" required/>
                     </div>
                     <div class="cell">
-                        <label for="group_members">Number of Participants</label>
-                        <input type="text" value="<?php echo $value['members']; ?>" name="group_members" id="group_members" required/>
+                        <label for="members">Number of Participants</label>
+                        <input type="text" value="<?php echo $value['members']; ?>" name="members" id="members" required/>
                     </div>
                     <div class="cell">
-                        <label for="group_meeting_time">Planned Meeting Time</label>
-                        <input type="text" value="<?php echo $value['meeting_time']; ?>" name="group_meeting_time" id="group_meeting_time" required/>
+                        <label for="meeting_time">Planned Meeting Time</label>
+                        <input type="text" value="<?php echo $value['meeting_time']; ?>" name="meeting_time" id="meeting_time" required/>
                     </div>
                     <div class="cell">
-                        <label for="group_address">Address</label>
-                        <input type="text" value="<?php echo $value['address']; ?>" name="group_address"
-                               id="group_address" required/>
+                        <label for="address">Address</label>
+                        <input type="text" value="<?php echo $value['address']; ?>" name="address"
+                               id="address" required/>
                     </div>
                     <div class="cell">
                         <br>
