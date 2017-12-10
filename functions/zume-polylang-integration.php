@@ -58,19 +58,19 @@ function zume_get_translation( $post_id, $slug = 'en' ) {
 
 function zume_get_posts_translation_url( $page_title, $slug = 'en' ) {
 
-	if ( function_exists( 'pll_the_languages' ) ) {
-    	// find post by title
-	    $post_id = get_page_by_title( $page_title, OBJECT, 'page' );
+    if ( function_exists( 'pll_the_languages' ) ) {
+        // find post by title
+        $post_id = get_page_by_title( $page_title, OBJECT, 'page' );
 
-	    // get translation id by eng id
-	    $trans_id = pll_get_post( $post_id->ID, $slug );
-	    if( ! $trans_id ) {
-		    return '';
-	    }
+        // get translation id by eng id
+        $trans_id = pll_get_post( $post_id->ID, $slug );
+        if ( ! $trans_id ) {
+            return '';
+        }
 
-	    $trans_object = get_post( $trans_id, OBJECT );
+        $trans_object = get_post( $trans_id, OBJECT );
 
-	    $trans_url = home_url('/') . $slug . '/' . $trans_object->post_name;
+        $trans_url = home_url( '/' ) . $slug . '/' . $trans_object->post_name;
 
         return $trans_url;
     }

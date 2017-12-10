@@ -4,21 +4,22 @@ Template Name: Zúme Dashboard
 */
 
 if ( ! empty( $_POST ) ) {
-	if ( ! empty( $_POST['type'] ) && $_POST['type'] == 'create' ) {
-		Zume_Dashboard::create_group( $_POST );
-	} elseif ( ! empty( $_POST['type'] ) && ( $_POST['type'] == 'edit' ) ) {
-		Zume_Dashboard::edit_group( $_POST );
-	} elseif ( ! empty( $_POST['type'] ) && ( $_POST['type'] == 'delete' ) ) {
-		Zume_Dashboard::delete_group( $_POST );
-	} else {
-		zume_write_log( 'Failed to filter' );
-	}
+    if ( ! empty( $_POST['type'] ) && $_POST['type'] == 'create' ) {
+        Zume_Dashboard::create_group( $_POST );
+    } elseif ( ! empty( $_POST['type'] ) && $_POST['type'] == 'edit' ) {
+        Zume_Dashboard::edit_group( $_POST );
+    } elseif ( ! empty( $_POST['type'] ) &&  $_POST['type'] == 'inactive' ) {
+        Zume_Dashboard::delete_group( $_POST );
+    } elseif ( ! empty( $_POST['type'] ) && $_POST['type'] == 'delete' ) {
+	    Zume_Dashboard::delete_group( $_POST );
+    } else {
+        zume_write_log( 'Failed to filter' );
+    }
 }
 
 $zume_current_lang = zume_current_language();
 $zume_current_user = get_current_user_id();
-$zume_user_meta    = array_map( function ( $a ) {
-	return $a[0];
+$zume_user_meta    = array_map( function ( $a ) { return $a[0];
 }, get_user_meta( $zume_current_user ) );
 
 get_header();
@@ -43,18 +44,18 @@ get_header();
                                 <h2 class="center">Your Groups</h2>
                             </li>
 
-							<?php
-							foreach ( $zume_user_meta as $key => $v ) {
-								$key_beginning = substr( $key, 0, 10 );
-								$no_groups = 0;
-								if ( $key_beginning == 'zume_group' ) {
-									$value = unserialize( $v );
-									?>
+                            <?php
+                            foreach ( $zume_user_meta as $key => $v ) {
+                                $key_beginning = substr( $key, 0, 10 );
+                                $no_groups = 0;
+                                if ( $key_beginning == 'zume_group' ) {
+                                    $value = unserialize( $v );
+                                    ?>
                                     <!-- Group Row -->
                                     <li class="block">
                                         <div class="grid-x grid-margin-x">
                                             <div class="large-6 cell">
-                                                <h3><a data-open="<?php echo $key; ?>"><?php echo $value['name'] ?></a>
+                                                <h3><a data-open="<?php echo $key; ?>"><?php echo $value['group_name'] ?></a>
                                                 </h3>
                                                 <p class="text-gray">
                                                     Meeting Time: <?php echo $value['meeting_time'] ?><br>
@@ -68,53 +69,55 @@ get_header();
                                             </div>
                                             <div class="large-6 cell">
                                                 <ul class="pagination" role="navigation" aria-label="Pagination">
-                                                    <li class="current">
+                                                    <li class="<?php ( $value['session_1'] ) ? print 'current' : print ''; ?>">
                                                         <a href="<?php echo zume_get_posts_translation_url( 'course', $zume_current_lang ) . '/?group=' . $key . '&session=1'; ?>">1</a>
                                                     </li>
-                                                    <li class="current">
+                                                    <li class="<?php ( $value['session_2'] ) ? print 'current' : print ''; ?>">
                                                         <a href="<?php echo zume_get_posts_translation_url( 'course', $zume_current_lang ) . '/?group=' . $key . '&session=2'; ?>">2</a>
                                                     </li>
-                                                    <li class="current">
+                                                    <li class="<?php ( $value['session_3'] ) ? print 'current' : print ''; ?>">
                                                         <a href="<?php echo zume_get_posts_translation_url( 'course', $zume_current_lang ) . '/?group=' . $key . '&session=3'; ?>">3</a>
                                                     </li>
-                                                    <li class="current">
+                                                    <li class="<?php ( $value['session_4'] ) ? print 'current' : print ''; ?>">
                                                         <a href="<?php echo zume_get_posts_translation_url( 'course', $zume_current_lang ) . '/?group=' . $key . '&session=4'; ?>">4</a>
                                                     </li>
-                                                    <li class="">
+                                                    <li class="<?php ( $value['session_5'] ) ? print 'current' : print ''; ?>">
                                                         <a href="<?php echo zume_get_posts_translation_url( 'course', $zume_current_lang ) . '/?group=' . $key . '&session=5'; ?>">5</a>
                                                     </li>
-                                                    <li class="">
+                                                    <li class="<?php ( $value['session_6'] ) ? print 'current' : print ''; ?>">
                                                         <a href="<?php echo zume_get_posts_translation_url( 'course', $zume_current_lang ) . '/?group=' . $key . '&session=6'; ?>">6</a>
                                                     </li>
-                                                    <li class="">
+                                                    <li class="<?php ( $value['session_7'] ) ? print 'current' : print ''; ?>">
                                                         <a href="<?php echo zume_get_posts_translation_url( 'course', $zume_current_lang ) . '/?group=' . $key . '&session=7'; ?>">7</a>
                                                     </li>
-                                                    <li class="">
+                                                    <li class="<?php ( $value['session_8'] ) ? print 'current' : print ''; ?>">
                                                         <a href="<?php echo zume_get_posts_translation_url( 'course', $zume_current_lang ) . '/?group=' . $key . '&session=8'; ?>">8</a>
                                                     </li>
-                                                    <li class="">
+                                                    <li class="<?php ( $value['session_9'] ) ? print 'current' : print ''; ?>">
                                                         <a href="<?php echo zume_get_posts_translation_url( 'course', $zume_current_lang ) . '/?group=' . $key . '&session=9'; ?>">9</a>
                                                     </li>
-                                                    <li class="">
+                                                    <li class="<?php ( $value['session_10'] ) ? print 'current' : print ''; ?>">
                                                         <a href="<?php echo zume_get_posts_translation_url( 'course', $zume_current_lang ) . '/?group=' . $key . '&session=10'; ?>">10</a>
                                                     </li>
                                                 </ul>
 
                                                 <div class="button-group">
-                                                    <a href="" class="button hollow">Start Next Session #</a>
+                                                    <a href="<?php echo zume_get_posts_translation_url( 'course', $zume_current_lang ) . '/?group=' . $key . '&session=' . $value['next_session']; ?>" class="button hollow">
+                                                        Start Next Session <?php print $value['next_session'] ?>
+                                                    </a>
                                                 </div>
 
                                             </div>
                                         </div>
                                     </li>
-									<?php
-									$no_groups++;
-								}
-							}
+                                    <?php
+                                    $no_groups++;
+                                }
+                            }
 
-							?>
+                            ?>
 
-                            <?php if( $no_groups < 1 ) : ?>
+                            <?php if ( $no_groups < 1 ) : ?>
 
                             <div class="grid-x grid-margin-x vertical-padding">
                                 <div class="large-8 large-offset-2 cell center">
@@ -158,8 +161,8 @@ get_header();
         <input type="hidden" name="ip_address" value="<?php echo zume_get_real_ip_address(); ?>"/>
         <div class="grid-x grid-margin-x">
             <div class="cell">
-                <label for="name">Group Name</label>
-                <input type="text" value="" name="name" id="name" required/>
+                <label for="group_name">Group Name</label>
+                <input type="text" value="" name="group_name" id="group_name" required/>
             </div>
             <div class="cell">
                 <label for="members">Number of Participants</label>
@@ -188,22 +191,22 @@ get_header();
 
 <?php
 foreach ( $zume_user_meta as $key => $v ) {
-	$key_beginning = substr( $key, 0, 10 );
-	$no_groups     = 0;
-	if ( $key_beginning == 'zume_group' ) {
-		$value = unserialize( $v );
-		?>
+    $key_beginning = substr( $key, 0, 10 );
+    $no_groups     = 0;
+    if ( $key_beginning == 'zume_group' ) {
+        $value = unserialize( $v );
+        ?>
 
         <!-- Edit current groups section -->
         <div class="small reveal" id="<?php echo $key; ?>" data-reveal>
             <h1>Edit Group</h1>
-            <form action="" method="post">
-                <input type="hidden" name="type" value="edit"/>
+            <form method="post">
+
                 <input type="hidden" name="key" value="<?php echo $key; ?>"/>
                 <div class="grid-x grid-margin-x">
                     <div class="cell">
-                        <label for="name">Group Name</label>
-                        <input type="text" value="<?php echo $value['name']; ?>" name="name" id="name" required/>
+                        <label for="group_name">Group Name</label>
+                        <input type="text" value="<?php echo $value['group_name']; ?>" name="group_name" id="group_name" required/>
                     </div>
                     <div class="cell">
                         <label for="members">Number of Participants</label>
@@ -220,7 +223,9 @@ foreach ( $zume_user_meta as $key => $v ) {
                     </div>
                     <div class="cell">
                         <br>
-                        <button type="submit" class="button">Submit</button>
+                        <button type="submit" class="button" name="type" value="edit">Update</button>
+                        <span class="align-right"><button type="submit" class="button hollow alert" name="type" value="delete">Delete</button></span>
+                        <span class="align-right"><button type="submit" class="button hollow alert" name="type" value="inactive">Make Inactive</button></span>
                     </div>
                 </div>
 
@@ -230,9 +235,9 @@ foreach ( $zume_user_meta as $key => $v ) {
             </form>
         </div>
 
-		<?php
-		$no_groups ++;
-	}
+        <?php
+        $no_groups ++;
+    }
 }
 
 ?>

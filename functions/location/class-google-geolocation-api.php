@@ -99,7 +99,7 @@ class Zume_Google_Geolocation
     }
 
     public static function geocode_ip_address( $ip_address ) {
-	    return [ 'lng' => '', 'lat' => '', 'formatted_address' => $ip_address ];
+        return [ 'lng' => '', 'lat' => '', 'formatted_address' => $ip_address ];
     }
 
 }

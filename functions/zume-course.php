@@ -3563,4 +3563,66 @@ class Zume_Course {
         <?php
     }
 
+    public static function get_next_session( $group_meta ) {
+
+        if ( $group_meta['session_1'] == false ) {
+            return 1;
+        }
+        if ( $group_meta['session_2'] == false ) {
+            return 2;
+        }
+        if ( $group_meta['session_3'] == false ) {
+            return 3;
+        }
+        if ( $group_meta['session_4'] == false ) {
+            return 4;
+        }
+        if ( $group_meta['session_5'] == false ) {
+            return 5;
+        }
+        if ( $group_meta['session_6'] == false ) {
+            return 6;
+        }
+        if ( $group_meta['session_7'] == false ) {
+            return 7;
+        }
+        if ( $group_meta['session_8'] == false ) {
+            return 8;
+        }
+        if ( $group_meta['session_9'] == false ) {
+            return 9;
+        }
+        if ( $group_meta['session_10'] == false ) {
+            return 10;
+        }
+        return false;
+
+    }
+
+    public static function update_session_complete( $group_key, $session_id, $user_id = '' ) {
+        if ( empty( $user_id ) ) {
+            $user_id = get_current_user_id();
+        }
+        $group_meta = get_user_meta( $user_id, $group_key, true );
+        if ( empty( $group_meta ) ) {
+            return false;
+        }
+
+        // update current session complete
+        $group_previous = $group_meta;
+        $session_key = 'session_' . $session_id;
+        $group_meta[ $session_key ] = true;
+
+        // update next session
+        $next_session = self::get_next_session( $group_meta );
+        $group_meta['next_session'] = $next_session;
+
+        $result = update_user_meta( $user_id, $group_key, $group_meta, $group_previous );
+
+        zume_write_log( $result );
+        print $result;
+        return true;
+
+    }
+
 }

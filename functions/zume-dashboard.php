@@ -48,112 +48,108 @@ class Zume_Dashboard {
 
     public static function create_group( $args ) {
 
-    	// Validate post data
-	    $defaults = array(
-		    'name' => false,
-		    'members' => false,
-		    'meeting_time' => '',
-		    'address' => false,
-		    'ip_address' => zume_get_real_ip_address(),
-	    );
-	    $args = wp_parse_args( $args, $defaults );
-	    zume_write_log($args);
+        // Validate post data
+        $defaults = array(
+            'group_name' => false,
+            'members' => false,
+            'meeting_time' => '',
+            'address' => false,
+            'ip_address' => zume_get_real_ip_address(),
+        );
+        $args = wp_parse_args( $args, $defaults );
 
-	    if( ! $args['name'] ) {
-	    	return new WP_Error('missing_info', 'You are missing the group name' );
-	    }
-	    if( ! $args['members'] ) {
-		    return new WP_Error('missing_info', 'You are missing number of group members' );
-	    }
-	    if( ! $args['address'] ) {
-		    return new WP_Error('missing_info', 'You are missing the group address' );
-	    }
+        if ( ! $args['group_name'] ) {
+            return new WP_Error( 'missing_info', 'You are missing the group name' );
+        }
+        if ( ! $args['members'] ) {
+            return new WP_Error( 'missing_info', 'You are missing number of group members' );
+        }
+        if ( ! $args['address'] ) {
+            return new WP_Error( 'missing_info', 'You are missing the group address' );
+        }
 
-	    // Geo lookup address
-	    $google_result = Zume_Google_Geolocation::query_google_api( $args['address'], $type = 'core' ); // get google api info
-	    if ($google_result == 'ZERO_RESULTS') {
-		    $results = Zume_Google_Geolocation::geocode_ip_address( $args['ip_address'] );// TODO: Need to still wire up the api to get ip address location
-		    $lng = $results['lng'];
-		    $lat = $results['lat'];
-		    $formatted_address = $args['address'];
-	    } else {
-		    $lng = $google_result['lng'];
-		    $lat = $google_result['lat'];
-		    $formatted_address = $google_result['formatted_address'];
-	    }
+        // Geo lookup address
+        $google_result = Zume_Google_Geolocation::query_google_api( $args['address'], $type = 'core' ); // get google api info
+        if ($google_result == 'ZERO_RESULTS') {
+            $results = Zume_Google_Geolocation::geocode_ip_address( $args['ip_address'] );// TODO: Need to still wire up the api to get ip address location
+            $lng = $results['lng'];
+            $lat = $results['lat'];
+            $formatted_address = $args['address'];
+        } else {
+            $lng = $google_result['lng'];
+            $lat = $google_result['lat'];
+            $formatted_address = $google_result['formatted_address'];
+        }
 
-	    // Prepare record array
-	    $current_user_id = get_current_user_id();
-	    $group_key = uniqid ('zume_group_');
-	    $group_values = [
-		    'owner' => $current_user_id,
-		    'name' => $args['name'],
-		    'members' => $args['members'],
-		    'meeting_time' => $args['meeting_time'],
-		    'address' => $formatted_address,
-		    'last_modified_date' => current_time( 'mysql'),
-		    'created_date' => current_time( 'mysql'),
-		    'lng' => $lng,
-		    'lat' => $lat,
-		    'next_session' => '1',
-		    'session_1' => false,
-		    'session_2' => false,
-		    'session_3' => false,
-		    'session_4' => false,
-		    'session_5' => false,
-		    'session_6' => false,
-		    'session_7' => false,
-		    'session_8' => false,
-		    'session_9' => false,
-		    'session_10' => false,
-		    'ip_address' => $args['ip_address'],
-	    ];
-	    zume_write_log($group_values);
-	    zume_write_log($group_key);
+        // Prepare record array
+        $current_user_id = get_current_user_id();
+        $group_key = uniqid( 'zume_group_' );
+        $group_values = [
+            'owner' => $current_user_id,
+            'group_name' => $args['group_name'],
+            'members' => $args['members'],
+            'meeting_time' => $args['meeting_time'],
+            'address' => $formatted_address,
+            'last_modified_date' => current_time( 'mysql' ),
+            'created_date' => current_time( 'mysql' ),
+            'lng' => $lng,
+            'lat' => $lat,
+            'next_session' => '1',
+            'session_1' => false,
+            'session_2' => false,
+            'session_3' => false,
+            'session_4' => false,
+            'session_5' => false,
+            'session_6' => false,
+            'session_7' => false,
+            'session_8' => false,
+            'session_9' => false,
+            'session_10' => false,
+            'ip_address' => $args['ip_address'],
+        ];
 
-
-	    $result = add_user_meta( $current_user_id, $group_key, $group_values, true );
-	    zume_write_log('User meta submitted');
-	    zume_write_log($result);
+        add_user_meta( $current_user_id, $group_key, $group_values, true );
+        return true;
 
     }
+
     public static function edit_group( $args ) {
-    	// Check if this user can edit this group
-	    $current_user_id = get_current_user_id();
-	    $user_meta = get_user_meta( $current_user_id, $args['key'] );
-	    if( empty( $user_meta ) ) {
-	    	return new WP_Error('no_group_match', 'Hey, you cheating? No, group with id found for you.');
-	    }
+        // Check if this user can edit this group
+        $current_user_id = get_current_user_id();
+        $user_meta = get_user_meta( $current_user_id, $args['key'] );
+        if ( empty( $user_meta ) ) {
+            return new WP_Error( 'no_group_match', 'Hey, you cheating? No, group with id found for you.' );
+        }
 
-	    if( ! ($args['address'] == $user_meta[0]['address'] ) ) {
-		    // Geo lookup address
-		    $google_result = Zume_Google_Geolocation::query_google_api( $args['address'], $type = 'core' ); // get google api info
-		    if ($google_result == 'ZERO_RESULTS') {
-			    $results = Zume_Google_Geolocation::geocode_ip_address( $args['ip_address'] );// TODO: Need to still wire up the api to get ip address location
-			    $lng = $results['lng'];
-			    $lat = $results['lat'];
-			    $formatted_address = $args['address'];
-		    } else {
-			    $lng = $google_result['lng'];
-			    $lat = $google_result['lat'];
-			    $formatted_address = $google_result['formatted_address'];
-		    }
+        if ( ! ( $args['address'] == $user_meta[0]['address'] && ! empty( $args['address'] ) ) ) {
+            // Geo lookup address
+            $google_result = Zume_Google_Geolocation::query_google_api( $args['address'], $type = 'core' ); // get google api info
+            if ($google_result == 'ZERO_RESULTS') {
+                $results = Zume_Google_Geolocation::geocode_ip_address( $args['ip_address'] );// TODO: Need to still wire up the api to get ip address location
+                $lng = $results['lng'];
+                $lat = $results['lat'];
+                $formatted_address = $args['address'];
+            } else {
+                $lng = $google_result['lng'];
+                $lat = $google_result['lat'];
+                $formatted_address = $google_result['formatted_address'];
+            }
 
-		    $args['lng'] = $lng;
-		    $args['lat'] = $lat;
-		    $args['address'] = $formatted_address;
-	    }
+            // add new geo data as new variable info to the $args
+            $args['lng'] = $lng;
+            $args['lat'] = $lat;
+            $args['address'] = $formatted_address;
+        }
 
-	    zume_write_log($args);
-	    zume_write_log($user_meta);
-	    // Combine array with new data
-	    $args = wp_parse_args( $args, $user_meta[0] );
+        // Combine array with new data
+        unset( $args['type'] ); // keeps from storing the form parse info
+        $args = wp_parse_args( $args, $user_meta[0] ); // TODO I don't think this is doing it right
 
-	    $result = update_user_meta( $current_user_id, $args['key'], $args, $user_meta[0] );
-
-	    zume_write_log('END');
+        update_user_meta( $current_user_id, $args['key'], $args );
+        return true;
     }
+
     public static function delete_group( $args ) {
-	    zume_write_log($args);
+        zume_write_log( $args );
     }
 }

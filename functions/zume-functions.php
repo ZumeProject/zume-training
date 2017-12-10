@@ -51,8 +51,8 @@ add_action( 'template_redirect', 'zume_dashboard_redirect' );
 
 
 // Remove admin bar on the front end.
-if( ! current_user_can( 'administrator' ) ) {
-	add_filter( 'show_admin_bar', '__return_false' );
+if ( ! current_user_can( 'administrator' ) ) {
+    add_filter( 'show_admin_bar', '__return_false' );
 }
 
 /*
@@ -108,17 +108,16 @@ add_action( 'wp_insert_post', 'zume_wp_insert_post', 10, 3 );
 
 function zume_get_real_ip_address()
 {
-	if (!empty($_SERVER['HTTP_CLIENT_IP']))   //check ip from share internet
-	{
-		$ip=$_SERVER['HTTP_CLIENT_IP'];
-	}
-	elseif (!empty($_SERVER['HTTP_X_FORWARDED_FOR']))   //to check ip is pass from proxy
-	{
-		$ip=$_SERVER['HTTP_X_FORWARDED_FOR'];
-	}
-	else
-	{
-		$ip=$_SERVER['REMOTE_ADDR'];
-	}
-	return $ip;
+    if ( !empty( $_SERVER['HTTP_CLIENT_IP'] ))   //check ip from share internet
+    {
+        $ip =$_SERVER['HTTP_CLIENT_IP'];
+    }
+    elseif ( !empty( $_SERVER['HTTP_X_FORWARDED_FOR'] ))   //to check ip is pass from proxy
+    {
+        $ip =$_SERVER['HTTP_X_FORWARDED_FOR'];
+    }
+    else {
+        $ip =$_SERVER['REMOTE_ADDR'];
+    }
+    return $ip;
 }

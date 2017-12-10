@@ -11,18 +11,18 @@
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
-	exit; // Exit if accessed directly
+    exit; // Exit if accessed directly
 }
 
 class Zume_Overview {
 
 
-	/**
-	 * Zume Overview: Primary content section
-	 * @return mixed
-	 */
-	public static function load_sessions( $session = 1, $language = 'en' ) {
-		?>
+    /**
+     * Zume Overview: Primary content section
+     * @return mixed
+     */
+    public static function load_sessions( $session = 1, $language = 'en' ) {
+        ?>
         <h2 class="center padding-bottom">Sessions Overview</h2>
 
         <script>
@@ -49,7 +49,7 @@ class Zume_Overview {
                     autoFocus: true,
                     onStepChanged: function (event, currentIndex, priorIndex) {
                         var newHash = "#s" + (currentIndex + 1);
-						<?php /* Replaces window.location.hash without creating
+                        <?php /* Replaces window.location.hash without creating
                         a history entry, and without scrolling or jumping, and
                         without triggering hashchange */ ?>
                         history.replaceState(null, null, newHash);
@@ -57,7 +57,7 @@ class Zume_Overview {
                     titleTemplate: '<span class="number">#index#</span> #title#'
                 });
                 window.addEventListener("hashchange", function (event) {
-					<?php /* This can get triggered when Overview menu items
+                    <?php /* This can get triggered when Overview menu items
                     get clicked */ ?>
                     var hash = event.newURL.substr(event.newURL.indexOf("#"));
                     if (!isNaN(parseInt(hash.substr(2)))) {
@@ -74,106 +74,106 @@ class Zume_Overview {
             <h3></h3>
             <section>
                 <h3 style="text-align: center; font-weight: bold">Session 1</h3>
-				<?php self::get_overview_content_1(); ?>
+                <?php self::get_overview_content_1(); ?>
             </section>
 
             <h3></h3>
             <section>
                 <h3 style="text-align: center; font-weight: bold">Session 2</h3>
-				<?php self::get_page_content( '2', $language ) ?>
+                <?php self::get_page_content( '2', $language ) ?>
             </section>
 
             <h3></h3>
             <section>
                 <h3 style="text-align: center; font-weight: bold">Session 3</h3>
-				<?php self::get_page_content( '3', $language ) ?>
+                <?php self::get_page_content( '3', $language ) ?>
             </section>
 
             <h3></h3>
             <section>
                 <h3 style="text-align: center; font-weight: bold">Session 4</h3>
-				<?php self::get_page_content( '4', $language ) ?>
+                <?php self::get_page_content( '4', $language ) ?>
             </section>
 
             <h3></h3>
             <section>
                 <h3 style="text-align: center; font-weight: bold">Session 5</h3>
-				<?php self::get_page_content( '5', $language ) ?>
+                <?php self::get_page_content( '5', $language ) ?>
             </section>
 
             <h3></h3>
             <section>
                 <h3 style="text-align: center; font-weight: bold">Session 6</h3>
-				<?php self::get_page_content( '6', $language ) ?>
+                <?php self::get_page_content( '6', $language ) ?>
             </section>
 
             <h3></h3>
             <section>
                 <h3 style="text-align: center; font-weight: bold">Session 7</h3>
-				<?php self::get_page_content( '7', $language ) ?>
+                <?php self::get_page_content( '7', $language ) ?>
             </section>
 
             <h3></h3>
             <section>
                 <h3 style="text-align: center; font-weight: bold">Session 8</h3>
-				<?php self::get_page_content( '8', $language ) ?>
+                <?php self::get_page_content( '8', $language ) ?>
             </section>
 
             <h3></h3>
             <section>
                 <h3 style="text-align: center; font-weight: bold">Session 9</h3>
-				<?php self::get_page_content( '9', $language ) ?>
+                <?php self::get_page_content( '9', $language ) ?>
             </section>
 
             <h3></h3>
             <section>
                 <h3 style="text-align: center; font-weight: bold">Session 10 - Advanced Training</h3>
-				<?php self::get_page_content( '10', $language ) ?>
+                <?php self::get_page_content( '10', $language ) ?>
             </section>
 
         </div>
 
-		<?php if ( is_user_logged_in() ) {
-			self::next_session_block();
-		} ?>
+        <?php if ( is_user_logged_in() ) {
+            self::next_session_block();
+} ?>
 
-		<?php
-	}
+        <?php
+    }
 
-	public static function next_session_block() {
-		?>
+    public static function next_session_block() {
+        ?>
         <div class="callout">
             <p class="center padding-bottom">Go to the Dashboard to select your Group and start the next session</p>
             <p class="center"><a href="/dashboard/" class="button large">Dashboard</a></p>
         </div>
-		<?php
-	}
+        <?php
+    }
 
-	/**
-	 * Pulls the content from the pages database
-	 */
-	public static function get_page_content( $session, $language = 'en' ) {
+    /**
+     * Pulls the content from the pages database
+     */
+    public static function get_page_content( $session, $language = 'en' ) {
 
-		$session_title = 'Session ' . $session . ' Overview';
-		$page_object   = get_page_by_title( $session_title, OBJECT, 'page' );
+        $session_title = 'Session ' . $session . ' Overview';
+        $page_object   = get_page_by_title( $session_title, OBJECT, 'page' );
 
-		if ( $language != 'en' ) {
-			$translation_id = zume_get_translation( $page_object->ID, $language );
-			$page_object    = get_post( $translation_id, OBJECT );
-		}
+        if ( $language != 'en' ) {
+            $translation_id = zume_get_translation( $page_object->ID, $language );
+            $page_object    = get_post( $translation_id, OBJECT );
+        }
 
-		if ( ! empty( $page_object ) || ! empty( $page_object->post_content ) ) {
-			$page_content = (string) $page_object->post_content;
+        if ( ! empty( $page_object ) || ! empty( $page_object->post_content ) ) {
+            $page_content = (string) $page_object->post_content;
 			// @codingStandardsIgnoreLine
 			echo "<div class=\"overview\">$page_content</div>";
 
-		} else {
-			print 'Please republish "' . esc_html( $session_title ) . '" with content for this section in the pages administration area.';
-		}
-	}
+        } else {
+            print 'Please republish "' . esc_html( $session_title ) . '" with content for this section in the pages administration area.';
+        }
+    }
 
-	public static function get_overview_content_1() {
-		?>
+    public static function get_overview_content_1() {
+        ?>
         <div class="grid-x grid-margin-x">
             <div class="large-2 cell"></div>
              <div class="large-8 cell">
@@ -246,7 +246,7 @@ class Zume_Overview {
                                  width="40" height="40" class="alignnone size-full wp-image-1035"/>
                         </div>
                         <div class="large-11 cell">
-	                        <?php esc_html_e( 'S.O.A.P.S. BIBLE READING — a tool for daily Bible study that helps you understand, obey, and share God’s Word.', 'zume' ) ?>
+                            <?php esc_html_e( 'S.O.A.P.S. BIBLE READING — a tool for daily Bible study that helps you understand, obey, and share God’s Word.', 'zume' ) ?>
                         </div>
                     </div>
                 </div>
@@ -257,7 +257,7 @@ class Zume_Overview {
                                  width="40" height="40" class="alignnone size-full wp-image-1567"/>
                         </div>
                         <div class="large-11 cell">
-	                        <?php esc_html_e( 'ACCOUNTABILITY GROUPS — a tool for two or three people of the same gender to meet weekly and encourage each other in areas that are going well and reveal areas that need correction.', 'zume' ) ?>
+                            <?php esc_html_e( 'ACCOUNTABILITY GROUPS — a tool for two or three people of the same gender to meet weekly and encourage each other in areas that are going well and reveal areas that need correction.', 'zume' ) ?>
                         </div>
                     </div>
                 </div>
@@ -268,7 +268,7 @@ class Zume_Overview {
                                  alt="" width="40" height="40" class="alignnone size-full wp-image-1566"/>
                         </div>
                         <div class="large-11 cell">
-							<?php esc_html_e( 'SPIRITUAL BREATHING — Being a disciple means we hear from God and we obey God.', 'zume' ) ?>
+                            <?php esc_html_e( 'SPIRITUAL BREATHING — Being a disciple means we hear from God and we obey God.', 'zume' ) ?>
                         </div>
                     </div>
                 </div>
@@ -291,7 +291,7 @@ class Zume_Overview {
                                  alt="" width="40" height="40" class="alignnone size-full wp-image-1568"/>
                         </div>
                         <div class="large-11 cell">
-	                        <?php esc_html_e( 'ACCOUNTABILITY GROUPS — Break into groups of two or three people to work through the Accountability Questions. (45 minutes)', 'zume' ) ?>
+                            <?php esc_html_e( 'ACCOUNTABILITY GROUPS — Break into groups of two or three people to work through the Accountability Questions. (45 minutes)', 'zume' ) ?>
                         </div>
                     </div>
                 </div>
@@ -299,7 +299,7 @@ class Zume_Overview {
             <div class="large-2 cell"></div>
         </div>
 
-		<?php
+        <?php
 
-	}
+    }
 }
