@@ -9,9 +9,9 @@ if ( ! empty( $_POST ) ) {
     } elseif ( ! empty( $_POST['type'] ) && $_POST['type'] == 'edit' ) {
         Zume_Dashboard::edit_group( $_POST );
     } elseif ( ! empty( $_POST['type'] ) &&  $_POST['type'] == 'inactive' ) {
-        Zume_Dashboard::delete_group( $_POST );
+//        Zume_Dashboard::delete_group( $_POST );
     } elseif ( ! empty( $_POST['type'] ) && $_POST['type'] == 'delete' ) {
-	    Zume_Dashboard::delete_group( $_POST );
+	    Zume_Dashboard::delete_group( $_POST['key'] );
     } else {
         zume_write_log( 'Failed to filter' );
     }

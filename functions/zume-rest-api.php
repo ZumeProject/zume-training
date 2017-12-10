@@ -66,6 +66,16 @@ class Zume_REST_API {
                 }
             ),
         ) );
+
+	    register_rest_route( $namespace, '/session/update_session_complete', array(
+		    array(
+			    'methods'         => WP_REST_Server::CREATABLE,
+			    'callback'        => array( $this, 'update_session_complete' ),
+			    "permission_callback" => function () {
+				    return current_user_can( 'subscriber' );
+			    }
+		    ),
+	    ) );
     }
 
     /**
@@ -114,5 +124,28 @@ class Zume_REST_API {
         return $status;
 
     }
+
+	/**
+	 * Update Session Complete
+	 * @param WP_REST_Request $request
+	 * @access public
+	 * @since 0.1
+	 * @return string|WP_Error
+	 */
+	public function update_session_complete( WP_REST_Request $request){
+		$params = $request->get_params();
+		if ( isset( $params['group_key'] ) && isset( $params['session_id'] ) ) {
+
+			$result = Zume_Course::update_session_complete( $params['group_key'], $params['session_id'] );
+
+			if ($result["status"] == true){
+				return 'success';
+			} else {
+				return new WP_Error( "log_status_error", $result["message"], array( 'status', 400 ) );
+			}
+		} else {
+			return new WP_Error( "log_param_error", "Please provide a valid address", array( 'status', 400 ) );
+		}
+	}
 
 }

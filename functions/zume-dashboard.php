@@ -84,29 +84,40 @@ class Zume_Dashboard {
         // Prepare record array
         $current_user_id = get_current_user_id();
         $group_key = uniqid( 'zume_group_' );
-        $group_values = [
-            'owner' => $current_user_id,
-            'group_name' => $args['group_name'],
-            'members' => $args['members'],
-            'meeting_time' => $args['meeting_time'],
-            'address' => $formatted_address,
-            'last_modified_date' => current_time( 'mysql' ),
-            'created_date' => current_time( 'mysql' ),
-            'lng' => $lng,
-            'lat' => $lat,
-            'next_session' => '1',
-            'session_1' => false,
-            'session_2' => false,
-            'session_3' => false,
-            'session_4' => false,
-            'session_5' => false,
-            'session_6' => false,
-            'session_7' => false,
-            'session_8' => false,
-            'session_9' => false,
-            'session_10' => false,
-            'ip_address' => $args['ip_address'],
-        ];
+	    $group_values = [
+		    'owner'               => $current_user_id,
+		    'group_name'          => $args['group_name'],
+		    'members'             => $args['members'],
+		    'meeting_time'        => $args['meeting_time'],
+		    'address'             => $formatted_address,
+		    'ip_address'          => $args['ip_address'],
+		    'lng'                 => $lng,
+		    'lat'                 => $lat,
+		    'created_date'        => current_time( 'mysql' ),
+		    'next_session'        => '1',
+		    'session_1'           => false,
+		    'session_1_complete'  => '',
+		    'session_2'           => false,
+		    'session_2_complete'  => '',
+		    'session_3'           => false,
+		    'session_3_complete'  => '',
+		    'session_4'           => false,
+		    'session_4_complete'  => '',
+		    'session_5'           => false,
+		    'session_5_complete'  => '',
+		    'session_6'           => false,
+		    'session_6_complete'  => '',
+		    'session_7'           => false,
+		    'session_7_complete'  => '',
+		    'session_8'           => false,
+		    'session_8_complete'  => '',
+		    'session_9'           => false,
+		    'session_9_complete'  => '',
+		    'session_10'          => false,
+		    'session_10_complete' => '',
+		    'last_modified_date'  => current_time( 'mysql' ),
+		    'completed'           => false,
+	    ];
 
         add_user_meta( $current_user_id, $group_key, $group_values, true );
         return true;
@@ -143,13 +154,15 @@ class Zume_Dashboard {
 
         // Combine array with new data
         unset( $args['type'] ); // keeps from storing the form parse info
+	    $args['last_modified_date'] = current_time( 'mysql' );
         $args = wp_parse_args( $args, $user_meta[0] ); // TODO I don't think this is doing it right
 
         update_user_meta( $current_user_id, $args['key'], $args );
         return true;
     }
 
-    public static function delete_group( $args ) {
-        zume_write_log( $args );
+    public static function delete_group( $group_key ) {
+    	$user_id = get_current_user_id();
+        delete_user_meta( $user_id, $group_key );
     }
 }

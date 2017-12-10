@@ -36,7 +36,7 @@ require_once( 'functions/zume-dashboard.php' ); // zume dashboard
 
 // Locations System
 require_once( 'functions/location/group-js-maps.php' ); // loads the group address meta fields
-require_once( 'functions/rest-api.php' );
+require_once( 'functions/zume-rest-api.php' );
 Zume_REST_API::instance();
 require_once( 'functions/location/class-census-geolocation-api.php' );
 require_once( 'functions/location/class-google-geolocation-api.php' );
