@@ -78,3 +78,45 @@ function zume_get_posts_translation_url( $page_title, $slug = 'en' ) {
         return new WP_Error( 'Polylang_missing', 'Polylang plugin missing' );
     }
 }
+
+function zume_dashboard_url() {
+	$current_lang = zume_current_language();
+	$url = zume_get_posts_translation_url( 'dashboard', $current_lang );
+	return $url;
+}
+
+function zume_course_url() {
+	$current_lang = zume_current_language();
+	$url = zume_get_posts_translation_url( 'course', $current_lang );
+	return $url;
+}
+
+function zume_overview_url() {
+	$current_lang = zume_current_language();
+	$url = zume_get_posts_translation_url( 'overview', $current_lang );
+	return $url;
+}
+
+function zume_guidebook_url() {
+	$current_lang = zume_current_language();
+	$url = zume_get_posts_translation_url( 'guidebook', $current_lang );
+	return $url;
+}
+
+function zume_profile_url() {
+	$current_lang = zume_current_language();
+	$url = zume_get_posts_translation_url( 'profile', $current_lang );
+	return $url;
+}
+
+function zume_about_url() {
+	$current_lang = zume_current_language();
+	$url = zume_get_posts_translation_url( 'about', $current_lang );
+	return $url;
+}
+
+function zume_faq_url() {
+	$current_lang = zume_current_language();
+	$url = zume_get_posts_translation_url( 'faq', $current_lang );
+	return $url;
+}
