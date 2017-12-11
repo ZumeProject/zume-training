@@ -137,8 +137,7 @@ class Zume_Course {
 
 	}
 
-
-    public function session_nine_plan( $attr = null ) {
+	public function session_nine_plan( $attr = null ) {
         $form = '<form id="session_nine_plan" action="/wp-admin/admin-post.php" method="post">';
         foreach ( $this->session_nine_labels as $index => $label ) {
             $form = $form . '<label style="font-size:16px">' . $label . '</label>';

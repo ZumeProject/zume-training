@@ -980,6 +980,10 @@ ul.orbit-container {
 //	height:0;
 //}
 
+.starter-switch {
+	@include switch-size(3rem, 6rem, 0.75rem);
+}
+
 
 
 

@@ -13,6 +13,8 @@ if ( empty( $_GET['group'] ) || empty( $_GET['session'] ) ) {
 }
 $zume_group_key    = sanitize_key( wp_unslash( $_GET['group'] ) );
 $zume_session      = sanitize_key( wp_unslash( $_GET['session'] ) );
+isset( $_GET['viewing'] ) ? $isset_viewing = true : $isset_viewing = false;
+
 $zume_current_user = get_current_user_id();
 
 $zume_user_meta    = array_map( function ( $a ) {
@@ -36,9 +38,25 @@ get_header();
 				 * Load Zume Course Content
 				 */
 
-				Zume_Course::update_session_complete( $zume_group_key, $zume_session );
+				if( $isset_viewing ) {
+					$viewing = sanitize_key( wp_unslash( $_GET['viewing'] ) );
+				    switch( $viewing ) {
+                        case 'group':
+	                        Zume_Course::update_session_complete( $zume_group_key, $zume_session );
 
-				Zume_Course_Content::get_course_content( $zume_session );
+	                        Zume_Course_Content::get_course_content( $zume_session );
+                            break;
+                        case 'member':
+	                        Zume_Course::update_session_complete( $zume_group_key, $zume_session );
+	                        Zume_Course_Content::get_course_content( $zume_session );
+                            break;
+                        case 'explore':
+	                        Zume_Course_Content::get_course_content( $zume_session );
+                            break;
+                    }
+                } else {
+                    Zume_Course_Content::course_start_panel();
+                }
 
 				?>
 
@@ -195,21 +213,21 @@ class Zume_Course_Content {
                 <div class="large-3"></div>
                 <div class="large-6 cell">
 
-                    <div class="switch">
+                    <div class="switch starter-switch">
                         <input class="switch-input" id="exampleRadioSwitch1" type="radio" checked name="testGroup">
                         <label class="switch-paddle" for="exampleRadioSwitch1">
                             <span class="show-for-sr">Bulbasaur</span>
                         </label>
                     </div>
 
-                    <div class="switch">
+                    <div class="switch starter-switch">
                         <input class="switch-input" id="exampleRadioSwitch2" type="radio" name="testGroup">
                         <label class="switch-paddle" for="exampleRadioSwitch2">
                             <span class="show-for-sr">Bulbasaur</span>
                         </label>
                     </div>
 
-                    <div class="switch">
+                    <div class="switch starter-switch">
                         <input class="switch-input" id="exampleRadioSwitch3" type="radio" name="testGroup">
                         <label class="switch-paddle" for="exampleRadioSwitch3">
                             <span class="show-for-sr">Bulbasaur</span>
