@@ -78,8 +78,6 @@ class Zume_Course_Content {
                     enablePagination: true,
                     // Enables all steps from the begining
                     enableAllSteps: false,
-                    // Removes the number from the title
-//                    titleTemplate: "#title#",
                     startIndex: startIndex,
                     headerTag: "h3",
                     bodyTag: "section",
@@ -93,8 +91,9 @@ class Zume_Course_Content {
                         history.replaceState(null, null, newHash);
                     },
                     onFinishing: function (event, currentIndex) {
-
+                        window.location.replace("<?php echo zume_dashboard_url() ?>")
                     },
+                    // Removes the number from the title
                     titleTemplate: '<span class="number">#index#</span> #title#'
                 });
                 window.addEventListener("hashchange", function (event) {
@@ -1849,7 +1848,7 @@ class Zume_Course_Content {
                 <div class="large-4 cell activity-title">WATCH</div>
                 <div class="large-8 cell activity-description">A 3/3 Group is a way for followers of Jesus to meet,
                     pray, learn,
-                    ggrid-x grid-margin-x, fellowship and practice obeying and sharing what they've learned. In this way
+                    grow, fellowship and practice obeying and sharing what they've learned. In this way
                     a 3/3 Group is
                     not just a small group but a Simple Church.<BR><BR> In the following video, you'll see a model 3/3
                     Group meet together and practice this format.<br><br>Find the "3/3 Groups Format" section in your
@@ -2082,7 +2081,7 @@ class Zume_Course_Content {
                 <div class="large-4 cell activity-title">PRAY</div>
                 <div class="large-8 cell activity-description">Thank God that He loves us enough to invite us into His
                     most important
-                    work &#8212; ggrid-x grid-margin-xing His family!
+                    work &#8212; growing His family!
                 </div>
             </div> <!-- grid-x grid-margin-x -->
         </section>
@@ -2316,13 +2315,13 @@ class Zume_Course_Content {
                 <div class="large-4 cell activity-title">OVERVIEW</div>
                 <div class="large-8 cell activity-description">In this session, you’ll learn how linear patterns hold
                     back kingdom
-                    ggrid-x grid-margin-xth and how Non-Sequential thinking helps you multiply disciples. You'll
+                    growth and how Non-Sequential thinking helps you multiply disciples. You'll
                     discover how much time
                     matters in disciple-making and how to accelerate Pace. You’ll learn how followers of Jesus can be a
-                    Part of Two Churches to help turn faithful, spiritual families into a ggrid-x grid-margin-xing
+                    Part of Two Churches to help turn faithful, spiritual families into a growing
                     city-wide body of
                     believers. Finally, you'll learn how a simple 3-Month Plan can focus your efforts and multiply your
-                    effectiveness in ggrid-x grid-margin-xing God's family exponentially.
+                    effectiveness in growing God's family exponentially.
                 </div>
             </div>
             <!-- grid-x grid-margin-x -->
@@ -2473,9 +2472,9 @@ class Zume_Course_Content {
                 <div class="large-4 cell activity-title">DISCUSS</div>
                 <div class="large-8 cell activity-description">What are some advantages of maintaining a consistent
                     spiritual family
-                    that gives birth to new ones that ggrid-x grid-margin-x and multiply instead of continually ggrid-x
+                    that gives birth to new ones that grow and multiply instead of continually ggrid-x
                     grid-margin-xing a family and
-                    splitting it in order to ggrid-x grid-margin-x?
+                    splitting it in order to grow?
                 </div>
             </div>
             <!-- grid-x grid-margin-x -->
@@ -2762,7 +2761,7 @@ class Zume_Course_Content {
                 <div class="large-8 cell activity-description">In this advanced training session, you’ll take a look at
                     how you can
                     level-up your Coaching Strengths with a quick checklist assessment. You’ll learn how Leadership in
-                    Networks allows a ggrid-x grid-margin-xing group of small churches to work together to accomplish
+                    Networks allows a growing group of small churches to work together to accomplish
                     even more. And
                     you’ll learn how to develop Peer Mentoring Groups that take leaders to a whole new level of growth.
                 </div>
@@ -2843,7 +2842,7 @@ class Zume_Course_Content {
             <!-- Activity Block  -->
             <div class="grid-x grid-margin-x block">
                 <div class="large-4 cell activity-title">WATCH</div>
-                <div class="large-8 cell activity-description">What happens to churches as they ggrid-x grid-margin-x
+                <div class="large-8 cell activity-description">What happens to churches as they grow
                     and start new churches that
                     start new churches? How do they stay connected and live life together as an extended, spiritual
                     family? They become a network!

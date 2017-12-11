@@ -45,9 +45,9 @@ get_header();
                             </li>
 
                             <?php
+                            $zume_no_groups = 0;
                             foreach ( $zume_user_meta as $key => $v ) {
                                 $key_beginning = substr( $key, 0, 10 );
-                                $no_groups = 0;
                                 if ( 'zume_group' == $key_beginning ) {
                                     $value = maybe_unserialize( $v );
                                     ?>
@@ -111,13 +111,13 @@ get_header();
                                         </div>
                                     </li>
                                     <?php
-                                    $no_groups++;
+                                    $zume_no_groups++;
                                 }
                             }
 
                             ?>
 
-                            <?php if ( $no_groups < 1 ) : ?>
+                            <?php if ( $zume_no_groups < 1 ) : ?>
 
                             <div class="grid-x grid-margin-x vertical-padding">
                                 <div class="large-8 large-offset-2 cell center">
@@ -192,7 +192,7 @@ get_header();
 <?php
 foreach ( $zume_user_meta as $key => $v ) {
     $key_beginning = substr( $key, 0, 10 );
-    $no_groups     = 0;
+    $zume_no_groups     = 0;
     if ( $key_beginning == 'zume_group' ) {
         $value = unserialize( $v );
         ?>
@@ -236,7 +236,7 @@ foreach ( $zume_user_meta as $key => $v ) {
         </div>
 
         <?php
-        $no_groups ++;
+        $zume_no_groups ++;
     }
 }
 
