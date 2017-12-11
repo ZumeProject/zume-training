@@ -33,7 +33,9 @@ get_header();
 
             Zume_Course::update_session_complete( $zume_group_key, $zume_session );
 
-            Zume_Course_Content::get_course_content_1();
+            Zume_Course_Content::get_course_content( $zume_session );
+
+            Zume_Course_Content::jquery_steps( $zume_group_key, $zume_session );
 
             ?>
 
@@ -64,19 +66,10 @@ class Zume_Course_Content {
 
 		$nonce                   = wp_create_nonce( 'wp_rest' );
 		$dashboard_complete      = home_url( "/dashboard/" );
-		$dashboard_complete_next = home_url( "/zume-training/" ) . '?group_id=' . $group_id . '&id=' . $session_number . '&wp_nonce=' . $nonce;
-		$success                 = __( 'Session Complete! Congratulations!', 'zume' );
 		$failure                 = __( 'Could not track your progress. Yikes. Tell us and we will tell our geeks to get on it!', 'zume' );
 
 		// Get list of members attending the group
-//        $group_members_result = groups_get_group_members( $args = array('group_id' => $group_id, 'exclude_admins_mods' => false) );
-//        $group_members_result = '';
 		$group_members = array();
-//        foreach(  $group_members_result['members'] as $member ) {
-//            $group_members[] = $member->ID;
-//        }
-//        $group_members_ids = implode(", ", $group_members);
-		// end Get list of members
 
 		// Create Javascript HTML
 		echo '<script>
@@ -99,126 +92,157 @@ class Zume_Course_Content {
 		}
 
 		// Fire record creation on step change
+//		echo 'onStepChanging: function (event, currentIndex, newIndex) {
+//
+//           if (currentIndex === 0) { /* check attendance requirement */
+//                var n = jQuery( "input:checked" ).length;
+//                if ( n < 4 ) {
+//                return false;
+//                }
+//           }
+//           return true;
+//
+//        },
+//
+//        ';
+//
+//		// Fire record creation on step change
+//		echo 'onStepChanged: function (event, currentIndex, priorIndex) {
+//
+//            if (currentIndex === 1 && priorIndex === 0) { /* record attendance */
+//
+//                var members = ' . json_encode( $group_members ) . ';
+//                var session = \'' . esc_js( $session_number ) . '\';
+//                var group_id = \'' . esc_js( $group_id ) . '\';
+//
+//                var data = {
+//                    members: members,
+//                    session: session,
+//                    group_id: group_id
+//                };
+//
+//                jQuery.ajax({
+//                method: "POST",
+//                url: \'' . esc_js( $root ) . '\' + \'zume/v1/attendance/log\',
+//                data: data,
+//                dataType: "json",
+//                beforeSend: function ( xhr ) {
+//                    xhr.setRequestHeader( \'X-WP-Nonce\', \'' . esc_js( $nonce ) . '\' );
+//                },
+//                error : function( jqXHR, textStatus, errorThrown ) {
+//                    console.log( jqXHR.responseText );
+//
+//                }
+//
+//            });
+//            }
+//
+//           var title = "Group-" + "' . esc_js( $group_id ) . '" + " Step-" + currentIndex + " Session-" + "' . esc_js( $session_number ) . '" ;
+//           var status = \'publish\';
+//
+//           var data = {
+//                title: title,
+//                status: status
+//            };
+//
+//           jQuery.ajax({
+//                method: "POST",
+//                url: \'' . esc_js( $root ) . '\' + \'wp/v2/steplog\',
+//                data: data,
+//                dataType: "json",
+//                beforeSend: function ( xhr ) {
+//                    xhr.setRequestHeader( \'X-WP-Nonce\', \'' . esc_js( $nonce ) . '\' );
+//                },
+//                error : function( jqXHR, textStatus, errorThrown ) {
+//                    console.log( jqXHR.responseText );
+//                    alert( \'' . esc_js( $failure ) . '\' );
+//                }
+//
+//            });
+//        },
+//
+//        '; // end html block
+//
+//		// Fire a session completed record creation
+//		echo '  onFinishing: function (event, currentIndex) {
+//
+//               var title = "Group-" + "' . esc_js( $group_id ) . '" + " Step-Complete" + " Session-" + "' . esc_js( $session_number ) . '" ;
+//               var excerpt = "' . esc_js( $session_number ) . '";
+//               var status = \'publish\';
+//
+//               var data = {
+//                    title: title,
+//                    excerpt: excerpt,
+//                    status: status
+//                };
+//
+//               jQuery.ajax({
+//                    method: "POST",
+//                    url: \'' . esc_js( $root ) . '\' + \'wp/v2/steplog\',
+//                    data: data,
+//                    dataType: "json",
+//                    beforeSend: function ( xhr ) {
+//                        xhr.setRequestHeader( \'X-WP-Nonce\', \'' . esc_js( $nonce ) . '\' );
+//                    },
+//                    success : function( response ) {
+//
+//                        window.location.replace("' . esc_js( $dashboard_complete ) . '");
+//                    },
+//                    error : function( jqXHR, textStatus, errorThrown ) {
+//                        console.log( jqXHR.responseText );
+//                        alert( \'' . esc_js( $failure ) . '\' );
+//                    }
+//                });
+//            },
 
-		if ( zume_group_highest_session_completed( $group_id ) < $session_number ) {
-			echo 'onStepChanging: function (event, currentIndex, newIndex) {
-
-                       if (currentIndex === 0) { /* check attendance requirement */
-                            var n = jQuery( "input:checked" ).length;
-                            if ( n < 4 ) {
-                            return false;
-                            }
-                       }
-                       return true;
-
-                    },
-
-                    ';
-		}// end html block
-
-		// Fire record creation on step change
-		echo 'onStepChanged: function (event, currentIndex, priorIndex) {
-
-                        if (currentIndex === 1 && priorIndex === 0) { /* record attendance */
-
-                            var members = ' . json_encode( $group_members ) . ';
-                            var session = \'' . esc_js( $session_number ) . '\';
-                            var group_id = \'' . esc_js( $group_id ) . '\';
-
-                            var data = {
-                                members: members,
-                                session: session,
-                                group_id: group_id
-                            };
-
-                            jQuery.ajax({
-                            method: "POST",
-                            url: \'' . esc_js( $root ) . '\' + \'zume/v1/attendance/log\',
-                            data: data,
-                            dataType: "json",
-                            beforeSend: function ( xhr ) {
-                                xhr.setRequestHeader( \'X-WP-Nonce\', \'' . esc_js( $nonce ) . '\' );
-                            },
-                            error : function( jqXHR, textStatus, errorThrown ) {
-                                console.log( jqXHR.responseText );
-
-                            }
-
-                        });
-                        }
-
-                       var title = "Group-" + "' . esc_js( $group_id ) . '" + " Step-" + currentIndex + " Session-" + "' . esc_js( $session_number ) . '" ;
-                       var status = \'publish\';
-
-                       var data = {
-                            title: title,
-                            status: status
-                        };
-
-                       jQuery.ajax({
-                            method: "POST",
-                            url: \'' . esc_js( $root ) . '\' + \'wp/v2/steplog\',
-                            data: data,
-                            dataType: "json",
-                            beforeSend: function ( xhr ) {
-                                xhr.setRequestHeader( \'X-WP-Nonce\', \'' . esc_js( $nonce ) . '\' );
-                            },
-                            error : function( jqXHR, textStatus, errorThrown ) {
-                                console.log( jqXHR.responseText );
-                                alert( \'' . esc_js( $failure ) . '\' );
-                            }
-
-                        });
-                    },
-
-                    '; // end html block
-
-		// Fire a session completed record creation
-		echo '  onFinishing: function (event, currentIndex) {
-
-                       var title = "Group-" + "' . esc_js( $group_id ) . '" + " Step-Complete" + " Session-" + "' . esc_js( $session_number ) . '" ;
-                       var excerpt = "' . esc_js( $session_number ) . '";
-                       var status = \'publish\';
-
-                       var data = {
-                            title: title,
-                            excerpt: excerpt,
-                            status: status
-                        };
-
-                       jQuery.ajax({
-                            method: "POST",
-                            url: \'' . esc_js( $root ) . '\' + \'wp/v2/steplog\',
-                            data: data,
-                            dataType: "json",
-                            beforeSend: function ( xhr ) {
-                                xhr.setRequestHeader( \'X-WP-Nonce\', \'' . esc_js( $nonce ) . '\' );
-                            },
-                            success : function( response ) {
-
-                                window.location.replace("' . esc_js( $dashboard_complete ) . '");
-                            },
-                            error : function( jqXHR, textStatus, errorThrown ) {
-                                console.log( jqXHR.responseText );
-                                alert( \'' . esc_js( $failure ) . '\' );
-                            }
-
-                        });
-
-                    },
-
-                    '; // end html block
+//            '; // end html block
 
 		echo "  titleTemplate: '<span class=\"number\">#index#</span> #title#'";
-
 
 		echo '    });
                     });
 
-                </script>
-                '; // end html block
+            </script>
+            '; // end html block
 
 	}
+
+	public static function get_course_content( $session_id ) {
+	    switch( $session_id ) {
+            case '1':
+                self::get_course_content_1();
+                break;
+            case '2':
+                self::get_course_content_2();
+                break;
+            case '3':
+                self::get_course_content_3();
+                break;
+            case '4':
+                self::get_course_content_4();
+                break;
+            case '5':
+                self::get_course_content_5();
+                break;
+            case '6':
+                self::get_course_content_6();
+                break;
+            case '7':
+                self::get_course_content_7();
+                break;
+            case '8':
+                self::get_course_content_8();
+                break;
+            case '9':
+                self::get_course_content_9();
+                break;
+            case '10':
+                self::get_course_content_10();
+                break;
+            default:
+                break;
+        }
+    }
 
 	public static function get_course_content_1() {
 		?>
