@@ -8,10 +8,10 @@ if ( ! empty( $_POST ) ) {
         Zume_Dashboard::create_group( $_POST );
     } elseif ( ! empty( $_POST['type'] ) && $_POST['type'] == 'edit' ) {
         Zume_Dashboard::edit_group( $_POST );
-    } elseif ( ! empty( $_POST['type'] ) &&  $_POST['type'] == 'inactive' ) {
+    } elseif ( ! empty( $_POST['type'] ) && $_POST['type'] == 'inactive' ) {
 //        Zume_Dashboard::delete_group( $_POST );
     } elseif ( ! empty( $_POST['type'] ) && $_POST['type'] == 'delete' ) {
-	    Zume_Dashboard::delete_group( $_POST['key'] );
+        Zume_Dashboard::delete_group( sanitize_key( wp_unslash( $_POST['key'] ) ) );
     } else {
         zume_write_log( 'Failed to filter' );
     }
@@ -48,8 +48,8 @@ get_header();
                             foreach ( $zume_user_meta as $key => $v ) {
                                 $key_beginning = substr( $key, 0, 10 );
                                 $no_groups = 0;
-                                if ( $key_beginning == 'zume_group' ) {
-                                    $value = unserialize( $v );
+                                if ( 'zume_group' == $key_beginning ) {
+                                    $value = maybe_unserialize( $v );
                                     ?>
                                     <!-- Group Row -->
                                     <li class="block">

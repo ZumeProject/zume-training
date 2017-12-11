@@ -3,15 +3,18 @@
 Template Name: Zúme Course
 */
 
-// Get variables
+/**
+ * Template for the Zume Course content
+ */
+
 if ( empty( $_GET['group'] ) || empty( $_GET['session'] ) ) {
-	wp_die( 'You are mission your group or session number. <a href="/">Head back to your dashboard</a>' );
+    wp_die( 'You are mission your group or session number. <a href="/">Head back to your dashboard</a>' );
 }
-$zume_group_key    = $_GET['group'];
-$zume_session      = $_GET['session'];
+$zume_group_key    = sanitize_key( wp_unslash( $_GET['group'] ) );
+$zume_session      = sanitize_key( wp_unslash( $_GET['session'] ) );
 $zume_current_user = get_current_user_id();
 $zume_user_meta    = array_map( function ( $a ) {
-	return $a[0];
+    return $a[0];
 }, get_user_meta( $zume_current_user ) );
 
 get_header();
@@ -49,49 +52,53 @@ get_header();
 
 <?php get_footer(); ?>
 
+
 <?php
-
+/**
+ * Class Zume_Course_Content
+ * Below is the HTML for the content of the Zume Course
+ */
 class Zume_Course_Content {
-	/**
-	 * Jquery Steps with configuration and prints
-	 */
-	public static function jquery_steps( $group_id, $session_number ) {
+    /**
+     * Jquery Steps with configuration and prints
+     */
+    public static function jquery_steps( $group_id, $session_number ) {
 
-		// Create variables
-		$visited   = true;
-		$completed = false;
-		$last_step = null;
+        // Create variables
+        $visited   = true;
+        $completed = false;
+        $last_step = null;
 
-		$root = home_url( "/wp-json/" );
+        $root = home_url( "/wp-json/" );
 
-		$nonce                   = wp_create_nonce( 'wp_rest' );
-		$dashboard_complete      = home_url( "/dashboard/" );
-		$failure                 = __( 'Could not track your progress. Yikes. Tell us and we will tell our geeks to get on it!', 'zume' );
+        $nonce                   = wp_create_nonce( 'wp_rest' );
+        $dashboard_complete      = home_url( "/dashboard/" );
+        $failure                 = __( 'Could not track your progress. Yikes. Tell us and we will tell our geeks to get on it!', 'zume' );
 
-		// Get list of members attending the group
-		$group_members = array();
+        // Get list of members attending the group
+        $group_members = array();
 
-		// Create Javascript HTML
-		echo '<script>
+        // Create Javascript HTML
+        echo '<script>
                     jQuery(document).ready(function() {
                         jQuery("';
 
-		echo '#session' . esc_js( $session_number . '-' . $group_id ); // Create selector
+        echo '#session' . esc_js( $session_number . '-' . $group_id ); // Create selector
 
-		echo '").steps({
+        echo '").steps({
                     headerTag: "h3",
                     bodyTag: "section",
                     transitionEffect: "fade",
                     saveState: true,
                     autofocus: true,';
 
-		if ( $completed ) {
-			echo 'enableAllSteps: true,';
-		} elseif ( $visited && $last_step != null ) {
-			echo 'startIndex: ' . esc_js( $last_step ) . ',';
-		}
+        if ( $completed ) {
+            echo 'enableAllSteps: true,';
+        } elseif ( $visited && $last_step != null ) {
+            echo 'startIndex: ' . esc_js( $last_step ) . ',';
+        }
 
-		// Fire record creation on step change
+        // Fire record creation on step change
 //		echo 'onStepChanging: function (event, currentIndex, newIndex) {
 //
 //           if (currentIndex === 0) { /* check attendance requirement */
@@ -197,18 +204,18 @@ class Zume_Course_Content {
 
 //            '; // end html block
 
-		echo "  titleTemplate: '<span class=\"number\">#index#</span> #title#'";
+        echo "  titleTemplate: '<span class=\"number\">#index#</span> #title#'";
 
-		echo '    });
+        echo '    });
                     });
 
             </script>
             '; // end html block
 
-	}
+    }
 
-	public static function get_course_content( $session_id ) {
-	    switch( $session_id ) {
+    public static function get_course_content( $session_id ) {
+        switch ( $session_id ) {
             case '1':
                 self::get_course_content_1();
                 break;
@@ -244,8 +251,8 @@ class Zume_Course_Content {
         }
     }
 
-	public static function get_course_content_1() {
-		?>
+    public static function get_course_content_1() {
+        ?>
 
         <h3></h3>
         <section><!-- Step Title -->
@@ -587,11 +594,11 @@ class Zume_Course_Content {
 
         </section>
 
-		<?php
-	}
+        <?php
+    }
 
-	public static function get_course_content_2() {
-		?>
+    public static function get_course_content_2() {
+        ?>
 
         <!-- Step -->
         <h3></h3>
@@ -868,11 +875,11 @@ class Zume_Course_Content {
                 </div>
             </div> <!-- grid-x grid-margin-x -->
         </section>
-		<?php
-	}
+        <?php
+    }
 
-	public static function get_course_content_3() {
-		?>
+    public static function get_course_content_3() {
+        ?>
 
         <!-- Step -->
         <h3></h3>
@@ -1164,11 +1171,11 @@ class Zume_Course_Content {
                 </div>
             </div>
         </section>
-		<?php
-	}
+        <?php
+    }
 
-	public static function get_course_content_4() {
-		?>
+    public static function get_course_content_4() {
+        ?>
 
         <!-- Step -->
         <h3></h3>
@@ -1524,11 +1531,11 @@ class Zume_Course_Content {
                 </div>
             </div> <!-- grid-x grid-margin-x -->
         </section>
-		<?php
-	}
+        <?php
+    }
 
-	public static function get_course_content_5() {
-		?>
+    public static function get_course_content_5() {
+        ?>
 
         <!-- Step -->
         <h3></h3>
@@ -1739,11 +1746,11 @@ class Zume_Course_Content {
                     </div>
                 </div> <!-- grid-x grid-margin-x -->
         </section>
-		<?php
-	}
+        <?php
+    }
 
-	public static function get_course_content_6() {
-		?>
+    public static function get_course_content_6() {
+        ?>
 
         <!-- Step -->
         <h3></h3>
@@ -1947,11 +1954,11 @@ class Zume_Course_Content {
                 </div>
             </div> <!-- grid-x grid-margin-x -->
         </section>
-		<?php
-	}
+        <?php
+    }
 
-	public static function get_course_content_7() {
-		?>
+    public static function get_course_content_7() {
+        ?>
 
         <!-- Step -->
         <h3></h3>
@@ -2121,11 +2128,11 @@ class Zume_Course_Content {
                 </div>
             </div> <!-- grid-x grid-margin-x -->
         </section>
-		<?php
-	}
+        <?php
+    }
 
-	public static function get_course_content_8() {
-		?>
+    public static function get_course_content_8() {
+        ?>
         <!-- Step -->
         <h3></h3>
         <section>
@@ -2292,11 +2299,11 @@ class Zume_Course_Content {
             </div> <!-- grid-x grid-margin-x -->
         </section>
 
-		<?php
-	}
+        <?php
+    }
 
-	public static function get_course_content_9() {
-		?>
+    public static function get_course_content_9() {
+        ?>
 
         <!-- Step -->
         <h3></h3>
@@ -2732,11 +2739,11 @@ class Zume_Course_Content {
             <!-- Activity Block -->
 
         </section>
-		<?php
-	}
+        <?php
+    }
 
-	public static function get_course_content_10() {
-		?>
+    public static function get_course_content_10() {
+        ?>
 
         <!-- Step -->
         <h3></h3>
@@ -3189,6 +3196,6 @@ class Zume_Course_Content {
                             </div>
                         </div>
         </section>
-		<?php
-	}
+        <?php
+    }
 }

@@ -382,8 +382,8 @@ class Zume_Course {
         $session_key = 'session_' . $session_id;
         $group_meta[ $session_key ] = true;
         $session_date_key = $session_key . '_complete';
-        if( '' == $group_meta[ $session_date_key ] ) {
-	        $group_meta[ $session_date_key ] = current_time( 'mysql' );
+        if ( '' == $group_meta[ $session_date_key ] ) {
+            $group_meta[ $session_date_key ] = current_time( 'mysql' );
         }
 
         // update next session
