@@ -2,6 +2,7 @@
 /*
 Template Name: Zume Profile
 */
+zume_force_login();
 ?>
 
 <?php get_header(); ?>

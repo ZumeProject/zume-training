@@ -2,6 +2,7 @@
 /*
 Template Name: Zúme Dashboard
 */
+zume_force_login();
 
 if ( ! empty( $_POST ) ) {
     if ( ! empty( $_POST['type'] ) && $_POST['type'] == 'create' ) {
