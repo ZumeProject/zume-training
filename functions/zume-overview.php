@@ -15,5 +15,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 class Zume_Overview {
-
+// Moved HTML content to bottom of template-zume-overview.php. Any processing logic can go into this class, so as to
+// abstract it from the heavy HTML templates.
+// (Note: Because there is not a large amount of logic with the overview, this class may prove useless.
 }

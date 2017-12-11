@@ -8,251 +8,151 @@ Template Name: Zúme Course
  */
 
 if ( empty( $_GET['group'] ) || empty( $_GET['session'] ) ) {
-    wp_die( 'You are mission your group or session number. <a href="/">Head back to your dashboard</a>' );
+	wp_die( 'You are mission your group or session number. <a href="/">Head back to your dashboard</a>' );
 }
 $zume_group_key    = sanitize_key( wp_unslash( $_GET['group'] ) );
 $zume_session      = sanitize_key( wp_unslash( $_GET['session'] ) );
 $zume_current_user = get_current_user_id();
 $zume_user_meta    = array_map( function ( $a ) {
-    return $a[0];
+	return $a[0];
 }, get_user_meta( $zume_current_user ) );
 
 get_header();
 
 ?>
 
-<div id="content">
+    <div id="content">
 
-    <div id="inner-content" class="grid-x grid-margin-x">
+        <div id="inner-content" class="grid-x grid-margin-x">
 
-        <div class="large-1 cell"></div>
+            <div class="large-1 cell"></div>
 
-        <div id="main" class="large-10 cell" role="main">
+            <div id="main" class="large-10 cell" role="main">
 
-            <?php
-            /**
-             * Load Zume Course Content
-             */
+				<?php
+				/**
+				 * Load Zume Course Content
+				 */
 
-            Zume_Course::update_session_complete( $zume_group_key, $zume_session );
+				Zume_Course::update_session_complete( $zume_group_key, $zume_session );
 
-            Zume_Course_Content::get_course_content( $zume_session );
+				Zume_Course_Content::get_course_content( $zume_session );
 
-            Zume_Course_Content::jquery_steps( $zume_group_key, $zume_session );
+				Zume_Course_Content::jquery_steps( $zume_group_key, $zume_session );
 
-            ?>
+				?>
 
-        </div> <!-- end #main -->
+            </div> <!-- end #main -->
 
-        <div class="large-1 cell"></div>
+            <div class="large-1 cell"></div>
 
-    </div> <!-- end #inner-content -->
+        </div> <!-- end #inner-content -->
 
-</div> <!-- end #content -->
+    </div> <!-- end #content -->
 
 <?php get_footer(); ?>
 
 
 <?php
+
 /**
  * Class Zume_Course_Content
  * Below is the HTML for the content of the Zume Course
  */
 class Zume_Course_Content {
-    /**
-     * Jquery Steps with configuration and prints
-     */
-    public static function jquery_steps( $group_id, $session_number ) {
 
-        // Create variables
-        $visited   = true;
-        $completed = false;
-        $last_step = null;
+	public static function get_course_content( $session_id ) {
+		?>
+        <h2 class="center padding-bottom">Session <?php echo $session_id; ?></h2>
 
-        $root = home_url( "/wp-json/" );
+        <script>
+            jQuery(document).ready(function ($) {
+                "use strict";
+                var startIndex = 0;
+                if (!isNaN(parseInt(window.location.hash.substr(2)))) {
+                    startIndex = parseInt(window.location.hash.substr(2)) - 1;
+                }
 
-        $nonce                   = wp_create_nonce( 'wp_rest' );
-        $dashboard_complete      = home_url( "/dashboard/" );
-        $failure                 = __( 'Could not track your progress. Yikes. Tell us and we will tell our geeks to get on it!', 'zume' );
-
-        // Get list of members attending the group
-        $group_members = array();
-
-        // Create Javascript HTML
-        echo '<script>
-                    jQuery(document).ready(function() {
-                        jQuery("';
-
-        echo '#session' . esc_js( $session_number . '-' . $group_id ); // Create selector
-
-        echo '").steps({
+                jQuery("#session").steps({
+                    // Disables the finish button (required if pagination is enabled)
+                    enableFinishButton: true,
+                    // Disables the next and previous buttons (optional)
+                    enablePagination: true,
+                    // Enables all steps from the begining
+                    enableAllSteps: false,
+                    // Removes the number from the title
+//                    titleTemplate: "#title#",
+                    startIndex: startIndex,
                     headerTag: "h3",
                     bodyTag: "section",
                     transitionEffect: "fade",
-                    saveState: true,
-                    autofocus: true,';
+                    autoFocus: true,
+                    onStepChanged: function (event, currentIndex, priorIndex) {
+                        var newHash = "#s" + (currentIndex + 1);
+						<?php /* Replaces window.location.hash without creating
+                        a history entry, and without scrolling or jumping, and
+                        without triggering hashchange */ ?>
+                        history.replaceState(null, null, newHash);
+                    },
+                    titleTemplate: '<span class="number">#index#</span> #title#'
+                });
+                window.addEventListener("hashchange", function (event) {
+					<?php /* This can get triggered when Overview menu items
+                    get clicked */ ?>
+                    var hash = event.newURL.substr(event.newURL.indexOf("#"));
+                    if (!isNaN(parseInt(hash.substr(2)))) {
+                        var stepIndex = parseInt(hash.substr(2)) - 1;
+                        $("#session .steps a#session-t-" + stepIndex).click();
+                    }
+                });
 
-        if ( $completed ) {
-            echo 'enableAllSteps: true,';
-        } elseif ( $visited && $last_step != null ) {
-            echo 'startIndex: ' . esc_js( $last_step ) . ',';
-        }
+            });
 
-        // Fire record creation on step change
-//		echo 'onStepChanging: function (event, currentIndex, newIndex) {
-//
-//           if (currentIndex === 0) { /* check attendance requirement */
-//                var n = jQuery( "input:checked" ).length;
-//                if ( n < 4 ) {
-//                return false;
-//                }
-//           }
-//           return true;
-//
-//        },
-//
-//        ';
-//
-//		// Fire record creation on step change
-//		echo 'onStepChanged: function (event, currentIndex, priorIndex) {
-//
-//            if (currentIndex === 1 && priorIndex === 0) { /* record attendance */
-//
-//                var members = ' . json_encode( $group_members ) . ';
-//                var session = \'' . esc_js( $session_number ) . '\';
-//                var group_id = \'' . esc_js( $group_id ) . '\';
-//
-//                var data = {
-//                    members: members,
-//                    session: session,
-//                    group_id: group_id
-//                };
-//
-//                jQuery.ajax({
-//                method: "POST",
-//                url: \'' . esc_js( $root ) . '\' + \'zume/v1/attendance/log\',
-//                data: data,
-//                dataType: "json",
-//                beforeSend: function ( xhr ) {
-//                    xhr.setRequestHeader( \'X-WP-Nonce\', \'' . esc_js( $nonce ) . '\' );
-//                },
-//                error : function( jqXHR, textStatus, errorThrown ) {
-//                    console.log( jqXHR.responseText );
-//
-//                }
-//
-//            });
-//            }
-//
-//           var title = "Group-" + "' . esc_js( $group_id ) . '" + " Step-" + currentIndex + " Session-" + "' . esc_js( $session_number ) . '" ;
-//           var status = \'publish\';
-//
-//           var data = {
-//                title: title,
-//                status: status
-//            };
-//
-//           jQuery.ajax({
-//                method: "POST",
-//                url: \'' . esc_js( $root ) . '\' + \'wp/v2/steplog\',
-//                data: data,
-//                dataType: "json",
-//                beforeSend: function ( xhr ) {
-//                    xhr.setRequestHeader( \'X-WP-Nonce\', \'' . esc_js( $nonce ) . '\' );
-//                },
-//                error : function( jqXHR, textStatus, errorThrown ) {
-//                    console.log( jqXHR.responseText );
-//                    alert( \'' . esc_js( $failure ) . '\' );
-//                }
-//
-//            });
-//        },
-//
-//        '; // end html block
-//
-//		// Fire a session completed record creation
-//		echo '  onFinishing: function (event, currentIndex) {
-//
-//               var title = "Group-" + "' . esc_js( $group_id ) . '" + " Step-Complete" + " Session-" + "' . esc_js( $session_number ) . '" ;
-//               var excerpt = "' . esc_js( $session_number ) . '";
-//               var status = \'publish\';
-//
-//               var data = {
-//                    title: title,
-//                    excerpt: excerpt,
-//                    status: status
-//                };
-//
-//               jQuery.ajax({
-//                    method: "POST",
-//                    url: \'' . esc_js( $root ) . '\' + \'wp/v2/steplog\',
-//                    data: data,
-//                    dataType: "json",
-//                    beforeSend: function ( xhr ) {
-//                        xhr.setRequestHeader( \'X-WP-Nonce\', \'' . esc_js( $nonce ) . '\' );
-//                    },
-//                    success : function( response ) {
-//
-//                        window.location.replace("' . esc_js( $dashboard_complete ) . '");
-//                    },
-//                    error : function( jqXHR, textStatus, errorThrown ) {
-//                        console.log( jqXHR.responseText );
-//                        alert( \'' . esc_js( $failure ) . '\' );
-//                    }
-//                });
-//            },
+        </script>
+        <div id="session" class="course-steps">
+			<?php
 
-//            '; // end html block
+			switch ( $session_id ) {
+				case '1':
+					self::get_course_content_1();
+					break;
+				case '2':
+					self::get_course_content_2();
+					break;
+				case '3':
+					self::get_course_content_3();
+					break;
+				case '4':
+					self::get_course_content_4();
+					break;
+				case '5':
+					self::get_course_content_5();
+					break;
+				case '6':
+					self::get_course_content_6();
+					break;
+				case '7':
+					self::get_course_content_7();
+					break;
+				case '8':
+					self::get_course_content_8();
+					break;
+				case '9':
+					self::get_course_content_9();
+					break;
+				case '10':
+					self::get_course_content_10();
+					break;
+				default:
+					break;
+			}
+			?>
+        </div>
+		<?php
+	}
 
-        echo "  titleTemplate: '<span class=\"number\">#index#</span> #title#'";
-
-        echo '    });
-                    });
-
-            </script>
-            '; // end html block
-
-    }
-
-    public static function get_course_content( $session_id ) {
-        switch ( $session_id ) {
-            case '1':
-                self::get_course_content_1();
-                break;
-            case '2':
-                self::get_course_content_2();
-                break;
-            case '3':
-                self::get_course_content_3();
-                break;
-            case '4':
-                self::get_course_content_4();
-                break;
-            case '5':
-                self::get_course_content_5();
-                break;
-            case '6':
-                self::get_course_content_6();
-                break;
-            case '7':
-                self::get_course_content_7();
-                break;
-            case '8':
-                self::get_course_content_8();
-                break;
-            case '9':
-                self::get_course_content_9();
-                break;
-            case '10':
-                self::get_course_content_10();
-                break;
-            default:
-                break;
-        }
-    }
-
-    public static function get_course_content_1() {
-        ?>
+	public static function get_course_content_1() {
+		?>
 
         <h3></h3>
         <section><!-- Step Title -->
@@ -270,9 +170,10 @@ class Zume_Course_Content {
                     member of your group has a printed copy of the materials for future sessions.
 
                 </div>
-                <div class="large-8 large-offset-4 cell activity-description"><a class="button" style="background-color: #21336a; color: white;"
-                                                     href="/wp-content/uploads/zume-guide-4039811470.pdf"
-                                                     target="_blank" rel="noopener"><img
+                <div class="large-8 large-offset-4 cell activity-description"><a class="button"
+                                                                                 style="background-color: #21336a; color: white;"
+                                                                                 href="/wp-content/uploads/zume-guide-4039811470.pdf"
+                                                                                 target="_blank" rel="noopener"><img
                                 class="alignnone size-full wp-image-1321"
                                 src="https://zumeproject.com/wp-content/uploads/download.png" alt="Download" width="29"
                                 height="26"/> GUIDEBOOK</a></div>
@@ -309,7 +210,8 @@ class Zume_Course_Content {
             <!-- Activity Block -->
             <div class="grid-x grid-margin-x block">
                 <div class="large-4 cell activity-title">WATCH</div>
-                <div class="large-8 cell activity-description">God uses ordinary people doing simple things to make a big impact.
+                <div class="large-8 cell activity-description">God uses ordinary people doing simple things to make a
+                    big impact.
                     Watch this video on how God works.
                 </div>
             </div>
@@ -333,7 +235,8 @@ class Zume_Course_Content {
             <!-- Activity Block -->
             <div class="grid-x grid-margin-x block">
                 <div class="large-4 cell activity-title">DISCUSS</div>
-                <div class="large-8 cell activity-description">If Jesus intended every one of His followers to obey His Great
+                <div class="large-8 cell activity-description">If Jesus intended every one of His followers to obey His
+                    Great
                     Commission, why do so few actually make disciples?
                 </div>
             </div>
@@ -352,7 +255,8 @@ class Zume_Course_Content {
             <!-- Activity Block -->
             <div class="grid-x grid-margin-x block">
                 <div class="large-4 cell activity-title">WATCH</div>
-                <div class="large-8 cell activity-description">What is a disciple? And how do you make one? How do you teach a
+                <div class="large-8 cell activity-description">What is a disciple? And how do you make one? How do you
+                    teach a
                     follower of Jesus to do what He told us in His Great Commission &#8212; to obey all of His commands?
                 </div>
             </div>
@@ -401,7 +305,8 @@ class Zume_Course_Content {
             <!-- Activity Block -->
             <div class="grid-x grid-margin-x block">
                 <div class="large-4 cell activity-title">WATCH</div>
-                <div class="large-8 cell activity-description">We breathe in. We breathe out. We're alive. Spiritual Breathing is
+                <div class="large-8 cell activity-description">We breathe in. We breathe out. We're alive. Spiritual
+                    Breathing is
                     like that, too.
                 </div>
             </div>
@@ -535,7 +440,9 @@ class Zume_Course_Content {
             <!-- Activity Block -->
             <div class="grid-x grid-margin-x block">
                 <div class="large-4 cell activity-title">BREAK UP</div>
-                <div class="large-8 cell activity-description">Break into groups of two or three people of the same gender.</div>
+                <div class="large-8 cell activity-description">Break into groups of two or three people of the same
+                    gender.
+                </div>
             </div>
             <!-- grid-x grid-margin-x -->
             <!-- Activity Block -->
@@ -567,7 +474,8 @@ class Zume_Course_Content {
             <!-- Activity Block -->
             <div class="grid-x grid-margin-x block">
                 <div class="large-4 cell activity-title">OBEY</div>
-                <div class="large-8 cell activity-description">Begin practicing the S.O.A.P.S. Bible reading between now and your
+                <div class="large-8 cell activity-description">Begin practicing the S.O.A.P.S. Bible reading between now
+                    and your
                     next meeting. Focus on Matthew 5-7, read it at least once a day. Keep a daily journal using the
                     S.O.A.P.S. format.
                 </div>
@@ -576,7 +484,8 @@ class Zume_Course_Content {
             <!-- Activity Block -->
             <div class="grid-x grid-margin-x block">
                 <div class="large-4 cell activity-title">SHARE</div>
-                <div class="large-8 cell activity-description">Spend time asking God who He might want you to start an Accountability
+                <div class="large-8 cell activity-description">Spend time asking God who He might want you to start an
+                    Accountability
                     Group with using the tools you've learned in this session. Share this person’s name with the group
                     before you go. Reach out to that person about starting an Accountabilty Group and meeting with you
                     weekly.
@@ -586,7 +495,8 @@ class Zume_Course_Content {
             <!-- Activity Block -->
             <div class="grid-x grid-margin-x block">
                 <div class="large-4 cell activity-title">PRAY</div>
-                <div class="large-8 cell activity-description">Pray that God helps you be obedient to Him and invite Him to work in
+                <div class="large-8 cell activity-description">Pray that God helps you be obedient to Him and invite Him
+                    to work in
                     you and those around you!
                 </div>
             </div>
@@ -594,11 +504,11 @@ class Zume_Course_Content {
 
         </section>
 
-        <?php
-    }
+		<?php
+	}
 
-    public static function get_course_content_2() {
-        ?>
+	public static function get_course_content_2() {
+		?>
 
         <!-- Step -->
         <h3></h3>
@@ -613,7 +523,8 @@ class Zume_Course_Content {
             <!-- Activity Block  -->
             <div class="grid-x grid-margin-x block">
                 <div class="large-4 cell activity-title"><span>DOWNLOAD</span></div>
-                <div class="large-8 cell activity-description">Does everyone have a printed copy of the Zúme Guidebook? If not,
+                <div class="large-8 cell activity-description">Does everyone have a printed copy of the Zúme Guidebook?
+                    If not,
                     please be sure that someone can download the Guidebook and that everyone has access to some paper
                     and a pen or pencil.
                     <br><br>
@@ -625,7 +536,8 @@ class Zume_Course_Content {
             <!-- Activity Block  -->
             <div class="grid-x grid-margin-x block">
                 <div class="large-4 cell activity-title"><span>CHECK-IN</span></div>
-                <div class="large-8 cell activity-description">Before getting started, take some time to check-in.<br><br>At the end
+                <div class="large-8 cell activity-description">Before getting started, take some time to
+                    check-in.<br><br>At the end
                     of the last session, everyone in your group was challenged in two ways: <br><br>
                     <ol>
                         <li>You were asked to begin practicing the S.O.A.P.S. Bible reading method and keeping a daily
@@ -639,7 +551,8 @@ class Zume_Course_Content {
             <!-- Activity Block  -->
             <div class="grid-x grid-margin-x block">
                 <div class="large-4 cell activity-title"><span>PRAY</span></div>
-                <div class="large-8 cell activity-description">Ask if anyone in the group has specific needs they'd like the group to
+                <div class="large-8 cell activity-description">Ask if anyone in the group has specific needs they'd like
+                    the group to
                     pray for. Ask someone to pray and ask God to help in the areas the group shared. Be sure to thank
                     God that He promises in His Word to listen and act when His people pray. And, as always, ask God's
                     Holy Spirit to lead your time, together.
@@ -660,7 +573,8 @@ class Zume_Course_Content {
             <!-- Activity Block  -->
             <div class="grid-x grid-margin-x block">
                 <div class="large-4 cell activity-title">WATCH</div>
-                <div class="large-8 cell activity-description">If we want to make disciples who multiply &#8212; spiritual producers
+                <div class="large-8 cell activity-description">If we want to make disciples who multiply &#8212;
+                    spiritual producers
                     and not just consumers &#8212; then we need to learn and share four main ways God makes everyday
                     followers more like Jesus:<br><br>
                     <ul>
@@ -753,14 +667,16 @@ class Zume_Course_Content {
             <!-- Activity Block  -->
             <div class="grid-x grid-margin-x block">
                 <div class="large-4 cell activity-title">LEAVE</div>
-                <div class="large-8 cell activity-description">Spend the next 60 minutes in prayer individually, using the exercises
+                <div class="large-8 cell activity-description">Spend the next 60 minutes in prayer individually, using
+                    the exercises
                     in "The Prayer Cycle" section of the Zúme Guidebook as a guide.
                 </div>
             </div> <!-- grid-x grid-margin-x -->
             <!-- Activity Block  -->
             <div class="grid-x grid-margin-x block">
                 <div class="large-4 cell activity-title">RETURN</div>
-                <div class="large-8 cell activity-description">Set a time for the group to return and reconnect. Be sure to add a few
+                <div class="large-8 cell activity-description">Set a time for the group to return and reconnect. Be sure
+                    to add a few
                     extra minutes for everyone to both find a quiet place to pray and to make their way back to the
                     group.
                 </div>
@@ -794,7 +710,8 @@ class Zume_Course_Content {
             <!-- Activity Block  -->
             <div class="grid-x grid-margin-x block">
                 <div class="large-4 cell activity-title">READ</div>
-                <div class="large-8 cell activity-description">ZÚME TOOLKIT - LIST OF 100<br><br>God has already given us the
+                <div class="large-8 cell activity-description">ZÚME TOOLKIT - LIST OF 100<br><br>God has already given
+                    us the
                     relationships we need to “Go and make disciples.” These are our family, friends, neighbors,
                     co-workers and classmates &#8212; people we’ve known all our lives or maybe just met.<br><br>
                     Being good stewards of these relationships is the first step in multiplying disciples. Start by
@@ -830,7 +747,8 @@ class Zume_Course_Content {
 
                 <!-- Activity Block  -->
                 <div class="grid-x grid-margin-x block single">
-                    <div class="large-8 cell activity-description well well-lg">CREATE YOUR OWN LIST OF 100<br><br>Have everyone in
+                    <div class="large-8 cell activity-description well well-lg">CREATE YOUR OWN LIST OF 100<br><br>Have
+                        everyone in
                         your group take the next 30 minutes to fill out their own inventory of relationships using the
                         form in the "List of 100" section in your Zúme Guidebook. 
                     </div>
@@ -855,7 +773,8 @@ class Zume_Course_Content {
             <!-- Activity Block  -->
             <div class="grid-x grid-margin-x block">
                 <div class="large-4 cell activity-title">OBEY</div>
-                <div class="large-8 cell activity-description">Spend time this week praying for five people from your List of 100
+                <div class="large-8 cell activity-description">Spend time this week praying for five people from your
+                    List of 100
                     that you marked as an "Unbeliever" or "Unknown." Ask God to prepare their hearts to be open to His
                     story.
                 </div>
@@ -863,23 +782,25 @@ class Zume_Course_Content {
             <!-- Activity Block  -->
             <div class="grid-x grid-margin-x block">
                 <div class="large-4 cell activity-title">SHARE</div>
-                <div class="large-8 cell activity-description">Ask God who He wants you to share the List of 100 tool with. Share
+                <div class="large-8 cell activity-description">Ask God who He wants you to share the List of 100 tool
+                    with. Share
                     this person's name with the group before you go and reach out to them before the next session.
                 </div>
             </div> <!-- grid-x grid-margin-x -->
             <!-- Activity Block  -->
             <div class="grid-x grid-margin-x block">
                 <div class="large-4 cell activity-title">PRAY</div>
-                <div class="large-8 cell activity-description">Pray that God help you be obedient to Him and invite Him to work in
+                <div class="large-8 cell activity-description">Pray that God help you be obedient to Him and invite Him
+                    to work in
                     you and those around you!
                 </div>
             </div> <!-- grid-x grid-margin-x -->
         </section>
-        <?php
-    }
+		<?php
+	}
 
-    public static function get_course_content_3() {
-        ?>
+	public static function get_course_content_3() {
+		?>
 
         <!-- Step -->
         <h3></h3>
@@ -895,7 +816,8 @@ class Zume_Course_Content {
             <!-- Activity Block  -->
             <div class="grid-x grid-margin-x block">
                 <div class="large-4 cell activity-title"><span>CHECK-IN</span></div>
-                <div class="large-8 cell activity-description">Before getting started, take some time to check-in.<br><br>At the end
+                <div class="large-8 cell activity-description">Before getting started, take some time to
+                    check-in.<br><br>At the end
                     of the last session, everyone in your group was challenged in two ways: <br><br>
                     <ol>
                         <li>You were asked to pray for five people from your List of 100 that you marked as an
@@ -909,14 +831,16 @@ class Zume_Course_Content {
             <!-- Activity Block  -->
             <div class="grid-x grid-margin-x block">
                 <div class="large-4 cell activity-title"><span>PRAY</span></div>
-                <div class="large-8 cell activity-description">Pray and thank God for the results and invite His Holy Spirit to lead
+                <div class="large-8 cell activity-description">Pray and thank God for the results and invite His Holy
+                    Spirit to lead
                     your time together.
                 </div>
             </div> <!-- grid-x grid-margin-x -->
             <!-- Activity Block  -->
             <div class="grid-x grid-margin-x block">
                 <div class="large-4 cell activity-title"><span>OVERVIEW</span></div>
-                <div class="large-8 cell activity-description">In this session, you’ll learn how God’s Spiritual Economy works and
+                <div class="large-8 cell activity-description">In this session, you’ll learn how God’s Spiritual Economy
+                    works and
                     how God invests more in those who are faithful with what they've already been given. You'll also
                     learn two more tools for making disciples &#8212; sharing God’s Story from Creation to Judgement and
                     Baptism.<br><br>Then, when you're ready, get started!
@@ -938,7 +862,8 @@ class Zume_Course_Content {
             <!-- Activity Block  -->
             <div class="grid-x grid-margin-x block">
                 <div class="large-4 cell activity-title">WATCH</div>
-                <div class="large-8 cell activity-description">In this broken world, people feel rewarded when they take, when they
+                <div class="large-8 cell activity-description">In this broken world, people feel rewarded when they
+                    take, when they
                     receive and when they gain more than those around them. But God's Spiritual Economy is different
                     &#8212; God invests more in those who are faithful with what they've already been given.
                 </div>
@@ -962,7 +887,8 @@ class Zume_Course_Content {
             <!-- Activity Block  -->
             <div class="grid-x grid-margin-x block">
                 <div class="large-4 cell activity-title">DISCUSS</div>
-                <div class="large-8 cell activity-description">What are some differences you see between God's Spiritual Economy and
+                <div class="large-8 cell activity-description">What are some differences you see between God's Spiritual
+                    Economy and
                     our earthly way of getting things done?
                 </div>
             </div> <!-- grid-x grid-margin-x -->
@@ -982,7 +908,8 @@ class Zume_Course_Content {
             <!-- Activity Block  -->
             <div class="grid-x grid-margin-x block">
                 <div class="large-4 cell activity-title">READ</div>
-                <div class="large-8 cell activity-description">Jesus said, “You will receive power when the Holy Spirit comes upon
+                <div class="large-8 cell activity-description">Jesus said, “You will receive power when the Holy Spirit
+                    comes upon
                     you. And you will be my witnesses, telling people about me everywhere &#8212; in Jerusalem,
                     throughout Judea, in Samaria, and to the ends of the earth.”<br><br>
                     Jesus believed in His followers so much, He trusted them to tell His story. Then He sent them around
@@ -1022,7 +949,8 @@ class Zume_Course_Content {
             <!-- Activity Block  -->
             <div class="grid-x grid-margin-x block">
                 <div class="large-4 cell activity-title">WATCH</div>
-                <div class="large-8 cell activity-description">One way to share God’s Good News is by telling God’s Story from
+                <div class="large-8 cell activity-description">One way to share God’s Good News is by telling God’s
+                    Story from
                     Creation to Judgement &#8212; from the beginning of humankind all the way to the end of this age.
                 </div>
             </div> <!-- grid-x grid-margin-x -->
@@ -1067,7 +995,8 @@ class Zume_Course_Content {
 
                 <div class="grid-x grid-margin-x block single">
                     <!-- Activity Block  -->
-                    <div class="large-8 cell activity-description well">Break into groups of two or three people and spend the next
+                    <div class="large-8 cell activity-description well">Break into groups of two or three people and
+                        spend the next
                         45 minutes practicing telling God's Story using the Activity instructions on page 13 of your
                         Zúme Guidebook.
                     </div>
@@ -1124,7 +1053,8 @@ class Zume_Course_Content {
                 </div>
             </div> <!-- grid-x grid-margin-x -->
             <div class="grid-x grid-margin-x block single">
-                <div class="large-8 cell activity-description well">IMPORTANT REMINDER &#8212; Have you been baptized? If not, then
+                <div class="large-8 cell activity-description well">IMPORTANT REMINDER &#8212; Have you been baptized?
+                    If not, then
                     we encourage you to plan this before even one more session of this training. Invite your group to be
                     a part of this important day when you celebrate saying "yes" to Jesus.
                 </div>
@@ -1146,14 +1076,16 @@ class Zume_Course_Content {
             <!-- Activity Block  -->
             <div class="grid-x grid-margin-x block">
                 <div class="large-4 cell activity-title">OBEY</div>
-                <div class="large-8 cell activity-description">Spend time this week practicing God's Story, and then share it with at
+                <div class="large-8 cell activity-description">Spend time this week practicing God's Story, and then
+                    share it with at
                     least one person from your List of 100 that you marked as "Unbeliever" or "Unknown."
                 </div>
             </div> <!-- grid-x grid-margin-x -->
             <!-- Activity Block  -->
             <div class="grid-x grid-margin-x block">
                 <div class="large-4 cell activity-title">SHARE</div>
-                <div class="large-8 cell activity-description">Ask God who He wants you to train to use the Creation to Judgment
+                <div class="large-8 cell activity-description">Ask God who He wants you to train to use the Creation to
+                    Judgment
                     story (or some other way to share God's Story). Share this person's name with the group before you
                     go.
                 </div>
@@ -1161,21 +1093,23 @@ class Zume_Course_Content {
             <!-- Activity Block  -->
             <div class="grid-x grid-margin-x block">
                 <div class="large-4 cell activity-title">PRAY</div>
-                <div class="large-8 cell activity-description">Pray that God help you be obedient to Him and invite Him to work in
+                <div class="large-8 cell activity-description">Pray that God help you be obedient to Him and invite Him
+                    to work in
                     you and those around you!
                 </div>
             </div> <!-- grid-x grid-margin-x -->
             <div class="grid-x grid-margin-x block single">
-                <div class="large-8 cell activity-description well">IMPORTANT REMINDER - Your group will be celebrating the Lord's
+                <div class="large-8 cell activity-description well">IMPORTANT REMINDER - Your group will be celebrating
+                    the Lord's
                     Supper next session. Be sure to remember the supplies (bread and wine / juice).
                 </div>
             </div>
         </section>
-        <?php
-    }
+		<?php
+	}
 
-    public static function get_course_content_4() {
-        ?>
+	public static function get_course_content_4() {
+		?>
 
         <!-- Step -->
         <h3></h3>
@@ -1191,7 +1125,8 @@ class Zume_Course_Content {
             <!-- Activity Block  -->
             <div class="grid-x grid-margin-x block">
                 <div class="large-4 cell activity-title"><span>CHECK-IN</span></div>
-                <div class="large-8 cell activity-description">At the end of the last session, everyone in your group was challenged
+                <div class="large-8 cell activity-description">At the end of the last session, everyone in your group
+                    was challenged
                     in two ways:<br><br>
                     <ol>
                         <li>You were asked to share God’s Story with at least one person from your List of 100 that you
@@ -1207,14 +1142,16 @@ class Zume_Course_Content {
             <!-- Activity Block  -->
             <div class="grid-x grid-margin-x block">
                 <div class="large-4 cell activity-title"><span>PRAY</span></div>
-                <div class="large-8 cell activity-description">Pray and thank God for the results and invite His Holy Spirit to lead
+                <div class="large-8 cell activity-description">Pray and thank God for the results and invite His Holy
+                    Spirit to lead
                     your time together.
                 </div>
             </div> <!-- grid-x grid-margin-x -->
             <!-- Activity Block  -->
             <div class="grid-x grid-margin-x block">
                 <div class="large-4 cell activity-title"><span>OVERVIEW</span></div>
-                <div class="large-8 cell activity-description">In this session, you'll learn how God's plan is for every follower to
+                <div class="large-8 cell activity-description">In this session, you'll learn how God's plan is for every
+                    follower to
                     multiply! You’ll discover how disciples multiply far and fast when they start to see where God’s
                     Kingdom isn’t. And, you'll learn another great tool for inviting others into God's family is as
                     simple as telling our story.<br><br>Then, when you're ready, get started!
@@ -1236,7 +1173,8 @@ class Zume_Course_Content {
             <!-- Activity Block  -->
             <div class="grid-x grid-margin-x block">
                 <div class="large-4 cell activity-title">READ</div>
-                <div class="large-8 cell activity-description">ZÚME TOOLKIT - 3-MINUTE TESTIMONY<br><br>As followers of Jesus, we are
+                <div class="large-8 cell activity-description">ZÚME TOOLKIT - 3-MINUTE TESTIMONY<br><br>As followers of
+                    Jesus, we are
                     “witnesses" for Him, because we “testify” about the impact Jesus has had on our lives. Your story of
                     your relationship with God is called your Testimony. It's powerful, and it's something no one can
                     share better than you.<br><br>Find the "3-Minute Testimony" section in your Zúme Guidebook, and
@@ -1274,7 +1212,8 @@ class Zume_Course_Content {
 
             <!-- Activity Block  -->
             <div class="grid-x grid-margin-x block single">
-                <div class="large-8 cell activity-description well">Break into groups of two or three and and spend the next 45
+                <div class="large-8 cell activity-description well">Break into groups of two or three and and spend the
+                    next 45
                     minutes practicing sharing your Testimony using the Activity instructions on page 15 of your Zúme
                     Guidebook.
                 </div>
@@ -1296,7 +1235,8 @@ class Zume_Course_Content {
             <!-- Activity Block  -->
             <div class="grid-x grid-margin-x block">
                 <div class="large-4 cell activity-title">WATCH</div>
-                <div class="large-8 cell activity-description">What is God's greatest blessing for His children? Making disciples who
+                <div class="large-8 cell activity-description">What is God's greatest blessing for His children? Making
+                    disciples who
                     multiply! <br><br>What if you could learn a simple pattern for making not just one follower of Jesus
                     but entire spiritual families who multiply for generations to come?
                 </div>
@@ -1350,7 +1290,8 @@ class Zume_Course_Content {
             <!-- Activity Block  -->
             <div class="grid-x grid-margin-x block">
                 <div class="large-4 cell activity-title">WATCH</div>
-                <div class="large-8 cell activity-description">What do ducklings have to do with disciple making? They lead and
+                <div class="large-8 cell activity-description">What do ducklings have to do with disciple making? They
+                    lead and
                     follow at the same time.
                 </div>
             </div> <!-- grid-x grid-margin-x -->
@@ -1401,7 +1342,8 @@ class Zume_Course_Content {
             <!-- Activity Block  -->
             <div class="grid-x grid-margin-x block">
                 <div class="large-4 cell activity-title">WATCH</div>
-                <div class="large-8 cell activity-description">Have you ever stopped to think about where God's Kingdom... isn't?<br><br>Have
+                <div class="large-8 cell activity-description">Have you ever stopped to think about where God's
+                    Kingdom... isn't?<br><br>Have
                     you ever visited a home or a neighborhood or even a city where it seemed as if God was just...
                     missing? These are usually the places where God wants to work the most.
                 </div>
@@ -1451,7 +1393,8 @@ class Zume_Course_Content {
             <!-- Activity Block  -->
             <div class="grid-x grid-margin-x block">
                 <div class="large-4 cell activity-title">READ</div>
-                <div class="large-8 cell activity-description">ZÚME TOOLKIT - THE LORD'S SUPPER<br><br>Jesus said, “I am the living
+                <div class="large-8 cell activity-description">ZÚME TOOLKIT - THE LORD'S SUPPER<br><br>Jesus said, “I am
+                    the living
                     bread that came down from heaven. Whoever eats this bread will live forever. This bread is my flesh,
                     which I will give for the life of the world.”<br><br>Find "The Lord's Supper" section in your Zúme
                     Guidebook, and listen to the audio below.
@@ -1488,7 +1431,8 @@ class Zume_Course_Content {
 
             <!-- Activity Block  -->
             <div class="grid-x grid-margin-x block single">
-                <div class="large-8 cell activity-description well">Spend the next 10 minutes celebrating The Lord's Supper with your
+                <div class="large-8 cell activity-description well">Spend the next 10 minutes celebrating The Lord's
+                    Supper with your
                     group using the pattern on page 15 of your Zúme Guidebook.
                 </div>
             </div> <!-- grid-x grid-margin-x -->
@@ -1511,7 +1455,8 @@ class Zume_Course_Content {
             <!-- Activity Block  -->
             <div class="grid-x grid-margin-x block">
                 <div class="large-4 cell activity-title">OBEY</div>
-                <div class="large-8 cell activity-description">Spend time this week practicing your 3-Minute Testimony, and then
+                <div class="large-8 cell activity-description">Spend time this week practicing your 3-Minute Testimony,
+                    and then
                     share it with at least one person from your List of 100 that you marked as "Unbeliever" or
                     "Unknown."
                 </div>
@@ -1519,23 +1464,25 @@ class Zume_Course_Content {
             <!-- Activity Block  -->
             <div class="grid-x grid-margin-x block">
                 <div class="large-4 cell activity-title">SHARE</div>
-                <div class="large-8 cell activity-description">Ask God who He wants you to train with the 3-Minute Testimony tool.
+                <div class="large-8 cell activity-description">Ask God who He wants you to train with the 3-Minute
+                    Testimony tool.
                     Share this person's name with the group before you go.
                 </div>
             </div> <!-- grid-x grid-margin-x -->
             <!-- Activity Block  -->
             <div class="grid-x grid-margin-x block">
                 <div class="large-4 cell activity-title">PRAY</div>
-                <div class="large-8 cell activity-description">Pray that God help you be obedient to Him and invite Him to work in
+                <div class="large-8 cell activity-description">Pray that God help you be obedient to Him and invite Him
+                    to work in
                     you and those around you!
                 </div>
             </div> <!-- grid-x grid-margin-x -->
         </section>
-        <?php
-    }
+		<?php
+	}
 
-    public static function get_course_content_5() {
-        ?>
+	public static function get_course_content_5() {
+		?>
 
         <!-- Step -->
         <h3></h3>
@@ -1551,7 +1498,8 @@ class Zume_Course_Content {
             <!-- Activity Block  -->
             <div class="grid-x grid-margin-x block">
                 <div class="large-4 cell activity-title"><span>CHECK-IN</span></div>
-                <div class="large-8 cell activity-description">At the end of the last session, everyone in your group was challenged
+                <div class="large-8 cell activity-description">At the end of the last session, everyone in your group
+                    was challenged
                     in two ways: <br><br>
                     <ol>
                         <li>You were asked to share your 3-Minute Testimony with at least one person on your List of
@@ -1565,14 +1513,16 @@ class Zume_Course_Content {
             <!-- Activity Block  -->
             <div class="grid-x grid-margin-x block">
                 <div class="large-4 cell activity-title"><span>PRAY</span></div>
-                <div class="large-8 cell activity-description">Pray and thank God for the results and invite His Holy Spirit to lead
+                <div class="large-8 cell activity-description">Pray and thank God for the results and invite His Holy
+                    Spirit to lead
                     your time together.
                 </div>
             </div> <!-- grid-x grid-margin-x -->
             <!-- Activity Block  -->
             <div class="grid-x grid-margin-x block">
                 <div class="large-4 cell activity-title"><span>OVERVIEW</span></div>
-                <div class="large-8 cell activity-description">In this session, you’ll learn how Prayer Walking is a powerful way to
+                <div class="large-8 cell activity-description">In this session, you’ll learn how Prayer Walking is a
+                    powerful way to
                     prepare a neighborhood for Jesus, and you'll learn a simple but powerful pattern for prayer that
                     will help you meet and make new disciples along the way.
                 </div>
@@ -1591,7 +1541,8 @@ class Zume_Course_Content {
             <!-- Activity Block  -->
             <div class="grid-x grid-margin-x block">
                 <div class="large-4 cell activity-title">READ</div>
-                <div class="large-8 cell activity-description">ZÚME TOOLKIT - PRAYER WALKING<br><br>Prayer Walking is a simple way to
+                <div class="large-8 cell activity-description">ZÚME TOOLKIT - PRAYER WALKING<br><br>Prayer Walking is a
+                    simple way to
                     obey God’s command to pray for others. And it's just what it sounds like &#8212; praying to God
                     while walking around!<br><br>Find the "Prayer Walking" section in your Zúme Guidebook, and listen to
                     the audio below.
@@ -1630,7 +1581,8 @@ class Zume_Course_Content {
             <!-- Activity Block  -->
             <div class="grid-x grid-margin-x block">
                 <div class="large-4 cell activity-title">WATCH</div>
-                <div class="large-8 cell activity-description">Disciple-making can be rapidly advanced by finding a person of peace,
+                <div class="large-8 cell activity-description">Disciple-making can be rapidly advanced by finding a
+                    person of peace,
                     even in a place where followers of Jesus are few and far between. How do you know when you have
                     found a person of peace and what do you when you find them?
                 </div>
@@ -1683,7 +1635,8 @@ class Zume_Course_Content {
 
             <!-- Activity Block  -->
             <div class="grid-x grid-margin-x block single">
-                <div class="large-8 cell activity-description well">Break into groups of two or three and spend the next 15 minutes
+                <div class="large-8 cell activity-description well">Break into groups of two or three and spend the next
+                    15 minutes
                     practicing the B.L.E.S.S. Prayer using the pattern on page 17 of your Zúme Guidebook. Practice
                     praying the five areas of the B.L.E.S.S. Prayer for someone AND practice how you would train others
                     to understand and use the B.L.E.S.S. Prayer, too.
@@ -1703,7 +1656,8 @@ class Zume_Course_Content {
                 </div> <!-- grid-x grid-margin-x --><!-- Activity Block  -->
                 <div class="grid-x grid-margin-x block">
                     <div class="large-4 cell activity-title">ACTIVITY</div>
-                    <div class="large-8 cell activity-description">Break into groups of two or three and go out into the community to
+                    <div class="large-8 cell activity-description">Break into groups of two or three and go out into the
+                        community to
                         practice Prayer Walking. <br><br>Choosing a location can be as simple as walking outside from
                         where you are now, or you could plan to go to a specific destination. <br><br>Go as God leads,
                         and plan on spending 60-90 minutes on this activity.
@@ -1724,14 +1678,16 @@ class Zume_Course_Content {
                 <!-- Activity Block  -->
                 <div class="grid-x grid-margin-x block">
                     <div class="large-4 cell activity-title">OBEY</div>
-                    <div class="large-8 cell activity-description">Spend time this week practicing Prayer Walking by going out alone
+                    <div class="large-8 cell activity-description">Spend time this week practicing Prayer Walking by
+                        going out alone
                         or with a small group at least once.
                     </div>
                 </div> <!-- grid-x grid-margin-x -->
                 <!-- Activity Block  -->
                 <div class="grid-x grid-margin-x block">
                     <div class="large-4 cell activity-title">SHARE</div>
-                    <div class="large-8 cell activity-description">Spend time asking God who He might want you to share the Prayer
+                    <div class="large-8 cell activity-description">Spend time asking God who He might want you to share
+                        the Prayer
                         Walking tool with before your group meets again. Share this person’s name with the group before
                         you go.
                     </div>
@@ -1739,18 +1695,19 @@ class Zume_Course_Content {
                 <!-- Activity Block  -->
                 <div class="grid-x grid-margin-x block">
                     <div class="large-4 cell activity-title">PRAY</div>
-                    <div class="large-8 cell activity-description">Before you go out on your Prayer Walking activity, be sure to pray
+                    <div class="large-8 cell activity-description">Before you go out on your Prayer Walking activity, be
+                        sure to pray
                         with your group to end your time together. Thank God that He loves the lost, the last and the
                         least &#8212; including us! Ask Him to prepare your heart and the heart of those you'll meet
                         during your walk to be open to His work.
                     </div>
                 </div> <!-- grid-x grid-margin-x -->
         </section>
-        <?php
-    }
+		<?php
+	}
 
-    public static function get_course_content_6() {
-        ?>
+	public static function get_course_content_6() {
+		?>
 
         <!-- Step -->
         <h3></h3>
@@ -1766,7 +1723,8 @@ class Zume_Course_Content {
             <!-- Activity Block  -->
             <div class="grid-x grid-margin-x block">
                 <div class="large-4 cell activity-title"><span>CHECK-IN</span></div>
-                <div class="large-8 cell activity-description">At the end of the last session, everyone in your group was challenged
+                <div class="large-8 cell activity-description">At the end of the last session, everyone in your group
+                    was challenged
                     in two ways: <br><br>
                     <ol>
                         <li>You were asked to spend some time Prayer Walking</li>
@@ -1778,14 +1736,16 @@ class Zume_Course_Content {
             <!-- Activity Block  -->
             <div class="grid-x grid-margin-x block">
                 <div class="large-4 cell activity-title"><span>PRAY</span></div>
-                <div class="large-8 cell activity-description">Pray and thank God for the results, ask Him to help when you find it
+                <div class="large-8 cell activity-description">Pray and thank God for the results, ask Him to help when
+                    you find it
                     hard to obey, and invite His Holy Spirit to lead your time together.
                 </div>
             </div> <!-- grid-x grid-margin-x -->
             <!-- Activity Block  -->
             <div class="grid-x grid-margin-x block">
                 <div class="large-4 cell activity-title"><span>OVERVIEW</span></div>
-                <div class="large-8 cell activity-description">In this session, you’ll learn how God uses faithful followers &#8212;
+                <div class="large-8 cell activity-description">In this session, you’ll learn how God uses faithful
+                    followers &#8212;
                     even if they're brand new &#8212; much more than ones with years of knowledge and training who just
                     won't obey. And you'll get a first look at a way to meet together that helps disciples multiply even
                     faster.
@@ -1806,7 +1766,8 @@ class Zume_Course_Content {
             <!-- Activity Block  -->
             <div class="grid-x grid-margin-x block">
                 <div class="large-4 cell activity-title">WATCH</div>
-                <div class="large-8 cell activity-description">When we help multiply disciples, we need to make sure we're
+                <div class="large-8 cell activity-description">When we help multiply disciples, we need to make sure
+                    we're
                     reproducing the right things. It's important what disciples know &#8212; but it's much more
                     important what they DO with what they know.
                 </div>
@@ -1831,7 +1792,8 @@ class Zume_Course_Content {
             <!-- Activity Block  -->
             <div class="grid-x grid-margin-x block">
                 <div class="large-4 cell activity-title">DISCUSS</div>
-                <div class="large-8 cell activity-description">Think about God's commands that you already know. How "faithful" are
+                <div class="large-8 cell activity-description">Think about God's commands that you already know. How
+                    "faithful" are
                     you in terms of obeying and sharing those things?
                 </div>
             </div> <!-- grid-x grid-margin-x -->
@@ -1849,7 +1811,8 @@ class Zume_Course_Content {
             <!-- Activity Block  -->
             <div class="grid-x grid-margin-x block">
                 <div class="large-4 cell activity-title">READ</div>
-                <div class="large-8 cell activity-description">ZÚME TOOLKIT - 3/3 GROUPS FORMAT<br><br>Jesus said, “Where two or
+                <div class="large-8 cell activity-description">ZÚME TOOLKIT - 3/3 GROUPS FORMAT<br><br>Jesus said,
+                    “Where two or
                     three have gathered together in My name, I am there in their midst.”<br><br>Find the "3/3 Group
                     Format" section in your Zúme Guidebook, and listen to the audio below.
                 </div>
@@ -1899,8 +1862,10 @@ class Zume_Course_Content {
             <!-- Activity Block  -->
             <div class="grid-x grid-margin-x block">
                 <div class="large-4 cell activity-title">WATCH</div>
-                <div class="large-8 cell activity-description">A 3/3 Group is a way for followers of Jesus to meet, pray, learn,
-                    ggrid-x grid-margin-x, fellowship and practice obeying and sharing what they've learned. In this way a 3/3 Group is
+                <div class="large-8 cell activity-description">A 3/3 Group is a way for followers of Jesus to meet,
+                    pray, learn,
+                    ggrid-x grid-margin-x, fellowship and practice obeying and sharing what they've learned. In this way
+                    a 3/3 Group is
                     not just a small group but a Simple Church.<BR><BR> In the following video, you'll see a model 3/3
                     Group meet together and practice this format.<br><br>Find the "3/3 Groups Format" section in your
                     Zúme Guidebook, and watch the video below.
@@ -1934,14 +1899,16 @@ class Zume_Course_Content {
             <!-- Activity Block  -->
             <div class="grid-x grid-margin-x block">
                 <div class="large-4 cell activity-title">OBEY</div>
-                <div class="large-8 cell activity-description">Spend time this week practicing Faithfulness by obeying and sharing at
+                <div class="large-8 cell activity-description">Spend time this week practicing Faithfulness by obeying
+                    and sharing at
                     least one of God's commands that you already know.
                 </div>
             </div> <!-- grid-x grid-margin-x -->
             <!-- Activity Block  -->
             <div class="grid-x grid-margin-x block">
                 <div class="large-4 cell activity-title">SHARE</div>
-                <div class="large-8 cell activity-description">Think about what you have heard and learned about Faithfulness in this
+                <div class="large-8 cell activity-description">Think about what you have heard and learned about
+                    Faithfulness in this
                     session, and ask God who He wants you to share it with. Share this person’s name with the group
                     before you go.
                 </div>
@@ -1949,16 +1916,17 @@ class Zume_Course_Content {
             <!-- Activity Block  -->
             <div class="grid-x grid-margin-x block">
                 <div class="large-4 cell activity-title">PRAY</div>
-                <div class="large-8 cell activity-description">Thank God for His Faithfulness &#8212; for fulfilling every promise
+                <div class="large-8 cell activity-description">Thank God for His Faithfulness &#8212; for fulfilling
+                    every promise
                     He's ever made. Ask Him to help you and your group become even more Faithful to Him.
                 </div>
             </div> <!-- grid-x grid-margin-x -->
         </section>
-        <?php
-    }
+		<?php
+	}
 
-    public static function get_course_content_7() {
-        ?>
+	public static function get_course_content_7() {
+		?>
 
         <!-- Step -->
         <h3></h3>
@@ -1974,7 +1942,8 @@ class Zume_Course_Content {
             <!-- Activity Block  -->
             <div class="grid-x grid-margin-x block">
                 <div class="large-4 cell activity-title"><span>CHECK-IN</span></div>
-                <div class="large-8 cell activity-description">At the end of the last session, everyone in your group was challenged
+                <div class="large-8 cell activity-description">At the end of the last session, everyone in your group
+                    was challenged
                     in two ways: <br><br>
                     <ol>
                         <li>You were asked to practice Faithfulness by obeying and sharing one of God's commands.</li>
@@ -1986,14 +1955,16 @@ class Zume_Course_Content {
             <!-- Activity Block  -->
             <div class="grid-x grid-margin-x block">
                 <div class="large-4 cell activity-title"><span>PRAY</span></div>
-                <div class="large-8 cell activity-description">Pray and thank God for the group's commitment to faithfully following
+                <div class="large-8 cell activity-description">Pray and thank God for the group's commitment to
+                    faithfully following
                     Jesus and invite God's Holy Spirit to lead your time together.
                 </div>
             </div> <!-- grid-x grid-margin-x -->
             <!-- Activity Block  -->
             <div class="grid-x grid-margin-x block">
                 <div class="large-4 cell activity-title"><span>OVERVIEW</span></div>
-                <div class="large-8 cell activity-description">In this session, you’ll learn a Training Cycle that helps disciples go
+                <div class="large-8 cell activity-description">In this session, you’ll learn a Training Cycle that helps
+                    disciples go
                     from one to many and turns a mission into a movement. You'll also practice the 3/3 Groups Format and
                     learn how the way you meet can impact the way you multiply.
                 </div>
@@ -2013,7 +1984,8 @@ class Zume_Course_Content {
             <!-- Activity Block  -->
             <div class="grid-x grid-margin-x block">
                 <div class="large-4 cell activity-title">WATCH</div>
-                <div class="large-8 cell activity-description">Have you ever learned how to ride a bicycle? Have you ever helped
+                <div class="large-8 cell activity-description">Have you ever learned how to ride a bicycle? Have you
+                    ever helped
                     someone else learn? If so, chances are you already know the Training Cycle.<br><br>Find the
                     "Training Cycle" section in your Zúme Guidebook. When you're ready, watch this video, and then
                     discuss the questions below.
@@ -2065,7 +2037,8 @@ class Zume_Course_Content {
             <!-- Activity Block  -->
             <div class="grid-x grid-margin-x block">
                 <div class="large-4 cell activity-title"><span>PRACTICE</span></div>
-                <div class="large-8 cell activity-description">Have your entire group spend the next 90 minutes practicing the 3/3
+                <div class="large-8 cell activity-description">Have your entire group spend the next 90 minutes
+                    practicing the 3/3
                     Groups Format using the pattern on pages 19-20 in your Zúme Guidebook.<br><br>
                     <ul>
                         <li>LOOK BACK - Use last week's Session Challenges to practice "Faithfulness" in the Look Back
@@ -2109,30 +2082,33 @@ class Zume_Course_Content {
             <!-- Activity Block  -->
             <div class="grid-x grid-margin-x block">
                 <div class="large-4 cell activity-title">OBEY</div>
-                <div class="large-8 cell activity-description">Spend time this week obeying, training, and sharing based on the
+                <div class="large-8 cell activity-description">Spend time this week obeying, training, and sharing based
+                    on the
                     commitments you've made during your 3/3 Group practice.
                 </div>
             </div> <!-- grid-x grid-margin-x -->
             <!-- Activity Block  -->
             <div class="grid-x grid-margin-x block">
                 <div class="large-4 cell activity-title">SHARE</div>
-                <div class="large-8 cell activity-description">Pray and ask God who He wants you to share the 3/3 Group format with
+                <div class="large-8 cell activity-description">Pray and ask God who He wants you to share the 3/3 Group
+                    format with
                     before your group meets again. Share this person’s name with the group before you go.
                 </div>
             </div> <!-- grid-x grid-margin-x -->
             <!-- Activity Block  -->
             <div class="grid-x grid-margin-x block">
                 <div class="large-4 cell activity-title">PRAY</div>
-                <div class="large-8 cell activity-description">Thank God that He loves us enough to invite us into His most important
+                <div class="large-8 cell activity-description">Thank God that He loves us enough to invite us into His
+                    most important
                     work &#8212; ggrid-x grid-margin-xing His family!
                 </div>
             </div> <!-- grid-x grid-margin-x -->
         </section>
-        <?php
-    }
+		<?php
+	}
 
-    public static function get_course_content_8() {
-        ?>
+	public static function get_course_content_8() {
+		?>
         <!-- Step -->
         <h3></h3>
         <section>
@@ -2147,7 +2123,8 @@ class Zume_Course_Content {
             <!-- Activity Block  -->
             <div class="grid-x grid-margin-x block">
                 <div class="large-4 cell activity-title"><span>CHECK-IN</span></div>
-                <div class="large-8 cell activity-description">Before getting started, take some time to check-in.<br><br>At the end
+                <div class="large-8 cell activity-description">Before getting started, take some time to
+                    check-in.<br><br>At the end
                     of the last session, everyone in your group was challenged in two ways: <br><br>
                     <ol>
                         <li>You were asked to practice obeying, training, and sharing based on your commitments during
@@ -2161,7 +2138,8 @@ class Zume_Course_Content {
             <!-- Activity Block  -->
             <div class="grid-x grid-margin-x block">
                 <div class="large-4 cell activity-title"><span>PRAY</span></div>
-                <div class="large-8 cell activity-description">Pray and thank God for giving your group the energy, the focus and the
+                <div class="large-8 cell activity-description">Pray and thank God for giving your group the energy, the
+                    focus and the
                     faithfulness to come so far in this training. Ask God to have His Holy Spirit remind everyone in the
                     group that they can do nothing without Him!
                 </div>
@@ -2169,7 +2147,8 @@ class Zume_Course_Content {
             <!-- Activity Block  -->
             <div class="grid-x grid-margin-x block">
                 <div class="large-4 cell activity-title"><span>OVERVIEW</span></div>
-                <div class="large-8 cell activity-description">In this session, you’ll learn how Leadership Cells prepare followers
+                <div class="large-8 cell activity-description">In this session, you’ll learn how Leadership Cells
+                    prepare followers
                     in a short time to become leaders for a lifetime. You'll learn how serving others is Jesus' strategy
                     for leadership. And you'll spend time practicing as a 3/3 Group, again.
                 </div>
@@ -2189,7 +2168,8 @@ class Zume_Course_Content {
             <!-- Activity Block  -->
             <div class="grid-x grid-margin-x block">
                 <div class="large-4 cell activity-title">WATCH</div>
-                <div class="large-8 cell activity-description">Jesus said, “Whoever wishes to become great among you shall be your
+                <div class="large-8 cell activity-description">Jesus said, “Whoever wishes to become great among you
+                    shall be your
                     servant.”
                     <br><br>
                     Jesus radically reversed our understanding of leadership by teaching us that if we feel called to
@@ -2243,7 +2223,8 @@ class Zume_Course_Content {
                     <!-- Activity Block  -->
                     <div class="grid-x grid-margin-x block">
                         <div class="large-4 cell activity-title"><span>PRACTICE</span></div>
-                        <div class="large-8 cell activity-description">Have your entire group spend the next 90 minutes practicing
+                        <div class="large-8 cell activity-description">Have your entire group spend the next 90 minutes
+                            practicing
                             the 3/3 Groups Format using the pattern on pages 19-20 in your Zúme Guidebook.<br><br>
                             <ul>
                                 <li>LOOK BACK - Use last session’s Obey, Train, and Share challenges to check-in with
@@ -2278,32 +2259,35 @@ class Zume_Course_Content {
             <!-- Activity Block  -->
             <div class="grid-x grid-margin-x block">
                 <div class="large-4 cell activity-title">OBEY</div>
-                <div class="large-8 cell activity-description">Spend time again this week obeying, sharing, and training based on the
+                <div class="large-8 cell activity-description">Spend time again this week obeying, sharing, and training
+                    based on the
                     commitments you've made during this session's 3/3 Group practice.
                 </div>
             </div> <!-- grid-x grid-margin-x -->
             <!-- Activity Block  -->
             <div class="grid-x grid-margin-x block">
                 <div class="large-4 cell activity-title">SHARE</div>
-                <div class="large-8 cell activity-description">Pray and ask God who He wants you to share the Leadership Cell tool
+                <div class="large-8 cell activity-description">Pray and ask God who He wants you to share the Leadership
+                    Cell tool
                     with before your group meets again. Share this person’s name with the group before you go.
                 </div>
             </div> <!-- grid-x grid-margin-x -->
             <!-- Activity Block  -->
             <div class="grid-x grid-margin-x block">
                 <div class="large-4 cell activity-title">PRAY</div>
-                <div class="large-8 cell activity-description">Thank God for sending Jesus to show us that real leaders are real
+                <div class="large-8 cell activity-description">Thank God for sending Jesus to show us that real leaders
+                    are real
                     servants. Thank Jesus for showing us the greatest service possible is giving up our own lives for
                     others.
                 </div>
             </div> <!-- grid-x grid-margin-x -->
         </section>
 
-        <?php
-    }
+		<?php
+	}
 
-    public static function get_course_content_9() {
-        ?>
+	public static function get_course_content_9() {
+		?>
 
         <!-- Step -->
         <h3></h3>
@@ -2339,7 +2323,8 @@ class Zume_Course_Content {
             <!-- Activity Block -->
             <div class="grid-x grid-margin-x block">
                 <div class="large-4 cell activity-title">PRAY</div>
-                <div class="large-8 cell activity-description">Pray and thank God that His ways are not our ways and His thoughts are
+                <div class="large-8 cell activity-description">Pray and thank God that His ways are not our ways and His
+                    thoughts are
                     not our thoughts. Ask Him to give each member of your group the mind of Christ — always focused on
                     His Father's work. Ask the Holy Spirit to lead your time together and make it the best session yet.
                 </div>
@@ -2348,10 +2333,13 @@ class Zume_Course_Content {
             <!-- Activity Block -->
             <div class="grid-x grid-margin-x block">
                 <div class="large-4 cell activity-title">OVERVIEW</div>
-                <div class="large-8 cell activity-description">In this session, you’ll learn how linear patterns hold back kingdom
-                    ggrid-x grid-margin-xth and how Non-Sequential thinking helps you multiply disciples. You'll discover how much time
+                <div class="large-8 cell activity-description">In this session, you’ll learn how linear patterns hold
+                    back kingdom
+                    ggrid-x grid-margin-xth and how Non-Sequential thinking helps you multiply disciples. You'll
+                    discover how much time
                     matters in disciple-making and how to accelerate Pace. You’ll learn how followers of Jesus can be a
-                    Part of Two Churches to help turn faithful, spiritual families into a ggrid-x grid-margin-xing city-wide body of
+                    Part of Two Churches to help turn faithful, spiritual families into a ggrid-x grid-margin-xing
+                    city-wide body of
                     believers. Finally, you'll learn how a simple 3-Month Plan can focus your efforts and multiply your
                     effectiveness in ggrid-x grid-margin-xing God's family exponentially.
                 </div>
@@ -2371,7 +2359,8 @@ class Zume_Course_Content {
             <!-- Activity Block -->
             <div class="grid-x grid-margin-x block">
                 <div class="large-4 cell activity-title">WATCH</div>
-                <div class="large-8 cell activity-description">When people think about disciples multiplying, they often think of it
+                <div class="large-8 cell activity-description">When people think about disciples multiplying, they often
+                    think of it
                     as a step-by-step process. The problem with that is — that's not how it works best!
                 </div>
             </div>
@@ -2421,7 +2410,8 @@ class Zume_Course_Content {
             <!-- Activity Block -->
             <div class="grid-x grid-margin-x block">
                 <div class="large-4 cell activity-title">WATCH</div>
-                <div class="large-8 cell activity-description">Multiplying matters and multiplying quickly matters even more. Pace
+                <div class="large-8 cell activity-description">Multiplying matters and multiplying quickly matters even
+                    more. Pace
                     matters because where we all spend our eternity — an existence that outlasts time — is determined in
                     the very short time we call “life."
                 </div>
@@ -2474,7 +2464,8 @@ class Zume_Course_Content {
             <!-- Activity Block -->
             <div class="grid-x grid-margin-x block">
                 <div class="large-4 cell activity-title">WATCH</div>
-                <div class="large-8 cell activity-description">Jesus taught us that we are to stay close — to live as a small,
+                <div class="large-8 cell activity-description">Jesus taught us that we are to stay close — to live as a
+                    small,
                     spiritual family, to love and give our lives to one another, to celebrate and suffer — together.
                     However, Jesus also taught us to leave our homes and loved ones behind and be willing to go anywhere
                     — and everywhere — to share and start new spiritual families.
@@ -2508,8 +2499,10 @@ class Zume_Course_Content {
             <!-- Activity Block -->
             <div class="grid-x grid-margin-x block">
                 <div class="large-4 cell activity-title">DISCUSS</div>
-                <div class="large-8 cell activity-description">What are some advantages of maintaining a consistent spiritual family
-                    that gives birth to new ones that ggrid-x grid-margin-x and multiply instead of continually ggrid-x grid-margin-xing a family and
+                <div class="large-8 cell activity-description">What are some advantages of maintaining a consistent
+                    spiritual family
+                    that gives birth to new ones that ggrid-x grid-margin-x and multiply instead of continually ggrid-x
+                    grid-margin-xing a family and
                     splitting it in order to ggrid-x grid-margin-x?
                 </div>
             </div>
@@ -2528,7 +2521,8 @@ class Zume_Course_Content {
                     <!-- Activity Block -->
                     <div class="grid-x grid-margin-x block">
                         <div class="large-4 cell activity-title">OVERVIEW</div>
-                        <div class="large-8 cell activity-description">In His Bible, God says, "I know the plans I have for you,
+                        <div class="large-8 cell activity-description">In His Bible, God says, "I know the plans I have
+                            for you,
                             plans to prosper you and not to harm you, plans to give you hope and a future."
 
                             God makes plans, and He expects us to make plans, too. He teaches us through His Word and
@@ -2546,7 +2540,8 @@ class Zume_Course_Content {
                     <!-- Activity Block -->
                     <div class="grid-x grid-margin-x block">
                         <div class="large-4 cell activity-title">PRAY</div>
-                        <div class="large-8 cell activity-description">Ask God what He specifically wants you to do with the basic
+                        <div class="large-8 cell activity-description">Ask God what He specifically wants you to do with
+                            the basic
                             disciple-making tools and techniques you have learned over these last nine sessions.
                             Remember His words about Faithfulness.
                         </div>
@@ -2555,7 +2550,8 @@ class Zume_Course_Content {
                     <!-- Activity Block -->
                     <div class="grid-x grid-margin-x block">
                         <div class="large-4 cell activity-title">LISTEN</div>
-                        <div class="large-8 cell activity-description">Take at least 10 minutes to be as quiet as possible and listen
+                        <div class="large-8 cell activity-description">Take at least 10 minutes to be as quiet as
+                            possible and listen
                             intently to what God has to say and what He chooses to reveal. Make an effort to hear His
                             voice.
                         </div>
@@ -2564,7 +2560,8 @@ class Zume_Course_Content {
                     <!-- Activity Block -->
                     <div class="grid-x grid-margin-x block">
                         <div class="large-4 cell activity-title">COMPLETE</div>
-                        <div class="large-8 cell activity-description">Use the rest of your time to complete the 3-Month Plan
+                        <div class="large-8 cell activity-description">Use the rest of your time to complete the 3-Month
+                            Plan
                             worksheet. You do not have to commit to every item, and there is room for other items not
                             already on the list. Do your best to align your commitments to what you have heard God
                             reveal to you about His will.
@@ -2666,7 +2663,8 @@ class Zume_Course_Content {
             <!-- Activity Block -->
             <div class="grid-x grid-margin-x block">
                 <div class="large-4 cell activity-title">WATCH</div>
-                <div class="large-8 cell activity-description">You may not know it, but you now have more practical training on
+                <div class="large-8 cell activity-description">You may not know it, but you now have more practical
+                    training on
                     starting simple churches and making disciples who multiply than many pastors and missionaries around
                     the world!
 
@@ -2694,7 +2692,8 @@ class Zume_Course_Content {
             <!-- Activity Block -->
             <div class="grid-x grid-margin-x block">
                 <div class="large-4 cell activity-title">OBEY</div>
-                <div class="large-8 cell activity-description">Set aside time on your calendar each week to continue to work on your
+                <div class="large-8 cell activity-description">Set aside time on your calendar each week to continue to
+                    work on your
                     3-Month Plan, and plan check-ins with your training partner at the end of week 1, 2, 3, 4, 6, 8, and
                     12. Each time you're together, ask about their results and share yours, making sure you're both
                     working through your plans.
@@ -2706,7 +2705,8 @@ class Zume_Course_Content {
             <!-- Activity Block -->
             <div class="grid-x grid-margin-x block">
                 <div class="large-4 cell activity-title">SHARE</div>
-                <div class="large-8 cell activity-description">Pray and ask God who He would have you share Zúme Training with by
+                <div class="large-8 cell activity-description">Pray and ask God who He would have you share Zúme
+                    Training with by
                     launching a Leadership Cell of future Zúme Training leaders.
                 </div>
             </div>
@@ -2714,7 +2714,8 @@ class Zume_Course_Content {
             <!-- Activity Block -->
             <div class="grid-x grid-margin-x block">
                 <div class="large-4 cell activity-title">PRAY</div>
-                <div class="large-8 cell activity-description">Be sure to pray with your group before you end your time together.
+                <div class="large-8 cell activity-description">Be sure to pray with your group before you end your time
+                    together.
                     Thank God that He has created and gifted you with exactly the right talents to make a difference in
                     His kingdom. Ask Him for wisdom to use the strengths He has given you and to find other followers
                     who help cover your weaknesses. Pray that He would make you fruitful and multiply — this was His
@@ -2728,7 +2729,8 @@ class Zume_Course_Content {
             <!-- Activity Block -->
             <div class="grid-x grid-margin-x block">
                 <div class="large-4 cell activity-title">BONUS</div>
-                <div class="large-8 cell activity-description">Check out <a href="https://www.2414now.net" target="_blank">www.2414now.net</a>
+                <div class="large-8 cell activity-description">Check out <a href="https://www.2414now.net"
+                                                                            target="_blank">www.2414now.net</a>
                     and join the global coalition praying and working together to start kingdom movement engagements in
                     every unreached people and place by 2025.
                 </div>
@@ -2739,11 +2741,11 @@ class Zume_Course_Content {
             <!-- Activity Block -->
 
         </section>
-        <?php
-    }
+		<?php
+	}
 
-    public static function get_course_content_10() {
-        ?>
+	public static function get_course_content_10() {
+		?>
 
         <!-- Step -->
         <h3></h3>
@@ -2759,7 +2761,8 @@ class Zume_Course_Content {
             <!-- Activity Block  -->
             <div class="grid-x grid-margin-x block">
                 <div class="large-4 cell activity-title"><span>CHECK-IN</span></div>
-                <div class="large-8 cell activity-description">Before getting started, take some time to check-in.<br><br>At the end
+                <div class="large-8 cell activity-description">Before getting started, take some time to
+                    check-in.<br><br>At the end
                     of the last session, everyone in your group was challenged in two ways: <br><br>
                     <ol>
                         <li>You were asked to prayerfully consider continuing as an ongoing spiritual family committed
@@ -2776,7 +2779,8 @@ class Zume_Course_Content {
             <!-- Activity Block  -->
             <div class="grid-x grid-margin-x block">
                 <div class="large-4 cell activity-title"><span>PRAY</span></div>
-                <div class="large-8 cell activity-description">Pray and thank God that He is faithful to complete His good work in
+                <div class="large-8 cell activity-description">Pray and thank God that He is faithful to complete His
+                    good work in
                     us. Ask Him to give your group clear heads and open hearts to the great things He wants to do in and
                     through you. Ask the Holy Spirit to lead your time together and thank Him for His faithfulness, too.
                     He got you through!
@@ -2785,9 +2789,11 @@ class Zume_Course_Content {
             <!-- Activity Block  -->
             <div class="grid-x grid-margin-x block">
                 <div class="large-4 cell activity-title"><span>OVERVIEW</span></div>
-                <div class="large-8 cell activity-description">In this advanced training session, you’ll take a look at how you can
+                <div class="large-8 cell activity-description">In this advanced training session, you’ll take a look at
+                    how you can
                     level-up your Coaching Strengths with a quick checklist assessment. You’ll learn how Leadership in
-                    Networks allows a ggrid-x grid-margin-xing group of small churches to work together to accomplish even more. And
+                    Networks allows a ggrid-x grid-margin-xing group of small churches to work together to accomplish
+                    even more. And
                     you’ll learn how to develop Peer Mentoring Groups that take leaders to a whole new level of growth.
                 </div>
             </div> <!-- grid-x grid-margin-x -->
@@ -2807,7 +2813,8 @@ class Zume_Course_Content {
             <!-- Activity Block  -->
             <div class="grid-x grid-margin-x block">
                 <div class="large-4 cell activity-title">ASSESS</div>
-                <div class="large-8 cell activity-description">The Coaching Checklist is a powerful tool you can use to quickly
+                <div class="large-8 cell activity-description">The Coaching Checklist is a powerful tool you can use to
+                    quickly
                     assess your own strengths and vulnerabilities when it comes to making disciples who multiply. It's
                     also a powerful tool you can use to help others &#8212; and others can use to help you.<br><br>
                     Find the Coaching Checklist section in your Zúme Guidebook, and take this quick (5-minutes or less)
@@ -2845,7 +2852,8 @@ class Zume_Course_Content {
             </div> <!-- grid-x grid-margin-x -->
             <!-- Activity Block  -->
             <div class="grid-x grid-margin-x block single">
-                <div class="large-8 cell activity-description well">REMEMBER &#8212; Be sure to share your Coaching Checklist results
+                <div class="large-8 cell activity-description well">REMEMBER &#8212; Be sure to share your Coaching
+                    Checklist results
                     with your Zúme Coach and/or your training partner or other mentor. If you're helping coach or mentor
                     someone, share this tool to help assess which areas need your attention and training.
                 </div>
@@ -2865,7 +2873,8 @@ class Zume_Course_Content {
             <!-- Activity Block  -->
             <div class="grid-x grid-margin-x block">
                 <div class="large-4 cell activity-title">WATCH</div>
-                <div class="large-8 cell activity-description">What happens to churches as they ggrid-x grid-margin-x and start new churches that
+                <div class="large-8 cell activity-description">What happens to churches as they ggrid-x grid-margin-x
+                    and start new churches that
                     start new churches? How do they stay connected and live life together as an extended, spiritual
                     family? They become a network!
                 </div>
@@ -2891,7 +2900,8 @@ class Zume_Course_Content {
             <!-- Activity Block  -->
             <div class="grid-x grid-margin-x block">
                 <div class="large-4 cell activity-title">DISCUSS</div>
-                <div class="large-8 cell activity-description">Are there advantages when networks of simple churches are connected by
+                <div class="large-8 cell activity-description">Are there advantages when networks of simple churches are
+                    connected by
                     deep, personal relationships? What are some examples that come to mind?
                 </div>
             </div> <!-- grid-x grid-margin-x -->
@@ -2909,7 +2919,8 @@ class Zume_Course_Content {
             <!-- Activity Block  -->
             <div class="grid-x grid-margin-x block">
                 <div class="large-4 cell activity-title">READ</div>
-                <div class="large-8 cell activity-description">ZÚME TOOLKIT - PEER MENTORING GROUPS<br><br>Making disciples who make
+                <div class="large-8 cell activity-description">ZÚME TOOLKIT - PEER MENTORING GROUPS<br><br>Making
+                    disciples who make
                     disciples means making leaders who make leaders. How do you develop stronger leaders? By teaching
                     them how to love one another better. Peer Mentoring Groups help leaders love deeper.<br><br>Find the
                     Peer Mentoring Groups section in your Zúme Guidebook, and listen to the audio below.
@@ -2952,7 +2963,8 @@ class Zume_Course_Content {
             <!-- Activity Block  -->
             <div class="grid-x grid-margin-x block">
                 <div class="large-4 cell activity-title"><span>GROUPS</span></div>
-                <div class="large-8 cell activity-description">Break into groups of two or three and work through the 3/3 sections of
+                <div class="large-8 cell activity-description">Break into groups of two or three and work through the
+                    3/3 sections of
                     the Peer Mentoring Group format. Peer Mentoring is something that happens once a month or once a
                     quarter and takes some time for the whole group to participate, so you will not have time for
                     everyone to experience the full mentoring process in this session.
@@ -2961,7 +2973,8 @@ class Zume_Course_Content {
             <!-- Activity Block  -->
             <div class="grid-x grid-margin-x block">
                 <div class="large-4 cell activity-title"><span>PRACTICE</span></div>
-                <div class="large-8 cell activity-description">To practice, choose one person in your group to be the "mentee" for
+                <div class="large-8 cell activity-description">To practice, choose one person in your group to be the
+                    "mentee" for
                     this session and have the other members spend time acting as Peer Mentors by working through the
                     suggested questions list and providing guidance and encouragement for the Mentee's work.<br><br>
 
@@ -2970,7 +2983,8 @@ class Zume_Course_Content {
             </div> <!-- grid-x grid-margin-x -->
             <!-- Activity Block  -->
             <div class="grid-x grid-margin-x block single">
-                <div class="large-8 cell activity-description well">REMEMBER - Spend time studying the Four Fields Diagnostic Diagram
+                <div class="large-8 cell activity-description well">REMEMBER - Spend time studying the Four Fields
+                    Diagnostic Diagram
                     and Generational Map in the Peer Mentoring Groups section of your Zúme Training Guide. Make sure
                     everyone in your group has a basic understanding of these tools before asking the suggested
                     questions.
@@ -3015,7 +3029,7 @@ class Zume_Course_Content {
                     <!-- grid-x grid-margin-x -->
                     <!-- Activity Block -->
                     <div class="grid-x grid-margin-x block">
-                        <div class="large-4 cell activity-title"><span>Ggrid-x grid-margin-x</span></div>
+                        <div class="large-4 cell activity-title"><span>Grow</span></div>
                         <div class="large-8 cell activity-description">
                             <p style="text-transform: uppercase">Grow as a disciple by putting your faith to work</p>
                             <p>
@@ -3031,41 +3045,41 @@ class Zume_Course_Content {
                         <div class="large-8 cell activity-description">
                             <div class="congratulations-more">
                                 <button class="button js-congratulations-more-button" data-item="learn-more"><span>
-                <div class="congratulations-icon congratulations-icon-learn-more"></div>
-                <span>Learn More</span>
-            </span></button>
-                                <button class="button js-congratulations-more-button" data-item="invite"><span>
-                <div class="congratulations-icon congratulations-icon-invite"></div>
-                <span>Invite my friends</span>
-            </span></button>
-                                <button class="button js-congratulations-more-button" data-item="coordinator"><span>
-                <div class="congratulations-icon congratulations-icon-coordinator"></div>
-                <span>Become a county coordinator</span>
-            </span></button>
-                                <button class="button js-congratulations-more-button" data-item="map"><span>
-                <div class="congratulations-icon congratulations-icon-map"></div>
-                <span>Map my neighborhood</span>
-            </span></button>
-                                <button class="button js-congratulations-more-button" data-item="language"><span>
-                <div class="congratulations-icon congratulations-icon-language"></div>
-                <span>Fund translation of Zúme</span>
-            </span></button>
-                                <button class="button js-congratulations-more-button" data-item="contact-coach"><span>
-                <div class="congratulations-icon congratulations-icon-contact-coach"></div>
-                <span>Contact my coach</span>
-            </span></button>
-                                <button class="button js-congratulations-more-button" data-item="share"><span>
-                <div class="congratulations-icon congratulations-icon-share"></div>
-                <span>Share on Social Media</span>
-            </span></button>
-                                <button class="button js-congratulations-more-button" data-item="champion"><span>
-                <div class="congratulations-icon congratulations-icon-champion"></div>
-                <span>Champion Zúme on Social Media</span>
-            </span></button>
-                                <button class="button js-congratulations-more-button" data-item="join-2414"><span>
-                <div class="congratulations-icon congratulations-icon-learn-more"></div>
-                <span>Join 2414</span>
-            </span></button>
+                                        <div class="congratulations-icon congratulations-icon-learn-more"></div>
+                                        <span>Learn More</span>
+                                    </span></button>
+                                                        <button class="button js-congratulations-more-button" data-item="invite"><span>
+                                        <div class="congratulations-icon congratulations-icon-invite"></div>
+                                        <span>Invite my friends</span>
+                                    </span></button>
+                                                        <button class="button js-congratulations-more-button" data-item="coordinator"><span>
+                                        <div class="congratulations-icon congratulations-icon-coordinator"></div>
+                                        <span>Become a county coordinator</span>
+                                    </span></button>
+                                                        <button class="button js-congratulations-more-button" data-item="map"><span>
+                                        <div class="congratulations-icon congratulations-icon-map"></div>
+                                        <span>Map my neighborhood</span>
+                                    </span></button>
+                                                        <button class="button js-congratulations-more-button" data-item="language"><span>
+                                        <div class="congratulations-icon congratulations-icon-language"></div>
+                                        <span>Fund translation of Zúme</span>
+                                    </span></button>
+                                                        <button class="button js-congratulations-more-button" data-item="contact-coach"><span>
+                                        <div class="congratulations-icon congratulations-icon-contact-coach"></div>
+                                        <span>Contact my coach</span>
+                                    </span></button>
+                                                        <button class="button js-congratulations-more-button" data-item="share"><span>
+                                        <div class="congratulations-icon congratulations-icon-share"></div>
+                                        <span>Share on Social Media</span>
+                                    </span></button>
+                                                        <button class="button js-congratulations-more-button" data-item="champion"><span>
+                                        <div class="congratulations-icon congratulations-icon-champion"></div>
+                                        <span>Champion Zúme on Social Media</span>
+                                    </span></button>
+                                                        <button class="button js-congratulations-more-button" data-item="join-2414"><span>
+                                        <div class="congratulations-icon congratulations-icon-learn-more"></div>
+                                        <span>Join 2414</span>
+                                    </span></button>
                             </div>
 
                             <div class="congratulations-more__text js-congratulations-more-item" data-item="learn-more"
@@ -3196,6 +3210,6 @@ class Zume_Course_Content {
                             </div>
                         </div>
         </section>
-        <?php
-    }
+		<?php
+	}
 }
