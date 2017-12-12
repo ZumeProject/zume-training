@@ -63,8 +63,12 @@ function zume_get_posts_translation_url( $page_title, $slug = 'en' ) {
         $post_id = get_page_by_title( $page_title, OBJECT, 'page' );
 
         // get translation id by eng id
-        $trans_id = pll_get_post( $post_id->ID, $slug );
-        if ( ! $trans_id ) {
+        if (isset($post_id->ID)){
+            $trans_id = pll_get_post( $post_id->ID, $slug );
+            if ( ! $trans_id ) {
+                return '';
+            }
+        } else {
             return '';
         }
 

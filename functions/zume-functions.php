@@ -121,3 +121,45 @@ function zume_get_real_ip_address()
     }
     return $ip;
 }
+
+function zume_update_user_contact_info()
+{
+    $current_user = wp_get_current_user();
+
+    // validate nonce
+    if ( isset( $_POST['user_update_nonce'] ) && !wp_verify_nonce( sanitize_key( $_POST['user_update_nonce'] ), 'user_' . $current_user->ID . '_update' ) ) {
+        return new WP_Error( 'fail_nonce_verification', 'The form requires a valid nonce, in order to process.' );
+    }
+
+    $args = [];
+    $args['ID'] = $current_user->ID;
+
+    // build user name variables
+    if ( isset( $_POST['first_name'] ) ) {
+        $args['first_name'] = sanitize_text_field( wp_unslash( $_POST['first_name'] ) );
+    }
+    if ( isset( $_POST['last_name'] ) ) {
+        $args['last_name'] = sanitize_text_field( wp_unslash( $_POST['last_name'] ) );
+    }
+    if ( isset( $_POST['display_name'] ) && !empty( $_POST['display_name'] ) ) {
+        $args['display_name'] = sanitize_text_field( wp_unslash( $_POST['display_name'] ) );
+    }
+    if ( isset( $_POST['user_email'] ) && !empty( $_POST['user_email'] ) ) {
+        $args['user_email'] = sanitize_email( wp_unslash( $_POST['user_email'] ) );
+    }
+    if ( isset( $_POST['description'] ) ) {
+        $args['description'] = sanitize_text_field( wp_unslash( $_POST['description'] ) );
+    }
+    if ( isset( $_POST['nickname'] ) ) {
+        $args['nickname'] = sanitize_text_field( wp_unslash( $_POST['nickname'] ) );
+    }
+
+    // _user table defaults
+    $result = wp_update_user( $args );
+
+    if ( is_wp_error( $result ) ) {
+        return new WP_Error( 'fail_update_user_data', 'Error while updating user data in user table.' );
+    }
+
+    return true;
+}
