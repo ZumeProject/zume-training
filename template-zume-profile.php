@@ -51,13 +51,6 @@ $zume_user_meta = get_user_meta( get_current_user_id() ); // Full array of user 
                             <td><input type="text" class="profile-input" id="nickname" name="nickname"
                                        value=" <?php echo esc_html( $zume_user->nickname ); ?>"/></td>
                         </tr>
-                        <tr>
-                            <td><label for="description"><?php echo __( 'Description', 'zume' )?></label></td>
-                            <td><textarea type="text" class="profile-input" id="description"
-                                          name="description"
-                                          rows="5"><?php echo esc_html( $zume_user->description ); ?></textarea>
-                            </td>
-                        </tr>
 
                     </table>
 
