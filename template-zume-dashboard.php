@@ -148,46 +148,36 @@ get_header();
 
                     <div class="callout" data-equalizer-watch>
 
-                        <?php $zume_coaches = [ '1' ] ?>
+                        <?php
+                        $zume_coach_id = get_user_meta( $zume_current_user, 'zume_coach', true );
+                        if ( ! empty( $zume_coach_id ) ) :
+                            $zume_coach_data = get_userdata( $zume_coach_id );
+                        ?>
 
                         <div class="grid-x">
-                            <div class="cell center">
+                            <div class="cell vertical-padding">
                                 Your Coach
-                                <hr>
+
                             </div>
                         </div>
 
-	                    <?php
+                        <div class="grid-x grid-margin-x">
+                            <div class="small-2 cell">
+                                <?php echo get_avatar( $zume_coach_id, 32 ) ?>
+                            </div>
+                            <div class="small-8 cell">
+                                <?php echo $zume_coach_data->display_name; ?>
+                            </div>
+                        </div>
 
-	                    foreach ( $zume_user_meta as $key => $v ) :
-		                    $key_beginning = substr( $key, 0, 10 );
-		                    if ( 'zume_group' == $key_beginning ) : // check if zume_group
-			                    $value = maybe_unserialize( $v );
-			                    if ( true == $value['closed'] ) : // check if closed
-				                    ?>
+	                    <?php endif; ?>
 
-                                    <div class="grid-x">
-                                        <div class="small-9 cell">
-						                    <?php echo $value['group_name']; ?>
-                                        </div>
-                                        <div class="small-3 cell">
-                                            <a href="">activate</a>
-                                        </div>
-                                    </div>
+                        <hr>
 
-				                    <?php
-				                    $zume_no_groups ++;
-			                    endif; // end if closed check
-		                    endif; // end check if zume_group
-	                    endforeach;
-	                    ?>
-
-
-
-                        <div class="grid-x vertical-padding">
-                            <div class="cell center">
+                        <div class="grid-x ">
+                            <div class="cell vertical-padding">
                                 Inactive Groups
-                                <hr>
+
                             </div>
                         </div>
 

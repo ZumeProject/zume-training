@@ -3,7 +3,7 @@
 /**
  * Zúme Course Core
  *
- * @class Disciple_Tools_Admin_Menus
+ * @class Zume_Admin_Menus
  * @version    0.1
  * @since 0.1
  * @package    Disciple_Tools
@@ -17,7 +17,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 class Zume_Course {
 
     /**
-     * Disciple_Tools_Admin_Menus The single instance of Disciple_Tools_Admin_Menus.
+     * Zume_Admin_Menus The single instance of Zume_Admin_Menus.
      * @var    object
      * @access  private
      * @since    0.1
@@ -27,7 +27,7 @@ class Zume_Course {
     /**
      * Main Zume_Course Instance
      *
-     * Ensures only one instance of Disciple_Tools_Admin_Menus is loaded or can be loaded.
+     * Ensures only one instance of Zume_Admin_Menus is loaded or can be loaded.
      *
      * @since 0.1
      * @static
