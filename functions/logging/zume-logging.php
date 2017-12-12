@@ -45,11 +45,7 @@ class Zume_Logging {
 	 * @return void
 	 */
 	public static function insert( $args ) {
-		global $wpdb, $post;
-		$post_slug = $post->post_name;
-		if( empty( $post_slug ) ) {
-			$post_slug = 'not-found';
-		}
+		global $wpdb;
 
 		$args = wp_parse_args(
 			$args,
@@ -57,23 +53,11 @@ class Zume_Logging {
 				'created_date' => current_time( 'mysql' ),
 				'user_id'      => get_current_user_id(),
 				'group_id'     => '',
-				'page'         => $post_slug,
+				'page'         => '',
 				'action'       => '',
 				'meta'         => '',
 			]
 		);
-		$user = get_user_by( 'id', get_current_user_id() );
-		if ( $user ) {
-			$args['user_caps'] = strtolower( key( $user->caps ) );
-			if ( empty( $args['user_id'] ) ) {
-				$args['user_id'] = $user->ID;
-			}
-		} else {
-			$args['user_caps'] = 'guest';
-			if ( empty( $args['user_id'] ) ) {
-				$args['user_id'] = 0;
-			}
-		}
 
 		// Make sure for non duplicate.
 		$check_duplicate = $wpdb->get_row(
@@ -133,35 +117,31 @@ class Zume_Logging {
 				'user_id'  => $user->ID,
 				'group_id' => '',
 				'page'     => 'login',
-				'action'   => 'login',
+				'action'   => 'logged_in',
 				'meta'     => '',
 			]
 		);
 	}
 
 	public function hooks_user_register( $user_id ) {
-		$user = get_user_by( 'id', $user_id );
-
 		self::insert(
 			[
-				'user_id'  => $user->ID,
+				'user_id'  => $user_id,
 				'group_id' => '',
 				'page'     => 'register',
-				'action'   => 'register',
+				'action'   => 'registered',
 				'meta'     => '',
 			]
 		);
 	}
 
 	public function hooks_delete_user( $user_id ) {
-		$user = get_user_by( 'id', $user_id );
-
 		self::insert(
 			[
-				'user_id'  => $user->ID,
+				'user_id'  => $user_id,
 				'group_id' => '',
 				'page'     => 'delete_user',
-				'action'   => 'delete_user',
+				'action'   => 'deleted',
 				'meta'     => '',
 			]
 		);
@@ -175,7 +155,7 @@ class Zume_Logging {
 				'user_id'  => $user->ID,
 				'group_id' => '',
 				'page'     => 'logout',
-				'action'   => 'logout',
+				'action'   => 'logged_out',
 				'meta'     => '',
 			]
 		);
