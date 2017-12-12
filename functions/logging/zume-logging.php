@@ -45,16 +45,19 @@ class Zume_Logging {
 	 * @return void
 	 */
 	public static function insert( $args ) {
-		global $wpdb;
+		global $wpdb, $post;
+		$post_slug = $post->post_name;
+		if( empty( $post_slug ) ) {
+			$post_slug = 'not-found';
+		}
 
 		$args = wp_parse_args(
 			$args,
 			[
-				'id'           => '',
-				'created_date' => '',
-				'user_id'      => '',
+				'created_date' => current_time( 'mysql' ),
+				'user_id'      => get_current_user_id(),
 				'group_id'     => '',
-				'page'         => '',
+				'page'         => $post_slug,
 				'action'       => '',
 				'meta'         => '',
 			]
@@ -81,7 +84,7 @@ class Zume_Logging {
                     `$wpdb->zume_logging`
                 WHERE
                      `created_date` = %s
-                    AND `user_id` = %s
+                    AND `user_id` = %d
                     AND `group_id` = %s
                     AND `page` = %s
                     AND `action` = %s
