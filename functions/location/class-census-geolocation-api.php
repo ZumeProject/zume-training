@@ -1,12 +1,12 @@
 <?php
 
 /**
- * Disciple_Tools_Census_Geolocation
+ * Zume_Census_Geolocation
  *
- * @class   Disciple_Tools_Census_Geolocation
+ * @class   Zume_Census_Geolocation
  * @version 0.1.0
  * @since   0.1.0
- * @package Disciple_Tools_Tabs
+ * @package Zume_Tabs
  * @author  Chasm.Solutions
  */
 
@@ -15,7 +15,7 @@ if ( !defined( 'ABSPATH' ) ) {
 } // Exit if accessed directly
 
 /**
- * Class Disciple_Tools_Census_Geolocation
+ * Class Zume_Census_Geolocation
  */
 class Zume_Census_Geolocation
 {

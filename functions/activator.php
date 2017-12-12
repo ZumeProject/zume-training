@@ -45,9 +45,26 @@ class Zume_Activator
 		add_role(
 			'coach', __( 'Coach' ),
 			[
-				// No capabilities to this role. Must be moved to another role for permission.
+				'coach' => true
 			]
 		);
-		zume_write_log('Role added');
+		if ( get_role( 'coach_leader' ) ) {
+			remove_role( 'coach_leader' );
+		}
+		add_role(
+			'coach_leader', __( 'Coach Leader' ),
+			[
+				'coach_leader' => true
+			]
+		);
+		$role = get_role( 'administrator' );
+		// If the administrator role exists, add required capabilities for the plugin.
+		if ( !empty( $role ) ) {
+			/* Manage DT configuration */
+			$role->add_cap( 'coach' );
+			$role->add_cap( 'coach_leader' );
+		}
+
+		zume_write_log('Roles added');
 	}
 }

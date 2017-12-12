@@ -10,6 +10,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 function zume_insert_log( $args = [] ) {
 	Zume_Logging::insert( $args );
 }
+function zume_log_last_active( $user_id ) {
+	$time = current_time('mysql');
+	$result = update_user_meta( $user_id, 'zume_last_active', $time );
+	return $result;
+}
 
 class Zume_Logging {
 	/**

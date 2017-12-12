@@ -2,7 +2,7 @@
 
 /**
  * Gets Coordinates from Database
- * Disciple_Tools_Coordinates_DB
+ * Zume_Coordinates_DB
  */
 
 if ( !defined( 'ABSPATH' ) ) {
@@ -10,7 +10,7 @@ if ( !defined( 'ABSPATH' ) ) {
 } // Exit if accessed directly
 
 /**
- * Class Disciple_Tools_Coordinates_DB
+ * Class Zume_Coordinates_DB
  */
 class Zume_Coordinates_DB
 {

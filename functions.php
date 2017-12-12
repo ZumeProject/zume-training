@@ -32,6 +32,7 @@ require_once( 'functions/utilities/cleanup.php' ); // WP Head and other cleanup 
 require_once( 'functions/utilities/menu.php' ); // Register custom menus and menu walkers
 require_once( 'functions/utilities/comments.php' ); // Makes WordPress comments suck less
 require_once( 'functions/login/login.php' ); // Customize the WordPress login menu
+require_once( 'functions/multi-role/multi-role.php' ); //
 
 // Zume Core Files
 require_once( 'functions/zume-course.php' ); // zume course
@@ -39,6 +40,7 @@ $zume_course = Zume_Course::instance();
 require_once( 'functions/zume-overview.php' ); // zume overview page
 require_once( 'functions/zume-functions.php' ); // general zume functions
 require_once( 'functions/zume-dashboard.php' ); // zume dashboard
+require_once( 'functions/zume-coach.php' ); // zume dashboard
 require_once( 'functions/logging/zume-logging.php' ); // zume logging of critical path actions
 
 
