@@ -2,7 +2,7 @@
 /*
 Template Name: Zume Profile
 */
-
+zume_force_login();
 /* Process $_POST content */
 // We're not checking the nonce here because update_user_contact_info will
 // @codingStandardsIgnoreLine

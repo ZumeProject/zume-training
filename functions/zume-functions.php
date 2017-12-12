@@ -9,27 +9,7 @@
 /* Require Authentication for Zúme */
 function zume_force_login() {
 
-    // Pages that should not be redirected. Add to array exception pages.
-    $exception_pages = array(
-        'Home',
-        'Register',
-        'Activate',
-        'Complete',
-        'Overview',
-        'About',
-        'Resources'
-    );
-
-    if ( is_page( $exception_pages ) || $GLOBALS['pagenow'] === 'wp-login.php' || $GLOBALS['pagenow'] === 'index.php' ) {
-        return;
-    }
-
-    $action = isset( $_REQUEST['action'] ) ? sanitize_key( $_REQUEST['action'] ) : 'login';
-    if ( $action == 'rp' || $action == 'resetpass' ) {
-        return;
-    }
-
-    // Otherwise, if user is not logged in redirect to login
+    // if user is not logged in redirect to login
     if ( !is_user_logged_in()) {
         auth_redirect();
     }
