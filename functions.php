@@ -2,11 +2,18 @@
 /**
  * Zume Project functions root
  */
+require_once( 'functions/utilities/debugger-log.php' ); // debug logger used for development. Use z_write_log();
 
 define( 'ZUME_DOMAIN', 'zume' );
 define( 'ZUME_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
-require_once( 'functions/utilities/debugger-log.php' ); // debug logger used for development. Use z_write_log();
+define( 'ZUME_VERSION', '1.0');
 
+/**
+ * Add custom table
+ */
+global $wpdb;
+require_once 'functions/activator.php';
+$wpdb->zume_logging = $wpdb->prefix . 'zume_logging';
 
 /**
  * INCLUDED FILES
@@ -17,7 +24,6 @@ require_once( 'assets/translation/translation.php' ); // Adds support for multip
 require_once( 'functions/zume-polylang-integration.php' ); // Adds support for multiple languages
 
 // Zume Theme Files
-
 require_once( 'functions/enqueue-scripts.php' ); // Register scripts and stylesheets
 require_once( 'functions/utilities/tgm-config.php' ); // monitors required plugin dependencies
 require_once( 'functions/enqueue-scripts.php' ); // Register scripts and stylesheets
@@ -33,6 +39,8 @@ $zume_course = Zume_Course::instance();
 require_once( 'functions/zume-overview.php' ); // zume overview page
 require_once( 'functions/zume-functions.php' ); // general zume functions
 require_once( 'functions/zume-dashboard.php' ); // zume dashboard
+require_once( 'functions/logging/zume-logging.php' ); // zume logging of critical path actions
+
 
 // Locations System
 require_once( 'functions/location/group-js-maps.php' ); // loads the group address meta fields
@@ -59,3 +67,5 @@ function zume_initialize_custom_emails(){
     zume_automatically_added_to_group_email();
 }
 register_activation_hook( __FILE__, 'zume_initialize_custom_emails' );
+
+

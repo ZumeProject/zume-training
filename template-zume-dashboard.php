@@ -2,6 +2,7 @@
 /*
 Template Name: Zúme Dashboard
 */
+zume_force_login();
 
 if ( ! empty( $_POST ) ) {
     if ( ! empty( $_POST['type'] ) && $_POST['type'] == 'create' ) {
@@ -45,9 +46,9 @@ get_header();
                             </li>
 
                             <?php
+                            $zume_no_groups = 0;
                             foreach ( $zume_user_meta as $key => $v ) {
                                 $key_beginning = substr( $key, 0, 10 );
-                                $no_groups = 0;
                                 if ( 'zume_group' == $key_beginning ) {
                                     $value = maybe_unserialize( $v );
                                     ?>
@@ -70,39 +71,39 @@ get_header();
                                             <div class="large-6 cell">
                                                 <ul class="pagination" role="navigation" aria-label="Pagination">
                                                     <li class="<?php ( $value['session_1'] ) ? print 'current' : print ''; ?>">
-                                                        <a href="<?php echo zume_get_posts_translation_url( 'course', $zume_current_lang ) . '/?group=' . $key . '&session=1'; ?>">1</a>
+                                                        <a href="<?php echo zume_course_url() . '/?group=' . $key . '&session=1'; ?>">1</a>
                                                     </li>
                                                     <li class="<?php ( $value['session_2'] ) ? print 'current' : print ''; ?>">
-                                                        <a href="<?php echo zume_get_posts_translation_url( 'course', $zume_current_lang ) . '/?group=' . $key . '&session=2'; ?>">2</a>
+                                                        <a href="<?php echo zume_course_url() . '/?group=' . $key . '&session=2'; ?>">2</a>
                                                     </li>
                                                     <li class="<?php ( $value['session_3'] ) ? print 'current' : print ''; ?>">
-                                                        <a href="<?php echo zume_get_posts_translation_url( 'course', $zume_current_lang ) . '/?group=' . $key . '&session=3'; ?>">3</a>
+                                                        <a href="<?php echo zume_course_url() . '/?group=' . $key . '&session=3'; ?>">3</a>
                                                     </li>
                                                     <li class="<?php ( $value['session_4'] ) ? print 'current' : print ''; ?>">
-                                                        <a href="<?php echo zume_get_posts_translation_url( 'course', $zume_current_lang ) . '/?group=' . $key . '&session=4'; ?>">4</a>
+                                                        <a href="<?php echo zume_course_url() . '/?group=' . $key . '&session=4'; ?>">4</a>
                                                     </li>
                                                     <li class="<?php ( $value['session_5'] ) ? print 'current' : print ''; ?>">
-                                                        <a href="<?php echo zume_get_posts_translation_url( 'course', $zume_current_lang ) . '/?group=' . $key . '&session=5'; ?>">5</a>
+                                                        <a href="<?php echo zume_course_url() . '/?group=' . $key . '&session=5'; ?>">5</a>
                                                     </li>
                                                     <li class="<?php ( $value['session_6'] ) ? print 'current' : print ''; ?>">
-                                                        <a href="<?php echo zume_get_posts_translation_url( 'course', $zume_current_lang ) . '/?group=' . $key . '&session=6'; ?>">6</a>
+                                                        <a href="<?php echo zume_course_url() . '/?group=' . $key . '&session=6'; ?>">6</a>
                                                     </li>
                                                     <li class="<?php ( $value['session_7'] ) ? print 'current' : print ''; ?>">
-                                                        <a href="<?php echo zume_get_posts_translation_url( 'course', $zume_current_lang ) . '/?group=' . $key . '&session=7'; ?>">7</a>
+                                                        <a href="<?php echo zume_course_url() . '/?group=' . $key . '&session=7'; ?>">7</a>
                                                     </li>
                                                     <li class="<?php ( $value['session_8'] ) ? print 'current' : print ''; ?>">
-                                                        <a href="<?php echo zume_get_posts_translation_url( 'course', $zume_current_lang ) . '/?group=' . $key . '&session=8'; ?>">8</a>
+                                                        <a href="<?php echo zume_course_url() . '/?group=' . $key . '&session=8'; ?>">8</a>
                                                     </li>
                                                     <li class="<?php ( $value['session_9'] ) ? print 'current' : print ''; ?>">
-                                                        <a href="<?php echo zume_get_posts_translation_url( 'course', $zume_current_lang ) . '/?group=' . $key . '&session=9'; ?>">9</a>
+                                                        <a href="<?php echo zume_course_url() . '/?group=' . $key . '&session=9'; ?>">9</a>
                                                     </li>
                                                     <li class="<?php ( $value['session_10'] ) ? print 'current' : print ''; ?>">
-                                                        <a href="<?php echo zume_get_posts_translation_url( 'course', $zume_current_lang ) . '/?group=' . $key . '&session=10'; ?>">10</a>
+                                                        <a href="<?php echo zume_course_url() . '/?group=' . $key . '&session=10'; ?>">10</a>
                                                     </li>
                                                 </ul>
 
                                                 <div class="button-group">
-                                                    <a href="<?php echo zume_get_posts_translation_url( 'course', $zume_current_lang ) . '/?group=' . $key . '&session=' . $value['next_session']; ?>" class="button hollow">
+                                                    <a href="<?php echo zume_course_url() . '/?group=' . $key . '&session=' . $value['next_session']; ?>" class="button hollow">
                                                         Start Next Session <?php print $value['next_session'] ?>
                                                     </a>
                                                 </div>
@@ -111,13 +112,13 @@ get_header();
                                         </div>
                                     </li>
                                     <?php
-                                    $no_groups++;
+                                    $zume_no_groups++;
                                 }
                             }
 
                             ?>
 
-                            <?php if ( $no_groups < 1 ) : ?>
+                            <?php if ( $zume_no_groups < 1 ) : ?>
 
                             <div class="grid-x grid-margin-x vertical-padding">
                                 <div class="large-8 large-offset-2 cell center">
@@ -192,7 +193,7 @@ get_header();
 <?php
 foreach ( $zume_user_meta as $key => $v ) {
     $key_beginning = substr( $key, 0, 10 );
-    $no_groups     = 0;
+    $zume_no_groups     = 0;
     if ( $key_beginning == 'zume_group' ) {
         $value = unserialize( $v );
         ?>
@@ -236,7 +237,7 @@ foreach ( $zume_user_meta as $key => $v ) {
         </div>
 
         <?php
-        $no_groups ++;
+        $zume_no_groups ++;
     }
 }
 
