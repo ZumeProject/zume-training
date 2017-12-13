@@ -42,11 +42,11 @@ get_header();
 
                     <div class="callout" data-equalizer-watch>
                         <p class="center">
-                            <button class="button hollow small" data-open="create">Start New Group</button>
+                            <button class="button hollow small" data-open="create"><?php echo esc_html__( 'Start New Group', 'zume' ) ?></button>
                         </p>
                         <ul id="groups-list" class="item-list">
                             <li class="block">
-                                <h2 class="center">Your Groups</h2>
+                                <h2 class="center"><?php echo esc_html__( 'Your Groups', 'zume' ) ?></h2>
                             </li>
 
                             <?php
@@ -70,7 +70,7 @@ get_header();
                                                 </p>
 
                                                 <button class="small" data-open="<?php echo esc_html( $key ); ?>">
-                                                    <i class="fi-pencil hollow"></i> edit
+                                                    <i class="fi-pencil hollow"></i> <?php echo esc_html__( 'edit', 'zume' ) ?>
                                                 </button>
                                             </div>
                                             <div class="large-6 cell">
@@ -140,7 +140,7 @@ get_header();
                             <?php endif; ?>
 
                             <p class="center vertical-padding">
-                                <button class="button hollow small" data-open="create">Start New Group</button>
+                                <button class="button hollow small" data-open="create"><?php echo esc_html__( 'Start New Group', 'zume' ) ?></button>
                             </p>
 
                     </div>
@@ -158,7 +158,7 @@ get_header();
 
                         <div class="grid-x">
                             <div class="cell vertical-padding">
-                                Your Coach
+                                <?php echo esc_html__( 'Your Coach', 'zume' ) ?>
 
                             </div>
                         </div>
@@ -178,7 +178,7 @@ get_header();
 
                         <div class="grid-x ">
                             <div class="cell vertical-padding">
-                                Inactive Groups
+                                <?php echo esc_html__( 'Inactive Groups', 'zume' ) ?>
 
                             </div>
                         </div>
@@ -197,7 +197,7 @@ get_header();
                                             <?php echo esc_html( $value['group_name'] ); ?>
                                         </div>
                                         <div class="small-3 cell">
-                                            <a href="">activate</a>
+                                            <a href=""><?php echo esc_html__( 'activate', 'zume' ) ?></a>
                                         </div>
                                     </div>
 
@@ -224,31 +224,31 @@ get_header();
 
 <!-- Create a New Group Modal -->
 <div class="small reveal" id="create" data-reveal>
-    <h1>Create Group</h1>
+    <h1><?php echo esc_html__( 'Create Group', 'zume' ) ?></h1>
     <form action="" method="post">
         <input type="hidden" name="type" value="create"/>
         <input type="hidden" name="ip_address" value="<?php echo esc_html( zume_get_real_ip_address() ); ?>"/>
         <div class="grid-x grid-margin-x">
             <div class="cell">
-                <label for="group_name">Group Name</label>
+                <label for="group_name"><?php echo esc_html__( 'Group Name', 'zume' ) ?></label>
                 <input type="text" value="" name="group_name" id="group_name" required/>
             </div>
             <div class="cell">
-                <label for="members">Number of Participants</label>
+                <label for="members"><?php echo esc_html__( 'Number of Participants', 'zume' ) ?></label>
                 <input type="text" value="" name="members" id="members" required/>
             </div>
             <div class="cell">
-                <label for="meeting_time">Planned Meeting Time</label>
+                <label for="meeting_time"><?php echo esc_html__( 'Planned Meeting Time', 'zume' ) ?></label>
                 <input type="text" value="" name="meeting_time" id="meeting_time" required/>
             </div>
             <div class="cell">
-                <label for="address">Address</label>
+                <label for="address"><?php echo esc_html__( 'Address', 'zume' ) ?></label>
                 <input type="text" value="" placeholder="Please enter the full address for the group meeting"
                        name="address" id="address" required/>
             </div>
             <div class="cell">
                 <br>
-                <button type="submit" class="button">Submit</button>
+                <button type="submit" class="button"><?php echo esc_html__( 'Submit', 'zume' ) ?></button>
             </div>
         </div>
 
@@ -268,33 +268,33 @@ foreach ( $zume_user_meta as $key => $v ) {
 
         <!-- Edit current groups section -->
         <div class="small reveal" id="<?php echo esc_html( $key ); ?>" data-reveal>
-            <h1>Edit Group</h1>
+            <h1><?php echo esc_html__( 'Edit Group', 'zume' ) ?></h1>
             <form method="post">
 
                 <input type="hidden" name="key" value="<?php echo esc_html( $key ); ?>"/>
                 <div class="grid-x grid-margin-x">
                     <div class="cell">
-                        <label for="group_name">Group Name</label>
+                        <label for="group_name"><?php echo esc_html__( 'Group Name', 'zume' ) ?></label>
                         <input type="text" value="<?php echo esc_html( $value['group_name'] ); ?>" name="group_name" id="group_name" required/>
                     </div>
                     <div class="cell">
-                        <label for="members">Number of Participants</label>
+                        <label for="members"><?php echo esc_html__( 'Number of Participants', 'zume' ) ?></label>
                         <input type="text" value="<?php echo esc_html( $value['members'] ); ?>" name="members" id="members" required/>
                     </div>
                     <div class="cell">
-                        <label for="meeting_time">Planned Meeting Time</label>
+                        <label for="meeting_time"><?php echo esc_html__( 'Planned Meeting Time', 'zume' ) ?></label>
                         <input type="text" value="<?php echo esc_html( $value['meeting_time'] ); ?>" name="meeting_time" id="meeting_time" required/>
                     </div>
                     <div class="cell">
-                        <label for="address">Address</label>
+                        <label for="address"><?php echo esc_html__( 'Address', 'zume' ) ?></label>
                         <input type="text" value="<?php echo esc_html( $value['address'] ); ?>" name="address"
                                id="address" required/>
                     </div>
                     <div class="cell">
                         <br>
-                        <button type="submit" class="button" name="type" value="edit">Update</button>
-                        <span class="align-right"><button type="submit" class="button hollow alert" name="type" value="delete">Delete</button></span>
-                        <span class="align-right"><button type="submit" class="button hollow alert" name="type" value="closed">Make Inactive</button></span>
+                        <button type="submit" class="button" name="type" value="edit"><?php echo esc_html__( 'Update', 'zume' ) ?></button>
+                        <span class="align-right"><button type="submit" class="button hollow alert" name="type" value="delete"><?php echo esc_html__( 'Delete', 'zume' ) ?></button></span>
+                        <span class="align-right"><button type="submit" class="button hollow alert" name="type" value="closed"><?php echo esc_html__( 'Make Inactive', 'zume' ) ?></button></span>
                     </div>
                 </div>
 
