@@ -32,7 +32,9 @@ require_once( 'functions/utilities/cleanup.php' ); // WP Head and other cleanup 
 require_once( 'functions/utilities/menu.php' ); // Register custom menus and menu walkers
 require_once( 'functions/utilities/comments.php' ); // Makes WordPress comments suck less
 require_once( 'functions/login/login.php' ); // Customize the WordPress login menu
-require_once( 'functions/multi-role/multi-role.php' ); //
+require_once( 'functions/multi-role/multi-role.php' ); // Adds multi role features
+require_once( 'functions/restrict-rest-api.php' ); // Restricts the default REST API to logged in users
+require_once( 'functions/restrict-xml-rpc-pingback.php' ); // Restricts RPC vulnerability
 
 // Zume Core Files
 require_once( 'functions/zume-course.php' ); // zume course
