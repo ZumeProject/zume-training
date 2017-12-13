@@ -11,13 +11,13 @@ zume_force_login();
 if ( empty( $_GET['group'] ) || empty( $_GET['session'] ) ) {
 	wp_die( 'You are missing your group or session number. <a href="/">Head back to your dashboard</a>' );
 }
-$zume_group_key    = sanitize_key( wp_unslash( $_GET['group'] ) );
-$zume_session      = sanitize_key( wp_unslash( $_GET['session'] ) );
-isset( $_GET['viewing'] ) ? $isset_viewing = true : $isset_viewing = false;
+$zume_group_key = sanitize_key( wp_unslash( $_GET['group'] ) );
+$zume_session   = sanitize_key( wp_unslash( $_GET['session'] ) );
+isset( $_POST['viewing'] ) ? $isset_viewing = true : $isset_viewing = false;
 
 $zume_current_user = get_current_user_id();
 
-$zume_user_meta    = array_map( function ( $a ) {
+$zume_user_meta = array_map( function ( $a ) {
 	return $a[0];
 }, get_user_meta( $zume_current_user ) );
 
@@ -38,25 +38,48 @@ get_header();
 				 * Load Zume Course Content
 				 */
 
-				if( $isset_viewing ) {
-					$viewing = sanitize_key( wp_unslash( $_GET['viewing'] ) );
-				    switch( $viewing ) {
-                        case 'group':
-	                        Zume_Course::update_session_complete( $zume_group_key, $zume_session );
-
-	                        Zume_Course_Content::get_course_content( $zume_session );
-                            break;
-                        case 'member':
-	                        Zume_Course::update_session_complete( $zume_group_key, $zume_session );
-	                        Zume_Course_Content::get_course_content( $zume_session );
-                            break;
-                        case 'explore':
-	                        Zume_Course_Content::get_course_content( $zume_session );
-                            break;
-                    }
-                } else {
-                    Zume_Course_Content::course_start_panel();
-                }
+				if ( $isset_viewing ) {
+					$viewing = sanitize_key( wp_unslash( $_POST['viewing'] ) );
+					switch ( $viewing ) {
+						case 'group':
+							Zume_Course::update_session_complete( $zume_group_key, $zume_session );
+							Zume_Course_Content::get_course_content( $zume_session );
+							zume_insert_log( [
+								'user_id'  => get_current_user_id(),
+								'group_id' => $zume_group_key,
+								'page'     => 'course',
+								'action'   => 'session_' . $zume_session,
+								'meta'     => 'group',
+							] );
+							break;
+						case 'member':
+							Zume_Course::update_session_complete( $zume_group_key, $zume_session );
+							Zume_Course_Content::get_course_content( $zume_session );
+							zume_insert_log( [
+								'user_id'  => get_current_user_id(),
+								'group_id' => $zume_group_key,
+								'page'     => 'course',
+								'action'   => 'session_' . $zume_session,
+								'meta'     => 'member',
+							] );
+							break;
+						case 'explore':
+							Zume_Course_Content::get_course_content( $zume_session );
+							zume_insert_log( [
+								'user_id'  => get_current_user_id(),
+								'group_id' => $zume_group_key,
+								'page'     => 'course',
+								'action'   => 'session_' . $zume_session,
+								'meta'     => 'explore',
+							] );
+							break;
+						default:
+							wp_die( 'You need a correctly formatted URL. This can happen if you came here from somewhere other than the dashboard. <a href="/">Head back to your dashboard and try again.</a>' );
+							break;
+					}
+				} else {
+					Zume_Course_Content::course_start_panel( $zume_session );
+				}
 
 				?>
 
@@ -110,15 +133,7 @@ class Zume_Course_Content {
                         without triggering hashchange */ ?>
                         history.replaceState(null, null, newHash);
                     },
-                    onStepChanging: function (event, currentIndex, newIndex) {
-                        if (currentIndex === 0) { /* check attendance requirement */
-                            var n = jQuery( "input:checked" ).length;
-                            if ( n < 4 ) {
-                                return false;
-                            }
-                        }
-                        return true;
-                    },
+
                     onFinishing: function (event, currentIndex) {
                         window.location.replace("<?php echo zume_dashboard_url() ?>")
                     },
@@ -179,83 +194,45 @@ class Zume_Course_Content {
         </div>
 		<?php
 	}
-	
-	public static function course_start_panel() {
-	    ?>
+
+	public static function course_start_panel( $zume_session ) {
+		?>
         <h3></h3>
         <section><!-- Step Title -->
-            <div class="grid-x grid-margin-x grid-margin-y">
-                <div class="step-title cell">READY TO START?</div>
-            </div><!-- grid-x -->
 
-            <!-- Activity Block -->
-            <!--<div class="grid-x grid-margin-x grid-margin-y">
-                <div class="large-3"></div>
-                <div class="large-6 cell">
-                    <ul id="attendance-list" style="list-style-type: none;">
-                        <li class="attendance-list"><div class="switch" style="width:100px; float:right;">
+            <form action="" method="post">
 
-                                <input class="switch-input" id="start-leading" type="checkbox" name="leading">
-                                <label class="switch-paddle" for="start-leading">
-                                    <span class="show-for-sr">member name</span>
-                                </label>
+                <!-- Activity Block -->
+                <div class="grid-x grid-margin-x grid-margin-y">
+                    <div class="large-4"></div>
+                    <div class="large-4 cell center">
+                        <p>Welcome to Session <?php echo $zume_session; ?></p>
+                        <h2>Which are you doing right now?</h2>
+                        <br>
+                        <button type="submit" class="button large expanded" name="viewing" value="group">Facilitating a Group
+                        </button>
+                        <br>
+                        <button type="submit" class="button large expanded" name="viewing" value="member">Participating in a
+                            Group
+                        </button>
+                        <br>
+                        <button type="submit" class="button large expanded" name="viewing" value="explore">Exploring the
+                            Session Content
+                        </button>
 
-                            </div>Are you facilitating this group?</li>
-                        <li class="attendance-list">How many are with you? <input type="text" id="members" name="members" /> </li>
-                    </ul>
-                </div>
-                <div class="large-3"></div>
-            </div>-->
-            <!-- grid-x -->
-            <hr>
-            <!-- Activity Block -->
-            <div class="grid-x grid-margin-x grid-margin-y">
-                <div class="large-3"></div>
-                <div class="large-6 cell">
 
-                    <div class="switch starter-switch">
-                        <input class="switch-input" id="exampleRadioSwitch1" type="radio" checked name="testGroup">
-                        <label class="switch-paddle" for="exampleRadioSwitch1">
-                            <span class="show-for-sr">Bulbasaur</span>
-                        </label>
                     </div>
-
-                    <div class="switch starter-switch">
-                        <input class="switch-input" id="exampleRadioSwitch2" type="radio" name="testGroup">
-                        <label class="switch-paddle" for="exampleRadioSwitch2">
-                            <span class="show-for-sr">Bulbasaur</span>
-                        </label>
-                    </div>
-
-                    <div class="switch starter-switch">
-                        <input class="switch-input" id="exampleRadioSwitch3" type="radio" name="testGroup">
-                        <label class="switch-paddle" for="exampleRadioSwitch3">
-                            <span class="show-for-sr">Bulbasaur</span>
-                        </label>
-                    </div>
-
+                    <div class="large-4"></div>
                 </div>
-                <div class="large-3"></div>
-            </div>
-            <!-- grid-x -->
-            <!-- Activity Block -->
-            <!--<div class="grid-x grid-margin-x grid-margin-y">
-                <div class="large-3"></div>
-                <div class="large-6 cell">
-                    Are you just exploring the content?
-                    (Choose this so we don't mark your progress as complete yet)
-                </div>
-                <div class="large-3"></div>
-            </div>-->
-            <!-- grid-x -->
-                        
+            </form>
+
         </section>
-        <?php
-    }
+		<?php
+	}
 
 	public static function get_course_content_1() {
-	    self::course_start_panel();
-	    ?>
+
+		?>
         <h3></h3>
         <section><!-- Step Title -->
             <div class="grid-x grid-margin-x grid-margin-y">
@@ -274,12 +251,13 @@ class Zume_Course_Content {
                 </div>
                 <div class="large-8 large-offset-4 cell activity-description">
                     <a class="button"
-                         style="background-color: #21336a; color: white;"
-                         href="<?php echo home_url( '/wp-content/themes/zume-project-multilingual/assets/files/' ) . zume_current_language() . '/'; ?>zume-guide-4039811470.pdf"
-                         target="_blank" rel="noopener">
+                       style="background-color: #21336a; color: white;"
+                       href="<?php echo home_url( '/wp-content/themes/zume-project-multilingual/assets/files/' ) . zume_current_language() . '/'; ?>zume-guide-4039811470.pdf"
+                       target="_blank" rel="noopener">
                         <img class="alignnone size-full wp-image-1321"
-                                src="<?php echo home_url( '/wp-content/themes/zume-project-multilingual/assets/images/course/' ) ?>download-icon-150x150.png" alt="Download" width="29"
-                                height="26"/> GUIDEBOOK</a></div>
+                             src="<?php echo home_url( '/wp-content/themes/zume-project-multilingual/assets/images/course/' ) ?>download-icon-150x150.png"
+                             alt="Download" width="29"
+                             height="26"/> GUIDEBOOK</a></div>
             </div>
             <!-- grid-x -->
 
@@ -288,10 +266,10 @@ class Zume_Course_Content {
         <section><!-- Step Title -->
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="step-title cell">GROUP PRAYER (5min)</div>
-
+            </div>
                 <!-- Activity Block -->
                 <div class="grid-x grid-margin-x grid-margin-y single">
-                    <div class="large-8 cell activity-description well">
+                    <div class="large-8 cell activity-description well center">
 
                         Begin with prayer. Spiritual insight and transformation is not possible without the Holy Spirit.
                         Take time as a group to invite Him to guide you over this session.
@@ -322,13 +300,15 @@ class Zume_Course_Content {
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="small-12 small-centered cell">
                     <div class="flex-video widescreen">
-                        <iframe src="https://player.vimeo.com/video/246841605" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                        <iframe src="https://player.vimeo.com/video/246841605" width="640" height="360" frameborder="0"
+                                webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
                     </div>
 
                     <p class="center"><a
                                 href="https://zumeproject.com/wp-content/uploads/Zume_Video_Scripts_Welcome.pdf"
                                 target="_blank"><img
-                                    src="<?php echo home_url( '/wp-content/themes/zume-project-multilingual/assets/images/course/' ) ?>download-icon-150x150.png" alt=""
+                                    src="<?php echo home_url( '/wp-content/themes/zume-project-multilingual/assets/images/course/' ) ?>download-icon-150x150.png"
+                                    alt=""
                                     width="35" height="35" class="alignnone size-thumbnail wp-image-3274"
                                     style="vertical-align: text-bottom"/> Zúme Video Scripts: Welcome</a></p>
                 </div>
@@ -366,13 +346,15 @@ class Zume_Course_Content {
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="small-12 small-centered cell">
                     <div class="flex-video widescreen">
-                        <iframe src="https://player.vimeo.com/video/246841605" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                        <iframe src="https://player.vimeo.com/video/246841605" width="640" height="360" frameborder="0"
+                                webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
                     </div>
 
                     <p class="center"><a
                                 href="https://zumeproject.com/wp-content/uploads/Zume_Video_Scripts_Teach_Them_to_Obey.pdf"
                                 target="_blank"><img
-                                    src="<?php echo home_url( '/wp-content/themes/zume-project-multilingual/assets/images/course/' ) ?>download-icon-150x150.png" alt=""
+                                    src="<?php echo home_url( '/wp-content/themes/zume-project-multilingual/assets/images/course/' ) ?>download-icon-150x150.png"
+                                    alt=""
                                     width="35" height="35" class="alignnone size-thumbnail wp-image-3274"
                                     style="vertical-align: text-bottom"/> Zúme Video Scripts: Teach Them to Obey</a></p>
                 </div>
@@ -417,13 +399,15 @@ class Zume_Course_Content {
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="small-12 small-centered cell">
                     <div class="flex-video widescreen">
-                        <iframe src="https://player.vimeo.com/video/246841605" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                        <iframe src="https://player.vimeo.com/video/246841605" width="640" height="360" frameborder="0"
+                                webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
                     </div>
 
                     <p class="center"><a
                                 href="https://zumeproject.com/wp-content/uploads/Zume_Video_Scripts_Spiritual_Breathing.pdf"
                                 target="_blank"><img
-                                    src="<?php echo home_url( '/wp-content/themes/zume-project-multilingual/assets/images/course/' ) ?>download-icon-150x150.png" alt=""
+                                    src="<?php echo home_url( '/wp-content/themes/zume-project-multilingual/assets/images/course/' ) ?>download-icon-150x150.png"
+                                    alt=""
                                     width="35" height="35" class="alignnone size-thumbnail wp-image-3274"
                                     style="vertical-align: text-bottom"/> Zúme Video Scripts: Spiritual Breathing</a>
                     </p>
@@ -472,12 +456,14 @@ class Zume_Course_Content {
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="small-12 small-centered cell">
                     <div class="flex-video widescreen">
-                        <iframe src="https://player.vimeo.com/video/246841605" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                        <iframe src="https://player.vimeo.com/video/246841605" width="640" height="360" frameborder="0"
+                                webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
                     </div>
 
                     <p class="center"><a href="https://zumeproject.com/wp-content/uploads/Zume_Video_Scripts_SOAPS.pdf"
                                          target="_blank"><img
-                                    src="<?php echo home_url( '/wp-content/themes/zume-project-multilingual/assets/images/course/' ) ?>download-icon-150x150.png" alt=""
+                                    src="<?php echo home_url( '/wp-content/themes/zume-project-multilingual/assets/images/course/' ) ?>download-icon-150x150.png"
+                                    alt=""
                                     width="35" height="35" class="alignnone size-thumbnail wp-image-3274"
                                     style="vertical-align: text-bottom"/> Zúme Video Scripts: SOAPS</a></p>
                 </div>
@@ -513,13 +499,15 @@ class Zume_Course_Content {
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="small-12 small-centered cell">
                     <div class="flex-video widescreen">
-                        <iframe src="https://player.vimeo.com/video/246841605" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                        <iframe src="https://player.vimeo.com/video/246841605" width="640" height="360" frameborder="0"
+                                webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
                     </div>
 
                     <p class="center"><a
                                 href="https://zumeproject.com/wp-content/uploads/Zume_Video_Scripts_Accountability_Groups.pdf"
                                 target="_blank"><img
-                                    src="<?php echo home_url( '/wp-content/themes/zume-project-multilingual/assets/images/course/' ) ?>download-icon-150x150.png" alt=""
+                                    src="<?php echo home_url( '/wp-content/themes/zume-project-multilingual/assets/images/course/' ) ?>download-icon-150x150.png"
+                                    alt=""
                                     width="35" height="35" class="alignnone size-thumbnail wp-image-3274"
                                     style="vertical-align: text-bottom"/> Zúme Video Scripts: Accountability Groups</a>
                 </div>
@@ -551,7 +539,8 @@ class Zume_Course_Content {
                     Spend the next 45 minutes working together through Accountability Questions - List 2 in the
                     "Accountability Groups" section of your
                     <a class="btn btn-large next-step zume-purple uppercase bg-white font-zume-purple big-btn btn-wide"
-                       href="<?php echo home_url( '/wp-content/themes/zume-project-multilingual/assets/files/' ) . zume_current_language() . '/'; ?>zume-guide-4039811470.pdf" target="_blank" rel="noopener"><i
+                       href="<?php echo home_url( '/wp-content/themes/zume-project-multilingual/assets/files/' ) . zume_current_language() . '/'; ?>zume-guide-4039811470.pdf"
+                       target="_blank" rel="noopener"><i
                                 class="glyphicon glyphicon-download-alt"></i> Zúme Guidebook</a>.
 
                 </div>
@@ -688,13 +677,15 @@ class Zume_Course_Content {
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="small-12 small-centered cell">
                     <div class="flex-video widescreen">
-                        <iframe src="https://player.vimeo.com/video/246841605" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                        <iframe src="https://player.vimeo.com/video/246841605" width="640" height="360" frameborder="0"
+                                webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
                     </div>
 
                     <p class="center"><a
                                 href="https://zumeproject.com/wp-content/uploads/Zume_Video_Scripts_Producers_vs_Consumers.pdf"
                                 target="_blank"><img
-                                    src="<?php echo home_url( '/wp-content/themes/zume-project-multilingual/assets/images/course/' ) ?>download-icon-150x150.png" alt=""
+                                    src="<?php echo home_url( '/wp-content/themes/zume-project-multilingual/assets/images/course/' ) ?>download-icon-150x150.png"
+                                    alt=""
                                     width="35" height="35" class="alignnone size-thumbnail wp-image-3274"
                                     style="vertical-align: text-bottom"/> Zúme Video Scripts: Producers vs Consumers</a>
                     </p>
@@ -737,13 +728,15 @@ class Zume_Course_Content {
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="small-12 small-centered cell">
                     <div class="flex-video widescreen">
-                        <iframe src="https://player.vimeo.com/video/246841605" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                        <iframe src="https://player.vimeo.com/video/246841605" width="640" height="360" frameborder="0"
+                                webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
                     </div>
 
                     <p class="center"><a
                                 href="https://zumeproject.com/wp-content/uploads/Zume_Video_Scripts_Prayer_Cycle.pdf"
                                 target="_blank"><img
-                                    src="<?php echo home_url( '/wp-content/themes/zume-project-multilingual/assets/images/course/' ) ?>download-icon-150x150.png" alt=""
+                                    src="<?php echo home_url( '/wp-content/themes/zume-project-multilingual/assets/images/course/' ) ?>download-icon-150x150.png"
+                                    alt=""
                                     width="35" height="35" class="alignnone size-thumbnail wp-image-3274"
                                     style="vertical-align: text-bottom"/> Zúme Video Scripts:Prayer Cycle</a></p>
                 </div>
@@ -820,13 +813,15 @@ class Zume_Course_Content {
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="small-12 small-centered cell">
                     <div class="flex-video widescreen">
-                        <iframe src="https://player.vimeo.com/video/246841605" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                        <iframe src="https://player.vimeo.com/video/246841605" width="640" height="360" frameborder="0"
+                                webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
                     </div>
 
                     <p class="center"><a
                                 href="https://zumeproject.com/wp-content/uploads/Zume_Video_Scripts_List_of_100.pdf"
                                 target="_blank"><img
-                                    src="<?php echo home_url( '/wp-content/themes/zume-project-multilingual/assets/images/course/' ) ?>download-icon-150x150.png" alt=""
+                                    src="<?php echo home_url( '/wp-content/themes/zume-project-multilingual/assets/images/course/' ) ?>download-icon-150x150.png"
+                                    alt=""
                                     width="35" height="35" class="alignnone size-thumbnail wp-image-3274"
                                     style="vertical-align: text-bottom"/> Zúme Video Scripts: List of 100</a></p>
                 </div>
@@ -968,12 +963,14 @@ class Zume_Course_Content {
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="small-12 small-centered cell">
                     <div class="flex-video widescreen">
-                        <iframe src="https://player.vimeo.com/video/246841605" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                        <iframe src="https://player.vimeo.com/video/246841605" width="640" height="360" frameborder="0"
+                                webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
                     </div>
 
                     <p class="center"><a
                                 href="https://zumeproject.com/wp-content/uploads/Zume_Video_Scripts_Spiritual_Economy.pdf"><img
-                                    src="<?php echo home_url( '/wp-content/themes/zume-project-multilingual/assets/images/course/' ) ?>download-icon-150x150.png" alt=""
+                                    src="<?php echo home_url( '/wp-content/themes/zume-project-multilingual/assets/images/course/' ) ?>download-icon-150x150.png"
+                                    alt=""
                                     width="35" height="35" class="alignnone size-thumbnail wp-image-3274"
                                     style="vertical-align: text-bottom"/> Zúme Video Scripts: Spiritual Economy</a></p>
                 </div>
@@ -1053,12 +1050,14 @@ class Zume_Course_Content {
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="small-12 small-centered cell">
                     <div class="flex-video widescreen">
-                        <iframe src="https://player.vimeo.com/video/246841605" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                        <iframe src="https://player.vimeo.com/video/246841605" width="640" height="360" frameborder="0"
+                                webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
                     </div>
 
                     <p class="center"><a
                                 href="https://zumeproject.com/wp-content/uploads/Zume_Video_Scripts_Creation_to_Judgement.pdf"><img
-                                    src="<?php echo home_url( '/wp-content/themes/zume-project-multilingual/assets/images/course/' ) ?>download-icon-150x150.png" alt=""
+                                    src="<?php echo home_url( '/wp-content/themes/zume-project-multilingual/assets/images/course/' ) ?>download-icon-150x150.png"
+                                    alt=""
                                     width="35" height="35" class="alignnone size-thumbnail wp-image-3274"
                                     style="vertical-align: text-bottom"/> Zúme Video Scripts: Creation to Judgement</a>
                     </p>
@@ -1121,12 +1120,14 @@ class Zume_Course_Content {
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="small-12 small-centered cell">
                     <div class="flex-video widescreen">
-                        <iframe src="https://player.vimeo.com/video/246841605" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                        <iframe src="https://player.vimeo.com/video/246841605" width="640" height="360" frameborder="0"
+                                webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
                     </div>
 
                     <p class="center"><a
                                 href="https://zumeproject.com/wp-content/uploads/Zume_Video_Scripts_Baptism.pdf"><img
-                                    src="<?php echo home_url( '/wp-content/themes/zume-project-multilingual/assets/images/course/' ) ?>download-icon-150x150.png" alt=""
+                                    src="<?php echo home_url( '/wp-content/themes/zume-project-multilingual/assets/images/course/' ) ?>download-icon-150x150.png"
+                                    alt=""
                                     width="35" height="35" class="alignnone size-thumbnail wp-image-3274"
                                     style="vertical-align: text-bottom"/> Zúme Video Scripts: Baptism</a></p>
                 </div>
@@ -1278,13 +1279,15 @@ class Zume_Course_Content {
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="small-12 small-centered cell">
                     <div class="flex-video widescreen">
-                        <iframe src="https://player.vimeo.com/video/246841605" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                        <iframe src="https://player.vimeo.com/video/246841605" width="640" height="360" frameborder="0"
+                                webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
                     </div>
 
                     <p class="center"><a
                                 href="https://zumeproject.com/wp-content/uploads/Zume_Video_Scripts_Testimony.pdf"
                                 target="_blank"><img
-                                    src="<?php echo home_url( '/wp-content/themes/zume-project-multilingual/assets/images/course/' ) ?>download-icon-150x150.png" alt=""
+                                    src="<?php echo home_url( '/wp-content/themes/zume-project-multilingual/assets/images/course/' ) ?>download-icon-150x150.png"
+                                    alt=""
                                     width="35" height="35" class="alignnone size-thumbnail wp-image-3274"
                                     style="vertical-align: text-bottom"/> Zúme Video Scripts: Testimony</a></p>
                 </div>
@@ -1337,13 +1340,15 @@ class Zume_Course_Content {
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="small-12 small-centered cell">
                     <div class="flex-video widescreen">
-                        <iframe src="https://player.vimeo.com/video/246841605" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                        <iframe src="https://player.vimeo.com/video/246841605" width="640" height="360" frameborder="0"
+                                webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
                     </div>
 
                     <p class="center"><a
                                 href="https://zumeproject.com/wp-content/uploads/Zume_Video_Scripts_Greatest_Blessing.pdf"
                                 target="_blank"><img
-                                    src="<?php echo home_url( '/wp-content/themes/zume-project-multilingual/assets/images/course/' ) ?>download-icon-150x150.png" alt=""
+                                    src="<?php echo home_url( '/wp-content/themes/zume-project-multilingual/assets/images/course/' ) ?>download-icon-150x150.png"
+                                    alt=""
                                     width="35" height="35" class="alignnone size-thumbnail wp-image-3274"
                                     style="vertical-align: text-bottom"/> Zúme Video Scripts: Greatest Blessing</a></p>
                 </div>
@@ -1390,13 +1395,15 @@ class Zume_Course_Content {
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="small-12 small-centered cell">
                     <div class="flex-video widescreen">
-                        <iframe src="https://player.vimeo.com/video/246841605" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                        <iframe src="https://player.vimeo.com/video/246841605" width="640" height="360" frameborder="0"
+                                webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
                     </div>
 
                     <p class="center">
                         <a href="https://zumeproject.com/wp-content/uploads/Duckling-discipleship.pdf"
-                                         target="_blank"><img
-                                    src="<?php echo home_url( '/wp-content/themes/zume-project-multilingual/assets/images/pages/' ); ?>download-icon.png" alt=""
+                           target="_blank"><img
+                                    src="<?php echo home_url( '/wp-content/themes/zume-project-multilingual/assets/images/pages/' ); ?>download-icon.png"
+                                    alt=""
                                     width="35" height="35" class="alignnone size-thumbnail wp-image-3274"
                                     style="vertical-align: text-bottom"/> Zúme Video Scripts: Duckling Discipleship
                         </a>
@@ -1444,13 +1451,15 @@ class Zume_Course_Content {
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="small-12 small-centered cell">
                     <div class="flex-video widescreen">
-                        <iframe src="https://player.vimeo.com/video/246841605" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                        <iframe src="https://player.vimeo.com/video/246841605" width="640" height="360" frameborder="0"
+                                webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
                     </div>
 
                     <p class="center"><a
                                 href="https://zumeproject.com/wp-content/uploads/Zume_Video_Scripts_Eyes_to_See.pdf"
                                 target="_blank"><img
-                                    src="<?php echo home_url( '/wp-content/themes/zume-project-multilingual/assets/images/course/' ) ?>download-icon-150x150.png" alt=""
+                                    src="<?php echo home_url( '/wp-content/themes/zume-project-multilingual/assets/images/course/' ) ?>download-icon-150x150.png"
+                                    alt=""
                                     width="35" height="35" class="alignnone size-thumbnail wp-image-3274"
                                     style="vertical-align: text-bottom"/> Zúme Video Scripts: Eyes to See</a></p>
                 </div>
@@ -1495,13 +1504,15 @@ class Zume_Course_Content {
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="small-12 small-centered cell">
                     <div class="flex-video widescreen">
-                        <iframe src="https://player.vimeo.com/video/246841605" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                        <iframe src="https://player.vimeo.com/video/246841605" width="640" height="360" frameborder="0"
+                                webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
                     </div>
 
                     <p class="center"><a
                                 href="https://zumeproject.com/wp-content/uploads/Zume_Video_Scripts_Lord_s_Supper.pdf"
                                 target="_blank"><img
-                                    src="<?php echo home_url( '/wp-content/themes/zume-project-multilingual/assets/images/course/' ) ?>download-icon-150x150.png" alt=""
+                                    src="<?php echo home_url( '/wp-content/themes/zume-project-multilingual/assets/images/course/' ) ?>download-icon-150x150.png"
+                                    alt=""
                                     width="35" height="35" class="alignnone size-thumbnail wp-image-3274"
                                     style="vertical-align: text-bottom"/> Zúme Video Scripts: Lord's Supper</a></p>
                 </div>
@@ -1642,13 +1653,15 @@ class Zume_Course_Content {
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="small-12 small-centered cell">
                     <div class="flex-video widescreen">
-                        <iframe src="https://player.vimeo.com/video/246841605" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                        <iframe src="https://player.vimeo.com/video/246841605" width="640" height="360" frameborder="0"
+                                webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
                     </div>
 
                     <p class="center"><a
                                 href="https://zumeproject.com/wp-content/uploads/Zume_Video_Scripts_Prayer_Walking.pdf"
                                 target="_blank"><img
-                                    src="<?php echo home_url( '/wp-content/themes/zume-project-multilingual/assets/images/course/' ) ?>download-icon-150x150.png" alt=""
+                                    src="<?php echo home_url( '/wp-content/themes/zume-project-multilingual/assets/images/course/' ) ?>download-icon-150x150.png"
+                                    alt=""
                                     width="35" height="35" class="alignnone size-thumbnail wp-image-3274"
                                     style="vertical-align: text-bottom"/> Zúme Video Scripts: Prayer Walking</a></p>
                 </div>
@@ -1681,12 +1694,14 @@ class Zume_Course_Content {
 
                 <div class="small-12 small-centered cell">
                     <div class="flex-video widescreen">
-                        <iframe src="https://player.vimeo.com/video/246841605" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                        <iframe src="https://player.vimeo.com/video/246841605" width="640" height="360" frameborder="0"
+                                webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
                     </div>
 
                     <p class="center"><a href="https://zumeproject.com/wp-content/uploads/Person-of-Peace.pdf"
                                          target="_blank"><img
-                                    src="<?php echo home_url( '/wp-content/themes/zume-project-multilingual/assets/images/course/' ) ?>download-icon-150x150.png" alt=""
+                                    src="<?php echo home_url( '/wp-content/themes/zume-project-multilingual/assets/images/course/' ) ?>download-icon-150x150.png"
+                                    alt=""
                                     width="35" height="35" class="alignnone size-thumbnail wp-image-3274"
                                     style="vertical-align: text-bottom"/> Zúme Video Scripts: Person of Peace</a></p>
                 </div>
@@ -1865,13 +1880,15 @@ class Zume_Course_Content {
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="small-12 small-centered cell">
                     <div class="flex-video widescreen">
-                        <iframe src="https://player.vimeo.com/video/246841605" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                        <iframe src="https://player.vimeo.com/video/246841605" width="640" height="360" frameborder="0"
+                                webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
                     </div>
 
                     <p class="center"><a
                                 href="https://zumeproject.com/wp-content/uploads/Zume_Video_Scripts_Faithfulness.pdf"
                                 target="_blank"><img
-                                    src="<?php echo home_url( '/wp-content/themes/zume-project-multilingual/assets/images/course/' ) ?>download-icon-150x150.png" alt=""
+                                    src="<?php echo home_url( '/wp-content/themes/zume-project-multilingual/assets/images/course/' ) ?>download-icon-150x150.png"
+                                    alt=""
                                     width="35" height="35" class="alignnone size-thumbnail wp-image-3274"
                                     style="vertical-align: text-bottom"/> Zúme Video Scripts: Faithfulness</a></p>
                 </div>
@@ -1909,13 +1926,15 @@ class Zume_Course_Content {
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="small-12 small-centered cell">
                     <div class="flex-video widescreen">
-                        <iframe src="https://player.vimeo.com/video/246841605" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                        <iframe src="https://player.vimeo.com/video/246841605" width="640" height="360" frameborder="0"
+                                webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
                     </div>
 
                     <p class="center"><a
                                 href="https://zumeproject.com/wp-content/uploads/Zume_Video_Scripts_3_3_Group.pdf"
                                 target="_blank"><img
-                                    src="<?php echo home_url( '/wp-content/themes/zume-project-multilingual/assets/images/course/' ) ?>download-icon-150x150.png" alt=""
+                                    src="<?php echo home_url( '/wp-content/themes/zume-project-multilingual/assets/images/course/' ) ?>download-icon-150x150.png"
+                                    alt=""
                                     width="35" height="35" class="alignnone size-thumbnail wp-image-3274"
                                     style="vertical-align: text-bottom"/> Zúme Video Scripts: 3/3 Group</a></p>
                 </div>
@@ -1962,7 +1981,8 @@ class Zume_Course_Content {
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="small-12 small-centered cell">
                     <div class="flex-video widescreen">
-                        <iframe src="https://player.vimeo.com/video/246841605" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                        <iframe src="https://player.vimeo.com/video/246841605" width="640" height="360" frameborder="0"
+                                webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
                     </div>
                 </div>
             </div> <!-- grid-x -->
@@ -2080,13 +2100,15 @@ class Zume_Course_Content {
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="small-12 small-centered cell">
                     <div class="flex-video widescreen">
-                        <iframe src="https://player.vimeo.com/video/246841605" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                        <iframe src="https://player.vimeo.com/video/246841605" width="640" height="360" frameborder="0"
+                                webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
                     </div>
 
                     <p class="center"><a
                                 href="https://zumeproject.com/wp-content/uploads/Zume_Video_Scripts_Training_Cycle.pdf"
                                 target="_blank"><img
-                                    src="<?php echo home_url( '/wp-content/themes/zume-project-multilingual/assets/images/course/' ) ?>download-icon-150x150.png" alt=""
+                                    src="<?php echo home_url( '/wp-content/themes/zume-project-multilingual/assets/images/course/' ) ?>download-icon-150x150.png"
+                                    alt=""
                                     width="35" height="35" class="alignnone size-thumbnail wp-image-3274"
                                     style="vertical-align: text-bottom"/> Zúme Video Scripts: Training Cycle</a></p>
                 </div>
@@ -2267,13 +2289,15 @@ class Zume_Course_Content {
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="small-12 small-centered cell">
                     <div class="flex-video widescreen">
-                        <iframe src="https://player.vimeo.com/video/246841605" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                        <iframe src="https://player.vimeo.com/video/246841605" width="640" height="360" frameborder="0"
+                                webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
                     </div>
 
                     <p class="center"><a
                                 href="https://zumeproject.com/wp-content/uploads/Zume_Video_Scripts_Leadership_Cells.pdf"
                                 target="_blank"><img
-                                    src="<?php echo home_url( '/wp-content/themes/zume-project-multilingual/assets/images/course/' ) ?>download-icon-150x150.png" alt=""
+                                    src="<?php echo home_url( '/wp-content/themes/zume-project-multilingual/assets/images/course/' ) ?>download-icon-150x150.png"
+                                    alt=""
                                     width="35" height="35" class="alignnone size-thumbnail wp-image-3274"
                                     style="vertical-align: text-bottom"/> Zúme Video Scripts: Leadership Cells</a></p>
                 </div>
@@ -2452,15 +2476,16 @@ class Zume_Course_Content {
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="small-12 small-centered cell">
                     <div class="flex-video widescreen">
-                        <iframe src="https://player.vimeo.com/video/246841605" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                        <iframe src="https://player.vimeo.com/video/246841605" width="640" height="360" frameborder="0"
+                                webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
                     </div>
-                <p class="center"><a
-                            href="https://zumeproject.com/wp-content/uploads/Zume_Video_Scripts_Non_Sequential.pdf"
-                            target="_blank" rel="noopener"><img class="alignnone size-thumbnail wp-image-3274"
-                                                                style="vertical-align: text-bottom;"
-                                                                src="<?php echo home_url( '/wp-content/themes/zume-project-multilingual/assets/images/course/' ) ?>download-icon-150x150.png"
-                                                                alt="" width="35" height="35"/> Zúme Video Scripts:
-                        Non-Sequential</a></p>
+                    <p class="center"><a
+                                href="https://zumeproject.com/wp-content/uploads/Zume_Video_Scripts_Non_Sequential.pdf"
+                                target="_blank" rel="noopener"><img class="alignnone size-thumbnail wp-image-3274"
+                                                                    style="vertical-align: text-bottom;"
+                                                                    src="<?php echo home_url( '/wp-content/themes/zume-project-multilingual/assets/images/course/' ) ?>download-icon-150x150.png"
+                                                                    alt="" width="35" height="35"/> Zúme Video Scripts:
+                            Non-Sequential</a></p>
                 </div>
             </div>
             <!-- grid-x -->
@@ -2501,14 +2526,16 @@ class Zume_Course_Content {
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="small-12 small-centered cell">
                     <div class="flex-video widescreen">
-                        <iframe src="https://player.vimeo.com/video/246841605" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                        <iframe src="https://player.vimeo.com/video/246841605" width="640" height="360" frameborder="0"
+                                webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
                     </div>
-                <p class="center"><a href="https://zumeproject.com/wp-content/uploads/Zume_Video_Scripts_Pace.pdf"
-                                     target="_blank" rel="noopener"><img class="alignnone size-thumbnail wp-image-3274"
-                                                                         style="vertical-align: text-bottom;"
-                                                                         src="<?php echo home_url( '/wp-content/themes/zume-project-multilingual/assets/images/course/' ) ?>download-icon-150x150.png"
-                                                                         alt="" width="35" height="35"/> Zúme Video
-                        Scripts: Pace</a></p>
+                    <p class="center"><a href="https://zumeproject.com/wp-content/uploads/Zume_Video_Scripts_Pace.pdf"
+                                         target="_blank" rel="noopener"><img
+                                    class="alignnone size-thumbnail wp-image-3274"
+                                    style="vertical-align: text-bottom;"
+                                    src="<?php echo home_url( '/wp-content/themes/zume-project-multilingual/assets/images/course/' ) ?>download-icon-150x150.png"
+                                    alt="" width="35" height="35"/> Zúme Video
+                            Scripts: Pace</a></p>
                 </div>
             </div>
             <!-- grid-x -->
@@ -2557,15 +2584,17 @@ class Zume_Course_Content {
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="small-12 small-centered cell">
                     <div class="flex-video widescreen">
-                        <iframe src="https://player.vimeo.com/video/246841605" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                        <iframe src="https://player.vimeo.com/video/246841605" width="640" height="360" frameborder="0"
+                                webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
                     </div>
-                <p class="center"><a
-                            href="https://zumeproject.com/wp-content/uploads/Zume_Video_Scripts_Two_Churches.pdf"
-                            target="_blank" rel="noopener"><img class="alignnone size-thumbnail wp-image-3274"
-                                                                style="vertical-align: text-bottom;"
-                                                                src="<?php echo home_url( '/wp-content/themes/zume-project-multilingual/assets/images/course/' ) ?>download-icon-150x150.png"
-                                                                alt="" width="35" height="35"/> Zúme Video Scripts: Two
-                        Churches</a></p>
+                    <p class="center"><a
+                                href="https://zumeproject.com/wp-content/uploads/Zume_Video_Scripts_Two_Churches.pdf"
+                                target="_blank" rel="noopener"><img class="alignnone size-thumbnail wp-image-3274"
+                                                                    style="vertical-align: text-bottom;"
+                                                                    src="<?php echo home_url( '/wp-content/themes/zume-project-multilingual/assets/images/course/' ) ?>download-icon-150x150.png"
+                                                                    alt="" width="35" height="35"/> Zúme Video Scripts:
+                            Two
+                            Churches</a></p>
                 </div>
             </div>
             <!-- grid-x -->
@@ -2747,7 +2776,8 @@ class Zume_Course_Content {
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="small-12 small-centered cell">
                     <div class="flex-video widescreen">
-                        <iframe src="https://player.vimeo.com/video/246841605" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                        <iframe src="https://player.vimeo.com/video/246841605" width="640" height="360" frameborder="0"
+                                webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
                     </div>
 
                     <p class="center"><a
@@ -2955,13 +2985,15 @@ class Zume_Course_Content {
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="small-12 small-centered cell">
                     <div class="flex-video widescreen">
-                        <iframe src="https://player.vimeo.com/video/246841605" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                        <iframe src="https://player.vimeo.com/video/246841605" width="640" height="360" frameborder="0"
+                                webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
                     </div>
 
                     <p class="center"><a
                                 href="https://zumeproject.com/wp-content/uploads/Zume_Video_Scripts_Leadership_in_Networks.pdf"
                                 target="_blank"><img
-                                    src="<?php echo home_url( '/wp-content/themes/zume-project-multilingual/assets/images/course/' ) ?>download-icon-150x150.png" alt=""
+                                    src="<?php echo home_url( '/wp-content/themes/zume-project-multilingual/assets/images/course/' ) ?>download-icon-150x150.png"
+                                    alt=""
                                     width="35" height="35" class="alignnone size-thumbnail wp-image-3274"
                                     style="vertical-align: text-bottom"/> Zúme Video Scripts: Leadership in Networks</a>
                     </p>
@@ -3001,13 +3033,15 @@ class Zume_Course_Content {
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="small-12 small-centered cell">
                     <div class="flex-video widescreen">
-                        <iframe src="https://player.vimeo.com/video/246841605" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                        <iframe src="https://player.vimeo.com/video/246841605" width="640" height="360" frameborder="0"
+                                webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
                     </div>
 
                     <p class="center"><a
                                 href="https://zumeproject.com/wp-content/uploads/Zume_Video_Scripts_Peer_Mentoring_Groups.pdf"
                                 target="_blank"><img
-                                    src="<?php echo home_url( '/wp-content/themes/zume-project-multilingual/assets/images/course/' ) ?>download-icon-150x150.png" alt=""
+                                    src="<?php echo home_url( '/wp-content/themes/zume-project-multilingual/assets/images/course/' ) ?>download-icon-150x150.png"
+                                    alt=""
                                     width="35" height="35" class="alignnone size-thumbnail wp-image-3274"
                                     style="vertical-align: text-bottom"/> Zúme Video Scripts: Peer Mentoring Groups</a>
                     </p>
@@ -3082,7 +3116,9 @@ class Zume_Course_Content {
                     <div class="grid-x grid-margin-x grid-margin-y">
                         <div class="small-12 small-centered cell">
                             <div class="flex-video widescreen">
-                                <iframe src="https://player.vimeo.com/video/246841605" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                                <iframe src="https://player.vimeo.com/video/246841605" width="640" height="360"
+                                        frameborder="0" webkitallowfullscreen mozallowfullscreen
+                                        allowfullscreen></iframe>
                             </div>
 
                             <p class="center"><a
@@ -3116,35 +3152,35 @@ class Zume_Course_Content {
                                         <div class="congratulations-icon congratulations-icon-learn-more"></div>
                                         <span>Learn More</span>
                                     </span></button>
-                                                        <button class="button js-congratulations-more-button" data-item="invite"><span>
+                                <button class="button js-congratulations-more-button" data-item="invite"><span>
                                         <div class="congratulations-icon congratulations-icon-invite"></div>
                                         <span>Invite my friends</span>
                                     </span></button>
-                                                        <button class="button js-congratulations-more-button" data-item="coordinator"><span>
+                                <button class="button js-congratulations-more-button" data-item="coordinator"><span>
                                         <div class="congratulations-icon congratulations-icon-coordinator"></div>
                                         <span>Become a county coordinator</span>
                                     </span></button>
-                                                        <button class="button js-congratulations-more-button" data-item="map"><span>
+                                <button class="button js-congratulations-more-button" data-item="map"><span>
                                         <div class="congratulations-icon congratulations-icon-map"></div>
                                         <span>Map my neighborhood</span>
                                     </span></button>
-                                                        <button class="button js-congratulations-more-button" data-item="language"><span>
+                                <button class="button js-congratulations-more-button" data-item="language"><span>
                                         <div class="congratulations-icon congratulations-icon-language"></div>
                                         <span>Fund translation of Zúme</span>
                                     </span></button>
-                                                        <button class="button js-congratulations-more-button" data-item="contact-coach"><span>
+                                <button class="button js-congratulations-more-button" data-item="contact-coach"><span>
                                         <div class="congratulations-icon congratulations-icon-contact-coach"></div>
                                         <span>Contact my coach</span>
                                     </span></button>
-                                                        <button class="button js-congratulations-more-button" data-item="share"><span>
+                                <button class="button js-congratulations-more-button" data-item="share"><span>
                                         <div class="congratulations-icon congratulations-icon-share"></div>
                                         <span>Share on Social Media</span>
                                     </span></button>
-                                                        <button class="button js-congratulations-more-button" data-item="champion"><span>
+                                <button class="button js-congratulations-more-button" data-item="champion"><span>
                                         <div class="congratulations-icon congratulations-icon-champion"></div>
                                         <span>Champion Zúme on Social Media</span>
                                     </span></button>
-                                                        <button class="button js-congratulations-more-button" data-item="join-2414"><span>
+                                <button class="button js-congratulations-more-button" data-item="join-2414"><span>
                                         <div class="congratulations-icon congratulations-icon-learn-more"></div>
                                         <span>Join 2414</span>
                                     </span></button>
