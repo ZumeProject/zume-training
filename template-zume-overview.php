@@ -388,7 +388,7 @@ class Zume_Overview_Content {
                         <div class="grid-x grid-margin-y">
                             <div class="large-1 cell">
                                 <!-- image -->
-                                <img src="<?php echo home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ); ?>Concept-1-5.png"
+                                <img src="<?php echo home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ); ?>concept-1-5.png"
                                      alt="" width="40" height="40" class="alignnone size-full wp-image-1576"/>
                             </div>
                             <div class="large-11 cell">
@@ -411,7 +411,7 @@ class Zume_Overview_Content {
                         <div class="grid-x grid-margin-y">
                             <div class="large-1 cell">
                                 <!-- image -->
-                                <img src="<?php echo home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ); ?>Practice-1-6.png"
+                                <img src="<?php echo home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ); ?>practice-1-6.png"
                                      alt="" width="40" height="40" class="alignnone size-full wp-image-1577"/>
                             </div>
                             <div class="large-11 cell">
@@ -423,7 +423,7 @@ class Zume_Overview_Content {
                         <div class="grid-x grid-margin-y grid-margin-y">
                             <div class="large-1 cell">
                                 <!-- image -->
-                                <img src="<?php echo home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ); ?>Practice-2-2.png"
+                                <img src="<?php echo home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ); ?>practice-2-2.png"
                                      alt="" width="40" height="40" class="alignnone size-full wp-image-1578"/>
                             </div>
                             <div class="large-11 cell">
@@ -454,7 +454,7 @@ class Zume_Overview_Content {
                         <div class="grid-x grid-margin-y grid-margin-y">
                             <div class="large-1 cell">
                                 <!-- image -->
-                                <img src="<?php echo home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ); ?>Tool-1-4.png"
+                                <img src="<?php echo home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ); ?>tool-1-4.png"
                                      alt="" width="40" height="40" class="alignnone size-full wp-image-1579"/>
                             </div>
                             <div class="large-11 cell">
@@ -464,7 +464,7 @@ class Zume_Overview_Content {
                         <div class="grid-x grid-margin-y grid-margin-y">
                             <div class="large-1 cell">
                                 <!-- image -->
-                                <img src="<?php echo home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ); ?>Tool-2-3.png"
+                                <img src="<?php echo home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ); ?>tool-2-3.png"
                                      alt="" width="40" height="40" class="alignnone size-full wp-image-1580"/>
                             </div>
                             <div class="large-11 cell">
@@ -793,7 +793,7 @@ class Zume_Overview_Content {
                         <div class="grid-x grid-margin-y">
                             <div class="large-1 cell">
                                 <!-- image -->
-                                <img src="<?php echo home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ); ?>Concept-2-2.png"
+                                <img src="<?php echo home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ); ?>concept-2-2.png"
                                      alt="" width="40" height="40" class="alignnone size-full wp-image-1028"/>
                             </div>
                             <div class="large-11 cell">
