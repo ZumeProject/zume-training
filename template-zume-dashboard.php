@@ -55,7 +55,7 @@ get_header();
                                 $key_beginning = substr( $key, 0, 10 );
                                 if ( 'zume_group' == $key_beginning ) { // check if zume_group
                                     $value = maybe_unserialize( $v );
-                                    if ( false == $value['closed'] ) : // check if closed
+                                    if ( isset( $value['closed'] ) && false == $value['closed'] ) : // check if closed
                             ?>
                                     <!-- Group Row -->
                                     <li class="block">
@@ -108,7 +108,7 @@ get_header();
                                                 </ul>
 
 
-                                                    <a href="<?php echo esc_html(zume_course_url() . '/?group=' . $key . '&session=' . $value['next_session']); ?>" class="button large">
+                                                    <a href="<?php echo esc_html( zume_course_url() . '/?group=' . $key . '&session=' . $value['next_session'] ); ?>" class="button large">
                                                         <?php echo esc_html( __( 'Start Next Session ', 'zume' ) . $value['next_session'] );?>
                                                     </a>
 
@@ -168,11 +168,11 @@ get_header();
                                 <?php echo get_avatar( $zume_coach_id, 32 ) ?>
                             </div>
                             <div class="small-8 cell">
-                                <?php echo $zume_coach_data->display_name; ?>
+                                <?php echo esc_html( $zume_coach_data->display_name ); ?>
                             </div>
                         </div>
 
-	                    <?php endif; ?>
+                        <?php endif; ?>
 
                         <hr>
 
@@ -183,30 +183,30 @@ get_header();
                             </div>
                         </div>
 
-	                    <?php
-	                    $zume_no_groups = 0;
-	                    foreach ( $zume_user_meta as $key => $v ) :
-		                    $key_beginning = substr( $key, 0, 10 );
-		                    if ( 'zume_group' == $key_beginning ) : // check if zume_group
-			                    $value = maybe_unserialize( $v );
-			                    if ( true == $value['closed'] ) : // check if closed
-				                    ?>
+                        <?php
+                        $zume_no_groups = 0;
+                        foreach ( $zume_user_meta as $key => $v ) :
+                            $key_beginning = substr( $key, 0, 10 );
+                            if ( 'zume_group' == $key_beginning ) : // check if zume_group
+                                $value = maybe_unserialize( $v );
+                                if ( isset( $value['closed'] ) && true == $value['closed'] ) : // check if closed
+                                    ?>
 
                                     <div class="grid-x">
                                         <div class="small-9 cell">
-						                    <?php echo $value['group_name']; ?>
+                                            <?php echo esc_html( $value['group_name'] ); ?>
                                         </div>
                                         <div class="small-3 cell">
                                             <a href="">activate</a>
                                         </div>
                                     </div>
 
-				                    <?php
-				                    $zume_no_groups ++;
-			                    endif; // end if closed check
-		                    endif; // end check if zume_group
-	                    endforeach;
-	                    ?>
+                                    <?php
+                                    $zume_no_groups ++;
+                                endif; // end if closed check
+                            endif; // end check if zume_group
+                        endforeach;
+                        ?>
 
                     </div>
 
