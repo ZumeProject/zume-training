@@ -18,13 +18,15 @@ if ( ! empty( $_POST ) ) {
     }
 }
 
-$zume_current_lang = zume_current_language();
-$zume_current_user = get_current_user_id();
-$zume_user_meta    = array_map( function ( $a ) { return $a[0];
-}, get_user_meta( $zume_current_user ) );
 
 get_header();
 
+(function() {
+
+    $zume_current_lang = zume_current_language();
+    $zume_current_user = get_current_user_id();
+    $zume_user_meta    = array_map( function ( $a ) { return $a[0];
+    }, get_user_meta( $zume_current_user ) );
 ?>
 
 <div id="content">
@@ -56,55 +58,55 @@ get_header();
                                     <li class="block">
                                         <div class="grid-x grid-margin-x">
                                             <div class="large-6 cell">
-                                                <h3><a data-open="<?php echo $key; ?>"><?php echo $value['group_name'] ?></a>
+                                                <h3><a data-open="<?php echo esc_html( $key ); ?>"><?php echo esc_html( $value['group_name'] ) ?></a>
                                                 </h3>
                                                 <p class="text-gray">
-                                                    Meeting Time: <?php echo $value['meeting_time'] ?><br>
-                                                    Members: <?php echo $value['members'] ?><br>
-                                                    Address: <?php echo $value['address'] ?><br>
+                                                    <?php echo esc_html( __( 'Meeting Time' , 'zume' ) . ": " .  $value['meeting_time'] ) ?><br>
+                                                    <?php echo esc_html( __( 'Members', 'zume' ) . ': ' . $value['members'] )?><br>
+                                                    <?php echo esc_html( __( 'Address', 'zume' ) . ': ' . $value['address'] )?><br>
                                                 </p>
 
-                                                <button class="small" data-open="<?php echo $key; ?>">
+                                                <button class="small" data-open="<?php echo esc_html( $key ); ?>">
                                                     <i class="fi-pencil hollow"></i> edit
                                                 </button>
                                             </div>
                                             <div class="large-6 cell">
                                                 <ul class="pagination" role="navigation" aria-label="Pagination">
-                                                    <li class="<?php ( $value['session_1'] ) ? print 'current' : print ''; ?>">
-                                                        <a href="<?php echo zume_course_url() . '/?group=' . $key . '&session=1'; ?>">1</a>
+                                                    <li class="<?php echo esc_html( $value['session_1'] ? 'current' : '' ); ?>">
+                                                        <a href="<?php echo esc_html( zume_course_url() . '/?group=' . $key . '&session=1' );?>">1</a>
                                                     </li>
-                                                    <li class="<?php ( $value['session_2'] ) ? print 'current' : print ''; ?>">
-                                                        <a href="<?php echo zume_course_url() . '/?group=' . $key . '&session=2'; ?>">2</a>
+                                                     <li class="<?php echo esc_html( $value['session_2'] ? 'current' : '' ); ?>">
+                                                        <a href="<?php echo esc_html( zume_course_url() . '/?group=' . $key . '&session=2' );?>">1</a>
                                                     </li>
-                                                    <li class="<?php ( $value['session_3'] ) ? print 'current' : print ''; ?>">
-                                                        <a href="<?php echo zume_course_url() . '/?group=' . $key . '&session=3'; ?>">3</a>
+                                                     <li class="<?php echo esc_html( $value['session_3'] ? 'current' : '' ); ?>">
+                                                        <a href="<?php echo esc_html( zume_course_url() . '/?group=' . $key . '&session=3' );?>">1</a>
                                                     </li>
-                                                    <li class="<?php ( $value['session_4'] ) ? print 'current' : print ''; ?>">
-                                                        <a href="<?php echo zume_course_url() . '/?group=' . $key . '&session=4'; ?>">4</a>
+                                                     <li class="<?php echo esc_html( $value['session_4'] ? 'current' : '' ); ?>">
+                                                        <a href="<?php echo esc_html( zume_course_url() . '/?group=' . $key . '&session=4' );?>">1</a>
                                                     </li>
-                                                    <li class="<?php ( $value['session_5'] ) ? print 'current' : print ''; ?>">
-                                                        <a href="<?php echo zume_course_url() . '/?group=' . $key . '&session=5'; ?>">5</a>
+                                                     <li class="<?php echo esc_html( $value['session_5'] ? 'current' : '' ); ?>">
+                                                        <a href="<?php echo esc_html( zume_course_url() . '/?group=' . $key . '&session=5' );?>">1</a>
                                                     </li>
-                                                    <li class="<?php ( $value['session_6'] ) ? print 'current' : print ''; ?>">
-                                                        <a href="<?php echo zume_course_url() . '/?group=' . $key . '&session=6'; ?>">6</a>
+                                                     <li class="<?php echo esc_html( $value['session_6'] ? 'current' : '' ); ?>">
+                                                        <a href="<?php echo esc_html( zume_course_url() . '/?group=' . $key . '&session=6' );?>">1</a>
                                                     </li>
-                                                    <li class="<?php ( $value['session_7'] ) ? print 'current' : print ''; ?>">
-                                                        <a href="<?php echo zume_course_url() . '/?group=' . $key . '&session=7'; ?>">7</a>
+                                                     <li class="<?php echo esc_html( $value['session_7'] ? 'current' : '' ); ?>">
+                                                        <a href="<?php echo esc_html( zume_course_url() . '/?group=' . $key . '&session=7' );?>">1</a>
                                                     </li>
-                                                    <li class="<?php ( $value['session_8'] ) ? print 'current' : print ''; ?>">
-                                                        <a href="<?php echo zume_course_url() . '/?group=' . $key . '&session=8'; ?>">8</a>
+                                                     <li class="<?php echo esc_html( $value['session_8'] ? 'current' : '' ); ?>">
+                                                        <a href="<?php echo esc_html( zume_course_url() . '/?group=' . $key . '&session=8' );?>">1</a>
                                                     </li>
-                                                    <li class="<?php ( $value['session_9'] ) ? print 'current' : print ''; ?>">
-                                                        <a href="<?php echo zume_course_url() . '/?group=' . $key . '&session=9'; ?>">9</a>
+                                                     <li class="<?php echo esc_html( $value['session_9'] ? 'current' : '' ); ?>">
+                                                        <a href="<?php echo esc_html( zume_course_url() . '/?group=' . $key . '&session=9' );?>">1</a>
                                                     </li>
-                                                    <li class="<?php ( $value['session_10'] ) ? print 'current' : print ''; ?>">
-                                                        <a href="<?php echo zume_course_url() . '/?group=' . $key . '&session=10'; ?>">10</a>
+                                                     <li class="<?php echo esc_html( $value['session_10'] ? 'current' : '' ); ?>">
+                                                        <a href="<?php echo esc_html( zume_course_url() . '/?group=' . $key . '&session=10' );?>">1</a>
                                                     </li>
                                                 </ul>
 
                                                 <div class="button-group">
-                                                    <a href="<?php echo zume_course_url() . '/?group=' . $key . '&session=' . $value['next_session']; ?>" class="button hollow">
-                                                        Start Next Session <?php print $value['next_session'] ?>
+                                                    <a href="<?php echo esc_html( zume_course_url() . '/?group=' . $key . '&session=' . $value['next_session'] ); ?>" class="button hollow">
+                                                        <?php echo esc_html( __( 'Start Next Session', 'zume' ) . $value['next_session'] ); ?>
                                                     </a>
                                                 </div>
 
@@ -122,12 +124,12 @@ get_header();
 
                             <div class="grid-x grid-margin-x vertical-padding">
                                 <div class="large-8 large-offset-2 cell center">
-                                    <p><strong>You do not currently have a group.</strong></p>
-                                    <p>You will need at least four people gathered together to start each new session.
+                                    <p><strong> <?php echo esc_html__( 'You are currently in a group', 'zume' ) ?></strong></p>
+                                    <p><?php echo esc_html__( "You will need at least four people gathered together to start each new session.
                                         Please start a group below. If you intended to join someone else's group, please
                                         return
                                         to the invitation they
-                                        sent and use the link provided to be automatically added to that group.</p>
+                                        sent and use the link provided to be automatically added to that group.", 'zume') ?></p>
                                 </div>
                             </div>
 
@@ -159,7 +161,7 @@ get_header();
     <h1>Create Group</h1>
     <form action="" method="post">
         <input type="hidden" name="type" value="create"/>
-        <input type="hidden" name="ip_address" value="<?php echo zume_get_real_ip_address(); ?>"/>
+        <input type="hidden" name="ip_address" value="<?php echo esc_html( zume_get_real_ip_address() ); ?>"/>
         <div class="grid-x grid-margin-x">
             <div class="cell">
                 <label for="group_name">Group Name</label>
@@ -199,27 +201,27 @@ foreach ( $zume_user_meta as $key => $v ) {
         ?>
 
         <!-- Edit current groups section -->
-        <div class="small reveal" id="<?php echo $key; ?>" data-reveal>
+        <div class="small reveal" id="<?php echo esc_html( $key ); ?>" data-reveal>
             <h1>Edit Group</h1>
             <form method="post">
 
-                <input type="hidden" name="key" value="<?php echo $key; ?>"/>
+                <input type="hidden" name="key" value="<?php echo esc_html( $key ); ?>"/>
                 <div class="grid-x grid-margin-x">
                     <div class="cell">
                         <label for="group_name">Group Name</label>
-                        <input type="text" value="<?php echo $value['group_name']; ?>" name="group_name" id="group_name" required/>
+                        <input type="text" value="<?php echo esc_html( $value['group_name'] ); ?>" name="group_name" id="group_name" required/>
                     </div>
                     <div class="cell">
                         <label for="members">Number of Participants</label>
-                        <input type="text" value="<?php echo $value['members']; ?>" name="members" id="members" required/>
+                        <input type="text" value="<?php echo esc_html( $value['members'] ); ?>" name="members" id="members" required/>
                     </div>
                     <div class="cell">
                         <label for="meeting_time">Planned Meeting Time</label>
-                        <input type="text" value="<?php echo $value['meeting_time']; ?>" name="meeting_time" id="meeting_time" required/>
+                        <input type="text" value="<?php echo esc_html( $value['meeting_time'] ); ?>" name="meeting_time" id="meeting_time" required/>
                     </div>
                     <div class="cell">
                         <label for="address">Address</label>
-                        <input type="text" value="<?php echo $value['address']; ?>" name="address"
+                        <input type="text" value="<?php echo esc_html( $value['address'] ); ?>" name="address"
                                id="address" required/>
                     </div>
                     <div class="cell">
@@ -243,5 +245,9 @@ foreach ( $zume_user_meta as $key => $v ) {
 
 ?>
 
-<?php get_footer(); ?>
+<?php
+
+})();
+
+get_footer(); ?>
 
