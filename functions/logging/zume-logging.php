@@ -10,6 +10,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 function zume_insert_log( $args = [] ) {
 	Zume_Logging::insert( $args );
 }
+function zume_log_last_active( $user_id ) {
+	$time = current_time('mysql');
+	$result = update_user_meta( $user_id, 'zume_last_active', $time );
+	return $result;
+}
 
 class Zume_Logging {
 	/**
@@ -50,27 +55,14 @@ class Zume_Logging {
 		$args = wp_parse_args(
 			$args,
 			[
-				'id'           => '',
-				'created_date' => '',
-				'user_id'      => '',
+				'created_date' => current_time( 'mysql' ),
+				'user_id'      => get_current_user_id(),
 				'group_id'     => '',
 				'page'         => '',
 				'action'       => '',
 				'meta'         => '',
 			]
 		);
-		$user = get_user_by( 'id', get_current_user_id() );
-		if ( $user ) {
-			$args['user_caps'] = strtolower( key( $user->caps ) );
-			if ( empty( $args['user_id'] ) ) {
-				$args['user_id'] = $user->ID;
-			}
-		} else {
-			$args['user_caps'] = 'guest';
-			if ( empty( $args['user_id'] ) ) {
-				$args['user_id'] = 0;
-			}
-		}
 
 		// Make sure for non duplicate.
 		$check_duplicate = $wpdb->get_row(
@@ -81,7 +73,7 @@ class Zume_Logging {
                     `$wpdb->zume_logging`
                 WHERE
                      `created_date` = %s
-                    AND `user_id` = %s
+                    AND `user_id` = %d
                     AND `group_id` = %s
                     AND `page` = %s
                     AND `action` = %s
@@ -130,35 +122,31 @@ class Zume_Logging {
 				'user_id'  => $user->ID,
 				'group_id' => '',
 				'page'     => 'login',
-				'action'   => 'login',
+				'action'   => 'logged_in',
 				'meta'     => '',
 			]
 		);
 	}
 
 	public function hooks_user_register( $user_id ) {
-		$user = get_user_by( 'id', $user_id );
-
 		self::insert(
 			[
-				'user_id'  => $user->ID,
+				'user_id'  => $user_id,
 				'group_id' => '',
 				'page'     => 'register',
-				'action'   => 'register',
+				'action'   => 'registered',
 				'meta'     => '',
 			]
 		);
 	}
 
 	public function hooks_delete_user( $user_id ) {
-		$user = get_user_by( 'id', $user_id );
-
 		self::insert(
 			[
-				'user_id'  => $user->ID,
+				'user_id'  => $user_id,
 				'group_id' => '',
 				'page'     => 'delete_user',
-				'action'   => 'delete_user',
+				'action'   => 'deleted',
 				'meta'     => '',
 			]
 		);
@@ -172,7 +160,7 @@ class Zume_Logging {
 				'user_id'  => $user->ID,
 				'group_id' => '',
 				'page'     => 'logout',
-				'action'   => 'logout',
+				'action'   => 'logged_out',
 				'meta'     => '',
 			]
 		);

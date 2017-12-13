@@ -116,7 +116,7 @@ class Zume_Dashboard {
             'session_10'          => false,
             'session_10_complete' => '',
             'last_modified_date'  => current_time( 'mysql' ),
-            'completed'           => false,
+            'closed'              => false,
         ];
 
         add_user_meta( $current_user_id, $group_key, $group_values, true );
@@ -127,12 +127,12 @@ class Zume_Dashboard {
     public static function edit_group( $args ) {
         // Check if this user can edit this group
         $current_user_id = get_current_user_id();
-        $user_meta = get_user_meta( $current_user_id, $args['key'] );
+        $user_meta = get_user_meta( $current_user_id, $args['key'], true );
         if ( empty( $user_meta ) ) {
             return new WP_Error( 'no_group_match', 'Hey, you cheating? No, group with id found for you.' );
         }
 
-        if ( ! ( $args['address'] == $user_meta[0]['address'] && ! empty( $args['address'] ) ) ) {
+        if ( ! ( $args['address'] == $user_meta['address'] && ! empty( $args['address'] ) ) ) {
             // Geo lookup address
             $google_result = Zume_Google_Geolocation::query_google_api( $args['address'], $type = 'core' ); // get google api info
             if ($google_result == 'ZERO_RESULTS') {
@@ -155,7 +155,7 @@ class Zume_Dashboard {
         // Combine array with new data
         unset( $args['type'] ); // keeps from storing the form parse info
         $args['last_modified_date'] = current_time( 'mysql' );
-        $args = wp_parse_args( $args, $user_meta[0] ); // TODO I don't think this is doing it right
+        $args = wp_parse_args( $args, $user_meta );
 
         update_user_meta( $current_user_id, $args['key'], $args );
         return true;
@@ -165,4 +165,15 @@ class Zume_Dashboard {
         $user_id = get_current_user_id();
         delete_user_meta( $user_id, $group_key );
     }
+
+	public static function closed_group( $group_key ) {
+		$user_id = get_current_user_id();
+		$user_meta = get_user_meta( $user_id, $group_key, true );
+		if ( empty( $user_meta ) ) {
+			return new WP_Error( 'no_group_match', 'Hey, you cheating? No, group with id found for you.' );
+		}
+		$user_meta['closed'] = true;
+		update_user_meta( $user_id, $group_key, $user_meta );
+
+	}
 }

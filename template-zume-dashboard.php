@@ -9,8 +9,8 @@ if ( ! empty( $_POST ) ) {
         Zume_Dashboard::create_group( $_POST );
     } elseif ( ! empty( $_POST['type'] ) && $_POST['type'] == 'edit' ) {
         Zume_Dashboard::edit_group( $_POST );
-    } elseif ( ! empty( $_POST['type'] ) && $_POST['type'] == 'inactive' ) {
-//        Zume_Dashboard::delete_group( $_POST );
+    } elseif ( ! empty( $_POST['type'] ) && $_POST['type'] == 'closed' ) {
+        Zume_Dashboard::closed_group( sanitize_key( wp_unslash( $_POST['key'] ) ) );
     } elseif ( ! empty( $_POST['type'] ) && $_POST['type'] == 'delete' ) {
         Zume_Dashboard::delete_group( sanitize_key( wp_unslash( $_POST['key'] ) ) );
     } else {
@@ -39,7 +39,9 @@ get_header();
                 <div class="large-7 cell">
 
                     <div class="callout" data-equalizer-watch>
-
+                        <p class="center">
+                            <button class="button hollow small" data-open="create">Start New Group</button>
+                        </p>
                         <ul id="groups-list" class="item-list">
                             <li class="block">
                                 <h2 class="center">Your Groups</h2>
@@ -49,9 +51,10 @@ get_header();
                             $zume_no_groups = 0;
                             foreach ( $zume_user_meta as $key => $v ) {
                                 $key_beginning = substr( $key, 0, 10 );
-                                if ( 'zume_group' == $key_beginning ) {
+                                if ( 'zume_group' == $key_beginning ) { // check if zume_group
                                     $value = maybe_unserialize( $v );
-                                    ?>
+                                    if ( false == $value['closed'] ) : // check if closed
+                            ?>
                                     <!-- Group Row -->
                                     <li class="block">
                                         <div class="grid-x grid-margin-x">
@@ -102,18 +105,19 @@ get_header();
                                                     </li>
                                                 </ul>
 
-                                                <div class="button-group">
-                                                    <a href="<?php echo zume_course_url() . '/?group=' . $key . '&session=' . $value['next_session']; ?>" class="button hollow">
-                                                        Start Next Session <?php print $value['next_session'] ?>
-                                                    </a>
-                                                </div>
+
+                                                <a href="<?php echo zume_course_url() . '/?group=' . $key . '&session=' . $value['next_session']; ?>" class="button large ">
+                                                    Start Next Session <?php print $value['next_session'] ?>
+                                                </a>
+
 
                                             </div>
                                         </div>
                                     </li>
                                     <?php
                                     $zume_no_groups++;
-                                }
+                                    endif; // end if closed check
+                                } // end check if zume_group
                             }
 
                             ?>
@@ -134,18 +138,80 @@ get_header();
                             <?php endif; ?>
 
                             <p class="center vertical-padding">
-                                <button class="button hollow" data-open="create">Start New Group</button>
+                                <button class="button hollow small" data-open="create">Start New Group</button>
                             </p>
 
                     </div>
                 </div>
 
                 <div class="large-3 cell dashboard-messages">
+
                     <div class="callout" data-equalizer-watch>
-                        <h2 class="center">Your Coach</h2>
+
+                        <?php
+                        $zume_coach_id = get_user_meta( $zume_current_user, 'zume_coach', true );
+                        if ( ! empty( $zume_coach_id ) ) :
+                            $zume_coach_data = get_userdata( $zume_coach_id );
+                        ?>
+
+                        <div class="grid-x">
+                            <div class="cell vertical-padding">
+                                Your Coach
+
+                            </div>
+                        </div>
+
+                        <div class="grid-x grid-margin-x">
+                            <div class="small-2 cell">
+                                <?php echo get_avatar( $zume_coach_id, 32 ) ?>
+                            </div>
+                            <div class="small-8 cell">
+                                <?php echo $zume_coach_data->display_name; ?>
+                            </div>
+                        </div>
+
+	                    <?php endif; ?>
+
+                        <hr>
+
+                        <div class="grid-x ">
+                            <div class="cell vertical-padding">
+                                Inactive Groups
+
+                            </div>
+                        </div>
+
+	                    <?php
+	                    $zume_no_groups = 0;
+	                    foreach ( $zume_user_meta as $key => $v ) :
+		                    $key_beginning = substr( $key, 0, 10 );
+		                    if ( 'zume_group' == $key_beginning ) : // check if zume_group
+			                    $value = maybe_unserialize( $v );
+			                    if ( true == $value['closed'] ) : // check if closed
+				                    ?>
+
+                                    <div class="grid-x">
+                                        <div class="small-9 cell">
+						                    <?php echo $value['group_name']; ?>
+                                        </div>
+                                        <div class="small-3 cell">
+                                            <a href="">activate</a>
+                                        </div>
+                                    </div>
+
+				                    <?php
+				                    $zume_no_groups ++;
+			                    endif; // end if closed check
+		                    endif; // end check if zume_group
+	                    endforeach;
+	                    ?>
+
                     </div>
+
                 </div>
+
                 <div class="large-1 cell"></div>
+
             </div>
 
         </div>
@@ -226,7 +292,7 @@ foreach ( $zume_user_meta as $key => $v ) {
                         <br>
                         <button type="submit" class="button" name="type" value="edit">Update</button>
                         <span class="align-right"><button type="submit" class="button hollow alert" name="type" value="delete">Delete</button></span>
-                        <span class="align-right"><button type="submit" class="button hollow alert" name="type" value="inactive">Make Inactive</button></span>
+                        <span class="align-right"><button type="submit" class="button hollow alert" name="type" value="closed">Make Inactive</button></span>
                     </div>
                 </div>
 
@@ -244,4 +310,3 @@ foreach ( $zume_user_meta as $key => $v ) {
 ?>
 
 <?php get_footer(); ?>
-

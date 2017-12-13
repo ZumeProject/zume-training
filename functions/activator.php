@@ -11,7 +11,8 @@ class Zume_Activator
 	public static function activate() {
 		$version = ZUME_VERSION;
 		self::create_tables( $version );
-		zume_write_log('Should only see this after theme switch');
+
+		self::add_coach_role();
 	}
 
 	public static function create_tables( $version ) {
@@ -33,6 +34,37 @@ class Zume_Activator
 			dbDelta( $sql1 );
 			update_option( 'zume_logging_db_version', $version );
 
+			zume_write_log('zume_logging table added');
 		}
+	}
+
+	public static function add_coach_role() {
+		if ( get_role( 'coach' ) ) {
+			remove_role( 'coach' );
+		}
+		add_role(
+			'coach', __( 'Coach' ),
+			[
+				'coach' => true
+			]
+		);
+		if ( get_role( 'coach_leader' ) ) {
+			remove_role( 'coach_leader' );
+		}
+		add_role(
+			'coach_leader', __( 'Coach Leader' ),
+			[
+				'coach_leader' => true
+			]
+		);
+		$role = get_role( 'administrator' );
+		// If the administrator role exists, add required capabilities for the plugin.
+		if ( !empty( $role ) ) {
+			/* Manage DT configuration */
+			$role->add_cap( 'coach' );
+			$role->add_cap( 'coach_leader' );
+		}
+
+		zume_write_log('Roles added');
 	}
 }
