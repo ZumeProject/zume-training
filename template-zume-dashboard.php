@@ -13,11 +13,12 @@ if ( ! empty( $_POST ) ) {
         Zume_Dashboard::closed_group( sanitize_key( wp_unslash( $_POST['key'] ) ) );
     } elseif ( ! empty( $_POST['type'] ) && $_POST['type'] == 'delete' ) {
         Zume_Dashboard::delete_group( sanitize_key( wp_unslash( $_POST['key'] ) ) );
+    } elseif ( ! empty( $_POST['type'] ) && $_POST['type'] == 'activate' ) {
+        Zume_Dashboard::activate_group( get_current_user_id(), sanitize_key( wp_unslash( $_POST['key'] ) ) );
     } else {
         zume_write_log( 'Failed to filter' );
     }
 }
-
 
 get_header();
 
@@ -149,11 +150,11 @@ get_header();
                             $value = maybe_unserialize( $v );
                             if ( isset( $value['closed'] ) && true == $value['closed'] ) : // check if closed
 
-                                $html .= '<div class="grid-x grid-margin-x"><div class="small-10 cell">';
+                                $html .= '<div class="grid-x grid-margin-x"><div class="small-1 cell"></div><div class="small-8 cell">';
                                 $html .= esc_html( $value['group_name'] );
                                 $html .= '</div><div class="small-2 cell">';
-                                $html .= '<a href="">' . esc_html__( 'activate', 'zume' ) . '</a>';
-                                $html .= '</div></div><hr>';
+                                $html .= '<button class="small button hollow" type="submit" name="key" value="'. esc_attr( $key ).'">' . esc_html__( 'activate', 'zume' ) . '</button>';
+                                $html .= '</div><div class="small-1 cell"></div></div>';
 
                                 $zume_no_inactive_groups++;
                             endif; // end if closed check
@@ -163,18 +164,22 @@ get_header();
                     ?>
 
                     <?php if( $zume_no_inactive_groups > 0 ) : ?>
-                    <div class="callout" >
 
-                        <div class="grid-x ">
-                            <div class="cell vertical-padding center">
-			                    <h3><?php echo esc_html__( 'Inactive Groups', 'zume' ) ?></h3>
-                                <hr>
+                        <div class="callout" >
+
+                            <div class="grid-x ">
+                                <div class="cell vertical-padding center">
+                                    <h3><?php echo esc_html__( 'Inactive Groups', 'zume' ) ?></h3>
+                                    <hr>
+                                </div>
                             </div>
+
+                            <form action="" method="post">
+                                <input type="hidden" name="type" value="activate" />
+		                        <?php echo $html; ?>
+                            </form>
+
                         </div>
-
-	                    <?php echo $html; ?>
-
-                    </div>
                     <?php endif; ?>
                     <!-- End Inactive Groups Section -->
 
@@ -185,6 +190,7 @@ get_header();
 
                     <div class="callout" data-equalizer-watch>
 
+                        <!-- Your Coach Section -->
                         <?php
                         $zume_coach_id = get_user_meta( $zume_current_user, 'zume_coach', true );
                         if ( ! empty( $zume_coach_id ) ) :
@@ -192,21 +198,43 @@ get_header();
                         ?>
 
                         <div class="grid-x">
-                            <div class="cell vertical-padding">
-                                <?php echo esc_html__( 'Your Coach', 'zume' ) ?>
+                            <div class="cell center">
+                                <h3><?php echo esc_html__( 'Your Coach', 'zume' ) ?></h3>
                             </div>
                         </div>
 
                         <div class="grid-x grid-margin-x">
-                            <div class="small-2 cell">
-                                <?php echo get_avatar( $zume_coach_id, 32 ) ?>
+                            <div class="small-3 cell">
+                                <?php echo get_avatar( $zume_coach_id, 64 ) ?>
                             </div>
-                            <div class="small-8 cell">
-                                <?php echo esc_html( $zume_coach_data->display_name ); ?>
+                            <div class="small-9 cell">
+                                <strong><?php echo esc_html( $zume_coach_data->display_name ); ?></strong><br>
+	                            <a href="mailto:<?php echo esc_html( $zume_coach_data->user_email ); ?>">
+                                <?php echo esc_html( $zume_coach_data->user_email ); ?>
+                                </a><br>
+	                            "<?php echo esc_html( $zume_coach_data->description ); ?>"
+                            </div>
+                        </div>
+                        <hr>
+
+                        <?php endif; ?>
+
+                        <!-- Instructions for What to Do -->
+                        <div class="grid-x">
+                            <div class="cell center">
+                                <h3><?php echo esc_html__( 'Instructions', 'zume' ) ?></h3>
                             </div>
                         </div>
 
-                        <?php endif; ?>
+                        <div class="grid-x grid-margin-x">
+                            <div class="cell">
+			                   <ul>
+                                   <li>Create a group <?php ($zume_no_groups > 0 ) ? print '<span class="primary-color">&#10004;</span>' : print '' ?></li>
+                                   <li>Plan a time and invite friends</li>
+                                   <li>Explore the upcoming session</li>
+                               </ul>
+                            </div>
+                        </div>
 
                     </div>
 
