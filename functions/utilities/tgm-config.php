@@ -60,9 +60,9 @@ function zume_register_required_plugins() {
             'required' => false,
         ),
         array(
-            'name' => 'WP Better Emails',
-            'slug' => 'wp-better-emails',
-            'version' => '0.3',
+            'name' => 'Easy WP SMTP',
+            'slug' => 'easy-wp-smtp',
+            'version' => '1.3.1',
             'required' => false,
         ),
         array(
@@ -102,7 +102,14 @@ function zume_register_required_plugins() {
             'version' => '1.9.1',
             'required' => true,
             'force_activation'  => true,
-        )
+        ),
+	    array(
+		    'name' => 'Peter\'s Login Redirect',
+		    'slug' => 'peters-login-redirect',
+		    'version' => '2.9.1',
+		    'required' => true,
+		    'force_activation'  => true,
+	    )
     );
 
     /*
