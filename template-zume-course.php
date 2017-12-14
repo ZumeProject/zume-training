@@ -9,17 +9,13 @@ zume_force_login();
  */
 
 if ( empty( $_GET['group'] ) || empty( $_GET['session'] ) ) {
-	wp_die( 'You are missing your group or session number. <a href="/">Head back to your dashboard</a>' );
+    wp_die( 'You are missing your group or session number. <a href="/">Head back to your dashboard</a>' );
 }
 $zume_group_key = sanitize_key( wp_unslash( $_GET['group'] ) );
 $zume_session   = sanitize_key( wp_unslash( $_GET['session'] ) );
-isset( $_POST['viewing'] ) ? $isset_viewing = true : $isset_viewing = false;
 
 $zume_current_user = get_current_user_id();
-
-$zume_user_meta = array_map( function ( $a ) {
-	return $a[0];
-}, get_user_meta( $zume_current_user ) );
+$zume_user_meta = zume_get_user_meta( $zume_current_user );
 
 get_header();
 
@@ -33,55 +29,58 @@ get_header();
 
             <div id="main" class="large-10 cell" role="main">
 
-				<?php
-				/**
-				 * Load Zume Course Content
-				 */
+                <?php
+                /**
+                 * Load Zume Course Content
+                 */
+                isset( $_POST['viewing'] ) ? $isset_viewing = true : $isset_viewing = false;
+                if ( $isset_viewing ) { // check if member check is complete
+                    $viewing = sanitize_key( wp_unslash( $_POST['viewing'] ) );
+                    if ( isset( $_POST['members'] ) ) {
+                        $members = sanitize_key( wp_unslash( $_POST['members'] ) );
+                    }
+                    switch ( $viewing ) {
+                        case 'group':
+                            Zume_Course::update_session_complete( $zume_group_key, $zume_session );
+                            Zume_Course_Content::get_course_content( $zume_session );
+                            zume_insert_log( [
+                                'user_id'  => get_current_user_id(),
+                                'group_id' => $zume_group_key,
+                                'page'     => 'course',
+                                'action'   => 'session_' . $zume_session,
+                                'meta'     => 'group_' . $members,
+                            ] );
+                            break;
+                        case 'member':
+                            Zume_Course::update_session_complete( $zume_group_key, $zume_session );
+                            Zume_Course_Content::get_course_content( $zume_session );
+                            zume_insert_log( [
+                                'user_id'  => get_current_user_id(),
+                                'group_id' => $zume_group_key,
+                                'page'     => 'course',
+                                'action'   => 'session_' . $zume_session,
+                                'meta'     => 'member_' . $members,
+                            ] );
+                            break;
+                        case 'explore':
+                            Zume_Course_Content::get_course_content( $zume_session );
+                            zume_insert_log( [
+                                'user_id'  => get_current_user_id(),
+                                'group_id' => $zume_group_key,
+                                'page'     => 'course',
+                                'action'   => 'session_' . $zume_session,
+                                'meta'     => 'explore',
+                            ] );
+                            break;
+                        default:
+                            wp_die( 'You need a correctly formatted URL. This can happen if you came here from somewhere other than the dashboard. <a href="/">Head back to your dashboard and try again.</a>' );
+                            break;
+                    }
+                } else {
+                    Zume_Course_Content::course_start_panel( $zume_session, $zume_user_meta[$zume_group_key] );
+                }
 
-				if ( $isset_viewing ) {
-					$viewing = sanitize_key( wp_unslash( $_POST['viewing'] ) );
-					switch ( $viewing ) {
-						case 'group':
-							Zume_Course::update_session_complete( $zume_group_key, $zume_session );
-							Zume_Course_Content::get_course_content( $zume_session );
-							zume_insert_log( [
-								'user_id'  => get_current_user_id(),
-								'group_id' => $zume_group_key,
-								'page'     => 'course',
-								'action'   => 'session_' . $zume_session,
-								'meta'     => 'group',
-							] );
-							break;
-						case 'member':
-							Zume_Course::update_session_complete( $zume_group_key, $zume_session );
-							Zume_Course_Content::get_course_content( $zume_session );
-							zume_insert_log( [
-								'user_id'  => get_current_user_id(),
-								'group_id' => $zume_group_key,
-								'page'     => 'course',
-								'action'   => 'session_' . $zume_session,
-								'meta'     => 'member',
-							] );
-							break;
-						case 'explore':
-							Zume_Course_Content::get_course_content( $zume_session );
-							zume_insert_log( [
-								'user_id'  => get_current_user_id(),
-								'group_id' => $zume_group_key,
-								'page'     => 'course',
-								'action'   => 'session_' . $zume_session,
-								'meta'     => 'explore',
-							] );
-							break;
-						default:
-							wp_die( 'You need a correctly formatted URL. This can happen if you came here from somewhere other than the dashboard. <a href="/">Head back to your dashboard and try again.</a>' );
-							break;
-					}
-				} else {
-					Zume_Course_Content::course_start_panel( $zume_session );
-				}
-
-				?>
+                ?>
 
             </div> <!-- end #main -->
 
@@ -102,8 +101,8 @@ get_header();
  */
 class Zume_Course_Content {
 
-	public static function get_course_content( $session_id ) {
-		?>
+    public static function get_course_content( $session_id ) {
+        ?>
         <h2 class="center padding-bottom">Session <?php echo $session_id; ?></h2>
 
         <script>
@@ -128,7 +127,7 @@ class Zume_Course_Content {
                     autoFocus: true,
                     onStepChanged: function (event, currentIndex, priorIndex) {
                         var newHash = "#s" + (currentIndex + 1);
-						<?php /* Replaces window.location.hash without creating
+                        <?php /* Replaces window.location.hash without creating
                         a history entry, and without scrolling or jumping, and
                         without triggering hashchange */ ?>
                         history.replaceState(null, null, newHash);
@@ -141,7 +140,7 @@ class Zume_Course_Content {
                     titleTemplate: '<span class="number">#index#</span> #title#'
                 });
                 window.addEventListener("hashchange", function (event) {
-					<?php /* This can get triggered when Overview menu items
+                    <?php /* This can get triggered when Overview menu items
                     get clicked */ ?>
                     var hash = event.newURL.substr(event.newURL.indexOf("#"));
                     if (!isNaN(parseInt(hash.substr(2)))) {
@@ -154,85 +153,138 @@ class Zume_Course_Content {
 
         </script>
         <div id="session" class="course-steps">
-			<?php
+            <?php
 
-			switch ( $session_id ) {
-				case '1':
-					self::get_course_content_1();
-					break;
-				case '2':
-					self::get_course_content_2();
-					break;
-				case '3':
-					self::get_course_content_3();
-					break;
-				case '4':
-					self::get_course_content_4();
-					break;
-				case '5':
-					self::get_course_content_5();
-					break;
-				case '6':
-					self::get_course_content_6();
-					break;
-				case '7':
-					self::get_course_content_7();
-					break;
-				case '8':
-					self::get_course_content_8();
-					break;
-				case '9':
-					self::get_course_content_9();
-					break;
-				case '10':
-					self::get_course_content_10();
-					break;
-				default:
-					break;
-			}
-			?>
+            switch ( $session_id ) {
+                case '1':
+                    self::get_course_content_1();
+                    break;
+                case '2':
+                    self::get_course_content_2();
+                    break;
+                case '3':
+                    self::get_course_content_3();
+                    break;
+                case '4':
+                    self::get_course_content_4();
+                    break;
+                case '5':
+                    self::get_course_content_5();
+                    break;
+                case '6':
+                    self::get_course_content_6();
+                    break;
+                case '7':
+                    self::get_course_content_7();
+                    break;
+                case '8':
+                    self::get_course_content_8();
+                    break;
+                case '9':
+                    self::get_course_content_9();
+                    break;
+                case '10':
+                    self::get_course_content_10();
+                    break;
+                default:
+                    break;
+            }
+            ?>
         </div>
-		<?php
-	}
+        <?php
+    }
 
-	public static function course_start_panel( $zume_session ) {
-		?>
+    public static function course_start_panel( $zume_session, $zume_group_meta ) {
+        ?>
         <h3></h3>
         <section><!-- Step Title -->
 
-            <form action="" method="post">
+            <!-- Activity Block -->
+            <div class="grid-x grid-margin-x grid-margin-y">
+                <div class="large-4"></div>
+                <div class="large-4 cell center">
+                    <p>Welcome to Session <?php echo $zume_session; ?></p>
+                    <h2>Which are you doing right now?</h2>
+                    <br>
+                    <button class="button large expanded" data-open="group">Facilitating a Group
+                    </button>
+                    <br>
+                    <button class="button large expanded" data-open="member">Participating in a Group
+                    </button>
+                    <br>
+                    <form action="" method="post">
+                    <button type="submit" class="button large expanded" name="viewing" value="explore">Exploring the Session Content
+                    </button>
+                    </form>
 
-                <!-- Activity Block -->
-                <div class="grid-x grid-margin-x grid-margin-y">
-                    <div class="large-4"></div>
-                    <div class="large-4 cell center">
-                        <p>Welcome to Session <?php echo $zume_session; ?></p>
-                        <h2>Which are you doing right now?</h2>
-                        <br>
-                        <button type="submit" class="button large expanded" name="viewing" value="group">Facilitating a Group
-                        </button>
-                        <br>
-                        <button type="submit" class="button large expanded" name="viewing" value="member">Participating in a
-                            Group
-                        </button>
-                        <br>
-                        <button type="submit" class="button large expanded" name="viewing" value="explore">Exploring the
-                            Session Content
-                        </button>
-
-
-                    </div>
-                    <div class="large-4"></div>
                 </div>
-            </form>
+                <div class="large-4"></div>
+            </div>
+
+            <!-- Modal for group -->
+            <div class="small reveal" id="group" data-reveal>
+                <div class="grid-x">
+                    <div class="small-4 cell"></div>
+                    <div class="small-4 cell center">
+                        <form action="" method="post">
+                            <label for="members">How many are with you?</label>
+                            <select id="members" name="members" >
+                                <?php
+                                $zume_group_meta = maybe_unserialize( $zume_group_meta );
+                                $i = 1;
+                                while( 16 > $i ) {
+                                    echo '<option value="'.$i.'"';
+                                    if( $zume_group_meta['members'] == $i ) {
+                                        echo 'selected';
+                                    }
+                                    echo '>'.$i.'</option>';
+                                    $i++;
+                                }
+                                ?>
+                            </select>
+                            <button type="submit" name="viewing" class="button" value="group">Continue</button>
+                        </form>
+                    </div>
+                    <div class="small-4 cell"></div>
+                </div>
+
+            </div>
+
+            <div class="small reveal" id="member" data-reveal>
+                <div class="grid-x">
+                    <div class="small-4 cell"></div>
+                    <div class="small-4 cell center">
+                        <form action="" method="post">
+                            <label for="members">How many are in your group?</label>
+                            <select id="members" name="members" >
+						        <?php
+						        $zume_group_meta = maybe_unserialize( $zume_group_meta );
+						        $i = 1;
+						        while( 16 > $i ) {
+							        echo '<option value="'.$i.'"';
+							        if( $zume_group_meta['members'] == $i ) {
+								        echo 'selected';
+							        }
+							        echo '>'.$i.'</option>';
+							        $i++;
+						        }
+						        ?>
+                            </select>
+                            <button type="submit" name="viewing" class="button" value="member">Continue</button>
+                        </form>
+                    </div>
+                    <div class="small-4 cell"></div>
+                </div>
+
+            </div>
 
         </section>
-		<?php
-	}
+        <?php
+    }
 
-	public static function get_course_content_1() {
+    public static function get_course_content_1() {
 
-		?>
+        ?>
         <h3></h3>
         <section><!-- Step Title -->
             <div class="grid-x grid-margin-x grid-margin-y">
@@ -591,11 +643,11 @@ class Zume_Course_Content {
 
         </section>
 
-		<?php
-	}
+        <?php
+    }
 
-	public static function get_course_content_2() {
-		?>
+    public static function get_course_content_2() {
+        ?>
 
         <!-- Step -->
         <h3></h3>
@@ -886,11 +938,11 @@ class Zume_Course_Content {
                 </div>
             </div> <!-- grid-x -->
         </section>
-		<?php
-	}
+        <?php
+    }
 
-	public static function get_course_content_3() {
-		?>
+    public static function get_course_content_3() {
+        ?>
 
         <!-- Step -->
         <h3></h3>
@@ -1198,11 +1250,11 @@ class Zume_Course_Content {
                 </div>
             </div>
         </section>
-		<?php
-	}
+        <?php
+    }
 
-	public static function get_course_content_4() {
-		?>
+    public static function get_course_content_4() {
+        ?>
 
         <!-- Step -->
         <h3></h3>
@@ -1578,11 +1630,11 @@ class Zume_Course_Content {
                 </div>
             </div> <!-- grid-x -->
         </section>
-		<?php
-	}
+        <?php
+    }
 
-	public static function get_course_content_5() {
-		?>
+    public static function get_course_content_5() {
+        ?>
 
         <!-- Step -->
         <h3></h3>
@@ -1807,11 +1859,11 @@ class Zume_Course_Content {
                     </div>
                 </div> <!-- grid-x -->
         </section>
-		<?php
-	}
+        <?php
+    }
 
-	public static function get_course_content_6() {
-		?>
+    public static function get_course_content_6() {
+        ?>
 
         <!-- Step -->
         <h3></h3>
@@ -2027,11 +2079,11 @@ class Zume_Course_Content {
                 </div>
             </div> <!-- grid-x -->
         </section>
-		<?php
-	}
+        <?php
+    }
 
-	public static function get_course_content_7() {
-		?>
+    public static function get_course_content_7() {
+        ?>
 
         <!-- Step -->
         <h3></h3>
@@ -2210,11 +2262,11 @@ class Zume_Course_Content {
                 </div>
             </div> <!-- grid-x -->
         </section>
-		<?php
-	}
+        <?php
+    }
 
-	public static function get_course_content_8() {
-		?>
+    public static function get_course_content_8() {
+        ?>
         <!-- Step -->
         <h3></h3>
         <section>
@@ -2390,11 +2442,11 @@ class Zume_Course_Content {
             </div> <!-- grid-x -->
         </section>
 
-		<?php
-	}
+        <?php
+    }
 
-	public static function get_course_content_9() {
-		?>
+    public static function get_course_content_9() {
+        ?>
 
         <!-- Step -->
         <h3></h3>
@@ -2843,11 +2895,11 @@ class Zume_Course_Content {
             <!-- Activity Block -->
 
         </section>
-		<?php
-	}
+        <?php
+    }
 
-	public static function get_course_content_10() {
-		?>
+    public static function get_course_content_10() {
+        ?>
 
         <!-- Step -->
         <h3></h3>
@@ -3315,6 +3367,6 @@ class Zume_Course_Content {
                             </div>
                         </div>
         </section>
-		<?php
-	}
+        <?php
+    }
 }

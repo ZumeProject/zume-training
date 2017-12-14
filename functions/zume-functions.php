@@ -144,4 +144,13 @@ function zume_update_user_contact_info()
     return true;
 }
 
-
+/**
+ * This returns a simple array versus the multi dimensional array from the get_user_meta function
+ * @param $user_id
+ *
+ * @return array
+ */
+function zume_get_user_meta( $user_id ) {
+    return array_map( function ( $a ) { return $a[0];
+    }, get_user_meta( $user_id ) );
+}

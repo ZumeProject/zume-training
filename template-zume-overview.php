@@ -16,22 +16,22 @@ get_header();
 
             <div id="main" class="large-12 medium-12 columns" role="main">
 
-				<?php
-				/**
-				 * Zúme Overview Content Loader
-				 *
-				 * @param 'id' in the url the id and session number is used to call the correct session.
-				 */
+                <?php
+                /**
+                 * Zúme Overview Content Loader
+                 *
+                 * @param 'id' in the url the id and session number is used to call the correct session.
+                 */
 
-				$zume_session  = 1;
-				$zume_language = zume_current_language();
-				if ( is_wp_error( $zume_language ) ) {
-					$zume_language = 'en';
-				}
+                $zume_session  = 1;
+                $zume_language = zume_current_language();
+                if ( is_wp_error( $zume_language ) ) {
+                    $zume_language = 'en';
+                }
 
-				Zume_Overview_Content::load_sessions();
+                Zume_Overview_Content::load_sessions();
 
-				?>
+                ?>
 
             </div> <!-- end #main -->
 
@@ -57,12 +57,12 @@ get_footer();
  */
 class Zume_Overview_Content {
 
-	/**
-	 * Zume Overview: Primary content section
-	 * @return mixed
-	 */
-	public static function load_sessions() {
-		?>
+    /**
+     * Zume Overview: Primary content section
+     * @return mixed
+     */
+    public static function load_sessions() {
+        ?>
         <h2 class="center padding-bottom">Sessions Overview</h2>
 
         <script>
@@ -89,7 +89,7 @@ class Zume_Overview_Content {
                     autoFocus: true,
                     onStepChanged: function (event, currentIndex, priorIndex) {
                         var newHash = "#s" + (currentIndex + 1);
-						<?php /* Replaces window.location.hash without creating
+                        <?php /* Replaces window.location.hash without creating
                         a history entry, and without scrolling or jumping, and
                         without triggering hashchange */ ?>
                         history.replaceState(null, null, newHash);
@@ -97,7 +97,7 @@ class Zume_Overview_Content {
                     titleTemplate: '<span class="number">#index#</span> #title#'
                 });
                 window.addEventListener("hashchange", function (event) {
-					<?php /* This can get triggered when Overview menu items
+                    <?php /* This can get triggered when Overview menu items
                     get clicked */ ?>
                     var hash = event.newURL.substr(event.newURL.indexOf("#"));
                     if (!isNaN(parseInt(hash.substr(2)))) {
@@ -114,106 +114,114 @@ class Zume_Overview_Content {
             <h3></h3>
             <section>
                 <h3 style="text-align: center; font-weight: bold">Session 1</h3>
-				<?php self::session_overview_1(); ?>
+                <?php self::session_overview_1(); ?>
             </section>
 
             <h3></h3>
             <section>
                 <h3 style="text-align: center; font-weight: bold">Session 2</h3>
-				<?php self::session_overview_2(); ?>
+                <?php self::session_overview_2(); ?>
             </section>
 
             <h3></h3>
             <section>
                 <h3 style="text-align: center; font-weight: bold">Session 3</h3>
-				<?php self::session_overview_3(); ?>
+                <?php self::session_overview_3(); ?>
             </section>
 
             <h3></h3>
             <section>
                 <h3 style="text-align: center; font-weight: bold">Session 4</h3>
-				<?php self::session_overview_4(); ?>
+                <?php self::session_overview_4(); ?>
             </section>
 
             <h3></h3>
             <section>
                 <h3 style="text-align: center; font-weight: bold">Session 5</h3>
-				<?php self::session_overview_5(); ?>
+                <?php self::session_overview_5(); ?>
             </section>
 
             <h3></h3>
             <section>
                 <h3 style="text-align: center; font-weight: bold">Session 6</h3>
-				<?php self::session_overview_6(); ?>
+                <?php self::session_overview_6(); ?>
             </section>
 
             <h3></h3>
             <section>
                 <h3 style="text-align: center; font-weight: bold">Session 7</h3>
-				<?php self::session_overview_7(); ?>
+                <?php self::session_overview_7(); ?>
             </section>
 
             <h3></h3>
             <section>
                 <h3 style="text-align: center; font-weight: bold">Session 8</h3>
-				<?php self::session_overview_8(); ?>
+                <?php self::session_overview_8(); ?>
             </section>
 
             <h3></h3>
             <section>
                 <h3 style="text-align: center; font-weight: bold">Session 9</h3>
-				<?php self::session_overview_9(); ?>
+                <?php self::session_overview_9(); ?>
             </section>
 
             <h3></h3>
             <section>
                 <h3 style="text-align: center; font-weight: bold">Session 10 - Advanced Training</h3>
-				<?php self::session_overview_10(); ?>
+                <?php self::session_overview_10(); ?>
             </section>
 
         </div>
 
-		<?php if ( is_user_logged_in() ) {
-			self::next_session_block();
-		} ?>
+        <?php if ( is_user_logged_in() ) {
+            self::next_session_block();
+} ?>
 
-		<?php
-	}
+        <?php
+    }
 
-	public static function next_session_block() {
-		?>
-        <div class="callout">
-            <p class="center padding-bottom">Go to the Dashboard to select your Group and start the next session</p>
-            <p class="center"><a href="/dashboard/" class="button large">Dashboard</a></p>
+    public static function next_session_block() {
+        ?>
+        <br>
+        <div class="grid-x grid-margin-x">
+            <div class="large-1 cell"></div>
+            <div class="large-10 cell center">
+                <div class="callout">
+                    <p class="center padding-bottom">Go to the Dashboard to select your Group and start the next session</p>
+                    <p class="center"><a href="<?php echo zume_dashboard_url(); ?>" class="button large">Dashboard</a></p>
+                </div>
+            </div>
+            <div class="large-1 cell"></div>
         </div>
-		<?php
-	}
 
-	/**
-	 * Pulls the content from the pages database
-	 */
-	public static function get_page_content( $session, $language = 'en' ) {
+        <?php
+    }
 
-		$session_title = 'Session ' . $session . ' Overview';
-		$page_object   = get_page_by_title( $session_title, OBJECT, 'page' );
+    /**
+     * Pulls the content from the pages database
+     */
+//	public static function get_page_content( $session, $language = 'en' ) {
+//
+//		$session_title = 'Session ' . $session . ' Overview';
+//		$page_object   = get_page_by_title( $session_title, OBJECT, 'page' );
+//
+//		if ( $language != 'en' ) {
+//			$translation_id = zume_get_translation( $page_object->ID, $language );
+//			$page_object    = get_post( $translation_id, OBJECT );
+//		}
+//
+//		if ( ! empty( $page_object ) || ! empty( $page_object->post_content ) ) {
+//			$page_content = (string) $page_object->post_content;
+//			// @codingStandardsIgnoreLine
+//			echo "<div class=\"overview\">$page_content</div>";
+//
+//		} else {
+//			print 'Please republish "' . esc_html( $session_title ) . '" with content for this section in the pages administration area.';
+//		}
+//	}
 
-		if ( $language != 'en' ) {
-			$translation_id = zume_get_translation( $page_object->ID, $language );
-			$page_object    = get_post( $translation_id, OBJECT );
-		}
-
-		if ( ! empty( $page_object ) || ! empty( $page_object->post_content ) ) {
-			$page_content = (string) $page_object->post_content;
-			// @codingStandardsIgnoreLine
-			echo "<div class=\"overview\">$page_content</div>";
-
-		} else {
-			print 'Please republish "' . esc_html( $session_title ) . '" with content for this section in the pages administration area.';
-		}
-	}
-
-	public static function session_overview_1() {
-		?>
+    public static function session_overview_1() {
+        ?>
         <div class="grid-x grid-margin-x">
             <div class="large-2 cell"></div>
             <div class="large-8 cell">
@@ -251,7 +259,7 @@ class Zume_Overview_Content {
                                      alt="" width="40" height="40" class="alignnone size-full wp-image-1564"/>
                             </div>
                             <div class="large-11 cell">
-								<?php esc_html_e( 'WELCOME TO ZÚME — You\'ll see how God uses ordinary people doing simple things to make a big impact.', 'zume' ) ?>
+                                <?php esc_html_e( 'WELCOME TO ZÚME — You\'ll see how God uses ordinary people doing simple things to make a big impact.', 'zume' ) ?>
                             </div>
                         </div>
                     </div>
@@ -262,7 +270,7 @@ class Zume_Overview_Content {
                                      alt="" width="40" height="40" class="alignnone size-full wp-image-1565"/>
                             </div>
                             <div class="large-11 cell">
-								<?php esc_html_e( 'TEACH THEM TO OBEY — Discover the essence of being a disciple, making a disciple, and what is the church.', 'zume' ) ?>
+                                <?php esc_html_e( 'TEACH THEM TO OBEY — Discover the essence of being a disciple, making a disciple, and what is the church.', 'zume' ) ?>
                             </div>
                         </div>
                     </div>
@@ -273,7 +281,7 @@ class Zume_Overview_Content {
                                      alt="" width="40" height="40" class="alignnone size-full wp-image-1566"/>
                             </div>
                             <div class="large-11 cell">
-								<?php esc_html_e( 'SPIRITUAL BREATHING — Being a disciple means we hear from God and we obey God.', 'zume' ) ?>
+                                <?php esc_html_e( 'SPIRITUAL BREATHING — Being a disciple means we hear from God and we obey God.', 'zume' ) ?>
                             </div>
                         </div>
                     </div>
@@ -294,7 +302,7 @@ class Zume_Overview_Content {
                                      width="40" height="40" class="alignnone size-full wp-image-1035"/>
                             </div>
                             <div class="large-11 cell">
-								<?php esc_html_e( 'S.O.A.P.S. BIBLE READING — a tool for daily Bible study that helps you understand, obey, and share God’s Word.', 'zume' ) ?>
+                                <?php esc_html_e( 'S.O.A.P.S. BIBLE READING — a tool for daily Bible study that helps you understand, obey, and share God’s Word.', 'zume' ) ?>
                             </div>
                         </div>
                     </div>
@@ -306,7 +314,7 @@ class Zume_Overview_Content {
                                      width="40" height="40" class="alignnone size-full wp-image-1567"/>
                             </div>
                             <div class="large-11 cell">
-								<?php esc_html_e( 'ACCOUNTABILITY GROUPS — a tool for two or three people of the same gender to meet weekly and encourage each other in areas that are going well and reveal areas that need correction.', 'zume' ) ?>
+                                <?php esc_html_e( 'ACCOUNTABILITY GROUPS — a tool for two or three people of the same gender to meet weekly and encourage each other in areas that are going well and reveal areas that need correction.', 'zume' ) ?>
                             </div>
                         </div>
                     </div>
@@ -317,7 +325,7 @@ class Zume_Overview_Content {
                                      alt="" width="40" height="40" class="alignnone size-full wp-image-1566"/>
                             </div>
                             <div class="large-11 cell">
-								<?php esc_html_e( 'SPIRITUAL BREATHING — Being a disciple means we hear from God and we obey God.', 'zume' ) ?>
+                                <?php esc_html_e( 'SPIRITUAL BREATHING — Being a disciple means we hear from God and we obey God.', 'zume' ) ?>
                             </div>
                         </div>
                     </div>
@@ -337,7 +345,7 @@ class Zume_Overview_Content {
                                      alt="" width="40" height="40" class="alignnone size-full wp-image-1568"/>
                             </div>
                             <div class="large-11 cell">
-								<?php esc_html_e( 'ACCOUNTABILITY GROUPS — Break into groups of two or three people to work through the Accountability Questions. (45 minutes)', 'zume' ) ?>
+                                <?php esc_html_e( 'ACCOUNTABILITY GROUPS — Break into groups of two or three people to work through the Accountability Questions. (45 minutes)', 'zume' ) ?>
                             </div>
                         </div>
                     </div>
@@ -347,11 +355,11 @@ class Zume_Overview_Content {
             <div class="large-2 cell"></div>
         </div>
 
-		<?php
-	}
+        <?php
+    }
 
-	public static function session_overview_2() {
-		?>
+    public static function session_overview_2() {
+        ?>
         <div class="grid-x grid-margin-y grid-margin-x">
             <div class="large-2 cell"></div>
             <div class="large-8 cell">
@@ -431,16 +439,7 @@ class Zume_Overview_Content {
                             </div>
                         </div>
                     </div>
-                    <div class="cell">
-                        <div class="grid-x grid-margin-y">
-                            <div class="large-1 cell">
-                                <!-- image -->
-                            </div>
-                            <div class="large-11 cell">
 
-                            </div>
-                        </div>
-                    </div>
                 </div>
 
                 <hr>
@@ -477,11 +476,11 @@ class Zume_Overview_Content {
             </div>
             <div class="large-2 cell"></div>
         </div>
-		<?php
-	}
+        <?php
+    }
 
-	public static function session_overview_3() {
-		?>
+    public static function session_overview_3() {
+        ?>
         <div class="grid-x grid-margin-y grid-margin-x">
             <div class="large-2 cell"></div>
             <div class="large-8 cell">
@@ -597,11 +596,11 @@ class Zume_Overview_Content {
             </div>
             <div class="large-2 cell"></div>
         </div>
-		<?php
-	}
+        <?php
+    }
 
-	public static function session_overview_4() {
-		?>
+    public static function session_overview_4() {
+        ?>
         <div class="grid-x grid-margin-y grid-margin-x">
             <div class="large-2 cell"></div>
             <div class="large-8 cell">
@@ -751,11 +750,11 @@ class Zume_Overview_Content {
             </div>
             <div class="large-2 cell"></div>
         </div>
-		<?php
-	}
+        <?php
+    }
 
-	public static function session_overview_5() {
-		?>
+    public static function session_overview_5() {
+        ?>
         <div class="grid-x grid-margin-y grid-margin-x">
             <div class="large-2 cell"></div>
             <div class="large-8 cell">
@@ -865,11 +864,11 @@ class Zume_Overview_Content {
             </div>
             <div class="large-2 cell"></div>
         </div>
-		<?php
-	}
+        <?php
+    }
 
-	public static function session_overview_6() {
-		?>
+    public static function session_overview_6() {
+        ?>
         <div class="grid-x grid-margin-y grid-margin-x">
             <div class="large-2 cell"></div>
             <div class="large-8 cell">
@@ -946,11 +945,11 @@ class Zume_Overview_Content {
             </div>
             <div class="large-2 cell"></div>
         </div>
-		<?php
-	}
+        <?php
+    }
 
-	public static function session_overview_7() {
-		?>
+    public static function session_overview_7() {
+        ?>
         <div class="grid-x grid-margin-y grid-margin-x">
             <div class="large-2 cell"></div>
             <div class="large-8 cell">
@@ -1023,11 +1022,11 @@ class Zume_Overview_Content {
             </div>
             <div class="large-2 cell"></div>
         </div>
-		<?php
-	}
+        <?php
+    }
 
-	public static function session_overview_8() {
-		?>
+    public static function session_overview_8() {
+        ?>
         <div class="grid-x grid-margin-y grid-margin-x">
             <div class="large-2 cell"></div>
             <div class="large-8 cell">
@@ -1102,11 +1101,11 @@ class Zume_Overview_Content {
             </div>
             <div class="large-2 cell"></div>
         </div>
-		<?php
-	}
+        <?php
+    }
 
-	public static function session_overview_9() {
-		?>
+    public static function session_overview_9() {
+        ?>
         <div class="grid-x grid-margin-y grid-margin-x">
             <div class="large-2 cell"></div>
             <div class="large-8 cell">
@@ -1204,11 +1203,11 @@ class Zume_Overview_Content {
             </div>
             <div class="large-2 cell"></div>
         </div>
-		<?php
-	}
+        <?php
+    }
 
-	public static function session_overview_10() {
-		?>
+    public static function session_overview_10() {
+        ?>
         <div class="grid-x grid-margin-y grid-margin-x">
             <div class="large-2 cell"></div>
             <div class="large-8 cell">
@@ -1279,6 +1278,7 @@ class Zume_Overview_Content {
                             </div>
                         </div>
                     </div>
+
                 </div>
 
                 <hr>
@@ -1288,19 +1288,7 @@ class Zume_Overview_Content {
                     <div class="cell">
                         <h3><?php esc_html_e( 'Practice:', 'zume' ) ?></h3>
                     </div>
-                    <div class="cell">
-                        <div class="grid-x grid-margin-y">
-                            <div class="large-1 cell">
-                                <!-- image -->
-                                <img src="<?php echo home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ); ?>practice-1-5.png"
-                                     alt="" width="40" height="40" class="alignnone size-full wp-image-1574"/>
-                            </div>
-                            <div class="large-11 cell">
-                                COACHING CHECKLIST — The Coaching Checklist is a powerful tool you can use to quickly assess your
-                                own strengths and vulnerabilities when it comes to making disciples who multiply. (10 minutes)
-                            </div>
-                        </div>
-                    </div>
+
                     <div class="cell">
                         <div class="grid-x grid-margin-y">
                             <div class="large-1 cell">
@@ -1319,7 +1307,7 @@ class Zume_Overview_Content {
             </div>
             <div class="large-2 cell"></div>
         </div>
-		<?php
-	}
+        <?php
+    }
 
 }

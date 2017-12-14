@@ -166,20 +166,38 @@ class Zume_Dashboard {
         delete_user_meta( $user_id, $group_key );
     }
 
-	public static function closed_group( $group_key ) {
-		$user_id = get_current_user_id();
-		$user_meta = get_user_meta( $user_id, $group_key, true );
-		if ( empty( $user_meta ) ) {
-			return new WP_Error( 'no_group_match', 'Hey, you cheating? No, group with id found for you.' );
-		}
-		$user_meta['closed'] = true;
-		update_user_meta( $user_id, $group_key, $user_meta );
-	}
+    public static function closed_group( $group_key ) {
+        $user_id = get_current_user_id();
+        $user_meta = get_user_meta( $user_id, $group_key, true );
+        if ( empty( $user_meta ) ) {
+            return new WP_Error( 'no_group_match', 'Hey, you cheating? No, group with id found for you.' );
+        }
+        $user_meta['closed'] = true;
+        update_user_meta( $user_id, $group_key, $user_meta );
+    }
 
-	public static function activate_group( $user_id, $group_id ) {
-		$group_meta = get_user_meta( $user_id, $group_id, true);
-		$group_previous = $group_meta;
-		$group_meta['closed'] = false;
-		update_user_meta( $user_id, $group_id, $group_meta, $group_previous );
-	}
+    public static function activate_group( $user_id, $group_id ) {
+        $group_meta = get_user_meta( $user_id, $group_id, true );
+        $group_previous = $group_meta;
+        $group_meta['closed'] = false;
+        update_user_meta( $user_id, $group_id, $group_meta, $group_previous );
+    }
+
+    public static function get_highest_session( $user_id ) {
+        $highest_session = 0;
+        $zume_user_meta = zume_get_user_meta( $user_id );
+        foreach ( $zume_user_meta as $key => $v ) {
+            $key_beginning = substr( $key, 0, 10 );
+            if ( 'zume_group' == $key_beginning ) { // check if zume_group
+                $value = maybe_unserialize( $v );
+                if ( isset( $value['closed'] ) && false == $value['closed'] ) {
+                    $next_session = Zume_Course::get_next_session( $value );
+                    if ( $highest_session < $next_session ) {
+                        $highest_session = $next_session;
+                    }
+                }
+            }
+        }
+        return $highest_session;
+    }
 }

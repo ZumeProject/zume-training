@@ -6,7 +6,7 @@ require_once( 'functions/utilities/debugger-log.php' ); // debug logger used for
 
 define( 'ZUME_DOMAIN', 'zume' );
 define( 'ZUME_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
-define( 'ZUME_VERSION', '1.0');
+define( 'ZUME_VERSION', '1.0' );
 
 /**
  * Add custom table

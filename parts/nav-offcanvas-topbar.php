@@ -32,7 +32,7 @@ if ( zume_has_polylang() ) {
     <div class=" show-for-small hide-for-large">
         <ul class="menu">
             <li class="zume-logo-in-top-bar"><a href="<?php if (is_user_logged_in()) { echo '/dashboard';
-                } else { echo esc_attr( home_url() ); } ?>">
+} else { echo esc_attr( home_url() ); } ?>">
                     <img src="<?php echo esc_attr( get_stylesheet_directory_uri() ); ?>/assets/images/zume-logo-white.png" >
                 </a></li>
         </ul>
