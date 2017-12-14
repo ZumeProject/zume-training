@@ -14,6 +14,8 @@ define( 'ZUME_VERSION', '1.0' );
 global $wpdb;
 require_once 'functions/activator.php';
 $wpdb->zume_logging = $wpdb->prefix . 'zume_logging';
+require_once( 'functions/post-types/video-post-type.php' );
+require_once( 'functions/post-types/pdf-assets-post-type.php' );
 
 /**
  * INCLUDED FILES
@@ -37,6 +39,7 @@ require_once( 'functions/restrict-rest-api.php' ); // Restricts the default REST
 require_once( 'functions/restrict-xml-rpc-pingback.php' ); // Restricts RPC vulnerability
 
 // Zume Core Files
+
 require_once( 'functions/zume-course.php' ); // zume course
 $zume_course = Zume_Course::instance();
 require_once( 'functions/zume-overview.php' ); // zume overview page

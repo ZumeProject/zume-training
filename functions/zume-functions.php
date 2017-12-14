@@ -23,7 +23,7 @@ function zume_dashboard_redirect() {
     global $post;
     if ( is_user_logged_in() && isset( $post )) {
         if ($post->post_name == 'home') {
-            wp_redirect( home_url( '/dashboard' ) );
+            wp_redirect( zume_dashboard_url() );
         }
     }
 }
@@ -36,7 +36,7 @@ if ( ! current_user_can( 'administrator' ) ) {
 }
 
 /*
- * Zúme Invite Page Content
+ * Zúme Invite Page Content // todo see if this is needed.
  * contains tailored content for the user to select the kind of invitation they want to make.
  */
 function zume_invite_page_content( $content ) {
@@ -153,4 +153,52 @@ function zume_update_user_contact_info()
 function zume_get_user_meta( $user_id ) {
     return array_map( function ( $a ) { return $a[0];
     }, get_user_meta( $user_id ) );
+}
+
+function zume_home_url() {
+	$current_lang = zume_current_language();
+	$url = zume_get_posts_translation_url( 'home', $current_lang );
+	return $url;
+}
+
+function zume_dashboard_url() {
+	$current_lang = zume_current_language();
+	$url = zume_get_posts_translation_url( 'dashboard', $current_lang );
+	return $url;
+}
+
+function zume_course_url() {
+	$current_lang = zume_current_language();
+	$url = zume_get_posts_translation_url( 'course', $current_lang );
+	return $url;
+}
+
+function zume_overview_url() {
+	$current_lang = zume_current_language();
+	$url = zume_get_posts_translation_url( 'overview', $current_lang );
+	return $url;
+}
+
+function zume_guidebook_url() {
+	$current_lang = zume_current_language();
+	$url = zume_get_posts_translation_url( 'guidebook', $current_lang );
+	return $url;
+}
+
+function zume_profile_url() {
+	$current_lang = zume_current_language();
+	$url = zume_get_posts_translation_url( 'profile', $current_lang );
+	return $url;
+}
+
+function zume_about_url() {
+	$current_lang = zume_current_language();
+	$url = zume_get_posts_translation_url( 'about', $current_lang );
+	return $url;
+}
+
+function zume_faq_url() {
+	$current_lang = zume_current_language();
+	$url = zume_get_posts_translation_url( 'faq', $current_lang );
+	return $url;
 }
