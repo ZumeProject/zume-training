@@ -1766,14 +1766,15 @@ class Zume_Course_Content {
                         and plan on spending 60-90 minutes on this activity.
                     </div>
                 </div> <!-- grid-x -->
-                <!-- Step Title -->
+            </div>
+
+
+            <!-- Step Title -->
                 <div class="grid-x grid-margin-x grid-margin-y">
-                    <div class="step-title cell">
+                    <div class="step-title cell center">
                         LOOKING FORWARD
                     </div> <!-- step-title cell -->
                     <div class="center">
-
-
                         <br> The session ends with a prayer walking activity. <br> Read through the Obey, Share, and
                         Pray sections, below, before you head out!
                     </div>

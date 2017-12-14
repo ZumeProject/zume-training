@@ -33,6 +33,10 @@ a, a:visited {
 	float:right;
 }
 
+.border-bottom {
+    border-bottom: 1px solid $light-gray;
+}
+
 /*********************
 H1, H2, H3, H4, H5 P STYLES
 *********************/
@@ -983,6 +987,8 @@ ul.orbit-container {
 .starter-switch {
 	@include switch-size(3rem, 6rem, 0.75rem);
 }
+
+
 
 
 

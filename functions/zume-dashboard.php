@@ -174,6 +174,12 @@ class Zume_Dashboard {
 		}
 		$user_meta['closed'] = true;
 		update_user_meta( $user_id, $group_key, $user_meta );
+	}
 
+	public static function activate_group( $user_id, $group_id ) {
+		$group_meta = get_user_meta( $user_id, $group_id, true);
+		$group_previous = $group_meta;
+		$group_meta['closed'] = false;
+		update_user_meta( $user_id, $group_id, $group_meta, $group_previous );
 	}
 }
