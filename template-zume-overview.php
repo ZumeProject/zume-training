@@ -63,7 +63,7 @@ class Zume_Overview_Content {
      */
     public static function load_sessions() {
         ?>
-        <h2 class="center padding-bottom">Sessions Overview</h2>
+        <h2 class="center padding-bottom"><?php echo esc_html__( 'Sessions Overview', 'zume' ) ?></h2>
 
         <script>
             jQuery(document).ready(function ($) {
@@ -113,61 +113,61 @@ class Zume_Overview_Content {
         <div id="overview">
             <h3></h3>
             <section>
-                <h3 style="text-align: center; font-weight: bold">Session 1</h3>
+                <h3 style="text-align: center; font-weight: bold"><?php echo esc_html__( 'Session 1', 'zume' ) ?></h3>
                 <?php self::session_overview_1(); ?>
             </section>
 
             <h3></h3>
             <section>
-                <h3 style="text-align: center; font-weight: bold">Session 2</h3>
+                <h3 style="text-align: center; font-weight: bold"><?php echo esc_html__( "Session 2", 'zume' ) ?></h3>
                 <?php self::session_overview_2(); ?>
             </section>
 
             <h3></h3>
             <section>
-                <h3 style="text-align: center; font-weight: bold">Session 3</h3>
+                <h3 style="text-align: center; font-weight: bold"><?php echo esc_html__( "Session 3", 'zume' ) ?></h3>
                 <?php self::session_overview_3(); ?>
             </section>
 
             <h3></h3>
             <section>
-                <h3 style="text-align: center; font-weight: bold">Session 4</h3>
+                <h3 style="text-align: center; font-weight: bold"><?php echo esc_html__( "Session 4", 'zume' ) ?></h3>
                 <?php self::session_overview_4(); ?>
             </section>
 
             <h3></h3>
             <section>
-                <h3 style="text-align: center; font-weight: bold">Session 5</h3>
+                <h3 style="text-align: center; font-weight: bold"><?php echo esc_html__( "Session 5", 'zume' ) ?></h3>
                 <?php self::session_overview_5(); ?>
             </section>
 
             <h3></h3>
             <section>
-                <h3 style="text-align: center; font-weight: bold">Session 6</h3>
+                <h3 style="text-align: center; font-weight: bold"><?php echo esc_html__( "Session 6", 'zume' ) ?></h3>
                 <?php self::session_overview_6(); ?>
             </section>
 
             <h3></h3>
             <section>
-                <h3 style="text-align: center; font-weight: bold">Session 7</h3>
+                <h3 style="text-align: center; font-weight: bold"><?php echo esc_html__( "Session 7", 'zume' ) ?></h3>
                 <?php self::session_overview_7(); ?>
             </section>
 
             <h3></h3>
             <section>
-                <h3 style="text-align: center; font-weight: bold">Session 8</h3>
+                <h3 style="text-align: center; font-weight: bold"><?php echo esc_html__( "Session 8", 'zume' ) ?></h3>
                 <?php self::session_overview_8(); ?>
             </section>
 
             <h3></h3>
             <section>
-                <h3 style="text-align: center; font-weight: bold">Session 9</h3>
+                <h3 style="text-align: center; font-weight: bold"><?php echo esc_html__( "Session 9", 'zume' ) ?></h3>
                 <?php self::session_overview_9(); ?>
             </section>
 
             <h3></h3>
             <section>
-                <h3 style="text-align: center; font-weight: bold">Session 10 - Advanced Training</h3>
+                <h3 style="text-align: center; font-weight: bold"><?php echo esc_html__( "Session 10 - Advanced Training", 'zume' ) ?></h3>
                 <?php self::session_overview_10(); ?>
             </section>
 
@@ -187,8 +187,8 @@ class Zume_Overview_Content {
             <div class="large-1 cell"></div>
             <div class="large-10 cell center">
                 <div class="callout">
-                    <p class="center padding-bottom">Go to the Dashboard to select your Group and start the next session</p>
-                    <p class="center"><a href="<?php echo zume_dashboard_url(); ?>" class="button large">Dashboard</a></p>
+                    <p class="center padding-bottom"><?php echo esc_html__( 'Go to the Dashboard to select your Group and start the next session', 'zume' ) ?></p>
+                    <p class="center"><a href="<?php echo esc_html( zume_dashboard_url() ); ?>" class="button large"><?php echo esc_html__( 'Dashboard', 'zume' ) ?></a></p>
                 </div>
             </div>
             <div class="large-1 cell"></div>
@@ -230,17 +230,17 @@ class Zume_Overview_Content {
                 <div class="grid-x grid-margin-y">
                     <div class="small-4 cell">
                         <img class="alignnone wp-image-943 size-full"
-                             src="<?php echo home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ); ?>1.1.png"
+                             src="<?php echo esc_html( home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>1.1.png"
                              alt="" width="400" height="225"/>
                     </div>
                     <div class="small-4 cell">
                         <img class="alignnone wp-image-944 size-full"
-                             src="<?php echo home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ); ?>1.2.png"
+                             src="<?php echo esc_html( home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>1.2.png"
                              alt="" width="400" height="225"/>
                     </div>
                     <div class="small-4 cell">
                         <img class="alignnone wp-image-945 size-full"
-                             src="<?php echo home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ); ?>1.3.png"
+                             src="<?php echo esc_html( home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>1.3.png"
                              alt="" width="400" height="225"/>
                     </div>
                 </div>
@@ -255,7 +255,7 @@ class Zume_Overview_Content {
                     <div class="cell">
                         <div class="grid-x grid-margin-y">
                             <div class="large-1 cell">
-                                <img src="<?php echo home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ); ?>concept-1-4.png"
+                                <img src="<?php echo esc_html( home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>concept-1-4.png"
                                      alt="" width="40" height="40" class="alignnone size-full wp-image-1564"/>
                             </div>
                             <div class="large-11 cell">
@@ -266,7 +266,7 @@ class Zume_Overview_Content {
                     <div class="cell">
                         <div class="grid-x grid-margin-y">
                             <div class="large-1 cell">
-                                <img src="<?php echo home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ); ?>concept-2-2.png"
+                                <img src="<?php echo esc_html( home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>concept-2-2.png"
                                      alt="" width="40" height="40" class="alignnone size-full wp-image-1565"/>
                             </div>
                             <div class="large-11 cell">
@@ -277,7 +277,7 @@ class Zume_Overview_Content {
                     <div class="cell">
                         <div class="grid-x grid-margin-y">
                             <div class="large-1 cell">
-                                <img src="<?php echo home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ); ?>concept-3-2.png"
+                                <img src="<?php echo esc_html( home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>concept-3-2.png"
                                      alt="" width="40" height="40" class="alignnone size-full wp-image-1566"/>
                             </div>
                             <div class="large-11 cell">
@@ -297,7 +297,7 @@ class Zume_Overview_Content {
                     <div class="cell">
                         <div class="grid-x grid-margin-y">
                             <div class="large-1 cell">
-                                <img src="<?php echo home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ); ?>tool-1-2.png"
+                                <img src="<?php echo esc_html( home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>tool-1-2.png"
                                      alt=""
                                      width="40" height="40" class="alignnone size-full wp-image-1035"/>
                             </div>
@@ -309,7 +309,7 @@ class Zume_Overview_Content {
                     <div class="cell">
                         <div class="grid-x grid-margin-y grid-margin-y">
                             <div class="large-1 cell">
-                                <img src="<?php echo home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ); ?>tool-2.png"
+                                <img src="<?php echo esc_html( home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>tool-2.png"
                                      alt=""
                                      width="40" height="40" class="alignnone size-full wp-image-1567"/>
                             </div>
@@ -321,7 +321,7 @@ class Zume_Overview_Content {
                     <div class="cell">
                         <div class="grid-x grid-margin-y">
                             <div class="large-1 cell">
-                                <img src="<?php echo home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ); ?>concept-3-2.png"
+                                <img src="<?php echo esc_html( home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>concept-3-2.png"
                                      alt="" width="40" height="40" class="alignnone size-full wp-image-1566"/>
                             </div>
                             <div class="large-11 cell">
@@ -341,7 +341,7 @@ class Zume_Overview_Content {
                     <div class="cell">
                         <div class="grid-x grid-margin-y">
                             <div class="large-1 cell">
-                                <img src="<?php echo home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ); ?>practice-1-5.png"
+                                <img src="<?php echo esc_html( home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>practice-1-5.png"
                                      alt="" width="40" height="40" class="alignnone size-full wp-image-1568"/>
                             </div>
                             <div class="large-11 cell">
@@ -368,18 +368,18 @@ class Zume_Overview_Content {
                 <div class="grid-x grid-margin-y">
                     <div class="small-4 cell">
                         <!-- image -->
-                        <img src="<?php echo home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ); ?>2.1.png"
+                        <img src="<?php echo esc_html( home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>2.1.png"
                              alt="" class="alignnone size-full wp-image-948"/>
                     </div>
                     <div class="small-4 cell">
                         <!-- image -->
-                        <img src="<?php echo home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ); ?>2.2.png"
+                        <img src="<?php echo esc_html( home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>2.2.png"
                              alt="" class="alignnone size-full wp-image-949"/>
                     </div>
                     <div class="small-4 cell">
                         <!-- image -->
                         <img
-                                src="<?php echo home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ); ?>2.3-1.png"
+                                src="<?php echo esc_html( home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>2.3-1.png"
                                 alt="List 100 people you know, 3 categories: those who follow Jesus, those who don&#039;t follow Jesus, those they&#039;re not sure about"
                                 width="400" height="225" class="alignnone size-full wp-image-1066"/>
                     </div>
@@ -396,13 +396,12 @@ class Zume_Overview_Content {
                         <div class="grid-x grid-margin-y">
                             <div class="large-1 cell">
                                 <!-- image -->
-                                <img src="<?php echo home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ); ?>concept-1-5.png"
+                                <img src="<?php echo esc_html( home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>concept-1-5.png"
                                      alt="" width="40" height="40" class="alignnone size-full wp-image-1576"/>
                             </div>
                             <div class="large-11 cell">
-                                PRODUCERS VS. CONSUMERS — You'll discover the four main ways God makes everyday
-                                followers more like
-                                Jesus.
+                                <?php echo esc_html__( "PRODUCERS VS. CONSUMERS — You'll discover the four main 
+                                ways God makes everyday followers more like Jesus.", 'zume' ) ?>
                             </div>
                         </div>
                     </div>
@@ -419,11 +418,11 @@ class Zume_Overview_Content {
                         <div class="grid-x grid-margin-y">
                             <div class="large-1 cell">
                                 <!-- image -->
-                                <img src="<?php echo home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ); ?>practice-1-6.png"
+                                <img src="<?php echo esc_html( home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>practice-1-6.png"
                                      alt="" width="40" height="40" class="alignnone size-full wp-image-1577"/>
                             </div>
                             <div class="large-11 cell">
-                                PRAYER CYCLE — See how easy it is to spend an hour in prayer.
+                                <?php echo esc_html__( 'PRAYER CYCLE — See how easy it is to spend an hour in prayer.', 'zume' ) ?>
                             </div>
                         </div>
                     </div>
@@ -431,11 +430,11 @@ class Zume_Overview_Content {
                         <div class="grid-x grid-margin-y grid-margin-y">
                             <div class="large-1 cell">
                                 <!-- image -->
-                                <img src="<?php echo home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ); ?>practice-2-2.png"
+                                <img src="<?php echo esc_html( home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>practice-2-2.png"
                                      alt="" width="40" height="40" class="alignnone size-full wp-image-1578"/>
                             </div>
                             <div class="large-11 cell">
-                                LIST OF 100 — a tool designed to help you be a good steward of your relationships.
+                                <?php echo esc_html__( 'LIST OF 100 — a tool designed to help you be a good steward of your relationships.', 'zume' ) ?>
                             </div>
                         </div>
                     </div>
@@ -453,21 +452,21 @@ class Zume_Overview_Content {
                         <div class="grid-x grid-margin-y grid-margin-y">
                             <div class="large-1 cell">
                                 <!-- image -->
-                                <img src="<?php echo home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ); ?>tool-1-4.png"
+                                <img src="<?php echo esc_html( home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>tool-1-4.png"
                                      alt="" width="40" height="40" class="alignnone size-full wp-image-1579"/>
                             </div>
                             <div class="large-11 cell">
-                                PRAYER CYCLE — Spend 60 minutes in prayer individually.
+                                <?php echo esc_html__( 'PRAYER CYCLE — Spend 60 minutes in prayer individually.', 'zume' ) ?>
                             </div>
                         </div>
                         <div class="grid-x grid-margin-y grid-margin-y">
                             <div class="large-1 cell">
                                 <!-- image -->
-                                <img src="<?php echo home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ); ?>tool-2-3.png"
+                                <img src="<?php echo esc_html( home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>tool-2-3.png"
                                      alt="" width="40" height="40" class="alignnone size-full wp-image-1580"/>
                             </div>
                             <div class="large-11 cell">
-                                LIST OF 100 — Create your own list of 100. (30 minutes)
+                                <?php echo esc_html__( 'LIST OF 100 — Create your own list of 100. (30 minutes)', 'zume' ) ?>
                             </div>
                         </div>
                     </div>
@@ -490,21 +489,21 @@ class Zume_Overview_Content {
                     <div class="small-4 cell">
                         <!-- image -->
                         <img
-                                src="<?php echo home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ); ?>3.1-1.png"
+                                src="<?php echo esc_html( home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>3.1-1.png"
                                 alt="Whoever can be trusted with very little can also be trusted with much. - Jesus. Breathe in, hear, breathe out, obey and share. Giving God&#039;s blessings"
                                 width="400" height="225" class="alignnone size-full wp-image-1068"/>
                     </div>
                     <div class="small-4 cell">
                         <!-- image -->
                         <img
-                                src="<?php echo home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ); ?>3.2.png"
+                                src="<?php echo esc_html( home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>3.2.png"
                                 alt="Obey, do, practise, share, teach, pass on" width="400" height="225"
                                 class="alignnone size-full wp-image-955"/>
                     </div>
                     <div class="small-4 cell">
                         <!-- image -->
                         <img
-                                src="<?php echo home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ); ?>3.3.png"
+                                src="<?php echo esc_html( home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>3.3.png"
                                 alt="" width="400" height="225" class="alignnone size-full wp-image-957"/>
                     </div>
                 </div>
@@ -520,13 +519,13 @@ class Zume_Overview_Content {
                         <div class="grid-x grid-margin-y">
                             <div class="large-1 cell">
                                 <!-- image -->
-                                <img src="<?php echo home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ); ?>concept-1-1.png"
+                                <img src="<?php echo esc_html( home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>concept-1-1.png"
                                      alt="" width="40" height="40" class="alignnone size-full wp-image-1023"/>
                             </div>
                             <div class="large-11 cell">
-                                SPIRITUAL ECONOMY — Learn how God's economy is different from the world's. God invests
+                                <?php echo esc_html__( "SPIRITUAL ECONOMY — Learn how God's economy is different from the world's. God invests
                                 more in those
-                                who are faithful with what they've already been given.
+                                who are faithful with what they've already been given.", 'zume' ) ?>
                             </div>
                         </div>
                     </div>
@@ -534,13 +533,13 @@ class Zume_Overview_Content {
                         <div class="grid-x grid-margin-y">
                             <div class="large-1 cell">
                                 <!-- image -->
-                                <img src="<?php echo home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ); ?>concept-2-1.png"
+                                <img src="<?php echo esc_html( home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>concept-2-1.png"
                                      alt="" width="40" height="40" class="alignnone size-full wp-image-1024"/>
                             </div>
                             <div class="large-11 cell">
-                                CREATION TO JUDGMENT — Learn a way to share God’s Good News from the beginning of
+                                <?php echo esc_html__( "CREATION TO JUDGMENT — Learn a way to share God’s Good News from the beginning of
                                 humanity all the
-                                way to the end of this age.
+                                way to the end of this age.", 'zume' ) ?>
                             </div>
                         </div>
                     </div>
@@ -558,13 +557,13 @@ class Zume_Overview_Content {
                         <div class="grid-x grid-margin-y">
                             <div class="large-1 cell">
                                 <!-- image -->
-                                <img src="<?php echo home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ); ?>tool-1-1-1.png"
+                                <img src="<?php echo esc_html( home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>tool-1-1-1.png"
                                      alt="" width="40" height="40" class="alignnone size-full wp-image-1183"/>
                             </div>
                             <div class="large-11 cell">
-                                BAPTISM — Jesus said, “Go and make disciples of all nations, BAPTIZING them in the name
+                                <?php echo esc_html__( 'BAPTISM — Jesus said, “Go and make disciples of all nations, BAPTIZING them in the name
                                 of the
-                                Father and of the Son and of the Holy Spirit…” Learn how to put this into practice.
+                                Father and of the Son and of the Holy Spirit…” Learn how to put this into practice.', 'zume' ) ?>
                             </div>
                         </div>
                     </div>
@@ -581,13 +580,13 @@ class Zume_Overview_Content {
                         <div class="grid-x grid-margin-y">
                             <div class="large-1 cell">
                                 <!-- image -->
-                                <img src="<?php echo home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ); ?>tool-2-1.png"
+                                <img src="<?php echo esc_html( home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>tool-2-1.png"
                                      alt="" width="40" height="40" class="alignnone size-full wp-image-1026"/>
                             </div>
                             <div class="large-11 cell">
-                                SHARE GOD’S STORY — Break into groups of two or three and practice sharing God’s Story.
+                                <?php echo esc_html__( 'SHARE GOD’S STORY — Break into groups of two or three and practice sharing God’s Story.
                                 (45
-                                minutes)
+                                minutes)', 'zume' ) ?>
                             </div>
                         </div>
                     </div>
@@ -610,19 +609,19 @@ class Zume_Overview_Content {
                     <div class="small-4 cell">
                         <!-- image -->
                         <img class="alignnone wp-image-943 size-full"
-                             src="<?php echo home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ); ?>4.1.png"
+                             src="<?php echo esc_html( home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>4.1.png"
                              alt="" width="400" height="225"/>
                     </div>
                     <div class="small-4 cell">
                         <!-- image -->
                         <img class="alignnone wp-image-944 size-full"
-                             src="<?php echo home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ); ?>4.2.png"
+                             src="<?php echo esc_html( home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>4.2.png"
                              alt="" width="400" height="225"/>
                     </div>
                     <div class="small-4 cell">
                         <!-- image -->
                         <img class="alignnone wp-image-945 size-full"
-                             src="<?php echo home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ); ?>4.3.png"
+                             src="<?php echo esc_html( home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>4.3.png"
                              alt="" width="400" height="225"/>
                     </div>
                 </div>
@@ -638,13 +637,13 @@ class Zume_Overview_Content {
                         <div class="grid-x grid-margin-y">
                             <div class="large-1 cell">
                                 <!-- image -->
-                                <img src="<?php echo home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ); ?>concept-1-2.png"
+                                <img src="<?php echo esc_html( home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>concept-1-2.png"
                                      alt="" width="40" height="40" class="alignnone size-full wp-image-1028"/>
                             </div>
                             <div class="large-11 cell">
-                                GREATEST BLESSING — Learn a simple pattern of making not just one follower of Jesus but
+                                <?php echo esc_html__( 'GREATEST BLESSING — Learn a simple pattern of making not just one follower of Jesus but
                                 entire
-                                spiritual families who multiply for generations to come.
+                                spiritual families who multiply for generations to come.', 'zume' ) ?>
                             </div>
                         </div>
                     </div>
@@ -652,13 +651,13 @@ class Zume_Overview_Content {
                         <div class="grid-x grid-margin-y">
                             <div class="large-1 cell">
                                 <!-- image -->
-                                <img src="<?php echo home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ); ?>concept-2-2.png"
+                                <img src="<?php echo esc_html( home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>concept-2-2.png"
                                      alt="" width="40" height="40" class="alignnone size-full wp-image-1029"/>
                             </div>
                             <div class="large-11 cell">
-                                EYES TO SEE — Begin to see where God’s Kingdom isn’t. These are usually the places where
+                                <?php echo esc_html__( 'EYES TO SEE — Begin to see where God’s Kingdom isn’t. These are usually the places where
                                 God wants
-                                to work the most.
+                                to work the most.', 'zume' ) ?>
                             </div>
                         </div>
                     </div>
@@ -666,11 +665,11 @@ class Zume_Overview_Content {
                         <div class="grid-x grid-margin-y">
                             <div class="large-1 cell">
                                 <!-- image -->
-                                <img src="<?php echo home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ); ?>duckling-discipleship.png"
+                                <img src="<?php echo esc_html( home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>duckling-discipleship.png"
                                      alt="" width="40" height="40" class="alignnone size-full wp-image-1028"/>
                             </div>
                             <div class="large-11 cell">
-                                DUCKLING DISCIPLESHIP — Learn what ducklings have to do with disciple-making.
+                                <?php echo esc_html__( "DUCKLING DISCIPLESHIP — Learn what ducklings have to do with disciple-making.", 'zume' ) ?>
                             </div>
                         </div>
                     </div>
@@ -687,13 +686,13 @@ class Zume_Overview_Content {
                         <div class="grid-x grid-margin-y">
                             <div class="large-1 cell">
                                 <!-- image -->
-                                <img src="<?php echo home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ); ?>practice-1.png"
+                                <img src="<?php echo esc_html( home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>practice-1.png"
                                      alt="" width="40" height="40" class="alignnone size-full wp-image-1035"/>
                             </div>
                             <div class="large-11 cell">
-                                3-MINUTE TESTIMONY — Learn how to share your testimony in three minutes by sharing how
+                                <?php echo esc_html__( "3-MINUTE TESTIMONY — Learn how to share your testimony in three minutes by sharing how
                                 Jesus has
-                                impacted your life.
+                                impacted your life.", 'zume' ) ?>
                             </div>
                         </div>
                     </div>
@@ -701,13 +700,13 @@ class Zume_Overview_Content {
                         <div class="grid-x grid-margin-y grid-margin-y">
                             <div class="large-1 cell">
                                 <!-- image -->
-                                <img src="<?php echo home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ); ?>practice-2-3.png"
+                                <img src="<?php echo esc_html( home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>practice-2-3.png"
                                      alt="" width="40" height="40" class="alignnone size-full wp-image-1186"/>
                             </div>
                             <div class="large-11 cell">
-                                THE LORD'S SUPPER — It’s a simple way to celebrate our intimate connection and ongoing
+                                <?php echo esc_html__( "THE LORD'S SUPPER — It’s a simple way to celebrate our intimate connection and ongoing
                                 relationship
-                                with Jesus. Learn a simple way to celebrate.
+                                with Jesus. Learn a simple way to celebrate.", 'zume' ) ?>
                             </div>
                         </div>
                     </div>
@@ -724,13 +723,13 @@ class Zume_Overview_Content {
                         <div class="grid-x grid-margin-y">
                             <div class="large-1 cell">
                                 <!-- image -->
-                                <img src="<?php echo home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ); ?>practice-1.png"
+                                <img src="<?php echo esc_html( home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>practice-1.png"
                                      alt="" width="40" height="40" class="alignnone size-full wp-image-1033"/>
                             </div>
                             <div class="large-11 cell">
-                                SHARING YOUR TESTIMONY — Break into groups of two or three and practice sharing your
+                                <?php echo esc_html__( "SHARING YOUR TESTIMONY — Break into groups of two or three and practice sharing your
                                 Testimony with
-                                others. (45 minutes)
+                                others. (45 minutes)", 'zume' ) ?>
                             </div>
                         </div>
                     </div>
@@ -738,11 +737,11 @@ class Zume_Overview_Content {
                         <div class="grid-x grid-margin-y">
                             <div class="large-1 cell">
                                 <!-- image -->
-                                <img src="<?php echo home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ); ?>practice-2-3.png"
+                                <img src="<?php echo esc_html( home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>practice-2-3.png"
                                      alt="" width="40" height="40" class="alignnone size-full wp-image-1186"/>
                             </div>
                             <div class="large-11 cell">
-                                THE LORD'S SUPPER — Take time as a group to do this together. (10 minutes)
+                                <?php echo esc_html__( "THE LORD'S SUPPER — Take time as a group to do this together. (10 minutes)", 'zume' ) ?>
                             </div>
                         </div>
                     </div>
@@ -764,19 +763,19 @@ class Zume_Overview_Content {
                     <div class="small-4 cell">
                         <!-- image -->
                         <img class="alignnone wp-image-943 size-full"
-                             src="<?php echo home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ); ?>5.1.png"
+                             src="<?php echo esc_html( home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>5.1.png"
                              alt="" width="400" height="225"/>
                     </div>
                     <div class="small-4 cell">
                         <!-- image -->
                         <img class="alignnone wp-image-944 size-full"
-                             src="<?php echo home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ); ?>5.2.png"
+                             src="<?php echo esc_html( home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>5.2.png"
                              alt="" width="400" height="225"/>
                     </div>
                     <div class="small-4 cell">
                         <!-- image -->
                         <img class="alignnone wp-image-945 size-full"
-                             src="<?php echo home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ); ?>5.3.png"
+                             src="<?php echo esc_html( home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>5.3.png"
                              alt="" width="400" height="225"/>
                     </div>
                 </div>
@@ -792,12 +791,12 @@ class Zume_Overview_Content {
                         <div class="grid-x grid-margin-y">
                             <div class="large-1 cell">
                                 <!-- image -->
-                                <img src="<?php echo home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ); ?>concept-2-2.png"
+                                <img src="<?php echo esc_html( home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>concept-2-2.png"
                                      alt="" width="40" height="40" class="alignnone size-full wp-image-1028"/>
                             </div>
                             <div class="large-11 cell">
-                                PERSON OF PEACE — Learn who a person of peace might be and how to know when you've found
-                                one.
+                                <?php echo esc_html__( "PERSON OF PEACE — Learn who a person of peace might be and how to know when you've found
+                                one.", 'zume' ) ?>
                             </div>
                         </div>
                     </div>
@@ -814,13 +813,13 @@ class Zume_Overview_Content {
                         <div class="grid-x grid-margin-y">
                             <div class="large-1 cell">
                                 <!-- image -->
-                                <img src="<?php echo home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ); ?>tool-1-4.png"
+                                <img src="<?php echo esc_html( home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>tool-1-4.png"
                                      alt="" width="40" height="40" class="alignnone size-full wp-image-1035"/>
                             </div>
                             <div class="large-11 cell">
-                                PRAYER WALKING — It’s a simple way to obey God’s command to pray for others. And it's
+                                <?php echo esc_html__( "PRAYER WALKING — It’s a simple way to obey God’s command to pray for others. And it's
                                 just what it
-                                sounds like — praying to God while walking around!
+                                sounds like — praying to God while walking around!", 'zume' ) ?>
                             </div>
                         </div>
                     </div>
@@ -837,25 +836,25 @@ class Zume_Overview_Content {
                         <div class="grid-x grid-margin-y">
                             <div class="large-1 cell">
                                 <!-- image -->
-                                <img src="<?php echo home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ); ?>practice-1-1.png"
+                                <img src="<?php echo esc_html( home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>practice-1-1.png"
                                      alt="" width="40" height="40" class="alignnone size-full wp-image-1033"/>
                             </div>
                             <div class="large-11 cell">
-                                B.L.E.S.S. PRAYER — Practice a simple mnemonic to remind you of ways to pray for others.
+                                <?php echo esc_html__( "B.L.E.S.S. PRAYER — Practice a simple mnemonic to remind you of ways to pray for others.
                                 (15
-                                minutes)
+                                minutes)", 'zume' ) ?>
                             </div>
                         </div>
                         <div class="grid-x grid-margin-y">
                             <div class="large-1 cell">
                                 <!-- image -->
-                                <img src="<?php echo home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ); ?>tool-1-4.png"
+                                <img src="<?php echo esc_html( home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>tool-1-4.png"
                                      alt="" width="40" height="40" class="alignnone size-full wp-image-1033"/>
                             </div>
                             <div class="large-11 cell">
-                                PRAYER WALKING — Break into groups of two or three and go out into the community to
+                                <?php echo esc_html__( "PRAYER WALKING — Break into groups of two or three and go out into the community to
                                 practice Prayer
-                                Walking. (60-90 minutes)
+                                Walking. (60-90 minutes)", 'zume' ) ?>
                             </div>
                         </div>
                     </div>
@@ -878,19 +877,19 @@ class Zume_Overview_Content {
                     <div class="small-4 cell">
                         <!-- image -->
                         <img class="alignnone wp-image-943 size-full"
-                             src="<?php echo home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ); ?>6.1-1.png"
+                             src="<?php echo esc_html( home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>6.1-1.png"
                              alt="" width="400" height="225"/>
                     </div>
                     <div class="small-4 cell">
                         <!-- image -->
                         <img class="alignnone wp-image-944 size-full"
-                             src="<?php echo home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ); ?>6.2.png"
+                             src="<?php echo esc_html( home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>6.2.png"
                              alt="" width="400" height="225"/>
                     </div>
                     <div class="small-4 cell">
                         <!-- image -->
                         <img class="alignnone wp-image-945 size-full"
-                             src="<?php echo home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ); ?>6.3.png"
+                             src="<?php echo esc_html( home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>6.3.png"
                              alt="" width="400" height="225"/>
                     </div>
                 </div>
@@ -906,13 +905,13 @@ class Zume_Overview_Content {
                         <div class="grid-x grid-margin-y">
                             <div class="large-1 cell">
                                 <!-- image -->
-                                <img src="<?php echo home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ); ?>concept-1-3.png"
+                                <img src="<?php echo esc_html( home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>concept-1-3.png"
                                      alt="" width="40" height="40" class="alignnone size-full wp-image-1028"/>
                             </div>
                             <div class="large-11 cell">
-                                FAITHFULNESS — It's important what disciples know — but it's much more important what
+                                <?php echo esc_html__( "FAITHFULNESS — It's important what disciples know — but it's much more important what
                                 they DO with
-                                what they know.
+                                what they know.", 'zume' ) ?>
                             </div>
                         </div>
                     </div>
@@ -929,15 +928,15 @@ class Zume_Overview_Content {
                         <div class="grid-x grid-margin-y">
                             <div class="large-1 cell">
                                 <!-- image -->
-                                <img src="<?php echo home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ); ?>tool-1-5.png"
+                                <img src="<?php echo esc_html( home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>tool-1-5.png"
                                      alt="" width="40" height="40" class="alignnone size-full wp-image-1035"/>
                             </div>
                             <div class="large-11 cell">
-                                3/3 GROUP FORMAT — A 3/3 Group is a way for followers of Jesus to meet, pray, learn,
+                                <?php echo esc_html__( "3/3 GROUP FORMAT — A 3/3 Group is a way for followers of Jesus to meet, pray, learn,
                                 grow,
                                 fellowship and practice obeying and sharing what they've learned. In this way, a 3/3
                                 Group is not
-                                just a small group but a Simple Church. (80 minutes)
+                                just a small group but a Simple Church. (80 minutes)", 'zume' ) ?>
                             </div>
                         </div>
                     </div>
@@ -959,19 +958,19 @@ class Zume_Overview_Content {
                     <div class="small-4 cell">
                         <!-- image -->
                         <img class="alignnone wp-image-943 size-full"
-                             src="<?php echo home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ); ?>7.1.png"
+                             src="<?php echo esc_html( home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>7.1.png"
                              alt="" width="400" height="225"/>
                     </div>
                     <div class="small-4 cell">
                         <!-- image -->
                         <img class="alignnone wp-image-944 size-full"
-                             src="<?php echo home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ); ?>7.2-1.png"
+                             src="<?php echo esc_html( home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>7.2-1.png"
                              alt="" width="400" height="225"/>
                     </div>
                     <div class="small-4 cell">
                         <!-- image -->
                         <img class="alignnone wp-image-945 size-full"
-                             src="<?php echo home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ); ?>7.3.png"
+                             src="<?php echo esc_html( home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>7.3.png"
                              alt="" width="400" height="225"/>
                     </div>
                 </div>
@@ -987,12 +986,12 @@ class Zume_Overview_Content {
                         <div class="grid-x grid-margin-y">
                             <div class="large-1 cell">
                                 <!-- image -->
-                                <img src="<?php echo home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ); ?>concept-1-6.png"
+                                <img src="<?php echo esc_html( home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>concept-1-6.png"
                                      alt="" width="40" height="40" class="alignnone size-full wp-image-1570"/>
                             </div>
                             <div class="large-11 cell">
-                                TRAINING CYCLE — Learn the training cycle and consider how it applies to disciple
-                                making.
+                                <?php echo esc_html__( "TRAINING CYCLE — Learn the training cycle and consider how it applies to disciple
+                                making.", 'zume' ) ?>
                             </div>
                         </div>
                     </div>
@@ -1009,11 +1008,11 @@ class Zume_Overview_Content {
                         <div class="grid-x grid-margin-y">
                             <div class="large-1 cell">
                                 <!-- image -->
-                                <img src="<?php echo home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ); ?>practice-1-2.png"
+                                <img src="<?php echo esc_html( home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>practice-1-2.png"
                                      alt="" width="40" height="40" class="alignnone size-full wp-image-1033"/>
                             </div>
                             <div class="large-11 cell">
-                                3/3 GROUP — Your entire group will spend 90 minutes practicing the 3/3 Group Format.
+                                <?php echo esc_html__( "3/3 GROUP — Your entire group will spend 90 minutes practicing the 3/3 Group Format.", 'zume' ) ?>
                             </div>
                         </div>
                     </div>
@@ -1036,20 +1035,20 @@ class Zume_Overview_Content {
                     <div class="small-4 cell">
                         <!-- image -->
                         <img class="alignnone wp-image-943 size-full"
-                             src="<?php echo home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ); ?>8.1.png"
+                             src="<?php echo esc_html( home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>8.1.png"
                              alt="" width="400" height="225"/>
                     </div>
                     <div class="small-4 cell">
                         <!-- image -->
                         <img
                                 class="alignnone wp-image-944 size-full"
-                                src="<?php echo home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ); ?>8.2.png"
+                                src="<?php echo esc_html( home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>8.2.png"
                                 alt="" width="400" height="225"/>
                     </div>
                     <div class="small-4 cell">
                         <!-- image -->
                         <img class="alignnone wp-image-945 size-full"
-                             src="<?php echo home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ); ?>8.3.png"
+                             src="<?php echo esc_html( home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>8.3.png"
                              alt="" width="400" height="225"/>
                     </div>
                 </div>
@@ -1065,13 +1064,13 @@ class Zume_Overview_Content {
                         <div class="grid-x grid-margin-y">
                             <div class="large-1 cell">
                                 <!-- image -->
-                                <img src="<?php echo home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ); ?>concept-1-4.png"
+                                <img src="<?php echo esc_html( home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>concept-1-4.png"
                                      alt="" width="40" height="40" class="alignnone size-full wp-image-1028"/>
                             </div>
                             <div class="large-11 cell">
-                                LEADERSHIP CELLS — A Leadership Cell is a way someone who feels called to lead can
+                                <?php echo esc_html__( "LEADERSHIP CELLS — A Leadership Cell is a way someone who feels called to lead can
                                 develop their
-                                leadership by practicing serving.
+                                leadership by practicing serving.", 'zume' ) ?>
                             </div>
                         </div>
                     </div>
@@ -1088,11 +1087,11 @@ class Zume_Overview_Content {
                         <div class="grid-x grid-margin-y">
                             <div class="large-1 cell">
                                 <!-- image -->
-                                <img src="<?php echo home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ); ?>practice-1-2.png"
+                                <img src="<?php echo esc_html( home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>practice-1-2.png"
                                      alt="" width="40" height="40" class="alignnone size-full wp-image-1033"/>
                             </div>
                             <div class="large-11 cell">
-                                3/3 GROUP — Your entire group will spend 90 minutes practicing the 3/3 Group Format.
+                                <?php echo esc_html__( "3/3 GROUP — Your entire group will spend 90 minutes practicing the 3/3 Group Format.", 'zume' ) ?>
                             </div>
                         </div>
                     </div>
@@ -1115,19 +1114,19 @@ class Zume_Overview_Content {
                     <div class="small-4 cell">
                         <!-- image -->
                         <img class="alignnone wp-image-943 size-full"
-                             src="<?php echo home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ); ?>9.1.png"
+                             src="<?php echo esc_html( home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>9.1.png"
                              alt="" width="400" height="225"/>
                     </div>
                     <div class="small-4 cell">
                         <!-- image -->
                         <img class="alignnone wp-image-944 size-full"
-                                src="<?php echo home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ); ?>9.2.png"
+                                src="<?php echo esc_html( home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>9.2.png"
                                 alt="" width="400" height="225"/>
                     </div>
                     <div class="small-4 cell">
                         <!-- image -->
                         <img class="alignnone wp-image-945 size-full"
-                             src="<?php echo home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ); ?>9.3.png"
+                             src="<?php echo esc_html( home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>9.3.png"
                              alt="" width="400" height="225"/>
                     </div>
                 </div>
@@ -1143,12 +1142,12 @@ class Zume_Overview_Content {
                         <div class="grid-x grid-margin-y">
                             <div class="large-1 cell">
                                 <!-- image -->
-                                <img src="<?php echo home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ); ?>concept-1-5.png"
+                                <img src="<?php echo esc_html( home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>concept-1-5.png"
                                      alt="" width="40" height="40" class="alignnone size-full wp-image-1028"/>
                             </div>
                             <div class="large-11 cell">
-                                NON-SEQUENTIAL — See how disciple making doesn't have to be linear. Multiple things can happen at
-                                the same time.
+                                <?php echo esc_html__( "NON-SEQUENTIAL — See how disciple making doesn't have to be linear. Multiple things can happen at
+                                the same time.", 'zume' ) ?>
                             </div>
                         </div>
                     </div>
@@ -1156,11 +1155,11 @@ class Zume_Overview_Content {
                         <div class="grid-x grid-margin-y">
                             <div class="large-1 cell">
                                 <!-- image -->
-                                <img src="<?php echo home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ); ?>concept-2-3.png"
+                                <img src="<?php echo esc_html( home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>concept-2-3.png"
                                      alt="" width="40" height="40" class="alignnone size-full wp-image-1029"/>
                             </div>
                             <div class="large-11 cell">
-                                PACE — Multiplying matters and multiplying quickly matters even more. See why pace matters.
+                                <?php echo esc_html__( "PACE — Multiplying matters and multiplying quickly matters even more. See why pace matters.", 'zume' ) ?>
                             </div>
                         </div>
                     </div>
@@ -1168,11 +1167,11 @@ class Zume_Overview_Content {
                         <div class="grid-x grid-margin-y">
                             <div class="large-1 cell">
                                 <!-- image -->
-                                <img src="<?php echo home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ); ?>concept-3.png"
+                                <img src="<?php echo esc_html( home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>concept-3.png"
                                      alt="" width="40" height="40" class="alignnone size-full wp-image-1030"/>
                             </div>
                             <div class="large-11 cell">
-                                PART OF TWO CHURCHES — Learn how to obey Jesus' commands by going AND staying.
+                                <?php echo esc_html__( "PART OF TWO CHURCHES — Learn how to obey Jesus' commands by going AND staying.", 'zume' ) ?>
                             </div>
                         </div>
                     </div>
@@ -1189,12 +1188,12 @@ class Zume_Overview_Content {
                         <div class="grid-x grid-margin-y">
                             <div class="large-1 cell">
                                 <!-- image -->
-                                <img src="<?php echo home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ); ?>practice-1-3.png"
+                                <img src="<?php echo esc_html( home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>practice-1-3.png"
                                      alt="" width="40" height="40" class="alignnone size-full wp-image-1033"/>
                             </div>
                             <div class="large-11 cell">
-                                3-MONTH PLAN — Create and share your plan for how you will implement the Zúme tools over the next
-                                three months. (60 minutes)
+                                <?php echo esc_html__( "3-MONTH PLAN — Create and share your plan for how you will implement the Zúme tools over the next
+                                three months. (60 minutes)", 'zume' ) ?>
                             </div>
                         </div>
                     </div>
@@ -1217,20 +1216,20 @@ class Zume_Overview_Content {
                     <div class="small-4 cell">
                         <!-- image -->
                         <img class="alignnone wp-image-943 size-full"
-                             src="<?php echo home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ); ?>10.1.png"
+                             src="<?php echo esc_html( home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>10.1.png"
                              alt="" width="400" height="225"/>
                     </div>
                     <div class="small-4 cell">
                         <!-- image -->
                         <img
                                 class="alignnone wp-image-944 size-full"
-                                src="<?php echo home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ); ?>10.2.png"
+                                src="<?php echo esc_html( home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>10.2.png"
                                 alt="" width="400" height="225"/>
                     </div>
                     <div class="small-4 cell">
                         <!-- image -->
                         <img class="alignnone wp-image-945 size-full"
-                             src="<?php echo home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ); ?>10.3.png"
+                             src="<?php echo esc_html( home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>10.3.png"
                              alt="" width="400" height="225"/>
                     </div>
                 </div>
@@ -1246,12 +1245,12 @@ class Zume_Overview_Content {
                         <div class="grid-x grid-margin-y">
                             <div class="large-1 cell">
                                 <!-- image -->
-                                <img src="<?php echo home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ); ?>practic.png"
+                                <img src="<?php echo esc_html( home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>practic.png"
                                      alt="" width="40" height="40" class="alignnone size-full wp-image-1028"/>
                             </div>
                             <div class="large-11 cell">
-                                LEADERSHIP IN NETWORKS — Learn how multiplying churches stay connected and live life together as an
-                                extended, spiritual family.
+                                <?php echo esc_html__( "LEADERSHIP IN NETWORKS — Learn how multiplying churches stay connected and live life together as an
+                                extended, spiritual family.", 'zume' ) ?>
                             </div>
                         </div>
                     </div>
@@ -1268,13 +1267,13 @@ class Zume_Overview_Content {
                         <div class="grid-x grid-margin-y">
                             <div class="large-1 cell">
                                 <!-- image -->
-                                <img src="<?php echo home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ); ?>tool-1-7.png"
+                                <img src="<?php echo esc_html( home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>tool-1-7.png"
                                      alt="" width="40" height="40" class="alignnone size-full wp-image-1572"/>
                             </div>
                             <div class="large-11 cell">
-                                PEER MENTORING GROUPS — This is a group that consists of people who are leading and starting 3/3
+                                <?php echo esc_html__( "PEER MENTORING GROUPS — This is a group that consists of people who are leading and starting 3/3
                                 Groups. It also follows a 3/3 format and is a powerful way to assess the spiritual health of God’s
-                                work in your area.
+                                work in your area.", 'zume' ) ?>
                             </div>
                         </div>
                     </div>
@@ -1293,12 +1292,12 @@ class Zume_Overview_Content {
                         <div class="grid-x grid-margin-y">
                             <div class="large-1 cell">
                                 <!-- image -->
-                                <img src="<?php echo home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ); ?>practice-2-2.png"
+                                <img src="<?php echo esc_html( home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>practice-2-2.png"
                                      alt="" width="40" height="40" class="alignnone size-full wp-image-1033"/>
                             </div>
                             <div class="large-11 cell">
-                                PEER MENTORING GROUPS — Break into groups of two or three and work through the Peer Mentoring Group
-                                format. (60 minutes)
+                                <?php echo esc_html__( "PEER MENTORING GROUPS — Break into groups of two or three and work through the Peer Mentoring Group
+                                format. (60 minutes)", 'zume' ) ?>
                             </div>
                         </div>
                     </div>
