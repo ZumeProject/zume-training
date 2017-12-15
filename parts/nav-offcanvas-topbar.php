@@ -18,7 +18,7 @@ if ( zume_has_polylang() ) {
 <div class="top-bar" id="top-bar-menu">
     <div class="show-for-large" style="display: flex; flex-direction: row; justify-content: space-around; width:100%">
         <div class="menu-item show-for-large">
-            <a href="<?php echo is_user_logged_in() ? print esc_url( zume_dashboard_url() ) : esc_attr( home_url() ) ?>">
+            <a href="<?php echo is_user_logged_in() ? print zume_dashboard_url()  : print esc_attr( home_url() ); ?>">
                <img src="<?php echo esc_attr( get_stylesheet_directory_uri() ); ?>/assets/images/zume-logo-white.png" class="zume-logo-in-top-bar">
             </a>
         </div>

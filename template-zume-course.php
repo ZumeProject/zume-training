@@ -33,13 +33,14 @@ get_header();
                 /**
                  * Load Zume Course Content
                  */
-                isset( $_POST['viewing'] ) ? $isset_viewing = true : $isset_viewing = false;
-                if ( $isset_viewing ) { // check if member check is complete
-                    $viewing = sanitize_key( wp_unslash( $_POST['viewing'] ) );
+
+                isset( $_POST['viewing'] ) ? $zume_isset_viewing = true : $zume_isset_viewing = false;
+                if ( esc_attr( $zume_isset_viewing ) ) { // check if member check is complete
+                    $zume_viewing = sanitize_key( wp_unslash( $_POST['viewing'] ) );
                     if ( isset( $_POST['members'] ) ) {
-                        $members = sanitize_key( wp_unslash( $_POST['members'] ) );
+                        $zume_members = sanitize_key( wp_unslash( $_POST['members'] ) );
                     }
-                    switch ( $viewing ) {
+                    switch ( $zume_viewing ) {
                         case 'group':
                             Zume_Course::update_session_complete( $zume_group_key, $zume_session );
                             Zume_Course_Content::get_course_content( $zume_session );
@@ -48,7 +49,7 @@ get_header();
                                 'group_id' => $zume_group_key,
                                 'page'     => 'course',
                                 'action'   => 'session_' . $zume_session,
-                                'meta'     => 'group_' . $members,
+                                'meta'     => 'group_' . $zume_members,
                             ] );
                             break;
                         case 'member':
@@ -59,7 +60,7 @@ get_header();
                                 'group_id' => $zume_group_key,
                                 'page'     => 'course',
                                 'action'   => 'session_' . $zume_session,
-                                'meta'     => 'member_' . $members,
+                                'meta'     => 'member_' . $zume_members,
                             ] );
                             break;
                         case 'explore':
@@ -103,7 +104,7 @@ class Zume_Course_Content {
 
     public static function get_course_content( $session_id ) {
         ?>
-        <h2 class="center padding-bottom">Session <?php echo $session_id; ?></h2>
+        <h2 class="center padding-bottom">Session <?php echo esc_attr( $session_id ); ?></h2>
 
         <script>
             jQuery(document).ready(function ($) {
@@ -134,7 +135,7 @@ class Zume_Course_Content {
                     },
 
                     onFinishing: function (event, currentIndex) {
-                        window.location.replace("<?php echo zume_dashboard_url() ?>")
+                        window.location.replace("<?php echo esc_url( zume_dashboard_url() ) ?>")
                     },
                     // Removes the number from the title
                     titleTemplate: '<span class="number">#index#</span> #title#'
@@ -203,7 +204,7 @@ class Zume_Course_Content {
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="large-4"></div>
                 <div class="large-4 cell center">
-                    <p>Welcome to Session <?php echo $zume_session; ?></p>
+                    <p>Welcome to Session <?php echo esc_attr( $zume_session ); ?></p>
                     <h2>Which are you doing right now?</h2>
                     <br>
                     <button class="button large expanded" data-open="group">Facilitating a Group
@@ -232,12 +233,12 @@ class Zume_Course_Content {
                                 <?php
                                 $zume_group_meta = maybe_unserialize( $zume_group_meta );
                                 $i = 1;
-                                while( 16 > $i ) {
-                                    echo '<option value="'.$i.'"';
-                                    if( $zume_group_meta['members'] == $i ) {
+                                while ( 16 > $i ) {
+                                    echo '<option value="'. esc_attr(  $i  ) .'"';
+                                    if ( $zume_group_meta['members'] == $i ) {
                                         echo 'selected';
                                     }
-                                    echo '>'.$i.'</option>';
+                                    echo '>'. esc_attr(  $i  ) .'</option>';
                                     $i++;
                                 }
                                 ?>
@@ -257,18 +258,18 @@ class Zume_Course_Content {
                         <form action="" method="post">
                             <label for="members">How many are in your group?</label>
                             <select id="members" name="members" >
-						        <?php
-						        $zume_group_meta = maybe_unserialize( $zume_group_meta );
-						        $i = 1;
-						        while( 16 > $i ) {
-							        echo '<option value="'.$i.'"';
-							        if( $zume_group_meta['members'] == $i ) {
-								        echo 'selected';
-							        }
-							        echo '>'.$i.'</option>';
-							        $i++;
-						        }
-						        ?>
+                                <?php
+                                $zume_group_meta = maybe_unserialize( $zume_group_meta );
+                                $i = 1;
+                                while ( 16 > $i ) {
+                                    echo '<option value="'. esc_attr(  $i  ) .'"';
+                                    if ( $zume_group_meta['members'] == $i ) {
+                                        echo 'selected';
+                                    }
+                                    echo '>'. esc_attr(  $i  ) .'</option>';
+                                    $i++;
+                                }
+                                ?>
                             </select>
                             <button type="submit" name="viewing" class="button" value="member">Continue</button>
                         </form>
@@ -301,13 +302,13 @@ class Zume_Course_Content {
                     member of your group has a printed copy of the materials for future sessions.
 
                 </div>
-                <div class="large-8 large-offset-4 cell activity-description">
+                <div class="large-8 large-offset-4 cell activity-description center">
                     <a class="button"
                        style="background-color: #21336a; color: white;"
-                       href="<?php echo home_url( '/wp-content/themes/zume-project-multilingual/assets/files/' ) . zume_current_language() . '/'; ?>zume-guide-4039811470.pdf"
+                       href="<?php echo esc_url( home_url( '/wp-content/themes/zume-project-multilingual/assets/files/' ) ) . esc_attr( zume_current_language() ) . '/'; ?>zume-guide-4039811470.pdf"
                        target="_blank" rel="noopener">
                         <img class="alignnone size-full wp-image-1321"
-                             src="<?php echo home_url( '/wp-content/themes/zume-project-multilingual/assets/images/course/' ) ?>download-icon-150x150.png"
+                             src="<?php echo esc_url( home_url( '/wp-content/themes/zume-project-multilingual/assets/images/course/' ) ) ?>download-icon-150x150.png"
                              alt="Download" width="29"
                              height="26"/> GUIDEBOOK</a></div>
             </div>
@@ -352,7 +353,7 @@ class Zume_Course_Content {
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="small-12 small-centered cell">
                     <div class="flex-video widescreen">
-                        <iframe src="<?php echo Zume_Course::get_video_by_key( 'scribe_1') ?>" width="640" height="360" frameborder="0"
+                        <iframe src="<?php echo Zume_Course::get_video_by_key( 'scribe_1' ) ?>" width="640" height="360" frameborder="0"
                                 webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
                     </div>
 
@@ -398,7 +399,7 @@ class Zume_Course_Content {
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="small-12 small-centered cell">
                     <div class="flex-video widescreen">
-                        <iframe src="<?php echo Zume_Course::get_video_by_key( 'scribe_1') ?>" width="640" height="360" frameborder="0"
+                        <iframe src="<?php echo Zume_Course::get_video_by_key( 'scribe_1' ) ?>" width="640" height="360" frameborder="0"
                                 webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
                     </div>
 
@@ -451,7 +452,7 @@ class Zume_Course_Content {
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="small-12 small-centered cell">
                     <div class="flex-video widescreen">
-                        <iframe src="<?php echo Zume_Course::get_video_by_key( 'scribe_1') ?>" width="640" height="360" frameborder="0"
+                        <iframe src="<?php echo Zume_Course::get_video_by_key( 'scribe_1' ) ?>" width="640" height="360" frameborder="0"
                                 webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
                     </div>
 
@@ -508,7 +509,7 @@ class Zume_Course_Content {
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="small-12 small-centered cell">
                     <div class="flex-video widescreen">
-                        <iframe src="<?php echo Zume_Course::get_video_by_key( 'scribe_1') ?>" width="640" height="360" frameborder="0"
+                        <iframe src="<?php echo Zume_Course::get_video_by_key( 'scribe_1' ) ?>" width="640" height="360" frameborder="0"
                                 webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
                     </div>
 
@@ -551,7 +552,7 @@ class Zume_Course_Content {
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="small-12 small-centered cell">
                     <div class="flex-video widescreen">
-                        <iframe src="<?php echo Zume_Course::get_video_by_key( 'scribe_1') ?>" width="640" height="360" frameborder="0"
+                        <iframe src="<?php echo Zume_Course::get_video_by_key( 'scribe_1' ) ?>" width="640" height="360" frameborder="0"
                                 webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
                     </div>
 
@@ -729,7 +730,7 @@ class Zume_Course_Content {
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="small-12 small-centered cell">
                     <div class="flex-video widescreen">
-                        <iframe src="<?php echo Zume_Course::get_video_by_key( 'scribe_1') ?>" width="640" height="360" frameborder="0"
+                        <iframe src="<?php echo Zume_Course::get_video_by_key( 'scribe_1' ) ?>" width="640" height="360" frameborder="0"
                                 webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
                     </div>
 
@@ -780,7 +781,7 @@ class Zume_Course_Content {
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="small-12 small-centered cell">
                     <div class="flex-video widescreen">
-                        <iframe src="<?php echo Zume_Course::get_video_by_key( 'scribe_1') ?>" width="640" height="360" frameborder="0"
+                        <iframe src="<?php echo Zume_Course::get_video_by_key( 'scribe_1' ) ?>" width="640" height="360" frameborder="0"
                                 webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
                     </div>
 
@@ -865,7 +866,7 @@ class Zume_Course_Content {
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="small-12 small-centered cell">
                     <div class="flex-video widescreen">
-                        <iframe src="<?php echo Zume_Course::get_video_by_key( 'scribe_1') ?>" width="640" height="360" frameborder="0"
+                        <iframe src="<?php echo Zume_Course::get_video_by_key( 'scribe_1' ) ?>" width="640" height="360" frameborder="0"
                                 webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
                     </div>
 
@@ -1015,7 +1016,7 @@ class Zume_Course_Content {
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="small-12 small-centered cell">
                     <div class="flex-video widescreen">
-                        <iframe src="<?php echo Zume_Course::get_video_by_key( 'scribe_1') ?>" width="640" height="360" frameborder="0"
+                        <iframe src="<?php echo Zume_Course::get_video_by_key( 'scribe_1' ) ?>" width="640" height="360" frameborder="0"
                                 webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
                     </div>
 
@@ -1102,7 +1103,7 @@ class Zume_Course_Content {
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="small-12 small-centered cell">
                     <div class="flex-video widescreen">
-                        <iframe src="<?php echo Zume_Course::get_video_by_key( 'scribe_1') ?>" width="640" height="360" frameborder="0"
+                        <iframe src="<?php echo Zume_Course::get_video_by_key( 'scribe_1' ) ?>" width="640" height="360" frameborder="0"
                                 webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
                     </div>
 
@@ -1172,7 +1173,7 @@ class Zume_Course_Content {
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="small-12 small-centered cell">
                     <div class="flex-video widescreen">
-                        <iframe src="<?php echo Zume_Course::get_video_by_key( 'scribe_1') ?>" width="640" height="360" frameborder="0"
+                        <iframe src="<?php echo Zume_Course::get_video_by_key( 'scribe_1' ) ?>" width="640" height="360" frameborder="0"
                                 webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
                     </div>
 
@@ -1331,7 +1332,7 @@ class Zume_Course_Content {
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="small-12 small-centered cell">
                     <div class="flex-video widescreen">
-                        <iframe src="<?php echo Zume_Course::get_video_by_key( 'scribe_1') ?>" width="640" height="360" frameborder="0"
+                        <iframe src="<?php echo Zume_Course::get_video_by_key( 'scribe_1' ) ?>" width="640" height="360" frameborder="0"
                                 webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
                     </div>
 
@@ -1392,7 +1393,7 @@ class Zume_Course_Content {
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="small-12 small-centered cell">
                     <div class="flex-video widescreen">
-                        <iframe src="<?php echo Zume_Course::get_video_by_key( 'scribe_1') ?>" width="640" height="360" frameborder="0"
+                        <iframe src="<?php echo Zume_Course::get_video_by_key( 'scribe_1' ) ?>" width="640" height="360" frameborder="0"
                                 webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
                     </div>
 
@@ -1447,7 +1448,7 @@ class Zume_Course_Content {
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="small-12 small-centered cell">
                     <div class="flex-video widescreen">
-                        <iframe src="<?php echo Zume_Course::get_video_by_key( 'scribe_1') ?>" width="640" height="360" frameborder="0"
+                        <iframe src="<?php echo Zume_Course::get_video_by_key( 'scribe_1' ) ?>" width="640" height="360" frameborder="0"
                                 webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
                     </div>
 
@@ -1503,7 +1504,7 @@ class Zume_Course_Content {
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="small-12 small-centered cell">
                     <div class="flex-video widescreen">
-                        <iframe src="<?php echo Zume_Course::get_video_by_key( 'scribe_1') ?>" width="640" height="360" frameborder="0"
+                        <iframe src="<?php echo Zume_Course::get_video_by_key( 'scribe_1' ) ?>" width="640" height="360" frameborder="0"
                                 webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
                     </div>
 
@@ -1556,7 +1557,7 @@ class Zume_Course_Content {
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="small-12 small-centered cell">
                     <div class="flex-video widescreen">
-                        <iframe src="<?php echo Zume_Course::get_video_by_key( 'scribe_1') ?>" width="640" height="360" frameborder="0"
+                        <iframe src="<?php echo Zume_Course::get_video_by_key( 'scribe_1' ) ?>" width="640" height="360" frameborder="0"
                                 webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
                     </div>
 
@@ -1705,7 +1706,7 @@ class Zume_Course_Content {
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="small-12 small-centered cell">
                     <div class="flex-video widescreen">
-                        <iframe src="<?php echo Zume_Course::get_video_by_key( 'scribe_1') ?>" width="640" height="360" frameborder="0"
+                        <iframe src="<?php echo Zume_Course::get_video_by_key( 'scribe_1' ) ?>" width="640" height="360" frameborder="0"
                                 webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
                     </div>
 
@@ -1746,7 +1747,7 @@ class Zume_Course_Content {
 
                 <div class="small-12 small-centered cell">
                     <div class="flex-video widescreen">
-                        <iframe src="<?php echo Zume_Course::get_video_by_key( 'scribe_1') ?>" width="640" height="360" frameborder="0"
+                        <iframe src="<?php echo Zume_Course::get_video_by_key( 'scribe_1' ) ?>" width="640" height="360" frameborder="0"
                                 webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
                     </div>
 
@@ -1933,7 +1934,7 @@ class Zume_Course_Content {
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="small-12 small-centered cell">
                     <div class="flex-video widescreen">
-                        <iframe src="<?php echo Zume_Course::get_video_by_key( 'scribe_1') ?>" width="640" height="360" frameborder="0"
+                        <iframe src="<?php echo Zume_Course::get_video_by_key( 'scribe_1' ) ?>" width="640" height="360" frameborder="0"
                                 webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
                     </div>
 
@@ -1979,7 +1980,7 @@ class Zume_Course_Content {
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="small-12 small-centered cell">
                     <div class="flex-video widescreen">
-                        <iframe src="<?php echo Zume_Course::get_video_by_key( 'scribe_1') ?>" width="640" height="360" frameborder="0"
+                        <iframe src="<?php echo Zume_Course::get_video_by_key( 'scribe_1' ) ?>" width="640" height="360" frameborder="0"
                                 webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
                     </div>
 
@@ -2034,7 +2035,7 @@ class Zume_Course_Content {
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="small-12 small-centered cell">
                     <div class="flex-video widescreen">
-                        <iframe src="<?php echo Zume_Course::get_video_by_key( 'scribe_1') ?>" width="640" height="360" frameborder="0"
+                        <iframe src="<?php echo Zume_Course::get_video_by_key( 'scribe_1' ) ?>" width="640" height="360" frameborder="0"
                                 webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
                     </div>
                 </div>
@@ -2153,7 +2154,7 @@ class Zume_Course_Content {
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="small-12 small-centered cell">
                     <div class="flex-video widescreen">
-                        <iframe src="<?php echo Zume_Course::get_video_by_key( 'scribe_1') ?>" width="640" height="360" frameborder="0"
+                        <iframe src="<?php echo Zume_Course::get_video_by_key( 'scribe_1' ) ?>" width="640" height="360" frameborder="0"
                                 webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
                     </div>
 
@@ -2342,7 +2343,7 @@ class Zume_Course_Content {
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="small-12 small-centered cell">
                     <div class="flex-video widescreen">
-                        <iframe src="<?php echo Zume_Course::get_video_by_key( 'scribe_1') ?>" width="640" height="360" frameborder="0"
+                        <iframe src="<?php echo Zume_Course::get_video_by_key( 'scribe_1' ) ?>" width="640" height="360" frameborder="0"
                                 webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
                     </div>
 
@@ -2529,7 +2530,7 @@ class Zume_Course_Content {
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="small-12 small-centered cell">
                     <div class="flex-video widescreen">
-                        <iframe src="<?php echo Zume_Course::get_video_by_key( 'scribe_1') ?>" width="640" height="360" frameborder="0"
+                        <iframe src="<?php echo Zume_Course::get_video_by_key( 'scribe_1' ) ?>" width="640" height="360" frameborder="0"
                                 webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
                     </div>
                     <p class="center"><a
@@ -2579,7 +2580,7 @@ class Zume_Course_Content {
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="small-12 small-centered cell">
                     <div class="flex-video widescreen">
-                        <iframe src="<?php echo Zume_Course::get_video_by_key( 'scribe_1') ?>" width="640" height="360" frameborder="0"
+                        <iframe src="<?php echo Zume_Course::get_video_by_key( 'scribe_1' ) ?>" width="640" height="360" frameborder="0"
                                 webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
                     </div>
                     <p class="center"><a href="https://zumeproject.com/wp-content/uploads/Zume_Video_Scripts_Pace.pdf"
@@ -2637,7 +2638,7 @@ class Zume_Course_Content {
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="small-12 small-centered cell">
                     <div class="flex-video widescreen">
-                        <iframe src="<?php echo Zume_Course::get_video_by_key( 'scribe_1') ?>" width="640" height="360" frameborder="0"
+                        <iframe src="<?php echo Zume_Course::get_video_by_key( 'scribe_1' ) ?>" width="640" height="360" frameborder="0"
                                 webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
                     </div>
                     <p class="center"><a
@@ -2829,7 +2830,7 @@ class Zume_Course_Content {
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="small-12 small-centered cell">
                     <div class="flex-video widescreen">
-                        <iframe src="<?php echo Zume_Course::get_video_by_key( 'scribe_1') ?>" width="640" height="360" frameborder="0"
+                        <iframe src="<?php echo Zume_Course::get_video_by_key( 'scribe_1' ) ?>" width="640" height="360" frameborder="0"
                                 webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
                     </div>
 
@@ -3038,7 +3039,7 @@ class Zume_Course_Content {
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="small-12 small-centered cell">
                     <div class="flex-video widescreen">
-                        <iframe src="<?php echo Zume_Course::get_video_by_key( 'scribe_1') ?>" width="640" height="360" frameborder="0"
+                        <iframe src="<?php echo Zume_Course::get_video_by_key( 'scribe_1' ) ?>" width="640" height="360" frameborder="0"
                                 webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
                     </div>
 
@@ -3086,7 +3087,7 @@ class Zume_Course_Content {
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="small-12 small-centered cell">
                     <div class="flex-video widescreen">
-                        <iframe src="<?php echo Zume_Course::get_video_by_key( 'scribe_1') ?>" width="640" height="360" frameborder="0"
+                        <iframe src="<?php echo Zume_Course::get_video_by_key( 'scribe_1' ) ?>" width="640" height="360" frameborder="0"
                                 webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
                     </div>
 
@@ -3169,7 +3170,7 @@ class Zume_Course_Content {
                     <div class="grid-x grid-margin-x grid-margin-y">
                         <div class="small-12 small-centered cell">
                             <div class="flex-video widescreen">
-                                <iframe src="<?php echo Zume_Course::get_video_by_key( 'scribe_1') ?>" width="640" height="360"
+                                <iframe src="<?php echo Zume_Course::get_video_by_key( 'scribe_1' ) ?>" width="640" height="360"
                                         frameborder="0" webkitallowfullscreen mozallowfullscreen
                                         allowfullscreen></iframe>
                             </div>
