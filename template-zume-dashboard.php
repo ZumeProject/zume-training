@@ -22,7 +22,7 @@ if ( ! empty( $_POST ) ) {
 
 get_header();
 
-(function() {
+( function() {
 
     $zume_current_user = get_current_user_id();
     $zume_user_meta    = array_map( function ( $a ) { return $a[0];
@@ -66,7 +66,7 @@ get_header();
                                             <h3><a data-open="<?php echo esc_html( $key ); ?>"><?php echo esc_html( $value['group_name'] ) ?></a>
                                             </h3>
                                             <p class="text-gray">
-                                                <?php echo esc_html( __( 'Meeting Time' , 'zume' ) . ": " .  $value['meeting_time'] ) ?><br>
+                                                <?php echo esc_html( __( 'Meeting Time', 'zume' ) . ": " .  $value['meeting_time'] ) ?><br>
                                                 <?php echo esc_html( __( 'Members', 'zume' ) . ': ' . $value['members'] )?><br>
                                                 <?php echo esc_html( __( 'Address', 'zume' ) . ': ' . $value['address'] )?><br>
                                             </p>
@@ -163,7 +163,7 @@ get_header();
 
                     ?>
 
-                    <?php if( $zume_no_inactive_groups > 0 ) : ?>
+                    <?php if ( $zume_no_inactive_groups > 0 ) : ?>
 
                         <div class="callout" >
 
@@ -176,7 +176,7 @@ get_header();
 
                             <form action="" method="post">
                                 <input type="hidden" name="type" value="activate" />
-		                        <?php echo $html; ?>
+                                <?php echo $html; ?>
                             </form>
 
                         </div>
@@ -209,27 +209,198 @@ get_header();
                             </div>
                             <div class="small-9 cell">
                                 <strong><?php echo esc_html( $zume_coach_data->display_name ); ?></strong><br>
-	                            <a href="mailto:<?php echo esc_html( $zume_coach_data->user_email ); ?>">
+                                <a href="mailto:<?php echo esc_html( $zume_coach_data->user_email ); ?>">
                                 <?php echo esc_html( $zume_coach_data->user_email ); ?>
                                 </a><br>
-	                            "<?php echo esc_html( $zume_coach_data->description ); ?>"
+                                "<?php echo esc_html( $zume_coach_data->description ); ?>"
                             </div>
                         </div>
                         <hr>
 
                         <?php endif; ?>
 
-                        <!-- Instructions for What to Do -->
+                        <!-- TOOLS SECTION -->
+                        <?php
+                        $highest_session = Zume_Dashboard::get_highest_session( $zume_current_user );
+
+                        if ( $highest_session > 1 ) {
+                            ?>
+                            <!-- Section top -->
+                            <div class="grid-x grid-margin-x grid-margin-y">
+                                <div class="cell">
+                                    <h3 class="center padding-bottom"><?php esc_html_e( 'Tools You\'ve Gained', 'zume' ) ?></h3>
+                                    <!--end section top-->
+
+                                    <div class="grid-x grid-margin-y">
+                                        <div class="large-2 cell">
+                                            <img src="<?php echo home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ); ?>tool-1-2.png"
+                                                 alt=""
+                                                 width="20" height="20" class="alignnone size-full wp-image-1035"/>
+                                        </div>
+                                        <div class="large-10 cell">
+                                            <?php esc_html_e( 'S.O.A.P.S. BIBLE READING', 'zume' ) ?>
+                                        </div>
+                                    </div>
+                                    <div class="grid-x grid-margin-y grid-margin-y">
+                                        <div class="large-2 cell">
+                                            <img src="<?php echo home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ); ?>tool-2.png"
+                                                 alt=""
+                                                 width="20" height="20" class="alignnone size-full wp-image-1567"/>
+                                        </div>
+                                        <div class="large-10 cell">
+                                            <?php esc_html_e( 'ACCOUNTABILITY GROUPS', 'zume' ) ?>
+                                        </div>
+                                    </div>
+                                    <div class="grid-x grid-margin-y">
+                                        <div class="large-2 cell">
+                                            <img src="<?php echo home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ); ?>concept-3-2.png"
+                                                 alt="" width="20" height="20" class="alignnone size-full wp-image-1566"/>
+                                        </div>
+                                        <div class="large-10 cell">
+                                            <?php esc_html_e( 'SPIRITUAL BREATHING', 'zume' ) ?>
+                                        </div>
+                                    </div>
+                            <?php
+                        }
+                        if ( $highest_session > 2 ) {
+                            ?>
+
+                            <div class="grid-x grid-margin-y">
+                                <div class="large-2 cell">
+                                    <!-- image -->
+                                    <img src="<?php echo home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ); ?>practice-1-6.png"
+                                         alt="" width="20" height="20" class="alignnone size-full wp-image-1577"/>
+                                </div>
+                                <div class="large-10 cell"><?php esc_html_e( 'PRAYER CYCLE', 'zume' ) ?>
+                                </div>
+                            </div>
+                            <div class="grid-x grid-margin-y grid-margin-y">
+                                <div class="large-2 cell">
+                                    <!-- image -->
+                                    <img src="<?php echo home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ); ?>practice-2-2.png"
+                                         alt="" width="20" height="20" class="alignnone size-full wp-image-1578"/>
+                                </div>
+                                <div class="large-10 cell"><?php esc_html_e( 'LIST OF 100', 'zume' ) ?>
+                                </div>
+                            </div>
+
+                            <?php
+                        }
+                        if ( $highest_session > 3 ) {
+                            ?>
+
+                            <div class="grid-x grid-margin-y">
+                                <div class="large-2 cell">
+                                    <!-- image -->
+                                    <img src="<?php echo home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ); ?>tool-1-1-1.png"
+                                         alt="" width="20" height="20" class="alignnone size-full wp-image-1183"/>
+                                </div>
+                                <div class="large-10 cell"><?php esc_html_e( 'BAPTISM', 'zume' ) ?>
+                                </div>
+                            </div>
+
+                            <?php
+                        }
+                        if ( $highest_session > 4 ) {
+                            ?>
+
+                            <div class="grid-x grid-margin-y">
+                                <div class="large-2 cell">
+                                    <!-- image -->
+                                    <img src="<?php echo home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ); ?>practice-1.png"
+                                         alt="" width="20" height="20" class="alignnone size-full wp-image-1035"/>
+                                </div>
+                                <div class="large-10 cell"><?php esc_html_e( '3-MINUTE TESTIMONY', 'zume' ) ?>
+                                </div>
+                            </div>
+                            <div class="grid-x grid-margin-y grid-margin-y">
+                                <div class="large-2 cell">
+                                    <!-- image -->
+                                    <img src="<?php echo home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ); ?>practice-2-3.png"
+                                         alt="" width="20" height="20" class="alignnone size-full wp-image-1186"/>
+                                </div>
+                                <div class="large-10 cell"><?php esc_html_e( 'THE LORD\'S SUPPER', 'zume' ) ?>
+                                </div>
+                            </div>
+
+                            <?php
+                        }
+                        if ( $highest_session > 5 ) {
+                            ?>
+
+                            <div class="grid-x grid-margin-y">
+                                <div class="large-2 cell">
+                                    <!-- image -->
+                                    <img src="<?php echo home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ); ?>tool-1-4.png"
+                                         alt="" width="20" height="20" class="alignnone size-full wp-image-1035"/>
+                                </div>
+                                <div class="large-10 cell"><?php esc_html_e( 'PRAYER WALKING', 'zume' ) ?>
+                                </div>
+                            </div>
+
+                            <?php
+                        }
+                        if ( $highest_session > 6 ) {
+                            ?>
+
+                            <div class="grid-x grid-margin-y">
+                                <div class="large-2 cell">
+                                    <!-- image -->
+                                    <img src="<?php echo home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ); ?>tool-1-5.png"
+                                         alt="" width="20" height="20" class="alignnone size-full wp-image-1035"/>
+                                </div>
+                                <div class="large-10 cell"><?php esc_html_e( '3/3 GROUP FORMAT', 'zume' ) ?>
+                                </div>
+                            </div>
+
+                            <?php
+                        }
+                        if ( $highest_session > 10 ) {
+                            ?>
+
+                            <div class="grid-x grid-margin-y">
+                                <div class="large-2 cell">
+                                    <!-- image -->
+                                    <img src="<?php echo home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ); ?>tool-1-7.png"
+                                         alt="" width="20" height="20" class="alignnone size-full wp-image-1572"/>
+                                </div>
+                                <div class="large-10 cell"><?php esc_html_e( 'PEER MENTORING GROUPS', 'zume' ) ?>
+                                </div>
+                            </div>
+                            <div class="grid-x grid-margin-y grid-margin-x">
+                                <div class="large-2 cell">
+                                    <!-- image -->
+                                    <img src="<?php echo home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ); ?>practice-1-5.png"
+                                         alt="" width="20" height="20" class="alignnone size-full wp-image-1574"/>
+                                </div>
+                                <div class="large-10 cell"><?php esc_html_e( 'COACHING CHECKLIST', 'zume' ) ?></div>
+                            </div>
+
+                            <?php
+                        }
+                        if ( $highest_session > 1 ) {
+                            ?><!-- Bottom section -->
+                                </div>
+                            </div>
+                            <hr>
+                        <!--end bottom section-->
+                            <?php
+                        }
+
+                        ?>
+
+
+                        <!-- Instructions for what to do -->
                         <div class="grid-x">
                             <div class="cell center">
-                                <h3><?php echo esc_html__( 'Instructions', 'zume' ) ?></h3>
+                                <h3 class="center padding-bottom"><?php echo esc_html__( 'Instructions', 'zume' ) ?></h3>
                             </div>
                         </div>
 
                         <div class="grid-x grid-margin-x">
                             <div class="cell">
-			                   <ul>
-                                   <li>Create a group <?php ($zume_no_groups > 0 ) ? print '<span class="primary-color">&#10004;</span>' : print '' ?></li>
+                               <ul>
+                                   <li>Create a group <?php ( $zume_no_groups > 0 ) ? print '<span class="primary-color">&#10004;</span>' : print '' ?></li>
                                    <li>Plan a time and invite friends</li>
                                    <li>Explore the upcoming session</li>
                                </ul>
@@ -339,6 +510,6 @@ foreach ( $zume_user_meta as $key => $v ) {
 
 <?php
 
-})();
+} )();
 
 get_footer();

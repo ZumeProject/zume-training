@@ -103,13 +103,13 @@ function zume_register_required_plugins() {
             'required' => true,
             'force_activation'  => true,
         ),
-	    array(
-		    'name' => 'Peter\'s Login Redirect',
-		    'slug' => 'peters-login-redirect',
-		    'version' => '2.9.1',
-		    'required' => true,
-		    'force_activation'  => true,
-	    )
+        array(
+            'name' => 'Peter\'s Login Redirect',
+            'slug' => 'peters-login-redirect',
+            'version' => '2.9.1',
+            'required' => true,
+            'force_activation'  => true,
+        )
     );
 
     /*

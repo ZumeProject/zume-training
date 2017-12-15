@@ -45,53 +45,52 @@ class Zume_Coach {
      * @since   0.1
      */
     public function __construct() {
-	    add_action( 'user_register', [ &$this, 'add_meta_data' ] );
+        add_action( 'user_register', [ &$this, 'add_meta_data' ] );
 
     } // End __construct()
 
     public function add_meta_data( $user_id ) {
-	    add_user_meta( $user_id, 'zume_coach', '', true );
-	    add_user_meta( $user_id, 'zume_phone', '', true );
-	    zume_log_last_active( $user_id );
+        add_user_meta( $user_id, 'zume_coach', '', true );
+        add_user_meta( $user_id, 'zume_phone', '', true );
+        zume_log_last_active( $user_id );
     }
 
-	public static function zume_get_coaches() {
-		global $wpdb;
-		$results = $wpdb->get_results("SELECT user_id FROM $wpdb->usermeta WHERE ( meta_value LIKE '%coach%' OR meta_value LIKE '%administrator%' ) AND meta_key = 'wp_capabilities'", ARRAY_A);
-		return $results;
-	}
+    public static function zume_get_coaches() {
+        global $wpdb;
+        $results = $wpdb->get_results( "SELECT user_id FROM $wpdb->usermeta WHERE ( meta_value LIKE '%coach%' OR meta_value LIKE '%administrator%' ) AND meta_key = 'wp_capabilities'", ARRAY_A );
+        return $results;
+    }
 
-	public static function zume_get_unassigned_users() {
-		global $wpdb;
-		$results = $wpdb->get_results("SELECT `user_id` FROM $wpdb->usermeta WHERE meta_key = 'zume_coach' AND meta_value = '' AND user_id NOT IN (
+    public static function zume_get_unassigned_users() {
+        global $wpdb;
+        $results = $wpdb->get_results("SELECT `user_id` FROM $wpdb->usermeta WHERE meta_key = 'zume_coach' AND meta_value = '' AND user_id NOT IN (
                                                 SELECT user_id FROM $wpdb->usermeta WHERE ( meta_value LIKE '%coach%' OR meta_value LIKE '%administrator%') AND meta_key = 'wp_capabilities'
                                               )", ARRAY_A);
-		return $results;
-	}
+        return $results;
+    }
 
-	public static function zume_get_coach_assignees( $user_id ) {
-		global $wpdb;
-		$results = $wpdb->get_results("SELECT user_id FROM $wpdb->usermeta WHERE meta_key = 'zume_coach' AND meta_value = '$user_id'", ARRAY_A);
-		return $results;
-	}
+    public static function zume_get_coach_assignees( $user_id ) {
+        global $wpdb;
+        $results = $wpdb->get_results( "SELECT user_id FROM $wpdb->usermeta WHERE meta_key = 'zume_coach' AND meta_value = '$user_id'", ARRAY_A );
+        return $results;
+    }
 
-	public static function assign( $args ) {
+    public static function assign( $args ) {
         // coach and user
-		$defaults = array(
-			'coach_id' => false,
-			'user_id' => false,
-		);
-		$args = wp_parse_args( $args, $defaults );
+        $defaults = array(
+            'coach_id' => false,
+            'user_id' => false,
+        );
+        $args = wp_parse_args( $args, $defaults );
 
-		update_user_meta( $args['user_id'], 'zume_coach', $args['coach_id'] );
+        update_user_meta( $args['user_id'], 'zume_coach', $args['coach_id'] );
 
-		zume_write_log($args);
     }
 
     public static function count_zume_groups_by_user( $user_id ) {
-	    global $wpdb;
-	    $results = $wpdb->get_var("SELECT count(umeta_id) FROM $wpdb->usermeta WHERE meta_key LIKE 'zume_group%' AND user_id = '$user_id'");
-	    return $results;
+        global $wpdb;
+        $results = $wpdb->get_var( "SELECT count(umeta_id) FROM $wpdb->usermeta WHERE meta_key LIKE 'zume_group%' AND user_id = '$user_id'" );
+        return $results;
     }
 
 }

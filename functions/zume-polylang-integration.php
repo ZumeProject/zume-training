@@ -63,7 +63,7 @@ function zume_get_posts_translation_url( $page_title, $slug = 'en' ) {
         $post_id = get_page_by_title( $page_title, OBJECT, 'page' );
 
         // get translation id by eng id
-        if (isset($post_id->ID)){
+        if (isset( $post_id->ID )){
             $trans_id = pll_get_post( $post_id->ID, $slug );
             if ( ! $trans_id ) {
                 return '';
@@ -74,7 +74,7 @@ function zume_get_posts_translation_url( $page_title, $slug = 'en' ) {
 
         $trans_object = get_post( $trans_id, OBJECT );
 
-        $trans_url = home_url( '/' ) . $slug . '/' . $trans_object->post_name;
+        $trans_url = home_url( '/' )  . $trans_object->post_name;
 
         return $trans_url;
     }
@@ -83,44 +83,4 @@ function zume_get_posts_translation_url( $page_title, $slug = 'en' ) {
     }
 }
 
-function zume_dashboard_url() {
-	$current_lang = zume_current_language();
-	$url = zume_get_posts_translation_url( 'dashboard', $current_lang );
-	return $url;
-}
 
-function zume_course_url() {
-	$current_lang = zume_current_language();
-	$url = zume_get_posts_translation_url( 'course', $current_lang );
-	return $url;
-}
-
-function zume_overview_url() {
-	$current_lang = zume_current_language();
-	$url = zume_get_posts_translation_url( 'overview', $current_lang );
-	return $url;
-}
-
-function zume_guidebook_url() {
-	$current_lang = zume_current_language();
-	$url = zume_get_posts_translation_url( 'guidebook', $current_lang );
-	return $url;
-}
-
-function zume_profile_url() {
-	$current_lang = zume_current_language();
-	$url = zume_get_posts_translation_url( 'profile', $current_lang );
-	return $url;
-}
-
-function zume_about_url() {
-	$current_lang = zume_current_language();
-	$url = zume_get_posts_translation_url( 'about', $current_lang );
-	return $url;
-}
-
-function zume_faq_url() {
-	$current_lang = zume_current_language();
-	$url = zume_get_posts_translation_url( 'faq', $current_lang );
-	return $url;
-}
