@@ -151,9 +151,9 @@ function zume_update_user_contact_info()
  * @return array
  */
 function zume_get_user_meta( $user_id = null ) {
-	if ( is_null( $user_id ) ) {
-		$user_id = get_current_user_id();
-	}
+    if ( is_null( $user_id ) ) {
+        $user_id = get_current_user_id();
+    }
     return array_map( function ( $a ) { return $a[0];
     }, get_user_meta( $user_id ) );
 }
@@ -204,4 +204,23 @@ function zume_faq_url() {
     $current_lang = zume_current_language();
     $url = zume_get_posts_translation_url( 'faq', $current_lang );
     return $url;
+}
+
+/**
+ * Returns the full URI of the images folder with the ending slash, either as images/ or as images/sub_folder/.
+ *
+ * @param string $sub_folder
+ * @return string
+ */
+function zume_images_uri( $sub_folder = '' ) {
+    $zume_images_uri = home_url( '/wp-content/themes/zume-project-multilingual/assets/images/' );
+    if ( empty( $sub_folder ) ) {
+        return $zume_images_uri;
+    } else {
+        return $zume_images_uri . $sub_folder . '/';
+    }
+}
+
+function zume_files_uri() {
+    return home_url( '/wp-content/themes/zume-project-multilingual/assets/files/' ) . zume_current_language() . '/';
 }
