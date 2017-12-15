@@ -5,7 +5,7 @@ jQuery( document ).ready( function() {
 	// When the delete role link is clicked, give a "AYS?" popup to confirm.
 	jQuery( '.members-delete-role-link' ).click(
 		function() {
-			return window.confirm( dt_multi_role_i18n.ays_delete_role );
+			return window.confirm( zume_multi_role_i18n.ays_delete_role );
 		}
 	);
 
@@ -20,7 +20,7 @@ jQuery( document ).ready( function() {
 	 * @param  string  $slug
 	 * @return void
 	 */
-	function dt_multi_role_print_role_slug( slug ) {
+	function zume_multi_role_print_role_slug( slug ) {
 
 		// Sanitize the role.
 		slug = slug.toLowerCase().trim().replace( /<.*?>/g, '' ).replace( /\s/g, '_' ).replace( /[^a-zA-Z0-9_]/g, '' );
@@ -36,7 +36,7 @@ jQuery( document ).ready( function() {
 			// If there's no value stored in the role input box, print this input's
 			// value in the role slug span.
 			if ( ! jQuery( 'input[name="role"]' ).val() )
-				dt_multi_role_print_role_slug( this.value );
+				zume_multi_role_print_role_slug( this.value );
 		}
 	); // .keyup
 
@@ -48,7 +48,7 @@ jQuery( document ).ready( function() {
 		function() {
 
 			// Toggle the button class and change the text.
-			jQuery( this ).removeClass( 'closed' ).addClass( 'open' ).text( dt_multi_role_i18n.button_role_ok );
+			jQuery( this ).removeClass( 'closed' ).addClass( 'open' ).text( zume_multi_role_i18n.button_role_ok );
 
 			// Show role input.
 			jQuery( 'input[name="role"]' ).show();
@@ -66,7 +66,7 @@ jQuery( document ).ready( function() {
 		function() {
 
 			// Toggle the button class and change the text.
-			jQuery( this ).removeClass( 'open' ).addClass( 'closed' ).text( dt_multi_role_i18n.button_role_edit );
+			jQuery( this ).removeClass( 'open' ).addClass( 'closed' ).text( zume_multi_role_i18n.button_role_edit );
 
 			// Hide role input.
 			jQuery( 'input[name="role"]' ).hide();
@@ -76,11 +76,11 @@ jQuery( document ).ready( function() {
 
 			// If we have a value, print the slug.
 			if ( role )
-				dt_multi_role_print_role_slug( role );
+				zume_multi_role_print_role_slug( role );
 
 			// Else, use the role name input value.
 			else
-				dt_multi_role_print_role_slug( jQuery( 'input[name="role_name"]' ).val() );
+				zume_multi_role_print_role_slug( jQuery( 'input[name="role_name"]' ).val() );
 		}
 	); // .click()
 
@@ -125,17 +125,17 @@ jQuery( document ).ready( function() {
 	var section_template = wp.template( 'members-cap-section' );
 	var control_template = wp.template( 'members-cap-control' );
 
-	// Check that the `dt_multi_role_sections` and `dt_multi_role_controls` variables were
+	// Check that the `zume_multi_role_sections` and `zume_multi_role_controls` variables were
 	// passed in via `wp_localize_script()`.
-	if ( typeof dt_multi_role_sections !== 'undefined' && typeof dt_multi_role_controls !== 'undefined' ) {
+	if ( typeof zume_multi_role_sections !== 'undefined' && typeof zume_multi_role_controls !== 'undefined' ) {
 
 		// Loop through the sections and append the template for each.
-		_.each( dt_multi_role_sections, function( data ) {
+		_.each( zume_multi_role_sections, function( data ) {
 			jQuery( '.members-tab-wrap' ).append( section_template( data ) );
 		} );
 
 		// Loop through the controls and append the template for each.
-		_.each( dt_multi_role_controls, function( data ) {
+		_.each( zume_multi_role_controls, function( data ) {
 			jQuery( '#members-tab-' + data.section + ' tbody' ).append( control_template( data ) );
 		} );
 	}
@@ -191,7 +191,7 @@ jQuery( document ).ready( function() {
 	 * @access public
 	 * @return void
 	 */
-	function dt_multi_role_count_caps() {
+	function zume_multi_role_count_caps() {
 
 		// Count the granted and denied caps that are checked.
 		var granted_count = jQuery( "#members-tab-all input[data-grant-cap]:checked" ).length;
@@ -215,7 +215,7 @@ jQuery( document ).ready( function() {
 	 * @param  object  $checkbox
 	 * @return void
 	 */
-	function dt_multi_role_check_uncheck( checkbox ) {
+	function zume_multi_role_check_uncheck( checkbox ) {
 
 		var type     = 'grant';
 		var opposite = 'deny';
@@ -248,7 +248,7 @@ jQuery( document ).ready( function() {
 	}
 
 	// Count the granted and denied caps that are checked.
-	dt_multi_role_count_caps();
+	zume_multi_role_count_caps();
 
 	// When a change is triggered for any grant/deny checkbox. Note that we're using `.on()`
 	// here because we're dealing with dynamically-generated HTML.
@@ -257,10 +257,10 @@ jQuery( document ).ready( function() {
 		function() {
 
 			// Check/Uncheck boxes.
-			dt_multi_role_check_uncheck( this );
+			zume_multi_role_check_uncheck( this );
 
 			// Count the granted and denied caps that are checked.
-			dt_multi_role_count_caps();
+			zume_multi_role_count_caps();
 		}
 	); // .on( 'change' )
 
@@ -367,8 +367,8 @@ jQuery( document ).ready( function() {
 				jQuery( 'a[href="#members-tab-custom"]' ).trigger( 'click' );
 
 				// Replace text placeholder with cap.
-				dt_multi_role_i18n.label_grant_cap = dt_multi_role_i18n.label_grant_cap.replace( /%s/g, '<code>' + new_cap + '</code>' );
-				dt_multi_role_i18n.label_deny_cap  = dt_multi_role_i18n.label_deny_cap.replace( /%s/g,  '<code>' + new_cap + '</code>' );
+				zume_multi_role_i18n.label_grant_cap = zume_multi_role_i18n.label_grant_cap.replace( /%s/g, '<code>' + new_cap + '</code>' );
+				zume_multi_role_i18n.label_deny_cap  = zume_multi_role_i18n.label_deny_cap.replace( /%s/g,  '<code>' + new_cap + '</code>' );
 
 				// Set up some data to pass to our Underscore template.
 				var data = {
@@ -377,7 +377,7 @@ jQuery( document ).ready( function() {
 					name           : { grant : 'grant-new-caps[]', deny : 'deny-new-caps[]' },
 					is_granted_cap : true,
 					is_denied_cap  : false,
-					label          : { grant : dt_multi_role_i18n.label_grant_cap, deny : dt_multi_role_i18n.label_deny_cap }
+					label          : { grant : zume_multi_role_i18n.label_grant_cap, deny : zume_multi_role_i18n.label_deny_cap }
 				};
 
 				// Prepend our template to the "custom" edit caps tab content.

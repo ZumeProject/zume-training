@@ -88,16 +88,17 @@ add_action( 'wp_insert_post', 'zume_wp_insert_post', 10, 3 );
 
 function zume_get_real_ip_address()
 {
-    if ( !empty( $_SERVER['HTTP_CLIENT_IP'] ))   //check ip from share internet
+    $ip = '';
+    if ( ! empty( $_SERVER['HTTP_CLIENT_IP'] ))   //check ip from share internet
     {
-        $ip =$_SERVER['HTTP_CLIENT_IP'];
+        $ip = sanitize_key( wp_unslash( $_SERVER['HTTP_CLIENT_IP'] ) );
     }
-    elseif ( !empty( $_SERVER['HTTP_X_FORWARDED_FOR'] ))   //to check ip is pass from proxy
+    elseif ( ! empty( $_SERVER['HTTP_X_FORWARDED_FOR'] ))   //to check ip is pass from proxy
     {
-        $ip =$_SERVER['HTTP_X_FORWARDED_FOR'];
+        $ip = sanitize_key( wp_unslash( $_SERVER['HTTP_X_FORWARDED_FOR'] ) );
     }
-    else {
-        $ip =$_SERVER['REMOTE_ADDR'];
+    elseif ( ! empty( $_SERVER['REMOTE_ADDR'] ) ) {
+        $ip = sanitize_key( wp_unslash( $_SERVER['REMOTE_ADDR'] ) );
     }
     return $ip;
 }

@@ -48,11 +48,11 @@ $zume_user_id = get_current_user_id();
                         ?>
 
                         <tr>
-                            <td><?php echo $zume_user->display_name; ?></td>
-                            <td><?php echo $zume_user->user_email; ?></td>
-                            <td><?php echo $zume_user_meta['zume_phone'][0] ?></td>
-                            <td><?php echo $zume_user_meta['zume_last_active'][0] ?></td>
-                            <td><?php echo $zume_group_count ?></td>
+                            <td><?php echo esc_attr( $zume_user->display_name ); ?></td>
+                            <td><?php echo esc_attr( $zume_user->user_email ); ?></td>
+                            <td><?php echo esc_attr( $zume_user_meta['zume_phone'][0] ); ?></td>
+                            <td><?php echo esc_attr( $zume_user_meta['zume_last_active'][0] ); ?></td>
+                            <td><?php echo esc_attr( $zume_group_count ); ?></td>
                         </tr>
 
                         <?php endforeach; ?>
@@ -84,10 +84,10 @@ $zume_user_id = get_current_user_id();
                                     <?php
                                     $zume_unassigned_users = Zume_Coach::zume_get_unassigned_users();
                                     foreach ( $zume_unassigned_users as $value ) :
-                                        $user_data = get_userdata( $value['user_id'] );
+                                        $zume_user_data = get_userdata( $value['user_id'] );
                                         ?>
 
-                                        <option value="<?php echo $value['user_id'] ?>"><?php echo $user_data->display_name ?></option>
+                                        <option value="<?php echo esc_attr( $value['user_id'] ); ?>"><?php echo esc_attr( $zume_user_data->display_name ); ?></option>
 
                                     <?php endforeach; ?>
                                 </select>
@@ -98,10 +98,10 @@ $zume_user_id = get_current_user_id();
                                     <?php
                                     $zume_unassigned_users = Zume_Coach::zume_get_coaches();
                                     foreach ( $zume_unassigned_users as $value ) :
-                                        $user_data = get_userdata( $value['user_id'] );
+                                        $zume_user_data = get_userdata( $value['user_id'] );
                                         ?>
 
-                                        <option value="<?php echo $value['user_id'] ?>"><?php echo $user_data->display_name ?></option>
+                                        <option value="<?php echo esc_attr( $value['user_id'] ); ?>"><?php echo esc_attr( $zume_user_data->display_name ); ?></option>
 
                                     <?php endforeach; ?>
                                 </select>

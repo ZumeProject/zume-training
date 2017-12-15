@@ -20,6 +20,7 @@ class Zume_Activator
         require_once( ABSPATH . 'wp-admin/includes/upgrade.php' );
         /* Activity Log */
         $table_name = $wpdb->prefix . 'zume_logging';
+        // @codingStandardsIgnoreLine
         if ( $wpdb->get_var( "show tables like '{$table_name}'" ) != $table_name ) {
             $sql1 = "CREATE TABLE IF NOT EXISTS `{$table_name}` (
 					  `id` BIGINT(20) UNSIGNED NOT NULL AUTO_INCREMENT,

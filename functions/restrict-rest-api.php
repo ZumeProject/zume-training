@@ -15,14 +15,12 @@
  * @since 0.1.0
  */
 
-$dt_dra_current_wp_version = get_bloginfo( 'version' );
+$zume_dra_current_wp_version = get_bloginfo( 'version' );
 
-if ( version_compare( $dt_dra_current_wp_version, '4.7', '>=' ) ) {
-    dt_dra_force_auth_error();
-    add_action( 'rest_api_init', "dt_add_api_routes" );
-    add_action( 'init', 'dt_setup_jwt' );
+if ( version_compare( $zume_dra_current_wp_version, '4.7', '>=' ) ) {
+    zume_dra_force_auth_error();
 } else {
-    dt_dra_disable_via_filters();
+    zume_dra_disable_via_filters();
 }
 
 //\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/
@@ -33,16 +31,16 @@ if ( version_compare( $dt_dra_current_wp_version, '4.7', '>=' ) ) {
  * This function is called if the current version of WordPress is 4.7 or above
  * Forcibly raise an authentication error to the REST API if the user is not logged in
  */
-function dt_dra_force_auth_error()
+function zume_dra_force_auth_error()
 {
-    add_filter( 'rest_authentication_errors', 'dt_dra_only_allow_logged_in_rest_access' );
+    add_filter( 'rest_authentication_errors', 'zume_dra_only_allow_logged_in_rest_access' );
 }
 
 /**
  * This function gets called if the current version of WordPress is less than 4.7
  * We are able to make use of filters to actually disable the functionality entirely
  */
-function dt_dra_disable_via_filters()
+function zume_dra_disable_via_filters()
 {
 
     // Filters for WP-API version 1.x
@@ -66,7 +64,7 @@ function dt_dra_disable_via_filters()
  *
  * @return WP_Error
  */
-function dt_dra_only_allow_logged_in_rest_access( $access )
+function zume_dra_only_allow_logged_in_rest_access( $access )
 {
     $is_public = false;
     $is_jwt = false;
@@ -82,25 +80,3 @@ function dt_dra_only_allow_logged_in_rest_access( $access )
 
     return $access;
 }
-
-/**
- * Setup the rest api routes for the plugin
- */
-function dt_add_api_routes()
-{
-    // setup the facebook endpoints
-    Disciple_Tools::instance()->facebook_integration->add_api_routes();
-}
-
-/**
- * Define key for JWT authentication
- */
-function dt_setup_jwt()
-{
-    if ( !defined( 'JWT_AUTH_SECRET_KEY' ) ) {
-        $iv = get_option( "my_jwt_key" );
-        // @codingStandardsIgnoreLine
-        define( 'JWT_AUTH_SECRET_KEY', $iv );
-    }
-}
-

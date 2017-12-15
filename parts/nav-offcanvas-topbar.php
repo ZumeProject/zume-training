@@ -18,8 +18,8 @@ if ( zume_has_polylang() ) {
 <div class="top-bar" id="top-bar-menu">
     <div class="show-for-large" style="display: flex; flex-direction: row; justify-content: space-around; width:100%">
         <div class="menu-item show-for-large">
-            <a href="<?php echo is_user_logged_in() ? print zume_dashboard_url() : print esc_attr( home_url() ); ?>">
-               <img src="<?php echo esc_attr( get_stylesheet_directory_uri() ); ?>/assets/images/zume-logo-white.png" class="zume-logo-in-top-bar">
+            <a href="<?php echo is_user_logged_in() ? esc_url( zume_dashboard_url() ) : esc_attr( home_url() ); ?>">
+               <img src="<?php echo esc_attr( zume_images_uri() ); ?>zume-logo-white.png" class="zume-logo-in-top-bar">
             </a>
         </div>
         <div class="menu-item show-for-large">
@@ -31,9 +31,9 @@ if ( zume_has_polylang() ) {
 
     <div class=" show-for-small hide-for-large">
         <ul class="menu">
-            <li class="zume-logo-in-top-bar"><a href="<?php if (is_user_logged_in()) { echo zume_dashboard_url();
+            <li class="zume-logo-in-top-bar"><a href="<?php if (is_user_logged_in()) { echo esc_url( zume_dashboard_url() );
 } else { echo esc_attr( home_url() ); } ?>">
-                    <img src="<?php echo esc_attr( get_stylesheet_directory_uri() ); ?>/assets/images/zume-logo-white.png" >
+                    <img src="<?php echo esc_attr( zume_images_uri() ); ?>zume-logo-white.png" >
                 </a></li>
         </ul>
     </div>

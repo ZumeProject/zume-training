@@ -19,6 +19,6 @@
  * @param  mixed   $val
  * @return bool
  */
-function dt_multi_role_validate_boolean( $val ) {
+function zume_multi_role_validate_boolean( $val ) {
     return filter_var( $val, FILTER_VALIDATE_BOOLEAN );
 }

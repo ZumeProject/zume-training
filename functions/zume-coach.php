@@ -71,7 +71,13 @@ class Zume_Coach {
 
     public static function zume_get_coach_assignees( $user_id ) {
         global $wpdb;
-        $results = $wpdb->get_results( "SELECT user_id FROM $wpdb->usermeta WHERE meta_key = 'zume_coach' AND meta_value = '$user_id'", ARRAY_A );
+        $results = $wpdb->get_results( $wpdb->prepare(
+            "SELECT user_id
+                    FROM $wpdb->usermeta 
+                    WHERE meta_key = 'zume_coach' 
+                      AND meta_value = %s",
+            $user_id
+        ), ARRAY_A );
         return $results;
     }
 
@@ -89,7 +95,14 @@ class Zume_Coach {
 
     public static function count_zume_groups_by_user( $user_id ) {
         global $wpdb;
-        $results = $wpdb->get_var( "SELECT count(umeta_id) FROM $wpdb->usermeta WHERE meta_key LIKE 'zume_group%' AND user_id = '$user_id'" );
+        $results = $wpdb->get_var( $wpdb->prepare(
+            "SELECT count(umeta_id) 
+                    FROM $wpdb->usermeta 
+                    WHERE meta_key LIKE %s 
+                      AND user_id = %s",
+            $wpdb->esc_like( 'zume_group' ) . '%',
+            $user_id
+        ) );
         return $results;
     }
 
