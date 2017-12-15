@@ -22,11 +22,9 @@ if ( ! empty( $_POST ) ) {
 
 get_header();
 
-( function() {
+$zume_current_user = get_current_user_id();
+$zume_user_meta    = zume_get_user_meta( $zume_current_user );
 
-    $zume_current_user = get_current_user_id();
-    $zume_user_meta    = array_map( function ( $a ) { return $a[0];
-    }, get_user_meta( $zume_current_user ) );
 ?>
 
 <div id="content">
@@ -509,7 +507,5 @@ foreach ( $zume_user_meta as $key => $v ) {
 ?>
 
 <?php
-
-} )();
 
 get_footer();
