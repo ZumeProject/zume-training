@@ -129,10 +129,7 @@ if ( is_user_logged_in() ) {
                                 <li class="orbit-slide">
                                     <div>
                                         <h4 class="text-center zume-slider-text"><strong>
-                                                <?php esc_html_e( 'There is a great harvest
-                                                readied in North America not being reached by the status quo. Zúme
-                                                is a biblical wake-up call and tool to empower the everyday believer
-                                                to begin walking in the Lords will to multiply disciples.', 'zume') ?></strong>
+                                            <?php esc_html_e( 'There is a great harvest readied in North America not being reached by the status quo. Zúme is a biblical wake-up call and tool to empower the everyday believer to begin walking in the Lords will to multiply disciples.', 'zume' ) ?></strong>
                                         </h4>
                                         <h4 class="zume-slider-name" style="text-transform: uppercase">
                                             <?php esc_html_e( 'Jake Duke — Indiana', 'zume' ) ?>
@@ -141,11 +138,11 @@ if ( is_user_logged_in() ) {
                                 </li>
                                 <li class="orbit-slide">
                                     <div>
-                                        <h4 class="text-center zume-slider-text"><strong><?php esc_html_e( 'Do you want to make a
-                                                difference in your workplace, neighborhood, or circle of friends?
-                                                The Zúme Project essentially will give you practical rails to run on
-                                                that follow the example of the Church as seen in the New
-                                                Testament.', 'zume') ?></strong></h4>
+                                        <h4 class="text-center zume-slider-text">
+                                            <strong>
+                                                <?php esc_html_e( 'Do you want to make a difference in your workplace, neighborhood, or circle of friends? The Zúme Project essentially will give you practical rails to run on that follow the example of the Church as seen in the New Testament.', 'zume' ) ?>
+                                            </strong>
+                                        </h4>
                                         <h4 class="zume-slider-name" style="text-transform: uppercase">
                                             <?php esc_html_e( 'Gavin Duerson — Kentucky', 'zume' ) ?>
                                         </h4>
@@ -153,10 +150,11 @@ if ( is_user_logged_in() ) {
                                 </li>
                                 <li class="orbit-slide">
                                     <div>
-                                        <h4 class="text-center zume-slider-text"><strong><?php esc_html_e( 'I am so excited to use this
-                                                Zúme tool to help in training all the soldiers to make and multiply
-                                                disciples in our neighborhood. Jesus can make it a neighborhood
-                                                again.', 'zume') ?></strong></h4>
+                                        <h4 class="text-center zume-slider-text">
+                                            <strong>
+                                                <?php esc_html_e( 'I am so excited to use this Zúme tool to help in training all the soldiers to make and multiply disciples in our neighborhood. Jesus can make it a neighborhood again.', 'zume' ) ?>
+                                            </strong>
+                                        </h4>
                                         <h4 class="zume-slider-name" style="text-transform: uppercase">
                                             <?php esc_html_e( 'Chad Rehnberg', 'zume' ) ?>
                                         </h4>
@@ -164,9 +162,11 @@ if ( is_user_logged_in() ) {
                                 </li>
                                 <li class="orbit-slide">
                                     <div>
-                                        <h4 class="text-center zume-slider-text"><strong><?php esc_html_e( 'I believe Zúme can be used
-                                                by the Lord to reach a huge number of people in our society who
-                                                would never darken the door of a church building.', 'zume') ?></strong></h4>
+                                        <h4 class="text-center zume-slider-text">
+                                            <strong>
+                                                <?php esc_html_e( 'I believe Zúme can be used by the Lord to reach a huge number of people in our society who would never darken the door of a church building.', 'zume' ) ?>
+                                            </strong>
+                                        </h4>
                                         <h4 class="zume-slider-name" style="text-transform: uppercase">
                                             <?php esc_html_e( 'Curtis Sergeant — Alabama', 'zume' ) ?>
                                         </h4>

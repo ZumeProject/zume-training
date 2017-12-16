@@ -400,8 +400,7 @@ class Zume_Overview_Content {
                                      alt="" width="40" height="40" class="alignnone size-full wp-image-1576"/>
                             </div>
                             <div class="large-11 cell">
-                                <?php echo esc_html__( "PRODUCERS VS. CONSUMERS — You'll discover the four main 
-                                ways God makes everyday followers more like Jesus.", 'zume' ) ?>
+                                <?php echo esc_html__( "PRODUCERS VS. CONSUMERS — You'll discover the four main ways God makes everyday followers more like Jesus.", 'zume' ) ?>
                             </div>
                         </div>
                     </div>
@@ -523,9 +522,7 @@ class Zume_Overview_Content {
                                      alt="" width="40" height="40" class="alignnone size-full wp-image-1023"/>
                             </div>
                             <div class="large-11 cell">
-                                <?php echo esc_html__( "SPIRITUAL ECONOMY — Learn how God's economy is different from the world's. God invests
-                                more in those
-                                who are faithful with what they've already been given.", 'zume' ) ?>
+                                <?php echo esc_html__( "SPIRITUAL ECONOMY — Learn how God's economy is different from the world's. God invests more in those who are faithful with what they've already been given.", 'zume' ) ?>
                             </div>
                         </div>
                     </div>
@@ -537,9 +534,7 @@ class Zume_Overview_Content {
                                      alt="" width="40" height="40" class="alignnone size-full wp-image-1024"/>
                             </div>
                             <div class="large-11 cell">
-                                <?php echo esc_html__( "CREATION TO JUDGMENT — Learn a way to share God’s Good News from the beginning of
-                                humanity all the
-                                way to the end of this age.", 'zume' ) ?>
+                                <?php echo esc_html__( "CREATION TO JUDGMENT — Learn a way to share God’s Good News from the beginning of humanity all the way to the end of this age.", 'zume' ) ?>
                             </div>
                         </div>
                     </div>
@@ -561,9 +556,7 @@ class Zume_Overview_Content {
                                      alt="" width="40" height="40" class="alignnone size-full wp-image-1183"/>
                             </div>
                             <div class="large-11 cell">
-                                <?php echo esc_html__( 'BAPTISM — Jesus said, “Go and make disciples of all nations, BAPTIZING them in the name
-                                of the
-                                Father and of the Son and of the Holy Spirit…” Learn how to put this into practice.', 'zume' ) ?>
+                                <?php echo esc_html__( 'BAPTISM — Jesus said, “Go and make disciples of all nations, BAPTIZING them in the name of the Father and of the Son and of the Holy Spirit…” Learn how to put this into practice.', 'zume' ) ?>
                             </div>
                         </div>
                     </div>
@@ -584,9 +577,7 @@ class Zume_Overview_Content {
                                      alt="" width="40" height="40" class="alignnone size-full wp-image-1026"/>
                             </div>
                             <div class="large-11 cell">
-                                <?php echo esc_html__( 'SHARE GOD’S STORY — Break into groups of two or three and practice sharing God’s Story.
-                                (45
-                                minutes)', 'zume' ) ?>
+                                <?php echo esc_html__( 'SHARE GOD’S STORY — Break into groups of two or three and practice sharing God’s Story. (45 minutes)', 'zume' ) ?>
                             </div>
                         </div>
                     </div>
@@ -641,9 +632,7 @@ class Zume_Overview_Content {
                                      alt="" width="40" height="40" class="alignnone size-full wp-image-1028"/>
                             </div>
                             <div class="large-11 cell">
-                                <?php echo esc_html__( 'GREATEST BLESSING — Learn a simple pattern of making not just one follower of Jesus but
-                                entire
-                                spiritual families who multiply for generations to come.', 'zume' ) ?>
+                                <?php echo esc_html__( 'GREATEST BLESSING — Learn a simple pattern of making not just one follower of Jesus but entire spiritual families who multiply for generations to come.', 'zume' ) ?>
                             </div>
                         </div>
                     </div>
@@ -655,9 +644,7 @@ class Zume_Overview_Content {
                                      alt="" width="40" height="40" class="alignnone size-full wp-image-1029"/>
                             </div>
                             <div class="large-11 cell">
-                                <?php echo esc_html__( 'EYES TO SEE — Begin to see where God’s Kingdom isn’t. These are usually the places where
-                                God wants
-                                to work the most.', 'zume' ) ?>
+                                <?php echo esc_html__( 'EYES TO SEE — Begin to see where God’s Kingdom isn’t. These are usually the places where God wants to work the most.', 'zume' ) ?>
                             </div>
                         </div>
                     </div>
@@ -690,9 +677,7 @@ class Zume_Overview_Content {
                                      alt="" width="40" height="40" class="alignnone size-full wp-image-1035"/>
                             </div>
                             <div class="large-11 cell">
-                                <?php echo esc_html__( "3-MINUTE TESTIMONY — Learn how to share your testimony in three minutes by sharing how
-                                Jesus has
-                                impacted your life.", 'zume' ) ?>
+                                <?php echo esc_html__( "3-MINUTE TESTIMONY — Learn how to share your testimony in three minutes by sharing how Jesus has impacted your life.", 'zume' ) ?>
                             </div>
                         </div>
                     </div>
@@ -704,9 +689,7 @@ class Zume_Overview_Content {
                                      alt="" width="40" height="40" class="alignnone size-full wp-image-1186"/>
                             </div>
                             <div class="large-11 cell">
-                                <?php echo esc_html__( "THE LORD'S SUPPER — It’s a simple way to celebrate our intimate connection and ongoing
-                                relationship
-                                with Jesus. Learn a simple way to celebrate.", 'zume' ) ?>
+                                <?php echo esc_html__( "THE LORD'S SUPPER — It’s a simple way to celebrate our intimate connection and ongoing relationship with Jesus. Learn a simple way to celebrate.", 'zume' ) ?>
                             </div>
                         </div>
                     </div>
@@ -727,9 +710,7 @@ class Zume_Overview_Content {
                                      alt="" width="40" height="40" class="alignnone size-full wp-image-1033"/>
                             </div>
                             <div class="large-11 cell">
-                                <?php echo esc_html__( "SHARING YOUR TESTIMONY — Break into groups of two or three and practice sharing your
-                                Testimony with
-                                others. (45 minutes)", 'zume' ) ?>
+                                <?php echo esc_html__( "SHARING YOUR TESTIMONY — Break into groups of two or three and practice sharing your Testimony with others. (45 minutes)", 'zume' ) ?>
                             </div>
                         </div>
                     </div>
@@ -795,8 +776,7 @@ class Zume_Overview_Content {
                                      alt="" width="40" height="40" class="alignnone size-full wp-image-1028"/>
                             </div>
                             <div class="large-11 cell">
-                                <?php echo esc_html__( "PERSON OF PEACE — Learn who a person of peace might be and how to know when you've found
-                                one.", 'zume' ) ?>
+                                <?php echo esc_html__( "PERSON OF PEACE — Learn who a person of peace might be and how to know when you've found one.", 'zume' ) ?>
                             </div>
                         </div>
                     </div>
@@ -817,9 +797,7 @@ class Zume_Overview_Content {
                                      alt="" width="40" height="40" class="alignnone size-full wp-image-1035"/>
                             </div>
                             <div class="large-11 cell">
-                                <?php echo esc_html__( "PRAYER WALKING — It’s a simple way to obey God’s command to pray for others. And it's
-                                just what it
-                                sounds like — praying to God while walking around!", 'zume' ) ?>
+                                <?php echo esc_html__( "PRAYER WALKING — It’s a simple way to obey God’s command to pray for others. And it's just what it sounds like — praying to God while walking around!", 'zume' ) ?>
                             </div>
                         </div>
                     </div>
@@ -840,9 +818,7 @@ class Zume_Overview_Content {
                                      alt="" width="40" height="40" class="alignnone size-full wp-image-1033"/>
                             </div>
                             <div class="large-11 cell">
-                                <?php echo esc_html__( "B.L.E.S.S. PRAYER — Practice a simple mnemonic to remind you of ways to pray for others.
-                                (15
-                                minutes)", 'zume' ) ?>
+                                <?php echo esc_html__( "B.L.E.S.S. PRAYER — Practice a simple mnemonic to remind you of ways to pray for others. (15 minutes)", 'zume' ) ?>
                             </div>
                         </div>
                         <div class="grid-x grid-margin-y">
@@ -852,9 +828,7 @@ class Zume_Overview_Content {
                                      alt="" width="40" height="40" class="alignnone size-full wp-image-1033"/>
                             </div>
                             <div class="large-11 cell">
-                                <?php echo esc_html__( "PRAYER WALKING — Break into groups of two or three and go out into the community to
-                                practice Prayer
-                                Walking. (60-90 minutes)", 'zume' ) ?>
+                                <?php echo esc_html__( "PRAYER WALKING — Break into groups of two or three and go out into the community to practice Prayer Walking. (60-90 minutes)", 'zume' ) ?>
                             </div>
                         </div>
                     </div>
@@ -909,9 +883,7 @@ class Zume_Overview_Content {
                                      alt="" width="40" height="40" class="alignnone size-full wp-image-1028"/>
                             </div>
                             <div class="large-11 cell">
-                                <?php echo esc_html__( "FAITHFULNESS — It's important what disciples know — but it's much more important what
-                                they DO with
-                                what they know.", 'zume' ) ?>
+                                <?php echo esc_html__( "FAITHFULNESS — It's important what disciples know — but it's much more important what they DO with what they know.", 'zume' ) ?>
                             </div>
                         </div>
                     </div>
@@ -932,11 +904,7 @@ class Zume_Overview_Content {
                                      alt="" width="40" height="40" class="alignnone size-full wp-image-1035"/>
                             </div>
                             <div class="large-11 cell">
-                                <?php echo esc_html__( "3/3 GROUP FORMAT — A 3/3 Group is a way for followers of Jesus to meet, pray, learn,
-                                grow,
-                                fellowship and practice obeying and sharing what they've learned. In this way, a 3/3
-                                Group is not
-                                just a small group but a Simple Church. (80 minutes)", 'zume' ) ?>
+                                <?php echo esc_html__( "3/3 GROUP FORMAT — A 3/3 Group is a way for followers of Jesus to meet, pray, learn, grow, fellowship and practice obeying and sharing what they've learned. In this way, a 3/3 Group is not just a small group but a Simple Church. (80 minutes)", 'zume' ) ?>
                             </div>
                         </div>
                     </div>
@@ -990,8 +958,7 @@ class Zume_Overview_Content {
                                      alt="" width="40" height="40" class="alignnone size-full wp-image-1570"/>
                             </div>
                             <div class="large-11 cell">
-                                <?php echo esc_html__( "TRAINING CYCLE — Learn the training cycle and consider how it applies to disciple
-                                making.", 'zume' ) ?>
+                                <?php echo esc_html__( "TRAINING CYCLE — Learn the training cycle and consider how it applies to disciple making.", 'zume' ) ?>
                             </div>
                         </div>
                     </div>
@@ -1068,9 +1035,7 @@ class Zume_Overview_Content {
                                      alt="" width="40" height="40" class="alignnone size-full wp-image-1028"/>
                             </div>
                             <div class="large-11 cell">
-                                <?php echo esc_html__( "LEADERSHIP CELLS — A Leadership Cell is a way someone who feels called to lead can
-                                develop their
-                                leadership by practicing serving.", 'zume' ) ?>
+                                <?php echo esc_html__( "LEADERSHIP CELLS — A Leadership Cell is a way someone who feels called to lead can develop their leadership by practicing serving.", 'zume' ) ?>
                             </div>
                         </div>
                     </div>
@@ -1146,8 +1111,7 @@ class Zume_Overview_Content {
                                      alt="" width="40" height="40" class="alignnone size-full wp-image-1028"/>
                             </div>
                             <div class="large-11 cell">
-                                <?php echo esc_html__( "NON-SEQUENTIAL — See how disciple making doesn't have to be linear. Multiple things can happen at
-                                the same time.", 'zume' ) ?>
+                                <?php echo esc_html__( "NON-SEQUENTIAL — See how disciple making doesn't have to be linear. Multiple things can happen at the same time.", 'zume' ) ?>
                             </div>
                         </div>
                     </div>
@@ -1192,8 +1156,7 @@ class Zume_Overview_Content {
                                      alt="" width="40" height="40" class="alignnone size-full wp-image-1033"/>
                             </div>
                             <div class="large-11 cell">
-                                <?php echo esc_html__( "3-MONTH PLAN — Create and share your plan for how you will implement the Zúme tools over the next
-                                three months. (60 minutes)", 'zume' ) ?>
+                                <?php echo esc_html__( "3-MONTH PLAN — Create and share your plan for how you will implement the Zúme tools over the next three months. (60 minutes)", 'zume' ) ?>
                             </div>
                         </div>
                     </div>
@@ -1249,8 +1212,7 @@ class Zume_Overview_Content {
                                      alt="" width="40" height="40" class="alignnone size-full wp-image-1028"/>
                             </div>
                             <div class="large-11 cell">
-                                <?php echo esc_html__( "LEADERSHIP IN NETWORKS — Learn how multiplying churches stay connected and live life together as an
-                                extended, spiritual family.", 'zume' ) ?>
+                                <?php echo esc_html__( "LEADERSHIP IN NETWORKS — Learn how multiplying churches stay connected and live life together as an extended, spiritual family.", 'zume' ) ?>
                             </div>
                         </div>
                     </div>
@@ -1271,9 +1233,7 @@ class Zume_Overview_Content {
                                      alt="" width="40" height="40" class="alignnone size-full wp-image-1572"/>
                             </div>
                             <div class="large-11 cell">
-                                <?php echo esc_html__( "PEER MENTORING GROUPS — This is a group that consists of people who are leading and starting 3/3
-                                Groups. It also follows a 3/3 format and is a powerful way to assess the spiritual health of God’s
-                                work in your area.", 'zume' ) ?>
+                                <?php echo esc_html__( "PEER MENTORING GROUPS — This is a group that consists of people who are leading and starting 3/3 Groups. It also follows a 3/3 format and is a powerful way to assess the spiritual health of God’s work in your area.", 'zume' ) ?>
                             </div>
                         </div>
                     </div>
@@ -1296,8 +1256,7 @@ class Zume_Overview_Content {
                                      alt="" width="40" height="40" class="alignnone size-full wp-image-1033"/>
                             </div>
                             <div class="large-11 cell">
-                                <?php echo esc_html__( "PEER MENTORING GROUPS — Break into groups of two or three and work through the Peer Mentoring Group
-                                format. (60 minutes)", 'zume' ) ?>
+                                <?php echo esc_html__( "PEER MENTORING GROUPS — Break into groups of two or three and work through the Peer Mentoring Group format. (60 minutes)", 'zume' ) ?>
                             </div>
                         </div>
                     </div>

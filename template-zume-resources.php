@@ -26,12 +26,9 @@ Template Name: Zume Resources
                 <div class="medium-2 cell"></div>
                 <div class="medium-8 cell vertical-padding">
                     <h3 style="color: white"><?php esc_html_e( 'The Zúme Mission:', 'zume' ) ?></h3>
-                    <?php esc_html_e( 'Helping ordinary people make a big impact for the Kingdom of God by obeying and implementing the
-                    Great Commission and the Great Commandment.', 'zume' ) ?>
+                    <?php esc_html_e( 'Helping ordinary people make a big impact for the Kingdom of God by obeying and implementing the Great Commission and the Great Commandment.', 'zume' ) ?>
                     <h3 style="color: white"><?php esc_html_e( 'The Zúme Vision:', 'zume' ) ?></h3>
-                    <?php esc_html_e( 'Make disciples in every census tract in the United States and then in every Omega District globally,
-                    using an online training platform focused on equipping participants in the basic disciple-making and
-                    simple church planting multiplication principles, processes, and practices.', 'zume' ) ?>
+                    <?php esc_html_e( 'Make disciples in every census tract in the United States and then in every Omega District globally, using an online training platform focused on equipping participants in the basic disciple-making and simple church planting multiplication principles, processes, and practices.', 'zume' ) ?>
                 </div>
                 <div class="medium-2 cell"></div>
             </div>
@@ -39,7 +36,7 @@ Template Name: Zume Resources
             <div class="grid-x grid-margin-x vertical-padding">
                 <div class="medium-2 cell"></div>
                 <div class="medium-8 cell">
-                    <h3>Resources:</h3>
+                    <h3><?php esc_html_e( "Resources:", 'zume' ) ?></h3>
                     <ul style="list-style-type: none;margin: 0">
                         <li>
                             <a href="<?php echo esc_url( home_url() ) ?>/wp-content/themes/zume-project-multilingual/assets/files/en/zume_guidebook.pdf"

@@ -24,9 +24,7 @@ Template Name: Zume About
 
                     <div class="grid-x row vertical-padding">
                         <div class="cell ">
-                            <p style="font-size: 150%; margin: 20px 0 40px 0; text-align: center;"><?php esc_html_e( 'Zúme Training is an
-                            on-line and in-life learning experience designed for small groups who follow Jesus to learn
-                            how to obey His Great Commission and make disciples who multiply.', 'zume' ) ?></p>
+                            <p style="font-size: 150%; margin: 20px 0 40px 0; text-align: center;"><?php esc_html_e( 'Zúme Training is an on-line and in-life learning experience designed for small groups who follow Jesus to learn how to obey His Great Commission and make disciples who multiply.', 'zume' ) ?></p>
                         </div>
                     </div>
 
@@ -41,15 +39,12 @@ Template Name: Zume About
                         <div class="large-2 cell"></div>
                         <div class="cell large-8" style="color: white;">
                             <h3 style="color: white;"><?php esc_html_e( 'Goals of the Zúme Project:', 'zume' ) ?></h3>
-                            <p><?php esc_html_e( 'Zúme means yeast in Greek. In Matthew 13:33 Jesus is quoted as saying, "The Kingdom of
-                            Heaven is like a woman who took yeast and mixed it into a large amount of flour until it
-                            was all leavened." This illustrates how ordinary people, using ordinary resources, can
-                            have an extraordinary impact for the Kingdom of God. Zúme aims to equip and empower
-                            ordinary believers to reach every neighborhood.', 'zume' ) ?></p>
-                            <p><?php __( 'The initial goal of Zúme is for there to be a training group of four to twelve people in
-                            each census tract in the country. Each of these training groups will start two
-                            first-generation churches which will then begin to reproduce. There are about 75,000
-                            census tracts in the U.S.', 'zume' ) ?></p>
+                            <p>
+                                <?php esc_html_e( 'Zúme means yeast in Greek. In Matthew 13:33 Jesus is quoted as saying, "The Kingdom of Heaven is like a woman who took yeast and mixed it into a large amount of flour until it was all leavened." This illustrates how ordinary people, using ordinary resources, can have an extraordinary impact for the Kingdom of God. Zúme aims to equip and empower ordinary believers to reach every neighborhood.', 'zume' ) ?>
+                            </p>
+                            <p>
+                                <?php __( 'The initial goal of Zúme is for there to be a training group of four to twelve people in each census tract in the country. Each of these training groups will start two first-generation churches which will then begin to reproduce. There are about 75,000 census tracts in the U.S.', 'zume' ) ?>
+                            </p>
                         </div>
                         <div class="large-2 cell"></div>
                     </div>
@@ -89,8 +84,8 @@ Template Name: Zume About
                             <h3><?php esc_html_e( 'How to get started:', 'zume' ) ?></h3>
                             <ul style="margin-bottom: 1.8rem;">
                                 <li><?php esc_html_e( 'If you haven\'t created a login yet, please do so.', 'zume' ) ?></li>
-                                <li><?php esc_html_e( 'Invite 3-11 friends. You must have at least four people present, who have accepted your
-                                invitation, to start the first session.', 'zume' ) ?>
+                                <li>
+                                    <?php esc_html_e( 'Invite 3-11 friends. You must have at least four people present, who have accepted your invitation, to start the first session.', 'zume' ) ?>
                                 </li>
                                 <li><?php esc_html_e( 'Schedule a time to get together with your friends.', 'zume' ) ?></li>
                                 <li><?php esc_html_e( 'Make sure you have access to an internet-enabled device.', 'zume' ) ?></li>

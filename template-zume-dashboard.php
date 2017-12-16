@@ -126,9 +126,8 @@ $zume_user_meta    = zume_get_user_meta( $zume_current_user );
                             <div class="grid-x grid-margin-x vertical-padding">
                                 <div class="large-8 large-offset-2 cell center">
                                     <h4><strong><?php echo esc_html__( 'You are not currently in a group', 'zume' ) ?></strong></h4>
-                                    <p><?php echo esc_html__( "You will need at least four people gathered together to start each new session.
-                                        Please start a group below. If you intended to join someone else's group, please
-                                        return to the invitation they sent and use the link provided to be automatically added to that group.", 'zume') ?></p>
+                                    <p>
+                                        <?php echo esc_html__( "You will need at least four people gathered together to start each new session. Please start a group below. If you intended to join someone else's group, please return to the invitation they sent and use the link provided to be automatically added to that group.", 'zume' ) ?></p>
                                 </div>
                             </div>
                             <?php endif; ?>
@@ -398,9 +397,9 @@ $zume_user_meta    = zume_get_user_meta( $zume_current_user );
                         <div class="grid-x grid-margin-x">
                             <div class="cell">
                                <ul>
-                                   <li>Create a group <?php if ( $zume_no_groups > 0 ) { print '<span class="primary-color">&#10004;</span>'; } ?></li>
-                                   <li>Plan a time and invite friends</li>
-                                   <li>Explore the upcoming session</li>
+                                   <li><?php esc_html_e( "Create a group", 'zume' ) ?> <?php if ( $zume_no_groups > 0 ) { print '<span class="primary-color">&#10004;</span>'; } ?></li>
+                                   <li><?php esc_html_e( "Plan a time and invite friends", 'zume' ) ?></li>
+                                   <li><?php esc_html_e( "Explore the upcoming session", 'zume' ) ?></li>
                                </ul>
                             </div>
                         </div>
