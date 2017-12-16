@@ -289,13 +289,17 @@ class Zume_Course_Content {
         <h3></h3>
         <section><!-- Step Title -->
             <div class="grid-x grid-margin-x grid-margin-y">
-                <div class="step-title cell"><?php esc_html_e( 'WELCOME TO ZÚME', 'zume' ) ?></div>
+                <div class="step-title cell">
+                    <?php esc_html_e( 'WELCOME TO ZÚME', 'zume' ) ?>
+                </div>
                 <!-- step-title cell -->
             </div><!-- grid-x -->
 
             <!-- Activity Block -->
             <div class="grid-x grid-margin-x grid-margin-y">
-                <div class="large-4 cell activity-title"><?php esc_html_e( 'DOWNLOAD', 'zume' ) ?></div>
+                <div class="large-4 cell activity-title">
+                    <?php esc_html_e( 'DOWNLOAD', 'zume' ) ?>
+                </div>
                 <div class="large-8 cell activity-description well">
                     <?php esc_html_e( 'You will be able to follow along on a digital PDF for this session, but please make sure that each
                     member of your group has a printed copy of the materials for future sessions.', 'zume') ?>
@@ -319,7 +323,9 @@ class Zume_Course_Content {
         <h3></h3>
         <section><!-- Step Title -->
             <div class="grid-x grid-margin-x grid-margin-y">
-                <div class="step-title cell"><?php esc_html_e( 'GROUP PRAYER (5min)', 'zume' ) ?></div>
+                <div class="step-title cell">
+                    <?php esc_html_e( 'GROUP PRAYER (5min)', 'zume' ) ?>
+                </div>
             </div>
             <!-- Activity Block -->
             <div class="grid-x grid-margin-x grid-margin-y single">

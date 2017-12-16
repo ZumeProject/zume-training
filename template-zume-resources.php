@@ -42,7 +42,7 @@ Template Name: Zume Resources
                     <h3>Resources:</h3>
                     <ul style="list-style-type: none;margin: 0">
                         <li>
-                            <a href="<?php echo esc_url( home_url() ) ?>/wp-content/themes/zume-project-multilingual/assets/files/en/zume-guidebook.pdf"
+                            <a href="<?php echo esc_url( home_url() ) ?>/wp-content/themes/zume-project-multilingual/assets/files/en/zume_guidebook.pdf"
                                target="_blank" rel="noopener noreferrer">
                                 <span style="padding:0 10px"><img
                                             src="/wp-content/themes/zume-project-multilingual/assets/images/pages/pdf-download.png"
@@ -53,7 +53,7 @@ Template Name: Zume Resources
                         </li>
 
                         <li>
-                            <a href="<?php echo esc_url( home_url() ) ?>/wp-content/themes/zume-project-multilingual/assets/files/en/zume-promo-flier.pdf"
+                            <a href="<?php echo esc_url( home_url() ) ?>/wp-content/themes/zume-project-multilingual/assets/files/en/zume_promo_flier.pdf"
                                target="_blank" rel="noopener noreferrer">
                                 <span style="padding:0 10px"><img
                                             src="/wp-content/themes/zume-project-multilingual/assets/images/pages/pdf-download.png"
@@ -96,7 +96,7 @@ Template Name: Zume Resources
                         </li>
 
                         <li>
-                            <a href="<?php echo esc_url( home_url() ) ?>/wp-content/themes/zume-project-multilingual/assets/files/en/zume-faq.pdf"
+                            <a href="<?php echo esc_url( home_url() ) ?>/wp-content/themes/zume-project-multilingual/assets/files/en/zume_faq.pdf"
                                target="_blank" rel="noopener noreferrer">
                                 <span style="padding:0 10px"><img
                                             src="/wp-content/themes/zume-project-multilingual/assets/images/pages/pdf-download.png"

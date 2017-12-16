@@ -15,7 +15,6 @@ global $wpdb;
 require_once 'functions/activator.php';
 $wpdb->zume_logging = $wpdb->prefix . 'zume_logging';
 require_once( 'functions/post-types/video-post-type.php' );
-require_once( 'functions/post-types/pdf-assets-post-type.php' );
 
 /**
  * INCLUDED FILES
