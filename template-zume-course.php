@@ -301,7 +301,7 @@ class Zume_Course_Content {
                     <?php esc_html_e( 'DOWNLOAD', 'zume' ) ?>
                 </div>
                 <div class="large-8 cell activity-description well">
-                    <?php esc_html_e( 'You will be able to follow along on a digital PDF for this session, but please make sure that each member of your group has a printed copy of the materials for future sessions.', 'zume') ?>
+                    <?php esc_html_e( 'You will be able to follow along on a digital PDF for this session, but please make sure that each member of your group has a printed copy of the materials for future sessions.', 'zume' ) ?>
                     <br>
                     <p>
                         <a class="button hollow"
@@ -1288,7 +1288,7 @@ class Zume_Course_Content {
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="large-4 cell activity-title"><span><?php esc_html_e( 'OVERVIEW', 'zume' ) ?></span></div>
                 <div class="large-8 cell activity-description">
-                    <?php esc_html_e( "In this session, you'll learn how God's plan is for every follower to multiply! You’ll discover how disciples multiply far and fast when they start to see where God’s Kingdom isn’t. And, you'll learn another great tool for inviting others into God's family is as simple as telling our story.", 'zume') ?>
+                    <?php esc_html_e( "In this session, you'll learn how God's plan is for every follower to multiply! You’ll discover how disciples multiply far and fast when they start to see where God’s Kingdom isn’t. And, you'll learn another great tool for inviting others into God's family is as simple as telling our story.", 'zume' ) ?>
                     <br><br>
                     <?php esc_html_e( "Then, when you're ready, get started!", 'zume' ) ?>
                 </div>
@@ -2115,7 +2115,7 @@ class Zume_Course_Content {
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="large-4 cell activity-title"><?php esc_html_e( 'WATCH', 'zume' ) ?></div>
                 <div class="large-8 cell activity-description">
-                    <?php esc_html_e( "Have you ever learned how to ride a bicycle? Have you ever helped someone else learn? If so, chances are you already know the Training Cycle.", 'zume')?>
+                    <?php esc_html_e( "Have you ever learned how to ride a bicycle? Have you ever helped someone else learn? If so, chances are you already know the Training Cycle.", 'zume' )?>
                     <br><br>
                     <?php esc_html_e( "Find the \"Training Cycle\" section in your Zúme Guidebook. When you're ready, watch this video, and then discuss the questions below.", 'zume' ) ?>
                 </div>
