@@ -682,7 +682,7 @@ class Zume_Course_Content {
                 <div class="large-8 cell activity-description">
                     <?php esc_html_e( 'Before getting started, take some time to check-in.', 'zume' ) ?>
                     <br><br>
-                    <?php esc_html_e( 'At the end of the last session, everyone in your group was challenged in two ways: ', 'zume' ) ?>
+                    <?php esc_html_e( 'At the end of the last session, everyone in your group was challenged in two ways:', 'zume' ) ?>
                     <br><br>
                     <ol>
                         <li><?php esc_html_e( 'You were asked to begin practicing the S.O.A.P.S. Bible reading method and keeping a daily journal.', 'zume' ) ?>
@@ -966,7 +966,7 @@ class Zume_Course_Content {
                 <div class="large-8 cell activity-description">
                     <?php esc_html_e( 'Before getting started, take some time to check-in.', 'zume' ) ?>
                     <br><br>
-                    <?php esc_html_e( 'At the end of the last session, everyone in your group was challenged in two ways: ', 'zume' ) ?>
+                    <?php esc_html_e( 'At the end of the last session, everyone in your group was challenged in two ways:', 'zume' ) ?>
                     <br><br>
                     <ol>
                         <li><?php esc_html_e( 'You were asked to pray for five people from your List of 100 that you marked as an "Unbeliever" or "Unknown."', 'zume' ) ?>
