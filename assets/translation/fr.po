@@ -3,7 +3,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "Project-Id-Version: Zúme Project\n"
 "POT-Creation-Date: 2017-12-17 14:46+0100\n"
-"PO-Revision-Date: 2017-12-17 09:09-0700\n"
+"PO-Revision-Date: 2017-12-17 09:31-0700\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -17,7 +17,7 @@ msgstr ""
 "esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
 "_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
 "Last-Translator: \n"
-"Language: fr\n"
+"Language: fr_FR\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 
@@ -955,7 +955,6 @@ msgstr ""
 
 #: functions/utilities/tgm-plugin-activation-class.php:1214
 #: functions/utilities/tgm-plugin-activation-class.php:3041
-#, fuzzy
 msgctxt "plugin A *and* plugin B"
 msgid "and"
 msgstr "et"
@@ -1276,6 +1275,7 @@ msgid "Goals of the Zúme Project:"
 msgstr "Objectifs de l'action"
 
 #: template-zume-about.php:43
+#, fuzzy
 msgid ""
 "Zúme means yeast in Greek. In Matthew 13:33 Jesus is quoted as saying, \"The "
 "Kingdom of Heaven is like a woman who took yeast and mixed it into a large "
@@ -1284,6 +1284,13 @@ msgid ""
 "Kingdom of God. Zúme aims to equip and empower ordinary believers to reach "
 "every neighborhood."
 msgstr ""
+"Zúme signifie levure en grec. Dans Matthieu 13:33 Jésus est cité comme "
+"disant, « Le Royaume des cieux est comme une femme qui a pris la levure et "
+"mélangeait dans une grande quantité de farine jusqu'à ce qu’il soit tout "
+"levé. » Ceci illustre comment les gens ordinaires, à l’aide de ressources "
+"ordinaires, peuvent avoir un impact extraordinaire pour le Royaume de Dieu. "
+"Zúme vise à équiper et à habiliter les croyants ordinaires pour rejoindre "
+"tous les quartiers."
 
 #: template-zume-about.php:46
 msgid ""
