@@ -190,11 +190,9 @@ class Zume_Dashboard {
             $key_beginning = substr( $key, 0, 10 );
             if ( 'zume_group' == $key_beginning ) { // check if zume_group
                 $value = maybe_unserialize( $v );
-                if ( isset( $value['closed'] ) && false == $value['closed'] ) {
-                    $next_session = Zume_Course::get_next_session( $value );
-                    if ( $highest_session < $next_session ) {
-                        $highest_session = $next_session;
-                    }
+                $next_session = Zume_Course::get_next_session( $value );
+                if ( $highest_session < $next_session ) {
+                    $highest_session = $next_session;
                 }
             }
         }

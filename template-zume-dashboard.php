@@ -29,11 +29,11 @@ $zume_user_meta    = zume_get_user_meta( $zume_current_user );
 
 <div id="content">
 
-    <div id="inner-content" class="grid-x">
+    <div id="inner-content" class="grid-x grid-margin-x">
 
         <div id="main" class="cell" role="main">
 
-            <div class="grid-x grid-margin-x" data-equalizer data-equalize-on="large" id="test-eq">
+            <div class="grid-x grid-margin-x " data-equalizer data-equalize-on="large" id="test-eq">
                 <div class="large-1 cell"></div>
 
                 <!-- Left Column -->
@@ -114,7 +114,10 @@ $zume_user_meta    = zume_get_user_meta( $zume_current_user );
                                             </a>
                                             <?php else : ?>
                                                 <!-- Close group button -->
+                                            <form method="post">
+                                                <input type="hidden" name="key" value="<?php echo esc_html( $zume_key ); ?>"/>
                                                 <span><button type="submit" class="button hollow alert" name="type" value="closed"><?php echo esc_html__( 'Close Group', 'zume' ) ?></button></span>
+                                            </form>
                                             <?php endif; ?>
                                         </div>
                                     </div>
@@ -178,7 +181,9 @@ $zume_user_meta    = zume_get_user_meta( $zume_current_user );
 
                             <form action="" method="post">
                                 <input type="hidden" name="type" value="activate" />
-                                <?php echo esc_html( $zume_html ); ?>
+                                <?php
+                                    // @codingStandardsIgnoreLine
+                                    echo $zume_html ?>
                             </form>
 
                         </div>
@@ -225,7 +230,7 @@ $zume_user_meta    = zume_get_user_meta( $zume_current_user );
                         <?php
                         $zume_highest_session = Zume_Dashboard::get_highest_session( $zume_current_user );
 
-                        if ( $zume_highest_session > 1 || $zume_highest_session == 0 ) {
+                        if ( $zume_highest_session > 1 ) {
                             ?>
                             <!-- Section top -->
                             <div class="grid-x grid-margin-x grid-margin-y">
@@ -264,7 +269,7 @@ $zume_user_meta    = zume_get_user_meta( $zume_current_user );
                                     </div>
                             <?php
                         }
-                        if ( $zume_highest_session > 2 || $zume_highest_session == 0 ) {
+                        if ( $zume_highest_session > 2 ) {
                             ?>
 
                             <div class="grid-x grid-margin-y">
@@ -288,7 +293,7 @@ $zume_user_meta    = zume_get_user_meta( $zume_current_user );
 
                             <?php
                         }
-                        if ( $zume_highest_session > 3 || $zume_highest_session == 0 ) {
+                        if ( $zume_highest_session > 3 ) {
                             ?>
 
                             <div class="grid-x grid-margin-y">
@@ -303,7 +308,7 @@ $zume_user_meta    = zume_get_user_meta( $zume_current_user );
 
                             <?php
                         }
-                        if ( $zume_highest_session > 4 || $zume_highest_session == 0 ) {
+                        if ( $zume_highest_session > 4 ) {
                             ?>
 
                             <div class="grid-x grid-margin-y">
@@ -327,7 +332,7 @@ $zume_user_meta    = zume_get_user_meta( $zume_current_user );
 
                             <?php
                         }
-                        if ( $zume_highest_session > 5 || $zume_highest_session == 0 ) {
+                        if ( $zume_highest_session > 5 ) {
                             ?>
 
                             <div class="grid-x grid-margin-y">
@@ -342,7 +347,7 @@ $zume_user_meta    = zume_get_user_meta( $zume_current_user );
 
                             <?php
                         }
-                        if ( $zume_highest_session > 6 || $zume_highest_session == 0 ) {
+                        if ( $zume_highest_session > 6 ) {
                             ?>
 
                             <div class="grid-x grid-margin-y">
@@ -357,7 +362,7 @@ $zume_user_meta    = zume_get_user_meta( $zume_current_user );
 
                             <?php
                         }
-                        if ( $zume_highest_session > 10 || $zume_highest_session == 0 ) {
+                        if ( $zume_highest_session > 10 ) {
                             ?>
 
                             <div class="grid-x grid-margin-y">
@@ -380,7 +385,7 @@ $zume_user_meta    = zume_get_user_meta( $zume_current_user );
 
                             <?php
                         }
-                        if ( $zume_highest_session > 1 || $zume_highest_session == 0 ) {
+                        if ( $zume_highest_session > 1 ) {
                             ?><!-- Bottom section -->
                                 </div>
                             </div>

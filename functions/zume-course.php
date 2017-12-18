@@ -103,6 +103,9 @@ class Zume_Course {
         if ( $group_meta['session_10'] == false ) {
             return 10;
         }
+        if ( $group_meta['session_10'] == true ) {
+            return 11;
+        }
         return 0;
 
     }
