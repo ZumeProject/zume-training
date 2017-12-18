@@ -225,7 +225,7 @@ $zume_user_meta    = zume_get_user_meta( $zume_current_user );
                         <?php
                         $zume_highest_session = Zume_Dashboard::get_highest_session( $zume_current_user );
 
-                        if ( $zume_highest_session > 1 ) {
+                        if ( $zume_highest_session > 1 || $zume_highest_session == 0 ) {
                             ?>
                             <!-- Section top -->
                             <div class="grid-x grid-margin-x grid-margin-y">
@@ -264,7 +264,7 @@ $zume_user_meta    = zume_get_user_meta( $zume_current_user );
                                     </div>
                             <?php
                         }
-                        if ( $zume_highest_session > 2 ) {
+                        if ( $zume_highest_session > 2 || $zume_highest_session == 0 ) {
                             ?>
 
                             <div class="grid-x grid-margin-y">
@@ -288,7 +288,7 @@ $zume_user_meta    = zume_get_user_meta( $zume_current_user );
 
                             <?php
                         }
-                        if ( $zume_highest_session > 3 ) {
+                        if ( $zume_highest_session > 3 || $zume_highest_session == 0 ) {
                             ?>
 
                             <div class="grid-x grid-margin-y">
@@ -303,7 +303,7 @@ $zume_user_meta    = zume_get_user_meta( $zume_current_user );
 
                             <?php
                         }
-                        if ( $zume_highest_session > 4 ) {
+                        if ( $zume_highest_session > 4 || $zume_highest_session == 0 ) {
                             ?>
 
                             <div class="grid-x grid-margin-y">
@@ -327,7 +327,7 @@ $zume_user_meta    = zume_get_user_meta( $zume_current_user );
 
                             <?php
                         }
-                        if ( $zume_highest_session > 5 ) {
+                        if ( $zume_highest_session > 5 || $zume_highest_session == 0 ) {
                             ?>
 
                             <div class="grid-x grid-margin-y">
@@ -342,7 +342,7 @@ $zume_user_meta    = zume_get_user_meta( $zume_current_user );
 
                             <?php
                         }
-                        if ( $zume_highest_session > 6 ) {
+                        if ( $zume_highest_session > 6 || $zume_highest_session == 0 ) {
                             ?>
 
                             <div class="grid-x grid-margin-y">
@@ -357,7 +357,7 @@ $zume_user_meta    = zume_get_user_meta( $zume_current_user );
 
                             <?php
                         }
-                        if ( $zume_highest_session > 10 ) {
+                        if ( $zume_highest_session > 10 || $zume_highest_session == 0 ) {
                             ?>
 
                             <div class="grid-x grid-margin-y">
@@ -380,7 +380,7 @@ $zume_user_meta    = zume_get_user_meta( $zume_current_user );
 
                             <?php
                         }
-                        if ( $zume_highest_session > 1 ) {
+                        if ( $zume_highest_session > 1 || $zume_highest_session == 0 ) {
                             ?><!-- Bottom section -->
                                 </div>
                             </div>
