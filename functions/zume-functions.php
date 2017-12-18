@@ -86,23 +86,6 @@ function zume_wp_insert_post( $post_id, $post, $update ) {
 add_action( 'wp_insert_post', 'zume_wp_insert_post', 10, 3 );
 
 
-function zume_get_real_ip_address()
-{
-    $ip = '';
-    if ( ! empty( $_SERVER['HTTP_CLIENT_IP'] ))   //check ip from share internet
-    {
-        $ip = sanitize_key( wp_unslash( $_SERVER['HTTP_CLIENT_IP'] ) );
-    }
-    elseif ( ! empty( $_SERVER['HTTP_X_FORWARDED_FOR'] ))   //to check ip is pass from proxy
-    {
-        $ip = sanitize_key( wp_unslash( $_SERVER['HTTP_X_FORWARDED_FOR'] ) );
-    }
-    elseif ( ! empty( $_SERVER['REMOTE_ADDR'] ) ) {
-        $ip = sanitize_key( wp_unslash( $_SERVER['REMOTE_ADDR'] ) );
-    }
-    return $ip;
-}
-
 function zume_update_user_contact_info()
 {
     $current_user = wp_get_current_user();

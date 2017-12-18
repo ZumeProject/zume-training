@@ -434,7 +434,7 @@ $zume_user_meta    = zume_get_user_meta( $zume_current_user );
     <h1><?php echo esc_html__( 'Create Group', 'zume' ) ?></h1>
     <form action="" method="post">
         <input type="hidden" name="type" value="create"/>
-        <input type="hidden" name="ip_address" value="<?php echo esc_html( zume_get_real_ip_address() ); ?>"/>
+        <input type="hidden" name="ip_address" value="<?php echo esc_html( Zume_Google_Geolocation::get_real_ip_address() ); ?>"/>
         <div class="grid-x grid-margin-x">
             <div class="cell">
                 <label for="group_name"><?php echo esc_html__( 'Group Name', 'zume' ) ?></label>
@@ -450,7 +450,7 @@ $zume_user_meta    = zume_get_user_meta( $zume_current_user );
             </div>
             <div class="cell">
                 <label for="address"><?php echo esc_html__( 'Address', 'zume' ) ?></label>
-                <input type="text" value="" placeholder="<?php esc_html_e( "Please enter the full address for the group meeting", 'zume' ) ?>"
+                <input type="text" value="" placeholder="<?php esc_html_e( "Example: 1000 Broadway, Denver, CO 80100", 'zume' ) ?>"
                        name="address" id="address" required/>
             </div>
             <div class="cell">

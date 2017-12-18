@@ -70,7 +70,7 @@ class Zume_Dashboard {
 
         // Geo lookup address
         $google_result = Zume_Google_Geolocation::query_google_api( $args['address'], $type = 'core' ); // get google api info
-        if ($google_result == 'ZERO_RESULTS') {
+        if ( ! $google_result ) {
             $results = Zume_Google_Geolocation::geocode_ip_address( $args['ip_address'] );// TODO: Need to still wire up the api to get ip address location
             $lng = $results['lng'];
             $lat = $results['lat'];
@@ -135,7 +135,7 @@ class Zume_Dashboard {
         if ( ! ( $args['address'] == $user_meta['address'] && ! empty( $args['address'] ) ) ) {
             // Geo lookup address
             $google_result = Zume_Google_Geolocation::query_google_api( $args['address'], $type = 'core' ); // get google api info
-            if ($google_result == 'ZERO_RESULTS') {
+            if ( ! $google_result ) {
                 $results = Zume_Google_Geolocation::geocode_ip_address( $args['ip_address'] );// TODO: Need to still wire up the api to get ip address location
                 $lng = $results['lng'];
                 $lat = $results['lat'];
