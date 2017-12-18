@@ -246,8 +246,8 @@ class Zume_Video_Post_Type
                 $this->singular,
                 strtolower( $this->singular )
             ),
-            2  => __( 'Project Update updated.', 'zume' ),
-            3  => __( 'Project Update deleted.', 'zume' ),
+            2  => __( 'Zume Video updated.', 'zume' ),
+            3  => __( 'Zume Video deleted.', 'zume' ),
             4  => sprintf( __( '%s updated.', 'zume' ), $this->singular ),
             /* translators: %s: date and time of the revision */
             5  => isset( $_GET['revision'] ) ? sprintf( __( '%1$s restored to revision from %2$s', 'zume' ), $this->singular, wp_post_revision_title( (int) $_GET['revision'], false ) ) : false,
