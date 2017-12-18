@@ -107,10 +107,15 @@ $zume_user_meta    = zume_get_user_meta( $zume_current_user );
                                                 </li>
                                             </ul>
 
+                                            <!-- Next Session Button -->
+                                            <?php if( ! 0 == $zume_value['next_session'] ) : ?>
                                             <a href="<?php echo esc_html( zume_course_url() . '/?group=' . $zume_key . '&session=' . $zume_value['next_session'] ); ?>" class="button large">
                                                 <?php echo esc_html( __( 'Start Next Session ', 'zume' ) . $zume_value['next_session'] );?>
                                             </a>
-
+                                            <?php else : ?>
+                                                <!-- Close group button -->
+                                                <span><button type="submit" class="button hollow alert" name="type" value="closed"><?php echo esc_html__( 'Close Group', 'zume' ) ?></button></span>
+                                            <?php endif; ?>
                                         </div>
                                     </div>
                                 </li>
