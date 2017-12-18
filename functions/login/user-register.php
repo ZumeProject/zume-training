@@ -75,6 +75,8 @@ function zume_user_register( $user_id ) {
 
     // Geocode and store ip address
     $ip_address = Zume_Google_Geolocation::get_real_ip_address();
+    update_user_meta( $user_id, 'zume_ip_at_registration', $ip_address );
+
     $ip_results = Zume_Google_Geolocation::geocode_ip_address( $ip_address );
 
     update_user_meta( $user_id, 'zume_address_from_ip', $ip_results['formatted_address'] );
@@ -105,7 +107,13 @@ function zume_show_custom_column_content( $value, $column_name, $user_id ) {
         return get_user_meta( $user_id, 'zume_phone_number', true );
     } // end if
     if ( 'zume_user_address' == $column_name ) {
-        return get_user_meta( $user_id, 'zume_user_address', true );
+        if ( empty( get_user_meta( $user_id, 'zume_user_address', true ) ) ) {
+            $content = '';
+        }
+        else {
+            $content = get_user_meta( $user_id, 'zume_user_address', true ) . '<br><a target="_blank" href="https://www.google.com/maps/search/?api=1&query='.get_user_meta( $user_id, 'zume_user_lat', true ).','.get_user_meta( $user_id, 'zume_user_lng', true ).'">map</a>';
+        }
+        return $content;
     } // end if
     if ( 'zume_address_from_ip' == $column_name ) {
         if ( empty( get_user_meta( $user_id, 'zume_address_from_ip', true ) ) ) {
