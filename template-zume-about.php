@@ -43,7 +43,7 @@ Template Name: Zume About
                                 <?php esc_html_e( 'Zúme means yeast in Greek. In Matthew 13:33 Jesus is quoted as saying, "The Kingdom of Heaven is like a woman who took yeast and mixed it into a large amount of flour until it was all leavened." This illustrates how ordinary people, using ordinary resources, can have an extraordinary impact for the Kingdom of God. Zúme aims to equip and empower ordinary believers to reach every neighborhood.', 'zume' ) ?>
                             </p>
                             <p>
-                                <?php __( 'The initial goal of Zúme is for there to be a training group of four to twelve people in each census tract in the country. Each of these training groups will start two first-generation churches which will then begin to reproduce. There are about 75,000 census tracts in the U.S.', 'zume' ) ?>
+                                <?php __( 'The goal of Zúme is to make disciples in every Omega District globally, using an online training platform focused on equipping participants in the basic disciple-making and simple church planting multiplication principles, processes, and practices.', 'zume' ) ?>
                             </p>
                         </div>
                         <div class="large-2 cell"></div>
