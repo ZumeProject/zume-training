@@ -440,7 +440,7 @@ $zume_user_meta    = zume_get_user_meta( $zume_current_user );
             </div>
             <div class="cell">
                 <label for="address"><?php echo esc_html__( 'Address', 'zume' ) ?></label>
-                <input type="text" value="" placeholder="Please enter the full address for the group meeting"
+                <input type="text" value="" placeholder="<?php esc_html_e( "Please enter the full address for the group meeting", 'zume' ) ?>"
                        name="address" id="address" required/>
             </div>
             <div class="cell">

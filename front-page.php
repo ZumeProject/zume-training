@@ -85,7 +85,7 @@ if ( is_user_logged_in() ) {
                         <div class="medium-4 cell center">
                             <h4 class="center" style="text-transform: uppercase"><span
                                         style="font-size:2.4rem;">&#10102</span>
-                                 Sign up</h4>
+                                 <?php esc_html_e( "Sign up", 'zume' ) ?></h4>
                             <img class="center"
                                  src="<?php echo esc_url( get_stylesheet_directory_uri() ) . '/assets/images/pages/'; ?>signup.jpg"
                                  alt="" width="100" height="100"/>
@@ -93,8 +93,8 @@ if ( is_user_logged_in() ) {
                         </div>
                         <div class="medium-4 cell center">
                             <h4 class="center" style="text-transform: uppercase"><span
-                                        style="font-size:2.4rem;">&#10103</span> Invite
-                                some friends</h4>
+                                        style="font-size:2.4rem;">&#10103</span> 
+                                <?php esc_html_e( "Invite some friends", 'zume' ) ?></h4>
                             <img class="center"
                                  src="<?php echo esc_url( get_stylesheet_directory_uri() ) . '/assets/images/pages/'; ?>invite.jpg"
                                  alt="" width="100" height="100"/>
@@ -102,8 +102,9 @@ if ( is_user_logged_in() ) {
                         </div>
                         <div class="medium-4 cell center">
                             <h4 class="center" style="text-transform: uppercase"><span
-                                        style="font-size:2.4rem;">&#10104</span> Host
-                                a training</h4>
+                                        style="font-size:2.4rem;">&#10104</span> 
+                                <?php esc_html_e( "Host a training", 'zume' ) ?>
+                            </h4>
                             <img class="center"
                                  src="<?php echo esc_url( get_stylesheet_directory_uri() ) . '/assets/images/pages/'; ?>training.jpg"
                                  alt="" width="100" height="100"/>

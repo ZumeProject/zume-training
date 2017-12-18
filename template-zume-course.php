@@ -743,7 +743,7 @@ class Zume_Course_Content {
                                     src="<?php echo esc_url( zume_images_uri( 'course' ) ) ?>download-icon-150x150.png"
                                     alt=""
                                     width="35" height="35" class="alignnone size-thumbnail wp-image-3274"
-                                    style="vertical-align: text-bottom"/> Zúme Video Scripts: Producers vs Consumers', 'zume' ) ?></a>
+                                    style="vertical-align: text-bottom"/> <?php esc_html_e( "Zúme Video Scripts: Producers vs Consumers", 'zume' ) ?></a>
                     </p>
                 </div>
             </div> <!-- grid-x -->
@@ -855,7 +855,7 @@ class Zume_Course_Content {
 
             <!-- Activity Block  -->
             <div class="grid-x grid-margin-x grid-margin-y">
-                <div class="large-4 cell activity-title">READ', 'zume' ) ?></div>
+                <div class="large-4 cell activity-title"><?php esc_html_e( "READ", 'zume' ) ?></div>
                 <div class="large-8 cell activity-description">
                     <?php esc_html_e( 'ZÚME TOOLKIT - LIST OF 100', 'zume' ) ?>
                     <br><br>
@@ -1133,14 +1133,13 @@ class Zume_Course_Content {
         <section><!-- Step Title -->
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="step-title cell"><?php esc_html_e( 'PRACTICE SHARING GOD\'S STORY (45min)', 'zume' ) ?></div>
-
-                <div class="grid-x grid-margin-x grid-margin-y single">
-                    <!-- Activity Block  -->
-                    <div class="large-8 cell activity-description well">
-                        <?php esc_html_e( 'Break into groups of two or three people and spend the next 45 minutes practicing telling God\'s Story using the Activity instructions on page 13 of your Zúme Guidebook.', 'zume' ) ?>
-                    </div>
+            </div>
+            <!-- Activity Block  -->
+            <div class="grid-x grid-margin-x grid-margin-y single">
+                <div class="large-8 cell activity-description well">
+                    <?php esc_html_e( 'Break into groups of two or three people and spend the next 45 minutes practicing telling God\'s Story using the Activity instructions on page 13 of your Zúme Guidebook.', 'zume' ) ?>
                 </div>
-                <!-- grid-x -->
+            </div>
 
         </section>
         <h3></h3>

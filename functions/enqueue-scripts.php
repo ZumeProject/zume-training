@@ -48,6 +48,20 @@ function zume_site_scripts() {
     }
 
     zume_enqueue_script( 'jquery-steps', 'assets/scripts/jquery.steps.js', array( 'jquery' ), true );
+    wp_localize_script(
+        "jquery-steps", "stepsSettings", array(
+            "translations" => [
+                "cancel" => esc_html__( 'Cancel', 'zume' ),
+                "current:" => esc_html__( 'Current Step:', 'zume' ),
+                "pagination" => esc_html__( 'Cancel', 'zume' ),
+                "finish" => esc_html__( 'Finish', 'zume' ),
+                "next" => esc_html__( 'Next', 'zume' ),
+                "previous" => esc_html__( 'Previous', 'zume' ),
+                "loading" => esc_html__( 'Loading...', 'zume' )
+            ]
+        )
+    );
+
     zume_enqueue_style( 'zume-course', 'assets/styles/zume-course.css', array(), 'all' ); // Relocated into the _main.scss theme file
 
     zume_enqueue_style( 'zume_dashboard_style', 'assets/styles/zume-dashboard.css' ); // Relocated to the _main.scss in the theme
