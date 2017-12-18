@@ -140,6 +140,7 @@ div.block {
 }
 
 div.step-title {
+    text-transform: uppercase;
     text-align: center;
     font-size: 18px;
     font-weight: 300;
@@ -150,10 +151,12 @@ div.activity-title {
     font-size: 50px;
     font-weight: bold;
     text-align: center;
+    text-transform: uppercase;
 }
 
 div.activity-title span {
     font-size: 40px;
+    text-transform: uppercase;
 }
 
 div.activity-description {
