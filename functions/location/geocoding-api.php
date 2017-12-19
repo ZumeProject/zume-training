@@ -147,14 +147,18 @@ class Zume_Google_Geolocation
         $ip = '';
         if ( ! empty( $_SERVER['HTTP_CLIENT_IP'] ))   //check ip from share internet
         {
-            $ip = sanitize_key( wp_unslash( $_SERVER['HTTP_CLIENT_IP'] ) );
+            // @codingStandardIgnoreLine
+            $ip = $_SERVER['HTTP_CLIENT_IP'];
         }
         elseif ( ! empty( $_SERVER['HTTP_X_FORWARDED_FOR'] ))   //to check ip is pass from proxy
         {
-            $ip = sanitize_key( wp_unslash( $_SERVER['HTTP_X_FORWARDED_FOR'] ) );
+            // @codingStandardIgnoreLine
+            $ip = $_SERVER['HTTP_X_FORWARDED_FOR'];
         }
-        elseif ( ! empty( $_SERVER['REMOTE_ADDR'] ) ) {
-            $ip = sanitize_key( wp_unslash( $_SERVER['REMOTE_ADDR'] ) );
+        elseif ( ! empty( $_SERVER['REMOTE_ADDR'] ) )
+        {
+            // @codingStandardIgnoreLine
+            $ip = $_SERVER['REMOTE_ADDR'];
         }
         return $ip;
     }
