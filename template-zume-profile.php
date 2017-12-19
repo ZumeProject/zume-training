@@ -118,7 +118,9 @@ $zume_user_meta = get_user_meta( get_current_user_id() ); // Full array of user 
                                     </div>
                                 </div>
 
-                                <div id="possible-results"></div>
+                                <div id="possible-results">
+                                    <input type="hidden" name="address" value="<?php echo isset( $zume_user_meta['zume_user_address'][0] ) ? esc_html( $zume_user_meta['zume_user_address'][0] ) : ''; ?>" />
+                                </div>
 
                                 <?php if ( ! empty( $zume_user_meta['zume_user_address'][0] ) && ! empty( $zume_user_meta['zume_user_lng'][0] ) && ! empty( $zume_user_meta['zume_user_lat'][0] ) ) : ?>
                                 <div id="map" >

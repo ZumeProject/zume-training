@@ -449,9 +449,24 @@ $zume_user_meta    = zume_get_user_meta( $zume_current_user );
                 <input type="text" value="" name="meeting_time" id="meeting_time" required/>
             </div>
             <div class="cell">
-                <label for="address"><?php echo esc_html__( 'Address', 'zume' ) ?></label>
-                <input type="text" value="" placeholder="<?php esc_html_e( "Example: 1000 Broadway, Denver, CO 80100", 'zume' ) ?>"
-                       name="address" id="address" required/>
+                <label for="validate_addressnew">Address</label>
+                <div class="input-group">
+                    <input type="text"
+                           placeholder="example: 1000 Broadway, Denver, CO 80126"
+                           class="profile-input input-group-field"
+                           name="validate_address"
+                           id="validate_addressnew"
+                           value=""
+                    />
+                    <div class="input-group-button">
+                        <input type="button" class="button" onclick="validate_group_address( jQuery('#validate_addressnew').val(), 'new')" value="Validate" id="validate_address_buttonnew">
+                    </div>
+                </div>
+
+                <div id="possible-resultsnew">
+                    <input type="hidden" name="address" value="" />
+                </div>
+
             </div>
             <div class="cell">
                 <br>
@@ -507,7 +522,7 @@ foreach ( $zume_user_meta as $zume_key => $v ) {
                         </div>
 
                         <div id="possible-results<?php echo esc_html( $zume_key ); ?>">
-                            <input type="hidden" name="address" value="<?php echo isset( $zume_value['address'] ) ? esc_html( $zume_value['address'] ) : ''; ?>"
+                            <input type="hidden" name="address" value="<?php echo isset( $zume_value['address'] ) ? esc_html( $zume_value['address'] ) : ''; ?>" />
                         </div>
 
                         <?php if ( ! empty( $zume_value['address'] ) && ! empty( esc_attr( $zume_value['lng'] ) ) && ! empty( esc_attr( $zume_value['lat'] ) ) ) : ?>
