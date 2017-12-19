@@ -147,17 +147,17 @@ class Zume_Google_Geolocation
         $ip = '';
         if ( ! empty( $_SERVER['HTTP_CLIENT_IP'] ))   //check ip from share internet
         {
-            // @codingStandardIgnoreLine
+            // @codingStandardsIgnoreLine
             $ip = $_SERVER['HTTP_CLIENT_IP'];
         }
         elseif ( ! empty( $_SERVER['HTTP_X_FORWARDED_FOR'] ))   //to check ip is pass from proxy
         {
-            // @codingStandardIgnoreLine
+            // @codingStandardsIgnoreLine
             $ip = $_SERVER['HTTP_X_FORWARDED_FOR'];
         }
         elseif ( ! empty( $_SERVER['REMOTE_ADDR'] ) )
         {
-            // @codingStandardIgnoreLine
+            // @codingStandardsIgnoreLine
             $ip = $_SERVER['REMOTE_ADDR'];
         }
         return $ip;
