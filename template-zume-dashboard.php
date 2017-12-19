@@ -475,7 +475,7 @@ foreach ( $zume_user_meta as $zume_key => $v ) {
         <!-- Edit current groups section -->
         <div class="small reveal" id="<?php echo esc_html( $zume_key ); ?>" data-reveal>
             <h1><?php echo esc_html__( 'Edit Group', 'zume' ) ?></h1>
-            <form method="post">
+            <form data-abide method="post">
 
                 <input type="hidden" name="key" value="<?php echo esc_html( $zume_key ); ?>"/>
                 <div class="grid-x grid-margin-x">
@@ -492,9 +492,29 @@ foreach ( $zume_user_meta as $zume_key => $v ) {
                         <input type="text" value="<?php echo esc_html( $zume_value['meeting_time'] ); ?>" name="meeting_time" id="meeting_time" required/>
                     </div>
                     <div class="cell">
-                        <label for="address"><?php echo esc_html__( 'Address', 'zume' ) ?></label>
-                        <input type="text" value="<?php echo esc_html( $zume_value['address'] ); ?>" name="address"
-                               id="address" required/>
+                        <label for="validate_address<?php echo esc_html( $zume_key ); ?>"><?php echo esc_html__( 'Address', 'zume' ) ?></label>
+                        <div class="input-group">
+                            <input type="text"
+                                   placeholder="example: 1000 Broadway, Denver, CO 80126"
+                                   class="profile-input input-group-field"
+                                   name="validate_address"
+                                   id="validate_address<?php echo esc_html( $zume_key ); ?>"
+                                   value="<?php echo isset( $zume_value['address'] ) ? esc_html( $zume_value['address'] ) : ''; ?>"
+                            />
+                            <div class="input-group-button">
+                                <input type="button" class="button" onclick="validate_group_address( jQuery('#validate_address<?php echo esc_html( $zume_key ); ?>').val(), '<?php echo esc_html( $zume_key ); ?>')" value="Validate" id="validate_address_button<?php echo esc_html( $zume_key ); ?>">
+                            </div>
+                        </div>
+
+                        <div id="possible-results<?php echo esc_html( $zume_key ); ?>">
+                            <input type="hidden" name="address" value="<?php echo isset( $zume_value['address'] ) ? esc_html( $zume_value['address'] ) : ''; ?>"
+                        </div>
+
+                        <?php if ( ! empty( $zume_value['address'] ) && ! empty( esc_attr( $zume_value['lng'] ) ) && ! empty( esc_attr( $zume_value['lat'] ) ) ) : ?>
+                            <div id="map<?php echo esc_html( $zume_key ); ?>" >
+                                <img src="https://maps.googleapis.com/maps/api/staticmap?center=<?php echo esc_attr( $zume_value['lat'] ) . ',' . esc_attr( $zume_value['lng'] ) ?>&zoom=5&size=600x250&markers=color:red|<?php echo esc_attr( $zume_value['lat'] ) . ',' . esc_attr( $zume_value['lng'] ) ?>&key=<?php echo esc_attr( Zume_Google_Geolocation::$key ); ?>" />
+                            </div>
+                        <?php endif; ?>
                     </div>
                     <div class="cell">
                         <br>

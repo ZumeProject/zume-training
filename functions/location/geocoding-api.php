@@ -19,7 +19,7 @@ if ( !defined( 'ABSPATH' ) ) {
  */
 class Zume_Google_Geolocation
 {
-    public static $key = 'AIzaSyCcddCscCo-Uyfa3HJQVe0JdBaMCORA9eY';
+    public static $key = 'AIzaSyDn0D_ePCkkQF6CYS7UPy7mbzCuJBRQmw8';
 
     /**
      * Google geocoding service
@@ -38,6 +38,7 @@ class Zume_Google_Geolocation
         $url_address = 'https://maps.googleapis.com/maps/api/geocode/json?address=' . $address . '&key=' . self::$key;
         $details = json_decode( self::url_get_contents( $url_address ) );
 
+        zume_write_log( $details );
         if ( $details->status == 'ZERO_RESULTS' ) {
             return false;
         }
@@ -75,7 +76,7 @@ class Zume_Google_Geolocation
                     ];
                     break;
                 default:
-                    return $details; // full_object returned
+                    return json_decode( self::url_get_contents( $url_address ), true ); // full_object returned
                     break;
             }
         }

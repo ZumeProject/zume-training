@@ -62,6 +62,16 @@ function zume_site_scripts() {
         )
     );
 
+    zume_enqueue_script( 'zume-maps', 'assets/scripts/zume-maps.js', array( 'jquery' ), true );
+    wp_localize_script(
+        "zume-maps", "zumeMaps", array(
+            'root' => esc_url_raw( rest_url() ),
+            'nonce' => wp_create_nonce( 'wp_rest' ),
+            'current_user_login' => wp_get_current_user()->user_login,
+            'current_user_id' => get_current_user_id(),
+        )
+    );
+
     zume_enqueue_style( 'zume-course', 'assets/styles/zume-course.css', array(), 'all' ); // Relocated into the _main.scss theme file
 
     zume_enqueue_style( 'zume_dashboard_style', 'assets/styles/zume-dashboard.css' ); // Relocated to the _main.scss in the theme

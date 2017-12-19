@@ -16,7 +16,7 @@ if ( ! defined( 'ABSPATH' ) ) { exit; // Exit if accessed directly
 class Zume_Location_Lookup_REST_API {
 
     private $version = 1;
-    private $context = "lookup";
+    private $context = "zume";
     private $namespace;
 
     /**
@@ -55,29 +55,15 @@ class Zume_Location_Lookup_REST_API {
     } // End __construct()
 
     public function add_api_routes() {
-        $version = '1';
-        $namespace = 'lookup/v' . $version;
-        $base = 'tract';
-        register_rest_route( $namespace, '/' . $base . '/findbyaddress', array(
+        $namespace = $this->namespace;
+        $base = 'locations';
+        register_rest_route( $namespace, '/' . $base . '/validate_address', array(
             array(
                 'methods'         => WP_REST_Server::CREATABLE,
-                'callback'        => array( $this, 'find_by_address' ),
+                'callback'        => array( $this, 'validate_by_address' ),
             ),
         ) );
-        register_rest_route( $namespace, '/' . $base. '/gettractmap', array(
-            array(
-                'methods'         => WP_REST_Server::CREATABLE,
-                'callback'        => array( $this, 'get_tract_map' ),
 
-            ),
-        ) );
-        register_rest_route( $namespace, '/' . $base. '/getmapbygeoid', array(
-            array(
-                'methods'         => WP_REST_Server::CREATABLE,
-                'callback'        => array( $this, 'get_map_by_geoid' ),
-
-            ),
-        ) );
     }
 
     /**
@@ -87,59 +73,19 @@ class Zume_Location_Lookup_REST_API {
      * @since 0.1
      * @return string|WP_Error The contact on success
      */
-    public function find_by_address( WP_REST_Request $request){
-        $params = $request->get_params();
-        if (isset( $params['address'] )){
-            $result = Zume_Location_Lookup_Controller::get_tract_by_address( $params['address'] );
-            if ($result["status"] == 'OK'){
-                return $result["tract"];
+    public function validate_by_address( WP_REST_Request $request){
+        $params = $request->get_json_params();
+        if ( isset( $params['address'] ) ){
+
+            $result = Zume_Google_Geolocation::query_google_api( $params['address'] );
+
+            if ( $result['status'] == 'OK'){
+                return $result;
             } else {
-                return new WP_Error( "tract_status_error", $result["message"], array( 'status', 400 ) );
+                return new WP_Error( "tract_status_error", 'Zero Results', array( 'status', 400 ) );
             }
         } else {
             return new WP_Error( "tract_param_error", "Please provide a valid address", array( 'status', 400 ) );
-        }
-    }
-
-    /**
-     * Get tract from submitted address
-     * @param WP_REST_Request $request
-     * @access public
-     * @since 0.1
-     * @return string|WP_Error The contact on success
-     */
-    public function get_tract_map( WP_REST_Request $request){
-        $params = $request->get_params();
-        if (isset( $params['address'] )){
-            $result = Zume_Location_Lookup_Controller::get_tract_map( $params['address'] );
-            if ($result["status"] == 'OK'){
-                return $result;
-            } else {
-                return new WP_Error( "map_status_error", $result["message"], array( 'status', 400 ) );
-            }
-        } else {
-            return new WP_Error( "map_param_error", "Please provide a valid address", array( 'status', 400 ) );
-        }
-    }
-
-    /**
-     * Get map by geoid
-     * @param WP_REST_Request $request
-     * @access public
-     * @since 0.1
-     * @return string|WP_Error The contact on success
-     */
-    public function get_map_by_geoid( WP_REST_Request $request){
-        $params = $request->get_params();
-        if (isset( $params['geoid'] )){
-            $result = Zume_Location_Lookup_Controller::get_map_by_geoid( $params );
-            if ($result["status"] == 'OK'){
-                return $result;
-            } else {
-                return new WP_Error( "map_status_error", $result["message"], array( 'status', 400 ) );
-            }
-        } else {
-            return new WP_Error( "map_param_error", "Please provide a valid address", array( 'status', 400 ) );
         }
     }
 

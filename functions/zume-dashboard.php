@@ -132,11 +132,15 @@ class Zume_Dashboard {
             return new WP_Error( 'no_group_match', 'Hey, you cheating? No, group with id found for you.' );
         }
 
-        if ( ! ( $args['address'] == $user_meta['address'] && ! empty( $args['address'] ) ) ) {
+        if ( isset( $args['validate_address'] ) && empty( $args['validate_address'] ) ) {
+            $args['address'] = '';
+        }
+
+        if ( isset( $args['address'] ) && ! $args['address'] == $user_meta['address'] && ! empty( $args['address'] ) ) {
             // Geo lookup address
             $google_result = Zume_Google_Geolocation::query_google_api( $args['address'], $type = 'core' ); // get google api info
             if ( ! $google_result ) {
-                $results = Zume_Google_Geolocation::geocode_ip_address( $args['ip_address'] );// TODO: Need to still wire up the api to get ip address location
+                $results = Zume_Google_Geolocation::geocode_ip_address( $args['ip_address'] );
                 $lng = $results['lng'];
                 $lat = $results['lat'];
                 $formatted_address = $args['address'];

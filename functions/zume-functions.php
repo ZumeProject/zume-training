@@ -88,15 +88,15 @@ add_action( 'wp_insert_post', 'zume_wp_insert_post', 10, 3 );
 
 function zume_update_user_contact_info()
 {
-    $current_user = wp_get_current_user();
+    $user_id = get_current_user_id();
 
     // validate nonce
-    if ( isset( $_POST['user_update_nonce'] ) && !wp_verify_nonce( sanitize_key( $_POST['user_update_nonce'] ), 'user_' . $current_user->ID . '_update' ) ) {
+    if ( isset( $_POST['user_update_nonce'] ) && !wp_verify_nonce( sanitize_key( $_POST['user_update_nonce'] ), 'user_' . $user_id. '_update' ) ) {
         return new WP_Error( 'fail_nonce_verification', 'The form requires a valid nonce, in order to process.' );
     }
 
     $args = [];
-    $args['ID'] = $current_user->ID;
+    $args['ID'] = $user_id;
 
     // build user name variables
     if ( isset( $_POST['first_name'] ) ) {
@@ -105,17 +105,25 @@ function zume_update_user_contact_info()
     if ( isset( $_POST['last_name'] ) ) {
         $args['last_name'] = sanitize_text_field( wp_unslash( $_POST['last_name'] ) );
     }
-    if ( isset( $_POST['display_name'] ) && !empty( $_POST['display_name'] ) ) {
-        $args['display_name'] = sanitize_text_field( wp_unslash( $_POST['display_name'] ) );
-    }
     if ( isset( $_POST['user_email'] ) && !empty( $_POST['user_email'] ) ) {
         $args['user_email'] = sanitize_email( wp_unslash( $_POST['user_email'] ) );
     }
-    if ( isset( $_POST['description'] ) ) {
-        $args['description'] = sanitize_text_field( wp_unslash( $_POST['description'] ) );
+    if ( isset( $_POST['zume_phone_number'] ) ) {
+        update_user_meta( $user_id, 'zume_phone_number', sanitize_text_field( wp_unslash( $_POST['zume_phone_number'] ) ) );
     }
-    if ( isset( $_POST['nickname'] ) ) {
-        $args['nickname'] = sanitize_text_field( wp_unslash( $_POST['nickname'] ) );
+    if ( isset( $_POST['zume_user_address'] ) ) {
+        if ( empty( $_POST['zume_user_address'] ) ) {
+            update_user_meta( $user_id, 'zume_user_address', sanitize_text_field( wp_unslash( $_POST['zume_user_address'] ) ) );
+        }
+        else {
+            $results = Zume_Google_Geolocation::query_google_api( trim( sanitize_text_field( wp_unslash( $_POST['zume_user_address'] ) ) ), 'core' );
+
+            if ( $results ) {
+                update_user_meta( $user_id, 'zume_user_address', trim( sanitize_text_field( wp_unslash( $_POST['zume_user_address'] ) ) ) );
+                update_user_meta( $user_id, 'zume_user_lng', $results['lng'] );
+                update_user_meta( $user_id, 'zume_user_lat', $results['lat'] );
+            }
+        }
     }
 
     // _user table defaults
