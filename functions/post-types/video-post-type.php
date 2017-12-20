@@ -497,16 +497,17 @@ class Zume_Video_Post_Type
             'name'        => 'Overview',
             'description' => '',
             'type'        => 'link',
-            'default'     => '245293029',
+            'default'     => '248149800',
             'section'     => 'scribe',
         ];
-        $fields['intro'] = [
-            'name'        => 'Intro',
+        $fields['how_zume_works'] = [
+            'name'        => 'How Zume Works',
             'description' => '',
             'type'        => 'link',
-            'default'     => '245293029',
+            'default'     => '248149797',
             'section'     => 'scribe',
         ];
+
         $fields['scribe_1'] = [
             'name'        => 'Welcome to Zume (scribe_1)',
             'description' => '',
@@ -525,7 +526,7 @@ class Zume_Video_Post_Type
             'name'        => 'Spiritual Breathing (scribe_3)',
             'description' => '',
             'type'        => 'link',
-            'default'     => '247382094', // todo upload this video and get the right id
+            'default'     => '247063777',
             'section'     => 'scribe',
         ];
         $fields['scribe_4'] = [
@@ -539,7 +540,7 @@ class Zume_Video_Post_Type
             'name'        => 'Greatest Blessing (scribe_5)',
             'description' => '',
             'type'        => 'link',
-            'default'     => '247063777',
+            'default'     => '247064323',
             'section'     => 'scribe',
         ];
         $fields['scribe_6'] = [
@@ -630,7 +631,14 @@ class Zume_Video_Post_Type
             'name'        => 'Person of Peace (scribe_18)',
             'description' => '',
             'type'        => 'link',
-            'default'     => '247382094', // todo upload this video and get the right id
+            'default'     => '248149796',
+            'section'     => 'scribe',
+        ];
+        $fields['3_3_group'] = [
+            'name'        => '3/3 Group Demonstration',
+            'description' => '',
+            'type'        => 'link',
+            'default'     => '248149797', // todo need correct video
             'section'     => 'scribe',
         ];
 
@@ -639,91 +647,91 @@ class Zume_Video_Post_Type
             'name'        => 'SOAPS (toolkit_1)',
             'description' => '',
             'type'        => 'link',
-            'default'     => '245293029',
+            'default'     => '248176918',
             'section'     => 'toolkit',
         ];
         $fields['toolkit_2'] = [
             'name'        => 'Accountability Groups (toolkit_2)',
             'description' => '',
             'type'        => 'link',
-            'default'     => '245293029',
+            'default'     => '248177083',
             'section'     => 'toolkit',
         ];
         $fields['toolkit_3'] = [
             'name'        => 'Prayer Cycle (toolkit_3)',
             'description' => '',
             'type'        => 'link',
-            'default'     => '245293029',
+            'default'     => '248177053',
             'section'     => 'toolkit',
         ];
         $fields['toolkit_4'] = [
             'name'        => 'List of 100 (toolkit_4)',
             'description' => '',
             'type'        => 'link',
-            'default'     => '245293029',
+            'default'     => '248177079',
             'section'     => 'toolkit',
         ];
         $fields['toolkit_5'] = [
             'name'        => '3 Minute Testimony (toolkit_5)',
             'description' => '',
             'type'        => 'link',
-            'default'     => '245293029',
+            'default'     => '248177254',
             'section'     => 'toolkit',
         ];
         $fields['toolkit_6'] = [
             'name'        => 'Baptism (toolkit_6)',
             'description' => '',
             'type'        => 'link',
-            'default'     => '245293029',
+            'default'     => '248150621',
             'section'     => 'toolkit',
         ];
         $fields['toolkit_7'] = [
             'name'        => 'God\'s Story (toolkit_7)',
             'description' => '',
             'type'        => 'link',
-            'default'     => '245293029',
+            'default'     => '248150410',
             'section'     => 'toolkit',
         ];
         $fields['toolkit_8'] = [
             'name'        => 'Prayer Walking (toolkit_8)',
             'description' => '',
             'type'        => 'link',
-            'default'     => '245293029',
+            'default'     => '248150722',
             'section'     => 'toolkit',
         ];
         $fields['toolkit_9'] = [
             'name'        => 'Lord\'s Supper (toolkit_9)',
             'description' => '',
             'type'        => 'link',
-            'default'     => '245293029',
+            'default'     => '248150969',
             'section'     => 'toolkit',
         ];
         $fields['toolkit_10'] = [
             'name'        => '3|3 Groups (toolkit_10)',
             'description' => '',
             'type'        => 'link',
-            'default'     => '245293029',
+            'default'     => '248184750',
             'section'     => 'toolkit',
         ];
         $fields['toolkit_11'] = [
             'name'        => 'Peer Mentoring (toolkit_11)',
             'description' => '',
             'type'        => 'link',
-            'default'     => '245293029',
+            'default'     => '248150042',
             'section'     => 'toolkit',
         ];
         $fields['toolkit_12'] = [
             'name'        => 'Leadership Cell (toolkit_12)',
             'description' => '',
             'type'        => 'link',
-            'default'     => '245293029',
+            'default'     => '248150570',
             'section'     => 'toolkit',
         ];
         $fields['toolkit_13'] = [
             'name'        => 'Coaching Checklist (toolkit_13)',
             'description' => '',
             'type'        => 'link',
-            'default'     => '245293029',
+            'default'     => '248150334',
             'section'     => 'toolkit',
         ];
 
