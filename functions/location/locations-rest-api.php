@@ -82,10 +82,10 @@ class Zume_Location_Lookup_REST_API {
             if ( $result['status'] == 'OK'){
                 return $result;
             } else {
-                return new WP_Error( "tract_status_error", 'Zero Results', array( 'status', 400 ) );
+                return new WP_Error( "tract_status_error", 'Zero Results', array( 'status' => 400 ) );
             }
         } else {
-            return new WP_Error( "tract_param_error", "Please provide a valid address", array( 'status', 400 ) );
+            return new WP_Error( "tract_param_error", "Please provide a valid address", array( 'status' => 400 ) );
         }
     }
 
