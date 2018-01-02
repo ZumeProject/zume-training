@@ -40,6 +40,7 @@ function validate_user_address(user_address){
             {
                 jQuery('#map').empty()
                 jQuery('#possible-results').empty().append('<fieldset id="multiple-results"><legend>We found this match. Is this correct? If not validate another.</legend><input type="radio" name="zume_user_address" id="zume_user_address" value="'+data.results[0].formatted_address+'" checked/><label for="zume_user_address">'+data.results[0].formatted_address+'</label></fieldset>')
+                jQuery('#submit_' + key).removeAttr('disabled')
             }
 
         })
@@ -82,12 +83,14 @@ function validate_group_address(user_address, group_key){
                     }
                     jQuery('#multiple-results'+group_key).append( '<input type="radio" name="address" id="address'+index+'" value="'+value.formatted_address+'" '+checked+' /><label for="address'+index+'">'+value.formatted_address+'</label><br>')
                 })
+                jQuery('#submit_' + group_key).removeAttr('disabled')
             }
             else
             {
                 jQuery('#map'+group_key).empty()
                 jQuery('#validate_address_button'+group_key).val('Validate Another?')
                 jQuery('#possible-results'+group_key).empty().append('<fieldset id="multiple-results'+group_key+'"><legend>We found this match. Is this correct?</legend><input type="radio" name="address" id="address" value="'+data.results[0].formatted_address+'" checked/><label for="address">'+data.results[0].formatted_address+'</label></fieldset>')
+                jQuery('#submit_' + group_key).removeAttr('disabled')
             }
 
         })
@@ -100,3 +103,23 @@ function validate_group_address(user_address, group_key){
             jQuery('#possible-results'+group_key).empty().append('<fieldset id="multiple-results'+group_key+'"><legend>We found no matching locations. Check your address and validate again.</legend></fieldset>')
         })
 }
+
+function check_address(key) {
+
+    let val_address = jQuery('#validate_address' + key).val()
+    let default_address = jQuery('#address_' + key).val()
+    let results_address = jQuery('#multiple-results' + key).length
+
+    if (val_address === default_address) // exactly same values
+    {
+        jQuery('#submit_' + key).removeAttr('disabled')
+    }
+    else if (results_address) // check if fieldset exists by validation
+    {
+        jQuery('#submit_' + key).removeAttr('disabled')
+    }
+    else {
+        jQuery('#submit_' + key).attr('disabled', 'disabled')
+    }
+}
+

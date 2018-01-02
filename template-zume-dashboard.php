@@ -116,7 +116,7 @@ $zume_user_meta    = zume_get_user_meta( $zume_current_user );
                                                 <!-- Close group button -->
                                             <form method="post">
                                                 <input type="hidden" name="key" value="<?php echo esc_html( $zume_key ); ?>"/>
-                                                <span><button type="submit" class="button hollow alert" name="type" value="closed"><?php echo esc_html__( 'Close Group', 'zume' ) ?></button></span>
+                                                <span><button type="submit" class="button hollow alert" name="type" value="closed"><?php echo esc_html__( 'Archive Group', 'zume' ) ?></button></span>
                                             </form>
                                             <?php endif; ?>
                                         </div>
@@ -174,7 +174,7 @@ $zume_user_meta    = zume_get_user_meta( $zume_current_user );
 
                             <div class="grid-x ">
                                 <div class="cell vertical-padding center">
-                                    <h3><?php echo esc_html__( 'Closed Groups', 'zume' ) ?></h3>
+                                    <h3><?php echo esc_html__( 'Archived Groups', 'zume' ) ?></h3>
                                     <hr>
                                 </div>
                             </div>
@@ -464,14 +464,21 @@ $zume_user_meta    = zume_get_user_meta( $zume_current_user );
                 </div>
 
                 <div id="possible-resultsnew">
-                    <input type="hidden" name="address" value="" />
+                    <input type="hidden" name="address" id="address_new" value="" />
                 </div>
 
             </div>
             <div class="cell">
                 <br>
-                <button type="submit" class="button"><?php echo esc_html__( 'Submit', 'zume' ) ?></button>
+                <button type="submit" class="button" id="submit_new"><?php echo esc_html__( 'Submit', 'zume' ) ?></button>
             </div>
+
+            <script>
+                jQuery('#validate_addressnew').keyup( function() {
+                    check_address('new')
+                });
+            </script>
+
         </div>
 
         <button class="close-button" data-close aria-label="Close modal" type="button">
@@ -489,57 +496,84 @@ foreach ( $zume_user_meta as $zume_key => $v ) {
 
         <!-- Edit current groups section -->
         <div class="small reveal" id="<?php echo esc_html( $zume_key ); ?>" data-reveal>
-            <h1><?php echo esc_html__( 'Edit Group', 'zume' ) ?></h1>
             <form data-abide method="post">
+                <h1><?php echo esc_html__( 'Edit Group', 'zume' ) ?></h1>
 
+                    <input type="hidden" name="key" value="<?php echo esc_html( $zume_key ); ?>"/>
+                    <div class="grid-x grid-margin-x">
+                        <div class="cell">
+                            <label for="group_name"><?php echo esc_html__( 'Group Name', 'zume' ) ?></label>
+                            <input type="text" value="<?php echo esc_html( $zume_value['group_name'] ); ?>" name="group_name" id="group_name" required/>
+                        </div>
+                        <div class="cell">
+                            <label for="members"><?php echo esc_html__( 'Number of Participants', 'zume' ) ?></label>
+                            <input type="text" value="<?php echo esc_html( $zume_value['members'] ); ?>" name="members" id="members" required/>
+                        </div>
+                        <div class="cell">
+                            <label for="meeting_time"><?php echo esc_html__( 'Planned Meeting Time', 'zume' ) ?></label>
+                            <input type="text" value="<?php echo esc_html( $zume_value['meeting_time'] ); ?>" name="meeting_time" id="meeting_time" required/>
+                        </div>
+                        <div class="cell">
+                            <label for="validate_address<?php echo esc_html( $zume_key ); ?>"><?php echo esc_html__( 'Address', 'zume' ) ?></label>
+                            <div class="input-group">
+                                <input type="text"
+                                       placeholder="example: 1000 Broadway, Denver, CO 80126"
+                                       class="profile-input input-group-field"
+                                       name="validate_address"
+                                       id="validate_address<?php echo esc_html( $zume_key ); ?>"
+                                       value="<?php echo isset( $zume_value['address'] ) ? esc_html( $zume_value['address'] ) : ''; ?>"
+                                />
+                                <div class="input-group-button">
+                                    <input type="button" class="button" onclick="validate_group_address( jQuery('#validate_address<?php echo esc_html( $zume_key ); ?>').val(), '<?php echo esc_html( $zume_key ); ?>')" value="Validate" id="validate_address_button<?php echo esc_html( $zume_key ); ?>">
+                                </div>
+                            </div>
+
+                            <div id="possible-results<?php echo esc_html( $zume_key ); ?>">
+                                <input type="hidden" name="address" id="address_<?php echo esc_html( $zume_key ); ?>" value="<?php echo isset( $zume_value['address'] ) ? esc_html( $zume_value['address'] ) : ''; ?>" />
+                            </div>
+
+                            <?php if ( ! empty( $zume_value['address'] ) && ! empty( esc_attr( $zume_value['lng'] ) ) && ! empty( esc_attr( $zume_value['lat'] ) ) ) : ?>
+                                <div id="map<?php echo esc_html( $zume_key ); ?>" >
+                                    <img src="https://maps.googleapis.com/maps/api/staticmap?center=<?php echo esc_attr( $zume_value['lat'] ) . ',' . esc_attr( $zume_value['lng'] ) ?>&zoom=5&size=600x250&markers=color:red|<?php echo esc_attr( $zume_value['lat'] ) . ',' . esc_attr( $zume_value['lng'] ) ?>&key=<?php echo esc_attr( Zume_Google_Geolocation::$key ); ?>" />
+                                </div>
+                            <?php endif; ?>
+
+                        </div>
+                        <div class="cell">
+                            <br>
+                            <button type="submit" class="button" name="type" onclick="check_address('<?php echo esc_html( $zume_key ); ?>')" value="edit" id="submit_<?php echo esc_html( $zume_key ); ?>"><?php echo esc_html__( 'Update', 'zume' ) ?></button>
+                            <span class="align-right"><button type="submit" class="button hollow alert" name="type" value="closed"><?php echo esc_html__( 'Archive', 'zume' ) ?></button></span>
+                            <span class="align-right"><button type="button" class="button clear alert" name="type" data-open="<?php echo esc_html( $zume_key ); ?>-delete"><?php echo esc_html__( 'Delete', 'zume' ) ?></button></span>
+                        </div>
+
+                        <script>
+                            jQuery('#validate_address<?php echo esc_html( $zume_key ); ?>').keyup( function() {
+                                check_address('<?php echo esc_html( $zume_key ); ?>')
+                            });
+                        </script>
+
+                    </div>
+
+
+                    <button class="close-button" data-close aria-label="Close modal" type="button">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+            </form>
+        </div>
+
+        <!-- This is the nested modal -->
+        <div class="reveal small" id="<?php echo esc_html( $zume_key ); ?>-delete" data-reveal>
+            <form data-abide method="post">
                 <input type="hidden" name="key" value="<?php echo esc_html( $zume_key ); ?>"/>
-                <div class="grid-x grid-margin-x">
-                    <div class="cell">
-                        <label for="group_name"><?php echo esc_html__( 'Group Name', 'zume' ) ?></label>
-                        <input type="text" value="<?php echo esc_html( $zume_value['group_name'] ); ?>" name="group_name" id="group_name" required/>
-                    </div>
-                    <div class="cell">
-                        <label for="members"><?php echo esc_html__( 'Number of Participants', 'zume' ) ?></label>
-                        <input type="text" value="<?php echo esc_html( $zume_value['members'] ); ?>" name="members" id="members" required/>
-                    </div>
-                    <div class="cell">
-                        <label for="meeting_time"><?php echo esc_html__( 'Planned Meeting Time', 'zume' ) ?></label>
-                        <input type="text" value="<?php echo esc_html( $zume_value['meeting_time'] ); ?>" name="meeting_time" id="meeting_time" required/>
-                    </div>
-                    <div class="cell">
-                        <label for="validate_address<?php echo esc_html( $zume_key ); ?>"><?php echo esc_html__( 'Address', 'zume' ) ?></label>
-                        <div class="input-group">
-                            <input type="text"
-                                   placeholder="example: 1000 Broadway, Denver, CO 80126"
-                                   class="profile-input input-group-field"
-                                   name="validate_address"
-                                   id="validate_address<?php echo esc_html( $zume_key ); ?>"
-                                   value="<?php echo isset( $zume_value['address'] ) ? esc_html( $zume_value['address'] ) : ''; ?>"
-                            />
-                            <div class="input-group-button">
-                                <input type="button" class="button" onclick="validate_group_address( jQuery('#validate_address<?php echo esc_html( $zume_key ); ?>').val(), '<?php echo esc_html( $zume_key ); ?>')" value="Validate" id="validate_address_button<?php echo esc_html( $zume_key ); ?>">
-                            </div>
-                        </div>
-
-                        <div id="possible-results<?php echo esc_html( $zume_key ); ?>">
-                            <input type="hidden" name="address" value="<?php echo isset( $zume_value['address'] ) ? esc_html( $zume_value['address'] ) : ''; ?>" />
-                        </div>
-
-                        <?php if ( ! empty( $zume_value['address'] ) && ! empty( esc_attr( $zume_value['lng'] ) ) && ! empty( esc_attr( $zume_value['lat'] ) ) ) : ?>
-                            <div id="map<?php echo esc_html( $zume_key ); ?>" >
-                                <img src="https://maps.googleapis.com/maps/api/staticmap?center=<?php echo esc_attr( $zume_value['lat'] ) . ',' . esc_attr( $zume_value['lng'] ) ?>&zoom=5&size=600x250&markers=color:red|<?php echo esc_attr( $zume_value['lat'] ) . ',' . esc_attr( $zume_value['lng'] ) ?>&key=<?php echo esc_attr( Zume_Google_Geolocation::$key ); ?>" />
-                            </div>
-                        <?php endif; ?>
-                    </div>
-                    <div class="cell">
-                        <br>
-                        <button type="submit" class="button" name="type" value="edit"><?php echo esc_html__( 'Update', 'zume' ) ?></button>
-                        <span class="align-right"><button type="submit" class="button hollow alert" name="type" value="delete"><?php echo esc_html__( 'Delete', 'zume' ) ?></button></span>
-                        <span class="align-right"><button type="submit" class="button hollow alert" name="type" value="closed"><?php echo esc_html__( 'Close', 'zume' ) ?></button></span>
+                <h3>ARE YOU SURE YOU WANT TO DELETE THIS GROUP?</h3><br>
+                <div class="grid-x">
+                    <div class="cell center">
+                        <span class="center"><button type="submit" class="button alert" name="type" value="delete"><?php echo esc_html__( 'Delete', 'zume' ) ?></button></span>
+                        <span class="center"><button type="button" class="button hollow" name="type"  data-open="<?php echo esc_html( $zume_key ); ?>"><?php echo esc_html__( 'Cancel', 'zume' ) ?></button></span>
                     </div>
                 </div>
 
-                <button class="close-button" data-close aria-label="Close modal" type="button">
+                <button class="close-button" data-close aria-label="Close reveal" type="button">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </form>
