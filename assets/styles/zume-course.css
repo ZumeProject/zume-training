@@ -140,10 +140,15 @@ div.block {
 }
 
 div.step-title {
-    text-transform: uppercase;
-    text-align: center;
-    font-size: 18px;
-    font-weight: 300;
+    text-transform: uppercase !important;
+    text-align: center !important;
+    font-weight: 600 !important;
+    color: #323a68 !important;
+    font-family: Helvetica,Roboto,Arial,sans-serif !important;
+    font-size: 2.5rem !important;
+    line-height: 1.4 !important;
+    margin-top: 2rem !important;
+    margin-bottom: 2rem !important;
 }
 
 div.activity-title {
@@ -289,10 +294,6 @@ button.btn.btn-large.next-step.zume-purple.uppercase.bg-white.font-zume-purple.b
 }
 
 
-
-
-
-
 #session {
     margin: 0 auto;
 }
@@ -338,4 +339,8 @@ body.single-item.groups #buddypress div#item-header #item-header-cover-image #it
 .chevron--left:before {
     left: 0;
     transform: rotate(-135deg);
+}
+
+section {
+    padding: 2rem 0;
 }

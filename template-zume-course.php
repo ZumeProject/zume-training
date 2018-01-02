@@ -104,7 +104,7 @@ class Zume_Course_Content {
 
     public static function get_course_content( $session_id ) {
         ?>
-        <h2 class="center padding-bottom"><?php esc_html_e( 'Session', 'zume' ) ?> <?php echo esc_attr( $session_id ); ?></h2>
+        <div class="center padding-bottom"><?php esc_html_e( 'Session', 'zume' ) ?> <?php echo esc_attr( $session_id ); ?></div>
 
         <script>
             jQuery(document).ready(function ($) {
@@ -288,6 +288,7 @@ class Zume_Course_Content {
         ?>
         <h3></h3>
         <section><!-- Step Title -->
+
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="step-title cell">
                     <?php esc_html_e( 'WELCOME TO ZÚME', 'zume' ) ?>
@@ -301,20 +302,18 @@ class Zume_Course_Content {
                     <?php esc_html_e( 'DOWNLOAD', 'zume' ) ?>
                 </div>
                 <div class="large-8 cell activity-description well">
-                    <?php esc_html_e( 'You will be able to follow along on a digital PDF for this session, but please make sure that each member of your group has a printed copy of the materials for future sessions.', 'zume' ) ?>
-                    <br>
                     <p>
-                        <a class="button hollow"
+                        <?php esc_html_e( 'You will be able to follow along on a digital PDF for this session, but please make sure that each member of your group has a printed copy of the materials for future sessions.', 'zume' ) ?>
+                    </p>
+
+                    <p>
+                        <a class="button large"
                            href="<?php echo esc_url( zume_files_uri() ) ?>zume-guidebook.pdf"
                            target="_blank" rel="noopener">
-                            <img class="alignnone size-full wp-image-1321"
-                                 src="<?php echo esc_url( zume_images_uri( 'course' ) ) ?>download-icon-150x150.png"
-                                 alt="Download" width="29"
-                                 height="26"/> <?php esc_html_e( 'GUIDEBOOK', 'zume' ) ?>
+                            <?php esc_html_e( 'GUIDEBOOK', 'zume' ) ?>
                         </a>
                     </p>
                 </div>
-
             </div>
             <!-- grid-x -->
 
@@ -323,7 +322,7 @@ class Zume_Course_Content {
         <section><!-- Step Title -->
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="step-title cell">
-                    <?php esc_html_e( 'GROUP PRAYER (5min)', 'zume' ) ?>
+                   <?php esc_html_e( 'GROUP PRAYER (5min)', 'zume' ) ?>
                 </div>
             </div>
             <!-- Activity Block -->
@@ -338,9 +337,10 @@ class Zume_Course_Content {
         <h3></h3>
         <section><!-- Step Title -->
             <div class="grid-x grid-margin-x grid-margin-y">
-                <div class="step-title cell"><?php esc_html_e( 'WATCH AND DISCUSS (15min)', 'zume' ) ?></div>
+                <div class="step-title cell">
+                    <?php esc_html_e( 'WATCH AND DISCUSS (15min)', 'zume' ) ?>
+                </div>
                 <!-- step-title cell -->
-
             </div>
             <!-- grid-x -->
 
@@ -351,12 +351,11 @@ class Zume_Course_Content {
                     <?php esc_html_e( 'God uses ordinary people doing simple things to make a big impact. Watch this video on how God works.', 'zume' ) ?>
                 </div>
             </div>
-
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="small-12 small-centered cell">
-                    <div class="flex-video widescreen">
-                        <iframe src="<?php echo esc_url( Zume_Course::get_video_by_key( 'scribe_1' ) ) ?>" width="640" height="360"
-                                frameborder="0"
+                    <div class="flex-video widescreen vimeo">
+                        <iframe style="border: 1px solid lightgrey;"  src="<?php echo esc_url( Zume_Course::get_video_by_key( 'scribe_1' ) ) ?>" width="560" height="315"
+                                frameborder="1"
                                 webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
                     </div>
 
@@ -399,9 +398,9 @@ class Zume_Course_Content {
 
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="small-12 small-centered cell">
-                    <div class="flex-video widescreen">
-                        <iframe src="<?php echo esc_url( Zume_Course::get_video_by_key( 'scribe_2' ) ) ?>" width="640" height="360"
-                                frameborder="0"
+                    <div class="flex-video widescreen vimeo">
+                        <iframe style="border: 1px solid lightgrey;"  src="<?php echo esc_url( Zume_Course::get_video_by_key( 'scribe_2' ) ) ?>" width="560" height="315"
+                                frameborder="1"
                                 webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
                     </div>
 
@@ -451,8 +450,8 @@ class Zume_Course_Content {
             <!-- Video block -->
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="small-12 small-centered cell">
-                    <div class="flex-video widescreen">
-                        <iframe src="<?php echo esc_url( Zume_Course::get_video_by_key( 'scribe_3' ) ) ?>" width="640" height="360"
+                    <div class="flex-video widescreen vimeo">
+                        <iframe style="border: 1px solid lightgrey;"  src="<?php echo esc_url( Zume_Course::get_video_by_key( 'scribe_3' ) ) ?>" width="560" height="315"
                                 frameborder="0"
                                 webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
                     </div>
@@ -509,9 +508,9 @@ class Zume_Course_Content {
             <!-- Video block -->
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="small-12 small-centered cell">
-                    <div class="flex-video widescreen">
-                        <iframe src="<?php echo esc_url( Zume_Course::get_video_by_key( 'toolkit_1' ) ) ?>" width="640" height="360"
-                                frameborder="0"
+                    <div class="flex-video widescreen vimeo">
+                        <iframe style="border: 1px solid lightgrey;"  src="<?php echo esc_url( Zume_Course::get_video_by_key( 'toolkit_1' ) ) ?>" width="560" height="315"
+                                frameborder="1"
                                 webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
                     </div>
 
@@ -554,8 +553,8 @@ class Zume_Course_Content {
             <!-- Video block -->
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="small-12 small-centered cell">
-                    <div class="flex-video widescreen">
-                        <iframe src="<?php echo esc_url( Zume_Course::get_video_by_key( 'toolkit_2' ) ) ?>" width="640" height="360"
+                    <div class="flex-video widescreen vimeo">
+                        <iframe style="border: 1px solid lightgrey;"  src="<?php echo esc_url( Zume_Course::get_video_by_key( 'toolkit_2' ) ) ?>" width="560" height="315"
                                 frameborder="0"
                                 webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
                     </div>
@@ -731,8 +730,8 @@ class Zume_Course_Content {
             <!-- Video block -->
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="small-12 small-centered cell">
-                    <div class="flex-video widescreen">
-                        <iframe src="<?php echo esc_url( Zume_Course::get_video_by_key( 'scribe_4' ) ) ?>" width="640" height="360"
+                    <div class="flex-video widescreen vimeo">
+                        <iframe style="border: 1px solid lightgrey;"  src="<?php echo esc_url( Zume_Course::get_video_by_key( 'scribe_4' ) ) ?>"
                                 frameborder="0"
                                 webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
                     </div>
@@ -786,8 +785,8 @@ class Zume_Course_Content {
             <!-- Video block -->
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="small-12 small-centered cell">
-                    <div class="flex-video widescreen">
-                        <iframe src="<?php echo esc_url( Zume_Course::get_video_by_key( 'toolkit_3' ) ) ?>" width="640" height="360"
+                    <div class="flex-video widescreen vimeo">
+                        <iframe style="border: 1px solid lightgrey;"  src="<?php echo esc_url( Zume_Course::get_video_by_key( 'toolkit_3' ) ) ?>" width="640" height="360"
                                 frameborder="0"
                                 webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
                     </div>
@@ -870,8 +869,8 @@ class Zume_Course_Content {
             <!-- Video block -->
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="small-12 small-centered cell">
-                    <div class="flex-video widescreen">
-                        <iframe src="<?php echo esc_url( Zume_Course::get_video_by_key( 'toolkit_4' ) ) ?>" width="640" height="360"
+                    <div class="flex-video widescreen vimeo">
+                        <iframe style="border: 1px solid lightgrey;"  src="<?php echo esc_url( Zume_Course::get_video_by_key( 'toolkit_4' ) ) ?>" width="640" height="360"
                                 frameborder="0"
                                 webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
                     </div>
@@ -1016,8 +1015,8 @@ class Zume_Course_Content {
             <!-- Video block -->
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="small-12 small-centered cell">
-                    <div class="flex-video widescreen">
-                        <iframe src="<?php echo esc_url( Zume_Course::get_video_by_key( 'scribe_6' ) ) ?>" width="640" height="360"
+                    <div class="flex-video widescreen vimeo">
+                        <iframe style="border: 1px solid lightgrey;"  src="<?php echo esc_url( Zume_Course::get_video_by_key( 'scribe_6' ) ) ?>" width="640" height="360"
                                 frameborder="0"
                                 webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
                     </div>
@@ -1098,8 +1097,8 @@ class Zume_Course_Content {
             <!-- Video block -->
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="small-12 small-centered cell">
-                    <div class="flex-video widescreen">
-                        <iframe src="<?php echo esc_url( Zume_Course::get_video_by_key( 'scribe_7' ) ) ?>" width="640" height="360"
+                    <div class="flex-video widescreen vimeo">
+                        <iframe style="border: 1px solid lightgrey;"  src="<?php echo esc_url( Zume_Course::get_video_by_key( 'scribe_7' ) ) ?>" width="640" height="360"
                                 frameborder="0"
                                 webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
                     </div>
@@ -1167,8 +1166,8 @@ class Zume_Course_Content {
             <!-- Video block -->
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="small-12 small-centered cell">
-                    <div class="flex-video widescreen">
-                        <iframe src="<?php echo esc_url( Zume_Course::get_video_by_key( 'toolkit_6' ) ) ?>" width="640" height="360"
+                    <div class="flex-video widescreen vimeo">
+                        <iframe style="border: 1px solid lightgrey;"  src="<?php echo esc_url( Zume_Course::get_video_by_key( 'toolkit_6' ) ) ?>" width="640" height="360"
                                 frameborder="0"
                                 webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
                     </div>
@@ -1320,8 +1319,8 @@ class Zume_Course_Content {
             <!-- Video block -->
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="small-12 small-centered cell">
-                    <div class="flex-video widescreen">
-                        <iframe src="<?php echo esc_url( Zume_Course::get_video_by_key( 'toolkit_5' ) ) ?>" width="640" height="360"
+                    <div class="flex-video widescreen vimeo">
+                        <iframe style="border: 1px solid lightgrey;"  src="<?php echo esc_url( Zume_Course::get_video_by_key( 'toolkit_5' ) ) ?>" width="640" height="360"
                                 frameborder="0"
                                 webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
                     </div>
@@ -1380,8 +1379,8 @@ class Zume_Course_Content {
             <!-- Video block -->
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="small-12 small-centered cell">
-                    <div class="flex-video widescreen">
-                        <iframe src="<?php echo esc_url( Zume_Course::get_video_by_key( 'scribe_5' ) ) ?>" width="640" height="360"
+                    <div class="flex-video widescreen vimeo">
+                        <iframe style="border: 1px solid lightgrey;"  src="<?php echo esc_url( Zume_Course::get_video_by_key( 'scribe_5' ) ) ?>" width="640" height="360"
                                 frameborder="0"
                                 webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
                     </div>
@@ -1433,8 +1432,8 @@ class Zume_Course_Content {
             <!-- Video block -->
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="small-12 small-centered cell">
-                    <div class="flex-video widescreen">
-                        <iframe src="<?php echo esc_url( Zume_Course::get_video_by_key( 'scribe_17' ) ) ?>" width="640" height="360"
+                    <div class="flex-video widescreen vimeo">
+                        <iframe style="border: 1px solid lightgrey;"  src="<?php echo esc_url( Zume_Course::get_video_by_key( 'scribe_17' ) ) ?>" width="640" height="360"
                                 frameborder="0"
                                 webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
                     </div>
@@ -1488,8 +1487,8 @@ class Zume_Course_Content {
             <!-- Video block -->
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="small-12 small-centered cell">
-                    <div class="flex-video widescreen">
-                        <iframe src="<?php echo esc_url( Zume_Course::get_video_by_key( 'scribe_8' ) ) ?>" width="640" height="360"
+                    <div class="flex-video widescreen vimeo">
+                        <iframe style="border: 1px solid lightgrey;"  src="<?php echo esc_url( Zume_Course::get_video_by_key( 'scribe_8' ) ) ?>" width="640" height="360"
                                 frameborder="0"
                                 webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
                     </div>
@@ -1542,8 +1541,8 @@ class Zume_Course_Content {
             <!-- Video block -->
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="small-12 small-centered cell">
-                    <div class="flex-video widescreen">
-                        <iframe src="<?php echo esc_url( Zume_Course::get_video_by_key( 'toolkit_9' ) ) ?>" width="640" height="360"
+                    <div class="flex-video widescreen vimeo">
+                        <iframe style="border: 1px solid lightgrey;"  src="<?php echo esc_url( Zume_Course::get_video_by_key( 'toolkit_9' ) ) ?>" width="640" height="360"
                                 frameborder="0"
                                 webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
                     </div>
@@ -1686,8 +1685,8 @@ class Zume_Course_Content {
             <!-- Video block -->
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="small-12 small-centered cell">
-                    <div class="flex-video widescreen">
-                        <iframe src="<?php echo esc_url( Zume_Course::get_video_by_key( 'toolkit_8' ) ) ?>" width="640" height="360"
+                    <div class="flex-video widescreen vimeo">
+                        <iframe style="border: 1px solid lightgrey;"  src="<?php echo esc_url( Zume_Course::get_video_by_key( 'toolkit_8' ) ) ?>" width="640" height="360"
                                 frameborder="0"
                                 webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
                     </div>
@@ -1726,8 +1725,8 @@ class Zume_Course_Content {
             <div class="grid-x grid-margin-x grid-margin-y">
 
                 <div class="small-12 small-centered cell">
-                    <div class="flex-video widescreen">
-                        <iframe src="<?php echo esc_url( Zume_Course::get_video_by_key( 'scribe_18' ) ) ?>" width="640" height="360"
+                    <div class="flex-video widescreen vimeo">
+                        <iframe style="border: 1px solid lightgrey;"  src="<?php echo esc_url( Zume_Course::get_video_by_key( 'scribe_18' ) ) ?>" width="640" height="360"
                                 frameborder="0"
                                 webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
                     </div>
@@ -1900,8 +1899,8 @@ class Zume_Course_Content {
             <!-- Video block -->
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="small-12 small-centered cell">
-                    <div class="flex-video widescreen">
-                        <iframe src="<?php echo esc_url( Zume_Course::get_video_by_key( 'scribe_9' ) ) ?>" width="640" height="360"
+                    <div class="flex-video widescreen vimeo">
+                        <iframe style="border: 1px solid lightgrey;"  src="<?php echo esc_url( Zume_Course::get_video_by_key( 'scribe_9' ) ) ?>" width="640" height="360"
                                 frameborder="0"
                                 webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
                     </div>
@@ -1948,8 +1947,8 @@ class Zume_Course_Content {
             <!-- Video block -->
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="small-12 small-centered cell">
-                    <div class="flex-video widescreen">
-                        <iframe src="<?php echo esc_url( Zume_Course::get_video_by_key( 'toolkit_10' ) ) ?>" width="640" height="360"
+                    <div class="flex-video widescreen vimeo">
+                        <iframe style="border: 1px solid lightgrey;"  src="<?php echo esc_url( Zume_Course::get_video_by_key( 'toolkit_10' ) ) ?>" width="640" height="360"
                                 frameborder="0"
                                 webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
                     </div>
@@ -2004,8 +2003,8 @@ class Zume_Course_Content {
             <!-- Video block -->
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="small-12 small-centered cell">
-                    <div class="flex-video widescreen">
-                        <iframe src="<?php echo esc_url( Zume_Course::get_video_by_key( '3_3_group' ) ) ?>" width="640" height="360"
+                    <div class="flex-video widescreen vimeo">
+                        <iframe style="border: 1px solid lightgrey;"  src="<?php echo esc_url( Zume_Course::get_video_by_key( '3_3_group' ) ) ?>" width="640" height="360"
                                 frameborder="0"
                                 webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
                     </div>
@@ -2123,8 +2122,8 @@ class Zume_Course_Content {
             <!-- Video block -->
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="small-12 small-centered cell">
-                    <div class="flex-video widescreen">
-                        <iframe src="<?php echo esc_url( Zume_Course::get_video_by_key( 'scribe_10' ) ) ?>" width="640" height="360"
+                    <div class="flex-video widescreen vimeo">
+                        <iframe style="border: 1px solid lightgrey;"  src="<?php echo esc_url( Zume_Course::get_video_by_key( 'scribe_10' ) ) ?>" width="640" height="360"
                                 frameborder="0"
                                 webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
                     </div>
@@ -2309,8 +2308,8 @@ class Zume_Course_Content {
             <!-- Video block -->
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="small-12 small-centered cell">
-                    <div class="flex-video widescreen">
-                        <iframe src="<?php echo esc_url( Zume_Course::get_video_by_key( 'scribe_11' ) ) ?>" width="640" height="360"
+                    <div class="flex-video widescreen vimeo">
+                        <iframe style="border: 1px solid lightgrey;"  src="<?php echo esc_url( Zume_Course::get_video_by_key( 'scribe_11' ) ) ?>" width="640" height="360"
                                 frameborder="0"
                                 webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
                     </div>
@@ -2492,8 +2491,8 @@ class Zume_Course_Content {
             <!-- Video block -->
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="small-12 small-centered cell">
-                    <div class="flex-video widescreen">
-                        <iframe src="<?php echo esc_url( Zume_Course::get_video_by_key( 'scribe_12' ) ) ?>" width="640" height="360"
+                    <div class="flex-video widescreen vimeo">
+                        <iframe style="border: 1px solid lightgrey;"  src="<?php echo esc_url( Zume_Course::get_video_by_key( 'scribe_12' ) ) ?>" width="640" height="360"
                                 frameborder="0"
                                 webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
                     </div>
@@ -2544,8 +2543,8 @@ class Zume_Course_Content {
             <!-- Video block -->
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="small-12 small-centered cell">
-                    <div class="flex-video widescreen">
-                        <iframe src="<?php echo esc_url( Zume_Course::get_video_by_key( 'scribe_13' ) ) ?>" width="640" height="360"
+                    <div class="flex-video widescreen vimeo">
+                        <iframe style="border: 1px solid lightgrey;"  src="<?php echo esc_url( Zume_Course::get_video_by_key( 'scribe_13' ) ) ?>" width="640" height="360"
                                 frameborder="0"
                                 webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
                     </div>
@@ -2599,8 +2598,8 @@ class Zume_Course_Content {
             <!-- Video block -->
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="small-12 small-centered cell">
-                    <div class="flex-video widescreen">
-                        <iframe src="<?php echo esc_url( Zume_Course::get_video_by_key( 'scribe_14' ) ) ?>" width="640" height="360"
+                    <div class="flex-video widescreen vimeo">
+                        <iframe style="border: 1px solid lightgrey;"  src="<?php echo esc_url( Zume_Course::get_video_by_key( 'scribe_14' ) ) ?>" width="640" height="360"
                                 frameborder="0"
                                 webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
                     </div>
@@ -2752,8 +2751,8 @@ class Zume_Course_Content {
             </div>
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="small-12 small-centered cell">
-                    <div class="flex-video widescreen">
-                        <iframe src="<?php echo esc_url( Zume_Course::get_video_by_key( 'scribe_16' ) ) ?>" width="640" height="360"
+                    <div class="flex-video widescreen vimeo">
+                        <iframe style="border: 1px solid lightgrey;"  src="<?php echo esc_url( Zume_Course::get_video_by_key( 'scribe_16' ) ) ?>" width="640" height="360"
                                 frameborder="0"
                                 webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
                     </div>
@@ -2942,8 +2941,8 @@ class Zume_Course_Content {
             <!-- Video block -->
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="small-12 small-centered cell">
-                    <div class="flex-video widescreen">
-                        <iframe src="<?php echo esc_url( Zume_Course::get_video_by_key( 'scribe_15' ) ) ?>" width="640" height="360"
+                    <div class="flex-video widescreen vimeo">
+                        <iframe style="border: 1px solid lightgrey;"  src="<?php echo esc_url( Zume_Course::get_video_by_key( 'scribe_15' ) ) ?>" width="640" height="360"
                                 frameborder="0"
                                 webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
                     </div>
@@ -2991,8 +2990,8 @@ class Zume_Course_Content {
             <!-- Video block -->
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="small-12 small-centered cell">
-                    <div class="flex-video widescreen">
-                        <iframe src="<?php echo esc_url( Zume_Course::get_video_by_key( 'toolkit_11' ) ) ?>" width="640" height="360"
+                    <div class="flex-video widescreen vimeo">
+                        <iframe style="border: 1px solid lightgrey;"  src="<?php echo esc_url( Zume_Course::get_video_by_key( 'toolkit_11' ) ) ?>" width="640" height="360"
                                 frameborder="0"
                                 webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
                     </div>
@@ -3072,8 +3071,8 @@ class Zume_Course_Content {
 
                     <div class="grid-x grid-margin-x grid-margin-y">
                         <div class="small-12 small-centered cell">
-                            <div class="flex-video widescreen">
-                                <iframe src="<?php echo esc_url( Zume_Course::get_video_by_key( 'scribe_16' ) ) ?>" width="640"
+                            <div class="flex-video widescreen vimeo">
+                                <iframe style="border: 1px solid lightgrey;"  src="<?php echo esc_url( Zume_Course::get_video_by_key( 'scribe_16' ) ) ?>" width="640"
                                         height="360"
                                         frameborder="0" webkitallowfullscreen mozallowfullscreen
                                         allowfullscreen></iframe>
