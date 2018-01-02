@@ -47,7 +47,7 @@ class Zume_Dashboard {
     public function __construct() { } // End __construct()
 
     public static function create_group( $args ) {
-        zume_write_log('BEGIN CREATE');
+        zume_write_log( 'BEGIN CREATE' );
 
         // Validate post data
         $defaults = array(
@@ -61,7 +61,7 @@ class Zume_Dashboard {
         );
         $args = wp_parse_args( $args, $defaults );
 
-        zume_write_log('begin checks');
+        zume_write_log( 'begin checks' );
         if ( ! $args['group_name'] ) {
             return new WP_Error( 'missing_info', 'You are missing the group name' );
         }
@@ -69,7 +69,7 @@ class Zume_Dashboard {
             return new WP_Error( 'missing_info', 'You are missing number of group members' );
         }
         if ( $args['address'] ) {
-            zume_write_log('begin locations');
+            zume_write_log( 'begin locations' );
             // Geo lookup address
             $google_result = Zume_Google_Geolocation::query_google_api( $args['address'], $type = 'core' ); // get google api info
             if ( ! $google_result ) {
@@ -122,10 +122,10 @@ class Zume_Dashboard {
             'closed'              => false,
         ];
 
-        zume_write_log('begin add meta');
+        zume_write_log( 'begin add meta' );
         add_user_meta( $current_user_id, $group_key, $group_values, true );
 
-        zume_write_log('END CREATE');
+        zume_write_log( 'END CREATE' );
 
         return true;
 
