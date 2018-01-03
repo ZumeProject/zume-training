@@ -40,7 +40,7 @@ function validate_user_address(user_address){
             {
                 jQuery('#map').empty()
                 jQuery('#possible-results').empty().append('<fieldset id="multiple-results"><legend>We found this match. Is this correct? If not validate another.</legend><input type="radio" name="zume_user_address" id="zume_user_address" value="'+data.results[0].formatted_address+'" checked/><label for="zume_user_address">'+data.results[0].formatted_address+'</label></fieldset>')
-                jQuery('#submit_' + key).removeAttr('disabled')
+                jQuery('#submit_profile').removeAttr('disabled')
             }
 
         })

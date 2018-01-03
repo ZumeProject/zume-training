@@ -16,9 +16,9 @@ Template Name: Zume About
                 <div class="large-8 small-12 cell">
 
                     <!-- Video -->
-                    <div class="responsive-embed widescreen"><!-- TODO: Add multilanguage video switcher-->
+                    <div class="responsive-embed widescreen">
                         <iframe allowFullScreen frameborder="0" height="564" mozallowfullscreen
-                                src="https://player.vimeo.com/video/245293029" webkitAllowFullScreen
+                                src="<?php echo esc_url( Zume_Course::get_video_by_key( 'overview' ) ) ?>" webkitAllowFullScreen
                                 width="640"></iframe>
                     </div>
 
@@ -40,7 +40,7 @@ Template Name: Zume About
                         <div class="cell large-8" style="color: white;">
                             <h3 style="color: white;"><?php esc_html_e( 'Goals of the Zúme Project:', 'zume' ) ?></h3>
                             <p>
-                                <?php esc_html_e( 'Zúme means yeast in Greek. In Matthew 13:33 Jesus is quoted as saying, "The Kingdom of Heaven is like a woman who took yeast and mixed it into a large amount of flour until it was all leavened." This illustrates how ordinary people, using ordinary resources, can have an extraordinary impact for the Kingdom of God. Zúme aims to equip and empower ordinary believers to reach every neighborhood.', 'zume' ) ?>
+                                <?php esc_html_e( 'Zúme means yeast in Greek. In Matthew 13:33, Jesus is quoted as saying, "The Kingdom of Heaven is like a woman who took yeast and mixed it into a large amount of flour until it was all leavened." This illustrates how ordinary people, using ordinary resources, can have an extraordinary impact for the Kingdom of God. Zúme aims to equip and empower ordinary believers to reach every neighborhood.', 'zume' ) ?>
                             </p>
                             <p>
                                 <?php esc_html_e( 'Make disciples in every Omega District globally, using an online training platform focused on equipping participants in the basic disciple-making and simple church planting multiplication principles, processes, and practices.', 'zume' ) ?>
@@ -59,7 +59,7 @@ Template Name: Zume About
 
                     <div class="grid-x  vertical-padding">
                         <div class="large-4 cell ">
-                            <img src="/wp-content/themes/zume-project-multilingual/assets/images/pages/training2.png"
+                            <img src="<?php echo esc_url( zume_images_uri( 'pages' ) ) ?>training2.png"
                                  alt="Zúme in 10 sessions, 2 hours each, cost: free" height="150"/>
                         </div>
                         <div class="large-8 cell ">
@@ -77,7 +77,7 @@ Template Name: Zume About
 
                     <div class="grid-x grid-margin-x grid-margin-y vertical-padding">
                         <div class="medium-4 cell ">
-                            <img src="/wp-content/themes/zume-project-multilingual/assets/images/pages/getstarted.png"
+                            <img src="<?php echo esc_url( zume_images_uri( 'pages' ) ) ?>getstarted.png"
                                  alt="" width="230" height="150"/>
                         </div>
                         <div class="medium-8 cell ">
@@ -95,7 +95,7 @@ Template Name: Zume About
 
                     <div class="grid-x grid-margin-x grid-margin-y vertical-padding">
                         <div class="medium-4 cell ">
-                            <img src="/wp-content/themes/zume-project-multilingual/assets/images/pages/guidebook.png"
+                            <img src="<?php echo esc_url( zume_images_uri( 'pages' ) ) ?>guidebook.png"
                                  alt=""
                                  width="230" height="150"/>
                         </div>
@@ -113,6 +113,22 @@ Template Name: Zume About
                 </div>
                 <div class="large-2 cell"></div>
             </div><!-- end #main -->
+
+            <!-- Description -->
+            <div class="grid-x vertical-padding">
+                <div class="medium-2 cell"></div>
+                <div class="medium-8 cell ">
+                    <!-- Video -->
+                    <div class="responsive-embed widescreen">
+                        <iframe allowFullScreen frameborder="0" height="564" mozallowfullscreen
+                                src="<?php echo esc_url( Zume_Course::get_video_by_key( 'promo' ) ) ?>" webkitAllowFullScreen
+                                width="640"></iframe>
+                    </div>
+                </div>
+                <div class="medium-2 cell"></div>
+            </div><!-- end #main -->
+
+
 
         </div> <!-- end #inner-content -->
 

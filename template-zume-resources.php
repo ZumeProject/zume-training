@@ -6,105 +6,97 @@ Template Name: Zume Resources
 
 <?php get_header(); ?>
 
+<style>
+    .resource-list {
+        list-style-type: none;
+    }
+    .resource-list li {
+        padding: .2em 0;
+    }
+    .resource-list li a {
+        color:white;
+        line-height: 1.5em;
+    }
+</style>
+
 <div id="content">
 
     <div id="inner-content" class="grid-x">
 
         <div id="main" class="large-12 medium-12 cell" role="main">
 
-            <div class="grid-x grid-margin-x vertical-padding">
-                <div class="medium-2 cell"></div>
-                <div class="medium-8 cell">
-                    <div class="responsive-embed widescreen"><!-- TODO: Add multilanguage video switcher-->
-                        <img src="http://via.placeholder.com/1920x1080"/>
-                    </div>
-                </div>
-                <div class="medium-2 cell"></div>
-            </div>
-
             <div class="grid-x grid-margin-x vertical-padding" style="background-color:#323A68; color:white;">
                 <div class="medium-2 cell"></div>
-                <div class="medium-8 cell vertical-padding">
-                    <h3 style="color: white"><?php esc_html_e( 'The Zúme Mission:', 'zume' ) ?></h3>
-                    <?php esc_html_e( 'Helping ordinary people make a big impact for the Kingdom of God by obeying and implementing the Great Commission and the Great Commandment.', 'zume' ) ?>
-                    <h3 style="color: white"><?php esc_html_e( 'The Zúme Vision:', 'zume' ) ?></h3>
-                    <?php esc_html_e( 'Make disciples in every census tract in the United States and then in every Omega District globally, using an online training platform focused on equipping participants in the basic disciple-making and simple church planting multiplication principles, processes, and practices.', 'zume' ) ?>
-                </div>
-                <div class="medium-2 cell"></div>
-            </div>
-
-            <div class="grid-x grid-margin-x vertical-padding">
-                <div class="medium-2 cell"></div>
-                <div class="medium-8 cell">
-                    <h3><?php esc_html_e( "Resources:", 'zume' ) ?></h3>
-                    <ul style="list-style-type: none;margin: 0">
+                <div class="medium-4 cell vertical-padding">
+                    <h3 class="white"><?php esc_html_e( 'Promotional Materials', 'zume' ) ?></h3>
+                    <ul class="resource-list">
                         <li>
-                            <a href="<?php echo esc_url( home_url() ) ?>/wp-content/themes/zume-project-multilingual/assets/files/en/zume_guidebook.pdf"
+                            <a href="<?php echo esc_url( zume_files_uri() ) ?>zume_guidebook.pdf"
                                target="_blank" rel="noopener noreferrer">
                                 <span style="padding:0 10px"><img
                                             src="/wp-content/themes/zume-project-multilingual/assets/images/pages/pdf-download.png"
                                             alt="PDF download" width="30" height="30"
                                             class="alignnone size-full wp-image-907"/></span>
-                                <?php esc_html_e( 'Download Guidebook here.', 'zume' ) ?>
+                                <?php esc_html_e( 'Download Guidebook', 'zume' ) ?>
                             </a>
                         </li>
 
                         <li>
-                            <a href="<?php echo esc_url( home_url() ) ?>/wp-content/themes/zume-project-multilingual/assets/files/en/zume_promo_flier.pdf"
+                            <a href="<?php echo esc_url( zume_files_uri() ) ?>flyer.pdf"
                                target="_blank" rel="noopener noreferrer">
                                 <span style="padding:0 10px"><img
                                             src="/wp-content/themes/zume-project-multilingual/assets/images/pages/pdf-download.png"
                                             alt="PDF download" width="30" height="30"
                                             class="alignnone size-full wp-image-907"/></span>
-                                <?php esc_html_e( 'Download and print the Zúme promo flyer.', 'zume' ) ?>
+                                <?php esc_html_e( 'Download Zúme Promo Flyer', 'zume' ) ?>
                             </a>
                         </li>
 
-                        <li><a href="https://www.youtube.com/watch?v=qIs-PiCowlw&amp;t=1s" target="_blank"
+                        <li><a href="<?php echo esc_url( zume_files_uri() ) ?>zume_project.mp4" target="_blank"
                                rel="noopener noreferrer">
                                 <span style="padding:0 10px"><img
                                             src="/wp-content/themes/zume-project-multilingual/assets/images/pages/video-camera.png"
                                             alt="Video" width="30" height="30"
                                             class="alignnone size-full wp-image-908"/></span>
-                                <?php esc_html_e( 'Share the Zúme Promo video here.', 'zume' ) ?>
+                                <?php esc_html_e( 'Download Zume Promo Video', 'zume' ) ?>
                             </a>
                         </li>
 
-                        <li>
-                            <a href="<?php echo esc_url( home_url() ) ?>/wp-content/themes/zume-project-multilingual/assets/files/en/mission_frontiers_39-3_Issue_5-6.pdf"
-                               target="_blank" rel="noopener noreferrer">
-                                <span style="padding:0 10px"><img
-                                            src="/wp-content/themes/zume-project-multilingual/assets/images/pages/pdf-download.png"
-                                            alt="PDF download" width="30" height="30"
-                                            class="alignnone size-full wp-image-907"/></span>
-                                <?php esc_html_e( 'Download May/June 2017 issue of Mission Frontiers on Zúme here.', 'zume' ) ?>
-                            </a>
-                        </li>
 
-                        <li>
-                            <a href="https://docs.google.com/spreadsheets/d/12NUKhKfJl4ZnqegEdkHadlYMf2oHuEKIjNmyZI78TeA/edit?usp=sharing"
-                               target="_blank" rel="noopener noreferrer">
-                                <span style="padding:0 10px"><img
-                                            src="/wp-content/themes/zume-project-multilingual/assets/images/pages/pdf-download.png"
-                                            alt="" width="30" height="30"
-                                            class="alignnone size-full wp-image-906"/></span>
-                                <?php esc_html_e( 'Check on language translation progress here.', 'zume' ) ?>
-                            </a>
-                        </li>
-
+                    </ul>
+                </div>
+                <div class="medium-4 cell vertical-padding">
+                    <h3 class="white"><?php esc_html_e( 'Project Information', 'zume' ) ?></h3>
+                    <ul class="resource-list">
                         <li>
                             <a href="<?php echo esc_url( home_url() ) ?>/wp-content/themes/zume-project-multilingual/assets/files/en/zume_faq.pdf"
                                target="_blank" rel="noopener noreferrer">
                                 <span style="padding:0 10px"><img
-                                            src="/wp-content/themes/zume-project-multilingual/assets/images/pages/pdf-download.png"
+                                            src="<?php echo esc_url( zume_images_uri( 'pages' ) ) ?>pdf-download.png"
                                             alt="PDF download" width="30" height="30"
                                             class="alignnone size-full wp-image-907"/></span>
                                 <?php esc_html_e( 'Frequently Asked Questions (FAQ).', 'zume' ) ?>
                             </a>
                         </li>
-
+                        <li>
+                            <a href="https://docs.google.com/spreadsheets/d/12NUKhKfJl4ZnqegEdkHadlYMf2oHuEKIjNmyZI78TeA/edit?usp=sharing"
+                               target="_blank" rel="noopener noreferrer">
+                                    <span style="padding:0 10px"><img
+                                                src="/wp-content/themes/zume-project-multilingual/assets/images/pages/pdf-download.png"
+                                                alt="" width="30" height="30"
+                                                class="alignnone size-full wp-image-906"/></span>
+                                <?php esc_html_e( 'Language Translation Progress', 'zume' ) ?>
+                            </a>
+                        </li>
                     </ul>
+                </div>
+                <div class="medium-2 cell"></div>
+            </div>
 
+            <div class="grid-x grid-margin-x vertical-padding">
+                <div class="medium-2 cell"></div>
+                <div class="medium-8 cell">
+                    <h3><?php esc_html_e( "Additional Resources:", 'zume' ) ?></h3>
                     <?php
                     /**
                      * Optional content for the resources section specific to the language. This content can be added
@@ -114,7 +106,7 @@ Template Name: Zume Resources
                     if ( ! empty( $post ) && ! empty( $post->post_content ) ) {
                         echo '<hr>';
                         // @codingStandardsIgnoreStart
-                        esc_html_e( $post->post_content, 'zume' );
+                        echo $post->post_content;
 	                    // @codingStandardsIgnoreEnd
                     }
                     ?>

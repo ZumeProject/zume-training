@@ -322,7 +322,7 @@ class Zume_Course_Content {
         <section><!-- Step Title -->
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="step-title cell">
-                   <?php esc_html_e( 'GROUP PRAYER (5min)', 'zume' ) ?>
+                    <?php esc_html_e( 'GROUP PRAYER (5min)', 'zume' ) ?>
                 </div>
             </div>
             <!-- Activity Block -->

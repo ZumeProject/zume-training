@@ -109,17 +109,17 @@ $zume_user_meta = get_user_meta( get_current_user_id() ); // Full array of user 
                                     <input type="text"
                                            placeholder="example: 1000 Broadway, Denver, CO 80126"
                                            class="profile-input input-group-field"
-                                           id="validate_address"
+                                           id="validate_addressprofile"
                                            name="validate_address"
                                            value="<?php echo isset( $zume_user_meta['zume_user_address'][0] ) ? esc_html( $zume_user_meta['zume_user_address'][0] ) : ''; ?>"
                                     />
                                     <div class="input-group-button">
-                                        <input type="button" class="button" id="validate_address_button" value="Validate">
+                                        <input type="button" class="button" id="validate_address_buttonprofile" value="Validate" onclick="validate_user_address( jQuery('#validate_addressprofile').val() )">
                                     </div>
                                 </div>
 
                                 <div id="possible-results">
-                                    <input type="hidden" name="address" value="<?php echo isset( $zume_user_meta['zume_user_address'][0] ) ? esc_html( $zume_user_meta['zume_user_address'][0] ) : ''; ?>" />
+                                    <input type="hidden" name="address" id="address_profile" value="<?php echo isset( $zume_user_meta['zume_user_address'][0] ) ? esc_html( $zume_user_meta['zume_user_address'][0] ) : ''; ?>" />
                                 </div>
 
                                 <?php if ( ! empty( $zume_user_meta['zume_user_address'][0] ) && ! empty( $zume_user_meta['zume_user_lng'][0] ) && ! empty( $zume_user_meta['zume_user_lat'][0] ) ) : ?>
@@ -127,6 +127,9 @@ $zume_user_meta = get_user_meta( get_current_user_id() ); // Full array of user 
                                     <img src="https://maps.googleapis.com/maps/api/staticmap?center=<?php echo esc_attr( $zume_user_meta['zume_user_lat'][0] ) . ',' . esc_attr( $zume_user_meta['zume_user_lng'][0] ) ?>&zoom=5&size=600x250&markers=color:red|<?php echo esc_attr( $zume_user_meta['zume_user_lat'][0] ) . ',' . esc_attr( $zume_user_meta['zume_user_lng'][0] ) ?>&key=<?php echo esc_attr( Zume_Google_Geolocation::$key ); ?>" />
                                 </div>
                                 <?php endif; ?>
+
+
+
                             </td>
                         </tr>
                     </table>
@@ -135,7 +138,14 @@ $zume_user_meta = get_user_meta( get_current_user_id() ); // Full array of user 
                         <strong><?php echo esc_html__( 'Oh snap!', 'zume' )?></strong>
                     </div>
 
-                    <button class="button" type="submit"><?php echo esc_html__( 'Save', 'zume' )?></button>
+                    <button class="button" type="submit" id="submit_profile"><?php echo esc_html__( 'Save', 'zume' )?></button>
+
+                    <script>
+                        jQuery('#validate_addressprofile').keyup( function() {
+                            check_address('profile')
+                        });
+                    </script>
+
                 </form>
             </div>
         </div>
