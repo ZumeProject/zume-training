@@ -25,6 +25,13 @@ Template Name: Zume Resources
 
         <div id="main" class="large-12 medium-12 cell" role="main">
 
+            <div class="grid-x grid-margin-x verticle-padding">
+                <div class="cell center">
+                    <h2><?php esc_html_e( 'RESOURCES', 'zume' ) ?></h2>
+                    <br>
+                </div>
+            </div>
+
             <div class="grid-x grid-margin-x vertical-padding" style="background-color:#323A68; color:white;">
                 <div class="medium-2 cell"></div>
                 <div class="medium-4 cell vertical-padding">
@@ -34,7 +41,7 @@ Template Name: Zume Resources
                             <a href="<?php echo esc_url( zume_files_uri() ) ?>zume_guidebook.pdf"
                                target="_blank" rel="noopener noreferrer">
                                 <span style="padding:0 10px"><img
-                                            src="/wp-content/themes/zume-project-multilingual/assets/images/pages/pdf-download.png"
+                                            src="<?php echo esc_url( zume_images_uri( 'pages' ) ) ?>pdf-download.png"
                                             alt="PDF download" width="30" height="30"
                                             class="alignnone size-full wp-image-907"/></span>
                                 <?php esc_html_e( 'Download Guidebook', 'zume' ) ?>
@@ -45,20 +52,29 @@ Template Name: Zume Resources
                             <a href="<?php echo esc_url( zume_files_uri() ) ?>flyer.pdf"
                                target="_blank" rel="noopener noreferrer">
                                 <span style="padding:0 10px"><img
-                                            src="/wp-content/themes/zume-project-multilingual/assets/images/pages/pdf-download.png"
+                                            src="<?php echo esc_url( zume_images_uri( 'pages' ) ) ?>pdf-download.png"
                                             alt="PDF download" width="30" height="30"
                                             class="alignnone size-full wp-image-907"/></span>
                                 <?php esc_html_e( 'Download Zúme Promo Flyer', 'zume' ) ?>
                             </a>
                         </li>
 
-                        <li><a href="<?php echo esc_url( zume_files_uri() ) ?>zume_project.mp4" target="_blank"
+                        <li><a href="<?php echo esc_url( Zume_Course::get_video_by_key( 'promo', false ) ) ?>" target="_blank"
                                rel="noopener noreferrer">
                                 <span style="padding:0 10px"><img
-                                            src="/wp-content/themes/zume-project-multilingual/assets/images/pages/video-camera.png"
+                                            src="<?php echo esc_url( zume_images_uri( 'pages' ) ) ?>video-camera.png"
                                             alt="Video" width="30" height="30"
                                             class="alignnone size-full wp-image-908"/></span>
                                 <?php esc_html_e( 'Download Zume Promo Video', 'zume' ) ?>
+                            </a>
+                        </li>
+                        <li><a href="<?php echo esc_url( Zume_Course::get_video_by_key( 'overview', false ) ) ?>" target="_blank"
+                               rel="noopener noreferrer">
+                                <span style="padding:0 10px"><img
+                                            src="<?php echo esc_url( zume_images_uri( 'pages' ) ) ?>video-camera.png"
+                                            alt="Video" width="30" height="30"
+                                            class="alignnone size-full wp-image-908"/></span>
+                                <?php esc_html_e( 'Download Zume Overview Video', 'zume' ) ?>
                             </a>
                         </li>
 
@@ -69,7 +85,7 @@ Template Name: Zume Resources
                     <h3 class="white"><?php esc_html_e( 'Project Information', 'zume' ) ?></h3>
                     <ul class="resource-list">
                         <li>
-                            <a href="<?php echo esc_url( home_url() ) ?>/wp-content/themes/zume-project-multilingual/assets/files/en/zume_faq.pdf"
+                            <a href="<?php echo esc_url( zume_files_uri() ) ?>faq.pdf"
                                target="_blank" rel="noopener noreferrer">
                                 <span style="padding:0 10px"><img
                                             src="<?php echo esc_url( zume_images_uri( 'pages' ) ) ?>pdf-download.png"
@@ -82,7 +98,7 @@ Template Name: Zume Resources
                             <a href="https://docs.google.com/spreadsheets/d/12NUKhKfJl4ZnqegEdkHadlYMf2oHuEKIjNmyZI78TeA/edit?usp=sharing"
                                target="_blank" rel="noopener noreferrer">
                                     <span style="padding:0 10px"><img
-                                                src="/wp-content/themes/zume-project-multilingual/assets/images/pages/pdf-download.png"
+                                                src="<?php echo esc_url( zume_images_uri( 'pages' ) ) ?>pdf-download.png"
                                                 alt="" width="30" height="30"
                                                 class="alignnone size-full wp-image-906"/></span>
                                 <?php esc_html_e( 'Language Translation Progress', 'zume' ) ?>

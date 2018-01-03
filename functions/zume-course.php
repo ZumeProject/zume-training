@@ -207,7 +207,7 @@ class Zume_Course {
         }
     }
 
-    public static function get_video_by_key( $meta_key ) {
+    public static function get_video_by_key( $meta_key, $player = true ) {
         // get language
         $current_lang = zume_current_language();
         // get custom post type by language title
@@ -218,6 +218,9 @@ class Zume_Course {
         $video_id = get_post_meta( $page->ID, $meta_key, true );
         if ( ! $video_id ) {
             return '';
+        }
+        if ( ! $player ) { // if not the player, then return just the vimeo url.
+            return 'https://vimeo.com/' . $video_id;
         }
         return 'https://player.vimeo.com/video/' . $video_id;
     }

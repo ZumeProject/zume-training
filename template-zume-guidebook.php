@@ -23,9 +23,11 @@ Template Name: Zume Guidebook
                 </div>
 
                 <div class="grid-x row vertical-padding">
-                    <div class="large-6 large-offset-3 cell ">
+                    <div class="cell large-3"></div>
+                    <div class="large-6 cell">
                         <p style="font-size: 150%; margin: 20px 0 40px 0; text-align: center;"><?php esc_html_e( 'Our goal is kingdom growth, so we have made the entire training guidebook free for download. Use the link below.', 'zume' ) ?></p>
                     </div>
+                    <div class="cell large-3"></div>
                 </div>
 
                 <div class="grid-x grid-margin-y">
