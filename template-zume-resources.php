@@ -109,29 +109,33 @@ Template Name: Zume Resources
                 <div class="medium-2 cell"></div>
             </div>
 
-            <div class="grid-x grid-margin-x vertical-padding">
-                <div class="medium-2 cell"></div>
-                <div class="medium-8 cell">
-                    <h3><?php esc_html_e( "Additional Resources:", 'zume' ) ?></h3>
-                    <?php
-                    /**
-                     * Optional content for the resources section specific to the language. This content can be added
-                     * in the content area of the resource post for the language
-                     */
-                    global $post;
-                    if ( ! empty( $post ) && ! empty( $post->post_content ) ) {
+            <?php
+            /**
+             * Additional resources section
+             */
+            global $post;
+            if ( ! empty( $post ) && ! empty( $post->post_content ) ) {
+            ?>
+                <div class="grid-x grid-margin-x vertical-padding">
+                    <div class="medium-2 cell"></div>
+                    <div class="medium-8 cell">
+                        <h3><?php esc_html_e( "Additional Resources:", 'zume' ) ?></h3>
+                        <?php
+                        /**
+                         * Optional content for the resources section specific to the language. This content can be added
+                         * in the content area of the resource post for the language
+                         */
+
                         echo '<hr>';
                         // @codingStandardsIgnoreStart
                         echo $post->post_content;
-	                    // @codingStandardsIgnoreEnd
-                    }
-                    ?>
+                        // @codingStandardsIgnoreEnd
 
+                        ?>
+                    </div>
+                    <div class="medium-2 cell"></div>
                 </div>
-
-                <div class="medium-2 cell"></div>
-
-            </div>
+            <?php  } ?>
 
         </div> <!-- end #main -->
 

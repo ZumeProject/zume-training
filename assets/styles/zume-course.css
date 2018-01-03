@@ -175,7 +175,7 @@ div.activity-description ol, div.activity-description ul {
 }
 
 div.activity-description ol li, div.activity-description ul li {
-    padding:5px 0 20px;
+    padding:5px 0 5px;
 }
 
 .wistia_embed {

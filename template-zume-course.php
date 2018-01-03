@@ -353,11 +353,11 @@ class Zume_Course_Content {
             </div>
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="small-12 small-centered cell">
-                    <div class="flex-video widescreen vimeo">
+
                         <iframe style="border: 1px solid lightgrey;"  src="<?php echo esc_url( Zume_Course::get_video_by_key( 'scribe_1' ) ) ?>" width="560" height="315"
                                 frameborder="1"
                                 webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-                    </div>
+
 
                     <p class="center"><a
                                 href="<?php echo esc_url( zume_files_uri() ) ?>zume_video_scripts_welcome.pdf"
@@ -365,7 +365,7 @@ class Zume_Course_Content {
                                     src="<?php echo esc_url( zume_images_uri( 'course' ) ) ?>download-icon-150x150.png"
                                     alt=""
                                     width="35" height="35" class="alignnone size-thumbnail wp-image-3274"
-                                    style="vertical-align: text-bottom"/> <?php esc_html_e( "Zúme Video Scripts: Welcome", 'zume' ) ?>></a></p>
+                                    style="vertical-align: text-bottom"/> <?php esc_html_e( "Zúme Video Scripts: Welcome", 'zume' ) ?></a></p>
                 </div>
             </div>
             <!-- grid-x -->
@@ -398,11 +398,11 @@ class Zume_Course_Content {
 
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="small-12 small-centered cell">
-                    <div class="flex-video widescreen vimeo">
+
                         <iframe style="border: 1px solid lightgrey;"  src="<?php echo esc_url( Zume_Course::get_video_by_key( 'scribe_2' ) ) ?>" width="560" height="315"
                                 frameborder="1"
                                 webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-                    </div>
+
 
                     <p class="center"><a
                                 href="<?php echo esc_url( zume_files_uri() ) ?>zume_scripts_teach_them_to_obey.pdf"
@@ -450,11 +450,11 @@ class Zume_Course_Content {
             <!-- Video block -->
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="small-12 small-centered cell">
-                    <div class="flex-video widescreen vimeo">
+
                         <iframe style="border: 1px solid lightgrey;"  src="<?php echo esc_url( Zume_Course::get_video_by_key( 'scribe_3' ) ) ?>" width="560" height="315"
                                 frameborder="0"
                                 webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-                    </div>
+
 
                     <p class="center"><a
                                 href="<?php echo esc_url( zume_files_uri() ) ?>zume_scripts_spiritual_breathing.pdf"
@@ -493,7 +493,6 @@ class Zume_Course_Content {
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="large-4 cell activity-title"><?php esc_html_e( 'READ', 'zume' ) ?></div>
                 <div class="large-8 cell activity-description">
-
                     <?php esc_html_e( 'S.O.A.P.S. BIBLE READING', 'zume' ) ?>
                     <br><br>
                     <br>
@@ -508,11 +507,11 @@ class Zume_Course_Content {
             <!-- Video block -->
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="small-12 small-centered cell">
-                    <div class="flex-video widescreen vimeo">
+
                         <iframe style="border: 1px solid lightgrey;"  src="<?php echo esc_url( Zume_Course::get_video_by_key( 'toolkit_1' ) ) ?>" width="560" height="315"
                                 frameborder="1"
                                 webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-                    </div>
+
 
                     <p class="center"><a href="<?php echo esc_url( zume_files_uri() ) ?>zume_scripts_soaps.pdf"
                                          target="_blank"><img
@@ -553,11 +552,11 @@ class Zume_Course_Content {
             <!-- Video block -->
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="small-12 small-centered cell">
-                    <div class="flex-video widescreen vimeo">
+
                         <iframe style="border: 1px solid lightgrey;"  src="<?php echo esc_url( Zume_Course::get_video_by_key( 'toolkit_2' ) ) ?>" width="560" height="315"
                                 frameborder="0"
                                 webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-                    </div>
+
 
                     <p class="center"><a
                                 href="<?php echo esc_url( zume_files_uri() ) ?>zume_scripts_accountability_groups.pdf"
@@ -605,14 +604,13 @@ class Zume_Course_Content {
         <h3></h3>
         <section><!-- Step Title -->
             <div class="grid-x grid-margin-x grid-margin-y">
-                <div class="step-title cell"><?php esc_html_e( 'LOOKING FORWARD', 'zume' ) ?></div>
+                <div class="step-title cell">
+                    <?php esc_html_e( 'LOOKING FORWARD', 'zume' ) ?>
+                </div>
                 <!-- step-title cell -->
-                <div class="center"><br>
-
-                    <?php esc_html_e( 'Congratulations! You\'ve completed Session 1.', 'zume' ) ?>
-
-                    <?php esc_html_e( 'Below are next steps to take in preparation for the next session.', 'zume' ) ?>
-
+                <div class="center">
+                    <p><?php esc_html_e( 'Congratulations! You\'ve completed Session 1.', 'zume' ) ?></p>
+                    <p><?php esc_html_e( 'Below are next steps to take in preparation for the next session.', 'zume' ) ?></p><br><br>
                 </div>
             </div>
             <!-- grid-x -->
@@ -665,14 +663,15 @@ class Zume_Course_Content {
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="large-4 cell activity-title"><span><?php esc_html_e( 'DOWNLOAD', 'zume' ) ?></span></div>
                 <div class="large-8 cell activity-description">
-                    <?php esc_html_e( 'Does everyone have a printed copy of the Zúme Guidebook? If not, please be sure that someone can download the Guidebook and that everyone has access to some paper and a pen or pencil.', 'zume' ) ?>
-                    <br><br>
-                    <a href="<?php echo esc_url( zume_files_uri() ); ?>zume_guidebook.pdf"
-                       class="btn btn-large next-step zume-purple uppercase bg-white font-zume-purple big-btn btn-wide"
-                       target="_blank"><i class="glyphicon glyphicon-download-alt"></i> <span>
+                    <p><?php esc_html_e( 'Does everyone have a printed copy of the Zúme Guidebook? If not, please be sure that someone can download the Guidebook and that everyone has access to some paper and a pen or pencil.', 'zume' ) ?>
+                    </p>
+                    <p>
+                        <a class="button large"
+                           href="<?php echo esc_url( zume_files_uri() ) ?>zume-guidebook.pdf"
+                           target="_blank" rel="noopener">
                             <?php esc_html_e( 'GUIDEBOOK', 'zume' ) ?>
-                        </span>
-                    </a>
+                        </a>
+                    </p>
                 </div>
             </div> <!-- grid-x -->
             <!-- Activity Block  -->
@@ -718,7 +717,7 @@ class Zume_Course_Content {
                 <div class="large-8 cell activity-description">
                     <?php esc_html_e( 'If we want to make disciples who multiply &#8212; spiritual producers and not just consumers &#8212; then we need to learn and share four main ways God makes everyday followers more like Jesus:', 'zume' ) ?>
                     <br><br>
-                    <ul>
+                    <ul style="padding:0;">
                         <li><?php esc_html_e( 'Prayer', 'zume' ) ?></li>
                         <li><?php esc_html_e( 'Scripture', 'zume' ) ?></li>
                         <li><?php esc_html_e( 'Body Life', 'zume' ) ?></li>
@@ -730,11 +729,11 @@ class Zume_Course_Content {
             <!-- Video block -->
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="small-12 small-centered cell">
-                    <div class="flex-video widescreen vimeo">
-                        <iframe style="border: 1px solid lightgrey;"  src="<?php echo esc_url( Zume_Course::get_video_by_key( 'scribe_4' ) ) ?>"
+
+                        <iframe style="border: 1px solid lightgrey;"  src="<?php echo esc_url( Zume_Course::get_video_by_key( 'scribe_4' ) ) ?>" width="560" height="315"
                                 frameborder="0"
                                 webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-                    </div>
+
 
                     <p class="center"><a
                                 href="<?php echo esc_url( zume_files_uri() ); ?>zume_scripts_producers_vs_consumers.pdf"
@@ -774,22 +773,23 @@ class Zume_Course_Content {
                 <div class="large-4 cell activity-title">
                     <?php esc_html_e( 'READ', 'zume' ) ?>
                 </div>
-                <div class="large-8 cell activity-description"<?php esc_html_e( '>ZÚME TOOLKIT - PRAYER CYCLE', 'zume' ) ?>
-                <br><br>
-                <?php esc_html_e( 'The Bible tells us that prayer is our chance to speak to and hear from the same God who created us!', 'zume' ) ?>
+                <div class="large-8 cell activity-description">
+                    <?php esc_html_e( 'ZÚME TOOLKIT - PRAYER CYCLE', 'zume' ) ?>
                     <br><br>
-                <?php esc_html_e( 'Find the "Prayer Cycle" section in your Zúme Guidebook, and listen to the audio below.', 'zume' ) ?>
+                    <?php esc_html_e( 'The Bible tells us that prayer is our chance to speak to and hear from the same God who created us!', 'zume' ) ?>
+                        <br><br>
+                    <?php esc_html_e( 'Find the "Prayer Cycle" section in your Zúme Guidebook, and listen to the audio below.', 'zume' ) ?>
                 </div>
             </div> <!-- grid-x -->
 
             <!-- Video block -->
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="small-12 small-centered cell">
-                    <div class="flex-video widescreen vimeo">
-                        <iframe style="border: 1px solid lightgrey;"  src="<?php echo esc_url( Zume_Course::get_video_by_key( 'toolkit_3' ) ) ?>" width="640" height="360"
+
+                        <iframe style="border: 1px solid lightgrey;"  src="<?php echo esc_url( Zume_Course::get_video_by_key( 'toolkit_3' ) ) ?>" width="560" height="315"
                                 frameborder="0"
                                 webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-                    </div>
+
 
                     <p class="center"><a
                                 href="<?php echo esc_url( zume_files_uri() ) ?>zume_scripts_prayer_cycle.pdf"
@@ -869,11 +869,11 @@ class Zume_Course_Content {
             <!-- Video block -->
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="small-12 small-centered cell">
-                    <div class="flex-video widescreen vimeo">
-                        <iframe style="border: 1px solid lightgrey;"  src="<?php echo esc_url( Zume_Course::get_video_by_key( 'toolkit_4' ) ) ?>" width="640" height="360"
+
+                        <iframe style="border: 1px solid lightgrey;"  src="<?php echo esc_url( Zume_Course::get_video_by_key( 'toolkit_4' ) ) ?>" width="560" height="315"
                                 frameborder="0"
                                 webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-                    </div>
+
 
                     <p class="center"><a
                                 href="<?php echo esc_url( zume_files_uri() ) ?>zume_scripts_list_of_100.pdf"
@@ -891,16 +891,21 @@ class Zume_Course_Content {
         <section>
             <!-- Step Title -->
             <div class="grid-x grid-margin-x grid-margin-y">
-                <div class="step-title cell"><?php esc_html_e( 'PROJECT (30min)', 'zume' ) ?></div>
+                <div class="step-title cell">
+                    <?php esc_html_e( 'PROJECT (30min)', 'zume' ) ?>
+                </div>
+            </div>
 
-                <!-- Activity Block  -->
-                <div class="grid-x grid-margin-x grid-margin-y single">
-                    <div class="large-8 cell activity-description well well-lg">
-                        <?php esc_html_e( 'CREATE YOUR OWN LIST OF 100', 'zume' ) ?>
-                        <br><br>
-                        <?php esc_html_e( 'Have everyone in your group take the next 30 minutes to fill out their own inventory of relationships using the form in the "List of 100" section in your Zúme Guidebook. ', 'zume' ) ?>
-                    </div>
-                </div> <!-- grid-x -->
+            <!-- Activity Block  -->
+            <div class="grid-x grid-margin-x grid-margin-y">
+                <div class="large-2 cell"></div>
+                <div class="large-8 cell center">
+                    <?php esc_html_e( 'CREATE YOUR OWN LIST OF 100', 'zume' ) ?>
+                    <br><br>
+                    <?php esc_html_e( 'Have everyone in your group take the next 30 minutes to fill out their own inventory of relationships using the form in the "List of 100" section in your Zúme Guidebook. ', 'zume' ) ?>
+                </div>
+                <div class="large-2 cell"></div>
+            </div> <!-- grid-x -->
 
         </section>
 
@@ -912,10 +917,9 @@ class Zume_Course_Content {
                 <div class="step-title cell">
                     <?php esc_html_e( 'LOOKING FORWARD', 'zume' ) ?>
                 </div> <!-- step-title cell -->
-                <div class="center"><br>
-                    <?php esc_html_e( 'Congratulations on finishing Session 2! ', 'zume' ) ?>
-                    <br>
-                    <?php esc_html_e( 'Below are next steps to take in preparation for the next session.', 'zume' ) ?>
+                <div class="center">
+                    <p><?php esc_html_e( 'Congratulations on finishing Session 2! ', 'zume' ) ?></p>
+                    <p><?php esc_html_e( 'Below are next steps to take in preparation for the next session.', 'zume' ) ?></p>
                 </div>
 
             </div> <!-- grid-x -->
@@ -956,22 +960,25 @@ class Zume_Course_Content {
                 <div class="step-title cell">
                     <?php esc_html_e( 'LOOKING BACK', 'zume' ) ?>
                 </div> <!-- step-title cell -->
-                <div class="center"><br><?php esc_html_e( 'Welcome back to Zúme Training!', 'zume' ) ?></div>
             </div> <!-- grid-x -->
 
             <!-- Activity Block  -->
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="large-4 cell activity-title"><span><?php esc_html_e( 'CHECK-IN', 'zume' ) ?></span></div>
                 <div class="large-8 cell activity-description">
+                    <p>
                     <?php esc_html_e( 'Before getting started, take some time to check-in.', 'zume' ) ?>
-                    <br><br>
+                    </p>
+
+                    <p>
                     <?php esc_html_e( 'At the end of the last session, everyone in your group was challenged in two ways:', 'zume' ) ?>
-                    <br><br>
+                    </p>
+
                     <ol>
-                        <li><?php esc_html_e( 'You were asked to pray for five people from your List of 100 that you marked as an "Unbeliever" or "Unknown."', 'zume' ) ?>
-                        </li>
+                        <li><?php esc_html_e( 'You were asked to pray for five people from your List of 100 that you marked as an "Unbeliever" or "Unknown."', 'zume' ) ?></li>
                         <li><?php esc_html_e( 'You were encouraged to share how to make a List of 100 with someone.', 'zume' ) ?></li>
                     </ol>
+
                     <?php esc_html_e( 'Take a few moments to see how your group did this week.', 'zume' ) ?>
                 </div>
             </div> <!-- grid-x -->
@@ -1015,11 +1022,11 @@ class Zume_Course_Content {
             <!-- Video block -->
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="small-12 small-centered cell">
-                    <div class="flex-video widescreen vimeo">
-                        <iframe style="border: 1px solid lightgrey;"  src="<?php echo esc_url( Zume_Course::get_video_by_key( 'scribe_6' ) ) ?>" width="640" height="360"
+
+                        <iframe style="border: 1px solid lightgrey;"  src="<?php echo esc_url( Zume_Course::get_video_by_key( 'scribe_6' ) ) ?>" width="560" height="315"
                                 frameborder="0"
                                 webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-                    </div>
+
 
                     <p class="center"><a
                                 href="<?php echo esc_url( zume_files_uri() ) ?>zume_scripts_spiritual_economy.pdf"><img
@@ -1097,11 +1104,11 @@ class Zume_Course_Content {
             <!-- Video block -->
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="small-12 small-centered cell">
-                    <div class="flex-video widescreen vimeo">
-                        <iframe style="border: 1px solid lightgrey;"  src="<?php echo esc_url( Zume_Course::get_video_by_key( 'scribe_7' ) ) ?>" width="640" height="360"
+
+                        <iframe style="border: 1px solid lightgrey;"  src="<?php echo esc_url( Zume_Course::get_video_by_key( 'scribe_7' ) ) ?>" width="560" height="315"
                                 frameborder="0"
                                 webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-                    </div>
+
 
                     <p class="center"><a
                                 href="<?php echo esc_url( zume_files_uri() ) ?>zume_scripts_creation_to_judgement.pdf"><img
@@ -1134,10 +1141,12 @@ class Zume_Course_Content {
                 <div class="step-title cell"><?php esc_html_e( 'PRACTICE SHARING GOD\'S STORY (45min)', 'zume' ) ?></div>
             </div>
             <!-- Activity Block  -->
-            <div class="grid-x grid-margin-x grid-margin-y single">
-                <div class="large-8 cell activity-description well">
+            <div class="grid-x grid-margin-x grid-margin-y ">
+                <div class="large-3 cell"></div>
+                <div class="large-6 cell  center">
                     <?php esc_html_e( 'Break into groups of two or three people and spend the next 45 minutes practicing telling God\'s Story using the Activity instructions on page 13 of your Zúme Guidebook.', 'zume' ) ?>
                 </div>
+                <div class="large-3 cell"></div>
             </div>
 
         </section>
@@ -1166,11 +1175,11 @@ class Zume_Course_Content {
             <!-- Video block -->
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="small-12 small-centered cell">
-                    <div class="flex-video widescreen vimeo">
-                        <iframe style="border: 1px solid lightgrey;"  src="<?php echo esc_url( Zume_Course::get_video_by_key( 'toolkit_6' ) ) ?>" width="640" height="360"
+
+                        <iframe style="border: 1px solid lightgrey;"  src="<?php echo esc_url( Zume_Course::get_video_by_key( 'toolkit_6' ) ) ?>" width="560" height="315"
                                 frameborder="0"
                                 webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-                    </div>
+
 
                     <p class="center"><a
                                 href="<?php echo esc_url( zume_files_uri() ) ?>zume_scripts_baptism.pdf"><img
@@ -1192,12 +1201,14 @@ class Zume_Course_Content {
                     </ol>
                 </div>
             </div> <!-- grid-x -->
-            <div class="grid-x grid-margin-x grid-margin-y single">
-                <div class="large-8 cell activity-description well">
+            <div class="grid-x grid-margin-x grid-margin-y ">
+                <div class="large-3 cell"></div>
+                <div class="large-6 cell center callout warning">
                     <?php esc_html_e( 'IMPORTANT REMINDER &#8212; Have you been baptized?', 'zume' ) ?>
                     <br><br>
                     <?php esc_html_e( 'If not, then we encourage you to plan this before even one more session of this training. Invite your group to be a part of this important day when you celebrate saying "yes" to Jesus.', 'zume' ) ?>
                 </div>
+                <div class="large-3 cell"></div>
             </div>
         </section>
 
@@ -1209,10 +1220,9 @@ class Zume_Course_Content {
                 <div class="step-title cell">
                     <?php esc_html_e( 'LOOKING FORWARD', 'zume' ) ?>
                 </div> <!-- step-title cell -->
-                <div class="center"><br>
-                    <?php esc_html_e( 'Congratulations on finishing Session 3! ', 'zume' ) ?>
-                    <br>
-                    <?php esc_html_e( 'Below are next steps to take in preparation for the next session.', 'zume' ) ?>
+                <div class="center">
+                    <p><?php esc_html_e( 'Congratulations on finishing Session 3! ', 'zume' ) ?></p>
+                    <p><?php esc_html_e( 'Below are next steps to take in preparation for the next session.', 'zume' ) ?></p>
                 </div>
             </div> <!-- grid-x -->
             <!-- Activity Block  -->
@@ -1256,7 +1266,6 @@ class Zume_Course_Content {
                 <div class="step-title cell">
                     <?php esc_html_e( 'LOOKING BACK', 'zume' ) ?>
                 </div> <!-- step-title cell -->
-                <div class="center"><br><?php esc_html_e( 'Welcome back to Zúme Training!', 'zume' ) ?></div>
             </div> <!-- grid-x -->
 
             <!-- Activity Block  -->
@@ -1277,7 +1286,9 @@ class Zume_Course_Content {
             </div> <!-- grid-x -->
             <!-- Activity Block  -->
             <div class="grid-x grid-margin-x grid-margin-y">
-                <div class="large-4 cell activity-title"><span><?php esc_html_e( 'PRAY', 'zume' ) ?></span></div>
+                <div class="large-4 cell activity-title">
+                    <?php esc_html_e( 'PRAY', 'zume' ) ?>
+                </div>
                 <div class="large-8 cell activity-description">
                     <?php esc_html_e( "Pray and thank God for the results and invite His Holy Spirit to lead your time together.", 'zume' ) ?>
                 </div>
@@ -1319,11 +1330,11 @@ class Zume_Course_Content {
             <!-- Video block -->
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="small-12 small-centered cell">
-                    <div class="flex-video widescreen vimeo">
-                        <iframe style="border: 1px solid lightgrey;"  src="<?php echo esc_url( Zume_Course::get_video_by_key( 'toolkit_5' ) ) ?>" width="640" height="360"
+
+                        <iframe style="border: 1px solid lightgrey;"  src="<?php echo esc_url( Zume_Course::get_video_by_key( 'toolkit_5' ) ) ?>" width="560" height="315"
                                 frameborder="0"
                                 webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-                    </div>
+
 
                     <p class="center"><a
                                 href="<?php echo esc_url( zume_files_uri() ) ?>zume_scripts_testimony.pdf"
@@ -1347,10 +1358,12 @@ class Zume_Course_Content {
             </div> <!-- grid-x -->
 
             <!-- Activity Block  -->
-            <div class="grid-x grid-margin-x grid-margin-y single">
-                <div class="large-8 cell activity-description well">
+            <div class="grid-x grid-margin-x grid-margin-y ">
+                <div class="large-3 cell"></div>
+                <div class="large-6 cell center ">
                     <?php esc_html_e( "Break into groups of two or three and and spend the next 45 minutes practicing sharing your Testimony using the Activity instructions on page 15 of your Zúme Guidebook.", 'zume' ) ?>
                 </div>
+                <div class="large-3 cell"></div>
             </div> <!-- grid-x -->
 
         </section>
@@ -1379,11 +1392,11 @@ class Zume_Course_Content {
             <!-- Video block -->
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="small-12 small-centered cell">
-                    <div class="flex-video widescreen vimeo">
-                        <iframe style="border: 1px solid lightgrey;"  src="<?php echo esc_url( Zume_Course::get_video_by_key( 'scribe_5' ) ) ?>" width="640" height="360"
+
+                        <iframe style="border: 1px solid lightgrey;"  src="<?php echo esc_url( Zume_Course::get_video_by_key( 'scribe_5' ) ) ?>" width="560" height="315"
                                 frameborder="0"
                                 webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-                    </div>
+
 
                     <p class="center"><a
                                 href="<?php echo esc_url( zume_files_uri() ) ?>zume_scripts_greatest_blessing.pdf"
@@ -1397,7 +1410,9 @@ class Zume_Course_Content {
 
             <!-- Activity Block  -->
             <div class="grid-x grid-margin-x grid-margin-y">
-                <div class="large-4 cell activity-title"><?php esc_html_e( 'DISCUSS', 'zume' ) ?></div>
+                <div class="large-4 cell activity-title">
+                    <?php esc_html_e( 'DISCUSS', 'zume' ) ?>
+                </div>
                 <div class="large-8 cell activity-description">
                     <ol>
                         <li><?php esc_html_e( "Is this the pattern you were taught when you first began to follow Jesus? If not, what was different?", 'zume' ) ?>
@@ -1432,16 +1447,16 @@ class Zume_Course_Content {
             <!-- Video block -->
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="small-12 small-centered cell">
-                    <div class="flex-video widescreen vimeo">
-                        <iframe style="border: 1px solid lightgrey;"  src="<?php echo esc_url( Zume_Course::get_video_by_key( 'scribe_17' ) ) ?>" width="640" height="360"
+
+                        <iframe style="border: 1px solid lightgrey;"  src="<?php echo esc_url( Zume_Course::get_video_by_key( 'scribe_17' ) ) ?>" width="560" height="315"
                                 frameborder="0"
                                 webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-                    </div>
+
 
                     <p class="center">
                         <a href="<?php echo esc_url( zume_files_uri() ) ?>zume_scripts_duckling_discipleship.pdf"
                            target="_blank"><img
-                                    src="<?php echo esc_url( zume_files_uri() ); ?>download-icon.png"
+                                    src="<?php echo esc_url( zume_images_uri( 'course' ) ) ?>download-icon-150x150.png"
                                     alt=""
                                     width="35" height="35" class="alignnone size-thumbnail wp-image-3274"
                                     style="vertical-align: text-bottom"/> <?php esc_html_e( "Zúme Video Scripts: Duckling Discipleship", 'zume' ) ?>
@@ -1487,11 +1502,11 @@ class Zume_Course_Content {
             <!-- Video block -->
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="small-12 small-centered cell">
-                    <div class="flex-video widescreen vimeo">
-                        <iframe style="border: 1px solid lightgrey;"  src="<?php echo esc_url( Zume_Course::get_video_by_key( 'scribe_8' ) ) ?>" width="640" height="360"
+
+                        <iframe style="border: 1px solid lightgrey;"  src="<?php echo esc_url( Zume_Course::get_video_by_key( 'scribe_8' ) ) ?>" width="560" height="315"
                                 frameborder="0"
                                 webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-                    </div>
+
 
                     <p class="center"><a
                                 href="<?php echo esc_url( zume_files_uri() ) ?>zume_scripts_eyes_to_see.pdf"
@@ -1541,11 +1556,11 @@ class Zume_Course_Content {
             <!-- Video block -->
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="small-12 small-centered cell">
-                    <div class="flex-video widescreen vimeo">
-                        <iframe style="border: 1px solid lightgrey;"  src="<?php echo esc_url( Zume_Course::get_video_by_key( 'toolkit_9' ) ) ?>" width="640" height="360"
+
+                        <iframe style="border: 1px solid lightgrey;"  src="<?php echo esc_url( Zume_Course::get_video_by_key( 'toolkit_9' ) ) ?>" width="560" height="315"
                                 frameborder="0"
                                 webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-                    </div>
+
 
                     <p class="center"><a
                                 href="<?php echo esc_url( zume_files_uri() ) ?>zume_scripts_lord_s_supper.pdf"
@@ -1569,10 +1584,12 @@ class Zume_Course_Content {
             </div> <!-- grid-x -->
 
             <!-- Activity Block  -->
-            <div class="grid-x grid-margin-x grid-margin-y single">
-                <div class="large-8 cell activity-description well">
+            <div class="grid-x grid-margin-x grid-margin-y">
+                <div class="large-3 cell"></div>
+                <div class="large-6 cell center">
                     <?php esc_html_e( "Spend the next 10 minutes celebrating The Lord's Supper with your group using the pattern on page 15 of your Zúme Guidebook.", 'zume' ) ?>
                 </div>
+                <div class="large-3 cell"></div>
             </div> <!-- grid-x -->
 
         </section>
@@ -1586,9 +1603,8 @@ class Zume_Course_Content {
                     <?php esc_html_e( 'LOOKING FORWARD', 'zume' ) ?>
                 </div> <!-- step-title cell -->
                 <div class="center"><br>
-                    <?php esc_html_e( "Congratulations on finishing Session 4!", 'zume' ) ?>
-                    <br>
-                    <?php esc_html_e( "Below are next steps to take in preparation for the next session.", 'zume' ) ?>
+                    <p><?php esc_html_e( "Congratulations on finishing Session 4!", 'zume' ) ?></p>
+                    <p><?php esc_html_e( "Below are next steps to take in preparation for the next session.", 'zume' ) ?></p>
                 </div>
             </div> <!-- grid-x -->
 
@@ -1628,12 +1644,13 @@ class Zume_Course_Content {
                 <div class="step-title cell">
                     <?php esc_html_e( 'LOOKING BACK', 'zume' ) ?>
                 </div> <!-- step-title cell -->
-                <div class="center"><br><?php esc_html_e( 'Welcome back to Zúme Training!', 'zume' ) ?></div>
             </div> <!-- grid-x -->
 
             <!-- Activity Block  -->
             <div class="grid-x grid-margin-x grid-margin-y">
-                <div class="large-4 cell activity-title"><span><?php esc_html_e( 'CHECK-IN', 'zume' ) ?></span></div>
+                <div class="large-4 cell activity-title">
+                    <?php esc_html_e( 'CHECK-IN', 'zume' ) ?>
+                </div>
                 <div class="large-8 cell activity-description">
                     <?php esc_html_e( "At the end of the last session, everyone in your group in two ways:", 'zume' ) ?>
                     <br><br>
@@ -1685,11 +1702,11 @@ class Zume_Course_Content {
             <!-- Video block -->
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="small-12 small-centered cell">
-                    <div class="flex-video widescreen vimeo">
-                        <iframe style="border: 1px solid lightgrey;"  src="<?php echo esc_url( Zume_Course::get_video_by_key( 'toolkit_8' ) ) ?>" width="640" height="360"
+
+                        <iframe style="border: 1px solid lightgrey;"  src="<?php echo esc_url( Zume_Course::get_video_by_key( 'toolkit_8' ) ) ?>" width="560" height="315"
                                 frameborder="0"
                                 webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-                    </div>
+
 
                     <p class="center"><a
                                 href="<?php echo esc_url( zume_files_uri() ) ?>zume_scripts_prayer_walking.pdf"
@@ -1725,11 +1742,11 @@ class Zume_Course_Content {
             <div class="grid-x grid-margin-x grid-margin-y">
 
                 <div class="small-12 small-centered cell">
-                    <div class="flex-video widescreen vimeo">
-                        <iframe style="border: 1px solid lightgrey;"  src="<?php echo esc_url( Zume_Course::get_video_by_key( 'scribe_18' ) ) ?>" width="640" height="360"
+
+                        <iframe style="border: 1px solid lightgrey;"  src="<?php echo esc_url( Zume_Course::get_video_by_key( 'scribe_18' ) ) ?>" width="560" height="315"
                                 frameborder="0"
                                 webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-                    </div>
+
 
                     <p class="center"><a href="<?php echo esc_url( zume_files_uri() ) ?>zume_scripts_person_of_peace.pdf"
                                          target="_blank"><img
@@ -1768,10 +1785,12 @@ class Zume_Course_Content {
             </div> <!-- grid-x -->
 
             <!-- Activity Block  -->
-            <div class="grid-x grid-margin-x grid-margin-y single">
-                <div class="large-8 cell activity-description well">
+            <div class="grid-x grid-margin-x grid-margin-y">
+                <div class="large-3 cell"></div>
+                <div class="large-6 cell center">
                     <?php esc_html_e( "Break into groups of two or three and spend the next 15 minutes practicing the B.L.E.S.S. Prayer using the pattern on page 17 of your Zúme Guidebook. Practice praying the five areas of the B.L.E.S.S. Prayer for someone AND practice how you would train others to understand and use the B.L.E.S.S. Prayer, too.", 'zume' ) ?>
                 </div>
+                <div class="large-3 cell"></div>
             </div> <!-- grid-x -->
 
         </section>
@@ -1788,26 +1807,24 @@ class Zume_Course_Content {
                 <div class="grid-x grid-margin-x grid-margin-y">
                     <div class="large-4 cell activity-title"><?php esc_html_e( "ACTIVITY", 'zume' ) ?></div>
                     <div class="large-8 cell activity-description">
-                        <?php esc_html_e( "Break into groups of two or three and go out into the community to practice Prayer Walking.", 'zume' ) ?>
-                        <br><br>
-                        <?php esc_html_e( "Choosing a location can be as simple as walking outside from where you are now, or you could plan to go to a specific destination.", 'zume' ) ?>
-                        <br><br>
-                        <?php esc_html_e( "Go as God leads, and plan on spending 60-90 minutes on this activity.", 'zume' ) ?>
+                        <p><?php esc_html_e( "Break into groups of two or three and go out into the community to practice Prayer Walking.", 'zume' ) ?></p>
+                        <p><?php esc_html_e( "Choosing a location can be as simple as walking outside from where you are now, or you could plan to go to a specific destination.", 'zume' ) ?></p>
+                        <p><?php esc_html_e( "Go as God leads, and plan on spending 60-90 minutes on this activity.", 'zume' ) ?></p>
                     </div>
                 </div> <!-- grid-x -->
             </div>
 
 
             <!-- Step Title -->
-            <div class="grid-x grid-margin-x grid-margin-y">
+            <div class="grid-x grid-margin-x grid-margin-y vertical-padding">
                 <div class="step-title cell center">
                     <?php esc_html_e( 'LOOKING FORWARD', 'zume' ) ?>
                 </div> <!-- step-title cell -->
                 <div class="center">
-                    <br>
-                    <?php esc_html_e( "The session ends with a prayer walking activity.", 'zume' ) ?>
-                    <br>
-                    <?php esc_html_e( "Read through the Obey, Share, and Pray sections, below, before you head out!", 'zume' ) ?>
+                    <p>
+                    <?php esc_html_e( "The session ends with a prayer walking activity.", 'zume' ) ?></p>
+                    <p>
+                    <?php esc_html_e( "Read through the Obey, Share, and Pray sections, below, before you head out!", 'zume' ) ?></p>
                 </div>
             </div> <!-- grid-x -->
             <!-- Activity Block  -->
@@ -1846,7 +1863,6 @@ class Zume_Course_Content {
                 <div class="step-title cell">
                     <?php esc_html_e( 'LOOKING BACK', 'zume' ) ?>
                 </div> <!-- step-title cell -->
-                <div class="center"><br><?php esc_html_e( 'Welcome back to Zúme Training!', 'zume' ) ?></div>
             </div> <!-- grid-x -->
 
             <!-- Activity Block  -->
@@ -1899,11 +1915,11 @@ class Zume_Course_Content {
             <!-- Video block -->
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="small-12 small-centered cell">
-                    <div class="flex-video widescreen vimeo">
-                        <iframe style="border: 1px solid lightgrey;"  src="<?php echo esc_url( Zume_Course::get_video_by_key( 'scribe_9' ) ) ?>" width="640" height="360"
+
+                        <iframe style="border: 1px solid lightgrey;"  src="<?php echo esc_url( Zume_Course::get_video_by_key( 'scribe_9' ) ) ?>" width="560" height="315"
                                 frameborder="0"
                                 webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-                    </div>
+
 
                     <p class="center"><a
                                 href="<?php echo esc_url( zume_files_uri() ) ?>zume_scripts_faithfulness.pdf"
@@ -1947,11 +1963,11 @@ class Zume_Course_Content {
             <!-- Video block -->
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="small-12 small-centered cell">
-                    <div class="flex-video widescreen vimeo">
-                        <iframe style="border: 1px solid lightgrey;"  src="<?php echo esc_url( Zume_Course::get_video_by_key( 'toolkit_10' ) ) ?>" width="640" height="360"
+
+                        <iframe style="border: 1px solid lightgrey;"  src="<?php echo esc_url( Zume_Course::get_video_by_key( 'toolkit_10' ) ) ?>" width="560" height="315"
                                 frameborder="0"
                                 webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-                    </div>
+
 
                     <p class="center"><a
                                 href="<?php echo esc_url( zume_files_uri() ) ?>zume_scripts_3_3_group.pdf"
@@ -2003,11 +2019,11 @@ class Zume_Course_Content {
             <!-- Video block -->
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="small-12 small-centered cell">
-                    <div class="flex-video widescreen vimeo">
-                        <iframe style="border: 1px solid lightgrey;"  src="<?php echo esc_url( Zume_Course::get_video_by_key( '3_3_group' ) ) ?>" width="640" height="360"
+
+                        <iframe style="border: 1px solid lightgrey;"  src="<?php echo esc_url( Zume_Course::get_video_by_key( '3_3_group' ) ) ?>" width="560" height="315"
                                 frameborder="0"
                                 webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-                    </div>
+
                 </div>
             </div> <!-- grid-x -->
         </section>
@@ -2021,10 +2037,10 @@ class Zume_Course_Content {
                     <?php esc_html_e( 'LOOKING FORWARD', 'zume' ) ?>
                 </div> <!-- step-title cell -->
                 <div class="center">
-                    <br>
-                    <?php esc_html_e( "Congratulations on finishing Session 6!", 'zume' ) ?>
-                    <br>
-                    <?php esc_html_e( "Below are next steps to take in preparation for the next session.", 'zume' ) ?>
+                    <p>
+                    <?php esc_html_e( "Congratulations on finishing Session 6!", 'zume' ) ?></p>
+                    <p>
+                    <?php esc_html_e( "Below are next steps to take in preparation for the next session.", 'zume' ) ?></p>
                 </div>
             </div> <!-- grid-x -->
             <!-- Activity Block  -->
@@ -2063,7 +2079,6 @@ class Zume_Course_Content {
                 <div class="step-title cell">
                     <?php esc_html_e( 'LOOKING BACK', 'zume' ) ?>
                 </div> <!-- step-title cell -->
-                <div class="center"><br><?php esc_html_e( 'Welcome back to Zúme Training!', 'zume' ) ?></div>
             </div> <!-- grid-x -->
 
             <!-- Activity Block  -->
@@ -2122,11 +2137,11 @@ class Zume_Course_Content {
             <!-- Video block -->
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="small-12 small-centered cell">
-                    <div class="flex-video widescreen vimeo">
-                        <iframe style="border: 1px solid lightgrey;"  src="<?php echo esc_url( Zume_Course::get_video_by_key( 'scribe_10' ) ) ?>" width="640" height="360"
+
+                        <iframe style="border: 1px solid lightgrey;"  src="<?php echo esc_url( Zume_Course::get_video_by_key( 'scribe_10' ) ) ?>" width="560" height="315"
                                 frameborder="0"
                                 webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-                    </div>
+
 
                     <p class="center"><a
                                 href="<?php echo esc_url( zume_files_uri() ) ?>zume_scripts_training_cycle.pdf"
@@ -2205,10 +2220,10 @@ class Zume_Course_Content {
                     <?php esc_html_e( 'LOOKING FORWARD', 'zume' ) ?>
                 </div> <!-- step-title cell -->
                 <div class="center">
-                    <br>
-                    <?php esc_html_e( "Congratulations on finishing Session 7!", 'zume' ) ?>
-                    <br>
-                    <?php esc_html_e( "Below are next steps to take in preparation for the next session.", 'zume' ) ?>
+                    <p>
+                    <?php esc_html_e( "Congratulations on finishing Session 7!", 'zume' ) ?></p>
+                    <p>
+                    <?php esc_html_e( "Below are next steps to take in preparation for the next session.", 'zume' ) ?></p>
                 </div>
             </div> <!-- grid-x -->
             <!-- Activity Block  -->
@@ -2246,7 +2261,6 @@ class Zume_Course_Content {
                 <div class="step-title cell">
                     <?php esc_html_e( 'LOOKING BACK', 'zume' ) ?>
                 </div> <!-- step-title cell -->
-                <div class="center"><br><?php esc_html_e( 'Welcome back to Zúme Training!', 'zume' ) ?></div>
             </div> <!-- grid-x -->
 
             <!-- Activity Block  -->
@@ -2308,11 +2322,11 @@ class Zume_Course_Content {
             <!-- Video block -->
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="small-12 small-centered cell">
-                    <div class="flex-video widescreen vimeo">
-                        <iframe style="border: 1px solid lightgrey;"  src="<?php echo esc_url( Zume_Course::get_video_by_key( 'scribe_11' ) ) ?>" width="640" height="360"
+
+                        <iframe style="border: 1px solid lightgrey;"  src="<?php echo esc_url( Zume_Course::get_video_by_key( 'scribe_11' ) ) ?>" width="560" height="315"
                                 frameborder="0"
                                 webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-                    </div>
+
 
                     <p class="center"><a
                                 href="<?php echo esc_url( zume_files_uri() ) ?>zume_scripts_leadership_cells.pdf"
@@ -2384,10 +2398,10 @@ class Zume_Course_Content {
                     <?php esc_html_e( 'LOOKING FORWARD', 'zume' ) ?>
                 </div> <!-- step-title cell -->
                 <div class="center">
-                    <br>
-                    <?php esc_html_e( "Congratulations! You've completed Session 8. ", 'zume' ) ?>
-                    <br>
-                    <?php esc_html_e( "Below are next steps to take in preparation for the next session.", 'zume' ) ?>
+                    <p>
+                    <?php esc_html_e( "Congratulations! You've completed Session 8. ", 'zume' ) ?></p>
+                    <p>
+                    <?php esc_html_e( "Below are next steps to take in preparation for the next session.", 'zume' ) ?></p>
                 </div>
             </div> <!-- grid-x -->
             <!-- Activity Block  -->
@@ -2423,17 +2437,17 @@ class Zume_Course_Content {
         <h3></h3>
         <section><!-- Step Title -->
             <div class="grid-x grid-margin-x grid-margin-y">
-                <div class="step-title cell"><?php esc_html_e( 'LOOKING BACK', 'zume' ) ?></div>
-                <!-- step-title cell -->
-                <div class="center">
-                    <?php esc_html_e( "Welcome back to Zúme Training!", 'zume' ) ?>
+                <div class="step-title cell">
+                    <?php esc_html_e( 'LOOKING BACK', 'zume' ) ?>
                 </div>
             </div>
             <!-- grid-x -->
 
             <!-- Activity Block -->
             <div class="grid-x grid-margin-x grid-margin-y">
-                <div class="large-4 cell activity-title"><?php esc_html_e( 'CHECK-IN', 'zume' ) ?></div>
+                <div class="large-4 cell activity-title">
+                    <?php esc_html_e( 'CHECK-IN', 'zume' ) ?>
+                </div>
                 <div class="large-8 cell activity-description">
 
                     <?php esc_html_e( "Before getting started, take some time to check-in.", 'zume' ) ?>
@@ -2473,15 +2487,17 @@ class Zume_Course_Content {
         <h3></h3>
         <section><!-- Step Title -->
             <div class="grid-x grid-margin-x grid-margin-y">
-                <div class="step-title cell"><?php esc_html_e( 'WATCH AND DISCUSS (15min)', 'zume' ) ?></div>
-                <!-- step-title cell -->
-
+                <div class="step-title cell">
+                    <?php esc_html_e( 'WATCH AND DISCUSS (15min)', 'zume' ) ?>
+                </div>
             </div>
             <!-- grid-x -->
 
             <!-- Activity Block -->
             <div class="grid-x grid-margin-x grid-margin-y">
-                <div class="large-4 cell activity-title"><?php esc_html_e( 'WATCH', 'zume' ) ?></div>
+                <div class="large-4 cell activity-title">
+                    <?php esc_html_e( 'WATCH', 'zume' ) ?>
+                </div>
                 <div class="large-8 cell activity-description">
                     <?php esc_html_e( "When people think about disciples multiplying, they often think of it as a step-by-step process. The problem with that is — that's not how it works best!", 'zume' ) ?>
                 </div>
@@ -2489,13 +2505,13 @@ class Zume_Course_Content {
             <!-- grid-x -->
 
             <!-- Video block -->
-            <div class="grid-x grid-margin-x grid-margin-y">
+            <div class="grid-x grid-margin-x grid-margin-y vertical-padding">
                 <div class="small-12 small-centered cell">
-                    <div class="flex-video widescreen vimeo">
-                        <iframe style="border: 1px solid lightgrey;"  src="<?php echo esc_url( Zume_Course::get_video_by_key( 'scribe_12' ) ) ?>" width="640" height="360"
+
+                        <iframe style="border: 1px solid lightgrey;"  src="<?php echo esc_url( Zume_Course::get_video_by_key( 'scribe_12' ) ) ?>" width="560" height="315"
                                 frameborder="0"
                                 webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-                    </div>
+
                     <p class="center">
                         <a href="<?php echo esc_url( zume_files_uri() ) ?>zume_scripts_non_sequential.pdf"
                            target="_blank" rel="noopener">
@@ -2541,13 +2557,13 @@ class Zume_Course_Content {
             <!-- grid-x -->
 
             <!-- Video block -->
-            <div class="grid-x grid-margin-x grid-margin-y">
-                <div class="small-12 small-centered cell">
-                    <div class="flex-video widescreen vimeo">
-                        <iframe style="border: 1px solid lightgrey;"  src="<?php echo esc_url( Zume_Course::get_video_by_key( 'scribe_13' ) ) ?>" width="640" height="360"
+            <div class="grid-x grid-margin-x grid-margin-y vertical-padding">
+                <div class="small-12 small-centered cell ">
+
+                        <iframe style="border: 1px solid lightgrey;"  src="<?php echo esc_url( Zume_Course::get_video_by_key( 'scribe_13' ) ) ?>" width="560" height="315"
                                 frameborder="0"
                                 webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-                    </div>
+
                     <p class="center">
                         <a  href="<?php echo esc_url( zume_files_uri() ) ?>zume_scripts_pace.pdf"
                             target="_blank" rel="noopener"><img
@@ -2596,13 +2612,13 @@ class Zume_Course_Content {
             <!-- grid-x -->
 
             <!-- Video block -->
-            <div class="grid-x grid-margin-x grid-margin-y">
+            <div class="grid-x grid-margin-x grid-margin-y vertical-padding">
                 <div class="small-12 small-centered cell">
-                    <div class="flex-video widescreen vimeo">
-                        <iframe style="border: 1px solid lightgrey;"  src="<?php echo esc_url( Zume_Course::get_video_by_key( 'scribe_14' ) ) ?>" width="640" height="360"
+
+                        <iframe style="border: 1px solid lightgrey;"  src="<?php echo esc_url( Zume_Course::get_video_by_key( 'scribe_14' ) ) ?>" width="560" height="315"
                                 frameborder="0"
                                 webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-                    </div>
+
                     <p class="center">
                         <a  href="<?php echo esc_url( zume_files_uri() ) ?>zume_scripts_two_churches.pdf"
                             target="_blank" rel="noopener">
@@ -2677,7 +2693,7 @@ class Zume_Course_Content {
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="step-title cell"><?php esc_html_e( "ACTIVITY (30min)", 'zume' ) ?></div>
                 <!-- step-title cell -->
-                <div class="center">
+                <div class="center vertical-padding">
                     <?php esc_html_e( "SHARE YOUR PLAN AND PLAN AS A TEAM.", 'zume' ) ?>
                 </div>
             </div>
@@ -2687,9 +2703,10 @@ class Zume_Course_Content {
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="large-4 cell activity-title"><?php esc_html_e( 'SHARE', 'zume' ) ?></div>
                 <div class="large-8 cell activity-description">
-                    <?php esc_html_e( "IN GROUPS OF TWO OR THREE (15 minutes)", 'zume' ) ?>
+                    <p><?php esc_html_e( "IN GROUPS OF TWO OR THREE (15 minutes)", 'zume' ) ?></p>
 
-                    <?php esc_html_e( "Take turns sharing your 3-Month Plans with each other. Take time to ask questions about things you might not understand about plans and how the others will meet their commitments. Ask them to do the same for you and your plan. Find a training partner(s) that is willing to check in with you to report on progress and challenges and ask questions after 1, 2, 3, 4, 6, 8 and 12 weeks. Commit to doing the same for them.", 'zume' ) ?>
+                    <p><?php esc_html_e( "Take turns sharing your 3-Month Plans with each other. Take time to ask questions about things you might not understand about plans and how the others will meet their commitments. Ask them to do the same for you and your plan. Find a training partner(s) that is willing to check in with you to report on progress and challenges and ask questions after 1, 2, 3, 4, 6, 8 and 12 weeks. Commit to doing the same for them.", 'zume' ) ?>
+                    </p>
                 </div>
             </div>
             <!-- grid-x -->
@@ -2697,7 +2714,7 @@ class Zume_Course_Content {
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="large-4 cell activity-title"><?php esc_html_e( 'DISCUSS', 'zume' ) ?></div>
                 <div class="large-8 cell activity-description">
-                    <?php esc_html_e( "IN YOUR FULL TRAINING GROUP (15 minutes)", 'zume' ) ?>
+                    <p><?php esc_html_e( "IN YOUR FULL TRAINING GROUP (15 minutes)", 'zume' ) ?></p>
 
                     <?php esc_html_e( "Discuss and develop a group plan for starting at least two new 3/3 Groups or Zúme Training Groups in your area. Remember, your goal is start Simple Churches that multiply. 3/3 Groups and Zúme Training Groups are two ways to do that. Discuss and decide whether these new Groups will be connected to an existing local church or network or whether you’ll start a new network out of your Zúme Training Group.", 'zume' ) ?>
                 </div>
@@ -2707,27 +2724,28 @@ class Zume_Course_Content {
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="large-4 cell activity-title"><?php esc_html_e( "CONNECT", 'zume' ) ?></div>
                 <div class="large-8 cell activity-description">
-                    <?php esc_html_e( "CONNECT WITH YOUR COACH", 'zume' ) ?>
+                    <p><?php esc_html_e( "CONNECT WITH YOUR COACH", 'zume' ) ?></p>
 
                     <?php esc_html_e( "Make sure all group members know how to contact the Zúme Coach that’s been assigned to your group in case anyone has questions or needs more training. Remember to share your 3-Month Plan with your Coach, so they understand your goals. Discuss any other locations where members of your group could help launch new 3/3 Groups or Zúme Training Groups. Be sure to pray as a group and ask God for His favor to bring about all the good work possible out of these plans and commitments.", 'zume' ) ?>
                 </div>
             </div>
             <!-- grid-x -->
             <!-- Activity Block -->
-            <div class="grid-x grid-margin-x grid-margin-y">
-                <div class="large-4 cell activity-title"><?php esc_html_e( "SEND", 'zume' ) ?></div>
+            <!--<div class="grid-x grid-margin-x grid-margin-y">
+                <div class="large-4 cell activity-title"><?php /*esc_html_e( "SEND", 'zume' ) */?></div>
                 <div class="large-8 cell activity-description">
 
-                    <?php esc_html_e( "SUBMIT YOUR 3-MONTH PLAN", 'zume' ) ?>
+                    <p><?php /*esc_html_e( "SUBMIT YOUR 3-MONTH PLAN", 'zume' ) */?></p>
 
-                    <?php esc_html_e( "Any individual in your group can go login right now (if you’re not already) and send your 3-month plan to your coach by filling out this webform. We will also email you a digital copy of your plan. Feel feel free to contact your coach to discuss your plan or ask questions at any time.", 'zume' ) ?>
+                    <?php /*esc_html_e( "Any individual in your group can go login right now (if you’re not already) and send your 3-month plan to your coach by filling out this webform. We will also email you a digital copy of your plan. Feel feel free to contact your coach to discuss your plan or ask questions at any time.", 'zume' ) */?>
+
                     <div style="text-align: center;">
-                        <button class="button show-session-9-form" style="font-size: 20px;"><?php esc_html_e( "Fill in my 3-Month Plan", 'zume' ) ?>
+                        <button class="button show-session-9-form" style="font-size: 20px;"><?php /*esc_html_e( "Fill in my 3-Month Plan", 'zume' ) */?>
                         </button>
                     </div>
                     <div class="session-9-plan-form" style="display: none;">[session_nine_plan]</div>
                 </div>
-            </div>
+            </div>-->
             <!-- grid-x -->
 
         </section><!-- Step -->
@@ -2736,7 +2754,7 @@ class Zume_Course_Content {
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="step-title cell"><?php esc_html_e( 'LOOKING FORWARD', 'zume' ) ?></div>
                 <!-- step-title cell -->
-                <div class="center">
+                <div class="center vertical-padding">
                     <?php esc_html_e( "Congratulations! You've completed Session 9.", 'zume' ) ?>
                 </div>
             </div>
@@ -2751,11 +2769,11 @@ class Zume_Course_Content {
             </div>
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="small-12 small-centered cell">
-                    <div class="flex-video widescreen vimeo">
-                        <iframe style="border: 1px solid lightgrey;"  src="<?php echo esc_url( Zume_Course::get_video_by_key( 'scribe_16' ) ) ?>" width="640" height="360"
+
+                        <iframe style="border: 1px solid lightgrey;"  src="<?php echo esc_url( Zume_Course::get_video_by_key( 'scribe_16' ) ) ?>" width="560" height="315"
                                 frameborder="0"
                                 webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-                    </div>
+
 
                     <p class="center">
                         <a  href="<?php echo esc_url( zume_files_uri() ) ?>zume_scripts_completion_of_training.pdf"
@@ -2941,11 +2959,11 @@ class Zume_Course_Content {
             <!-- Video block -->
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="small-12 small-centered cell">
-                    <div class="flex-video widescreen vimeo">
-                        <iframe style="border: 1px solid lightgrey;"  src="<?php echo esc_url( Zume_Course::get_video_by_key( 'scribe_15' ) ) ?>" width="640" height="360"
+
+                        <iframe style="border: 1px solid lightgrey;"  src="<?php echo esc_url( Zume_Course::get_video_by_key( 'scribe_15' ) ) ?>" width="560" height="315"
                                 frameborder="0"
                                 webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-                    </div>
+
 
                     <p class="center">
                         <a  href="<?php echo esc_url( zume_files_uri() ) ?>zume_scripts_leadership_in_networks.pdf"
@@ -2990,11 +3008,11 @@ class Zume_Course_Content {
             <!-- Video block -->
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="small-12 small-centered cell">
-                    <div class="flex-video widescreen vimeo">
-                        <iframe style="border: 1px solid lightgrey;"  src="<?php echo esc_url( Zume_Course::get_video_by_key( 'toolkit_11' ) ) ?>" width="640" height="360"
+
+                        <iframe style="border: 1px solid lightgrey;"  src="<?php echo esc_url( Zume_Course::get_video_by_key( 'toolkit_11' ) ) ?>" width="560" height="315"
                                 frameborder="0"
                                 webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-                    </div>
+
 
                     <p class="center">
                         <a  href="<?php echo esc_url( zume_files_uri() ) ?>zume_scripts_peer_mentoring_groups.pdf"
@@ -3071,12 +3089,11 @@ class Zume_Course_Content {
 
                     <div class="grid-x grid-margin-x grid-margin-y">
                         <div class="small-12 small-centered cell">
-                            <div class="flex-video widescreen vimeo">
-                                <iframe style="border: 1px solid lightgrey;"  src="<?php echo esc_url( Zume_Course::get_video_by_key( 'scribe_16' ) ) ?>" width="640"
-                                        height="360"
+
+                                <iframe style="border: 1px solid lightgrey;"  src="<?php echo esc_url( Zume_Course::get_video_by_key( 'scribe_16' ) ) ?>" width="560" height="315"
                                         frameborder="0" webkitallowfullscreen mozallowfullscreen
                                         allowfullscreen></iframe>
-                            </div>
+
 
                             <p class="center">
                                 <a  href="<?php echo esc_url( zume_files_uri() ) ?>zume_scripts_completion_of_training.pdf"
