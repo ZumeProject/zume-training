@@ -209,4 +209,88 @@ class Zume_Dashboard {
         }
         return $highest_session;
     }
+
+    public static function get_available_videos_count( $next_session ) {
+        switch ( $next_session ) {
+            case '1':
+                echo 3;
+                break;
+            case '2':
+                echo 8;
+                break;
+            case '3':
+                echo 11;
+                break;
+            case '4':
+                echo 14;
+                break;
+            case '5':
+                echo 19;
+                break;
+            case '6':
+                echo 21;
+                break;
+            case '7':
+                echo 24;
+                break;
+            case '8':
+                echo 25;
+                break;
+            case '9':
+                echo 26;
+                break;
+            case '10':
+                echo 30;
+                break;
+            case '11':
+                echo 32;
+                break;
+            default:
+                echo 3;
+                break;
+
+        }
+    }
+
+    public static function get_available_tools_count( $next_session ) {
+        switch ( $next_session ) {
+            case '1':
+                echo 0;
+                break;
+            case '2':
+                echo 3;
+                break;
+            case '3':
+                echo 5;
+                break;
+            case '4':
+                echo 6;
+                break;
+            case '5':
+                echo 8;
+                break;
+            case '6':
+                echo 9;
+                break;
+            case '7':
+                echo 10;
+                break;
+            case '8':
+                echo 10;
+                break;
+            case '9':
+                echo 10;
+                break;
+            case '10':
+                echo 10;
+                break;
+            case '11':
+                echo 12;
+                break;
+            default:
+                echo 0;
+                break;
+
+        }
+    }
 }

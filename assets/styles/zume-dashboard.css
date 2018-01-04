@@ -412,3 +412,15 @@ ul#members-list.item-list {
     border: 1px solid #e0e0e0;
     border-radius: 10px;
 }
+
+.secondary-color {
+    color: #00aeff;
+}
+
+a.small {
+    font-size: small;
+}
+
+div.small {
+    font-size: small;
+}
