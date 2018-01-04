@@ -76,6 +76,13 @@ class Zume_REST_API {
                 }
             ),
         ) );
+
+        register_rest_route( $namespace, '/locations/validate_address', array(
+            array(
+                'methods'         => WP_REST_Server::CREATABLE,
+                'callback'        => array( $this, 'validate_by_address' ),
+            ),
+        ) );
     }
 
     /**
@@ -145,6 +152,29 @@ class Zume_REST_API {
             }
         } else {
             return new WP_Error( "log_param_error", "Please provide a valid address", array( 'status' => 400 ) );
+        }
+    }
+
+    /**
+     * Get tract from submitted address
+     * @param WP_REST_Request $request
+     * @access public
+     * @since 0.1
+     * @return string|WP_Error The contact on success
+     */
+    public function validate_by_address( WP_REST_Request $request){
+        $params = $request->get_json_params();
+        if ( isset( $params['address'] ) ){
+
+            $result = Zume_Google_Geolocation::query_google_api( $params['address'] );
+
+            if ( $result['status'] == 'OK'){
+                return $result;
+            } else {
+                return new WP_Error( "tract_status_error", 'Zero Results', array( 'status' => 400 ) );
+            }
+        } else {
+            return new WP_Error( "tract_param_error", "Please provide a valid address", array( 'status' => 400 ) );
         }
     }
 

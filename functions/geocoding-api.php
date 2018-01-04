@@ -38,7 +38,6 @@ class Zume_Google_Geolocation
         $url_address = 'https://maps.googleapis.com/maps/api/geocode/json?address=' . $address . '&key=' . self::$key;
         $details = json_decode( self::url_get_contents( $url_address ) );
 
-        zume_write_log( $details );
         if ( $details->status == 'ZERO_RESULTS' ) {
             return false;
         }

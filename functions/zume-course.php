@@ -49,26 +49,6 @@ class Zume_Course {
      * @since   0.1
      */
     public function __construct() {
-        add_shortcode( 'session_nine_plan', array( $this, 'session_nine_plan' ) );
-        add_action( "admin_post_session_nine_plan", array( $this, "session_nine_plan_submit" ) );
-        $this->session_nine_labels = array(
-            "I will share My Story [Testimony] and God’s Story [the Gospel] with the following individuals:",
-            "I will invite the following people to begin an Accountability Group with me:",
-            "I will challenge the following people to begin their own Accountability Groups and train them how to do it:",
-            "I will invite the following people to begin a 3/3 Group with me:",
-            "I will challenge the following people to begin their own 3/3 Groups and train them how to do it:",
-            "I will invite the following people to participate in a 3/3 Hope or Discover Group [see Appendix]:",
-            "I will invite the following people to participate in Prayer Walking with me:",
-            "I will equip the following people to share their story and God’s Story and make a List of 100 of the people in their relational network:",
-            "I will challenge the following people to use the Prayer Cycle tool on a periodic basis:",
-            "I will use the Prayer Cycle tool once every [days / weeks / months].",
-            "I will Prayer Walk once every [days / weeks / months].",
-            "I will invite the following people to be part of a Leadership Cell that I will lead:",
-            "I will encourage the following people to go through this Zúme Training course:",
-            "Other commitments:"
-        );
-
-
     } // End __construct()
 
     public static function get_next_session( $group_meta ) {
@@ -155,8 +135,4 @@ class Zume_Course {
         }
         return 'https://player.vimeo.com/video/' . $video_id;
     }
-
-
-
-
 }

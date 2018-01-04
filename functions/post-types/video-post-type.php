@@ -240,22 +240,22 @@ class Zume_Video_Post_Type
         $messages[ $this->post_type ] = [
             0  => '', // Unused. Messages start at index 1.
             1  => sprintf(
-                __( '%3$s updated. %1$sView %4$s%2$s', 'zume' ),
+                '%3$s updated. %1$sView %4$s%2$s',
                 '<a href="' . esc_url( get_permalink( $post->ID ) ) . '">',
                 '</a>',
                 $this->singular,
                 strtolower( $this->singular )
             ),
-            2  => __( 'Zume Video updated.', 'zume' ),
-            3  => __( 'Zume Video deleted.', 'zume' ),
-            4  => sprintf( __( '%s updated.', 'zume' ), $this->singular ),
+            2  => 'Zume Video updated.',
+            3  => 'Zume Video deleted.',
+            4  => sprintf( '%s updated.', $this->singular ),
             /* translators: %s: date and time of the revision */
-            5  => isset( $_GET['revision'] ) ? sprintf( __( '%1$s restored to revision from %2$s', 'zume' ), $this->singular, wp_post_revision_title( (int) $_GET['revision'], false ) ) : false,
-            6  => sprintf( __( '%1$s published. %3$sView %2$s%4$s', 'zume' ), $this->singular, strtolower( $this->singular ), '<a href="' . esc_url( get_permalink( $post->ID ) ) . '">', '</a>' ),
-            7  => sprintf( __( '%s saved.', 'zume' ), $this->singular ),
-            8  => sprintf( __( '%1$s submitted. %2$sPreview %3$s%4$s', 'zume' ), $this->singular, strtolower( $this->singular ), '<a target="_blank" href="' . esc_url( add_query_arg( 'preview', 'true', get_permalink( $post->ID ) ) ) . '">', '</a>' ),
+            5  => isset( $_GET['revision'] ) ? sprintf( '%1$s restored to revision from %2$s', $this->singular, wp_post_revision_title( (int) $_GET['revision'], false ) ) : false,
+            6  => sprintf( '%1$s published. %3$sView %2$s%4$s', $this->singular, strtolower( $this->singular ), '<a href="' . esc_url( get_permalink( $post->ID ) ) . '">', '</a>' ),
+            7  => sprintf( '%s saved.', $this->singular ),
+            8  => sprintf( '%1$s submitted. %2$sPreview %3$s%4$s', $this->singular, strtolower( $this->singular ), '<a target="_blank" href="' . esc_url( add_query_arg( 'preview', 'true', get_permalink( $post->ID ) ) ) . '">', '</a>' ),
             9  => sprintf(
-                __( '%1$s scheduled for: %1$s. %2$sPreview %2$s%3$6$s', 'zume' ),
+                '%1$s scheduled for: %1$s. %2$sPreview %2$s%3$6$s',
                 $this->singular,
                 strtolower( $this->singular ),
                 // translators: Publish box date format, see http://php.net/date
@@ -264,7 +264,7 @@ class Zume_Video_Post_Type
                 '<a target="_blank" href="' . esc_url( get_permalink( $post->ID ) ) . '">',
                 '</a>'
             ),
-            10 => sprintf( __( '%1$s draft updated. %2$sPreview %3$s%4$s', 'zume' ), $this->singular, strtolower( $this->singular ), '<a target="_blank" href="' . esc_url( add_query_arg( 'preview', 'true', get_permalink( $post->ID ) ) ) . '">', '</a>' ),
+            10 => sprintf( '%1$s draft updated. %2$sPreview %3$s%4$s', $this->singular, strtolower( $this->singular ), '<a target="_blank" href="' . esc_url( add_query_arg( 'preview', 'true', get_permalink( $post->ID ) ) ) . '">', '</a>' ),
         ];
 
         return $messages;
@@ -279,8 +279,8 @@ class Zume_Video_Post_Type
      */
     public function meta_box_setup()
     {
-        add_meta_box( $this->post_type . '_scribes', __( 'Video Scribes', 'zume' ), array( $this, 'load_video_meta_box' ), $this->post_type, 'normal', 'high' );
-        add_meta_box( $this->post_type . '_toolkit', __( 'Audio Toolkit', 'zume' ), array( $this, 'load_audio_meta_box' ), $this->post_type, 'normal', 'high' );
+        add_meta_box( $this->post_type . '_scribes', 'Video Scribes', array( $this, 'load_video_meta_box' ), $this->post_type, 'normal', 'high' );
+        add_meta_box( $this->post_type . '_toolkit', 'Audio Toolkit', array( $this, 'load_audio_meta_box' ), $this->post_type, 'normal', 'high' );
     } // End meta_box_setup()
 
     /**
@@ -638,7 +638,7 @@ class Zume_Video_Post_Type
             'name'        => '3/3 Group Demonstration',
             'description' => '',
             'type'        => 'link',
-            'default'     => '248149797', // todo need correct video
+            'default'     => '249724003',
             'section'     => 'scribe',
         ];
 

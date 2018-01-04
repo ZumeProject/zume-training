@@ -75,7 +75,7 @@ function zume_dra_only_allow_logged_in_rest_access( $access )
         $is_jwt = true;
     }
     if ( !is_user_logged_in() && !$is_public && !$is_jwt ) {
-        return new WP_Error( 'rest_cannot_access', __( 'Only authenticated users can access the REST API.', 'disable-json-api' ), [ 'status' => rest_authorization_required_code() ] );
+        return new WP_Error( 'rest_cannot_access', 'Only authenticated users can access the REST API.', [ 'status' => rest_authorization_required_code() ] );
     }
 
     return $access;

@@ -5,15 +5,6 @@
             <nav role="navigation">
 				<?php zume_footer_links(); ?>
             </nav>
-
-            <!--<p class="source-org copyright">
-                &copy; <?php
-/*	            // @codingStandardsIgnoreStart
-                esc_html_e( date( 'Y' ), 'zume' )
-	            // @codingStandardsIgnoreEnd
-                */?>
-                <?php /*bloginfo( 'name' ); */?>.
-            </p>-->
         </div>
         <div class="medium-1 cell"></div>
     </div> <!-- end #inner-footer -->
