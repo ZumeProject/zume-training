@@ -488,6 +488,9 @@ $zume_user_meta    = zume_get_user_meta( $zume_current_user );
 </div>
 
 <?php
+/**
+ * Group Modal Boxes
+ */
 foreach ( $zume_user_meta as $zume_key => $v ) {
     $zume_key_beginning = substr( $zume_key, 0, 10 );
     if ( 'zume_group' == $zume_key_beginning ) {

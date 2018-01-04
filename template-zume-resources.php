@@ -135,7 +135,7 @@ Template Name: Zume Resources
                     </div>
                     <div class="medium-2 cell"></div>
                 </div>
-            <?php  } ?>
+            <?php } ?>
 
         </div> <!-- end #main -->
 
