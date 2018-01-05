@@ -6,6 +6,8 @@
  * use: function_exists('pll_the_languages' )
  */
 
+
+
 /**
  * Tests if polylang plugin is installed.
  * Must check for plugin existence, because when the polylang plugin is updated, it will be deleted and reinstalled, which
@@ -83,4 +85,20 @@ function zume_get_posts_translation_url( $page_title, $slug = 'en' ) {
     }
 }
 
-
+// Navigation Translation Strings for Menu Titles
+$navigation_menu = [
+    __( 'Home', 'zume' ),
+    __( 'Dashboard', 'zume' ),
+    __( 'About', 'zume' ),
+    __( 'Guidebook', 'zume' ),
+    __( 'Resources', 'zume' ),
+    __( 'FAQ', 'zume' ),
+    __( 'Overview', 'zume' ),
+    __( 'Settings', 'zume' ),
+    __( 'Profile', 'zume' ),
+    __( 'Coach', 'zume' ),
+    __( 'Admin', 'zume' ),
+    __( 'Logout', 'zume' ),
+    __( 'Login', 'zume' ),
+    __( 'Register', 'zume' )
+];

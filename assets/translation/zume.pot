@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "Project-Id-Version: Zúme Project\n"
-"POT-Creation-Date: 2018-01-04 16:18-0700\n"
+"POT-Creation-Date: 2018-01-05 07:37-0700\n"
 "PO-Revision-Date: 2017-12-05 06:36-0800\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -132,7 +132,7 @@ msgstr ""
 msgid "Find out more about Zúme"
 msgstr ""
 
-#: functions/activator.php:46
+#: functions/activator.php:46 functions/zume-polylang-integration.php:99
 msgid "Coach"
 msgstr ""
 
@@ -197,6 +197,58 @@ msgstr ""
 
 #: functions/login/user-register.php:98
 msgid "GeoCoded IP"
+msgstr ""
+
+#: functions/zume-polylang-integration.php:90
+msgid "Home"
+msgstr ""
+
+#: functions/zume-polylang-integration.php:91 template-zume-overview.php:191
+msgid "Dashboard"
+msgstr ""
+
+#: functions/zume-polylang-integration.php:92
+msgid "About"
+msgstr ""
+
+#: functions/zume-polylang-integration.php:93
+msgid "Guidebook"
+msgstr ""
+
+#: functions/zume-polylang-integration.php:94
+msgid "Resources"
+msgstr ""
+
+#: functions/zume-polylang-integration.php:95
+msgid "FAQ"
+msgstr ""
+
+#: functions/zume-polylang-integration.php:96
+msgid "Overview"
+msgstr ""
+
+#: functions/zume-polylang-integration.php:97
+msgid "Settings"
+msgstr ""
+
+#: functions/zume-polylang-integration.php:98
+msgid "Profile"
+msgstr ""
+
+#: functions/zume-polylang-integration.php:100
+msgid "Admin"
+msgstr ""
+
+#: functions/zume-polylang-integration.php:101
+msgid "Logout"
+msgstr ""
+
+#: functions/zume-polylang-integration.php:102
+msgid "Login"
+msgstr ""
+
+#: functions/zume-polylang-integration.php:103
+msgid "Register"
 msgstr ""
 
 #: parts/content-missing.php:4
@@ -318,6 +370,42 @@ msgstr ""
 msgid ""
 "Consider connecting to a TV or projector so everyone in your group can view "
 "the content."
+msgstr ""
+
+#: template-zume-coach.php:27
+msgid "Your Assigned People"
+msgstr ""
+
+#: template-zume-coach.php:32
+msgid "Name"
+msgstr ""
+
+#: template-zume-coach.php:33 template-zume-profile.php:70
+msgid "Email"
+msgstr ""
+
+#: template-zume-coach.php:34
+msgid "Phone"
+msgstr ""
+
+#: template-zume-coach.php:35
+msgid "Last Active"
+msgstr ""
+
+#: template-zume-coach.php:36 template-zume-coach.php:96
+msgid "Groups"
+msgstr ""
+
+#: template-zume-coach.php:78
+msgid "Assign Coach to Member"
+msgstr ""
+
+#: template-zume-coach.php:82
+msgid "User to be assigned"
+msgstr ""
+
+#: template-zume-coach.php:113
+msgid "Assign"
 msgstr ""
 
 #: template-zume-course.php:8
@@ -2404,8 +2492,8 @@ msgstr ""
 msgid "Members"
 msgstr ""
 
-#: template-zume-dashboard.php:76 template-zume-dashboard.php:1333
-#: template-zume-profile.php:104
+#: template-zume-dashboard.php:76 template-zume-dashboard.php:1259
+#: template-zume-dashboard.php:1333 template-zume-profile.php:104
 msgid "Address"
 msgstr ""
 
@@ -2669,6 +2757,11 @@ msgstr ""
 
 #: template-zume-dashboard.php:1255 template-zume-dashboard.php:1328
 msgid "Planned Meeting Time"
+msgstr ""
+
+#: template-zume-dashboard.php:1271 template-zume-dashboard.php:1345
+#: template-zume-profile.php:117
+msgid "Validate"
 msgstr ""
 
 #: template-zume-dashboard.php:1283
@@ -3112,10 +3205,6 @@ msgstr ""
 msgid "Go to the Dashboard to select your Group and start the next session"
 msgstr ""
 
-#: template-zume-overview.php:191
-msgid "Dashboard"
-msgstr ""
-
 #: template-zume-overview.php:253 template-zume-overview.php:393
 #: template-zume-overview.php:515 template-zume-overview.php:625
 #: template-zume-overview.php:769 template-zume-overview.php:876
@@ -3385,10 +3474,6 @@ msgstr ""
 #: template-zume-profile.php:55 template-zume-profile.php:59
 #: template-zume-profile.php:60
 msgid "Last Name"
-msgstr ""
-
-#: template-zume-profile.php:70
-msgid "Email"
 msgstr ""
 
 #: template-zume-profile.php:138

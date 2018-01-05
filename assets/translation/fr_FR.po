@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Zúme Project\n"
-"POT-Creation-Date: 2018-01-04 16:22-0700\n"
-"PO-Revision-Date: 2018-01-04 16:25-0700\n"
+"POT-Creation-Date: 2018-01-05 07:43-0700\n"
+"PO-Revision-Date: 2018-01-05 07:48-0700\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -54,14 +54,10 @@ msgid "Sign up"
 msgstr "Se connecter"
 
 #: front-page.php:97
-#, fuzzy
-#| msgid "Invite my friends"
 msgid "Invite some friends"
 msgstr "inviter des amis"
 
 #: front-page.php:106
-#, fuzzy
-#| msgid "Want to start the training?"
 msgid "Host a training"
 msgstr "Accueillir une formation"
 
@@ -150,7 +146,7 @@ msgstr "Quatrième diapositive détails."
 msgid "Find out more about Zúme"
 msgstr "Apprenez davantage sur l&apos; appareil respiratoire"
 
-#: functions/activator.php:46
+#: functions/activator.php:46 functions/zume-polylang-integration.php:99
 msgid "Coach"
 msgstr "Car"
 
@@ -164,8 +160,6 @@ msgid "Cancel"
 msgstr "Annuler"
 
 #: functions/enqueue-scripts.php:55
-#, fuzzy
-#| msgid "Current Slide"
 msgid "Current Step:"
 msgstr "Étape actuelle :"
 
@@ -186,22 +180,18 @@ msgid "Loading..."
 msgstr "Chargement..."
 
 #: functions/login/user-register.php:18
-#, fuzzy
 msgid "First Name (optional for coaching)"
 msgstr "Prénom (facultatif pour le coaching)"
 
 #: functions/login/user-register.php:22
-#, fuzzy
 msgid "Last Name (optional for coaching)"
 msgstr "Prénom (facultatif pour le coaching)"
 
 #: functions/login/user-register.php:26
-#, fuzzy
 msgid "Phone Number (optional for coaching)"
 msgstr "N° de téléphone (Facultatif)"
 
 #: functions/login/user-register.php:30
-#, fuzzy
 msgid "Address (optional for coaching)"
 msgstr "Adresse (facultatif pour le coaching)"
 
@@ -210,6 +200,8 @@ msgid ""
 "<strong>ERROR</strong>: We can not recognize this address as valid location. "
 "Please, check spelling."
 msgstr ""
+"<strong>Erreur</strong>: nous ne pouvons pas reconnaître cette adresse comme "
+"emplacement valide. S’il vous plaît, vérifier l’orthographe."
 
 #: functions/login/user-register.php:96 template-zume-profile.php:88
 msgid "Phone Number"
@@ -220,13 +212,62 @@ msgid "User Address"
 msgstr "Adresse de l'utilisateur"
 
 #: functions/login/user-register.php:98
-#, fuzzy
 msgid "GeoCoded IP"
 msgstr "Géocodées IP"
 
+#: functions/zume-polylang-integration.php:90
+msgid "Home"
+msgstr "Accueil"
+
+#: functions/zume-polylang-integration.php:91 template-zume-overview.php:191
+msgid "Dashboard"
+msgstr "Tableau de bord"
+
+#: functions/zume-polylang-integration.php:92
+msgid "About"
+msgstr "Ceux qui vous sentez-vous incertains ?"
+
+#: functions/zume-polylang-integration.php:93
+msgid "Guidebook"
+msgstr "Guide de Zúme"
+
+#: functions/zume-polylang-integration.php:94
+msgid "Resources"
+msgstr "Source"
+
+#: functions/zume-polylang-integration.php:95
+msgid "FAQ"
+msgstr "FAQ"
+
+#: functions/zume-polylang-integration.php:96
+msgid "Overview"
+msgstr "Vidéo d'aperçu analytique"
+
+#: functions/zume-polylang-integration.php:97
+msgid "Settings"
+msgstr "Paramètres"
+
+#: functions/zume-polylang-integration.php:98
+msgid "Profile"
+msgstr "Votre profil"
+
+#: functions/zume-polylang-integration.php:100
+msgid "Admin"
+msgstr "Administrateur du site"
+
+#: functions/zume-polylang-integration.php:101
+msgid "Logout"
+msgstr "URL de déconnexion"
+
+#: functions/zume-polylang-integration.php:102
+msgid "Login"
+msgstr "URL de connexion"
+
+#: functions/zume-polylang-integration.php:103
+msgid "Register"
+msgstr "S\\'inscrire"
+
 #: parts/content-missing.php:4
-#, fuzzy
-#| msgid "Oops, Post Not Found!"
 msgid "Oops, Page Not Found!"
 msgstr "Ups  ! Page pas trouvée"
 
@@ -265,7 +306,6 @@ msgid "Goals of the Zúme Project:"
 msgstr "Objectifs de l'action"
 
 #: template-zume-about.php:43
-#, fuzzy
 msgid ""
 "Zúme means yeast in Greek. In Matthew 13:33, Jesus is quoted as saying, "
 "\"The Kingdom of Heaven is like a woman who took yeast and mixed it into a "
@@ -283,12 +323,6 @@ msgstr ""
 "tous les quartiers."
 
 #: template-zume-about.php:46 template-zume-faq.php:209
-#, fuzzy
-#| msgid ""
-#| "Make disciples in every census tract in the United States and then in "
-#| "every Omega District globally, using an online training platform focused "
-#| "on equipping participants in the basic disciple-making and simple church "
-#| "planting multiplication principles, processes, and practices."
 msgid ""
 "Make disciples in every Omega District globally, using an online training "
 "platform focused on equipping participants in the basic disciple-making and "
@@ -384,6 +418,42 @@ msgid ""
 msgstr ""
 "Envisager de se connecter à un téléviseur ou un projecteur donc tous les "
 "membres de votre groupe peuvent afficher le contenu."
+
+#: template-zume-coach.php:27
+msgid "Your Assigned People"
+msgstr "Vos personnes affectées"
+
+#: template-zume-coach.php:32
+msgid "Name"
+msgstr "Nom d'utilisateur"
+
+#: template-zume-coach.php:33 template-zume-profile.php:70
+msgid "Email"
+msgstr "Email"
+
+#: template-zume-coach.php:34
+msgid "Phone"
+msgstr "Téléphone"
+
+#: template-zume-coach.php:35
+msgid "Last Active"
+msgstr "Plus actifs"
+
+#: template-zume-coach.php:36 template-zume-coach.php:96
+msgid "Groups"
+msgstr "Vos groupes"
+
+#: template-zume-coach.php:78
+msgid "Assign Coach to Member"
+msgstr "Assignez l’entraîneur au membre"
+
+#: template-zume-coach.php:82
+msgid "User to be assigned"
+msgstr "A affecter"
+
+#: template-zume-coach.php:113
+msgid "Assign"
+msgstr "Attribuer"
 
 #: template-zume-course.php:8
 msgid ""
@@ -879,8 +949,6 @@ msgid "Persecution and Suffering"
 msgstr "Persécution et la souffrance"
 
 #: template-zume-course.php:744
-#, fuzzy
-#| msgid "Zúme Video Scripts: Prayer Cycle"
 msgid "Zúme Video Scripts: Producers vs Consumers"
 msgstr "Zúme vidéo des Scripts : Cycle de prière"
 
@@ -907,10 +975,8 @@ msgid "LISTEN AND READ ALONG (2min)"
 msgstr "ÉCOUTER et lire le long (2min)"
 
 #: template-zume-course.php:777
-#, fuzzy
-#| msgid ">ZÚME TOOLKIT - PRAYER CYCLE"
 msgid "ZÚME TOOLKIT - PRAYER CYCLE"
-msgstr "> ZÚME TOOLKIT - CYCLE DE PRIÈRE"
+msgstr "ZÚME TOOLKIT - CYCLE DE PRIÈRE"
 
 #: template-zume-course.php:779
 msgid ""
@@ -3093,8 +3159,8 @@ msgstr "Heure de réunion"
 msgid "Members"
 msgstr "Membres"
 
-#: template-zume-dashboard.php:76 template-zume-dashboard.php:1333
-#: template-zume-profile.php:104
+#: template-zume-dashboard.php:76 template-zume-dashboard.php:1259
+#: template-zume-dashboard.php:1333 template-zume-profile.php:104
 msgid "Address"
 msgstr "Adresse"
 
@@ -3107,14 +3173,10 @@ msgid "Start Next Session "
 msgstr "Commencer la prochaine Session"
 
 #: template-zume-dashboard.php:133
-#, fuzzy
-#| msgid "Create Group"
 msgid "Archive Group"
 msgstr "fonds d'archive"
 
 #: template-zume-dashboard.php:151
-#, fuzzy
-#| msgid "You are not currently in a group"
 msgid "You have no active groups"
 msgstr "Vous n'avez pas de groupe."
 
@@ -3123,85 +3185,66 @@ msgid ""
 "We recommend at least 4 people for a group and no more than 12 people. "
 "Please start a group with the button provided."
 msgstr ""
+"Nous recommandons au moins 4 personnes pour un groupe et pas plus de 12 "
+"personnes. S’il vous plaît lancer un groupe avec le bouton prévu."
 
 #: template-zume-dashboard.php:173
 msgid "Video Library"
 msgstr "Vidéothèque"
 
 #: template-zume-dashboard.php:174
-#, fuzzy
 msgid "of 32 videos"
 msgstr "de 32 vidéos"
 
 #: template-zume-dashboard.php:183
-#, fuzzy
 msgid "Promo Challenge"
 msgstr "Défi de promo"
 
 #: template-zume-dashboard.php:204
-#, fuzzy
-#| msgid "View Zume Video"
 msgid "Overview Video"
 msgstr "Vidéo d'aperçu analytique"
 
 #: template-zume-dashboard.php:225
 msgid "How Zúme Works"
-msgstr ""
+msgstr "Comment fonctionne Zúme"
 
 #: template-zume-dashboard.php:251
-#, fuzzy
-#| msgid "Welcome to Session"
 msgid "Welcome to Zume"
 msgstr "Bienvenue à"
 
 #: template-zume-dashboard.php:272
-#, fuzzy
-#| msgid "Zúme Video Scripts: Teach Them to Obey"
 msgid "Teach Them to Obey"
 msgstr "Apprenez-leur à obéir"
 
 #: template-zume-dashboard.php:293
-#, fuzzy
-#| msgid "Zúme Video Scripts: Spiritual Breathing"
 msgid "Spiritual Breathing"
 msgstr "RESPIRATION SPIRITUELLE"
 
 #: template-zume-dashboard.php:314
-#, fuzzy
 msgid "S.O.A.P.S Bible Reading"
 msgstr "Lecture de la Bible S.O.A.P.S"
 
 #: template-zume-dashboard.php:335
-#, fuzzy
-#| msgid "Zúme Video Scripts: Accountability Groups"
 msgid "Accountability Groups"
 msgstr "GROUPES DE RESPONSABILISATION"
 
 #: template-zume-dashboard.php:362
-#, fuzzy
-#| msgid "Zúme Video Scripts: Prayer Cycle"
 msgid "Producers vs Consumers"
 msgstr "Vs producteurs consommateurs"
 
 #: template-zume-dashboard.php:383
-#, fuzzy
-#| msgid "Prayer"
 msgid "Prayer Cycle"
 msgstr "CYCLE DE PRIÈRE"
 
 #: template-zume-dashboard.php:404
-#, fuzzy
 msgid "List of 100"
 msgstr "LISTE DES 100"
 
 #: template-zume-dashboard.php:437
-#, fuzzy
-#| msgid "Zúme Video Scripts: Spiritual Economy"
 msgid "Spiritual Economy"
 msgstr "Les Scripts Zúme vidéo : L’économie spirituelle"
 
 #: template-zume-dashboard.php:458
-#, fuzzy
 msgid "The Gospel"
 msgstr ""
 "Il n’y a pas un « meilleur moyen » pour raconter l’histoire de Dieu "
@@ -3211,45 +3254,34 @@ msgstr ""
 "avec le public qu’ils partagent avec."
 
 #: template-zume-dashboard.php:479
-#, fuzzy
 msgid "Baptism"
 msgstr "baptême"
 
 #: template-zume-dashboard.php:507
-#, fuzzy
 msgid "3 Minute Testimony"
 msgstr "Témoignage de 3 minutes"
 
 #: template-zume-dashboard.php:528
-#, fuzzy
-#| msgid "Zúme Video Scripts: Greatest Blessing"
 msgid "Greatest Blessing"
 msgstr "Les Scripts Zúme vidéo : Plus grande bénédiction"
 
 #: template-zume-dashboard.php:549
-#, fuzzy
-#| msgid "Zúme Video Scripts: Duckling Discipleship"
 msgid "Duckling Discipleship"
 msgstr "Zúme vidéo des Scripts : Disciple de caneton"
 
 #: template-zume-dashboard.php:570
-#, fuzzy
 msgid "Eyes to See"
 msgstr "Pour voir"
 
 #: template-zume-dashboard.php:591
-#, fuzzy
 msgid "Lord's Supper"
 msgstr "LA SAINTE CÈNE"
 
 #: template-zume-dashboard.php:617
-#, fuzzy
-#| msgid "Prayer"
 msgid "Prayer Walking"
 msgstr "PRIÈRE À PIED"
 
 #: template-zume-dashboard.php:638
-#, fuzzy
 msgid "Person of Peace"
 msgstr ""
 "PERSONNE de la paix — Apprendre qui peut être une personne de la paix et "
@@ -3260,28 +3292,22 @@ msgid "Faithfulness"
 msgstr "Monogamie"
 
 #: template-zume-dashboard.php:692
-#, fuzzy
 msgid "3/3 Group Format"
 msgstr "FORMAT DE GROUPE 3/3"
 
 #: template-zume-dashboard.php:713
-#, fuzzy
 msgid "3/3 Group Live"
 msgstr "Groupe 3/3 Live"
 
 #: template-zume-dashboard.php:740
-#, fuzzy
 msgid "Training Cycle"
 msgstr "Scripts de Zúme vidéo : Cycle d’entraînement"
 
 #: template-zume-dashboard.php:767
-#, fuzzy
-#| msgid "Zúme Video Scripts: Leadership Cells"
 msgid "Leadership Cells"
 msgstr "Zúme vidéo des Scripts : Cellules de Leadership"
 
 #: template-zume-dashboard.php:794
-#, fuzzy
 msgid "Non-Sequential"
 msgstr "Séquentiel"
 
@@ -3290,30 +3316,22 @@ msgid "Pace"
 msgstr "Rythme"
 
 #: template-zume-dashboard.php:836
-#, fuzzy
 msgid "Part of Two Churches"
 msgstr "Proportion des deux églises"
 
 #: template-zume-dashboard.php:857
-#, fuzzy
-#| msgid "Zúme Video Scripts: Completion of Training"
 msgid "Completion of Training"
 msgstr "Education ouvrière USE éducation permanente (1)"
 
 #: template-zume-dashboard.php:884
-#, fuzzy
-#| msgid "Zúme Video Scripts: Leadership in Networks"
 msgid "Leadership in Networks"
 msgstr "Leadership dans les réseaux"
 
 #: template-zume-dashboard.php:905
-#, fuzzy
-#| msgid "Zúme Video Scripts: Peer Mentoring Groups"
 msgid "Peer Mentoring Groups"
 msgstr "GROUPES DE MENTORAT PAR LES PAIRS"
 
 #: template-zume-dashboard.php:932
-#, fuzzy
 msgid "Session videos will be added as you complete sessions."
 msgstr "Vidéos de la session seront ajoutés que vous avez terminé les séances."
 
@@ -3322,7 +3340,6 @@ msgid "Tools You've Gained"
 msgstr "Outils que vous avez gagné"
 
 #: template-zume-dashboard.php:952
-#, fuzzy
 msgid "of 12 tools"
 msgstr "de 12 outils"
 
@@ -3372,7 +3389,7 @@ msgstr "LISTE DE VÉRIFICATION DES ENTRAÎNEUR"
 
 #: template-zume-dashboard.php:1103
 msgid "Session tools will be added as you complete sessions."
-msgstr ""
+msgstr "Outils de session seront ajoutés comme vous toutes les séances."
 
 #: template-zume-dashboard.php:1133
 msgid "Your Coach"
@@ -3399,8 +3416,6 @@ msgid "activate"
 msgstr "activer"
 
 #: template-zume-dashboard.php:1207
-#, fuzzy
-#| msgid "Closed Groups"
 msgid "Archived Groups"
 msgstr "Cacher les groupes qui ont été fermés"
 
@@ -3414,11 +3429,16 @@ msgstr "Nom de groupe"
 
 #: template-zume-dashboard.php:1251
 msgid "Number of Group Members (including you)"
-msgstr ""
+msgstr "Il vous manque un nombre correct de groupe ou de la session."
 
 #: template-zume-dashboard.php:1255 template-zume-dashboard.php:1328
 msgid "Planned Meeting Time"
 msgstr "Prévu le temps de réunion"
+
+#: template-zume-dashboard.php:1271 template-zume-dashboard.php:1345
+#: template-zume-profile.php:117
+msgid "Validate"
+msgstr "Validé"
 
 #: template-zume-dashboard.php:1283
 msgid "Submit"
@@ -3445,14 +3465,13 @@ msgid "Delete"
 msgstr "Effacer"
 
 #: template-zume-faq.php:21
-#, fuzzy
 msgid "Zume FAQs"
 msgstr "FAQs"
 
 #: template-zume-faq.php:31
-#, fuzzy, php-format
+#, php-format
 msgid "Is it really 100% free?"
-msgstr "Est-ce réellement si libéral?"
+msgstr "Est-ce réellement si 100% libéral?"
 
 #: template-zume-faq.php:32
 msgid ""
@@ -3460,15 +3479,15 @@ msgid ""
 "products. We feel strongly that Kingdom ventures should be sacrificially "
 "offered freely."
 msgstr ""
+"Oui. Il n’y a aucune version de prime, pas de période d’essais, aucune vente "
+"de suivi des produits. Nous croyons fermement que ventures Royaume-Uni "
+"devraient être sacrificiellement offerts librement."
 
 #: template-zume-faq.php:38
-#, fuzzy
-#| msgid "How ready do you feel when it comes to training others?"
 msgid "How old do you have to be to take the training?"
 msgstr "Quel âge avez-vous suivre la formation ?"
 
 #: template-zume-faq.php:39
-#, fuzzy
 msgid ""
 "We recommend the training for people from 13-years-old and up. If you think "
 "you have a child younger than that who can benefit, by all means let them "
@@ -3480,16 +3499,18 @@ msgstr ""
 
 #: template-zume-faq.php:45
 msgid "What if no one in our group has internet access?"
-msgstr ""
+msgstr "Que se passe-t-il si aucun membre de notre groupe a accès à internet ?"
 
 #: template-zume-faq.php:46
 msgid ""
 "For now, you will need to find a place with public access. See the FAQ on "
 "“Are the videos available for download so they can be viewed offline?”"
 msgstr ""
+"Pour l’instant, vous devrez trouver un endroit à accès public. Voir la FAQ "
+"sur « est les vidéos disponibles en téléchargement afin qu’ils puissent être "
+"consultés hors ligne ? »"
 
 #: template-zume-faq.php:52
-#, fuzzy
 msgid "What if someone wants to be trained and doesn’t have an e-mail address?"
 msgstr ""
 "Que se passe-t-il si quelqu'un veut être formé et n’a pas une adresse de "
@@ -3504,20 +3525,33 @@ msgid ""
 "an address then the person who does have one can help them set up a free one "
 "through Gmail or other similar provider."
 msgstr ""
+"Au moins une personne dans le groupe devra avoir un compte de messagerie "
+"qu’ils utilisent en fait parce que le système de communications se "
+"produisent via la messagerie électronique. Cette personne doit être désigné "
+"comme le leader du groupe. Autres participants peuvent utiliser des adresses "
+"qui ne sont pas vérifiées régulièrement. Si quelqu'un n’a pas une adresse, "
+"puis la personne qui a un peut aider eux mis en place un gratuit via Gmail "
+"ou un autre similaire."
 
 #: template-zume-faq.php:59
 msgid "How can I preview the lessons before starting a training event?"
 msgstr ""
+"Comment puis-je visualiser les leçons avant de commencer une activité de "
+"formation ?"
 
 #: template-zume-faq.php:60
 msgid ""
 "Check out the “Overview” section. It highlights the concepts, the tools, and "
 "what your group will practice for each session."
 msgstr ""
+"Consultez la section « Présentation ». Il met en évidence les concepts, les "
+"outils, et ce que votre groupe sera pratique pour chaque session."
 
 #: template-zume-faq.php:66
 msgid "Are the videos available for download so they can be viewed offline?"
 msgstr ""
+"Sont les vidéos disponibles en téléchargement afin qu’ils puissent être "
+"consultés hors ligne ?"
 
 #: template-zume-faq.php:67
 msgid ""
@@ -3539,10 +3573,28 @@ msgid ""
 "try to short-circuit this intent. You can view the FAQ on “What is the "
 "content of the training?” for a general idea of the content."
 msgstr ""
+"Actuellement non. Cela va certainement changer quand nous commençons à avoir "
+"le matériel dans d’autres langues. Dans certains endroits, l’accès à "
+"Internet ou même aux ordinateurs est limité. Dans d’autres endroits, un "
+"système basé sur le Web n’est pas utilisable pour des raisons de sécurité. "
+"Dans d’autres encore, il n’y aura pas suffisamment de bénévoles pour gérer "
+"un système basé sur le Web. Aux États-Unis, il existe généralement des "
+"solutions de rechange pour de telles limitations. Culturellement aux Etats-"
+"Unis, les gens ont tendance à regarder des vidéos pour le divertissement ou "
+"la curiosité. Cela entraîne des vidéos hors contexte. Dans ce cas, il y a un "
+"fort désir que la formation soit faite en groupe, avec l’intention de "
+"l’application, et avec la responsabilité. Nous voulons également savoir où "
+"les lacunes dans la mise en œuvre existent géographiquement et ont besoin de "
+"l’approche basée sur le Web pour le faire. Les Américains sont notoirement "
+"mauvais pour ce qui est des reportages et nous voulons nous assurer qu’il "
+"n’y a vraiment pas de place où les disciples ne se multiplient pas aux États-"
+"Unis. Par conséquent, nous choisissons, au moins pour le moment, de rendre "
+"incommode et difficile de consommer les vidéos autrement que de la manière "
+"prévue. Nous vous demandons de ne pas essayer de court-circuiter cette "
+"intention. Vous pouvez consulter la FAQ sur “Quel est le contenu de la "
+"formation?” Pour avoir une idée générale du contenu."
 
 #: template-zume-faq.php:73
-#, fuzzy
-#| msgid "Want to start the training?"
 msgid "What is the content of the training?"
 msgstr "Quel est le contenu précis de chaque activité de formation?"
 
@@ -3553,15 +3605,21 @@ msgid ""
 "at the first page of the session choose \"Exploring Session\". This will let "
 "you go through the course content without marking it as completed."
 msgstr ""
+"Vous pouvez afficher un aperçu du contenu dans la section \"contenu\", ou "
+"téléchargez le guide et examiner le contenu du cours ou vous connecter et "
+"démarrer un groupe mais à la première page de la session « Découverte de "
+"Session ». Cela vous permettra de parcourir le contenu du cours sans la "
+"marquer comme terminée."
 
 #: template-zume-faq.php:80
 msgid ""
 "I want to make copies of the manual (Guidebook) before the training. How can "
 "I do that?"
 msgstr ""
+"Je veux faire des copies du manuel (Guide) avant la formation. Comment puis-"
+"je faire ?"
 
 #: template-zume-faq.php:81
-#, fuzzy
 msgid ""
 "You can always find the Guidebook by hovering over the “About” tab on the "
 "top of every page."
@@ -3574,6 +3632,8 @@ msgid ""
 "I accidentally hit the next button and I want to go back and view a video "
 "again. How do I navigate?"
 msgstr ""
+"J’ai accidentellement touché le bouton suivant et je veux revenir en arrière "
+"et voir la vidéo à nouveau. Comment naviguer ?"
 
 #: template-zume-faq.php:88
 msgid ""
@@ -3582,10 +3642,14 @@ msgid ""
 "small arrows next to the session number at the top of the page in a large "
 "font: < Session 2 >, for example."
 msgstr ""
+"La navigation se fait via les cases vers le haut de l’écran. Ceux qui "
+"représentent les étapes de la session. Navigation entre les sessions se fait "
+"par les petites flèches à côté du numéro de session en haut de la page dans "
+"une police de grande taille : < Session 2 >, par exemple."
 
 #: template-zume-faq.php:94
 msgid "There are lots of DMM or CPM trainers; why is Zúme needed?"
-msgstr ""
+msgstr "Il y a beaucoup de formateurs DMM ou CPM ; Pourquoi faut-il le Zúme ?"
 
 #: template-zume-faq.php:95
 msgid ""
@@ -3597,13 +3661,22 @@ msgid ""
 "people. It uses the same principles as many of the live training types "
 "available from others."
 msgstr ""
+"Formation en direct est mieux que la formation en ligne. Formation en ligne "
+"devrait jamais remplacer des événements de formation en direct. "
+"Malheureusement, en raison des limitations d’accès, la sensibilisation, "
+"disponibilité, calendrier et bien d’autres raisons, beaucoup de gens qui "
+"peut et devrait avoir accès à des activités de formation en direct n’ont pas "
+"accès. Zúme est une tentative de fournir un substitut de qualité entrée de "
+"gamme pour ces personnes. Il utilise les mêmes principes que bon nombre des "
+"types d’entraînement disponibles auprès d’autres."
 
 #: template-zume-faq.php:101
 msgid "I speak English but live outside the USA. How can I participate?"
 msgstr ""
+"Je parle anglais mais vivent en dehors des États-Unis. Comment puis-je "
+"participer ?"
 
 #: template-zume-faq.php:102
-#, fuzzy
 msgid ""
 "Right now, you need to provide some USA-based address for the system to "
 "work. This will not be true once Phase 3 is begun in other English-speaking "
@@ -3615,10 +3688,9 @@ msgstr ""
 
 #: template-zume-faq.php:108
 msgid "What is the statement of faith for Zúme?"
-msgstr ""
+msgstr "Quelle est la profession de foi pour Zúme ?"
 
 #: template-zume-faq.php:109
-#, fuzzy
 msgid ""
 "Since Zúme is not run by an organization, there is not a formal statement of "
 "faith. All of us involved, however, would agree on the Lausanne Covenant."
@@ -3628,20 +3700,19 @@ msgstr ""
 "sur la déclaration de Lausanne."
 
 #: template-zume-faq.php:115
-#, fuzzy
 msgid "Where can I view the promo video?"
 msgstr "Où puis-je voir la vidéo de promo ?"
 
 #: template-zume-faq.php:116
 msgid "Hover over the “About” tab and click “Resources”."
 msgstr ""
+"Placez le curseur sur l’onglet « A propos » et cliquez sur « Ressources »."
 
 #: template-zume-faq.php:122
 msgid "How does the coaching work?"
-msgstr ""
+msgstr "Comment fonctionne le coaching ?"
 
 #: template-zume-faq.php:123
-#, fuzzy
 msgid ""
 "Shortly after your group is registered, you will have a coach assigned. On "
 "each page of the training there is a link at the bottom of the page that "
@@ -3658,8 +3729,6 @@ msgstr ""
 "page d’atterrissage à zumeproject.com."
 
 #: template-zume-faq.php:129
-#, fuzzy
-#| msgid "Want to start the training?"
 msgid "Can I do the training by myself?"
 msgstr "Pour commencer la formation."
 
@@ -3669,9 +3738,11 @@ msgid ""
 "require other participants to complete. At least four people need to be "
 "present at every session."
 msgstr ""
+"N ° Il y a des exercices essentiels pour la formation et des séances "
+"d’essais qui nécessitent d’autres participants compléter. Au moins quatre "
+"personnes doivent être présentes à chaque session."
 
 #: template-zume-faq.php:136
-#, fuzzy
 msgid "Who is the training appropriate for?"
 msgstr "Qui est la formation appropriée pour ?"
 
@@ -3683,9 +3754,13 @@ msgid ""
 "not that version. We believe every person who fits this profile should take "
 "the training."
 msgstr ""
+"La formation est appropriée pour l’anglais parlant disciples du Christ qui "
+"sont âgée de 13 ans ou plus et qui sont capables de lire. À l’avenir, il "
+"peut y avoir une version produite qui est approprié pour les personnes "
+"analphabètes, mais ce n’est pas cette version. Nous croyons que chaque "
+"personne qui correspond à ce profil doit suivre la formation."
 
 #: template-zume-faq.php:143
-#, fuzzy
 msgid "Who owns Zúme?"
 msgstr "À qui appartient le Zúme ?"
 
@@ -3700,22 +3775,25 @@ msgid ""
 "Jonathan Project (https://hill111.com) is a consortium of people committed "
 "to multiplying disciples around the world."
 msgstr ""
+"Il n’y a pas d’organisation qui «gère» le projet Zúme et le projet n’est pas "
+"une organisation. C’est une coalition de gens qui ont un cœur pour exécuter "
+"le commandement du Christ de faire des disciples de chaque groupe de "
+"personnes sur terre et d’étendre Son Royaume à chaque endroit jusqu’à ce que "
+"Sa volonté soit faite sur la terre comme au ciel. L’idée du projet a vu le "
+"jour lors d’une réunion du leadership du projet Jonathan, mais s’est depuis "
+"propagée bien au-delà de ce groupe. Le Jonathan Project (https://hill111."
+"com) est un consortium de personnes engagées à multiplier les disciples à "
+"travers le monde."
 
 #: template-zume-faq.php:150
 msgid "What are the three phases that are planned?"
-msgstr ""
+msgstr "Quels sont les trois phases prévues ?"
 
 #: template-zume-faq.php:151
 msgid "PHASE 1"
 msgstr "phase 1"
 
 #: template-zume-faq.php:152
-#, fuzzy
-#| msgid ""
-#| "The initial goal of Zúme is for there to be a training group of four to "
-#| "twelve people in each census tract in the country. Each of these training "
-#| "groups will start two first-generation churches which will then begin to "
-#| "reproduce. There are about 75,000 census tracts in the U.S."
 msgid ""
 "Focuses on the United States in English. The initial goal is for there to be "
 "a training group of four to twelve people in each census tract in the "
@@ -3734,7 +3812,6 @@ msgid "PHASE 2"
 msgstr "Phase 2"
 
 #: template-zume-faq.php:154
-#, fuzzy
 msgid ""
 "Focuses on other language groups in the United States. The data available "
 "through www.mappingcenter.com will be mapped to the census tract level so it "
@@ -3771,14 +3848,24 @@ msgid ""
 "the least evangelized areas this will be a training group for approximately "
 "every 50,000 people."
 msgstr ""
+"Se concentre globalement dans les principales langues du monde. Le cadre de "
+"ciblage des groupes de formation est basé sur les cartes 4K développées par "
+"JEM. Il divise le monde en segments basés sur la population et le niveau "
+"général de saturation de l’évangile, avec des zones moins évangélisées "
+"recevant environ trois fois l’attention des régions plus évangélisées. Pour "
+"plus d’informations sur le framework, rendez-vous sur http://www.4Kworldmap."
+"com. Le projet utilisera la prochaine génération de données, 4K Plus, qui "
+"divisera le monde en environ 60 000 districts Omega. Des groupes de "
+"formation seront créés dans chaque district d’Omega, qui lancera ensuite des "
+"églises de première génération dans les districts. Dans les régions les "
+"moins évangélisées, ce sera un groupe de formation pour environ 50 000 "
+"personnes."
 
 #: template-zume-faq.php:162
-#, fuzzy
 msgid "Why is it called Zúme?"
 msgstr "Pourquoi le Cadre de réinvestissement?"
 
 #: template-zume-faq.php:163
-#, fuzzy
 msgid ""
 "Zúme means yeast in Greek. In Matthew 13:33 Jesus is quoted as saying, “the "
 "Kingdom of Heaven is like a woman who took yeast and mixed it into a large "
@@ -3800,6 +3887,8 @@ msgid ""
 "I really want to support Zúme financially because I passionately believe in "
 "it. How can I give?"
 msgstr ""
+"Je veux vraiment financièrement Zúme parce que je crois passionnément en "
+"elle. Comment puis-je donner ?"
 
 #: template-zume-faq.php:169
 msgid ""
@@ -3808,10 +3897,15 @@ msgid ""
 "the project for free. You can donate at big.life/donate/ if you select “Zúme "
 "Project” as the designation for your gift."
 msgstr ""
+"Voilà comment tout sur Zúme s’est passé jusqu'à présent. Nous sommes heureux "
+"que vous vous sentez de la même manière tout ce que nous faisons. Biglife a "
+"accepté de gérer les dons pour le projet gratuitement. Vous pouvez faire un "
+"don à big.life/donate/ si vous sélectionnez « Projet Zúme » comme "
+"désignation pour votre don."
 
 #: template-zume-faq.php:174
 msgid "When will the other 34 language versions become available?"
-msgstr ""
+msgstr "Quand les autres versions 34 linguistiques deviendront disponibles ?"
 
 #: template-zume-faq.php:175
 msgid ""
@@ -3825,13 +3919,22 @@ msgid ""
 "pay for a language we haven’t planned on then you can designate "
 "contributions for that language."
 msgstr ""
+"Premièrement, nous voulons régler les problèmes en anglais pendant quelques "
+"mois. Ensuite, cela dépend de la rapidité avec laquelle nous pouvons réunir "
+"des fonds pour les traductions, et de la rapidité avec laquelle nous pouvons "
+"localiser les traducteurs appropriés, et à quelle vitesse ils peuvent "
+"fonctionner. Espérons que les corrections seront terminées d’ici mai 2017. "
+"Le processus de traduction est difficile à cause de toutes les voix-off et "
+"de la retiming des vidéos, donc nous ne faisons que deviner le coût par "
+"langue, mais nous espérons environ 7 000 $ par langue. Si vous voulez "
+"financer une langue particulière ou payer pour une langue que nous n’avons "
+"pas prévue, vous pouvez désigner des contributions pour cette langue."
 
 #: template-zume-faq.php:180
 msgid "What languages will the training be translated into?"
-msgstr ""
+msgstr "Dans quelles langues la formation se traduira par ?"
 
 #: template-zume-faq.php:181
-#, fuzzy
 msgid ""
 "The project will start in the following languages and made available to "
 "those wishing to translate the training and tools into additional languages: "
@@ -3852,6 +3955,7 @@ msgstr ""
 #: template-zume-faq.php:186
 msgid "How are the groups started by trainees aligned or organized?"
 msgstr ""
+"Comment les groupes sont démarrés par les stagiaires alignés ou organisé ?"
 
 #: template-zume-faq.php:187
 msgid ""
@@ -3864,9 +3968,17 @@ msgid ""
 "developing Zúme come from such networks so we can help arrange that if "
 "desired."
 msgstr ""
+"Ça dépend. Si les stagiaires sortent d’une église, d’une dénomination ou "
+"d’un réseau particulier, alors la chose la plus naturelle est que les "
+"groupes nouvellement formés soient reliés à ces églises, dénominations ou "
+"réseaux existants. Si vous le souhaitez, cependant, un nouveau réseau peut "
+"être formé à partir des groupes qui commencent. Une troisième alternative "
+"serait que les nouveaux groupes se joignent à d’autres réseaux déjà "
+"existants d’églises simples. Beaucoup de personnes impliquées dans le "
+"développement de Zúme viennent de tels réseaux, donc nous pouvons aider à "
+"organiser cela si vous le souhaitez."
 
 #: template-zume-faq.php:206
-#, fuzzy
 msgid ""
 "Zúme means yeast in Greek. In Matthew 13:33 Jesus is quoted as saying, \"The "
 "Kingdom of Heaven is like a woman who took yeast and mixed it into a large "
@@ -3884,7 +3996,6 @@ msgstr ""
 "tous les quartiers."
 
 #: template-zume-guidebook.php:28
-#, fuzzy
 msgid ""
 "Our goal is kingdom growth, so we have made the entire training guidebook "
 "free for download. Use the link below."
@@ -3894,8 +4005,6 @@ msgstr ""
 "dessous."
 
 #: template-zume-guidebook.php:35
-#, fuzzy
-#| msgid "Download the Zúme Guidebook."
 msgid "Complete Zume Guidebook"
 msgstr "Guide complet de Zume"
 
@@ -3948,10 +4057,6 @@ msgid "Go to the Dashboard to select your Group and start the next session"
 msgstr ""
 "Aller au tableau de bord pour sélectionner votre groupe et commencer la "
 "prochaine session"
-
-#: template-zume-overview.php:191
-msgid "Dashboard"
-msgstr "Tableau de bord"
 
 #: template-zume-overview.php:253 template-zume-overview.php:393
 #: template-zume-overview.php:515 template-zume-overview.php:625
@@ -4307,10 +4412,6 @@ msgstr "Prénom"
 msgid "Last Name"
 msgstr "Nom"
 
-#: template-zume-profile.php:70
-msgid "Email"
-msgstr "Email"
-
 #: template-zume-profile.php:138
 msgid "Oh snap!"
 msgstr "Désolé"
@@ -4320,7 +4421,6 @@ msgid "Save"
 msgstr "Sauvegarder"
 
 #: template-zume-resources.php:30
-#, fuzzy
 msgid "RESOURCES"
 msgstr "Ressources :"
 
@@ -4329,26 +4429,20 @@ msgid "Promotional Materials"
 msgstr "Promotional Materials"
 
 #: template-zume-resources.php:47
-#, fuzzy
-#| msgid "Download Guidebook here."
 msgid "Download Guidebook"
 msgstr "Téléchargez le guide ici."
 
 #: template-zume-resources.php:58
-#, fuzzy
-#| msgid "Download and print the Zúme promo flyer."
 msgid "Download Zúme Promo Flyer"
 msgstr "Télécharger le Flyer Zúme Promo"
 
 #: template-zume-resources.php:68
-#, fuzzy
-#| msgid "Download the Zúme Guidebook."
 msgid "Download Zume Promo Video"
 msgstr "Téléchargez le Guide de Zúme."
 
 #: template-zume-resources.php:77
 msgid "Download Zume Overview Video"
-msgstr ""
+msgstr "Télécharger la vidéo de présentation de Zume"
 
 #: template-zume-resources.php:85
 msgid "Project Information"
@@ -4359,8 +4453,6 @@ msgid "Frequently Asked Questions (FAQ)."
 msgstr "Foire aux questions (FAQ)"
 
 #: template-zume-resources.php:104
-#, fuzzy
-#| msgid "Check on language translation progress here."
 msgid "Language Translation Progress"
 msgstr "Vérifier sur les progrès de traduction langue ici."
 
@@ -4370,8 +4462,6 @@ msgstr ""
 "Amusez-vous à pratiquer certaines activités en famille ou avec vos amis."
 
 #. Theme Name of the plugin/theme
-#, fuzzy
-#| msgid "Zúme Project Theme"
 msgid "Zúme Project"
 msgstr "Zúme projet pour multiplier les disciples."
 
@@ -4775,9 +4865,6 @@ msgstr "https://github.com/ChasmSolutions"
 #~ msgid "Installed But Not Activated"
 #~ msgstr "Installé mais non activé"
 
-#~ msgid "Active"
-#~ msgstr "Plus actifs"
-
 #~ msgid "Required Update not Available"
 #~ msgstr "Mise à jour Requise Indisponible"
 
@@ -4832,9 +4919,6 @@ msgstr "https://github.com/ChasmSolutions"
 
 #~ msgid "Plugin"
 #~ msgstr "Plug-in"
-
-#~ msgid "Source"
-#~ msgstr "Source"
 
 #~ msgid "Type"
 #~ msgstr "Type de la recette"
@@ -5026,12 +5110,6 @@ msgstr "https://github.com/ChasmSolutions"
 #~ "Télécharger mai / juin 2017 issue des frontières de la Mission sur Zúme "
 #~ "ici."
 
-#~ msgid "Register"
-#~ msgstr "S\\'inscrire"
-
-#~ msgid "Site Admin"
-#~ msgstr "Administrateur du site"
-
 #~ msgid "ERROR: Non-existent username submitted "
 #~ msgstr "ERREUR: Le nom d'utilisateur soumis n'existe pas"
 
@@ -5118,12 +5196,6 @@ msgstr "https://github.com/ChasmSolutions"
 
 #~ msgid "Successfully updated plugin settings"
 #~ msgstr "Les paramètres ont été mis à jour avec succès"
-
-#~ msgid "Login URL"
-#~ msgstr "URL de connexion"
-
-#~ msgid "Logout URL"
-#~ msgstr "URL de déconnexion"
 
 #~ msgid "Manage redirect rules"
 #~ msgstr "Gérer les règles de redirection"

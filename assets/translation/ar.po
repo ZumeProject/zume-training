@@ -1,16 +1,16 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Zúme Project\n"
-"POT-Creation-Date: 2018-01-04 16:15-0700\n"
-"PO-Revision-Date: 2018-01-04 16:51-0700\n"
+"POT-Creation-Date: 2018-01-05 07:37-0700\n"
+"PO-Revision-Date: 2018-01-05 07:40-0700\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: ar\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=6; plural=(n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n"
-"%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5);\n"
+"Plural-Forms: nplurals=6; plural=(n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5);\n"
 "X-Generator: Poedit 2.0.5\n"
 "X-Poedit-Basepath: ../..\n"
 "X-Poedit-Flags-xgettext: --add-comments=translators:\n"
@@ -74,8 +74,8 @@ msgid ""
 "believer to begin walking in the Lords will to multiply disciples."
 msgstr ""
 "وهناك حصادا كبيرا فتا في أمريكا الشمالية التي لا تصلها الوضع الراهن. Zúme "
-"الكتاب المقدس-إيقاظ وأداة لتمكين المؤمن اليومية للبدء في المشي في مجلس اللوردات "
-"لضرب التلاميذ."
+"الكتاب المقدس-إيقاظ وأداة لتمكين المؤمن اليومية للبدء في المشي في مجلس "
+"اللوردات لضرب التلاميذ."
 
 #: front-page.php:136
 msgid "Jake Duke — Indiana"
@@ -83,9 +83,9 @@ msgstr "جيك دوق - إنديانا"
 
 #: front-page.php:144
 msgid ""
-"Do you want to make a difference in your workplace, neighborhood, or circle of "
-"friends? The Zúme Project essentially will give you practical rails to run on "
-"that follow the example of the Church as seen in the New Testament."
+"Do you want to make a difference in your workplace, neighborhood, or circle "
+"of friends? The Zúme Project essentially will give you practical rails to run "
+"on that follow the example of the Church as seen in the New Testament."
 msgstr ""
 "هل تريد أن تحدث فرقا في مكان العمل، وحي، أو دائرة من الأصدقاء؟ المشروع Zúme "
 "أساسا سوف أعطيكم القضبان العملية لتشغيل على أن اتبع مثال الكنيسة كما رأينا في "
@@ -101,8 +101,8 @@ msgid ""
 "make and multiply disciples in our neighborhood. Jesus can make it a "
 "neighborhood again."
 msgstr ""
-"أنا متحمس جداً لاستخدام هذه الأداة Zúme للمساعدة في تدريب جميع الجنود لجعل وضرب "
-"تلاميذ في جوارنا. يمكن أن تجعل يسوع من حي مرة أخرى."
+"أنا متحمس جداً لاستخدام هذه الأداة Zúme للمساعدة في تدريب جميع الجنود لجعل "
+"وضرب تلاميذ في جوارنا. يمكن أن تجعل يسوع من حي مرة أخرى."
 
 #: front-page.php:160
 msgid "Chad Rehnberg"
@@ -110,8 +110,8 @@ msgstr "تشاد رينبيرج"
 
 #: front-page.php:168
 msgid ""
-"I believe Zúme can be used by the Lord to reach a huge number of people in our "
-"society who would never darken the door of a church building."
+"I believe Zúme can be used by the Lord to reach a huge number of people in "
+"our society who would never darken the door of a church building."
 msgstr ""
 "وأعتقد أن زوم يمكن أن تستخدم من قبل الرب للوصول إلى عدد كبير من الناس في "
 "مجتمعنا الذين لن تغمق باب مبنى الكنيسة."
@@ -144,7 +144,7 @@ msgstr "تفاصيل الشريحة الرابعة."
 msgid "Find out more about Zúme"
 msgstr "أعرف أكثر عنك"
 
-#: functions/activator.php:46
+#: functions/activator.php:46 functions/zume-polylang-integration.php:99
 msgid "Coach"
 msgstr "مدرب"
 
@@ -213,6 +213,58 @@ msgstr "عنوان"
 msgid "GeoCoded IP"
 msgstr "كود الموقع الجغرافي"
 
+#: functions/zume-polylang-integration.php:90
+msgid "Home"
+msgstr "الرئيسية"
+
+#: functions/zume-polylang-integration.php:91 template-zume-overview.php:191
+msgid "Dashboard"
+msgstr "لوحة التحكم"
+
+#: functions/zume-polylang-integration.php:92
+msgid "About"
+msgstr "حول"
+
+#: functions/zume-polylang-integration.php:93
+msgid "Guidebook"
+msgstr "دليل"
+
+#: functions/zume-polylang-integration.php:94
+msgid "Resources"
+msgstr "الموارد"
+
+#: functions/zume-polylang-integration.php:95
+msgid "FAQ"
+msgstr "الأسئلة الأكثر شيوعاً"
+
+#: functions/zume-polylang-integration.php:96
+msgid "Overview"
+msgstr "نظرة عامة"
+
+#: functions/zume-polylang-integration.php:97
+msgid "Settings"
+msgstr "الإعدادات"
+
+#: functions/zume-polylang-integration.php:98
+msgid "Profile"
+msgstr "الملف الشخصي"
+
+#: functions/zume-polylang-integration.php:100
+msgid "Admin"
+msgstr "المشرف العام"
+
+#: functions/zume-polylang-integration.php:101
+msgid "Logout"
+msgstr "تسجيل الخروج"
+
+#: functions/zume-polylang-integration.php:102
+msgid "Login"
+msgstr "تسجيل الدخول"
+
+#: functions/zume-polylang-integration.php:103
+msgid "Register"
+msgstr "التسجيل"
+
 #: parts/content-missing.php:4
 msgid "Oops, Page Not Found!"
 msgstr "عفوا، اضافة  غير موجودة!"
@@ -239,9 +291,9 @@ msgstr "القائمة"
 
 #: template-zume-about.php:27
 msgid ""
-"Zúme Training is an on-line and in-life learning experience designed for small "
-"groups who follow Jesus to learn how to obey His Great Commission and make "
-"disciples who multiply."
+"Zúme Training is an on-line and in-life learning experience designed for "
+"small groups who follow Jesus to learn how to obey His Great Commission and "
+"make disciples who multiply."
 msgstr ""
 "التدريب Zúme هي تجربة تعلم على الإنترنت وفي الحياة مصممة للمجموعات الصغيرة "
 "الذين يتبعون يسوع لمعرفة كيفية إطاعة \"صاحب لجنة كبيرة\" وجعل التلاميذ الذين "
@@ -262,8 +314,8 @@ msgid ""
 msgstr ""
 "لعملة باستحداث لبلجيكا، من بها, غينيا الخاطفة ثم إيو, قبل في وصغار الغالي. "
 "الشطر الخاطفة الصينية عن دار, جمعت لعدم الساحة به، أم. بلا تطوير بالجانب "
-"المنتصر أي, الآخر حاملات دول بـ, أهّل بالفشل للسيطرة بحق عل. هذه هو اتّجة قبضتهم "
-"الدولارات, دون و مايو النزاع لتقليعة."
+"المنتصر أي, الآخر حاملات دول بـ, أهّل بالفشل للسيطرة بحق عل. هذه هو اتّجة "
+"قبضتهم الدولارات, دون و مايو النزاع لتقليعة."
 
 #: template-zume-about.php:46 template-zume-faq.php:209
 msgid ""
@@ -271,9 +323,9 @@ msgid ""
 "platform focused on equipping participants in the basic disciple-making and "
 "simple church planting multiplication principles, processes, and practices."
 msgstr ""
-"جعل التلاميذ في كل حي أوميغا عالمياً، تستخدم منصة تدريب عبر إنترنت بسيطة ومركزة "
-"على تزويد المشاركين في صنع التلميذ الأساسية-الكنيسة غرس مبادئ الضرب والعمليات "
-"والممارسات."
+"جعل التلاميذ في كل حي أوميغا عالمياً، تستخدم منصة تدريب عبر إنترنت بسيطة "
+"ومركزة على تزويد المشاركين في صنع التلميذ الأساسية-الكنيسة غرس مبادئ الضرب "
+"والعمليات والممارسات."
 
 #: template-zume-about.php:66
 msgid "Zúme Training consists of nine (two-hour) Basic Sessions and includes:"
@@ -365,11 +417,47 @@ msgstr "إذا كنت تريد، يمكنك طباعة نسخ لأعضاء ال�
 
 #: template-zume-about.php:107
 msgid ""
-"Consider connecting to a TV or projector so everyone in your group can view the "
-"content."
+"Consider connecting to a TV or projector so everyone in your group can view "
+"the content."
 msgstr ""
 "ان, عدد فبعد أوزار الشهير في, وتم المحيط عالمية الدّفاع تم. بها في جورج بالحرب "
 "الخارجية,"
+
+#: template-zume-coach.php:27
+msgid "Your Assigned People"
+msgstr "الخاص بك تعيين شخص"
+
+#: template-zume-coach.php:32
+msgid "Name"
+msgstr "الإسم"
+
+#: template-zume-coach.php:33 template-zume-profile.php:70
+msgid "Email"
+msgstr "البريد الالكتروني"
+
+#: template-zume-coach.php:34
+msgid "Phone"
+msgstr "رقم الهاتف"
+
+#: template-zume-coach.php:35
+msgid "Last Active"
+msgstr "آخر نشاط"
+
+#: template-zume-coach.php:36 template-zume-coach.php:96
+msgid "Groups"
+msgstr "المجموعات"
+
+#: template-zume-coach.php:78
+msgid "Assign Coach to Member"
+msgstr "تعيين مدرب للأعضاء"
+
+#: template-zume-coach.php:82
+msgid "User to be assigned"
+msgstr "يتم تعيين المستخدم"
+
+#: template-zume-coach.php:113
+msgid "Assign"
+msgstr "تعيين"
 
 #: template-zume-course.php:8
 msgid ""
@@ -446,9 +534,9 @@ msgstr "تنزيل"
 
 #: template-zume-course.php:306
 msgid ""
-"You will be able to follow along on a digital PDF for this session, but please "
-"make sure that each member of your group has a printed copy of the materials "
-"for future sessions."
+"You will be able to follow along on a digital PDF for this session, but "
+"please make sure that each member of your group has a printed copy of the "
+"materials for future sessions."
 msgstr ""
 "سوف تتمكن من متابعة على طول على ملف PDF رقمية لهذه الدورة، ولكن الرجاء التأكد "
 "من أن كل عضو من الفريق الخاص بك لديه نسخة مطبوعة من المواد اللازمة للدورات "
@@ -464,12 +552,12 @@ msgstr "مجموعة الصلاة (5 دقائق)"
 
 #: template-zume-course.php:331
 msgid ""
-"Begin with prayer. Spiritual insight and transformation is not possible without "
-"the Holy Spirit. Take time as a group to invite Him to guide you over this "
-"session."
+"Begin with prayer. Spiritual insight and transformation is not possible "
+"without the Holy Spirit. Take time as a group to invite Him to guide you over "
+"this session."
 msgstr ""
-"تبدأ بالصلاة. البصيرة الروحية والتحول ليس ممكناً من دون الروح القدس. يستغرق بعض "
-"الوقت كمجموعة أن أدعوه لإرشادك خلال هذه الدورة."
+"تبدأ بالصلاة. البصيرة الروحية والتحول ليس ممكناً من دون الروح القدس. يستغرق "
+"بعض الوقت كمجموعة أن أدعوه لإرشادك خلال هذه الدورة."
 
 #: template-zume-course.php:341 template-zume-course.php:385
 #: template-zume-course.php:435 template-zume-course.php:708
@@ -525,17 +613,17 @@ msgstr "ناقش"
 
 #: template-zume-course.php:376
 msgid ""
-"If Jesus intended every one of His followers to obey His Great Commission, why "
-"do so few actually make disciples?"
+"If Jesus intended every one of His followers to obey His Great Commission, "
+"why do so few actually make disciples?"
 msgstr ""
-"إذا كان يقصد يسوع كل واحد من اتباعه طاعة \"له لجنة كبيرة\"، لماذا حتى عدد قليل "
-"في الواقع جعل التوابع؟"
+"إذا كان يقصد يسوع كل واحد من اتباعه طاعة \"له لجنة كبيرة\"، لماذا حتى عدد "
+"قليل في الواقع جعل التوابع؟"
 
 #: template-zume-course.php:395
 msgid ""
 "What is a disciple? And how do you make one? How do you teach a follower of "
-"Jesus to do what He told us in His Great Commission &#8212; to obey all of His "
-"commands?"
+"Jesus to do what He told us in His Great Commission &#8212; to obey all of "
+"His commands?"
 msgstr ""
 "ما هو الضبط؟ وكيف تجعل واحدة؟ كيف يمكنك تعليم تابعا ليسوع للقيام بما قاله لنا "
 "في \"لجنة كبيرة صاحب\" &#8212; الانصياع لكافة الأوامر له؟"
@@ -550,8 +638,8 @@ msgstr "عندما تفكر في الكنيسة، ما يتبادر إلى ال�
 
 #: template-zume-course.php:423
 msgid ""
-"What's the difference between that picture and what's described in the video as "
-"a \"Simple Church\"?"
+"What's the difference between that picture and what's described in the video "
+"as a \"Simple Church\"?"
 msgstr "ما هو الفرق بين هذه الصورة وما تم وصفه في الفيديو ككنيسة \"بسيطة\"؟"
 
 #: template-zume-course.php:425
@@ -608,8 +696,8 @@ msgstr ""
 
 #: template-zume-course.php:501
 msgid ""
-"Find the \"S.O.A.P.S. Bible Reading\" section in your Zúme Guidebook and listen "
-"to the audio overview."
+"Find the \"S.O.A.P.S. Bible Reading\" section in your Zúme Guidebook and "
+"listen to the audio overview."
 msgstr ""
 "العثور على مقطع \"قراءة الكتاب المقدس S.O.A.P.S.\" في دليل Zúme الخاص بك "
 "والاستماع إلى الصوت نظرة عامة."
@@ -625,19 +713,19 @@ msgstr "فرز قائمة المجموعات"
 #: template-zume-course.php:543
 msgid ""
 "The Bible tells us that every follower of Jesus will one day be held "
-"accountable for what we do and say and think. Accountability Groups are a great "
-"way to get ready!"
+"accountable for what we do and say and think. Accountability Groups are a "
+"great way to get ready!"
 msgstr ""
-"الكتاب المقدس يقول لنا أن كل اتباع المسيح سوف يوم واحد تكون مسؤولة عن ما والقول "
-"والتفكير. مجموعات المساءلة طريقة رائعة للحصول على استعداد!"
+"الكتاب المقدس يقول لنا أن كل اتباع المسيح سوف يوم واحد تكون مسؤولة عن ما "
+"والقول والتفكير. مجموعات المساءلة طريقة رائعة للحصول على استعداد!"
 
 #: template-zume-course.php:546
 msgid ""
 "Find the \"Accountability Groups\" section in your Zúme Guidebook, and listen "
 "to the audio below."
 msgstr ""
-"العثور على مقطع \"مجموعة المساءلة\" في دليل Zúme الخاص بك، والاستماع إلى الصوت "
-"أدناه."
+"العثور على مقطع \"مجموعة المساءلة\" في دليل Zúme الخاص بك، والاستماع إلى "
+"الصوت أدناه."
 
 #: template-zume-course.php:567
 msgid "Zúme Video Scripts: Accountability Groups"
@@ -752,12 +840,12 @@ msgstr "مرحباً بعودتك!"
 
 #: template-zume-course.php:666
 msgid ""
-"Does everyone have a printed copy of the Zúme Guidebook? If not, please be sure "
-"that someone can download the Guidebook and that everyone has access to some "
-"paper and a pen or pencil."
+"Does everyone have a printed copy of the Zúme Guidebook? If not, please be "
+"sure that someone can download the Guidebook and that everyone has access to "
+"some paper and a pen or pencil."
 msgstr ""
-"كل شخص لديه نسخة مطبوعة من دليل Zúme؟ إذا لم يكن الأمر كذلك، يرجى التأكد من أن "
-"شخص يمكن تنزيل الدليل وأن لكل فرد الحصول على بعض الورق والقلم أو قلم رصاص."
+"كل شخص لديه نسخة مطبوعة من دليل Zúme؟ إذا لم يكن الأمر كذلك، يرجى التأكد من "
+"أن شخص يمكن تنزيل الدليل وأن لكل فرد الحصول على بعض الورق والقلم أو قلم رصاص."
 
 #: template-zume-course.php:679 template-zume-course.php:967
 #: template-zume-course.php:1273 template-zume-course.php:1652
@@ -787,8 +875,8 @@ msgid ""
 "You were asked to begin practicing the S.O.A.P.S. Bible reading method and "
 "keeping a daily journal."
 msgstr ""
-"يمكنك طلب أن تبدأ ممارسة الكتاب المقدس S.O.A.P.S. أسلوب القراءة والاحتفاظ بدفتر "
-"يومية."
+"يمكنك طلب أن تبدأ ممارسة الكتاب المقدس S.O.A.P.S. أسلوب القراءة والاحتفاظ "
+"بدفتر يومية."
 
 #: template-zume-course.php:688
 msgid ""
@@ -805,25 +893,26 @@ msgstr "تأخذ لحظات قليلة لنرى كيف فعلت المجموعة
 
 #: template-zume-course.php:697
 msgid ""
-"Ask if anyone in the group has specific needs they would like the group to pray "
-"for. Ask someone to pray and ask God to help in the areas the group shared. Be "
-"sure to thank God that He promises in His Word to listen and act when His "
-"people pray. And, as always, ask God's Holy Spirit to lead your time, together."
+"Ask if anyone in the group has specific needs they would like the group to "
+"pray for. Ask someone to pray and ask God to help in the areas the group "
+"shared. Be sure to thank God that He promises in His Word to listen and act "
+"when His people pray. And, as always, ask God's Holy Spirit to lead your "
+"time, together."
 msgstr ""
-"اسأل إذا كان أي شخص في المجموعة للاحتياجات الخاصة أنها تود المجموعة أن نصلي من "
-"أجل. أطلب من شخص الصلاة وأسأل الله أن تساعد في المجالات المجموعة المشتركة. من "
-"المؤكد أن نصلي والحمد لله الذي وعد في \"كلمته\" للاستماع والعمل عند قومه. وكما "
-"هو الحال دائماً، نسأل الله الروح القدس لقيادة وقتك، معا."
+"اسأل إذا كان أي شخص في المجموعة للاحتياجات الخاصة أنها تود المجموعة أن نصلي "
+"من أجل. أطلب من شخص الصلاة وأسأل الله أن تساعد في المجالات المجموعة المشتركة. "
+"من المؤكد أن نصلي والحمد لله الذي وعد في \"كلمته\" للاستماع والعمل عند قومه. "
+"وكما هو الحال دائماً، نسأل الله الروح القدس لقيادة وقتك، معا."
 
 #: template-zume-course.php:718
 msgid ""
 "If we want to make disciples who multiply &#8212; spiritual producers and not "
-"just consumers &#8212; then we need to learn and share four main ways God makes "
-"everyday followers more like Jesus:"
+"just consumers &#8212; then we need to learn and share four main ways God "
+"makes everyday followers more like Jesus:"
 msgstr ""
-"إذا كنا نريد أن تجعل التلاميذ الذين تتضاعف &#8212; الروحية المنتجين والمستهلكين "
-"ليس فقط &#8212; فإننا بحاجة إلى تعلم وتبادل أربع طرق رئيسية الله يجعل شوهد "
-"اليومية أكثر مثل يسوع:"
+"إذا كنا نريد أن تجعل التلاميذ الذين تتضاعف &#8212; الروحية المنتجين "
+"والمستهلكين ليس فقط &#8212; فإننا بحاجة إلى تعلم وتبادل أربع طرق رئيسية الله "
+"يجعل شوهد اليومية أكثر مثل يسوع:"
 
 #: template-zume-course.php:721
 msgid "Prayer"
@@ -847,8 +936,8 @@ msgstr "‫Zúme فيديو مخطوطات: المنتجين مقابل المس
 
 #: template-zume-course.php:753
 msgid ""
-"Of the four areas detailed above (prayer, God's Word, etc.), which ones do you "
-"already practice?"
+"Of the four areas detailed above (prayer, God's Word, etc.), which ones do "
+"you already practice?"
 msgstr ""
 "المجالات الأربعة المفصلة أعلاه (الصلاة، كلمة الله، إلخ)، تلك التي كنت فعلا "
 "الممارسة؟"
@@ -871,8 +960,8 @@ msgstr "> أدوات ZÚME-دورة الصلاة"
 
 #: template-zume-course.php:779
 msgid ""
-"The Bible tells us that prayer is our chance to speak to and hear from the same "
-"God who created us!"
+"The Bible tells us that prayer is our chance to speak to and hear from the "
+"same God who created us!"
 msgstr ""
 "الكتاب المقدس يقول لنا أن الصلاة هي فرصتنا للتحدث والاستماع إلى من نفس الله "
 "الذي خلق لنا!"
@@ -899,8 +988,8 @@ msgstr "مغادرة"
 
 #: template-zume-course.php:819
 msgid ""
-"Spend the next 60 minutes in prayer individually, using the exercises in \"The "
-"Prayer Cycle\" section of the Zúme Guidebook as a guide."
+"Spend the next 60 minutes in prayer individually, using the exercises in "
+"\"The Prayer Cycle\" section of the Zúme Guidebook as a guide."
 msgstr ""
 "قضاء 60 دقيقة المقبلة في الصلاة منفردة، استخدام المناورات في قسم \"دورة الصلاة"
 "\" دليل Zúme كدليل."
@@ -940,13 +1029,13 @@ msgstr "أدوات ZÚME--قائمة 100"
 
 #: template-zume-course.php:861
 msgid ""
-"God has already given us the relationships we need to “Go and make disciples.” "
-"These are our family, friends, neighbors, co-workers and classmates &#8212; "
-"people we’ve known all our lives or maybe just met."
+"God has already given us the relationships we need to “Go and make "
+"disciples.” These are our family, friends, neighbors, co-workers and "
+"classmates &#8212; people we’ve known all our lives or maybe just met."
 msgstr ""
-"الله الفعل أعطانا العلاقات ونحن بحاجة إلى الذهاب وجعل تلاميذه. \" هذه هي الأسرة "
-"والأصدقاء، والجيران، وزملاء العمل وزملاء الدراسة &#8212; الناس أننا لقد تعرف كل "
-"حياتنا أو ربما التقيت للتو."
+"الله الفعل أعطانا العلاقات ونحن بحاجة إلى الذهاب وجعل تلاميذه. \" هذه هي "
+"الأسرة والأصدقاء، والجيران، وزملاء العمل وزملاء الدراسة &#8212; الناس أننا "
+"لقد تعرف كل حياتنا أو ربما التقيت للتو."
 
 #: template-zume-course.php:863
 msgid ""
@@ -960,7 +1049,8 @@ msgid ""
 "Find the \"List of 100\" section in your Zúme Guidebook, and listen to the "
 "audio below."
 msgstr ""
-"العثور على مقطع \"قائمة 100\" في دليل Zúme الخاص بك، والاستماع إلى الصوت أدناه."
+"العثور على مقطع \"قائمة 100\" في دليل Zúme الخاص بك، والاستماع إلى الصوت "
+"أدناه."
 
 #: template-zume-course.php:884
 msgid "Zúme Video Scripts: List of 100"
@@ -990,11 +1080,11 @@ msgstr "تهاني بمناسبة الانتهاء من الدورة 2!"
 #: template-zume-course.php:931
 msgid ""
 "Spend time this week praying for five people from your List of 100 that you "
-"marked as an \"Unbeliever\" or \"Unknown.\" Ask God to prepare their hearts to "
-"be open to His story."
+"marked as an \"Unbeliever\" or \"Unknown.\" Ask God to prepare their hearts "
+"to be open to His story."
 msgstr ""
-"قضاء وقت الصلاة هذا الأسبوع لخمسة أشخاص من قائمة 100 التي قمت بوضع علامة \"كافر"
-"\" أو \"مجهول\". اسأل الله أن إعداد قلوبهم تكون مفتوحة لقصته."
+"قضاء وقت الصلاة هذا الأسبوع لخمسة أشخاص من قائمة 100 التي قمت بوضع علامة "
+"\"كافر\" أو \"مجهول\". اسأل الله أن إعداد قلوبهم تكون مفتوحة لقصته."
 
 #: template-zume-course.php:938
 msgid ""
@@ -1021,11 +1111,11 @@ msgstr "نظرة إلى الوراء"
 
 #: template-zume-course.php:978
 msgid ""
-"You were asked to pray for five people from your List of 100 that you marked as "
-"an \"Unbeliever\" or \"Unknown.\""
+"You were asked to pray for five people from your List of 100 that you marked "
+"as an \"Unbeliever\" or \"Unknown.\""
 msgstr ""
-"قد يطلب منك للصلاة من أجل خمسة أشخاص من قائمة 100 التي قمت بوضع علامة \"كافر\" "
-"أو \"مجهول\"."
+"قد يطلب منك للصلاة من أجل خمسة أشخاص من قائمة 100 التي قمت بوضع علامة \"كافر"
+"\" أو \"مجهول\"."
 
 #: template-zume-course.php:979
 msgid "You were encouraged to share how to make a List of 100 with someone."
@@ -1034,11 +1124,11 @@ msgstr "كنت شجعت على مشاركة كيفية تقديم قائمة 100
 #: template-zume-course.php:989 template-zume-course.php:1293
 #: template-zume-course.php:1669
 msgid ""
-"Pray and thank God for the results and invite His Holy Spirit to lead your time "
-"together."
+"Pray and thank God for the results and invite His Holy Spirit to lead your "
+"time together."
 msgstr ""
-"نصلي والحمد لله للحصول على النتائج ودعوة \"روحه المقدسة\" المهلة الزمنية الخاصة "
-"بك معا."
+"نصلي والحمد لله للحصول على النتائج ودعوة \"روحه المقدسة\" المهلة الزمنية "
+"الخاصة بك معا."
 
 #: template-zume-course.php:994 template-zume-course.php:1298
 #: template-zume-course.php:1674 template-zume-course.php:1890
@@ -1056,8 +1146,8 @@ msgid ""
 "Story from Creation to Judgement and Baptism."
 msgstr ""
 "في هذه الدورة، سوف تتعلم كيفية عمل \"الاقتصاد\" الله الروحية وكيف الله تستثمر "
-"أكثر في أولئك الذين هم المؤمنين بما أنهم فعلا قد أعطيت. سوف تتعلم أيضا اثنين من "
-"أدوات أكثر لجعل التوابع &#8212; تقاسم قصة الله من إنشاء للحكم والمعمودية."
+"أكثر في أولئك الذين هم المؤمنين بما أنهم فعلا قد أعطيت. سوف تتعلم أيضا اثنين "
+"من أدوات أكثر لجعل التوابع &#8212; تقاسم قصة الله من إنشاء للحكم والمعمودية."
 
 #: template-zume-course.php:998 template-zume-course.php:1302
 msgid "Then, when you're ready, get started!"
@@ -1066,9 +1156,9 @@ msgstr "ثم، عندما كنت على استعداد، تبدأ!"
 #: template-zume-course.php:1018
 msgid ""
 "In this broken world, people feel rewarded when they take, when they receive "
-"and when they gain more than those around them. But God's Spiritual Economy is "
-"different &#8212; God invests more in those who are faithful with what they've "
-"already been given."
+"and when they gain more than those around them. But God's Spiritual Economy "
+"is different &#8212; God invests more in those who are faithful with what "
+"they've already been given."
 msgstr ""
 "في هذا العالم مكسورة، يشعر الناس مكافأة عندما تتخذ، عندما تتلقى وعند اكتساب "
 "أكثر من حولهم. ولكن الاقتصاد الله روحية مختلفة &#8212; الله تستثمر أكثر في "
@@ -1083,8 +1173,8 @@ msgid ""
 "What are some differences you see between God's Spiritual Economy and our "
 "earthly way of getting things done?"
 msgstr ""
-"ما هي بعض الاختلافات التي تراها بين \"الاقتصاد\" الله الروحية وطريقنا على إنجاز "
-"الأمور الدنيوية؟"
+"ما هي بعض الاختلافات التي تراها بين \"الاقتصاد\" الله الروحية وطريقنا على "
+"إنجاز الأمور الدنيوية؟"
 
 #: template-zume-course.php:1055 template-zume-course.php:1159
 msgid "READ AND DISCUSS (15min)"
@@ -1097,41 +1187,42 @@ msgid ""
 "Jerusalem, throughout Judea, in Samaria, and to the ends of the earth.”"
 msgstr ""
 "يسوع قال، \"سوف تتلقى السلطة عندما يأتي الروح القدس عليكم. وسوف تكون لي شهود، "
-"يقول الناس عني في كل مكان &#8212; في القدس، في جميع أنحاء يهودا والسامرة، وإلى "
-"أقاصي الأرض. \""
+"يقول الناس عني في كل مكان &#8212; في القدس، في جميع أنحاء يهودا والسامرة، "
+"وإلى أقاصي الأرض. \""
 
 #: template-zume-course.php:1065
 msgid ""
 "Jesus believed in His followers so much, He trusted them to tell His story. "
 "Then He sent them around the world to do it. Now, He’s sending us."
 msgstr ""
-"يعتقد يسوع في اتباعه كثيرا، وأعرب عن ثقته منهم ليروي قصته. ثم أنه أرسل لهم حول "
-"العالم للقيام بذلك. والآن، أنه يرسل لنا."
+"يعتقد يسوع في اتباعه كثيرا، وأعرب عن ثقته منهم ليروي قصته. ثم أنه أرسل لهم "
+"حول العالم للقيام بذلك. والآن، أنه يرسل لنا."
 
 #: template-zume-course.php:1067
 msgid ""
-"There’s no one “best way” to tell God’s story (also called The Gospel), because "
-"the best way will depend on who you’re sharing with. Every disciple should "
-"learn to tell God’s Story in a way that’s true to scripture and connects with "
-"the audience they’re sharing with."
+"There’s no one “best way” to tell God’s story (also called The Gospel), "
+"because the best way will depend on who you’re sharing with. Every disciple "
+"should learn to tell God’s Story in a way that’s true to scripture and "
+"connects with the audience they’re sharing with."
 msgstr ""
 "لا يوجد أحد \"أفضل طريقة\" تحكي قصة الله (وتسمى أيضا الإنجيل)، لأن أفضل طريقة "
-"سيتوقف على الذين كنت تشارك مع. يجب أن تعلم كل تلميذ لتحكي قصة الله في طريقة هو "
-"وفيا للكتاب المقدس والاتصال مع الجمهور كنت تشارك مع."
+"سيتوقف على الذين كنت تشارك مع. يجب أن تعلم كل تلميذ لتحكي قصة الله في طريقة "
+"هو وفيا للكتاب المقدس والاتصال مع الجمهور كنت تشارك مع."
 
 #: template-zume-course.php:1075
 msgid ""
 "What comes to mind when you hear God's command to be His \"witness\" and to "
 "tell His story?"
-msgstr "ما يتبادر إلى الذهن عند سماع أمر الله أن تكون له \"الشاهد\" وأقول له قصة؟"
+msgstr ""
+"ما يتبادر إلى الذهن عند سماع أمر الله أن تكون له \"الشاهد\" وأقول له قصة؟"
 
 #: template-zume-course.php:1077
 msgid ""
-"Why do you think Jesus chose ordinary people instead of some other way to share "
-"His Good News?."
+"Why do you think Jesus chose ordinary people instead of some other way to "
+"share His Good News?."
 msgstr ""
-"لماذا تعتقد أن يسوع اختيار الأشخاص العاديين بدلاً من طريقة أخرى لتبادل \"الأخبار "
-"الجيدة له\"؟."
+"لماذا تعتقد أن يسوع اختيار الأشخاص العاديين بدلاً من طريقة أخرى لتبادل "
+"\"الأخبار الجيدة له\"؟."
 
 #: template-zume-course.php:1079
 msgid "What would it take for you to feel more comfortable sharing God's Story?"
@@ -1143,8 +1234,8 @@ msgid ""
 "Judgement &#8212; from the beginning of humankind all the way to the end of "
 "this age."
 msgstr ""
-"طريقة واحدة لتبادل \"الأخبار الجيدة\" الله تحكي الله من إنشاء للحكم &#8212; من "
-"بداية البشرية وصولاً إلى نهاية هذا العصر."
+"طريقة واحدة لتبادل \"الأخبار الجيدة\" الله تحكي الله من إنشاء للحكم &#8212; "
+"من بداية البشرية وصولاً إلى نهاية هذا العصر."
 
 #: template-zume-course.php:1118
 msgid "Zúme Video Scripts: Creation to Judgement"
@@ -1174,8 +1265,9 @@ msgid ""
 "practicing telling God's Story using the Activity instructions on page 13 of "
 "your Zúme Guidebook."
 msgstr ""
-"اقتحام مجموعات من شخصين أو ثلاثة أشخاص، وقضاء بعض الدقائق ال 45 القادمة ممارسة "
-"قصة تقول الله باستخدام الإرشادات النشاط في الصفحة 13 من دليل Zúme الخاص بك."
+"اقتحام مجموعات من شخصين أو ثلاثة أشخاص، وقضاء بعض الدقائق ال 45 القادمة "
+"ممارسة قصة تقول الله باستخدام الإرشادات النشاط في الصفحة 13 من دليل Zúme "
+"الخاص بك."
 
 #: template-zume-course.php:1167
 msgid "ZÚME TOOLKIT - BAPTISM"
@@ -1194,7 +1286,8 @@ msgid ""
 "Find the \"Baptism\" section in your Zúme Guidebook, and listen to the audio "
 "below."
 msgstr ""
-"العثور على مقطع \"المعمودية\" في دليل Zúme الخاص بك، والاستماع إلى الصوت أدناه."
+"العثور على مقطع \"المعمودية\" في دليل Zúme الخاص بك، والاستماع إلى الصوت "
+"أدناه."
 
 #: template-zume-course.php:1189
 msgid "Zúme Video Scripts: Baptism"
@@ -1222,8 +1315,8 @@ msgstr "تذكير هام &#8212; وقد كنت قد عمد؟"
 
 #: template-zume-course.php:1209
 msgid ""
-"If not, then we encourage you to plan this before even one more session of this "
-"training. Invite your group to be a part of this important day when you "
+"If not, then we encourage you to plan this before even one more session of "
+"this training. Invite your group to be a part of this important day when you "
 "celebrate saying \"yes\" to Jesus."
 msgstr ""
 "إذا لم يكن كذلك، ثم أننا نشجعكم على خطة هذا قبل الدورة أكثر واحد حتى من هذا "
@@ -1237,8 +1330,8 @@ msgstr "تهاني بمناسبة الانتهاء من الدورة 3!"
 #: template-zume-course.php:1232
 msgid ""
 "Spend time this week practicing God's Story, and then share it with at least "
-"one person from your List of 100 that you marked as \"Unbeliever\" or \"Unknown."
-"\""
+"one person from your List of 100 that you marked as \"Unbeliever\" or "
+"\"Unknown.\""
 msgstr ""
 "قضاء بعض القصة الوقت هذا الأسبوع الله ممارسة ومن ثم مشاركته مع شخص واحد على "
 "الأقل من قائمة 100 التي قمت بوضع علامة \"كافر\" أو \"غير معروف\"."
@@ -1257,31 +1350,31 @@ msgid ""
 "IMPORTANT REMINDER - Your group will be celebrating the Lord's Supper next "
 "session. Be sure to remember the supplies (bread and wine / juice)."
 msgstr ""
-"تذكير هام-المجموعة الخاصة بك سوف تحتفل الرباني الدورة القادمة. تأكد من أن نتذكر "
-"الإمدادات (الخبز والنبيذ/عصير)."
+"تذكير هام-المجموعة الخاصة بك سوف تحتفل الرباني الدورة القادمة. تأكد من أن "
+"نتذكر الإمدادات (الخبز والنبيذ/عصير)."
 
 #: template-zume-course.php:1278
 msgid ""
-"You were asked to share God’s Story with at least one person from your List of "
-"100 that you marked as \"Unbeliever\" or \"Unknown.\""
+"You were asked to share God’s Story with at least one person from your List "
+"of 100 that you marked as \"Unbeliever\" or \"Unknown.\""
 msgstr ""
 "وقد يطلب منك مشاركة قصة الله مع شخص واحد على الأقل من قائمة 100 التي قمت بوضع "
 "علامة \"كافر\" أو \"غير معروف\"."
 
 #: template-zume-course.php:1281
 msgid ""
-"You were encouraged to train someone to use the Creation to Judgement story (or "
-"some other way to share God’s Story) with someone."
+"You were encouraged to train someone to use the Creation to Judgement story "
+"(or some other way to share God’s Story) with someone."
 msgstr ""
-"كنت شجعت على تدريب شخص ما استخدام إنشاء لقصة الحكم (أو بعض الطرق الأخرى لمشاركة "
-"قصة الله) مع شخص ما."
+"كنت شجعت على تدريب شخص ما استخدام إنشاء لقصة الحكم (أو بعض الطرق الأخرى "
+"لمشاركة قصة الله) مع شخص ما."
 
 #: template-zume-course.php:1300
 msgid ""
-"In this session, you'll learn how God's plan is for every follower to multiply! "
-"You’ll discover how disciples multiply far and fast when they start to see "
-"where God’s Kingdom isn’t. And, you'll learn another great tool for inviting "
-"others into God's family is as simple as telling our story."
+"In this session, you'll learn how God's plan is for every follower to "
+"multiply! You’ll discover how disciples multiply far and fast when they start "
+"to see where God’s Kingdom isn’t. And, you'll learn another great tool for "
+"inviting others into God's family is as simple as telling our story."
 msgstr ""
 "في هذه الدورة، سوف تتعلم كيف خطة الله لكل من اتباع لمضاعفة! عليك اكتشاف كيفية "
 "مضاعفة تلاميذه الآن وسريع عندما تبدأ لنرى أين ليست ملكوت الله. وعليك أن تتعلم "
@@ -1293,14 +1386,14 @@ msgstr "أدوات ZÚME-شهادة 3 دقائق"
 
 #: template-zume-course.php:1324
 msgid ""
-"As followers of Jesus, we are “witnesses\" for Him, because we “testify” about "
-"the impact Jesus has had on our lives. Your story of your relationship with God "
-"is called your Testimony. It's powerful, and it's something no one can share "
-"better than you."
+"As followers of Jesus, we are “witnesses\" for Him, because we “testify” "
+"about the impact Jesus has had on our lives. Your story of your relationship "
+"with God is called your Testimony. It's powerful, and it's something no one "
+"can share better than you."
 msgstr ""
-"كما شوهد يسوع، نحن \"الشهود\" بالنسبة له، نظراً لأننا \"الشهادة\" حول تأثير يسوع "
-"في حياتنا. ويسمى قصتك علاقتك مع الله الشهادة الخاصة بك. أنها قوية، وهو شيء لا "
-"أحد يمكن مشاركتها بشكل أفضل مما كنت."
+"كما شوهد يسوع، نحن \"الشهود\" بالنسبة له، نظراً لأننا \"الشهادة\" حول تأثير "
+"يسوع في حياتنا. ويسمى قصتك علاقتك مع الله الشهادة الخاصة بك. أنها قوية، وهو "
+"شيء لا أحد يمكن مشاركتها بشكل أفضل مما كنت."
 
 #: template-zume-course.php:1326
 msgid ""
@@ -1320,16 +1413,17 @@ msgstr "ممارسة تقاسم الخاص بك شهادة (45 دقيقة)"
 
 #: template-zume-course.php:1364
 msgid ""
-"Break into groups of two or three and and spend the next 45 minutes practicing "
-"sharing your Testimony using the Activity instructions on page 15 of your Zúme "
-"Guidebook."
+"Break into groups of two or three and and spend the next 45 minutes "
+"practicing sharing your Testimony using the Activity instructions on page 15 "
+"of your Zúme Guidebook."
 msgstr ""
 "اقتحام مجموعات من اثنين أو ثلاثة وقضاء بعض الدقائق ال 45 القادمة ممارسة تبادل "
 "الشهادة الخاصة بك باستخدام تعليمات النشاط في الصفحة 15 من دليل Zúme الخاص بك."
 
 #: template-zume-course.php:1386
 msgid ""
-"What is God's greatest blessing for His children? Making disciples who multiply!"
+"What is God's greatest blessing for His children? Making disciples who "
+"multiply!"
 msgstr "ما هو أعظم نعمة الله لأولاده؟ مما يجعل التلاميذ الذين تتضاعف!"
 
 #: template-zume-course.php:1388
@@ -1359,16 +1453,17 @@ msgstr "بعد أن وصلت إلى الإيمان، متى كان ذلك قبل
 
 #: template-zume-course.php:1421
 msgid ""
-"What do you think would happen if new followers started sharing and discipling "
-"others, immediately?"
+"What do you think would happen if new followers started sharing and "
+"discipling others, immediately?"
 msgstr "ما رأيك سيحدث إذا شوهد جديدة بدأت مشاركة وتلمذة الآخرين، فورا؟"
 
 #: template-zume-course.php:1443
 msgid ""
-"What do ducklings have to do with disciple making? They lead and follow at the "
-"same time."
+"What do ducklings have to do with disciple making? They lead and follow at "
+"the same time."
 msgstr ""
-"ما بد من القيام به مع التلميذ مما يجعل فراخ البط؟ وهي تؤدي واتبع في الوقت نفسه."
+"ما بد من القيام به مع التلميذ مما يجعل فراخ البط؟ وهي تؤدي واتبع في الوقت "
+"نفسه."
 
 #: template-zume-course.php:1462
 msgid "Zúme Video Scripts: Duckling Discipleship"
@@ -1385,11 +1480,11 @@ msgstr ""
 
 #: template-zume-course.php:1475
 msgid ""
-"What is one area of discipleship that you feel you could share with others? Who "
-"is someone that you could share with?"
+"What is one area of discipleship that you feel you could share with others? "
+"Who is someone that you could share with?"
 msgstr ""
-"ما هو مجال واحد من التلمذة التي تشعر أنك أنت يمكن مشاركتها مع الآخرين؟ وهو شخص "
-"يمكن أن تشاركها مع؟"
+"ما هو مجال واحد من التلمذة التي تشعر أنك أنت يمكن مشاركتها مع الآخرين؟ وهو "
+"شخص يمكن أن تشاركها مع؟"
 
 #: template-zume-course.php:1496
 msgid "Have you ever stopped to think about where God's Kingdom... isn't?"
@@ -1398,8 +1493,8 @@ msgstr "توقفت لك من أي وقت مضى أن نفكر فيها ملكو�
 #: template-zume-course.php:1498
 msgid ""
 "Have you ever visited a home or a neighborhood or even a city where it seemed "
-"as if God was just... missing? These are usually the places where God wants to "
-"work the most."
+"as if God was just... missing? These are usually the places where God wants "
+"to work the most."
 msgstr ""
 "هل من أي وقت مضى زرت حي أو منزل أو حتى مدينة حيث يبدو كما لو كان مجرد الله.. "
 "مفقود؟ هذه هي عادة الأماكن حيث يريد الله للعمل أكثر من غيرها."
@@ -1410,8 +1505,8 @@ msgstr "الفيديو Zúme النصية: عيون انظر إلى"
 
 #: template-zume-course.php:1526
 msgid ""
-"Who are you more comfortable sharing with -- people you already know or people "
-"you haven't met, yet?"
+"Who are you more comfortable sharing with -- people you already know or "
+"people you haven't met, yet?"
 msgstr ""
 "الذي أنت أكثر راحة تقاسم مع--لم اجتمع الناس كنت تعرف بالفعل أو الناس لك، حتى "
 "الآن؟"
@@ -1432,8 +1527,8 @@ msgstr "أدوات ZÚME-العشاء الرباني"
 #: template-zume-course.php:1550
 msgid ""
 "Jesus said, “I am the living bread that came down from heaven. Whoever eats "
-"this bread will live forever. This bread is my flesh, which I will give for the "
-"life of the world.”"
+"this bread will live forever. This bread is my flesh, which I will give for "
+"the life of the world.”"
 msgstr ""
 "يسوع قال، \"أنا خبز الحياة الذي نزل من السماء. كل من يأكل هذا الخبز وسوف يعيش "
 "إلى الأبد. هذا الخبز هو جسدي، الذي أعطى للحياة للعالم \"."
@@ -1467,17 +1562,17 @@ msgstr "تهاني بمناسبة الانتهاء من الدورة 4!"
 
 #: template-zume-course.php:1615
 msgid ""
-"Spend time this week practicing your 3-Minute Testimony, and then share it with "
-"at least one person from your List of 100 that you marked as \"Unbeliever\" or "
-"\"Unknown.\""
+"Spend time this week practicing your 3-Minute Testimony, and then share it "
+"with at least one person from your List of 100 that you marked as \"Unbeliever"
+"\" or \"Unknown.\""
 msgstr ""
-"قضاء بعض الوقت هذا الأسبوع ممارسة الخاص بك شهادة 3 دقائق ومن ثم مشاركته مع شخص "
-"واحد على الأقل من قائمة 100 التي قمت بوضع علامة \"كافر\" أو \"غير معروف\"."
+"قضاء بعض الوقت هذا الأسبوع ممارسة الخاص بك شهادة 3 دقائق ومن ثم مشاركته مع "
+"شخص واحد على الأقل من قائمة 100 التي قمت بوضع علامة \"كافر\" أو \"غير معروف\"."
 
 #: template-zume-course.php:1622
 msgid ""
-"Ask God who He wants you to train with the 3-Minute Testimony tool. Share this "
-"person's name with the group before you go."
+"Ask God who He wants you to train with the 3-Minute Testimony tool. Share "
+"this person's name with the group before you go."
 msgstr ""
 "اسأل الله الذي يريد لك لتدريب مع أداة الشهادة بعد 3 دقائق. اسم هذا الشخص "
 "المشاركة مع الفريق قبل أن تذهب."
@@ -1491,8 +1586,8 @@ msgid ""
 "You were asked to share your 3-Minute Testimony with at least one person on "
 "your List of 100."
 msgstr ""
-"يمكنك طلب مشاركة الخاص بك شهادة 3 دقائق مع شخص واحد على الأقل في القائمة الخاصة "
-"بك من 100."
+"يمكنك طلب مشاركة الخاص بك شهادة 3 دقائق مع شخص واحد على الأقل في القائمة "
+"الخاصة بك من 100."
 
 #: template-zume-course.php:1660
 msgid ""
@@ -1501,8 +1596,8 @@ msgstr "كنت شجعت على تدريب شخص آخر باستخدام أدا�
 
 #: template-zume-course.php:1676
 msgid ""
-"In this session, you’ll learn how Prayer Walking is a powerful way to prepare a "
-"neighborhood for Jesus, and you'll learn a simple but powerful pattern for "
+"In this session, you’ll learn how Prayer Walking is a powerful way to prepare "
+"a neighborhood for Jesus, and you'll learn a simple but powerful pattern for "
 "prayer that will help you meet and make new disciples along the way."
 msgstr ""
 "في هذه الدورة، سوف تتعلم كيفية \"المشي الصلاة\" وسيلة قوية لإعداد حي للمسيح، "
@@ -1522,8 +1617,8 @@ msgid ""
 "Prayer Walking is a simple way to obey God’s command to pray for others. And "
 "it's just what it sounds like &#8212; praying to God while walking around!"
 msgstr ""
-"الصلاة المشي طريقة بسيطة للانصياع لأمر الله للصلاة من أجل الآخرين. وما يبدو مثل "
-"&#8212; الصلاة لله حين يتجول!"
+"الصلاة المشي طريقة بسيطة للانصياع لأمر الله للصلاة من أجل الآخرين. وما يبدو "
+"مثل &#8212; الصلاة لله حين يتجول!"
 
 #: template-zume-course.php:1698
 msgid ""
@@ -1539,13 +1634,13 @@ msgstr "فيديو Zúme النصية: الصلاة المشي"
 
 #: template-zume-course.php:1737
 msgid ""
-"Disciple-making can be rapidly advanced by finding a person of peace, even in a "
-"place where followers of Jesus are few and far between. How do you know when "
-"you have found a person of peace and what do you when you find them?"
+"Disciple-making can be rapidly advanced by finding a person of peace, even in "
+"a place where followers of Jesus are few and far between. How do you know "
+"when you have found a person of peace and what do you when you find them?"
 msgstr ""
 "يمكن النهوض صنع التلميذ سريعاً من خلال إيجاد شخص للسلام، حتى في مكان حيث شوهد "
-"يسوع قليلة ومتباعدة. كيف يمكنك أن تعرف عندما كنت قد وجدت شخص السلام وماذا عندما "
-"يمكنك العثور عليها؟"
+"يسوع قليلة ومتباعدة. كيف يمكنك أن تعرف عندما كنت قد وجدت شخص السلام وماذا "
+"عندما يمكنك العثور عليها؟"
 
 #: template-zume-course.php:1756
 msgid "Zúme Video Scripts: Person of Peace"
@@ -1553,8 +1648,9 @@ msgstr "‫Zúme فيديو مخطوطات: الشخص السلام"
 
 #: template-zume-course.php:1766
 msgid ""
-"Can someone who has a \"bad reputation\" (like the Samaritan woman or the demon-"
-"possessed man in the Gadarenes) really be a Person of Peace? Why or why not?"
+"Can someone who has a \"bad reputation\" (like the Samaritan woman or the "
+"demon-possessed man in the Gadarenes) really be a Person of Peace? Why or why "
+"not?"
 msgstr ""
 "شخص لديه \"سمعة سيئة\" (مثل السامري المرأة أو الرجل شيطان يمتلك في جادارينيس) "
 "يمكن حقاً \"الشخص السلام\"؟ لماذا أو لماذا لا؟"
@@ -1567,8 +1663,8 @@ msgid ""
 "that community?"
 msgstr ""
 "ما هو المجتمع أو شريحة من شرائح المجتمع القرب منك التي يبدو أن تواجد المملكة "
-"قليلاً (أو لا)؟ كيف يمكن أن \"الشخص للسلام\" (شخص غير المفتوحة، هوسبيتابل، ويعرف "
-"الآخرين والأسهم) تسريع انتشار الإنجيل في هذا المجتمع؟"
+"قليلاً (أو لا)؟ كيف يمكن أن \"الشخص للسلام\" (شخص غير المفتوحة، هوسبيتابل، "
+"ويعرف الآخرين والأسهم) تسريع انتشار الإنجيل في هذا المجتمع؟"
 
 #: template-zume-course.php:1783
 msgid "PRACTICE THE B.L.E.S.S. PRAYER (15min)"
@@ -1576,15 +1672,16 @@ msgstr "الصلاة B.L.E.S.S. الممارسة (15 دقيقة)"
 
 #: template-zume-course.php:1791
 msgid ""
-"Break into groups of two or three and spend the next 15 minutes practicing the "
-"B.L.E.S.S. Prayer using the pattern on page 17 of your Zúme Guidebook. Practice "
-"praying the five areas of the B.L.E.S.S. Prayer for someone AND practice how "
-"you would train others to understand and use the B.L.E.S.S. Prayer, too."
+"Break into groups of two or three and spend the next 15 minutes practicing "
+"the B.L.E.S.S. Prayer using the pattern on page 17 of your Zúme Guidebook. "
+"Practice praying the five areas of the B.L.E.S.S. Prayer for someone AND "
+"practice how you would train others to understand and use the B.L.E.S.S. "
+"Prayer, too."
 msgstr ""
-"اقتحام مجموعات من اثنين أو ثلاثة، وقضاء بعض الدقائق ال 15 التالية ممارسة الصلاة "
-"B.L.E.S.S. باستخدام النمط في صفحة 17 من دليل Zúme الخاص بك. ممارسة الصلاة "
-"المجالات الخمسة للصلاة B.L.E.S.S. لشخص ما والممارسة كيف يمكنك تدريب الآخرين على "
-"فهم واستخدام الصلاة B.L.E.S.S.، أيضا."
+"اقتحام مجموعات من اثنين أو ثلاثة، وقضاء بعض الدقائق ال 15 التالية ممارسة "
+"الصلاة B.L.E.S.S. باستخدام النمط في صفحة 17 من دليل Zúme الخاص بك. ممارسة "
+"الصلاة المجالات الخمسة للصلاة B.L.E.S.S. لشخص ما والممارسة كيف يمكنك تدريب "
+"الآخرين على فهم واستخدام الصلاة B.L.E.S.S.، أيضا."
 
 #: template-zume-course.php:1804
 msgid "PRACTICE PRAYER WALKING (60-90min)"
@@ -1603,11 +1700,11 @@ msgstr ""
 
 #: template-zume-course.php:1811
 msgid ""
-"Choosing a location can be as simple as walking outside from where you are now, "
-"or you could plan to go to a specific destination."
+"Choosing a location can be as simple as walking outside from where you are "
+"now, or you could plan to go to a specific destination."
 msgstr ""
-"اختيار موقع يمكن أن تكون بسيطة مثل المشي خارج من حيث أنت الآن، أو يمكن أن تخطط "
-"للذهاب إلى وجهة معينة."
+"اختيار موقع يمكن أن تكون بسيطة مثل المشي خارج من حيث أنت الآن، أو يمكن أن "
+"تخطط للذهاب إلى وجهة معينة."
 
 #: template-zume-course.php:1812
 msgid "Go as God leads, and plan on spending 60-90 minutes on this activity."
@@ -1637,14 +1734,15 @@ msgid ""
 "before you go."
 msgstr ""
 "قضاء بعض الوقت نسأل الله الذين قد يريد لك حصة في أداة \"الصلاة المشي\" مع قبل "
-"أن يجتمع الفريق الخاص بك مرة أخرى. اسم هذا الشخص المشاركة مع الفريق قبل أن تذهب."
+"أن يجتمع الفريق الخاص بك مرة أخرى. اسم هذا الشخص المشاركة مع الفريق قبل أن "
+"تذهب."
 
 #: template-zume-course.php:1848
 msgid ""
 "Before you go out on your Prayer Walking activity, be sure to pray with your "
-"group to end your time together. Thank God that He loves the lost, the last and "
-"the least &#8212; including us! Ask Him to prepare your heart and the heart of "
-"those you'll meet during your walk to be open to His work."
+"group to end your time together. Thank God that He loves the lost, the last "
+"and the least &#8212; including us! Ask Him to prepare your heart and the "
+"heart of those you'll meet during your walk to be open to His work."
 msgstr ""
 "قبل الخروج في النشاط الخاص بك \"المشي الصلاة\"، يجب التأكد من أن تصلي مع "
 "المجموعة الخاصة بك إلى نهاية الوقت الخاص بك معا. والحمد لله أن يحب المفقودة "
@@ -1675,9 +1773,9 @@ msgid ""
 "together that helps disciples multiply even faster."
 msgstr ""
 "في هذه الدورة، سوف تتعلم كيف يستخدم الله شوهد المؤمنين &#8212; حتى لو أنهم "
-"العلامة التجارية الجديدة &#8212; أكثر بكثير من تلك مع سنوات من المعرفة والتدريب "
-"الذين لن تطيع فقط. وستحصل على نظرة أولى في طريقة الاجتماع معا أن يساعد تلاميذه "
-"تتضاعف حتى أسرع."
+"العلامة التجارية الجديدة &#8212; أكثر بكثير من تلك مع سنوات من المعرفة "
+"والتدريب الذين لن تطيع فقط. وستحصل على نظرة أولى في طريقة الاجتماع معا أن "
+"يساعد تلاميذه تتضاعف حتى أسرع."
 
 #: template-zume-course.php:1911
 msgid ""
@@ -1685,9 +1783,9 @@ msgid ""
 "right things. It's important what disciples know &#8212; but it's much more "
 "important what they DO with what they know."
 msgstr ""
-"عندما نساعد ضرب التلاميذ، نحن بحاجة للتأكد من أننا كنت استنساخ الأمور في نصابها "
-"الصحيح. المهم ما أعرف التوابع &#8212; ولكن من المهم أكثر بكثير ما يفعلونه مع ما "
-"يعرفونه."
+"عندما نساعد ضرب التلاميذ، نحن بحاجة للتأكد من أننا كنت استنساخ الأمور في "
+"نصابها الصحيح. المهم ما أعرف التوابع &#8212; ولكن من المهم أكثر بكثير ما "
+"يفعلونه مع ما يعرفونه."
 
 #: template-zume-course.php:1930
 msgid "Zúme Video Scripts: Faithfulness"
@@ -1713,8 +1811,8 @@ msgstr "يسوع قال، \"حيث تجمع اثنين أو ثلاثة معا ف
 
 #: template-zume-course.php:1959
 msgid ""
-"Find the \"3/3 Group Format\" section in your Zúme Guidebook, and listen to the "
-"audio below."
+"Find the \"3/3 Group Format\" section in your Zúme Guidebook, and listen to "
+"the audio below."
 msgstr ""
 "العثور على مقطع \"تنسيق المجموعة 3/3\" في دليل Zúme الخاص بك، والاستماع إلى "
 "الصوت أدناه."
@@ -1726,8 +1824,8 @@ msgstr "البرامج النصية Zúme الفيديو: مجموعة 3/3"
 #: template-zume-course.php:1987
 msgid ""
 "Did you notice any differences between a 3/3 Group and a Bible Study or Small "
-"Group you've been a part of (or have heard about) in the past? If so, how would "
-"those differences impact the group?"
+"Group you've been a part of (or have heard about) in the past? If so, how "
+"would those differences impact the group?"
 msgstr ""
 "تلاحظ أية اختلافات بين مجموعة 3/3 ودراسة الكتاب المقدس أو المجموعة الصغيرة لك "
 "لقد كان جزءا من (أو قد سمعوا عن) في الماضي؟ إذا كان الأمر كذلك، كيف أن هذه "
@@ -1744,8 +1842,8 @@ msgstr "نموذج المجموعة 3/3"
 #: template-zume-course.php:2011
 msgid ""
 "A 3/3 Group is a way for followers of Jesus to meet, pray, learn, grow, "
-"fellowship and practice obeying and sharing what they've learned. In this way a "
-"3/3 Group is not just a small group but a Simple Church."
+"fellowship and practice obeying and sharing what they've learned. In this way "
+"a 3/3 Group is not just a small group but a Simple Church."
 msgstr ""
 "مجموعة 3/3 وسيلة لاتباع المسيح الوفاء، الصلاة، تعلم، وتنمو، والزمالة وممارسة "
 "طاعة وتقاسم ما تعلموه. وبهذه الطريقة مجموعة 3/3 ليست مجرد مجموعة صغيرة ولكن "
@@ -1753,17 +1851,18 @@ msgstr ""
 
 #: template-zume-course.php:2013
 msgid ""
-"In the following video, you'll see a model 3/3 Group meet together and practice "
-"this format."
-msgstr "في الفيديو التالي، سترى نموذج 3/3 المجموعة يجتمعون معا وممارسة هذا الشكل."
+"In the following video, you'll see a model 3/3 Group meet together and "
+"practice this format."
+msgstr ""
+"في الفيديو التالي، سترى نموذج 3/3 المجموعة يجتمعون معا وممارسة هذا الشكل."
 
 #: template-zume-course.php:2015
 msgid ""
 "Find the \"3/3 Groups Format\" section in your Zúme Guidebook, and watch the "
 "video below."
 msgstr ""
-"العثور على مقطع \"تنسيق المجموعات 3/3\" في دليل Zúme الخاص بك، ومشاهدة الفيديو "
-"أدناه."
+"العثور على مقطع \"تنسيق المجموعات 3/3\" في دليل Zúme الخاص بك، ومشاهدة "
+"الفيديو أدناه."
 
 #: template-zume-course.php:2041
 msgid "Congratulations on finishing Session 6!"
@@ -1774,17 +1873,17 @@ msgid ""
 "Spend time this week practicing Faithfulness by obeying and sharing at least "
 "one of God's commands that you already know."
 msgstr ""
-"قضاء بعض الوقت هذا الأسبوع ممارسة الإخلاص بطاعة ومشاركة واحدة على الأقل لأوامر "
-"الله التي كنت تعرف بالفعل."
+"قضاء بعض الوقت هذا الأسبوع ممارسة الإخلاص بطاعة ومشاركة واحدة على الأقل "
+"لأوامر الله التي كنت تعرف بالفعل."
 
 #: template-zume-course.php:2057
 msgid ""
-"Think about what you have heard and learned about Faithfulness in this session, "
-"and ask God who He wants you to share it with. Share this person’s name with "
-"the group before you go."
+"Think about what you have heard and learned about Faithfulness in this "
+"session, and ask God who He wants you to share it with. Share this person’s "
+"name with the group before you go."
 msgstr ""
-"التفكير في ما كنت قد سمعت والمستفادة حول الإخلاص في هذه الدورة، وأسأل الله الذي "
-"يريد لك لتقاسمها مع. اسم هذا الشخص المشاركة مع الفريق قبل أن تذهب."
+"التفكير في ما كنت قد سمعت والمستفادة حول الإخلاص في هذه الدورة، وأسأل الله "
+"الذي يريد لك لتقاسمها مع. اسم هذا الشخص المشاركة مع الفريق قبل أن تذهب."
 
 #: template-zume-course.php:2064
 msgid ""
@@ -1815,8 +1914,8 @@ msgstr ""
 
 #: template-zume-course.php:2112
 msgid ""
-"In this session, you’ll learn a Training Cycle that helps disciples go from one "
-"to many and turns a mission into a movement. You'll also practice the 3/3 "
+"In this session, you’ll learn a Training Cycle that helps disciples go from "
+"one to many and turns a mission into a movement. You'll also practice the 3/3 "
 "Groups Format and learn how the way you meet can impact the way you multiply."
 msgstr ""
 "سوف تتعلم في هذه الدورة، \"دورة تدريبية\" تساعد على الذهاب من واحد إلى العديد "
@@ -1825,16 +1924,16 @@ msgstr ""
 
 #: template-zume-course.php:2131
 msgid ""
-"Have you ever learned how to ride a bicycle? Have you ever helped someone else "
-"learn? If so, chances are you already know the Training Cycle."
+"Have you ever learned how to ride a bicycle? Have you ever helped someone "
+"else learn? If so, chances are you already know the Training Cycle."
 msgstr ""
 "وقد تعلمنا كيفية ركوب دراجة من أي وقت مضى؟ لقد كنت من أي وقت مضى ساعد شخص آخر "
 "تعلم؟ إذا كان الأمر كذلك، وهناك احتمالات كنت تعرف بالفعل \"دورة التدريب\"."
 
 #: template-zume-course.php:2133
 msgid ""
-"Find the \"Training Cycle\" section in your Zúme Guidebook. When you're ready, "
-"watch this video, and then discuss the questions below."
+"Find the \"Training Cycle\" section in your Zúme Guidebook. When you're "
+"ready, watch this video, and then discuss the questions below."
 msgstr ""
 "العثور على مقطع \"دورة تدريبية\" في دليل Zúme الخاص بك. عندما تكون مستعدا، "
 "مشاهدة هذا الفيديو، ومن ثم مناقشة الأسئلة الواردة أدناه."
@@ -1856,8 +1955,8 @@ msgid ""
 "Could the same person be at different parts of the Training Cycle while "
 "learning different skills?"
 msgstr ""
-"يمكن أن يكون الشخص نفسه في أجزاء مختلفة من \"دورة التدريب\" أثناء تعلم المهارات "
-"المختلفة؟"
+"يمكن أن يكون الشخص نفسه في أجزاء مختلفة من \"دورة التدريب\" أثناء تعلم "
+"المهارات المختلفة؟"
 
 #: template-zume-course.php:2165
 msgid "What would it look like to train someone like that?"
@@ -1877,37 +1976,37 @@ msgid ""
 "Have your entire group spend the next 90 minutes practicing the 3/3 Groups "
 "Format using the pattern on pages 19-20 in your Zúme Guidebook."
 msgstr ""
-"وقد الخاص بك المجموعة بأكملها قضاء 90 دقيقة المقبلة ممارسة تنسيق المجموعات 3/3 "
-"باستخدام النمط على الصفحات 19-20 في دليل Zúme الخاص بك."
+"وقد الخاص بك المجموعة بأكملها قضاء 90 دقيقة المقبلة ممارسة تنسيق المجموعات "
+"3/3 باستخدام النمط على الصفحات 19-20 في دليل Zúme الخاص بك."
 
 #: template-zume-course.php:2189
 msgid ""
-"LOOK BACK - Use last week's Session Challenges to practice \"Faithfulness\" in "
-"the Look Back section."
+"LOOK BACK - Use last week's Session Challenges to practice \"Faithfulness\" "
+"in the Look Back section."
 msgstr ""
 "نظرة إلى الوراء--استخدم \"الدورة تحديات\" الأسبوع الماضي الممارسة \"الإخلاص\" "
 "في المقطع \"نظرة إلى الوراء\"."
 
 #: template-zume-course.php:2192
 msgid ""
-"LOOK UP - Use Mark 5:1-20 as your group's reading passage and answer questions "
-"1-4 during the Look Up section."
+"LOOK UP - Use Mark 5:1-20 as your group's reading passage and answer "
+"questions 1-4 during the Look Up section."
 msgstr ""
 "بحث لأعلى--استخدام مارك 5:1-20 كمرور القراءة المجموعة الخاصة بك والإجابة على "
 "الأسئلة 1-4 خلال المقطع \"بحث لأعلى\"."
 
 #: template-zume-course.php:2195
 msgid ""
-"LOOK FORWARD - Use questions 5, 6, and 7 in the Look Forward section to develop "
-"how you will Obey, Train and Share."
+"LOOK FORWARD - Use questions 5, 6, and 7 in the Look Forward section to "
+"develop how you will Obey, Train and Share."
 msgstr ""
 "التطلع إلى الأمام--استخدام الأسئلة 5 و 6 و 7 في المقطع \"نظرة إلى الأمام\" في "
 "تطوير كيف سوف طاعة وتدريب وتبادل."
 
 #: template-zume-course.php:2199 template-zume-course.php:2386
 msgid ""
-"REMEMBER - Each section should take about 1/3 (or 30 minutes) of your practice "
-"time."
+"REMEMBER - Each section should take about 1/3 (or 30 minutes) of your "
+"practice time."
 msgstr "تذكر--ينبغي أن تأخذ كل مقطع حوالي 1/3 (أو 30 دقيقة) وقت الممارسة."
 
 #: template-zume-course.php:2207
@@ -1927,8 +2026,8 @@ msgid ""
 "Spend time this week obeying, training, and sharing based on the commitments "
 "you've made during your 3/3 Group practice."
 msgstr ""
-"قضاء بعض الوقت هذا الأسبوع طاعة، والتدريب، وتبادل استناداً إلى التعهدات التي قمت "
-"بها أثناء تدريبك مجموعة 3/3."
+"قضاء بعض الوقت هذا الأسبوع طاعة، والتدريب، وتبادل استناداً إلى التعهدات التي "
+"قمت بها أثناء تدريبك مجموعة 3/3."
 
 #: template-zume-course.php:2240
 msgid ""
@@ -1942,7 +2041,8 @@ msgstr ""
 msgid ""
 "Thank God that He loves us enough to invite us into His most important work "
 "&#8212; growing His family!"
-msgstr "والحمد لله أن يحب لنا ما يكفي لدعوة منا إلى عمله أهم &#8212; تزايد أسرته!"
+msgstr ""
+"والحمد لله أن يحب لنا ما يكفي لدعوة منا إلى عمله أهم &#8212; تزايد أسرته!"
 
 #: template-zume-course.php:2276
 msgid ""
@@ -1968,14 +2068,14 @@ msgstr ""
 
 #: template-zume-course.php:2296
 msgid ""
-"In this session, you’ll learn how Leadership Cells prepare followers in a short "
-"time to become leaders for a lifetime. You'll learn how serving others is "
-"Jesus' strategy for leadership. And you'll spend time practicing as a 3/3 "
+"In this session, you’ll learn how Leadership Cells prepare followers in a "
+"short time to become leaders for a lifetime. You'll learn how serving others "
+"is Jesus' strategy for leadership. And you'll spend time practicing as a 3/3 "
 "Group, again."
 msgstr ""
 "في هذه الدورة، سوف تتعلم كيفية إعداد \"الخلايا القيادة\" شوهد في وقت قصير أن "
-"يصبحوا قادة لمدى حياة. سوف تتعلم كيفية خدمة الآخرين هو استراتيجية يسوع للقيادة. "
-"وسوف تنفق الوقت ممارسة كمجموعة 3/3، مرة أخرى."
+"يصبحوا قادة لمدى حياة. سوف تتعلم كيفية خدمة الآخرين هو استراتيجية يسوع "
+"للقيادة. وسوف تنفق الوقت ممارسة كمجموعة 3/3، مرة أخرى."
 
 #: template-zume-course.php:2315
 msgid ""
@@ -1984,10 +2084,10 @@ msgstr "يسوع قال: \"كل من يرغب في أن يصبح كبير بين
 
 #: template-zume-course.php:2317
 msgid ""
-"Jesus radically reversed our understanding of leadership by teaching us that if "
-"we feel called to lead, then we are being called to serve. A Leadership Cell is "
-"a way someone who feels called to lead can develop their leadership by "
-"practicing serving."
+"Jesus radically reversed our understanding of leadership by teaching us that "
+"if we feel called to lead, then we are being called to serve. A Leadership "
+"Cell is a way someone who feels called to lead can develop their leadership "
+"by practicing serving."
 msgstr ""
 "يسوع عكس جذريا فهمنا للقيادة بالتدريس لنا أنه إذا شعرنا ودعا للرصاص، ثم أننا "
 "مدعوون لخدمة. خلية القيادة هي طريقة شخص يشعر يسمى أن يؤدي تطوير قيادتهم خلال "
@@ -2031,8 +2131,8 @@ msgstr ""
 
 #: template-zume-course.php:2379
 msgid ""
-"LOOK UP - Use Acts 2:42-47 as your group’s reading passage and answer questions "
-"1- 4."
+"LOOK UP - Use Acts 2:42-47 as your group’s reading passage and answer "
+"questions 1- 4."
 msgstr ""
 "بحث لأعلى--استخدام الأفعال 02:42-47 كمرور القراءة المجموعة الخاصة بك والإجابة "
 "على الأسئلة 1-4."
@@ -2052,13 +2152,14 @@ msgid ""
 "Spend time again this week obeying, sharing, and training based on the "
 "commitments you've made during this session's 3/3 Group practice."
 msgstr ""
-"قضاء بعض الوقت مرة أخرى هذا الأسبوع طاعة، وتقاسم، والتدريب استناداً إلى التعهدات "
-"التي قمت بها خلال 3/3 المجموعة الممارسة هذه الدورة."
+"قضاء بعض الوقت مرة أخرى هذا الأسبوع طاعة، وتقاسم، والتدريب استناداً إلى "
+"التعهدات التي قمت بها خلال 3/3 المجموعة الممارسة هذه الدورة."
 
 #: template-zume-course.php:2418
 msgid ""
-"Pray and ask God who He wants you to share the Leadership Cell tool with before "
-"your group meets again. Share this person’s name with the group before you go."
+"Pray and ask God who He wants you to share the Leadership Cell tool with "
+"before your group meets again. Share this person’s name with the group before "
+"you go."
 msgstr ""
 "نصلي ونسأل الله الذي يريد لك حصة أداة \"خلية القيادة\" مع قبل أن يجتمع الفريق "
 "الخاص بك مرة أخرى. اسم هذا الشخص المشاركة مع الفريق قبل أن تذهب."
@@ -2077,45 +2178,46 @@ msgid ""
 "You were asked to practice Obeying, Training, and Sharing based on your "
 "commitments during last session's 3/3 Group practice."
 msgstr ""
-"طلب منك ممارسة أوبييينج والتدريب وتقاسم استناداً إلى الالتزامات الخاصة بك أثناء "
-"3/3 المجموعة الممارسة الدورة الأخيرة."
+"طلب منك ممارسة أوبييينج والتدريب وتقاسم استناداً إلى الالتزامات الخاصة بك "
+"أثناء 3/3 المجموعة الممارسة الدورة الأخيرة."
 
 #: template-zume-course.php:2461
-msgid "You were encouraged to share the Leadership Cells tool with someone else."
+msgid ""
+"You were encouraged to share the Leadership Cells tool with someone else."
 msgstr "كنت شجعت على مشاركة الأداة \"خلايا القيادة\" مع شخص آخر."
 
 #: template-zume-course.php:2473
 msgid ""
-"Pray and thank God that His ways are not our ways and His thoughts are not our "
-"thoughts. Ask Him to give each member of your group the mind of Christ — always "
-"focused on His Father's work. Ask the Holy Spirit to lead your time together "
-"and make it the best session yet."
+"Pray and thank God that His ways are not our ways and His thoughts are not "
+"our thoughts. Ask Him to give each member of your group the mind of Christ — "
+"always focused on His Father's work. Ask the Holy Spirit to lead your time "
+"together and make it the best session yet."
 msgstr ""
-"الصلاة، والحمد لله أن طرقه غير طرقنا وأفكاره ليست أفكارنا. أطلب منه أن يعطي كل "
-"عضو في المجموعة الخاصة بك في ذهن المسيح – تركز دائماً على عمل والده. أطلب من "
-"الروح القدس المهلة الزمنية الخاصة بك معا وجعله أفضل الدورة بعد."
+"الصلاة، والحمد لله أن طرقه غير طرقنا وأفكاره ليست أفكارنا. أطلب منه أن يعطي "
+"كل عضو في المجموعة الخاصة بك في ذهن المسيح – تركز دائماً على عمل والده. أطلب "
+"من الروح القدس المهلة الزمنية الخاصة بك معا وجعله أفضل الدورة بعد."
 
 #: template-zume-course.php:2481
 msgid ""
-"In this session, you’ll learn how linear patterns hold back kingdom growth and "
-"how Non-Sequential thinking helps you multiply disciples. You'll discover how "
-"much time matters in disciple-making and how to accelerate Pace. You’ll learn "
-"how followers of Jesus can be a Part of Two Churches to help turn faithful, "
-"spiritual families into a growing city-wide body of believers. Finally, you'll "
-"learn how a simple 3-Month Plan can focus your efforts and multiply your "
-"effectiveness in growing God's family exponentially."
+"In this session, you’ll learn how linear patterns hold back kingdom growth "
+"and how Non-Sequential thinking helps you multiply disciples. You'll discover "
+"how much time matters in disciple-making and how to accelerate Pace. You’ll "
+"learn how followers of Jesus can be a Part of Two Churches to help turn "
+"faithful, spiritual families into a growing city-wide body of believers. "
+"Finally, you'll learn how a simple 3-Month Plan can focus your efforts and "
+"multiply your effectiveness in growing God's family exponentially."
 msgstr ""
 "في هذه الجلسة، سوف تتعلم كيف أنماط خطية تعيق نمو المملكة وكيف غير التفكير "
 "متسلسل يساعدك على ضرب التلاميذ. سوف تكتشف كم من الوقت الوقت في صنع التلميذ "
 "وكيفية تسريع بيس. سوف تتعلم كيف أتباع يسوع يمكن أن يكون جزءا من اثنين من "
 "الكنائس للمساعدة في تحويل المؤمنين، والأسر الروحية إلى هيئة متنامية على نطاق "
-"المدينة من المؤمنين. وأخيرا، سوف تتعلم كيف خطة بسيطة 3 أشهر يمكن أن تركز جهودكم "
-"ومضاعفة فعاليتك في نمو عائلة الله أضعافا مضاعفة."
+"المدينة من المؤمنين. وأخيرا، سوف تتعلم كيف خطة بسيطة 3 أشهر يمكن أن تركز "
+"جهودكم ومضاعفة فعاليتك في نمو عائلة الله أضعافا مضاعفة."
 
 #: template-zume-course.php:2502
 msgid ""
-"When people think about disciples multiplying, they often think of it as a step-"
-"by-step process. The problem with that is — that's not how it works best!"
+"When people think about disciples multiplying, they often think of it as a "
+"step-by-step process. The problem with that is — that's not how it works best!"
 msgstr ""
 "عندما يفكر الناس حول التوابع ضرب، أنهم غالباً ما أعتقد أنها عملية تدريجية. "
 "المشكلة مع ذلك – وهذا ليس كيف يعمل بشكل أفضل!"
@@ -2135,8 +2237,8 @@ msgstr "ما هي الفكرة الأكثر تحديا؟ لماذا؟"
 #: template-zume-course.php:2554
 msgid ""
 "Multiplying matters and multiplying quickly matters even more. Pace matters "
-"because where we all spend our eternity — an existence that outlasts time — is "
-"determined in the very short time we call “life.“"
+"because where we all spend our eternity — an existence that outlasts time — "
+"is determined in the very short time we call “life.“"
 msgstr ""
 "المسائل ضرب المسائل وضرب بسرعة أكثر. وتيرة الأمور لأنه حيث نقضي جميع أعمالنا "
 "الخلود – وجود أووتلاستس الوقت – يتحدد في وقت قصير جداً وندعو \"الحياة\"."
@@ -2151,8 +2253,8 @@ msgstr "لماذا هو وتيرة هامة؟"
 
 #: template-zume-course.php:2587
 msgid ""
-"What do you need to change in your thinking, your actions, or your attitude to "
-"be better aligned with God's priority for pace?"
+"What do you need to change in your thinking, your actions, or your attitude "
+"to be better aligned with God's priority for pace?"
 msgstr ""
 "ما الذي تحتاج إلى تغيير في التفكير، الإجراءات الخاصة بك، أو الموقف الخاص بك "
 "يكون أفضل محاذي للأولوية الله لوتيرة؟"
@@ -2167,15 +2269,15 @@ msgid ""
 "Jesus taught us that we are to stay close — to live as a small, spiritual "
 "family, to love and give our lives to one another, to celebrate and suffer — "
 "together. However, Jesus also taught us to leave our homes and loved ones "
-"behind and be willing to go anywhere — and everywhere — to share and start new "
-"spiritual families. So how can we do both? When you're ready, watch the video "
-"below and discuss the question that follows."
+"behind and be willing to go anywhere — and everywhere — to share and start "
+"new spiritual families. So how can we do both? When you're ready, watch the "
+"video below and discuss the question that follows."
 msgstr ""
 "يسوع علمنا أن أردنا البقاء على مقربة – للعيش كأسرة صغيرة، والروحي، إلى الحب "
 "وتعطي حياتنا إلى بعضها البعض، للاحتفال وتعاني – معا. ولكن يسوع كما علمتنا أن "
-"مغادرة بيوتنا واحبائهم وراء وتكون على استعداد للذهاب إلى أي مكان – وفي كل مكان "
-"– مشاركة وتبدأ الأسر الروحية الجديدة. فكيف يمكننا أن نفعل معا؟ عندما تكون "
-"مستعدا، مشاهدة الفيديو أدناه ومناقشة السؤال التالي."
+"مغادرة بيوتنا واحبائهم وراء وتكون على استعداد للذهاب إلى أي مكان – وفي كل "
+"مكان – مشاركة وتبدأ الأسر الروحية الجديدة. فكيف يمكننا أن نفعل معا؟ عندما "
+"تكون مستعدا، مشاهدة الفيديو أدناه ومناقشة السؤال التالي."
 
 #: template-zume-course.php:2629
 msgid "Zúme Video Scripts: Two Churches"
@@ -2184,8 +2286,8 @@ msgstr "الفيديو Zúme البرامج النصية: الكنائس اثن�
 #: template-zume-course.php:2639
 msgid ""
 "What are some advantages of maintaining a consistent spiritual family that "
-"gives birth to new ones that grow and multiply instead of continually growing a "
-"family and splitting it in order to grow?"
+"gives birth to new ones that grow and multiply instead of continually growing "
+"a family and splitting it in order to grow?"
 msgstr ""
 "ما هي بعض مزايا الاحتفاظ بأسره روحية متسقة أن تلد أخرى جديدة للنمو والتكاثر "
 "بدلاً من نمو أسرة وتقسيمها كي تنمو باستمرار؟"
@@ -2196,23 +2298,23 @@ msgstr "إنشاء خطة مدتها 3 أشهر (30 دقيقة)"
 
 #: template-zume-course.php:2658
 msgid ""
-"In His Bible, God says, \"I know the plans I have for you, plans to prosper you "
-"and not to harm you, plans to give you hope and a future.\" God makes plans, "
-"and He expects us to make plans, too. He teaches us through His Word and His "
-"work to look ahead, see a better tomorrow, make a plan for how to get there, "
-"and then prepare the resources we'll need on the way."
+"In His Bible, God says, \"I know the plans I have for you, plans to prosper "
+"you and not to harm you, plans to give you hope and a future.\" God makes "
+"plans, and He expects us to make plans, too. He teaches us through His Word "
+"and His work to look ahead, see a better tomorrow, make a plan for how to get "
+"there, and then prepare the resources we'll need on the way."
 msgstr ""
-"في \"الكتاب المقدس\"، وله يقول الله، \"أعرف خطط لدى لك، وخطط الازدهار لكم وعدم "
-"إلحاق الأذى لك، وتخطط لتعطيك الأمل ومستقبل\". الله يجعل من خطط، وأنه يتوقع منا "
-"لجعل الخطط، أيضا. وقال أنه يعلم لنا من خلال كلمته وعمله للتطلع إلى المستقبل، "
-"انظر أفضل غدا، وضع خطة لكيفية الوصول إلى هناك، ثم قم بإعداد الموارد التي سوف "
-"نحتاج في الطريق."
+"في \"الكتاب المقدس\"، وله يقول الله، \"أعرف خطط لدى لك، وخطط الازدهار لكم "
+"وعدم إلحاق الأذى لك، وتخطط لتعطيك الأمل ومستقبل\". الله يجعل من خطط، وأنه "
+"يتوقع منا لجعل الخطط، أيضا. وقال أنه يعلم لنا من خلال كلمته وعمله للتطلع إلى "
+"المستقبل، انظر أفضل غدا، وضع خطة لكيفية الوصول إلى هناك، ثم قم بإعداد الموارد "
+"التي سوف نحتاج في الطريق."
 
 #: template-zume-course.php:2659
 msgid ""
 "A 3-Month Plan is a tool you can use to help focus your attention and efforts "
-"and keep them aligned with God's priorities for making disciples who multiply. "
-"Spend the next 30 minutes praying over, reading through, and then "
+"and keep them aligned with God's priorities for making disciples who "
+"multiply. Spend the next 30 minutes praying over, reading through, and then "
 "completing the commitments listed in the 3-Month Plan section in your Zúme "
 "Guidebook."
 msgstr ""
@@ -2236,11 +2338,12 @@ msgstr "استمع"
 
 #: template-zume-course.php:2675
 msgid ""
-"Take at least 10 minutes to be as quiet as possible and listen intently to what "
-"God has to say and what He chooses to reveal. Make an effort to hear His voice."
+"Take at least 10 minutes to be as quiet as possible and listen intently to "
+"what God has to say and what He chooses to reveal. Make an effort to hear His "
+"voice."
 msgstr ""
-"أن تكون هادئة قدر الإمكان والاستماع إمعان إلى ما الله قد يقول وما يختاره لتكشف "
-"عن 10 دقائق على الأقل. بذل جهد لسماع صوته."
+"أن تكون هادئة قدر الإمكان والاستماع إمعان إلى ما الله قد يقول وما يختاره "
+"لتكشف عن 10 دقائق على الأقل. بذل جهد لسماع صوته."
 
 #: template-zume-course.php:2681
 msgid "COMPLETE"
@@ -2249,13 +2352,14 @@ msgstr "أُنجز"
 #: template-zume-course.php:2683
 msgid ""
 "Use the rest of your time to complete the 3-Month Plan worksheet. You do not "
-"have to commit to every item, and there is room for other items not already on "
-"the list. Do your best to align your commitments to what you have heard God "
-"reveal to you about His will."
+"have to commit to every item, and there is room for other items not already "
+"on the list. Do your best to align your commitments to what you have heard "
+"God reveal to you about His will."
 msgstr ""
-"استخدام باقي الوقت الخاص بك لإكمال ورقة العمل خطة 3 أشهر. لم يكن لديك أن تلتزم "
-"بكل بند من البنود، وهناك غرفة لعناصر أخرى لم تكن بالفعل في القائمة. بذل قصارى "
-"جهدكم لمواءمة الالتزامات الخاصة بك إلى ما كنت قد سمعت الله تكشف لك عن إرادته."
+"استخدام باقي الوقت الخاص بك لإكمال ورقة العمل خطة 3 أشهر. لم يكن لديك أن "
+"تلتزم بكل بند من البنود، وهناك غرفة لعناصر أخرى لم تكن بالفعل في القائمة. بذل "
+"قصارى جهدكم لمواءمة الالتزامات الخاصة بك إلى ما كنت قد سمعت الله تكشف لك عن "
+"إرادته."
 
 #: template-zume-course.php:2694
 msgid "ACTIVITY (30min)"
@@ -2272,17 +2376,17 @@ msgstr "في \"مجموعات من اثنين أو ثلاثة\" (15 دقيقة)"
 #: template-zume-course.php:2708
 msgid ""
 "Take turns sharing your 3-Month Plans with each other. Take time to ask "
-"questions about things you might not understand about plans and how the others "
-"will meet their commitments. Ask them to do the same for you and your plan. "
-"Find a training partner(s) that is willing to check in with you to report on "
-"progress and challenges and ask questions after 1, 2, 3, 4, 6, 8 and 12 weeks. "
-"Commit to doing the same for them."
+"questions about things you might not understand about plans and how the "
+"others will meet their commitments. Ask them to do the same for you and your "
+"plan. Find a training partner(s) that is willing to check in with you to "
+"report on progress and challenges and ask questions after 1, 2, 3, 4, 6, 8 "
+"and 12 weeks. Commit to doing the same for them."
 msgstr ""
 "يتناوبون على تقاسم الخاصة بك خطط 3 أشهر مع بعضها البعض. خذ بعض الوقت لطرح "
 "الأسئلة حول الأشياء التي كنت قد لا يفهم حول خطط وكيف الآخرين سوف تفي "
 "بالتزاماتها. أطلب منها تفعل نفس الشيء لك والخطة الخاصة بك. العثور شركاء تدريب "
-"التي ترغب في التحقق معك يقدم تقريرا عن التقدم المحرز والتحديات وأسأل أسئلة بعد "
-"1، 2، 3، 4، 6، 8 و 12 أسبوعا. نلتزم بالقيام بنفس الشيء لهم."
+"التي ترغب في التحقق معك يقدم تقريرا عن التقدم المحرز والتحديات وأسأل أسئلة "
+"بعد 1، 2، 3، 4، 6، 8 و 12 أسبوعا. نلتزم بالقيام بنفس الشيء لهم."
 
 #: template-zume-course.php:2717
 msgid "IN YOUR FULL TRAINING GROUP (15 minutes)"
@@ -2291,17 +2395,17 @@ msgstr "في الخاص بك مجموعة تدريبية كاملة (15 دقيق
 #: template-zume-course.php:2719
 msgid ""
 "Discuss and develop a group plan for starting at least two new 3/3 Groups or "
-"Zúme Training Groups in your area. Remember, your goal is start Simple Churches "
-"that multiply. 3/3 Groups and Zúme Training Groups are two ways to do that. "
-"Discuss and decide whether these new Groups will be connected to an existing "
-"local church or network or whether you’ll start a new network out of your Zúme "
-"Training Group."
+"Zúme Training Groups in your area. Remember, your goal is start Simple "
+"Churches that multiply. 3/3 Groups and Zúme Training Groups are two ways to "
+"do that. Discuss and decide whether these new Groups will be connected to an "
+"existing local church or network or whether you’ll start a new network out of "
+"your Zúme Training Group."
 msgstr ""
 "مناقشة ووضع خطة مجموعة لبدء تشغيل اثنين على الأقل من مجموعات 3/3 جديدة أو "
-"مجموعات التدريب Zúme في منطقتك. تذكر، وهدفك هو بدء الكنائس البسيطة التي تتكاثر. "
-"3/3 مجموعات ومجموعات التدريب Zúme طريقتان للقيام بذلك. يناقش ويقرر ما إذا كان "
-"سيتم ربط هذه المجموعات الجديدة محلية موجودة الكنيسة أو الشبكة، أو ما إذا كان "
-"عليك أن تبدأ شبكة جديدة من مجموعة التدريب Zúme الخاصة بك."
+"مجموعات التدريب Zúme في منطقتك. تذكر، وهدفك هو بدء الكنائس البسيطة التي "
+"تتكاثر. 3/3 مجموعات ومجموعات التدريب Zúme طريقتان للقيام بذلك. يناقش ويقرر ما "
+"إذا كان سيتم ربط هذه المجموعات الجديدة محلية موجودة الكنيسة أو الشبكة، أو ما "
+"إذا كان عليك أن تبدأ شبكة جديدة من مجموعة التدريب Zúme الخاصة بك."
 
 #: template-zume-course.php:2725
 msgid "CONNECT"
@@ -2321,12 +2425,12 @@ msgid ""
 "ask God for His favor to bring about all the good work possible out of these "
 "plans and commitments."
 msgstr ""
-"تأكد من أن كافة أعضاء المجموعة معرفة كيفية الاتصال بالمدرب Zúme التي تم تعيينها "
-"إلى المجموعة الخاصة بك في حالة أي شخص لديه أسئلة أو يحتاج إلى مزيد من التدريب. "
-"تذكر أن مشاركة خطتكم لمدة 3 أشهر مع المدرب، حيث أنهم يفهمون الأهداف الخاصة بك. "
-"مناقشة أي مواقع أخرى حيث يمكن أن تساعد أعضاء الفريق الخاص بك إطلاق جديدة 3/3 "
-"مجموعات أو مجموعات التدريب Zúme. من المؤكد أن الصلاة كمجموعة، ونسأل الله "
-"لمصلحته لتحقيق جميع أعمال جيدة يمكن الخروج من هذه الخطط والالتزامات."
+"تأكد من أن كافة أعضاء المجموعة معرفة كيفية الاتصال بالمدرب Zúme التي تم "
+"تعيينها إلى المجموعة الخاصة بك في حالة أي شخص لديه أسئلة أو يحتاج إلى مزيد من "
+"التدريب. تذكر أن مشاركة خطتكم لمدة 3 أشهر مع المدرب، حيث أنهم يفهمون الأهداف "
+"الخاصة بك. مناقشة أي مواقع أخرى حيث يمكن أن تساعد أعضاء الفريق الخاص بك إطلاق "
+"جديدة 3/3 مجموعات أو مجموعات التدريب Zúme. من المؤكد أن الصلاة كمجموعة، ونسأل "
+"الله لمصلحته لتحقيق جميع أعمال جيدة يمكن الخروج من هذه الخطط والالتزامات."
 
 #: template-zume-course.php:2758
 msgid "Congratulations! You've completed Session 9."
@@ -2336,8 +2440,8 @@ msgstr "تهانينا! لقد قمت بإكمال الدورة 9."
 msgid ""
 "You may not know it, but you now have more practical training on starting "
 "simple churches and making disciples who multiply than many pastors and "
-"missionaries around the world! Watch the following video and celebrate all that "
-"you've learned!"
+"missionaries around the world! Watch the following video and celebrate all "
+"that you've learned!"
 msgstr ""
 "قد لا تعرف ذلك، ولكن لديك التدريب العملي أكثر الآن ابتداء من الكنائس بسيطة، "
 "وجعل التلاميذ الذين ضرب من كثير من القساوسة والمبشرين العالم! مشاهدة الفيديو "
@@ -2350,21 +2454,22 @@ msgstr "الفيديو Zúme البرامج النصية: إكمال التدر�
 #: template-zume-course.php:2795
 msgid ""
 "Set aside time on your calendar each week to continue to work on your 3-Month "
-"Plan, and plan check-ins with your training partner at the end of week 1, 2, 3, "
-"4, 6, 8, and 12. Each time you're together, ask about their results and share "
-"yours, making sure you're both working through your plans. Prayerfully consider "
-"continuing as an ongoing spiritual family committed to multiplying disciples."
+"Plan, and plan check-ins with your training partner at the end of week 1, 2, "
+"3, 4, 6, 8, and 12. Each time you're together, ask about their results and "
+"share yours, making sure you're both working through your plans. Prayerfully "
+"consider continuing as an ongoing spiritual family committed to multiplying "
+"disciples."
 msgstr ""
-"تعيين تخصيص وقت في التقويم الخاص بك كل أسبوع إلى مواصلة العمل على خطتكم لمدة 3 "
-"أشهر، وخطة الاختيار الإضافية مع شريكك التدريب في نهاية الأسبوع 1، 2، 3، 4، 6، 8 "
-"و 12. في كل مرة كنت معا، يسأل عن نتائجها ولك نصيب، والتأكد من أنت كنت على حد "
-"سواء تعمل من خلال الخطط الخاصة بك. بصلاتي النظر في مواصلة كأسرة روحية جارية "
-"ملتزمة بضرب التلاميذ."
+"تعيين تخصيص وقت في التقويم الخاص بك كل أسبوع إلى مواصلة العمل على خطتكم لمدة "
+"3 أشهر، وخطة الاختيار الإضافية مع شريكك التدريب في نهاية الأسبوع 1، 2، 3، 4، "
+"6، 8 و 12. في كل مرة كنت معا، يسأل عن نتائجها ولك نصيب، والتأكد من أنت كنت "
+"على حد سواء تعمل من خلال الخطط الخاصة بك. بصلاتي النظر في مواصلة كأسرة روحية "
+"جارية ملتزمة بضرب التلاميذ."
 
 #: template-zume-course.php:2803
 msgid ""
-"Pray and ask God who He would have you share Zúme Training with by launching a "
-"Leadership Cell of future Zúme Training leaders."
+"Pray and ask God who He would have you share Zúme Training with by launching "
+"a Leadership Cell of future Zúme Training leaders."
 msgstr ""
 "نصلي ونسأل الله الذي قال أنه سوف يكون لك حصة التدريب Zúme مع قبل الشروع في "
 "\"خلية القيادة\" لقادة المستقبل في التدريب Zúme."
@@ -2373,18 +2478,18 @@ msgstr ""
 msgid ""
 "Be sure to pray with your group before you end your time together. Thank God "
 "that He has created and gifted you with exactly the right talents to make a "
-"difference in His kingdom. Ask Him for wisdom to use the strengths He has given "
-"you and to find other followers who help cover your weaknesses. Pray that He "
-"would make you fruitful and multiply — this was His plan from the very "
-"beginning. Pray that God help you be obedient to Him and invite Him to work in "
-"you and those around you!"
+"difference in His kingdom. Ask Him for wisdom to use the strengths He has "
+"given you and to find other followers who help cover your weaknesses. Pray "
+"that He would make you fruitful and multiply — this was His plan from the "
+"very beginning. Pray that God help you be obedient to Him and invite Him to "
+"work in you and those around you!"
 msgstr ""
 "يجب التأكد من أن يصلي مع المجموعة الخاصة بك قبل أن يمكنك إنهاء الوقت الخاص بك "
 "معا. والحمد لله أنه قد تم إنشاؤها والموهوبين لك بالضبط مواهب الحق فرقا في "
-"مملكته. اسأله عن الحكمة لاستخدام القوة وقد أعطاه لك وإيجاد الأخرى اتباعه الذين "
-"المساعدة على تغطية نقاط الضعف الخاصة بك. الصلاة أنه يجعلك مثمرا وضرب – كان هذا "
-"خطته منذ البداية. نصلي أن الله يساعدك أن تكون مطيعة له، وأدعوه إلى العمل في لك "
-"وحولك!"
+"مملكته. اسأله عن الحكمة لاستخدام القوة وقد أعطاه لك وإيجاد الأخرى اتباعه "
+"الذين المساعدة على تغطية نقاط الضعف الخاصة بك. الصلاة أنه يجعلك مثمرا وضرب – "
+"كان هذا خطته منذ البداية. نصلي أن الله يساعدك أن تكون مطيعة له، وأدعوه إلى "
+"العمل في لك وحولك!"
 
 #: template-zume-course.php:2819
 msgid "BONUS"
@@ -2393,10 +2498,10 @@ msgstr "المكافأة"
 #: template-zume-course.php:2820 template-zume-course.php:3252
 msgid "Check out"
 msgstr ""
-"تم إنشاء إطار مسترجع مع المطور في الاعتبار. أنها تسمح لأي مطور الموضوع أن يكون "
-"فريق موضوع متقدمة مع معظم الميزات سيحتاج مطور. لمزيد من المعلومات راجع الريبو "
-"Github في: <a href=“https://github.com/ReduxFramework/Redux-Framework”>https://"
-"github.com/ReduxFramework/Redux-Framework</a>"
+"تم إنشاء إطار مسترجع مع المطور في الاعتبار. أنها تسمح لأي مطور الموضوع أن "
+"يكون فريق موضوع متقدمة مع معظم الميزات سيحتاج مطور. لمزيد من المعلومات راجع "
+"الريبو Github في: <a href=“https://github.com/ReduxFramework/Redux-"
+"Framework”>https://github.com/ReduxFramework/Redux-Framework</a>"
 
 #: template-zume-course.php:2822 template-zume-course.php:3253
 msgid ""
@@ -2421,8 +2526,8 @@ msgid ""
 "You were encouraged to share Zúme Training by launching a Leadership Cell of "
 "future Zúme Training leaders."
 msgstr ""
-"كنت شجعت على حصة تدريبية Zúme بإطلاق \"خلية القيادة\" لقادة المستقبل في التدريب "
-"Zúme."
+"كنت شجعت على حصة تدريبية Zúme بإطلاق \"خلية القيادة\" لقادة المستقبل في "
+"التدريب Zúme."
 
 #: template-zume-course.php:2864
 msgid ""
@@ -2434,15 +2539,15 @@ msgstr ""
 
 #: template-zume-course.php:2871
 msgid ""
-"Pray and thank God that He is faithful to complete His good work in us. Ask Him "
-"to give your group clear heads and open hearts to the great things He wants to "
-"do in and through you. Ask the Holy Spirit to lead your time together and thank "
-"Him for His faithfulness, too. He got you through!"
+"Pray and thank God that He is faithful to complete His good work in us. Ask "
+"Him to give your group clear heads and open hearts to the great things He "
+"wants to do in and through you. Ask the Holy Spirit to lead your time "
+"together and thank Him for His faithfulness, too. He got you through!"
 msgstr ""
 "نصلي والحمد لله أنه المخلص لإكمال عمله الجيد في الولايات المتحدة. أطلب منه أن "
-"يعطي رؤساء واضحة الفريق الخاص بك وفتح القلوب لأشياء عظيمة يريد أن يفعله في ومن "
-"خلالكم. أطلب من الروح القدس المهلة الزمنية الخاصة بك معا وأشكره على الإخلاص له، "
-"أيضا. حصل لك عن طريق!"
+"يعطي رؤساء واضحة الفريق الخاص بك وفتح القلوب لأشياء عظيمة يريد أن يفعله في "
+"ومن خلالكم. أطلب من الروح القدس المهلة الزمنية الخاصة بك معا وأشكره على "
+"الإخلاص له، أيضا. حصل لك عن طريق!"
 
 #: template-zume-course.php:2878
 msgid ""
@@ -2484,11 +2589,11 @@ msgstr ""
 
 #: template-zume-course.php:2900
 msgid ""
-"Find the Coaching Checklist section in your Zúme Guidebook, and take this quick "
-"(5-minutes or less) self-assessment:"
+"Find the Coaching Checklist section in your Zúme Guidebook, and take this "
+"quick (5-minutes or less) self-assessment:"
 msgstr ""
-"العثور على مقطع \"التدريب القائمة المرجعية\" في دليل Zúme الخاص بك، واتخاذ هذا "
-"سريعة (5 دقائق أو أقل) التقييم الذاتي:"
+"العثور على مقطع \"التدريب القائمة المرجعية\" في دليل Zúme الخاص بك، واتخاذ "
+"هذا سريعة (5 دقائق أو أقل) التقييم الذاتي:"
 
 #: template-zume-course.php:2903
 msgid ""
@@ -2503,21 +2608,22 @@ msgstr "وضع علامة على كل واحدة من \"أدوات التدري�
 
 #: template-zume-course.php:2906
 msgid ""
-"If you're unfamiliar or don't understand the Tool &#8212; check the BLACK column"
+"If you're unfamiliar or don't understand the Tool &#8212; check the BLACK "
+"column"
 msgstr "إذا كنت غير مألوف أو لا يفهمون الأداة &#8212; التحقق من عمود أسود"
 
 #: template-zume-course.php:2909
 msgid ""
-"If you're somewhat familiar but still not sure about the Tool &#8212; check the "
-"RED column"
+"If you're somewhat familiar but still not sure about the Tool &#8212; check "
+"the RED column"
 msgstr ""
-"إذا كنت مألوفة نوعا ما ولكن لا يزال غير متأكد حول الأداة &#8212; التحقق من عمود "
-"أحمر"
+"إذا كنت مألوفة نوعا ما ولكن لا يزال غير متأكد حول الأداة &#8212; التحقق من "
+"عمود أحمر"
 
 #: template-zume-course.php:2912
 msgid ""
-"If you understand and can train the basics on the Tool &#8212; check the YELLOW "
-"column"
+"If you understand and can train the basics on the Tool &#8212; check the "
+"YELLOW column"
 msgstr ""
 "إذا كنت أفهم، ويمكن تدريب أساسيات على الأداة &#8212; التحقق من العمود الأصفر"
 
@@ -2537,8 +2643,8 @@ msgstr "تلك التي جعلتك تشعر الضعيفة كمدرب؟"
 
 #: template-zume-course.php:2929
 msgid ""
-"Are there any Training Tools that you would add or subtract from the Checklist? "
-"Why?"
+"Are there any Training Tools that you would add or subtract from the "
+"Checklist? Why?"
 msgstr ""
 "هل هناك أي \"أدوات التدريب\" التي سوف تقوم بإضافة أو استقطاع من القائمة "
 "المرجعية؟ لماذا؟"
@@ -2546,14 +2652,14 @@ msgstr ""
 #: template-zume-course.php:2936
 msgid ""
 "REMEMBER &#8212; Be sure to share your Coaching Checklist results with "
-"your Zúme Coach and/or your training partner or other mentor. If you're helping "
-"coach or mentor someone, share this tool to help assess which areas need your "
-"attention and training."
+"your Zúme Coach and/or your training partner or other mentor. If you're "
+"helping coach or mentor someone, share this tool to help assess which areas "
+"need your attention and training."
 msgstr ""
-"تذكر &#8212; ومن المؤكد أن مشاركة نتائج \"التدريب القائمة المرجعية\" الخاصة بك "
-"مع مدرب Zúme الخاص بك و/أو شريكك التدريب أو معلمة أخرى. إذا كنت مساعدة مدرب أو "
-"معلمة شخص، تتقاسم هذه الأداة المساعدة في تقييم المناطق التي تحتاج إلى اهتمام "
-"والتدريب الخاصة بك."
+"تذكر &#8212; ومن المؤكد أن مشاركة نتائج \"التدريب القائمة المرجعية\" الخاصة "
+"بك مع مدرب Zúme الخاص بك و/أو شريكك التدريب أو معلمة أخرى. إذا كنت مساعدة "
+"مدرب أو معلمة شخص، تتقاسم هذه الأداة المساعدة في تقييم المناطق التي تحتاج إلى "
+"اهتمام والتدريب الخاصة بك."
 
 #: template-zume-course.php:2955
 msgid ""
@@ -2583,8 +2689,8 @@ msgstr "أدوات ZÚME-التوجيه مجموعات الأقران"
 
 #: template-zume-course.php:3002
 msgid ""
-"Making disciples who make disciples means making leaders who make leaders. How "
-"do you develop stronger leaders? By teaching them how to love one another "
+"Making disciples who make disciples means making leaders who make leaders. "
+"How do you develop stronger leaders? By teaching them how to love one another "
 "better. Peer Mentoring Groups help leaders love deeper."
 msgstr ""
 "جعل التلاميذ الذين جعل التوابع يعني جعل القادة الذين يصنعون القادة. كيف يمكنك "
@@ -2596,8 +2702,8 @@ msgid ""
 "Find the Peer Mentoring Groups section in your Zúme Guidebook, and listen to "
 "the audio below."
 msgstr ""
-"العثور على مقطع \"جماعات الأقران الإرشاد\" في دليل Zúme الخاص بك، والاستماع إلى "
-"الصوت أدناه."
+"العثور على مقطع \"جماعات الأقران الإرشاد\" في دليل Zúme الخاص بك، والاستماع "
+"إلى الصوت أدناه."
 
 #: template-zume-course.php:3024
 msgid "Zúme Video Scripts: Peer Mentoring Groups"
@@ -2613,9 +2719,9 @@ msgid ""
 "Mentoring Groups format. Find the Peer Mentoring Groups section in your Zúme "
 "Training Guide, and follow these steps."
 msgstr ""
-"ممارسة التوجيه مجموعات الأقران. تنفق المقبل 60 دقيقة من ممارسة تنسيق \"مجموعات "
-"التوجيه الأقران\". العثور على مقطع \"جماعات الأقران الإرشاد\" في \"دليل التدريب"
-"\" الخاص بك Zúme، واتبع هذه الخطوات."
+"ممارسة التوجيه مجموعات الأقران. تنفق المقبل 60 دقيقة من ممارسة تنسيق "
+"\"مجموعات التوجيه الأقران\". العثور على مقطع \"جماعات الأقران الإرشاد\" في "
+"\"دليل التدريب\" الخاص بك Zúme، واتبع هذه الخطوات."
 
 #: template-zume-course.php:3049
 msgid "GROUPS"
@@ -2623,23 +2729,23 @@ msgstr "فرز قائمة المجموعات"
 
 #: template-zume-course.php:3053
 msgid ""
-"Break into groups of two or three and work through the 3/3 sections of the Peer "
-"Mentoring Group format. Peer Mentoring is something that happens once a month "
-"or once a quarter and takes some time for the whole group to participate, so "
-"you will not have time for everyone to experience the full mentoring process in "
-"this session."
+"Break into groups of two or three and work through the 3/3 sections of the "
+"Peer Mentoring Group format. Peer Mentoring is something that happens once a "
+"month or once a quarter and takes some time for the whole group to "
+"participate, so you will not have time for everyone to experience the full "
+"mentoring process in this session."
 msgstr ""
 "اقتحام مجموعات من اثنين أو ثلاثة، والعمل من خلال الفروع 3/3 من تنسيق فريق "
-"التوجيه من جانب الأقران. الإرشاد الأقران هو شيء يحدث مرة واحدة في شهر، أو مجرد "
-"ربع ويأخذ بعض الوقت للمجموعة بأكملها للمشاركة، لذلك سوف لا يكون لديك الوقت "
-"للجميع لتجربة عملية التوجيه الكامل في هذه الدورة."
+"التوجيه من جانب الأقران. الإرشاد الأقران هو شيء يحدث مرة واحدة في شهر، أو "
+"مجرد ربع ويأخذ بعض الوقت للمجموعة بأكملها للمشاركة، لذلك سوف لا يكون لديك "
+"الوقت للجميع لتجربة عملية التوجيه الكامل في هذه الدورة."
 
 #: template-zume-course.php:3060
 msgid ""
 "To practice, choose one person in your group to be the \"mentee\" for this "
-"session and have the other members spend time acting as Peer Mentors by working "
-"through the suggested questions list and providing guidance and encouragement "
-"for the Mentee's work."
+"session and have the other members spend time acting as Peer Mentors by "
+"working through the suggested questions list and providing guidance and "
+"encouragement for the Mentee's work."
 msgstr ""
 "للممارسة، واختيار شخص واحد في المجموعة الخاصة بك لتكون \"mentee\" لهذه الدورة "
 "وأعضاء أخرى تنفق الوقت يتصرف \"موجهين الأقران\" بالعمل من خلال قائمة الأسئلة "
@@ -2668,8 +2774,8 @@ msgstr "تهانينا على التدريب ZÚME كومبليتينج!"
 
 #: template-zume-course.php:3086
 msgid ""
-"You and your group are now ready to take leadership to a new level! Here are a "
-"few more steps to help you KEEP growing!"
+"You and your group are now ready to take leadership to a new level! Here are "
+"a few more steps to help you KEEP growing!"
 msgstr ""
 "الآن أنت والفريق الخاص بك على استعداد لأخذ زمام القيادة إلى مستوى جديد! فيما "
 "يلي بضع خطوات أكثر لمساعدتك في الحفاظ على النمو!"
@@ -2685,12 +2791,12 @@ msgstr "تنمو كتلميذ عن طريق وضع الخاص بك الإيما�
 #: template-zume-course.php:3116
 msgid ""
 "Consider registering online for reminders, coaching resources, and to become "
-"connected with others who are using the same sort of ministry approach. You can "
-"do this at ZumeProject.com."
+"connected with others who are using the same sort of ministry approach. You "
+"can do this at ZumeProject.com."
 msgstr ""
 "النظر في تسجيل على الإنترنت للتذكير، الموارد، والتدريب، وأن تصبح متصلاً مع "
-"الآخرين الذين يستخدمون نفس النوع من نهج وزارة. يمكنك القيام بذلك في ZumeProject."
-"com."
+"الآخرين الذين يستخدمون نفس النوع من نهج وزارة. يمكنك القيام بذلك في "
+"ZumeProject.com."
 
 #: template-zume-course.php:3122
 msgid "ACT"
@@ -2753,17 +2859,17 @@ msgid ""
 "sites, but we can't invite your friends for you."
 msgstr ""
 "يمكنك وضع ما تعرفه للعمل من خلال مساعدة انتشار كلمة عن التدريب Zúme ودعوة "
-"الآخرين الذهاب من خلال التدريب، أيضا. نحن تجعل من السهل لدعوة الأصدقاء عن طريق "
-"البريد الإلكتروني، فيسبوك، والتغريد، سنابتشات والمواقع الاجتماعية الأخرى، ولكن "
-"نحن لا يمكن دعوة أصدقائك لك."
+"الآخرين الذهاب من خلال التدريب، أيضا. نحن تجعل من السهل لدعوة الأصدقاء عن "
+"طريق البريد الإلكتروني، فيسبوك، والتغريد، سنابتشات والمواقع الاجتماعية "
+"الأخرى، ولكن نحن لا يمكن دعوة أصدقائك لك."
 
 #: template-zume-course.php:3188
 msgid ""
 "One of the ways you can put what you know to work is by becoming a county "
-"coordinator, that is someone who can help connect groups as they get started in "
-"your area. If you’re the kind of person who likes to help people go and grow, "
-"this might be a way God can use your gifts to do even more. Let us know by "
-"sending an e-mail to"
+"coordinator, that is someone who can help connect groups as they get started "
+"in your area. If you’re the kind of person who likes to help people go and "
+"grow, this might be a way God can use your gifts to do even more. Let us know "
+"by sending an e-mail to"
 msgstr ""
 "أحد الطرق يمكنك وضع ما تعرفه للعمل قبل أن تصبح منسق محافظة، أي شخص يمكن أن "
 "تساعد في توصيل المجموعات كما أنها تبدأ في منطقتك. إذا كنت النوع الذي يحب أن "
@@ -2776,12 +2882,12 @@ msgstr "نحن نعمل معه."
 
 #: template-zume-course.php:3200
 msgid ""
-"to try to provide you with free information on the residents within your census "
-"tract in order to help you more effectively reach it. \"Stay tuned\" for more "
-"information. If you do not have relationships within your census tract and are "
-"looking for ways to connect with your neighbors, you might consider the Mapping "
-"Your Neighborhood program for disaster preparedness. You can find information "
-"and downloadable resources at"
+"to try to provide you with free information on the residents within your "
+"census tract in order to help you more effectively reach it. \"Stay tuned\" "
+"for more information. If you do not have relationships within your census "
+"tract and are looking for ways to connect with your neighbors, you might "
+"consider the Mapping Your Neighborhood program for disaster preparedness. You "
+"can find information and downloadable resources at"
 msgstr ""
 "محاولة لتزويدك بالمعلومات مجاناً على المقيمين داخل المسالك التعداد الخاص بك "
 "لمساعدتك في أكثر فعالية التوصل إلى ذلك. \"ترقبوا\" للحصول على مزيد من "
@@ -2793,14 +2899,14 @@ msgstr ""
 msgid ""
 "As Zúme Training grows, sessions will soon be available in 34 more languages. "
 "As we bring those trainings online, we’ll send you information on people in "
-"your neighborhood that speak those languages, so you can share something that’s "
-"built just for them. You can help fund the translation of the Zúme Training "
-"into additional languages by donating at"
+"your neighborhood that speak those languages, so you can share something "
+"that’s built just for them. You can help fund the translation of the Zúme "
+"Training into additional languages by donating at"
 msgstr ""
-"كما ينمو Zúme التدريب، دورات ستتاح قريبا في 34 لغات أكثر. كما نقدم هذه الدورات "
-"التدريبية على الإنترنت، سوف نرسل لك معلومات عن الناس في منطقتكم التي تتكلم هذه "
-"اللغات، حيث يمكنك مشاركة شيء التي تم إنشاؤها فقط بالنسبة لهم. يمكنك المساعدة في "
-"تمويل ترجمة التدريب Zúme إلى لغات إضافية عن طريق التبرع في"
+"كما ينمو Zúme التدريب، دورات ستتاح قريبا في 34 لغات أكثر. كما نقدم هذه "
+"الدورات التدريبية على الإنترنت، سوف نرسل لك معلومات عن الناس في منطقتكم التي "
+"تتكلم هذه اللغات، حيث يمكنك مشاركة شيء التي تم إنشاؤها فقط بالنسبة لهم. يمكنك "
+"المساعدة في تمويل ترجمة التدريب Zúme إلى لغات إضافية عن طريق التبرع في"
 
 #: template-zume-course.php:3217
 msgid ""
@@ -2840,8 +2946,8 @@ msgstr "وقت الموعد"
 msgid "Members"
 msgstr "الأعضاء"
 
-#: template-zume-dashboard.php:76 template-zume-dashboard.php:1333
-#: template-zume-profile.php:104
+#: template-zume-dashboard.php:76 template-zume-dashboard.php:1259
+#: template-zume-dashboard.php:1333 template-zume-profile.php:104
 msgid "Address"
 msgstr "عنوان"
 
@@ -3109,6 +3215,11 @@ msgstr "عدد أعضاء الفريق (بما فيهم أنت)"
 msgid "Planned Meeting Time"
 msgstr "تخطيط وقت الاجتماع"
 
+#: template-zume-dashboard.php:1271 template-zume-dashboard.php:1345
+#: template-zume-profile.php:117
+msgid "Validate"
+msgstr "التحقق"
+
 #: template-zume-dashboard.php:1283
 msgid "Submit"
 msgstr "ارسل "
@@ -3138,9 +3249,9 @@ msgid "Zume FAQs"
 msgstr "أسئلة وأجوبة زم"
 
 #: template-zume-faq.php:31
-#, php-format
+#, fuzzy, php-format
 msgid "Is it really 100% free?"
-msgstr "هل هى كذلك ؟"
+msgstr "هل هىك كذلك"
 
 #: template-zume-faq.php:32
 msgid ""
@@ -3157,12 +3268,12 @@ msgstr "استعداد كيف تشعر عندما يتعلق الأمر بتدر
 
 #: template-zume-faq.php:39
 msgid ""
-"We recommend the training for people from 13-years-old and up. If you think you "
-"have a child younger than that who can benefit, by all means let them "
+"We recommend the training for people from 13-years-old and up. If you think "
+"you have a child younger than that who can benefit, by all means let them "
 "participate."
 msgstr ""
-"نوصي تدريب الناس من عمرها 13 سنة وما فوق. إذا كنت تعتقد أن لديك طفل أصغر سنا من "
-"أن الذين يمكن أن تستفيد، والسماح لهم بالمشاركة بكل الوسائل."
+"نوصي تدريب الناس من عمرها 13 سنة وما فوق. إذا كنت تعتقد أن لديك طفل أصغر سنا "
+"من أن الذين يمكن أن تستفيد، والسماح لهم بالمشاركة بكل الوسائل."
 
 #: template-zume-faq.php:45
 msgid "What if no one in our group has internet access?"
@@ -3170,8 +3281,8 @@ msgstr "ماهو الشيء الوحيد الذي لاتملكه واحدة من
 
 #: template-zume-faq.php:46
 msgid ""
-"For now, you will need to find a place with public access. See the FAQ on “Are "
-"the videos available for download so they can be viewed offline?”"
+"For now, you will need to find a place with public access. See the FAQ on "
+"“Are the videos available for download so they can be viewed offline?”"
 msgstr ""
 "في الوقت الحالي، سوف تحتاج إلى العثور على مكان مع وصول الجمهور. اطلع على "
 "الأسئلة الشائعة حول “هل تتوفر مقاطع الفيديو للتنزيل حتى يمكن عرضها في وضع عدم "
@@ -3187,8 +3298,8 @@ msgid ""
 "actually use because system communications happen through e-mail. That person "
 "needs to be designated as the leader of the group. Other participants can use "
 "addresses that are not regularly checked. If someone does not have an address "
-"then the person who does have one can help them set up a free one through Gmail "
-"or other similar provider."
+"then the person who does have one can help them set up a free one through "
+"Gmail or other similar provider."
 msgstr ""
 "يجب أن يكون لدى شخص واحد على الأقل في المجموعة حساب بريد إلكتروني يستخدمونه "
 "بالفعل لأن اتصالات النظام تحدث عبر البريد الإلكتروني. ويتعين تعيين هذا الشخص "
@@ -3218,33 +3329,35 @@ msgid ""
 "in other languages. In some places, access to internet or even computers is "
 "limited. In other places a web-based system is not workable for security "
 "reasons. In still others, there will not be adequate volunteers to run a web-"
-"based system. In the USA, there are usually work-arounds for such limitations. "
-"Culturally in the USA there is a tendency for people to view videos for "
-"entertainment or curiosity. That results in videos being viewed out of context. "
-"In this case, there is a strong desire for the training to be done in groups, "
-"with intent for application, and with accountability. We also want to track "
-"where gaps in implementation exist geographically and need the web-based "
-"approach to do that. Americans are notoriously bad at reporting and we want to "
-"ensure there really is no place left where multiplying disciples are not being "
-"made in the USA. Therefore we are choosing, at least for the present, to make "
-"it inconvenient and difficult to consume the videos in other than this intended "
-"manner. We ask that you not try to short-circuit this intent. You can view the "
-"FAQ on “What is the content of the training?” for a general idea of the content."
+"based system. In the USA, there are usually work-arounds for such "
+"limitations. Culturally in the USA there is a tendency for people to view "
+"videos for entertainment or curiosity. That results in videos being viewed "
+"out of context. In this case, there is a strong desire for the training to be "
+"done in groups, with intent for application, and with accountability. We also "
+"want to track where gaps in implementation exist geographically and need the "
+"web-based approach to do that. Americans are notoriously bad at reporting and "
+"we want to ensure there really is no place left where multiplying disciples "
+"are not being made in the USA. Therefore we are choosing, at least for the "
+"present, to make it inconvenient and difficult to consume the videos in other "
+"than this intended manner. We ask that you not try to short-circuit this "
+"intent. You can view the FAQ on “What is the content of the training?” for a "
+"general idea of the content."
 msgstr ""
-"لا حاليا. وهذا سيتغير بالتأكيد عندما نبدأ في الحصول على المواد في لغات أخرى. في "
-"بعض الأماكن، والوصول إلى الإنترنت أو حتى أجهزة الكمبيوتر محدودة. في أماكن أخرى "
-"نظام على شبكة الإنترنت غير عملي لأسباب أمنية. وفي بلدان أخرى، لن يكون هناك "
-"متطوعون كافيون لتشغيل نظام قائم على الويب. في الولايات المتحدة الأمريكية، عادة "
-"ما تكون هناك مجالات عمل لهذه القيود. ثقافيا في الولايات المتحدة هناك ميل للناس "
-"لمشاهدة أشرطة الفيديو للترفيه أو الفضول. ويؤدي ذلك إلى عرض مقاطع الفيديو خارج "
-"السياق. في هذه الحالة، هناك رغبة قوية في أن يتم التدريب في مجموعات، مع نية "
-"التطبيق، ومع المساءلة. ونريد أيضا أن نتعقب أين توجد ثغرات في التنفيذ جغرافيا "
-"وتحتاج إلى النهج القائم على شبكة الإنترنت للقيام بذلك. الأميركيون سيئة سيئة في "
-"تقديم التقارير، ونحن نريد أن نضمن أن هناك حقا لا يوجد مكان اليسار حيث لا يتم "
-"إجراء التلاميذ ضرب في الولايات المتحدة الأمريكية. لذلك نحن نختار، على الأقل في "
-"الوقت الحاضر، لجعله غير مريح وصعبة لاستهلاك أشرطة الفيديو في غير هذه الطريقة "
-"المقصود. نطلب منك ألا تحاول قصر هذه النية. يمكنك عرض الأسئلة الشائعة حول “ما هو "
-"محتوى التدريب؟” لفكرة عامة عن المحتوى."
+"لا حاليا. وهذا سيتغير بالتأكيد عندما نبدأ في الحصول على المواد في لغات أخرى. "
+"في بعض الأماكن، والوصول إلى الإنترنت أو حتى أجهزة الكمبيوتر محدودة. في أماكن "
+"أخرى نظام على شبكة الإنترنت غير عملي لأسباب أمنية. وفي بلدان أخرى، لن يكون "
+"هناك متطوعون كافيون لتشغيل نظام قائم على الويب. في الولايات المتحدة "
+"الأمريكية، عادة ما تكون هناك مجالات عمل لهذه القيود. ثقافيا في الولايات "
+"المتحدة هناك ميل للناس لمشاهدة أشرطة الفيديو للترفيه أو الفضول. ويؤدي ذلك إلى "
+"عرض مقاطع الفيديو خارج السياق. في هذه الحالة، هناك رغبة قوية في أن يتم "
+"التدريب في مجموعات، مع نية التطبيق، ومع المساءلة. ونريد أيضا أن نتعقب أين "
+"توجد ثغرات في التنفيذ جغرافيا وتحتاج إلى النهج القائم على شبكة الإنترنت "
+"للقيام بذلك. الأميركيون سيئة سيئة في تقديم التقارير، ونحن نريد أن نضمن أن "
+"هناك حقا لا يوجد مكان اليسار حيث لا يتم إجراء التلاميذ ضرب في الولايات "
+"المتحدة الأمريكية. لذلك نحن نختار، على الأقل في الوقت الحاضر، لجعله غير مريح "
+"وصعبة لاستهلاك أشرطة الفيديو في غير هذه الطريقة المقصود. نطلب منك ألا تحاول "
+"قصر هذه النية. يمكنك عرض الأسئلة الشائعة حول “ما هو محتوى التدريب؟” لفكرة "
+"عامة عن المحتوى."
 
 #: template-zume-faq.php:73
 msgid "What is the content of the training?"
@@ -3252,10 +3365,10 @@ msgstr "لبدء التدريب."
 
 #: template-zume-faq.php:74
 msgid ""
-"You can view an overview of the content in the content section, or download the "
-"guidebook and review the course content, or login and start a group but at the "
-"first page of the session choose \"Exploring Session\". This will let you go "
-"through the course content without marking it as completed."
+"You can view an overview of the content in the content section, or download "
+"the guidebook and review the course content, or login and start a group but "
+"at the first page of the session choose \"Exploring Session\". This will let "
+"you go through the course content without marking it as completed."
 msgstr ""
 "يمكنك عرض نظرة عامة على المحتوى في قسم المحتوى أو تنزيل الدليل ومراجعة محتوى "
 "الدورة التدريبية أو تسجيل الدخول وبدء مجموعة ولكن في الصفحة الأولى من الجلسة "
@@ -3264,8 +3377,8 @@ msgstr ""
 
 #: template-zume-faq.php:80
 msgid ""
-"I want to make copies of the manual (Guidebook) before the training. How can I "
-"do that?"
+"I want to make copies of the manual (Guidebook) before the training. How can "
+"I do that?"
 msgstr "أريد جعل نسخة من الدليل (دليل) قبل التدريب. كيف يمكن أن تفعل ذلك؟"
 
 #: template-zume-faq.php:81
@@ -3273,23 +3386,23 @@ msgid ""
 "You can always find the Guidebook by hovering over the “About” tab on the top "
 "of every page."
 msgstr ""
-"يمكنك دائما العثور على الدليل عن طريق تمرير مؤشر الماوس فوق علامة التبويب “حول” "
-"في أعلى كل صفحة."
+"يمكنك دائما العثور على الدليل عن طريق تمرير مؤشر الماوس فوق علامة التبويب "
+"“حول” في أعلى كل صفحة."
 
 #: template-zume-faq.php:87
 msgid ""
 "I accidentally hit the next button and I want to go back and view a video "
 "again. How do I navigate?"
 msgstr ""
-"أنا ضرب بطريق الخطأ الزر التالي وأريد أن أعود وعرض الفيديو مرة أخرى. كيف يمكنني "
-"التنقل؟"
+"أنا ضرب بطريق الخطأ الزر التالي وأريد أن أعود وعرض الفيديو مرة أخرى. كيف "
+"يمكنني التنقل؟"
 
 #: template-zume-faq.php:88
 msgid ""
 "The navigation is via the boxes toward the top of the screen. Those represent "
 "the steps of the session. Navigation between sessions is via the small arrows "
-"next to the session number at the top of the page in a large font: < Session 2 "
-">, for example."
+"next to the session number at the top of the page in a large font: < Session "
+"2 >, for example."
 msgstr ""
 "الملاحة عبر المربعات نحو الجزء العلوي من الشاشة. وهذه تمثل خطوات الدورة. يتم "
 "التنقل بين الجلسات عبر الأسهم الصغيرة بجوار رقم الجلسة أعلى الصفحة بخط كبير: "
@@ -3305,16 +3418,16 @@ msgid ""
 "replace live training events. Unfortunately, due to limitations of access, "
 "awareness, availability, scheduling, and many other reasons, many people who "
 "can and should have access to live training events don’t have access. Zúme is "
-"an attempt to provide a high-quality entry level substitute for such people. It "
-"uses the same principles as many of the live training types available from "
+"an attempt to provide a high-quality entry level substitute for such people. "
+"It uses the same principles as many of the live training types available from "
 "others."
 msgstr ""
 "التدريب المباشر هو أفضل من التدريب عبر الإنترنت. وينبغي ألا يحل التدريب عبر "
-"الإنترنت محل أحداث التدريب المباشر. لسوء الحظ، بسبب القيود المفروضة على الوصول، "
-"والوعي، وتوافر، وجدولة، والعديد من الأسباب الأخرى، وكثير من الناس الذين "
-"يستطيعون ويجب أن يكون الوصول إلى أحداث التدريب الحية لا يمكن الوصول إليها. زوم "
-"هو محاولة لتوفير بديل جودة عالية مستوى الدخول لهؤلاء الناس. ويستخدم نفس المبادئ "
-"مثل العديد من أنواع التدريب الحية المتاحة من الآخرين."
+"الإنترنت محل أحداث التدريب المباشر. لسوء الحظ، بسبب القيود المفروضة على "
+"الوصول، والوعي، وتوافر، وجدولة، والعديد من الأسباب الأخرى، وكثير من الناس "
+"الذين يستطيعون ويجب أن يكون الوصول إلى أحداث التدريب الحية لا يمكن الوصول "
+"إليها. زوم هو محاولة لتوفير بديل جودة عالية مستوى الدخول لهؤلاء الناس. "
+"ويستخدم نفس المبادئ مثل العديد من أنواع التدريب الحية المتاحة من الآخرين."
 
 #: template-zume-faq.php:101
 msgid "I speak English but live outside the USA. How can I participate?"
@@ -3323,7 +3436,8 @@ msgstr "أتتحدث الإنجليزية؟"
 #: template-zume-faq.php:102
 msgid ""
 "Right now, you need to provide some USA-based address for the system to work. "
-"This will not be true once Phase 3 is begun in other English-speaking countries."
+"This will not be true once Phase 3 is begun in other English-speaking "
+"countries."
 msgstr ""
 "الآن، تحتاج إلى توفير بعض عنوان الولايات المتحدة الأمريكية على أساس النظام "
 "للعمل. ولن يكون هذا صحيحا بمجرد بدء المرحلة الثالثة في البلدان الناطقة "
@@ -3355,18 +3469,18 @@ msgstr "جد مهيب"
 
 #: template-zume-faq.php:123
 msgid ""
-"Shortly after your group is registered, you will have a coach assigned. On each "
-"page of the training there is a link at the bottom of the page that enables you "
-"to send a message to your coach. They will respond at their earliest "
-"convenience. If for some reason you cannot get responses from your coach then "
-"send a request via the form at the bottom of the landing page at zumeproject."
-"com."
+"Shortly after your group is registered, you will have a coach assigned. On "
+"each page of the training there is a link at the bottom of the page that "
+"enables you to send a message to your coach. They will respond at their "
+"earliest convenience. If for some reason you cannot get responses from your "
+"coach then send a request via the form at the bottom of the landing page at "
+"zumeproject.com."
 msgstr ""
 "بعد فترة وجيزة من تسجيل مجموعتك، سيكون لديك مدرب معين. في كل صفحة من التدريب "
-"هناك رابط في الجزء السفلي من الصفحة التي تمكنك من إرسال رسالة إلى المدرب الخاص "
-"بك. وسوف تستجيب في أقرب وقت ممكن. إذا لسبب ما لا يمكنك الحصول على ردود من "
-"المدرب الخاص بك ثم إرسال طلب عبر النموذج في الجزء السفلي من الصفحة المقصودة في "
-"zumeproject.com."
+"هناك رابط في الجزء السفلي من الصفحة التي تمكنك من إرسال رسالة إلى المدرب "
+"الخاص بك. وسوف تستجيب في أقرب وقت ممكن. إذا لسبب ما لا يمكنك الحصول على ردود "
+"من المدرب الخاص بك ثم إرسال طلب عبر النموذج في الجزء السفلي من الصفحة "
+"المقصودة في zumeproject.com."
 
 #: template-zume-faq.php:129
 msgid "Can I do the training by myself?"
@@ -3374,9 +3488,9 @@ msgstr "لبدء التدريب."
 
 #: template-zume-faq.php:130
 msgid ""
-"No. There are essential training exercises and practice sessions which require "
-"other participants to complete. At least four people need to be present at "
-"every session."
+"No. There are essential training exercises and practice sessions which "
+"require other participants to complete. At least four people need to be "
+"present at every session."
 msgstr ""
 "لا. وهناك تمارين التدريب الأساسية وجلسات التدريب التي تتطلب مشاركين آخرين "
 "لإكمال. أربعة أشخاص على الأقل بحاجة إلى أن يكون حاضرا في كل دورة."
@@ -3387,16 +3501,16 @@ msgstr "انضمام مجموعة بلدي التدريب"
 
 #: template-zume-faq.php:137
 msgid ""
-"The training is appropriate for English speaking followers of Christ who are 13-"
-"years-old or older and who are able to read. In the future, there may be a "
+"The training is appropriate for English speaking followers of Christ who are "
+"13-years-old or older and who are able to read. In the future, there may be a "
 "version produced that is appropriate for non-literate people, but this is not "
 "that version. We believe every person who fits this profile should take the "
 "training."
 msgstr ""
 "التدريب المناسب لاتباع يتحدث الإنجليزية المسيح الذين هم عمرها 13 سنة أو أكثر "
-"والذين تكون قادراً على قراءة. في المستقبل، قد يكون هناك نسخة إنتاج مناسب للأشخاص "
-"الأميين، ولكن هذا ليس هذا الإصدار. نعتقد أن كل شخص يناسب هذا التشكيل الجانبي "
-"ينبغي أن يأخذ التدريب."
+"والذين تكون قادراً على قراءة. في المستقبل، قد يكون هناك نسخة إنتاج مناسب "
+"للأشخاص الأميين، ولكن هذا ليس هذا الإصدار. نعتقد أن كل شخص يناسب هذا التشكيل "
+"الجانبي ينبغي أن يأخذ التدريب."
 
 #: template-zume-faq.php:143
 msgid "Who owns Zúme?"
@@ -3404,21 +3518,21 @@ msgstr "من يملك Zúme؟"
 
 #: template-zume-faq.php:144
 msgid ""
-"There is no organization that is “running” the Zúme Project and the project is "
-"not an organization. It is a coalition of people who have a heart to carry out "
-"Christ’s command to make disciples of every people group on earth and expand "
-"His Kingdom to every place until His will is done on earth as it is in heaven. "
-"The idea for the project originated in a meeting of the Jonathan Project "
-"leadership but has since spread far beyond that group. The Jonathan Project "
-"(https://hill111.com) is a consortium of people committed to multiplying "
-"disciples around the world."
+"There is no organization that is “running” the Zúme Project and the project "
+"is not an organization. It is a coalition of people who have a heart to carry "
+"out Christ’s command to make disciples of every people group on earth and "
+"expand His Kingdom to every place until His will is done on earth as it is in "
+"heaven. The idea for the project originated in a meeting of the Jonathan "
+"Project leadership but has since spread far beyond that group. The Jonathan "
+"Project (https://hill111.com) is a consortium of people committed to "
+"multiplying disciples around the world."
 msgstr ""
-"لا توجد منظمة “تشغيل” مشروع زومي والمشروع ليس منظمة. وهو ائتلاف من الناس الذين "
-"لديهم قلب لتنفيذ قيادة المسيح لتلاميذ كل مجموعة الناس على الأرض وتوسيع مملكته "
-"إلى كل مكان حتى يتم إرادته على الأرض كما هو الحال في السماء. نشأت فكرة المشروع "
-"في اجتماع قيادة جوناثان المشروع ولكن منذ ذلك الحين انتشرت أبعد من تلك المجموعة. "
-"مشروع جوناثان (https://hill111.com) هو كونسورتيوم من الناس ملتزمة ضرب التلاميذ "
-"في جميع أنحاء العالم.\n"
+"لا توجد منظمة “تشغيل” مشروع زومي والمشروع ليس منظمة. وهو ائتلاف من الناس "
+"الذين لديهم قلب لتنفيذ قيادة المسيح لتلاميذ كل مجموعة الناس على الأرض وتوسيع "
+"مملكته إلى كل مكان حتى يتم إرادته على الأرض كما هو الحال في السماء. نشأت فكرة "
+"المشروع في اجتماع قيادة جوناثان المشروع ولكن منذ ذلك الحين انتشرت أبعد من تلك "
+"المجموعة. مشروع جوناثان (https://hill111.com) هو كونسورتيوم من الناس ملتزمة "
+"ضرب التلاميذ في جميع أنحاء العالم.\n"
 "‬"
 
 #: template-zume-faq.php:150
@@ -3431,11 +3545,11 @@ msgstr "المرحلة 1"
 
 #: template-zume-faq.php:152
 msgid ""
-"Focuses on the United States in English. The initial goal is for there to be a "
-"training group of four to twelve people in each census tract in the country. "
-"Each of these training groups will start two first-generation churches which "
-"will then begin to reproduce. There are about 75,000 census tracts so this will "
-"mean 150,000 first-generation churches."
+"Focuses on the United States in English. The initial goal is for there to be "
+"a training group of four to twelve people in each census tract in the "
+"country. Each of these training groups will start two first-generation "
+"churches which will then begin to reproduce. There are about 75,000 census "
+"tracts so this will mean 150,000 first-generation churches."
 msgstr ""
 "ويهدف Zúme الأولية لكي يتم تدريب مجموعة من أربعة إلى اثني عشر شخصا في كل "
 "المسالك تعداد السكان في البلاد. وستبدأ كل مجموعة من هذه المجموعات التدريبية "
@@ -3450,10 +3564,11 @@ msgstr "المرحلة 2"
 msgid ""
 "Focuses on other language groups in the United States. The data available "
 "through www.mappingcenter.com will be mapped to the census tract level so it "
-"will be easy for those working in each of the census tracts to determine which "
-"of the target languages are significantly represented within their local area "
-"and seek to start training groups in the appropriate languages. These training "
-"groups can then start first-generation churches in those language groups."
+"will be easy for those working in each of the census tracts to determine "
+"which of the target languages are significantly represented within their "
+"local area and seek to start training groups in the appropriate languages. "
+"These training groups can then start first-generation churches in those "
+"language groups."
 msgstr ""
 "يركز على مجموعات اللغات الأخرى في الولايات المتحدة. وسيتم تحديد البيانات "
 "المتاحة من خلال www.mappingcenter.com إلى مستوى التعداد، لذلك سيكون من السهل "
@@ -3469,15 +3584,16 @@ msgstr "المرحلة 3"
 #: template-zume-faq.php:156
 msgid ""
 "Focuses globally in major world languages. The framework for targeting the "
-"training groups is based on the 4K maps developed by YWAM. It divides the world "
-"into segments based on population and the general level of gospel saturation, "
-"with less evangelized areas receiving about three times the attention of more "
-"evangelized areas. For more information on the framework go to http://"
-"www.4Kworldmap.com. The project will use the next generation of the data, 4K "
-"Plus, which will divide the world into about 60,000 Omega Districts. There will "
-"be training groups started in each Omega District which will then launch first-"
-"generation churches within the districts. In the least evangelized areas this "
-"will be a training group for approximately every 50,000 people."
+"training groups is based on the 4K maps developed by YWAM. It divides the "
+"world into segments based on population and the general level of gospel "
+"saturation, with less evangelized areas receiving about three times the "
+"attention of more evangelized areas. For more information on the framework go "
+"to http://www.4Kworldmap.com. The project will use the next generation of the "
+"data, 4K Plus, which will divide the world into about 60,000 Omega Districts. "
+"There will be training groups started in each Omega District which will then "
+"launch first-generation churches within the districts. In the least "
+"evangelized areas this will be a training group for approximately every "
+"50,000 people."
 msgstr ""
 "يركز عالميا في لغات العالم الرئيسية. ويستند إطار استهداف مجموعات التدريب على "
 "خرائط 4K التي وضعتها يوام. وهو يقسم العالم إلى شرائح على أساس السكان والمستوى "
@@ -3486,7 +3602,8 @@ msgstr ""
 "www.4Kworldmap.com. وسوف يستخدم المشروع الجيل القادم من البيانات، 4K زائد، "
 "والتي سوف تقسم العالم إلى حوالي 60،000 مناطق أوميغا. وسوف تكون هناك مجموعات "
 "تدريبية بدأت في كل منطقة أوميغا التي سوف ثم إطلاق الجيل الأول من الكنائس داخل "
-"المناطق. وفي المناطق الأقل تبشيرا، سيكون هذا الفريق تدريبا لكل 50000 شخص تقريبا."
+"المناطق. وفي المناطق الأقل تبشيرا، سيكون هذا الفريق تدريبا لكل 50000 شخص "
+"تقريبا."
 
 #: template-zume-faq.php:162
 msgid "Why is it called Zúme?"
@@ -3503,25 +3620,25 @@ msgid ""
 msgstr ""
 "لعملة باستحداث لبلجيكا، من بها, غينيا الخاطفة ثم إيو, قبل في وصغار الغالي. "
 "الشطر الخاطفة الصينية عن دار, جمعت لعدم الساحة به، أم. بلا تطوير بالجانب "
-"المنتصر أي, الآخر حاملات دول بـ, أهّل بالفشل للسيطرة بحق عل. هذه هو اتّجة قبضتهم "
-"الدولارات, دون و مايو النزاع لتقليعة."
+"المنتصر أي, الآخر حاملات دول بـ, أهّل بالفشل للسيطرة بحق عل. هذه هو اتّجة "
+"قبضتهم الدولارات, دون و مايو النزاع لتقليعة."
 
 #: template-zume-faq.php:168
 msgid ""
-"I really want to support Zúme financially because I passionately believe in it. "
-"How can I give?"
+"I really want to support Zúme financially because I passionately believe in "
+"it. How can I give?"
 msgstr "أريد حقا أن دعم زوم ماليا لأنني أؤمن بحماس في ذلك. كيف يمكنني أن أعطي؟"
 
 #: template-zume-faq.php:169
 msgid ""
-"That is how everything about Zúme has happened so far. We’re glad you feel the "
-"same way about it that we do. Biglife has agreed to handle donations for the "
-"project for free. You can donate at big.life/donate/ if you select “Zúme "
+"That is how everything about Zúme has happened so far. We’re glad you feel "
+"the same way about it that we do. Biglife has agreed to handle donations for "
+"the project for free. You can donate at big.life/donate/ if you select “Zúme "
 "Project” as the designation for your gift."
 msgstr ""
-"هكذا حدث كل شيء عن زومي حتى الآن. نحن سعداء بأنك تشعر بنفس الطريقة التي نفعلها. "
-"وقد وافقت بيغليف على التعامل مع التبرعات للمشروع مجانا. يمكنك التبرع في big."
-"life/donate/ إذا قمت بتحديد “زوم مشروع” كما تسمية لهديتك."
+"هكذا حدث كل شيء عن زومي حتى الآن. نحن سعداء بأنك تشعر بنفس الطريقة التي "
+"نفعلها. وقد وافقت بيغليف على التعامل مع التبرعات للمشروع مجانا. يمكنك التبرع "
+"في big.life/donate/ إذا قمت بتحديد “زوم مشروع” كما تسمية لهديتك."
 
 #: template-zume-faq.php:174
 msgid "When will the other 34 language versions become available?"
@@ -3530,13 +3647,13 @@ msgstr "عندما ستصبح 34 لغات أخرى متاحة؟"
 #: template-zume-faq.php:175
 msgid ""
 "First we want to iron out the kinks in English for a few months. Then it "
-"depends on how quickly we can raise funds for the translations, and how quickly "
-"we can locate appropriate translators, and how quickly they can work. Hopefully "
-"the kinks will be worked out by May 2017. The translation process is tricky "
-"because of all the voiceovers and the retiming of the videos so we are only "
-"guessing at the cost per language but we are hoping for about $7,000 per "
-"language. If you want to fund a particular language or pay for a language we "
-"haven’t planned on then you can designate contributions for that language."
+"depends on how quickly we can raise funds for the translations, and how "
+"quickly we can locate appropriate translators, and how quickly they can work. "
+"Hopefully the kinks will be worked out by May 2017. The translation process "
+"is tricky because of all the voiceovers and the retiming of the videos so we "
+"are only guessing at the cost per language but we are hoping for about $7,000 "
+"per language. If you want to fund a particular language or pay for a language "
+"we haven’t planned on then you can designate contributions for that language."
 msgstr ""
 "نحن نريد أولا أن نطرح الروابط باللغة الإنجليزية لبضعة أشهر. ثم يعتمد ذلك على "
 "مدى السرعة التي يمكننا بها جمع الأموال للترجمات، ومدى سرعة العثور على مترجمين "
@@ -3553,20 +3670,20 @@ msgstr "ما هي اللغات التي سيتم التدريب تترجم إل�
 #: template-zume-faq.php:181
 msgid ""
 "The project will start in the following languages and made available to those "
-"wishing to translate the training and tools into additional languages: Arabic, "
-"Bengali, Bhojpuri, Burmese, Chinese (Mandarin), Chinese (Cantonese), Farsi, "
-"French, German, Gujarati, Hausa, Hindi, Indonesian, Italian, Japanese, Kannada, "
-"Korean, Maithili, Malayalam, Marathi, Oriya, Panjabi (Eastern), Panjabi "
-"(Western), Portuguese, Russian, Spanish, Swahili, Tamil, Telugu, Thai, Turkish, "
-"Urdu, Vietnamese, Yoruba."
+"wishing to translate the training and tools into additional languages: "
+"Arabic, Bengali, Bhojpuri, Burmese, Chinese (Mandarin), Chinese (Cantonese), "
+"Farsi, French, German, Gujarati, Hausa, Hindi, Indonesian, Italian, Japanese, "
+"Kannada, Korean, Maithili, Malayalam, Marathi, Oriya, Panjabi (Eastern), "
+"Panjabi (Western), Portuguese, Russian, Spanish, Swahili, Tamil, Telugu, "
+"Thai, Turkish, Urdu, Vietnamese, Yoruba."
 msgstr ""
 "وسيبدأ المشروع باللغات التالية وإتاحته لأولئك الذين يرغبون في ترجمة التدريب "
 "والأدوات إلى لغات إضافية: العربية والبنغالية والبوجبية والبورمية والصينية "
-"(الماندرين) والصينية (الكانتونية) والفارسية والفرنسية والألمانية والغوجاراتية، "
-"الهوسا، الهندية، الإندونيسية، الإيطالية، اليابانية، الكانادا، الكورية، ميثيلي، "
-"المالايالامية، الماراثية، الأوريا، البنجابي (الشرقية)، البنجابي (الغربية) "
-"والبرتغالية والروسية والإسبانية والسواحيلية والتاميلية والتيلوجو والتايلاندية "
-"والتركية والأردية، الفيتنامية، اليوروبا.\n"
+"(الماندرين) والصينية (الكانتونية) والفارسية والفرنسية والألمانية "
+"والغوجاراتية، الهوسا، الهندية، الإندونيسية، الإيطالية، اليابانية، الكانادا، "
+"الكورية، ميثيلي، المالايالامية، الماراثية، الأوريا، البنجابي (الشرقية)، "
+"البنجابي (الغربية) والبرتغالية والروسية والإسبانية والسواحيلية والتاميلية "
+"والتيلوجو والتايلاندية والتركية والأردية، الفيتنامية، اليوروبا.\n"
 "‬"
 
 #: template-zume-faq.php:186
@@ -3575,20 +3692,20 @@ msgstr "كيف هي بدأت المجموعات المتدربين الانحي�
 
 #: template-zume-faq.php:187
 msgid ""
-"It depends. If the trainees come out of a particular church or denomination or "
-"network then the most natural thing is for the newly formed groups to be "
+"It depends. If the trainees come out of a particular church or denomination "
+"or network then the most natural thing is for the newly formed groups to be "
 "connected with those existing churches, denomination, or network. If desired, "
 "however, a new network can be formed from the groups that start. A third "
 "alternative would be for the new groups to join with other already existing "
 "networks of simple churches. Many of the people involved in developing Zúme "
 "come from such networks so we can help arrange that if desired."
 msgstr ""
-"هذا يعتمد. إذا خرج المتدربون من كنيسة معينة أو طائفة أو شبكة، فإن الشيء الأكثر "
-"طبيعية هو أن تكون المجموعات التي تم تشكيلها حديثا مرتبطة بالكنائس القائمة، أو "
-"المذهب، أو الشبكة. ولكن إذا رغبت في ذلك، يمكن تشكيل شبكة جديدة من المجموعات "
-"التي تبدأ. وثمة بديل ثالث هو أن تنضم المجموعات الجديدة إلى شبكات أخرى موجودة "
-"بالفعل من الكنائس البسيطة. العديد من الناس المشاركين في تطوير زوم تأتي من مثل "
-"هذه الشبكات حتى نتمكن من المساعدة في ترتيب أنه إذا رغبت في ذلك."
+"هذا يعتمد. إذا خرج المتدربون من كنيسة معينة أو طائفة أو شبكة، فإن الشيء "
+"الأكثر طبيعية هو أن تكون المجموعات التي تم تشكيلها حديثا مرتبطة بالكنائس "
+"القائمة، أو المذهب، أو الشبكة. ولكن إذا رغبت في ذلك، يمكن تشكيل شبكة جديدة من "
+"المجموعات التي تبدأ. وثمة بديل ثالث هو أن تنضم المجموعات الجديدة إلى شبكات "
+"أخرى موجودة بالفعل من الكنائس البسيطة. العديد من الناس المشاركين في تطوير زوم "
+"تأتي من مثل هذه الشبكات حتى نتمكن من المساعدة في ترتيب أنه إذا رغبت في ذلك."
 
 #: template-zume-faq.php:206
 msgid ""
@@ -3601,16 +3718,16 @@ msgid ""
 msgstr ""
 "لعملة باستحداث لبلجيكا، من بها, غينيا الخاطفة ثم إيو, قبل في وصغار الغالي. "
 "الشطر الخاطفة الصينية عن دار, جمعت لعدم الساحة به، أم. بلا تطوير بالجانب "
-"المنتصر أي, الآخر حاملات دول بـ, أهّل بالفشل للسيطرة بحق عل. هذه هو اتّجة قبضتهم "
-"الدولارات, دون و مايو النزاع لتقليعة."
+"المنتصر أي, الآخر حاملات دول بـ, أهّل بالفشل للسيطرة بحق عل. هذه هو اتّجة "
+"قبضتهم الدولارات, دون و مايو النزاع لتقليعة."
 
 #: template-zume-guidebook.php:28
 msgid ""
-"Our goal is kingdom growth, so we have made the entire training guidebook free "
-"for download. Use the link below."
+"Our goal is kingdom growth, so we have made the entire training guidebook "
+"free for download. Use the link below."
 msgstr ""
-"هدفنا هو نمو المملكة، لذلك حققنا كامل دليل التدريب مجانا للتحميل. استخدم الرابط "
-"أدناه."
+"هدفنا هو نمو المملكة، لذلك حققنا كامل دليل التدريب مجانا للتحميل. استخدم "
+"الرابط أدناه."
 
 #: template-zume-guidebook.php:35
 msgid "Complete Zume Guidebook"
@@ -3665,10 +3782,6 @@ msgid "Go to the Dashboard to select your Group and start the next session"
 msgstr ""
 "الانتقال إلى لوحة المعلومات لتحديد المجموعة الخاصة بك والبدء في الدورة المقبلة"
 
-#: template-zume-overview.php:191
-msgid "Dashboard"
-msgstr "لوحة التحكم"
-
 #: template-zume-overview.php:253 template-zume-overview.php:393
 #: template-zume-overview.php:515 template-zume-overview.php:625
 #: template-zume-overview.php:769 template-zume-overview.php:876
@@ -3712,8 +3825,8 @@ msgid ""
 "S.O.A.P.S. BIBLE READING — a tool for daily Bible study that helps you "
 "understand, obey, and share God’s Word."
 msgstr ""
-"قراءة الكتاب المقدس S.O.A.P.S. – أداة لدراسة الكتاب المقدس اليومية التي تساعدك "
-"على فهم وطاعة ومشاركة كلمة الله."
+"قراءة الكتاب المقدس S.O.A.P.S. – أداة لدراسة الكتاب المقدس اليومية التي "
+"تساعدك على فهم وطاعة ومشاركة كلمة الله."
 
 #: template-zume-overview.php:317
 msgid ""
@@ -3742,8 +3855,8 @@ msgstr ""
 
 #: template-zume-overview.php:403
 msgid ""
-"PRODUCERS VS. CONSUMERS — You'll discover the four main ways God makes everyday "
-"followers more like Jesus."
+"PRODUCERS VS. CONSUMERS — You'll discover the four main ways God makes "
+"everyday followers more like Jesus."
 msgstr ""
 "مقابل المنتجين. المستهلكين، فسوف نكتشف أربع طرق رئيسية الله يجعل اليومية شوهد "
 "أكثر مثل يسوع."
@@ -3757,7 +3870,8 @@ msgid ""
 "LIST OF 100 — a tool designed to help you be a good steward of your "
 "relationships."
 msgstr ""
-"قائمة من 100 – أداة مصممة لمساعدتك على أن تكون ستيوارد جيدة للعلاقات الخاصة بك."
+"قائمة من 100 – أداة مصممة لمساعدتك على أن تكون ستيوارد جيدة للعلاقات الخاصة "
+"بك."
 
 #: template-zume-overview.php:458
 msgid "PRAYER CYCLE — Spend 60 minutes in prayer individually."
@@ -3769,28 +3883,29 @@ msgstr "قائمة من 100 – إنشاء القائمة الخاصة بك من
 
 #: template-zume-overview.php:525
 msgid ""
-"SPIRITUAL ECONOMY — Learn how God's economy is different from the world's. God "
-"invests more in those who are faithful with what they've already been given."
+"SPIRITUAL ECONOMY — Learn how God's economy is different from the world's. "
+"God invests more in those who are faithful with what they've already been "
+"given."
 msgstr ""
-"الاقتصاد الروحية – تعلم كيف الاقتصاد الله يختلف عن العالم. الله تستثمر أكثر في "
-"أولئك الذين هم المؤمنين بما أنهم فعلا قد أعطيت."
+"الاقتصاد الروحية – تعلم كيف الاقتصاد الله يختلف عن العالم. الله تستثمر أكثر "
+"في أولئك الذين هم المؤمنين بما أنهم فعلا قد أعطيت."
 
 #: template-zume-overview.php:537
 msgid ""
-"CREATION TO JUDGMENT — Learn a way to share God’s Good News from the beginning "
-"of humanity all the way to the end of this age."
+"CREATION TO JUDGMENT — Learn a way to share God’s Good News from the "
+"beginning of humanity all the way to the end of this age."
 msgstr ""
 "إنشاء للحكم – تعلم طريقة لتبادل \"الأخبار الجيدة\" الله ابتداء من الإنسانية "
 "وصولاً إلى نهاية هذا العصر."
 
 #: template-zume-overview.php:559
 msgid ""
-"BAPTISM — Jesus said, “Go and make disciples of all nations, BAPTIZING them in "
-"the name of the Father and of the Son and of the Holy Spirit…” Learn how to put "
-"this into practice."
+"BAPTISM — Jesus said, “Go and make disciples of all nations, BAPTIZING them "
+"in the name of the Father and of the Son and of the Holy Spirit…” Learn how "
+"to put this into practice."
 msgstr ""
-"معمودية-يسوع قال، \"اذهب وجعل التوابع من جميع الأمم، يعمد لهم باسم الأب والابن "
-"والروح القدس...\" تعلم كيفية وضع ذلك موضع التنفيذ."
+"معمودية-يسوع قال، \"اذهب وجعل التوابع من جميع الأمم، يعمد لهم باسم الأب "
+"والابن والروح القدس...\" تعلم كيفية وضع ذلك موضع التنفيذ."
 
 #: template-zume-overview.php:580
 msgid ""
@@ -3813,8 +3928,8 @@ msgid ""
 "EYES TO SEE — Begin to see where God’s Kingdom isn’t. These are usually the "
 "places where God wants to work the most."
 msgstr ""
-"العينين لرؤية – تبدأ نرى أين ليست ملكوت الله. هذه هي عادة الأماكن حيث يريد الله "
-"للعمل أكثر من غيرها."
+"العينين لرؤية – تبدأ نرى أين ليست ملكوت الله. هذه هي عادة الأماكن حيث يريد "
+"الله للعمل أكثر من غيرها."
 
 #: template-zume-overview.php:659
 msgid ""
@@ -3826,27 +3941,28 @@ msgid ""
 "3-MINUTE TESTIMONY — Learn how to share your testimony in three minutes by "
 "sharing how Jesus has impacted your life."
 msgstr ""
-"شهادة 3 دقائق-تعلم كيفية مشاركة الخاص بك شهادة في ثلاث دقائق عن طريق تقاسم يسوع "
-"كيف أثرت بحياتك."
+"شهادة 3 دقائق-تعلم كيفية مشاركة الخاص بك شهادة في ثلاث دقائق عن طريق تقاسم "
+"يسوع كيف أثرت بحياتك."
 
 #: template-zume-overview.php:692
 msgid ""
-"THE LORD'S SUPPER — It’s a simple way to celebrate our intimate connection and "
-"ongoing relationship with Jesus. Learn a simple way to celebrate."
+"THE LORD'S SUPPER — It’s a simple way to celebrate our intimate connection "
+"and ongoing relationship with Jesus. Learn a simple way to celebrate."
 msgstr ""
 "العشاء الرباني – أنها طريقة بسيطة للاحتفال لدينا اتصال الحميمة والعلاقة "
 "المستمرة مع يسوع. تعلم طريقة بسيطة للاحتفال."
 
 #: template-zume-overview.php:713
 msgid ""
-"SHARING YOUR TESTIMONY — Break into groups of two or three and practice sharing "
-"your Testimony with others. (45 minutes)"
+"SHARING YOUR TESTIMONY — Break into groups of two or three and practice "
+"sharing your Testimony with others. (45 minutes)"
 msgstr ""
 "تبادل الشهادة الخاصة بك — اقتحام مجموعات من اثنين أو ثلاثة وممارسات تقاسم "
 "الشهادة الخاصة بك مع الآخرين. (45 دقيقة)"
 
 #: template-zume-overview.php:725
-msgid "THE LORD'S SUPPER — Take time as a group to do this together. (10 minutes)"
+msgid ""
+"THE LORD'S SUPPER — Take time as a group to do this together. (10 minutes)"
 msgstr "العشاء الرباني – يستغرق الوقت كمجموعة للقيام بذلك معا. (10 دقائق)"
 
 #: template-zume-overview.php:779
@@ -3869,8 +3985,8 @@ msgid ""
 "B.L.E.S.S. PRAYER — Practice a simple mnemonic to remind you of ways to pray "
 "for others. (15 minutes)"
 msgstr ""
-"الصلاة B.L.E.S.S. – الممارسة mnemonic بسيطة لتذكيرك بطرق للصلاة من أجل الآخرين. "
-"(15 دقيقة)"
+"الصلاة B.L.E.S.S. – الممارسة mnemonic بسيطة لتذكيرك بطرق للصلاة من أجل "
+"الآخرين. (15 دقيقة)"
 
 #: template-zume-overview.php:831
 msgid ""
@@ -3885,25 +4001,26 @@ msgid ""
 "FAITHFULNESS — It's important what disciples know — but it's much more "
 "important what they DO with what they know."
 msgstr ""
-"الإخلاص، فمن المهم ما يعرف تلاميذه – ولكن من المهم أكثر بكثير ما يفعلونه مع ما "
-"يعرفونه."
+"الإخلاص، فمن المهم ما يعرف تلاميذه – ولكن من المهم أكثر بكثير ما يفعلونه مع "
+"ما يعرفونه."
 
 #: template-zume-overview.php:907
 msgid ""
 "3/3 GROUP FORMAT — A 3/3 Group is a way for followers of Jesus to meet, pray, "
-"learn, grow, fellowship and practice obeying and sharing what they've learned. "
-"In this way, a 3/3 Group is not just a small group but a Simple Church. (80 "
-"minutes)"
+"learn, grow, fellowship and practice obeying and sharing what they've "
+"learned. In this way, a 3/3 Group is not just a small group but a Simple "
+"Church. (80 minutes)"
 msgstr ""
-"تنسيق مجموعة 3/3 – مجموعة 3/3 وسيلة لاتباع المسيح الوفاء، الصلاة، تعلم، وتنمو، "
-"والزمالة وممارسة طاعة وتقاسم ما تعلموه. وبهذه الطريقة، مجموعة 3/3 ليست مجرد "
-"مجموعة صغيرة ولكن كنيسة بسيطة. (80 دقيقة)"
+"تنسيق مجموعة 3/3 – مجموعة 3/3 وسيلة لاتباع المسيح الوفاء، الصلاة، تعلم، "
+"وتنمو، والزمالة وممارسة طاعة وتقاسم ما تعلموه. وبهذه الطريقة، مجموعة 3/3 ليست "
+"مجرد مجموعة صغيرة ولكن كنيسة بسيطة. (80 دقيقة)"
 
 #: template-zume-overview.php:961
 msgid ""
 "TRAINING CYCLE — Learn the training cycle and consider how it applies to "
 "disciple making."
-msgstr "دورة تدريبية، تعلم دورة التدريب والنظر في كيفية تطبيقه للتلميذ مما يجعل."
+msgstr ""
+"دورة تدريبية، تعلم دورة التدريب والنظر في كيفية تطبيقه للتلميذ مما يجعل."
 
 #: template-zume-overview.php:982 template-zume-overview.php:1059
 msgid ""
@@ -3915,11 +4032,11 @@ msgstr ""
 
 #: template-zume-overview.php:1038
 msgid ""
-"LEADERSHIP CELLS — A Leadership Cell is a way someone who feels called to lead "
-"can develop their leadership by practicing serving."
+"LEADERSHIP CELLS — A Leadership Cell is a way someone who feels called to "
+"lead can develop their leadership by practicing serving."
 msgstr ""
-"خلايا القيادة – \"بقيادة الخلية\" هي طريقة شخص يشعر يسمى أن يؤدي تطوير قيادتهم "
-"خلال ممارسة الخدمة."
+"خلايا القيادة – \"بقيادة الخلية\" هي طريقة شخص يشعر يسمى أن يؤدي تطوير "
+"قيادتهم خلال ممارسة الخدمة."
 
 #: template-zume-overview.php:1114
 msgid ""
@@ -3950,17 +4067,17 @@ msgstr ""
 
 #: template-zume-overview.php:1215
 msgid ""
-"LEADERSHIP IN NETWORKS — Learn how multiplying churches stay connected and live "
-"life together as an extended, spiritual family."
+"LEADERSHIP IN NETWORKS — Learn how multiplying churches stay connected and "
+"live life together as an extended, spiritual family."
 msgstr ""
 "القيادة في الشبكات-تعلم كيف ضرب الكنائس البقاء متصلاً والعيش معا كأسرة ممتدة، "
 "والروحية."
 
 #: template-zume-overview.php:1236
 msgid ""
-"PEER MENTORING GROUPS — This is a group that consists of people who are leading "
-"and starting 3/3 Groups. It also follows a 3/3 format and is a powerful way to "
-"assess the spiritual health of God’s work in your area."
+"PEER MENTORING GROUPS — This is a group that consists of people who are "
+"leading and starting 3/3 Groups. It also follows a 3/3 format and is a "
+"powerful way to assess the spiritual health of God’s work in your area."
 msgstr ""
 "مجموعات الأقران الإرشاد – هذا هو مجموعة التي تتألف من الأشخاص الذين تؤدي وبدء "
 "مجموعات 3/3. كما يتبع شكل 3/3 وهو وسيلة قوية لتقييم صحة روحية لعمل الله في "
@@ -3968,8 +4085,8 @@ msgstr ""
 
 #: template-zume-overview.php:1259
 msgid ""
-"PEER MENTORING GROUPS — Break into groups of two or three and work through the "
-"Peer Mentoring Group format. (60 minutes)"
+"PEER MENTORING GROUPS — Break into groups of two or three and work through "
+"the Peer Mentoring Group format. (60 minutes)"
 msgstr ""
 "مجموعات الأقران الإرشاد – اقتحام مجموعات من اثنين أو ثلاثة، والعمل من خلال "
 "تنسيق فريق التوجيه من جانب الأقران. (60 دقيقة)"
@@ -3995,10 +4112,6 @@ msgstr "اسمك"
 #: template-zume-profile.php:60
 msgid "Last Name"
 msgstr "الكنية ( اللقب )"
-
-#: template-zume-profile.php:70
-msgid "Email"
-msgstr "البريد الالكتروني"
 
 #: template-zume-profile.php:138
 msgid "Oh snap!"
@@ -4201,8 +4314,8 @@ msgstr "‫http://github.com/ChasmSolutions"
 #~ "The following plugins need to be updated to their latest version to ensure "
 #~ "maximum compatibility with this theme: %1$s."
 #~ msgstr[0] ""
-#~ "يحتاج البرنامج المساعد التالية ليتم تحديثه إلى الإصدار الأحدث لضمان أقصى قدر "
-#~ "من التوافق مع هذا القالب :%1$s."
+#~ "يحتاج البرنامج المساعد التالية ليتم تحديثه إلى الإصدار الأحدث لضمان أقصى "
+#~ "قدر من التوافق مع هذا القالب :%1$s."
 #~ msgstr[1] ""
 #~ msgstr[2] ""
 #~ msgstr[3] ""
@@ -4228,7 +4341,8 @@ msgstr "‫http://github.com/ChasmSolutions"
 #~ msgstr[5] ""
 
 #~ msgid "The following recommended plugin is currently inactive: %1$s."
-#~ msgid_plural "The following recommended plugins are currently inactive: %1$s."
+#~ msgid_plural ""
+#~ "The following recommended plugins are currently inactive: %1$s."
 #~ msgstr[0] "البرنامج المساعد الموصى بها التالية غير نشط حاليا:%1$s."
 #~ msgstr[1] ""
 #~ msgstr[2] ""
@@ -4298,8 +4412,8 @@ msgstr "‫http://github.com/ChasmSolutions"
 #~ msgstr "تجاهل هذا الإشعار"
 
 #~ msgid ""
-#~ "There are one or more required or recommended plugins to install, update or "
-#~ "activate."
+#~ "There are one or more required or recommended plugins to install, update "
+#~ "or activate."
 #~ msgstr ""
 #~ "هناك واحد أو أكثر من الإضافات المطلوبة أو الموصى بها لتثبيت أو تحديث أو "
 #~ "تنشيط."
@@ -4308,7 +4422,8 @@ msgstr "‫http://github.com/ChasmSolutions"
 #~ msgstr "يرجى الاتصال بمسؤول هذا الموقع للحصول على المساعدة."
 
 #~ msgid "This plugin needs to be updated to be compatible with your theme."
-#~ msgstr "هذا البرنامج المساعد يحتاج إلى تحديث لتكون متوافقة مع القالب الخاص بك."
+#~ msgstr ""
+#~ "هذا البرنامج المساعد يحتاج إلى تحديث لتكون متوافقة مع القالب الخاص بك."
 
 #~ msgid "Update Required"
 #~ msgstr "مطلوب التحديث"
@@ -4329,8 +4444,8 @@ msgstr "‫http://github.com/ChasmSolutions"
 #~ "للووردبريس."
 
 #~ msgid ""
-#~ "The remote plugin package consists of more than one file, but the files are "
-#~ "not packaged in a folder."
+#~ "The remote plugin package consists of more than one file, but the files "
+#~ "are not packaged in a folder."
 #~ msgstr ""
 #~ "حزمه البرنامج المساعد البعيد يتكون من أكثر من ملف واحد ، ولكن لا يتم حزم "
 #~ "الملفات في مجلد."
@@ -4435,9 +4550,6 @@ msgstr "‫http://github.com/ChasmSolutions"
 #~ msgid "Plugin"
 #~ msgstr "اضافة مساعدة"
 
-#~ msgid "Source"
-#~ msgstr "مصدر"
-
 #~ msgid "Type"
 #~ msgstr "اكتب"
 
@@ -4496,8 +4608,8 @@ msgstr "‫http://github.com/ChasmSolutions"
 #~ msgstr "فشل تثبيت %1$s."
 
 #~ msgid ""
-#~ "The installation and activation process is starting. This process may take a "
-#~ "while on some hosts, so please be patient."
+#~ "The installation and activation process is starting. This process may take "
+#~ "a while on some hosts, so please be patient."
 #~ msgstr ""
 #~ "بدء عمليه التثبيت والتنشيط. قد تستغرق هذه العملية بعض الوقت علي بعض "
 #~ "المضيفين ، لذا يرجى الصبر."
@@ -4512,8 +4624,8 @@ msgstr "‫http://github.com/ChasmSolutions"
 #~ msgstr "تثبيت وتفعيل الإضافة %1$s (%2$d/%3$d)"
 
 #~ msgid ""
-#~ "The installation process is starting. This process may take a while on some "
-#~ "hosts, so please be patient."
+#~ "The installation process is starting. This process may take a while on "
+#~ "some hosts, so please be patient."
 #~ msgstr ""
 #~ "روند نصب شروع شده است. این فرآیند ممکن است در برخی از میزبانها طول بکشد، "
 #~ "بنابراین لطفا صبور باشید."
@@ -4557,13 +4669,14 @@ msgstr "‫http://github.com/ChasmSolutions"
 #~ "Hi {{recipient.name}},\n"
 #~ "\n"
 #~ "Fantastic! Your Zúme Training Group, {{group.name}}, now has at least four "
-#~ "people who have activated their accounts. You are ready to begin your first "
-#~ "session. Pick a time that works for all of you and get started!\n"
+#~ "people who have activated their accounts. You are ready to begin your "
+#~ "first session. Pick a time that works for all of you and get started!\n"
 #~ "\n"
 #~ msgstr ""
 #~ "مرحبا {{recipient.name}}، رائع! المجموعة التدريبية الخاصة بك Zúme، {{group."
-#~ "name}}، وأصبح مالا يقل عن أربعة أشخاص بتنشيط حساباتهم. كنت على استعداد للبدء "
-#~ "في الدورة الأولى الخاص بك. اختيار وقت الذي يعمل للكم جميعا والشروع في العمل!"
+#~ "name}}، وأصبح مالا يقل عن أربعة أشخاص بتنشيط حساباتهم. كنت على استعداد "
+#~ "للبدء في الدورة الأولى الخاص بك. اختيار وقت الذي يعمل للكم جميعا والشروع "
+#~ "في العمل!"
 
 #~ msgid "Your plan"
 #~ msgstr "الخطة الخاصة بك"
@@ -4573,9 +4686,9 @@ msgstr "‫http://github.com/ChasmSolutions"
 #~| "Hi {{recipient.name}},\n"
 #~| "\t\n"
 #~| "Here's a copy of the 3-month plan you submitted. A copy was sent to your "
-#~| "coach. You can keep it for your personal reference. Feel free to forward it "
-#~| "on to your training partner so you can pray for one another and hold each "
-#~| "other accountable to these commitments.\n"
+#~| "coach. You can keep it for your personal reference. Feel free to forward "
+#~| "it on to your training partner so you can pray for one another and hold "
+#~| "each other accountable to these commitments.\n"
 #~| "\n"
 #~| "{{three_month_plan}}\n"
 #~| "\n"
@@ -4584,9 +4697,9 @@ msgstr "‫http://github.com/ChasmSolutions"
 #~ "Hi {{recipient.name}},\n"
 #~ "\n"
 #~ "Here's a copy of the 3-month plan you submitted. A copy was sent to your "
-#~ "coach. You can keep it for your personal reference. Feel free to forward it "
-#~ "on to your training partner so you can pray for one another and hold each "
-#~ "other accountable to these commitments.\n"
+#~ "coach. You can keep it for your personal reference. Feel free to forward "
+#~ "it on to your training partner so you can pray for one another and hold "
+#~ "each other accountable to these commitments.\n"
 #~ "\n"
 #~ "{{three_month_plan}}\n"
 #~ "\n"
@@ -4596,9 +4709,9 @@ msgstr "‫http://github.com/ChasmSolutions"
 #~ "‬\n"
 #~ "‏‫\t\n"
 #~ "‬\n"
-#~ "‫مكّن كرسي دار ان, عدد فبعد أوزار الشهير في, وتم المحيط عالمية الدّفاع تم. بها "
-#~ "في جورج بالحرب الخارجية, دار شعار ويكيبيديا و. انذار اكتوبر والفلبين ما الا. "
-#~ "يرتبط وإقامة الإقتصادية بين ما.\n"
+#~ "‫مكّن كرسي دار ان, عدد فبعد أوزار الشهير في, وتم المحيط عالمية الدّفاع تم. "
+#~ "بها في جورج بالحرب الخارجية, دار شعار ويكيبيديا و. انذار اكتوبر والفلبين "
+#~ "ما الا. يرتبط وإقامة الإقتصادية بين ما.\n"
 #~ "‬\n"
 #~ "‏‫\n"
 #~ "‬\n"
@@ -4689,10 +4802,11 @@ msgstr "‫http://github.com/ChasmSolutions"
 
 #, fuzzy
 #~ msgid ""
-#~ "Any individual in your group can go login right now (if you’re not already) "
-#~ "and send your 3-month plan to your coach by filling out this webform. We "
-#~ "will also email you a digital copy of your plan. Feel feel free to contact "
-#~ "your coach to discuss your plan or ask questions at any time."
+#~ "Any individual in your group can go login right now (if you’re not "
+#~ "already) and send your 3-month plan to your coach by filling out this "
+#~ "webform. We will also email you a digital copy of your plan. Feel feel "
+#~ "free to contact your coach to discuss your plan or ask questions at any "
+#~ "time."
 #~ msgstr ""
 #~ "الذهاب تسجيل الدخول الآن (إذا كنت لا بالفعل) أي فرد في المجموعة الخاصة بك "
 #~ "وإرسال خطتكم لمدة 3 أشهر إلى المدرب الخاص بك عن طريق ملء هذا webform. ونحن "
@@ -4710,9 +4824,9 @@ msgstr "‫http://github.com/ChasmSolutions"
 #, fuzzy
 #~ msgid ""
 #~ "You will need at least four people gathered together to start each new "
-#~ "session. Please start a group below. If you intended to join someone else's "
-#~ "group, please return to the invitation they sent and use the link provided "
-#~ "to be automatically added to that group."
+#~ "session. Please start a group below. If you intended to join someone "
+#~ "else's group, please return to the invitation they sent and use the link "
+#~ "provided to be automatically added to that group."
 #~ msgstr ""
 #~ "وسوف تحتاج على الأقل أربعة أشخاص تجمعوا معا لبدء كل دورة جديدة. الرجاء بدء "
 #~ "مجموعة أدناه. إذا كنت تنوي الانضمام إلى المجموعة لشخص آخر، يرجى الرجوع إلى "
@@ -4734,8 +4848,8 @@ msgstr "‫http://github.com/ChasmSolutions"
 
 #, fuzzy
 #~ msgid ""
-#~ "Helping ordinary people make a big impact for the Kingdom of God by obeying "
-#~ "and implementing the Great Commission and the Great Commandment."
+#~ "Helping ordinary people make a big impact for the Kingdom of God by "
+#~ "obeying and implementing the Great Commission and the Great Commandment."
 #~ msgstr ""
 #~ "مساعدة الناس العاديين يكون لها تأثير كبير لملكوت الله بطاعة وتنفيذ اللجنة "
 #~ "عظيم ووصية عظيمة."
@@ -4746,13 +4860,13 @@ msgstr "‫http://github.com/ChasmSolutions"
 
 #, fuzzy
 #~ msgid ""
-#~ "Make disciples in every census tract in the United States and then in every "
-#~ "Omega District globally, using an online training platform focused on "
-#~ "equipping participants in the basic disciple-making and simple church "
+#~ "Make disciples in every census tract in the United States and then in "
+#~ "every Omega District globally, using an online training platform focused "
+#~ "on equipping participants in the basic disciple-making and simple church "
 #~ "planting multiplication principles, processes, and practices."
 #~ msgstr ""
-#~ "جعل التلاميذ في كل المسالك تعداد السكان في الولايات المتحدة، ومن ثم في كل حي "
-#~ "أوميغا على الصعيد العالمي، تستخدم منصة تدريب عبر إنترنت تركز على تزويد "
+#~ "جعل التلاميذ في كل المسالك تعداد السكان في الولايات المتحدة، ومن ثم في كل "
+#~ "حي أوميغا على الصعيد العالمي، تستخدم منصة تدريب عبر إنترنت تركز على تزويد "
 #~ "المشاركين في الأنشطة الأساسية عمليات بسيطة وصنع تلميذ الكنيسة غرس مبادئ "
 #~ "الضرب، ، والممارسات."
 
@@ -4763,12 +4877,6 @@ msgstr "‫http://github.com/ChasmSolutions"
 #, fuzzy
 #~ msgid "Download May/June 2017 issue of Mission Frontiers on Zúme here."
 #~ msgstr "تحميل مايو/يونيو 2017 العدد الحدود البعثة في Zúme هنا."
-
-#~ msgid "Register"
-#~ msgstr "التسجيل"
-
-#~ msgid "Site Admin"
-#~ msgstr "ސައިޓްގެ އެޑްމިން"
 
 #, fuzzy
 #~ msgid "ERROR: Non-existent username submitted "
@@ -4815,7 +4923,8 @@ msgstr "‫http://github.com/ChasmSolutions"
 #~ "الآخرين &#34;"
 
 #~ msgid "Successfully removed URL for &#34;all other users&#34; "
-#~ msgstr "ستتم إزالة هذا الدور لهذا المستخدم في جميع نطاقات المستخدمين الأخرين."
+#~ msgstr ""
+#~ "ستتم إزالة هذا الدور لهذا المستخدم في جميع نطاقات المستخدمين الأخرين."
 
 #~ msgid "ERROR: Non-local or invalid URL submitted "
 #~ msgstr "خطأ: تم إرسال عنوان ورل غير محلي أو غير صالح"
@@ -4830,25 +4939,21 @@ msgstr "‫http://github.com/ChasmSolutions"
 #~ msgstr "تم تحديث عنوان ورل بنجاح ل & # 34؛ جميع المستخدمين الآخرين & # 34؛"
 
 #~ msgid ""
-#~ "ERROR: Unknown database problem removing URL for &#34;post-registration&#34; "
+#~ "ERROR: Unknown database problem removing URL for &#34;post-"
+#~ "registration&#34; "
 #~ msgstr ""
-#~ "خطأ: مشكلة قاعدة بيانات غير معروفة تتم إزالة عنوان ورل ل & # 34؛ بعد التسجيل "
-#~ "& # 34؛"
+#~ "خطأ: مشكلة قاعدة بيانات غير معروفة تتم إزالة عنوان ورل ل & # 34؛ بعد "
+#~ "التسجيل & # 34؛"
 
 #~ msgid "Successfully removed URL for &#34;post-registration&#34; "
 #~ msgstr "تمت إزالة عنوان ورل بنجاح ل & # 34؛ بعد التسجيل & # 34؛"
 
 #~ msgid ""
-#~ "ERROR: Unknown database problem updating URL for &#34;post-registration&#34; "
+#~ "ERROR: Unknown database problem updating URL for &#34;post-"
+#~ "registration&#34; "
 #~ msgstr ""
-#~ "خطأ: مشكلة قاعدة بيانات غير معروفة لتحديث عنوان ورل ل & # 34؛ بعد التسجيل & "
-#~ "# 34؛"
-
-#~ msgid "Login URL"
-#~ msgstr "رابط تسجيل الدخول"
-
-#~ msgid "Logout URL"
-#~ msgstr "رابط تسجيل الخروج"
+#~ "خطأ: مشكلة قاعدة بيانات غير معروفة لتحديث عنوان ورل ل & # 34؛ بعد التسجيل "
+#~ "& # 34؛"
 
 #, fuzzy
 #~ msgid ""
@@ -4857,8 +4962,8 @@ msgstr "‫http://github.com/ChasmSolutions"
 #~ "login."
 #~ msgstr ""
 #~ "قم بتعريف عناوين Url المخصصة التي سيعاد توجيه مختلف المستخدمين والمستخدمين "
-#~ "مع الأدوار المحددة والمستخدمين مع مستويات محددة وجميع المستخدمين الآخرين عند "
-#~ "تسجيل الدخول."
+#~ "مع الأدوار المحددة والمستخدمين مع مستويات محددة وجميع المستخدمين الآخرين "
+#~ "عند تسجيل الدخول."
 
 #, fuzzy
 #~ msgid ""
@@ -4867,8 +4972,8 @@ msgstr "‫http://github.com/ChasmSolutions"
 #~ "login, replacing that text with the users username."
 #~ msgstr ""
 #~ "لاحظ أنه يمكنك استخدام بناء الجملة <strong>المستخدم [متغير] [/variable]</"
-#~ "strong> في عناوين Url الخاصة بك حيث أن هذا النظام سوف نبني URL ديناميكية عند "
-#~ "كل تسجيل دخول، الاستعاضة عن هذا النص باسم المستخدم المستخدمين."
+#~ "strong> في عناوين Url الخاصة بك حيث أن هذا النظام سوف نبني URL ديناميكية "
+#~ "عند كل تسجيل دخول، الاستعاضة عن هذا النص باسم المستخدم المستخدمين."
 
 #, fuzzy
 #~ msgid "Specific users"
@@ -4944,7 +5049,8 @@ msgstr "‫http://github.com/ChasmSolutions"
 #~ "Allow a POST or GET &#34;redirect_to&#34; variable to take redirect "
 #~ "precedence"
 #~ msgstr ""
-#~ "تسمح وظيفة أو الحصول على &#34; redirect_to &#34; متغير لإعادة توجيه الأسبقية"
+#~ "تسمح وظيفة أو الحصول على &#34; redirect_to &#34; متغير لإعادة توجيه "
+#~ "الأسبقية"
 
 #~ msgid "Yes"
 #~ msgstr "نعم"
@@ -4956,8 +5062,8 @@ msgstr "‫http://github.com/ChasmSolutions"
 #~ msgid ""
 #~ "Use external redirect file. Set this to &#34;Yes&#34; if you are using a "
 #~ "plugin such as Gigya that bypasses the regular WordPress redirect process "
-#~ "(and allows only one fixed redirect URL). Then, set the redirect URL in the "
-#~ "other plugin to %s"
+#~ "(and allows only one fixed redirect URL). Then, set the redirect URL in "
+#~ "the other plugin to %s"
 #~ msgstr ""
 #~ "استخدام ملف إعادة التوجيه الخارجي. قم بتعيين هذا &#34; نعم &#34; إذا كنت "
 #~ "تستخدم البرنامج المساعد مثل جيجيا يتجاوز عملية إعادة توجيه وورد العادية "
@@ -5004,10 +5110,6 @@ msgstr "‫http://github.com/ChasmSolutions"
 #~ msgstr[4] ""
 #~ msgstr[5] ""
 
-#~ msgctxt "Groups admin Group Name column header"
-#~ msgid "Name"
-#~ msgstr "الإسم"
-
 #~ msgctxt "Groups admin Group Description column header"
 #~ msgid "Description"
 #~ msgstr "وصف"
@@ -5015,14 +5117,6 @@ msgstr "‫http://github.com/ChasmSolutions"
 #~ msgctxt "Groups admin Privacy Status column header"
 #~ msgid "Status"
 #~ msgstr "الحالة"
-
-#~ msgctxt "Assigned To"
-#~ msgid "Assigned To"
-#~ msgstr "مسندة إلى"
-
-#~ msgctxt "Groups admin Last Active column header"
-#~ msgid "Last Active"
-#~ msgstr "آخر نشاط"
 
 #~ msgid "Select group %1$d"
 #~ msgstr "إختر مجموعة %1$d"
@@ -5063,9 +5157,9 @@ msgstr "‫http://github.com/ChasmSolutions"
 #~ "Hi {{recipient.name}}, \n"
 #~ "\t\n"
 #~ "Here's a copy of the 3-month plan you submitted. A copy was sent to your "
-#~ "coach. You can keep it for your personal reference. Feel free to forward it "
-#~ "on to your training partner so you can pray for one another and hold each "
-#~ "other accountable to these commitments.\n"
+#~ "coach. You can keep it for your personal reference. Feel free to forward "
+#~ "it on to your training partner so you can pray for one another and hold "
+#~ "each other accountable to these commitments.\n"
 #~ "\n"
 #~ "{{three_month_plan}}\n"
 #~ "\n"
@@ -5075,9 +5169,9 @@ msgstr "‫http://github.com/ChasmSolutions"
 #~ "‬\n"
 #~ "‏‫\t\n"
 #~ "‬\n"
-#~ "‫مكّن كرسي دار ان, عدد فبعد أوزار الشهير في, وتم المحيط عالمية الدّفاع تم. بها "
-#~ "في جورج بالحرب الخارجية, دار شعار ويكيبيديا و. انذار اكتوبر والفلبين ما الا. "
-#~ "يرتبط وإقامة الإقتصادية بين ما.\n"
+#~ "‫مكّن كرسي دار ان, عدد فبعد أوزار الشهير في, وتم المحيط عالمية الدّفاع تم. "
+#~ "بها في جورج بالحرب الخارجية, دار شعار ويكيبيديا و. انذار اكتوبر والفلبين "
+#~ "ما الا. يرتبط وإقامة الإقتصادية بين ما.\n"
 #~ "‬\n"
 #~ "‏‫\n"
 #~ "‬\n"
@@ -5094,8 +5188,8 @@ msgstr "‫http://github.com/ChasmSolutions"
 #~ msgstr "لمحيط عالمية الدّفاع تم. بها"
 
 #~ msgid ""
-#~ "Could not track your progress. Yikes. Tell us and we will tell our geeks to "
-#~ "get on it!"
+#~ "Could not track your progress. Yikes. Tell us and we will tell our geeks "
+#~ "to get on it!"
 #~ msgstr ""
 #~ "لا يمكن تتبع التقدم المحرز الخاص بك. ييكيس. قل لنا، ونحن سوف أقول لدينا "
 #~ "المهوسون الحصول على ذلك!"

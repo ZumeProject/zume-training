@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Zúme Project\n"
-"POT-Creation-Date: 2018-01-04 16:21-0700\n"
-"PO-Revision-Date: 2018-01-04 16:21-0700\n"
+"POT-Creation-Date: 2018-01-05 07:42-0700\n"
+"PO-Revision-Date: 2018-01-05 07:43-0700\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: en_US\n"
@@ -61,10 +61,8 @@ msgid "Invite some friends"
 msgstr "Invite my friends"
 
 #: front-page.php:106
-#, fuzzy
-#| msgid "Want to start the training?"
 msgid "Host a training"
-msgstr "Want to start the training?"
+msgstr ""
 
 #: front-page.php:125
 msgid "What others are saying?"
@@ -148,7 +146,7 @@ msgstr "Fourth slide details."
 msgid "Find out more about Zúme"
 msgstr "Find out more about Zúme"
 
-#: functions/activator.php:46
+#: functions/activator.php:46 functions/zume-polylang-integration.php:99
 msgid "Coach"
 msgstr "Coach"
 
@@ -162,10 +160,8 @@ msgid "Cancel"
 msgstr ""
 
 #: functions/enqueue-scripts.php:55
-#, fuzzy
-#| msgid "Current Slide"
 msgid "Current Step:"
-msgstr "Current Slide"
+msgstr ""
 
 #: functions/enqueue-scripts.php:57
 msgid "Finish"
@@ -218,6 +214,72 @@ msgstr "Address"
 #: functions/login/user-register.php:98
 msgid "GeoCoded IP"
 msgstr ""
+
+#: functions/zume-polylang-integration.php:90
+msgid "Home"
+msgstr ""
+
+#: functions/zume-polylang-integration.php:91 template-zume-overview.php:191
+msgid "Dashboard"
+msgstr "Dashboard"
+
+#: functions/zume-polylang-integration.php:92
+msgid "About"
+msgstr ""
+
+#: functions/zume-polylang-integration.php:93
+#, fuzzy
+#| msgid "Zúme Guidebook"
+msgid "Guidebook"
+msgstr "Zúme Guidebook"
+
+#: functions/zume-polylang-integration.php:94
+#, fuzzy
+#| msgid "Source"
+msgid "Resources"
+msgstr "Source"
+
+#: functions/zume-polylang-integration.php:95
+msgid "FAQ"
+msgstr ""
+
+#: functions/zume-polylang-integration.php:96
+#, fuzzy
+#| msgid "View Zume Video"
+msgid "Overview"
+msgstr "View Zume Video"
+
+#: functions/zume-polylang-integration.php:97
+msgid "Settings"
+msgstr ""
+
+#: functions/zume-polylang-integration.php:98
+#, fuzzy
+#| msgid "Your Profile"
+msgid "Profile"
+msgstr "Your Profile"
+
+#: functions/zume-polylang-integration.php:100
+#, fuzzy
+#| msgid "Site Admin"
+msgid "Admin"
+msgstr "Site Admin"
+
+#: functions/zume-polylang-integration.php:101
+#, fuzzy
+#| msgid "Logout URL"
+msgid "Logout"
+msgstr "Logout URL"
+
+#: functions/zume-polylang-integration.php:102
+#, fuzzy
+#| msgid "Login URL"
+msgid "Login"
+msgstr "Login URL"
+
+#: functions/zume-polylang-integration.php:103
+msgid "Register"
+msgstr "Register"
 
 #: parts/content-missing.php:4
 #, fuzzy
@@ -378,6 +440,48 @@ msgid ""
 msgstr ""
 "Consider connecting to a TV or projector so everyone in your group can view "
 "the content."
+
+#: template-zume-coach.php:27
+msgid "Your Assigned People"
+msgstr ""
+
+#: template-zume-coach.php:32
+#, fuzzy
+#| msgid "User Name"
+msgid "Name"
+msgstr "User Name"
+
+#: template-zume-coach.php:33 template-zume-profile.php:70
+msgid "Email"
+msgstr "Email"
+
+#: template-zume-coach.php:34
+msgid "Phone"
+msgstr ""
+
+#: template-zume-coach.php:35
+#, fuzzy
+#| msgid "Active"
+msgid "Last Active"
+msgstr "Active"
+
+#: template-zume-coach.php:36 template-zume-coach.php:96
+#, fuzzy
+#| msgid "Your Groups"
+msgid "Groups"
+msgstr "Your Groups"
+
+#: template-zume-coach.php:78
+msgid "Assign Coach to Member"
+msgstr ""
+
+#: template-zume-coach.php:82
+msgid "User to be assigned"
+msgstr ""
+
+#: template-zume-coach.php:113
+msgid "Assign"
+msgstr ""
 
 #: template-zume-course.php:8
 msgid ""
@@ -2985,8 +3089,8 @@ msgstr "Meeting Time"
 msgid "Members"
 msgstr "Members"
 
-#: template-zume-dashboard.php:76 template-zume-dashboard.php:1333
-#: template-zume-profile.php:104
+#: template-zume-dashboard.php:76 template-zume-dashboard.php:1259
+#: template-zume-dashboard.php:1333 template-zume-profile.php:104
 msgid "Address"
 msgstr "Address"
 
@@ -3287,6 +3391,11 @@ msgstr ""
 #: template-zume-dashboard.php:1255 template-zume-dashboard.php:1328
 msgid "Planned Meeting Time"
 msgstr "Planned Meeting Time"
+
+#: template-zume-dashboard.php:1271 template-zume-dashboard.php:1345
+#: template-zume-profile.php:117
+msgid "Validate"
+msgstr ""
 
 #: template-zume-dashboard.php:1283
 msgid "Submit"
@@ -3714,10 +3823,8 @@ msgid ""
 msgstr ""
 
 #: template-zume-guidebook.php:35
-#, fuzzy
-#| msgid "Download the Zúme Guidebook."
 msgid "Complete Zume Guidebook"
-msgstr "Download the Zúme Guidebook."
+msgstr ""
 
 #: template-zume-overview.php:66
 msgid "Sessions Overview"
@@ -3766,10 +3873,6 @@ msgstr "Session 10 - Advanced Training"
 #: template-zume-overview.php:190
 msgid "Go to the Dashboard to select your Group and start the next session"
 msgstr "Go to the Dashboard to select your Group and start the next session"
-
-#: template-zume-overview.php:191
-msgid "Dashboard"
-msgstr "Dashboard"
 
 #: template-zume-overview.php:253 template-zume-overview.php:393
 #: template-zume-overview.php:515 template-zume-overview.php:625
@@ -4116,10 +4219,6 @@ msgstr "First Name"
 msgid "Last Name"
 msgstr "Last Name"
 
-#: template-zume-profile.php:70
-msgid "Email"
-msgstr "Email"
-
 #: template-zume-profile.php:138
 msgid "Oh snap!"
 msgstr "Oh snap!"
@@ -4137,22 +4236,16 @@ msgid "Promotional Materials"
 msgstr ""
 
 #: template-zume-resources.php:47
-#, fuzzy
-#| msgid "Download Guidebook here."
 msgid "Download Guidebook"
-msgstr "Download Guidebook here."
+msgstr ""
 
 #: template-zume-resources.php:58
-#, fuzzy
-#| msgid "Download and print the Zúme promo flyer."
 msgid "Download Zúme Promo Flyer"
-msgstr "Download and print the Zúme promo flyer."
+msgstr ""
 
 #: template-zume-resources.php:68
-#, fuzzy
-#| msgid "Download the Zúme Guidebook."
 msgid "Download Zume Promo Video"
-msgstr "Download the Zúme Guidebook."
+msgstr ""
 
 #: template-zume-resources.php:77
 msgid "Download Zume Overview Video"
@@ -4167,10 +4260,8 @@ msgid "Frequently Asked Questions (FAQ)."
 msgstr "Frequently Asked Questions (FAQ)."
 
 #: template-zume-resources.php:104
-#, fuzzy
-#| msgid "Check on language translation progress here."
 msgid "Language Translation Progress"
-msgstr "Check on language translation progress here."
+msgstr ""
 
 #: template-zume-resources.php:122
 #, fuzzy
@@ -4455,9 +4546,6 @@ msgstr ""
 #~ msgid "Installed But Not Activated"
 #~ msgstr "Installed But Not Activated"
 
-#~ msgid "Active"
-#~ msgstr "Active"
-
 #~ msgid "Required Update not Available"
 #~ msgstr "Required Update not Available"
 
@@ -4510,9 +4598,6 @@ msgstr ""
 
 #~ msgid "Plugin"
 #~ msgstr "Plugin"
-
-#~ msgid "Source"
-#~ msgstr "Source"
 
 #~ msgid "Type"
 #~ msgstr "Type"
@@ -4673,12 +4758,6 @@ msgstr ""
 #~ msgid "Join my training group"
 #~ msgstr "Join my training group"
 
-#~ msgid "Register"
-#~ msgstr "Register"
-
-#~ msgid "Site Admin"
-#~ msgstr "Site Admin"
-
 #~ msgid "ERROR: Non-existent username submitted "
 #~ msgstr "ERROR: Non-existent username submitted "
 
@@ -4757,12 +4836,6 @@ msgstr ""
 
 #~ msgid "Successfully updated plugin settings"
 #~ msgstr "Successfully updated plugin settings"
-
-#~ msgid "Login URL"
-#~ msgstr "Login URL"
-
-#~ msgid "Logout URL"
-#~ msgstr "Logout URL"
 
 #~ msgid "Manage redirect rules"
 #~ msgstr "Manage redirect rules"
