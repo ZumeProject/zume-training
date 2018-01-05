@@ -1187,7 +1187,7 @@ $zume_highest_session = Zume_Dashboard::get_highest_session( $zume_current_user 
                                 $zume_value = maybe_unserialize( $v );
                                 if ( isset( $zume_value['closed'] ) && true == $zume_value['closed'] ) : // check if closed
 
-                                    $zume_html .= '<div class="grid-x grid-margin-x"><div class="small-9 cell">';
+                                    $zume_html .= '<div class="grid-x grid-margin-x"><div class="small-8 cell">';
                                     $zume_html .= esc_html( $zume_value['group_name'] );
                                     $zume_html .= '</div><div class="small-3 cell">';
                                     $zume_html .= '<button class="small button clear" type="submit" name="key" value="' . esc_attr( $zume_key ) . '">' . esc_html__( 'activate', 'zume' ) . '</button>';
@@ -1256,7 +1256,7 @@ $zume_highest_session = Zume_Dashboard::get_highest_session( $zume_current_user 
                     <input type="text" value="" name="meeting_time" id="meeting_time" required/>
                 </div>
                 <div class="cell">
-                    <label for="validate_addressnew">Address</label>
+                    <label for="validate_addressnew"><?php echo esc_html__( 'Address', 'zume' ) ?></label>
                     <div class="input-group">
                         <input type="text"
                                placeholder="example: 1000 Broadway, Denver, CO 80126"
@@ -1268,7 +1268,7 @@ $zume_highest_session = Zume_Dashboard::get_highest_session( $zume_current_user 
                         <div class="input-group-button">
                             <input type="button" class="button"
                                    onclick="validate_group_address( jQuery('#validate_addressnew').val(), 'new')"
-                                   value="Validate" id="validate_address_buttonnew">
+                                   value="<?php echo esc_html__( 'Validate', 'zume' ) ?>" id="validate_address_buttonnew">
                         </div>
                     </div>
 
@@ -1342,7 +1342,7 @@ foreach ( $zume_user_meta as $zume_key => $v ) {
                             <div class="input-group-button">
                                 <input type="button" class="button"
                                        onclick="validate_group_address( jQuery('#validate_address<?php echo esc_html( $zume_key ); ?>').val(), '<?php echo esc_html( $zume_key ); ?>')"
-                                       value="Validate"
+                                       value="<?php echo esc_html__( 'Validate', 'zume' ) ?>"
                                        id="validate_address_button<?php echo esc_html( $zume_key ); ?>">
                             </div>
                         </div>

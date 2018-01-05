@@ -114,7 +114,7 @@ $zume_user_meta = get_user_meta( get_current_user_id() ); // Full array of user 
                                            value="<?php echo isset( $zume_user_meta['zume_user_address'][0] ) ? esc_html( $zume_user_meta['zume_user_address'][0] ) : ''; ?>"
                                     />
                                     <div class="input-group-button">
-                                        <input type="button" class="button" id="validate_address_buttonprofile" value="Validate" onclick="validate_user_address( jQuery('#validate_addressprofile').val() )">
+                                        <input type="button" class="button" id="validate_address_buttonprofile" value="<?php echo esc_html__( 'Validate', 'zume' ) ?>" onclick="validate_user_address( jQuery('#validate_addressprofile').val() )">
                                     </div>
                                 </div>
 

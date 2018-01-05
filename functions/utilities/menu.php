@@ -1,4 +1,21 @@
 <?php
+
+// Navigation Translation Strings for Menu Titles
+__( 'Home', 'zume');
+__( 'Dashboard', 'zume');
+__( 'About', 'zume');
+    __( 'Guidebook', 'zume');
+    __( 'Resources', 'zume');
+    __( 'FAQ', 'zume');
+__( 'Overview', 'zume');
+__( 'Settings', 'zume');
+    __( 'Profile', 'zume');
+    __( 'Coach', 'zume');
+    __( 'Admin', 'zume');
+    __( 'Logout', 'zume');
+__( 'Login', 'zume');
+__( 'Register', 'zume');
+
 // Register menus
 register_nav_menus(
     array(

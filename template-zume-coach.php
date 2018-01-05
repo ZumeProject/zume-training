@@ -24,16 +24,16 @@ $zume_user_id = get_current_user_id();
 
                 <div class="callout" data-equalizer-watch>
 
-                    <h2 class="center vertical-padding">Your Assigned People</h2>
+                    <h2 class="center vertical-padding"><?php echo esc_html__( 'Your Assigned People', 'zume' ) ?></h2>
 
                     <table class="hover stack">
                         <thead>
                             <tr>
-                                <th>Name</th>
-                                <th>Email</th>
-                                <th>Phone</th>
-                                <th>Last Active</th>
-                                <th>Groups</th>
+                                <th><?php echo esc_html__( 'Name', 'zume' ) ?></th>
+                                <th><?php echo esc_html__( 'Email', 'zume' ) ?></th>
+                                <th><?php echo esc_html__( 'Phone', 'zume' ) ?></th>
+                                <th><?php echo esc_html__( 'Last Active', 'zume' ) ?></th>
+                                <th><?php echo esc_html__( 'Groups', 'zume' ) ?></th>
                             </tr>
                         </thead>
                         <tbody>
@@ -75,11 +75,11 @@ $zume_user_id = get_current_user_id();
                 <!-- Assign users to coaches -->
 
                     <form action="" method="post">
-                        <p class="center">Assign Coach to Member</p>
+                        <p class="center"><?php echo esc_html__( 'Assign Coach to Member', 'zume' ) ?></p>
 
                         <div class="grid-x">
                             <div class="cell">
-                                <label for="user">User to be assigned</label>
+                                <label for="user"><?php echo esc_html__( 'User to be assigned', 'zume' ) ?></label>
                                 <select id="user" name="user_id">
                                     <?php
                                     $zume_unassigned_users = Zume_Coach::zume_get_unassigned_users();
@@ -93,7 +93,7 @@ $zume_user_id = get_current_user_id();
                                 </select>
                             </div>
                             <div class="cell">
-                                <label for="coach">Coach</label>
+                                <label for="coach">Coach<?php echo esc_html__( 'Groups', 'zume' ) ?></label>
                                 <select id="coach" name="coach_id">
                                     <?php
                                     $zume_unassigned_users = Zume_Coach::zume_get_coaches();
@@ -110,7 +110,7 @@ $zume_user_id = get_current_user_id();
 
                             </div>
                             <div class="cell">
-                                <button type="submit" class="button" name="assign" value="true">Assign</button>
+                                <button type="submit" class="button" name="assign" value="true"><?php echo esc_html__( 'Assign', 'zume' ) ?></button>
                             </div>
 
                         </div>
