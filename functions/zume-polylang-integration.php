@@ -86,7 +86,7 @@ function zume_get_posts_translation_url( $page_title, $slug = 'en' ) {
 }
 
 // Navigation Translation Strings for Menu Titles
-$navigation_menu = [
+$zume_navigation_menu = [
     __( 'Home', 'zume' ),
     __( 'Dashboard', 'zume' ),
     __( 'About', 'zume' ),
