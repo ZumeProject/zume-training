@@ -161,34 +161,22 @@ if ( is_user_logged_in() ) {
                                         </h4>
                                     </div>
                                 </li>
-                                <li class="orbit-slide">
-                                    <div>
-                                        <h4 class="text-center zume-slider-text">
-                                            <strong>
-                                                <?php esc_html_e( 'I believe Zúme can be used by the Lord to reach a huge number of people in our society who would never darken the door of a church building.', 'zume' ) ?>
-                                            </strong>
-                                        </h4>
-                                        <h4 class="zume-slider-name" style="text-transform: uppercase">
-                                            <?php esc_html_e( 'Curtis Sergeant — Alabama', 'zume' ) ?>
-                                        </h4>
-                                    </div>
-                                </li>
 
                             </ul>
                             <nav class="orbit-bullets">
-                                <button class="is-active" data-slide="0"><span
-                                            class="show-for-sr">
-                                        <?php esc_html_e( 'First slide details.', 'zume' ) ?></span><span
-                                            class="show-for-sr">
-                                        <?php esc_html_e( 'Current Slide', 'zume' ) ?></span></button>
+                                <button class="is-active" data-slide="0">
+                                    <span class="show-for-sr">
+                                        First slide details.</span>
+                                    <span class="show-for-sr">
+                                        Current Slide</span></button>
                                 <button data-slide="1"><span class="show-for-sr">
-                                        <?php esc_html_e( 'Second slide details.', 'zume' ) ?></span>
+                                        Second slide details.</span>
                                 </button>
                                 <button data-slide="2"><span class="show-for-sr">
-                                        <?php esc_html_e( 'Third slide details.', 'zume' ) ?></span>
+                                        Third slide details.</span>
                                 </button>
                                 <button data-slide="3"><span class="show-for-sr">
-                                        <?php esc_html_e( 'Fourth slide details.', 'zume' ) ?></span>
+                                        Fourth slide details.</span>
                                 </button>
                             </nav>
                         </div>

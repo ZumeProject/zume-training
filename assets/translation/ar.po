@@ -622,11 +622,11 @@ msgstr ""
 #: template-zume-course.php:395
 msgid ""
 "What is a disciple? And how do you make one? How do you teach a follower of "
-"Jesus to do what He told us in His Great Commission &#8212; to obey all of "
+"Jesus to do what He told us in His Great Commission - to obey all of "
 "His commands?"
 msgstr ""
 "ما هو الضبط؟ وكيف تجعل واحدة؟ كيف يمكنك تعليم تابعا ليسوع للقيام بما قاله لنا "
-"في \"لجنة كبيرة صاحب\" &#8212; الانصياع لكافة الأوامر له؟"
+"في \"لجنة كبيرة صاحب\" - الانصياع لكافة الأوامر له؟"
 
 #: template-zume-course.php:413
 msgid "Zúme Video Scripts: Teach Them to Obey"
@@ -906,12 +906,12 @@ msgstr ""
 
 #: template-zume-course.php:718
 msgid ""
-"If we want to make disciples who multiply &#8212; spiritual producers and not "
-"just consumers &#8212; then we need to learn and share four main ways God "
+"If we want to make disciples who multiply - spiritual producers and not "
+"just consumers - then we need to learn and share four main ways God "
 "makes everyday followers more like Jesus:"
 msgstr ""
-"إذا كنا نريد أن تجعل التلاميذ الذين تتضاعف &#8212; الروحية المنتجين "
-"والمستهلكين ليس فقط &#8212; فإننا بحاجة إلى تعلم وتبادل أربع طرق رئيسية الله "
+"إذا كنا نريد أن تجعل التلاميذ الذين تتضاعف - الروحية المنتجين "
+"والمستهلكين ليس فقط - فإننا بحاجة إلى تعلم وتبادل أربع طرق رئيسية الله "
 "يجعل شوهد اليومية أكثر مثل يسوع:"
 
 #: template-zume-course.php:721
@@ -1031,10 +1031,10 @@ msgstr "أدوات ZÚME--قائمة 100"
 msgid ""
 "God has already given us the relationships we need to “Go and make "
 "disciples.” These are our family, friends, neighbors, co-workers and "
-"classmates &#8212; people we’ve known all our lives or maybe just met."
+"classmates - people we’ve known all our lives or maybe just met."
 msgstr ""
 "الله الفعل أعطانا العلاقات ونحن بحاجة إلى الذهاب وجعل تلاميذه. \" هذه هي "
-"الأسرة والأصدقاء، والجيران، وزملاء العمل وزملاء الدراسة &#8212; الناس أننا "
+"الأسرة والأصدقاء، والجيران، وزملاء العمل وزملاء الدراسة - الناس أننا "
 "لقد تعرف كل حياتنا أو ربما التقيت للتو."
 
 #: template-zume-course.php:863
@@ -1142,12 +1142,12 @@ msgstr "لمحة عامة"
 msgid ""
 "In this session, you’ll learn how God’s Spiritual Economy works and how God "
 "invests more in those who are faithful with what they've already been given. "
-"You'll also learn two more tools for making disciples &#8212; sharing God’s "
+"You'll also learn two more tools for making disciples - sharing God’s "
 "Story from Creation to Judgement and Baptism."
 msgstr ""
 "في هذه الدورة، سوف تتعلم كيفية عمل \"الاقتصاد\" الله الروحية وكيف الله تستثمر "
 "أكثر في أولئك الذين هم المؤمنين بما أنهم فعلا قد أعطيت. سوف تتعلم أيضا اثنين "
-"من أدوات أكثر لجعل التوابع &#8212; تقاسم قصة الله من إنشاء للحكم والمعمودية."
+"من أدوات أكثر لجعل التوابع - تقاسم قصة الله من إنشاء للحكم والمعمودية."
 
 #: template-zume-course.php:998 template-zume-course.php:1302
 msgid "Then, when you're ready, get started!"
@@ -1157,11 +1157,11 @@ msgstr "ثم، عندما كنت على استعداد، تبدأ!"
 msgid ""
 "In this broken world, people feel rewarded when they take, when they receive "
 "and when they gain more than those around them. But God's Spiritual Economy "
-"is different &#8212; God invests more in those who are faithful with what "
+"is different - God invests more in those who are faithful with what "
 "they've already been given."
 msgstr ""
 "في هذا العالم مكسورة، يشعر الناس مكافأة عندما تتخذ، عندما تتلقى وعند اكتساب "
-"أكثر من حولهم. ولكن الاقتصاد الله روحية مختلفة &#8212; الله تستثمر أكثر في "
+"أكثر من حولهم. ولكن الاقتصاد الله روحية مختلفة - الله تستثمر أكثر في "
 "أولئك الذين هم المؤمنين بما أنهم فعلا قد أعطيت."
 
 #: template-zume-course.php:1036
@@ -1183,11 +1183,11 @@ msgstr "قراءة ومناقشة (15 دقيقة)"
 #: template-zume-course.php:1063
 msgid ""
 "Jesus said, “You will receive power when the Holy Spirit comes upon you. And "
-"you will be my witnesses, telling people about me everywhere &#8212; in "
+"you will be my witnesses, telling people about me everywhere - in "
 "Jerusalem, throughout Judea, in Samaria, and to the ends of the earth.”"
 msgstr ""
 "يسوع قال، \"سوف تتلقى السلطة عندما يأتي الروح القدس عليكم. وسوف تكون لي شهود، "
-"يقول الناس عني في كل مكان &#8212; في القدس، في جميع أنحاء يهودا والسامرة، "
+"يقول الناس عني في كل مكان - في القدس، في جميع أنحاء يهودا والسامرة، "
 "وإلى أقاصي الأرض. \""
 
 #: template-zume-course.php:1065
@@ -1231,10 +1231,10 @@ msgstr "وسوف يستغرق ما لك أن تشعر بالقصة الله مش
 #: template-zume-course.php:1100
 msgid ""
 "One way to share God’s Good News is by telling God’s Story from Creation to "
-"Judgement &#8212; from the beginning of humankind all the way to the end of "
+"Judgement - from the beginning of humankind all the way to the end of "
 "this age."
 msgstr ""
-"طريقة واحدة لتبادل \"الأخبار الجيدة\" الله تحكي الله من إنشاء للحكم &#8212; "
+"طريقة واحدة لتبادل \"الأخبار الجيدة\" الله تحكي الله من إنشاء للحكم - "
 "من بداية البشرية وصولاً إلى نهاية هذا العصر."
 
 #: template-zume-course.php:1118
@@ -1310,8 +1310,8 @@ msgstr ""
 "الآخرين؟ لماذا أو لماذا لا؟"
 
 #: template-zume-course.php:1207
-msgid "IMPORTANT REMINDER &#8212; Have you been baptized?"
-msgstr "تذكير هام &#8212; وقد كنت قد عمد؟"
+msgid "IMPORTANT REMINDER - Have you been baptized?"
+msgstr "تذكير هام - وقد كنت قد عمد؟"
 
 #: template-zume-course.php:1209
 msgid ""
@@ -1615,10 +1615,10 @@ msgstr "أدوات ZÚME-الصلاة المشي"
 #: template-zume-course.php:1696
 msgid ""
 "Prayer Walking is a simple way to obey God’s command to pray for others. And "
-"it's just what it sounds like &#8212; praying to God while walking around!"
+"it's just what it sounds like - praying to God while walking around!"
 msgstr ""
 "الصلاة المشي طريقة بسيطة للانصياع لأمر الله للصلاة من أجل الآخرين. وما يبدو "
-"مثل &#8212; الصلاة لله حين يتجول!"
+"مثل - الصلاة لله حين يتجول!"
 
 #: template-zume-course.php:1698
 msgid ""
@@ -1741,12 +1741,12 @@ msgstr ""
 msgid ""
 "Before you go out on your Prayer Walking activity, be sure to pray with your "
 "group to end your time together. Thank God that He loves the lost, the last "
-"and the least &#8212; including us! Ask Him to prepare your heart and the "
+"and the least - including us! Ask Him to prepare your heart and the "
 "heart of those you'll meet during your walk to be open to His work."
 msgstr ""
 "قبل الخروج في النشاط الخاص بك \"المشي الصلاة\"، يجب التأكد من أن تصلي مع "
 "المجموعة الخاصة بك إلى نهاية الوقت الخاص بك معا. والحمد لله أن يحب المفقودة "
-"وآخر والأقل &#8212; بما في ذلك لنا! أطلب منه أن يعد قلبك وقلب تلك التي سوف "
+"وآخر والأقل - بما في ذلك لنا! أطلب منه أن يعد قلبك وقلب تلك التي سوف "
 "تجتمع خلال السير الخاص بك تكون مفتوحة لعمله."
 
 #: template-zume-course.php:1875
@@ -1767,24 +1767,24 @@ msgstr ""
 
 #: template-zume-course.php:1892
 msgid ""
-"In this session, you’ll learn how God uses faithful followers &#8212; even if "
-"they're brand new &#8212; much more than ones with years of knowledge and "
+"In this session, you’ll learn how God uses faithful followers - even if "
+"they're brand new - much more than ones with years of knowledge and "
 "training who just won't obey. And you'll get a first look at a way to meet "
 "together that helps disciples multiply even faster."
 msgstr ""
-"في هذه الدورة، سوف تتعلم كيف يستخدم الله شوهد المؤمنين &#8212; حتى لو أنهم "
-"العلامة التجارية الجديدة &#8212; أكثر بكثير من تلك مع سنوات من المعرفة "
+"في هذه الدورة، سوف تتعلم كيف يستخدم الله شوهد المؤمنين - حتى لو أنهم "
+"العلامة التجارية الجديدة - أكثر بكثير من تلك مع سنوات من المعرفة "
 "والتدريب الذين لن تطيع فقط. وستحصل على نظرة أولى في طريقة الاجتماع معا أن "
 "يساعد تلاميذه تتضاعف حتى أسرع."
 
 #: template-zume-course.php:1911
 msgid ""
 "When we help multiply disciples, we need to make sure we're reproducing the "
-"right things. It's important what disciples know &#8212; but it's much more "
+"right things. It's important what disciples know - but it's much more "
 "important what they DO with what they know."
 msgstr ""
 "عندما نساعد ضرب التلاميذ، نحن بحاجة للتأكد من أننا كنت استنساخ الأمور في "
-"نصابها الصحيح. المهم ما أعرف التوابع &#8212; ولكن من المهم أكثر بكثير ما "
+"نصابها الصحيح. المهم ما أعرف التوابع - ولكن من المهم أكثر بكثير ما "
 "يفعلونه مع ما يعرفونه."
 
 #: template-zume-course.php:1930
@@ -1887,10 +1887,10 @@ msgstr ""
 
 #: template-zume-course.php:2064
 msgid ""
-"Thank God for His Faithfulness &#8212; for fulfilling every promise He's ever "
+"Thank God for His Faithfulness - for fulfilling every promise He's ever "
 "made. Ask Him to help you and your group become even more Faithful to Him."
 msgstr ""
-"والحمد لله \"صاحب الإخلاص\" &#8212; للوفاء بوعد كل ما كان في أي وقت مضى. أطلب "
+"والحمد لله \"صاحب الإخلاص\" - للوفاء بوعد كل ما كان في أي وقت مضى. أطلب "
 "منه أن يساعد أنت والفريق الخاص بك يصبح حتى أكثر إخﻻصا له."
 
 #: template-zume-course.php:2092
@@ -2040,9 +2040,9 @@ msgstr ""
 #: template-zume-course.php:2247
 msgid ""
 "Thank God that He loves us enough to invite us into His most important work "
-"&#8212; growing His family!"
+"- growing His family!"
 msgstr ""
-"والحمد لله أن يحب لنا ما يكفي لدعوة منا إلى عمله أهم &#8212; تزايد أسرته!"
+"والحمد لله أن يحب لنا ما يكفي لدعوة منا إلى عمله أهم - تزايد أسرته!"
 
 #: template-zume-course.php:2276
 msgid ""
@@ -2579,12 +2579,12 @@ msgstr "قييم"
 msgid ""
 "The Coaching Checklist is a powerful tool you can use to quickly assess your "
 "own strengths and vulnerabilities when it comes to making disciples who "
-"multiply. It's also a powerful tool you can use to help others &#8212; and "
+"multiply. It's also a powerful tool you can use to help others - and "
 "others can use to help you."
 msgstr ""
 "قائمة التدريب هو أداة قوية يمكن أن تستخدم لتقييم مواطن القوة ومواطن الضعف "
 "الخاصة بك بسرعة عندما يتعلق الأمر بجعل التلاميذ الذين تتضاعف. كما أنها أداة "
-"قوية يمكن أن تستخدمها لمساعدة الآخرين على &#8212; ويمكن استخدام الآخرين "
+"قوية يمكن أن تستخدمها لمساعدة الآخرين على - ويمكن استخدام الآخرين "
 "لمساعدتك."
 
 #: template-zume-course.php:2900
@@ -2608,30 +2608,30 @@ msgstr "وضع علامة على كل واحدة من \"أدوات التدري�
 
 #: template-zume-course.php:2906
 msgid ""
-"If you're unfamiliar or don't understand the Tool &#8212; check the BLACK "
+"If you're unfamiliar or don't understand the Tool - check the BLACK "
 "column"
-msgstr "إذا كنت غير مألوف أو لا يفهمون الأداة &#8212; التحقق من عمود أسود"
+msgstr "إذا كنت غير مألوف أو لا يفهمون الأداة - التحقق من عمود أسود"
 
 #: template-zume-course.php:2909
 msgid ""
-"If you're somewhat familiar but still not sure about the Tool &#8212; check "
+"If you're somewhat familiar but still not sure about the Tool - check "
 "the RED column"
 msgstr ""
-"إذا كنت مألوفة نوعا ما ولكن لا يزال غير متأكد حول الأداة &#8212; التحقق من "
+"إذا كنت مألوفة نوعا ما ولكن لا يزال غير متأكد حول الأداة - التحقق من "
 "عمود أحمر"
 
 #: template-zume-course.php:2912
 msgid ""
-"If you understand and can train the basics on the Tool &#8212; check the "
+"If you understand and can train the basics on the Tool - check the "
 "YELLOW column"
 msgstr ""
-"إذا كنت أفهم، ويمكن تدريب أساسيات على الأداة &#8212; التحقق من العمود الأصفر"
+"إذا كنت أفهم، ويمكن تدريب أساسيات على الأداة - التحقق من العمود الأصفر"
 
 #: template-zume-course.php:2915
 msgid ""
-"If you feel confident and can effectively train the Tool &#8212; check the "
+"If you feel confident and can effectively train the Tool - check the "
 "GREEN column"
-msgstr "إذا كنت تشعر بالثقة ويمكن تدريب فعال الأداة &#8212; التحقق من عمود أخضر"
+msgstr "إذا كنت تشعر بالثقة ويمكن تدريب فعال الأداة - التحقق من عمود أخضر"
 
 #: template-zume-course.php:2927
 msgid "Which Training Tools did you feel you would be able to train well?"
@@ -2651,12 +2651,12 @@ msgstr ""
 
 #: template-zume-course.php:2936
 msgid ""
-"REMEMBER &#8212; Be sure to share your Coaching Checklist results with "
+"REMEMBER - Be sure to share your Coaching Checklist results with "
 "your Zúme Coach and/or your training partner or other mentor. If you're "
 "helping coach or mentor someone, share this tool to help assess which areas "
 "need your attention and training."
 msgstr ""
-"تذكر &#8212; ومن المؤكد أن مشاركة نتائج \"التدريب القائمة المرجعية\" الخاصة "
+"تذكر - ومن المؤكد أن مشاركة نتائج \"التدريب القائمة المرجعية\" الخاصة "
 "بك مع مدرب Zúme الخاص بك و/أو شريكك التدريب أو معلمة أخرى. إذا كنت مساعدة "
 "مدرب أو معلمة شخص، تتقاسم هذه الأداة المساعدة في تقييم المناطق التي تحتاج إلى "
 "اهتمام والتدريب الخاصة بك."
