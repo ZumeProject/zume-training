@@ -1,5 +1,5 @@
 <!-- By default, this menu will use off-canvas for small
-	 and a topbar for medium-up -->
+     and a topbar for medium-up -->
 
 <?php
     $zume_is_logged_in = is_user_logged_in();

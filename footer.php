@@ -3,7 +3,7 @@
         <div class="medium-1 cell"></div>
         <div class="medium-10 cell">
             <nav role="navigation">
-				<?php zume_footer_links(); ?>
+                <?php zume_footer_links(); ?>
             </nav>
         </div>
         <div class="medium-1 cell"></div>

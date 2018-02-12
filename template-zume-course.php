@@ -233,7 +233,7 @@ class Zume_Course_Content {
                                 <?php
                                 $zume_group_meta = maybe_unserialize( $zume_group_meta );
                                 $i               = 1;
-                                while ( 16 > $i ) {
+                                while ( 27 > $i ) {
                                     echo '<option value="' . esc_attr( $i ) . '"';
                                     if ( $zume_group_meta['members'] == $i ) {
                                         echo 'selected';

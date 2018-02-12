@@ -179,7 +179,7 @@ function zume_register_required_plugins() {
                 'Begin installing plugins',
                 'disciple_tools'
             ),
-            'update_link' 					  => _n_noop(
+            'update_link'                     => _n_noop(
                 'Begin updating plugin',
                 'Begin updating plugins',
                 'disciple_tools'

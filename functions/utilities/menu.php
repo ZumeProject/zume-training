@@ -10,7 +10,7 @@ register_nav_menus(
 
 // The Top Menu
 function zume_top_nav() {
-     wp_nav_menu(array(
+    wp_nav_menu(array(
          'container' => false,                           // Remove nav container
          'menu_class' => 'medium-horizontal menu',       // Adding custom nav class
          'items_wrap' => '<ul id="%1$s" class="%2$s" data-responsive-menu="accordion medium-dropdown">%3$s</ul>',
@@ -18,7 +18,7 @@ function zume_top_nav() {
          'depth' => 5,                                   // Limit the depth of the nav
          'fallback_cb' => false,                         // Fallback function (see below)
          'walker' => new Zume_Topbar_Menu_Walker()
-     ));
+    ));
 }
 
 // Big thanks to Brett Mason (https://github.com/brettsmason) for the awesome walker
@@ -31,7 +31,7 @@ class Zume_Topbar_Menu_Walker extends Walker_Nav_Menu {
 
 // The Off Canvas Menu
 function zume_off_canvas_nav() {
-     wp_nav_menu(array(
+    wp_nav_menu(array(
          'container' => false,                           // Remove nav container
          'menu_class' => 'vertical menu top-padding',       // Adding custom nav class
          'items_wrap' => '<ul id="%1$s" class="%2$s" data-accordion-menu>%3$s</ul>',
@@ -39,7 +39,7 @@ function zume_off_canvas_nav() {
          'depth' => 5,                                   // Limit the depth of the nav
          'fallback_cb' => false,                         // Fallback function (see below)
          'walker' => new Zume_Off_Canvas_Menu_Walker()
-     ));
+    ));
 }
 
 class Zume_Off_Canvas_Menu_Walker extends Walker_Nav_Menu {
