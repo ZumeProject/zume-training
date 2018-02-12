@@ -3,14 +3,14 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "Project-Id-Version: Zúme Project\n"
-"POT-Creation-Date: 2018-01-05 07:37-0700\n"
+"POT-Creation-Date: 2018-02-08 16:22+0100\n"
 "PO-Revision-Date: 2017-12-05 06:36-0800\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.0.5\n"
+"X-Generator: Poedit 2.0.6\n"
 "X-Poedit-Basepath: ../..\n"
 "X-Poedit-Flags-xgettext: --add-comments=translators:\n"
 "X-Poedit-WPHeader: style.css\n"
@@ -98,37 +98,7 @@ msgstr ""
 msgid "Chad Rehnberg"
 msgstr ""
 
-#: front-page.php:168
-msgid ""
-"I believe Zúme can be used by the Lord to reach a huge number of people in "
-"our society who would never darken the door of a church building."
-msgstr ""
-
-#: front-page.php:172
-msgid "Curtis Sergeant — Alabama"
-msgstr ""
-
-#: front-page.php:181
-msgid "First slide details."
-msgstr ""
-
-#: front-page.php:183
-msgid "Current Slide"
-msgstr ""
-
-#: front-page.php:185
-msgid "Second slide details."
-msgstr ""
-
-#: front-page.php:188
-msgid "Third slide details."
-msgstr ""
-
-#: front-page.php:191
-msgid "Fourth slide details."
-msgstr ""
-
-#: front-page.php:207
+#: front-page.php:195
 msgid "Find out more about Zúme"
 msgstr ""
 
@@ -557,8 +527,8 @@ msgstr ""
 #: template-zume-course.php:395
 msgid ""
 "What is a disciple? And how do you make one? How do you teach a follower of "
-"Jesus to do what He told us in His Great Commission - to obey all of "
-"His commands?"
+"Jesus to do what He told us in His Great Commission - to obey all of His "
+"commands?"
 msgstr ""
 
 #: template-zume-course.php:413
@@ -811,9 +781,9 @@ msgstr ""
 
 #: template-zume-course.php:718
 msgid ""
-"If we want to make disciples who multiply - spiritual producers and "
-"not just consumers - then we need to learn and share four main ways "
-"God makes everyday followers more like Jesus:"
+"If we want to make disciples who multiply - spiritual producers and not just "
+"consumers - then we need to learn and share four main ways God makes "
+"everyday followers more like Jesus:"
 msgstr ""
 
 #: template-zume-course.php:721
@@ -1019,8 +989,8 @@ msgstr ""
 msgid ""
 "In this session, you’ll learn how God’s Spiritual Economy works and how God "
 "invests more in those who are faithful with what they've already been given. "
-"You'll also learn two more tools for making disciples - sharing God’s "
-"Story from Creation to Judgement and Baptism."
+"You'll also learn two more tools for making disciples - sharing God’s Story "
+"from Creation to Judgement and Baptism."
 msgstr ""
 
 #: template-zume-course.php:998 template-zume-course.php:1302
@@ -1031,8 +1001,8 @@ msgstr ""
 msgid ""
 "In this broken world, people feel rewarded when they take, when they receive "
 "and when they gain more than those around them. But God's Spiritual Economy "
-"is different - God invests more in those who are faithful with what "
-"they've already been given."
+"is different - God invests more in those who are faithful with what they've "
+"already been given."
 msgstr ""
 
 #: template-zume-course.php:1036
@@ -1052,8 +1022,8 @@ msgstr ""
 #: template-zume-course.php:1063
 msgid ""
 "Jesus said, “You will receive power when the Holy Spirit comes upon you. And "
-"you will be my witnesses, telling people about me everywhere - in "
-"Jerusalem, throughout Judea, in Samaria, and to the ends of the earth.”"
+"you will be my witnesses, telling people about me everywhere - in Jerusalem, "
+"throughout Judea, in Samaria, and to the ends of the earth.”"
 msgstr ""
 
 #: template-zume-course.php:1065
@@ -1090,8 +1060,8 @@ msgstr ""
 #: template-zume-course.php:1100
 msgid ""
 "One way to share God’s Good News is by telling God’s Story from Creation to "
-"Judgement - from the beginning of humankind all the way to the end of "
-"this age."
+"Judgement - from the beginning of humankind all the way to the end of this "
+"age."
 msgstr ""
 
 #: template-zume-course.php:1118
@@ -1515,8 +1485,8 @@ msgstr ""
 msgid ""
 "Before you go out on your Prayer Walking activity, be sure to pray with your "
 "group to end your time together. Thank God that He loves the lost, the last "
-"and the least - including us! Ask Him to prepare your heart and the "
-"heart of those you'll meet during your walk to be open to His work."
+"and the least - including us! Ask Him to prepare your heart and the heart of "
+"those you'll meet during your walk to be open to His work."
 msgstr ""
 
 #: template-zume-course.php:1875
@@ -1535,10 +1505,10 @@ msgstr ""
 
 #: template-zume-course.php:1892
 msgid ""
-"In this session, you’ll learn how God uses faithful followers - even "
-"if they're brand new - much more than ones with years of knowledge and "
-"training who just won't obey. And you'll get a first look at a way to meet "
-"together that helps disciples multiply even faster."
+"In this session, you’ll learn how God uses faithful followers - even if "
+"they're brand new - much more than ones with years of knowledge and training "
+"who just won't obey. And you'll get a first look at a way to meet together "
+"that helps disciples multiply even faster."
 msgstr ""
 
 #: template-zume-course.php:1911
@@ -1631,9 +1601,8 @@ msgstr ""
 
 #: template-zume-course.php:2064
 msgid ""
-"Thank God for His Faithfulness - for fulfilling every promise He's "
-"ever made. Ask Him to help you and your group become even more Faithful to "
-"Him."
+"Thank God for His Faithfulness - for fulfilling every promise He's ever "
+"made. Ask Him to help you and your group become even more Faithful to Him."
 msgstr ""
 
 #: template-zume-course.php:2092
@@ -2186,8 +2155,8 @@ msgstr ""
 msgid ""
 "The Coaching Checklist is a powerful tool you can use to quickly assess your "
 "own strengths and vulnerabilities when it comes to making disciples who "
-"multiply. It's also a powerful tool you can use to help others - and "
-"others can use to help you."
+"multiply. It's also a powerful tool you can use to help others - and others "
+"can use to help you."
 msgstr ""
 
 #: template-zume-course.php:2900
@@ -2208,26 +2177,25 @@ msgstr ""
 
 #: template-zume-course.php:2906
 msgid ""
-"If you're unfamiliar or don't understand the Tool - check the BLACK "
-"column"
+"If you're unfamiliar or don't understand the Tool - check the BLACK column"
 msgstr ""
 
 #: template-zume-course.php:2909
 msgid ""
-"If you're somewhat familiar but still not sure about the Tool - check "
-"the RED column"
+"If you're somewhat familiar but still not sure about the Tool - check the "
+"RED column"
 msgstr ""
 
 #: template-zume-course.php:2912
 msgid ""
-"If you understand and can train the basics on the Tool - check the "
-"YELLOW column"
+"If you understand and can train the basics on the Tool - check the YELLOW "
+"column"
 msgstr ""
 
 #: template-zume-course.php:2915
 msgid ""
-"If you feel confident and can effectively train the Tool - check the "
-"GREEN column"
+"If you feel confident and can effectively train the Tool - check the GREEN "
+"column"
 msgstr ""
 
 #: template-zume-course.php:2927
@@ -2246,10 +2214,10 @@ msgstr ""
 
 #: template-zume-course.php:2936
 msgid ""
-"REMEMBER - Be sure to share your Coaching Checklist results with "
-"your Zúme Coach and/or your training partner or other mentor. If you're "
-"helping coach or mentor someone, share this tool to help assess which areas "
-"need your attention and training."
+"REMEMBER - Be sure to share your Coaching Checklist results with your Zúme "
+"Coach and/or your training partner or other mentor. If you're helping coach "
+"or mentor someone, share this tool to help assess which areas need your "
+"attention and training."
 msgstr ""
 
 #: template-zume-course.php:2955
@@ -2793,8 +2761,7 @@ msgid "Zume FAQs"
 msgstr ""
 
 #: template-zume-faq.php:31
-#, php-format
-msgid "Is it really 100% free?"
+msgid "Is it really 100 percent free?"
 msgstr ""
 
 #: template-zume-faq.php:32
