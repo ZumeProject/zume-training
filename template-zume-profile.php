@@ -19,7 +19,7 @@ $zume_user_meta = get_user_meta( get_current_user_id() ); // Full array of user 
     <div id="content">
         <div id="inner-content" class="grid-x grid-margin-x grid-padding-x">
             <div class="large-8 medium-8 small-12 grid-margin-x cell" style="max-width: 900px; margin: 0 auto">
-                <span class="section-header"><?php echo esc_html__( 'Your Profile', 'zume' )?> </span>
+                <h3 class="section-header"><?php echo esc_html__( 'Your Profile', 'zume' )?> </h3>
                 <hr size="1" style="max-width:100%"/>
                 <p><?php echo get_avatar( get_current_user_id(), '150' ); ?></p>
                 <p><a href="http://gravatar.com" class="small"><?php esc_html_e( 'edit image @ gravatar.com', 'zume' ) ?></a></p>
