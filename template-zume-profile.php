@@ -22,6 +22,7 @@ $zume_user_meta = get_user_meta( get_current_user_id() ); // Full array of user 
                 <span class="section-header"><?php echo esc_html__( 'Your Profile', 'zume' )?> </span>
                 <hr size="1" style="max-width:100%"/>
                 <p><?php echo get_avatar( get_current_user_id(), '150' ); ?></p>
+                <p><a href="http://gravatar.com" class="small"><?php esc_html_e( 'edit image @ gravatar.com', 'zume' ) ?></a></p>
                 <form data-abide method="post">
 
                     <?php wp_nonce_field( "user_" . $zume_user->ID . "_update", "user_update_nonce", false, true ); ?>
