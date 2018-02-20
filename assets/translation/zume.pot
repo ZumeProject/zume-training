@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "Project-Id-Version: Zúme Project\n"
-"POT-Creation-Date: 2018-02-08 16:22+0100\n"
+"POT-Creation-Date: 2018-02-16 07:33-0700\n"
 "PO-Revision-Date: 2017-12-05 06:36-0800\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -111,7 +111,7 @@ msgid "Coach Leader"
 msgstr ""
 
 #: functions/enqueue-scripts.php:54 functions/enqueue-scripts.php:56
-#: template-zume-dashboard.php:1398
+#: template-zume-dashboard.php:1449
 msgid "Cancel"
 msgstr ""
 
@@ -157,7 +157,7 @@ msgid ""
 "Please, check spelling."
 msgstr ""
 
-#: functions/login/user-register.php:96 template-zume-profile.php:88
+#: functions/login/user-register.php:96 template-zume-profile.php:89
 msgid "Phone Number"
 msgstr ""
 
@@ -350,7 +350,7 @@ msgstr ""
 msgid "Name"
 msgstr ""
 
-#: template-zume-coach.php:33 template-zume-profile.php:70
+#: template-zume-coach.php:33 template-zume-profile.php:71
 msgid "Email"
 msgstr ""
 
@@ -2460,8 +2460,8 @@ msgstr ""
 msgid "Members"
 msgstr ""
 
-#: template-zume-dashboard.php:76 template-zume-dashboard.php:1259
-#: template-zume-dashboard.php:1333 template-zume-profile.php:104
+#: template-zume-dashboard.php:76 template-zume-dashboard.php:1284
+#: template-zume-dashboard.php:1384 template-zume-profile.php:105
 msgid "Address"
 msgstr ""
 
@@ -2715,7 +2715,7 @@ msgstr ""
 msgid "Create Group"
 msgstr ""
 
-#: template-zume-dashboard.php:1247 template-zume-dashboard.php:1318
+#: template-zume-dashboard.php:1247 template-zume-dashboard.php:1343
 msgid "Group Name"
 msgstr ""
 
@@ -2723,36 +2723,36 @@ msgstr ""
 msgid "Number of Group Members (including you)"
 msgstr ""
 
-#: template-zume-dashboard.php:1255 template-zume-dashboard.php:1328
+#: template-zume-dashboard.php:1280 template-zume-dashboard.php:1379
 msgid "Planned Meeting Time"
 msgstr ""
 
-#: template-zume-dashboard.php:1271 template-zume-dashboard.php:1345
-#: template-zume-profile.php:117
+#: template-zume-dashboard.php:1296 template-zume-dashboard.php:1396
+#: template-zume-profile.php:118
 msgid "Validate"
 msgstr ""
 
-#: template-zume-dashboard.php:1283
+#: template-zume-dashboard.php:1308
 msgid "Submit"
 msgstr ""
 
-#: template-zume-dashboard.php:1313
+#: template-zume-dashboard.php:1338
 msgid "Edit Group"
 msgstr ""
 
-#: template-zume-dashboard.php:1323
+#: template-zume-dashboard.php:1348
 msgid "Number of Participants"
 msgstr ""
 
-#: template-zume-dashboard.php:1366
+#: template-zume-dashboard.php:1417
 msgid "Update"
 msgstr ""
 
-#: template-zume-dashboard.php:1368
+#: template-zume-dashboard.php:1419
 msgid "Archive"
 msgstr ""
 
-#: template-zume-dashboard.php:1370 template-zume-dashboard.php:1396
+#: template-zume-dashboard.php:1421 template-zume-dashboard.php:1447
 msgid "Delete"
 msgstr ""
 
@@ -3425,29 +3425,33 @@ msgstr ""
 msgid "Your Profile"
 msgstr ""
 
-#: template-zume-profile.php:32
+#: template-zume-profile.php:25
+msgid "edit image @ gravatar.com"
+msgstr ""
+
+#: template-zume-profile.php:33
 msgid "User Name"
 msgstr ""
 
-#: template-zume-profile.php:35
+#: template-zume-profile.php:36
 msgid "(can not change)"
 msgstr ""
 
-#: template-zume-profile.php:40 template-zume-profile.php:44
-#: template-zume-profile.php:45
+#: template-zume-profile.php:41 template-zume-profile.php:45
+#: template-zume-profile.php:46
 msgid "First Name"
 msgstr ""
 
-#: template-zume-profile.php:55 template-zume-profile.php:59
-#: template-zume-profile.php:60
+#: template-zume-profile.php:56 template-zume-profile.php:60
+#: template-zume-profile.php:61
 msgid "Last Name"
 msgstr ""
 
-#: template-zume-profile.php:138
+#: template-zume-profile.php:139
 msgid "Oh snap!"
 msgstr ""
 
-#: template-zume-profile.php:141
+#: template-zume-profile.php:142
 msgid "Save"
 msgstr ""
 
