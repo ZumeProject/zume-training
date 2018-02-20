@@ -980,11 +980,6 @@ ul.orbit-container {
 	height: 300px;
 }
 
-//.switch { // TODO to global. Removed because it affecting the entire site use of switches.
-//	margin-bottom: 0;
-//	height:0;
-//}
-
 .starter-switch {
 	@include switch-size(3rem, 6rem, 0.75rem);
 }

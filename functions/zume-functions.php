@@ -205,7 +205,7 @@ function zume_faq_url() {
  * @return string
  */
 function zume_images_uri( $sub_folder = '' ) {
-    $zume_images_uri = home_url( '/wp-content/themes/zume-project-multilingual/assets/images/' );
+    $zume_images_uri = site_url( '/wp-content/themes/zume-project-multilingual/assets/images/' );
     if ( empty( $sub_folder ) ) {
         return $zume_images_uri;
     } else {
@@ -214,5 +214,5 @@ function zume_images_uri( $sub_folder = '' ) {
 }
 
 function zume_files_uri() {
-    return home_url( '/wp-content/themes/zume-project-multilingual/assets/files/' ) . zume_current_language() . '/';
+    return site_url( '/wp-content/themes/zume-project-multilingual/assets/files/' ) . zume_current_language() . '/';
 }

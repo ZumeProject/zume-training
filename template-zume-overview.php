@@ -230,17 +230,17 @@ class Zume_Overview_Content {
                 <div class="grid-x grid-margin-y">
                     <div class="small-4 cell">
                         <img class="alignnone wp-image-943 size-full"
-                             src="<?php echo esc_html( home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>1.1.png"
+                             src="<?php echo esc_html( site_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>1.1.png"
                              alt="" width="400" height="225"/>
                     </div>
                     <div class="small-4 cell">
                         <img class="alignnone wp-image-944 size-full"
-                             src="<?php echo esc_html( home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>1.2.png"
+                             src="<?php echo esc_html( site_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>1.2.png"
                              alt="" width="400" height="225"/>
                     </div>
                     <div class="small-4 cell">
                         <img class="alignnone wp-image-945 size-full"
-                             src="<?php echo esc_html( home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>1.3.png"
+                             src="<?php echo esc_html( site_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>1.3.png"
                              alt="" width="400" height="225"/>
                     </div>
                 </div>
@@ -255,7 +255,7 @@ class Zume_Overview_Content {
                     <div class="cell">
                         <div class="grid-x grid-margin-y">
                             <div class="large-1 cell">
-                                <img src="<?php echo esc_html( home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>concept-1-4.png"
+                                <img src="<?php echo esc_html( site_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>concept-1-4.png"
                                      alt="" width="40" height="40" class="alignnone size-full wp-image-1564"/>
                             </div>
                             <div class="large-11 cell">
@@ -266,7 +266,7 @@ class Zume_Overview_Content {
                     <div class="cell">
                         <div class="grid-x grid-margin-y">
                             <div class="large-1 cell">
-                                <img src="<?php echo esc_html( home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>concept-2-2.png"
+                                <img src="<?php echo esc_html( site_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>concept-2-2.png"
                                      alt="" width="40" height="40" class="alignnone size-full wp-image-1565"/>
                             </div>
                             <div class="large-11 cell">
@@ -277,7 +277,7 @@ class Zume_Overview_Content {
                     <div class="cell">
                         <div class="grid-x grid-margin-y">
                             <div class="large-1 cell">
-                                <img src="<?php echo esc_html( home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>concept-3-2.png"
+                                <img src="<?php echo esc_html( site_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>concept-3-2.png"
                                      alt="" width="40" height="40" class="alignnone size-full wp-image-1566"/>
                             </div>
                             <div class="large-11 cell">
@@ -297,7 +297,7 @@ class Zume_Overview_Content {
                     <div class="cell">
                         <div class="grid-x grid-margin-y">
                             <div class="large-1 cell">
-                                <img src="<?php echo esc_html( home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>tool-1-2.png"
+                                <img src="<?php echo esc_html( site_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>tool-1-2.png"
                                      alt=""
                                      width="40" height="40" class="alignnone size-full wp-image-1035"/>
                             </div>
@@ -309,7 +309,7 @@ class Zume_Overview_Content {
                     <div class="cell">
                         <div class="grid-x grid-margin-y grid-margin-y">
                             <div class="large-1 cell">
-                                <img src="<?php echo esc_html( home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>tool-2.png"
+                                <img src="<?php echo esc_html( site_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>tool-2.png"
                                      alt=""
                                      width="40" height="40" class="alignnone size-full wp-image-1567"/>
                             </div>
@@ -321,7 +321,7 @@ class Zume_Overview_Content {
                     <div class="cell">
                         <div class="grid-x grid-margin-y">
                             <div class="large-1 cell">
-                                <img src="<?php echo esc_html( home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>concept-3-2.png"
+                                <img src="<?php echo esc_html( site_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>concept-3-2.png"
                                      alt="" width="40" height="40" class="alignnone size-full wp-image-1566"/>
                             </div>
                             <div class="large-11 cell">
@@ -341,7 +341,7 @@ class Zume_Overview_Content {
                     <div class="cell">
                         <div class="grid-x grid-margin-y">
                             <div class="large-1 cell">
-                                <img src="<?php echo esc_html( home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>practice-1-5.png"
+                                <img src="<?php echo esc_html( site_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>practice-1-5.png"
                                      alt="" width="40" height="40" class="alignnone size-full wp-image-1568"/>
                             </div>
                             <div class="large-11 cell">
@@ -368,18 +368,18 @@ class Zume_Overview_Content {
                 <div class="grid-x grid-margin-y">
                     <div class="small-4 cell">
                         <!-- image -->
-                        <img src="<?php echo esc_html( home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>2.1.png"
+                        <img src="<?php echo esc_html( site_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>2.1.png"
                              alt="" class="alignnone size-full wp-image-948"/>
                     </div>
                     <div class="small-4 cell">
                         <!-- image -->
-                        <img src="<?php echo esc_html( home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>2.2.png"
+                        <img src="<?php echo esc_html( site_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>2.2.png"
                              alt="" class="alignnone size-full wp-image-949"/>
                     </div>
                     <div class="small-4 cell">
                         <!-- image -->
                         <img
-                                src="<?php echo esc_html( home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>2.3-1.png"
+                                src="<?php echo esc_html( site_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>2.3-1.png"
                                 alt="List 100 people you know, 3 categories: those who follow Jesus, those who don&#039;t follow Jesus, those they&#039;re not sure about"
                                 width="400" height="225" class="alignnone size-full wp-image-1066"/>
                     </div>
@@ -396,7 +396,7 @@ class Zume_Overview_Content {
                         <div class="grid-x grid-margin-y">
                             <div class="large-1 cell">
                                 <!-- image -->
-                                <img src="<?php echo esc_html( home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>concept-1-5.png"
+                                <img src="<?php echo esc_html( site_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>concept-1-5.png"
                                      alt="" width="40" height="40" class="alignnone size-full wp-image-1576"/>
                             </div>
                             <div class="large-11 cell">
@@ -417,7 +417,7 @@ class Zume_Overview_Content {
                         <div class="grid-x grid-margin-y">
                             <div class="large-1 cell">
                                 <!-- image -->
-                                <img src="<?php echo esc_html( home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>practice-1-6.png"
+                                <img src="<?php echo esc_html( site_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>practice-1-6.png"
                                      alt="" width="40" height="40" class="alignnone size-full wp-image-1577"/>
                             </div>
                             <div class="large-11 cell">
@@ -429,7 +429,7 @@ class Zume_Overview_Content {
                         <div class="grid-x grid-margin-y grid-margin-y">
                             <div class="large-1 cell">
                                 <!-- image -->
-                                <img src="<?php echo esc_html( home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>practice-2-2.png"
+                                <img src="<?php echo esc_html( site_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>practice-2-2.png"
                                      alt="" width="40" height="40" class="alignnone size-full wp-image-1578"/>
                             </div>
                             <div class="large-11 cell">
@@ -451,7 +451,7 @@ class Zume_Overview_Content {
                         <div class="grid-x grid-margin-y grid-margin-y">
                             <div class="large-1 cell">
                                 <!-- image -->
-                                <img src="<?php echo esc_html( home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>tool-1-4.png"
+                                <img src="<?php echo esc_html( site_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>tool-1-4.png"
                                      alt="" width="40" height="40" class="alignnone size-full wp-image-1579"/>
                             </div>
                             <div class="large-11 cell">
@@ -461,7 +461,7 @@ class Zume_Overview_Content {
                         <div class="grid-x grid-margin-y grid-margin-y">
                             <div class="large-1 cell">
                                 <!-- image -->
-                                <img src="<?php echo esc_html( home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>tool-2-3.png"
+                                <img src="<?php echo esc_html( site_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>tool-2-3.png"
                                      alt="" width="40" height="40" class="alignnone size-full wp-image-1580"/>
                             </div>
                             <div class="large-11 cell">
@@ -488,21 +488,21 @@ class Zume_Overview_Content {
                     <div class="small-4 cell">
                         <!-- image -->
                         <img
-                                src="<?php echo esc_html( home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>3.1-1.png"
+                                src="<?php echo esc_html( site_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>3.1-1.png"
                                 alt="Whoever can be trusted with very little can also be trusted with much. - Jesus. Breathe in, hear, breathe out, obey and share. Giving God&#039;s blessings"
                                 width="400" height="225" class="alignnone size-full wp-image-1068"/>
                     </div>
                     <div class="small-4 cell">
                         <!-- image -->
                         <img
-                                src="<?php echo esc_html( home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>3.2.png"
+                                src="<?php echo esc_html( site_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>3.2.png"
                                 alt="Obey, do, practise, share, teach, pass on" width="400" height="225"
                                 class="alignnone size-full wp-image-955"/>
                     </div>
                     <div class="small-4 cell">
                         <!-- image -->
                         <img
-                                src="<?php echo esc_html( home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>3.3.png"
+                                src="<?php echo esc_html( site_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>3.3.png"
                                 alt="" width="400" height="225" class="alignnone size-full wp-image-957"/>
                     </div>
                 </div>
@@ -518,7 +518,7 @@ class Zume_Overview_Content {
                         <div class="grid-x grid-margin-y">
                             <div class="large-1 cell">
                                 <!-- image -->
-                                <img src="<?php echo esc_html( home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>concept-1-1.png"
+                                <img src="<?php echo esc_html( site_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>concept-1-1.png"
                                      alt="" width="40" height="40" class="alignnone size-full wp-image-1023"/>
                             </div>
                             <div class="large-11 cell">
@@ -530,7 +530,7 @@ class Zume_Overview_Content {
                         <div class="grid-x grid-margin-y">
                             <div class="large-1 cell">
                                 <!-- image -->
-                                <img src="<?php echo esc_html( home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>concept-2-1.png"
+                                <img src="<?php echo esc_html( site_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>concept-2-1.png"
                                      alt="" width="40" height="40" class="alignnone size-full wp-image-1024"/>
                             </div>
                             <div class="large-11 cell">
@@ -552,7 +552,7 @@ class Zume_Overview_Content {
                         <div class="grid-x grid-margin-y">
                             <div class="large-1 cell">
                                 <!-- image -->
-                                <img src="<?php echo esc_html( home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>tool-1-1-1.png"
+                                <img src="<?php echo esc_html( site_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>tool-1-1-1.png"
                                      alt="" width="40" height="40" class="alignnone size-full wp-image-1183"/>
                             </div>
                             <div class="large-11 cell">
@@ -573,7 +573,7 @@ class Zume_Overview_Content {
                         <div class="grid-x grid-margin-y">
                             <div class="large-1 cell">
                                 <!-- image -->
-                                <img src="<?php echo esc_html( home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>tool-2-1.png"
+                                <img src="<?php echo esc_html( site_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>tool-2-1.png"
                                      alt="" width="40" height="40" class="alignnone size-full wp-image-1026"/>
                             </div>
                             <div class="large-11 cell">
@@ -600,19 +600,19 @@ class Zume_Overview_Content {
                     <div class="small-4 cell">
                         <!-- image -->
                         <img class="alignnone wp-image-943 size-full"
-                             src="<?php echo esc_html( home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>4.1.png"
+                             src="<?php echo esc_html( site_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>4.1.png"
                              alt="" width="400" height="225"/>
                     </div>
                     <div class="small-4 cell">
                         <!-- image -->
                         <img class="alignnone wp-image-944 size-full"
-                             src="<?php echo esc_html( home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>4.2.png"
+                             src="<?php echo esc_html( site_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>4.2.png"
                              alt="" width="400" height="225"/>
                     </div>
                     <div class="small-4 cell">
                         <!-- image -->
                         <img class="alignnone wp-image-945 size-full"
-                             src="<?php echo esc_html( home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>4.3.png"
+                             src="<?php echo esc_html( site_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>4.3.png"
                              alt="" width="400" height="225"/>
                     </div>
                 </div>
@@ -628,7 +628,7 @@ class Zume_Overview_Content {
                         <div class="grid-x grid-margin-y">
                             <div class="large-1 cell">
                                 <!-- image -->
-                                <img src="<?php echo esc_html( home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>concept-1-2.png"
+                                <img src="<?php echo esc_html( site_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>concept-1-2.png"
                                      alt="" width="40" height="40" class="alignnone size-full wp-image-1028"/>
                             </div>
                             <div class="large-11 cell">
@@ -640,7 +640,7 @@ class Zume_Overview_Content {
                         <div class="grid-x grid-margin-y">
                             <div class="large-1 cell">
                                 <!-- image -->
-                                <img src="<?php echo esc_html( home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>concept-2-2.png"
+                                <img src="<?php echo esc_html( site_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>concept-2-2.png"
                                      alt="" width="40" height="40" class="alignnone size-full wp-image-1029"/>
                             </div>
                             <div class="large-11 cell">
@@ -652,7 +652,7 @@ class Zume_Overview_Content {
                         <div class="grid-x grid-margin-y">
                             <div class="large-1 cell">
                                 <!-- image -->
-                                <img src="<?php echo esc_html( home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>duckling-discipleship.png"
+                                <img src="<?php echo esc_html( site_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>duckling-discipleship.png"
                                      alt="" width="40" height="40" class="alignnone size-full wp-image-1028"/>
                             </div>
                             <div class="large-11 cell">
@@ -673,7 +673,7 @@ class Zume_Overview_Content {
                         <div class="grid-x grid-margin-y">
                             <div class="large-1 cell">
                                 <!-- image -->
-                                <img src="<?php echo esc_html( home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>practice-1.png"
+                                <img src="<?php echo esc_html( site_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>practice-1.png"
                                      alt="" width="40" height="40" class="alignnone size-full wp-image-1035"/>
                             </div>
                             <div class="large-11 cell">
@@ -685,7 +685,7 @@ class Zume_Overview_Content {
                         <div class="grid-x grid-margin-y grid-margin-y">
                             <div class="large-1 cell">
                                 <!-- image -->
-                                <img src="<?php echo esc_html( home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>practice-2-3.png"
+                                <img src="<?php echo esc_html( site_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>practice-2-3.png"
                                      alt="" width="40" height="40" class="alignnone size-full wp-image-1186"/>
                             </div>
                             <div class="large-11 cell">
@@ -706,7 +706,7 @@ class Zume_Overview_Content {
                         <div class="grid-x grid-margin-y">
                             <div class="large-1 cell">
                                 <!-- image -->
-                                <img src="<?php echo esc_html( home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>practice-1.png"
+                                <img src="<?php echo esc_html( site_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>practice-1.png"
                                      alt="" width="40" height="40" class="alignnone size-full wp-image-1033"/>
                             </div>
                             <div class="large-11 cell">
@@ -718,7 +718,7 @@ class Zume_Overview_Content {
                         <div class="grid-x grid-margin-y">
                             <div class="large-1 cell">
                                 <!-- image -->
-                                <img src="<?php echo esc_html( home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>practice-2-3.png"
+                                <img src="<?php echo esc_html( site_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>practice-2-3.png"
                                      alt="" width="40" height="40" class="alignnone size-full wp-image-1186"/>
                             </div>
                             <div class="large-11 cell">
@@ -744,19 +744,19 @@ class Zume_Overview_Content {
                     <div class="small-4 cell">
                         <!-- image -->
                         <img class="alignnone wp-image-943 size-full"
-                             src="<?php echo esc_html( home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>5.1.png"
+                             src="<?php echo esc_html( site_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>5.1.png"
                              alt="" width="400" height="225"/>
                     </div>
                     <div class="small-4 cell">
                         <!-- image -->
                         <img class="alignnone wp-image-944 size-full"
-                             src="<?php echo esc_html( home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>5.2.png"
+                             src="<?php echo esc_html( site_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>5.2.png"
                              alt="" width="400" height="225"/>
                     </div>
                     <div class="small-4 cell">
                         <!-- image -->
                         <img class="alignnone wp-image-945 size-full"
-                             src="<?php echo esc_html( home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>5.3.png"
+                             src="<?php echo esc_html( site_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>5.3.png"
                              alt="" width="400" height="225"/>
                     </div>
                 </div>
@@ -772,7 +772,7 @@ class Zume_Overview_Content {
                         <div class="grid-x grid-margin-y">
                             <div class="large-1 cell">
                                 <!-- image -->
-                                <img src="<?php echo esc_html( home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>concept-2-2.png"
+                                <img src="<?php echo esc_html( site_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>concept-2-2.png"
                                      alt="" width="40" height="40" class="alignnone size-full wp-image-1028"/>
                             </div>
                             <div class="large-11 cell">
@@ -793,7 +793,7 @@ class Zume_Overview_Content {
                         <div class="grid-x grid-margin-y">
                             <div class="large-1 cell">
                                 <!-- image -->
-                                <img src="<?php echo esc_html( home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>tool-1-4.png"
+                                <img src="<?php echo esc_html( site_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>tool-1-4.png"
                                      alt="" width="40" height="40" class="alignnone size-full wp-image-1035"/>
                             </div>
                             <div class="large-11 cell">
@@ -814,7 +814,7 @@ class Zume_Overview_Content {
                         <div class="grid-x grid-margin-y">
                             <div class="large-1 cell">
                                 <!-- image -->
-                                <img src="<?php echo esc_html( home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>practice-1-1.png"
+                                <img src="<?php echo esc_html( site_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>practice-1-1.png"
                                      alt="" width="40" height="40" class="alignnone size-full wp-image-1033"/>
                             </div>
                             <div class="large-11 cell">
@@ -824,7 +824,7 @@ class Zume_Overview_Content {
                         <div class="grid-x grid-margin-y">
                             <div class="large-1 cell">
                                 <!-- image -->
-                                <img src="<?php echo esc_html( home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>tool-1-4.png"
+                                <img src="<?php echo esc_html( site_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>tool-1-4.png"
                                      alt="" width="40" height="40" class="alignnone size-full wp-image-1033"/>
                             </div>
                             <div class="large-11 cell">
@@ -851,19 +851,19 @@ class Zume_Overview_Content {
                     <div class="small-4 cell">
                         <!-- image -->
                         <img class="alignnone wp-image-943 size-full"
-                             src="<?php echo esc_html( home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>6.1-1.png"
+                             src="<?php echo esc_html( site_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>6.1-1.png"
                              alt="" width="400" height="225"/>
                     </div>
                     <div class="small-4 cell">
                         <!-- image -->
                         <img class="alignnone wp-image-944 size-full"
-                             src="<?php echo esc_html( home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>6.2.png"
+                             src="<?php echo esc_html( site_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>6.2.png"
                              alt="" width="400" height="225"/>
                     </div>
                     <div class="small-4 cell">
                         <!-- image -->
                         <img class="alignnone wp-image-945 size-full"
-                             src="<?php echo esc_html( home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>6.3.png"
+                             src="<?php echo esc_html( site_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>6.3.png"
                              alt="" width="400" height="225"/>
                     </div>
                 </div>
@@ -879,7 +879,7 @@ class Zume_Overview_Content {
                         <div class="grid-x grid-margin-y">
                             <div class="large-1 cell">
                                 <!-- image -->
-                                <img src="<?php echo esc_html( home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>concept-1-3.png"
+                                <img src="<?php echo esc_html( site_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>concept-1-3.png"
                                      alt="" width="40" height="40" class="alignnone size-full wp-image-1028"/>
                             </div>
                             <div class="large-11 cell">
@@ -900,7 +900,7 @@ class Zume_Overview_Content {
                         <div class="grid-x grid-margin-y">
                             <div class="large-1 cell">
                                 <!-- image -->
-                                <img src="<?php echo esc_html( home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>tool-1-5.png"
+                                <img src="<?php echo esc_html( site_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>tool-1-5.png"
                                      alt="" width="40" height="40" class="alignnone size-full wp-image-1035"/>
                             </div>
                             <div class="large-11 cell">
@@ -926,19 +926,19 @@ class Zume_Overview_Content {
                     <div class="small-4 cell">
                         <!-- image -->
                         <img class="alignnone wp-image-943 size-full"
-                             src="<?php echo esc_html( home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>7.1.png"
+                             src="<?php echo esc_html( site_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>7.1.png"
                              alt="" width="400" height="225"/>
                     </div>
                     <div class="small-4 cell">
                         <!-- image -->
                         <img class="alignnone wp-image-944 size-full"
-                             src="<?php echo esc_html( home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>7.2-1.png"
+                             src="<?php echo esc_html( site_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>7.2-1.png"
                              alt="" width="400" height="225"/>
                     </div>
                     <div class="small-4 cell">
                         <!-- image -->
                         <img class="alignnone wp-image-945 size-full"
-                             src="<?php echo esc_html( home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>7.3.png"
+                             src="<?php echo esc_html( site_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>7.3.png"
                              alt="" width="400" height="225"/>
                     </div>
                 </div>
@@ -954,7 +954,7 @@ class Zume_Overview_Content {
                         <div class="grid-x grid-margin-y">
                             <div class="large-1 cell">
                                 <!-- image -->
-                                <img src="<?php echo esc_html( home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>concept-1-6.png"
+                                <img src="<?php echo esc_html( site_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>concept-1-6.png"
                                      alt="" width="40" height="40" class="alignnone size-full wp-image-1570"/>
                             </div>
                             <div class="large-11 cell">
@@ -975,7 +975,7 @@ class Zume_Overview_Content {
                         <div class="grid-x grid-margin-y">
                             <div class="large-1 cell">
                                 <!-- image -->
-                                <img src="<?php echo esc_html( home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>practice-1-2.png"
+                                <img src="<?php echo esc_html( site_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>practice-1-2.png"
                                      alt="" width="40" height="40" class="alignnone size-full wp-image-1033"/>
                             </div>
                             <div class="large-11 cell">
@@ -1002,20 +1002,20 @@ class Zume_Overview_Content {
                     <div class="small-4 cell">
                         <!-- image -->
                         <img class="alignnone wp-image-943 size-full"
-                             src="<?php echo esc_html( home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>8.1.png"
+                             src="<?php echo esc_html( site_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>8.1.png"
                              alt="" width="400" height="225"/>
                     </div>
                     <div class="small-4 cell">
                         <!-- image -->
                         <img
                                 class="alignnone wp-image-944 size-full"
-                                src="<?php echo esc_html( home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>8.2.png"
+                                src="<?php echo esc_html( site_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>8.2.png"
                                 alt="" width="400" height="225"/>
                     </div>
                     <div class="small-4 cell">
                         <!-- image -->
                         <img class="alignnone wp-image-945 size-full"
-                             src="<?php echo esc_html( home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>8.3.png"
+                             src="<?php echo esc_html( site_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>8.3.png"
                              alt="" width="400" height="225"/>
                     </div>
                 </div>
@@ -1031,7 +1031,7 @@ class Zume_Overview_Content {
                         <div class="grid-x grid-margin-y">
                             <div class="large-1 cell">
                                 <!-- image -->
-                                <img src="<?php echo esc_html( home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>concept-1-4.png"
+                                <img src="<?php echo esc_html( site_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>concept-1-4.png"
                                      alt="" width="40" height="40" class="alignnone size-full wp-image-1028"/>
                             </div>
                             <div class="large-11 cell">
@@ -1052,7 +1052,7 @@ class Zume_Overview_Content {
                         <div class="grid-x grid-margin-y">
                             <div class="large-1 cell">
                                 <!-- image -->
-                                <img src="<?php echo esc_html( home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>practice-1-2.png"
+                                <img src="<?php echo esc_html( site_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>practice-1-2.png"
                                      alt="" width="40" height="40" class="alignnone size-full wp-image-1033"/>
                             </div>
                             <div class="large-11 cell">
@@ -1079,19 +1079,19 @@ class Zume_Overview_Content {
                     <div class="small-4 cell">
                         <!-- image -->
                         <img class="alignnone wp-image-943 size-full"
-                             src="<?php echo esc_html( home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>9.1.png"
+                             src="<?php echo esc_html( site_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>9.1.png"
                              alt="" width="400" height="225"/>
                     </div>
                     <div class="small-4 cell">
                         <!-- image -->
                         <img class="alignnone wp-image-944 size-full"
-                                src="<?php echo esc_html( home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>9.2.png"
+                                src="<?php echo esc_html( site_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>9.2.png"
                                 alt="" width="400" height="225"/>
                     </div>
                     <div class="small-4 cell">
                         <!-- image -->
                         <img class="alignnone wp-image-945 size-full"
-                             src="<?php echo esc_html( home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>9.3.png"
+                             src="<?php echo esc_html( site_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>9.3.png"
                              alt="" width="400" height="225"/>
                     </div>
                 </div>
@@ -1107,7 +1107,7 @@ class Zume_Overview_Content {
                         <div class="grid-x grid-margin-y">
                             <div class="large-1 cell">
                                 <!-- image -->
-                                <img src="<?php echo esc_html( home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>concept-1-5.png"
+                                <img src="<?php echo esc_html( site_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>concept-1-5.png"
                                      alt="" width="40" height="40" class="alignnone size-full wp-image-1028"/>
                             </div>
                             <div class="large-11 cell">
@@ -1119,7 +1119,7 @@ class Zume_Overview_Content {
                         <div class="grid-x grid-margin-y">
                             <div class="large-1 cell">
                                 <!-- image -->
-                                <img src="<?php echo esc_html( home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>concept-2-3.png"
+                                <img src="<?php echo esc_html( site_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>concept-2-3.png"
                                      alt="" width="40" height="40" class="alignnone size-full wp-image-1029"/>
                             </div>
                             <div class="large-11 cell">
@@ -1131,7 +1131,7 @@ class Zume_Overview_Content {
                         <div class="grid-x grid-margin-y">
                             <div class="large-1 cell">
                                 <!-- image -->
-                                <img src="<?php echo esc_html( home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>concept-3.png"
+                                <img src="<?php echo esc_html( site_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>concept-3.png"
                                      alt="" width="40" height="40" class="alignnone size-full wp-image-1030"/>
                             </div>
                             <div class="large-11 cell">
@@ -1152,7 +1152,7 @@ class Zume_Overview_Content {
                         <div class="grid-x grid-margin-y">
                             <div class="large-1 cell">
                                 <!-- image -->
-                                <img src="<?php echo esc_html( home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>practice-1-3.png"
+                                <img src="<?php echo esc_html( site_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>practice-1-3.png"
                                      alt="" width="40" height="40" class="alignnone size-full wp-image-1033"/>
                             </div>
                             <div class="large-11 cell">
@@ -1179,20 +1179,20 @@ class Zume_Overview_Content {
                     <div class="small-4 cell">
                         <!-- image -->
                         <img class="alignnone wp-image-943 size-full"
-                             src="<?php echo esc_html( home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>10.1.png"
+                             src="<?php echo esc_html( site_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>10.1.png"
                              alt="" width="400" height="225"/>
                     </div>
                     <div class="small-4 cell">
                         <!-- image -->
                         <img
                                 class="alignnone wp-image-944 size-full"
-                                src="<?php echo esc_html( home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>10.2.png"
+                                src="<?php echo esc_html( site_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>10.2.png"
                                 alt="" width="400" height="225"/>
                     </div>
                     <div class="small-4 cell">
                         <!-- image -->
                         <img class="alignnone wp-image-945 size-full"
-                             src="<?php echo esc_html( home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>10.3.png"
+                             src="<?php echo esc_html( site_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>10.3.png"
                              alt="" width="400" height="225"/>
                     </div>
                 </div>
@@ -1208,7 +1208,7 @@ class Zume_Overview_Content {
                         <div class="grid-x grid-margin-y">
                             <div class="large-1 cell">
                                 <!-- image -->
-                                <img src="<?php echo esc_html( home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>practic.png"
+                                <img src="<?php echo esc_html( site_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>practic.png"
                                      alt="" width="40" height="40" class="alignnone size-full wp-image-1028"/>
                             </div>
                             <div class="large-11 cell">
@@ -1229,7 +1229,7 @@ class Zume_Overview_Content {
                         <div class="grid-x grid-margin-y">
                             <div class="large-1 cell">
                                 <!-- image -->
-                                <img src="<?php echo esc_html( home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>tool-1-7.png"
+                                <img src="<?php echo esc_html( site_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>tool-1-7.png"
                                      alt="" width="40" height="40" class="alignnone size-full wp-image-1572"/>
                             </div>
                             <div class="large-11 cell">
@@ -1252,7 +1252,7 @@ class Zume_Overview_Content {
                         <div class="grid-x grid-margin-y">
                             <div class="large-1 cell">
                                 <!-- image -->
-                                <img src="<?php echo esc_html( home_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>practice-2-2.png"
+                                <img src="<?php echo esc_html( site_url( '/wp-content/themes/zume-project-multilingual/assets/images/overview/' ) ); ?>practice-2-2.png"
                                      alt="" width="40" height="40" class="alignnone size-full wp-image-1033"/>
                             </div>
                             <div class="large-11 cell">

@@ -21,7 +21,7 @@ if ( zume_has_polylang() ) {
 
         <!-- Show for large -->
         <div class="menu-item">
-            <a href="<?php echo is_user_logged_in() ? esc_url( zume_dashboard_url() ) : esc_attr( home_url() ); ?>">
+            <a href="<?php echo is_user_logged_in() ? esc_url( zume_dashboard_url() ) : esc_attr( site_url() ); ?>">
                <img src="<?php echo esc_attr( zume_images_uri() ); ?>zume-logo-white.png" class="zume-logo-in-top-bar">
             </a>
         </div>

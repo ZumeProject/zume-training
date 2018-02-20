@@ -107,7 +107,6 @@ class Zume_Google_Geolocation
 
         $url_address = 'http://freegeoip.net/json/' . $ip_address;
         $details = json_decode( self::url_get_contents( $url_address ), true );
-        zume_write_log( $details );
 
         $formatted_address = '';
         $formatted_address .= empty( $details['city'] ) ? '' : $details['city'];
