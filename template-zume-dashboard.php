@@ -38,7 +38,7 @@ $zume_highest_session = Zume_Dashboard::get_highest_session( $zume_current_user 
                     <div class="large-1 cell"></div>
 
                     <!-- Left Column -->
-                    <div class="large-7 cell">
+                    <div class="large-8 cell">
 
                         <!-- ********************************************************************************************* -->
                         <!-- Groups Management Section -->
@@ -64,7 +64,7 @@ $zume_highest_session = Zume_Dashboard::get_highest_session( $zume_current_user 
                                             <!-- Group Row -->
                                             <li class="block">
                                                 <div class="grid-x grid-margin-x">
-                                                    <div class="large-6 cell">
+                                                    <div class="cell large-6">
                                                         <h3>
                                                             <a data-open="<?php echo esc_html( $zume_key ); ?>"><?php echo esc_html( $zume_value['group_name'] ) ?></a>
                                                         </h3>
@@ -82,9 +82,8 @@ $zume_highest_session = Zume_Dashboard::get_highest_session( $zume_current_user 
                                                             <i class="fi-pencil hollow"></i> <?php echo esc_html__( 'edit', 'zume' ) ?>
                                                         </button>
                                                     </div>
-                                                    <div class="large-6 cell">
-                                                        <ul class="pagination" role="navigation"
-                                                            aria-label="Pagination">
+                                                    <div class="large-6 cell" style="min-width:350px;">
+                                                        <ul class="pagination" role="navigation" aria-label="Pagination">
                                                             <li class="<?php echo esc_html( $zume_value['session_1'] ? 'current' : '' ); ?>">
                                                                 <a href="<?php echo esc_html( zume_course_url() . '/?group=' . $zume_key . '&session=1' ); ?>">1</a>
                                                             </li>
@@ -1117,7 +1116,7 @@ $zume_highest_session = Zume_Dashboard::get_highest_session( $zume_current_user 
 
 
                     <!-- Right Column -->
-                    <div class="large-3 cell dashboard-messages">
+                    <div class="large-2 cell dashboard-messages">
 
                         <!-- ********************************************************************************************* -->
                         <!-- COACH SECTION -->
