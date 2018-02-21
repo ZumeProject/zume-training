@@ -76,7 +76,7 @@ function zume_die_handler( $message, $title = '', $args = array() ) {
     }
     ?>
     <?php /* @codingStandardsIgnoreLine */ ?>
-    <title><?php echo $title ?></title>
+    <title><?php echo esc_attr( $title ) ?></title>
     <style type="text/css">
         html {
             background: #f1f1f1;
@@ -197,10 +197,10 @@ function zume_die_handler( $message, $title = '', $args = array() ) {
 <body id="error-page">
 <?php endif; // ! did_action( 'admin_head' ) ?>
     <?php /* @codingStandardsIgnoreLine */ ?>
-    <?php echo $message; ?>
+    <?php echo esc_attr( $message ); ?>
     <div><p>
         <?php /* @codingStandardsIgnoreLine */ ?>
-        You can contact <a href="mailto:<?php echo antispambot( "info@zumeproject.com" ); ?>"><?php echo antispambot( "info@zumeproject.com" ); ?></a>
+        You can contact <a href="mailto:<?php echo esc_attr( antispambot( "info@zumeproject.com" ) ); ?>"><?php echo esc_attr( antispambot( "info@zumeproject.com" ) ); ?></a>
         or continue to the <a href="<?php echo esc_attr( get_site_url() ) ?>">home page</a>.
     </p></div>
 </body>
