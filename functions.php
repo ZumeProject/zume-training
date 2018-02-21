@@ -45,6 +45,8 @@ require_once( 'functions/zume-functions.php' ); // general zume functions
 require_once( 'functions/zume-dashboard.php' ); // zume dashboard
 require_once( 'functions/zume-coach.php' ); // zume dashboard
 require_once( 'functions/logging/zume-logging.php' ); // zume logging of critical path actions
+require_once( 'functions/utilities/custom-die-handler.php' ); // zume logging of critical path actions
+require_once( 'functions/zume-stats.php' ); // zume logging of critical path actions
 
 // REST API
 require_once( 'functions/zume-rest-api.php' );
