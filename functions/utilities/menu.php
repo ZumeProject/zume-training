@@ -1,5 +1,4 @@
 <?php
-
 // Register menus
 register_nav_menus(
     array(
@@ -12,7 +11,7 @@ register_nav_menus(
 function zume_top_nav() {
     wp_nav_menu(array(
          'container' => false,                           // Remove nav container
-         'menu_class' => 'medium-horizontal menu',       // Adding custom nav class
+         'menu_class' => 'vertical medium-horizontal menu float-right',       // Adding custom nav class
          'items_wrap' => '<ul id="%1$s" class="%2$s" data-responsive-menu="accordion medium-dropdown">%3$s</ul>',
          'theme_location' => 'main-nav',                 // Where it's located in the theme
          'depth' => 5,                                   // Limit the depth of the nav
@@ -33,7 +32,7 @@ class Zume_Topbar_Menu_Walker extends Walker_Nav_Menu {
 function zume_off_canvas_nav() {
     wp_nav_menu(array(
          'container' => false,                           // Remove nav container
-         'menu_class' => 'vertical menu top-padding zume-side-menu',       // Adding custom nav class
+         'menu_class' => 'vertical menu top-padding',       // Adding custom nav class
          'items_wrap' => '<ul id="%1$s" class="%2$s" data-accordion-menu>%3$s</ul>',
          'theme_location' => 'main-nav',                 // Where it's located in the theme
          'depth' => 5,                                   // Limit the depth of the nav

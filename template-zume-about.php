@@ -10,6 +10,17 @@ Template Name: Zume About
 
         <div id="inner-content">
 
+            <!-- Challenge -->
+            <div class="grid-x grid-margin-x grid-margin-y vertical-padding" style="max-width:100%; margin:0; background:white; padding:17px">
+                <div class="medium-2 small-1 cell"></div>
+                <div class="medium-8 small-10 cell center">
+                    <h3 style="margin-bottom:0px">
+                        <strong><?php esc_html_e( 'About Zúme Project', 'zume' ) ?></strong>
+                    </h3>
+                </div>
+                <div class="medium-2 small-1 cell"></div>
+            </div>
+
             <div class="grid-x ">
                 <div class="large-2 cell"></div>
 
@@ -113,22 +124,6 @@ Template Name: Zume About
                 </div>
                 <div class="large-2 cell"></div>
             </div><!-- end #main -->
-
-            <!-- Description -->
-            <div class="grid-x vertical-padding">
-                <div class="medium-2 cell"></div>
-                <div class="medium-8 cell ">
-                    <!-- Video -->
-                    <div class="responsive-embed widescreen">
-                        <iframe allowFullScreen frameborder="0" height="564" mozallowfullscreen
-                                src="<?php echo esc_url( Zume_Course::get_video_by_key( 'promo' ) ) ?>" webkitAllowFullScreen
-                                width="640"></iframe>
-                    </div>
-                </div>
-                <div class="medium-2 cell"></div>
-            </div><!-- end #main -->
-
-
 
         </div> <!-- end #inner-content -->
 

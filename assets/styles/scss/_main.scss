@@ -988,3 +988,42 @@ iframe {
 	border: 1px solid #ececec !important;
 }
 
+.switch {
+	margin-bottom: 0;
+	height:0;
+}
+
+.blue-ribbon {
+	background-color: #21336A;
+	color: white;
+	padding-top: 20px;
+	padding-bottom: 10px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	margin-left: -0.9375rem;
+	margin-right: -0.9375rem;
+	padding-left: 0.9375rem;
+	padding-right: 0.9375rem;
+	h3 {
+		color: white;
+	}
+}
+@media only screen and (min-width: 40em) { .blue-ribbon {
+	margin-left: -1.25rem;
+	margin-right: -1.25rem;
+	padding-left: 1.25rem;
+	padding-right: 1.25rem;
+}}
+@media only screen and (min-width: 75rem) { .blue-ribbon {
+	margin-left: calc(-100vw / 2 + 75rem / 2 - 1.25rem);
+	margin-right: calc(-100vw / 2 + 75rem / 2 - 1.25rem);
+	padding-left: calc(100vw / 2 - 75rem / 2 + 1.25rem);
+	padding-right: calc(100vw / 2 - 75rem / 2 + 1.25rem);
+}}
+
+.bp-template-notice.updated p{
+	background-color: #efc;
+	border: 1px solid #591;
+	color: #250;
+	padding: 10px;
+}

@@ -59,15 +59,6 @@ Template Name: Zume Resources
                             </a>
                         </li>
 
-                        <li><a href="<?php echo esc_url( Zume_Course::get_video_by_key( 'promo', false ) ) ?>" target="_blank"
-                               rel="noopener noreferrer">
-                                <span style="padding:0 10px"><img
-                                            src="<?php echo esc_url( zume_images_uri( 'pages' ) ) ?>video-camera.png"
-                                            alt="Video" width="30" height="30"
-                                            class="alignnone size-full wp-image-908"/></span>
-                                <?php esc_html_e( 'Download Zume Promo Video', 'zume' ) ?>
-                            </a>
-                        </li>
                         <li><a href="<?php echo esc_url( Zume_Course::get_video_by_key( 'overview', false ) ) ?>" target="_blank"
                                rel="noopener noreferrer">
                                 <span style="padding:0 10px"><img
