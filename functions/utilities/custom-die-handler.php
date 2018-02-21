@@ -200,7 +200,7 @@ function zume_die_handler( $message, $title = '', $args = array() ) {
     <?php echo $message; ?>
     <div><p>
         <?php /* @codingStandardsIgnoreLine */ ?>
-        You can contact <a href="mailto:<?php echo antispambot("info@zumeproject.com"); ?>"><?php echo antispambot("info@zumeproject.com"); ?></a>
+        You can contact <a href="mailto:<?php echo antispambot( "info@zumeproject.com" ); ?>"><?php echo antispambot( "info@zumeproject.com" ); ?></a>
         or continue to the <a href="<?php echo esc_attr( get_site_url() ) ?>">home page</a>.
     </p></div>
 </body>

@@ -39,15 +39,15 @@ class Zume_Stats{
      * @since   0.1
      */
     public function __construct() {
-//		add_action( 'wp_enqueue_scripts', array($this, 'enqueue_buddypress_styles_to_zume' ) );
+//      add_action( 'wp_enqueue_scripts', array($this, 'enqueue_buddypress_styles_to_zume' ) );
         $this->get_coach_groups();
     } // End __construct()
 
 
     public function enqueue_buddypress_styles_to_zume() {
 
-//		wp_register_style( 'zume_stats_style', ZUME_PLUGIN_URL . '/includes/css/zume-stats.css' );
-//		wp_enqueue_style( 'zume_stats_stylesheet', ZUME_PLUGIN_URL . '/includes/css/zume-stats.css');
+//      wp_register_style( 'zume_stats_style', ZUME_PLUGIN_URL . '/includes/css/zume-stats.css' );
+//      wp_enqueue_style( 'zume_stats_stylesheet', ZUME_PLUGIN_URL . '/includes/css/zume-stats.css');
     }
 
     /**

@@ -77,6 +77,43 @@ function zume_site_scripts() {
     zume_enqueue_style( 'zume_dashboard_style', 'assets/styles/zume-dashboard.css' ); // Relocated to the _main.scss in the theme
     wp_enqueue_style( 'foundations-icons', get_template_directory_uri() .'/assets/styles/foundation-icons/foundation-icons.css', array(), '3' );
 
+//      @todo Rebuild the statistics lookups for Zume stats
+//    $stats = Zume_Stats::instance();
+//    $url_path = trim( parse_url( add_query_arg( array() ), PHP_URL_PATH ), '/' );
+//    if ("stats" === $url_path){
+//        wp_enqueue_script( 'google-charts', 'https://www.gstatic.com/charts/loader.js', array(), false );
+//        wp_enqueue_script( 'stats', get_template_directory_uri() . '/assets/js/stats.js', array( 'jquery', 'google-charts' ), '', false );
+//        wp_localize_script(
+//            "stats", "wpApiSettings", array(
+//                "locations" => $stats->get_group_locations(),
+//                "sizes" => $stats->get_group_sizes(),
+//                "steps" => $stats->get_group_steps(),
+//                "analytics" => $stats->analytics(),
+//                "intro_views" => $stats->get_intro_video_views()
+//            )
+//        );
+//
+//    }
+//    if ("catalysts" === $url_path){
+//        wp_enqueue_script( 'stats', get_template_directory_uri() . '/assets/js/stats.js', array( 'jquery' ), '', false );
+//        wp_localize_script(
+//            "stats", "wpApiSettings", array(
+//                "coach_groups" => $stats->get_coach_groups()
+//            )
+//        );
+//
+//    }
+//    if ("progress" === $url_path || "zume-progress" === $url_path){
+//        wp_enqueue_script( 'google-charts', 'https://www.gstatic.com/charts/loader.js', array(), false );
+//        wp_enqueue_script( 'stats', get_template_directory_uri() . '/assets/js/stats.js', array( 'jquery', 'google-charts' ), '', false );
+//        wp_localize_script(
+//            "stats", "wpApiSettings", array(
+//                "locations" => $stats->get_group_locations(),
+//            )
+//        );
+//
+//    }
+
 
 }
 add_action( 'wp_enqueue_scripts', 'zume_site_scripts', 999 );
