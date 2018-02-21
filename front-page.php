@@ -144,7 +144,7 @@ if ( is_user_logged_in() ) {
                                 <img src="<?php echo esc_attr( get_stylesheet_directory_uri() ) . '/assets/images/home/'; ?>1body.png"
                                      class="center front-page-social-image">
                                 <p class="text-center" style="color:#21336A">
-                                    <?php esc_attr_e('"Zúme will help us accelerate our training into more countries and languages."', 'zume') ?>
+                                    <?php esc_attr_e( '"Zúme will help us accelerate our training into more countries and languages."', 'zume' ) ?>
                             </div>
                             <div class="large-4 medium-6 small-12 cell centered" data-equalizer-watch>
                                 <img src="<?php echo esc_attr( get_stylesheet_directory_uri() ) . '/assets/images/home/'; ?>noplaceleft.png"
@@ -158,7 +158,7 @@ if ( is_user_logged_in() ) {
                                 <img src="<?php echo esc_attr( get_stylesheet_directory_uri() ) . '/assets/images/home/'; ?>2414.png"
                                      class="center front-page-social-image">
                                 <p class="text-center" style="color:#21336A">
-                                    <?php esc_attr_e('"Zúme is a wonderful on-ramp for our coalition."', 'zume') ?>
+                                    <?php esc_attr_e( '"Zúme is a wonderful on-ramp for our coalition."', 'zume' ) ?>
                                 </p>
                             </div>
                             <div class="large-4 medium-6 small-12 cell centered" data-equalizer-watch>
@@ -167,7 +167,7 @@ if ( is_user_logged_in() ) {
                                      class="center front-page-social-image" style="max-height: 60px">
                                 <!--                                </div>-->
                                 <p class="text-center" style="color:#21336A">
-                                    <?php esc_attr_e('"Zúme brilliantly encapsulates the principles in our introductory training."', 'zume') ?>
+                                    <?php esc_attr_e( '"Zúme brilliantly encapsulates the principles in our introductory training."', 'zume' ) ?>
                                 </p>
                             </div>
                             <div class="large-4 medium-6 small-12 cell centered">
