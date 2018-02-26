@@ -33,7 +33,13 @@ if ( zume_has_polylang() ) {
         <!-- End show for large -->
 
         <!-- Show for all screens -->
-        <div class=" menu-item"><?php pll_the_languages( array( 'dropdown' => 1 ) ) ?></div>
+        <div class="menu-item"><?php
+            $url_path = trim( parse_url( add_query_arg( array() ), PHP_URL_PATH ), '/' );
+            if ( "course" != $url_path ) {
+                pll_the_languages( array( 'dropdown' => 1 ) );
+            }
+            ?>
+        </div>
         <!-- End show for all -->
 
         <!-- Show for small/med -->
