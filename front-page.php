@@ -113,7 +113,7 @@ if ( is_user_logged_in() ) {
                     <div class="grid-x grid-margin-x grid-margin-y vertical-padding">
                         <div class="medium-2 small-1 cell"></div>
                         <div class="medium-8 small-10 cell center" >
-                            <a href="<?php echo esc_url( site_url( '/' ) . $zume_current_lang ) . '/register'; ?>" alt="Register" class="button large center " style="background:white; color:#323a68; font-family:'europa-regular'; padding:0.5em 2em"><?php esc_html_e( 'Get Started', 'zume' ) ?></a>
+                            <a href="<?php echo esc_url( site_url( '/' ) .  'wp-login.php?action=register' ); ?>" alt="Register" class="button large center " style="background:white; color:#323a68; font-family:'europa-regular'; padding:0.5em 2em"><?php esc_html_e( 'Get Started', 'zume' ) ?></a>
                         </div>
                         <div class="medium-2 small-1 cell"></div>
                     </div>
