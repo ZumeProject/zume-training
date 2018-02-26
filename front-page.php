@@ -32,7 +32,7 @@ if ( is_user_logged_in() ) {
                                             height="360"
                                             frameborder="0"
                                             allowfullscreen
-                                            src="https://www.youtube-nocookie.com/embed/EOdSAdJ6AhI?rel=0&amp;showinfo=0"
+                                            src="<?php echo esc_url( Zume_Course::get_video_by_key( 'overview' ) ) ?>"
 
                                     ></iframe>
                                 </div>
@@ -207,7 +207,7 @@ if ( is_user_logged_in() ) {
             <div class="grid-x ">
                 <div class="small-8 medium-3 small-centered cell center vertical-padding">
                     <br>
-                    <a href="<?php echo esc_url( site_url( '/' ) . $zume_current_lang ) . '/about'; ?>" class="button large center " style="text-transform: uppercase">
+                    <a href="<?php echo esc_url( site_url( '/' ) . $zume_current_lang ) . '/about'; ?>" class="button large center " >
                         <?php esc_html_e( 'Find out more about Zúme', 'zume' ) ?></a>
                     <br>
                 </div>
@@ -216,7 +216,6 @@ if ( is_user_logged_in() ) {
         </div> <!-- end #main -->
 
     </div> <!-- end #inner-content -->
-
 
 
 <?php get_footer(); ?>
