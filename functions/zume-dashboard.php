@@ -208,40 +208,40 @@ class Zume_Dashboard {
     public static function get_available_videos_count( $next_session ) {
         switch ( $next_session ) {
             case '1':
-                echo 3;
+                echo 2;
                 break;
             case '2':
-                echo 8;
+                echo 7;
                 break;
             case '3':
-                echo 11;
+                echo 10;
                 break;
             case '4':
-                echo 14;
+                echo 13;
                 break;
             case '5':
-                echo 19;
+                echo 18;
                 break;
             case '6':
-                echo 21;
+                echo 20;
                 break;
             case '7':
-                echo 24;
+                echo 23;
                 break;
             case '8':
-                echo 25;
+                echo 24;
                 break;
             case '9':
-                echo 26;
+                echo 25;
                 break;
             case '10':
-                echo 30;
+                echo 29;
                 break;
             case '11':
-                echo 32;
+                echo 31;
                 break;
             default:
-                echo 3;
+                echo 2;
                 break;
 
         }
