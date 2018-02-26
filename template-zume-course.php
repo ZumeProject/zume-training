@@ -3199,23 +3199,6 @@ class Zume_Course_Content {
                                     <a class="button" href="/dashboard/#your-coaches"><?php esc_html_e( "Contact my coach", 'zume' ) ?></a>
                                 </p>
                             </div>
-                            <div class="congratulations-more__text js-congratulations-more-item" data-item="map" hidden>
-                                <p>
-                                    <?php esc_html_e( "We are working with", 'zume' ) ?>
-                                    <a href="http://www.mappingcenter.org"
-                                       target="_blank">http://www.mappingcenter.org</a>
-                                    <?php esc_html_e( "to try to provide you with free information on the residents within your census tract in order to help you more effectively reach it. \"Stay tuned\" for more information. If you do not have relationships within your census tract and are looking for ways to connect with your neighbors, you might consider the Mapping Your Neighborhood program for disaster preparedness. You can find information and downloadable resources at", 'zume' ) ?>
-                                    <a href="http://mil.wa.gov/emergency-management-division/preparedness/map-your-neighborhood"
-                                       target="_blank">
-                                        http://mil.wa.gov/emergency-management-division/preparedness/map-your-neighborhood
-                                    </a>.
-                                </p>
-                                <p class="center">
-                                    <a class="button" href="http://www.mappingcenter.org/" target="_blank">
-                                        <?php esc_html_e( "Map my neighborhood", 'zume' ) ?>
-                                    </a>
-                                </p>
-                            </div>
                             <div class="congratulations-more__text js-congratulations-more-item" data-item="language"
                                  hidden>
                                 <p>
