@@ -30,7 +30,7 @@ $zume_highest_session = Zume_Dashboard::get_highest_session( $zume_current_user 
 
     <script type="application/javascript">
         var load_iframe = function (id, src) {
-            jQuery("#"+id + " iframe").attr("src", src)
+            jQuery("#video-display" + " iframe").attr("src", src)
         }
         var end_video_play = function( id ) {
             jQuery("#"+id + " iframe").attr("src", '')
@@ -180,67 +180,74 @@ $zume_highest_session = Zume_Dashboard::get_highest_session( $zume_current_user 
                                     <div class="grid-x grid-margin-x"> <!-- Begin columns container -->
                                         <?php
                                             $zume_videos = [
-                                                ["name" => esc_html__( 'Promo Challenge', 'zume' ), "key" => "promo", "session" => -1, "column" => 1, "length" => "(1:41)" ],
-                                                ["name" => esc_html__( 'Overview Video', 'zume' ), "length" => "(2:07)", "key" => "overview", "session" => -1, "column" => 1 ],
-                                                ["name" => esc_html__( 'How Zúme Works', 'zume' ), "key" => "how_zume_works", "session" => -1, "column" => 1, "length" => "(3:22)" ],
-                                                ["name" => esc_html__( 'Welcome to Zume', 'zume' ), "length" => "(3:07)", "key" => "scribe_1", "session" => 1, "column" => 1 ],
-                                                ["name" => esc_html__( 'Teach Them to Obey', 'zume' ), "length" => "(4:01)", "key" => "scribe_2", "session" => 1, "column" => 1 ],
-                                                ["name" => esc_html__( 'Spiritual Breathing', 'zume' ), "length" => "(5:46)", "key" => "scribe_3", "session" => 1, "column" => 1 ],
-                                                ["name" => esc_html__( 'S.O.A.P.S Bible Reading', 'zume' ), "length" => "(3:22)", "key" => "toolkit_1", "session" => 1, "column" => 1 ],
-                                                ["name" => esc_html__( 'Accountability Groups', 'zume' ), "length" => "(1:10)", "key" => "toolkit_2", "session" => 1, "column" => 1 ],
-                                                ["name" => esc_html__( 'Producers vs Consumers', 'zume' ), "length" => "(5:33)", "key" => "scribe_4", "session" => 2, "column" => 1 ],
-                                                ["name" => esc_html__( 'Prayer Cycle', 'zume' ), "length" => "(1:10)", "key" => "toolkit_3", "session" => 2, "column" => 1 ],
-                                                ["name" => esc_html__( 'List of 100', 'zume' ), "length" => "(1:04)", "key" => "toolkit_4", "session" => 2, "column" => 1 ],
-                                                ["name" => esc_html__( 'Spiritual Economy', 'zume' ), "length" => "(2:32)", "key" => "scribe_6", "session" => 3, "column" => 2 ],
-                                                ["name" => esc_html__( 'The Gospel', 'zume' ), "length" => "(4:41)", "key" => "scribe_7", "session" => 3, "column" => 2 ],
-                                                ["name" => esc_html__( 'Baptism', 'zume' ), "length" => "(3:22)", "key" => "toolkit_6", "session" => 3, "column" => 2 ],
-                                                ["name" => esc_html__( '3 Minute Testimony', 'zume' ), "length" => "(2:26)", "key" => "toolkit_5", "session" => 4, "column" => 2 ],
-                                                ["name" => esc_html__( 'Greatest Blessing', 'zume' ), "length" => "(2:26)", "key" => "scribe_5", "session" => 4, "column" => 2 ],
-                                                ["name" => esc_html__( 'Duckling Discipleship', 'zume' ), "length" => "(3:29)", "key" => "scribe_17", "session" => 4, "column" => 2 ],
-                                                ["name" => esc_html__( 'Eyes to See', 'zume' ), "length" => "(6:08)", "key" => "scribe_8", "session" => 4, "column" => 2 ],
-                                                ["name" => esc_html__( 'Lord\'s Supper', 'zume' ), "length" => "(1:54)", "key" => "toolkit_9", "session" => 4, "column" => 2 ],
-                                                ["name" => esc_html__( 'Prayer Walking', 'zume' ), "length" => "(5:05)", "key" => "toolkit_8", "session" => 5, "column" => 2 ],
-                                                ["name" => esc_html__( 'Person of Peace', 'zume' ), "length" => "(5:45)", "key" => "scribe_18", "session" => 5, "column" => 2 ],
-                                                ["name" => esc_html__( 'Faithfulness', 'zume' ), "length" => "(5:45)", "key" => "scribe_9", "session" => 6, "column" => 3 ],
-                                                ["name" => esc_html__( '3/3 Group Format', 'zume' ), "length" => "(5:45)", "key" => "toolkit_10", "session" => 6, "column" => 3 ],
-                                                ["name" => esc_html__( '3/3 Group Live', 'zume' ), "length" => "(1:19:00)", "key" => "3_3_group", "session" => 6, "column" => 3 ],
-                                                ["name" => esc_html__( 'Training Cycle', 'zume' ), "length" => "(5:45)", "key" => "scribe_10", "session" => 7, "column" => 3 ],
-                                                ["name" => esc_html__( 'Leadership Cells', 'zume' ), "length" => "(5:45)", "key" => "scribe_11", "session" => 8, "column" => 3 ],
-                                                ["name" => esc_html__( 'Non-Sequential', 'zume' ), "length" => "(5:45)", "key" => "scribe_12", "session" => 9, "column" => 3 ],
-                                                ["name" => esc_html__( 'Pace', 'zume' ), "length" => "(5:45)", "key" => "scribe_13", "session" => 9, "column" => 3 ],
-                                                ["name" => esc_html__( 'Part of Two Churches', 'zume' ), "length" => "(5:45)", "key" => "scribe_14", "session" => 9, "column" => 3 ],
-                                                ["name" => esc_html__( 'Completion of Training', 'zume' ), "length" => "(5:45)", "key" => "scribe_16", "session" => 9, "column" => 3 ],
-                                                ["name" => esc_html__( 'Leadership in Networks', 'zume' ), "length" => "(5:45)", "key" => "scribe_15", "session" => 10, "column" => 3 ],
-                                                ["name" => esc_html__( 'Peer Mentoring Groups', 'zume' ), "length" => "(5:45)", "key" => "toolkit_11", "session" => 10, "column" => 3 ],
+                                                ["name" => esc_html__( 'Overview Video', 'zume' ), "length" => "(2:07)", "key" => "overview", "session" => -1, "title" => 0, "column" => 1 ],
+                                                ["name" => esc_html__( 'How Zúme Works', 'zume' ), "length" => "(3:22)" , "key" => "how_zume_works", "session" => -1, "title" => 0, "column" => 1 ],
+                                                ["name" => esc_html__( 'Session 1', 'zume' ), "length" => "", "key" => "", "session" => 1, "title" => 1, "column" => 1 ], // title
+                                                ["name" => esc_html__( 'Welcome to Zume', 'zume' ), "length" => "(3:07)", "key" => "scribe_1", "session" => 1, "title" => 0, "column" => 1 ],
+                                                ["name" => esc_html__( 'Teach Them to Obey', 'zume' ), "length" => "(4:01)", "key" => "scribe_2", "session" => 1, "title" => 0, "column" => 1 ],
+                                                ["name" => esc_html__( 'Spiritual Breathing', 'zume' ), "length" => "(5:46)", "key" => "scribe_3", "session" => 1, "title" => 0, "column" => 1 ],
+                                                ["name" => esc_html__( 'S.O.A.P.S Bible Reading', 'zume' ), "length" => "(3:22)", "key" => "toolkit_1", "session" => 1, "title" => 0, "column" => 1 ],
+                                                ["name" => esc_html__( 'Accountability Groups', 'zume' ), "length" => "(1:10)", "key" => "toolkit_2", "session" => 1, "title" => 0, "column" => 1 ],
+                                                ["name" => esc_html__( 'Session 2', 'zume' ), "length" => "", "key" => "", "session" => 2, "title" => 1, "column" => 1 ], // title
+                                                ["name" => esc_html__( 'Producers vs Consumers', 'zume' ), "length" => "(5:33)", "key" => "scribe_4", "session" => 2, "title" => 0, "column" => 1 ],
+                                                ["name" => esc_html__( 'Prayer Cycle', 'zume' ), "length" => "(1:10)", "key" => "toolkit_3", "session" => 2, "title" => 0, "column" => 1 ],
+                                                ["name" => esc_html__( 'List of 100', 'zume' ), "length" => "(1:04)", "key" => "toolkit_4", "session" => 2, "title" => 0, "column" => 1 ],
+                                                ["name" => esc_html__( 'Session 3', 'zume' ), "length" => "", "key" => "", "session" => 3, "title" => 1, "column" => 2 ], // title
+                                                ["name" => esc_html__( 'Spiritual Economy', 'zume' ), "length" => "(2:32)", "key" => "scribe_6", "session" => 3, "title" => 0, "column" => 2 ],
+                                                ["name" => esc_html__( 'The Gospel', 'zume' ), "length" => "(4:41)", "key" => "scribe_7", "session" => 3, "title" => 0, "column" => 2 ],
+                                                ["name" => esc_html__( 'Baptism', 'zume' ), "length" => "(3:22)", "key" => "toolkit_6", "session" => 3, "title" => 0, "column" => 2 ],
+                                                ["name" => esc_html__( 'Session 4', 'zume' ), "length" => "", "key" => "", "session" => 4, "title" => 1, "column" => 2 ], // title
+                                                ["name" => esc_html__( '3 Minute Testimony', 'zume' ), "length" => "(2:26)", "key" => "toolkit_5", "session" => 4, "title" => 0, "column" => 2 ],
+                                                ["name" => esc_html__( 'Greatest Blessing', 'zume' ), "length" => "(2:26)", "key" => "scribe_5", "session" => 4, "title" => 0, "column" => 2 ],
+                                                ["name" => esc_html__( 'Duckling Discipleship', 'zume' ), "length" => "(3:29)", "key" => "scribe_17", "session" => 4, "title" => 0, "column" => 2 ],
+                                                ["name" => esc_html__( 'Eyes to See', 'zume' ), "length" => "(6:08)", "key" => "scribe_8", "session" => 4, "title" => 0, "column" => 2 ],
+                                                ["name" => esc_html__( 'Lord\'s Supper', 'zume' ), "length" => "(1:54)", "key" => "toolkit_9", "session" => 4, "title" => 0, "column" => 2 ],
+                                                ["name" => esc_html__( 'Session 5', 'zume' ), "length" => "", "key" => "", "session" => 5, "title" => 1, "column" => 2 ], // title
+                                                ["name" => esc_html__( 'Prayer Walking', 'zume' ), "length" => "(5:05)", "key" => "toolkit_8", "session" => 5, "title" => 0, "column" => 2 ],
+                                                ["name" => esc_html__( 'Person of Peace', 'zume' ), "length" => "(5:45)", "key" => "scribe_18", "session" => 5, "title" => 0, "column" => 2 ],
+                                                ["name" => esc_html__( 'Session 6', 'zume' ), "length" => "", "key" => "", "session" => 6, "title" => 1, "column" => 3 ], // title
+                                                ["name" => esc_html__( 'Faithfulness', 'zume' ), "length" => "(5:45)", "key" => "scribe_9", "session" => 6, "title" => 0, "column" => 3 ],
+                                                ["name" => esc_html__( '3/3 Group Format', 'zume' ), "length" => "(5:45)", "key" => "toolkit_10", "session" => 6, "title" => 0, "column" => 3 ],
+                                                ["name" => esc_html__( '3/3 Group Live', 'zume' ), "length" => "(1:19:00)", "key" => "3_3_group", "session" => 6, "title" => 0, "column" => 3 ],
+                                                ["name" => esc_html__( 'Session 7', 'zume' ), "length" => "", "key" => "", "session" => 7, "title" => 1, "column" => 3 ], // title
+                                                ["name" => esc_html__( 'Training Cycle', 'zume' ), "length" => "(5:45)", "key" => "scribe_10", "session" => 7, "title" => 0, "column" => 3 ],
+                                                ["name" => esc_html__( 'Session 8', 'zume' ), "length" => "", "key" => "", "session" => 8, "title" => 1, "column" => 3 ], // title
+                                                ["name" => esc_html__( 'Leadership Cells', 'zume' ), "length" => "(5:45)", "key" => "scribe_11", "session" => 8, "title" => 0, "column" => 3 ],
+                                                ["name" => esc_html__( 'Session 9', 'zume' ), "length" => "", "key" => "", "session" => 9, "title" => 1, "column" => 3 ], // title
+                                                ["name" => esc_html__( 'Non-Sequential', 'zume' ), "length" => "(5:45)", "key" => "scribe_12", "session" => 9, "title" => 0, "column" => 3 ],
+                                                ["name" => esc_html__( 'Pace', 'zume' ), "length" => "(5:45)", "key" => "scribe_13", "session" => 9, "title" => 0, "column" => 3 ],
+                                                ["name" => esc_html__( 'Part of Two Churches', 'zume' ), "length" => "(5:45)", "key" => "scribe_14", "session" => 9, "title" => 0, "column" => 3 ],
+                                                ["name" => esc_html__( 'Completion of Training', 'zume' ), "length" => "(5:45)", "key" => "scribe_16", "session" => 9, "title" => 0, "column" => 3 ],
+                                                ["name" => esc_html__( 'Session 10', 'zume' ), "length" => "", "key" => "", "session" => 10, "title" => 1, "column" => 3 ], // title
+                                                ["name" => esc_html__( 'Leadership in Networks', 'zume' ), "length" => "(5:45)", "key" => "scribe_15", "session" => 10, "title" => 0, "column" => 3 ],
+                                                ["name" => esc_html__( 'Peer Mentoring Groups', 'zume' ), "length" => "(5:45)", "key" => "toolkit_11", "session" => 10, "title" => 0, "column" => 3 ],
 
                                             ];
                                             $zume_display_video_section = function ( $zume_video, $zume_highest_session ){
-                                                if ($zume_highest_session > $zume_video["session"] ){
+                                                if ( $zume_highest_session > $zume_video["session"] && ! $zume_video["title"] ){
                                                 ?>
                                                 <div class="grid-x grid-margin-x">
                                                 <div class="cell">
                                                     <a class="small" style="text-transform: uppercase;"
-                                                       data-open="<?php echo esc_html( $zume_video["key"] )?>"
-                                                       onclick="load_iframe( '<?php echo esc_html( $zume_video["key"] )?>', '<?php echo esc_url( Zume_Course::get_video_by_key( $zume_video["key"] ) ) ?>')">
+                                                       data-open="video-display"
+                                                       onclick="load_iframe( 'video-display', '<?php echo esc_url( Zume_Course::get_video_by_key( $zume_video["key"] ) ) ?>')">
                                                         <i class="fi-play-circle secondary-color"></i>
                                                         <?php echo esc_html( $zume_video["name"] )?> <?php echo esc_html( $zume_video["length"] )?>
                                                     </a>
                                                 </div>
-                                                <div class="small reveal" id="<?php echo esc_html( $zume_video["key"] )?>" data-reveal>
-                                                    <br>
-                                                    <iframe frameborder="0"
-                                                            width="560" height="315"
-                                                            webkitallowfullscreen mozallowfullscreen
-                                                            allowfullscreen></iframe>
-                                                    <button class="close-button" data-close aria-label="Close reveal"
-                                                            type="button" onclick="end_video_play( '<?php echo esc_html( $zume_video["key"] )?>' )">
-                                                        <span aria-hidden="true">&times;</span>
-                                                    </button>
-                                                </div>
                                             </div>
 
-                                        <?php }
-                                            }; ?>
+                                        <?php } elseif ( $zume_highest_session > $zume_video["session"] && $zume_video["title"] ) { // adds titles
+                                            ?>
+                                            <div class="grid-x grid-margin-x">
+                                                <div class="cell">
+                                                    <?php echo esc_attr( $zume_video["name"] ) ?>
+                                                </div>
+                                            </div>
+                                                    <?php
+}
+
+                                            }; // end function ?>
                                         <div class="large-4 cell">
                                             <?php
                                             foreach ($zume_videos as $video) {
@@ -269,6 +276,19 @@ $zume_highest_session = Zume_Dashboard::get_highest_session( $zume_current_user 
                                             ?>
                                         </div>
                                     </div> <!-- end columns container -->
+
+                                    <div class="small reveal" id="video-display" data-reveal>
+                                        <br>
+                                        <iframe frameborder="0"
+                                                width="560" height="315"
+                                                webkitallowfullscreen mozallowfullscreen
+                                                allowfullscreen></iframe>
+                                        <button class="close-button" data-close aria-label="Close reveal"
+                                                type="button" onclick="end_video_play( 'video-display' )">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+
                                     <?php if ( $zume_highest_session < 2 ) { ?>
                                         <div class="grid-x grid-margin-x grid-margin-y">
                                             <div class="cell large-3"></div>

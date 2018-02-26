@@ -40,7 +40,7 @@ function zume_theme_support() {
     );
 
     // hide admin bar for everyone
-    show_admin_bar(false);
+    show_admin_bar( false );
 
     // Set the maximum allowed width for any content in the theme, like oEmbeds and images added to posts.
     // @codingStandardsIgnoreLine: TODO use zume_ prefix
