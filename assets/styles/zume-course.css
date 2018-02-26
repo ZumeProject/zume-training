@@ -344,3 +344,14 @@ body.single-item.groups #buddypress div#item-header #item-header-cover-image #it
 section {
     padding: 2rem 0;
 }
+
+@media only screen and (max-width: 639px) {
+    .course-steps.wizard .steps li:not(:last-child):after {
+    content: "";
+    position: absolute;
+    border: 0;
+    left: 0;
+    top: 0;
+    width: 0;
+}
+}

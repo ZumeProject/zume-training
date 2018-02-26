@@ -729,7 +729,7 @@ JQUERY STEPS WIZARD
         display: inline-block;
         font-size: 1.8rem;
         position: relative;
-        @media only screen and (max-width: 500px) {
+        @media only screen and (max-width: 639px) {
             width: $mobile-step-width;
             height: $mobile-step-width;
             margin: 5px $mobile-step-margin;
@@ -743,10 +743,12 @@ JQUERY STEPS WIZARD
         left: $step-width - $border-thickness;
         top: ($step-width / 2) - $border-thickness - 1px;
         width: $step-margin + 1px;
-        @media only screen and (max-width: 500px) {
-            left: $mobile-step-width - $border-thickness;
-            top: ($mobile-step-width / 2) - $border-thickness - 1px;
-            width: $mobile-step-margin + 1px;
+        @media only screen and (max-width: 639px) {
+			border: 0;
+			left: 0;
+			width: 0;
+			top: 0;
+			display:none;
         }
     }
     li:not(:first-child):before {
@@ -756,21 +758,36 @@ JQUERY STEPS WIZARD
         left: -$step-margin - $border-thickness;
         width: $step-margin + 1px;
         top: ($step-width / 2) - $border-thickness - 1px;
-        @media only screen and (max-width: 500px) {
-            left: -$mobile-step-margin - $border-thickness;
-            width: $mobile-step-margin + 1px;
-            top: ($mobile-step-width / 2) - $border-thickness - 1px;
+        @media only screen and (max-width: 639px) {
+			border: 0;
+			left: 0;
+			width: 0;
+			top: 0;
+			display:none;
         }
     }
     li.current:not(:last-child):after,
     li.current:not(:first-child):before,
     .current {
         border-color: #00AEFF;
+		@media only screen and (max-width: 639px) {
+			border: 0;
+			left: 0;
+			width: 0;
+			top: 0;
+			display:none;
+		}
     }
     li:hover:not(.disabled),
     li:hover:not(.disabled):not(:last-child):after,
     li:hover:not(.disabled):not(:first-child):before {
         border-color: #21336A;
+		@media only screen and (max-width: 639px) {
+			left: 0;
+			width: 0;
+			top: 0;
+			display:none;
+		}
     }
     .current-info.audible {
         display: none;
@@ -796,7 +813,7 @@ JQUERY STEPS WIZARD
 }
 
 .course-steps.wizard > .steps {
-    @include steps(20px, 20px, 15px, 15px);
+    @include steps(20px, 20px, 0px, 0px);
     .number {
         display: none;
     }
@@ -811,6 +828,15 @@ JQUERY STEPS WIZARD
             }
         }
     }
+	li:not(:last-child):after {
+		@media only screen and (max-width: 639px) {
+			border: 0;
+			left: 0;
+			width: 0;
+			top: 0;
+			display:none;
+		}
+	}
     li.disabled a:hover {
         cursor: default;
     }
