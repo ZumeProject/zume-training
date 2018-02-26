@@ -377,7 +377,7 @@ $zume_highest_session = Zume_Dashboard::get_highest_session( $zume_current_user 
                         <div class="grid-x grid-margin-x">
                             <div class="cell center">
                                 <a class="button"
-                                   href="<?php echo esc_url( zume_files_uri() ) ?>zume_guidebook.pdf"
+                                   href="<?php echo esc_url( Zume_Course::get_download_by_key( '33' ) ) ?>"
                                    target="_blank" rel="noopener" download>
                                     <?php esc_html_e( 'Download Guidebook', 'zume' ) ?>
                                 </a>
