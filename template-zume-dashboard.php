@@ -37,7 +37,7 @@ $zume_highest_session = Zume_Dashboard::get_highest_session( $zume_current_user 
         }
 
     </script>
-    <div id="content" class="grid-x grid-margin-x"><div class="cell">
+    <div id="content" class="grid-x grid-padding-x"><div class="cell">
 
         <div id="inner-content" class="grid-x grid-margin-x">
 
@@ -47,7 +47,7 @@ $zume_highest_session = Zume_Dashboard::get_highest_session( $zume_current_user 
                     <div class="large-1 cell"></div>
 
                     <!-- Left Column -->
-                    <div class="large-8 cell">
+                    <div class="large-8 medium-auto cell">
 
                         <!-- ********************************************************************************************* -->
                         <!-- Groups Management Section -->
@@ -70,9 +70,17 @@ $zume_highest_session = Zume_Dashboard::get_highest_session( $zume_current_user 
                                             <li class="block">
                                                 <div class="grid-x grid-margin-x">
                                                     <div class="cell large-6">
-                                                        <h3>
-                                                            <a data-open="<?php echo esc_html( $zume_key ); ?>"><?php echo esc_html( $zume_value['group_name'] ) ?></a>
-                                                        </h3>
+                                                        <style>
+                                                            .group-title {
+                                                                font-size: 1.9375rem;
+                                                            }
+                                                        </style>
+                                                        <span class="group-title">
+                                                            <a data-open="<?php echo esc_html( $zume_key ); ?>"><?php echo esc_html( $zume_value['group_name'] ) ?></a></span>
+                                                            <button class="small" data-open="<?php echo esc_html( $zume_key ); ?>">
+                                                                <i class="fi-pencil hollow"></i> <?php echo esc_html__( 'edit', 'zume' ) ?>
+                                                            </button>
+
                                                         <p class="text-gray">
                                                             <?php echo esc_html( __( 'Meeting Time', 'zume' ) . ": " . $zume_value['meeting_time'] ) ?>
                                                             <br>
@@ -82,10 +90,7 @@ $zume_highest_session = Zume_Dashboard::get_highest_session( $zume_current_user 
                                                             <br>
                                                         </p>
 
-                                                        <button class="small"
-                                                                data-open="<?php echo esc_html( $zume_key ); ?>">
-                                                            <i class="fi-pencil hollow"></i> <?php echo esc_html__( 'edit', 'zume' ) ?>
-                                                        </button>
+
                                                     </div>
                                                     <div class="large-6 cell" style="min-width:350px;">
                                                         <ul class="pagination" role="navigation" aria-label="Pagination">
@@ -481,7 +486,7 @@ $zume_highest_session = Zume_Dashboard::get_highest_session( $zume_current_user 
 
 
                     <!-- Right Column -->
-                    <div class="large-2 cell dashboard-messages">
+                    <div class="large-2 show-for-large hide-for-small cell dashboard-messages">
 
                         <!-- ********************************************************************************************* -->
                         <!-- COACH SECTION -->
