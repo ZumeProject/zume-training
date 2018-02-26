@@ -8,9 +8,6 @@ npm-debug.log
 /assets/scss/*.css
 /.sass-cache/
 /vendor/
-upload-script-temp.php
-query_result.csv
 
 config.rb
 
-upload-script-temp.csv
