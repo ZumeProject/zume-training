@@ -15,6 +15,7 @@ global $wpdb;
 require_once 'functions/activator.php';
 $wpdb->zume_logging = $wpdb->prefix . 'zume_logging';
 require_once( 'functions/post-types/video-post-type.php' );
+require_once( 'functions/post-types/pdf-download-post-type.php' );
 
 /**
  * INCLUDED FILES
@@ -58,7 +59,3 @@ require_once( 'functions/geocoding-api.php' );
 // Email System
 include_once( 'functions/utilities/zume-mailchimp-settings.php' ); // Creates the options page for mailchimp automation
 include_once( 'functions/login/user-register.php' );
-
-
-
-

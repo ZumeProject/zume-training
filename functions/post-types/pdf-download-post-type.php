@@ -4,14 +4,14 @@ if ( !defined( 'ABSPATH' ) ) {
 } // Exit if accessed directly.
 
 /**
- * Zume_Video_Post_Type Post Type Class
- * All functionality pertaining to project update post types in Zume_Video_Post_Type.
+ * Zume_PDF_Download_Post_Type Post Type Class
+ * All functionality pertaining to project update post types in Zume_PDF_Download_Post_Type.
  *
  * @package  Disciple_Tools
  * @author   Chasm.Solutions & Kingdom.Training
  * @since    0.1.0
  */
-class Zume_Video_Post_Type
+class Zume_PDF_Download_Post_Type
 {
     /**
      * The post type token.
@@ -59,7 +59,7 @@ class Zume_Video_Post_Type
     public $taxonomies;
 
     /**
-     * Zume_Video_Post_Type The single instance of Zume_Video_Post_Type.
+     * Zume_PDF_Download_Post_Type The single instance of Zume_PDF_Download_Post_Type.
      * @var     object
      * @access  private
      * @since   0.1
@@ -67,13 +67,13 @@ class Zume_Video_Post_Type
     private static $_instance = null;
 
     /**
-     * Main Zume_Video_Post_Type Instance
+     * Main Zume_PDF_Download_Post_Type Instance
      *
-     * Ensures only one instance of Zume_Video_Post_Type is loaded or can be loaded.
+     * Ensures only one instance of Zume_PDF_Download_Post_Type is loaded or can be loaded.
      *
      * @since 0.1
      * @static
-     * @return Zume_Video_Post_Type instance
+     * @return Zume_PDF_Download_Post_Type instance
      */
     public static function instance() {
         if ( is_null( self::$_instance ) ) {
@@ -91,7 +91,7 @@ class Zume_Video_Post_Type
      * @param array  $args
      * @param array  $taxonomies
      */
-    public function __construct( $post_type = 'zume_video', $singular = 'Video', $plural = 'Videos', $args = [], $taxonomies = [] )
+    public function __construct( $post_type = 'zume_download', $singular = 'Download', $plural = 'Downloads', $args = [], $taxonomies = [] )
     {
         $this->post_type = $post_type;
         $this->singular = $singular;
@@ -130,35 +130,35 @@ class Zume_Video_Post_Type
         register_post_type( $this->post_type, /* (http://codex.wordpress.org/Function_Reference/register_post_type) */
             // let's now add all the options for this post type
             array(
-            'labels' => array(
-                'name' => __( 'Zume Video', 'zume' ), /* This is the Title of the Group */
-                'singular_name' => __( 'Zume Video', 'zume' ), /* This is the individual type */
-                'all_items' => __( 'All Zume Videos', 'zume' ), /* the all items menu item */
-                'add_new' => __( 'Add New', 'zume' ), /* The add new menu item */
-                'add_new_item' => __( 'Add New Zume Video', 'zume' ), /* Add New Display Title */
-                'edit' => __( 'Edit', 'zume' ), /* Edit Dialog */
-                'edit_item' => __( 'Edit Zume Video', 'zume' ), /* Edit Display Title */
-                'new_item' => __( 'New Zume Video', 'zume' ), /* New Display Title */
-                'view_item' => __( 'View Zume Video', 'zume' ), /* View Display Title */
-                'search_items' => __( 'Search Zume Videos', 'zume' ), /* Search Custom Type Title */
-                'not_found' => __( 'Nothing found in the Database.', 'zume' ), /* This displays if there are no entries yet */
-                'not_found_in_trash' => __( 'Nothing found in Trash', 'zume' ), /* This displays if there is nothing in the trash */
-                'parent_item_colon' => ''
-            ), /* end of arrays */
-                  'description' => __( 'Zume video catalog for language videos', 'zume' ), /* Custom Type Description */
-                  'public' => false,
-                  'publicly_queryable' => false,
-                  'exclude_from_search' => true,
-                  'show_ui' => true,
-                  'query_var' => true,
-                  'menu_position' => 8, /* this is what order you want it to appear in on the left hand side menu */
-                  'menu_icon' => 'dashicons-book', /* the icon for the custom post type menu. uses built-in dashicons (CSS class name) */
-                  'rewrite' => array( 'slug' => 'zume_video', 'with_front' => false ), /* you can specify its url slug */
-                  'has_archive' => 'zume_video', /* you can rename the slug here */
-                  'capability_type' => 'post',
-                  'hierarchical' => false,
+                'labels' => array(
+                    'name' => __( 'Zume Download', 'zume' ), /* This is the Title of the Group */
+                    'singular_name' => __( 'Zume Download', 'zume' ), /* This is the individual type */
+                    'all_items' => __( 'All Zume Downloads', 'zume' ), /* the all items menu item */
+                    'add_new' => __( 'Add New', 'zume' ), /* The add new menu item */
+                    'add_new_item' => __( 'Add New Zume Download', 'zume' ), /* Add New Display Title */
+                    'edit' => __( 'Edit', 'zume' ), /* Edit Dialog */
+                    'edit_item' => __( 'Edit Zume Download', 'zume' ), /* Edit Display Title */
+                    'new_item' => __( 'New Zume Download', 'zume' ), /* New Display Title */
+                    'view_item' => __( 'View Zume Download', 'zume' ), /* View Display Title */
+                    'search_items' => __( 'Search Zume Downloads', 'zume' ), /* Search Custom Type Title */
+                    'not_found' => __( 'Nothing found in the Database.', 'zume' ), /* This displays if there are no entries yet */
+                    'not_found_in_trash' => __( 'Nothing found in Trash', 'zume' ), /* This displays if there is nothing in the trash */
+                    'parent_item_colon' => ''
+                ), /* end of arrays */
+                'description' => __( 'Zume video catalog for language videos', 'zume' ), /* Custom Type Description */
+                'public' => false,
+                'publicly_queryable' => false,
+                'exclude_from_search' => true,
+                'show_ui' => true,
+                'query_var' => true,
+                'menu_position' => 8, /* this is what order you want it to appear in on the left hand side menu */
+                'menu_icon' => 'dashicons-book', /* the icon for the custom post type menu. uses built-in dashicons (CSS class name) */
+                'rewrite' => array( 'slug' => 'zume_video', 'with_front' => false ), /* you can specify its url slug */
+                'has_archive' => 'zume_video', /* you can rename the slug here */
+                'capability_type' => 'post',
+                'hierarchical' => false,
                 /* the next one is important, it tells what's enabled in the post editor */
-                  'supports' => array( 'title' )
+                'supports' => array( 'title' )
             ) /* end of options */
         ); /* end of register post type */
     } // End register_post_type()
@@ -246,8 +246,8 @@ class Zume_Video_Post_Type
                 $this->singular,
                 strtolower( $this->singular )
             ),
-            2  => 'Zume Video updated.',
-            3  => 'Zume Video deleted.',
+            2  => 'Zume Download updated.',
+            3  => 'Zume Download deleted.',
             4  => sprintf( '%s updated.', $this->singular ),
             /* translators: %s: date and time of the revision */
             5  => isset( $_GET['revision'] ) ? sprintf( '%1$s restored to revision from %2$s', $this->singular, wp_post_revision_title( (int) $_GET['revision'], false ) ) : false,
@@ -260,7 +260,7 @@ class Zume_Video_Post_Type
                 strtolower( $this->singular ),
                 // translators: Publish box date format, see http://php.net/date
                 '<strong>' . date_i18n( __( 'M j, Y @ G:i' ),
-                strtotime( $post->post_date ) ) . '</strong>',
+                    strtotime( $post->post_date ) ) . '</strong>',
                 '<a target="_blank" href="' . esc_url( get_permalink( $post->ID ) ) . '">',
                 '</a>'
             ),
@@ -279,8 +279,7 @@ class Zume_Video_Post_Type
      */
     public function meta_box_setup()
     {
-        add_meta_box( $this->post_type . '_scribes', 'Video Scribes', array( $this, 'load_video_meta_box' ), $this->post_type, 'normal', 'high' );
-        add_meta_box( $this->post_type . '_toolkit', 'Audio Toolkit', array( $this, 'load_audio_meta_box' ), $this->post_type, 'normal', 'high' );
+        add_meta_box( $this->post_type . '_scribes', 'Downloads', array( $this, 'load_downloads_meta_box' ), $this->post_type, 'normal', 'high' );
     } // End meta_box_setup()
 
     /**
@@ -289,10 +288,10 @@ class Zume_Video_Post_Type
      * @access public
      * @since  0.1.0
      */
-    public function load_video_meta_box()
+    public function load_downloads_meta_box()
     {
-        echo 'These numeric ids below refer to the unique Vimeo id. It should work with the url "https://player.vimeo.com/video/{put_video_id_here}". Use the "verify link" to check if the video loads correctly.<br><br>The page title above needs to be the two character language code.<br><hr>';
-        $this->meta_box_content( 'scribe' ); // prints
+        echo 'Add only the filename with the .pdf extension. The file is added to the Theme in `zume-project-multilingual/files`.<br><br>The page title above needs to be the two character language code.<br><hr>';
+        $this->meta_box_content( 'downloads' ); // prints
     }
 
     /**
@@ -351,8 +350,6 @@ class Zume_Video_Post_Type
                         case 'link':
                             echo '<tr valign="top"><th scope="row"><label for="' . esc_attr( $k ) . '">' . esc_html( $v['name'] ) . '</label></th>
                                 <td><input name="' . esc_attr( $k ) . '" type="text" id="' . esc_attr( $k ) . '" class="regular-text" value="' . esc_attr( $data ) . '" />' . "\n";
-                            $video_id = esc_attr( $k ) .'video';
-                            echo '<p class="description"><a onclick="show_video( \'' . esc_attr( $video_id ) . '\', \'' . esc_attr( $data ) . '\' )">verify link</a><span id="'. esc_attr( $video_id ) .'"></span></p>' . "\n";
                             echo '</td><tr/>' . "\n";
                             break;
                         case 'select':
@@ -380,11 +377,6 @@ class Zume_Video_Post_Type
             }
             echo '</tbody>' . "\n";
             echo '</table>' . "\n";
-            echo "<script>
-                    function show_video( block, id ) {
-                        jQuery( '#' + block ).append('<iframe src=\"https://player.vimeo.com/video/' + id + '\" width=\"340\" height=\"160\" frameborder=\"0\" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe><p><a onclick=\"jQuery(\'#' + block + '\').empty();\">Close video</a></p>')
-                    }
-                    </script>";
         }
     } // End meta_box_content()
 
@@ -485,251 +477,220 @@ class Zume_Video_Post_Type
     {
         $fields = [];
 
-        $fields['overview'] = [
-            'name'        => 'Overview',
+        // Project Update Information Section
+        $fields['33'] = [
+            'name'        => 'Zúme Guidebook (33)',
             'description' => '',
             'type'        => 'link',
-            'default'     => '248149800',
-            'section'     => 'scribe',
+            'default'     => '33_en_zume_guidebook.pdf',
+            'section'     => 'downloads',
         ];
-        $fields['how_zume_works'] = [
-            'name'        => 'How Zume Works',
+        $fields['34'] = [
+            'name'        => 'Welcome to Zúme Script (34)',
             'description' => '',
             'type'        => 'link',
-            'default'     => '248149797',
-            'section'     => 'scribe',
+            'default'     => '34_en_welcome_to_zume.pdf',
+            'section'     => 'downloads',
         ];
-
-        $fields['scribe_1'] = [
-            'name'        => 'Welcome to Zume (scribe_1)',
+        $fields['35'] = [
+            'name'        => 'Teach them to Obey Script (35)',
             'description' => '',
             'type'        => 'link',
-            'default'     => '247062938',
-            'section'     => 'scribe',
+            'default'     => '35_en_teach_them_to_obey.pdf',
+            'section'     => 'downloads',
         ];
-        $fields['scribe_2'] = [
-            'name'        => 'Teach them to Obey (scribe_2)',
+        $fields['36'] = [
+            'name'        => 'Spiritual Breathing Script (36)',
             'description' => '',
             'type'        => 'link',
-            'default'     => '247382094',
-            'section'     => 'scribe',
+            'default'     => '36_en_spiritual_breathing.pdf',
+            'section'     => 'downloads',
         ];
-        $fields['scribe_3'] = [
-            'name'        => 'Spiritual Breathing (scribe_3)',
+        $fields['37'] = [
+            'name'        => 'S.O.A.P.S. Script (37)',
             'description' => '',
             'type'        => 'link',
-            'default'     => '247063777',
-            'section'     => 'scribe',
+            'default'     => '37_en_soaps.pdf',
+            'section'     => 'downloads',
         ];
-        $fields['scribe_4'] = [
-            'name'        => 'Producers vs Consumers (scribe_4)',
+        $fields['38'] = [
+            'name'        => 'Accountability Groups Script (38)',
             'description' => '',
             'type'        => 'link',
-            'default'     => '247063338',
-            'section'     => 'scribe',
+            'default'     => '38_en_accountability_groups.pdf',
+            'section'     => 'downloads',
         ];
-        $fields['scribe_5'] = [
-            'name'        => 'Greatest Blessing (scribe_5)',
+        $fields['39'] = [
+            'name'        => 'Producers vs Consumers Script (39)',
             'description' => '',
             'type'        => 'link',
-            'default'     => '247064323',
-            'section'     => 'scribe',
+            'default'     => '39_en_producers_vs_consumers.pdf',
+            'section'     => 'downloads',
         ];
-        $fields['scribe_6'] = [
-            'name'        => 'Spiritual Economy (scribe_6)',
+        $fields['40'] = [
+            'name'        => 'Prayer Cycle Script (40)',
             'description' => '',
             'type'        => 'link',
-            'default'     => '247064680',
-            'section'     => 'scribe',
+            'default'     => '40_en_prayer_cycle.pdf',
+            'section'     => 'downloads',
         ];
-        $fields['scribe_7'] = [
-            'name'        => 'The Gospel (scribe_7)',
+        $fields['41'] = [
+            'name'        => 'List of 100 Script (41)',
             'description' => '',
             'type'        => 'link',
-            'default'     => '247064875',
-            'section'     => 'scribe',
+            'default'     => '41_en_list_of_100.pdf',
+            'section'     => 'downloads',
         ];
-        $fields['scribe_8'] = [
-            'name'        => 'Eyes to See (scribe_8)',
+        $fields['42'] = [
+            'name'        => 'Spiritual Economy Script (42)',
             'description' => '',
             'type'        => 'link',
-            'default'     => '247065338',
-            'section'     => 'scribe',
+            'default'     => '42_en_spiritual_economy.pdf',
+            'section'     => 'downloads',
         ];
-        $fields['scribe_9'] = [
-            'name'        => 'Faithfulness (scribe_9)',
+        $fields['43'] = [
+            'name'        => 'The Gospel Script (43)',
             'description' => '',
             'type'        => 'link',
-            'default'     => '247065912',
-            'section'     => 'scribe',
+            'default'     => '43_en_the_gospel.pdf',
+            'section'     => 'downloads',
         ];
-        $fields['scribe_10'] = [
-            'name'        => 'Training Cycle (scribe_10)',
+        $fields['44'] = [
+            'name'        => 'Baptism Script (44)',
             'description' => '',
             'type'        => 'link',
-            'default'     => '247066070',
-            'section'     => 'scribe',
+            'default'     => '44_en_baptism.pdf',
+            'section'     => 'downloads',
         ];
-        $fields['scribe_11'] = [
-            'name'        => 'Leadership Cells (scribe_11)',
+        $fields['45'] = [
+            'name'        => '3 Minute Testimony Script (45)',
             'description' => '',
             'type'        => 'link',
-            'default'     => '247376979',
-            'section'     => 'scribe',
+            'default'     => '45_en_3_minute_testimony.pdf',
+            'section'     => 'downloads',
         ];
-        $fields['scribe_12'] = [
-            'name'        => 'Non-Sequential (scribe_12)',
+        $fields['46'] = [
+            'name'        => 'Greatest Blessing Script (46)',
             'description' => '',
             'type'        => 'link',
-            'default'     => '247377353',
-            'section'     => 'scribe',
+            'default'     => '46_en_greatest_blessing.pdf',
+            'section'     => 'downloads',
         ];
-        $fields['scribe_13'] = [
-            'name'        => 'Pace (scribe_13)',
+        $fields['47'] = [
+            'name'        => 'Duckling Discipleship Script (47)',
             'description' => '',
             'type'        => 'link',
-            'default'     => '247076726',
-            'section'     => 'scribe',
+            'default'     => '47_en_duckling_discipleship.pdf',
+            'section'     => 'downloads',
         ];
-        $fields['scribe_14'] = [
-            'name'        => 'Part of Two Churches (scribe_14)',
+        $fields['48'] = [
+            'name'        => 'Eyes to See Script (48)',
             'description' => '',
             'type'        => 'link',
-            'default'     => '247077391',
-            'section'     => 'scribe',
+            'default'     => '48_en_eyes_to_see.pdf',
+            'section'     => 'downloads',
         ];
-        $fields['scribe_15'] = [
-            'name'        => 'Leadership in Networks (scribe_15)',
+        $fields['49'] = [
+            'name'        => 'Lord\'s Supper Script (49)',
             'description' => '',
             'type'        => 'link',
-            'default'     => '247077671',
-            'section'     => 'scribe',
+            'default'     => '49_en_lords_supper.pdf',
+            'section'     => 'downloads',
         ];
-        $fields['scribe_16'] = [
-            'name'        => 'Completion of Training (scribe_16)',
+        $fields['50'] = [
+            'name'        => 'Prayer Walking Script (50)',
             'description' => '',
             'type'        => 'link',
-            'default'     => '247078031',
-            'section'     => 'scribe',
+            'default'     => '50_en_prayer_walking.pdf',
+            'section'     => 'downloads',
         ];
-        $fields['scribe_17'] = [
-            'name'        => 'Duckling Discipleship (scribe_17)',
+        $fields['51'] = [
+            'name'        => 'Person of Peace Script (51)',
             'description' => '',
             'type'        => 'link',
-            'default'     => '247378271',
-            'section'     => 'scribe',
+            'default'     => '51_en_person_of_peace.pdf',
+            'section'     => 'downloads',
         ];
-        $fields['scribe_18'] = [
-            'name'        => 'Person of Peace (scribe_18)',
+        $fields['52'] = [
+            'name'        => 'Faithfulness Script (52)',
             'description' => '',
             'type'        => 'link',
-            'default'     => '248149796',
-            'section'     => 'scribe',
+            'default'     => '52_en_faithfulness.pdf',
+            'section'     => 'downloads',
         ];
-        $fields['3_3_group'] = [
-            'name'        => '3/3 Group Demonstration',
+        $fields['53'] = [
+            'name'        => '3/3 Groups Script (53)',
             'description' => '',
             'type'        => 'link',
-            'default'     => '249724003',
-            'section'     => 'scribe',
+            'default'     => '53_en_3_3_groups.pdf',
+            'section'     => 'downloads',
         ];
-
-        /* Toolkit */
-        $fields['toolkit_1'] = [
-            'name'        => 'SOAPS (toolkit_1)',
+        $fields['54'] = [
+            'name'        => 'Training Cycle Script (54)',
             'description' => '',
             'type'        => 'link',
-            'default'     => '248176918',
-            'section'     => 'toolkit',
+            'default'     => '54_en_training_cycle.pdf',
+            'section'     => 'downloads',
         ];
-        $fields['toolkit_2'] = [
-            'name'        => 'Accountability Groups (toolkit_2)',
+        $fields['55'] = [
+            'name'        => 'Leadership Cells Script (55)',
             'description' => '',
             'type'        => 'link',
-            'default'     => '248177083',
-            'section'     => 'toolkit',
+            'default'     => '55_en_leadership_cells.pdf',
+            'section'     => 'downloads',
         ];
-        $fields['toolkit_3'] = [
-            'name'        => 'Prayer Cycle (toolkit_3)',
+        $fields['56'] = [
+            'name'        => 'Non-Sequential Script (56)',
             'description' => '',
             'type'        => 'link',
-            'default'     => '248177053',
-            'section'     => 'toolkit',
+            'default'     => '56_en_non_sequential.pdf',
+            'section'     => 'downloads',
         ];
-        $fields['toolkit_4'] = [
-            'name'        => 'List of 100 (toolkit_4)',
+        $fields['57'] = [
+            'name'        => 'Pace Script (57)',
             'description' => '',
             'type'        => 'link',
-            'default'     => '248177079',
-            'section'     => 'toolkit',
+            'default'     => '57_en_pace.pdf',
+            'section'     => 'downloads',
         ];
-        $fields['toolkit_5'] = [
-            'name'        => '3 Minute Testimony (toolkit_5)',
+        $fields['58'] = [
+            'name'        => 'Part of Two Churches Script (58)',
             'description' => '',
             'type'        => 'link',
-            'default'     => '248177254',
-            'section'     => 'toolkit',
+            'default'     => '58_en_part_of_two_churches.pdf',
+            'section'     => 'downloads',
         ];
-        $fields['toolkit_6'] = [
-            'name'        => 'Baptism (toolkit_6)',
+        $fields['59'] = [
+            'name'        => 'Completion of Training Script (59)',
             'description' => '',
             'type'        => 'link',
-            'default'     => '248150621',
-            'section'     => 'toolkit',
+            'default'     => '59_en_completion_of_training.pdf',
+            'section'     => 'downloads',
         ];
-        $fields['toolkit_7'] = [
-            'name'        => 'God\'s Story (toolkit_7)',
+        $fields['60'] = [
+            'name'        => 'Coaching Checklist Script (60)',
             'description' => '',
             'type'        => 'link',
-            'default'     => '248150410',
-            'section'     => 'toolkit',
+            'default'     => '60_en_coaching_checklist.pdf',
+            'section'     => 'downloads',
         ];
-        $fields['toolkit_8'] = [
-            'name'        => 'Prayer Walking (toolkit_8)',
+        $fields['61'] = [
+            'name'        => 'Leadeship in Networks Script (61)',
             'description' => '',
             'type'        => 'link',
-            'default'     => '248150722',
-            'section'     => 'toolkit',
+            'default'     => '61_en_leadeship_in_networks.pdf',
+            'section'     => 'downloads',
         ];
-        $fields['toolkit_9'] = [
-            'name'        => 'Lord\'s Supper (toolkit_9)',
+        $fields['62'] = [
+            'name'        => 'Peer Mentoring Script (62)',
             'description' => '',
             'type'        => 'link',
-            'default'     => '248150969',
-            'section'     => 'toolkit',
-        ];
-        $fields['toolkit_10'] = [
-            'name'        => '3|3 Groups (toolkit_10)',
-            'description' => '',
-            'type'        => 'link',
-            'default'     => '248184750',
-            'section'     => 'toolkit',
-        ];
-        $fields['toolkit_11'] = [
-            'name'        => 'Peer Mentoring (toolkit_11)',
-            'description' => '',
-            'type'        => 'link',
-            'default'     => '248150042',
-            'section'     => 'toolkit',
-        ];
-        $fields['toolkit_12'] = [
-            'name'        => 'Leadership Cell (toolkit_12)',
-            'description' => '',
-            'type'        => 'link',
-            'default'     => '248150570',
-            'section'     => 'toolkit',
-        ];
-        $fields['toolkit_13'] = [
-            'name'        => 'Coaching Checklist (toolkit_13)',
-            'description' => '',
-            'type'        => 'link',
-            'default'     => '248150334',
-            'section'     => 'toolkit',
+            'default'     => '62_en_peer_mentoring.pdf',
+            'section'     => 'downloads',
         ];
 
 
-
-        return apply_filters( 'zume_video_fields_settings', $fields );
+        return apply_filters( 'zume_pdf_download_fields_settings', $fields );
     } // End get_custom_fields_settings()
 
     /**
@@ -756,4 +717,4 @@ class Zume_Video_Post_Type
     } // End flush_rewrite_rules()
 
 } // End Class
-Zume_Video_Post_Type::instance();
+Zume_PDF_Download_Post_Type::instance();
