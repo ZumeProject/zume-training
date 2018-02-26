@@ -315,7 +315,7 @@ $zume_highest_session = Zume_Dashboard::get_highest_session( $zume_current_user 
 
 
                     <!-- Right Column -->
-                    <div class="large-2 show-for-large hide-for-small cell dashboard-messages">
+                    <div class="large-2 cell dashboard-messages">
 
                         <!-- ********************************************************************************************* -->
                         <!-- COACH SECTION -->
@@ -352,7 +352,7 @@ $zume_highest_session = Zume_Dashboard::get_highest_session( $zume_current_user 
                         <!-- ********************************************************************************************* -->
                         <!-- INSTRUCTIONS SECTION -->
                         <!-- ********************************************************************************************* -->
-                        <div class="callout">
+                        <div class="callout show-for-large hide-for-small">
                             <div class="grid-x">
                                 <div class="cell center">
                                     <h3 class="center padding-bottom"><?php echo esc_html__( 'Instructions', 'zume' ) ?></h3>
@@ -376,9 +376,9 @@ $zume_highest_session = Zume_Dashboard::get_highest_session( $zume_current_user 
                         <!-- ********************************************************************************************* -->
                         <div class="grid-x grid-margin-x">
                             <div class="cell center">
-                                <a class="button "
-                                   href="<?php echo esc_url( zume_files_uri() ) ?>zume-guidebook.pdf"
-                                   target="_blank" rel="noopener">
+                                <a class="button"
+                                   href="<?php echo esc_url( zume_files_uri() ) ?>zume_guidebook.pdf"
+                                   target="_blank" rel="noopener" download>
                                     <?php esc_html_e( 'Download Guidebook', 'zume' ) ?>
                                 </a>
                             </div>
