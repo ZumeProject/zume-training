@@ -485,248 +485,230 @@ class Zume_Video_Post_Type
     {
         $fields = [];
 
-        $fields['overview'] = [
-            'name'        => 'Overview',
-            'description' => '',
-            'type'        => 'link',
-            'default'     => '248149800',
-            'section'     => 'scribe',
-        ];
-        $fields['how_zume_works'] = [
-            'name'        => 'How Zume Works',
-            'description' => '',
-            'type'        => 'link',
-            'default'     => '248149797',
-            'section'     => 'scribe',
-        ];
-
-        $fields['scribe_1'] = [
-            'name'        => 'Welcome to Zume (scribe_1)',
+        $fields['1'] = [
+            'name'        => 'Welcome to Zume (1)',
             'description' => '',
             'type'        => 'link',
             'default'     => '247062938',
             'section'     => 'scribe',
         ];
-        $fields['scribe_2'] = [
-            'name'        => 'Teach them to Obey (scribe_2)',
+        $fields['2'] = [
+            'name'        => 'Teach them to Obey (2)',
             'description' => '',
             'type'        => 'link',
             'default'     => '247382094',
             'section'     => 'scribe',
         ];
-        $fields['scribe_3'] = [
-            'name'        => 'Spiritual Breathing (scribe_3)',
+        $fields['3'] = [
+            'name'        => 'Spiritual Breathing (3)',
             'description' => '',
             'type'        => 'link',
             'default'     => '247063777',
             'section'     => 'scribe',
         ];
-        $fields['scribe_4'] = [
-            'name'        => 'Producers vs Consumers (scribe_4)',
-            'description' => '',
-            'type'        => 'link',
-            'default'     => '247063338',
-            'section'     => 'scribe',
-        ];
-        $fields['scribe_5'] = [
-            'name'        => 'Greatest Blessing (scribe_5)',
-            'description' => '',
-            'type'        => 'link',
-            'default'     => '247064323',
-            'section'     => 'scribe',
-        ];
-        $fields['scribe_6'] = [
-            'name'        => 'Spiritual Economy (scribe_6)',
-            'description' => '',
-            'type'        => 'link',
-            'default'     => '247064680',
-            'section'     => 'scribe',
-        ];
-        $fields['scribe_7'] = [
-            'name'        => 'The Gospel (scribe_7)',
-            'description' => '',
-            'type'        => 'link',
-            'default'     => '247064875',
-            'section'     => 'scribe',
-        ];
-        $fields['scribe_8'] = [
-            'name'        => 'Eyes to See (scribe_8)',
-            'description' => '',
-            'type'        => 'link',
-            'default'     => '247065338',
-            'section'     => 'scribe',
-        ];
-        $fields['scribe_9'] = [
-            'name'        => 'Faithfulness (scribe_9)',
-            'description' => '',
-            'type'        => 'link',
-            'default'     => '247065912',
-            'section'     => 'scribe',
-        ];
-        $fields['scribe_10'] = [
-            'name'        => 'Training Cycle (scribe_10)',
-            'description' => '',
-            'type'        => 'link',
-            'default'     => '247066070',
-            'section'     => 'scribe',
-        ];
-        $fields['scribe_11'] = [
-            'name'        => 'Leadership Cells (scribe_11)',
-            'description' => '',
-            'type'        => 'link',
-            'default'     => '247376979',
-            'section'     => 'scribe',
-        ];
-        $fields['scribe_12'] = [
-            'name'        => 'Non-Sequential (scribe_12)',
-            'description' => '',
-            'type'        => 'link',
-            'default'     => '247377353',
-            'section'     => 'scribe',
-        ];
-        $fields['scribe_13'] = [
-            'name'        => 'Pace (scribe_13)',
-            'description' => '',
-            'type'        => 'link',
-            'default'     => '247076726',
-            'section'     => 'scribe',
-        ];
-        $fields['scribe_14'] = [
-            'name'        => 'Part of Two Churches (scribe_14)',
-            'description' => '',
-            'type'        => 'link',
-            'default'     => '247077391',
-            'section'     => 'scribe',
-        ];
-        $fields['scribe_15'] = [
-            'name'        => 'Leadership in Networks (scribe_15)',
-            'description' => '',
-            'type'        => 'link',
-            'default'     => '247077671',
-            'section'     => 'scribe',
-        ];
-        $fields['scribe_16'] = [
-            'name'        => 'Completion of Training (scribe_16)',
-            'description' => '',
-            'type'        => 'link',
-            'default'     => '247078031',
-            'section'     => 'scribe',
-        ];
-        $fields['scribe_17'] = [
-            'name'        => 'Duckling Discipleship (scribe_17)',
-            'description' => '',
-            'type'        => 'link',
-            'default'     => '247378271',
-            'section'     => 'scribe',
-        ];
-        $fields['scribe_18'] = [
-            'name'        => 'Person of Peace (scribe_18)',
-            'description' => '',
-            'type'        => 'link',
-            'default'     => '248149796',
-            'section'     => 'scribe',
-        ];
-        $fields['3_3_group'] = [
-            'name'        => '3/3 Group Demonstration',
-            'description' => '',
-            'type'        => 'link',
-            'default'     => '249724003',
-            'section'     => 'scribe',
-        ];
-
-        /* Toolkit */
-        $fields['toolkit_1'] = [
-            'name'        => 'SOAPS (toolkit_1)',
+        $fields['4'] = [
+            'name'        => 'S.O.A.P.S. (4)',
             'description' => '',
             'type'        => 'link',
             'default'     => '248176918',
             'section'     => 'toolkit',
         ];
-        $fields['toolkit_2'] = [
-            'name'        => 'Accountability Groups (toolkit_2)',
+        $fields['5'] = [
+            'name'        => 'Accountability Groups (5)',
             'description' => '',
             'type'        => 'link',
             'default'     => '248177083',
             'section'     => 'toolkit',
         ];
-        $fields['toolkit_3'] = [
-            'name'        => 'Prayer Cycle (toolkit_3)',
+        $fields['6'] = [
+            'name'        => 'Producers vs Consumers (6)',
+            'description' => '',
+            'type'        => 'link',
+            'default'     => '247063338',
+            'section'     => 'scribe',
+        ];
+        $fields['7'] = [
+            'name'        => 'Prayer Cycle (7)',
             'description' => '',
             'type'        => 'link',
             'default'     => '248177053',
             'section'     => 'toolkit',
         ];
-        $fields['toolkit_4'] = [
-            'name'        => 'List of 100 (toolkit_4)',
+        $fields['8'] = [
+            'name'        => 'List of 100 (8)',
             'description' => '',
             'type'        => 'link',
             'default'     => '248177079',
             'section'     => 'toolkit',
         ];
-        $fields['toolkit_5'] = [
-            'name'        => '3 Minute Testimony (toolkit_5)',
+        $fields['9'] = [
+            'name'        => 'Spiritual Economy (9)',
             'description' => '',
             'type'        => 'link',
-            'default'     => '248177254',
-            'section'     => 'toolkit',
+            'default'     => '247064680',
+            'section'     => 'scribe',
         ];
-        $fields['toolkit_6'] = [
-            'name'        => 'Baptism (toolkit_6)',
+        $fields['10'] = [
+            'name'        => 'The Gospel (10)',
+            'description' => '',
+            'type'        => 'link',
+            'default'     => '247064875',
+            'section'     => 'scribe',
+        ];
+        $fields['11'] = [
+            'name'        => 'Baptism (11)',
             'description' => '',
             'type'        => 'link',
             'default'     => '248150621',
             'section'     => 'toolkit',
         ];
-        $fields['toolkit_7'] = [
-            'name'        => 'God\'s Story (toolkit_7)',
+        $fields['12'] = [
+            'name'        => '3 Minute Testimony (12)',
             'description' => '',
             'type'        => 'link',
-            'default'     => '248150410',
+            'default'     => '248177254',
             'section'     => 'toolkit',
         ];
-        $fields['toolkit_8'] = [
-            'name'        => 'Prayer Walking (toolkit_8)',
+        $fields['13'] = [
+            'name'        => 'Greatest Blessing (13)',
             'description' => '',
             'type'        => 'link',
-            'default'     => '248150722',
-            'section'     => 'toolkit',
+            'default'     => '247064323',
+            'section'     => 'scribe',
         ];
-        $fields['toolkit_9'] = [
-            'name'        => 'Lord\'s Supper (toolkit_9)',
+        $fields['14'] = [
+            'name'        => 'Duckling Discipleship (14)',
+            'description' => '',
+            'type'        => 'link',
+            'default'     => '247378271',
+            'section'     => 'scribe',
+        ];
+        $fields['15'] = [
+            'name'        => 'Eyes to See (15)',
+            'description' => '',
+            'type'        => 'link',
+            'default'     => '247065338',
+            'section'     => 'scribe',
+        ];
+        $fields['16'] = [
+            'name'        => 'Lord\'s Supper (16)',
             'description' => '',
             'type'        => 'link',
             'default'     => '248150969',
             'section'     => 'toolkit',
         ];
-        $fields['toolkit_10'] = [
-            'name'        => '3|3 Groups (toolkit_10)',
+        $fields['17'] = [
+            'name'        => 'Prayer Walking (17)',
+            'description' => '',
+            'type'        => 'link',
+            'default'     => '248150722',
+            'section'     => 'toolkit',
+        ];
+        $fields['18'] = [
+            'name'        => 'Person of Peace (18)',
+            'description' => '',
+            'type'        => 'link',
+            'default'     => '248149796',
+            'section'     => 'scribe',
+        ];
+        $fields['19'] = [
+            'name'        => 'Faithfulness (19)',
+            'description' => '',
+            'type'        => 'link',
+            'default'     => '247065912',
+            'section'     => 'scribe',
+        ];
+        $fields['20'] = [
+            'name'        => '3|3 Groups (20)',
             'description' => '',
             'type'        => 'link',
             'default'     => '248184750',
             'section'     => 'toolkit',
         ];
-        $fields['toolkit_11'] = [
-            'name'        => 'Peer Mentoring (toolkit_11)',
+        $fields['21'] = [
+            'name'        => '3|3 Group Demo (21)',
             'description' => '',
             'type'        => 'link',
-            'default'     => '248150042',
-            'section'     => 'toolkit',
+            'default'     => '249724003',
+            'section'     => 'scribe',
         ];
-        $fields['toolkit_12'] = [
-            'name'        => 'Leadership Cell (toolkit_12)',
+        $fields['22'] = [
+            'name'        => 'Training Cycle (22)',
             'description' => '',
             'type'        => 'link',
-            'default'     => '248150570',
-            'section'     => 'toolkit',
+            'default'     => '247066070',
+            'section'     => 'scribe',
         ];
-        $fields['toolkit_13'] = [
-            'name'        => 'Coaching Checklist (toolkit_13)',
+        $fields['23'] = [
+            'name'        => 'Leadership Cells (23)',
+            'description' => '',
+            'type'        => 'link',
+            'default'     => '247376979',
+            'section'     => 'scribe',
+        ];
+        $fields['24'] = [
+            'name'        => 'Non-Sequential (24)',
+            'description' => '',
+            'type'        => 'link',
+            'default'     => '247377353',
+            'section'     => 'scribe',
+        ];
+        $fields['25'] = [
+            'name'        => 'Pace (25)',
+            'description' => '',
+            'type'        => 'link',
+            'default'     => '247076726',
+            'section'     => 'scribe',
+        ];
+        $fields['26'] = [
+            'name'        => 'Part of Two Churches (26)',
+            'description' => '',
+            'type'        => 'link',
+            'default'     => '247077391',
+            'section'     => 'scribe',
+        ];
+        $fields['27'] = [
+            'name'        => 'Completion of Training (27)',
+            'description' => '',
+            'type'        => 'link',
+            'default'     => '247078031',
+            'section'     => 'scribe',
+        ];
+        $fields['28'] = [
+            'name'        => 'Coaching Checklist (28)',
             'description' => '',
             'type'        => 'link',
             'default'     => '248150334',
             'section'     => 'toolkit',
         ];
-
+        $fields['29'] = [
+            'name'        => 'Leadership in Networks (29)',
+            'description' => '',
+            'type'        => 'link',
+            'default'     => '247077671',
+            'section'     => 'scribe',
+        ];
+        $fields['30'] = [
+            'name'        => 'Peer Mentoring (30)',
+            'description' => '',
+            'type'        => 'link',
+            'default'     => '248150042',
+            'section'     => 'toolkit',
+        ];
+        $fields['31'] = [
+            'name'        => 'Overview (31)',
+            'description' => '',
+            'type'        => 'link',
+            'default'     => '248149800',
+            'section'     => 'scribe',
+        ];
+        $fields['32'] = [
+            'name'        => 'How Zume Works (32)',
+            'description' => '',
+            'type'        => 'link',
+            'default'     => '248149797',
+            'section'     => 'scribe',
+        ];
 
 
         return apply_filters( 'zume_video_fields_settings', $fields );
