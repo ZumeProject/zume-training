@@ -113,7 +113,7 @@ if ( is_user_logged_in() ) {
                     <div class="grid-x grid-margin-x grid-margin-y vertical-padding">
                         <div class="medium-2 small-1 cell"></div>
                         <div class="medium-8 small-10 cell center" >
-                            <a href="<?php echo  esc_url( site_url('/') . $zume_current_lang ) . '/register'; ?>" alt="Register" class="button large center " style="background:white; color:#323a68; font-family:'europa-regular'; padding:0.5em 2em"><?php esc_html_e( 'Get Started', 'zume' ) ?></a>
+                            <a href="<?php echo esc_url( site_url( '/' ) . $zume_current_lang ) . '/register'; ?>" alt="Register" class="button large center " style="background:white; color:#323a68; font-family:'europa-regular'; padding:0.5em 2em"><?php esc_html_e( 'Get Started', 'zume' ) ?></a>
                         </div>
                         <div class="medium-2 small-1 cell"></div>
                     </div>
@@ -207,7 +207,7 @@ if ( is_user_logged_in() ) {
             <div class="grid-x ">
                 <div class="small-8 medium-3 small-centered cell center vertical-padding">
                     <br>
-                    <a href="<?php echo esc_url( site_url('/') . $zume_current_lang ) . '/about'; ?>" class="button large center " style="text-transform: uppercase">
+                    <a href="<?php echo esc_url( site_url( '/' ) . $zume_current_lang ) . '/about'; ?>" class="button large center " style="text-transform: uppercase">
                         <?php esc_html_e( 'Find out more about Zúme', 'zume' ) ?></a>
                     <br>
                 </div>
