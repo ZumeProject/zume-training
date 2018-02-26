@@ -10,7 +10,7 @@ if ( is_user_logged_in() ) {
 ?>
 <?php get_header(); ?>
 
-<div id="content">
+<div id="content" class="grid-x grid-padding-x"><div class="cell">
 
     <div id="inner-content grid-x">
 
@@ -215,7 +215,7 @@ if ( is_user_logged_in() ) {
 
         </div> <!-- end #main -->
 
-    </div> <!-- end #inner-content -->
+    </div> <!-- end cell --> </div> <!-- content -->
 
 
 <?php get_footer(); ?>

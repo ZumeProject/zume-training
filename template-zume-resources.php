@@ -19,7 +19,7 @@ Template Name: Zume Resources
     }
 </style>
 
-<div id="content">
+<div id="content" class="grid-x grid-padding-x"><div class="cell">
 
     <div id="inner-content" class="grid-x">
 
@@ -132,6 +132,7 @@ Template Name: Zume Resources
 
     </div> <!-- end #inner-content -->
 
-</div> <!-- end #content -->
+    </div> <!-- cell -->
+</div><!-- end #content -->
 
 <?php get_footer(); ?>

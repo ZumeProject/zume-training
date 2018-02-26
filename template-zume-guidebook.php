@@ -6,7 +6,7 @@ Template Name: Zume Guidebook
 
 <?php get_header(); ?>
 
-<div id="content">
+<div id="content" class="grid-x grid-padding-x"><div class="cell">
 
     <div id="inner-content">
 
@@ -44,6 +44,7 @@ Template Name: Zume Guidebook
 
     </div> <!-- end #inner-content -->
 
-</div>
+    </div> <!--cell -->
+</div> <!-- content-->
 
 <?php get_footer(); ?>

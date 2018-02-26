@@ -7,7 +7,7 @@ get_header();
 
 ?>
 
-<div id="content">
+<div id="content" class="grid-x grid-padding-x"><div class="cell">
     <div id="inner-content" class="grid-x grid-margin-x">
         <div class="cell">
 
@@ -105,6 +105,8 @@ skills. Each of these groups will be connected to a mentor/coach early in the pr
 
         </div><!-- Cell -->
     </div><!-- Inner Content -->
+
+    </div> <!-- cell -->
 </div><!-- Content -->
 
 <?php get_footer(); ?>

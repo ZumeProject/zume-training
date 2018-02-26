@@ -14,7 +14,7 @@ $zume_user_id = get_current_user_id();
 
 <?php get_header(); ?>
 
-    <div id="content">
+    <div id="content"class="grid-x grid-padding-x"><div class="cell">
 
         <div id="inner-content" class="grid-x grid-margin-x grid-margin-y" data-equalizer data-equalize-on="large">
 
@@ -127,6 +127,7 @@ $zume_user_id = get_current_user_id();
 
         </div> <!-- end #inner-content -->
 
-    </div> <!-- end #content -->
+        </div> <!-- cell -->
+    </div><!-- end #content -->
 
 <?php get_footer(); ?>

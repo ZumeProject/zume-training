@@ -16,7 +16,7 @@ $zume_user_meta = get_user_meta( get_current_user_id() ); // Full array of user 
 
 <?php get_header(); ?>
 
-    <div id="content">
+    <div id="content" class="grid-x grid-padding-x"><div class="cell">
         <div id="inner-content" class="grid-x grid-margin-x grid-padding-x">
             <div class="large-8 medium-8 small-12 grid-margin-x cell" style="max-width: 900px; margin: 0 auto">
                 <h3 class="section-header"><?php echo esc_html__( 'Your Profile', 'zume' )?> </h3>
@@ -150,6 +150,7 @@ $zume_user_meta = get_user_meta( get_current_user_id() ); // Full array of user 
                 </form>
             </div>
         </div>
-    </div> <!-- end #content -->
+        </div> <!--cell -->
+    </div><!-- end #content -->
 
 <?php get_footer(); ?>
