@@ -554,13 +554,13 @@ class Zume_Course_Content {
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="small-12 small-centered cell">
 
-                        <iframe style="border: 1px solid lightgrey;"  src="<?php echo esc_url( Zume_Course::get_video_by_key( '38' ) ) ?>" width="560" height="315"
+                        <iframe style="border: 1px solid lightgrey;"  src="<?php echo esc_url( Zume_Course::get_video_by_key( '5' ) ) ?>" width="560" height="315"
                                 frameborder="0"
                                 webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
 
                     <p class="center hide-for-small-only"><a
-                                href="<?php echo esc_url( Zume_Course::get_download_by_key( '5' ) ) ?>"
+                                href="<?php echo esc_url( Zume_Course::get_download_by_key( '38' ) ) ?>"
                                 target="_blank"><img
                                     src="<?php echo esc_url( zume_images_uri( 'course' ) ) ?>download-icon-150x150.png"
                                     alt=""
