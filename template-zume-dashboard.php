@@ -76,8 +76,8 @@ $zume_highest_session = Zume_Dashboard::get_highest_session( $zume_current_user 
                                                             }
                                                         </style>
                                                         <span class="group-title">
-                                                            <a data-open="<?php echo esc_html( $zume_key ); ?>"><?php echo esc_html( $zume_value['group_name'] ) ?></a></span>
-                                                            <button class="small" data-open="<?php echo esc_html( $zume_key ); ?>">
+                                                            <a data-open="<?php echo esc_html( $zume_key ); ?>"><?php echo esc_html( $zume_value['group_name'] ) ?></a></span>&nbsp;
+                                                            <button class="small" data-open="<?php echo esc_html( $zume_key ); ?>" style="opacity: .5;">
                                                                 <i class="fi-pencil hollow"></i> <?php echo esc_html__( 'edit', 'zume' ) ?>
                                                             </button>
 
@@ -313,7 +313,7 @@ $zume_highest_session = Zume_Dashboard::get_highest_session( $zume_current_user 
                         <!-- ********************************************************************************************* -->
                         <!-- TOOLS SECTION -->
                         <!-- ********************************************************************************************* -->
-                        <div class="callout">
+                        <div class="callout" style="display:none;"><!-- @todo evaluate removal of section-->
                             <!-- Section top -->
                             <div class="grid-x grid-margin-x grid-margin-y">
                                 <div class="cell">
