@@ -260,7 +260,7 @@ class Zume_PDF_Download_Post_Type
                 strtolower( $this->singular ),
                 // translators: Publish box date format, see http://php.net/date
                 '<strong>' . date_i18n( __( 'M j, Y @ G:i' ),
-                    strtotime( $post->post_date ) ) . '</strong>',
+                strtotime( $post->post_date ) ) . '</strong>',
                 '<a target="_blank" href="' . esc_url( get_permalink( $post->ID ) ) . '">',
                 '</a>'
             ),
