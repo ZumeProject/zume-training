@@ -139,7 +139,7 @@ class Zume_Course {
         // get language
         $current_lang = zume_current_language();
         // get custom post type by language title
-        $page = get_page_by_title( $current_lang, OBJECT, 'zume_video' );
+        $page = get_page_by_title( $current_lang, OBJECT, 'zume_download' );
         if ( ! $page ) {
             return '';
         }
@@ -147,6 +147,6 @@ class Zume_Course {
         if ( ! $video_id ) {
             return '';
         }
-        return 'https://player.vimeo.com/video/' . $video_id;
+        return trailingslashit( get_stylesheet_directory_uri() ) . 'downloads/' . $current_lang . '/' . $video_id;
     }
 }

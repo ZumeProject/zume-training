@@ -309,9 +309,9 @@ class Zume_Course_Content {
 
                     <p>
                         <a class="button large"
-                           href="<?php echo esc_url( zume_files_uri() ) ?>zume-guidebook.pdf"
+                           href="<?php echo esc_url( Zume_Course::get_download_by_key( '33' ) ) ?>"
                            target="_blank" rel="noopener">
-                            <?php esc_html_e( 'GUIDEBOOK', 'zume' ) ?>
+                            <?php esc_html_e( 'Guidebook', 'zume' ) ?>
                         </a>
                     </p>
                 </div>
@@ -360,8 +360,8 @@ class Zume_Course_Content {
                                 webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
 
-                    <p class="center"><a
-                                href="<?php echo esc_url( zume_files_uri() ) ?>zume_video_scripts_welcome.pdf"
+                    <p class="center hide-on-small"><a
+                                href="<?php echo esc_url( Zume_Course::get_download_by_key( '34' ) ) ?>"
                                 target="_blank"><img
                                     src="<?php echo esc_url( zume_images_uri( 'course' ) ) ?>download-icon-150x150.png"
                                     alt=""
@@ -405,8 +405,8 @@ class Zume_Course_Content {
                                 webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
 
-                    <p class="center"><a
-                                href="<?php echo esc_url( zume_files_uri() ) ?>zume_scripts_teach_them_to_obey.pdf"
+                    <p class="center hide-on-small"><a
+                                href="<?php echo esc_url( Zume_Course::get_download_by_key( '35' ) ) ?>"
                                 target="_blank"><img
                                     src="<?php echo esc_url( zume_images_uri( 'course' ) ) ?>download-icon-150x150.png"
                                     alt=""
@@ -457,8 +457,8 @@ class Zume_Course_Content {
                                 webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
 
-                    <p class="center"><a
-                                href="<?php echo esc_url( zume_files_uri() ) ?>zume_scripts_spiritual_breathing.pdf"
+                    <p class="center hide-on-small"><a
+                                href="<?php echo esc_url( Zume_Course::get_download_by_key( '36' ) ) ?>"
                                 target="_blank"><img
                                     src="<?php echo esc_url( zume_images_uri( 'course' ) ) ?>download-icon-150x150.png"
                                     alt=""
@@ -514,7 +514,7 @@ class Zume_Course_Content {
                                 webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
 
-                    <p class="center"><a href="<?php echo esc_url( zume_files_uri() ) ?>zume_scripts_soaps.pdf"
+                    <p class="center hide-on-small"><a href="<?php echo esc_url( Zume_Course::get_download_by_key( '37' ) ) ?>"
                                          target="_blank"><img
                                     src="<?php echo esc_url( zume_images_uri( 'course' ) ) ?>download-icon-150x150.png"
                                     alt=""
@@ -554,13 +554,13 @@ class Zume_Course_Content {
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="small-12 small-centered cell">
 
-                        <iframe style="border: 1px solid lightgrey;"  src="<?php echo esc_url( Zume_Course::get_video_by_key( '5' ) ) ?>" width="560" height="315"
+                        <iframe style="border: 1px solid lightgrey;"  src="<?php echo esc_url( Zume_Course::get_video_by_key( '38' ) ) ?>" width="560" height="315"
                                 frameborder="0"
                                 webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
 
-                    <p class="center"><a
-                                href="<?php echo esc_url( zume_files_uri() ) ?>zume_scripts_accountability_groups.pdf"
+                    <p class="center hide-on-small"><a
+                                href="<?php echo esc_url( Zume_Course::get_download_by_key( '5' ) ) ?>"
                                 target="_blank"><img
                                     src="<?php echo esc_url( zume_images_uri( 'course' ) ) ?>download-icon-150x150.png"
                                     alt=""
@@ -593,7 +593,7 @@ class Zume_Course_Content {
 
                     <?php esc_html_e( 'Spend the next 45 minutes working together through Accountability Questions - List 2 in the "Accountability Groups" section of your', 'zume' ) ?>
                     <a class="btn btn-large next-step zume-purple uppercase bg-white font-zume-purple big-btn btn-wide"
-                       href="<?php echo esc_url( zume_files_uri() ) ?>zume_guidebook.pdf"
+                       href="<?php echo esc_url( Zume_Course::get_download_by_key( '33' ) ) ?>"
                        target="_blank" rel="noopener"><i
                                 class="glyphicon glyphicon-download-alt"></i> <?php esc_html_e( 'Zúme Guidebook', 'zume' ) ?></a>.
 
@@ -668,7 +668,7 @@ class Zume_Course_Content {
                     </p>
                     <p>
                         <a class="button large"
-                           href="<?php echo esc_url( zume_files_uri() ) ?>zume-guidebook.pdf"
+                           href="<?php echo esc_url( Zume_Course::get_download_by_key( '33' ) ) ?>"
                            target="_blank" rel="noopener">
                             <?php esc_html_e( 'GUIDEBOOK', 'zume' ) ?>
                         </a>
@@ -736,8 +736,8 @@ class Zume_Course_Content {
                                 webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
 
-                    <p class="center"><a
-                                href="<?php echo esc_url( zume_files_uri() ); ?>zume_scripts_producers_vs_consumers.pdf"
+                    <p class="center hide-on-small"><a
+                                href="<?php echo esc_url( Zume_Course::get_download_by_key( '39' ) ) ?>"
                                 target="_blank"><img
                                     src="<?php echo esc_url( zume_images_uri( 'course' ) ) ?>download-icon-150x150.png"
                                     alt=""
@@ -792,8 +792,8 @@ class Zume_Course_Content {
                                 webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
 
-                    <p class="center"><a
-                                href="<?php echo esc_url( zume_files_uri() ) ?>zume_scripts_prayer_cycle.pdf"
+                    <p class="center hide-on-small"><a
+                                href="<?php echo esc_url( Zume_Course::get_download_by_key( '40' ) ) ?>"
                                 target="_blank"><img
                                     src="<?php echo esc_url( zume_images_uri( 'course' ) ) ?>download-icon-150x150.png"
                                     alt=""
@@ -876,8 +876,8 @@ class Zume_Course_Content {
                                 webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
 
-                    <p class="center"><a
-                                href="<?php echo esc_url( zume_files_uri() ) ?>zume_scripts_list_of_100.pdf"
+                    <p class="center hide-on-small"><a
+                                href="<?php echo esc_url( Zume_Course::get_download_by_key( '41' ) ) ?>"
                                 target="_blank"><img
                                     src="<?php echo esc_url( zume_images_uri( 'course' ) ) ?>download-icon-150x150.png"
                                     alt=""
@@ -1029,8 +1029,8 @@ class Zume_Course_Content {
                                 webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
 
-                    <p class="center"><a
-                                href="<?php echo esc_url( zume_files_uri() ) ?>zume_scripts_spiritual_economy.pdf"><img
+                    <p class="center hide-on-small"><a
+                                href="<?php echo esc_url( Zume_Course::get_download_by_key( '42' ) ) ?>"><img
                                     src="<?php echo esc_url( zume_images_uri( 'course' ) ) ?>download-icon-150x150.png"
                                     alt=""
                                     width="35" height="35" class="alignnone size-thumbnail wp-image-3274"
@@ -1111,8 +1111,8 @@ class Zume_Course_Content {
                                 webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
 
-                    <p class="center"><a
-                                href="<?php echo esc_url( zume_files_uri() ) ?>zume_scripts_creation_to_judgement.pdf"><img
+                    <p class="center hide-on-small"><a
+                                href="<?php echo esc_url( Zume_Course::get_download_by_key( '43' ) ) ?>"><img
                                     src="<?php echo esc_url( zume_images_uri( 'course' ) ) ?>download-icon-150x150.png"
                                     alt=""
                                     width="35" height="35" class="alignnone size-thumbnail wp-image-3274"
@@ -1182,8 +1182,8 @@ class Zume_Course_Content {
                                 webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
 
-                    <p class="center"><a
-                                href="<?php echo esc_url( zume_files_uri() ) ?>zume_scripts_baptism.pdf"><img
+                    <p class="center hide-on-small"><a
+                                href="<?php echo esc_url( Zume_Course::get_download_by_key( '44' ) ) ?>"><img
                                     src="<?php echo esc_url( zume_images_uri( 'course' ) ) ?>download-icon-150x150.png"
                                     alt=""
                                     width="35" height="35" class="alignnone size-thumbnail wp-image-3274"
@@ -1337,8 +1337,8 @@ class Zume_Course_Content {
                                 webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
 
-                    <p class="center"><a
-                                href="<?php echo esc_url( zume_files_uri() ) ?>zume_scripts_testimony.pdf"
+                    <p class="center hide-on-small"><a
+                                href="<?php echo esc_url( Zume_Course::get_download_by_key( '45' ) ) ?>"
                                 target="_blank"><img
                                     src="<?php echo esc_url( zume_images_uri( 'course' ) ) ?>download-icon-150x150.png"
                                     alt=""
@@ -1399,8 +1399,8 @@ class Zume_Course_Content {
                                 webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
 
-                    <p class="center"><a
-                                href="<?php echo esc_url( zume_files_uri() ) ?>zume_scripts_greatest_blessing.pdf"
+                    <p class="center hide-on-small"><a
+                                href="<?php echo esc_url( Zume_Course::get_download_by_key( '46' ) ) ?>"
                                 target="_blank"><img
                                     src="<?php echo esc_url( zume_images_uri( 'course' ) ) ?>download-icon-150x150.png"
                                     alt=""
@@ -1454,8 +1454,8 @@ class Zume_Course_Content {
                                 webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
 
-                    <p class="center">
-                        <a href="<?php echo esc_url( zume_files_uri() ) ?>zume_scripts_duckling_discipleship.pdf"
+                    <p class="center hide-on-small">
+                        <a href="<?php echo esc_url( Zume_Course::get_download_by_key( '47' ) ) ?>"
                            target="_blank"><img
                                     src="<?php echo esc_url( zume_images_uri( 'course' ) ) ?>download-icon-150x150.png"
                                     alt=""
@@ -1509,8 +1509,8 @@ class Zume_Course_Content {
                                 webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
 
-                    <p class="center"><a
-                                href="<?php echo esc_url( zume_files_uri() ) ?>zume_scripts_eyes_to_see.pdf"
+                    <p class="center hide-on-small"><a
+                                href="<?php echo esc_url( Zume_Course::get_download_by_key( '48' ) ) ?>"
                                 target="_blank"><img
                                     src="<?php echo esc_url( zume_images_uri( 'course' ) ) ?>download-icon-150x150.png"
                                     alt=""
@@ -1563,8 +1563,8 @@ class Zume_Course_Content {
                                 webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
 
-                    <p class="center"><a
-                                href="<?php echo esc_url( zume_files_uri() ) ?>zume_scripts_lord_s_supper.pdf"
+                    <p class="center hide-on-small"><a
+                                href="<?php echo esc_url( Zume_Course::get_download_by_key( '49' ) ) ?>"
                                 target="_blank"><img
                                     src="<?php echo esc_url( zume_images_uri( 'course' ) ) ?>download-icon-150x150.png"
                                     alt=""
@@ -1709,8 +1709,8 @@ class Zume_Course_Content {
                                 webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
 
-                    <p class="center"><a
-                                href="<?php echo esc_url( zume_files_uri() ) ?>zume_scripts_prayer_walking.pdf"
+                    <p class="center hide-on-small"><a
+                                href="<?php echo esc_url( Zume_Course::get_download_by_key( '50' ) ) ?>"
                                 target="_blank"><img
                                     src="<?php echo esc_url( zume_images_uri( 'course' ) ) ?>download-icon-150x150.png"
                                     alt=""
@@ -1749,7 +1749,7 @@ class Zume_Course_Content {
                                 webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
 
-                    <p class="center"><a href="<?php echo esc_url( zume_files_uri() ) ?>zume_scripts_person_of_peace.pdf"
+                    <p class="center hide-on-small"><a href="<?php echo esc_url( Zume_Course::get_download_by_key( '51' ) ) ?>"
                                          target="_blank"><img
                                     src="<?php echo esc_url( zume_images_uri( 'course' ) ) ?>download-icon-150x150.png"
                                     alt=""
@@ -1922,8 +1922,8 @@ class Zume_Course_Content {
                                 webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
 
-                    <p class="center"><a
-                                href="<?php echo esc_url( zume_files_uri() ) ?>zume_scripts_faithfulness.pdf"
+                    <p class="center hide-on-small"><a
+                                href="<?php echo esc_url( Zume_Course::get_download_by_key( '52' ) ) ?>"
                                 target="_blank"><img
                                     src="<?php echo esc_url( zume_images_uri( 'course' ) ) ?>download-icon-150x150.png"
                                     alt=""
@@ -1970,8 +1970,8 @@ class Zume_Course_Content {
                                 webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
 
-                    <p class="center"><a
-                                href="<?php echo esc_url( zume_files_uri() ) ?>zume_scripts_3_3_group.pdf"
+                    <p class="center hide-on-small"><a
+                                href="<?php echo esc_url( Zume_Course::get_download_by_key( '53' ) ) ?>"
                                 target="_blank"><img
                                     src="<?php echo esc_url( zume_images_uri( 'course' ) ) ?>download-icon-150x150.png"
                                     alt=""
@@ -2144,8 +2144,8 @@ class Zume_Course_Content {
                                 webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
 
-                    <p class="center"><a
-                                href="<?php echo esc_url( zume_files_uri() ) ?>zume_scripts_training_cycle.pdf"
+                    <p class="center hide-on-small"><a
+                                href="<?php echo esc_url( Zume_Course::get_download_by_key( '54' ) ) ?>"
                                 target="_blank"><img
                                     src="<?php echo esc_url( zume_images_uri( 'course' ) ) ?>download-icon-150x150.png"
                                     alt=""
@@ -2329,8 +2329,8 @@ class Zume_Course_Content {
                                 webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
 
-                    <p class="center"><a
-                                href="<?php echo esc_url( zume_files_uri() ) ?>zume_scripts_leadership_cells.pdf"
+                    <p class="center hide-on-small"><a
+                                href="<?php echo esc_url( Zume_Course::get_download_by_key( '55' ) ) ?>"
                                 target="_blank"><img
                                     src="<?php echo esc_url( zume_images_uri( 'course' ) ) ?>download-icon-150x150.png"
                                     alt=""
@@ -2513,8 +2513,8 @@ class Zume_Course_Content {
                                 frameborder="0"
                                 webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
-                    <p class="center">
-                        <a href="<?php echo esc_url( zume_files_uri() ) ?>zume_scripts_non_sequential.pdf"
+                    <p class="center hide-on-small">
+                        <a href="<?php echo esc_url( Zume_Course::get_download_by_key( '56' ) ) ?>"
                            target="_blank" rel="noopener">
                             <img class="alignnone size-thumbnail wp-image-3274"
                                  style="vertical-align: text-bottom;"
@@ -2565,8 +2565,8 @@ class Zume_Course_Content {
                                 frameborder="0"
                                 webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
-                    <p class="center">
-                        <a  href="<?php echo esc_url( zume_files_uri() ) ?>zume_scripts_pace.pdf"
+                    <p class="center hide-on-small">
+                        <a  href="<?php echo esc_url( Zume_Course::get_download_by_key( '57' ) ) ?>"
                             target="_blank" rel="noopener"><img
                             class="alignnone size-thumbnail wp-image-3274"
                             style="vertical-align: text-bottom;"
@@ -2620,8 +2620,8 @@ class Zume_Course_Content {
                                 frameborder="0"
                                 webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
-                    <p class="center">
-                        <a  href="<?php echo esc_url( zume_files_uri() ) ?>zume_scripts_two_churches.pdf"
+                    <p class="center hide-on-small">
+                        <a  href="<?php echo esc_url( Zume_Course::get_download_by_key( '58' ) ) ?>"
                             target="_blank" rel="noopener">
                             <img class="alignnone size-thumbnail wp-image-3274"
                                 style="vertical-align: text-bottom;"
@@ -2730,24 +2730,7 @@ class Zume_Course_Content {
                     <?php esc_html_e( "Make sure all group members know how to contact the Zúme Coach that’s been assigned to your group in case anyone has questions or needs more training. Remember to share your 3-Month Plan with your Coach, so they understand your goals. Discuss any other locations where members of your group could help launch new 3/3 Groups or Zúme Training Groups. Be sure to pray as a group and ask God for His favor to bring about all the good work possible out of these plans and commitments.", 'zume' ) ?>
                 </div>
             </div>
-            <!-- grid-x -->
-            <!-- Activity Block -->
-            <!--<div class="grid-x grid-margin-x grid-margin-y">
-                <div class="large-4 cell activity-title"><?php /*esc_html_e( "SEND", 'zume' ) */?></div>
-                <div class="large-8 cell activity-description">
 
-                    <p><?php /*esc_html_e( "SUBMIT YOUR 3-MONTH PLAN", 'zume' ) */?></p>
-
-                    <?php /*esc_html_e( "Any individual in your group can go login right now (if you’re not already) and send your 3-month plan to your coach by filling out this webform. We will also email you a digital copy of your plan. Feel feel free to contact your coach to discuss your plan or ask questions at any time.", 'zume' ) */?>
-
-                    <div style="text-align: center;">
-                        <button class="button show-session-9-form" style="font-size: 20px;"><?php /*esc_html_e( "Fill in my 3-Month Plan", 'zume' ) */?>
-                        </button>
-                    </div>
-                    <div class="session-9-plan-form" style="display: none;">[session_nine_plan]</div>
-                </div>
-            </div>-->
-            <!-- grid-x -->
 
         </section><!-- Step -->
         <h3></h3>
@@ -2776,8 +2759,8 @@ class Zume_Course_Content {
                                 webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
 
-                    <p class="center">
-                        <a  href="<?php echo esc_url( zume_files_uri() ) ?>zume_scripts_completion_of_training.pdf"
+                    <p class="center hide-on-small">
+                        <a  href="<?php echo esc_url( Zume_Course::get_download_by_key( '59' ) ) ?>"
                             target="_blank" rel="noopener">
                             <img class="alignnone size-thumbnail wp-image-3274"
                                     style="vertical-align: text-bottom;"
@@ -2920,6 +2903,29 @@ class Zume_Course_Content {
                     </ol>
                 </div>
             </div> <!-- grid-x -->
+
+            <!-- Video block -->
+            <div class="grid-x grid-margin-x grid-margin-y">
+                <div class="small-12 small-centered cell">
+
+                    <iframe style="border: 1px solid lightgrey;"  src="<?php echo esc_url( Zume_Course::get_video_by_key( '28' ) ) ?>" width="560" height="315"
+                            frameborder="0"
+                            webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+
+
+                    <p class="center hide-on-small">
+                        <a  href="<?php echo esc_url( Zume_Course::get_download_by_key( '60' ) ) ?>"
+                            target="_blank">
+                            <img    src="<?php echo esc_url( zume_images_uri( 'course' ) ) ?>download-icon-150x150.png"
+                                    alt=""
+                                    width="35" height="35" class="alignnone size-thumbnail wp-image-3274"
+                                    style="vertical-align: text-bottom"/>
+                            <?php esc_html_e( "Zúme Video Scripts: Coaching Checklist", 'zume' ) ?>
+                        </a>
+                    </p>
+                </div>
+            </div> <!-- grid-x -->
+            
             <!-- Activity Block  -->
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="large-4 cell activity-title"><?php esc_html_e( 'DISCUSS', 'zume' ) ?></div>
@@ -2966,8 +2972,8 @@ class Zume_Course_Content {
                                 webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
 
-                    <p class="center">
-                        <a  href="<?php echo esc_url( zume_files_uri() ) ?>zume_scripts_leadership_in_networks.pdf"
+                    <p class="center hide-on-small">
+                        <a  href="<?php echo esc_url( Zume_Course::get_download_by_key( '61' ) ) ?>"
                             target="_blank">
                             <img    src="<?php echo esc_url( zume_images_uri( 'course' ) ) ?>download-icon-150x150.png"
                                     alt=""
@@ -3015,8 +3021,8 @@ class Zume_Course_Content {
                                 webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
 
-                    <p class="center">
-                        <a  href="<?php echo esc_url( zume_files_uri() ) ?>zume_scripts_peer_mentoring_groups.pdf"
+                    <p class="center hide-on-small">
+                        <a  href="<?php echo esc_url( Zume_Course::get_download_by_key( '62' ) ) ?>"
                             target="_blank">
                             <img    src="<?php echo esc_url( zume_images_uri( 'course' ) ) ?>download-icon-150x150.png"
                                     alt=""
@@ -3096,8 +3102,8 @@ class Zume_Course_Content {
                                         allowfullscreen></iframe>
 
 
-                            <p class="center">
-                                <a  href="<?php echo esc_url( zume_files_uri() ) ?>zume_scripts_completion_of_training.pdf"
+                            <p class="center hide-on-small">
+                                <a  href="<?php echo esc_url( Zume_Course::get_download_by_key( '59' ) ) ?>"
                                     target="_blank">
                                     <img src="<?php echo esc_url( zume_images_uri( 'course' ) ) ?>download-icon-150x150.png"
                                         alt="" width="35" height="35" class="alignnone size-thumbnail wp-image-3274"
