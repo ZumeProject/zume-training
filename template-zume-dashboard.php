@@ -253,7 +253,7 @@ $zume_highest_session = Zume_Dashboard::get_highest_session( $zume_current_user 
 }
 
                                             }; // end function ?>
-                                        <div class="large-4 cell">
+                                        <div class="medium-4 cell">
                                             <?php
                                             foreach ($zume_videos as $video) {
                                                 if ( $video["column"] == 1 ) {
@@ -262,7 +262,7 @@ $zume_highest_session = Zume_Dashboard::get_highest_session( $zume_current_user 
                                             }
                                             ?>
                                         </div>
-                                        <div class="large-4 cell">
+                                        <div class="medium-4 cell">
                                             <?php
                                             foreach ($zume_videos as $video) {
                                                 if ( $video["column"] == 2 ) {
@@ -271,7 +271,7 @@ $zume_highest_session = Zume_Dashboard::get_highest_session( $zume_current_user 
                                             }
                                             ?>
                                          </div>
-                                        <div class="large-4 cell">
+                                        <div class="medium-4 cell">
                                             <?php
                                             foreach ($zume_videos as $video) {
                                                 if ( $video["column"] == 3 ) {
@@ -533,9 +533,7 @@ $zume_highest_session = Zume_Dashboard::get_highest_session( $zume_current_user 
                             <div class="grid-x grid-margin-x">
                                 <div class="cell">
                                     <ul>
-                                        <li><?php esc_html_e( "Create a group", 'zume' ) ?><?php if ( $zume_no_groups > 0 ) {
-                                                print ' &nbsp;<span class="primary-color">&#10004;</span>';
-} ?></li>
+                                        <li><?php esc_html_e( "Create a group", 'zume' ) ?></li>
                                         <li><?php esc_html_e( "Plan a time and invite friends", 'zume' ) ?></li>
                                         <li><?php esc_html_e( "Explore the upcoming session", 'zume' ) ?></li>
                                     </ul>
