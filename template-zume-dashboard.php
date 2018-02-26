@@ -309,7 +309,7 @@ $zume_highest_session = Zume_Dashboard::get_highest_session( $zume_current_user 
 
                         </div> <!-- end call out-->
                         <!--END VIDEO SECTION -->
-                        
+
 
                     </div> <!-- End Left Column -->
 
@@ -367,6 +367,20 @@ $zume_highest_session = Zume_Dashboard::get_highest_session( $zume_current_user 
                                         <li><?php esc_html_e( "Explore the upcoming session", 'zume' ) ?></li>
                                     </ul>
                                 </div>
+                            </div>
+                        </div>
+                        <!-- END INSTRUCTIONS -->
+
+                        <!-- ********************************************************************************************* -->
+                        <!-- DOWNLOAD GUIDEBOOK -->
+                        <!-- ********************************************************************************************* -->
+                        <div class="grid-x grid-margin-x">
+                            <div class="cell center">
+                                <a class="button "
+                                   href="<?php echo esc_url( zume_files_uri() ) ?>zume-guidebook.pdf"
+                                   target="_blank" rel="noopener">
+                                    <?php esc_html_e( 'Download Guidebook', 'zume' ) ?>
+                                </a>
                             </div>
                         </div>
                         <!-- END INSTRUCTIONS -->
