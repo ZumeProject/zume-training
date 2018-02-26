@@ -71,10 +71,20 @@ function zume_site_scripts() {
             'current_user_id' => get_current_user_id(),
         )
     );
+    zume_enqueue_script( 'zume-all', 'assets/scripts/zume.js', array( 'jquery' ), true );
+    wp_localize_script(
+        "zume-all", "zumeAll", array(
+            'root' => esc_url_raw( rest_url() ),
+            'nonce' => wp_create_nonce( 'wp_rest' ),
+            'current_user_login' => wp_get_current_user()->user_login,
+            'current_user_id' => get_current_user_id(),
+        )
+    );
 
     zume_enqueue_style( 'zume-course', 'assets/styles/zume-course.css', array(), 'all' ); // Relocated into the _main.scss theme file
 
     zume_enqueue_style( 'zume_dashboard_style', 'assets/styles/zume-dashboard.css' ); // Relocated to the _main.scss in the theme
+
     wp_enqueue_style( 'foundations-icons', get_template_directory_uri() .'/assets/styles/foundation-icons/foundation-icons.css', array(), '3' );
 
 //      @todo Rebuild the statistics lookups for Zume stats

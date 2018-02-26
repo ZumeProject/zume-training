@@ -32,8 +32,12 @@ $zume_highest_session = Zume_Dashboard::get_highest_session( $zume_current_user 
         var load_iframe = function (id, src) {
             jQuery("#"+id + " iframe").attr("src", src)
         }
+        var end_video_play = function( id ) {
+            jQuery("#"+id + " iframe").attr("src", '')
+        }
+
     </script>
-    <div id="content">
+    <div id="content" class="grid-x grid-margin-x"><div class="cell">
 
         <div id="inner-content" class="grid-x grid-margin-x">
 
@@ -49,10 +53,6 @@ $zume_highest_session = Zume_Dashboard::get_highest_session( $zume_current_user 
                         <!-- Groups Management Section -->
                         <!-- ********************************************************************************************* -->
                         <div class="callout">
-                            <p class="center">
-                                <button class="button hollow small"
-                                        data-open="create"><?php echo esc_html__( 'Start New Group', 'zume' ) ?></button>
-                            </p>
                             <ul id="groups-list" class="item-list">
                                 <li class="block">
                                     <h2 class="center"><?php echo esc_html__( 'Your Groups', 'zume' ) ?></h2>
@@ -233,7 +233,7 @@ $zume_highest_session = Zume_Dashboard::get_highest_session( $zume_current_user 
                                                             webkitallowfullscreen mozallowfullscreen
                                                             allowfullscreen></iframe>
                                                     <button class="close-button" data-close aria-label="Close reveal"
-                                                            type="button">
+                                                            type="button" onclick="end_video_play( '<?php echo esc_html( $zume_video["key"] )?>' )">
                                                         <span aria-hidden="true">&times;</span>
                                                     </button>
                                                 </div>
@@ -575,7 +575,8 @@ $zume_highest_session = Zume_Dashboard::get_highest_session( $zume_current_user 
 
         </div>
 
-    </div>
+    </div> <!-- Cell div -->
+    </div> <!-- Content div -->
 
     <!-- ********************************************************************************************* -->
     <!-- Create a New Group Modal -->
