@@ -28,6 +28,11 @@ $zume_highest_session = Zume_Dashboard::get_highest_session( $zume_current_user 
 
 ?>
 
+    <script type="application/javascript">
+        var load_iframe = function (id, src) {
+            jQuery("#"+id + " iframe").attr("src", src)
+        }
+    </script>
     <div id="content">
 
         <div id="inner-content" class="grid-x grid-margin-x">
@@ -173,19 +178,58 @@ $zume_highest_session = Zume_Dashboard::get_highest_session( $zume_current_user 
                                     <span class="x-small center float-right"><?php Zume_Dashboard::get_available_videos_count( $zume_highest_session ); ?> <?php esc_html_e( 'of 32 videos', 'zume' ) ?></span>
                                     <hr>
                                     <div class="grid-x grid-margin-x"> <!-- Begin columns container -->
-                                        <div class="large-4 cell"><!-- begin first column -->
+                                        <?php
+                                            $zume_videos = [
+                                                ["name" => esc_html__( 'Promo Challenge', 'zume' ), "key" => "promo", "session" => -1, "column" => 1, "length" => "(1:41)" ],
+                                                ["name" => esc_html__( 'Overview Video', 'zume' ), "length" => "(2:07)", "key" => "overview", "session" => -1, "column" => 1 ],
+                                                ["name" => esc_html__( 'How Zúme Works', 'zume' ), "key" => "how_zume_works", "session" => -1, "column" => 1, "length" => "(3:22)" ],
+                                                ["name" => esc_html__( 'Welcome to Zume', 'zume' ), "length" => "(3:07)", "key" => "scribe_1", "session" => 1, "column" => 1 ],
+                                                ["name" => esc_html__( 'Teach Them to Obey', 'zume' ), "length" => "(4:01)", "key" => "scribe_2", "session" => 1, "column" => 1 ],
+                                                ["name" => esc_html__( 'Spiritual Breathing', 'zume' ), "length" => "(5:46)", "key" => "scribe_3", "session" => 1, "column" => 1 ],
+                                                ["name" => esc_html__( 'S.O.A.P.S Bible Reading', 'zume' ), "length" => "(3:22)", "key" => "toolkit_1", "session" => 1, "column" => 1 ],
+                                                ["name" => esc_html__( 'Accountability Groups', 'zume' ), "length" => "(1:10)", "key" => "toolkit_2", "session" => 1, "column" => 1 ],
+                                                ["name" => esc_html__( 'Producers vs Consumers', 'zume' ), "length" => "(5:33)", "key" => "scribe_4", "session" => 2, "column" => 1 ],
+                                                ["name" => esc_html__( 'Prayer Cycle', 'zume' ), "length" => "(1:10)", "key" => "toolkit_3", "session" => 2, "column" => 1 ],
+                                                ["name" => esc_html__( 'List of 100', 'zume' ), "length" => "(1:04)", "key" => "toolkit_4", "session" => 2, "column" => 1 ],
+                                                ["name" => esc_html__( 'Spiritual Economy', 'zume' ), "length" => "(2:32)", "key" => "scribe_6", "session" => 3, "column" => 2 ],
+                                                ["name" => esc_html__( 'The Gospel', 'zume' ), "length" => "(4:41)", "key" => "scribe_7", "session" => 3, "column" => 2 ],
+                                                ["name" => esc_html__( 'Baptism', 'zume' ), "length" => "(3:22)", "key" => "toolkit_6", "session" => 3, "column" => 2 ],
+                                                ["name" => esc_html__( '3 Minute Testimony', 'zume' ), "length" => "(2:26)", "key" => "toolkit_5", "session" => 4, "column" => 2 ],
+                                                ["name" => esc_html__( 'Greatest Blessing', 'zume' ), "length" => "(2:26)", "key" => "scribe_5", "session" => 4, "column" => 2 ],
+                                                ["name" => esc_html__( 'Duckling Discipleship', 'zume' ), "length" => "(3:29)", "key" => "scribe_17", "session" => 4, "column" => 2 ],
+                                                ["name" => esc_html__( 'Eyes to See', 'zume' ), "length" => "(6:08)", "key" => "scribe_8", "session" => 4, "column" => 2 ],
+                                                ["name" => esc_html__( 'Lord\'s Supper', 'zume' ), "length" => "(1:54)", "key" => "toolkit_9", "session" => 4, "column" => 2 ],
+                                                ["name" => esc_html__( 'Prayer Walking', 'zume' ), "length" => "(5:05)", "key" => "toolkit_8", "session" => 5, "column" => 2 ],
+                                                ["name" => esc_html__( 'Person of Peace', 'zume' ), "length" => "(5:45)", "key" => "scribe_18", "session" => 5, "column" => 2 ],
+                                                ["name" => esc_html__( 'Faithfulness', 'zume' ), "length" => "(5:45)", "key" => "scribe_9", "session" => 6, "column" => 3 ],
+                                                ["name" => esc_html__( '3/3 Group Format', 'zume' ), "length" => "(5:45)", "key" => "toolkit_10", "session" => 6, "column" => 3 ],
+                                                ["name" => esc_html__( '3/3 Group Live', 'zume' ), "length" => "(1:19:00)", "key" => "3_3_group", "session" => 6, "column" => 3 ],
+                                                ["name" => esc_html__( 'Training Cycle', 'zume' ), "length" => "(5:45)", "key" => "scribe_10", "session" => 7, "column" => 3 ],
+                                                ["name" => esc_html__( 'Leadership Cells', 'zume' ), "length" => "(5:45)", "key" => "scribe_11", "session" => 8, "column" => 3 ],
+                                                ["name" => esc_html__( 'Non-Sequential', 'zume' ), "length" => "(5:45)", "key" => "scribe_12", "session" => 9, "column" => 3 ],
+                                                ["name" => esc_html__( 'Pace', 'zume' ), "length" => "(5:45)", "key" => "scribe_13", "session" => 9, "column" => 3 ],
+                                                ["name" => esc_html__( 'Part of Two Churches', 'zume' ), "length" => "(5:45)", "key" => "scribe_14", "session" => 9, "column" => 3 ],
+                                                ["name" => esc_html__( 'Completion of Training', 'zume' ), "length" => "(5:45)", "key" => "scribe_16", "session" => 9, "column" => 3 ],
+                                                ["name" => esc_html__( 'Leadership in Networks', 'zume' ), "length" => "(5:45)", "key" => "scribe_15", "session" => 10, "column" => 3 ],
+                                                ["name" => esc_html__( 'Peer Mentoring Groups', 'zume' ), "length" => "(5:45)", "key" => "toolkit_11", "session" => 10, "column" => 3 ],
 
-                                            <!-- Video link and modal block -->
-                                            <div class="grid-x grid-margin-x">
+                                            ];
+                                            $zume_display_video_section = function ( $zume_video, $zume_highest_session ){
+                                                if ($zume_highest_session > $zume_video["session"] ){
+                                                ?>
+                                                <div class="grid-x grid-margin-x">
                                                 <div class="cell">
                                                     <a class="small" style="text-transform: uppercase;"
-                                                       data-open="promo"><i class="fi-play-circle secondary-color"></i> <?php esc_html_e( 'Promo Challenge', 'zume' ) ?> (1:41)</a>
+                                                       data-open="<?php echo esc_html( $zume_video["key"] )?>"
+                                                       onclick="load_iframe( '<?php echo esc_html( $zume_video["key"] )?>', '<?php echo esc_url( Zume_Course::get_video_by_key( $zume_video["key"] ) ) ?>')">
+                                                        <i class="fi-play-circle secondary-color"></i>
+                                                        <?php echo esc_html( $zume_video["name"] )?> <?php echo esc_html( $zume_video["length"] )?>
+                                                    </a>
                                                 </div>
-                                                <div class="small reveal" id="promo" data-reveal>
+                                                <div class="small reveal" id="<?php echo esc_html( $zume_video["key"] )?>" data-reveal>
                                                     <br>
-                                                    <iframe src="<?php echo esc_url( Zume_Course::get_video_by_key( 'promo' ) ) ?>"
+                                                    <iframe frameborder="0"
                                                             width="560" height="315"
-                                                            frameborder="0"
                                                             webkitallowfullscreen mozallowfullscreen
                                                             allowfullscreen></iframe>
                                                     <button class="close-button" data-close aria-label="Close reveal"
@@ -194,735 +238,36 @@ $zume_highest_session = Zume_Dashboard::get_highest_session( $zume_current_user 
                                                     </button>
                                                 </div>
                                             </div>
-                                            <!-- end block -->
 
-                                            <!-- Video link and modal block -->
-                                            <div class="grid-x grid-margin-x">
-                                                <div class="cell">
-                                                    <a class="small" style="text-transform: uppercase;"
-                                                       data-open="overview"><i class="fi-play-circle secondary-color"></i> <?php esc_html_e( 'Overview Video', 'zume' ) ?> (2:07)</a>
-                                                </div>
-                                                <div class="small reveal" id="overview" data-reveal>
-                                                    <br>
-                                                    <iframe src="<?php echo esc_url( Zume_Course::get_video_by_key( 'overview' ) ) ?>"
-                                                            width="560" height="315"
-                                                            frameborder="0"
-                                                            webkitallowfullscreen mozallowfullscreen
-                                                            allowfullscreen></iframe>
-                                                    <button class="close-button" data-close aria-label="Close reveal"
-                                                            type="button">
-                                                        <span aria-hidden="true">&times;</span>
-                                                    </button>
-                                                </div>
-                                            </div>
-                                            <!-- end block -->
-
-                                            <!-- Video link and modal block -->
-                                            <div class="grid-x grid-margin-x">
-                                                <div class="cell">
-                                                    <a class="small" style="text-transform: uppercase;"
-                                                       data-open="how_zume_works"><i class="fi-play-circle secondary-color"></i> <?php esc_html_e( 'How Zúme Works', 'zume' ) ?> (3:22)</a>
-                                                </div>
-                                                <div class="small reveal" id="how_zume_works" data-reveal>
-                                                    <br>
-                                                    <iframe src="<?php echo esc_url( Zume_Course::get_video_by_key( 'how_zume_works' ) ) ?>"
-                                                            width="560" height="315"
-                                                            frameborder="0"
-                                                            webkitallowfullscreen mozallowfullscreen
-                                                            allowfullscreen></iframe>
-                                                    <button class="close-button" data-close aria-label="Close reveal"
-                                                            type="button">
-                                                        <span aria-hidden="true">&times;</span>
-                                                    </button>
-                                                </div>
-                                            </div>
-                                            <!-- end block -->
-
-
-                                            <!--end section top-->
+                                        <?php }
+                                            }; ?>
+                                        <div class="large-4 cell">
                                             <?php
-                                            if ( $zume_highest_session > 1 ) {
-                                                ?>
-                                                <!-- Video link and modal block -->
-                                                <div class="grid-x grid-margin-x">
-                                                    <div class="cell">
-                                                        <a class="small" style="text-transform: uppercase;"
-                                                           data-open="scribe_1"><i class="fi-play-circle secondary-color"></i> <?php esc_html_e( 'Welcome to Zume', 'zume' ) ?> (3:07)</a>
-                                                    </div>
-                                                    <div class="small reveal" id="scribe_1" data-reveal>
-                                                        <br>
-                                                        <iframe src="<?php echo esc_url( Zume_Course::get_video_by_key( 'scribe_1' ) ) ?>"
-                                                                width="560" height="315"
-                                                                frameborder="0"
-                                                                webkitallowfullscreen mozallowfullscreen
-                                                                allowfullscreen></iframe>
-                                                        <button class="close-button" data-close aria-label="Close reveal"
-                                                                type="button">
-                                                            <span aria-hidden="true">&times;</span>
-                                                        </button>
-                                                    </div>
-                                                </div>
-                                                <!-- end block -->
-
-                                                <!-- Video link and modal block -->
-                                                <div class="grid-x grid-margin-x">
-                                                    <div class="cell">
-                                                        <a class="small" style="text-transform: uppercase;"
-                                                           data-open="scribe_2"><i class="fi-play-circle secondary-color"></i> <?php esc_html_e( 'Teach Them to Obey', 'zume' ) ?> (4:01)</a>
-                                                    </div>
-                                                    <div class="small reveal" id="scribe_2" data-reveal>
-                                                        <br>
-                                                        <iframe src="<?php echo esc_url( Zume_Course::get_video_by_key( 'scribe_2' ) ) ?>"
-                                                                width="560" height="315"
-                                                                frameborder="0"
-                                                                webkitallowfullscreen mozallowfullscreen
-                                                                allowfullscreen></iframe>
-                                                        <button class="close-button" data-close aria-label="Close reveal"
-                                                                type="button">
-                                                            <span aria-hidden="true">&times;</span>
-                                                        </button>
-                                                    </div>
-                                                </div>
-                                                <!-- end block -->
-
-                                                <!-- Video link and modal block -->
-                                                <div class="grid-x grid-margin-x">
-                                                    <div class="cell">
-                                                        <a class="small" style="text-transform: uppercase;"
-                                                           data-open="scribe_3"><i class="fi-play-circle secondary-color"></i> <?php esc_html_e( 'Spiritual Breathing', 'zume' ) ?> (5:46) </a>
-                                                    </div>
-                                                    <div class="small reveal" id="scribe_3" data-reveal>
-                                                        <br>
-                                                        <iframe src="<?php echo esc_url( Zume_Course::get_video_by_key( 'scribe_3' ) ) ?>"
-                                                                width="560" height="315"
-                                                                frameborder="0"
-                                                                webkitallowfullscreen mozallowfullscreen
-                                                                allowfullscreen></iframe>
-                                                        <button class="close-button" data-close aria-label="Close reveal"
-                                                                type="button">
-                                                            <span aria-hidden="true">&times;</span>
-                                                        </button>
-                                                    </div>
-                                                </div>
-                                                <!-- end block -->
-
-                                                <!-- Video link and modal block -->
-                                                <div class="grid-x grid-margin-x">
-                                                    <div class="cell">
-                                                        <a class="small" style="text-transform: uppercase;"
-                                                           data-open="toolkit_1"><i class="fi-microphone secondary-color"></i> <?php esc_html_e( 'S.O.A.P.S Bible Reading', 'zume' ) ?> (3:22)</a>
-                                                    </div>
-                                                    <div class="small reveal" id="toolkit_1" data-reveal>
-                                                        <br>
-                                                        <iframe src="<?php echo esc_url( Zume_Course::get_video_by_key( 'toolkit_1' ) ) ?>"
-                                                                width="560" height="315"
-                                                                frameborder="0"
-                                                                webkitallowfullscreen mozallowfullscreen
-                                                                allowfullscreen></iframe>
-                                                        <button class="close-button" data-close aria-label="Close reveal"
-                                                                type="button">
-                                                            <span aria-hidden="true">&times;</span>
-                                                        </button>
-                                                    </div>
-                                                </div>
-                                                <!-- end block -->
-
-                                                <!-- Video link and modal block -->
-                                                <div class="grid-x grid-margin-x">
-                                                    <div class="cell">
-                                                        <a class="small" style="text-transform: uppercase;"
-                                                           data-open="toolkit_2"><i class="fi-microphone secondary-color"></i> <?php esc_html_e( 'Accountability Groups', 'zume' ) ?> (1:10)</a>
-                                                    </div>
-                                                    <div class="small reveal" id="toolkit_2" data-reveal>
-                                                        <br>
-                                                        <iframe src="<?php echo esc_url( Zume_Course::get_video_by_key( 'toolkit_2' ) ) ?>"
-                                                                width="560" height="315"
-                                                                frameborder="0"
-                                                                webkitallowfullscreen mozallowfullscreen
-                                                                allowfullscreen></iframe>
-                                                        <button class="close-button" data-close aria-label="Close reveal"
-                                                                type="button">
-                                                            <span aria-hidden="true">&times;</span>
-                                                        </button>
-                                                    </div>
-                                                </div>
-                                                <!-- end block -->
-
-
-                                                <?php
+                                            foreach ($zume_videos as $video) {
+                                                if ( $video["column"] == 1 ) {
+                                                    $zume_display_video_section( $video, $zume_highest_session );
+                                                }
                                             }
-                                            if ( $zume_highest_session > 2 ) {
-                                                ?>
-
-                                                <!-- Video link and modal block -->
-                                                <div class="grid-x grid-margin-x">
-                                                    <div class="cell">
-                                                        <a class="small" style="text-transform: uppercase;"
-                                                           data-open="scribe_4"><i class="fi-play-circle secondary-color"></i> <?php esc_html_e( 'Producers vs Consumers', 'zume' ) ?> (5:33)</a>
-                                                    </div>
-                                                    <div class="small reveal" id="scribe_4" data-reveal>
-                                                        <br>
-                                                        <iframe src="<?php echo esc_url( Zume_Course::get_video_by_key( 'scribe_4' ) ) ?>"
-                                                                width="560" height="315"
-                                                                frameborder="0"
-                                                                webkitallowfullscreen mozallowfullscreen
-                                                                allowfullscreen></iframe>
-                                                        <button class="close-button" data-close aria-label="Close reveal"
-                                                                type="button">
-                                                            <span aria-hidden="true">&times;</span>
-                                                        </button>
-                                                    </div>
-                                                </div>
-                                                <!-- end block -->
-
-                                                <!-- Video link and modal block -->
-                                                <div class="grid-x grid-margin-x">
-                                                    <div class="cell">
-                                                        <a class="small" style="text-transform: uppercase;"
-                                                           data-open="toolkit_3"><i class="fi-microphone secondary-color"></i> <?php esc_html_e( 'Prayer Cycle', 'zume' ) ?> (1:10)</a>
-                                                    </div>
-                                                    <div class="small reveal" id="toolkit_3" data-reveal>
-                                                        <br>
-                                                        <iframe src="<?php echo esc_url( Zume_Course::get_video_by_key( 'toolkit_3' ) ) ?>"
-                                                                width="560" height="315"
-                                                                frameborder="0"
-                                                                webkitallowfullscreen mozallowfullscreen
-                                                                allowfullscreen></iframe>
-                                                        <button class="close-button" data-close aria-label="Close reveal"
-                                                                type="button">
-                                                            <span aria-hidden="true">&times;</span>
-                                                        </button>
-                                                    </div>
-                                                </div>
-                                                <!-- end block -->
-
-                                                <!-- Video link and modal block -->
-                                                <div class="grid-x grid-margin-x">
-                                                    <div class="cell">
-                                                        <a class="small" style="text-transform: uppercase;"
-                                                           data-open="toolkit_4"><i class="fi-microphone secondary-color"></i> <?php esc_html_e( 'List of 100', 'zume' ) ?> (1:04)</a>
-                                                    </div>
-                                                    <div class="small reveal" id="toolkit_4" data-reveal>
-                                                        <br>
-                                                        <iframe src="<?php echo esc_url( Zume_Course::get_video_by_key( 'toolkit_4' ) ) ?>"
-                                                                width="560" height="315"
-                                                                frameborder="0"
-                                                                webkitallowfullscreen mozallowfullscreen
-                                                                allowfullscreen></iframe>
-                                                        <button class="close-button" data-close aria-label="Close reveal"
-                                                                type="button">
-                                                            <span aria-hidden="true">&times;</span>
-                                                        </button>
-                                                    </div>
-                                                </div>
-                                                <!-- end block -->
-
-                                                <?php
-                                            }
-
-                                            // SECOND COLUMN
                                             ?>
-                                            </div> <!-- end first column-->
-                                            <div class="large-4 cell"> <!-- begin second column-->
-
+                                        </div>
+                                        <div class="large-4 cell">
                                             <?php
-                                            if ( $zume_highest_session > 3 ) {
-                                                ?>
-
-                                                <!-- Video link and modal block -->
-                                                <div class="grid-x grid-margin-x">
-                                                    <div class="cell">
-                                                        <a class="small" style="text-transform: uppercase;"
-                                                           data-open="scribe_6"><i class="fi-play-circle secondary-color"></i> <?php esc_html_e( 'Spiritual Economy', 'zume' ) ?> (2:32)</a>
-                                                    </div>
-                                                    <div class="small reveal" id="scribe_6" data-reveal>
-                                                        <br>
-                                                        <iframe src="<?php echo esc_url( Zume_Course::get_video_by_key( 'scribe_6' ) ) ?>"
-                                                                width="560" height="315"
-                                                                frameborder="0"
-                                                                webkitallowfullscreen mozallowfullscreen
-                                                                allowfullscreen></iframe>
-                                                        <button class="close-button" data-close aria-label="Close reveal"
-                                                                type="button">
-                                                            <span aria-hidden="true">&times;</span>
-                                                        </button>
-                                                    </div>
-                                                </div>
-                                                <!-- end block -->
-
-                                                <!-- Video link and modal block -->
-                                                <div class="grid-x grid-margin-x">
-                                                    <div class="cell">
-                                                        <a class="small" style="text-transform: uppercase;"
-                                                           data-open="scribe_7"><i class="fi-play-circle secondary-color"></i> <?php esc_html_e( 'The Gospel', 'zume' ) ?> (4:41)</a>
-                                                    </div>
-                                                    <div class="small reveal" id="scribe_7" data-reveal>
-                                                        <br>
-                                                        <iframe src="<?php echo esc_url( Zume_Course::get_video_by_key( 'scribe_7' ) ) ?>"
-                                                                width="560" height="315"
-                                                                frameborder="0"
-                                                                webkitallowfullscreen mozallowfullscreen
-                                                                allowfullscreen></iframe>
-                                                        <button class="close-button" data-close aria-label="Close reveal"
-                                                                type="button">
-                                                            <span aria-hidden="true">&times;</span>
-                                                        </button>
-                                                    </div>
-                                                </div>
-                                                <!-- end block -->
-
-                                                <!-- Video link and modal block -->
-                                                <div class="grid-x grid-margin-x">
-                                                    <div class="cell">
-                                                        <a class="small" style="text-transform: uppercase;"
-                                                           data-open="toolkit_6"><i class="fi-microphone secondary-color"></i> <?php esc_html_e( 'Baptism', 'zume' ) ?> (3:22)</a>
-                                                    </div>
-                                                    <div class="small reveal" id="toolkit_6" data-reveal>
-                                                        <br>
-                                                        <iframe src="<?php echo esc_url( Zume_Course::get_video_by_key( 'toolkit_6' ) ) ?>"
-                                                                width="560" height="315"
-                                                                frameborder="0"
-                                                                webkitallowfullscreen mozallowfullscreen
-                                                                allowfullscreen></iframe>
-                                                        <button class="close-button" data-close aria-label="Close reveal"
-                                                                type="button">
-                                                            <span aria-hidden="true">&times;</span>
-                                                        </button>
-                                                    </div>
-                                                </div>
-                                                <!-- end block -->
-
-                                                <?php
+                                            foreach ($zume_videos as $video) {
+                                                if ( $video["column"] == 2 ) {
+                                                    $zume_display_video_section( $video, $zume_highest_session );
+                                                }
                                             }
-
-
-                                            if ( $zume_highest_session > 4 ) {
-                                                ?>
-
-                                                <!-- Video link and modal block -->
-                                                <div class="grid-x grid-margin-x">
-                                                <div class="cell">
-                                                    <a class="small" style="text-transform: uppercase;"
-                                                       data-open="toolkit_5"><i class="fi-microphone secondary-color"></i> <?php esc_html_e( '3 Minute Testimony', 'zume' ) ?> (2:26)</a>
-                                                </div>
-                                                <div class="small reveal" id="toolkit_5" data-reveal>
-                                                    <br>
-                                                    <iframe src="<?php echo esc_url( Zume_Course::get_video_by_key( 'toolkit_5' ) ) ?>"
-                                                            width="560" height="315"
-                                                            frameborder="0"
-                                                            webkitallowfullscreen mozallowfullscreen
-                                                            allowfullscreen></iframe>
-                                                    <button class="close-button" data-close aria-label="Close reveal"
-                                                            type="button">
-                                                        <span aria-hidden="true">&times;</span>
-                                                    </button>
-                                                </div>
-                                                </div>
-                                                <!-- end block -->
-
-                                                <!-- Video link and modal block -->
-                                                <div class="grid-x grid-margin-x">
-                                                <div class="cell">
-                                                    <a class="small" style="text-transform: uppercase;"
-                                                       data-open="scribe_5"><i class="fi-play-circle secondary-color"></i> <?php esc_html_e( 'Greatest Blessing', 'zume' ) ?> (2:26)</a>
-                                                </div>
-                                                <div class="small reveal" id="scribe_5" data-reveal>
-                                                    <br>
-                                                    <iframe src="<?php echo esc_url( Zume_Course::get_video_by_key( 'scribe_5' ) ) ?>"
-                                                            width="560" height="315"
-                                                            frameborder="0"
-                                                            webkitallowfullscreen mozallowfullscreen
-                                                            allowfullscreen></iframe>
-                                                    <button class="close-button" data-close aria-label="Close reveal"
-                                                            type="button">
-                                                        <span aria-hidden="true">&times;</span>
-                                                    </button>
-                                                </div>
-                                                </div>
-                                                <!-- end block -->
-
-                                                <!-- Video link and modal block -->
-                                                <div class="grid-x grid-margin-x">
-                                                <div class="cell">
-                                                    <a class="small" style="text-transform: uppercase;"
-                                                       data-open="scribe_17"><i class="fi-play-circle secondary-color"></i> <?php esc_html_e( 'Duckling Discipleship', 'zume' ) ?> (3:29)</a>
-                                                </div>
-                                                <div class="small reveal" id="scribe_17" data-reveal>
-                                                    <br>
-                                                    <iframe src="<?php echo esc_url( Zume_Course::get_video_by_key( 'scribe_17' ) ) ?>"
-                                                            width="560" height="315"
-                                                            frameborder="0"
-                                                            webkitallowfullscreen mozallowfullscreen
-                                                            allowfullscreen></iframe>
-                                                    <button class="close-button" data-close aria-label="Close reveal"
-                                                            type="button">
-                                                        <span aria-hidden="true">&times;</span>
-                                                    </button>
-                                                </div>
-                                                </div>
-                                                <!-- end block -->
-
-                                                <!-- Video link and modal block -->
-                                                <div class="grid-x grid-margin-x">
-                                                <div class="cell">
-                                                    <a class="small" style="text-transform: uppercase;"
-                                                       data-open="scribe_8"><i class="fi-play-circle secondary-color"></i> <?php esc_html_e( 'Eyes to See', 'zume' ) ?> (6:08)</a>
-                                                </div>
-                                                <div class="small reveal" id="scribe_8" data-reveal>
-                                                    <br>
-                                                    <iframe src="<?php echo esc_url( Zume_Course::get_video_by_key( 'scribe_8' ) ) ?>"
-                                                            width="560" height="315"
-                                                            frameborder="0"
-                                                            webkitallowfullscreen mozallowfullscreen
-                                                            allowfullscreen></iframe>
-                                                    <button class="close-button" data-close aria-label="Close reveal"
-                                                            type="button">
-                                                        <span aria-hidden="true">&times;</span>
-                                                    </button>
-                                                </div>
-                                                </div>
-                                                <!-- end block -->
-
-                                                <!-- Video link and modal block -->
-                                                <div class="grid-x grid-margin-x">
-                                                <div class="cell">
-                                                    <a class="small" style="text-transform: uppercase;"
-                                                       data-open="toolkit_9"><i class="fi-microphone secondary-color"></i> <?php esc_html_e( 'Lord\'s Supper', 'zume' ) ?> (1:54)</a>
-                                                </div>
-                                                <div class="small reveal" id="toolkit_9" data-reveal>
-                                                    <br>
-                                                    <iframe src="<?php echo esc_url( Zume_Course::get_video_by_key( 'toolkit_9' ) ) ?>"
-                                                            width="560" height="315"
-                                                            frameborder="0"
-                                                            webkitallowfullscreen mozallowfullscreen
-                                                            allowfullscreen></iframe>
-                                                    <button class="close-button" data-close aria-label="Close reveal"
-                                                            type="button">
-                                                        <span aria-hidden="true">&times;</span>
-                                                    </button>
-                                                </div>
-                                                </div>
-                                                <!-- end block -->
-
-                                                <?php
-                                            }
-                                            if ( $zume_highest_session > 5 ) {
-                                                ?>
-
-                                                <!-- Video link and modal block -->
-                                                <div class="grid-x grid-margin-x">
-                                                    <div class="cell">
-                                                        <a class="small" style="text-transform: uppercase;"
-                                                           data-open="toolkit_8"><i class="fi-microphone secondary-color"></i> <?php esc_html_e( 'Prayer Walking', 'zume' ) ?> (5:05)</a>
-                                                    </div>
-                                                    <div class="small reveal" id="toolkit_8" data-reveal>
-                                                        <br>
-                                                        <iframe src="<?php echo esc_url( Zume_Course::get_video_by_key( 'toolkit_8' ) ) ?>"
-                                                                width="560" height="315"
-                                                                frameborder="0"
-                                                                webkitallowfullscreen mozallowfullscreen
-                                                                allowfullscreen></iframe>
-                                                        <button class="close-button" data-close aria-label="Close reveal"
-                                                                type="button">
-                                                            <span aria-hidden="true">&times;</span>
-                                                        </button>
-                                                    </div>
-                                                </div>
-                                                <!-- end block -->
-
-                                                <!-- Video link and modal block -->
-                                                <div class="grid-x grid-margin-x">
-                                                    <div class="cell">
-                                                        <a class="small" style="text-transform: uppercase;"
-                                                           data-open="scribe_18"><i class="fi-play-circle secondary-color"></i> <?php esc_html_e( 'Person of Peace', 'zume' ) ?> (5:45)</a>
-                                                    </div>
-                                                    <div class="small reveal" id="scribe_18" data-reveal>
-                                                        <br>
-                                                        <iframe src="<?php echo esc_url( Zume_Course::get_video_by_key( 'scribe_18' ) ) ?>"
-                                                                width="560" height="315"
-                                                                frameborder="0"
-                                                                webkitallowfullscreen mozallowfullscreen
-                                                                allowfullscreen></iframe>
-                                                        <button class="close-button" data-close aria-label="Close reveal"
-                                                                type="button">
-                                                            <span aria-hidden="true">&times;</span>
-                                                        </button>
-                                                    </div>
-                                                </div>
-                                                <!-- end block -->
-
-                                                <?php
-                                            }
-
-                                            // THIRD COLUMN
                                             ?>
-                                            </div> <!-- end second column-->
-                                            <div class="large-4 cell"> <!-- begin third column-->
-
+                                         </div>
+                                        <div class="large-4 cell">
                                             <?php
-                                            if ( $zume_highest_session > 6 ) {
-                                                ?>
-
-                                                <!-- Video link and modal block -->
-                                                <div class="grid-x grid-margin-x">
-                                                    <div class="cell">
-                                                        <a class="small" style="text-transform: uppercase;"
-                                                           data-open="scribe_9"><i class="fi-play-circle secondary-color"></i> <?php esc_html_e( 'Faithfulness', 'zume' ) ?> (5:45)</a>
-                                                    </div>
-                                                    <div class="small reveal" id="scribe_9" data-reveal>
-                                                        <br>
-                                                        <iframe src="<?php echo esc_url( Zume_Course::get_video_by_key( 'scribe_9' ) ) ?>"
-                                                                width="560" height="315"
-                                                                frameborder="0"
-                                                                webkitallowfullscreen mozallowfullscreen
-                                                                allowfullscreen></iframe>
-                                                        <button class="close-button" data-close aria-label="Close reveal"
-                                                                type="button">
-                                                            <span aria-hidden="true">&times;</span>
-                                                        </button>
-                                                    </div>
-                                                </div>
-                                                <!-- end block -->
-
-                                                <!-- Video link and modal block -->
-                                                <div class="grid-x grid-margin-x">
-                                                    <div class="cell">
-                                                        <a class="small" style="text-transform: uppercase;"
-                                                           data-open="toolkit_10"><i class="fi-play-circle secondary-color"></i> <?php esc_html_e( '3/3 Group Format', 'zume' ) ?> (5:45)</a>
-                                                    </div>
-                                                    <div class="small reveal" id="toolkit_10" data-reveal>
-                                                        <br>
-                                                        <iframe src="<?php echo esc_url( Zume_Course::get_video_by_key( 'toolkit_10' ) ) ?>"
-                                                                width="560" height="315"
-                                                                frameborder="0"
-                                                                webkitallowfullscreen mozallowfullscreen
-                                                                allowfullscreen></iframe>
-                                                        <button class="close-button" data-close aria-label="Close reveal"
-                                                                type="button">
-                                                            <span aria-hidden="true">&times;</span>
-                                                        </button>
-                                                    </div>
-                                                </div>
-                                                <!-- end block -->
-
-                                                <!-- Video link and modal block -->
-                                                <div class="grid-x grid-margin-x">
-                                                    <div class="cell">
-                                                        <a class="small" style="text-transform: uppercase;"
-                                                           data-open="3_3_group"><i class="fi-play-circle secondary-color"></i> <?php esc_html_e( '3/3 Group Live', 'zume' ) ?> (1:19:00)</a>
-                                                    </div>
-                                                    <div class="small reveal" id="3_3_group" data-reveal>
-                                                        <br>
-                                                        <iframe src="<?php echo esc_url( Zume_Course::get_video_by_key( '3_3_group' ) ) ?>"
-                                                                width="560" height="315"
-                                                                frameborder="0"
-                                                                webkitallowfullscreen mozallowfullscreen
-                                                                allowfullscreen></iframe>
-                                                        <button class="close-button" data-close aria-label="Close reveal"
-                                                                type="button">
-                                                            <span aria-hidden="true">&times;</span>
-                                                        </button>
-                                                    </div>
-                                                </div>
-                                                <!-- end block -->
-
-                                                <?php
+                                            foreach ($zume_videos as $video) {
+                                                if ( $video["column"] == 3 ) {
+                                                    $zume_display_video_section( $video, $zume_highest_session );
+                                                }
                                             }
-
-                                            if ( $zume_highest_session > 7 ) {
-                                                ?>
-
-                                                <!-- Video link and modal block -->
-                                                <div class="grid-x grid-margin-x">
-                                                    <div class="cell">
-                                                        <a class="small" style="text-transform: uppercase;"
-                                                           data-open="scribe_10"><i class="fi-play-circle secondary-color"></i> <?php esc_html_e( 'Training Cycle', 'zume' ) ?> (5:45)</a>
-                                                    </div>
-                                                    <div class="small reveal" id="scribe_10" data-reveal>
-                                                        <br>
-                                                        <iframe src="<?php echo esc_url( Zume_Course::get_video_by_key( 'scribe_10' ) ) ?>"
-                                                                width="560" height="315"
-                                                                frameborder="0"
-                                                                webkitallowfullscreen mozallowfullscreen
-                                                                allowfullscreen></iframe>
-                                                        <button class="close-button" data-close aria-label="Close reveal"
-                                                                type="button">
-                                                            <span aria-hidden="true">&times;</span>
-                                                        </button>
-                                                    </div>
-                                                </div>
-                                                <!-- end block -->
-
-                                                <?php
-                                            }
-
-                                            if ( $zume_highest_session > 8 ) {
-                                                ?>
-
-                                                <!-- Video link and modal block -->
-                                                <div class="grid-x grid-margin-x">
-                                                    <div class="cell">
-                                                        <a class="small" style="text-transform: uppercase;"
-                                                           data-open="scribe_11"><i class="fi-play-circle secondary-color"></i> <?php esc_html_e( 'Leadership Cells', 'zume' ) ?> (5:45)</a>
-                                                    </div>
-                                                    <div class="small reveal" id="scribe_11" data-reveal>
-                                                        <br>
-                                                        <iframe src="<?php echo esc_url( Zume_Course::get_video_by_key( 'scribe_11' ) ) ?>"
-                                                                width="560" height="315"
-                                                                frameborder="0"
-                                                                webkitallowfullscreen mozallowfullscreen
-                                                                allowfullscreen></iframe>
-                                                        <button class="close-button" data-close aria-label="Close reveal"
-                                                                type="button">
-                                                            <span aria-hidden="true">&times;</span>
-                                                        </button>
-                                                    </div>
-                                                </div>
-                                                <!-- end block -->
-
-                                                <?php
-                                            }
-
-                                            if ( $zume_highest_session > 9 ) {
-                                                ?>
-
-                                                <!-- Video link and modal block -->
-                                                <div class="grid-x grid-margin-x">
-                                                    <div class="cell">
-                                                        <a class="small" style="text-transform: uppercase;"
-                                                           data-open="scribe_12"><i class="fi-play-circle secondary-color"></i> <?php esc_html_e( 'Non-Sequential', 'zume' ) ?> (5:45)</a>
-                                                    </div>
-                                                    <div class="small reveal" id="scribe_12" data-reveal>
-                                                        <br>
-                                                        <iframe src="<?php echo esc_url( Zume_Course::get_video_by_key( 'scribe_12' ) ) ?>"
-                                                                width="560" height="315"
-                                                                frameborder="0"
-                                                                webkitallowfullscreen mozallowfullscreen
-                                                                allowfullscreen></iframe>
-                                                        <button class="close-button" data-close aria-label="Close reveal"
-                                                                type="button">
-                                                            <span aria-hidden="true">&times;</span>
-                                                        </button>
-                                                    </div>
-                                                </div>
-                                                <!-- end block -->
-
-                                                <!-- Video link and modal block -->
-                                                <div class="grid-x grid-margin-x">
-                                                    <div class="cell">
-                                                        <a class="small" style="text-transform: uppercase;"
-                                                           data-open="scribe_13"><i class="fi-play-circle secondary-color"></i> <?php esc_html_e( 'Pace', 'zume' ) ?> (5:45)</a>
-                                                    </div>
-                                                    <div class="small reveal" id="scribe_13" data-reveal>
-                                                        <br>
-                                                        <iframe src="<?php echo esc_url( Zume_Course::get_video_by_key( 'scribe_13' ) ) ?>"
-                                                                width="560" height="315"
-                                                                frameborder="0"
-                                                                webkitallowfullscreen mozallowfullscreen
-                                                                allowfullscreen></iframe>
-                                                        <button class="close-button" data-close aria-label="Close reveal"
-                                                                type="button">
-                                                            <span aria-hidden="true">&times;</span>
-                                                        </button>
-                                                    </div>
-                                                </div>
-                                                <!-- end block -->
-
-                                                <!-- Video link and modal block -->
-                                                <div class="grid-x grid-margin-x">
-                                                    <div class="cell">
-                                                        <a class="small" style="text-transform: uppercase;"
-                                                           data-open="scribe_14"><i class="fi-play-circle secondary-color"></i> <?php esc_html_e( 'Part of Two Churches', 'zume' ) ?> (5:45)</a>
-                                                    </div>
-                                                    <div class="small reveal" id="scribe_14" data-reveal>
-                                                        <br>
-                                                        <iframe src="<?php echo esc_url( Zume_Course::get_video_by_key( 'scribe_14' ) ) ?>"
-                                                                width="560" height="315"
-                                                                frameborder="0"
-                                                                webkitallowfullscreen mozallowfullscreen
-                                                                allowfullscreen></iframe>
-                                                        <button class="close-button" data-close aria-label="Close reveal"
-                                                                type="button">
-                                                            <span aria-hidden="true">&times;</span>
-                                                        </button>
-                                                    </div>
-                                                </div>
-                                                <!-- end block -->
-
-                                                <!-- Video link and modal block -->
-                                                <div class="grid-x grid-margin-x">
-                                                    <div class="cell">
-                                                        <a class="small" style="text-transform: uppercase;"
-                                                           data-open="scribe_16"><i class="fi-play-circle secondary-color"></i> <?php esc_html_e( 'Completion of Training', 'zume' ) ?> (5:45)</a>
-                                                    </div>
-                                                    <div class="small reveal" id="scribe_16" data-reveal>
-                                                        <br>
-                                                        <iframe src="<?php echo esc_url( Zume_Course::get_video_by_key( 'scribe_16' ) ) ?>"
-                                                                width="560" height="315"
-                                                                frameborder="0"
-                                                                webkitallowfullscreen mozallowfullscreen
-                                                                allowfullscreen></iframe>
-                                                        <button class="close-button" data-close aria-label="Close reveal"
-                                                                type="button">
-                                                            <span aria-hidden="true">&times;</span>
-                                                        </button>
-                                                    </div>
-                                                </div>
-                                                <!-- end block -->
-
-                                                <?php
-                                            }
-
-                                            if ( $zume_highest_session > 10 ) {
                                             ?>
-
-                                            <!-- Video link and modal block -->
-                                            <div class="grid-x grid-margin-x">
-                                                <div class="cell">
-                                                    <a class="small" style="text-transform: uppercase;"
-                                                       data-open="scribe_15"><i class="fi-play-circle secondary-color"></i> <?php esc_html_e( 'Leadership in Networks', 'zume' ) ?> (5:45)</a>
-                                                </div>
-                                                <div class="small reveal" id="scribe_15" data-reveal>
-                                                    <br>
-                                                    <iframe src="<?php echo esc_url( Zume_Course::get_video_by_key( 'scribe_15' ) ) ?>"
-                                                            width="560" height="315"
-                                                            frameborder="0"
-                                                            webkitallowfullscreen mozallowfullscreen
-                                                            allowfullscreen></iframe>
-                                                    <button class="close-button" data-close aria-label="Close reveal"
-                                                            type="button">
-                                                        <span aria-hidden="true">&times;</span>
-                                                    </button>
-                                                </div>
-                                            </div>
-                                            <!-- end block -->
-
-                                            <!-- Video link and modal block -->
-                                            <div class="grid-x grid-margin-x">
-                                                <div class="cell">
-                                                    <a class="small" style="text-transform: uppercase;"
-                                                       data-open="toolkit_11"><i class="fi-play-circle secondary-color"></i> <?php esc_html_e( 'Peer Mentoring Groups', 'zume' ) ?> (5:45)</a>
-                                                </div>
-                                                <div class="small reveal" id="toolkit_11" data-reveal>
-                                                    <br>
-                                                    <iframe src="<?php echo esc_url( Zume_Course::get_video_by_key( 'toolkit_11' ) ) ?>"
-                                                            width="560" height="315"
-                                                            frameborder="0"
-                                                            webkitallowfullscreen mozallowfullscreen
-                                                            allowfullscreen></iframe>
-                                                    <button class="close-button" data-close aria-label="Close reveal"
-                                                            type="button">
-                                                        <span aria-hidden="true">&times;</span>
-                                                    </button>
-                                                </div>
-                                            </div>
-                                            <!-- end block -->
-
-                                            <?php } ?><!-- Bottom section -->
-
-
-                                        </div> <!-- end third column -->
-
+                                        </div>
                                     </div> <!-- end columns container -->
                                     <?php if ( $zume_highest_session < 2 ) { ?>
                                         <div class="grid-x grid-margin-x grid-margin-y">
