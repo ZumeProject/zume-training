@@ -105,7 +105,7 @@ class Zume_Course_Content {
 
     public static function get_course_content( $session_id ) {
         ?>
-        <div class="center padding-bottom"><?php esc_html_e( 'Session', 'zume' ) ?> <?php echo esc_attr( $session_id ); ?></div>
+        <div class="center padding-bottom hide-for-small-only"><?php esc_html_e( 'Session', 'zume' ) ?> <?php echo esc_attr( $session_id ); ?></div>
 
         <script>
             jQuery(document).ready(function ($) {
@@ -193,6 +193,7 @@ class Zume_Course_Content {
             }
             ?>
         </div>
+        <div class="center padding-bottom show-for-small-only"><br><br><br><?php esc_html_e( 'Session', 'zume' ) ?> <?php echo esc_attr( $session_id ); ?></div>
         <?php
     }
 
