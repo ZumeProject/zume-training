@@ -55,7 +55,7 @@ skills. Each of these groups will be connected to a mentor/coach early in the pr
                             <img class="center" src="<?php echo esc_attr( get_stylesheet_directory_uri() ) . '/assets/images/pages/'; ?>zume-translation-infographic.png" alt="" />
                         </a>
                         <h2 style="color:#2cace2; font-weight: bold; text-align: center"><?php esc_html_e( 'YOU can help get Zúme into other languages!', 'zume' ) ?> <br>
-<?php esc_html_e( 'Donate to the translation of Zúme <a href="https://support.chasm.solutions/zumeproject" target="_blank" style="color:#8FC741">here</a>.</h2>
+<?php esc_html_e( 'Donate to the translation of Zúme', 'zume' ) ?> <a href="https://support.chasm.solutions/zumeproject" target="_blank" style="color:#8FC741">here</a>.</h2>
                     </div>
 
                 </div>
