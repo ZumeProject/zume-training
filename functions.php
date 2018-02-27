@@ -1,8 +1,6 @@
 <?php
 /**
  * Zume Project
- *
- *
  */
 require_once( 'functions/utilities/debugger-log.php' ); // debug logger used for development.
 

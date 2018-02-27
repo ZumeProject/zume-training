@@ -32,8 +32,8 @@ class Zume_Topbar_Menu_Walker extends Walker_Nav_Menu {
 function zume_off_canvas_nav() {
     wp_nav_menu(array(
          'container' => false,                           // Remove nav container
-         'menu_class' => 'vertical menu top-padding side-menu',       // Adding custom nav class
-         'items_wrap' => '<ul id="%1$s" class="%2$s" data-accordion-menu>%3$s</ul>',
+         'menu_class' => 'vertical menu top-padding',       // Adding custom nav class
+         'items_wrap' => '<ul id="%1$s" class="%2$s" data-accordion-menu data-submenu-toggle="true">%3$s</ul>',
          'theme_location' => 'main-nav',                 // Where it's located in the theme
          'depth' => 5,                                   // Limit the depth of the nav
          'fallback_cb' => false,                         // Fallback function (see below)

@@ -71,15 +71,6 @@ function zume_site_scripts() {
             'current_user_id' => get_current_user_id(),
         )
     );
-    zume_enqueue_script( 'zume-all', 'assets/scripts/zume.js', array( 'jquery' ), true );
-    wp_localize_script(
-        "zume-all", "zumeAll", array(
-            'root' => esc_url_raw( rest_url() ),
-            'nonce' => wp_create_nonce( 'wp_rest' ),
-            'current_user_login' => wp_get_current_user()->user_login,
-            'current_user_id' => get_current_user_id(),
-        )
-    );
 
     zume_enqueue_style( 'zume-course', 'assets/styles/zume-course.css', array(), 'all' ); // Relocated into the _main.scss theme file
 
