@@ -96,7 +96,7 @@ Template Name: Zume About
                             <ul style="margin-bottom: 1.8rem;">
                                 <li><?php esc_html_e( 'If you haven\'t created a login yet, please do so.', 'zume' ) ?></li>
                                 <li>
-                                    <?php esc_html_e( 'Invite 3-11 friends. You must have at least four people present, who have accepted your invitation, to start the first session.', 'zume' ) ?>
+                                    <?php esc_html_e( 'Invite 3-11 friends. A minimum group of 3-4 is needed for the practice and elements of the training.', 'zume' ) ?>
                                 </li>
                                 <li><?php esc_html_e( 'Schedule a time to get together with your friends.', 'zume' ) ?></li>
                                 <li><?php esc_html_e( 'Make sure you have access to an internet-enabled device.', 'zume' ) ?></li>

@@ -15,9 +15,8 @@ Template Name: Zume FAQ
 
             <div class="large-8 small-12 cell">
 
-                <div class="grid-x grid-margin-y">
+                <div class="grid-x grid-margin-y grid-padding-y">
                     <div class="cell center">
-                        <br>
                         <h2><?php esc_html_e( 'Zume FAQs', 'zume' ) ?></h2>
                     </div>
                 </div>
@@ -85,21 +84,14 @@ Template Name: Zume FAQ
                     <div class="cell">
                         <hr>
                         <h3 class="secondary"><?php esc_html_e( 'I accidentally hit the next button and I want to go back and view a video again. How do I navigate?', 'zume' ) ?></h3>
-                        <?php esc_html_e( 'The navigation is via the boxes toward the top of the screen. Those represent the steps of the session. Navigation between sessions is via the small arrows next to the session number at the top of the page in a large font: < Session 2 >, for example.', 'zume' ) ?>
+                        <?php esc_html_e( 'Use the "Previous" and "Next" buttons at the bottom of the session to navigate through the session. From the Dashboard you can click the session number of the group and go directly to that session.', 'zume' ) ?>
                     </div>
 
                     <!-- Item -->
                     <div class="cell">
                         <hr>
-                        <h3 class="secondary"><?php esc_html_e( 'There are lots of DMM or CPM trainers; why is Zúme needed?', 'zume' ) ?></h3>
-                        <?php esc_html_e( 'Live training is better than online training. Online training should never replace live training events. Unfortunately, due to limitations of access, awareness, availability, scheduling, and many other reasons, many people who can and should have access to live training events don’t have access. Zúme is an attempt to provide a high-quality entry level substitute for such people. It uses the same principles as many of the live training types available from others.', 'zume' ) ?>
-                    </div>
-
-                    <!-- Item -->
-                    <div class="cell">
-                        <hr>
-                        <h3 class="secondary"><?php esc_html_e( 'I speak English but live outside the USA. How can I participate?', 'zume' ) ?></h3>
-                        <?php esc_html_e( 'Right now, you need to provide some USA-based address for the system to work. This will not be true once Phase 3 is begun in other English-speaking countries.', 'zume' ) ?>
+                        <h3 class="secondary"><?php esc_html_e( 'There are lots of DMM or CPM trainers, so why is Zúme needed?', 'zume' ) ?></h3>
+                        <?php esc_html_e( 'Live training is better than online training. Online training should never replace live training events. Unfortunately, due to limitations of access, awareness, availability, scheduling, and many other reasons, many people who can and should have access to live training events don’t have access. Zúme is an attempt to provide a high-quality entry level substitute for such people. It uses the same principles as many of the live training types available from others. In addition, we find that once a person is trained with Zúme, they can very easily turn around and launch their own group and facilitate training for others using Zúme. This is a powerful opportunity for multiplying disciple-making principles.', 'zume' ) ?>
                     </div>
 
                     <!-- Item -->
@@ -112,67 +104,55 @@ Template Name: Zume FAQ
                     <!-- Item -->
                     <div class="cell">
                         <hr>
-                        <h3 class="secondary"><?php esc_html_e( 'Where can I view the promo video?', 'zume' ) ?></h3>
-                        <?php esc_html_e( 'Hover over the “About” tab and click “Resources”.', 'zume' ) ?>
-                    </div>
-
-                    <!-- Item -->
-                    <div class="cell">
-                        <hr>
                         <h3 class="secondary"><?php esc_html_e( 'How does the coaching work?', 'zume' ) ?></h3>
-                        <?php esc_html_e( 'Shortly after your group is registered, you will have a coach assigned. On each page of the training there is a link at the bottom of the page that enables you to send a message to your coach. They will respond at their earliest convenience. If for some reason you cannot get responses from your coach then send a request via the form at the bottom of the landing page at zumeproject.com.', 'zume' ) ?>
+                        <?php esc_html_e( 'Shortly after your group is registered, your account will be connected to a coach either by location or language. Our coaches are active disciple-makers who are practicing the principles in Zúme. Being coached is optional, but to grow to the most fruitful disciple you can be, you will need to find those who can help you get there. The Zúme network will attempt to match you with someone who can help you get there.', 'zume' ) ?>
                     </div>
 
                     <!-- Item -->
                     <div class="cell">
                         <hr>
                         <h3 class="secondary"><?php esc_html_e( 'Can I do the training by myself?', 'zume' ) ?></h3>
-                        <?php esc_html_e( 'No. There are essential training exercises and practice sessions which require other participants to complete. At least four people need to be present at every session.', 'zume' ) ?>
+                        <?php esc_html_e( 'No. There are essential training exercises and practice sessions which require other participants to complete. At least 3-4 people need to be present at every session, or you will not be able to experience the full training.', 'zume' ) ?>
                     </div>
 
                     <!-- Item -->
                     <div class="cell">
                         <hr>
                         <h3 class="secondary"><?php esc_html_e( 'Who is the training appropriate for?', 'zume' ) ?></h3>
-                        <?php esc_html_e( 'The training is appropriate for English speaking followers of Christ who are 13-years-old or older and who are able to read. In the future, there may be a version produced that is appropriate for non-literate people, but this is not that version. We believe every person who fits this profile should take the training.', 'zume' ) ?>
+                        <?php esc_html_e( 'The training is appropriate for followers of Christ who are 13-years-old or older and who are able to read. In the future, there may be a version produced that is appropriate for non-literate people, but this is not that version. We believe every person who fits this profile should take the training.', 'zume' ) ?>
                     </div>
 
                     <!-- Item -->
                     <div class="cell">
                         <hr>
                         <h3 class="secondary"><?php esc_html_e( 'Who owns Zúme?', 'zume' ) ?></h3>
-                        <?php esc_html_e( 'There is no organization that is “running” the Zúme Project and the project is not an organization. It is a coalition of people who have a heart to carry out Christ’s command to make disciples of every people group on earth and expand His Kingdom to every place until His will is done on earth as it is in heaven. The idea for the project originated in a meeting of the Jonathan Project leadership but has since spread far beyond that group. The Jonathan Project (https://hill111.com) is a consortium of people committed to multiplying disciples around the world.', 'zume' ) ?>
+                        <?php esc_html_e( 'There is no organization that is “running” the Zúme Project and the project is not an organization. It is a coalition of people who have a heart to carry out Christ’s command to make disciples of every people group on earth and expand His Kingdom to every place until His will is done on earth as it is in heaven. The idea for the project originated in a meeting of the Jonathan Project leadership but has since spread far beyond that group. The Jonathan Project is a consortium of people committed to multiplying disciples around the world.', 'zume' ) ?>
                     </div>
 
                     <!-- Item -->
                     <div class="cell">
                         <hr>
                         <h3 class="secondary"><?php esc_html_e( 'What are the three phases that are planned?', 'zume' ) ?></h3>
-                        <?php esc_html_e( 'PHASE 1', 'zume' ) ?>
-                        <?php esc_html_e( 'Focuses on the United States in English. The initial goal is for there to be a training group of four to twelve people in each census tract in the country. Each of these training groups will start two first-generation churches which will then begin to reproduce. There are about 75,000 census tracts so this will mean 150,000 first-generation churches.', 'zume' ) ?>
-                        <?php esc_html_e( 'PHASE 2', 'zume' ) ?>
-                        <?php esc_html_e( 'Focuses on other language groups in the United States. The data available through www.mappingcenter.com will be mapped to the census tract level so it will be easy for those working in each of the census tracts to determine which of the target languages are significantly represented within their local area and seek to start training groups in the appropriate languages. These training groups can then start first-generation churches in those language groups.', 'zume' ) ?>
-                        <?php esc_html_e( 'PHASE 3', 'zume' ) ?>
-                        <?php esc_html_e( 'Focuses globally in major world languages. The framework for targeting the training groups is based on the 4K maps developed by YWAM. It divides the world into segments based on population and the general level of gospel saturation, with less evangelized areas receiving about three times the attention of more evangelized areas. For more information on the framework go to http://www.4Kworldmap.com. The project will use the next generation of the data, 4K Plus, which will divide the world into about 60,000 Omega Districts. There will be training groups started in each Omega District which will then launch first-generation churches within the districts. In the least evangelized areas this will be a training group for approximately every 50,000 people.', 'zume' ) ?>
+                        <p>
+                            <strong><?php esc_html_e( 'PHASE 1', 'zume' ) ?>:</strong><br>
+                            <?php esc_html_e( 'Focuses on the United States in English. The initial goal is for there to be a training group of four to twelve people in each census tract in the country. Each of these training groups will start two first-generation churches which will then begin to reproduce. There are about 75,000 census tracts so this will mean 150,000 first-generation churches.', 'zume' ) ?>
+                        </p>
+                        <p>
+                            <strong><?php esc_html_e( 'PHASE 2', 'zume' ) ?>:</strong><br>
+                            <?php esc_html_e( 'The second phase will include coaching these Phase One churches through the reproduction process, as well as delivering the project in other major world languages. The project will start in the following languages: Arabic, Bengali, Bhojpuri, Burmese, Chinese (Mandarin), Chinese (Cantonese), Farsi, French, German, Gujarati, Hausa, Hindi, Indonesian, Italian, Japanese, Kannada, Korean, Maithili, Malayalam, Marathi, Oriya, Panjabi (Eastern), Panjabi (Western), Portuguese, Russian, Spanish, Swahili, Tamil, Telugu, Thai, Turkish, Urdu, Vietnamese, Yoruba.', 'zume' ) ?>
+
+                        </p>
+                        <p>
+                            <strong><?php esc_html_e( 'PHASE 3', 'zume' ) ?>:</strong><br>
+                            <?php esc_html_e( 'Focuses globally in major world languages. The framework for targeting the training groups is based on the 4K maps developed by YWAM. It divides the world into segments based on population and the general level of gospel saturation, with less evangelized areas receiving about three times the attention of more evangelized areas. For more information on the framework go to www.4Kworldmap.com. The project will use the next generation of the data, 4K Plus, which will divide the world into about 60,000 Omega Districts. There will be training groups started in each Omega District which will then launch first-generation churches within the districts. In the least evangelized areas this will be a training group for approximately every 50,000 people.', 'zume' ) ?>
+                        </p>
                     </div>
 
                     <!-- Item -->
                     <div class="cell">
                         <hr>
                         <h3 class="secondary"><?php esc_html_e( 'Why is it called Zúme?', 'zume' ) ?></h3>
-                        <?php esc_html_e( 'Zúme means yeast in Greek. In Matthew 13:33 Jesus is quoted as saying, “the Kingdom of Heaven is like a woman who took yeast and mixed it into a large amount of flour until it was all leavened.” This illustrates how ordinary people, using ordinary resources, can have an extraordinary impact for the Kingdom of God. Zúme aims to equip and empower ordinary believers to reach every neighborhood.', 'zume' ) ?>
-                    </div>
-                    <!-- Item -->
-                    <div class="cell">
-                        <hr>
-                        <h3 class="secondary"><?php esc_html_e( 'I really want to support Zúme financially because I passionately believe in it. How can I give?', 'zume' ) ?></h3>
-                        <?php esc_html_e( 'That is how everything about Zúme has happened so far. We’re glad you feel the same way about it that we do. Biglife has agreed to handle donations for the project for free. You can donate at big.life/donate/ if you select “Zúme Project” as the designation for your gift.', 'zume' ) ?>
-                    </div>
-                    <!-- Item -->
-                    <div class="cell">
-                        <hr>
-                        <h3 class="secondary"><?php esc_html_e( 'When will the other 34 language versions become available?', 'zume' ) ?></h3>
-                        <?php esc_html_e( 'First we want to iron out the kinks in English for a few months. Then it depends on how quickly we can raise funds for the translations, and how quickly we can locate appropriate translators, and how quickly they can work. Hopefully the kinks will be worked out by May 2017. The translation process is tricky because of all the voiceovers and the retiming of the videos so we are only guessing at the cost per language but we are hoping for about $7,000 per language. If you want to fund a particular language or pay for a language we haven’t planned on then you can designate contributions for that language.', 'zume' ) ?>
+                        <?php esc_html_e( 'Zúme means yeast in Greek. In Matthew 13:33 Jesus is quoted as saying, “The Kingdom of Heaven is like a woman who took yeast and mixed it into a large amount of flour until it was all leavened.” This illustrates how ordinary people, using ordinary resources, can have an extraordinary impact for the Kingdom of God. Zúme aims to equip and empower ordinary believers to reach every neighborhood.', 'zume' ) ?>
                     </div>
                     <!-- Item -->
                     <div class="cell">
@@ -186,8 +166,6 @@ Template Name: Zume FAQ
                         <h3 class="secondary"><?php esc_html_e( 'How are the groups started by trainees aligned or organized?', 'zume' ) ?></h3>
                         <?php esc_html_e( 'It depends. If the trainees come out of a particular church or denomination or network then the most natural thing is for the newly formed groups to be connected with those existing churches, denomination, or network. If desired, however, a new network can be formed from the groups that start. A third alternative would be for the new groups to join with other already existing networks of simple churches. Many of the people involved in developing Zúme come from such networks so we can help arrange that if desired.', 'zume' ) ?>
                     </div>
-
-
                 </div> <!-- end faq stack of questions-->
 
             </div>

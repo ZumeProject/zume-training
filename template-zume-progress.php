@@ -10,11 +10,16 @@ get_header();
 <div id="content" class="grid-x grid-padding-x"><div class="cell">
     <div id="inner-content" class="grid-x grid-margin-x">
         <div class="cell">
+            <div class="grid-x grid-margin-y grid-padding-y">
+                <div class="cell center">
+                    <h2 ><?php esc_html_e( 'Progress', 'zume' ) ?></h2>
+                </div>
+            </div>
 
             <!-- Phase 1 Title -->
-            <div class="grid-x grid-margin-x grid-margin-y vertical-padding" >
+            <div class="grid-x grid-margin-x grid-margin-y " >
                 <div class="medium-12 small-12 cell center">
-                    <h3 class="blue-ribbon">
+                    <h3 class="blue-ribbon secondary">
                         <strong><?php esc_html_e( 'Phase 1', 'zume' ) ?></strong>
                     </h3>
                 </div>
@@ -24,12 +29,10 @@ get_header();
             <div class="grid-x grid-margin-x " >
                 <div class="medium-2 small-1 cell"></div>
                 <div class="medium-8 small-10 cell">
-                    <p><?php esc_attr_e('The first phase of the project is will be designed for use in the United States and will be presented in English. We will attempt to get a training group to be equipped in basic disciple-multiplication
-skills. Each of these groups will be connected to a mentor/coach early in the process to provide encouragement, support, and accountability.', 'zume') ?></p>
+                    <p>
+                        <?php esc_html_e( 'Focuses on the United States in English. The initial goal is for there to be a training group of four to twelve people in each census tract in the country. Each of these training groups will start two first-generation churches which will then begin to reproduce. There are about 75,000 census tracts so this will mean 150,000 first-generation churches.', 'zume' ) ?>
+                    </p>
 
-
-
-                    <!--<div id="group-markers" style="width: 100%; height: 600px;"></div>-->
 
                 </div>
                 <div class="medium-2 small-1 cell"></div>
@@ -38,7 +41,7 @@ skills. Each of these groups will be connected to a mentor/coach early in the pr
             <!-- Phase 2 Title -->
             <div class="grid-x grid-margin-x grid-margin-y vertical-padding" >
                 <div class="medium-12 small-12 cell center">
-                    <h3 class="blue-ribbon">
+                    <h3 class="blue-ribbon secondary">
                         <strong><?php esc_html_e( 'Phase 2', 'zume' ) ?></strong>
                     </h3>
                 </div>
@@ -48,14 +51,16 @@ skills. Each of these groups will be connected to a mentor/coach early in the pr
             <div class="grid-x grid-margin-x " >
                 <div class="medium-2 small-1 cell"></div>
                 <div class="medium-8 small-10 cell">
-                    <p><?php esc_attr_e( 'The second phase will be coaching these Phase One churches through the reproduction process and delivering the project in other major world languages in the USA.', 'zume' ) ?></p>
+                    <p>
+                        <?php esc_html_e( 'The second phase will include coaching these Phase One churches through the reproduction process, as well as delivering the project in other major world languages. The project will start in the following languages: Arabic, Bengali, Bhojpuri, Burmese, Chinese (Mandarin), Chinese (Cantonese), Farsi, French, German, Gujarati, Hausa, Hindi, Indonesian, Italian, Japanese, Kannada, Korean, Maithili, Malayalam, Marathi, Oriya, Panjabi (Eastern), Panjabi (Western), Portuguese, Russian, Spanish, Swahili, Tamil, Telugu, Thai, Turkish, Urdu, Vietnamese, Yoruba.', 'zume' ) ?>
+                    </p>
 
                     <div style="text-align: center">
                         <a href="https://support.chasm.solutions/zumeproject" target="_blank">
                             <img class="center" src="<?php echo esc_attr( get_stylesheet_directory_uri() ) . '/assets/images/pages/'; ?>zume-translation-infographic.png" alt="" />
                         </a>
                         <h2 style="color:#2cace2; font-weight: bold; text-align: center"><?php esc_html_e( 'YOU can help get Zúme into other languages!', 'zume' ) ?> <br>
-                        <?php esc_html_e( 'Donate to the translation of Zúme', 'zume' ) ?> <a href="https://support.chasm.solutions/zumeproject" target="_blank" style="color:#8FC741">here</a>.</h2>
+                            <a href="https://support.chasm.solutions/zumeproject" target="_blank" ><?php esc_html_e( 'Donate to the translation of Zúme', 'zume' ) ?></a></h2>
                     </div>
 
                 </div>
@@ -65,7 +70,7 @@ skills. Each of these groups will be connected to a mentor/coach early in the pr
             <!-- Phase 3 Title -->
             <div class="grid-x grid-margin-x grid-margin-y vertical-padding" >
                 <div class="medium-12 small-12 cell center">
-                    <h3 class="blue-ribbon">
+                    <h3 class="blue-ribbon secondary">
                         <strong><?php esc_html_e( 'Phase 3', 'zume' ) ?></strong>
                     </h3>
                 </div>
@@ -75,7 +80,9 @@ skills. Each of these groups will be connected to a mentor/coach early in the pr
             <div class="grid-x grid-margin-x " >
                 <div class="medium-2 small-1 cell"></div>
                 <div class="medium-8 small-10 cell">
-                    <p><?php esc_attr_e( 'The third phase will be to launch the process globally and in many other languages around the world, and to coach the second-phase multi-lingual churches through the reproduction process.', 'zume' ) ?></p>
+                    <p>
+                        <?php esc_html_e( 'Focuses globally in major world languages. The framework for targeting the training groups is based on the 4K maps developed by YWAM. It divides the world into segments based on population and the general level of gospel saturation, with less evangelized areas receiving about three times the attention of more evangelized areas. For more information on the framework go to www.4Kworldmap.com. The project will use the next generation of the data, 4K Plus, which will divide the world into about 60,000 Omega Districts. There will be training groups started in each Omega District which will then launch first-generation churches within the districts. In the least evangelized areas this will be a training group for approximately every 50,000 people.', 'zume' ) ?>
+                    </p>
 
                 </div>
                 <div class="medium-2 small-1 cell"></div>
@@ -88,7 +95,7 @@ skills. Each of these groups will be connected to a mentor/coach early in the pr
                     <div class="grid-x grid-margin-x grid-padding-x grid-margin-y">
                         <div class="large-2 cell"></div>
                         <div class="cell large-8" style="color: white;">
-                            <h3 style="color: white;"><?php esc_html_e( 'Goals of the Zúme Project:', 'zume' ) ?></h3>
+                            <h3 class="secondary" style="color: white;"><?php esc_html_e( 'Goals of the Zúme Project:', 'zume' ) ?></h3>
                             <p>
                                 <?php esc_html_e( 'Zúme means yeast in Greek. In Matthew 13:33, Jesus is quoted as saying, "The Kingdom of Heaven is like a woman who took yeast and mixed it into a large amount of flour until it was all leavened." This illustrates how ordinary people, using ordinary resources, can have an extraordinary impact for the Kingdom of God. Zúme aims to equip and empower ordinary believers to reach every neighborhood.', 'zume' ) ?>
                             </p>

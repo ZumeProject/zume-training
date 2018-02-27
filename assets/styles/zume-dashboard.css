@@ -461,3 +461,12 @@ select {
 .off-canvas li.is-submenu-item {
     padding-left: 1em;
 }
+
+@media only screen and (max-width: 639px) {
+    h2 {
+        font-size: 2em;
+    }
+    h3.secondary {
+        font-size: 1.5em;
+    }
+}
