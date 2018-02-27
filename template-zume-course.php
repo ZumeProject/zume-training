@@ -230,7 +230,7 @@ class Zume_Course_Content {
                     <div class="small-4 cell"></div>
                     <div class="small-4 cell center">
                         <form action="" method="post">
-                            <label for="members"><?php esc_html_e( 'How many are with you?', 'zume' ) ?></label>
+                            <p><label for="members"><?php esc_html_e( 'How many are with you?', 'zume' ) ?></label>
                             <select id="members" name="members">
                                 <?php
                                 $zume_group_meta = maybe_unserialize( $zume_group_meta );
@@ -244,8 +244,8 @@ class Zume_Course_Content {
                                     $i ++;
                                 }
                                 ?>
-                            </select>
-                            <button type="submit" name="viewing" class="button" value="group"><?php esc_html_e( 'Continue', 'zume' ) ?></button>
+                            </select></p>
+                            <p><button type="submit" name="viewing" class="button" value="group"><?php esc_html_e( 'Continue', 'zume' ) ?></button></p>
                         </form>
                     </div>
                     <div class="small-4 cell"></div>
@@ -258,7 +258,7 @@ class Zume_Course_Content {
                     <div class="small-4 cell"></div>
                     <div class="small-4 cell center">
                         <form action="" method="post">
-                            <label for="members"><?php esc_html_e( 'How many are in your group?', 'zume' ) ?></label>
+                            <p><label for="members"><?php esc_html_e( 'How many are in your group?', 'zume' ) ?></label>
                             <select id="members" name="members">
                                 <?php
                                 $zume_group_meta = maybe_unserialize( $zume_group_meta );
@@ -272,8 +272,8 @@ class Zume_Course_Content {
                                     $i ++;
                                 }
                                 ?>
-                            </select>
-                            <button type="submit" name="viewing" class="button" value="member"><?php esc_html_e( 'Continue', 'zume' ) ?></button>
+                            </select></p>
+                            <p><button type="submit" name="viewing" class="button" value="member"><?php esc_html_e( 'Continue', 'zume' ) ?></button></p>
                         </form>
                     </div>
                     <div class="small-4 cell"></div>
@@ -520,7 +520,7 @@ class Zume_Course_Content {
                                     src="<?php echo esc_url( zume_images_uri( 'course' ) ) ?>download-icon-150x150.png"
                                     alt=""
                                     width="35" height="35" class="alignnone size-thumbnail wp-image-3274"
-                                    style="vertical-align: text-bottom"/> <?php esc_html_e( 'Zúme Video Scripts: SOAPS', 'zume' ) ?></a></p>
+                                    style="vertical-align: text-bottom"/> <?php esc_html_e( 'Zúme Video Scripts: S.O.A.P.S.', 'zume' ) ?></a></p>
                 </div>
             </div>
             <!-- grid-x -->
