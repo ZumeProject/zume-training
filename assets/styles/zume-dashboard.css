@@ -470,3 +470,10 @@ select {
         font-size: 1.5em;
     }
 }
+
+.dropdown.menu.medium-horizontal>li.is-dropdown-submenu-parent.active>a:after {
+    border-color: white transparent transparent;
+}
+.dropdown.menu.medium-horizontal>li.is-dropdown-submenu-parent:hover>a:after {
+    border-color: white transparent transparent;
+}
