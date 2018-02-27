@@ -46,7 +46,7 @@ Template Name: Zume About
             <!-- Goals -->
             <div class="grid-x">
                 <div class="cell vertical-padding" style="background-color:#323A68;">
-                    <div class="grid-x grid-margin-x grid-margin-y">
+                    <div class="grid-x grid-margin-x grid-padding-x grid-margin-y">
                         <div class="large-2 cell"></div>
                         <div class="cell large-8" style="color: white;">
                             <h3 style="color: white;"><?php esc_html_e( 'Goals of the Zúme Project:', 'zume' ) ?></h3>
@@ -68,13 +68,13 @@ Template Name: Zume About
                 <div class="medium-2 cell"></div>
                 <div class="medium-8 cell ">
 
-                    <div class="grid-x  vertical-padding">
-                        <div class="large-4 cell ">
+                    <div class="grid-x grid-padding-x grid-padding-y">
+                        <div class="large-4 cell center">
                             <img src="<?php echo esc_url( zume_images_uri( 'pages' ) ) ?>training2.png"
-                                 alt="Zúme in 10 sessions, 2 hours each, cost: free" height="150"/>
+                                 alt="Zúme consists of 10 sessions, 2 hours each" height="150"/>
                         </div>
                         <div class="large-8 cell ">
-                            <h3><?php esc_html_e( 'Zúme Training consists of nine (two-hour) Basic Sessions and includes:', 'zume' ) ?></h3>
+                            <h3><?php esc_html_e( 'Zúme consists of 10 sessions, 2 hours each', 'zume' ) ?>:</h3>
                             <ul>
                                 <li><?php esc_html_e( 'Video and Audio to help your group understand basic principles of multiplying disciples.', 'zume' ) ?></li>
                                 <li><?php esc_html_e( 'Group Discussions to help your group think through what’s being shared.', 'zume' ) ?></li>
@@ -86,8 +86,8 @@ Template Name: Zume About
                     </div>
 
 
-                    <div class="grid-x grid-margin-x grid-margin-y vertical-padding">
-                        <div class="medium-4 cell ">
+                    <div class="grid-x grid-padding-x grid-padding-y">
+                        <div class="medium-4 cell center">
                             <img src="<?php echo esc_url( zume_images_uri( 'pages' ) ) ?>getstarted.png"
                                  alt="" width="230" height="150"/>
                         </div>
@@ -104,13 +104,13 @@ Template Name: Zume About
                         </div>
                     </div>
 
-                    <div class="grid-x grid-margin-x grid-margin-y vertical-padding">
-                        <div class="medium-4 cell ">
+                    <div class="grid-x grid-padding-x grid-padding-y">
+                        <div class="medium-4 cell center">
                             <img src="<?php echo esc_url( zume_images_uri( 'pages' ) ) ?>guidebook.png"
                                  alt=""
                                  width="230" height="150"/>
                         </div>
-                        <div class="medium-8 cell">
+                        <div class="medium-8 cell ">
                             <h3><?php esc_html_e( 'Optional prep for your first meeting:', 'zume' ) ?></h3>
                             <ul>
                                 <li><?php esc_html_e( 'Download the Zúme Guidebook.', 'zume' ) ?></li>

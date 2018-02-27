@@ -85,7 +85,7 @@ skills. Each of these groups will be connected to a mentor/coach early in the pr
             <!-- Goals of the Zume Project -->
             <div class="grid-x">
                 <div class="cell vertical-padding" style="background-color:#323A68;">
-                    <div class="grid-x grid-margin-x grid-margin-y">
+                    <div class="grid-x grid-margin-x grid-padding-x grid-margin-y">
                         <div class="large-2 cell"></div>
                         <div class="cell large-8" style="color: white;">
                             <h3 style="color: white;"><?php esc_html_e( 'Goals of the Zúme Project:', 'zume' ) ?></h3>
