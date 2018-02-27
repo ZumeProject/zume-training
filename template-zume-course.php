@@ -2648,7 +2648,10 @@ class Zume_Course_Content {
         <section><!-- Step Title -->
             <div class="grid-x grid-margin-x grid-margin-y">
 
-                <div class="step-title cell"><?php esc_html_e( "CREATE A 3-MONTH PLAN (30min)", 'zume' ) ?></div>
+                <div class="step-title cell"><?php esc_html_e( "ACTIVITY (30min)", 'zume' ) ?></div>
+                <div class="step-title center cell">
+                    <?php esc_html_e( "CREATE A 3-MONTH PLAN", 'zume' ) ?>
+                </div>
                 <!-- step-title cell -->
                 <div class="center">
 
@@ -2695,7 +2698,7 @@ class Zume_Course_Content {
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="step-title cell"><?php esc_html_e( "ACTIVITY (30min)", 'zume' ) ?></div>
                 <!-- step-title cell -->
-                <div class="center vertical-padding">
+                <div class="step-title center cell">
                     <?php esc_html_e( "SHARE YOUR PLAN AND PLAN AS A TEAM.", 'zume' ) ?>
                 </div>
             </div>
@@ -2752,26 +2755,26 @@ class Zume_Course_Content {
                     <?php esc_html_e( "You may not know it, but you now have more practical training on starting simple churches and making disciples who multiply than many pastors and missionaries around the world! Watch the following video and celebrate all that you've learned!", 'zume' ) ?>
                 </div>
             </div>
-            <div class="grid-x grid-margin-x grid-margin-y">
+            <!--<div class="grid-x grid-margin-x grid-margin-y">
                 <div class="small-12 small-centered cell">
 
-                        <iframe style="border: 1px solid lightgrey;"  src="<?php echo esc_url( Zume_Course::get_video_by_key( '27' ) ) ?>" width="560" height="315"
+                        <iframe style="border: 1px solid lightgrey;"  src="<?php /*echo esc_url( Zume_Course::get_video_by_key( '27' ) ) */?>" width="560" height="315"
                                 frameborder="0"
                                 webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
 
                     <p class="center hide-for-small-only">
-                        <a  href="<?php echo esc_url( Zume_Course::get_download_by_key( '59' ) ) ?>"
+                        <a  href="<?php /*echo esc_url( Zume_Course::get_download_by_key( '59' ) ) */?>"
                             target="_blank" rel="noopener noreferrer">
                             <img class="alignnone size-thumbnail wp-image-3274"
                                     style="vertical-align: text-bottom;"
-                                    src="<?php echo esc_url( zume_images_uri( 'course' ) ) ?>download-icon-150x150.png"
+                                    src="<?php /*echo esc_url( zume_images_uri( 'course' ) ) */?>download-icon-150x150.png"
                                     alt="" width="35" height="35"/>
-                            <?php esc_html_e( "Zúme Video Scripts: Completion of Training", 'zume' ) ?>
+                            <?php /*esc_html_e( "Zúme Video Scripts: Completion of Training", 'zume' ) */?>
                         </a>
                     </p>
                 </div>
-            </div>
+            </div>-->
             <!-- grid-x -->
             <!-- Activity Block -->
             <div class="grid-x grid-margin-x grid-margin-y">
@@ -2800,13 +2803,13 @@ class Zume_Course_Content {
 
             <!-- grid-x -->
             <!-- Activity Block -->
-            <div class="grid-x grid-margin-x grid-margin-y">
-                <div class="large-4 cell activity-title"><?php esc_html_e( 'BONUS', 'zume' ) ?></div>
-                <div class="large-8 cell activity-description"><?php esc_html_e( "Check out", 'zume' ) ?>
+            <!--<div class="grid-x grid-margin-x grid-margin-y">
+                <div class="large-4 cell activity-title"><?php /*esc_html_e( 'BONUS', 'zume' ) */?></div>
+                <div class="large-8 cell activity-description"><?php /*esc_html_e( "Check out", 'zume' ) */?>
                     <a href="https://www.2414now.net" target="_blank" rel="noopener noreferrer">www.2414now.net</a>
-                    <?php esc_html_e( "and join the global coalition praying and working together to start kingdom movement engagements in every unreached people and place by 2025.", 'zume' ) ?>
+                    <?php /*esc_html_e( "and join the global coalition praying and working together to start kingdom movement engagements in every unreached people and place by 2025.", 'zume' ) */?>
                 </div>
-            </div>
+            </div>-->
             <!-- grid-x -->
 
             <!-- grid-x -->

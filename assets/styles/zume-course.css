@@ -342,14 +342,6 @@ body.single-item.groups #buddypress div#item-header #item-header-cover-image #it
     transform: rotate(-135deg);
 }
 
-section {
-    padding: 2rem 0;
-}
-@media only screen and (max-width: 639px) {
-    section {
-        padding: 0;
-    }
-}
 
 @media only screen and (max-width: 639px) {
     .course-steps.wizard .steps li:not(:last-child):after {
