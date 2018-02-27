@@ -311,7 +311,7 @@ class Zume_Course_Content {
                     <p>
                         <a class="button large"
                            href="<?php echo esc_url( Zume_Course::get_download_by_key( '33' ) ) ?>"
-                           target="_blank" rel="noopener">
+                           target="_blank" rel="noopener noreferrer">
                             <?php esc_html_e( 'Guidebook', 'zume' ) ?>
                         </a>
                     </p>
@@ -363,7 +363,7 @@ class Zume_Course_Content {
 
                     <p class="center hide-for-small-only">
                         <a href="<?php echo esc_url( Zume_Course::get_download_by_key( '34' ) ) ?>"
-                                target="_blank"><img
+                                target="_blank" rel="noopener noreferrer"><img
                                     src="<?php echo esc_url( zume_images_uri( 'course' ) ) ?>download-icon-150x150.png"
                                     alt=""
                                     width="35" height="35" class="alignnone size-thumbnail wp-image-3274"
@@ -408,7 +408,7 @@ class Zume_Course_Content {
 
                     <p class="center hide-for-small-only"><a
                                 href="<?php echo esc_url( Zume_Course::get_download_by_key( '35' ) ) ?>"
-                                target="_blank"><img
+                                target="_blank" rel="noopener noreferrer"><img
                                     src="<?php echo esc_url( zume_images_uri( 'course' ) ) ?>download-icon-150x150.png"
                                     alt=""
                                     width="35" height="35" class="alignnone size-thumbnail wp-image-3274"
@@ -460,7 +460,7 @@ class Zume_Course_Content {
 
                     <p class="center hide-for-small-only"><a
                                 href="<?php echo esc_url( Zume_Course::get_download_by_key( '36' ) ) ?>"
-                                target="_blank"><img
+                                target="_blank" rel="noopener noreferrer"><img
                                     src="<?php echo esc_url( zume_images_uri( 'course' ) ) ?>download-icon-150x150.png"
                                     alt=""
                                     width="35" height="35" class="alignnone size-thumbnail wp-image-3274"
@@ -516,7 +516,7 @@ class Zume_Course_Content {
 
 
                     <p class="center hide-for-small-only"><a href="<?php echo esc_url( Zume_Course::get_download_by_key( '37' ) ) ?>"
-                                         target="_blank"><img
+                                         target="_blank" rel="noopener noreferrer"><img
                                     src="<?php echo esc_url( zume_images_uri( 'course' ) ) ?>download-icon-150x150.png"
                                     alt=""
                                     width="35" height="35" class="alignnone size-thumbnail wp-image-3274"
@@ -562,7 +562,7 @@ class Zume_Course_Content {
 
                     <p class="center hide-for-small-only"><a
                                 href="<?php echo esc_url( Zume_Course::get_download_by_key( '38' ) ) ?>"
-                                target="_blank"><img
+                                target="_blank" rel="noopener noreferrer"><img
                                     src="<?php echo esc_url( zume_images_uri( 'course' ) ) ?>download-icon-150x150.png"
                                     alt=""
                                     width="35" height="35" class="alignnone size-thumbnail wp-image-3274"
@@ -595,7 +595,7 @@ class Zume_Course_Content {
                     <?php esc_html_e( 'Spend the next 45 minutes working together through Accountability Questions - List 2 in the "Accountability Groups" section of your', 'zume' ) ?>
                     <a class="btn btn-large next-step zume-purple uppercase bg-white font-zume-purple big-btn btn-wide"
                        href="<?php echo esc_url( Zume_Course::get_download_by_key( '33' ) ) ?>"
-                       target="_blank" rel="noopener"><i
+                       target="_blank" rel="noopener noreferrer"><i
                                 class="glyphicon glyphicon-download-alt"></i> <?php esc_html_e( 'Zúme Guidebook', 'zume' ) ?></a>.
 
                 </div>
@@ -670,7 +670,7 @@ class Zume_Course_Content {
                     <p>
                         <a class="button large"
                            href="<?php echo esc_url( Zume_Course::get_download_by_key( '33' ) ) ?>"
-                           target="_blank" rel="noopener">
+                           target="_blank" rel="noopener noreferrer">
                             <?php esc_html_e( 'GUIDEBOOK', 'zume' ) ?>
                         </a>
                     </p>
@@ -739,7 +739,7 @@ class Zume_Course_Content {
 
                     <p class="center hide-for-small-only"><a
                                 href="<?php echo esc_url( Zume_Course::get_download_by_key( '39' ) ) ?>"
-                                target="_blank"><img
+                                target="_blank" rel="noopener noreferrer"><img
                                     src="<?php echo esc_url( zume_images_uri( 'course' ) ) ?>download-icon-150x150.png"
                                     alt=""
                                     width="35" height="35" class="alignnone size-thumbnail wp-image-3274"
@@ -795,7 +795,7 @@ class Zume_Course_Content {
 
                     <p class="center hide-for-small-only"><a
                                 href="<?php echo esc_url( Zume_Course::get_download_by_key( '40' ) ) ?>"
-                                target="_blank"><img
+                                target="_blank" rel="noopener noreferrer"><img
                                     src="<?php echo esc_url( zume_images_uri( 'course' ) ) ?>download-icon-150x150.png"
                                     alt=""
                                     width="35" height="35" class="alignnone size-thumbnail wp-image-3274"
@@ -879,7 +879,7 @@ class Zume_Course_Content {
 
                     <p class="center hide-for-small-only"><a
                                 href="<?php echo esc_url( Zume_Course::get_download_by_key( '41' ) ) ?>"
-                                target="_blank"><img
+                                target="_blank" rel="noopener noreferrer"><img
                                     src="<?php echo esc_url( zume_images_uri( 'course' ) ) ?>download-icon-150x150.png"
                                     alt=""
                                     width="35" height="35" class="alignnone size-thumbnail wp-image-3274"
@@ -1030,7 +1030,7 @@ class Zume_Course_Content {
                                 webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
 
-                    <p class="center hide-for-small-only"><a
+                    <p class="center hide-for-small-only"><a target="_blank" rel="noopener noreferrer"
                                 href="<?php echo esc_url( Zume_Course::get_download_by_key( '42' ) ) ?>"><img
                                     src="<?php echo esc_url( zume_images_uri( 'course' ) ) ?>download-icon-150x150.png"
                                     alt=""
@@ -1112,7 +1112,7 @@ class Zume_Course_Content {
                                 webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
 
-                    <p class="center hide-for-small-only"><a
+                    <p class="center hide-for-small-only"><a target="_blank" rel="noopener noreferrer"
                                 href="<?php echo esc_url( Zume_Course::get_download_by_key( '43' ) ) ?>"><img
                                     src="<?php echo esc_url( zume_images_uri( 'course' ) ) ?>download-icon-150x150.png"
                                     alt=""
@@ -1183,7 +1183,7 @@ class Zume_Course_Content {
                                 webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
 
-                    <p class="center hide-for-small-only"><a
+                    <p class="center hide-for-small-only"><a target="_blank" rel="noopener noreferrer"
                                 href="<?php echo esc_url( Zume_Course::get_download_by_key( '44' ) ) ?>"><img
                                     src="<?php echo esc_url( zume_images_uri( 'course' ) ) ?>download-icon-150x150.png"
                                     alt=""
@@ -1321,7 +1321,7 @@ class Zume_Course_Content {
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="large-4 cell activity-title"><?php esc_html_e( "READ", 'zume' ) ?></div>
                 <div class="large-8 cell activity-description">
-                    <?php esc_html_e( "ZÚME TOOLKIT - 3-MINUTE TESTIMONY", 'zume' ) ?>
+                    <?php esc_html_e( "3-MINUTE TESTIMONY", 'zume' ) ?>
                     <br><br>
                     <?php esc_html_e( 'As followers of Jesus, we are “witnesses" for Him, because we “testify” about the impact Jesus has had on our lives. Your story of your relationship with God is called your Testimony. It\'s powerful, and it\'s something no one can share better than you.', 'zume' ) ?>
                     <br><br>
@@ -1340,7 +1340,7 @@ class Zume_Course_Content {
 
                     <p class="center hide-for-small-only"><a
                                 href="<?php echo esc_url( Zume_Course::get_download_by_key( '45' ) ) ?>"
-                                target="_blank"><img
+                                target="_blank" rel="noopener noreferrer"><img
                                     src="<?php echo esc_url( zume_images_uri( 'course' ) ) ?>download-icon-150x150.png"
                                     alt=""
                                     width="35" height="35" class="alignnone size-thumbnail wp-image-3274"
@@ -1402,7 +1402,7 @@ class Zume_Course_Content {
 
                     <p class="center hide-for-small-only"><a
                                 href="<?php echo esc_url( Zume_Course::get_download_by_key( '46' ) ) ?>"
-                                target="_blank"><img
+                                target="_blank" rel="noopener noreferrer"><img
                                     src="<?php echo esc_url( zume_images_uri( 'course' ) ) ?>download-icon-150x150.png"
                                     alt=""
                                     width="35" height="35" class="alignnone size-thumbnail wp-image-3274"
@@ -1457,7 +1457,7 @@ class Zume_Course_Content {
 
                     <p class="center hide-for-small-only">
                         <a href="<?php echo esc_url( Zume_Course::get_download_by_key( '47' ) ) ?>"
-                           target="_blank"><img
+                           target="_blank" rel="noopener noreferrer"><img
                                     src="<?php echo esc_url( zume_images_uri( 'course' ) ) ?>download-icon-150x150.png"
                                     alt=""
                                     width="35" height="35" class="alignnone size-thumbnail wp-image-3274"
@@ -1512,7 +1512,7 @@ class Zume_Course_Content {
 
                     <p class="center hide-for-small-only"><a
                                 href="<?php echo esc_url( Zume_Course::get_download_by_key( '48' ) ) ?>"
-                                target="_blank"><img
+                                target="_blank" rel="noopener noreferrer"><img
                                     src="<?php echo esc_url( zume_images_uri( 'course' ) ) ?>download-icon-150x150.png"
                                     alt=""
                                     width="35" height="35" class="alignnone size-thumbnail wp-image-3274"
@@ -1566,7 +1566,7 @@ class Zume_Course_Content {
 
                     <p class="center hide-for-small-only"><a
                                 href="<?php echo esc_url( Zume_Course::get_download_by_key( '49' ) ) ?>"
-                                target="_blank"><img
+                                target="_blank" rel="noopener noreferrer"><img
                                     src="<?php echo esc_url( zume_images_uri( 'course' ) ) ?>download-icon-150x150.png"
                                     alt=""
                                     width="35" height="35" class="alignnone size-thumbnail wp-image-3274"
@@ -1712,7 +1712,7 @@ class Zume_Course_Content {
 
                     <p class="center hide-for-small-only"><a
                                 href="<?php echo esc_url( Zume_Course::get_download_by_key( '50' ) ) ?>"
-                                target="_blank"><img
+                                target="_blank" rel="noopener noreferrer"><img
                                     src="<?php echo esc_url( zume_images_uri( 'course' ) ) ?>download-icon-150x150.png"
                                     alt=""
                                     width="35" height="35" class="alignnone size-thumbnail wp-image-3274"
@@ -1751,7 +1751,7 @@ class Zume_Course_Content {
 
 
                     <p class="center hide-for-small-only"><a href="<?php echo esc_url( Zume_Course::get_download_by_key( '51' ) ) ?>"
-                                         target="_blank"><img
+                                         target="_blank" rel="noopener noreferrer"><img
                                     src="<?php echo esc_url( zume_images_uri( 'course' ) ) ?>download-icon-150x150.png"
                                     alt=""
                                     width="35" height="35" class="alignnone size-thumbnail wp-image-3274"
@@ -1925,7 +1925,7 @@ class Zume_Course_Content {
 
                     <p class="center hide-for-small-only"><a
                                 href="<?php echo esc_url( Zume_Course::get_download_by_key( '52' ) ) ?>"
-                                target="_blank"><img
+                                target="_blank" rel="noopener noreferrer"><img
                                     src="<?php echo esc_url( zume_images_uri( 'course' ) ) ?>download-icon-150x150.png"
                                     alt=""
                                     width="35" height="35" class="alignnone size-thumbnail wp-image-3274"
@@ -1973,7 +1973,7 @@ class Zume_Course_Content {
 
                     <p class="center hide-for-small-only"><a
                                 href="<?php echo esc_url( Zume_Course::get_download_by_key( '53' ) ) ?>"
-                                target="_blank"><img
+                                target="_blank" rel="noopener noreferrer"><img
                                     src="<?php echo esc_url( zume_images_uri( 'course' ) ) ?>download-icon-150x150.png"
                                     alt=""
                                     width="35" height="35" class="alignnone size-thumbnail wp-image-3274"
@@ -2147,7 +2147,7 @@ class Zume_Course_Content {
 
                     <p class="center hide-for-small-only"><a
                                 href="<?php echo esc_url( Zume_Course::get_download_by_key( '54' ) ) ?>"
-                                target="_blank"><img
+                                target="_blank" rel="noopener noreferrer"><img
                                     src="<?php echo esc_url( zume_images_uri( 'course' ) ) ?>download-icon-150x150.png"
                                     alt=""
                                     width="35" height="35" class="alignnone size-thumbnail wp-image-3274"
@@ -2332,7 +2332,7 @@ class Zume_Course_Content {
 
                     <p class="center hide-for-small-only"><a
                                 href="<?php echo esc_url( Zume_Course::get_download_by_key( '55' ) ) ?>"
-                                target="_blank"><img
+                                target="_blank" rel="noopener noreferrer"><img
                                     src="<?php echo esc_url( zume_images_uri( 'course' ) ) ?>download-icon-150x150.png"
                                     alt=""
                                     width="35" height="35" class="alignnone size-thumbnail wp-image-3274"
@@ -2516,7 +2516,7 @@ class Zume_Course_Content {
 
                     <p class="center hide-for-small-only">
                         <a href="<?php echo esc_url( Zume_Course::get_download_by_key( '56' ) ) ?>"
-                           target="_blank" rel="noopener">
+                           target="_blank" rel="noopener noreferrer" >
                             <img class="alignnone size-thumbnail wp-image-3274"
                                  style="vertical-align: text-bottom;"
                                  src="<?php echo esc_url( zume_images_uri( 'course' ) ) ?>download-icon-150x150.png"
@@ -2568,7 +2568,7 @@ class Zume_Course_Content {
 
                     <p class="center hide-for-small-only">
                         <a  href="<?php echo esc_url( Zume_Course::get_download_by_key( '57' ) ) ?>"
-                            target="_blank" rel="noopener"><img
+                            target="_blank" rel="noopener noreferrer" ><img
                             class="alignnone size-thumbnail wp-image-3274"
                             style="vertical-align: text-bottom;"
                             src="<?php echo esc_url( zume_images_uri( 'course' ) ) ?>download-icon-150x150.png"
@@ -2623,7 +2623,7 @@ class Zume_Course_Content {
 
                     <p class="center hide-for-small-only">
                         <a  href="<?php echo esc_url( Zume_Course::get_download_by_key( '58' ) ) ?>"
-                            target="_blank" rel="noopener">
+                            target="_blank" rel="noopener noreferrer">
                             <img class="alignnone size-thumbnail wp-image-3274"
                                 style="vertical-align: text-bottom;"
                                 src="<?php echo esc_url( zume_images_uri( 'course' ) ) ?>download-icon-150x150.png"
@@ -2762,7 +2762,7 @@ class Zume_Course_Content {
 
                     <p class="center hide-for-small-only">
                         <a  href="<?php echo esc_url( Zume_Course::get_download_by_key( '59' ) ) ?>"
-                            target="_blank" rel="noopener">
+                            target="_blank" rel="noopener noreferrer">
                             <img class="alignnone size-thumbnail wp-image-3274"
                                     style="vertical-align: text-bottom;"
                                     src="<?php echo esc_url( zume_images_uri( 'course' ) ) ?>download-icon-150x150.png"
@@ -2803,7 +2803,7 @@ class Zume_Course_Content {
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="large-4 cell activity-title"><?php esc_html_e( 'BONUS', 'zume' ) ?></div>
                 <div class="large-8 cell activity-description"><?php esc_html_e( "Check out", 'zume' ) ?>
-                    <a href="https://www.2414now.net" target="_blank">www.2414now.net</a>
+                    <a href="https://www.2414now.net" target="_blank" rel="noopener noreferrer">www.2414now.net</a>
                     <?php esc_html_e( "and join the global coalition praying and working together to start kingdom movement engagements in every unreached people and place by 2025.", 'zume' ) ?>
                 </div>
             </div>
@@ -2916,7 +2916,7 @@ class Zume_Course_Content {
 
                     <p class="center hide-for-small-only">
                         <a  href="<?php echo esc_url( Zume_Course::get_download_by_key( '60' ) ) ?>"
-                            target="_blank">
+                            target="_blank" rel="noopener noreferrer">
                             <img    src="<?php echo esc_url( zume_images_uri( 'course' ) ) ?>download-icon-150x150.png"
                                     alt=""
                                     width="35" height="35" class="alignnone size-thumbnail wp-image-3274"
@@ -2975,7 +2975,7 @@ class Zume_Course_Content {
 
                     <p class="center hide-for-small-only">
                         <a  href="<?php echo esc_url( Zume_Course::get_download_by_key( '61' ) ) ?>"
-                            target="_blank">
+                            target="_blank" rel="noopener noreferrer">
                             <img    src="<?php echo esc_url( zume_images_uri( 'course' ) ) ?>download-icon-150x150.png"
                                     alt=""
                                     width="35" height="35" class="alignnone size-thumbnail wp-image-3274"
@@ -3024,7 +3024,7 @@ class Zume_Course_Content {
 
                     <p class="center hide-for-small-only">
                         <a  href="<?php echo esc_url( Zume_Course::get_download_by_key( '62' ) ) ?>"
-                            target="_blank">
+                            target="_blank" rel="noopener noreferrer">
                             <img    src="<?php echo esc_url( zume_images_uri( 'course' ) ) ?>download-icon-150x150.png"
                                     alt=""
                                     width="35" height="35" class="alignnone size-thumbnail wp-image-3274"
@@ -3105,7 +3105,7 @@ class Zume_Course_Content {
 
                             <p class="center hide-for-small-only">
                                 <a  href="<?php echo esc_url( Zume_Course::get_download_by_key( '59' ) ) ?>"
-                                    target="_blank">
+                                    target="_blank" rel="noopener noreferrer">
                                     <img src="<?php echo esc_url( zume_images_uri( 'course' ) ) ?>download-icon-150x150.png"
                                         alt="" width="35" height="35" class="alignnone size-thumbnail wp-image-3274"
                                         style="vertical-align: text-bottom"/>
@@ -3172,7 +3172,7 @@ class Zume_Course_Content {
                                  hidden>
                                 <p>
                                     <?php esc_html_e( "Find additional information on some of the multiplication concepts at", 'zume' ) ?>
-                                    <a href="http://metacamp.org/multiplication-concepts/" target="_blank">
+                                    <a href="http://metacamp.org/multiplication-concepts/" target="_blank" rel="noopener noreferrer">
                                         http://metacamp.org/multiplication-concepts/
                                     </a>
                                     <?php esc_html_e( "or ask questions about specific resources by e-mailing", 'zume' ) ?>
@@ -3180,7 +3180,7 @@ class Zume_Course_Content {
                                 </p>
                                 <p class="center">
                                     <a class="button" href="http://metacamp.org/multiplication-concepts/"
-                                       target="_blank"><?php esc_html_e( "Learn more", 'zume' ) ?></a>
+                                       target="_blank" rel="noopener noreferrer"><?php esc_html_e( "Learn more", 'zume' ) ?></a>
                                 </p>
                             </div>
                             <div class="congratulations-more__text js-congratulations-more-item" data-item="invite"
@@ -3204,11 +3204,11 @@ class Zume_Course_Content {
                                  hidden>
                                 <p>
                                     <?php esc_html_e( "As Zúme Training grows, sessions will soon be available in 34 more languages. As we bring those trainings online, we’ll send you information on people in your neighborhood that speak those languages, so you can share something that’s built just for them. You can help fund the translation of the Zúme Training into additional languages by donating at", 'zume' ) ?>
-                                    <a href="https://big.life/donate" target="_blank">https://big.life/donate</a>
+                                    <a href="https://big.life/donate" target="_blank" rel="noopener noreferrer">https://big.life/donate</a>
                                     <?php esc_html_e( "and designating the gift for the Zúme Project with a note about the language you would like to fund.", 'zume' ) ?>
                                 </p>
                                 <p class="center">
-                                    <a class="button" href="https://big.life/donate" target="_blank">
+                                    <a class="button" href="https://big.life/donate" target="_blank" rel="noopener noreferrer">
                                         <?php esc_html_e( "Fund translation of Zúme", 'zume' ) ?>
                                     </a>
                                 </p>
@@ -3222,7 +3222,7 @@ class Zume_Course_Content {
                             <div class="congratulations-more__text js-congratulations-more-item" data-item="share"
                                  hidden>
                                 <p class="center">
-                                    <a class="button" href="https://www.facebook.com/zumeproject" target="_blank">
+                                    <a class="button" href="https://www.facebook.com/zumeproject" target="_blank" rel="noopener noreferrer">
                                         <?php esc_html_e( "Facebook page", 'zume' ) ?>
                                     </a>
                                 </p>
@@ -3240,11 +3240,11 @@ class Zume_Course_Content {
                             <div class="congratulations-more__text js-congratulations-more-item" data-item="join-2414"
                                  hidden>
                                 <p>
-                                    <?php esc_html_e( "Check out", 'zume' ) ?> <a href="https://www.2414now.net" target="_blank">www.2414now.net</a>
+                                    <?php esc_html_e( "Check out", 'zume' ) ?> <a href="https://www.2414now.net" target="_blank" rel="noopener noreferrer">www.2414now.net</a>
                                     <?php esc_html_e( "and join the global coalition praying and working together to start kingdom movement engagements in every unreached people and place by 2025.", 'zume' ) ?>
                                 </p>
                                 <p class="center">
-                                    <a class="button" href="https://www.2414now.net" target="_blank"><?php esc_html_e( "Join 2414", 'zume' ) ?></a>
+                                    <a class="button" href="https://www.2414now.net" target="_blank" rel="noopener noreferrer"><?php esc_html_e( "Join 2414", 'zume' ) ?></a>
                                 </p>
 
 
