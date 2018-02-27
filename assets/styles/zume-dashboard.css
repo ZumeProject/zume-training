@@ -454,3 +454,10 @@ select {
 .front-page-social + div {
     margin-bottom: 20px;
 }
+
+/*--------------------------------------------------------------
+3.4 Menu Overrides
+ */
+.off-canvas li.is-submenu-item {
+    padding-left: 1em;
+}

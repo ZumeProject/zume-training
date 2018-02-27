@@ -344,6 +344,11 @@ body.single-item.groups #buddypress div#item-header #item-header-cover-image #it
 section {
     padding: 2rem 0;
 }
+@media only screen and (max-width: 639px) {
+    section {
+        padding: 0;
+    }
+}
 
 @media only screen and (max-width: 639px) {
     .course-steps.wizard .steps li:not(:last-child):after {
@@ -354,4 +359,8 @@ section {
     top: 0;
     width: 0;
 }
+}
+
+dl, ol, ul {
+    list-style-position: inside;
 }
