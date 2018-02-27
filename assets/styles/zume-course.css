@@ -168,6 +168,7 @@ div.activity-description {
     padding-top: 12px;
     text-align: center;
     font-size: 1.5rem;
+    margin-bottom: 2em !important;
 }
 
 div.activity-description ol, div.activity-description ul {
@@ -211,7 +212,7 @@ button.btn.btn-large.next-step.zume-purple.uppercase.bg-white.font-zume-purple.b
 }
 
 /* Medium devices (tablets, 768px and up) */
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 640px) {
 
     .wistia_embed {
         height: 350px;
@@ -224,7 +225,7 @@ button.btn.btn-large.next-step.zume-purple.uppercase.bg-white.font-zume-purple.b
 }
 
 /*Large devices (desktops, 992px and up)*/
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 1200px) {
 
     h1.uppercase.font-zume-purple {
         display:block;
@@ -352,13 +353,15 @@ section {
 
 @media only screen and (max-width: 639px) {
     .course-steps.wizard .steps li:not(:last-child):after {
-    content: "";
-    position: absolute;
-    border: 0;
-    left: 0;
-    top: 0;
-    width: 0;
-}
+        content: "";
+        position: absolute;
+        border: 0;
+        left: 0;
+        top: 0;
+        width: 0;
+    }
+
+
 }
 
 dl, ol, ul {
