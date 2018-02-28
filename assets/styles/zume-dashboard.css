@@ -469,6 +469,10 @@ select {
     h3.secondary {
         font-size: 1.5em;
     }
+    h3.overview {
+        font-size: 1.5em;
+        font-weight: bold;
+    }
 }
 
 .dropdown.menu.medium-horizontal>li.is-dropdown-submenu-parent.active>a:after {
@@ -477,3 +481,4 @@ select {
 .dropdown.menu.medium-horizontal>li.is-dropdown-submenu-parent:hover>a:after {
     border-color: white transparent transparent;
 }
+
