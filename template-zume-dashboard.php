@@ -47,7 +47,7 @@ $zume_highest_session = Zume_Dashboard::get_highest_session( $zume_current_user 
                     <div class="large-1 cell"></div>
 
                     <!-- Left Column -->
-                    <div class="large-8 medium-auto cell">
+                    <div class="large-8 cell">
 
                         <!-- ********************************************************************************************* -->
                         <!-- Groups Management Section -->

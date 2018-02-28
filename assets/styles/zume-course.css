@@ -363,3 +363,7 @@ dl, ol, ul {
 .wizard > .actions > ul > li.disabled {
     display: none;
 }
+
+.text-uppercase {
+    text-transform: uppercase;
+}
