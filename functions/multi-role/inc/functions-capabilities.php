@@ -11,8 +11,8 @@
  */
 
 # Disables the old user levels from capabilities array.
-add_filter( 'dt_multi_role_get_capabilities', 'dt_multi_role_remove_old_levels' );
-add_filter( 'dt_multi_role_get_capabilities', 'dt_multi_role_remove_hidden_caps' );
+add_filter( 'zume_multi_role_get_capabilities', 'zume_multi_role_remove_old_levels' );
+add_filter( 'zume_multi_role_get_capabilities', 'zume_multi_role_remove_hidden_caps' );
 
 /**
  * Function for sanitizing a capability.
@@ -22,8 +22,8 @@ add_filter( 'dt_multi_role_get_capabilities', 'dt_multi_role_remove_hidden_caps'
  * @param  string  $cap
  * @return string
  */
-function dt_multi_role_sanitize_cap( $cap ) {
-    return apply_filters( 'dt_multi_role_sanitize_cap', sanitize_key( $cap ) );
+function zume_multi_role_sanitize_cap( $cap ) {
+    return apply_filters( 'zume_multi_role_sanitize_cap', sanitize_key( $cap ) );
 }
 
 /**
@@ -34,8 +34,8 @@ function dt_multi_role_sanitize_cap( $cap ) {
  * @param  string  $cap
  * @return bool
  */
-function dt_multi_role_cap_exists( $cap ) {
-    return in_array( $cap, dt_multi_role_get_capabilities() );
+function zume_multi_role_cap_exists( $cap ) {
+    return in_array( $cap, zume_multi_role_get_capabilities() );
 }
 
 /**
@@ -47,11 +47,11 @@ function dt_multi_role_cap_exists( $cap ) {
  * @param  string  $cap
  * @return bool
  */
-function dt_multi_role_is_cap_editable( $cap ) {
+function zume_multi_role_is_cap_editable( $cap ) {
 
-    $uneditable = array_keys( dt_multi_role_get_uneditable_role_names() );
+    $uneditable = array_keys( zume_multi_role_get_uneditable_role_names() );
 
-    return ! in_array( $cap, dt_multi_role_get_wp_capabilities() ) && ! array_intersect( $uneditable, dt_multi_role_get_cap_roles( $cap ) );
+    return ! in_array( $cap, zume_multi_role_get_wp_capabilities() ) && ! array_intersect( $uneditable, zume_multi_role_get_cap_roles( $cap ) );
 }
 
 /**
@@ -62,7 +62,7 @@ function dt_multi_role_is_cap_editable( $cap ) {
  * @param  string  $cap
  * @return array
  */
-function dt_multi_role_get_cap_roles( $cap ) {
+function zume_multi_role_get_cap_roles( $cap ) {
     global $wp_roles;
 
     $_roles = [];
@@ -87,17 +87,17 @@ function dt_multi_role_get_cap_roles( $cap ) {
  * @access public
  * @return array
  */
-function dt_multi_role_get_capabilities() {
+function zume_multi_role_get_capabilities() {
 
     // Merge the default WP, role, and plugin caps together.
     $capabilities = array_merge(
-        dt_multi_role_get_wp_capabilities(),
-        dt_multi_role_get_role_capabilities(),
-        dt_multi_role_get_plugin_capabilities()
+        zume_multi_role_get_wp_capabilities(),
+        zume_multi_role_get_role_capabilities(),
+        zume_multi_role_get_plugin_capabilities()
     );
 
     // Apply filters to the array of capabilities.
-    $capabilities = apply_filters( 'dt_multi_role_get_capabilities', $capabilities );
+    $capabilities = apply_filters( 'zume_multi_role_get_capabilities', $capabilities );
 
     // Sort the capabilities alphabetically.
     sort( $capabilities );
@@ -112,13 +112,13 @@ function dt_multi_role_get_capabilities() {
  *
  * Note that if no role has the capability, it technically no longer exists.  Since this could be
  * a problem with folks accidentally deleting the default WordPress capabilities, the
- * `dt_multi_role_get_plugin_capabilities()` will return all the defaults.
+ * `zume_multi_role_get_plugin_capabilities()` will return all the defaults.
  *
  * @since  0.1.0.0
  * @global object  $wp_roles
  * @return array
  */
-function dt_multi_role_get_role_capabilities() {
+function zume_multi_role_get_role_capabilities() {
     global $wp_roles;
 
     // Set up an empty capabilities array.
@@ -149,7 +149,7 @@ function dt_multi_role_get_role_capabilities() {
  * @access public
  * @return array
  */
-function dt_multi_role_get_plugin_capabilities() {
+function zume_multi_role_get_plugin_capabilities() {
 
     return [
         'list_roles',       // View roles list.
@@ -175,7 +175,7 @@ function dt_multi_role_get_plugin_capabilities() {
  * @access public
  * @return array
  */
-function dt_multi_role_get_wp_capabilities() {
+function zume_multi_role_get_wp_capabilities() {
 
     return [
         'activate_plugins',
@@ -241,7 +241,7 @@ function dt_multi_role_get_wp_capabilities() {
  * @param  string  $cap
  * @return bool
  */
-function dt_multi_role_check_for_cap( $cap = '' ) {
+function zume_multi_role_check_for_cap( $cap = '' ) {
 
     // Without a capability, we have nothing to check for.  Just return false.
     if ( ! $cap ) {
@@ -249,7 +249,7 @@ function dt_multi_role_check_for_cap( $cap = '' ) {
     }
 
     // Check if the cap is assigned to any role.
-    return in_array( $cap, dt_multi_role_get_role_capabilities() );
+    return in_array( $cap, zume_multi_role_get_role_capabilities() );
 }
 
 /**
@@ -259,7 +259,7 @@ function dt_multi_role_check_for_cap( $cap = '' ) {
  * @access public
  * @return array
  */
-function dt_multi_role_get_hidden_caps() {
+function zume_multi_role_get_hidden_caps() {
 
     $caps = [];
 
@@ -307,8 +307,8 @@ function dt_multi_role_get_hidden_caps() {
  * @param  array  $caps
  * @return array
  */
-function dt_multi_role_remove_hidden_caps( $caps ) {
-    return apply_filters( 'dt_multi_role_remove_hidden_caps', true ) ? array_diff( $caps, dt_multi_role_get_hidden_caps() ) : $caps;
+function zume_multi_role_remove_hidden_caps( $caps ) {
+    return apply_filters( 'zume_multi_role_remove_hidden_caps', true ) ? array_diff( $caps, zume_multi_role_get_hidden_caps() ) : $caps;
 }
 
 /**
@@ -320,7 +320,7 @@ function dt_multi_role_remove_hidden_caps( $caps ) {
  * @access public
  * @return array
  */
-function dt_multi_role_get_old_levels() {
+function zume_multi_role_get_old_levels() {
 
     return [
         'level_0',
@@ -339,15 +339,15 @@ function dt_multi_role_get_old_levels() {
 
 /**
  * Get rid of levels since these are mostly useless in newer versions of WordPress.  Devs should
- * add the `__return_false` filter to the `dt_multi_role_remove_old_levels` hook to utilize user levels.
+ * add the `__return_false` filter to the `zume_multi_role_remove_old_levels` hook to utilize user levels.
  *
  * @since  0.1.0.0
  * @access public
  * @param  array  $caps
  * @return array
  */
-function dt_multi_role_remove_old_levels( $caps ) {
-    return apply_filters( 'dt_multi_role_remove_old_levels', true ) ? array_diff( $caps, dt_multi_role_get_old_levels() ) : $caps;
+function zume_multi_role_remove_old_levels( $caps ) {
+    return apply_filters( 'zume_multi_role_remove_old_levels', true ) ? array_diff( $caps, zume_multi_role_get_old_levels() ) : $caps;
 }
 
 /**
@@ -359,9 +359,9 @@ function dt_multi_role_remove_old_levels( $caps ) {
  * @access public
  * @return array
  */
-function dt_multi_role_new_role_default_capabilities() {
+function zume_multi_role_new_role_default_capabilities() {
 
-    return apply_filters( 'dt_multi_role_new_role_default_capabilities', [ 'read' ] );
+    return apply_filters( 'zume_multi_role_new_role_default_capabilities', [ 'read' ] );
 }
 
 /**
@@ -373,7 +373,7 @@ function dt_multi_role_new_role_default_capabilities() {
  * @access public
  * @return array
  */
-function dt_multi_role_new_role_default_caps() {
+function zume_multi_role_new_role_default_caps() {
 
-    return apply_filters( 'dt_multi_role_new_role_default_caps', [ 'read' => true ] );
+    return apply_filters( 'zume_multi_role_new_role_default_caps', [ 'read' => true ] );
 }

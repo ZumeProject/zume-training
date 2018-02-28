@@ -84,12 +84,6 @@ function zume_register_required_plugins() {
             'required' => false,
         ),
         array(
-            'name' => 'Updraft Plus',
-            'slug' => 'updraftplus',
-            'version' => '1.13.12',
-            'required' => false,
-        ),
-        array(
             'name' => 'PolyLang',
             'slug' => 'polylang',
             'version' => '2.2.7',
@@ -107,8 +101,8 @@ function zume_register_required_plugins() {
             'name' => 'Peter\'s Login Redirect',
             'slug' => 'peters-login-redirect',
             'version' => '2.9.1',
-            'required' => true,
-            'force_activation'  => true,
+            'required' => false,
+            'force_activation'  => false,
         )
     );
 
@@ -179,7 +173,7 @@ function zume_register_required_plugins() {
                 'Begin installing plugins',
                 'disciple_tools'
             ),
-            'update_link' 					  => _n_noop(
+            'update_link'                     => _n_noop(
                 'Begin updating plugin',
                 'Begin updating plugins',
                 'disciple_tools'

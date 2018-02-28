@@ -56,9 +56,7 @@ function zume_plugin_admin_init() {
 }
 
 function zume_section_text() {
-    echo '<p>';
-    esc_html_e( "Please fill in your MailChimp API key here for use in the website." );
-    echo '</p>';
+    echo '<p>Please fill in your MailChimp API key here for use in the website.</p>';
 }
 
 function zume_mailchimp_api_key_input_html() {

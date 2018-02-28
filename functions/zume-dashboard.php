@@ -54,7 +54,9 @@ class Zume_Dashboard {
             'members' => false,
             'meeting_time' => '',
             'address' => false,
-            'ip_address' => zume_get_real_ip_address(),
+            'ip_address' => Zume_Google_Geolocation::get_real_ip_address(),
+            'lng'   => '',
+            'lat'   => '',
         );
         $args = wp_parse_args( $args, $defaults );
 
@@ -64,22 +66,21 @@ class Zume_Dashboard {
         if ( ! $args['members'] ) {
             return new WP_Error( 'missing_info', 'You are missing number of group members' );
         }
-        if ( ! $args['address'] ) {
-            return new WP_Error( 'missing_info', 'You are missing the group address' );
+        if ( $args['address'] ) {
+            zume_write_log( 'begin locations' );
+            // Geo lookup address
+            $google_result = Zume_Google_Geolocation::query_google_api( $args['address'], $type = 'core' ); // get google api info
+            if ( ! $google_result ) {
+                $results = Zume_Google_Geolocation::geocode_ip_address( $args['ip_address'] );// TODO: Need to still wire up the api to get ip address location
+                $args['lng'] = $results['lng'];
+                $args['lat'] = $results['lat'];
+            } else {
+                $args['lng'] = $google_result['lng'];
+                $args['lat'] = $google_result['lat'];
+                $args['address'] = $google_result['formatted_address'];
+            }
         }
 
-        // Geo lookup address
-        $google_result = Zume_Google_Geolocation::query_google_api( $args['address'], $type = 'core' ); // get google api info
-        if ($google_result == 'ZERO_RESULTS') {
-            $results = Zume_Google_Geolocation::geocode_ip_address( $args['ip_address'] );// TODO: Need to still wire up the api to get ip address location
-            $lng = $results['lng'];
-            $lat = $results['lat'];
-            $formatted_address = $args['address'];
-        } else {
-            $lng = $google_result['lng'];
-            $lat = $google_result['lat'];
-            $formatted_address = $google_result['formatted_address'];
-        }
 
         // Prepare record array
         $current_user_id = get_current_user_id();
@@ -89,10 +90,10 @@ class Zume_Dashboard {
             'group_name'          => $args['group_name'],
             'members'             => $args['members'],
             'meeting_time'        => $args['meeting_time'],
-            'address'             => $formatted_address,
+            'address'             => $args['address'],
             'ip_address'          => $args['ip_address'],
-            'lng'                 => $lng,
-            'lat'                 => $lat,
+            'lng'                 => $args['lng'],
+            'lat'                 => $args['lat'],
             'created_date'        => current_time( 'mysql' ),
             'next_session'        => '1',
             'session_1'           => false,
@@ -120,6 +121,7 @@ class Zume_Dashboard {
         ];
 
         add_user_meta( $current_user_id, $group_key, $group_values, true );
+
         return true;
 
     }
@@ -132,11 +134,15 @@ class Zume_Dashboard {
             return new WP_Error( 'no_group_match', 'Hey, you cheating? No, group with id found for you.' );
         }
 
-        if ( ! ( $args['address'] == $user_meta['address'] && ! empty( $args['address'] ) ) ) {
+        if ( isset( $args['validate_address'] ) && empty( $args['validate_address'] ) ) {
+            $args['address'] = '';
+        }
+
+        if ( isset( $args['address'] ) && ! $args['address'] == $user_meta['address'] && ! empty( $args['address'] ) ) {
             // Geo lookup address
             $google_result = Zume_Google_Geolocation::query_google_api( $args['address'], $type = 'core' ); // get google api info
-            if ($google_result == 'ZERO_RESULTS') {
-                $results = Zume_Google_Geolocation::geocode_ip_address( $args['ip_address'] );// TODO: Need to still wire up the api to get ip address location
+            if ( ! $google_result ) {
+                $results = Zume_Google_Geolocation::geocode_ip_address( $args['ip_address'] );
                 $lng = $results['lng'];
                 $lat = $results['lat'];
                 $formatted_address = $args['address'];
@@ -190,14 +196,96 @@ class Zume_Dashboard {
             $key_beginning = substr( $key, 0, 10 );
             if ( 'zume_group' == $key_beginning ) { // check if zume_group
                 $value = maybe_unserialize( $v );
-                if ( isset( $value['closed'] ) && false == $value['closed'] ) {
-                    $next_session = Zume_Course::get_next_session( $value );
-                    if ( $highest_session < $next_session ) {
-                        $highest_session = $next_session;
-                    }
+                $next_session = Zume_Course::get_next_session( $value );
+                if ( $highest_session < $next_session ) {
+                    $highest_session = $next_session;
                 }
             }
         }
         return $highest_session;
+    }
+
+    public static function get_available_videos_count( $next_session ) {
+        switch ( $next_session ) {
+            case '1':
+                echo 2;
+                break;
+            case '2':
+                echo 7;
+                break;
+            case '3':
+                echo 10;
+                break;
+            case '4':
+                echo 13;
+                break;
+            case '5':
+                echo 18;
+                break;
+            case '6':
+                echo 20;
+                break;
+            case '7':
+                echo 23;
+                break;
+            case '8':
+                echo 24;
+                break;
+            case '9':
+                echo 25;
+                break;
+            case '10':
+                echo 29;
+                break;
+            case '11':
+                echo 31;
+                break;
+            default:
+                echo 2;
+                break;
+
+        }
+    }
+
+    public static function get_available_tools_count( $next_session ) {
+        switch ( $next_session ) {
+            case '1':
+                echo 0;
+                break;
+            case '2':
+                echo 3;
+                break;
+            case '3':
+                echo 5;
+                break;
+            case '4':
+                echo 6;
+                break;
+            case '5':
+                echo 8;
+                break;
+            case '6':
+                echo 9;
+                break;
+            case '7':
+                echo 10;
+                break;
+            case '8':
+                echo 10;
+                break;
+            case '9':
+                echo 10;
+                break;
+            case '10':
+                echo 10;
+                break;
+            case '11':
+                echo 12;
+                break;
+            default:
+                echo 0;
+                break;
+
+        }
     }
 }

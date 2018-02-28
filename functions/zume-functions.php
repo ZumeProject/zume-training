@@ -86,33 +86,17 @@ function zume_wp_insert_post( $post_id, $post, $update ) {
 add_action( 'wp_insert_post', 'zume_wp_insert_post', 10, 3 );
 
 
-function zume_get_real_ip_address()
-{
-    if ( !empty( $_SERVER['HTTP_CLIENT_IP'] ))   //check ip from share internet
-    {
-        $ip =$_SERVER['HTTP_CLIENT_IP'];
-    }
-    elseif ( !empty( $_SERVER['HTTP_X_FORWARDED_FOR'] ))   //to check ip is pass from proxy
-    {
-        $ip =$_SERVER['HTTP_X_FORWARDED_FOR'];
-    }
-    else {
-        $ip =$_SERVER['REMOTE_ADDR'];
-    }
-    return $ip;
-}
-
 function zume_update_user_contact_info()
 {
-    $current_user = wp_get_current_user();
+    $user_id = get_current_user_id();
 
     // validate nonce
-    if ( isset( $_POST['user_update_nonce'] ) && !wp_verify_nonce( sanitize_key( $_POST['user_update_nonce'] ), 'user_' . $current_user->ID . '_update' ) ) {
+    if ( isset( $_POST['user_update_nonce'] ) && !wp_verify_nonce( sanitize_key( $_POST['user_update_nonce'] ), 'user_' . $user_id. '_update' ) ) {
         return new WP_Error( 'fail_nonce_verification', 'The form requires a valid nonce, in order to process.' );
     }
 
     $args = [];
-    $args['ID'] = $current_user->ID;
+    $args['ID'] = $user_id;
 
     // build user name variables
     if ( isset( $_POST['first_name'] ) ) {
@@ -121,17 +105,25 @@ function zume_update_user_contact_info()
     if ( isset( $_POST['last_name'] ) ) {
         $args['last_name'] = sanitize_text_field( wp_unslash( $_POST['last_name'] ) );
     }
-    if ( isset( $_POST['display_name'] ) && !empty( $_POST['display_name'] ) ) {
-        $args['display_name'] = sanitize_text_field( wp_unslash( $_POST['display_name'] ) );
-    }
     if ( isset( $_POST['user_email'] ) && !empty( $_POST['user_email'] ) ) {
         $args['user_email'] = sanitize_email( wp_unslash( $_POST['user_email'] ) );
     }
-    if ( isset( $_POST['description'] ) ) {
-        $args['description'] = sanitize_text_field( wp_unslash( $_POST['description'] ) );
+    if ( isset( $_POST['zume_phone_number'] ) ) {
+        update_user_meta( $user_id, 'zume_phone_number', sanitize_text_field( wp_unslash( $_POST['zume_phone_number'] ) ) );
     }
-    if ( isset( $_POST['nickname'] ) ) {
-        $args['nickname'] = sanitize_text_field( wp_unslash( $_POST['nickname'] ) );
+    if ( isset( $_POST['zume_user_address'] ) ) {
+        if ( empty( $_POST['zume_user_address'] ) ) {
+            update_user_meta( $user_id, 'zume_user_address', sanitize_text_field( wp_unslash( $_POST['zume_user_address'] ) ) );
+        }
+        else {
+            $results = Zume_Google_Geolocation::query_google_api( trim( sanitize_text_field( wp_unslash( $_POST['zume_user_address'] ) ) ), 'core' );
+
+            if ( $results ) {
+                update_user_meta( $user_id, 'zume_user_address', trim( sanitize_text_field( wp_unslash( $_POST['zume_user_address'] ) ) ) );
+                update_user_meta( $user_id, 'zume_user_lng', $results['lng'] );
+                update_user_meta( $user_id, 'zume_user_lat', $results['lat'] );
+            }
+        }
     }
 
     // _user table defaults
@@ -151,9 +143,9 @@ function zume_update_user_contact_info()
  * @return array
  */
 function zume_get_user_meta( $user_id = null ) {
-	if ( is_null( $user_id ) ) {
-		$user_id = get_current_user_id();
-	}
+    if ( is_null( $user_id ) ) {
+        $user_id = get_current_user_id();
+    }
     return array_map( function ( $a ) { return $a[0];
     }, get_user_meta( $user_id ) );
 }
@@ -204,4 +196,23 @@ function zume_faq_url() {
     $current_lang = zume_current_language();
     $url = zume_get_posts_translation_url( 'faq', $current_lang );
     return $url;
+}
+
+/**
+ * Returns the full URI of the images folder with the ending slash, either as images/ or as images/sub_folder/.
+ *
+ * @param string $sub_folder
+ * @return string
+ */
+function zume_images_uri( $sub_folder = '' ) {
+    $zume_images_uri = site_url( '/wp-content/themes/zume-project-multilingual/assets/images/' );
+    if ( empty( $sub_folder ) ) {
+        return $zume_images_uri;
+    } else {
+        return $zume_images_uri . $sub_folder . '/';
+    }
+}
+
+function zume_files_uri() {
+    return site_url( '/wp-content/themes/zume-project-multilingual/assets/files/' ) . zume_current_language() . '/';
 }

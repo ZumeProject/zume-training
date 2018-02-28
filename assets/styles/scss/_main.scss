@@ -8,6 +8,8 @@ Stylesheet: Main Stylesheet
 GENERAL STYLES
 *********************/
 
+
+
 /*********************
 LINK STYLES
 *********************/
@@ -505,6 +507,7 @@ COMMENT FORM STYLES
 			border: 2px solid #cecece;
 			line-height: 1.5em;
 
+
 			&:focus {
 				background: #fff;
 			}
@@ -728,7 +731,7 @@ JQUERY STEPS WIZARD
         display: inline-block;
         font-size: 1.8rem;
         position: relative;
-        @media only screen and (max-width: 500px) {
+        @media only screen and (max-width: 639px) {
             width: $mobile-step-width;
             height: $mobile-step-width;
             margin: 5px $mobile-step-margin;
@@ -742,10 +745,12 @@ JQUERY STEPS WIZARD
         left: $step-width - $border-thickness;
         top: ($step-width / 2) - $border-thickness - 1px;
         width: $step-margin + 1px;
-        @media only screen and (max-width: 500px) {
-            left: $mobile-step-width - $border-thickness;
-            top: ($mobile-step-width / 2) - $border-thickness - 1px;
-            width: $mobile-step-margin + 1px;
+        @media only screen and (max-width: 639px) {
+			border: 0;
+			left: 0;
+			width: 0;
+			top: 0;
+			display:none;
         }
     }
     li:not(:first-child):before {
@@ -755,21 +760,36 @@ JQUERY STEPS WIZARD
         left: -$step-margin - $border-thickness;
         width: $step-margin + 1px;
         top: ($step-width / 2) - $border-thickness - 1px;
-        @media only screen and (max-width: 500px) {
-            left: -$mobile-step-margin - $border-thickness;
-            width: $mobile-step-margin + 1px;
-            top: ($mobile-step-width / 2) - $border-thickness - 1px;
+        @media only screen and (max-width: 639px) {
+			border: 0;
+			left: 0;
+			width: 0;
+			top: 0;
+			display:none;
         }
     }
     li.current:not(:last-child):after,
     li.current:not(:first-child):before,
     .current {
         border-color: #00AEFF;
+		@media only screen and (max-width: 639px) {
+			border: 0;
+			left: 0;
+			width: 0;
+			top: 0;
+			display:none;
+		}
     }
     li:hover:not(.disabled),
     li:hover:not(.disabled):not(:last-child):after,
     li:hover:not(.disabled):not(:first-child):before {
         border-color: #21336A;
+		@media only screen and (max-width: 639px) {
+			left: 0;
+			width: 0;
+			top: 0;
+			display:none;
+		}
     }
     .current-info.audible {
         display: none;
@@ -795,7 +815,7 @@ JQUERY STEPS WIZARD
 }
 
 .course-steps.wizard > .steps {
-    @include steps(20px, 20px, 15px, 15px);
+    @include steps(20px, 20px, 0px, 0px);
     .number {
         display: none;
     }
@@ -810,6 +830,15 @@ JQUERY STEPS WIZARD
             }
         }
     }
+	li:not(:last-child):after {
+		@media only screen and (max-width: 639px) {
+			border: 0;
+			left: 0;
+			width: 0;
+			top: 0;
+			display:none;
+		}
+	}
     li.disabled a:hover {
         cursor: default;
     }
@@ -979,17 +1008,50 @@ ul.orbit-container {
 	height: 300px;
 }
 
-//.switch { // TODO to global. Removed because it affecting the entire site use of switches.
-//	margin-bottom: 0;
-//	height:0;
-//}
-
 .starter-switch {
 	@include switch-size(3rem, 6rem, 0.75rem);
 }
 
+iframe {
+	border: 1px solid #ececec !important;
+}
 
+.switch {
+	margin-bottom: 0;
+	height:0;
+}
 
+.blue-ribbon {
+	background-color: #21336A;
+	color: white;
+	padding-top: 20px;
+	padding-bottom: 10px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	margin-left: -0.9375rem;
+	margin-right: -0.9375rem;
+	padding-left: 0.9375rem;
+	padding-right: 0.9375rem;
+	h3 {
+		color: white;
+	}
+}
+@media only screen and (min-width: 40em) { .blue-ribbon {
+	margin-left: -1.25rem;
+	margin-right: -1.25rem;
+	padding-left: 1.25rem;
+	padding-right: 1.25rem;
+}}
+@media only screen and (min-width: 75rem) { .blue-ribbon {
+	margin-left: calc(-100vw / 2 + 75rem / 2 - 1.25rem);
+	margin-right: calc(-100vw / 2 + 75rem / 2 - 1.25rem);
+	padding-left: calc(100vw / 2 - 75rem / 2 + 1.25rem);
+	padding-right: calc(100vw / 2 - 75rem / 2 + 1.25rem);
+}}
 
-
-
+.bp-template-notice.updated p{
+	background-color: #efc;
+	border: 1px solid #591;
+	color: #250;
+	padding: 10px;
+}

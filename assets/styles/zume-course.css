@@ -1,10 +1,10 @@
 
 body {
-    padding-top:12px;
+    /*padding-top:12px;*/
     /*background-image: url(/images/artboard.jpg);*/
     background-position: center top;
     font-family: Helvetica, Roboto, Arial, sans-serif !important;
-    padding-bottom:25px;
+    /*padding-bottom:25px;*/
 }
 .course-steps {
     font-size: 1.5rem;
@@ -140,9 +140,15 @@ div.block {
 }
 
 div.step-title {
-    text-align: center;
-    font-size: 18px;
-    font-weight: 300;
+    text-transform: uppercase !important;
+    text-align: center !important;
+    font-weight: 600 !important;
+    color: #323a68 !important;
+    font-family: Helvetica,Roboto,Arial,sans-serif !important;
+    font-size: 2.5rem !important;
+    line-height: 1.4 !important;
+    margin-top: 2rem !important;
+    margin-bottom: 2rem !important;
 }
 
 div.activity-title {
@@ -150,16 +156,19 @@ div.activity-title {
     font-size: 50px;
     font-weight: bold;
     text-align: center;
+    text-transform: uppercase;
 }
 
 div.activity-title span {
     font-size: 40px;
+    text-transform: uppercase;
 }
 
 div.activity-description {
     padding-top: 12px;
     text-align: center;
     font-size: 1.5rem;
+    margin-bottom: 2em !important;
 }
 
 div.activity-description ol, div.activity-description ul {
@@ -167,7 +176,7 @@ div.activity-description ol, div.activity-description ul {
 }
 
 div.activity-description ol li, div.activity-description ul li {
-    padding:5px 0 20px;
+    padding:5px 0 5px;
 }
 
 .wistia_embed {
@@ -203,7 +212,7 @@ button.btn.btn-large.next-step.zume-purple.uppercase.bg-white.font-zume-purple.b
 }
 
 /* Medium devices (tablets, 768px and up) */
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 640px) {
 
     .wistia_embed {
         height: 350px;
@@ -216,7 +225,7 @@ button.btn.btn-large.next-step.zume-purple.uppercase.bg-white.font-zume-purple.b
 }
 
 /*Large devices (desktops, 992px and up)*/
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 1200px) {
 
     h1.uppercase.font-zume-purple {
         display:block;
@@ -286,10 +295,6 @@ button.btn.btn-large.next-step.zume-purple.uppercase.bg-white.font-zume-purple.b
 }
 
 
-
-
-
-
 #session {
     margin: 0 auto;
 }
@@ -335,4 +340,22 @@ body.single-item.groups #buddypress div#item-header #item-header-cover-image #it
 .chevron--left:before {
     left: 0;
     transform: rotate(-135deg);
+}
+
+
+@media only screen and (max-width: 639px) {
+    .course-steps.wizard .steps li:not(:last-child):after {
+        content: "";
+        position: absolute;
+        border: 0;
+        left: 0;
+        top: 0;
+        width: 0;
+    }
+
+
+}
+
+dl, ol, ul {
+    list-style-position: inside;
 }

@@ -10,14 +10,17 @@ if ( is_user_logged_in() ) {
 ?>
 <?php get_header(); ?>
 
-<div id="content">
+<div id="content" >
 
-    <div id="inner-content grid-x">
+    <div id="inner-content grid-x grid-padding-x">
 
         <div id="main" class="cell" role="main">
 
-            <!-- Video -->
-            <div class="grid-x grid-margin-x grid-margin-y">
+            <!----------------------------------->
+            <!-- VIDEO RIBBON -->
+            <!----------------------------------->
+            <div style="background: linear-gradient(#2CA2E2, #21336A)">
+            <div class="grid-x grid-margin-x " style="padding-top:30px">
                 <div class="medium-2 small-1 cell"></div>
                 <div class="medium-8 small-10 cell">
 
@@ -31,7 +34,7 @@ if ( is_user_logged_in() ) {
                                             height="360"
                                             frameborder="0"
                                             allowfullscreen
-                                            src="https://www.youtube-nocookie.com/embed/EOdSAdJ6AhI?rel=0&amp;showinfo=0"
+                                            src="<?php echo esc_url( Zume_Course::get_video_by_key( '31' ) ) ?>"
 
                                     ></iframe>
                                 </div>
@@ -43,39 +46,32 @@ if ( is_user_logged_in() ) {
                 <div class="medium-2 small-1 cell"></div>
             </div>
 
-
-            <!-- Challenge -->
-            <div class="grid-x grid-margin-x grid-margin-y vertical-padding">
+            <!----------------------------------->
+            <!-- CHALLENGE RIBBON -->
+            <!----------------------------------->
+            <div class="grid-x grid-margin-x grid-margin-y vertical-padding" style="max-width:100%; margin:0; background:white; padding:17px">
                 <div class="medium-2 small-1 cell"></div>
                 <div class="medium-8 small-10 cell center">
-                    <h1 class="front-page-header">
-                        <?php esc_html_e( 'Want to start the training?', 'zume' ) ?>
-                    </h1>
-                    <h1 class="front-page-header">
-                        <?php esc_html_e( 'Get started below:', 'zume' ) ?>
-                    </h1>
+                    <h3 style="margin-bottom:0px">
+                        <strong><?php esc_html_e( 'Want to start the training?', 'zume' ) ?></strong>
+                    </h3>
+                    <h3 style="margin-bottom:0px">
+                        <strong><?php esc_html_e( 'Get started below', 'zume' ) ?></strong>
+                    </h3>
                 </div>
                 <div class="medium-2 small-1 cell"></div>
             </div>
 
-            <div class="grid-x grid-margin-x grid-margin-y vertical-padding">
-                <div class="medium-2 small-1 cell"></div>
-                <div class="medium-8 small-10 cell center">
-                    <a href="<?php echo '/' . esc_url( $zume_current_lang ) . '/register'; ?>" alt="Register" class="button large center "><?php esc_html_e( 'GET STARTED', 'zume' ) ?></a>
+
+            <!----------------------------------->
+            <!-- GET STARTED RIBBON -->
+            <!----------------------------------->
+            <!-- triangle -->
+            <div class="center" style="width: 0; height: 0; border-left: 30px solid transparent; border-right: 30px solid transparent; border-top: 30px solid white; margin-top:0px;"></div>
+            <div class="row vertical-padding">
+                <div class="large-6 medium-8 small-10  center">
+                    <h3><strong style="color: white">It's as easy as 1-2-3</strong></h3>
                 </div>
-                <div class="medium-2 small-1 cell"></div>
-            </div>
-
-            <hr style="border-color: #323A68;" size="3px" width="100%"/>
-
-
-            <!-- Steps -->
-            <div class="grid-x grid-margin-x grid-margin-y vertical-padding">
-                <div class="medium-2 small-1 cell"></div>
-                <div class="medium-8 small-10 cell center">
-                    <h3 style="text-transform: uppercase"><?php esc_html_e( 'It\'s as easy as 1-2-3', 'zume' ) ?></h3>
-                </div>
-                <div class="medium-2 small-1 cell"></div>
             </div>
 
             <div class="grid-x grid-margin-x grid-margin-y vertical-padding">
@@ -83,115 +79,139 @@ if ( is_user_logged_in() ) {
                 <div class="medium-8 small-10 cell">
                     <div class="grid-x">
                         <div class="medium-4 cell center">
-                            <h4 class="center" style="text-transform: uppercase"><span
-                                        style="font-size:2.4rem;">&#10102</span>
-                                 Sign up</h4>
+                            <h4 class="center" style="color:white">
+                                <span style="font-size:2.4rem;">&#10102</span>
+                                <span style="font-family:'europa-regular'; font-size:1.2rem; vertical-align:25%; display:inline-block">
+                                 <?php esc_html_e( "Sign up", 'zume' ) ?></span>
+                            </h4>
+
                             <img class="center"
-                                 src="<?php echo esc_url( get_stylesheet_directory_uri() ) . '/assets/images/pages/'; ?>signup.jpg"
+                                 src="<?php echo esc_url( get_stylesheet_directory_uri() ) . '/assets/images/home/'; ?>sign-up.svg"
                                  alt="" width="100" height="100"/>
 
                         </div>
                         <div class="medium-4 cell center">
-                            <h4 class="center" style="text-transform: uppercase"><span
-                                        style="font-size:2.4rem;">&#10103</span> Invite
-                                some friends</h4>
+                            <h4 class="center" style="color:white">
+                                <span style="font-size:2.4rem;">&#10103</span> 
+                                <span style="font-family:'europa-regular'; font-size:1.2rem; vertical-align:25%; display:inline-block">
+                                    <?php esc_html_e( "Invite some friends", 'zume' ) ?>
+                                </span>
+                            </h4>
+
                             <img class="center"
-                                 src="<?php echo esc_url( get_stylesheet_directory_uri() ) . '/assets/images/pages/'; ?>invite.jpg"
+                                 src="<?php echo esc_url( get_stylesheet_directory_uri() ) . '/assets/images/home/'; ?>invite-friends.svg"
                                  alt="" width="100" height="100"/>
 
                         </div>
                         <div class="medium-4 cell center">
-                            <h4 class="center" style="text-transform: uppercase"><span
-                                        style="font-size:2.4rem;">&#10104</span> Host
-                                a training</h4>
+                            <h4 class="center" style="color:white">
+                                <span style="font-size:2.4rem;">&#10104</span> 
+                                <span style="font-family:'europa-regular'; font-size:1.2rem; vertical-align:25%; display:inline-block">  
+                                    <?php esc_html_e( "Host a training", 'zume' ) ?>
+                                </span>
+                            </h4>
                             <img class="center"
-                                 src="<?php echo esc_url( get_stylesheet_directory_uri() ) . '/assets/images/pages/'; ?>training.jpg"
+                                 src="<?php echo esc_url( get_stylesheet_directory_uri() ) . '/assets/images/home/'; ?>host-training.svg"
                                  alt="" width="100" height="100"/>
 
                         </div>
                     </div>
+
+                    <div class="grid-x grid-margin-x grid-margin-y vertical-padding">
+                        <div class="medium-2 small-1 cell"></div>
+                        <div class="medium-8 small-10 cell center" >
+                            <a href="<?php echo esc_url( site_url( '/' ) .  'wp-login.php?action=register' ); ?>" alt="Register" class="button large center " style="background:white; color:#323a68; font-family:'europa-regular'; padding:0.5em 2em"><?php esc_html_e( 'Get Started', 'zume' ) ?></a>
+                        </div>
+                        <div class="medium-2 small-1 cell"></div>
+                    </div>
+
                 </div>
                 <div class="medium-2 small-1 cell"></div>
             </div>
+            </div> <!-- Gradient background -->
 
+
+            
+
+
+            <!----------------------------------->
+            <!-- WHAT OTHERS ARE SAYING RIBBON -->
+            <!----------------------------------->
+            <br clear />
             <!-- Slider -->
-            <div class="grid-x expanded" style="background: #323A68;">
+            <div class="grid-x expanded" >
                 <div class="medium-2 small-1 cell"></div>
                 <div class="small-10 medium-8 small-centered cell">
 
-                    <div style="color: white; text-align: center; padding: 20px;">
-
-                        <h4 class="padding-bottom" style="text-transform: uppercase"><?php esc_html_e( 'What others are saying?', 'zume' ) ?></h4>
-
-                        <div class="orbit" role="region" aria-label="Favorite Space Pictures" data-orbit>
-                            <ul class="orbit-container white">
-
-                                <li class="orbit-slide">
-                                    <div>
-                                        <h4 class="text-center zume-slider-text"><strong>
-                                                <?php esc_html_e( 'There is a great harvest
-                                                readied in North America not being reached by the status quo. Zúme
-                                                is a biblical wake-up call and tool to empower the everyday believer
-                                                to begin walking in the Lords will to multiply disciples.', 'zume') ?></strong>
-                                        </h4>
-                                        <h4 class="zume-slider-name" style="text-transform: uppercase">
-                                            <?php esc_html_e( 'Jake Duke — Indiana', 'zume' ) ?>
-                                        </h4>
-                                    </div>
-                                </li>
-                                <li class="orbit-slide">
-                                    <div>
-                                        <h4 class="text-center zume-slider-text"><strong><?php esc_html_e( 'Do you want to make a
-                                                difference in your workplace, neighborhood, or circle of friends?
-                                                The Zúme Project essentially will give you practical rails to run on
-                                                that follow the example of the Church as seen in the New
-                                                Testament.', 'zume') ?></strong></h4>
-                                        <h4 class="zume-slider-name" style="text-transform: uppercase">
-                                            <?php esc_html_e( 'Gavin Duerson — Kentucky', 'zume' ) ?>
-                                        </h4>
-                                    </div>
-                                </li>
-                                <li class="orbit-slide">
-                                    <div>
-                                        <h4 class="text-center zume-slider-text"><strong><?php esc_html_e( 'I am so excited to use this
-                                                Zúme tool to help in training all the soldiers to make and multiply
-                                                disciples in our neighborhood. Jesus can make it a neighborhood
-                                                again.', 'zume') ?></strong></h4>
-                                        <h4 class="zume-slider-name" style="text-transform: uppercase">
-                                            <?php esc_html_e( 'Chad Rehnberg', 'zume' ) ?>
-                                        </h4>
-                                    </div>
-                                </li>
-                                <li class="orbit-slide">
-                                    <div>
-                                        <h4 class="text-center zume-slider-text"><strong><?php esc_html_e( 'I believe Zúme can be used
-                                                by the Lord to reach a huge number of people in our society who
-                                                would never darken the door of a church building.', 'zume') ?></strong></h4>
-                                        <h4 class="zume-slider-name" style="text-transform: uppercase">
-                                            <?php esc_html_e( 'Curtis Sergeant — Alabama', 'zume' ) ?>
-                                        </h4>
-                                    </div>
-                                </li>
-
-                            </ul>
-                            <nav class="orbit-bullets">
-                                <button class="is-active" data-slide="0"><span
-                                            class="show-for-sr">
-                                        <?php esc_html_e( 'First slide details.', 'zume' ) ?></span><span
-                                            class="show-for-sr">
-                                        <?php esc_html_e( 'Current Slide', 'zume' ) ?></span></button>
-                                <button data-slide="1"><span class="show-for-sr">
-                                        <?php esc_html_e( 'Second slide details.', 'zume' ) ?></span>
-                                </button>
-                                <button data-slide="2"><span class="show-for-sr">
-                                        <?php esc_html_e( 'Third slide details.', 'zume' ) ?></span>
-                                </button>
-                                <button data-slide="3"><span class="show-for-sr">
-                                        <?php esc_html_e( 'Fourth slide details.', 'zume' ) ?></span>
-                                </button>
-                            </nav>
+                    <div class="grid-x grid-margin-x grid-margin-y vertical-padding">
+                        <div class="medium-2 small-1 cell"></div>
+                        <div class="medium-8 small-10 cell center">
+                            <h3 class="center"><strong><?php esc_html_e( 'What others are saying?', 'zume' ) ?></strong></h3>
                         </div>
+                        <div class="medium-2 small-1 cell"></div>
                     </div>
+
+                    <div class="grid-x grid-margin-x grid-margin-y vertical-padding">
+
+                        <div class="cell front-page-social" data-equalizer style="color:#21336A;">
+                            <div class="grid-x grid-margin-x grid-margin-y">
+                            <div class="large-4 medium-6 small-12 cell centered" data-equalizer-watch>
+                                <img src="<?php echo esc_attr( get_stylesheet_directory_uri() ) . '/assets/images/home/'; ?>1body.png"
+                                     class="center front-page-social-image">
+                                <p class="text-center" style="color:#21336A">
+                                    <?php esc_attr_e( '"Zúme will help us accelerate our training into more countries and languages."', 'zume' ) ?>
+                            </div>
+                            <div class="large-4 medium-6 small-12 cell centered" data-equalizer-watch>
+                                <img src="<?php echo esc_attr( get_stylesheet_directory_uri() ) . '/assets/images/home/'; ?>noplaceleft.png"
+                                     class="center front-page-social-image">
+                                <p class="text-center" style="color:#21336A">
+                                    <?php esc_attr_e('"Zúme is a helpful way to filter for faithful people that can spread quickly and
+                                    conserve training bandwidth."', 'zume') ?>
+                                </p>
+                            </div>
+                            <div class="large-4 medium-6 small-12 cell centered" data-equalizer-watch>
+                                <img src="<?php echo esc_attr( get_stylesheet_directory_uri() ) . '/assets/images/home/'; ?>2414.png"
+                                     class="center front-page-social-image">
+                                <p class="text-center" style="color:#21336A">
+                                    <?php esc_attr_e( '"Zúme is a wonderful on-ramp for our coalition."', 'zume' ) ?>
+                                </p>
+                            </div>
+                            <div class="large-4 medium-6 small-12 cell centered" data-equalizer-watch>
+                                <!--                                <div class="center">-->
+                                <img src="<?php echo esc_attr( get_stylesheet_directory_uri() ) . '/assets/images/home/'; ?>biglife.png"
+                                     class="center front-page-social-image" style="max-height: 60px">
+                                <!--                                </div>-->
+                                <p class="text-center" style="color:#21336A">
+                                    <?php esc_attr_e( '"Zúme brilliantly encapsulates the principles in our introductory training."', 'zume' ) ?>
+                                </p>
+                            </div>
+                            <div class="large-4 medium-6 small-12 cell centered">
+                                <!--                                <div style="height: 60px" class="center">-->
+                                <img src="<?php echo esc_attr( get_stylesheet_directory_uri() ) . '/assets/images/home/'; ?>teamexpansion.png"
+                                     class="center front-page-social-image" style="max-height: 60px">
+                                <!--                                </div>-->
+                                <p class="text-center" style="color:#21336A">
+                                    <?php esc_attr_e('"The principles and life practices packed into the Zúme disciple-multiplication
+                                    training course have enormous potential to impact not only the USA but also, as the
+                                    course is translated into 34 other languages, the world as well."', 'zume') ?>
+                                </p>
+                            </div>
+                            <div class="large-4 medium-6 small-12 cell centered" data-equalizer-watch>
+                                <div style="height: 75px" class="center">
+                                    <img src="<?php echo esc_attr( get_stylesheet_directory_uri() ) . '/assets/images/home/'; ?>finishingthetask-logo.png"
+                                         class="center front-page-social-image" style="max-height: 60px; width:280px">
+                                </div>
+                                <p class="text-center" style="color:#21336A">
+                                    <?php esc_attr_e('"Zúme is a valuable tool for many of our member organizations to use in engaging new
+                                    people groups."', 'zume') ?>
+                                </p>
+                            </div>
+                            </div>
+                        </div>
+
+                        <!-- Find out more link -->
+                    </div>
+                </div> <!-- end #main -->
 
                 </div> <!-- End columns-->
                 <div class="medium-2 small-1 cell"></div>
@@ -202,7 +222,7 @@ if ( is_user_logged_in() ) {
             <div class="grid-x ">
                 <div class="small-8 medium-3 small-centered cell center vertical-padding">
                     <br>
-                    <a href="<?php echo '/' . esc_url( $zume_current_lang ) . '/about'; ?>" class="button large center " style="text-transform: uppercase">
+                    <a href="<?php echo esc_url( site_url( '/' ) . $zume_current_lang ) . '/about'; ?>" class="button large center " >
                         <?php esc_html_e( 'Find out more about Zúme', 'zume' ) ?></a>
                     <br>
                 </div>
@@ -210,8 +230,7 @@ if ( is_user_logged_in() ) {
 
         </div> <!-- end #main -->
 
-    </div> <!-- end #inner-content -->
+    </div> <!-- end cell --><!-- content -->
 
-</div> <!-- end #content -->
 
 <?php get_footer(); ?>

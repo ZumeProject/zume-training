@@ -412,3 +412,73 @@ ul#members-list.item-list {
     border: 1px solid #e0e0e0;
     border-radius: 10px;
 }
+
+.secondary-color {
+    color: #00aeff;
+}
+
+a.small {
+    font-size: small;
+}
+
+div.small {
+    font-size: small;
+}
+
+/*--------------------------------------------------------------
+3.4 Menu Overrides
+ */
+select {
+    margin: 0;
+}
+
+#zume-main-menu ul li {
+    border-left: 2px solid white;
+    border-right: 2px solid white;
+}
+
+#zume-main-menu ul a:hover {
+    background: #2CACE2;
+    color: white;
+}
+#zume-main-menu ul.dropdown.menu .is-active>a{
+    background: #2CACE2;
+    color: white;
+}
+
+.front-page-social-image {
+    display: block;
+    max-height: 80px;
+    margin-bottom: 15px;
+}
+.front-page-social + div {
+    margin-bottom: 20px;
+}
+
+/*--------------------------------------------------------------
+3.4 Menu Overrides
+ */
+.off-canvas li.is-submenu-item {
+    padding-left: 1em;
+}
+
+@media only screen and (max-width: 639px) {
+    h2 {
+        font-size: 2em;
+    }
+    h3.secondary {
+        font-size: 1.5em;
+    }
+    h3.overview {
+        font-size: 1.5em;
+        font-weight: bold;
+    }
+}
+
+.dropdown.menu.medium-horizontal>li.is-dropdown-submenu-parent.active>a:after {
+    border-color: white transparent transparent;
+}
+.dropdown.menu.medium-horizontal>li.is-dropdown-submenu-parent:hover>a:after {
+    border-color: white transparent transparent;
+}
+

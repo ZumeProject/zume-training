@@ -1,7 +1,7 @@
 ( function() {
 
 	// Bail if we don't have the JSON, which is passed in via `wp_localize_script()`.
-	if ( _.isUndefined( dt_multi_role_cp_data ) ) {
+	if ( _.isUndefined( zume_multi_role_cp_data ) ) {
 		return;
 	}
 
@@ -128,7 +128,7 @@
 
 	var sections = new Sections();
 
-	_.each( dt_multi_role_cp_data.sections ), function( data ) {
+	_.each( zume_multi_role_cp_data.sections ), function( data ) {
 
 		sections.add( new Section( data ) );
 	}
@@ -145,7 +145,7 @@
 		section.set( 'selected', 0 == i );
 	}, this );
 
-	_.each( dt_multi_role_cp_data.controls ), function( data ) {
+	_.each( zume_multi_role_cp_data.controls ), function( data ) {
 
 		var control = new Control( data );
 

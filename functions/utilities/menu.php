@@ -9,15 +9,15 @@ register_nav_menus(
 
 // The Top Menu
 function zume_top_nav() {
-     wp_nav_menu(array(
+    wp_nav_menu(array(
          'container' => false,                           // Remove nav container
-         'menu_class' => 'medium-horizontal menu',       // Adding custom nav class
+         'menu_class' => 'vertical medium-horizontal menu float-right',       // Adding custom nav class
          'items_wrap' => '<ul id="%1$s" class="%2$s" data-responsive-menu="accordion medium-dropdown">%3$s</ul>',
          'theme_location' => 'main-nav',                 // Where it's located in the theme
          'depth' => 5,                                   // Limit the depth of the nav
          'fallback_cb' => false,                         // Fallback function (see below)
          'walker' => new Zume_Topbar_Menu_Walker()
-     ));
+    ));
 }
 
 // Big thanks to Brett Mason (https://github.com/brettsmason) for the awesome walker
@@ -30,15 +30,15 @@ class Zume_Topbar_Menu_Walker extends Walker_Nav_Menu {
 
 // The Off Canvas Menu
 function zume_off_canvas_nav() {
-     wp_nav_menu(array(
+    wp_nav_menu(array(
          'container' => false,                           // Remove nav container
          'menu_class' => 'vertical menu top-padding',       // Adding custom nav class
-         'items_wrap' => '<ul id="%1$s" class="%2$s" data-accordion-menu>%3$s</ul>',
+         'items_wrap' => '<ul id="%1$s" class="%2$s" data-accordion-menu data-submenu-toggle="true">%3$s</ul>',
          'theme_location' => 'main-nav',                 // Where it's located in the theme
          'depth' => 5,                                   // Limit the depth of the nav
          'fallback_cb' => false,                         // Fallback function (see below)
          'walker' => new Zume_Off_Canvas_Menu_Walker()
-     ));
+    ));
 }
 
 class Zume_Off_Canvas_Menu_Walker extends Walker_Nav_Menu {
@@ -48,35 +48,6 @@ class Zume_Off_Canvas_Menu_Walker extends Walker_Nav_Menu {
     }
 }
 
-// The Footer Menu
-function zume_footer_links() {
-    wp_nav_menu(array(
-        'container' => 'false',                         // Remove nav container
-        'menu' => __( 'Footer Links', 'zume' ),     // Nav name
-        'menu_class' => 'menu',                         // Adding custom nav class
-        'theme_location' => 'footer-links',             // Where it's located in the theme
-        'depth' => 0,                                   // Limit the depth of the nav
-        'fallback_cb' => ''                             // Fallback function
-    ));
-} /* End Footer Menu */
-
-// Header Fallback Menu
-function zume_main_nav_fallback() {
-    wp_page_menu( array(
-        'show_home' => true,
-        'menu_class' => '',                             // Adding custom nav class
-        'include'     => '',
-        'exclude'     => '',
-        'echo'        => true,
-        'link_before' => '',                           // Before each link
-        'link_after' => ''                             // After each link
-    ) );
-}
-
-// Footer Fallback Menu
-function zume_footer_links_fallback() {
-    /* You can put a default here if you like */
-}
 
 // Add Foundation active class to menu
 function zume_required_active_nav_class( $classes, $item ) {

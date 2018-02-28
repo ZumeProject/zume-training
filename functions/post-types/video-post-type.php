@@ -240,22 +240,22 @@ class Zume_Video_Post_Type
         $messages[ $this->post_type ] = [
             0  => '', // Unused. Messages start at index 1.
             1  => sprintf(
-                __( '%3$s updated. %1$sView %4$s%2$s', 'zume' ),
+                '%3$s updated. %1$sView %4$s%2$s',
                 '<a href="' . esc_url( get_permalink( $post->ID ) ) . '">',
                 '</a>',
                 $this->singular,
                 strtolower( $this->singular )
             ),
-            2  => __( 'Project Update updated.', 'zume' ),
-            3  => __( 'Project Update deleted.', 'zume' ),
-            4  => sprintf( __( '%s updated.', 'zume' ), $this->singular ),
+            2  => 'Zume Video updated.',
+            3  => 'Zume Video deleted.',
+            4  => sprintf( '%s updated.', $this->singular ),
             /* translators: %s: date and time of the revision */
-            5  => isset( $_GET['revision'] ) ? sprintf( __( '%1$s restored to revision from %2$s', 'zume' ), $this->singular, wp_post_revision_title( (int) $_GET['revision'], false ) ) : false,
-            6  => sprintf( __( '%1$s published. %3$sView %2$s%4$s', 'zume' ), $this->singular, strtolower( $this->singular ), '<a href="' . esc_url( get_permalink( $post->ID ) ) . '">', '</a>' ),
-            7  => sprintf( __( '%s saved.', 'zume' ), $this->singular ),
-            8  => sprintf( __( '%1$s submitted. %2$sPreview %3$s%4$s', 'zume' ), $this->singular, strtolower( $this->singular ), '<a target="_blank" href="' . esc_url( add_query_arg( 'preview', 'true', get_permalink( $post->ID ) ) ) . '">', '</a>' ),
+            5  => isset( $_GET['revision'] ) ? sprintf( '%1$s restored to revision from %2$s', $this->singular, wp_post_revision_title( (int) $_GET['revision'], false ) ) : false,
+            6  => sprintf( '%1$s published. %3$sView %2$s%4$s', $this->singular, strtolower( $this->singular ), '<a href="' . esc_url( get_permalink( $post->ID ) ) . '">', '</a>' ),
+            7  => sprintf( '%s saved.', $this->singular ),
+            8  => sprintf( '%1$s submitted. %2$sPreview %3$s%4$s', $this->singular, strtolower( $this->singular ), '<a target="_blank" href="' . esc_url( add_query_arg( 'preview', 'true', get_permalink( $post->ID ) ) ) . '">', '</a>' ),
             9  => sprintf(
-                __( '%1$s scheduled for: %1$s. %2$sPreview %2$s%3$6$s', 'zume' ),
+                '%1$s scheduled for: %1$s. %2$sPreview %2$s%3$6$s',
                 $this->singular,
                 strtolower( $this->singular ),
                 // translators: Publish box date format, see http://php.net/date
@@ -264,7 +264,7 @@ class Zume_Video_Post_Type
                 '<a target="_blank" href="' . esc_url( get_permalink( $post->ID ) ) . '">',
                 '</a>'
             ),
-            10 => sprintf( __( '%1$s draft updated. %2$sPreview %3$s%4$s', 'zume' ), $this->singular, strtolower( $this->singular ), '<a target="_blank" href="' . esc_url( add_query_arg( 'preview', 'true', get_permalink( $post->ID ) ) ) . '">', '</a>' ),
+            10 => sprintf( '%1$s draft updated. %2$sPreview %3$s%4$s', $this->singular, strtolower( $this->singular ), '<a target="_blank" href="' . esc_url( add_query_arg( 'preview', 'true', get_permalink( $post->ID ) ) ) . '">', '</a>' ),
         ];
 
         return $messages;
@@ -279,8 +279,8 @@ class Zume_Video_Post_Type
      */
     public function meta_box_setup()
     {
-        add_meta_box( $this->post_type . '_scribes', __( 'Video Scribes', 'zume' ), array( $this, 'load_video_meta_box' ), $this->post_type, 'normal', 'high' );
-        add_meta_box( $this->post_type . '_toolkit', __( 'Audio Toolkit', 'zume' ), array( $this, 'load_audio_meta_box' ), $this->post_type, 'normal', 'high' );
+        add_meta_box( $this->post_type . '_scribes', 'Video Scribes', array( $this, 'load_video_meta_box' ), $this->post_type, 'normal', 'high' );
+        add_meta_box( $this->post_type . '_toolkit', 'Audio Toolkit', array( $this, 'load_audio_meta_box' ), $this->post_type, 'normal', 'high' );
     } // End meta_box_setup()
 
     /**
@@ -291,7 +291,7 @@ class Zume_Video_Post_Type
      */
     public function load_video_meta_box()
     {
-        echo 'These numeric ids below refer to the unique Vimeo id. <br>The page title above needs to be the two character language code.<br>';
+        echo 'These numeric ids below refer to the unique Vimeo id. It should work with the url "https://player.vimeo.com/video/{put_video_id_here}". Use the "verify link" to check if the video loads correctly.<br><br>The page title above needs to be the two character language code.<br><hr>';
         $this->meta_box_content( 'scribe' ); // prints
     }
 
@@ -348,6 +348,13 @@ class Zume_Video_Post_Type
                             echo '<p class="description">' . esc_html( $v['description'] ) . '</p>' . "\n";
                             echo '</td><tr/>' . "\n";
                             break;
+                        case 'link':
+                            echo '<tr valign="top"><th scope="row"><label for="' . esc_attr( $k ) . '">' . esc_html( $v['name'] ) . '</label></th>
+                                <td><input name="' . esc_attr( $k ) . '" type="text" id="' . esc_attr( $k ) . '" class="regular-text" value="' . esc_attr( $data ) . '" />' . "\n";
+                            $video_id = esc_attr( $k ) .'video';
+                            echo '<p class="description"><a onclick="show_video( \'' . esc_attr( $video_id ) . '\', \'' . esc_attr( $data ) . '\' )">verify link</a><span id="'. esc_attr( $video_id ) .'"></span></p>' . "\n";
+                            echo '</td><tr/>' . "\n";
+                            break;
                         case 'select':
                             echo '<tr valign="top"><th scope="row">
                                 <label for="' . esc_attr( $k ) . '">' . esc_html( $v['name'] ) . '</label></th>
@@ -365,33 +372,19 @@ class Zume_Video_Post_Type
                             echo '<p class="description">' . esc_html( $v['description'] ) . '</p>' . "\n";
                             echo '</td><tr/>' . "\n";
                             break;
-                        case 'radio':
-                            echo '<tr valign="top"><th scope="row">' . esc_html( $v['name'] ) . '</th>
-                                <td><fieldset>';
-                            // Iterate the buttons
-                            $increment_the_radio_button = 1;
-                            foreach ( $v['default'] as $vv ) {
-                                echo '<label for="' . esc_attr( "$k-$increment_the_radio_button" ) . "\">" . esc_html( $vv ) . "</label>" .
-                                     '<input class="drm-radio" type="radio" name="' . esc_attr( $k ) . '" id="' . esc_attr( $k . '-' . $increment_the_radio_button ) . '" value="' . esc_attr( $vv ) . '" ';
-                                if ( $vv == $data ) {
-                                    echo 'checked';
-                                }
-                                echo '>';
-                                $increment_the_radio_button++;
-                            }
-                            echo '</fieldset>' . "\n";
-                            echo '<p class="description">' . esc_html( $v['description'] ) . '</p>' . "\n";
-                            echo '</td><tr/>' . "\n";
-                            break;
 
                         default:
                             break;
                     }
                 }
             }
-
             echo '</tbody>' . "\n";
             echo '</table>' . "\n";
+            echo "<script>
+                    function show_video( block, id ) {
+                        jQuery( '#' + block ).append('<iframe src=\"https://player.vimeo.com/video/' + id + '\" width=\"340\" height=\"160\" frameborder=\"0\" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe><p><a onclick=\"jQuery(\'#' + block + '\').empty();\">Close video</a></p>')
+                    }
+                    </script>";
         }
     } // End meta_box_content()
 
@@ -492,248 +485,230 @@ class Zume_Video_Post_Type
     {
         $fields = [];
 
-        // Project Update Information Section
-        $fields['promo'] = [
-            'name'        => 'Promo',
+        $fields['1'] = [
+            'name'        => 'Welcome to Zume (1)',
             'description' => '',
-            'type'        => 'text',
-            'default'     => '245293029',
-            'section'     => 'scribe',
-        ];
-        $fields['overview'] = [
-            'name'        => 'Overview',
-            'description' => '',
-            'type'        => 'text',
-            'default'     => '245293029',
-            'section'     => 'scribe',
-        ];
-        $fields['intro'] = [
-            'name'        => 'Intro',
-            'description' => '',
-            'type'        => 'text',
-            'default'     => '245293029',
-            'section'     => 'scribe',
-        ];
-        $fields['scribe_1'] = [
-            'name'        => '(scribe_1) Welcome to Zume',
-            'description' => '',
-            'type'        => 'text',
+            'type'        => 'link',
             'default'     => '247062938',
             'section'     => 'scribe',
         ];
-        $fields['scribe_2'] = [
-            'name'        => '(scribe_2) Teach them to Obey',
+        $fields['2'] = [
+            'name'        => 'Teach them to Obey (2)',
             'description' => '',
-            'type'        => 'text',
+            'type'        => 'link',
             'default'     => '247382094',
             'section'     => 'scribe',
         ];
-        $fields['scribe_3'] = [
-            'name'        => '(scribe_3) Spiritual Breathing',
+        $fields['3'] = [
+            'name'        => 'Spiritual Breathing (3)',
             'description' => '',
-            'type'        => 'text',
-            'default'     => '247382094', // todo upload this video and get the right id
-            'section'     => 'scribe',
-        ];
-        $fields['scribe_4'] = [
-            'name'        => '(scribe_4) Producers vs Consumers',
-            'description' => '',
-            'type'        => 'text',
-            'default'     => '247063338',
-            'section'     => 'scribe',
-        ];
-        $fields['scribe_5'] = [
-            'name'        => '(scribe_5) Greatest Blessing',
-            'description' => '',
-            'type'        => 'text',
+            'type'        => 'link',
             'default'     => '247063777',
             'section'     => 'scribe',
         ];
-        $fields['scribe_6'] = [
-            'name'        => '(scribe_6) Spiritual Economy',
+        $fields['4'] = [
+            'name'        => 'S.O.A.P.S. (4)',
             'description' => '',
-            'type'        => 'text',
+            'type'        => 'link',
+            'default'     => '248176918',
+            'section'     => 'toolkit',
+        ];
+        $fields['5'] = [
+            'name'        => 'Accountability Groups (5)',
+            'description' => '',
+            'type'        => 'link',
+            'default'     => '248177083',
+            'section'     => 'toolkit',
+        ];
+        $fields['6'] = [
+            'name'        => 'Producers vs Consumers (6)',
+            'description' => '',
+            'type'        => 'link',
+            'default'     => '247063338',
+            'section'     => 'scribe',
+        ];
+        $fields['7'] = [
+            'name'        => 'Prayer Cycle (7)',
+            'description' => '',
+            'type'        => 'link',
+            'default'     => '248177053',
+            'section'     => 'toolkit',
+        ];
+        $fields['8'] = [
+            'name'        => 'List of 100 (8)',
+            'description' => '',
+            'type'        => 'link',
+            'default'     => '248177079',
+            'section'     => 'toolkit',
+        ];
+        $fields['9'] = [
+            'name'        => 'Spiritual Economy (9)',
+            'description' => '',
+            'type'        => 'link',
             'default'     => '247064680',
             'section'     => 'scribe',
         ];
-        $fields['scribe_7'] = [
-            'name'        => '(scribe_7) The Gospel',
+        $fields['10'] = [
+            'name'        => 'The Gospel (10)',
             'description' => '',
-            'type'        => 'text',
+            'type'        => 'link',
             'default'     => '247064875',
             'section'     => 'scribe',
         ];
-        $fields['scribe_8'] = [
-            'name'        => '(scribe_8) Eyes to See',
+        $fields['11'] = [
+            'name'        => 'Baptism (11)',
             'description' => '',
-            'type'        => 'text',
-            'default'     => '247065338',
+            'type'        => 'link',
+            'default'     => '248150621',
+            'section'     => 'toolkit',
+        ];
+        $fields['12'] = [
+            'name'        => '3 Minute Testimony (12)',
+            'description' => '',
+            'type'        => 'link',
+            'default'     => '248177254',
+            'section'     => 'toolkit',
+        ];
+        $fields['13'] = [
+            'name'        => 'Greatest Blessing (13)',
+            'description' => '',
+            'type'        => 'link',
+            'default'     => '247064323',
             'section'     => 'scribe',
         ];
-        $fields['scribe_9'] = [
-            'name'        => '(scribe_9) Faithfulness',
+        $fields['14'] = [
+            'name'        => 'Duckling Discipleship (14)',
             'description' => '',
-            'type'        => 'text',
-            'default'     => '247065912',
-            'section'     => 'scribe',
-        ];
-        $fields['scribe_10'] = [
-            'name'        => '(scribe_10) Training Cycle',
-            'description' => '',
-            'type'        => 'text',
-            'default'     => '247066070',
-            'section'     => 'scribe',
-        ];
-        $fields['scribe_11'] = [
-            'name'        => '(scribe_11) Leadership Cells',
-            'description' => '',
-            'type'        => 'text',
-            'default'     => '247376979',
-            'section'     => 'scribe',
-        ];
-        $fields['scribe_12'] = [
-            'name'        => '(scribe_12) Non-Sequential',
-            'description' => '',
-            'type'        => 'text',
-            'default'     => '247377353',
-            'section'     => 'scribe',
-        ];
-        $fields['scribe_13'] = [
-            'name'        => '(scribe_13) Pace',
-            'description' => '',
-            'type'        => 'text',
-            'default'     => '247076726',
-            'section'     => 'scribe',
-        ];
-        $fields['scribe_14'] = [
-            'name'        => '(scribe_14) Part of Two Churches',
-            'description' => '',
-            'type'        => 'text',
-            'default'     => '247077391',
-            'section'     => 'scribe',
-        ];
-        $fields['scribe_15'] = [
-            'name'        => '(scribe_15) Leadership in Networks',
-            'description' => '',
-            'type'        => 'text',
-            'default'     => '247077671',
-            'section'     => 'scribe',
-        ];
-        $fields['scribe_16'] = [
-            'name'        => '(scribe_16) Completion of Training',
-            'description' => '',
-            'type'        => 'text',
-            'default'     => '247078031',
-            'section'     => 'scribe',
-        ];
-        $fields['scribe_17'] = [
-            'name'        => '(scribe_17) Duckling Discipleship',
-            'description' => '',
-            'type'        => 'text',
+            'type'        => 'link',
             'default'     => '247378271',
             'section'     => 'scribe',
         ];
-        $fields['scribe_18'] = [
-            'name'        => '(scribe_18) Person of Peace',
+        $fields['15'] = [
+            'name'        => 'Eyes to See (15)',
             'description' => '',
-            'type'        => 'text',
-            'default'     => '247382094', // todo upload this video and get the right id
+            'type'        => 'link',
+            'default'     => '247065338',
             'section'     => 'scribe',
         ];
-
-        /* Toolkit */
-        $fields['toolkit_1'] = [
-            'name'        => '(toolkit_1) SOAPS',
+        $fields['16'] = [
+            'name'        => 'Lord\'s Supper (16)',
             'description' => '',
-            'type'        => 'text',
-            'default'     => '245293029',
+            'type'        => 'link',
+            'default'     => '248150969',
             'section'     => 'toolkit',
         ];
-        $fields['toolkit_2'] = [
-            'name'        => '(toolkit_2) Accountability Groups',
+        $fields['17'] = [
+            'name'        => 'Prayer Walking (17)',
             'description' => '',
-            'type'        => 'text',
-            'default'     => '245293029',
+            'type'        => 'link',
+            'default'     => '248150722',
             'section'     => 'toolkit',
         ];
-        $fields['toolkit_3'] = [
-            'name'        => '(toolkit_3) Prayer Cycle',
+        $fields['18'] = [
+            'name'        => 'Person of Peace (18)',
             'description' => '',
-            'type'        => 'text',
-            'default'     => '245293029',
+            'type'        => 'link',
+            'default'     => '248149796',
+            'section'     => 'scribe',
+        ];
+        $fields['19'] = [
+            'name'        => 'Faithfulness (19)',
+            'description' => '',
+            'type'        => 'link',
+            'default'     => '247065912',
+            'section'     => 'scribe',
+        ];
+        $fields['20'] = [
+            'name'        => '3|3 Groups (20)',
+            'description' => '',
+            'type'        => 'link',
+            'default'     => '248184750',
             'section'     => 'toolkit',
         ];
-        $fields['toolkit_4'] = [
-            'name'        => '(toolkit_4) List of 100',
+        $fields['21'] = [
+            'name'        => '3|3 Group Live (21)',
             'description' => '',
-            'type'        => 'text',
-            'default'     => '245293029',
+            'type'        => 'link',
+            'default'     => '249724003',
+            'section'     => 'scribe',
+        ];
+        $fields['22'] = [
+            'name'        => 'Training Cycle (22)',
+            'description' => '',
+            'type'        => 'link',
+            'default'     => '247066070',
+            'section'     => 'scribe',
+        ];
+        $fields['23'] = [
+            'name'        => 'Leadership Cells (23)',
+            'description' => '',
+            'type'        => 'link',
+            'default'     => '247376979',
+            'section'     => 'scribe',
+        ];
+        $fields['24'] = [
+            'name'        => 'Non-Sequential (24)',
+            'description' => '',
+            'type'        => 'link',
+            'default'     => '247377353',
+            'section'     => 'scribe',
+        ];
+        $fields['25'] = [
+            'name'        => 'Pace (25)',
+            'description' => '',
+            'type'        => 'link',
+            'default'     => '247076726',
+            'section'     => 'scribe',
+        ];
+        $fields['26'] = [
+            'name'        => 'Part of Two Churches (26)',
+            'description' => '',
+            'type'        => 'link',
+            'default'     => '247077391',
+            'section'     => 'scribe',
+        ];
+        $fields['27'] = [
+            'name'        => 'Completion of Training (27)',
+            'description' => '',
+            'type'        => 'link',
+            'default'     => '247078031',
+            'section'     => 'scribe',
+        ];
+        $fields['28'] = [
+            'name'        => 'Coaching Checklist (28)',
+            'description' => '',
+            'type'        => 'link',
+            'default'     => '248150334',
             'section'     => 'toolkit',
         ];
-        $fields['toolkit_5'] = [
-            'name'        => '(toolkit_5) 3 Minute Testimony',
+        $fields['29'] = [
+            'name'        => 'Leadership in Networks (29)',
             'description' => '',
-            'type'        => 'text',
-            'default'     => '245293029',
+            'type'        => 'link',
+            'default'     => '247077671',
+            'section'     => 'scribe',
+        ];
+        $fields['30'] = [
+            'name'        => 'Peer Mentoring (30)',
+            'description' => '',
+            'type'        => 'link',
+            'default'     => '248150042',
             'section'     => 'toolkit',
         ];
-        $fields['toolkit_6'] = [
-            'name'        => '(toolkit_6) Baptism',
+        $fields['31'] = [
+            'name'        => 'Overview (31)',
             'description' => '',
-            'type'        => 'text',
-            'default'     => '245293029',
-            'section'     => 'toolkit',
+            'type'        => 'link',
+            'default'     => '248149800',
+            'section'     => 'scribe',
         ];
-        $fields['toolkit_7'] = [
-            'name'        => '(toolkit_7) God\'s Story',
+        $fields['32'] = [
+            'name'        => 'How Zume Works (32)',
             'description' => '',
-            'type'        => 'text',
-            'default'     => '245293029',
-            'section'     => 'toolkit',
+            'type'        => 'link',
+            'default'     => '248149797',
+            'section'     => 'scribe',
         ];
-        $fields['toolkit_8'] = [
-            'name'        => '(toolkit_8) Prayer Walking',
-            'description' => '',
-            'type'        => 'text',
-            'default'     => '245293029',
-            'section'     => 'toolkit',
-        ];
-        $fields['toolkit_9'] = [
-            'name'        => '(toolkit_9) Lord\s Supper',
-            'description' => '',
-            'type'        => 'text',
-            'default'     => '245293029',
-            'section'     => 'toolkit',
-        ];
-        $fields['toolkit_10'] = [
-            'name'        => '(toolkit_10) 3|3 Groups',
-            'description' => '',
-            'type'        => 'text',
-            'default'     => '245293029',
-            'section'     => 'toolkit',
-        ];
-        $fields['toolkit_11'] = [
-            'name'        => '(toolkit_11) Peer Mentoring',
-            'description' => '',
-            'type'        => 'text',
-            'default'     => '245293029',
-            'section'     => 'toolkit',
-        ];
-        $fields['toolkit_12'] = [
-            'name'        => '(toolkit_12) Leadership Cell',
-            'description' => '',
-            'type'        => 'text',
-            'default'     => '245293029',
-            'section'     => 'toolkit',
-        ];
-        $fields['toolkit_13'] = [
-            'name'        => '(toolkit_13) Coaching Checklist',
-            'description' => '',
-            'type'        => 'text',
-            'default'     => '245293029',
-            'section'     => 'toolkit',
-        ];
-
 
 
         return apply_filters( 'zume_video_fields_settings', $fields );

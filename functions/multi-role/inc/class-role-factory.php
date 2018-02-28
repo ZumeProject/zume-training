@@ -74,7 +74,7 @@ final class Zume_Multi_Role_Factory {
     public function add_role( $role ) {
 
         // If the role exists with WP but hasn't been added.
-        if ( dt_multi_role_role_exists( $role ) ) {
+        if ( zume_multi_role_role_exists( $role ) ) {
 
             // Get the role object.
             $this->roles[ $role ] = new Zume_Multi_Role( $role );
@@ -87,7 +87,7 @@ final class Zume_Multi_Role_Factory {
             }
 
             // Is WP role?
-            if ( dt_multi_role_is_wordpress_role( $role ) ) {
+            if ( zume_multi_role_is_wordpress_role( $role ) ) {
                 $this->wordpress[ $role ] = $this->roles[ $role ];
             }
         }

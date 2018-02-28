@@ -11,12 +11,12 @@
  */
 
 # Register scripts/styles.
-add_action( 'admin_enqueue_scripts', 'dt_multi_role_admin_register_scripts', 0 );
-add_action( 'admin_enqueue_scripts', 'dt_multi_role_admin_register_styles', 0 );
+add_action( 'admin_enqueue_scripts', 'zume_multi_role_admin_register_scripts', 0 );
+add_action( 'admin_enqueue_scripts', 'zume_multi_role_admin_register_styles', 0 );
 
 # Custom manage users columns.
-add_filter( 'manage_users_columns', 'dt_multi_role_manage_users_columns' );
-add_filter( 'manage_users_custom_column', 'dt_multi_role_manage_users_custom_column', 10, 3 );
+add_filter( 'manage_users_columns', 'zume_multi_role_manage_users_columns' );
+add_filter( 'manage_users_custom_column', 'zume_multi_role_manage_users_custom_column', 10, 3 );
 
 
 /**
@@ -26,7 +26,7 @@ add_filter( 'manage_users_custom_column', 'dt_multi_role_manage_users_custom_col
  * @access public
  * @return void
  */
-function dt_multi_role_admin_register_scripts() {
+function zume_multi_role_admin_register_scripts() {
 
     $min = defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ? '' : '.min';
 
@@ -42,7 +42,7 @@ function dt_multi_role_admin_register_scripts() {
         'ays_delete_role'  => esc_html__( 'Are you sure you want to delete this role? This is a permanent action and cannot be undone.', 'members' )
     ];
 
-    wp_localize_script( 'members-edit-role', 'dt_multi_role_i18n', $i18n );
+    wp_localize_script( 'members-edit-role', 'zume_multi_role_i18n', $i18n );
 }
 
 /**
@@ -52,7 +52,7 @@ function dt_multi_role_admin_register_scripts() {
  * @access public
  * @return void
  */
-function dt_multi_role_admin_register_styles() {
+function zume_multi_role_admin_register_styles() {
 
     $min = defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ? '' : '.min';
 
@@ -69,7 +69,7 @@ function dt_multi_role_admin_register_styles() {
  * @param  string  $role
  * @return void
  */
-function dt_multi_role_delete_role( $role ) {
+function zume_multi_role_delete_role( $role ) {
 
     // Get the default role.
     $default_role = get_option( 'default_role' );
@@ -104,7 +104,7 @@ function dt_multi_role_delete_role( $role ) {
     remove_role( $role );
 
     // Remove the role from the role factory.
-    dt_multi_role_role_factory()->remove_role( $role );
+    zume_multi_role_role_factory()->remove_role( $role );
 }
 
 /**
@@ -115,7 +115,7 @@ function dt_multi_role_delete_role( $role ) {
  * @global object  $wpdb
  * @return array
  */
-function dt_multi_role_get_user_meta_keys() {
+function zume_multi_role_get_user_meta_keys() {
     global $wpdb;
 
     return $wpdb->get_col( "SELECT meta_key FROM $wpdb->usermeta GROUP BY meta_key ORDER BY meta_key" );
@@ -129,10 +129,10 @@ function dt_multi_role_get_user_meta_keys() {
  * @param  array  $columns
  * @return array
  */
-function dt_multi_role_manage_users_columns( $columns ) {
+function zume_multi_role_manage_users_columns( $columns ) {
 
     // If multiple roles per user is not enabled, bail.
-    if ( ! dt_multi_role_multiple_user_roles_enabled() ) {
+    if ( ! zume_multi_role_multiple_user_roles_enabled() ) {
         return $columns;
     }
 
@@ -164,9 +164,9 @@ function dt_multi_role_manage_users_columns( $columns ) {
  * @param  int     $user_id
  * @return string
  */
-function dt_multi_role_manage_users_custom_column( $output, $column, $user_id ) {
+function zume_multi_role_manage_users_custom_column( $output, $column, $user_id ) {
 
-    if ( 'roles' === $column && dt_multi_role_multiple_user_roles_enabled() ) {
+    if ( 'roles' === $column && zume_multi_role_multiple_user_roles_enabled() ) {
 
         $user = new WP_User( $user_id );
 
@@ -177,8 +177,8 @@ function dt_multi_role_manage_users_custom_column( $output, $column, $user_id ) 
 
             foreach ( $user->roles as $role ) {
 
-                if ( dt_multi_role_role_exists( $role ) ) {
-                    $user_roles[] = dt_multi_role_translate_role( $role );
+                if ( zume_multi_role_role_exists( $role ) ) {
+                    $user_roles[] = zume_multi_role_translate_role( $role );
                 }
             }
 
