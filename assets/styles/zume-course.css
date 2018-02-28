@@ -359,3 +359,7 @@ body.single-item.groups #buddypress div#item-header #item-header-cover-image #it
 dl, ol, ul {
     list-style-position: inside;
 }
+
+.wizard > .actions > ul > li.disabled {
+    display: none;
+}
