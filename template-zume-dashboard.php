@@ -398,23 +398,34 @@ $zume_highest_session = Zume_Dashboard::get_highest_session( $zume_current_user 
                         <!-- ********************************************************************************************* -->
                         <!-- INSTRUCTIONS SECTION -->
                         <!-- ********************************************************************************************* -->
-                        <div class="callout show-for-large hide-for-small">
+                        <!--<div class="callout show-for-large hide-for-small">
+
                             <div class="grid-x">
                                 <div class="cell center">
-                                    <h3 class="center padding-bottom"><?php echo esc_html__( 'Instructions', 'zume' ) ?></h3>
+                                    <p class="center padding-bottom"><strong><?php /*echo esc_html__( 'Welcome', 'zume' ) */?></strong></p>
+                                </div>
+                            </div>
+                            <div class="grid-x">
+                                <div class="cell small">
+
                                 </div>
                             </div>
 
-                            <div class="grid-x grid-margin-x">
-                                <div class="cell">
-                                    <ul>
-                                        <li><?php esc_html_e( "Create a group", 'zume' ) ?></li>
-                                        <li><?php esc_html_e( "Plan a time and invite friends", 'zume' ) ?></li>
-                                        <li><?php esc_html_e( "Explore the upcoming session", 'zume' ) ?></li>
+                            <div class="grid-x">
+                                <div class="cell center">
+                                    <p class="center padding-bottom"><strong><?php /*echo esc_html__( 'Help', 'zume' ) */?></strong></p>
+                                </div>
+                            </div>
+                            <div class="grid-x">
+                                <div class="cell small">
+
+                                    <ul style="margin-left:0;list-style-type: circle;">
+                                        <li><a onclick=""><?php /*esc_html_e( "Start a new group", 'zume' ) */?></a></li>
+                                        <li><a onclick=""><?php /*esc_html_e( "Call together friends", 'zume' ) */?></a></li>
                                     </ul>
                                 </div>
                             </div>
-                        </div>
+                        </div>-->
                         <!-- END INSTRUCTIONS -->
 
                         <!-- ********************************************************************************************* -->

@@ -626,7 +626,7 @@ class Zume_Video_Post_Type
             'section'     => 'toolkit',
         ];
         $fields['21'] = [
-            'name'        => '3|3 Group Demo (21)',
+            'name'        => '3|3 Group Live (21)',
             'description' => '',
             'type'        => 'link',
             'default'     => '249724003',
