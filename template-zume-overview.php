@@ -307,7 +307,7 @@ class Zume_Overview_Content {
                     <div class="cell">
                         <div class="grid-x grid-margin-y">
                             <div class="small-2 cell center">
-                                <img src="<?php echo esc_url( zume_images_uri( 'overview' ) ) ?>practice-1.png"
+                                <img src="<?php echo esc_url( zume_images_uri( 'overview' ) ) ?>tool-2.png"
                                      alt="" width="40" height="40" class="alignnone size-full wp-image-1568"/>
                             </div>
                             <div class="small-10 cell">
@@ -384,7 +384,7 @@ class Zume_Overview_Content {
                         <div class="grid-x grid-margin-y">
                             <div class="small-2 cell center">
                                 <!-- image -->
-                                <img src="<?php echo esc_url( zume_images_uri( 'overview' ) ) ?>practice-1-6.png"
+                                <img src="<?php echo esc_url( zume_images_uri( 'overview' ) ) ?>practice-1-1.png"
                                      alt="" width="40" height="40" class="alignnone size-full wp-image-1577"/>
                             </div>
                             <div class="small-10 cell">
@@ -396,7 +396,7 @@ class Zume_Overview_Content {
                         <div class="grid-x grid-margin-y grid-margin-y">
                             <div class="small-2 cell center">
                                 <!-- image -->
-                                <img src="<?php echo esc_url( zume_images_uri( 'overview' ) ) ?>practice-2.png"
+                                <img src="<?php echo esc_url( zume_images_uri( 'overview' ) ) ?>tool-2-1.png"
                                      alt="" width="40" height="40" class="alignnone size-full wp-image-1578"/>
                             </div>
                             <div class="small-10 cell">
@@ -418,7 +418,7 @@ class Zume_Overview_Content {
                         <div class="grid-x grid-margin-y grid-margin-y">
                             <div class="small-2 cell center">
                                 <!-- image -->
-                                <img src="<?php echo esc_url( zume_images_uri( 'overview' ) ) ?>practice-1-6.png"
+                                <img src="<?php echo esc_url( zume_images_uri( 'overview' ) ) ?>practice-1-1.png"
                                      alt="" width="40" height="40" class="alignnone size-full wp-image-1579"/>
                             </div>
                             <div class="small-10 cell">
@@ -428,7 +428,7 @@ class Zume_Overview_Content {
                         <div class="grid-x grid-margin-y grid-margin-y">
                             <div class="small-2 cell center">
                                 <!-- image -->
-                                <img src="<?php echo esc_url( zume_images_uri( 'overview' ) ) ?>practice-2.png"
+                                <img src="<?php echo esc_url( zume_images_uri( 'overview' ) ) ?>tool-2-1.png"
                                      alt="" width="40" height="40" class="alignnone size-full wp-image-1580"/>
                             </div>
                             <div class="small-10 cell">
@@ -609,7 +609,7 @@ class Zume_Overview_Content {
                         <div class="grid-x grid-margin-y">
                             <div class="small-2 cell center">
                                 <!-- image -->
-                                <img src="<?php echo esc_url( zume_images_uri( 'overview' ) ) ?>concept-2-2.png"
+                                <img src="<?php echo esc_url( zume_images_uri( 'overview' ) ) ?>concept-2-2-1.png"
                                      alt="" width="40" height="40" class="alignnone size-full wp-image-1029"/>
                             </div>
                             <div class="small-10 cell">
@@ -850,7 +850,7 @@ class Zume_Overview_Content {
                         <div class="grid-x grid-margin-y">
                             <div class="small-2 cell center">
                                 <!-- image -->
-                                <img src="<?php echo esc_url( zume_images_uri( 'overview' ) ) ?>concept-1-3.png"
+                                <img src="<?php echo esc_url( zume_images_uri( 'overview' ) ) ?>tool-1-4.png"
                                      alt="" width="40" height="40" class="alignnone size-full wp-image-1028"/>
                             </div>
                             <div class="small-10 cell">
@@ -1183,7 +1183,7 @@ class Zume_Overview_Content {
                         <div class="grid-x grid-margin-y">
                             <div class="small-2 cell center">
                                 <!-- image -->
-                                <img src="<?php echo esc_url( zume_images_uri( 'overview' ) ) ?>practic.png"
+                                <img src="<?php echo esc_url( zume_images_uri( 'overview' ) ) ?>practice.png"
                                      alt="" width="40" height="40" class="alignnone size-full wp-image-1028"/>
                             </div>
                             <div class="small-10 cell">
@@ -1215,7 +1215,7 @@ class Zume_Overview_Content {
                         <div class="grid-x grid-margin-y">
                             <div class="small-2 cell center">
                                 <!-- image -->
-                                <img src="<?php echo esc_url( zume_images_uri( 'overview' ) ) ?>tool-1-7.png"
+                                <img src="<?php echo esc_url( zume_images_uri( 'overview' ) ) ?>tool-1-6.png"
                                      alt="" width="40" height="40" class="alignnone size-full wp-image-1572"/>
                             </div>
                             <div class="small-10 cell">
