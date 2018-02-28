@@ -111,7 +111,7 @@ class Zume_Overview_Content {
 
         </script>
 
-        <div id="overview">
+        <div id="overview1">
             <h3></h3>
             <section>
                 <h3 style="text-align: center; font-weight: bold"><?php echo esc_html__( 'Session 1', 'zume' ) ?></h3>
@@ -197,29 +197,6 @@ class Zume_Overview_Content {
 
         <?php
     }
-
-    /**
-     * Pulls the content from the pages database
-     */
-//  public static function get_page_content( $session, $language = 'en' ) {
-//
-//      $session_title = 'Session ' . $session . ' Overview';
-//      $page_object   = get_page_by_title( $session_title, OBJECT, 'page' );
-//
-//      if ( $language != 'en' ) {
-//          $translation_id = zume_get_translation( $page_object->ID, $language );
-//          $page_object    = get_post( $translation_id, OBJECT );
-//      }
-//
-//      if ( ! empty( $page_object ) || ! empty( $page_object->post_content ) ) {
-//          $page_content = (string) $page_object->post_content;
-//			// @codingStandardsIgnoreLine
-//			echo "<div class=\"overview\">$page_content</div>";
-//
-//      } else {
-//          print 'Please republish "' . esc_html( $session_title ) . '" with content for this section in the pages administration area.';
-//      }
-//  }
 
     public static function session_overview_1() {
         ?>
