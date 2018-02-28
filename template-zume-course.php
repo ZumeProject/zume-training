@@ -2607,13 +2607,28 @@ class Zume_Course_Content {
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="large-4 cell activity-title"><?php esc_html_e( 'WATCH', 'zume' ) ?></div>
                 <div class="large-8 cell activity-description">
-                    <?php esc_html_e( "Jesus said, “Whoever wishes to become great among you shall be your servant.”", 'zume' ) ?>
-                    <br><br>
+                    <p>
+                        <?php esc_html_e( "Jesus said, “Whoever wishes to become great among you shall be your servant.”", 'zume' ) ?>
+                    </p>
+                    <p>
                     <?php esc_html_e( "Jesus radically reversed our understanding of leadership by teaching us that if we feel called to lead, then we are being called to serve. A Leadership Cell is a way someone who feels called to lead can develop their leadership by practicing serving.", 'zume' ) ?>
-                    <br><br>
-                    <?php esc_html_e( "Find the \"Leadership Cells\" section in your Zúme Guidebook. When you're ready, watch and discuss this video.", 'zume' ) ?>
+                    </p>
                 </div>
             </div> <!-- grid-x -->
+
+            <!-- Inset Block -->
+            <div class="grid-x grid-margin-x grid-margin-y single">
+                <div class="cell auto"></div>
+                <div class="large-8 cell activity-description well">
+                    <div class="grid-x grid-padding-x grid-padding-y center" >
+                        <div class="cell" style="border: 1px solid #ccc;">
+                            <?php esc_html_e( "Find the \"Leadership Cells\" section in your Zúme Guidebook. When you're ready, watch and discuss this video.", 'zume' ) ?>
+                        </div>
+                    </div>
+                </div>
+                <div class="cell auto"></div>
+            </div> <!-- grid-x -->
+
             <!-- Video block -->
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="small-12 small-centered cell">
@@ -2653,35 +2668,47 @@ class Zume_Course_Content {
             <!-- Step Title -->
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="step-title cell">
-                    <?php esc_html_e( "PRACTICE A 3/3 GROUP SESSION (90min)", 'zume' ) ?>
-                </div> <!-- step-title cell --><br>
-                <div class="center"><!-- grid-x -->
+                    <?php esc_html_e( "PRACTICE 3/3 GROUP (90min)", 'zume' ) ?>
+                </div> <!-- step-title cell -->
+            </div>
 
-                    <!-- Activity Block  -->
-                    <div class="grid-x grid-margin-x grid-margin-y">
-                        <div class="large-4 cell activity-title">
-                            <span>
-                                <?php esc_html_e( "PRACTICE", 'zume' ) ?>
-                            </span>
+            <!-- Inset Block -->
+            <div class="grid-x grid-margin-x grid-margin-y single">
+                <div class="cell auto"></div>
+                <div class="large-8 cell activity-description well">
+                    <div class="grid-x grid-padding-x grid-padding-y center" >
+                        <div class="cell" style="border: 1px solid #ccc;">
+                            <?php esc_html_e( "Have your entire group spend the next 90 minutes practicing the 3/3 Groups Format.", 'zume' ) ?>
                         </div>
-                        <div class="large-8 cell activity-description">
-                            <?php esc_html_e( "Have your entire group spend the next 90 minutes practicing the 3/3 Groups Format using the pattern on pages 19-20 in your Zúme Guidebook.", 'zume' ) ?>
-                            <br><br>
-                            <ul>
-                                <li>
-                                    <?php esc_html_e( "LOOK BACK - Use last session’s Obey, Train, and Share challenges to check-in with each other.", 'zume' ) ?>
-                                </li>
-                                <li>
-                                    <?php esc_html_e( "LOOK UP - Use Acts 2:42-47 as your group’s reading passage and answer questions 1- 4.", 'zume' ) ?>
-                                </li>
-                                <li>
-                                    <?php esc_html_e( "LOOK FORWARD - Use questions 5, 6, and 7 to develop how you will Obey, Train and Share.", 'zume' ) ?>
-                                </li>
-                            </ul>
-                            <br>
-                            <?php esc_html_e( "REMEMBER - Each section should take about 1/3 (or 30 minutes) of your practice time.", 'zume' ) ?>
-                        </div>
-                    </div> <!-- grid-x -->
+                    </div>
+                </div>
+                <div class="cell auto"></div>
+            </div> <!-- grid-x -->
+
+            <!-- Activity Block  -->
+            <div class="grid-x grid-margin-x grid-margin-y">
+                <div class="large-4 cell activity-title">
+                    <span>
+                        <?php esc_html_e( "PRACTICE", 'zume' ) ?>
+                    </span>
+                </div>
+
+                <div class="large-8 cell activity-description">
+                    <ul>
+                        <li>
+                            <?php esc_html_e( "LOOK BACK - Use last session’s Obey, Train, and Share challenges to check-in with each other.", 'zume' ) ?>
+                        </li>
+                        <li>
+                            <?php esc_html_e( "LOOK UP - Use Acts 2:42-47 as your group’s reading passage and answer questions 1- 4.", 'zume' ) ?>
+                        </li>
+                        <li>
+                            <?php esc_html_e( "LOOK FORWARD - Use questions 5, 6, and 7 to develop how you will Obey, Train and Share.", 'zume' ) ?>
+                        </li>
+                    </ul>
+                    <br>
+                    <?php esc_html_e( "REMEMBER - Each section should take about 1/3 (or 30 minutes) of your practice time.", 'zume' ) ?>
+                </div>
+            </div> <!-- grid-x -->
 
         </section>
 
@@ -2697,7 +2724,6 @@ class Zume_Course_Content {
                     <p>
                     <?php esc_html_e( "Congratulations! You've completed Session 8. ", 'zume' ) ?></p>
                     <p>
-                    <?php esc_html_e( "Below are next steps to take in preparation for the next session.", 'zume' ) ?></p>
                 </div>
             </div> <!-- grid-x -->
             <!-- Activity Block  -->
@@ -2948,10 +2974,7 @@ class Zume_Course_Content {
         <section><!-- Step Title -->
             <div class="grid-x grid-margin-x grid-margin-y">
 
-                <div class="step-title cell"><?php esc_html_e( "ACTIVITY (30min)", 'zume' ) ?></div>
-                <div class="step-title center cell">
-                    <?php esc_html_e( "CREATE A 3-MONTH PLAN", 'zume' ) ?>
-                </div>
+                <div class="step-title cell"><?php esc_html_e( "CREATE A 3-MONTH PLAN (30min)", 'zume' ) ?></div>
                 <!-- step-title cell -->
                 <div class="center">
 
@@ -2960,8 +2983,12 @@ class Zume_Course_Content {
                     <div class="grid-x grid-margin-x grid-margin-y">
                         <div class="large-4 cell activity-title"><?php esc_html_e( 'OVERVIEW', 'zume' ) ?></div>
                         <div class="large-8 cell activity-description">
+                            <p>
                             <?php esc_html_e( "In His Bible, God says, \"I know the plans I have for you, plans to prosper you and not to harm you, plans to give you hope and a future.\" God makes plans, and He expects us to make plans, too. He teaches us through His Word and His work to look ahead, see a better tomorrow, make a plan for how to get there, and then prepare the resources we'll need on the way.", 'zume' ) ?>
+                            </p>
+                            <p>
                             <?php esc_html_e( "A 3-Month Plan is a tool you can use to help focus your attention and efforts and keep them aligned with God's priorities for making disciples who multiply. Spend the next 30 minutes praying over, reading through, and then completing the commitments listed in the 3-Month Plan section in your Zúme Guidebook.", 'zume' ) ?>
+                            </p>
                         </div>
                     </div>
                     <!-- grid-x -->
@@ -2996,11 +3023,8 @@ class Zume_Course_Content {
         <h3></h3>
         <section><!-- Step Title -->
             <div class="grid-x grid-margin-x grid-margin-y">
-                <div class="step-title cell"><?php esc_html_e( "ACTIVITY (30min)", 'zume' ) ?></div>
+                <div class="step-title cell"> <?php esc_html_e( "SHARE YOUR PLAN (30min)", 'zume' ) ?></div>
                 <!-- step-title cell -->
-                <div class="step-title center cell">
-                    <?php esc_html_e( "SHARE YOUR PLAN AND PLAN AS A TEAM.", 'zume' ) ?>
-                </div>
             </div>
             <!-- grid-x -->
 
@@ -3266,7 +3290,7 @@ class Zume_Course_Content {
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="large-4 cell activity-title"><?php esc_html_e( "READ", 'zume' ) ?></div>
                 <div class="large-8 cell activity-description">
-                    <?php esc_html_e( "ZÚME TOOLKIT - PEER MENTORING GROUPS", 'zume' ) ?>
+                    <?php esc_html_e( "PEER MENTORING GROUPS", 'zume' ) ?>
                     <br><br>
                     <?php esc_html_e( "Making disciples who make disciples means making leaders who make leaders. How do you develop stronger leaders? By teaching them how to love one another better. Peer Mentoring Groups help leaders love deeper.", 'zume' ) ?>
                     <br><br>
@@ -3312,7 +3336,7 @@ class Zume_Course_Content {
                 <div class="large-8 cell activity-description well">
                     <div class="grid-x grid-padding-x grid-padding-y center" >
                         <div class="cell" style="border: 1px solid #ccc;">
-                            <?php esc_html_e( "Practice peer mentoring groups. Spend the next 60 minutes practicing the Peer Mentoring Groups format. Find the Peer Mentoring Groups section in your Zúme Training Guide, and follow these steps.", 'zume' ) ?>
+                            <?php esc_html_e( "Find the Peer Mentoring Groups section in your Zúme Training Guide, and follow these steps.", 'zume' ) ?>
                         </div>
                     </div>
 
