@@ -408,14 +408,14 @@ $zume_highest_session = Zume_Dashboard::get_highest_session( $zume_current_user 
                                 <div class="cell center">
                                     <p class="center padding-bottom">
                                         <strong>
-                                            <?php esc_attr_e( $zume_message['title'] ?? '', 'zume' ) ?>
+                                            <?php isset( $zume_message['title'] ) ? print esc_attr( $zume_message['title'] ) : print ''; ?>
                                         </strong>
                                     </p>
                                 </div>
                             </div>
                             <div class="grid-x">
                                 <div class="cell small">
-                                    <?php esc_attr_e( $zume_message['message'] ?? '', 'zume' ) ?>
+                                    <?php isset( $zume_message['message'] ) ? print esc_attr( $zume_message['message'] ) : print ''; ?>
                                 </div>
                             </div>
 
@@ -645,17 +645,19 @@ foreach ( $zume_user_meta as $zume_key => $v ) {
 
                     </div>
 
-
                     <!-- Add coleaders -->
                     <div class="cell padding-top">
                         <label for="add_coleader"><strong><?php echo esc_html__( 'Coleaders', 'zume' ) ?></strong></label>
 
                         <?php
                         // Print current coleaders
-                        if( isset( $zume_value['coleaders'] ) && ! empty( $zume_value['coleaders'] ) && is_array( $zume_value['coleaders'] ) ) :
-                            echo '<ul>';
-                            foreach( $zume_value['coleaders'] as $zume_coleader ) {
-                                Zume_Dashboard::get_coleader_input( $zume_coleader );
+                        if ( isset( $zume_value['coleaders'] ) && ! empty( $zume_value['coleaders'] ) && is_array( $zume_value['coleaders'] ) ) :
+                            echo '<ul id="coleaders-ul-'. esc_html( $zume_key ).'" data-key="'. esc_html( $zume_key ).'">';
+                            $zume_i = 0;
+                            foreach ( $zume_value['coleaders'] as $zume_coleader ) {
+                                $zume_li_id = $zume_key . $zume_i;
+                                Zume_Dashboard::get_coleader_input( $zume_coleader, $zume_li_id );
+                                $zume_i++;
                             } // endforeach
                             echo '</ul>';
                         endif; // if coleader exits
@@ -704,7 +706,7 @@ foreach ( $zume_user_meta as $zume_key => $v ) {
 
                 <div class="grid-x grid-padding-x">
                     <div class="cell center">
-                        <h2><?php esc_attr_e('ARE YOU SURE YOU WANT TO DELETE THIS GROUP?', 'zume') ?></h2>
+                        <h2><?php esc_attr_e( 'ARE YOU SURE YOU WANT TO DELETE THIS GROUP?', 'zume' ) ?></h2>
                     </div>
                 </div>
                 <div class="grid-x">

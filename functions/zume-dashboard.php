@@ -118,6 +118,7 @@ class Zume_Dashboard {
             'session_10_complete' => '',
             'last_modified_date'  => current_time( 'mysql' ),
             'closed'              => false,
+            'coleaders'           => [],
         ];
 
         add_user_meta( $current_user_id, $group_key, $group_values, true );
@@ -161,17 +162,18 @@ class Zume_Dashboard {
         // Add coleaders
         $args['coleaders'] = ( isset( $args['coleaders'] ) && is_array( $args['coleaders'] ) && ! empty( $args['coleaders'] ) ) ? array_filter( $args['coleaders'] ) : [];
         if ( isset( $args['new_coleader'] ) && ! empty( $args['new_coleader'] && is_array( $args['new_coleader'] ) ) ) { // test if new coleader added
-            foreach( $args['new_coleader'] as $coleader ) { // loop potential additions
+            foreach ( $args['new_coleader'] as $coleader ) { // loop potential additions
 
+                $coleader = trim( $coleader );
                 // check if empty
-                if ( empty( $coleader ) ) {
+                if ( empty( $coleader ) || ! is_email( $coleader )) {
                     continue;
                 }
 
                 // duplicate check
                 if ( ! empty( $args['coleaders'] ) ) { // if coleaders exist
-                    foreach( $args['coleaders'] as $previous_coleader ) {
-                        if( $previous_coleader == $coleader ) {
+                    foreach ( $args['coleaders'] as $previous_coleader ) {
+                        if ( $previous_coleader == $coleader ) {
                             continue 2;
                         }
                     }
@@ -323,13 +325,13 @@ class Zume_Dashboard {
             'new' => [
                 'type' => 'new',
                 'name' => 'new_registration',
-                'title' => __( 'Welcome!', 'zume'),
+                'title' => __( 'Welcome!', 'zume' ),
                 'message' => __( 'Praise God for your interest in sharpening your disciple-making!', 'zume' )
             ],
         ];
 
         // new, no group
-        if( 0 == $targeted_message ) {
+        if ( 0 == $targeted_message ) {
             return $message['new'];
         }
 
@@ -353,22 +355,63 @@ class Zume_Dashboard {
 
     }
 
-    public static function get_coleader_input( $email_address ) {
+    public static function get_coleader_input( $email_address, $id ) {
         // check if email is a user
         $user = get_user_by( 'email', $email_address );
 
         if ( $user ) {
         // if email is a user
             ?>
-            <li><?php echo esc_attr( $email_address ) ?><input type="hidden" name="coleaders[]" value="<?php echo esc_attr( $email_address ) ?>" /> ( <?php echo get_avatar( $email_address, 15 ) ?>  <?php esc_attr_e( $user->display_name ) ?> )</li>
+            <li class="coleader" id="<?php echo esc_attr( $id ) ?>"><?php echo esc_attr( $email_address ) ?><input type="hidden" name="coleaders[]" value="<?php echo esc_attr( $email_address ) ?>" /> ( <?php echo get_avatar( $email_address, 15 ) ?>  <?php echo esc_attr( $user->display_name ) ?> )</li>
             <?php
 
         } else {
         // if email is not a user
             ?>
-            <li><?php echo esc_attr( $email_address ) ?><input type="hidden" name="coleaders[]" value="<?php echo esc_attr( $email_address ) ?>" /> ( <a href="mailto:<?php echo esc_attr( $email_address ) ?>"><?php esc_attr_e( 'Invite to Zúme') ?></a> )</li>
+            <li class="coleader" id="<?php echo esc_attr( $id ) ?>"><?php echo esc_attr( $email_address ) ?><input type="hidden" name="coleaders[]" value="<?php echo esc_attr( $email_address ) ?>" /> (
+                <a href="mailto:<?php echo esc_attr( $email_address ) ?>?subject=<?php esc_attr_e( 'Join me on the Zúme Project' ) ?>&body=<?php esc_attr_e( 'Join me on the Zúme Project' ) ?>: <?php echo esc_url( site_url( '/wp-login.php?action=register' ) ) ?>"><?php esc_attr_e( 'Invite to Zúme' ) ?></a>
+                )</li>
             <?php
         }
     }
 
+    public static function delete_coleader( $email, $group_id ) {
+        $group = get_user_meta( get_current_user_id(), $group_id, true );
+        $group = maybe_unserialize( $group );
+        $group_prev = $group;
+        if ( empty( $group ) ) {
+            return [ 'status' => 'Permission failure' ];
+        }
+
+        if ( empty( $email ) ) {
+            return [ 'status' => 'Email failure' ];
+        }
+
+        if ( ! isset( $group['coleaders'] ) ) {
+            return [ 'status' => 'Coleaders not present' ];
+        }
+
+        foreach ( $group['coleaders'] as $key => $coleader ) {
+            if ( $email == $coleader) {
+                unset( $group['coleaders'][$key] );
+                update_user_meta( get_current_user_id(), $group_id, $group, $group_prev );
+                return [ 'status' => 'OK' ];
+            }
+        }
+        return [ 'status' => 'Coleader not found' ];
+    }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
