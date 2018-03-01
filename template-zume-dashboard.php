@@ -84,9 +84,9 @@ $zume_highest_session = Zume_Dashboard::get_highest_session( $zume_current_user 
                                                         <p class="text-gray">
                                                             <?php echo esc_html( __( 'Meeting Time', 'zume' ) . ": " . $zume_value['meeting_time'] ) ?>
                                                             <br>
-                                                            <?php echo esc_html( __( 'Members', 'zume' ) . ': ' . $zume_value['members'] ) ?>
-                                                            <br>
                                                             <?php echo esc_html( __( 'Address', 'zume' ) . ': ' . $zume_value['address'] ) ?>
+                                                            <br>
+                                                            <?php echo esc_html( __( 'Members', 'zume' ) . ': ' . $zume_value['members'] ) ?>
                                                             <br>
                                                         </p>
 
@@ -398,34 +398,42 @@ $zume_highest_session = Zume_Dashboard::get_highest_session( $zume_current_user 
                         <!-- ********************************************************************************************* -->
                         <!-- INSTRUCTIONS SECTION -->
                         <!-- ********************************************************************************************* -->
-                        <!--<div class="callout show-for-large hide-for-small">
+                        <?php
+                        $zume_message = Zume_Dashboard::get_encouragement();
+                        ?>
+                        <div class="callout show-for-large hide-for-small">
 
+                            <!-- Encouragement message -->
                             <div class="grid-x">
                                 <div class="cell center">
-                                    <p class="center padding-bottom"><strong><?php /*echo esc_html__( 'Welcome', 'zume' ) */?></strong></p>
+                                    <p class="center padding-bottom">
+                                        <strong>
+                                            <?php esc_attr_e( $zume_message['title'] ?? '', 'zume' ) ?>
+                                        </strong>
+                                    </p>
                                 </div>
                             </div>
                             <div class="grid-x">
                                 <div class="cell small">
-
+                                    <?php esc_attr_e( $zume_message['message'] ?? '', 'zume' ) ?>
                                 </div>
                             </div>
 
-                            <div class="grid-x">
+                            <!--<div class="grid-x grid-padding-y grid-margin-y">
                                 <div class="cell center">
-                                    <p class="center padding-bottom"><strong><?php /*echo esc_html__( 'Help', 'zume' ) */?></strong></p>
+                                    <p class="center padding-bottom"><strong><?php /*echo esc_html__( 'Help', 'zume' )  */?></strong></p>
                                 </div>
                             </div>
                             <div class="grid-x">
                                 <div class="cell small">
 
                                     <ul style="margin-left:0;list-style-type: circle;">
-                                        <li><a onclick=""><?php /*esc_html_e( "Start a new group", 'zume' ) */?></a></li>
+                                        <li><a onclick=""><?php /*esc_html_e( "What's new", 'zume' )  */?></a></li>
                                         <li><a onclick=""><?php /*esc_html_e( "Call together friends", 'zume' ) */?></a></li>
                                     </ul>
                                 </div>
-                            </div>
-                        </div>-->
+                            </div>-->
+                        </div>
                         <!-- END INSTRUCTIONS -->
 
                         <!-- ********************************************************************************************* -->
@@ -648,6 +656,8 @@ foreach ( $zume_user_meta as $zume_key => $v ) {
                         });
                     </script>
 
+                    <div class="cell"
+
                 </div>
 
 
@@ -661,7 +671,12 @@ foreach ( $zume_user_meta as $zume_key => $v ) {
         <div class="reveal small" id="<?php echo esc_html( $zume_key ); ?>-delete" data-reveal>
             <form data-abide method="post">
                 <input type="hidden" name="key" value="<?php echo esc_html( $zume_key ); ?>"/>
-                <h3>ARE YOU SURE YOU WANT TO DELETE THIS GROUP?</h3><br>
+
+                <div class="grid-x grid-padding-x">
+                    <div class="cell center">
+                        <h2><?php esc_attr_e('ARE YOU SURE YOU WANT TO DELETE THIS GROUP?', 'zume') ?></h2>
+                    </div>
+                </div>
                 <div class="grid-x">
                     <div class="cell center">
                         <span class="center"><button type="submit" class="button alert" name="type"

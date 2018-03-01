@@ -288,4 +288,49 @@ class Zume_Dashboard {
 
         }
     }
+
+    public static function get_encouragement() {
+        // check for and get user message level
+        $targeted_message = 0;
+
+        // build messages
+        $message = [
+            'new' => [
+                'type' => 'new',
+                'name' => 'new_registration',
+                'title' => __( 'Welcome!', 'zume'),
+                'message' => __( 'Praise God for your interest in sharpening your disciple-making!', 'zume' )
+            ],
+        ];
+
+        // new, no group
+        if( 0 == $targeted_message ) {
+            return $message['new'];
+        }
+
+        // @todo targeted messages
+
+        // group, no sessions
+        // group, no address (encourage to participate in global plan)
+        // group, < 3 members
+        // group, first session complete
+        // >1 group
+        // group, next session 2
+        // group, next session 3
+        // group, next session 4
+        // group, next session 5
+        // group, next session 6
+        // group, next session 7
+        // group, next session 8
+        // group, next session 9
+        // group, next session 10
+        // group, complete
+
+    }
+
+    public static function add_leaders( $group_id ) {
+        // check if user is owner
+
+
+    }
 }
