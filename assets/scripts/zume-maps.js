@@ -123,3 +123,8 @@ function check_address(key) {
     }
 }
 
+
+/* Support for adding coleaders */
+function add_new_coleader( target ) {
+    jQuery('#' + target ).append('<input type="email" value="" placeholder="email address" name="new_coleader[]" />')
+}

@@ -567,14 +567,17 @@ foreach ( $zume_user_meta as $zume_key => $v ) {
                 <h1><?php echo esc_html__( 'Edit Group', 'zume' ) ?></h1>
 
                 <input type="hidden" name="key" value="<?php echo esc_html( $zume_key ); ?>"/>
-                <div class="grid-x grid-margin-x">
+
+                <div class="grid-x">
+                    <!-- Group name -->
                     <div class="cell">
-                        <label for="group_name"><?php echo esc_html__( 'Group Name', 'zume' ) ?></label>
+                        <label for="group_name"><strong><?php echo esc_html__( 'Group Name', 'zume' ) ?></strong></label>
                         <input type="text" value="<?php echo esc_html( $zume_value['group_name'] ); ?>"
                                name="group_name" id="group_name" required/>
                     </div>
-                    <div class="cell">
-                        <label for="members"><?php echo esc_html__( 'Number of Participants', 'zume' ) ?></label>
+                    <!-- Participants -->
+                    <div class="cell padding-bottom">
+                        <label for="members"><strong><?php echo esc_html__( 'Number of Participants', 'zume' ) ?></strong></label>
                         <select name="members" id="members" required>
                             <option value="<?php echo esc_html( $zume_value['members'] ); ?>"><?php echo esc_html( $zume_value['members'] ); ?></option>
                             <option disabled>---</option>
@@ -604,13 +607,15 @@ foreach ( $zume_user_meta as $zume_key => $v ) {
                             <option value="24">24</option>
                         </select>
                     </div>
+                    <!-- Meeting Time -->
                     <div class="cell">
-                        <label for="meeting_time"><?php echo esc_html__( 'Planned Meeting Time', 'zume' ) ?></label>
+                        <label for="meeting_time"><strong><?php echo esc_html__( 'Planned Meeting Time', 'zume' ) ?></strong></label>
                         <input type="text" value="<?php echo esc_html( $zume_value['meeting_time'] ); ?>"
                                name="meeting_time" id="meeting_time" required/>
                     </div>
-                    <div class="cell">
-                        <label for="validate_address<?php echo esc_html( $zume_key ); ?>"><?php echo esc_html__( 'Address', 'zume' ) ?></label>
+                    <!-- Address -->
+                    <div class="cell padding-bottom">
+                        <label for="validate_address<?php echo esc_html( $zume_key ); ?>"><strong><?php echo esc_html__( 'Address', 'zume' ) ?></strong></label>
                         <div class="input-group">
                             <input type="text"
                                    placeholder="example: 1000 Broadway, Denver, CO 80126"
@@ -639,6 +644,31 @@ foreach ( $zume_user_meta as $zume_key => $v ) {
                         <?php endif; ?>
 
                     </div>
+
+
+                    <!-- Add coleaders -->
+                    <div class="cell padding-top">
+                        <label for="add_coleader"><strong><?php echo esc_html__( 'Coleaders', 'zume' ) ?></strong></label>
+
+                        <?php
+                        // Print current coleaders
+                        if( isset( $zume_value['coleaders'] ) && ! empty( $zume_value['coleaders'] ) && is_array( $zume_value['coleaders'] ) ) :
+                            echo '<ul>';
+                            foreach( $zume_value['coleaders'] as $zume_coleader ) {
+                                Zume_Dashboard::get_coleader_input( $zume_coleader );
+                            } // endforeach
+                            echo '</ul>';
+                        endif; // if coleader exits
+                        ?>
+
+                        <span id="new_coleaders_<?php echo esc_html( $zume_key ); ?>"></span>
+
+                        <button type="button" class="button clear" onclick="add_new_coleader('new_coleaders_<?php echo esc_html( $zume_key ); ?>')"><i class="fi-plus"></i> <?php esc_attr_e( 'Add', 'zume' ) ?></button>
+
+                    </div>
+
+
+                    <!-- Update, Delete, Archive buttons -->
                     <div class="cell">
                         <br>
                         <button type="submit" class="button" name="type"
@@ -656,7 +686,7 @@ foreach ( $zume_user_meta as $zume_key => $v ) {
                         });
                     </script>
 
-                    <div class="cell"
+
 
                 </div>
 

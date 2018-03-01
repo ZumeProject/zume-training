@@ -158,6 +158,31 @@ class Zume_Dashboard {
             $args['address'] = $formatted_address;
         }
 
+        // Add coleaders
+        $args['coleaders'] = ( isset( $args['coleaders'] ) && is_array( $args['coleaders'] ) && ! empty( $args['coleaders'] ) ) ? array_filter( $args['coleaders'] ) : [];
+        if ( isset( $args['new_coleader'] ) && ! empty( $args['new_coleader'] && is_array( $args['new_coleader'] ) ) ) { // test if new coleader added
+            foreach( $args['new_coleader'] as $coleader ) { // loop potential additions
+
+                // check if empty
+                if ( empty( $coleader ) ) {
+                    continue;
+                }
+
+                // duplicate check
+                if ( ! empty( $args['coleaders'] ) ) { // if coleaders exist
+                    foreach( $args['coleaders'] as $previous_coleader ) {
+                        if( $previous_coleader == $coleader ) {
+                            continue 2;
+                        }
+                    }
+                }
+
+                // insert new values
+                array_push( $args['coleaders'], $coleader );
+            }
+            unset( $args['new_coleader'] );
+        }
+
         // Combine array with new data
         unset( $args['type'] ); // keeps from storing the form parse info
         $args['last_modified_date'] = current_time( 'mysql' );
@@ -328,9 +353,22 @@ class Zume_Dashboard {
 
     }
 
-    public static function add_leaders( $group_id ) {
-        // check if user is owner
+    public static function get_coleader_input( $email_address ) {
+        // check if email is a user
+        $user = get_user_by( 'email', $email_address );
 
+        if ( $user ) {
+        // if email is a user
+            ?>
+            <li><?php echo esc_attr( $email_address ) ?><input type="hidden" name="coleaders[]" value="<?php echo esc_attr( $email_address ) ?>" /> ( <?php echo get_avatar( $email_address, 15 ) ?>  <?php esc_attr_e( $user->display_name ) ?> )</li>
+            <?php
 
+        } else {
+        // if email is not a user
+            ?>
+            <li><?php echo esc_attr( $email_address ) ?><input type="hidden" name="coleaders[]" value="<?php echo esc_attr( $email_address ) ?>" /> ( <a href="mailto:<?php echo esc_attr( $email_address ) ?>"><?php esc_attr_e( 'Invite to Zúme') ?></a> )</li>
+            <?php
+        }
     }
+
 }
