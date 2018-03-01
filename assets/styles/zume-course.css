@@ -342,9 +342,17 @@ body.single-item.groups #buddypress div#item-header #item-header-cover-image #it
     transform: rotate(-135deg);
 }
 
-
+/* Modifies the mobile steps progress bar to shrink and remove connecting lines */
 @media only screen and (max-width: 639px) {
     .course-steps.wizard .steps li:not(:last-child):after {
+        content: "";
+        position: absolute;
+        border: 0;
+        left: 0;
+        top: 0;
+        width: 0;
+    }
+    .course-steps.wizard>.steps li:not(:first-child):before {
         content: "";
         position: absolute;
         border: 0;
@@ -356,14 +364,17 @@ body.single-item.groups #buddypress div#item-header #item-header-cover-image #it
 
 }
 
+/* Style override to bring the lists within boundaries. */
 dl, ol, ul {
     list-style-position: inside;
 }
 
+/* Removes the previous button on the steps wizard*/
 .wizard > .actions > ul > li.disabled {
     display: none;
 }
 
+/* Adds override used for forcing multiple languages to use caps in a certain style*/
 .text-uppercase {
     text-transform: uppercase;
 }
