@@ -45,6 +45,7 @@ require_once( 'functions/zume-course.php' ); // zume course
 $zume_course = Zume_Course::instance();
 require_once( 'functions/zume-functions.php' ); // general zume functions
 require_once( 'functions/zume-dashboard.php' ); // zume dashboard
+require_once( 'functions/zume-welcome-messages.php' ); // zume welcome messages
 require_once( 'functions/zume-coach.php' ); // zume dashboard
 require_once( 'functions/logging/zume-logging.php' ); // zume logging of critical path actions
 require_once( 'functions/zume-stats.php' ); // zume logging of critical path actions

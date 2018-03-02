@@ -81,11 +81,11 @@ class Zume_Dashboard {
             }
         }
 
-
         // Prepare record array
         $current_user_id = get_current_user_id();
         $group_key = uniqid( 'zume_group_' );
-        $group_values = [
+        $group_values = self::verify_group_array_filter();
+        $group_new_values = [
             'owner'               => $current_user_id,
             'group_name'          => $args['group_name'],
             'members'             => $args['members'],
@@ -94,6 +94,39 @@ class Zume_Dashboard {
             'ip_address'          => $args['ip_address'],
             'lng'                 => $args['lng'],
             'lat'                 => $args['lat'],
+        ];
+        foreach( $group_new_values as $key => $value ) {
+            $group_values[$key] = $value;
+        }
+
+        add_user_meta( $current_user_id, $group_key, $group_values, true );
+
+        return true;
+
+    }
+
+    /**
+     * Creates and verifies default values for the groups array.
+     * This is the master location for defining the zume_groups array.
+     *
+     * If called empty, it will return an empty group array with default values. ex group_array_filter()
+     * If passed a group array, it will verify that all required keys are present, add any missing, and return
+     * group array. ex.group_array_filter( $group_meta )
+     *
+     * @param array $group_meta
+     * @return array
+     */
+    public static function verify_group_array_filter( $group_meta = [] ) {
+
+        $defaults = [
+            'owner'               => get_current_user_id(),
+            'group_name'          => __( 'No Name', 'zume' ),
+            'members'             => '1',
+            'meeting_time'        => '',
+            'address'             => '',
+            'ip_address'          => '',
+            'lng'                 => '',
+            'lat'                 => '',
             'created_date'        => current_time( 'mysql' ),
             'next_session'        => '1',
             'session_1'           => false,
@@ -119,12 +152,21 @@ class Zume_Dashboard {
             'last_modified_date'  => current_time( 'mysql' ),
             'closed'              => false,
             'coleaders'           => [],
+            'coleaders_accepted'  => [],
+            'coleaders_declined'  => [],
         ];
 
-        add_user_meta( $current_user_id, $group_key, $group_values, true );
+        if( ! is_array( $group_meta ) ) {
+            $group_meta = [];
+        }
 
-        return true;
+        foreach ( $defaults as $k => $v ) {
+            if( !isset( $group_meta[ $k ] ) ) {
+                $group_meta[$k] = $v;
+            }
+        }
 
+        return $group_meta;
     }
 
     public static function edit_group( $args ) {
@@ -160,7 +202,9 @@ class Zume_Dashboard {
         }
 
         // Add coleaders
-        $args['coleaders'] = ( isset( $args['coleaders'] ) && is_array( $args['coleaders'] ) && ! empty( $args['coleaders'] ) ) ? array_filter( $args['coleaders'] ) : [];
+        $args['coleaders'] = ( isset( $args['coleaders'] ) && is_array( $args['coleaders'] ) && ! empty( $args['coleaders'] ) ) ? array_filter( $args['coleaders'] ) : []; // confirm or establish array variable.
+        $args['coleaders_accepted'] = ( isset( $args['coleaders_accepted'] ) && is_array( $args['coleaders_accepted'] ) && ! empty( $args['coleaders_accepted'] ) ) ? array_filter( $args['coleaders_accepted'] ) : []; // confirm or establish array variable
+        $args['coleaders_declined'] = ( isset( $args['coleaders_declined'] ) && is_array( $args['coleaders_declined'] ) && ! empty( $args['coleaders_declined'] ) ) ? array_filter( $args['coleaders_declined'] ) : []; // confirm or establish array variable
         if ( isset( $args['new_coleader'] ) && ! empty( $args['new_coleader'] && is_array( $args['new_coleader'] ) ) ) { // test if new coleader added
             foreach ( $args['new_coleader'] as $coleader ) { // loop potential additions
 
@@ -316,45 +360,6 @@ class Zume_Dashboard {
         }
     }
 
-    public static function get_encouragement() {
-        // check for and get user message level
-        $targeted_message = 0;
-
-        // build messages
-        $message = [
-            'new' => [
-                'type' => 'new',
-                'name' => 'new_registration',
-                'title' => __( 'Welcome!', 'zume' ),
-                'message' => __( 'Praise God for your interest in sharpening your disciple-making!', 'zume' )
-            ],
-        ];
-
-        // new, no group
-        if ( 0 == $targeted_message ) {
-            return $message['new'];
-        }
-
-        // @todo targeted messages
-
-        // group, no sessions
-        // group, no address (encourage to participate in global plan)
-        // group, < 3 members
-        // group, first session complete
-        // >1 group
-        // group, next session 2
-        // group, next session 3
-        // group, next session 4
-        // group, next session 5
-        // group, next session 6
-        // group, next session 7
-        // group, next session 8
-        // group, next session 9
-        // group, next session 10
-        // group, complete
-
-    }
-
     public static function get_coleader_input( $email_address, $id ) {
         // check if email is a user
         $user = get_user_by( 'email', $email_address );
@@ -400,6 +405,127 @@ class Zume_Dashboard {
         }
         return [ 'status' => 'Coleader not found' ];
     }
+
+    /**
+     * Gets the displayable list of Colead Groups
+     * These groups have the user email added to their record
+     * These groups have user email listed as accepted for coleadership
+     *
+     * @return array
+     */
+    public static function get_colead_groups( $status = 'accepted' ) {
+        global $wpdb;
+        $prepared = [];
+        $user = get_user_by( 'id', get_current_user_id() );
+        $results = $wpdb->get_results($wpdb->prepare(
+                "SELECT *
+                        FROM `$wpdb->usermeta`
+                        WHERE meta_key LIKE %s
+                          AND meta_value LIKE %s",
+                        $wpdb->esc_like( 'zume_group_').'%',
+            '%'. $wpdb->esc_like( $user->user_email ). '%'
+        ), ARRAY_A );
+        if ( empty( $results ) ) {
+            return $prepared;
+        }
+
+        switch( $status ) {
+            case 'accepted':
+                foreach( $results as $v ){
+                    $zume_key = $v['meta_key'];
+                    $zume_value = maybe_unserialize( $v['meta_value'] );
+                    $zume_value = self::verify_group_array_filter( $zume_value );
+
+                    if ( in_array($user->user_email, $zume_value['coleaders'] ) && // is added as coleader
+                        in_array($user->user_email, $zume_value['coleaders_accepted'] ) && // is accepted
+                        ! in_array($user->user_email, $zume_value['coleaders_declined'] ) ) // not declined
+                    {
+                        $zume_value['no_edit'] = true; // tags record as no owned
+                        $prepared[$zume_key] = $zume_value;
+                    }
+
+
+                }
+
+                return $prepared;
+                break;
+
+            case 'waiting_acceptance':
+                foreach( $results as $v ){
+                    $zume_key = $v['meta_key'];
+                    $zume_value = maybe_unserialize( $v['meta_value'] );
+                    $zume_value = self::verify_group_array_filter( $zume_value );
+
+                    // if not a currently listed coleader or is in the declined list
+                    if ( in_array( $user->user_email, $zume_value['coleaders'] ) && // is added as coleader
+                        ! in_array( $user->user_email, $zume_value['coleaders_declined'] ) && // not declined
+                        ! in_array( $user->user_email, $zume_value['coleaders_accepted'] ) )  // not accepted
+                    {
+                        $zume_value['no_edit'] = true; // tags record as no owned
+                        $prepared[$zume_key] = $zume_value;
+                    }
+                }
+
+                return $prepared;
+                break;
+
+            case 'declined':
+                foreach( $results as $v ){
+                    $zume_key = $v['meta_key'];
+                    $zume_value = maybe_unserialize( $v['meta_value'] );
+                    $zume_value = self::verify_group_array_filter( $zume_value );
+
+                    if ( in_array($user->user_email, $zume_value['coleaders_declined'] ) ) // is declined
+                    {
+                        $zume_value['no_edit'] = true; // tags record as no owned
+                        $prepared[$zume_key] = $zume_value;
+                    }
+                }
+                break;
+            default:
+                return [];
+                break;
+        }
+    }
+
+    public static function coleader_invitation_response( $response ) {
+        global $wpdb;
+        $user = get_user_by( 'id', get_current_user_id() );
+
+        if( isset( $response['accept'] ) ) {
+            zume_write_log('made it to accept');
+            $group_key = $response['accept'];
+            // check if user has active invitation for group
+            $results = $wpdb->get_results($wpdb->prepare( "SELECT * FROM $wpdb->usermeta WHERE meta_key = %s", $group_key ), ARRAY_A );
+            if ( empty( $results ) ) {
+                return;
+            }
+            foreach( $results as $result ) {
+                $group_meta = maybe_unserialize( $result['meta_value'] );
+                $group_meta = self::verify_group_array_filter( $group_meta );
+                $group_user_id = $result['user_id'];
+
+                // qualify that current user has invitation from this group
+                if ( in_array( $user->user_email, $group_meta['coleaders'] ) && // is added as coleader
+                    ! in_array( $user->user_email, $group_meta['coleaders_declined'] ) && // not declined
+                    ! in_array( $user->user_email, $group_meta['coleaders_accepted'] ) )  // not accepted
+                {
+                    array_push( $group_meta['coleaders_accepted'], $user->user_email );
+                    update_user_meta( $group_user_id, $group_key, $group_meta);
+                }
+                zume_write_log('end of accept');
+            }
+        }
+
+        if( isset( $response['decline'] ) ) {
+            // check if user has active invitation for group
+            $group_key = $response['decline'];
+
+        }
+    }
+
+
+
 }
 
 
