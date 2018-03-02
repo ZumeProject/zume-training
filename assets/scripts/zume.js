@@ -123,3 +123,56 @@ function check_address(key) {
     }
 }
 
+
+/* Support for adding coleaders */
+function add_new_coleader( target ) {
+    jQuery('#' + target ).append('<input type="email" value="" placeholder="email address" name="new_coleader[]" />')
+}
+
+jQuery(document).ready( function() {
+    jQuery( "li.coleader" ).hover(
+        function() {
+            let email = jQuery( this ).find( "input").val();
+            let group_id = jQuery( this ).parent().attr('data-key');
+            let li_id = jQuery(this).attr('id');
+            jQuery( this ).append( jQuery( '<span > <a onclick="remove_coleader( \'' + email + '\',\'' + group_id + '\', \''+ li_id +'\')" style="color:red;">'+zumeMaps.translations.delete+'</a></span>' ) );
+        }, function() {
+            jQuery( this ).find( "span:last" ).remove();
+        }
+    );
+
+    jQuery( "div.coleader-group" ).hover(
+        function() {
+            var remove = jQuery('span.coleader-remove-link');
+            jQuery( this ).find( remove ).show();
+        }, function() {
+            var remove = jQuery('span.coleader-remove-link');
+            jQuery( this ).find( remove ).hide();
+        }
+    );
+})
+
+function remove_coleader( email, group_id, li_id ) {
+    let data = {"email": email, "group_id": group_id };
+    return jQuery.ajax({
+        type: "POST",
+        data: JSON.stringify(data),
+        contentType: "application/json; charset=utf-8",
+        dataType: "json",
+        url: zumeMaps.root + 'zume/v1/coleaders_delete',
+        beforeSend: function(xhr) {
+            xhr.setRequestHeader('X-WP-Nonce', zumeMaps.nonce);
+        },
+    })
+        .done(function (data) {
+            jQuery('#' + li_id ).remove();
+
+        })
+        .fail(function (err) {
+            jQuery('#' + li_id ).append( '<span>'+zumeMaps.translations.failed_to_remove+'</span>' );
+        })
+}
+
+
+
+

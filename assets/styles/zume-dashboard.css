@@ -482,3 +482,6 @@ select {
     border-color: white transparent transparent;
 }
 
+.group-title {
+    font-size: 1.9375rem;
+}

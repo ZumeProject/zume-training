@@ -5,16 +5,24 @@ Template Name: Zúme Course
 zume_force_login();
 
 if ( empty( $_GET['group'] ) || empty( $_GET['session'] ) ) {
-    wp_die( esc_html__( 'You are missing a group or session number. <a href="/">Head back to your dashboard</a>' ) );
+    wp_die( esc_html__( 'You are missing a group or session number.', 'zume' ) . '<a href="'. esc_url( zume_dashboard_url() ) .'">' . esc_html__( 'Head back to your dashboard', 'zume' ) . '</a>' );
 }
 $zume_group_key = sanitize_key( wp_unslash( $_GET['group'] ) );
 $zume_session   = sanitize_key( wp_unslash( $_GET['session'] ) );
 
-$zume_current_user = get_current_user_id();
-$zume_user_meta    = zume_get_user_meta( $zume_current_user );
+// verify permissions to represent group
+$zume_current_user = get_user_by( 'id', get_current_user_id() );
+$zume_user_meta    = zume_get_user_meta( $zume_current_user->ID );
+$zume_current_user_email = $zume_current_user->user_email;
+$zume_group_meta = Zume_Dashboard::get_group_by_key( $zume_group_key );
 
-if ( ! isset( $zume_user_meta[ $zume_group_key ] ) ) {
-    wp_die( esc_html__( 'You are missing a correct group or session number.', 'zume' ) . ' <a href="/">' . esc_html__( 'Head back to your dashboard', 'zume' ) . '</a>' );
+if ( ! $zume_group_meta ) {
+    wp_die( esc_html__( 'Cannot find this group.', 'zume' ) . '<a href="'. esc_url( zume_dashboard_url() ) .'">' . esc_html__( 'Head back to your dashboard and try again', 'zume' ) . '</a>' );
+}
+if ( ! isset( $zume_user_meta[ $zume_group_key ] ) ) { // check if owner of group
+    if ( ! in_array( $zume_current_user_email, $zume_group_meta['coleaders'] ) ) { // if current_user is not a coleader
+        wp_die( esc_html__( 'You are missing a correct group or session number.', 'zume' ) . ' <a href="'. esc_url( zume_dashboard_url() ).'">' . esc_html__( 'Head back to your dashboard', 'zume' ) . '</a>' );
+    }
 }
 
 get_header();
@@ -47,7 +55,7 @@ get_header();
                     }
                     switch ( $zume_viewing ) {
                         case 'group':
-                            Zume_Course::update_session_complete( $zume_group_key, $zume_session );
+                            Zume_Course::update_session_complete( $zume_group_key, $zume_session, $zume_group_meta['owner'] );
                             Zume_Course_Content::get_course_content( $zume_session );
                             zume_insert_log( [
                                 'user_id'  => get_current_user_id(),
@@ -55,17 +63,6 @@ get_header();
                                 'page'     => 'course',
                                 'action'   => 'session_' . $zume_session,
                                 'meta'     => 'group_' . $zume_members,
-                            ] );
-                            break;
-                        case 'member':
-                            Zume_Course::update_session_complete( $zume_group_key, $zume_session );
-                            Zume_Course_Content::get_course_content( $zume_session );
-                            zume_insert_log( [
-                                'user_id'  => get_current_user_id(),
-                                'group_id' => $zume_group_key,
-                                'page'     => 'course',
-                                'action'   => 'session_' . $zume_session,
-                                'meta'     => 'member_' . $zume_members,
                             ] );
                             break;
                         case 'explore':
@@ -83,7 +80,7 @@ get_header();
                             break;
                     }
                 } else {
-                    Zume_Course_Content::course_start_panel( $zume_session, $zume_user_meta[ $zume_group_key ] );
+                    Zume_Course_Content::course_start_panel( $zume_session, $zume_group_meta );
                 }
 
                 ?>
@@ -217,9 +214,6 @@ class Zume_Course_Content {
                     <button class="button large expanded" data-open="group"><?php esc_html_e( 'Facilitating a Group', 'zume' ) ?>
                     </button>
                     <br>
-                    <button class="button large expanded" data-open="member"><?php esc_html_e( 'Participating in a Group', 'zume' ) ?>
-                    </button>
-                    <br>
                     <form action="" method="post">
                         <button type="submit" class="button large expanded" name="viewing" value="explore"><?php esc_html_e( 'Exploring the Session Content', 'zume' ) ?>
                         </button>
@@ -257,35 +251,7 @@ class Zume_Course_Content {
                 </div>
 
             </div>
-
-            <div class="small reveal" id="member" data-reveal>
-                <div class="grid-x">
-                    <div class="small-4 cell"></div>
-                    <div class="small-4 cell center">
-                        <form action="" method="post">
-                            <p><label for="members"><?php esc_html_e( 'How many are in your group?', 'zume' ) ?></label>
-                            <select id="members" name="members">
-                                <?php
-                                $zume_group_meta = maybe_unserialize( $zume_group_meta );
-                                $i               = 1;
-                                while ( 16 > $i ) {
-                                    echo '<option value="' . esc_attr( $i ) . '"';
-                                    if ( $zume_group_meta['members'] == $i ) {
-                                        echo 'selected';
-                                    }
-                                    echo '>' . esc_attr( $i ) . '</option>';
-                                    $i ++;
-                                }
-                                ?>
-                            </select></p>
-                            <p><button type="submit" name="viewing" class="button" value="member"><?php esc_html_e( 'Continue', 'zume' ) ?></button></p>
-                        </form>
-                    </div>
-                    <div class="small-4 cell"></div>
-                </div>
-
-            </div>
-
+            
         </section>
         <?php
     }

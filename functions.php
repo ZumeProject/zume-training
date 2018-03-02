@@ -36,6 +36,7 @@ require_once( 'functions/login/login.php' ); // Customize the WordPress login me
 require_once( 'functions/login/user-register.php' ); // Customize the WordPress login menu
 require_once( 'functions/multi-role/multi-role.php' ); // Adds multi role features
 require_once( 'functions/restrict-rest-api.php' ); // Restricts the default REST API to logged in users
+remove_action( 'rest_api_init', 'create_initial_rest_routes', 99 );
 require_once( 'functions/restrict-xml-rpc-pingback.php' ); // Restricts RPC vulnerability
 
 // Zume Core Files
@@ -44,13 +45,13 @@ require_once( 'functions/zume-course.php' ); // zume course
 $zume_course = Zume_Course::instance();
 require_once( 'functions/zume-functions.php' ); // general zume functions
 require_once( 'functions/zume-dashboard.php' ); // zume dashboard
+require_once( 'functions/zume-welcome-messages.php' ); // zume welcome messages
 require_once( 'functions/zume-coach.php' ); // zume dashboard
 require_once( 'functions/logging/zume-logging.php' ); // zume logging of critical path actions
 require_once( 'functions/zume-stats.php' ); // zume logging of critical path actions
 
 // REST API
 require_once( 'functions/zume-rest-api.php' );
-Zume_REST_API::instance();
 
 // Locations System
 require_once( 'functions/geocoding-api.php' );
@@ -58,3 +59,4 @@ require_once( 'functions/geocoding-api.php' );
 // Email System
 include_once( 'functions/utilities/zume-mailchimp-settings.php' ); // Creates the options page for mailchimp automation
 include_once( 'functions/login/user-register.php' );
+

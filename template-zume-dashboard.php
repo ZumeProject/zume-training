@@ -4,20 +4,36 @@ Template Name: Zúme Dashboard
 */
 zume_force_login();
 
-if ( ! empty( $_POST ) ) {
-    if ( ! empty( $_POST['type'] ) && $_POST['type'] == 'create' ) {
-        Zume_Dashboard::create_group( $_POST );
-    } elseif ( ! empty( $_POST['type'] ) && $_POST['type'] == 'edit' ) {
-        Zume_Dashboard::edit_group( $_POST );
-    } elseif ( ! empty( $_POST['type'] ) && $_POST['type'] == 'closed' && isset( $_POST['key'] ) ) {
-        Zume_Dashboard::closed_group( sanitize_key( wp_unslash( $_POST['key'] ) ) );
-    } elseif ( ! empty( $_POST['type'] ) && $_POST['type'] == 'delete' && isset( $_POST['key'] ) ) {
-        Zume_Dashboard::delete_group( sanitize_key( wp_unslash( $_POST['key'] ) ) );
-    } elseif ( ! empty( $_POST['type'] ) && $_POST['type'] == 'activate' && isset( $_POST['key'] ) ) {
-        Zume_Dashboard::activate_group( get_current_user_id(), sanitize_key( wp_unslash( $_POST['key'] ) ) );
-    } else {
-        zume_write_log( 'Failed to filter' );
-    }
+if ( ! empty( $_POST ) ) { // test if post submitted
+    // validate nonce
+    if ( isset( $_POST['zume_nonce'] ) && wp_verify_nonce( sanitize_key( wp_unslash( $_POST['zume_nonce'] ) ), get_current_user_id() ) ) { // verify that the form came from this page
+        // remove excess nonce elements
+        if ( isset( $_POST['zume_nonce'] ) ) {
+            unset( $_POST['zume_nonce'] );
+        }
+        if ( isset( $_POST['_wp_http_referer'] ) ) {
+            unset( $_POST['_wp_http_referer'] );
+        }
+
+        // handle post
+        if ( isset( $_POST['type'] ) ) { // group submissions
+            if ( ! empty( $_POST['type'] ) && $_POST['type'] == 'create' ) { // create group
+                Zume_Dashboard::create_group( $_POST );
+            } elseif ( ! empty( $_POST['type'] ) && $_POST['type'] == 'edit' ) { // edit group
+                Zume_Dashboard::edit_group( $_POST );
+            } elseif ( ! empty( $_POST['type'] ) && $_POST['type'] == 'closed' && isset( $_POST['key'] ) ) { // close group
+                Zume_Dashboard::closed_group( sanitize_key( wp_unslash( $_POST['key'] ) ) );
+            } elseif ( ! empty( $_POST['type'] ) && $_POST['type'] == 'delete' && isset( $_POST['key'] ) ) { // delete group
+                Zume_Dashboard::delete_group( sanitize_key( wp_unslash( $_POST['key'] ) ) );
+            } elseif ( ! empty( $_POST['type'] ) && $_POST['type'] == 'activate' && isset( $_POST['key'] ) ) { // re-activate group
+                Zume_Dashboard::activate_group( get_current_user_id(), sanitize_key( wp_unslash( $_POST['key'] ) ) );
+            } elseif ( ! empty( $_POST['type'] ) && $_POST['type'] == 'coleader' ) { // coleader response
+                Zume_Dashboard::coleader_invitation_response( $_POST );
+            } else {
+                zume_write_log( 'Failed to filter' );
+            }
+        }
+    } // endif nonce
 }
 
 get_header();
@@ -59,37 +75,64 @@ $zume_highest_session = Zume_Dashboard::get_highest_session( $zume_current_user 
                                 </li>
 
                                 <?php
+                                /**
+                                 * Groups
+                                 */
                                 $zume_no_groups = 0;
+
+                                // add colead groups to array
+                                $zume_colead_groups = Zume_Dashboard::get_colead_groups();
+                                foreach ( $zume_colead_groups as $zume_colead_key => $zume_colead_value ) {
+                                    $zume_user_meta[$zume_colead_key] = $zume_colead_value;
+                                }
+
                                 foreach ( $zume_user_meta as $zume_key => $v ) {
                                     $zume_key_beginning = substr( $zume_key, 0, 10 );
                                     if ( 'zume_group' == $zume_key_beginning ) { // check if zume_group
                                         $zume_value = maybe_unserialize( $v );
+                                        $zume_value = Zume_Dashboard::verify_group_array_filter( $zume_value );
+
                                         if ( isset( $zume_value['closed'] ) && false == $zume_value['closed'] ) : // check if closed
+
                                             ?>
                                             <!-- Group Row -->
                                             <li class="block">
                                                 <div class="grid-x grid-margin-x">
-                                                    <div class="cell large-6">
-                                                        <style>
-                                                            .group-title {
-                                                                font-size: 1.9375rem;
-                                                            }
-                                                        </style>
-                                                        <span class="group-title">
-                                                            <a data-open="<?php echo esc_html( $zume_key ); ?>"><?php echo esc_html( $zume_value['group_name'] ) ?></a></span>&nbsp;
+                                                    <div class="cell large-6 <?php if ( isset( $zume_value['no_edit'] ) ) { echo 'coleader-group'; } ?>">
+
+                                                            <?php if ( isset( $zume_value['no_edit'] ) ) : ?>
+                                                                <span class="group-title"> <?php echo esc_html( $zume_value['group_name'] ) ?></span>
+                                                            <?php else : ?>
+                                                                <span class="group-title"><a data-open="<?php echo esc_html( $zume_key ); ?>"><?php echo esc_html( $zume_value['group_name'] ) ?></a></span>&nbsp;
+
                                                             <button class="small" data-open="<?php echo esc_html( $zume_key ); ?>" style="opacity: .5;">
                                                                 <i class="fi-pencil hollow"></i> <?php echo esc_html__( 'edit', 'zume' ) ?>
                                                             </button>
+                                                            <?php endif; ?>
 
                                                         <p class="text-gray">
                                                             <?php echo esc_html( __( 'Meeting Time', 'zume' ) . ": " . $zume_value['meeting_time'] ) ?>
                                                             <br>
-                                                            <?php echo esc_html( __( 'Members', 'zume' ) . ': ' . $zume_value['members'] ) ?>
-                                                            <br>
                                                             <?php echo esc_html( __( 'Address', 'zume' ) . ': ' . $zume_value['address'] ) ?>
                                                             <br>
-                                                        </p>
+                                                            <?php echo esc_html( __( 'Members', 'zume' ) . ': ' . $zume_value['members'] ) ?>
 
+                                                            <?php if ( isset( $zume_value['no_edit'] ) ) : ?>
+                                                                <br>(Colead Group)
+                                                                <span class="coleader-remove-link" style="display:none;">
+                                                                    <a class="small text-gray" onclick="jQuery('#<?php echo esc_html( $zume_key ); ?>-remove-group').toggle();">
+                                                                        <?php esc_attr_e( 'Remove this group', 'zume' ) ?>
+                                                                    </a>
+                                                                    <form method="post" style="display:none;" id="<?php echo esc_html( $zume_key ); ?>-remove-group">
+                                                                        <?php wp_nonce_field( get_current_user_id(), 'zume_nonce' ) ?>
+                                                                        <input type="hidden" name="type" value="coleader"/>
+                                                                        <?php esc_attr_e( 'Are you sure you want to remove this group?', 'zume' ) ?><br>
+                                                                    <button class="small button" type="submit" name="decline" value="<?php echo esc_html( $zume_key ); ?>"><?php esc_attr_e( 'Yes', 'zume' ) ?></button>
+                                                                    </form>
+                                                                </span>
+
+                                                            <?php endif; ?>
+                                                        </p>
 
                                                     </div>
                                                     <div class="large-6 cell" style="min-width:350px;">
@@ -152,7 +195,8 @@ $zume_highest_session = Zume_Dashboard::get_highest_session( $zume_current_user 
                                 }
                                 ?>
 
-                                <!-- Message if there is no groups -->
+
+                                <!-- Message if there are no groups -->
                                 <?php if ( $zume_no_groups < 1 ) : ?>
                                     <div class="grid-x grid-margin-x vertical-padding">
                                         <div class="large-8 large-offset-2 cell center">
@@ -164,6 +208,8 @@ $zume_highest_session = Zume_Dashboard::get_highest_session( $zume_current_user 
                                         </div>
                                     </div>
                                 <?php endif; ?>
+
+
 
                                 <p class="center vertical-padding">
                                     <button class="button hollow small"
@@ -298,7 +344,7 @@ $zume_highest_session = Zume_Dashboard::get_highest_session( $zume_current_user 
                                     <?php if ( $zume_highest_session < 2 ) { ?>
                                         <div class="grid-x grid-margin-x grid-margin-y">
                                             <div class="cell large-3"></div>
-                                            <div class="cell large-6 callout warning">
+                                            <div class="cell large-6 small text-gray">
                                                 <?php esc_html_e( 'Session videos will be added as you complete sessions.', 'zume' ) ?>
                                             </div>
                                             <div class="cell large-3"></div>
@@ -363,10 +409,10 @@ $zume_highest_session = Zume_Dashboard::get_highest_session( $zume_current_user 
                     <!-- Right Column -->
                     <div class="large-2 cell dashboard-messages">
 
-                        <!-- ********************************************************************************************* -->
-                        <!-- COACH SECTION -->
-                        <!-- ********************************************************************************************* -->
                         <?php
+                        /***********************************************************************************************
+                         * COACH SECTION
+                         **********************************************************************************************/
                         $zume_coach_id = get_user_meta( $zume_current_user, 'zume_coach', true );
                         if ( ! empty( $zume_coach_id ) ) :
                             $zume_coach_data = get_userdata( $zume_coach_id );
@@ -392,51 +438,99 @@ $zume_highest_session = Zume_Dashboard::get_highest_session( $zume_current_user 
                                 </div>
                             </div>
 
-                        <?php endif; ?>
-                        <!-- END COACH SECTION -->
+                        <?php endif; //END COACH SECTION  ?>
 
-                        <!-- ********************************************************************************************* -->
-                        <!-- INSTRUCTIONS SECTION -->
-                        <!-- ********************************************************************************************* -->
-                        <!--<div class="callout show-for-large hide-for-small">
+                        <?php
+                        /***********************************************************************************************
+                         * WELCOME SECTION
+                         **********************************************************************************************/
+                        $zume_message = Zume_Welcome_Messages::get_encouragement();
+                        ?>
+                        <div class="callout show-for-large hide-for-small">
 
+                            <!-- Encouragement message -->
                             <div class="grid-x">
                                 <div class="cell center">
-                                    <p class="center padding-bottom"><strong><?php /*echo esc_html__( 'Welcome', 'zume' ) */?></strong></p>
+                                    <p class="center padding-bottom">
+                                        <strong>
+                                            <?php isset( $zume_message['title'] ) ? print esc_attr( $zume_message['title'] ) : print ''; ?>
+                                        </strong>
+                                    </p>
                                 </div>
                             </div>
                             <div class="grid-x">
                                 <div class="cell small">
-
+                                    <?php isset( $zume_message['message'] ) ? print esc_attr( $zume_message['message'] ) : print ''; ?>
                                 </div>
                             </div>
 
-                            <div class="grid-x">
-                                <div class="cell center">
-                                    <p class="center padding-bottom"><strong><?php /*echo esc_html__( 'Help', 'zume' ) */?></strong></p>
-                                </div>
-                            </div>
-                            <div class="grid-x">
-                                <div class="cell small">
-
-                                    <ul style="margin-left:0;list-style-type: circle;">
-                                        <li><a onclick=""><?php /*esc_html_e( "Start a new group", 'zume' ) */?></a></li>
-                                        <li><a onclick=""><?php /*esc_html_e( "Call together friends", 'zume' ) */?></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>-->
+                        </div>
                         <!-- END INSTRUCTIONS -->
+
+
+                        <?php
+                        /***********************************************************************************************
+                         * COLEADER REQUESTS SECTION
+                         **********************************************************************************************/
+                        $zume_waiting_acceptance = Zume_Dashboard::get_colead_groups( 'waiting_acceptance' );
+
+                        if ( count( $zume_waiting_acceptance ) > 0 ) :
+                        ?>
+                        <form method="post">
+                            <?php wp_nonce_field( get_current_user_id(), 'zume_nonce' ) ?>
+                            <input type="hidden" name="type" value="coleader"/>
+
+                        <div class="callout">
+                            <div class="grid-x grid-padding-y">
+                                <div class="cell center">
+                                    <strong>
+                                        <?php esc_attr_e( 'Invitations', 'zume' ) ?>
+                                    </strong>
+                                </div>
+                                <?php
+                                foreach ( $zume_waiting_acceptance as $zume_accept_key => $zume_accept_value ) {
+                                    ?>
+                                    <div class="cell border-top">
+                                        <p><strong><?php $zume_group_owner = get_user_by( 'id', $zume_accept_value['owner'] ); echo esc_attr( $zume_group_owner->display_name ) ?></strong> <?php esc_attr_e( 'invites you to join', 'zume' ) ?> <strong><?php echo esc_attr( $zume_accept_value['group_name'] ) ?></strong></p>
+
+                                        <p class="center"><button class="button hollow" type="submit" name="accept" value="<?php echo esc_attr( $zume_accept_key ) ?>"><?php esc_attr_e( 'Accept', 'zume' ) ?></button>
+                                        <button class="button hollow" type="submit" name="decline" value="<?php echo esc_attr( $zume_accept_key ) ?>"><?php esc_attr_e( 'Decline', 'zume' ) ?></button></p>
+                                    </div>
+                                <?php
+                                }
+                                ?>
+
+                            </div>
+                        </div>
+                        </form>
+                        <?php
+                        endif; // end waiting acceptance if
+                        /* END COLEADER REQUESTS */
+                        ?>
+
 
                         <!-- ********************************************************************************************* -->
                         <!-- DOWNLOAD GUIDEBOOK -->
                         <!-- ********************************************************************************************* -->
                         <div class="grid-x grid-margin-x">
                             <div class="cell center">
-                                <a class="button"
+                                <a class="button expanded"
                                    href="<?php echo esc_url( Zume_Course::get_download_by_key( '33' ) ) ?>"
                                    target="_blank" rel="noopener" download>
                                     <?php esc_html_e( 'Download Guidebook', 'zume' ) ?>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- END INSTRUCTIONS -->
+
+                        <!-- ********************************************************************************************* -->
+                        <!-- INVITE TO ZUME -->
+                        <!-- ********************************************************************************************* -->
+                        <div class="grid-x grid-margin-x">
+                            <div class="cell center">
+                                <a class="button expanded"
+                                   href="mailto:?subject=<?php esc_attr_e( 'Join me on the Zúme Project' ) ?>&body=<?php esc_attr_e( 'Join me on the Zúme Project' ) ?>: <?php echo esc_url( site_url( '/wp-login.php?action=register' ) ) ?>">
+                                    <?php esc_html_e( 'Invite to Zume', 'zume' ) ?>
                                 </a>
                             </div>
                         </div>
@@ -460,6 +554,7 @@ $zume_highest_session = Zume_Dashboard::get_highest_session( $zume_current_user 
     <div class="small reveal" id="create" data-reveal>
         <h1><?php echo esc_html__( 'Create Group', 'zume' ) ?></h1>
         <form action="" method="post">
+            <?php wp_nonce_field( get_current_user_id(), 'zume_nonce' ) ?>
             <input type="hidden" name="type" value="create"/>
             <input type="hidden" name="ip_address"
                    value="<?php echo esc_html( Zume_Google_Geolocation::get_real_ip_address() ); ?>"/>
@@ -547,26 +642,31 @@ $zume_highest_session = Zume_Dashboard::get_highest_session( $zume_current_user 
     <!-- GROUP MODAL BOXES SECTION -->
     <!-- ********************************************************************************************* -->
 <?php
+$zume_user_meta = zume_get_user_meta( $zume_current_user ); // reset variable without coleader data
 foreach ( $zume_user_meta as $zume_key => $v ) {
     $zume_key_beginning = substr( $zume_key, 0, 10 );
     if ( 'zume_group' == $zume_key_beginning ) {
-        $zume_value = unserialize( $v );
+        $zume_value = maybe_unserialize( $v );
         ?>
 
         <!-- Edit current groups section -->
         <div class="small reveal" id="<?php echo esc_html( $zume_key ); ?>" data-reveal>
             <form data-abide method="post">
+                <?php wp_nonce_field( get_current_user_id(), 'zume_nonce' ) ?>
                 <h1><?php echo esc_html__( 'Edit Group', 'zume' ) ?></h1>
 
                 <input type="hidden" name="key" value="<?php echo esc_html( $zume_key ); ?>"/>
-                <div class="grid-x grid-margin-x">
+
+                <div class="grid-x">
+                    <!-- Group name -->
                     <div class="cell">
-                        <label for="group_name"><?php echo esc_html__( 'Group Name', 'zume' ) ?></label>
+                        <label for="group_name"><strong><?php echo esc_html__( 'Group Name', 'zume' ) ?></strong></label>
                         <input type="text" value="<?php echo esc_html( $zume_value['group_name'] ); ?>"
                                name="group_name" id="group_name" required/>
                     </div>
-                    <div class="cell">
-                        <label for="members"><?php echo esc_html__( 'Number of Participants', 'zume' ) ?></label>
+                    <!-- Participants -->
+                    <div class="cell padding-bottom">
+                        <label for="members"><strong><?php echo esc_html__( 'Number of Participants', 'zume' ) ?></strong></label>
                         <select name="members" id="members" required>
                             <option value="<?php echo esc_html( $zume_value['members'] ); ?>"><?php echo esc_html( $zume_value['members'] ); ?></option>
                             <option disabled>---</option>
@@ -596,13 +696,15 @@ foreach ( $zume_user_meta as $zume_key => $v ) {
                             <option value="24">24</option>
                         </select>
                     </div>
+                    <!-- Meeting Time -->
                     <div class="cell">
-                        <label for="meeting_time"><?php echo esc_html__( 'Planned Meeting Time', 'zume' ) ?></label>
+                        <label for="meeting_time"><strong><?php echo esc_html__( 'Planned Meeting Time', 'zume' ) ?></strong></label>
                         <input type="text" value="<?php echo esc_html( $zume_value['meeting_time'] ); ?>"
                                name="meeting_time" id="meeting_time" required/>
                     </div>
-                    <div class="cell">
-                        <label for="validate_address<?php echo esc_html( $zume_key ); ?>"><?php echo esc_html__( 'Address', 'zume' ) ?></label>
+                    <!-- Address -->
+                    <div class="cell padding-bottom">
+                        <label for="validate_address<?php echo esc_html( $zume_key ); ?>"><strong><?php echo esc_html__( 'Address', 'zume' ) ?></strong></label>
                         <div class="input-group">
                             <input type="text"
                                    placeholder="example: 1000 Broadway, Denver, CO 80126"
@@ -631,6 +733,33 @@ foreach ( $zume_user_meta as $zume_key => $v ) {
                         <?php endif; ?>
 
                     </div>
+
+                    <!-- Add coleaders -->
+                    <div class="cell padding-top">
+                        <label for="add_coleader"><strong><?php echo esc_html__( 'Coleaders', 'zume' ) ?></strong></label>
+                        <p class="small text-gray"><?php esc_attr( 'Adding a coleader gives their Zúme dashboard access to the group, if they accept. They can facilitate a training, but cannot change any details of the group.', 'zume' ) ?></p>
+                        <?php
+                        // Print current coleaders
+                        if ( isset( $zume_value['coleaders'] ) && ! empty( $zume_value['coleaders'] ) && is_array( $zume_value['coleaders'] ) ) :
+                            echo '<ul id="coleaders-ul-'. esc_html( $zume_key ).'" data-key="'. esc_html( $zume_key ).'">';
+                            $zume_i = 0;
+                            foreach ( $zume_value['coleaders'] as $zume_coleader ) {
+                                $zume_li_id = $zume_key . $zume_i; // create incrementing id of for each list item.
+                                Zume_Dashboard::get_coleader_input( $zume_coleader, $zume_li_id, $zume_key );
+                                $zume_i++;
+                            } // endforeach
+                            echo '</ul>';
+                        endif; // if coleader exits
+                        ?>
+
+                        <span id="new_coleaders_<?php echo esc_html( $zume_key ); ?>"></span>
+
+                        <button type="button" class="button clear" onclick="add_new_coleader('new_coleaders_<?php echo esc_html( $zume_key ); ?>')"><i class="fi-plus"></i> <?php esc_attr_e( 'Add', 'zume' ) ?></button>
+
+                    </div>
+
+
+                    <!-- Update, Delete, Archive buttons -->
                     <div class="cell">
                         <br>
                         <button type="submit" class="button" name="type"
@@ -648,6 +777,8 @@ foreach ( $zume_user_meta as $zume_key => $v ) {
                         });
                     </script>
 
+
+
                 </div>
 
 
@@ -661,7 +792,12 @@ foreach ( $zume_user_meta as $zume_key => $v ) {
         <div class="reveal small" id="<?php echo esc_html( $zume_key ); ?>-delete" data-reveal>
             <form data-abide method="post">
                 <input type="hidden" name="key" value="<?php echo esc_html( $zume_key ); ?>"/>
-                <h3>ARE YOU SURE YOU WANT TO DELETE THIS GROUP?</h3><br>
+
+                <div class="grid-x grid-padding-x">
+                    <div class="cell center">
+                        <h2><?php esc_attr_e( 'ARE YOU SURE YOU WANT TO DELETE THIS GROUP?', 'zume' ) ?></h2>
+                    </div>
+                </div>
                 <div class="grid-x">
                     <div class="cell center">
                         <span class="center"><button type="submit" class="button alert" name="type"
