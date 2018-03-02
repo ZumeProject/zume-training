@@ -62,9 +62,9 @@ function zume_site_scripts() {
         )
     );
 
-    zume_enqueue_script( 'zume-maps', 'assets/scripts/zume-maps.js', array( 'jquery' ), true );
+    zume_enqueue_script( 'zume', 'assets/scripts/zume.js', array( 'jquery' ), true );
     wp_localize_script(
-        "zume-maps", "zumeMaps", array(
+        "zume", "zumeMaps", array(
             'root' => esc_url_raw( rest_url() ),
             'nonce' => wp_create_nonce( 'wp_rest' ),
             'current_user_login' => wp_get_current_user()->user_login,

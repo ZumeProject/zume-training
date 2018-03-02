@@ -140,6 +140,16 @@ jQuery(document).ready( function() {
             jQuery( this ).find( "span:last" ).remove();
         }
     );
+
+    jQuery( "div.coleader-group" ).hover(
+        function() {
+            var remove = jQuery('span.coleader-remove-link');
+            jQuery( this ).find( remove ).show();
+        }, function() {
+            var remove = jQuery('span.coleader-remove-link');
+            jQuery( this ).find( remove ).hide();
+        }
+    );
 })
 
 function remove_coleader( email, group_id, li_id ) {
