@@ -83,7 +83,7 @@ class Zume_Dashboard {
 
         // Prepare record array
         $current_user_id = get_current_user_id();
-        $group_key = uniqid( 'zume_group_' );
+        $group_key = self::get_unique_group_key();
         $group_values = self::verify_group_array_filter();
         $group_new_values = [
             'owner'               => $current_user_id,
@@ -104,6 +104,17 @@ class Zume_Dashboard {
         return true;
 
     }
+
+    public static function get_unique_group_key() {
+        global $wpdb;
+        $duplicate_check = 1;
+        while ( $duplicate_check != 0 ) {
+            $group_key = uniqid( 'zume_group_' );
+            $duplicate_check = $wpdb->get_var( $wpdb->prepare( "SELECT count(*) FROM $wpdb->usermeta WHERE meta_key = %s", $group_key) );
+        }
+        return $group_key;
+    }
+
 
     /**
      * Creates and verifies default values for the groups array.
