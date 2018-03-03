@@ -110,7 +110,7 @@ class Zume_Dashboard {
         $duplicate_check = 1;
         while ( $duplicate_check != 0 ) {
             $group_key = uniqid( 'zume_group_' );
-            $duplicate_check = $wpdb->get_var( $wpdb->prepare( "SELECT count(*) FROM $wpdb->usermeta WHERE meta_key = %s", $group_key) );
+            $duplicate_check = $wpdb->get_var( $wpdb->prepare( "SELECT count(*) FROM $wpdb->usermeta WHERE meta_key = %s", $group_key ) );
         }
         return $group_key;
     }
