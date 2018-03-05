@@ -177,6 +177,7 @@ $zume_highest_session = Zume_Dashboard::get_highest_session( $zume_current_user 
                                                             </a>
                                                         <?php else : ?>
                                                             <!-- Close group button -->
+                                                            <?php if ( ! isset( $zume_value['no_edit'] ) ) : ?>
                                                             <form method="post">
                                                                 <input type="hidden" name="key"
                                                                        value="<?php echo esc_html( $zume_key ); ?>"/>
@@ -184,6 +185,7 @@ $zume_highest_session = Zume_Dashboard::get_highest_session( $zume_current_user 
                                                                               name="type"
                                                                               value="closed"><?php echo esc_html__( 'Archive Group', 'zume' ) ?></button></span>
                                                             </form>
+                                                            <?php endif; ?>
                                                         <?php endif; ?>
                                                     </div>
                                                 </div>
