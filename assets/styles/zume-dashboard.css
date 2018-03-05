@@ -485,3 +485,8 @@ select {
 .group-title {
     font-size: 1.9375rem;
 }
+
+/* takes off border from the zendesk button */
+iframe#launcher {
+    border: none;
+}
