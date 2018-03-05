@@ -471,8 +471,6 @@ class Zume_Dashboard {
                         $zume_value['no_edit'] = true; // tags record as no owned
                         $prepared[$zume_key] = $zume_value;
                     }
-
-
                 }
 
                 return $prepared;

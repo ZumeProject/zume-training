@@ -64,6 +64,7 @@ get_header();
                                 'action'   => 'session_' . $zume_session,
                                 'meta'     => 'group_' . $zume_members,
                             ] );
+
                             break;
                         case 'explore':
                             Zume_Course_Content::get_course_content( $zume_session );

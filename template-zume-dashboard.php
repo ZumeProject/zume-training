@@ -137,34 +137,34 @@ $zume_highest_session = Zume_Dashboard::get_highest_session( $zume_current_user 
                                                     </div>
                                                     <div class="large-6 cell" style="min-width:350px;">
                                                         <ul class="pagination" role="navigation" aria-label="Pagination">
-                                                            <li class="<?php echo esc_html( $zume_value['session_1'] ? 'current' : '' ); ?>">
+                                                            <li class="<?php echo $zume_value['session_1'] == 'true' ? esc_html( 'current' ) : ''; ?>">
                                                                 <a href="<?php echo esc_html( zume_course_url() . '/?group=' . $zume_key . '&session=1' ); ?>">1</a>
                                                             </li>
-                                                            <li class="<?php echo esc_html( $zume_value['session_2'] ? 'current' : '' ); ?>">
+                                                            <li class="<?php echo $zume_value['session_2'] == 'true' ? esc_html( 'current' ) : ''; ?>">
                                                                 <a href="<?php echo esc_html( zume_course_url() . '/?group=' . $zume_key . '&session=2' ); ?>">2</a>
                                                             </li>
-                                                            <li class="<?php echo esc_html( $zume_value['session_3'] ? 'current' : '' ); ?>">
+                                                            <li class="<?php echo $zume_value['session_3'] == 'true' ? esc_html( 'current' ) : ''; ?>">
                                                                 <a href="<?php echo esc_html( zume_course_url() . '/?group=' . $zume_key . '&session=3' ); ?>">3</a>
                                                             </li>
-                                                            <li class="<?php echo esc_html( $zume_value['session_4'] ? 'current' : '' ); ?>">
+                                                            <li class="<?php echo $zume_value['session_4'] == 'true' ? esc_html( 'current' ) : ''; ?>">
                                                                 <a href="<?php echo esc_html( zume_course_url() . '/?group=' . $zume_key . '&session=4' ); ?>">4</a>
                                                             </li>
-                                                            <li class="<?php echo esc_html( $zume_value['session_5'] ? 'current' : '' ); ?>">
+                                                            <li class="<?php echo $zume_value['session_5'] == 'true' ? esc_html( 'current' ) : ''; ?>">
                                                                 <a href="<?php echo esc_html( zume_course_url() . '/?group=' . $zume_key . '&session=5' ); ?>">5</a>
                                                             </li>
-                                                            <li class="<?php echo esc_html( $zume_value['session_6'] ? 'current' : '' ); ?>">
+                                                            <li class="<?php echo $zume_value['session_6'] == 'true' ? esc_html( 'current' ) : ''; ?>">
                                                                 <a href="<?php echo esc_html( zume_course_url() . '/?group=' . $zume_key . '&session=6' ); ?>">6</a>
                                                             </li>
-                                                            <li class="<?php echo esc_html( $zume_value['session_7'] ? 'current' : '' ); ?>">
+                                                            <li class="<?php echo $zume_value['session_7'] == 'true' ? esc_html( 'current' ) : ''; ?>">
                                                                 <a href="<?php echo esc_html( zume_course_url() . '/?group=' . $zume_key . '&session=7' ); ?>">7</a>
                                                             </li>
-                                                            <li class="<?php echo esc_html( $zume_value['session_8'] ? 'current' : '' ); ?>">
+                                                            <li class="<?php echo $zume_value['session_8'] == 'true' ? esc_html( 'current' ) : ''; ?>">
                                                                 <a href="<?php echo esc_html( zume_course_url() . '/?group=' . $zume_key . '&session=8' ); ?>">8</a>
                                                             </li>
-                                                            <li class="<?php echo esc_html( $zume_value['session_9'] ? 'current' : '' ); ?>">
+                                                            <li class="<?php echo $zume_value['session_9'] == 'true' ? esc_html( 'current' ) : ''; ?>">
                                                                 <a href="<?php echo esc_html( zume_course_url() . '/?group=' . $zume_key . '&session=9' ); ?>">9</a>
                                                             </li>
-                                                            <li class="<?php echo esc_html( $zume_value['session_10'] ? 'current' : '' ); ?>">
+                                                            <li class="<?php echo $zume_value['session_10'] == 'true' ? esc_html( 'current' ) : ''; ?>">
                                                                 <a href="<?php echo esc_html( zume_course_url() . '/?group=' . $zume_key . '&session=10' ); ?>">10</a>
                                                             </li>
                                                         </ul>
@@ -791,6 +791,7 @@ foreach ( $zume_user_meta as $zume_key => $v ) {
         <!-- This is the nested modal -->
         <div class="reveal small" id="<?php echo esc_html( $zume_key ); ?>-delete" data-reveal>
             <form data-abide method="post">
+                <?php wp_nonce_field( get_current_user_id(), 'zume_nonce' ) ?>
                 <input type="hidden" name="key" value="<?php echo esc_html( $zume_key ); ?>"/>
 
                 <div class="grid-x grid-padding-x">

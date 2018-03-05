@@ -40,8 +40,6 @@ class Zume_Course {
         return self::$_instance;
     } // End instance()
 
-    private $session_nine_labels = array();
-
     /**
      * Constructor function.
      * @access  public

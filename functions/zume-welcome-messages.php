@@ -46,26 +46,30 @@ class Zume_Welcome_Messages {
     public function __construct() { } // End __construct()
 
     public static function get_encouragement() {
-        // check for and get user message level
-        $targeted_message = 0;
 
-        // build messages
-        $message = [
-            'new' => [
-                'type' => 'new',
-                'name' => 'new_registration',
-                'title' => __( 'Welcome!', 'zume' ),
-                'message' => __( 'Praise God for your interest in sharpening your disciple-making!', 'zume' )
-            ],
-        ];
-
-        // new, no group
-        if ( 0 == $targeted_message ) {
-            return $message['new'];
+        // get cached current message
+        $current_message = get_user_meta( get_current_user_id(), 'zume_message', true );
+        if ( ! $current_message ) {
+            $current_message = [
+                'key' => 'new',
+                'date' => current_time( 'mysql' ),
+            ];
+            update_user_meta( get_current_user_id(), 'zume_message', $current_message );
+            $current_message = get_user_meta( get_current_user_id(), 'zume_message', true );
         }
 
-        // @todo targeted messages
+        // check if you need to recalulate
+        if ( ! $current_message['date'] > date( "Y-m-j H:i:s", strtotime( '1 day ago' ) ) ) {
+            return self::get_message_text( $current_message['key'] );
+        }
 
+        // calculate
+        $message = self::calculate_message();
+
+        return $message;
+    }
+
+    public static function calculate_message( $key = 'new' ) { // @todo build the decision tree for which message to deliver
         // group, no sessions
         // group, no address (encourage to participate in global plan)
         // group, < 3 members
@@ -80,9 +84,26 @@ class Zume_Welcome_Messages {
         // group, next session 8
         // group, next session 9
         // group, next session 10
-        // group, complete
 
+//        $next_session = Zume_Course::get_next_session();
+        // group, complete
+        return self::get_message_text( $key = 'new' );
     }
+
+    public static function get_message_text( $key = 'new' ) { // @todo create the different messages for the different situations.
+
+        $message = [
+            'new' => [
+                'type' => 'new',
+                'name' => 'new_registration',
+                'title' => __( 'Welcome!', 'zume' ),
+                'message' => __( 'Praise God for your interest in sharpening your disciple-making!', 'zume' )
+            ],
+        ];
+
+        return $message[$key];
+    }
+
 
 }
 
