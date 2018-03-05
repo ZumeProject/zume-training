@@ -60,3 +60,9 @@ require_once( 'functions/geocoding-api.php' );
 include_once( 'functions/utilities/zume-mailchimp-settings.php' ); // Creates the options page for mailchimp automation
 include_once( 'functions/login/user-register.php' );
 
+/**
+ * redirect all logins to the home page
+ */
+add_filter( 'login_redirect', function( $url, $query, $user ) {
+    return site_url();
+}, 10, 3 );
