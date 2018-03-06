@@ -738,8 +738,8 @@ foreach ( $zume_user_meta as $zume_key => $v ) {
 
                     <!-- Add coleaders -->
                     <div class="cell padding-top">
-                        <label for="add_coleader"><strong><?php echo esc_html__( 'Coleaders', 'zume' ) ?></strong></label>
-                        <p class="small text-gray"><?php esc_attr( 'Adding a coleader gives their Zúme dashboard access to the group, if they accept. They can facilitate a training, but cannot change any details of the group.', 'zume' ) ?></p>
+                        <label for="add_coleader"><strong><?php echo esc_html__( 'Coleaders or additional participants', 'zume' ) ?></strong></label>
+                        <p class="small text-gray"><?php esc_attr( 'Adding a coleader or additional participant below gives that individual\'s Zúme dashboard access to the group after they accept the invitation. They can facilitate a training, but cannot change any details of the group.', 'zume' ) ?></p>
                         <?php
                         // Print current coleaders
                         if ( isset( $zume_value['coleaders'] ) && ! empty( $zume_value['coleaders'] ) && is_array( $zume_value['coleaders'] ) ) :
