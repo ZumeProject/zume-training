@@ -186,16 +186,18 @@ class Zume_Dashboard {
     public static function edit_group( $args ) {
         // Check if this user can edit this group
         $current_user_id = get_current_user_id();
-        $user_meta = get_user_meta( $current_user_id, $args['key'], true );
-        if ( empty( $user_meta ) ) {
+        $group_meta = get_user_meta( $current_user_id, $args['key'], true );
+        $group_meta = self::verify_group_array_filter( $group_meta );
+
+        if ( empty( $group_meta ) ) {
             return new WP_Error( 'no_group_match', 'Hey, you cheating? No, group with id found for you.' );
         }
 
-        if ( isset( $args['validate_address'] ) && empty( $args['validate_address'] ) ) {
+        if ( empty( $args['validate_address'] ) ) {
             $args['address'] = '';
         }
 
-        if ( isset( $args['address'] ) && ! $args['address'] == $user_meta['address'] && ! empty( $args['address'] ) ) {
+        if ( isset( $args['address'] ) && ! $args['address'] == $group_meta['address'] && ! empty( $args['address'] ) ) {
             // Geo lookup address
             $google_result = Zume_Google_Geolocation::query_google_api( $args['address'], $type = 'core' ); // get google api info
             if ( ! $google_result ) {
@@ -216,9 +218,9 @@ class Zume_Dashboard {
         }
 
         // Add coleaders
-        $args['coleaders'] = ( isset( $args['coleaders'] ) && is_array( $args['coleaders'] ) && ! empty( $args['coleaders'] ) ) ? array_filter( $args['coleaders'] ) : []; // confirm or establish array variable.
-        $args['coleaders_accepted'] = ( isset( $args['coleaders_accepted'] ) && is_array( $args['coleaders_accepted'] ) && ! empty( $args['coleaders_accepted'] ) ) ? array_filter( $args['coleaders_accepted'] ) : []; // confirm or establish array variable
-        $args['coleaders_declined'] = ( isset( $args['coleaders_declined'] ) && is_array( $args['coleaders_declined'] ) && ! empty( $args['coleaders_declined'] ) ) ? array_filter( $args['coleaders_declined'] ) : []; // confirm or establish array variable
+        $args['coleaders'] = ( ! empty( $args['coleaders'] ) ) ? array_filter( $args['coleaders'] ) : []; // confirm or establish array variable.
+        $args['coleaders_accepted'] = ( ! empty( $args['coleaders_accepted'] ) ) ? array_filter( $args['coleaders_accepted'] ) : [];
+        $args['coleaders_declined'] = ( ! empty( $args['coleaders_declined'] ) ) ? array_filter( $args['coleaders_declined'] ) : []; 
         if ( isset( $args['new_coleader'] ) && ! empty( $args['new_coleader'] && is_array( $args['new_coleader'] ) ) ) { // test if new coleader added
             foreach ( $args['new_coleader'] as $coleader ) { // loop potential additions
 
@@ -246,7 +248,7 @@ class Zume_Dashboard {
         // Combine array with new data
         unset( $args['type'] ); // keeps from storing the form parse info
         $args['last_modified_date'] = current_time( 'mysql' );
-        $args = wp_parse_args( $args, $user_meta );
+        $args = wp_parse_args( $args, $group_meta );
 
         update_user_meta( $current_user_id, $args['key'], $args );
         return true;
@@ -410,7 +412,7 @@ class Zume_Dashboard {
 
     public static function delete_coleader( $email, $group_id ) {
         $group = get_user_meta( get_current_user_id(), $group_id, true );
-        $group = maybe_unserialize( $group );
+        $group = self::verify_group_array_filter( $group );
         $group_prev = $group;
         if ( empty( $group ) ) {
             return [ 'status' => 'Permission failure' ];
@@ -420,13 +422,15 @@ class Zume_Dashboard {
             return [ 'status' => 'Email failure' ];
         }
 
-        if ( ! isset( $group['coleaders'] ) ) {
+        if ( empty( $group['coleaders'] ) ) {
             return [ 'status' => 'Coleaders not present' ];
         }
 
         foreach ( $group['coleaders'] as $key => $coleader ) {
             if ( $email == $coleader) {
                 unset( $group['coleaders'][$key] );
+                unset( $group['coleaders_accepted'][$key] );
+                unset( $group['coleaders_declined'][$key] );
                 update_user_meta( get_current_user_id(), $group_id, $group, $group_prev );
                 return [ 'status' => 'OK' ];
             }
