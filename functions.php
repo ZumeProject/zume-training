@@ -22,7 +22,7 @@ require_once( 'functions/post-types/pdf-download-post-type.php' );
  */
 
 // Language Files
-require_once( 'translation/translation.php' ); // Adds support for multiple languages
+require_once( 'translations/translation.php' ); // Adds support for multiple languages
 require_once( 'functions/zume-polylang-integration.php' ); // Adds support for multiple languages
 
 // Zume Theme Files
