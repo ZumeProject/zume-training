@@ -276,7 +276,6 @@ class Zume_Dashboard {
         $group_meta['closed'] = false;
 
         update_user_meta( get_current_user_id(), $group_id, $group_meta );
-        zume_write_log( 'end of update' );
     }
 
     public static function get_highest_session( $user_id ) {

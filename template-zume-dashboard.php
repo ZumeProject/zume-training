@@ -6,7 +6,7 @@ zume_force_login();
 
 if ( ! empty( $_POST ) ) { // test if post submitted
     // validate nonce
-    zume_write_log( $_POST );
+//    zume_write_log( $_POST );
     if ( isset( $_POST['zume_nonce'] ) && wp_verify_nonce( sanitize_key( wp_unslash( $_POST['zume_nonce'] ) ), get_current_user_id() ) ) { // verify that the form came from this page
         // remove excess nonce elements
         if ( isset( $_POST['zume_nonce'] ) ) {
@@ -27,7 +27,6 @@ if ( ! empty( $_POST ) ) { // test if post submitted
             } elseif ( ! empty( $_POST['type'] ) && $_POST['type'] == 'delete' && isset( $_POST['key'] ) ) { // delete group
                 Zume_Dashboard::delete_group( sanitize_key( wp_unslash( $_POST['key'] ) ) );
             } elseif ( ! empty( $_POST['type'] ) && $_POST['type'] == 'activate' && isset( $_POST['key'] ) ) { // re-activate group
-                zume_write_log( 'made it to activate' );
                 Zume_Dashboard::activate_group( sanitize_key( wp_unslash( $_POST['key'] ) ) );
             } elseif ( ! empty( $_POST['type'] ) && $_POST['type'] == 'coleader' ) { // coleader response
                 Zume_Dashboard::coleader_invitation_response( $_POST );
@@ -536,6 +535,19 @@ $zume_highest_session = Zume_Dashboard::get_highest_session( $zume_current_user 
 
 
                         <!-- ********************************************************************************************* -->
+                        <!-- INVITE TO ZUME -->
+                        <!-- ********************************************************************************************* -->
+                        <div class="grid-x grid-margin-x">
+                            <div class="cell center">
+                                <a class="button expanded"
+                                   href="mailto:?subject=<?php esc_attr_e( 'Join me on the Zúme Project' ) ?>&body=<?php esc_attr_e( 'Join me on the Zúme Project' ) ?>: <?php echo esc_url( site_url( '/wp-login.php?action=register' ) ) ?>">
+                                    <?php esc_html_e( 'Invite to Zume', 'zume' ) ?>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- END INSTRUCTIONS -->
+
+                        <!-- ********************************************************************************************* -->
                         <!-- DOWNLOAD GUIDEBOOK -->
                         <!-- ********************************************************************************************* -->
                         <div class="grid-x grid-margin-x">
@@ -549,18 +561,6 @@ $zume_highest_session = Zume_Dashboard::get_highest_session( $zume_current_user 
                         </div>
                         <!-- END INSTRUCTIONS -->
 
-                        <!-- ********************************************************************************************* -->
-                        <!-- INVITE TO ZUME -->
-                        <!-- ********************************************************************************************* -->
-                        <div class="grid-x grid-margin-x">
-                            <div class="cell center">
-                                <a class="button expanded"
-                                   href="mailto:?subject=<?php esc_attr_e( 'Join me on the Zúme Project' ) ?>&body=<?php esc_attr_e( 'Join me on the Zúme Project' ) ?>: <?php echo esc_url( site_url( '/wp-login.php?action=register' ) ) ?>">
-                                    <?php esc_html_e( 'Invite to Zume', 'zume' ) ?>
-                                </a>
-                            </div>
-                        </div>
-                        <!-- END INSTRUCTIONS -->
 
                     </div> <!-- End Right Column -->
 
