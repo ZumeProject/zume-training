@@ -80,7 +80,6 @@ Template Name: Zume About
                                 <li><?php esc_html_e( 'Group Discussions to help your group think through what’s being shared.', 'zume' ) ?></li>
                                 <li><?php esc_html_e( 'Simple Exercises to help your group put what you’re learning into practice.', 'zume' ) ?></li>
                                 <li><?php esc_html_e( 'Session Challenges to help your group keep learning and growing between sessions.', 'zume' ) ?></li>
-                                <li><?php esc_html_e( 'There is an optional Session 10 with extra material.', 'zume' ) ?></li>
                             </ul>
                         </div>
                     </div>
