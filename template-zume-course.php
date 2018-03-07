@@ -336,8 +336,6 @@ class Zume_Course_Content {
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="small-12 small-centered cell">
 
-                    <p class="center"><?php esc_html_e( 'Welcome', 'zume' ) ?></p>
-
                     <iframe style="border: 1px solid lightgrey;"  src="<?php echo esc_url( Zume_Course::get_video_by_key( '1' ) ) ?>" width="560" height="315"
                             frameborder="1"
                             webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
@@ -381,8 +379,6 @@ class Zume_Course_Content {
 
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="small-12 small-centered cell">
-
-                    <p class="center"><?php esc_html_e( 'Teach Them to Obey', 'zume' ) ?></p>
 
                     <iframe style="border: 1px solid lightgrey;"  src="<?php echo esc_url( Zume_Course::get_video_by_key( '2' ) ) ?>" width="560" height="315"
                             frameborder="1"
@@ -434,8 +430,6 @@ class Zume_Course_Content {
             <!-- Video block -->
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="small-12 small-centered cell">
-
-                    <p class="center"><?php esc_html_e( 'Spiritual Breathing', 'zume' ) ?></p>
 
                     <iframe style="border: 1px solid lightgrey;"  src="<?php echo esc_url( Zume_Course::get_video_by_key( '3' ) ) ?>" width="560" height="315"
                             frameborder="0"
@@ -505,8 +499,6 @@ class Zume_Course_Content {
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="small-12 small-centered cell">
 
-                    <p class="center"><?php esc_html_e( 'S.O.A.P.S. Bible Study', 'zume' ) ?></p>
-
                     <iframe style="border: 1px solid lightgrey;"  src="<?php echo esc_url( Zume_Course::get_video_by_key( '4' ) ) ?>" width="560" height="315"
                             frameborder="1"
                             webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
@@ -561,8 +553,6 @@ class Zume_Course_Content {
             <!-- Video block -->
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="small-12 small-centered cell">
-
-                    <p class="center"><?php esc_html_e( 'Accountability Groups', 'zume' ) ?></p>
 
                     <iframe style="border: 1px solid lightgrey;"  src="<?php echo esc_url( Zume_Course::get_video_by_key( '5' ) ) ?>" width="560" height="315"
                             frameborder="0"
@@ -754,8 +744,6 @@ class Zume_Course_Content {
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="small-12 small-centered cell">
 
-                    <p class="center"><?php esc_html_e( 'Producers vs Consumers', 'zume' ) ?></p>
-
                     <iframe style="border: 1px solid lightgrey;"  src="<?php echo esc_url( Zume_Course::get_video_by_key( '6' ) ) ?>" width="560" height="315"
                             frameborder="0"
                             webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
@@ -821,8 +809,6 @@ class Zume_Course_Content {
             <!-- Video block -->
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="small-12 small-centered cell">
-
-                    <p class="center"><?php esc_html_e( 'Prayer Cycle', 'zume' ) ?></p>
 
                     <iframe style="border: 1px solid lightgrey;"  src="<?php echo esc_url( Zume_Course::get_video_by_key( '7' ) ) ?>" width="560" height="315"
                             frameborder="0"
@@ -922,8 +908,6 @@ class Zume_Course_Content {
             <!-- Video block -->
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="small-12 small-centered cell">
-
-                    <p class="center"><?php esc_html_e( 'List of 100', 'zume' ) ?></p>
 
                     <iframe style="border: 1px solid lightgrey;"  src="<?php echo esc_url( Zume_Course::get_video_by_key( '8' ) ) ?>" width="560" height="315"
                             frameborder="0"
@@ -1095,8 +1079,6 @@ class Zume_Course_Content {
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="small-12 small-centered cell">
 
-                    <p class="center"><?php esc_html_e( 'Spiritual Economy', 'zume' ) ?></p>
-
                     <iframe style="border: 1px solid lightgrey;"  src="<?php echo esc_url( Zume_Course::get_video_by_key( '9' ) ) ?>" width="560" height="315"
                             frameborder="0"
                             webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
@@ -1183,8 +1165,6 @@ class Zume_Course_Content {
             <!-- Video block -->
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="small-12 small-centered cell">
-
-                    <p class="center"><?php esc_html_e( 'The Gospel', 'zume' ) ?></p>
 
                     <iframe style="border: 1px solid lightgrey;"  src="<?php echo esc_url( Zume_Course::get_video_by_key( '10' ) ) ?>" width="560" height="315"
                             frameborder="0"
@@ -1276,8 +1256,6 @@ class Zume_Course_Content {
             <!-- Video block -->
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="small-12 small-centered cell">
-
-                    <p class="center"><?php esc_html_e( 'Baptism', 'zume' ) ?></p>
 
                     <iframe style="border: 1px solid lightgrey;"  src="<?php echo esc_url( Zume_Course::get_video_by_key( '11' ) ) ?>" width="560" height="315"
                             frameborder="0"
@@ -1480,8 +1458,6 @@ class Zume_Course_Content {
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="small-12 small-centered cell">
 
-                    <p class="center"><?php esc_html_e( 'Testimony', 'zume' ) ?></p>
-
                     <iframe style="border: 1px solid lightgrey;"  src="<?php echo esc_url( Zume_Course::get_video_by_key( '12' ) ) ?>" width="560" height="315"
                             frameborder="0"
                             webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
@@ -1547,8 +1523,6 @@ class Zume_Course_Content {
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="small-12 small-centered cell">
 
-                    <p class="center"><?php esc_html_e( 'Greatest Blessing', 'zume' ) ?></p>
-
                     <iframe style="border: 1px solid lightgrey;"  src="<?php echo esc_url( Zume_Course::get_video_by_key( '13' ) ) ?>" width="560" height="315"
                             frameborder="0"
                             webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
@@ -1603,8 +1577,6 @@ class Zume_Course_Content {
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="small-12 small-centered cell">
 
-                    <p class="center"><?php esc_html_e( 'Duckling Discipleship', 'zume' ) ?></p>
-
                     <iframe style="border: 1px solid lightgrey;"  src="<?php echo esc_url( Zume_Course::get_video_by_key( '14' ) ) ?>" width="560" height="315"
                             frameborder="0"
                             webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
@@ -1658,8 +1630,6 @@ class Zume_Course_Content {
             <!-- Video block -->
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="small-12 small-centered cell">
-
-                    <p class="center"><?php esc_html_e( 'Eyes to See', 'zume' ) ?></p>
 
                     <iframe style="border: 1px solid lightgrey;"  src="<?php echo esc_url( Zume_Course::get_video_by_key( '15' ) ) ?>" width="560" height="315"
                             frameborder="0"
@@ -1727,8 +1697,6 @@ class Zume_Course_Content {
             <!-- Video block -->
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="small-12 small-centered cell">
-
-                    <p class="center"><?php esc_html_e( 'Lord\'s Supper', 'zume' ) ?></p>
 
                     <iframe style="border: 1px solid lightgrey;"  src="<?php echo esc_url( Zume_Course::get_video_by_key( '16' ) ) ?>" width="560" height="315"
                             frameborder="0"
@@ -1893,8 +1861,6 @@ class Zume_Course_Content {
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="small-12 small-centered cell">
 
-                    <p class="center"><?php esc_html_e( 'Prayer Walking', 'zume' ) ?></p>
-
                     <iframe style="border: 1px solid lightgrey;"  src="<?php echo esc_url( Zume_Course::get_video_by_key( '17' ) ) ?>" width="560" height="315"
                             frameborder="0"
                             webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
@@ -1933,8 +1899,6 @@ class Zume_Course_Content {
             <div class="grid-x grid-margin-x grid-margin-y">
 
                 <div class="small-12 small-centered cell">
-
-                    <p class="center"><?php esc_html_e( 'Person of Peace', 'zume' ) ?></p>
 
                     <iframe style="border: 1px solid lightgrey;"  src="<?php echo esc_url( Zume_Course::get_video_by_key( '18' ) ) ?>" width="560" height="315"
                             frameborder="0"
@@ -2119,8 +2083,6 @@ class Zume_Course_Content {
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="small-12 small-centered cell">
 
-                    <p class="center"><?php esc_html_e( 'Faithfulness', 'zume' ) ?></p>
-
                     <iframe style="border: 1px solid lightgrey;"  src="<?php echo esc_url( Zume_Course::get_video_by_key( '19' ) ) ?>" width="560" height="315"
                             frameborder="0"
                             webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
@@ -2182,8 +2144,6 @@ class Zume_Course_Content {
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="small-12 small-centered cell">
 
-                    <p class="center"><?php esc_html_e( '3/3 Groups', 'zume' ) ?></p>
-
                     <iframe style="border: 1px solid lightgrey;"  src="<?php echo esc_url( Zume_Course::get_video_by_key( '20' ) ) ?>" width="560" height="315"
                             frameborder="0"
                             webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
@@ -2239,8 +2199,6 @@ class Zume_Course_Content {
             <!-- Video block -->
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="small-12 small-centered cell">
-
-                    <p class="center"><?php esc_html_e( '3/3 Group Live', 'zume' ) ?></p>
 
                     <iframe style="border: 1px solid lightgrey;"  src="<?php echo esc_url( Zume_Course::get_video_by_key( '21' ) ) ?>" width="560" height="315"
                             frameborder="0"
@@ -2384,8 +2342,6 @@ class Zume_Course_Content {
             <!-- Video block -->
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="small-12 small-centered cell">
-
-                    <p class="center"><?php esc_html_e( 'Training Cycle', 'zume' ) ?></p>
 
                     <iframe style="border: 1px solid lightgrey;"  src="<?php echo esc_url( Zume_Course::get_video_by_key( '22' ) ) ?>" width="560" height="315"
                             frameborder="0"
@@ -2601,8 +2557,6 @@ class Zume_Course_Content {
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="small-12 small-centered cell">
 
-                    <p class="center"><?php esc_html_e( 'Leadership Cells', 'zume' ) ?></p>
-
                     <iframe style="border: 1px solid lightgrey;"  src="<?php echo esc_url( Zume_Course::get_video_by_key( '23' ) ) ?>" width="560" height="315"
                             frameborder="0"
                             webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
@@ -2798,8 +2752,6 @@ class Zume_Course_Content {
             <div class="grid-x grid-margin-x grid-margin-y vertical-padding">
                 <div class="small-12 small-centered cell">
 
-                    <p class="center"><?php esc_html_e( 'Non-Sequential', 'zume' ) ?></p>
-
                     <iframe style="border: 1px solid lightgrey;"  src="<?php echo esc_url( Zume_Course::get_video_by_key( '24' ) ) ?>" width="560" height="315"
                             frameborder="0"
                             webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
@@ -2851,8 +2803,6 @@ class Zume_Course_Content {
             <!-- Video block -->
             <div class="grid-x grid-margin-x grid-margin-y vertical-padding">
                 <div class="small-12 small-centered cell ">
-
-                    <p class="center"><?php esc_html_e( 'Pace', 'zume' ) ?></p>
 
                     <iframe style="border: 1px solid lightgrey;"  src="<?php echo esc_url( Zume_Course::get_video_by_key( '25' ) ) ?>" width="560" height="315"
                             frameborder="0"
@@ -2908,8 +2858,6 @@ class Zume_Course_Content {
             <!-- Video block -->
             <div class="grid-x grid-margin-x grid-margin-y vertical-padding">
                 <div class="small-12 small-centered cell">
-
-                    <p class="center"><?php esc_html_e( 'Two Churches', 'zume' ) ?></p>
 
                     <iframe style="border: 1px solid lightgrey;"  src="<?php echo esc_url( Zume_Course::get_video_by_key( '26' ) ) ?>" width="560" height="315"
                             frameborder="0"
@@ -3154,8 +3102,6 @@ class Zume_Course_Content {
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="small-12 small-centered cell">
 
-                    <p class="center"><?php esc_html_e( 'Coaching Checklist', 'zume' ) ?></p>
-
                     <iframe style="border: 1px solid lightgrey;"  src="<?php echo esc_url( Zume_Course::get_video_by_key( '28' ) ) ?>" width="560" height="315"
                             frameborder="0"
                             webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
@@ -3219,8 +3165,6 @@ class Zume_Course_Content {
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="small-12 small-centered cell">
 
-                    <p class="center"><?php esc_html_e( 'Leadership in Networks', 'zume' ) ?></p>
-
                     <iframe style="border: 1px solid lightgrey;"  src="<?php echo esc_url( Zume_Course::get_video_by_key( '29' ) ) ?>" width="560" height="315"
                             frameborder="0"
                             webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
@@ -3269,8 +3213,6 @@ class Zume_Course_Content {
             <!-- Video block -->
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="small-12 small-centered cell">
-
-                    <p class="center"><?php esc_html_e( 'Peer Mentoring Groups', 'zume' ) ?></p>
 
                     <iframe style="border: 1px solid lightgrey;"  src="<?php echo esc_url( Zume_Course::get_video_by_key( '30' ) ) ?>" width="560" height="315"
                             frameborder="0"
@@ -3366,8 +3308,6 @@ class Zume_Course_Content {
                     <div class="grid-x grid-margin-x grid-margin-y">
                         <div class="small-12 small-centered cell">
 
-                            <p class="center"><?php esc_html_e( 'Completion of Training', 'zume' ) ?></p>
-
                             <iframe style="border: 1px solid lightgrey;"  src="<?php echo esc_url( Zume_Course::get_video_by_key( '27' ) ) ?>" width="560" height="315"
                                     frameborder="0" webkitallowfullscreen mozallowfullscreen
                                     allowfullscreen></iframe>
@@ -3384,142 +3324,6 @@ class Zume_Course_Content {
                         </div>
                     </div>
                     <br><br>
-                    <!-- grid-x -->
-                    <!-- Activity Block -->
-                    <!--<div class="grid-x grid-margin-x grid-margin-y">
-                        <div class="large-4 cell activity-title"><span><?php /*esc_html_e( "Grow", 'zume' ) */?></span></div>
-                        <div class="large-8 cell activity-description">
-                            <p style="text-transform: uppercase"><?php /*esc_html_e( "Grow as a disciple by putting your faith to work", 'zume' ) */?></p>
-                            <p>
-                                <?php /*esc_html_e( "Consider registering online for reminders, coaching resources, and to become connected with others who are using the same sort of ministry approach. You can do this at ZumeProject.com.", 'zume' ) */?>
-                            </p>
-                        </div>
-                    </div>-->
-
-                    <!--<div class="grid-x grid-margin-x grid-margin-y">
-                        <div class="large-4 cell activity-title"><span><?php /*esc_html_e( "ACT", 'zume' ) */?></span></div>
-                        <div class="large-8 cell activity-description">
-                            <div class="congratulations-more">
-                                <button class="button js-congratulations-more-button" data-item="learn-more"><span>
-                                        <div class="congratulations-icon congratulations-icon-learn-more"></div>
-                                        <span><?php /*esc_html_e( "Learn More", 'zume' ) */?></span>
-                                    </span></button>
-                                <button class="button js-congratulations-more-button" data-item="invite"><span>
-                                        <div class="congratulations-icon congratulations-icon-invite"></div>
-                                        <span><?php /*esc_html_e( "Invite my friends", 'zume' ) */?></span>
-                                    </span></button>
-                                <button class="button js-congratulations-more-button" data-item="coordinator"><span>
-                                        <div class="congratulations-icon congratulations-icon-coordinator"></div>
-                                        <span><?php /*esc_html_e( "Become a county coordinator", 'zume' ) */?></span>
-                                    </span></button>
-                                <button class="button js-congratulations-more-button" data-item="map"><span>
-                                        <div class="congratulations-icon congratulations-icon-map"></div>
-                                        <span><?php /*esc_html_e( "Map my neighborhood", 'zume' ) */?></span>
-                                    </span></button>
-                                <button class="button js-congratulations-more-button" data-item="language"><span>
-                                        <div class="congratulations-icon congratulations-icon-language"></div>
-                                        <span><?php /*esc_html_e( "Fund translation of Zúme", 'zume' ) */?></span>
-                                    </span></button>
-                                <button class="button js-congratulations-more-button" data-item="contact-coach"><span>
-                                        <div class="congratulations-icon congratulations-icon-contact-coach"></div>
-                                        <span><?php /*esc_html_e( "Contact my coach", 'zume' ) */?></span>
-                                    </span></button>
-                                <button class="button js-congratulations-more-button" data-item="share"><span>
-                                        <div class="congratulations-icon congratulations-icon-share"></div>
-                                        <span><?php /*esc_html_e( "Share on Social Media", 'zume' ) */?></span>
-                                    </span></button>
-                                <button class="button js-congratulations-more-button" data-item="champion"><span>
-                                        <div class="congratulations-icon congratulations-icon-champion"></div>
-                                        <span><?php /*esc_html_e( "Champion Zúme on Social Media", 'zume' ) */?></span>
-                                    </span></button>
-                                <button class="button js-congratulations-more-button" data-item="join-2414"><span>
-                                        <div class="congratulations-icon congratulations-icon-learn-more"></div>
-                                        <span><?php /*esc_html_e( "Join 2414", 'zume' ) */?></span>
-                                    </span></button>
-                            </div>
-
-                            <div class="congratulations-more__text js-congratulations-more-item" data-item="learn-more"
-                                 hidden>
-                                <p>
-                                    <?php /*esc_html_e( "Find additional information on some of the multiplication concepts at", 'zume' ) */?>
-                                    <a href="http://metacamp.org/multiplication-concepts/" target="_blank" rel="noopener noreferrer">
-                                        http://metacamp.org/multiplication-concepts/
-                                    </a>
-                                    <?php /*esc_html_e( "or ask questions about specific resources by e-mailing", 'zume' ) */?>
-                                    <a href="mailto:info@zumeproject.com">info@zumeproject.com</a>.
-                                </p>
-                                <p class="center">
-                                    <a class="button" href="http://metacamp.org/multiplication-concepts/"
-                                       target="_blank" rel="noopener noreferrer"><?php /*esc_html_e( "Learn more", 'zume' ) */?></a>
-                                </p>
-                            </div>
-                            <div class="congratulations-more__text js-congratulations-more-item" data-item="invite"
-                                 hidden>
-                                <p>
-                                    <?php /*esc_html_e( "You can put what you know to work by helping spread the word about Zúme Training and inviting others to go through training, too. We make it easy to invite friends through email, Facebook, Twitter, Snapchat and other social sites, but we can't invite your friends for you.", 'zume' ) */?>
-                                </p>
-                                <div class="js-congratulations-more-invite-button"></div>
-                            </div>
-                            <div class="congratulations-more__text js-congratulations-more-item" data-item="coordinator"
-                                 hidden>
-                                <p>
-                                    <?php /*esc_html_e( "One of the ways you can put what you know to work is by becoming a county coordinator, that is someone who can help connect groups as they get started in your area. If you’re the kind of person who likes to help people go and grow, this might be a way God can use your gifts to do even more. Let us know by sending an e-mail to", 'zume' ) */?>
-                                    <a href="mailto:info@zumeproject.com">info@zumeproject.com</a>.
-                                </p>
-                                <p class="center">
-                                    <a class="button" href="/dashboard/#your-coaches"><?php /*esc_html_e( "Contact my coach", 'zume' ) */?></a>
-                                </p>
-                            </div>
-                            <div class="congratulations-more__text js-congratulations-more-item" data-item="language"
-                                 hidden>
-                                <p>
-                                    <?php /*esc_html_e( "As Zúme Training grows, sessions will soon be available in 34 more languages. As we bring those trainings online, we’ll send you information on people in your neighborhood that speak those languages, so you can share something that’s built just for them. You can help fund the translation of the Zúme Training into additional languages by donating at", 'zume' ) */?>
-                                    <a href="https://big.life/donate" target="_blank" rel="noopener noreferrer">https://big.life/donate</a>
-                                    <?php /*esc_html_e( "and designating the gift for the Zúme Project with a note about the language you would like to fund.", 'zume' ) */?>
-                                </p>
-                                <p class="center">
-                                    <a class="button" href="https://big.life/donate" target="_blank" rel="noopener noreferrer">
-                                        <?php /*esc_html_e( "Fund translation of Zúme", 'zume' ) */?>
-                                    </a>
-                                </p>
-                            </div>
-                            <div class="congratulations-more__text js-congratulations-more-item"
-                                 data-item="contact-coach" hidden>
-                                <p class="center">
-                                    <a class="button" href="/dashboard/#your-coaches"><?php /*esc_html_e( "Contact my coach", 'zume' ) */?></a>
-                                </p>
-                            </div>
-                            <div class="congratulations-more__text js-congratulations-more-item" data-item="share"
-                                 hidden>
-                                <p class="center">
-                                    <a class="button" href="https://www.facebook.com/zumeproject" target="_blank" rel="noopener noreferrer">
-                                        <?php /*esc_html_e( "Facebook page", 'zume' ) */?>
-                                    </a>
-                                </p>
-                            </div>
-                            <div class="congratulations-more__text js-congratulations-more-item" data-item="champion"
-                                 hidden>
-                                <p>
-                                    <?php /*esc_html_e( "Contact us at", 'zume' ) */?> <a href="mailto:info@zumeproject.com">info@zumeproject.com</a>
-                                    <?php /*esc_html_e( "if you are interested in serving as a social media moderator for Zúme.", 'zume' ) */?>
-                                </p>
-                                <p class="center">
-                                    <a class="button" href="mailto:info@zumeproject.com"><?php /*esc_html_e( "Contact us", 'zume' ) */?></a>
-                                </p>
-                            </div>
-                            <div class="congratulations-more__text js-congratulations-more-item" data-item="join-2414"
-                                 hidden>
-                                <p>
-                                    <?php /*esc_html_e( "Check out", 'zume' ) */?> <a href="https://www.2414now.net" target="_blank" rel="noopener noreferrer">www.2414now.net</a>
-                                    <?php /*esc_html_e( "and join the global coalition praying and working together to start kingdom movement engagements in every unreached people and place by 2025.", 'zume' ) */?>
-                                </p>
-                                <p class="center">
-                                    <a class="button" href="https://www.2414now.net" target="_blank" rel="noopener noreferrer"><?php /*esc_html_e( "Join 2414", 'zume' ) */?></a>
-                                </p>
-
-
-                            </div>
-                        </div>-->
         </section>
         <?php
     }
