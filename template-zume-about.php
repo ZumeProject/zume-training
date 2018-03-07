@@ -69,11 +69,11 @@ Template Name: Zume About
                 <div class="medium-8 cell ">
 
                     <div class="grid-x grid-padding-x grid-padding-y">
-                        <div class="large-4 cell center">
+                        <div class="medium-4 cell center">
                             <img src="<?php echo esc_url( zume_images_uri( 'pages' ) ) ?>training2.png"
                                  alt="Zúme consists of 10 sessions, 2 hours each" height="150"/>
                         </div>
-                        <div class="large-8 cell ">
+                        <div class="medium-8 cell ">
                             <h3><?php esc_html_e( 'Zúme consists of 10 sessions, 2 hours each', 'zume' ) ?>:</h3>
                             <ul>
                                 <li><?php esc_html_e( 'Video and Audio to help your group understand basic principles of multiplying disciples.', 'zume' ) ?></li>
