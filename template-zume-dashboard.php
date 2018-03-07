@@ -6,6 +6,7 @@ zume_force_login();
 
 if ( ! empty( $_POST ) ) { // test if post submitted
     // validate nonce
+    zume_write_log( $_POST );
     if ( isset( $_POST['zume_nonce'] ) && wp_verify_nonce( sanitize_key( wp_unslash( $_POST['zume_nonce'] ) ), get_current_user_id() ) ) { // verify that the form came from this page
         // remove excess nonce elements
         if ( isset( $_POST['zume_nonce'] ) ) {
@@ -26,7 +27,8 @@ if ( ! empty( $_POST ) ) { // test if post submitted
             } elseif ( ! empty( $_POST['type'] ) && $_POST['type'] == 'delete' && isset( $_POST['key'] ) ) { // delete group
                 Zume_Dashboard::delete_group( sanitize_key( wp_unslash( $_POST['key'] ) ) );
             } elseif ( ! empty( $_POST['type'] ) && $_POST['type'] == 'activate' && isset( $_POST['key'] ) ) { // re-activate group
-                Zume_Dashboard::activate_group( get_current_user_id(), sanitize_key( wp_unslash( $_POST['key'] ) ) );
+                zume_write_log( 'made it to activate' );
+                Zume_Dashboard::activate_group( sanitize_key( wp_unslash( $_POST['key'] ) ) );
             } elseif ( ! empty( $_POST['type'] ) && $_POST['type'] == 'coleader' ) { // coleader response
                 Zume_Dashboard::coleader_invitation_response( $_POST );
             } else {
@@ -48,8 +50,8 @@ $zume_highest_session = Zume_Dashboard::get_highest_session( $zume_current_user 
         var load_iframe = function (id, src) {
             jQuery("#video-display" + " iframe").attr("src", src)
         }
-        var end_video_play = function( id ) {
-            jQuery("#"+id + " iframe").attr("src", '')
+        var end_video_play = function (id) {
+            jQuery("#" + id + " iframe").attr("src", '')
         }
 
     </script>
@@ -83,7 +85,7 @@ $zume_highest_session = Zume_Dashboard::get_highest_session( $zume_current_user 
                                 // add colead groups to array
                                 $zume_colead_groups = Zume_Dashboard::get_colead_groups();
                                 foreach ( $zume_colead_groups as $zume_colead_key => $zume_colead_value ) {
-                                    $zume_user_meta[$zume_colead_key] = $zume_colead_value;
+                                    $zume_user_meta[ $zume_colead_key ] = $zume_colead_value;
                                 }
 
                                 foreach ( $zume_user_meta as $zume_key => $v ) {
@@ -98,17 +100,22 @@ $zume_highest_session = Zume_Dashboard::get_highest_session( $zume_current_user 
                                             <!-- Group Row -->
                                             <li class="block">
                                                 <div class="grid-x grid-margin-x">
-                                                    <div class="cell large-6 <?php if ( isset( $zume_value['no_edit'] ) ) { echo 'coleader-group'; } ?>">
+                                                    <div class="cell large-6 <?php if ( isset( $zume_value['no_edit'] ) ) {
+                                                        echo 'coleader-group';
+} ?>">
 
-                                                            <?php if ( isset( $zume_value['no_edit'] ) ) : ?>
-                                                                <span class="group-title"> <?php echo esc_html( $zume_value['group_name'] ) ?></span>
-                                                            <?php else : ?>
-                                                                <span class="group-title"><a data-open="<?php echo esc_html( $zume_key ); ?>"><?php echo esc_html( $zume_value['group_name'] ) ?></a></span>&nbsp;
+                                                        <?php if ( isset( $zume_value['no_edit'] ) ) : ?>
+                                                            <span class="group-title"> <?php echo esc_html( $zume_value['group_name'] ) ?></span>
+                                                        <?php else : ?>
+                                                            <span class="group-title"><a
+                                                                        data-open="<?php echo esc_html( $zume_key ); ?>"><?php echo esc_html( $zume_value['group_name'] ) ?></a></span>&nbsp;
 
-                                                            <button class="small" data-open="<?php echo esc_html( $zume_key ); ?>" style="opacity: .5;">
+                                                            <button class="small"
+                                                                    data-open="<?php echo esc_html( $zume_key ); ?>"
+                                                                    style="opacity: .5;">
                                                                 <i class="fi-pencil hollow"></i> <?php echo esc_html__( 'edit', 'zume' ) ?>
                                                             </button>
-                                                            <?php endif; ?>
+                                                        <?php endif; ?>
 
                                                         <p class="text-gray">
                                                             <?php echo esc_html( __( 'Meeting Time', 'zume' ) . ": " . $zume_value['meeting_time'] ) ?>
@@ -119,15 +126,22 @@ $zume_highest_session = Zume_Dashboard::get_highest_session( $zume_current_user 
 
                                                             <?php if ( isset( $zume_value['no_edit'] ) ) : ?>
                                                                 <br>(Colead Group)
-                                                                <span class="coleader-remove-link" style="display:none;">
-                                                                    <a class="small text-gray" onclick="jQuery('#<?php echo esc_html( $zume_key ); ?>-remove-group').toggle();">
+                                                                <span class="coleader-remove-link"
+                                                                      style="display:none;">
+                                                                    <a class="small text-gray"
+                                                                       onclick="jQuery('#<?php echo esc_html( $zume_key ); ?>-remove-group').toggle();">
                                                                         <?php esc_attr_e( 'Remove this group', 'zume' ) ?>
                                                                     </a>
-                                                                    <form method="post" style="display:none;" id="<?php echo esc_html( $zume_key ); ?>-remove-group">
+                                                                    <form method="post" style="display:none;"
+                                                                          id="<?php echo esc_html( $zume_key ); ?>-remove-group">
                                                                         <?php wp_nonce_field( get_current_user_id(), 'zume_nonce' ) ?>
-                                                                        <input type="hidden" name="type" value="coleader"/>
-                                                                        <?php esc_attr_e( 'Are you sure you want to remove this group?', 'zume' ) ?><br>
-                                                                    <button class="small button" type="submit" name="decline" value="<?php echo esc_html( $zume_key ); ?>"><?php esc_attr_e( 'Yes', 'zume' ) ?></button>
+                                                                        <input type="hidden" name="type"
+                                                                               value="coleader"/>
+                                                                        <?php esc_attr_e( 'Are you sure you want to remove this group?', 'zume' ) ?>
+                                                                        <br>
+                                                                    <button class="small button" type="submit"
+                                                                            name="decline"
+                                                                            value="<?php echo esc_html( $zume_key ); ?>"><?php esc_attr_e( 'Yes', 'zume' ) ?></button>
                                                                     </form>
                                                                 </span>
 
@@ -136,7 +150,8 @@ $zume_highest_session = Zume_Dashboard::get_highest_session( $zume_current_user 
 
                                                     </div>
                                                     <div class="large-6 cell" style="min-width:350px;">
-                                                        <ul class="pagination" role="navigation" aria-label="Pagination">
+                                                        <ul class="pagination" role="navigation"
+                                                            aria-label="Pagination">
                                                             <li class="<?php echo $zume_value['session_1'] == 'true' ? esc_html( 'current' ) : ''; ?>">
                                                                 <a href="<?php echo esc_html( zume_course_url() . '/?group=' . $zume_key . '&session=1' ); ?>">1</a>
                                                             </li>
@@ -178,13 +193,14 @@ $zume_highest_session = Zume_Dashboard::get_highest_session( $zume_current_user 
                                                         <?php else : ?>
                                                             <!-- Close group button -->
                                                             <?php if ( ! isset( $zume_value['no_edit'] ) ) : ?>
-                                                            <form method="post">
-                                                                <input type="hidden" name="key"
-                                                                       value="<?php echo esc_html( $zume_key ); ?>"/>
-                                                                <span><button type="submit" class="button hollow alert"
-                                                                              name="type"
-                                                                              value="closed"><?php echo esc_html__( 'Archive Group', 'zume' ) ?></button></span>
-                                                            </form>
+                                                                <form method="post">
+                                                                    <input type="hidden" name="key"
+                                                                           value="<?php echo esc_html( $zume_key ); ?>"/>
+                                                                    <span><button type="submit"
+                                                                                  class="button hollow alert"
+                                                                                  name="type"
+                                                                                  value="closed"><?php echo esc_html__( 'Archive Group', 'zume' ) ?></button></span>
+                                                                </form>
                                                             <?php endif; ?>
                                                         <?php endif; ?>
                                                     </div>
@@ -212,7 +228,6 @@ $zume_highest_session = Zume_Dashboard::get_highest_session( $zume_current_user 
                                 <?php endif; ?>
 
 
-
                                 <p class="center vertical-padding">
                                     <button class="button hollow small"
                                             data-open="create"><?php echo esc_html__( 'Start New Group', 'zume' ) ?></button>
@@ -228,83 +243,83 @@ $zume_highest_session = Zume_Dashboard::get_highest_session( $zume_current_user 
                             <div class="grid-x grid-margin-x grid-margin-y">
                                 <div class="cell">
                                     <h3 class="center padding-bottom"><?php esc_html_e( 'Video Library', 'zume' ) ?></h3>
-                                    <span class="x-small center float-right"><?php Zume_Dashboard::get_available_videos_count( $zume_highest_session ); ?> <?php esc_html_e( 'of 31 videos', 'zume' ) ?></span>
+                                    <span class="x-small center float-right"><?php Zume_Dashboard::get_available_videos_count( $zume_highest_session ); ?><?php esc_html_e( 'of 31 videos', 'zume' ) ?></span>
                                     <hr>
                                     <div class="grid-x grid-margin-x"> <!-- Begin columns container -->
                                         <?php
-                                            $zume_videos = [
-                                                ["name" => esc_html__( 'Overview Video', 'zume' ), "length" => "(2:07)", "key" => "31", "session" => -1, "title" => 0, "column" => 1 ],
-                                                ["name" => esc_html__( 'How Zúme Works', 'zume' ), "length" => "(3:22)" , "key" => "32", "session" => -1, "title" => 0, "column" => 1 ],
-                                                ["name" => esc_html__( 'Session 1', 'zume' ), "length" => "", "key" => "", "session" => 1, "title" => 1, "column" => 1 ], // title
-                                                ["name" => esc_html__( 'Welcome to Zume', 'zume' ), "length" => "(3:07)", "key" => "1", "session" => 1, "title" => 0, "column" => 1 ],
-                                                ["name" => esc_html__( 'Teach Them to Obey', 'zume' ), "length" => "(4:01)", "key" => "2", "session" => 1, "title" => 0, "column" => 1 ],
-                                                ["name" => esc_html__( 'Spiritual Breathing', 'zume' ), "length" => "(5:46)", "key" => "3", "session" => 1, "title" => 0, "column" => 1 ],
-                                                ["name" => esc_html__( 'S.O.A.P.S Bible Reading', 'zume' ), "length" => "(3:22)", "key" => "4", "session" => 1, "title" => 0, "column" => 1 ],
-                                                ["name" => esc_html__( 'Accountability Groups', 'zume' ), "length" => "(1:10)", "key" => "5", "session" => 1, "title" => 0, "column" => 1 ],
-                                                ["name" => esc_html__( 'Session 2', 'zume' ), "length" => "", "key" => "", "session" => 2, "title" => 1, "column" => 1 ], // title
-                                                ["name" => esc_html__( 'Producers vs Consumers', 'zume' ), "length" => "(5:33)", "key" => "6", "session" => 2, "title" => 0, "column" => 1 ],
-                                                ["name" => esc_html__( 'Prayer Cycle', 'zume' ), "length" => "(1:10)", "key" => "7", "session" => 2, "title" => 0, "column" => 1 ],
-                                                ["name" => esc_html__( 'List of 100', 'zume' ), "length" => "(1:04)", "key" => "8", "session" => 2, "title" => 0, "column" => 1 ],
-                                                ["name" => esc_html__( 'Session 3', 'zume' ), "length" => "", "key" => "", "session" => 3, "title" => 1, "column" => 2 ], // title
-                                                ["name" => esc_html__( 'Spiritual Economy', 'zume' ), "length" => "(2:32)", "key" => "9", "session" => 3, "title" => 0, "column" => 2 ],
-                                                ["name" => esc_html__( 'The Gospel', 'zume' ), "length" => "(4:41)", "key" => "10", "session" => 3, "title" => 0, "column" => 2 ],
-                                                ["name" => esc_html__( 'Baptism', 'zume' ), "length" => "(3:22)", "key" => "11", "session" => 3, "title" => 0, "column" => 2 ],
-                                                ["name" => esc_html__( 'Session 4', 'zume' ), "length" => "", "key" => "", "session" => 4, "title" => 1, "column" => 2 ], // title
-                                                ["name" => esc_html__( '3 Minute Testimony', 'zume' ), "length" => "(2:26)", "key" => "12", "session" => 4, "title" => 0, "column" => 2 ],
-                                                ["name" => esc_html__( 'Greatest Blessing', 'zume' ), "length" => "(2:26)", "key" => "13", "session" => 4, "title" => 0, "column" => 2 ],
-                                                ["name" => esc_html__( 'Duckling Discipleship', 'zume' ), "length" => "(3:29)", "key" => "14", "session" => 4, "title" => 0, "column" => 2 ],
-                                                ["name" => esc_html__( 'Eyes to See', 'zume' ), "length" => "(6:08)", "key" => "15", "session" => 4, "title" => 0, "column" => 2 ],
-                                                ["name" => esc_html__( 'Lord\'s Supper', 'zume' ), "length" => "(1:54)", "key" => "16", "session" => 4, "title" => 0, "column" => 2 ],
-                                                ["name" => esc_html__( 'Session 5', 'zume' ), "length" => "", "key" => "", "session" => 5, "title" => 1, "column" => 2 ], // title
-                                                ["name" => esc_html__( 'Prayer Walking', 'zume' ), "length" => "(5:05)", "key" => "17", "session" => 5, "title" => 0, "column" => 2 ],
-                                                ["name" => esc_html__( 'Person of Peace', 'zume' ), "length" => "(5:45)", "key" => "18", "session" => 5, "title" => 0, "column" => 2 ],
-                                                ["name" => esc_html__( 'Session 6', 'zume' ), "length" => "", "key" => "", "session" => 6, "title" => 1, "column" => 3 ], // title
-                                                ["name" => esc_html__( 'Faithfulness', 'zume' ), "length" => "(2:35)", "key" => "19", "session" => 6, "title" => 0, "column" => 3 ],
-                                                ["name" => esc_html__( '3/3 Group', 'zume' ), "length" => "(3:28)", "key" => "20", "session" => 6, "title" => 0, "column" => 3 ],
-                                                ["name" => esc_html__( '3/3 Group Live', 'zume' ), "length" => "(1:19:00)", "key" => "21", "session" => 6, "title" => 0, "column" => 3 ],
-                                                ["name" => esc_html__( 'Session 7', 'zume' ), "length" => "", "key" => "", "session" => 7, "title" => 1, "column" => 3 ], // title
-                                                ["name" => esc_html__( 'Training Cycle', 'zume' ), "length" => "(4:12)", "key" => "22", "session" => 7, "title" => 0, "column" => 3 ],
-                                                ["name" => esc_html__( 'Session 8', 'zume' ), "length" => "", "key" => "", "session" => 8, "title" => 1, "column" => 3 ], // title
-                                                ["name" => esc_html__( 'Leadership Cells', 'zume' ), "length" => "(2:22)", "key" => "23", "session" => 8, "title" => 0, "column" => 3 ],
-                                                ["name" => esc_html__( 'Session 9', 'zume' ), "length" => "", "key" => "", "session" => 9, "title" => 1, "column" => 3 ], // title
-                                                ["name" => esc_html__( 'Non-Sequential', 'zume' ), "length" => "(3:58)", "key" => "24", "session" => 9, "title" => 0, "column" => 3 ],
-                                                ["name" => esc_html__( 'Pace', 'zume' ), "length" => "(2:53)", "key" => "25", "session" => 9, "title" => 0, "column" => 3 ],
-                                                ["name" => esc_html__( 'Part of Two Churches', 'zume' ), "length" => "(3:55)", "key" => "26", "session" => 9, "title" => 0, "column" => 3 ],
-                                                ["name" => esc_html__( 'Completion of Training', 'zume' ), "length" => "(2:35)", "key" => "27", "session" => 9, "title" => 0, "column" => 3 ],
-                                                ["name" => esc_html__( 'Session 10', 'zume' ), "length" => "", "key" => "", "session" => 10, "title" => 1, "column" => 3 ], // title
-                                                ["name" => esc_html__( 'Coaching Checklist', 'zume' ), "length" => "(1:22)", "key" => "28", "session" => 10, "title" => 0, "column" => 3 ],
-                                                ["name" => esc_html__( 'Leadership in Networks', 'zume' ), "length" => "(4:26)", "key" => "29", "session" => 10, "title" => 0, "column" => 3 ],
-                                                ["name" => esc_html__( 'Peer Mentoring', 'zume' ), "length" => "(4:15)", "key" => "30", "session" => 10, "title" => 0, "column" => 3 ],
+                                        $zume_videos = [
+                                            [ "name" => esc_html__( 'Overview Video', 'zume' ), "length" => "(2:07)", "key" => "31", "session" => -1, "title" => 0, "column" => 1 ],
+                                            [ "name" => esc_html__( 'How Zúme Works', 'zume' ), "length" => "(3:22)", "key" => "32", "session" => -1, "title" => 0, "column" => 1 ],
+                                            [ "name" => esc_html__( 'Session 1', 'zume' ), "length" => "", "key" => "", "session" => 1, "title" => 1, "column" => 1 ], // title
+                                            [ "name" => esc_html__( 'Welcome to Zume', 'zume' ), "length" => "(3:07)", "key" => "1", "session" => 1, "title" => 0, "column" => 1 ],
+                                            [ "name" => esc_html__( 'Teach Them to Obey', 'zume' ), "length" => "(4:01)", "key" => "2", "session" => 1, "title" => 0, "column" => 1 ],
+                                            [ "name" => esc_html__( 'Spiritual Breathing', 'zume' ), "length" => "(5:46)", "key" => "3", "session" => 1, "title" => 0, "column" => 1 ],
+                                            [ "name" => esc_html__( 'S.O.A.P.S Bible Reading', 'zume' ), "length" => "(3:22)", "key" => "4", "session" => 1, "title" => 0, "column" => 1 ],
+                                            [ "name" => esc_html__( 'Accountability Groups', 'zume' ), "length" => "(1:10)", "key" => "5", "session" => 1, "title" => 0, "column" => 1 ],
+                                            [ "name" => esc_html__( 'Session 2', 'zume' ), "length" => "", "key" => "", "session" => 2, "title" => 1, "column" => 1 ], // title
+                                            [ "name" => esc_html__( 'Producers vs Consumers', 'zume' ), "length" => "(5:33)", "key" => "6", "session" => 2, "title" => 0, "column" => 1 ],
+                                            [ "name" => esc_html__( 'Prayer Cycle', 'zume' ), "length" => "(1:10)", "key" => "7", "session" => 2, "title" => 0, "column" => 1 ],
+                                            [ "name" => esc_html__( 'List of 100', 'zume' ), "length" => "(1:04)", "key" => "8", "session" => 2, "title" => 0, "column" => 1 ],
+                                            [ "name" => esc_html__( 'Session 3', 'zume' ), "length" => "", "key" => "", "session" => 3, "title" => 1, "column" => 2 ], // title
+                                            [ "name" => esc_html__( 'Spiritual Economy', 'zume' ), "length" => "(2:32)", "key" => "9", "session" => 3, "title" => 0, "column" => 2 ],
+                                            [ "name" => esc_html__( 'The Gospel', 'zume' ), "length" => "(4:41)", "key" => "10", "session" => 3, "title" => 0, "column" => 2 ],
+                                            [ "name" => esc_html__( 'Baptism', 'zume' ), "length" => "(3:22)", "key" => "11", "session" => 3, "title" => 0, "column" => 2 ],
+                                            [ "name" => esc_html__( 'Session 4', 'zume' ), "length" => "", "key" => "", "session" => 4, "title" => 1, "column" => 2 ], // title
+                                            [ "name" => esc_html__( '3 Minute Testimony', 'zume' ), "length" => "(2:26)", "key" => "12", "session" => 4, "title" => 0, "column" => 2 ],
+                                            [ "name" => esc_html__( 'Greatest Blessing', 'zume' ), "length" => "(2:26)", "key" => "13", "session" => 4, "title" => 0, "column" => 2 ],
+                                            [ "name" => esc_html__( 'Duckling Discipleship', 'zume' ), "length" => "(3:29)", "key" => "14", "session" => 4, "title" => 0, "column" => 2 ],
+                                            [ "name" => esc_html__( 'Eyes to See', 'zume' ), "length" => "(6:08)", "key" => "15", "session" => 4, "title" => 0, "column" => 2 ],
+                                            [ "name" => esc_html__( 'Lord\'s Supper', 'zume' ), "length" => "(1:54)", "key" => "16", "session" => 4, "title" => 0, "column" => 2 ],
+                                            [ "name" => esc_html__( 'Session 5', 'zume' ), "length" => "", "key" => "", "session" => 5, "title" => 1, "column" => 2 ], // title
+                                            [ "name" => esc_html__( 'Prayer Walking', 'zume' ), "length" => "(5:05)", "key" => "17", "session" => 5, "title" => 0, "column" => 2 ],
+                                            [ "name" => esc_html__( 'Person of Peace', 'zume' ), "length" => "(5:45)", "key" => "18", "session" => 5, "title" => 0, "column" => 2 ],
+                                            [ "name" => esc_html__( 'Session 6', 'zume' ), "length" => "", "key" => "", "session" => 6, "title" => 1, "column" => 3 ], // title
+                                            [ "name" => esc_html__( 'Faithfulness', 'zume' ), "length" => "(2:35)", "key" => "19", "session" => 6, "title" => 0, "column" => 3 ],
+                                            [ "name" => esc_html__( '3/3 Group', 'zume' ), "length" => "(3:28)", "key" => "20", "session" => 6, "title" => 0, "column" => 3 ],
+                                            [ "name" => esc_html__( '3/3 Group Live', 'zume' ), "length" => "(1:19:00)", "key" => "21", "session" => 6, "title" => 0, "column" => 3 ],
+                                            [ "name" => esc_html__( 'Session 7', 'zume' ), "length" => "", "key" => "", "session" => 7, "title" => 1, "column" => 3 ], // title
+                                            [ "name" => esc_html__( 'Training Cycle', 'zume' ), "length" => "(4:12)", "key" => "22", "session" => 7, "title" => 0, "column" => 3 ],
+                                            [ "name" => esc_html__( 'Session 8', 'zume' ), "length" => "", "key" => "", "session" => 8, "title" => 1, "column" => 3 ], // title
+                                            [ "name" => esc_html__( 'Leadership Cells', 'zume' ), "length" => "(2:22)", "key" => "23", "session" => 8, "title" => 0, "column" => 3 ],
+                                            [ "name" => esc_html__( 'Session 9', 'zume' ), "length" => "", "key" => "", "session" => 9, "title" => 1, "column" => 3 ], // title
+                                            [ "name" => esc_html__( 'Non-Sequential', 'zume' ), "length" => "(3:58)", "key" => "24", "session" => 9, "title" => 0, "column" => 3 ],
+                                            [ "name" => esc_html__( 'Pace', 'zume' ), "length" => "(2:53)", "key" => "25", "session" => 9, "title" => 0, "column" => 3 ],
+                                            [ "name" => esc_html__( 'Part of Two Churches', 'zume' ), "length" => "(3:55)", "key" => "26", "session" => 9, "title" => 0, "column" => 3 ],
+                                            [ "name" => esc_html__( 'Completion of Training', 'zume' ), "length" => "(2:35)", "key" => "27", "session" => 9, "title" => 0, "column" => 3 ],
+                                            [ "name" => esc_html__( 'Session 10', 'zume' ), "length" => "", "key" => "", "session" => 10, "title" => 1, "column" => 3 ], // title
+                                            [ "name" => esc_html__( 'Coaching Checklist', 'zume' ), "length" => "(1:22)", "key" => "28", "session" => 10, "title" => 0, "column" => 3 ],
+                                            [ "name" => esc_html__( 'Leadership in Networks', 'zume' ), "length" => "(4:26)", "key" => "29", "session" => 10, "title" => 0, "column" => 3 ],
+                                            [ "name" => esc_html__( 'Peer Mentoring', 'zume' ), "length" => "(4:15)", "key" => "30", "session" => 10, "title" => 0, "column" => 3 ],
 
-                                            ];
-                                            $zume_display_video_section = function ( $zume_video, $zume_highest_session ){
-                                                if ( $zume_highest_session > $zume_video["session"] && ! $zume_video["title"] ){
+                                        ];
+                                        $zume_display_video_section = function ( $zume_video, $zume_highest_session ) {
+                                            if ( $zume_highest_session > $zume_video["session"] && ! $zume_video["title"] ) {
                                                 ?>
                                                 <div class="grid-x grid-margin-x">
-                                                <div class="cell">
-                                                    <a class="small" style="text-transform: uppercase;"
-                                                       data-open="video-display"
-                                                       onclick="load_iframe( 'video-display', '<?php echo esc_url( Zume_Course::get_video_by_key( $zume_video["key"] ) ) ?>')">
-                                                        <i class="fi-play-circle secondary-color"></i>
-                                                        <?php echo esc_html( $zume_video["name"] )?> <?php echo esc_html( $zume_video["length"] )?>
-                                                    </a>
+                                                    <div class="cell">
+                                                        <a class="small" style="text-transform: uppercase;"
+                                                           data-open="video-display"
+                                                           onclick="load_iframe( 'video-display', '<?php echo esc_url( Zume_Course::get_video_by_key( $zume_video["key"] ) ) ?>')">
+                                                            <i class="fi-play-circle secondary-color"></i>
+                                                            <?php echo esc_html( $zume_video["name"] ) ?> <?php echo esc_html( $zume_video["length"] ) ?>
+                                                        </a>
+                                                    </div>
                                                 </div>
-                                            </div>
 
-                                        <?php } elseif ( $zume_highest_session > $zume_video["session"] && $zume_video["title"] ) { // adds titles
-                                            ?>
-                                            <div class="grid-x grid-margin-x">
-                                                <div class="cell">
-                                                    <?php echo esc_attr( $zume_video["name"] ) ?>
+                                            <?php } elseif ( $zume_highest_session > $zume_video["session"] && $zume_video["title"] ) { // adds titles
+                                                ?>
+                                                <div class="grid-x grid-margin-x">
+                                                    <div class="cell">
+                                                        <?php echo esc_attr( $zume_video["name"] ) ?>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                                    <?php
+                                                <?php
 }
 
-                                            }; // end function ?>
+                                        }; // end function ?>
                                         <div class="medium-4 cell">
                                             <?php
-                                            foreach ($zume_videos as $video) {
+                                            foreach ( $zume_videos as $video ) {
                                                 if ( $video["column"] == 1 ) {
                                                     $zume_display_video_section( $video, $zume_highest_session );
                                                 }
@@ -313,16 +328,16 @@ $zume_highest_session = Zume_Dashboard::get_highest_session( $zume_current_user 
                                         </div>
                                         <div class="medium-4 cell">
                                             <?php
-                                            foreach ($zume_videos as $video) {
+                                            foreach ( $zume_videos as $video ) {
                                                 if ( $video["column"] == 2 ) {
                                                     $zume_display_video_section( $video, $zume_highest_session );
                                                 }
                                             }
                                             ?>
-                                         </div>
+                                        </div>
                                         <div class="medium-4 cell">
                                             <?php
-                                            foreach ($zume_videos as $video) {
+                                            foreach ( $zume_videos as $video ) {
                                                 if ( $video["column"] == 3 ) {
                                                     $zume_display_video_section( $video, $zume_highest_session );
                                                 }
@@ -394,6 +409,7 @@ $zume_highest_session = Zume_Dashboard::get_highest_session( $zume_current_user 
                                 </div>
 
                                 <form action="" method="post">
+                                    <?php wp_nonce_field( get_current_user_id(), 'zume_nonce' ) ?>
                                     <input type="hidden" name="type" value="activate"/>
                                     <?php
                                     // @codingStandardsIgnoreLine
@@ -477,34 +493,42 @@ $zume_highest_session = Zume_Dashboard::get_highest_session( $zume_current_user 
                         $zume_waiting_acceptance = Zume_Dashboard::get_colead_groups( 'waiting_acceptance' );
 
                         if ( count( $zume_waiting_acceptance ) > 0 ) :
-                        ?>
-                        <form method="post">
-                            <?php wp_nonce_field( get_current_user_id(), 'zume_nonce' ) ?>
-                            <input type="hidden" name="type" value="coleader"/>
+                            ?>
+                            <form method="post">
+                                <?php wp_nonce_field( get_current_user_id(), 'zume_nonce' ) ?>
+                                <input type="hidden" name="type" value="coleader"/>
 
-                        <div class="callout">
-                            <div class="grid-x grid-padding-y">
-                                <div class="cell center">
-                                    <strong>
-                                        <?php esc_attr_e( 'Invitations', 'zume' ) ?>
-                                    </strong>
-                                </div>
-                                <?php
-                                foreach ( $zume_waiting_acceptance as $zume_accept_key => $zume_accept_value ) {
-                                    ?>
-                                    <div class="cell border-top">
-                                        <p><strong><?php $zume_group_owner = get_user_by( 'id', $zume_accept_value['owner'] ); echo esc_attr( $zume_group_owner->display_name ) ?></strong> <?php esc_attr_e( 'invites you to join', 'zume' ) ?> <strong><?php echo esc_attr( $zume_accept_value['group_name'] ) ?></strong></p>
+                                <div class="callout">
+                                    <div class="grid-x grid-padding-y">
+                                        <div class="cell center">
+                                            <strong>
+                                                <?php esc_attr_e( 'Invitations', 'zume' ) ?>
+                                            </strong>
+                                        </div>
+                                        <?php
+                                        foreach ( $zume_waiting_acceptance as $zume_accept_key => $zume_accept_value ) {
+                                            ?>
+                                            <div class="cell border-top">
+                                                <p>
+                                                    <strong><?php $zume_group_owner = get_user_by( 'id', $zume_accept_value['owner'] );
+                                                        echo esc_attr( $zume_group_owner->display_name ) ?></strong> <?php esc_attr_e( 'invites you to join', 'zume' ) ?>
+                                                    <strong><?php echo esc_attr( $zume_accept_value['group_name'] ) ?></strong>
+                                                </p>
 
-                                        <p class="center"><button class="button hollow" type="submit" name="accept" value="<?php echo esc_attr( $zume_accept_key ) ?>"><?php esc_attr_e( 'Accept', 'zume' ) ?></button>
-                                        <button class="button hollow" type="submit" name="decline" value="<?php echo esc_attr( $zume_accept_key ) ?>"><?php esc_attr_e( 'Decline', 'zume' ) ?></button></p>
+                                                <p class="center">
+                                                    <button class="button hollow" type="submit" name="accept"
+                                                            value="<?php echo esc_attr( $zume_accept_key ) ?>"><?php esc_attr_e( 'Accept', 'zume' ) ?></button>
+                                                    <button class="button hollow" type="submit" name="decline"
+                                                            value="<?php echo esc_attr( $zume_accept_key ) ?>"><?php esc_attr_e( 'Decline', 'zume' ) ?></button>
+                                                </p>
+                                            </div>
+                                            <?php
+                                        }
+                                        ?>
+
                                     </div>
-                                <?php
-                                }
-                                ?>
-
-                            </div>
-                        </div>
-                        </form>
+                                </div>
+                            </form>
                         <?php
                         endif; // end waiting acceptance if
                         /* END COLEADER REQUESTS */
@@ -611,7 +635,8 @@ $zume_highest_session = Zume_Dashboard::get_highest_session( $zume_current_user 
                         <div class="input-group-button">
                             <input type="button" class="button"
                                    onclick="validate_group_address( jQuery('#validate_addressnew').val(), 'new')"
-                                   value="<?php echo esc_html__( 'Validate', 'zume' ) ?>" id="validate_address_buttonnew">
+                                   value="<?php echo esc_html__( 'Validate', 'zume' ) ?>"
+                                   id="validate_address_buttonnew">
                         </div>
                     </div>
 
@@ -743,7 +768,7 @@ foreach ( $zume_user_meta as $zume_key => $v ) {
                         <?php
                         // Print current coleaders
                         if ( isset( $zume_value['coleaders'] ) && ! empty( $zume_value['coleaders'] ) && is_array( $zume_value['coleaders'] ) ) :
-                            echo '<ul id="coleaders-ul-'. esc_html( $zume_key ).'" data-key="'. esc_html( $zume_key ).'">';
+                            echo '<ul id="coleaders-ul-' . esc_html( $zume_key ) . '" data-key="' . esc_html( $zume_key ) . '">';
                             $zume_i = 0;
                             foreach ( $zume_value['coleaders'] as $zume_coleader ) {
                                 $zume_li_id = $zume_key . $zume_i; // create incrementing id of for each list item.
@@ -756,7 +781,9 @@ foreach ( $zume_user_meta as $zume_key => $v ) {
 
                         <span id="new_coleaders_<?php echo esc_html( $zume_key ); ?>"></span>
 
-                        <button type="button" class="button clear" onclick="add_new_coleader('new_coleaders_<?php echo esc_html( $zume_key ); ?>')"><i class="fi-plus"></i> <?php esc_attr_e( 'Add', 'zume' ) ?></button>
+                        <button type="button" class="button clear"
+                                onclick="add_new_coleader('new_coleaders_<?php echo esc_html( $zume_key ); ?>')"><i
+                                    class="fi-plus"></i> <?php esc_attr_e( 'Add', 'zume' ) ?></button>
 
                     </div>
 
@@ -778,7 +805,6 @@ foreach ( $zume_user_meta as $zume_key => $v ) {
                             check_address('<?php echo esc_html( $zume_key ); ?>')
                         });
                     </script>
-
 
 
                 </div>

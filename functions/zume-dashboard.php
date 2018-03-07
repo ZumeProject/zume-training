@@ -269,11 +269,14 @@ class Zume_Dashboard {
         update_user_meta( $user_id, $group_key, $user_meta );
     }
 
-    public static function activate_group( $user_id, $group_id ) {
-        $group_meta = get_user_meta( $user_id, $group_id, true );
-        $group_previous = $group_meta;
+    public static function activate_group( $group_id ) {
+        $group_meta = get_user_meta( get_current_user_id(), $group_id, true );
+        $group_meta = self::verify_group_array_filter( $group_meta );
+
         $group_meta['closed'] = false;
-        update_user_meta( $user_id, $group_id, $group_meta, $group_previous );
+
+        update_user_meta( get_current_user_id(), $group_id, $group_meta );
+        zume_write_log( 'end of update' );
     }
 
     public static function get_highest_session( $user_id ) {
