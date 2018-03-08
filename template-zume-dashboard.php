@@ -223,8 +223,8 @@ $zume_highest_session = Zume_Dashboard::get_highest_session( $zume_current_user 
                                             <h4>
                                                 <strong><?php echo esc_html__( 'You have no active groups', 'zume' ) ?></strong>
                                             </h4>
-                                            <p>
-                                                <?php echo esc_html__( "We recommend at least 4 people for a group and no more than 12 people. Please start a group with the button provided.", 'zume' ) ?></p>
+                                            <p><?php esc_html_e( "We recommend at least 3-11 people for a group.", 'zume' ) ?></p>
+                                            <p><?php esc_html_e( "You can join a current group when the group owner adds your email to the approved coleader/participant list. To start your own group, use the button below.", 'zume' ) ?></p>
                                         </div>
                                     </div>
                                 <?php endif; ?>
