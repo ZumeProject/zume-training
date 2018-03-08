@@ -17,7 +17,7 @@ Template Name: Zúme FAQ
 
                 <div class="grid-x grid-margin-y grid-padding-y">
                     <div class="cell center">
-                        <h2><?php esc_html_e( 'Zume FAQs', 'zume' ) ?></h2>
+                        <h2><?php esc_html_e( 'Zúme FAQs', 'zume' ) ?></h2>
                     </div>
                 </div>
 
