@@ -5,7 +5,7 @@ Template Name: Three-Month Plan
 zume_force_login();
 
 /* Process $_POST content */
-if( isset( $_POST[ 'thee_month_plan_nonce' ] ) ) {
+if ( isset( $_POST['thee_month_plan_nonce'] ) ) {
     // validate nonce
     if ( isset( $_POST['thee_month_plan_nonce'] ) && ! wp_verify_nonce( sanitize_key( $_POST['thee_month_plan_nonce'] ), "thee_month_plan_" . get_current_user_id() ) ) {
         return new WP_Error( 'fail_nonce_verification', 'The form requires a valid nonce, in order to process.' );
@@ -73,20 +73,20 @@ class Zume_Three_Month_Plan
 
     public static function plan_items() {
         $plan_items = [
-            'people_to_share_with' => __( 'I will share My Story [Testimony] and God’s Story [the Gospel] with the following individuals:' , 'zume' ),
+            'people_to_share_with' => __( 'I will share My Story [Testimony] and God’s Story [the Gospel] with the following individuals:', 'zume' ),
             'people_for_accountablity' => __( 'I will invite the following people to begin an Accountability Group with me:', 'zume' ),
-            'people_to_challenge' => __('I will challenge the following people to begin their own Accountability Groups and train them how to do it:', 'zume' ),
-            'people_to_3_3_invite' => __('I will invite the following people to begin a 3/3 Group with me:', 'zume' ),
-            'people_to_3_3_challenge' => __('I will challenge the following people to begin their own 3/3 Groups and train them how to do it:', 'zume' ),
-            'people_to_discover_invite' => __('I will invite the following people to participate in a 3/3 Hope or Discover Group [see Appendix]:', 'zume' ),
-            'people_to_prayer_walk_with' => __('I will invite the following people to participate in Prayer Walking with me:', 'zume' ),
-            'people_to_equip_list_100' => __('I will equip the following people to share their story and God’s Story and make a List of 100 of the people in their relational network:', 'zume' ),
-            'people_to_challenge_prayer' => __('I will challenge the following people to use the Prayer Cycle tool on a periodic basis:', 'zume' ),
-            'my_prayer_commitment' => __('I will use the Prayer Cycle tool once every [days / weeks / months].', 'zume' ),
-            'my_prayer_walk_commitment' => __('I will Prayer Walk once every [days / weeks / months].', 'zume' ),
-            'people_for_leadership_cell' => __('I will invite the following people to be part of a Leadership Cell that I will lead:', 'zume' ),
-            'people_for_zume' => __('I will encourage the following people to go through this Zúme Training course:', 'zume' ),
-            'other_commitments' => __('Other commitments:', 'zume' ),
+            'people_to_challenge' => __( 'I will challenge the following people to begin their own Accountability Groups and train them how to do it:', 'zume' ),
+            'people_to_3_3_invite' => __( 'I will invite the following people to begin a 3/3 Group with me:', 'zume' ),
+            'people_to_3_3_challenge' => __( 'I will challenge the following people to begin their own 3/3 Groups and train them how to do it:', 'zume' ),
+            'people_to_discover_invite' => __( 'I will invite the following people to participate in a 3/3 Hope or Discover Group [see Appendix]:', 'zume' ),
+            'people_to_prayer_walk_with' => __( 'I will invite the following people to participate in Prayer Walking with me:', 'zume' ),
+            'people_to_equip_list_100' => __( 'I will equip the following people to share their story and God’s Story and make a List of 100 of the people in their relational network:', 'zume' ),
+            'people_to_challenge_prayer' => __( 'I will challenge the following people to use the Prayer Cycle tool on a periodic basis:', 'zume' ),
+            'my_prayer_commitment' => __( 'I will use the Prayer Cycle tool once every [days / weeks / months].', 'zume' ),
+            'my_prayer_walk_commitment' => __( 'I will Prayer Walk once every [days / weeks / months].', 'zume' ),
+            'people_for_leadership_cell' => __( 'I will invite the following people to be part of a Leadership Cell that I will lead:', 'zume' ),
+            'people_for_zume' => __( 'I will encourage the following people to go through this Zúme Training course:', 'zume' ),
+            'other_commitments' => __( 'Other commitments:', 'zume' ),
         ];
 
             return $plan_items;
