@@ -91,7 +91,7 @@ function zume_update_user_contact_info()
     $user_id = get_current_user_id();
 
     // validate nonce
-    if ( isset( $_POST['user_update_nonce'] ) && !wp_verify_nonce( sanitize_key( $_POST['user_update_nonce'] ), 'user_' . $user_id. '_update' ) ) {
+    if ( isset( $_POST['user_update_nonce'] ) && ! wp_verify_nonce( sanitize_key( $_POST['user_update_nonce'] ), 'user_' . $user_id. '_update' ) ) {
         return new WP_Error( 'fail_nonce_verification', 'The form requires a valid nonce, in order to process.' );
     }
 
@@ -165,6 +165,12 @@ function zume_dashboard_url() {
 function zume_course_url() {
     $current_lang = zume_current_language();
     $url = zume_get_posts_translation_url( 'course', $current_lang );
+    return $url;
+}
+
+function zume_three_month_plan_url() {
+    $current_lang = zume_current_language();
+    $url = zume_get_posts_translation_url( 'three-month plan', $current_lang );
     return $url;
 }
 

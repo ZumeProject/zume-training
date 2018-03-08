@@ -92,13 +92,15 @@ $zume_navigation_menu = [
     __( 'About', 'zume' ),
     __( 'Guidebook', 'zume' ),
     __( 'Resources', 'zume' ),
-    __( 'FAQ', 'zume' ),
+    __( 'FAQs', 'zume' ),
     __( 'Overview', 'zume' ),
     __( 'Settings', 'zume' ),
     __( 'Profile', 'zume' ),
-    __( 'Coach', 'zume' ),
     __( 'Admin', 'zume' ),
     __( 'Logout', 'zume' ),
     __( 'Login', 'zume' ),
-    __( 'Register', 'zume' )
+    __( 'Register', 'zume' ),
+    __( 'Three Month Plan', 'zume' ),
+    __( 'Progress', 'zume' ),
+    __( 'Stats', 'zume' ),
 ];

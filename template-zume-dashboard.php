@@ -242,7 +242,7 @@ $zume_highest_session = Zume_Dashboard::get_highest_session( $zume_current_user 
                             <div class="grid-x grid-margin-x grid-margin-y">
                                 <div class="cell">
                                     <h3 class="center padding-bottom"><?php esc_html_e( 'Video Library', 'zume' ) ?></h3>
-                                    <span class="x-small center float-right"><?php Zume_Dashboard::get_available_videos_count( $zume_highest_session ); ?><?php esc_html_e( 'of 31 videos', 'zume' ) ?></span>
+                                    <span class="x-small center float-right"><?php Zume_Dashboard::get_available_videos_count( $zume_highest_session ); ?> <?php esc_html_e( 'of 31 videos', 'zume' ) ?></span>
                                     <hr>
                                     <div class="grid-x grid-margin-x"> <!-- Begin columns container -->
                                         <?php
@@ -560,6 +560,24 @@ $zume_highest_session = Zume_Dashboard::get_highest_session( $zume_current_user 
                             </div>
                         </div>
                         <!-- END INSTRUCTIONS -->
+
+                        <?php
+                        /***********************************************************************************************
+                         * THREE MONTH PLAN
+                         **********************************************************************************************/
+                        $zume_three_month_plan = zume_three_month_plan_url();
+                        if ( ! empty( $zume_three_month_plan ) ) :
+                        ?>
+                        <div class="grid-x grid-margin-x">
+                            <div class="cell center">
+                                <a class="button expanded"
+                                   href="<?php echo esc_url( $zume_three_month_plan ) ?>" >
+                                    <?php esc_html_e( 'Three Month Plan', 'zume' ) ?>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- THREE MONTH PLAN -->
+                        <?php endif; ?>
 
 
                     </div> <!-- End Right Column -->
