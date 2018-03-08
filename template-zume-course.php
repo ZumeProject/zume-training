@@ -197,7 +197,7 @@ class Zume_Course_Content {
             }
             ?>
         </div>
-        <div class="center padding-bottom show-for-small-only"><br><br><br><?php esc_html_e( 'Session', 'zume' ) ?> <?php echo esc_attr( $session_id ); ?></div>
+        <div style="padding-bottom: 3em;"></div>
         <?php
     }
 
