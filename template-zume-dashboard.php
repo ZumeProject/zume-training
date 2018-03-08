@@ -540,7 +540,7 @@ $zume_highest_session = Zume_Dashboard::get_highest_session( $zume_current_user 
                         <div class="grid-x grid-margin-x">
                             <div class="cell center">
                                 <a class="button expanded"
-                                   href="mailto:?subject=<?php esc_attr_e( 'Join me on the Zúme Project' ) ?>&body=<?php esc_attr_e( 'Join me on the Zúme Project' ) ?>: <?php echo esc_url( site_url( '/wp-login.php?action=register' ) ) ?>">
+                                   href="mailto:?subject=<?php esc_attr_e( 'Join me on the Zúme Project' ) ?>&body=<?php esc_attr_e( 'Join me on the Zúme Project' ) ?>: <?php echo esc_url( site_url( '/' ) ) ?>">
                                     <?php esc_html_e( 'Invite to Zume', 'zume' ) ?>
                                 </a>
                             </div>
