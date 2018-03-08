@@ -49,7 +49,7 @@ Template Name: Zume FAQ
                     <div class="cell">
                         <hr>
                         <h3 class="secondary"><?php esc_html_e( 'What if someone wants to be trained and doesn’t have an e-mail address?', 'zume' ) ?></h3>
-                        <?php esc_html_e( 'At least one person in the group will have to have an e-mail account they actually use because system communications happen through e-mail. That person needs to be designated as the leader of the group. Other participants can use addresses that are not regularly checked. If someone does not have an address then the person who does have one can help them set up a free one through Gmail or other similar provider.', 'zume' ) ?>
+                        <?php esc_html_e( 'At least one person in the group will have to have an e-mail account they actually use so that they can login and access all of the features of the website. Participants who view the media when present with the group no longer need an email address for the group to begin.', 'zume' ) ?>
                     </div>
 
                     <!-- Item -->
@@ -90,15 +90,15 @@ Template Name: Zume FAQ
                     <!-- Item -->
                     <div class="cell">
                         <hr>
-                        <h3 class="secondary"><?php esc_html_e( 'There are lots of DMM or CPM trainers, so why is Zúme needed?', 'zume' ) ?></h3>
-                        <?php esc_html_e( 'Live training is better than online training. Online training should never replace live training events. Unfortunately, due to limitations of access, awareness, availability, scheduling, and many other reasons, many people who can and should have access to live training events don’t have access. Zúme is an attempt to provide a high-quality entry level substitute for such people. It uses the same principles as many of the live training types available from others. In addition, we find that once a person is trained with Zúme, they can very easily turn around and launch their own group and facilitate training for others using Zúme. This is a powerful opportunity for multiplying disciple-making principles.', 'zume' ) ?>
+                        <h3 class="secondary"><?php esc_html_e( 'There are lots of DMM or CPM trainers, so why is Zúme needed?', 'zume' ) ?></h3>
+                        <?php esc_html_e( 'Live training is better than online training. Online training should never replace live training events. Unfortunately, due to limitations of access, awareness, availability, scheduling, and many other reasons, many people who can and should have access to live training events don’t have access. Zúme is an attempt to provide a high-quality entry level substitute for such people. It uses the same principles as many of the live training types available from others. In addition, we find that once a person is trained with Zúme, they can very easily turn around and launch their own group and facilitate training for others using Zúme. This is a powerful opportunity for multiplying disciple-making principles.', 'zume' ) ?>
                     </div>
 
                     <!-- Item -->
                     <div class="cell">
                         <hr>
-                        <h3 class="secondary"><?php esc_html_e( 'What is the statement of faith for Zúme?', 'zume' ) ?></h3>
-                        <?php esc_html_e( 'Since Zúme is not run by an organization, there is not a formal statement of faith. All of us involved, however, would agree on the Lausanne Covenant.', 'zume' ) ?> <a href="https://www.lausanne.org/content/covenant/lausanne-covenant" target="_blank">Read the Covenant</a>
+                        <h3 class="secondary"><?php esc_html_e( 'What is the statement of faith for Zúme?', 'zume' ) ?></h3>
+                        <?php esc_html_e( 'Since Zúme is not run by an organization, there is not a formal statement of faith. All of us involved, however, would agree on the Lausanne Covenant.', 'zume' ) ?> <a href="https://www.lausanne.org/content/covenant/lausanne-covenant" target="_blank">Read the Covenant</a>
                     </div>
 
                     <!-- Item -->
@@ -125,8 +125,8 @@ Template Name: Zume FAQ
                     <!-- Item -->
                     <div class="cell">
                         <hr>
-                        <h3 class="secondary"><?php esc_html_e( 'Who owns Zúme?', 'zume' ) ?></h3>
-                        <?php esc_html_e( 'There is no organization that is “running” the Zúme Project and the project is not an organization. It is a coalition of people who have a heart to carry out Christ’s command to make disciples of every people group on earth and expand His Kingdom to every place until His will is done on earth as it is in heaven. The idea for the project originated in a meeting of the Jonathan Project leadership but has since spread far beyond that group. The Jonathan Project is a consortium of people committed to multiplying disciples around the world.', 'zume' ) ?>
+                        <h3 class="secondary"><?php esc_html_e( 'Who owns Zúme?', 'zume' ) ?></h3>
+                        <?php esc_html_e( 'There is no organization that is “running” the Zúme Project and the project is not an organization. It is a coalition of people who have a heart to carry out Christ’s command to make disciples of every people group on earth and expand His Kingdom to every place until His will is done on earth as it is in heaven. The idea for the project originated in a meeting of the Jonathan Project leadership but has since spread far beyond that group. The Jonathan Project is a consortium of people committed to multiplying disciples around the world.', 'zume' ) ?>
                     </div>
 
                     <!-- Item -->
@@ -151,8 +151,8 @@ Template Name: Zume FAQ
                     <!-- Item -->
                     <div class="cell">
                         <hr>
-                        <h3 class="secondary"><?php esc_html_e( 'Why is it called Zúme?', 'zume' ) ?></h3>
-                        <?php esc_html_e( 'Zúme means yeast in Greek. In Matthew 13:33 Jesus is quoted as saying, “The Kingdom of Heaven is like a woman who took yeast and mixed it into a large amount of flour until it was all leavened.” This illustrates how ordinary people, using ordinary resources, can have an extraordinary impact for the Kingdom of God. Zúme aims to equip and empower ordinary believers to reach every neighborhood.', 'zume' ) ?>
+                        <h3 class="secondary"><?php esc_html_e( 'Why is it called Zúme?', 'zume' ) ?></h3>
+                        <?php esc_html_e( 'Zúme means yeast in Greek. In Matthew 13:33 Jesus is quoted as saying, “The Kingdom of Heaven is like a woman who took yeast and mixed it into a large amount of flour until it was all leavened.” This illustrates how ordinary people, using ordinary resources, can have an extraordinary impact for the Kingdom of God. Zúme aims to equip and empower ordinary believers to reach every neighborhood.', 'zume' ) ?>
                     </div>
                     <!-- Item -->
                     <div class="cell">
@@ -164,7 +164,7 @@ Template Name: Zume FAQ
                     <div class="cell">
                         <hr>
                         <h3 class="secondary"><?php esc_html_e( 'How are the groups started by trainees aligned or organized?', 'zume' ) ?></h3>
-                        <?php esc_html_e( 'It depends. If the trainees come out of a particular church or denomination or network then the most natural thing is for the newly formed groups to be connected with those existing churches, denomination, or network. If desired, however, a new network can be formed from the groups that start. A third alternative would be for the new groups to join with other already existing networks of simple churches. Many of the people involved in developing Zúme come from such networks so we can help arrange that if desired.', 'zume' ) ?>
+                        <?php esc_html_e( 'It depends. If the trainees come out of a particular church or denomination or network then the most natural thing is for the newly formed groups to be connected with those existing churches, denomination, or network. If desired, however, a new network can be formed from the groups that start. A third alternative would be for the new groups to join with other already existing networks of simple churches. Many of the people involved in developing Zúme come from such networks so we can help arrange that if desired.', 'zume' ) ?>
                     </div>
                 </div> <!-- end faq stack of questions-->
 
