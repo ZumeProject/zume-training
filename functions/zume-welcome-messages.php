@@ -97,7 +97,7 @@ class Zume_Welcome_Messages {
                 'type' => 'new',
                 'name' => 'new_registration',
                 'title' => __( 'Welcome!', 'zume' ),
-                'message' => __( 'Praise God for your interest in sharpening your disciple-making!', 'zume' )
+                'message' => __( ' I want to make disciples who multiply!', 'zume' )
             ],
         ];
 
