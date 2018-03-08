@@ -168,6 +168,12 @@ function zume_course_url() {
     return $url;
 }
 
+function zume_nine_month_plan_url() {
+    $current_lang = zume_current_language();
+    $url = zume_get_posts_translation_url( 'three-month-plan', $current_lang );
+    return $url;
+}
+
 function zume_overview_url() {
     $current_lang = zume_current_language();
     $url = zume_get_posts_translation_url( 'overview', $current_lang );
