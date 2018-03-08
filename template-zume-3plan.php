@@ -12,6 +12,7 @@ if( isset( $_POST[ 'user_update_nonce' ] ) ) {
 /* Build variables for page */
 $zume_user = wp_get_current_user(); // Returns WP_User object
 $zume_user_meta = get_user_meta( get_current_user_id() ); // Full array of user meta data
+
 ?>
 
 <?php get_header(); ?>
@@ -19,10 +20,8 @@ $zume_user_meta = get_user_meta( get_current_user_id() ); // Full array of user 
 <div id="content" class="grid-x grid-padding-x"><div class="cell">
         <div id="inner-content" class="grid-x grid-margin-x grid-padding-x">
             <div class="large-8 medium-8 small-12 grid-margin-x cell" style="max-width: 900px; margin: 0 auto">
-                <h3 class="section-header"><?php echo esc_html__( 'Your Profile', 'zume' )?> </h3>
+                <h3 class="section-header"><?php echo esc_html__( 'Three Month Plan', 'zume' )?> </h3>
                 <hr size="1" style="max-width:100%"/>
-                <p><?php echo get_avatar( get_current_user_id(), '150' ); ?></p>
-                <p><a href="http://gravatar.com" class="small"><?php esc_html_e( 'edit image @ gravatar.com', 'zume' ) ?></a></p>
                 <form data-abide method="post">
 
                     <?php wp_nonce_field( "user_" . $zume_user->ID . "_update", "user_update_nonce", false, true ); ?>
@@ -51,88 +50,6 @@ $zume_user_meta = get_user_meta( get_current_user_id() ); // Full array of user 
                                        data-abide-ignore />
                             </td>
                         </tr>
-                        <tr>
-                            <td style="vertical-align: top;">
-                                <label for="last_name"><?php echo esc_html__( 'Last Name', 'zume' )?></label>
-                            </td>
-                            <td>
-                                <input type="text"
-                                       placeholder="<?php echo esc_html__( 'Last Name', 'zume' )?>"
-                                       aria-describedby="<?php echo esc_html__( 'Last Name', 'zume' )?>"
-                                       class="profile-input"
-                                       id="last_name"
-                                       name="last_name"
-                                       value="<?php echo esc_html( $zume_user->last_name ); ?>"
-                                       data-abide-ignore />
-                            </td>
-                        </tr>
-                        <tr>
-                            <td style="vertical-align: top;">
-                                <label for="user_email"><?php echo esc_html__( 'Email', 'zume' )?></label>
-                            </td>
-                            <td>
-                                <input type="text"
-                                       class="profile-input"
-                                       placeholder="name@email.com"
-                                       id="user_email"
-                                       name="user_email"
-                                       value="<?php echo esc_html( $zume_user->user_email ); ?>"
-                                       data-abide-ignore
-                                />
-                                <span class="form-error">
-                                  Yo, you had better fill this out, it's required.
-                                </span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td style="vertical-align: top;">
-                                <label for="zume_phone_number"><?php echo esc_html__( 'Phone Number', 'zume' )?></label>
-                            </td>
-                            <td>
-                                <input type="tel"
-                                       placeholder="111-111-1111"
-                                       class="profile-input"
-                                       id="zume_phone_number"
-                                       name="zume_phone_number"
-                                       value="<?php echo isset( $zume_user_meta['zume_phone_number'][0] ) ? esc_html( $zume_user_meta['zume_phone_number'][0] ) : ''; ?>"
-                                       data-abide-ignore
-                                />
-                            </td>
-                        </tr>
-                        <tr>
-                            <td style="vertical-align: top;">
-                                <label for="validate_address">
-                                    <?php echo esc_html__( 'Address', 'zume' )?>
-                                </label>
-                            </td>
-                            <td>
-                                <div class="input-group">
-                                    <input type="text"
-                                           placeholder="example: 1000 Broadway, Denver, CO 80126"
-                                           class="profile-input input-group-field"
-                                           id="validate_addressprofile"
-                                           name="validate_address"
-                                           value="<?php echo isset( $zume_user_meta['zume_user_address'][0] ) ? esc_html( $zume_user_meta['zume_user_address'][0] ) : ''; ?>"
-                                    />
-                                    <div class="input-group-button">
-                                        <input type="button" class="button" id="validate_address_buttonprofile" value="<?php echo esc_html__( 'Validate', 'zume' ) ?>" onclick="validate_user_address( jQuery('#validate_addressprofile').val() )">
-                                    </div>
-                                </div>
-
-                                <div id="possible-results">
-                                    <input type="hidden" name="address" id="address_profile" value="<?php echo isset( $zume_user_meta['zume_user_address'][0] ) ? esc_html( $zume_user_meta['zume_user_address'][0] ) : ''; ?>" />
-                                </div>
-
-                                <?php if ( ! empty( $zume_user_meta['zume_user_address'][0] ) && ! empty( $zume_user_meta['zume_user_lng'][0] ) && ! empty( $zume_user_meta['zume_user_lat'][0] ) ) : ?>
-                                    <div id="map" >
-                                        <img src="https://maps.googleapis.com/maps/api/staticmap?center=<?php echo esc_attr( $zume_user_meta['zume_user_lat'][0] ) . ',' . esc_attr( $zume_user_meta['zume_user_lng'][0] ) ?>&zoom=5&size=600x250&markers=color:red|<?php echo esc_attr( $zume_user_meta['zume_user_lat'][0] ) . ',' . esc_attr( $zume_user_meta['zume_user_lng'][0] ) ?>&key=<?php echo esc_attr( Zume_Google_Geolocation::$key ); ?>" />
-                                    </div>
-                                <?php endif; ?>
-
-
-
-                            </td>
-                        </tr>
                     </table>
 
                     <div data-abide-error  class="alert alert-box" style="display:none;" id="alert">
@@ -154,3 +71,130 @@ $zume_user_meta = get_user_meta( get_current_user_id() ); // Full array of user 
 </div><!-- end #content -->
 
 <?php get_footer(); ?>
+
+<?php
+
+/**
+ * Class Zume_Three_Month_Plan
+ */
+class Zume_Three_Month_Plan
+{
+    /**
+     * Zume_Three_Month_Plan The single instance of Zume_Three_Month_Plan.
+     * @var     object
+     * @access  private
+     * @since   0.1
+     */
+    private static $_instance = null;
+
+    /**
+     * Main Zume_Three_Month_Plan Instance
+     *
+     * Ensures only one instance of Zume_Three_Month_Plan is loaded or can be loaded.
+     *
+     * @since 0.1
+     * @static
+     * @return Zume_Three_Month_Plan instance
+     */
+    public static function instance() {
+        if ( is_null( self::$_instance ) ) {
+            self::$_instance = new self();
+        }
+        return self::$_instance;
+    } // End instance()
+
+    private $plan_labels = array();
+
+    /**
+     * Constructor function.
+     * @access  public
+     * @since   0.1
+     */
+    public function __construct() {
+        $this->plan_labels = array(
+            "I will share My Story [Testimony] and God’s Story [the Gospel] with the following individuals:",
+            "I will invite the following people to begin an Accountability Group with me:",
+            "I will challenge the following people to begin their own Accountability Groups and train them how to do it:",
+            "I will invite the following people to begin a 3/3 Group with me:",
+            "I will challenge the following people to begin their own 3/3 Groups and train them how to do it:",
+            "I will invite the following people to participate in a 3/3 Hope or Discover Group [see Appendix]:",
+            "I will invite the following people to participate in Prayer Walking with me:",
+            "I will equip the following people to share their story and God’s Story and make a List of 100 of the people in their relational network:",
+            "I will challenge the following people to use the Prayer Cycle tool on a periodic basis:",
+            "I will use the Prayer Cycle tool once every [days / weeks / months].",
+            "I will Prayer Walk once every [days / weeks / months].",
+            "I will invite the following people to be part of a Leadership Cell that I will lead:",
+            "I will encourage the following people to go through this Zúme Training course:",
+            "Other commitments:"
+        );
+    }
+
+    public static function plan_items() {
+        $plan_items = [
+                [
+                    'key' => 'individuals_to_share_with',
+                    'label' => __( 'I will share My Story [Testimony] and God’s Story [the Gospel] with the following individuals:' , 'zume' ),
+                ],
+                [
+                    'key' => 'individuals_for_accountablity',
+                    'label' => __( 'I will invite the following people to begin an Accountability Group with me:', 'zume' ),
+                ],
+                [
+                    'key' => '',
+                    'label' => __('I will challenge the following people to begin their own Accountability Groups and train them how to do it:', 'zume' ),
+                ],
+                [
+                    'key' => '',
+                    'label' => __('I will invite the following people to begin a 3/3 Group with me:', 'zume' ),
+                ],
+                [
+                    'key' => '',
+                    'label' => __('', 'zume' ),
+                ],
+                [
+                    'key' => '',
+                    'label' => __('', 'zume' ),
+                ],
+                [
+                    'key' => '',
+                    'label' => __('', 'zume' ),
+                ],
+                [
+                    'key' => '',
+                    'label' => __('', 'zume' ),
+                ],
+                [
+                    'key' => '',
+                    'label' => __('', 'zume' ),
+                ],
+                [
+                    'key' => '',
+                    'label' => __('', 'zume' ),
+                ],
+                [
+                    'key' => '',
+                    'label' => __('', 'zume' ),
+                ],
+
+
+            "",
+            "",
+            "",
+            "",
+            "I will challenge the following people to begin their own 3/3 Groups and train them how to do it:",
+            "I will invite the following people to participate in a 3/3 Hope or Discover Group [see Appendix]:",
+            "I will invite the following people to participate in Prayer Walking with me:",
+            "I will equip the following people to share their story and God’s Story and make a List of 100 of the people in their relational network:",
+            "I will challenge the following people to use the Prayer Cycle tool on a periodic basis:",
+            "I will use the Prayer Cycle tool once every [days / weeks / months].",
+            "I will Prayer Walk once every [days / weeks / months].",
+            "I will invite the following people to be part of a Leadership Cell that I will lead:",
+            "I will encourage the following people to go through this Zúme Training course:",
+            "Other commitments:"
+        ];
+
+            return $plan_items;
+    }
+
+
+}
