@@ -562,14 +562,13 @@ $zume_highest_session = Zume_Dashboard::get_highest_session( $zume_current_user 
                         <!-- END INSTRUCTIONS -->
 
                         <!-- ********************************************************************************************* -->
-                        <!-- NINE MONTH PLAN -->
+                        <!-- THREE MONTH PLAN -->
                         <!-- ********************************************************************************************* -->
                         <div class="grid-x grid-margin-x">
                             <div class="cell center">
                                 <a class="button expanded"
-                                   href="<?php echo esc_url( zume_course_url() ) ?>"
-                                   target="_blank" rel="noopener" download>
-                                    <?php esc_html_e( 'Download Guidebook', 'zume' ) ?>
+                                   href="<?php echo esc_url( zume_three_month_plan_url() ) ?>" >
+                                    <?php esc_html_e( 'Three Month Plan', 'zume' ) ?>
                                 </a>
                             </div>
                         </div>

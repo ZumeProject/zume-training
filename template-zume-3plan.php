@@ -3,16 +3,20 @@
 Template Name: Three-Month Plan
 */
 zume_force_login();
+
 /* Process $_POST content */
-// We're not checking the nonce here because update_user_contact_info will
-// @codingStandardsIgnoreLine
-if( isset( $_POST[ 'user_update_nonce' ] ) ) {
-    zume_update_user_contact_info();
+if( isset( $_POST[ 'thee_month_plan_nonce' ] ) ) {
+    // validate nonce
+    if ( isset( $_POST['thee_month_plan_nonce'] ) && ! wp_verify_nonce( sanitize_key( $_POST['thee_month_plan_nonce'] ), "thee_month_plan_" . get_current_user_id() ) ) {
+        return new WP_Error( 'fail_nonce_verification', 'The form requires a valid nonce, in order to process.' );
+    }
+
+    Zume_Three_Month_Plan::process_post( $_POST );
 }
+
 /* Build variables for page */
 $zume_user = wp_get_current_user(); // Returns WP_User object
-$zume_user_meta = get_user_meta( get_current_user_id() ); // Full array of user meta data
-
+$zume_user_meta = zume_get_user_meta( get_current_user_id() ); // Full array of user meta data
 ?>
 
 <?php get_header(); ?>
@@ -24,7 +28,7 @@ $zume_user_meta = get_user_meta( get_current_user_id() ); // Full array of user 
                 <hr size="1" style="max-width:100%"/>
                 <form data-abide method="post">
 
-                    <?php wp_nonce_field( "user_" . $zume_user->ID . "_update", "user_update_nonce", false, true ); ?>
+                    <?php wp_nonce_field( "thee_month_plan_" . get_current_user_id(), "thee_month_plan_nonce", false, true ); ?>
 
                     <table class="hover stack">
                         <tr style="vertical-align: top;">
@@ -79,121 +83,72 @@ $zume_user_meta = get_user_meta( get_current_user_id() ); // Full array of user 
  */
 class Zume_Three_Month_Plan
 {
-    /**
-     * Zume_Three_Month_Plan The single instance of Zume_Three_Month_Plan.
-     * @var     object
-     * @access  private
-     * @since   0.1
-     */
-    private static $_instance = null;
-
-    /**
-     * Main Zume_Three_Month_Plan Instance
-     *
-     * Ensures only one instance of Zume_Three_Month_Plan is loaded or can be loaded.
-     *
-     * @since 0.1
-     * @static
-     * @return Zume_Three_Month_Plan instance
-     */
-    public static function instance() {
-        if ( is_null( self::$_instance ) ) {
-            self::$_instance = new self();
-        }
-        return self::$_instance;
-    } // End instance()
-
-    private $plan_labels = array();
-
-    /**
-     * Constructor function.
-     * @access  public
-     * @since   0.1
-     */
-    public function __construct() {
-        $this->plan_labels = array(
-            "I will share My Story [Testimony] and God’s Story [the Gospel] with the following individuals:",
-            "I will invite the following people to begin an Accountability Group with me:",
-            "I will challenge the following people to begin their own Accountability Groups and train them how to do it:",
-            "I will invite the following people to begin a 3/3 Group with me:",
-            "I will challenge the following people to begin their own 3/3 Groups and train them how to do it:",
-            "I will invite the following people to participate in a 3/3 Hope or Discover Group [see Appendix]:",
-            "I will invite the following people to participate in Prayer Walking with me:",
-            "I will equip the following people to share their story and God’s Story and make a List of 100 of the people in their relational network:",
-            "I will challenge the following people to use the Prayer Cycle tool on a periodic basis:",
-            "I will use the Prayer Cycle tool once every [days / weeks / months].",
-            "I will Prayer Walk once every [days / weeks / months].",
-            "I will invite the following people to be part of a Leadership Cell that I will lead:",
-            "I will encourage the following people to go through this Zúme Training course:",
-            "Other commitments:"
-        );
-    }
 
     public static function plan_items() {
         $plan_items = [
                 [
-                    'key' => 'individuals_to_share_with',
+                    'key' => 'people_to_share_with',
                     'label' => __( 'I will share My Story [Testimony] and God’s Story [the Gospel] with the following individuals:' , 'zume' ),
                 ],
                 [
-                    'key' => 'individuals_for_accountablity',
+                    'key' => 'people_for_accountablity',
                     'label' => __( 'I will invite the following people to begin an Accountability Group with me:', 'zume' ),
                 ],
                 [
-                    'key' => '',
+                    'key' => 'people_to_challenge',
                     'label' => __('I will challenge the following people to begin their own Accountability Groups and train them how to do it:', 'zume' ),
                 ],
                 [
-                    'key' => '',
+                    'key' => 'people_to_3_3_invite',
                     'label' => __('I will invite the following people to begin a 3/3 Group with me:', 'zume' ),
                 ],
                 [
-                    'key' => '',
-                    'label' => __('', 'zume' ),
+                    'key' => 'people_to_3_3_challenge',
+                    'label' => __('I will challenge the following people to begin their own 3/3 Groups and train them how to do it:', 'zume' ),
                 ],
                 [
-                    'key' => '',
-                    'label' => __('', 'zume' ),
+                    'key' => 'people_to_discover_invite',
+                    'label' => __('I will invite the following people to participate in a 3/3 Hope or Discover Group [see Appendix]:', 'zume' ),
                 ],
                 [
-                    'key' => '',
-                    'label' => __('', 'zume' ),
+                    'key' => 'people_to_prayer_walk_with',
+                    'label' => __('I will invite the following people to participate in Prayer Walking with me:', 'zume' ),
                 ],
                 [
-                    'key' => '',
-                    'label' => __('', 'zume' ),
+                    'key' => 'people_to_equip_list_100',
+                    'label' => __('I will equip the following people to share their story and God’s Story and make a List of 100 of the people in their relational network:', 'zume' ),
                 ],
                 [
-                    'key' => '',
-                    'label' => __('', 'zume' ),
+                    'key' => 'people_to_challenge_prayer',
+                    'label' => __('I will challenge the following people to use the Prayer Cycle tool on a periodic basis:', 'zume' ),
                 ],
                 [
-                    'key' => '',
-                    'label' => __('', 'zume' ),
+                    'key' => 'my_prayer_commitment',
+                    'label' => __('I will use the Prayer Cycle tool once every [days / weeks / months].', 'zume' ),
                 ],
                 [
-                    'key' => '',
-                    'label' => __('', 'zume' ),
+                    'key' => 'my_prayer_walk_commitment',
+                    'label' => __('I will Prayer Walk once every [days / weeks / months].', 'zume' ),
                 ],
-
-
-            "",
-            "",
-            "",
-            "",
-            "I will challenge the following people to begin their own 3/3 Groups and train them how to do it:",
-            "I will invite the following people to participate in a 3/3 Hope or Discover Group [see Appendix]:",
-            "I will invite the following people to participate in Prayer Walking with me:",
-            "I will equip the following people to share their story and God’s Story and make a List of 100 of the people in their relational network:",
-            "I will challenge the following people to use the Prayer Cycle tool on a periodic basis:",
-            "I will use the Prayer Cycle tool once every [days / weeks / months].",
-            "I will Prayer Walk once every [days / weeks / months].",
-            "I will invite the following people to be part of a Leadership Cell that I will lead:",
-            "I will encourage the following people to go through this Zúme Training course:",
-            "Other commitments:"
+                [
+                    'key' => 'people_for_leadership_cell',
+                    'label' => __('I will invite the following people to be part of a Leadership Cell that I will lead:', 'zume' ),
+                ],
+                [
+                    'key' => 'people_for_zume',
+                    'label' => __('I will encourage the following people to go through this Zúme Training course:', 'zume' ),
+                ],
+                [
+                    'key' => 'other_commitments',
+                    'label' => __('Other commitments:', 'zume' ),
+                ],
         ];
 
             return $plan_items;
+    }
+
+    public static function process_post( $response ) {
+        return 1;
     }
 
 
