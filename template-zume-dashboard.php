@@ -80,6 +80,7 @@ $zume_highest_session = Zume_Dashboard::get_highest_session( $zume_current_user 
                                  * Groups
                                  */
                                 $zume_no_groups = 0;
+                                $zume_archived_groups = [];
 
                                 // add colead groups to array
                                 $zume_colead_groups = Zume_Dashboard::get_colead_groups();
@@ -207,6 +208,8 @@ $zume_highest_session = Zume_Dashboard::get_highest_session( $zume_current_user 
                                             </li>
                                             <?php
                                             $zume_no_groups++;
+                                        else :
+                                            $zume_archived_groups[ $zume_key ] = $zume_value; // add archived groups to array for use in the archive section
                                         endif; // end if closed check
                                     } // end check if zume_group
                                 }
@@ -373,33 +376,13 @@ $zume_highest_session = Zume_Dashboard::get_highest_session( $zume_current_user 
                         </div> <!-- end call out-->
                         <!--END VIDEO SECTION -->
 
-                        <!-- ********************************************************************************************* -->
-                        <!-- Begin Inactive Groups Section -->
-                        <!-- ********************************************************************************************* -->
+
                         <?php
-                        $zume_no_inactive_groups = 0;
-                        $zume_html = '';
-                        foreach ( $zume_user_meta as $zume_key => $v ) :
-                            $zume_key_beginning = substr( $zume_key, 0, 10 );
-                            if ( 'zume_group' == $zume_key_beginning ) : // check if zume_group
-                                $zume_value = maybe_unserialize( $v );
-                                if ( isset( $zume_value['closed'] ) && true == $zume_value['closed'] ) : // check if closed
-
-                                    $zume_html .= '<div class="grid-x grid-margin-x gr"><div class="small-8 cell">';
-                                    $zume_html .= esc_html( $zume_value['group_name'] );
-                                    $zume_html .= '</div><div class="small-3 cell ">';
-                                    $zume_html .= '<button class="small button float-right" type="submit" name="key" value="' . esc_attr( $zume_key ) . '">' . esc_html__( 'activate', 'zume' ) . '</button>';
-                                    $zume_html .= '</div></div>';
-
-                                    $zume_no_inactive_groups++;
-                                endif; // end if closed check
-                            endif; // end check if zume_group
-                        endforeach;
-
-                        ?>
-
-                        <?php if ( $zume_no_inactive_groups > 0 ) : ?>
-                            <div class="callout">
+                        /***********************************************************************************************
+                         * Begin Inactive Groups Section
+                         ***********************************************************************************************/
+                        if ( ! empty( $zume_archived_groups ) ) : ?>
+                            <div class="callout" id="archived">
                                 <div class="grid-x ">
                                     <div class="cell vertical-padding center">
                                         <h3><?php echo esc_html__( 'Archived Groups', 'zume' ) ?></h3>
@@ -410,15 +393,22 @@ $zume_highest_session = Zume_Dashboard::get_highest_session( $zume_current_user 
                                 <form action="" method="post">
                                     <?php wp_nonce_field( get_current_user_id(), 'zume_nonce' ) ?>
                                     <input type="hidden" name="type" value="activate"/>
-                                    <?php
-                                    // @codingStandardsIgnoreLine
-                                    echo $zume_html ?>
+
+                                    <?php foreach ( $zume_archived_groups as $zume_key => $v ) : ?>
+                                        <div class="grid-x grid-margin-x gr">
+                                            <div class="small-8 cell">
+                                                <?php echo esc_html( $zume_value['group_name'] ) ?>
+                                            </div>
+                                            <div class="small-3 cell ">
+                                                <button class="small button float-right" type="submit" name="key" value="<?php echo esc_attr( $zume_key ) ?>"><?php esc_html_e( 'activate', 'zume' ) ?></button>
+                                            </div>
+                                        </div>
+                                    <?php endforeach; ?>
                                 </form>
-
                             </div>
-                        <?php endif; ?>
-                        <!-- End Inactive Groups Section -->
-
+                        <?php endif; // end if there are archived groups
+                        //<!-- End Inactive Groups Section -->
+                        ?>
 
                     </div> <!-- End Left Column -->
 
@@ -577,6 +567,21 @@ $zume_highest_session = Zume_Dashboard::get_highest_session( $zume_current_user 
                             </div>
                         </div>
                         <!-- THREE MONTH PLAN -->
+                        <?php endif; ?>
+
+                        <?php
+                        /***********************************************************************************************
+                         * LINK TO ARCHIVES
+                         **********************************************************************************************/
+                        if ( ! empty( $zume_archived_groups ) ) : ?>
+                            <div class="grid-x grid-margin-x">
+                                <div class="cell center">
+                                    <a class="small" href="#archived"  data-smooth-scroll>
+                                        <?php esc_html_e( 'Archived Groups', 'zume' ); echo ' (' . count( $zume_archived_groups ) . ')' ?>
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- THREE MONTH PLAN -->
                         <?php endif; ?>
 
 
