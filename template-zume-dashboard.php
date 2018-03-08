@@ -561,18 +561,23 @@ $zume_highest_session = Zume_Dashboard::get_highest_session( $zume_current_user 
                         </div>
                         <!-- END INSTRUCTIONS -->
 
-                        <!-- ********************************************************************************************* -->
-                        <!-- THREE MONTH PLAN -->
-                        <!-- ********************************************************************************************* -->
+                        <?php
+                        /***********************************************************************************************
+                         * THREE MONTH PLAN
+                         **********************************************************************************************/
+                        $zume_three_month_plan = zume_three_month_plan_url();
+                        if ( ! empty( $zume_three_month_plan ) ) :
+                        ?>
                         <div class="grid-x grid-margin-x">
                             <div class="cell center">
                                 <a class="button expanded"
-                                   href="<?php echo esc_url( zume_three_month_plan_url() ) ?>" >
+                                   href="<?php echo esc_url( $zume_three_month_plan ) ?>" >
                                     <?php esc_html_e( 'Three Month Plan', 'zume' ) ?>
                                 </a>
                             </div>
                         </div>
-                        <!-- END INSTRUCTIONS -->
+                        <!-- THREE MONTH PLAN -->
+                        <?php endif; ?>
 
 
                     </div> <!-- End Right Column -->
