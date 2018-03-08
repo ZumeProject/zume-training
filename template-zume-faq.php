@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Zume FAQ
+Template Name: Zúme FAQ
 */
 ?>
 
