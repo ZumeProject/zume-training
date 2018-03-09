@@ -41,13 +41,6 @@ Template Name: Zúme FAQ
                     <!-- Item -->
                     <div class="cell">
                         <hr>
-                        <h3 class="secondary"><?php esc_html_e( 'What if no one in our group has internet access?', 'zume' ) ?></h3>
-                        <?php esc_html_e( 'For now, you will need to find a place with public access. See the FAQ on “Are the videos available for download so they can be viewed offline?”', 'zume' ) ?>
-                    </div>
-
-                    <!-- Item -->
-                    <div class="cell">
-                        <hr>
                         <h3 class="secondary"><?php esc_html_e( 'What if someone wants to be trained and doesn’t have an e-mail address?', 'zume' ) ?></h3>
                         <?php esc_html_e( 'At least one person in the group will have to have an e-mail account they actually use so that they can login and access all of the features of the website. Participants who view the media when present with the group no longer need an email address for the group to begin.', 'zume' ) ?>
                     </div>
@@ -57,13 +50,6 @@ Template Name: Zúme FAQ
                         <hr>
                         <h3 class="secondary"><?php esc_html_e( 'How can I preview the lessons before starting a training event?', 'zume' ) ?></h3>
                         <?php esc_html_e( 'Check out the “Overview” section. It highlights the concepts, the tools, and what your group will practice for each session.', 'zume' ) ?>
-                    </div>
-
-                    <!-- Item -->
-                    <div class="cell">
-                        <hr>
-                        <h3 class="secondary"><?php esc_html_e( 'Are the videos available for download so they can be viewed offline?', 'zume' ) ?></h3>
-                        <?php esc_html_e( 'Currently, no. This will definitely change when we start having the materials in other languages. In some places, access to internet or even computers is limited. In other places a web-based system is not workable for security reasons. In still others, there will not be adequate volunteers to run a web-based system. In the USA, there are usually work-arounds for such limitations. Culturally in the USA there is a tendency for people to view videos for entertainment or curiosity. That results in videos being viewed out of context. In this case, there is a strong desire for the training to be done in groups, with intent for application, and with accountability. We also want to track where gaps in implementation exist geographically and need the web-based approach to do that. Americans are notoriously bad at reporting and we want to ensure there really is no place left where multiplying disciples are not being made in the USA. Therefore we are choosing, at least for the present, to make it inconvenient and difficult to consume the videos in other than this intended manner. We ask that you not try to short-circuit this intent. You can view the FAQ on “What is the content of the training?” for a general idea of the content.', 'zume' ) ?>
                     </div>
 
                     <!-- Item -->
@@ -99,13 +85,6 @@ Template Name: Zúme FAQ
                         <hr>
                         <h3 class="secondary"><?php esc_html_e( 'What is the statement of faith for Zúme?', 'zume' ) ?></h3>
                         <?php esc_html_e( 'Since Zúme is not run by an organization, there is not a formal statement of faith. All of us involved, however, would agree on the Lausanne Covenant.', 'zume' ) ?> <a href="https://www.lausanne.org/content/covenant/lausanne-covenant" target="_blank">Read the Covenant</a>
-                    </div>
-
-                    <!-- Item -->
-                    <div class="cell">
-                        <hr>
-                        <h3 class="secondary"><?php esc_html_e( 'How does the coaching work?', 'zume' ) ?></h3>
-                        <?php esc_html_e( 'Shortly after your group is registered, your account will be connected to a coach either by location or language. Our coaches are active disciple-makers who are practicing the principles in Zúme. Being coached is optional, but to grow to the most fruitful disciple you can be, you will need to find those who can help you get there. The Zúme network will attempt to match you with someone who can help you get there.', 'zume' ) ?>
                     </div>
 
                     <!-- Item -->
