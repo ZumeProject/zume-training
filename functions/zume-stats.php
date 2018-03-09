@@ -40,7 +40,7 @@ class Zume_Stats{
      */
     public function __construct() {
 //      add_action( 'wp_enqueue_scripts', array($this, 'enqueue_buddypress_styles_to_zume' ) );
-        $this->get_coach_groups();
+//        $this->get_coach_groups();
     } // End __construct()
 
 
@@ -61,44 +61,39 @@ class Zume_Stats{
 
     public function get_group_locations(){
         global $wpdb;
-        $latitudes = $wpdb->get_results( 'SELECT * FROM wp_bp_groups_groupmeta WHERE meta_key = "lat"', OBJECT );
-        $longitudes = $wpdb->get_results( 'SELECT * FROM wp_bp_groups_groupmeta WHERE meta_key = "lng"', OBJECT );
-        $address = $wpdb->get_results( 'SELECT * FROM wp_bp_groups_groupmeta WHERE meta_key = "address"', OBJECT );
-
-        $a = [];
-        foreach ( $latitudes as $lat ){
-            $a[$lat->group_id]["lat"] = (int) $lat->meta_value;
-        }
-        foreach ( $longitudes as $lng ){
-            $a[$lng->group_id]["lng"] = (int) $lng->meta_value;
-        }
-        foreach ( $address as $adr ){
-            $a[$adr->group_id]["address"] = $adr->meta_value;
-        }
-        $result =[]; // ["address"]
-        foreach ($a as $key => $val){
-            if (isset( $val["lat"] ) && isset( $val["lng"] )){
-                $result[] = [ $val["lat"], $val["lng"] ];
+        $groups = $wpdb->get_results( 'SELECT * FROM wp_usermeta WHERE meta_key LIKE "zume_group_%"' );
+        $result = [];
+        foreach ( $groups as $group ){
+            $fields = maybe_unserialize( $group->meta_value );
+            if (isset( $fields["lat"] ) && !empty( $fields["lat"] ) && isset( $fields["lng"] ) && !empty( $fields["lng"] )){
+                $result[] = [ $fields["lat"], $fields["lng"] ];
             }
         }
 
         return $result;
+//
+//        foreach ( $address as $adr ){
+//            $a[$adr->group_id]["address"] = $adr->meta_value;
+//        }
 
     }
 
     public function get_group_sizes(){
         global $wpdb;
-        $groups = $wpdb->get_results( "SELECT group_id, COUNT(*) AS `num` FROM wp_bp_groups_members a INNER JOIN wp_bp_groups b ON a.group_id = b.id GROUP BY group_id" );
+
+        $groups = $wpdb->get_results( 'SELECT * FROM wp_usermeta WHERE meta_key LIKE "zume_group_%"' );
         $counts = [];
         foreach ($groups as $group){
-            if ( !isset( $counts[ $group->num ] ) ){
-                $counts[$group->num] = 1;
-            } else {
-
-                $counts[$group->num]++;
-
+            $fields = maybe_unserialize( $group->meta_value );
+            if ( isset( $fields["members"] ) && intval( $fields["members"] )){
+                if ( !isset( $counts[ $fields["members"] ] ) ){
+                    $counts[ $fields["members"] ] = 1;
+                } else {
+                    $counts[ $fields["members"] ]++;
+                }
             }
         }
+
         ksort( $counts );
         $result = [ [ "Group Size", "Number of groups", [ "role" => "annotation" ] ] ];
         foreach ($counts as $group_size => $occurrence){
@@ -111,67 +106,36 @@ class Zume_Stats{
 
     public function get_group_steps(){
         global $wpdb;
-        $groups = $wpdb->get_results( "SELECT id FROM wp_bp_groups" );
-        $steps = $wpdb->get_results( "SELECT post_name, COUNT(*) AS `num` FROM wp_posts WHERE post_name LIKE '%step-complete%' GROUP BY post_name" );
-        $number_ready_groups = $wpdb->get_results(
-            "SELECT COUNT(*) as `groups`
-            FROM (
-                SELECT group_id
-                FROM wp_bp_groups_members a INNER JOIN wp_bp_groups b ON a.group_id = b.id
-                GROUP BY group_id
-                HAVING COUNT(*) > 3
-            ) T1"
-        );
 
-        $groups_ids = array_map(
-            function($a){
-                return $a->id;
-            },
-            $groups
-        );
+        $groups = $wpdb->get_results( 'SELECT * FROM wp_usermeta WHERE meta_key LIKE "zume_group_%"' );
         $count = [
-            "More than 4 members" => (int) $number_ready_groups[0]->groups,
-            "session1" =>0,
-            "session2" =>0,
-            "session3" =>0,
-            "session4" =>0,
-            "session5" =>0,
-            "session6" =>0,
-            "session7" =>0,
-            "session8" =>0,
-            "session9" =>0,
-            "session10" =>0,
+            "More than 4 members" => 0,
+            "session_1" =>0,
+            "session_2" =>0,
+            "session_3" =>0,
+            "session_4" =>0,
+            "session_5" =>0,
+            "session_6" =>0,
+            "session_7" =>0,
+            "session_8" =>0,
+            "session_9" =>0,
+            "session_10" =>0,
         ];
-        function ends_with( $haystack, $needle ){
-            $length = strlen( $needle );
-            return $length === 0 || ( substr( $haystack, -$length ) === $needle );
-        }
-        foreach ( $steps as $step ){
-            $group_id = explode( '-', $step->post_name )[1];
-            if ( in_array( $group_id, $groups_ids ) ){
-                if ( ends_with( $step->post_name, "session-10" )){
-                    $count["session10"] += $step->num;
-                } elseif ( ends_with( $step->post_name, "session-2" ) ){
-                    $count["session2"] += $step->num;
-                } elseif ( ends_with( $step->post_name, "session-3" ) ){
-                    $count["session3"] += $step->num;
-                } elseif ( ends_with( $step->post_name, "session-4" ) ){
-                    $count["session4"] += $step->num;
-                } elseif ( ends_with( $step->post_name, "session-5" ) ){
-                    $count["session5"] += $step->num;
-                } elseif ( ends_with( $step->post_name, "session-6" ) ){
-                    $count["session6"] += $step->num;
-                } elseif ( ends_with( $step->post_name, "session-7" ) ){
-                    $count["session7"] += $step->num;
-                } elseif ( ends_with( $step->post_name, "session-8" ) ){
-                    $count["session8"] += $step->num;
-                } elseif ( ends_with( $step->post_name, "session-9" ) ){
-                    $count["session9"] += $step->num;
-                } elseif ( ends_with( $step->post_name, "session-1" )){
-                    $count["session1"] += 1;
+        foreach ($groups as $group){
+            $fields = maybe_unserialize( $group->meta_value );
+            if ( isset( $fields["members"] ) && intval( $fields["members"] )){
+                $members = intval( $fields["members"] );
+                if ( $members >= 4 ) {
+                    $count["More than 4 members"] ++;
+                }
+                foreach ($count as $session => $value){
+                    if ( isset( $fields[$session]) && $fields[$session] == true){
+                        $count[$session]++;
+                    }
                 }
             }
         }
+
         $result = [ [ "Session", "number completed", [ "role" => "annotation" ] ] ];
         foreach ( $count as $session => $number ){
             $result[] = [ $session, $number, $number ];
