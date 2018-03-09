@@ -123,6 +123,9 @@ $zume_highest_session = Zume_Dashboard::get_highest_session( $zume_current_user 
                                                             <?php echo esc_html( __( 'Address', 'zume' ) . ': ' . $zume_value['address'] ) ?>
                                                             <br>
                                                             <?php echo esc_html( __( 'Members', 'zume' ) . ': ' . $zume_value['members'] ) ?>
+                                                            <br>
+                                                            <?php echo esc_html( __( 'Group Key', 'zume' ) . ': ' . $zume_value['public_key'] ) ?>
+                                                            <br>
 
                                                             <?php if ( isset( $zume_value['no_edit'] ) ) : ?>
                                                                 <br>(Colead Group)

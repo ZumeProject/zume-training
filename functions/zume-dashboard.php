@@ -49,25 +49,9 @@ class Zume_Dashboard {
     public static function create_group( $args ) {
 
         // Validate post data
-        $defaults = array(
-            'group_name' => false,
-            'members' => false,
-            'meeting_time' => '',
-            'address' => false,
-            'ip_address' => Zume_Google_Geolocation::get_real_ip_address(),
-            'lng'   => '',
-            'lat'   => '',
-        );
-        $args = wp_parse_args( $args, $defaults );
+        $group_values = self::verify_group_array_filter([], true);
 
-        if ( ! $args['group_name'] ) {
-            return new WP_Error( 'missing_info', 'You are missing the group name' );
-        }
-        if ( ! $args['members'] ) {
-            return new WP_Error( 'missing_info', 'You are missing number of group members' );
-        }
-        if ( $args['address'] ) {
-            zume_write_log( 'begin locations' );
+        if ( ! empty ( $args['address'] ) ) {
             // Geo lookup address
             $google_result = Zume_Google_Geolocation::query_google_api( $args['address'], $type = 'core' ); // get google api info
             if ( ! $google_result ) {
@@ -81,38 +65,14 @@ class Zume_Dashboard {
             }
         }
 
+        $new_group = wp_parse_args( $args, $group_values );
         // Prepare record array
-        $current_user_id = get_current_user_id();
-        $group_key = self::get_unique_group_key();
-        $group_values = self::verify_group_array_filter();
-        $group_new_values = [
-            'owner'               => $current_user_id,
-            'group_name'          => $args['group_name'],
-            'members'             => $args['members'],
-            'meeting_time'        => $args['meeting_time'],
-            'address'             => $args['address'],
-            'ip_address'          => $args['ip_address'],
-            'lng'                 => $args['lng'],
-            'lat'                 => $args['lat'],
-        ];
-        foreach ( $group_new_values as $key => $value ) {
-            $group_values[$key] = $value;
-        }
 
-        add_user_meta( $current_user_id, $group_key, $group_values, true );
+
+        add_user_meta( get_current_user_id(), $new_group['key'], $new_group, true );
 
         return true;
 
-    }
-
-    public static function get_unique_group_key() {
-        global $wpdb;
-        $duplicate_check = 1;
-        while ( $duplicate_check != 0 ) {
-            $group_key = uniqid( 'zume_group_' );
-            $duplicate_check = $wpdb->get_var( $wpdb->prepare( "SELECT count(*) FROM $wpdb->usermeta WHERE meta_key = %s", $group_key ) );
-        }
-        return $group_key;
     }
 
 
@@ -124,17 +84,19 @@ class Zume_Dashboard {
      * If passed a group array, it will verify that all required keys are present, add any missing, and return
      * group array. ex.group_array_filter( $group_meta )
      *
-     * @param array $group_meta
+     * @param $group_meta
      * @return array
      */
-    public static function verify_group_array_filter( $group_meta = [] ) {
+    public static function verify_group_array_filter( $group_meta, $new = false ) {
         if ( is_serialized( $group_meta ) ) {
             $group_meta = maybe_unserialize( $group_meta );
         }
 
-        $defaults = [
+        $active_keys = [
             'owner'               => get_current_user_id(),
             'group_name'          => __( 'No Name', 'zume' ),
+            'key'                 => self::get_unique_group_key(),
+            'public_key'          => self::get_unique_public_key(),
             'members'             => '1',
             'meeting_time'        => '',
             'address'             => '',
@@ -168,32 +130,72 @@ class Zume_Dashboard {
             'coleaders'           => [],
             'coleaders_accepted'  => [],
             'coleaders_declined'  => [],
+            'three_month_plans'   => [],
         ];
 
-//        $deprecated_keys = [
-////            'remove_this_key',
-//        ];
+        $deprecated_keys = [
+                // 'deprecated_key_name',
+        ];
 
         if ( ! is_array( $group_meta ) ) {
             $group_meta = [];
         }
 
-        foreach ( $defaults as $k => $v ) {
+        $trigger_update = false;
+
+        // Active keys
+        foreach ( $active_keys as $k => $v ) {
             if ( !isset( $group_meta[ $k ] ) ) {
                 $group_meta[$k] = $v;
+                $trigger_update = true;
             }
         }
 
         // Deprecated keys
-//        foreach ( $deprecated_plan_items as $deprecated_key ) {
-//            if ( isset( $plan_meta[ $deprecated_key ] ) ) {
-//                unset( $plan_meta[$deprecated_key] );
-//            }
-//        }
+        foreach ( $deprecated_keys as $deprecated_key ) {
+            if ( isset( $group_meta[ $deprecated_key ] ) ) {
+                unset( $group_meta[$deprecated_key] );
+                $trigger_update = true;
+            }
+        }
+
+        if ( $new ) {
+            $trigger_update = false;
+        }
+
+        if ( $trigger_update ) {
+            update_user_meta( $group_meta['owner'], $group_meta['key'], $group_meta );
+        }
 
         return $group_meta;
     }
 
+    public static function get_unique_group_key() {
+        global $wpdb;
+        $duplicate_check = 1;
+        while ( $duplicate_check != 0 ) {
+            $group_key = uniqid( 'zume_group_' );
+            $duplicate_check = $wpdb->get_var( $wpdb->prepare( "SELECT count(*) FROM $wpdb->usermeta WHERE meta_key = %s", $group_key ) );
+        }
+        return $group_key;
+    }
+
+    public static function get_unique_public_key() {
+        global $wpdb;
+        $duplicate_check = 1;
+        while ( $duplicate_check != 0 ) {
+            $key = strtoupper( substr( bin2hex( random_bytes( 32 ) ), 0, 5 ) );
+            $duplicate_check = $wpdb->get_var( $wpdb->prepare( "SELECT count(*) FROM $wpdb->usermeta WHERE meta_key = %s", $key ) );
+        }
+        return $key;
+    }
+
+    /**
+     * Edit Group
+     *
+     * @param $args
+     * @return bool|WP_Error
+     */
     public static function edit_group( $args ) {
         // Check if this user can edit this group
         $current_user_id = get_current_user_id();
