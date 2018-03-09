@@ -567,14 +567,68 @@ class Zume_Dashboard {
         }
     }
 
+    /**
+     * Gets the group array by the group key
+     *
+     * @param $group_key
+     * @return array|bool
+     */
     public static function get_group_by_key( $group_key ) {
         global $wpdb;
-        $result = $wpdb->get_var( $wpdb->prepare( "SELECT meta_value FROM $wpdb->usermeta WHERE meta_key = %s LIMIT 1", $group_key ) );
+        $result = $wpdb->get_var( $wpdb->prepare( "SELECT meta_value FROM $wpdb->usermeta WHERE meta_key = %s", $group_key ) );
         if ( empty( $result ) ) {
             return false;
         }
         $group_meta = self::verify_group_array_filter( $result );
         return $group_meta;
+    }
+
+    /**
+     * Gets user owned groups
+     *
+     * @return array|bool
+     */
+    public static function get_current_user_groups()  {
+        $zume_user_meta = zume_get_user_meta( get_current_user_id() );
+        $groups = [];
+        foreach ( $zume_user_meta as $zume_key => $v ) {
+            $zume_key_beginning = substr( $zume_key, 0, 10 );
+            if ( 'zume_group' == $zume_key_beginning ) {
+                $zume_value = Zume_Dashboard::verify_group_array_filter( $v );
+                $groups[$zume_key] = $zume_value;
+            }
+        }
+
+        if ( ! empty( $groups ) ) {
+            return $groups;
+        } else {
+            return false;
+        }
+    }
+
+    /**
+     * Returns true of false if user owns groups
+     * This does not test if they are a coleader or named participant.
+     *
+     * @return bool  True if user owns groups, False if use does not own groups.
+     */
+    public static function current_user_has_groups() : bool  {
+        $zume_user_meta = zume_get_user_meta( get_current_user_id() );
+        foreach ( $zume_user_meta as $zume_key => $v ) {
+            $zume_key_beginning = substr( $zume_key, 0, 10 );
+            if ( 'zume_group' == $zume_key_beginning ) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public static function verify_public_key_for_group( $public_key ) {
+
+        return false;
+        // return false, or group_key
+
+
     }
 
 }
