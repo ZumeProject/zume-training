@@ -71,7 +71,7 @@ class Zume_Dashboard {
             // Geo lookup address
             $google_result = Zume_Google_Geolocation::query_google_api( $args['address'], $type = 'core' ); // get google api info
             if ( ! $google_result ) {
-                $results = Zume_Google_Geolocation::geocode_ip_address( $args['ip_address'] );// TODO: Need to still wire up the api to get ip address location
+                $results = Zume_Google_Geolocation::geocode_ip_address( $args['ip_address'] );
                 $args['lng'] = $results['lng'];
                 $args['lat'] = $results['lat'];
             } else {
@@ -170,6 +170,10 @@ class Zume_Dashboard {
             'coleaders_declined'  => [],
         ];
 
+//        $deprecated_keys = [
+////            'remove_this_key',
+//        ];
+
         if ( ! is_array( $group_meta ) ) {
             $group_meta = [];
         }
@@ -179,6 +183,13 @@ class Zume_Dashboard {
                 $group_meta[$k] = $v;
             }
         }
+
+        // Deprecated keys
+//        foreach ( $deprecated_plan_items as $deprecated_key ) {
+//            if ( isset( $plan_meta[ $deprecated_key ] ) ) {
+//                unset( $plan_meta[$deprecated_key] );
+//            }
+//        }
 
         return $group_meta;
     }
