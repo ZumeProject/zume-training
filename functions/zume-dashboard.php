@@ -170,9 +170,9 @@ class Zume_Dashboard {
             'coleaders_declined'  => [],
         ];
 
-        $deprecated_keys = [
-//            'remove_this_key',
-        ];
+//        $deprecated_keys = [
+////            'remove_this_key',
+//        ];
 
         if ( ! is_array( $group_meta ) ) {
             $group_meta = [];
@@ -185,11 +185,11 @@ class Zume_Dashboard {
         }
 
         // Deprecated keys
-        foreach ( $deprecated_plan_items as $deprecated_key ) {
-            if ( isset( $plan_meta[ $deprecated_key ] ) ) {
-                unset( $plan_meta[$deprecated_key] );
-            }
-        }
+//        foreach ( $deprecated_plan_items as $deprecated_key ) {
+//            if ( isset( $plan_meta[ $deprecated_key ] ) ) {
+//                unset( $plan_meta[$deprecated_key] );
+//            }
+//        }
 
         return $group_meta;
     }
