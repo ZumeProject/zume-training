@@ -129,7 +129,7 @@ class Zume_Stats{
                     $count["More than 4 members"] ++;
                 }
                 foreach ($count as $session => $value){
-                    if ( isset( $fields[$session]) && $fields[$session] == true){
+                    if ( isset( $fields[$session] ) && $fields[$session] == true){
                         $count[$session]++;
                     }
                 }

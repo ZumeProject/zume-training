@@ -93,8 +93,8 @@ function zume_site_scripts() {
                 "locations" => $stats->get_group_locations(),
                 "sizes" => $stats->get_group_sizes(),
                 "steps" => $stats->get_group_steps(),
-//                "analytics" => $stats->analytics(),
-//                "intro_views" => $stats->get_intro_video_views()
+            //                "analytics" => $stats->analytics(),
+            //                "intro_views" => $stats->get_intro_video_views()
             )
         );
 
