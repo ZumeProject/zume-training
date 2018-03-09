@@ -38,6 +38,13 @@ h4 {
     width:100%;
     padding: 0 15px;
 }
+.max-content-width {
+    max-width: 1300px;
+    margin-right:auto;
+    margin-left:auto;
+    padding-left:10px;
+    padding-right:10px;
+}
 
 @media (max-width:1199px) {
     #sign-up-btn {
@@ -139,21 +146,36 @@ div.block {
     margin: 0 auto;
 }
 
-div.step-title {
-    text-transform: uppercase !important;
+.course-steps .steps {
+    margin-bottom: 30px;
+}
+
+.step-title {
+    /*text-transform: lowercase !important;*/
     text-align: center !important;
     font-weight: 600 !important;
+    color: #323a68 !important;
+    font-family: Helvetica,Roboto,Arial,sans-serif !important;
+    font-size: 1.5rem !important;
+    line-height: 1.4 !important;
+    margin-top: 2rem !important;
+    margin-bottom: 3rem !important;
+}
+
+.session-title {
+    text-align: center !important;
+    /*font-weight: 600 !important;*/
     color: #323a68 !important;
     font-family: Helvetica,Roboto,Arial,sans-serif !important;
     font-size: 2.5rem !important;
     line-height: 1.4 !important;
     margin-top: 2rem !important;
-    margin-bottom: 2rem !important;
+    margin-bottom: 1rem !important;
 }
 
 div.activity-title {
     color: #062d6d;
-    font-size: 50px;
+    font-size: 40px;
     font-weight: bold;
     text-align: center;
     text-transform: uppercase;
@@ -166,9 +188,17 @@ div.activity-title span {
 
 div.activity-description {
     padding-top: 12px;
-    text-align: center;
-    font-size: 1.5rem;
+    /*text-align: center;*/
+    font-size: 18px;
     margin-bottom: 2em !important;
+}
+
+div.activity-description {
+    padding: 12px 0 12px 6%;
+    text-align: left;
+    float: right;
+    border-left: solid 4px #00aeff;
+    font-size: 1.5rem;
 }
 
 div.activity-description ol, div.activity-description ul {
@@ -178,6 +208,14 @@ div.activity-description ol, div.activity-description ul {
 div.activity-description ol li, div.activity-description ul li {
     padding:5px 0 5px;
 }
+
+div.video-section {
+    margin-bottom: 2em !important;
+}
+div.video-section a {
+    font-size: 20px;
+}
+
 
 .wistia_embed {
     height: 200px;
@@ -202,7 +240,17 @@ button.btn.btn-large.next-step.zume-purple.uppercase.bg-white.font-zume-purple.b
     display: none;
 }
 
-/* Small devices (landscape phones, 576px and up) */
+/*Small devices*/
+@media (max-width: 640px) {
+   .easy-1-2-3 h4 {
+        padding-left: 40px;
+    }
+    h3 {
+        font-size: 24px
+    }
+}
+
+/*  (landscape phones, 576px and up) */
 @media (min-width: 576px) {
 
     .wistia_embed {
@@ -221,7 +269,13 @@ button.btn.btn-large.next-step.zume-purple.uppercase.bg-white.font-zume-purple.b
     .btn-wide span {
         display: inline-block;
     }
+    div.activity-description {
+        font-size: 1.5rem;
+    }
 
+    .easy-1-2-3 h4 {
+        text-align: center;
+    }
 }
 
 /*Large devices (desktops, 992px and up)*/
@@ -242,13 +296,12 @@ button.btn.btn-large.next-step.zume-purple.uppercase.bg-white.font-zume-purple.b
 
     div.step-title {
         text-align: center;
-        font-size: 20px;
         font-weight: 300;
     }
 
     div.activity-title {
         color: #062d6d;
-        font-size: 50px;
+        font-size: 40px;
         float: left;
         width: 25%;
         font-weight: bold;
@@ -261,6 +314,7 @@ button.btn.btn-large.next-step.zume-purple.uppercase.bg-white.font-zume-purple.b
         float: right;
         width: 68%;
         border-left: solid 4px #00aeff;
+        font-size: 1.5rem;
     }
 
     div.single .activity-description {
@@ -366,7 +420,7 @@ body.single-item.groups #buddypress div#item-header #item-header-cover-image #it
 
 /* Style override to bring the lists within boundaries. */
 dl, ol, ul {
-    list-style-position: inside;
+    /*list-style-position: inside;*/
 }
 
 /* Removes the previous button on the steps wizard*/

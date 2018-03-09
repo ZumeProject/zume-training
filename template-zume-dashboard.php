@@ -351,7 +351,7 @@ $zume_highest_session = Zume_Dashboard::get_highest_session( $zume_current_user 
                                     <div class="small reveal" id="video-display" data-reveal>
                                         <br>
                                         <iframe frameborder="0"
-                                                width="560" height="315"
+                                                width="100%" height="315"
                                                 webkitallowfullscreen mozallowfullscreen
                                                 allowfullscreen></iframe>
                                         <button class="close-button" data-close aria-label="Close reveal"
@@ -814,7 +814,7 @@ foreach ( $zume_user_meta as $zume_key => $v ) {
                     <!-- Update, Delete, Archive buttons -->
                     <div class="cell">
                         <br>
-                        <button type="submit" class="button" name="type"
+                        <button type="submit" class="button align-right" name="type" style="margin-left:20px"
                                 onclick="check_address('<?php echo esc_html( $zume_key ); ?>')" value="edit"
                                 id="submit_<?php echo esc_html( $zume_key ); ?>"><?php echo esc_html__( 'Update', 'zume' ) ?></button>
                         <span class="align-right"><button type="submit" class="button hollow alert" name="type"
