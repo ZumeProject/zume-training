@@ -49,9 +49,9 @@ class Zume_Dashboard {
     public static function create_group( $args ) {
 
         // Validate post data
-        $group_values = self::verify_group_array_filter([], true);
+        $group_values = self::verify_group_array_filter( [], true );
 
-        if ( ! empty ( $args['address'] ) ) {
+        if ( ! empty( $args['address'] ) ) {
             // Geo lookup address
             $google_result = Zume_Google_Geolocation::query_google_api( $args['address'], $type = 'core' ); // get google api info
             if ( ! $google_result ) {
@@ -66,12 +66,10 @@ class Zume_Dashboard {
         }
 
         $new_group = wp_parse_args( $args, $group_values );
-        // Prepare record array
 
+        $result = add_user_meta( get_current_user_id(), $new_group['key'], $new_group, true );
 
-        add_user_meta( get_current_user_id(), $new_group['key'], $new_group, true );
-
-        return true;
+        return $result;
 
     }
 
