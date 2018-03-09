@@ -819,7 +819,7 @@ foreach ( $zume_user_meta as $zume_key => $v ) {
                     <!-- Update, Delete, Archive buttons -->
                     <div class="cell">
                         <br>
-                        <button type="submit" class="button align-right" name="type" style="margin-left:20px"
+                        <button type="submit" class="button align-left" name="type" style="margin-right:20px"
                                 onclick="check_address('<?php echo esc_html( $zume_key ); ?>')" value="edit"
                                 id="submit_<?php echo esc_html( $zume_key ); ?>"><?php echo esc_html__( 'Update', 'zume' ) ?></button>
                         <span class="align-right"><button type="submit" class="button hollow alert" name="type"
