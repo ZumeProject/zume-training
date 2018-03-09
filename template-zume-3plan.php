@@ -13,18 +13,24 @@ if ( isset( $_POST['thee_month_plan_nonce'] ) ) {
     } else {
         unset( $_POST['thee_month_plan_nonce'] );
     }
+    zume_write_log($_POST);
+    if( isset( $_POST['reset_three_month_plan'] ) ) {
 
-    $status = Zume_Three_Month_Plan::edit_post( $_POST );
-    if( 'Public_Key_Error' === $status['status'] ) {
-        $zume_error_message = $status['message'];
+        Zume_Three_Month_Plan::reset_plan();
+    }
+    else {
+        $status = Zume_Three_Month_Plan::edit_post( $_POST );
+        if( 'Public_Key_Error' === $status['status'] ) {
+            $zume_error_message = $status['message'];
+        }
     }
 }
 
 /* Build variables for page */
+zume_write_log( Zume_Three_Month_Plan::plan_items_filter( get_user_meta( get_current_user_id(), 'three_month_plan', true ) ) );
 $zume_three_month_plan = Zume_Three_Month_Plan::plan_items_filter( get_user_meta( get_current_user_id(), 'three_month_plan', true ) );
 $zume_groups = Zume_Dashboard::get_current_user_groups();
 
-zume_write_log( $zume_groups );
 ?>
 
 <?php get_header(); ?>
@@ -32,6 +38,7 @@ zume_write_log( $zume_groups );
 <div id="content" class="grid-x grid-padding-x"><div class="cell">
         <div id="inner-content" class="grid-x grid-margin-x grid-padding-x">
             <div class="large-8 medium-8 small-12 grid-margin-x cell" style="max-width: 900px; margin: 0 auto">
+
                 <h3 class="section-header"><?php echo esc_html__( 'Three Month Plan', 'zume' )?> </h3>
 
                 <p><?php esc_attr_e('The Three Month Plan is part of the session 9 training and helps you become specific on how you will apply the training in the near future.
@@ -62,11 +69,11 @@ zume_write_log( $zume_groups );
                     <table class="hover stack">
                         <?php
                         $zume_fields = Zume_Three_Month_Plan::plan_labels();
-                        $zume_index = 1;
+                        $zume_index = 1; // number the questions
                         foreach ( $zume_fields as $zume_key => $zume_label ) :
 
                             if ( 'public_key' === $zume_key ) {
-                                Zume_Three_Month_Plan::get_public_key_field( $zume_key, $zume_label );
+                                Zume_Three_Month_Plan::get_public_key_field( $zume_key, $zume_label, $zume_three_month_plan );
                                 continue;
                             }
                             ?>
@@ -82,6 +89,7 @@ zume_write_log( $zume_groups );
                         <strong><?php echo esc_html__( 'Oh snap!', 'zume' )?></strong>
                     </div>
                     <button class="button" type="submit" id="submit_profile"><?php echo esc_html__( 'Save', 'zume' )?></button>
+                    <button class="button hollow clear float-right" type="submit" name="reset_three_month_plan"><?php echo esc_html__( 'Reset', 'zume' )?></button>
                 </form>
                 <!-- End My Plan Form -->
 
@@ -154,6 +162,8 @@ class Zume_Three_Month_Plan
 
         $active_keys = [
             'public_key' => '',
+            'group_key' => '',
+            'linked' => false,
             'people_to_share_with' => '',
             'people_for_accountablity' => '',
             'people_to_challenge' => '',
@@ -237,14 +247,16 @@ class Zume_Three_Month_Plan
 
         // test for group key
         $public_key_error = false;
-        if ( isset( $plan['public_key'] ) ) {
+        if ( isset( $plan['public_key'] ) && ! empty( $plan['public_key'] ) ) {
             $group_key = Zume_Dashboard::verify_public_key_for_group( $plan['public_key'] );
             if ( $group_key ) {
                 // setup public key success
-
+                $plan['linked'] = self::add_user_to_group_three_month_list( $group_key, get_current_user_id() );
+                if ( $plan['linked'] ) {
+                    $plan['group_key'] = $group_key;
+                }
             } else {
-                // set up public key fail
-                $public_key_error = true;
+                $public_key_error = true; // set up public key fail
             }
         }
 
@@ -256,14 +268,27 @@ class Zume_Three_Month_Plan
             return [ 'status' => 'Fail', 'message' => __( 'Unable to save three month plan.', 'zume' ) ];
         }
 
-        if ($public_key_error ) {
+        if ( $public_key_error ) {
             return [ 'status' => 'Public_Key_Error', 'message' => __( 'Unable to find key:', 'zume' ) . ' ' . $plan['public_key'] ];
         }
 
         return [ 'status' => 'OK' ];
     }
 
-    
+    public static function add_user_to_group_three_month_list( $group_key, $user_id ) {
+
+        $group_meta = Zume_Dashboard::get_group_by_key( $group_key );
+        if ( array_search( $user_id, $group_meta['three_month_plans' ] ) ) {
+            return true;
+        }
+
+        array_push( $group_meta['three_month_plans' ], $user_id  );
+
+        return update_user_meta( $group_meta['owner'], $group_key, $group_meta );
+
+    }
+
+
     /**
      * Gets the three month plan for a user
      * Warning: Does not do permission checking. This must be done previously.
@@ -292,4 +317,20 @@ class Zume_Three_Month_Plan
 
     }
 
+    public static function get_public_key_field( $zume_key, $zume_label, $zume_three_month_plan ) {
+        // if not linked
+        ?>
+        <tr>
+            <td>
+                <label for="<?php echo esc_attr( $zume_key ) ?>"><strong> <?php echo esc_html( $zume_label )?></strong></label>
+                <input type='text' id="<?php echo esc_attr( $zume_key ) ?>" name="<?php echo esc_attr( $zume_key ) ?>" />
+            </td>
+        </tr>
+        <?php
+    }
+
+    public static function reset_plan() {
+        delete_user_meta( get_current_user_id(), 'three_month_plan' );
+        update_user_meta( get_current_user_id(), 'three_month_plan', self::plan_items_filter([]) );
+    }
 }

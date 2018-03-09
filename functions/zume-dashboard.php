@@ -623,12 +623,35 @@ class Zume_Dashboard {
         return false;
     }
 
+    /**
+     * Verify public key for group
+     *
+     * @param $public_key
+     * @return bool|mixed returns false if false, returns group key if success.
+     */
     public static function verify_public_key_for_group( $public_key ) {
+        global $wpdb;
+        $results = $wpdb->get_results( $wpdb->prepare( "
+                  SELECT meta_key 
+                  FROM $wpdb->usermeta 
+                  WHERE meta_key LIKE %s 
+                    AND meta_value LIKE %s",
+            $wpdb->esc_like( 'zume_group'). '%',
+            '%'.$wpdb->esc_like( $public_key ).'%'
+        ), ARRAY_A );
+
+        if ( empty( $result ) ) {
+            return false;
+        }
+
+        foreach( $results as $result ) {
+            $group_meta = self::verify_group_array_filter( $result );
+            if ( $public_key == $group_meta['public_key'] ) {
+                return $group_meta['key'];
+            }
+        }
 
         return false;
-        // return false, or group_key
-
-
     }
 
 }
