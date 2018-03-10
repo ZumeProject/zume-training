@@ -654,6 +654,29 @@ class Zume_Dashboard {
         return false;
     }
 
+    public static function change_group_public_key( $group_key ) {
+        // check if owner of group
+        $group_meta = get_user_meta( get_current_user_id(), $group_key, true );
+        if ( ! $group_meta ) {
+            return new WP_Error( 'authorization_failure', 'Not authorized to make this change.' );
+        }
+        $group_meta = self::verify_group_array_filter( $group_meta );
+
+        // get new key
+        $new_key = self::get_unique_public_key();
+
+        // save to group
+        $group_meta['public_key'] = $new_key;
+        zume_write_log( $group_meta );
+        $result = update_user_meta( get_current_user_id(), $group_key, $group_meta );
+
+        if ( ! $result ) {
+            return new WP_Error( 'update_failure', 'Failed to update record.' );
+        } else {
+            return $new_key;
+        }
+    }
+
 }
 
 

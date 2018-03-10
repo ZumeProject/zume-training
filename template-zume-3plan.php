@@ -13,7 +13,7 @@ if ( isset( $_POST['thee_month_plan_nonce'] ) ) {
     } else {
         unset( $_POST['thee_month_plan_nonce'] );
     }
-    
+
     if( isset( $_POST['reset_three_month_plan'] ) ) {
 
         Zume_Three_Month_Plan::reset_plan();

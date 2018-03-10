@@ -68,7 +68,7 @@ class Zume_REST_API {
                 'methods'         => WP_REST_Server::CREATABLE,
                 'callback'        => array( $this, 'validate_by_address' ),
                 "permission_callback" => function () {
-                    return current_user_can( 'read' );
+                    return current_user_can( 'zume' );
                 }
             ),
         ) );
@@ -78,7 +78,17 @@ class Zume_REST_API {
                 'methods'         => WP_REST_Server::CREATABLE,
                 'callback'        => array( $this, 'coleader_delete' ),
                 "permission_callback" => function () {
-                    return current_user_can( 'read' );
+                    return current_user_can( 'zume' );
+                }
+            ),
+        ) );
+
+        register_rest_route( $namespace, '/change_public_key', array(
+            array(
+                'methods'         => WP_REST_Server::CREATABLE,
+                'callback'        => array( $this, 'change_public_key' ),
+                "permission_callback" => function () {
+                    return current_user_can( 'zume' );
                 }
             ),
         ) );
@@ -150,6 +160,19 @@ class Zume_REST_API {
             }
         } else {
             return new WP_Error( "coleader_param_error", "Please provide a valid params", array( 'status' => 400 ) );
+        }
+    }
+
+    public function change_public_key( WP_REST_Request $request ) {
+        $params = $request->get_json_params();
+        if ( isset( $params['group_key'] ) ){
+
+            $result = Zume_Dashboard::change_group_public_key( $params['group_key'] );
+
+            return $result;
+
+        } else {
+            return new WP_Error( "public_key_param_error", "Please provide a valid params", array( 'status' => 400 ) );
         }
     }
 

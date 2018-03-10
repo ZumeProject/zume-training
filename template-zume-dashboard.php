@@ -123,7 +123,7 @@ $zume_highest_session = Zume_Dashboard::get_highest_session( $zume_current_user 
                                                             <br>
                                                             <?php echo esc_html( __( 'Members', 'zume' ) . ': ' . $zume_value['members'] ) ?>
                                                             <br>
-                                                            <?php echo esc_html( __( 'Group Key', 'zume' ) . ': ' . $zume_value['public_key'] ) ?>
+                                                            <?php echo esc_html( __( 'Key', 'zume' ) . ':' ) ?> <span class="<?php echo esc_html( $zume_key ); ?>_public_key"><?php echo $zume_value['public_key'] ?></span>
                                                             <br>
 
                                                             <?php if ( isset( $zume_value['no_edit'] ) ) : ?>
@@ -710,12 +710,18 @@ foreach ( $zume_user_meta as $zume_key => $v ) {
                 <input type="hidden" name="key" value="<?php echo esc_html( $zume_key ); ?>"/>
 
                 <div class="grid-x">
+                    <!-- Group Public Key -->
+                    <div class="cell public_key">
+                        <p><strong><?php echo esc_html__( 'Key', 'zume' ) ?>:</strong> <span class="<?php echo esc_html( $zume_key ); ?>_public_key"><?php echo esc_html( $zume_value['public_key'] ); ?></span>
+                            <span class="public_key_change" style="display:none"><a class="small" onclick="change_group_key('<?php echo esc_html( $zume_key ); ?>')">Change Key</a></span></p>
+                    </div>
                     <!-- Group name -->
                     <div class="cell">
                         <label for="group_name"><strong><?php echo esc_html__( 'Group Name', 'zume' ) ?></strong></label>
                         <input type="text" value="<?php echo esc_html( $zume_value['group_name'] ); ?>"
                                name="group_name" id="group_name" required/>
                     </div>
+
                     <!-- Participants -->
                     <div class="cell padding-bottom">
                         <label for="members"><strong><?php echo esc_html__( 'Number of Participants', 'zume' ) ?></strong></label>
@@ -815,17 +821,20 @@ foreach ( $zume_user_meta as $zume_key => $v ) {
                     </div>
 
 
+
                     <!-- Update, Delete, Archive buttons -->
                     <div class="cell">
                         <br>
-                        <button type="submit" class="button align-left" name="type" style="margin-right:20px"
+                        <button type="submit" class="button align-left" name="type"
                                 onclick="check_address('<?php echo esc_html( $zume_key ); ?>')" value="edit"
                                 id="submit_<?php echo esc_html( $zume_key ); ?>"><?php echo esc_html__( 'Update', 'zume' ) ?></button>
+
                         <span class="align-right"><button type="submit" class="button hollow alert" name="type"
                                                           value="closed"><?php echo esc_html__( 'Archive', 'zume' ) ?></button></span>
                         <span class="align-right"><button type="button" class="button clear alert" name="type"
                                                           data-open="<?php echo esc_html( $zume_key ); ?>-delete"><?php echo esc_html__( 'Delete', 'zume' ) ?></button></span>
                     </div>
+
 
                     <script>
                         jQuery('#validate_address<?php echo esc_html( $zume_key ); ?>').keyup(function () {

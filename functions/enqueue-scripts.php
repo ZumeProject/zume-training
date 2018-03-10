@@ -72,6 +72,7 @@ function zume_site_scripts() {
             "translations" => [
                 "delete" => esc_html__( 'Delete', 'zume' ),
                 "failed_to_remove" => esc_html__( 'Failed to remove item.', 'zume' ),
+                "failed_to_change" => esc_html__( 'Failed to change item.', 'zume' ),
             ]
         )
     );

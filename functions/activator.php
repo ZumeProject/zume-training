@@ -13,6 +13,15 @@ class Zume_Activator
         self::create_tables( $version );
 
         self::add_coach_role();
+
+        /**
+         * Remove ability to reach dashboard and add zume cap to interact with REST API
+         */
+        $role = get_role( 'subscriber' );
+        $role->add_cap( 'zume' );
+        $role->remove_cap( 'read' );
+
+
     }
 
     public static function create_tables( $version ) {
@@ -45,7 +54,8 @@ class Zume_Activator
         add_role(
             'coach', __( 'Coach' ),
             [
-                'coach' => true
+                'coach' => true,
+                'zume' => true,
             ]
         );
         if ( get_role( 'coach_leader' ) ) {
@@ -54,7 +64,8 @@ class Zume_Activator
         add_role(
             'coach_leader', __( 'Coach Leader' ),
             [
-                'coach_leader' => true
+                'coach_leader' => true,
+                'zume' => true,
             ]
         );
         $role = get_role( 'administrator' );
@@ -63,7 +74,9 @@ class Zume_Activator
             /* Manage DT configuration */
             $role->add_cap( 'coach' );
             $role->add_cap( 'coach_leader' );
+            $role->add_cap( 'zume' );
         }
+
 
     }
 }

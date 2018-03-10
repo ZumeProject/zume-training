@@ -150,6 +150,16 @@ jQuery(document).ready( function() {
             jQuery( this ).find( remove ).hide();
         }
     );
+
+    jQuery( "div.public_key" ).hover(
+        function() {
+            var remove = jQuery('span.public_key_change');
+            jQuery( this ).find( remove ).show();
+        }, function() {
+            var remove = jQuery('span.public_key_change');
+            jQuery( this ).find( remove ).hide();
+        }
+    );
 })
 
 function remove_coleader( email, group_id, li_id ) {
@@ -170,6 +180,26 @@ function remove_coleader( email, group_id, li_id ) {
         })
         .fail(function (err) {
             jQuery('#' + li_id ).append( '<span>'+zumeMaps.translations.failed_to_remove+'</span>' );
+        })
+}
+
+function change_group_key( group_key ) {
+    return jQuery.ajax({
+        type: "POST",
+        data: JSON.stringify({"group_key": group_key }),
+        contentType: "application/json; charset=utf-8",
+        dataType: "json",
+        url: zumeMaps.root + 'zume/v1/change_public_key',
+        beforeSend: function(xhr) {
+            xhr.setRequestHeader('X-WP-Nonce', zumeMaps.nonce);
+        },
+    })
+        .done(function (data) {
+            jQuery('.' + group_key + '_public_key' ).html(data);
+
+        })
+        .fail(function (err) {
+            jQuery('.' + group_key + '_public_key'  ).append( '<span>'+zumeMaps.translations.failed_to_change+'</span>' );
         })
 }
 
