@@ -13,7 +13,7 @@ if ( isset( $_POST['thee_month_plan_nonce'] ) ) {
     } else {
         unset( $_POST['thee_month_plan_nonce'] );
     }
-    zume_write_log($_POST);
+    
     if( isset( $_POST['reset_three_month_plan'] ) ) {
 
         Zume_Three_Month_Plan::reset_plan();
@@ -27,7 +27,6 @@ if ( isset( $_POST['thee_month_plan_nonce'] ) ) {
 }
 
 /* Build variables for page */
-zume_write_log( Zume_Three_Month_Plan::plan_items_filter( get_user_meta( get_current_user_id(), 'three_month_plan', true ) ) );
 $zume_three_month_plan = Zume_Three_Month_Plan::plan_items_filter( get_user_meta( get_current_user_id(), 'three_month_plan', true ) );
 $zume_groups = Zume_Dashboard::get_current_user_groups();
 
@@ -155,9 +154,15 @@ class Zume_Three_Month_Plan
      * @param $plan_meta
      * @return array|mixed
      */
-    public static function plan_items_filter( $plan_meta ) {
-        if ( is_serialized( $plan_meta ) ) {
+    public static function plan_items_filter( $plan_meta = null ) {
+        if ( is_null( $plan_meta ) ) {
+            $plan_meta = [];
+        }
+        elseif ( is_serialized( $plan_meta ) ) {
             $plan_meta = maybe_unserialize( $plan_meta );
+        }
+        elseif ( ! is_array( $plan_meta ) ) {
+            $plan_meta = [];
         }
 
         $active_keys = [
@@ -183,14 +188,10 @@ class Zume_Three_Month_Plan
 
         ];
 
-        if ( ! is_array( $plan_meta ) || empty( $plan_meta ) ) {
-            $plan_meta = [];
-        }
-
         // Active keys
-        foreach ( $active_keys as $active_key ) {
-            if ( ! isset( $plan_meta[ $active_key ] ) ) {
-                $plan_meta[$active_key] = '';
+        foreach ( $active_keys as $key => $value ) {
+            if ( ! isset( $plan_meta[$key] ) ) {
+                $plan_meta[$key] = $value;
             }
         }
 
@@ -331,6 +332,6 @@ class Zume_Three_Month_Plan
 
     public static function reset_plan() {
         delete_user_meta( get_current_user_id(), 'three_month_plan' );
-        update_user_meta( get_current_user_id(), 'three_month_plan', self::plan_items_filter([]) );
+        update_user_meta( get_current_user_id(), 'three_month_plan', self::plan_items_filter() );
     }
 }
