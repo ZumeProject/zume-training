@@ -38,6 +38,7 @@ require_once( 'functions/multi-role/multi-role.php' ); // Adds multi role featur
 require_once( 'functions/restrict-rest-api.php' ); // Restricts the default REST API to logged in users
 remove_action( 'rest_api_init', 'create_initial_rest_routes', 99 );
 require_once( 'functions/restrict-xml-rpc-pingback.php' ); // Restricts RPC vulnerability
+require_once( 'functions/zume-three-month-plan.php' );
 
 // Zume Core Files
 

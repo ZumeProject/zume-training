@@ -203,6 +203,26 @@ function change_group_key( group_key ) {
         })
 }
 
+function connect_plan_to_group( public_key ) {
+    return jQuery.ajax({
+        type: "POST",
+        data: JSON.stringify({"public_key": public_key }),
+        contentType: "application/json; charset=utf-8",
+        dataType: "json",
+        url: zumeMaps.root + 'zume/v1/connect_plan_to_group',
+        beforeSend: function(xhr) {
+            xhr.setRequestHeader('X-WP-Nonce', zumeMaps.nonce);
+        },
+    })
+        .done(function (data) {
+            jQuery( '#linked_group' ).html('success'); // @todo finish
+
+        })
+        .fail(function (err) {
+            jQuery( '#linked_group' ).append( '<span>'+zumeMaps.translations.failed_to_change+'</span>' );
+        })
+}
+
 
 
 

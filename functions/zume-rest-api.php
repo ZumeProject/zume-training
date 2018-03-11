@@ -92,34 +92,21 @@ class Zume_REST_API {
                 }
             ),
         ) );
-    }
 
-
-    /**
-     * Update Session Complete
-     * @param WP_REST_Request $request
-     * @access public
-     * @since 0.1
-     * @return string|WP_Error
-     */
-    public function update_session_complete( WP_REST_Request $request){
-        $params = $request->get_params();
-        if ( isset( $params['group_key'] ) && isset( $params['session_id'] ) ) {
-
-            $result = Zume_Course::update_session_complete( $params['group_key'], $params['session_id'] );
-
-            if ($result["status"] == true){
-                return 'success';
-            } else {
-                return new WP_Error( "log_status_error", $result["message"], array( 'status' => 400 ) );
-            }
-        } else {
-            return new WP_Error( "log_param_error", "Please provide a valid address", array( 'status' => 400 ) );
-        }
+        register_rest_route( $namespace, '/connect_plan_to_group', array(
+            array(
+                'methods'         => WP_REST_Server::CREATABLE,
+                'callback'        => array( $this, 'connect_plan_to_group' ),
+                "permission_callback" => function () {
+                    return current_user_can( 'zume' );
+                }
+            ),
+        ) );
     }
 
     /**
      * Get tract from submitted address
+     *
      * @param WP_REST_Request $request
      * @access public
      * @since 0.1
@@ -142,6 +129,8 @@ class Zume_REST_API {
     }
 
     /**
+     * Coleader Delete
+     *
      * @param WP_REST_Request $request
      * @access public
      * @since 0.1
@@ -163,6 +152,38 @@ class Zume_REST_API {
         }
     }
 
+    /**
+     * Coleader Delete
+     *
+     * @param WP_REST_Request $request
+     * @access public
+     * @since 0.1
+     * @return string|WP_Error The contact on success
+     */
+    public function connect_plan_to_group( WP_REST_Request $request){
+        $params = $request->get_json_params();
+        if ( isset( $params['public_key'] ) ){
+
+            $result = Zume_Three_Month_Plan::connect_plan_to_group( $params['public_key'] );
+
+            return $result;
+
+            if ( $result['status'] == 'OK'){
+                return true;
+            } else {
+                return new WP_Error( "coleader_delete_error", $result['status'] );
+            }
+        } else {
+            return new WP_Error( "coleader_param_error", "Please provide a valid params", array( 'status' => 400 ) );
+        }
+    }
+
+    /**
+     * Change public key
+     *
+     * @param WP_REST_Request $request
+     * @return string|WP_Error
+     */
     public function change_public_key( WP_REST_Request $request ) {
         $params = $request->get_json_params();
         if ( isset( $params['group_key'] ) ){
@@ -173,6 +194,30 @@ class Zume_REST_API {
 
         } else {
             return new WP_Error( "public_key_param_error", "Please provide a valid params", array( 'status' => 400 ) );
+        }
+    }
+
+    /**
+     * Update Session Complete
+     *
+     * @param WP_REST_Request $request
+     * @access public
+     * @since 0.1
+     * @return string|WP_Error
+     */
+    public function update_session_complete( WP_REST_Request $request){
+        $params = $request->get_params();
+        if ( isset( $params['group_key'] ) && isset( $params['session_id'] ) ) {
+
+            $result = Zume_Course::update_session_complete( $params['group_key'], $params['session_id'] );
+
+            if ($result["status"] == true){
+                return 'success';
+            } else {
+                return new WP_Error( "log_status_error", $result["message"], array( 'status' => 400 ) );
+            }
+        } else {
+            return new WP_Error( "log_param_error", "Please provide a valid address", array( 'status' => 400 ) );
         }
     }
 
