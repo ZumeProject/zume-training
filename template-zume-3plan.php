@@ -8,6 +8,8 @@ zume_force_login();
 $zume_error_message = '';
 if ( isset( $_POST['thee_month_plan_nonce'] ) ) {
     // validate nonce
+    zume_write_log( $_POST );
+
     if ( isset( $_POST['thee_month_plan_nonce'] ) && ! wp_verify_nonce( sanitize_key( $_POST['thee_month_plan_nonce'] ), "thee_month_plan_" . get_current_user_id() ) ) {
         return new WP_Error( 'fail_nonce_verification', 'The form requires a valid nonce, in order to process.' );
     } else {
@@ -72,7 +74,7 @@ $zume_groups = Zume_Dashboard::get_current_user_groups();
                         foreach ( $zume_fields as $zume_key => $zume_label ) :
 
                             if ( 'public_key' === $zume_key ) {
-                                Zume_Three_Month_Plan::get_public_key_field( $zume_key, $zume_label, $zume_three_month_plan );
+                                Zume_Three_Month_Plan::get_public_key_field( $zume_key, $zume_label, $zume_three_month_plan, $zume_groups );
                                 continue;
                             }
                             ?>
@@ -249,6 +251,7 @@ class Zume_Three_Month_Plan
         // test for group key
         $public_key_error = false;
         if ( isset( $plan['public_key'] ) && ! empty( $plan['public_key'] ) ) {
+
             $group_key = Zume_Dashboard::verify_public_key_for_group( $plan['public_key'] );
             if ( $group_key ) {
                 // setup public key success
@@ -318,13 +321,22 @@ class Zume_Three_Month_Plan
 
     }
 
-    public static function get_public_key_field( $zume_key, $zume_label, $zume_three_month_plan ) {
+    public static function get_public_key_field( $zume_key, $zume_label, $zume_three_month_plan, $zume_groups ) {
         // if not linked
         ?>
         <tr>
             <td>
-                <label for="<?php echo esc_attr( $zume_key ) ?>"><strong> <?php echo esc_html( $zume_label )?></strong></label>
-                <input type='text' id="<?php echo esc_attr( $zume_key ) ?>" name="<?php echo esc_attr( $zume_key ) ?>" />
+                <label for="public_key"><strong> <?php echo esc_html( $zume_label )?></strong></label>
+                <input type='text' id="public_key" name="public_key" />
+                <?php
+                if( count( $zume_groups ) > 0 ) {
+                    esc_attr_e('Add one of your groups? ', 'zume' );
+                    foreach ( $zume_groups as $zume_group ) {
+                        $group_meta = Zume_Dashboard::verify_group_array_filter( $zume_group );
+                        print '(<a onclick="jQuery(\'#public_key\').val(\''.$group_meta['public_key'] .'\')">' . $group_meta['group_name'] . ': ' . $group_meta['public_key'] . ' </a>) ';
+                    }
+                }
+                ?>
             </td>
         </tr>
         <?php

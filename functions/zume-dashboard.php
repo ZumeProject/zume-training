@@ -643,6 +643,7 @@ class Zume_Dashboard {
         if ( empty( $result ) ) {
             return false;
         }
+        zume_write_log( $results );
 
         foreach( $results as $result ) {
             $group_meta = self::verify_group_array_filter( $result );
@@ -667,7 +668,7 @@ class Zume_Dashboard {
 
         // save to group
         $group_meta['public_key'] = $new_key;
-        zume_write_log( $group_meta );
+
         $result = update_user_meta( get_current_user_id(), $group_key, $group_meta );
 
         if ( ! $result ) {
