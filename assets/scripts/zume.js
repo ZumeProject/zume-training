@@ -218,7 +218,7 @@ function connect_plan_to_group( public_key ) {
             let connected_content = `
             Connected to: 
             `
-            jQuery( '#linked_group' ).html('success'); // @todo finish
+            jQuery( '#linked_group' ).html('almost done :)'); // @todo finish
 
         })
         .fail(function (err) {
