@@ -85,12 +85,43 @@ function zume_get_posts_translation_url( $page_title, $slug = 'en' ) {
     }
 }
 
+/**
+ * Gets the translation post id for the front page
+ *
+ * @param $page_title
+ * @param string $slug
+ * @return array|int|null|string|WP_Error|WP_Post
+ */
+function zume_get_home_translation_id( $page_title, $slug = 'en' ) {
+
+    if ( function_exists( 'pll_the_languages' ) ) {
+        // find post by title
+        $post_id = get_page_by_title( $page_title, OBJECT, 'page' );
+
+        // get translation id by eng id
+        if ( isset( $post_id->ID )){
+            $trans_id = pll_get_post( $post_id->ID, $slug );
+            if ( ! $trans_id ) {
+                return $post_id;
+            }
+        } else {
+            return '';
+        }
+
+        $trans_object = get_post( $trans_id, OBJECT );
+
+        return $trans_object->ID;
+    }
+    else {
+        return new WP_Error( 'Polylang_missing', 'Polylang plugin missing' );
+    }
+}
+
 // Navigation Translation Strings for Menu Titles
 $zume_navigation_menu = [
     __( 'Home', 'zume' ),
     __( 'Dashboard', 'zume' ),
     __( 'About', 'zume' ),
-    __( 'Guidebook', 'zume' ),
     __( 'Resources', 'zume' ),
     __( 'FAQs', 'zume' ),
     __( 'Overview', 'zume' ),

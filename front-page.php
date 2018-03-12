@@ -170,92 +170,24 @@ if ( is_user_logged_in() ) {
             </div> <!-- Gradient background -->
 
 
-
-
-
-            <!----------------------------------->
-            <!-- WHAT OTHERS ARE SAYING RIBBON -->
-            <!----------------------------------->
             <br clear />
-            <!-- Slider -->
-            <div class="grid-x expanded" >
-                <div class="medium-2 small-1 cell"></div>
-                <div class="small-10 medium-8 small-centered cell">
 
-                    <div class="grid-x grid-margin-x grid-margin-y vertical-padding">
-                        <div class="medium-2 small-1 cell"></div>
-                        <div class="medium-8 small-10 cell center">
-                            <h3 class="center"><strong><?php esc_html_e( 'What others are saying?', 'zume' ) ?></strong></h3>
-                        </div>
-                        <div class="medium-2 small-1 cell"></div>
-                    </div>
+            <?php
+            /******************************************************************
+             * WHAT OTHERS ARE SAYING RIBBON
+             *******************************************************************/
+            $zume_content_query = new WP_Query( 'page_id=' . zume_home_id() );
+            while ($zume_content_query->have_posts()) : $zume_content_query->the_post();
+                ?>
 
-                    <div class="grid-x grid-margin-x grid-margin-y vertical-padding">
+                <div class="entry">
 
-                        <div class="cell front-page-social" data-equalizer style="color:#21336A;">
-                            <div class="grid-x grid-margin-x grid-margin-y">
-                            <div class="large-4 medium-6 small-12 cell centered" data-equalizer-watch>
-                                <img src="<?php echo esc_attr( get_stylesheet_directory_uri() ) . '/assets/images/home/'; ?>1body.png"
-                                     class="center front-page-social-image">
-                                <p class="text-center" style="color:#21336A">
-                                    <?php esc_attr_e( '"Zúme will help us accelerate our training into more countries and languages."', 'zume' ) ?>
-                            </div>
-                            <div class="large-4 medium-6 small-12 cell centered" data-equalizer-watch>
-                                <img src="<?php echo esc_attr( get_stylesheet_directory_uri() ) . '/assets/images/home/'; ?>noplaceleft.png"
-                                     class="center front-page-social-image">
-                                <p class="text-center" style="color:#21336A">
-                                    <?php esc_attr_e('"Zúme is a helpful way to filter for faithful people that can spread quickly and
-                                    conserve training bandwidth."', 'zume') ?>
-                                </p>
-                            </div>
-                            <div class="large-4 medium-6 small-12 cell centered" data-equalizer-watch>
-                                <img src="<?php echo esc_attr( get_stylesheet_directory_uri() ) . '/assets/images/home/'; ?>2414.png"
-                                     class="center front-page-social-image">
-                                <p class="text-center" style="color:#21336A">
-                                    <?php esc_attr_e( '"Zúme is a wonderful on-ramp for our coalition."', 'zume' ) ?>
-                                </p>
-                            </div>
-                            <div class="large-4 medium-6 small-12 cell centered" data-equalizer-watch>
-                                <!--                                <div class="center">-->
-                                <img src="<?php echo esc_attr( get_stylesheet_directory_uri() ) . '/assets/images/home/'; ?>biglife.png"
-                                     class="center front-page-social-image" style="max-height: 60px">
-                                <!--                                </div>-->
-                                <p class="text-center" style="color:#21336A">
-                                    <?php esc_attr_e( '"Zúme brilliantly encapsulates the principles in our introductory training."', 'zume' ) ?>
-                                </p>
-                            </div>
-                            <div class="large-4 medium-6 small-12 cell centered">
-                                <!--                                <div style="height: 60px" class="center">-->
-                                <img src="<?php echo esc_attr( get_stylesheet_directory_uri() ) . '/assets/images/home/'; ?>teamexpansion.png"
-                                     class="center front-page-social-image" style="max-height: 60px">
-                                <!--                                </div>-->
-                                <p class="text-center" style="color:#21336A">
-                                    <?php esc_attr_e('"The principles and life practices packed into the Zúme disciple-multiplication
-                                    training course have enormous potential to impact not only the USA but also, as the
-                                    course is translated into 34 other languages, the world as well."', 'zume') ?>
-                                </p>
-                            </div>
-                            <div class="large-4 medium-6 small-12 cell centered" data-equalizer-watch>
-                                <div style="height: 75px" class="center">
-                                    <img src="<?php echo esc_attr( get_stylesheet_directory_uri() ) . '/assets/images/home/'; ?>finishingthetask-logo.png"
-                                         class="center front-page-social-image" style="max-height: 60px; width:280px">
-                                </div>
-                                <p class="text-center" style="color:#21336A">
-                                    <?php esc_attr_e('"Zúme is a valuable tool for many of our member organizations to use in engaging new
-                                    people groups."', 'zume') ?>
-                                </p>
-                            </div>
-                            </div>
-                        </div>
+                    <?php the_content( 'read more &raquo;' ); ?>
 
-                        <!-- Find out more link -->
-                    </div>
-                </div> <!-- end #main -->
+                </div>
 
-                </div> <!-- End columns-->
-                <div class="medium-2 small-1 cell"></div>
+            <?php endwhile; ?>
 
-            </div>
 
             <!-- Find out more link -->
             <div class="grid-x ">
