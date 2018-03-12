@@ -757,8 +757,8 @@ foreach ( $zume_user_meta as $zume_key => $v ) {
                     <!-- Meeting Time -->
                     <div class="cell">
                         <label for="meeting_time"><strong><?php echo esc_html__( 'Planned Meeting Time', 'zume' ) ?></strong></label>
-                        <input type="text" 
-                               placeholder="example: Saturday 7PM"
+                        <input type="text"
+                               placeholder="<?php esc_attr_e( 'example: Saturday 7PM', 'zume' ) ?>"
                                value="<?php echo esc_html( $zume_value['meeting_time'] ); ?>"
                                name="meeting_time" id="meeting_time" required/>
                     </div>
