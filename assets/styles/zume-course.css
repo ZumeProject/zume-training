@@ -173,6 +173,10 @@ div.block {
     margin-bottom: 1rem !important;
 }
 
+.read-section {
+    font-weight: 600;
+}
+
 div.activity-title {
     color: #062d6d;
     font-size: 40px;
