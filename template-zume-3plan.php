@@ -98,7 +98,7 @@ zume_write_log( $zume_three_month_plan );
                                             <?php esc_attr_e( 'Connected to group', 'zume' ) ?>: <span id="display-group-name"></span> <span><a onclick=""><?php esc_attr_e( 'Unlink Group', 'zume' ) ?></a> </span>
                                         </div>
                                         <script>
-                                            if( <?php $zume_three_month_plan['linked'] ?> ) {
+                                            if( <?php echo esc_attr( $zume_three_month_plan['linked'] ? 1 : 0 ) ?> ) {
                                                 jQuery('#add-public-key').hide();
                                                 jQuery('#display-public-key').show();
                                             } else {
