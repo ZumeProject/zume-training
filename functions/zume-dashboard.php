@@ -655,6 +655,10 @@ class Zume_Dashboard {
         return false;
     }
 
+    /**
+     * @param $group_key
+     * @return string|WP_Error
+     */
     public static function change_group_public_key( $group_key ) {
         // check if owner of group
         $group_meta = get_user_meta( get_current_user_id(), $group_key, true );

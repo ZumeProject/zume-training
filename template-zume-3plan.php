@@ -177,8 +177,6 @@ endforeach; ?>
 
                                             </div>
                                         </div>
-
-
                                     <?php endif;
 /* End check for user content */ endforeach; /* End loop through users plans */ ?>
                                     </ul>

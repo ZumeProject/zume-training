@@ -165,9 +165,10 @@ class Zume_Three_Month_Plan
      * Warning: Does not do permission checking. This must be done previously.
      *
      * @param int $user_id
+     * @param bool $full_plan
      * @return array|bool
      */
-    public static function get_user_three_month_plan( int $user_id ) {
+    public static function get_user_three_month_plan( int $user_id, bool $full_plan = true ) {
 
         $user = get_user_by( 'id', $user_id );
         if ( ! $user ) {
@@ -177,15 +178,17 @@ class Zume_Three_Month_Plan
         $plan = self::plan_items_filter( get_user_meta( $user_id, 'three_month_plan', true ) );
         $labels = self::plan_labels();
 
-        $full_plan = [
+        $full = [
             'user' => $user,
             'plan' => $plan,
             'labels' => $labels,
         ];
 
-        return $full_plan;
-
-
+        if ( $full_plan ) {
+            return $full;
+        } else {
+            return $plan;
+        }
     }
 
     public static function reset_plan() {
@@ -195,13 +198,32 @@ class Zume_Three_Month_Plan
 
     public static function connect_plan_to_group( $public_key ) {
         // todo add logic for connecting plan to group
-        // get user id
+
+        // get group key
+        $group_key = Zume_Dashboard::verify_public_key_for_group( $public_key );
+        if ( ! $group_key ) {
+            return new WP_Error('key_not_found', 'The key supplied was not found' );
+        }
 
         // open group by key
+        $group_meta = Zume_Dashboard::get_group_by_key( $group_key );
+        if ( ! $group_meta ) {
+            return new WP_Error( 'group_data_failure', 'Group found, but with no data.' );
+        }
 
-        // user to three month plan list
+        // user to three month plan list of group
+        if( ! array_search( get_current_user_id(), $group_meta['three_month_plans'] ) ) {
+            array_push( $group_meta['three_month_plans'], get_current_user_id() );
+            update_user_meta( $group_meta['owner'], $group_meta['key'], $group_meta );
+        }
 
-        // save group with addition
+        // update user three month plan
+        $user_three_month_plan = self::get_user_three_month_plan( get_current_user_id(), false );
+        $user_three_month_plan['linked'] = true;
+        $user_three_month_plan['group_key'] = $group_key;
+        $user_three_month_plan['public_key'] = $public_key;
+        update_user_meta( get_current_user_id(), 'three_month_plan', $user_three_month_plan );
+
 
         // return true
 
