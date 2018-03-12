@@ -256,7 +256,7 @@ class Zume_Course_Content {
 
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="step-title cell">
-                    <?php esc_html_e( 'WELCOME TO ZÚME', 'zume' ) ?>
+                    <?php esc_html_e( 'Welcome to Zúme', 'zume' ) ?>
                 </div>
                 <!-- step-title cell -->
             </div><!-- grid-x -->
@@ -264,7 +264,7 @@ class Zume_Course_Content {
             <!-- Activity Block -->
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="large-3 cell activity-title">
-                    <?php esc_html_e( 'DOWNLOAD', 'zume' ) ?>
+                    <?php esc_html_e( 'Download', 'zume' ) ?>
                 </div>
                 <div class="large-9 cell activity-description well">
                     <p>
@@ -287,7 +287,7 @@ class Zume_Course_Content {
         <section><!-- Step Title -->
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="step-title cell">
-                    <?php esc_html_e( 'GROUP PRAYER (5min)', 'zume' ) ?>
+                    <?php esc_html_e( 'Group Prayer (5min)', 'zume' ) ?>
                 </div>
             </div>
 
@@ -310,7 +310,7 @@ class Zume_Course_Content {
         <section><!-- Step Title -->
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="step-title cell">
-                    <?php esc_html_e( 'WATCH AND DISCUSS (15min)', 'zume' ) ?>
+                    <?php esc_html_e( 'Watch and Discuss (15min)', 'zume' ) ?>
                 </div>
                 <!-- step-title cell -->
             </div>
@@ -353,7 +353,7 @@ class Zume_Course_Content {
         <h3></h3>
         <section><!-- Step Title -->
             <div class="grid-x grid-margin-x grid-margin-y">
-                <div class="step-title cell"><?php esc_html_e( 'WATCH AND DISCUSS (15min)', 'zume' ) ?></div>
+                <div class="step-title cell"><?php esc_html_e( 'Watch and Discuss (15min)', 'zume' ) ?></div>
                 <!-- step-title cell -->
 
             </div>
@@ -402,7 +402,7 @@ class Zume_Course_Content {
         <h3></h3>
         <section><!-- Step Title -->
             <div class="grid-x grid-margin-x grid-margin-y">
-                <div class="step-title cell"><?php esc_html_e( 'WATCH AND DISCUSS (15min)', 'zume' ) ?></div>
+                <div class="step-title cell"><?php esc_html_e( 'Watch and Discuss (15min)', 'zume' ) ?></div>
                 <!-- step-title cell -->
 
             </div>
@@ -453,7 +453,7 @@ class Zume_Course_Content {
         <h3></h3>
         <section>
             <div class="grid-x grid-margin-x grid-margin-y">
-                <div class="step-title cell"><?php esc_html_e( 'LISTEN AND READ ALONG (3min)', 'zume' ) ?></div>
+                <div class="step-title cell"><?php esc_html_e( 'Listen and Read Along (3min)', 'zume' ) ?></div>
                 <!-- step-title cell -->
 
             </div>
@@ -463,7 +463,7 @@ class Zume_Course_Content {
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="large-3 cell activity-title"><?php esc_html_e( 'READ', 'zume' ) ?></div>
                 <div class="large-9 cell activity-description">
-                    <p><?php esc_html_e( 'S.O.A.P.S. BIBLE READING', 'zume' ) ?></p>
+                    <p class="read-section"><?php esc_html_e( 'S.O.A.P.S. Bible Reading', 'zume' ) ?></p>
                     <p><?php esc_html_e( 'Hearing from God regularly is a key element in our personal relationship with Him, and in our ability to stay obediently engaged in what He is doing around us.', 'zume' ) ?></p>
 
                 </div>
@@ -506,7 +506,7 @@ class Zume_Course_Content {
         <h3></h3>
         <section>
             <div class="grid-x grid-margin-x grid-margin-y">
-                <div class="step-title cell"><?php esc_html_e( 'LISTEN AND READ ALONG (3min)', 'zume' ) ?></div>
+                <div class="step-title cell"><?php esc_html_e( 'Listen and Read Along (3min)', 'zume' ) ?></div>
                 <!-- step-title cell -->
 
             </div>
@@ -516,8 +516,8 @@ class Zume_Course_Content {
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="large-3 cell activity-title"><?php esc_html_e( 'READ', 'zume' ) ?></div>
                 <div class="large-9 cell activity-description">
-                    <p>
-                        <?php esc_html_e( 'ACCOUNTABILITY GROUPS', 'zume' ) ?>
+                    <p class="read-section">
+                        <?php esc_html_e( 'Accountability Groups', 'zume' ) ?>
                     </p>
                     <p>
                         <?php esc_html_e( 'The Bible tells us that every follower of Jesus will one day be held accountable for what we do and say and think. Accountability Groups are a great way to get ready!', 'zume' ) ?>
@@ -562,7 +562,7 @@ class Zume_Course_Content {
         <h3></h3>
         <section><!-- Step Title -->
             <div class="grid-x grid-margin-x grid-margin-y">
-                <div class="step-title cell"><?php esc_html_e( 'PRACTICE (45min)', 'zume' ) ?></div>
+                <div class="step-title cell"><?php esc_html_e( 'Practice (45min)', 'zume' ) ?></div>
                 <!-- step-title cell -->
 
             </div>
@@ -710,7 +710,7 @@ class Zume_Course_Content {
             <!-- Step Title -->
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="step-title cell">
-                    <?php esc_html_e( 'WATCH AND DISCUSS (15min)', 'zume' ) ?>
+                    <?php esc_html_e( 'Watch and Discuss (15min)', 'zume' ) ?>
                 </div> <!-- step-title cell -->
             </div> <!-- grid-x -->
 
@@ -767,7 +767,7 @@ class Zume_Course_Content {
         <section>
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="step-title cell">
-                    <?php esc_html_e( 'LISTEN AND READ ALONG (2min)', 'zume' ) ?>
+                    <?php esc_html_e( 'Listen and Read Along (2min)', 'zume' ) ?>
                 </div> <!-- step-title cell -->
             </div> <!-- grid-x -->
 
@@ -777,7 +777,7 @@ class Zume_Course_Content {
                     <?php esc_html_e( 'READ', 'zume' ) ?>
                 </div>
                 <div class="large-9 cell activity-description">
-                    <p><?php esc_html_e( 'PRAYER CYCLE', 'zume' ) ?></p>
+                    <p class="read-section"><?php esc_html_e( 'Prayer Cycle', 'zume' ) ?></p>
                     <p><?php esc_html_e( 'The Bible tells us that prayer is our chance to speak to and hear from the same God who created us!', 'zume' ) ?></p>
                 </div>
             </div> <!-- grid-x -->
@@ -821,7 +821,7 @@ class Zume_Course_Content {
             <!-- Step Title -->
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="step-title cell">
-                    <?php esc_html_e( 'PRACTICE THE PRAYER CYCLE (60min)', 'zume' ) ?>
+                    <?php esc_html_e( 'Practice the Prayer Cycle (60min)', 'zume' ) ?>
                 </div> <!-- step-title cell -->
             </div> <!-- grid-x -->
 
@@ -858,10 +858,10 @@ class Zume_Course_Content {
         <!-- Step -->
         <h3></h3>
         <section>
-            <!-- LISTEN AND READ ALONG -->
+            <!-- Listen and Read Along -->
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="step-title cell">
-                    <?php esc_html_e( 'LISTEN AND READ ALONG (3min)', 'zume' ) ?>
+                    <?php esc_html_e( 'Listen and Read Along (3min)', 'zume' ) ?>
                 </div> <!-- step-title cell -->
             </div> <!-- grid-x -->
 
@@ -869,8 +869,8 @@ class Zume_Course_Content {
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="large-3 cell activity-title"><?php esc_html_e( "READ", 'zume' ) ?></div>
                 <div class="large-9 cell activity-description">
-                    <p>
-                        <?php esc_html_e( 'LIST OF 100', 'zume' ) ?>
+                    <p class="read-section">
+                        <?php esc_html_e( 'List of 100', 'zume' ) ?>
                     </p>
                     <p>
                         <?php esc_html_e( 'God has already given us the relationships we need to “Go and make disciples.” These are our family, friends, neighbors, co-workers and classmates – people we’ve known all our lives or maybe just met.', 'zume' ) ?>
@@ -920,7 +920,7 @@ class Zume_Course_Content {
             <!-- Step Title -->
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="step-title cell">
-                    <?php esc_html_e( 'PROJECT (30min)', 'zume' ) ?>
+                    <?php esc_html_e( 'Project (30min)', 'zume' ) ?>
                 </div>
             </div>
 
@@ -930,7 +930,7 @@ class Zume_Course_Content {
                 <div class="large-9 cell activity-description well">
                     <div class="grid-x grid-padding-x grid-padding-y center" >
                         <div class="cell" style="border: 1px solid #ccc;">
-                            <?php esc_html_e( 'CREATE YOUR OWN LIST OF 100', 'zume' ) ?>
+                            <?php esc_html_e( 'Create your own list of 100', 'zume' ) ?>
                             <br><br>
                             <?php esc_html_e( 'Have everyone in your group take the next 30 minutes to fill out their own inventory of relationships using the form in the "List of 100" section in your Zúme Guidebook. ', 'zume' ) ?>
                         </div>
@@ -1053,7 +1053,7 @@ class Zume_Course_Content {
             <!-- Step Title -->
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="step-title cell">
-                    <?php esc_html_e( 'WATCH AND DISCUSS (15min)', 'zume' ) ?>
+                    <?php esc_html_e( 'Watch and Discuss (15min)', 'zume' ) ?>
                 </div> <!-- step-title cell -->
             </div> <!-- grid-x -->
 
@@ -1097,7 +1097,7 @@ class Zume_Course_Content {
             <!-- Step Title -->
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="step-title cell">
-                    <?php esc_html_e( 'READ AND DISCUSS (15min)', 'zume' ) ?>
+                    <?php esc_html_e( 'Read and Discuss (15min)', 'zume' ) ?>
                 </div> <!-- step-title cell -->
             </div> <!-- grid-x -->
 
@@ -1138,7 +1138,7 @@ class Zume_Course_Content {
             <!-- Step Title -->
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="step-title cell">
-                    <?php esc_html_e( 'WATCH AND DISCUSS (15min)', 'zume' ) ?>
+                    <?php esc_html_e( 'Watch and Discuss (15min)', 'zume' ) ?>
                 </div> <!-- step-title cell -->
             </div> <!-- grid-x -->
 
@@ -1146,7 +1146,7 @@ class Zume_Course_Content {
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="large-3 cell activity-title"><?php esc_html_e( 'WATCH', 'zume' ) ?></div>
                 <div class="large-9 cell activity-description">
-                    <p><?php esc_html_e( 'THE GOSPEL', 'zume' ) ?></p>
+                    <p class="read-section"><?php esc_html_e( 'The Gospel', 'zume' ) ?></p>
                     <p><?php esc_html_e( 'One way to share God’s Good News is by telling God’s Story from Creation to Judgement – from the beginning of humankind all the way to the end of this age.', 'zume' ) ?></p>
 
                 </div>
@@ -1212,7 +1212,7 @@ class Zume_Course_Content {
             <!-- Step Title -->
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="step-title cell">
-                    <?php esc_html_e( 'READ AND DISCUSS (15min)', 'zume' ) ?>
+                    <?php esc_html_e( 'Read and Discuss (15min)', 'zume' ) ?>
                 </div> <!-- step-title cell -->
             </div> <!-- grid-x -->
 
@@ -1220,8 +1220,8 @@ class Zume_Course_Content {
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="large-3 cell activity-title"><?php esc_html_e( 'READ', 'zume' ) ?></div>
                 <div class="large-9 cell activity-description">
-                    <p>
-                    <?php esc_html_e( 'BAPTISM', 'zume' ) ?>
+                    <p class="read-section">
+                    <?php esc_html_e( 'Baptism', 'zume' ) ?>
                     </p>
                     <p>
                     <?php esc_html_e( 'Jesus said, “Go and make disciples of all nations, BAPTIZING them in the name of the Father and of the Son and of the Holy Spirit…”', 'zume' ) ?>
@@ -1410,11 +1410,11 @@ class Zume_Course_Content {
         <!-- Step -->
         <h3></h3>
         <section>
-            <!-- LISTEN AND READ ALONG -->
+            <!-- Listen and Read Along -->
 
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="step-title cell">
-                    <?php esc_html_e( 'LISTEN AND READ ALONG (3min)', 'zume' ) ?>
+                    <?php esc_html_e( 'Listen and Read Along (3min)', 'zume' ) ?>
                 </div> <!-- step-title cell -->
             </div> <!-- grid-x -->
 
@@ -1422,8 +1422,8 @@ class Zume_Course_Content {
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="large-3 cell activity-title"><?php esc_html_e( "READ", 'zume' ) ?></div>
                 <div class="large-9 cell activity-description">
-                    <p>
-                    <?php esc_html_e( "3-MINUTE TESTIMONY", 'zume' ) ?>
+                    <p class="read-section">
+                    <?php esc_html_e( "3-Minute Testimony", 'zume' ) ?>
                     </p>
                     <p>
                     <?php esc_html_e( 'As followers of Jesus, we are “witnesses" for Him, because we “testify” about the impact Jesus has had on our lives. Your story of your relationship with God is called your Testimony. It\'s powerful, and it\'s something no one can share better than you.', 'zume' ) ?>
@@ -1469,7 +1469,7 @@ class Zume_Course_Content {
             <!-- Step Title -->
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="step-title cell">
-                    <?php esc_html_e( "PRACTICE SHARING YOUR TESTIMONY (45min)", 'zume' ) ?>
+                    <?php esc_html_e( "Practice Sharing your Testimony (45min)", 'zume' ) ?>
                 </div> <!-- step-title cell -->
             </div> <!-- grid-x -->
 
@@ -1495,7 +1495,7 @@ class Zume_Course_Content {
             <!-- Step Title -->
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="step-title cell">
-                    <?php esc_html_e( 'WATCH AND DISCUSS (15min)', 'zume' ) ?>
+                    <?php esc_html_e( 'Watch and Discuss (15min)', 'zume' ) ?>
                 </div> <!-- step-title cell -->
             </div> <!-- grid-x -->
 
@@ -1551,7 +1551,7 @@ class Zume_Course_Content {
             <!-- Step Title -->
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="step-title cell">
-                    <?php esc_html_e( 'WATCH AND DISCUSS (15min)', 'zume' ) ?>
+                    <?php esc_html_e( 'Watch and Discuss (15min)', 'zume' ) ?>
                 </div> <!-- step-title cell -->
             </div> <!-- grid-x -->
 
@@ -1603,7 +1603,7 @@ class Zume_Course_Content {
             <!-- Step Title -->
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="step-title cell">
-                    <?php esc_html_e( 'WATCH AND DISCUSS (15min)', 'zume' ) ?>
+                    <?php esc_html_e( 'Watch and Discuss (15min)', 'zume' ) ?>
                 </div> <!-- step-title cell -->
             </div> <!-- grid-x -->
 
@@ -1654,7 +1654,7 @@ class Zume_Course_Content {
         <section>
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="step-title cell">
-                    <?php esc_html_e( 'LISTEN AND READ ALONG (3min)', 'zume' ) ?>
+                    <?php esc_html_e( 'Listen and Read Along (3min)', 'zume' ) ?>
                 </div> <!-- step-title cell -->
             </div> <!-- grid-x -->
 
@@ -1662,8 +1662,8 @@ class Zume_Course_Content {
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="large-3 cell activity-title"><?php esc_html_e( "READ", 'zume' ) ?></div>
                 <div class="large-9 cell activity-description">
-                    <p>
-                    <?php esc_html_e( "THE LORD'S SUPPER", 'zume' ) ?>
+                    <p class="read-section">
+                    <?php esc_html_e( "The Lord's Supper", 'zume' ) ?>
                     </p>
                     <p>
                     <?php esc_html_e( "Jesus said, “I am the living bread that came down from heaven. Whoever eats this bread will live forever. This bread is my flesh, which I will give for the life of the world.”", 'zume' ) ?>
@@ -1709,7 +1709,7 @@ class Zume_Course_Content {
             <!-- Step Title -->
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="step-title cell">
-                    <?php esc_html_e( "PRACTICE THE LORD'S SUPPER (10min)", 'zume' ) ?>
+                    <?php esc_html_e( "Practice the Lord's Supper (10min)", 'zume' ) ?>
                 </div> <!-- step-title cell -->
             </div> <!-- grid-x -->
 
@@ -1817,7 +1817,7 @@ class Zume_Course_Content {
         <section>
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="step-title cell">
-                    <?php esc_html_e( "LISTEN AND READ ALONG (15min)", 'zume' ) ?>
+                    <?php esc_html_e( "Listen and Read Along (15min)", 'zume' ) ?>
                 </div> <!-- step-title cell -->
             </div> <!-- grid-x -->
 
@@ -1825,8 +1825,8 @@ class Zume_Course_Content {
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="large-3 cell activity-title"><?php esc_html_e( "READ", 'zume' ) ?></div>
                 <div class="large-9 cell activity-description">
-                    <p>
-                    <?php esc_html_e( "PRAYER WALKING", 'zume' ) ?>
+                    <p class="read-section">
+                    <?php esc_html_e( "Prayer Walking", 'zume' ) ?>
                     </p>
                     <p>
                     <?php esc_html_e( "Prayer Walking is a simple way to obey God’s command to pray for others. And it's just what it sounds like – praying to God while walking around!", 'zume' ) ?>
@@ -1873,7 +1873,7 @@ class Zume_Course_Content {
             <!-- Step Title -->
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="step-title cell">
-                    <?php esc_html_e( 'WATCH AND DISCUSS (15min)', 'zume' ) ?>
+                    <?php esc_html_e( 'Watch and Discuss (15min)', 'zume' ) ?>
                 </div> <!-- step-title cell -->
             </div> <!-- grid-x -->
 
@@ -1926,7 +1926,7 @@ class Zume_Course_Content {
             <!-- Step Title -->
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="step-title cell">
-                    <?php esc_html_e( "PRACTICE THE B.L.E.S.S. PRAYER (15min)", 'zume' ) ?>
+                    <?php esc_html_e( "Practice the B.L.E.S.S. Prayer (15min)", 'zume' ) ?>
                 </div> <!-- step-title cell -->
             </div> <!-- grid-x -->
 
@@ -1951,7 +1951,7 @@ class Zume_Course_Content {
             <!-- Step Title -->
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="step-title cell">
-                    <?php esc_html_e( "PRAYER WALKING (60-90min)", 'zume' ) ?>
+                    <?php esc_html_e( "Prayer Walking (60-90min)", 'zume' ) ?>
                 </div> <!-- grid-x -->
             </div>
 
@@ -2057,7 +2057,7 @@ class Zume_Course_Content {
             <!-- Step Title -->
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="step-title cell">
-                    <?php esc_html_e( 'WATCH AND DISCUSS (15min)', 'zume' ) ?>
+                    <?php esc_html_e( 'Watch and Discuss (15min)', 'zume' ) ?>
                 </div> <!-- step-title cell -->
             </div> <!-- grid-x -->
 
@@ -2100,7 +2100,7 @@ class Zume_Course_Content {
         <section>
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="step-title cell">
-                    <?php esc_html_e( "LISTEN AND READ ALONG (15min)", 'zume' ) ?>
+                    <?php esc_html_e( "Listen and Read Along (15min)", 'zume' ) ?>
                 </div> <!-- step-title cell -->
             </div> <!-- grid-x -->
 
@@ -2108,8 +2108,8 @@ class Zume_Course_Content {
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="large-3 cell activity-title"><?php esc_html_e( "READ", 'zume' ) ?></div>
                 <div class="large-9 cell activity-description">
-                    <p>
-                    <?php esc_html_e( "3/3 GROUPS FORMAT", 'zume' ) ?>
+                    <p class="read-section">
+                    <?php esc_html_e( "3/3 Groups Format", 'zume' ) ?>
                     </p>
                     <p>
                     <?php esc_html_e( "Jesus said, “Where two or three have gathered together in My name, I am there in their midst.”", 'zume' ) ?>
@@ -2302,7 +2302,7 @@ class Zume_Course_Content {
             <!-- Step Title -->
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="step-title cell">
-                    <?php esc_html_e( 'WATCH AND DISCUSS (15min)', 'zume' ) ?>
+                    <?php esc_html_e( 'Watch and Discuss (15min)', 'zume' ) ?>
                 </div> <!-- step-title cell -->
             </div> <!-- grid-x -->
 
@@ -2368,7 +2368,7 @@ class Zume_Course_Content {
             <!-- Step Title -->
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="step-title cell">
-                    <?php esc_html_e( "PRACTICE AND DISCUSS (90min)", 'zume' ) ?>
+                    <?php esc_html_e( "Practice and Discuss (90min)", 'zume' ) ?>
                 </div> <!-- step-title cell -->
             </div> <!-- grid-x -->
 
@@ -2513,7 +2513,7 @@ class Zume_Course_Content {
             <!-- Step Title -->
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="step-title cell">
-                    <?php esc_html_e( 'WATCH AND DISCUSS (15min)', 'zume' ) ?>
+                    <?php esc_html_e( 'Watch and Discuss (15min)', 'zume' ) ?>
                 </div> <!-- step-title cell -->
             </div> <!-- grid-x -->
 
@@ -2580,7 +2580,7 @@ class Zume_Course_Content {
             <!-- Step Title -->
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="step-title cell">
-                    <?php esc_html_e( "PRACTICE 3/3 GROUP (90min)", 'zume' ) ?>
+                    <?php esc_html_e( "Practice 3/3 Group (90min)", 'zume' ) ?>
                 </div> <!-- step-title cell -->
             </div>
 
@@ -2722,7 +2722,7 @@ class Zume_Course_Content {
         <section><!-- Step Title -->
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="step-title cell">
-                    <?php esc_html_e( 'WATCH AND DISCUSS (15min)', 'zume' ) ?>
+                    <?php esc_html_e( 'Watch and Discuss (15min)', 'zume' ) ?>
                 </div>
             </div>
             <!-- grid-x -->
@@ -2775,7 +2775,7 @@ class Zume_Course_Content {
         <h3></h3>
         <section><!-- Step Title -->
             <div class="grid-x grid-margin-x grid-margin-y">
-                <div class="step-title cell"><?php esc_html_e( 'WATCH AND DISCUSS (15min)', 'zume' ) ?></div>
+                <div class="step-title cell"><?php esc_html_e( 'Watch and Discuss (15min)', 'zume' ) ?></div>
                 <!-- step-title cell -->
 
             </div>
@@ -2830,7 +2830,7 @@ class Zume_Course_Content {
         <h3></h3>
         <section><!-- Step Title -->
             <div class="grid-x grid-margin-x grid-margin-y">
-                <div class="step-title cell"><?php esc_html_e( 'WATCH AND DISCUSS (15min)', 'zume' ) ?></div>
+                <div class="step-title cell"><?php esc_html_e( 'Watch and Discuss (15min)', 'zume' ) ?></div>
                 <!-- step-title cell -->
 
             </div>
@@ -2880,7 +2880,7 @@ class Zume_Course_Content {
         <section><!-- Step Title -->
             <div class="grid-x grid-margin-x grid-margin-y">
 
-                <div class="step-title cell"><?php esc_html_e( "CREATE A 3-MONTH PLAN (30min)", 'zume' ) ?></div>
+                <div class="step-title cell"><?php esc_html_e( "Create a 3-Month Plan (30min)", 'zume' ) ?></div>
                 <!-- step-title cell -->
                 <div class="center cell">
 
@@ -2929,7 +2929,7 @@ class Zume_Course_Content {
         <h3></h3>
         <section><!-- Step Title -->
             <div class="grid-x grid-margin-x grid-margin-y">
-                <div class="step-title cell"> <?php esc_html_e( "SHARE YOUR PLAN (30min)", 'zume' ) ?></div>
+                <div class="step-title cell"> <?php esc_html_e( "Share you Plan (30min)", 'zume' ) ?></div>
                 <!-- step-title cell -->
             </div>
             <!-- grid-x -->
@@ -2938,7 +2938,7 @@ class Zume_Course_Content {
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="large-3 cell activity-title"><?php esc_html_e( 'SHARE', 'zume' ) ?></div>
                 <div class="large-9 cell activity-description">
-                    <p><?php esc_html_e( "IN GROUPS OF TWO OR THREE (15 minutes)", 'zume' ) ?></p>
+                    <p class="read-section"><?php esc_html_e( "In groups of two or three (15 minutes)", 'zume' ) ?></p>
 
                     <p><?php esc_html_e( "Take turns sharing your 3-Month Plans with each other. Take time to ask questions about things you might not understand about plans and how the others will meet their commitments. Ask them to do the same for you and your plan. Find a training partner(s) that is willing to check in with you to report on progress and challenges and ask questions after 1, 2, 3, 4, 6, 8 and 12 weeks. Commit to doing the same for them.", 'zume' ) ?>
                     </p>
@@ -2949,7 +2949,7 @@ class Zume_Course_Content {
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="large-3 cell activity-title"><?php esc_html_e( 'DISCUSS', 'zume' ) ?></div>
                 <div class="large-9 cell activity-description">
-                    <p><?php esc_html_e( "IN YOUR FULL TRAINING GROUP (15 minutes)", 'zume' ) ?></p>
+                    <p class="read-section"><?php esc_html_e( "In your full training Group (15 minutes)", 'zume' ) ?></p>
 
                     <?php esc_html_e( "Discuss and develop a group plan for starting at least two new 3/3 Groups or Zúme Training Groups in your area. Remember, your goal is start Simple Churches that multiply. 3/3 Groups and Zúme Training Groups are two ways to do that. Discuss and decide whether these new Groups will be connected to an existing local church or network or whether you’ll start a new network out of your Zúme Training Group.", 'zume' ) ?>
                 </div>
@@ -3008,7 +3008,7 @@ class Zume_Course_Content {
             <!-- Step Title -->
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="step-title cell">
-                    <?php esc_html_e( 'LOOKING BACK', 'zume' ) ?>
+                    <?php esc_html_e( 'Looking Back', 'zume' ) ?>
                 </div> <!-- step-title cell -->
                 <div class="center cell"><?php esc_html_e( 'Welcome back to Zúme Training!', 'zume' ) ?></div>
             </div> <!-- grid-x -->
@@ -3054,9 +3054,9 @@ class Zume_Course_Content {
             <!-- Step Title -->
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="step-title cell">
-                    <?php esc_html_e( "ACTIVITY (10min)", 'zume' ) ?>
+                    <?php esc_html_e( "Activity (10min)", 'zume' ) ?>
                 </div> <!-- step-title cell -->
-                <div class="center cell"><?php esc_html_e( "ASSESS YOURSELF USING THE COACHING CHECKLIST.", 'zume' ) ?></div>
+                <div class="center cell step-header"><?php esc_html_e( "Asses yourself using the coaching checklist.", 'zume' ) ?></div>
             </div> <!-- grid-x -->
 
             <!-- Activity Block  -->
@@ -3139,7 +3139,7 @@ class Zume_Course_Content {
             <!-- Step Title -->
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="step-title cell">
-                    <?php esc_html_e( 'WATCH AND DISCUSS (15min)', 'zume' ) ?>
+                    <?php esc_html_e( 'Watch and Discuss (15min)', 'zume' ) ?>
                 </div> <!-- step-title cell -->
             </div> <!-- grid-x -->
 
@@ -3184,7 +3184,7 @@ class Zume_Course_Content {
         <section>
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="step-title cell">
-                    <?php esc_html_e( 'LISTEN AND READ ALONG (3min)', 'zume' ) ?>
+                    <?php esc_html_e( 'Listen and Read Along (3min)', 'zume' ) ?>
                 </div> <!-- step-title cell -->
             </div> <!-- grid-x -->
 
@@ -3192,11 +3192,15 @@ class Zume_Course_Content {
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="large-3 cell activity-title"><?php esc_html_e( "READ", 'zume' ) ?></div>
                 <div class="large-9 cell activity-description">
-                    <?php esc_html_e( "PEER MENTORING GROUPS", 'zume' ) ?>
-                    <br><br>
+                    <p class="read-section">
+                    <?php esc_html_e( "Peer Mentoring Groups", 'zume' ) ?>
+                    </p>
+                    <p>
                     <?php esc_html_e( "Making disciples who make disciples means making leaders who make leaders. How do you develop stronger leaders? By teaching them how to love one another better. Peer Mentoring Groups help leaders love deeper.", 'zume' ) ?>
-                    <br><br>
+                    </p>
+                    <p>
                     <?php esc_html_e( "Find the Peer Mentoring Groups section in your Zúme Guidebook, and listen to the audio below.", 'zume' ) ?>
+                    </p>
                 </div>
             </div> <!-- grid-x -->
 
@@ -3228,7 +3232,7 @@ class Zume_Course_Content {
             <!-- Step Title -->
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="step-title cell">
-                    <?php esc_html_e( "PRACTICE (60min)", 'zume' ) ?>
+                    <?php esc_html_e( "Practice (60min)", 'zume' ) ?>
                 </div> <!-- step-title cell -->
             </div> <!-- grid-x -->
 
