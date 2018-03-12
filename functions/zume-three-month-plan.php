@@ -55,9 +55,7 @@ class Zume_Three_Month_Plan
             'people_for_zume' => '',
             'other_commitments' => '',
         ];
-        $deprecated_keys = [
-
-        ];
+        $deprecated_keys = [];
 
         // Active keys
         foreach ( $active_keys as $key => $value ) {
@@ -79,7 +77,7 @@ class Zume_Three_Month_Plan
 
     public static function plan_labels( $key = null ) {
         $active_plan_items = [
-            'public_key' => __('Group Key (optional)', 'zume'),
+            'public_key' => __( 'Group Key (optional)', 'zume' ),
             'people_to_share_with' => __( 'I will share My Story [Testimony] and God’s Story [the Gospel] with the following individuals:', 'zume' ),
             'people_for_accountablity' => __( 'I will invite the following people to begin an Accountability Group with me:', 'zume' ),
             'people_to_challenge' => __( 'I will challenge the following people to begin their own Accountability Groups and train them how to do it:', 'zume' ),
@@ -151,11 +149,11 @@ class Zume_Three_Month_Plan
     public static function add_user_to_group_three_month_list( $group_key, $user_id ) {
 
         $group_meta = Zume_Dashboard::get_group_by_key( $group_key );
-        if ( array_search( $user_id, $group_meta['three_month_plans' ] ) ) {
+        if ( array_search( $user_id, $group_meta['three_month_plans'] ) ) {
             return true;
         }
 
-        array_push( $group_meta['three_month_plans' ], $user_id  );
+        array_push( $group_meta['three_month_plans'], $user_id );
 
         return update_user_meta( $group_meta['owner'], $group_key, $group_meta );
 
@@ -171,12 +169,12 @@ class Zume_Three_Month_Plan
      */
     public static function get_user_three_month_plan( int $user_id ) {
 
-        $user = get_user_by('id', $user_id );
+        $user = get_user_by( 'id', $user_id );
         if ( ! $user ) {
             return false;
         }
 
-        $plan = self::plan_items_filter(  get_user_meta( $user_id, 'three_month_plan', true ) );
+        $plan = self::plan_items_filter( get_user_meta( $user_id, 'three_month_plan', true ) );
         $labels = self::plan_labels();
 
         $full_plan = [
@@ -190,50 +188,6 @@ class Zume_Three_Month_Plan
 
     }
 
-    public static function get_public_key_field( $zume_key, $zume_label, $zume_three_month_plan, $zume_groups ) {
-        // if not linked
-        ?>
-        <tr>
-            <td id="linked_group">
-                <label for="public_key"><strong> <?php echo esc_html( $zume_label )?></strong></label>
-                <div class="input-group">
-                    <input type="text"
-                           placeholder="<?php esc_attr_e( 'example: ABC12', 'zume') ?>"
-                           class="profile-input input-group-field"
-                           name="public_key"
-                           id="public_key"
-                           value=""
-                    />
-                    <div class="input-group-button">
-                        <input type="button" class="button"
-                               onclick="connect_plan_to_group( jQuery('#public_key').val() )"
-                               value="<?php echo esc_html__( 'Validate', 'zume' ) ?>"
-                               id="public_key_button">
-                    </div>
-                </div>
-                <?php
-                /**
-                 * List of groups to link to
-                 */
-                if( count( $zume_groups ) > 0 ) {
-                    echo '<span class="text-small">'.esc_attr__('Add one of your groups? ', 'zume' ).'</span>';
-
-                    $zume_colead_groups = Zume_Dashboard::get_colead_groups();
-                    foreach ( $zume_colead_groups as $zume_colead_key => $zume_colead_value ) {
-                        $zume_groups[ $zume_colead_key ] = $zume_colead_value;
-                    }
-                    foreach ( $zume_groups as $zume_group ) {
-                        $group_meta = Zume_Dashboard::verify_group_array_filter( $zume_group );
-                        print '<a class="small" onclick="jQuery(\'#public_key\').val(\''.$group_meta['public_key'] .'\')">(' . $group_meta['group_name'] . ': ' . $group_meta['public_key'] . ')</a> ';
-                    }
-                }
-                ?>
-
-            </td>
-        </tr>
-        <?php
-    }
-
     public static function reset_plan() {
         delete_user_meta( get_current_user_id(), 'three_month_plan' );
         update_user_meta( get_current_user_id(), 'three_month_plan', self::plan_items_filter() );
@@ -241,7 +195,20 @@ class Zume_Three_Month_Plan
 
     public static function connect_plan_to_group( $public_key ) {
         // todo add logic for connecting plan to group
+        // get user id
+
+        // open group by key
+
+        // user to three month plan list
+
+        // save group with addition
+
+        // return true
 
         return $public_key;
+    }
+
+    public static function is_user_plan_linked_to_group() {
+
     }
 }

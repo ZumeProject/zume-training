@@ -215,6 +215,9 @@ function connect_plan_to_group( public_key ) {
         },
     })
         .done(function (data) {
+            let connected_content = `
+            Connected to: 
+            `
             jQuery( '#linked_group' ).html('success'); // @todo finish
 
         })

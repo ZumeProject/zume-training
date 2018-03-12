@@ -16,13 +16,13 @@ if ( isset( $_POST['thee_month_plan_nonce'] ) ) {
         unset( $_POST['thee_month_plan_nonce'] );
     }
 
-    if( isset( $_POST['reset_three_month_plan'] ) ) {
+    if ( isset( $_POST['reset_three_month_plan'] ) ) {
 
         Zume_Three_Month_Plan::reset_plan();
     }
     else {
         $status = Zume_Three_Month_Plan::edit_post( $_POST );
-        if( 'Public_Key_Error' === $status['status'] ) {
+        if ( 'Public_Key_Error' === $status['status'] ) {
             $zume_error_message = $status['message'];
         }
     }
@@ -31,7 +31,7 @@ if ( isset( $_POST['thee_month_plan_nonce'] ) ) {
 /* Build variables for page */
 $zume_three_month_plan = Zume_Three_Month_Plan::plan_items_filter( get_user_meta( get_current_user_id(), 'three_month_plan', true ) );
 $zume_groups = Zume_Dashboard::get_current_user_groups();
-
+zume_write_log( $zume_three_month_plan );
 ?>
 
 <?php get_header(); ?>
@@ -46,7 +46,7 @@ $zume_groups = Zume_Dashboard::get_current_user_groups();
                 You can connect your three month plan to a group by adding the the group key. Check with your group leader to get the key.', 'zume') ?></p>
                 <hr>
 
-                <?php echo empty( $zume_error_message ) ? '' : '<div class="callout alert">'. $zume_error_message .'</div>' ?>
+                <?php echo empty( $zume_error_message ) ? '' : '<div class="callout alert">'. esc_attr( $zume_error_message ) .'</div>' ?>
 
                 <?php
                 /**
@@ -69,14 +69,70 @@ $zume_groups = Zume_Dashboard::get_current_user_groups();
                     <?php wp_nonce_field( "thee_month_plan_" . get_current_user_id(), "thee_month_plan_nonce", false, true ); ?>
                     <table class="hover stack">
                         <?php
-                        $zume_fields = Zume_Three_Month_Plan::plan_labels();
+                        $zume_fields = Zume_Three_Month_Plan::plan_labels(); // get labels for fields
                         $zume_index = 1; // number the questions
                         foreach ( $zume_fields as $zume_key => $zume_label ) :
 
+                            /* Handle the public key */
                             if ( 'public_key' === $zume_key ) {
-                                Zume_Three_Month_Plan::get_public_key_field( $zume_key, $zume_label, $zume_three_month_plan, $zume_groups );
-                                continue;
+                                ?>
+                                <tr>
+                                    <td id="linked_group">
+                                        <label for="public_key"><strong> <?php echo esc_html( $zume_label )?></strong></label>
+                                        <div id="add-public-key" class="input-group">
+                                            <input type="text"
+                                                   placeholder="<?php esc_attr_e( 'example: ABC12', 'zume' ) ?>"
+                                                   class="profile-input input-group-field"
+                                                   name="public_key"
+                                                   id="public_key"
+                                                   value=""
+                                            />
+                                            <div class="input-group-button">
+                                                <input type="button" class="button"
+                                                       onclick="connect_plan_to_group( jQuery('#public_key').val() )"
+                                                       value="<?php echo esc_html__( 'Link', 'zume' ) ?>"
+                                                       id="public_key_button">
+                                            </div>
+                                        </div>
+                                        <div id="display-public-key grid-x" style="display:none;">
+                                            <div class="cell"></div>
+                                            <div class="cell medium-2 small-2"></div>
+                                            <?php esc_attr_e( 'Connected to group', 'zume' ) ?>: <span></span><span></span>
+                                        </div>
+                                        <script>
+                                            if( <?php $zume_three_month_plan['linked'] ?> ) {
+                                                jQuery('#add-public-key').hide();
+                                                jQuery('#display-public-key').show();
+                                            } else {
+                                                jQuery('#add-public-key').show();
+                                                jQuery('#display-public-key').hide();
+                                            }
+
+                                        </script>
+                                        <?php
+                                        /**
+                                         * Description area with a quick list of groups
+                                         */
+                                        if ( count( $zume_groups ) > 0 ) {
+                                            echo '<span class="text-small">'.esc_attr__( 'Add one of your groups? ', 'zume' ).'</span>';
+
+                                            $zume_colead_groups = Zume_Dashboard::get_colead_groups();
+                                            foreach ( $zume_colead_groups as $zume_colead_key => $zume_colead_value ) {
+                                                $zume_groups[ $zume_colead_key ] = $zume_colead_value;
+                                            }
+                                            foreach ( $zume_groups as $zume_group ) {
+                                                $zume_group_meta = Zume_Dashboard::verify_group_array_filter( $zume_group );
+                                                print '<a class="small" onclick="jQuery(\'#public_key\').val(\''.esc_attr( $zume_group_meta['public_key'] ) .'\')">(' . esc_attr( $zume_group_meta['group_name'] ) . ': ' . esc_attr( $zume_group_meta['public_key'] ) . ')</a> ';
+                                            }
+                                        }
+                                        ?>
+
+                                    </td>
+                                </tr>
+                                <?php
                             }
+
+                            /* Generate all rows */
                             ?>
                             <tr>
                                 <td>
@@ -84,7 +140,8 @@ $zume_groups = Zume_Dashboard::get_current_user_groups();
                                     <textarea id="<?php echo esc_attr( $zume_key ) ?>" name="<?php echo esc_attr( $zume_key ) ?>" rows="3"><?php echo esc_html( $zume_three_month_plan[ $zume_key ] ?? '' ) ?></textarea>
                                 </td>
                             </tr>
-                         <?php $zume_index++; endforeach; ?>
+                            <?php $zume_index++;
+endforeach; ?>
                     </table>
                     <div data-abide-error  class="alert alert-box" style="display:none;" id="alert">
                         <strong><?php echo esc_html__( 'Oh snap!', 'zume' )?></strong>
@@ -112,9 +169,9 @@ $zume_groups = Zume_Dashboard::get_current_user_groups();
                                     <ul>
                                     <?php foreach ( $zume_group['three_month_plans'] as $zume_plan_user_id ) :
                                         $zume_participant_plan = Zume_Three_Month_Plan::get_user_three_month_plan( $zume_plan_user_id );
-                                        if( $zume_participant_plan ) :
+                                        if ( $zume_participant_plan ) :
                                         ?>
-                                        <li><a data-open="<?php echo esc_html( $zume_key ); ?>"><?php echo $zume_participant_plan['user']->user_name ?></a></li>
+                                        <li><a data-open="<?php echo esc_html( $zume_key ); ?>"><?php echo esc_attr( $zume_participant_plan['user']->user_name ) ?></a></li>
                                         <div class="grid-x">
                                             <div class="cell">
 
@@ -122,10 +179,11 @@ $zume_groups = Zume_Dashboard::get_current_user_groups();
                                         </div>
 
 
-                                    <?php endif; /* End check for user content */ endforeach; /* End loop through users plans */ ?>
+                                    <?php endif;
+/* End check for user content */ endforeach; /* End loop through users plans */ ?>
                                     </ul>
                                 <?php else : ?>
-                                    <p class="small text-gray" style="padding: 0 .5rem;"><?php esc_attr_e('No plans found', 'zume' ) ?></p>
+                                    <p class="small text-gray" style="padding: 0 .5rem;"><?php esc_attr_e( 'No plans found', 'zume' ) ?></p>
                                 <?php endif; ?>
 
                             <?php endforeach; ?>

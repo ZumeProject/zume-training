@@ -168,11 +168,11 @@ class Zume_REST_API {
 
             return $result;
 
-            if ( $result['status'] == 'OK'){
-                return true;
-            } else {
-                return new WP_Error( "coleader_delete_error", $result['status'] );
-            }
+//            if ( $result['status'] == 'OK'){
+//                return true;
+//            } else {
+//                return new WP_Error( "coleader_delete_error", $result['status'] );
+//            }
         } else {
             return new WP_Error( "coleader_param_error", "Please provide a valid params", array( 'status' => 400 ) );
         }

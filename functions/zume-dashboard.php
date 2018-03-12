@@ -588,7 +588,7 @@ class Zume_Dashboard {
      *
      * @return array|bool
      */
-    public static function get_current_user_groups()  {
+    public static function get_current_user_groups() {
         $zume_user_meta = zume_get_user_meta( get_current_user_id() );
         $groups = [];
         foreach ( $zume_user_meta as $zume_key => $v ) {
@@ -636,7 +636,7 @@ class Zume_Dashboard {
                   FROM $wpdb->usermeta 
                   WHERE meta_key LIKE %s 
                     AND meta_value LIKE %s",
-            $wpdb->esc_like( 'zume_group'). '%',
+            $wpdb->esc_like( 'zume_group' ). '%',
             '%'.$wpdb->esc_like( $public_key ).'%'
         ), ARRAY_A );
 
@@ -645,7 +645,7 @@ class Zume_Dashboard {
         }
         zume_write_log( $results );
 
-        foreach( $results as $result ) {
+        foreach ( $results as $result ) {
             $group_meta = self::verify_group_array_filter( $result );
             if ( $public_key == $group_meta['public_key'] ) {
                 return $group_meta['key'];

@@ -123,7 +123,7 @@ $zume_highest_session = Zume_Dashboard::get_highest_session( $zume_current_user 
                                                             <br>
                                                             <?php echo esc_html( __( 'Members', 'zume' ) . ': ' . $zume_value['members'] ) ?>
                                                             <br>
-                                                            <?php echo esc_html( __( 'Key', 'zume' ) . ':' ) ?> <span class="<?php echo esc_html( $zume_key ); ?>_public_key"><?php echo $zume_value['public_key'] ?></span>
+                                                            <?php echo esc_html( __( 'Key', 'zume' ) . ':' ) ?> <span class="<?php echo esc_html( $zume_key ); ?>_public_key"><?php echo esc_attr( $zume_value['public_key'] ) ?></span>
                                                             <br>
 
                                                             <?php if ( isset( $zume_value['no_edit'] ) ) : ?>
@@ -767,7 +767,7 @@ foreach ( $zume_user_meta as $zume_key => $v ) {
                         <label for="validate_address<?php echo esc_html( $zume_key ); ?>"><strong><?php echo esc_html__( 'Address', 'zume' ) ?></strong></label>
                         <div class="input-group">
                             <input type="text"
-                                   placeholder="<?php esc_attr_e( 'example: 1000 Broadway, Denver, CO 80126', 'zume') ?>"
+                                   placeholder="<?php esc_attr_e( 'example: 1000 Broadway, Denver, CO 80126', 'zume' ) ?>"
                                    class="profile-input input-group-field"
                                    name="validate_address"
                                    id="validate_address<?php echo esc_html( $zume_key ); ?>"
