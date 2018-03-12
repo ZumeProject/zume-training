@@ -57,7 +57,7 @@ function zume_register_required_plugins() {
             'name' => 'iThemes Security',
             'slug' => 'better-wp-security',
             'version' => '6.7.0',
-            'required' => false,
+            'required' => true,
         ),
 //        array(
 //            'name' => 'Easy WP SMTP',
