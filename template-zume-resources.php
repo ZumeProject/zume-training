@@ -69,31 +69,15 @@ Template Name: Zume Resources
 
             <?php
             /**
-             * Additional resources section
+             * Additional Resources section
              */
-            global $post;
-            if ( ! empty( $post ) && ! empty( $post->post_content ) ) {
+            if (have_posts()) :
+                while (have_posts()) :
+                    the_post();
+                    the_content();
+                endwhile;
+            endif;
             ?>
-                <div class="grid-x grid-margin-x vertical-padding">
-                    <div class="medium-2 cell"></div>
-                    <div class="medium-8 cell">
-                        <h3><?php esc_html_e( "Additional Resources:", 'zume' ) ?></h3>
-                        <?php
-                        /**
-                         * Optional content for the resources section specific to the language. This content can be added
-                         * in the content area of the resource post for the language
-                         */
-
-                        echo '<hr>';
-                        // @codingStandardsIgnoreStart
-                        echo $post->post_content;
-                        // @codingStandardsIgnoreEnd
-
-                        ?>
-                    </div>
-                    <div class="medium-2 cell"></div>
-                </div>
-            <?php } ?>
 
         </div> <!-- end #main -->
 

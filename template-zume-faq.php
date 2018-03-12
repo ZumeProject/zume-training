@@ -146,7 +146,17 @@ Template Name: Zúme FAQ
                         <?php esc_html_e( 'It depends. If the trainees come out of a particular church or denomination or network then the most natural thing is for the newly formed groups to be connected with those existing churches, denomination, or network. If desired, however, a new network can be formed from the groups that start. A third alternative would be for the new groups to join with other already existing networks of simple churches. Many of the people involved in developing Zúme come from such networks so we can help arrange that if desired.', 'zume' ) ?>
                     </div>
 
-
+                    <?php
+                    /**
+                     * Additional FAQs section
+                     */
+                    if (have_posts()) :
+                        while (have_posts()) :
+                            the_post();
+                            the_content();
+                        endwhile;
+                    endif;
+                    ?>
 
                 </div> <!-- end faq stack of questions-->
 
