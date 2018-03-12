@@ -102,7 +102,7 @@ function zume_get_home_translation_id( $page_title, $slug = 'en' ) {
         if ( isset( $post_id->ID )){
             $trans_id = pll_get_post( $post_id->ID, $slug );
             if ( ! $trans_id ) {
-                return $post_id;
+                return '';
             }
         } else {
             return '';
