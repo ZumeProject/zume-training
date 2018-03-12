@@ -123,6 +123,9 @@ $zume_highest_session = Zume_Dashboard::get_highest_session( $zume_current_user 
                                                             <?php echo esc_html( __( 'Address', 'zume' ) . ': ' . $zume_value['address'] ) ?>
                                                             <br>
                                                             <?php echo esc_html( __( 'Members', 'zume' ) . ': ' . $zume_value['members'] ) ?>
+                                                            <br>
+                                                            <?php echo esc_html( __( 'Group Key', 'zume' ) . ': ' . $zume_value['public_key'] ) ?>
+                                                            <br>
 
                                                             <?php if ( isset( $zume_value['no_edit'] ) ) : ?>
                                                                 <br>(Colead Group)
@@ -749,7 +752,9 @@ foreach ( $zume_user_meta as $zume_key => $v ) {
                     <!-- Meeting Time -->
                     <div class="cell">
                         <label for="meeting_time"><strong><?php echo esc_html__( 'Planned Meeting Time', 'zume' ) ?></strong></label>
-                        <input type="text" value="<?php echo esc_html( $zume_value['meeting_time'] ); ?>"
+                        <input type="text" 
+                               placeholder="example: Saturday 7PM"
+                               value="<?php echo esc_html( $zume_value['meeting_time'] ); ?>"
                                name="meeting_time" id="meeting_time" required/>
                     </div>
                     <!-- Address -->
@@ -814,7 +819,7 @@ foreach ( $zume_user_meta as $zume_key => $v ) {
                     <!-- Update, Delete, Archive buttons -->
                     <div class="cell">
                         <br>
-                        <button type="submit" class="button align-right" name="type" style="margin-left:20px"
+                        <button type="submit" class="button align-left" name="type" style="margin-right:20px"
                                 onclick="check_address('<?php echo esc_html( $zume_key ); ?>')" value="edit"
                                 id="submit_<?php echo esc_html( $zume_key ); ?>"><?php echo esc_html__( 'Update', 'zume' ) ?></button>
                         <span class="align-right"><button type="submit" class="button hollow alert" name="type"

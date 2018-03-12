@@ -26,8 +26,9 @@ $zume_three_month_plan = Zume_Three_Month_Plan::plan_items_filter( get_user_meta
         <div id="inner-content" class="grid-x grid-margin-x grid-padding-x">
             <div class="large-8 medium-8 small-12 grid-margin-x cell" style="max-width: 900px; margin: 0 auto">
                 <h3 class="section-header"><?php echo esc_html__( 'Three Month Plan', 'zume' )?> </h3>
-                <form data-abide method="post">
 
+
+                <form data-abide method="post">
                     <?php wp_nonce_field( "thee_month_plan_" . get_current_user_id(), "thee_month_plan_nonce", false, true ); ?>
 
                     <table class="hover stack">
@@ -36,7 +37,7 @@ $zume_three_month_plan = Zume_Three_Month_Plan::plan_items_filter( get_user_meta
                         $zume_index = 0;
                         foreach ( $zume_fields as $zume_key => $zume_label ) : $zume_index++;
                         ?>
-                        <tr style="vertical-align: top;">
+                        <tr>
                             <td>
                                 <label for="<?php echo esc_attr( $zume_key ) ?>"><strong>(<?php echo esc_attr( $zume_index ) ?>) <?php echo esc_html( $zume_label )?></strong></label>
                                 <textarea id="<?php echo esc_attr( $zume_key ) ?>" name="<?php echo esc_attr( $zume_key ) ?>" rows="3"><?php echo esc_html( $zume_three_month_plan[ $zume_key ] ?? '' ) ?></textarea>
@@ -111,7 +112,7 @@ class Zume_Three_Month_Plan
         }
 
         $active_keys = array_keys( self::plan_items() );
-        $deprecated_plan_items = self::plan_items( false );
+        $deprecated_keys = self::plan_items( false );
 
         if ( ! is_array( $plan_meta ) || empty( $plan_meta ) ) {
             $plan_meta = [];
@@ -125,7 +126,7 @@ class Zume_Three_Month_Plan
         }
 
         // Deprecated keys
-        foreach ( $deprecated_plan_items as $deprecated_key ) {
+        foreach ( $deprecated_keys as $deprecated_key ) {
             if ( isset( $plan_meta[ $deprecated_key ] ) ) {
                 unset( $plan_meta[$deprecated_key] );
             }
@@ -134,6 +135,7 @@ class Zume_Three_Month_Plan
         return $plan_meta;
 
     }
+
 
     public static function process_post( $submitted_plan ) {
 
