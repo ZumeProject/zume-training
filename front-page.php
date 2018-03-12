@@ -153,7 +153,7 @@ if ( is_user_logged_in() ) {
                         <h4 class="" style="color:white">
                             <span style="font-size:2.4rem;vertical-align:middle">&#10104</span>
                             <span style="font-size:1.5rem; display:inline-block; margin: 0 10px">
-                             <?php esc_html_e( "Invite some friends", 'zume' ) ?></span>
+                             <?php esc_html_e( "Host a training", 'zume' ) ?></span>
                             <img class=""
                                  src="<?php echo esc_url( get_stylesheet_directory_uri() ) . '/assets/images/home/'; ?>host-training.svg"
                                  alt="" width="50"/>
