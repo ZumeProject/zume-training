@@ -102,6 +102,16 @@ class Zume_REST_API {
                 }
             ),
         ) );
+
+        register_rest_route( $namespace, '/unlink_plan_from_group', array(
+            array(
+                'methods'         => WP_REST_Server::CREATABLE,
+                'callback'        => array( $this, 'unlink_plan_from_group' ),
+                "permission_callback" => function () {
+                    return current_user_can( 'zume' );
+                }
+            ),
+        ) );
     }
 
     /**
@@ -216,6 +226,26 @@ class Zume_REST_API {
             } else {
                 return new WP_Error( "log_status_error", $result["message"], array( 'status' => 400 ) );
             }
+        } else {
+            return new WP_Error( "log_param_error", "Please provide a valid address", array( 'status' => 400 ) );
+        }
+    }
+
+    /**
+     * Update Session Complete
+     *
+     * @param WP_REST_Request $request
+     * @access public
+     * @since 0.1
+     * @return string|WP_Error
+     */
+    public function unlink_plan_from_group( WP_REST_Request $request){
+        $params = $request->get_params();
+        if ( isset( $params['group_key'] ) ) {
+
+            $result = Zume_Three_Month_Plan::unlink_plan_from_group( $params['group_key'] );
+            return $result;
+
         } else {
             return new WP_Error( "log_param_error", "Please provide a valid address", array( 'status' => 400 ) );
         }

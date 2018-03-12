@@ -160,6 +160,16 @@ jQuery(document).ready( function() {
             jQuery( this ).find( remove ).hide();
         }
     );
+
+    jQuery( "div#display-public-key" ).hover(
+        function() {
+            var remove = jQuery('span.display-public-key-unlink');
+            jQuery( this ).find( remove ).show();
+        }, function() {
+            var remove = jQuery('span.display-public-key-unlink');
+            jQuery( this ).find( remove ).hide();
+        }
+    );
 })
 
 function remove_coleader( email, group_id, li_id ) {
@@ -215,14 +225,54 @@ function connect_plan_to_group( public_key ) {
         },
     })
         .done(function (data) {
-            jQuery( '#linked_group' ).html('almost done :)'); // @todo finish
+            jQuery('#display-group-name').html( data.group_name )
+            jQuery('#add-public-key').hide();
+            jQuery('#display-public-key').show();
+            jQuery('.public-key-error').remove();
+            jQuery('#unlink-three-month-plan').attr('onclick', 'unlink_three_month_plan(\''+data.key+'\')');
+        })
+        .fail(function (err) {
+            jQuery( '#linked_group' ).append( '<span class="public-key-error">'+zumeMaps.translations.failed_to_change+'</span>' );
+        })
+}
 
+function unlink_three_month_plan( group_key ) {
+
+    return jQuery.ajax({
+        type: "POST",
+        data: JSON.stringify({"group_key": group_key }),
+        contentType: "application/json; charset=utf-8",
+        dataType: "json",
+        url: zumeMaps.root + 'zume/v1/unlink_plan_from_group',
+        beforeSend: function(xhr) {
+            xhr.setRequestHeader('X-WP-Nonce', zumeMaps.nonce);
+        },
+    })
+        .done(function (data) {
+            jQuery('#add-public-key').show();
+            jQuery('#display-public-key').hide();
         })
         .fail(function (err) {
             jQuery( '#linked_group' ).append( '<span>'+zumeMaps.translations.failed_to_change+'</span>' );
         })
 }
 
+function print_element(divId) {
+    var content = document.getElementById(divId).innerHTML;
+    var mywindow = window.open('', 'Print', 'height=600,width=800');
+
+    mywindow.document.write('<html><head><title>'+zumeMaps.translations.print_copyright+'</title>');
+    mywindow.document.write('</head><body >');
+    mywindow.document.write(content);
+    mywindow.document.write('<div>'+zumeMaps.translations.print_copyright+'</div>');
+    mywindow.document.write('</body></html>');
+
+    mywindow.document.close();
+    mywindow.focus()
+    mywindow.print();
+    mywindow.close();
+    return true;
+}
 
 
 
