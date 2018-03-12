@@ -30,17 +30,17 @@ get_header();
 
                 <br>
                 <br>
-                <h3>Translation Progress</h3>
-                <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vS3rJ_shcus0nIrYWHzFpWY5F5UfiYWb4ql8kaNTtWDf5htAA8-KmiVwV49RYWIxZumfI6zVH5fY4ZG/pubhtml?gid=2023643321&amp;single=true&amp;widget=true&amp;headers=false"
-                        width="60%" height="400px"
-                ></iframe>
-                <br>
-                <br><br>
-                <h3>Progress for each language</h3>
-                <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vS3rJ_shcus0nIrYWHzFpWY5F5UfiYWb4ql8kaNTtWDf5htAA8-KmiVwV49RYWIxZumfI6zVH5fY4ZG/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false"
-                        width="60%"
-                        height="1000px"
-                ></iframe>
+<!--                <h3>Translation Progress</h3>-->
+<!--                <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vS3rJ_shcus0nIrYWHzFpWY5F5UfiYWb4ql8kaNTtWDf5htAA8-KmiVwV49RYWIxZumfI6zVH5fY4ZG/pubhtml?gid=2023643321&amp;single=true&amp;widget=true&amp;headers=false"-->
+<!--                        width="60%" height="400px"-->
+<!--                ></iframe>-->
+<!--                <br>-->
+<!--                <br><br>-->
+<!--                <h3>Progress for each language</h3>-->
+<!--                <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vS3rJ_shcus0nIrYWHzFpWY5F5UfiYWb4ql8kaNTtWDf5htAA8-KmiVwV49RYWIxZumfI6zVH5fY4ZG/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false"-->
+<!--                        width="60%"-->
+<!--                        height="1000px"-->
+<!--                ></iframe>-->
             </main>
         </div>
     </div>
