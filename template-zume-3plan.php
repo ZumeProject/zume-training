@@ -85,7 +85,7 @@ zume_write_log( $zume_three_month_plan );
                                                    class="profile-input input-group-field"
                                                    name="public_key"
                                                    id="public_key"
-                                                   value=""
+                                                   value="<?php echo esc_html( $zume_three_month_plan[ $zume_key ] ?? '' ) ?>"
                                             />
                                             <div class="input-group-button">
                                                 <input type="button" class="button"
@@ -94,10 +94,8 @@ zume_write_log( $zume_three_month_plan );
                                                        id="public_key_button">
                                             </div>
                                         </div>
-                                        <div id="display-public-key grid-x" style="display:none;">
-                                            <div class="cell"></div>
-                                            <div class="cell medium-2 small-2"></div>
-                                            <?php esc_attr_e( 'Connected to group', 'zume' ) ?>: <span></span><span></span>
+                                        <div id="display-public-key" style="display:none;">
+                                            <?php esc_attr_e( 'Connected to group', 'zume' ) ?>: <span id="display-group-name"></span> <span><a onclick=""><?php esc_attr_e( 'Unlink Group', 'zume' ) ?></a> </span>
                                         </div>
                                         <script>
                                             if( <?php $zume_three_month_plan['linked'] ?> ) {
@@ -113,7 +111,7 @@ zume_write_log( $zume_three_month_plan );
                                         /**
                                          * Description area with a quick list of groups
                                          */
-                                        if ( count( $zume_groups ) > 0 ) {
+                                        if ( $zume_groups ) {
                                             echo '<span class="text-small">'.esc_attr__( 'Add one of your groups? ', 'zume' ).'</span>';
 
                                             $zume_colead_groups = Zume_Dashboard::get_colead_groups();
@@ -177,8 +175,8 @@ endforeach; ?>
 
                                             </div>
                                         </div>
-                                    <?php endif;
-/* End check for user content */ endforeach; /* End loop through users plans */ ?>
+                                    <?php endif; /* End check for user content */
+                                     endforeach; /* End loop through users plans */ ?>
                                     </ul>
                                 <?php else : ?>
                                     <p class="small text-gray" style="padding: 0 .5rem;"><?php esc_attr_e( 'No plans found', 'zume' ) ?></p>

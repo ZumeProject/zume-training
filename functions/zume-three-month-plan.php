@@ -202,7 +202,7 @@ class Zume_Three_Month_Plan
         // get group key
         $group_key = Zume_Dashboard::verify_public_key_for_group( $public_key );
         if ( ! $group_key ) {
-            return new WP_Error('key_not_found', 'The key supplied was not found' );
+            return new WP_Error( 'key_not_found', 'The key supplied was not found' );
         }
 
         // open group by key
@@ -212,7 +212,7 @@ class Zume_Three_Month_Plan
         }
 
         // user to three month plan list of group
-        if( ! array_search( get_current_user_id(), $group_meta['three_month_plans'] ) ) {
+        if ( ! array_search( get_current_user_id(), $group_meta['three_month_plans'] ) ) {
             array_push( $group_meta['three_month_plans'], get_current_user_id() );
             update_user_meta( $group_meta['owner'], $group_meta['key'], $group_meta );
         }
@@ -226,8 +226,7 @@ class Zume_Three_Month_Plan
 
 
         // return true
-
-        return $public_key;
+        return $group_meta;
     }
 
     public static function is_user_plan_linked_to_group() {
