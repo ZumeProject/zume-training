@@ -645,7 +645,8 @@ $zume_highest_session = Zume_Dashboard::get_highest_session( $zume_current_user 
                 </div>
                 <div class="cell">
                     <label for="meeting_time"><?php echo esc_html__( 'Planned Meeting Time', 'zume' ) ?></label>
-                    <input type="text" value="" name="meeting_time" id="meeting_time" required/>
+                    <input placeholder="<?php esc_attr_e( 'example: Saturday 7PM', 'zume' ) ?>"
+                           type="text" value="" name="meeting_time" id="meeting_time" required/>
                 </div>
                 <div class="cell">
                     <label for="validate_addressnew"><?php echo esc_html__( 'Address', 'zume' ) ?></label>
