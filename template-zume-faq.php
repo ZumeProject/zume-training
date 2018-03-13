@@ -145,6 +145,19 @@ Template Name: Zúme FAQ
                         <h3 class="secondary"><?php esc_html_e( 'How are the groups started by trainees aligned or organized?', 'zume' ) ?></h3>
                         <?php esc_html_e( 'It depends. If the trainees come out of a particular church or denomination or network then the most natural thing is for the newly formed groups to be connected with those existing churches, denomination, or network. If desired, however, a new network can be formed from the groups that start. A third alternative would be for the new groups to join with other already existing networks of simple churches. Many of the people involved in developing Zúme come from such networks so we can help arrange that if desired.', 'zume' ) ?>
                     </div>
+
+                    <?php
+                    /**
+                     * Additional FAQs section
+                     */
+                    if (have_posts()) :
+                        while (have_posts()) :
+                            the_post();
+                            the_content();
+                        endwhile;
+                    endif;
+                    ?>
+
                 </div> <!-- end faq stack of questions-->
 
             </div>
@@ -152,24 +165,19 @@ Template Name: Zúme FAQ
         </div>
 
         <br><br>
-        <!-- Goals -->
-        <div class="grid-x">
-            <div class="cell vertical-padding" style="background-color:#323A68;">
-                <div class="grid-x grid-margin-x grid-padding-x grid-margin-y">
-                    <div class="large-2 cell"></div>
-                    <div class="cell large-8" style="color: white;">
-                        <h3 style="color: white;"><?php esc_html_e( 'Goals of the Zúme Project:', 'zume' ) ?></h3>
-                        <p>
-                            <?php esc_html_e( 'Zúme means yeast in Greek. In Matthew 13:33 Jesus is quoted as saying, "The Kingdom of Heaven is like a woman who took yeast and mixed it into a large amount of flour until it was all leavened." This illustrates how ordinary people, using ordinary resources, can have an extraordinary impact for the Kingdom of God. Zúme aims to equip and empower ordinary believers to reach every neighborhood.', 'zume' ) ?>
-                        </p>
-                        <p>
-                            <?php esc_html_e( 'Make disciples in every Omega District globally, using an online training platform focused on equipping participants in the basic disciple-making and simple church planting multiplication principles, processes, and practices.', 'zume' ) ?>
-                        </p>
-                    </div>
-                    <div class="large-2 cell"></div>
-                </div>
-
+        <!-- Goals of the Zume Project -->
+        <div class="grid-x grid-margin-x grid-margin-y vertical-padding" style="background-color:#323A68;">
+            <div class="large-2 cell"></div>
+            <div class="cell large-8" style="color: white;">
+                <h3 class="secondary" style="color: white;"><?php esc_html_e( 'Goals of the Zúme Project:', 'zume' ) ?></h3>
+                <p>
+                    <?php esc_html_e( 'Zúme means yeast in Greek. In Matthew 13:33, Jesus is quoted as saying, "The Kingdom of Heaven is like a woman who took yeast and mixed it into a large amount of flour until it was all leavened." This illustrates how ordinary people, using ordinary resources, can have an extraordinary impact for the Kingdom of God. Zúme aims to equip and empower ordinary believers to reach every neighborhood.', 'zume' ) ?>
+                </p>
+                <p>
+                    <?php esc_html_e( 'Make disciples in every Omega District globally, using an online training platform focused on equipping participants in the basic disciple-making and simple church planting multiplication principles, processes, and practices.', 'zume' ) ?>
+                </p>
             </div>
+            <div class="large-2 cell"></div>
         </div>
 
     </div> <!-- end #inner-content -->

@@ -280,6 +280,7 @@ class Zume_PDF_Download_Post_Type
     public function meta_box_setup()
     {
         add_meta_box( $this->post_type . '_scribes', 'Downloads', array( $this, 'load_downloads_meta_box' ), $this->post_type, 'normal', 'high' );
+        add_meta_box( $this->post_type . '_links', 'Links', array( $this, 'load_links_meta_box' ), $this->post_type, 'normal', 'high' );
     } // End meta_box_setup()
 
     /**
@@ -300,10 +301,9 @@ class Zume_PDF_Download_Post_Type
      * @access public
      * @since  0.1.0
      */
-    public function load_audio_meta_box()
+    public function load_links_meta_box()
     {
-        echo 'These numeric ids below refer to the unique Vimeo id. <br>';
-        $this->meta_box_content( 'toolkit' ); // prints
+        $this->meta_box_content( 'links' ); // prints
     }
 
     /**
@@ -479,214 +479,223 @@ class Zume_PDF_Download_Post_Type
 
         // Project Update Information Section
         $fields['33'] = [
-            'name'        => 'Zúme Guidebook (33)',
+            'name'        => '(33) Zúme Guidebook ',
             'description' => '',
             'type'        => 'link',
             'default'     => '33_en_zume_guidebook.pdf',
             'section'     => 'downloads',
         ];
         $fields['34'] = [
-            'name'        => 'Welcome to Zúme Script (34)',
+            'name'        => '(34) Welcome to Zúme Script',
             'description' => '',
             'type'        => 'link',
             'default'     => '34_en_welcome_to_zume.pdf',
             'section'     => 'downloads',
         ];
         $fields['35'] = [
-            'name'        => 'Teach them to Obey Script (35)',
+            'name'        => '(35) Teach them to Obey Script',
             'description' => '',
             'type'        => 'link',
             'default'     => '35_en_teach_them_to_obey.pdf',
             'section'     => 'downloads',
         ];
         $fields['36'] = [
-            'name'        => 'Spiritual Breathing Script (36)',
+            'name'        => '(36) Spiritual Breathing Script ',
             'description' => '',
             'type'        => 'link',
             'default'     => '36_en_spiritual_breathing.pdf',
             'section'     => 'downloads',
         ];
         $fields['37'] = [
-            'name'        => 'S.O.A.P.S. Script (37)',
+            'name'        => '(37) S.O.A.P.S. Script ',
             'description' => '',
             'type'        => 'link',
             'default'     => '37_en_soaps.pdf',
             'section'     => 'downloads',
         ];
         $fields['38'] = [
-            'name'        => 'Accountability Groups Script (38)',
+            'name'        => '(38) Accountability Groups Script ',
             'description' => '',
             'type'        => 'link',
             'default'     => '38_en_accountability_groups.pdf',
             'section'     => 'downloads',
         ];
         $fields['39'] = [
-            'name'        => 'Producers vs Consumers Script (39)',
+            'name'        => '(39) Producers vs Consumers Script ',
             'description' => '',
             'type'        => 'link',
             'default'     => '39_en_producers_vs_consumers.pdf',
             'section'     => 'downloads',
         ];
         $fields['40'] = [
-            'name'        => 'Prayer Cycle Script (40)',
+            'name'        => '(40) Prayer Cycle Script ',
             'description' => '',
             'type'        => 'link',
             'default'     => '40_en_prayer_cycle.pdf',
             'section'     => 'downloads',
         ];
         $fields['41'] = [
-            'name'        => 'List of 100 Script (41)',
+            'name'        => '(41) List of 100 Script ',
             'description' => '',
             'type'        => 'link',
             'default'     => '41_en_list_of_100.pdf',
             'section'     => 'downloads',
         ];
         $fields['42'] = [
-            'name'        => 'Spiritual Economy Script (42)',
+            'name'        => '(42) Spiritual Economy Script ',
             'description' => '',
             'type'        => 'link',
             'default'     => '42_en_spiritual_economy.pdf',
             'section'     => 'downloads',
         ];
         $fields['43'] = [
-            'name'        => 'The Gospel Script (43)',
+            'name'        => '(43) The Gospel Script ',
             'description' => '',
             'type'        => 'link',
             'default'     => '43_en_the_gospel.pdf',
             'section'     => 'downloads',
         ];
         $fields['44'] = [
-            'name'        => 'Baptism Script (44)',
+            'name'        => '(44) Baptism Script',
             'description' => '',
             'type'        => 'link',
             'default'     => '44_en_baptism.pdf',
             'section'     => 'downloads',
         ];
         $fields['45'] = [
-            'name'        => '3 Minute Testimony Script (45)',
+            'name'        => '(45) 3 Minute Testimony Script ',
             'description' => '',
             'type'        => 'link',
             'default'     => '45_en_3_minute_testimony.pdf',
             'section'     => 'downloads',
         ];
         $fields['46'] = [
-            'name'        => 'Greatest Blessing Script (46)',
+            'name'        => '(46) Greatest Blessing Script',
             'description' => '',
             'type'        => 'link',
             'default'     => '46_en_greatest_blessing.pdf',
             'section'     => 'downloads',
         ];
         $fields['47'] = [
-            'name'        => 'Duckling Discipleship Script (47)',
+            'name'        => '(47) Duckling Discipleship Script ',
             'description' => '',
             'type'        => 'link',
             'default'     => '47_en_duckling_discipleship.pdf',
             'section'     => 'downloads',
         ];
         $fields['48'] = [
-            'name'        => 'Eyes to See Script (48)',
+            'name'        => '(48) Eyes to See Script ',
             'description' => '',
             'type'        => 'link',
             'default'     => '48_en_eyes_to_see.pdf',
             'section'     => 'downloads',
         ];
         $fields['49'] = [
-            'name'        => 'Lord\'s Supper Script (49)',
+            'name'        => '(49) Lord\'s Supper Script ',
             'description' => '',
             'type'        => 'link',
             'default'     => '49_en_lords_supper.pdf',
             'section'     => 'downloads',
         ];
         $fields['50'] = [
-            'name'        => 'Prayer Walking Script (50)',
+            'name'        => '(50) Prayer Walking Script ',
             'description' => '',
             'type'        => 'link',
             'default'     => '50_en_prayer_walking.pdf',
             'section'     => 'downloads',
         ];
         $fields['51'] = [
-            'name'        => 'Person of Peace Script (51)',
+            'name'        => '(51) Person of Peace Script ',
             'description' => '',
             'type'        => 'link',
             'default'     => '51_en_person_of_peace.pdf',
             'section'     => 'downloads',
         ];
         $fields['52'] = [
-            'name'        => 'Faithfulness Script (52)',
+            'name'        => '(52) Faithfulness Script ',
             'description' => '',
             'type'        => 'link',
             'default'     => '52_en_faithfulness.pdf',
             'section'     => 'downloads',
         ];
         $fields['53'] = [
-            'name'        => '3/3 Groups Script (53)',
+            'name'        => '(53) 3/3 Groups Script ',
             'description' => '',
             'type'        => 'link',
             'default'     => '53_en_3_3_groups.pdf',
             'section'     => 'downloads',
         ];
         $fields['54'] = [
-            'name'        => 'Training Cycle Script (54)',
+            'name'        => '(54) Training Cycle Script ',
             'description' => '',
             'type'        => 'link',
             'default'     => '54_en_training_cycle.pdf',
             'section'     => 'downloads',
         ];
         $fields['55'] = [
-            'name'        => 'Leadership Cells Script (55)',
+            'name'        => '(55) Leadership Cells Script ',
             'description' => '',
             'type'        => 'link',
             'default'     => '55_en_leadership_cells.pdf',
             'section'     => 'downloads',
         ];
         $fields['56'] = [
-            'name'        => 'Non-Sequential Script (56)',
+            'name'        => '(56) Non-Sequential Script ',
             'description' => '',
             'type'        => 'link',
             'default'     => '56_en_non_sequential.pdf',
             'section'     => 'downloads',
         ];
         $fields['57'] = [
-            'name'        => 'Pace Script (57)',
+            'name'        => '(57) Pace Script ',
             'description' => '',
             'type'        => 'link',
             'default'     => '57_en_pace.pdf',
             'section'     => 'downloads',
         ];
         $fields['58'] = [
-            'name'        => 'Part of Two Churches Script (58)',
+            'name'        => '(58) Part of Two Churches Script ',
             'description' => '',
             'type'        => 'link',
             'default'     => '58_en_part_of_two_churches.pdf',
             'section'     => 'downloads',
         ];
         $fields['59'] = [
-            'name'        => 'Completion of Training Script (59)',
+            'name'        => '(59) Completion of Training Script ',
             'description' => '',
             'type'        => 'link',
             'default'     => '59_en_completion_of_training.pdf',
             'section'     => 'downloads',
         ];
         $fields['60'] = [
-            'name'        => 'Coaching Checklist Script (60)',
+            'name'        => '(60) Coaching Checklist Script ',
             'description' => '',
             'type'        => 'link',
             'default'     => '60_en_coaching_checklist.pdf',
             'section'     => 'downloads',
         ];
         $fields['61'] = [
-            'name'        => 'Leadeship in Networks Script (61)',
+            'name'        => '(61) Leadeship in Networks Script ',
             'description' => '',
             'type'        => 'link',
             'default'     => '61_en_leadeship_in_networks.pdf',
             'section'     => 'downloads',
         ];
         $fields['62'] = [
-            'name'        => 'Peer Mentoring Script (62)',
+            'name'        => '(62) Peer Mentoring Script ',
             'description' => '',
             'type'        => 'link',
             'default'     => '62_en_peer_mentoring.pdf',
             'section'     => 'downloads',
+        ];
+
+        /* Full links to files */
+        $fields['video_overview'] = [
+            'name'        => 'Video Overview Download',
+            'description' => 'This is the complete download link to download the video from Vimeo',
+            'type'        => 'link',
+            'default'     => 'https://player.vimeo.com/external/248149800.hd.mp4?s=3a6907fc2a263b3a7fa8050864dab149e498226b&profile_id=174&download=1',
+            'section'     => 'links',
         ];
 
 

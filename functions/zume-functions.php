@@ -220,5 +220,11 @@ function zume_images_uri( $sub_folder = '' ) {
 }
 
 function zume_files_uri() {
-    return site_url( '/wp-content/themes/zume-project-multilingual/assets/files/' ) . zume_current_language() . '/';
+    return site_url( '/wp-content/themes/zume-project-multilingual/downloads/' ) . zume_current_language() . '/';
+}
+
+function zume_home_id() {
+    $current_lang = zume_current_language();
+    $id = zume_get_home_translation_id( 'home', $current_lang );
+    return $id;
 }

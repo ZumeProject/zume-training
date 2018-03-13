@@ -179,12 +179,11 @@ class Zume_Dashboard {
     }
 
     public static function get_unique_public_key() {
-        global $wpdb;
-        $duplicate_check = 1;
-        while ( $duplicate_check != 0 ) {
-            $key = strtoupper( substr( bin2hex( random_bytes( 32 ) ), 0, 5 ) );
-            $duplicate_check = $wpdb->get_var( $wpdb->prepare( "SELECT count(*) FROM $wpdb->usermeta WHERE meta_key = %s", $key ) );
-        }
+        $key = bin2hex( random_bytes( 64 ) );
+        $key = str_replace( '0', '', $key );
+        $key = str_replace( 'O', '', $key );
+        $key = str_replace( 'o', '', $key );
+        $key = strtoupper( substr( $key, 0, 5 ) );
         return $key;
     }
 
@@ -631,28 +630,54 @@ class Zume_Dashboard {
      */
     public static function verify_public_key_for_group( $public_key ) {
         global $wpdb;
-        $results = $wpdb->get_results( $wpdb->prepare( "
-                  SELECT meta_key 
+
+        $public_key = self::filter_public_key( $public_key );
+
+        $results = $wpdb->get_var( $wpdb->prepare( "
+                  SELECT meta_value 
                   FROM $wpdb->usermeta 
                   WHERE meta_key LIKE %s 
-                    AND meta_value LIKE %s",
+                    AND meta_value LIKE %s LIMIT 1",
             $wpdb->esc_like( 'zume_group' ). '%',
             '%'.$wpdb->esc_like( $public_key ).'%'
-        ), ARRAY_A );
+        ) );
 
-        if ( empty( $result ) ) {
+        if ( empty( $results ) ) {
             return false;
         }
-        zume_write_log( $results );
 
-        foreach ( $results as $result ) {
-            $group_meta = self::verify_group_array_filter( $result );
-            if ( $public_key == $group_meta['public_key'] ) {
-                return $group_meta['key'];
-            }
+        $group_meta = self::verify_group_array_filter( $results );
+
+        $group_meta['public_key'] = strtoupper( $group_meta['public_key'] );
+        $public_key = strtoupper( $public_key );
+        if ( $public_key == $group_meta['public_key'] ) {
+            return $group_meta['key'];
         }
 
         return false;
+    }
+
+    public static function filter_public_key( $public_key ) {
+        $fail = '00000'; // returns a false key
+
+        // must not be empty
+        if ( empty( $public_key ) ) {
+            return $fail;
+        }
+
+        // must be alphanumberic
+        if ( ! ctype_alnum( $public_key ) ) {
+            return $fail;
+        }
+
+        // must have 5 digits
+        if ( ! strlen( $public_key ) === 5 ) {
+            return $fail;
+        }
+
+        $public_key = sanitize_key( $public_key );
+
+        return $public_key;
     }
 
     /**

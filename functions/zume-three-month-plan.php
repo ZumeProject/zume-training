@@ -37,9 +37,7 @@ class Zume_Three_Month_Plan
         }
 
         $active_keys = [
-            'public_key' => '',
             'group_key' => '',
-            'linked' => false,
             'people_to_share_with' => '',
             'people_for_accountablity' => '',
             'people_to_challenge' => '',
@@ -55,7 +53,10 @@ class Zume_Three_Month_Plan
             'people_for_zume' => '',
             'other_commitments' => '',
         ];
-        $deprecated_keys = [];
+        $deprecated_keys = [
+            'linked',
+            'public_key',
+        ];
 
         // Active keys
         foreach ( $active_keys as $key => $value ) {
@@ -77,7 +78,6 @@ class Zume_Three_Month_Plan
 
     public static function plan_labels( $key = null ) {
         $active_plan_items = [
-            'public_key' => __( 'Group Key (optional)', 'zume' ),
             'people_to_share_with' => __( 'I will share My Story [Testimony] and God’s Story [the Gospel] with the following individuals:', 'zume' ),
             'people_for_accountablity' => __( 'I will invite the following people to begin an Accountability Group with me:', 'zume' ),
             'people_to_challenge' => __( 'I will challenge the following people to begin their own Accountability Groups and train them how to do it:', 'zume' ),
@@ -196,8 +196,18 @@ class Zume_Three_Month_Plan
         update_user_meta( get_current_user_id(), 'three_month_plan', self::plan_items_filter() );
     }
 
+    public static function get_group_name_by_group_key( $group_key ) {
+        $group_meta = Zume_Dashboard::get_group_by_key( $group_key );
+        return $group_meta['group_name'];
+    }
+
+    /**
+     * Connect to a group via a public key
+     *
+     * @param $public_key
+     * @return array|bool|WP_Error
+     */
     public static function connect_plan_to_group( $public_key ) {
-        // todo add logic for connecting plan to group
 
         // get group key
         $group_key = Zume_Dashboard::verify_public_key_for_group( $public_key );
@@ -224,12 +234,49 @@ class Zume_Three_Month_Plan
         $user_three_month_plan['public_key'] = $public_key;
         update_user_meta( get_current_user_id(), 'three_month_plan', $user_three_month_plan );
 
-
         // return true
         return $group_meta;
     }
 
-    public static function is_user_plan_linked_to_group() {
+    /**
+     * Unlink a plan from a group
+     *
+     * @param $group_key
+     * @return bool|WP_Error
+     */
+    public static function unlink_plan_from_group( $group_key ) {
+        // validate group key
+        if ( empty( $group_key ) ) {
+            return new WP_Error( 'key_failure', 'Failed to supply key' );
+        }
 
+        $group_meta = Zume_Dashboard::get_group_by_key( $group_key );
+        if ( ! $group_meta ) {
+            return new WP_Error( 'group_not_found', 'Group not found.' );
+        }
+
+        // validate the current user is listed in the three_month_plans section
+        if ( array_search( get_current_user_id(), $group_meta['three_month_plans'] ) === false ) {
+
+            return new WP_Error( 'user_not_found_in_group', 'User plan not found in group.' );
+
+        } else {
+
+            // remove from group
+            foreach ( $group_meta['three_month_plans'] as $three_month_plan ) {
+                if ( get_current_user_id() == $three_month_plan ) {
+                    unset( $group_meta['three_month_plans'] );
+                }
+            }
+            update_user_meta( $group_meta['owner'], $group_meta['key'], $group_meta );
+
+            // remove from three month plan
+            $three_month_plan = self::get_user_three_month_plan( get_current_user_id(), false );
+            unset( $three_month_plan['group_key'] );
+            update_user_meta( get_current_user_id(), 'three_month_plan', $three_month_plan );
+
+            return true;
+        }
     }
+
 }
