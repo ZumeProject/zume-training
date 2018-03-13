@@ -196,6 +196,7 @@ $zume_highest_session = Zume_Dashboard::get_highest_session( $zume_current_user 
                                                             <!-- Close group button -->
                                                             <?php if ( ! isset( $zume_value['no_edit'] ) ) : ?>
                                                                 <form method="post">
+                                                                    <?php wp_nonce_field( get_current_user_id(), 'zume_nonce' ) ?>
                                                                     <input type="hidden" name="key"
                                                                            value="<?php echo esc_html( $zume_key ); ?>"/>
                                                                     <span><button type="submit"
