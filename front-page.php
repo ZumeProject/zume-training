@@ -109,9 +109,6 @@ if ( is_user_logged_in() ) {
                         <h3 style="margin-bottom:0px">
                             <strong><?php esc_html_e( 'Want to start the training?', 'zume' ) ?></strong>
                         </h3>
-                        <h3 style="margin-bottom:0px">
-                            <strong><?php esc_html_e( 'Get started below', 'zume' ) ?></strong>
-                        </h3>
                     </div>
                     <div class="medium-2 small-1 cell"></div>
                 </div>
