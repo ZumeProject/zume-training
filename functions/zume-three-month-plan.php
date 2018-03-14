@@ -198,6 +198,10 @@ class Zume_Three_Month_Plan
 
     public static function get_group_name_by_group_key( $group_key ) {
         $group_meta = Zume_Dashboard::get_group_by_key( $group_key );
+        if ( ! $group_meta ) {
+            // unlink the group from the three month plan
+            self::unlink_plan_from_group( $group_key );
+        }
         return $group_meta['group_name'];
     }
 
@@ -242,25 +246,28 @@ class Zume_Three_Month_Plan
      * Unlink a plan from a group
      *
      * @param $group_key
-     * @return bool|WP_Error
+     *
      */
     public static function unlink_plan_from_group( $group_key ) {
-        // validate group key
+
+        // REMOVE FROM CURRENT USER THREE MONTH PLAN
+        $three_month_plan = self::get_user_three_month_plan( get_current_user_id(), false );
+        unset( $three_month_plan['group_key'] );
+        update_user_meta( get_current_user_id(), 'three_month_plan', $three_month_plan );
+
+
+        // REMOVE FROM GROUP
         if ( empty( $group_key ) ) {
-            return new WP_Error( 'key_failure', 'Failed to supply key' );
+            return;
         }
 
         $group_meta = Zume_Dashboard::get_group_by_key( $group_key );
         if ( ! $group_meta ) {
-            return new WP_Error( 'group_not_found', 'Group not found.' );
+            return;
         }
 
         // validate the current user is listed in the three_month_plans section
-        if ( array_search( get_current_user_id(), $group_meta['three_month_plans'] ) === false ) {
-
-            return new WP_Error( 'user_not_found_in_group', 'User plan not found in group.' );
-
-        } else {
+        if ( array_search( get_current_user_id(), $group_meta['three_month_plans'] ) === true ) {
 
             // remove from group
             foreach ( $group_meta['three_month_plans'] as $three_month_plan ) {
@@ -270,13 +277,8 @@ class Zume_Three_Month_Plan
             }
             update_user_meta( $group_meta['owner'], $group_meta['key'], $group_meta );
 
-            // remove from three month plan
-            $three_month_plan = self::get_user_three_month_plan( get_current_user_id(), false );
-            unset( $three_month_plan['group_key'] );
-            update_user_meta( get_current_user_id(), 'three_month_plan', $three_month_plan );
-
-            return true;
         }
+        return;
     }
 
 }
