@@ -68,78 +68,80 @@ class Zume_Overview_Content {
 
         <div class="grid-x">
 
-            <div class="medium-3 cell callout sticky" data-sticky data-top-anchor="overview" data-sticky-on="medium" data-margin-top="5">
-                <?php self::menu() ?>
+            <div class="cell large-3 left" data-sticky-container>
+                <div class="sticky" data-sticky data-top-anchor="overview" data-sticky-on="large" data-margin-top="10" style="min-width:150px">
+                    <?php self::menu() ?>
+                </div>
             </div>
-            <div id="left-column" class="medium-auto cell">
+            <div id="left-column" class="large-auto cell" style="max-width: 1000px">
+                <h2 class="" style="font-weight: 600; max-width: 800px; text-align: center"><?php esc_html_e( "Sessions Overview", 'zume' ) ?></h2>
                 <div id="overview">
-                    <h3></h3>
                     <section class="vertical-padding" id="session1" data-magellan-target="session1">
 
-                        <h2 class="vertical-padding center"><?php echo esc_html__( 'Session 1', 'zume' ) ?></h2>
+                        <h3 class="vertical-padding" style="margin-top:20px"><?php echo esc_html__( 'Session 1', 'zume' ) ?></h3>
                         <?php self::session_overview_1(); ?>
                     </section>
 
                     <h3></h3>
                     <section class="vertical-padding"  id="session2" data-magellan-target="session2">
 
-                        <h2 class="vertical-padding center"><?php echo esc_html__( "Session 2", 'zume' ) ?></h2>
+                        <h3 class="vertical-padding"><?php echo esc_html__( "Session 2", 'zume' ) ?></h3>
                         <?php self::session_overview_2(); ?>
                     </section>
 
                     <h3></h3>
                     <section class="vertical-padding" id="session3" data-magellan-target="session3">
 
-                        <h2 class="vertical-padding center"><?php echo esc_html__( "Session 3", 'zume' ) ?></h2>
+                        <h3 class="vertical-padding"><?php echo esc_html__( "Session 3", 'zume' ) ?></h3>
                         <?php self::session_overview_3(); ?>
                     </section>
 
                     <h3></h3>
                     <section class="vertical-padding" id="session4" data-magellan-target="session4">
 
-                        <h2 class="vertical-padding center"><?php echo esc_html__( "Session 4", 'zume' ) ?></h2>
+                        <h3 class="vertical-padding"><?php echo esc_html__( "Session 4", 'zume' ) ?></h3>
                         <?php self::session_overview_4(); ?>
                     </section>
 
                     <h3></h3>
                     <section class="vertical-padding" id="session5" data-magellan-target="session5">
 
-                        <h2 class="vertical-padding center"><?php echo esc_html__( "Session 5", 'zume' ) ?></h2>
+                        <h3 class="vertical-padding"><?php echo esc_html__( "Session 5", 'zume' ) ?></h3>
                         <?php self::session_overview_5(); ?>
                     </section>
 
                     <h3></h3>
                     <section class="vertical-padding" id="session6" data-magellan-target="session6">
 
-                        <h2 class="vertical-padding center"><?php echo esc_html__( "Session 6", 'zume' ) ?></h2>
+                        <h3 class="vertical-padding"><?php echo esc_html__( "Session 6", 'zume' ) ?></h3>
                         <?php self::session_overview_6(); ?>
                     </section>
 
                     <h3></h3>
                     <section class="vertical-padding" id="session7" data-magellan-target="session7">
 
-                        <h2 class="vertical-padding center"><?php echo esc_html__( "Session 7", 'zume' ) ?></h2>
+                        <h3 class="vertical-padding"><?php echo esc_html__( "Session 7", 'zume' ) ?></h3>
                         <?php self::session_overview_7(); ?>
                     </section>
 
                     <h3></h3>
                     <section class="vertical-padding" id="session8" data-magellan-target="session8">
 
-                        <h2 class="vertical-padding center"><?php echo esc_html__( "Session 8", 'zume' ) ?></h2>
+                        <h3 class="vertical-padding"><?php echo esc_html__( "Session 8", 'zume' ) ?></h3>
                         <?php self::session_overview_8(); ?>
                     </section>
 
                     <h3></h3>
                     <section class="vertical-padding" id="session9" data-magellan-target="session9">
 
-                        <h2 class="vertical-padding center"><?php echo esc_html__( "Session 9", 'zume' ) ?></h2>
+                        <h3 class="vertical-padding"><?php echo esc_html__( "Session 9", 'zume' ) ?></h3>
                         <?php self::session_overview_9(); ?>
                     </section>
 
                     <h3></h3>
                     <section class="vertical-padding" id="session10" data-magellan-target="session10">
 
-                        <h2 class="vertical-padding center"><?php echo esc_html__( "Session 10 - Advanced Training", 'zume' ) ?></h2>
+                        <h3 class="vertical-padding"><?php echo esc_html__( "Session 10 - Advanced Training", 'zume' ) ?></h3>
                         <?php self::session_overview_10(); ?>
                     </section>
 
@@ -163,16 +165,16 @@ class Zume_Overview_Content {
         ?>
         <div  >
             <ul class="vertical menu" data-smooth-scroll>
-                <li><a href="#session1">Session 1</a></li>
-                <li><a href="#session2">Session 2</a></li>
-                <li><a href="#session3">Session 3</a></li>
-                <li><a href="#session4">Session 4</a></li>
-                <li><a href="#session5">Session 5</a></li>
-                <li><a href="#session6">Session 6</a></li>
-                <li><a href="#session7">Session 7</a></li>
-                <li><a href="#session8">Session 8</a></li>
-                <li><a href="#session9">Session 9</a></li>
-                <li><a href="#session10">Session 10</a></li>
+                <li><a href="#session1"><?php esc_html_e( "Session 1", 'zume' ) ?></a></li>
+                <li><a href="#session2"><?php esc_html_e( "Session 2", 'zume' ) ?></a></li>
+                <li><a href="#session3"><?php esc_html_e( "Session 3", 'zume' ) ?></a></li>
+                <li><a href="#session4"><?php esc_html_e( "Session 4", 'zume' ) ?></a></li>
+                <li><a href="#session5"><?php esc_html_e( "Session 5", 'zume' ) ?></a></li>
+                <li><a href="#session6"><?php esc_html_e( "Session 6", 'zume' ) ?></a></li>
+                <li><a href="#session7"><?php esc_html_e( "Session 7", 'zume' ) ?></a></li>
+                <li><a href="#session8"><?php esc_html_e( "Session 8", 'zume' ) ?></a></li>
+                <li><a href="#session9"><?php esc_html_e( "Session 9", 'zume' ) ?></a></li>
+                <li><a href="#session10"><?php esc_html_e( "Session 10", 'zume' ) ?></a></li>
             </ul>
         </div>
 
@@ -198,9 +200,8 @@ class Zume_Overview_Content {
 
     public static function session_overview_1() {
         ?>
-        
+
         <div class="grid-x grid-margin-x">
-            <div class="large-2 cell"></div>
             <div class="large-8 cell">
 
                 <!-- Image Bar -->
@@ -222,7 +223,7 @@ class Zume_Overview_Content {
                     </div>
                 </div>
 
-                
+
 
                 <!-- Concepts -->
                 <div class="grid-x grid-margin-y">
@@ -264,7 +265,7 @@ class Zume_Overview_Content {
                     </div>
                 </div>
 
-                
+
 
                 <!-- Tools -->
                 <div class="grid-x grid-margin-y">
@@ -297,7 +298,7 @@ class Zume_Overview_Content {
                     </div>
                 </div>
 
-                
+
 
                 <!-- Practice -->
                 <div class="grid-x grid-margin-y">
@@ -318,7 +319,6 @@ class Zume_Overview_Content {
                 </div>
 
             </div>
-            <div class="large-2 cell"></div>
         </div>
 
         <?php
@@ -326,9 +326,8 @@ class Zume_Overview_Content {
 
     public static function session_overview_2() {
         ?>
-        
+
         <div class="grid-x grid-margin-y grid-margin-x">
-            <div class="large-2 cell"></div>
             <div class="large-8 cell">
 
                 <!-- Image Bar -->
@@ -352,7 +351,7 @@ class Zume_Overview_Content {
                     </div>
                 </div>
 
-                
+
 
                 <!-- Concepts -->
                 <div class="grid-x grid-margin-y grid-margin-y">
@@ -373,7 +372,7 @@ class Zume_Overview_Content {
                     </div>
                 </div>
 
-                
+
 
                 <!-- Tools -->
                 <div class="grid-x grid-margin-y grid-margin-y">
@@ -407,7 +406,7 @@ class Zume_Overview_Content {
 
                 </div>
 
-                
+
 
                 <!-- Practice -->
                 <div class="grid-x grid-margin-y grid-margin-y ">
@@ -439,16 +438,15 @@ class Zume_Overview_Content {
                 </div>
 
             </div>
-            <div class="large-2 cell"></div>
         </div>
         <?php
     }
 
     public static function session_overview_3() {
         ?>
-        
+
         <div class="grid-x grid-margin-y grid-margin-x">
-            <div class="large-2 cell"></div>
+
             <div class="large-8 cell">
 
                 <!-- Image Bar -->
@@ -475,7 +473,7 @@ class Zume_Overview_Content {
                     </div>
                 </div>
 
-                
+
 
                 <!-- Concepts -->
                 <div class="grid-x grid-margin-y">
@@ -509,7 +507,7 @@ class Zume_Overview_Content {
 
                 </div>
 
-                
+
 
                 <!-- Tools -->
                 <div class="grid-x grid-margin-y">
@@ -530,7 +528,7 @@ class Zume_Overview_Content {
                     </div>
                 </div>
 
-                
+
 
                 <!-- Practice -->
                 <div class="grid-x grid-margin-y">
@@ -552,16 +550,16 @@ class Zume_Overview_Content {
                 </div>
 
             </div>
-            <div class="large-2 cell"></div>
+
         </div>
         <?php
     }
 
     public static function session_overview_4() {
         ?>
-        
+
         <div class="grid-x grid-margin-y grid-margin-x">
-            <div class="large-2 cell"></div>
+
             <div class="large-8 cell">
 
                 <!-- Image Bar -->
@@ -586,7 +584,7 @@ class Zume_Overview_Content {
                     </div>
                 </div>
 
-                
+
 
                 <!-- Concepts -->
                 <div class="grid-x grid-margin-y">
@@ -631,7 +629,7 @@ class Zume_Overview_Content {
                     </div>
                 </div>
 
-                
+
 
                 <!-- Tools -->
                 <div class="grid-x grid-margin-y">
@@ -664,7 +662,7 @@ class Zume_Overview_Content {
                     </div>
                 </div>
 
-                
+
 
                 <!-- Practice -->
                 <div class="grid-x grid-margin-y">
@@ -697,16 +695,16 @@ class Zume_Overview_Content {
                     </div>
                 </div>
             </div>
-            <div class="large-2 cell"></div>
+
         </div>
         <?php
     }
 
     public static function session_overview_5() {
         ?>
-        
+
         <div class="grid-x grid-margin-y grid-margin-x">
-            <div class="large-2 cell"></div>
+
             <div class="large-8 cell">
 
                 <!-- Image Bar -->
@@ -731,7 +729,7 @@ class Zume_Overview_Content {
                     </div>
                 </div>
 
-                
+
 
                 <!-- Concepts -->
                 <div class="grid-x grid-margin-y">
@@ -752,7 +750,7 @@ class Zume_Overview_Content {
                     </div>
                 </div>
 
-                
+
 
                 <!-- Tools -->
                 <div class="grid-x grid-margin-y">
@@ -773,7 +771,7 @@ class Zume_Overview_Content {
                     </div>
                 </div>
 
-                
+
 
                 <!-- Practice -->
                 <div class="grid-x grid-margin-y">
@@ -805,16 +803,16 @@ class Zume_Overview_Content {
                 </div>
 
             </div>
-            <div class="large-2 cell"></div>
+
         </div>
         <?php
     }
 
     public static function session_overview_6() {
         ?>
-        
+
         <div class="grid-x grid-margin-y grid-margin-x">
-            <div class="large-2 cell"></div>
+
             <div class="large-8 cell">
 
                 <!-- Image Bar -->
@@ -839,7 +837,7 @@ class Zume_Overview_Content {
                     </div>
                 </div>
 
-                
+
 
                 <!-- Concepts -->
                 <div class="grid-x grid-margin-y">
@@ -860,7 +858,7 @@ class Zume_Overview_Content {
                     </div>
                 </div>
 
-                
+
 
                 <!-- Tools -->
                 <div class="grid-x grid-margin-y">
@@ -881,16 +879,16 @@ class Zume_Overview_Content {
                     </div>
                 </div>
             </div>
-            <div class="large-2 cell"></div>
+
         </div>
         <?php
     }
 
     public static function session_overview_7() {
         ?>
-        
+
         <div class="grid-x grid-margin-y grid-margin-x">
-            <div class="large-2 cell"></div>
+
             <div class="large-8 cell">
 
                 <!-- Image Bar -->
@@ -915,7 +913,7 @@ class Zume_Overview_Content {
                     </div>
                 </div>
 
-                
+
 
                 <!-- Concepts -->
                 <div class="grid-x grid-margin-y">
@@ -936,7 +934,7 @@ class Zume_Overview_Content {
                     </div>
                 </div>
 
-                
+
 
                 <!-- Practice -->
                 <div class="grid-x grid-margin-y">
@@ -958,16 +956,16 @@ class Zume_Overview_Content {
                 </div>
 
             </div>
-            <div class="large-2 cell"></div>
+
         </div>
         <?php
     }
 
     public static function session_overview_8() {
         ?>
-        
+
         <div class="grid-x grid-margin-y grid-margin-x">
-            <div class="large-2 cell"></div>
+
             <div class="large-8 cell">
 
                 <!-- Image Bar -->
@@ -993,7 +991,7 @@ class Zume_Overview_Content {
                     </div>
                 </div>
 
-                
+
 
                 <!-- Concepts -->
                 <div class="grid-x grid-margin-y">
@@ -1014,7 +1012,7 @@ class Zume_Overview_Content {
                     </div>
                 </div>
 
-                
+
 
                 <!-- Practice -->
                 <div class="grid-x grid-margin-y">
@@ -1036,16 +1034,16 @@ class Zume_Overview_Content {
                 </div>
 
             </div>
-            <div class="large-2 cell"></div>
+
         </div>
         <?php
     }
 
     public static function session_overview_9() {
         ?>
-        
+
         <div class="grid-x grid-margin-y grid-margin-x">
-            <div class="large-2 cell"></div>
+
             <div class="large-8 cell">
 
                 <!-- Image Bar -->
@@ -1070,7 +1068,7 @@ class Zume_Overview_Content {
                     </div>
                 </div>
 
-                
+
 
                 <!-- Concepts -->
                 <div class="grid-x grid-margin-y">
@@ -1115,7 +1113,7 @@ class Zume_Overview_Content {
                     </div>
                 </div>
 
-                
+
 
                 <!-- Practice -->
                 <div class="grid-x grid-margin-y">
@@ -1137,16 +1135,16 @@ class Zume_Overview_Content {
                 </div>
 
             </div>
-            <div class="large-2 cell"></div>
+
         </div>
         <?php
     }
 
     public static function session_overview_10() {
         ?>
-        
+
         <div class="grid-x grid-margin-y grid-margin-x">
-            <div class="large-2 cell"></div>
+
             <div class="large-8 cell">
 
                 <!-- Image Bar -->
@@ -1172,7 +1170,7 @@ class Zume_Overview_Content {
                     </div>
                 </div>
 
-                
+
 
                 <!-- Concepts -->
                 <div class="grid-x grid-margin-y">
@@ -1193,7 +1191,7 @@ class Zume_Overview_Content {
                     </div>
                 </div>
 
-                
+
 
                 <!-- Tools -->
                 <div class="grid-x grid-margin-y">
@@ -1226,7 +1224,7 @@ class Zume_Overview_Content {
 
                 </div>
 
-                
+
 
                 <!-- Practice -->
                 <div class="grid-x grid-margin-y">
@@ -1249,7 +1247,7 @@ class Zume_Overview_Content {
                 </div>
 
             </div>
-            <div class="large-2 cell"></div>
+
         </div>
         <?php
     }

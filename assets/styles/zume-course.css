@@ -436,3 +436,13 @@ dl, ol, ul {
 .text-uppercase {
     text-transform: uppercase;
 }
+
+#overview h3.vertical-padding {
+    max-width:800px;
+    background: #323a68;
+    color: white;
+    padding: 5px;
+    margin-top:100px;
+    margin-bottom: 30px;
+    text-align: center;
+}
