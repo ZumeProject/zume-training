@@ -2903,7 +2903,23 @@ class Zume_Course_Content {
                     <div class="grid-x grid-margin-x grid-margin-y">
                         <div class="large-3 cell activity-title"><?php esc_html_e( 'PRAY', 'zume' ) ?></div>
                         <div class="large-9 cell activity-description">
-                            <?php esc_html_e( "Ask God what He specifically wants you to do with the basic disciple-making tools and techniques you have learned over these last nine sessions. Remember His words about Faithfulness.", 'zume' ) ?>
+                            <p>
+                                <?php esc_html_e( "Ask God what He specifically wants you to do with the basic disciple-making tools and techniques you have learned over these last nine sessions. You can remember them in terms of the Greatest Blessing.", 'zume' ) ?>
+                            </p>
+                            <ul>
+                                <li>
+                                    <?php esc_html_e( "It's a Blessing to ... S.O.A.P.S. Bible Reading, Accountability Groups, Prayer Cycle", 'zume' ) ?>
+                                </li>
+                                <li>
+                                    <?php esc_html_e( "It's a Great Blessing to ... Share your 3-Minute Testimony and God's Story, Prayer Walking", 'zume' ) ?>
+                                </li>
+                                <li>
+                                    <?php esc_html_e( "It's a Greater Blessing to ... Start a 3/3rds Group", 'zume' ) ?>
+                                </li>
+                                <li>
+                                    <?php esc_html_e( "It's the Greatest Blessing to ... Start a Zúme Group", 'zume' ) ?>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                     <!-- grid-x -->
@@ -2919,7 +2935,13 @@ class Zume_Course_Content {
                     <div class="grid-x grid-margin-x grid-margin-y">
                         <div class="large-3 cell activity-title"><?php esc_html_e( 'COMPLETE', 'zume' ) ?></div>
                         <div class="large-9 cell activity-description">
-                            <?php esc_html_e( "Use the rest of your time to complete the 3-Month Plan worksheet. You do not have to commit to every item, and there is room for other items not already on the list. Do your best to align your commitments to what you have heard God reveal to you about His will.", 'zume' ) ?>
+                            <p>
+                                <?php esc_html_e( "Use the rest of your time to complete the 3-Month Plan worksheet. You can write it out on a piece of paper. If you are logged in to ZúmeProject.com you can fill out your form digitally and link it to your group. Once you login, you’ll find the 3-MONTH PLAN under Settings. You can also find the 3-MONTH PLAN on your Dashboard.", 'zume' ) ?>
+                            </p>
+                            <p>
+                                <?php esc_html_e( "You do not have to commit to every item, and there is room for other items not already on the list. Do your best to align your commitments to what you have heard God reveal to you about His will.", 'zume' ) ?>
+                            </p>
+
                         </div>
                     </div>
                     <!-- grid-x -->
@@ -2951,8 +2973,12 @@ class Zume_Course_Content {
                 <div class="large-3 cell activity-title"><?php esc_html_e( 'DISCUSS', 'zume' ) ?></div>
                 <div class="large-9 cell activity-description">
                     <p class="read-section"><?php esc_html_e( "In your full training Group (15 minutes)", 'zume' ) ?></p>
-
-                    <?php esc_html_e( "Discuss and develop a group plan for starting at least two new 3/3 Groups or Zúme Training Groups in your area. Remember, your goal is start Simple Churches that multiply. 3/3 Groups and Zúme Training Groups are two ways to do that. Discuss and decide whether these new Groups will be connected to an existing local church or network or whether you’ll start a new network out of your Zúme Training Group.", 'zume' ) ?>
+                    <p>
+                        <?php esc_html_e( "Discuss and develop a group plan for starting at least two new 3/3 Groups or Zúme Training Groups in your area. If you haven’t filled out a digital copy for your group, it is highly recommended that you do this together now. Just go to the 3-MONTH PLAN under Settings and link the form to your group.", 'zume' ) ?>
+                    </p>
+                    <p>
+                        <?php esc_html_e( "Remember, your goal is to start Simple Churches that multiply. 3/3 Groups and Zúme Training Groups are two ways to do that. Discuss and decide whether these new Groups will be connected to an existing local church or network or whether you’ll start a new network out of your Zúme Training Group.", 'zume' ) ?>
+                    </p>
                 </div>
             </div>
             <!-- grid-x -->
@@ -3316,6 +3342,13 @@ class Zume_Course_Content {
                                     <?php esc_html_e( "Zúme Video Scripts: Completion of Training", 'zume' ) ?>
                                 </a>
                             </p>
+                        </div>
+                    </div>
+
+                    <div class="grid-x grid-margin-x grid-margin-y">
+                        <div class="large-3 cell activity-title"><span><?php esc_html_e( 'ACT', 'zume' ) ?></span></div>
+                        <div class="large-9 cell activity-description">
+                            <?php esc_html_e( "To help others become and make disciples, share this ZumeProject.com link today! It'll soon be in 37 languages.", 'zume' ) ?>
                         </div>
                     </div>
                     <br><br>

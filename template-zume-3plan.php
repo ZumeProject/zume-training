@@ -42,8 +42,9 @@ zume_write_log( $zume_three_month_plan );
 
                 <h3 class="section-header"><?php echo esc_html__( 'Three Month Plan', 'zume' )?> </h3>
 
-                <p><?php esc_attr_e('The Three Month Plan is part of the session 9 training and helps you become specific on how you will apply the training in the near future.
-                You can connect your three month plan to a group by adding the the group key. Check with your group leader to get the key.', 'zume') ?></p>
+                <p><?php esc_attr_e( 'The Three Month Plan is part of the Session 9 training. It is designed to help you identify specific action steps post Zúme Training. Further instructions about the Three Month Plan are found in Session 9.', 'zume' ) ?></p>
+                <p><?php esc_attr_e( 'You can connect your Three Month Plan to a group by adding the group key. Click on your group name below the "Link to a Group with a Group Key" field or check with your group leader to get the 5 digit code.', 'zume' ) ?></p>
+                <p><?php esc_attr_e( 'If you have completed a live training event, you can use the group key your trainer gives you to connect your plan with your training group.', 'zume' ) ?></p>
                 <hr>
 
                 <?php echo empty( $zume_error_message ) ? '' : '<div class="callout alert">'. esc_attr( $zume_error_message ) .'</div>' ?>
