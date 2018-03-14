@@ -92,6 +92,8 @@ $zume_highest_session = Zume_Dashboard::get_highest_session( $zume_current_user 
                                     $zume_key_beginning = substr( $zume_key, 0, 10 );
                                     if ( 'zume_group' == $zume_key_beginning ) { // check if zume_group
                                         $zume_value = Zume_Dashboard::verify_group_array_filter( $v );
+//                                        zume_write_log( $zume_key );
+//                                        zume_write_log( $zume_value );
 
                                         if ( isset( $zume_value['closed'] ) && false == $zume_value['closed'] ) : // check if closed
 
@@ -195,7 +197,7 @@ $zume_highest_session = Zume_Dashboard::get_highest_session( $zume_current_user 
                                                         <?php else : ?>
                                                             <!-- Close group button -->
                                                             <?php if ( ! isset( $zume_value['no_edit'] ) ) : ?>
-                                                                <form method="post">
+                                                                <form method="post" id="close-group-button">
                                                                     <?php wp_nonce_field( get_current_user_id(), 'zume_nonce' ) ?>
                                                                     <input type="hidden" name="key"
                                                                            value="<?php echo esc_html( $zume_key ); ?>"/>
@@ -402,9 +404,11 @@ $zume_highest_session = Zume_Dashboard::get_highest_session( $zume_current_user 
                                             <div class="small-8 cell">
                                                 <?php echo esc_html( $zume_archive_value['group_name'] ) ?>
                                             </div>
+                                            <?php if ( ! isset( $zume_archive_value['no_edit'] ) ) : ?>
                                             <div class="small-3 cell ">
                                                 <button class="small button float-right" type="submit" name="key" value="<?php echo esc_attr( $zume_archive_key ) ?>"><?php esc_html_e( 'activate', 'zume' ) ?></button>
                                             </div>
+                                            <?php endif; ?>
                                         </div>
                                     <?php endforeach; ?>
                                 </form>

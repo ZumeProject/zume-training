@@ -97,7 +97,6 @@ class Zume_Course {
         }
 
         // update current session complete
-        $group_previous = $group_meta;
         $session_key = 'session_' . $session_id;
         $group_meta[ $session_key ] = true;
         $session_date_key = $session_key . '_complete';
@@ -109,7 +108,7 @@ class Zume_Course {
         $next_session = self::get_next_session( $group_meta );
         $group_meta['next_session'] = $next_session;
 
-        update_user_meta( $user_id, $group_key, $group_meta, $group_previous );
+        update_user_meta( $user_id, $group_key, $group_meta );
 
         return true;
 
