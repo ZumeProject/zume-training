@@ -6,7 +6,7 @@ zume_force_login();
 
 if ( ! empty( $_POST ) ) { // test if post submitted
     // validate nonce
-//    zume_write_log( $_POST );
+    zume_write_log( $_POST );
     if ( isset( $_POST['zume_nonce'] ) && wp_verify_nonce( sanitize_key( wp_unslash( $_POST['zume_nonce'] ) ), get_current_user_id() ) ) { // verify that the form came from this page
         // remove excess nonce elements
         if ( isset( $_POST['zume_nonce'] ) ) {
@@ -16,6 +16,7 @@ if ( ! empty( $_POST ) ) { // test if post submitted
             unset( $_POST['_wp_http_referer'] );
         }
 
+                zume_write_log( 'made it to nonce' );
         // handle post
         if ( isset( $_POST['type'] ) ) { // group submissions
             if ( ! empty( $_POST['type'] ) && $_POST['type'] == 'create' ) { // create group
@@ -23,6 +24,7 @@ if ( ! empty( $_POST ) ) { // test if post submitted
             } elseif ( ! empty( $_POST['type'] ) && $_POST['type'] == 'edit' ) { // edit group
                 Zume_Dashboard::edit_group( $_POST );
             } elseif ( ! empty( $_POST['type'] ) && $_POST['type'] == 'closed' && isset( $_POST['key'] ) ) { // close group
+                zume_write_log( 'made it to closed' );
                 Zume_Dashboard::closed_group( sanitize_key( wp_unslash( $_POST['key'] ) ) );
             } elseif ( ! empty( $_POST['type'] ) && $_POST['type'] == 'delete' && isset( $_POST['key'] ) ) { // delete group
                 Zume_Dashboard::delete_group( sanitize_key( wp_unslash( $_POST['key'] ) ) );
@@ -92,6 +94,8 @@ $zume_highest_session = Zume_Dashboard::get_highest_session( $zume_current_user 
                                     $zume_key_beginning = substr( $zume_key, 0, 10 );
                                     if ( 'zume_group' == $zume_key_beginning ) { // check if zume_group
                                         $zume_value = Zume_Dashboard::verify_group_array_filter( $v );
+//                                        zume_write_log( $zume_key );
+//                                        zume_write_log( $zume_value );
 
                                         if ( isset( $zume_value['closed'] ) && false == $zume_value['closed'] ) : // check if closed
 
@@ -195,7 +199,7 @@ $zume_highest_session = Zume_Dashboard::get_highest_session( $zume_current_user 
                                                         <?php else : ?>
                                                             <!-- Close group button -->
                                                             <?php if ( ! isset( $zume_value['no_edit'] ) ) : ?>
-                                                                <form method="post">
+                                                                <form method="post" id="close-group-button">
                                                                     <?php wp_nonce_field( get_current_user_id(), 'zume_nonce' ) ?>
                                                                     <input type="hidden" name="key"
                                                                            value="<?php echo esc_html( $zume_key ); ?>"/>

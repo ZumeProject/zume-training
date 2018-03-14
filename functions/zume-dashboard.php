@@ -264,6 +264,20 @@ class Zume_Dashboard {
         return true;
     }
 
+    public static function update_ip_address( $group_key ) {
+        $group_meta = self::get_group_by_key( $group_key );
+        if ( ! $group_meta ) {
+            return false;
+        }
+        $group_meta['ip_address'] = Zume_Google_Geolocation::get_real_ip_address();
+        $status = update_user_meta( $group_meta['owner'], $group_meta['key'], $group_meta );
+        if ( true == $status ) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
     public static function delete_group( $group_key ) {
         $user_id = get_current_user_id();
         delete_user_meta( $user_id, $group_key );
