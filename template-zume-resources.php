@@ -67,17 +67,20 @@ Template Name: Zume Resources
                 <div class="medium-2 cell"></div>
             </div>
 
-            <?php
-            /**
-             * Additional Resources section
-             */
-            if (have_posts()) :
-                while (have_posts()) :
-                    the_post();
-                    the_content();
-                endwhile;
-            endif;
-            ?>
+            <div class="max-content-width">
+
+                <?php
+                /**
+                 * Additional Resources section
+                 */
+                if (have_posts()) :
+                    while (have_posts()) :
+                        the_post();
+                        the_content();
+                    endwhile;
+                endif;
+                ?>
+            </div>
 
         </div> <!-- end #main -->
 
