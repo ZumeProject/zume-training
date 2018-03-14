@@ -94,10 +94,12 @@ zume_write_log( $zume_three_month_plan );
                                     if ( $zume_groups ) {
                                         echo '<span class="text-small">'.esc_attr__( 'Add one of your groups? ', 'zume' ).'</span>';
 
+                                        // Add colead groups to user owned groups
                                         $zume_colead_groups = Zume_Dashboard::get_colead_groups();
                                         foreach ( $zume_colead_groups as $zume_colead_key => $zume_colead_value ) {
                                             $zume_groups[ $zume_colead_key ] = $zume_colead_value;
                                         }
+                                        // list groups available
                                         foreach ( $zume_groups as $zume_group ) {
                                             $zume_group_meta = Zume_Dashboard::verify_group_array_filter( $zume_group );
                                             print '<a class="small" 
