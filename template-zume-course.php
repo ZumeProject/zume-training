@@ -2713,7 +2713,7 @@ class Zume_Course_Content {
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="large-3 cell activity-title"><?php esc_html_e( 'OVERVIEW', 'zume' ) ?></div>
                 <div class="large-9 cell activity-description">
-                    <?php esc_html_e( "In this session, you’ll learn how linear patterns hold back kingdom growth and how Non-Sequential thinking helps you multiply disciples. You'll discover how much time matters in disciple-making and how to accelerate Pace. You’ll learn how followers of Jesus can be a Part of Two Churches to help turn faithful, spiritual families into a growing city-wide body of believers. Finally, you'll learn how a simple 3-Month Plan can focus your efforts and multiply your effectiveness in growing God's family exponentially.", 'zume' ) ?>
+                    <?php esc_html_e( "In this session, you’ll learn how linear patterns hold back kingdom growth and how Non-Sequential thinking helps you multiply disciples. You'll discover how much time matters in disciple-making and how to accelerate Pace. You’ll learn how followers of Jesus can be a Part of Two Churches to help turn faithful, spiritual families into a growing city-wide body of believers. Finally, you'll learn how a simple Three Month Plan can focus your efforts and multiply your effectiveness in growing God's family exponentially.", 'zume' ) ?>
                 </div>
             </div>
             <!-- grid-x -->
@@ -2881,7 +2881,7 @@ class Zume_Course_Content {
         <section><!-- Step Title -->
             <div class="grid-x grid-margin-x grid-margin-y">
 
-                <div class="step-title cell"><?php esc_html_e( "Create a 3-Month Plan (30min)", 'zume' ) ?></div>
+                <div class="step-title cell"><?php esc_html_e( "Create a Three Month Plan (30min)", 'zume' ) ?></div>
                 <!-- step-title cell -->
                 <div class="center cell">
 
@@ -2894,7 +2894,7 @@ class Zume_Course_Content {
                             <?php esc_html_e( "In His Bible, God says, \"I know the plans I have for you, plans to prosper you and not to harm you, plans to give you hope and a future.\" God makes plans, and He expects us to make plans, too. He teaches us through His Word and His work to look ahead, see a better tomorrow, make a plan for how to get there, and then prepare the resources we'll need on the way.", 'zume' ) ?>
                             </p>
                             <p>
-                            <?php esc_html_e( "A 3-Month Plan is a tool you can use to help focus your attention and efforts and keep them aligned with God's priorities for making disciples who multiply. Spend the next 30 minutes praying over, reading through, and then completing the commitments listed in the 3-Month Plan section in your Zúme Guidebook.", 'zume' ) ?>
+                            <?php esc_html_e( "A Three Month Plan is a tool you can use to help focus your attention and efforts and keep them aligned with God's priorities for making disciples who multiply. Spend the next 30 minutes praying over, reading through, and then completing the commitments listed in the Three Month Plan section in your Zúme Guidebook.", 'zume' ) ?>
                             </p>
                         </div>
                     </div>
@@ -2906,7 +2906,7 @@ class Zume_Course_Content {
                             <p>
                                 <?php esc_html_e( "Ask God what He specifically wants you to do with the basic disciple-making tools and techniques you have learned over these last nine sessions. You can remember them in terms of the Greatest Blessing.", 'zume' ) ?>
                             </p>
-                            <ul>
+                            <ul style="margin-left: 50px;">
                                 <li>
                                     <?php esc_html_e( "It's a Blessing to ... S.O.A.P.S. Bible Reading, Accountability Groups, Prayer Cycle", 'zume' ) ?>
                                 </li>
@@ -2936,7 +2936,7 @@ class Zume_Course_Content {
                         <div class="large-3 cell activity-title"><?php esc_html_e( 'COMPLETE', 'zume' ) ?></div>
                         <div class="large-9 cell activity-description">
                             <p>
-                                <?php esc_html_e( "Use the rest of your time to complete the 3-Month Plan worksheet. You can write it out on a piece of paper. If you are logged in to ZúmeProject.com you can fill out your form digitally and link it to your group. Once you login, you’ll find the 3-MONTH PLAN under Settings. You can also find the 3-MONTH PLAN on your Dashboard.", 'zume' ) ?>
+                                <?php esc_html_e( "Use the rest of your time to complete the Three Month Plan worksheet. You can write it out on a piece of paper. If you are logged in to ZúmeProject.com you can fill out your form digitally and link it to your group. Once you login, you’ll find the Three Month Plan under Settings. You can also find the Three Month Plan on your Dashboard.", 'zume' ) ?>
                             </p>
                             <p>
                                 <?php esc_html_e( "You do not have to commit to every item, and there is room for other items not already on the list. Do your best to align your commitments to what you have heard God reveal to you about His will.", 'zume' ) ?>
@@ -2963,7 +2963,7 @@ class Zume_Course_Content {
                 <div class="large-9 cell activity-description">
                     <p class="read-section"><?php esc_html_e( "In groups of two or three (15 minutes)", 'zume' ) ?></p>
 
-                    <p><?php esc_html_e( "Take turns sharing your 3-Month Plans with each other. Take time to ask questions about things you might not understand about plans and how the others will meet their commitments. Ask them to do the same for you and your plan. Find a training partner(s) that is willing to check in with you to report on progress and challenges and ask questions after 1, 2, 3, 4, 6, 8 and 12 weeks. Commit to doing the same for them.", 'zume' ) ?>
+                    <p><?php esc_html_e( "Take turns sharing your Three Month Plans with each other. Take time to ask questions about things you might not understand about plans and how the others will meet their commitments. Ask them to do the same for you and your plan. Find a training partner(s) that is willing to check in with you to report on progress and challenges and ask questions after 1, 2, 3, 4, 6, 8 and 12 weeks. Commit to doing the same for them.", 'zume' ) ?>
                     </p>
                 </div>
             </div>
@@ -2974,7 +2974,7 @@ class Zume_Course_Content {
                 <div class="large-9 cell activity-description">
                     <p class="read-section"><?php esc_html_e( "In your full training Group (15 minutes)", 'zume' ) ?></p>
                     <p>
-                        <?php esc_html_e( "Discuss and develop a group plan for starting at least two new 3/3 Groups or Zúme Training Groups in your area. If you haven’t filled out a digital copy for your group, it is highly recommended that you do this together now. Just go to the 3-MONTH PLAN under Settings and link the form to your group.", 'zume' ) ?>
+                        <?php esc_html_e( "Discuss and develop a group plan for starting at least two new 3/3 Groups or Zúme Training Groups in your area. If you haven’t filled out a digital copy for your group, it is highly recommended that you do this together now. Just go to the Three Month Plan under Settings and link the form to your group.", 'zume' ) ?>
                     </p>
                     <p>
                         <?php esc_html_e( "Remember, your goal is to start Simple Churches that multiply. 3/3 Groups and Zúme Training Groups are two ways to do that. Discuss and decide whether these new Groups will be connected to an existing local church or network or whether you’ll start a new network out of your Zúme Training Group.", 'zume' ) ?>
@@ -3001,7 +3001,7 @@ class Zume_Course_Content {
                 <div class="large-3 cell activity-title"><?php esc_html_e( 'OBEY', 'zume' ) ?></div>
                 <div class="large-9 cell activity-description">
                     <p><?php esc_html_e( "You may not know it, but you now have more practical training on starting simple churches and making disciples who multiply than many pastors and missionaries around the world!", 'zume' ) ?></p>
-                    <p><?php esc_html_e( "Set aside time on your calendar each week to continue to work on your 3-Month Plan, and plan check-ins with your training partner at the end of week 1, 2, 3, 4, 6, 8, and 12. Each time you're together, ask about their results and share yours, making sure you're both working through your plans. Prayerfully consider continuing as an ongoing spiritual family committed to multiplying disciples.", 'zume' ) ?></p>
+                    <p><?php esc_html_e( "Set aside time on your calendar each week to continue to work on your Three Month Plan, and plan check-ins with your training partner at the end of week 1, 2, 3, 4, 6, 8, and 12. Each time you're together, ask about their results and share yours, making sure you're both working through your plans. Prayerfully consider continuing as an ongoing spiritual family committed to multiplying disciples.", 'zume' ) ?></p>
                 </div>
             </div>
             <!-- grid-x -->
@@ -3056,7 +3056,7 @@ class Zume_Course_Content {
                             <?php esc_html_e( "You were encouraged to share Zúme Training by launching a Leadership Cell of future Zúme Training leaders.", 'zume' ) ?>
                         </li>
                     </ol>
-                    <?php esc_html_e( "Take a few moments to see how your group has been doing with these items and their 3-Month Plans since you've last met.", 'zume' ) ?>
+                    <?php esc_html_e( "Take a few moments to see how your group has been doing with these items and their Three Month Plans since you've last met.", 'zume' ) ?>
                 </div>
             </div> <!-- grid-x -->
             <!-- Activity Block  -->
