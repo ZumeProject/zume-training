@@ -279,7 +279,7 @@ class Zume_Overview_Content {
                     <div class="cell">
                         <div class="grid-x grid-margin-y">
                             <div class="small-2 cell center">
-                                <img src="<?php echo esc_url( zume_images_uri( 'overview' ) ) ?>concept-1.png"
+                                <img src="<?php echo esc_url( zume_images_uri( 'overview' ) ) ?>concept.png"
                                      alt="" width="40" height="40" class="alignnone size-full wp-image-1564"/>
                             </div>
                             <div class="small-10 cell">
