@@ -66,6 +66,11 @@ class Zume_Overview_Content {
     public static function load_sessions() {
         ?>
 
+        <div class="grid-x hide-for-large">
+            <div class="cell large-8">
+                <h2 class="" style="font-weight: 600;text-align: center"><?php esc_html_e( "Sessions Overview", 'zume' ) ?></h2>
+            </div>
+        </div>
         <div class="grid-x">
 
             <div class="cell large-3 left" data-sticky-container>
@@ -74,74 +79,115 @@ class Zume_Overview_Content {
                 </div>
             </div>
             <div id="left-column" class="large-auto cell" style="max-width: 1000px">
-                <h2 class="" style="font-weight: 600; max-width: 800px; text-align: center"><?php esc_html_e( "Sessions Overview", 'zume' ) ?></h2>
+                <div class="grid-x show-for-large">
+                    <div class="cell large-8">
+                        <h2 class="" style="font-weight: 600;text-align: center"><?php esc_html_e( "Sessions Overview", 'zume' ) ?></h2>
+                    </div>
+                </div>
                 <div id="overview">
                     <section class="vertical-padding" id="session1" data-magellan-target="session1">
 
-                        <h3 class="vertical-padding" style="margin-top:20px"><?php echo esc_html__( 'Session 1', 'zume' ) ?></h3>
+                        <div class="grid-x">
+                            <div class="cell large-8">
+                                <h3 class="vertical-padding" style="margin-top:20px"><?php echo esc_html__( 'Session 1', 'zume' ) ?></h3>
+                            </div>
+                        </div>
                         <?php self::session_overview_1(); ?>
                     </section>
 
                     <h3></h3>
                     <section class="vertical-padding"  id="session2" data-magellan-target="session2">
-
-                        <h3 class="vertical-padding"><?php echo esc_html__( "Session 2", 'zume' ) ?></h3>
+                        <div class="grid-x">
+                            <div class="cell large-8">
+                                <h3 class="vertical-padding"><?php echo esc_html__( "Session 2", 'zume' ) ?></h3>
+                            </div>
+                        </div>
                         <?php self::session_overview_2(); ?>
                     </section>
 
                     <h3></h3>
                     <section class="vertical-padding" id="session3" data-magellan-target="session3">
-
-                        <h3 class="vertical-padding"><?php echo esc_html__( "Session 3", 'zume' ) ?></h3>
+                        <div class="grid-x">
+                            <div class="cell large-8">
+                                <h3 class="vertical-padding"><?php echo esc_html__( "Session 3", 'zume' ) ?></h3>
+                            </div>
+                        </div>
                         <?php self::session_overview_3(); ?>
                     </section>
 
                     <h3></h3>
                     <section class="vertical-padding" id="session4" data-magellan-target="session4">
-
-                        <h3 class="vertical-padding"><?php echo esc_html__( "Session 4", 'zume' ) ?></h3>
+                        <div class="grid-x">
+                            <div class="cell large-8">
+                                <h3 class="vertical-padding"><?php echo esc_html__( "Session 4", 'zume' ) ?></h3>
+                            </div>
+                        </div>
                         <?php self::session_overview_4(); ?>
                     </section>
 
                     <h3></h3>
                     <section class="vertical-padding" id="session5" data-magellan-target="session5">
+                        <div class="grid-x">
+                            <div class="cell large-8">
+                                <h3 class="vertical-padding"><?php echo esc_html__( "Session 5", 'zume' ) ?></h3>
+                            </div>
+                        </div>
 
-                        <h3 class="vertical-padding"><?php echo esc_html__( "Session 5", 'zume' ) ?></h3>
                         <?php self::session_overview_5(); ?>
                     </section>
 
                     <h3></h3>
                     <section class="vertical-padding" id="session6" data-magellan-target="session6">
+                        <div class="grid-x">
+                            <div class="cell large-8">
+                                <h3 class="vertical-padding"><?php echo esc_html__( "Session 6", 'zume' ) ?></h3>
+                            </div>
+                        </div>
 
-                        <h3 class="vertical-padding"><?php echo esc_html__( "Session 6", 'zume' ) ?></h3>
                         <?php self::session_overview_6(); ?>
                     </section>
 
                     <h3></h3>
                     <section class="vertical-padding" id="session7" data-magellan-target="session7">
+                        <div class="grid-x">
+                            <div class="cell large-8">
+                                <h3 class="vertical-padding"><?php echo esc_html__( "Session 7", 'zume' ) ?></h3>
+                            </div>
+                        </div>
 
-                        <h3 class="vertical-padding"><?php echo esc_html__( "Session 7", 'zume' ) ?></h3>
                         <?php self::session_overview_7(); ?>
                     </section>
 
                     <h3></h3>
                     <section class="vertical-padding" id="session8" data-magellan-target="session8">
+                        <div class="grid-x">
+                            <div class="cell large-8">
+                                <h3 class="vertical-padding"><?php echo esc_html__( "Session 8", 'zume' ) ?></h3>
+                            </div>
+                        </div>
 
-                        <h3 class="vertical-padding"><?php echo esc_html__( "Session 8", 'zume' ) ?></h3>
                         <?php self::session_overview_8(); ?>
                     </section>
 
                     <h3></h3>
                     <section class="vertical-padding" id="session9" data-magellan-target="session9">
+                        <div class="grid-x">
+                            <div class="cell large-8">
+                                <h3 class="vertical-padding"><?php echo esc_html__( "Session 9", 'zume' ) ?></h3>
+                            </div>
+                        </div>
 
-                        <h3 class="vertical-padding"><?php echo esc_html__( "Session 9", 'zume' ) ?></h3>
                         <?php self::session_overview_9(); ?>
                     </section>
 
                     <h3></h3>
                     <section class="vertical-padding" id="session10" data-magellan-target="session10">
+                        <div class="grid-x">
+                            <div class="cell large-8">
+                                <h3 class="vertical-padding"><?php echo esc_html__( "Session 10 - Advanced Training", 'zume' ) ?></h3>
+                            </div>
+                        </div>
 
-                        <h3 class="vertical-padding"><?php echo esc_html__( "Session 10 - Advanced Training", 'zume' ) ?></h3>
                         <?php self::session_overview_10(); ?>
                     </section>
 
@@ -164,7 +210,7 @@ class Zume_Overview_Content {
     public static function menu() {
         ?>
         <div  >
-            <ul class="vertical menu" data-smooth-scroll>
+            <ul class="vertical menu" data-smooth-scroll style="text-align: center;">
                 <li><a href="#session1"><?php esc_html_e( "Session 1", 'zume' ) ?></a></li>
                 <li><a href="#session2"><?php esc_html_e( "Session 2", 'zume' ) ?></a></li>
                 <li><a href="#session3"><?php esc_html_e( "Session 3", 'zume' ) ?></a></li>
@@ -228,7 +274,7 @@ class Zume_Overview_Content {
                 <!-- Concepts -->
                 <div class="grid-x grid-margin-y">
                     <div class="cell">
-                        <h3 class="overview"><?php esc_html_e( 'Concepts:', 'zume' ) ?></h3>
+                        <h3 class="overview"><?php esc_html_e( 'Concepts', 'zume' ) ?></h3>
                     </div>
                     <div class="cell">
                         <div class="grid-x grid-margin-y">
@@ -270,7 +316,7 @@ class Zume_Overview_Content {
                 <!-- Tools -->
                 <div class="grid-x grid-margin-y">
                     <div class="cell">
-                        <h3 class="overview"><?php esc_html_e( 'Tools:', 'zume' ) ?></h3>
+                        <h3 class="overview"><?php esc_html_e( 'Tools', 'zume' ) ?></h3>
                     </div>
                     <div class="cell">
                         <div class="grid-x grid-margin-y">
@@ -303,7 +349,7 @@ class Zume_Overview_Content {
                 <!-- Practice -->
                 <div class="grid-x grid-margin-y">
                     <div class="cell">
-                        <h3 class="overview"><?php esc_html_e( 'Practice:', 'zume' ) ?></h3>
+                        <h3 class="overview"><?php esc_html_e( 'Practice', 'zume' ) ?></h3>
                     </div>
                     <div class="cell">
                         <div class="grid-x grid-margin-y">
@@ -356,7 +402,7 @@ class Zume_Overview_Content {
                 <!-- Concepts -->
                 <div class="grid-x grid-margin-y grid-margin-y">
                     <div class="cell">
-                        <h3 class="overview"><?php esc_html_e( 'Concepts:', 'zume' ) ?></h3>
+                        <h3 class="overview"><?php esc_html_e( 'Concepts', 'zume' ) ?></h3>
                     </div>
                     <div class="cell">
                         <div class="grid-x grid-margin-y">
@@ -377,7 +423,7 @@ class Zume_Overview_Content {
                 <!-- Tools -->
                 <div class="grid-x grid-margin-y grid-margin-y">
                     <div class="cell">
-                        <h3 class="overview"><?php esc_html_e( 'Tools:', 'zume' ) ?></h3>
+                        <h3 class="overview"><?php esc_html_e( 'Tools', 'zume' ) ?></h3>
                     </div>
                     <div class="cell">
                         <div class="grid-x grid-margin-y">
@@ -411,7 +457,7 @@ class Zume_Overview_Content {
                 <!-- Practice -->
                 <div class="grid-x grid-margin-y grid-margin-y ">
                     <div class="cell">
-                        <h3 class="overview"><?php esc_html_e( 'Practice:', 'zume' ) ?></h3>
+                        <h3 class="overview"><?php esc_html_e( 'Practice', 'zume' ) ?></h3>
                     </div>
                     <div class="cell">
                         <div class="grid-x grid-margin-y grid-margin-y">
@@ -478,7 +524,7 @@ class Zume_Overview_Content {
                 <!-- Concepts -->
                 <div class="grid-x grid-margin-y">
                     <div class="cell">
-                        <h3 class="overview"><?php esc_html_e( 'Concepts:', 'zume' ) ?></h3>
+                        <h3 class="overview"><?php esc_html_e( 'Concepts', 'zume' ) ?></h3>
                     </div>
                     <div class="cell">
                         <div class="grid-x grid-margin-y">
@@ -512,7 +558,7 @@ class Zume_Overview_Content {
                 <!-- Tools -->
                 <div class="grid-x grid-margin-y">
                     <div class="cell">
-                        <h3 class="overview"><?php esc_html_e( 'Tools:', 'zume' ) ?></h3>
+                        <h3 class="overview"><?php esc_html_e( 'Tools', 'zume' ) ?></h3>
                     </div>
                     <div class="cell">
                         <div class="grid-x grid-margin-y">
@@ -533,7 +579,7 @@ class Zume_Overview_Content {
                 <!-- Practice -->
                 <div class="grid-x grid-margin-y">
                     <div class="cell">
-                        <h3 class="overview"><?php esc_html_e( 'Practice:', 'zume' ) ?></h3>
+                        <h3 class="overview"><?php esc_html_e( 'Practice', 'zume' ) ?></h3>
                     </div>
                     <div class="cell">
                         <div class="grid-x grid-margin-y">
@@ -589,7 +635,7 @@ class Zume_Overview_Content {
                 <!-- Concepts -->
                 <div class="grid-x grid-margin-y">
                     <div class="cell">
-                        <h3 class="overview"><?php esc_html_e( 'Concepts:', 'zume' ) ?></h3>
+                        <h3 class="overview"><?php esc_html_e( 'Concepts', 'zume' ) ?></h3>
                     </div>
                     <div class="cell">
                         <div class="grid-x grid-margin-y">
@@ -634,7 +680,7 @@ class Zume_Overview_Content {
                 <!-- Tools -->
                 <div class="grid-x grid-margin-y">
                     <div class="cell">
-                        <h3 class="overview"><?php esc_html_e( 'Tools:', 'zume' ) ?></h3>
+                        <h3 class="overview"><?php esc_html_e( 'Tools', 'zume' ) ?></h3>
                     </div>
                     <div class="cell">
                         <div class="grid-x grid-margin-y">
@@ -667,7 +713,7 @@ class Zume_Overview_Content {
                 <!-- Practice -->
                 <div class="grid-x grid-margin-y">
                     <div class="cell">
-                        <h3 class="overview"><?php esc_html_e( 'Practice:', 'zume' ) ?></h3>
+                        <h3 class="overview"><?php esc_html_e( 'Practice', 'zume' ) ?></h3>
                     </div>
                     <div class="cell">
                         <div class="grid-x grid-margin-y">
@@ -734,7 +780,7 @@ class Zume_Overview_Content {
                 <!-- Concepts -->
                 <div class="grid-x grid-margin-y">
                     <div class="cell">
-                        <h3 class="overview"><?php esc_html_e( 'Concepts:', 'zume' ) ?></h3>
+                        <h3 class="overview"><?php esc_html_e( 'Concepts', 'zume' ) ?></h3>
                     </div>
                     <div class="cell">
                         <div class="grid-x grid-margin-y">
@@ -755,7 +801,7 @@ class Zume_Overview_Content {
                 <!-- Tools -->
                 <div class="grid-x grid-margin-y">
                     <div class="cell">
-                        <h3 class="overview"><?php esc_html_e( 'Tools:', 'zume' ) ?></h3>
+                        <h3 class="overview"><?php esc_html_e( 'Tools', 'zume' ) ?></h3>
                     </div>
                     <div class="cell">
                         <div class="grid-x grid-margin-y">
@@ -776,7 +822,7 @@ class Zume_Overview_Content {
                 <!-- Practice -->
                 <div class="grid-x grid-margin-y">
                     <div class="cell">
-                        <h3 class="overview"><?php esc_html_e( 'Practice:', 'zume' ) ?></h3>
+                        <h3 class="overview"><?php esc_html_e( 'Practice', 'zume' ) ?></h3>
                     </div>
                     <div class="cell">
                         <div class="grid-x grid-margin-y">
@@ -842,7 +888,7 @@ class Zume_Overview_Content {
                 <!-- Concepts -->
                 <div class="grid-x grid-margin-y">
                     <div class="cell">
-                        <h3 class="overview"><?php esc_html_e( 'Concepts:', 'zume' ) ?></h3>
+                        <h3 class="overview"><?php esc_html_e( 'Concepts', 'zume' ) ?></h3>
                     </div>
                     <div class="cell">
                         <div class="grid-x grid-margin-y">
@@ -863,7 +909,7 @@ class Zume_Overview_Content {
                 <!-- Tools -->
                 <div class="grid-x grid-margin-y">
                     <div class="cell">
-                        <h3 class="overview"><?php esc_html_e( 'Tools:', 'zume' ) ?></h3>
+                        <h3 class="overview"><?php esc_html_e( 'Tools', 'zume' ) ?></h3>
                     </div>
                     <div class="cell">
                         <div class="grid-x grid-margin-y">
@@ -918,7 +964,7 @@ class Zume_Overview_Content {
                 <!-- Concepts -->
                 <div class="grid-x grid-margin-y">
                     <div class="cell">
-                        <h3 class="overview"><?php esc_html_e( 'Concepts:', 'zume' ) ?></h3>
+                        <h3 class="overview"><?php esc_html_e( 'Concepts', 'zume' ) ?></h3>
                     </div>
                     <div class="cell">
                         <div class="grid-x grid-margin-y">
@@ -939,7 +985,7 @@ class Zume_Overview_Content {
                 <!-- Practice -->
                 <div class="grid-x grid-margin-y">
                     <div class="cell">
-                        <h3 class="overview"><?php esc_html_e( 'Practice:', 'zume' ) ?></h3>
+                        <h3 class="overview"><?php esc_html_e( 'Practice', 'zume' ) ?></h3>
                     </div>
                     <div class="cell">
                         <div class="grid-x grid-margin-y">
@@ -996,7 +1042,7 @@ class Zume_Overview_Content {
                 <!-- Concepts -->
                 <div class="grid-x grid-margin-y">
                     <div class="cell">
-                        <h3 class="overview"><?php esc_html_e( 'Concepts:', 'zume' ) ?></h3>
+                        <h3 class="overview"><?php esc_html_e( 'Concepts', 'zume' ) ?></h3>
                     </div>
                     <div class="cell">
                         <div class="grid-x grid-margin-y">
@@ -1017,7 +1063,7 @@ class Zume_Overview_Content {
                 <!-- Practice -->
                 <div class="grid-x grid-margin-y">
                     <div class="cell">
-                        <h3 class="overview"><?php esc_html_e( 'Practice:', 'zume' ) ?></h3>
+                        <h3 class="overview"><?php esc_html_e( 'Practice', 'zume' ) ?></h3>
                     </div>
                     <div class="cell">
                         <div class="grid-x grid-margin-y">
@@ -1073,7 +1119,7 @@ class Zume_Overview_Content {
                 <!-- Concepts -->
                 <div class="grid-x grid-margin-y">
                     <div class="cell">
-                        <h3 class="overview"><?php esc_html_e( 'Concepts:', 'zume' ) ?></h3>
+                        <h3 class="overview"><?php esc_html_e( 'Concepts', 'zume' ) ?></h3>
                     </div>
                     <div class="cell">
                         <div class="grid-x grid-margin-y">
@@ -1118,7 +1164,7 @@ class Zume_Overview_Content {
                 <!-- Practice -->
                 <div class="grid-x grid-margin-y">
                     <div class="cell">
-                        <h3 class="overview"><?php esc_html_e( 'Practice:', 'zume' ) ?></h3>
+                        <h3 class="overview"><?php esc_html_e( 'Practice', 'zume' ) ?></h3>
                     </div>
                     <div class="cell">
                         <div class="grid-x grid-margin-y">
@@ -1175,7 +1221,7 @@ class Zume_Overview_Content {
                 <!-- Concepts -->
                 <div class="grid-x grid-margin-y">
                     <div class="cell">
-                        <h3 class="overview"><?php esc_html_e( 'Concepts:', 'zume' ) ?></h3>
+                        <h3 class="overview"><?php esc_html_e( 'Concepts', 'zume' ) ?></h3>
                     </div>
                     <div class="cell">
                         <div class="grid-x grid-margin-y">
@@ -1196,7 +1242,7 @@ class Zume_Overview_Content {
                 <!-- Tools -->
                 <div class="grid-x grid-margin-y">
                     <div class="cell">
-                        <h3 class="overview"><?php esc_html_e( 'Tools:', 'zume' ) ?></h3>
+                        <h3 class="overview"><?php esc_html_e( 'Tools', 'zume' ) ?></h3>
                     </div>
                     <div class="cell">
                         <div class="grid-x grid-margin-y">
@@ -1229,7 +1275,7 @@ class Zume_Overview_Content {
                 <!-- Practice -->
                 <div class="grid-x grid-margin-y">
                     <div class="cell">
-                        <h3 class="overview"><?php esc_html_e( 'Practice:', 'zume' ) ?></h3>
+                        <h3 class="overview"><?php esc_html_e( 'Practice', 'zume' ) ?></h3>
                     </div>
 
                     <div class="cell">
