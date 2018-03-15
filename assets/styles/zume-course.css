@@ -450,3 +450,8 @@ dl, ol, ul {
 .overview {
     margin-top:20px;
 }
+
+.session-boxes {
+    background-color: #E7F6FC;
+    border: 1px solid #00aeff;
+}
