@@ -2974,7 +2974,7 @@ class Zume_Course_Content {
                 <div class="large-9 cell activity-description">
                     <p class="read-section"><?php esc_html_e( "In your full training Group (15 minutes)", 'zume' ) ?></p>
                     <p>
-                        <?php esc_html_e( "Discuss and develop a group plan for starting at least two new 3/3 Groups or Zúme Training Groups in your area. If you haven’t filled out a digital copy for your group, it is highly recommended that you do this together now. Just go to the Three Month Plan under Settings and link the form to your group.", 'zume' ) ?>
+                        <?php esc_html_e( "Discuss and develop a group plan for starting at least two new 3/3 Groups or Zúme Training Groups in your area. Several of your group members may have just completed and saved your individual Three-Month Plans to your Zúme group. On this step, if no one from your group has filled out a digital copy on the website of your Three-Month Plan, it is highly recommended that you do this together now. Just go to the Three-Month Plan under Settings and link the form to your group.", 'zume' ) ?>
                     </p>
                     <p>
                         <?php esc_html_e( "Remember, your goal is to start Simple Churches that multiply. 3/3 Groups and Zúme Training Groups are two ways to do that. Discuss and decide whether these new Groups will be connected to an existing local church or network or whether you’ll start a new network out of your Zúme Training Group.", 'zume' ) ?>
