@@ -92,8 +92,6 @@ $zume_highest_session = Zume_Dashboard::get_highest_session( $zume_current_user 
                                     $zume_key_beginning = substr( $zume_key, 0, 10 );
                                     if ( 'zume_group' == $zume_key_beginning ) { // check if zume_group
                                         $zume_value = Zume_Dashboard::verify_group_array_filter( $v );
-//                                        zume_write_log( $zume_key );
-//                                        zume_write_log( $zume_value );
 
                                         if ( isset( $zume_value['closed'] ) && false == $zume_value['closed'] ) : // check if closed
 
