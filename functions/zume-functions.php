@@ -35,20 +35,6 @@ if ( ! current_user_can( 'administrator' ) ) {
     add_filter( 'show_admin_bar', '__return_false' );
 }
 
-/*
- * Zúme Invite Page Content // todo see if this is needed.
- * contains tailored content for the user to select the kind of invitation they want to make.
- */
-function zume_invite_page_content( $content ) {
-    if ( is_page( 'zume-invite' ) ) {
-
-         require_once( 'templates/zume-invites.php' );
-         zume_page_content_zume_invites();
-
-    }
-    return $content;
-}
-add_filter( 'the_content', 'zume_invite_page_content' );
 
 /**
  * Remove menu items for coaches in the admin dashboard.
@@ -73,17 +59,6 @@ function zume_custom_menu_page_removing() {
     }
 }
 add_action( 'admin_menu', 'zume_custom_menu_page_removing' );
-
-
-function zume_wp_insert_post( $post_id, $post, $update ) {
-    if ( wp_is_post_revision( $post_id ) ) {
-        return;
-    }
-    if ( $post->post_type === 'steplog' && preg_match( '/^group-(\d+)-step-complete-session-(\d+)/i', $post->post_name, $matches ) ) {
-        zume_session_completed_trigger_mailchimp( (int) $matches[1], (int) $matches[2] );
-    }
-}
-add_action( 'wp_insert_post', 'zume_wp_insert_post', 10, 3 );
 
 
 function zume_update_user_contact_info()
@@ -126,6 +101,8 @@ function zume_update_user_contact_info()
         }
     }
 
+    zume_update_user_ip_address_and_location( $user_id );
+
     // _user table defaults
     $result = wp_update_user( $args );
 
@@ -135,6 +112,32 @@ function zume_update_user_contact_info()
 
     return true;
 }
+
+function zume_update_user_ip_address_and_location( $user_id = null ) {
+    if ( is_null( $user_id ) )
+    {
+        $user_id = get_current_user_id();
+    }
+    // Geocode and store ip address
+    $ip_address = Zume_Google_Geolocation::get_real_ip_address();
+    update_user_meta( $user_id, 'zume_recent_ip', $ip_address );
+
+    $ip_results = Zume_Google_Geolocation::geocode_ip_address( $ip_address );
+
+    update_user_meta( $user_id, 'zume_address_from_ip', $ip_results['formatted_address'] );
+    update_user_meta( $user_id, 'zume_lng_from_ip', $ip_results['lng'] );
+    update_user_meta( $user_id, 'zume_lat_from_ip', $ip_results['lat'] );
+}
+
+/**
+ * Update User IP Address location on login
+ */
+add_action( 'wp_login', 'zume_login_update_ip_info', 10, 2 );
+function zume_login_update_ip_info( $user_login, $user ) {
+    zume_update_user_ip_address_and_location( $user->ID );
+
+}
+
 
 /**
  * This returns a simple array versus the multi dimensional array from the get_user_meta function

@@ -58,12 +58,11 @@ require_once( 'functions/zume-rest-api.php' );
 require_once( 'functions/geocoding-api.php' );
 
 // Email System
-include_once( 'functions/utilities/zume-mailchimp-settings.php' ); // Creates the options page for mailchimp automation
 include_once( 'functions/login/user-register.php' );
 
 /**
  * redirect all logins to the home page
  */
 add_filter( 'login_redirect', function( $url, $query, $user ) {
-    return site_url();
+    return zume_dashboard_url();
 }, 10, 3 );

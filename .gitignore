@@ -1,14 +1,16 @@
 .DS_Store
+
 assets/scss/.sass-cache/*
+/assets/scss/*.css
+/.sass-cache/
+
 node_modules/*
 bower_components/*
 vendor/*
 
-npm-debug.log
 .idea
 .env
-/assets/scss/*.css
-/.sass-cache/
 
 config.rb
 package-lock.json
+npm-debug.log
