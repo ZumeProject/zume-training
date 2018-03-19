@@ -56,8 +56,8 @@ class Zume_Dashboard {
             $google_result = Zume_Google_Geolocation::query_google_api( $args['address'], $type = 'core' ); // get google api info
             if ( ! $google_result ) {
                 $results = Zume_Google_Geolocation::geocode_ip_address( $args['ip_address'] );
-                $args['lng'] = $results['lng'];
-                $args['lat'] = $results['lat'];
+                $args['ip_lng'] = $results['lng'];
+                $args['ip_lat'] = $results['lat'];
             } else {
                 $args['lng'] = $google_result['lng'];
                 $args['lat'] = $google_result['lat'];
@@ -98,9 +98,11 @@ class Zume_Dashboard {
             'members'             => '1',
             'meeting_time'        => '',
             'address'             => '',
-            'ip_address'          => '',
             'lng'                 => '',
             'lat'                 => '',
+            'ip_address'          => '',
+            'ip_lng'              => '',
+            'ip_lat'              => '',
             'created_date'        => current_time( 'mysql' ),
             'next_session'        => '1',
             'session_1'           => false,
@@ -270,6 +272,9 @@ class Zume_Dashboard {
             return false;
         }
         $group_meta['ip_address'] = Zume_Google_Geolocation::get_real_ip_address();
+        $results = Zume_Google_Geolocation::geocode_ip_address( $group_meta['ip_address'] );
+        $group_meta['ip_lng'] = $results['lng'];
+        $group_meta['ip_lat'] = $results['lat'];
         $status = update_user_meta( $group_meta['owner'], $group_meta['key'], $group_meta );
         if ( true == $status ) {
             return true;
@@ -722,17 +727,3 @@ class Zume_Dashboard {
     }
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
