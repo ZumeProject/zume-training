@@ -43,6 +43,8 @@ $zume_current_user = get_current_user_id();
 $zume_user_meta = zume_get_user_meta( $zume_current_user );
 $zume_highest_session = Zume_Dashboard::get_highest_session( $zume_current_user );
 
+$zume_user_meta = Zume_Dashboard::filter_user_language( $zume_user_meta );
+
 ?>
 
     <script type="application/javascript">

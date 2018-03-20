@@ -76,6 +76,8 @@ function zume_user_register( $user_id ) {
 
     zume_update_user_ip_address_and_location( $user_id ); // record ip address and location
 
+    update_user_meta( $user_id, 'zume_language', zume_current_language() );
+
 }
 
 

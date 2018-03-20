@@ -726,4 +726,9 @@ class Zume_Dashboard {
         }
     }
 
+    public static function filter_user_language( $zume_user_meta ) {
+        $zume_user_meta['zume_language'] = zume_current_language();
+        return $zume_user_meta;
+    }
+
 }

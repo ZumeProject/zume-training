@@ -36,7 +36,7 @@ function zume_current_language() {
         return pll_current_language();
     }
     else {
-        return new WP_Error( 'Polylang_missing', 'Polylang plugin missing' );
+        return 'en';
     }
 }
 
