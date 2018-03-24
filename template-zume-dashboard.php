@@ -45,6 +45,7 @@ $zume_highest_session = Zume_Dashboard::get_highest_session( $zume_current_user 
 
 $zume_user_meta = Zume_Dashboard::filter_user_language( $zume_user_meta );
 
+do_action( 'zume_dashboard_header' );
 ?>
 
     <script type="application/javascript">
@@ -890,5 +891,5 @@ foreach ( $zume_user_meta as $zume_key => $v ) {
 ?>
 
 <?php
-
+do_action( 'zume_dashboard_footer' );
 get_footer();
