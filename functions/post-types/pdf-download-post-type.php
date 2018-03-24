@@ -675,10 +675,10 @@ class Zume_PDF_Download_Post_Type
             'section'     => 'downloads',
         ];
         $fields['61'] = [
-            'name'        => '(61) Leadeship in Networks Script ',
+            'name'        => '(61) Leadership in Networks Script ',
             'description' => '',
             'type'        => 'link',
-            'default'     => '61_en_leadeship_in_networks.pdf',
+            'default'     => '61_en_leadership_in_networks.pdf',
             'section'     => 'downloads',
         ];
         $fields['62'] = [
