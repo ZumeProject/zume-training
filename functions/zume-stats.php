@@ -39,16 +39,7 @@ class Zume_Stats{
      * @since   0.1
      */
     public function __construct() {
-//      add_action( 'wp_enqueue_scripts', array($this, 'enqueue_buddypress_styles_to_zume' ) );
-//        $this->get_coach_groups();
     } // End __construct()
-
-
-    public function enqueue_buddypress_styles_to_zume() {
-
-//      wp_register_style( 'zume_stats_style', ZUME_PLUGIN_URL . '/includes/css/zume-stats.css' );
-//      wp_enqueue_style( 'zume_stats_stylesheet', ZUME_PLUGIN_URL . '/includes/css/zume-stats.css');
-    }
 
     /**
      * get the number of verified users
@@ -71,11 +62,6 @@ class Zume_Stats{
         }
 
         return $result;
-//
-//        foreach ( $address as $adr ){
-//            $a[$adr->group_id]["address"] = $adr->meta_value;
-//        }
-
     }
 
     public function get_group_sizes(){
@@ -143,9 +129,6 @@ class Zume_Stats{
 
         return $result;
     }
-
-
-
 
     public function initialize_analytics()
     {
@@ -279,104 +262,4 @@ class Zume_Stats{
         $views = $views_response->getItems();
         return $views[0]["statistics"]["viewCount"];
     }
-
-
-    public function get_coach_groups(){
-        global $wpdb;
-
-        $zume_groups = $wpdb->get_results( "SELECT id, date_created FROM wp_bp_groups" );
-        $address = $wpdb->get_results( 'SELECT * FROM wp_bp_groups_groupmeta m WHERE meta_key = "address" GROUP BY group_id', OBJECT );
-        $states = $wpdb->get_results( 'SELECT * FROM wp_bp_groups_groupmeta m WHERE meta_key = "state"', OBJECT );
-        $counties = $wpdb->get_results( 'SELECT * FROM wp_bp_groups_groupmeta m WHERE meta_key = "county"', OBJECT );
-        $tracts = $wpdb->get_results( 'SELECT * FROM wp_bp_groups_groupmeta m WHERE meta_key = "tract"', OBJECT );
-        $members_count = $wpdb->get_results( 'SELECT * FROM wp_bp_groups_groupmeta m WHERE meta_key = "total_member_count"', OBJECT );
-        $leaders = $wpdb->get_results(
-            "SELECT  p.id,   wp_users.user_email, wp_users.display_name
-            FROM    wp_bp_groups p LEFT JOIN wp_users ON (p.creator_id=wp_users.ID)",
-        ARRAY_A);
-        $steps = $wpdb->get_results( "SELECT post_name, COUNT(*) AS `num` FROM wp_posts WHERE post_name LIKE '%step-complete%' GROUP BY post_name" );
-
-
-        $groups = [];
-        foreach ( $leaders as $leader ){
-            $groups[$leader["id"]] = [ //the group id
-                "email" => $leader["user_email"],
-                "name" => $leader["display_name"],
-                "group_id" => $leader["id"],
-            ];
-        }
-
-        foreach ( $address as $a ){
-            if (isset( $groups[ $a->group_id ] )){
-                $groups[$a->group_id]["address"] = $a->meta_value;
-            }
-        }
-        foreach ( $members_count as $a ){
-            if (isset( $groups[ $a->group_id ] )){
-                $groups[$a->group_id]["member_count"] = $a->meta_value;
-            }
-        }
-        $codes = json_decode( file_get_contents( plugin_dir_path( __FILE__ ) . '../json/usa-tracts-file-directory.json' ) )->USA_tracts;
-        foreach ( $states as $a ){
-            if (isset( $groups[ $a->group_id ] )){
-                if (isset( $a->meta_value ) && isset( $codes->{$a->meta_value} )){
-                    $state = $codes->{$a->meta_value}->STUSAB;
-                } else {
-                    $state = $a->meta_value;
-                }
-                $groups[$a->group_id]["state"] = $state;
-                $groups[$a->group_id]["stateCode"] = $a->meta_value;
-            }
-        }
-        $county_codes = json_decode( file_get_contents( plugin_dir_path( __FILE__ ) . '../json/usa-county-codes.json' ) );
-        foreach ( $counties as $a ){
-            if (isset( $groups[ $a->group_id ] )){
-                if (isset( $a->meta_value ) && isset( $groups[$a->group_id]["stateCode"] )){
-                    foreach ( $county_codes as $code ){
-                        if ( $code->STATE == $groups[$a->group_id]["stateCode"] && $code->COUNTY == $a->meta_value ){
-                            $groups[$a->group_id]["county"] = $code->COUNTY_NAME;
-                        }
-                    }
-                } else {
-                    $groups[$a->group_id]["county"] = $a->meta_value;
-                }
-            }
-        }
-        foreach ( $tracts as $tract ){
-            if ( isset( $groups[$tract->group_id] )){
-                $groups[$tract->group_id]["tract"] = $tract->meta_value;
-            }
-        }
-        foreach ( $steps as $step ){
-            $exploded = explode( '-', $step->post_name );
-            $group_id = $exploded[1];
-            if ( !isset( $exploded[5] )){
-                $session = $exploded[4];
-            } else {
-                $session = $exploded[5];
-            }
-            if ( isset( $groups[ $group_id ] ) ){
-                if ( !isset( $groups[ $group_id ]["session"] )){
-                    $groups[ $group_id ]["session"] = 0;
-                }
-                if ( (int) $session > (int) $groups[ $group_id ]["session"] ){
-                    $groups[ $group_id ]["session"] = $session;
-                }
-            }
-        }
-        $group_array = [];
-//        foreach ($groups as $group_id => $group_vals){
-//            $group_array[] = $group_vals;
-//        }
-
-        foreach ( $zume_groups as $g ){
-            if ( isset( $groups[$g->id] )){
-                $groups[$g->id]['created'] = $g->date_created;
-                $group_array[] = $groups[$g->id];
-            }
-        }
-
-        return $group_array;
-    }
-
 }

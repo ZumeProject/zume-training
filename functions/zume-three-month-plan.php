@@ -144,7 +144,7 @@ class Zume_Three_Month_Plan
             return [ 'status' => 'Public_Key_Error', 'message' => __( 'Unable to find key:', 'zume' ) . ' ' . $plan['public_key'] ];
         }
 
-        do_action( 'zume_update_three_month_plan', $plan );
+        do_action( 'zume_update_three_month_plan', get_current_user_id(), $plan );
 
         return [ 'status' => 'OK' ];
     }

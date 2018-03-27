@@ -8,7 +8,6 @@ if ( !current_user_can( "administrator" ) ){
 
 get_header();
 
-
 ?>
 
     <div id="content">
@@ -19,7 +18,7 @@ get_header();
                 <div id="sizes" style="width: 900px; height: 600px;"></div>
                 <div id="sessions" style="width: 900px; height: 600px;"></div>
 
-                <h3>Groups locations</h3>
+                <h3><?php esc_html_e( 'Groups Locations', 'zume' ) ?></h3>
                 <div id="group-markers" style="width: 900px; height: 600px;"></div>
 
                 <br>
@@ -30,13 +29,13 @@ get_header();
 
                 <br>
                 <br>
-                <h3>Translation Progress</h3>
+                <h3><?php esc_html_e( 'Translation Progress', 'zume' ) ?></h3>
                     <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRnYZtXXZ6sBIrVYJAibJXuQ08rFqJe6HtPfnxBMoywOTvIeoDK-UtGlEWTSWZNqquM8doyr-JCw2By/pubhtml?gid=2022886715&amp;single=true&amp;widget=true&amp;headers=false"
                         width="60%" height="400px"
                     ></iframe>
                 <br>
                 <br><br>
-                <h3>Progress for each language</h3>
+                <h3><?php esc_html_e( 'Progress for Each Language', 'zume' ) ?></h3>
                 <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRnYZtXXZ6sBIrVYJAibJXuQ08rFqJe6HtPfnxBMoywOTvIeoDK-UtGlEWTSWZNqquM8doyr-JCw2By/pubhtml?gid=446320782&amp;single=true&amp;widget=true&amp;headers=false"
                     width="60%"
                     height="1100px"

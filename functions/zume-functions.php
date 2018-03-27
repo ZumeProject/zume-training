@@ -135,7 +135,6 @@ function zume_update_user_ip_address_and_location( $user_id = null ) {
 add_action( 'wp_login', 'zume_login_update_ip_info', 10, 2 );
 function zume_login_update_ip_info( $user_login, $user ) {
     zume_update_user_ip_address_and_location( $user->ID );
-
 }
 
 

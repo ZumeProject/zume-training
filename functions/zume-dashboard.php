@@ -133,6 +133,7 @@ class Zume_Dashboard {
             'coleaders_accepted'  => [],
             'coleaders_declined'  => [],
             'three_month_plans'   => [],
+            'foreign_key'         => bin2hex( random_bytes( 40 ) ),
         ];
 
         $deprecated_keys = [
@@ -730,11 +731,6 @@ class Zume_Dashboard {
         } else {
             return $new_key;
         }
-    }
-
-    public static function filter_user_language( $zume_user_meta ) {
-        $zume_user_meta['zume_language'] = zume_current_language();
-        return $zume_user_meta;
     }
 
 }
