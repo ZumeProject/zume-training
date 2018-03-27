@@ -63,6 +63,8 @@ get_header();
                                 'meta'     => 'group_' . $zume_members,
                             ] );
 
+                            do_action( 'zume_session_complete', $zume_group_key, $zume_session, get_current_user_id() );
+
                             break;
                         case 'explore':
                             Zume_Course_Content::get_course_content( $zume_session );

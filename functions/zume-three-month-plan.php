@@ -104,6 +104,7 @@ class Zume_Three_Month_Plan
 
     public static function edit_post( $submitted_plan ) {
 
+        $plan = [];
         $current_plan = self::plan_items_filter( get_user_meta( get_current_user_id(), 'three_month_plan', true ) );
 
         $default_keys = array_keys( self::plan_labels() ); // get expected keys
@@ -142,6 +143,8 @@ class Zume_Three_Month_Plan
         if ( $public_key_error ) {
             return [ 'status' => 'Public_Key_Error', 'message' => __( 'Unable to find key:', 'zume' ) . ' ' . $plan['public_key'] ];
         }
+
+        do_action( 'zume_update_three_month_plan', $plan );
 
         return [ 'status' => 'OK' ];
     }

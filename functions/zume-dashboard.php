@@ -69,6 +69,8 @@ class Zume_Dashboard {
 
         $result = add_user_meta( get_current_user_id(), $new_group['key'], $new_group, true );
 
+        do_action( 'zume_create_group', get_current_user_id(), $new_group['key'], $new_group );
+
         return $result;
 
     }
@@ -263,6 +265,9 @@ class Zume_Dashboard {
         $args = wp_parse_args( $args, $group_meta );
 
         update_user_meta( $current_user_id, $args['key'], $args );
+
+        do_action( 'zume_edit_group', $current_user_id, $args['key'], $args );
+
         return true;
     }
 
@@ -286,6 +291,7 @@ class Zume_Dashboard {
     public static function delete_group( $group_key ) {
         $user_id = get_current_user_id();
         delete_user_meta( $user_id, $group_key );
+        do_action( 'zume_delete_group', $user_id, $group_key );
     }
 
     public static function closed_group( $group_key ) {
