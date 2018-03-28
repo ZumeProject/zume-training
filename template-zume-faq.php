@@ -145,6 +145,21 @@ Template Name: Zúme FAQ
                         <h3 class="secondary"><?php esc_html_e( 'How are the groups started by trainees aligned or organized?', 'zume' ) ?></h3>
                         <?php esc_html_e( 'It depends. If the trainees come out of a particular church or denomination or network then the most natural thing is for the newly formed groups to be connected with those existing churches, denomination, or network. If desired, however, a new network can be formed from the groups that start. A third alternative would be for the new groups to join with other already existing networks of simple churches. Many of the people involved in developing Zúme come from such networks so we can help arrange that if desired.', 'zume' ) ?>
                     </div>
+                    <div class="cell">
+                        <hr>
+                        <h3 class="secondary"><?php esc_html_e( 'Who can see my Three-Month Plan?', 'zume' ) ?></h3>
+                        <?php esc_html_e( 'Only you see your plan, unless you link it to your group, then the group leader and coleaders will be able to see your Three-Month Plan. Your plan will also be visible to your coach. If you do not want coaching, go to your profile and set coaching preference to "Decline Coaching".', 'zume' ) ?>
+                    </div>
+                    <div class="cell">
+                        <hr>
+                        <h3 class="secondary"><?php esc_html_e( 'Can I print my Three-Month Plan?', 'zume' ) ?></h3>
+                        <?php esc_html_e( 'Yes, make sure you save you plan first, then just scroll to the bottom of your plan and click on the "Print Saved Plan" button.', 'zume' ) ?>
+                    </div>
+                    <div class="cell">
+                        <hr>
+                        <h3 class="secondary"><?php esc_html_e( 'Can I edit my Three-Month Plan later?', 'zume' ) ?></h3>
+                        <?php esc_html_e( 'Yes, you can go back to your plan at any time and edit it. Make sure you click, "Save" at the bottom of your plan.', 'zume' ) ?>
+                    </div>
 
                     <?php
                     /**
