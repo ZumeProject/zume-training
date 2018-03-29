@@ -60,7 +60,7 @@ class Zume_Integration_Hook_Groups extends Zume_Integration_Hook_Base {
                 );
             } catch ( Exception $e ) {
                 dt_write_log( '@' . __METHOD__ );
-                dt_write_log( 'Caught exception: ',  $e->getMessage(), "\n" );
+                dt_write_log( 'Caught exception: ', $e->getMessage(), "\n" );
             }
         }
         return;
@@ -94,7 +94,7 @@ class Zume_Integration_Hook_User extends Zume_Integration_Hook_Base {
             );
         } catch ( Exception $e ) {
             dt_write_log( '@' . __METHOD__ );
-            dt_write_log( 'Caught exception: ',  $e->getMessage(), "\n" );
+            dt_write_log( 'Caught exception: ', $e->getMessage(), "\n" );
         }
         return;
     }

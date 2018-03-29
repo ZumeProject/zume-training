@@ -20,7 +20,7 @@ function zume_integration_load_async_send()
             $insert_location = new Zume_Integration_Session_Complete_Transfer();
             $insert_location->send();
         } catch ( Exception $e ) {
-            dt_write_log( 'Caught exception: ',  $e->getMessage(), "\n" );
+            dt_write_log( 'Caught exception: ', $e->getMessage(), "\n" );
         }
     }
 
@@ -33,7 +33,7 @@ function zume_integration_load_async_send()
             $insert_location = new Zume_Integration_Three_Month_Plan_Updated();
             $insert_location->send();
         } catch ( Exception $e ) {
-            dt_write_log( 'Caught exception: ',  $e->getMessage(), "\n" );
+            dt_write_log( 'Caught exception: ', $e->getMessage(), "\n" );
         }
     }
 }

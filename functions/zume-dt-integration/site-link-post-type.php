@@ -8,13 +8,14 @@ if ( !defined( 'ABSPATH' ) ) {
  *
  * All functionality pertaining to project update post types in Site_Link_System.
  * @class Site_Link_System
- *           
+ *
  * @version 0.1.7
  *
  * @since    0.1.7 Moved to post type
  */
-if ( ! class_exists( 'Site_Link_System') ) {
-    
+if ( ! class_exists( 'Site_Link_System' ) ) {
+
+    // @codingStandardsIgnoreLine
     class Site_Link_System
     {
 
@@ -136,7 +137,7 @@ if ( ! class_exists( 'Site_Link_System') ) {
 
             $approved_urls = [];
             foreach ( $keys as $key => $value ) {
-                $approved_urls[] = 'https://' . self::get_non_local_site( $value[ 'site1' ], $value[ 'site2' ] );
+                $approved_urls[] = 'https://' . self::get_non_local_site( $value['site1'], $value['site2'] );
             }
 
             $request_header = get_http_origin();
@@ -171,9 +172,9 @@ if ( ! class_exists( 'Site_Link_System') ) {
         public function register_post_type()
         {
             register_post_type( $this->post_type, /* (http://codex.wordpress.org/Function_Reference/register_post_type) */
-            // let's now add all the options for this post type
-            [
-            'labels'              => [
+                // let's now add all the options for this post type
+                [
+                'labels'              => [
                 'name'               => $this->singular, /* This is the Title of the Group */
                 'singular_name'      => $this->singular, /* This is the individual type */
                 'all_items'          => __( 'All' ) . ' ' . $this->plural, /* the all items menu item */
@@ -187,21 +188,21 @@ if ( ! class_exists( 'Site_Link_System') ) {
                 'not_found'          => __( 'Nothing found in the Database.' ), /* This displays if there are no entries yet */
                 'not_found_in_trash' => __( 'Nothing found in Trash' ), /* This displays if there is nothing in the trash */
                 'parent_item_colon'  => ''
-            ], /* end of arrays */
-            'public'              => false,
-            'publicly_queryable'  => false,
-            'exclude_from_search' => true,
-            'show_ui'             => true,
-            'query_var'           => true,
-            'menu_position'       => $this->menu_position, /* this is what order you want it to appear in on the left hand side menu */
-            'menu_icon'           => $this->dashicon, /* the icon for the custom post type menu. uses built-in dashicons (CSS class name) */
-            'rewrite'             => [ 'slug' => $this->post_type, 'with_front' => false ], /* you can specify its url slug */
-            'has_archive'         => false, /* you can rename the slug here */
-            'capability_type'     => 'post',
-            'hierarchical'        => false,
-            /* the next one is important, it tells what's enabled in the post editor */
-            'supports'            => [ 'title' ]
-            ] /* end of options */
+                ], /* end of arrays */
+                'public'              => false,
+                'publicly_queryable'  => false,
+                'exclude_from_search' => true,
+                'show_ui'             => true,
+                'query_var'           => true,
+                'menu_position'       => $this->menu_position, /* this is what order you want it to appear in on the left hand side menu */
+                'menu_icon'           => $this->dashicon, /* the icon for the custom post type menu. uses built-in dashicons (CSS class name) */
+                'rewrite'             => [ 'slug' => $this->post_type, 'with_front' => false ], /* you can specify its url slug */
+                'has_archive'         => false, /* you can rename the slug here */
+                'capability_type'     => 'post',
+                'hierarchical'        => false,
+                /* the next one is important, it tells what's enabled in the post editor */
+                'supports'            => [ 'title' ]
+                ] /* end of options */
             ); /* end of register post type */
         }
 
@@ -211,7 +212,7 @@ if ( ! class_exists( 'Site_Link_System') ) {
 
             switch ( $column_name ) {
                 case 'linked':
-                    if( $this->is_key_locked( $post->ID ) ) {
+                    if ( $this->is_key_locked( $post->ID ) ) {
                         ?>
 
                         <span >
@@ -241,7 +242,7 @@ if ( ! class_exists( 'Site_Link_System') ) {
         public function register_custom_column_headings( $defaults )
         {
 
-            $new_columns = array( 'linked' => __( 'Linked' ));
+            $new_columns = array( 'linked' => __( 'Linked' ) );
 
             $last_item = [];
 
@@ -269,26 +270,26 @@ if ( ! class_exists( 'Site_Link_System') ) {
             $messages[ $this->post_type ] = [
             0  => '', // Unused. Messages start at index 1.
             1  => sprintf(
-            '%1$s updated.',
-            $this->singular
+                '%1$s updated.',
+                $this->singular
             ),
             2  => 'Site Link updated.',
             3  => 'Site Link deleted.',
             4  => sprintf( '%s updated.', $this->singular ),
             /* translators: %s: date and time of the revision */
-            5  => isset( $_GET[ 'revision' ] ) ? sprintf( '%1$s restored to revision from %2$s', $this->singular, wp_post_revision_title( (int) $_GET[ 'revision' ], false ) ) : false,
+            5  => isset( $_GET['revision'] ) ? sprintf( '%1$s restored to revision from %2$s', $this->singular, wp_post_revision_title( (int) $_GET['revision'], false ) ) : false,
             6  => sprintf( '%1$s published. %3$s%2$s%4$s', $this->singular, strtolower( $this->singular ), '', '' ),
             7  => sprintf( '%s saved.', $this->singular ),
             8  => sprintf( '%1$s submitted. %2$s%3$s%4$s', $this->singular, strtolower( $this->singular ), '', '' ),
             9  => sprintf(
-            '%1$s scheduled for: %1$s. %2$s%2$s%3$6$s',
-            $this->singular,
-            strtolower( $this->singular ),
-            // translators: Publish box date format, see http://php.net/date
-            '<strong>' . date_i18n( __( 'M j, Y @ G:i' ),
-            strtotime( $post->post_date ) ) . '</strong>',
-            '',
-            ''
+                '%1$s scheduled for: %1$s. %2$s%2$s%3$6$s',
+                $this->singular,
+                strtolower( $this->singular ),
+                // translators: Publish box date format, see http://php.net/date
+                '<strong>' . date_i18n( __( 'M j, Y @ G:i' ),
+                strtotime( $post->post_date ) ) . '</strong>',
+                '',
+                ''
             ),
             10 => sprintf( '%1$s draft updated. %2$s%3$s%4$s', $this->singular, strtolower( $this->singular ), '', '' ),
             ];
@@ -316,34 +317,34 @@ if ( ! class_exists( 'Site_Link_System') ) {
 
                 foreach ( $field_data as $k => $v ) {
 
-                    if ( $v[ 'section' ] == $section ) {
+                    if ( $v['section'] == $section ) {
 
-                        $data = $v[ 'default' ];
-                        if ( isset( $fields[ $k ] ) && isset( $fields[ $k ][ 0 ] ) ) {
-                            $data = $fields[ $k ][ 0 ];
+                        $data = $v['default'];
+                        if ( isset( $fields[ $k ] ) && isset( $fields[ $k ][0] ) ) {
+                            $data = $fields[ $k ][0];
                         }
 
-                        $type = $v[ 'type' ];
+                        $type = $v['type'];
 
                         switch ( $type ) {
 
                             case 'url':
                                 if ( $this->is_key_locked( $post_id ) ) {
-                                    echo '<tr valign="top"><th scope="row"><label for="' . esc_attr( $k ) . '">' . esc_html( $v[ 'name' ] ) . '</label></th>
-                                    <td>' . esc_attr( $data ) ;
+                                    echo '<tr valign="top"><th scope="row"><label for="' . esc_attr( $k ) . '">' . esc_html( $v['name'] ) . '</label></th>
+                                    <td>' . esc_attr( $data );
                                     echo '</td><tr/>' . "\n";
                                 }
                                 else {
-                                    echo '<tr valign="top"><th scope="row"><label for="' . esc_attr( $k ) . '">' . esc_html( $v[ 'name' ] ) . '</label></th>
+                                    echo '<tr valign="top"><th scope="row"><label for="' . esc_attr( $k ) . '">' . esc_html( $v['name'] ) . '</label></th>
                                     <td><input name="' . esc_attr( $k ) . '" type="text" id="' . esc_attr( $k ) . '" class="regular-text" value="' . esc_attr( $data ) . '" /> <a onclick="jQuery(\'#' . esc_attr( $k ) . '\').val( window.location.hostname );">add this site</a>' . "\n";
-                                    echo '<p class="description">' . esc_html( $v[ 'description' ] ) . '</p>' . "\n";
+                                    echo '<p class="description">' . esc_html( $v['description'] ) . '</p>' . "\n";
                                     echo '</td><tr/>' . "\n";
                                 }
 
                                 break;
                             case 'token':
                                 if ( $this->is_key_locked( $post_id ) ) {
-                                    echo '<tr valign="top"><th scope="row">' . esc_html( $v[ 'name' ] ) . '</th>
+                                    echo '<tr valign="top"><th scope="row">' . esc_html( $v['name'] ) . '</th>
                                     <td style="-ms-word-break: break-all;
                                                  word-break: break-all;
                                                  word-break: break-word;
@@ -355,20 +356,20 @@ if ( ! class_exists( 'Site_Link_System') ) {
                                 else {
                                     $data = self::generate_token();
 
-                                    echo '<tr valign="top"><th scope="row"><label for="' . esc_attr( $k ) . '">' . esc_html( $v[ 'name' ] ) . '</label></th>
+                                    echo '<tr valign="top"><th scope="row"><label for="' . esc_attr( $k ) . '">' . esc_html( $v['name'] ) . '</label></th>
                                     <td><input name="' . esc_attr( $k ) . '" type="text" id="' . esc_attr( $k ) . '" class="regular-text" value="' . esc_attr( $data ) . '" /> <a style="" onclick="jQuery(\'#'.esc_attr( $k ).'\').val(\'\');">clear</a>' . "\n";
-                                    echo '<p class="description">' . esc_html( $v[ 'description' ] ) . '</p>' . "\n";
+                                    echo '<p class="description">' . esc_html( $v['description'] ) . '</p>' . "\n";
                                     echo '</td><tr/>' . "\n";
                                 }
 
                                 break;
                             case 'select':
                                 echo '<tr valign="top"><th scope="row">
-                                <label for="' . esc_attr( $k ) . '">' . esc_html( $v[ 'name' ] ) . '</label></th>
+                                <label for="' . esc_attr( $k ) . '">' . esc_html( $v['name'] ) . '</label></th>
                                 <td>
                                 <select name="' . esc_attr( $k ) . '" id="' . esc_attr( $k ) . '" class="regular-text">';
                                 // Iterate the options
-                                foreach ( $v[ 'default' ] as $vv ) {
+                                foreach ( $v['default'] as $vv ) {
                                     echo '<option value="' . esc_attr( $vv ) . '" ';
                                     if ( $vv == $data ) {
                                         echo 'selected';
@@ -376,7 +377,7 @@ if ( ! class_exists( 'Site_Link_System') ) {
                                     echo '>' . esc_html( $vv ) . '</option>';
                                 }
                                 echo '</select>' . "\n";
-                                echo '<p class="description">' . esc_html( $v[ 'description' ] ) . '</p>' . "\n";
+                                echo '<p class="description">' . esc_html( $v['description'] ) . '</p>' . "\n";
                                 echo '</td><tr/>' . "\n";
                                 break;
 
@@ -403,7 +404,7 @@ if ( ! class_exists( 'Site_Link_System') ) {
                 return $post_id;
             }
 
-            if ( isset( $_POST[ 'post_type' ] ) && 'page' == sanitize_text_field( wp_unslash( $_POST[ 'post_type' ] ) ) ) {
+            if ( isset( $_POST['post_type'] ) && 'page' == sanitize_text_field( wp_unslash( $_POST['post_type'] ) ) ) {
                 if ( ! current_user_can( 'edit_page', $post_id ) ) {
                     return $post_id;
                 }
@@ -413,8 +414,8 @@ if ( ! class_exists( 'Site_Link_System') ) {
                 }
             }
 
-            if ( isset( $_GET[ 'action' ] ) ) {
-                if ( $_GET[ 'action' ] == 'trash' || $_GET[ 'action' ] == 'untrash' || $_GET[ 'action' ] == 'delete' ) {
+            if ( isset( $_GET['action'] ) ) {
+                if ( $_GET['action'] == 'trash' || $_GET['action'] == 'untrash' || $_GET['action'] == 'delete' ) {
                     return $post_id;
                 }
             }
@@ -441,8 +442,8 @@ if ( ! class_exists( 'Site_Link_System') ) {
                 ${$f} = strip_tags( trim( sanitize_text_field( wp_unslash( $_POST[ $f ] ) ) ) );
 
                 // Escape and confirm format of the URL fields.
-                if ( 'url' == $field_data[ $f ][ 'type' ] ) {
-                    if ( strpos(${$f}, 'http' )!== false || strpos(${$f}, '//' ) !== false || strpos(${$f}, '/' ) !== false ){
+                if ( 'url' == $field_data[ $f ]['type'] ) {
+                    if ( strpos( ${$f}, 'http' ) !== false || strpos( ${$f}, '//' ) !== false || strpos( ${$f}, '/' ) !== false ){
                         ${$f} = parse_url( ${$f}, PHP_URL_HOST );
                     }
                 }
@@ -467,7 +468,7 @@ if ( ! class_exists( 'Site_Link_System') ) {
 
             // Public Info
 
-            $fields[ 'token' ] = [
+            $fields['token'] = [
             'name'        => 'Token',
             'description' => 'If you have a token from another site, just clear token above and replace it.',
             'type'        => 'token',
@@ -475,7 +476,7 @@ if ( ! class_exists( 'Site_Link_System') ) {
             'section'     => 'site',
             ];
 
-            $fields[ 'site1' ] = [
+            $fields['site1'] = [
             'name'        => 'Site 1',
             'description' => 'Use just the host name. Example: www.website.com',
             'type'        => 'url',
@@ -483,7 +484,7 @@ if ( ! class_exists( 'Site_Link_System') ) {
             'section'     => 'site',
             ];
 
-            $fields[ 'site2' ] = [
+            $fields['site2'] = [
             'name'        => 'Site 2',
             'description' => 'Use just the host name. Example: www.website.com',
             'type'        => 'url',
@@ -724,7 +725,7 @@ if ( ! class_exists( 'Site_Link_System') ) {
                 ];
             }
 
-            update_option( self::$token . '_api_keys', $site_keys);
+            update_option( self::$token . '_api_keys', $site_keys );
             return $site_keys;
         }
 
@@ -790,12 +791,12 @@ if ( ! class_exists( 'Site_Link_System') ) {
             $namespace = 'dt-public/v' . $version;
 
             register_rest_route(
-            $namespace, '/sites/site_link_check', [
-            [
-            'methods'  => WP_REST_Server::CREATABLE,
-            'callback' => [ $this, 'site_link_check' ],
-            ],
-            ]
+                $namespace, '/sites/site_link_check', [
+                [
+                'methods'  => WP_REST_Server::CREATABLE,
+                'callback' => [ $this, 'site_link_check' ],
+                ],
+                ]
             );
 
             // Enable cross origin resource requests (CORS) for approved sites.
@@ -813,8 +814,8 @@ if ( ! class_exists( 'Site_Link_System') ) {
         {
             $params = $request->get_params();
 
-            if ( isset( $params[ 'transfer_token' ] ) ) {
-                $status = self::verify_transfer_token( $params[ 'transfer_token' ] );
+            if ( isset( $params['transfer_token'] ) ) {
+                $status = self::verify_transfer_token( $params['transfer_token'] );
                 if ( $status ) {
                     return true;
                 } else {
@@ -865,10 +866,10 @@ if ( ! class_exists( 'Site_Link_System') ) {
         public static function filter_for_target_site( $value )
         {
             $local_site = self::get_current_site_base_url();
-            if ( $local_site == $value[ 'site1' ] ) {
-                return $value[ 'site2' ];
+            if ( $local_site == $value['site1'] ) {
+                return $value['site2'];
             } else {
-                return $value[ 'site1' ];
+                return $value['site1'];
             }
         }
 
@@ -957,8 +958,8 @@ if ( ! class_exists( 'Site_Link_System') ) {
                 add_filter( 'enter_title_here', [ $this, 'enter_title_here' ] );
                 add_filter( 'post_updated_messages', [ $this, 'post_type_updated_messages' ] );
 
-                if ( $pagenow == 'edit.php' && isset( $_GET[ 'post_type' ] ) ) {
-                    $pt = sanitize_text_field( wp_unslash( $_GET[ 'post_type' ] ) );
+                if ( $pagenow == 'edit.php' && isset( $_GET['post_type'] ) ) {
+                    $pt = sanitize_text_field( wp_unslash( $_GET['post_type'] ) );
                     if ( $pt === $this->post_type ) {
                         add_filter( 'manage_edit-' . $this->post_type . '_columns', [ $this, 'register_custom_column_headings' ], 10, 1 );
                         add_action( 'manage_posts_custom_column', [ $this, 'register_custom_columns' ], 10, 2 );

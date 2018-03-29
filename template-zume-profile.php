@@ -136,8 +136,8 @@ $zume_user_meta = zume_get_user_meta( get_current_user_id() ); // Full array of 
                             </td>
                             <td>
                                 <select id="zume_decline_coaching" name="zume_decline_coaching">
-                                    <option value="0"><?php esc_html_e('Authorized', 'zume') ?></option>
-                                    <option value="1"><?php esc_html_e('Decline Coaching', 'zume') ?></option>
+                                    <option value="0"><?php esc_html_e( 'Authorized', 'zume' ) ?></option>
+                                    <option value="1"><?php esc_html_e( 'Decline Coaching', 'zume' ) ?></option>
                                 </select>
                             </td>
                         </tr>
@@ -148,8 +148,8 @@ $zume_user_meta = zume_get_user_meta( get_current_user_id() ); // Full array of 
                             <td>
                                 <select id="zume_coalition_affiliation" name="zume_coalition_affiliation">
                                     <?php echo isset( $zume_user_meta['zume_coalition_affiliation'] ) ? esc_html( $zume_user_meta['zume_coalition_affiliation'] ) : ''; ?>
-                                    <option value="0"><?php esc_html_e('Zúme', 'zume') ?></option>
-                                    <option value="1"><?php esc_html_e('2414', 'zume') ?></option>
+                                    <option value="0"><?php esc_html_e( 'Zúme', 'zume' ) ?></option>
+                                    <option value="1"><?php esc_html_e( '2414', 'zume' ) ?></option>
                                 </select>
                             </td>
                         </tr>

@@ -109,6 +109,7 @@ if ( ! function_exists( 'dt_write_log' ) ) {
      *
      * @param $log
      */
+    // @codingStandardsIgnoreLine
     function dt_write_log( $log )
     {
         if ( true === WP_DEBUG ) {

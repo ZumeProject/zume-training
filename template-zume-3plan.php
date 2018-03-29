@@ -164,7 +164,7 @@ zume_write_log( $zume_three_month_plan );
                     </div>
                     <button class="button" type="submit" id="submit_profile"><?php echo esc_html__( 'Save', 'zume' )?></button>
                     <button class="button hollow clear float-right" type="submit" name="reset_three_month_plan"><?php echo esc_html__( 'Reset', 'zume' )?></button>
-                        <button type="button" class="button hollow float-right" onclick="print_element('my-plan-print')"><?php esc_html_e('Print Saved Plan', 'zume') ?></button>
+                        <button type="button" class="button hollow float-right" onclick="print_element('my-plan-print')"><?php esc_html_e( 'Print Saved Plan', 'zume' ) ?></button>
 
                     <div style="display:none;">
                         <div id="my-plan-print">
@@ -175,7 +175,7 @@ zume_write_log( $zume_three_month_plan );
                                 /* Generate all rows */
                                 ?>
                                 <h3><strong>(<?php echo esc_attr( $zume_index ) ?>) <?php echo esc_html( $zume_label )?></strong></h3>
-                                <p><?php echo esc_html( $zume_three_month_plan[ $zume_key ] ?: __('not answered', 'zume') ) ?></p>
+                                <p><?php echo esc_html( $zume_three_month_plan[ $zume_key ] ?: __( 'not answered', 'zume' ) ) ?></p>
                                 <?php
                                 $zume_index++; // add increment
                             endforeach;
@@ -225,7 +225,7 @@ zume_write_log( $zume_three_month_plan );
 endforeach; ?>
 
                                             <div class="cell center">
-                                                <button type="button" class="button" onclick="print_element('participant-<?php echo esc_attr( $zume_participant_plan['user']->ID ) ?>')"><?php esc_html_e('Print', 'Zume') ?></button>
+                                                <button type="button" class="button" onclick="print_element('participant-<?php echo esc_attr( $zume_participant_plan['user']->ID ) ?>')"><?php esc_html_e( 'Print', 'Zume' ) ?></button>
                                             </div>
 
                                             <button class="close-button" data-close aria-label="Close modal" type="button">
