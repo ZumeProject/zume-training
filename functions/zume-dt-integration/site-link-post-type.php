@@ -307,7 +307,7 @@ if ( ! class_exists( 'Site_Link_System' ) ) {
         {
             global $post_id;
             $fields = get_post_custom( $post_id );
-            $field_data = $this->get_custom_fields_settings();
+            $field_data = $this->meta_box_custom_fields_settings();
 
             echo '<input type="hidden" name="' . esc_attr( $this->post_type ) . '_noonce" id="' . esc_attr( $this->post_type ) . '_noonce" value="' . esc_attr( wp_create_nonce( esc_attr( $this->post_type ) . '_noonce_action' ) ) . '" />';
 
