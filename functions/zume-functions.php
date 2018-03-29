@@ -100,6 +100,12 @@ function zume_update_user_contact_info()
             }
         }
     }
+    if ( isset( $_POST['zume_decline_coaching'] ) ) {
+        update_user_meta( $user_id, 'zume_decline_coaching', sanitize_text_field( wp_unslash( $_POST['zume_decline_coaching'] ) ) );
+    }
+    if ( isset( $_POST['zume_coalition_affiliation'] ) ) {
+        update_user_meta( $user_id, 'zume_coalition_affiliation', sanitize_text_field( wp_unslash( $_POST['zume_coalition_affiliation'] ) ) );
+    }
 
     zume_update_user_ip_address_and_location( $user_id );
 

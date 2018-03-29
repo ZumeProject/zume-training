@@ -11,7 +11,7 @@ if( isset( $_POST[ 'user_update_nonce' ] ) ) {
 }
 /* Build variables for page */
 $zume_user = wp_get_current_user(); // Returns WP_User object
-$zume_user_meta = get_user_meta( get_current_user_id() ); // Full array of user meta data
+$zume_user_meta = zume_get_user_meta( get_current_user_id() ); // Full array of user meta data
 ?>
 
 <?php get_header(); ?>
@@ -94,7 +94,7 @@ $zume_user_meta = get_user_meta( get_current_user_id() ); // Full array of user 
                                        class="profile-input"
                                        id="zume_phone_number"
                                        name="zume_phone_number"
-                                       value="<?php echo isset( $zume_user_meta['zume_phone_number'][0] ) ? esc_html( $zume_user_meta['zume_phone_number'][0] ) : ''; ?>"
+                                       value="<?php echo isset( $zume_user_meta['zume_phone_number'] ) ? esc_html( $zume_user_meta['zume_phone_number'] ) : ''; ?>"
                                        data-abide-ignore
                                 />
                             </td>
@@ -112,7 +112,7 @@ $zume_user_meta = get_user_meta( get_current_user_id() ); // Full array of user 
                                            class="profile-input input-group-field"
                                            id="validate_addressprofile"
                                            name="validate_address"
-                                           value="<?php echo isset( $zume_user_meta['zume_user_address'][0] ) ? esc_html( $zume_user_meta['zume_user_address'][0] ) : ''; ?>"
+                                           value="<?php echo isset( $zume_user_meta['zume_user_address'] ) ? esc_html( $zume_user_meta['zume_user_address'] ) : ''; ?>"
                                     />
                                     <div class="input-group-button">
                                         <input type="button" class="button" id="validate_address_buttonprofile" value="<?php echo esc_html__( 'Validate', 'zume' ) ?>" onclick="validate_user_address( jQuery('#validate_addressprofile').val() )">
@@ -120,17 +120,37 @@ $zume_user_meta = get_user_meta( get_current_user_id() ); // Full array of user 
                                 </div>
 
                                 <div id="possible-results">
-                                    <input type="hidden" name="address" id="address_profile" value="<?php echo isset( $zume_user_meta['zume_user_address'][0] ) ? esc_html( $zume_user_meta['zume_user_address'][0] ) : ''; ?>" />
+                                    <input type="hidden" name="address" id="address_profile" value="<?php echo isset( $zume_user_meta['zume_user_address'] ) ? esc_html( $zume_user_meta['zume_user_address'] ) : ''; ?>" />
                                 </div>
 
-                                <?php if ( ! empty( $zume_user_meta['zume_user_address'][0] ) && ! empty( $zume_user_meta['zume_user_lng'][0] ) && ! empty( $zume_user_meta['zume_user_lat'][0] ) ) : ?>
+                                <?php if ( ! empty( $zume_user_meta['zume_user_address'] ) && ! empty( $zume_user_meta['zume_user_lng'] ) && ! empty( $zume_user_meta['zume_user_lat'] ) ) : ?>
                                 <div id="map" >
-                                    <img src="https://maps.googleapis.com/maps/api/staticmap?center=<?php echo esc_attr( $zume_user_meta['zume_user_lat'][0] ) . ',' . esc_attr( $zume_user_meta['zume_user_lng'][0] ) ?>&zoom=5&size=600x250&markers=color:red|<?php echo esc_attr( $zume_user_meta['zume_user_lat'][0] ) . ',' . esc_attr( $zume_user_meta['zume_user_lng'][0] ) ?>&key=<?php echo esc_attr( Zume_Google_Geolocation::$key ); ?>" />
+                                    <img src="https://maps.googleapis.com/maps/api/staticmap?center=<?php echo esc_attr( $zume_user_meta['zume_user_lat'] ) . ',' . esc_attr( $zume_user_meta['zume_user_lng'] ) ?>&zoom=5&size=600x250&markers=color:red|<?php echo esc_attr( $zume_user_meta['zume_user_lat'] ) . ',' . esc_attr( $zume_user_meta['zume_user_lng'] ) ?>&key=<?php echo esc_attr( Zume_Google_Geolocation::$key ); ?>" />
                                 </div>
                                 <?php endif; ?>
-
-
-
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="vertical-align: top;">
+                                <label for="zume_decline_coaching"><?php echo esc_html__( 'Coaching', 'zume' )?></label>
+                            </td>
+                            <td>
+                                <select id="zume_decline_coaching" name="zume_decline_coaching">
+                                    <option value="0"><?php esc_html_e('Authorized', 'zume') ?></option>
+                                    <option value="1"><?php esc_html_e('Decline Coaching', 'zume') ?></option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="vertical-align: top;">
+                                <label for="zume_coalition_affiliation"><?php echo esc_html__( 'Coalition Affiliation', 'zume' )?></label>
+                            </td>
+                            <td>
+                                <select id="zume_coalition_affiliation" name="zume_coalition_affiliation">
+                                    <?php echo isset( $zume_user_meta['zume_coalition_affiliation'] ) ? esc_html( $zume_user_meta['zume_coalition_affiliation'] ) : ''; ?>
+                                    <option value="0"><?php esc_html_e('Zúme', 'zume') ?></option>
+                                    <option value="1"><?php esc_html_e('2414', 'zume') ?></option>
+                                </select>
                             </td>
                         </tr>
                     </table>

@@ -57,8 +57,19 @@ require_once( 'functions/zume-rest-api.php' );
 // Locations System
 require_once( 'functions/geocoding-api.php' );
 
-// Email System
 include_once( 'functions/login/user-register.php' );
+
+// Zume - DT - Integration
+require_once( 'functions/zume-dt-integration/site-link-post-type.php' );
+Site_Link_System::instance();
+require_once( 'functions/zume-dt-integration/wp-async-request.php' );
+require_once( 'functions/zume-dt-integration/site-link-system.php' );
+require_once( 'functions/zume-dt-integration/menu-and-tabs.php' );
+require_once( 'functions/zume-dt-integration/zume.php' );
+require_once( 'functions/zume-dt-integration/zume-hooks.php' );
+require_once( 'functions/zume-dt-integration/zume-async-send.php' );
+require_once( 'functions/zume-dt-integration/utility-functions.php' );
+require_once( 'functions/zume-dt-integration/zume-endpoints.php' );
 
 /**
  * redirect all logins to the home page
