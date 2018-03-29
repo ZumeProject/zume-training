@@ -80,9 +80,7 @@ class Zume_Integration_Zume_Endpoints
                 // prepare user data
                 $zume = new Zume_Integration_Zume();
                 $user_data = $zume->get_transfer_user_array( $user_id );
-                $fields = $zume->build_user_transfer_record( $user_data );
                 return [
-                    'transfer_record' => $fields,
                     'raw_record' => $user_data,
                 ];
 

@@ -39,7 +39,6 @@ class Zume_Integration_Menu
     {
         $this->token = 'dt_zume';
         add_action( "admin_menu", [ $this, "register_menu" ] );
-        add_action( 'admin_head', [ $this, 'scripts' ], 20 );
     } // End __construct()
 
     /**
@@ -49,7 +48,7 @@ class Zume_Integration_Menu
      */
     public function register_menu()
     {
-        add_menu_page( __( 'Zúme Integration', 'disciple_tools' ), __( 'Zúme Integration', 'disciple_tools' ), 'manage_options', $this->token, [ $this, 'zume_content' ], 'dashicons-admin-generic', 59 );
+        add_submenu_page( 'edit.php?post_type=site_link_system', __( 'Settings' ), __( 'Settings' ), 'manage_options', 'site_link_system_settings', [ $this, 'zume_content' ] );
     }
 
     /**
@@ -68,17 +67,13 @@ class Zume_Integration_Menu
 
         $tab_bar = [
         [
-        'key' => 'site_links',
-        'label' => __( 'Site Links', 'dt_zume' ),
-        ],
-        [
         'key' => 'zume_settings',
         'label' => __( 'Settings', 'dt_zume' ),
-        ],
+        ]
         ];
 
         // determine active tabs
-        $active_tab = 'site_links';
+        $active_tab = 'zume_settings';
 
         if ( isset( $_GET["tab"] ) ) {
             $active_tab = sanitize_key( wp_unslash( $_GET["tab"] ) );
@@ -101,7 +96,6 @@ class Zume_Integration_Menu
         <div class="wrap">
 
             <h2><?php echo esc_attr( $title ) ?></h2>
-            <span class="text-light-grey"><?php echo esc_attr__( 'Active: Disciple Tools' ) ?></span>
 
             <h2 class="nav-tab-wrapper">
                 <?php foreach ( $tab_bar as $tab) : ?>
@@ -115,15 +109,8 @@ class Zume_Integration_Menu
             <?php
             switch ( $active_tab ) {
 
-
-                case 'site_links':
-                    $this->tab_site_links();
-                    break;
                 case "zume_settings":
                     $this->tab_zume_settings();
-                    break;
-                case "dt_settings":
-                    $this->tab_dt_settings();
                     break;
                 default:
                     break;
@@ -133,18 +120,6 @@ class Zume_Integration_Menu
         </div><!-- End wrap -->
 
         <?php
-    }
-
-    public function tab_site_links() {
-        // begin columns template
-        $this->template( 'begin' );
-
-        DT_Site_Link_System::metabox_multiple_link(); // main column content
-
-        // begin right column template
-        $this->template( 'right_column' );
-        // end columns template
-        $this->template( 'end' );
     }
 
     public function tab_zume_settings() {
@@ -159,19 +134,6 @@ class Zume_Integration_Menu
         $this->site_default_metabox();
         $this->session_complete_transfer_metabox();
         $this->system_health_metabox();
-
-        // begin right column template
-        $this->template( 'right_column' );
-        // end columns template
-        $this->template( 'end' );
-    }
-
-    public function tab_dt_settings() {
-        // begin columns template
-        $this->template( 'begin' );
-
-        // Runs validation of the database when page is loaded.
-        $this->site_default_metabox();
 
         // begin right column template
         $this->template( 'right_column' );
@@ -238,14 +200,6 @@ class Zume_Integration_Menu
         }
     }
 
-    public function scripts() {
-
-        echo "<style>
-            .text-light-grey {
-                color: lightsteelblue;
-            }
-            </style>";
-    }
 
     public static function site_default_metabox()
     {
@@ -256,7 +210,7 @@ class Zume_Integration_Menu
                 update_option( 'zume_default_site', $default_site );
             }
         }
-        $keys = DT_Site_Link_System::get_site_keys();
+        $keys = Site_Link_System::get_site_keys();
         $current_key = get_option( 'zume_default_site' );
 
         ?>
@@ -278,7 +232,7 @@ class Zume_Integration_Menu
                         <select id="default-site" name="default-site">
                             <?php foreach ($keys as $key => $value ) : ?>
                                 <option value="<?php echo esc_attr( $key ) ?>" <?php $current_key == $key ? print esc_attr( 'selected' ) : print '';  ?> >
-                                    <?php echo esc_html( $value['id'] )?>
+                                    <?php echo esc_html( $value['label'] )?>
                                 </option>
                             <?php endforeach; ?>
                         </select>
