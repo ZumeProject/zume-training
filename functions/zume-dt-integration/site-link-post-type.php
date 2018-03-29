@@ -175,7 +175,7 @@ if ( ! class_exists( 'Site_Link_System' ) ) {
                 // let's now add all the options for this post type
                 [
                 'labels'              => [
-                'name'               => $this->singular, /* This is the Title of the Group */
+                'name'               => $this->plural, /* This is the Title of the Group */
                 'singular_name'      => $this->singular, /* This is the individual type */
                 'all_items'          => __( 'All' ) . ' ' . $this->plural, /* the all items menu item */
                 'add_new'            => __( 'Add New' ), /* The add new menu item */
@@ -195,7 +195,7 @@ if ( ! class_exists( 'Site_Link_System' ) ) {
                 'show_ui'             => true,
                 'query_var'           => true,
                 'menu_position'       => $this->menu_position, /* this is what order you want it to appear in on the left hand side menu */
-                'menu_icon'           => $this->dashicon, /* the icon for the custom post type menu. uses built-in dashicons (CSS class name) */
+                'menu_icon'           => 'dashicons-admin-links', /* the icon for the custom post type menu. uses built-in dashicons (CSS class name) */
                 'rewrite'             => [ 'slug' => $this->post_type, 'with_front' => false ], /* you can specify its url slug */
                 'has_archive'         => false, /* you can rename the slug here */
                 'capability_type'     => 'post',
@@ -562,7 +562,7 @@ if ( ! class_exists( 'Site_Link_System' ) ) {
                             })
                         </script>
                     </table>
-                <?php
+                    <?php
 
                 } else {
                     $this->meta_box_content( 'site' );
@@ -717,11 +717,11 @@ if ( ! class_exists( 'Site_Link_System' ) ) {
             $site_keys = [];
             foreach ( $results as $result ) {
                 $site_keys[$result['site_key']] = [
-                        'id'    => $result['id'],
-                        'label' => $result['label'],
-                        'token' => $result['token'],
-                        'site1' => $result['site1'],
-                        'site2' => $result['site2'],
+                'id'    => $result['id'],
+                'label' => $result['label'],
+                'token' => $result['token'],
+                'site1' => $result['site1'],
+                'site2' => $result['site2'],
                 ];
             }
 
@@ -936,8 +936,8 @@ if ( ! class_exists( 'Site_Link_System' ) ) {
          * @param string $dashicon
          */
         public function __construct(
-            $menu_position = 5,
-            $dashicon = 'dashicons-book'
+        $menu_position = 5,
+        $dashicon = 'dashicons-admin-links'
         )
         {
             $this->post_type = self::$token;
