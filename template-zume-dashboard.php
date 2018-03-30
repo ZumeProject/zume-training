@@ -19,6 +19,7 @@ if ( ! empty( $_POST ) ) { // test if post submitted
         // handle post
         if ( isset( $_POST['type'] ) ) { // group submissions
             if ( ! empty( $_POST['type'] ) && $_POST['type'] == 'create' ) { // create group
+                dt_write_log( $_POST );
                 Zume_Dashboard::create_group( $_POST );
             } elseif ( ! empty( $_POST['type'] ) && $_POST['type'] == 'edit' ) { // edit group
                 Zume_Dashboard::edit_group( $_POST );
@@ -100,21 +101,23 @@ do_action( 'zume_dashboard_header' );
                                             <!-- Group Row -->
                                             <li class="block">
                                                 <div class="grid-x grid-margin-x">
-                                                    <div class="cell large-6 <?php if ( isset( $zume_value['no_edit'] ) ) {
-                                                        echo 'coleader-group';
-} ?>">
+                                                    <div class="cell large-6 <?php if ( isset( $zume_value['no_edit'] ) ) { echo 'coleader-group'; } ?>" >
 
-                                                        <?php if ( isset( $zume_value['no_edit'] ) ) : ?>
-                                                            <span class="group-title"> <?php echo esc_html( $zume_value['group_name'] ) ?></span>
-                                                        <?php else : ?>
                                                             <span class="group-title"><a
                                                                         data-open="<?php echo esc_html( $zume_key ); ?>"><?php echo esc_html( $zume_value['group_name'] ) ?></a></span>&nbsp;
 
-                                                            <button class="small"
-                                                                    data-open="<?php echo esc_html( $zume_key ); ?>"
-                                                                    style="opacity: .5;">
-                                                                <i class="fi-pencil hollow"></i> <?php echo esc_html__( 'edit', 'zume' ) ?>
-                                                            </button>
+                                                            <?php if ( isset( $zume_value['no_edit'] ) ) : ?>
+                                                                <button class="small"
+                                                                        data-open="<?php echo esc_html( $zume_key ); ?>"
+                                                                        style="opacity: .5;">
+                                                                    <i class="fi-eye hollow"></i> <?php echo esc_html__( 'view', 'zume' ) ?>
+                                                                </button>
+                                                            <?php else : ?>
+                                                                <button class="small"
+                                                                        data-open="<?php echo esc_html( $zume_key ); ?>"
+                                                                        style="opacity: .5;">
+                                                                    <i class="fi-pencil hollow"></i> <?php echo esc_html__( 'edit', 'zume' ) ?>
+                                                                </button>
                                                         <?php endif; ?>
 
                                                         <p class="text-gray">
@@ -126,28 +129,6 @@ do_action( 'zume_dashboard_header' );
                                                             <?php if ( ! isset( $zume_value['no_edit'] ) ) : ?>
                                                                 <br>
                                                                 <?php echo esc_html( __( 'Key', 'zume' ) . ':' ) ?> <span class="<?php echo esc_html( $zume_key ); ?>_public_key"><?php echo esc_attr( $zume_value['public_key'] ) ?></span>
-                                                            <?php endif; ?>
-                                                            <?php if ( isset( $zume_value['no_edit'] ) ) : ?>
-                                                                <br>(Colead Group)
-                                                                <span class="coleader-remove-link"
-                                                                      style="display:none;">
-                                                                    <a class="small text-gray"
-                                                                       onclick="jQuery('#<?php echo esc_html( $zume_key ); ?>-remove-group').toggle();">
-                                                                        <?php esc_attr_e( 'Remove this group', 'zume' ) ?>
-                                                                    </a>
-                                                                    <form method="post" style="display:none;"
-                                                                          id="<?php echo esc_html( $zume_key ); ?>-remove-group">
-                                                                        <?php wp_nonce_field( get_current_user_id(), 'zume_nonce' ) ?>
-                                                                        <input type="hidden" name="type"
-                                                                               value="coleader"/>
-                                                                        <?php esc_attr_e( 'Are you sure you want to remove this group?', 'zume' ) ?>
-                                                                        <br>
-                                                                    <button class="small button" type="submit"
-                                                                            name="decline"
-                                                                            value="<?php echo esc_html( $zume_key ); ?>"><?php esc_attr_e( 'Yes', 'zume' ) ?></button>
-                                                                    </form>
-                                                                </span>
-
                                                             <?php endif; ?>
                                                         </p>
 
@@ -614,10 +595,13 @@ do_action( 'zume_dashboard_header' );
             <input type="hidden" name="ip_address"
                    value="<?php echo esc_html( Zume_Google_Geolocation::get_real_ip_address() ); ?>"/>
             <div class="grid-x grid-margin-x">
+                <!--Group Name-->
                 <div class="cell">
                     <label for="group_name"><?php echo esc_html__( 'Group Name', 'zume' ) ?></label>
                     <input type="text" value="" name="group_name" id="group_name" required/>
                 </div>
+
+                <!-- Number of group members -->
                 <div class="cell">
                     <label for="members"><?php echo esc_html__( 'Number of Group Members (including you)', 'zume' ) ?></label>
                     <select name="members" id="members" required>
@@ -647,11 +631,15 @@ do_action( 'zume_dashboard_header' );
                         <option value="24">24</option>
                     </select>
                 </div>
-                <div class="cell">
+
+                <!-- Planned Meeting Time -->
+                <div class="cell padding-top" style="padding-top: .8em;">
                     <label for="meeting_time"><?php echo esc_html__( 'Planned Meeting Time', 'zume' ) ?></label>
                     <input placeholder="<?php esc_attr_e( 'example: Saturday 7PM', 'zume' ) ?>"
                            type="text" value="" name="meeting_time" id="meeting_time" required/>
                 </div>
+
+                <!-- New Address -->
                 <div class="cell">
                     <label for="validate_addressnew"><?php echo esc_html__( 'Address', 'zume' ) ?></label>
                     <div class="input-group">
@@ -675,18 +663,31 @@ do_action( 'zume_dashboard_header' );
                     </div>
 
                 </div>
-                <div class="cell">
-                    <br>
-                    <button type="submit" class="button"
-                            id="submit_new"><?php echo esc_html__( 'Submit', 'zume' ) ?></button>
-                </div>
-
                 <script>
                     jQuery('#validate_addressnew').keyup(function () {
                         check_address('new')
                     });
                 </script>
 
+                <!-- Add coleaders -->
+                <div class="cell padding-top">
+                    <label for="add_coleader"><strong><?php echo esc_html__( 'Coleaders or additional participants', 'zume' ) ?></strong></label>
+                    <p class="small text-gray"><?php esc_attr( 'Adding a coleader or additional participant below gives that individual\'s Zúme dashboard access to the group after they accept the invitation. They can facilitate a training, but cannot change any details of the group.', 'zume' ) ?></p>
+
+
+                    <span id="create_coleader"></span>
+
+                    <button type="button" class="button clear"
+                            onclick="create_coleader('create_coleader')"><i
+                                class="fi-plus"></i> <?php esc_attr_e( 'Add', 'zume' ) ?></button>
+
+                </div>
+
+                <div class="cell">
+                    <br>
+                    <button type="submit" class="button"
+                            id="submit_new"><?php echo esc_html__( 'Submit', 'zume' ) ?></button>
+                </div>
             </div>
 
             <button class="close-button" data-close aria-label="Close modal" type="button">
@@ -711,14 +712,23 @@ foreach ( $zume_user_meta as $zume_key => $v ) {
             <form data-abide method="post">
                 <?php wp_nonce_field( get_current_user_id(), 'zume_nonce' ) ?>
                 <h1><?php echo esc_html__( 'Edit Group', 'zume' ) ?></h1>
+                <p><?php esc_html_e('You are the owner of this group. All changes to the group details must be done through 
+                you.', 'zume') ?></p>
+                <hr>
 
                 <input type="hidden" name="key" value="<?php echo esc_html( $zume_key ); ?>"/>
 
                 <div class="grid-x">
                     <!-- Group Public Key -->
                     <div class="cell public_key">
-                        <p><strong><?php echo esc_html__( 'Key', 'zume' ) ?>:</strong> <span class="<?php echo esc_html( $zume_key ); ?>_public_key"><?php echo esc_html( $zume_value['public_key'] ); ?></span>
-                            <span class="public_key_change" style="display:none"><a class="small" onclick="change_group_key('<?php echo esc_html( $zume_key ); ?>')">Change Key</a></span></p>
+                        <p><strong><?php echo esc_html__( 'Key', 'zume' ) ?>:
+                            </strong> <span class="<?php echo esc_html( $zume_key ); ?>_public_key">
+                                <?php echo esc_html( $zume_value['public_key'] ); ?>
+                            </span>
+                            <span class="public_key_change" style="display:none">
+                                <a class="small" onclick="change_group_key('<?php echo esc_html( $zume_key ); ?>')">
+                                    <?php esc_html_e( 'Change Key', 'zume' ) ?>
+                                </a></span></p>
                     </div>
                     <!-- Group name -->
                     <div class="cell">
@@ -802,11 +812,15 @@ foreach ( $zume_user_meta as $zume_key => $v ) {
                     <!-- Add coleaders -->
                     <div class="cell padding-top">
                         <label for="add_coleader"><strong><?php echo esc_html__( 'Coleaders or additional participants', 'zume' ) ?></strong></label>
-                        <p class="small text-gray"><?php esc_attr( 'Adding a coleader or additional participant below gives that individual\'s Zúme dashboard access to the group after they accept the invitation. They can facilitate a training, but cannot change any details of the group.', 'zume' ) ?></p>
+                        <p class="small text-gray">
+                            <?php esc_html_e( 'Adding a coleader or additional participants below gives their 
+                            Zúme dashboard access to the group, once they accept the invitation. 
+                            They can facilitate a training, but cannot change any details of the group.', 'zume' ) ?>
+                        </p>
                         <?php
                         // Print current coleaders
                         if ( isset( $zume_value['coleaders'] ) && ! empty( $zume_value['coleaders'] ) && is_array( $zume_value['coleaders'] ) ) :
-                            echo '<ul id="coleaders-ul-' . esc_html( $zume_key ) . '" data-key="' . esc_html( $zume_key ) . '">';
+                            echo '<ul id="coleaders-ul-' . esc_html( $zume_key ) . '" data-key="' . esc_html( $zume_key ) . '" style="padding: 0 2em;">';
                             $zume_i = 0;
                             foreach ( $zume_value['coleaders'] as $zume_coleader ) {
                                 $zume_li_id = $zume_key . $zume_i; // create incrementing id of for each list item.
@@ -865,7 +879,7 @@ foreach ( $zume_user_meta as $zume_key => $v ) {
 
                 <div class="grid-x grid-padding-x">
                     <div class="cell center">
-                        <h2><?php esc_attr_e( 'ARE YOU SURE YOU WANT TO DELETE THIS GROUP?', 'zume' ) ?></h2>
+                        <h3><?php esc_attr_e( 'ARE YOU SURE YOU WANT TO DELETE THIS GROUP?', 'zume' ) ?></h3>
                     </div>
                 </div>
                 <div class="grid-x">
@@ -886,6 +900,128 @@ foreach ( $zume_user_meta as $zume_key => $v ) {
         <?php
     }
 }
+?>
+
+    <!-- ********************************************************************************************* -->
+    <!-- GROUP MODAL BOXES SECTION -->
+    <!-- ********************************************************************************************* -->
+<?php
+if ( ! empty( $zume_colead_groups ) ) : // reset variable without coleader data
+
+    foreach ( $zume_colead_groups as $zume_key => $v ) {
+        $zume_key_beginning = substr( $zume_key, 0, 10 );
+        if ( 'zume_group' == $zume_key_beginning ) {
+            $zume_value = maybe_unserialize( $v );
+            ?>
+
+            <!-- Edit current groups section -->
+            <div class="small reveal" id="<?php echo esc_html( $zume_key ); ?>" data-reveal>
+                    <h1><?php echo esc_html__( 'View Group', 'zume' ) ?></h1>
+
+                    <p>
+                        <?php esc_html_e( 'You are a participant or coleader of this group and can view the group 
+                        details and lead the group through a session, but cannot change the details of the group or add 
+                        participants. Please, make change requests through the group owner.', 'zume' ) ?>
+                    </p>
+                    <hr>
+                    <div class="grid-x">
+                        <!-- Group Public Key -->
+                        <div class="cell">
+                            <dl>
+                                <dt><?php echo esc_html__( 'Group Owner', 'zume' ) ?></dt>
+                                <dd><?php $zume_owner = get_user_by( 'id', $zume_value['owner'] );
+                                echo esc_html( $zume_owner->nickname ); ?></dd>
+
+                                <dt><?php echo esc_html__( 'Group Name', 'zume' ) ?></dt>
+                                <dd><?php echo esc_html( $zume_value['group_name'] ); ?></dd>
+
+                                <dt><?php echo esc_html__( 'Number of Participants', 'zume' ) ?></dt>
+                                <dd><?php echo esc_html( $zume_value['members'] ); ?></dd>
+
+                                <dt><?php echo esc_html__( 'Planned Meeting Time', 'zume' ) ?></dt>
+                                <dd><?php echo esc_html( $zume_value['meeting_time'] ); ?></dd>
+
+                                <dt><?php echo esc_html__( 'Address', 'zume' ) ?></dt>
+                                <dd><?php echo isset( $zume_value['address'] ) ? esc_html( $zume_value['address'] ) : ''; ?></dd>
+                                <dd>
+                                    <?php if ( ! empty( $zume_value['address'] ) && ! empty( esc_attr( $zume_value['lng'] ) ) && ! empty( esc_attr( $zume_value['lat'] ) ) ) : ?>
+                                        <div id="map<?php echo esc_html( $zume_key ); ?>">
+                                            <img src="https://maps.googleapis.com/maps/api/staticmap?center=<?php echo esc_attr( $zume_value['lat'] ) . ',' . esc_attr( $zume_value['lng'] ) ?>&zoom=5&size=600x250&markers=color:red|<?php echo esc_attr( $zume_value['lat'] ) . ',' . esc_attr( $zume_value['lng'] ) ?>&key=<?php echo esc_attr( Zume_Google_Geolocation::$key ); ?>"/>
+                                        </div>
+                                    <?php endif; ?>
+                                </dd>
+
+                                <dt><?php echo esc_html__( 'Coleaders or additional participants', 'zume' ) ?></dt>
+                                <dd>
+                                    <?php
+                                    // Print current coleaders
+                                    if ( isset( $zume_value['coleaders'] ) && ! empty( $zume_value['coleaders'] ) && is_array( $zume_value['coleaders'] ) ) :
+                                        echo '<ul style="padding: 0 2em;">';
+                                        foreach ( $zume_value['coleaders'] as $zume_coleader ) {
+                                            echo '<li>' . esc_html( $zume_coleader ) . '</li>';
+                                        } // endforeach
+                                        echo '</ul>';
+                                    endif; // if coleader exits
+                                    ?>
+                                </dd>
+
+                            </dl>
+                        </div>
+
+                        <div class="cell">
+                            <span class="align-right">
+                                <button type="button" class="button clear alert" name="type"
+                                        data-open="<?php echo esc_html( $zume_key ); ?>-delete">
+                                    <?php echo esc_html__( 'Remove Group', 'zume' ) ?>
+                                </button>
+                            </span>
+                        </div>
+
+                        <!-- This is the nested modal -->
+                        <div class="reveal small" id="<?php echo esc_html( $zume_key ); ?>-delete" data-reveal>
+                            <form data-abide method="post">
+                                <?php wp_nonce_field( get_current_user_id(), 'zume_nonce' ) ?>
+                                <input type="hidden" name="type" value="coleader"/>
+                                <input type="hidden" name="key" value="<?php echo esc_html( $zume_key ); ?>"/>
+
+                                <div class="grid-x grid-padding-x">
+                                    <div class="cell center">
+                                        <h3><?php esc_attr_e( 'ARE YOU SURE YOU WANT TO REMOVE THIS GROUP?', 'zume' ) ?></h3>
+                                        <p><?php esc_html_e( 'To reverse this action, the owner of the group must re-invite you to the group again.', 'zume' ) ?></p>
+                                    </div>
+                                </div>
+                                <div class="grid-x">
+                                    <div class="cell center">
+                                        <span class="center">
+                                            <button type="submit" class="button alert" name="type" value="decline">
+                                                <?php echo esc_html__( 'Remove', 'zume' ) ?>
+                                            </button>
+                                        </span>
+                                        <span class="center">
+                                            <button type="button" class="button hollow" name="type" data-open="<?php echo esc_html( $zume_key ); ?>">
+                                                <?php echo esc_html__( 'Cancel', 'zume' ) ?>
+                                            </button>
+                                        </span>
+                                    </div>
+                                </div>
+
+                                <button class="close-button" data-close aria-label="Close reveal" type="button">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </form>
+                        </div>
+
+                    </div>
+
+                    <button class="close-button" data-close aria-label="Close modal" type="button">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+            </div>
+
+            <?php
+        }
+    }
+endif; // check if $zume_colead_groups is no empty
 ?>
 
 <?php

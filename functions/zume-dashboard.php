@@ -162,6 +162,14 @@ class Zume_Dashboard {
             }
         }
 
+        // Members can be always more, never less than participants
+        if ( isset( $group_meta['coleaders_accepted'] ) ) {
+            if ( count( $group_meta['coleaders_accepted'] ) + 1 > $group_meta['members'] ) {
+                $group_meta['members'] = count( $group_meta['coleaders_accepted'] ) + 1;
+                $trigger_update = true;
+            }
+        }
+
         if ( $new ) {
             $trigger_update = false;
         }

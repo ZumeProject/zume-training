@@ -129,6 +129,10 @@ function add_new_coleader( target ) {
     jQuery('#' + target ).append('<input type="email" value="" placeholder="email address" name="new_coleader[]" />')
 }
 
+function create_coleader( target ) {
+    jQuery('#' + target ).append('<input type="email" value="" placeholder="email address" name="coleaders[]" />')
+}
+
 jQuery(document).ready( function() {
     jQuery( "li.coleader" ).hover(
         function() {
