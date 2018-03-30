@@ -12,7 +12,7 @@ if ( !defined( 'ABSPATH' ) ) {
  * @version 0.1.8
  *
  * @since   0.1.7 Moved to post type
- * @since   0.1.8 Added key_select
+ * @since   0.1.8 Added key_select, readonly
  */
 if ( ! class_exists( 'Site_Link_System' ) ) {
 
@@ -367,6 +367,23 @@ if ( ! class_exists( 'Site_Link_System' ) ) {
                                 }
 
                                 break;
+
+                            case 'text':
+                                echo '<tr valign="top"><th scope="row"><label for="' . esc_attr( $k ) . '">' . esc_html( $v['name'] ) . '</label></th>
+                                    <td><input name="' . esc_attr( $k ) . '" type="text" id="' . esc_attr( $k ) . '" class="regular-text" value="' . esc_attr( $data ) . '" />' . "\n";
+                                echo '<p class="description">' . esc_html( $v['description'] ) . '</p>' . "\n";
+                                echo '</td><tr/>' . "\n";
+
+                                break;
+                            case 'readonly':
+                                echo '<tr valign="top"><th scope="row"><label for="' . esc_attr( $k ) . '">' . esc_html( $v['name'] ) . '</label></th>
+                                    <td>' . esc_attr( $data );
+                                echo '<input name="' . esc_attr( $k ) . '" type="hidden" id="' . esc_attr( $k ) . '" value="' . esc_attr( $data ) . '" /> ';
+                                echo '<p class="description">' . esc_html( $v['description'] ) . '</p>' . "\n";
+                                echo '</td><tr/>' . "\n";
+
+                                break;
+
                             case 'select':
                                 echo '<tr valign="top"><th scope="row">
                                 <label for="' . esc_attr( $k ) . '">' . esc_html( $v['name'] ) . '</label></th>
@@ -384,7 +401,6 @@ if ( ! class_exists( 'Site_Link_System' ) ) {
                                 echo '<p class="description">' . esc_html( $v['description'] ) . '</p>' . "\n";
                                 echo '</td><tr/>' . "\n";
                                 break;
-
                             case 'key_select':
                                 echo '<tr valign="top"><th scope="row">
                                 <label for="' . esc_attr( $k ) . '">' . esc_attr( $v['name'] ) . '</label></th>
