@@ -2896,11 +2896,39 @@ class Zume_Course_Content {
                             <?php esc_html_e( "In His Bible, God says, \"I know the plans I have for you, plans to prosper you and not to harm you, plans to give you hope and a future.\" God makes plans, and He expects us to make plans, too. He teaches us through His Word and His work to look ahead, see a better tomorrow, make a plan for how to get there, and then prepare the resources we'll need on the way.", 'zume' ) ?>
                             </p>
                             <p>
-                            <?php esc_html_e( "A Three Month Plan is a tool you can use to help focus your attention and efforts and keep them aligned with God's priorities for making disciples who multiply. Spend the next 30 minutes praying over, reading through, and then completing the commitments listed in the Three Month Plan section in your Zúme Guidebook.", 'zume' ) ?>
+                            <?php esc_html_e( "A Three Month Plan is a tool you can use to help focus your attention and efforts and keep them aligned with God's priorities for making disciples who multiply. Spend the next 30 minutes praying over, reading through, and then completing the commitments listed in the Three Month Plan.", 'zume' ) ?>
                             </p>
+                            <p>
+                            <?php esc_html_e( "You can use the printed version in your Zúme Guidebook or our online version.", 'zume' ) ?>
+                            </p>
+                            <h2>
+                                <a class="button" target="_blank" rel="noopener nofollow noreferrer" href="<?php echo esc_url( zume_three_month_plan_url() ) ?>"><i class="fi-link"></i> <?php esc_html_e( 'Online "Three Month Plan"', 'zume' ) ?></a>
+                            </h2>
                         </div>
                     </div>
                     <!-- grid-x -->
+
+                    <!-- Inset Block -->
+                    <div class="grid-x grid-margin-x grid-margin-y single">
+                        <div class="cell auto"></div>
+                        <div class="large-9 cell activity-description well">
+                            <div class="grid-x grid-padding-x grid-padding-y center" >
+                                <div class="cell session-boxes">
+                                    <?php esc_html_e( "Participants can access their own three month plan on the side column of their dashboard. They can connect their plan with this group by adding the following key:", 'zume' ) ?>
+                                    <h2>
+                                        <?php
+                                        if ( isset( $_GET['group'] ) ) {
+                                            $zume_group_key = sanitize_key( wp_unslash( $_GET['group'] ) );
+                                            echo esc_attr( Zume_Course::get_group_public_key( $zume_group_key ) );
+                                        }
+                                        ?>
+                                    </h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cell auto"></div>
+                    </div> <!-- grid-x -->
+
                     <!-- Activity Block -->
                     <div class="grid-x grid-margin-x grid-margin-y">
                         <div class="large-3 cell activity-title"><?php esc_html_e( 'PRAY', 'zume' ) ?></div>

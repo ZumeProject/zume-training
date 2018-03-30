@@ -212,6 +212,7 @@ function zume_faq_url() {
     return $url;
 }
 
+
 /**
  * Returns the full URI of the images folder with the ending slash, either as images/ or as images/sub_folder/.
  *

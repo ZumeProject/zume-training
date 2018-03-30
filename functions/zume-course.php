@@ -146,4 +146,23 @@ class Zume_Course {
         }
         return trailingslashit( get_stylesheet_directory_uri() ) . 'downloads/' . $current_lang . '/' . $video_id;
     }
+
+    public static function get_group_public_key( $zume_group_key ) {
+        global $wpdb;
+        $zume_group_meta = $wpdb->get_var( $wpdb->prepare( "
+            SELECT meta_value 
+            FROM $wpdb->usermeta 
+            WHERE meta_key = %s
+        ",
+            $zume_group_key
+        ));
+
+        if ( ! $zume_group_meta ) {
+            return __( '( Key not available. Check dashboard. )', 'zume' );
+        }
+
+        $zume_group_meta = Zume_Dashboard::verify_group_array_filter( $zume_group_meta );
+
+        return $zume_group_meta['public_key'] ?? '';
+    }
 }
