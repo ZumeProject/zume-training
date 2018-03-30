@@ -371,7 +371,7 @@ class Zume_Dashboard {
                 echo 29;
                 break;
             case '11':
-                echo 31;
+                echo 32;
                 break;
             default:
                 echo 2;
@@ -621,8 +621,11 @@ class Zume_Dashboard {
      *
      * @return array|bool
      */
-    public static function get_current_user_groups() {
-        $zume_user_meta = zume_get_user_meta( get_current_user_id() );
+    public static function get_current_user_groups( $user_id = null ) {
+        if ( is_null( $user_id ) ){
+            $user_id = get_current_user_id();
+        }
+        $zume_user_meta = zume_get_user_meta( $user_id );
         $groups = [];
         foreach ( $zume_user_meta as $zume_key => $v ) {
             $zume_key_beginning = substr( $zume_key, 0, 10 );

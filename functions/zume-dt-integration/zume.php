@@ -26,7 +26,7 @@ class Zume_Integration
         $coleaders = $this->get_coleader_foreign_keys( $zume_group_meta );
 
         // Get target site for transfer
-        $site_key = $this->filter_for_site_key( $owner_user_data );
+        $site_key = $this->filter_for_site_key( $owner_user_data, $owner_id );
         if ( ! $site_key ) {
             return; // no sites setup
         }
@@ -54,8 +54,14 @@ class Zume_Integration
         // Get prepared data for user
         $user_data = $this->get_transfer_user_array( $user_id );
 
+        // check if user has groups, if so then stop.
+        $has_groups = Zume_Dashboard::get_current_user_groups( $user_id );
+        if( $has_groups ) {
+            return;
+        }
+
         // Get target site for transfer
-        $site_key = $this->filter_for_site_key( $user_data );
+        $site_key = $this->filter_for_site_key( $user_data, $user_id );
         if ( ! $site_key ) {
             return; // no sites setup
         }
@@ -111,12 +117,7 @@ class Zume_Integration
      *
      * @return bool|int|string
      */
-    public function filter_for_site_key( $user_data = null ) {
-
-        // @TODO Potentially add routing logic.
-        // Evaluate routing factors of the user_data to route the user to a certain site.
-        // Is language set, then potentially route to language DT site
-        // Is location set, then potentially route to location site
+    public function filter_for_site_key( $user_data, $user_id ) {
 
         $key = get_option( 'zume_default_site' ); // Currently, the default site is returned as the only routing option.
         if ( ! $key ) {
@@ -131,99 +132,29 @@ class Zume_Integration
                 break;
             }
         }
+
+        // @TODO Potentially add routing logic.
+        // Evaluate routing factors of the user_data to route the user to a certain site.
+        // Is language set, then potentially route to language DT site
+        // Is location set, then potentially route to location site
+
+        if ( get_user_meta( $user_id, 'zume_affiliation_key', true ) ) {
+            // @todo build function to lookup affiliation key
+        }
+        if ( get_user_meta( $user_id, 'zume_affiliation', true ) ) {
+            // @todo build filter to return zume_affiliation
+        }
+        if ( $this->route_by_language( $user_data['zume_language'] ) ) {
+            // @todo build function to route according to languages.
+        }
+
         return $key;
     }
 
-//    public function send_new_contact( $user_id ) {
-//
-//        // Get prepared data for user
-//        $user_data = $this->get_transfer_user_array( $user_id );
-//
-//        // Get target site for transfer
-//        $site_key = zume_integration_filter_for_site_key( $user_data );
-//        if ( ! $site_key ) {
-//            return; // no sites setup
-//        }
-//
-//        $site = zume_integration_get_site_details( $site_key );
-//
-//        // Build new DT record data
-//        $fields = $this->build_dt_contact_record_array( $user_data );
-//
-//        // Send remote request
-//        $args = [
-//            'method' => 'POST',
-//            'body' => [
-//                'transfer_token' => $site['transfer_token'],
-//                'transfer_record' => $fields,
-//                'raw_record' => $user_data,
-//            ]
-//        ];
-//        $result = zume_integration_remote_send( 'create_new_contact', $site['url'], $args );
-//
-//        dt_write_log( __METHOD__ );
-//        dt_write_log( $result );
-//        return;
-//    }
-
-
-//    public function send_update_contact( $user_id ) {
-//        dt_write_log( __METHOD__ );
-//
-//        // Get prepared data for user
-//        $user_data = $this->get_transfer_user_array( $user_id );
-//
-//        // Get target site for transfer
-//        $site_key = zume_integration_filter_for_site_key( $user_data );
-//        if ( ! $site_key ) {
-//            return; // no sites setup
-//        }
-//        $site = zume_integration_get_site_details( $site_key );
-//
-//        // Send remote request
-//        $args = [
-//            'method' => 'POST',
-//            'body' => [
-//                'transfer_token' => $site['transfer_token'],
-//                'raw_record' => $user_data,
-//            ]
-//        ];
-//        $result = zume_integration_remote_send( 'update_contact', $site['url'], $args );
-//
-//        dt_write_log( $result );
-//        return;
-//    }
-
-//    public function send_contact_last_login( $user_id ) {
-//        dt_write_log( __METHOD__ );
-//
-//        $zume_foreign_key = $this->get_foreign_key( $user_id );
-//        $time = current_time('mysql');
-//
-//        // Get target site for transfer
-//        $site_key = zume_integration_filter_for_site_key();
-//        if ( ! $site_key ) {
-//            return; // no sites setup
-//        }
-//        $site = zume_integration_get_site_details( $site_key );
-//
-//        // Send remote request
-//        $args = [
-//            'method' => 'POST',
-//            'body' => [
-//                'transfer_token' => $site['transfer_token'],
-//                'zume_foreign_key' => $zume_foreign_key,
-//                'last_login' => $time,
-//            ]
-//        ];
-//        $result = zume_integration_remote_send( 'contact_last_login', $site['url'], $args );
-//
-//        dt_write_log( $result );
-//        return;
-//    }
-
-
-
+    public function route_by_language( $zume_language ) {
+        // @todo add routing logic for language
+        return false;
+    }
 
     /**
      * Transfer user data

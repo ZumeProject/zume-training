@@ -634,7 +634,7 @@ class Zume_Course_Content {
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="large-3 cell activity-title"><?php esc_html_e( 'SHARE', 'zume' ) ?></div>
                 <div class="large-9 cell activity-description">
-                    <?php esc_html_e( 'Spend time asking God who He might want you to start an Accountability Group with using the tools you\'ve learned in this session. Share this person’s name with the group before you go. Reach out to that person about starting an Accountabilty Group and meeting with you weekly.', 'zume' ) ?>
+                    <?php esc_html_e( 'Spend time asking God who He might want you to start an Accountability Group with using the tools you\'ve learned in this session. Share this person’s name with the group before you go. Reach out to that person about starting an Accountability Group and meeting with you weekly.', 'zume' ) ?>
                 </div>
             </div>
             <!-- grid-x -->
