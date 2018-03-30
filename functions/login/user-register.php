@@ -31,6 +31,33 @@ function zume_register_form() {
             <input type="text" name="zume_address" id="zume_address" class="input" value="<?php echo esc_attr( wp_unslash( $zume_address ) ); ?>" size="25" />
         </label>
     </p>
+    <p class="grid-x grid-padding-x" style="width:100%">
+        <label for="zume_affiliation"><?php esc_attr_e( 'Affiliation (optional)', 'zume' ) ?></label><br>
+            <span class="medium-6 cell" style="width:49%; float:left;">
+                <select id="zume_affiliation" name="zume_affiliation" style="font-size: 24px;
+                        width: 100%;
+                        padding: 3px;
+                        margin: 2px 6px 16px 0">
+                    <option></option>
+
+                    <?php
+                    if ( is_array( zume_get_public_site_links() ) ) {
+                        $zume_public_sites = zume_get_public_site_links();
+
+                        foreach ( $zume_public_sites as $zume_public_site ) {
+                            echo '<option value="'. esc_attr( $zume_public_site['id'] ) .'" ';
+                            echo '>' . esc_html( $zume_public_site['label'] ). '</option>';
+                        }
+                    } ?>
+                </select>
+
+            </span>
+            <span class="medium-6 cell" style="width:49%; float: right;">
+                    <input type="text" value="" id="zume_affiliation_key" name="zume_affiliation_key" />
+            </span>
+    </p>
+    <br clear="all" />
+
     <?php
 }
 

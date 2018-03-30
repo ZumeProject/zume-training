@@ -127,9 +127,10 @@ class Zume_Integration_Menu
         $this->template( 'begin' );
 
         // Runs validation of the database when page is loaded.
-        $object = new Zume_Integration_Zume();
+        $object = new Zume_Integration();
         $object->verify_foreign_key_installed();
         $object->verify_check_sum_installed();
+        zume_get_public_site_links();
 
         $this->site_default_metabox();
         $this->session_complete_transfer_metabox();
@@ -305,7 +306,7 @@ class Zume_Integration_Menu
 
     public static function system_health_metabox()
     {
-        $object = new Zume_Integration_Zume();
+        $object = new Zume_Integration();
 
         ?>
         <form method="post" action="">

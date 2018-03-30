@@ -9,9 +9,10 @@ if ( !defined( 'ABSPATH' ) ) {
  * All functionality pertaining to project update post types in Site_Link_System.
  * @class Site_Link_System
  *
- * @version 0.1.7
+ * @version 0.1.8
  *
- * @since    0.1.7 Moved to post type
+ * @since   0.1.7 Moved to post type
+ * @since   0.1.8 Added key_select
  */
 if ( ! class_exists( 'Site_Link_System' ) ) {
 
@@ -381,6 +382,24 @@ if ( ! class_exists( 'Site_Link_System' ) ) {
                                 }
                                 echo '</select>' . "\n";
                                 echo '<p class="description">' . esc_html( $v['description'] ) . '</p>' . "\n";
+                                echo '</td><tr/>' . "\n";
+                                break;
+
+                            case 'key_select':
+                                echo '<tr valign="top"><th scope="row">
+                                <label for="' . esc_attr( $k ) . '">' . esc_attr( $v['name'] ) . '</label></th>
+                                <td>
+                                <select name="' . esc_attr( $k ) . '" id="' . esc_attr( $k ) . '" class="regular-text">';
+                                // Iterate the options
+                                foreach ( $v['default'] as $kk => $vv ) {
+                                    echo '<option value="' . esc_attr( $kk ) . '" ';
+                                    if ( $kk == $data ) {
+                                        echo 'selected';
+                                    }
+                                    echo '>' . esc_attr( $vv ) . '</option>';
+                                }
+                                echo '</select>' . "\n";
+                                echo '<p class="description">' . esc_attr( $v['description'] ) . '</p>' . "\n";
                                 echo '</td><tr/>' . "\n";
                                 break;
 

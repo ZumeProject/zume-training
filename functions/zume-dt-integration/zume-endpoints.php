@@ -1,6 +1,6 @@
 <?php
 /**
- * Zume_Integration_Zume_Endpoints
+ * Zume_Integration_Endpoints
  *
  * @class      Zume_Integration_DT_Endpoints
  * @since      0.1.0
@@ -15,7 +15,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * Class DT_Webform_Home_Endpoints
  */
-class Zume_Integration_Zume_Endpoints
+class Zume_Integration_Endpoints
 {
     private static $_instance = null;
 
@@ -72,13 +72,13 @@ class Zume_Integration_Zume_Endpoints
             if ( isset( $params['zume_foreign_key'] ) && ! empty( $params['zume_foreign_key'] ) ) {
 
                 // get user_id by zume foreign key
-                $user_id = Zume_Integration_Zume::get_user_by_foreign_key( $params['zume_foreign_key'] );
+                $user_id = Zume_Integration::get_user_by_foreign_key( $params['zume_foreign_key'] );
                 if ( ! $user_id ) {
                     return new WP_Error( 'user_lookup_failure', 'Did not find user.' );
                 }
 
                 // prepare user data
-                $zume = new Zume_Integration_Zume();
+                $zume = new Zume_Integration();
                 $user_data = $zume->get_transfer_user_array( $user_id );
                 return [
                     'raw_record' => $user_data,
@@ -93,4 +93,4 @@ class Zume_Integration_Zume_Endpoints
     }
 
 }
-Zume_Integration_Zume_Endpoints::instance();
+Zume_Integration_Endpoints::instance();

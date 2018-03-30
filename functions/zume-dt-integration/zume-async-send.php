@@ -64,7 +64,7 @@ class Zume_Integration_Session_Complete_Transfer extends Disciple_Tools_Async_Ta
 
             dt_write_log( __METHOD__ . ': ' . $zume_group_key );
 
-            $object = new Zume_Integration_Zume();
+            $object = new Zume_Integration();
             $object->send_session_complete_transfer( $zume_group_key, $owner_id, $current_user_id );
 
         } // end if check
@@ -94,7 +94,7 @@ class Zume_Integration_Three_Month_Plan_Updated extends Disciple_Tools_Async_Tas
             $user_id = sanitize_key( wp_unslash( $_POST[0]['user_id'] ) );
             // @codingStandardsIgnoreEnd
 
-            $object = new Zume_Integration_Zume();
+            $object = new Zume_Integration();
             $object->send_session_complete_transfer( $user_id );
 
         } // end if check

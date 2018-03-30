@@ -8,9 +8,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * Class Zume_Integration_Zume
+ * Class Zume_Integration
  */
-class Zume_Integration_Zume
+class Zume_Integration
 {
 
     public function send_session_complete_transfer( $zume_group_key, $owner_id, $current_user_id ) {
@@ -443,8 +443,6 @@ function zume_integration_remote_send( $endpoint, $url, $args ) {
     return $result;
 }
 
-
-
 /**
  * Get the token and url of the site
  *
@@ -462,8 +460,26 @@ function zume_integration_get_site_details( $site_key ) {
     $transfer_token = Site_Link_System::create_transfer_token_for_site( $site_key );
 
     return [
-    'url' => $url,
-    'transfer_token' => $transfer_token
+        'url' => $url,
+        'transfer_token' => $transfer_token
     ];
 }
 
+function zume_get_public_site_links() {
+
+    global $wpdb;
+    $list = $wpdb->get_results( $wpdb->prepare( "
+        SELECT ID as id, post_title as label 
+        FROM $wpdb->posts as posts 
+          JOIN $wpdb->postmeta as postmeta ON posts.ID=postmeta.post_id 
+        WHERE post_type = 'site_link_system' 
+          AND post_status = 'publish'
+          AND postmeta.meta_key = 'visibility'
+          AND postmeta.meta_value = %s
+          AND ID IN ( SELECT post_id FROM $wpdb->postmeta WHERE meta_key = 'site_key' )
+    ",
+    0 ), ARRAY_A );
+
+    dt_write_log( $list );
+    return $list;
+}

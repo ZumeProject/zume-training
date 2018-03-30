@@ -26,6 +26,7 @@ class Zume_Integration_Hooks
     {
         new Zume_Integration_Hook_User();
         new Zume_Integration_Hook_Groups();
+        new Zume_Integration_Metabox();
     }
 }
 Zume_Integration_Hooks::instance();
@@ -73,14 +74,13 @@ class Zume_Integration_Hook_Groups extends Zume_Integration_Hook_Base {
     }
 }
 
-
 /**
  * Class Zume_Integration_Hook_User
  */
 class Zume_Integration_Hook_User extends Zume_Integration_Hook_Base {
 
     public function add_zume_foreign_key( $user_id ) { // add zume foreign key on registration
-        $new_key = Zume_Integration_Zume::get_foreign_key( $user_id );
+        $new_key = Zume_Integration::get_foreign_key( $user_id );
         add_user_meta( $user_id, 'zume_foreign_key', $new_key, true );
     }
 
@@ -102,7 +102,7 @@ class Zume_Integration_Hook_User extends Zume_Integration_Hook_Base {
     public function check_for_zume_default_meta( $user_login, $user ) {
 
         if ( empty( get_user_meta( $user->ID, 'zume_foreign_key' ) ) ) {
-            Zume_Integration_Zume::get_foreign_key( $user->ID );
+            Zume_Integration::get_foreign_key( $user->ID );
         }
         if ( empty( get_user_meta( $user->ID, 'zume_language' ) ) ) {
             update_user_meta( $user->ID, 'zume_language', zume_current_language() );
@@ -119,4 +119,36 @@ class Zume_Integration_Hook_User extends Zume_Integration_Hook_Base {
         parent::__construct();
     }
 
+}
+
+/**
+ * Class Zume_Integration_Hook_Groups
+ */
+class Zume_Integration_Metabox extends Zume_Integration_Hook_Base {
+
+    public function meta_box_setup() {
+        add_meta_box( 'site_link_system_extensions', 'Zúme Configuration', [ $this, 'meta_box_extensions' ], 'site_link_system', 'normal', 'low' );
+    }
+
+    public function meta_box_extensions() {
+        Site_Link_System::instance()->meta_box_content( 'zume' );
+    }
+
+    public function add_fields( $fields ) {
+        $fields['visibility'] = [
+            'name'        => 'Visibility',
+            'description' => 'Private keeps the site connection from being listed on registration and profile.',
+            'type'        => 'key_select',
+            'default'     => [ '0' => __( 'Public (Default)' ), '1' => __( 'Private' ) ],
+            'section'     => 'zume',
+            ];
+        return $fields;
+    }
+
+    public function __construct() {
+        add_action( 'admin_menu', [ $this, 'meta_box_setup' ], 20 );
+        add_filter( 'site_link_fields_settings', [ $this, 'add_fields' ] );
+
+        parent::__construct();
+    }
 }
