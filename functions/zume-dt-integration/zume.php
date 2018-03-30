@@ -26,7 +26,7 @@ class Zume_Integration_Zume
         $coleaders = $this->get_coleader_foreign_keys( $zume_group_meta );
 
         // Get target site for transfer
-        $site_key = $this->zume_integration_filter_for_site_key( $owner_user_data );
+        $site_key = $this->filter_for_site_key( $owner_user_data );
         if ( ! $site_key ) {
             return; // no sites setup
         }
@@ -49,34 +49,30 @@ class Zume_Integration_Zume
     }
 
     public function send_three_month_plan_transfer( $user_id ) {
-// @todo
-//        // Get prepared data for user
-//        $user_data = $this->get_transfer_user_array( $user_id );
-//
-//        // Get target site for transfer
-//        $site_key = zume_integration_filter_for_site_key( $user_data );
-//        if ( ! $site_key ) {
-//            return; // no sites setup
-//        }
-//
-//        $site = zume_integration_get_site_details( $site_key );
-//
-//        // Build new DT record data
-//        $fields = $this->build_dt_contact_record_array( $user_data );
-//
-//        // Send remote request
-//        $args = [
-//        'method' => 'POST',
-//            'body' => [
-//            'transfer_token' => $site['transfer_token'],
-//            'transfer_record' => $fields,
-//            'raw_record' => $user_data,
-//            ]
-//        ];
-//        $result = zume_integration_remote_send( 'three_month_plan_submitted', $site['url'], $args );
-//
-//        dt_write_log( __METHOD__ );
-//        dt_write_log( $result );
+        dt_write_log( __METHOD__ );
+
+        // Get prepared data for user
+        $user_data = $this->get_transfer_user_array( $user_id );
+
+        // Get target site for transfer
+        $site_key = $this->filter_for_site_key( $user_data );
+        if ( ! $site_key ) {
+            return; // no sites setup
+        }
+
+        $site = zume_integration_get_site_details( $site_key );
+
+        // Send remote request
+        $args = [
+        'method' => 'POST',
+            'body' => [
+            'transfer_token' => $site['transfer_token'],
+            'raw_record' => $user_data,
+            ]
+        ];
+        $result = zume_integration_remote_send( 'three_month_plan_submitted', $site['url'], $args );
+
+        dt_write_log( $result );
         return;
     }
 
@@ -115,7 +111,7 @@ class Zume_Integration_Zume
      *
      * @return bool|int|string
      */
-    public function zume_integration_filter_for_site_key( $user_data = null ) {
+    public function filter_for_site_key( $user_data = null ) {
 
         // @TODO Potentially add routing logic.
         // Evaluate routing factors of the user_data to route the user to a certain site.

@@ -716,6 +716,7 @@ if ( ! class_exists( 'Site_Link_System' ) ) {
                   JOIN $wpdb->postmeta as meta2 ON post.ID=meta2.post_id AND meta2.meta_key = 'token'
                   JOIN $wpdb->postmeta as meta3 ON post.ID=meta3.post_id AND meta3.meta_key = 'site1'
                   JOIN $wpdb->postmeta as meta4 ON post.ID=meta4.post_id AND meta4.meta_key = 'site2'
+                WHERE post.post_status = 'publish'
             ", ARRAY_A  );
 
             $site_keys = [];
