@@ -44,10 +44,10 @@ class Zume_Integration_Endpoints
         $namespace = 'dt-public/v' . $version;
 
         register_rest_route(
-            $namespace, '/zume/get_contact_by_foreign_key', [
+            $namespace, '/zume/check_user_record_update', [
             [
             'methods'  => WP_REST_Server::CREATABLE,
-            'callback' => [ $this, 'get_contact_by_foreign_key' ],
+            'callback' => [ $this, 'check_user_record_update' ],
             ],
             ]
         );
@@ -60,16 +60,19 @@ class Zume_Integration_Endpoints
      * @param \WP_REST_Request $request
      * @return array|\WP_Error
      */
-    public function get_contact_by_foreign_key( WP_REST_Request $request ) {
+    public function check_user_record_update( WP_REST_Request $request ) {
 
         dt_write_log( __METHOD__ );
 
         $params = $request->get_params();
-        $site_key = DT_Site_Link_System::verify_transfer_token( $params['transfer_token'] );
+        $site_key = Site_Link_System::verify_transfer_token( $params['transfer_token'] );
 
         if ( ! is_wp_error( $site_key ) && $site_key ) {
 
-            if ( isset( $params['zume_foreign_key'] ) && ! empty( $params['zume_foreign_key'] ) ) {
+            if ( isset( $params['zume_foreign_key'] )
+            && ! empty( $params['zume_foreign_key'] )
+            && isset( $params['zume_check_sum'] )
+            && ! empty( $params['zume_check_sum'] )) {
 
                 // get user_id by zume foreign key
                 $user_id = Zume_Integration::get_user_by_foreign_key( $params['zume_foreign_key'] );
@@ -80,12 +83,21 @@ class Zume_Integration_Endpoints
                 // prepare user data
                 $zume = new Zume_Integration();
                 $user_data = $zume->get_transfer_user_array( $user_id );
-                return [
-                    'raw_record' => $user_data,
-                ];
 
+                // check supplied check_sum
+                $check_sum = get_user_meta( $user_id, 'zume_check_sum', true );
+                if ( $check_sum == $params['zume_check_sum'] ) {
+                    return [
+                    'status' => 'OK'
+                    ];
+                } else {
+                    return [
+                    'status' => 'Update_Needed',
+                    'raw_record' => $user_data,
+                    ];
+                }
             } else {
-                return new WP_Error( 'malformed_content', 'Did not find `selected_records` in array.' );
+                return new WP_Error( 'malformed_content', 'Did not find correct params in array.' );
             }
         } else {
             return new WP_Error( 'failed_authentication', 'Failed id and/or token authentication.' );

@@ -19,9 +19,10 @@ if ( ! empty( $_POST ) ) { // test if post submitted
         // handle post
         if ( isset( $_POST['type'] ) ) { // group submissions
             if ( ! empty( $_POST['type'] ) && $_POST['type'] == 'create' ) { // create group
-                dt_write_log( $_POST );
+                unset( $_POST['type'] );
                 Zume_Dashboard::create_group( $_POST );
             } elseif ( ! empty( $_POST['type'] ) && $_POST['type'] == 'edit' ) { // edit group
+                unset( $_POST['type'] );
                 Zume_Dashboard::edit_group( $_POST );
             } elseif ( ! empty( $_POST['type'] ) && $_POST['type'] == 'closed' && isset( $_POST['key'] ) ) { // close group
                 Zume_Dashboard::closed_group( sanitize_key( wp_unslash( $_POST['key'] ) ) );
@@ -942,6 +943,7 @@ if ( ! empty( $zume_colead_groups ) ) : // reset variable without coleader data
                                 <dd><?php echo esc_html( $zume_value['meeting_time'] ); ?></dd>
 
                                 <dt><?php echo esc_html__( 'Address', 'zume' ) ?></dt>
+
                                 <dd><?php echo isset( $zume_value['address'] ) ? esc_html( $zume_value['address'] ) : ''; ?></dd>
                                 <dd>
                                     <?php if ( ! empty( $zume_value['address'] ) && ! empty( esc_attr( $zume_value['lng'] ) ) && ! empty( esc_attr( $zume_value['lat'] ) ) ) : ?>

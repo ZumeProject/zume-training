@@ -54,15 +54,18 @@ class Zume_Dashboard {
         if ( ! empty( $args['address'] ) ) {
             // Geo lookup address
             $google_result = Zume_Google_Geolocation::query_google_api( $args['address'], $type = 'core' ); // get google api info
-            if ( ! $google_result ) {
-                $results = Zume_Google_Geolocation::geocode_ip_address( $args['ip_address'] );
-                $args['ip_lng'] = $results['lng'];
-                $args['ip_lat'] = $results['lat'];
-            } else {
+            if ( $google_result ) {
                 $args['lng'] = $google_result['lng'];
                 $args['lat'] = $google_result['lat'];
                 $args['address'] = $google_result['formatted_address'];
             }
+        }
+
+        $results = Zume_Google_Geolocation::geocode_ip_address( $args['ip_address'] );
+        if ( $results ) {
+            $args['ip_lng'] = $results['lng'];
+            $args['ip_lat'] = $results['lat'];
+            $args['ip_address'] = $results['formatted_address'];
         }
 
         $new_group = wp_parse_args( $args, $group_values );
@@ -224,21 +227,19 @@ class Zume_Dashboard {
             // Geo lookup address
             $google_result = Zume_Google_Geolocation::query_google_api( $args['address'], $type = 'core' ); // get google api info
             if ( ! $google_result ) {
-                $results = Zume_Google_Geolocation::geocode_ip_address( $args['ip_address'] );
-                $lng = $results['lng'];
-                $lat = $results['lat'];
-                $formatted_address = $args['address'];
-            } else {
-                $lng = $google_result['lng'];
-                $lat = $google_result['lat'];
-                $formatted_address = $google_result['formatted_address'];
+                $args['lng'] = $google_result['lng'];
+                $args['lat'] = $google_result['lat'];
+                $args['address'] = $google_result['formatted_address'];
             }
-
-            // add new geo data as new variable info to the $args
-            $args['lng'] = $lng;
-            $args['lat'] = $lat;
-            $args['address'] = $formatted_address;
         }
+
+        $results = Zume_Google_Geolocation::geocode_ip_address( $args['ip_address'] );
+        if ( $results ) {
+            $args['ip_lng'] = $results['lng'];
+            $args['ip_lat'] = $results['lat'];
+            $args['ip_address'] = $args['address'];
+        }
+
 
         // Add coleaders
         $args['coleaders'] = ( ! empty( $args['coleaders'] ) ) ? array_filter( $args['coleaders'] ) : []; // confirm or establish array variable.
