@@ -44,10 +44,10 @@ class Zume_Integration_Endpoints
         $namespace = 'dt-public/v' . $version;
 
         register_rest_route(
-            $namespace, '/zume/check_user_record_update', [
+            $namespace, '/zume/check_for_update', [
             [
             'methods'  => WP_REST_Server::CREATABLE,
-            'callback' => [ $this, 'check_user_record_update' ],
+            'callback' => [ $this, 'check_for_update' ],
             ],
             ]
         );
@@ -60,7 +60,7 @@ class Zume_Integration_Endpoints
      * @param \WP_REST_Request $request
      * @return array|\WP_Error
      */
-    public function check_user_record_update( WP_REST_Request $request ) {
+    public function check_for_update( WP_REST_Request $request ) {
 
         dt_write_log( __METHOD__ );
 
@@ -72,30 +72,61 @@ class Zume_Integration_Endpoints
             if ( isset( $params['zume_foreign_key'] )
             && ! empty( $params['zume_foreign_key'] )
             && isset( $params['zume_check_sum'] )
-            && ! empty( $params['zume_check_sum'] )) {
+            && ! empty( $params['zume_check_sum'] )
+            && isset( $params['type'] )
+            && ! empty( $params['type'] )
+            ) {
+                if ( $params['type'] === 'contact' ) {
 
-                // get user_id by zume foreign key
-                $user_id = Zume_Integration::get_user_by_foreign_key( $params['zume_foreign_key'] );
-                if ( ! $user_id ) {
-                    return new WP_Error( 'user_lookup_failure', 'Did not find user.' );
-                }
+                    // get user_id by zume foreign key
+                    $user_id = Zume_Integration::get_user_by_foreign_key( $params['zume_foreign_key'] );
+                    if ( ! $user_id ) {
+                        return new WP_Error( 'user_lookup_failure', 'Did not find user.' );
+                    }
 
-                // prepare user data
-                $zume = new Zume_Integration();
-                $user_data = $zume->get_transfer_user_array( $user_id );
+                    // prepare user data
+                    $zume = new Zume_Integration();
+                    $user_data = $zume->get_transfer_user_array( $user_id );
 
-                // check supplied check_sum
-                $check_sum = get_user_meta( $user_id, 'zume_check_sum', true );
-                if ( $check_sum == $params['zume_check_sum'] ) {
-                    return [
-                    'status' => 'OK'
-                    ];
+                    // check supplied check_sum
+                    $check_sum = get_user_meta( $user_id, 'zume_check_sum', true );
+                    if ( $check_sum == $params['zume_check_sum'] ) {
+                        return [
+                        'status' => 'OK'
+                        ];
+                    } else {
+                        return [
+                        'status' => 'Update_Needed',
+                        'raw_record' => $user_data,
+                        ];
+                    }
+                } elseif ( $params['type'] === 'group' ) {
+                    // get user_id by zume foreign key
+                    $group = Zume_Integration::get_group_by_foreign_key( $params['zume_foreign_key'] );
+                    if ( empty( $group ) ) {
+                        return new WP_Error( 'group_lookup_failure', 'Did not find group.' );
+                    }
+
+                    // prepare user data
+                    $zume = new Zume_Integration();
+                    $group_meta = $zume->get_transfer_group_array( $group['group_key'], $group['user_id'] );
+
+                    // check supplied check_sum
+                    $check_sum = $group_meta['zume_check_sum'];
+                    if ( $check_sum === $params['zume_check_sum'] ) {
+                        return [
+                        'status' => 'OK'
+                        ];
+                    } else {
+                        return [
+                        'status' => 'Update_Needed',
+                        'raw_record' => $group_meta,
+                        ];
+                    }
                 } else {
-                    return [
-                    'status' => 'Update_Needed',
-                    'raw_record' => $user_data,
-                    ];
+                    return new WP_Error( 'malformed_type', 'Type must be either `contact` or `group`' );
                 }
+
             } else {
                 return new WP_Error( 'malformed_content', 'Did not find correct params in array.' );
             }

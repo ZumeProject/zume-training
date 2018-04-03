@@ -302,6 +302,22 @@ class Zume_Integration
         return $user_id;
     }
 
+    public static function get_group_by_foreign_key( $zume_foreign_key ) {
+        global $wpdb;
+        $group = $wpdb->get_results( $wpdb->prepare( "
+            SELECT user_id, meta_key as group_key FROM $wpdb->usermeta WHERE meta_key LIKE %s AND meta_value LIKE %s LIMIT 1
+        ",
+            $wpdb->esc_like( 'zume_group' ) . '%',
+        '%' . $wpdb->esc_like( $zume_foreign_key ) . '%'
+        ), ARRAY_A );
+
+        if ( ! $group ) {
+            return [];
+        }
+
+        return $group[0];
+    }
+
     /**
      * Goes through database and adds foreign key to any users missing
      * Called from the Zume Settings page. Used during database installation
@@ -309,6 +325,7 @@ class Zume_Integration
     // @todo VIP coding standard is flagging this sql query saying "Usage of users/usermeta tables is highly discouraged in VIP context, For storing user additional user metadata, you should look at User Attributes."
     // @codingStandardsIgnoreStart
     public function verify_check_sum_installed() {
+        dt_write_log(__METHOD__);
         global $wpdb;
         $results = $wpdb->get_col( "SELECT ID FROM $wpdb->users WHERE id NOT IN ( SELECT user_id FROM $wpdb->usermeta WHERE meta_key = 'zume_check_sum' )" );
 
@@ -329,6 +346,7 @@ class Zume_Integration
      * Goes through database and adds foreign key to any users missing
      */
     public function verify_foreign_key_installed() {
+        dt_write_log(__METHOD__);
         global $wpdb;
         $results = $wpdb->get_col( "SELECT ID FROM $wpdb->users WHERE id NOT IN ( SELECT user_id FROM $wpdb->usermeta WHERE meta_key = 'zume_foreign_key' )" );
 
@@ -343,6 +361,29 @@ class Zume_Integration
             return $i;
         } else {
             return $i;
+        }
+    }
+
+    public function verify_foreign_key_installed_on_group() {
+        dt_write_log(__METHOD__);
+        global $wpdb;
+        $results = $wpdb->get_results( "SELECT user_id, meta_key as group_key FROM $wpdb->usermeta WHERE meta_key LIKE 'zume_group%'", ARRAY_A );
+
+//        dt_write_log( $results );
+
+        if ( ! empty( $results ) ) {
+            foreach ( $results as $v ) {
+                $group_meta = Zume_Dashboard::verify_group_array_filter( get_user_meta( $v['user_id'], $v['group_key'], true ) );
+
+                if ( isset( $group_meta['foreign_key'] ) ) {
+                    dt_write_log( $v['group_key'] . '; true' );
+                } else {
+                    dt_write_log( $v['group_key'] . '; false' );
+                }
+            }
+            return;
+        } else {
+            return;
         }
     }
     // @codingStandardsIgnoreEnd
