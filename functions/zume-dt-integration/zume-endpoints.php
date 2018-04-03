@@ -126,7 +126,6 @@ class Zume_Integration_Endpoints
                 } else {
                     return new WP_Error( 'malformed_type', 'Type must be either `contact` or `group`' );
                 }
-
             } else {
                 return new WP_Error( 'malformed_content', 'Did not find correct params in array.' );
             }

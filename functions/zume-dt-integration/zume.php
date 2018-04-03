@@ -56,7 +56,7 @@ class Zume_Integration
 
         // check if user has groups, if so then stop.
         $has_groups = Zume_Dashboard::get_current_user_groups( $user_id );
-        if( $has_groups ) {
+        if ( $has_groups ) {
             return;
         }
 
@@ -140,12 +140,15 @@ class Zume_Integration
 
         if ( get_user_meta( $user_id, 'zume_affiliation_key', true ) ) {
             // @todo build function to lookup affiliation key
+            dt_write_log( 'build zume_affiliation_key' );
         }
         if ( get_user_meta( $user_id, 'zume_affiliation', true ) ) {
             // @todo build filter to return zume_affiliation
+            dt_write_log( 'build zume_affiliation' );
         }
         if ( $this->route_by_language( $user_data['zume_language'] ) ) {
             // @todo build function to route according to languages.
+            dt_write_log( 'build zume_language' );
         }
 
         return $key;
@@ -308,7 +311,7 @@ class Zume_Integration
             SELECT user_id, meta_key as group_key FROM $wpdb->usermeta WHERE meta_key LIKE %s AND meta_value LIKE %s LIMIT 1
         ",
             $wpdb->esc_like( 'zume_group' ) . '%',
-        '%' . $wpdb->esc_like( $zume_foreign_key ) . '%'
+            '%' . $wpdb->esc_like( $zume_foreign_key ) . '%'
         ), ARRAY_A );
 
         if ( ! $group ) {
