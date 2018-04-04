@@ -100,9 +100,6 @@ function zume_update_user_contact_info()
             }
         }
     }
-    if ( isset( $_POST['zume_affiliation'] ) ) {
-        update_user_meta( $user_id, 'zume_affiliation', sanitize_text_field( wp_unslash( $_POST['zume_affiliation'] ) ) );
-    }
     if ( isset( $_POST['zume_affiliation_key'] ) ) {
         update_user_meta( $user_id, 'zume_affiliation_key', trim( sanitize_text_field( wp_unslash( $_POST['zume_affiliation_key'] ) ) ) );
     }

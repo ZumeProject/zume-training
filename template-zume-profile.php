@@ -133,34 +133,13 @@ $zume_user_meta = zume_get_user_meta( get_current_user_id() ); // Full array of 
 
                         <tr>
                             <td style="vertical-align: top;">
-                                <label for="zume_affiliation"><?php echo esc_html__( 'Affiliation', 'zume' )?></label>
+                                <label for="zume_affiliation_key"><?php echo esc_html__( 'Affiliation Key', 'zume' )?></label>
                             </td>
                             <td>
-                                <div class="grid-x grid-padding-x">
-                                    <div class="medium-6 cell">
-                                        <select id="zume_affiliation" name="zume_affiliation">
-                                            <option></option>
-
-                                            <?php
-                                            if ( is_array( zume_get_public_site_links() ) ) {
-                                                $zume_public_sites = zume_get_public_site_links();
-
-                                                foreach ( $zume_public_sites as $zume_public_site ) {
-                                                    echo '<option value="'. esc_attr( $zume_public_site['id'] ).'" ';
-                                                    $zume_affiliation = $zume_user_meta['zume_affiliation'] ?? '';
-                                                    if ( $zume_public_site['id'] == $zume_affiliation ) {
-                                                        echo 'selected';
-                                                    }
-                                                    echo '>' .esc_html( $zume_public_site['label'] ). '</option>';
-                                                }
-                                            } ?>
-                                        </select>
-                                    </div>
-                                    <div class="medium-6 cell">
-                                        <input type="text" value="<?php echo esc_attr( $zume_user_meta['zume_affiliation_key'] ?? '' ) ?>" placeholder="affiliation key" name="zume_affiliation_key" />
-                                    </div>
-                                </div>
-
+                                <input type="text" value="<?php echo isset( $zume_user_meta['zume_affiliation_key'] )
+                                 ? strtoupper( esc_html( $zume_user_meta['zume_affiliation_key'] ) ) : ''; ?>"
+                                 id="zume_affiliation_key"
+                                       name="zume_affiliation_key" maxlength="5" />
                             </td>
                         </tr>
                     </table>

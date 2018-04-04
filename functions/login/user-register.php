@@ -31,30 +31,16 @@ function zume_register_form() {
             <input type="text" name="zume_address" id="zume_address" class="input" value="<?php echo esc_attr( wp_unslash( $zume_address ) ); ?>" size="25" />
         </label>
     </p>
+    <?php
+    $key = '';
+    if ( isset( $_GET['affiliation'] ) ) {
+        $key = strtoupper( sanitize_key( wp_unslash( $_GET['affiliation'] ) ) );
+    }
+    ?>
     <p class="grid-x grid-padding-x" style="width:100%">
-        <label for="zume_affiliation"><?php esc_attr_e( 'Affiliation (optional)', 'zume' ) ?></label><br>
-            <span class="medium-6 cell" style="width:49%; float:left;">
-                <select id="zume_affiliation" name="zume_affiliation" style="font-size: 24px;
-                        width: 100%;
-                        padding: 3px;
-                        margin: 2px 6px 16px 0">
-                    <option></option>
-
-                    <?php
-                    if ( is_array( zume_get_public_site_links() ) ) {
-                        $zume_public_sites = zume_get_public_site_links();
-
-                        foreach ( $zume_public_sites as $zume_public_site ) {
-                            echo '<option value="'. esc_attr( $zume_public_site['id'] ) .'" ';
-                            echo '>' . esc_html( $zume_public_site['label'] ). '</option>';
-                        }
-                    } ?>
-                </select>
-
-            </span>
-            <span class="medium-6 cell" style="width:49%; float: right;">
-                    <input type="text" value="" id="zume_affiliation_key" name="zume_affiliation_key" />
-            </span>
+        <label for="zume_affiliation_key"><?php esc_attr_e( 'Affiliation Key (optional)', 'zume' ) ?></label><br>
+        <input type="text" value="<?php echo esc_html( $key ) ?>" id="zume_affiliation_key"
+               name="zume_affiliation_key" maxlength="5" />
     </p>
     <br clear="all" />
 
@@ -100,11 +86,13 @@ function zume_user_register( $user_id ) {
             update_user_meta( $user_id, 'zume_user_lat', $results['lat'] );
         }
     }
+    if ( ! empty( $_POST['zume_affiliation_key'] ) ) {
+        update_user_meta( $user_id, 'zume_affiliation_key', trim( sanitize_key( wp_unslash( $_POST['zume_affiliation_key'] ) ) ) );
+    }
 
     zume_update_user_ip_address_and_location( $user_id ); // record ip address and location
 
     update_user_meta( $user_id, 'zume_language', zume_current_language() );
-
 }
 
 

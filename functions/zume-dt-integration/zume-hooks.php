@@ -132,9 +132,21 @@ class Zume_Integration_Metabox extends Zume_Integration_Hook_Base {
 
     public function meta_box_extensions() {
         Site_Link_System::instance()->meta_box_content( 'zume' );
+
+        global $post, $pagenow;
+        if ( ! ( $pagenow == 'post-new.php' ) ) {
+            echo '<table class="form-table"><tr><th scope="row" width="33%"><label>Affiliation URL</label></th><td>';
+            echo '<a href="' . site_url() . '/wp-login.php?action=register&affiliation=' . get_post_meta(
+                $post->ID,
+                    'affiliation_key', true ) . '" target="">' . site_url() . '/wp-login.php?action=register&affiliation=' . get_post_meta(
+                $post->ID,
+                    'affiliation_key', true ) . '</a>';
+            echo '</td></tr></table>';
+        }
     }
 
     public function add_fields( $fields ) {
+
         $fields['visibility'] = [
             'name'        => __( 'Visibility' ),
             'description' => 'Private keeps the site connection from being listed on registration and profile.',
@@ -149,6 +161,7 @@ class Zume_Integration_Metabox extends Zume_Integration_Hook_Base {
             'default'     => Zume_Dashboard::get_unique_public_key(),
             'section'     => 'zume',
         ];
+
         return $fields;
     }
 
