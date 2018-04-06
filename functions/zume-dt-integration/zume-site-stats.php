@@ -36,7 +36,6 @@ class Zume_Site_Stats
         $groups_meta = self::query_zume_group_records();
 
         $counts = [];
-        $group_sizes = [];
 
         foreach ($groups_meta as $group_meta){
             $fields = Zume_Dashboard::verify_group_array_filter( $group_meta );
@@ -88,7 +87,13 @@ class Zume_Site_Stats
             }
         }
 
-        return $count;
+        $result = [ [ 'Session', 'Groups', [ 'role' => 'annotation' ] ] ];
+
+        foreach ( $count as $key => $value ) {
+            $result[] = [ $key, $value, $value ];
+        }
+
+        return $result;
     }
 
     public static function get_groups_next_session(){
