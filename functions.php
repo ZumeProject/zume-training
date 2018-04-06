@@ -68,6 +68,7 @@ require_once( 'functions/zume-dt-integration/zume.php' );
 require_once( 'functions/zume-dt-integration/zume-hooks.php' );
 require_once( 'functions/zume-dt-integration/zume-async-send.php' );
 require_once( 'functions/zume-dt-integration/zume-endpoints.php' );
+require_once( 'functions/zume-dt-integration/zume-site-stats.php' );
 
 /**
  * redirect all logins to the home page

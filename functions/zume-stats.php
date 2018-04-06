@@ -58,6 +58,8 @@ class Zume_Stats{
             $fields = maybe_unserialize( $group->meta_value );
             if (isset( $fields["lat"] ) && !empty( $fields["lat"] ) && isset( $fields["lng"] ) && !empty( $fields["lng"] )){
                 $result[] = [ $fields["lat"], $fields["lng"] ];
+            } elseif (isset( $fields["ip_lat"] ) && !empty( $fields["ip_lat"] ) && isset( $fields["ip_lng"] ) && !empty( $fields["ip_lng"] ) ) {
+                $result[] = [ $fields["ip_lat"], $fields["ip_lng"] ];
             }
         }
 

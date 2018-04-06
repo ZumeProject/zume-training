@@ -23,12 +23,6 @@ get_header();
 
                 <br>
                 <br>
-<!--                <h3>Other stats</h3>-->
-<!--                <div>Homepage page views: <span id="analytics"></span></div>-->
-<!--                <div>Intro video views: <span id="intro_views"></span></div>-->
-
-                <br>
-                <br>
                 <h3><?php esc_html_e( 'Translation Progress', 'zume' ) ?></h3>
                     <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRnYZtXXZ6sBIrVYJAibJXuQ08rFqJe6HtPfnxBMoywOTvIeoDK-UtGlEWTSWZNqquM8doyr-JCw2By/pubhtml?gid=2022886715&amp;single=true&amp;widget=true&amp;headers=false"
                         width="60%" height="400px"
