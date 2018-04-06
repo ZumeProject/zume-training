@@ -137,7 +137,7 @@ $zume_user_meta = zume_get_user_meta( get_current_user_id() ); // Full array of 
                             </td>
                             <td>
                                 <input type="text" value="<?php echo isset( $zume_user_meta['zume_affiliation_key'] )
-                                 ? strtoupper( esc_html( $zume_user_meta['zume_affiliation_key'] ) ) : ''; ?>"
+                                 ? esc_html( strtoupper( $zume_user_meta['zume_affiliation_key'] ) ) : ''; ?>"
                                  id="zume_affiliation_key"
                                        name="zume_affiliation_key" maxlength="5" />
                             </td>

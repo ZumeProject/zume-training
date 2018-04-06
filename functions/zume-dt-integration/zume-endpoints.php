@@ -330,15 +330,15 @@ class Zume_Integration_Endpoints
 
 
                 $report['zume_stats_check_sum'] = md5( maybe_serialize( $report ) );
-        dt_write_log($report['zume_stats_check_sum']);
-        dt_write_log($params['zume_stats_check_sum']);
+                dt_write_log( $report['zume_stats_check_sum'] );
+                dt_write_log( $params['zume_stats_check_sum'] );
                 if ( $report['zume_stats_check_sum'] == $params['zume_stats_check_sum'] ) {
-                    dt_write_log('Okay');
+                    dt_write_log( 'Okay' );
                     return [
                         'status' => 'OK'
                     ];
                 } else {
-                    dt_write_log($report);
+                    dt_write_log( $report );
                     return [
                         'status' => 'Update_Needed',
                         'raw_record' => $report,

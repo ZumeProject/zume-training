@@ -9,15 +9,16 @@ class Zume_Site_Stats
                   SELECT meta_value 
                   FROM $wpdb->usermeta 
                   WHERE meta_key LIKE %s LIMIT 10000", // @todo Returning all results, but at some point we should limit this
-                $wpdb->esc_like('zume_group').'%'
-            ) );
+                $wpdb->esc_like( 'zume_group' ).'%'
+            )
+        );
         return $groups_meta;
     }
 
     public static function get_group_coordinates() {
         $groups_meta = self::query_zume_group_records();
 
-        $result = [];
+        $result = [ [ 'number','number' ] ];
 
         foreach ( $groups_meta as $group_meta ){
             $fields = Zume_Dashboard::verify_group_array_filter( $group_meta );
@@ -56,7 +57,7 @@ class Zume_Site_Stats
             $result[] = [ $string, $occurrence, $occurrence ];
         }
 
-        dt_write_log( $result);
+        dt_write_log( $result );
 
         return $result;
     }
