@@ -154,71 +154,142 @@ class Zume_Integration_Endpoints
             if ( isset( $params['zume_stats_check_sum'] ) && ! empty( $params['zume_stats_check_sum'] ) ) {
 
                 $report = [
-                    'site' => [],
-                    'global' => [
-                        'total_users' => 3000,
-                        'total_groups' => 400,
-                        'project_overview' => [
-                            [ 'Label', 'Last 7 Days', 'Previous', 'Last 30 Days', 'Previous', 'Last 90 Days', 'Previous', 'All Time'],
-                            ['New (Individual)', 200, 150, 600, 380, 1500, 999, 3000],
-                            ['New (Groups)', 100, 90, 400, 20, 1040, 999, 3000],
-                            ['Sessions (Individual)', 100, 90, 400, 380, 1040, 999, 3000],
-                            ['Sessions (Groups)', 100, 90, 400, 380, 1040, 999, 3000],
-                            ['Course (Individual)', 100, 90, 400, 380, 1040, 999, 3000],
-                            ['Course (Group)', 100, 90, 400, 380, 1040, 999, 3000],
-                        ],
-                        'session_progress_groups' => Zume_Site_Stats::get_group_steps_completed(),
-                        'session_progress_users' => [
-                            'session_1' => 1000,
-                            'session_2' => 100,
-                            'session_3' => 100,
-                            'session_4' => 100,
-                            'session_5' => 100,
-                            'session_6' => 100,
-                            'session_7' => 100,
-                            'session_8' => 100,
-                            'session_9' => 100,
-                            'session_10' => 100,
-                        ],
-                        'members_per_group' => Zume_Site_Stats::get_group_sizes(),
-                        'logins' => [
-                            'last_day' => 5,
-                            'last_week' => 200,
-                            'last_month' => 1200,
-                            'last_3_months' => 5000,
-                        ],
-                        'top_cities' => [
-                            0 => 'Denver, CO',
-                            1 => 'Lexington, KY',
-                            2 => 'Nampa, FL',
-                            3 => 'Los Angelos, CA',
-                            4 => 'Lexington, KY',
-                        ],
-                        'top_countries' => [
-                            0 => [
-                                'name' => 'U.S.A.',
-                                'count' => 400,
-                            ],
-                            1 => [
-                                'name' => 'U.S.A.',
-                                'count' => 100,
-                            ],
-                            2 => [
-                                'name' => 'U.S.A.',
-                                'count' => 50,
-                            ],
-                            3 => [
-                                'name' => 'U.S.A.',
-                                'count' => 40,
-                            ],
-                            4 => [
-                                'name' => 'U.S.A.',
-                                'count' => 10,
-                            ],
-                        ],
-                        'top_languages' => [],
-                        'group_coordinates' => Zume_Site_Stats::get_group_coordinates(),
-                    ]
+                    'hero_stats' => [
+                        'registered_people' => 3000, // total members reported in groups who have finished at least one session
+                        'engaged_people' => 3000, // total members reported in groups who have finished at least one session
+                        'active_people' => 600, // count of members for sessions that finished the last 30 days
+                        'trained_people' => 50, // finished the 10 sessions
+                        'total_people_registered' => 3000,
+                        'total_people_in_groups' => 500,
+                        'engaged_groups' => 500, // groups that have at least finished 1 session
+                        'active_groups' => 500, // finished a session in the last 45 days
+                        'trained_groups' => 20, // finished the entire course
+                        'total_groups_registered' => 500, // number of registered groups that have finished session 1
+                        'total_languages' => 1, // number of languages installed and available
+                        'total_countries' => 4, // number of countries groups or users are located in
+                        'hours_trained' => 500, // number of sessions * 2 = hours of training
+                        'groups_over_4_members' => 400,
+                    ],
+                    'groups_progress_by_month' => [
+                        ['Month', 'Registered', 'Engaged', 'Active', 'Trained', 'Average'],
+                        ['2004/05',  165,      938,         522,             998,             614.6],
+                        ['2005/06',  135,      1120,        599,             1268,          682],
+                        ['2006/07',  157,      1167,        587,             807,             623],
+                        ['2007/08',  139,      1110,        615,             968,            609.4],
+                        ['2008/09',  136,      691,         629,             1026,          569.6],
+                        ['2008/09',  136,      691,         629,             1026,           569.6],
+                    ],
+                    'people_progress_by_month' => [
+                        ['Month', 'Registered', 'Engaged', 'Active', 'Trained', 'Average'],
+                        ['2004/05',  165,      938,         522,             998,             614.6],
+                        ['2005/06',  135,      1120,        599,             1268,          682],
+                        ['2006/07',  157,      1167,        587,             807,             623],
+                        ['2007/08',  139,      1110,        615,             968,            609.4],
+                        ['2008/09',  136,      691,         629,             1026,          569.6],
+                        ['2008/09',  136,      691,         629,             1026,           569.6],
+                    ],
+                    'table_totals_group_people' => [
+                        [ 'Type', 'Groups', 'People', ],
+                        ['Registrations', 200, 150 ],
+                        ['Active', 100, 90 ],
+                        ['Trained', 100, 90 ],
+                        ['System Total', 100, 90 ],
+                    ],
+                    'table_total_misc' => [
+                        [ 'Type', 'Groups', 'People', ],
+                        ['Registrations', 200, 150 ],
+                        ['Active', 100, 90 ],
+                        ['Trained', 100, 90 ],
+                        ['System Total', 100, 90 ],
+                    ],
+                    'members_per_group' => Zume_Site_Stats::get_group_sizes(),
+                    'session_progress_groups' => Zume_Site_Stats::get_group_steps_completed(),
+                    'current_session_of_group' => [
+                        ['Session', 'Groups', ['role' => 'annotation'] ],
+                        ['Session 1', 3000, 3000],
+                        ['Session 2', 2000, 2000],
+                        ['Session 3', 1900, 1900],
+                        ['Session 4', 500, 500],
+                        ['Session 5', 900, 900],
+                        ['Session 6', 670, 670],
+                        ['Session 7', 550, 550],
+                        ['Session 8', 460, 460],
+                        ['Session 9', 100, 100],
+                        ['Session 10', 40, 40],
+                    ],
+                    'trained_groups_coordinates' => Zume_Site_Stats::get_group_coordinates(), // @todo needs filtered for just trained groups
+                    'session_progress_people' => [
+                        ['Session', 'People', ['role' => 'annotation'] ],
+                        ['Session 1', 3000, 3000],
+                        ['Session 2', 2000, 2000],
+                        ['Session 3', 1900, 1900],
+                        ['Session 4', 500, 500],
+                        ['Session 5', 900, 900],
+                        ['Session 6', 670, 670],
+                        ['Session 7', 550, 550],
+                        ['Session 8', 460, 460],
+                        ['Session 9', 100, 100],
+                        ['Session 10', 40, 40],
+                    ],
+                    'active_people_timeline' => [
+                        ['Month', 'Logins', 'Completed Sessions' ],
+                        ['Feb', 1000, 121],
+                        ['Mar', 1000, 101],
+                        ['Apr', 1000, 191],
+                        ['May', 1000, 101],
+                        ['Jun', 1000, 101],
+                        ['Jul', 1000, 151],
+                        ['Aug', 1000, 101],
+                        ['Sep', 1000, 121],
+                        ['Oct', 1000, 101],
+                        ['Nov', 1000, 171],
+                        ['Dec', 1000, 101],
+                        ['Jan', 1000, 101],
+                        ['Feb', 1170, 111],
+                    ],
+                    'people_info' => [
+                        ['Label', 'Number'],
+                        ['No Group', 3456],
+                        ['More than 1 Group', 56],
+                    ],
+                    'sessions_completed_by_groups' => [
+                        ['Session', 'Groups', ['role'=> 'annotation']],
+                        ['None', 3000, 3000],
+                        ['Session 1', 3000, 3000],
+                        ['Session 2', 2000, 2000],
+                        ['Session 3', 1900, 1900],
+                        ['Session 4', 1400, 1400],
+                        ['Session 5', 1200, 1200],
+                        ['Session 5', 900, 900],
+                        ['Session 6', 670, 670],
+                        ['Session 7', 550, 550],
+                        ['Session 8', 460, 460],
+                        ['Session 9', 100, 100],
+                        ['Session 10', 40, 40],
+                    ],
+                    'pipeline_trends' => [
+                        ['Label', 'Last 7 Days', 'Last 30 Days', 'Last 90 Days', 'All Time'],
+                        ['Session 1', 100, 400, 1040, 3000],
+                        ['Session 2', 100, 400, 1040, 3000],
+                        ['Session 3', 100, 400, 1040, 3000],
+                        ['Session 4', 100, 400, 1040, 3000],
+                        ['Session 5', 100, 400, 1040, 3000],
+                        ['Session 5', 100, 400, 1040, 3000],
+                        ['Session 6', 100, 400, 1040, 3000],
+                        ['Session 7', 100, 400, 1040, 3000],
+                        ['Session 8', 100, 400, 1040, 3000],
+                        ['Session 9', 100, 400, 1040, 3000],
+                        ['Session 10', 100, 400, 1040, 3000],
+                    ],
+                    'people_languages' => [
+                        ['Languages', 'Users', [ "role" => "annotation" ] ],
+                        ['English', 3000, 3000],
+                        ['Farsi', 400, 400 ],
+                        ['Arabic', 300, 300],
+                        ['French', 1200, 1200],
+                    ],
+                    'group_coordinates' => Zume_Site_Stats::get_group_coordinates(),
+
                 ];
 
 
