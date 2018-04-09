@@ -360,12 +360,12 @@ class Zume_Site_Stats
         }
 
         $non_english = 0;
-        foreach( $results as $value ) {
-            if( ! ( $value['language_code'] == 'en' ) ) {
+        foreach ( $results as $value ) {
+            if ( ! ( $value['language_code'] == 'en' ) ) {
                 // translate to readable name
                 $readable_language_name = self::language_codes_and_names( $value['language_code'] );
 
-                $people_languages[] = [ $readable_language_name, intval( $value['people'] ), intval($value['people'] ) ];
+                $people_languages[] = [ $readable_language_name, intval( $value['people'] ), intval( $value['people'] ) ];
 
                 $non_english = $non_english + $value['people'];
             }
