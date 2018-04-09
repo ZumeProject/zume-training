@@ -84,6 +84,7 @@ function zume_user_register( $user_id ) {
             update_user_meta( $user_id, 'zume_user_address', $results['formatted_address'] );
             update_user_meta( $user_id, 'zume_user_lng', $results['lng'] );
             update_user_meta( $user_id, 'zume_user_lat', $results['lat'] );
+            update_user_meta( $user_id, 'zume_raw_location', $results );
         }
     }
     if ( ! empty( $_POST['zume_affiliation_key'] ) ) {

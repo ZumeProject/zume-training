@@ -39,6 +39,7 @@ class Zume_Integration_Menu
     {
         $this->token = 'dt_zume';
         add_action( "admin_menu", [ $this, "register_menu" ] );
+
     } // End __construct()
 
     /**
@@ -132,6 +133,8 @@ class Zume_Integration_Menu
         $object->verify_foreign_key_installed_on_group();
         $object->verify_check_sum_installed();
         zume_get_public_site_links();
+
+        Zume_Site_Stats::temp_load_hook();
 
         $this->site_default_metabox();
         $this->session_complete_transfer_metabox();

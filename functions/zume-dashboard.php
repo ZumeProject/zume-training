@@ -100,14 +100,16 @@ class Zume_Dashboard {
             'group_name'          => __( 'No Name', 'zume' ),
             'key'                 => self::get_unique_group_key(),
             'public_key'          => self::get_unique_public_key(),
-            'members'             => '1',
+            'members'             => 1,
             'meeting_time'        => '',
             'address'             => '',
             'lng'                 => '',
             'lat'                 => '',
+            'raw_location'        => [],
             'ip_address'          => '',
             'ip_lng'              => '',
             'ip_lat'              => '',
+            'ip_raw_location'     => [],
             'created_date'        => current_time( 'mysql' ),
             'next_session'        => '1',
             'session_1'           => false,
@@ -230,16 +232,20 @@ class Zume_Dashboard {
                 $args['lng'] = $google_result['lng'];
                 $args['lat'] = $google_result['lat'];
                 $args['address'] = $google_result['formatted_address'];
+                $args['raw_location'] = $google_result;
             }
         }
 
-        $results = Zume_Google_Geolocation::geocode_ip_address( $args['ip_address'] );
-        if ( $results ) {
-            $args['ip_lng'] = $results['lng'];
-            $args['ip_lat'] = $results['lat'];
-            $args['ip_address'] = $args['address'];
+        $args['ip_address'] = $args['ip_address'] ?? Zume_Google_Geolocation::get_real_ip_address();
+        if ( isset( $args['ip_address'] ) && ! empty( $args['ip_address'] ) ) {
+            $results = Zume_Google_Geolocation::geocode_ip_address( $args['ip_address'] );
+            if ( $results ) {
+                $args['ip_lng'] = $results['lng'];
+                $args['ip_lat'] = $results['lat'];
+                $args['ip_address'] = $args['address'];
+                $args['ip_raw_location'] = $results;
+            }
         }
-
 
         // Add coleaders
         $args['coleaders'] = ( ! empty( $args['coleaders'] ) ) ? array_filter( $args['coleaders'] ) : []; // confirm or establish array variable.
@@ -290,6 +296,7 @@ class Zume_Dashboard {
         $results = Zume_Google_Geolocation::geocode_ip_address( $group_meta['ip_address'] );
         $group_meta['ip_lng'] = $results['lng'];
         $group_meta['ip_lat'] = $results['lat'];
+        $group_meta['ip_raw_location'] = $results;
         $status = update_user_meta( $group_meta['owner'], $group_meta['key'], $group_meta );
         if ( true == $status ) {
             return true;

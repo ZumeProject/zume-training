@@ -19,7 +19,7 @@ if ( !defined( 'ABSPATH' ) ) {
  */
 class Zume_Google_Geolocation
 {
-    public static $key = 'AIzaSyDn0D_ePCkkQF6CYS7UPy7mbzCuJBRQmw8';
+    public static $key = 'AIzaSyDPNx9iEK4L1y709lUvw-exL8EqU31MeDk';
 
     /**
      * Google geocoding service
