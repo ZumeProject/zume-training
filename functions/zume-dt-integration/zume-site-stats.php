@@ -4,7 +4,7 @@ class Zume_Site_Stats
 {
     public static function temp_load_hook() {
         dt_write_log( 'FUNCTION RESPONSE' );
-        dt_write_log( self::hero_stats() );
+        dt_write_log( self::get_groups_next_session() );
     }
 
     private static function query_zume_group_records() {
@@ -101,6 +101,41 @@ class Zume_Site_Stats
         return $result;
     }
 
+    public static function get_sessions_completed_by_groups(){
+
+        $groups_meta = self::query_zume_group_records();
+
+        $count = [
+            "session_1" => 0,
+            "session_2" => 0,
+            "session_3" => 0,
+            "session_4" => 0,
+            "session_5" => 0,
+            "session_6" => 0,
+            "session_7" => 0,
+            "session_8" => 0,
+            "session_9" => 0,
+            "session_10" => 0,
+        ];
+
+        foreach ($groups_meta as $group_meta){
+            $fields = Zume_Dashboard::verify_group_array_filter( $group_meta );
+            foreach ($count as $key => $value ){
+                if ( $fields[$key] == true ){
+                    $count[$key]++;
+                }
+            }
+        }
+
+        $result = [ [ 'Session', 'Groups', [ 'role' => 'annotation' ] ] ];
+
+        foreach ( $count as $key => $value ) {
+            $result[] = [ $key, $value, $value ];
+        }
+
+        return $result;
+    }
+
     public static function get_groups_next_session(){
 
         $groups_meta = self::query_zume_group_records();
@@ -121,10 +156,25 @@ class Zume_Site_Stats
 
         foreach ($groups_meta as $group_meta){
             $fields = Zume_Dashboard::verify_group_array_filter( $group_meta );
-            $count[ (int) $fields['next_session'] ] = $count[ (int) $fields['next_session'] ]++;
+
+            $count[ intval( $fields['next_session'] ) ] = $count[ intval( $fields['next_session'] ) ] + 1;
         }
 
-        return $count;
+        $current_session_of_group = [
+            [ 'Session', 'Groups', [ 'role' => 'annotation' ] ],
+            [ 'Session 1', $count[1], $count[1] ],
+            [ 'Session 2', $count[2], $count[2] ],
+            [ 'Session 3', $count[3], $count[3] ],
+            [ 'Session 4', $count[4], $count[4] ],
+            [ 'Session 5', $count[5], $count[5] ],
+            [ 'Session 6', $count[6], $count[6] ],
+            [ 'Session 7', $count[7], $count[7] ],
+            [ 'Session 8', $count[8], $count[8] ],
+            [ 'Session 9', $count[9], $count[9] ],
+            [ 'Session 10', $count[10], $count[10] ],
+        ];
+
+        return $current_session_of_group;
     }
 
     /**
@@ -228,7 +278,7 @@ class Zume_Site_Stats
                 }
 
                 // trained people
-                if ( $fields['session_10'] ) {
+                if ( $fields['session_9'] || $fields['session_10'] ) {
                     $hero_stats['trained_people'] = $hero_stats['trained_people'] + $members_in_group;
                     $hero_stats['trained_groups'] = $hero_stats['trained_groups'] + 1;
                 }
