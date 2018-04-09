@@ -225,29 +225,8 @@ class Zume_Integration_Endpoints
                         [ 'No Group', 3456 ],
                         [ 'More than 1 Group', 56 ],
                     ],
-                    'pipeline_trends' => [
-                        [ 'Label', 'Last 7 Days', 'Last 30 Days', 'Last 90 Days', 'All Time' ],
-                        [ 'Session 1', 100, 400, 1040, 3000 ],
-                        [ 'Session 2', 100, 400, 1040, 3000 ],
-                        [ 'Session 3', 100, 400, 1040, 3000 ],
-                        [ 'Session 4', 100, 400, 1040, 3000 ],
-                        [ 'Session 5', 100, 400, 1040, 3000 ],
-                        [ 'Session 5', 100, 400, 1040, 3000 ],
-                        [ 'Session 6', 100, 400, 1040, 3000 ],
-                        [ 'Session 7', 100, 400, 1040, 3000 ],
-                        [ 'Session 8', 100, 400, 1040, 3000 ],
-                        [ 'Session 9', 100, 400, 1040, 3000 ],
-                        [ 'Session 10', 100, 400, 1040, 3000 ],
-                    ],
-                    'people_languages' => [
-                        [ 'Languages', 'Users', [ "role" => "annotation" ] ],
-                        [ 'English', 3000, 3000 ],
-                        [ 'Farsi', 400, 400 ],
-                        [ 'Arabic', 300, 300 ],
-                        [ 'French', 1200, 1200 ],
-                    ],
+                    'people_languages' => Zume_Site_Stats::get_people_languages(),
                     'group_coordinates' => Zume_Site_Stats::get_group_coordinates(),
-
                 ];
 
 

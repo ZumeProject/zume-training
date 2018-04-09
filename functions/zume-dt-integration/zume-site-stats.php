@@ -4,7 +4,7 @@ class Zume_Site_Stats
 {
     public static function temp_load_hook() {
         dt_write_log( 'FUNCTION RESPONSE' );
-        dt_write_log( self::get_groups_next_session() );
+        dt_write_log( self::get_people_languages() );
     }
 
     private static function query_zume_group_records() {
@@ -337,6 +337,241 @@ class Zume_Site_Stats
         }
 
         return $hero_stats;
+    }
+
+    public static function get_people_languages() {
+        global $wpdb;
+        $results = $wpdb->get_results("
+            SELECT meta_value as language_code, count(umeta_id) as people 
+            FROM $wpdb->usermeta 
+            WHERE meta_key = 'zume_language' 
+            GROUP BY meta_value
+            ", ARRAY_A );
+
+        $people_languages = [
+            [ 'Languages', 'Users', [ "role" => "annotation" ] ],
+        ];
+
+        $registered_people = self::get_registered_people();
+
+        if ( empty( $results ) ) {
+            $people_languages[] = [ 'English', $registered_people, $registered_people ];
+            return $people_languages;
+        }
+
+        $non_english = 0;
+        foreach( $results as $value ) {
+            if( ! ( $value['language_code'] == 'en' ) ) {
+                // translate to readable name
+                $readable_language_name = self::language_codes_and_names( $value['language_code'] );
+
+                $people_languages[] = [ $readable_language_name, intval( $value['people'] ), intval($value['people'] ) ];
+
+                $non_english = $non_english + $value['people'];
+            }
+        }
+
+        $english = $registered_people - $non_english;
+        $people_languages[] = [ 'English', intval( $english ), intval( $english ) ];
+
+        return $people_languages;
+
+    }
+
+    public static function language_codes_and_names( $code ) {
+
+        $matching_names = [
+            'ab' => 'Abkhazian',
+            'aa' => 'Afar',
+            'af' => 'Afrikaans',
+            'ak' => 'Akan',
+            'sq' => 'Albanian',
+            'am' => 'Amharic',
+            'ar' => 'Arabic',
+            'an' => 'Aragonese',
+            'hy' => 'Armenian',
+            'as' => 'Assamese',
+            'av' => 'Avaric',
+            'ae' => 'Avestan',
+            'ay' => 'Aymara',
+            'az' => 'Azerbaijani',
+            'bm' => 'Bambara',
+            'ba' => 'Bashkir',
+            'eu' => 'Basque',
+            'be' => 'Belarusian',
+            'bn' => 'Bengali',
+            'bh' => 'Bihari languages',
+            'bi' => 'Bislama',
+            'bs' => 'Bosnian',
+            'br' => 'Breton',
+            'bg' => 'Bulgarian',
+            'my' => 'Burmese',
+            'ca' => 'Catalan, Valencian',
+            'km' => 'Central Khmer',
+            'ch' => 'Chamorro',
+            'ce' => 'Chechen',
+            'ny' => 'Chichewa, Chewa, Nyanja',
+            'zh' => 'Chinese',
+            'cu' => 'Church Slavonic, Old Bulgarian, Old Church Slavonic',
+            'cv' => 'Chuvash',
+            'kw' => 'Cornish',
+            'co' => 'Corsican',
+            'cr' => 'Cree',
+            'hr' => 'Croatian',
+            'cs' => 'Czech',
+            'da' => 'Danish',
+            'dv' => 'Divehi, Dhivehi, Maldivian',
+            'nl' => 'Dutch, Flemish',
+            'dz' => 'Dzongkha',
+            'en' => 'English',
+            'eo' => 'Esperanto',
+            'et' => 'Estonian',
+            'ee' => 'Ewe',
+            'fo' => 'Faroese',
+            'fj' => 'Fijian',
+            'fi' => 'Finnish',
+            'fr' => 'French',
+            'ff' => 'Fulah',
+            'gd' => 'Gaelic, Scottish Gaelic',
+            'gl' => 'Galician',
+            'lg' => 'Ganda',
+            'ka' => 'Georgian',
+            'de' => 'German',
+            'ki' => 'Gikuyu, Kikuyu',
+            'el' => 'Greek (Modern)',
+            'kl' => 'Greenlandic, Kalaallisut',
+            'gn' => 'Guarani',
+            'gu' => 'Gujarati',
+            'ht' => 'Haitian, Haitian Creole',
+            'ha' => 'Hausa',
+            'he' => 'Hebrew',
+            'hz' => 'Herero',
+            'hi' => 'Hindi',
+            'ho' => 'Hiri Motu',
+            'hu' => 'Hungarian',
+            'is' => 'Icelandic',
+            'io' => 'Ido',
+            'ig' => 'Igbo',
+            'id' => 'Indonesian',
+            'ia' => 'Interlingua (International Auxiliary Language Association)',
+            'ie' => 'Interlingue',
+            'iu' => 'Inuktitut',
+            'ik' => 'Inupiaq',
+            'ga' => 'Irish',
+            'it' => 'Italian',
+            'ja' => 'Japanese',
+            'jv' => 'Javanese',
+            'kn' => 'Kannada',
+            'kr' => 'Kanuri',
+            'ks' => 'Kashmiri',
+            'kk' => 'Kazakh',
+            'rw' => 'Kinyarwanda',
+            'kv' => 'Komi',
+            'kg' => 'Kongo',
+            'ko' => 'Korean',
+            'kj' => 'Kwanyama, Kuanyama',
+            'ku' => 'Kurdish',
+            'ky' => 'Kyrgyz',
+            'lo' => 'Lao',
+            'la' => 'Latin',
+            'lv' => 'Latvian',
+            'lb' => 'Letzeburgesch, Luxembourgish',
+            'li' => 'Limburgish, Limburgan, Limburger',
+            'ln' => 'Lingala',
+            'lt' => 'Lithuanian',
+            'lu' => 'Luba-Katanga',
+            'mk' => 'Macedonian',
+            'mg' => 'Malagasy',
+            'ms' => 'Malay',
+            'ml' => 'Malayalam',
+            'mt' => 'Maltese',
+            'gv' => 'Manx',
+            'mi' => 'Maori',
+            'mr' => 'Marathi',
+            'mh' => 'Marshallese',
+            'ro' => 'Moldovan, Moldavian, Romanian',
+            'mn' => 'Mongolian',
+            'na' => 'Nauru',
+            'nv' => 'Navajo, Navaho',
+            'nd' => 'Northern Ndebele',
+            'ng' => 'Ndonga',
+            'ne' => 'Nepali',
+            'se' => 'Northern Sami',
+            'no' => 'Norwegian',
+            'nb' => 'Norwegian Bokmål',
+            'nn' => 'Norwegian Nynorsk',
+            'ii' => 'Nuosu, Sichuan Yi',
+            'oc' => 'Occitan (post 1500)',
+            'oj' => 'Ojibwa',
+            'or' => 'Oriya',
+            'om' => 'Oromo',
+            'os' => 'Ossetian, Ossetic',
+            'pi' => 'Pali',
+            'pa' => 'Panjabi, Punjabi',
+            'ps' => 'Pashto, Pushto',
+            'fa' => 'Persian',
+            'pl' => 'Polish',
+            'pt' => 'Portuguese',
+            'qu' => 'Quechua',
+            'rm' => 'Romansh',
+            'rn' => 'Rundi',
+            'ru' => 'Russian',
+            'sm' => 'Samoan',
+            'sg' => 'Sango',
+            'sa' => 'Sanskrit',
+            'sc' => 'Sardinian',
+            'sr' => 'Serbian',
+            'sn' => 'Shona',
+            'sd' => 'Sindhi',
+            'si' => 'Sinhala, Sinhalese',
+            'sk' => 'Slovak',
+            'sl' => 'Slovenian',
+            'so' => 'Somali',
+            'st' => 'Sotho, Southern',
+            'nr' => 'South Ndebele',
+            'es' => 'Spanish, Castilian',
+            'su' => 'Sundanese',
+            'sw' => 'Swahili',
+            'ss' => 'Swati',
+            'sv' => 'Swedish',
+            'tl' => 'Tagalog',
+            'ty' => 'Tahitian',
+            'tg' => 'Tajik',
+            'ta' => 'Tamil',
+            'tt' => 'Tatar',
+            'te' => 'Telugu',
+            'th' => 'Thai',
+            'bo' => 'Tibetan',
+            'ti' => 'Tigrinya',
+            'to' => 'Tonga (Tonga Islands)',
+            'ts' => 'Tsonga',
+            'tn' => 'Tswana',
+            'tr' => 'Turkish',
+            'tk' => 'Turkmen',
+            'tw' => 'Twi',
+            'ug' => 'Uighur, Uyghur',
+            'uk' => 'Ukrainian',
+            'ur' => 'Urdu',
+            'uz' => 'Uzbek',
+            've' => 'Venda',
+            'vi' => 'Vietnamese',
+            'vo' => 'Volap_k',
+            'wa' => 'Walloon',
+            'cy' => 'Welsh',
+            'fy' => 'Western Frisian',
+            'wo' => 'Wolof',
+            'xh' => 'Xhosa',
+            'yi' => 'Yiddish',
+            'yo' => 'Yoruba',
+            'za' => 'Zhuang, Chuang',
+            'zu' => 'Zulu'
+        ];
+
+        if ( isset( $matching_names[$code] ) ) {
+            return $matching_names[$code];
+        } else {
+            return $code;
+        }
     }
 
 }
