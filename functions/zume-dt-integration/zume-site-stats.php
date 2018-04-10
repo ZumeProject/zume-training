@@ -576,8 +576,33 @@ class Zume_Site_Stats
 
     public static function view_geodata() {
 
-        $result = Zume_Google_Geolocation::query_google_api( 'Highlands Ranch, CO', 'core' );
-        return $result;
+        $result = Zume_Google_Geolocation::query_google_api( 'Le Cheix de la Prugne, 63330 Pionsat, France', 'core' );
+
+        $location = [];
+
+        if ( isset( $result['raw']['status'] ) && ( 'OK' == $result['raw']['status'] ?? ''  ) ) {
+            $address_components = $result['raw']['results'][0]['address_components'];
+            foreach( $address_components as $address_component ) {
+                if ( 'neighborhood' == $address_component['types'][0] ) {
+                    $location['neighborhood'] = $address_component['long_name'];
+                }
+                if ( 'locality' == $address_component['types'][0] ) {
+                    $location['locality'] = $address_component['long_name'];
+                }
+                if ( 'administrative_area_level_2' == $address_component['types'][0] ) {
+                    $location['admin_2'] = $address_component['long_name'];
+                }
+                if ( 'administrative_area_level_1' == $address_component['types'][0] ) {
+                    $location['admin_1'] = $address_component['long_name'];
+                }
+                if ( 'country' == $address_component['types'][0] ) {
+                    $location['country'] = $address_component['long_name'];
+                }
+            }
+            $location['result'] =  $result;
+
+            return $location;
+        }
     }
 
 }
