@@ -709,6 +709,7 @@ class Zume_Course_Content {
                 <div class="large-3 cell activity-title"><?php esc_html_e( 'SHARE', 'zume' ) ?></div>
                 <div class="large-9 cell activity-description">
                     <?php esc_html_e( 'Spend time asking God who He might want you to start an Accountability Group with using the tools you\'ve learned in this session. Share this person’s name with the group before you go. Reach out to that person about starting an Accountability Group and meeting with you weekly.', 'zume' ) ?>
+
                 </div>
             </div>
             <!-- grid-x -->
@@ -719,6 +720,14 @@ class Zume_Course_Content {
                 </div>
                 <div class="large-9 cell activity-description">
                     <?php esc_html_e( 'Pray that God helps you be obedient to Him and invite Him to work in you and those around you!', 'zume' ) ?>
+                </div>
+            </div>
+            <!-- grid-x -->
+            <!-- Activity Block -->
+            <div class="grid-x grid-margin-x grid-margin-y">
+                <div class="large-3 cell activity-title lowercase"><?php esc_html_e( '#ZumeProject', 'zume' ) ?></div>
+                <div class="large-9 cell activity-description">
+                    <?php esc_html_e( 'Take a picture of your S.O.A.P.S. Bible study and share it on social media.', 'zume' ) ?>
                 </div>
             </div>
             <!-- grid-x -->
@@ -1068,6 +1077,14 @@ class Zume_Course_Content {
                     <?php esc_html_e( 'Pray that God help you be obedient to Him and invite Him to work in you and those around you!', 'zume' ) ?>
                 </div>
             </div> <!-- grid-x -->
+            <!-- Activity Block -->
+            <div class="grid-x grid-margin-x grid-margin-y">
+                <div class="large-3 cell activity-title lowercase"><?php esc_html_e( '#ZumeProject', 'zume' ) ?></div>
+                <div class="large-9 cell activity-description">
+                    <?php esc_html_e( 'Thing others could use the 60-minute prayer tool? Share about it on social media.', 'zume' ) ?>
+                </div>
+            </div>
+            <!-- grid-x -->
         </section>
         <?php
     }
@@ -1417,6 +1434,14 @@ class Zume_Course_Content {
                     <?php esc_html_e( 'Pray that God help you be obedient to Him and invite Him to work in you and those around you!', 'zume' ) ?>
                 </div>
             </div> <!-- grid-x -->
+            <!-- Activity Block -->
+            <div class="grid-x grid-margin-x grid-margin-y">
+                <div class="large-3 cell activity-title lowercase"><?php esc_html_e( '#ZumeProject', 'zume' ) ?></div>
+                <div class="large-9 cell activity-description">
+                    <?php esc_html_e( 'What’s been your Zúme highlight? Tell others about it on social media.', 'zume' ) ?>
+                </div>
+            </div>
+            <!-- grid-x -->
 
             <!-- Inset Block -->
             <div class="grid-x grid-margin-x grid-margin-y single">
@@ -1840,6 +1865,14 @@ class Zume_Course_Content {
                     <?php esc_html_e( "Pray that God help you be obedient to Him and invite Him to work in you and those around you!", 'zume' ) ?>
                 </div>
             </div> <!-- grid-x -->
+            <!-- Activity Block -->
+            <div class="grid-x grid-margin-x grid-margin-y">
+                <div class="large-3 cell activity-title lowercase"><?php esc_html_e( '#ZumeProject', 'zume' ) ?></div>
+                <div class="large-9 cell activity-description">
+                    <?php esc_html_e( 'What’s the best thing you got today? Share about it on social media.', 'zume' ) ?>
+                </div>
+            </div>
+            <!-- grid-x -->
         </section>
         <?php
     }
@@ -2082,6 +2115,14 @@ class Zume_Course_Content {
                     <?php esc_html_e( "Before you go out on your Prayer Walking activity, be sure to pray with your group to end your time together. Thank God that He loves the lost, the last and the least – including us! Ask Him to prepare your heart and the heart of those you'll meet during your walk to be open to His work.", 'zume' ) ?>
                 </div>
             </div> <!-- grid-x -->
+            <!-- Activity Block -->
+            <div class="grid-x grid-margin-x grid-margin-y">
+                <div class="large-3 cell activity-title lowercase"><?php esc_html_e( '#ZumeProject', 'zume' ) ?></div>
+                <div class="large-9 cell activity-description">
+                    <?php esc_html_e( 'Take a picture of something you see on your prayer walk and post it on social media. ', 'zume' ) ?>
+                </div>
+            </div>
+            <!-- grid-x -->
         </section>
         <?php
     }
@@ -2323,6 +2364,14 @@ class Zume_Course_Content {
                     <?php esc_html_e( "Thank God for His Faithfulness – for fulfilling every promise He's ever made. Ask Him to help you and your group become even more Faithful to Him.", 'zume' ) ?>
                 </div>
             </div> <!-- grid-x -->
+            <!-- Activity Block -->
+            <div class="grid-x grid-margin-x grid-margin-y">
+                <div class="large-3 cell activity-title lowercase"><?php esc_html_e( '#ZumeProject', 'zume' ) ?></div>
+                <div class="large-9 cell activity-description">
+                    <?php esc_html_e( 'Got a Christian brother or sister who might like Zúme? Share it with them on social media.', 'zume' ) ?>
+                </div>
+            </div>
+            <!-- grid-x -->
         </section>
         <?php
     }
@@ -2533,6 +2582,14 @@ class Zume_Course_Content {
                     <?php esc_html_e( "Thank God that He loves us enough to invite us into His most important work – growing His family!", 'zume' ) ?>
                 </div>
             </div> <!-- grid-x -->
+            <!-- Activity Block -->
+            <div class="grid-x grid-margin-x grid-margin-y">
+                <div class="large-3 cell activity-title lowercase"><?php esc_html_e( '#ZumeProject', 'zume' ) ?></div>
+                <div class="large-9 cell activity-description">
+                    <?php esc_html_e( 'Hop on LIVE and tell the world what you just learned and where they could learn it too.', 'zume' ) ?>
+                </div>
+            </div>
+            <!-- grid-x -->
         </section>
         <?php
     }
@@ -2736,6 +2793,14 @@ class Zume_Course_Content {
                     <?php esc_html_e( "Thank God for sending Jesus to show us that real leaders are real servants. Thank Jesus for showing us the greatest service possible is giving up our own lives for others.", 'zume' ) ?>
                 </div>
             </div> <!-- grid-x -->
+            <!-- Activity Block -->
+            <div class="grid-x grid-margin-x grid-margin-y">
+                <div class="large-3 cell activity-title lowercase"><?php esc_html_e( '#ZumeProject', 'zume' ) ?></div>
+                <div class="large-9 cell activity-description">
+                    <?php esc_html_e( 'What’s the best thing you got today? Share about it on social media.', 'zume' ) ?>
+                </div>
+            </div>
+            <!-- grid-x -->
         </section>
 
         <?php
@@ -3125,7 +3190,14 @@ class Zume_Course_Content {
                 </div>
             </div>
             <!-- grid-x -->
-
+            <!-- Activity Block -->
+            <div class="grid-x grid-margin-x grid-margin-y">
+                <div class="large-3 cell activity-title lowercase"><?php esc_html_e( '#ZumeProject', 'zume' ) ?></div>
+                <div class="large-9 cell activity-description">
+                    <?php esc_html_e( 'Excited to help a new Zúme group get started? Share about Zúme on social media and let people know where they can get started.', 'zume' ) ?>
+                </div>
+            </div>
+            <!-- grid-x -->
         </section>
         <?php
     }
