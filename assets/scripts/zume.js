@@ -6,6 +6,8 @@ jQuery(document).ready( function() {
 })
 
 function validate_user_address(user_address){
+    jQuery('#map').empty()
+    jQuery('#possible-results').empty().append('<span class="spinner"><img src="' + zumeMaps.theme_uri + '/assets/images/spinner.svg" style="height:20px;" /></span>')
     let data = {"address": user_address };
     return jQuery.ajax({
         type: "POST",
@@ -55,6 +57,8 @@ function validate_user_address(user_address){
 }
 
 function validate_group_address(user_address, group_key){
+    jQuery('#map'+group_key).empty()
+    jQuery('#possible-results'+group_key).empty().append('<span class="spinner"><img src="' + zumeMaps.theme_uri + '/assets/images/spinner.svg" style="height:20px;" /></span>')
     let data = {"address": user_address };
     return jQuery.ajax({
         type: "POST",

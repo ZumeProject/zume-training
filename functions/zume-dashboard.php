@@ -58,6 +58,7 @@ class Zume_Dashboard {
                 $args['lng'] = $google_result['lng'];
                 $args['lat'] = $google_result['lat'];
                 $args['address'] = $google_result['formatted_address'];
+                $args['raw_location'] = $google_result['raw'];
             }
         }
 
@@ -66,6 +67,11 @@ class Zume_Dashboard {
             $args['ip_lng'] = $results['lng'];
             $args['ip_lat'] = $results['lat'];
             $args['ip_address'] = $results['formatted_address'];
+            $args['ip_raw_location'] = $results;
+        }
+
+        if ( isset( $args['type'] ) ) {
+            unset( $args['type'] );
         }
 
         $new_group = wp_parse_args( $args, $group_values );
@@ -224,15 +230,18 @@ class Zume_Dashboard {
         if ( empty( $args['validate_address'] ) ) {
             $args['address'] = '';
         }
-
-        if ( isset( $args['address'] ) && ! $args['address'] == $group_meta['address'] && ! empty( $args['address'] ) ) {
+        if ( isset( $args['address'] ) && ! ( $args['address'] == $group_meta['address'] ) && ! empty( $args['address'] ) ) {
             // Geo lookup address
             $google_result = Zume_Google_Geolocation::query_google_api( $args['address'], $type = 'core' ); // get google api info
-            if ( ! $google_result ) {
+            if ( $google_result ) {
+                $group_meta['lng'] = '';
+                $group_meta['lat'] = '';
+                $group_meta['address'] = '';
+                $group_meta['raw_location'] = '';
                 $args['lng'] = $google_result['lng'];
                 $args['lat'] = $google_result['lat'];
                 $args['address'] = $google_result['formatted_address'];
-                $args['raw_location'] = $google_result;
+                $args['raw_location'] = $google_result['raw'];
             }
         }
 
@@ -276,7 +285,9 @@ class Zume_Dashboard {
         }
 
         // Combine array with new data
-        unset( $args['type'] ); // keeps from storing the form parse info
+        if ( isset( $args['type'] ) ) { // keeps from storing the form parse info
+            unset( $args['type'] );
+        }
         $args['last_modified_date'] = current_time( 'mysql' );
         $args = wp_parse_args( $args, $group_meta );
 

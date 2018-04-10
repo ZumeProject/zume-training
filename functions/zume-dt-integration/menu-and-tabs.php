@@ -37,7 +37,7 @@ class Zume_Integration_Menu
      */
     public function __construct()
     {
-        $this->token = 'dt_zume';
+        $this->token = 'site_link_system_settings';
         add_action( "admin_menu", [ $this, "register_menu" ] );
 
     } // End __construct()
@@ -49,7 +49,7 @@ class Zume_Integration_Menu
      */
     public function register_menu()
     {
-        add_submenu_page( 'edit.php?post_type=site_link_system', __( 'Settings' ), __( 'Settings' ), 'manage_options', 'site_link_system_settings', [ $this, 'zume_content' ] );
+        add_submenu_page( 'edit.php?post_type=site_link_system', __( 'Settings' ), __( 'Settings' ), 'manage_options', $this->token, [ $this, 'zume_content' ] );
     }
 
     /**
@@ -67,10 +67,14 @@ class Zume_Integration_Menu
         $link = 'admin.php?page=' . $this->token . '&tab=';
 
         $tab_bar = [
-        [
-        'key' => 'zume_settings',
-        'label' => __( 'Settings', 'dt_zume' ),
-        ]
+            [
+                'key' => 'zume_settings',
+                'label' => __( 'Settings', 'dt_zume' ),
+            ],
+            [
+                'key' => 'google_keys',
+                'label' => __( 'Google Keys', 'dt_zume' ),
+            ]
         ];
 
         // determine active tabs
@@ -113,6 +117,10 @@ class Zume_Integration_Menu
                 case "zume_settings":
                     $this->tab_zume_settings();
                     break;
+                case "google_keys":
+                    $object = new Zume_Keys_Tab();
+                    $object->content();
+                break;
                 default:
                     break;
             }

@@ -97,7 +97,7 @@ function zume_update_user_contact_info()
                 update_user_meta( $user_id, 'zume_user_address', trim( sanitize_text_field( wp_unslash( $_POST['zume_user_address'] ) ) ) );
                 update_user_meta( $user_id, 'zume_user_lng', $results['lng'] );
                 update_user_meta( $user_id, 'zume_user_lat', $results['lat'] );
-                update_user_meta( $user_id, 'zume_raw_location', $results );
+                update_user_meta( $user_id, 'zume_raw_location', $results['raw'] );
             }
         }
     }

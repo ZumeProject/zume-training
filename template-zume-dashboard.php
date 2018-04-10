@@ -19,10 +19,8 @@ if ( ! empty( $_POST ) ) { // test if post submitted
         // handle post
         if ( isset( $_POST['type'] ) ) { // group submissions
             if ( ! empty( $_POST['type'] ) && $_POST['type'] == 'create' ) { // create group
-                unset( $_POST['type'] );
                 Zume_Dashboard::create_group( $_POST );
             } elseif ( ! empty( $_POST['type'] ) && $_POST['type'] == 'edit' ) { // edit group
-                unset( $_POST['type'] );
                 Zume_Dashboard::edit_group( $_POST );
             } elseif ( ! empty( $_POST['type'] ) && $_POST['type'] == 'closed' && isset( $_POST['key'] ) ) { // close group
                 Zume_Dashboard::closed_group( sanitize_key( wp_unslash( $_POST['key'] ) ) );
@@ -793,7 +791,7 @@ foreach ( $zume_user_meta as $zume_key => $v ) {
                                 <input type="button" class="button"
                                        onclick="validate_group_address( jQuery('#validate_address<?php echo esc_html( $zume_key ); ?>').val(), '<?php echo esc_html( $zume_key ); ?>')"
                                        value="<?php echo esc_html__( 'Validate', 'zume' ) ?>"
-                                       id="validate_address_button<?php echo esc_html( $zume_key ); ?>">
+                                       id="validate_address_button<?php echo esc_html( $zume_key ); ?>" >
                             </div>
                         </div>
 
@@ -804,7 +802,7 @@ foreach ( $zume_user_meta as $zume_key => $v ) {
 
                         <?php if ( ! empty( $zume_value['address'] ) && ! empty( esc_attr( $zume_value['lng'] ) ) && ! empty( esc_attr( $zume_value['lat'] ) ) ) : ?>
                             <div id="map<?php echo esc_html( $zume_key ); ?>">
-                                <img src="https://maps.googleapis.com/maps/api/staticmap?center=<?php echo esc_attr( $zume_value['lat'] ) . ',' . esc_attr( $zume_value['lng'] ) ?>&zoom=5&size=600x250&markers=color:red|<?php echo esc_attr( $zume_value['lat'] ) . ',' . esc_attr( $zume_value['lng'] ) ?>&key=<?php echo esc_attr( Zume_Google_Geolocation::$key ); ?>"/>
+                                <img src="https://maps.googleapis.com/maps/api/staticmap?center=<?php echo esc_attr( $zume_value['lat'] ) . ',' . esc_attr( $zume_value['lng'] ) ?>&zoom=5&size=600x250&markers=color:red|<?php echo esc_attr( $zume_value['lat'] ) . ',' . esc_attr( $zume_value['lng'] ) ?>&key=<?php echo esc_attr( Zume_Google_Geolocation::key() ); ?>"/>
                             </div>
                         <?php endif; ?>
 
@@ -948,7 +946,7 @@ if ( ! empty( $zume_colead_groups ) ) : // reset variable without coleader data
                                 <dd>
                                     <?php if ( ! empty( $zume_value['address'] ) && ! empty( esc_attr( $zume_value['lng'] ) ) && ! empty( esc_attr( $zume_value['lat'] ) ) ) : ?>
                                         <div id="map<?php echo esc_html( $zume_key ); ?>">
-                                            <img src="https://maps.googleapis.com/maps/api/staticmap?center=<?php echo esc_attr( $zume_value['lat'] ) . ',' . esc_attr( $zume_value['lng'] ) ?>&zoom=5&size=600x250&markers=color:red|<?php echo esc_attr( $zume_value['lat'] ) . ',' . esc_attr( $zume_value['lng'] ) ?>&key=<?php echo esc_attr( Zume_Google_Geolocation::$key ); ?>"/>
+                                            <img src="https://maps.googleapis.com/maps/api/staticmap?center=<?php echo esc_attr( $zume_value['lat'] ) . ',' . esc_attr( $zume_value['lng'] ) ?>&zoom=5&size=600x250&markers=color:red|<?php echo esc_attr( $zume_value['lat'] ) . ',' . esc_attr( $zume_value['lng'] ) ?>&key=<?php echo esc_attr( Zume_Google_Geolocation::key() ); ?>"/>
                                         </div>
                                     <?php endif; ?>
                                 </dd>

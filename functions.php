@@ -63,6 +63,7 @@ include_once( 'functions/login/user-register.php' );
 require_once( 'functions/zume-dt-integration/site-link-post-type.php' );
 Site_Link_System::instance();
 require_once( 'functions/zume-dt-integration/wp-async-request.php' );
+require_once( 'functions/tab-keys.php' );
 require_once( 'functions/zume-dt-integration/menu-and-tabs.php' );
 require_once( 'functions/zume-dt-integration/zume.php' );
 require_once( 'functions/zume-dt-integration/zume-hooks.php' );

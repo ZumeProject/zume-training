@@ -19,7 +19,9 @@ if ( !defined( 'ABSPATH' ) ) {
  */
 class Zume_Google_Geolocation
 {
-    public static $key = 'AIzaSyDPNx9iEK4L1y709lUvw-exL8EqU31MeDk';
+    public static function key() {
+        return get_option( 'zume_google_map_key' );
+    }
 
     /**
      * Google geocoding service
@@ -35,10 +37,10 @@ class Zume_Google_Geolocation
         $address = str_replace( '   ', ' ', $address );
         $address = str_replace( '  ', ' ', $address );
         $address = urlencode( trim( $address ) );
-        $url_address = 'https://maps.googleapis.com/maps/api/geocode/json?address=' . $address . '&key=' . self::$key;
-        $details = json_decode( self::url_get_contents( $url_address ) );
+        $url_address = 'https://maps.googleapis.com/maps/api/geocode/json?address=' . $address . '&key=' . self::key();
+        $details = json_decode( self::url_get_contents( $url_address ), true );
 
-        if ( $details->status == 'ZERO_RESULTS' ) {
+        if ( $details['status'] == 'ZERO_RESULTS' ) {
             return false;
         }
         else {
@@ -47,35 +49,39 @@ class Zume_Google_Geolocation
                     return true;
                     break;
                 case 'coordinates_only':
-                    $g_lat = $details->results[0]->geometry->location->lat;
-                    $g_lng = $details->results[0]->geometry->location->lng;
-
-                    return [
-                        'lng' => $g_lng,
-                        'lat' => $g_lat
-                    ];
-                    break;
-                case 'core':
-                    $g_lat = $details->results[0]->geometry->location->lat;
-                    $g_lng = $details->results[0]->geometry->location->lng;
-                    $g_formatted_address = $details->results[0]->formatted_address;
+                    $g_lat = $details['results'][0]['geometry']['location']['lat'];
+                    $g_lng = $details['results'][0]['geometry']['location']['lng'];
 
                     return [
                         'lng' => $g_lng,
                         'lat' => $g_lat,
-                        'formatted_address' => $g_formatted_address
+                        'raw' => $details,
+                    ];
+                    break;
+                case 'core':
+                    $g_lat = $details['results'][0]['geometry']['location']['lat'];
+                    $g_lng = $details['results'][0]['geometry']['location']['lng'];
+                    $g_formatted_address = $details['results'][0]['formatted_address'];
+
+
+                    return [
+                        'lng' => $g_lng,
+                        'lat' => $g_lat,
+                        'formatted_address' => $g_formatted_address,
+                        'raw' => $details,
                     ];
                     break;
                 case 'all_points':
                     return [
-                        'center' => $details->results[0]->geometry->location,
-                        'northeast' => $details->results[0]->geometry->bounds->northeast,
-                        'southwest' => $details->results[0]->geometry->bounds->southwest,
-                        'formatted_address' => $details->results[0]->formatted_address,
+                        'center' => $details['results'][0]['geometry']['location'],
+                        'northeast' => $details['results'][0]['geometry']['bounds']['northeast'],
+                        'southwest' => $details['results'][0]['geometry']['bounds']['southwest'],
+                        'formatted_address' => $details['results'][0]['formatted_address'],
+                        'raw' => $details,
                     ];
                     break;
                 default:
-                    return json_decode( self::url_get_contents( $url_address ), true ); // full_object returned
+                    return $details; // full_object returned
                     break;
             }
         }
@@ -130,7 +136,7 @@ class Zume_Google_Geolocation
         $address = str_replace( '   ', ' ', $address );
         $address = str_replace( '  ', ' ', $address );
         $address = urlencode( trim( $address ) );
-        $url_address = 'https://maps.googleapis.com/maps/api/geocode/json?address=' . $address . '&key=' . self::$key;
+        $url_address = 'https://maps.googleapis.com/maps/api/geocode/json?address=' . $address . '&key=' . self::key();
         $details = json_decode( self::url_get_contents( $url_address ) );
 
         if ($details->status == 'ZERO_RESULTS' ) {

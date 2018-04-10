@@ -4,7 +4,7 @@ class Zume_Site_Stats
 {
     public static function temp_load_hook() {
         dt_write_log( 'FUNCTION RESPONSE' );
-        dt_write_log( self::get_people_languages() );
+        dt_write_log( self::view_geodata() );
     }
 
     private static function query_zume_group_records() {
@@ -572,6 +572,12 @@ class Zume_Site_Stats
         } else {
             return $code;
         }
+    }
+
+    public static function view_geodata() {
+
+        $result = Zume_Google_Geolocation::query_google_api( 'Highlands Ranch, CO', 'core' );
+        return $result;
     }
 
 }

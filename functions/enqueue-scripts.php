@@ -69,6 +69,7 @@ function zume_site_scripts() {
             'nonce' => wp_create_nonce( 'wp_rest' ),
             'current_user_login' => wp_get_current_user()->user_login,
             'current_user_id' => get_current_user_id(),
+            'theme_uri' => get_stylesheet_directory_uri(),
             "translations" => [
                 "delete" => esc_html__( 'Delete', 'zume' ),
                 "failed_to_remove" => esc_html__( 'Failed to remove item.', 'zume' ),
