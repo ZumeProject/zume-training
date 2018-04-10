@@ -198,22 +198,28 @@ class Zume_Integration
             'last_name' => sanitize_text_field( wp_unslash( $user_meta['last_name'] ?? '' ) ),
             'user_registered' => $user->data->user_registered,
             'user_email' => sanitize_email( wp_unslash( $user->data->user_email ) ),
+            'last_activity' => $user_meta['last_activity'] ?? '',
             'zume_language' => maybe_unserialize( $user_meta['zume_language'] ?? zume_current_language() ?: zume_default_language() ) ,
             'zume_phone_number' => sanitize_text_field( wp_unslash( $user_meta['zume_phone_number'] ?? '' ) ),
             'zume_user_address' => sanitize_text_field( wp_unslash( $user_meta['zume_user_address'] ?? '' ) ),
             'zume_user_lng' => sanitize_text_field( wp_unslash( $user_meta['zume_user_lng'] ?? '' ) ),
             'zume_user_lat' => sanitize_text_field( wp_unslash( $user_meta['zume_user_lat'] ?? '' ) ),
+            'zume_raw_location' => maybe_unserialize( sanitize_text_field( wp_unslash( $user_meta['zume_raw_location'] ?? '' ) ) ),
             'zume_address_from_ip' => $user_meta['zume_address_from_ip'] ?? '',
             'zume_lng_from_ip' => $user_meta['zume_lng_from_ip'] ?? '',
             'zume_lat_from_ip' => $user_meta['zume_lat_from_ip'] ?? '',
+            'zume_raw_location_from_ip' => maybe_unserialize( sanitize_text_field( wp_unslash( $user_meta['zume_raw_location_from_ip'] ?? '' ) ) ),
             'zume_foreign_key' => $user_meta['zume_foreign_key'] ?? self::get_foreign_key( $user_id ),
             'zume_three_month_plan' => $three_month_plan ?: [],
             'zume_groups' => $zume_groups ?? [],
             'zume_colead_groups' => $zume_colead_groups ?? [],
+            'zume_affiliation_key' => sanitize_text_field( wp_unslash( $user_meta['zume_affiliation_key'] ?? '' ) ),
         ];
 
         update_user_meta( $user_id, 'zume_check_sum', md5( serialize( $prepared_user_data ) ) );
         $prepared_user_data['zume_check_sum'] = md5( serialize( $prepared_user_data ) );
+
+
 
         return $prepared_user_data;
     }
