@@ -451,14 +451,14 @@ endforeach; ?>
                 }
 
                 // build locations for users
-                $groups_meta = $wpdb->get_col(
-                    $wpdb->prepare( "
-                  SELECT meta_value 
-                  FROM $wpdb->usermeta 
-                  WHERE meta_key LIKE %s",
-                        $wpdb->esc_like( 'zume_group' ).'%'
-                    )
-                );
+//                $user_meta = $wpdb->get_col(
+//                    $wpdb->prepare( "
+//                  SELECT meta_value
+//                  FROM $wpdb->usermeta
+//                  WHERE meta_key LIKE %s",
+//                        $wpdb->esc_like( 'zume_group' ).'%'
+//                    )
+//                );
             }
         }
 
