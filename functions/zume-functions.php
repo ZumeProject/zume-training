@@ -114,6 +114,8 @@ function zume_update_user_contact_info()
         return new WP_Error( 'fail_update_user_data', 'Error while updating user data in user table.' );
     }
 
+    do_action( 'zume_update_profile', $user_id );
+
     return true;
 }
 

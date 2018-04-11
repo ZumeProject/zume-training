@@ -238,6 +238,7 @@ class Zume_Dashboard {
                 $group_meta['lat'] = '';
                 $group_meta['address'] = '';
                 $group_meta['raw_location'] = '';
+
                 $args['lng'] = $google_result['lng'];
                 $args['lat'] = $google_result['lat'];
                 $args['address'] = $google_result['formatted_address'];
@@ -330,6 +331,8 @@ class Zume_Dashboard {
         }
         $user_meta['closed'] = true;
         update_user_meta( $user_id, $group_key, $user_meta );
+
+        do_action( 'zume_close_group', $user_id, $group_key );
     }
 
     public static function activate_group( $group_id ) {
@@ -339,6 +342,8 @@ class Zume_Dashboard {
         $group_meta['closed'] = false;
 
         update_user_meta( get_current_user_id(), $group_id, $group_meta );
+
+        do_action( 'zume_activate_group', get_current_user_id(), $group_id );
     }
 
     public static function get_highest_session( $user_id ) {
@@ -590,6 +595,7 @@ class Zume_Dashboard {
         if ( isset( $response['accept'] ) ) {
             $decision = 'accepted';
             $group_key = $response['accept'];
+
         } elseif ( isset( $response['decline'] ) ) {
             $decision = 'declined';
             $group_key = $response['decline'];
@@ -617,6 +623,8 @@ class Zume_Dashboard {
                 }
             }
         }
+
+        do_action( 'zume_coleader_invitation_response', $user->ID, $group_key, $decision );
     }
 
     /**

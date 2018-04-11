@@ -142,11 +142,12 @@ class Zume_Integration_Menu
         $object->verify_check_sum_installed();
         zume_get_public_site_links();
 
-        Zume_Site_Stats::temp_load_hook();
+//        Zume_Site_Stats::temp_load_hook();
 
         $this->site_default_metabox();
         $this->session_complete_transfer_metabox();
-        $this->system_health_metabox();
+        $this->check_for_session_limit_transfers();
+        $this->check_for_location_data_installed();
 
         // begin right column template
         $this->template( 'right_column' );
@@ -212,7 +213,6 @@ class Zume_Integration_Menu
                 break;
         }
     }
-
 
     public static function site_default_metabox()
     {
@@ -286,7 +286,7 @@ class Zume_Integration_Menu
                 <thead>
                 <tr>
                     <td>
-                        <?php esc_html_e( 'Session Level for Transfer' ) ?>
+                        Session Level for Transfer
                     </td>
                 </tr>
                 </thead>
@@ -305,7 +305,7 @@ class Zume_Integration_Menu
 
                 <tr>
                     <td>
-                        <button class="button" type="submit"><?php esc_html_e( 'Update' ) ?></button>
+                        <button class="button" type="submit">Update</button>
                     </td>
                 </tr>
                 </tbody>
@@ -316,47 +316,186 @@ class Zume_Integration_Menu
         <?php
     }
 
-    public static function system_health_metabox()
+    public function check_for_session_limit_transfers()
     {
-        $object = new Zume_Integration();
+        $report = [];
+
+        // Check for post
+        if ( isset( $_POST['zume_check_for_transfer_nonce'] ) && ! empty( $_POST['zume_check_for_transfer_nonce'] ) && wp_verify_nonce( sanitize_text_field( wp_unslash( $_POST['zume_check_for_transfer_nonce'] ) ), 'zume_check_for_transfer_'. get_current_user_id() ) ) {
+            if ( isset( $_POST['check-and-transfer'] ) && ! empty( $_POST['check-and-transfer'] ) ) {
+                global $wpdb;
+                $groups_meta = $wpdb->get_col(
+                    $wpdb->prepare( "
+                  SELECT meta_value 
+                  FROM $wpdb->usermeta 
+                  WHERE meta_key LIKE %s LIMIT 10000", // @todo Returning all results, but at some point we should limit this
+                        $wpdb->esc_like( 'zume_group' ).'%'
+                    )
+                );
+
+                $transfer_level = get_option( 'zume_session_complete_transfer_level' );
+
+                foreach ($groups_meta as $v){
+                    $fields = Zume_Dashboard::verify_group_array_filter( $v );
+                    if ( $fields['next_session'] > $transfer_level ) {
+                        try {
+                            $send_new_user = new Zume_Integration_Session_Complete_Transfer();
+                            $send_new_user->launch(
+                                [
+                                    'zume_group_key'    => $fields['key'],
+                                    'owner_id'          => $fields['owner'],
+                                ]
+                            );
+                            $report[] = 'Transfered: ' . $fields['key'];
+                        } catch ( Exception $e ) {
+                            dt_write_log( '@' . __METHOD__ );
+                            dt_write_log( 'Caught exception: ', $e->getMessage(), "\n" );
+                            $report[] = 'Failed Transfer: ' . $fields['key'];
+                        }
+                    }
+                }
+            }
+        }
 
         ?>
         <form method="post" action="">
+            <?php wp_nonce_field( 'zume_check_for_transfer_'. get_current_user_id(), 'zume_check_for_transfer_nonce', false, true ) ?>
 
+            <!-- Box -->
             <table class="widefat striped">
                 <thead>
                 <tr>
-                    <td colspan="2">
-                        <?php esc_html_e( 'Connection Health' ) ?>
+                    <td>
+                        Check and Transfer Qualified Records
                     </td>
                 </tr>
                 </thead>
                 <tbody>
                 <tr>
                     <td>
-                        <?php esc_html_e( 'Foreign Keys Needing Update' ) ?>:
-                    </td>
-                    <td>
-                        <?php echo esc_html( $object->verify_foreign_key_installed() )  ?>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <?php esc_html_e( 'Check Sum Records Needing Update' ) ?>:
-                    </td>
-                    <td>
-                        <?php echo esc_html( $object->verify_check_sum_installed() )  ?>
+                        <button class="button" name="check-and-transfer" value="1" type="submit">Check and Transfer</button>
                     </td>
                 </tr>
 
+                <!-- Results -->
+                <?php if ( ! empty( $report ) ) : ?>
+                    <tr>
+                        <td>
+                            <?php foreach ( $report as $result ) : print esc_html( $result ) . '<br>';
+endforeach; ?>
+                        </td>
+                    </tr>
+                <?php endif; ?>
                 </tbody>
             </table>
             <br>
-
+            <!-- End Box -->
         </form>
         <?php
     }
 
+    public function check_for_location_data_installed()
+    {
+        $report = [];
 
+        // Check for post
+        if ( isset( $_POST['zume_location_nonce'] ) && ! empty( $_POST['zume_location_nonce'] ) && wp_verify_nonce( sanitize_text_field( wp_unslash( $_POST['zume_location_nonce'] ) ), 'zume_location_'. get_current_user_id() ) ) {
+            if ( isset( $_POST['check-location'] ) && ! empty( $_POST['check-location'] ) ) {
 
+                // build locations for groups
+                global $wpdb;
+                $groups_meta = $wpdb->get_col(
+                    $wpdb->prepare( "
+                  SELECT meta_value 
+                  FROM $wpdb->usermeta 
+                  WHERE meta_key LIKE %s",
+                        $wpdb->esc_like( 'zume_group' ).'%'
+                    )
+                );
+
+                foreach ($groups_meta as $v){
+                    $fields = Zume_Dashboard::verify_group_array_filter( $v );
+                    $updated = false;
+
+                    if ( empty( $fields['raw_location'] ) && ! empty( $fields['address'] ) ) {
+                        $google_result = Zume_Google_Geolocation::query_google_api( $fields['address'], $type = 'core' ); // get google api info
+                        if ( $google_result ) {
+
+                            $fields['lng'] = $google_result['lng'];
+                            $fields['lat'] = $google_result['lat'];
+                            $fields['address'] = $google_result['formatted_address'];
+                            $fields['raw_location'] = $google_result['raw'];
+                        }
+                        $updated = true;
+                        $report[] = 'Updated Group ' . $fields['key'] . ": Location";
+                        dt_write_log( 'Updated Group ' . $fields['key'] . ": Location" );
+                    }
+                    if ( empty( $fields['ip_raw_location'] ) && ! empty( $fields['ip_address'] ) ) {
+                        $results = Zume_Google_Geolocation::geocode_ip_address( $fields['ip_address'] );
+                        if ( $results ) {
+                            $fields['ip_lng'] = $results['lng'];
+                            $fields['ip_lat'] = $results['lat'];
+                            $fields['ip_raw_location'] = $results;
+                        }
+                        $updated = true;
+                        $report[] = 'Updated Group ' . $fields['key'] . ": IP Location";
+                        dt_write_log( 'Updated Group ' . $fields['key'] . ": IP Location" );
+                    }
+
+                    if ( $updated ) {
+
+                        $fields['last_modified_date'] = current_time( 'mysql' );
+
+                        update_user_meta( $fields['owner'], $fields['key'], $fields );
+                    }
+                }
+
+                // build locations for users
+                $groups_meta = $wpdb->get_col(
+                    $wpdb->prepare( "
+                  SELECT meta_value 
+                  FROM $wpdb->usermeta 
+                  WHERE meta_key LIKE %s",
+                        $wpdb->esc_like( 'zume_group' ).'%'
+                    )
+                );
+            }
+        }
+
+        ?>
+        <form method="post" action="">
+            <?php wp_nonce_field( 'zume_location_'. get_current_user_id(), 'zume_location_nonce', false, true ) ?>
+
+            <!-- Box -->
+            <table class="widefat striped">
+                <thead>
+                <tr>
+                    <td>
+                        Check Locations Installed
+                    </td>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>
+                        <button class="button" name="check-location" value="1" type="submit">Check Location</button>
+                    </td>
+                </tr>
+
+                <!-- Results -->
+                <?php if ( ! empty( $report ) ) : ?>
+                    <tr>
+                        <td>
+                            <?php foreach ( $report as $result ) : print esc_html( $result ) . '<br>';
+endforeach; ?>
+                        </td>
+                    </tr>
+                <?php endif; ?>
+                </tbody>
+            </table>
+            <br>
+            <!-- End Box -->
+        </form>
+        <?php
+    }
 }

@@ -13,7 +13,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 class Zume_Integration
 {
 
-    public function send_session_complete_transfer( $zume_group_key, $owner_id, $current_user_id ) {
+    public function send_session_complete_transfer( $zume_group_key, $owner_id ) {
         dt_write_log( __METHOD__ );
 
         // Get owner prepared data

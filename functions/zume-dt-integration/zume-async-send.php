@@ -59,13 +59,13 @@ class Zume_Integration_Session_Complete_Transfer extends Disciple_Tools_Async_Ta
 
             $zume_group_key = sanitize_key( wp_unslash( $_POST[0]['zume_group_key'] ) );
             $owner_id = sanitize_key( wp_unslash( $_POST[0]['owner_id'] ) );
-            $current_user_id = sanitize_key( wp_unslash( $_POST[0]['current_user_id'] ) );
+//            $current_user_id = sanitize_key( wp_unslash( $_POST[0]['current_user_id'] ) ); @todo remove
             // @codingStandardsIgnoreEnd
 
             dt_write_log( __METHOD__ . ': ' . $zume_group_key );
 
             $object = new Zume_Integration();
-            $object->send_session_complete_transfer( $zume_group_key, $owner_id, $current_user_id );
+            $object->send_session_complete_transfer( $zume_group_key, $owner_id );
 
         } // end if check
         return;

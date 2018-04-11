@@ -576,30 +576,44 @@ class Zume_Site_Stats
 
     public static function view_geodata() {
 
-        $result = Zume_Google_Geolocation::query_google_api( 'Le Cheix de la Prugne, 63330 Pionsat, France', 'core' );
+        $result = Zume_Google_Geolocation::query_google_api( '799 W Lincolnway, Columbia City, IN 46725, USA', 'core' );
 
         $location = [];
+        $level1 = '';
+        $level2 = '';
 
-        if ( isset( $result['raw']['status'] ) && ( 'OK' == $result['raw']['status'] ?? ''  ) ) {
+        if ( isset( $result['raw']['status'] ) && ( 'OK' == $result['raw']['status'] ?? '' ) ) {
             $address_components = $result['raw']['results'][0]['address_components'];
-            foreach( $address_components as $address_component ) {
+            foreach ( $address_components as $address_component ) {
                 if ( 'neighborhood' == $address_component['types'][0] ) {
                     $location['neighborhood'] = $address_component['long_name'];
+                    $level2 .= $location['neighborhood'] . ', ';
                 }
                 if ( 'locality' == $address_component['types'][0] ) {
                     $location['locality'] = $address_component['long_name'];
+                    $level2 .= $location['locality'] . ', ';
                 }
                 if ( 'administrative_area_level_2' == $address_component['types'][0] ) {
                     $location['admin_2'] = $address_component['long_name'];
+                    $level2 .= $location['admin_2'] . ', ';
                 }
                 if ( 'administrative_area_level_1' == $address_component['types'][0] ) {
                     $location['admin_1'] = $address_component['long_name'];
+                    $level1 .= $location['admin_1'] . ', ';
                 }
                 if ( 'country' == $address_component['types'][0] ) {
                     $location['country'] = $address_component['long_name'];
+                    $level1 .= $location['country'];
                 }
+                $level1 = rtrim( $level1, ',' );
             }
-            $location['result'] =  $result;
+
+            $level2 = substr( $level2, 0, -2 );
+
+            $location['level2'] = $level2;
+            $location['level1'] = $level1;
+            $location['raw'] = $result;
+
 
             return $location;
         }
