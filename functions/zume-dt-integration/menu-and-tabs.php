@@ -451,14 +451,27 @@ endforeach; ?>
                 }
 
                 // build locations for users
-//                $user_meta = $wpdb->get_col(
-//                    $wpdb->prepare( "
-//                  SELECT meta_value
-//                  FROM $wpdb->usermeta
-//                  WHERE meta_key LIKE %s",
-//                        $wpdb->esc_like( 'zume_group' ).'%'
-//                    )
-//                );
+                $users_with_addresses = $wpdb->get_results(
+                    "SELECT * FROM $wpdb->usermeta WHERE meta_key = 'zume_user_address'", ARRAY_A
+                );
+
+                foreach ( $users_with_addresses as $value ) {
+                    if ( empty( $value['meta_value'] ) ) {
+
+                        dt_write_log( 'Empty value' );
+                        dt_write_log( $value );
+                        continue;
+                    }
+                    $results = Zume_Google_Geolocation::query_google_api( trim( sanitize_text_field( wp_unslash( $value['meta_value'] ) ) ), 'core' );
+
+                    if ( $results ) {
+                        update_user_meta( $value['user_id'], 'zume_user_lng', $results['lng'] );
+                        update_user_meta( $value['user_id'], 'zume_user_lat', $results['lat'] );
+                        update_user_meta( $value['user_id'], 'zume_raw_location', $results['raw'] );
+                    }
+                    $report[] = 'Updated User ' . $value['user_id'];
+                    dt_write_log( 'Updated User ' . $value['user_id'] );
+                }
             }
         }
 
