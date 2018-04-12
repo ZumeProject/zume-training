@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "Project-Id-Version: Zúme Project\n"
-"POT-Creation-Date: 2018-04-09 05:48-0600\n"
+"POT-Creation-Date: 2018-04-12 12:15-0600\n"
 "PO-Revision-Date: 2018-03-06 11:15-0700\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -99,7 +99,7 @@ msgid "Coach Leader"
 msgstr ""
 
 #: functions/enqueue-scripts.php:54 functions/enqueue-scripts.php:56
-#: template-zume-dashboard.php:891 template-zume-dashboard.php:1004
+#: template-zume-dashboard.php:889 template-zume-dashboard.php:1002
 msgid "Cancel"
 msgstr ""
 
@@ -123,20 +123,20 @@ msgstr ""
 msgid "Loading..."
 msgstr ""
 
-#: functions/enqueue-scripts.php:73 template-zume-dashboard.php:855
-#: template-zume-dashboard.php:889
+#: functions/enqueue-scripts.php:74 template-zume-dashboard.php:853
+#: template-zume-dashboard.php:887
 msgid "Delete"
 msgstr ""
 
-#: functions/enqueue-scripts.php:74
+#: functions/enqueue-scripts.php:75
 msgid "Failed to remove item."
 msgstr ""
 
-#: functions/enqueue-scripts.php:75
+#: functions/enqueue-scripts.php:76
 msgid "Failed to change item."
 msgstr ""
 
-#: functions/enqueue-scripts.php:76
+#: functions/enqueue-scripts.php:77
 msgid "Three Month Plan - Zúme Project"
 msgstr ""
 
@@ -689,9 +689,8 @@ msgid "Install"
 msgstr ""
 
 #: functions/utilities/tgm-plugin-activation-class.php:2816
-#: functions/zume-dt-integration/menu-and-tabs.php:249
-#: functions/zume-dt-integration/menu-and-tabs.php:300
-#: template-zume-dashboard.php:850
+#: functions/zume-dt-integration/menu-and-tabs.php:257
+#: template-zume-dashboard.php:848
 msgid "Update"
 msgstr ""
 
@@ -788,7 +787,1998 @@ msgstr ""
 msgid "( Key not available. Check dashboard. )"
 msgstr ""
 
-#: functions/zume-dashboard.php:100
+#: functions/zume-course.php:180
+msgid "Session"
+msgstr ""
+
+#: functions/zume-course.php:281
+msgid "Welcome to Session"
+msgstr ""
+
+#: functions/zume-course.php:282
+msgid "Which are you doing right now?"
+msgstr ""
+
+#: functions/zume-course.php:283
+msgid "Facilitating a Group"
+msgstr ""
+
+#: functions/zume-course.php:287
+msgid "Exploring the Session Content"
+msgstr ""
+
+#: functions/zume-course.php:301
+msgid "How many are with you?"
+msgstr ""
+
+#: functions/zume-course.php:316
+msgid "Continue"
+msgstr ""
+
+#: functions/zume-course.php:336
+msgid "Welcome to Zúme"
+msgstr ""
+
+#: functions/zume-course.php:344
+msgid "Download"
+msgstr ""
+
+#: functions/zume-course.php:348
+msgid ""
+"You will be able to follow along on a digital PDF for this session, but "
+"please make sure that each member of your group has a printed copy of the "
+"materials for future sessions."
+msgstr ""
+
+#: functions/zume-course.php:355 template-zume-dashboard.php:534
+#: template-zume-resources.php:35
+msgid "Download Guidebook"
+msgstr ""
+
+#: functions/zume-course.php:367
+msgid "Group Prayer (5min)"
+msgstr ""
+
+#: functions/zume-course.php:377
+msgid ""
+"Begin with prayer. Spiritual insight and transformation is not possible "
+"without the Holy Spirit. Take time as a group to invite Him to guide you "
+"over this session."
+msgstr ""
+
+#: functions/zume-course.php:390 functions/zume-course.php:433
+#: functions/zume-course.php:482 functions/zume-course.php:799
+#: functions/zume-course.php:1150 functions/zume-course.php:1235
+#: functions/zume-course.php:1600 functions/zume-course.php:1656
+#: functions/zume-course.php:1708 functions/zume-course.php:1986
+#: functions/zume-course.php:2178 functions/zume-course.php:2431
+#: functions/zume-course.php:2650 functions/zume-course.php:2867
+#: functions/zume-course.php:2920 functions/zume-course.php:2975
+#: functions/zume-course.php:3345
+msgid "Watch and Discuss (15min)"
+msgstr ""
+
+#: functions/zume-course.php:398 functions/zume-course.php:441
+#: functions/zume-course.php:490 functions/zume-course.php:806
+#: functions/zume-course.php:1156 functions/zume-course.php:1241
+#: functions/zume-course.php:1606 functions/zume-course.php:1662
+#: functions/zume-course.php:1714 functions/zume-course.php:1992
+#: functions/zume-course.php:2184 functions/zume-course.php:2296
+#: functions/zume-course.php:2437 functions/zume-course.php:2656
+#: functions/zume-course.php:2875 functions/zume-course.php:2928
+#: functions/zume-course.php:2983 functions/zume-course.php:3351
+#: functions/zume-course.php:3499
+msgid "WATCH"
+msgstr ""
+
+#: functions/zume-course.php:400
+msgid ""
+"God uses ordinary people doing simple things to make a big impact. Watch "
+"this video on how God works."
+msgstr ""
+
+#: functions/zume-course.php:416
+msgid "Zúme Video Scripts: Welcome"
+msgstr ""
+
+#: functions/zume-course.php:422 functions/zume-course.php:466
+#: functions/zume-course.php:519 functions/zume-course.php:839
+#: functions/zume-course.php:930 functions/zume-course.php:1180
+#: functions/zume-course.php:1215 functions/zume-course.php:1268
+#: functions/zume-course.php:1358 functions/zume-course.php:1635
+#: functions/zume-course.php:1690 functions/zume-course.php:1742
+#: functions/zume-course.php:2018 functions/zume-course.php:2209
+#: functions/zume-course.php:2270 functions/zume-course.php:2477
+#: functions/zume-course.php:2540 functions/zume-course.php:2699
+#: functions/zume-course.php:2906 functions/zume-course.php:2958
+#: functions/zume-course.php:3013 functions/zume-course.php:3142
+#: functions/zume-course.php:3317 functions/zume-course.php:3378
+msgid "DISCUSS"
+msgstr ""
+
+#: functions/zume-course.php:424
+msgid ""
+"If Jesus intended every one of His followers to obey His Great Commission, "
+"why do so few actually make disciples?"
+msgstr ""
+
+#: functions/zume-course.php:443
+msgid ""
+"What is a disciple? And how do you make one? How do you teach a follower of "
+"Jesus to do what He told us in His Great Commission – to obey all of His "
+"commands?"
+msgstr ""
+
+#: functions/zume-course.php:460
+msgid "Zúme Video Scripts: Teach Them to Obey"
+msgstr ""
+
+#: functions/zume-course.php:469
+msgid "When you think of a church, what comes to mind?"
+msgstr ""
+
+#: functions/zume-course.php:470
+msgid ""
+"What's the difference between that picture and what's described in the video "
+"as a \"Simple Church\"?"
+msgstr ""
+
+#: functions/zume-course.php:472
+msgid "Which one do you think would be easier to multiply and why?"
+msgstr ""
+
+#: functions/zume-course.php:492
+msgid ""
+"We breathe in. We breathe out. We're alive. Spiritual Breathing is like "
+"that, too."
+msgstr ""
+
+#: functions/zume-course.php:512
+msgid "Zúme Video Scripts: Spiritual Breathing"
+msgstr ""
+
+#: functions/zume-course.php:522
+msgid "Why is it essential to learn to hear and recognize God's voice?"
+msgstr ""
+
+#: functions/zume-course.php:523
+msgid ""
+"Is hearing and responding to the Lord really like breathing? Why or why not?"
+msgstr ""
+
+#: functions/zume-course.php:533 functions/zume-course.php:586
+#: functions/zume-course.php:950 functions/zume-course.php:1519
+#: functions/zume-course.php:1759 functions/zume-course.php:3390
+msgid "Listen and Read Along (3min)"
+msgstr ""
+
+#: functions/zume-course.php:541 functions/zume-course.php:594
+#: functions/zume-course.php:863 functions/zume-course.php:956
+#: functions/zume-course.php:1200 functions/zume-course.php:1315
+#: functions/zume-course.php:1525 functions/zume-course.php:1765
+#: functions/zume-course.php:1936 functions/zume-course.php:2227
+#: functions/zume-course.php:3396
+msgid "READ"
+msgstr ""
+
+#: functions/zume-course.php:543
+msgid "S.O.A.P.S. Bible Reading"
+msgstr ""
+
+#: functions/zume-course.php:544
+msgid ""
+"Hearing from God regularly is a key element in our personal relationship "
+"with Him, and in our ability to stay obediently engaged in what He is doing "
+"around us."
+msgstr ""
+
+#: functions/zume-course.php:557
+msgid ""
+"Find the \"S.O.A.P.S. Bible Reading\" section in your Zúme Guidebook and "
+"listen to the audio overview."
+msgstr ""
+
+#: functions/zume-course.php:578
+msgid "Zúme Video Scripts: S.O.A.P.S."
+msgstr ""
+
+#: functions/zume-course.php:597 template-zume-dashboard.php:244
+msgid "Accountability Groups"
+msgstr ""
+
+#: functions/zume-course.php:600
+msgid ""
+"The Bible tells us that every follower of Jesus will one day be held "
+"accountable for what we do and say and think. Accountability Groups are a "
+"great way to get ready!"
+msgstr ""
+
+#: functions/zume-course.php:612
+msgid ""
+"Find the \"Accountability Groups\" section in your Zúme Guidebook, and "
+"listen to the audio below."
+msgstr ""
+
+#: functions/zume-course.php:634
+msgid "Zúme Video Scripts: Accountability Groups"
+msgstr ""
+
+#: functions/zume-course.php:642
+msgid "Practice (45min)"
+msgstr ""
+
+#: functions/zume-course.php:650
+msgid "BREAK UP"
+msgstr ""
+
+#: functions/zume-course.php:651
+msgid "Break into groups of two or three people of the same gender."
+msgstr ""
+
+#: functions/zume-course.php:657 functions/zume-course.php:709
+#: functions/zume-course.php:1068 functions/zume-course.php:1425
+#: functions/zume-course.php:1856 functions/zume-course.php:2106
+#: functions/zume-course.php:2355 functions/zume-course.php:2573
+#: functions/zume-course.php:2784 functions/zume-course.php:3131
+#: functions/zume-course.php:3179
+msgid "SHARE"
+msgstr ""
+
+#: functions/zume-course.php:660
+msgid ""
+"Spend the next 45 minutes working together through Accountability Questions "
+"– List 2 in the \"Accountability Groups\" section of your"
+msgstr ""
+
+#: functions/zume-course.php:664
+msgid "Zúme Guidebook"
+msgstr ""
+
+#: functions/zume-course.php:675 functions/zume-course.php:1037
+#: functions/zume-course.php:1395 functions/zume-course.php:1839
+#: functions/zume-course.php:2093 functions/zume-course.php:2325
+#: functions/zume-course.php:2556 functions/zume-course.php:2767
+#: functions/zume-course.php:3160
+msgid "LOOKING FORWARD"
+msgstr ""
+
+#: functions/zume-course.php:679
+msgid "Congratulations! You've completed Session 1."
+msgstr ""
+
+#: functions/zume-course.php:691 functions/zume-course.php:1050
+#: functions/zume-course.php:1408 functions/zume-course.php:1843
+#: functions/zume-course.php:2339
+msgid "Below are next steps to take in preparation for the next session."
+msgstr ""
+
+#: functions/zume-course.php:701 functions/zume-course.php:1061
+#: functions/zume-course.php:1418 functions/zume-course.php:1849
+#: functions/zume-course.php:2099 functions/zume-course.php:2348
+#: functions/zume-course.php:2566 functions/zume-course.php:2777
+#: functions/zume-course.php:3170
+msgid "OBEY"
+msgstr ""
+
+#: functions/zume-course.php:703
+msgid ""
+"Begin practicing the S.O.A.P.S. Bible reading between now and your next "
+"meeting. Focus on Matthew 5-7, read it at least once a day. Keep a daily "
+"journal using the S.O.A.P.S. format."
+msgstr ""
+
+#: functions/zume-course.php:711
+msgid ""
+"Spend time asking God who He might want you to start an Accountability Group "
+"with using the tools you've learned in this session. Share this person’s "
+"name with the group before you go. Reach out to that person about starting "
+"an Accountability Group and meeting with you weekly."
+msgstr ""
+
+#: functions/zume-course.php:719 functions/zume-course.php:786
+#: functions/zume-course.php:1075 functions/zume-course.php:1127
+#: functions/zume-course.php:1432 functions/zume-course.php:1495
+#: functions/zume-course.php:1863 functions/zume-course.php:1911
+#: functions/zume-course.php:2113 functions/zume-course.php:2158
+#: functions/zume-course.php:2362 functions/zume-course.php:2411
+#: functions/zume-course.php:2580 functions/zume-course.php:2630
+#: functions/zume-course.php:2791 functions/zume-course.php:2847
+#: functions/zume-course.php:3073 functions/zume-course.php:3187
+#: functions/zume-course.php:3240
+msgid "PRAY"
+msgstr ""
+
+#: functions/zume-course.php:722
+msgid ""
+"Pray that God helps you be obedient to Him and invite Him to work in you and "
+"those around you!"
+msgstr ""
+
+#: functions/zume-course.php:728 functions/zume-course.php:1082
+#: functions/zume-course.php:1439 functions/zume-course.php:1870
+#: functions/zume-course.php:2120 functions/zume-course.php:2369
+#: functions/zume-course.php:2587 functions/zume-course.php:2798
+#: functions/zume-course.php:3195
+msgid "#ZumeProject"
+msgstr ""
+
+#: functions/zume-course.php:730
+msgid ""
+"Take a picture of your S.O.A.P.S. Bible study and share it on social media."
+msgstr ""
+
+#: functions/zume-course.php:749
+msgid "WELCOME BACK!"
+msgstr ""
+
+#: functions/zume-course.php:755
+msgid "DOWNLOAD"
+msgstr ""
+
+#: functions/zume-course.php:757
+msgid ""
+"Does everyone have a printed copy of the Zúme Guidebook? If not, please be "
+"sure that someone can download the Guidebook and that everyone has access to "
+"some paper and a pen or pencil."
+msgstr ""
+
+#: functions/zume-course.php:763
+msgid "DOWNLOAD GUIDEBOOK"
+msgstr ""
+
+#: functions/zume-course.php:770 functions/zume-course.php:1107
+#: functions/zume-course.php:1478 functions/zume-course.php:1896
+#: functions/zume-course.php:2145 functions/zume-course.php:2394
+#: functions/zume-course.php:2611 functions/zume-course.php:2825
+#: functions/zume-course.php:3221
+msgid "CHECK-IN"
+msgstr ""
+
+#: functions/zume-course.php:772 functions/zume-course.php:1110
+#: functions/zume-course.php:2613 functions/zume-course.php:2829
+#: functions/zume-course.php:3223
+msgid "Before getting started, take some time to check-in."
+msgstr ""
+
+#: functions/zume-course.php:774 functions/zume-course.php:1114
+#: functions/zume-course.php:1480 functions/zume-course.php:2147
+#: functions/zume-course.php:2396 functions/zume-course.php:2615
+#: functions/zume-course.php:2831 functions/zume-course.php:3225
+msgid ""
+"At the end of the last session, everyone in your group was challenged in two "
+"ways:"
+msgstr ""
+
+#: functions/zume-course.php:777
+msgid ""
+"You were asked to begin practicing the S.O.A.P.S. Bible reading method and "
+"keeping a daily journal."
+msgstr ""
+
+#: functions/zume-course.php:779
+msgid ""
+"You were encouraged to reach out to someone about starting an Accountability "
+"Group."
+msgstr ""
+
+#: functions/zume-course.php:781 functions/zume-course.php:1122
+#: functions/zume-course.php:1489 functions/zume-course.php:1906
+#: functions/zume-course.php:2153 functions/zume-course.php:2406
+#: functions/zume-course.php:2625 functions/zume-course.php:2840
+msgid "Take a few moments to see how your group did this week."
+msgstr ""
+
+#: functions/zume-course.php:788
+msgid ""
+"Ask if anyone in the group has specific needs they would like the group to "
+"pray for. Ask someone to pray and ask God to help in the areas the group "
+"shared. Be sure to thank God that He promises in His Word to listen and act "
+"when His people pray. And, as always, ask God's Holy Spirit to lead your "
+"time, together."
+msgstr ""
+
+#: functions/zume-course.php:809
+msgid ""
+"If we want to make disciples who multiply – spiritual producers and not just "
+"consumers – then we need to learn and share four main ways God makes "
+"everyday followers more like Jesus:"
+msgstr ""
+
+#: functions/zume-course.php:811
+msgid "Prayer"
+msgstr ""
+
+#: functions/zume-course.php:812
+msgid "Scripture"
+msgstr ""
+
+#: functions/zume-course.php:813
+msgid "Body Life"
+msgstr ""
+
+#: functions/zume-course.php:814
+msgid "Persecution and Suffering"
+msgstr ""
+
+#: functions/zume-course.php:833
+msgid "Zúme Video Scripts: Producers vs Consumers"
+msgstr ""
+
+#: functions/zume-course.php:842
+msgid ""
+"Of the four areas detailed above (prayer, God's Word, etc.), which ones do "
+"you already practice?"
+msgstr ""
+
+#: functions/zume-course.php:844
+msgid "Which ones do you feel unsure about?"
+msgstr ""
+
+#: functions/zume-course.php:845
+msgid "How ready do you feel when it comes to training others?"
+msgstr ""
+
+#: functions/zume-course.php:856
+msgid "Listen and Read Along (2min)"
+msgstr ""
+
+#: functions/zume-course.php:866 template-zume-dashboard.php:247
+msgid "Prayer Cycle"
+msgstr ""
+
+#: functions/zume-course.php:867
+msgid ""
+"The Bible tells us that prayer is our chance to speak to and hear from the "
+"same God who created us!"
+msgstr ""
+
+#: functions/zume-course.php:877
+msgid ""
+"Find the \"Prayer Cycle\" section in your Zúme Guidebook, and listen to the "
+"audio below."
+msgstr ""
+
+#: functions/zume-course.php:899
+msgid "Zúme Video Scripts: Prayer Cycle"
+msgstr ""
+
+#: functions/zume-course.php:910
+msgid "Practice the Prayer Cycle (60min)"
+msgstr ""
+
+#: functions/zume-course.php:916
+msgid "LEAVE"
+msgstr ""
+
+#: functions/zume-course.php:918
+msgid ""
+"Spend the next 60 minutes in prayer individually, using the exercises in "
+"\"The Prayer Cycle\" section of the Zúme Guidebook as a guide."
+msgstr ""
+
+#: functions/zume-course.php:923
+msgid "RETURN"
+msgstr ""
+
+#: functions/zume-course.php:925
+msgid ""
+"Set a time for the group to return and reconnect. Be sure to add a few extra "
+"minutes for everyone to both find a quiet place to pray and to make their "
+"way back to the group."
+msgstr ""
+
+#: functions/zume-course.php:933
+msgid "What is your reaction to spending an hour in prayer?"
+msgstr ""
+
+#: functions/zume-course.php:934
+msgid "How do you feel?"
+msgstr ""
+
+#: functions/zume-course.php:935
+msgid "Did you learn or hear anything?"
+msgstr ""
+
+#: functions/zume-course.php:936
+msgid ""
+"What would life be like if you made this kind of prayer a regular habit?"
+msgstr ""
+
+#: functions/zume-course.php:959 template-zume-dashboard.php:248
+msgid "List of 100"
+msgstr ""
+
+#: functions/zume-course.php:962
+msgid ""
+"God has already given us the relationships we need to “Go and make "
+"disciples.” These are our family, friends, neighbors, co-workers and "
+"classmates – people we’ve known all our lives or maybe just met."
+msgstr ""
+
+#: functions/zume-course.php:965
+msgid ""
+"Being good stewards of these relationships is the first step in multiplying "
+"disciples. Start by making a list."
+msgstr ""
+
+#: functions/zume-course.php:976
+msgid ""
+"Find the \"List of 100\" section in your Zúme Guidebook, and listen to the "
+"audio below."
+msgstr ""
+
+#: functions/zume-course.php:998
+msgid "Zúme Video Scripts: List of 100"
+msgstr ""
+
+#: functions/zume-course.php:1009
+msgid "Project (30min)"
+msgstr ""
+
+#: functions/zume-course.php:1019
+msgid "Create your own list of 100"
+msgstr ""
+
+#: functions/zume-course.php:1021
+msgid ""
+"Have everyone in your group take the next 30 minutes to fill out their own "
+"inventory of relationships using the form in the \"List of 100\" section in "
+"your Zúme Guidebook. "
+msgstr ""
+
+#: functions/zume-course.php:1040
+msgid "Congratulations on finishing Session 2! "
+msgstr ""
+
+#: functions/zume-course.php:1063
+msgid ""
+"Spend time this week praying for five people from your List of 100 that you "
+"marked as an \"Unbeliever\" or \"Unknown.\" Ask God to prepare their hearts "
+"to be open to His story."
+msgstr ""
+
+#: functions/zume-course.php:1070
+msgid ""
+"Ask God who He wants you to share the List of 100 tool with. Share this "
+"person's name with the group before you go and reach out to them before the "
+"next session."
+msgstr ""
+
+#: functions/zume-course.php:1077 functions/zume-course.php:1434
+#: functions/zume-course.php:1865
+msgid ""
+"Pray that God help you be obedient to Him and invite Him to work in you and "
+"those around you!"
+msgstr ""
+
+#: functions/zume-course.php:1084
+msgid ""
+"Thing others could use the 60-minute prayer tool? Share about it on social "
+"media."
+msgstr ""
+
+#: functions/zume-course.php:1101 functions/zume-course.php:1472
+#: functions/zume-course.php:1889 functions/zume-course.php:2139
+#: functions/zume-course.php:2388 functions/zume-course.php:2605
+#: functions/zume-course.php:2817
+msgid "LOOKING BACK"
+msgstr ""
+
+#: functions/zume-course.php:1118
+msgid ""
+"You were asked to pray for five people from your List of 100 that you marked "
+"as an \"Unbeliever\" or \"Unknown.\""
+msgstr ""
+
+#: functions/zume-course.php:1119
+msgid "You were encouraged to share how to make a List of 100 with someone."
+msgstr ""
+
+#: functions/zume-course.php:1129 functions/zume-course.php:1498
+#: functions/zume-course.php:1913
+msgid ""
+"Pray and thank God for the results and invite His Holy Spirit to lead your "
+"time together."
+msgstr ""
+
+#: functions/zume-course.php:1134 functions/zume-course.php:1503
+#: functions/zume-course.php:1918 functions/zume-course.php:2165
+#: functions/zume-course.php:2418 functions/zume-course.php:2637
+#: functions/zume-course.php:2855 functions/zume-course.php:3032
+#: functions/zume-course.php:3247
+msgid "OVERVIEW"
+msgstr ""
+
+#: functions/zume-course.php:1136
+msgid ""
+"In this session, you’ll learn how God’s Spiritual Economy works and how God "
+"invests more in those who are faithful with what they've already been given. "
+"You'll also learn two more tools for making disciples – sharing God’s Story "
+"from Creation to Judgement and Baptism."
+msgstr ""
+
+#: functions/zume-course.php:1138 functions/zume-course.php:1507
+msgid "Then, when you're ready, get started!"
+msgstr ""
+
+#: functions/zume-course.php:1158
+msgid ""
+"In this broken world, people feel rewarded when they take, when they receive "
+"and when they gain more than those around them. But God's Spiritual Economy "
+"is different – God invests more in those who are faithful with what they've "
+"already been given."
+msgstr ""
+
+#: functions/zume-course.php:1175
+msgid "Zúme Video Scripts: Spiritual Economy"
+msgstr ""
+
+#: functions/zume-course.php:1182
+msgid ""
+"What are some differences you see between God's Spiritual Economy and our "
+"earthly way of getting things done?"
+msgstr ""
+
+#: functions/zume-course.php:1194 functions/zume-course.php:1309
+msgid "Read and Discuss (15min)"
+msgstr ""
+
+#: functions/zume-course.php:1203
+msgid ""
+"Jesus said, “You will receive power when the Holy Spirit comes upon you. And "
+"you will be my witnesses, telling people about me everywhere – in Jerusalem, "
+"throughout Judea, in Samaria, and to the ends of the earth.”"
+msgstr ""
+
+#: functions/zume-course.php:1206
+msgid ""
+"Jesus believed in His followers so much, He trusted them to tell His story. "
+"Then He sent them around the world to do it. Now, He’s sending us."
+msgstr ""
+
+#: functions/zume-course.php:1209
+msgid ""
+"There’s no one “best way” to tell God’s story (also called The Gospel), "
+"because the best way will depend on who you’re sharing with. Every disciple "
+"should learn to tell God’s Story in a way that’s true to scripture and "
+"connects with the audience they’re sharing with."
+msgstr ""
+
+#: functions/zume-course.php:1218
+msgid ""
+"What comes to mind when you hear God's command to be His \"witness\" and to "
+"tell His story?"
+msgstr ""
+
+#: functions/zume-course.php:1220
+msgid ""
+"Why do you think Jesus chose ordinary people instead of some other way to "
+"share His Good News?."
+msgstr ""
+
+#: functions/zume-course.php:1222
+msgid ""
+"What would it take for you to feel more comfortable sharing God's Story?"
+msgstr ""
+
+#: functions/zume-course.php:1243 template-zume-dashboard.php:251
+msgid "The Gospel"
+msgstr ""
+
+#: functions/zume-course.php:1244
+msgid ""
+"One way to share God’s Good News is by telling God’s Story from Creation to "
+"Judgement – from the beginning of humankind all the way to the end of this "
+"age."
+msgstr ""
+
+#: functions/zume-course.php:1262
+msgid "Zúme Video Scripts: The Gospel"
+msgstr ""
+
+#: functions/zume-course.php:1271
+msgid "What do you learn about mankind from this story?"
+msgstr ""
+
+#: functions/zume-course.php:1272
+msgid "What do you learn about God?"
+msgstr ""
+
+#: functions/zume-course.php:1273
+msgid ""
+"Do you think it would be easier or harder to share God's Story by telling a "
+"story like this?"
+msgstr ""
+
+#: functions/zume-course.php:1285
+msgid "PRACTICE SHARING GOD'S STORY (45min)"
+msgstr ""
+
+#: functions/zume-course.php:1294
+msgid ""
+"Break into groups of two or three people and spend the next 45 minutes "
+"practicing telling God's Story. You can use the using the Activity "
+"instructions for \"God's Story\" found in your Zúme Guidebook."
+msgstr ""
+
+#: functions/zume-course.php:1318 template-zume-dashboard.php:252
+msgid "Baptism"
+msgstr ""
+
+#: functions/zume-course.php:1321
+msgid ""
+"Jesus said, “Go and make disciples of all nations, BAPTIZING them in the "
+"name of the Father and of the Son and of the Holy Spirit…”"
+msgstr ""
+
+#: functions/zume-course.php:1332
+msgid ""
+"Find the \"Baptism\" section in your Zúme Guidebook, and listen to the audio "
+"below."
+msgstr ""
+
+#: functions/zume-course.php:1353
+msgid "Zúme Video Scripts: Baptism"
+msgstr ""
+
+#: functions/zume-course.php:1361
+msgid "Have you ever baptized someone?"
+msgstr ""
+
+#: functions/zume-course.php:1362
+msgid "Would you even consider it?"
+msgstr ""
+
+#: functions/zume-course.php:1363
+msgid ""
+"If the Great Commission is for every follower of Jesus, does that mean every "
+"follower is allowed to baptize others? Why or why not?"
+msgstr ""
+
+#: functions/zume-course.php:1376
+msgid "IMPORTANT REMINDER – Have you been baptized?"
+msgstr ""
+
+#: functions/zume-course.php:1379
+msgid ""
+"If not, then we encourage you to plan this before even one more session of "
+"this training. Invite your group to be a part of this important day when you "
+"celebrate saying \"yes\" to Jesus."
+msgstr ""
+
+#: functions/zume-course.php:1398
+msgid "Congratulations on finishing Session 3! "
+msgstr ""
+
+#: functions/zume-course.php:1420
+msgid ""
+"Spend time this week practicing God's Story, and then share it with at least "
+"one person from your List of 100 that you marked as \"Unbeliever\" or "
+"\"Unknown.\""
+msgstr ""
+
+#: functions/zume-course.php:1427
+msgid ""
+"Ask God who He wants you to train to use the Creation to Judgment story (or "
+"some other way to share God's Story). Share this person's name with the "
+"group before you go."
+msgstr ""
+
+#: functions/zume-course.php:1441
+msgid "What’s been your Zúme highlight? Tell others about it on social media."
+msgstr ""
+
+#: functions/zume-course.php:1452
+msgid ""
+"IMPORTANT REMINDER – Your group will be celebrating the Lord's Supper next "
+"session. Be sure to remember the supplies (bread and wine / juice)."
+msgstr ""
+
+#: functions/zume-course.php:1483
+msgid ""
+"You were asked to share God’s Story with at least one person from your List "
+"of 100 that you marked as \"Unbeliever\" or \"Unknown.\""
+msgstr ""
+
+#: functions/zume-course.php:1486
+msgid ""
+"You were encouraged to train someone to use the Creation to Judgement story "
+"(or some other way to share God’s Story) with someone."
+msgstr ""
+
+#: functions/zume-course.php:1505
+msgid ""
+"In this session, you'll learn how God's plan is for every follower to "
+"multiply! You’ll discover how disciples multiply far and fast when they "
+"start to see where God’s Kingdom isn’t. And, you'll learn another great tool "
+"for inviting others into God's family is as simple as telling our story."
+msgstr ""
+
+#: functions/zume-course.php:1528
+msgid "3-Minute Testimony"
+msgstr ""
+
+#: functions/zume-course.php:1531
+msgid ""
+"As followers of Jesus, we are “witnesses\" for Him, because we “testify” "
+"about the impact Jesus has had on our lives. Your story of your relationship "
+"with God is called your Testimony. It's powerful, and it's something no one "
+"can share better than you."
+msgstr ""
+
+#: functions/zume-course.php:1542
+msgid ""
+"Find the \"3-Minute Testimony\" section in your Zúme Guidebook, and listen "
+"to the audio below."
+msgstr ""
+
+#: functions/zume-course.php:1563
+msgid "Zúme Video Scripts: Testimony"
+msgstr ""
+
+#: functions/zume-course.php:1574
+msgid "Practice Sharing your Testimony (45min)"
+msgstr ""
+
+#: functions/zume-course.php:1584
+msgid ""
+"Break into groups of two or three and and spend the next 45 minutes "
+"practicing sharing your Testimony using the Activity instructions on page 15 "
+"of your Zúme Guidebook."
+msgstr ""
+
+#: functions/zume-course.php:1608
+msgid ""
+"What is God's greatest blessing for His children? Making disciples who "
+"multiply!"
+msgstr ""
+
+#: functions/zume-course.php:1610
+msgid ""
+"What if you could learn a simple pattern for making not just one follower of "
+"Jesus but entire spiritual families who multiply for generations to come?"
+msgstr ""
+
+#: functions/zume-course.php:1628
+msgid "Zúme Video Scripts: Greatest Blessing"
+msgstr ""
+
+#: functions/zume-course.php:1639
+msgid ""
+"Is this the pattern you were taught when you first began to follow Jesus? If "
+"not, what was different?"
+msgstr ""
+
+#: functions/zume-course.php:1641
+msgid ""
+"After you came to faith, how long was it before you began to disciple others?"
+msgstr ""
+
+#: functions/zume-course.php:1642
+msgid ""
+"What do you think would happen if new followers started sharing and "
+"discipling others, immediately?"
+msgstr ""
+
+#: functions/zume-course.php:1664
+msgid ""
+"What do ducklings have to do with disciple making? They lead and follow at "
+"the same time."
+msgstr ""
+
+#: functions/zume-course.php:1682
+msgid "Zúme Video Scripts: Duckling Discipleship"
+msgstr ""
+
+#: functions/zume-course.php:1693
+msgid ""
+"What is one area of discipleship (reading/understanding the Bible, praying, "
+"sharing God's Story, etc.) that you want to learn more about? Who is someone "
+"that could help you learn?"
+msgstr ""
+
+#: functions/zume-course.php:1695
+msgid ""
+"What is one area of discipleship that you feel you could share with others? "
+"Who is someone that you could share with?"
+msgstr ""
+
+#: functions/zume-course.php:1716
+msgid "Have you ever stopped to think about where God's Kingdom... isn't?"
+msgstr ""
+
+#: functions/zume-course.php:1718
+msgid ""
+"Have you ever visited a home or a neighborhood or even a city where it "
+"seemed as if God was just... missing? These are usually the places where God "
+"wants to work the most."
+msgstr ""
+
+#: functions/zume-course.php:1736
+msgid "Zúme Video Scripts: Eyes to See"
+msgstr ""
+
+#: functions/zume-course.php:1745
+msgid ""
+"Who are you more comfortable sharing with -- people you already know or "
+"people you haven't met, yet?"
+msgstr ""
+
+#: functions/zume-course.php:1747
+msgid "Why do you think that is?"
+msgstr ""
+
+#: functions/zume-course.php:1748
+msgid ""
+"How could you get better at sharing with people you're less comfortable with?"
+msgstr ""
+
+#: functions/zume-course.php:1768
+msgid "The Lord's Supper"
+msgstr ""
+
+#: functions/zume-course.php:1771
+msgid ""
+"Jesus said, “I am the living bread that came down from heaven. Whoever eats "
+"this bread will live forever. This bread is my flesh, which I will give for "
+"the life of the world.”"
+msgstr ""
+
+#: functions/zume-course.php:1782
+msgid ""
+"Find \"The Lord's Supper\" section in your Zúme Guidebook, and listen to the "
+"audio below."
+msgstr ""
+
+#: functions/zume-course.php:1803
+msgid "Zúme Video Scripts: Lord's Supper"
+msgstr ""
+
+#: functions/zume-course.php:1814
+msgid "Practice the Lord's Supper (10min)"
+msgstr ""
+
+#: functions/zume-course.php:1824
+msgid ""
+"Spend the next 10 minutes celebrating The Lord's Supper with your group "
+"using the pattern on page 15 of your Zúme Guidebook."
+msgstr ""
+
+#: functions/zume-course.php:1842
+msgid "Congratulations on finishing Session 4!"
+msgstr ""
+
+#: functions/zume-course.php:1851
+msgid ""
+"Spend time this week practicing your 3-Minute Testimony, and then share it "
+"with at least one person from your List of 100 that you marked as "
+"\"Unbeliever\" or \"Unknown.\""
+msgstr ""
+
+#: functions/zume-course.php:1858
+msgid ""
+"Ask God who He wants you to train with the 3-Minute Testimony tool. Share "
+"this person's name with the group before you go."
+msgstr ""
+
+#: functions/zume-course.php:1872 functions/zume-course.php:2800
+msgid "What’s the best thing you got today? Share about it on social media."
+msgstr ""
+
+#: functions/zume-course.php:1899
+msgid "At the end of the last session, everyone in your group in two ways:"
+msgstr ""
+
+#: functions/zume-course.php:1902
+msgid ""
+"You were asked to share your 3-Minute Testimony with at least one person on "
+"your List of 100."
+msgstr ""
+
+#: functions/zume-course.php:1904
+msgid ""
+"You were encouraged to train someone else with the 3-Minute Testimony tool."
+msgstr ""
+
+#: functions/zume-course.php:1920
+msgid ""
+"In this session, you’ll learn how Prayer Walking is a powerful way to "
+"prepare a neighborhood for Jesus, and you'll learn a simple but powerful "
+"pattern for prayer that will help you meet and make new disciples along the "
+"way."
+msgstr ""
+
+#: functions/zume-course.php:1930 functions/zume-course.php:2221
+msgid "Listen and Read Along (15min)"
+msgstr ""
+
+#: functions/zume-course.php:1939 template-zume-dashboard.php:260
+msgid "Prayer Walking"
+msgstr ""
+
+#: functions/zume-course.php:1942
+msgid ""
+"Prayer Walking is a simple way to obey God’s command to pray for others. And "
+"it's just what it sounds like – praying to God while walking around!"
+msgstr ""
+
+#: functions/zume-course.php:1953
+msgid ""
+"Find the \"Prayer Walking\" section in your Zúme Guidebook, and listen to "
+"the audio below."
+msgstr ""
+
+#: functions/zume-course.php:1974
+msgid "Zúme Video Scripts: Prayer Walking"
+msgstr ""
+
+#: functions/zume-course.php:1994
+msgid ""
+"Disciple-making can be rapidly advanced by finding a person of peace, even "
+"in a place where followers of Jesus are few and far between. How do you know "
+"when you have found a person of peace and what do you when you find them?"
+msgstr ""
+
+#: functions/zume-course.php:2012
+msgid "Zúme Video Scripts: Person of Peace"
+msgstr ""
+
+#: functions/zume-course.php:2022
+msgid ""
+"Can someone who has a \"bad reputation\" (like the Samaritan woman or the "
+"demon-possessed man in the Gadarenes) really be a Person of Peace? Why or "
+"why not?"
+msgstr ""
+
+#: functions/zume-course.php:2025
+msgid ""
+"What is a community or segment of society near you that seems to have little "
+"(or no) Kingdom presence? How could a Person of Peace (someone who is OPEN, "
+"HOSPITABLE, KNOWS OTHERS and SHARES) accelerate the spread of the Gospel in "
+"that community?"
+msgstr ""
+
+#: functions/zume-course.php:2039
+msgid "Practice the B.L.E.S.S. Prayer (15min)"
+msgstr ""
+
+#: functions/zume-course.php:2049
+msgid ""
+"Break into groups of two or three and practicing the B.L.E.S.S. Prayer. The "
+"prayer pattern can be found in the Zúme Guidebook. Practice praying the five "
+"areas of the B.L.E.S.S. Prayer."
+msgstr ""
+
+#: functions/zume-course.php:2064
+msgid "Prayer Walking (60-90min)"
+msgstr ""
+
+#: functions/zume-course.php:2074
+msgid ""
+"Break into groups of two or three and go out into the community to practice "
+"Prayer Walking."
+msgstr ""
+
+#: functions/zume-course.php:2075
+msgid ""
+"Choosing a location can be as simple as walking outside from where you are "
+"now, or you could plan to go to a specific destination."
+msgstr ""
+
+#: functions/zume-course.php:2076
+msgid "Go as God leads, and plan on spending 60-90 minutes on this activity."
+msgstr ""
+
+#: functions/zume-course.php:2085
+msgid "The session ends with a prayer walking activity."
+msgstr ""
+
+#: functions/zume-course.php:2087
+msgid ""
+"Read through the Obey, Share, and Pray sections, below, before you head out!"
+msgstr ""
+
+#: functions/zume-course.php:2101
+msgid ""
+"Spend time this week practicing Prayer Walking by going out alone or with a "
+"small group at least once."
+msgstr ""
+
+#: functions/zume-course.php:2108
+msgid ""
+"Spend time asking God who He might want you to share the Prayer Walking tool "
+"with before your group meets again. Share this person’s name with the group "
+"before you go."
+msgstr ""
+
+#: functions/zume-course.php:2115
+msgid ""
+"Before you go out on your Prayer Walking activity, be sure to pray with your "
+"group to end your time together. Thank God that He loves the lost, the last "
+"and the least – including us! Ask Him to prepare your heart and the heart of "
+"those you'll meet during your walk to be open to His work."
+msgstr ""
+
+#: functions/zume-course.php:2122
+msgid ""
+"Take a picture of something you see on your prayer walk and post it on "
+"social media. "
+msgstr ""
+
+#: functions/zume-course.php:2150
+msgid "You were asked to spend some time Prayer Walking"
+msgstr ""
+
+#: functions/zume-course.php:2151
+msgid "You were encouraged to share the Prayer Walking tool with someone else."
+msgstr ""
+
+#: functions/zume-course.php:2160
+msgid ""
+"Pray and thank God for the results, ask Him to help when you find it hard to "
+"obey, and invite His Holy Spirit to lead your time together."
+msgstr ""
+
+#: functions/zume-course.php:2167
+msgid ""
+"In this session, you’ll learn how God uses faithful followers – even if "
+"they're brand new – much more than ones with years of knowledge and training "
+"who just won't obey. And you'll get a first look at a way to meet together "
+"that helps disciples multiply even faster."
+msgstr ""
+
+#: functions/zume-course.php:2186
+msgid ""
+"When we help multiply disciples, we need to make sure we're reproducing the "
+"right things. It's important what disciples know – but it's much more "
+"important what they DO with what they know."
+msgstr ""
+
+#: functions/zume-course.php:2204
+msgid "Zúme Video Scripts: Faithfulness"
+msgstr ""
+
+#: functions/zume-course.php:2211
+msgid ""
+"Think about God's commands that you already know. How \"faithful\" are you "
+"in terms of obeying and sharing those things?"
+msgstr ""
+
+#: functions/zume-course.php:2230
+msgid "3/3 Groups Format"
+msgstr ""
+
+#: functions/zume-course.php:2233
+msgid ""
+"Jesus said, “Where two or three have gathered together in My name, I am "
+"there in their midst.”"
+msgstr ""
+
+#: functions/zume-course.php:2244
+msgid ""
+"Find the \"3/3 Group Format\" section in your Zúme Guidebook, and listen to "
+"the audio below."
+msgstr ""
+
+#: functions/zume-course.php:2265
+msgid "Zúme Video Scripts: 3/3 Group"
+msgstr ""
+
+#: functions/zume-course.php:2274
+msgid ""
+"Did you notice any differences between a 3/3 Group and a Bible Study or "
+"Small Group you've been a part of (or have heard about) in the past? If so, "
+"how would those differences impact the group?"
+msgstr ""
+
+#: functions/zume-course.php:2277
+msgid "Could a 3/3 Group be considered a Simple Church? Why or why not?"
+msgstr ""
+
+#: functions/zume-course.php:2290
+msgid "MODEL 3/3 GROUP"
+msgstr ""
+
+#: functions/zume-course.php:2299
+msgid ""
+"A 3/3 Group is a way for followers of Jesus to meet, pray, learn, grow, "
+"fellowship and practice obeying and sharing what they've learned. In this "
+"way a 3/3 Group is not just a small group but a Simple Church."
+msgstr ""
+
+#: functions/zume-course.php:2302
+msgid ""
+"In the following video, you'll see a live demonstration of a 3/3 group "
+"meeting together."
+msgstr ""
+
+#: functions/zume-course.php:2329
+msgid "Congratulations on finishing Session 6!"
+msgstr ""
+
+#: functions/zume-course.php:2350
+msgid ""
+"Spend time this week practicing Faithfulness by obeying and sharing at least "
+"one of God's commands that you already know."
+msgstr ""
+
+#: functions/zume-course.php:2357
+msgid ""
+"Think about what you have heard and learned about Faithfulness in this "
+"session, and ask God who He wants you to share it with. Share this person’s "
+"name with the group before you go."
+msgstr ""
+
+#: functions/zume-course.php:2364
+msgid ""
+"Thank God for His Faithfulness – for fulfilling every promise He's ever "
+"made. Ask Him to help you and your group become even more Faithful to Him."
+msgstr ""
+
+#: functions/zume-course.php:2371
+msgid ""
+"Got a Christian brother or sister who might like Zúme? Share it with them on "
+"social media."
+msgstr ""
+
+#: functions/zume-course.php:2400
+msgid ""
+"You were asked to practice Faithfulness by obeying and sharing one of God's "
+"commands."
+msgstr ""
+
+#: functions/zume-course.php:2403
+msgid ""
+"You were encouraged to share the importance of Faithfulness with someone "
+"else."
+msgstr ""
+
+#: functions/zume-course.php:2413
+msgid ""
+"Pray and thank God for the group's commitment to faithfully following Jesus "
+"and invite God's Holy Spirit to lead your time together."
+msgstr ""
+
+#: functions/zume-course.php:2420
+msgid ""
+"In this session, you’ll learn a Training Cycle that helps disciples go from "
+"one to many and turns a mission into a movement. You'll also practice the "
+"3/3 Groups Format and learn how the way you meet can impact the way you "
+"multiply."
+msgstr ""
+
+#: functions/zume-course.php:2440
+msgid ""
+"Have you ever learned how to ride a bicycle? Have you ever helped someone "
+"else learn? If so, chances are you already know the Training Cycle."
+msgstr ""
+
+#: functions/zume-course.php:2451
+msgid ""
+"Find the \"Training Cycle\" section in your Zúme Guidebook. When you're "
+"ready, watch this video, and then discuss the questions below."
+msgstr ""
+
+#: functions/zume-course.php:2472
+msgid "Zúme Video Scripts: Training Cycle"
+msgstr ""
+
+#: functions/zume-course.php:2480
+msgid "Have you ever been a part of a Training Cycle?"
+msgstr ""
+
+#: functions/zume-course.php:2481
+msgid "Who did you train? Or who trained you?"
+msgstr ""
+
+#: functions/zume-course.php:2483
+msgid ""
+"Could the same person be at different parts of the Training Cycle while "
+"learning different skills?"
+msgstr ""
+
+#: functions/zume-course.php:2485
+msgid "What would it look like to train someone like that?"
+msgstr ""
+
+#: functions/zume-course.php:2497
+msgid "Practice and Discuss (90min)"
+msgstr ""
+
+#: functions/zume-course.php:2503 functions/zume-course.php:2738
+#: functions/zume-course.php:3466
+msgid "PRACTICE"
+msgstr ""
+
+#: functions/zume-course.php:2513
+msgid ""
+"Have your entire group spend the next 90 minutes practicing the 3/3 Groups "
+"Format. Refer to the Zúme Guidebook if you need a reminder about the pattern."
+msgstr ""
+
+#: functions/zume-course.php:2525
+msgid ""
+"LOOK BACK – Use last week's Session Challenges to practice \"Faithfulness\" "
+"in the Look Back section."
+msgstr ""
+
+#: functions/zume-course.php:2528
+msgid ""
+"LOOK UP – Use Mark 5:1-20 as your group's reading passage and answer "
+"questions 1-4 during the Look Up section."
+msgstr ""
+
+#: functions/zume-course.php:2531
+msgid ""
+"LOOK FORWARD – Use questions 5, 6, and 7 in the Look Forward section to "
+"develop how you will Obey, Train and Share."
+msgstr ""
+
+#: functions/zume-course.php:2535 functions/zume-course.php:2755
+msgid ""
+"REMEMBER – Each section should take about 1/3 (or 30 minutes) of your "
+"practice time."
+msgstr ""
+
+#: functions/zume-course.php:2543
+msgid "What did you like best about the 3/3 Group? Why?"
+msgstr ""
+
+#: functions/zume-course.php:2544
+msgid "What was the most challenging? Why?"
+msgstr ""
+
+#: functions/zume-course.php:2560
+msgid "Congratulations on finishing Session 7!"
+msgstr ""
+
+#: functions/zume-course.php:2568
+msgid ""
+"Spend time this week obeying, training, and sharing based on the commitments "
+"you've made during your 3/3 Group practice."
+msgstr ""
+
+#: functions/zume-course.php:2575
+msgid ""
+"Pray and ask God who He wants you to share the 3/3 Group format with before "
+"your group meets again. Share this person’s name with the group before you "
+"go."
+msgstr ""
+
+#: functions/zume-course.php:2582
+msgid ""
+"Thank God that He loves us enough to invite us into His most important work "
+"– growing His family!"
+msgstr ""
+
+#: functions/zume-course.php:2589
+msgid ""
+"Hop on LIVE and tell the world what you just learned and where they could "
+"learn it too."
+msgstr ""
+
+#: functions/zume-course.php:2619
+msgid ""
+"You were asked to practice obeying, training, and sharing based on your "
+"commitments during 3/3 Group practice."
+msgstr ""
+
+#: functions/zume-course.php:2622
+msgid "You were encouraged to share the 3/3 Group Format with someone else."
+msgstr ""
+
+#: functions/zume-course.php:2632
+msgid ""
+"Pray and thank God for giving your group the energy, the focus and the "
+"faithfulness to come so far in this training. Ask God to have His Holy "
+"Spirit remind everyone in the group that they can do nothing without Him!"
+msgstr ""
+
+#: functions/zume-course.php:2639
+msgid ""
+"In this session, you’ll learn how Leadership Cells prepare followers in a "
+"short time to become leaders for a lifetime. You'll learn how serving others "
+"is Jesus' strategy for leadership. And you'll spend time practicing as a 3/3 "
+"Group, again."
+msgstr ""
+
+#: functions/zume-course.php:2659
+msgid ""
+"Jesus said, “Whoever wishes to become great among you shall be your servant.”"
+msgstr ""
+
+#: functions/zume-course.php:2662
+msgid ""
+"Jesus radically reversed our understanding of leadership by teaching us that "
+"if we feel called to lead, then we are being called to serve. A Leadership "
+"Cell is a way someone who feels called to lead can develop their leadership "
+"by practicing serving."
+msgstr ""
+
+#: functions/zume-course.php:2673
+msgid ""
+"Find the \"Leadership Cells\" section in your Zúme Guidebook. When you're "
+"ready, watch and discuss this video."
+msgstr ""
+
+#: functions/zume-course.php:2694
+msgid "Zúme Video Scripts: Leadership Cells"
+msgstr ""
+
+#: functions/zume-course.php:2703
+msgid ""
+"Is there a group of followers of Jesus you know that are already meeting or "
+"would be willing to meet and form a Leadership Cell to learn Zúme Training?"
+msgstr ""
+
+#: functions/zume-course.php:2705
+msgid "What would it take to bring them together?"
+msgstr ""
+
+#: functions/zume-course.php:2717
+msgid "Practice 3/3 Group (90min)"
+msgstr ""
+
+#: functions/zume-course.php:2727
+msgid ""
+"Have your entire group spend the next 90 minutes practicing the 3/3 Groups "
+"Format."
+msgstr ""
+
+#: functions/zume-course.php:2745
+msgid ""
+"LOOK BACK – Use last session’s Obey, Train, and Share challenges to check-in "
+"with each other."
+msgstr ""
+
+#: functions/zume-course.php:2748
+msgid ""
+"LOOK UP – Use Acts 2:42-47 as your group’s reading passage and answer "
+"questions 1- 4."
+msgstr ""
+
+#: functions/zume-course.php:2751
+msgid ""
+"LOOK FORWARD – Use questions 5, 6, and 7 to develop how you will Obey, Train "
+"and Share."
+msgstr ""
+
+#: functions/zume-course.php:2771
+msgid "Congratulations! You've completed Session 8. "
+msgstr ""
+
+#: functions/zume-course.php:2779
+msgid ""
+"Spend time again this week obeying, sharing, and training based on the "
+"commitments you've made during this session's 3/3 Group practice."
+msgstr ""
+
+#: functions/zume-course.php:2786
+msgid ""
+"Pray and ask God who He wants you to share the Leadership Cell tool with "
+"before your group meets again. Share this person’s name with the group "
+"before you go."
+msgstr ""
+
+#: functions/zume-course.php:2793
+msgid ""
+"Thank God for sending Jesus to show us that real leaders are real servants. "
+"Thank Jesus for showing us the greatest service possible is giving up our "
+"own lives for others."
+msgstr ""
+
+#: functions/zume-course.php:2834
+msgid ""
+"You were asked to practice Obeying, Training, and Sharing based on your "
+"commitments during last session's 3/3 Group practice."
+msgstr ""
+
+#: functions/zume-course.php:2837
+msgid ""
+"You were encouraged to share the Leadership Cells tool with someone else."
+msgstr ""
+
+#: functions/zume-course.php:2849
+msgid ""
+"Pray and thank God that His ways are not our ways and His thoughts are not "
+"our thoughts. Ask Him to give each member of your group the mind of Christ — "
+"always focused on His Father's work. Ask the Holy Spirit to lead your time "
+"together and make it the best session yet."
+msgstr ""
+
+#: functions/zume-course.php:2857
+msgid ""
+"In this session, you’ll learn how linear patterns hold back kingdom growth "
+"and how Non-Sequential thinking helps you multiply disciples. You'll "
+"discover how much time matters in disciple-making and how to accelerate "
+"Pace. You’ll learn how followers of Jesus can be a Part of Two Churches to "
+"help turn faithful, spiritual families into a growing city-wide body of "
+"believers. Finally, you'll learn how a simple Three Month Plan can focus "
+"your efforts and multiply your effectiveness in growing God's family "
+"exponentially."
+msgstr ""
+
+#: functions/zume-course.php:2878
+msgid ""
+"When people think about disciples multiplying, they often think of it as a "
+"step-by-step process. The problem with that is — that's not how it works "
+"best!"
+msgstr ""
+
+#: functions/zume-course.php:2898
+msgid "Zúme Video Scripts: Non-Sequential"
+msgstr ""
+
+#: functions/zume-course.php:2909
+msgid "What is the most exciting idea you heard in this video? Why?"
+msgstr ""
+
+#: functions/zume-course.php:2910
+msgid "What is the most challenging idea? Why?"
+msgstr ""
+
+#: functions/zume-course.php:2930
+msgid ""
+"Multiplying matters and multiplying quickly matters even more. Pace matters "
+"because where we all spend our eternity — an existence that outlasts time — "
+"is determined in the very short time we call “life.“"
+msgstr ""
+
+#: functions/zume-course.php:2950
+msgid "Zúme Video Scripts: Pace"
+msgstr ""
+
+#: functions/zume-course.php:2961
+msgid "Why is pace important?"
+msgstr ""
+
+#: functions/zume-course.php:2963
+msgid ""
+"What do you need to change in your thinking, your actions, or your attitude "
+"to be better aligned with God's priority for pace?"
+msgstr ""
+
+#: functions/zume-course.php:2965
+msgid ""
+"What is one thing you can do starting this week that will make a difference?"
+msgstr ""
+
+#: functions/zume-course.php:2985
+msgid ""
+"Jesus taught us that we are to stay close — to live as a small, spiritual "
+"family, to love and give our lives to one another, to celebrate and suffer — "
+"together. However, Jesus also taught us to leave our homes and loved ones "
+"behind and be willing to go anywhere — and everywhere — to share and start "
+"new spiritual families. So how can we do both? When you're ready, watch the "
+"video below and discuss the question that follows."
+msgstr ""
+
+#: functions/zume-course.php:3005
+msgid "Zúme Video Scripts: Two Churches"
+msgstr ""
+
+#: functions/zume-course.php:3015
+msgid ""
+"What are some advantages of maintaining a consistent spiritual family that "
+"gives birth to new ones that grow and multiply instead of continually "
+"growing a family and splitting it in order to grow?"
+msgstr ""
+
+#: functions/zume-course.php:3025
+msgid "Create a Three Month Plan (30min)"
+msgstr ""
+
+#: functions/zume-course.php:3035
+msgid ""
+"In His Bible, God says, \"I know the plans I have for you, plans to prosper "
+"you and not to harm you, plans to give you hope and a future.\" God makes "
+"plans, and He expects us to make plans, too. He teaches us through His Word "
+"and His work to look ahead, see a better tomorrow, make a plan for how to "
+"get there, and then prepare the resources we'll need on the way."
+msgstr ""
+
+#: functions/zume-course.php:3038
+msgid ""
+"A Three Month Plan is a tool you can use to help focus your attention and "
+"efforts and keep them aligned with God's priorities for making disciples who "
+"multiply. Spend the next 30 minutes praying over, reading through, and then "
+"completing the commitments listed in the Three Month Plan."
+msgstr ""
+
+#: functions/zume-course.php:3041
+msgid ""
+"You can use the printed version in your Zúme Guidebook or our online version."
+msgstr ""
+
+#: functions/zume-course.php:3044
+msgid "Online \"Three Month Plan\""
+msgstr ""
+
+#: functions/zume-course.php:3056
+msgid ""
+"Participants can access their own three month plan on the side column of "
+"their dashboard. They can connect their plan with this group by adding the "
+"following key:"
+msgstr ""
+
+#: functions/zume-course.php:3076
+msgid ""
+"Ask God what He specifically wants you to do with the basic disciple-making "
+"tools and techniques you have learned over these last nine sessions. You can "
+"remember them in terms of the Greatest Blessing."
+msgstr ""
+
+#: functions/zume-course.php:3080
+msgid ""
+"It's a Blessing to ... S.O.A.P.S. Bible Reading, Accountability Groups, "
+"Prayer Cycle"
+msgstr ""
+
+#: functions/zume-course.php:3083
+msgid ""
+"It's a Great Blessing to ... Share your 3-Minute Testimony and God's Story, "
+"Prayer Walking"
+msgstr ""
+
+#: functions/zume-course.php:3086
+msgid "It's a Greater Blessing to ... Start a 3/3rds Group"
+msgstr ""
+
+#: functions/zume-course.php:3089
+msgid "It's the Greatest Blessing to ... Start a Zúme Group"
+msgstr ""
+
+#: functions/zume-course.php:3097
+msgid "LISTEN"
+msgstr ""
+
+#: functions/zume-course.php:3099
+msgid ""
+"Take at least 10 minutes to be as quiet as possible and listen intently to "
+"what God has to say and what He chooses to reveal. Make an effort to hear "
+"His voice."
+msgstr ""
+
+#: functions/zume-course.php:3105
+msgid "COMPLETE"
+msgstr ""
+
+#: functions/zume-course.php:3108
+msgid ""
+"Use the rest of your time to complete the Three Month Plan worksheet. You "
+"can write it out on a piece of paper. If you are logged in to ZúmeProject."
+"com you can fill out your form digitally and link it to your group. Once you "
+"login, you’ll find the Three Month Plan under Settings. You can also find "
+"the Three Month Plan on your Dashboard."
+msgstr ""
+
+#: functions/zume-course.php:3111
+msgid ""
+"You do not have to commit to every item, and there is room for other items "
+"not already on the list. Do your best to align your commitments to what you "
+"have heard God reveal to you about His will."
+msgstr ""
+
+#: functions/zume-course.php:3124
+msgid "Share you Plan (30min)"
+msgstr ""
+
+#: functions/zume-course.php:3133
+msgid "In groups of two or three (15 minutes)"
+msgstr ""
+
+#: functions/zume-course.php:3135
+msgid ""
+"Take turns sharing your Three Month Plans with each other. Take time to ask "
+"questions about things you might not understand about plans and how the "
+"others will meet their commitments. Ask them to do the same for you and your "
+"plan. Find a training partner(s) that is willing to check in with you to "
+"report on progress and challenges and ask questions after 1, 2, 3, 4, 6, 8 "
+"and 12 weeks. Commit to doing the same for them."
+msgstr ""
+
+#: functions/zume-course.php:3144
+msgid "In your full training Group (15 minutes)"
+msgstr ""
+
+#: functions/zume-course.php:3146
+msgid ""
+"Discuss and develop a group plan for starting at least two new 3/3 Groups or "
+"Zúme Training Groups in your area. Several of your group members may have "
+"just completed and saved your individual Three-Month Plans to your Zúme "
+"group. On this step, if no one from your group has filled out a digital copy "
+"on the website of your Three-Month Plan, it is highly recommended that you "
+"do this together now. Just go to the Three-Month Plan under Settings and "
+"link the form to your group."
+msgstr ""
+
+#: functions/zume-course.php:3149
+msgid ""
+"Remember, your goal is to start Simple Churches that multiply. 3/3 Groups "
+"and Zúme Training Groups are two ways to do that. Discuss and decide whether "
+"these new Groups will be connected to an existing local church or network or "
+"whether you’ll start a new network out of your Zúme Training Group."
+msgstr ""
+
+#: functions/zume-course.php:3163
+msgid "Congratulations! You've completed Session 9."
+msgstr ""
+
+#: functions/zume-course.php:3172
+msgid ""
+"You may not know it, but you now have more practical training on starting "
+"simple churches and making disciples who multiply than many pastors and "
+"missionaries around the world!"
+msgstr ""
+
+#: functions/zume-course.php:3173
+msgid ""
+"Set aside time on your calendar each week to continue to work on your Three "
+"Month Plan, and plan check-ins with your training partner at the end of week "
+"1, 2, 3, 4, 6, 8, and 12. Each time you're together, ask about their results "
+"and share yours, making sure you're both working through your plans. "
+"Prayerfully consider continuing as an ongoing spiritual family committed to "
+"multiplying disciples."
+msgstr ""
+
+#: functions/zume-course.php:3181
+msgid ""
+"Pray and ask God who He would have you share Zúme Training with by launching "
+"a Leadership Cell of future Zúme Training leaders."
+msgstr ""
+
+#: functions/zume-course.php:3189
+msgid ""
+"Be sure to pray with your group before you end your time together. Thank God "
+"that He has created and gifted you with exactly the right talents to make a "
+"difference in His kingdom. Ask Him for wisdom to use the strengths He has "
+"given you and to find other followers who help cover your weaknesses. Pray "
+"that He would make you fruitful and multiply — this was His plan from the "
+"very beginning. Pray that God help you be obedient to Him and invite Him to "
+"work in you and those around you!"
+msgstr ""
+
+#: functions/zume-course.php:3197
+msgid ""
+"Excited to help a new Zúme group get started? Share about Zúme on social "
+"media and let people know where they can get started."
+msgstr ""
+
+#: functions/zume-course.php:3214
+msgid "Looking Back"
+msgstr ""
+
+#: functions/zume-course.php:3216
+msgid "Welcome back to Zúme Training!"
+msgstr ""
+
+#: functions/zume-course.php:3229
+msgid ""
+"You were asked to prayerfully consider continuing as an ongoing spiritual "
+"family committed to multiplying disciples."
+msgstr ""
+
+#: functions/zume-course.php:3232
+msgid ""
+"You were encouraged to share Zúme Training by launching a Leadership Cell of "
+"future Zúme Training leaders."
+msgstr ""
+
+#: functions/zume-course.php:3235
+msgid ""
+"Take a few moments to see how your group has been doing with these items and "
+"their Three Month Plans since you've last met."
+msgstr ""
+
+#: functions/zume-course.php:3242
+msgid ""
+"Pray and thank God that He is faithful to complete His good work in us. Ask "
+"Him to give your group clear heads and open hearts to the great things He "
+"wants to do in and through you. Ask the Holy Spirit to lead your time "
+"together and thank Him for His faithfulness, too. He got you through!"
+msgstr ""
+
+#: functions/zume-course.php:3249
+msgid ""
+"In this advanced training session, you’ll take a look at how you can level-"
+"up your Coaching Strengths with a quick checklist assessment. You’ll learn "
+"how Leadership in Networks allows a growing group of small churches to work "
+"together to accomplish even more. And you’ll learn how to develop Peer "
+"Mentoring Groups that take leaders to a whole new level of growth."
+msgstr ""
+
+#: functions/zume-course.php:3260
+msgid "Activity (10min)"
+msgstr ""
+
+#: functions/zume-course.php:3262
+msgid "Asses yourself using the coaching checklist."
+msgstr ""
+
+#: functions/zume-course.php:3267
+msgid "ASSESS"
+msgstr ""
+
+#: functions/zume-course.php:3269
+msgid ""
+"The Coaching Checklist is a powerful tool you can use to quickly assess your "
+"own strengths and vulnerabilities when it comes to making disciples who "
+"multiply. It's also a powerful tool you can use to help others – and others "
+"can use to help you."
+msgstr ""
+
+#: functions/zume-course.php:3271
+msgid ""
+"Find the Coaching Checklist section in your Zúme Guidebook, and take this "
+"quick (5-minutes or less) self-assessment:"
+msgstr ""
+
+#: functions/zume-course.php:3274
+msgid ""
+"Read through the Disciple Training Tools in the far left column of the "
+"Checklist."
+msgstr ""
+
+#: functions/zume-course.php:3275
+msgid "Mark each one of the Training Tools, using the following method:"
+msgstr ""
+
+#: functions/zume-course.php:3277
+msgid ""
+"If you're unfamiliar or don't understand the Tool – check the BLACK column"
+msgstr ""
+
+#: functions/zume-course.php:3280
+msgid ""
+"If you're somewhat familiar but still not sure about the Tool – check the "
+"RED column"
+msgstr ""
+
+#: functions/zume-course.php:3283
+msgid ""
+"If you understand and can train the basics on the Tool – check the YELLOW "
+"column"
+msgstr ""
+
+#: functions/zume-course.php:3286
+msgid ""
+"If you feel confident and can effectively train the Tool – check the GREEN "
+"column"
+msgstr ""
+
+#: functions/zume-course.php:3309
+msgid "Zúme Video Scripts: Coaching Checklist"
+msgstr ""
+
+#: functions/zume-course.php:3320
+msgid "Which Training Tools did you feel you would be able to train well?"
+msgstr ""
+
+#: functions/zume-course.php:3321
+msgid "Which ones made you feel vulnerable as a trainer?"
+msgstr ""
+
+#: functions/zume-course.php:3322
+msgid ""
+"Are there any Training Tools that you would add or subtract from the "
+"Checklist? Why?"
+msgstr ""
+
+#: functions/zume-course.php:3331
+msgid ""
+"REMEMBER – Be sure to share your Coaching Checklist results with training "
+"partner or other mentor. If you're helping coach or mentor someone, use this "
+"tool to help you assess which areas need your attention and training."
+msgstr ""
+
+#: functions/zume-course.php:3353
+msgid ""
+"What happens to churches as they grow and start new churches that start new "
+"churches? How do they stay connected and live life together as an extended, "
+"spiritual family? They become a network!"
+msgstr ""
+
+#: functions/zume-course.php:3372
+msgid "Zúme Video Scripts: Leadership in Networks"
+msgstr ""
+
+#: functions/zume-course.php:3380
+msgid ""
+"Are there advantages when networks of simple churches are connected by deep, "
+"personal relationships? What are some examples that come to mind?"
+msgstr ""
+
+#: functions/zume-course.php:3399
+msgid "Peer Mentoring Groups"
+msgstr ""
+
+#: functions/zume-course.php:3402
+msgid ""
+"Making disciples who make disciples means making leaders who make leaders. "
+"How do you develop stronger leaders? By teaching them how to love one "
+"another better. Peer Mentoring Groups help leaders love deeper."
+msgstr ""
+
+#: functions/zume-course.php:3405
+msgid ""
+"Find the Peer Mentoring Groups section in your Zúme Guidebook, and listen to "
+"the audio below."
+msgstr ""
+
+#: functions/zume-course.php:3425
+msgid "Zúme Video Scripts: Peer Mentoring Groups"
+msgstr ""
+
+#: functions/zume-course.php:3438
+msgid "Practice (60min)"
+msgstr ""
+
+#: functions/zume-course.php:3446
+msgid ""
+"Find the Peer Mentoring Groups section in your Zúme Training Guide, and "
+"follow these steps."
+msgstr ""
+
+#: functions/zume-course.php:3457
+msgid "GROUPS"
+msgstr ""
+
+#: functions/zume-course.php:3461
+msgid ""
+"Break into groups of two or three and work through the 3/3 sections of the "
+"Peer Mentoring Group format. Peer Mentoring is something that happens once a "
+"month or once a quarter and takes some time for the whole group to "
+"participate, so you will not have time for everyone to experience the full "
+"mentoring process in this session."
+msgstr ""
+
+#: functions/zume-course.php:3468
+msgid ""
+"To practice, choose one person in your group to be the \"mentee\" for this "
+"session and have the other members spend time acting as Peer Mentors by "
+"working through the suggested questions list and providing guidance and "
+"encouragement for the Mentee's work."
+msgstr ""
+
+#: functions/zume-course.php:3470
+msgid ""
+"By the time you're finished, everyone should have a basic understanding of "
+"asking and answering."
+msgstr ""
+
+#: functions/zume-course.php:3479
+msgid ""
+"REMEMBER – Spend time studying the Four Fields Diagnostic Diagram and "
+"Generational Map in the Peer Mentoring Groups section of your Zúme Training "
+"Guide. Make sure everyone in your group has a basic understanding of these "
+"tools before asking the suggested questions."
+msgstr ""
+
+#: functions/zume-course.php:3494
+msgid "CONGRATULATIONS ON COMPLETING ZÚME TRAINING!"
+msgstr ""
+
+#: functions/zume-course.php:3501
+msgid ""
+"You and your group are now ready to take leadership to a new level! Here are "
+"a few more steps to help you KEEP growing!"
+msgstr ""
+
+#: functions/zume-course.php:3518
+msgid "Zúme Video Scripts: Completion of Training"
+msgstr ""
+
+#: functions/zume-course.php:3525
+msgid "ACT"
+msgstr ""
+
+#: functions/zume-course.php:3527
+msgid ""
+"To help others become and make disciples, share this www.ZumeProject.com "
+"link today! It'll soon be in 37 languages."
+msgstr ""
+
+#: functions/zume-dashboard.php:106
 msgid "No Name"
 msgstr ""
 
@@ -806,24 +2796,12 @@ msgstr ""
 msgid "DISCIPLE TOOLS - INTEGRATION"
 msgstr ""
 
-#: functions/zume-dt-integration/menu-and-tabs.php:230
+#: functions/zume-dt-integration/menu-and-tabs.php:76
+msgid "Google Keys"
+msgstr ""
+
+#: functions/zume-dt-integration/menu-and-tabs.php:238
 msgid "Set Default Transfer Site"
-msgstr ""
-
-#: functions/zume-dt-integration/menu-and-tabs.php:281
-msgid "Session Level for Transfer"
-msgstr ""
-
-#: functions/zume-dt-integration/menu-and-tabs.php:322
-msgid "Connection Health"
-msgstr ""
-
-#: functions/zume-dt-integration/menu-and-tabs.php:329
-msgid "Foreign Keys Needing Update"
-msgstr ""
-
-#: functions/zume-dt-integration/menu-and-tabs.php:337
-msgid "Check Sum Records Needing Update"
 msgstr ""
 
 #: functions/zume-dt-integration/site-link-post-type.php:181
@@ -961,7 +2939,7 @@ msgid "Register"
 msgstr ""
 
 #: functions/zume-polylang-integration.php:134 template-zume-3plan.php:42
-#: template-zume-dashboard.php:553
+#: template-zume-dashboard.php:551
 msgid "Three Month Plan"
 msgstr ""
 
@@ -1385,2268 +3363,328 @@ msgstr ""
 msgid "Head back to your dashboard and try again."
 msgstr ""
 
-#: template-zume-course.php:106
-msgid "Session"
-msgstr ""
-
-#: template-zume-course.php:207
-msgid "Welcome to Session"
-msgstr ""
-
-#: template-zume-course.php:208
-msgid "Which are you doing right now?"
-msgstr ""
-
-#: template-zume-course.php:209
-msgid "Facilitating a Group"
-msgstr ""
-
-#: template-zume-course.php:213
-msgid "Exploring the Session Content"
-msgstr ""
-
-#: template-zume-course.php:227
-msgid "How many are with you?"
-msgstr ""
-
-#: template-zume-course.php:242
-msgid "Continue"
-msgstr ""
-
-#: template-zume-course.php:262
-msgid "Welcome to Zúme"
-msgstr ""
-
-#: template-zume-course.php:270
-msgid "Download"
-msgstr ""
-
-#: template-zume-course.php:274
-msgid ""
-"You will be able to follow along on a digital PDF for this session, but "
-"please make sure that each member of your group has a printed copy of the "
-"materials for future sessions."
-msgstr ""
-
-#: template-zume-course.php:281 template-zume-dashboard.php:536
-#: template-zume-resources.php:35
-msgid "Download Guidebook"
-msgstr ""
-
-#: template-zume-course.php:293
-msgid "Group Prayer (5min)"
-msgstr ""
-
-#: template-zume-course.php:303
-msgid ""
-"Begin with prayer. Spiritual insight and transformation is not possible "
-"without the Holy Spirit. Take time as a group to invite Him to guide you "
-"over this session."
-msgstr ""
-
-#: template-zume-course.php:316 template-zume-course.php:359
-#: template-zume-course.php:408 template-zume-course.php:716
-#: template-zume-course.php:1059 template-zume-course.php:1144
-#: template-zume-course.php:1501 template-zume-course.php:1557
-#: template-zume-course.php:1609 template-zume-course.php:1879
-#: template-zume-course.php:2063 template-zume-course.php:2308
-#: template-zume-course.php:2519 template-zume-course.php:2728
-#: template-zume-course.php:2781 template-zume-course.php:2836
-#: template-zume-course.php:3199
-msgid "Watch and Discuss (15min)"
-msgstr ""
-
-#: template-zume-course.php:324 template-zume-course.php:367
-#: template-zume-course.php:416 template-zume-course.php:723
-#: template-zume-course.php:1065 template-zume-course.php:1150
-#: template-zume-course.php:1507 template-zume-course.php:1563
-#: template-zume-course.php:1615 template-zume-course.php:1885
-#: template-zume-course.php:2069 template-zume-course.php:2181
-#: template-zume-course.php:2314 template-zume-course.php:2525
-#: template-zume-course.php:2736 template-zume-course.php:2789
-#: template-zume-course.php:2844 template-zume-course.php:3205
-#: template-zume-course.php:3353
-msgid "WATCH"
-msgstr ""
-
-#: template-zume-course.php:326
-msgid ""
-"God uses ordinary people doing simple things to make a big impact. Watch "
-"this video on how God works."
-msgstr ""
-
-#: template-zume-course.php:342
-msgid "Zúme Video Scripts: Welcome"
-msgstr ""
-
-#: template-zume-course.php:348 template-zume-course.php:392
-#: template-zume-course.php:445 template-zume-course.php:756
-#: template-zume-course.php:847 template-zume-course.php:1089
-#: template-zume-course.php:1124 template-zume-course.php:1177
-#: template-zume-course.php:1267 template-zume-course.php:1536
-#: template-zume-course.php:1591 template-zume-course.php:1643
-#: template-zume-course.php:1911 template-zume-course.php:2094
-#: template-zume-course.php:2155 template-zume-course.php:2354
-#: template-zume-course.php:2417 template-zume-course.php:2568
-#: template-zume-course.php:2767 template-zume-course.php:2819
-#: template-zume-course.php:2874 template-zume-course.php:3003
-#: template-zume-course.php:3171 template-zume-course.php:3232
-msgid "DISCUSS"
-msgstr ""
-
-#: template-zume-course.php:350
-msgid ""
-"If Jesus intended every one of His followers to obey His Great Commission, "
-"why do so few actually make disciples?"
-msgstr ""
-
-#: template-zume-course.php:369
-msgid ""
-"What is a disciple? And how do you make one? How do you teach a follower of "
-"Jesus to do what He told us in His Great Commission – to obey all of His "
-"commands?"
-msgstr ""
-
-#: template-zume-course.php:386
-msgid "Zúme Video Scripts: Teach Them to Obey"
-msgstr ""
-
-#: template-zume-course.php:395
-msgid "When you think of a church, what comes to mind?"
-msgstr ""
-
-#: template-zume-course.php:396
-msgid ""
-"What's the difference between that picture and what's described in the video "
-"as a \"Simple Church\"?"
-msgstr ""
-
-#: template-zume-course.php:398
-msgid "Which one do you think would be easier to multiply and why?"
-msgstr ""
-
-#: template-zume-course.php:418
-msgid ""
-"We breathe in. We breathe out. We're alive. Spiritual Breathing is like "
-"that, too."
-msgstr ""
-
-#: template-zume-course.php:438
-msgid "Zúme Video Scripts: Spiritual Breathing"
-msgstr ""
-
-#: template-zume-course.php:448
-msgid "Why is it essential to learn to hear and recognize God's voice?"
-msgstr ""
-
-#: template-zume-course.php:449
-msgid ""
-"Is hearing and responding to the Lord really like breathing? Why or why not?"
-msgstr ""
-
-#: template-zume-course.php:459 template-zume-course.php:512
-#: template-zume-course.php:867 template-zume-course.php:1420
-#: template-zume-course.php:1660 template-zume-course.php:3244
-msgid "Listen and Read Along (3min)"
-msgstr ""
-
-#: template-zume-course.php:467 template-zume-course.php:520
-#: template-zume-course.php:780 template-zume-course.php:873
-#: template-zume-course.php:1109 template-zume-course.php:1224
-#: template-zume-course.php:1426 template-zume-course.php:1666
-#: template-zume-course.php:1829 template-zume-course.php:2112
-#: template-zume-course.php:3250
-msgid "READ"
-msgstr ""
-
-#: template-zume-course.php:469
-msgid "S.O.A.P.S. Bible Reading"
-msgstr ""
-
-#: template-zume-course.php:470
-msgid ""
-"Hearing from God regularly is a key element in our personal relationship "
-"with Him, and in our ability to stay obediently engaged in what He is doing "
-"around us."
-msgstr ""
-
-#: template-zume-course.php:483
-msgid ""
-"Find the \"S.O.A.P.S. Bible Reading\" section in your Zúme Guidebook and "
-"listen to the audio overview."
-msgstr ""
-
-#: template-zume-course.php:504
-msgid "Zúme Video Scripts: S.O.A.P.S."
-msgstr ""
-
-#: template-zume-course.php:523 template-zume-dashboard.php:246
-msgid "Accountability Groups"
-msgstr ""
-
-#: template-zume-course.php:526
-msgid ""
-"The Bible tells us that every follower of Jesus will one day be held "
-"accountable for what we do and say and think. Accountability Groups are a "
-"great way to get ready!"
-msgstr ""
-
-#: template-zume-course.php:538
-msgid ""
-"Find the \"Accountability Groups\" section in your Zúme Guidebook, and "
-"listen to the audio below."
-msgstr ""
-
-#: template-zume-course.php:560
-msgid "Zúme Video Scripts: Accountability Groups"
-msgstr ""
-
-#: template-zume-course.php:568
-msgid "Practice (45min)"
-msgstr ""
-
-#: template-zume-course.php:576
-msgid "BREAK UP"
-msgstr ""
-
-#: template-zume-course.php:577
-msgid "Break into groups of two or three people of the same gender."
-msgstr ""
-
-#: template-zume-course.php:583 template-zume-course.php:635
-#: template-zume-course.php:985 template-zume-course.php:1334
-#: template-zume-course.php:1757 template-zume-course.php:1999
-#: template-zume-course.php:2240 template-zume-course.php:2450
-#: template-zume-course.php:2653 template-zume-course.php:2992
-#: template-zume-course.php:3040
-msgid "SHARE"
-msgstr ""
-
-#: template-zume-course.php:586
-msgid ""
-"Spend the next 45 minutes working together through Accountability Questions "
-"– List 2 in the \"Accountability Groups\" section of your"
-msgstr ""
-
-#: template-zume-course.php:590
-msgid "Zúme Guidebook"
-msgstr ""
-
-#: template-zume-course.php:601 template-zume-course.php:954
-#: template-zume-course.php:1304 template-zume-course.php:1740
-#: template-zume-course.php:1986 template-zume-course.php:2210
-#: template-zume-course.php:2433 template-zume-course.php:2636
-#: template-zume-course.php:3021
-msgid "LOOKING FORWARD"
-msgstr ""
-
-#: template-zume-course.php:605
-msgid "Congratulations! You've completed Session 1."
-msgstr ""
-
-#: template-zume-course.php:617 template-zume-course.php:967
-#: template-zume-course.php:1317 template-zume-course.php:1744
-#: template-zume-course.php:2224
-msgid "Below are next steps to take in preparation for the next session."
-msgstr ""
-
-#: template-zume-course.php:627 template-zume-course.php:978
-#: template-zume-course.php:1327 template-zume-course.php:1750
-#: template-zume-course.php:1992 template-zume-course.php:2233
-#: template-zume-course.php:2443 template-zume-course.php:2646
-#: template-zume-course.php:3031
-msgid "OBEY"
-msgstr ""
-
-#: template-zume-course.php:629
-msgid ""
-"Begin practicing the S.O.A.P.S. Bible reading between now and your next "
-"meeting. Focus on Matthew 5-7, read it at least once a day. Keep a daily "
-"journal using the S.O.A.P.S. format."
-msgstr ""
-
-#: template-zume-course.php:637
-msgid ""
-"Spend time asking God who He might want you to start an Accountability Group "
-"with using the tools you've learned in this session. Share this person’s "
-"name with the group before you go. Reach out to that person about starting "
-"an Accountability Group and meeting with you weekly."
-msgstr ""
-
-#: template-zume-course.php:644 template-zume-course.php:703
-#: template-zume-course.php:992 template-zume-course.php:1036
-#: template-zume-course.php:1341 template-zume-course.php:1396
-#: template-zume-course.php:1764 template-zume-course.php:1804
-#: template-zume-course.php:2006 template-zume-course.php:2043
-#: template-zume-course.php:2247 template-zume-course.php:2288
-#: template-zume-course.php:2457 template-zume-course.php:2499
-#: template-zume-course.php:2660 template-zume-course.php:2708
-#: template-zume-course.php:2934 template-zume-course.php:3048
-#: template-zume-course.php:3094
-msgid "PRAY"
-msgstr ""
-
-#: template-zume-course.php:647
-msgid ""
-"Pray that God helps you be obedient to Him and invite Him to work in you and "
-"those around you!"
-msgstr ""
-
-#: template-zume-course.php:666
-msgid "WELCOME BACK!"
-msgstr ""
-
-#: template-zume-course.php:672
-msgid "DOWNLOAD"
-msgstr ""
-
-#: template-zume-course.php:674
-msgid ""
-"Does everyone have a printed copy of the Zúme Guidebook? If not, please be "
-"sure that someone can download the Guidebook and that everyone has access to "
-"some paper and a pen or pencil."
-msgstr ""
-
-#: template-zume-course.php:680
-msgid "DOWNLOAD GUIDEBOOK"
-msgstr ""
-
-#: template-zume-course.php:687 template-zume-course.php:1016
-#: template-zume-course.php:1379 template-zume-course.php:1789
-#: template-zume-course.php:2030 template-zume-course.php:2271
-#: template-zume-course.php:2480 template-zume-course.php:2686
-#: template-zume-course.php:3075
-msgid "CHECK-IN"
-msgstr ""
-
-#: template-zume-course.php:689 template-zume-course.php:1019
-#: template-zume-course.php:2482 template-zume-course.php:2690
-#: template-zume-course.php:3077
-msgid "Before getting started, take some time to check-in."
-msgstr ""
-
-#: template-zume-course.php:691 template-zume-course.php:1023
-#: template-zume-course.php:1381 template-zume-course.php:2032
-#: template-zume-course.php:2273 template-zume-course.php:2484
-#: template-zume-course.php:2692 template-zume-course.php:3079
-msgid ""
-"At the end of the last session, everyone in your group was challenged in two "
-"ways:"
-msgstr ""
-
-#: template-zume-course.php:694
-msgid ""
-"You were asked to begin practicing the S.O.A.P.S. Bible reading method and "
-"keeping a daily journal."
-msgstr ""
-
-#: template-zume-course.php:696
-msgid ""
-"You were encouraged to reach out to someone about starting an Accountability "
-"Group."
-msgstr ""
-
-#: template-zume-course.php:698 template-zume-course.php:1031
-#: template-zume-course.php:1390 template-zume-course.php:1799
-#: template-zume-course.php:2038 template-zume-course.php:2283
-#: template-zume-course.php:2494 template-zume-course.php:2701
-msgid "Take a few moments to see how your group did this week."
-msgstr ""
-
-#: template-zume-course.php:705
-msgid ""
-"Ask if anyone in the group has specific needs they would like the group to "
-"pray for. Ask someone to pray and ask God to help in the areas the group "
-"shared. Be sure to thank God that He promises in His Word to listen and act "
-"when His people pray. And, as always, ask God's Holy Spirit to lead your "
-"time, together."
-msgstr ""
-
-#: template-zume-course.php:726
-msgid ""
-"If we want to make disciples who multiply – spiritual producers and not just "
-"consumers – then we need to learn and share four main ways God makes "
-"everyday followers more like Jesus:"
-msgstr ""
-
-#: template-zume-course.php:728
-msgid "Prayer"
-msgstr ""
-
-#: template-zume-course.php:729
-msgid "Scripture"
-msgstr ""
-
-#: template-zume-course.php:730
-msgid "Body Life"
-msgstr ""
-
-#: template-zume-course.php:731
-msgid "Persecution and Suffering"
-msgstr ""
-
-#: template-zume-course.php:750
-msgid "Zúme Video Scripts: Producers vs Consumers"
-msgstr ""
-
-#: template-zume-course.php:759
-msgid ""
-"Of the four areas detailed above (prayer, God's Word, etc.), which ones do "
-"you already practice?"
-msgstr ""
-
-#: template-zume-course.php:761
-msgid "Which ones do you feel unsure about?"
-msgstr ""
-
-#: template-zume-course.php:762
-msgid "How ready do you feel when it comes to training others?"
-msgstr ""
-
-#: template-zume-course.php:773
-msgid "Listen and Read Along (2min)"
-msgstr ""
-
-#: template-zume-course.php:783 template-zume-dashboard.php:249
-msgid "Prayer Cycle"
-msgstr ""
-
-#: template-zume-course.php:784
-msgid ""
-"The Bible tells us that prayer is our chance to speak to and hear from the "
-"same God who created us!"
-msgstr ""
-
-#: template-zume-course.php:794
-msgid ""
-"Find the \"Prayer Cycle\" section in your Zúme Guidebook, and listen to the "
-"audio below."
-msgstr ""
-
-#: template-zume-course.php:816
-msgid "Zúme Video Scripts: Prayer Cycle"
-msgstr ""
-
-#: template-zume-course.php:827
-msgid "Practice the Prayer Cycle (60min)"
-msgstr ""
-
-#: template-zume-course.php:833
-msgid "LEAVE"
-msgstr ""
-
-#: template-zume-course.php:835
-msgid ""
-"Spend the next 60 minutes in prayer individually, using the exercises in "
-"\"The Prayer Cycle\" section of the Zúme Guidebook as a guide."
-msgstr ""
-
-#: template-zume-course.php:840
-msgid "RETURN"
-msgstr ""
-
-#: template-zume-course.php:842
-msgid ""
-"Set a time for the group to return and reconnect. Be sure to add a few extra "
-"minutes for everyone to both find a quiet place to pray and to make their "
-"way back to the group."
-msgstr ""
-
-#: template-zume-course.php:850
-msgid "What is your reaction to spending an hour in prayer?"
-msgstr ""
-
-#: template-zume-course.php:851
-msgid "How do you feel?"
-msgstr ""
-
-#: template-zume-course.php:852
-msgid "Did you learn or hear anything?"
-msgstr ""
-
-#: template-zume-course.php:853
-msgid ""
-"What would life be like if you made this kind of prayer a regular habit?"
-msgstr ""
-
-#: template-zume-course.php:876 template-zume-dashboard.php:250
-msgid "List of 100"
-msgstr ""
-
-#: template-zume-course.php:879
-msgid ""
-"God has already given us the relationships we need to “Go and make "
-"disciples.” These are our family, friends, neighbors, co-workers and "
-"classmates – people we’ve known all our lives or maybe just met."
-msgstr ""
-
-#: template-zume-course.php:882
-msgid ""
-"Being good stewards of these relationships is the first step in multiplying "
-"disciples. Start by making a list."
-msgstr ""
-
-#: template-zume-course.php:893
-msgid ""
-"Find the \"List of 100\" section in your Zúme Guidebook, and listen to the "
-"audio below."
-msgstr ""
-
-#: template-zume-course.php:915
-msgid "Zúme Video Scripts: List of 100"
-msgstr ""
-
-#: template-zume-course.php:926
-msgid "Project (30min)"
-msgstr ""
-
-#: template-zume-course.php:936
-msgid "Create your own list of 100"
-msgstr ""
-
-#: template-zume-course.php:938
-msgid ""
-"Have everyone in your group take the next 30 minutes to fill out their own "
-"inventory of relationships using the form in the \"List of 100\" section in "
-"your Zúme Guidebook. "
-msgstr ""
-
-#: template-zume-course.php:957
-msgid "Congratulations on finishing Session 2! "
-msgstr ""
-
-#: template-zume-course.php:980
-msgid ""
-"Spend time this week praying for five people from your List of 100 that you "
-"marked as an \"Unbeliever\" or \"Unknown.\" Ask God to prepare their hearts "
-"to be open to His story."
-msgstr ""
-
-#: template-zume-course.php:987
-msgid ""
-"Ask God who He wants you to share the List of 100 tool with. Share this "
-"person's name with the group before you go and reach out to them before the "
-"next session."
-msgstr ""
-
-#: template-zume-course.php:994 template-zume-course.php:1343
-#: template-zume-course.php:1766
-msgid ""
-"Pray that God help you be obedient to Him and invite Him to work in you and "
-"those around you!"
-msgstr ""
-
-#: template-zume-course.php:1010 template-zume-course.php:1373
-#: template-zume-course.php:1782 template-zume-course.php:2024
-#: template-zume-course.php:2265 template-zume-course.php:2474
-#: template-zume-course.php:2678
-msgid "LOOKING BACK"
-msgstr ""
-
-#: template-zume-course.php:1027
-msgid ""
-"You were asked to pray for five people from your List of 100 that you marked "
-"as an \"Unbeliever\" or \"Unknown.\""
-msgstr ""
-
-#: template-zume-course.php:1028
-msgid "You were encouraged to share how to make a List of 100 with someone."
-msgstr ""
-
-#: template-zume-course.php:1038 template-zume-course.php:1399
-#: template-zume-course.php:1806
-msgid ""
-"Pray and thank God for the results and invite His Holy Spirit to lead your "
-"time together."
-msgstr ""
-
-#: template-zume-course.php:1043 template-zume-course.php:1404
-#: template-zume-course.php:1811 template-zume-course.php:2050
-#: template-zume-course.php:2295 template-zume-course.php:2506
-#: template-zume-course.php:2716 template-zume-course.php:2893
-#: template-zume-course.php:3101
-msgid "OVERVIEW"
-msgstr ""
-
-#: template-zume-course.php:1045
-msgid ""
-"In this session, you’ll learn how God’s Spiritual Economy works and how God "
-"invests more in those who are faithful with what they've already been given. "
-"You'll also learn two more tools for making disciples – sharing God’s Story "
-"from Creation to Judgement and Baptism."
-msgstr ""
-
-#: template-zume-course.php:1047 template-zume-course.php:1408
-msgid "Then, when you're ready, get started!"
-msgstr ""
-
-#: template-zume-course.php:1067
-msgid ""
-"In this broken world, people feel rewarded when they take, when they receive "
-"and when they gain more than those around them. But God's Spiritual Economy "
-"is different – God invests more in those who are faithful with what they've "
-"already been given."
-msgstr ""
-
-#: template-zume-course.php:1084
-msgid "Zúme Video Scripts: Spiritual Economy"
-msgstr ""
-
-#: template-zume-course.php:1091
-msgid ""
-"What are some differences you see between God's Spiritual Economy and our "
-"earthly way of getting things done?"
-msgstr ""
-
-#: template-zume-course.php:1103 template-zume-course.php:1218
-msgid "Read and Discuss (15min)"
-msgstr ""
-
-#: template-zume-course.php:1112
-msgid ""
-"Jesus said, “You will receive power when the Holy Spirit comes upon you. And "
-"you will be my witnesses, telling people about me everywhere – in Jerusalem, "
-"throughout Judea, in Samaria, and to the ends of the earth.”"
-msgstr ""
-
-#: template-zume-course.php:1115
-msgid ""
-"Jesus believed in His followers so much, He trusted them to tell His story. "
-"Then He sent them around the world to do it. Now, He’s sending us."
-msgstr ""
-
-#: template-zume-course.php:1118
-msgid ""
-"There’s no one “best way” to tell God’s story (also called The Gospel), "
-"because the best way will depend on who you’re sharing with. Every disciple "
-"should learn to tell God’s Story in a way that’s true to scripture and "
-"connects with the audience they’re sharing with."
-msgstr ""
-
-#: template-zume-course.php:1127
-msgid ""
-"What comes to mind when you hear God's command to be His \"witness\" and to "
-"tell His story?"
-msgstr ""
-
-#: template-zume-course.php:1129
-msgid ""
-"Why do you think Jesus chose ordinary people instead of some other way to "
-"share His Good News?."
-msgstr ""
-
-#: template-zume-course.php:1131
-msgid ""
-"What would it take for you to feel more comfortable sharing God's Story?"
-msgstr ""
-
-#: template-zume-course.php:1152 template-zume-dashboard.php:253
-msgid "The Gospel"
-msgstr ""
-
-#: template-zume-course.php:1153
-msgid ""
-"One way to share God’s Good News is by telling God’s Story from Creation to "
-"Judgement – from the beginning of humankind all the way to the end of this "
-"age."
-msgstr ""
-
-#: template-zume-course.php:1171
-msgid "Zúme Video Scripts: The Gospel"
-msgstr ""
-
-#: template-zume-course.php:1180
-msgid "What do you learn about mankind from this story?"
-msgstr ""
-
-#: template-zume-course.php:1181
-msgid "What do you learn about God?"
-msgstr ""
-
-#: template-zume-course.php:1182
-msgid ""
-"Do you think it would be easier or harder to share God's Story by telling a "
-"story like this?"
-msgstr ""
-
-#: template-zume-course.php:1194
-msgid "PRACTICE SHARING GOD'S STORY (45min)"
-msgstr ""
-
-#: template-zume-course.php:1203
-msgid ""
-"Break into groups of two or three people and spend the next 45 minutes "
-"practicing telling God's Story. You can use the using the Activity "
-"instructions for \"God's Story\" found in your Zúme Guidebook."
-msgstr ""
-
-#: template-zume-course.php:1227 template-zume-dashboard.php:254
-msgid "Baptism"
-msgstr ""
-
-#: template-zume-course.php:1230
-msgid ""
-"Jesus said, “Go and make disciples of all nations, BAPTIZING them in the "
-"name of the Father and of the Son and of the Holy Spirit…”"
-msgstr ""
-
-#: template-zume-course.php:1241
-msgid ""
-"Find the \"Baptism\" section in your Zúme Guidebook, and listen to the audio "
-"below."
-msgstr ""
-
-#: template-zume-course.php:1262
-msgid "Zúme Video Scripts: Baptism"
-msgstr ""
-
-#: template-zume-course.php:1270
-msgid "Have you ever baptized someone?"
-msgstr ""
-
-#: template-zume-course.php:1271
-msgid "Would you even consider it?"
-msgstr ""
-
-#: template-zume-course.php:1272
-msgid ""
-"If the Great Commission is for every follower of Jesus, does that mean every "
-"follower is allowed to baptize others? Why or why not?"
-msgstr ""
-
-#: template-zume-course.php:1285
-msgid "IMPORTANT REMINDER – Have you been baptized?"
-msgstr ""
-
-#: template-zume-course.php:1288
-msgid ""
-"If not, then we encourage you to plan this before even one more session of "
-"this training. Invite your group to be a part of this important day when you "
-"celebrate saying \"yes\" to Jesus."
-msgstr ""
-
-#: template-zume-course.php:1307
-msgid "Congratulations on finishing Session 3! "
-msgstr ""
-
-#: template-zume-course.php:1329
-msgid ""
-"Spend time this week practicing God's Story, and then share it with at least "
-"one person from your List of 100 that you marked as \"Unbeliever\" or "
-"\"Unknown.\""
-msgstr ""
-
-#: template-zume-course.php:1336
-msgid ""
-"Ask God who He wants you to train to use the Creation to Judgment story (or "
-"some other way to share God's Story). Share this person's name with the "
-"group before you go."
-msgstr ""
-
-#: template-zume-course.php:1353
-msgid ""
-"IMPORTANT REMINDER – Your group will be celebrating the Lord's Supper next "
-"session. Be sure to remember the supplies (bread and wine / juice)."
-msgstr ""
-
-#: template-zume-course.php:1384
-msgid ""
-"You were asked to share God’s Story with at least one person from your List "
-"of 100 that you marked as \"Unbeliever\" or \"Unknown.\""
-msgstr ""
-
-#: template-zume-course.php:1387
-msgid ""
-"You were encouraged to train someone to use the Creation to Judgement story "
-"(or some other way to share God’s Story) with someone."
-msgstr ""
-
-#: template-zume-course.php:1406
-msgid ""
-"In this session, you'll learn how God's plan is for every follower to "
-"multiply! You’ll discover how disciples multiply far and fast when they "
-"start to see where God’s Kingdom isn’t. And, you'll learn another great tool "
-"for inviting others into God's family is as simple as telling our story."
-msgstr ""
-
-#: template-zume-course.php:1429
-msgid "3-Minute Testimony"
-msgstr ""
-
-#: template-zume-course.php:1432
-msgid ""
-"As followers of Jesus, we are “witnesses\" for Him, because we “testify” "
-"about the impact Jesus has had on our lives. Your story of your relationship "
-"with God is called your Testimony. It's powerful, and it's something no one "
-"can share better than you."
-msgstr ""
-
-#: template-zume-course.php:1443
-msgid ""
-"Find the \"3-Minute Testimony\" section in your Zúme Guidebook, and listen "
-"to the audio below."
-msgstr ""
-
-#: template-zume-course.php:1464
-msgid "Zúme Video Scripts: Testimony"
-msgstr ""
-
-#: template-zume-course.php:1475
-msgid "Practice Sharing your Testimony (45min)"
-msgstr ""
-
-#: template-zume-course.php:1485
-msgid ""
-"Break into groups of two or three and and spend the next 45 minutes "
-"practicing sharing your Testimony using the Activity instructions on page 15 "
-"of your Zúme Guidebook."
-msgstr ""
-
-#: template-zume-course.php:1509
-msgid ""
-"What is God's greatest blessing for His children? Making disciples who "
-"multiply!"
-msgstr ""
-
-#: template-zume-course.php:1511
-msgid ""
-"What if you could learn a simple pattern for making not just one follower of "
-"Jesus but entire spiritual families who multiply for generations to come?"
-msgstr ""
-
-#: template-zume-course.php:1529
-msgid "Zúme Video Scripts: Greatest Blessing"
-msgstr ""
-
-#: template-zume-course.php:1540
-msgid ""
-"Is this the pattern you were taught when you first began to follow Jesus? If "
-"not, what was different?"
-msgstr ""
-
-#: template-zume-course.php:1542
-msgid ""
-"After you came to faith, how long was it before you began to disciple others?"
-msgstr ""
-
-#: template-zume-course.php:1543
-msgid ""
-"What do you think would happen if new followers started sharing and "
-"discipling others, immediately?"
-msgstr ""
-
-#: template-zume-course.php:1565
-msgid ""
-"What do ducklings have to do with disciple making? They lead and follow at "
-"the same time."
-msgstr ""
-
-#: template-zume-course.php:1583
-msgid "Zúme Video Scripts: Duckling Discipleship"
-msgstr ""
-
-#: template-zume-course.php:1594
-msgid ""
-"What is one area of discipleship (reading/understanding the Bible, praying, "
-"sharing God's Story, etc.) that you want to learn more about? Who is someone "
-"that could help you learn?"
-msgstr ""
-
-#: template-zume-course.php:1596
-msgid ""
-"What is one area of discipleship that you feel you could share with others? "
-"Who is someone that you could share with?"
-msgstr ""
-
-#: template-zume-course.php:1617
-msgid "Have you ever stopped to think about where God's Kingdom... isn't?"
-msgstr ""
-
-#: template-zume-course.php:1619
-msgid ""
-"Have you ever visited a home or a neighborhood or even a city where it "
-"seemed as if God was just... missing? These are usually the places where God "
-"wants to work the most."
-msgstr ""
-
-#: template-zume-course.php:1637
-msgid "Zúme Video Scripts: Eyes to See"
-msgstr ""
-
-#: template-zume-course.php:1646
-msgid ""
-"Who are you more comfortable sharing with -- people you already know or "
-"people you haven't met, yet?"
-msgstr ""
-
-#: template-zume-course.php:1648
-msgid "Why do you think that is?"
-msgstr ""
-
-#: template-zume-course.php:1649
-msgid ""
-"How could you get better at sharing with people you're less comfortable with?"
-msgstr ""
-
-#: template-zume-course.php:1669
-msgid "The Lord's Supper"
-msgstr ""
-
-#: template-zume-course.php:1672
-msgid ""
-"Jesus said, “I am the living bread that came down from heaven. Whoever eats "
-"this bread will live forever. This bread is my flesh, which I will give for "
-"the life of the world.”"
-msgstr ""
-
-#: template-zume-course.php:1683
-msgid ""
-"Find \"The Lord's Supper\" section in your Zúme Guidebook, and listen to the "
-"audio below."
-msgstr ""
-
-#: template-zume-course.php:1704
-msgid "Zúme Video Scripts: Lord's Supper"
-msgstr ""
-
-#: template-zume-course.php:1715
-msgid "Practice the Lord's Supper (10min)"
-msgstr ""
-
-#: template-zume-course.php:1725
-msgid ""
-"Spend the next 10 minutes celebrating The Lord's Supper with your group "
-"using the pattern on page 15 of your Zúme Guidebook."
-msgstr ""
-
-#: template-zume-course.php:1743
-msgid "Congratulations on finishing Session 4!"
-msgstr ""
-
-#: template-zume-course.php:1752
-msgid ""
-"Spend time this week practicing your 3-Minute Testimony, and then share it "
-"with at least one person from your List of 100 that you marked as "
-"\"Unbeliever\" or \"Unknown.\""
-msgstr ""
-
-#: template-zume-course.php:1759
-msgid ""
-"Ask God who He wants you to train with the 3-Minute Testimony tool. Share "
-"this person's name with the group before you go."
-msgstr ""
-
-#: template-zume-course.php:1792
-msgid "At the end of the last session, everyone in your group in two ways:"
-msgstr ""
-
-#: template-zume-course.php:1795
-msgid ""
-"You were asked to share your 3-Minute Testimony with at least one person on "
-"your List of 100."
-msgstr ""
-
-#: template-zume-course.php:1797
-msgid ""
-"You were encouraged to train someone else with the 3-Minute Testimony tool."
-msgstr ""
-
-#: template-zume-course.php:1813
-msgid ""
-"In this session, you’ll learn how Prayer Walking is a powerful way to "
-"prepare a neighborhood for Jesus, and you'll learn a simple but powerful "
-"pattern for prayer that will help you meet and make new disciples along the "
-"way."
-msgstr ""
-
-#: template-zume-course.php:1823 template-zume-course.php:2106
-msgid "Listen and Read Along (15min)"
-msgstr ""
-
-#: template-zume-course.php:1832 template-zume-dashboard.php:262
-msgid "Prayer Walking"
-msgstr ""
-
-#: template-zume-course.php:1835
-msgid ""
-"Prayer Walking is a simple way to obey God’s command to pray for others. And "
-"it's just what it sounds like – praying to God while walking around!"
-msgstr ""
-
-#: template-zume-course.php:1846
-msgid ""
-"Find the \"Prayer Walking\" section in your Zúme Guidebook, and listen to "
-"the audio below."
-msgstr ""
-
-#: template-zume-course.php:1867
-msgid "Zúme Video Scripts: Prayer Walking"
-msgstr ""
-
-#: template-zume-course.php:1887
-msgid ""
-"Disciple-making can be rapidly advanced by finding a person of peace, even "
-"in a place where followers of Jesus are few and far between. How do you know "
-"when you have found a person of peace and what do you when you find them?"
-msgstr ""
-
-#: template-zume-course.php:1905
-msgid "Zúme Video Scripts: Person of Peace"
-msgstr ""
-
-#: template-zume-course.php:1915
-msgid ""
-"Can someone who has a \"bad reputation\" (like the Samaritan woman or the "
-"demon-possessed man in the Gadarenes) really be a Person of Peace? Why or "
-"why not?"
-msgstr ""
-
-#: template-zume-course.php:1918
-msgid ""
-"What is a community or segment of society near you that seems to have little "
-"(or no) Kingdom presence? How could a Person of Peace (someone who is OPEN, "
-"HOSPITABLE, KNOWS OTHERS and SHARES) accelerate the spread of the Gospel in "
-"that community?"
-msgstr ""
-
-#: template-zume-course.php:1932
-msgid "Practice the B.L.E.S.S. Prayer (15min)"
-msgstr ""
-
-#: template-zume-course.php:1942
-msgid ""
-"Break into groups of two or three and practicing the B.L.E.S.S. Prayer. The "
-"prayer pattern can be found in the Zúme Guidebook. Practice praying the five "
-"areas of the B.L.E.S.S. Prayer."
-msgstr ""
-
-#: template-zume-course.php:1957
-msgid "Prayer Walking (60-90min)"
-msgstr ""
-
-#: template-zume-course.php:1967
-msgid ""
-"Break into groups of two or three and go out into the community to practice "
-"Prayer Walking."
-msgstr ""
-
-#: template-zume-course.php:1968
-msgid ""
-"Choosing a location can be as simple as walking outside from where you are "
-"now, or you could plan to go to a specific destination."
-msgstr ""
-
-#: template-zume-course.php:1969
-msgid "Go as God leads, and plan on spending 60-90 minutes on this activity."
-msgstr ""
-
-#: template-zume-course.php:1978
-msgid "The session ends with a prayer walking activity."
-msgstr ""
-
-#: template-zume-course.php:1980
-msgid ""
-"Read through the Obey, Share, and Pray sections, below, before you head out!"
-msgstr ""
-
-#: template-zume-course.php:1994
-msgid ""
-"Spend time this week practicing Prayer Walking by going out alone or with a "
-"small group at least once."
-msgstr ""
-
-#: template-zume-course.php:2001
-msgid ""
-"Spend time asking God who He might want you to share the Prayer Walking tool "
-"with before your group meets again. Share this person’s name with the group "
-"before you go."
-msgstr ""
-
-#: template-zume-course.php:2008
-msgid ""
-"Before you go out on your Prayer Walking activity, be sure to pray with your "
-"group to end your time together. Thank God that He loves the lost, the last "
-"and the least – including us! Ask Him to prepare your heart and the heart of "
-"those you'll meet during your walk to be open to His work."
-msgstr ""
-
-#: template-zume-course.php:2035
-msgid "You were asked to spend some time Prayer Walking"
-msgstr ""
-
-#: template-zume-course.php:2036
-msgid "You were encouraged to share the Prayer Walking tool with someone else."
-msgstr ""
-
-#: template-zume-course.php:2045
-msgid ""
-"Pray and thank God for the results, ask Him to help when you find it hard to "
-"obey, and invite His Holy Spirit to lead your time together."
-msgstr ""
-
-#: template-zume-course.php:2052
-msgid ""
-"In this session, you’ll learn how God uses faithful followers – even if "
-"they're brand new – much more than ones with years of knowledge and training "
-"who just won't obey. And you'll get a first look at a way to meet together "
-"that helps disciples multiply even faster."
-msgstr ""
-
-#: template-zume-course.php:2071
-msgid ""
-"When we help multiply disciples, we need to make sure we're reproducing the "
-"right things. It's important what disciples know – but it's much more "
-"important what they DO with what they know."
-msgstr ""
-
-#: template-zume-course.php:2089
-msgid "Zúme Video Scripts: Faithfulness"
-msgstr ""
-
-#: template-zume-course.php:2096
-msgid ""
-"Think about God's commands that you already know. How \"faithful\" are you "
-"in terms of obeying and sharing those things?"
-msgstr ""
-
-#: template-zume-course.php:2115
-msgid "3/3 Groups Format"
-msgstr ""
-
-#: template-zume-course.php:2118
-msgid ""
-"Jesus said, “Where two or three have gathered together in My name, I am "
-"there in their midst.”"
-msgstr ""
-
-#: template-zume-course.php:2129
-msgid ""
-"Find the \"3/3 Group Format\" section in your Zúme Guidebook, and listen to "
-"the audio below."
-msgstr ""
-
-#: template-zume-course.php:2150
-msgid "Zúme Video Scripts: 3/3 Group"
-msgstr ""
-
-#: template-zume-course.php:2159
-msgid ""
-"Did you notice any differences between a 3/3 Group and a Bible Study or "
-"Small Group you've been a part of (or have heard about) in the past? If so, "
-"how would those differences impact the group?"
-msgstr ""
-
-#: template-zume-course.php:2162
-msgid "Could a 3/3 Group be considered a Simple Church? Why or why not?"
-msgstr ""
-
-#: template-zume-course.php:2175
-msgid "MODEL 3/3 GROUP"
-msgstr ""
-
-#: template-zume-course.php:2184
-msgid ""
-"A 3/3 Group is a way for followers of Jesus to meet, pray, learn, grow, "
-"fellowship and practice obeying and sharing what they've learned. In this "
-"way a 3/3 Group is not just a small group but a Simple Church."
-msgstr ""
-
-#: template-zume-course.php:2187
-msgid ""
-"In the following video, you'll see a live demonstration of a 3/3 group "
-"meeting together."
-msgstr ""
-
-#: template-zume-course.php:2214
-msgid "Congratulations on finishing Session 6!"
-msgstr ""
-
-#: template-zume-course.php:2235
-msgid ""
-"Spend time this week practicing Faithfulness by obeying and sharing at least "
-"one of God's commands that you already know."
-msgstr ""
-
-#: template-zume-course.php:2242
-msgid ""
-"Think about what you have heard and learned about Faithfulness in this "
-"session, and ask God who He wants you to share it with. Share this person’s "
-"name with the group before you go."
-msgstr ""
-
-#: template-zume-course.php:2249
-msgid ""
-"Thank God for His Faithfulness – for fulfilling every promise He's ever "
-"made. Ask Him to help you and your group become even more Faithful to Him."
-msgstr ""
-
-#: template-zume-course.php:2277
-msgid ""
-"You were asked to practice Faithfulness by obeying and sharing one of God's "
-"commands."
-msgstr ""
-
-#: template-zume-course.php:2280
-msgid ""
-"You were encouraged to share the importance of Faithfulness with someone "
-"else."
-msgstr ""
-
-#: template-zume-course.php:2290
-msgid ""
-"Pray and thank God for the group's commitment to faithfully following Jesus "
-"and invite God's Holy Spirit to lead your time together."
-msgstr ""
-
-#: template-zume-course.php:2297
-msgid ""
-"In this session, you’ll learn a Training Cycle that helps disciples go from "
-"one to many and turns a mission into a movement. You'll also practice the "
-"3/3 Groups Format and learn how the way you meet can impact the way you "
-"multiply."
-msgstr ""
-
-#: template-zume-course.php:2317
-msgid ""
-"Have you ever learned how to ride a bicycle? Have you ever helped someone "
-"else learn? If so, chances are you already know the Training Cycle."
-msgstr ""
-
-#: template-zume-course.php:2328
-msgid ""
-"Find the \"Training Cycle\" section in your Zúme Guidebook. When you're "
-"ready, watch this video, and then discuss the questions below."
-msgstr ""
-
-#: template-zume-course.php:2349
-msgid "Zúme Video Scripts: Training Cycle"
-msgstr ""
-
-#: template-zume-course.php:2357
-msgid "Have you ever been a part of a Training Cycle?"
-msgstr ""
-
-#: template-zume-course.php:2358
-msgid "Who did you train? Or who trained you?"
-msgstr ""
-
-#: template-zume-course.php:2360
-msgid ""
-"Could the same person be at different parts of the Training Cycle while "
-"learning different skills?"
-msgstr ""
-
-#: template-zume-course.php:2362
-msgid "What would it look like to train someone like that?"
-msgstr ""
-
-#: template-zume-course.php:2374
-msgid "Practice and Discuss (90min)"
-msgstr ""
-
-#: template-zume-course.php:2380 template-zume-course.php:2607
-#: template-zume-course.php:3320
-msgid "PRACTICE"
-msgstr ""
-
-#: template-zume-course.php:2390
-msgid ""
-"Have your entire group spend the next 90 minutes practicing the 3/3 Groups "
-"Format. Refer to the Zúme Guidebook if you need a reminder about the pattern."
-msgstr ""
-
-#: template-zume-course.php:2402
-msgid ""
-"LOOK BACK – Use last week's Session Challenges to practice \"Faithfulness\" "
-"in the Look Back section."
-msgstr ""
-
-#: template-zume-course.php:2405
-msgid ""
-"LOOK UP – Use Mark 5:1-20 as your group's reading passage and answer "
-"questions 1-4 during the Look Up section."
-msgstr ""
-
-#: template-zume-course.php:2408
-msgid ""
-"LOOK FORWARD – Use questions 5, 6, and 7 in the Look Forward section to "
-"develop how you will Obey, Train and Share."
-msgstr ""
-
-#: template-zume-course.php:2412 template-zume-course.php:2624
-msgid ""
-"REMEMBER – Each section should take about 1/3 (or 30 minutes) of your "
-"practice time."
-msgstr ""
-
-#: template-zume-course.php:2420
-msgid "What did you like best about the 3/3 Group? Why?"
-msgstr ""
-
-#: template-zume-course.php:2421
-msgid "What was the most challenging? Why?"
-msgstr ""
-
-#: template-zume-course.php:2437
-msgid "Congratulations on finishing Session 7!"
-msgstr ""
-
-#: template-zume-course.php:2445
-msgid ""
-"Spend time this week obeying, training, and sharing based on the commitments "
-"you've made during your 3/3 Group practice."
-msgstr ""
-
-#: template-zume-course.php:2452
-msgid ""
-"Pray and ask God who He wants you to share the 3/3 Group format with before "
-"your group meets again. Share this person’s name with the group before you "
-"go."
-msgstr ""
-
-#: template-zume-course.php:2459
-msgid ""
-"Thank God that He loves us enough to invite us into His most important work "
-"– growing His family!"
-msgstr ""
-
-#: template-zume-course.php:2488
-msgid ""
-"You were asked to practice obeying, training, and sharing based on your "
-"commitments during 3/3 Group practice."
-msgstr ""
-
-#: template-zume-course.php:2491
-msgid "You were encouraged to share the 3/3 Group Format with someone else."
-msgstr ""
-
-#: template-zume-course.php:2501
-msgid ""
-"Pray and thank God for giving your group the energy, the focus and the "
-"faithfulness to come so far in this training. Ask God to have His Holy "
-"Spirit remind everyone in the group that they can do nothing without Him!"
-msgstr ""
-
-#: template-zume-course.php:2508
-msgid ""
-"In this session, you’ll learn how Leadership Cells prepare followers in a "
-"short time to become leaders for a lifetime. You'll learn how serving others "
-"is Jesus' strategy for leadership. And you'll spend time practicing as a 3/3 "
-"Group, again."
-msgstr ""
-
-#: template-zume-course.php:2528
-msgid ""
-"Jesus said, “Whoever wishes to become great among you shall be your servant.”"
-msgstr ""
-
-#: template-zume-course.php:2531
-msgid ""
-"Jesus radically reversed our understanding of leadership by teaching us that "
-"if we feel called to lead, then we are being called to serve. A Leadership "
-"Cell is a way someone who feels called to lead can develop their leadership "
-"by practicing serving."
-msgstr ""
-
-#: template-zume-course.php:2542
-msgid ""
-"Find the \"Leadership Cells\" section in your Zúme Guidebook. When you're "
-"ready, watch and discuss this video."
-msgstr ""
-
-#: template-zume-course.php:2563
-msgid "Zúme Video Scripts: Leadership Cells"
-msgstr ""
-
-#: template-zume-course.php:2572
-msgid ""
-"Is there a group of followers of Jesus you know that are already meeting or "
-"would be willing to meet and form a Leadership Cell to learn Zúme Training?"
-msgstr ""
-
-#: template-zume-course.php:2574
-msgid "What would it take to bring them together?"
-msgstr ""
-
-#: template-zume-course.php:2586
-msgid "Practice 3/3 Group (90min)"
-msgstr ""
-
-#: template-zume-course.php:2596
-msgid ""
-"Have your entire group spend the next 90 minutes practicing the 3/3 Groups "
-"Format."
-msgstr ""
-
-#: template-zume-course.php:2614
-msgid ""
-"LOOK BACK – Use last session’s Obey, Train, and Share challenges to check-in "
-"with each other."
-msgstr ""
-
-#: template-zume-course.php:2617
-msgid ""
-"LOOK UP – Use Acts 2:42-47 as your group’s reading passage and answer "
-"questions 1- 4."
-msgstr ""
-
-#: template-zume-course.php:2620
-msgid ""
-"LOOK FORWARD – Use questions 5, 6, and 7 to develop how you will Obey, Train "
-"and Share."
-msgstr ""
-
-#: template-zume-course.php:2640
-msgid "Congratulations! You've completed Session 8. "
-msgstr ""
-
-#: template-zume-course.php:2648
-msgid ""
-"Spend time again this week obeying, sharing, and training based on the "
-"commitments you've made during this session's 3/3 Group practice."
-msgstr ""
-
-#: template-zume-course.php:2655
-msgid ""
-"Pray and ask God who He wants you to share the Leadership Cell tool with "
-"before your group meets again. Share this person’s name with the group "
-"before you go."
-msgstr ""
-
-#: template-zume-course.php:2662
-msgid ""
-"Thank God for sending Jesus to show us that real leaders are real servants. "
-"Thank Jesus for showing us the greatest service possible is giving up our "
-"own lives for others."
-msgstr ""
-
-#: template-zume-course.php:2695
-msgid ""
-"You were asked to practice Obeying, Training, and Sharing based on your "
-"commitments during last session's 3/3 Group practice."
-msgstr ""
-
-#: template-zume-course.php:2698
-msgid ""
-"You were encouraged to share the Leadership Cells tool with someone else."
-msgstr ""
-
-#: template-zume-course.php:2710
-msgid ""
-"Pray and thank God that His ways are not our ways and His thoughts are not "
-"our thoughts. Ask Him to give each member of your group the mind of Christ — "
-"always focused on His Father's work. Ask the Holy Spirit to lead your time "
-"together and make it the best session yet."
-msgstr ""
-
-#: template-zume-course.php:2718
-msgid ""
-"In this session, you’ll learn how linear patterns hold back kingdom growth "
-"and how Non-Sequential thinking helps you multiply disciples. You'll "
-"discover how much time matters in disciple-making and how to accelerate "
-"Pace. You’ll learn how followers of Jesus can be a Part of Two Churches to "
-"help turn faithful, spiritual families into a growing city-wide body of "
-"believers. Finally, you'll learn how a simple Three Month Plan can focus "
-"your efforts and multiply your effectiveness in growing God's family "
-"exponentially."
-msgstr ""
-
-#: template-zume-course.php:2739
-msgid ""
-"When people think about disciples multiplying, they often think of it as a "
-"step-by-step process. The problem with that is — that's not how it works "
-"best!"
-msgstr ""
-
-#: template-zume-course.php:2759
-msgid "Zúme Video Scripts: Non-Sequential"
-msgstr ""
-
-#: template-zume-course.php:2770
-msgid "What is the most exciting idea you heard in this video? Why?"
-msgstr ""
-
-#: template-zume-course.php:2771
-msgid "What is the most challenging idea? Why?"
-msgstr ""
-
-#: template-zume-course.php:2791
-msgid ""
-"Multiplying matters and multiplying quickly matters even more. Pace matters "
-"because where we all spend our eternity — an existence that outlasts time — "
-"is determined in the very short time we call “life.“"
-msgstr ""
-
-#: template-zume-course.php:2811
-msgid "Zúme Video Scripts: Pace"
-msgstr ""
-
-#: template-zume-course.php:2822
-msgid "Why is pace important?"
-msgstr ""
-
-#: template-zume-course.php:2824
-msgid ""
-"What do you need to change in your thinking, your actions, or your attitude "
-"to be better aligned with God's priority for pace?"
-msgstr ""
-
-#: template-zume-course.php:2826
-msgid ""
-"What is one thing you can do starting this week that will make a difference?"
-msgstr ""
-
-#: template-zume-course.php:2846
-msgid ""
-"Jesus taught us that we are to stay close — to live as a small, spiritual "
-"family, to love and give our lives to one another, to celebrate and suffer — "
-"together. However, Jesus also taught us to leave our homes and loved ones "
-"behind and be willing to go anywhere — and everywhere — to share and start "
-"new spiritual families. So how can we do both? When you're ready, watch the "
-"video below and discuss the question that follows."
-msgstr ""
-
-#: template-zume-course.php:2866
-msgid "Zúme Video Scripts: Two Churches"
-msgstr ""
-
-#: template-zume-course.php:2876
-msgid ""
-"What are some advantages of maintaining a consistent spiritual family that "
-"gives birth to new ones that grow and multiply instead of continually "
-"growing a family and splitting it in order to grow?"
-msgstr ""
-
-#: template-zume-course.php:2886
-msgid "Create a Three Month Plan (30min)"
-msgstr ""
-
-#: template-zume-course.php:2896
-msgid ""
-"In His Bible, God says, \"I know the plans I have for you, plans to prosper "
-"you and not to harm you, plans to give you hope and a future.\" God makes "
-"plans, and He expects us to make plans, too. He teaches us through His Word "
-"and His work to look ahead, see a better tomorrow, make a plan for how to "
-"get there, and then prepare the resources we'll need on the way."
-msgstr ""
-
-#: template-zume-course.php:2899
-msgid ""
-"A Three Month Plan is a tool you can use to help focus your attention and "
-"efforts and keep them aligned with God's priorities for making disciples who "
-"multiply. Spend the next 30 minutes praying over, reading through, and then "
-"completing the commitments listed in the Three Month Plan."
-msgstr ""
-
-#: template-zume-course.php:2902
-msgid ""
-"You can use the printed version in your Zúme Guidebook or our online version."
-msgstr ""
-
-#: template-zume-course.php:2905
-msgid "Online \"Three Month Plan\""
-msgstr ""
-
-#: template-zume-course.php:2917
-msgid ""
-"Participants can access their own three month plan on the side column of "
-"their dashboard. They can connect their plan with this group by adding the "
-"following key:"
-msgstr ""
-
-#: template-zume-course.php:2937
-msgid ""
-"Ask God what He specifically wants you to do with the basic disciple-making "
-"tools and techniques you have learned over these last nine sessions. You can "
-"remember them in terms of the Greatest Blessing."
-msgstr ""
-
-#: template-zume-course.php:2941
-msgid ""
-"It's a Blessing to ... S.O.A.P.S. Bible Reading, Accountability Groups, "
-"Prayer Cycle"
-msgstr ""
-
-#: template-zume-course.php:2944
-msgid ""
-"It's a Great Blessing to ... Share your 3-Minute Testimony and God's Story, "
-"Prayer Walking"
-msgstr ""
-
-#: template-zume-course.php:2947
-msgid "It's a Greater Blessing to ... Start a 3/3rds Group"
-msgstr ""
-
-#: template-zume-course.php:2950
-msgid "It's the Greatest Blessing to ... Start a Zúme Group"
-msgstr ""
-
-#: template-zume-course.php:2958
-msgid "LISTEN"
-msgstr ""
-
-#: template-zume-course.php:2960
-msgid ""
-"Take at least 10 minutes to be as quiet as possible and listen intently to "
-"what God has to say and what He chooses to reveal. Make an effort to hear "
-"His voice."
-msgstr ""
-
-#: template-zume-course.php:2966
-msgid "COMPLETE"
-msgstr ""
-
-#: template-zume-course.php:2969
-msgid ""
-"Use the rest of your time to complete the Three Month Plan worksheet. You "
-"can write it out on a piece of paper. If you are logged in to ZúmeProject."
-"com you can fill out your form digitally and link it to your group. Once you "
-"login, you’ll find the Three Month Plan under Settings. You can also find "
-"the Three Month Plan on your Dashboard."
-msgstr ""
-
-#: template-zume-course.php:2972
-msgid ""
-"You do not have to commit to every item, and there is room for other items "
-"not already on the list. Do your best to align your commitments to what you "
-"have heard God reveal to you about His will."
-msgstr ""
-
-#: template-zume-course.php:2985
-msgid "Share you Plan (30min)"
-msgstr ""
-
-#: template-zume-course.php:2994
-msgid "In groups of two or three (15 minutes)"
-msgstr ""
-
-#: template-zume-course.php:2996
-msgid ""
-"Take turns sharing your Three Month Plans with each other. Take time to ask "
-"questions about things you might not understand about plans and how the "
-"others will meet their commitments. Ask them to do the same for you and your "
-"plan. Find a training partner(s) that is willing to check in with you to "
-"report on progress and challenges and ask questions after 1, 2, 3, 4, 6, 8 "
-"and 12 weeks. Commit to doing the same for them."
-msgstr ""
-
-#: template-zume-course.php:3005
-msgid "In your full training Group (15 minutes)"
-msgstr ""
-
-#: template-zume-course.php:3007
-msgid ""
-"Discuss and develop a group plan for starting at least two new 3/3 Groups or "
-"Zúme Training Groups in your area. Several of your group members may have "
-"just completed and saved your individual Three-Month Plans to your Zúme "
-"group. On this step, if no one from your group has filled out a digital copy "
-"on the website of your Three-Month Plan, it is highly recommended that you "
-"do this together now. Just go to the Three-Month Plan under Settings and "
-"link the form to your group."
-msgstr ""
-
-#: template-zume-course.php:3010
-msgid ""
-"Remember, your goal is to start Simple Churches that multiply. 3/3 Groups "
-"and Zúme Training Groups are two ways to do that. Discuss and decide whether "
-"these new Groups will be connected to an existing local church or network or "
-"whether you’ll start a new network out of your Zúme Training Group."
-msgstr ""
-
-#: template-zume-course.php:3024
-msgid "Congratulations! You've completed Session 9."
-msgstr ""
-
-#: template-zume-course.php:3033
-msgid ""
-"You may not know it, but you now have more practical training on starting "
-"simple churches and making disciples who multiply than many pastors and "
-"missionaries around the world!"
-msgstr ""
-
-#: template-zume-course.php:3034
-msgid ""
-"Set aside time on your calendar each week to continue to work on your Three "
-"Month Plan, and plan check-ins with your training partner at the end of week "
-"1, 2, 3, 4, 6, 8, and 12. Each time you're together, ask about their results "
-"and share yours, making sure you're both working through your plans. "
-"Prayerfully consider continuing as an ongoing spiritual family committed to "
-"multiplying disciples."
-msgstr ""
-
-#: template-zume-course.php:3042
-msgid ""
-"Pray and ask God who He would have you share Zúme Training with by launching "
-"a Leadership Cell of future Zúme Training leaders."
-msgstr ""
-
-#: template-zume-course.php:3050
-msgid ""
-"Be sure to pray with your group before you end your time together. Thank God "
-"that He has created and gifted you with exactly the right talents to make a "
-"difference in His kingdom. Ask Him for wisdom to use the strengths He has "
-"given you and to find other followers who help cover your weaknesses. Pray "
-"that He would make you fruitful and multiply — this was His plan from the "
-"very beginning. Pray that God help you be obedient to Him and invite Him to "
-"work in you and those around you!"
-msgstr ""
-
-#: template-zume-course.php:3068
-msgid "Looking Back"
-msgstr ""
-
-#: template-zume-course.php:3070
-msgid "Welcome back to Zúme Training!"
-msgstr ""
-
-#: template-zume-course.php:3083
-msgid ""
-"You were asked to prayerfully consider continuing as an ongoing spiritual "
-"family committed to multiplying disciples."
-msgstr ""
-
-#: template-zume-course.php:3086
-msgid ""
-"You were encouraged to share Zúme Training by launching a Leadership Cell of "
-"future Zúme Training leaders."
-msgstr ""
-
-#: template-zume-course.php:3089
-msgid ""
-"Take a few moments to see how your group has been doing with these items and "
-"their Three Month Plans since you've last met."
-msgstr ""
-
-#: template-zume-course.php:3096
-msgid ""
-"Pray and thank God that He is faithful to complete His good work in us. Ask "
-"Him to give your group clear heads and open hearts to the great things He "
-"wants to do in and through you. Ask the Holy Spirit to lead your time "
-"together and thank Him for His faithfulness, too. He got you through!"
-msgstr ""
-
-#: template-zume-course.php:3103
-msgid ""
-"In this advanced training session, you’ll take a look at how you can level-"
-"up your Coaching Strengths with a quick checklist assessment. You’ll learn "
-"how Leadership in Networks allows a growing group of small churches to work "
-"together to accomplish even more. And you’ll learn how to develop Peer "
-"Mentoring Groups that take leaders to a whole new level of growth."
-msgstr ""
-
-#: template-zume-course.php:3114
-msgid "Activity (10min)"
-msgstr ""
-
-#: template-zume-course.php:3116
-msgid "Asses yourself using the coaching checklist."
-msgstr ""
-
-#: template-zume-course.php:3121
-msgid "ASSESS"
-msgstr ""
-
-#: template-zume-course.php:3123
-msgid ""
-"The Coaching Checklist is a powerful tool you can use to quickly assess your "
-"own strengths and vulnerabilities when it comes to making disciples who "
-"multiply. It's also a powerful tool you can use to help others – and others "
-"can use to help you."
-msgstr ""
-
-#: template-zume-course.php:3125
-msgid ""
-"Find the Coaching Checklist section in your Zúme Guidebook, and take this "
-"quick (5-minutes or less) self-assessment:"
-msgstr ""
-
-#: template-zume-course.php:3128
-msgid ""
-"Read through the Disciple Training Tools in the far left column of the "
-"Checklist."
-msgstr ""
-
-#: template-zume-course.php:3129
-msgid "Mark each one of the Training Tools, using the following method:"
-msgstr ""
-
-#: template-zume-course.php:3131
-msgid ""
-"If you're unfamiliar or don't understand the Tool – check the BLACK column"
-msgstr ""
-
-#: template-zume-course.php:3134
-msgid ""
-"If you're somewhat familiar but still not sure about the Tool – check the "
-"RED column"
-msgstr ""
-
-#: template-zume-course.php:3137
-msgid ""
-"If you understand and can train the basics on the Tool – check the YELLOW "
-"column"
-msgstr ""
-
-#: template-zume-course.php:3140
-msgid ""
-"If you feel confident and can effectively train the Tool – check the GREEN "
-"column"
-msgstr ""
-
-#: template-zume-course.php:3163
-msgid "Zúme Video Scripts: Coaching Checklist"
-msgstr ""
-
-#: template-zume-course.php:3174
-msgid "Which Training Tools did you feel you would be able to train well?"
-msgstr ""
-
-#: template-zume-course.php:3175
-msgid "Which ones made you feel vulnerable as a trainer?"
-msgstr ""
-
-#: template-zume-course.php:3176
-msgid ""
-"Are there any Training Tools that you would add or subtract from the "
-"Checklist? Why?"
-msgstr ""
-
-#: template-zume-course.php:3185
-msgid ""
-"REMEMBER – Be sure to share your Coaching Checklist results with training "
-"partner or other mentor. If you're helping coach or mentor someone, use this "
-"tool to help you assess which areas need your attention and training."
-msgstr ""
-
-#: template-zume-course.php:3207
-msgid ""
-"What happens to churches as they grow and start new churches that start new "
-"churches? How do they stay connected and live life together as an extended, "
-"spiritual family? They become a network!"
-msgstr ""
-
-#: template-zume-course.php:3226
-msgid "Zúme Video Scripts: Leadership in Networks"
-msgstr ""
-
-#: template-zume-course.php:3234
-msgid ""
-"Are there advantages when networks of simple churches are connected by deep, "
-"personal relationships? What are some examples that come to mind?"
-msgstr ""
-
-#: template-zume-course.php:3253
-msgid "Peer Mentoring Groups"
-msgstr ""
-
-#: template-zume-course.php:3256
-msgid ""
-"Making disciples who make disciples means making leaders who make leaders. "
-"How do you develop stronger leaders? By teaching them how to love one "
-"another better. Peer Mentoring Groups help leaders love deeper."
-msgstr ""
-
-#: template-zume-course.php:3259
-msgid ""
-"Find the Peer Mentoring Groups section in your Zúme Guidebook, and listen to "
-"the audio below."
-msgstr ""
-
-#: template-zume-course.php:3279
-msgid "Zúme Video Scripts: Peer Mentoring Groups"
-msgstr ""
-
-#: template-zume-course.php:3292
-msgid "Practice (60min)"
-msgstr ""
-
-#: template-zume-course.php:3300
-msgid ""
-"Find the Peer Mentoring Groups section in your Zúme Training Guide, and "
-"follow these steps."
-msgstr ""
-
-#: template-zume-course.php:3311
-msgid "GROUPS"
-msgstr ""
-
-#: template-zume-course.php:3315
-msgid ""
-"Break into groups of two or three and work through the 3/3 sections of the "
-"Peer Mentoring Group format. Peer Mentoring is something that happens once a "
-"month or once a quarter and takes some time for the whole group to "
-"participate, so you will not have time for everyone to experience the full "
-"mentoring process in this session."
-msgstr ""
-
-#: template-zume-course.php:3322
-msgid ""
-"To practice, choose one person in your group to be the \"mentee\" for this "
-"session and have the other members spend time acting as Peer Mentors by "
-"working through the suggested questions list and providing guidance and "
-"encouragement for the Mentee's work."
-msgstr ""
-
-#: template-zume-course.php:3324
-msgid ""
-"By the time you're finished, everyone should have a basic understanding of "
-"asking and answering."
-msgstr ""
-
-#: template-zume-course.php:3333
-msgid ""
-"REMEMBER – Spend time studying the Four Fields Diagnostic Diagram and "
-"Generational Map in the Peer Mentoring Groups section of your Zúme Training "
-"Guide. Make sure everyone in your group has a basic understanding of these "
-"tools before asking the suggested questions."
-msgstr ""
-
-#: template-zume-course.php:3348
-msgid "CONGRATULATIONS ON COMPLETING ZÚME TRAINING!"
-msgstr ""
-
-#: template-zume-course.php:3355
-msgid ""
-"You and your group are now ready to take leadership to a new level! Here are "
-"a few more steps to help you KEEP growing!"
-msgstr ""
-
-#: template-zume-course.php:3372
-msgid "Zúme Video Scripts: Completion of Training"
-msgstr ""
-
-#: template-zume-course.php:3379
-msgid "ACT"
-msgstr ""
-
-#: template-zume-course.php:3381
-msgid ""
-"To help others become and make disciples, share this www.ZumeProject.com "
-"link today! It'll soon be in 37 languages."
-msgstr ""
-
-#: template-zume-dashboard.php:78
+#: template-zume-dashboard.php:76
 msgid "Your Groups"
 msgstr ""
 
-#: template-zume-dashboard.php:114
+#: template-zume-dashboard.php:112
 msgid "view"
 msgstr ""
 
-#: template-zume-dashboard.php:120
+#: template-zume-dashboard.php:118
 msgid "edit"
 msgstr ""
 
-#: template-zume-dashboard.php:125
+#: template-zume-dashboard.php:123
 msgid "Meeting Time"
 msgstr ""
 
-#: template-zume-dashboard.php:127 template-zume-dashboard.php:645
-#: template-zume-dashboard.php:783 template-zume-dashboard.php:945
+#: template-zume-dashboard.php:125 template-zume-dashboard.php:643
+#: template-zume-dashboard.php:781 template-zume-dashboard.php:943
 #: template-zume-profile.php:105
 msgid "Address"
 msgstr ""
 
-#: template-zume-dashboard.php:129
+#: template-zume-dashboard.php:127
 msgid "Members"
 msgstr ""
 
-#: template-zume-dashboard.php:132 template-zume-dashboard.php:725
+#: template-zume-dashboard.php:130 template-zume-dashboard.php:723
 msgid "Key"
 msgstr ""
 
-#: template-zume-dashboard.php:176
+#: template-zume-dashboard.php:174
 msgid "Start Next Session "
 msgstr ""
 
-#: template-zume-dashboard.php:188
+#: template-zume-dashboard.php:186
 msgid "Archive Group"
 msgstr ""
 
-#: template-zume-dashboard.php:210
+#: template-zume-dashboard.php:208
 msgid "You have no active groups"
 msgstr ""
 
-#: template-zume-dashboard.php:212
+#: template-zume-dashboard.php:210
 msgid "We recommend at least 3-11 people for a group."
 msgstr ""
 
-#: template-zume-dashboard.php:213
+#: template-zume-dashboard.php:211
 msgid ""
 "You can join a current group when the group owner adds your email to the "
 "approved coleader/participant list. To start your own group, use the button "
 "below."
 msgstr ""
 
-#: template-zume-dashboard.php:221
+#: template-zume-dashboard.php:219
 msgid "Start New Group"
 msgstr ""
 
-#: template-zume-dashboard.php:233
+#: template-zume-dashboard.php:231
 msgid "Video Library"
 msgstr ""
 
-#: template-zume-dashboard.php:234
+#: template-zume-dashboard.php:232
 msgid "of 32 videos"
 msgstr ""
 
-#: template-zume-dashboard.php:239
+#: template-zume-dashboard.php:237
 msgid "Overview Video"
 msgstr ""
 
-#: template-zume-dashboard.php:240
+#: template-zume-dashboard.php:238
 msgid "How Zúme Works"
 msgstr ""
 
-#: template-zume-dashboard.php:241 template-zume-overview.php:92
+#: template-zume-dashboard.php:239 template-zume-overview.php:92
 #: template-zume-overview.php:214
 msgid "Session 1"
 msgstr ""
 
-#: template-zume-dashboard.php:242
+#: template-zume-dashboard.php:240
 msgid "Welcome to Zume"
 msgstr ""
 
-#: template-zume-dashboard.php:243
+#: template-zume-dashboard.php:241
 msgid "Teach Them to Obey"
 msgstr ""
 
-#: template-zume-dashboard.php:244
+#: template-zume-dashboard.php:242
 msgid "Spiritual Breathing"
 msgstr ""
 
-#: template-zume-dashboard.php:245
+#: template-zume-dashboard.php:243
 msgid "S.O.A.P.S Bible Reading"
 msgstr ""
 
-#: template-zume-dashboard.php:247 template-zume-overview.php:102
+#: template-zume-dashboard.php:245 template-zume-overview.php:102
 #: template-zume-overview.php:215
 msgid "Session 2"
 msgstr ""
 
-#: template-zume-dashboard.php:248
+#: template-zume-dashboard.php:246
 msgid "Producers vs Consumers"
 msgstr ""
 
-#: template-zume-dashboard.php:251 template-zume-overview.php:112
+#: template-zume-dashboard.php:249 template-zume-overview.php:112
 #: template-zume-overview.php:216
 msgid "Session 3"
 msgstr ""
 
-#: template-zume-dashboard.php:252
+#: template-zume-dashboard.php:250
 msgid "Spiritual Economy"
 msgstr ""
 
-#: template-zume-dashboard.php:255 template-zume-overview.php:122
+#: template-zume-dashboard.php:253 template-zume-overview.php:122
 #: template-zume-overview.php:217
 msgid "Session 4"
 msgstr ""
 
-#: template-zume-dashboard.php:256
+#: template-zume-dashboard.php:254
 msgid "3 Minute Testimony"
 msgstr ""
 
-#: template-zume-dashboard.php:257
+#: template-zume-dashboard.php:255
 msgid "Greatest Blessing"
 msgstr ""
 
-#: template-zume-dashboard.php:258
+#: template-zume-dashboard.php:256
 msgid "Duckling Discipleship"
 msgstr ""
 
-#: template-zume-dashboard.php:259
+#: template-zume-dashboard.php:257
 msgid "Eyes to See"
 msgstr ""
 
-#: template-zume-dashboard.php:260
+#: template-zume-dashboard.php:258
 msgid "Lord's Supper"
 msgstr ""
 
-#: template-zume-dashboard.php:261 template-zume-overview.php:132
+#: template-zume-dashboard.php:259 template-zume-overview.php:132
 #: template-zume-overview.php:218
 msgid "Session 5"
 msgstr ""
 
-#: template-zume-dashboard.php:263
+#: template-zume-dashboard.php:261
 msgid "Person of Peace"
 msgstr ""
 
-#: template-zume-dashboard.php:264 template-zume-overview.php:143
+#: template-zume-dashboard.php:262 template-zume-overview.php:143
 #: template-zume-overview.php:219
 msgid "Session 6"
 msgstr ""
 
-#: template-zume-dashboard.php:265
+#: template-zume-dashboard.php:263
 msgid "Faithfulness"
 msgstr ""
 
-#: template-zume-dashboard.php:266
+#: template-zume-dashboard.php:264
 msgid "3/3 Group"
 msgstr ""
 
-#: template-zume-dashboard.php:267
+#: template-zume-dashboard.php:265
 msgid "3/3 Group Live"
 msgstr ""
 
-#: template-zume-dashboard.php:268 template-zume-overview.php:154
+#: template-zume-dashboard.php:266 template-zume-overview.php:154
 #: template-zume-overview.php:220
 msgid "Session 7"
 msgstr ""
 
-#: template-zume-dashboard.php:269
+#: template-zume-dashboard.php:267
 msgid "Training Cycle"
 msgstr ""
 
-#: template-zume-dashboard.php:270 template-zume-overview.php:165
+#: template-zume-dashboard.php:268 template-zume-overview.php:165
 #: template-zume-overview.php:221
 msgid "Session 8"
 msgstr ""
 
-#: template-zume-dashboard.php:271
+#: template-zume-dashboard.php:269
 msgid "Leadership Cells"
 msgstr ""
 
-#: template-zume-dashboard.php:272 template-zume-overview.php:176
+#: template-zume-dashboard.php:270 template-zume-overview.php:176
 #: template-zume-overview.php:222
 msgid "Session 9"
 msgstr ""
 
-#: template-zume-dashboard.php:273
+#: template-zume-dashboard.php:271
 msgid "Non-Sequential"
 msgstr ""
 
-#: template-zume-dashboard.php:274
+#: template-zume-dashboard.php:272
 msgid "Pace"
 msgstr ""
 
-#: template-zume-dashboard.php:275
+#: template-zume-dashboard.php:273
 msgid "Part of Two Churches"
 msgstr ""
 
-#: template-zume-dashboard.php:276
+#: template-zume-dashboard.php:274
 msgid "Completion of Training"
 msgstr ""
 
-#: template-zume-dashboard.php:277 template-zume-overview.php:223
+#: template-zume-dashboard.php:275 template-zume-overview.php:223
 msgid "Session 10"
 msgstr ""
 
-#: template-zume-dashboard.php:278
+#: template-zume-dashboard.php:276
 msgid "Coaching Checklist"
 msgstr ""
 
-#: template-zume-dashboard.php:279
+#: template-zume-dashboard.php:277
 msgid "Leadership in Networks"
 msgstr ""
 
-#: template-zume-dashboard.php:280
+#: template-zume-dashboard.php:278
 msgid "Peer Mentoring"
 msgstr ""
 
-#: template-zume-dashboard.php:353
+#: template-zume-dashboard.php:351
 msgid "Session videos will be added as you complete sessions."
 msgstr ""
 
-#: template-zume-dashboard.php:374 template-zume-dashboard.php:568
+#: template-zume-dashboard.php:372 template-zume-dashboard.php:566
 msgid "Archived Groups"
 msgstr ""
 
-#: template-zume-dashboard.php:390
+#: template-zume-dashboard.php:388
 msgid "activate"
 msgstr ""
 
-#: template-zume-dashboard.php:418
+#: template-zume-dashboard.php:416
 msgid "Your Coach"
 msgstr ""
 
-#: template-zume-dashboard.php:482
+#: template-zume-dashboard.php:480
 msgid "Invitations"
 msgstr ""
 
-#: template-zume-dashboard.php:491
+#: template-zume-dashboard.php:489
 msgid "invites you to join"
 msgstr ""
 
-#: template-zume-dashboard.php:497
+#: template-zume-dashboard.php:495
 msgid "Accept"
 msgstr ""
 
-#: template-zume-dashboard.php:499
+#: template-zume-dashboard.php:497
 msgid "Decline"
 msgstr ""
 
-#: template-zume-dashboard.php:521
+#: template-zume-dashboard.php:519
 msgid "Join me on the Zúme Project"
 msgstr ""
 
-#: template-zume-dashboard.php:522
+#: template-zume-dashboard.php:520
 msgid "Invite to Zúme"
 msgstr ""
 
-#: template-zume-dashboard.php:592
+#: template-zume-dashboard.php:590
 msgid "Create Group"
 msgstr ""
 
-#: template-zume-dashboard.php:601 template-zume-dashboard.php:736
-#: template-zume-dashboard.php:936
+#: template-zume-dashboard.php:599 template-zume-dashboard.php:734
+#: template-zume-dashboard.php:934
 msgid "Group Name"
 msgstr ""
 
-#: template-zume-dashboard.php:607
+#: template-zume-dashboard.php:605
 msgid "Number of Group Members (including you)"
 msgstr ""
 
-#: template-zume-dashboard.php:638 template-zume-dashboard.php:775
-#: template-zume-dashboard.php:942
+#: template-zume-dashboard.php:636 template-zume-dashboard.php:773
+#: template-zume-dashboard.php:940
 msgid "Planned Meeting Time"
 msgstr ""
 
-#: template-zume-dashboard.php:639 template-zume-dashboard.php:777
+#: template-zume-dashboard.php:637 template-zume-dashboard.php:775
 msgid "example: Saturday 7PM"
 msgstr ""
 
-#: template-zume-dashboard.php:657 template-zume-dashboard.php:795
+#: template-zume-dashboard.php:655 template-zume-dashboard.php:793
 #: template-zume-profile.php:118
 msgid "Validate"
 msgstr ""
 
-#: template-zume-dashboard.php:675 template-zume-dashboard.php:815
-#: template-zume-dashboard.php:956
+#: template-zume-dashboard.php:673 template-zume-dashboard.php:813
+#: template-zume-dashboard.php:954
 msgid "Coleaders or additional participants"
 msgstr ""
 
-#: template-zume-dashboard.php:683 template-zume-dashboard.php:839
+#: template-zume-dashboard.php:681 template-zume-dashboard.php:837
 msgid "Add"
 msgstr ""
 
-#: template-zume-dashboard.php:690
+#: template-zume-dashboard.php:688
 msgid "Submit"
 msgstr ""
 
-#: template-zume-dashboard.php:715
+#: template-zume-dashboard.php:713
 msgid "Edit Group"
 msgstr ""
 
-#: template-zume-dashboard.php:716
+#: template-zume-dashboard.php:714
 msgid ""
 "You are the owner of this group. All changes to the group details must be "
 "done through \n"
 "                you."
 msgstr ""
 
-#: template-zume-dashboard.php:731
+#: template-zume-dashboard.php:729
 msgid "Change Key"
 msgstr ""
 
-#: template-zume-dashboard.php:743 template-zume-dashboard.php:939
+#: template-zume-dashboard.php:741 template-zume-dashboard.php:937
 msgid "Number of Participants"
 msgstr ""
 
-#: template-zume-dashboard.php:786
+#: template-zume-dashboard.php:784
 msgid "example: 1000 Broadway, Denver, CO 80126"
 msgstr ""
 
-#: template-zume-dashboard.php:817
+#: template-zume-dashboard.php:815
 msgid ""
 "Adding a coleader or additional participants below gives their \n"
 "                            Zúme dashboard access to the group, once they "
@@ -3655,19 +3693,19 @@ msgid ""
 "change any details of the group."
 msgstr ""
 
-#: template-zume-dashboard.php:853
+#: template-zume-dashboard.php:851
 msgid "Archive"
 msgstr ""
 
-#: template-zume-dashboard.php:883
+#: template-zume-dashboard.php:881
 msgid "ARE YOU SURE YOU WANT TO DELETE THIS GROUP?"
 msgstr ""
 
-#: template-zume-dashboard.php:920
+#: template-zume-dashboard.php:918
 msgid "View Group"
 msgstr ""
 
-#: template-zume-dashboard.php:923
+#: template-zume-dashboard.php:921
 msgid ""
 "You are a participant or coleader of this group and can view the group \n"
 "                        details and lead the group through a session, but "
@@ -3676,25 +3714,25 @@ msgid ""
 "the group owner."
 msgstr ""
 
-#: template-zume-dashboard.php:932
+#: template-zume-dashboard.php:930
 msgid "Group Owner"
 msgstr ""
 
-#: template-zume-dashboard.php:977
+#: template-zume-dashboard.php:975
 msgid "Remove Group"
 msgstr ""
 
-#: template-zume-dashboard.php:991
+#: template-zume-dashboard.php:989
 msgid "ARE YOU SURE YOU WANT TO REMOVE THIS GROUP?"
 msgstr ""
 
-#: template-zume-dashboard.php:992
+#: template-zume-dashboard.php:990
 msgid ""
 "To reverse this action, the owner of the group must re-invite you to the "
 "group again."
 msgstr ""
 
-#: template-zume-dashboard.php:999
+#: template-zume-dashboard.php:997
 msgid "Remove"
 msgstr ""
 
