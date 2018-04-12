@@ -435,7 +435,7 @@ endforeach; ?>
                         if ( $results ) {
                             $fields['ip_lng'] = $results['lng'];
                             $fields['ip_lat'] = $results['lat'];
-                            $fields['ip_raw_location'] = $results;
+                            $fields['ip_raw_location'] = $results['raw'];
                         }
                         $updated = true;
                         $report[] = 'Updated Group ' . $fields['key'] . ": IP Location";

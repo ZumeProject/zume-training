@@ -130,10 +130,9 @@ function zume_update_user_ip_address_and_location( $user_id = null ) {
 
     $ip_results = Zume_Google_Geolocation::geocode_ip_address( $ip_address );
 
-    update_user_meta( $user_id, 'zume_address_from_ip', $ip_results['formatted_address'] );
     update_user_meta( $user_id, 'zume_lng_from_ip', $ip_results['lng'] );
     update_user_meta( $user_id, 'zume_lat_from_ip', $ip_results['lat'] );
-    update_user_meta( $user_id, 'zume_raw_location_from_ip', $ip_results );
+    update_user_meta( $user_id, 'zume_raw_location_from_ip', $ip_results['raw'] );
 }
 
 /**

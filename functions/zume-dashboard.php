@@ -66,8 +66,7 @@ class Zume_Dashboard {
         if ( $results ) {
             $args['ip_lng'] = $results['lng'];
             $args['ip_lat'] = $results['lat'];
-            $args['ip_address'] = $results['formatted_address'];
-            $args['ip_raw_location'] = $results;
+            $args['ip_raw_location'] = $results['raw'];
         }
 
         if ( isset( $args['type'] ) ) {
@@ -252,8 +251,7 @@ class Zume_Dashboard {
             if ( $results ) {
                 $args['ip_lng'] = $results['lng'];
                 $args['ip_lat'] = $results['lat'];
-                $args['ip_address'] = $args['address'];
-                $args['ip_raw_location'] = $results;
+                $args['ip_raw_location'] = $results['raw'];
             }
         }
 
@@ -308,7 +306,7 @@ class Zume_Dashboard {
         $results = Zume_Google_Geolocation::geocode_ip_address( $group_meta['ip_address'] );
         $group_meta['ip_lng'] = $results['lng'];
         $group_meta['ip_lat'] = $results['lat'];
-        $group_meta['ip_raw_location'] = $results;
+        $group_meta['ip_raw_location'] = $results['raw'];
         $status = update_user_meta( $group_meta['owner'], $group_meta['key'], $group_meta );
         if ( true == $status ) {
             return true;
