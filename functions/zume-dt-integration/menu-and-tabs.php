@@ -39,7 +39,7 @@ class Zume_Integration_Menu
     {
         $this->token = 'site_link_system_settings';
         add_action( "admin_menu", [ $this, "register_menu" ] );
-
+        add_action( 'dt_settings_tab_menu', [ $this, 'add_tab' ], 99, 1 );
     } // End __construct()
 
     /**
@@ -50,7 +50,18 @@ class Zume_Integration_Menu
     public function register_menu()
     {
         add_submenu_page( 'edit.php?post_type=site_link_system', __( 'Settings' ), __( 'Settings' ), 'manage_options', $this->token, [ $this, 'zume_content' ] );
+
+
     }
+
+    public function add_tab( $tab ) {
+        echo '<a href="admin.php?page=dt_options&tab=auto_location" class="nav-tab ';
+        if ( $tab == 'auto_location' ) {
+            echo 'nav-tab-active';
+        }
+        echo '">Auto Locations</a>';
+    }
+
 
     /**
      * Combined tabs preprocessor
