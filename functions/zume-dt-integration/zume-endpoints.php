@@ -153,26 +153,24 @@ class Zume_Integration_Endpoints
 
             if ( isset( $params['zume_stats_check_sum'] ) && ! empty( $params['zume_stats_check_sum'] ) ) {
 
+                if ( get_transient( 'dt_zume_site_stats' ) ) {
+                    $report = get_transient( 'dt_zume_site_stats' );
+                    if ( $report['zume_stats_check_sum'] == $params['zume_stats_check_sum'] ) {
+                        return [
+                            'status' => 'OK'
+                        ];
+                    } else {
+                        return [
+                            'status' => 'Update_Needed',
+                            'raw_record' => $report,
+                        ];
+                    }
+                }
+
                 $report = [
                     'hero_stats' => Zume_Site_Stats::hero_stats(),
-                    'groups_progress_by_month' => [
-                        [ 'Month', 'Registered', 'Engaged', 'Active', 'Trained', 'Average' ],
-                        [ '2004/05',  165,      938,         522,             998,             614.6 ],
-                        [ '2005/06',  135,      1120,        599,             1268,          682 ],
-                        [ '2006/07',  157,      1167,        587,             807,             623 ],
-                        [ '2007/08',  139,      1110,        615,             968,            609.4 ],
-                        [ '2008/09',  136,      691,         629,             1026,          569.6 ],
-                        [ '2008/09',  136,      691,         629,             1026,           569.6 ],
-                    ],
-                    'people_progress_by_month' => [
-                        [ 'Month', 'Registered', 'Engaged', 'Active', 'Trained', 'Average' ],
-                        [ '2004/05',  165,      938,         522,             998,             614.6 ],
-                        [ '2005/06',  135,      1120,        599,             1268,          682 ],
-                        [ '2006/07',  157,      1167,        587,             807,             623 ],
-                        [ '2007/08',  139,      1110,        615,             968,            609.4 ],
-                        [ '2008/09',  136,      691,         629,             1026,          569.6 ],
-                        [ '2008/09',  136,      691,         629,             1026,           569.6 ],
-                    ],
+                    'groups_progress_by_month' => Zume_Site_Stats::groups_progress_by_month(),
+                    'people_progress_by_month' => Zume_Site_Stats::people_progress_by_month(),
                     'table_totals_group_people' => [
                         [ 'Type', 'Groups', 'People', ],
                         [ 'Registrations', 200, 150 ],
@@ -232,6 +230,12 @@ class Zume_Integration_Endpoints
 
                 $report['zume_stats_check_sum'] = md5( maybe_serialize( $report ) );
                 $report['timestamp'] = current_time( 'mysql' );
+
+                // store record until midnight
+                $midnight = mktime( 0, 0, 0, date( 'n' ), date( 'j' ) +1, date( 'Y' ) );
+                $the_time_until_midnight = $midnight - current_time( 'timestamp' );
+                set_transient( 'dt_zume_site_stats', $report, $the_time_until_midnight );
+                // end store record
 
                 if ( $report['zume_stats_check_sum'] == $params['zume_stats_check_sum'] ) {
                     return [

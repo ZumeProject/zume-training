@@ -57,7 +57,7 @@ function zume_site_scripts() {
                 "finish" => esc_html__( 'Finish', 'zume' ),
                 "next" => esc_html__( 'Next', 'zume' ),
                 "previous" => esc_html__( 'Previous', 'zume' ),
-                "loading" => esc_html__( 'Loading...', 'zume' )
+                "loading" => esc_html__( 'Loading...', 'zume' ),
             ]
         )
     );

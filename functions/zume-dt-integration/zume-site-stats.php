@@ -4,7 +4,7 @@ class Zume_Site_Stats
 {
     public static function temp_load_hook() {
         dt_write_log( 'FUNCTION RESPONSE' );
-        dt_write_log( self::view_geodata() );
+        dt_write_log( self::groups_progress_by_month() );
     }
 
     private static function query_zume_group_records() {
@@ -19,6 +19,7 @@ class Zume_Site_Stats
         );
         return $groups_meta;
     }
+
 
     public static function get_group_coordinates() {
         $groups_meta = self::query_zume_group_records();
@@ -210,15 +211,18 @@ class Zume_Site_Stats
         $groups_meta = self::query_zume_group_records();
 
         $hero_stats = [
+            'registered_people' => 0, // total people registered on Zume Project
             'engaged_people' => 0, // total members reported in groups who have finished at least one session
             'active_people' => 0, // count of members for sessions that finished the last 30 days
             'trained_people' => 0, // finished the 10 sessions
-            'total_people_registered' => 0,
+
             'total_people_in_groups' => 0,
+
+            'registered_groups' => 0,
             'engaged_groups' => 0, // groups that have at least finished 1 session
             'active_groups' => 0, // finished a session in the last 45 days
             'trained_groups' => 0, // finished the entire course
-            'total_groups_registered' => 0, // number of registered groups that have finished session 1
+
             'total_languages' => 0, // number of languages installed and available
             'total_countries' => 1, // number of countries groups or users are located in
             'hours_trained_as_group' => 0, // number of sessions * 2 = hours of training
@@ -227,7 +231,7 @@ class Zume_Site_Stats
         ];
 
         // Registered people
-        $hero_stats['total_people_registered'] = Zume_Site_Stats::get_registered_people();
+        $hero_stats['registered_people'] = Zume_Site_Stats::get_registered_people();
         $hero_stats['total_languages'] = count( pll_languages_list() );
 
         // Loop group details
@@ -285,7 +289,7 @@ class Zume_Site_Stats
 
                 // total people in groups
                 $hero_stats['total_people_in_groups'] = $hero_stats['total_people_in_groups'] + $members_in_group;
-                $hero_stats['total_groups_registered'] = $hero_stats['total_groups_registered'] + 1;
+                $hero_stats['registered_groups'] = $hero_stats['registered_groups'] + 1;
 
                 // hours trained
                 if ( $fields['session_1'] ) {
@@ -574,49 +578,424 @@ class Zume_Site_Stats
         }
     }
 
-    public static function view_geodata() {
+//    public static function view_geodata() {
+//
+//        $result = Zume_Google_Geolocation::query_google_api( '799 W Lincolnway, Columbia City, IN 46725, USA', 'core' );
+//
+//        $location = [];
+//        $level1 = '';
+//        $level2 = '';
+//
+//        if ( isset( $result['raw']['status'] ) && ( 'OK' == $result['raw']['status'] ?? '' ) ) {
+//            $address_components = $result['raw']['results'][0]['address_components'];
+//            foreach ( $address_components as $address_component ) {
+//                if ( 'neighborhood' == $address_component['types'][0] ) {
+//                    $location['neighborhood'] = $address_component['long_name'];
+//                    $level2 .= $location['neighborhood'] . ', ';
+//                }
+//                if ( 'locality' == $address_component['types'][0] ) {
+//                    $location['locality'] = $address_component['long_name'];
+//                    $level2 .= $location['locality'] . ', ';
+//                }
+//                if ( 'administrative_area_level_2' == $address_component['types'][0] ) {
+//                    $location['admin_2'] = $address_component['long_name'];
+//                    $level2 .= $location['admin_2'] . ', ';
+//                }
+//                if ( 'administrative_area_level_1' == $address_component['types'][0] ) {
+//                    $location['admin_1'] = $address_component['long_name'];
+//                    $level1 .= $location['admin_1'] . ', ';
+//                }
+//                if ( 'country' == $address_component['types'][0] ) {
+//                    $location['country'] = $address_component['long_name'];
+//                    $level1 .= $location['country'];
+//                }
+//                $level1 = rtrim( $level1, ',' );
+//            }
+//
+//            $level2 = substr( $level2, 0, -2 );
+//
+//            $location['level2'] = $level2;
+//            $location['level1'] = $level1;
+//            $location['raw'] = $result;
+//
+//
+//            return $location;
+//        }
+//    }
 
-        $result = Zume_Google_Geolocation::query_google_api( '799 W Lincolnway, Columbia City, IN 46725, USA', 'core' );
+    public static function query_groups_registered_by_month() {
+        global $wpdb;
+        $result = $wpdb->get_results(
+            "
+                    SELECT CONCAT( YEAR(created_date), '-', MONTH(created_date) ) as date, count(id) as total
+                    FROM $wpdb->zume_logging
+                    WHERE page = 'dashboard' AND action = 'create_group'
+                    GROUP BY MONTH(created_date)
+                    ORDER BY YEAR(created_date), MONTH(created_date) LIMIT 6;
+                  ", ARRAY_A
+        );
+        return $result;
+    }
+    public static function query_groups_engaged_by_month() {
+        global $wpdb;
+        $result = $wpdb->get_results(
+            "
+                    SELECT CONCAT( YEAR(created_date), '-', MONTH(created_date) ) as date, count(id) as total
+                    FROM $wpdb->zume_logging
+                    WHERE page = 'course' AND action = 'session_1' AND meta LIKE 'group%'
+                    GROUP BY MONTH(created_date)
+                    ORDER BY YEAR(created_date), MONTH(created_date) LIMIT 6;
+                  ", ARRAY_A
+        );
+        return $result;
+    }
+    public static function query_groups_trained_by_month() {
+        global $wpdb;
+        $result = $wpdb->get_results(
+            "
+                    SELECT CONCAT( YEAR(created_date), '-', MONTH(created_date) ) as date, count(id) as total
+                    FROM $wpdb->zume_logging
+                    WHERE page = 'course' AND ( action = 'session_9' OR action = 'session_10' ) AND meta LIKE 'group%'
+                    GROUP BY MONTH(created_date)
+                    ORDER BY YEAR(created_date), MONTH(created_date) LIMIT 6;
+                  ", ARRAY_A
+        );
+        return $result;
+    }
+    public static function query_groups_active_by_month() {
+        global $wpdb;
+        $result = $wpdb->get_results(
+            "
+                    SELECT CONCAT( YEAR(created_date), '-', MONTH(created_date) ) as date, count(id) as total
+                    FROM $wpdb->zume_logging
+                    WHERE page = 'course' AND action LIKE 'session_%' AND meta LIKE 'group%'
+                    GROUP BY MONTH(created_date)
+                    ORDER BY YEAR(created_date), MONTH(created_date) LIMIT 6;
+                  ", ARRAY_A
+        );
+        return $result;
+    }
+    public static function query_people_registered_by_month() {
+        global $wpdb;
+        $result = $wpdb->get_results(
+            "
+                    SELECT CONCAT( YEAR(created_date), '-', MONTH(created_date) ) as date, count(id) as total
+                    FROM $wpdb->zume_logging
+                    WHERE action = 'registered' GROUP BY MONTH(created_date)
+                    ORDER BY YEAR(created_date), MONTH(created_date) LIMIT 6;
+                  ", ARRAY_A
+        );
+        return $result;
+    }
+    public static function query_people_engaged_by_month() {
+        global $wpdb;
+        $result = $wpdb->get_results(
+            "
+                    SELECT CONCAT( YEAR(a.created_date), '-', MONTH(a.created_date) ) as date, SUM(b.members) as total 
+                    FROM $wpdb->zume_logging as a
+                      INNER JOIN (
+                                   SELECT *, REPLACE( meta, 'group_', '') as members FROM $wpdb->zume_logging
+                                   WHERE page = 'course' AND action = 'session_1' AND meta LIKE 'group%'
+                                   GROUP BY group_id, action, MONTH(created_date)
+                                 ) as b
+                        ON a.id=b.id
+                    GROUP BY MONTH(a.created_date)
+                    ORDER BY YEAR(a.created_date), MONTH(a.created_date) LIMIT 6
+                  ", ARRAY_A
+        );
+        return $result;
+    }
+    public static function query_people_trained_by_month() {
+        global $wpdb;
+        $result = $wpdb->get_results(
+            "
+                    SELECT CONCAT( YEAR(a.created_date), '-', MONTH(a.created_date) ) as date, SUM(b.members) as total 
+                    FROM $wpdb->zume_logging as a
+                      INNER JOIN (
+                                   SELECT *, REPLACE( meta, 'group_', '') as members FROM $wpdb->zume_logging
+                                   WHERE page = 'course' AND ( action = 'session_9' OR action = 'session_10' ) AND meta LIKE 'group%'
+                                   GROUP BY group_id, action, MONTH(created_date)
+                                 ) as b
+                        ON a.id=b.id
+                    GROUP BY MONTH(a.created_date)
+                    ORDER BY YEAR(a.created_date), MONTH(a.created_date) LIMIT 6
+                  ", ARRAY_A
+        );
+        return $result;
+    }
+    public static function query_people_active_by_month() {
+        global $wpdb;
+        $result = $wpdb->get_results(
+            "
+                    SELECT CONCAT( YEAR(a.created_date), '-', MONTH(a.created_date) ) as date, SUM(b.members) as total 
+                    FROM $wpdb->zume_logging as a
+                    INNER JOIN (
+                        SELECT *, REPLACE( meta, 'group_', '') as members FROM $wpdb->zume_logging
+                        WHERE meta LIKE 'group_%'
+                        GROUP BY group_id, action, MONTH(created_date)
+                        ) as b
+                    ON a.id=b.id
+                    GROUP BY MONTH(a.created_date)
+                    ORDER BY YEAR(a.created_date), MONTH(a.created_date) LIMIT 6
+                  ", ARRAY_A
+        );
+        return $result;
+    }
 
-        $location = [];
-        $level1 = '';
-        $level2 = '';
+    public static function groups_progress_by_month() {
 
-        if ( isset( $result['raw']['status'] ) && ( 'OK' == $result['raw']['status'] ?? '' ) ) {
-            $address_components = $result['raw']['results'][0]['address_components'];
-            foreach ( $address_components as $address_component ) {
-                if ( 'neighborhood' == $address_component['types'][0] ) {
-                    $location['neighborhood'] = $address_component['long_name'];
-                    $level2 .= $location['neighborhood'] . ', ';
-                }
-                if ( 'locality' == $address_component['types'][0] ) {
-                    $location['locality'] = $address_component['long_name'];
-                    $level2 .= $location['locality'] . ', ';
-                }
-                if ( 'administrative_area_level_2' == $address_component['types'][0] ) {
-                    $location['admin_2'] = $address_component['long_name'];
-                    $level2 .= $location['admin_2'] . ', ';
-                }
-                if ( 'administrative_area_level_1' == $address_component['types'][0] ) {
-                    $location['admin_1'] = $address_component['long_name'];
-                    $level1 .= $location['admin_1'] . ', ';
-                }
-                if ( 'country' == $address_component['types'][0] ) {
-                    $location['country'] = $address_component['long_name'];
-                    $level1 .= $location['country'];
-                }
-                $level1 = rtrim( $level1, ',' );
-            }
+        // Get dates YYYY-M
+        $five_months_back = date( 'Y-n', strtotime( '-5 month' ) );
+        $four_months_back = date( 'Y-n', strtotime( '-4 month' ) );
+        $three_months_back = date( 'Y-n', strtotime( '-3 month' ) );
+        $two_months_back = date( 'Y-n', strtotime( '-2 month' ) );
+        $one_month_back = date( 'Y-n', strtotime( '-1 month' ) );
+        $this_month = date( 'Y-n' );
 
-            $level2 = substr( $level2, 0, -2 );
+        // build default date array
+        $expected_dates = [
+            $five_months_back => 0,
+            $four_months_back => 0,
+            $three_months_back => 0,
+            $two_months_back => 0,
+            $one_month_back => 0,
+            $this_month => 0,
+        ];
 
-            $location['level2'] = $level2;
-            $location['level1'] = $level1;
-            $location['raw'] = $result;
+        // get data and format array
+        $registered = self::combine_by_month_array( self::query_groups_registered_by_month() );
+        $engaged = self::combine_by_month_array( self::query_groups_engaged_by_month() );
+        $trained = self::combine_by_month_array( self::query_groups_trained_by_month() );
+        $active = self::combine_by_month_array( self::query_groups_active_by_month() );
 
+        // parse results against default so that we have an expected amount of array elements, if even with a 0 value
+        $registered = wp_parse_args( $registered, $expected_dates );
+        $engaged = wp_parse_args( $engaged, $expected_dates );
+        $trained = wp_parse_args( $trained, $expected_dates );
+        $active = wp_parse_args( $active, $expected_dates );
 
-            return $location;
+        $stats = [
+            [
+                'Month',
+                'Registered',
+                'Engaged',
+                'Trained',
+                'Active',
+                'Average'
+            ],
+            [
+                date( 'M', strtotime( '-5 month' ) ),
+                $registered[$five_months_back],
+                $engaged[$five_months_back],
+                $trained[$five_months_back],
+                $active[$five_months_back],
+                $average = round(array_sum([
+                        $registered[$five_months_back],
+                        $engaged[$five_months_back],
+                        $trained[$five_months_back],
+                        $active[$five_months_back],
+                ]) /6 )
+            ],
+            [
+                date( 'M', strtotime( '-4 month' ) ),
+                $registered[$four_months_back],
+                $engaged[$four_months_back],
+                $trained[$four_months_back],
+                $active[$four_months_back],
+                $average = round(array_sum([
+                        $registered[$four_months_back],
+                        $engaged[$four_months_back],
+                        $trained[$four_months_back],
+                        $active[$four_months_back],
+                ]) /6 )
+            ],
+            [
+                date( 'M', strtotime( '-3 month' ) ),
+                $registered[$three_months_back],
+                $engaged[$three_months_back],
+                $trained[$three_months_back],
+                $active[$three_months_back],
+                $average = round(array_sum([
+                        $registered[$three_months_back],
+                        $engaged[$three_months_back],
+                        $trained[$three_months_back],
+                        $active[$three_months_back],
+                ]) /6 )
+            ],
+            [
+                date( 'M', strtotime( '-2 month' ) ),
+                $registered[$two_months_back],
+                $engaged[$two_months_back],
+                $trained[$two_months_back],
+                $active[$two_months_back],
+                $average = round(array_sum([
+                    $registered[$two_months_back],
+                    $engaged[$two_months_back],
+                    $trained[$two_months_back],
+                    $active[$two_months_back],
+                ]) /6 )
+            ],
+            [
+                date( 'M', strtotime( '-1 month' ) ),
+                $registered[$one_month_back],
+                $engaged[$one_month_back],
+                $trained[$one_month_back],
+                $active[$one_month_back],
+                $average = round(array_sum([
+                        $registered[$one_month_back],
+                        $engaged[$one_month_back],
+                        $trained[$one_month_back],
+                        $active[$one_month_back],
+                ]) /6 )
+            ],
+            [
+                date( 'M' ),
+                $registered[$this_month],
+                $engaged[$this_month],
+                $trained[$this_month],
+                $active[$this_month],
+                $average = round(array_sum([
+                        $registered[$this_month],
+                        $engaged[$this_month],
+                        $trained[$this_month],
+                        $active[$this_month],
+                ]) /6 )
+            ],
+        ];
+
+        return $stats;
+    }
+
+    public static function people_progress_by_month() {
+
+        // Get dates YYYY-M
+        $five_months_back = date( 'Y-n', strtotime( '-5 month' ) );
+        $four_months_back = date( 'Y-n', strtotime( '-4 month' ) );
+        $three_months_back = date( 'Y-n', strtotime( '-3 month' ) );
+        $two_months_back = date( 'Y-n', strtotime( '-2 month' ) );
+        $one_month_back = date( 'Y-n', strtotime( '-1 month' ) );
+        $this_month = date( 'Y-n' );
+
+        // build default date array
+        $expected_dates = [
+            $five_months_back => 0,
+            $four_months_back => 0,
+            $three_months_back => 0,
+            $two_months_back => 0,
+            $one_month_back => 0,
+            $this_month => 0,
+        ];
+
+        // get data and format array
+        $registered = self::combine_by_month_array( self::query_people_registered_by_month() );
+        $engaged = self::combine_by_month_array( self::query_people_engaged_by_month() );
+        $trained = self::combine_by_month_array( self::query_people_trained_by_month() );
+        $active = self::combine_by_month_array( self::query_people_active_by_month() );
+
+        // parse results against default so that we have an expected amount of array elements, if even with a 0 value
+        $registered = wp_parse_args( $registered, $expected_dates );
+        $engaged = wp_parse_args( $engaged, $expected_dates );
+        $trained = wp_parse_args( $trained, $expected_dates );
+        $active = wp_parse_args( $active, $expected_dates );
+
+        $stats = [
+            [
+                'Month',
+                'Registered',
+                'Engaged',
+                'Trained',
+                'Active',
+                'Average'
+            ],
+            [
+                date( 'M', strtotime( '-5 month' ) ),
+                $registered[$five_months_back],
+                $engaged[$five_months_back],
+                $trained[$five_months_back],
+                $active[$five_months_back],
+                $average = round(array_sum([
+                        $registered[$five_months_back],
+                        $engaged[$five_months_back],
+                        $trained[$five_months_back],
+                        $active[$five_months_back],
+                ]) /6 )
+            ],
+            [
+                date( 'M', strtotime( '-4 month' ) ),
+                $registered[$four_months_back],
+                $engaged[$four_months_back],
+                $trained[$four_months_back],
+                $active[$four_months_back],
+                $average = round(array_sum([
+                        $registered[$four_months_back],
+                        $engaged[$four_months_back],
+                        $trained[$four_months_back],
+                        $active[$four_months_back],
+                ]) /6 )
+            ],
+            [
+                date( 'M', strtotime( '-3 month' ) ),
+                $registered[$three_months_back],
+                $engaged[$three_months_back],
+                $trained[$three_months_back],
+                $active[$three_months_back],
+                $average = round(array_sum([
+                        $registered[$three_months_back],
+                        $engaged[$three_months_back],
+                        $trained[$three_months_back],
+                        $active[$three_months_back],
+                ]) /6 )
+            ],
+            [
+                date( 'M', strtotime( '-2 month' ) ),
+                $registered[$two_months_back],
+                $engaged[$two_months_back],
+                $trained[$two_months_back],
+                $active[$two_months_back],
+                $average = round(array_sum([
+                        $registered[$two_months_back],
+                        $engaged[$two_months_back],
+                        $trained[$two_months_back],
+                        $active[$two_months_back],
+                ]) /6 )
+            ],
+            [
+                date( 'M', strtotime( '-1 month' ) ),
+                $registered[$one_month_back],
+                $engaged[$one_month_back],
+                $trained[$one_month_back],
+                $active[$one_month_back],
+                $average = round(array_sum([
+                        $registered[$one_month_back],
+                        $engaged[$one_month_back],
+                        $trained[$one_month_back],
+                        $active[$one_month_back],
+                ]) /6 )
+            ],
+            [
+                date( 'M' ),
+                $registered[$this_month],
+                $engaged[$this_month],
+                $trained[$this_month],
+                $active[$this_month],
+                $average = round(array_sum([
+                        $registered[$this_month],
+                        $engaged[$this_month],
+                        $trained[$this_month],
+                        $active[$this_month],
+                ]) /6 )
+            ],
+        ];
+
+        return $stats;
+    }
+
+    private static function combine_by_month_array( $array ) {
+        $new_array = [];
+        foreach ( $array as $value ) {
+            $new_array[$value['date']] = $value['total'];
         }
+        return $new_array;
     }
 
 }
