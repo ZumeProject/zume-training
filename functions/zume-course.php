@@ -1081,7 +1081,7 @@ class Zume_Course_Content {
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="large-3 cell activity-title lowercase"><?php esc_html_e( '#ZumeProject', 'zume' ) ?></div>
                 <div class="large-9 cell activity-description">
-                    <?php esc_html_e( 'Thing others could use the 60-minute prayer tool? Share about it on social media.', 'zume' ) ?>
+                    <?php esc_html_e( 'Think others could use the 60-minute prayer tool? Share about it on social media.', 'zume' ) ?>
                 </div>
             </div>
             <!-- grid-x -->
