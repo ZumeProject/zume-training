@@ -71,6 +71,12 @@ function zume_dra_only_allow_logged_in_rest_access( $access )
         $is_public = true;
     }
     /**
+     * Android app uses jwt authentication plugin which needs public access.
+     */
+    if ( isset( $_SERVER['REQUEST_URI'] ) && strpos( sanitize_text_field( wp_unslash( $_SERVER['REQUEST_URI'] ) ), '/jwt-auth/' ) !== false ) {
+        $is_public = true;
+    }
+    /**
      * External integrations to a Disciple Tools site can be done through the /dt-public/ route, which is left open to non-logged in external access
      */
     if ( isset( $_SERVER['REQUEST_URI'] ) && strpos( sanitize_text_field( wp_unslash( $_SERVER['REQUEST_URI'] ) ), '/dt-public/' ) !== false ) {
