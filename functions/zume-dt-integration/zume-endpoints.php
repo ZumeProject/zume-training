@@ -45,10 +45,10 @@ class Zume_Integration_Endpoints
 
         register_rest_route(
             $namespace, '/zume/check_for_update', [
-            [
-            'methods'  => WP_REST_Server::CREATABLE,
-            'callback' => [ $this, 'check_for_update' ],
-            ],
+                [
+                'methods'  => WP_REST_Server::CREATABLE,
+                'callback' => [ $this, 'check_for_update' ],
+                ],
             ]
         );
 

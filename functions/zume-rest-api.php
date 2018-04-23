@@ -53,16 +53,6 @@ class Zume_REST_API {
         $version = '1';
         $namespace = 'zume/v' . $version;
 
-//        register_rest_route( $namespace, '/session/update_session_complete', array(
-//            array(
-//                'methods'         => WP_REST_Server::CREATABLE,
-//                'callback'        => array( $this, 'update_session_complete' ),
-//                "permission_callback" => function () {
-//                    return current_user_can( 'subscriber' );
-//                }
-//            ),
-//        ) );
-
         register_rest_route( $namespace, '/locations/validate_address', array(
             array(
                 'methods'         => WP_REST_Server::CREATABLE,
@@ -178,11 +168,6 @@ class Zume_REST_API {
 
             return $result;
 
-//            if ( $result['status'] == 'OK'){
-//                return true;
-//            } else {
-//                return new WP_Error( "coleader_delete_error", $result['status'] );
-//            }
         } else {
             return new WP_Error( "coleader_param_error", "Please provide a valid params", array( 'status' => 400 ) );
         }
