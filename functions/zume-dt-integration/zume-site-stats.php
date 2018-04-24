@@ -580,7 +580,7 @@ class Zume_Site_Stats
 
 //    public static function view_geodata() {
 //
-//        $result = Zume_Google_Geolocation::query_google_api( '799 W Lincolnway, Columbia City, IN 46725, USA', 'core' );
+//        $result = Disciple_Tools_Google_Geocode_API::query_google_api( '799 W Lincolnway, Columbia City, IN 46725, USA', 'core' );
 //
 //        $location = [];
 //        $level1 = '';

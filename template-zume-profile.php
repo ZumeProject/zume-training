@@ -125,7 +125,7 @@ $zume_user_meta = zume_get_user_meta( get_current_user_id() ); // Full array of 
 
                                 <?php if ( ! empty( $zume_user_meta['zume_user_address'] ) && ! empty( $zume_user_meta['zume_user_lng'] ) && ! empty( $zume_user_meta['zume_user_lat'] ) ) : ?>
                                 <div id="map" >
-                                    <img src="https://maps.googleapis.com/maps/api/staticmap?center=<?php echo esc_attr( $zume_user_meta['zume_user_lat'] ) . ',' . esc_attr( $zume_user_meta['zume_user_lng'] ) ?>&zoom=5&size=600x250&markers=color:red|<?php echo esc_attr( $zume_user_meta['zume_user_lat'] ) . ',' . esc_attr( $zume_user_meta['zume_user_lng'] ) ?>&key=<?php echo esc_attr( Zume_Google_Geolocation::key() ); ?>" />
+                                    <img src="https://maps.googleapis.com/maps/api/staticmap?center=<?php echo esc_attr( $zume_user_meta['zume_user_lat'] ) . ',' . esc_attr( $zume_user_meta['zume_user_lng'] ) ?>&zoom=5&size=600x250&markers=color:red|<?php echo esc_attr( $zume_user_meta['zume_user_lat'] ) . ',' . esc_attr( $zume_user_meta['zume_user_lng'] ) ?>&key=<?php echo esc_attr( Disciple_Tools_Google_Geocode_API::key() ); ?>" />
                                 </div>
                                 <?php endif; ?>
                             </td>

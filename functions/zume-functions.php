@@ -91,7 +91,7 @@ function zume_update_user_contact_info()
             update_user_meta( $user_id, 'zume_user_address', sanitize_text_field( wp_unslash( $_POST['zume_user_address'] ) ) );
         }
         else {
-            $results = Zume_Google_Geolocation::query_google_api( trim( sanitize_text_field( wp_unslash( $_POST['zume_user_address'] ) ) ), 'core' );
+            $results = Disciple_Tools_Google_Geocode_API::query_google_api( trim( sanitize_text_field( wp_unslash( $_POST['zume_user_address'] ) ) ), 'core' );
 
             if ( $results ) {
                 update_user_meta( $user_id, 'zume_user_address', trim( sanitize_text_field( wp_unslash( $_POST['zume_user_address'] ) ) ) );
@@ -125,10 +125,10 @@ function zume_update_user_ip_address_and_location( $user_id = null ) {
         $user_id = get_current_user_id();
     }
     // Geocode and store ip address
-    $ip_address = Zume_Google_Geolocation::get_real_ip_address();
+    $ip_address = Disciple_Tools_Google_Geocode_API::get_real_ip_address();
     update_user_meta( $user_id, 'zume_recent_ip', $ip_address );
 
-    $ip_results = Zume_Google_Geolocation::geocode_ip_address( $ip_address );
+    $ip_results = Disciple_Tools_Google_Geocode_API::geocode_ip_address( $ip_address );
 
     update_user_meta( $user_id, 'zume_lng_from_ip', $ip_results['lng'] );
     update_user_meta( $user_id, 'zume_lat_from_ip', $ip_results['lat'] );

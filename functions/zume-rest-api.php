@@ -116,7 +116,7 @@ class Zume_REST_API {
         $params = $request->get_json_params();
         if ( isset( $params['address'] ) ){
 
-            $result = Zume_Google_Geolocation::query_google_api( $params['address'] );
+            $result = Disciple_Tools_Google_Geocode_API::query_google_api( $params['address'] );
 
             if ( $result['status'] == 'OK'){
                 return $result;

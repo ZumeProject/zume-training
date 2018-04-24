@@ -592,7 +592,7 @@ do_action( 'zume_dashboard_header' );
             <?php wp_nonce_field( get_current_user_id(), 'zume_nonce' ) ?>
             <input type="hidden" name="type" value="create"/>
             <input type="hidden" name="ip_address"
-                   value="<?php echo esc_html( Zume_Google_Geolocation::get_real_ip_address() ); ?>"/>
+                   value="<?php echo esc_html( Disciple_Tools_Google_Geocode_API::get_real_ip_address() ); ?>"/>
             <div class="grid-x grid-margin-x">
                 <!--Group Name-->
                 <div class="cell">
@@ -802,7 +802,7 @@ foreach ( $zume_user_meta as $zume_key => $v ) {
 
                         <?php if ( ! empty( $zume_value['address'] ) && ! empty( esc_attr( $zume_value['lng'] ) ) && ! empty( esc_attr( $zume_value['lat'] ) ) ) : ?>
                             <div id="map<?php echo esc_html( $zume_key ); ?>">
-                                <img src="https://maps.googleapis.com/maps/api/staticmap?center=<?php echo esc_attr( $zume_value['lat'] ) . ',' . esc_attr( $zume_value['lng'] ) ?>&zoom=5&size=600x250&markers=color:red|<?php echo esc_attr( $zume_value['lat'] ) . ',' . esc_attr( $zume_value['lng'] ) ?>&key=<?php echo esc_attr( Zume_Google_Geolocation::key() ); ?>"/>
+                                <img src="https://maps.googleapis.com/maps/api/staticmap?center=<?php echo esc_attr( $zume_value['lat'] ) . ',' . esc_attr( $zume_value['lng'] ) ?>&zoom=5&size=600x250&markers=color:red|<?php echo esc_attr( $zume_value['lat'] ) . ',' . esc_attr( $zume_value['lng'] ) ?>&key=<?php echo esc_attr( Disciple_Tools_Google_Geocode_API::key() ); ?>"/>
                             </div>
                         <?php endif; ?>
 
@@ -946,7 +946,7 @@ if ( ! empty( $zume_colead_groups ) ) : // reset variable without coleader data
                                 <dd>
                                     <?php if ( ! empty( $zume_value['address'] ) && ! empty( esc_attr( $zume_value['lng'] ) ) && ! empty( esc_attr( $zume_value['lat'] ) ) ) : ?>
                                         <div id="map<?php echo esc_html( $zume_key ); ?>">
-                                            <img src="https://maps.googleapis.com/maps/api/staticmap?center=<?php echo esc_attr( $zume_value['lat'] ) . ',' . esc_attr( $zume_value['lng'] ) ?>&zoom=5&size=600x250&markers=color:red|<?php echo esc_attr( $zume_value['lat'] ) . ',' . esc_attr( $zume_value['lng'] ) ?>&key=<?php echo esc_attr( Zume_Google_Geolocation::key() ); ?>"/>
+                                            <img src="https://maps.googleapis.com/maps/api/staticmap?center=<?php echo esc_attr( $zume_value['lat'] ) . ',' . esc_attr( $zume_value['lng'] ) ?>&zoom=5&size=600x250&markers=color:red|<?php echo esc_attr( $zume_value['lat'] ) . ',' . esc_attr( $zume_value['lng'] ) ?>&key=<?php echo esc_attr( Disciple_Tools_Google_Geocode_API::key() ); ?>"/>
                                         </div>
                                     <?php endif; ?>
                                 </dd>

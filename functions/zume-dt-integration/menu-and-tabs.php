@@ -421,7 +421,7 @@ endforeach; ?>
                     $updated = false;
 
                     if ( empty( $fields['raw_location'] ) && ! empty( $fields['address'] ) ) {
-                        $google_result = Zume_Google_Geolocation::query_google_api( $fields['address'], $type = 'core' ); // get google api info
+                        $google_result = Disciple_Tools_Google_Geocode_API::query_google_api( $fields['address'], $type = 'core' ); // get google api info
                         if ( $google_result ) {
 
                             $fields['lng'] = $google_result['lng'];
@@ -434,7 +434,7 @@ endforeach; ?>
                         dt_write_log( 'Updated Group ' . $fields['key'] . ": Location" );
                     }
                     if ( empty( $fields['ip_raw_location'] ) && ! empty( $fields['ip_address'] ) ) {
-                        $results = Zume_Google_Geolocation::geocode_ip_address( $fields['ip_address'] );
+                        $results = Disciple_Tools_Google_Geocode_API::geocode_ip_address( $fields['ip_address'] );
                         if ( $results ) {
                             $fields['ip_lng'] = $results['lng'];
                             $fields['ip_lat'] = $results['lat'];
@@ -465,7 +465,7 @@ endforeach; ?>
                         dt_write_log( $value );
                         continue;
                     }
-                    $results = Zume_Google_Geolocation::query_google_api( trim( sanitize_text_field( wp_unslash( $value['meta_value'] ) ) ), 'core' );
+                    $results = Disciple_Tools_Google_Geocode_API::query_google_api( trim( sanitize_text_field( wp_unslash( $value['meta_value'] ) ) ), 'core' );
 
                     if ( $results ) {
                         update_user_meta( $value['user_id'], 'zume_user_lng', $results['lng'] );

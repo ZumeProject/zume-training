@@ -53,7 +53,7 @@ function zume_registration_errors( $errors, $sanitized_user_login, $user_email )
 
     if ( empty( $_POST['zume_address'] ) || ! empty( $_POST['zume_address'] ) && trim( sanitize_key( wp_unslash( $_POST['zume_address'] ) ) ) == '' ) {
 
-        $results = Zume_Google_Geolocation::query_google_api( trim( sanitize_key( wp_unslash( $_POST['zume_address'] ) ) ), 'validate' );
+        $results = Disciple_Tools_Google_Geocode_API::query_google_api( trim( sanitize_key( wp_unslash( $_POST['zume_address'] ) ) ), 'validate' );
 
         if ( ! $results ) {
             $errors->add( 'zume_address_error', esc_attr__( '<strong>ERROR</strong>: We can not recognize this address as valid location. Please, check spelling.', 'zume' ) );
@@ -78,7 +78,7 @@ function zume_user_register( $user_id ) {
     }
     if ( ! empty( $_POST['zume_address'] ) ) {
 
-        $results = Zume_Google_Geolocation::query_google_api( trim( sanitize_key( wp_unslash( $_POST['zume_address'] ) ) ), 'core' );
+        $results = Disciple_Tools_Google_Geocode_API::query_google_api( trim( sanitize_key( wp_unslash( $_POST['zume_address'] ) ) ), 'core' );
 
         if ( $results ) {
             update_user_meta( $user_id, 'zume_user_address', $results['formatted_address'] );
