@@ -9,10 +9,12 @@ if ( !defined( 'ABSPATH' ) ) {
  * All functionality pertaining to project update post types in Site_Link_System.
  * @class Site_Link_System
  *
- * @version 0.1.8
+ * @version 0.1.10
  *
  * @since   0.1.7 Moved to post type
- * @since   0.1.8 Added key_select, readonly
+ *          0.1.8 Added key_select, readonly
+ *          0.1.9 Added non-wordpress link_check endpoint
+ *          0.1.10 Fixed option rebuild on trashed posts
  */
 if ( ! class_exists( 'Site_Link_System' ) ) {
 
@@ -158,7 +160,6 @@ if ( ! class_exists( 'Site_Link_System' ) ) {
         }
 
 
-
         /************************************************************************************************************
          * ADMIN INTERFACE SECTION
          *
@@ -175,37 +176,37 @@ if ( ! class_exists( 'Site_Link_System' ) ) {
             register_post_type( $this->post_type, /* (http://codex.wordpress.org/Function_Reference/register_post_type) */
                 // let's now add all the options for this post type
                 [
-                'labels'              => [
-                'name'               => $this->plural, /* This is the Title of the Group */
-                'singular_name'      => $this->singular, /* This is the individual type */
-                'all_items'          => __( 'All' ) . ' ' . $this->plural, /* the all items menu item */
-                'add_new'            => __( 'Add New' ), /* The add new menu item */
-                'add_new_item'       => __( 'Add New' ) . ' ' . $this->singular, /* Add New Display Title */
-                'edit'               => __( 'Edit' ), /* Edit Dialog */
-                'edit_item'          => __( 'Edit' ) . ' ' . $this->singular, /* Edit Display Title */
-                'new_item'           => __( 'New' ) . ' ' . $this->singular, /* New Display Title */
-                'view_item'          => __( 'View' ) . ' ' . $this->singular, /* View Display Title */
-                'search_items'       => __( 'Search' ) . ' ' . $this->plural, /* Search Custom Type Title */
-                'not_found'          => __( 'Nothing found in the Database.' ), /* This displays if there are no entries yet */
-                'not_found_in_trash' => __( 'Nothing found in Trash' ), /* This displays if there is nothing in the trash */
-                'parent_item_colon'  => ''
-                ], /* end of arrays */
-                'public'              => false,
-                'publicly_queryable'  => false,
-                'exclude_from_search' => true,
-                'show_ui'             => true,
-                'query_var'           => true,
-                'menu_position'       => $this->menu_position, /* this is what order you want it to appear in on the left hand side menu */
-                'menu_icon'           => 'dashicons-admin-links', /* the icon for the custom post type menu. uses built-in dashicons (CSS class name) */
-                'rewrite'             => [
-                'slug' => $this->post_type,
-                'with_front' => false
-                ], /* you can specify its url slug */
-                'has_archive'         => false, /* you can rename the slug here */
-                'capability_type'     => 'post',
-                'hierarchical'        => false,
-                /* the next one is important, it tells what's enabled in the post editor */
-                'supports'            => [ 'title' ]
+                    'labels'              => [
+                        'name'               => $this->plural, /* This is the Title of the Group */
+                        'singular_name'      => $this->singular, /* This is the individual type */
+                        'all_items'          => __( 'All' ) . ' ' . $this->plural, /* the all items menu item */
+                        'add_new'            => __( 'Add New' ), /* The add new menu item */
+                        'add_new_item'       => __( 'Add New' ) . ' ' . $this->singular, /* Add New Display Title */
+                        'edit'               => __( 'Edit' ), /* Edit Dialog */
+                        'edit_item'          => __( 'Edit' ) . ' ' . $this->singular, /* Edit Display Title */
+                        'new_item'           => __( 'New' ) . ' ' . $this->singular, /* New Display Title */
+                        'view_item'          => __( 'View' ) . ' ' . $this->singular, /* View Display Title */
+                        'search_items'       => __( 'Search' ) . ' ' . $this->plural, /* Search Custom Type Title */
+                        'not_found'          => __( 'Nothing found in the Database.' ), /* This displays if there are no entries yet */
+                        'not_found_in_trash' => __( 'Nothing found in Trash' ), /* This displays if there is nothing in the trash */
+                        'parent_item_colon'  => ''
+                    ], /* end of arrays */
+                    'public'              => false,
+                    'publicly_queryable'  => false,
+                    'exclude_from_search' => true,
+                    'show_ui'             => true,
+                    'query_var'           => true,
+                    'menu_position'       => $this->menu_position, /* this is what order you want it to appear in on the left hand side menu */
+                    'menu_icon'           => 'dashicons-admin-links', /* the icon for the custom post type menu. uses built-in dashicons (CSS class name) */
+                    'rewrite'             => [
+                        'slug' => $this->post_type,
+                        'with_front' => false
+                    ], /* you can specify its url slug */
+                    'has_archive'         => false, /* you can rename the slug here */
+                    'capability_type'     => 'post',
+                    'hierarchical'        => false,
+                    /* the next one is important, it tells what's enabled in the post editor */
+                    'supports'            => [ 'title' ]
                 ] /* end of options */
             ); /* end of register post type */
         }
@@ -216,7 +217,10 @@ if ( ! class_exists( 'Site_Link_System' ) ) {
 
             switch ( $column_name ) {
                 case 'linked':
-                    if ( $this->is_key_locked( $post->ID ) ) {
+                    if ( get_post_meta( $post->ID, 'non_wp', true ) ) {
+                        echo '<span>' . esc_html( 'Non-DT Site Connection' ) . '</span>';
+                    }
+                    elseif ( $this->is_key_locked( $post->ID ) ) {
                         ?>
 
                         <span >
@@ -234,7 +238,7 @@ if ( ! class_exists( 'Site_Link_System' ) ) {
                         </script>
                         <?php
                     } else {
-                        echo '<span >Unfinished Configuration</span>';
+                        echo '<span>' . esc_html( 'Unfinished Configuration' ) . '</span>';
                     }
                     break;
 
@@ -272,30 +276,30 @@ if ( ! class_exists( 'Site_Link_System' ) ) {
             global $post;
 
             $messages[ $this->post_type ] = [
-            0  => '', // Unused. Messages start at index 1.
-            1  => sprintf(
-                '%1$s updated.',
-                $this->singular
-            ),
-            2  => 'Site Link updated.',
-            3  => 'Site Link deleted.',
-            4  => sprintf( '%s updated.', $this->singular ),
-            /* translators: %s: date and time of the revision */
-            5  => isset( $_GET['revision'] ) ? sprintf( '%1$s restored to revision from %2$s', $this->singular, wp_post_revision_title( (int) $_GET['revision'], false ) ) : false,
-            6  => sprintf( '%1$s published. %3$s%2$s%4$s', $this->singular, strtolower( $this->singular ), '', '' ),
-            7  => sprintf( '%s saved.', $this->singular ),
-            8  => sprintf( '%1$s submitted. %2$s%3$s%4$s', $this->singular, strtolower( $this->singular ), '', '' ),
-            9  => sprintf(
-                '%1$s scheduled for: %1$s. %2$s%2$s%3$6$s',
-                $this->singular,
-                strtolower( $this->singular ),
-                // translators: Publish box date format, see http://php.net/date
-                '<strong>' . date_i18n( __( 'M j, Y @ G:i' ),
-                strtotime( $post->post_date ) ) . '</strong>',
-                '',
-                ''
-            ),
-            10 => sprintf( '%1$s draft updated. %2$s%3$s%4$s', $this->singular, strtolower( $this->singular ), '', '' ),
+                0  => '', // Unused. Messages start at index 1.
+                1  => sprintf(
+                    '%1$s updated.',
+                    $this->singular
+                ),
+                2  => 'Site Link updated.',
+                3  => 'Site Link deleted.',
+                4  => sprintf( '%s updated.', $this->singular ),
+                /* translators: %s: date and time of the revision */
+                5  => isset( $_GET['revision'] ) ? sprintf( '%1$s restored to revision from %2$s', $this->singular, wp_post_revision_title( (int) $_GET['revision'], false ) ) : false,
+                6  => sprintf( '%1$s published. %3$s%2$s%4$s', $this->singular, strtolower( $this->singular ), '', '' ),
+                7  => sprintf( '%s saved.', $this->singular ),
+                8  => sprintf( '%1$s submitted. %2$s%3$s%4$s', $this->singular, strtolower( $this->singular ), '', '' ),
+                9  => sprintf(
+                    '%1$s scheduled for: %1$s. %2$s%2$s%3$6$s',
+                    $this->singular,
+                    strtolower( $this->singular ),
+                    // translators: Publish box date format, see http://php.net/date
+                    '<strong>' . date_i18n( __( 'M j, Y @ G:i' ),
+                    strtotime( $post->post_date ) ) . '</strong>',
+                    '',
+                    ''
+                ),
+                10 => sprintf( '%1$s draft updated. %2$s%3$s%4$s', $this->singular, strtolower( $this->singular ), '', '' ),
             ];
 
             return $messages;
@@ -303,8 +307,8 @@ if ( ! class_exists( 'Site_Link_System' ) ) {
 
         public function meta_box_setup()
         {
-            add_meta_box( $this->post_type . '_details', 'Manage Site Link', [ $this, 'meta_box_load_management_box' ], $this->post_type, 'normal', 'high' );
-            add_meta_box( $this->post_type . '_instructions', 'Configuration Notes', [ $this, 'meta_box_configuration_box' ], $this->post_type, 'normal', 'high' );
+            add_meta_box( $this->post_type . '_details', __( 'Manage Site Link' ), [ $this, 'meta_box_load_management_box' ], $this->post_type, 'normal', 'high' );
+            add_meta_box( $this->post_type . '_instructions', __( 'Configuration' ), [ $this, 'meta_box_configuration_box' ], $this->post_type, 'normal', 'high' );
         }
 
         public function meta_box_content( $section = 'info' )
@@ -507,27 +511,38 @@ if ( ! class_exists( 'Site_Link_System' ) ) {
             // Public Info
 
             $fields['token'] = [
-            'name'        => 'Token',
-            'description' => 'If you have a token from another site, just clear token above and replace it.',
-            'type'        => 'token',
-            'default'     => self::generate_token(),
-            'section'     => 'site',
+                'name'        => __( 'Token' ),
+                'description' => 'If you have a token from another site, just clear token above and replace it.',
+                'type'        => 'token',
+                'default'     => self::generate_token(),
+                'section'     => 'site',
             ];
 
             $fields['site1'] = [
-            'name'        => 'Site 1',
-            'description' => 'Use just the host name. Example: www.website.com',
-            'type'        => 'url',
-            'default'     => '',
-            'section'     => 'site',
+                'name'        => __( 'Site 1' ),
+                'description' => 'Use just the host name. Example: www.website.com',
+                'type'        => 'url',
+                'default'     => '',
+                'section'     => 'site',
             ];
 
             $fields['site2'] = [
-            'name'        => 'Site 2',
-            'description' => 'Use just the host name. Example: www.website.com',
-            'type'        => 'url',
-            'default'     => '',
-            'section'     => 'site',
+                'name'        => __( 'Site 2' ),
+                'description' => 'Use just the host name. Example: www.website.com',
+                'type'        => 'url',
+                'default'     => '',
+                'section'     => 'site',
+            ];
+
+            $fields['non_wp'] = [
+                'name'        => __( 'DT Site' ),
+                'description' => 'Is this connection to a Disciple Tools/Wordpress system.',
+                'type'        => 'key_select',
+                'default'     => [
+                    0 => __( 'Yes, connected to another DT site (default)' ),
+                    1 => __( 'No, connection for a non-Disciple Tools system.' )
+                ],
+                'section'     => 'non_wp',
             ];
 
             // @codingStandardsIgnoreLine
@@ -559,14 +574,18 @@ if ( ! class_exists( 'Site_Link_System' ) ) {
                     <table width="100%">
                         <tr>
                             <td>
-                                <span style="float:right">
-                                    <?php esc_html_e( 'Status:' ) ?>
-                                    <strong>
-                                        <span id="<?php echo esc_attr( md5( $post_id ) ); ?>-status">
-                                            <?php esc_html_e( 'Checking Status' ) ?>
-                                        </span>
-                                    </strong>
-                                </span>
+
+                                <?php if ( ! get_post_meta( $post_id, 'non_wp', true ) ) : ?>
+                                    <span style="float:right">
+                                        <?php esc_html_e( 'Status:' ) ?>
+                                        <strong>
+                                            <span id="<?php echo esc_attr( md5( $post_id ) ); ?>-status">
+                                                <?php esc_html_e( 'Checking Status' ) ?>
+                                            </span>
+                                        </strong>
+                                    </span>
+                                <?php endif; // check for non-wp ?>
+
                                 <p>
                                     <a class="button" onclick="jQuery('#reset-confirmation').toggle();" name="reset">Delete Current Site Configuration</a>
                                 </p>
@@ -577,30 +596,41 @@ if ( ! class_exists( 'Site_Link_System' ) ) {
                                 </p>
                             </td>
                         </tr>
-                        <tr id="<?php echo esc_attr( md5( $post_id ) ); ?>-message" style="display:none;">
-                            <td>
-                                <strong><?php esc_attr_e( 'Consider Checking:' ) ?></strong>
-                                <ol>
-                                    <li>
-                                        <?php echo sprintf( esc_attr__( 'Check if the target site is setup with identical configuration information.' ), esc_attr( current_time( 'Y-m-dH', 1 ) ) ); ?>
-                                    </li>
-                                    <li>
-                                        <?php echo esc_attr__( 'Check if HTTPS/SSL is enabled on both sites. Due to the transfer of data between these sites, SSL encryption is required for both sites to protect the data exchange.' ); ?>
-                                    </li>
-                                    <li>
-                                        <?php echo esc_attr__( 'Check if the server timestamps are identical. Mismatched server times will cause decryption key failures. Your server timestamp' ); ?>
-                                        :
-                                        <span class="info-color"><strong><?php echo esc_attr( current_time( 'Y-m-d H:i', 1 ) ) ?></strong></span>
-                                    </li>
-                                </ol>
-                            </td>
-                        </tr>
-                        <script>
-                            jQuery(document).ready(function () {
-                                check_link_status('<?php echo esc_attr( self::create_transfer_token_for_site( $site_key ) ); ?>', '<?php echo esc_attr( $this->get_non_local_site_by_id( $post_id ) ); ?>', '<?php echo esc_attr( md5( $post_id ) ); ?>');
-                            })
-                        </script>
+                        <?php if ( ! get_post_meta( $post_id, 'non_wp', true ) ) : ?>
+                            <tr id="<?php echo esc_attr( md5( $post_id ) ); ?>-message" style="display:none;">
+                                <td>
+                                    <strong><?php esc_attr_e( 'Consider Checking:' ) ?></strong>
+                                    <ol>
+                                        <li>
+                                            <?php echo sprintf( esc_attr__( 'Check if the target site is setup with identical configuration information.' ), esc_attr( current_time( 'Y-m-dH', 1 ) ) ); ?>
+                                        </li>
+                                        <li>
+                                            <?php echo esc_attr__( 'Check if HTTPS/SSL is enabled on both sites. Due to the transfer of data between these sites, SSL encryption is required for both sites to protect the data exchange.' ); ?>
+                                        </li>
+                                        <li>
+                                            <?php echo esc_attr__( 'Check if the server timestamps are identical. Mismatched server times will cause decryption key failures. Your server timestamp' ); ?>
+                                            :
+                                            <span class="info-color"><strong><?php echo esc_attr( current_time( 'Y-m-d H:i', 1 ) ) ?></strong></span>
+                                        </li>
+                                    </ol>
+                                </td>
+                            </tr>
+
+                            <script>
+                                jQuery(document).ready(function () {
+                                    check_link_status('<?php echo esc_attr( self::create_transfer_token_for_site( $site_key ) ); ?>', '<?php echo esc_attr( $this->get_non_local_site_by_id( $post_id ) ); ?>', '<?php echo esc_attr( md5( $post_id ) ); ?>');
+                                })
+                            </script>
+                        <?php endif; // check for non-wp ?>
                     </table>
+
+                    <!-- Footer Information -->
+                    <p><?php esc_attr_e( 'Current Site' ) ?>: <span
+                                class="info-color"><?php echo esc_html( self::get_current_site_base_url() ); ?></span></p>
+                    <p class="text-small"><?php esc_attr_e( 'Timestamp' ) ?>: <span
+                                class="info-color"><?php echo esc_attr( current_time( 'Y-m-d H:i', 1 ) ) ?></span>
+                        <em>( <?php esc_attr_e( 'Compare this number to linked site. It should be identical.' ) ?> )</em></p>
+
                     <?php
 
                 } else {
@@ -610,13 +640,12 @@ if ( ! class_exists( 'Site_Link_System' ) ) {
         }
 
         public function meta_box_configuration_box() {
+            $this->meta_box_content( 'non_wp' );
             ?>
-            <!-- Footer Information -->
-            <p><?php esc_attr_e( 'Current Site' ) ?>: <span
-                        class="info-color"><?php echo esc_html( self::get_current_site_base_url() ); ?></span></p>
-            <p class="text-small"><?php esc_attr_e( 'Timestamp' ) ?>: <span
-                        class="info-color"><?php echo esc_attr( current_time( 'Y-m-d H:i', 1 ) ) ?></span>
-                <em>( <?php esc_attr_e( 'Compare this number to linked site. It should be identical.' ) ?> )</em></p>
+            <p id="description">
+                The site link system is built to easily connect Disciple Tools systems together, but can be extended to provide token validation
+                for other system integrations. Please refer to our developer wiki for more information.
+            </p>
             <?php
         }
 
@@ -631,38 +660,38 @@ if ( ! class_exists( 'Site_Link_System' ) ) {
         {
             echo "<script type='text/javascript'>
             
-        function check_link_status( transfer_token, url, id ) {
+            function check_link_status( transfer_token, url, id ) {
+                
+            let linked = '" . esc_attr__( 'Linked' ) . "';
+            let not_linked = '" . esc_attr__( 'Not Linked' ) . "';
+            let not_found = '" . esc_attr__( 'Failed to connect with the URL provided.' ) . "';
             
-        let linked = '" . esc_attr__( 'Linked' ) . "';
-        let not_linked = '" . esc_attr__( 'Not Linked' ) . "';
-        let not_found = '" . esc_attr__( 'Failed to connect with the URL provided.' ) . "';
-        
-        return jQuery.ajax({
-            type: 'POST',
-            data: JSON.stringify({ \"transfer_token\": transfer_token } ),
-            contentType: 'application/json; charset=utf-8',
-            dataType: 'json',
-            url: 'https://' + url + '/wp-json/dt-public/v1/sites/site_link_check',
-        })
-            .done(function (data) {
-                if( data ) {
-                    jQuery('#' + id + '-status').html( linked ).attr('class', 'success-green')
-                } else {
-                    jQuery('#' + id + '-status').html( not_linked ).attr('class', 'fail-red');
-                    jQuery('#' + id + '-message').show();
-                }
+            return jQuery.ajax({
+                type: 'POST',
+                data: JSON.stringify({ \"transfer_token\": transfer_token } ),
+                contentType: 'application/json; charset=utf-8',
+                dataType: 'json',
+                url: 'https://' + url + '/wp-json/dt-public/v1/sites/site_link_check',
             })
-            .fail(function (err) {
-                jQuery( document ).ajaxError(function( event, request, settings ) {
-                     if( request.status === 0 ) {
-                        jQuery('#' + id + '-status').html( not_found ).attr('class', 'fail-red')
-                     } else {
-                        jQuery('#' + id + '-status').html( JSON.stringify( request.statusText ) ).attr('class', 'fail-red')
-                     }
+                .done(function (data) {
+                    if( data ) {
+                        jQuery('#' + id + '-status').html( linked ).attr('class', 'success-green')
+                    } else {
+                        jQuery('#' + id + '-status').html( not_linked ).attr('class', 'fail-red');
+                        jQuery('#' + id + '-message').show();
+                    }
+                })
+                .fail(function (err) {
+                    jQuery( document ).ajaxError(function( event, request, settings ) {
+                         if( request.status === 0 ) {
+                            jQuery('#' + id + '-status').html( not_found ).attr('class', 'fail-red')
+                         } else {
+                            jQuery('#' + id + '-status').html( JSON.stringify( request.statusText ) ).attr('class', 'fail-red')
+                         }
+                    });
                 });
-            });
-        }
-        </script>";
+            }
+            </script>";
             echo "<style>
                 .success-green { color: limegreen;}
                 .fail-red { color: red;}
@@ -757,11 +786,11 @@ if ( ! class_exists( 'Site_Link_System' ) ) {
             $site_keys = [];
             foreach ( $results as $result ) {
                 $site_keys[$result['site_key']] = [
-                'id'    => $result['id'],
-                'label' => $result['label'],
-                'token' => $result['token'],
-                'site1' => $result['site1'],
-                'site2' => $result['site2'],
+                    'id'    => $result['id'],
+                    'label' => $result['label'],
+                    'token' => $result['token'],
+                    'site1' => $result['site1'],
+                    'site2' => $result['site2'],
                 ];
             }
 
@@ -832,10 +861,10 @@ if ( ! class_exists( 'Site_Link_System' ) ) {
 
             register_rest_route(
                 $namespace, '/sites/site_link_check', [
-                [
-                'methods'  => WP_REST_Server::CREATABLE,
-                'callback' => [ $this, 'site_link_check' ],
-                ],
+                    [
+                        'methods'  => WP_REST_Server::CREATABLE,
+                        'callback' => [ $this, 'site_link_check' ],
+                    ],
                 ]
             );
 
@@ -952,6 +981,12 @@ if ( ! class_exists( 'Site_Link_System' ) ) {
             delete_option( $prefix . '_api_keys' );
         }
 
+        public function hook_post_deleted() {
+            $prefix = self::$token;
+            delete_option( $prefix . '_api_keys' );
+            $this->build_cached_option();
+        }
+
         /**
          * Variables and Singleton
          */
@@ -976,8 +1011,8 @@ if ( ! class_exists( 'Site_Link_System' ) ) {
          * @param string $dashicon
          */
         public function __construct(
-        $menu_position = 5,
-        $dashicon = 'dashicons-admin-links'
+            $menu_position = 5,
+            $dashicon = 'dashicons-admin-links'
         )
         {
             $this->post_type = self::$token;
@@ -998,11 +1033,16 @@ if ( ! class_exists( 'Site_Link_System' ) ) {
                 add_filter( 'enter_title_here', [ $this, 'enter_title_here' ] );
                 add_filter( 'post_updated_messages', [ $this, 'post_type_updated_messages' ] );
 
-                if ( $pagenow == 'edit.php' && isset( $_GET['post_type'] ) ) {
+
+
+                if ( isset( $_GET['post_type'] ) ) {
                     $pt = sanitize_text_field( wp_unslash( $_GET['post_type'] ) );
-                    if ( $pt === $this->post_type ) {
+                    if ( $pt === $this->post_type && $pagenow == 'edit.php' ) {
                         add_filter( 'manage_edit-' . $this->post_type . '_columns', [ $this, 'register_custom_column_headings' ], 10, 1 );
                         add_action( 'manage_posts_custom_column', [ $this, 'register_custom_columns' ], 10, 2 );
+                    }
+                    if ( $pt === $this->post_type ) {
+                        add_action( 'trash_post', [ $this, 'hook_post_deleted' ] );
                     }
                 }
             }
