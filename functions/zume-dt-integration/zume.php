@@ -219,8 +219,6 @@ class Zume_Integration
         update_user_meta( $user_id, 'zume_check_sum', md5( serialize( $prepared_user_data ) ) );
         $prepared_user_data['zume_check_sum'] = md5( serialize( $prepared_user_data ) );
 
-
-
         return $prepared_user_data;
     }
 
