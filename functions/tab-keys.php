@@ -52,7 +52,7 @@ class Zume_Keys_Tab
     {
         $this->handle_post();
 
-        $current_key = get_option( 'zume_google_map_key' );
+        $current_key = get_option( 'dt_map_key' );
         ?>
         <form method="post">
             <?php wp_nonce_field( 'zume_google_map_key_' . get_current_user_id() . '_nonce', 'zume_google_map_key' . get_current_user_id() ) ?>
@@ -121,17 +121,17 @@ class Zume_Keys_Tab
 
                     if ( isset( $default_keys[ $submitted_key ] ) ) { // check if set
                         if ( $default_keys[ $submitted_key ] <= $count ) { // check if it is a valid default key number
-                            update_option( 'zume_google_map_key', $default_keys[ $submitted_key ] );
+                            update_option( 'dt_map_key', $default_keys[ $submitted_key ] );
                         }
                     }
                 } else {
                     $key = $default_keys[ rand( 0, $count ) ];
-                    update_option( 'zume_google_map_key', $key );
+                    update_option( 'dt_map_key', $key );
                 }
             }
             else {
                     dt_write_log( 'not empty zume_google_map_key' );
-                update_option( 'zume_google_map_key', trim( sanitize_text_field( wp_unslash( $_POST['zume_google_map_key'] ) ) ) );
+                update_option( 'dt_map_key', trim( sanitize_text_field( wp_unslash( $_POST['zume_google_map_key'] ) ) ) );
                 return;
             }
         }
@@ -144,7 +144,7 @@ class Zume_Keys_Tab
             $count = count( $keys ) - 1;
             $key = $keys[ rand( 0, $count ) ];
 
-            update_option( 'zume_google_map_key', $key, true );
+            update_option( 'dt_map_key', $key, true );
             return true;
         }
 

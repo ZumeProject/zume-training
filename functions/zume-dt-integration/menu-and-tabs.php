@@ -144,7 +144,7 @@ class Zume_Integration_Menu
         $object->verify_check_sum_installed();
         zume_get_public_site_links();
 
-        Zume_Site_Stats::temp_load_hook();
+//        Zume_Site_Stats::temp_load_hook();
 
 
         $this->site_default_metabox();
