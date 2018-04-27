@@ -295,7 +295,7 @@ if ( ! class_exists( 'Site_Link_System' ) ) {
                     strtolower( $this->singular ),
                     // translators: Publish box date format, see http://php.net/date
                     '<strong>' . date_i18n( __( 'M j, Y @ G:i' ),
-                    strtotime( $post->post_date ) ) . '</strong>',
+                        strtotime( $post->post_date ) ) . '</strong>',
                     '',
                     ''
                 ),
@@ -314,6 +314,7 @@ if ( ! class_exists( 'Site_Link_System' ) ) {
         public function meta_box_content( $section = 'info' )
         {
             global $post_id;
+            $this->build_cached_option(); // verifies options install on load
             $fields = get_post_custom( $post_id );
             $field_data = $this->meta_box_custom_fields_settings();
 
@@ -458,6 +459,7 @@ if ( ! class_exists( 'Site_Link_System' ) ) {
 
             if ( isset( $_GET['action'] ) ) {
                 if ( $_GET['action'] == 'trash' || $_GET['action'] == 'untrash' || $_GET['action'] == 'delete' ) {
+                    $this->build_cached_option(); // rebuilds cache for options
                     return $post_id;
                 }
             }
@@ -468,6 +470,8 @@ if ( ! class_exists( 'Site_Link_System' ) ) {
                     delete_post_meta( $post_id, 'site1' );
                     delete_post_meta( $post_id, 'site2' );
                     delete_post_meta( $post_id, 'site_key' );
+
+                    $this->build_cached_option(); // rebuilds cache for options
 
                     return $post_id;
                 }
@@ -780,7 +784,7 @@ if ( ! class_exists( 'Site_Link_System' ) ) {
                   JOIN $wpdb->postmeta as meta2 ON post.ID=meta2.post_id AND meta2.meta_key = 'token'
                   JOIN $wpdb->postmeta as meta3 ON post.ID=meta3.post_id AND meta3.meta_key = 'site1'
                   JOIN $wpdb->postmeta as meta4 ON post.ID=meta4.post_id AND meta4.meta_key = 'site2'
-                WHERE post.post_status = 'publish'
+                WHERE post.post_status = 'publish' AND post.post_type = 'site_link_system'
             ", ARRAY_A  );
 
             $site_keys = [];
@@ -981,11 +985,7 @@ if ( ! class_exists( 'Site_Link_System' ) ) {
             delete_option( $prefix . '_api_keys' );
         }
 
-        public function hook_post_deleted() {
-            $prefix = self::$token;
-            delete_option( $prefix . '_api_keys' );
-            $this->build_cached_option();
-        }
+
 
         /**
          * Variables and Singleton
@@ -1033,16 +1033,11 @@ if ( ! class_exists( 'Site_Link_System' ) ) {
                 add_filter( 'enter_title_here', [ $this, 'enter_title_here' ] );
                 add_filter( 'post_updated_messages', [ $this, 'post_type_updated_messages' ] );
 
-
-
                 if ( isset( $_GET['post_type'] ) ) {
                     $pt = sanitize_text_field( wp_unslash( $_GET['post_type'] ) );
                     if ( $pt === $this->post_type && $pagenow == 'edit.php' ) {
                         add_filter( 'manage_edit-' . $this->post_type . '_columns', [ $this, 'register_custom_column_headings' ], 10, 1 );
                         add_action( 'manage_posts_custom_column', [ $this, 'register_custom_columns' ], 10, 2 );
-                    }
-                    if ( $pt === $this->post_type ) {
-                        add_action( 'trash_post', [ $this, 'hook_post_deleted' ] );
                     }
                 }
             }
