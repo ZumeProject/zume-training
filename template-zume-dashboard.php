@@ -35,6 +35,7 @@ if ( ! empty( $_POST ) ) { // test if post submitted
             }
         }
     } // endif nonce
+    $_POST = [];
 }
 
 get_header();

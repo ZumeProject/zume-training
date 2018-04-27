@@ -75,6 +75,10 @@ class Zume_Dashboard {
 
         $new_group = wp_parse_args( $args, $group_values );
 
+        if ( __( 'No Name', 'zume' ) == $new_group['group_name'] ) {
+            return false;
+        }
+
         $result = add_user_meta( get_current_user_id(), $new_group['key'], $new_group, true );
 
         do_action( 'zume_create_group', get_current_user_id(), $new_group['key'], $new_group );
@@ -185,7 +189,9 @@ class Zume_Dashboard {
         }
 
         if ( $trigger_update ) {
-            update_user_meta( $group_meta['owner'], $group_meta['key'], $group_meta );
+            if ( ! ( __( 'No Name', 'zume' ) == $group_meta['group_name'] ) ) {
+                update_user_meta( $group_meta['owner'], $group_meta['key'], $group_meta );
+            }
         }
 
         return $group_meta;
@@ -637,6 +643,7 @@ class Zume_Dashboard {
         if ( empty( $result ) ) {
             return false;
         }
+
         $group_meta = self::verify_group_array_filter( $result );
         return $group_meta;
     }
