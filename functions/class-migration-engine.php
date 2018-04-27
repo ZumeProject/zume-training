@@ -33,6 +33,7 @@ class Zume_Migration_Engine
         $rv = [];
         foreach ( $filenames as $filename ) {
             if ( $filename[0] === "." || $filename === "abstract.php" ) {
+                zume_write_log( 'Skip ' . $filename );
                 // skip this filename
             } elseif ( preg_match( '/^([0-9][0-9][0-9][0-9])(-.*)?\.php$/i', $filename, $matches ) ) {
                 $got_migration_number = intval( $matches[1] );
@@ -64,10 +65,12 @@ class Zume_Migration_Engine
      */
     public static function migrate( int $target_migration_number )
     {
+        zume_write_log( __METHOD__ );
         if ( $target_migration_number >= count( self::get_migrations() ) ) {
             throw new Exception( "Migration number $target_migration_number does not exist" );
         }
 
+        zume_write_log( '@while' );
         while ( true ) {
             $current_migration_number = get_option( 'dt_migration_number' );
             if ( $current_migration_number === false ) {
@@ -77,18 +80,20 @@ class Zume_Migration_Engine
                 throw new Exception( "Current migration number doesn't look like an integer ($current_migration_number)" );
             }
             $current_migration_number = intval( $current_migration_number );
-
+            zume_write_log( '@current_migration number' );
             if ( $target_migration_number === $current_migration_number ) {
+                zume_write_log( '@target and current are the same' );
                 break;
             } elseif ( $target_migration_number < $current_migration_number ) {
+                zume_write_log( '@ migrate backwards' );
                 throw new Exception( "Trying to migrate backwards, aborting" );
             }
 
             $activating_migration_number = $current_migration_number + 1;
             $migration = self::get_migrations()[ $activating_migration_number ];
-
+            zume_write_log( '@pre-sanity check' );
             self::sanity_check_expected_tables( $migration->get_expected_tables() );
-
+            zume_write_log( '@dt_migration_lock' );
             if ( (int) get_option( 'dt_migration_lock', 0 ) ) {
                 throw new Zume_Migration_Lock_Exception();
             }
@@ -124,7 +129,9 @@ class Zume_Migration_Engine
     {
         global $wpdb;
         foreach ( $expected_tables as $name => $table ) {
-            if ( preg_match( '/\bIF NOT EXISTS\b/i', $table ) ) {
+                zume_write_log( $table );
+            if ( preg_match( '/\b IF NOT EXISTS \b/i', $table ) ) {
+                zume_write_log( '@error' );
                 throw new Exception( "Table definition of $name should not contain 'IF NOT EXISTS'" );
             } elseif ( !preg_match( '/\b' . preg_quote( $name ) . '\b/', $table ) ) {
                 throw new Exception( "Expected to find table name in table definition of $name" );
