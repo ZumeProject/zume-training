@@ -15,6 +15,7 @@ if ( !defined( 'ABSPATH' ) ) {
  *          0.1.8 Added key_select, readonly
  *          0.1.9 Added non-wordpress link_check endpoint
  *          0.1.10 Fixed option rebuild on trashed posts
+ *          0.1.11 Updated menu position
  */
 if ( ! class_exists( 'Site_Link_System' ) ) {
 
@@ -295,7 +296,7 @@ if ( ! class_exists( 'Site_Link_System' ) ) {
                     strtolower( $this->singular ),
                     // translators: Publish box date format, see http://php.net/date
                     '<strong>' . date_i18n( __( 'M j, Y @ G:i' ),
-                    strtotime( $post->post_date ) ) . '</strong>',
+                        strtotime( $post->post_date ) ) . '</strong>',
                     '',
                     ''
                 ),
@@ -986,7 +987,6 @@ if ( ! class_exists( 'Site_Link_System' ) ) {
         }
 
 
-
         /**
          * Variables and Singleton
          */
@@ -1010,10 +1010,7 @@ if ( ! class_exists( 'Site_Link_System' ) ) {
          * @param int    $menu_position
          * @param string $dashicon
          */
-        public function __construct(
-            $menu_position = 5,
-            $dashicon = 'dashicons-admin-links'
-        )
+        public function __construct( $menu_position = 100, $dashicon = 'dashicons-admin-links' )
         {
             $this->post_type = self::$token;
             $this->singular = 'Site Link';
