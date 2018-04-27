@@ -18,6 +18,18 @@ require_once( 'functions/post-types/video-post-type.php' );
 require_once( 'functions/post-types/pdf-download-post-type.php' );
 
 /**
+ * We want to make sure migrations are run on updates.
+ *
+ * @see https://www.sitepoint.com/wordpress-plugin-updates-right-way/
+ */
+try {
+    require_once( 'functions/class-migration-engine.php' );
+    Zume_Migration_Engine::migrate( 0 );
+} catch ( Throwable $e ) {
+    new WP_Error( 'migration_error', 'Migration engine failed to migrate.' );
+}
+
+/**
  * INCLUDED FILES
  */
 
