@@ -32,8 +32,8 @@ class Zume_Migration_Engine
         $expected_migration_number = 0;
         $rv = [];
         foreach ( $filenames as $filename ) {
+            // @codingStandardsIgnoreLine
             if ( $filename[0] === "." || $filename === "abstract.php" ) {
-                zume_write_log( 'Skip ' . $filename );
                 // skip this filename
             } elseif ( preg_match( '/^([0-9][0-9][0-9][0-9])(-.*)?\.php$/i', $filename, $matches ) ) {
                 $got_migration_number = intval( $matches[1] );
@@ -91,7 +91,7 @@ class Zume_Migration_Engine
 
             $activating_migration_number = $current_migration_number + 1;
             $migration = self::get_migrations()[ $activating_migration_number ];
-            
+
             self::sanity_check_expected_tables( $migration->get_expected_tables() );
 
             if ( (int) get_option( 'dt_migration_lock', 0 ) ) {

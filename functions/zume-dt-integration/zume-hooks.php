@@ -84,21 +84,6 @@ class Zume_Integration_Hook_User extends Zume_Integration_Hook_Base {
         add_user_meta( $user_id, 'zume_foreign_key', $new_key, true );
     }
 
-    public function hooks_three_month_plan_updated( $user_id, $plan ) {
-        try {
-            $send_new_user = new Zume_Integration_Three_Month_Plan_Updated();
-            $send_new_user->launch(
-                [
-                'user_id'   => $user_id,
-                ]
-            );
-        } catch ( Exception $e ) {
-            dt_write_log( '@' . __METHOD__ );
-            dt_write_log( 'Caught exception: ', $e->getMessage(), "\n" );
-        }
-        return;
-    }
-
     public function check_for_zume_default_meta( $user_login, $user ) {
 
         if ( empty( get_user_meta( $user->ID, 'zume_foreign_key' ) ) ) {
@@ -113,7 +98,6 @@ class Zume_Integration_Hook_User extends Zume_Integration_Hook_Base {
 
     public function __construct() {
         add_action( 'user_register', [ &$this, 'add_zume_foreign_key' ], 99, 1 );
-        add_action( 'zume_update_three_month_plan', [ &$this, 'hooks_three_month_plan_updated' ], 99, 2 );
         add_action( 'wp_login', [ &$this, 'check_for_zume_default_meta' ], 10, 2 );
 
         parent::__construct();

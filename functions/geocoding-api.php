@@ -13,18 +13,11 @@
  *        1.2 add query with components, add refers lookup, add parse_raw_results
  *        1.3 moved keys and options within class
  *        1.4 added keys in parse function
- *        1.5 added function to call class
  */
 
 if ( !defined( 'ABSPATH' ) ) {
     exit;
 } // Exit if accessed directly
-
-if ( ! function_exists( 'disciple_tools_google_geocode_api' ) ) {
-    function disciple_tools_google_geocode_api() {
-        return new Disciple_Tools_Google_Geocode_API();
-    }
-}
 
 /**
  * Class Disciple_Tools_Google_Geocode_API

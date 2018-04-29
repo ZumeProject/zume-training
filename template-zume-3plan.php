@@ -8,7 +8,6 @@ zume_force_login();
 $zume_error_message = '';
 if ( isset( $_POST['thee_month_plan_nonce'] ) ) {
     // validate nonce
-//    zume_write_log( $_POST );
 
     if ( isset( $_POST['thee_month_plan_nonce'] ) && ! wp_verify_nonce( sanitize_key( $_POST['thee_month_plan_nonce'] ), "thee_month_plan_" . get_current_user_id() ) ) {
         return new WP_Error( 'fail_nonce_verification', 'The form requires a valid nonce, in order to process.' );
@@ -30,7 +29,6 @@ if ( isset( $_POST['thee_month_plan_nonce'] ) ) {
 /* Build variables for page */
 $zume_three_month_plan = Zume_Three_Month_Plan::plan_items_filter( get_user_meta( get_current_user_id(), 'three_month_plan', true ) );
 $zume_groups = Zume_Dashboard::get_current_user_groups();
-zume_write_log( $zume_three_month_plan );
 ?>
 
 <?php get_header(); ?>
