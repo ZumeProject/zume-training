@@ -167,75 +167,7 @@ class Zume_Integration_Endpoints
                     }
                 }
 
-                $report = [
-                    'hero_stats' => Zume_Site_Stats::hero_stats(),
-                    'groups_progress_by_month' => Zume_Site_Stats::groups_progress_by_month(),
-                    'people_progress_by_month' => Zume_Site_Stats::people_progress_by_month(),
-                    'table_totals_group_people' => [
-                        [ 'Type', 'Groups', 'People', ],
-                        [ 'Registrations', 200, 150 ],
-                        [ 'Active', 100, 90 ],
-                        [ 'Trained', 100, 90 ],
-                        [ 'System Total', 100, 90 ],
-                    ],
-                    'table_total_misc' => [
-                        [ 'Type', 'Groups', 'People', ],
-                        [ 'Registrations', 200, 150 ],
-                        [ 'Active', 100, 90 ],
-                        [ 'Trained', 100, 90 ],
-                        [ 'System Total', 100, 90 ],
-                    ],
-                    'members_per_group' => Zume_Site_Stats::get_group_sizes(),
-                    'current_session_of_group' => Zume_Site_Stats::get_groups_next_session(),
-                    'sessions_completed_by_groups' => Zume_Site_Stats::get_sessions_completed_by_groups(),
-                    'trained_groups_coordinates' => Zume_Site_Stats::get_group_coordinates(), // @todo needs filtered for just trained groups
-                    'session_progress_people' => [
-                        [ 'Session', 'People', [ 'role' => 'annotation' ] ],
-                        [ 'Session 1', 3000, 3000 ],
-                        [ 'Session 2', 2000, 2000 ],
-                        [ 'Session 3', 1900, 1900 ],
-                        [ 'Session 4', 500, 500 ],
-                        [ 'Session 5', 900, 900 ],
-                        [ 'Session 6', 670, 670 ],
-                        [ 'Session 7', 550, 550 ],
-                        [ 'Session 8', 460, 460 ],
-                        [ 'Session 9', 100, 100 ],
-                        [ 'Session 10', 40, 40 ],
-                    ],
-                    'active_people_timeline' => [
-                        [ 'Month', 'Logins', 'Completed Sessions' ],
-                        [ 'Feb', 1000, 121 ],
-                        [ 'Mar', 1000, 101 ],
-                        [ 'Apr', 1000, 191 ],
-                        [ 'May', 1000, 101 ],
-                        [ 'Jun', 1000, 101 ],
-                        [ 'Jul', 1000, 151 ],
-                        [ 'Aug', 1000, 101 ],
-                        [ 'Sep', 1000, 121 ],
-                        [ 'Oct', 1000, 101 ],
-                        [ 'Nov', 1000, 171 ],
-                        [ 'Dec', 1000, 101 ],
-                        [ 'Jan', 1000, 101 ],
-                        [ 'Feb', 1170, 111 ],
-                    ],
-                    'people_info' => [
-                        [ 'Label', 'Number' ],
-                        [ 'No Group', 3456 ],
-                        [ 'More than 1 Group', 56 ],
-                    ],
-                    'people_languages' => Zume_Site_Stats::get_people_languages(),
-                    'group_coordinates' => Zume_Site_Stats::get_group_coordinates(),
-                ];
-
-
-                $report['zume_stats_check_sum'] = md5( maybe_serialize( $report ) );
-                $report['timestamp'] = current_time( 'mysql' );
-
-                // store record until midnight
-                $midnight = mktime( 0, 0, 0, date( 'n' ), date( 'j' ) +1, date( 'Y' ) );
-                $the_time_until_midnight = $midnight - current_time( 'timestamp' );
-                set_transient( 'dt_zume_site_stats', $report, $the_time_until_midnight );
-                // end store record
+                $report = Zume_Site_Stats::build();
 
                 if ( $report['zume_stats_check_sum'] == $params['zume_stats_check_sum'] ) {
                     return [

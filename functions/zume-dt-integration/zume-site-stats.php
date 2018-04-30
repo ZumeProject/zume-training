@@ -4,210 +4,40 @@ class Zume_Site_Stats
 {
     public static function temp_load_hook() {
         dt_write_log( 'FUNCTION RESPONSE' );
-        dt_write_log( self::groups_progress_by_month() );
+        dt_write_log( self::build() );
     }
 
-    private static function query_zume_group_records() {
-        global $wpdb;
-        $groups_meta = $wpdb->get_col(
-            $wpdb->prepare( "
-                  SELECT meta_value 
-                  FROM $wpdb->usermeta 
-                  WHERE meta_key LIKE %s LIMIT 10000", // @todo Returning all results, but at some point we should limit this
-                $wpdb->esc_like( 'zume_group' ).'%'
-            )
-        );
-        return $groups_meta;
-    }
-
-
-    public static function get_group_coordinates() {
-        $groups_meta = self::query_zume_group_records();
-
-        $result = [ [ 'number','number' ] ];
-
-        foreach ( $groups_meta as $group_meta ){
-            $fields = Zume_Dashboard::verify_group_array_filter( $group_meta );
-            if ( !empty( $fields["lat"] ) && !empty( $fields["lng"] ) ) {
-                $result[] = [ $fields["lat"], $fields["lng"] ];
-            } elseif ( !empty( $fields["ip_lat"] ) && !empty( $fields["ip_lng"] ) ) {
-                $result[] = [ $fields["ip_lat"], $fields["ip_lng"] ];
-            }
-        }
-
-        return $result;
-    }
-
-    public static function get_group_sizes(){
-        $groups_meta = self::query_zume_group_records();
-
-        $counts = [];
-
-        foreach ($groups_meta as $group_meta){
-            $fields = Zume_Dashboard::verify_group_array_filter( $group_meta );
-            if ( isset( $fields["members"] ) && intval( $fields["members"] )){
-                if ( !isset( $counts[ $fields["members"] ] ) ){
-                    $counts[ $fields["members"] ] = 1;
-                } else {
-                    $counts[ $fields["members"] ]++;
-                }
-            }
-        }
-
-        ksort( $counts );
-
-        $result = [ [ "Group Size", "Number of groups", [ "role" => "annotation" ] ] ];
-        foreach ($counts as $group_size => $occurrence){
-            $string = $group_size . " members";
-            $result[] = [ $string, $occurrence, $occurrence ];
-        }
-
-        dt_write_log( $result );
-
-        return $result;
-    }
-
-    public static function get_group_steps_completed(){
-
-        $groups_meta = self::query_zume_group_records();
-
-        $count = [
-            "session_1" => 0,
-            "session_2" => 0,
-            "session_3" => 0,
-            "session_4" => 0,
-            "session_5" => 0,
-            "session_6" => 0,
-            "session_7" => 0,
-            "session_8" => 0,
-            "session_9" => 0,
-            "session_10" => 0,
+    public static function build() {
+        $report = [
+            'hero_stats' => self::get_hero_stats(),
+            'groups_progress_by_month' => self::get_groups_progress_by_month(),
+            'people_progress_by_month' => self::get_people_progress_by_month(),
+            'active_by_month' => self::get_active_by_month(),
+            'members_per_group' => self::get_group_sizes(),
+            'current_session_of_group' => self::get_groups_next_session(),
+            'sessions_completed_by_groups' => self::get_sessions_completed_by_groups(),
+            'logins_by_month' => self::get_logins_by_month(),
+            'people_languages' => self::get_people_languages(),
+            'country_list_by_group' => self::get_country_list_by_group(),
+            'country_list_by_people' => self::get_country_list_by_people(),
+            'group_coordinates' => self::get_group_coordinates(),
         ];
 
-        foreach ($groups_meta as $group_meta){
-            $fields = Zume_Dashboard::verify_group_array_filter( $group_meta );
-            foreach ($count as $key => $value ){
-                if ( $fields[$key] == true ){
-                    $count[$key]++;
-                }
-            }
-        }
 
-        $result = [ [ 'Session', 'Groups', [ 'role' => 'annotation' ] ] ];
+        $report['zume_stats_check_sum'] = md5( maybe_serialize( $report ) );
+        $report['timestamp'] = current_time( 'mysql' );
 
-        foreach ( $count as $key => $value ) {
-            $result[] = [ $key, $value, $value ];
-        }
+        // store record until midnight
+        $midnight = mktime( 0, 0, 0, date( 'n' ), date( 'j' ) +1, date( 'Y' ) );
+        $the_time_until_midnight = $midnight - current_time( 'timestamp' );
+        delete_transient( 'dt_zume_site_stats' );
+        set_transient( 'dt_zume_site_stats', $report, $the_time_until_midnight );
+        // end store record
 
-        return $result;
+        return $report;
     }
 
-    public static function get_sessions_completed_by_groups(){
-
-        $groups_meta = self::query_zume_group_records();
-
-        $count = [
-            "session_1" => 0,
-            "session_2" => 0,
-            "session_3" => 0,
-            "session_4" => 0,
-            "session_5" => 0,
-            "session_6" => 0,
-            "session_7" => 0,
-            "session_8" => 0,
-            "session_9" => 0,
-            "session_10" => 0,
-        ];
-
-        foreach ($groups_meta as $group_meta){
-            $fields = Zume_Dashboard::verify_group_array_filter( $group_meta );
-            foreach ($count as $key => $value ){
-                if ( $fields[$key] == true ){
-                    $count[$key]++;
-                }
-            }
-        }
-
-        $result = [ [ 'Session', 'Groups', [ 'role' => 'annotation' ] ] ];
-
-        foreach ( $count as $key => $value ) {
-            $result[] = [ $key, $value, $value ];
-        }
-
-        return $result;
-    }
-
-    public static function get_groups_next_session(){
-
-        $groups_meta = self::query_zume_group_records();
-
-        $count = [
-            1 => 0,
-            2 => 0,
-            3 => 0,
-            4 => 0,
-            5 => 0,
-            6 => 0,
-            7 => 0,
-            8 => 0,
-            9 => 0,
-            10 => 0,
-            11 => 0,
-            ];
-
-        foreach ($groups_meta as $group_meta){
-            $fields = Zume_Dashboard::verify_group_array_filter( $group_meta );
-
-            $count[ intval( $fields['next_session'] ) ] = $count[ intval( $fields['next_session'] ) ] + 1;
-        }
-
-        $current_session_of_group = [
-            [ 'Session', 'Groups', [ 'role' => 'annotation' ] ],
-            [ 'Session 1', $count[1], $count[1] ],
-            [ 'Session 2', $count[2], $count[2] ],
-            [ 'Session 3', $count[3], $count[3] ],
-            [ 'Session 4', $count[4], $count[4] ],
-            [ 'Session 5', $count[5], $count[5] ],
-            [ 'Session 6', $count[6], $count[6] ],
-            [ 'Session 7', $count[7], $count[7] ],
-            [ 'Session 8', $count[8], $count[8] ],
-            [ 'Session 9', $count[9], $count[9] ],
-            [ 'Session 10', $count[10], $count[10] ],
-        ];
-
-        return $current_session_of_group;
-    }
-
-    /**
-     * Returns count of all registered users of ZumeProject.com
-     * @return int
-     */
-    public static function get_registered_people(){
-        $result = count_users();
-        return $result['total_users'];
-    }
-
-    /**
-     * Returns the number of engaged people. People who have completed at least session 1.
-     * @return int
-     */
-    public static function get_engaged_people() {
-        $groups_meta = self::query_zume_group_records();
-        $count = 0;
-
-        foreach ($groups_meta as $group_meta){
-            $fields = Zume_Dashboard::verify_group_array_filter( $group_meta );
-            if ( isset( $fields["members"] ) && intval( $fields["members"] )){
-                if ( intval( $fields["next_session"] ) > 1 ) {
-                    $count = $count + $fields["members"];
-                }
-            }
-        }
-
-        return $count;
-    }
-
-    public static function hero_stats() {
+    public static function get_hero_stats() {
         $groups_meta = self::query_zume_group_records();
 
         $hero_stats = [
@@ -231,7 +61,7 @@ class Zume_Site_Stats
         ];
 
         // Registered people
-        $hero_stats['registered_people'] = Zume_Site_Stats::get_registered_people();
+        $hero_stats['registered_people'] = Zume_Site_Stats::query_registered_people();
         $hero_stats['total_languages'] = count( pll_languages_list() );
 
         // Loop group details
@@ -343,7 +173,588 @@ class Zume_Site_Stats
         return $hero_stats;
     }
 
+    public static function get_group_coordinates() {
+        $groups_meta = self::query_zume_group_records();
+
+        $result = [ [ 'number','number' ] ];
+
+        foreach ( $groups_meta as $group_meta ){
+            $fields = Zume_Dashboard::verify_group_array_filter( $group_meta );
+            if ( !empty( $fields["lat"] ) && !empty( $fields["lng"] ) ) {
+                $result[] = [ $fields["lat"], $fields["lng"] ];
+            } elseif ( !empty( $fields["ip_lat"] ) && !empty( $fields["ip_lng"] ) ) {
+                $result[] = [ $fields["ip_lat"], $fields["ip_lng"] ];
+            }
+        }
+
+        return $result;
+    }
+
+    public static function get_group_sizes() {
+        $groups_meta = self::query_zume_group_records();
+
+        $counts = [];
+
+        foreach ($groups_meta as $group_meta){
+            $fields = Zume_Dashboard::verify_group_array_filter( $group_meta );
+            if ( isset( $fields["members"] ) && intval( $fields["members"] )){
+                if ( !isset( $counts[ $fields["members"] ] ) ){
+                    $counts[ $fields["members"] ] = 1;
+                } else {
+                    $counts[ $fields["members"] ]++;
+                }
+            }
+        }
+
+        ksort( $counts );
+
+        $result = [ [ "Group Size", "Number of groups", [ "role" => "annotation" ] ] ];
+        foreach ($counts as $group_size => $occurrence){
+            $string = $group_size . " members";
+            $result[] = [ $string, $occurrence, $occurrence ];
+        }
+
+        return $result;
+    }
+
+    public static function get_group_steps_completed() {
+
+        $groups_meta = self::query_zume_group_records();
+
+        $count = [
+            "session_1" => 0,
+            "session_2" => 0,
+            "session_3" => 0,
+            "session_4" => 0,
+            "session_5" => 0,
+            "session_6" => 0,
+            "session_7" => 0,
+            "session_8" => 0,
+            "session_9" => 0,
+            "session_10" => 0,
+        ];
+
+        foreach ($groups_meta as $group_meta){
+            $fields = Zume_Dashboard::verify_group_array_filter( $group_meta );
+            foreach ($count as $key => $value ){
+                if ( $fields[$key] == true ){
+                    $count[$key]++;
+                }
+            }
+        }
+
+        $result = [ [ 'Session', 'Groups', [ 'role' => 'annotation' ] ] ];
+
+        foreach ( $count as $key => $value ) {
+            $result[] = [ $key, $value, $value ];
+        }
+
+        return $result;
+    }
+
+    public static function get_sessions_completed_by_groups() {
+
+        $groups_meta = self::query_zume_group_records();
+
+        $count = [
+            "session_1" => 0,
+            "session_2" => 0,
+            "session_3" => 0,
+            "session_4" => 0,
+            "session_5" => 0,
+            "session_6" => 0,
+            "session_7" => 0,
+            "session_8" => 0,
+            "session_9" => 0,
+            "session_10" => 0,
+        ];
+
+        foreach ($groups_meta as $group_meta){
+            $fields = Zume_Dashboard::verify_group_array_filter( $group_meta );
+            foreach ($count as $key => $value ){
+                if ( $fields[$key] == true ){
+                    $count[$key]++;
+                }
+            }
+        }
+
+        $result = [ [ 'Session', 'Groups', [ 'role' => 'annotation' ] ] ];
+
+        foreach ( $count as $key => $value ) {
+            $result[] = [ $key, $value, $value ];
+        }
+
+        return $result;
+    }
+
+    public static function get_groups_next_session() {
+
+        $groups_meta = self::query_zume_group_records();
+
+        $count = [
+            1 => 0,
+            2 => 0,
+            3 => 0,
+            4 => 0,
+            5 => 0,
+            6 => 0,
+            7 => 0,
+            8 => 0,
+            9 => 0,
+            10 => 0,
+            11 => 0,
+            ];
+
+        foreach ($groups_meta as $group_meta){
+            $fields = Zume_Dashboard::verify_group_array_filter( $group_meta );
+
+            $count[ intval( $fields['next_session'] ) ] = $count[ intval( $fields['next_session'] ) ] + 1;
+        }
+
+        $current_session_of_group = [
+            [ 'Session', 'Groups', [ 'role' => 'annotation' ] ],
+            [ 'Session 1', $count[1], $count[1] ],
+            [ 'Session 2', $count[2], $count[2] ],
+            [ 'Session 3', $count[3], $count[3] ],
+            [ 'Session 4', $count[4], $count[4] ],
+            [ 'Session 5', $count[5], $count[5] ],
+            [ 'Session 6', $count[6], $count[6] ],
+            [ 'Session 7', $count[7], $count[7] ],
+            [ 'Session 8', $count[8], $count[8] ],
+            [ 'Session 9', $count[9], $count[9] ],
+            [ 'Session 10', $count[10], $count[10] ],
+        ];
+
+        return $current_session_of_group;
+    }
+
+    public static function get_country_list_by_group() {
+        /**
+         * Gets a list of countries from parsing geodata and counts number of groups
+         * @return array
+         */
+        $groups_meta = self::query_zume_group_records();
+
+        $country = [];
+
+        foreach ($groups_meta as $group_meta){
+            $fields = Zume_Dashboard::verify_group_array_filter( $group_meta );
+            if ( isset( $fields['ip_raw_location'] ) && ! empty( $fields['ip_raw_location'] ) ) {
+                $label = Disciple_Tools_Google_Geocode_API::parse_raw_result( $fields['ip_raw_location'], 'country' );
+                if ( ! isset( $country[$label] ) ) {
+                    $country[$label] = 0;
+                }
+                $country[$label] = $country[$label] + 1;
+            }
+        }
+
+        $countries_by_groups = [
+            [ 'Country', 'Groups' ],
+        ];
+
+        foreach ( $country as $key => $value ) {
+            if ( '0' == $key ) {
+                array_push( $countries_by_groups, [ '-', $value ] );
+            } else {
+                array_push( $countries_by_groups, [ $key, $value ] );
+            }
+        }
+
+        return $countries_by_groups;
+    }
+
+    public static function get_country_list_by_people() {
+        $user_results = self::query_raw_user_ip_locations();
+
+        $country = [];
+
+        array_filter( $user_results );
+
+        foreach ($user_results as $user_result){
+            if ( ! empty( $user_result ) ) {
+                $user_result = maybe_unserialize( $user_result );
+                $label = Disciple_Tools_Google_Geocode_API::parse_raw_result( $user_result, 'country' );
+                if ( ! isset( $country[$label] ) ) {
+                    $country[$label] = 0;
+                }
+                $country[$label] = $country[$label] + 1;
+            }
+        }
+
+        $countries_by_users = [
+            [ 'Country', 'People' ],
+        ];
+
+        foreach ( $country as $key => $value ) {
+            if ( '0' == $key ) {
+                array_push( $countries_by_users, [ '-', $value ] );
+            } else {
+                array_push( $countries_by_users, [ $key, $value ] );
+            }
+        }
+
+        return $countries_by_users;
+    }
+
+    public static function get_logins_by_month() {
+
+        $results = self::query_logins_by_month();
+
+        $logins = [
+            [ 'Month', 'Logins' ]
+        ];
+
+        foreach ( $results as $result ) {
+            $logins[] = [ date( 'M', strtotime( $result['date'] ) ), intval( $result['total'] ) ];
+        }
+
+        return $logins;
+    }
+
     public static function get_people_languages() {
+
+        $results = self::query_languages_users();
+
+        $people_languages = [
+            [ 'Languages', 'Users', [ "role" => "annotation" ] ],
+        ];
+
+        foreach ( $results as $value ) {
+            // translate to readable name
+            $readable_language_name = self::language_codes_and_names( $value['language_code'] );
+
+            $people_languages[] = [ $readable_language_name, intval( $value['people'] ), intval( $value['people'] ) ];
+        }
+
+        return $people_languages;
+    }
+
+
+    public static function get_groups_progress_by_month() {
+
+        // Get dates YYYY-M
+        $five_months_back = date( 'Y-n', strtotime( '-5 months -3 days' ) );
+        $four_months_back = date( 'Y-n', strtotime( '-4 months -3 days' ) );
+        $three_months_back = date( 'Y-n', strtotime( '-3 months -3 days' ) );
+        $two_months_back = date( 'Y-n', strtotime( '-2 months -3 days' ) );
+        $one_month_back = date( 'Y-n', strtotime( '-1 month -3 days' ) );
+        $this_month = date( 'Y-n' );
+
+        // build default date array
+        $expected_dates = [
+            $five_months_back => 0,
+            $four_months_back => 0,
+            $three_months_back => 0,
+            $two_months_back => 0,
+            $one_month_back => 0,
+            $this_month => 0,
+        ];
+
+        // get data and format array
+        $registered = self::combine_by_month_array( self::query_groups_registered_by_month() );
+        $engaged = self::combine_by_month_array( self::query_groups_engaged_by_month() );
+        $trained = self::combine_by_month_array( self::query_groups_trained_by_month() );
+
+        // parse results against default so that we have an expected amount of array elements, if even with a 0 value
+        $registered = wp_parse_args( $registered, $expected_dates );
+        $engaged = wp_parse_args( $engaged, $expected_dates );
+        $trained = wp_parse_args( $trained, $expected_dates );
+
+        $stats = [
+            [
+                'Month',
+                'Registered',
+                'Engaged',
+                'Trained',
+                'Average'
+            ],
+            [
+                date( 'M', strtotime( '-5 months -3 days' ) ),
+                $registered[$five_months_back],
+                $engaged[$five_months_back],
+                $trained[$five_months_back],
+                $average = round(array_sum([
+                        $registered[$five_months_back],
+                        $engaged[$five_months_back],
+                        $trained[$five_months_back],
+                ]) /6 )
+            ],
+            [
+                date( 'M', strtotime( '-4 months -3 days' ) ),
+                $registered[$four_months_back],
+                $engaged[$four_months_back],
+                $trained[$four_months_back],
+                $average = round(array_sum([
+                        $registered[$four_months_back],
+                        $engaged[$four_months_back],
+                        $trained[$four_months_back],
+                ]) /6 )
+            ],
+            [
+                date( 'M', strtotime( '-3 months -3 days' ) ),
+                $registered[$three_months_back],
+                $engaged[$three_months_back],
+                $trained[$three_months_back],
+                $average = round(array_sum([
+                        $registered[$three_months_back],
+                        $engaged[$three_months_back],
+                        $trained[$three_months_back],
+                ]) /6 )
+            ],
+            [
+                date( 'M', strtotime( '-2 months -3 days' ) ),
+                $registered[$two_months_back],
+                $engaged[$two_months_back],
+                $trained[$two_months_back],
+                $average = round(array_sum([
+                        $registered[$two_months_back],
+                        $engaged[$two_months_back],
+                        $trained[$two_months_back],
+                ]) /6 )
+            ],
+            [
+                date( 'M', strtotime( '-1 month -3 days' ) ),
+                $registered[$one_month_back],
+                $engaged[$one_month_back],
+                $trained[$one_month_back],
+                $average = round(array_sum([
+                        $registered[$one_month_back],
+                        $engaged[$one_month_back],
+                        $trained[$one_month_back],
+                ]) /6 )
+            ],
+            [
+                date( 'M' ),
+                $registered[$this_month],
+                $engaged[$this_month],
+                $trained[$this_month],
+                $average = round(array_sum([
+                        $registered[$this_month],
+                        $engaged[$this_month],
+                        $trained[$this_month],
+                ]) /6 )
+            ],
+        ];
+
+        return $stats;
+    }
+
+    public static function get_people_progress_by_month() {
+
+        // Get dates YYYY-M
+        $five_months_back = date( 'Y-n', strtotime( '-5 months -3 days' ) );
+        $four_months_back = date( 'Y-n', strtotime( '-4 months -3 days' ) );
+        $three_months_back = date( 'Y-n', strtotime( '-3 months -3 days' ) );
+        $two_months_back = date( 'Y-n', strtotime( '-2 months -3 days' ) );
+        $one_month_back = date( 'Y-n', strtotime( '-1 month -3 days' ) );
+        $this_month = date( 'Y-n' );
+
+        // build default date array
+        $expected_dates = [
+            $five_months_back => 0,
+            $four_months_back => 0,
+            $three_months_back => 0,
+            $two_months_back => 0,
+            $one_month_back => 0,
+            $this_month => 0,
+        ];
+
+        // get data and format array
+        $registered = self::combine_by_month_array( self::query_people_registered_by_month() );
+        $engaged = self::combine_by_month_array( self::query_people_engaged_by_month() );
+        $trained = self::combine_by_month_array( self::query_people_trained_by_month() );
+
+        // parse results against default so that we have an expected amount of array elements, if even with a 0 value
+        $registered = wp_parse_args( $registered, $expected_dates );
+        $engaged = wp_parse_args( $engaged, $expected_dates );
+        $trained = wp_parse_args( $trained, $expected_dates );
+
+        $stats = [
+            [
+                'Month',
+                'Registered',
+                'Engaged',
+                'Trained',
+                'Average'
+            ],
+            [
+                date( 'M', strtotime( '-5 months -3 days' ) ),
+                $registered[$five_months_back],
+                $engaged[$five_months_back],
+                $trained[$five_months_back],
+                $average = round(array_sum([
+                        $registered[$five_months_back],
+                        $engaged[$five_months_back],
+                        $trained[$five_months_back],
+                ]) /6 )
+            ],
+            [
+                date( 'M', strtotime( '-4 months -3 days' ) ),
+                $registered[$four_months_back],
+                $engaged[$four_months_back],
+                $trained[$four_months_back],
+                $average = round(array_sum([
+                        $registered[$four_months_back],
+                        $engaged[$four_months_back],
+                        $trained[$four_months_back],
+                ]) /6 )
+            ],
+            [
+                date( 'M', strtotime( '-3 months -3 days' ) ),
+                $registered[$three_months_back],
+                $engaged[$three_months_back],
+                $trained[$three_months_back],
+                $average = round(array_sum([
+                        $registered[$three_months_back],
+                        $engaged[$three_months_back],
+                        $trained[$three_months_back],
+                ]) /6 )
+            ],
+            [
+                date( 'M', strtotime( '-2 months -3 days' ) ),
+                $registered[$two_months_back],
+                $engaged[$two_months_back],
+                $trained[$two_months_back],
+                $average = round(array_sum([
+                        $registered[$two_months_back],
+                        $engaged[$two_months_back],
+                        $trained[$two_months_back],
+                ]) /6 )
+            ],
+            [
+                date( 'M', strtotime( '-1 month -3 days' ) ),
+                $registered[$one_month_back],
+                $engaged[$one_month_back],
+                $trained[$one_month_back],
+                $average = round(array_sum([
+                        $registered[$one_month_back],
+                        $engaged[$one_month_back],
+                        $trained[$one_month_back],
+                ]) /6 )
+            ],
+            [
+                date( 'M' ),
+                $registered[$this_month],
+                $engaged[$this_month],
+                $trained[$this_month],
+                $average = round(array_sum([
+                        $registered[$this_month],
+                        $engaged[$this_month],
+                        $trained[$this_month],
+                ]) /6 )
+            ],
+        ];
+
+        return $stats;
+    }
+
+    public static function get_active_by_month() {
+        // Get dates YYYY-M
+        $five_months_back = date( 'Y-n', strtotime( '-5 months -3 days' ) );
+        $four_months_back = date( 'Y-n', strtotime( '-4 months -3 days' ) );
+        $three_months_back = date( 'Y-n', strtotime( '-3 months -3 days' ) );
+        $two_months_back = date( 'Y-n', strtotime( '-2 months -3 days' ) );
+        $one_month_back = date( 'Y-n', strtotime( '-1 month -3 days' ) );
+        $this_month = date( 'Y-n' );
+
+        // build default date array
+        $expected_dates = [
+            $five_months_back => 0,
+            $four_months_back => 0,
+            $three_months_back => 0,
+            $two_months_back => 0,
+            $one_month_back => 0,
+            $this_month => 0,
+        ];
+
+        // get data and format array
+        $active_groups = self::combine_by_month_array( self::query_groups_active_by_month() );
+        $active_people = self::combine_by_month_array( self::query_people_active_by_month() );
+
+        // parse results against default so that we have an expected amount of array elements, if even with a 0 value
+        $active_groups = wp_parse_args( $active_groups, $expected_dates );
+        $active_people = wp_parse_args( $active_people, $expected_dates );
+
+        $stats = [
+            [
+                'Month',
+                'Groups',
+                'People',
+                'Average'
+            ],
+            [
+                date( 'M', strtotime( '-5 months -3 days' ) ),
+                $active_groups[$five_months_back],
+                $active_people[$five_months_back],
+                $average = round(array_sum([
+                        $active_groups[$five_months_back],
+                        $active_people[$five_months_back],
+                ]) /6 )
+            ],
+            [
+                date( 'M', strtotime( '-4 months -3 days' ) ),
+                $active_groups[$four_months_back],
+                $active_people[$four_months_back],
+                $average = round(array_sum([
+                        $active_groups[$four_months_back],
+                        $active_people[$four_months_back],
+                ]) /6 )
+            ],
+            [
+                date( 'M', strtotime( '-3 months -3 days' ) ),
+                $active_groups[$three_months_back],
+                $active_people[$three_months_back],
+                $average = round(array_sum([
+                        $active_groups[$three_months_back],
+                        $active_people[$three_months_back],
+                ]) /6 )
+            ],
+            [
+                date( 'M', strtotime( '-2 months -3 days' ) ),
+                $active_groups[$two_months_back],
+                $active_people[$two_months_back],
+                $average = round(array_sum([
+                        $active_groups[$two_months_back],
+                        $active_people[$two_months_back],
+                ]) /6 )
+            ],
+            [
+                date( 'M', strtotime( '-1 month -3 days' ) ),
+                $active_groups[$one_month_back],
+                $active_people[$one_month_back],
+                $average = round(array_sum([
+                        $active_groups[$one_month_back],
+                        $active_people[$one_month_back],
+                ]) /6 )
+            ],
+            [
+                date( 'M' ),
+                $active_groups[$this_month],
+                $active_people[$this_month],
+                $average = round(array_sum([
+                        $active_groups[$this_month],
+                        $active_people[$this_month],
+                ]) /6 )
+            ],
+        ];
+
+        return $stats;
+    }
+
+    public static function query_zume_group_records() {
+        global $wpdb;
+        $groups_meta = $wpdb->get_col(
+            $wpdb->prepare( "
+                  SELECT meta_value 
+                  FROM $wpdb->usermeta 
+                  WHERE meta_key LIKE %s LIMIT 10000", // @todo Returning all results, but at some point we should limit this
+                $wpdb->esc_like( 'zume_group' ).'%'
+            )
+        );
+        return $groups_meta;
+    }
+
+    public static function query_languages_users() {
         global $wpdb;
         $results = $wpdb->get_results("
             SELECT meta_value as language_code, count(umeta_id) as people 
@@ -351,35 +762,196 @@ class Zume_Site_Stats
             WHERE meta_key = 'zume_language' 
             GROUP BY meta_value
             ", ARRAY_A );
+        return $results;
+    }
 
-        $people_languages = [
-            [ 'Languages', 'Users', [ "role" => "annotation" ] ],
-        ];
+    public static function query_raw_user_ip_locations() {
+        global $wpdb;
+        $raw_user_georesults = $wpdb->get_col(
+            "
+                  SELECT meta_value 
+                  FROM wp_usermeta 
+                  WHERE meta_key = 'zume_raw_location_from_ip'"
+        );
+        return $raw_user_georesults;
+    }
 
-        $registered_people = self::get_registered_people();
+    public static function query_groups_registered_by_month() {
+        global $wpdb;
+        $result = $wpdb->get_results(
+            "
+                    SELECT CONCAT( YEAR(created_date), '-', MONTH(created_date) ) as date, count(id) as total
+                    FROM $wpdb->zume_logging
+                    WHERE page = 'dashboard' AND action = 'create_group'
+                    GROUP BY MONTH(created_date)
+                    ORDER BY YEAR(created_date), MONTH(created_date) LIMIT 6;
+                  ", ARRAY_A
+        );
+        return $result;
+    }
 
-        if ( empty( $results ) ) {
-            $people_languages[] = [ 'English', $registered_people, $registered_people ];
-            return $people_languages;
-        }
+    public static function query_groups_engaged_by_month() {
+        global $wpdb;
+        $result = $wpdb->get_results(
+            "
+                    SELECT CONCAT( YEAR(created_date), '-', MONTH(created_date) ) as date, count(id) as total
+                    FROM $wpdb->zume_logging
+                    WHERE page = 'course' AND action = 'session_1' AND meta LIKE 'group%'
+                    GROUP BY MONTH(created_date)
+                    ORDER BY YEAR(created_date), MONTH(created_date) LIMIT 6;
+                  ", ARRAY_A
+        );
+        return $result;
+    }
 
-        $non_english = 0;
-        foreach ( $results as $value ) {
-            if ( ! ( $value['language_code'] == 'en' ) ) {
-                // translate to readable name
-                $readable_language_name = self::language_codes_and_names( $value['language_code'] );
+    public static function query_groups_trained_by_month() {
+        global $wpdb;
+        $result = $wpdb->get_results(
+            "
+                    SELECT CONCAT( YEAR(created_date), '-', MONTH(created_date) ) as date, count(id) as total
+                    FROM $wpdb->zume_logging
+                    WHERE page = 'course' AND ( action = 'session_9' OR action = 'session_10' ) AND meta LIKE 'group%'
+                    GROUP BY MONTH(created_date)
+                    ORDER BY YEAR(created_date), MONTH(created_date) LIMIT 6;
+                  ", ARRAY_A
+        );
+        return $result;
+    }
 
-                $people_languages[] = [ $readable_language_name, intval( $value['people'] ), intval( $value['people'] ) ];
+    public static function query_logins_by_month() {
+        global $wpdb;
 
-                $non_english = $non_english + $value['people'];
+        $results = $wpdb->get_results("
+            SELECT CONCAT( YEAR(created_date), '-', MONTH(created_date) ) as date, count(id) as total
+            FROM $wpdb->zume_logging
+            WHERE page = 'login' AND action = 'logged_in'
+            GROUP BY MONTH(created_date)
+            ORDER BY YEAR(created_date), MONTH(created_date) 
+            LIMIT 6
+        ", ARRAY_A );
+
+        return $results;
+    }
+
+    public static function query_groups_active_by_month() {
+        global $wpdb;
+        $result = $wpdb->get_results(
+            "
+                    SELECT CONCAT( YEAR(created_date), '-', MONTH(created_date) ) as date, count(id) as total
+                    FROM $wpdb->zume_logging
+                    WHERE page = 'course' AND action LIKE 'session_%' AND meta LIKE 'group%'
+                    GROUP BY MONTH(created_date)
+                    ORDER BY YEAR(created_date), MONTH(created_date) LIMIT 6;
+                  ", ARRAY_A
+        );
+        return $result;
+    }
+
+    public static function query_people_registered_by_month() {
+        global $wpdb;
+        $result = $wpdb->get_results(
+            "
+                    SELECT CONCAT( YEAR(created_date), '-', MONTH(created_date) ) as date, count(id) as total
+                    FROM $wpdb->zume_logging
+                    WHERE action = 'registered' GROUP BY MONTH(created_date)
+                    ORDER BY YEAR(created_date), MONTH(created_date) LIMIT 6;
+                  ", ARRAY_A
+        );
+        return $result;
+    }
+
+    public static function query_people_engaged_by_month() {
+        global $wpdb;
+        $result = $wpdb->get_results(
+            "
+                    SELECT CONCAT( YEAR(a.created_date), '-', MONTH(a.created_date) ) as date, SUM(b.members) as total 
+                    FROM $wpdb->zume_logging as a
+                      INNER JOIN (
+                                   SELECT *, REPLACE( meta, 'group_', '') as members FROM $wpdb->zume_logging
+                                   WHERE page = 'course' AND action = 'session_1' AND meta LIKE 'group%'
+                                   GROUP BY group_id, action, MONTH(created_date)
+                                 ) as b
+                        ON a.id=b.id
+                    GROUP BY MONTH(a.created_date)
+                    ORDER BY YEAR(a.created_date), MONTH(a.created_date) LIMIT 6
+                  ", ARRAY_A
+        );
+        return $result;
+    }
+
+    public static function query_people_trained_by_month() {
+        global $wpdb;
+        $result = $wpdb->get_results(
+            "
+                    SELECT CONCAT( YEAR(a.created_date), '-', MONTH(a.created_date) ) as date, SUM(b.members) as total 
+                    FROM $wpdb->zume_logging as a
+                      INNER JOIN (
+                                   SELECT *, REPLACE( meta, 'group_', '') as members FROM $wpdb->zume_logging
+                                   WHERE page = 'course' AND ( action = 'session_9' OR action = 'session_10' ) AND meta LIKE 'group%'
+                                   GROUP BY group_id, action, MONTH(created_date)
+                                 ) as b
+                        ON a.id=b.id
+                    GROUP BY MONTH(a.created_date)
+                    ORDER BY YEAR(a.created_date), MONTH(a.created_date) LIMIT 6
+                  ", ARRAY_A
+        );
+        return $result;
+    }
+
+    public static function query_people_active_by_month() {
+        global $wpdb;
+        $result = $wpdb->get_results(
+            "
+                    SELECT CONCAT( YEAR(a.created_date), '-', MONTH(a.created_date) ) as date, SUM(b.members) as total 
+                    FROM $wpdb->zume_logging as a
+                    INNER JOIN (
+                        SELECT *, REPLACE( meta, 'group_', '') as members FROM $wpdb->zume_logging
+                        WHERE meta LIKE 'group_%'
+                        GROUP BY group_id, action, MONTH(created_date)
+                        ) as b
+                    ON a.id=b.id
+                    GROUP BY MONTH(a.created_date)
+                    ORDER BY YEAR(a.created_date), MONTH(a.created_date) LIMIT 6
+                  ", ARRAY_A
+        );
+        return $result;
+    }
+
+    public static function query_registered_people() {
+        /**
+         * Returns count of all registered users of ZumeProject.com
+         * @return int
+         */
+        $result = count_users();
+        return $result['total_users'];
+    }
+
+    public static function query_engaged_people() {
+        /**
+         * Returns the number of engaged people. People who have completed at least session 1.
+         * @return int
+         */
+        $groups_meta = self::query_zume_group_records();
+        $count = 0;
+
+        foreach ($groups_meta as $group_meta){
+            $fields = Zume_Dashboard::verify_group_array_filter( $group_meta );
+            if ( isset( $fields["members"] ) && intval( $fields["members"] )){
+                if ( intval( $fields["next_session"] ) > 1 ) {
+                    $count = $count + $fields["members"];
+                }
             }
         }
 
-        $english = $registered_people - $non_english;
-        $people_languages[] = [ 'English', intval( $english ), intval( $english ) ];
+        return $count;
+    }
 
-        return $people_languages;
-
+    private static function combine_by_month_array( $array ) {
+        $new_array = [];
+        foreach ( $array as $value ) {
+            $new_array[$value['date']] = $value['total'];
+        }
+        return $new_array;
     }
 
     public static function language_codes_and_names( $code ) {
@@ -577,425 +1149,4 @@ class Zume_Site_Stats
             return $code;
         }
     }
-
-//    public static function view_geodata() {
-//
-//        $result = Disciple_Tools_Google_Geocode_API::query_google_api( '799 W Lincolnway, Columbia City, IN 46725, USA', 'core' );
-//
-//        $location = [];
-//        $level1 = '';
-//        $level2 = '';
-//
-//        if ( isset( $result['raw']['status'] ) && ( 'OK' == $result['raw']['status'] ?? '' ) ) {
-//            $address_components = $result['raw']['results'][0]['address_components'];
-//            foreach ( $address_components as $address_component ) {
-//                if ( 'neighborhood' == $address_component['types'][0] ) {
-//                    $location['neighborhood'] = $address_component['long_name'];
-//                    $level2 .= $location['neighborhood'] . ', ';
-//                }
-//                if ( 'locality' == $address_component['types'][0] ) {
-//                    $location['locality'] = $address_component['long_name'];
-//                    $level2 .= $location['locality'] . ', ';
-//                }
-//                if ( 'administrative_area_level_2' == $address_component['types'][0] ) {
-//                    $location['admin_2'] = $address_component['long_name'];
-//                    $level2 .= $location['admin_2'] . ', ';
-//                }
-//                if ( 'administrative_area_level_1' == $address_component['types'][0] ) {
-//                    $location['admin_1'] = $address_component['long_name'];
-//                    $level1 .= $location['admin_1'] . ', ';
-//                }
-//                if ( 'country' == $address_component['types'][0] ) {
-//                    $location['country'] = $address_component['long_name'];
-//                    $level1 .= $location['country'];
-//                }
-//                $level1 = rtrim( $level1, ',' );
-//            }
-//
-//            $level2 = substr( $level2, 0, -2 );
-//
-//            $location['level2'] = $level2;
-//            $location['level1'] = $level1;
-//            $location['raw'] = $result;
-//
-//
-//            return $location;
-//        }
-//    }
-
-    public static function query_groups_registered_by_month() {
-        global $wpdb;
-        $result = $wpdb->get_results(
-            "
-                    SELECT CONCAT( YEAR(created_date), '-', MONTH(created_date) ) as date, count(id) as total
-                    FROM $wpdb->zume_logging
-                    WHERE page = 'dashboard' AND action = 'create_group'
-                    GROUP BY MONTH(created_date)
-                    ORDER BY YEAR(created_date), MONTH(created_date) LIMIT 6;
-                  ", ARRAY_A
-        );
-        return $result;
-    }
-    public static function query_groups_engaged_by_month() {
-        global $wpdb;
-        $result = $wpdb->get_results(
-            "
-                    SELECT CONCAT( YEAR(created_date), '-', MONTH(created_date) ) as date, count(id) as total
-                    FROM $wpdb->zume_logging
-                    WHERE page = 'course' AND action = 'session_1' AND meta LIKE 'group%'
-                    GROUP BY MONTH(created_date)
-                    ORDER BY YEAR(created_date), MONTH(created_date) LIMIT 6;
-                  ", ARRAY_A
-        );
-        return $result;
-    }
-    public static function query_groups_trained_by_month() {
-        global $wpdb;
-        $result = $wpdb->get_results(
-            "
-                    SELECT CONCAT( YEAR(created_date), '-', MONTH(created_date) ) as date, count(id) as total
-                    FROM $wpdb->zume_logging
-                    WHERE page = 'course' AND ( action = 'session_9' OR action = 'session_10' ) AND meta LIKE 'group%'
-                    GROUP BY MONTH(created_date)
-                    ORDER BY YEAR(created_date), MONTH(created_date) LIMIT 6;
-                  ", ARRAY_A
-        );
-        return $result;
-    }
-    public static function query_groups_active_by_month() {
-        global $wpdb;
-        $result = $wpdb->get_results(
-            "
-                    SELECT CONCAT( YEAR(created_date), '-', MONTH(created_date) ) as date, count(id) as total
-                    FROM $wpdb->zume_logging
-                    WHERE page = 'course' AND action LIKE 'session_%' AND meta LIKE 'group%'
-                    GROUP BY MONTH(created_date)
-                    ORDER BY YEAR(created_date), MONTH(created_date) LIMIT 6;
-                  ", ARRAY_A
-        );
-        return $result;
-    }
-    public static function query_people_registered_by_month() {
-        global $wpdb;
-        $result = $wpdb->get_results(
-            "
-                    SELECT CONCAT( YEAR(created_date), '-', MONTH(created_date) ) as date, count(id) as total
-                    FROM $wpdb->zume_logging
-                    WHERE action = 'registered' GROUP BY MONTH(created_date)
-                    ORDER BY YEAR(created_date), MONTH(created_date) LIMIT 6;
-                  ", ARRAY_A
-        );
-        return $result;
-    }
-    public static function query_people_engaged_by_month() {
-        global $wpdb;
-        $result = $wpdb->get_results(
-            "
-                    SELECT CONCAT( YEAR(a.created_date), '-', MONTH(a.created_date) ) as date, SUM(b.members) as total 
-                    FROM $wpdb->zume_logging as a
-                      INNER JOIN (
-                                   SELECT *, REPLACE( meta, 'group_', '') as members FROM $wpdb->zume_logging
-                                   WHERE page = 'course' AND action = 'session_1' AND meta LIKE 'group%'
-                                   GROUP BY group_id, action, MONTH(created_date)
-                                 ) as b
-                        ON a.id=b.id
-                    GROUP BY MONTH(a.created_date)
-                    ORDER BY YEAR(a.created_date), MONTH(a.created_date) LIMIT 6
-                  ", ARRAY_A
-        );
-        return $result;
-    }
-    public static function query_people_trained_by_month() {
-        global $wpdb;
-        $result = $wpdb->get_results(
-            "
-                    SELECT CONCAT( YEAR(a.created_date), '-', MONTH(a.created_date) ) as date, SUM(b.members) as total 
-                    FROM $wpdb->zume_logging as a
-                      INNER JOIN (
-                                   SELECT *, REPLACE( meta, 'group_', '') as members FROM $wpdb->zume_logging
-                                   WHERE page = 'course' AND ( action = 'session_9' OR action = 'session_10' ) AND meta LIKE 'group%'
-                                   GROUP BY group_id, action, MONTH(created_date)
-                                 ) as b
-                        ON a.id=b.id
-                    GROUP BY MONTH(a.created_date)
-                    ORDER BY YEAR(a.created_date), MONTH(a.created_date) LIMIT 6
-                  ", ARRAY_A
-        );
-        return $result;
-    }
-    public static function query_people_active_by_month() {
-        global $wpdb;
-        $result = $wpdb->get_results(
-            "
-                    SELECT CONCAT( YEAR(a.created_date), '-', MONTH(a.created_date) ) as date, SUM(b.members) as total 
-                    FROM $wpdb->zume_logging as a
-                    INNER JOIN (
-                        SELECT *, REPLACE( meta, 'group_', '') as members FROM $wpdb->zume_logging
-                        WHERE meta LIKE 'group_%'
-                        GROUP BY group_id, action, MONTH(created_date)
-                        ) as b
-                    ON a.id=b.id
-                    GROUP BY MONTH(a.created_date)
-                    ORDER BY YEAR(a.created_date), MONTH(a.created_date) LIMIT 6
-                  ", ARRAY_A
-        );
-        return $result;
-    }
-
-    public static function groups_progress_by_month() {
-
-        // Get dates YYYY-M
-        $five_months_back = date( 'Y-n', strtotime( '-5 month' ) );
-        $four_months_back = date( 'Y-n', strtotime( '-4 month' ) );
-        $three_months_back = date( 'Y-n', strtotime( '-3 month' ) );
-        $two_months_back = date( 'Y-n', strtotime( '-2 month' ) );
-        $one_month_back = date( 'Y-n', strtotime( '-1 month' ) );
-        $this_month = date( 'Y-n' );
-
-        // build default date array
-        $expected_dates = [
-            $five_months_back => 0,
-            $four_months_back => 0,
-            $three_months_back => 0,
-            $two_months_back => 0,
-            $one_month_back => 0,
-            $this_month => 0,
-        ];
-
-        // get data and format array
-        $registered = self::combine_by_month_array( self::query_groups_registered_by_month() );
-        $engaged = self::combine_by_month_array( self::query_groups_engaged_by_month() );
-        $trained = self::combine_by_month_array( self::query_groups_trained_by_month() );
-        $active = self::combine_by_month_array( self::query_groups_active_by_month() );
-
-        // parse results against default so that we have an expected amount of array elements, if even with a 0 value
-        $registered = wp_parse_args( $registered, $expected_dates );
-        $engaged = wp_parse_args( $engaged, $expected_dates );
-        $trained = wp_parse_args( $trained, $expected_dates );
-        $active = wp_parse_args( $active, $expected_dates );
-
-        $stats = [
-            [
-                'Month',
-                'Registered',
-                'Engaged',
-                'Trained',
-                'Active',
-                'Average'
-            ],
-            [
-                date( 'M', strtotime( '-5 month' ) ),
-                $registered[$five_months_back],
-                $engaged[$five_months_back],
-                $trained[$five_months_back],
-                $active[$five_months_back],
-                $average = round(array_sum([
-                        $registered[$five_months_back],
-                        $engaged[$five_months_back],
-                        $trained[$five_months_back],
-                        $active[$five_months_back],
-                ]) /6 )
-            ],
-            [
-                date( 'M', strtotime( '-4 month' ) ),
-                $registered[$four_months_back],
-                $engaged[$four_months_back],
-                $trained[$four_months_back],
-                $active[$four_months_back],
-                $average = round(array_sum([
-                        $registered[$four_months_back],
-                        $engaged[$four_months_back],
-                        $trained[$four_months_back],
-                        $active[$four_months_back],
-                ]) /6 )
-            ],
-            [
-                date( 'M', strtotime( '-3 month' ) ),
-                $registered[$three_months_back],
-                $engaged[$three_months_back],
-                $trained[$three_months_back],
-                $active[$three_months_back],
-                $average = round(array_sum([
-                        $registered[$three_months_back],
-                        $engaged[$three_months_back],
-                        $trained[$three_months_back],
-                        $active[$three_months_back],
-                ]) /6 )
-            ],
-            [
-                date( 'M', strtotime( '-2 month' ) ),
-                $registered[$two_months_back],
-                $engaged[$two_months_back],
-                $trained[$two_months_back],
-                $active[$two_months_back],
-                $average = round(array_sum([
-                    $registered[$two_months_back],
-                    $engaged[$two_months_back],
-                    $trained[$two_months_back],
-                    $active[$two_months_back],
-                ]) /6 )
-            ],
-            [
-                date( 'M', strtotime( '-1 month' ) ),
-                $registered[$one_month_back],
-                $engaged[$one_month_back],
-                $trained[$one_month_back],
-                $active[$one_month_back],
-                $average = round(array_sum([
-                        $registered[$one_month_back],
-                        $engaged[$one_month_back],
-                        $trained[$one_month_back],
-                        $active[$one_month_back],
-                ]) /6 )
-            ],
-            [
-                date( 'M' ),
-                $registered[$this_month],
-                $engaged[$this_month],
-                $trained[$this_month],
-                $active[$this_month],
-                $average = round(array_sum([
-                        $registered[$this_month],
-                        $engaged[$this_month],
-                        $trained[$this_month],
-                        $active[$this_month],
-                ]) /6 )
-            ],
-        ];
-
-        return $stats;
-    }
-
-    public static function people_progress_by_month() {
-
-        // Get dates YYYY-M
-        $five_months_back = date( 'Y-n', strtotime( '-5 month' ) );
-        $four_months_back = date( 'Y-n', strtotime( '-4 month' ) );
-        $three_months_back = date( 'Y-n', strtotime( '-3 month' ) );
-        $two_months_back = date( 'Y-n', strtotime( '-2 month' ) );
-        $one_month_back = date( 'Y-n', strtotime( '-1 month' ) );
-        $this_month = date( 'Y-n' );
-
-        // build default date array
-        $expected_dates = [
-            $five_months_back => 0,
-            $four_months_back => 0,
-            $three_months_back => 0,
-            $two_months_back => 0,
-            $one_month_back => 0,
-            $this_month => 0,
-        ];
-
-        // get data and format array
-        $registered = self::combine_by_month_array( self::query_people_registered_by_month() );
-        $engaged = self::combine_by_month_array( self::query_people_engaged_by_month() );
-        $trained = self::combine_by_month_array( self::query_people_trained_by_month() );
-        $active = self::combine_by_month_array( self::query_people_active_by_month() );
-
-        // parse results against default so that we have an expected amount of array elements, if even with a 0 value
-        $registered = wp_parse_args( $registered, $expected_dates );
-        $engaged = wp_parse_args( $engaged, $expected_dates );
-        $trained = wp_parse_args( $trained, $expected_dates );
-        $active = wp_parse_args( $active, $expected_dates );
-
-        $stats = [
-            [
-                'Month',
-                'Registered',
-                'Engaged',
-                'Trained',
-                'Active',
-                'Average'
-            ],
-            [
-                date( 'M', strtotime( '-5 month' ) ),
-                $registered[$five_months_back],
-                $engaged[$five_months_back],
-                $trained[$five_months_back],
-                $active[$five_months_back],
-                $average = round(array_sum([
-                        $registered[$five_months_back],
-                        $engaged[$five_months_back],
-                        $trained[$five_months_back],
-                        $active[$five_months_back],
-                ]) /6 )
-            ],
-            [
-                date( 'M', strtotime( '-4 month' ) ),
-                $registered[$four_months_back],
-                $engaged[$four_months_back],
-                $trained[$four_months_back],
-                $active[$four_months_back],
-                $average = round(array_sum([
-                        $registered[$four_months_back],
-                        $engaged[$four_months_back],
-                        $trained[$four_months_back],
-                        $active[$four_months_back],
-                ]) /6 )
-            ],
-            [
-                date( 'M', strtotime( '-3 month' ) ),
-                $registered[$three_months_back],
-                $engaged[$three_months_back],
-                $trained[$three_months_back],
-                $active[$three_months_back],
-                $average = round(array_sum([
-                        $registered[$three_months_back],
-                        $engaged[$three_months_back],
-                        $trained[$three_months_back],
-                        $active[$three_months_back],
-                ]) /6 )
-            ],
-            [
-                date( 'M', strtotime( '-2 month' ) ),
-                $registered[$two_months_back],
-                $engaged[$two_months_back],
-                $trained[$two_months_back],
-                $active[$two_months_back],
-                $average = round(array_sum([
-                        $registered[$two_months_back],
-                        $engaged[$two_months_back],
-                        $trained[$two_months_back],
-                        $active[$two_months_back],
-                ]) /6 )
-            ],
-            [
-                date( 'M', strtotime( '-1 month' ) ),
-                $registered[$one_month_back],
-                $engaged[$one_month_back],
-                $trained[$one_month_back],
-                $active[$one_month_back],
-                $average = round(array_sum([
-                        $registered[$one_month_back],
-                        $engaged[$one_month_back],
-                        $trained[$one_month_back],
-                        $active[$one_month_back],
-                ]) /6 )
-            ],
-            [
-                date( 'M' ),
-                $registered[$this_month],
-                $engaged[$this_month],
-                $trained[$this_month],
-                $active[$this_month],
-                $average = round(array_sum([
-                        $registered[$this_month],
-                        $engaged[$this_month],
-                        $trained[$this_month],
-                        $active[$this_month],
-                ]) /6 )
-            ],
-        ];
-
-        return $stats;
-    }
-
-    private static function combine_by_month_array( $array ) {
-        $new_array = [];
-        foreach ( $array as $value ) {
-            $new_array[$value['date']] = $value['total'];
-        }
-        return $new_array;
-    }
-
 }

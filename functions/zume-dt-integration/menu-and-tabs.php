@@ -142,15 +142,15 @@ class Zume_Integration_Menu
         $object->verify_foreign_key_installed();
         $object->verify_foreign_key_installed_on_group();
         $object->verify_check_sum_installed();
-        zume_get_public_site_links();
-
-//        Zume_Site_Stats::temp_load_hook();
+//        zume_get_public_site_links();
 
 
         $this->site_default_metabox();
         $this->session_complete_transfer_metabox();
         $this->check_for_session_limit_transfers();
         $this->check_for_location_data_installed();
+        $this->reset_location_data_installed();
+        $this->quality_check_metabox();
 
         // begin right column template
         $this->template( 'right_column' );
@@ -397,84 +397,27 @@ endforeach; ?>
         <?php
     }
 
-    public function check_for_location_data_installed()
+    public function check_for_location_data_installed( $force = false )
     {
         $report = [];
 
         // Check for post
         if ( isset( $_POST['zume_location_nonce'] ) && ! empty( $_POST['zume_location_nonce'] ) && wp_verify_nonce( sanitize_text_field( wp_unslash( $_POST['zume_location_nonce'] ) ), 'zume_location_'. get_current_user_id() ) ) {
-            if ( isset( $_POST['check-location'] ) && ! empty( $_POST['check-location'] ) ) {
-
-                // build locations for groups
-                global $wpdb;
-                $groups_meta = $wpdb->get_col(
-                    $wpdb->prepare( "
-                  SELECT meta_value 
-                  FROM $wpdb->usermeta 
-                  WHERE meta_key LIKE %s",
-                        $wpdb->esc_like( 'zume_group' ).'%'
-                    )
-                );
-
-                foreach ($groups_meta as $v){
-                    $fields = Zume_Dashboard::verify_group_array_filter( $v );
-                    $updated = false;
-
-                    if ( empty( $fields['raw_location'] ) && ! empty( $fields['address'] ) ) {
-                        $google_result = Disciple_Tools_Google_Geocode_API::query_google_api( $fields['address'], $type = 'core' ); // get google api info
-                        if ( $google_result ) {
-
-                            $fields['lng'] = $google_result['lng'];
-                            $fields['lat'] = $google_result['lat'];
-                            $fields['address'] = $google_result['formatted_address'];
-                            $fields['raw_location'] = $google_result['raw'];
-                        }
-                        $updated = true;
-                        $report[] = 'Updated Group ' . $fields['key'] . ": Location";
-                        dt_write_log( 'Updated Group ' . $fields['key'] . ": Location" );
-                    }
-                    if ( empty( $fields['ip_raw_location'] ) && ! empty( $fields['ip_address'] ) ) {
-                        $results = Disciple_Tools_Google_Geocode_API::geocode_ip_address( $fields['ip_address'] );
-                        if ( $results ) {
-                            $fields['ip_lng'] = $results['lng'];
-                            $fields['ip_lat'] = $results['lat'];
-                            $fields['ip_raw_location'] = $results['raw'];
-                        }
-                        $updated = true;
-                        $report[] = 'Updated Group ' . $fields['key'] . ": IP Location";
-                        dt_write_log( 'Updated Group ' . $fields['key'] . ": IP Location" );
-                    }
-
-                    if ( $updated ) {
-
-                        $fields['last_modified_date'] = current_time( 'mysql' );
-
-                        update_user_meta( $fields['owner'], $fields['key'], $fields );
-                    }
-                }
-
-                // build locations for users
-                $users_with_addresses = $wpdb->get_results(
-                    "SELECT * FROM $wpdb->usermeta WHERE meta_key = 'zume_user_address'", ARRAY_A
-                );
-
-                foreach ( $users_with_addresses as $value ) {
-                    if ( empty( $value['meta_value'] ) ) {
-
-                        dt_write_log( 'Empty value' );
-                        dt_write_log( $value );
-                        continue;
-                    }
-                    $results = Disciple_Tools_Google_Geocode_API::query_google_api( trim( sanitize_text_field( wp_unslash( $value['meta_value'] ) ) ), 'core' );
-
-                    if ( $results ) {
-                        update_user_meta( $value['user_id'], 'zume_user_lng', $results['lng'] );
-                        update_user_meta( $value['user_id'], 'zume_user_lat', $results['lat'] );
-                        update_user_meta( $value['user_id'], 'zume_raw_location', $results['raw'] );
-                    }
-                    $report[] = 'Updated User ' . $value['user_id'];
-                    dt_write_log( 'Updated User ' . $value['user_id'] );
-                }
+            if ( isset( $_POST['check-group-address'] ) && ! empty( $_POST['check-group-address'] ) ) {
+                $report = System_Check_Metabox::check_group_address_geocode( false );
+                dt_write_log( $report );
+            }
+            if ( isset( $_POST['check-group-ip'] ) && ! empty( $_POST['check-group-ip'] ) ) {
+                $report = System_Check_Metabox::check_group_ip_geocode( false );
+                dt_write_log( $report );
+            }
+            if ( isset( $_POST['check-user-address'] ) && ! empty( $_POST['check-user-address'] ) ) {
+                $report = System_Check_Metabox::check_user_address_geocode( false );
+                dt_write_log( $report );
+            }
+            if ( isset( $_POST['check-user-ip'] ) && ! empty( $_POST['check-user-ip'] ) ) {
+                $report = System_Check_Metabox::check_user_ip_geocode( false );
+                dt_write_log( $report );
             }
         }
 
@@ -487,14 +430,29 @@ endforeach; ?>
                 <thead>
                 <tr>
                     <td>
-                        Check Locations Installed
+                        Check Geocoding Data
                     </td>
                 </tr>
                 </thead>
                 <tbody>
                 <tr>
                     <td>
-                        <button class="button" name="check-location" value="1" type="submit">Check Location</button>
+                        <button class="button" name="check-group-address" value="1" type="submit">Check Group Address Geocode</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button class="button" name="check-group-ip" value="1" type="submit">Check Group IP Geocode</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button class="button" name="check-user-address" value="1" type="submit">Check User Address Geocode</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button class="button" name="check-user-ip" value="1" type="submit">Check User IP Geocode</button>
                     </td>
                 </tr>
 
@@ -507,6 +465,146 @@ endforeach; ?>
                         </td>
                     </tr>
                 <?php endif; ?>
+                </tbody>
+            </table>
+            <br>
+            <!-- End Box -->
+        </form>
+        <?php
+    }
+
+    public function quality_check_metabox() {
+        if ( isset( $_POST['zume_build_system_check_nonce'] ) && ! empty( $_POST['zume_build_system_check_nonce'] ) && wp_verify_nonce( sanitize_text_field( wp_unslash( $_POST['zume_build_system_check_nonce'] ) ), 'zume_build_system_check_'. get_current_user_id() ) ) {
+            if ( isset( $_POST['rebuild-system-check'] ) && ! empty( $_POST['rebuild-system-check'] ) ) {
+                $result = Zume_Site_Stats::build();
+                dt_write_log( $result );
+            }
+        }
+        ?>
+
+        <form method="post" action="">
+            <?php wp_nonce_field( 'zume_build_system_check_'. get_current_user_id(), 'zume_build_system_check_nonce', false, true ) ?>
+
+            <!-- Box -->
+            <?php $this->box( 'top', 'System Checks' ) ?>
+                <tr>
+                    <td>
+                        <button class="button" name="rebuild-system-check" value="1" type="submit">Rebuild System Stats</button>
+                    </td>
+                </tr>
+
+                <!-- Results -->
+                <?php if ( ! empty( $report ) ) : ?>
+                    <tr>
+                        <td>
+                            <?php foreach ( $report as $result ) : print esc_html( $result ) . '<br>';
+                            endforeach; ?>
+                        </td>
+                    </tr>
+                <?php endif; ?>
+
+            <?php $this->box( 'bottom' ) ?>
+            <!-- End Box -->
+        </form>
+        <?php
+    }
+
+    /**
+     * @param        $section
+     * @param string $title
+     * @param array  $args
+     *                    row_container removes the default containing row
+     *                    col_span sets the number of columns the header should span
+     *                    striped can remove the striped class from the table
+     */
+    public function box( $section, $title = '', $args = [] ) {
+
+        $args = wp_parse_args( $args, [
+            'row_container' => true,
+            'col_span' => 1,
+            'striped' => true,
+        ] );
+
+        switch ( $section ) {
+            case 'top':
+                ?>
+                <!-- Begin Box -->
+                <table class="widefat <?php echo $args['striped'] ? 'striped' : '' ?>">
+                <thead><th colspan="<?php echo esc_attr( $args['col_span'] ) ?>"><?php echo esc_html( $title ) ?></th></thead>
+                <tbody>
+
+                <?php
+                echo $args['row_container'] ? '<tr><td>' : '';
+
+                break;
+            case 'bottom':
+
+                echo $args['row_container'] ? '</tr></td>' : '';
+                ?>
+                </tbody></table><br>
+                <!-- End Box -->
+                <?php
+                break;
+        }
+    }
+
+    public function reset_location_data_installed()
+    {
+        // Check for post
+        if ( isset( $_POST['zume_locationreset_nonce'] ) && ! empty( $_POST['zume_locationreset_nonce'] ) && wp_verify_nonce( sanitize_text_field( wp_unslash( $_POST['zume_locationreset_nonce'] ) ), 'zume_locationreset_'. get_current_user_id() ) ) {
+            if ( isset( $_POST['reset-group-address'] ) && ! empty( $_POST['reset-group-address'] ) ) {
+                $report = System_Check_Metabox::check_group_address_geocode( true );
+                dt_write_log( $report );
+            }
+            if ( isset( $_POST['reset-group-ip'] ) && ! empty( $_POST['reset-group-ip'] ) ) {
+                $report = System_Check_Metabox::check_group_ip_geocode( true );
+                dt_write_log( $report );
+            }
+            if ( isset( $_POST['reset-user-address'] ) && ! empty( $_POST['reset-user-address'] ) ) {
+                $report = System_Check_Metabox::check_user_address_geocode( true );
+                dt_write_log( $report );
+            }
+            if ( isset( $_POST['reset-user-ip'] ) && ! empty( $_POST['reset-user-ip'] ) ) {
+                $report = System_Check_Metabox::check_user_ip_geocode( true );
+                dt_write_log( $report );
+            }
+        }
+
+        ?>
+        <form method="post" action="">
+            <?php wp_nonce_field( 'zume_locationreset_'. get_current_user_id(), 'zume_locationreset_nonce', false, true ) ?>
+
+            <!-- Box -->
+            <table class="widefat striped">
+                <thead>
+                <tr>
+                    <td>
+                        Force Rebuild All GeoData
+                    </td>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>
+                        <button class="button" name="reset-group-address" value="1" type="submit">Reset Group Address Geocode</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button class="button" name="reset-group-ip" value="1" type="submit">Reset Group IP Geocode</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button class="button" name="reset-user-address" value="1" type="submit">Reset User Address Geocode</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button class="button" name="reset-user-ip" value="1" type="submit">Reset User IP Geocode</button>
+                    </td>
+                </tr>
+
                 </tbody>
             </table>
             <br>
