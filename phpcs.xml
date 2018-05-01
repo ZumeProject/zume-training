@@ -55,6 +55,8 @@
     <exclude name="WordPress.VIP.PostsPerPage.posts_per_page_nopaging" />
     <exclude name="WordPress.VIP.PostsPerPage.posts_per_page_numberposts" />
     <exclude name="WordPress.WP.I18n.MissingTranslatorsComment" />
+    <exclude name="WordPress.VIP.RestrictedVariables.user_meta"/>
+    <exclude name="WordPress.VIP.RestrictedFunctions.user_meta" />
     <exclude name="WordPress.VIP.RestrictedFunctions.user_meta_get_user_meta" />
     <exclude name="WordPress.VIP.RestrictedFunctions.user_meta_add_user_meta" />
     <exclude name="WordPress.VIP.RestrictedFunctions.user_meta_update_user_meta" />

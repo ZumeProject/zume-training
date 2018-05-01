@@ -54,7 +54,7 @@ class Zume_Site_Stats
             'trained_groups' => 0, // finished the entire course
 
             'total_languages' => 0, // number of languages installed and available
-            'total_countries' => 1, // number of countries groups or users are located in
+            'total_countries' => 0, // number of countries groups or users are located in
             'hours_trained_as_group' => 0, // number of sessions * 2 = hours of training
             'hours_trained_per_person' => 0, // number of sessions * 2 = hours of training
             'groups_over_4_members' => 0,
@@ -63,6 +63,7 @@ class Zume_Site_Stats
         // Registered people
         $hero_stats['registered_people'] = Zume_Site_Stats::query_registered_people();
         $hero_stats['total_languages'] = count( pll_languages_list() );
+        $countries = [];
 
         // Loop group details
         foreach ($groups_meta as $v){
@@ -167,8 +168,25 @@ class Zume_Site_Stats
                 if ( $members_in_group > 3 ) {
                     $hero_stats['groups_over_4_members'] = $hero_stats['groups_over_4_members'] + 1;
                 }
+
+                // countries of trained groups
+                $user_location = $fields['raw_location'];
+                $ip_location = $fields['ip_raw_location'];
+                if ( ! empty( $user_location ) && ( $fields['session_9'] || $fields['session_10'] ) ) {
+                    $response = Disciple_Tools_Google_Geocode_API::parse_raw_result( $user_location, 'country' );
+                    if ( $response ) {
+                        $countries[$response] = true;
+                    }
+                } elseif ( ! empty( $ip_location ) && ( $fields['session_9'] || $fields['session_10'] ) ) {
+                    $response = Disciple_Tools_Google_Geocode_API::parse_raw_result( $ip_location, 'country' );
+                    if ( $response ) {
+                        $countries[$response] = true;
+                    }
+                }
             }
         }
+
+        $hero_stats['total_countries'] = count( $countries );
 
         return $hero_stats;
     }

@@ -10,6 +10,7 @@ class System_Check_Metabox
         global $wpdb;
         $report = [];
         // build user ip address locations
+        // @codingStandardsIgnoreStart
         $results = $wpdb->get_results("
                         SELECT a.ID, b.meta_value as ip_address, c.meta_value as raw
                         FROM $wpdb->users as a
@@ -20,7 +21,7 @@ class System_Check_Metabox
                             ON a.ID=c.user_id
                                AND c.meta_key = 'zume_raw_location_from_ip'
                     ", ARRAY_A);
-
+        // @codingStandardsIgnoreEnd
         foreach ( $results as $result ) {
             $empty_field = empty( $value['zume_raw_location_from_ip'] );
             if ( $force ) { // force rebuild
