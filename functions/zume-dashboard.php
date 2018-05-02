@@ -484,10 +484,16 @@ class Zume_Dashboard {
         return in_array( $email_address, $group_meta['coleaders_accepted'] );
     }
 
-    public static function delete_coleader( $email, $group_id ) {
-        $group = get_user_meta( get_current_user_id(), $group_id, true );
+    public static function delete_coleader( $email, $group_id, $user_id = null ) {
+
+        if ( is_null( $user_id ) ) {
+            $user_id = get_current_user_id();
+        }
+
+        $group = get_user_meta( $user_id, $group_id, true );
         $group = self::verify_group_array_filter( $group );
         $group_prev = $group;
+
         if ( empty( $group ) ) {
             return [ 'status' => 'Permission failure' ];
         }
@@ -497,7 +503,7 @@ class Zume_Dashboard {
         }
 
         if ( empty( $group['coleaders'] ) ) {
-            return [ 'status' => 'Coleaders not present' ];
+            return [ 'status' => 'Coleader not present' ];
         }
 
         foreach ( $group['coleaders'] as $key => $coleader ) {
@@ -505,7 +511,7 @@ class Zume_Dashboard {
                 unset( $group['coleaders'][$key] );
                 unset( $group['coleaders_accepted'][$key] );
                 unset( $group['coleaders_declined'][$key] );
-                update_user_meta( get_current_user_id(), $group_id, $group, $group_prev );
+                update_user_meta( $user_id, $group_id, $group, $group_prev );
                 return [ 'status' => 'OK' ];
             }
         }

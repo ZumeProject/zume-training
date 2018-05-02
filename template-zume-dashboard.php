@@ -30,12 +30,17 @@ if ( ! empty( $_POST ) ) { // test if post submitted
                 Zume_Dashboard::activate_group( sanitize_key( wp_unslash( $_POST['key'] ) ) );
             } elseif ( ! empty( $_POST['type'] ) && $_POST['type'] == 'coleader' ) { // coleader response
                 Zume_Dashboard::coleader_invitation_response( $_POST );
+            } elseif ( ! empty( $_POST['type'] ) && $_POST['type'] == 'remove' ) { // coleader response
+                $zume_user = get_user_by( 'id', get_current_user_id() );
+                if ( ! empty( $zume_user ) && isset( $_POST['key'] ) && isset( $_POST['owner'] ) ) {
+                    Zume_Dashboard::delete_coleader( $user->user_email, sanitize_key( wp_unslash( $_POST['key'] ) ), sanitize_key( wp_unslash( $_POST['owner'] ) ) );
+                }
             } else {
                 zume_write_log( 'Failed to filter' );
             }
         }
     } // endif nonce
-    $_POST = [];
+    wp_redirect( zume_dashboard_url() );
 }
 
 get_header();
@@ -589,7 +594,7 @@ do_action( 'zume_dashboard_header' );
     <!-- ********************************************************************************************* -->
     <div class="small reveal" id="create" data-reveal>
         <h1><?php echo esc_html__( 'Create Group', 'zume' ) ?></h1>
-        <form action="" method="post">
+        <form action="" method="post" class="submit-new-form">
             <?php wp_nonce_field( get_current_user_id(), 'zume_nonce' ) ?>
             <input type="hidden" name="type" value="create"/>
             <input type="hidden" name="ip_address"
@@ -836,7 +841,6 @@ foreach ( $zume_user_meta as $zume_key => $v ) {
                         <button type="button" class="button clear"
                                 onclick="add_new_coleader('new_coleaders_<?php echo esc_html( $zume_key ); ?>')"><i
                                     class="fi-plus"></i> <?php esc_attr_e( 'Add', 'zume' ) ?></button>
-
                     </div>
 
 
@@ -903,7 +907,7 @@ foreach ( $zume_user_meta as $zume_key => $v ) {
 ?>
 
     <!-- ********************************************************************************************* -->
-    <!-- GROUP MODAL BOXES SECTION -->
+    <!-- GROUP MODAL COLEAD GROUPS SECTION -->
     <!-- ********************************************************************************************* -->
 <?php
 if ( ! empty( $zume_colead_groups ) ) : // reset variable without coleader data
@@ -982,8 +986,8 @@ if ( ! empty( $zume_colead_groups ) ) : // reset variable without coleader data
                         <div class="reveal small" id="<?php echo esc_html( $zume_key ); ?>-delete" data-reveal>
                             <form data-abide method="post">
                                 <?php wp_nonce_field( get_current_user_id(), 'zume_nonce' ) ?>
-                                <input type="hidden" name="type" value="coleader"/>
-                                <input type="hidden" name="key" value="<?php echo esc_html( $zume_key ); ?>"/>
+                                <input type="hidden" name="type" value="remove"/>
+                                <input type="hidden" name="owner" value="<?php echo esc_attr( $zume_owner->ID ) ?>"/>
 
                                 <div class="grid-x grid-padding-x">
                                     <div class="cell center">
@@ -994,12 +998,12 @@ if ( ! empty( $zume_colead_groups ) ) : // reset variable without coleader data
                                 <div class="grid-x">
                                     <div class="cell center">
                                         <span class="center">
-                                            <button type="submit" class="button alert" name="type" value="decline">
+                                            <button type="submit" class="button alert" name="key" value="<?php echo esc_html( $zume_key ); ?>">
                                                 <?php echo esc_html__( 'Remove', 'zume' ) ?>
                                             </button>
                                         </span>
                                         <span class="center">
-                                            <button type="button" class="button hollow" name="type" data-open="<?php echo esc_html( $zume_key ); ?>">
+                                            <button type="button" class="button hollow" data-open="<?php echo esc_html( $zume_key ); ?>">
                                                 <?php echo esc_html__( 'Cancel', 'zume' ) ?>
                                             </button>
                                         </span>

@@ -3,6 +3,12 @@ jQuery(document).ready( function() {
     jQuery('#validate_address_button').click(function() {
         validate_user_address( jQuery('#validate_address').val() )
     });
+
+    jQuery('#submit-new-form').submit(function() {
+        jQuery('#submit_new').attr('disabled', 'disabled')
+    })
+
+
 })
 
 function validate_user_address(user_address){

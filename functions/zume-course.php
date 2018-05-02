@@ -297,7 +297,7 @@ class Zume_Course_Content {
                 <div class="grid-x">
                     <div class="small-4 cell"></div>
                     <div class="small-4 cell center">
-                        <form action="" method="post">
+                        <form action="" method="post" id="submit-group-session">
                             <p><label for="members"><?php esc_html_e( 'How many are with you?', 'zume' ) ?></label>
                                 <select id="members" name="members">
                                     <?php
@@ -313,7 +313,7 @@ class Zume_Course_Content {
                                     }
                                     ?>
                                 </select></p>
-                            <p><button type="submit" name="viewing" class="button" value="group"><?php esc_html_e( 'Continue', 'zume' ) ?></button></p>
+                            <p><button type="submit" name="viewing" class="button" id="submit-group-session-button" value="group"><?php esc_html_e( 'Continue', 'zume' ) ?></button></p>
                         </form>
                     </div>
                     <div class="small-4 cell"></div>
