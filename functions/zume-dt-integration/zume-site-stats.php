@@ -967,7 +967,7 @@ class Zume_Site_Stats
     private static function combine_by_month_array( $array ) {
         $new_array = [];
         foreach ( $array as $value ) {
-            $new_array[$value['date']] = $value['total'];
+            $new_array[$value['date']] = intval( $value['total'] );
         }
         return $new_array;
     }
