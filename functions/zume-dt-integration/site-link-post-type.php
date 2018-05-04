@@ -210,6 +210,7 @@ if ( ! class_exists( 'Site_Link_System' ) ) {
                 'supports'            => [ 'title' ]
             ]; /* end of options */
 
+            // @codingStandardsIgnoreLine
             $args = apply_filters( 'site_link_system_post_type_args', $args );
 
             register_post_type( $this->post_type, $args );
@@ -299,7 +300,7 @@ if ( ! class_exists( 'Site_Link_System' ) ) {
                     strtolower( $this->singular ),
                     // translators: Publish box date format, see http://php.net/date
                     '<strong>' . date_i18n( __( 'M j, Y @ G:i' ),
-                        strtotime( $post->post_date ) ) . '</strong>',
+                    strtotime( $post->post_date ) ) . '</strong>',
                     '',
                     ''
                 ),
