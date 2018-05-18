@@ -33,7 +33,7 @@ if ( ! empty( $_POST ) ) { // test if post submitted
             } elseif ( ! empty( $_POST['type'] ) && $_POST['type'] == 'remove' ) { // coleader response
                 $zume_user = get_user_by( 'id', get_current_user_id() );
                 if ( ! empty( $zume_user ) && isset( $_POST['key'] ) && isset( $_POST['owner'] ) ) {
-                    Zume_Dashboard::delete_coleader( $user->user_email, sanitize_key( wp_unslash( $_POST['key'] ) ), sanitize_key( wp_unslash( $_POST['owner'] ) ) );
+                    Zume_Dashboard::delete_coleader( $zume_user->user_email, sanitize_key( wp_unslash( $_POST['key'] ) ), sanitize_key( wp_unslash( $_POST['owner'] ) ) );
                 }
             } else {
                 zume_write_log( 'Failed to filter' );
