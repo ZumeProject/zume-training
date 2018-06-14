@@ -104,13 +104,6 @@ function zume_site_scripts() {
 
     }
 
-    dt_write_log( zume_current_language() );
-
-    if ( true ) {
-        zume_enqueue_style( 'right-to-left-css', 'assets/styles/style-rtl.css', array(), 'all' );
-    }
-
-
 }
 add_action( 'wp_enqueue_scripts', 'zume_site_scripts', 999 );
 
