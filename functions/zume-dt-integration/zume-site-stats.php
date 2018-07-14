@@ -801,6 +801,7 @@ class Zume_Site_Stats
                     SELECT CONCAT( YEAR(created_date), '-', MONTH(created_date) ) as date, count(id) as total
                     FROM $wpdb->zume_logging
                     WHERE page = 'dashboard' AND action = 'create_group'
+                    AND created_date > DATE_SUB( CONCAT( YEAR(NOW()), '-', MONTH(NOW()), '-01'), INTERVAL 5 MONTH)
                     GROUP BY MONTH(created_date)
                     ORDER BY YEAR(created_date), MONTH(created_date) LIMIT 6;
                   ", ARRAY_A
@@ -815,6 +816,7 @@ class Zume_Site_Stats
                     SELECT CONCAT( YEAR(created_date), '-', MONTH(created_date) ) as date, count(id) as total
                     FROM $wpdb->zume_logging
                     WHERE page = 'course' AND action = 'session_1' AND meta LIKE 'group%'
+                    AND created_date > DATE_SUB( CONCAT( YEAR(NOW()), '-', MONTH(NOW()), '-01'), INTERVAL 5 MONTH)
                     GROUP BY MONTH(created_date)
                     ORDER BY YEAR(created_date), MONTH(created_date) LIMIT 6;
                   ", ARRAY_A
@@ -829,6 +831,7 @@ class Zume_Site_Stats
                     SELECT CONCAT( YEAR(created_date), '-', MONTH(created_date) ) as date, count(id) as total
                     FROM $wpdb->zume_logging
                     WHERE page = 'course' AND ( action = 'session_9' OR action = 'session_10' ) AND meta LIKE 'group%'
+                    AND created_date > DATE_SUB( CONCAT( YEAR(NOW()), '-', MONTH(NOW()), '-01'), INTERVAL 5 MONTH)
                     GROUP BY MONTH(created_date)
                     ORDER BY YEAR(created_date), MONTH(created_date) LIMIT 6;
                   ", ARRAY_A
@@ -843,6 +846,7 @@ class Zume_Site_Stats
             SELECT CONCAT( YEAR(created_date), '-', MONTH(created_date) ) as date, count(id) as total
             FROM $wpdb->zume_logging
             WHERE page = 'login' AND action = 'logged_in'
+            AND created_date > DATE_SUB( CONCAT( YEAR(NOW()), '-', MONTH(NOW()), '-01'), INTERVAL 5 MONTH)
             GROUP BY MONTH(created_date)
             ORDER BY YEAR(created_date), MONTH(created_date) 
             LIMIT 6
@@ -858,6 +862,7 @@ class Zume_Site_Stats
                     SELECT CONCAT( YEAR(created_date), '-', MONTH(created_date) ) as date, count(id) as total
                     FROM $wpdb->zume_logging
                     WHERE page = 'course' AND action LIKE 'session_%' AND meta LIKE 'group%'
+                    AND created_date > DATE_SUB( CONCAT( YEAR(NOW()), '-', MONTH(NOW()), '-01'), INTERVAL 5 MONTH)
                     GROUP BY MONTH(created_date)
                     ORDER BY YEAR(created_date), MONTH(created_date) LIMIT 6;
                   ", ARRAY_A
@@ -871,7 +876,9 @@ class Zume_Site_Stats
             "
                     SELECT CONCAT( YEAR(created_date), '-', MONTH(created_date) ) as date, count(id) as total
                     FROM $wpdb->zume_logging
-                    WHERE action = 'registered' GROUP BY MONTH(created_date)
+                    WHERE action = 'registered' 
+                    AND created_date > DATE_SUB( CONCAT( YEAR(NOW()), '-', MONTH(NOW()), '-01'), INTERVAL 5 MONTH)
+                    GROUP BY MONTH(created_date)
                     ORDER BY YEAR(created_date), MONTH(created_date) LIMIT 6;
                   ", ARRAY_A
         );
@@ -890,6 +897,7 @@ class Zume_Site_Stats
                                    GROUP BY group_id, action, MONTH(created_date)
                                  ) as b
                         ON a.id=b.id
+                    WHERE a.created_date > DATE_SUB( CONCAT( YEAR(NOW()), '-', MONTH(NOW()), '-01'), INTERVAL 5 MONTH)
                     GROUP BY MONTH(a.created_date)
                     ORDER BY YEAR(a.created_date), MONTH(a.created_date) LIMIT 6
                   ", ARRAY_A
@@ -909,6 +917,7 @@ class Zume_Site_Stats
                                    GROUP BY group_id, action, MONTH(created_date)
                                  ) as b
                         ON a.id=b.id
+                    WHERE a.created_date > DATE_SUB( CONCAT( YEAR(NOW()), '-', MONTH(NOW()), '-01'), INTERVAL 5 MONTH)    
                     GROUP BY MONTH(a.created_date)
                     ORDER BY YEAR(a.created_date), MONTH(a.created_date) LIMIT 6
                   ", ARRAY_A
@@ -928,6 +937,7 @@ class Zume_Site_Stats
                         GROUP BY group_id, action, MONTH(created_date)
                         ) as b
                     ON a.id=b.id
+                    WHERE a.created_date > DATE_SUB( CONCAT( YEAR(NOW()), '-', MONTH(NOW()), '-01'), INTERVAL 5 MONTH) 
                     GROUP BY MONTH(a.created_date)
                     ORDER BY YEAR(a.created_date), MONTH(a.created_date) LIMIT 6
                   ", ARRAY_A
