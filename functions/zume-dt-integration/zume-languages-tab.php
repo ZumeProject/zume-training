@@ -52,25 +52,25 @@ class Zume_Languages_Tab
                     <?php
                     global $wpdb;
                     $list_of_sites = get_option( 'site_link_system_api_keys' );
-                    $results = $wpdb->get_col("SELECT description FROM $wpdb->term_taxonomy WHERE taxonomy = 'language'");
-                    $map = get_option('zume_dt_language_map');
+                    $results = $wpdb->get_col( "SELECT description FROM $wpdb->term_taxonomy WHERE taxonomy = 'language'" );
+                    $map = get_option( 'zume_dt_language_map' );
 
                     if ( ! empty( $results ) ) {
-                        foreach( $results as $result) {
+                        foreach ( $results as $result) {
                             $var = unserialize( $result );
-                            $lang_code = substr( $var['locale'], 0, 2 ) ;
+                            $lang_code = substr( $var['locale'], 0, 2 );
                             echo '<tr>';
-                            echo '<td>'.Zume_Site_Stats::language_codes_and_names( $lang_code ).'</td>';
-                            echo '<td><select name="map['. $lang_code .']">';
+                            echo '<td>'.esc_attr( Zume_Site_Stats::language_codes_and_names( $lang_code ) ).'</td>';
+                            echo '<td><select name="map['. esc_attr( $lang_code ) .']">';
                             echo '<option></option>';
                             if ( isset( $map[$lang_code] ) && isset( $list_of_sites[$map[$lang_code]]['label'] ) ) {
-                                echo '<option value="'.$map[$lang_code].'" selected>'.$list_of_sites[$map[$lang_code]]['label'].'</option>';
+                                echo '<option value="'.esc_attr( $map[$lang_code] ).'" selected>'.esc_attr( $list_of_sites[$map[$lang_code]]['label'] ).'</option>';
                                 echo '<option>-----</option>';
                             }
 
                             if ( ! empty( $list_of_sites ) ) {
-                                foreach( $list_of_sites as $key => $site ) {
-                                    echo '<option value="'. $key . '">' . $site['label'] . '</option>';
+                                foreach ( $list_of_sites as $key => $site ) {
+                                    echo '<option value="'. esc_attr( $key ) . '">' . esc_attr( $site['label'] ) . '</option>';
                                 }
                             }
 
@@ -91,9 +91,10 @@ class Zume_Languages_Tab
     public function handle_post()
     {
         if ( isset( $_POST[ 'zume_language_map_' . get_current_user_id() ] ) && wp_verify_nonce( sanitize_key( wp_unslash( $_POST[ 'zume_language_map_' . get_current_user_id() ] ) ), 'zume_language_map_' . get_current_user_id() . '_nonce' ) ) {
-            $map = array_map('sanitize_text_field', wp_unslash( $_POST['map'] ) );
+            // @codingStandardsIgnoreLine
+            $map = array_map( 'sanitize_text_field', wp_unslash( $_POST['map'] ) );
             $map = array_filter( $map ); // clear empty array fields
-            update_option('zume_dt_language_map', $map, false );
+            update_option( 'zume_dt_language_map', $map, false );
         }
     }
 

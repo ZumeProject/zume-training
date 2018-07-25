@@ -28,9 +28,14 @@ class Zume_Integration
         // Get target site for transfer
         $site_key = $this->filter_for_site_key( $owner_user_data, $owner_id );
         if ( ! $site_key ) {
+            dt_write_log( __METHOD__ . ' (Failure: filter_for_site_key)' );
             return; // no sites setup
         }
         $site = zume_integration_get_site_details( $site_key );
+        if ( ! $site ) {
+            dt_write_log( __METHOD__ . ' (Failure: zume_integration_get_site_details | '.$site_key.')' );
+            return;
+        }
 
         // Send remote request
         $args = [
@@ -63,10 +68,15 @@ class Zume_Integration
         // Get target site for transfer
         $site_key = $this->filter_for_site_key( $user_data, $user_id );
         if ( ! $site_key ) {
+            dt_write_log( __METHOD__ . ' (Failure: filter_for_site_key)' );
             return; // no sites setup
         }
 
         $site = zume_integration_get_site_details( $site_key );
+        if ( ! $site ) {
+            dt_write_log( __METHOD__ . ' (Failure: zume_integration_get_site_details)' );
+            return;
+        }
 
         // Send remote request
         $args = [
@@ -163,7 +173,7 @@ class Zume_Integration
             return false;
         }
 
-        $map = get_option('zume_dt_language_map');
+        $map = get_option( 'zume_dt_language_map' );
         if ( empty( $map ) ) {
             return false;
         }
@@ -449,10 +459,14 @@ function zume_integration_remote_send( $endpoint, $url, $args ) {
  *
  * @param $site_key
  *
- * @return array
+ * @return bool|array
  */
 function zume_integration_get_site_details( $site_key ) {
     $keys = Site_Link_System::get_site_keys();
+
+    if ( ! isset( $keys[$site_key] ) ) {
+        return false;
+    }
 
     $site1 = $keys[$site_key]['site1'];
     $site2 = $keys[$site_key]['site2'];

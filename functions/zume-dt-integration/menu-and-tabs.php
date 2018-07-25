@@ -126,7 +126,7 @@ class Zume_Integration_Menu
                     $object->content();
                     break;
                 case "languages":
-                    require_once(get_stylesheet_directory(). '/functions/zume-dt-integration/zume-languages-tab.php');
+                    require_once( get_stylesheet_directory(). '/functions/zume-dt-integration/zume-languages-tab.php' );
                     $object = new Zume_Languages_Tab();
                     $object->content();
                 break;
