@@ -37,7 +37,7 @@ class Zume_Integration_Menu
      */
     public function __construct()
     {
-        $this->token = 'site_link_system_settings';
+        $this->token = 'zume';
         add_action( "admin_menu", [ $this, "register_menu" ] );
 
     } // End __construct()
@@ -49,9 +49,7 @@ class Zume_Integration_Menu
      */
     public function register_menu()
     {
-        add_submenu_page( 'edit.php?post_type=site_link_system', __( 'Settings' ), __( 'Settings' ), 'manage_options', $this->token, [ $this, 'zume_content' ] );
-
-
+        add_menu_page( __( 'Zume' ), __( 'Zume' ), 'manage_options', $this->token, [ $this, 'zume_content' ], 'dashicons-admin-site', 5 );
     }
 
     /**
@@ -76,6 +74,10 @@ class Zume_Integration_Menu
             [
                 'key' => 'google_keys',
                 'label' => __( 'Google Keys', 'dt_zume' ),
+            ],
+            [
+                'key' => 'languages',
+                'label' => __( 'Languages', 'dt_zume' ),
             ]
         ];
 
@@ -121,6 +123,11 @@ class Zume_Integration_Menu
                     break;
                 case "google_keys":
                     $object = new Zume_Keys_Tab();
+                    $object->content();
+                    break;
+                case "languages":
+                    require_once(get_stylesheet_directory(). '/functions/zume-dt-integration/zume-languages-tab.php');
+                    $object = new Zume_Languages_Tab();
                     $object->content();
                 break;
                 default:

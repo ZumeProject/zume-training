@@ -135,7 +135,6 @@ class Zume_Integration
 
         // @TODO Potentially add routing logic.
         // Evaluate routing factors of the user_data to route the user to a certain site.
-        // Is language set, then potentially route to language DT site
         // Is location set, then potentially route to location site
 
         if ( get_user_meta( $user_id, 'zume_affiliation_key', true ) ) {
@@ -146,16 +145,35 @@ class Zume_Integration
             // @todo build filter to return zume_affiliation
             dt_write_log( 'build zume_affiliation' );
         }
-        if ( $this->route_by_language( $user_data['zume_language'] ) ) {
-            // @todo build function to route according to languages.
-            dt_write_log( 'build zume_language' );
+        if ( $lang_site_key = $this->route_by_language( $user_data['zume_language'] ) ) {
+            return $lang_site_key;
         }
 
         return $key;
     }
 
+    /**
+     * Filters language for associated site keys. These keys are defined in the languages tab of the Zume menu item.
+     * @param $zume_language
+     *
+     * @return bool
+     */
     public function route_by_language( $zume_language ) {
-        // @todo add routing logic for language
+        if ( 'en' === $zume_language ) {
+            return false;
+        }
+
+        $map = get_option('zume_dt_language_map');
+        if ( empty( $map ) ) {
+            return false;
+        }
+
+        foreach ( $map as $lang_code => $site ) {
+            if ( $lang_code === $zume_language ) {
+                return $site;
+            }
+        }
+
         return false;
     }
 
