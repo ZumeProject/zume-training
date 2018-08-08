@@ -36,6 +36,7 @@ class Zume_Integration
             dt_write_log( __METHOD__ . ' (Failure: zume_integration_get_site_details | '.$site_key.')' );
             return;
         }
+        
 
         // Send remote request
         $args = [
