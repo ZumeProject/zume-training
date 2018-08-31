@@ -1217,7 +1217,7 @@ class Zume_Course_Content {
                     <ol>
                         <li><?php esc_html_e( 'What comes to mind when you hear God\'s command to be His "witness" and to tell His story?', 'zume' ) ?>
                         </li>
-                        <li><?php esc_html_e( 'Why do you think Jesus chose ordinary people instead of some other way to share His Good News?.', 'zume' ) ?>
+                        <li><?php esc_html_e( 'Why do you think Jesus chose ordinary people instead of some other way to share His Good News?', 'zume' ) ?>
                         </li>
                         <li><?php esc_html_e( 'What would it take for you to feel more comfortable sharing God\'s Story?', 'zume' ) ?></li>
                     </ol>
@@ -2498,12 +2498,6 @@ class Zume_Course_Content {
                 </div> <!-- step-title cell -->
             </div> <!-- grid-x -->
 
-            <!-- Activity Block  -->
-            <div class="grid-x grid-margin-x grid-margin-y">
-                <div class="large-3 cell activity-title"><span><?php esc_html_e( "PRACTICE", 'zume' ) ?></span>
-                </div>
-            </div>
-
             <!-- Inset Block -->
             <div class="grid-x grid-margin-x grid-margin-y single">
                 <div class="cell auto"></div>
@@ -2517,8 +2511,11 @@ class Zume_Course_Content {
                 <div class="cell auto"></div>
             </div> <!-- grid-x -->
 
+
             <!-- Activity Block  -->
             <div class="grid-x grid-margin-x grid-margin-y">
+                <div class="large-3 cell activity-title"><span><?php esc_html_e( "PRACTICE", 'zume' ) ?></span>
+                </div>
                 <div class="large-9 cell activity-description">
                     <ul>
                         <li>
@@ -2535,6 +2532,7 @@ class Zume_Course_Content {
                     <?php esc_html_e( "REMEMBER – Each section should take about 1/3 (or 30 minutes) of your practice time.", 'zume' ) ?>
                 </div>
             </div> <!-- grid-x -->
+
             <!-- Activity Block  -->
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="large-3 cell activity-title"><span><?php esc_html_e( 'DISCUSS', 'zume' ) ?></span></div>
