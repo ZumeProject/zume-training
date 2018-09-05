@@ -5,11 +5,11 @@
     $zume_is_logged_in = is_user_logged_in();
 
     // adds the current language to the nav url
-if ( zume_has_polylang() ) {
-    $zume_current_language_slug = pll_current_language() . '/';
-} else {
-    $zume_current_language_slug = '';
-}
+//if ( zume_has_polylang() ) {
+//    $zume_current_language_slug = zume_the_languages() . '/';
+//} else {
+//    $zume_current_language_slug = '';
+//}
 ?>
 
 <div class="top-bar" id="top-bar-menu">
@@ -33,7 +33,7 @@ if ( zume_has_polylang() ) {
         <!-- End show for large -->
 
         <!-- Show for all screens -->
-        <div class="menu-item"><?php pll_the_languages( array( 'dropdown' => 1 ) ); ?></div>
+        <div class="menu-item"><?php zume_the_languages( array( 'dropdown' => 1 ) ); ?></div>
         <!-- End show for all -->
 
         <!-- Show for small/med -->
