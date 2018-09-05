@@ -71,8 +71,8 @@ function zume_mu_register_form() {
     <style>#signup-content .wp-signup-container h2 {display:none;}</style>
 
     <?php
-    dt_write_log(__METHOD__);
-    dt_write_log('step 1');
+    dt_write_log( __METHOD__ );
+    dt_write_log( 'step 1' );
 }
 add_action( 'signup_extra_fields', 'zume_mu_register_form' );
 
@@ -89,46 +89,13 @@ function zume_mu_registration_errors( $errors, $sanitized_user_login, $user_emai
             $errors->add( 'zume_address_error', esc_attr__( '<strong>ERROR</strong>: We can not recognize this address as valid location. Please, check spelling.', 'zume' ) );
         }
     }
-    dt_write_log(__METHOD__);
-    dt_write_log('validation step');
+    dt_write_log( __METHOD__ );
+    dt_write_log( 'validation step' );
     return $errors;
 }
 
-//3. Finally, save our extra registration user meta.
-//add_action( 'signup_extra_fields', 'zume_mu_user_register' );
-//function zume_mu_user_register( $user_id ) {
-//    // Capture user submitted fields
-//    if ( ! empty( $_POST['first_name'] ) ) {
-//        update_user_meta( $user_id, 'first_name', trim( sanitize_key( wp_unslash( $_POST['first_name'] ) ) ) );
-//    }
-//    if ( ! empty( $_POST['last_name'] ) ) {
-//        update_user_meta( $user_id, 'last_name', trim( sanitize_key( wp_unslash( $_POST['last_name'] ) ) ) );
-//    }
-//    if ( ! empty( $_POST['zume_phone_number'] ) ) {
-//        update_user_meta( $user_id, 'zume_phone_number', trim( sanitize_key( wp_unslash( $_POST['zume_phone_number'] ) ) ) );
-//    }
-//    if ( ! empty( $_POST['zume_address'] ) ) {
-//
-//        $results = Disciple_Tools_Google_Geocode_API::query_google_api( trim( sanitize_key( wp_unslash( $_POST['zume_address'] ) ) ), 'core' );
-//
-//        if ( $results ) {
-//            update_user_meta( $user_id, 'zume_user_address', $results['formatted_address'] );
-//            update_user_meta( $user_id, 'zume_user_lng', $results['lng'] );
-//            update_user_meta( $user_id, 'zume_user_lat', $results['lat'] );
-//            update_user_meta( $user_id, 'zume_raw_location', $results );
-//        }
-//    }
-//    if ( ! empty( $_POST['zume_affiliation_key'] ) ) {
-//        update_user_meta( $user_id, 'zume_affiliation_key', trim( sanitize_key( wp_unslash( $_POST['zume_affiliation_key'] ) ) ) );
-//    }
-//
-//    zume_update_user_ip_address_and_location( $user_id ); // record ip address and location
-//
-//    update_user_meta( $user_id, 'zume_language', zume_current_language() );
-//}
-
 // Stores form data for activation
-add_filter( 'add_signup_meta' , 'custom_add_signup_meta' );
+add_filter( 'add_signup_meta', 'custom_add_signup_meta' );
 function custom_add_signup_meta( $meta )
 {
     $first_name = '';
@@ -162,19 +129,19 @@ function custom_add_signup_meta( $meta )
     );
 
     $meta['user_meta'] = $user_meta;
-    dt_write_log(__METHOD__);
-    dt_write_log('Step 2');
-    dt_write_log($meta);
+    dt_write_log( __METHOD__ );
+    dt_write_log( 'Step 2' );
+    dt_write_log( $meta );
 
     return $meta;
 
 }
 
 // Save after activation step
-add_action( 'wpmu_activate_user' , 'custom_wpmu_activate_blog' , 10 , 3 );
+add_action( 'wpmu_activate_user', 'custom_wpmu_activate_blog', 10, 3 );
 function custom_wpmu_activate_blog(  $user_id, $password, $meta ) {
-    dt_write_log(__METHOD__);
-    dt_write_log("Save step");
+    dt_write_log( __METHOD__ );
+    dt_write_log( "Save step" );
 
     // Capture user submitted fields
     if ( isset( $meta['user_meta']['first_name'] ) && ! empty( $meta['user_meta']['first_name'] ) ) {
@@ -183,7 +150,7 @@ function custom_wpmu_activate_blog(  $user_id, $password, $meta ) {
     if ( isset( $meta['user_meta']['last_name'] ) && ! empty( $meta['user_meta']['last_name'] ) ) {
         update_user_meta( $user_id, 'last_name', trim( sanitize_key( wp_unslash( $meta['user_meta']['last_name'] ) ) ) );
     }
-    if ( isset($meta['user_meta']['zume_phone_number'] ) && ! empty( $meta['user_meta']['zume_phone_number'] ) ) {
+    if ( isset( $meta['user_meta']['zume_phone_number'] ) && ! empty( $meta['user_meta']['zume_phone_number'] ) ) {
         update_user_meta( $user_id, 'zume_phone_number', trim( sanitize_key( wp_unslash( $meta['user_meta']['zume_phone_number'] ) ) ) );
     }
     if ( isset( $meta['user_meta']['zume_address'] ) && ! empty( $meta['user_meta']['zume_address'] ) ) {
