@@ -29,7 +29,7 @@ Template Name: Zume About
                     <!-- Video -->
                     <div class="responsive-embed widescreen">
                         <iframe allowFullScreen frameborder="0" height="564" mozallowfullscreen
-                                src="<?php echo esc_url( Zume_Course::get_video_by_key( '31' ) ) ?>" webkitAllowFullScreen
+                                src="<?php echo esc_url( Zume_Course::get_video_by_key( '32' ) ) ?>" webkitAllowFullScreen
                                 width="640"></iframe>
                     </div>
 
