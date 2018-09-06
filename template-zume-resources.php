@@ -36,8 +36,7 @@ Template Name: Zume Resources
                                 </a>
                             </li>
 
-                            <li><a href="<?php echo esc_url( Zume_Course::get_download_by_key( 'video_overview' ) ) ?>" target="_blank"
-                                   rel="noopener noreferrer">
+                            <li><a href="<?php echo esc_url( Zume_Course::get_download_by_key( 'video_overview' ) ) ?>" target="_blank" >
                                     <span style="padding:0 10px"><img
                                                 src="<?php echo esc_url( zume_images_uri( 'pages' ) ) ?>video-camera.png"
                                                 alt="Video" width="30" height="30"

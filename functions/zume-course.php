@@ -144,6 +144,9 @@ class Zume_Course {
         if ( ! $video_id ) {
             return '';
         }
+        if ( 'video_overview' == $meta_key ) {
+            return $video_id;
+        }
         return trailingslashit( get_stylesheet_directory_uri() ) . 'downloads/' . $current_lang . '/' . $video_id;
     }
 
