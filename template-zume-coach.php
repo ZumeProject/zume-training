@@ -45,7 +45,7 @@ $zume_user_id = get_current_user_id();
                             $zume_user = get_userdata( $value['user_id'] );
                             $zume_user_meta = get_user_meta( $value['user_id'] );
                             $zume_group_count = Zume_Coach::count_zume_groups_by_user( $value['user_id'] );
-                        ?>
+                            ?>
 
                         <tr>
                             <td><?php echo esc_attr( $zume_user->display_name ); ?></td>

@@ -8,8 +8,7 @@
  *
  * @return mixed
  */
-function zume_block_xmlrpc_attacks( $methods )
-{
+function zume_block_xmlrpc_attacks( $methods ) {
     unset( $methods['pingback.ping'] );
     unset( $methods['pingback.extensions.getPingbacks'] );
 
@@ -22,8 +21,7 @@ add_filter( 'xmlrpc_methods', 'zume_block_xmlrpc_attacks' );
  *
  * @return mixed
  */
-function zume_remove_x_pingback_header( $headers )
-{
+function zume_remove_x_pingback_header( $headers ) {
     unset( $headers['X-Pingback'] );
 
     return $headers;

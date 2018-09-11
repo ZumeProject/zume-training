@@ -202,7 +202,7 @@ $zume_groups = Zume_Dashboard::get_current_user_groups();
                                     <?php foreach ( $zume_group['three_month_plans'] as $zume_plan_user_id ) :
                                         $zume_participant_plan = Zume_Three_Month_Plan::get_user_three_month_plan( $zume_plan_user_id );
                                         if ( $zume_participant_plan ) :
-                                        ?>
+                                            ?>
 
                                         <li>
                                             <a data-open="participant-<?php echo esc_attr( $zume_participant_plan['user']->ID ) ?>">
@@ -219,7 +219,7 @@ $zume_groups = Zume_Dashboard::get_current_user_groups();
                                                     (<?php echo esc_attr( $zume_i ) ?>) <?php echo esc_attr( $zume_p_label ) ?><br>
                                                     <strong><?php echo esc_attr( $zume_participant_plan['plan'][$zume_p_key] ) ?></strong><br>
                                                 </div>
-                                            <?php $zume_i++;
+                                                <?php $zume_i++;
 endforeach; ?>
 
                                             <div class="cell center">

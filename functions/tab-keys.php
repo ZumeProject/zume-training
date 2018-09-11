@@ -21,8 +21,7 @@ class Zume_Keys_Tab
      *
      * @return void
      */
-    public function content()
-    {
+    public function content() {
         ?>
         <form method="post">
 
@@ -48,8 +47,7 @@ class Zume_Keys_Tab
         <?php
     }
 
-    public function google_map_api_key_metabox()
-    {
+    public function google_map_api_key_metabox() {
         $this->handle_post();
 
         $current_key = get_option( 'dt_map_key' );
@@ -109,8 +107,7 @@ class Zume_Keys_Tab
         <?php
     }
 
-    public function handle_post()
-    {
+    public function handle_post() {
         if ( isset( $_POST[ 'zume_google_map_key' . get_current_user_id() ] ) && wp_verify_nonce( sanitize_key( wp_unslash( $_POST[ 'zume_google_map_key' . get_current_user_id() ] ) ), 'zume_google_map_key_' . get_current_user_id() . '_nonce' ) ) {
             if ( empty( $_POST['zume_google_map_key'] ) ) {
                 $default_keys = zume_default_google_api_keys();
@@ -157,8 +154,7 @@ class Zume_Keys_Tab
         return false;
     }
 
-    public function get_your_own_google_key_metabox()
-    {
+    public function get_your_own_google_key_metabox() {
         ?>
         <table class="widefat striped">
             <thead>
@@ -212,8 +208,7 @@ class Zume_Keys_Tab
     }
 }
 
-function zume_default_google_api_keys()
-{
+function zume_default_google_api_keys() {
     $default_keys = [
         'AIzaSyBkI5W07GdlhQCqzf3F8VW2E_3mhdzR3s4',
         'AIzaSyAaaZusK9pa9eLuO0nlllGnbQPyXHfTGxQ',

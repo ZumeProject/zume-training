@@ -21,8 +21,7 @@ class Zume_Integration_Menu
 
     private static $_instance = null;
 
-    public static function instance()
-    {
+    public static function instance() {
         if ( is_null( self::$_instance ) ) {
             self::$_instance = new self();
         }
@@ -35,8 +34,7 @@ class Zume_Integration_Menu
      * @access  public
      * @since   0.1.0
      */
-    public function __construct()
-    {
+    public function __construct() {
         $this->token = 'zume';
         add_action( "admin_menu", [ $this, "register_menu" ] );
 
@@ -47,16 +45,14 @@ class Zume_Integration_Menu
      *
      * @since 0.1.0
      */
-    public function register_menu()
-    {
+    public function register_menu() {
         add_menu_page( __( 'Zume' ), __( 'Zume' ), 'manage_options', $this->token, [ $this, 'zume_content' ], 'dashicons-admin-site', 5 );
     }
 
     /**
      * Combined tabs preprocessor
      */
-    public function zume_content()
-    {
+    public function zume_content() {
 
         if ( ! current_user_can( 'manage_options' ) ) {
             wp_die( esc_attr__( 'You do not have sufficient permissions to access this page.' ) );
@@ -224,8 +220,7 @@ class Zume_Integration_Menu
         }
     }
 
-    public static function site_default_metabox()
-    {
+    public static function site_default_metabox() {
         // Check for post
         if ( isset( $_POST['dt_site_default_nonce'] ) && ! empty( $_POST['dt_site_default_nonce'] ) && wp_verify_nonce( sanitize_text_field( wp_unslash( $_POST['dt_site_default_nonce'] ) ), 'dt_site_default_'. get_current_user_id() ) ) {
             if ( isset( $_POST['default-site'] ) && ! empty( $_POST['default-site'] ) ) {
@@ -275,8 +270,7 @@ class Zume_Integration_Menu
         <?php
     }
 
-    public static function session_complete_transfer_metabox()
-    {
+    public static function session_complete_transfer_metabox() {
         // Check for post
         if ( isset( $_POST['zume_session_complete_transfer_nonce'] ) && ! empty( $_POST['zume_session_complete_transfer_nonce'] ) && wp_verify_nonce( sanitize_text_field( wp_unslash( $_POST['zume_session_complete_transfer_nonce'] ) ), 'zume_session_complete_transfer_'. get_current_user_id() ) ) {
             if ( isset( $_POST['session-level'] ) && ! empty( $_POST['session-level'] ) ) {
@@ -326,8 +320,7 @@ class Zume_Integration_Menu
         <?php
     }
 
-    public function check_for_session_limit_transfers()
-    {
+    public function check_for_session_limit_transfers() {
         $report = [];
 
         // Check for post
@@ -404,8 +397,7 @@ endforeach; ?>
         <?php
     }
 
-    public function check_for_location_data_installed( $force = false )
-    {
+    public function check_for_location_data_installed( $force = false ) {
         $report = [];
 
         // Check for post
@@ -555,8 +547,7 @@ endforeach; ?>
         }
     }
 
-    public function reset_location_data_installed()
-    {
+    public function reset_location_data_installed() {
         // Check for post
         if ( isset( $_POST['zume_locationreset_nonce'] ) && ! empty( $_POST['zume_locationreset_nonce'] ) && wp_verify_nonce( sanitize_text_field( wp_unslash( $_POST['zume_locationreset_nonce'] ) ), 'zume_locationreset_'. get_current_user_id() ) ) {
             if ( isset( $_POST['reset-group-address'] ) && ! empty( $_POST['reset-group-address'] ) ) {

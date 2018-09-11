@@ -11,8 +11,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 class Zume_Languages_Tab
 {
 
-    public function content()
-    {
+    public function content() {
         ?>
         <form method="post">
 
@@ -37,8 +36,7 @@ class Zume_Languages_Tab
         <?php
     }
 
-    public function language_map()
-    {
+    public function language_map() {
         $this->handle_post();
 
         ?>
@@ -88,8 +86,7 @@ class Zume_Languages_Tab
         <?php
     }
 
-    public function handle_post()
-    {
+    public function handle_post() {
         if ( isset( $_POST[ 'zume_language_map_' . get_current_user_id() ] ) && wp_verify_nonce( sanitize_key( wp_unslash( $_POST[ 'zume_language_map_' . get_current_user_id() ] ) ), 'zume_language_map_' . get_current_user_id() . '_nonce' ) ) {
             // @codingStandardsIgnoreLine
             $map = array_map( 'sanitize_text_field', wp_unslash( $_POST['map'] ) );

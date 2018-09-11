@@ -61,7 +61,7 @@ class Zume_Site_Stats
         ];
 
         // Registered people
-        $hero_stats['registered_people'] = Zume_Site_Stats::query_registered_people();
+        $hero_stats['registered_people'] = self::query_registered_people();
         $hero_stats['total_languages'] = count( pll_languages_list() );
         $countries = [];
 

@@ -91,8 +91,7 @@ class Zume_Video_Post_Type
      * @param array  $args
      * @param array  $taxonomies
      */
-    public function __construct( $post_type = 'zume_video', $singular = 'Video', $plural = 'Videos', $args = [], $taxonomies = [] )
-    {
+    public function __construct( $post_type = 'zume_video', $singular = 'Video', $plural = 'Videos', $args = [], $taxonomies = [] ) {
         $this->post_type = $post_type;
         $this->singular = $singular;
         $this->plural = $plural;
@@ -125,8 +124,7 @@ class Zume_Video_Post_Type
      * @access public
      * @return void
      */
-    public function register_post_type()
-    {
+    public function register_post_type() {
         register_post_type( $this->post_type, /* (http://codex.wordpress.org/Function_Reference/register_post_type) */
             // let's now add all the options for this post type
             array(
@@ -174,8 +172,7 @@ class Zume_Video_Post_Type
      * @since  0.1.0
      * @return void
      */
-    public function register_custom_columns( $column_name )
-    {
+    public function register_custom_columns( $column_name ) {
 //        global $post;
 
         switch ( $column_name ) {
@@ -200,8 +197,7 @@ class Zume_Video_Post_Type
      * @since  0.1.0
      * @return mixed/void
      */
-    public function register_custom_column_headings( $defaults )
-    {
+    public function register_custom_column_headings( $defaults ) {
 
         $new_columns = []; //array( 'image' => __( 'Image', 'zume' ));
 
@@ -233,8 +229,7 @@ class Zume_Video_Post_Type
      *
      * @return array           Modified array.
      */
-    public function updated_messages( $messages )
-    {
+    public function updated_messages( $messages ) {
         global $post;
 
         $messages[ $this->post_type ] = [
@@ -277,8 +272,7 @@ class Zume_Video_Post_Type
      * @since  0.1.0
      * @return void
      */
-    public function meta_box_setup()
-    {
+    public function meta_box_setup() {
         add_meta_box( $this->post_type . '_scribes', 'Video Scribes', array( $this, 'load_video_meta_box' ), $this->post_type, 'normal', 'high' );
         add_meta_box( $this->post_type . '_toolkit', 'Audio Toolkit', array( $this, 'load_audio_meta_box' ), $this->post_type, 'normal', 'high' );
     } // End meta_box_setup()
@@ -289,8 +283,7 @@ class Zume_Video_Post_Type
      * @access public
      * @since  0.1.0
      */
-    public function load_video_meta_box()
-    {
+    public function load_video_meta_box() {
         echo 'These numeric ids below refer to the unique Vimeo id. It should work with the url "https://player.vimeo.com/video/{put_video_id_here}". Use the "verify link" to check if the video loads correctly.<br><br>The page title above needs to be the two character language code.<br><hr>';
         $this->meta_box_content( 'scribe' ); // prints
     }
@@ -301,8 +294,7 @@ class Zume_Video_Post_Type
      * @access public
      * @since  0.1.0
      */
-    public function load_audio_meta_box()
-    {
+    public function load_audio_meta_box() {
         echo 'These numeric ids below refer to the unique Vimeo id. <br>';
         $this->meta_box_content( 'toolkit' ); // prints
     }
@@ -312,8 +304,7 @@ class Zume_Video_Post_Type
      *
      * @param string $section
      */
-    public function meta_box_content( $section = 'scribe' )
-    {
+    public function meta_box_content( $section = 'scribe' ) {
         global $post_id;
         $fields = get_post_custom( $post_id );
         $field_data = $this->get_custom_fields_settings();
@@ -398,8 +389,7 @@ class Zume_Video_Post_Type
      *
      * @return int $post_id
      */
-    public function meta_box_save( $post_id )
-    {
+    public function meta_box_save( $post_id ) {
 
         // Verify
         if ( get_post_type() != $this->post_type ) {
@@ -465,8 +455,7 @@ class Zume_Video_Post_Type
      *
      * @return string
      */
-    public function enter_title_here( $title )
-    {
+    public function enter_title_here( $title ) {
         if ( get_post_type() == $this->post_type ) {
             $title = __( 'Enter the title here', 'zume' );
         }
@@ -481,8 +470,7 @@ class Zume_Video_Post_Type
      * @since  0.1.0
      * @return array
      */
-    public function get_custom_fields_settings()
-    {
+    public function get_custom_fields_settings() {
         $fields = [];
 
         $fields['1'] = [
@@ -720,8 +708,7 @@ class Zume_Video_Post_Type
      * @access public
      * @since  0.1.0
      */
-    public function activation()
-    {
+    public function activation() {
         $this->flush_rewrite_rules();
     } // End activation()
 
@@ -731,8 +718,7 @@ class Zume_Video_Post_Type
      * @access public
      * @since  0.1.0
      */
-    private function flush_rewrite_rules()
-    {
+    private function flush_rewrite_rules() {
         $this->register_post_type();
         flush_rewrite_rules();
     } // End flush_rewrite_rules()

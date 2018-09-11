@@ -668,7 +668,7 @@ class Zume_Dashboard {
         foreach ( $zume_user_meta as $zume_key => $v ) {
             $zume_key_beginning = substr( $zume_key, 0, 10 );
             if ( 'zume_group' == $zume_key_beginning ) {
-                $zume_value = Zume_Dashboard::verify_group_array_filter( $v );
+                $zume_value = self::verify_group_array_filter( $v );
                 $groups[$zume_key] = $zume_value;
             }
         }

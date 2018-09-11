@@ -8,8 +8,7 @@
  * Function checker for async post requests
  * This runs on every page load looking for an async post request
  */
-function zume_integration_load_async_send()
-{
+function zume_integration_load_async_send() {
     // check for create new contact
     if ( isset( $_POST['_wp_nonce'] )
     && wp_verify_nonce( sanitize_key( wp_unslash( $_POST['_wp_nonce'] ) ) )
@@ -37,8 +36,7 @@ class Zume_Integration_Session_Complete_Transfer extends Disciple_Tools_Async_Ta
 
     protected function prepare_data( $data ) { return $data; }
 
-    public function send()
-    {
+    public function send() {
             // @codingStandardsIgnoreStart
         if( isset( $_POST[ 'action' ] )
             && sanitize_key( wp_unslash( $_POST[ 'action' ] ) ) == 'dt_async_'.$this->action

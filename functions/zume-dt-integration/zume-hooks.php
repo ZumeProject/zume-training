@@ -11,8 +11,7 @@ class Zume_Integration_Hooks
 
     private static $_instance = null;
 
-    public static function instance()
-    {
+    public static function instance() {
         if ( is_null( self::$_instance ) ) {
             self::$_instance = new self();
         }
@@ -22,8 +21,7 @@ class Zume_Integration_Hooks
     /**
      * Build hook classes
      */
-    public function __construct()
-    {
+    public function __construct() {
         new Zume_Integration_Hook_User();
         new Zume_Integration_Hook_Groups();
         new Zume_Integration_Metabox();
@@ -37,8 +35,7 @@ Zume_Integration_Hooks::instance();
  */
 abstract class Zume_Integration_Hook_Base
 {
-    public function __construct()
-    {
+    public function __construct() {
     }
 }
 

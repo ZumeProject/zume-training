@@ -63,8 +63,7 @@ class Zume_Migration_Engine
      * @throws \Zume_Migration_Lock_Exception ...
      * @throws \Throwable ...
      */
-    public static function migrate( int $target_migration_number )
-    {
+    public static function migrate( int $target_migration_number ) {
 
         if ( $target_migration_number >= count( self::get_migrations() ) ) {
             throw new Exception( "Migration number $target_migration_number does not exist" );
@@ -125,8 +124,7 @@ class Zume_Migration_Engine
      *
      * @throws \Exception Expected to find table name in table definition of $name.
      */
-    protected static function sanity_check_expected_tables( array $expected_tables )
-    {
+    protected static function sanity_check_expected_tables( array $expected_tables ) {
         global $wpdb;
         foreach ( $expected_tables as $name => $table ) {
                 zume_write_log( $table );

@@ -132,8 +132,7 @@ class Zume_Stats{
         return $result;
     }
 
-    public function initialize_analytics()
-    {
+    public function initialize_analytics() {
         // Creates and returns the Analytics Reporting service object.
 
         // Use the developers console and download your service account

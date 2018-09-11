@@ -1,8 +1,7 @@
 <?php
 
 // Fire all our initial functions at the start
-function zume_start()
-{
+function zume_start() {
 
     // launching operation cleanup
     add_action( 'init', 'zume_head_cleanup' );
@@ -29,8 +28,7 @@ function zume_start()
 add_action( 'after_setup_theme', 'zume_start', 16 );
 
 //The default wordpress head is a mess. Let's clean it up by removing all the junk we don't need.
-function zume_head_cleanup()
-{
+function zume_head_cleanup() {
     // Remove category feeds
     remove_action( 'wp_head', 'feed_links_extra', 3 );
     // Remove post and comment feeds
@@ -52,16 +50,14 @@ function zume_head_cleanup()
 } /* end Zume head cleanup */
 
 // Remove injected CSS for recent comments widget
-function zume_remove_wp_widget_recent_comments_style()
-{
+function zume_remove_wp_widget_recent_comments_style() {
     if ( has_filter( 'wp_head', 'wp_widget_recent_comments_style' ) ) {
         remove_filter( 'wp_head', 'wp_widget_recent_comments_style' );
     }
 }
 
 // Remove injected CSS from recent comments widget
-function zume_remove_recent_comments_style()
-{
+function zume_remove_recent_comments_style() {
     global $wp_widget_factory;
     if ( isset( $wp_widget_factory->widgets['WP_Widget_Recent_Comments'] ) ) {
         remove_action( 'wp_head', array( $wp_widget_factory->widgets['WP_Widget_Recent_Comments'], 'recent_comments_style' ) );
@@ -69,22 +65,19 @@ function zume_remove_recent_comments_style()
 }
 
 // Remove injected CSS from gallery
-function zume_gallery_style($css)
-{
+function zume_gallery_style($css) {
     return preg_replace( "!<style type='text/css'>(.*?)</style>!s", '', $css );
 }
 
 // This removes the annoying […] to a Read More link
-function zume_excerpt_more($more)
-{
+function zume_excerpt_more($more) {
     global $post;
     // edit here if you like
     return '<a class="excerpt-read-more" href="' . get_permalink( $post->ID ) . '" title="' . __( 'Read', 'zume' ) . get_the_title( $post->ID ) . '">' . __( '... Read more &raquo;', 'zume' ) . '</a>';
 }
 
 //  Stop WordPress from using the sticky class (which conflicts with Foundation), and style WordPress sticky posts using the .wp-sticky class instead
-function zume_remove_sticky_class($classes)
-{
+function zume_remove_sticky_class($classes) {
     if ( in_array( 'sticky', $classes ) ) {
         $classes = array_diff( $classes, array( "sticky" ) );
         $classes[] = 'wp-sticky';
@@ -94,8 +87,7 @@ function zume_remove_sticky_class($classes)
 }
 
 //This is a modified the_author_posts_link() which just returns the link. This is necessary to allow usage of the usual l10n process with printf()
-function zume_get_the_author_posts_link()
-{
+function zume_get_the_author_posts_link() {
     global $authordata;
     if ( !is_object( $authordata ) ) {
         return false;

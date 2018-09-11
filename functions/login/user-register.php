@@ -96,8 +96,7 @@ function zume_mu_registration_errors( $errors, $sanitized_user_login, $user_emai
 
 // Stores form data for activation
 add_filter( 'add_signup_meta', 'custom_add_signup_meta' );
-function custom_add_signup_meta( $meta )
-{
+function custom_add_signup_meta( $meta ) {
     $first_name = '';
     $last_name = '';
     $zume_phone_number = '';

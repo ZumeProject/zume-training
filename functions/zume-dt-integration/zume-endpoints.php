@@ -19,8 +19,7 @@ class Zume_Integration_Endpoints
 {
     private static $_instance = null;
 
-    public static function instance()
-    {
+    public static function instance() {
         if ( is_null( self::$_instance ) ) {
             self::$_instance = new self();
         }
@@ -33,13 +32,11 @@ class Zume_Integration_Endpoints
      * @access  public
      * @since   0.1.0
      */
-    public function __construct()
-    {
+    public function __construct() {
         add_action( 'rest_api_init', [ $this, 'add_api_routes' ] );
     } // End __construct()
 
-    public function add_api_routes()
-    {
+    public function add_api_routes() {
         $version = '1';
         $namespace = 'dt-public/v' . $version;
 

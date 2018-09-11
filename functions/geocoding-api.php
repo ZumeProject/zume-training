@@ -49,8 +49,7 @@ class Disciple_Tools_Google_Geocode_API
         }
     }
 
-    public static function default_google_api_keys()
-    {
+    public static function default_google_api_keys() {
         $default_keys = [
             'AIzaSyBkI5W07GdlhQCqzf3F8VW2E_3mhdzR3s4',
             'AIzaSyAaaZusK9pa9eLuO0nlllGnbQPyXHfTGxQ',
@@ -71,8 +70,7 @@ class Disciple_Tools_Google_Geocode_API
      *
      * @return array|mixed|object|bool
      */
-    public static function query_google_api( $address, $type = 'raw' )
-    {
+    public static function query_google_api( $address, $type = 'raw' ) {
         $address = str_replace( '   ', ' ', $address );
         $address = str_replace( '  ', ' ', $address );
         $address = urlencode( trim( $address ) );
@@ -126,8 +124,7 @@ class Disciple_Tools_Google_Geocode_API
         }
     }
 
-    public static function query_google_api_with_components( $address, $components = [] )
-    {
+    public static function query_google_api_with_components( $address, $components = [] ) {
         $address = str_replace( '   ', ' ', $address );
         $address = str_replace( '  ', ' ', $address );
         $address = urlencode( trim( $address ) );
@@ -165,8 +162,7 @@ class Disciple_Tools_Google_Geocode_API
      *
      * @return array|bool|mixed|object
      */
-    public static function query_google_api_reverse( $latlng, $result_type = 'locality' )
-    {
+    public static function query_google_api_reverse( $latlng, $result_type = 'locality' ) {
         $latlng = trim( $latlng );
         $latlng = str_replace( ' ', '', $latlng );
 
@@ -186,8 +182,7 @@ class Disciple_Tools_Google_Geocode_API
      *
      * @return mixed
      */
-    public static function url_get_contents( $url )
-    {
+    public static function url_get_contents( $url ) {
         if ( !function_exists( 'curl_init' ) ) {
             die( 'CURL is not installed!' );
         }
@@ -203,7 +198,6 @@ class Disciple_Tools_Google_Geocode_API
     /**
      * @since 4.7.2018 Added new api endpoint with api key.
      * @param $ip_address
-     *
      *
      * @return bool|array False on fail, or result array on success
      *
@@ -251,8 +245,7 @@ class Disciple_Tools_Google_Geocode_API
     /**
      * @return string
      */
-    public static function get_real_ip_address()
-    {
+    public static function get_real_ip_address() {
         $ip = '';
         if ( ! empty( $_SERVER['HTTP_CLIENT_IP'] ))   //check ip from share internet
         {
