@@ -50,7 +50,9 @@
         <!-- End Facebook Pixel Code -->
 
         <!-- Global site tag (gtag.js) - Google Analytics -->
+        <?php // @codingStandardsIgnoreStart ?>
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-102207784-1"></script>
+        <?php // @codingStandardsIgnoreEnd ?>
         <script>
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}

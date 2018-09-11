@@ -30,8 +30,8 @@ function zume_multi_role_admin_register_scripts() {
 
     $min = defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ? '' : '.min';
 
-    wp_register_script( 'members-settings', "js/settings{$min}.js", [ 'jquery' ], '', true );
-    wp_register_script( 'members-edit-role', "js/edit-role{$min}.js", [ 'postbox', 'wp-util' ], '', true );
+    wp_register_script( 'members-settings', "js/settings{$min}.js", [ 'jquery' ], '1', true );
+    wp_register_script( 'members-edit-role', "js/edit-role{$min}.js", [ 'postbox', 'wp-util' ], '1', true );
 
     // Localize our script with some text we want to pass in.
     $i18n = [
@@ -56,7 +56,7 @@ function zume_multi_role_admin_register_styles() {
 
     $min = defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ? '' : '.min';
 
-    wp_register_style( 'members-admin', "css/admin{$min}.css" );
+    wp_register_style( 'members-admin', "css/admin{$min}.css", [], '1' );
 }
 
 /**

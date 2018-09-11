@@ -19,7 +19,10 @@ if ( isset( $_POST['thee_month_plan_nonce'] ) ) {
         Zume_Three_Month_Plan::reset_plan();
     }
     else {
-        $status = Zume_Three_Month_Plan::edit_post( $_POST );
+        // @codingStandardsIgnoreStart
+        $post_content = $_POST;
+        $status = Zume_Three_Month_Plan::edit_post( $post_content );
+        // @codingStandardsIgnoreEnd
         if ( 'Public_Key_Error' === $status['status'] ) {
             $zume_error_message = $status['message'];
         }

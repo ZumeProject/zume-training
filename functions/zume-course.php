@@ -301,6 +301,7 @@ class Zume_Course_Content {
                     <div class="small-4 cell"></div>
                     <div class="small-4 cell center">
                         <form action="" method="post" id="submit-group-session">
+                            <?php wp_nonce_field( 'zume_course_action', 'zume_course_nonce', true, true ) ?>
                             <p><label for="members"><?php esc_html_e( 'How many are with you?', 'zume' ) ?></label>
                                 <select id="members" name="members">
                                     <?php
