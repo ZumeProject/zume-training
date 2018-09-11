@@ -206,6 +206,46 @@ do_action( 'zume_dashboard_header' );
                                 }
                                 ?>
 
+                                <?php
+                                /***********************************************************************************************
+                                 * COLEADER REQUESTS SECTION
+                                 **********************************************************************************************/
+                                $zume_waiting_acceptance = Zume_Dashboard::get_colead_groups( 'waiting_acceptance' );
+
+                                if ( count( $zume_waiting_acceptance ) > 0 ) :
+                                    ?>
+                                    <form method="post">
+                                        <?php wp_nonce_field( get_current_user_id(), 'zume_nonce' ) ?>
+                                        <input type="hidden" name="type" value="coleader"/>
+
+                                        <div class="grid-x grid-padding-y">
+                                            <?php
+                                            foreach ( $zume_waiting_acceptance as $zume_accept_key => $zume_accept_value ) {
+                                                ?>
+                                                <div class="cell session-boxes">
+                                                    <p class="center">
+                                                        <strong><?php $zume_group_owner = get_user_by( 'id', $zume_accept_value['owner'] );
+                                                            echo esc_attr( $zume_group_owner->display_name ) ?></strong> <?php esc_attr_e( 'invites you to join', 'zume' ) ?>
+                                                        <strong><?php echo esc_attr( $zume_accept_value['group_name'] ) ?></strong>
+                                                    </p><br>
+
+                                                    <p class="center">
+                                                        <button class="button" type="submit" name="accept"
+                                                                value="<?php echo esc_attr( $zume_accept_key ) ?>"><?php esc_attr_e( 'Accept', 'zume' ) ?></button>
+                                                        <button class="button" type="submit" name="decline"
+                                                                value="<?php echo esc_attr( $zume_accept_key ) ?>"><?php esc_attr_e( 'Decline', 'zume' ) ?></button>
+                                                    </p>
+                                                </div>
+                                                <?php
+                                            }
+                                            ?>
+                                        </div>
+                                    </form>
+                                    <?php
+                                endif; // end waiting acceptance if
+                                /* END COLEADER REQUESTS */
+                                ?>
+
 
                                 <!-- Message if there are no groups -->
                                 <?php if ( $zume_no_groups < 1 ) : ?>
@@ -468,53 +508,7 @@ do_action( 'zume_dashboard_header' );
                         <!-- END INSTRUCTIONS -->
 
 
-                        <?php
-                        /***********************************************************************************************
-                         * COLEADER REQUESTS SECTION
-                         **********************************************************************************************/
-                        $zume_waiting_acceptance = Zume_Dashboard::get_colead_groups( 'waiting_acceptance' );
 
-                        if ( count( $zume_waiting_acceptance ) > 0 ) :
-                            ?>
-                            <form method="post">
-                                <?php wp_nonce_field( get_current_user_id(), 'zume_nonce' ) ?>
-                                <input type="hidden" name="type" value="coleader"/>
-
-                                <div class="callout">
-                                    <div class="grid-x grid-padding-y">
-                                        <div class="cell center">
-                                            <strong>
-                                                <?php esc_attr_e( 'Invitations', 'zume' ) ?>
-                                            </strong>
-                                        </div>
-                                        <?php
-                                        foreach ( $zume_waiting_acceptance as $zume_accept_key => $zume_accept_value ) {
-                                            ?>
-                                            <div class="cell border-top">
-                                                <p>
-                                                    <strong><?php $zume_group_owner = get_user_by( 'id', $zume_accept_value['owner'] );
-                                                        echo esc_attr( $zume_group_owner->display_name ) ?></strong> <?php esc_attr_e( 'invites you to join', 'zume' ) ?>
-                                                    <strong><?php echo esc_attr( $zume_accept_value['group_name'] ) ?></strong>
-                                                </p>
-
-                                                <p class="center">
-                                                    <button class="button hollow" type="submit" name="accept"
-                                                            value="<?php echo esc_attr( $zume_accept_key ) ?>"><?php esc_attr_e( 'Accept', 'zume' ) ?></button>
-                                                    <button class="button hollow" type="submit" name="decline"
-                                                            value="<?php echo esc_attr( $zume_accept_key ) ?>"><?php esc_attr_e( 'Decline', 'zume' ) ?></button>
-                                                </p>
-                                            </div>
-                                            <?php
-                                        }
-                                        ?>
-
-                                    </div>
-                                </div>
-                            </form>
-                        <?php
-                        endif; // end waiting acceptance if
-                        /* END COLEADER REQUESTS */
-                        ?>
 
 
                         <!-- ********************************************************************************************* -->
@@ -550,7 +544,7 @@ do_action( 'zume_dashboard_header' );
                          **********************************************************************************************/
                         $zume_three_month_plan = zume_three_month_plan_url();
                         if ( ! empty( $zume_three_month_plan ) ) :
-                        ?>
+                            ?>
                         <div class="grid-x grid-margin-x">
                             <div class="cell center">
                                 <a class="button expanded"
