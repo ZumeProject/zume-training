@@ -7,10 +7,8 @@ zume_force_login();
 if ( empty( $_GET['group'] ) || empty( $_GET['session'] ) ) {
     wp_die( esc_html__( 'You are missing a group or session number.', 'zume' ) . '<a href="'. esc_url( zume_dashboard_url() ) .'">' . esc_html__( 'Head back to your dashboard', 'zume' ) . '</a>' );
 }
-if ( ! empty( $_POST ) ) {
-    if ( ! isset( $_POST['zume_course_nonce'] ) && ! wp_verify_nonce( sanitize_key( wp_unslash( $_POST['zume_course_nonce'] ) ), 'zume_course_action' ) ) {
-        wp_die( esc_html__( 'You do not have a valid nonce. Where did you come from? ', 'zume' ) . '<a href="'. esc_url( zume_dashboard_url() ) .'"> ' . esc_html__( 'Head back to your dashboard', 'zume' ) . '</a>' );
-    }
+if ( isset( $_POST['viewing'] ) && isset( $_POST['zume_course_nonce'] ) && ! wp_verify_nonce( sanitize_key( wp_unslash( $_POST['zume_course_nonce'] ) ), 'zume_course_action' ) ) {
+    wp_die( esc_html__( 'You do not have a valid nonce. Where did you come from? ', 'zume' ) . '<a href="'. esc_url( zume_dashboard_url() ) .'"> ' . esc_html__( 'Head back to your dashboard', 'zume' ) . '</a>' );
 }
 $zume_group_key = sanitize_key( wp_unslash( $_GET['group'] ) );
 $zume_session   = sanitize_key( wp_unslash( $_GET['session'] ) );
