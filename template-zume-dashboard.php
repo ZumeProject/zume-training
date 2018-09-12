@@ -449,36 +449,6 @@ do_action( 'zume_dashboard_header' );
                     <!-- Right Column -->
                     <div class="large-2 cell dashboard-messages">
 
-                        <?php
-                        /***********************************************************************************************
-                         * COACH SECTION
-                         **********************************************************************************************/
-                        $zume_coach_id = get_user_meta( $zume_current_user, 'zume_coach', true );
-                        if ( ! empty( $zume_coach_id ) ) :
-                            $zume_coach_data = get_userdata( $zume_coach_id );
-                            ?>
-                            <div class="callout">
-                                <div class="grid-x">
-                                    <div class="cell center">
-                                        <h3><?php echo esc_html__( 'Your Coach', 'zume' ) ?></h3>
-                                    </div>
-                                </div>
-
-                                <div class="grid-x grid-margin-x">
-                                    <div class="small-3 cell">
-                                        <?php echo get_avatar( $zume_coach_id, 64 ) ?>
-                                    </div>
-                                    <div class="small-9 cell">
-                                        <strong><?php echo esc_html( $zume_coach_data->display_name ); ?></strong><br>
-                                        <a href="mailto:<?php echo esc_html( $zume_coach_data->user_email ); ?>">
-                                            <?php echo esc_html( $zume_coach_data->user_email ); ?>
-                                        </a><br>
-                                        "<?php echo esc_html( $zume_coach_data->description ); ?>"
-                                    </div>
-                                </div>
-                            </div>
-
-                        <?php endif; //END COACH SECTION  ?>
 
                         <?php
                         /***********************************************************************************************
@@ -571,6 +541,44 @@ do_action( 'zume_dashboard_header' );
                             <!-- THREE MONTH PLAN -->
                         <?php endif; ?>
 
+
+
+                        <?php
+                        /***********************************************************************************************
+                         * NETWORKS SECTION
+                         **********************************************************************************************/
+                        $zume_user_sites = get_blogs_of_user( get_current_user_id() );
+                        unset( $zume_user_sites[1] );
+
+                        if ( ! empty( $zume_user_sites ) ) :
+                            ?>
+                            <div class="callout">
+                                <div class="grid-x">
+                                    <div class="cell center">
+                                        <strong><?php echo esc_html__( 'Networks', 'zume' ) ?></strong>
+                                    </div>
+                                </div>
+
+                                <div class="grid-x grid-margin-x grid-padding-y">
+                                    <div class="small-9 cell">
+                                        <ul style="list-style-type: none;">
+                                            <?php
+                                            $ordered_sites = [];
+                                            foreach ($zume_user_sites as $key => $value) {
+                                                $ordered_sites[$value->blogname] = $value->siteurl;
+                                            }
+                                            ksort( $ordered_sites );
+
+                                            foreach ($ordered_sites as $sitename => $siteurl ) {
+                                                echo '<li><a href="' . esc_url( $siteurl ) . '" target="_blank" rel="noopener">'. esc_html( $sitename ) .'</a></li>';
+                                            }
+                                            ?>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                        <?php endif; ?>
 
                     </div> <!-- End Right Column -->
 
