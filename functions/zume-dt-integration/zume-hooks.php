@@ -117,9 +117,9 @@ class Zume_Integration_Metabox extends Zume_Integration_Hook_Base {
         global $post, $pagenow;
         if ( ! ( $pagenow == 'post-new.php' ) ) {
             echo '<table class="form-table"><tr><th scope="row" width="33%"><label>Affiliation URL</label></th><td>';
-            echo '<a href="' . esc_url( site_url() ) . '/wp-login.php?action=register&affiliation=' . esc_attr( get_post_meta(
+            echo '<a href="' . esc_url( site_url() ) . '/local-signup/?affiliation=' . esc_attr( get_post_meta(
                 $post->ID,
-            'affiliation_key', true ) ) . '" target="">' . esc_url( site_url() ) . '/wp-login.php?action=register&affiliation=' . esc_attr( get_post_meta(
+            'affiliation_key', true ) ) . '" target="">' . esc_url( site_url() ) . '/local-signup/?affiliation=' . esc_attr( get_post_meta(
                 $post->ID,
             'affiliation_key', true ) ) . '</a>';
             echo '</td></tr></table>';
