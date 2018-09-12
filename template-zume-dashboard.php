@@ -813,9 +813,7 @@ foreach ( $zume_user_meta as $zume_key => $v ) {
                     <div class="cell padding-top">
                         <label for="add_coleader"><strong><?php echo esc_html__( 'Coleaders or additional participants', 'zume' ) ?></strong></label>
                         <p class="small text-gray">
-                            <?php esc_html_e( 'Adding a coleader or additional participants below gives their 
-                            Zúme dashboard access to the group, once they accept the invitation. 
-                            They can facilitate a training, but cannot change any details of the group.', 'zume' ) ?>
+                            <?php esc_html_e( 'Adding a coleader or additional participants gives them access to this group on their Zúme dashboard once they have signed up and logged in using the email address you add. When they login to their dashboard they will see an invitation from you on the right side of the screen. Adding them to this group allows them to facilitate a training but they cannot change any details of the group. Note: they will not receive a system email from Zúme with this invitation, you will need to ask them to sign up.', 'zume' ) ?>
                         </p>
                         <?php
                         // Print current coleaders
