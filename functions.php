@@ -63,6 +63,7 @@ require_once( 'functions/zume-welcome-messages.php' ); // zume welcome messages
 require_once( 'functions/logging/zume-logging.php' ); // zume logging of critical path actions
 require_once( 'functions/zume-stats.php' ); // zume logging of critical path actions
 
+
 // REST API
 require_once( 'functions/zume-rest-api.php' );
 
@@ -84,7 +85,9 @@ require_once( 'functions/zume-dt-integration/zume-endpoints.php' );
 require_once( 'functions/zume-dt-integration/zume-site-stats.php' );
 require_once( 'functions/zume-dt-integration/system-check-metabox.php' );
 
-
+if ( is_admin() ) {
+    require_once( 'functions/zume-resource-metabox.php' ); // zume logging of critical path actions
+}
 
 
 /**
