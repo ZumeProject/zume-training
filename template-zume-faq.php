@@ -114,7 +114,7 @@ Template Name: Zúme FAQ
                         <h3 class="secondary"><?php esc_html_e( 'What are the three phases that are planned?', 'zume' ) ?></h3>
                         <p>
                             <strong><?php esc_html_e( 'PHASE 1', 'zume' ) ?>:</strong><br>
-                            <?php esc_html_e( 'Focuses on the United States in English. The initial goal is for there to be a training group of four to twelve people in each census tract in the country. Each of these training groups will start two first-generation churches which will then begin to reproduce. There are about 75,000 census tracts so this will mean 150,000 first-generation churches.', 'zume' ) ?>
+                            <?php esc_html_e( 'Focuses on the United States in English. The initial goal is for there to be a training group of four to twelve people per every 5,000 people in the country. Each of these training groups will start two first-generation churches which will then begin to reproduce. This will mean in the United States more than 65,000 Zúme groups and 130,000 churches need to be started.', 'zume' ) ?>
                         </p>
                         <p>
                             <strong><?php esc_html_e( 'PHASE 2', 'zume' ) ?>:</strong><br>
@@ -123,7 +123,7 @@ Template Name: Zúme FAQ
                         </p>
                         <p>
                             <strong><?php esc_html_e( 'PHASE 3', 'zume' ) ?>:</strong><br>
-                            <?php esc_html_e( 'Focuses globally in major world languages. The framework for targeting the training groups is based on the 4K maps developed by YWAM. It divides the world into segments based on population and the general level of gospel saturation, with less evangelized areas receiving about three times the attention of more evangelized areas. For more information on the framework go to www.4Kworldmap.com. The project will use the next generation of the data, 4K Plus, which will divide the world into about 60,000 Omega Districts. There will be training groups started in each Omega District which will then launch first-generation churches within the districts. In the least evangelized areas this will be a training group for approximately every 50,000 people.', 'zume' ) ?>
+                            <?php esc_html_e( 'Focuses globally in major world languages with a vision to make disciples in every place, among every people group. Zúme Project exists to saturate the globe with multiplying disciples in our generation. We developed a mapping solution with a city-based framework allowing teams to securely visualize progress toward starting a Zúme training group and two simple churches among every 5,000 person segment.', 'zume' ) ?>
                         </p>
                     </div>
 
