@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Zúme Project\n"
-"POT-Creation-Date: 2018-09-20 09:45-0600\n"
-"PO-Revision-Date: 2018-09-20 09:47-0600\n"
+"POT-Creation-Date: 2018-09-20 10:46-0600\n"
+"PO-Revision-Date: 2018-09-20 10:46-0600\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fa_IR\n"
@@ -201,8 +201,8 @@ msgid "User Roles"
 msgstr "نقش های کاربری"
 
 #: functions/multi-role/functions-admin.php:38
-#: functions/post-types/pdf-download-post-type.php:137
-#: functions/post-types/video-post-type.php:137
+#: functions/post-types/pdf-download-post-type.php:136
+#: functions/post-types/video-post-type.php:136
 #: functions/zume-dt-integration/site-link-post-type.php:245
 #: functions/zume-dt-integration/site-link-post-type.php:246
 msgid "Edit"
@@ -235,98 +235,98 @@ msgstr ""
 msgid "None"
 msgstr "هیچ یک"
 
+#: functions/post-types/pdf-download-post-type.php:131
 #: functions/post-types/pdf-download-post-type.php:132
-#: functions/post-types/pdf-download-post-type.php:133
 msgid "Zume Download"
 msgstr "دانلود زومه"
 
-#: functions/post-types/pdf-download-post-type.php:134
+#: functions/post-types/pdf-download-post-type.php:133
 msgid "All Zume Downloads"
 msgstr "همه دانلودهای زومه"
 
-#: functions/post-types/pdf-download-post-type.php:135
-#: functions/post-types/video-post-type.php:135
+#: functions/post-types/pdf-download-post-type.php:134
+#: functions/post-types/video-post-type.php:134
 #: functions/zume-dt-integration/site-link-post-type.php:243
 #: functions/zume-dt-integration/site-link-post-type.php:244
 msgid "Add New"
 msgstr "افزودن مورد جدید"
 
-#: functions/post-types/pdf-download-post-type.php:136
+#: functions/post-types/pdf-download-post-type.php:135
 msgid "Add New Zume Download"
 msgstr "افزودن دانلود جدید زومه"
 
-#: functions/post-types/pdf-download-post-type.php:138
+#: functions/post-types/pdf-download-post-type.php:137
 msgid "Edit Zume Download"
 msgstr "ویرایش دانلود زومه"
 
-#: functions/post-types/pdf-download-post-type.php:139
+#: functions/post-types/pdf-download-post-type.php:138
 msgid "New Zume Download"
 msgstr "دانلود جدید زومه"
 
-#: functions/post-types/pdf-download-post-type.php:140
+#: functions/post-types/pdf-download-post-type.php:139
 msgid "View Zume Download"
 msgstr "مشاهده دانلود زومه"
 
-#: functions/post-types/pdf-download-post-type.php:141
+#: functions/post-types/pdf-download-post-type.php:140
 msgid "Search Zume Downloads"
 msgstr "جستجوی دانلودهای زومه"
 
-#: functions/post-types/pdf-download-post-type.php:142
-#: functions/post-types/video-post-type.php:142
+#: functions/post-types/pdf-download-post-type.php:141
+#: functions/post-types/video-post-type.php:141
 #: functions/zume-dt-integration/site-link-post-type.php:250
 msgid "Nothing found in the Database."
 msgstr "چیزی در پایگاه داده ها یافت نشد."
 
-#: functions/post-types/pdf-download-post-type.php:143
-#: functions/post-types/video-post-type.php:143
+#: functions/post-types/pdf-download-post-type.php:142
+#: functions/post-types/video-post-type.php:142
 #: functions/zume-dt-integration/site-link-post-type.php:251
 msgid "Nothing found in Trash"
 msgstr "چیزی در سطل زباله یافت نشد"
 
-#: functions/post-types/pdf-download-post-type.php:146
-#: functions/post-types/video-post-type.php:146
+#: functions/post-types/pdf-download-post-type.php:145
+#: functions/post-types/video-post-type.php:145
 msgid "Zume video catalog for language videos"
 msgstr "کاتالوگ ویدیویی زومه برای ویدیوهای زبان"
 
 #. translators: Publish box date format, see http://php.net/date
-#: functions/post-types/pdf-download-post-type.php:257
-#: functions/post-types/video-post-type.php:257
+#: functions/post-types/pdf-download-post-type.php:256
+#: functions/post-types/video-post-type.php:256
 #: functions/zume-dt-integration/site-link-post-type.php:360
 msgid "M j, Y @ G:i"
 msgstr "M j, Y @ G:i"
 
-#: functions/post-types/pdf-download-post-type.php:452
-#: functions/post-types/video-post-type.php:460
+#: functions/post-types/pdf-download-post-type.php:451
+#: functions/post-types/video-post-type.php:459
 #: functions/zume-dt-integration/site-link-post-type.php:816
 msgid "Enter the title here"
 msgstr "عنوان را اینجا وارد کنید"
 
+#: functions/post-types/video-post-type.php:131
 #: functions/post-types/video-post-type.php:132
-#: functions/post-types/video-post-type.php:133
 msgid "Zume Video"
 msgstr "ویدیوی زومه"
 
-#: functions/post-types/video-post-type.php:134
+#: functions/post-types/video-post-type.php:133
 msgid "All Zume Videos"
 msgstr "همه ویدیوهای زومه"
 
-#: functions/post-types/video-post-type.php:136
+#: functions/post-types/video-post-type.php:135
 msgid "Add New Zume Video"
 msgstr "افزودن ویدیوی جدید زومه"
 
-#: functions/post-types/video-post-type.php:138
+#: functions/post-types/video-post-type.php:137
 msgid "Edit Zume Video"
 msgstr "ویرایش ویدیوی زومه"
 
-#: functions/post-types/video-post-type.php:139
+#: functions/post-types/video-post-type.php:138
 msgid "New Zume Video"
 msgstr "ویدیوی جدید زومه"
 
-#: functions/post-types/video-post-type.php:140
+#: functions/post-types/video-post-type.php:139
 msgid "View Zume Video"
 msgstr "مشاهده ویدیوی زومه"
 
-#: functions/post-types/video-post-type.php:141
+#: functions/post-types/video-post-type.php:140
 msgid "Search Zume Videos"
 msgstr "جستجوی ویدیوهای زومه"
 
@@ -1581,16 +1581,12 @@ msgstr ""
 "چیزی به ذهن تان می آید؟"
 
 #: functions/zume-course.php:1224
-#, fuzzy
-#| msgid ""
-#| "Why do you think Jesus chose ordinary people instead of some other way to "
-#| "share His Good News?."
 msgid ""
 "Why do you think Jesus chose ordinary people instead of some other way to "
 "share His Good News?"
 msgstr ""
 "فکر می کنید چرا عیسی افرادی معمولی را بجای راههایی دیگر انتخاب کرد تا خبر خوش "
-"خود را انتقال دهد؟."
+"خود را انتقال دهد؟"
 
 #: functions/zume-course.php:1226
 msgid "What would it take for you to feel more comfortable sharing God's Story?"
@@ -3300,8 +3296,8 @@ msgstr ""
 "برای کمک به دیگران برای شاگرد شدن و شاگردسازی کردن، این لینک را امروز به "
 "اشتراک بگذارید: www.ZumeProject.com به زودی به 37 زبان در دسترس خواهد بود."
 
-#: functions/zume-dashboard.php:78 functions/zume-dashboard.php:109
-#: functions/zume-dashboard.php:192
+#: functions/zume-dashboard.php:77 functions/zume-dashboard.php:108
+#: functions/zume-dashboard.php:191
 msgid "No Name"
 msgstr "بدون نام"
 
@@ -3523,7 +3519,7 @@ msgstr "پیشرفت"
 msgid "Stats"
 msgstr "آمار"
 
-#: functions/zume-three-month-plan.php:81
+#: functions/zume-three-month-plan.php:80
 msgid ""
 "I will share My Story [Testimony] and God’s Story [the Gospel] with the "
 "following individuals:"
@@ -3531,12 +3527,12 @@ msgstr ""
 "من داستان خودم [شهادت] و داستان خدا [انجیل] را با این افراد در میان خواهم "
 "گذاشت:"
 
-#: functions/zume-three-month-plan.php:82
+#: functions/zume-three-month-plan.php:81
 msgid ""
 "I will invite the following people to begin an Accountability Group with me:"
 msgstr "من این افراد را دعوت خواهم کرد تا با من یک گروه پاسخگویی را شروع کنند:"
 
-#: functions/zume-three-month-plan.php:83
+#: functions/zume-three-month-plan.php:82
 msgid ""
 "I will challenge the following people to begin their own Accountability "
 "Groups and train them how to do it:"
@@ -3544,11 +3540,11 @@ msgstr ""
 "من این افراد را به چالش خواهم کشید تا گروه های پاسخگویی خودشان را آغاز کنند و "
 "به آنها آموزش خواهم داد که چطور این کار را انجام دهند:"
 
-#: functions/zume-three-month-plan.php:84
+#: functions/zume-three-month-plan.php:83
 msgid "I will invite the following people to begin a 3/3 Group with me:"
 msgstr "من این افراد را دعوت خواهم کرد تا با من گروه 3/3 را آغاز کنند:"
 
-#: functions/zume-three-month-plan.php:85
+#: functions/zume-three-month-plan.php:84
 msgid ""
 "I will challenge the following people to begin their own 3/3 Groups and train "
 "them how to do it:"
@@ -3556,7 +3552,7 @@ msgstr ""
 "من این افراد را به چالش خواهم کشید تا گروه های 3/3 خودشان را آغاز کنند و به "
 "آنها آموزش خواهم داد که چطور این کار را انجام دهند:"
 
-#: functions/zume-three-month-plan.php:86
+#: functions/zume-three-month-plan.php:85
 msgid ""
 "I will invite the following people to participate in a 3/3 Hope or Discover "
 "Group [see Appendix of Zúme Guidebook]"
@@ -3564,16 +3560,16 @@ msgstr ""
 "من این افراد را دعوت خواهم کرد که در یک گروه امید یا کشف 3/3 شرکت کنند [پیوست "
 "کتاب راهنمای زومه را ببینید]"
 
-#: functions/zume-three-month-plan.php:87
+#: functions/zume-three-month-plan.php:86
 msgid ""
 "I will invite the following people to participate in Prayer Walking with me:"
 msgstr "من این افراد را دعوت خواهم کرد که با من در دعای پیاده شرکت کنند:"
 
-#: functions/zume-three-month-plan.php:88
+#: functions/zume-three-month-plan.php:87
 msgid "I will Prayer Walk once every [days / weeks / months]."
 msgstr "من در هر [روز / هفته / ماه] یک بار دعای پیاده خواهم کرد."
 
-#: functions/zume-three-month-plan.php:89
+#: functions/zume-three-month-plan.php:88
 msgid ""
 "I will equip the following people to share their story and God’s Story and "
 "make a List of 100 of the people in their relational network:"
@@ -3581,7 +3577,7 @@ msgstr ""
 "من این افراد را تجهیز خواهم کرد تا داستان خودشان و داستان خدا را انتقال دهند "
 "و لیستی 100 نفره از افرادی که در شبکه رابطه ای آنها هستند تهیه کنند:"
 
-#: functions/zume-three-month-plan.php:90
+#: functions/zume-three-month-plan.php:89
 msgid ""
 "I will challenge the following people to use the Prayer Cycle tool on a "
 "periodic basis:"
@@ -3589,11 +3585,11 @@ msgstr ""
 "من این افراد را به چالش خواهم کشید که از ابزار چرخه دعا بصورت دوره ای استفاده "
 "کنند:"
 
-#: functions/zume-three-month-plan.php:91
+#: functions/zume-three-month-plan.php:90
 msgid "I will use the Prayer Cycle tool once every [days / weeks / months]."
 msgstr "من از ابزار چرخه دعا هر [روز / هفته / ماه] یک بار استفاده خواهم کرد."
 
-#: functions/zume-three-month-plan.php:92
+#: functions/zume-three-month-plan.php:91
 msgid ""
 "I will invite the following people to be part of a Leadership Cell that I "
 "will lead:"
@@ -3601,108 +3597,108 @@ msgstr ""
 "من این افراد را دعوت خواهم کرد که بخشی از یک گروه کوچک رهبری باشند که من آن "
 "را رهبری خواهم کرد:"
 
-#: functions/zume-three-month-plan.php:93
+#: functions/zume-three-month-plan.php:92
 msgid ""
 "I will encourage the following people to go through this Zúme Training course:"
 msgstr "من این افراد را تشویق خواهم کرد که این دوره آموزشی زومه را بگذرانند:"
 
-#: functions/zume-three-month-plan.php:94
+#: functions/zume-three-month-plan.php:93
 msgid "Other commitments:"
 msgstr "تعهدات دیگر:"
 
-#: functions/zume-three-month-plan.php:140
+#: functions/zume-three-month-plan.php:139
 msgid "Unable to save three month plan."
 msgstr "قادر به ذخیره برنامه سه ماهه نمی باشد."
 
-#: functions/zume-three-month-plan.php:144
+#: functions/zume-three-month-plan.php:143
 msgid "Unable to find key:"
 msgstr "عدم موفقیت در پیدا کردن کلید:"
 
-#: functions/zume-welcome-messages.php:99
+#: functions/zume-welcome-messages.php:98
 msgid "Welcome!"
 msgstr "خوش آمدید!"
 
-#: functions/zume-welcome-messages.php:100
+#: functions/zume-welcome-messages.php:99
 msgid "I want to make disciples who multiply!"
 msgstr "من می خواهم شاگردانی تربیت کنم که تکثیر می شوند!"
 
-#: functions/zume-welcome-messages.php:105
+#: functions/zume-welcome-messages.php:104
 msgid "Title 1"
 msgstr "عنوان 1"
 
-#: functions/zume-welcome-messages.php:106
+#: functions/zume-welcome-messages.php:105
 msgid "Message1"
 msgstr "پیغام1"
 
-#: functions/zume-welcome-messages.php:111
+#: functions/zume-welcome-messages.php:110
 msgid "Title 2"
 msgstr "عنوان 2"
 
-#: functions/zume-welcome-messages.php:112
+#: functions/zume-welcome-messages.php:111
 msgid "Message2"
 msgstr "پیغام2"
 
-#: functions/zume-welcome-messages.php:117
+#: functions/zume-welcome-messages.php:116
 msgid "Title 3"
 msgstr "عنوان 3"
 
-#: functions/zume-welcome-messages.php:118
+#: functions/zume-welcome-messages.php:117
 msgid "Message3"
 msgstr "پیغام3"
 
-#: functions/zume-welcome-messages.php:123
+#: functions/zume-welcome-messages.php:122
 msgid "Title 4"
 msgstr "عنوان 4"
 
-#: functions/zume-welcome-messages.php:124
+#: functions/zume-welcome-messages.php:123
 msgid "Message4"
 msgstr "پیغام4"
 
-#: functions/zume-welcome-messages.php:129
+#: functions/zume-welcome-messages.php:128
 msgid "Title 5"
 msgstr "عنوان 5"
 
-#: functions/zume-welcome-messages.php:130
+#: functions/zume-welcome-messages.php:129
 msgid "Message5"
 msgstr "پیغام5"
 
-#: functions/zume-welcome-messages.php:135
+#: functions/zume-welcome-messages.php:134
 msgid "Title 6"
 msgstr "عنوان 6"
 
-#: functions/zume-welcome-messages.php:136
+#: functions/zume-welcome-messages.php:135
 msgid "Message6"
 msgstr "پیغام6"
 
-#: functions/zume-welcome-messages.php:141
+#: functions/zume-welcome-messages.php:140
 msgid "Title 7"
 msgstr "عنوان 7"
 
-#: functions/zume-welcome-messages.php:142
+#: functions/zume-welcome-messages.php:141
 msgid "Message7"
 msgstr "پیغام7"
 
-#: functions/zume-welcome-messages.php:147
+#: functions/zume-welcome-messages.php:146
 msgid "Title 8"
 msgstr "عنوان 8"
 
-#: functions/zume-welcome-messages.php:148
+#: functions/zume-welcome-messages.php:147
 msgid "Message8"
 msgstr "پیغام8"
 
-#: functions/zume-welcome-messages.php:153
+#: functions/zume-welcome-messages.php:152
 msgid "Title 9"
 msgstr "عنوان 9"
 
-#: functions/zume-welcome-messages.php:154
+#: functions/zume-welcome-messages.php:153
 msgid "Message9"
 msgstr "پیغام9"
 
-#: functions/zume-welcome-messages.php:159
+#: functions/zume-welcome-messages.php:158
 msgid "Title 10"
 msgstr "عنوان 10"
 
-#: functions/zume-welcome-messages.php:160
+#: functions/zume-welcome-messages.php:159
 msgid "Message10"
 msgstr "پیغام10"
 
@@ -3834,7 +3830,7 @@ msgstr "درباره پروژه زومه"
 msgid ""
 "Zúme uses an online training platform to equip participants in basic disciple-"
 "making and simple church planting multiplication principles, processes, and "
-"practices. "
+"practices."
 msgstr ""
 "در هر محله ای در سطح جهانی شاگردسازی کنید، با استفاده از یک برنامه آموزشی "
 "آنلاین که بر تجهیز شرکت کنندگان در اصول، پروسه ها و تمرینات تکثیر شاگردسازی و "
@@ -4609,7 +4605,7 @@ msgstr ""
 msgid "PHASE 3"
 msgstr "مرحله 3"
 
-#: template-zume-faq.php:126
+#: template-zume-faq.php:126 template-zume-progress.php:84
 msgid ""
 "The third phase focuses Phase 1 and Phase 2 churches to mobilize globally "
 "with a vision to make disciples in every place, among every people group. "
@@ -5129,17 +5125,6 @@ msgstr "به پروژه ترجمه زومه هدیه دهید"
 msgid "Phase 3"
 msgstr "مرحله 3"
 
-#: template-zume-progress.php:84
-msgid ""
-"The third phase focuses Phase 1 and Phase 2 churches to mobilize globally "
-"with a vision to make disciples in every place, among every people group. "
-"Zúme Project exists to saturate the globe with multiplying disciples in our "
-"generation. To accelerate our mission, we have developed and will deliver a "
-"mapping solution allowing teams to work strategically towards the goal of a "
-"Zúme training group and two simple churches among every 50,000 people outside "
-"the US. "
-msgstr ""
-
 #: template-zume-resources.php:20
 msgid "RESOURCES"
 msgstr "منابع"
@@ -5177,7 +5162,9 @@ msgid "Zúme Project"
 msgstr "پروژه زومه"
 
 #. Theme URI of the plugin/theme
-msgid "https://github.com/ChasmSolutions/zume-project-theme"
+#, fuzzy
+#| msgid "https://github.com/ChasmSolutions/zume-project-theme"
+msgid "https://github.com/ZumeProject/zume-project-multilingual"
 msgstr "https://github.com/ChasmSolutions/zume-project-theme"
 
 #. Description of the plugin/theme
@@ -5185,11 +5172,15 @@ msgid "Zúme Project for multiplying disciples."
 msgstr "پروژه زومه برای تکثیر شاگردان."
 
 #. Author of the plugin/theme
-msgid "Chasm Solutions"
-msgstr "راه حلهای شکاف (Chasm Solutions)"
+#, fuzzy
+#| msgid "#ZumeProject"
+msgid "Zume Project"
+msgstr "#پروژه زومه"
 
 #. Author URI of the plugin/theme
-msgid "https://github.com/ChasmSolutions"
+#, fuzzy
+#| msgid "https://github.com/ChasmSolutions"
+msgid "https://github.com/ZumeProject"
 msgstr "https://github.com/ChasmSolutions"
 
 #. Template Name of the plugin/theme
@@ -5255,6 +5246,9 @@ msgstr ""
 #| msgid "How Zúme Works"
 msgid "Zúme Course"
 msgstr "چطور زومه عمل می کند"
+
+#~ msgid "Chasm Solutions"
+#~ msgstr "راه حلهای شکاف (Chasm Solutions)"
 
 #~ msgid "Your Assigned People"
 #~ msgstr "افراد اختصاص داده شده شما"

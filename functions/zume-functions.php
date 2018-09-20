@@ -3,7 +3,6 @@
  * Functions used in the Zúme implementation
  *
  * @since 0.1
- * @author  Chasm Solutions
  */
 
 /* Require Authentication for Zúme */

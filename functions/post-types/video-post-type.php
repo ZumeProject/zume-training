@@ -8,7 +8,6 @@ if ( !defined( 'ABSPATH' ) ) {
  * All functionality pertaining to project update post types in Zume_Video_Post_Type.
  *
  * @package  Disciple_Tools
- * @author   Chasm.Solutions & Kingdom.Training
  * @since    0.1.0
  */
 class Zume_Video_Post_Type

@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "Project-Id-Version: Zúme Project\n"
-"POT-Creation-Date: 2018-09-20 09:50-0600\n"
+"POT-Creation-Date: 2018-09-20 10:45-0600\n"
 "PO-Revision-Date: 2018-03-06 11:15-0700\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -189,8 +189,8 @@ msgid "User Roles"
 msgstr ""
 
 #: functions/multi-role/functions-admin.php:38
-#: functions/post-types/pdf-download-post-type.php:137
-#: functions/post-types/video-post-type.php:137
+#: functions/post-types/pdf-download-post-type.php:136
+#: functions/post-types/video-post-type.php:136
 #: functions/zume-dt-integration/site-link-post-type.php:245
 #: functions/zume-dt-integration/site-link-post-type.php:246
 msgid "Edit"
@@ -220,98 +220,98 @@ msgstr ""
 msgid "None"
 msgstr ""
 
+#: functions/post-types/pdf-download-post-type.php:131
 #: functions/post-types/pdf-download-post-type.php:132
-#: functions/post-types/pdf-download-post-type.php:133
 msgid "Zume Download"
 msgstr ""
 
-#: functions/post-types/pdf-download-post-type.php:134
+#: functions/post-types/pdf-download-post-type.php:133
 msgid "All Zume Downloads"
 msgstr ""
 
-#: functions/post-types/pdf-download-post-type.php:135
-#: functions/post-types/video-post-type.php:135
+#: functions/post-types/pdf-download-post-type.php:134
+#: functions/post-types/video-post-type.php:134
 #: functions/zume-dt-integration/site-link-post-type.php:243
 #: functions/zume-dt-integration/site-link-post-type.php:244
 msgid "Add New"
 msgstr ""
 
-#: functions/post-types/pdf-download-post-type.php:136
+#: functions/post-types/pdf-download-post-type.php:135
 msgid "Add New Zume Download"
 msgstr ""
 
-#: functions/post-types/pdf-download-post-type.php:138
+#: functions/post-types/pdf-download-post-type.php:137
 msgid "Edit Zume Download"
 msgstr ""
 
-#: functions/post-types/pdf-download-post-type.php:139
+#: functions/post-types/pdf-download-post-type.php:138
 msgid "New Zume Download"
 msgstr ""
 
-#: functions/post-types/pdf-download-post-type.php:140
+#: functions/post-types/pdf-download-post-type.php:139
 msgid "View Zume Download"
 msgstr ""
 
-#: functions/post-types/pdf-download-post-type.php:141
+#: functions/post-types/pdf-download-post-type.php:140
 msgid "Search Zume Downloads"
 msgstr ""
 
-#: functions/post-types/pdf-download-post-type.php:142
-#: functions/post-types/video-post-type.php:142
+#: functions/post-types/pdf-download-post-type.php:141
+#: functions/post-types/video-post-type.php:141
 #: functions/zume-dt-integration/site-link-post-type.php:250
 msgid "Nothing found in the Database."
 msgstr ""
 
-#: functions/post-types/pdf-download-post-type.php:143
-#: functions/post-types/video-post-type.php:143
+#: functions/post-types/pdf-download-post-type.php:142
+#: functions/post-types/video-post-type.php:142
 #: functions/zume-dt-integration/site-link-post-type.php:251
 msgid "Nothing found in Trash"
 msgstr ""
 
-#: functions/post-types/pdf-download-post-type.php:146
-#: functions/post-types/video-post-type.php:146
+#: functions/post-types/pdf-download-post-type.php:145
+#: functions/post-types/video-post-type.php:145
 msgid "Zume video catalog for language videos"
 msgstr ""
 
 #. translators: Publish box date format, see http://php.net/date
-#: functions/post-types/pdf-download-post-type.php:257
-#: functions/post-types/video-post-type.php:257
+#: functions/post-types/pdf-download-post-type.php:256
+#: functions/post-types/video-post-type.php:256
 #: functions/zume-dt-integration/site-link-post-type.php:360
 msgid "M j, Y @ G:i"
 msgstr ""
 
-#: functions/post-types/pdf-download-post-type.php:452
-#: functions/post-types/video-post-type.php:460
+#: functions/post-types/pdf-download-post-type.php:451
+#: functions/post-types/video-post-type.php:459
 #: functions/zume-dt-integration/site-link-post-type.php:816
 msgid "Enter the title here"
 msgstr ""
 
+#: functions/post-types/video-post-type.php:131
 #: functions/post-types/video-post-type.php:132
-#: functions/post-types/video-post-type.php:133
 msgid "Zume Video"
 msgstr ""
 
-#: functions/post-types/video-post-type.php:134
+#: functions/post-types/video-post-type.php:133
 msgid "All Zume Videos"
 msgstr ""
 
-#: functions/post-types/video-post-type.php:136
+#: functions/post-types/video-post-type.php:135
 msgid "Add New Zume Video"
 msgstr ""
 
-#: functions/post-types/video-post-type.php:138
+#: functions/post-types/video-post-type.php:137
 msgid "Edit Zume Video"
 msgstr ""
 
-#: functions/post-types/video-post-type.php:139
+#: functions/post-types/video-post-type.php:138
 msgid "New Zume Video"
 msgstr ""
 
-#: functions/post-types/video-post-type.php:140
+#: functions/post-types/video-post-type.php:139
 msgid "View Zume Video"
 msgstr ""
 
-#: functions/post-types/video-post-type.php:141
+#: functions/post-types/video-post-type.php:140
 msgid "Search Zume Videos"
 msgstr ""
 
@@ -2779,8 +2779,8 @@ msgid ""
 "link today! It'll soon be in 37 languages."
 msgstr ""
 
-#: functions/zume-dashboard.php:78 functions/zume-dashboard.php:109
-#: functions/zume-dashboard.php:192
+#: functions/zume-dashboard.php:77 functions/zume-dashboard.php:108
+#: functions/zume-dashboard.php:191
 msgid "No Name"
 msgstr ""
 
@@ -2996,173 +2996,173 @@ msgstr ""
 msgid "Stats"
 msgstr ""
 
-#: functions/zume-three-month-plan.php:81
+#: functions/zume-three-month-plan.php:80
 msgid ""
 "I will share My Story [Testimony] and God’s Story [the Gospel] with the "
 "following individuals:"
 msgstr ""
 
-#: functions/zume-three-month-plan.php:82
+#: functions/zume-three-month-plan.php:81
 msgid ""
 "I will invite the following people to begin an Accountability Group with me:"
 msgstr ""
 
-#: functions/zume-three-month-plan.php:83
+#: functions/zume-three-month-plan.php:82
 msgid ""
 "I will challenge the following people to begin their own Accountability "
 "Groups and train them how to do it:"
 msgstr ""
 
-#: functions/zume-three-month-plan.php:84
+#: functions/zume-three-month-plan.php:83
 msgid "I will invite the following people to begin a 3/3 Group with me:"
 msgstr ""
 
-#: functions/zume-three-month-plan.php:85
+#: functions/zume-three-month-plan.php:84
 msgid ""
 "I will challenge the following people to begin their own 3/3 Groups and "
 "train them how to do it:"
 msgstr ""
 
-#: functions/zume-three-month-plan.php:86
+#: functions/zume-three-month-plan.php:85
 msgid ""
 "I will invite the following people to participate in a 3/3 Hope or Discover "
 "Group [see Appendix of Zúme Guidebook]"
 msgstr ""
 
-#: functions/zume-three-month-plan.php:87
+#: functions/zume-three-month-plan.php:86
 msgid ""
 "I will invite the following people to participate in Prayer Walking with me:"
 msgstr ""
 
-#: functions/zume-three-month-plan.php:88
+#: functions/zume-three-month-plan.php:87
 msgid "I will Prayer Walk once every [days / weeks / months]."
 msgstr ""
 
-#: functions/zume-three-month-plan.php:89
+#: functions/zume-three-month-plan.php:88
 msgid ""
 "I will equip the following people to share their story and God’s Story and "
 "make a List of 100 of the people in their relational network:"
 msgstr ""
 
-#: functions/zume-three-month-plan.php:90
+#: functions/zume-three-month-plan.php:89
 msgid ""
 "I will challenge the following people to use the Prayer Cycle tool on a "
 "periodic basis:"
 msgstr ""
 
-#: functions/zume-three-month-plan.php:91
+#: functions/zume-three-month-plan.php:90
 msgid "I will use the Prayer Cycle tool once every [days / weeks / months]."
 msgstr ""
 
-#: functions/zume-three-month-plan.php:92
+#: functions/zume-three-month-plan.php:91
 msgid ""
 "I will invite the following people to be part of a Leadership Cell that I "
 "will lead:"
 msgstr ""
 
-#: functions/zume-three-month-plan.php:93
+#: functions/zume-three-month-plan.php:92
 msgid ""
 "I will encourage the following people to go through this Zúme Training "
 "course:"
 msgstr ""
 
-#: functions/zume-three-month-plan.php:94
+#: functions/zume-three-month-plan.php:93
 msgid "Other commitments:"
 msgstr ""
 
-#: functions/zume-three-month-plan.php:140
+#: functions/zume-three-month-plan.php:139
 msgid "Unable to save three month plan."
 msgstr ""
 
-#: functions/zume-three-month-plan.php:144
+#: functions/zume-three-month-plan.php:143
 msgid "Unable to find key:"
 msgstr ""
 
-#: functions/zume-welcome-messages.php:99
+#: functions/zume-welcome-messages.php:98
 msgid "Welcome!"
 msgstr ""
 
-#: functions/zume-welcome-messages.php:100
+#: functions/zume-welcome-messages.php:99
 msgid "I want to make disciples who multiply!"
 msgstr ""
 
-#: functions/zume-welcome-messages.php:105
+#: functions/zume-welcome-messages.php:104
 msgid "Title 1"
 msgstr ""
 
-#: functions/zume-welcome-messages.php:106
+#: functions/zume-welcome-messages.php:105
 msgid "Message1"
 msgstr ""
 
-#: functions/zume-welcome-messages.php:111
+#: functions/zume-welcome-messages.php:110
 msgid "Title 2"
 msgstr ""
 
-#: functions/zume-welcome-messages.php:112
+#: functions/zume-welcome-messages.php:111
 msgid "Message2"
 msgstr ""
 
-#: functions/zume-welcome-messages.php:117
+#: functions/zume-welcome-messages.php:116
 msgid "Title 3"
 msgstr ""
 
-#: functions/zume-welcome-messages.php:118
+#: functions/zume-welcome-messages.php:117
 msgid "Message3"
 msgstr ""
 
-#: functions/zume-welcome-messages.php:123
+#: functions/zume-welcome-messages.php:122
 msgid "Title 4"
 msgstr ""
 
-#: functions/zume-welcome-messages.php:124
+#: functions/zume-welcome-messages.php:123
 msgid "Message4"
 msgstr ""
 
-#: functions/zume-welcome-messages.php:129
+#: functions/zume-welcome-messages.php:128
 msgid "Title 5"
 msgstr ""
 
-#: functions/zume-welcome-messages.php:130
+#: functions/zume-welcome-messages.php:129
 msgid "Message5"
 msgstr ""
 
-#: functions/zume-welcome-messages.php:135
+#: functions/zume-welcome-messages.php:134
 msgid "Title 6"
 msgstr ""
 
-#: functions/zume-welcome-messages.php:136
+#: functions/zume-welcome-messages.php:135
 msgid "Message6"
 msgstr ""
 
-#: functions/zume-welcome-messages.php:141
+#: functions/zume-welcome-messages.php:140
 msgid "Title 7"
 msgstr ""
 
-#: functions/zume-welcome-messages.php:142
+#: functions/zume-welcome-messages.php:141
 msgid "Message7"
 msgstr ""
 
-#: functions/zume-welcome-messages.php:147
+#: functions/zume-welcome-messages.php:146
 msgid "Title 8"
 msgstr ""
 
-#: functions/zume-welcome-messages.php:148
+#: functions/zume-welcome-messages.php:147
 msgid "Message8"
 msgstr ""
 
-#: functions/zume-welcome-messages.php:153
+#: functions/zume-welcome-messages.php:152
 msgid "Title 9"
 msgstr ""
 
-#: functions/zume-welcome-messages.php:154
+#: functions/zume-welcome-messages.php:153
 msgid "Message9"
 msgstr ""
 
-#: functions/zume-welcome-messages.php:159
+#: functions/zume-welcome-messages.php:158
 msgid "Title 10"
 msgstr ""
 
-#: functions/zume-welcome-messages.php:160
+#: functions/zume-welcome-messages.php:159
 msgid "Message10"
 msgstr ""
 
@@ -4396,7 +4396,7 @@ msgid "Zúme Project"
 msgstr ""
 
 #. Theme URI of the plugin/theme
-msgid "https://github.com/ChasmSolutions/zume-project-theme"
+msgid "https://github.com/ZumeProject/zume-project-multilingual"
 msgstr ""
 
 #. Description of the plugin/theme
@@ -4404,11 +4404,11 @@ msgid "Zúme Project for multiplying disciples."
 msgstr ""
 
 #. Author of the plugin/theme
-msgid "Chasm Solutions"
+msgid "Zume Project"
 msgstr ""
 
 #. Author URI of the plugin/theme
-msgid "https://github.com/ChasmSolutions"
+msgid "https://github.com/ZumeProject"
 msgstr ""
 
 #. Template Name of the plugin/theme
