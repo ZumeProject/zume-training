@@ -160,6 +160,11 @@ Template Name: Zúme FAQ
                         <h3 class="secondary"><?php esc_html_e( 'Can I edit my Three-Month Plan later?', 'zume' ) ?></h3>
                         <?php esc_html_e( 'Yes, you can go back to your plan at any time and edit it. Make sure you click, "Save" at the bottom of your plan.', 'zume' ) ?>
                     </div>
+                    <div class="cell">
+                        <hr>
+                        <h3 class="secondary"><?php esc_html_e( 'Does Zúme offer a way for me to chat with people in my group?', 'zume' ) ?></h3>
+                        <?php esc_html_e( 'Not at this time. We recommend that every member of your group create a login and get added to your Zúme group. This way every member will have access to all of the material whenever they want. Then the group can use any messaging platform that they prefer (iMessage, WhatsApp, Facebook group, etc.) for further group communication.', 'zume' ) ?>
+                    </div>                    
 
                     <?php
                     /**
