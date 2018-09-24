@@ -7,7 +7,7 @@ wp_destroy_current_session();
 wp_clear_auth_cookie();
 
 if ( ! isset( $_GET['logout'] ) ) {
-    wp_redirect( zume_get_posts_translation_url( 'Logout' ) . '?logout=true' );
+    wp_redirect( zume_get_posts_translation_url( 'Logout', zume_current_language() ) . '?logout=true' );
 }
 
 ?>
