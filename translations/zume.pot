@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "Project-Id-Version: Zúme Project\n"
-"POT-Creation-Date: 2018-09-20 10:45-0600\n"
+"POT-Creation-Date: 2018-09-24 12:50-0600\n"
 "PO-Revision-Date: 2018-03-06 11:15-0700\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -112,6 +112,7 @@ msgid "Finish"
 msgstr ""
 
 #: functions/enqueue-scripts.php:59 functions/utilities/menu.php:108
+#: template-zume-register.php:568
 msgid "Next"
 msgstr ""
 
@@ -140,42 +141,41 @@ msgstr ""
 msgid "Three Month Plan - Zúme Project"
 msgstr ""
 
-#: functions/login/user-register.php:38 functions/login/user-register.php:237
+#: functions/login/registration.php:98
 msgid "First Name (optional for coaching)"
 msgstr ""
 
-#: functions/login/user-register.php:42 functions/login/user-register.php:241
+#: functions/login/registration.php:102
 msgid "Last Name (optional for coaching)"
 msgstr ""
 
-#: functions/login/user-register.php:46 functions/login/user-register.php:245
+#: functions/login/registration.php:106
 msgid "Phone Number (optional for coaching)"
 msgstr ""
 
-#: functions/login/user-register.php:50 functions/login/user-register.php:249
+#: functions/login/registration.php:110
 msgid "Address (optional for coaching)"
 msgstr ""
 
-#: functions/login/user-register.php:61 functions/login/user-register.php:260
+#: functions/login/registration.php:121
 msgid "Affiliation Key (optional)"
 msgstr ""
 
-#: functions/login/user-register.php:86 functions/login/user-register.php:279
+#: functions/login/registration.php:145
 msgid ""
 "<strong>ERROR</strong>: We can not recognize this address as valid location. "
 "Please, check spelling."
 msgstr ""
 
-#: functions/login/user-register.php:186 functions/login/user-register.php:327
-#: template-zume-profile.php:89
+#: functions/login/registration.php:260 template-zume-profile.php:89
 msgid "Phone Number"
 msgstr ""
 
-#: functions/login/user-register.php:187 functions/login/user-register.php:328
+#: functions/login/registration.php:261
 msgid "User Address"
 msgstr ""
 
-#: functions/login/user-register.php:188 functions/login/user-register.php:329
+#: functions/login/registration.php:262
 msgid "GeoCoded IP"
 msgstr ""
 
@@ -191,8 +191,8 @@ msgstr ""
 #: functions/multi-role/functions-admin.php:38
 #: functions/post-types/pdf-download-post-type.php:136
 #: functions/post-types/video-post-type.php:136
-#: functions/zume-dt-integration/site-link-post-type.php:245
-#: functions/zume-dt-integration/site-link-post-type.php:246
+#: functions/zume-dt-integration/site-link-post-type.php:315
+#: functions/zume-dt-integration/site-link-post-type.php:316
 msgid "Edit"
 msgstr ""
 
@@ -231,8 +231,8 @@ msgstr ""
 
 #: functions/post-types/pdf-download-post-type.php:134
 #: functions/post-types/video-post-type.php:134
-#: functions/zume-dt-integration/site-link-post-type.php:243
-#: functions/zume-dt-integration/site-link-post-type.php:244
+#: functions/zume-dt-integration/site-link-post-type.php:313
+#: functions/zume-dt-integration/site-link-post-type.php:314
 msgid "Add New"
 msgstr ""
 
@@ -258,13 +258,13 @@ msgstr ""
 
 #: functions/post-types/pdf-download-post-type.php:141
 #: functions/post-types/video-post-type.php:141
-#: functions/zume-dt-integration/site-link-post-type.php:250
+#: functions/zume-dt-integration/site-link-post-type.php:320
 msgid "Nothing found in the Database."
 msgstr ""
 
 #: functions/post-types/pdf-download-post-type.php:142
 #: functions/post-types/video-post-type.php:142
-#: functions/zume-dt-integration/site-link-post-type.php:251
+#: functions/zume-dt-integration/site-link-post-type.php:321
 msgid "Nothing found in Trash"
 msgstr ""
 
@@ -276,13 +276,13 @@ msgstr ""
 #. translators: Publish box date format, see http://php.net/date
 #: functions/post-types/pdf-download-post-type.php:256
 #: functions/post-types/video-post-type.php:256
-#: functions/zume-dt-integration/site-link-post-type.php:360
+#: functions/zume-dt-integration/site-link-post-type.php:430
 msgid "M j, Y @ G:i"
 msgstr ""
 
 #: functions/post-types/pdf-download-post-type.php:451
 #: functions/post-types/video-post-type.php:459
-#: functions/zume-dt-integration/site-link-post-type.php:816
+#: functions/zume-dt-integration/site-link-post-type.php:893
 msgid "Enter the title here"
 msgstr ""
 
@@ -2813,112 +2813,143 @@ msgstr ""
 msgid "Set Default Transfer Site"
 msgstr ""
 
-#: functions/zume-dt-integration/site-link-post-type.php:242
+#: functions/zume-dt-integration/site-link-post-type.php:312
 msgid "All"
 msgstr ""
 
-#: functions/zume-dt-integration/site-link-post-type.php:247
+#: functions/zume-dt-integration/site-link-post-type.php:317
 msgid "New"
 msgstr ""
 
-#: functions/zume-dt-integration/site-link-post-type.php:248
+#: functions/zume-dt-integration/site-link-post-type.php:318
 msgid "View"
 msgstr ""
 
-#: functions/zume-dt-integration/site-link-post-type.php:249
+#: functions/zume-dt-integration/site-link-post-type.php:319
 msgid "Search"
 msgstr ""
 
-#: functions/zume-dt-integration/site-link-post-type.php:292
-#: functions/zume-dt-integration/site-link-post-type.php:668
+#: functions/zume-dt-integration/site-link-post-type.php:362
+#: functions/zume-dt-integration/site-link-post-type.php:745
 msgid "Status:"
 msgstr ""
 
-#: functions/zume-dt-integration/site-link-post-type.php:295
-#: functions/zume-dt-integration/site-link-post-type.php:671
+#: functions/zume-dt-integration/site-link-post-type.php:365
+#: functions/zume-dt-integration/site-link-post-type.php:748
 msgid "Checking Status"
 msgstr ""
 
-#: functions/zume-dt-integration/site-link-post-type.php:317
-#: functions/zume-dt-integration/site-link-post-type.php:762
+#: functions/zume-dt-integration/site-link-post-type.php:387
+#: functions/zume-dt-integration/site-link-post-type.php:839
 msgid "Linked"
 msgstr ""
 
-#: functions/zume-dt-integration/site-link-post-type.php:372
+#: functions/zume-dt-integration/site-link-post-type.php:442
 msgid "Manage Site Link"
 msgstr ""
 
-#: functions/zume-dt-integration/site-link-post-type.php:373
+#: functions/zume-dt-integration/site-link-post-type.php:443
 msgid "Configuration"
 msgstr ""
 
-#: functions/zume-dt-integration/site-link-post-type.php:595
+#: functions/zume-dt-integration/site-link-post-type.php:665
 msgid "Token"
 msgstr ""
 
-#: functions/zume-dt-integration/site-link-post-type.php:603
+#: functions/zume-dt-integration/site-link-post-type.php:666
+msgid ""
+"If you have a token from another site, just clear token above and replace it."
+msgstr ""
+
+#: functions/zume-dt-integration/site-link-post-type.php:673
 msgid "Site 1"
 msgstr ""
 
-#: functions/zume-dt-integration/site-link-post-type.php:611
+#: functions/zume-dt-integration/site-link-post-type.php:674
+#: functions/zume-dt-integration/site-link-post-type.php:682
+msgid "Use just the host name. Example: www.website.com"
+msgstr ""
+
+#: functions/zume-dt-integration/site-link-post-type.php:681
 msgid "Site 2"
 msgstr ""
 
-#: functions/zume-dt-integration/site-link-post-type.php:619
+#: functions/zume-dt-integration/site-link-post-type.php:689
 msgid "Approved IP Address"
 msgstr ""
 
-#: functions/zume-dt-integration/site-link-post-type.php:626
+#: functions/zume-dt-integration/site-link-post-type.php:690
+msgid ""
+"Enter an approved ip address to restrict responses of this connection. "
+"(format: xxx.xxx.xxx.xxx)"
+msgstr ""
+
+#: functions/zume-dt-integration/site-link-post-type.php:696
+msgid "Connection Type"
+msgstr ""
+
+#: functions/zume-dt-integration/site-link-post-type.php:697
+msgid ""
+"This adds permissions needed for the labeled task. If you have trouble with "
+"a connection succeeding, and a task failing. This permission setting may be "
+"the reason."
+msgstr ""
+
+#: functions/zume-dt-integration/site-link-post-type.php:703
 msgid "DT Site"
 msgstr ""
 
-#: functions/zume-dt-integration/site-link-post-type.php:630
+#: functions/zume-dt-integration/site-link-post-type.php:704
+msgid "Is this connection to a Disciple Tools/Wordpress system."
+msgstr ""
+
+#: functions/zume-dt-integration/site-link-post-type.php:707
 msgid "Yes, connected to another DT site (default)"
 msgstr ""
 
-#: functions/zume-dt-integration/site-link-post-type.php:631
+#: functions/zume-dt-integration/site-link-post-type.php:708
 msgid "No, connection for a non-Disciple Tools system."
 msgstr ""
 
-#: functions/zume-dt-integration/site-link-post-type.php:690
+#: functions/zume-dt-integration/site-link-post-type.php:767
 msgid "Consider Checking:"
 msgstr ""
 
-#: functions/zume-dt-integration/site-link-post-type.php:693
+#: functions/zume-dt-integration/site-link-post-type.php:770
 msgid ""
 "Check if the target site is setup with identical configuration information."
 msgstr ""
 
-#: functions/zume-dt-integration/site-link-post-type.php:696
+#: functions/zume-dt-integration/site-link-post-type.php:773
 msgid ""
 "Check if HTTPS/SSL is enabled on both sites. Due to the transfer of data "
 "between these sites, SSL encryption is required for both sites to protect "
 "the data exchange."
 msgstr ""
 
-#: functions/zume-dt-integration/site-link-post-type.php:699
+#: functions/zume-dt-integration/site-link-post-type.php:776
 msgid ""
 "Check if the server timestamps are identical. Mismatched server times will "
 "cause decryption key failures. Your server timestamp"
 msgstr ""
 
-#: functions/zume-dt-integration/site-link-post-type.php:716
+#: functions/zume-dt-integration/site-link-post-type.php:793
 msgid "Current Site"
 msgstr ""
 
-#: functions/zume-dt-integration/site-link-post-type.php:718
+#: functions/zume-dt-integration/site-link-post-type.php:795
 msgid "Timestamp"
 msgstr ""
 
-#: functions/zume-dt-integration/site-link-post-type.php:720
+#: functions/zume-dt-integration/site-link-post-type.php:797
 msgid "Compare this number to linked site. It should be identical."
 msgstr ""
 
-#: functions/zume-dt-integration/site-link-post-type.php:763
+#: functions/zume-dt-integration/site-link-post-type.php:840
 msgid "Not Linked"
 msgstr ""
 
-#: functions/zume-dt-integration/site-link-post-type.php:764
+#: functions/zume-dt-integration/site-link-post-type.php:841
 msgid "Failed to connect with the URL provided."
 msgstr ""
 
@@ -2979,7 +3010,7 @@ msgstr ""
 msgid "Login"
 msgstr ""
 
-#: functions/zume-polylang-integration.php:133
+#: functions/zume-polylang-integration.php:133 template-zume-login.php:40
 msgid "Register"
 msgstr ""
 
@@ -4041,6 +4072,18 @@ msgid ""
 "etc.) for further group communication."
 msgstr ""
 
+#: template-zume-login.php:43
+msgid "Lost your password?"
+msgstr ""
+
+#: template-zume-logout.php:22
+msgid "You have been logged out."
+msgstr ""
+
+#: template-zume-logout.php:24
+msgid "Back to home page"
+msgstr ""
+
 #: template-zume-overview.php:71 template-zume-overview.php:84
 msgid "Sessions Overview"
 msgstr ""
@@ -4359,6 +4402,278 @@ msgstr ""
 msgid "Phase 3"
 msgstr ""
 
+#: template-zume-register.php:111
+msgid "Site Name:"
+msgstr ""
+
+#: template-zume-register.php:112
+msgid "Site Domain:"
+msgstr ""
+
+#: template-zume-register.php:126
+msgid "sitename"
+msgstr ""
+
+#: template-zume-register.php:128
+msgid "domain"
+msgstr ""
+
+#. translators: %s: site address
+#: template-zume-register.php:132
+#, php-format
+msgid "Your address will be %s."
+msgstr ""
+
+#: template-zume-register.php:132
+msgid ""
+"Must be at least 4 characters, letters and numbers only. It cannot be "
+"changed, so choose carefully!"
+msgstr ""
+
+#: template-zume-register.php:137
+msgid "Site Title:"
+msgstr ""
+
+#: template-zume-register.php:151
+msgid "Site Language:"
+msgstr ""
+
+#: template-zume-register.php:178
+msgid "Privacy:"
+msgstr ""
+
+#: template-zume-register.php:179
+msgid "Allow search engines to index this site."
+msgstr ""
+
+#: template-zume-register.php:183
+msgid "Yes"
+msgstr ""
+
+#: template-zume-register.php:187
+msgid "No"
+msgstr ""
+
+#: template-zume-register.php:234
+msgid "Username:"
+msgstr ""
+
+#: template-zume-register.php:239
+msgid "(Must be at least 4 characters, letters and numbers only.)"
+msgstr ""
+
+#: template-zume-register.php:242
+msgid "Email&nbsp;Address:"
+msgstr ""
+
+#: template-zume-register.php:246
+msgid ""
+"We send your registration email to this address. (Double-check your email "
+"address before continuing.)"
+msgstr ""
+
+#: template-zume-register.php:313
+#, php-format
+msgid "Get <em>another</em> %s site in seconds"
+msgstr ""
+
+#: template-zume-register.php:316
+msgid "There was a problem, please correct the form below and try again."
+msgstr ""
+
+#: template-zume-register.php:319
+#, php-format
+msgid ""
+"Welcome back, %s. By filling out the form below, you can <strong>add another "
+"site to your account</strong>. There is no limit to the number of sites you "
+"can have, so create to your heart&#8217;s content, but write responsibly!"
+msgstr ""
+
+#: template-zume-register.php:325
+msgid "Sites you are already a member of:"
+msgstr ""
+
+#: template-zume-register.php:334
+msgid ""
+"If you&#8217;re not going to use a great site domain, leave it for a new "
+"user. Now have at it!"
+msgstr ""
+
+#: template-zume-register.php:349
+msgid "Create Site"
+msgstr ""
+
+#. translators: %s: site name
+#: template-zume-register.php:474
+#, php-format
+msgid "The site %s is yours."
+msgstr ""
+
+#. translators: 1: link to new site, 2: login URL, 3: username
+#: template-zume-register.php:479
+#, php-format
+msgid ""
+"%1$s is your new site. <a href=\"%2$s\">Log in</a> as &#8220;%3$s&#8221; "
+"using your existing password."
+msgstr ""
+
+#. translators: %s: name of the network
+#: template-zume-register.php:544
+#, php-format
+msgid "Get your own %s account in seconds"
+msgstr ""
+
+#: template-zume-register.php:561
+msgid "Gimme a site!"
+msgstr ""
+
+#: template-zume-register.php:564
+msgid "Just a username, please."
+msgstr ""
+
+#. translators: %s: username
+#: template-zume-register.php:614
+#, php-format
+msgid "%s is your new username"
+msgstr ""
+
+#: template-zume-register.php:615
+msgid ""
+"But, before you can start using your new username, <strong>you must activate "
+"it</strong>."
+msgstr ""
+
+#. translators: %s: email address
+#: template-zume-register.php:617 template-zume-register.php:764
+#, php-format
+msgid "Check your inbox at %s and click the link given."
+msgstr ""
+
+#: template-zume-register.php:618
+msgid ""
+"If you do not activate your username within two days, you will have to sign "
+"up again."
+msgstr ""
+
+#: template-zume-register.php:684
+msgid "Signup"
+msgstr ""
+
+#. translators: %s: site address
+#: template-zume-register.php:760
+#, php-format
+msgid "Congratulations! Your new site, %s, is almost ready."
+msgstr ""
+
+#: template-zume-register.php:762
+msgid ""
+"But, before you can start using your site, <strong>you must activate it</"
+"strong>."
+msgstr ""
+
+#: template-zume-register.php:765
+msgid ""
+"If you do not activate your site within two days, you will have to sign up "
+"again."
+msgstr ""
+
+#: template-zume-register.php:766
+msgid "Still waiting for your email?"
+msgstr ""
+
+#: template-zume-register.php:768
+msgid ""
+"If you haven&#8217;t received your email yet, there are a number of things "
+"you can do:"
+msgstr ""
+
+#: template-zume-register.php:770
+msgid ""
+"Wait a little longer. Sometimes delivery of email can be delayed by "
+"processes outside of our control."
+msgstr ""
+
+#: template-zume-register.php:771
+msgid ""
+"Check the junk or spam folder of your email client. Sometime emails wind up "
+"there by mistake."
+msgstr ""
+
+#. translators: %s: email address
+#: template-zume-register.php:774
+#, php-format
+msgid ""
+"Have you entered your email correctly? You have entered %s, if it&#8217;s "
+"incorrect, you will not receive your email."
+msgstr ""
+
+#: template-zume-register.php:831
+msgid "Greetings Network Administrator!"
+msgstr ""
+
+#: template-zume-register.php:836
+msgid "The network currently disallows registrations."
+msgstr ""
+
+#: template-zume-register.php:839
+msgid "The network currently allows site registrations."
+msgstr ""
+
+#: template-zume-register.php:842
+msgid "The network currently allows user registrations."
+msgstr ""
+
+#: template-zume-register.php:845
+msgid "The network currently allows both site and user registrations."
+msgstr ""
+
+#. translators: %s: network settings URL
+#: template-zume-register.php:852
+#, php-format
+msgid ""
+"To change or disable registration go to your <a href=\"%s\">Options page</a>."
+msgstr ""
+
+#: template-zume-register.php:860
+msgid "Registration has been disabled."
+msgstr ""
+
+#. translators: %s: login URL
+#: template-zume-register.php:864
+#, php-format
+msgid ""
+"You must first <a href=\"%s\">log in</a>, and then you can create a new site."
+msgstr ""
+
+#: template-zume-register.php:871
+msgid "User registration has been disabled."
+msgstr ""
+
+#: template-zume-register.php:877
+msgid "Site registration has been disabled."
+msgstr ""
+
+#: template-zume-register.php:897
+msgid "Sorry, new registrations are not allowed at this time."
+msgstr ""
+
+#: template-zume-register.php:898
+msgid "You are logged in already. No need to register again!"
+msgstr ""
+
+#. translators: %s: site address
+#: template-zume-register.php:906
+#, php-format
+msgid ""
+"The site you were looking for, %s, does not exist, but you can create it now!"
+msgstr ""
+
+#. translators: %s: site address
+#: template-zume-register.php:910
+#, php-format
+msgid "The site you were looking for, %s, does not exist."
+msgstr ""
+
 #: template-zume-resources.php:20
 msgid "RESOURCES"
 msgstr ""
@@ -4416,6 +4731,10 @@ msgid "Zúme Stats"
 msgstr ""
 
 #. Template Name of the plugin/theme
+msgid "Zume Logout"
+msgstr ""
+
+#. Template Name of the plugin/theme
 msgid "Zume About"
 msgstr ""
 
@@ -4428,7 +4747,15 @@ msgid "Zúme Progress"
 msgstr ""
 
 #. Template Name of the plugin/theme
+msgid "Zume Login"
+msgstr ""
+
+#. Template Name of the plugin/theme
 msgid "Zume Profile"
+msgstr ""
+
+#. Template Name of the plugin/theme
+msgid "Zume Register"
 msgstr ""
 
 #. Template Name of the plugin/theme
@@ -4441,6 +4768,10 @@ msgstr ""
 
 #. Template Name of the plugin/theme
 msgid "Zúme FAQ"
+msgstr ""
+
+#. Template Name of the plugin/theme
+msgid "Zume Forgot Password"
 msgstr ""
 
 #. Template Name of the plugin/theme
