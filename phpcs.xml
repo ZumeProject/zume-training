@@ -35,6 +35,7 @@
   <exclude-pattern>functions/coaching/class-coaches-unassigned-groups.php</exclude-pattern>
   <exclude-pattern>functions/utilities/tgm-plugin-activation-class.php</exclude-pattern>
   <exclude-pattern>*/zume-dt-integration/wp-async-request.php</exclude-pattern>
+  <exclude-pattern>template-zume-register.php</exclude-pattern>
 
   <arg name="extensions" value="php,inc,lib"/>
   <arg value="n"/>
