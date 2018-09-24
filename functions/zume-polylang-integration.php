@@ -131,7 +131,7 @@ $zume_navigation_menu = [
     __( 'Logout', 'zume' ),
     __( 'Login', 'zume' ),
     __( 'Register', 'zume' ),
-    __( 'Three Month Plan', 'zume' ),
+    __( 'Three-Month Plan', 'zume' ),
     __( 'Progress', 'zume' ),
     __( 'Stats', 'zume' ),
 ];
