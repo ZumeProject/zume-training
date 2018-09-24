@@ -76,7 +76,7 @@ function zume_mu_disable_header() {
     </style>
     <script>
         jQuery(document).ready(function() {
-            jQuery('#signup-content').append('<p style="text-align:center;"><a class="button" href="">Login</a></p>')
+            jQuery('#signup-content').append('<p style="text-align:center;"><a class="button" href="<?php echo site_url('/login')  ?>">Login</a></p>')
 
         })
     </script>
