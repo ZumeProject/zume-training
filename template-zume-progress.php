@@ -30,7 +30,7 @@ get_header();
                 <div class="medium-2 small-1 cell"></div>
                 <div class="medium-8 small-10 cell">
                     <p>
-                        <?php esc_html_e( 'Focuses on the United States in English. The initial goal is for there to be a training group of four to twelve people in each census tract in the country. Each of these training groups will start two first-generation churches which will then begin to reproduce. There are about 75,000 census tracts so this will mean 150,000 first-generation churches.', 'zume' ) ?>
+                        <?php esc_html_e( 'The first phase focuses on the United States and English. The initial goal is to catalyze a training group of four to twelve people per every 5,000 people in the country. Each of these training groups will be challenged to start two first-generation churches which should also reproduce. The target for the United States is to start more than 65,000 English-language Zúme groups and 130,000 churches.', 'zume' ) ?>
                     </p>
 
 
@@ -52,7 +52,7 @@ get_header();
                 <div class="medium-2 small-1 cell"></div>
                 <div class="medium-8 small-10 cell">
                     <p>
-                        <?php esc_html_e( 'The second phase will include coaching these Phase One churches through the reproduction process, as well as delivering the project in other major world languages. The project will start in the following languages: Arabic, Bengali, Bhojpuri, Burmese, Chinese (Mandarin), Chinese (Cantonese), Farsi, French, German, Gujarati, Hausa, Hindi, Indonesian, Italian, Japanese, Kannada, Korean, Maithili, Malayalam, Marathi, Oriya, Panjabi (Eastern), Panjabi (Western), Portuguese, Russian, Spanish, Swahili, Tamil, Telugu, Thai, Turkish, Urdu, Vietnamese, Yoruba.', 'zume' ) ?>
+                        <?php esc_html_e( 'The second phase focuses on coaching these Phase 1 churches through the reproduction process, as well as delivering the project in other major world languages. The project will start in the following languages: Ahmaric, Arabic, Bengali, Bhojpuri, Burmese, Chinese (Mandarin), Chinese (Cantonese), Farsi, French, German, Gujarati, Hausa, Hindi, Indonesian, Italian, Japanese, Kannada, Korean, Maithili, Malayalam, Marathi, Oriya, Panjabi (Eastern), Panjabi (Western), Portuguese, Russian, Somali, Spanish, Swahili, Tamil, Telugu, Thai, Turkish, Urdu, Vietnamese, Yoruba.', 'zume' ) ?>
                     </p>
 
                     <div style="text-align: center">
@@ -81,7 +81,7 @@ get_header();
                 <div class="medium-2 small-1 cell"></div>
                 <div class="medium-8 small-10 cell">
                     <p>
-                        <?php esc_html_e( 'Focuses globally in major world languages. The framework for targeting the training groups is based on the 4K maps developed by YWAM. It divides the world into segments based on population and the general level of gospel saturation, with less evangelized areas receiving about three times the attention of more evangelized areas. For more information on the framework go to www.4Kworldmap.com. The project will use the next generation of the data, 4K Plus, which will divide the world into about 60,000 Omega Districts. There will be training groups started in each Omega District which will then launch first-generation churches within the districts. In the least evangelized areas this will be a training group for approximately every 50,000 people.', 'zume' ) ?>
+                        <?php esc_html_e( 'The third phase focuses Phase 1 and Phase 2 churches to mobilize globally with a vision to make disciples in every place, among every people group. Zúme Project exists to saturate the globe with multiplying disciples in our generation. To accelerate our mission, we have developed and will deliver a mapping solution allowing teams to work strategically towards the goal of a Zúme training group and two simple churches among every 50,000 people outside the US.', 'zume' ) ?>
                     </p>
 
                 </div>
@@ -95,10 +95,10 @@ get_header();
                 <div class="cell large-8" style="color: white;">
                     <h3 class="secondary" style="color: white;"><?php esc_html_e( 'Goals of the Zúme Project:', 'zume' ) ?></h3>
                     <p>
-                        <?php esc_html_e( 'Zúme means yeast in Greek. In Matthew 13:33, Jesus is quoted as saying, "The Kingdom of Heaven is like a woman who took yeast and mixed it into a large amount of flour until it was all leavened." This illustrates how ordinary people, using ordinary resources, can have an extraordinary impact for the Kingdom of God. Zúme aims to equip and empower ordinary believers to reach every neighborhood.', 'zume' ) ?>
+                        <?php esc_html_e( 'Zúme means yeast in Greek. In Matthew 13:33, Jesus is quoted as saying, "The Kingdom of Heaven is like a woman who took yeast and mixed it into a large amount of flour until it was all leavened." This illustrates how ordinary people, using ordinary resources, can have an extraordinary impact for the Kingdom of God. Zúme aims to equip and empower ordinary believers to saturate the globe with multiplying disciples in our generation.', 'zume' ) ?>
                     </p>
                     <p>
-                        <?php esc_html_e( 'Make disciples in every Omega District globally, using an online training platform focused on equipping participants in the basic disciple-making and simple church planting multiplication principles, processes, and practices.', 'zume' ) ?>
+                        <?php esc_html_e( 'Zúme uses an online training platform to equip participants in basic disciple-making and simple church planting multiplication principles, processes, and practices.', 'zume' ) ?>
                     </p>
                 </div>
                 <div class="large-2 cell"></div>

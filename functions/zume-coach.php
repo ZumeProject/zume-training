@@ -7,7 +7,6 @@
  * @version 0.1
  * @since 0.1
  * @package Zume
- * @author Chasm.Solutions & Kingdom.Training
  */
 
 if ( ! defined( 'ABSPATH' ) ) { exit; // Exit if accessed directly
