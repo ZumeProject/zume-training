@@ -71,6 +71,7 @@ class Zume_Integration_Endpoints
         dt_write_log( __METHOD__ );
 
         $params = $request->get_params();
+        dt_write_log($params);
         $site_key = Site_Link_System::verify_transfer_token( $params['transfer_token'] );
 
         if ( ! is_wp_error( $site_key ) && $site_key ) {

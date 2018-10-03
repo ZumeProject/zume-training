@@ -9,7 +9,7 @@ if ( !defined( 'ABSPATH' ) ) {
  * All functionality pertaining to project update post types in Site_Link_System.
  * @class Site_Link_System
  *
- * @version 0.1.17
+ * @version 0.1.18
  *
  * @since   0.1.7 Moved to post type
  *          0.1.8 Added key_select, readonly
@@ -22,6 +22,7 @@ if ( !defined( 'ABSPATH' ) ) {
  *          0.1.15 Added get_site_connection_vars function;
  *          0.1.16 Added https filter, capability filter for token verification
  *          0.1.17 Added type column to admin list
+ *          0.1.18 Added listing function by site type
  */
 if ( ! class_exists( 'Site_Link_System' ) ) {
 
@@ -117,6 +118,65 @@ if ( ! class_exists( 'Site_Link_System' ) ) {
             $keys = get_option( $prefix . '_api_keys', [] );
 
             return $keys;
+        }
+
+        /**
+         * GET A LIST OF SITES BY CONNECTION TYPE
+         *
+         * Submit the $type_name as an array of strings. ex. ['Contact Sharing', 'Contact Sending']
+         *
+         * @param array  $type_name
+         * @param string $format
+         *
+         * @return array
+         */
+        public static function get_list_of_sites_by_type( array $type_name, $format = 'name_list' ) {
+            global $wpdb;
+
+            if ( ! is_array( $type_name ) ) {
+                dt_write_log( new WP_Error(__METHOD__, '$type_name is not an array' ) );
+                return [];
+            }
+
+            $type_string = '';
+            $i = 0;
+            foreach ( $type_name as $name ) {
+                if ( ! ( 0 === $i ) ) {
+                    $type_string .= ',';
+                }
+                $type_string .= $name;
+            }
+
+            switch ( $format ) {
+
+                case 'name_list':
+                    $results = $wpdb->get_results( $wpdb->prepare(
+                        "SELECT ID as id, post_title as name 
+                        FROM $wpdb->posts 
+                          JOIN $wpdb->postmeta 
+                          ON $wpdb->posts.ID=$wpdb->postmeta.post_id 
+                            AND meta_key = 'type' 
+                        WHERE meta_value IN (%s)", $type_string ), ARRAY_A );
+
+                    return $results;
+                    break;
+
+                case 'post_ids':
+                    $results = $wpdb->get_col( $wpdb->prepare(
+                        "SELECT id 
+                        FROM $wpdb->posts 
+                          JOIN $wpdb->postmeta 
+                          ON $wpdb->posts.ID=$wpdb->postmeta.post_id 
+                            AND meta_key = 'type' 
+                        WHERE meta_value IN (%s)", $type_string ) );
+
+                    return $results;
+                    break;
+
+                default:
+                    return [];
+                    break;
+            }
         }
 
         /**
@@ -378,6 +438,10 @@ if ( ! class_exists( 'Site_Link_System' ) ) {
                     }
                     break;
 
+                case 'type':
+                    echo esc_html( ucwords( str_replace( '_', ' ', get_post_meta( $post->ID, 'type', true ) ) ) );
+                    break;
+
                 default:
                     break;
             }
@@ -385,9 +449,16 @@ if ( ! class_exists( 'Site_Link_System' ) ) {
 
         public function register_custom_column_headings( $defaults ) {
 
-            $new_columns = array( 'linked' => __( 'Linked' ) );
+            $new_columns = array(
+                'linked' => __( 'Linked' ),
+                'type' => __( 'Type' )
+            );
 
             $last_item = [];
+
+            if ( isset( $defaults['date'] ) ) {
+                unset( $defaults['date'] );
+            }
 
             if ( count( $defaults ) > 2 ) {
                 $last_item = array_slice( $defaults, -1 );
@@ -429,7 +500,7 @@ if ( ! class_exists( 'Site_Link_System' ) ) {
                     strtolower( $this->singular ),
                     // translators: Publish box date format, see http://php.net/date
                     '<strong>' . date_i18n( __( 'M j, Y @ G:i' ),
-                    strtotime( $post->post_date ) ) . '</strong>',
+                        strtotime( $post->post_date ) ) . '</strong>',
                     '',
                     ''
                 ),
@@ -696,8 +767,8 @@ if ( ! class_exists( 'Site_Link_System' ) ) {
             $fields['type'] = [
                 'name'        => __( 'Connection Type' ),
                 'description' => __( 'This adds permissions needed for the labeled task. If you have trouble with a connection succeeding, and a task failing. This permission setting may be the reason.' ),
-                'type'        => 'select',
-                'default'     => apply_filters( 'site_link_type', $permission = [ "" ] ),
+                'type'        => 'key_select',
+                'default'     => apply_filters( 'site_link_type', $permission = [ "" => "" ] ),
                 'section'     => 'non_wp',
             ];
             $fields['non_wp'] = [
@@ -1182,17 +1253,6 @@ if ( ! class_exists( 'Site_Link_System' ) ) {
             return trim( $url );
         }
 
-        public function admin_table_head( $defaults ) {
-            $defaults['type']  = 'Type';
-            return $defaults;
-        }
-
-        public function admin_table_content( $column_name, $post_id ) {
-            if ($column_name == 'type') {
-                echo esc_html( get_post_meta( $post_id, 'type', true ) );
-            }
-        }
-
         private function flush_rewrite_rules() {
             $this->register_post_type();
             flush_rewrite_rules();
@@ -1206,7 +1266,6 @@ if ( ! class_exists( 'Site_Link_System' ) ) {
             $prefix = self::$token;
             delete_option( $prefix . '_api_keys' );
         }
-
 
         /**
          * Variables and Singleton
@@ -1248,8 +1307,6 @@ if ( ! class_exists( 'Site_Link_System' ) ) {
                 add_action( 'save_post', [ $this, 'meta_box_save' ] );
                 add_filter( 'enter_title_here', [ $this, 'enter_title_here' ] );
                 add_filter( 'post_updated_messages', [ $this, 'post_type_updated_messages' ] );
-                add_filter( 'manage_'.$this->post_type.'_posts_columns', [ $this, 'admin_table_head' ] );
-                add_action( 'manage_'.$this->post_type.'_posts_custom_column', [ $this, 'admin_table_content' ], 10, 2 );
 
                 if ( isset( $_GET['post_type'] ) ) {
                     $pt = sanitize_text_field( wp_unslash( $_GET['post_type'] ) );
