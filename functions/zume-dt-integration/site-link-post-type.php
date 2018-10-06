@@ -134,7 +134,7 @@ if ( ! class_exists( 'Site_Link_System' ) ) {
             global $wpdb;
 
             if ( ! is_array( $type_name ) ) {
-                dt_write_log( new WP_Error(__METHOD__, '$type_name is not an array' ) );
+                dt_write_log( new WP_Error( __METHOD__, '$type_name is not an array' ) );
                 return [];
             }
 
@@ -500,7 +500,7 @@ if ( ! class_exists( 'Site_Link_System' ) ) {
                     strtolower( $this->singular ),
                     // translators: Publish box date format, see http://php.net/date
                     '<strong>' . date_i18n( __( 'M j, Y @ G:i' ),
-                        strtotime( $post->post_date ) ) . '</strong>',
+                    strtotime( $post->post_date ) ) . '</strong>',
                     '',
                     ''
                 ),
