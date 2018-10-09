@@ -332,7 +332,7 @@ do_action( 'before_signup_form' );
                 <?php } ?>
 
                 <p><?php _e( 'If you&#8217;re not going to use a great site domain, leave it for a new user. Now have at it!' ) ?></p>
-                <form id="setupform" method="post" action=""> <!-- zume removed action-->
+                <form id="setupform" method="post" action="?registration=success"> <!-- zume removed action-->
                     <input type="hidden" name="stage" value="gimmeanotherblog" />
                     <?php
                     /**
@@ -543,7 +543,7 @@ do_action( 'before_signup_form' );
                     /* translators: %s: name of the network */
                     printf( __( 'Get your own %s account in seconds' ), get_site()->blogname ); // zume changed site name
                 ?></h2>
-                <form id="setupform" method="post" action="" novalidate="novalidate"> <!-- zume removed action -->
+                <form id="setupform" method="post" action="?registration=success" novalidate="novalidate"> <!-- zume removed action -->
                     <input type="hidden" name="stage" value="validate-user-signup" />
                     <?php
                     /** This action is documented in wp-signup.php */
@@ -672,7 +672,7 @@ do_action( 'before_signup_form' );
                     $blogname = $user_name;
                 }
                 ?>
-                <form id="setupform" method="post" action=""><!-- zume removed action -->
+                <form id="setupform" method="post" action="?registration=success"><!-- zume removed action -->
                     <input type="hidden" name="stage" value="validate-blog-signup" />
                     <input type="hidden" name="user_name" value="<?php echo esc_attr( $user_name ) ?>" />
                     <input type="hidden" name="user_email" value="<?php echo esc_attr( $user_email ) ?>" />
