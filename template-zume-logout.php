@@ -2,16 +2,17 @@
 /**
  * Template Name: Zume Logout
  */
+$current_language = zume_current_language();
 
 wp_destroy_current_session();
 wp_clear_auth_cookie();
 
 if ( ! isset( $_GET['logout'] ) ) {
-    wp_redirect( zume_get_posts_translation_url( 'Logout', zume_current_language() ) . '?logout=true' );
+    wp_redirect( zume_get_posts_translation_url( 'Logout', $current_language ) . '?logout=true' );
 }
 
-if ( 'en' != zume_current_language() ) {
-    $home_url = site_url() . '/' . zume_current_language();
+if ( 'en' != $current_language ) {
+    $home_url = site_url() . '/' . $current_language;
 } else {
     $home_url = site_url();
 }
