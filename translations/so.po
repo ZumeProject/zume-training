@@ -1,0 +1,4402 @@
+msgid ""
+msgstr ""
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Project-Id-Version: Zúme Project\n"
+"POT-Creation-Date: 2018-02-18 09:57-0700\n"
+"PO-Revision-Date: 2018-11-10 00:17-0800\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.2\n"
+"X-Poedit-Basepath: ../..\n"
+"X-Poedit-Flags-xgettext: --add-comments=translators:\n"
+"X-Poedit-WPHeader: style.css\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"Last-Translator: \n"
+"Language: en\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+"X-Poedit-SearchPathExcluded-1: functions/utilities\n"
+"X-Poedit-SearchPathExcluded-2: functions/post-types\n"
+"X-Poedit-SearchPathExcluded-3: functions/multi-role\n"
+
+#: 404.php:12
+msgid "Epic 404 - Article Not Found"
+msgstr "Epic 404 - Maqaalkan lama heli karo"
+
+#: 404.php:16
+msgid ""
+"The article you were looking for was not found, but maybe try looking again!"
+msgstr "Maqaalka aad raadinayso lama helin ee mar kale isku day!"
+
+#: front-page.php:52
+msgid "Want to start the training?"
+msgstr "Ma rabtaa inaad tababbarka bilowdo?"
+
+#: front-page.php:55
+msgid "Get started below:"
+msgstr "Halkan hoose ka bilow:"
+
+#: front-page.php:64
+msgid "GET STARTED"
+msgstr "BILOW"
+
+#: front-page.php:76
+msgid "It's as easy as 1-2-3"
+msgstr "Waxay u fududdahay sida 1-2-3"
+
+#: front-page.php:88
+msgid "Sign up"
+msgstr "Is diwaangeli"
+
+#: front-page.php:97
+msgid "Invite some friends"
+msgstr "Ku casuun asxaabtaada"
+
+#: front-page.php:106
+msgid "Host a training"
+msgstr "Qabo tababbar"
+
+#: front-page.php:125
+msgid "What others are saying?"
+msgstr "Maxay dadka kale leeyihiin?"
+
+#: front-page.php:133
+msgid ""
+"There is a great harvest readied in North America not being reached by the "
+"status quo. Zúme is a biblical wake-up call and tool to empower the everyday "
+"believer to begin walking in the Lords will to multiply disciples."
+msgstr ""
+"Waxa jira midho goosad wanaagsan oo lagu diyaariyey waqooyiga Maraykanka. "
+"Zúme waxaa weeye agab Kitaabka ku salaysan oo loogu talo galay "
+"Rumeystayaasha si ay ugu socdaan jidka Rabbiga una sii badiyaan xerta."
+
+#: front-page.php:136
+msgid "Jake Duke — Indiana"
+msgstr "Ahmed Warsame —Borama"
+
+#: front-page.php:144
+msgid ""
+"Do you want to make a difference in your workplace, neighborhood, or circle "
+"of friends? The Zúme Project essentially will give you practical rails to "
+"run on that follow the example of the Church as seen in the New Testament."
+msgstr ""
+"Ma rabtaa inaad farqi ku dhex sameyso goobtada shaqada, deriskaaga ama "
+"asxaabtaada? Mashruuca Zúme waxa uu ku siinayaa tallaabo wax ku ool ah oo "
+"kuu suurto gelinaysa inaad raacado tusaalaha Kiniistadda ee inooga muuqda "
+"Axdiga Cusub."
+
+#: front-page.php:148
+msgid "Gavin Duerson — Kentucky"
+msgstr "Yaxye Abdi — Ceerigaabo"
+
+#: front-page.php:156
+msgid ""
+"I am so excited to use this Zúme tool to help in training all the soldiers "
+"to make and multiply disciples in our neighborhood. Jesus can make it a "
+"neighborhood again."
+msgstr ""
+"Aad ayaan ugu faraxasanhay inaan isticmaalo agabkan  Zúme ga sii aan ugu "
+"tabbaro xerta si aay dariiskooda uga sameeyaan xer kale. Ciise ayaa suurta "
+"gelin kara."
+
+#: front-page.php:160
+msgid "Chad Rehnberg"
+msgstr "Ali Diriye"
+
+#: front-page.php:195
+msgid "Find out more about Zúme"
+msgstr "Wax badan ka baro Zúme"
+
+#: functions/activator.php:46 functions/zume-polylang-integration.php:99
+msgid "Coach"
+msgstr "Tababbare"
+
+#: functions/activator.php:55
+msgid "Coach Leader"
+msgstr "Hoggaamiyaha tababbaraha"
+
+#: functions/enqueue-scripts.php:54 functions/enqueue-scripts.php:56
+#: template-zume-dashboard.php:1449
+msgid "Cancel"
+msgstr "Ka noqo"
+
+#: functions/enqueue-scripts.php:55
+msgid "Current Step:"
+msgstr "Tallaabada hadda ah:"
+
+#: functions/enqueue-scripts.php:57
+msgid "Finish"
+msgstr "Dhammee"
+
+#: functions/enqueue-scripts.php:58
+msgid "Next"
+msgstr "Ku xiga"
+
+#: functions/enqueue-scripts.php:59
+msgid "Previous"
+msgstr "Kii hore"
+
+#: functions/enqueue-scripts.php:60
+msgid "Loading..."
+msgstr "Qaadaya..."
+
+#: functions/login/user-register.php:18
+msgid "First Name (optional for coaching)"
+msgstr "Magaca Kowaad"
+
+#: functions/login/user-register.php:22
+msgid "Last Name (optional for coaching)"
+msgstr "Magaca Labaad"
+
+#: functions/login/user-register.php:26
+msgid "Phone Number (optional for coaching)"
+msgstr "Nambarka Telefoonka"
+
+#: functions/login/user-register.php:30
+msgid "Address (optional for coaching)"
+msgstr "Cinwaan"
+
+#: functions/login/user-register.php:46
+msgid ""
+"<strong>ERROR</strong>: We can not recognize this address as valid location. "
+"Please, check spelling."
+msgstr ""
+"<xoog>KHALAD</xoog>: Ma garan karno ciwaankan inu Jiro. Fadlan, iska hubi "
+"qooralka."
+
+#: functions/login/user-register.php:96 template-zume-profile.php:89
+msgid "Phone Number"
+msgstr "Nambarka Telefoonka"
+
+#: functions/login/user-register.php:97
+msgid "User Address"
+msgstr "Cinwaanka Adeegsadaha"
+
+#: functions/login/user-register.php:98
+msgid "GeoCoded IP"
+msgstr "GoobCinwaaneed"
+
+#: functions/zume-polylang-integration.php:90
+msgid "Home"
+msgstr "Hoyga"
+
+#: functions/zume-polylang-integration.php:91 template-zume-overview.php:191
+msgid "Dashboard"
+msgstr "Muuqaalguud"
+
+#: functions/zume-polylang-integration.php:92
+msgid "About"
+msgstr "KuSaabsan"
+
+#: functions/zume-polylang-integration.php:93
+msgid "Guidebook"
+msgstr "Buuggahagaha"
+
+#: functions/zume-polylang-integration.php:94
+msgid "Resources"
+msgstr "Ilaha"
+
+#: functions/zume-polylang-integration.php:95
+msgid "FAQ"
+msgstr "Su'aalaha Had iyo Jeer la Isweyddiiyo (SHJI)"
+
+#: functions/zume-polylang-integration.php:96
+msgid "Overview"
+msgstr "Guudmar"
+
+#: functions/zume-polylang-integration.php:97
+msgid "Settings"
+msgstr "Hagaajiin"
+
+#: functions/zume-polylang-integration.php:98
+msgid "Profile"
+msgstr "Macluumaad"
+
+#: functions/zume-polylang-integration.php:100
+msgid "Admin"
+msgstr "Maamul"
+
+#: functions/zume-polylang-integration.php:101
+msgid "Logout"
+msgstr "Ka bax"
+
+#: functions/zume-polylang-integration.php:102
+msgid "Login"
+msgstr "Gal"
+
+#: functions/zume-polylang-integration.php:103
+msgid "Register"
+msgstr "Is diwaangeli"
+
+#: parts/content-missing.php:4
+msgid "Oops, Page Not Found!"
+msgstr "Boggan lama heli karo!"
+
+#: parts/content-missing.php:8
+msgid "Uh Oh. Something is missing. Try double checking things."
+msgstr "Waxbaa maqan. Hubi mar kale."
+
+#: parts/loop-archive.php:9
+msgid "Read more..."
+msgstr "Sii akhri…"
+
+#: parts/loop-archive.php:13 parts/loop-single.php:15
+msgid "Tags:"
+msgstr "Lifaaqyo:"
+
+#: parts/loop-single.php:14
+msgid "Pages:"
+msgstr "Bogag:"
+
+#: parts/nav-offcanvas-topbar.php:41
+msgid "Menu"
+msgstr "Meenu"
+
+#: template-zume-about.php:27
+msgid ""
+"Zúme Training is an on-line and in-life learning experience designed for "
+"small groups who follow Jesus to learn how to obey His Great Commission and "
+"make disciples who multiply."
+msgstr ""
+"Tababbarka Zúme waa mid si toos ah looga qaato shabakadda internet-ka waana "
+"mid nolosha wax lagaga baranayo oo loogu talo galay dad koox yar ah oo ah "
+"rumaystayaasha Ciise Masiix si ay uga bartaan sidii ay u adkeeyaan "
+"Amarkiisii Weynaa una sameeyaan xer taranta."
+
+#: template-zume-about.php:41 template-zume-faq.php:204
+msgid "Goals of the Zúme Project:"
+msgstr "Ujeeddooyinka Mashruuca Zúme:"
+
+#: template-zume-about.php:43
+msgid ""
+"Zúme means yeast in Greek. In Matthew 13:33, Jesus is quoted as saying, "
+"\"The Kingdom of Heaven is like a woman who took yeast and mixed it into a "
+"large amount of flour until it was all leavened.\" This illustrates how "
+"ordinary people, using ordinary resources, can have an extraordinary impact "
+"for the Kingdom of God. Zúme aims to equip and empower ordinary believers to "
+"reach every neighborhood."
+msgstr ""
+"Macnaha Zúme waxaa weeye Giriig ahaan Khamiir. Sida ku jirta Matayos 13:33, "
+"Ciise waxa uu yidhi, \"Boqortooyada jannada waxay u eg tahay khamiir, kan "
+"naagi intay qaadday ay saddex qiyaasood oo bur ah ku dhex qooshtay ilaa ay "
+"wada khamiireen.” Tani waxa ay tilmaamaysaa sida dadka caadiga ah, oo "
+"waxyaabo caadi ah isticmaalaya ay u saamayn weyn oo aan caadi ahayn ugu "
+"yeelan karaan Boqortooyada Ilaah. Zume ujeedkiisu waa inay rumaystayaasha "
+"caadiga ah u qalabeeyaan sidii ay deriskooda ku gaadhi lahaayeen."
+
+#: template-zume-about.php:46 template-zume-faq.php:209
+msgid ""
+"Make disciples in every Omega District globally, using an online training "
+"platform focused on equipping participants in the basic disciple-making and "
+"simple church planting multiplication principles, processes, and practices."
+msgstr ""
+"Xer ka dhex sameeya Degmo kasta oo Caalamka ugu weyn, idinka oo adeegsanaya "
+"habka tababbarka qadka ee tooska ah oo ka qayb galayaasha ku qalabaynaya "
+"waxyaabaha waxyaabaha aasaasiga ah ee xer-samaynta, iyo dhisidda kaniisad "
+"yar, qaabkeeda badinta, iyo dhiirrigelinta."
+
+#: template-zume-about.php:66
+msgid "Zúme Training consists of nine (two-hour) Basic Sessions and includes:"
+msgstr ""
+"Tababbarka Zúme waxa uu ka kooban yahay sagaal kulanoo (labo saac ah) oo "
+"aasaasi ah oo au ku jiraan:"
+
+#: template-zume-about.php:68
+msgid ""
+"Video and Audio to help your group understand basic principles of "
+"multiplying disciples."
+msgstr ""
+"Muuqaal iyo Maqal ka caawinaya kooxdaada in ay fahanto xeerarka aasaasiga u "
+"ah sida xerta loo badiyo."
+
+#: template-zume-about.php:69
+msgid "Group Discussions to help your group think through what’s being shared."
+msgstr ""
+"Wada-tashiyo kooxda dhexdeeda ah si ay kooxdaada uga caawiyso in ay ka "
+"hadlaan wixii la falanqeeyay."
+
+#: template-zume-about.php:70
+msgid ""
+"Simple Exercises to help your group put what you’re learning into practice."
+msgstr ""
+"Layliyo ama tijaabooyin sahlan oo kooxdaada ka caawinaya sidii ay u dhaqan "
+"gelin lahaayeen wixii ay barteen."
+
+#: template-zume-about.php:71
+msgid ""
+"Session Challenges to help your group keep learning and growing between "
+"sessions."
+msgstr ""
+"Kooxda oo culays la saarayo si ay uga caawiso in ay koraan oo ay wax ka "
+"bartaan inta kulannadu socdaan."
+
+#: template-zume-about.php:72
+msgid "There is an optional Session 10 with extra material."
+msgstr ""
+"Waxaa jira Kulan tobnaad oo dheeraad ah oo ka mid ah agabyada aad "
+"isticmaalayso.."
+
+#: template-zume-about.php:84
+msgid "How to get started:"
+msgstr "Sida loo bilaabayo:"
+
+#: template-zume-about.php:86
+msgid "If you haven't created a login yet, please do so."
+msgstr "Haddaanad cinwaan lahayn . Fadlan samayso.."
+
+#: template-zume-about.php:88
+msgid ""
+"Invite 3-11 friends. You must have at least four people present, who have "
+"accepted your invitation, to start the first session."
+msgstr ""
+"Kusoo casuum 3-11 saaxiib. Waan inaad haysataa ugu yaraan afar qofood oo "
+"diyaar ah, oo casumaaddaada aqbashay, si aad kulanka koobaad u bilowdaan."
+
+#: template-zume-about.php:90
+msgid "Schedule a time to get together with your friends."
+msgstr "Samayso kadwal aad saaxiibbadaa isugu timaddaan."
+
+#: template-zume-about.php:91
+msgid "Make sure you have access to an internet-enabled device."
+msgstr "Iska hubi in qadka internet-ku kuu shaqaynayo."
+
+#: template-zume-about.php:103
+msgid "Optional prep for your first meeting:"
+msgstr "Doorashda kulanka waqtigiinna ugu horreeya:"
+
+#: template-zume-about.php:105
+msgid "Download the Zúme Guidebook."
+msgstr "Soo Degso Buuggahagaha Zúme."
+
+#: template-zume-about.php:106
+msgid "If you'd like, you can print out copies for the members of your group."
+msgstr "Haddaad rabo inaad kooxdaada nuqullo u baadcadid waad u rugi kartaa."
+
+#: template-zume-about.php:107
+msgid ""
+"Consider connecting to a TV or projector so everyone in your group can view "
+"the content."
+msgstr ""
+"Ogsoonow inaad ku xidhiidhisid shaashad ama Borojegtar si kooxdaadu taxa u "
+"aragto."
+
+#: template-zume-coach.php:27
+msgid "Your Assigned People"
+msgstr "Dadka laguu xilsaaray"
+
+#: template-zume-coach.php:32
+msgid "Name"
+msgstr "Magac"
+
+#: template-zume-coach.php:33 template-zume-profile.php:71
+msgid "Email"
+msgstr "Iimayl"
+
+#: template-zume-coach.php:34
+msgid "Phone"
+msgstr "Telefoon"
+
+#: template-zume-coach.php:35
+msgid "Last Active"
+msgstr "Shaqadisi ugu danbeysay"
+
+#: template-zume-coach.php:36 template-zume-coach.php:96
+msgid "Groups"
+msgstr "Kooxo"
+
+#: template-zume-coach.php:78
+msgid "Assign Coach to Member"
+msgstr "Cid Tababbare u Magacow"
+
+#: template-zume-coach.php:82
+msgid "User to be assigned"
+msgstr "Adeegsadaha la magacabayo"
+
+#: template-zume-coach.php:113
+msgid "Assign"
+msgstr "Magacow"
+
+#: template-zume-course.php:8
+msgid ""
+"You are missing a group or session number. <a href=\"/\">Head back to your "
+"dashboard</a>"
+msgstr ""
+"Waxad seegtay kulan ama casharkii taanaa. <a href=\"/\">Kunnoqo "
+"muqaalkagiguud</a>"
+
+#: template-zume-course.php:17
+msgid "You are missing a correct group or session number."
+msgstr "Waxad seegtay kulan ama casharkii taxanaha saxda ahaa."
+
+#: template-zume-course.php:17
+msgid "Head back to your dashboard"
+msgstr "Kunnoqo muqaalkagi guud"
+
+#: template-zume-course.php:77
+msgid ""
+"You need a correctly formatted URL. This can happen if you came here from "
+"somewhere other than the dashboard."
+msgstr ""
+"Waxad u bahantahay URL saxa. Tani waxay dhici kartaa haddii aad ka timid "
+"meel aan aheyn muqaalka guud."
+
+#: template-zume-course.php:77
+msgid "Head back to your dashboard and try again."
+msgstr "Kunnoqo muqaalkaaga guud oo mar kale isku day."
+
+#: template-zume-course.php:107
+msgid "Session"
+msgstr "Kulan"
+
+#: template-zume-course.php:207
+msgid "Welcome to Session"
+msgstr "Kusoo dhawoow Kulanka"
+
+#: template-zume-course.php:208
+msgid "Which are you doing right now?"
+msgstr "Kee baad wada hada?"
+
+#: template-zume-course.php:210
+msgid "Facilitating a Group"
+msgstr "Abaabulid kooxeed"
+
+#: template-zume-course.php:213
+msgid "Participating in a Group"
+msgstr "Kaqeybgal Kooxeed"
+
+#: template-zume-course.php:217
+msgid "Exploring the Session Content"
+msgstr "Soo bandhigta waxa uu ka kooban yahay casharku"
+
+#: template-zume-course.php:231
+msgid "How many are with you?"
+msgstr "Imisa kula jooga?"
+
+#: template-zume-course.php:246 template-zume-course.php:274
+msgid "Continue"
+msgstr "Sii wad"
+
+#: template-zume-course.php:259
+msgid "How many are in your group?"
+msgstr "Kooxdadu waa imisa?"
+
+#: template-zume-course.php:294
+msgid "WELCOME TO ZÚME"
+msgstr "KUSOO DHAWOOW ZÚME"
+
+#: template-zume-course.php:302 template-zume-course.php:664
+msgid "DOWNLOAD"
+msgstr "SOO DEJISO"
+
+#: template-zume-course.php:306
+msgid ""
+"You will be able to follow along on a digital PDF for this session, but "
+"please make sure that each member of your group has a printed copy of the "
+"materials for future sessions."
+msgstr ""
+"Kulanka waxaad ka tixraacan doontaa qaybta l PDF, balse iska hubi inay "
+"kooxdaadu wada daabacatay alaabadii kulammada soo socda."
+
+#: template-zume-course.php:313 template-zume-course.php:672
+msgid "GUIDEBOOK"
+msgstr "BUUGGAHAGAHA"
+
+#: template-zume-course.php:325
+msgid "GROUP PRAYER (5min)"
+msgstr "DUCO KOOXEED (5daqiiqo)"
+
+#: template-zume-course.php:331
+msgid ""
+"Begin with prayer. Spiritual insight and transformation is not possible "
+"without the Holy Spirit. Take time as a group to invite Him to guide you "
+"over this session."
+msgstr ""
+"Duco ku bilaaba. Is beddel ma suurtoobo Ruuxa Qudduuska ah la'aantiis. "
+"Kooxdu Isaga kha ka dalbatl inuu kulankan ku hoggaamiyo."
+
+#: template-zume-course.php:341 template-zume-course.php:385
+#: template-zume-course.php:435 template-zume-course.php:708
+#: template-zume-course.php:1010 template-zume-course.php:1092
+#: template-zume-course.php:1378 template-zume-course.php:1435
+#: template-zume-course.php:1488 template-zume-course.php:1729
+#: template-zume-course.php:1903 template-zume-course.php:2123
+#: template-zume-course.php:2307 template-zume-course.php:2491
+#: template-zume-course.php:2544 template-zume-course.php:2599
+#: template-zume-course.php:2947
+msgid "WATCH AND DISCUSS (15min)"
+msgstr "DAAWO OO FALANQEE (15daqiiqo)"
+
+#: template-zume-course.php:349 template-zume-course.php:393
+#: template-zume-course.php:443 template-zume-course.php:715
+#: template-zume-course.php:1016 template-zume-course.php:1098
+#: template-zume-course.php:1384 template-zume-course.php:1441
+#: template-zume-course.php:1494 template-zume-course.php:1735
+#: template-zume-course.php:1909 template-zume-course.php:2009
+#: template-zume-course.php:2129 template-zume-course.php:2313
+#: template-zume-course.php:2499 template-zume-course.php:2552
+#: template-zume-course.php:2607 template-zume-course.php:2765
+#: template-zume-course.php:2953 template-zume-course.php:3084
+msgid "WATCH"
+msgstr "DAAWO"
+
+#: template-zume-course.php:351
+msgid ""
+"God uses ordinary people doing simple things to make a big impact. Watch "
+"this video on how God works."
+msgstr ""
+"Ilaah wuxuu adeegsadaa dadka caadiga ah iay wax sahlan sameeyaan si uu wax "
+"weyn ugu sameyo. Daawo muuqaalkan ku saabsan sida Ilaah u shaqeeyo."
+
+#: template-zume-course.php:368
+msgid "Zúme Video Scripts: Welcome"
+msgstr "Qoraalka Muqaalka Zúme: Kusoo dhawoow"
+
+#: template-zume-course.php:374 template-zume-course.php:419
+#: template-zume-course.php:472 template-zume-course.php:750
+#: template-zume-course.php:831 template-zume-course.php:1041
+#: template-zume-course.php:1072 template-zume-course.php:1124
+#: template-zume-course.php:1194 template-zume-course.php:1414
+#: template-zume-course.php:1470 template-zume-course.php:1523
+#: template-zume-course.php:1762 template-zume-course.php:1935
+#: template-zume-course.php:1983 template-zume-course.php:2157
+#: template-zume-course.php:2204 template-zume-course.php:2342
+#: template-zume-course.php:2530 template-zume-course.php:2582
+#: template-zume-course.php:2637 template-zume-course.php:2715
+#: template-zume-course.php:2924 template-zume-course.php:2980
+msgid "DISCUSS"
+msgstr "FALANQEE"
+
+#: template-zume-course.php:376
+msgid ""
+"If Jesus intended every one of His followers to obey His Great Commission, "
+"why do so few actually make disciples?"
+msgstr ""
+"Haddii Ciise ku talogalkiisu ahaa in kuwa raaca oo dhan ay addeecaan "
+"Amarkiisii Wenaa, maxay in yar oo qudhihi xer u samaysaa?"
+
+#: template-zume-course.php:395
+msgid ""
+"What is a disciple? And how do you make one? How do you teach a follower of "
+"Jesus to do what He told us in His Great Commission - to obey all of His "
+"commands?"
+msgstr ""
+"Waa maxay xerorw? Sidee baan mid u samayn karnaa? Sidee ayaad qof Ciise "
+"rumaysan aad u bari kartaa inuu aqbalo Amarkiisii Weynaa?"
+
+#: template-zume-course.php:413
+msgid "Zúme Video Scripts: Teach Them to Obey"
+msgstr "Qoraaka muqaalka Zúme: Bar inay Addeecaan"
+
+#: template-zume-course.php:422
+msgid "When you think of a church, what comes to mind?"
+msgstr "Marka aad ka fikirto kainisaad, maxa maskaxadaad ku soo dhaca?"
+
+#: template-zume-course.php:423
+msgid ""
+"What's the difference between that picture and what's described in the video "
+"as a \"Simple Church\"?"
+msgstr "Maxaa farqiya oo u dhexeeya taswiirta."
+
+#: template-zume-course.php:425
+msgid "Which one do you think would be easier to multiply and why?"
+msgstr "Kee baad u malaynaysaa inuu fududaanayo inuu bato sababna?"
+
+#: template-zume-course.php:445
+msgid ""
+"We breathe in. We breathe out. We're alive. Spiritual Breathing is like "
+"that, too."
+msgstr ""
+"Neef ayaa na gasha. Waan soo neefsanaa. Naf ayaa nagu jirta. Neefsashada "
+"Ruuxu waa waa sidaas."
+
+#: template-zume-course.php:465
+msgid "Zúme Video Scripts: Spiritual Breathing"
+msgstr "Qoraalka Muqaalka ee Zúme: Neesashada Ruuxig ah"
+
+#: template-zume-course.php:475
+msgid "Why is it essential to learn to hear and recognize God's voice?"
+msgstr "Sababtee bay muhiim u tahay in la maqlo oo la aqoonsado codka Ilaah?"
+
+#: template-zume-course.php:476
+msgid ""
+"Is hearing and responding to the Lord really like breathing? Why or why not?"
+msgstr ""
+"In Rabbigta la maqlo oo loo jawaabo ma sidii neefsashada oo kalaa? Maxay ku "
+"tahay maxayan se ku ahayn?"
+
+#: template-zume-course.php:486 template-zume-course.php:529
+#: template-zume-course.php:851 template-zume-course.php:1314
+#: template-zume-course.php:1540 template-zume-course.php:2992
+msgid "LISTEN AND READ ALONG (3min)"
+msgstr "WADA DHEEGAYSTA OO WADA AKHRIYA ( 3daqiiqo)"
+
+#: template-zume-course.php:494 template-zume-course.php:537
+#: template-zume-course.php:774 template-zume-course.php:857
+#: template-zume-course.php:1061 template-zume-course.php:1165
+#: template-zume-course.php:1320 template-zume-course.php:1546
+#: template-zume-course.php:1692 template-zume-course.php:1953
+#: template-zume-course.php:2998
+msgid "READ"
+msgstr "AKHRI"
+
+#: template-zume-course.php:496 template-zume-dashboard.php:967
+msgid "S.O.A.P.S. BIBLE READING"
+msgstr "AKHRINTA BAYBALKA EE S.O.A.P."
+
+#: template-zume-course.php:499
+msgid ""
+"Hearing from God regularly is a key element in our personal relationship "
+"with Him, and in our ability to stay obediently engaged in what He is doing "
+"around us."
+msgstr ""
+"In Ilaah laga maqlo ayaa ah furaha ugu ee xidhiidhkeenna an Isaga la "
+"leenahay, awooda aan addeecis ugu qaadanayno waxa uu inaga agteenna ka "
+"samaynayo."
+
+#: template-zume-course.php:501
+msgid ""
+"Find the \"S.O.A.P.S. Bible Reading\" section in your Zúme Guidebook and "
+"listen to the audio overview."
+msgstr ""
+"Ka hel Akhrinta Baybalka \"S.O.A.P.S. \" qaybtiisa ku jirta Buuggahagahaaga "
+"ee Zúme kana dhegayso guudmarka maqalka."
+
+#: template-zume-course.php:521
+msgid "Zúme Video Scripts: SOAPS"
+msgstr "Qoraalka muqaalka Zúme: ee SOAPS"
+
+#: template-zume-course.php:540
+msgid " GROUPS"
+msgstr "KOOXO"
+
+#: template-zume-course.php:543
+msgid ""
+"The Bible tells us that every follower of Jesus will one day be held "
+"accountable for what we do and say and think. Accountability Groups are a "
+"great way to get ready!"
+msgstr ""
+"Kitaabka Qudduuska ah wuxuu inoo sheegayaa in rumaystayaasha Ciise nagu "
+"qaadayaan waxa aan samayno, sheegno oo aan ku fakarno. Kooxaha Masuuliyaddu "
+"waa hab aad u weyn oo lagu diyaar garoobo!"
+
+#: template-zume-course.php:546
+msgid ""
+"Find the \"Accountability Groups\" section in your Zúme Guidebook, and "
+"listen to the audio below."
+msgstr ""
+"Ka hel \"Kooxaha Masuuliyadda \" qaybtiisa ku jirta Buuggahagahaaga ee Zúme, "
+"oo dhegayso dhegaysiga hoose."
+
+#: template-zume-course.php:567
+msgid "Zúme Video Scripts: Accountability Groups"
+msgstr "Qoraallada Muuqaalka ee Zúme : Kooxaha Masuuliyadeed"
+
+#: template-zume-course.php:575
+msgid "PRACTICE (45min)"
+msgstr "DHAQAN GELIN (45daqiiqo)"
+
+#: template-zume-course.php:583
+msgid "BREAK UP"
+msgstr "KALA QEYBI"
+
+#: template-zume-course.php:584
+msgid "Break into groups of two or three people of the same gender."
+msgstr "U kala qaybi kooxo labo ama saddex qof ah oo rag ama dumar ah."
+
+#: template-zume-course.php:590 template-zume-course.php:627
+#: template-zume-course.php:936 template-zume-course.php:1237
+#: template-zume-course.php:1620 template-zume-course.php:1839
+#: template-zume-course.php:2055 template-zume-course.php:2238
+#: template-zume-course.php:2416 template-zume-course.php:2704
+#: template-zume-course.php:2801
+msgid "SHARE"
+msgstr "LA WADAG"
+
+#: template-zume-course.php:593
+msgid ""
+"Spend the next 45 minutes working together through Accountability Questions "
+"- List 2 in the \"Accountability Groups\" section of your"
+msgstr ""
+"Waxaad 45 ka daqiiqadood ee soo socda ku qaadataan ka wada shaqaynta "
+"Su'aalaha Masuuliyadda - ee liiska 2aad ee ku jira \"Kooxaha Masuuliyadeed\" "
+"qaybtaada"
+
+#: template-zume-course.php:597 template-zume-guidebook.php:21
+msgid "Zúme Guidebook"
+msgstr "Buuga hagaha ee Zúme"
+
+#: template-zume-course.php:608 template-zume-course.php:918
+#: template-zume-course.php:1221 template-zume-course.php:1603
+#: template-zume-course.php:1821 template-zume-course.php:2037
+#: template-zume-course.php:2220 template-zume-course.php:2398
+#: template-zume-course.php:2755
+msgid "LOOKING FORWARD"
+msgstr "HORE U SOCO"
+
+#: template-zume-course.php:612
+msgid "Congratulations! You've completed Session 1."
+msgstr "Hambalyo! Qayaabtii 1aad ayaad dhammaysay."
+
+#: template-zume-course.php:613 template-zume-course.php:922
+#: template-zume-course.php:1225 template-zume-course.php:1607
+#: template-zume-course.php:2043 template-zume-course.php:2226
+#: template-zume-course.php:2404
+msgid "Below are next steps to take in preparation for the next session."
+msgstr ""
+"Hoos waxaa ah tallaabooyinkii aad isugu diyaarin lahayd kulanka kan xiga."
+
+#: template-zume-course.php:619 template-zume-course.php:929
+#: template-zume-course.php:1230 template-zume-course.php:1613
+#: template-zume-course.php:1832 template-zume-course.php:2048
+#: template-zume-course.php:2231 template-zume-course.php:2409
+#: template-zume-course.php:2793
+msgid "OBEY"
+msgstr "ADDEEC"
+
+#: template-zume-course.php:621
+msgid ""
+"Begin practicing the S.O.A.P.S. Bible reading between now and your next "
+"meeting. Focus on Matthew 5-7, read it at least once a day. Keep a daily "
+"journal using the S.O.A.P.S. format."
+msgstr ""
+"Bilow inaad ficil ahaan u samayso akhrinta Kitaabka Qudduuska ah ee S.O.A.P."
+"S. imminka iyo sidoo kale kulankiinna xiga. Ka fakar  Matayos5-7, akhriya "
+"ugu yaraan hal mar maalintii. Samaysta qoraal xusuuseed idinkoo adeegsanaya "
+"qaabka S.O.A.P.S."
+
+#: template-zume-course.php:629
+msgid ""
+"Spend time asking God who He might want you to start an Accountability Group "
+"with using the tools you've learned in this session. Share this person’s "
+"name with the group before you go. Reach out to that person about starting "
+"an Accountabilty Group and meeting with you weekly."
+msgstr ""
+"Qaado wakhti aad Ilaah ku weyddiisanaysid kan uu kaa doonayo inaad Koox "
+"Masuuliyadeed la bilowdid adiga oo isticmaalaya waxyaabihii aad kulankan ku "
+"baratay. Qofkan magaciisa u sheeg kooxda inta aadan bixin ka hor. Gaadhsii "
+"qofkaas inaad Koox Masuuliyadeed ka bilaabayso oo aad usbuuc walba la "
+"kulmaysid."
+
+#: template-zume-course.php:636 template-zume-course.php:695
+#: template-zume-course.php:943 template-zume-course.php:987
+#: template-zume-course.php:1244 template-zume-course.php:1290
+#: template-zume-course.php:1627 template-zume-course.php:1667
+#: template-zume-course.php:1846 template-zume-course.php:1883
+#: template-zume-course.php:2062 template-zume-course.php:2103
+#: template-zume-course.php:2245 template-zume-course.php:2287
+#: template-zume-course.php:2423 template-zume-course.php:2471
+#: template-zume-course.php:2665 template-zume-course.php:2809
+#: template-zume-course.php:2869
+msgid "PRAY"
+msgstr "DUCAAYSO"
+
+#: template-zume-course.php:639
+msgid ""
+"Pray that God helps you be obedient to Him and invite Him to work in you and "
+"those around you!"
+msgstr ""
+"Ilaah ka bari inuu kaa caawiyo inaad baarri u noqotid oo aad aqbashid inuu "
+"ka dhex shaqeeyo adiga iyo kuwa kugu dhow!"
+
+#: template-zume-course.php:658
+msgid "WELCOME BACK!"
+msgstr "SOO DHAWOOW MAR KALE!"
+
+#: template-zume-course.php:666
+msgid ""
+"Does everyone have a printed copy of the Zúme Guidebook? If not, please be "
+"sure that someone can download the Guidebook and that everyone has access to "
+"some paper and a pen or pencil."
+msgstr ""
+"Miyuu midkiin waliba nuqul ka haystaa Buuggahagaha ee Zúme? haddanay ahayn, "
+"fadlan hubso in qof uu idiin soo dejiyo Buuggahagaha si mid walba uu warqad "
+"iyo qalin rasaas u helo."
+
+#: template-zume-course.php:679 template-zume-course.php:967
+#: template-zume-course.php:1273 template-zume-course.php:1652
+#: template-zume-course.php:1870 template-zume-course.php:2086
+#: template-zume-course.php:2268 template-zume-course.php:2449
+#: template-zume-course.php:2850
+msgid "CHECK-IN"
+msgstr "HUBI"
+
+#: template-zume-course.php:681 template-zume-course.php:970
+#: template-zume-course.php:2270 template-zume-course.php:2453
+#: template-zume-course.php:2852
+msgid "Before getting started, take some time to check-in."
+msgstr "Intaanan la bilaabin, qaata wakhti aad waxku kala baadhaan."
+
+#: template-zume-course.php:683 template-zume-course.php:974
+#: template-zume-course.php:1275 template-zume-course.php:1872
+#: template-zume-course.php:2088 template-zume-course.php:2272
+#: template-zume-course.php:2455 template-zume-course.php:2854
+msgid ""
+"At the end of the last session, everyone in your group was challenged in two "
+"ways:"
+msgstr ""
+"Dhammaadka kulanka ugu dambeeya, mid walba labo waddo ayaa loo tijabinayaa:"
+
+#: template-zume-course.php:686
+msgid ""
+"You were asked to begin practicing the S.O.A.P.S. Bible reading method and "
+"keeping a daily journal."
+msgstr ""
+"Waxaa lagu weyddiistay inaad qaabka akhrinta Baybalka ee S.O.A.P.S. ficil "
+"ahaan u samaysid oo aad maalinle ahaan u waddid."
+
+#: template-zume-course.php:688
+msgid ""
+"You were encouraged to reach out to someone about starting an Accountability "
+"Group."
+msgstr ""
+"Waxaa lagugu xoojiyey inaad shakhsi gaadho oo aad Koox Masuuliyadeed la "
+"bilowdid."
+
+#: template-zume-course.php:690 template-zume-course.php:982
+#: template-zume-course.php:1284 template-zume-course.php:1662
+#: template-zume-course.php:1878 template-zume-course.php:2098
+#: template-zume-course.php:2282 template-zume-course.php:2464
+msgid "Take a few moments to see how your group did this week."
+msgstr ""
+"Qaado wakti yar oo aad ku aragtid sidii ay kooxdaadu toddobaadkan wax u "
+"sameeyeen."
+
+#: template-zume-course.php:697
+msgid ""
+"Ask if anyone in the group has specific needs they would like the group to "
+"pray for. Ask someone to pray and ask God to help in the areas the group "
+"shared. Be sure to thank God that He promises in His Word to listen and act "
+"when His people pray. And, as always, ask God's Holy Spirit to lead your "
+"time, together."
+msgstr ""
+"Weyddii hadii qof ka mid ah kooxdu uu leeyahay baahiyo qaas ah oo ay "
+"doonayaan in ay kooxdu uga ducayso. Weyddii in qof inuu u duceeyo oo uu "
+"Ilaah u weyddiiyo in ka caawiyo meelahaa laga laga hadlay. Ogaada in Ilaah "
+"ballan qaaday inuu maqlayo oo ka jawaabayo marka dadkiisu baryaan.  mar "
+"walba weyddiista in Ilaah Ruuxiisa Qudduiinna."
+
+#: template-zume-course.php:718
+msgid ""
+"If we want to make disciples who multiply - spiritual producers and not just "
+"consumers - then we need to learn and share four main ways God makes "
+"everyday followers more like Jesus:"
+msgstr ""
+"Haddii aan doonaynno inaan samayno xer badata - ruux ahaan waxsoosaar u leh "
+"oo aan ahayn macaamiil uun - waxaan u baahan nahay inaan baranno oo aan "
+"wadaagno afar waddo oo gaar ah oo Ilaah rumaystayaasha ekaanka Ciise u siiyo:"
+
+#: template-zume-course.php:721
+msgid "Prayer"
+msgstr "Tukasho"
+
+#: template-zume-course.php:722
+msgid "Scripture"
+msgstr "Qorniin"
+
+#: template-zume-course.php:723
+msgid "Body Life"
+msgstr "Noolosha Jidhka"
+
+#: template-zume-course.php:724
+msgid "Persecution and Suffering"
+msgstr "Silic iyo cadaadis"
+
+#: template-zume-course.php:744
+msgid "Zúme Video Scripts: Producers vs Consumers"
+msgstr "Qoraalka Muqaalka ee Zúme: Soo Saarayaasha iyo Macmiil"
+
+#: template-zume-course.php:753
+msgid ""
+"Of the four areas detailed above (prayer, God's Word, etc.), which ones do "
+"you already practice?"
+msgstr ""
+"Afarta meelood ee kor lagu soo faahfaahiyey ee (ducada, Ereyga Ilaah, iwm.), "
+"keebaad durbaba dhaqan gelisay?"
+
+#: template-zume-course.php:755
+msgid "Which ones do you feel unsure about?"
+msgstr "Kee baad is leedahay waxba kama hubtid?"
+
+#: template-zume-course.php:756
+msgid "How ready do you feel when it comes to training others?"
+msgstr ""
+"Sidee baad is leedahay waad u diyaarsan tahay marka ay noqoto tababbarista "
+"kuwa kale?"
+
+#: template-zume-course.php:767
+msgid "LISTEN AND READ ALONG (2min)"
+msgstr "WADA DHAGEYSTA OO WADA AKHRIYA (2daqiiqo)"
+
+#: template-zume-course.php:777
+msgid "ZÚME TOOLKIT - PRAYER CYCLE"
+msgstr "Qalabka ZÚME - DUCADA WAREEGGA"
+
+#: template-zume-course.php:779
+msgid ""
+"The Bible tells us that prayer is our chance to speak to and hear from the "
+"same God who created us!"
+msgstr ""
+"Baybalku wuxuu inoo sheegayaa inay salaaddu tahay fursaddeenna aan kula "
+"hadalno ugana maqalno Ilaah ina abuuray!"
+
+#: template-zume-course.php:781
+msgid ""
+"Find the \"Prayer Cycle\" section in your Zúme Guidebook, and listen to the "
+"audio below."
+msgstr ""
+"Hel \"Ducada Wareegga ah\" ee ku jirta qaybta Buuggaga hagaha, oo dhegayso "
+"codayta hoose."
+
+#: template-zume-course.php:800
+msgid "Zúme Video Scripts: Prayer Cycle"
+msgstr "Qoraalka muqaalka ee Zúme: Kulan duco"
+
+#: template-zume-course.php:811
+msgid "PRACTICE THE PRAYER CYCLE (60min)"
+msgstr "SAMEE DUCADA WAREEGRADA AH (60daqiiqo)"
+
+#: template-zume-course.php:817
+msgid "LEAVE"
+msgstr "KATAG"
+
+#: template-zume-course.php:819
+msgid ""
+"Spend the next 60 minutes in prayer individually, using the exercises in "
+"\"The Prayer Cycle\" section of the Zúme Guidebook as a guide."
+msgstr ""
+"Ku qaado 60 daqiiqo ee xiga salaad adiga oo shaqsi ahaantaada uga shaqaynaya "
+"\"Ducada Wareegga ah\" adigoo hage ahaan u adeegsanaya qaybta ku jirta "
+"Buuggahagaha Zúme."
+
+#: template-zume-course.php:824
+msgid "RETURN"
+msgstr "KUNNOQO"
+
+#: template-zume-course.php:826
+msgid ""
+"Set a time for the group to return and reconnect. Be sure to add a few extra "
+"minutes for everyone to both find a quiet place to pray and to make their "
+"way back to the group."
+msgstr ""
+"Kooxda u qabo wakhti ay isu soo laabtaan oo isugu xidhmaan. Ogsoonoow in aad "
+"siisid daqiiqado dheeraad ah mid walba oo uu ku helo meel deggan oo uu ku "
+"ducaysto inta ay kooxda dib ugu soo laabanayaan."
+
+#: template-zume-course.php:834
+msgid "What is your reaction to spending an hour in prayer?"
+msgstr "Maxaa kaaga soo baxa marka aad duco ku qaadatid hal saac?"
+
+#: template-zume-course.php:835
+msgid "How do you feel?"
+msgstr "Sidee baad dareentaa?"
+
+#: template-zume-course.php:836
+msgid "Did you learn or hear anything?"
+msgstr "Mtay ama aad wax maqashay?"
+
+#: template-zume-course.php:837
+msgid ""
+"What would life be like if you made this kind of prayer a regular habit?"
+msgstr ""
+"Sidee ayey noloshu ahaan lahayd haddii aad ducada noocan ah caado ka "
+"dhigatid?"
+
+#: template-zume-course.php:859
+msgid "ZÚME TOOLKIT - LIST OF 100"
+msgstr "QALABKA ZÚME - TAXA 100-ka ah"
+
+#: template-zume-course.php:861
+msgid ""
+"God has already given us the relationships we need to “Go and make "
+"disciples.” These are our family, friends, neighbors, co-workers and "
+"classmates - people we’ve known all our lives or maybe just met."
+msgstr ""
+"Ilaah waxa uu ina saaray xidhiidho aan ugu baahan nahay in aan “Baxno oo aan "
+"xer samaynno.” Kuwani waxaa weeye qoyskeenna, saaxiibbadeen, deriskeenna, "
+"kuwa aan wada shaqaynno iyo kuwa aan isku galaaska nahay – dad aannu "
+"weligeen niqiin ama dabcan kuwo aan wada kulannay."
+
+#: template-zume-course.php:863
+msgid ""
+"Being good stewards of these relationships is the first step in multiplying "
+"disciples. Start by making a list."
+msgstr ""
+"Waxa ugu weyn ee Ilaah masuuliyadda inooga saaray dadka ee ugu horreeya waa "
+"in aan xer samaynno. waxa ayna midani noogu hir gelaysaa annaga oo liis u "
+"samaysanna."
+
+#: template-zume-course.php:865
+msgid ""
+"Find the \"List of 100\" section in your Zúme Guidebook, and listen to the "
+"audio below."
+msgstr ""
+"Hel \"Taxa 100-ka ah\" ee ku jirta qaybta Buuggaga hagaha, oo dhegayso "
+"codayta hoose."
+
+#: template-zume-course.php:884
+msgid "Zúme Video Scripts: List of 100"
+msgstr "Qoraallada Muuqaalka Zúme: Taxa 100-ka"
+
+#: template-zume-course.php:895
+msgid "PROJECT (30min)"
+msgstr "MASHRUUC (30daqiiqo)"
+
+#: template-zume-course.php:903
+msgid "CREATE YOUR OWN LIST OF 100"
+msgstr "SAMAYSO TAXAAGA 100-ka EE KUU GAARKA AH"
+
+#: template-zume-course.php:905
+msgid ""
+"Have everyone in your group take the next 30 minutes to fill out their own "
+"inventory of relationships using the form in the \"List of 100\" section in "
+"your Zúme Guidebook. "
+msgstr ""
+"Mid walba oo kooxdaada ka mid ahu miyuu 30 kii daqiiqadood ee xigay ku "
+"qaatay inuu buuxiyo xidhiidhadiisa isaga oo isticmaalaya \"Taxa 100-ka\" "
+"qaybta kuugu jirta Buuggahagaha Zúme."
+
+#: template-zume-course.php:921
+msgid "Congratulations on finishing Session 2! "
+msgstr "Hambalyo waxaad dhammaysay Kulankii 2!"
+
+#: template-zume-course.php:931
+msgid ""
+"Spend time this week praying for five people from your List of 100 that you "
+"marked as an \"Unbeliever\" or \"Unknown.\" Ask God to prepare their hearts "
+"to be open to His story."
+msgstr ""
+"Qaado wakhti toddobaadka aad ugu ducaynaysid shan qof oo Taxa 100-ka kuugu "
+"jirta adiga oo u calaamadinaya \"Rumaysad Laawe\" ama \"Lama Yaqaan.\" Ilaah "
+"weyddiiso inuu qisooyinkiisa u diyaariyo qalbiyadooda."
+
+#: template-zume-course.php:938
+msgid ""
+"Ask God who He wants you to share the List of 100 tool with. Share this "
+"person's name with the group before you go and reach out to them before the "
+"next session."
+msgstr ""
+"Ilaah weyddiiso kan uu donayo inaad la wadaagtid Taxa 100-ka. ofkan "
+"magaciisa u sheeg kooxda inta aadan bixin ka hor. La wadaag kooxda qofkan "
+"magaciisa inta aadan bixin ka hor oo gaadh iyaga kulanka xiga hortii."
+
+#: template-zume-course.php:945 template-zume-course.php:1246
+#: template-zume-course.php:1629
+msgid ""
+"Pray that God help you be obedient to Him and invite Him to work in you and "
+"those around you!"
+msgstr ""
+"Ilaah ka bari inuu kaa caawiyo inaad baarri u noqotid oo aad aqbashid inuu "
+"ka dhex shaqeeyo adiga iyo kuwa kugu dhow!"
+
+#: template-zume-course.php:961 template-zume-course.php:1267
+#: template-zume-course.php:1645 template-zume-course.php:1864
+#: template-zume-course.php:2080 template-zume-course.php:2262
+#: template-zume-course.php:2441 template-zume-course.php:2843
+msgid "LOOKING BACK"
+msgstr "DIB U EEGIS"
+
+#: template-zume-course.php:978
+msgid ""
+"You were asked to pray for five people from your List of 100 that you marked "
+"as an \"Unbeliever\" or \"Unknown.\""
+msgstr ""
+"Waxaa lagu weyddiistay inaad u ducaysid shan qof oo ku jira Taxaaga 100-ka "
+"aad u calaamadiisaya \"Rumaysad Laawe\" ama \"Lama Yaqaan.\""
+
+#: template-zume-course.php:979
+msgid "You were encouraged to share how to make a List of 100 with someone."
+msgstr ""
+"Waxaa lagugu xoojiyey inaad qof la wadaagtid sida loo samaysto Taxa 100-ka."
+
+#: template-zume-course.php:989 template-zume-course.php:1293
+#: template-zume-course.php:1669
+msgid ""
+"Pray and thank God for the results and invite His Holy Spirit to lead your "
+"time together."
+msgstr ""
+"Ducee oo Ilaah ugu mahadnaq natiijooyinkii oo Ruuxiisa Qudduuska ah ku "
+"casuun inuu ku hago."
+
+#: template-zume-course.php:994 template-zume-course.php:1298
+#: template-zume-course.php:1674 template-zume-course.php:1890
+#: template-zume-course.php:2110 template-zume-course.php:2294
+#: template-zume-course.php:2479 template-zume-course.php:2656
+#: template-zume-course.php:2876
+msgid "OVERVIEW"
+msgstr "GUUDMAR"
+
+#: template-zume-course.php:996
+msgid ""
+"In this session, you’ll learn how God’s Spiritual Economy works and how God "
+"invests more in those who are faithful with what they've already been given. "
+"You'll also learn two more tools for making disciples - sharing God’s Story "
+"from Creation to Judgement and Baptism."
+msgstr ""
+"Kulankan dhexdiisa, waxa aan ku baran doonnaa sida Dhaqaalaha Ilaah ee xagga "
+"Ruuxu u shaqeeyo iyo sida Ilaah in ka sii badab ugu maal geliyo kuwa "
+"aamminka ku ah wixii horay loo siiyey. Waxaan sidoo kale ku baran doonnaa "
+"labo qaab oo dheeraad ah oo ku saabsan sida xerta loo badiyo – annaga oo "
+"wadaagayna Ilaah qisooyinkiisa ku saabsan Abuuristii, Xukunkii iyo "
+"Baabtiisamka."
+
+#: template-zume-course.php:998 template-zume-course.php:1302
+msgid "Then, when you're ready, get started!"
+msgstr "Dabadeed, goortaad diyaar garowdo, bilow!"
+
+#: template-zume-course.php:1018
+msgid ""
+"In this broken world, people feel rewarded when they take, when they receive "
+"and when they gain more than those around them. But God's Spiritual Economy "
+"is different - God invests more in those who are faithful with what they've "
+"already been given."
+msgstr ""
+"Caalamkan guul darraystay dhexdiisa, dadku waxa ay abaal marintooda "
+"dareemaan marka ay qaataan, ama marka ay helaan iyo marka ay kasbadaan wax "
+"ka baxsan waxa ay haystaan. Balse Ilaah Dhaqaalihiisa Ruuxiga ahu waa uu ka "
+"duwan yahay - Ilaah in badan ugu yeedhaa kuwaa iyagu aamminka ku ah wixii "
+"horay loo siiyey."
+
+#: template-zume-course.php:1036
+msgid "Zúme Video Scripts: Spiritual Economy"
+msgstr "Qoraallada Muuqaalka Zúme: Dhaqaalaha Ruuxiga ah"
+
+#: template-zume-course.php:1043
+msgid ""
+"What are some differences you see between God's Spiritual Economy and our "
+"earthly way of getting things done?"
+msgstr ""
+"Maxay yihiin farqiyada aad arkaysid ee u dhexeeya Ilaah Dhaqaalihiisa "
+"Qudduuska ah iyo qaabka aan adduunka wax ugu samaysano?"
+
+#: template-zume-course.php:1055 template-zume-course.php:1159
+msgid "READ AND DISCUSS (15min)"
+msgstr "AKHRIYA OO FALANQEEYA (15daqiiqo)"
+
+#: template-zume-course.php:1063
+msgid ""
+"Jesus said, “You will receive power when the Holy Spirit comes upon you. And "
+"you will be my witnesses, telling people about me everywhere - in Jerusalem, "
+"throughout Judea, in Samaria, and to the ends of the earth.”"
+msgstr ""
+"Ciise waxa uu yirii -- “Waxaad heli doontaan xoog Markii Ruuxa Quduuska ahi "
+"idinku soo dego; oo markhaatiyaal ayaad iiga noqon doontaan Yeruusaalem, iyo "
+"Yahuudiya oo dhan, iyo Samaariya, iyo meesha dunida ugu fog.”"
+
+#: template-zume-course.php:1065
+msgid ""
+"Jesus believed in His followers so much, He trusted them to tell His story. "
+"Then He sent them around the world to do it. Now, He’s sending us."
+msgstr ""
+"Ciise aad ayuu xertiisa u rumaysnaa, waa uu ku aamminay inuu qisadiisa u "
+"sheega. Oo dunida oo dhan ayuu u diray si ay middan u sameeyaan. Imminka "
+"annaga ayuu ina dirayaa."
+
+#: template-zume-course.php:1067
+msgid ""
+"There’s no one “best way” to tell God’s story (also called The Gospel), "
+"because the best way will depend on who you’re sharing with. Every disciple "
+"should learn to tell God’s Story in a way that’s true to scripture and "
+"connects with the audience they’re sharing with."
+msgstr ""
+"Ma jiro qof sida ugu fiican u sheegi kara qisooyinka Ilaah ee [loo yaqaan "
+"Injiilka], maxaa yeelay qaabka ugu fiicani waxa uu ku xidhan yahay qofka aad "
+"la wadaagaysid. Qof walba oo xer ahu waa inuu bartaa sidii uu qisooyinka "
+"Ilaah ugu sheegi lahaa sida runta ah ee waafaqsan qorniinka oo isku xidh u "
+"noqonaysa dhegaystayaasha ay la wadaagayaan."
+
+#: template-zume-course.php:1075
+msgid ""
+"What comes to mind when you hear God's command to be His \"witness\" and to "
+"tell His story?"
+msgstr ""
+"Maxaa qalbiga kaaga soo dhacaya markaad maqashid Ilaah amarkiisa ah in loo "
+"noqdo \"markhaatifur\" qisooyinkiisana la sheego?"
+
+#: template-zume-course.php:1077
+msgid ""
+"Why do you think Jesus chose ordinary people instead of some other way to "
+"share His Good News?."
+msgstr ""
+"Sababtee baad ugu malaynaysaa in Ciise uu doortay dad caadi iska ah isagoo "
+"awooday inuu siyaabo kale Warkiise Wanaagsan ugu gudbin lahaa?."
+
+#: template-zume-course.php:1079
+msgid ""
+"What would it take for you to feel more comfortable sharing God's Story?"
+msgstr ""
+"Maxaa kugu farxad gelin kara inaad Ilaah Qisadiisa la wadaagtid kuwa akle?"
+
+#: template-zume-course.php:1100
+msgid ""
+"One way to share God’s Good News is by telling God’s Story from Creation to "
+"Judgement - from the beginning of humankind all the way to the end of this "
+"age."
+msgstr ""
+"Mid ka mid ah waddooyinka Warka Wanaagsan ee Ilaah dadka loola wadaago ayaa "
+"waxa ay tahay iyada oo la sheego qisada Abuuristii illaa Xukunka - laga soo "
+"bilaabo bilowgii aadanaha illaa laga soo gaadho dhammaadka waqtiga."
+
+#: template-zume-course.php:1118
+msgid "Zúme Video Scripts: Creation to Judgement"
+msgstr "Qoraallada Muuqaalka Zúme: Abuuristii iyo Xukunka"
+
+#: template-zume-course.php:1127
+msgid "What do you learn about mankind from this story?"
+msgstr "Maxaad sheekadan dhexdeeda kaga baratay wax ku saabsan aadanaha?"
+
+#: template-zume-course.php:1128
+msgid "What do you learn about God?"
+msgstr "Maxaad baratay oo ku saabsan Ilaah?"
+
+#: template-zume-course.php:1129
+msgid ""
+"Do you think it would be easier or harder to share God's Story by telling a "
+"story like this?"
+msgstr ""
+"Ma u malaynaysaa inay sahlanaan lahayd ama adkaan lahayd iyada oo qisooyinka "
+"Ilaah sidan dadka loola wadaagayo?"
+
+#: template-zume-course.php:1141
+msgid "PRACTICE SHARING GOD'S STORY (45min)"
+msgstr "DHAQANGELI ADIGA DADKA LA WADAAGAYA QISOOYINKA ILAAH (45daqiiqo)"
+
+#: template-zume-course.php:1147
+msgid ""
+"Break into groups of two or three people and spend the next 45 minutes "
+"practicing telling God's Story using the Activity instructions on page 13 of "
+"your Zúme Guidebook."
+msgstr ""
+"Kooxo isku qaybiya labo ama saddex ah idinka oo 45 daqiiqadood ee soo socda "
+"ku qaadanaya inaad sheegtaan Ilaah Qisooyinkiisa idinka oo adeegsanaya "
+"tilmaamaha bogga 13 ee Buuggahagaha Zúme."
+
+#: template-zume-course.php:1167
+msgid "ZÚME TOOLKIT - BAPTISM"
+msgstr "QALABKA ZÚME - BAABTIIS"
+
+#: template-zume-course.php:1169
+msgid ""
+"Jesus said, “Go and make disciples of all nations, BAPTIZING them in the "
+"name of the Father and of the Son and of the Holy Spirit…”"
+msgstr ""
+"Ciise Wuxuu yidhi, “Taga, oo quruumaha oo dhan xer ka dhiga, oo ku BAABTIISA "
+"magaca Aabbaha iyo Wiilka iyo Ruuxa Quduuskaa…”"
+
+#: template-zume-course.php:1171
+msgid ""
+"Find the \"Baptism\" section in your Zúme Guidebook, and listen to the audio "
+"below."
+msgstr ""
+"Ka hel the \"Baabtiis\" qaybta Buuggahagaha ee Zúme, oo dhegayso codaynta "
+"hoose."
+
+#: template-zume-course.php:1189
+msgid "Zúme Video Scripts: Baptism"
+msgstr "Qoraallada Muuqaalka Zúme: Baabtiis"
+
+#: template-zume-course.php:1197
+msgid "Have you ever baptized someone?"
+msgstr "Miyaad weligaa baabtiistay qof?"
+
+#: template-zume-course.php:1198
+msgid "Would you even consider it?"
+msgstr "Miyaad xitaa tixgelin tu samaysay?"
+
+#: template-zume-course.php:1199
+msgid ""
+"If the Great Commission is for every follower of Jesus, does that mean every "
+"follower is allowed to baptize others? Why or why not?"
+msgstr ""
+"Haddii Amarka Weyn laga doonayo qof kasta oo Ciise rumaysan, taas ma waxaa "
+"loola jeedaa in rumayste kasta loo oggol yahay inuu kuwa kale baabtiiso? "
+"Maxay ku tahay maxaanay se ku ahayn?"
+
+#: template-zume-course.php:1207
+msgid "IMPORTANT REMINDER - Have you been baptized?"
+msgstr "XUSUUSIN KUHIIIM AH - Miyaa weligaa lagu baabtiisay?"
+
+#: template-zume-course.php:1209
+msgid ""
+"If not, then we encourage you to plan this before even one more session of "
+"this training. Invite your group to be a part of this important day when you "
+"celebrate saying \"yes\" to Jesus."
+msgstr ""
+"Haddanay ahayn, waxaan kugu dhiirri gelinaynaa inaad tan sii qorshaysatid "
+"inta aanu iman tababbar kale oo kulankan ah. Kooxdaada ku casuun inay kasoo "
+"qayb galaan maalintan muhiimka ah marka aad u dabbaal degaysid ee aad Ciise "
+"ku leedahay \"haa\"."
+
+#: template-zume-course.php:1224
+msgid "Congratulations on finishing Session 3! "
+msgstr "Hambalyo waxaad dhammaysay Kulankii 3!"
+
+#: template-zume-course.php:1232
+msgid ""
+"Spend time this week practicing God's Story, and then share it with at least "
+"one person from your List of 100 that you marked as \"Unbeliever\" or "
+"\"Unknown.\""
+msgstr ""
+"Qaado wakhti toddobaadkan aad dhaqan gelinaysid Qisooyinka Ilaah, kaddibna "
+"la wadaag hal qof oo Taxa 100-ka kuugu jirta ee aad ku "
+"calaamadisay \"Rumaysad Laawe\" ama \"Lama Yaqaan.\""
+
+#: template-zume-course.php:1239
+msgid ""
+"Ask God who He wants you to train to use the Creation to Judgment story (or "
+"some other way to share God's Story). Share this person's name with the "
+"group before you go."
+msgstr ""
+"Ilaah weyddiiso kan uu kaa doonayo inaad tababbartid adigoo adeegsanaya "
+"sheekada Abuuristii iyo Xukunka (ama waddo kale oo Qisooyinka Ilaah dadka "
+"lagula wadaago. Qofkan magaciisa la wadaag kooxda inta aadan bixin ka hor."
+
+#: template-zume-course.php:1251
+msgid ""
+"IMPORTANT REMINDER - Your group will be celebrating the Lord's Supper next "
+"session. Be sure to remember the supplies (bread and wine / juice)."
+msgstr ""
+"XUSUUSIN MUHIIM AH - Kooxdaadu waxa ay u dabbaal degaysaa Cashadii Rabbiga "
+"kulanta soo socda. Ha iska illaawin qalabkii aad isticmaali lahayd sida "
+"[roodhidii canabkii/ ama sharaabkii)."
+
+#: template-zume-course.php:1278
+msgid ""
+"You were asked to share God’s Story with at least one person from your List "
+"of 100 that you marked as \"Unbeliever\" or \"Unknown.\""
+msgstr ""
+"Waxaa lagaa dalbanayaa inaad Qisooyinka Ilaah la wadaag hal qof oo Taxa 100-"
+"ka kuugu jirta ee aad ku calaamadisay \"Rumaysad Laawe\" ama \"Lama Yaqaan.\""
+
+#: template-zume-course.php:1281
+msgid ""
+"You were encouraged to train someone to use the Creation to Judgement story "
+"(or some other way to share God’s Story) with someone."
+msgstr ""
+"Waxaa lagugu dhiirri geliyey inaad qof ku tababbartidadeegsanaya sheekada "
+"Abuuristii iyo Xukunka (ama waddo kale oo Qisooyinka Ilaah) dadka lagula "
+"wadaago."
+
+#: template-zume-course.php:1300
+msgid ""
+"In this session, you'll learn how God's plan is for every follower to "
+"multiply! You’ll discover how disciples multiply far and fast when they "
+"start to see where God’s Kingdom isn’t. And, you'll learn another great tool "
+"for inviting others into God's family is as simple as telling our story."
+msgstr ""
+"Kulankan, waxa aan ku baran doonnaa Ilaah qorshihiisa ah in rumaystaashu ay "
+"bataan! Waxa aad daaha ka qaadi doontaan sida ay xertu u dhaqso ugu badati "
+"meel aan Boqortooyada Ilaah laga aqoon. Oo waxaad baran doontaan hab kale oo "
+"kuwa kale loogu casumayno in ay dadka Ilaah ka mid noqdaan oo u fudud sidii "
+"sheegiddii qisada oo kale."
+
+#: template-zume-course.php:1322
+msgid "ZÚME TOOLKIT - 3-MINUTE TESTIMONY"
+msgstr "QALABKA ZÚME - MARKHAATIFUR 3-DAQIIQO AH"
+
+#: template-zume-course.php:1324
+msgid ""
+"As followers of Jesus, we are “witnesses\" for Him, because we “testify” "
+"about the impact Jesus has had on our lives. Your story of your relationship "
+"with God is called your Testimony. It's powerful, and it's something no one "
+"can share better than you."
+msgstr ""
+"Haddii aad rumaystayaasha Ciise, waxa aad tihiin markhaati fur - "
+"“caddayanaya” saamayntii uu Ciise noloshiinna ku dhex yeeshay. Sheekadiinna "
+"ku saabsan xidhiidhka aad Ilaah la leedihiin ayaa ah markhaatifurkaaga.Waa "
+"mid awood badan oo aanayn jidhin cid sidaasa oo kale qof ula wadaagi karta."
+
+#: template-zume-course.php:1326
+msgid ""
+"Find the \"3-Minute Testimony\" section in your Zúme Guidebook, and listen "
+"to the audio below."
+msgstr ""
+"Ka hel \"Markhaatifur 3-Daqiiqo ah\" qaybta Buuggahagaha Zúm, oo dhegayso "
+"codaynta hoose."
+
+#: template-zume-course.php:1345
+msgid "Zúme Video Scripts: Testimony"
+msgstr "Qoraallada Muuqaalka Zúme: Markhaatifur"
+
+#: template-zume-course.php:1356
+msgid "PRACTICE SHARING YOUR TESTIMONY (45min)"
+msgstr "DHAQANGELI ADIGA DADKA LA WADAAGAYA QISOOYINKA ILAAH (45daqiiqo)"
+
+#: template-zume-course.php:1364
+msgid ""
+"Break into groups of two or three and and spend the next 45 minutes "
+"practicing sharing your Testimony using the Activity instructions on page 15 "
+"of your Zúme Guidebook."
+msgstr ""
+"Kooxo isku qaybiya labo ama saddex ah idinka oo 45 daqiiqadood ee soo socda "
+"ku qaadanaya inaad markhaatifurkiinna wadaagtaan idinkoo adeegsanaya "
+"tilmaamaha ku jira bogga 15 ee Buuggahagaha Zúme."
+
+#: template-zume-course.php:1386
+msgid ""
+"What is God's greatest blessing for His children? Making disciples who "
+"multiply!"
+msgstr ""
+"Maxay tahay Ilaah barakadiisa weyn ee uu Carruurtiisa u hayo? In la sameeyo "
+"xer badata!"
+
+#: template-zume-course.php:1388
+msgid ""
+"What if you could learn a simple pattern for making not just one follower of "
+"Jesus but entire spiritual families who multiply for generations to come?"
+msgstr ""
+"Ka warran haddii aad baratid qaab fudud oo aan lagu samaynayn qof keliya "
+"inuu Ciise raaco balse ah in jiilalka soo socda la helo qoysas ruuxi ah oo "
+"bata?"
+
+#: template-zume-course.php:1407
+msgid "Zúme Video Scripts: Greatest Blessing"
+msgstr "Qoraallada Muuqaalka Zúme: Barakada ugu Weyn"
+
+#: template-zume-course.php:1418
+msgid ""
+"Is this the pattern you were taught when you first began to follow Jesus? If "
+"not, what was different?"
+msgstr ""
+"Kani ma qaabkii lagu baraybaa markii ugu horraysay ee aad bilowday inaad "
+"Ciise raacdid? Haddaanay ahayn, muxuu ahaa farqigu?"
+
+#: template-zume-course.php:1420
+msgid ""
+"After you came to faith, how long was it before you began to disciple others?"
+msgstr ""
+"Markii aad iimaanka qaadatay kaddib, intee in le'eg ayey ahayd markii aad "
+"bilowday inaad xer ka dhigtid kuwa kale?"
+
+#: template-zume-course.php:1421
+msgid ""
+"What do you think would happen if new followers started sharing and "
+"discipling others, immediately?"
+msgstr ""
+"Maxaad u malaynaysaa inay dhacayaan haddii rumayste cusub uu bilaabo inuu "
+"durbadiiba la wadaago oo uu qaar kale xer ka dhigo?"
+
+#: template-zume-course.php:1443
+msgid ""
+"What do ducklings have to do with disciple making? They lead and follow at "
+"the same time."
+msgstr ""
+"Maxaa horkacayaasha laga doonayaa inay ka qabtaan xer samaynta? Hal mar ayey "
+"wax hoggaamiyaan lana hoggaamiyaa."
+
+#: template-zume-course.php:1462
+msgid "Zúme Video Scripts: Duckling Discipleship"
+msgstr "Qoraallada Muuqaalka Zúme: Horkicidda Xernimada"
+
+#: template-zume-course.php:1473
+msgid ""
+"What is one area of discipleship (reading/understanding the Bible, praying, "
+"sharing God's Story, etc.) that you want to learn more about? Who is someone "
+"that could help you learn?"
+msgstr ""
+"Muxuu yahay halka boos ee ka midka ah xernimada (akhrinta/fahanka Baybalka, "
+"salaad, la wadaagidda Qisooyinka Ilaah, iwm.) ee aad adigu doonaysid inaad "
+"wax badan ka baratid? Waa kuma qofka ku caawin karaa?"
+
+#: template-zume-course.php:1475
+msgid ""
+"What is one area of discipleship that you feel you could share with others? "
+"Who is someone that you could share with?"
+msgstr ""
+"Waa maxay hasha meele aad dareesan tahay inaad kuwa kale xernimada kala "
+"wadaagtid? Waa kuma qofka aad la wadaagaysid?"
+
+#: template-zume-course.php:1496
+msgid "Have you ever stopped to think about where God's Kingdom... isn't?"
+msgstr ""
+"Weligaa ma joojisay inaad ka fakartid meel aanay Boqortooyada Ilaah ... ka "
+"jirin?"
+
+#: template-zume-course.php:1498
+msgid ""
+"Have you ever visited a home or a neighborhood or even a city where it "
+"seemed as if God was just... missing? These are usually the places where God "
+"wants to work the most."
+msgstr ""
+"Weligaa ma booqatay guri ama deris ama magaalo kuwaasoo kuula muuqday sidii "
+"in iyaga Ilaah ay ... waayeen? Meelahaasi waa halka Ilaah rabo inuu sida "
+"aadka ah uga shaqeeyo."
+
+#: template-zume-course.php:1517
+msgid "Zúme Video Scripts: Eyes to See"
+msgstr "Qoraallada Muuqaalka Zúme: Indho Wax Lagu Arko"
+
+#: template-zume-course.php:1526
+msgid ""
+"Who are you more comfortable sharing with -- people you already know or "
+"people you haven't met, yet?"
+msgstr ""
+"Kuwee ayaa kuugu fiican la wadaagista -- dad aad horay u garanaysay ama dad "
+"aadan weligaa la kulmin, marna?"
+
+#: template-zume-course.php:1528
+msgid "Why do you think that is?"
+msgstr "Sababtee ayaad ugu malaynaysaa inay saa tahay?"
+
+#: template-zume-course.php:1529
+msgid ""
+"How could you get better at sharing with people you're less comfortable with?"
+msgstr ""
+"Sidee ayaad ugu fiicnaan kartaa inaad wax la wadaagtid dad aadan ku "
+"faraxsanayn?"
+
+#: template-zume-course.php:1548
+msgid "ZÚME TOOLKIT - THE LORD'S SUPPER"
+msgstr "QALABKA ZÚME - CASHADA RABBIGA"
+
+#: template-zume-course.php:1550
+msgid ""
+"Jesus said, “I am the living bread that came down from heaven. Whoever eats "
+"this bread will live forever. This bread is my flesh, which I will give for "
+"the life of the world.”"
+msgstr ""
+"Ciise wuxuu yiri - “Anigu waxaan ahay kibista nool ee samada ka soo degtay. "
+"Haddii qof uun kibistan cuno, weligiis wuu noolaan doonaa. Oo kibistaan siin "
+"doonaa waa jidhkayga, nolosha dunida aawadeed.”"
+
+#: template-zume-course.php:1552
+msgid ""
+"Find \"The Lord's Supper\" section in your Zúme Guidebook, and listen to the "
+"audio below."
+msgstr ""
+"Ka hel \"Cashada Rabbiga\" qaybta ku jirta Buuggahagaha Zúme, oo dhegayso "
+"qodaynta hoose."
+
+#: template-zume-course.php:1571
+msgid "Zúme Video Scripts: Lord's Supper"
+msgstr "Qoraallada Muuqaalka Zúme: Cashada Rabbiga"
+
+#: template-zume-course.php:1582
+msgid "PRACTICE THE LORD'S SUPPER (10min)"
+msgstr "DHAQANGELI CASHADA RABBIGA (10daqiiqo)"
+
+#: template-zume-course.php:1590
+msgid ""
+"Spend the next 10 minutes celebrating The Lord's Supper with your group "
+"using the pattern on page 15 of your Zúme Guidebook."
+msgstr ""
+"Qaado 10 daqiiqadood oo aad kooxdaada kula dabbaal degtid Cashada Rabbiga "
+"adiga oo isticmaalaya qaabka ku jira boggaa 15 ee Buuggahagaha Zúme."
+
+#: template-zume-course.php:1606
+msgid "Congratulations on finishing Session 4!"
+msgstr "Hambalyo waxaad dhammaysay Kulankii 4!"
+
+#: template-zume-course.php:1615
+msgid ""
+"Spend time this week practicing your 3-Minute Testimony, and then share it "
+"with at least one person from your List of 100 that you marked as "
+"\"Unbeliever\" or \"Unknown.\""
+msgstr ""
+"Qaado wakhti aad toddobaadkan ku dhaqan gelinaysid Markhaatifurkaaga 3-"
+"Daqiiqo, dabadeed ugu yaraan hal qof kala wadaag Taxaagii 100-ka ee aad ku "
+"calaamadaysatay \"rumaysad laawe\"ama \"lama yaqaan.\""
+
+#: template-zume-course.php:1622
+msgid ""
+"Ask God who He wants you to train with the 3-Minute Testimony tool. Share "
+"this person's name with the group before you go."
+msgstr ""
+"Ilaah weyddiiso kan uu kaa doonayo inaad ku tababbartid qalabka ah "
+"Markhaatifurka 3-Daqiiqo. La wadaag kooxda qofka magaciisa inta aadan bixin "
+"ka hor."
+
+#: template-zume-course.php:1655
+msgid "At the end of the last session, everyone in your group in two ways:"
+msgstr ""
+"Dhammaadka kulanka ugu dambeeya, mid kasta oo kooxda ka mid ahu labo uun buu "
+"mid raacayaa:"
+
+#: template-zume-course.php:1658
+msgid ""
+"You were asked to share your 3-Minute Testimony with at least one person on "
+"your List of 100."
+msgstr ""
+"Waxaa lagaa dalbaday inaad Markhaatifurkaaga 3-Daqiiqo ugu yaraan la "
+"wadaagtid hal qof oo kuugu jira taxaagii 100-ka."
+
+#: template-zume-course.php:1660
+msgid ""
+"You were encouraged to train someone else with the 3-Minute Testimony tool."
+msgstr ""
+"Waxaa lagugi xoojiyey inaad qof kale ku tababbartid agabka Markhaatifurka 3-"
+"Daqiiqo."
+
+#: template-zume-course.php:1676
+msgid ""
+"In this session, you’ll learn how Prayer Walking is a powerful way to "
+"prepare a neighborhood for Jesus, and you'll learn a simple but powerful "
+"pattern for prayer that will help you meet and make new disciples along the "
+"way."
+msgstr ""
+"Kulankan, waxa aan ku baran doonnaa sida ducada iyada oo la socdo la "
+"ducaysto waana nidaam deriska loogu yeerayo in ay Ciise u yimaadaan, waxaan "
+"kaloo baran doonnaa qaab fudud balse xoog leh oo annaga oo soconna aan ugu "
+"ducayn karno kuna heli karno xer aad u badan."
+
+#: template-zume-course.php:1686 template-zume-course.php:1947
+msgid "LISTEN AND READ ALONG (15min)"
+msgstr "DHEGAYSO OO AKHRISO(15daqiiqo)"
+
+#: template-zume-course.php:1694
+msgid "ZÚME TOOLKIT - PRAYER WALKING"
+msgstr "QALABKA ZÚME - SALAADDA SOCODKA"
+
+#: template-zume-course.php:1696
+msgid ""
+"Prayer Walking is a simple way to obey God’s command to pray for others. And "
+"it's just what it sounds like - praying to God while walking around!"
+msgstr ""
+"Socod ku ducaysigu waa hab fudud oo adeecayo amarksii Ilaah ee ahaa in kuwa "
+"kale loo duceeyo. Tani waxaa weeyaan in dadka Ilaah loo baryo marka la "
+"soconayo!"
+
+#: template-zume-course.php:1698
+msgid ""
+"Find the \"Prayer Walking\" section in your Zúme Guidebook, and listen to "
+"the audio below."
+msgstr ""
+"Ka hel \"Salaadda Socodka\" qaybta ku jirta Buuggahagaha Zúme, oo dhegayso "
+"codaynta hoose."
+
+#: template-zume-course.php:1717
+msgid "Zúme Video Scripts: Prayer Walking"
+msgstr "Qoraallada Muuqaalka Zúme: Salaadda Socodka"
+
+#: template-zume-course.php:1737
+msgid ""
+"Disciple-making can be rapidly advanced by finding a person of peace, even "
+"in a place where followers of Jesus are few and far between. How do you know "
+"when you have found a person of peace and what do you when you find them?"
+msgstr ""
+"Xer sameyntu waxay si dhakhso leh u horumari kartaa marka la helo qof "
+"nabadeed, xatta meesha rumeystayasha Ciise ee aay ku yar yihiin kuna kala "
+"fog yihiin. Sidee baad ku garan karta inaad heshay qof nabadeed maxaanad "
+"sameyn markaad hesho?"
+
+#: template-zume-course.php:1756
+msgid "Zúme Video Scripts: Person of Peace"
+msgstr "Qoraallada Muuqaalka Zúme: Qof Nabadeed"
+
+#: template-zume-course.php:1766
+msgid ""
+"Can someone who has a \"bad reputation\" (like the Samaritan woman or the "
+"demon-possessed man in the Gadarenes) really be a Person of Peace? Why or "
+"why not?"
+msgstr ""
+"Miyaad qof \"sumcad xad xum leh\" ( sida haweenaydii reer Saamariya ama "
+"ninki jinka qabay ee reer Gadara'ii) runtii noqon karan qof nabadeed? "
+"sabaabtee ayeey u tahay ama aaney u aheeyn?"
+
+#: template-zume-course.php:1769
+msgid ""
+"What is a community or segment of society near you that seems to have little "
+"(or no) Kingdom presence? How could a Person of Peace (someone who is OPEN, "
+"HOSPITABLE, KNOWS OTHERS and SHARES) accelerate the spread of the Gospel in "
+"that community?"
+msgstr ""
+"Waa tee bulshada ama qaybta shacabka ka mid ah ee in yar ka og (ama aanan) "
+"ogayba Boqortooyada> sidee baa qofka nabadeed ee ah (mid FURFURAN, SOO "
+"DHAWAYN LEH, KUWA KALE YAQAAN oo WAX LA WADAAGA) uu bulshadaas dhexdeeda ugu "
+"socodsiin karaa faafinta Injiilka?"
+
+#: template-zume-course.php:1783
+msgid "PRACTICE THE B.L.E.S.S. PRAYER (15min)"
+msgstr "DHAQANGELIYA DUCADA B.L.E.S.S. (15daqiiqo)"
+
+#: template-zume-course.php:1791
+msgid ""
+"Break into groups of two or three and spend the next 15 minutes practicing "
+"the B.L.E.S.S. Prayer using the pattern on page 17 of your Zúme Guidebook. "
+"Practice praying the five areas of the B.L.E.S.S. Prayer for someone AND "
+"practice how you would train others to understand and use the B.L.E.S.S. "
+"Prayer, too."
+msgstr ""
+"Kooxo isu qaybiya aha labo ama saddex oo 15 ka daqiiqo ee soo socda ficil "
+"ahaan u sameeya ducada B.L.E.S.S. idinka oo adeegsanaya qaabka ku jira bogga "
+"17 ee Buuggaaga hagaha ee Zúme. Dhaqan geliya inaad u ducaysaan shantii "
+"meelood ee habka B.L.E.S.S. Dadka u ducee oo ficil ahaan u samee sidii aad "
+"kuwa kale u tababbari lahayd inay fahmaan faa'iidada ku jirta adeegiga habka "
+"B.L.E.S.S. Sidoo kale ducayso."
+
+#: template-zume-course.php:1804
+msgid "PRACTICE PRAYER WALKING (60-90min)"
+msgstr "DHAQANGELIYA SALAADDA SOCODKA (60-90daqiiqo)"
+
+#: template-zume-course.php:1808
+msgid "ACTIVITY"
+msgstr "HAWLQABAD"
+
+#: template-zume-course.php:1810
+msgid ""
+"Break into groups of two or three and go out into the community to practice "
+"Prayer Walking."
+msgstr ""
+"Isu qaybiya kooxo ah labo ama saddex ah oo bulshada dhex aada si aad ficil "
+"ahaan ugu soo samaysaan Salaadda Socodka."
+
+#: template-zume-course.php:1811
+msgid ""
+"Choosing a location can be as simple as walking outside from where you are "
+"now, or you could plan to go to a specific destination."
+msgstr ""
+"In meel la doorto waxa ay u sahlan tahay si la mid ah sida adiga meesha aad "
+"markaas maraysid, ama meel gaar ah oo aad tagtid ayaad dooran kartaa."
+
+#: template-zume-course.php:1812
+msgid "Go as God leads, and plan on spending 60-90 minutes on this activity."
+msgstr ""
+"U bax sidii Ilaah kugu hoggaamiyo, oo qorshayso inaad 60-90 daqiiqadood ku "
+"soo bixin waxqabadyadan."
+
+#: template-zume-course.php:1825
+msgid "The session ends with a prayer walking activity."
+msgstr "Kulanku waxaa uu ku dhammaanayaa waxqabadka salaadda socodka."
+
+#: template-zume-course.php:1827
+msgid ""
+"Read through the Obey, Share, and Pray sections, below, before you head out!"
+msgstr ""
+"Akhri qaybaha Addeecista, Lawadaagidda, iyo Salaadda, ee hoose, intaadan sii "
+"gudbin!"
+
+#: template-zume-course.php:1834
+msgid ""
+"Spend time this week practicing Prayer Walking by going out alone or with a "
+"small group at least once."
+msgstr ""
+"Wakhtigan ku qaado Salaadda Socodka adiga oo keli ahaantaa u baxaya ama hal "
+"mar oo qura koox yar raacaya."
+
+#: template-zume-course.php:1841
+msgid ""
+"Spend time asking God who He might want you to share the Prayer Walking tool "
+"with before your group meets again. Share this person’s name with the group "
+"before you go."
+msgstr ""
+"Qaado wakhti aad Ilaah weyddiisanaysid kan uu kaa doonayo inaad la wadaagtid "
+"nidaamka Salaadda Socodka ka hor inta aanay kooxdaadu kulmin. qofkan "
+"magaciisa la wadaag kooxda inta aadan bixin ka hor."
+
+#: template-zume-course.php:1848
+msgid ""
+"Before you go out on your Prayer Walking activity, be sure to pray with your "
+"group to end your time together. Thank God that He loves the lost, the last "
+"and the least - including us! Ask Him to prepare your heart and the heart of "
+"those you'll meet during your walk to be open to His work."
+msgstr ""
+"Inta aadan u bixin Salaaddaada Socodka ka hor, hubso inaad kooxdaada la "
+"ducaysatid si aad wakhtigiinna u wada dhammaysataan. Ilaah uga mahad celi "
+"inuu jecel yahay kuwa lunsan, ugu dambayan iyo ugu yaraanba - annagana ku "
+"dhahoo! Isaga weyddiiso inuu qalbigaaga iyo qalbiyada kuwa aad socodkaaga "
+"kula kulmi doontid u diyaariyo inay noqdaan kuwa u furfuran Shaqadiisa."
+
+#: template-zume-course.php:1875
+msgid "You were asked to spend some time Prayer Walking"
+msgstr "Waxaa lagaa dalbaday inaad wakhti ku qaadatid Salaadda Socodka"
+
+#: template-zume-course.php:1876
+msgid "You were encouraged to share the Prayer Walking tool with someone else."
+msgstr ""
+"Waxaa lagugu dhiirri geliyey inaad habka Salaadda Socodka la wadaagtid qof "
+"kale."
+
+#: template-zume-course.php:1885
+msgid ""
+"Pray and thank God for the results, ask Him to help when you find it hard to "
+"obey, and invite His Holy Spirit to lead your time together."
+msgstr ""
+"Ducee ooIlaah uga mahad naq natiijooyinka, ka dalbo inuu ku caawiyo marka "
+"addeecistu adag tahay, oo weyddiiso Ruuxiisa Qudduuska ah inuu ku hoggaamiyo."
+
+#: template-zume-course.php:1892
+msgid ""
+"In this session, you’ll learn how God uses faithful followers - even if "
+"they're brand new - much more than ones with years of knowledge and training "
+"who just won't obey. And you'll get a first look at a way to meet together "
+"that helps disciples multiply even faster."
+msgstr ""
+"Kulankan dhexdiisa, waxa aad ku baran doontaa sida Ilaah u adeegsado "
+"rumaystayaasha aamminka ah - xataa haddii ay yihiin kuwo cusub - weliba in "
+"ka badan kuwa aqoonta iyo tababbarka leh ee sannado badan ahaa balse aan "
+"dhab u addeecin. Waxaad raadinaysaa marka hore siday u wada kulmi lahaayeen "
+"taasoo ka caaminaysa inay xertu dhakhso u bataan."
+
+#: template-zume-course.php:1911
+msgid ""
+"When we help multiply disciples, we need to make sure we're reproducing the "
+"right things. It's important what disciples know - but it's much more "
+"important what they DO with what they know."
+msgstr ""
+"Marka aan badinno xerta, waxaan u baahan nahay inaan isa hubinno inaan "
+"waxyaabo wanaagsan soo saarayno. Waxa ay xertu ogtahay waa muhiin - balse "
+"waxaa ka sii muhiimsan sida ay u SAMAYANAYAAN waxa ay garanayaan."
+
+#: template-zume-course.php:1930
+msgid "Zúme Video Scripts: Faithfulness"
+msgstr "Qoraallada Muuqaalka Zúmes: Aamminnimo"
+
+#: template-zume-course.php:1937
+msgid ""
+"Think about God's commands that you already know. How \"faithful\" are you "
+"in terms of obeying and sharing those things?"
+msgstr ""
+"Ka fikir Ilaah amarradiisa aad horay u tiqiin. Sidee ayaad \"aammin\" ugu "
+"tahay waxyaabahan addeecistooda iyo la wadaagiddooda kuwa kale?"
+
+#: template-zume-course.php:1955
+msgid "ZÚME TOOLKIT - 3/3 GROUPS FORMAT"
+msgstr "QALABKA ZÚME NIDAAMKA KOOXAHA - 3/3"
+
+#: template-zume-course.php:1957
+msgid ""
+"Jesus said, “Where two or three have gathered together in My name, I am "
+"there in their midst.”"
+msgstr ""
+"Ciise wuxuu yiri, “Meeshii laba ama saddex qof ay magacayga isugu soo "
+"ururaan, halkaas anigu dhexdoodaan joogaa.”"
+
+#: template-zume-course.php:1959
+msgid ""
+"Find the \"3/3 Group Format\" section in your Zúme Guidebook, and listen to "
+"the audio below."
+msgstr ""
+"Ka hel \"Nidaamka Kooxaha 3/3\" qaybta ku jirta Buuggaaga hagaha Zúme, oo "
+"dhegayso codaynta hoose."
+
+#: template-zume-course.php:1978
+msgid "Zúme Video Scripts: 3/3 Group"
+msgstr "Qoraallada Muuqaalka Zúme: Kooxda 3/3"
+
+#: template-zume-course.php:1987
+msgid ""
+"Did you notice any differences between a 3/3 Group and a Bible Study or "
+"Small Group you've been a part of (or have heard about) in the past? If so, "
+"how would those differences impact the group?"
+msgstr ""
+"Miyaad ogaatay wax farqi ah oo u dhexeeya kooxda 3/3 iyo qaabka Barashada "
+"baybalka ama Koox Yar oo aad ka mid ahayd (ama aad maqashay) mar hore? "
+"Haddii ay sidaas tahay, sideebay farqiyadaasi kooxda u saameeyeen?"
+
+#: template-zume-course.php:1990
+msgid "Could a 3/3 Group be considered a Simple Church? Why or why not?"
+msgstr ""
+"Miyaa Kooxda 3/3 loo tix gelin karaa sidii Kaniisad Yar? MAxay ku tahay "
+"amayse ku ahayn?"
+
+#: template-zume-course.php:2003
+msgid "MODEL 3/3 GROUP"
+msgstr "KOOXDA 3/3 EE TUSAALAHA AH"
+
+#: template-zume-course.php:2011
+msgid ""
+"A 3/3 Group is a way for followers of Jesus to meet, pray, learn, grow, "
+"fellowship and practice obeying and sharing what they've learned. In this "
+"way a 3/3 Group is not just a small group but a Simple Church."
+msgstr ""
+"Kooxda 3/3 waa hab ay rumaystayaasha Ciise ku wada kulmaan, ducaystaan, "
+"bartaan, koraan, koraan, weheshadaan oo ay ku dhaqan geliyaan wixii ay wada "
+"barteen. habkani ma ahan koox yar ee waa Kaniisad Yar."
+
+#: template-zume-course.php:2013
+msgid ""
+"In the following video, you'll see a model 3/3 Group meet together and "
+"practice this format."
+msgstr ""
+"Muuqaalkan soo socda dhexdiisa, waxaad ku arki doontaan qaabka ay Kooxda 3/3 "
+"u wada kulmaan oo ay nidaamkan u sameeyaan."
+
+#: template-zume-course.php:2015
+msgid ""
+"Find the \"3/3 Groups Format\" section in your Zúme Guidebook, and watch the "
+"video below."
+msgstr ""
+"Ka hel \"Nidaamka Kooxaha 3/3\" qaybta ku jirta Buuggaaga hagaha Zúme, oo "
+"daawo muuqaalka hoose."
+
+#: template-zume-course.php:2041
+msgid "Congratulations on finishing Session 6!"
+msgstr "Hambalyo waxaad dhammaysay Kulankii 6!"
+
+#: template-zume-course.php:2050
+msgid ""
+"Spend time this week practicing Faithfulness by obeying and sharing at least "
+"one of God's commands that you already know."
+msgstr ""
+"Qaado wakhti toddobaadkan aad ku dhaqan gelinaysid Aamminnimada adiga oo "
+"addeecaya oo la wadaagaya ugu yaraan lmid ka amarradii Ilaah ee aad horay u "
+"tiqiin."
+
+#: template-zume-course.php:2057
+msgid ""
+"Think about what you have heard and learned about Faithfulness in this "
+"session, and ask God who He wants you to share it with. Share this person’s "
+"name with the group before you go."
+msgstr ""
+"Ka fakar wixii aad maqashay ee aad ka Aamminnimada kulankan dhexdiisa, oo "
+"Ilaah weyddiiso kan uu kaa doonayo inaad la wadaagtid. Kooxda la wadaag "
+"qofka magaciisa inta aadan tegin ka hor."
+
+#: template-zume-course.php:2064
+msgid ""
+"Thank God for His Faithfulness - for fulfilling every promise He's ever "
+"made. Ask Him to help you and your group become even more Faithful to Him."
+msgstr ""
+"Ilaah Aamminnimadiisa uga mahad celi - inuu fuliyo ballan kasta oo uu qaado. "
+"Ka dalbo inuu adiga iyo kooxdaada idinka caawiyo inaad Isaga aamminiin u "
+"ahaataan."
+
+#: template-zume-course.php:2092
+msgid ""
+"You were asked to practice Faithfulness by obeying and sharing one of God's "
+"commands."
+msgstr ""
+"Waxaa lagaa dalbaday inaad dhaqan gelisid Aamminnimada oo aad mid ka mid ah "
+"Ilaah amarradiisa dadka la wadaagtid."
+
+#: template-zume-course.php:2095
+msgid ""
+"You were encouraged to share the importance of Faithfulness with someone "
+"else."
+msgstr ""
+"Waxaa lagugu xoojiyey inaad muhiimadda Aamminnimada qof kale la wadaagtid."
+
+#: template-zume-course.php:2105
+msgid ""
+"Pray and thank God for the group's commitment to faithfully following Jesus "
+"and invite God's Holy Spirit to lead your time together."
+msgstr ""
+"Ducee oo Ilaah uga mahad celi sidii aamminka ahayd ee uu kooxdu Ciise u "
+"raaceen Ruuxiisa Qudduuska ahna ku casuun inuu waqtigiinna idinku hoggaamiyo."
+
+#: template-zume-course.php:2112
+msgid ""
+"In this session, you’ll learn a Training Cycle that helps disciples go from "
+"one to many and turns a mission into a movement. You'll also practice the "
+"3/3 Groups Format and learn how the way you meet can impact the way you "
+"multiply."
+msgstr ""
+"Kulankan,waxa aad ku baran doontaa hab lagu magacaabo Tababbarka Wareegga ah "
+"kaasoo xerta ka caawinaya in ay dad badan noqdaan oo ay hawlqabad weyn leh. "
+"Sidoo kale waxa aad ficil ahaan u qaban doontaa Nidaamka Kooxaha ee 3/3 oo "
+"aad ku baranaysaan in hadba sida aad u kulantaan aad u badanaysaan."
+
+#: template-zume-course.php:2131
+msgid ""
+"Have you ever learned how to ride a bicycle? Have you ever helped someone "
+"else learn? If so, chances are you already know the Training Cycle."
+msgstr ""
+"Miyaad weligaa baratay sida loo wado baaskiiladda? Miyaad weligga ka "
+"caawisay qof kale inuu barto? Hadday saas tahay, fursadahaagu waxay ka "
+"dhigan yihiin in aad taqaan Tababbarka Wareegga ah."
+
+#: template-zume-course.php:2133
+msgid ""
+"Find the \"Training Cycle\" section in your Zúme Guidebook. When you're "
+"ready, watch this video, and then discuss the questions below."
+msgstr ""
+"Ka hel \"Tababbarka Wareegga ah\" qaybta Buuggaaga Hagaha Zúme. Marka aad "
+"diyaar garoowdid, daawo Muuqaalkan, dabadeed falanqee su'aalahan hoose."
+
+#: template-zume-course.php:2152
+msgid "Zúme Video Scripts: Training Cycle"
+msgstr "Qoraallada Muuqaalka Zúme: Tababbarka Wareegga ah"
+
+#: template-zume-course.php:2160
+msgid "Have you ever been a part of a Training Cycle?"
+msgstr "Miyaad weligaa ka qayb qaadatay Tababbarka Wareegga ah?"
+
+#: template-zume-course.php:2161
+msgid "Who did you train? Or who trained you?"
+msgstr "Kee baad tababbartay? Kumaase ku tababbaray?"
+
+#: template-zume-course.php:2163
+msgid ""
+"Could the same person be at different parts of the Training Cycle while "
+"learning different skills?"
+msgstr ""
+"Miyaa isla qofkaasi joogay qaybo kale oo Tababbarka Wareegga ah ka mid ah "
+"marka xirfadaha la baranayey?"
+
+#: template-zume-course.php:2165
+msgid "What would it look like to train someone like that?"
+msgstr "Maxay u ekaan lahayd in la tababbaro qof sidaa ah?"
+
+#: template-zume-course.php:2177
+msgid "PRACTICE AND DISCUSS (90min)"
+msgstr "DHAQANGELI OO FALANQEE (90daqiiqo)"
+
+#: template-zume-course.php:2183 template-zume-course.php:2368
+#: template-zume-course.php:3058
+msgid "PRACTICE"
+msgstr "DHAQANGELI"
+
+#: template-zume-course.php:2185 template-zume-course.php:2372
+msgid ""
+"Have your entire group spend the next 90 minutes practicing the 3/3 Groups "
+"Format using the pattern on pages 19-20 in your Zúme Guidebook."
+msgstr ""
+"Kooxdaada oo dhammi 90 daqiiqadood ee soo socda ha ku qaateen in ay dhaqan "
+"geliyaan Nidaamka Kooxaha 3/3 iyaga oo adeegsanaya habka ku jira bogagga "
+"19-20 ee ku jira Buuggaaga hagaha Zúme."
+
+#: template-zume-course.php:2189
+msgid ""
+"LOOK BACK - Use last week's Session Challenges to practice \"Faithfulness\" "
+"in the Look Back section."
+msgstr ""
+"DIB U EEG - Adeegso toddobaadkii la soo dhaafay Kulanka Caqabadihiisii si "
+"aad dhaqan gelin ugu samaysid \"Aamminnimada\" qaybtan Dib u Eegista "
+"dhexdeeda."
+
+#: template-zume-course.php:2192
+msgid ""
+"LOOK UP - Use Mark 5:1-20 as your group's reading passage and answer "
+"questions 1-4 during the Look Up section."
+msgstr ""
+"BAADH - U adeegso Mark 5:1-20 qaybta akhrinta qoraalka ee kooxdaada oo ka "
+"jawaab su'aalaha 1-4 inta lagu guda jiro qaybta Baadhista."
+
+#: template-zume-course.php:2195
+msgid ""
+"LOOK FORWARD - Use questions 5, 6, and 7 in the Look Forward section to "
+"develop how you will Obey, Train and Share."
+msgstr ""
+"HORAY U WAD - Adeegso su;aalaha 5, 6, iyo 7 ee ku jira qaybta Horay U "
+"Wadidda si aad u horumarinsaad inaad addeecdaan, tababbarataan oo wadaagtaan."
+
+#: template-zume-course.php:2199 template-zume-course.php:2386
+msgid ""
+"REMEMBER - Each section should take about 1/3 (or 30 minutes) of your "
+"practice time."
+msgstr ""
+"XUSUUSNOW - Qaybtiiba waa inay qaadataa illaa 1/3 (ama 30 daqiiqo) "
+"waqtigiinna dhaqan gelinta."
+
+#: template-zume-course.php:2207
+msgid "What did you like best about the 3/3 Group? Why?"
+msgstr "Maxaad Kooxda 3/3 ugu wada jeceshahay? Sabab?"
+
+#: template-zume-course.php:2208
+msgid "What was the most challenging? Why?"
+msgstr "Muxuu ahaa wixii ugu caqabadda badnaa? Sabab?"
+
+#: template-zume-course.php:2224
+msgid "Congratulations on finishing Session 7!"
+msgstr "Hambalyo waxaad dhammaysay Kulankii 7!"
+
+#: template-zume-course.php:2233
+msgid ""
+"Spend time this week obeying, training, and sharing based on the commitments "
+"you've made during your 3/3 Group practice."
+msgstr ""
+"Qaado wakhti toddobaadkan aad ku addeecaysid, tababbaraysid, oo aad dadka "
+"kula wadaagaysid wixii aad ku qaadatay intii lagu guda jiray dhaqan gelintii "
+"Kooxda 3/3."
+
+#: template-zume-course.php:2240
+msgid ""
+"Pray and ask God who He wants you to share the 3/3 Group format with before "
+"your group meets again. Share this person’s name with the group before you "
+"go."
+msgstr ""
+"Ducayso oo Ilaah ka dalbo kan uu kaa doonayo inaad la wadaato nidaamka "
+"Kooxda 3/3 inta kooxdaadu aysan mar kale kulmin. Kooxda la wadaag qofka "
+"magaciisa inta aadan bixin ka hor."
+
+#: template-zume-course.php:2247
+msgid ""
+"Thank God that He loves us enough to invite us into His most important work "
+"- growing His family!"
+msgstr ""
+"Ilaah uga mahad celi inuu in badan ina jecel yahay oo uu inoogu yeedhay "
+"shaqadiisa muhiimka ah - inaan u korno sidii dadkiisa!"
+
+#: template-zume-course.php:2276
+msgid ""
+"You were asked to practice obeying, training, and sharing based on your "
+"commitments during 3/3 Group practice."
+msgstr ""
+"Waxaa lagaa dalbaday inaad ficil ahaan u samaysid, addeecis, tababbar iyo la "
+"wadaagis ku salaysan wixii ku jiray dhaqan gelintii Kooxda 3/3."
+
+#: template-zume-course.php:2279
+msgid "You were encouraged to share the 3/3 Group Format with someone else."
+msgstr "Waxaa lagugu xoojiyey inaad Nidaamka Kooxda 3/3 la wadaagtid qof kale."
+
+#: template-zume-course.php:2289
+msgid ""
+"Pray and thank God for giving your group the energy, the focus and the "
+"faithfulness to come so far in this training. Ask God to have His Holy "
+"Spirit remind everyone in the group that they can do nothing without Him!"
+msgstr ""
+"Ducayso oo Ilaah uga mahad celi sidii uu kooxdaada u siiyey tammartii, "
+"ujeedkii iyo aamminnimadii intii ay tababbarkan kusoo jireen. Ilaah "
+"weyddiiso in Ruuxiisa Qudduuska ahu xusuusiyo in mid walba oo kooxda ka mid "
+"ah aanu Isaga la'aantiis waxba qaban karin!"
+
+#: template-zume-course.php:2296
+msgid ""
+"In this session, you’ll learn how Leadership Cells prepare followers in a "
+"short time to become leaders for a lifetime. You'll learn how serving others "
+"is Jesus' strategy for leadership. And you'll spend time practicing as a 3/3 "
+"Group, again."
+msgstr ""
+"Kulankan, waxaan ku baran doonnaa sida ay Hoggaamiyeyaasha Unugga ahu u "
+"diyaariyaan sidii ay xertooda uga soo saari lahaayeen kuwo iyagu "
+"hoggaamiyeyaal noqda. Waxaan ku baran doonnaa ku arki doonnaa sidii kuwa "
+"kale oo loo adeegaa ay u ahayd nidaamkii qaab hoggaamineed ee Ciise Masiix. "
+"Waxaan mar kale waxan ficil ahaan u samayn doonnaa habkii koox ahaaneed ee "
+"3/3."
+
+#: template-zume-course.php:2315
+msgid ""
+"Jesus said, “Whoever wishes to become great among you shall be your servant.”"
+msgstr ""
+"Ciise wuxuu yiri, \"Ku alla kii doonaya inuu dhexdiinna u weynaado, "
+"midiidinkiinna waa inuu ahaado,\""
+
+#: template-zume-course.php:2317
+msgid ""
+"Jesus radically reversed our understanding of leadership by teaching us that "
+"if we feel called to lead, then we are being called to serve. A Leadership "
+"Cell is a way someone who feels called to lead can develop their leadership "
+"by practicing serving."
+msgstr ""
+"Ciise wuxuu si adag u tilmaamay sida fahankeenna hoggaamintu uu yahay Isaga "
+"oo ina baraya in haddii yeedhisteennu hoggaamin tahay, ay waxa naloogu "
+"yeedhay tahay imaad adeegno. Hoggaaminta Unugga ahu waxaa weeye in qofka "
+"loogu yeedhay inuu hoggaamiyo ay hoggaamintiisu adeegis tahay."
+
+#: template-zume-course.php:2319
+msgid ""
+"Find the \"Leadership Cells\" section in your Zúme Guidebook. When you're "
+"ready, watch and discuss this video."
+msgstr ""
+"Ka hel \"Hoggaaminta Unugga ah\" qaybta ku jirta Buuggaaga hagaha Zúme. Mar "
+"aad diyaar garoowdo, daawo oo falanqee muuqaalkan."
+
+#: template-zume-course.php:2337
+msgid "Zúme Video Scripts: Leadership Cells"
+msgstr "Qoraallada Muuqaalka Zúme: Hoggaaminta Unugga ah"
+
+#: template-zume-course.php:2346
+msgid ""
+"Is there a group of followers of Jesus you know that are already meeting or "
+"would be willing to meet and form a Leadership Cell to learn Zúme Training?"
+msgstr ""
+"Miyey jirtaa koox rumaystayaasha Ciise ah oo aad garanaysid in ay kulmaan "
+"ama doonaya in ay kulmaan oo Hoggaaminta Unugga ah samaysanaya si ay "
+"Tababbarka Zúme u bartaan?"
+
+#: template-zume-course.php:2348
+msgid "What would it take to bring them together?"
+msgstr "In la isku keeno maxay qaadanaysaa?"
+
+#: template-zume-course.php:2360
+msgid "PRACTICE A 3/3 GROUP SESSION (90min)"
+msgstr "DHAQANGELI KULANKA KOOXDA 3/3 (90daqiiqo)"
+
+#: template-zume-course.php:2376
+msgid ""
+"LOOK BACK - Use last session’s Obey, Train, and Share challenges to check-in "
+"with each other."
+msgstr ""
+"DIB U EEG - Adeegso habkii kulankii ugu dambeeyay ee Addeecis, Tababbar, iyo "
+"Lawadaagis wixii ka soo baxay si aad isula eegtaan."
+
+#: template-zume-course.php:2379
+msgid ""
+"LOOK UP - Use Acts 2:42-47 as your group’s reading passage and answer "
+"questions 1- 4."
+msgstr ""
+"BAADH - U adeegso Falimaha Rasuullada 2:42-47 qoraal akhrinta kooxdaada kana "
+"jawaab su'aalaha 1- 4."
+
+#: template-zume-course.php:2382
+msgid ""
+"LOOK FORWARD - Use questions 5, 6, and 7 to develop how you will Obey, Train "
+"and Share."
+msgstr ""
+"HORAY U WAD - Adeegso su'aalaha 5, 6, iyo 7 si aad u horumarisaan sidii aad "
+"u Addeci lahaydeen, Tababbari lahaydeen oo aad u Wadaagi lahaydeen."
+
+#: template-zume-course.php:2402
+msgid "Congratulations! You've completed Session 8. "
+msgstr "Hambalyo! waxaad dhammaysay Kulankii 8."
+
+#: template-zume-course.php:2411
+msgid ""
+"Spend time again this week obeying, sharing, and training based on the "
+"commitments you've made during this session's 3/3 Group practice."
+msgstr ""
+"Mar kale toddobaadkan waqkhti ku qaado addeecis, wadaag, iyo tababbar ku "
+"salaysan sidii loo sameeyay dhaqan gelintii kulankan Kooxda 3/3."
+
+#: template-zume-course.php:2418
+msgid ""
+"Pray and ask God who He wants you to share the Leadership Cell tool with "
+"before your group meets again. Share this person’s name with the group "
+"before you go."
+msgstr ""
+"Ducayso oo Ilaah weyddiiso kan uu kaa doonayo inaa la wadaagtid habka "
+"Hoggaaminta Unugga ah inta kooxdaadu aanay kulmin mar kale. La wadaag kooxda "
+"qofkan magaciisa inta aadan tegin ka hor."
+
+#: template-zume-course.php:2425
+msgid ""
+"Thank God for sending Jesus to show us that real leaders are real servants. "
+"Thank Jesus for showing us the greatest service possible is giving up our "
+"own lives for others."
+msgstr ""
+"Ilaah uga mahad celi inuu Ciise noogu soo diray inuu na tuso in "
+"hoggaamiyeyaasha runta ahu ay yihiin adeegayaasha runta ah. Ciise uga mahad "
+"celiya sidii uu inoo tusay in adeegga ugu weyni uu yahay in aan nafteenna u "
+"bixinno kuwa kale."
+
+#: template-zume-course.php:2458
+msgid ""
+"You were asked to practice Obeying, Training, and Sharing based on your "
+"commitments during last session's 3/3 Group practice."
+msgstr ""
+"Waxaa lagaa dalbaday inaad dhaqan gelisid Addeecis, Tababbar, iyo wadaagis "
+"adiga kaa timid intii lagu guda jiray kulankii ugu dambeeyay ee Kooxda 3/3."
+
+#: template-zume-course.php:2461
+msgid ""
+"You were encouraged to share the Leadership Cells tool with someone else."
+msgstr ""
+"Waxaa lagugu xoojiyey inaad habka Hoggaaminta Unugyada ah la wadaagtid qof "
+"kale."
+
+#: template-zume-course.php:2473
+msgid ""
+"Pray and thank God that His ways are not our ways and His thoughts are not "
+"our thoughts. Ask Him to give each member of your group the mind of Christ — "
+"always focused on His Father's work. Ask the Holy Spirit to lead your time "
+"together and make it the best session yet."
+msgstr ""
+"Ducayso oo Ilaaah uga mahad celi in jidadkiisu aanay jidadkeenna ahayn "
+"fikirradiisuna aanay fikirradeenna ahayn. Ka dalbo in xubin kasta oo "
+"kooxdaada ka mid uu siiyo maanka Masiixa — had iyo goorna shaqada Aabbihii "
+"diiradda saaraan. Weyddiiso Ruuxa Qudduuska ahu inuu waqtigiinna hoggaamiyo "
+"oo uu kulankii ugu fiicnaa idiinka dhigo."
+
+#: template-zume-course.php:2481
+msgid ""
+"In this session, you’ll learn how linear patterns hold back kingdom growth "
+"and how Non-Sequential thinking helps you multiply disciples. You'll "
+"discover how much time matters in disciple-making and how to accelerate "
+"Pace. You’ll learn how followers of Jesus can be a Part of Two Churches to "
+"help turn faithful, spiritual families into a growing city-wide body of "
+"believers. Finally, you'll learn how a simple 3-Month Plan can focus your "
+"efforts and multiply your effectiveness in growing God's family "
+"exponentially."
+msgstr ""
+"Kulankan, waxa aan ku baran doonnaa sida qaabka ku tiirsanaantu ay dib u "
+"dhac u geliso koritanka boqortooyada iyo sida fikirka toosani uu kaaga "
+"caawinayo badashada xerta. Waxaan soo saari doonnaa sida waqtigu uu qayb uga "
+"yahay xer samaynta iyo aan xawli u socodkeenna u dardar gelinayno. Waxaaan "
+"ku baran doonnaa sida kuwa Ciise Masiix raaca ay uga mid noqon karaan Labo "
+"Qayb Kaniisadood si iimaankoodu u adkaado, oo ay ruux ahaan u noqdaan qoysas "
+"ka mid bulsho ballaadhan oo rumaystayaal ah. Ugu dambayntii, waxa aan ku "
+"baran doonnaa Qorshe 3-Bilood ah oo si fudud kuu siin kara inaad diiradda "
+"saartid dadaalladaada oo aad u labo jibbaartid firfircoonidaada aad qoyska "
+"Ilaah ugu korinaysid si isbeddel weyn leh."
+
+#: template-zume-course.php:2502
+msgid ""
+"When people think about disciples multiplying, they often think of it as a "
+"step-by-step process. The problem with that is — that's not how it works "
+"best!"
+msgstr ""
+"Marka ay dadku ka fikiraan badinta xerta, had iyo jeer waxay uga fikiraan "
+"hannaan tallaabo-tallaabo ah. Taas dhibaatadeedu waxaa weeye — in qaabka ugu "
+"fiican ee ay u shaqaysaa aanu saa ahayn!"
+
+#: template-zume-course.php:2522
+msgid "Zúme Video Scripts: Non-Sequential"
+msgstr "Qoraallada Muuqaalka Zúme: Aan Isla Socon"
+
+#: template-zume-course.php:2533
+msgid "What is the most exciting idea you heard in this video? Why?"
+msgstr "Maxay tahay fikradda qiimaha leh ee ku jirta muuqaalkan? Sabab?"
+
+#: template-zume-course.php:2534
+msgid "What is the most challenging idea? Why?"
+msgstr "Maxay tahay fikradda ugu adagi? Sabab?"
+
+#: template-zume-course.php:2554
+msgid ""
+"Multiplying matters and multiplying quickly matters even more. Pace matters "
+"because where we all spend our eternity — an existence that outlasts time — "
+"is determined in the very short time we call “life.“"
+msgstr ""
+"Badintu mace ayey ku fadhidaa oo si dhaqo leh ayey micne ku samaysaa. "
+"Xawaarayntu waa ay shaqaysaa maxaa yeelay halka aan ku waaraynno — "
+"jiritaanka aan wakhtiga ku xadaysnayn — waxaa go'aankeeda iska leh wakhtigan "
+"yar een ugu yeedhno “nolol.“"
+
+#: template-zume-course.php:2574
+msgid "Zúme Video Scripts: Pace"
+msgstr "Qoraallada Muuqaalka Zúme: Xawaare"
+
+#: template-zume-course.php:2585
+msgid "Why is pace important?"
+msgstr "Muxuu xawaaruhu muhiim u yahay?"
+
+#: template-zume-course.php:2587
+msgid ""
+"What do you need to change in your thinking, your actions, or your attitude "
+"to be better aligned with God's priority for pace?"
+msgstr ""
+"Maxaad ugu baahan tahay inaa beddeshid fikirkaaga, ficilladaada, ama "
+"aragtidaada ku aaddan inaad si adag ugu xidhan Ilaah?"
+
+#: template-zume-course.php:2589
+msgid ""
+"What is one thing you can do starting this week that will make a difference?"
+msgstr ""
+"Muxuu yahay hal sheey oo aad samayn karto inaad toddobaadkan bilowdid oo "
+"isbeddel samayn kara?"
+
+#: template-zume-course.php:2609
+msgid ""
+"Jesus taught us that we are to stay close — to live as a small, spiritual "
+"family, to love and give our lives to one another, to celebrate and suffer — "
+"together. However, Jesus also taught us to leave our homes and loved ones "
+"behind and be willing to go anywhere — and everywhere — to share and start "
+"new spiritual families. So how can we do both? When you're ready, watch the "
+"video below and discuss the question that follows."
+msgstr ""
+"Ciise wuxuu ina baray inaan isku soo dhawaanno — si aan ugu noolaanno nolol "
+"qoys yar oo ruuxi ah, is jeclaano oo midba midka kale nafta u huro, oo "
+"wadajir u wada dabbaal degno oo wada silicno. haddaba, sidoo kale Ciise "
+"wuxuu ina baray inaan ka tagno guryaheenna iyo kuwa aan jecel nahay oo meel "
+"walba u socdaalno — meel kasta — si aan meeshaan uga bilowno qoys cusub oo "
+"ruuxi ah. Haddaba labaas ma iwada samayn karnaa? Marka aad diyaar garoowdo, "
+"daawo muuqaalkan hoose oo falanqee su'aalaha la socda."
+
+#: template-zume-course.php:2629
+msgid "Zúme Video Scripts: Two Churches"
+msgstr "Qoraallada Muuqaalka Zúmes: Labo Kaniisadood"
+
+#: template-zume-course.php:2639
+msgid ""
+"What are some advantages of maintaining a consistent spiritual family that "
+"gives birth to new ones that grow and multiply instead of continually "
+"growing a family and splitting it in order to grow?"
+msgstr ""
+"Maxay yihiin qaar ka mid ah faa'iidooyinka in la noqdo qoys ruuxi ah oo kuwa "
+"cusub sii dhala kuwaa kora oo bata halkii laga kala qaybin lahaa si ay u "
+"koraan?"
+
+#: template-zume-course.php:2649
+msgid "CREATE A 3-MONTH PLAN (30min)"
+msgstr "ABUUR QORSHE AH 3-BILOOD (30daqiiqo)"
+
+#: template-zume-course.php:2658
+msgid ""
+"In His Bible, God says, \"I know the plans I have for you, plans to prosper "
+"you and not to harm you, plans to give you hope and a future.\" God makes "
+"plans, and He expects us to make plans, too. He teaches us through His Word "
+"and His work to look ahead, see a better tomorrow, make a plan for how to "
+"get there, and then prepare the resources we'll need on the way."
+msgstr ""
+"Ilaah wuxuu Baybalkiisa ku dhex sheegayaa, \"Anigu waan garanayaa fikirrada "
+"aan idiinku fikiro, waana fikirro nabadeed, oo ma aha kuwa masiibeed, si aan "
+"ugudambaystiinna rajo idiin siiyo.\" Ilaah qorsheyaal ayuu sameeyaa, wuxuuna "
+"naga sugayaa inaan sidoo kale qorsheyaal samaysano. Wuxuu Ereygiisa iyo "
+"shuqulladiisa nagu baraa inaan horay u eegno, berri oo wabaagsan aragno, aan "
+"qorshayno sidii aan halkaa ku gaadhi lahayn, dabadeedna aan siyaarsanno "
+"sahaydii aan jidka ugu baahan lahayn."
+
+#: template-zume-course.php:2659
+msgid ""
+"A 3-Month Plan is a tool you can use to help focus your attention and "
+"efforts and keep them aligned with God's priorities for making disciples who "
+"multiply. Spend the next 30 minutes praying over, reading through, and then "
+"completing the commitments listed in the 3-Month Plan section in your Zúme "
+"Guidebook."
+msgstr ""
+"Qorshaha 3-Bilood waa hab kaa caawinaya inaad u adeegsato inaad dareenkaaga "
+"iyo dadaalladaada siisid waxa Ilaah kaa doonayo ee ah inaad samaysid xer "
+"badata. Ku qaado 30 daqiiqadood ee soo socda duco, wax akhris, dabadeedna "
+"dhammaynta wisii ku jiray liika  Qorshaha 3-Bilood ee ku jira qaybta "
+"Buuggaaga hagaha Zúme."
+
+#: template-zume-course.php:2667
+msgid ""
+"Ask God what He specifically wants you to do with the basic disciple-making "
+"tools and techniques you have learned over these last nine sessions. "
+"Remember His words about Faithfulness."
+msgstr ""
+"Weyddiiso Ilaah waxa uu sida gaarka ah kaaga doonayo inaad ka qabato qalabka "
+"aasaasiga ah ee xer samaynta iyo farsamooyinkii aad sagaalkii kulan ka "
+"baratay. Xusuusnow Ereyadiisa ku saabsan Aamminnimada."
+
+#: template-zume-course.php:2673
+msgid "LISTEN"
+msgstr "DHEGAYSO"
+
+#: template-zume-course.php:2675
+msgid ""
+"Take at least 10 minutes to be as quiet as possible and listen intently to "
+"what God has to say and what He chooses to reveal. Make an effort to hear "
+"His voice."
+msgstr ""
+"Ku qaadougu yaraan 10 daqiiqo oo xasil iyo aammusnan ah si aad ugu "
+"dhegaystid waxa Ilaah sheegayo oo uu doortay inuu muujiyo. Ku dadaal inaad "
+"codkiisa maqashid."
+
+#: template-zume-course.php:2681
+msgid "COMPLETE"
+msgstr "DHAMMAYSTIR"
+
+#: template-zume-course.php:2683
+msgid ""
+"Use the rest of your time to complete the 3-Month Plan worksheet. You do not "
+"have to commit to every item, and there is room for other items not already "
+"on the list. Do your best to align your commitments to what you have heard "
+"God reveal to you about His will."
+msgstr ""
+"Wakhtigaagan inta ka hadhay u isticmaal dhammaystirka warqadda qaabka "
+"Qorshaha 3-Bilood. Ha isku qasbin in inaad wax walba ku dartid, waxyaabaha "
+"kale ee aan liiska ku jidhin boos ayey leeyihiin. isku taxalluji inaad "
+"fulisid wixii aad Ilaah ka maqashay ee uu doonistiisa kaaga muujiyey."
+
+#: template-zume-course.php:2694
+msgid "ACTIVITY (30min)"
+msgstr "HAWLQABAD (30daqiiqo)"
+
+#: template-zume-course.php:2697
+msgid "SHARE YOUR PLAN AND PLAN AS A TEAM."
+msgstr "QORSHAHAAGA LA WADAAG KOOX AHAANNA U QORSHEEYA."
+
+#: template-zume-course.php:2706
+msgid "IN GROUPS OF TWO OR THREE (15 minutes)"
+msgstr "KOOXO KA KOOBAN LABO AMA SADDEX (15 daqiiqo)"
+
+#: template-zume-course.php:2708
+msgid ""
+"Take turns sharing your 3-Month Plans with each other. Take time to ask "
+"questions about things you might not understand about plans and how the "
+"others will meet their commitments. Ask them to do the same for you and your "
+"plan. Find a training partner(s) that is willing to check in with you to "
+"report on progress and challenges and ask questions after 1, 2, 3, 4, 6, 8 "
+"and 12 weeks. Commit to doing the same for them."
+msgstr ""
+"Samayso marar aad kuwa kale la wadaagtid Qorshayaasha 3-Bilood. Samayso "
+"wakhti aad weyddiinaysid su;aalo ku saabsan waxyaabaha aadan fahmin ee ku "
+"saabsan qorsheyaasha iyo sida kuwa kale ay go'aannadooda u wajahayaan. "
+"Weyddii inay raacaan adiga iyo qorshahaaga. raadso xubno kaala qayb qaata oo "
+"kula eega war bixinnada iyo horumarka iyo culaysyada oo weyddii su;aalaha 1, "
+"2, 3, 4, 6, 8 iyo 12 toddobaad. ku adkoow inaad sidaas u samaysid."
+
+#: template-zume-course.php:2717
+msgid "IN YOUR FULL TRAINING GROUP (15 minutes)"
+msgstr "GUDAHA KOOXDAADA TABABBARKA BUUXA (15 daqiiqo)"
+
+#: template-zume-course.php:2719
+msgid ""
+"Discuss and develop a group plan for starting at least two new 3/3 Groups or "
+"Zúme Training Groups in your area. Remember, your goal is start Simple "
+"Churches that multiply. 3/3 Groups and Zúme Training Groups are two ways to "
+"do that. Discuss and decide whether these new Groups will be connected to an "
+"existing local church or network or whether you’ll start a new network out "
+"of your Zúme Training Group."
+msgstr ""
+"Falanqee oo horumar ku samee qorshe kooxeed oo aad ku bilaabaysid ugu yaraan "
+"labo cusub oo Kooxaha 3/3 ah ama Kooxo Tababbarka Zúme ah oo degaankaaga ah. "
+"Xusuusnow, ujeeddadaadu waxaa weeye inaad bilowdid kaniisado yaryar oo bata. "
+"Kooxaha 3/3 iyo Kooxaha Tababbarka Zúme waxa loo samaynayaa waa labo waddo. "
+"Falanqee oo go'aanso in Kooxahaan cusb ay ku xidhmi doonaan kaniisad jirta "
+"oo degaanku leeyahay ama shabakad ama inaad bilaabaysid isku xidh cusub oo "
+"Kooxda Tababbarka Zúme bannaanka ka ah."
+
+#: template-zume-course.php:2725
+msgid "CONNECT"
+msgstr "ISKU XDIH"
+
+#: template-zume-course.php:2727
+msgid "CONNECT WITH YOUR COACH"
+msgstr "ISKU XIDH TABABBARAHAAHA"
+
+#: template-zume-course.php:2729
+msgid ""
+"Make sure all group members know how to contact the Zúme Coach that’s been "
+"assigned to your group in case anyone has questions or needs more training. "
+"Remember to share your 3-Month Plan with your Coach, so they understand your "
+"goals. Discuss any other locations where members of your group could help "
+"launch new 3/3 Groups or Zúme Training Groups. Be sure to pray as a group "
+"and ask God for His favor to bring about all the good work possible out of "
+"these plans and commitments."
+msgstr ""
+"Hubi in dhammaan xubnaha kooxdu ay garanayaan sidii ay ula xidhiidhi "
+"lahaayeen Tababbaraha Zúme ee kooxdaada loo qorsheeyay si haddii qof su'aalo "
+"qabo ama ama baahiyo kale oo tababbar dheeraada ah u weyddiisto. Xusaga la "
+"wadaagtid Qorshaha 3-Bilood, si ujeeddooyinkaaga loo ogaado. Falanqee "
+"meelaha kale ee ay xubnaha kooxdaadu ka bilaabi karaan kuwo cusub Kooxaha "
+"3/3 ama Kooxaha Tababbarka Zúme ah. Hubso inaad koox ahaan u ducaysataan oo "
+"aad Ilaah weyddiisataan inuu wax walba oo shaqo uu naxariistiisa idiinku "
+"fududeeyo."
+
+#: template-zume-course.php:2758
+msgid "Congratulations! You've completed Session 9."
+msgstr "Hambalyo! Waxaad dhammaysay Kulankii 9."
+
+#: template-zume-course.php:2767
+msgid ""
+"You may not know it, but you now have more practical training on starting "
+"simple churches and making disciples who multiply than many pastors and "
+"missionaries around the world! Watch the following video and celebrate all "
+"that you've learned!"
+msgstr ""
+"Ma wada garan kartid balse imminka waxaad haysataa tababbar guud oo ah sida "
+"kaniisadaha yarayr lagu bilaabo adoo haysta in ka badan inta ay wadaaddada "
+"adeegayaasha adduunku haystaan! Daawo Muuqaalkan soo socda una dabbaal deg "
+"dhammaan wixii aad soo baratay!"
+
+#: template-zume-course.php:2785 template-zume-course.php:3104
+msgid "Zúme Video Scripts: Completion of Training"
+msgstr "Qoraallada Muuqaalka Zúmes: Dhammaystirka Tababbarka"
+
+#: template-zume-course.php:2795
+msgid ""
+"Set aside time on your calendar each week to continue to work on your 3-"
+"Month Plan, and plan check-ins with your training partner at the end of week "
+"1, 2, 3, 4, 6, 8, and 12. Each time you're together, ask about their results "
+"and share yours, making sure you're both working through your plans. "
+"Prayerfully consider continuing as an ongoing spiritual family committed to "
+"multiplying disciples."
+msgstr ""
+"Wakhti ah ku calaamadayso kalandarkaaga toddobaad kasta si aad u sii waddid "
+"inaad ka shaqaysid Qorshaha 3-Bilood, iyo baadhista ee aad la leedahay "
+"xubnaahaaga kale ee tababbarka ee dhammaadda toddobaadka 1, 2, 3, 4, 6, 8, "
+"iyo 12. Wakhti kasta oo aad wada joogtaan,weyddii natiijooyinkooda kuwaagana "
+"la wadaag, si aad u ogaatid in labadiinnuba aad qorsheyaashaadii ku "
+"joogtaan. Duco badan ku sii soco adoo eegaya inaad noqotaan qoys ruuxi ah si "
+"aad xerta u badisaan."
+
+#: template-zume-course.php:2803
+msgid ""
+"Pray and ask God who He would have you share Zúme Training with by launching "
+"a Leadership Cell of future Zúme Training leaders."
+msgstr ""
+"Ducayso oo Ilaah ka dalbo kii uu kaa doonayey inaad Tababbarka Zúme la "
+"wadaagtid si aad u soo saartid Unug Hoggaamineed oo mustaqbalka "
+"hoggaamiyeyaal ka Tababbarka Zúme ka noqda."
+
+#: template-zume-course.php:2811
+msgid ""
+"Be sure to pray with your group before you end your time together. Thank God "
+"that He has created and gifted you with exactly the right talents to make a "
+"difference in His kingdom. Ask Him for wisdom to use the strengths He has "
+"given you and to find other followers who help cover your weaknesses. Pray "
+"that He would make you fruitful and multiply — this was His plan from the "
+"very beginning. Pray that God help you be obedient to Him and invite Him to "
+"work in you and those around you!"
+msgstr ""
+"Hubso inaad kooxdaada la tukatid inta aydnaan wakhtigiinna soo gaboggabayn. "
+"Ilaah uga mahad celi inuu y kuna siiyey hadiyad si aad isbeddel "
+"Boqortooyadiisa uga dhex samaysid. Weyddiiso inuu ku siiyo xikmad aad ku "
+"isticmaashid xoogga uu ku siiyey oo aad heshid rumaystayaal kale oo "
+"liidnaantaada daboola. Ka dalbo inuu kaa dhigo mid midho leh oo wax badiya — "
+"kan ayuu ahaa qorshihiisii biwlogii. Ku ducayso in Ilaah kugu inaad baarri u "
+"noqotid una oggolaatid inuu adiga iyo kuwa kugu dhowdhow ka dhex shaqeeyo!"
+
+#: template-zume-course.php:2819
+msgid "BONUS"
+msgstr "Awguuriyo"
+
+#: template-zume-course.php:2820 template-zume-course.php:3252
+msgid "Check out"
+msgstr "Baadhis"
+
+#: template-zume-course.php:2822 template-zume-course.php:3253
+msgid ""
+"and join the global coalition praying and working together to start kingdom "
+"movement engagements in every unreached people and place by 2025."
+msgstr ""
+"oo ku soo biidh isku tagga caalamiga ah ee ducaysanaya kana wada shaqaynaya "
+"inay bilaabaan dhaqdhaqaaqyo ka hawl gala dadka aan la gaadhin ee 2025."
+
+#: template-zume-course.php:2845
+msgid "Welcome back to Zúme Training!"
+msgstr "Kusoo dhawoow mar kale Tababbarka Zúme!"
+
+#: template-zume-course.php:2858
+msgid ""
+"You were asked to prayerfully consider continuing as an ongoing spiritual "
+"family committed to multiplying disciples."
+msgstr ""
+"Waxaa lagaa dalbaday inaad si duco ku jirto u waddid inaad noqotaan qoys "
+"ruuxi ah oo u taagan inay badiyaan xerta."
+
+#: template-zume-course.php:2861
+msgid ""
+"You were encouraged to share Zúme Training by launching a Leadership Cell of "
+"future Zúme Training leaders."
+msgstr ""
+"Waxaa lagugu xoojiyey inaad Tababbarka Zúme la wadaagtid dadka si aad usoo "
+"saartid Unug Hoggaamineed oo mustaqbalka hoggaamiyeyaal Tababbarka Zúme u "
+"noqda."
+
+#: template-zume-course.php:2864
+msgid ""
+"Take a few moments to see how your group has been doing with these items and "
+"their 3-Month Plans since you've last met."
+msgstr ""
+"Qaado wakhti aad ku aragtid sida kooxdaadu ay waxyaabahn u samaynayeen iyo "
+"Qorsheyaashii 3-Bilood maaddaama wakhtigaagii soo dhammaaday."
+
+#: template-zume-course.php:2871
+msgid ""
+"Pray and thank God that He is faithful to complete His good work in us. Ask "
+"Him to give your group clear heads and open hearts to the great things He "
+"wants to do in and through you. Ask the Holy Spirit to lead your time "
+"together and thank Him for His faithfulness, too. He got you through!"
+msgstr ""
+"Ducee oo Ilaah uga mahad celi sida uu aamminka ugu yahay inuu shuqulkii nagu "
+"kaamilo. Weyddii inuu kooxdaada siiyo maskax nadiif ah iyo qalbiyo u furan "
+"waxyaabaha waaweyn ee uu doonayo inuu iyaga iyo adigaba u adeegsado, "
+"Weyddiiso in Ruuxa Qudduuska ahu wakhtigiinna hoggaamiyo ugana mahad celi "
+"sidoo kale aamminnimadiisa. adiga ayuu kugu helay!"
+
+#: template-zume-course.php:2878
+msgid ""
+"In this advanced training session, you’ll take a look at how you can level-"
+"up your Coaching Strengths with a quick checklist assessment. You’ll learn "
+"how Leadership in Networks allows a growing group of small churches to work "
+"together to accomplish even more. And you’ll learn how to develop Peer "
+"Mentoring Groups that take leaders to a whole new level of growth."
+msgstr ""
+"Tababbarkan horumarsan dhexdiisa waxa aan ku eegi doonnaa sidii aan sare ugu "
+"qaadi lahayn Xoogagga Tababbarrada annaga oo adeegsanayna liiska hubinta ee "
+"qiimaynta. Waxaan ku baran doonnaa sida Hoggaanka Isku-xidhku uu kooxaha uga "
+"dhigo kaniisado yaryar oo ay uga wada shaqayn lahaayeen wax intaas ka sii "
+"badan. Oo waxa aan sidoo kale ku baran doonnaa sida Kooxaha Eegista iyo "
+"Hagidda loo horumariyo yeelashada korintaan aad u sarreeya."
+
+#: template-zume-course.php:2889
+msgid "ACTIVITY (10min)"
+msgstr "HAWLQABAD (10daqiiqo)"
+
+#: template-zume-course.php:2891
+msgid "ASSESS YOURSELF USING THE COACHING CHECKLIST."
+msgstr "IS QIIMEE ADIGOO ADEEGSANAYA LIISKA HUBINTA."
+
+#: template-zume-course.php:2896
+msgid "ASSESS"
+msgstr "QIIMEE"
+
+#: template-zume-course.php:2898
+msgid ""
+"The Coaching Checklist is a powerful tool you can use to quickly assess your "
+"own strengths and vulnerabilities when it comes to making disciples who "
+"multiply. It's also a powerful tool you can use to help others - and others "
+"can use to help you."
+msgstr ""
+"Tababbarashada Liiska hubintu waa qalab xoog badan oo aay u adeegsan kartid "
+"inaad dhaqo leh ugu qiimaysid xooggaaga iyo dayacnaantaada marka ay noqoto "
+"samaynta xer badata. sidoo kale qalab awood badan oo aad u isticmaali kartid "
+"inaad kuwa kale ku caawisid - kuwa kalena ay adiga kugu caawin karaan."
+
+#: template-zume-course.php:2900
+msgid ""
+"Find the Coaching Checklist section in your Zúme Guidebook, and take this "
+"quick (5-minutes or less) self-assessment:"
+msgstr ""
+"Ka hel Ilaalinta Liiska hubinta ee ku jira Buuggaaga hagaha Zúme, oo samee "
+"(5-daqiiqo ama ka yar) Is qiimayn:"
+
+#: template-zume-course.php:2903
+msgid ""
+"Read through the Disciple Training Tools in the far left column of the "
+"Checklist."
+msgstr "Wada akhri Qalabka Tababbarka Xerta ee ku jira shaxda Liiska hubinta."
+
+#: template-zume-course.php:2904
+msgid "Mark each one of the Training Tools, using the following method:"
+msgstr ""
+"Calaamadee mid kasta oo ka mid ah Qalabka Tababbarka , adigoo adeegsanaya "
+"qodobbada soo socda:"
+
+#: template-zume-course.php:2906
+msgid ""
+"If you're unfamiliar or don't understand the Tool - check the BLACK column"
+msgstr "Haddii aadan garanayn ama aadan fahmin Qalabka - baadh shaxda BADOW"
+
+#: template-zume-course.php:2909
+msgid ""
+"If you're somewhat familiar but still not sure about the Tool - check the "
+"RED column"
+msgstr ""
+"Haddii aad yara garanaysid balse aadan weli hubin Qalabka - baadh shaxda CAS"
+
+#: template-zume-course.php:2912
+msgid ""
+"If you understand and can train the basics on the Tool - check the YELLOW "
+"column"
+msgstr ""
+"haddii aad ganaysid oo aad inta aasaasiga ah Qalabka ku tababbari kartid - "
+"baadh shaxda HURUUDDA."
+
+#: template-zume-course.php:2915
+msgid ""
+"If you feel confident and can effectively train the Tool - check the GREEN "
+"column"
+msgstr ""
+"Haddii aad isku kalsoon tahay oo aad Qalabka si waafi ah wax ugu tababbari "
+"kartid - baadh shaxda CAGAARAN"
+
+#: template-zume-course.php:2927
+msgid "Which Training Tools did you feel you would be able to train well?"
+msgstr ""
+"Qalab Tababbar oo caynkee ayaad si hagaasan wax ugu tababbari kartaan well?"
+
+#: template-zume-course.php:2928
+msgid "Which ones made you feel vulnerable as a trainer?"
+msgstr "Kee baad dareemaysaa inuusan ku habboonayn tababbartaha?"
+
+#: template-zume-course.php:2929
+msgid ""
+"Are there any Training Tools that you would add or subtract from the "
+"Checklist? Why?"
+msgstr ""
+"Miyey jiraan wax Qalab Tababbar ah oo aad ku dari lahayd aad ka dhimmi "
+"lahayn Liiska hubinta? Sabab?"
+
+#: template-zume-course.php:2936
+msgid ""
+"REMEMBER - Be sure to share your Coaching Checklist results with your Zúme "
+"Coach and/or your training partner or other mentor. If you're helping coach "
+"or mentor someone, share this tool to help assess which areas need your "
+"attention and training."
+msgstr ""
+"XUSUUSIN - Xusuusnow inaad natiijooyinka Tababbarka Liiska Hubinta la "
+"wadaagtid Tababbarahaaga Zúme ama qofka tababbarka kula wada ama qof kale oo "
+"hage ah. Haddii aad tababbare caawinaysid ama aad qof hage u tahay, la "
+"wadaag qalabkan si uu u qiimeeyo halka tababbarkaaga iyo dareenkaaga u "
+"baahan."
+
+#: template-zume-course.php:2955
+msgid ""
+"What happens to churches as they grow and start new churches that start new "
+"churches? How do they stay connected and live life together as an extended, "
+"spiritual family? They become a network!"
+msgstr ""
+"Haddaba maxaa dhacaya mara kaniisadahan oo dhan ay koraan oo ay bilaabaan "
+"kaniisado cusub oo soo saara kaniisado kale oo cusub? Siday isugu xidhnaan "
+"karaa? Sidee bay ugu wada noolaadaan noloshii laga rabay qoyska ruuxiga ah? "
+"Waxa ay noqdaan shabakad!"
+
+#: template-zume-course.php:2974
+msgid "Zúme Video Scripts: Leadership in Networks"
+msgstr "Qoraallada Muuqaalka Zúme: Hoggaaminta ku jirta Iskuxidhka"
+
+#: template-zume-course.php:2982
+msgid ""
+"Are there advantages when networks of simple churches are connected by deep, "
+"personal relationships? What are some examples that come to mind?"
+msgstr ""
+"Maxaa faa'iidooyin ah oo ku jira marka isku xidhka kaniisaduhu noqdo "
+"xidhiidh qoto dheer? Waa maxay tusaaleyaasha maskaxda ku soo dhaca?"
+
+#: template-zume-course.php:3000
+msgid "ZÚME TOOLKIT - PEER MENTORING GROUPS"
+msgstr "QALABKA ZÚME - KOOXAHA WAX HAGA"
+
+#: template-zume-course.php:3002
+msgid ""
+"Making disciples who make disciples means making leaders who make leaders. "
+"How do you develop stronger leaders? By teaching them how to love one "
+"another better. Peer Mentoring Groups help leaders love deeper."
+msgstr ""
+"In la sameeyo xer samaysa xer kale macnaheedu waxaa weeye iyada oo la soo "
+"saaro hoggaamiyeyaal sameeya hoggaamiyeyaal kale. Sidee baad hoggaamiyeyaal "
+"adag usoo saari kartaa? Iyaga oo barta sidii ay si fiican isugu baran "
+"lahaayeen. Soosaarista Kooaxaha Hagista waxay hoggaamiyeyaasha ka caawisaa "
+"inay si qoto dheer isu jeclaadaan."
+
+#: template-zume-course.php:3004
+msgid ""
+"Find the Peer Mentoring Groups section in your Zúme Guidebook, and listen to "
+"the audio below."
+msgstr ""
+"Ka hel Soosaarista Kooxaha Wa Haga qaybta ku jirta Buuggaaga hagaha Zúme, oo "
+"dhegayso codaynta hoose."
+
+#: template-zume-course.php:3024
+msgid "Zúme Video Scripts: Peer Mentoring Groups"
+msgstr "Qoraallada Muuqaalka Zúme: Soosaarista Kooxaha Wax Haga"
+
+#: template-zume-course.php:3037
+msgid "PRACTICE (60min)"
+msgstr "DHAQANGELIN (60daqiiqo)"
+
+#: template-zume-course.php:3041
+msgid ""
+"Practice peer mentoring groups. Spend the next 60 minutes practicing the "
+"Peer Mentoring Groups format. Find the Peer Mentoring Groups section in your "
+"Zúme Training Guide, and follow these steps."
+msgstr ""
+"Ficil ahaan u samee soosaarista kooxaha wax haga. ku qaata 60 daqiiqadood ee "
+"soo socda inaad dhaqangelisaan hab soosaarista Kooxaha Wax Haga ee ku jita "
+"Hagaha Tababbarka Zúme, oo tallaabooyinkan raac."
+
+#: template-zume-course.php:3049
+msgid "GROUPS"
+msgstr "KOOXO"
+
+#: template-zume-course.php:3053
+msgid ""
+"Break into groups of two or three and work through the 3/3 sections of the "
+"Peer Mentoring Group format. Peer Mentoring is something that happens once a "
+"month or once a quarter and takes some time for the whole group to "
+"participate, so you will not have time for everyone to experience the full "
+"mentoring process in this session."
+msgstr ""
+"U qaybi kooxo ah labo ama saddex oo ka wada shaqeeya qatbaha 3/3 ee habka "
+"Soosaarista Kooxaha Wax Haga. Soosaarista Haguhu waa wax dhaca bishii hal "
+"mar ama saddexdii bil ood mar oo wakhti ku qaadanaysa in kooxda oo dhammi ay "
+"ka wada qayb galaan, taas awgeedna wakhti uma heli doontid in dhammaantood "
+"ay ka wada qayb qaataan nidaamkan hagista oo buuxa."
+
+#: template-zume-course.php:3060
+msgid ""
+"To practice, choose one person in your group to be the \"mentee\" for this "
+"session and have the other members spend time acting as Peer Mentors by "
+"working through the suggested questions list and providing guidance and "
+"encouragement for the Mentee's work."
+msgstr ""
+"Si aad u dhaqan gelisid, dooro qof kooxdaada ka mid ah inuu kulankan u noqdo "
+"\"kii la hagayey\" kuwii kalena ay noqdaan hagayaashii la soo saarayey iyaga "
+"oo ka wada shaqaynaya liiskii su'aalihii la soo jeediyey iyagoo hagid iyo "
+"dhiirri gelin siinaya shaqada kan la hagayo."
+
+#: template-zume-course.php:3062
+msgid ""
+"By the time you're finished, everyone should have a basic understanding of "
+"asking and answering."
+msgstr ""
+"Markan waad dhammaysay, qof kastana waa inuu waayo aragnimo aasaasi ah u "
+"leeyahay fahanka wax weyddiinta iyo ka jawaabista."
+
+#: template-zume-course.php:3068
+msgid ""
+"REMEMBER - Spend time studying the Four Fields Diagnostic Diagram and "
+"Generational Map in the Peer Mentoring Groups section of your Zúme Training "
+"Guide. Make sure everyone in your group has a basic understanding of these "
+"tools before asking the suggested questions."
+msgstr ""
+"XUSUUSIN - Qaado wakhti aad ku baranaysid Jaantuska Soosaarista Afarta Boos "
+"iyo Qariidadda Faraca ee ku jirta Soosaarista Kooxaha Wax Haga ee Hagahaaga "
+"Tababbarka Zúme. Hubi in qof walba oo kxxodaada ka tirsan uu fahan aasaasi "
+"ah u leeyahay qalabkan inta aadan weyddiin su'aalihii la soo jeediyey."
+
+#: template-zume-course.php:3079
+msgid "CONGRATULATIONS ON COMPLETEING ZÚME TRAINING!"
+msgstr "WAAN KUUGU HAMBALYEYNAYNAA DHAMMAYSASHADA TABABBARKA ZÚME!"
+
+#: template-zume-course.php:3086
+msgid ""
+"You and your group are now ready to take leadership to a new level! Here are "
+"a few more steps to help you KEEP growing!"
+msgstr ""
+"Adiga iyo kooxdaadu waxaad imminka u diyaarsan tihiin inaad qaadataan darajo "
+"cusub oo hoggaaminta ah! halkan waxaa ah dhowr tallaabo oo kaa caawinaya "
+"inaad sii WADDO koritaanka!"
+
+#: template-zume-course.php:3112
+msgid "Grow"
+msgstr "Korriimo"
+
+#: template-zume-course.php:3114
+msgid "Grow as a disciple by putting your faith to work"
+msgstr "Xer ahaan u kor adiga oo iimaankaaga ku shaqaynaya"
+
+#: template-zume-course.php:3116
+msgid ""
+"Consider registering online for reminders, coaching resources, and to become "
+"connected with others who are using the same sort of ministry approach. You "
+"can do this at ZumeProject.com."
+msgstr ""
+"Tix raac inaad isu diwaangeliso xusuusinta qadka tooska ah, ee ilaha "
+"tababbare, iyo inaad kuwa kale ku xidhantid kuwa kale ee adeeggan ku hawlan. "
+"Tan waxaad ku samayn kartaa ZumeProject.com."
+
+#: template-zume-course.php:3122
+msgid "ACT"
+msgstr "FALIMO"
+
+#: template-zume-course.php:3127
+msgid "Learn More"
+msgstr "Wax badan ka Baro"
+
+#: template-zume-course.php:3131
+msgid "Invite my friends"
+msgstr "Casuun saaxiibbaday"
+
+#: template-zume-course.php:3135
+msgid "Become a county coordinator"
+msgstr "Noqo iskuduwe waddan"
+
+#: template-zume-course.php:3139 template-zume-course.php:3208
+msgid "Map my neighborhood"
+msgstr "Maabka ii saar deriskayga"
+
+#: template-zume-course.php:3143 template-zume-course.php:3221
+msgid "Fund translation of Zúme"
+msgstr "Dhaqaale sii tarjumaadda Zúme"
+
+#: template-zume-course.php:3147 template-zume-course.php:3192
+#: template-zume-course.php:3228
+msgid "Contact my coach"
+msgstr "Tababbarahayga la xidhiidh"
+
+#: template-zume-course.php:3151
+msgid "Share on Social Media"
+msgstr "Kula Xidhiidh Baraha Bulshada"
+
+#: template-zume-course.php:3155
+msgid "Champion Zúme on Social Media"
+msgstr "Horayaalaka Zúme ee baraha bulshada"
+
+#: template-zume-course.php:3159 template-zume-course.php:3256
+msgid "Join 2414"
+msgstr "Ku xidhmo 2414"
+
+#: template-zume-course.php:3166
+msgid "Find additional information on some of the multiplication concepts at"
+msgstr ""
+"Hel warbixin dheeraad ah oo ku aaddan qaar ka mid ah ujeeddooyinka badinta ee"
+
+#: template-zume-course.php:3170
+msgid "or ask questions about specific resources by e-mailing"
+msgstr "ama dalbo su'aalo ku saabsan ilo qaas ah adigoo soo e-mail garaynaya"
+
+#: template-zume-course.php:3175
+msgid "Learn more"
+msgstr "Wax badan ka baro"
+
+#: template-zume-course.php:3181
+msgid ""
+"You can put what you know to work by helping spread the word about Zúme "
+"Training and inviting others to go through training, too. We make it easy to "
+"invite friends through email, Facebook, Twitter, Snapchat and other social "
+"sites, but we can't invite your friends for you."
+msgstr ""
+"Waad ku shaqayn kartaa waxa aad tagaan adiga oo caawimaad ka geysanaya in "
+"ereygu ku faafo Tababbarka Zúme oo aad kuwa kalena ku casuuntid inay iyaguna "
+"tababbartaan. wax fudud ayaan ka dhignay inaan asxaabta ku casuunnoo email, "
+"Facebook, Twitter, Snapchat iyo goobaha kale ee baraha bulshada, balse "
+"annagu saaxiibkaa kuuma casuumi karno."
+
+#: template-zume-course.php:3188
+msgid ""
+"One of the ways you can put what you know to work is by becoming a county "
+"coordinator, that is someone who can help connect groups as they get started "
+"in your area. If you’re the kind of person who likes to help people go and "
+"grow, this might be a way God can use your gifts to do even more. Let us "
+"know by sending an e-mail to"
+msgstr ""
+"Mid ka mid ah in waxa aad taqaanid oo kuu shaqeeyaa ayaa ah inaad noqotid "
+"iskuduwe waddan, kaasi waa qof caawimaad u leh inuu isku xidho kooxo sida ay "
+"wax meeshiinna uga bilowdaan. Haddii aad tahay qofka noocaas ah ee jecel "
+"inuu dadka ku caawiyo inay tagaan oo koraan, tani waxa ay kuu noqon kartaa "
+"waddo Ilaah hadiyadahaaga ugu isticmaalayo inuu wax badan ku sameeyo. Noo "
+"soo dir e-mail si aan u ogaanno."
+
+#: template-zume-course.php:3197
+msgid "We are working with"
+msgstr "Waxaan la shaqaynaynaa"
+
+#: template-zume-course.php:3200
+msgid ""
+"to try to provide you with free information on the residents within your "
+"census tract in order to help you more effectively reach it. \"Stay tuned\" "
+"for more information. If you do not have relationships within your census "
+"tract and are looking for ways to connect with your neighbors, you might "
+"consider the Mapping Your Neighborhood program for disaster preparedness. "
+"You can find information and downloadable resources at"
+msgstr ""
+"si aan isugu dayno inaan ku siinno xog furan oo ku aaddan degaannada ay ku "
+"jiraan waddada aad soo maraysid si aad u soo gaadhid. \"Diyaar u ahaw\" xog "
+"dheeraad ah. Haddii aadan xidhiidh la lahayn dadkii aad isku degaanka "
+"ahaydeen oo aad rabtid inaad deriskaaga kula xidhiidhid, waxaad samayn "
+"kartaa inaad ku raadisid barnaamijka Maab ku Raadinta Deriskaaga ee "
+"aafooyinka looga gaashaanto. Waxaad macluumaad la soo dejisan karo ka heli "
+"kartaa"
+
+#: template-zume-course.php:3215
+msgid ""
+"As Zúme Training grows, sessions will soon be available in 34 more "
+"languages. As we bring those trainings online, we’ll send you information on "
+"people in your neighborhood that speak those languages, so you can share "
+"something that’s built just for them. You can help fund the translation of "
+"the Zúme Training into additional languages by donating at"
+msgstr ""
+"Maaddama uu Tababbarka Zúme korayo, Waxaa kulannada si dhakhsiyo leh loogu "
+"heli doonaa inka badan 34 luuqadood. Marka aan tababbarradan hawada gelinno "
+"waxaan kuu soo diri doonnaa warbixin ku aaddan dadka deriskaaga ah ee "
+"luuqadahan ku hadla, si aad ula wadaagtid wixii iyaga loo diyaariyey. waxaad "
+"caawimaad ka qaadan kaertaa inaad dhaqaale u heshid Tababbarka Zúme in "
+"luuqado dheeraad ah lagu tarjumo adoo uga deeq raadinaya"
+
+#: template-zume-course.php:3217
+msgid ""
+"and designating the gift for the Zúme Project with a note about the language "
+"you would like to fund."
+msgstr ""
+"oo qoraal ugu saxeexaya hadiyadaha Mashruuca Zúme ee luuqadda aan jeceshahay "
+"in dhaqaale lagu bixiyo."
+
+#: template-zume-course.php:3235
+msgid "Facebook page"
+msgstr "Bogga Facebook"
+
+#: template-zume-course.php:3242
+msgid "Contact us at"
+msgstr "Nagala soo xidhiidh"
+
+#: template-zume-course.php:3243
+msgid "if you are interested in serving as a social media moderator for Zúme."
+msgstr ""
+"haddii aad xiisaynaysid inaad Zúme ugu adeegtid inaad baraha bulshada ka "
+"casriyeysid."
+
+#: template-zume-course.php:3246
+msgid "Contact us"
+msgstr "Nala soo xidhiidh"
+
+#: template-zume-dashboard.php:49 template-zume-dashboard.php:161
+msgid "Start New Group"
+msgstr "Bilow Koox Cusub"
+
+#: template-zume-dashboard.php:53
+msgid "Your Groups"
+msgstr "Kooxahaaga"
+
+#: template-zume-dashboard.php:72
+msgid "Meeting Time"
+msgstr "Wakhtiga Kulanka"
+
+#: template-zume-dashboard.php:74
+msgid "Members"
+msgstr "Xubnaha"
+
+#: template-zume-dashboard.php:76 template-zume-dashboard.php:1284
+#: template-zume-dashboard.php:1384 template-zume-profile.php:105
+msgid "Address"
+msgstr "Cinwaanka"
+
+#: template-zume-dashboard.php:82
+msgid "edit"
+msgstr "tafaftir"
+
+#: template-zume-dashboard.php:124
+msgid "Start Next Session "
+msgstr "Bilow Kulan Cusub"
+
+#: template-zume-dashboard.php:133
+msgid "Archive Group"
+msgstr "Kooxda Kaydka"
+
+#: template-zume-dashboard.php:151
+msgid "You have no active groups"
+msgstr "Ma haysid kooxo shaqaynaya"
+
+#: template-zume-dashboard.php:154
+msgid ""
+"We recommend at least 4 people for a group and no more than 12 people. "
+"Please start a group with the button provided."
+msgstr ""
+"Waxaan kugula talin lahayn koox ugu yaraan 4 qof ka kooban kana badnayn 12 "
+"qof. Fadlan riix badhanka laguu tilmaamay si aad koox u bilowdid."
+
+#: template-zume-dashboard.php:173
+msgid "Video Library"
+msgstr "Masxafka Muuqaalka"
+
+#: template-zume-dashboard.php:174
+msgid "of 32 videos"
+msgstr "ee 32 Muuqaal"
+
+#: template-zume-dashboard.php:183
+msgid "Promo Challenge"
+msgstr "Caqabada Kobicinta"
+
+#: template-zume-dashboard.php:204
+msgid "Overview Video"
+msgstr "Muuqaalka Guudmarka"
+
+#: template-zume-dashboard.php:225
+msgid "How Zúme Works"
+msgstr "Sida Zúme u Shaqeeyo"
+
+#: template-zume-dashboard.php:251
+msgid "Welcome to Zume"
+msgstr "Ku soo Dhawoow Zume"
+
+#: template-zume-dashboard.php:272
+msgid "Teach Them to Obey"
+msgstr "Bar Inay Addeecaan"
+
+#: template-zume-dashboard.php:293
+msgid "Spiritual Breathing"
+msgstr "Neefsashada Ruuxiga ah"
+
+#: template-zume-dashboard.php:314
+msgid "S.O.A.P.S Bible Reading"
+msgstr "Akhrinta Baybalka ee S.O.A.P.S"
+
+#: template-zume-dashboard.php:335
+msgid "Accountability Groups"
+msgstr "Kooxo Masuuliyadeed"
+
+#: template-zume-dashboard.php:362
+msgid "Producers vs Consumers"
+msgstr "Waxsoosaar iyo Macaamil"
+
+#: template-zume-dashboard.php:383
+msgid "Prayer Cycle"
+msgstr "Habka Salaadda Wareegga"
+
+#: template-zume-dashboard.php:404
+msgid "List of 100"
+msgstr "Liiska 100ka"
+
+#: template-zume-dashboard.php:437
+msgid "Spiritual Economy"
+msgstr "Dhaqaalaha Ruuxigaa"
+
+#: template-zume-dashboard.php:458
+msgid "The Gospel"
+msgstr "Injiilka"
+
+#: template-zume-dashboard.php:479
+msgid "Baptism"
+msgstr "Baabtiis"
+
+#: template-zume-dashboard.php:507
+msgid "3 Minute Testimony"
+msgstr "Markhaatifur 3 Daqiiqo ah"
+
+#: template-zume-dashboard.php:528
+msgid "Greatest Blessing"
+msgstr "Barakada ugu Weyn"
+
+#: template-zume-dashboard.php:549
+msgid "Duckling Discipleship"
+msgstr "Horkicidda Xernimada"
+
+#: template-zume-dashboard.php:570
+msgid "Eyes to See"
+msgstr "Indho Waxa lagu Arko"
+
+#: template-zume-dashboard.php:591
+msgid "Lord's Supper"
+msgstr "Cashada Rabbiga"
+
+#: template-zume-dashboard.php:617
+msgid "Prayer Walking"
+msgstr "Salaadda Socodka"
+
+#: template-zume-dashboard.php:638
+msgid "Person of Peace"
+msgstr "Qod Nabadeed"
+
+#: template-zume-dashboard.php:671
+msgid "Faithfulness"
+msgstr "Aamminnimo"
+
+#: template-zume-dashboard.php:692
+msgid "3/3 Group Format"
+msgstr "Habka Kooxaha 3/3"
+
+#: template-zume-dashboard.php:713
+msgid "3/3 Group Live"
+msgstr "Kooxda 3/3 oo Muuqaal ah"
+
+#: template-zume-dashboard.php:740
+msgid "Training Cycle"
+msgstr "Tababbarka Wareega ah"
+
+#: template-zume-dashboard.php:767
+msgid "Leadership Cells"
+msgstr "Hoggaaminta unugga ah"
+
+#: template-zume-dashboard.php:794
+msgid "Non-Sequential"
+msgstr "Aan Isla Socon"
+
+#: template-zume-dashboard.php:815
+msgid "Pace"
+msgstr "Heer"
+
+#: template-zume-dashboard.php:836
+msgid "Part of Two Churches"
+msgstr "Qayb ka ah Labo Kaniisadood"
+
+#: template-zume-dashboard.php:857
+msgid "Completion of Training"
+msgstr "Dhammaystirka Tababbarka"
+
+#: template-zume-dashboard.php:884
+msgid "Leadership in Networks"
+msgstr "Hoggaaminta ku jirta Isku Xidhka"
+
+#: template-zume-dashboard.php:905
+msgid "Peer Mentoring Groups"
+msgstr "Soosaarista Kooxaha Wax Haga"
+
+#: template-zume-dashboard.php:932
+msgid "Session videos will be added as you complete sessions."
+msgstr ""
+"Kulanka muuqaalka waxaa lagu darayaaisla marka aad kulannada dhammaysid."
+
+#: template-zume-dashboard.php:951
+msgid "Tools You've Gained"
+msgstr "Qalabka aad Heshay"
+
+#: template-zume-dashboard.php:952
+msgid "of 12 tools"
+msgstr "ee 12 qalab"
+
+#: template-zume-dashboard.php:974
+msgid "ACCOUNTABILITY GROUPS"
+msgstr "KOOXO MASUULIYADEED"
+
+#: template-zume-dashboard.php:980
+msgid "SPIRITUAL BREATHING"
+msgstr "NEEFSASHADA RUUXIGA AH"
+
+#: template-zume-dashboard.php:994
+msgid "PRAYER CYCLE"
+msgstr "HABKA SALAADDA WAREEGGA"
+
+#: template-zume-dashboard.php:1000
+msgid "LIST OF 100"
+msgstr "LIISKA 100KA"
+
+#: template-zume-dashboard.php:1014
+msgid "BAPTISM"
+msgstr "BAABTIIS"
+
+#: template-zume-dashboard.php:1035
+msgid "3-MINUTE TESTIMONY"
+msgstr "MARKHAATIFUR 3-DAQIIQO AH"
+
+#: template-zume-dashboard.php:1041
+msgid "THE LORD'S SUPPER"
+msgstr "CASHADA RABBIGA"
+
+#: template-zume-dashboard.php:1055
+msgid "PRAYER WALKING"
+msgstr "SALAADDA SOCODKA"
+
+#: template-zume-dashboard.php:1069
+msgid "3/3 GROUP FORMAT"
+msgstr "HABKA KOOXAHA 3/3"
+
+#: template-zume-dashboard.php:1083
+msgid "PEER MENTORING GROUPS"
+msgstr "KOOXAHA WAX HAGA"
+
+#: template-zume-dashboard.php:1089
+msgid "COACHING CHECKLIST"
+msgstr "LIISKA HUBINTA TABABBARIDDA"
+
+#: template-zume-dashboard.php:1103
+msgid "Session tools will be added as you complete sessions."
+msgstr "Qalabka kulanka waxaa lagu dari doonaa marka ay kulannadu dhammaadaan."
+
+#: template-zume-dashboard.php:1133
+msgid "Your Coach"
+msgstr "TABABBARAHAAGA"
+
+#: template-zume-dashboard.php:1160
+msgid "Instructions"
+msgstr "Tilmaamo"
+
+#: template-zume-dashboard.php:1167
+msgid "Create a group"
+msgstr "Koox abuur"
+
+#: template-zume-dashboard.php:1170
+msgid "Plan a time and invite friends"
+msgstr "Qorshee wakhti aad saaxiibbo ku casuuntid"
+
+#: template-zume-dashboard.php:1171
+msgid "Explore the upcoming session"
+msgstr "Eeg kulanka soo socda"
+
+#: template-zume-dashboard.php:1193
+msgid "activate"
+msgstr "kici"
+
+#: template-zume-dashboard.php:1207
+msgid "Archived Groups"
+msgstr "Kooxaha la Kaydiyey"
+
+#: template-zume-dashboard.php:1240
+msgid "Create Group"
+msgstr "Koox Abuur"
+
+#: template-zume-dashboard.php:1247 template-zume-dashboard.php:1343
+msgid "Group Name"
+msgstr "Magaca Kooxda"
+
+#: template-zume-dashboard.php:1251
+msgid "Number of Group Members (including you)"
+msgstr "Tirada Xubnaha Kooxda (aad ku jirtid)"
+
+#: template-zume-dashboard.php:1280 template-zume-dashboard.php:1379
+msgid "Planned Meeting Time"
+msgstr "Wakhti Kulan la Qorsheeyay"
+
+#: template-zume-dashboard.php:1296 template-zume-dashboard.php:1396
+#: template-zume-profile.php:118
+msgid "Validate"
+msgstr "Ansixi"
+
+#: template-zume-dashboard.php:1308
+msgid "Submit"
+msgstr "Dhiib"
+
+#: template-zume-dashboard.php:1338
+msgid "Edit Group"
+msgstr "Kooxda Tafatirka"
+
+#: template-zume-dashboard.php:1348
+msgid "Number of Participants"
+msgstr "Tirada ka Qaybgalayaasha"
+
+#: template-zume-dashboard.php:1417
+msgid "Update"
+msgstr "Xog cusub"
+
+#: template-zume-dashboard.php:1419
+msgid "Archive"
+msgstr "Kayd"
+
+#: template-zume-dashboard.php:1421 template-zume-dashboard.php:1447
+msgid "Delete"
+msgstr "Tir"
+
+#: template-zume-faq.php:21
+msgid "Zume FAQs"
+msgstr "Zume SHJI"
+
+#: template-zume-faq.php:31
+msgid "Is it really 100 percent free?"
+msgstr "Ma mid runtii 100 boqol fasax ah baa?"
+
+#: template-zume-faq.php:32
+msgid ""
+"Yes. There are no premium versions, no trial periods, no follow-on sales of "
+"products. We feel strongly that Kingdom ventures should be sacrificially "
+"offered freely."
+msgstr ""
+"Haa. ma laha qaybo caymis ku jira, ma laha xilliyo la is taqsiirayo, ma "
+"jirto cid wax soosaarkan iibisa. Waxaan si xooggan u dareemaynaa kuwo "
+"Boqortooyada ka shaqeeya ay xor ah ugu deeqeen."
+
+#: template-zume-faq.php:38
+msgid "How old do you have to be to take the training?"
+msgstr "Immisa jirbaad ku qaadanaysaa tababbarka?"
+
+#: template-zume-faq.php:39
+msgid ""
+"We recommend the training for people from 13-years-old and up. If you think "
+"you have a child younger than that who can benefit, by all means let them "
+"participate."
+msgstr ""
+"Waxaan tababbarka kula talinaynaa dadka ay da'doodu tahay illaa 13-sanno-old "
+"iyo ka badan. Haddii aad leedahay ilmo da'daas jira aadse la rabtid inuu ka "
+"faa'iidaysto ha ka soo qayb galaan."
+
+#: template-zume-faq.php:45
+msgid "What if no one in our group has internet access?"
+msgstr "Ka warran haddii mid walba oo kooxda ka mid ah uusan haysan internet?"
+
+#: template-zume-faq.php:46
+msgid ""
+"For now, you will need to find a place with public access. See the FAQ on "
+"“Are the videos available for download so they can be viewed offline?”"
+msgstr ""
+"Markaan, waxaad u baahantahay meelaha shaqeeya ee bulshada. Eeg SHJI “Miyaa "
+"Muuqaallada la soo degsan karaa si qad la'aan loo daawado?”"
+
+#: template-zume-faq.php:52
+msgid "What if someone wants to be trained and doesn’t have an e-mail address?"
+msgstr ""
+"Ka warran haddii qof rabo in la tababbaro oo uusan lahayn cinwaan e-mail?"
+
+#: template-zume-faq.php:53
+msgid ""
+"At least one person in the group will have to have an e-mail account they "
+"actually use because system communications happen through e-mail. That "
+"person needs to be designated as the leader of the group. Other participants "
+"can use addresses that are not regularly checked. If someone does not have "
+"an address then the person who does have one can help them set up a free one "
+"through Gmail or other similar provider."
+msgstr ""
+"Ugu yaraan qof ka mid ah kooxdu waa inu leeyahy email aay adeegsadan maadam "
+"habkan email lagu isticmaalo. Qofkaasi waa inu ahaada mid loo magacabey "
+"hoogmiyaha kooxda. Ka qeybgalayashaa kale waxa aay isticmaali karan emailo "
+"kale oo aan had iyo jeer la isticmaaleyn. Haddii qofi aanu ciwaan laheeyn "
+"waxa ka cawin kara qofka kale ee leh oo uga sameyn kara kuwa kale Gmail ama "
+"kuwa kale ee lamid ka aha ee la heli karo."
+
+#: template-zume-faq.php:59
+msgid "How can I preview the lessons before starting a training event?"
+msgstr ""
+"Sideen u dul marri karaa casharrada inta aanan bilaabin hawsha tababbarka?"
+
+#: template-zume-faq.php:60
+msgid ""
+"Check out the “Overview” section. It highlights the concepts, the tools, and "
+"what your group will practice for each session."
+msgstr ""
+"Ka eego “Guudmarka” qayntiiisa. Waxa ay kuu muujinaysaa ujeeddooyinka, "
+"qalabka, wixii uu kooxdaadu kulan kasta ku dhaqan gelin lahaayeen."
+
+#: template-zume-faq.php:66
+msgid "Are the videos available for download so they can be viewed offline?"
+msgstr ""
+"Miyaa muuqaallada la doo degsan karaan si loo daawado iyadoo aan qadka lagu "
+"jidhin?"
+
+#: template-zume-faq.php:67
+msgid ""
+"Currently, no. This will definitely change when we start having the "
+"materials in other languages. In some places, access to internet or even "
+"computers is limited. In other places a web-based system is not workable for "
+"security reasons. In still others, there will not be adequate volunteers to "
+"run a web-based system. In the USA, there are usually work-arounds for such "
+"limitations. Culturally in the USA there is a tendency for people to view "
+"videos for entertainment or curiosity. That results in videos being viewed "
+"out of context. In this case, there is a strong desire for the training to "
+"be done in groups, with intent for application, and with accountability. We "
+"also want to track where gaps in implementation exist geographically and "
+"need the web-based approach to do that. Americans are notoriously bad at "
+"reporting and we want to ensure there really is no place left where "
+"multiplying disciples are not being made in the USA. Therefore we are "
+"choosing, at least for the present, to make it inconvenient and difficult to "
+"consume the videos in other than this intended manner. We ask that you not "
+"try to short-circuit this intent. You can view the FAQ on “What is the "
+"content of the training?” for a general idea of the content."
+msgstr ""
+"Imminka, maya. Tan waxaa la beddeli doonaa marka aan agabka ku helo luuqado "
+"kale. meelaha qaar, adeegsiga shaqada internet0ku way haddidan tahay. Meelo "
+"kale shaqadiisu kama hir gasho arrimo ammaanka ah awgood, lama heli karo "
+"mutadawiciin ku filan oo socodsiiya waxa baraha la xidhiidha. Maraykanka "
+"dhexdiisa waxaa jira dad badan oo muuqaallada aad u daawada. Mar kasta "
+"natiijooyinka guudmarka muuqaalladu waa kuwo la helayo. Sababtan awgeed, mar "
+"kasta waxaa jira rabitan weyn oo loo qabo in kooxo la sameeyo, niyad u haya "
+"codsiga, iyo masuuliyadda. Waxaan doonaynaa inaan buuxinno meelaha juquraafi "
+"ahaan kala go'u ka jiro kuwaasoo la xidhiidha baahida ku salaysan baraha si "
+"taas loo sameeyo. Ameerika dhexdeedaxagga is wargelintu way xun tahay oo "
+"waxaad doonaynaa inaa hubinoo in aanay jidhin meel laga tegay oo aanay ka "
+"dhicinbadinta xertu USA gudaheeda. Sidaas daraaddeed waxaannu dooranaynaa "
+"ugu yaraan waqtin, ma doonayno inaan muuqaallada aan si xilkasnimo la'aan u "
+"bixinno oo aan ka ahayn qorshihii loogu tahlo galay, Waxaan kaa dalbanaynaa "
+"inaadan isku dayin inaad arrintan fududaysato. Waxaad dul martaa SAL \"Muxuu "
+"tababbarku ka kooban yahay?\" si aad fikir good uga haysatid waxa uu ka "
+"kooban yahay."
+
+#: template-zume-faq.php:73
+msgid "What is the content of the training?"
+msgstr "Muxuu tababbarku ka kooban yahay?"
+
+#: template-zume-faq.php:74
+msgid ""
+"You can view an overview of the content in the content section, or download "
+"the guidebook and review the course content, or login and start a group but "
+"at the first page of the session choose \"Exploring Session\". This will let "
+"you go through the course content without marking it as completed."
+msgstr ""
+"Waxaad dulmar ku samaysaa guudmarka koobaha ku jira waxa uu tababban ka "
+"kooban yahay, ama waxaado soo degsataa buuggahagaha oo dul waxa koorsooyinku "
+"ka kooban yihiin, ama gal oo koox bilow bogga koowaad ee kulanka oo dooro "
+"\"Sahminta Kuanka|\". Tani waxay ku siinaysaa inaad dhex marto waxa "
+"koorsooyinku ka kooban yihiin adigoo aan u calaamadin sidii in "
+"aandhammaystirtay."
+
+#: template-zume-faq.php:80
+msgid ""
+"I want to make copies of the manual (Guidebook) before the training. How can "
+"I do that?"
+msgstr ""
+"Waxaan doonayaa inaan koobiyeysto (Buuggahagaha) tababbarka ka hor. Sidee "
+"baan taa u samayn karaa?"
+
+#: template-zume-faq.php:81
+msgid ""
+"You can always find the Guidebook by hovering over the “About” tab on the "
+"top of every page."
+msgstr ""
+"Waxaad Buuggahagaha had iyo jeer ka heli kartaa halka ay ku qodhan tahay "
+"\"KuSaabsan\" adoo ka taabanaya bog walba meesha ugu horraysa."
+
+#: template-zume-faq.php:87
+msgid ""
+"I accidentally hit the next button and I want to go back and view a video "
+"again. How do I navigate?"
+msgstr ""
+"Waxaan si kama' ah u gujiyey boton kale waxaana rabaa in aan ka laabto oo "
+"aan muuqaalka eegto mar kale. sideen u asteeyaa?"
+
+#: template-zume-faq.php:88
+msgid ""
+"The navigation is via the boxes toward the top of the screen. Those "
+"represent the steps of the session. Navigation between sessions is via the "
+"small arrows next to the session number at the top of the page in a large "
+"font: < Session 2 >, for example."
+msgstr ""
+"Asteeyuhu waxay ku aadan yihiin sanduuqayada sare ee shaashadda. Waxay u "
+"taagan yihiin tallaabooyinka kulanka. Asteeyaha u dhaxeeya kulannada waxa uu "
+"ku aaddan yahay fallaadhaha yar yar ee ku xiga nambarka kulanka ee xagga "
+"sare ee bogga kuwaas oo ah qoraal ballaadhan: < Kulanka 2>, tusaale ahaan."
+
+#: template-zume-faq.php:94
+msgid "There are lots of DMM or CPM trainers; why is Zúme needed?"
+msgstr ""
+"Waxa jira tababbarayaal badan oo ah DMM ama CPM; maxaa looga baahan yahay "
+"Zúme?"
+
+#: template-zume-faq.php:95
+msgid ""
+"Live training is better than online training. Online training should never "
+"replace live training events. Unfortunately, due to limitations of access, "
+"awareness, availability, scheduling, and many other reasons, many people who "
+"can and should have access to live training events don’t have access. Zúme "
+"is an attempt to provide a high-quality entry level substitute for such "
+"people. It uses the same principles as many of the live training types "
+"available from others."
+msgstr ""
+"Tanabbarka muuqaalka tooska ahu waa uu ka fiican yahay tababbarka qadka laga "
+"galo. Tababbarka qadka laga galo dhacdadiisu la mid ma noqoto Tababbarka "
+"tooska waqtigaas is isku arko. Nasiib darro, xaddidnaanta xaddiga "
+"isticmaalka,ka warqabka,helitaanka, jadwalka iyo sababo kale oo badan, dad "
+"badan oo awooda oo inay muuqaal ahaan uga qayb qaataan ayaan haysan xaddigii "
+"adeegsiga. Zúme waa isku day raba inuu siiyo heer gelitaan oo aad u sarreeya "
+"oo dadkaan u qalma. Waxa uu adeegsadaa qaababka ay adeegsadaan kuwa "
+"tababbarrada muuqaalka tooska ah ku bixiya laga helo."
+
+#: template-zume-faq.php:101
+msgid "I speak English but live outside the USA. How can I participate?"
+msgstr ""
+"Waan ku hadlaa Ingiriisiga balse USA kuma dhex nooli. Sidee baan uga qayb "
+"gali karaa?"
+
+#: template-zume-faq.php:102
+msgid ""
+"Right now, you need to provide some USA-based address for the system to "
+"work. This will not be true once Phase 3 is begun in other English-speaking "
+"countries."
+msgstr ""
+"Imminka, waxaad u baahan tahay inaad heshid cinwaan qof USA-deggan si "
+"habkani kuugu shaqeeyo. Tani kama suurtoobayso waddammada kale ee "
+"Ingiriisiga ku hadla illaa Wejiga 3 uu ka bilowdo."
+
+#: template-zume-faq.php:108
+msgid "What is the statement of faith for Zúme?"
+msgstr "Maxay weedha iimaan uga dhigan tahay Zúme?"
+
+#: template-zume-faq.php:109
+msgid ""
+"Since Zúme is not run by an organization, there is not a formal statement of "
+"faith. All of us involved, however, would agree on the Lausanne Covenant."
+msgstr ""
+"Maddaama Zúme wax urur aho wadin, ma jiro weedh u gaar ah iimaanka. Inteenna "
+"wadda oo dhan waxaan isku raacnay Axdigii Lausanne."
+
+#: template-zume-faq.php:115
+msgid "Where can I view the promo video?"
+msgstr "Halkeen ka eegan karaa muuqaalka promo?"
+
+#: template-zume-faq.php:116
+msgid "Hover over the “About” tab and click “Resources”."
+msgstr "Dusha ka mar qanka “KuSaabsan” oo guji “Ilaha”."
+
+#: template-zume-faq.php:122
+msgid "How does the coaching work?"
+msgstr "Sidee bay tababbar eegistu u shaqaysaa?"
+
+#: template-zume-faq.php:123
+msgid ""
+"Shortly after your group is registered, you will have a coach assigned. On "
+"each page of the training there is a link at the bottom of the page that "
+"enables you to send a message to your coach. They will respond at their "
+"earliest convenience. If for some reason you cannot get responses from your "
+"coach then send a request via the form at the bottom of the landing page at "
+"zumeproject.com."
+msgstr ""
+"Inyar kaddib marka kooxdaadu is diwaan geliso, waxaa la idiin qabanayaa "
+"tababbare. Bog kasta oo uu tababbarku leeyahay waxaa bogga meeshiisa hoose "
+"ku qoran cinwaan kuu sahlaya inaad tababbaraheena u dirsatid farriin. Marka "
+"ugu horraysa ayey kuu soo jawaabayaan. Sababa jira awgood haddiiaad fariimo "
+"ka weydid tababbarahaga dabadeed codsi ku soo dir foomka bogga laga soo "
+"gelayo barta zumeproject.com."
+
+#: template-zume-faq.php:129
+msgid "Can I do the training by myself?"
+msgstr "Nafsad ahaantayda tababbarka ma u samaysan karaa?"
+
+#: template-zume-faq.php:130
+msgid ""
+"No. There are essential training exercises and practice sessions which "
+"require other participants to complete. At least four people need to be "
+"present at every session."
+msgstr ""
+"Maya. Waxaa jira layliyo iyo dhaqan gelinno kulanka ku jira oo ay tahay inay "
+"kaqayb galayaal kale dhammaystiraan. Ugu yaraan waa in afar qof ay "
+"kulankiiba xaadir ku yihiin."
+
+#: template-zume-faq.php:136
+msgid "Who is the training appropriate for?"
+msgstr "Waa kuma kan tababbarka sida tooska ah ugu habboon?"
+
+#: template-zume-faq.php:137
+msgid ""
+"The training is appropriate for English speaking followers of Christ who are "
+"13-years-old or older and who are able to read. In the future, there may be "
+"a version produced that is appropriate for non-literate people, but this is "
+"not that version. We believe every person who fits this profile should take "
+"the training."
+msgstr ""
+"Tababbarku waxa uu ku habboon yahay kuwa Masiixa raacsan ee ay da'doodu "
+"tahay 13-ama ka weyn ee awooda in ay akhriyaan. Mustaqbalka, waxaa dhici "
+"doonta in la helo qayb loogu talo galay dadka aan wax akhriyin, middanise "
+"qaybtaas ma ahan. Waxaanka qaadanayo."
+
+#: template-zume-faq.php:143
+msgid "Who owns Zúme?"
+msgstr "Yaa iska leh Zúme?"
+
+#: template-zume-faq.php:144
+msgid ""
+"There is no organization that is “running” the Zúme Project and the project "
+"is not an organization. It is a coalition of people who have a heart to "
+"carry out Christ’s command to make disciples of every people group on earth "
+"and expand His Kingdom to every place until His will is done on earth as it "
+"is in heaven. The idea for the project originated in a meeting of the "
+"Jonathan Project leadership but has since spread far beyond that group. The "
+"Jonathan Project (https://hill111.com) is a consortium of people committed "
+"to multiplying disciples around the world."
+msgstr ""
+"Ma jiro urur wada Mashruuca Zúme mashruucuna urur ma ahan. Waa dad is "
+"kaashaday oo wada oo qalbiguudu ku jiro inay fuliyaan amarkii Masiixa ee "
+"ahaa in xer laga dhigo qolo kasta oo dunida joogta oo Boqortooyadiisa lagu "
+"faafiyo meel kasta illaa doonistiisa ldhulka looga yeelo siday samadalooga "
+"yeelo. fikradda mashruuca waxaa laga dhex aasaasay kulan uu lahaa Jonathan "
+"Project leadership wixii intaas ka dambeeyayna aad ayuu usii fiday. Jonathan "
+"Project (https://hill111.com) waa dad isu tegay oo u go'ay inay xerta ku "
+"badiyaan adduunka oo dhan."
+
+#: template-zume-faq.php:150
+msgid "What are the three phases that are planned?"
+msgstr "Maxay saddexda weji oo la qorsheeyay kala yihiin?"
+
+#: template-zume-faq.php:151
+msgid "PHASE 1"
+msgstr "WEJI 1"
+
+#: template-zume-faq.php:152
+msgid ""
+"Focuses on the United States in English. The initial goal is for there to be "
+"a training group of four to twelve people in each census tract in the "
+"country. Each of these training groups will start two first-generation "
+"churches which will then begin to reproduce. There are about 75,000 census "
+"tracts so this will mean 150,000 first-generation churches."
+msgstr ""
+"Wuxuu ku jeedaa Isutagga Maraykanka waana af Ingiriisi. Hadafka koowaad "
+"waxaa weeye in la helo koox tababbaraynsa oo ka kooban afar illaa labo iyo "
+"toban qof meel kasta tirakooban oo dalka ma mid ah. Kooxahan la "
+"tababbaranaya ka mid ah waxay bilaabi doonaan labo kaniisadood oo jiilka "
+"koonaad ah kuwaa dababdeed bilaabaya inay sii farcamaan. Inta tirokooban "
+"waxaa weeye 75,000 oo meel tanina waxay noqonaysaa 150,000 oo kaniisadood oo "
+"faricii koobaad ah."
+
+#: template-zume-faq.php:153
+msgid "PHASE 2"
+msgstr "WEJI 2"
+
+#: template-zume-faq.php:154
+msgid ""
+"Focuses on other language groups in the United States. The data available "
+"through www.mappingcenter.com will be mapped to the census tract level so it "
+"will be easy for those working in each of the census tracts to determine "
+"which of the target languages are significantly represented within their "
+"local area and seek to start training groups in the appropriate languages. "
+"These training groups can then start first-generation churches in those "
+"language groups."
+msgstr ""
+"Wuxuu ku jeedaa dadka ku hadla luuqadaha kale ee deggan Isutagga Maraykanka. "
+"Xogta lagu heli karo www.mappingcenter.com taas ayaana dhulkaa heerkiisa "
+"trokoon lagu ogaan doonaa sidaas ayeyna ugu fududaan doontaa in ay "
+"go'aansadaan luuqadaha ay abbaarayaan iyo degaankoodaas si ay u raadiyaan "
+"kooxo ay tababbar ugu bilaabaan luuqadahaas la eegtay. Kooxahan la "
+"tababbaray waxay dababdeed bilaabi doonaan jiilkii kaniisadihii ugu "
+"horreeyay ee kooxaha luuqadahaas ku hadla."
+
+#: template-zume-faq.php:155
+msgid "PHASE 3"
+msgstr "WEJI 3"
+
+#: template-zume-faq.php:156
+msgid ""
+"Focuses globally in major world languages. The framework for targeting the "
+"training groups is based on the 4K maps developed by YWAM. It divides the "
+"world into segments based on population and the general level of gospel "
+"saturation, with less evangelized areas receiving about three times the "
+"attention of more evangelized areas. For more information on the framework "
+"go to http://www.4Kworldmap.com. The project will use the next generation of "
+"the data, 4K Plus, which will divide the world into about 60,000 Omega "
+"Districts. There will be training groups started in each Omega District "
+"which will then launch first-generation churches within the districts. In "
+"the least evangelized areas this will be a training group for approximately "
+"every 50,000 people."
+msgstr ""
+"Wuxuu ku jeedaa koom ahaan luuqadahooda ugu waaweyn. Qaabaynta lagu "
+"tilmaansanayo kooxaha la tababbarayo waxa uu ku salaysan yahay maababka 4K "
+"ee ay YWAM habaysay. Waxay adduunka u kala qaybinayaan gaba-gabal taasoo ku "
+"salaysan bulshada iyo heerka guud ee uu injiilku ku eg yahay, oo meelaha aan "
+"wax la wacdiyin saddex jeer ka helitaan badan kuwa la wacdiyey. Faahfahin "
+"dheerFor more inaad ah oo ku saabsan qaabayntan waxaa ka helaysaa http://"
+"www.4Kworldmap.com. Mashruucu waxa uu adeegsanayaa jiilka labaad ee xogta,, "
+"4K Plus, kaasoo adduunka u kala qaybinaya illaa 60,000 oo ah Gobollo "
+"Waaweyn. Waxaa jiri doona kooxo laga bilaabi doono Gobol Weyn oo kasta "
+"kuwaasoo dabadeed bilaabi doona kaniisado faracii ugu horreeyay ah isla "
+"gobollada dhexdooda. Qaybaha aan aadka loo gaadhin waxay noqon kooxda "
+"tababbaranaysa qiyaas ahaan illaa  50,000 oo qofood."
+
+#: template-zume-faq.php:162
+msgid "Why is it called Zúme?"
+msgstr "Maxay tahay sababta loogu bixiyey magaca Zúme?"
+
+#: template-zume-faq.php:163
+msgid ""
+"Zúme means yeast in Greek. In Matthew 13:33 Jesus is quoted as saying, “the "
+"Kingdom of Heaven is like a woman who took yeast and mixed it into a large "
+"amount of flour until it was all leavened.” This illustrates how ordinary "
+"people, using ordinary resources, can have an extraordinary impact for the "
+"Kingdom of God. Zúme aims to equip and empower ordinary believers to reach "
+"every neighborhood."
+msgstr ""
+"Zúme waxay af Giriig ku tahay qamiir. Sida ku jirta Matayos 13:33 Ciise "
+"wuxuu yidhi, “Boqortooyada jannada waxay u eg tahay khamiir, kan naagi intay "
+"qaadday ay saddex qiyaasood oo bur ah ku dhex qooshtay ilaa ay wada "
+"khamiireen.” Tani waxay tilmaamaysaa sida dadka iska caadiga, iyaga oo waxaa "
+"ay haystaan adeegsanaya, ay saamayn aan caadi ahayn Boqortooyada Ilaah ugu "
+"yeelan karaan. Zúme ujeedkiisu waxaa weeye in lagu qalabeeyo oo lagu xoojiyo "
+"sidii rumaystayaasha caadiga ahu deriskooda u gaadhi lahaayeen."
+
+#: template-zume-faq.php:168
+msgid ""
+"I really want to support Zúme financially because I passionately believe in "
+"it. How can I give?"
+msgstr ""
+"Runtii waxaan doonayanaa in aan dhaqaale ahaan u taageero Zúme maxaa yeelay "
+"naxariis ayaan u qaaday. Sidee baan ku bioxin karaa?"
+
+#: template-zume-faq.php:169
+msgid ""
+"That is how everything about Zúme has happened so far. We’re glad you feel "
+"the same way about it that we do. Biglife has agreed to handle donations for "
+"the project for free. You can donate at big.life/donate/ if you select “Zúme "
+"Project” as the designation for your gift."
+msgstr ""
+"Waa taas waxa uu illaa iyo hadda uu Zúme ku socdo. Aad ayaan annaguna ugu "
+"faraxsan nahay oo u dareemaynaa inaan u samayno. Biglife ayaa qaabbishay "
+"inay xagga qaadhaanka ka saaciddo mashruuca. Waxaad qaadhaanka ku bixin "
+"kartaa big.life/donate/ haddaad dooratid “Zúme Project” inay hadiyaddaadu ku "
+"socoto."
+
+#: template-zume-faq.php:174
+msgid "When will the other 34 language versions become available?"
+msgstr "Gooree 34 luuqadood ee kale qaybahooda la helayaa?"
+
+#: template-zume-faq.php:175
+msgid ""
+"First we want to iron out the kinks in English for a few months. Then it "
+"depends on how quickly we can raise funds for the translations, and how "
+"quickly we can locate appropriate translators, and how quickly they can "
+"work. Hopefully the kinks will be worked out by May 2017. The translation "
+"process is tricky because of all the voiceovers and the retiming of the "
+"videos so we are only guessing at the cost per language but we are hoping "
+"for about $7,000 per language. If you want to fund a particular language or "
+"pay for a language we haven’t planned on then you can designate "
+"contributions for that language."
+msgstr ""
+"Marka hore waxaan rabnaa inaan dhowra bilood ee hore aan adkayno kan "
+"Ingiriisiga. intaas kaddib waxay ku xidhan tahay hadba sida tarjumaadaha "
+"dhaqaale loogu helo, iyo sidii aan tarjumayaal ku habboon ugu, iyo sida ugu "
+"dhakhsaha badan ee ay uga shaqayn karaan. Sidan rajaynayno adkayntan bilowga "
+"ahu waxay inaga dhammaan doontaa bisha May 2017. Habsocodka tarjumaaddu way "
+"iska hawlo badan tahay sababo la xidhiidha ku celcelinta codaynta iyo "
+"googoynta waqtiga muuqaalka markaa waxaan qiyaasi karnaa oo keliya qiimaha "
+"luuqad kasta oo aan rajaynayno illaa $7,000 luuqaddii kasta. Haddaad "
+"doonaysid inaad luuqadka gaar ah maal gelisid ama aad u bixisid luuqad "
+"aynaan weli qorshayn darteed markaa waad bixin kartaa wixii biirin kaaga ah "
+"luuqaddaas."
+
+#: template-zume-faq.php:180
+msgid "What languages will the training be translated into?"
+msgstr "Luuqadahee ayaa tababbarka lagu tarjumi doonaa?"
+
+#: template-zume-faq.php:181
+msgid ""
+"The project will start in the following languages and made available to "
+"those wishing to translate the training and tools into additional languages: "
+"Arabic, Bengali, Bhojpuri, Burmese, Chinese (Mandarin), Chinese (Cantonese), "
+"Farsi, French, German, Gujarati, Hausa, Hindi, Indonesian, Italian, "
+"Japanese, Kannada, Korean, Maithili, Malayalam, Marathi, Oriya, Panjabi "
+"(Eastern), Panjabi (Western), Portuguese, Russian, Spanish, Swahili, Tamil, "
+"Telugu, Thai, Turkish, Urdu, Vietnamese, Yoruba."
+msgstr ""
+"Mashruucu wuxuu bilaabi doonaa luuqadahan soo socda oo uu u diyaarin doonaa "
+"kuwa raba inay tarjumaan tababbarka iyo qalabka luuqadahaas dheeraadka ah "
+"ee: Arabic, Bengali, Bhojpuri, Burmese, Chinese (Mandarin), Chinese "
+"(Cantonese), Farsi, French, German, Gujarati, Hausa, Hindi, Indonesian, "
+"Italian, Japanese, Kannada, Korean, Maithili, Malayalam, Marathi, Oriya, "
+"Panjabi (Eastern), Panjabi (Western), Portuguese, Russian, Spanish, Swahili, "
+"Tamil, Telugu, Thai, Turkish, Urdu, Vietnamese, Yoruba."
+
+#: template-zume-faq.php:186
+msgid "How are the groups started by trainees aligned or organized?"
+msgstr ""
+"Sidee bay kooxuhu ku bilaabmaan ma kuwo meel kasoo wada jeeda mise kuwo is "
+"abaabulay?"
+
+#: template-zume-faq.php:187
+msgid ""
+"It depends. If the trainees come out of a particular church or denomination "
+"or network then the most natural thing is for the newly formed groups to be "
+"connected with those existing churches, denomination, or network. If "
+"desired, however, a new network can be formed from the groups that start. A "
+"third alternative would be for the new groups to join with other already "
+"existing networks of simple churches. Many of the people involved in "
+"developing Zúme come from such networks so we can help arrange that if "
+"desired."
+msgstr ""
+"Taas ayey ku xidhan tahay. Haddii kuwa la tababbarayaa ay ka wada yimaadaan "
+"kaniisad gaar ah ama mad'hab ama shabakad dabadeed kooxihii cusbaa ee la "
+"sameeyay ayaa waxa ay ku xidhmayaan kaniisadaha, ama madaahiibta ama "
+"shabakadda. Hadii loo baahdo, iskuxidh cusub ayaa laga samayn karaa kooxihii "
+"bilaabay dhexdooda. Doorasho saddexaad ayey kooxihii la aasaasay haystaan ay "
+"ugu biiraax iskuxidhka kaniisadaha yaryar ee horay u jiray. Dad badan oo ah "
+"kuwa ku lugta leh horumarinta Zúme shabakadahan wada shaqaynta ayey ka "
+"yimaadeen sidaas darteed waan habayn karnaa haddii loo baahdo."
+
+#: template-zume-faq.php:206
+msgid ""
+"Zúme means yeast in Greek. In Matthew 13:33 Jesus is quoted as saying, \"The "
+"Kingdom of Heaven is like a woman who took yeast and mixed it into a large "
+"amount of flour until it was all leavened.\" This illustrates how ordinary "
+"people, using ordinary resources, can have an extraordinary impact for the "
+"Kingdom of God. Zúme aims to equip and empower ordinary believers to reach "
+"every neighborhood."
+msgstr ""
+"Zúme waxay af Giriig ku tahay qamiir. Sida ku jirta Matayos 13:33 Ciise "
+"wuxuu yidhi, “Boqortooyada jannada waxay u eg tahay khamiir, kan naagi intay "
+"qaadday ay saddex qiyaasood oo bur ah ku dhex qooshtay ilaa ay wada "
+"khamiireen.” Tani waxay tilmaamaysaa sida dadka iska caadiga, iyaga oo waxaa "
+"ay haystaan adeegsanaya, ay saamayn aan caadi ahayn Boqortooyada Ilaah ugu "
+"yeelan karaan. Zúme ujeedkiisu waxaa weeye in lagu qalabeeyo oo lagu xoojiyo "
+"sidii rumaystayaasha caadiga ahu deriskooda u gaadhi lahaayeen."
+
+#: template-zume-guidebook.php:28
+msgid ""
+"Our goal is kingdom growth, so we have made the entire training guidebook "
+"free for download. Use the link below."
+msgstr ""
+"Ujeedkeennu waa korinta boqortooyada, sidaas daraaddeed waxaan tababbarka "
+"buuggahagaha dhammaantii ku bixinaynaa in fasax lagu soo degsado. Isticmaal "
+"cinwaanka hoose."
+
+#: template-zume-guidebook.php:35
+msgid "Complete Zume Guidebook"
+msgstr "Dhammaystir Buuggahagaha Zume"
+
+#: template-zume-overview.php:66
+msgid "Sessions Overview"
+msgstr "Guudmarka Kulannada"
+
+#: template-zume-overview.php:116
+msgid "Session 1"
+msgstr "Kulanka 1"
+
+#: template-zume-overview.php:122
+msgid "Session 2"
+msgstr "Kulanka 2"
+
+#: template-zume-overview.php:128
+msgid "Session 3"
+msgstr "Kulanka 3"
+
+#: template-zume-overview.php:134
+msgid "Session 4"
+msgstr "Kulanka 4"
+
+#: template-zume-overview.php:140
+msgid "Session 5"
+msgstr "Kulanka 5"
+
+#: template-zume-overview.php:146
+msgid "Session 6"
+msgstr "Kulanka 6"
+
+#: template-zume-overview.php:152
+msgid "Session 7"
+msgstr "Kulanka 7"
+
+#: template-zume-overview.php:158
+msgid "Session 8"
+msgstr "Kulanka 8"
+
+#: template-zume-overview.php:164
+msgid "Session 9"
+msgstr "Kulanka 9"
+
+#: template-zume-overview.php:170
+msgid "Session 10 - Advanced Training"
+msgstr "Kulanka 10 - Tababbar Heer Sare ah"
+
+#: template-zume-overview.php:190
+msgid "Go to the Dashboard to select your Group and start the next session"
+msgstr "Tag Muuqaalkaguud si aad u dooratid kooxdaada oo bilow kulanka xiga"
+
+#: template-zume-overview.php:253 template-zume-overview.php:393
+#: template-zume-overview.php:515 template-zume-overview.php:625
+#: template-zume-overview.php:769 template-zume-overview.php:876
+#: template-zume-overview.php:951 template-zume-overview.php:1028
+#: template-zume-overview.php:1104 template-zume-overview.php:1205
+msgid "Concepts:"
+msgstr "Ujeeddooyin:"
+
+#: template-zume-overview.php:262
+msgid ""
+"WELCOME TO ZÚME — You'll see how God uses ordinary people doing simple "
+"things to make a big impact."
+msgstr ""
+"KU SOO DHAWOOW ZÚME — Waxaad arki doontaa sida Ilaah ugu adeegsado dadka "
+"caadiga ah oo waxyaabo fudfudud adeegsanaya ay sameeyaan wax saamaym weyn "
+"leh."
+
+#: template-zume-overview.php:273
+msgid ""
+"TEACH THEM TO OBEY — Discover the essence of being a disciple, making a "
+"disciple, and what is the church."
+msgstr ""
+"BAR INAY ADDEECAAN — Soosaarista muhiimadda in xer la noqdo, xer la sameeyo, "
+"iyo waxa ay kaniisaddu tahay."
+
+#: template-zume-overview.php:284 template-zume-overview.php:328
+msgid ""
+"SPIRITUAL BREATHING — Being a disciple means we hear from God and we obey "
+"God."
+msgstr ""
+"NEEFSASHADA RUUXIGA AH — In xer la noqdo macnaheedu waxaa weeye Ilaah ayaan "
+"wax ka maqalnaa oo Ilaah ayaan addeecnaa."
+
+#: template-zume-overview.php:295 template-zume-overview.php:414
+#: template-zume-overview.php:549 template-zume-overview.php:670
+#: template-zume-overview.php:790 template-zume-overview.php:897
+#: template-zume-overview.php:1226
+msgid "Tools:"
+msgstr "Qalab:"
+
+#: template-zume-overview.php:305
+msgid ""
+"S.O.A.P.S. BIBLE READING — a tool for daily Bible study that helps you "
+"understand, obey, and share God’s Word."
+msgstr ""
+"AKHRINTA BAYBALKA EE S.O.A.P.S. — qalab maalin kasta barashada Baybalka kaa "
+"caawinaya inaad fahantid, addeecdid oo aad Ereyga Ilaah dadka la wadaagtid."
+
+#: template-zume-overview.php:317
+msgid ""
+"ACCOUNTABILITY GROUPS — a tool for two or three people of the same gender to "
+"meet weekly and encourage each other in areas that are going well and reveal "
+"areas that need correction."
+msgstr ""
+"KOOXO MASUULIYADEED— dad labo ama saddex qof ka kooban oo isku rag ama dumar "
+"ah oo toddobaad walba kulma oo isku dhiirri geliya waxa sida fiican u socda "
+"iyo waxa u baahan in la saxo."
+
+#: template-zume-overview.php:339 template-zume-overview.php:448
+#: template-zume-overview.php:570 template-zume-overview.php:703
+#: template-zume-overview.php:811 template-zume-overview.php:972
+#: template-zume-overview.php:1049 template-zume-overview.php:1149
+#: template-zume-overview.php:1248
+msgid "Practice:"
+msgstr "Dhaqangeli:"
+
+#: template-zume-overview.php:348
+msgid ""
+"ACCOUNTABILITY GROUPS — Break into groups of two or three people to work "
+"through the Accountability Questions. (45 minutes)"
+msgstr ""
+"KOOXO MASUULIYADEED — U qaybi kooxo ka kooban labo ama saddex qof si ay uga "
+"wada shaqeeyaan Su'aalaha Masuuliyadeed. (45 daqiiqo)"
+
+#: template-zume-overview.php:403
+msgid ""
+"PRODUCERS VS. CONSUMERS — You'll discover the four main ways God makes "
+"everyday followers more like Jesus."
+msgstr ""
+"WAX SOOSAAR IYO MACMIILS — Waxaad soo saari doontaa saddexda waddo ee uu "
+"Ilaah rumaystaha ekaanta Ciise ugu yeelo."
+
+#: template-zume-overview.php:424
+msgid "PRAYER CYCLE — See how easy it is to spend an hour in prayer."
+msgstr ""
+"HABKA SALAADDA WAREEGGA — Eeg sida ay u fududdahay in hal saacad duco lagu "
+"qaato."
+
+#: template-zume-overview.php:436
+msgid ""
+"LIST OF 100 — a tool designed to help you be a good steward of your "
+"relationships."
+msgstr ""
+"LIISKA 100ka — qalab loogu talo galay inuu kaa caawiyo sidii aad "
+"xidhiidhadaada masuuliyad isaga saari lahayd."
+
+#: template-zume-overview.php:458
+msgid "PRAYER CYCLE — Spend 60 minutes in prayer individually."
+msgstr "HABKA SALAADDA WAREEGGA — Ku qaado 60 daqiiqo salaad keli ahaaneed."
+
+#: template-zume-overview.php:468
+msgid "LIST OF 100 — Create your own list of 100. (30 minutes)"
+msgstr "LIISKA 100ka — Samayso liiskaaga 100ka ee kuu gaarka ah. (30 daqiiqo)"
+
+#: template-zume-overview.php:525
+msgid ""
+"SPIRITUAL ECONOMY — Learn how God's economy is different from the world's. "
+"God invests more in those who are faithful with what they've already been "
+"given."
+msgstr ""
+"DHAQAALAHA RUUXIGAA — Baro sida Ilaah dhaqaalihiisu uga duwan yahay kan "
+"adduunka. Ilaah wuxuu siiya kuwa aamminka ku ah wixii horay loo siiyey."
+
+#: template-zume-overview.php:537
+msgid ""
+"CREATION TO JUDGMENT — Learn a way to share God’s Good News from the "
+"beginning of humanity all the way to the end of this age."
+msgstr ""
+"ABUURTII IYO XUKUNKA — Baro habka dadka loola wadaago Ilaah Warkiisa "
+"Wanaagsan ee bilowgii aadanaha illaa iyo dhammaadka waqtiga."
+
+#: template-zume-overview.php:559
+msgid ""
+"BAPTISM — Jesus said, “Go and make disciples of all nations, BAPTIZING them "
+"in the name of the Father and of the Son and of the Holy Spirit…” Learn how "
+"to put this into practice."
+msgstr ""
+"BAABTIIS — Ciise wixii yiri, “Taga, oo quruumaha oo dhan xer ka dhiga, oo ku "
+"baabtiisa magaca Aabbaha iyo Wiilka iyo Ruuxa Quduuskaa…” Baro sida middan "
+"loo dhaqan geliyo."
+
+#: template-zume-overview.php:580
+msgid ""
+"SHARE GOD’S STORY — Break into groups of two or three and practice sharing "
+"God’s Story. (45 minutes)"
+msgstr ""
+"LA WADAAG QISOOYINKA ILAAH — Uqaybi kooxo ah labo ama saddex oo dhaqan "
+"geliya inaad Qisooyinka Ilaah wadaagtaan. (45 daqiiqo)"
+
+#: template-zume-overview.php:635
+msgid ""
+"GREATEST BLESSING — Learn a simple pattern of making not just one follower "
+"of Jesus but entire spiritual families who multiply for generations to come."
+msgstr ""
+"BARAKADA UGU WEYN — Baro qaab aan ahayn inaad samaynaysid hal qof oo raaca "
+"Ciise balse taas beddelkeeda aad ku samaynaid qoysas ruuxi ah oo sii badiya "
+"jiilalka soo socda."
+
+#: template-zume-overview.php:647
+msgid ""
+"EYES TO SEE — Begin to see where God’s Kingdom isn’t. These are usually the "
+"places where God wants to work the most."
+msgstr ""
+"INDHO WAX LAGU ARKO — Bilow inaad aragtid halka aanay Boqortooyada Ilaah ka "
+"jirin. Meelahani waa halka Ilaah doonayo in wax badan laga qabto."
+
+#: template-zume-overview.php:659
+msgid ""
+"DUCKLING DISCIPLESHIP — Learn what ducklings have to do with disciple-making."
+msgstr ""
+"HORKICIDDA XERNIMADA — Baro waxca ay horkiciddu u leedahay xer-samaynta."
+
+#: template-zume-overview.php:680
+msgid ""
+"3-MINUTE TESTIMONY — Learn how to share your testimony in three minutes by "
+"sharing how Jesus has impacted your life."
+msgstr ""
+"MARKHAATIFUR 3-DAQIIQO AH — Baro inaad markhaatifurkaaga kula wadaagtid "
+"saddex daqiiqo adigoo la wadaagaya sidii Ciise uu noloshaada saamaynta ugu "
+"yeeshay."
+
+#: template-zume-overview.php:692
+msgid ""
+"THE LORD'S SUPPER — It’s a simple way to celebrate our intimate connection "
+"and ongoing relationship with Jesus. Learn a simple way to celebrate."
+msgstr ""
+"CASHADA RABBIGA — Waa dabbaal deg ama isku xidh iyo xidhiidh dhow oo Ciise "
+"lala yeesho. Halkan waxaa ah hab fudud oo loogu dabbaal dego."
+
+#: template-zume-overview.php:713
+msgid ""
+"SHARING YOUR TESTIMONY — Break into groups of two or three and practice "
+"sharing your Testimony with others. (45 minutes)"
+msgstr ""
+"LA WADAAG MARKHAATIFURKAAGA — U qaybi kooxo labo ama saddex ah oo dhaqan "
+"geli inaad markhaatifurkiinna la wadaagtaan kuwa kale. (45 daqiiqo)"
+
+#: template-zume-overview.php:725
+msgid ""
+"THE LORD'S SUPPER — Take time as a group to do this together. (10 minutes)"
+msgstr "CASHADA RABBIGA— Koox ahaan u qaata inaad tan samaysaan. (10 daqiiqo)"
+
+#: template-zume-overview.php:779
+msgid ""
+"PERSON OF PEACE — Learn who a person of peace might be and how to know when "
+"you've found one."
+msgstr ""
+"QOF NABADEED — Baro kan qofka nabadeed uu noqonayo iyo sida aad ku "
+"garanaysid marka aad mid heshid.."
+
+#: template-zume-overview.php:800
+msgid ""
+"PRAYER WALKING — It’s a simple way to obey God’s command to pray for others. "
+"And it's just what it sounds like — praying to God while walking around!"
+msgstr ""
+"SALAADDA SOCODKA — Waa hab fudud oo lagu addeeco amarka Ilaah ee ah in kuwa "
+"kale loo duceeyo. Waxayna noqonaysaa — Ilaah oo la baryo iyadoo la socdo!"
+
+#: template-zume-overview.php:821
+msgid ""
+"B.L.E.S.S. PRAYER — Practice a simple mnemonic to remind you of ways to pray "
+"for others. (15 minutes)"
+msgstr ""
+"SALAADDA B.L.E.S.S. — Dhaqan geli xifdin sahlan si ay kuu xusuusiso qaababka "
+"kuwa kale loogu duceeyo. (15 daqiiqo)"
+
+#: template-zume-overview.php:831
+msgid ""
+"PRAYER WALKING — Break into groups of two or three and go out into the "
+"community to practice Prayer Walking. (60-90 minutes)"
+msgstr ""
+"SALAADDA SOCODKA — U qaybi kooxo labo ama saddex ah oo bulshada dhex aada si "
+"aad u dhaqan gelisaan Salaadda Socodka. (60-90 daqiiqo)"
+
+#: template-zume-overview.php:886
+msgid ""
+"FAITHFULNESS — It's important what disciples know — but it's much more "
+"important what they DO with what they know."
+msgstr ""
+"AAMMINNIMO — Waa muhiim waxa ay xertu og tahay — Balse waxaa aad uga sii "
+"muhiimsan waxa ay SAMEEYAAN iyaga oo og."
+
+#: template-zume-overview.php:907
+msgid ""
+"3/3 GROUP FORMAT — A 3/3 Group is a way for followers of Jesus to meet, "
+"pray, learn, grow, fellowship and practice obeying and sharing what they've "
+"learned. In this way, a 3/3 Group is not just a small group but a Simple "
+"Church. (80 minutes)"
+msgstr ""
+"HABKA KOOXAHA 3/3 — Kooxda 3/3 waa qaab ay raacayaasha Ciise u kulmaan, "
+"ducaystaan, bartaan, koraan, isu weheshadaan oo ay u dhaqan geliyaan una "
+"wadaagaan wixii ay barteen. habkan Kooxaha 3/3 iskama ahan koox yar oo qudha "
+"balse waa Kaniisad Yar. (80 daqiiqo)"
+
+#: template-zume-overview.php:961
+msgid ""
+"TRAINING CYCLE — Learn the training cycle and consider how it applies to "
+"disciple making."
+msgstr ""
+"TABABBARKA WAREEGGA AH — Baka wareegga ah oo tixraac ku samee sida loogu "
+"dabbakho xer samaynta."
+
+#: template-zume-overview.php:982 template-zume-overview.php:1059
+msgid ""
+"3/3 GROUP — Your entire group will spend 90 minutes practicing the 3/3 Group "
+"Format."
+msgstr ""
+"KOOXAHA 3/3 — Kooxdaada oo dhan waxay ku qaadan doonaan 90 daqiiqo dhaqan "
+"gelinta Nidaamka Kooxaha 3/3."
+
+#: template-zume-overview.php:1038
+msgid ""
+"LEADERSHIP CELLS — A Leadership Cell is a way someone who feels called to "
+"lead can develop their leadership by practicing serving."
+msgstr ""
+"UNUGYADA HOGGAAMINTA — Unugga hoggaamintu waa qaab qofka dareema in "
+"hoggaamin loogu yeedhay uu xirfadihiisa ku horumarin kari isaga oo "
+"adeegitaan samaynaya."
+
+#: template-zume-overview.php:1114
+msgid ""
+"NON-SEQUENTIAL — See how disciple making doesn't have to be linear. Multiple "
+"things can happen at the same time."
+msgstr ""
+"AAN ISLA SOCON — Ar sida xer samayntu aanay u ahayn mid isku xigxigta. "
+"Sheeyo dhowr ah ayaa hal mar wada dhici kara."
+
+#: template-zume-overview.php:1126
+msgid ""
+"PACE — Multiplying matters and multiplying quickly matters even more. See "
+"why pace matters."
+msgstr ""
+"XAWAARE — Badintu macne ayey samaysaa, si dhakhso ah loo badiyaana kasii "
+"badan ayey samaysaa. Arag sababta xawaaruhu muhiimka u yahay."
+
+#: template-zume-overview.php:1138
+msgid ""
+"PART OF TWO CHURCHES — Learn how to obey Jesus' commands by going AND "
+"staying."
+msgstr ""
+"QAYB KA AH LABO KANIISADOOD— Baro sidii aad amarradii Ciise ugu adeeci "
+"lahayd bixid iyo jooid."
+
+#: template-zume-overview.php:1159
+msgid ""
+"3-MONTH PLAN — Create and share your plan for how you will implement the "
+"Zúme tools over the next three months. (60 minutes)"
+msgstr ""
+"QORSHE 3-BIL AH — Abuur oo la wadaag qorshahaaga sidii aad qalabka Zúme u "
+"hir gelin lahayd saddexda bilood ee soo socda. (60 daqiiqo)"
+
+#: template-zume-overview.php:1215
+msgid ""
+"LEADERSHIP IN NETWORKS — Learn how multiplying churches stay connected and "
+"live life together as an extended, spiritual family."
+msgstr ""
+"HOGGAAMINTA KU JIRTA ISKU XIDHKA — Baro sidii badinta kaniisaduhu u noqon "
+"lahaayeen kuwo isku xidhan oo u noolaada hab qoys ruuxi ahaaneed."
+
+#: template-zume-overview.php:1236
+msgid ""
+"PEER MENTORING GROUPS — This is a group that consists of people who are "
+"leading and starting 3/3 Groups. It also follows a 3/3 format and is a "
+"powerful way to assess the spiritual health of God’s work in your area."
+msgstr ""
+"SOOSAARISTA KOOXAHA WAX HAGA — Tani waa koox ka kooban dad wax hoggaaminaya "
+"oo bilaabaya Kooxaha 3/3. Sidoo kale Nidaamka 3/3 ayaa la socda waana hab "
+"awood badan oo aad ku baadhi kartid caafimaad ruuxi ahaaneed ee shaqada "
+"Ilaah ee ka socota aaggiinna."
+
+#: template-zume-overview.php:1259
+msgid ""
+"PEER MENTORING GROUPS — Break into groups of two or three and work through "
+"the Peer Mentoring Group format. (60 minutes)"
+msgstr ""
+"SOOSAARISTA KOOXAHA WAX HAGA— U qaybi kooxo labo ama saddex ah oo ka wada "
+"shaqeeya nidaamka Soosaarista Kooxaha Wax Haga. (60 daqiiqo)"
+
+#: template-zume-profile.php:22
+msgid "Your Profile"
+msgstr "Cinwaankaaga"
+
+#: template-zume-profile.php:25
+msgid "edit image @ gravatar.com"
+msgstr "edit image @ gravatar.com"
+
+#: template-zume-profile.php:33
+msgid "User Name"
+msgstr "Magaca Adeegsadaha"
+
+#: template-zume-profile.php:36
+msgid "(can not change)"
+msgstr "(ma beddeli karo)"
+
+#: template-zume-profile.php:41 template-zume-profile.php:45
+#: template-zume-profile.php:46
+msgid "First Name"
+msgstr "Magaca Koowaad"
+
+#: template-zume-profile.php:56 template-zume-profile.php:60
+#: template-zume-profile.php:61
+msgid "Last Name"
+msgstr "Magaca Labaad"
+
+#: template-zume-profile.php:139
+msgid "Oh snap!"
+msgstr "Ala hayaay!"
+
+#: template-zume-profile.php:142
+msgid "Save"
+msgstr "Kaydi"
+
+#: template-zume-resources.php:30
+msgid "RESOURCES"
+msgstr "ILAHA"
+
+#: template-zume-resources.php:38
+msgid "Promotional Materials"
+msgstr "Waxaybaha lagu guleysanaayo"
+
+#: template-zume-resources.php:47
+msgid "Download Guidebook"
+msgstr "Soo degso Buuggahagaha"
+
+#: template-zume-resources.php:58
+msgid "Download Zúme Promo Flyer"
+msgstr "Soo degso Kobcinta Zúme Flyer"
+
+#: template-zume-resources.php:68
+msgid "Download Zume Promo Video"
+msgstr "Soo degso Muuqaalka Kobcinta Zume"
+
+#: template-zume-resources.php:77
+msgid "Download Zume Overview Video"
+msgstr "Soo degso Muuqaalka Guudmarka Zume"
+
+#: template-zume-resources.php:85
+msgid "Project Information"
+msgstr "Warbixinta Mashruuca"
+
+#: template-zume-resources.php:94
+msgid "Frequently Asked Questions (FAQ)."
+msgstr "Su'aalaha Had iyo Jeer la Isweyddiisyo (SHJI)."
+
+#: template-zume-resources.php:104
+msgid "Language Translation Progress"
+msgstr "Horumarka Tarjumaadda Luuqadda"
+
+#: template-zume-resources.php:122
+msgid "Additional Resources:"
+msgstr "Ilo Dheeraad ah:"
+
+#. Theme Name of the plugin/theme
+msgid "Zúme Project"
+msgstr "Mashruuca Zúme"
+
+#. Theme URI of the plugin/theme
+msgid "https://github.com/ChasmSolutions/zume-project-theme"
+msgstr "https://github.com/ChasmSolutions/zume-project-theme"
+
+#. Description of the plugin/theme
+msgid "Zúme Project for multiplying disciples."
+msgstr "Mashruuca Zúme ee badinta xerta."
+
+#. Author of the plugin/theme
+msgid "Chasm Solutions"
+msgstr "Chasm Solutions"
+
+#. Author URI of the plugin/theme
+msgid "https://github.com/ChasmSolutions"
+msgstr "https://github.com/ChasmSolutions"
