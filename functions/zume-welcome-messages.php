@@ -98,66 +98,6 @@ class Zume_Welcome_Messages {
                 'title' => __( 'Welcome!', 'zume' ),
                 'message' => __( 'I want to make disciples who multiply!', 'zume' )
         ];
-        $message['1'] = [
-                'type' => 'new',
-                'name' => 'new_registration',
-                'title' => __( 'Title 1', 'zume' ),
-                'message' => __( 'Message1', 'zume' )
-        ];
-        $message['2'] = [
-                'type' => 'new',
-                'name' => 'new_registration',
-                'title' => __( 'Title 2', 'zume' ),
-                'message' => __( 'Message2', 'zume' )
-        ];
-        $message['3'] = [
-                'type' => 'new',
-                'name' => 'new_registration',
-                'title' => __( 'Title 3', 'zume' ),
-                'message' => __( 'Message3', 'zume' )
-        ];
-        $message['4'] = [
-                'type' => 'new',
-                'name' => 'new_registration',
-                'title' => __( 'Title 4', 'zume' ),
-                'message' => __( 'Message4', 'zume' )
-        ];
-        $message['5'] = [
-                'type' => 'new',
-                'name' => 'new_registration',
-                'title' => __( 'Title 5', 'zume' ),
-                'message' => __( 'Message5', 'zume' )
-        ];
-        $message['6'] = [
-                'type' => 'new',
-                'name' => 'new_registration',
-                'title' => __( 'Title 6', 'zume' ),
-                'message' => __( 'Message6', 'zume' )
-        ];
-        $message['7'] = [
-                'type' => 'new',
-                'name' => 'new_registration',
-                'title' => __( 'Title 7', 'zume' ),
-                'message' => __( 'Message7', 'zume' )
-        ];
-        $message['8'] = [
-                'type' => 'new',
-                'name' => 'new_registration',
-                'title' => __( 'Title 8', 'zume' ),
-                'message' => __( 'Message8', 'zume' )
-        ];
-        $message['9'] = [
-                'type' => 'new',
-                'name' => 'new_registration',
-                'title' => __( 'Title 9', 'zume' ),
-                'message' => __( 'Message9', 'zume' )
-        ];
-        $message['10'] = [
-                'type' => 'new',
-                'name' => 'new_registration',
-                'title' => __( 'Title 10', 'zume' ),
-                'message' => __( 'Message10', 'zume' )
-        ];
 
 
         return $message[$key];
