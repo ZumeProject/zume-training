@@ -58,22 +58,22 @@ class Zume_Integration_Menu
             wp_die( esc_attr__( 'You do not have sufficient permissions to access this page.' ) );
         }
 
-        $title = __( 'DISCIPLE TOOLS - INTEGRATION' );
+        $title = 'DISCIPLE TOOLS - INTEGRATION';
 
         $link = 'admin.php?page=' . $this->token . '&tab=';
 
         $tab_bar = [
             [
                 'key' => 'zume_settings',
-                'label' => __( 'Settings', 'dt_zume' ),
+                'label' =>'Settings',
             ],
             [
                 'key' => 'google_keys',
-                'label' => __( 'Google Keys', 'dt_zume' ),
+                'label' => 'Google Keys',
             ],
             [
                 'key' => 'languages',
-                'label' => __( 'Languages', 'dt_zume' ),
+                'label' =>'Languages',
             ]
         ];
 
