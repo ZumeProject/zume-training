@@ -150,9 +150,51 @@ function zume_get_user_meta( $user_id = null ) {
     }, get_user_meta( $user_id ) );
 }
 
-function zume_home_url() {
-    $current_lang = zume_current_language();
-    $url = zume_get_posts_translation_url( 'home', $current_lang );
+function zume_home_url( $current_language = null ) {
+    if ( is_null( $current_language ) ) {
+        $current_language = zume_current_language();
+    }
+    if ( 'en' != $current_language ) {
+        $home_url = site_url() . '/' . $current_language;
+    } else {
+        $home_url = site_url();
+    }
+    return $home_url;
+}
+
+function zume_login_url( $current_language = null ) {
+    if ( is_null( $current_language ) ) {
+        $current_language = zume_current_language();
+    }
+    if ( 'en' != $current_language && ! empty( $current_language ) ) {
+        $url = zume_get_posts_translation_url( 'login', $current_language );
+    } else {
+        $url = site_url() . '/login';
+    }
+    return $url;
+}
+
+function zume_lostpassword_url( $current_language = null ) {
+    if ( is_null( $current_language ) ) {
+        $current_language = zume_current_language();
+    }
+    if ( 'en' != $current_language && ! empty( $current_language ) ) {
+        $url = zume_get_posts_translation_url( 'login', $current_language ) . '/?action=lostpassword';
+    } else {
+        $url = site_url() . '/login/?action=lostpassword';
+    }
+    return $url;
+}
+
+function zume_register_url( $current_language = null ) {
+    if ( is_null( $current_language ) ) {
+        $current_language = zume_current_language();
+    }
+    if ( 'en' != $current_language && ! empty( $current_language ) ) {
+        $url = zume_get_posts_translation_url( 'login', $current_language ) . '/?action=register';
+    } else {
+        $url = site_url() . '/login/?action=register';
+    }
     return $url;
 }
 

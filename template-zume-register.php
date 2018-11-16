@@ -32,9 +32,17 @@ $wp_query->is_404 = false;
 
 function zume_signup_header() {
     ?>
-    <meta name="google-signin-scope" content="profile email">
-    <meta name="google-signin-client_id" content="<?php echo get_option( 'dt_google_sso_key' ); ?>">
-    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <script src="https://apis.google.com/js/platform.js?onload=start" async defer></script>
+    <script>
+        function start() {
+            gapi.load('auth2', function() {
+                auth2 = gapi.auth2.init({
+                    client_id: '<?php echo get_option( 'dt_google_sso_key' ); ?>',
+                    scope: 'profile email'
+                });
+            });
+        }
+    </script>
     <?php
 }
 
@@ -47,12 +55,20 @@ get_header( 'wp-signup' );
 
     <div class="cell medium-6 center">
         <h2>Social Registration</h2>
-        <!--<div class="g-signin2" data-onsuccess="onSign In" data-theme="dark"></div>-->
-        <div class="g-signin2"  data-theme="dark"></div>
+
+        <button id="signinButton" class="button">Sign in with Google</button>
         <div id="google_error"></div>
+
         <script>
+            jQuery('#signinButton').click(function() {
+                auth2.signIn().then(onSignIn);
+            });
+
             function onSignIn(googleUser) {
                 // Useful data for your client-side scripts:
+                jQuery('#signinButton').attr('style', 'background-color: grey');
+                console.log(googleUser)
+
                 let profile = googleUser.getBasicProfile();
                 console.log("ID: " + profile.getId()); // Don't send this directly to your server!
                 console.log('Full Name: ' + profile.getName());
@@ -75,7 +91,6 @@ get_header( 'wp-signup' );
                     "token": googleUser.getAuthResponse().id_token
                 };
                 register_user_with_google_auth( data );
-
             }
 
             function register_user_with_google_auth( data ) {
@@ -91,7 +106,7 @@ get_header( 'wp-signup' );
                 })
                     .done(function (data) {
                         console.log(data)
-                        //window.location = "<?php //echo esc_url( site_url() ) ?>//"
+                        window.location = "<?php echo esc_url( site_url() ) ?>"
                     })
                     .fail(function (err) {
                         signOut()
@@ -124,7 +139,7 @@ get_header( 'wp-signup' );
                         console.log(err)
                     })
 
-                let auth2 = gapi.auth2.getAuthInstance();
+
                 auth2.signOut().then(function () {
                     console.log('Google User signed out.');
                 });
@@ -134,7 +149,7 @@ get_header( 'wp-signup' );
 
         <hr>
         <h2>Register by Email</h2>
-        <?php custom_registration_function(); ?>
+<!--        --><?php //custom_registration_function(); ?>
         <hr>
 
     </div>

@@ -2,16 +2,7 @@
 if ( ! defined( 'ABSPATH' ) ) { exit; } // Exit if accessed directly
 
 
-/**********************************************************************************************************************
- * Customize links for signup and registration
- * @see wp-login.php:765
- */
-add_filter( 'wp_signup_location', 'zume_multisite_signup_location', 99, 1 );
-add_filter( 'register_url', 'zume_multisite_signup_location', 99, 1 );
-function zume_multisite_signup_location( $url ) {
-    $url = zume_get_posts_translation_url( 'Register' );
-    return $url;
-}
+
 
 /********************************************************************************************************************
  * Google Signon Registration
@@ -50,6 +41,7 @@ class Zume_User_Registration
     }
 
     public function register_via_google( WP_REST_Request $request ) {
+        dt_write_log(__METHOD__ );
         $params = $request->get_json_params();
 
         // verify token authenticity
@@ -59,6 +51,7 @@ class Zume_User_Registration
 
         // Get $id_token via HTTPS POST.
         $google_sso_key = get_option( 'dt_google_sso_key' );
+
         $google_token = $params['token'];
 
         $client = new Google_Client([ 'client_id' => $google_sso_key ]);  // Specify the CLIENT_ID of the app that accesses the backend
@@ -79,8 +72,6 @@ class Zume_User_Registration
         } else {
             return new WP_Error(__METHOD__, 'Failed Google Verification of User Token' ); // Invalid ID token
         }
-        dt_write_log( 'Success Payload' );
-        dt_write_log( $payload );
 
         // if does not exist
         $user_id = email_exists( $user_email );
@@ -109,8 +100,6 @@ class Zume_User_Registration
                 return $user_id;
             }
 
-            dt_write_log( "Post Insert Success: " . $user_id );
-
             zume_update_user_ip_address_and_location( $user_id ); // record ip address and location
 
             add_user_meta( $user_id, 'zume_language', zume_current_language(), true );
@@ -119,8 +108,6 @@ class Zume_User_Registration
             add_user_meta( $user_id, 'zume_affiliation_key', null, true );
 
             add_user_to_blog( get_current_blog_id(), $user_id, 'subscriber' ); // add user to ZumeProject site.
-
-            dt_write_log( 'Post user meta addition' );
 
         }
 
@@ -145,6 +132,8 @@ class Zume_User_Registration
     }
 
     public function logout() {
+        wp_destroy_current_session();
+        wp_clear_auth_cookie();
         wp_logout();
         return true;
     }
@@ -382,78 +371,9 @@ function registration_validation( $username, $password, $email, $website, $first
 
 
 
-/**
- * LOGIN
- */
-/**
- * Changes the logo link from wordpress.org to your site
- */
-function zume_site_url() {
-    return site_url();
-}
-add_filter( 'login_headerurl', 'zume_site_url' );
 
-/**
- * Changes the alt text on the logo to show your site name
- */
-function zume_login_title() {
-    return get_option( 'blogname' );
-}
-add_filter( 'login_headertitle', 'zume_login_title' );
 
-/* Main redirection of the default login page */
-function zume_redirect_login_page() {
-    if ( isset( $_SERVER['REQUEST_URI'] ) && !empty( $_SERVER['REQUEST_URI'] ) ) {
-        $login_page  = zume_get_posts_translation_url( 'Login', zume_current_language() );
-        $page_viewed = basename( sanitize_text_field( wp_unslash( $_SERVER['REQUEST_URI'] ) ) );
 
-        if ( isset( $_SERVER['REQUEST_METHOD'] ) && $page_viewed == "wp-login.php" && $_SERVER['REQUEST_METHOD'] == 'GET') {
-            wp_redirect( $login_page );
-            exit;
-        }
-    }
-}
-add_action( 'init', 'zume_redirect_login_page' );
-
-/* Where to go if a login failed */
-function zume_custom_login_failed() {
-    $login_page  = zume_get_posts_translation_url( 'Login', zume_current_language() );
-    wp_redirect( $login_page . '?login=failed' );
-    exit;
-}
-add_action( 'wp_login_failed', 'zume_custom_login_failed' );
-
-/* Where to go if any of the fields were empty */
-function zume_verify_user_pass($user, $username, $password) {
-    $login_page  = zume_get_posts_translation_url( 'Login', zume_current_language() );
-    if ($username == "" || $password == "") {
-        wp_redirect( $login_page . "?login=empty" );
-        exit;
-    }
-}
-add_filter( 'authenticate', 'zume_verify_user_pass', 1, 3 );
-
-/* What to do on logout */
-//function zume_logout_redirect() {
-//    $current_language  = zume_current_language();
-//    wp_redirect( site_url() . "/" . $current_language );
-//    exit;
-//}
-//add_action( 'wp_logout', 'zume_logout_redirect' );
-
-/* Modify default link for login */
-function zume_login_url( $login_url, $redirect, $force_reauth ) {
-    return zume_get_posts_translation_url( 'Login', zume_current_language() );
-}
-add_filter( 'login_url', 'zume_login_url', 99, 3 );
-
-/**
- * Update User IP Address location on login
- */
-add_action( 'wp_login', 'zume_login_update_ip_info', 10, 2 );
-function zume_login_update_ip_info( $user_login, $user ) {
-    zume_update_user_ip_address_and_location( $user->ID );
-}
 
 
 
