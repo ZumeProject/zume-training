@@ -47,7 +47,9 @@ get_header( 'wp-signup' );
 
     <div class="cell medium-6 center">
         <h2>Social Registration</h2>
-        <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
+        <!--<div class="g-signin2" data-onsuccess="onSign In" data-theme="dark"></div>-->
+        <div class="g-signin2"  data-theme="dark"></div>
+        <div id="google_error"></div>
         <script>
             function onSignIn(googleUser) {
                 // Useful data for your client-side scripts:
@@ -89,22 +91,46 @@ get_header( 'wp-signup' );
                 })
                     .done(function (data) {
                         console.log(data)
+                        //window.location = "<?php //echo esc_url( site_url() ) ?>//"
                     })
                     .fail(function (err) {
+                        signOut()
+                        jQuery('#google_error').text('Failed to authenticate your Google account')
                         console.log("error")
                         console.log(err)
                     })
             }
+
         </script>
+
         <a href="#" onclick="signOut();">Sign out</a>
         <script>
             function signOut() {
-                var auth2 = gapi.auth2.getAuthInstance();
+                jQuery.ajax({
+                    type: "POST",
+                    contentType: "application/json; charset=utf-8",
+                    dataType: "json",
+                    url: '<?php echo rest_url('/zume/v1/logout') ?>',
+                    beforeSend: function(xhr) {
+                        xhr.setRequestHeader('X-WP-Nonce', '<?php echo wp_create_nonce( 'wp_rest' ) ?>');
+                    },
+                })
+                    .done(function (data) {
+                        console.log('Wordpress User Signed Out')
+                    })
+                    .fail(function (err) {
+                        console.log("Wordpress signout failure")
+                        jQuery('#google_error').text(err.responseText )
+                        console.log(err)
+                    })
+
+                let auth2 = gapi.auth2.getAuthInstance();
                 auth2.signOut().then(function () {
-                    console.log('User signed out.');
+                    console.log('Google User signed out.');
                 });
             }
         </script>
+
 
         <hr>
         <h2>Register by Email</h2>

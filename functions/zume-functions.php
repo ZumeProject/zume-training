@@ -133,13 +133,7 @@ function zume_update_user_ip_address_and_location( $user_id = null ) {
     update_user_meta( $user_id, 'zume_raw_location_from_ip', $ip_results['raw'] );
 }
 
-/**
- * Update User IP Address location on login
- */
-add_action( 'wp_login', 'zume_login_update_ip_info', 10, 2 );
-function zume_login_update_ip_info( $user_login, $user ) {
-    zume_update_user_ip_address_and_location( $user->ID );
-}
+
 
 
 /**
@@ -233,5 +227,54 @@ function zume_files_uri() {
 function zume_home_id() {
     $current_lang = zume_current_language();
     $id = zume_get_home_translation_id( 'home', $current_lang );
+    if ( is_wp_error( $id ) ) {
+        return 'en';
+    }
     return $id;
 }
+
+/***********************************************************************************************************************
+ *
+ * ADMIN AREA
+ *
+ *
+ **********************************************************************************************************************/
+
+// Adds columns to the user table in the admin area
+function zume_mu_add_user_admin_columns( $columns ) {
+
+    $columns['zume_phone_number'] = __( 'Phone Number', 'zume' );
+    $columns['zume_user_address'] = __( 'User Address', 'zume' );
+    $columns['zume_address_from_ip'] = __( 'GeoCoded IP', 'zume' );
+    return $columns;
+
+} // end theme_add_user_zip_code_column
+add_filter( 'manage_users_columns', 'zume_mu_add_user_admin_columns' );
+
+
+function zume_mu_show_custom_column_content( $value, $column_name, $user_id ) {
+
+    if ( 'zume_phone_number' == $column_name ) {
+        return get_user_meta( $user_id, 'zume_phone_number', true );
+    } // end if
+    if ( 'zume_user_address' == $column_name ) {
+        if ( empty( get_user_meta( $user_id, 'zume_user_address', true ) ) ) {
+            $content = '';
+        }
+        else {
+            $content = get_user_meta( $user_id, 'zume_user_address', true ) . '<br><a target="_blank" href="https://www.google.com/maps/search/?api=1&query='.get_user_meta( $user_id, 'zume_user_lat', true ).','.get_user_meta( $user_id, 'zume_user_lng', true ).'">map</a>';
+        }
+        return $content;
+    } // end if
+    if ( 'zume_address_from_ip' == $column_name ) {
+        if ( empty( get_user_meta( $user_id, 'zume_address_from_ip', true ) ) ) {
+            $content = '';
+        }
+        else {
+            $content = get_user_meta( $user_id, 'zume_address_from_ip', true ) . '<br><a target="_blank" href="https://www.google.com/maps/search/?api=1&query='.get_user_meta( $user_id, 'zume_lat_from_ip', true ).','.get_user_meta( $user_id, 'zume_lng_from_ip', true ).'">map</a>';
+        }
+        return $content;
+    } // end if
+
+} // end theme_show_user_zip_code_data
+add_action( 'manage_users_custom_column', 'zume_mu_show_custom_column_content', 10, 3 );

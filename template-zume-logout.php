@@ -17,6 +17,16 @@ if ( 'en' != $current_language ) {
     $home_url = site_url();
 }
 
+function zume_signup_header() {
+    ?>
+    <meta name="google-signin-scope" content="profile email">
+    <meta name="google-signin-client_id" content="<?php echo get_option( 'dt_google_sso_key' ); ?>">
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <?php
+}
+
+add_action( 'wp_head', 'zume_signup_header' );
+
 ?>
 
 <?php get_header(); ?>
@@ -34,5 +44,18 @@ if ( 'en' != $current_language ) {
         </div>
     </div>
 </div>
+<script>
+    function signOut() {
+
+        let auth2 = gapi.auth2.getAuthInstance();
+        auth2.signOut().then(function () {
+            console.log('Google User signed out.');
+        });
+    }
+    jQuery(document).ready(function() {
+        signOut()
+    })
+
+</script>
 
 <?php get_footer(); ?>
