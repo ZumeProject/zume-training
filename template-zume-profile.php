@@ -84,6 +84,7 @@ $zume_user_meta = zume_get_user_meta( get_current_user_id() ); // Full array of 
                                 </span>
                             </td>
                         </tr>
+                        <?php if ( get_user_meta( $zume_user->ID, 'google_sso_email', true ) ) : ?>
                         <tr>
                             <td style="vertical-align: top;">
                                 <label for="user_email"><?php echo esc_html__( 'Linked Google Email', 'zume' )?></label>
@@ -96,6 +97,7 @@ $zume_user_meta = zume_get_user_meta( get_current_user_id() ); // Full array of 
                                 />
                             </td>
                         </tr>
+                        <?php endif; ?>
                         <tr>
                             <td style="vertical-align: top;">
                                 <label for="zume_phone_number"><?php echo esc_html__( 'Phone Number', 'zume' )?></label>

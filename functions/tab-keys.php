@@ -34,6 +34,8 @@ class Zume_Keys_Tab
                             <br>
                             <?php $this->google_sso_key_metabox() ?>
                             <br>
+                            <?php $this->google_captcha_key_metabox() ?>
+                            <br>
                             <?php $this->get_your_own_google_key_metabox(); ?>
 
                         </div><!-- end post-body-content -->
@@ -191,6 +193,44 @@ class Zume_Keys_Tab
     public function google_sso_key_handle_post() {
         if ( isset( $_POST[ 'dt_google_sso_key' . get_current_user_id() ] ) && wp_verify_nonce( sanitize_key( wp_unslash( $_POST[ 'dt_google_sso_key' . get_current_user_id() ] ) ), 'dt_google_sso_key' . get_current_user_id() ) ) {
             update_option( 'dt_google_sso_key', trim( sanitize_text_field( wp_unslash( $_POST['dt_google_sso_key'] ) ) ) );
+            return;
+        }
+    }
+
+    public function google_captcha_key_metabox() {
+        $this->google_captcha_key_handle_post();
+        $current_key = get_option( 'dt_google_captcha_key' );
+        ?>
+        <form method="post" name="captcha">
+            <?php wp_nonce_field( 'dt_google_captcha_key' . get_current_user_id(), 'dt_google_captcha_key' . get_current_user_id() ) ?>
+            <table class="widefat striped">
+                <thead>
+                <th colspan="2">Google Captcha Key</th>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>
+                        <label>Secret Key</label><br>
+                    </td>
+                    <td>
+                        <input type="text" name="dt_google_captcha_key" id="dt_google_captcha_key" style="width: 100%;" value="<?php echo esc_attr( $current_key ) ?>"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <br><span style="float:right;"><button type="submit" class="button float-right">Save</button></span>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </form>
+
+        <?php
+    }
+
+    public function google_captcha_key_handle_post() {
+        if ( isset( $_POST[ 'dt_google_captcha_key' . get_current_user_id() ] ) && wp_verify_nonce( sanitize_key( wp_unslash( $_POST[ 'dt_google_captcha_key' . get_current_user_id() ] ) ), 'dt_google_captcha_key' . get_current_user_id() ) ) {
+            update_option( 'dt_google_captcha_key', trim( sanitize_text_field( wp_unslash( $_POST['dt_google_captcha_key'] ) ) ) );
             return;
         }
     }

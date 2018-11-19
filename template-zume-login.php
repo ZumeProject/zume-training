@@ -3,6 +3,7 @@
 Template Name: Zume Login
 */
 
+
 /**
  * Catch Logout Request and Process Immediately
  */
@@ -34,6 +35,18 @@ function zume_signup_header() {
             });
         }
     </script>
+    <script>
+        var verifyCallback = function(response) {
+            jQuery('#submit').prop("disabled", false);
+        };
+        var onloadCallback = function() {
+            grecaptcha.render('g-recaptcha', {
+                'sitekey' : '6LdiznsUAAAAAKiEqY8m_D-6fMrUNZtSpgGPIFDx',
+                'callback' : verifyCallback,
+            });
+        };
+    </script>
+
     <?php
 }
 add_action( 'wp_head', 'zume_signup_header' );
@@ -306,6 +319,9 @@ case 'rp' :
     break;
 
 case 'register' :
+    $register = Zume_User_Registration::instance();
+    $register->custom_registration_function();
+
     get_header(); ?>
 
     <div id="content">
@@ -316,24 +332,15 @@ case 'register' :
                 <div class="cell callout medium-6 large-4">
                     <div class="grid-x grid-padding-x grid-padding-y">
                         <div class="cell center"><img src="<?php echo esc_url( get_theme_file_uri( '/assets/images/zume-logo-white.png' ) ) ?>" /></div>
-                        <div class="cell"><?php zume_google_sign_in_button() ?></div>
+                        <div class="cell"><?php zume_google_sign_in_button( 'register' ) ?><hr></div>
                         <div class="cell">
                             <div class="wp_register_form">
                                 <?php
-
+                                $register->registration_form();
                                 ?>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="cell medium-3 large-4"></div>
-            </div>
-            <div class="grid-x grid-padding-x">
-                <div class="cell medium-3 large-4"></div>
-                <div class="cell medium-6 large-4">
-                    <p id="nav">
-                        <?php echo '<a href="' . esc_url( zume_login_url( $current_language ) ) . '">'. esc_html__( 'Login' ) .'</a>'; ?>
-                    </p>
                 </div>
                 <div class="cell medium-3 large-4"></div>
             </div>
@@ -438,9 +445,14 @@ default: get_header(); ?>
 } // end action switch
 
 
-function zume_google_sign_in_button() {
+function zume_google_sign_in_button( $label = 'signin') {
+    if ( 'register' === $label ) {
+        $label = __( 'Register with Google' );
+    } else {
+        $label = __( 'Sign in with Google' );
+    }
     ?>
-    <button id="signinButton" class="button">Sign in with Google</button>
+    <button id="signinButton" class="button"><?php echo esc_attr( $label ) ?></button>
     <div id="google_error"></div>
 
     <script>
@@ -451,34 +463,11 @@ function zume_google_sign_in_button() {
         function onSignIn(googleUser) {
             // Useful data for your client-side scripts:
             jQuery('#signinButton').attr('style', 'background-color: grey');
-            console.log(googleUser)
-
-            let profile = googleUser.getBasicProfile();
-            console.log("ID: " + profile.getId()); // Don't send this directly to your server!
-            console.log('Full Name: ' + profile.getName());
-            console.log('Given Name: ' + profile.getGivenName());
-            console.log('Family Name: ' + profile.getFamilyName());
-            console.log("Image URL: " + profile.getImageUrl());
-            console.log("Email: " + profile.getEmail());
-
-            // The ID token you need to pass to your backend:
-            let id_token = googleUser.getAuthResponse().id_token;
-            console.log("ID Token: " + id_token);
 
             let data = {
-                "google_id": profile.getId(),
-                "username": profile.getId(),
-                "user_email": profile.getEmail(),
-                "first_name": profile.getGivenName(),
-                "last_name": profile.getFamilyName(),
-                "website": profile.getImageUrl(),
                 "token": googleUser.getAuthResponse().id_token
             };
-            register_user_with_google_auth( data );
-        }
-
-        function register_user_with_google_auth( data ) {
-            return jQuery.ajax({
+            jQuery.ajax({
                 type: "POST",
                 data: JSON.stringify(data),
                 contentType: "application/json; charset=utf-8",
@@ -499,113 +488,12 @@ function zume_google_sign_in_button() {
                     console.log(err)
                 })
         }
-
     </script>
     <?php
 }
 
 
 
-
-
-
-
-function zume_retrieve_password() {
-    $errors = new WP_Error();
-
-    if ( empty( $_POST['user_login'] ) || ! is_string( $_POST['user_login'] ) ) {
-        $errors->add('empty_username', __('<strong>ERROR</strong>: Enter a username or email address.'));
-    } elseif ( strpos( $_POST['user_login'], '@' ) ) {
-        $user_data = get_user_by( 'email', trim( wp_unslash( $_POST['user_login'] ) ) );
-        if ( empty( $user_data ) )
-            $errors->add('invalid_email', __('<strong>ERROR</strong>: There is no user registered with that email address.'));
-    } else {
-        $login = trim($_POST['user_login']);
-        $user_data = get_user_by('login', $login);
-    }
-
-    /**
-     * Fires before errors are returned from a password reset request.
-     *
-     * @since 2.1.0
-     * @since 4.4.0 Added the `$errors` parameter.
-     *
-     * @param WP_Error $errors A WP_Error object containing any errors generated
-     *                         by using invalid credentials.
-     */
-    do_action( 'lostpassword_post', $errors );
-
-    if ( $errors->get_error_code() )
-        return $errors;
-
-    if ( !$user_data ) {
-        $errors->add('invalidcombo', __('<strong>ERROR</strong>: Invalid username or email.'));
-        return $errors;
-    }
-
-    // Redefining user_login ensures we return the right case in the email.
-    $user_login = $user_data->user_login;
-    $user_email = $user_data->user_email;
-    $key = get_password_reset_key( $user_data );
-
-    if ( is_wp_error( $key ) ) {
-        return $key;
-    }
-
-    if ( is_multisite() ) {
-        $site_name = get_network()->site_name;
-    } else {
-        /*
-         * The blogname option is escaped with esc_html on the way into the database
-         * in sanitize_option we want to reverse this for the plain text arena of emails.
-         */
-        $site_name = wp_specialchars_decode( get_option( 'blogname' ), ENT_QUOTES );
-    }
-
-    $message = __( 'Someone has requested a password reset for the following account:' ) . "\r\n\r\n";
-    /* translators: %s: site name */
-    $message .= sprintf( __( 'Site Name: %s'), $site_name ) . "\r\n\r\n";
-    /* translators: %s: user login */
-    $message .= sprintf( __( 'Username: %s'), $user_login ) . "\r\n\r\n";
-    $message .= __( 'If this was a mistake, just ignore this email and nothing will happen.' ) . "\r\n\r\n";
-    $message .= __( 'To reset your password, visit the following address:' ) . "\r\n\r\n";
-    $message .= '<' . zume_login_url() . "?action=rp&key=$key&login=" . rawurlencode( $user_login ) . ">\r\n";
-
-    /* translators: Password reset email subject. %s: Site name */
-    $title = sprintf( __( '[%s] Password Reset' ), $site_name );
-
-    /**
-     * Filters the subject of the password reset email.
-     *
-     * @since 2.8.0
-     * @since 4.4.0 Added the `$user_login` and `$user_data` parameters.
-     *
-     * @param string  $title      Default email title.
-     * @param string  $user_login The username for the user.
-     * @param WP_User $user_data  WP_User object.
-     */
-    $title = apply_filters( 'retrieve_password_title', $title, $user_login, $user_data );
-
-    /**
-     * Filters the message body of the password reset mail.
-     *
-     * If the filtered message is empty, the password reset email will not be sent.
-     *
-     * @since 2.8.0
-     * @since 4.1.0 Added `$user_login` and `$user_data` parameters.
-     *
-     * @param string  $message    Default mail message.
-     * @param string  $key        The activation key.
-     * @param string  $user_login The username for the user.
-     * @param WP_User $user_data  WP_User object.
-     */
-    $message = apply_filters( 'retrieve_password_message', $message, $key, $user_login, $user_data );
-
-    if ( $message && !wp_mail( $user_email, wp_specialchars_decode( $title ), $message ) )
-        wp_die( __('The email could not be sent.') . "<br />\n" . __('Possible reason: your host may have disabled the mail() function.') );
-
-    return true;
-}
 
 // modifies the buttons of the login form.
 function zume_login_styles() {
