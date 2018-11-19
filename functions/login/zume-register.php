@@ -62,9 +62,7 @@ class Zume_User_Registration
             $user_nicename = $payload['name'];
             $first_name = $payload['given_name'];
             $last_name = $payload['family_name'];
-            $language = $payload['locale'];
             $picture_url = $payload['picture'];
-            $user_url = $payload['hd'];
 
             $random_password = wp_generate_password( $length=12, $include_standard_special_chars=false );
             $username = str_replace( ' ', '_', $payload['name'] );
@@ -73,9 +71,10 @@ class Zume_User_Registration
             return new WP_Error(__METHOD__, 'Failed Google Verification of User Token' ); // Invalid ID token
         }
 
-        // if does not exist
-        $user_id = email_exists( $user_email );
-        if ( empty( $user_id ) ) {
+
+        $user_id = $this->query_google_email( $user_email );
+        // if no google_sso_email found and user with email does not exist
+        if ( empty( $user_id ) && ! email_exists( $user_email ) ) {
 
             // create a user from Google data
             $userdata = [
@@ -90,7 +89,6 @@ class Zume_User_Registration
                 'last_name'       => sanitize_text_field( $last_name ),
                 'user_registered' => current_time( 'mysql' ),
             ];
-            dt_write_log($userdata);
 
             $user_id = wp_insert_user( $userdata );
 
@@ -107,8 +105,15 @@ class Zume_User_Registration
             add_user_meta( $user_id, 'zume_address', null, true );
             add_user_meta( $user_id, 'zume_affiliation_key', null, true );
 
+            add_user_meta( $user_id, 'google_sso_email', $user_email, true );
+
             add_user_to_blog( get_current_blog_id(), $user_id, 'subscriber' ); // add user to ZumeProject site.
 
+        }
+        // if no google_sso_email found but user with email does exist
+        else if (  empty( $user_id ) && email_exists( $user_email ) ) {
+            $user_id = email_exists( $user_email );
+            add_user_meta( $user_id, 'google_sso_email', $user_email, true );
         }
 
         // add google id if needed
@@ -128,6 +133,30 @@ class Zume_User_Registration
             return true;
         } else {
             return new WP_Error(__METHOD__, 'No user found.' );
+        }
+    }
+
+    /**
+     * Gets first match for Google email or returns false.
+     *
+     * @param $email_address
+     *
+     * @return bool|string
+     */
+    public function query_google_email( $email_address ) {
+        global $wpdb;
+        $result = $wpdb->get_var( $wpdb->prepare( "
+        SELECT user_id 
+        FROM $wpdb->usermeta 
+        WHERE meta_key = 'google_sso_email'
+          AND meta_value = %s
+          LIMIT 1
+        ", $email_address ), ARRAY_A );
+
+        if ( ! empty( $result ) ) {
+            return $result;
+        } else {
+            return false;
         }
     }
 

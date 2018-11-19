@@ -86,6 +86,18 @@ $zume_user_meta = zume_get_user_meta( get_current_user_id() ); // Full array of 
                         </tr>
                         <tr>
                             <td style="vertical-align: top;">
+                                <label for="user_email"><?php echo esc_html__( 'Linked Google Email', 'zume' )?></label>
+                            </td>
+                            <td>
+                                <input type="text"
+                                       class="profile-input"
+                                       value="<?php echo get_user_meta( $zume_user->ID, 'google_sso_email', true ) ?>"
+                                       readonly
+                                />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="vertical-align: top;">
                                 <label for="zume_phone_number"><?php echo esc_html__( 'Phone Number', 'zume' )?></label>
                             </td>
                             <td>
