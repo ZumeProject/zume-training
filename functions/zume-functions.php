@@ -166,10 +166,13 @@ function zume_login_url( $current_language = null ) {
     if ( is_null( $current_language ) ) {
         $current_language = zume_current_language();
     }
-    if ( 'en' != $current_language && ! empty( $current_language ) ) {
-        $url = zume_get_posts_translation_url( 'login', $current_language );
-    } else {
+    if ( 'en' === $current_language ) {
         $url = site_url() . '/login';
+    }
+    else if ( empty( $current_language ) ) {
+        $url = site_url() . '/login';
+    } else {
+        $url = zume_get_posts_translation_url( 'Login', $current_language );
     }
     return $url;
 }
@@ -179,7 +182,7 @@ function zume_lostpassword_url( $current_language = null ) {
         $current_language = zume_current_language();
     }
     if ( 'en' != $current_language && ! empty( $current_language ) ) {
-        $url = zume_get_posts_translation_url( 'login', $current_language ) . '/?action=lostpassword';
+        $url = zume_get_posts_translation_url( 'Login', $current_language ) . '/?action=lostpassword';
     } else {
         $url = site_url() . '/login/?action=lostpassword';
     }
@@ -191,7 +194,7 @@ function zume_register_url( $current_language = null ) {
         $current_language = zume_current_language();
     }
     if ( 'en' != $current_language && ! empty( $current_language ) ) {
-        $url = zume_get_posts_translation_url( 'login', $current_language ) . '/?action=register';
+        $url = zume_get_posts_translation_url( 'Login', $current_language ) . '/?action=register';
     } else {
         $url = site_url() . '/login/?action=register';
     }

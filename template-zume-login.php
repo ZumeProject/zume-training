@@ -51,18 +51,20 @@ function zume_signup_header() {
 }
 add_action( 'wp_head', 'zume_signup_header' );
 
-
+// set variables
 $action = isset($_REQUEST['action']) ? $_REQUEST['action'] : 'login';
 $http_post = ('POST' == $_SERVER['REQUEST_METHOD']);
 $errors = new WP_Error();
 $home_url = zume_home_url();
 
-if ( isset($_GET['key']) )
+// preset defaults
+if ( isset($_GET['key']) ) {
     $action = 'resetpass';
+}
+if ( !in_array( $action, array( 'postpass', 'logout', 'lostpassword', 'retrievepassword', 'resetpass', 'rp', 'register', 'login', 'confirmation' ), true ) && false === has_filter( 'login_form_' . $action ) ) {
+    $action = 'login'; // validate action so as to default to the login screen
+}
 
-// validate action so as to default to the login screen
-if ( !in_array( $action, array( 'postpass', 'logout', 'lostpassword', 'retrievepassword', 'resetpass', 'rp', 'register', 'login', 'confirmation' ), true ) && false === has_filter( 'login_form_' . $action ) )
-    $action = 'login';
 
 switch ($action) {
 
@@ -72,41 +74,14 @@ case 'logout' :
     wp_safe_redirect( zume_home_url( $current_language ) );
     exit();
 
-case 'postpass' :
-    if ( ! array_key_exists( 'post_password', $_POST ) ) {
-        wp_safe_redirect( wp_get_referer() );
-        exit();
-    }
-
-    require_once ABSPATH . WPINC . '/class-phpass.php';
-    $hasher = new PasswordHash( 8, true );
-
-    $expire = apply_filters( 'post_password_expires', time() + 10 * DAY_IN_SECONDS );
-    $referer = wp_get_referer();
-    if ( $referer ) {
-        $secure = ( 'https' === parse_url( $referer, PHP_URL_SCHEME ) );
-    } else {
-        $secure = false;
-    }
-    setcookie( 'wp-postpass_' . COOKIEHASH, $hasher->HashPassword( wp_unslash( $_POST['post_password'] ) ), $expire, COOKIEPATH, COOKIE_DOMAIN, $secure );
-
-    if ( $switched_locale ) {
-        restore_previous_locale();
-    }
-
-    wp_safe_redirect( wp_get_referer() );
-    exit();
-
 case 'lostpassword' :
 case 'retrievepassword' :
-
+    $sent = false;
     dt_write_log(__METHOD__ . ': lost password' );
     if ( $http_post ) {
         $errors = zume_retrieve_password();
-        if ( !is_wp_error($errors) ) {
-            $redirect_to = !empty( $_REQUEST['redirect_to'] ) ? $_REQUEST['redirect_to'] : zume_home_url( $current_language );
-            wp_safe_redirect( $redirect_to );
-            exit();
+        if ( ! is_wp_error($errors) ) {
+            $sent = true;
         }
     }
 
@@ -119,22 +94,8 @@ case 'retrievepassword' :
     }
 
     $lostpassword_redirect = ! empty( $_REQUEST['redirect_to'] ) ? $_REQUEST['redirect_to'] : '';
-    /**
-     * Filters the URL redirected to after submitting the lostpassword/retrievepassword form.
-     *
-     * @since 3.0.0
-     *
-     * @param string $lostpassword_redirect The redirect destination URL.
-     */
     $redirect_to = apply_filters( 'lostpassword_redirect', $lostpassword_redirect );
-
-    /**
-     * Fires before the lost password form.
-     *
-     * @since 1.5.1
-     */
     do_action( 'lost_password' );
-
     $user_login = '';
 
     if ( isset( $_POST['user_login'] ) && is_string( $_POST['user_login'] ) ) {
@@ -152,8 +113,16 @@ case 'retrievepassword' :
                 <div class="cell callout medium-6 large-4">
                     <div class="grid-x grid-padding-x grid-padding-y">
                         <div class="cell center"><img src="<?php echo esc_url( get_theme_file_uri( '/assets/images/zume-logo-white.png' ) ) ?>" /></div>
+                        <?php  if (  ! empty( $errors->errors )  ) :?>
+                            <div class="cell alert callout">
+                                <?php
+                                echo $errors->get_error_message();
+                                ?>
+                            </div>
+                        <?php endif; ?>
                         <div class="cell">
                             <div class="wp_lostpassword_form">
+                                <?php if ( ! $sent ) : ?>
                                 <form name="lostpasswordform" id="lostpasswordform" action="<?php echo esc_url( zume_lostpassword_url( $current_language ) ); ?>" method="post">
                                     <p>
                                         <label for="user_login" ><?php _e( 'Username or Email Address' ); ?><br />
@@ -169,6 +138,9 @@ case 'retrievepassword' :
                                     <input type="hidden" name="redirect_to" value="<?php echo esc_attr( $redirect_to ); ?>" />
                                     <p class="submit"><input type="submit" name="wp-submit" id="wp-submit" class="button button-primary button-large" value="<?php esc_attr_e('Get New Password'); ?>" /></p>
                                 </form>
+                                <?php elseif ( $sent ): ?>
+                                    <?php echo esc_html('Your password reset email has been sent. Check your email or junk mail for the link to reset your password.') ?>
+                                <?php endif; ?>
 
                             </div>
                         </div>
@@ -189,7 +161,6 @@ case 'retrievepassword' :
 
 case 'resetpass' :
 case 'rp' :
-    get_header();
 
     list( $rp_path ) = explode( '?', wp_unslash( $_SERVER['REQUEST_URI'] ) );
     $rp_cookie = 'wp-resetpass-' . COOKIEHASH;
@@ -224,29 +195,51 @@ case 'rp' :
     if ( isset($_POST['pass1']) && $_POST['pass1'] != $_POST['pass2'] )
         $errors->add( 'password_reset_mismatch', __( 'The passwords do not match.' ) );
 
-    /**
-     * Fires before the password reset procedure is validated.
-     *
-     * @since 3.5.0
-     *
-     * @param object           $errors WP Error object.
-     * @param WP_User|WP_Error $user   WP_User object if the login and reset key match. WP_Error object otherwise.
-     */
-    do_action( 'validate_password_reset', $errors, $user );
 
     if ( ( ! $errors->get_error_code() ) && isset( $_POST['pass1'] ) && !empty( $_POST['pass1'] ) ) {
         reset_password($user, $_POST['pass1']);
         setcookie( $rp_cookie, ' ', time() - YEAR_IN_SECONDS, $rp_path, COOKIE_DOMAIN, is_ssl(), true );
-        login_header( __( 'Password Reset' ), '<p class="message reset-pass">' . __( 'Your password has been reset.' ) . ' <a href="' . esc_url( wp_login_url() ) . '">' . __( 'Log in' ) . '</a></p>' );
+
+        get_header();
+        ?>
+        <div id="content">
+        <div id="login">
+            <br>
+            <div id="inner-content" class="grid-x grid-margin-x grid-padding-x">
+                <div class="cell medium-3 large-4"></div>
+                <div class="cell callout medium-6 large-4">
+                    <div class="grid-x grid-padding-x grid-padding-y">
+                        <div class="cell center"><img src="<?php echo esc_url( get_theme_file_uri( '/assets/images/zume-logo-white.png' ) ) ?>" /></div>
+                        <div class="cell"><?php echo sprintf( 'Your password is reset. %s You can login %', '<a href="'.zume_login_url( $current_language ).'">', '</a>') ?></div>
+                    </div>
+                </div>
+                <div class="cell medium-3 large-4"></div>
+            </div>
+        </div>
+        <?php
         login_footer();
         exit;
     }
 
-    wp_enqueue_script('utils');
-    wp_enqueue_script('user-profile');
-
+    get_header();
  ?>
+    <style>
+        meter{
+            width:100%;
+        }
+        /* Webkit based browsers */
+        meter[value="1"]::-webkit-meter-optimum-value { background: red; }
+        meter[value="2"]::-webkit-meter-optimum-value { background: yellow; }
+        meter[value="3"]::-webkit-meter-optimum-value { background: orange; }
+        meter[value="4"]::-webkit-meter-optimum-value { background: green; }
 
+        /* Gecko based browsers */
+        meter[value="1"]::-moz-meter-bar { background: red; }
+        meter[value="2"]::-moz-meter-bar { background: yellow; }
+        meter[value="3"]::-moz-meter-bar { background: orange; }
+        meter[value="4"]::-moz-meter-bar { background: green; }
+
+    </style>
     <div id="content">
         <div id="login">
             <br>
@@ -255,37 +248,37 @@ case 'rp' :
                 <div class="cell callout medium-6 large-4">
                     <div class="grid-x grid-padding-x grid-padding-y">
                         <div class="cell center"><img src="<?php echo esc_url( get_theme_file_uri( '/assets/images/zume-logo-white.png' ) ) ?>" /></div>
+                        <?php  if (  ! empty( $errors->errors )  ) :?>
+                            <div class="cell alert callout">
+                                <?php
+                                echo $errors->get_error_message();
+                                ?>
+                            </div>
+                        <?php endif; ?>
                         <div class="cell">
                             <div class="wp_resetpassword_form">
-                                <form name="resetpassform" id="resetpassform" action="<?php echo esc_url( zume_login_url( $current_language ) . '/?action=resetpass' ); ?>" method="post" autocomplete="off">
+                                <form name="resetpassform" id="resetpassform" action="<?php echo esc_url( zume_login_url( $current_language ) . '/?action=resetpass' ); ?>" method="post" autocomplete="off" data-abide novalidate>
                                     <input type="hidden" id="user_login" value="<?php echo esc_attr( $rp_login ); ?>" autocomplete="off" />
 
-                                    <div class="user-pass1-wrap">
-                                        <p>
-                                            <label for="pass1"><?php _e( 'New password' ) ?></label>
-                                        </p>
-
-                                        <div class="wp-pwd">
-                                            <div class="password-input-wrapper">
-                                                <input type="password" data-reveal="1" data-pw="<?php echo esc_attr( wp_generate_password( 16 ) ); ?>" name="pass1" id="pass1" class="input password-input" size="24" value="" autocomplete="off" aria-describedby="pass-strength-result" />
-                                                <span class="button button-secondary wp-hide-pw hide-if-no-js">
-                                                    <span class="dashicons dashicons-hidden"></span>
-                                                </span>
-                                            </div>
-                                            <div id="pass-strength-result" class="hide-if-no-js" aria-live="polite"><?php _e( 'Strength indicator' ); ?></div>
-                                        </div>
-                                        <div class="pw-weak">
-                                            <label>
-                                                <input type="checkbox" name="pw_weak" class="pw-checkbox" />
-                                                <?php _e( 'Confirm use of weak password' ); ?>
-                                            </label>
-                                        </div>
-                                    </div>
-
-                                    <p class="user-pass2-wrap">
-                                        <label for="pass2"><?php _e( 'Confirm new password' ) ?></label><br />
-                                        <input type="password" name="pass2" id="pass2" class="input" size="20" value="" autocomplete="off" />
+                                    <p>
+                                        <label><?php esc_html_e( 'Password Required') ?> <strong>*</strong>
+                                            <input type="password" id="pass1" name="pass1" placeholder="yeti4preZ" aria-errormessage="password-error-1" required >
+                                            <span class="form-error" id="password-error-1">
+                                                <?php esc_html_e('Password required' ) ?>
+                                            </span>
+                                        </label>
+                                        <meter max="4" id="password-strength-meter" value="0"></meter>
+                                                                    <p id="password-strength-text"></p>
                                     </p>
+                                    <p>
+                                        <label><?php esc_html_e( 'Re-enter Password') ?> <strong>*</strong>
+                                            <input type="password" name="pass2" placeholder="yeti4preZ" aria-errormessage="password-error-2" data-equalto="pass1">
+                                            <span class="form-error" id="password-error-2">
+                                                <?php esc_html_e( 'Passwords do not match. Please, try again.' ) ?>
+                                            </span>
+                                        </label>
+                                    </p>
+
 
                                     <p class="description indicator-hint"><?php echo wp_get_password_hint(); ?></p>
                                     <br class="clear" />
@@ -312,15 +305,42 @@ case 'rp' :
             </div>
         </div>
     </div>
+    <script>
+        var strength = {
+            0: "Worst",
+            1: "Bad",
+            2: "Weak",
+            3: "Good",
+            4: "Strong"
+        }
+        var password = document.getElementById('pass1');
+        var meter = document.getElementById('password-strength-meter');
+        var text = document.getElementById('password-strength-text');
 
+        password.addEventListener('input', function() {
+            var val = password.value;
+            var result = zxcvbn(val);
+
+            // Update the password strength meter
+            meter.value = result.score;
+
+            // Update the text indicator
+            if (val !== "") {
+                text.innerHTML = "Strength: " + strength[result.score];
+            } else {
+                text.innerHTML = "";
+            }
+        });
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/zxcvbn/4.2.0/zxcvbn.js"></script>
     <?php
-    zume_login_styles();
+//    zume_login_styles();
     get_footer();
     break;
 
 case 'register' :
     $register = Zume_User_Registration::instance();
-    $register->custom_registration_function();
+    $status = $register->custom_registration_function();
 
     get_header(); ?>
 
@@ -332,7 +352,13 @@ case 'register' :
                 <div class="cell callout medium-6 large-4">
                     <div class="grid-x grid-padding-x grid-padding-y">
                         <div class="cell center"><img src="<?php echo esc_url( get_theme_file_uri( '/assets/images/zume-logo-white.png' ) ) ?>" /></div>
+
                         <div class="cell"><?php zume_google_sign_in_button( 'register' ) ?><hr></div>
+                        <?php  if (  is_wp_error( $status )  ) :?>
+                            <div class="cell alert callout">
+                                <?php echo $status->get_error_message() ?>
+                            </div>
+                        <?php endif; ?>
                         <div class="cell">
                             <div class="wp_register_form">
                                 <?php
@@ -341,6 +367,21 @@ case 'register' :
                             </div>
                         </div>
                     </div>
+                </div>
+                <div class="cell medium-3 large-4"></div>
+            </div>
+            <div class="grid-x grid-padding-x">
+                <div class="cell medium-3 large-4"></div>
+                <div class="cell medium-6 large-4">
+                    <p>
+                        <?php if ( ! isset( $_GET['checkemail'] ) || ! in_array( wp_unslash( $_GET['checkemail'] ), array( 'confirm', 'newpass' ) ) ) : ?>
+
+                            <a href="<?php echo esc_url( zume_login_url( $current_language ) ) ?>"><?php esc_html_e( 'Login' ) ?></a>
+                            &nbsp;|&nbsp;
+                            <a href="<?php echo esc_url( zume_lostpassword_url( $current_language ) ); ?>"><?php esc_html_e( 'Lost your password?' ); ?></a>
+
+                        <?php endif; ?>
+                    </p>
                 </div>
                 <div class="cell medium-3 large-4"></div>
             </div>
@@ -387,7 +428,7 @@ case 'confirmation' :
 
     login_header( __( 'User action confirmed.' ), $message );
     login_footer();
-    exit;
+    exit; // @todo possibly remove
 
 case 'login' :
 default: get_header(); ?>
@@ -400,7 +441,7 @@ default: get_header(); ?>
                 <div class="cell callout medium-6 large-4">
                     <div class="grid-x grid-padding-x grid-padding-y">
                         <div class="cell center"><img src="<?php echo esc_url( get_theme_file_uri( '/assets/images/zume-logo-white.png' ) ) ?>" /></div>
-                        <div class="cell"><?php zume_google_sign_in_button() ?></div>
+                        <div class="cell"><?php zume_google_sign_in_button() ?><hr></div>
                         <div class="cell">
                             <div class="wp_login_form">
                                 <?php
@@ -421,13 +462,13 @@ default: get_header(); ?>
             <div class="grid-x grid-padding-x">
                 <div class="cell medium-3 large-4"></div>
                 <div class="cell medium-6 large-4">
-                    <p id="nav">
-                        <?php if ( ! isset( $_GET['checkemail'] ) || ! in_array( wp_unslash( $_GET['checkemail'] ), array( 'confirm', 'newpass' ) ) ) :
-                            if ( get_option( 'users_can_register' ) ) :
-                                echo '<a href="' . esc_url( zume_register_url( $current_language ) ) . '">'. esc_html__( 'Register' ) .'</a>';
-                            endif;
-                            ?>
+                    <p>
+                        <?php if ( ! isset( $_GET['checkemail'] ) || ! in_array( wp_unslash( $_GET['checkemail'] ), array( 'confirm', 'newpass' ) ) ) : ?>
+
+                            <a href="<?php echo esc_url( zume_register_url( $current_language ) ) ?>"><?php esc_html_e( 'Register' ) ?></a>
+                            &nbsp;|&nbsp;
                             <a href="<?php echo esc_url( zume_lostpassword_url( $current_language ) ); ?>"><?php esc_html_e( 'Lost your password?' ); ?></a>
+
                         <?php endif; ?>
                     </p>
                 </div>
@@ -444,146 +485,3 @@ default: get_header(); ?>
 
 } // end action switch
 
-
-function zume_google_sign_in_button( $label = 'signin') {
-    if ( 'register' === $label ) {
-        $label = __( 'Register with Google' );
-    } else {
-        $label = __( 'Sign in with Google' );
-    }
-    ?>
-    <button id="signinButton" class="button"><?php echo esc_attr( $label ) ?></button>
-    <div id="google_error"></div>
-
-    <script>
-        jQuery('#signinButton').click(function() {
-            auth2.signIn().then(onSignIn);
-        });
-
-        function onSignIn(googleUser) {
-            // Useful data for your client-side scripts:
-            jQuery('#signinButton').attr('style', 'background-color: grey');
-
-            let data = {
-                "token": googleUser.getAuthResponse().id_token
-            };
-            jQuery.ajax({
-                type: "POST",
-                data: JSON.stringify(data),
-                contentType: "application/json; charset=utf-8",
-                dataType: "json",
-                url: '<?php echo rest_url('/zume/v1/register_via_google') ?>',
-                beforeSend: function(xhr) {
-                    xhr.setRequestHeader('X-WP-Nonce', '<?php echo wp_create_nonce( 'wp_rest' ) ?>');
-                },
-            })
-                .done(function (data) {
-                    console.log(data)
-                    window.location = "<?php echo esc_url( site_url() ) ?>"
-                })
-                .fail(function (err) {
-                    signOut()
-                    jQuery('#google_error').text('Failed to authenticate your Google account')
-                    console.log("error")
-                    console.log(err)
-                })
-        }
-    </script>
-    <?php
-}
-
-
-
-
-// modifies the buttons of the login form.
-function zume_login_styles() {
-    ?>
-    <style>
-        body.login {
-            background: none;
-        }
-        #wp-submit {
-            background: #fefefe;
-            border: 0;
-            color: #323A68;
-            font-size: medium;
-            cursor: pointer;
-            outline: #323A68 solid 1px;
-            padding: 0.85em 1em;
-            text-align: center;
-            text-decoration: none;
-            -webkit-border-radius: 0;
-            -moz-border-radius: 0;
-            border-radius: 0;
-            margin: 2px;
-            height: inherit;
-            text-shadow: none;
-            float:right;
-        }
-        #wp-submit:hover {
-            background: #323A68;
-            border: 0;
-            color: #fefefe;
-            font-size: medium;
-            cursor: pointer;
-            outline: #323A68 solid 1px;
-            padding: 0.85em 1em;
-            text-align: center;
-            text-decoration: none;
-            -webkit-border-radius: 0;
-            -moz-border-radius: 0;
-            border-radius: 0;
-            margin: 2px;
-            height:inherit;
-            float:right;
-        }
-        .login h1 a {
-            background: url(<?php echo esc_url( get_theme_file_uri( '/assets/images/zume-logo-white.png' ) ) ?>) no-repeat top center;
-            width: 326px;
-            height: 67px;
-            text-indent: -9999px;
-            overflow: hidden;
-            padding-bottom: 15px;
-            display: block;
-        }
-        #nav a {
-            background: #fefefe;
-            border: 0;
-            color: #323A68;
-            font-size: medium;
-            cursor: pointer;
-            outline: #323A68 solid 1px;
-            padding: 1em;
-            text-align: center;
-            text-decoration: none;
-            -webkit-border-radius: 0;
-            -moz-border-radius: 0;
-            border-radius: 0;
-            margin: 2px;
-        }
-        #nav a:hover {
-            background: #323A68;
-            border: 0;
-            color: #fefefe;
-            font-size: medium;
-            cursor: pointer;
-            outline: #323A68 solid 1px;
-            padding: 5px;
-            text-align: center;
-            text-decoration: none;
-            -webkit-border-radius: 0;
-            -moz-border-radius: 0;
-            border-radius: 0;
-            margin: 2px;
-        }
-        @media only screen and (min-width: 640px) {
-            #nav a {
-                padding: 1em !important;
-            }
-            #nav a:hover {
-                padding: 1em !important;
-            }
-        }
-    </style>
-    <?php
-}

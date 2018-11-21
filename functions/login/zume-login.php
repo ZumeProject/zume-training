@@ -7,192 +7,6 @@ if ( ! defined( 'ABSPATH' ) ) { exit; } // Exit if accessed directly
 
 require_once( get_theme_file_path() . '/vendor/autoload.php' );
 
-/**********************************************************************************************************************
- * Customize links for signup and registration
- * @see wp-login.php:765
- */
-add_filter( 'wp_signup_location', 'zume_multisite_signup_location', 99, 1 );
-function zume_multisite_signup_location( $url ) {
-    $url = zume_get_posts_translation_url( 'Login', zume_current_language() );
-    return $url;
-}
-add_filter( 'register_url', 'zume_multisite_register_location', 99, 1 );
-function zume_multisite_register_location( $url ) {
-    $url = zume_get_posts_translation_url( 'Login', zume_current_language() ) . '/?action=registration';
-    return $url;
-}
-
-/**
- * Modify default link for login
- * @see zume-functions.php for the function
- */
-add_filter( 'login_url', 'zume_login_url', 99, 3 );
-
-/**
- * Update User IP Address location on login
- */
-add_action( 'wp_login', 'zume_login_update_ip_info', 10, 2 );
-function zume_login_update_ip_info( $user_login, $user ) {
-    zume_update_user_ip_address_and_location( $user->ID );
-}
-
-/**
- * LOGIN
- */
-/**
- * Changes the logo link from wordpress.org to your site
- */
-function zume_site_url() {
-    $current_language = zume_current_language();
-    if ( 'en' != $current_language ) {
-        $home_url = site_url() . '/' . $current_language;
-    } else {
-        $home_url = site_url();
-    }
-    return $home_url;
-}
-add_filter( 'login_headerurl', 'zume_site_url' );
-
-/**
- * Changes the alt text on the logo to show your site name
- */
-function zume_login_title() {
-    return get_option( 'blogname' );
-}
-add_filter( 'login_headertitle', 'zume_login_title' );
-
-/* Main redirection of the default login page */
-function zume_redirect_login_page() {
-    if ( isset( $_SERVER['REQUEST_URI'] ) && !empty( $_SERVER['REQUEST_URI'] ) ) {
-        $login_page  = zume_get_posts_translation_url( 'Login', zume_current_language() );
-        $page_viewed = basename( sanitize_text_field( wp_unslash( $_SERVER['REQUEST_URI'] ) ) );
-
-        if ( isset( $_SERVER['REQUEST_METHOD'] ) && $page_viewed == "wp-login.php" && $_SERVER['REQUEST_METHOD'] == 'GET') {
-            wp_redirect( $login_page );
-            exit;
-        }
-    }
-}
-add_action( 'init', 'zume_redirect_login_page' );
-
-/* Where to go if a login failed */
-function zume_custom_login_failed() {
-    $login_page  = zume_get_posts_translation_url( 'Login', zume_current_language() );
-    wp_redirect( $login_page . '?login=failed' );
-    exit;
-}
-add_action( 'wp_login_failed', 'zume_custom_login_failed' );
-
-/* Where to go if any of the fields were empty */
-function zume_verify_user_pass($user, $username, $password) {
-    $login_page  = zume_get_posts_translation_url( 'Login', zume_current_language() );
-    if ($username == "" || $password == "") {
-        wp_redirect( $login_page . "?login=empty" );
-        exit;
-    }
-}
-add_filter( 'authenticate', 'zume_verify_user_pass', 1, 3 );
-
-
-function zume_retrieve_password() {
-    $errors = new WP_Error();
-
-    if ( empty( $_POST['user_login'] ) || ! is_string( $_POST['user_login'] ) ) {
-        $errors->add('empty_username', __('<strong>ERROR</strong>: Enter a username or email address.'));
-    } elseif ( strpos( $_POST['user_login'], '@' ) ) {
-        $user_data = get_user_by( 'email', trim( wp_unslash( $_POST['user_login'] ) ) );
-        if ( empty( $user_data ) )
-            $errors->add('invalid_email', __('<strong>ERROR</strong>: There is no user registered with that email address.'));
-    } else {
-        $login = trim($_POST['user_login']);
-        $user_data = get_user_by('login', $login);
-    }
-
-    /**
-     * Fires before errors are returned from a password reset request.
-     *
-     * @since 2.1.0
-     * @since 4.4.0 Added the `$errors` parameter.
-     *
-     * @param WP_Error $errors A WP_Error object containing any errors generated
-     *                         by using invalid credentials.
-     */
-    do_action( 'lostpassword_post', $errors );
-
-    if ( $errors->get_error_code() )
-        return $errors;
-
-    if ( !$user_data ) {
-        $errors->add('invalidcombo', __('<strong>ERROR</strong>: Invalid username or email.'));
-        return $errors;
-    }
-
-    // Redefining user_login ensures we return the right case in the email.
-    $user_login = $user_data->user_login;
-    $user_email = $user_data->user_email;
-    $key = get_password_reset_key( $user_data );
-
-    if ( is_wp_error( $key ) ) {
-        return $key;
-    }
-
-    if ( is_multisite() ) {
-        $site_name = get_network()->site_name;
-    } else {
-        /*
-         * The blogname option is escaped with esc_html on the way into the database
-         * in sanitize_option we want to reverse this for the plain text arena of emails.
-         */
-        $site_name = wp_specialchars_decode( get_option( 'blogname' ), ENT_QUOTES );
-    }
-
-    $message = __( 'Someone has requested a password reset for the following account:' ) . "\r\n\r\n";
-    /* translators: %s: site name */
-    $message .= sprintf( __( 'Site Name: %s'), $site_name ) . "\r\n\r\n";
-    /* translators: %s: user login */
-    $message .= sprintf( __( 'Username: %s'), $user_login ) . "\r\n\r\n";
-    $message .= __( 'If this was a mistake, just ignore this email and nothing will happen.' ) . "\r\n\r\n";
-    $message .= __( 'To reset your password, visit the following address:' ) . "\r\n\r\n";
-    $message .= '<' . zume_login_url() . "?action=rp&key=$key&login=" . rawurlencode( $user_login ) . ">\r\n";
-
-    /* translators: Password reset email subject. %s: Site name */
-    $title = sprintf( __( '[%s] Password Reset' ), $site_name );
-
-    /**
-     * Filters the subject of the password reset email.
-     *
-     * @since 2.8.0
-     * @since 4.4.0 Added the `$user_login` and `$user_data` parameters.
-     *
-     * @param string  $title      Default email title.
-     * @param string  $user_login The username for the user.
-     * @param WP_User $user_data  WP_User object.
-     */
-    $title = apply_filters( 'retrieve_password_title', $title, $user_login, $user_data );
-
-    /**
-     * Filters the message body of the password reset mail.
-     *
-     * If the filtered message is empty, the password reset email will not be sent.
-     *
-     * @since 2.8.0
-     * @since 4.1.0 Added `$user_login` and `$user_data` parameters.
-     *
-     * @param string  $message    Default mail message.
-     * @param string  $key        The activation key.
-     * @param string  $user_login The username for the user.
-     * @param WP_User $user_data  WP_User object.
-     */
-    $message = apply_filters( 'retrieve_password_message', $message, $key, $user_login, $user_data );
-
-    if ( $message && !wp_mail( $user_email, wp_specialchars_decode( $title ), $message ) )
-        wp_die( __('The email could not be sent.') . "<br />\n" . __('Possible reason: your host may have disabled the mail() function.') );
-
-    return true;
-}
-
-
-
 /********************************************************************************************************************
  * Google Signon Registration
  ********************************************************************************************************************/
@@ -399,7 +213,7 @@ class Zume_User_Registration
                               </span>
                             </label>
                             <meter max="4" id="password-strength-meter" value="0"></meter>
-<!--                            <p id="password-strength-text"></p>-->
+                            <!--                            <p id="password-strength-text"></p>-->
                         </div>
                         <div class="cell small-12">
                             <label><?php esc_html_e( 'Re-enter Password') ?> <strong>*</strong>
@@ -409,64 +223,70 @@ class Zume_User_Registration
                               </span>
                             </label>
                         </div>
-                        </div>
-                        <div class="cell small-12">
-                            <div class="g-recaptcha" id="g-recaptcha"></div><br>
-                        </div>
-                        <div class="cell small-12">
-                            <input type="submit" class="button button-primary" id="submit" value="<?php esc_html_e( 'Register') ?>" disabled />
-                        </div>
-                        <script>
-                            jQuery(document).ready( function() {
-
-                                console.log(<?php echo json_encode( $_POST ) ?>);
-
-                                jQuery('#g-recaptcha-response').change( function() {
-                                    console.log( 'captcha created' )
-                                })
-                            })
-                        </script>
                     </div>
+                    <div class="cell small-12">
+                        <div class="g-recaptcha" id="g-recaptcha"></div><br>
+                    </div>
+                    <div class="cell small-12">
+                        <input type="submit" class="button button-primary" id="submit" value="<?php esc_html_e( 'Register') ?>" disabled />
+                    </div>
+                    <script>
+                        jQuery(document).ready( function() {
+
+                            console.log(<?php echo json_encode( $_POST ) ?>);
+
+                            jQuery('#g-recaptcha-response').change( function() {
+                                console.log( 'captcha created' )
+                            })
+                        })
+                    </script>
                 </div>
-            </form>
-            <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
-            <script>
-                var strength = {
-                    0: "Worst",
-                    1: "Bad",
-                    2: "Weak",
-                    3: "Good",
-                    4: "Strong"
+        </div>
+        </form>
+        <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
+        <script>
+            var strength = {
+                0: "Worst",
+                1: "Bad",
+                2: "Weak",
+                3: "Good",
+                4: "Strong"
+            }
+            var password = document.getElementById('password');
+            var meter = document.getElementById('password-strength-meter');
+            var text = document.getElementById('password-strength-text');
+
+            password.addEventListener('input', function() {
+                var val = password.value;
+                var result = zxcvbn(val);
+
+                // Update the password strength meter
+                meter.value = result.score;
+
+                // Update the text indicator
+                if (val !== "") {
+                    text.innerHTML = "Strength: " + strength[result.score];
+                } else {
+                    text.innerHTML = "";
                 }
-                var password = document.getElementById('password');
-                var meter = document.getElementById('password-strength-meter');
-                var text = document.getElementById('password-strength-text');
-
-                password.addEventListener('input', function() {
-                    var val = password.value;
-                    var result = zxcvbn(val);
-
-                    // Update the password strength meter
-                    meter.value = result.score;
-
-                    // Update the text indicator
-                    if (val !== "") {
-                        text.innerHTML = "Strength: " + strength[result.score];
-                    } else {
-                        text.innerHTML = "";
-                    }
-                });
-            </script>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/zxcvbn/4.2.0/zxcvbn.js"></script>
+            });
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/zxcvbn/4.2.0/zxcvbn.js"></script>
         </div>
         <?php
     }
 
     public function custom_registration_function() {
+        $error = new WP_Error();
 
-       // validate recaptcha with Google
-        if ( empty( $_POST ) || ! isset( $_POST['g-recaptcha-response'] ) ) {
-            return 'Missing captcha response. How did you do that?';
+        // validate recaptcha with Google
+        if ( empty( $_POST ) ) {
+            return 0;
+        }
+
+        if ( ! isset( $_POST['g-recaptcha-response'] ) ) {
+            $error->add(__METHOD__, __('Missing captcha response. How did you do that?', 'zume') );
+            return $error;
         }
         $args = [
             'method' => 'POST',
@@ -478,13 +298,17 @@ class Zume_User_Registration
         $post_result = wp_remote_post( 'https://www.google.com/recaptcha/api/siteverify', $args );
         $post_body = json_decode( wp_remote_retrieve_body($post_result), true );
         if ( ! isset( $post_body['success'] ) || false === $post_body['success'] ) {
-            return 'Captcha failure. Try again, if you are human.';
+            $error->add(__METHOD__, __('Captcha failure. Try again, if you are human.', 'zume') );
+            return $error;
         }
 
         // validate elements
         if ( empty( $_POST['email'] ) || empty( $_POST['password'] ) ) {
-            return 'Missing email or password';
+            $error->add(__METHOD__, __('Missing email or password.', 'zume') );
+            return $error;
         }
+
+        $current_language = zume_current_language();
 
         // sanitize user form input
         $password   =   esc_attr( $_POST['password'] );
@@ -499,7 +323,8 @@ class Zume_User_Registration
         $username   =   sanitize_user( $username );
 
         if ( email_exists( $email ) ) {
-            return 'Sorry. This email is already registered. If you forgot your password, use the forgot password form.';
+            $error->add(__METHOD__, sprintf( __('Sorry. This email is already registered. %s Go to Login %s', 'zume'), '<a href="'. zume_login_url( $current_language ).'">', '</a>' ) );
+            return $error;
         }
 
         if ( username_exists( $username ) ) {
@@ -509,12 +334,12 @@ class Zume_User_Registration
         $user_id = wp_create_user( $username, $password, $email );
 
         if ( is_wp_error( $user_id ) ) {
-            return 'Something went wrong. Sorry. Could you try again?';
+            $error->add(__METHOD__, __('Something went wrong. Sorry. Could you try again?', 'zume') );
+            return $error;
         }
 
         zume_update_user_ip_address_and_location( $user_id ); // record ip address and location
 
-        $current_language = zume_current_language();
         add_user_meta( $user_id, 'zume_language', $current_language, true );
         add_user_meta( $user_id, 'zume_phone_number', null, true );
         add_user_meta( $user_id, 'zume_address', null, true );
@@ -531,8 +356,364 @@ class Zume_User_Registration
             wp_safe_redirect( zume_home_url( $current_language ) );
             exit;
         } else {
-            return 'No user found.';
+            $error->add(__METHOD__, __('No new user found.', 'zume') );
+            return $error;
         }
     }
 }
 Zume_User_Registration::instance();
+
+
+function zume_google_sign_in_button( $label = 'signin') {
+    if ( 'register' === $label ) {
+        $label = __( 'Register with Google', 'zume' );
+    } else {
+        $label = __( 'Sign in with Google', 'zume' );
+    }
+    ?>
+    <button id="signinButton" class="button"><i class="fi-social-google-plus"></i> <?php echo esc_attr( $label ) ?></button>
+    <div id="google_error"></div>
+
+    <script>
+        jQuery('#signinButton').click(function() {
+            auth2.signIn().then(onSignIn);
+        });
+
+        function onSignIn(googleUser) {
+            // Useful data for your client-side scripts:
+            jQuery('#signinButton').attr('style', 'background-color: grey');
+
+            let data = {
+                "token": googleUser.getAuthResponse().id_token
+            };
+            jQuery.ajax({
+                type: "POST",
+                data: JSON.stringify(data),
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                url: '<?php echo rest_url('/zume/v1/register_via_google') ?>',
+                beforeSend: function(xhr) {
+                    xhr.setRequestHeader('X-WP-Nonce', '<?php echo wp_create_nonce( 'wp_rest' ) ?>');
+                },
+            })
+                .done(function (data) {
+                    console.log(data)
+                    window.location = "<?php echo esc_url( site_url() ) ?>"
+                })
+                .fail(function (err) {
+                    signOut()
+                    jQuery('#google_error').text( '<?php esc_html_e( 'Failed to authenticate your Google account. Try again.', 'zume' ); ?>' )
+                    console.log("error")
+                    console.log(err)
+                })
+        }
+    </script>
+    <?php
+}
+
+
+
+
+// modifies the buttons of the login form.
+function zume_login_styles() {
+    ?>
+    <style>
+        body.login {
+            background: none;
+        }
+        #wp-submit {
+            background: #fefefe;
+            border: 0;
+            color: #323A68;
+            font-size: medium;
+            cursor: pointer;
+            outline: #323A68 solid 1px;
+            padding: 0.85em 1em;
+            text-align: center;
+            text-decoration: none;
+            -webkit-border-radius: 0;
+            -moz-border-radius: 0;
+            border-radius: 0;
+            margin: 2px;
+            height: inherit;
+            text-shadow: none;
+            float:right;
+        }
+        #wp-submit:hover {
+            background: #323A68;
+            border: 0;
+            color: #fefefe;
+            font-size: medium;
+            cursor: pointer;
+            outline: #323A68 solid 1px;
+            padding: 0.85em 1em;
+            text-align: center;
+            text-decoration: none;
+            -webkit-border-radius: 0;
+            -moz-border-radius: 0;
+            border-radius: 0;
+            margin: 2px;
+            height:inherit;
+            float:right;
+        }
+        .login h1 a {
+            background: url(<?php echo esc_url( get_theme_file_uri( '/assets/images/zume-logo-white.png' ) ) ?>) no-repeat top center;
+            width: 326px;
+            height: 67px;
+            text-indent: -9999px;
+            overflow: hidden;
+            padding-bottom: 15px;
+            display: block;
+        }
+        #nav a {
+            background: #fefefe;
+            border: 0;
+            color: #323A68;
+            font-size: medium;
+            cursor: pointer;
+            outline: #323A68 solid 1px;
+            padding: 1em;
+            text-align: center;
+            text-decoration: none;
+            -webkit-border-radius: 0;
+            -moz-border-radius: 0;
+            border-radius: 0;
+            margin: 2px;
+        }
+        #nav a:hover {
+            background: #323A68;
+            border: 0;
+            color: #fefefe;
+            font-size: medium;
+            cursor: pointer;
+            outline: #323A68 solid 1px;
+            padding: 5px;
+            text-align: center;
+            text-decoration: none;
+            -webkit-border-radius: 0;
+            -moz-border-radius: 0;
+            border-radius: 0;
+            margin: 2px;
+        }
+        @media only screen and (min-width: 640px) {
+            #nav a {
+                padding: 1em !important;
+            }
+            #nav a:hover {
+                padding: 1em !important;
+            }
+        }
+    </style>
+    <?php
+}
+
+function zume_retrieve_password() {
+    $errors = new WP_Error();
+
+    if ( empty( $_POST['user_login'] ) || ! is_string( $_POST['user_login'] ) ) {
+        $errors->add('empty_username', __('<strong>ERROR</strong>: Enter a username or email address.'));
+    } elseif ( strpos( $_POST['user_login'], '@' ) ) {
+        $user_data = get_user_by( 'email', trim( wp_unslash( $_POST['user_login'] ) ) );
+        if ( empty( $user_data ) )
+            $errors->add('invalid_email', __('<strong>ERROR</strong>: There is no user registered with that email address.'));
+    } else {
+        $login = trim($_POST['user_login']);
+        $user_data = get_user_by('login', $login);
+    }
+
+    /**
+     * Fires before errors are returned from a password reset request.
+     *
+     * @since 2.1.0
+     * @since 4.4.0 Added the `$errors` parameter.
+     *
+     * @param WP_Error $errors A WP_Error object containing any errors generated
+     *                         by using invalid credentials.
+     */
+    do_action( 'lostpassword_post', $errors );
+
+    if ( $errors->get_error_code() )
+        return $errors;
+
+    if ( !$user_data ) {
+        $errors->add('invalidcombo', __('<strong>ERROR</strong>: Invalid username or email.'));
+        return $errors;
+    }
+
+    // Redefining user_login ensures we return the right case in the email.
+    $user_login = $user_data->user_login;
+    $user_email = $user_data->user_email;
+    $key = get_password_reset_key( $user_data );
+
+    if ( is_wp_error( $key ) ) {
+        return $key;
+    }
+
+    if ( is_multisite() ) {
+        $site_name = get_network()->site_name;
+    } else {
+        /*
+         * The blogname option is escaped with esc_html on the way into the database
+         * in sanitize_option we want to reverse this for the plain text arena of emails.
+         */
+        $site_name = wp_specialchars_decode( get_option( 'blogname' ), ENT_QUOTES );
+    }
+
+    $message = __( 'Someone has requested a password reset for the following account:' ) . "\r\n\r\n";
+    /* translators: %s: site name */
+    $message .= sprintf( __( 'Site Name: %s'), $site_name ) . "\r\n\r\n";
+    /* translators: %s: user login */
+    $message .= sprintf( __( 'Username: %s'), $user_login ) . "\r\n\r\n";
+    $message .= __( 'If this was a mistake, just ignore this email and nothing will happen.' ) . "\r\n\r\n";
+    $message .= __( 'To reset your password, visit the following address:' ) . "\r\n\r\n";
+    $message .= '<' . zume_login_url() . "?action=rp&key=$key&login=" . rawurlencode( $user_login ) . ">\r\n";
+
+    /* translators: Password reset email subject. %s: Site name */
+    $title = sprintf( __( '[%s] Password Reset' ), $site_name );
+
+    /**
+     * Filters the subject of the password reset email.
+     *
+     * @since 2.8.0
+     * @since 4.4.0 Added the `$user_login` and `$user_data` parameters.
+     *
+     * @param string  $title      Default email title.
+     * @param string  $user_login The username for the user.
+     * @param WP_User $user_data  WP_User object.
+     */
+    $title = apply_filters( 'retrieve_password_title', $title, $user_login, $user_data );
+
+    /**
+     * Filters the message body of the password reset mail.
+     *
+     * If the filtered message is empty, the password reset email will not be sent.
+     *
+     * @since 2.8.0
+     * @since 4.1.0 Added `$user_login` and `$user_data` parameters.
+     *
+     * @param string  $message    Default mail message.
+     * @param string  $key        The activation key.
+     * @param string  $user_login The username for the user.
+     * @param WP_User $user_data  WP_User object.
+     */
+    $message = apply_filters( 'retrieve_password_message', $message, $key, $user_login, $user_data );
+
+    if ( $message && !wp_mail( $user_email, wp_specialchars_decode( $title ), $message ) )
+        wp_die( __('The email could not be sent.') . "<br />\n" . __('Possible reason: your host may have disabled the mail() function.') );
+
+    return true;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**********************************************************************************************************************
+ * Customize links for signup and registration
+ * @see wp-login.php:765
+ */
+add_filter( 'wp_signup_location', 'zume_multisite_signup_location', 99, 1 );
+function zume_multisite_signup_location( $url ) {
+    $url = zume_get_posts_translation_url( 'Login', zume_current_language() );
+    return $url;
+}
+add_filter( 'register_url', 'zume_multisite_register_location', 99, 1 );
+function zume_multisite_register_location( $url ) {
+    $url = zume_get_posts_translation_url( 'Login', zume_current_language() ) . '/?action=registration';
+    return $url;
+}
+
+/**
+ * Modify default link for login
+ * @see zume-functions.php for the function
+ */
+add_filter( 'login_url', 'zume_login_url', 99, 3 );
+
+/**
+ * Update User IP Address location on login
+ */
+add_action( 'wp_login', 'zume_login_update_ip_info', 10, 2 );
+function zume_login_update_ip_info( $user_login, $user ) {
+    zume_update_user_ip_address_and_location( $user->ID );
+}
+
+/**
+ * LOGIN
+ */
+/**
+ * Changes the logo link from wordpress.org to your site
+ */
+function zume_site_url() {
+    $current_language = zume_current_language();
+    if ( 'en' != $current_language ) {
+        $home_url = site_url() . '/' . $current_language;
+    } else {
+        $home_url = site_url();
+    }
+    return $home_url;
+}
+add_filter( 'login_headerurl', 'zume_site_url' );
+
+/**
+ * Changes the alt text on the logo to show your site name
+ */
+function zume_login_title() {
+    return get_option( 'blogname' );
+}
+add_filter( 'login_headertitle', 'zume_login_title' );
+
+/* Main redirection of the default login page */
+function zume_redirect_login_page() {
+    if ( isset( $_SERVER['REQUEST_URI'] ) && !empty( $_SERVER['REQUEST_URI'] ) ) {
+        $login_page  = zume_get_posts_translation_url( 'Login', zume_current_language() );
+        $page_viewed = basename( sanitize_text_field( wp_unslash( $_SERVER['REQUEST_URI'] ) ) );
+
+        if ( isset( $_SERVER['REQUEST_METHOD'] ) && $page_viewed == "wp-login.php" && $_SERVER['REQUEST_METHOD'] == 'GET') {
+            wp_redirect( $login_page );
+            exit;
+        }
+    }
+}
+add_action( 'init', 'zume_redirect_login_page' );
+
+/* Where to go if a login failed */
+function zume_custom_login_failed() {
+    $login_page  = zume_get_posts_translation_url( 'Login', zume_current_language() );
+    wp_redirect( $login_page . '?login=failed' );
+    exit;
+}
+add_action( 'wp_login_failed', 'zume_custom_login_failed' );
+
+/* Where to go if any of the fields were empty */
+function zume_verify_user_pass($user, $username, $password) {
+    $login_page  = zume_get_posts_translation_url( 'Login', zume_current_language() );
+    if ($username == "" || $password == "") {
+        wp_redirect( $login_page . "?login=empty" );
+        exit;
+    }
+}
+add_filter( 'authenticate', 'zume_verify_user_pass', 1, 3 );
+
+
+
+
+
+
+
