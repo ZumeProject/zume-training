@@ -186,6 +186,8 @@ if ( is_user_logged_in() ) {
             <?php endwhile; ?>
 
 
+
+
             <!-- Find out more link -->
             <div class="grid-x ">
                 <div class="small-8 medium-3 small-centered cell center vertical-padding">

@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Zúme Project\n"
-"POT-Creation-Date: 2018-09-24 12:51-0600\n"
-"PO-Revision-Date: 2018-09-24 12:51-0600\n"
+"POT-Creation-Date: 2018-11-26 12:26-0700\n"
+"PO-Revision-Date: 2018-11-26 12:29-0700\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: th_TH\n"
@@ -77,7 +77,7 @@ msgstr "เป็นเจ้าภาพจัดการฝึกอบรม
 msgid "Get Started"
 msgstr "ลงมือทำ"
 
-#: front-page.php:194
+#: front-page.php:196
 msgid "Find out more about Zúme"
 msgstr "หาข้อมูลเกี่ยวกับซูเม่เพิ่มเติม"
 
@@ -101,7 +101,7 @@ msgstr "ขั้นตอนปัจจุบัน:"
 msgid "Finish"
 msgstr "เสร็จสิ้น"
 
-#: functions/enqueue-scripts.php:59 functions/utilities/menu.php:108 template-zume-register.php:568
+#: functions/enqueue-scripts.php:59 functions/utilities/menu.php:108 template-register-old.php:568
 msgid "Next"
 msgstr "อันต่อไป"
 
@@ -129,76 +129,188 @@ msgstr "ไม่สามารถทำการเปลี่ยนแปล
 msgid "Three Month Plan - Zúme Project"
 msgstr "แผนสามเดือน - โครงการซูเม่"
 
-#: functions/login/registration.php:98
+#: functions/login/zume-login.php:207 functions/login/zume-login.php:435
+msgid "No user found."
+msgstr ""
+
+#: functions/login/zume-login.php:278 functions/login/zume-login.php:400
+msgid "You are missing your sign-in token. Try signing in again."
+msgstr ""
+
+#: functions/login/zume-login.php:289 functions/login/zume-login.php:410
+#, fuzzy
+#| msgid "Failed to connect with the URL provided."
+msgid "Failed to connect with Facebook. Try again."
+msgstr "Failed to connect with the URL provided."
+
+#: functions/login/zume-login.php:308 functions/login/zume-login.php:426
+msgid "Facebook user lookup error. Sorry for the inconvenience."
+msgstr ""
+
+#: functions/login/zume-login.php:311 functions/login/zume-login.php:429
+msgid "Error with looking up user with Facebook. Sorry for the inconvenience."
+msgstr ""
+
+#: functions/login/zume-login.php:531
+msgid "There are some errors in your form."
+msgstr ""
+
+#: functions/login/zume-login.php:536 template-zume-profile.php:129
+msgid "Email"
+msgstr "อีเมล์"
+
+#: functions/login/zume-login.php:540 template-zume-login.php:265
+#, fuzzy
+#| msgid "Required"
+msgid "Password Required"
+msgstr "จำเป็นต้องมี"
+
+#: functions/login/zume-login.php:543 template-zume-login.php:268
+msgid "Password required"
+msgstr ""
+
+#: functions/login/zume-login.php:550 template-zume-login.php:275
+msgid "Re-enter Password"
+msgstr ""
+
+#: functions/login/zume-login.php:553 template-zume-login.php:278
+msgid "Passwords do not match. Please, try again."
+msgstr ""
+
+#: functions/login/zume-login.php:562 functions/zume-polylang-integration.php:143 template-zume-login.php:491
+msgid "Register"
+msgstr "ลงทะเบียน"
+
+#: functions/login/zume-login.php:619
+msgid "Missing captcha response. How did you do that?"
+msgstr ""
+
+#: functions/login/zume-login.php:632
+msgid "Captcha failure. Try again, if you are human."
+msgstr ""
+
+#: functions/login/zume-login.php:638
+msgid "Missing email or password."
+msgstr ""
+
+#: functions/login/zume-login.php:657
+#, php-format
+msgid "Sorry. This email is already registered. %s Go to Login %s"
+msgstr ""
+
+#: functions/login/zume-login.php:668
+#, fuzzy
+#| msgid "Something went wrong with the plugin API."
+msgid "Something went wrong. Sorry. Could you try again?"
+msgstr "มีบางอย่างผิดปกติเกี่ยวกับปลั๊กอิน API"
+
+#: functions/login/zume-login.php:690
+msgid "No new user found."
+msgstr ""
+
+#: functions/login/zume-login.php:700
+msgid "Register with Google"
+msgstr ""
+
+#: functions/login/zume-login.php:702
+msgid "Sign in with Google"
+msgstr ""
+
+#: functions/login/zume-login.php:736
+msgid "Failed to authenticate your Google account. Try again."
+msgstr ""
+
+#: functions/login/zume-login.php:747
+msgid "Link with Google"
+msgstr ""
+
+#: functions/login/zume-login.php:862
+msgid "Link Facebook"
+msgstr ""
+
+#: functions/login/zume-login.php:938
+msgid "Failed to authenticate your Facebook account. Try again."
+msgstr ""
+
+#: functions/login/zume-login.php:964
+msgid "Login Facebook"
+msgstr ""
+
+#: functions/login/zume-login.php:1089
+msgid "<strong>ERROR</strong>: Enter a username or email address."
+msgstr ""
+
+#: functions/login/zume-login.php:1093
+msgid "<strong>ERROR</strong>: There is no user registered with that email address."
+msgstr ""
+
+#: functions/login/zume-login.php:1114
+msgid "<strong>ERROR</strong>: Invalid username or email."
+msgstr ""
+
+#: functions/login/zume-login.php:1137
+msgid "Someone has requested a password reset for the following account:"
+msgstr ""
+
+#. translators: %s: site name
+#: functions/login/zume-login.php:1139
+#, fuzzy, php-format
+#| msgid "First Name"
+msgid "Site Name: %s"
+msgstr "ชื่อ"
+
+#. translators: %s: user login
+#: functions/login/zume-login.php:1141
+#, fuzzy, php-format
+#| msgid "User Name"
+msgid "Username: %s"
+msgstr "ชื่อผู้ใช้งาน"
+
+#: functions/login/zume-login.php:1142
+msgid "If this was a mistake, just ignore this email and nothing will happen."
+msgstr ""
+
+#: functions/login/zume-login.php:1143
+msgid "To reset your password, visit the following address:"
+msgstr ""
+
+#. translators: Password reset email subject. %s: Site name
+#: functions/login/zume-login.php:1147
+#, php-format
+msgid "[%s] Password Reset"
+msgstr ""
+
+#: functions/login/zume-login.php:1177
+msgid "The email could not be sent."
+msgstr ""
+
+#: functions/login/zume-login.php:1177
+msgid "Possible reason: your host may have disabled the mail() function."
+msgstr ""
+
+#: functions/login/zume-register.php:141
 msgid "First Name (optional for coaching)"
 msgstr "ชื่อ (กรอกหรือไม่ก็ได้ สำหรับการฝึกสอน)"
 
-#: functions/login/registration.php:102
+#: functions/login/zume-register.php:145
 msgid "Last Name (optional for coaching)"
 msgstr "นามสกุล (กรอกหรือไม่ก็ได้ สำหรับการฝึกสอน)"
 
-#: functions/login/registration.php:106
+#: functions/login/zume-register.php:149
 msgid "Phone Number (optional for coaching)"
 msgstr "เบอร์โทรศัพท์ (กรอกหรือไม่ก็ได้ สำหรับการฝึกสอน)"
 
-#: functions/login/registration.php:110
+#: functions/login/zume-register.php:153
 msgid "Address (optional for coaching)"
 msgstr "ที่อยู่ (กรอกหรือไม่ก็ได้ สำหรับการฝึกสอน)"
 
-#: functions/login/registration.php:121
+#: functions/login/zume-register.php:164
 msgid "Affiliation Key (optional)"
 msgstr "Affiliation Key (optional)"
 
-#: functions/login/registration.php:145
+#: functions/login/zume-register.php:188
 msgid "<strong>ERROR</strong>: We can not recognize this address as valid location. Please, check spelling."
 msgstr "<strong>ERROR</strong>: เราไม่เห็นว่าที่อยู่นี้เป็นที่อยู่ที่มีอยู่จริง โปรดตรวจสอบตัวสะกดอีกครั้ง"
-
-#: functions/login/registration.php:260 template-zume-profile.php:89
-msgid "Phone Number"
-msgstr "เบอร์โทร"
-
-#: functions/login/registration.php:261
-msgid "User Address"
-msgstr "อีเมล์ผู้ใช้งาน"
-
-#: functions/login/registration.php:262
-msgid "GeoCoded IP"
-msgstr "GeoCoded IP"
-
-#: functions/multi-role/class-user-edit.php:84 functions/multi-role/functions-admin.php:145
-msgid "Roles"
-msgstr "ตำแหน่ง"
-
-#: functions/multi-role/class-user-edit.php:89
-msgid "User Roles"
-msgstr "ตำแหน่งของผู้ใช้งาน"
-
-#: functions/multi-role/functions-admin.php:38 functions/post-types/pdf-download-post-type.php:136 functions/post-types/video-post-type.php:136
-#: functions/zume-dt-integration/site-link-post-type.php:315 functions/zume-dt-integration/site-link-post-type.php:316
-msgid "Edit"
-msgstr "ตัดต่อ"
-
-#: functions/multi-role/functions-admin.php:39
-msgid "OK"
-msgstr "ตกลง"
-
-#: functions/multi-role/functions-admin.php:40
-#, php-format
-msgid "Grant %s capability"
-msgstr "Grant %s capability"
-
-#: functions/multi-role/functions-admin.php:41
-#, php-format
-msgid "Deny %s capability"
-msgstr "Deny %s capability"
-
-#: functions/multi-role/functions-admin.php:42
-msgid "Are you sure you want to delete this role? This is a permanent action and cannot be undone."
-msgstr "คุณแน่ใจที่จะลบตำแหน่งนี้ออกไปหรือไม่? เพราะนี่จะเป็นการลบที่มีผลถาวรและไม่สามารถแก้ไขอีกได้"
-
-#: functions/multi-role/functions-admin.php:174
-msgid "None"
-msgstr "ไม่มี"
 
 #: functions/post-types/pdf-download-post-type.php:131 functions/post-types/pdf-download-post-type.php:132
 msgid "Zume Download"
@@ -208,14 +320,17 @@ msgstr "ดาว์นโหลดซูเม่"
 msgid "All Zume Downloads"
 msgstr "ดาวน์โหลดทั้งหมดของซูเม่"
 
-#: functions/post-types/pdf-download-post-type.php:134 functions/post-types/video-post-type.php:134 functions/zume-dt-integration/site-link-post-type.php:313
-#: functions/zume-dt-integration/site-link-post-type.php:314
+#: functions/post-types/pdf-download-post-type.php:134 functions/post-types/video-post-type.php:134
 msgid "Add New"
 msgstr "เพิ่มเติมสิ่งใหม่"
 
 #: functions/post-types/pdf-download-post-type.php:135
 msgid "Add New Zume Download"
 msgstr "เพิ่มการดาวน์โหลดซูเม่อันใหม่"
+
+#: functions/post-types/pdf-download-post-type.php:136 functions/post-types/video-post-type.php:136
+msgid "Edit"
+msgstr "ตัดต่อ"
 
 #: functions/post-types/pdf-download-post-type.php:137
 msgid "Edit Zume Download"
@@ -233,11 +348,11 @@ msgstr "ดูซูเม่ดาวน์โหลด"
 msgid "Search Zume Downloads"
 msgstr "ค้นหาซูเม่ดาวน์โหลด"
 
-#: functions/post-types/pdf-download-post-type.php:141 functions/post-types/video-post-type.php:141 functions/zume-dt-integration/site-link-post-type.php:320
+#: functions/post-types/pdf-download-post-type.php:141 functions/post-types/video-post-type.php:141
 msgid "Nothing found in the Database."
 msgstr "ไม่พบสิ่งใดในฐานข้อมูลนี้"
 
-#: functions/post-types/pdf-download-post-type.php:142 functions/post-types/video-post-type.php:142 functions/zume-dt-integration/site-link-post-type.php:321
+#: functions/post-types/pdf-download-post-type.php:142 functions/post-types/video-post-type.php:142
 msgid "Nothing found in Trash"
 msgstr "ไม่พบสิ่งใดในขยะ"
 
@@ -246,11 +361,11 @@ msgid "Zume video catalog for language videos"
 msgstr "แคตตาล็อควิดีโอซูเม่สำหรับวิดีโอภาษาต่างๆ"
 
 #. translators: Publish box date format, see http://php.net/date
-#: functions/post-types/pdf-download-post-type.php:256 functions/post-types/video-post-type.php:256 functions/zume-dt-integration/site-link-post-type.php:430
+#: functions/post-types/pdf-download-post-type.php:256 functions/post-types/video-post-type.php:256
 msgid "M j, Y @ G:i"
 msgstr "M j, Y @ G:i"
 
-#: functions/post-types/pdf-download-post-type.php:451 functions/post-types/video-post-type.php:459 functions/zume-dt-integration/site-link-post-type.php:893
+#: functions/post-types/pdf-download-post-type.php:451 functions/post-types/video-post-type.php:459
 msgid "Enter the title here"
 msgstr "กรอกหัวข้อที่นี่"
 
@@ -310,405 +425,6 @@ msgstr "อันแรก"
 #: functions/utilities/menu.php:111
 msgid "Last"
 msgstr "อันสุดท้าย"
-
-#: functions/utilities/tgm-plugin-activation-class.php:334
-msgid "Install Required Plugins"
-msgstr "การติดตั้งต้องมีปลั๊กอิน"
-
-#: functions/utilities/tgm-plugin-activation-class.php:335
-msgid "Install Plugins"
-msgstr "ติดตั้งปลั๊กอิน"
-
-#. translators: %s: plugin name.
-#: functions/utilities/tgm-plugin-activation-class.php:337
-#, php-format
-msgid "Installing Plugin: %s"
-msgstr "กำลังติดตั้งปลั๊กอิน: %s"
-
-#. translators: %s: plugin name.
-#: functions/utilities/tgm-plugin-activation-class.php:339
-#, php-format
-msgid "Updating Plugin: %s"
-msgstr "อัพเดทปลั๊กอิน: %s"
-
-#: functions/utilities/tgm-plugin-activation-class.php:340
-msgid "Something went wrong with the plugin API."
-msgstr "มีบางอย่างผิดปกติเกี่ยวกับปลั๊กอิน API"
-
-#. translators: 1: plugin name(s).
-#: functions/utilities/tgm-plugin-activation-class.php:343
-#, php-format
-msgid "This theme requires the following plugin: %1$s."
-msgid_plural "This theme requires the following plugins: %1$s."
-msgstr[0] "Theme นี้ต้องใช้ปลั๊กอินต่อไปนี้ : %1$s"
-
-#. translators: 1: plugin name(s).
-#: functions/utilities/tgm-plugin-activation-class.php:349
-#, php-format
-msgid "This theme recommends the following plugin: %1$s."
-msgid_plural "This theme recommends the following plugins: %1$s."
-msgstr[0] "Theme นี้แนะนำให้ใช้ปลั๊กอินต่อไปนี้: %1$s."
-
-#. translators: 1: plugin name(s).
-#: functions/utilities/tgm-plugin-activation-class.php:355
-#, php-format
-msgid "The following plugin needs to be updated to its latest version to ensure maximum compatibility with this theme: %1$s."
-msgid_plural "The following plugins need to be updated to their latest version to ensure maximum compatibility with this theme: %1$s."
-msgstr[0] "ปลั๊กอินอันต่อไปนี้ต้องอัพเดพใช้เวอร์ชั่นล่าสุดเพื่อการทำงานที่เหมาะสมที่สุดสำหรับ Theme นี้: %1$s"
-
-#. translators: 1: plugin name(s).
-#: functions/utilities/tgm-plugin-activation-class.php:361
-#, php-format
-msgid "There is an update available for: %1$s."
-msgid_plural "There are updates available for the following plugins: %1$s."
-msgstr[0] "นี่คือการอัพเดทที่มีอยู่สำหรับ: %1$s"
-
-#. translators: 1: plugin name(s).
-#: functions/utilities/tgm-plugin-activation-class.php:367
-#, php-format
-msgid "The following required plugin is currently inactive: %1$s."
-msgid_plural "The following required plugins are currently inactive: %1$s."
-msgstr[0] "ปลั๊กอินต่างๆ ที่ต้องมีดังต่อไปนี้ ในตอนนี้ไม่แอคทีฟ: %1$s"
-
-#. translators: 1: plugin name(s).
-#: functions/utilities/tgm-plugin-activation-class.php:373
-#, php-format
-msgid "The following recommended plugin is currently inactive: %1$s."
-msgid_plural "The following recommended plugins are currently inactive: %1$s."
-msgstr[0] "ปลั๊กอินต่างๆ ที่แนะนำดังต่อไปนี้ ในตอนนี้ไม่แอคทีฟ:: %1$s"
-
-#: functions/utilities/tgm-plugin-activation-class.php:378
-msgid "Begin installing plugin"
-msgid_plural "Begin installing plugins"
-msgstr[0] "เริ่มติดตั้งปลั๊กอิน"
-
-#: functions/utilities/tgm-plugin-activation-class.php:383
-msgid "Begin updating plugin"
-msgid_plural "Begin updating plugins"
-msgstr[0] "เริ่มอัพเดทปลั๊กอิน"
-
-#: functions/utilities/tgm-plugin-activation-class.php:388
-msgid "Begin activating plugin"
-msgid_plural "Begin activating plugins"
-msgstr[0] "เริ่มแอคติเวทปลั๊กอิน"
-
-#: functions/utilities/tgm-plugin-activation-class.php:392
-msgid "Return to Required Plugins Installer"
-msgstr "กลับไปยัง Required Plugins Installer"
-
-#: functions/utilities/tgm-plugin-activation-class.php:393 functions/utilities/tgm-plugin-activation-class.php:920 functions/utilities/tgm-plugin-activation-class.php:2626
-#: functions/utilities/tgm-plugin-activation-class.php:3675
-msgid "Return to the Dashboard"
-msgstr "กลับไปยัง Dashboard"
-
-#: functions/utilities/tgm-plugin-activation-class.php:394 functions/utilities/tgm-plugin-activation-class.php:3252
-msgid "Plugin activated successfully."
-msgstr "ปลั๊กอิน activate สำเร็จแล้ว"
-
-#: functions/utilities/tgm-plugin-activation-class.php:395 functions/utilities/tgm-plugin-activation-class.php:3045
-msgid "The following plugin was activated successfully:"
-msgid_plural "The following plugins were activated successfully:"
-msgstr[0] "ปลั๊กอินต่อไปนี้ activate สำเร็จแล้ว"
-
-#. translators: 1: plugin name.
-#: functions/utilities/tgm-plugin-activation-class.php:397
-#, php-format
-msgid "No action taken. Plugin %1$s was already active."
-msgstr "ไม่มีการรับคำสั่งใด ปลั๊กอิน%1$s ทำงานแล้ว"
-
-#. translators: 1: plugin name.
-#: functions/utilities/tgm-plugin-activation-class.php:399
-#, php-format
-msgid "Plugin not activated. A higher version of %s is needed for this theme. Please update the plugin."
-msgstr "ปลั๊กอินยังไม่ถูก activate สำหรับ Theme นี้ต้องใช้เวอร์ชั่นของ %s ที่สูงกว่า โปรดอัพเดทปลั๊กอิน"
-
-#. translators: 1: dashboard link.
-#: functions/utilities/tgm-plugin-activation-class.php:401
-#, php-format
-msgid "All plugins installed and activated successfully. %1$s"
-msgstr "ปลั๊กอินทั้งหมดถูก activate แล้วและ activate สำเร็จแล้ว %1$s"
-
-#: functions/utilities/tgm-plugin-activation-class.php:402
-msgid "Dismiss this notice"
-msgstr "ทิ้งข้อความนี้ได้"
-
-#: functions/utilities/tgm-plugin-activation-class.php:403
-msgid "There are one or more required or recommended plugins to install, update or activate."
-msgstr "ยังต้องติดตั้งหรือ activate ปลั๊กอินอันหนึ่งหรือมากกว่านั้นหรือปลั๊กอินที่แนะนำไว้"
-
-#: functions/utilities/tgm-plugin-activation-class.php:404
-msgid "Please contact the administrator of this site for help."
-msgstr "โปรดติดต่อเจ้าหน้าที่เว๊ปไซต์นี้เพื่อขอความช่วยเหลือ"
-
-#: functions/utilities/tgm-plugin-activation-class.php:607
-msgid "This plugin needs to be updated to be compatible with your theme."
-msgstr "ปลั๊กอินนี้ต้องได้รับการอัพเดทเพื่อให้สามารถใช้งานได้กับ Theme ของคุณ"
-
-#: functions/utilities/tgm-plugin-activation-class.php:608
-msgid "Update Required"
-msgstr "ต้องอัพเดท"
-
-#: functions/utilities/tgm-plugin-activation-class.php:725
-msgid "Set the parent_slug config variable instead."
-msgstr "โปรดตั้ง parent_slug config variable แทน"
-
-#: functions/utilities/tgm-plugin-activation-class.php:1027
-msgid "The remote plugin package does not contain a folder with the desired slug and renaming did not work."
-msgstr "The remote plugin package does not contain a folder with the desired slug and renaming did not work."
-
-#: functions/utilities/tgm-plugin-activation-class.php:1027 functions/utilities/tgm-plugin-activation-class.php:1030
-msgid "Please contact the plugin provider and ask them to package their plugin according to the WordPress guidelines."
-msgstr "โปรดติดต่อผู้ให้บริการปลั๊กอินและของให้พวกเขา package ปลั๊กอินตามคำแนะนำของ WordPress"
-
-#: functions/utilities/tgm-plugin-activation-class.php:1030
-msgid "The remote plugin package consists of more than one file, but the files are not packaged in a folder."
-msgstr "The remote plugin package consists of more than one file, but the files are not packaged in a folder."
-
-#: functions/utilities/tgm-plugin-activation-class.php:1214 functions/utilities/tgm-plugin-activation-class.php:3041
-msgctxt "plugin A *and* plugin B"
-msgid "and"
-msgstr "and"
-
-#. translators: %s: version number
-#: functions/utilities/tgm-plugin-activation-class.php:2075
-#, php-format
-msgid "TGMPA v%s"
-msgstr "TGMPA v%s"
-
-#: functions/utilities/tgm-plugin-activation-class.php:2366
-msgid "Required"
-msgstr "จำเป็นต้องมี"
-
-#: functions/utilities/tgm-plugin-activation-class.php:2369
-msgid "Recommended"
-msgstr "แนะนำ"
-
-#: functions/utilities/tgm-plugin-activation-class.php:2385
-msgid "WordPress Repository"
-msgstr "ที่เก็บ WordPress"
-
-#: functions/utilities/tgm-plugin-activation-class.php:2388
-msgid "External Source"
-msgstr "External Source"
-
-#: functions/utilities/tgm-plugin-activation-class.php:2391
-msgid "Pre-Packaged"
-msgstr "Pre-Packaged"
-
-#: functions/utilities/tgm-plugin-activation-class.php:2408
-msgid "Not Installed"
-msgstr "ไม่ได้ถูกติดตั้ง"
-
-#: functions/utilities/tgm-plugin-activation-class.php:2412
-msgid "Installed But Not Activated"
-msgstr "ติดตั้งแล้วแต่ยังไม่ถูก activate"
-
-#: functions/utilities/tgm-plugin-activation-class.php:2414
-msgid "Active"
-msgstr "แอคทีพ"
-
-#: functions/utilities/tgm-plugin-activation-class.php:2420
-msgid "Required Update not Available"
-msgstr "ยังไม่มีการอัพเดทที่ต้องการ"
-
-#: functions/utilities/tgm-plugin-activation-class.php:2423
-msgid "Requires Update"
-msgstr "ต้องอัพเดท"
-
-#: functions/utilities/tgm-plugin-activation-class.php:2426
-msgid "Update recommended"
-msgstr "แนะนำให้อัพเดท"
-
-#. translators: 1: install status, 2: update status
-#: functions/utilities/tgm-plugin-activation-class.php:2435
-#, php-format
-msgctxt "Install/Update Status"
-msgid "%1$s, %2$s"
-msgstr "%1$s, %2$s"
-
-#. translators: 1: number of plugins.
-#: functions/utilities/tgm-plugin-activation-class.php:2481
-#, php-format
-msgctxt "plugins"
-msgid "All <span class=\"count\">(%s)</span>"
-msgid_plural "All <span class=\"count\">(%s)</span>"
-msgstr[0] "All <span class=\"count\">(%s)</span>"
-
-#. translators: 1: number of plugins.
-#: functions/utilities/tgm-plugin-activation-class.php:2485
-#, php-format
-msgid "To Install <span class=\"count\">(%s)</span>"
-msgid_plural "To Install <span class=\"count\">(%s)</span>"
-msgstr[0] "To Install <span class=\"count\">(%s)</span>"
-
-#. translators: 1: number of plugins.
-#: functions/utilities/tgm-plugin-activation-class.php:2489
-#, php-format
-msgid "Update Available <span class=\"count\">(%s)</span>"
-msgid_plural "Update Available <span class=\"count\">(%s)</span>"
-msgstr[0] "Update Available <span class=\"count\">(%s)</span>"
-
-#. translators: 1: number of plugins.
-#: functions/utilities/tgm-plugin-activation-class.php:2493
-#, php-format
-msgid "To Activate <span class=\"count\">(%s)</span>"
-msgid_plural "To Activate <span class=\"count\">(%s)</span>"
-msgstr[0] "To Activate <span class=\"count\">(%s)</span>"
-
-#: functions/utilities/tgm-plugin-activation-class.php:2575
-msgctxt "as in: \"version nr unknown\""
-msgid "unknown"
-msgstr "unknown"
-
-#: functions/utilities/tgm-plugin-activation-class.php:2583
-msgid "Installed version:"
-msgstr "เวอร์ชั่นที่ติดตั้ง"
-
-#: functions/utilities/tgm-plugin-activation-class.php:2591
-msgid "Minimum required version:"
-msgstr "ต้องมีเวอร์ชั่นอย่างน้อย:"
-
-#: functions/utilities/tgm-plugin-activation-class.php:2603
-msgid "Available version:"
-msgstr "เวอร์ชั่นที่มีอยู่:"
-
-#: functions/utilities/tgm-plugin-activation-class.php:2626
-msgid "No plugins to install, update or activate."
-msgstr "ไม่มีปลั๊กอินให้ติดตั้ง หรืออัพเดทหรือ activate"
-
-#: functions/utilities/tgm-plugin-activation-class.php:2640
-msgid "Plugin"
-msgstr "ปลั๊กอิน"
-
-#: functions/utilities/tgm-plugin-activation-class.php:2641
-msgid "Source"
-msgstr "แหล่งข้อมูล"
-
-#: functions/utilities/tgm-plugin-activation-class.php:2642
-msgid "Type"
-msgstr "ประเภท"
-
-#: functions/utilities/tgm-plugin-activation-class.php:2646
-msgid "Version"
-msgstr "เวอร์ชั่น"
-
-#: functions/utilities/tgm-plugin-activation-class.php:2647
-msgid "Status"
-msgstr "สถานะ"
-
-#. translators: %2$s: plugin name in screen reader markup
-#: functions/utilities/tgm-plugin-activation-class.php:2696
-#, php-format
-msgid "Install %2$s"
-msgstr "ติดตั้ง %2$s"
-
-#. translators: %2$s: plugin name in screen reader markup
-#: functions/utilities/tgm-plugin-activation-class.php:2701
-#, php-format
-msgid "Update %2$s"
-msgstr "อัพเดท %2$s"
-
-#. translators: %2$s: plugin name in screen reader markup
-#: functions/utilities/tgm-plugin-activation-class.php:2707
-#, php-format
-msgid "Activate %2$s"
-msgstr "แอคติเวท %2$s"
-
-#: functions/utilities/tgm-plugin-activation-class.php:2777
-msgid "Upgrade message from the plugin author:"
-msgstr "ข้อความอัพเกรดจากผู้เขียนปลั๊กอิน"
-
-#: functions/utilities/tgm-plugin-activation-class.php:2810
-msgid "Install"
-msgstr "ติดตั้ง"
-
-#: functions/utilities/tgm-plugin-activation-class.php:2816 functions/zume-dt-integration/menu-and-tabs.php:262 template-zume-dashboard.php:854
-msgid "Update"
-msgstr "อัพเดท"
-
-#: functions/utilities/tgm-plugin-activation-class.php:2819
-msgid "Activate"
-msgstr "แอคติเวท"
-
-#: functions/utilities/tgm-plugin-activation-class.php:2850
-msgid "No plugins were selected to be installed. No action taken."
-msgstr "No plugins were selected to be installed. No action taken."
-
-#: functions/utilities/tgm-plugin-activation-class.php:2852
-msgid "No plugins were selected to be updated. No action taken."
-msgstr "No plugins were selected to be updated. No action taken."
-
-#: functions/utilities/tgm-plugin-activation-class.php:2893
-msgid "No plugins are available to be installed at this time."
-msgstr "No plugins are available to be installed at this time."
-
-#: functions/utilities/tgm-plugin-activation-class.php:2895
-msgid "No plugins are available to be updated at this time."
-msgstr "No plugins are available to be updated at this time."
-
-#: functions/utilities/tgm-plugin-activation-class.php:3001
-msgid "No plugins were selected to be activated. No action taken."
-msgstr "No plugins were selected to be activated. No action taken."
-
-#: functions/utilities/tgm-plugin-activation-class.php:3027
-msgid "No plugins are available to be activated at this time."
-msgstr "No plugins are available to be activated at this time."
-
-#: functions/utilities/tgm-plugin-activation-class.php:3251
-msgid "Plugin activation failed."
-msgstr "Plugin activation failed."
-
-#. translators: 1: plugin name, 2: action number 3: total number of actions.
-#: functions/utilities/tgm-plugin-activation-class.php:3593
-#, php-format
-msgid "Updating Plugin %1$s (%2$d/%3$d)"
-msgstr "กำลังอัพเดทปลั๊กอิน %1$s (%2$d/%3$d)"
-
-#. translators: 1: plugin name, 2: error message.
-#: functions/utilities/tgm-plugin-activation-class.php:3596
-#, php-format
-msgid "An error occurred while installing %1$s: <strong>%2$s</strong>."
-msgstr "มีความผิดพลาดเกิดขึ้นขณะติดตั้ง %1$s: <strong>%2$s</strong>."
-
-#. translators: 1: plugin name.
-#: functions/utilities/tgm-plugin-activation-class.php:3598
-#, php-format
-msgid "The installation of %1$s failed."
-msgstr "การติดตั้งของ %1$s ล้มเหลว"
-
-#: functions/utilities/tgm-plugin-activation-class.php:3602
-msgid "The installation and activation process is starting. This process may take a while on some hosts, so please be patient."
-msgstr "กระบวนการติดตั้งและการ activate กำลังเริ่มต้นขึ้นแล้ว กระบวนการนี้อาจใช้เวลานานกับบาง host โปรดรอ"
-
-#. translators: 1: plugin name.
-#: functions/utilities/tgm-plugin-activation-class.php:3604 functions/utilities/tgm-plugin-activation-class.php:3612
-#, php-format
-msgid "%1$s done."
-msgstr "เสร็จแล้ว %1$s"
-
-#: functions/utilities/tgm-plugin-activation-class.php:3605
-msgid "All installations and activations have been completed."
-msgstr "การติดตั้งและการ activate ทั้งหมดเสร็จสิ้นแล้ว"
-
-#. translators: 1: plugin name, 2: action number 3: total number of actions.
-#: functions/utilities/tgm-plugin-activation-class.php:3607
-#, php-format
-msgid "Installing and Activating Plugin %1$s (%2$d/%3$d)"
-msgstr "กำลังติดตั้งและ activate %1$s (%2$d/%3$d)"
-
-#: functions/utilities/tgm-plugin-activation-class.php:3610
-msgid "The installation process is starting. This process may take a while on some hosts, so please be patient."
-msgstr "กระบวนการติดตั้งกำลังเริ่มต้นขึ้นแล้ว กระบวนการนี้อาจใช้เวลานานกับบาง host โปรดรอ"
-
-#: functions/utilities/tgm-plugin-activation-class.php:3613
-msgid "All installations have been completed."
-msgstr "การติดตั้งต่างๆ เสร็จเรียบร้อยแล้ว"
-
-#. translators: 1: plugin name, 2: action number 3: total number of actions.
-#: functions/utilities/tgm-plugin-activation-class.php:3615
-#, php-format
-msgid "Installing Plugin %1$s (%2$d/%3$d)"
-msgstr "กำลังติดตั้.ปลั๊กอิน %1$s (%2$d/%3$d)"
 
 #: functions/zume-course.php:164
 msgid "( Key not available. Check dashboard. )"
@@ -2337,227 +2053,74 @@ msgstr "เพื่อช่วยผู้อื่นให้เป็นส
 msgid "No Name"
 msgstr "ไม่มีชื่อ"
 
-#: functions/zume-dt-integration/menu-and-tabs.php:49
-msgid "Zume"
-msgstr ""
+#: functions/zume-functions.php:291 template-zume-profile.php:182
+msgid "Phone Number"
+msgstr "เบอร์โทร"
 
-#: functions/zume-dt-integration/menu-and-tabs.php:58
-msgid "You do not have sufficient permissions to access this page."
-msgstr "คุณไม่ได้รับอนุญาติให้เข้าในหน้านี้"
+#: functions/zume-functions.php:292
+msgid "User Address"
+msgstr "อีเมล์ผู้ใช้งาน"
 
-#: functions/zume-dt-integration/menu-and-tabs.php:61
-msgid "DISCIPLE TOOLS - INTEGRATION"
-msgstr "เครื่องมือการสร้างสาวก - ความซื่อสัตย์"
+#: functions/zume-functions.php:293
+msgid "GeoCoded IP"
+msgstr "GeoCoded IP"
 
-#: functions/zume-dt-integration/menu-and-tabs.php:68 functions/zume-polylang-integration.php:128
-msgid "Settings"
-msgstr "การตั้งค่า"
-
-#: functions/zume-dt-integration/menu-and-tabs.php:72
-msgid "Google Keys"
-msgstr "Google Keys"
-
-#: functions/zume-dt-integration/menu-and-tabs.php:76
-msgid "Languages"
-msgstr ""
-
-#: functions/zume-dt-integration/menu-and-tabs.php:243
-msgid "Set Default Transfer Site"
-msgstr "Set Default Transfer Site"
-
-#: functions/zume-dt-integration/site-link-post-type.php:312
-msgid "All"
-msgstr "ทั้งหมด"
-
-#: functions/zume-dt-integration/site-link-post-type.php:317
-msgid "New"
-msgstr "ใหม่"
-
-#: functions/zume-dt-integration/site-link-post-type.php:318
-msgid "View"
-msgstr "ดู"
-
-#: functions/zume-dt-integration/site-link-post-type.php:319
-msgid "Search"
-msgstr "ค้นหา"
-
-#: functions/zume-dt-integration/site-link-post-type.php:362 functions/zume-dt-integration/site-link-post-type.php:745
-msgid "Status:"
-msgstr "สถานะ:"
-
-#: functions/zume-dt-integration/site-link-post-type.php:365 functions/zume-dt-integration/site-link-post-type.php:748
-msgid "Checking Status"
-msgstr "กำลังตรวจสอบสถานะ"
-
-#: functions/zume-dt-integration/site-link-post-type.php:387 functions/zume-dt-integration/site-link-post-type.php:839
-msgid "Linked"
-msgstr "ลิงค์ไปยัง"
-
-#: functions/zume-dt-integration/site-link-post-type.php:442
-msgid "Manage Site Link"
-msgstr ""
-
-#: functions/zume-dt-integration/site-link-post-type.php:443
-msgid "Configuration"
-msgstr ""
-
-#: functions/zume-dt-integration/site-link-post-type.php:665
-msgid "Token"
-msgstr ""
-
-#: functions/zume-dt-integration/site-link-post-type.php:666
-msgid "If you have a token from another site, just clear token above and replace it."
-msgstr ""
-
-#: functions/zume-dt-integration/site-link-post-type.php:673
-msgid "Site 1"
-msgstr ""
-
-#: functions/zume-dt-integration/site-link-post-type.php:674 functions/zume-dt-integration/site-link-post-type.php:682
-msgid "Use just the host name. Example: www.website.com"
-msgstr ""
-
-#: functions/zume-dt-integration/site-link-post-type.php:681
-msgid "Site 2"
-msgstr ""
-
-#: functions/zume-dt-integration/site-link-post-type.php:689
-msgid "Approved IP Address"
-msgstr ""
-
-#: functions/zume-dt-integration/site-link-post-type.php:690
-msgid "Enter an approved ip address to restrict responses of this connection. (format: xxx.xxx.xxx.xxx)"
-msgstr ""
-
-#: functions/zume-dt-integration/site-link-post-type.php:696
-msgid "Connection Type"
-msgstr ""
-
-#: functions/zume-dt-integration/site-link-post-type.php:697
-msgid "This adds permissions needed for the labeled task. If you have trouble with a connection succeeding, and a task failing. This permission setting may be the reason."
-msgstr ""
-
-#: functions/zume-dt-integration/site-link-post-type.php:703
-msgid "DT Site"
-msgstr ""
-
-#: functions/zume-dt-integration/site-link-post-type.php:704
-msgid "Is this connection to a Disciple Tools/Wordpress system."
-msgstr ""
-
-#: functions/zume-dt-integration/site-link-post-type.php:707
-msgid "Yes, connected to another DT site (default)"
-msgstr ""
-
-#: functions/zume-dt-integration/site-link-post-type.php:708
-msgid "No, connection for a non-Disciple Tools system."
-msgstr ""
-
-#: functions/zume-dt-integration/site-link-post-type.php:767
-msgid "Consider Checking:"
-msgstr "Consider Checking:"
-
-#: functions/zume-dt-integration/site-link-post-type.php:770
-msgid "Check if the target site is setup with identical configuration information."
-msgstr "Check if the target site is setup with identical configuration information."
-
-#: functions/zume-dt-integration/site-link-post-type.php:773
-msgid "Check if HTTPS/SSL is enabled on both sites. Due to the transfer of data between these sites, SSL encryption is required for both sites to protect the data exchange."
-msgstr "Check if HTTPS/SSL is enabled on both sites. Due to the transfer of data between these sites, SSL encryption is required for both sites to protect the data exchange."
-
-#: functions/zume-dt-integration/site-link-post-type.php:776
-msgid "Check if the server timestamps are identical. Mismatched server times will cause decryption key failures. Your server timestamp"
-msgstr "Check if the server timestamps are identical. Mismatched server times will cause decryption key failures. Your server timestamp"
-
-#: functions/zume-dt-integration/site-link-post-type.php:793
-msgid "Current Site"
-msgstr "หน้าปัจจุบัน"
-
-#: functions/zume-dt-integration/site-link-post-type.php:795
-msgid "Timestamp"
-msgstr "Timestamp"
-
-#: functions/zume-dt-integration/site-link-post-type.php:797
-msgid "Compare this number to linked site. It should be identical."
-msgstr "เปรียบเทียบตัวเลขที่กับหน้าที่ถูกลิงค์ ควรเป็นตัวเลขเดียวกัน"
-
-#: functions/zume-dt-integration/site-link-post-type.php:840
-msgid "Not Linked"
-msgstr "ไม่ได้ถูกลิงค์"
-
-#: functions/zume-dt-integration/site-link-post-type.php:841
-msgid "Failed to connect with the URL provided."
-msgstr "Failed to connect with the URL provided."
-
-#: functions/zume-dt-integration/zume-hooks.php:132
-msgid "Visibility"
-msgstr "Visibility"
-
-#: functions/zume-dt-integration/zume-hooks.php:135
-msgid "Public (Default)"
-msgstr "Public (Default)"
-
-#: functions/zume-dt-integration/zume-hooks.php:135
-msgid "Private"
-msgstr "Private"
-
-#: functions/zume-dt-integration/zume-hooks.php:139 template-zume-profile.php:136
-msgid "Affiliation Key"
-msgstr "Affiliation Key"
-
-#: functions/zume-polylang-integration.php:122
+#: functions/zume-polylang-integration.php:132
 msgid "Home"
 msgstr "หน้าหลัก"
 
-#: functions/zume-polylang-integration.php:123 template-zume-overview.php:238
+#: functions/zume-polylang-integration.php:133 template-zume-overview.php:238
 msgid "Dashboard"
 msgstr "แผงควบคุม"
 
-#: functions/zume-polylang-integration.php:124
+#: functions/zume-polylang-integration.php:134
 msgid "About"
 msgstr "เกี่ยวกัน"
 
-#: functions/zume-polylang-integration.php:125
+#: functions/zume-polylang-integration.php:135
 msgid "Resources"
 msgstr "แหล่งข้อมูล"
 
-#: functions/zume-polylang-integration.php:126
+#: functions/zume-polylang-integration.php:136
 msgid "FAQs"
 msgstr "คำถามที่พบบ่อย"
 
-#: functions/zume-polylang-integration.php:127
+#: functions/zume-polylang-integration.php:137
 msgid "Overview"
 msgstr "ภาพรวม"
 
-#: functions/zume-polylang-integration.php:129
+#: functions/zume-polylang-integration.php:138
+msgid "Settings"
+msgstr "การตั้งค่า"
+
+#: functions/zume-polylang-integration.php:139
 msgid "Profile"
 msgstr "ข้อมูลส่วนตัว"
 
-#: functions/zume-polylang-integration.php:130
+#: functions/zume-polylang-integration.php:140
 msgid "Admin"
 msgstr "แอดมิน"
 
-#: functions/zume-polylang-integration.php:131
+#: functions/zume-polylang-integration.php:141
 msgid "Logout"
 msgstr "ออกจากระบบ"
 
-#: functions/zume-polylang-integration.php:132
+#: functions/zume-polylang-integration.php:142 template-zume-login.php:390
 msgid "Login"
 msgstr "เข้าสู่ระบบ"
 
-#: functions/zume-polylang-integration.php:133 template-zume-login.php:40
-msgid "Register"
-msgstr "ลงทะเบียน"
-
-#: functions/zume-polylang-integration.php:134 template-zume-3plan.php:43 template-zume-dashboard.php:522
-msgid "Three Month Plan"
+#. Template Name of the plugin/theme
+#: functions/zume-polylang-integration.php:144
+#, fuzzy
+#| msgid "Three Month Plan"
+msgid "Three-Month Plan"
 msgstr "แผนสามเดือน"
 
-#: functions/zume-polylang-integration.php:135 template-zume-progress.php:15
+#: functions/zume-polylang-integration.php:145 template-zume-progress.php:15
 msgid "Progress"
 msgstr "ความก้าวหน้า"
 
-#: functions/zume-polylang-integration.php:136
+#: functions/zume-polylang-integration.php:146
 msgid "Stats"
 msgstr "สถิติ"
 
@@ -2633,86 +2196,6 @@ msgstr "ยินดีต้อนรับ!"
 msgid "I want to make disciples who multiply!"
 msgstr "ฉันอยากสร้างสาวกผู้ทวีจำนวน!"
 
-#: functions/zume-welcome-messages.php:104
-msgid "Title 1"
-msgstr "หัวเรื่อง 1"
-
-#: functions/zume-welcome-messages.php:105
-msgid "Message1"
-msgstr "ข้อความ1"
-
-#: functions/zume-welcome-messages.php:110
-msgid "Title 2"
-msgstr "หัวเรื่อง 2"
-
-#: functions/zume-welcome-messages.php:111
-msgid "Message2"
-msgstr "ข้อความ2"
-
-#: functions/zume-welcome-messages.php:116
-msgid "Title 3"
-msgstr "หัวเรื่อง 3"
-
-#: functions/zume-welcome-messages.php:117
-msgid "Message3"
-msgstr "ข้อความ3"
-
-#: functions/zume-welcome-messages.php:122
-msgid "Title 4"
-msgstr "หัวเรื่อง 4"
-
-#: functions/zume-welcome-messages.php:123
-msgid "Message4"
-msgstr "ข้อความ4"
-
-#: functions/zume-welcome-messages.php:128
-msgid "Title 5"
-msgstr "หัวเรื่อง 5"
-
-#: functions/zume-welcome-messages.php:129
-msgid "Message5"
-msgstr "ข้อความ5"
-
-#: functions/zume-welcome-messages.php:134
-msgid "Title 6"
-msgstr "หัวเรื่อง 6"
-
-#: functions/zume-welcome-messages.php:135
-msgid "Message6"
-msgstr "ข้อความ6"
-
-#: functions/zume-welcome-messages.php:140
-msgid "Title 7"
-msgstr "หัวเรื่อง 7"
-
-#: functions/zume-welcome-messages.php:141
-msgid "Message7"
-msgstr "ข้อความ7"
-
-#: functions/zume-welcome-messages.php:146
-msgid "Title 8"
-msgstr "หัวเรื่อง 8"
-
-#: functions/zume-welcome-messages.php:147
-msgid "Message8"
-msgstr "ข้อความ8"
-
-#: functions/zume-welcome-messages.php:152
-msgid "Title 9"
-msgstr "หัวเรื่อง 9"
-
-#: functions/zume-welcome-messages.php:153
-msgid "Message9"
-msgstr "ข้อความ9"
-
-#: functions/zume-welcome-messages.php:158
-msgid "Title 10"
-msgstr "หัวเรื่อง 10"
-
-#: functions/zume-welcome-messages.php:159
-msgid "Message10"
-msgstr "ข้อความ10"
-
 #: parts/content-missing.php:4
 msgid "Oops, Page Not Found!"
 msgstr "ไม่พบหน้านั้น!"
@@ -2736,6 +2219,272 @@ msgstr "หน้า:"
 #: parts/nav-offcanvas-topbar.php:43
 msgid "Menu"
 msgstr "เมนู"
+
+#: template-register-old.php:111
+#, fuzzy
+#| msgid "First Name"
+msgid "Site Name:"
+msgstr "ชื่อ"
+
+#: template-register-old.php:112
+msgid "Site Domain:"
+msgstr ""
+
+#: template-register-old.php:126
+msgid "sitename"
+msgstr ""
+
+#: template-register-old.php:128
+msgid "domain"
+msgstr ""
+
+#. translators: %s: site address
+#: template-register-old.php:132
+#, php-format
+msgid "Your address will be %s."
+msgstr ""
+
+#: template-register-old.php:132
+msgid "Must be at least 4 characters, letters and numbers only. It cannot be changed, so choose carefully!"
+msgstr ""
+
+#: template-register-old.php:137
+msgid "Site Title:"
+msgstr ""
+
+#: template-register-old.php:151
+msgid "Site Language:"
+msgstr ""
+
+#: template-register-old.php:178
+#, fuzzy
+#| msgid "Private"
+msgid "Privacy:"
+msgstr "Private"
+
+#: template-register-old.php:179
+msgid "Allow search engines to index this site."
+msgstr ""
+
+#: template-register-old.php:183
+msgid "Yes"
+msgstr ""
+
+#: template-register-old.php:187
+#, fuzzy
+#| msgid "None"
+msgid "No"
+msgstr "ไม่มี"
+
+#: template-register-old.php:234
+#, fuzzy
+#| msgid "User Name"
+msgid "Username:"
+msgstr "ชื่อผู้ใช้งาน"
+
+#: template-register-old.php:239
+msgid "(Must be at least 4 characters, letters and numbers only.)"
+msgstr ""
+
+#: template-register-old.php:242
+msgid "Email&nbsp;Address:"
+msgstr ""
+
+#: template-register-old.php:246
+msgid "We send your registration email to this address. (Double-check your email address before continuing.)"
+msgstr ""
+
+#: template-register-old.php:313
+#, php-format
+msgid "Get <em>another</em> %s site in seconds"
+msgstr ""
+
+#: template-register-old.php:316
+msgid "There was a problem, please correct the form below and try again."
+msgstr ""
+
+#: template-register-old.php:319
+#, php-format
+msgid ""
+"Welcome back, %s. By filling out the form below, you can <strong>add another site to your account</strong>. There is no limit to the number of sites you can have, so create to "
+"your heart&#8217;s content, but write responsibly!"
+msgstr ""
+
+#: template-register-old.php:325
+msgid "Sites you are already a member of:"
+msgstr ""
+
+#: template-register-old.php:334
+msgid "If you&#8217;re not going to use a great site domain, leave it for a new user. Now have at it!"
+msgstr ""
+
+#: template-register-old.php:349
+#, fuzzy
+#| msgid "Current Site"
+msgid "Create Site"
+msgstr "หน้าปัจจุบัน"
+
+#. translators: %s: site name
+#: template-register-old.php:474
+#, php-format
+msgid "The site %s is yours."
+msgstr ""
+
+#. translators: 1: link to new site, 2: login URL, 3: username
+#: template-register-old.php:479
+#, php-format
+msgid "%1$s is your new site. <a href=\"%2$s\">Log in</a> as &#8220;%3$s&#8221; using your existing password."
+msgstr ""
+
+#. translators: %s: name of the network
+#: template-register-old.php:544
+#, php-format
+msgid "Get your own %s account in seconds"
+msgstr ""
+
+#: template-register-old.php:561
+msgid "Gimme a site!"
+msgstr ""
+
+#: template-register-old.php:564
+msgid "Just a username, please."
+msgstr ""
+
+#. translators: %s: username
+#: template-register-old.php:614
+#, php-format
+msgid "%s is your new username"
+msgstr ""
+
+#: template-register-old.php:615
+msgid "But, before you can start using your new username, <strong>you must activate it</strong>."
+msgstr ""
+
+#. translators: %s: email address
+#: template-register-old.php:617 template-register-old.php:764
+#, php-format
+msgid "Check your inbox at %s and click the link given."
+msgstr ""
+
+#: template-register-old.php:618
+msgid "If you do not activate your username within two days, you will have to sign up again."
+msgstr ""
+
+#: template-register-old.php:684
+#, fuzzy
+#| msgid "Sign up"
+msgid "Signup"
+msgstr "ลงทะเบียน"
+
+#. translators: %s: site address
+#: template-register-old.php:760
+#, fuzzy, php-format
+#| msgid "Congratulations! You've completed Session 1."
+msgid "Congratulations! Your new site, %s, is almost ready."
+msgstr "ขอแสดงความยินดีด้วยครับ! คุณทำบทเรียนที่ 1 เสร็จเรียบร้อยแล้ว"
+
+#: template-register-old.php:762
+msgid "But, before you can start using your site, <strong>you must activate it</strong>."
+msgstr ""
+
+#: template-register-old.php:765
+msgid "If you do not activate your site within two days, you will have to sign up again."
+msgstr ""
+
+#: template-register-old.php:766
+msgid "Still waiting for your email?"
+msgstr ""
+
+#: template-register-old.php:768
+msgid "If you haven&#8217;t received your email yet, there are a number of things you can do:"
+msgstr ""
+
+#: template-register-old.php:770
+msgid "Wait a little longer. Sometimes delivery of email can be delayed by processes outside of our control."
+msgstr ""
+
+#: template-register-old.php:771
+msgid "Check the junk or spam folder of your email client. Sometime emails wind up there by mistake."
+msgstr ""
+
+#. translators: %s: email address
+#: template-register-old.php:774
+#, php-format
+msgid "Have you entered your email correctly? You have entered %s, if it&#8217;s incorrect, you will not receive your email."
+msgstr ""
+
+#: template-register-old.php:831
+msgid "Greetings Network Administrator!"
+msgstr ""
+
+#: template-register-old.php:836
+msgid "The network currently disallows registrations."
+msgstr ""
+
+#: template-register-old.php:839
+msgid "The network currently allows site registrations."
+msgstr ""
+
+#: template-register-old.php:842
+msgid "The network currently allows user registrations."
+msgstr ""
+
+#: template-register-old.php:845
+msgid "The network currently allows both site and user registrations."
+msgstr ""
+
+#. translators: %s: network settings URL
+#: template-register-old.php:852
+#, php-format
+msgid "To change or disable registration go to your <a href=\"%s\">Options page</a>."
+msgstr ""
+
+#: template-register-old.php:860
+#, fuzzy
+#| msgid "All installations have been completed."
+msgid "Registration has been disabled."
+msgstr "การติดตั้งต่างๆ เสร็จเรียบร้อยแล้ว"
+
+#. translators: %s: login URL
+#: template-register-old.php:864
+#, php-format
+msgid "You must first <a href=\"%s\">log in</a>, and then you can create a new site."
+msgstr ""
+
+#: template-register-old.php:871
+msgid "User registration has been disabled."
+msgstr ""
+
+#: template-register-old.php:877
+msgid "Site registration has been disabled."
+msgstr ""
+
+#: template-register-old.php:897
+#, fuzzy
+#| msgid "No plugins are available to be installed at this time."
+msgid "Sorry, new registrations are not allowed at this time."
+msgstr "No plugins are available to be installed at this time."
+
+#: template-register-old.php:898
+msgid "You are logged in already. No need to register again!"
+msgstr ""
+
+#. translators: %s: site address
+#: template-register-old.php:906
+#, fuzzy, php-format
+#| msgid "The article you were looking for was not found, but maybe try looking again!"
+msgid "The site you were looking for, %s, does not exist, but you can create it now!"
+msgstr "ไม่พบข้อความที่คุณกำลังค้นหา โปรดลองค้นหาอีกครั้ง!"
+
+#. translators: %s: site address
+#: template-register-old.php:910
+#, php-format
+msgid "The site you were looking for, %s, does not exist."
+msgstr ""
+
+#: template-zume-3plan.php:43 template-zume-dashboard.php:522
+msgid "Three Month Plan"
+msgstr "แผนสามเดือน"
 
 #: template-zume-3plan.php:45
 msgid ""
@@ -2785,11 +2534,11 @@ msgstr "ลิงค์ไปยัง"
 msgid "Unlink Group"
 msgstr "เลิกลิงค์กลุ่ม"
 
-#: template-zume-3plan.php:164 template-zume-profile.php:148
+#: template-zume-3plan.php:164 template-zume-profile.php:241
 msgid "Oh snap!"
 msgstr "Oh snap!"
 
-#: template-zume-3plan.php:166 template-zume-profile.php:151
+#: template-zume-3plan.php:166 template-zume-profile.php:244
 msgid "Save"
 msgstr "บันทึก"
 
@@ -2931,7 +2680,7 @@ msgstr "ตัดต่อ"
 msgid "Meeting Time"
 msgstr "เวลาประชุม"
 
-#: template-zume-dashboard.php:132 template-zume-dashboard.php:652 template-zume-dashboard.php:790 template-zume-dashboard.php:949 template-zume-profile.php:105
+#: template-zume-dashboard.php:132 template-zume-dashboard.php:652 template-zume-dashboard.php:790 template-zume-dashboard.php:949 template-zume-profile.php:198
 msgid "Address"
 msgstr "ที่อยู่"
 
@@ -3175,7 +2924,7 @@ msgstr "เวลาประชุมที่ตกลงกันไว้แ
 msgid "example: Saturday 7PM"
 msgstr "ตัวอย่างเช่น: วันเสาร์ 1 ทุ่ม"
 
-#: template-zume-dashboard.php:664 template-zume-dashboard.php:802 template-zume-profile.php:118
+#: template-zume-dashboard.php:664 template-zume-dashboard.php:802 template-zume-profile.php:211
 msgid "Validate"
 msgstr "Validate"
 
@@ -3219,6 +2968,10 @@ msgid ""
 "they login to their dashboard they will see an invitation from you on the right side of the screen. Adding them to this group allows them to facilitate a training but they "
 "cannot change any details of the group. Note: they will not receive a system email from Zúme with this invitation, you will need to ask them to sign up."
 msgstr ""
+
+#: template-zume-dashboard.php:854
+msgid "Update"
+msgstr "อัพเดท"
 
 #: template-zume-dashboard.php:857
 msgid "Archive"
@@ -3522,18 +3275,48 @@ msgid ""
 "whenever they want. Then the group can use any messaging platform that they prefer (iMessage, WhatsApp, Facebook group, etc.) for further group communication."
 msgstr ""
 
-#: template-zume-login.php:43
+#: template-zume-login.php:91
+msgid "Your password reset link appears to be invalid. Please request a new link below."
+msgstr ""
+
+#: template-zume-login.php:93
+msgid "Your password reset link has expired. Please request a new link below."
+msgstr ""
+
+#: template-zume-login.php:129
+#, fuzzy
+#| msgid "User Address"
+msgid "Username or Email Address"
+msgstr "อีเมล์ผู้ใช้งาน"
+
+#: template-zume-login.php:140
+msgid "Get New Password"
+msgstr ""
+
+#: template-zume-login.php:197
+msgid "The passwords do not match."
+msgstr ""
+
+#: template-zume-login.php:298
+msgid "Reset Password"
+msgstr ""
+
+#: template-zume-login.php:392 template-zume-login.php:493
 msgid "Lost your password?"
 msgstr ""
 
-#: template-zume-logout.php:22
-#, fuzzy
-#| msgid "You have no active groups"
-msgid "You have been logged out."
-msgstr "คุณไม่มีกลุ่มที่กำลังฝึกฝนอยู่"
+#: template-zume-login.php:409
+msgid "Invalid request."
+msgstr ""
 
-#: template-zume-logout.php:24
-msgid "Back to home page"
+#: template-zume-login.php:418
+#, fuzzy
+#| msgid "Unable to find key:"
+msgid "Invalid key"
+msgstr "หารหัสไม่เจอ"
+
+#: template-zume-login.php:440
+msgid "User action confirmed."
 msgstr ""
 
 #: template-zume-overview.php:71 template-zume-overview.php:84
@@ -3728,33 +3511,47 @@ msgstr "กลุ่มเพื่อน - พี่เลี้ยง - นี
 msgid "PEER MENTORING GROUPS — Break into groups of two or three and work through the Peer Mentoring Group format. (60 minutes)"
 msgstr "กลุ่มเพื่อน - พี่เลี้ยง - แบ่งกลุ่มๆ ละสองถึงสามคนเพื่อทำรูปแบบกลุ่มเพื่อน - พี่เลี้ยงด้วยกัน (60 นาที)"
 
-#: template-zume-profile.php:22
+#: template-zume-profile.php:53
 msgid "Your Profile"
 msgstr "ข้อมูลส่วนตัวของคุณ"
 
-#: template-zume-profile.php:25
+#: template-zume-profile.php:58
 msgid "edit image @ gravatar.com"
 msgstr "แก้ไขภาพ @ gravatar.com"
 
-#: template-zume-profile.php:33
+#: template-zume-profile.php:91
 msgid "User Name"
 msgstr "ชื่อผู้ใช้งาน"
 
-#: template-zume-profile.php:36
+#: template-zume-profile.php:94
 msgid "(can not change)"
 msgstr "ไม่สามารถเปลี่ยนแปลงได้"
 
-#: template-zume-profile.php:41 template-zume-profile.php:45 template-zume-profile.php:46
+#: template-zume-profile.php:99 template-zume-profile.php:103 template-zume-profile.php:104
 msgid "First Name"
 msgstr "ชื่อ"
 
-#: template-zume-profile.php:56 template-zume-profile.php:60 template-zume-profile.php:61
+#: template-zume-profile.php:114 template-zume-profile.php:118 template-zume-profile.php:119
 msgid "Last Name"
 msgstr "นามสกุล"
 
-#: template-zume-profile.php:71
-msgid "Email"
-msgstr "อีเมล์"
+#: template-zume-profile.php:149
+msgid "Linked Facebook Account"
+msgstr ""
+
+#: template-zume-profile.php:156 template-zume-profile.php:172
+#, fuzzy
+#| msgid "Unlink Group"
+msgid "Unlink"
+msgstr "เลิกลิงค์กลุ่ม"
+
+#: template-zume-profile.php:165
+msgid "Linked Google Account"
+msgstr ""
+
+#: template-zume-profile.php:229
+msgid "Affiliation Key"
+msgstr "Affiliation Key"
 
 #: template-zume-progress.php:23
 msgid "Phase 1"
@@ -3775,268 +3572,6 @@ msgstr "บริจาคเพื่อการแปลซูเม่"
 #: template-zume-progress.php:74
 msgid "Phase 3"
 msgstr "ระยะที่ 3"
-
-#: template-zume-register.php:111
-#, fuzzy
-#| msgid "First Name"
-msgid "Site Name:"
-msgstr "ชื่อ"
-
-#: template-zume-register.php:112
-msgid "Site Domain:"
-msgstr ""
-
-#: template-zume-register.php:126
-msgid "sitename"
-msgstr ""
-
-#: template-zume-register.php:128
-msgid "domain"
-msgstr ""
-
-#. translators: %s: site address
-#: template-zume-register.php:132
-#, php-format
-msgid "Your address will be %s."
-msgstr ""
-
-#: template-zume-register.php:132
-msgid "Must be at least 4 characters, letters and numbers only. It cannot be changed, so choose carefully!"
-msgstr ""
-
-#: template-zume-register.php:137
-msgid "Site Title:"
-msgstr ""
-
-#: template-zume-register.php:151
-msgid "Site Language:"
-msgstr ""
-
-#: template-zume-register.php:178
-#, fuzzy
-#| msgid "Private"
-msgid "Privacy:"
-msgstr "Private"
-
-#: template-zume-register.php:179
-msgid "Allow search engines to index this site."
-msgstr ""
-
-#: template-zume-register.php:183
-msgid "Yes"
-msgstr ""
-
-#: template-zume-register.php:187
-#, fuzzy
-#| msgid "None"
-msgid "No"
-msgstr "ไม่มี"
-
-#: template-zume-register.php:234
-#, fuzzy
-#| msgid "User Name"
-msgid "Username:"
-msgstr "ชื่อผู้ใช้งาน"
-
-#: template-zume-register.php:239
-msgid "(Must be at least 4 characters, letters and numbers only.)"
-msgstr ""
-
-#: template-zume-register.php:242
-msgid "Email&nbsp;Address:"
-msgstr ""
-
-#: template-zume-register.php:246
-msgid "We send your registration email to this address. (Double-check your email address before continuing.)"
-msgstr ""
-
-#: template-zume-register.php:313
-#, php-format
-msgid "Get <em>another</em> %s site in seconds"
-msgstr ""
-
-#: template-zume-register.php:316
-msgid "There was a problem, please correct the form below and try again."
-msgstr ""
-
-#: template-zume-register.php:319
-#, php-format
-msgid ""
-"Welcome back, %s. By filling out the form below, you can <strong>add another site to your account</strong>. There is no limit to the number of sites you can have, so create to "
-"your heart&#8217;s content, but write responsibly!"
-msgstr ""
-
-#: template-zume-register.php:325
-msgid "Sites you are already a member of:"
-msgstr ""
-
-#: template-zume-register.php:334
-msgid "If you&#8217;re not going to use a great site domain, leave it for a new user. Now have at it!"
-msgstr ""
-
-#: template-zume-register.php:349
-#, fuzzy
-#| msgid "Current Site"
-msgid "Create Site"
-msgstr "หน้าปัจจุบัน"
-
-#. translators: %s: site name
-#: template-zume-register.php:474
-#, php-format
-msgid "The site %s is yours."
-msgstr ""
-
-#. translators: 1: link to new site, 2: login URL, 3: username
-#: template-zume-register.php:479
-#, php-format
-msgid "%1$s is your new site. <a href=\"%2$s\">Log in</a> as &#8220;%3$s&#8221; using your existing password."
-msgstr ""
-
-#. translators: %s: name of the network
-#: template-zume-register.php:544
-#, php-format
-msgid "Get your own %s account in seconds"
-msgstr ""
-
-#: template-zume-register.php:561
-msgid "Gimme a site!"
-msgstr ""
-
-#: template-zume-register.php:564
-msgid "Just a username, please."
-msgstr ""
-
-#. translators: %s: username
-#: template-zume-register.php:614
-#, php-format
-msgid "%s is your new username"
-msgstr ""
-
-#: template-zume-register.php:615
-msgid "But, before you can start using your new username, <strong>you must activate it</strong>."
-msgstr ""
-
-#. translators: %s: email address
-#: template-zume-register.php:617 template-zume-register.php:764
-#, php-format
-msgid "Check your inbox at %s and click the link given."
-msgstr ""
-
-#: template-zume-register.php:618
-msgid "If you do not activate your username within two days, you will have to sign up again."
-msgstr ""
-
-#: template-zume-register.php:684
-#, fuzzy
-#| msgid "Sign up"
-msgid "Signup"
-msgstr "ลงทะเบียน"
-
-#. translators: %s: site address
-#: template-zume-register.php:760
-#, fuzzy, php-format
-#| msgid "Congratulations! You've completed Session 1."
-msgid "Congratulations! Your new site, %s, is almost ready."
-msgstr "ขอแสดงความยินดีด้วยครับ! คุณทำบทเรียนที่ 1 เสร็จเรียบร้อยแล้ว"
-
-#: template-zume-register.php:762
-msgid "But, before you can start using your site, <strong>you must activate it</strong>."
-msgstr ""
-
-#: template-zume-register.php:765
-msgid "If you do not activate your site within two days, you will have to sign up again."
-msgstr ""
-
-#: template-zume-register.php:766
-msgid "Still waiting for your email?"
-msgstr ""
-
-#: template-zume-register.php:768
-msgid "If you haven&#8217;t received your email yet, there are a number of things you can do:"
-msgstr ""
-
-#: template-zume-register.php:770
-msgid "Wait a little longer. Sometimes delivery of email can be delayed by processes outside of our control."
-msgstr ""
-
-#: template-zume-register.php:771
-msgid "Check the junk or spam folder of your email client. Sometime emails wind up there by mistake."
-msgstr ""
-
-#. translators: %s: email address
-#: template-zume-register.php:774
-#, php-format
-msgid "Have you entered your email correctly? You have entered %s, if it&#8217;s incorrect, you will not receive your email."
-msgstr ""
-
-#: template-zume-register.php:831
-msgid "Greetings Network Administrator!"
-msgstr ""
-
-#: template-zume-register.php:836
-msgid "The network currently disallows registrations."
-msgstr ""
-
-#: template-zume-register.php:839
-msgid "The network currently allows site registrations."
-msgstr ""
-
-#: template-zume-register.php:842
-msgid "The network currently allows user registrations."
-msgstr ""
-
-#: template-zume-register.php:845
-msgid "The network currently allows both site and user registrations."
-msgstr ""
-
-#. translators: %s: network settings URL
-#: template-zume-register.php:852
-#, php-format
-msgid "To change or disable registration go to your <a href=\"%s\">Options page</a>."
-msgstr ""
-
-#: template-zume-register.php:860
-#, fuzzy
-#| msgid "All installations have been completed."
-msgid "Registration has been disabled."
-msgstr "การติดตั้งต่างๆ เสร็จเรียบร้อยแล้ว"
-
-#. translators: %s: login URL
-#: template-zume-register.php:864
-#, php-format
-msgid "You must first <a href=\"%s\">log in</a>, and then you can create a new site."
-msgstr ""
-
-#: template-zume-register.php:871
-msgid "User registration has been disabled."
-msgstr ""
-
-#: template-zume-register.php:877
-msgid "Site registration has been disabled."
-msgstr ""
-
-#: template-zume-register.php:897
-#, fuzzy
-#| msgid "No plugins are available to be installed at this time."
-msgid "Sorry, new registrations are not allowed at this time."
-msgstr "No plugins are available to be installed at this time."
-
-#: template-zume-register.php:898
-msgid "You are logged in already. No need to register again!"
-msgstr ""
-
-#. translators: %s: site address
-#: template-zume-register.php:906
-#, fuzzy, php-format
-#| msgid "The article you were looking for was not found, but maybe try looking again!"
-msgid "The site you were looking for, %s, does not exist, but you can create it now!"
-msgstr "ไม่พบข้อความที่คุณกำลังค้นหา โปรดลองค้นหาอีกครั้ง!"
-
-#. translators: %s: site address
-#: template-zume-register.php:910
-#, php-format
-msgid "The site you were looking for, %s, does not exist."
-msgstr ""
 
 #: template-zume-resources.php:20
 msgid "RESOURCES"
@@ -4105,12 +3640,6 @@ msgstr "คำถามที่พบบ่อยกับซูเม่"
 #. Template Name of the plugin/theme
 #, fuzzy
 #| msgid "About"
-msgid "Zume Logout"
-msgstr "เกี่ยวกัน"
-
-#. Template Name of the plugin/theme
-#, fuzzy
-#| msgid "About"
 msgid "Zume About"
 msgstr "เกี่ยวกัน"
 
@@ -4140,31 +3669,15 @@ msgstr "ข้อมูลส่วนตัวของคุณ"
 
 #. Template Name of the plugin/theme
 #, fuzzy
-#| msgid "Register"
-msgid "Zume Register"
-msgstr "ลงทะเบียน"
-
-#. Template Name of the plugin/theme
-#, fuzzy
 #| msgid "Overview"
 msgid "Zúme Overview"
 msgstr "ภาพรวม"
 
 #. Template Name of the plugin/theme
 #, fuzzy
-#| msgid "Three Month Plan"
-msgid "Three-Month Plan"
-msgstr "แผนสามเดือน"
-
-#. Template Name of the plugin/theme
-#, fuzzy
 #| msgid "Zúme FAQs"
 msgid "Zúme FAQ"
 msgstr "คำถามที่พบบ่อยกับซูเม่"
-
-#. Template Name of the plugin/theme
-msgid "Zume Forgot Password"
-msgstr ""
 
 #. Template Name of the plugin/theme
 #, fuzzy
@@ -4181,6 +3694,423 @@ msgstr ""
 #| msgid "How Zúme Works"
 msgid "Zúme Course"
 msgstr "ซูเม่ทำงานอย่างไร"
+
+#~ msgid "Roles"
+#~ msgstr "ตำแหน่ง"
+
+#~ msgid "User Roles"
+#~ msgstr "ตำแหน่งของผู้ใช้งาน"
+
+#~ msgid "OK"
+#~ msgstr "ตกลง"
+
+#~ msgid "Grant %s capability"
+#~ msgstr "Grant %s capability"
+
+#~ msgid "Deny %s capability"
+#~ msgstr "Deny %s capability"
+
+#~ msgid "Are you sure you want to delete this role? This is a permanent action and cannot be undone."
+#~ msgstr "คุณแน่ใจที่จะลบตำแหน่งนี้ออกไปหรือไม่? เพราะนี่จะเป็นการลบที่มีผลถาวรและไม่สามารถแก้ไขอีกได้"
+
+#~ msgid "None"
+#~ msgstr "ไม่มี"
+
+#~ msgid "Install Required Plugins"
+#~ msgstr "การติดตั้งต้องมีปลั๊กอิน"
+
+#~ msgid "Install Plugins"
+#~ msgstr "ติดตั้งปลั๊กอิน"
+
+#~ msgid "Installing Plugin: %s"
+#~ msgstr "กำลังติดตั้งปลั๊กอิน: %s"
+
+#~ msgid "Updating Plugin: %s"
+#~ msgstr "อัพเดทปลั๊กอิน: %s"
+
+#~ msgid "This theme requires the following plugin: %1$s."
+#~ msgid_plural "This theme requires the following plugins: %1$s."
+#~ msgstr[0] "Theme นี้ต้องใช้ปลั๊กอินต่อไปนี้ : %1$s"
+
+#~ msgid "This theme recommends the following plugin: %1$s."
+#~ msgid_plural "This theme recommends the following plugins: %1$s."
+#~ msgstr[0] "Theme นี้แนะนำให้ใช้ปลั๊กอินต่อไปนี้: %1$s."
+
+#~ msgid "The following plugin needs to be updated to its latest version to ensure maximum compatibility with this theme: %1$s."
+#~ msgid_plural "The following plugins need to be updated to their latest version to ensure maximum compatibility with this theme: %1$s."
+#~ msgstr[0] "ปลั๊กอินอันต่อไปนี้ต้องอัพเดพใช้เวอร์ชั่นล่าสุดเพื่อการทำงานที่เหมาะสมที่สุดสำหรับ Theme นี้: %1$s"
+
+#~ msgid "There is an update available for: %1$s."
+#~ msgid_plural "There are updates available for the following plugins: %1$s."
+#~ msgstr[0] "นี่คือการอัพเดทที่มีอยู่สำหรับ: %1$s"
+
+#~ msgid "The following required plugin is currently inactive: %1$s."
+#~ msgid_plural "The following required plugins are currently inactive: %1$s."
+#~ msgstr[0] "ปลั๊กอินต่างๆ ที่ต้องมีดังต่อไปนี้ ในตอนนี้ไม่แอคทีฟ: %1$s"
+
+#~ msgid "The following recommended plugin is currently inactive: %1$s."
+#~ msgid_plural "The following recommended plugins are currently inactive: %1$s."
+#~ msgstr[0] "ปลั๊กอินต่างๆ ที่แนะนำดังต่อไปนี้ ในตอนนี้ไม่แอคทีฟ:: %1$s"
+
+#~ msgid "Begin installing plugin"
+#~ msgid_plural "Begin installing plugins"
+#~ msgstr[0] "เริ่มติดตั้งปลั๊กอิน"
+
+#~ msgid "Begin updating plugin"
+#~ msgid_plural "Begin updating plugins"
+#~ msgstr[0] "เริ่มอัพเดทปลั๊กอิน"
+
+#~ msgid "Begin activating plugin"
+#~ msgid_plural "Begin activating plugins"
+#~ msgstr[0] "เริ่มแอคติเวทปลั๊กอิน"
+
+#~ msgid "Return to Required Plugins Installer"
+#~ msgstr "กลับไปยัง Required Plugins Installer"
+
+#~ msgid "Return to the Dashboard"
+#~ msgstr "กลับไปยัง Dashboard"
+
+#~ msgid "Plugin activated successfully."
+#~ msgstr "ปลั๊กอิน activate สำเร็จแล้ว"
+
+#~ msgid "The following plugin was activated successfully:"
+#~ msgid_plural "The following plugins were activated successfully:"
+#~ msgstr[0] "ปลั๊กอินต่อไปนี้ activate สำเร็จแล้ว"
+
+#~ msgid "No action taken. Plugin %1$s was already active."
+#~ msgstr "ไม่มีการรับคำสั่งใด ปลั๊กอิน%1$s ทำงานแล้ว"
+
+#~ msgid "Plugin not activated. A higher version of %s is needed for this theme. Please update the plugin."
+#~ msgstr "ปลั๊กอินยังไม่ถูก activate สำหรับ Theme นี้ต้องใช้เวอร์ชั่นของ %s ที่สูงกว่า โปรดอัพเดทปลั๊กอิน"
+
+#~ msgid "All plugins installed and activated successfully. %1$s"
+#~ msgstr "ปลั๊กอินทั้งหมดถูก activate แล้วและ activate สำเร็จแล้ว %1$s"
+
+#~ msgid "Dismiss this notice"
+#~ msgstr "ทิ้งข้อความนี้ได้"
+
+#~ msgid "There are one or more required or recommended plugins to install, update or activate."
+#~ msgstr "ยังต้องติดตั้งหรือ activate ปลั๊กอินอันหนึ่งหรือมากกว่านั้นหรือปลั๊กอินที่แนะนำไว้"
+
+#~ msgid "Please contact the administrator of this site for help."
+#~ msgstr "โปรดติดต่อเจ้าหน้าที่เว๊ปไซต์นี้เพื่อขอความช่วยเหลือ"
+
+#~ msgid "This plugin needs to be updated to be compatible with your theme."
+#~ msgstr "ปลั๊กอินนี้ต้องได้รับการอัพเดทเพื่อให้สามารถใช้งานได้กับ Theme ของคุณ"
+
+#~ msgid "Update Required"
+#~ msgstr "ต้องอัพเดท"
+
+#~ msgid "Set the parent_slug config variable instead."
+#~ msgstr "โปรดตั้ง parent_slug config variable แทน"
+
+#~ msgid "The remote plugin package does not contain a folder with the desired slug and renaming did not work."
+#~ msgstr "The remote plugin package does not contain a folder with the desired slug and renaming did not work."
+
+#~ msgid "Please contact the plugin provider and ask them to package their plugin according to the WordPress guidelines."
+#~ msgstr "โปรดติดต่อผู้ให้บริการปลั๊กอินและของให้พวกเขา package ปลั๊กอินตามคำแนะนำของ WordPress"
+
+#~ msgid "The remote plugin package consists of more than one file, but the files are not packaged in a folder."
+#~ msgstr "The remote plugin package consists of more than one file, but the files are not packaged in a folder."
+
+#~ msgctxt "plugin A *and* plugin B"
+#~ msgid "and"
+#~ msgstr "and"
+
+#~ msgid "TGMPA v%s"
+#~ msgstr "TGMPA v%s"
+
+#~ msgid "Recommended"
+#~ msgstr "แนะนำ"
+
+#~ msgid "WordPress Repository"
+#~ msgstr "ที่เก็บ WordPress"
+
+#~ msgid "External Source"
+#~ msgstr "External Source"
+
+#~ msgid "Pre-Packaged"
+#~ msgstr "Pre-Packaged"
+
+#~ msgid "Not Installed"
+#~ msgstr "ไม่ได้ถูกติดตั้ง"
+
+#~ msgid "Installed But Not Activated"
+#~ msgstr "ติดตั้งแล้วแต่ยังไม่ถูก activate"
+
+#~ msgid "Active"
+#~ msgstr "แอคทีพ"
+
+#~ msgid "Required Update not Available"
+#~ msgstr "ยังไม่มีการอัพเดทที่ต้องการ"
+
+#~ msgid "Requires Update"
+#~ msgstr "ต้องอัพเดท"
+
+#~ msgid "Update recommended"
+#~ msgstr "แนะนำให้อัพเดท"
+
+#~ msgctxt "Install/Update Status"
+#~ msgid "%1$s, %2$s"
+#~ msgstr "%1$s, %2$s"
+
+#~ msgctxt "plugins"
+#~ msgid "All <span class=\"count\">(%s)</span>"
+#~ msgid_plural "All <span class=\"count\">(%s)</span>"
+#~ msgstr[0] "All <span class=\"count\">(%s)</span>"
+
+#~ msgid "To Install <span class=\"count\">(%s)</span>"
+#~ msgid_plural "To Install <span class=\"count\">(%s)</span>"
+#~ msgstr[0] "To Install <span class=\"count\">(%s)</span>"
+
+#~ msgid "Update Available <span class=\"count\">(%s)</span>"
+#~ msgid_plural "Update Available <span class=\"count\">(%s)</span>"
+#~ msgstr[0] "Update Available <span class=\"count\">(%s)</span>"
+
+#~ msgid "To Activate <span class=\"count\">(%s)</span>"
+#~ msgid_plural "To Activate <span class=\"count\">(%s)</span>"
+#~ msgstr[0] "To Activate <span class=\"count\">(%s)</span>"
+
+#~ msgctxt "as in: \"version nr unknown\""
+#~ msgid "unknown"
+#~ msgstr "unknown"
+
+#~ msgid "Installed version:"
+#~ msgstr "เวอร์ชั่นที่ติดตั้ง"
+
+#~ msgid "Minimum required version:"
+#~ msgstr "ต้องมีเวอร์ชั่นอย่างน้อย:"
+
+#~ msgid "Available version:"
+#~ msgstr "เวอร์ชั่นที่มีอยู่:"
+
+#~ msgid "No plugins to install, update or activate."
+#~ msgstr "ไม่มีปลั๊กอินให้ติดตั้ง หรืออัพเดทหรือ activate"
+
+#~ msgid "Plugin"
+#~ msgstr "ปลั๊กอิน"
+
+#~ msgid "Source"
+#~ msgstr "แหล่งข้อมูล"
+
+#~ msgid "Type"
+#~ msgstr "ประเภท"
+
+#~ msgid "Version"
+#~ msgstr "เวอร์ชั่น"
+
+#~ msgid "Status"
+#~ msgstr "สถานะ"
+
+#~ msgid "Install %2$s"
+#~ msgstr "ติดตั้ง %2$s"
+
+#~ msgid "Update %2$s"
+#~ msgstr "อัพเดท %2$s"
+
+#~ msgid "Activate %2$s"
+#~ msgstr "แอคติเวท %2$s"
+
+#~ msgid "Upgrade message from the plugin author:"
+#~ msgstr "ข้อความอัพเกรดจากผู้เขียนปลั๊กอิน"
+
+#~ msgid "Install"
+#~ msgstr "ติดตั้ง"
+
+#~ msgid "Activate"
+#~ msgstr "แอคติเวท"
+
+#~ msgid "No plugins were selected to be installed. No action taken."
+#~ msgstr "No plugins were selected to be installed. No action taken."
+
+#~ msgid "No plugins were selected to be updated. No action taken."
+#~ msgstr "No plugins were selected to be updated. No action taken."
+
+#~ msgid "No plugins are available to be installed at this time."
+#~ msgstr "No plugins are available to be installed at this time."
+
+#~ msgid "No plugins are available to be updated at this time."
+#~ msgstr "No plugins are available to be updated at this time."
+
+#~ msgid "No plugins were selected to be activated. No action taken."
+#~ msgstr "No plugins were selected to be activated. No action taken."
+
+#~ msgid "No plugins are available to be activated at this time."
+#~ msgstr "No plugins are available to be activated at this time."
+
+#~ msgid "Plugin activation failed."
+#~ msgstr "Plugin activation failed."
+
+#~ msgid "Updating Plugin %1$s (%2$d/%3$d)"
+#~ msgstr "กำลังอัพเดทปลั๊กอิน %1$s (%2$d/%3$d)"
+
+#~ msgid "An error occurred while installing %1$s: <strong>%2$s</strong>."
+#~ msgstr "มีความผิดพลาดเกิดขึ้นขณะติดตั้ง %1$s: <strong>%2$s</strong>."
+
+#~ msgid "The installation of %1$s failed."
+#~ msgstr "การติดตั้งของ %1$s ล้มเหลว"
+
+#~ msgid "The installation and activation process is starting. This process may take a while on some hosts, so please be patient."
+#~ msgstr "กระบวนการติดตั้งและการ activate กำลังเริ่มต้นขึ้นแล้ว กระบวนการนี้อาจใช้เวลานานกับบาง host โปรดรอ"
+
+#~ msgid "%1$s done."
+#~ msgstr "เสร็จแล้ว %1$s"
+
+#~ msgid "All installations and activations have been completed."
+#~ msgstr "การติดตั้งและการ activate ทั้งหมดเสร็จสิ้นแล้ว"
+
+#~ msgid "Installing and Activating Plugin %1$s (%2$d/%3$d)"
+#~ msgstr "กำลังติดตั้งและ activate %1$s (%2$d/%3$d)"
+
+#~ msgid "The installation process is starting. This process may take a while on some hosts, so please be patient."
+#~ msgstr "กระบวนการติดตั้งกำลังเริ่มต้นขึ้นแล้ว กระบวนการนี้อาจใช้เวลานานกับบาง host โปรดรอ"
+
+#~ msgid "All installations have been completed."
+#~ msgstr "การติดตั้งต่างๆ เสร็จเรียบร้อยแล้ว"
+
+#~ msgid "Installing Plugin %1$s (%2$d/%3$d)"
+#~ msgstr "กำลังติดตั้.ปลั๊กอิน %1$s (%2$d/%3$d)"
+
+#~ msgid "You do not have sufficient permissions to access this page."
+#~ msgstr "คุณไม่ได้รับอนุญาติให้เข้าในหน้านี้"
+
+#~ msgid "DISCIPLE TOOLS - INTEGRATION"
+#~ msgstr "เครื่องมือการสร้างสาวก - ความซื่อสัตย์"
+
+#~ msgid "Google Keys"
+#~ msgstr "Google Keys"
+
+#~ msgid "Set Default Transfer Site"
+#~ msgstr "Set Default Transfer Site"
+
+#~ msgid "All"
+#~ msgstr "ทั้งหมด"
+
+#~ msgid "New"
+#~ msgstr "ใหม่"
+
+#~ msgid "View"
+#~ msgstr "ดู"
+
+#~ msgid "Search"
+#~ msgstr "ค้นหา"
+
+#~ msgid "Status:"
+#~ msgstr "สถานะ:"
+
+#~ msgid "Checking Status"
+#~ msgstr "กำลังตรวจสอบสถานะ"
+
+#~ msgid "Linked"
+#~ msgstr "ลิงค์ไปยัง"
+
+#~ msgid "Consider Checking:"
+#~ msgstr "Consider Checking:"
+
+#~ msgid "Check if the target site is setup with identical configuration information."
+#~ msgstr "Check if the target site is setup with identical configuration information."
+
+#~ msgid "Check if HTTPS/SSL is enabled on both sites. Due to the transfer of data between these sites, SSL encryption is required for both sites to protect the data exchange."
+#~ msgstr "Check if HTTPS/SSL is enabled on both sites. Due to the transfer of data between these sites, SSL encryption is required for both sites to protect the data exchange."
+
+#~ msgid "Check if the server timestamps are identical. Mismatched server times will cause decryption key failures. Your server timestamp"
+#~ msgstr "Check if the server timestamps are identical. Mismatched server times will cause decryption key failures. Your server timestamp"
+
+#~ msgid "Current Site"
+#~ msgstr "หน้าปัจจุบัน"
+
+#~ msgid "Timestamp"
+#~ msgstr "Timestamp"
+
+#~ msgid "Compare this number to linked site. It should be identical."
+#~ msgstr "เปรียบเทียบตัวเลขที่กับหน้าที่ถูกลิงค์ ควรเป็นตัวเลขเดียวกัน"
+
+#~ msgid "Not Linked"
+#~ msgstr "ไม่ได้ถูกลิงค์"
+
+#~ msgid "Visibility"
+#~ msgstr "Visibility"
+
+#~ msgid "Public (Default)"
+#~ msgstr "Public (Default)"
+
+#~ msgid "Private"
+#~ msgstr "Private"
+
+#~ msgid "Title 1"
+#~ msgstr "หัวเรื่อง 1"
+
+#~ msgid "Message1"
+#~ msgstr "ข้อความ1"
+
+#~ msgid "Title 2"
+#~ msgstr "หัวเรื่อง 2"
+
+#~ msgid "Message2"
+#~ msgstr "ข้อความ2"
+
+#~ msgid "Title 3"
+#~ msgstr "หัวเรื่อง 3"
+
+#~ msgid "Message3"
+#~ msgstr "ข้อความ3"
+
+#~ msgid "Title 4"
+#~ msgstr "หัวเรื่อง 4"
+
+#~ msgid "Message4"
+#~ msgstr "ข้อความ4"
+
+#~ msgid "Title 5"
+#~ msgstr "หัวเรื่อง 5"
+
+#~ msgid "Message5"
+#~ msgstr "ข้อความ5"
+
+#~ msgid "Title 6"
+#~ msgstr "หัวเรื่อง 6"
+
+#~ msgid "Message6"
+#~ msgstr "ข้อความ6"
+
+#~ msgid "Title 7"
+#~ msgstr "หัวเรื่อง 7"
+
+#~ msgid "Message7"
+#~ msgstr "ข้อความ7"
+
+#~ msgid "Title 8"
+#~ msgstr "หัวเรื่อง 8"
+
+#~ msgid "Message8"
+#~ msgstr "ข้อความ8"
+
+#~ msgid "Title 9"
+#~ msgstr "หัวเรื่อง 9"
+
+#~ msgid "Message9"
+#~ msgstr "ข้อความ9"
+
+#~ msgid "Title 10"
+#~ msgstr "หัวเรื่อง 10"
+
+#~ msgid "Message10"
+#~ msgstr "ข้อความ10"
+
+#, fuzzy
+#~| msgid "You have no active groups"
+#~ msgid "You have been logged out."
+#~ msgstr "คุณไม่มีกลุ่มที่กำลังฝึกฝนอยู่"
+
+#, fuzzy
+#~| msgid "About"
+#~ msgid "Zume Logout"
+#~ msgstr "เกี่ยวกัน"
+
+#, fuzzy
+#~| msgid "Register"
+#~ msgid "Zume Register"
+#~ msgstr "ลงทะเบียน"
 
 #~ msgid "Chasm Solutions"
 #~ msgstr "Chasm Solutions"

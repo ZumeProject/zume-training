@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Zúme Project\n"
-"POT-Creation-Date: 2018-11-07 12:57-0700\n"
-"PO-Revision-Date: 2018-11-07 13:15-0700\n"
+"POT-Creation-Date: 2018-11-26 12:26-0700\n"
+"PO-Revision-Date: 2018-11-26 12:28-0700\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: hi\n"
@@ -80,7 +80,7 @@ msgstr "प्रशिक्षण की मेज़बानी करें
 msgid "Get Started"
 msgstr "आरंभ करें"
 
-#: front-page.php:194
+#: front-page.php:196
 msgid "Find out more about Zúme"
 msgstr "Zúme के बारे में अधिक जानकारी प्राप्त करें"
 
@@ -105,7 +105,7 @@ msgstr "वर्तमान चरण:"
 msgid "Finish"
 msgstr "समाप्त"
 
-#: functions/enqueue-scripts.php:59 functions/utilities/menu.php:108 template-zume-register.php:568
+#: functions/enqueue-scripts.php:59 functions/utilities/menu.php:108 template-register-old.php:568
 msgid "Next"
 msgstr "अगला"
 
@@ -133,78 +133,190 @@ msgstr "यह विषय बदलने में विफल ।"
 msgid "Three Month Plan - Zúme Project"
 msgstr "तीन माह की योजना-Zúme परियोजना"
 
-#: functions/login/registration.php:98
+#: functions/login/zume-login.php:207 functions/login/zume-login.php:435
+msgid "No user found."
+msgstr ""
+
+#: functions/login/zume-login.php:278 functions/login/zume-login.php:400
+msgid "You are missing your sign-in token. Try signing in again."
+msgstr ""
+
+#: functions/login/zume-login.php:289 functions/login/zume-login.php:410
+#, fuzzy
+#| msgid "Failed to connect with the URL provided."
+msgid "Failed to connect with Facebook. Try again."
+msgstr "मुहैया किए गए URL के साथ कनेक्ट होने में विफल ।"
+
+#: functions/login/zume-login.php:308 functions/login/zume-login.php:426
+msgid "Facebook user lookup error. Sorry for the inconvenience."
+msgstr ""
+
+#: functions/login/zume-login.php:311 functions/login/zume-login.php:429
+msgid "Error with looking up user with Facebook. Sorry for the inconvenience."
+msgstr ""
+
+#: functions/login/zume-login.php:531
+msgid "There are some errors in your form."
+msgstr ""
+
+#: functions/login/zume-login.php:536 template-zume-profile.php:129
+msgid "Email"
+msgstr "ईमेल"
+
+#: functions/login/zume-login.php:540 template-zume-login.php:265
+#, fuzzy
+#| msgid "Required"
+msgid "Password Required"
+msgstr "आवश्यक"
+
+#: functions/login/zume-login.php:543 template-zume-login.php:268
+msgid "Password required"
+msgstr ""
+
+#: functions/login/zume-login.php:550 template-zume-login.php:275
+msgid "Re-enter Password"
+msgstr ""
+
+#: functions/login/zume-login.php:553 template-zume-login.php:278
+msgid "Passwords do not match. Please, try again."
+msgstr ""
+
+#: functions/login/zume-login.php:562 functions/zume-polylang-integration.php:143
+#: template-zume-login.php:491
+msgid "Register"
+msgstr "पंजीकरण"
+
+#: functions/login/zume-login.php:619
+msgid "Missing captcha response. How did you do that?"
+msgstr ""
+
+#: functions/login/zume-login.php:632
+msgid "Captcha failure. Try again, if you are human."
+msgstr ""
+
+#: functions/login/zume-login.php:638
+msgid "Missing email or password."
+msgstr ""
+
+#: functions/login/zume-login.php:657
+#, php-format
+msgid "Sorry. This email is already registered. %s Go to Login %s"
+msgstr ""
+
+#: functions/login/zume-login.php:668
+#, fuzzy
+#| msgid "Something went wrong with the plugin API."
+msgid "Something went wrong. Sorry. Could you try again?"
+msgstr "प्लग-इन एपीआई के साथ कुछ गलत हुआ है ।"
+
+#: functions/login/zume-login.php:690
+msgid "No new user found."
+msgstr ""
+
+#: functions/login/zume-login.php:700
+msgid "Register with Google"
+msgstr ""
+
+#: functions/login/zume-login.php:702
+msgid "Sign in with Google"
+msgstr ""
+
+#: functions/login/zume-login.php:736
+msgid "Failed to authenticate your Google account. Try again."
+msgstr ""
+
+#: functions/login/zume-login.php:747
+msgid "Link with Google"
+msgstr ""
+
+#: functions/login/zume-login.php:862
+msgid "Link Facebook"
+msgstr ""
+
+#: functions/login/zume-login.php:938
+msgid "Failed to authenticate your Facebook account. Try again."
+msgstr ""
+
+#: functions/login/zume-login.php:964
+msgid "Login Facebook"
+msgstr ""
+
+#: functions/login/zume-login.php:1089
+msgid "<strong>ERROR</strong>: Enter a username or email address."
+msgstr ""
+
+#: functions/login/zume-login.php:1093
+msgid "<strong>ERROR</strong>: There is no user registered with that email address."
+msgstr ""
+
+#: functions/login/zume-login.php:1114
+msgid "<strong>ERROR</strong>: Invalid username or email."
+msgstr ""
+
+#: functions/login/zume-login.php:1137
+msgid "Someone has requested a password reset for the following account:"
+msgstr ""
+
+#. translators: %s: site name
+#: functions/login/zume-login.php:1139
+#, fuzzy, php-format
+#| msgid "Site Name:"
+msgid "Site Name: %s"
+msgstr "साइट का नाम:"
+
+#. translators: %s: user login
+#: functions/login/zume-login.php:1141
+#, fuzzy, php-format
+#| msgid "Username:"
+msgid "Username: %s"
+msgstr "उपयोगकर्ता:"
+
+#: functions/login/zume-login.php:1142
+msgid "If this was a mistake, just ignore this email and nothing will happen."
+msgstr ""
+
+#: functions/login/zume-login.php:1143
+msgid "To reset your password, visit the following address:"
+msgstr ""
+
+#. translators: Password reset email subject. %s: Site name
+#: functions/login/zume-login.php:1147
+#, php-format
+msgid "[%s] Password Reset"
+msgstr ""
+
+#: functions/login/zume-login.php:1177
+msgid "The email could not be sent."
+msgstr ""
+
+#: functions/login/zume-login.php:1177
+msgid "Possible reason: your host may have disabled the mail() function."
+msgstr ""
+
+#: functions/login/zume-register.php:141
 msgid "First Name (optional for coaching)"
 msgstr "प्रथम नाम (कोचिंग के लिए वैकल्पिक)"
 
-#: functions/login/registration.php:102
+#: functions/login/zume-register.php:145
 msgid "Last Name (optional for coaching)"
 msgstr "अंतिम नाम (कोचिंग के लिए वैकल्पिक)"
 
-#: functions/login/registration.php:106
+#: functions/login/zume-register.php:149
 msgid "Phone Number (optional for coaching)"
 msgstr "फोन नंबर (कोचिंग के लिए वैकल्पिक)"
 
-#: functions/login/registration.php:110
+#: functions/login/zume-register.php:153
 msgid "Address (optional for coaching)"
 msgstr "पता (कोचिंग के लिए वैकल्पिक)"
 
-#: functions/login/registration.php:121
+#: functions/login/zume-register.php:164
 msgid "Affiliation Key (optional)"
 msgstr "संबद्धता कुंजी (वैकल्पिक)"
 
-#: functions/login/registration.php:145
+#: functions/login/zume-register.php:188
 msgid ""
 "<strong>ERROR</strong>: We can not recognize this address as valid location. Please, check spelling."
 msgstr "<strong>ERROR</strong>: हम इस पते के वैध स्थान को नहीं पहचान पा रहे। कृपया शब्दों की जांच करें ।"
-
-#: functions/login/registration.php:260 template-zume-profile.php:89
-msgid "Phone Number"
-msgstr "फ़ोन नंबर"
-
-#: functions/login/registration.php:261
-msgid "User Address"
-msgstr "यूजर एड्रेस"
-
-#: functions/login/registration.php:262
-msgid "GeoCoded IP"
-msgstr "GeoCoded आईपी"
-
-#: functions/multi-role/class-user-edit.php:84 functions/multi-role/functions-admin.php:145
-msgid "Roles"
-msgstr "भूमिकाएं"
-
-#: functions/multi-role/class-user-edit.php:89
-msgid "User Roles"
-msgstr "उपयोगकर्ता की भूमिकाएं"
-
-#: functions/multi-role/functions-admin.php:38 functions/post-types/pdf-download-post-type.php:136
-#: functions/post-types/video-post-type.php:136 functions/zume-dt-integration/site-link-post-type.php:376
-#: functions/zume-dt-integration/site-link-post-type.php:377
-msgid "Edit"
-msgstr "एडिट करें"
-
-#: functions/multi-role/functions-admin.php:39
-msgid "OK"
-msgstr "ठीक है"
-
-#: functions/multi-role/functions-admin.php:40
-#, php-format
-msgid "Grant %s capability"
-msgstr "मंजूर %s क्षमता"
-
-#: functions/multi-role/functions-admin.php:41
-#, php-format
-msgid "Deny %s capability"
-msgstr "अस्वीकार %s क्षमता"
-
-#: functions/multi-role/functions-admin.php:42
-msgid "Are you sure you want to delete this role? This is a permanent action and cannot be undone."
-msgstr "क्या आप वाकई इस भूमिका को हटाना चाहते हैं? यह एक स्थाई क्रिया है और पूर्ववत नहीं की जा सकती ।"
-
-#: functions/multi-role/functions-admin.php:174
-msgid "None"
-msgstr "इनमें से कोई नहीं"
 
 #: functions/post-types/pdf-download-post-type.php:131 functions/post-types/pdf-download-post-type.php:132
 msgid "Zume Download"
@@ -215,14 +327,16 @@ msgid "All Zume Downloads"
 msgstr "सभी Zume डाउनलोड"
 
 #: functions/post-types/pdf-download-post-type.php:134 functions/post-types/video-post-type.php:134
-#: functions/zume-dt-integration/site-link-post-type.php:374
-#: functions/zume-dt-integration/site-link-post-type.php:375
 msgid "Add New"
 msgstr "नया जोड़ें"
 
 #: functions/post-types/pdf-download-post-type.php:135
 msgid "Add New Zume Download"
 msgstr "नया Zume डाउनलोड जोड़ें"
+
+#: functions/post-types/pdf-download-post-type.php:136 functions/post-types/video-post-type.php:136
+msgid "Edit"
+msgstr "एडिट करें"
 
 #: functions/post-types/pdf-download-post-type.php:137
 msgid "Edit Zume Download"
@@ -241,12 +355,10 @@ msgid "Search Zume Downloads"
 msgstr "खोजें Zume डाउनलोड"
 
 #: functions/post-types/pdf-download-post-type.php:141 functions/post-types/video-post-type.php:141
-#: functions/zume-dt-integration/site-link-post-type.php:381
 msgid "Nothing found in the Database."
 msgstr "डेटाबेस में कुछ भी नहीं मिला ।"
 
 #: functions/post-types/pdf-download-post-type.php:142 functions/post-types/video-post-type.php:142
-#: functions/zume-dt-integration/site-link-post-type.php:382
 msgid "Nothing found in Trash"
 msgstr "ट्रैश में कुछ नहीं मिला"
 
@@ -256,12 +368,10 @@ msgstr "भाषा वीडियो के लिए Zume वीडियो
 
 #. translators: Publish box date format, see http://php.net/date
 #: functions/post-types/pdf-download-post-type.php:256 functions/post-types/video-post-type.php:256
-#: functions/zume-dt-integration/site-link-post-type.php:502
 msgid "M j, Y @ G:i"
 msgstr "एम जे, वाई @ G:i"
 
 #: functions/post-types/pdf-download-post-type.php:451 functions/post-types/video-post-type.php:459
-#: functions/zume-dt-integration/site-link-post-type.php:965
 msgid "Enter the title here"
 msgstr "यहां शीर्षक दर्ज करें"
 
@@ -321,444 +431,6 @@ msgstr "प्रथम"
 #: functions/utilities/menu.php:111
 msgid "Last"
 msgstr "अंतिम"
-
-#: functions/utilities/tgm-plugin-activation-class.php:334
-msgid "Install Required Plugins"
-msgstr "आवश्यक Plugins स्थापित करें"
-
-#: functions/utilities/tgm-plugin-activation-class.php:335
-msgid "Install Plugins"
-msgstr "Plugins स्थापित करें"
-
-#. translators: %s: plugin name.
-#: functions/utilities/tgm-plugin-activation-class.php:337
-#, php-format
-msgid "Installing Plugin: %s"
-msgstr "प्लग-इन स्थापित हो रहा है: %s"
-
-#. translators: %s: plugin name.
-#: functions/utilities/tgm-plugin-activation-class.php:339
-#, php-format
-msgid "Updating Plugin: %s"
-msgstr "प्लग-इन अद्यतन हो रहा है: %s"
-
-#: functions/utilities/tgm-plugin-activation-class.php:340
-msgid "Something went wrong with the plugin API."
-msgstr "प्लग-इन एपीआई के साथ कुछ गलत हुआ है ।"
-
-#. translators: 1: plugin name(s).
-#: functions/utilities/tgm-plugin-activation-class.php:343
-#, php-format
-msgid "This theme requires the following plugin: %1$s."
-msgid_plural "This theme requires the following plugins: %1$s."
-msgstr[0] "इस विषयवस्तु के लिए निम्नलिखित प्लग-इन की आवश्यकता है: %1$s."
-msgstr[1] "इस विषयवस्तु के लिए निम्नलिखित प्लग-इन की आवश्यकता है: %1$s."
-
-#. translators: 1: plugin name(s).
-#: functions/utilities/tgm-plugin-activation-class.php:349
-#, php-format
-msgid "This theme recommends the following plugin: %1$s."
-msgid_plural "This theme recommends the following plugins: %1$s."
-msgstr[0] "यह विषयवस्तु निम्नलिखित प्लग-इन्स की सलाह देती है: %1$s."
-msgstr[1] "यह विषयवस्तु निम्नलिखित प्लग-इन्स की सलाह देती है: %1$s."
-
-#. translators: 1: plugin name(s).
-#: functions/utilities/tgm-plugin-activation-class.php:355
-#, php-format
-msgid ""
-"The following plugin needs to be updated to its latest version to ensure maximum compatibility with "
-"this theme: %1$s."
-msgid_plural ""
-"The following plugins need to be updated to their latest version to ensure maximum compatibility with "
-"this theme: %1$s."
-msgstr[0] ""
-"इस विषयवस्तु के साथ अधिकतम संगतता सुनिश्चित करने के लिए निम्नलिखित प्लग-इन्स को इसके नवीनतम संस्करण में अद्यतित करने की "
-"आवश्यकता है: %1$s."
-msgstr[1] ""
-"इस विषयवस्तु के साथ अधिकतम संगतता सुनिश्चित करने के लिए निम्नलिखित प्लग-इन्स को इसके नवीनतम संस्करण में अद्यतित करने की "
-"आवश्यकता है: %1$s."
-
-#. translators: 1: plugin name(s).
-#: functions/utilities/tgm-plugin-activation-class.php:361
-#, php-format
-msgid "There is an update available for: %1$s."
-msgid_plural "There are updates available for the following plugins: %1$s."
-msgstr[0] "इसके लिए एक अद्यतन (अपडेट्स) उपलब्ध है: %1$s."
-msgstr[1] "इसके लिए एक अद्यतन (अपडेट्स) उपलब्ध है: %1$s."
-
-#. translators: 1: plugin name(s).
-#: functions/utilities/tgm-plugin-activation-class.php:367
-#, php-format
-msgid "The following required plugin is currently inactive: %1$s."
-msgid_plural "The following required plugins are currently inactive: %1$s."
-msgstr[0] "निम्नलिखित आवश्यक प्लग-इन्स वर्तमान में निष्क्रिय है: %1$s."
-msgstr[1] "निम्नलिखित आवश्यक प्लग-इन्स वर्तमान में निष्क्रिय है: %1$s."
-
-#. translators: 1: plugin name(s).
-#: functions/utilities/tgm-plugin-activation-class.php:373
-#, php-format
-msgid "The following recommended plugin is currently inactive: %1$s."
-msgid_plural "The following recommended plugins are currently inactive: %1$s."
-msgstr[0] "निम्नलिखित सिफारिश किये हुए प्लग-इन वर्तमान में निष्क्रिय है: %1$s."
-msgstr[1] "निम्नलिखित सिफारिश किये हुए प्लग-इन वर्तमान में निष्क्रिय है: %1$s."
-
-#: functions/utilities/tgm-plugin-activation-class.php:378
-msgid "Begin installing plugin"
-msgid_plural "Begin installing plugins"
-msgstr[0] "प्लग-इन स्थापित करना शुरू करें"
-msgstr[1] "प्लग-इन स्थापित करना शुरू करें"
-
-#: functions/utilities/tgm-plugin-activation-class.php:383
-msgid "Begin updating plugin"
-msgid_plural "Begin updating plugins"
-msgstr[0] "प्लग-इन अद्यतन शुरू करें"
-msgstr[1] "प्लग-इन अद्यतन शुरू करें"
-
-#: functions/utilities/tgm-plugin-activation-class.php:388
-msgid "Begin activating plugin"
-msgid_plural "Begin activating plugins"
-msgstr[0] "प्लग-इन सक्रिय करना शुरू करें"
-msgstr[1] "प्लग-इन सक्रिय करना शुरू करें"
-
-#: functions/utilities/tgm-plugin-activation-class.php:392
-msgid "Return to Required Plugins Installer"
-msgstr "आवश्यक प्लगइन्स (Plugins) इंस्टॉलर पर लौटें"
-
-#: functions/utilities/tgm-plugin-activation-class.php:393
-#: functions/utilities/tgm-plugin-activation-class.php:920
-#: functions/utilities/tgm-plugin-activation-class.php:2626
-#: functions/utilities/tgm-plugin-activation-class.php:3675
-msgid "Return to the Dashboard"
-msgstr "डैशबोर्ड पर लौटें"
-
-#: functions/utilities/tgm-plugin-activation-class.php:394
-#: functions/utilities/tgm-plugin-activation-class.php:3252
-msgid "Plugin activated successfully."
-msgstr "प्लग-इन्स सफलतापूर्वक सक्रिय ।"
-
-#: functions/utilities/tgm-plugin-activation-class.php:395
-#: functions/utilities/tgm-plugin-activation-class.php:3045
-msgid "The following plugin was activated successfully:"
-msgid_plural "The following plugins were activated successfully:"
-msgstr[0] "निम्नलिखित प्लग-इन सफलतापूर्वक सक्रिय किया गया था:"
-msgstr[1] "निम्नलिखित प्लग-इन सफलतापूर्वक सक्रिय किया गया था:"
-
-#. translators: 1: plugin name.
-#: functions/utilities/tgm-plugin-activation-class.php:397
-#, php-format
-msgid "No action taken. Plugin %1$s was already active."
-msgstr "कोई कार्रवाई नहीं। प्लग-इन %1$s पहले से ही सक्रिय था।"
-
-#. translators: 1: plugin name.
-#: functions/utilities/tgm-plugin-activation-class.php:399
-#, php-format
-msgid "Plugin not activated. A higher version of %s is needed for this theme. Please update the plugin."
-msgstr "प्लग-इन सक्रिय नहीं है । इस विषयवस्तु के लिए %s का उच्चतर संस्करण आवश्यक है । प्लग-इन का अद्यतन करें ।"
-
-#. translators: 1: dashboard link.
-#: functions/utilities/tgm-plugin-activation-class.php:401
-#, php-format
-msgid "All plugins installed and activated successfully. %1$s"
-msgstr "सभी प्लगइन्स इंस्टाल और सफलतापूर्वक एक्टिवेट कर दी गयी है । %1$s"
-
-#: functions/utilities/tgm-plugin-activation-class.php:402
-msgid "Dismiss this notice"
-msgstr "इस नोटिस को खारिज करें"
-
-#: functions/utilities/tgm-plugin-activation-class.php:403
-msgid "There are one or more required or recommended plugins to install, update or activate."
-msgstr "यहाँ एक या उससे अधिक प्लगइन्स स्थापित, अद्यतन या सक्रिय करने की जरूरत हैं या सिफारिश की गयी हैं।"
-
-#: functions/utilities/tgm-plugin-activation-class.php:404
-msgid "Please contact the administrator of this site for help."
-msgstr "कृपया मदद के लिए इस साइट के व्यवस्थापक से संपर्क करें ।"
-
-#: functions/utilities/tgm-plugin-activation-class.php:607
-msgid "This plugin needs to be updated to be compatible with your theme."
-msgstr "इस प्लग-इन को अपने विषय के साथ संगत होने के लिए अद्यतन करने की जरूरत है."
-
-#: functions/utilities/tgm-plugin-activation-class.php:608
-msgid "Update Required"
-msgstr "अद्यतन आवश्यक"
-
-#: functions/utilities/tgm-plugin-activation-class.php:725
-msgid "Set the parent_slug config variable instead."
-msgstr "इसके बजाय parent_slug config चर सेट करें ।"
-
-#: functions/utilities/tgm-plugin-activation-class.php:1027
-msgid ""
-"The remote plugin package does not contain a folder with the desired slug and renaming did not work."
-msgstr "दूरस्थ प्लग-इन पैकेज में वह फ़ोल्डर शामिल नहीं है जिसमें इच्छित स्लग हैं और नाम बदलने का कार्य नहीं हो रहा है।"
-
-#: functions/utilities/tgm-plugin-activation-class.php:1027
-#: functions/utilities/tgm-plugin-activation-class.php:1030
-msgid ""
-"Please contact the plugin provider and ask them to package their plugin according to the WordPress "
-"guidelines."
-msgstr "कृपया प्लग-इन प्रदाता से संपर्क करें और उन्हें WordPress दिशानिर्देश के अनुसार उनके पैकेज को प्लग-इन करने को कहें।"
-
-#: functions/utilities/tgm-plugin-activation-class.php:1030
-msgid ""
-"The remote plugin package consists of more than one file, but the files are not packaged in a folder."
-msgstr "दूरस्थ प्लग-इन पैकेज एक से अधिक फ़ाइल के होते हैं, लेकिन फ़ाइलें किसी फ़ोल्डर में पैक नहीं होती हैं ।"
-
-#: functions/utilities/tgm-plugin-activation-class.php:1214
-#: functions/utilities/tgm-plugin-activation-class.php:3041
-msgctxt "plugin A *and* plugin B"
-msgid "and"
-msgstr "प्लग-इन A *और* प्लग-इन B और"
-
-#. translators: %s: version number
-#: functions/utilities/tgm-plugin-activation-class.php:2075
-#, php-format
-msgid "TGMPA v%s"
-msgstr "TGMPA v%s"
-
-#: functions/utilities/tgm-plugin-activation-class.php:2366
-msgid "Required"
-msgstr "आवश्यक"
-
-#: functions/utilities/tgm-plugin-activation-class.php:2369
-msgid "Recommended"
-msgstr "अनुशंसित"
-
-#: functions/utilities/tgm-plugin-activation-class.php:2385
-msgid "WordPress Repository"
-msgstr "वर्डप्रेस कोष"
-
-#: functions/utilities/tgm-plugin-activation-class.php:2388
-msgid "External Source"
-msgstr "बाहरी स्रोत"
-
-#: functions/utilities/tgm-plugin-activation-class.php:2391
-msgid "Pre-Packaged"
-msgstr "पूर्व पैक"
-
-#: functions/utilities/tgm-plugin-activation-class.php:2408
-msgid "Not Installed"
-msgstr "स्थापित नहीं"
-
-#: functions/utilities/tgm-plugin-activation-class.php:2412
-msgid "Installed But Not Activated"
-msgstr "इंस्टाल (स्थापित) है, लेकिन एक्टिवेट (सक्रीय) नहीं है"
-
-#: functions/utilities/tgm-plugin-activation-class.php:2414
-msgid "Active"
-msgstr "सक्रिय"
-
-#: functions/utilities/tgm-plugin-activation-class.php:2420
-msgid "Required Update not Available"
-msgstr "आवश्यक अद्यतन उपलब्ध नहीं"
-
-#: functions/utilities/tgm-plugin-activation-class.php:2423
-msgid "Requires Update"
-msgstr "अद्यतन की आवश्यकता है"
-
-#: functions/utilities/tgm-plugin-activation-class.php:2426
-msgid "Update recommended"
-msgstr "अद्यतन अनुशंसित"
-
-#. translators: 1: install status, 2: update status
-#: functions/utilities/tgm-plugin-activation-class.php:2435
-#, php-format
-msgctxt "Install/Update Status"
-msgid "%1$s, %2$s"
-msgstr "इंस्टॉल (स्थापित)/अद्यतन स्थिति %1$s,%2$s"
-
-#. translators: 1: number of plugins.
-#: functions/utilities/tgm-plugin-activation-class.php:2481
-#, php-format
-msgctxt "plugins"
-msgid "All <span class=\"count\">(%s)</span>"
-msgid_plural "All <span class=\"count\">(%s)</span>"
-msgstr[0] "प्लगइन्स सभी <span class=“count”>(%s)</span>"
-msgstr[1] "प्लगइन्स सभी <span class=“count”>(%s)</span>"
-
-#. translators: 1: number of plugins.
-#: functions/utilities/tgm-plugin-activation-class.php:2485
-#, php-format
-msgid "To Install <span class=\"count\">(%s)</span>"
-msgid_plural "To Install <span class=\"count\">(%s)</span>"
-msgstr[0] "इनस्टॉल करने के लिए <span class=“count”>(%s)</span>"
-msgstr[1] "इनस्टॉल करने के लिए <span class=“count”>(%s)</span>"
-
-#. translators: 1: number of plugins.
-#: functions/utilities/tgm-plugin-activation-class.php:2489
-#, php-format
-msgid "Update Available <span class=\"count\">(%s)</span>"
-msgid_plural "Update Available <span class=\"count\">(%s)</span>"
-msgstr[0] "अद्यतन उपलब्ध <span class=“count”>(%s)</span>"
-msgstr[1] "अद्यतन उपलब्ध <span class=“count”>(%s)</span>"
-
-#. translators: 1: number of plugins.
-#: functions/utilities/tgm-plugin-activation-class.php:2493
-#, php-format
-msgid "To Activate <span class=\"count\">(%s)</span>"
-msgid_plural "To Activate <span class=\"count\">(%s)</span>"
-msgstr[0] "सक्रीय करने के लिए <span class=“count”>(%s)</span>"
-msgstr[1] "सक्रीय करने के लिए <span class=“count”>(%s)</span>"
-
-#: functions/utilities/tgm-plugin-activation-class.php:2575
-msgctxt "as in: \"version nr unknown\""
-msgid "unknown"
-msgstr "जैसे की: “version nr unknown” अज्ञात"
-
-#: functions/utilities/tgm-plugin-activation-class.php:2583
-msgid "Installed version:"
-msgstr "स्थापित संस्करण:"
-
-#: functions/utilities/tgm-plugin-activation-class.php:2591
-msgid "Minimum required version:"
-msgstr "न्यूनतम आवश्यक संस्करण:"
-
-#: functions/utilities/tgm-plugin-activation-class.php:2603
-msgid "Available version:"
-msgstr "उपलब्ध संस्करण:"
-
-#: functions/utilities/tgm-plugin-activation-class.php:2626
-msgid "No plugins to install, update or activate."
-msgstr "कोई प्लगइन्स स्थापित नहीं, अद्यतन या सक्रिय करने के लिए ।"
-
-#: functions/utilities/tgm-plugin-activation-class.php:2640
-msgid "Plugin"
-msgstr "प्लग-इन"
-
-#: functions/utilities/tgm-plugin-activation-class.php:2641
-msgid "Source"
-msgstr "स्रोत"
-
-#: functions/utilities/tgm-plugin-activation-class.php:2642
-#: functions/zume-dt-integration/site-link-post-type.php:454
-msgid "Type"
-msgstr "प्रकार"
-
-#: functions/utilities/tgm-plugin-activation-class.php:2646
-msgid "Version"
-msgstr "संस्करण"
-
-#: functions/utilities/tgm-plugin-activation-class.php:2647
-msgid "Status"
-msgstr " स्थिति"
-
-#. translators: %2$s: plugin name in screen reader markup
-#: functions/utilities/tgm-plugin-activation-class.php:2696
-#, php-format
-msgid "Install %2$s"
-msgstr "%2$s स्थापित करें"
-
-#. translators: %2$s: plugin name in screen reader markup
-#: functions/utilities/tgm-plugin-activation-class.php:2701
-#, php-format
-msgid "Update %2$s"
-msgstr "अद्यतन %2$s"
-
-#. translators: %2$s: plugin name in screen reader markup
-#: functions/utilities/tgm-plugin-activation-class.php:2707
-#, php-format
-msgid "Activate %2$s"
-msgstr "सक्रिय करें %2$s"
-
-#: functions/utilities/tgm-plugin-activation-class.php:2777
-msgid "Upgrade message from the plugin author:"
-msgstr "प्लग-इन लेखक से अद्यतन संदेश:"
-
-#: functions/utilities/tgm-plugin-activation-class.php:2810
-msgid "Install"
-msgstr "इन्स्टाल करें"
-
-#: functions/utilities/tgm-plugin-activation-class.php:2816
-#: functions/zume-dt-integration/menu-and-tabs.php:262 template-zume-dashboard.php:854
-msgid "Update"
-msgstr "अपडेट (अद्यतन) करें"
-
-#: functions/utilities/tgm-plugin-activation-class.php:2819
-msgid "Activate"
-msgstr "एक्टिवेट (सक्रीय) करें"
-
-#: functions/utilities/tgm-plugin-activation-class.php:2850
-msgid "No plugins were selected to be installed. No action taken."
-msgstr "किसी भी प्लगइन्स का चयन नहीं किया गया स्थापित (इंस्टॉल) करने के लिए। कोई कार्रवाई नहीं की गई।"
-
-#: functions/utilities/tgm-plugin-activation-class.php:2852
-msgid "No plugins were selected to be updated. No action taken."
-msgstr "कोई प्लगइन्स अद्यतन करने के लिए नहीं चुना गया । कोई कार्रवाई नहीं की गई ।"
-
-#: functions/utilities/tgm-plugin-activation-class.php:2893
-msgid "No plugins are available to be installed at this time."
-msgstr "इस समय स्थापित करने के लिए कोई प्लग-इन उपलब्ध नहीं हैं।"
-
-#: functions/utilities/tgm-plugin-activation-class.php:2895
-msgid "No plugins are available to be updated at this time."
-msgstr "इस समय अद्यतन करने के लिए कोई प्लग-इन्स उपलब्ध नहीं हैं ।"
-
-#: functions/utilities/tgm-plugin-activation-class.php:3001
-msgid "No plugins were selected to be activated. No action taken."
-msgstr "सक्रिय होने के लिए किसी भी प्लगइन्स का चुनाव नहीं किया गया हैं । कोई कार्रवाई नहीं की गई ।"
-
-#: functions/utilities/tgm-plugin-activation-class.php:3027
-msgid "No plugins are available to be activated at this time."
-msgstr "इस समय सक्रिय होने के लिए कोई प्लगइन्स उपलब्ध नहीं हैं ।"
-
-#: functions/utilities/tgm-plugin-activation-class.php:3251
-msgid "Plugin activation failed."
-msgstr "प्लग-इन सक्रियण विफल हुआ ।"
-
-#. translators: 1: plugin name, 2: action number 3: total number of actions.
-#: functions/utilities/tgm-plugin-activation-class.php:3593
-#, php-format
-msgid "Updating Plugin %1$s (%2$d/%3$d)"
-msgstr "अद्यतन हो रहा है प्लग-इन %1$s (%2$d/%3$d)"
-
-#. translators: 1: plugin name, 2: error message.
-#: functions/utilities/tgm-plugin-activation-class.php:3596
-#, php-format
-msgid "An error occurred while installing %1$s: <strong>%2$s</strong>."
-msgstr "%1$s: <strong>%2$s</strong>. स्थापित करते समय एक त्रुटि हुई ।"
-
-#. translators: 1: plugin name.
-#: functions/utilities/tgm-plugin-activation-class.php:3598
-#, php-format
-msgid "The installation of %1$s failed."
-msgstr "%1$s की इंस्टालेशन विफल रही ।"
-
-#: functions/utilities/tgm-plugin-activation-class.php:3602
-msgid ""
-"The installation and activation process is starting. This process may take a while on some hosts, so "
-"please be patient."
-msgstr ""
-"इंस्टालेशन और एक्टिवेशन की प्रक्रिया शुरू हो रही है। इस प्रक्रिया में कुछ होस्ट्स पर कुछ समय लग सकता है, तो कृपया धैर्य रखें ।"
-
-#. translators: 1: plugin name.
-#: functions/utilities/tgm-plugin-activation-class.php:3604
-#: functions/utilities/tgm-plugin-activation-class.php:3612
-#, php-format
-msgid "%1$s done."
-msgstr "%1$s हो गया है ।"
-
-#: functions/utilities/tgm-plugin-activation-class.php:3605
-msgid "All installations and activations have been completed."
-msgstr "सभी इंस्टालेशन और एक्टिवेशन पुरे हो चुके है ।"
-
-#. translators: 1: plugin name, 2: action number 3: total number of actions.
-#: functions/utilities/tgm-plugin-activation-class.php:3607
-#, php-format
-msgid "Installing and Activating Plugin %1$s (%2$d/%3$d)"
-msgstr "%1$s (%2$d/%3$d) प्लग-इन इन्स्टाल (स्थापित)और एक्टिवेट (सक्रीय) हो रहा है"
-
-#: functions/utilities/tgm-plugin-activation-class.php:3610
-msgid ""
-"The installation process is starting. This process may take a while on some hosts, so please be patient."
-msgstr "स्थापना प्रक्रिया प्रारंभ हो रही है । इस प्रक्रिया में कुछ होस्टस पर थोड़ा समय लग सकता है, तो कृपया धैर्य रखें ।"
-
-#: functions/utilities/tgm-plugin-activation-class.php:3613
-msgid "All installations have been completed."
-msgstr "सभी इन्स्टालेशन्स पूरे कर लिए गए हैं ।"
-
-#. translators: 1: plugin name, 2: action number 3: total number of actions.
-#: functions/utilities/tgm-plugin-activation-class.php:3615
-#, php-format
-msgid "Installing Plugin %1$s (%2$d/%3$d)"
-msgstr "%1$s (%2$d/%3$d) प्लग-इन इन्स्टाल (स्थापित) हो रहा है"
 
 #: functions/zume-course.php:164
 msgid "( Key not available. Check dashboard. )"
@@ -2819,243 +2491,72 @@ msgstr ""
 msgid "No Name"
 msgstr "कोई नाम नहीं"
 
-#: functions/zume-dt-integration/menu-and-tabs.php:49
-msgid "Zume"
-msgstr "Zume"
+#: functions/zume-functions.php:291 template-zume-profile.php:182
+msgid "Phone Number"
+msgstr "फ़ोन नंबर"
 
-#: functions/zume-dt-integration/menu-and-tabs.php:58
-msgid "You do not have sufficient permissions to access this page."
-msgstr "आपके पास इस पृष्ठ तक पहुंचने के लिए पर्याप्त अनुमतियां नहीं हैं ।"
+#: functions/zume-functions.php:292
+msgid "User Address"
+msgstr "यूजर एड्रेस"
 
-#: functions/zume-dt-integration/menu-and-tabs.php:61
-msgid "DISCIPLE TOOLS - INTEGRATION"
-msgstr "शिष्य के उपकरण - एकीकरण"
+#: functions/zume-functions.php:293
+msgid "GeoCoded IP"
+msgstr "GeoCoded आईपी"
 
-#: functions/zume-dt-integration/menu-and-tabs.php:68 functions/zume-polylang-integration.php:128
-msgid "Settings"
-msgstr "सेटिंग्स"
-
-#: functions/zume-dt-integration/menu-and-tabs.php:72
-msgid "Google Keys"
-msgstr "Google कुंजियां"
-
-#: functions/zume-dt-integration/menu-and-tabs.php:76
-msgid "Languages"
-msgstr "भाषाएँ"
-
-#: functions/zume-dt-integration/menu-and-tabs.php:243
-msgid "Set Default Transfer Site"
-msgstr "डिफ़ॉल्ट स्थानांतरण साइट सेट करें"
-
-#: functions/zume-dt-integration/site-link-post-type.php:373
-msgid "All"
-msgstr "सभी"
-
-#: functions/zume-dt-integration/site-link-post-type.php:378
-msgid "New"
-msgstr "नया"
-
-#: functions/zume-dt-integration/site-link-post-type.php:379
-msgid "View"
-msgstr "देखें"
-
-#: functions/zume-dt-integration/site-link-post-type.php:380
-msgid "Search"
-msgstr "खोजें"
-
-#: functions/zume-dt-integration/site-link-post-type.php:423
-#: functions/zume-dt-integration/site-link-post-type.php:817
-msgid "Status:"
-msgstr "स्थिति:"
-
-#: functions/zume-dt-integration/site-link-post-type.php:426
-#: functions/zume-dt-integration/site-link-post-type.php:820
-msgid "Checking Status"
-msgstr "स्थिति जांच रहे हैं"
-
-#: functions/zume-dt-integration/site-link-post-type.php:453
-#: functions/zume-dt-integration/site-link-post-type.php:911
-msgid "Linked"
-msgstr "जुड़ गए"
-
-#: functions/zume-dt-integration/site-link-post-type.php:514
-msgid "Manage Site Link"
-msgstr "साइट लिंक प्रबंधित करें"
-
-#: functions/zume-dt-integration/site-link-post-type.php:515
-msgid "Configuration"
-msgstr "विन्यास (कॉन्फ़िगरेशन)"
-
-#: functions/zume-dt-integration/site-link-post-type.php:737
-msgid "Token"
-msgstr "टोकन"
-
-#: functions/zume-dt-integration/site-link-post-type.php:738
-msgid "If you have a token from another site, just clear token above and replace it."
-msgstr "यदि आपके पास एक और साइट का टोकन है, ऊपरी टोकन को क्लिअर करें और इसे बदलें ।"
-
-#: functions/zume-dt-integration/site-link-post-type.php:745
-msgid "Site 1"
-msgstr "साइट १"
-
-#: functions/zume-dt-integration/site-link-post-type.php:746
-#: functions/zume-dt-integration/site-link-post-type.php:754
-msgid "Use just the host name. Example: www.website.com"
-msgstr "केवल होस्ट नाम का उपयोग करें । उदाहरण: www.website.com"
-
-#: functions/zume-dt-integration/site-link-post-type.php:753
-msgid "Site 2"
-msgstr "साइट २"
-
-#: functions/zume-dt-integration/site-link-post-type.php:761
-msgid "Approved IP Address"
-msgstr "अनुमोदित IP पता"
-
-#: functions/zume-dt-integration/site-link-post-type.php:762
-msgid "Enter an approved ip address to restrict responses of this connection. (format: xxx.xxx.xxx.xxx)"
-msgstr "इस कनेक्शन की प्रतिक्रियाओं को प्रतिबंधित करने के लिए एक अनुमोदित ip पता दर्ज करें । (प्रारूप: xxx.xxx.xxx.xxx)"
-
-#: functions/zume-dt-integration/site-link-post-type.php:768
-msgid "Connection Type"
-msgstr "कनेक्शन प्रकार"
-
-#: functions/zume-dt-integration/site-link-post-type.php:769
-msgid ""
-"This adds permissions needed for the labeled task. If you have trouble with a connection succeeding, "
-"and a task failing. This permission setting may be the reason."
-msgstr ""
-"यह लेबल किए गए कार्य के लिए आवश्यक अनुमतियां जोड़ता है । यदि आपको कनेक्शन सफल होने में समस्या हो रही है, और कोई कार्य "
-"विफल हो रहा है । यह अनुमति सेटिंग का कारण हो सकता है ।"
-
-#: functions/zume-dt-integration/site-link-post-type.php:775
-msgid "DT Site"
-msgstr "डीटी साइट"
-
-#: functions/zume-dt-integration/site-link-post-type.php:776
-msgid "Is this connection to a Disciple Tools/Wordpress system."
-msgstr "क्या यह कनेक्शन शिष्यत्व उपकरण/वर्डप्रेस सिस्टम से सम्बंधित हैं।"
-
-#: functions/zume-dt-integration/site-link-post-type.php:779
-msgid "Yes, connected to another DT site (default)"
-msgstr "हां, एक और डीटी साइट से जुड़ गए (डिफ़ॉल्ट)"
-
-#: functions/zume-dt-integration/site-link-post-type.php:780
-msgid "No, connection for a non-Disciple Tools system."
-msgstr "नहीं, एक गैर-शिष्य उपकरण प्रणाली के लिए कनेक्शन ।"
-
-#: functions/zume-dt-integration/site-link-post-type.php:839
-msgid "Consider Checking:"
-msgstr "जांच पर विचार करें:"
-
-#: functions/zume-dt-integration/site-link-post-type.php:842
-msgid "Check if the target site is setup with identical configuration information."
-msgstr "जांचें कि क्या लक्ष्य साइट समान कॉंफ़िगरेशन जानकारी के साथ सेटअप है ।"
-
-#: functions/zume-dt-integration/site-link-post-type.php:845
-msgid ""
-"Check if HTTPS/SSL is enabled on both sites. Due to the transfer of data between these sites, SSL "
-"encryption is required for both sites to protect the data exchange."
-msgstr ""
-"जांचे की दोनों साइट्स पर HTTPS/SSL सक्षम किया गया है या नहीं । इन साइट्स के बीच डेटा के स्थानांतरण के कारण, डेटा "
-"विनिमय को सुरक्षित करने के लिए दोनों साइट्स के लिए SSL एंक्रिप्शन आवश्यक है ।"
-
-#: functions/zume-dt-integration/site-link-post-type.php:848
-msgid ""
-"Check if the server timestamps are identical. Mismatched server times will cause decryption key "
-"failures. Your server timestamp"
-msgstr ""
-"जांचें कि क्या सर्वर टाइमस्टैंप समरूप हैं । बेमेल सर्वर समय डिक्रिप्शन कुंजी विफलताओं का कारण होते हैं । आपके सर्वर टाइमस्टैंप"
-
-#: functions/zume-dt-integration/site-link-post-type.php:865
-msgid "Current Site"
-msgstr "वर्तमान साइट"
-
-#: functions/zume-dt-integration/site-link-post-type.php:867
-msgid "Timestamp"
-msgstr "टाइमस्टैम्प"
-
-#: functions/zume-dt-integration/site-link-post-type.php:869
-msgid "Compare this number to linked site. It should be identical."
-msgstr "इस संख्या की लिंक्ड साइट से तुलना करें । यह समरूप होना चाहिए ।"
-
-#: functions/zume-dt-integration/site-link-post-type.php:912
-msgid "Not Linked"
-msgstr "नहीं जुड़ पाए"
-
-#: functions/zume-dt-integration/site-link-post-type.php:913
-msgid "Failed to connect with the URL provided."
-msgstr "मुहैया किए गए URL के साथ कनेक्ट होने में विफल ।"
-
-#: functions/zume-dt-integration/zume-hooks.php:132
-msgid "Visibility"
-msgstr "दृश्यता"
-
-#: functions/zume-dt-integration/zume-hooks.php:135
-msgid "Public (Default)"
-msgstr "सार्वजनिक (डिफ़ॉल्ट)"
-
-#: functions/zume-dt-integration/zume-hooks.php:135
-msgid "Private"
-msgstr "निजी"
-
-#: functions/zume-dt-integration/zume-hooks.php:139 template-zume-profile.php:136
-msgid "Affiliation Key"
-msgstr "संबद्धता कुंजी"
-
-#: functions/zume-polylang-integration.php:122
+#: functions/zume-polylang-integration.php:132
 msgid "Home"
 msgstr "होम"
 
-#: functions/zume-polylang-integration.php:123 template-zume-overview.php:238
+#: functions/zume-polylang-integration.php:133 template-zume-overview.php:238
 msgid "Dashboard"
 msgstr "डैशबोर्ड"
 
-#: functions/zume-polylang-integration.php:124
+#: functions/zume-polylang-integration.php:134
 msgid "About"
 msgstr "बारे में"
 
-#: functions/zume-polylang-integration.php:125
+#: functions/zume-polylang-integration.php:135
 msgid "Resources"
 msgstr "संसाधने"
 
-#: functions/zume-polylang-integration.php:126
+#: functions/zume-polylang-integration.php:136
 msgid "FAQs"
 msgstr "अक्सर पूछे जाने वाले प्रश्न"
 
-#: functions/zume-polylang-integration.php:127
+#: functions/zume-polylang-integration.php:137
 msgid "Overview"
 msgstr "अवलोकन"
 
-#: functions/zume-polylang-integration.php:129
+#: functions/zume-polylang-integration.php:138
+msgid "Settings"
+msgstr "सेटिंग्स"
+
+#: functions/zume-polylang-integration.php:139
 msgid "Profile"
 msgstr "प्रोफाइल"
 
-#: functions/zume-polylang-integration.php:130
+#: functions/zume-polylang-integration.php:140
 msgid "Admin"
 msgstr "व्यवस्थापक"
 
-#: functions/zume-polylang-integration.php:131
+#: functions/zume-polylang-integration.php:141
 msgid "Logout"
 msgstr "लॉगआउट"
 
-#: functions/zume-polylang-integration.php:132
+#: functions/zume-polylang-integration.php:142 template-zume-login.php:390
 msgid "Login"
 msgstr "लॉग-इन"
 
-#: functions/zume-polylang-integration.php:133 template-zume-login.php:40
-msgid "Register"
-msgstr "पंजीकरण"
-
 #. Template Name of the plugin/theme
-#: functions/zume-polylang-integration.php:134
+#: functions/zume-polylang-integration.php:144
 msgid "Three-Month Plan"
 msgstr "तीन माह की योजना"
 
-#: functions/zume-polylang-integration.php:135 template-zume-progress.php:15
+#: functions/zume-polylang-integration.php:145 template-zume-progress.php:15
 msgid "Progress"
 msgstr "प्रगति"
 
-#: functions/zume-polylang-integration.php:136
+#: functions/zume-polylang-integration.php:146
 msgid "Stats"
 msgstr "आँकड़े"
 
@@ -3141,86 +2642,6 @@ msgstr "स्वागत है!"
 msgid "I want to make disciples who multiply!"
 msgstr "मैं वह शिष्य जो बढ़ना चाहते है बनाना चाहता हूँ !"
 
-#: functions/zume-welcome-messages.php:104
-msgid "Title 1"
-msgstr "शीर्षक १"
-
-#: functions/zume-welcome-messages.php:105
-msgid "Message1"
-msgstr "संदेश १"
-
-#: functions/zume-welcome-messages.php:110
-msgid "Title 2"
-msgstr "शीर्षक २"
-
-#: functions/zume-welcome-messages.php:111
-msgid "Message2"
-msgstr "संदेश २"
-
-#: functions/zume-welcome-messages.php:116
-msgid "Title 3"
-msgstr "शीर्षक ३"
-
-#: functions/zume-welcome-messages.php:117
-msgid "Message3"
-msgstr "संदेश ३"
-
-#: functions/zume-welcome-messages.php:122
-msgid "Title 4"
-msgstr "शीर्षक ४"
-
-#: functions/zume-welcome-messages.php:123
-msgid "Message4"
-msgstr "संदेश ४"
-
-#: functions/zume-welcome-messages.php:128
-msgid "Title 5"
-msgstr "शीर्षक ५"
-
-#: functions/zume-welcome-messages.php:129
-msgid "Message5"
-msgstr "संदेश ५"
-
-#: functions/zume-welcome-messages.php:134
-msgid "Title 6"
-msgstr "शीर्षक ६"
-
-#: functions/zume-welcome-messages.php:135
-msgid "Message6"
-msgstr "संदेश ६"
-
-#: functions/zume-welcome-messages.php:140
-msgid "Title 7"
-msgstr "शीर्षक ७"
-
-#: functions/zume-welcome-messages.php:141
-msgid "Message7"
-msgstr "संदेश ७"
-
-#: functions/zume-welcome-messages.php:146
-msgid "Title 8"
-msgstr "शीर्षक ८"
-
-#: functions/zume-welcome-messages.php:147
-msgid "Message8"
-msgstr "संदेश ८"
-
-#: functions/zume-welcome-messages.php:152
-msgid "Title 9"
-msgstr "शीर्षक ९"
-
-#: functions/zume-welcome-messages.php:153
-msgid "Message9"
-msgstr "संदेश ९"
-
-#: functions/zume-welcome-messages.php:158
-msgid "Title 10"
-msgstr "शीर्षक १०"
-
-#: functions/zume-welcome-messages.php:159
-msgid "Message10"
-msgstr "संदेश १०"
-
 #: parts/content-missing.php:4
 msgid "Oops, Page Not Found!"
 msgstr "उफ़, पृष्ठ नहीं मिला!"
@@ -3244,6 +2665,266 @@ msgstr "पृष्ठ:"
 #: parts/nav-offcanvas-topbar.php:43
 msgid "Menu"
 msgstr "मेनू"
+
+#: template-register-old.php:111
+msgid "Site Name:"
+msgstr "साइट का नाम:"
+
+#: template-register-old.php:112
+msgid "Site Domain:"
+msgstr "साइट डोमेन:"
+
+#: template-register-old.php:126
+msgid "sitename"
+msgstr "साइट का नाम"
+
+#: template-register-old.php:128
+msgid "domain"
+msgstr "डोमेन"
+
+#. translators: %s: site address
+#: template-register-old.php:132
+#, php-format
+msgid "Your address will be %s."
+msgstr "आपका पता %s होगा ।"
+
+#: template-register-old.php:132
+msgid ""
+"Must be at least 4 characters, letters and numbers only. It cannot be changed, so choose carefully!"
+msgstr "केवल कम से कम ४ वर्ण, अक्षर और संख्या होनी चाहिए । इसे बदला नहीं जा सकता, इसलिए सावधानी से चुनें!"
+
+#: template-register-old.php:137
+msgid "Site Title:"
+msgstr "साइट शीर्षक:"
+
+#: template-register-old.php:151
+msgid "Site Language:"
+msgstr "साइट भाषा:"
+
+#: template-register-old.php:178
+msgid "Privacy:"
+msgstr "गोपनीयता:"
+
+#: template-register-old.php:179
+msgid "Allow search engines to index this site."
+msgstr "खोज इंजन को इस साइट को अनुक्रमित करने दें ।"
+
+#: template-register-old.php:183
+msgid "Yes"
+msgstr "हाँ"
+
+#: template-register-old.php:187
+msgid "No"
+msgstr "नहीं"
+
+#: template-register-old.php:234
+msgid "Username:"
+msgstr "उपयोगकर्ता:"
+
+#: template-register-old.php:239
+msgid "(Must be at least 4 characters, letters and numbers only.)"
+msgstr "(केवल ४ वर्णों, अक्षरों और संख्याओं का होना आवश्यक है.)"
+
+#: template-register-old.php:242
+msgid "Email&nbsp;Address:"
+msgstr "ईमेल &nbsp; पता:"
+
+#: template-register-old.php:246
+msgid ""
+"We send your registration email to this address. (Double-check your email address before continuing.)"
+msgstr "हम इस पते पर आपका पंजीकरण ईमेल भेजते हैं । (जारी रखने से पहले अपने ईमेल पते को एक बार फिर से जांचें)"
+
+#: template-register-old.php:313
+#, php-format
+msgid "Get <em>another</em> %s site in seconds"
+msgstr "प्राप्त करें <em> एक और</em> %s साइट कुछ ही क्षणों में"
+
+#: template-register-old.php:316
+msgid "There was a problem, please correct the form below and try again."
+msgstr "एक समस्या थी, कृपया नीचे दिए गए फ़ॉर्म को सुधारें और पुन: प्रयास करें ।"
+
+#: template-register-old.php:319
+#, php-format
+msgid ""
+"Welcome back, %s. By filling out the form below, you can <strong>add another site to your account</"
+"strong>. There is no limit to the number of sites you can have, so create to your heart&#8217;s "
+"content, but write responsibly!"
+msgstr ""
+"वापस स्वागत है, %s. नीचे दिए फॉर्म को भरने से, आप अपने अकाउंट </strong> में एक और साइट <strong> जोड़ सकते हैं । आप "
+"अगणित साइट्स पा सकते है; साइटों की संख्या की कोई सीमा नहीं है, इसलिए अपने मन को बनाएं &#8217;s सामग्री, लेकिन "
+"जिम्मेदारी से लिखो!"
+
+#: template-register-old.php:325
+msgid "Sites you are already a member of:"
+msgstr "साइट्स जो आप पहले से ही सदस्य हैं:"
+
+#: template-register-old.php:334
+msgid "If you&#8217;re not going to use a great site domain, leave it for a new user. Now have at it!"
+msgstr ""
+"यदि आप &#8217; एक महान साइट डोमेन का उपयोग नहीं कर रहें, तो यह एक नए उपयोगकर्ता के लिए छोड़ दें । अब कोशिश करो!"
+
+#: template-register-old.php:349
+msgid "Create Site"
+msgstr "साइट बनाएं"
+
+#. translators: %s: site name
+#: template-register-old.php:474
+#, php-format
+msgid "The site %s is yours."
+msgstr "साइट %s आपकी है ।"
+
+#. translators: 1: link to new site, 2: login URL, 3: username
+#: template-register-old.php:479
+#, php-format
+msgid ""
+"%1$s is your new site. <a href=\"%2$s\">Log in</a> as &#8220;%3$s&#8221; using your existing password."
+msgstr ""
+"%1$s आपकी नई साइट है । <a href=\"%2$s\"> लॉग इन </a> as &#8220;%3$s&#8221; अपना मौजूदा पासवर्ड का उपयोग करें "
+"।"
+
+#. translators: %s: name of the network
+#: template-register-old.php:544
+#, php-format
+msgid "Get your own %s account in seconds"
+msgstr "कुछ ही क्षणों में अपना %s खाता प्राप्त करें"
+
+#: template-register-old.php:561
+msgid "Gimme a site!"
+msgstr "गिंमी एक साईट!"
+
+#: template-register-old.php:564
+msgid "Just a username, please."
+msgstr "सिर्फ एक उपयोगकर्ता नाम, कृपया ।"
+
+#. translators: %s: username
+#: template-register-old.php:614
+#, php-format
+msgid "%s is your new username"
+msgstr "%s आपका नया उपयोगकर्ता नाम है"
+
+#: template-register-old.php:615
+msgid "But, before you can start using your new username, <strong>you must activate it</strong>."
+msgstr ""
+"लेकिन, इससे पहले कि आप अपने नए उपयोगकर्ता नाम का उपयोग शुरू करें, <strong> आपको इसे सक्रिय करना होगा </strong>."
+
+#. translators: %s: email address
+#: template-register-old.php:617 template-register-old.php:764
+#, php-format
+msgid "Check your inbox at %s and click the link given."
+msgstr "आपका इनबॉक्स %s पर जांचें और दिए गए लिंक पर क्लिक करें ।"
+
+#: template-register-old.php:618
+msgid "If you do not activate your username within two days, you will have to sign up again."
+msgstr "यदि आप अपने उपयोगकर्ता नाम को दो दिनों के भीतर सक्रिय नहीं करते हैं, तो आपको फिर से साइन-अप करना होगा ।"
+
+#: template-register-old.php:684
+msgid "Signup"
+msgstr "साइन-अप "
+
+#. translators: %s: site address
+#: template-register-old.php:760
+#, php-format
+msgid "Congratulations! Your new site, %s, is almost ready."
+msgstr "बधाइयाँ! आपकी नई साइट, %s, लगभग तैयार है ।"
+
+#: template-register-old.php:762
+msgid "But, before you can start using your site, <strong>you must activate it</strong>."
+msgstr "लेकिन, इससे पहले कि आप अपनी साइट का उपयोग शुरू करें, <strong> आपको इसे सक्रिय करना होगा </strong>."
+
+#: template-register-old.php:765
+msgid "If you do not activate your site within two days, you will have to sign up again."
+msgstr "यदि आप अपनी साइट को दो दिनों के भीतर सक्रिय नहीं करते हैं, तो आपको फिर से साइन-अप करना होगा ।"
+
+#: template-register-old.php:766
+msgid "Still waiting for your email?"
+msgstr "अभी भी अपने ईमेल के लिए इंतज़ार कर रहे हैं?"
+
+#: template-register-old.php:768
+msgid "If you haven&#8217;t received your email yet, there are a number of things you can do:"
+msgstr "यदि आप &#8217; अभी तक अपना ईमेल प्राप्त नहीं किए, तो भी आप बहुत सारी चिजें कर सकते हैं:"
+
+#: template-register-old.php:770
+msgid ""
+"Wait a little longer. Sometimes delivery of email can be delayed by processes outside of our control."
+msgstr "थोड़ी देर रुकिए । कई बार ईमेल का वितरण हमारे नियंत्रण के बाहर प्रक्रियाओं द्वारा विलंबित किया जा सकता है ।"
+
+#: template-register-old.php:771
+msgid "Check the junk or spam folder of your email client. Sometime emails wind up there by mistake."
+msgstr "अपने ईमेल क्लाइंट का जंक या स्पैम फ़ोल्डर की जांच करें । कभी-कभी गलती से इमेल्स वहां पहुँच जाते हैं ।"
+
+#. translators: %s: email address
+#: template-register-old.php:774
+#, php-format
+msgid ""
+"Have you entered your email correctly? You have entered %s, if it&#8217;s incorrect, you will not "
+"receive your email."
+msgstr ""
+"क्या आपने अपना ईमेल सही तरीके से दर्ज किया है? आपने %s दर्ज किया है, यदि यह &#8217; s गलत है, तो आपको अपना ईमेल "
+"प्राप्त नहीं होगा ।"
+
+#: template-register-old.php:831
+msgid "Greetings Network Administrator!"
+msgstr "अभिवादन नेटवर्क व्यवस्थापक!"
+
+#: template-register-old.php:836
+msgid "The network currently disallows registrations."
+msgstr "नेटवर्क वर्तमान में पंजीकरण को अस्वीकृत कर देता है ।"
+
+#: template-register-old.php:839
+msgid "The network currently allows site registrations."
+msgstr "नेटवर्क वर्तमान में साइट पंजीकरण की अनुमति देता है ।"
+
+#: template-register-old.php:842
+msgid "The network currently allows user registrations."
+msgstr "नेटवर्क वर्तमान में उपयोगकर्ता पंजीकरण की अनुमति देता है ।"
+
+#: template-register-old.php:845
+msgid "The network currently allows both site and user registrations."
+msgstr "नेटवर्क वर्तमान में साइट और उपयोगकर्ता दोनों पंजीकरण की अनुमति देता है ।"
+
+#. translators: %s: network settings URL
+#: template-register-old.php:852
+#, php-format
+msgid "To change or disable registration go to your <a href=\"%s\">Options page</a>."
+msgstr "पंजीकरण बदलने या अक्षम करने के लिए अपने <a href=\"%s\"> विकल्प पृष्ठ </a> पर जाएँ."
+
+#: template-register-old.php:860
+msgid "Registration has been disabled."
+msgstr "पंजीकरण अक्षम कर दिया गया है ।"
+
+#. translators: %s: login URL
+#: template-register-old.php:864
+#, php-format
+msgid "You must first <a href=\"%s\">log in</a>, and then you can create a new site."
+msgstr "आपको पहले <a href =\"%s\"> लॉग-इन</a> होना है, और फिर आप नई साइट बना सकते हैं ।"
+
+#: template-register-old.php:871
+msgid "User registration has been disabled."
+msgstr "उपयोगकर्ता पंजीकरण अक्षम कर दिया गया है ।"
+
+#: template-register-old.php:877
+msgid "Site registration has been disabled."
+msgstr "साइट पंजीकरण अक्षम कर दिया गया है ।"
+
+#: template-register-old.php:897
+msgid "Sorry, new registrations are not allowed at this time."
+msgstr "क्षमा करें, इस समय नए पंजीकरण की अनुमति नहीं है ।"
+
+#: template-register-old.php:898
+msgid "You are logged in already. No need to register again!"
+msgstr "आप पहले से ही लॉग-इन हैं । फिर से पंजीकरण करने की जरूरत नहीं!"
+
+#. translators: %s: site address
+#: template-register-old.php:906
+#, php-format
+msgid "The site you were looking for, %s, does not exist, but you can create it now!"
+msgstr "जिस साइट को आप खोज रहे थे, %s, मौजूद नहीं है, लेकिन आप इसे अभी बना सकते हैं!"
+
+#. translators: %s: site address
+#: template-register-old.php:910
+#, php-format
+msgid "The site you were looking for, %s, does not exist."
+msgstr "जिस साइट को आप खोज रहे थे, %s, मौजूद नहीं है ।"
 
 #: template-zume-3plan.php:43 template-zume-dashboard.php:522
 msgid "Three Month Plan"
@@ -3306,11 +2987,11 @@ msgstr "से जुड़ा"
 msgid "Unlink Group"
 msgstr "समूह छोड़ दे (अनलिंक करें)"
 
-#: template-zume-3plan.php:164 template-zume-profile.php:148
+#: template-zume-3plan.php:164 template-zume-profile.php:241
 msgid "Oh snap!"
 msgstr "ओह स्नैप!"
 
-#: template-zume-3plan.php:166 template-zume-profile.php:151
+#: template-zume-3plan.php:166 template-zume-profile.php:244
 msgid "Save"
 msgstr "सेव करें"
 
@@ -3458,7 +3139,7 @@ msgid "Meeting Time"
 msgstr "बैठक का समय"
 
 #: template-zume-dashboard.php:132 template-zume-dashboard.php:652 template-zume-dashboard.php:790
-#: template-zume-dashboard.php:949 template-zume-profile.php:105
+#: template-zume-dashboard.php:949 template-zume-profile.php:198
 msgid "Address"
 msgstr "पता"
 
@@ -3706,7 +3387,7 @@ msgstr "नियोजित बैठक समय"
 msgid "example: Saturday 7PM"
 msgstr "उदाहरण: शनिवार ७"
 
-#: template-zume-dashboard.php:664 template-zume-dashboard.php:802 template-zume-profile.php:118
+#: template-zume-dashboard.php:664 template-zume-dashboard.php:802 template-zume-profile.php:211
 msgid "Validate"
 msgstr "मान्य"
 
@@ -3757,6 +3438,10 @@ msgstr ""
 "दाईं ओर आपका निमंत्रण देख पाएंगे । उन्हें इस समूह में जोड़ना उन्हें एक प्रशिक्षण की सुविधा देता है लेकिन वे समूह के किसी भी "
 "विवरण को बदल नहीं सकते हैं. नोट: उन्हें इस निमंत्रण के साथ Zúme द्वारा कोई सिस्टम ईमेल नहीं प्राप्त होगा, आपको उन्हें साइन-"
 "अप करने के लिए पूछना होगा ।"
+
+#: template-zume-dashboard.php:854
+msgid "Update"
+msgstr "अपडेट (अद्यतन) करें"
 
 #: template-zume-dashboard.php:857
 msgid "Archive"
@@ -4132,17 +3817,51 @@ msgstr ""
 "सदस्य उन सभी सामग्रियों को जब वे चाहते हैं पा सकते हैं । इसके बाद समूह किसी भी मेसेजिंग प्लेटफॉर्म का इस्तेमाल कर सकता है "
 "जिसे वे पसंद करते हैं (iMessage, व्हाट्सएप्प, फेसबुक ग्रुप आदि) आगे ग्रुप कम्युनिकेशन (समूह संपर्क) के लिए ।"
 
-#: template-zume-login.php:43
+#: template-zume-login.php:91
+msgid "Your password reset link appears to be invalid. Please request a new link below."
+msgstr ""
+
+#: template-zume-login.php:93
+msgid "Your password reset link has expired. Please request a new link below."
+msgstr ""
+
+#: template-zume-login.php:129
+#, fuzzy
+#| msgid "User Address"
+msgid "Username or Email Address"
+msgstr "यूजर एड्रेस"
+
+#: template-zume-login.php:140
+#, fuzzy
+msgid "Get New Password"
+msgstr "Zume पासवर्ड भूल गए"
+
+#: template-zume-login.php:197
+msgid "The passwords do not match."
+msgstr ""
+
+#: template-zume-login.php:298
+#, fuzzy
+msgid "Reset Password"
+msgstr "Zume पासवर्ड भूल गए"
+
+#: template-zume-login.php:392 template-zume-login.php:493
 msgid "Lost your password?"
 msgstr "आपका पासवर्ड खो गया है?"
 
-#: template-zume-logout.php:28
-msgid "You have been logged out."
-msgstr "आप लॉग आउट हो गए है ।"
+#: template-zume-login.php:409
+msgid "Invalid request."
+msgstr ""
 
-#: template-zume-logout.php:30
-msgid "Back to home page"
-msgstr "मुख पृष्ठ पर वापस जाएं"
+#: template-zume-login.php:418
+#, fuzzy
+#| msgid "Unable to find key:"
+msgid "Invalid key"
+msgstr "कुंजी ढूंढने में असमर्थ:"
+
+#: template-zume-login.php:440
+msgid "User action confirmed."
+msgstr ""
 
 #: template-zume-overview.php:71 template-zume-overview.php:84
 msgid "Sessions Overview"
@@ -4426,33 +4145,47 @@ msgid ""
 msgstr ""
 "सहकर्मी सलाह समूह - दो या तीन के समूह में बट जाएं और सहकर्मी सलाह समूह के प्रारूप के अनुसार कार्य करें । (६० मिनिट)"
 
-#: template-zume-profile.php:22
+#: template-zume-profile.php:53
 msgid "Your Profile"
 msgstr "आपकी प्रोफ़ाइल"
 
-#: template-zume-profile.php:25
+#: template-zume-profile.php:58
 msgid "edit image @ gravatar.com"
 msgstr "छवि संपादित करें @ gravatar.com"
 
-#: template-zume-profile.php:33
+#: template-zume-profile.php:91
 msgid "User Name"
 msgstr "उपयोगकर्ता का नाम"
 
-#: template-zume-profile.php:36
+#: template-zume-profile.php:94
 msgid "(can not change)"
 msgstr "(नहीं बदल सकते हैं)"
 
-#: template-zume-profile.php:41 template-zume-profile.php:45 template-zume-profile.php:46
+#: template-zume-profile.php:99 template-zume-profile.php:103 template-zume-profile.php:104
 msgid "First Name"
 msgstr "प्रथम नाम"
 
-#: template-zume-profile.php:56 template-zume-profile.php:60 template-zume-profile.php:61
+#: template-zume-profile.php:114 template-zume-profile.php:118 template-zume-profile.php:119
 msgid "Last Name"
 msgstr "अंतिम नाम"
 
-#: template-zume-profile.php:71
-msgid "Email"
-msgstr "ईमेल"
+#: template-zume-profile.php:149
+msgid "Linked Facebook Account"
+msgstr ""
+
+#: template-zume-profile.php:156 template-zume-profile.php:172
+#, fuzzy
+#| msgid "Unlink Group"
+msgid "Unlink"
+msgstr "समूह छोड़ दे (अनलिंक करें)"
+
+#: template-zume-profile.php:165
+msgid "Linked Google Account"
+msgstr ""
+
+#: template-zume-profile.php:229
+msgid "Affiliation Key"
+msgstr "संबद्धता कुंजी"
 
 #: template-zume-progress.php:23
 msgid "Phase 1"
@@ -4473,266 +4206,6 @@ msgstr "Zúme के अनुवाद के लिए दान करें 
 #: template-zume-progress.php:74
 msgid "Phase 3"
 msgstr "फेज ३"
-
-#: template-zume-register.php:111
-msgid "Site Name:"
-msgstr "साइट का नाम:"
-
-#: template-zume-register.php:112
-msgid "Site Domain:"
-msgstr "साइट डोमेन:"
-
-#: template-zume-register.php:126
-msgid "sitename"
-msgstr "साइट का नाम"
-
-#: template-zume-register.php:128
-msgid "domain"
-msgstr "डोमेन"
-
-#. translators: %s: site address
-#: template-zume-register.php:132
-#, php-format
-msgid "Your address will be %s."
-msgstr "आपका पता %s होगा ।"
-
-#: template-zume-register.php:132
-msgid ""
-"Must be at least 4 characters, letters and numbers only. It cannot be changed, so choose carefully!"
-msgstr "केवल कम से कम ४ वर्ण, अक्षर और संख्या होनी चाहिए । इसे बदला नहीं जा सकता, इसलिए सावधानी से चुनें!"
-
-#: template-zume-register.php:137
-msgid "Site Title:"
-msgstr "साइट शीर्षक:"
-
-#: template-zume-register.php:151
-msgid "Site Language:"
-msgstr "साइट भाषा:"
-
-#: template-zume-register.php:178
-msgid "Privacy:"
-msgstr "गोपनीयता:"
-
-#: template-zume-register.php:179
-msgid "Allow search engines to index this site."
-msgstr "खोज इंजन को इस साइट को अनुक्रमित करने दें ।"
-
-#: template-zume-register.php:183
-msgid "Yes"
-msgstr "हाँ"
-
-#: template-zume-register.php:187
-msgid "No"
-msgstr "नहीं"
-
-#: template-zume-register.php:234
-msgid "Username:"
-msgstr "उपयोगकर्ता:"
-
-#: template-zume-register.php:239
-msgid "(Must be at least 4 characters, letters and numbers only.)"
-msgstr "(केवल ४ वर्णों, अक्षरों और संख्याओं का होना आवश्यक है.)"
-
-#: template-zume-register.php:242
-msgid "Email&nbsp;Address:"
-msgstr "ईमेल &nbsp; पता:"
-
-#: template-zume-register.php:246
-msgid ""
-"We send your registration email to this address. (Double-check your email address before continuing.)"
-msgstr "हम इस पते पर आपका पंजीकरण ईमेल भेजते हैं । (जारी रखने से पहले अपने ईमेल पते को एक बार फिर से जांचें)"
-
-#: template-zume-register.php:313
-#, php-format
-msgid "Get <em>another</em> %s site in seconds"
-msgstr "प्राप्त करें <em> एक और</em> %s साइट कुछ ही क्षणों में"
-
-#: template-zume-register.php:316
-msgid "There was a problem, please correct the form below and try again."
-msgstr "एक समस्या थी, कृपया नीचे दिए गए फ़ॉर्म को सुधारें और पुन: प्रयास करें ।"
-
-#: template-zume-register.php:319
-#, php-format
-msgid ""
-"Welcome back, %s. By filling out the form below, you can <strong>add another site to your account</"
-"strong>. There is no limit to the number of sites you can have, so create to your heart&#8217;s "
-"content, but write responsibly!"
-msgstr ""
-"वापस स्वागत है, %s. नीचे दिए फॉर्म को भरने से, आप अपने अकाउंट </strong> में एक और साइट <strong> जोड़ सकते हैं । आप "
-"अगणित साइट्स पा सकते है; साइटों की संख्या की कोई सीमा नहीं है, इसलिए अपने मन को बनाएं &#8217;s सामग्री, लेकिन "
-"जिम्मेदारी से लिखो!"
-
-#: template-zume-register.php:325
-msgid "Sites you are already a member of:"
-msgstr "साइट्स जो आप पहले से ही सदस्य हैं:"
-
-#: template-zume-register.php:334
-msgid "If you&#8217;re not going to use a great site domain, leave it for a new user. Now have at it!"
-msgstr ""
-"यदि आप &#8217; एक महान साइट डोमेन का उपयोग नहीं कर रहें, तो यह एक नए उपयोगकर्ता के लिए छोड़ दें । अब कोशिश करो!"
-
-#: template-zume-register.php:349
-msgid "Create Site"
-msgstr "साइट बनाएं"
-
-#. translators: %s: site name
-#: template-zume-register.php:474
-#, php-format
-msgid "The site %s is yours."
-msgstr "साइट %s आपकी है ।"
-
-#. translators: 1: link to new site, 2: login URL, 3: username
-#: template-zume-register.php:479
-#, php-format
-msgid ""
-"%1$s is your new site. <a href=\"%2$s\">Log in</a> as &#8220;%3$s&#8221; using your existing password."
-msgstr ""
-"%1$s आपकी नई साइट है । <a href=\"%2$s\"> लॉग इन </a> as &#8220;%3$s&#8221; अपना मौजूदा पासवर्ड का उपयोग करें "
-"।"
-
-#. translators: %s: name of the network
-#: template-zume-register.php:544
-#, php-format
-msgid "Get your own %s account in seconds"
-msgstr "कुछ ही क्षणों में अपना %s खाता प्राप्त करें"
-
-#: template-zume-register.php:561
-msgid "Gimme a site!"
-msgstr "गिंमी एक साईट!"
-
-#: template-zume-register.php:564
-msgid "Just a username, please."
-msgstr "सिर्फ एक उपयोगकर्ता नाम, कृपया ।"
-
-#. translators: %s: username
-#: template-zume-register.php:614
-#, php-format
-msgid "%s is your new username"
-msgstr "%s आपका नया उपयोगकर्ता नाम है"
-
-#: template-zume-register.php:615
-msgid "But, before you can start using your new username, <strong>you must activate it</strong>."
-msgstr ""
-"लेकिन, इससे पहले कि आप अपने नए उपयोगकर्ता नाम का उपयोग शुरू करें, <strong> आपको इसे सक्रिय करना होगा </strong>."
-
-#. translators: %s: email address
-#: template-zume-register.php:617 template-zume-register.php:764
-#, php-format
-msgid "Check your inbox at %s and click the link given."
-msgstr "आपका इनबॉक्स %s पर जांचें और दिए गए लिंक पर क्लिक करें ।"
-
-#: template-zume-register.php:618
-msgid "If you do not activate your username within two days, you will have to sign up again."
-msgstr "यदि आप अपने उपयोगकर्ता नाम को दो दिनों के भीतर सक्रिय नहीं करते हैं, तो आपको फिर से साइन-अप करना होगा ।"
-
-#: template-zume-register.php:684
-msgid "Signup"
-msgstr "साइन-अप "
-
-#. translators: %s: site address
-#: template-zume-register.php:760
-#, php-format
-msgid "Congratulations! Your new site, %s, is almost ready."
-msgstr "बधाइयाँ! आपकी नई साइट, %s, लगभग तैयार है ।"
-
-#: template-zume-register.php:762
-msgid "But, before you can start using your site, <strong>you must activate it</strong>."
-msgstr "लेकिन, इससे पहले कि आप अपनी साइट का उपयोग शुरू करें, <strong> आपको इसे सक्रिय करना होगा </strong>."
-
-#: template-zume-register.php:765
-msgid "If you do not activate your site within two days, you will have to sign up again."
-msgstr "यदि आप अपनी साइट को दो दिनों के भीतर सक्रिय नहीं करते हैं, तो आपको फिर से साइन-अप करना होगा ।"
-
-#: template-zume-register.php:766
-msgid "Still waiting for your email?"
-msgstr "अभी भी अपने ईमेल के लिए इंतज़ार कर रहे हैं?"
-
-#: template-zume-register.php:768
-msgid "If you haven&#8217;t received your email yet, there are a number of things you can do:"
-msgstr "यदि आप &#8217; अभी तक अपना ईमेल प्राप्त नहीं किए, तो भी आप बहुत सारी चिजें कर सकते हैं:"
-
-#: template-zume-register.php:770
-msgid ""
-"Wait a little longer. Sometimes delivery of email can be delayed by processes outside of our control."
-msgstr "थोड़ी देर रुकिए । कई बार ईमेल का वितरण हमारे नियंत्रण के बाहर प्रक्रियाओं द्वारा विलंबित किया जा सकता है ।"
-
-#: template-zume-register.php:771
-msgid "Check the junk or spam folder of your email client. Sometime emails wind up there by mistake."
-msgstr "अपने ईमेल क्लाइंट का जंक या स्पैम फ़ोल्डर की जांच करें । कभी-कभी गलती से इमेल्स वहां पहुँच जाते हैं ।"
-
-#. translators: %s: email address
-#: template-zume-register.php:774
-#, php-format
-msgid ""
-"Have you entered your email correctly? You have entered %s, if it&#8217;s incorrect, you will not "
-"receive your email."
-msgstr ""
-"क्या आपने अपना ईमेल सही तरीके से दर्ज किया है? आपने %s दर्ज किया है, यदि यह &#8217; s गलत है, तो आपको अपना ईमेल "
-"प्राप्त नहीं होगा ।"
-
-#: template-zume-register.php:831
-msgid "Greetings Network Administrator!"
-msgstr "अभिवादन नेटवर्क व्यवस्थापक!"
-
-#: template-zume-register.php:836
-msgid "The network currently disallows registrations."
-msgstr "नेटवर्क वर्तमान में पंजीकरण को अस्वीकृत कर देता है ।"
-
-#: template-zume-register.php:839
-msgid "The network currently allows site registrations."
-msgstr "नेटवर्क वर्तमान में साइट पंजीकरण की अनुमति देता है ।"
-
-#: template-zume-register.php:842
-msgid "The network currently allows user registrations."
-msgstr "नेटवर्क वर्तमान में उपयोगकर्ता पंजीकरण की अनुमति देता है ।"
-
-#: template-zume-register.php:845
-msgid "The network currently allows both site and user registrations."
-msgstr "नेटवर्क वर्तमान में साइट और उपयोगकर्ता दोनों पंजीकरण की अनुमति देता है ।"
-
-#. translators: %s: network settings URL
-#: template-zume-register.php:852
-#, php-format
-msgid "To change or disable registration go to your <a href=\"%s\">Options page</a>."
-msgstr "पंजीकरण बदलने या अक्षम करने के लिए अपने <a href=\"%s\"> विकल्प पृष्ठ </a> पर जाएँ."
-
-#: template-zume-register.php:860
-msgid "Registration has been disabled."
-msgstr "पंजीकरण अक्षम कर दिया गया है ।"
-
-#. translators: %s: login URL
-#: template-zume-register.php:864
-#, php-format
-msgid "You must first <a href=\"%s\">log in</a>, and then you can create a new site."
-msgstr "आपको पहले <a href =\"%s\"> लॉग-इन</a> होना है, और फिर आप नई साइट बना सकते हैं ।"
-
-#: template-zume-register.php:871
-msgid "User registration has been disabled."
-msgstr "उपयोगकर्ता पंजीकरण अक्षम कर दिया गया है ।"
-
-#: template-zume-register.php:877
-msgid "Site registration has been disabled."
-msgstr "साइट पंजीकरण अक्षम कर दिया गया है ।"
-
-#: template-zume-register.php:897
-msgid "Sorry, new registrations are not allowed at this time."
-msgstr "क्षमा करें, इस समय नए पंजीकरण की अनुमति नहीं है ।"
-
-#: template-zume-register.php:898
-msgid "You are logged in already. No need to register again!"
-msgstr "आप पहले से ही लॉग-इन हैं । फिर से पंजीकरण करने की जरूरत नहीं!"
-
-#. translators: %s: site address
-#: template-zume-register.php:906
-#, php-format
-msgid "The site you were looking for, %s, does not exist, but you can create it now!"
-msgstr "जिस साइट को आप खोज रहे थे, %s, मौजूद नहीं है, लेकिन आप इसे अभी बना सकते हैं!"
-
-#. translators: %s: site address
-#: template-zume-register.php:910
-#, php-format
-msgid "The site you were looking for, %s, does not exist."
-msgstr "जिस साइट को आप खोज रहे थे, %s, मौजूद नहीं है ।"
 
 #: template-zume-resources.php:20
 msgid "RESOURCES"
@@ -4791,10 +4264,6 @@ msgid "Zúme Stats"
 msgstr "Zúme आँकड़े"
 
 #. Template Name of the plugin/theme
-msgid "Zume Logout"
-msgstr "Zume लॉग-आउट"
-
-#. Template Name of the plugin/theme
 msgid "Zume About"
 msgstr "Zume के बारे में"
 
@@ -4813,10 +4282,6 @@ msgstr "Zume लॉग-इन"
 #. Template Name of the plugin/theme
 msgid "Zume Profile"
 msgstr "Zume प्रोफाइल"
-
-#. Template Name of the plugin/theme
-msgid "Zume Register"
-msgstr "Zume रजिस्टर"
 
 #. Template Name of the plugin/theme
 msgid "Zúme Overview"
@@ -4838,6 +4303,513 @@ msgstr "पूर्ण चौड़ाई होम"
 msgid "Zúme Course"
 msgstr "Zúme कोर्स"
 
-#, fuzzy
-#~ msgid "Zume Forgot Password"
-#~ msgstr "Zume पासवर्ड भूल गए"
+#~ msgid "Roles"
+#~ msgstr "भूमिकाएं"
+
+#~ msgid "User Roles"
+#~ msgstr "उपयोगकर्ता की भूमिकाएं"
+
+#~ msgid "OK"
+#~ msgstr "ठीक है"
+
+#~ msgid "Grant %s capability"
+#~ msgstr "मंजूर %s क्षमता"
+
+#~ msgid "Deny %s capability"
+#~ msgstr "अस्वीकार %s क्षमता"
+
+#~ msgid "Are you sure you want to delete this role? This is a permanent action and cannot be undone."
+#~ msgstr "क्या आप वाकई इस भूमिका को हटाना चाहते हैं? यह एक स्थाई क्रिया है और पूर्ववत नहीं की जा सकती ।"
+
+#~ msgid "None"
+#~ msgstr "इनमें से कोई नहीं"
+
+#~ msgid "Install Required Plugins"
+#~ msgstr "आवश्यक Plugins स्थापित करें"
+
+#~ msgid "Install Plugins"
+#~ msgstr "Plugins स्थापित करें"
+
+#~ msgid "Installing Plugin: %s"
+#~ msgstr "प्लग-इन स्थापित हो रहा है: %s"
+
+#~ msgid "Updating Plugin: %s"
+#~ msgstr "प्लग-इन अद्यतन हो रहा है: %s"
+
+#~ msgid "This theme requires the following plugin: %1$s."
+#~ msgid_plural "This theme requires the following plugins: %1$s."
+#~ msgstr[0] "इस विषयवस्तु के लिए निम्नलिखित प्लग-इन की आवश्यकता है: %1$s."
+#~ msgstr[1] "इस विषयवस्तु के लिए निम्नलिखित प्लग-इन की आवश्यकता है: %1$s."
+
+#~ msgid "This theme recommends the following plugin: %1$s."
+#~ msgid_plural "This theme recommends the following plugins: %1$s."
+#~ msgstr[0] "यह विषयवस्तु निम्नलिखित प्लग-इन्स की सलाह देती है: %1$s."
+#~ msgstr[1] "यह विषयवस्तु निम्नलिखित प्लग-इन्स की सलाह देती है: %1$s."
+
+#~ msgid ""
+#~ "The following plugin needs to be updated to its latest version to ensure maximum compatibility with "
+#~ "this theme: %1$s."
+#~ msgid_plural ""
+#~ "The following plugins need to be updated to their latest version to ensure maximum compatibility "
+#~ "with this theme: %1$s."
+#~ msgstr[0] ""
+#~ "इस विषयवस्तु के साथ अधिकतम संगतता सुनिश्चित करने के लिए निम्नलिखित प्लग-इन्स को इसके नवीनतम संस्करण में अद्यतित करने "
+#~ "की आवश्यकता है: %1$s."
+#~ msgstr[1] ""
+#~ "इस विषयवस्तु के साथ अधिकतम संगतता सुनिश्चित करने के लिए निम्नलिखित प्लग-इन्स को इसके नवीनतम संस्करण में अद्यतित करने "
+#~ "की आवश्यकता है: %1$s."
+
+#~ msgid "There is an update available for: %1$s."
+#~ msgid_plural "There are updates available for the following plugins: %1$s."
+#~ msgstr[0] "इसके लिए एक अद्यतन (अपडेट्स) उपलब्ध है: %1$s."
+#~ msgstr[1] "इसके लिए एक अद्यतन (अपडेट्स) उपलब्ध है: %1$s."
+
+#~ msgid "The following required plugin is currently inactive: %1$s."
+#~ msgid_plural "The following required plugins are currently inactive: %1$s."
+#~ msgstr[0] "निम्नलिखित आवश्यक प्लग-इन्स वर्तमान में निष्क्रिय है: %1$s."
+#~ msgstr[1] "निम्नलिखित आवश्यक प्लग-इन्स वर्तमान में निष्क्रिय है: %1$s."
+
+#~ msgid "The following recommended plugin is currently inactive: %1$s."
+#~ msgid_plural "The following recommended plugins are currently inactive: %1$s."
+#~ msgstr[0] "निम्नलिखित सिफारिश किये हुए प्लग-इन वर्तमान में निष्क्रिय है: %1$s."
+#~ msgstr[1] "निम्नलिखित सिफारिश किये हुए प्लग-इन वर्तमान में निष्क्रिय है: %1$s."
+
+#~ msgid "Begin installing plugin"
+#~ msgid_plural "Begin installing plugins"
+#~ msgstr[0] "प्लग-इन स्थापित करना शुरू करें"
+#~ msgstr[1] "प्लग-इन स्थापित करना शुरू करें"
+
+#~ msgid "Begin updating plugin"
+#~ msgid_plural "Begin updating plugins"
+#~ msgstr[0] "प्लग-इन अद्यतन शुरू करें"
+#~ msgstr[1] "प्लग-इन अद्यतन शुरू करें"
+
+#~ msgid "Begin activating plugin"
+#~ msgid_plural "Begin activating plugins"
+#~ msgstr[0] "प्लग-इन सक्रिय करना शुरू करें"
+#~ msgstr[1] "प्लग-इन सक्रिय करना शुरू करें"
+
+#~ msgid "Return to Required Plugins Installer"
+#~ msgstr "आवश्यक प्लगइन्स (Plugins) इंस्टॉलर पर लौटें"
+
+#~ msgid "Return to the Dashboard"
+#~ msgstr "डैशबोर्ड पर लौटें"
+
+#~ msgid "Plugin activated successfully."
+#~ msgstr "प्लग-इन्स सफलतापूर्वक सक्रिय ।"
+
+#~ msgid "The following plugin was activated successfully:"
+#~ msgid_plural "The following plugins were activated successfully:"
+#~ msgstr[0] "निम्नलिखित प्लग-इन सफलतापूर्वक सक्रिय किया गया था:"
+#~ msgstr[1] "निम्नलिखित प्लग-इन सफलतापूर्वक सक्रिय किया गया था:"
+
+#~ msgid "No action taken. Plugin %1$s was already active."
+#~ msgstr "कोई कार्रवाई नहीं। प्लग-इन %1$s पहले से ही सक्रिय था।"
+
+#~ msgid ""
+#~ "Plugin not activated. A higher version of %s is needed for this theme. Please update the plugin."
+#~ msgstr "प्लग-इन सक्रिय नहीं है । इस विषयवस्तु के लिए %s का उच्चतर संस्करण आवश्यक है । प्लग-इन का अद्यतन करें ।"
+
+#~ msgid "All plugins installed and activated successfully. %1$s"
+#~ msgstr "सभी प्लगइन्स इंस्टाल और सफलतापूर्वक एक्टिवेट कर दी गयी है । %1$s"
+
+#~ msgid "Dismiss this notice"
+#~ msgstr "इस नोटिस को खारिज करें"
+
+#~ msgid "There are one or more required or recommended plugins to install, update or activate."
+#~ msgstr "यहाँ एक या उससे अधिक प्लगइन्स स्थापित, अद्यतन या सक्रिय करने की जरूरत हैं या सिफारिश की गयी हैं।"
+
+#~ msgid "Please contact the administrator of this site for help."
+#~ msgstr "कृपया मदद के लिए इस साइट के व्यवस्थापक से संपर्क करें ।"
+
+#~ msgid "This plugin needs to be updated to be compatible with your theme."
+#~ msgstr "इस प्लग-इन को अपने विषय के साथ संगत होने के लिए अद्यतन करने की जरूरत है."
+
+#~ msgid "Update Required"
+#~ msgstr "अद्यतन आवश्यक"
+
+#~ msgid "Set the parent_slug config variable instead."
+#~ msgstr "इसके बजाय parent_slug config चर सेट करें ।"
+
+#~ msgid ""
+#~ "The remote plugin package does not contain a folder with the desired slug and renaming did not work."
+#~ msgstr "दूरस्थ प्लग-इन पैकेज में वह फ़ोल्डर शामिल नहीं है जिसमें इच्छित स्लग हैं और नाम बदलने का कार्य नहीं हो रहा है।"
+
+#~ msgid ""
+#~ "Please contact the plugin provider and ask them to package their plugin according to the WordPress "
+#~ "guidelines."
+#~ msgstr "कृपया प्लग-इन प्रदाता से संपर्क करें और उन्हें WordPress दिशानिर्देश के अनुसार उनके पैकेज को प्लग-इन करने को कहें।"
+
+#~ msgid ""
+#~ "The remote plugin package consists of more than one file, but the files are not packaged in a folder."
+#~ msgstr "दूरस्थ प्लग-इन पैकेज एक से अधिक फ़ाइल के होते हैं, लेकिन फ़ाइलें किसी फ़ोल्डर में पैक नहीं होती हैं ।"
+
+#~ msgctxt "plugin A *and* plugin B"
+#~ msgid "and"
+#~ msgstr "प्लग-इन A *और* प्लग-इन B और"
+
+#~ msgid "TGMPA v%s"
+#~ msgstr "TGMPA v%s"
+
+#~ msgid "Recommended"
+#~ msgstr "अनुशंसित"
+
+#~ msgid "WordPress Repository"
+#~ msgstr "वर्डप्रेस कोष"
+
+#~ msgid "External Source"
+#~ msgstr "बाहरी स्रोत"
+
+#~ msgid "Pre-Packaged"
+#~ msgstr "पूर्व पैक"
+
+#~ msgid "Not Installed"
+#~ msgstr "स्थापित नहीं"
+
+#~ msgid "Installed But Not Activated"
+#~ msgstr "इंस्टाल (स्थापित) है, लेकिन एक्टिवेट (सक्रीय) नहीं है"
+
+#~ msgid "Active"
+#~ msgstr "सक्रिय"
+
+#~ msgid "Required Update not Available"
+#~ msgstr "आवश्यक अद्यतन उपलब्ध नहीं"
+
+#~ msgid "Requires Update"
+#~ msgstr "अद्यतन की आवश्यकता है"
+
+#~ msgid "Update recommended"
+#~ msgstr "अद्यतन अनुशंसित"
+
+#~ msgctxt "Install/Update Status"
+#~ msgid "%1$s, %2$s"
+#~ msgstr "इंस्टॉल (स्थापित)/अद्यतन स्थिति %1$s,%2$s"
+
+#~ msgctxt "plugins"
+#~ msgid "All <span class=\"count\">(%s)</span>"
+#~ msgid_plural "All <span class=\"count\">(%s)</span>"
+#~ msgstr[0] "प्लगइन्स सभी <span class=“count”>(%s)</span>"
+#~ msgstr[1] "प्लगइन्स सभी <span class=“count”>(%s)</span>"
+
+#~ msgid "To Install <span class=\"count\">(%s)</span>"
+#~ msgid_plural "To Install <span class=\"count\">(%s)</span>"
+#~ msgstr[0] "इनस्टॉल करने के लिए <span class=“count”>(%s)</span>"
+#~ msgstr[1] "इनस्टॉल करने के लिए <span class=“count”>(%s)</span>"
+
+#~ msgid "Update Available <span class=\"count\">(%s)</span>"
+#~ msgid_plural "Update Available <span class=\"count\">(%s)</span>"
+#~ msgstr[0] "अद्यतन उपलब्ध <span class=“count”>(%s)</span>"
+#~ msgstr[1] "अद्यतन उपलब्ध <span class=“count”>(%s)</span>"
+
+#~ msgid "To Activate <span class=\"count\">(%s)</span>"
+#~ msgid_plural "To Activate <span class=\"count\">(%s)</span>"
+#~ msgstr[0] "सक्रीय करने के लिए <span class=“count”>(%s)</span>"
+#~ msgstr[1] "सक्रीय करने के लिए <span class=“count”>(%s)</span>"
+
+#~ msgctxt "as in: \"version nr unknown\""
+#~ msgid "unknown"
+#~ msgstr "जैसे की: “version nr unknown” अज्ञात"
+
+#~ msgid "Installed version:"
+#~ msgstr "स्थापित संस्करण:"
+
+#~ msgid "Minimum required version:"
+#~ msgstr "न्यूनतम आवश्यक संस्करण:"
+
+#~ msgid "Available version:"
+#~ msgstr "उपलब्ध संस्करण:"
+
+#~ msgid "No plugins to install, update or activate."
+#~ msgstr "कोई प्लगइन्स स्थापित नहीं, अद्यतन या सक्रिय करने के लिए ।"
+
+#~ msgid "Plugin"
+#~ msgstr "प्लग-इन"
+
+#~ msgid "Source"
+#~ msgstr "स्रोत"
+
+#~ msgid "Type"
+#~ msgstr "प्रकार"
+
+#~ msgid "Version"
+#~ msgstr "संस्करण"
+
+#~ msgid "Status"
+#~ msgstr " स्थिति"
+
+#~ msgid "Install %2$s"
+#~ msgstr "%2$s स्थापित करें"
+
+#~ msgid "Update %2$s"
+#~ msgstr "अद्यतन %2$s"
+
+#~ msgid "Activate %2$s"
+#~ msgstr "सक्रिय करें %2$s"
+
+#~ msgid "Upgrade message from the plugin author:"
+#~ msgstr "प्लग-इन लेखक से अद्यतन संदेश:"
+
+#~ msgid "Install"
+#~ msgstr "इन्स्टाल करें"
+
+#~ msgid "Activate"
+#~ msgstr "एक्टिवेट (सक्रीय) करें"
+
+#~ msgid "No plugins were selected to be installed. No action taken."
+#~ msgstr "किसी भी प्लगइन्स का चयन नहीं किया गया स्थापित (इंस्टॉल) करने के लिए। कोई कार्रवाई नहीं की गई।"
+
+#~ msgid "No plugins were selected to be updated. No action taken."
+#~ msgstr "कोई प्लगइन्स अद्यतन करने के लिए नहीं चुना गया । कोई कार्रवाई नहीं की गई ।"
+
+#~ msgid "No plugins are available to be installed at this time."
+#~ msgstr "इस समय स्थापित करने के लिए कोई प्लग-इन उपलब्ध नहीं हैं।"
+
+#~ msgid "No plugins are available to be updated at this time."
+#~ msgstr "इस समय अद्यतन करने के लिए कोई प्लग-इन्स उपलब्ध नहीं हैं ।"
+
+#~ msgid "No plugins were selected to be activated. No action taken."
+#~ msgstr "सक्रिय होने के लिए किसी भी प्लगइन्स का चुनाव नहीं किया गया हैं । कोई कार्रवाई नहीं की गई ।"
+
+#~ msgid "No plugins are available to be activated at this time."
+#~ msgstr "इस समय सक्रिय होने के लिए कोई प्लगइन्स उपलब्ध नहीं हैं ।"
+
+#~ msgid "Plugin activation failed."
+#~ msgstr "प्लग-इन सक्रियण विफल हुआ ।"
+
+#~ msgid "Updating Plugin %1$s (%2$d/%3$d)"
+#~ msgstr "अद्यतन हो रहा है प्लग-इन %1$s (%2$d/%3$d)"
+
+#~ msgid "An error occurred while installing %1$s: <strong>%2$s</strong>."
+#~ msgstr "%1$s: <strong>%2$s</strong>. स्थापित करते समय एक त्रुटि हुई ।"
+
+#~ msgid "The installation of %1$s failed."
+#~ msgstr "%1$s की इंस्टालेशन विफल रही ।"
+
+#~ msgid ""
+#~ "The installation and activation process is starting. This process may take a while on some hosts, so "
+#~ "please be patient."
+#~ msgstr ""
+#~ "इंस्टालेशन और एक्टिवेशन की प्रक्रिया शुरू हो रही है। इस प्रक्रिया में कुछ होस्ट्स पर कुछ समय लग सकता है, तो कृपया धैर्य रखें "
+#~ "।"
+
+#~ msgid "%1$s done."
+#~ msgstr "%1$s हो गया है ।"
+
+#~ msgid "All installations and activations have been completed."
+#~ msgstr "सभी इंस्टालेशन और एक्टिवेशन पुरे हो चुके है ।"
+
+#~ msgid "Installing and Activating Plugin %1$s (%2$d/%3$d)"
+#~ msgstr "%1$s (%2$d/%3$d) प्लग-इन इन्स्टाल (स्थापित)और एक्टिवेट (सक्रीय) हो रहा है"
+
+#~ msgid ""
+#~ "The installation process is starting. This process may take a while on some hosts, so please be "
+#~ "patient."
+#~ msgstr "स्थापना प्रक्रिया प्रारंभ हो रही है । इस प्रक्रिया में कुछ होस्टस पर थोड़ा समय लग सकता है, तो कृपया धैर्य रखें ।"
+
+#~ msgid "All installations have been completed."
+#~ msgstr "सभी इन्स्टालेशन्स पूरे कर लिए गए हैं ।"
+
+#~ msgid "Installing Plugin %1$s (%2$d/%3$d)"
+#~ msgstr "%1$s (%2$d/%3$d) प्लग-इन इन्स्टाल (स्थापित) हो रहा है"
+
+#~ msgid "Zume"
+#~ msgstr "Zume"
+
+#~ msgid "You do not have sufficient permissions to access this page."
+#~ msgstr "आपके पास इस पृष्ठ तक पहुंचने के लिए पर्याप्त अनुमतियां नहीं हैं ।"
+
+#~ msgid "DISCIPLE TOOLS - INTEGRATION"
+#~ msgstr "शिष्य के उपकरण - एकीकरण"
+
+#~ msgid "Google Keys"
+#~ msgstr "Google कुंजियां"
+
+#~ msgid "Languages"
+#~ msgstr "भाषाएँ"
+
+#~ msgid "Set Default Transfer Site"
+#~ msgstr "डिफ़ॉल्ट स्थानांतरण साइट सेट करें"
+
+#~ msgid "All"
+#~ msgstr "सभी"
+
+#~ msgid "New"
+#~ msgstr "नया"
+
+#~ msgid "View"
+#~ msgstr "देखें"
+
+#~ msgid "Search"
+#~ msgstr "खोजें"
+
+#~ msgid "Status:"
+#~ msgstr "स्थिति:"
+
+#~ msgid "Checking Status"
+#~ msgstr "स्थिति जांच रहे हैं"
+
+#~ msgid "Linked"
+#~ msgstr "जुड़ गए"
+
+#~ msgid "Manage Site Link"
+#~ msgstr "साइट लिंक प्रबंधित करें"
+
+#~ msgid "Configuration"
+#~ msgstr "विन्यास (कॉन्फ़िगरेशन)"
+
+#~ msgid "Token"
+#~ msgstr "टोकन"
+
+#~ msgid "If you have a token from another site, just clear token above and replace it."
+#~ msgstr "यदि आपके पास एक और साइट का टोकन है, ऊपरी टोकन को क्लिअर करें और इसे बदलें ।"
+
+#~ msgid "Site 1"
+#~ msgstr "साइट १"
+
+#~ msgid "Use just the host name. Example: www.website.com"
+#~ msgstr "केवल होस्ट नाम का उपयोग करें । उदाहरण: www.website.com"
+
+#~ msgid "Site 2"
+#~ msgstr "साइट २"
+
+#~ msgid "Approved IP Address"
+#~ msgstr "अनुमोदित IP पता"
+
+#~ msgid ""
+#~ "Enter an approved ip address to restrict responses of this connection. (format: xxx.xxx.xxx.xxx)"
+#~ msgstr ""
+#~ "इस कनेक्शन की प्रतिक्रियाओं को प्रतिबंधित करने के लिए एक अनुमोदित ip पता दर्ज करें । (प्रारूप: xxx.xxx.xxx.xxx)"
+
+#~ msgid "Connection Type"
+#~ msgstr "कनेक्शन प्रकार"
+
+#~ msgid ""
+#~ "This adds permissions needed for the labeled task. If you have trouble with a connection succeeding, "
+#~ "and a task failing. This permission setting may be the reason."
+#~ msgstr ""
+#~ "यह लेबल किए गए कार्य के लिए आवश्यक अनुमतियां जोड़ता है । यदि आपको कनेक्शन सफल होने में समस्या हो रही है, और कोई "
+#~ "कार्य विफल हो रहा है । यह अनुमति सेटिंग का कारण हो सकता है ।"
+
+#~ msgid "DT Site"
+#~ msgstr "डीटी साइट"
+
+#~ msgid "Is this connection to a Disciple Tools/Wordpress system."
+#~ msgstr "क्या यह कनेक्शन शिष्यत्व उपकरण/वर्डप्रेस सिस्टम से सम्बंधित हैं।"
+
+#~ msgid "Yes, connected to another DT site (default)"
+#~ msgstr "हां, एक और डीटी साइट से जुड़ गए (डिफ़ॉल्ट)"
+
+#~ msgid "No, connection for a non-Disciple Tools system."
+#~ msgstr "नहीं, एक गैर-शिष्य उपकरण प्रणाली के लिए कनेक्शन ।"
+
+#~ msgid "Consider Checking:"
+#~ msgstr "जांच पर विचार करें:"
+
+#~ msgid "Check if the target site is setup with identical configuration information."
+#~ msgstr "जांचें कि क्या लक्ष्य साइट समान कॉंफ़िगरेशन जानकारी के साथ सेटअप है ।"
+
+#~ msgid ""
+#~ "Check if HTTPS/SSL is enabled on both sites. Due to the transfer of data between these sites, SSL "
+#~ "encryption is required for both sites to protect the data exchange."
+#~ msgstr ""
+#~ "जांचे की दोनों साइट्स पर HTTPS/SSL सक्षम किया गया है या नहीं । इन साइट्स के बीच डेटा के स्थानांतरण के कारण, डेटा "
+#~ "विनिमय को सुरक्षित करने के लिए दोनों साइट्स के लिए SSL एंक्रिप्शन आवश्यक है ।"
+
+#~ msgid ""
+#~ "Check if the server timestamps are identical. Mismatched server times will cause decryption key "
+#~ "failures. Your server timestamp"
+#~ msgstr ""
+#~ "जांचें कि क्या सर्वर टाइमस्टैंप समरूप हैं । बेमेल सर्वर समय डिक्रिप्शन कुंजी विफलताओं का कारण होते हैं । आपके सर्वर टाइमस्टैंप"
+
+#~ msgid "Current Site"
+#~ msgstr "वर्तमान साइट"
+
+#~ msgid "Timestamp"
+#~ msgstr "टाइमस्टैम्प"
+
+#~ msgid "Compare this number to linked site. It should be identical."
+#~ msgstr "इस संख्या की लिंक्ड साइट से तुलना करें । यह समरूप होना चाहिए ।"
+
+#~ msgid "Not Linked"
+#~ msgstr "नहीं जुड़ पाए"
+
+#~ msgid "Visibility"
+#~ msgstr "दृश्यता"
+
+#~ msgid "Public (Default)"
+#~ msgstr "सार्वजनिक (डिफ़ॉल्ट)"
+
+#~ msgid "Private"
+#~ msgstr "निजी"
+
+#~ msgid "Title 1"
+#~ msgstr "शीर्षक १"
+
+#~ msgid "Message1"
+#~ msgstr "संदेश १"
+
+#~ msgid "Title 2"
+#~ msgstr "शीर्षक २"
+
+#~ msgid "Message2"
+#~ msgstr "संदेश २"
+
+#~ msgid "Title 3"
+#~ msgstr "शीर्षक ३"
+
+#~ msgid "Message3"
+#~ msgstr "संदेश ३"
+
+#~ msgid "Title 4"
+#~ msgstr "शीर्षक ४"
+
+#~ msgid "Message4"
+#~ msgstr "संदेश ४"
+
+#~ msgid "Title 5"
+#~ msgstr "शीर्षक ५"
+
+#~ msgid "Message5"
+#~ msgstr "संदेश ५"
+
+#~ msgid "Title 6"
+#~ msgstr "शीर्षक ६"
+
+#~ msgid "Message6"
+#~ msgstr "संदेश ६"
+
+#~ msgid "Title 7"
+#~ msgstr "शीर्षक ७"
+
+#~ msgid "Message7"
+#~ msgstr "संदेश ७"
+
+#~ msgid "Title 8"
+#~ msgstr "शीर्षक ८"
+
+#~ msgid "Message8"
+#~ msgstr "संदेश ८"
+
+#~ msgid "Title 9"
+#~ msgstr "शीर्षक ९"
+
+#~ msgid "Message9"
+#~ msgstr "संदेश ९"
+
+#~ msgid "Title 10"
+#~ msgstr "शीर्षक १०"
+
+#~ msgid "Message10"
+#~ msgstr "संदेश १०"
+
+#~ msgid "You have been logged out."
+#~ msgstr "आप लॉग आउट हो गए है ।"
+
+#~ msgid "Back to home page"
+#~ msgstr "मुख पृष्ठ पर वापस जाएं"
+
+#~ msgid "Zume Logout"
+#~ msgstr "Zume लॉग-आउट"
+
+#~ msgid "Zume Register"
+#~ msgstr "Zume रजिस्टर"

@@ -58,22 +58,22 @@ class Zume_Integration_Menu
             wp_die( esc_attr__( 'You do not have sufficient permissions to access this page.' ) );
         }
 
-        $title = __( 'DISCIPLE TOOLS - INTEGRATION' );
+        $title = 'DISCIPLE TOOLS - INTEGRATION';
 
         $link = 'admin.php?page=' . $this->token . '&tab=';
 
         $tab_bar = [
             [
                 'key' => 'zume_settings',
-                'label' => __( 'Settings', 'dt_zume' ),
+                'label' =>'Settings',
             ],
             [
-                'key' => 'google_keys',
-                'label' => __( 'Google Keys', 'dt_zume' ),
+                'key' => 'third_party_keys',
+                'label' => 'API Keys',
             ],
             [
                 'key' => 'languages',
-                'label' => __( 'Languages', 'dt_zume' ),
+                'label' =>'Languages',
             ]
         ];
 
@@ -117,7 +117,7 @@ class Zume_Integration_Menu
                 case "zume_settings":
                     $this->tab_zume_settings();
                     break;
-                case "google_keys":
+                case "third_party_keys":
                     $object = new Zume_Keys_Tab();
                     $object->content();
                     break;
@@ -248,11 +248,16 @@ class Zume_Integration_Menu
                 <tr>
                     <td>
                         <select id="default-site" name="default-site">
-                            <?php foreach ($keys as $key => $value ) : ?>
+                            <?php
+                            if ( ! empty( $keys ) ) :
+                                foreach ($keys as $key => $value ) : ?>
                                 <option value="<?php echo esc_attr( $key ) ?>" <?php $current_key == $key ? print esc_attr( 'selected' ) : print '';  ?> >
-                                    <?php echo esc_html( $value['label'] )?>
+                                        <?php echo esc_html( $value['label'] )?>
                                 </option>
-                            <?php endforeach; ?>
+                                    <?php
+                            endforeach;
+                            endif;
+                            ?>
                         </select>
                     </td>
                 </tr>

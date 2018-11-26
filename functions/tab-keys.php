@@ -32,7 +32,11 @@ class Zume_Keys_Tab
 
                             <?php $this->google_map_api_key_metabox() ?>
                             <br>
-                            <?php $this->get_your_own_google_key_metabox(); ?>
+                            <?php $this->google_sso_key_metabox() ?>
+                            <br>
+                            <?php $this->google_captcha_key_metabox() ?>
+                            <br>
+                            <?php $this->facebook_sso_key_metabox() ?>
 
                         </div><!-- end post-body-content -->
                         <div id="postbox-container-1" class="postbox-container">
@@ -154,58 +158,155 @@ class Zume_Keys_Tab
         return false;
     }
 
-    public function get_your_own_google_key_metabox() {
+    public function google_sso_key_metabox() {
+        $this->google_sso_key_handle_post();
+
+        $current_key = get_option( 'dt_google_sso_key' );
         ?>
-        <table class="widefat striped">
-            <thead>
-            <th colspan="2">Getting Your Own Google API Key</th>
-            </thead>
-            <tbody>
-            <tr>
-                <td>
-                    <p>Because of Google API limits, Disciple Tools default keys will overrun daily limits. Getting your
-                        own key for your site is both free and fairly simple. Follow these steps:</p>
-                    <ol>
-                        <li>First, you need a Gmail Account and to login to it. (<a href="https://myaccount.google.com"
-                                                                                    target="_blank" rel="noopener nofollow
-            noreferrer">Login</a> or <a href="https://accounts.google.com/SignUp" target="_blank" rel="noopener nofollow
-            noreferrer">Create New Gmail Account</a>)
-                        </li>
-                        <li>Next go to <a href="https://developers.google.com/maps/documentation/javascript/"
-                                          target="_blank" rel="noopener">Google Maps Javascript API key website</a>.
-                            <br><img class="img-center" title="Get a key"
-                                 src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/' ) ?>google-api-1-screenshot.png" alt="Get a key" />
-                        </li>
-                        <li>In “<strong>Activate the Google Maps JavaScript API</strong>” popup window, changed the default title (optional), select "Yes" to the Terms of Service, and then click “Next”.
-                            <br><img
-                                    title="Activate the Google Maps JavaScript API"
-                                    src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/' ) ?>google-api-2-screenshot.png"
-                                    alt="Activate the Google Maps JavaScript API" />
-                        </li>
-                        <li>After this, you will get your Google maps API key, copy it.<br>
-                            <img title="Copy API Key"
-                                    src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/' ) ?>google-api-3-screenshot.png"
-                                    alt="Copy API Key" />
-                        </li>
-                        <li>Paste this key into the "Add Your Own Key" field above and save it. That's it!</li>
-                    </ol>
+        <form method="post" name="oAuth">
+            <?php wp_nonce_field( 'dt_google_sso_key' . get_current_user_id(), 'dt_google_sso_key' . get_current_user_id() ) ?>
+            <table class="widefat striped">
+                <thead>
+                <th colspan="2">Google SSO Login/Registration oAuth Key</th>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>
+                        <label>Add Google API oAuth Login Key</label><br>
+                    </td>
+                    <td>
+                        <input type="text" name="dt_google_sso_key" id="dt_google_sso_key" style="width: 100%;" value="<?php echo esc_attr( $current_key ) ?>"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <br><span style="float:right;"><button type="submit" class="button float-right">Save</button></span>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </form>
 
-
-                </td>
-            </tr>
-            <tr><td>
-
-                    More information on the Google API limits:<br>
-                    <p><a href="https://developers.google.com/maps/pricing-and-plans/standard-plan-2016-update"
-                          target="_blank" rel="noopener">Here</a> you can get more information about all updates.
-                        Also please check all <a
-                                href="https://developers.google.com/maps/documentation/javascript/usage"
-                                target="_blank" rel="noopener">Maps JavaScript API Usage Limits</a>.</p>
-                </td></tr>
-            </tbody>
-        </table><br>
         <?php
     }
+
+    public function google_sso_key_handle_post() {
+        if ( isset( $_POST[ 'dt_google_sso_key' . get_current_user_id() ] )
+            && wp_verify_nonce( sanitize_key( wp_unslash( $_POST[ 'dt_google_sso_key' . get_current_user_id() ] ) ), 'dt_google_sso_key' . get_current_user_id() )
+            && isset( $_POST['dt_google_sso_key'] ) ) {
+            update_option( 'dt_google_sso_key', trim( sanitize_text_field( wp_unslash( $_POST['dt_google_sso_key'] ) ) ) );
+            return;
+        }
+    }
+
+    public function google_captcha_key_metabox() {
+        $this->google_captcha_key_handle_post();
+        $current_key = get_option( 'dt_google_captcha_key' );
+        $server_key = get_option( 'dt_google_captcha_server_key' );
+        ?>
+        <form method="post" name="captcha">
+            <?php wp_nonce_field( 'dt_google_captcha_key' . get_current_user_id(), 'dt_google_captcha_key' . get_current_user_id() ) ?>
+            <table class="widefat striped">
+                <thead>
+                <th colspan="2">Google Captcha Key</th>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>
+                        <label>Client Key</label><br>
+                    </td>
+                    <td>
+                        <input type="text" name="dt_google_captcha_key" id="dt_google_captcha_key" style="width: 100%;" value="<?php echo esc_attr( $current_key ) ?>"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>Server Secret Key</label><br>
+                    </td>
+                    <td>
+                        <input type="text" name="dt_google_captcha_server_key" id="dt_google_captcha_server_key" style="width: 100%;" value="<?php echo esc_attr( $server_key ) ?>"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <br><span style="float:right;"><button type="submit" class="button float-right">Save</button></span>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </form>
+
+        <?php
+    }
+
+    public function google_captcha_key_handle_post() {
+        if ( isset( $_POST[ 'dt_google_captcha_key' . get_current_user_id() ] )
+            && wp_verify_nonce( sanitize_key( wp_unslash( $_POST[ 'dt_google_captcha_key' . get_current_user_id() ] ) ), 'dt_google_captcha_key' . get_current_user_id() )
+            && isset( $_POST['dt_google_captcha_key'] )
+            && isset( $_POST['dt_google_captcha_server_key'] ) ) {
+
+            update_option( 'dt_google_captcha_key', trim( sanitize_text_field( wp_unslash( $_POST['dt_google_captcha_key'] ) ) ) );
+            update_option( 'dt_google_captcha_server_key', trim( sanitize_text_field( wp_unslash( $_POST['dt_google_captcha_server_key'] ) ) ) );
+
+            return;
+        }
+    }
+
+    /**
+     * Facebook Secret Key Metabox
+     */
+    public function facebook_sso_key_metabox() {
+        $this->facebook_sso_key_handle_post();
+
+        $pub_key = get_option( 'dt_facebook_sso_pub_key' );
+        $sec_key = get_option( 'dt_facebook_sso_sec_key' );
+        ?>
+        <form method="post" name="oAuth">
+            <?php wp_nonce_field( 'dt_facebook_sso_key' . get_current_user_id(), 'dt_facebook_sso_key' . get_current_user_id() ) ?>
+            <table class="widefat striped">
+                <thead>
+                <th colspan="2">Facebook SSO Login/Registration Secret Key</th>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>
+                        <label>Add Facebook Public Key</label><br>
+                    </td>
+                    <td>
+                        <input type="text" name="dt_facebook_sso_pub_key" id="dt_facebook_sso_pub_key" style="width: 100%;" value="<?php echo esc_attr( $pub_key ) ?>"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>Add Facebook Secret Key</label><br>
+                    </td>
+                    <td>
+                        <input type="text" name="dt_facebook_sso_sec_key" id="dt_facebook_sso_sec_key" style="width: 100%;" value="<?php echo esc_attr( $sec_key ) ?>"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <br><span style="float:right;"><button type="submit" class="button float-right">Save</button></span>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </form>
+
+        <?php
+    }
+
+    public function facebook_sso_key_handle_post() {
+        if ( isset( $_POST[ 'dt_facebook_sso_key' . get_current_user_id() ] )
+            && wp_verify_nonce( sanitize_key( wp_unslash( $_POST[ 'dt_facebook_sso_key' . get_current_user_id() ] ) ), 'dt_facebook_sso_key' . get_current_user_id() )
+            && isset( $_POST['dt_facebook_sso_pub_key'] )
+            && isset( $_POST['dt_facebook_sso_sec_key'] ) ) {
+            update_option( 'dt_facebook_sso_pub_key', trim( sanitize_text_field( wp_unslash( $_POST['dt_facebook_sso_pub_key'] ) ) ) );
+            update_option( 'dt_facebook_sso_sec_key', trim( sanitize_text_field( wp_unslash( $_POST['dt_facebook_sso_sec_key'] ) ) ) );
+            return;
+        }
+    }
+
 }
 
 function zume_default_google_api_keys() {
