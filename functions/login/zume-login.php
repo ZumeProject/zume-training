@@ -541,7 +541,6 @@ class Zume_User_Registration
                               </span>
                             </label>
                             <meter max="4" id="password-strength-meter" value="0"></meter>
-                            <!--                            <p id="password-strength-text"></p>-->
                         </div>
                         <div class="cell small-12">
                             <label><?php esc_html_e( 'Re-enter Password' ) ?> <strong>*</strong>
@@ -582,7 +581,6 @@ class Zume_User_Registration
             }
             var password = document.getElementById('password');
             var meter = document.getElementById('password-strength-meter');
-            var text = document.getElementById('password-strength-text');
 
             password.addEventListener('input', function() {
                 var val = password.value;
@@ -591,12 +589,6 @@ class Zume_User_Registration
                 // Update the password strength meter
                 meter.value = result.score;
 
-                // Update the text indicator
-                if (val !== "") {
-                    text.innerHTML = "Strength: " + strength[result.score];
-                } else {
-                    text.innerHTML = "";
-                }
             });
         </script>
         <?php // @codingStandardsIgnoreStart ?>
@@ -619,12 +611,13 @@ class Zume_User_Registration
         $args = [
             'method' => 'POST',
             'body' => [
-                'secret' => get_option( 'dt_google_captcha_key' ),
-                'response' => sanitize_text_field( wp_unslash( $_POST['g-recaptcha-response'] ) ),
+                'secret' => get_option( 'dt_google_captcha_server_key' ),
+                'response' => trim( sanitize_text_field( wp_unslash( $_POST['g-recaptcha-response'] ) ) ),
             ]
         ];
         $post_result = wp_remote_post( 'https://www.google.com/recaptcha/api/siteverify', $args );
         $post_body = json_decode( wp_remote_retrieve_body( $post_result ), true );
+        dt_write_log( $args );
         if ( ! isset( $post_body['success'] ) || false === $post_body['success'] ) {
             $error->add( __METHOD__, __( 'Captcha failure. Try again, if you are human.', 'zume' ) );
             return $error;
@@ -651,7 +644,7 @@ class Zume_User_Registration
         $username   = sanitize_user( $username );
 
         if ( email_exists( $email ) ) {
-            $error->add( __METHOD__, sprintf( __( 'Sorry. This email is already registered. %1$s Go to Login %2$s', 'zume' ), '<a href="'. zume_login_url( $current_language ).'">', '</a>' ) );
+            $error->add( __METHOD__, __( 'Sorry. This email is already registered.', 'zume' ) );
             return $error;
         }
 
@@ -693,9 +686,7 @@ Zume_User_Registration::instance();
 
 function zume_spinner( $size = '15', $echo = true ) {
     if ( $echo ) {
-        ?>
-        <img src="<?php echo esc_url( site_url() ) ?>/wp-content/themes/zume-project-multilingual/assets/images/spinner.svg" width="<?php echo esc_attr( $size ) ?>px" />
-        <?php
+        ?><img src="<?php echo esc_url( site_url() ) ?>/wp-content/themes/zume-project-multilingual/assets/images/spinner.svg" width="<?php echo esc_attr( $size ) ?>px" /><?php
     } else {
         return '<img src="'. esc_url( site_url() ) . '/wp-content/themes/zume-project-multilingual/assets/images/spinner.svg" width="'. $size .'px" />';
     }
@@ -1199,60 +1190,6 @@ function zume_retrieve_password() {
 
     return true;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/**********************************************************************************************************************
- * Customize links for signup and registration
- * @see wp-login.php:765
- */
-add_filter( 'wp_signup_location', 'zume_multisite_signup_location', 99, 1 );
-function zume_multisite_signup_location( $url ) {
-    $url = zume_get_posts_translation_url( 'Login', zume_current_language() );
-    return $url;
-}
-add_filter( 'register_url', 'zume_multisite_register_location', 99, 1 );
-function zume_multisite_register_location( $url ) {
-    $url = zume_get_posts_translation_url( 'Login', zume_current_language() ) . '/?action=registration';
-    return $url;
-}
-
-/**
- * Modify default link for login
- * @see zume-functions.php for the function
- */
-add_filter( 'login_url', 'zume_login_url', 99, 3 );
-
-/**
- * Update User IP Address location on login
- */
-add_action( 'wp_login', 'zume_login_update_ip_info', 10, 2 );
-function zume_login_update_ip_info( $user_login, $user ) {
-    zume_update_user_ip_address_and_location( $user->ID );
-}
-
-/**
- * LOGIN
- */
 /**
  * Changes the logo link from wordpress.org to your site
  */
@@ -1306,6 +1243,60 @@ function zume_verify_user_pass($user, $username, $password) {
     }
 }
 add_filter( 'authenticate', 'zume_verify_user_pass', 1, 3 );
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// @todo remove
+/**********************************************************************************************************************
+ * Customize links for signup and registration
+ * @see wp-login.php:765
+ */
+add_filter( 'wp_signup_location', 'zume_multisite_signup_location', 99, 1 );
+function zume_multisite_signup_location( $url ) {
+    $url = zume_get_posts_translation_url( 'Login', zume_current_language() );
+    return $url;
+}
+add_filter( 'register_url', 'zume_multisite_register_location', 99, 1 );
+function zume_multisite_register_location( $url ) {
+    $url = zume_get_posts_translation_url( 'Login', zume_current_language() ) . '/?action=registration';
+    return $url;
+}
+
+/**
+ * Modify default link for login
+ * @see zume-functions.php for the function
+ */
+add_filter( 'login_url', 'zume_login_url', 99, 3 );
+
+/**
+ * Update User IP Address location on login
+ */
+add_action( 'wp_login', 'zume_login_update_ip_info', 10, 2 );
+function zume_login_update_ip_info( $user_login, $user ) {
+    zume_update_user_ip_address_and_location( $user->ID );
+}
+
+/**
+ * LOGIN
+ */
+
 
 
 

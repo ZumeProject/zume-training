@@ -202,6 +202,7 @@ class Zume_Keys_Tab
     public function google_captcha_key_metabox() {
         $this->google_captcha_key_handle_post();
         $current_key = get_option( 'dt_google_captcha_key' );
+        $server_key = get_option( 'dt_google_captcha_server_key' );
         ?>
         <form method="post" name="captcha">
             <?php wp_nonce_field( 'dt_google_captcha_key' . get_current_user_id(), 'dt_google_captcha_key' . get_current_user_id() ) ?>
@@ -212,10 +213,18 @@ class Zume_Keys_Tab
                 <tbody>
                 <tr>
                     <td>
-                        <label>Secret Key</label><br>
+                        <label>Client Key</label><br>
                     </td>
                     <td>
                         <input type="text" name="dt_google_captcha_key" id="dt_google_captcha_key" style="width: 100%;" value="<?php echo esc_attr( $current_key ) ?>"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>Server Secret Key</label><br>
+                    </td>
+                    <td>
+                        <input type="text" name="dt_google_captcha_server_key" id="dt_google_captcha_server_key" style="width: 100%;" value="<?php echo esc_attr( $server_key ) ?>"/>
                     </td>
                 </tr>
                 <tr>
@@ -233,8 +242,12 @@ class Zume_Keys_Tab
     public function google_captcha_key_handle_post() {
         if ( isset( $_POST[ 'dt_google_captcha_key' . get_current_user_id() ] )
             && wp_verify_nonce( sanitize_key( wp_unslash( $_POST[ 'dt_google_captcha_key' . get_current_user_id() ] ) ), 'dt_google_captcha_key' . get_current_user_id() )
-            && isset( $_POST['dt_google_captcha_key'] ) ) {
+            && isset( $_POST['dt_google_captcha_key'] )
+            && isset( $_POST['dt_google_captcha_server_key'] ) ) {
+
             update_option( 'dt_google_captcha_key', trim( sanitize_text_field( wp_unslash( $_POST['dt_google_captcha_key'] ) ) ) );
+            update_option( 'dt_google_captcha_server_key', trim( sanitize_text_field( wp_unslash( $_POST['dt_google_captcha_server_key'] ) ) ) );
+
             return;
         }
     }

@@ -248,11 +248,16 @@ class Zume_Integration_Menu
                 <tr>
                     <td>
                         <select id="default-site" name="default-site">
-                            <?php foreach ($keys as $key => $value ) : ?>
+                            <?php
+                            if ( ! empty( $keys ) ) :
+                                foreach ($keys as $key => $value ) : ?>
                                 <option value="<?php echo esc_attr( $key ) ?>" <?php $current_key == $key ? print esc_attr( 'selected' ) : print '';  ?> >
-                                    <?php echo esc_html( $value['label'] )?>
+                                        <?php echo esc_html( $value['label'] )?>
                                 </option>
-                            <?php endforeach; ?>
+                                    <?php
+                            endforeach;
+                            endif;
+                            ?>
                         </select>
                     </td>
                 </tr>
