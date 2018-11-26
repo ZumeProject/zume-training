@@ -4,6 +4,7 @@
         "wp-coding-standards/wpcs": "*"
     },
     "require": {
-        "google/apiclient": "^2.2"
+        "google/apiclient": "^2.2",
+        "facebook/graph-sdk": "^5.6"
     }
 }

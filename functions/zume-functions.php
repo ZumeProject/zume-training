@@ -9,7 +9,7 @@
 function zume_force_login() {
 
     // if user is not logged in redirect to login
-    if ( !is_user_logged_in()) {
+    if ( ! is_user_logged_in() ) {
         auth_redirect();
     }
 }

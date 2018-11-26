@@ -12,6 +12,39 @@ if( isset( $_POST[ 'user_update_nonce' ] ) ) {
 /* Build variables for page */
 $zume_user = wp_get_current_user(); // Returns WP_User object
 $zume_user_meta = zume_get_user_meta( get_current_user_id() ); // Full array of user meta data
+
+function zume_social_link_header() {
+    ?>
+    <!--Google Sign in-->
+    <?php // @codingStandardsIgnoreStart ?>
+    <script src="https://apis.google.com/js/platform.js?onload=start" async defer></script>
+    <?php // @codingStandardsIgnoreEnd ?>
+    <script>
+        function start() {
+            gapi.load('auth2', function() {
+                auth2 = gapi.auth2.init({
+                    client_id: '<?php echo esc_attr( get_option( 'dt_google_sso_key' ) ); ?>',
+                    scope: 'profile email'
+                });
+            });
+        }
+    </script>
+    <script>
+        var verifyCallback = function(response) {
+            jQuery('#submit').prop("disabled", false);
+        };
+        var onloadCallback = function() {
+            grecaptcha.render('g-recaptcha', {
+                'sitekey' : '<?php echo esc_attr( get_option( 'dt_google_captcha_key' ) ); ?>',
+                'callback' : verifyCallback,
+            });
+        };
+    </script>
+
+
+    <?php
+}
+add_action( 'wp_head', 'zume_social_link_header' );
 ?>
 
 <?php get_header(); ?>
@@ -21,8 +54,35 @@ $zume_user_meta = zume_get_user_meta( get_current_user_id() ); // Full array of 
             <div class="large-8 medium-8 small-12 grid-margin-x cell" style="max-width: 900px; margin: 0 auto">
                 <h3 class="section-header"><?php echo esc_html__( 'Your Profile', 'zume' )?> </h3>
                 <hr size="1" style="max-width:100%"/>
-                <p><?php echo get_avatar( get_current_user_id(), '150' ); ?></p>
-                <p><a href="http://gravatar.com" class="small"><?php esc_html_e( 'edit image @ gravatar.com', 'zume' ) ?></a></p>
+                <div class="grid-x grid-padding-x">
+                    <div class="cell medium-4">
+                        <p><?php echo get_avatar( get_current_user_id(), '150' ); ?></p>
+                        <p><a href="http://gravatar.com" class="small"><?php esc_html_e( 'edit image @ gravatar.com', 'zume' ) ?></a></p>
+                    </div>
+                    <div class="cell medium-4">
+                        <?php
+                        if ( ! get_user_meta( $zume_user->ID, 'google_sso_email', true ) ) :
+                            zume_google_link_account_button();
+                        endif;
+                        ?>
+                    </div>
+                    <div class="cell medium-4">
+                        <?php
+                        if ( ! get_user_meta( $zume_user->ID, 'facebook_sso_email', true ) ) :
+                            zume_facebook_link_account_button();
+                        endif;
+                        ?>
+                    </div>
+                </div>
+
+                <style>
+                    /* Fix for button inheritance on second social sign on. */
+                    button.button {
+                        padding-top: .85em;
+                        padding-bottom: .85em;
+                    }
+                </style>
+
                 <form data-abide method="post">
 
                     <?php wp_nonce_field( "user_" . $zume_user->ID . "_update", "user_update_nonce", false, true ); ?>
@@ -84,20 +144,41 @@ $zume_user_meta = zume_get_user_meta( get_current_user_id() ); // Full array of 
                                 </span>
                             </td>
                         </tr>
-                        <?php if ( get_user_meta( $zume_user->ID, 'google_sso_email', true ) ) : ?>
+
+                        <?php if ( get_user_meta( $zume_user->ID, 'facebook_sso_email', true ) ) : ?>
                         <tr>
                             <td style="vertical-align: top;">
-                                <label for="user_email"><?php echo esc_html__( 'Linked Google Email', 'zume' )?></label>
+                                <label ><?php echo esc_html__( 'Linked Facebook Account', 'zume' )?></label>
                             </td>
                             <td>
-                                <input type="text"
-                                       class="profile-input"
-                                       value="<?php echo get_user_meta( $zume_user->ID, 'google_sso_email', true ) ?>"
-                                       readonly
-                                />
+                                <div class="input-group">
+                                    <input class="input-group-field profile-input" type="text"
+                                           value="<?php echo esc_attr( get_user_meta( $zume_user->ID, 'facebook_sso_email', true ) ) ?>" id="facebook_email" readonly />
+                                    <div class="input-group-button">
+                                        <button name="unlink_facebook" value="true" type="submit" class="button"><?php esc_attr_e( 'Unlink', 'zume' ) ?></button>
+                                    </div>
+                                </div>
                             </td>
                         </tr>
                         <?php endif; ?>
+                        <?php if ( get_user_meta( $zume_user->ID, 'google_sso_email', true ) ) : ?>
+                        <tr>
+                            <td style="vertical-align: top;">
+                                <label for="google_email"><?php echo esc_html__( 'Linked Google Account', 'zume' )?></label>
+                            </td>
+                            <td>
+                                <div class="input-group">
+                                    <input class="input-group-field profile-input" type="text"
+                                           value="<?php echo esc_attr( get_user_meta( $zume_user->ID, 'google_sso_email', true ) ) ?>" id="google_email" readonly />
+                                    <div class="input-group-button">
+                                        <button name="unlink_google" value="true" type="submit" class="button"><?php esc_attr_e( 'Unlink', 'zume' ) ?></button>
+                                    </div>
+                                </div>
+
+                            </td>
+                        </tr>
+                        <?php endif; ?>
+
                         <tr>
                             <td style="vertical-align: top;">
                                 <label for="zume_phone_number"><?php echo esc_html__( 'Phone Number', 'zume' )?></label>

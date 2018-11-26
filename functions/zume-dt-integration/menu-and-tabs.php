@@ -68,8 +68,8 @@ class Zume_Integration_Menu
                 'label' =>'Settings',
             ],
             [
-                'key' => 'google_keys',
-                'label' => 'Google Keys',
+                'key' => 'third_party_keys',
+                'label' => 'API Keys',
             ],
             [
                 'key' => 'languages',
@@ -117,7 +117,7 @@ class Zume_Integration_Menu
                 case "zume_settings":
                     $this->tab_zume_settings();
                     break;
-                case "google_keys":
+                case "third_party_keys":
                     $object = new Zume_Keys_Tab();
                     $object->content();
                     break;
