@@ -891,7 +891,6 @@ function zume_facebook_login_button() {
         })
 
     </script>
-<!--    <a onclick="fbLogIn()" id="facebook_login" class="button facebook_elements" style="width:100%;"><i class="fi-social-facebook"></i> --><?php //esc_attr_e( 'Facebook', 'zume' ); ?><!--</a>-->
     <div class="button hollow facebook_elements" id="facebook_login" style="width:100%; background-color:#3b5998; color:white;">
         <span style="float:left;">
             <img src="<?php echo get_theme_file_uri('/assets/images/flogo-HexRBG-Wht-72.png') ?>" style="width:20px;" />
@@ -943,7 +942,7 @@ function zume_facebook_link_account_button() {
             });
         }
 
-        function fbLogIn() {
+        jQuery('#facebook_login').click(function() {
             FB.login(function(response) {
                 if (response.status === 'connected') {
                     // Logged into your app and Facebook.
@@ -977,10 +976,15 @@ function zume_facebook_link_account_button() {
                     console.log('fbLogIn facebook not connected')
                 }
             }, {scope: 'email'} )
-        }
+        })
 
     </script>
-    <a onclick="fbLogIn()" id="facebook_login" class="button" style="width:100%; display:none;"><i class="fi-social-facebook"></i> <?php esc_attr_e( 'Link Facebook', 'zume' ) ?></a>
+    <div class="button hollow facebook_elements" id="facebook_login" style="width:100%; background-color:#3b5998; color:white;">
+        <span style="float:left;">
+            <img src="<?php echo get_theme_file_uri('/assets/images/flogo-HexRBG-Wht-72.png') ?>" style="width:20px;" />
+        </span>
+        <?php esc_attr_e( 'Facebook', 'zume' ) ?>
+    </div>
     <div id="facebook_error"></div>
 
     <?php
