@@ -278,8 +278,8 @@ class Zume_User_Registration
 
         try {
             $fb = new \Facebook\Facebook([
-                'app_id' => '762591594092101',
-                'app_secret' => '030f8acd0eeab4dae9c2608e49f4042a',
+                'app_id' => get_option( 'dt_facebook_sso_pub_key' ),
+                'app_secret' => get_option( 'dt_facebook_sso_sec_key' ),
                 'default_graph_version' => 'v3.2',
                 //                'default_access_token' => $params['token'],
             ]);
@@ -617,7 +617,6 @@ class Zume_User_Registration
         ];
         $post_result = wp_remote_post( 'https://www.google.com/recaptcha/api/siteverify', $args );
         $post_body = json_decode( wp_remote_retrieve_body( $post_result ), true );
-        dt_write_log( $args );
         if ( ! isset( $post_body['success'] ) || false === $post_body['success'] ) {
             $error->add( __METHOD__, __( 'Captcha failure. Try again, if you are human.', 'zume' ) );
             return $error;
@@ -812,6 +811,7 @@ function zume_facebook_link_account_button() {
             FB.getLoginStatus(function(response) {
                 if (response.status === 'connected') {
                     // Logged into your app and Facebook.
+                    jQuery('#facebook_login').show()
                     console.log('checkLoginState facebook connected')
                     console.log(response)
                 } else {
@@ -858,7 +858,7 @@ function zume_facebook_link_account_button() {
         }
 
     </script>
-    <a onclick="fbLogIn()" id="facebook_login" class="button" style="width:100%;"><i class="fi-social-facebook"></i> <?php esc_attr_e( 'Link Facebook', 'zume' ) ?></a>
+    <a onclick="fbLogIn()" id="facebook_login" class="button" style="width:100%; display:none;"><i class="fi-social-facebook"></i> <?php esc_attr_e( 'Link Facebook', 'zume' ) ?></a>
     <div id="facebook_error"></div>
 
     <?php
