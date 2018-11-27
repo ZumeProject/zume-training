@@ -338,7 +338,7 @@ switch ($request_action) {
                             </div>
 
                             <div class="cell">
-                                
+
                                 <p class="google_elements" style="display:none;">
                                     <?php zume_google_sign_in_button( ) ?>
                                 </p>
@@ -446,19 +446,15 @@ switch ($request_action) {
                         <div class="grid-x grid-padding-x grid-padding-y">
                             <div class="cell center">
                                 <img src="<?php echo esc_url( get_theme_file_uri( '/assets/images/zume-logo-white.png' ) ) ?>" />
+                                <p><span style="color:gray;"><?php esc_html_e( "Sign in using:") ?></span></p>
                             </div>
-                            <div class="cell">
-                                <div class="grid-x grid-padding-x">
-                                    <div class="cell small-6">
-                                        <?php zume_google_sign_in_button() ?>
-                                    </div>
-                                    <div class="cell small-6">
-                                    <?php zume_facebook_login_button(); ?>
-                                    </div>
-                                </div>
-                            <hr>
+                            <div class="cell small-6">
+                                <?php zume_google_sign_in_button() ?>
                             </div>
-                            <div class="cell">
+                            <div class="cell small-6">
+                                <?php zume_facebook_login_button(); ?>
+                            </div>
+                            <div class="cell" style="border-top: 1px solid lightgray;">
                                 <div class="wp_login_form">
                                     <?php
                                     $args = array(
