@@ -816,6 +816,7 @@ function zume_facebook_link_account_button() {
                     console.log(response)
                 } else {
                     // The person is not logged into this app or we are unable to tell.
+                    jQuery('#facebook_login').show()
                     console.log(' checkLoginState facebook not connected')
                 }
             });
