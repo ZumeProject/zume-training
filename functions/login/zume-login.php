@@ -557,13 +557,6 @@ class Zume_User_Registration
                     <div class="cell small-12">
                         <input type="submit" class="button button-primary" id="submit" value="<?php esc_html_e( 'Register' ) ?>" disabled />
                     </div>
-                    <script>
-                        jQuery(document).ready( function() {
-                            jQuery('#g-recaptcha-response').change( function() {
-                                console.log( 'captcha created' )
-                            })
-                        })
-                    </script>
                 </div>
             </form>
         </div>
@@ -692,23 +685,24 @@ function zume_spinner( $size = '15', $echo = true ) {
 }
 
 function zume_google_sign_in_button( $label = 'signin') {
-    if ( 'register' === $label ) {
-        $label = __( 'Register with Google', 'zume' );
-    } else {
-        $label = __( 'Login with Google', 'zume' );
-    }
     ?>
-
-    <button id="signinButton" class="button" style="width:100%;"><i class="fi-social-google-plus"></i> <?php echo esc_attr( $label ) ?></button>
+<!--    <button id="google_signinButton" class="button google_elements" style="width:100%;"><i class="fi-social-google-plus"></i> --><?php //esc_attr_e( 'Google', 'zume' ) ?><!--</button>-->
+    <div class="button hollow google_elements" id="google_signinButton" style="width:100%;">
+        <span style="float:left;">
+            <img src="<?php echo get_theme_file_uri('/assets/images/g-logo.png') ?>" style="width:20px;" />
+        </span>
+        <?php esc_attr_e( 'Google', 'zume' ) ?>
+    </div>
     <div id="google_error"></div>
+
     <script>
-        jQuery('#signinButton').click(function() {
+        jQuery('#google_signinButton').click(function() {
             auth2.signIn().then(onSignIn);
         });
 
         function onSignIn(googleUser) {
             // Useful data for your client-side scripts:
-            jQuery('#signinButton').attr('style', 'background-color: grey; width:100%;').append(' <?php zume_spinner( '15' ) ?>');
+            jQuery('#google_signinButton').attr('style', 'background-color: grey; width:100%;').append(' <?php zume_spinner( '15' ) ?>');
 
             let data = {
                 "token": googleUser.getAuthResponse().id_token
@@ -735,15 +729,55 @@ function zume_google_sign_in_button( $label = 'signin') {
                 })
         }
     </script>
-
     <?php
 }
+
+function zume_signup_header() {
+    ?>
+    <!--Google Sign in-->
+    <?php // @codingStandardsIgnoreStart ?>
+    <script src="https://apis.google.com/js/platform.js?onload=start" async defer></script>
+    <?php // @codingStandardsIgnoreEnd ?>
+
+    <script>
+        function start() {
+            gapi.load('auth2', function() {
+                auth2 = gapi.auth2.init({
+                    client_id: '<?php echo esc_attr( get_option( 'dt_google_sso_key' ) ); ?>',
+                    scope: 'profile email'
+                });
+                if ( typeof gapi !== "undefined" ) {
+                    jQuery('.google_elements').show()
+                }
+            });
+        }
+    </script>
+    <!-- Google Captcha -->
+    <script>
+        var verifyCallback = function(response) {
+            jQuery('#submit').prop("disabled", false);
+        };
+        var onloadCallback = function() {
+            grecaptcha.render('g-recaptcha', {
+                'sitekey' : '<?php echo esc_attr( get_option( 'dt_google_captcha_key' ) ); ?>',
+                'callback' : verifyCallback,
+            });
+        };
+    </script>
+    <?php
+}
+
 
 function zume_google_link_account_button() {
     $label = __( 'Link with Google', 'zume' );
     ?>
-
-    <button id="google_signinButton" class="button" style="width:100%; display:none;"><i class="fi-social-google-plus"></i> <?php echo esc_attr( $label ) ?></button>
+<!--    <button id="google_signinButton" class="button" style="width:100%; display:none;"><i class="fi-social-google-plus"></i> --><?php //echo esc_attr( $label ) ?><!--</button>-->
+    <div class="button hollow google_elements" id="google_signinButton" style="width:100%;">
+        <span style="float:left;">
+            <img src="<?php echo get_theme_file_uri('/assets/images/g-logo.png') ?>" style="width:20px;" />
+        </span>
+        <?php esc_attr_e( 'Google', 'zume' ) ?>
+    </div>
     <div id="google_error"></div>
     <script>
         jQuery('#google_signinButton').click(function() {
@@ -777,45 +811,98 @@ function zume_google_link_account_button() {
                 })
         }
     </script>
-
     <?php
 }
 
-function zume_signup_header() {
+function zume_facebook_login_button() {
+    // @see https://developers.facebook.com/apps/762591594092101/fb-login/quickstart/
     ?>
-    <!--Google Sign in-->
-    <?php // @codingStandardsIgnoreStart ?>
-    <script src="https://apis.google.com/js/platform.js?onload=start" async defer></script>
-    <?php // @codingStandardsIgnoreEnd ?>
+
+    <!--Facebook signin-->
     <script>
-        function start() {
-            gapi.load('auth2', function() {
-                auth2 = gapi.auth2.init({
-                    client_id: '<?php echo esc_attr( get_option( 'dt_google_sso_key' ) ); ?>',
-                    scope: 'profile email'
-                });
-                if ( typeof gapi !== "undefined" ) {
-                    jQuery('#google_signinButton').show()
+        window.fbAsyncInit = function() {
+            FB.init({
+                appId      : '<?php echo esc_attr( get_option( 'dt_facebook_sso_pub_key' ) ) ?>',
+                cookie     : true,
+                xfbml      : true,
+                version    : 'v3.2'
+            });
+
+            FB.AppEvents.logPageView();
+            checkLoginState()
+        };
+
+        (function(d, s, id){
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) {return;}
+            js = d.createElement(s); js.id = id;
+            js.src = "https://connect.facebook.net/en_US/sdk.js";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+
+        function checkLoginState() {
+            FB.getLoginStatus(function(response) {
+                if (response.status === 'connected') {
+                    // Logged into your app and Facebook.
+                    console.log('checkLoginState facebook connected')
+                    console.log(response)
+                    jQuery('.facebook_elements').show()
+                } else {
+                    // The person is not logged into this app or we are unable to tell.
+                    console.log(' checkLoginState facebook not connected')
+                    jQuery('.facebook_elements').show()
                 }
             });
         }
-    </script>
-    <!-- Google Captcha -->
-    <script>
-        var verifyCallback = function(response) {
-            jQuery('#submit').prop("disabled", false);
-        };
-        var onloadCallback = function() {
-            grecaptcha.render('g-recaptcha', {
-                'sitekey' : '<?php echo esc_attr( get_option( 'dt_google_captcha_key' ) ); ?>',
-                'callback' : verifyCallback,
-            });
-        };
-    </script>
 
+        jQuery('#facebook_login').click(function() {
+            FB.login(function(response) {
+                if (response.status === 'connected') {
+                    // Logged into your app and Facebook.
+                    console.log('fbLogIn facebook connected')
+
+                    let data = {
+                        "token": response.authResponse.accessToken
+                    };
+                    jQuery.ajax({
+                        type: "POST",
+                        data: JSON.stringify(data),
+                        contentType: "application/json; charset=utf-8",
+                        dataType: "json",
+                        url: '<?php echo esc_url( rest_url( '/zume/v1/register_via_facebook' ) ) ?>',
+                        beforeSend: function(xhr) {
+                            xhr.setRequestHeader('X-WP-Nonce', '<?php echo esc_attr( wp_create_nonce( 'wp_rest' ) ) ?>');
+                        },
+                    })
+                        .done(function (data) {
+                            console.log(data)
+                            if ( data ) {
+                                window.location = "<?php echo esc_url( site_url() ) ?>"
+                            }
+                        })
+                        .fail(function (err) {
+                            jQuery('#facebook_error').text( err.responseJSON['message'] )
+                            console.log("error")
+                            console.log(err)
+                        })
+                } else {
+                    // The person is not logged into this app or we are unable to tell.
+                    console.log('fbLogIn facebook not connected')
+                }
+            }, {scope: 'email'} )
+        })
+
+    </script>
+<!--    <a onclick="fbLogIn()" id="facebook_login" class="button facebook_elements" style="width:100%;"><i class="fi-social-facebook"></i> --><?php //esc_attr_e( 'Facebook', 'zume' ); ?><!--</a>-->
+    <div class="button hollow facebook_elements" id="facebook_login" style="width:100%; background-color:#3b5998; color:white;">
+        <span style="float:left;">
+            <img src="<?php echo get_theme_file_uri('/assets/images/flogo-HexRBG-Wht-72.png') ?>" style="width:20px;" />
+        </span>
+        <?php esc_attr_e( 'Facebook', 'zume' ) ?>
+    </div>
+    <div id="facebook_error"></div>
     <?php
 }
-add_action( 'wp_head', 'zume_signup_header' );
 
 function zume_facebook_link_account_button() {
     ?>
@@ -847,12 +934,12 @@ function zume_facebook_link_account_button() {
             FB.getLoginStatus(function(response) {
                 if (response.status === 'connected') {
                     // Logged into your app and Facebook.
-                    jQuery('#facebook_login').show()
+                    jQuery('.facebook_elements').show()
                     console.log('checkLoginState facebook connected')
                     console.log(response)
                 } else {
                     // The person is not logged into this app or we are unable to tell.
-                    jQuery('#facebook_login').show()
+                    jQuery('.facebook_elements').show()
                     console.log(' checkLoginState facebook not connected')
                 }
             });
@@ -900,97 +987,6 @@ function zume_facebook_link_account_button() {
 
     <?php
 }
-
-function zume_facebook_login_button( $label = 'login') {
-    // @see https://developers.facebook.com/apps/762591594092101/fb-login/quickstart/
-    if ( 'register' === $label ) {
-        $label = __( 'Register Facebook', 'zume' );
-    } else {
-        $label = __( 'Login with Facebook', 'zume' );
-    }
-    ?>
-
-    <!--Facebook signin-->
-    <script>
-        window.fbAsyncInit = function() {
-            FB.init({
-                appId      : '<?php echo esc_attr( get_option( 'dt_facebook_sso_pub_key' ) ) ?>',
-                cookie     : true,
-                xfbml      : true,
-                version    : 'v3.2'
-            });
-
-            FB.AppEvents.logPageView();
-            checkLoginState()
-
-        };
-
-        (function(d, s, id){
-            var js, fjs = d.getElementsByTagName(s)[0];
-            if (d.getElementById(id)) {return;}
-            js = d.createElement(s); js.id = id;
-            js.src = "https://connect.facebook.net/en_US/sdk.js";
-            fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'facebook-jssdk'));
-
-        function checkLoginState() {
-            FB.getLoginStatus(function(response) {
-                if (response.status === 'connected') {
-                    // Logged into your app and Facebook.
-                    console.log('checkLoginState facebook connected')
-                    console.log(response)
-                    jQuery('#facebook_login').show()
-                } else {
-                    // The person is not logged into this app or we are unable to tell.
-                    console.log(' checkLoginState facebook not connected')
-                    jQuery('#facebook_login').show()
-                }
-            });
-        }
-
-        function fbLogIn() {
-            FB.login(function(response) {
-                if (response.status === 'connected') {
-                    // Logged into your app and Facebook.
-                    console.log('fbLogIn facebook connected')
-
-                    let data = {
-                        "token": response.authResponse.accessToken
-                    };
-                    jQuery.ajax({
-                        type: "POST",
-                        data: JSON.stringify(data),
-                        contentType: "application/json; charset=utf-8",
-                        dataType: "json",
-                        url: '<?php echo esc_url( rest_url( '/zume/v1/register_via_facebook' ) ) ?>',
-                        beforeSend: function(xhr) {
-                            xhr.setRequestHeader('X-WP-Nonce', '<?php echo esc_attr( wp_create_nonce( 'wp_rest' ) ) ?>');
-                        },
-                    })
-                        .done(function (data) {
-                            console.log(data)
-                            if ( data ) {
-                                window.location = "<?php echo esc_url( site_url() ) ?>"
-                            }
-                        })
-                        .fail(function (err) {
-                            jQuery('#facebook_error').text( err.responseJSON['message'] )
-                            console.log("error")
-                            console.log(err)
-                        })
-                } else {
-                    // The person is not logged into this app or we are unable to tell.
-                    console.log('fbLogIn facebook not connected')
-                }
-            }, {scope: 'email'} )
-        }
-
-    </script>
-    <a onclick="fbLogIn()" id="facebook_login" class="button" style="width:100%; display:none;"><i class="fi-social-facebook"></i> <?php echo esc_attr( $label ) ?></a>
-    <div id="facebook_error"></div>
-    <?php
-}
-
 
 function zume_unlink_facebook_account( $user_id ) {
     if ( isset( $_POST['unlink_facebook'] ) ) {
