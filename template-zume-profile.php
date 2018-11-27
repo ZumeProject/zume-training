@@ -13,38 +13,7 @@ if( isset( $_POST[ 'user_update_nonce' ] ) ) {
 $zume_user = wp_get_current_user(); // Returns WP_User object
 $zume_user_meta = zume_get_user_meta( get_current_user_id() ); // Full array of user meta data
 
-function zume_social_link_header() {
-    ?>
-    <!--Google Sign in-->
-    <?php // @codingStandardsIgnoreStart ?>
-    <script src="https://apis.google.com/js/platform.js?onload=start" async defer></script>
-    <?php // @codingStandardsIgnoreEnd ?>
-    <script>
-        function start() {
-            gapi.load('auth2', function() {
-                auth2 = gapi.auth2.init({
-                    client_id: '<?php echo esc_attr( get_option( 'dt_google_sso_key' ) ); ?>',
-                    scope: 'profile email'
-                });
-            });
-        }
-    </script>
-    <script>
-        var verifyCallback = function(response) {
-            jQuery('#submit').prop("disabled", false);
-        };
-        var onloadCallback = function() {
-            grecaptcha.render('g-recaptcha', {
-                'sitekey' : '<?php echo esc_attr( get_option( 'dt_google_captcha_key' ) ); ?>',
-                'callback' : verifyCallback,
-            });
-        };
-    </script>
-
-
-    <?php
-}
-add_action( 'wp_head', 'zume_social_link_header' );
+add_action( 'wp_head', 'zume_signup_header' );
 ?>
 
 <?php get_header(); ?>
