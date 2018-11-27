@@ -686,7 +686,6 @@ function zume_spinner( $size = '15', $echo = true ) {
 
 function zume_google_sign_in_button( $label = 'signin') {
     ?>
-<!--    <button id="google_signinButton" class="button google_elements" style="width:100%;"><i class="fi-social-google-plus"></i> --><?php //esc_attr_e( 'Google', 'zume' ) ?><!--</button>-->
     <div class="button hollow google_elements" id="google_signinButton" style="width:100%;">
         <span style="float:left;">
             <img src="<?php echo get_theme_file_uri('/assets/images/g-logo.png') ?>" style="width:20px;" />
@@ -771,7 +770,6 @@ function zume_signup_header() {
 function zume_google_link_account_button() {
     $label = __( 'Link with Google', 'zume' );
     ?>
-<!--    <button id="google_signinButton" class="button" style="width:100%; display:none;"><i class="fi-social-google-plus"></i> --><?php //echo esc_attr( $label ) ?><!--</button>-->
     <div class="button hollow google_elements" id="google_signinButton" style="width:100%;">
         <span style="float:left;">
             <img src="<?php echo get_theme_file_uri('/assets/images/g-logo.png') ?>" style="width:20px;" />

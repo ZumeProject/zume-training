@@ -338,6 +338,7 @@ switch ($request_action) {
                             </div>
 
                             <div class="cell">
+                                
                                 <p class="google_elements" style="display:none;">
                                     <?php zume_google_sign_in_button( ) ?>
                                 </p>
