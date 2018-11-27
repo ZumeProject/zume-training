@@ -278,8 +278,8 @@ class Zume_User_Registration
 
         try {
             $fb = new \Facebook\Facebook([
-                'app_id' => '762591594092101',
-                'app_secret' => '030f8acd0eeab4dae9c2608e49f4042a',
+                'app_id' => get_option( 'dt_facebook_sso_pub_key' ),
+                'app_secret' => get_option( 'dt_facebook_sso_sec_key' ),
                 'default_graph_version' => 'v3.2',
                 //                'default_access_token' => $params['token'],
             ]);
@@ -617,7 +617,6 @@ class Zume_User_Registration
         ];
         $post_result = wp_remote_post( 'https://www.google.com/recaptcha/api/siteverify', $args );
         $post_body = json_decode( wp_remote_retrieve_body( $post_result ), true );
-        dt_write_log( $args );
         if ( ! isset( $post_body['success'] ) || false === $post_body['success'] ) {
             $error->add( __METHOD__, __( 'Captcha failure. Try again, if you are human.', 'zume' ) );
             return $error;
