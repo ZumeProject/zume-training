@@ -743,16 +743,16 @@ function zume_google_link_account_button() {
     $label = __( 'Link with Google', 'zume' );
     ?>
 
-    <button id="signinButton" class="button" style="width:100%;"><i class="fi-social-google-plus"></i> <?php echo esc_attr( $label ) ?></button>
+    <button id="google_signinButton" class="button" style="width:100%; display:none;"><i class="fi-social-google-plus"></i> <?php echo esc_attr( $label ) ?></button>
     <div id="google_error"></div>
     <script>
-        jQuery('#signinButton').click(function() {
+        jQuery('#google_signinButton').click(function() {
             auth2.signIn().then(onSignIn);
         });
 
         function onSignIn(googleUser) {
             // Useful data for your client-side scripts:
-            jQuery('#signinButton').attr('style', 'background-color: grey; width:100%;').append(' <?php zume_spinner( '15' ) ?>');
+            jQuery('#google_signinButton').attr('style', 'background-color: grey; width:100%;').append(' <?php zume_spinner( '15' ) ?>');
 
             let data = {
                 "token": googleUser.getAuthResponse().id_token
@@ -780,6 +780,42 @@ function zume_google_link_account_button() {
 
     <?php
 }
+
+function zume_signup_header() {
+    ?>
+    <!--Google Sign in-->
+    <?php // @codingStandardsIgnoreStart ?>
+    <script src="https://apis.google.com/js/platform.js?onload=start" async defer></script>
+    <?php // @codingStandardsIgnoreEnd ?>
+    <script>
+        function start() {
+            gapi.load('auth2', function() {
+                auth2 = gapi.auth2.init({
+                    client_id: '<?php echo esc_attr( get_option( 'dt_google_sso_key' ) ); ?>',
+                    scope: 'profile email'
+                });
+                if ( typeof gapi !== "undefined" ) {
+                    jQuery('#google_signinButton').show()
+                }
+            });
+        }
+    </script>
+    <!-- Google Captcha -->
+    <script>
+        var verifyCallback = function(response) {
+            jQuery('#submit').prop("disabled", false);
+        };
+        var onloadCallback = function() {
+            grecaptcha.render('g-recaptcha', {
+                'sitekey' : '<?php echo esc_attr( get_option( 'dt_google_captcha_key' ) ); ?>',
+                'callback' : verifyCallback,
+            });
+        };
+    </script>
+
+    <?php
+}
+add_action( 'wp_head', 'zume_signup_header' );
 
 function zume_facebook_link_account_button() {
     ?>
@@ -903,9 +939,11 @@ function zume_facebook_login_button( $label = 'login') {
                     // Logged into your app and Facebook.
                     console.log('checkLoginState facebook connected')
                     console.log(response)
+                    jQuery('#facebook_login').show()
                 } else {
                     // The person is not logged into this app or we are unable to tell.
                     console.log(' checkLoginState facebook not connected')
+                    jQuery('#facebook_login').show()
                 }
             });
         }
@@ -948,7 +986,7 @@ function zume_facebook_login_button( $label = 'login') {
         }
 
     </script>
-    <a onclick="fbLogIn()" id="facebook_login" class="button" style="width:100%;"><i class="fi-social-facebook"></i> <?php echo esc_attr( $label ) ?></a>
+    <a onclick="fbLogIn()" id="facebook_login" class="button" style="width:100%; display:none;"><i class="fi-social-facebook"></i> <?php echo esc_attr( $label ) ?></a>
     <div id="facebook_error"></div>
     <?php
 }
