@@ -28,14 +28,14 @@ add_action( 'wp_head', 'zume_signup_header' );
                         <p><?php echo get_avatar( get_current_user_id(), '150' ); ?></p>
                         <p><a href="http://gravatar.com" class="small"><?php esc_html_e( 'edit image @ gravatar.com', 'zume' ) ?></a></p>
                     </div>
-                    <div class="cell medium-4">
+                    <div class="cell medium-4 google_elements">
                         <?php
                         if ( ! get_user_meta( $zume_user->ID, 'google_sso_email', true ) ) :
                             zume_google_link_account_button();
                         endif;
                         ?>
                     </div>
-                    <div class="cell medium-4">
+                    <div class="cell medium-4 facebook_elements">
                         <?php
                         if ( ! get_user_meta( $zume_user->ID, 'facebook_sso_email', true ) ) :
                             zume_facebook_link_account_button();

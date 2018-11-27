@@ -853,7 +853,7 @@ function zume_facebook_login_button() {
             });
         }
 
-        jQuery('#facebook_login').click(function() {
+        function facebook_signin() {
             FB.login(function(response) {
                 if (response.status === 'connected') {
                     // Logged into your app and Facebook.
@@ -888,10 +888,14 @@ function zume_facebook_login_button() {
                     console.log('fbLogIn facebook not connected')
                 }
             }, {scope: 'email'} )
+        }
+
+        jQuery('#facebook_login').click(function() {
+            facebook_signin()
         })
 
     </script>
-    <div class="button hollow facebook_elements" id="facebook_login" style="width:100%; background-color:#3b5998; color:white;">
+    <div class="button hollow facebook_elements" onclick="facebook_signin()" id="facebook_login" style="width:100%; background-color:#3b5998; color:white;">
         <span style="float:left;">
             <img src="<?php echo get_theme_file_uri('/assets/images/flogo-HexRBG-Wht-72.png') ?>" style="width:20px;" />
         </span>
@@ -942,7 +946,7 @@ function zume_facebook_link_account_button() {
             });
         }
 
-        jQuery('#facebook_login').click(function() {
+        function facebook_signin() {
             FB.login(function(response) {
                 if (response.status === 'connected') {
                     // Logged into your app and Facebook.
@@ -976,10 +980,14 @@ function zume_facebook_link_account_button() {
                     console.log('fbLogIn facebook not connected')
                 }
             }, {scope: 'email'} )
+        }
+
+        jQuery('#facebook_login').click(function() {
+            facebook_signin()
         })
 
     </script>
-    <div class="button hollow facebook_elements" id="facebook_login" style="width:100%; background-color:#3b5998; color:white;">
+    <div class="button hollow facebook_elements" onclick="facebook_signin()"  id="facebook_login" style="width:100%; background-color:#3b5998; color:white; display:none;">
         <span style="float:left;">
             <img src="<?php echo get_theme_file_uri('/assets/images/flogo-HexRBG-Wht-72.png') ?>" style="width:20px;" />
         </span>
