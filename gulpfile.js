@@ -4,6 +4,7 @@ var gulp  = require('gulp'),
     gutil = require('gulp-util'),
     browserSync = require('browser-sync').create(),
     filter = require('gulp-filter'),
+    touch = require('gulp-touch-cmd'),
     plugin = require('gulp-load-plugins')(),
     chmod = require('gulp-chmod');
 
@@ -127,6 +128,7 @@ gulp.task('styles', function() {
     .pipe(plugin.cssnano())
     .pipe(plugin.sourcemaps.write('.'))
     .pipe(gulp.dest(ASSETS.styles))
+    .pipe(touch())
     .pipe(browserSync.reload({
       stream: true
     }));
