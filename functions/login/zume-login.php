@@ -555,7 +555,7 @@ class Zume_User_Registration
                         <div class="g-recaptcha" id="g-recaptcha"></div><br>
                     </div>
                     <div class="cell small-12">
-                        <input type="submit" class="button button-primary" id="submit" value="<?php esc_html_e( 'Register' ) ?>" disabled />
+                        <input type="submit" class="button button-primary" id="submit"  value="<?php esc_html_e( 'Register' ) ?>" disabled />
                     </div>
                 </div>
             </form>
@@ -895,7 +895,7 @@ function zume_facebook_login_button() {
         })
 
     </script>
-    <div class="button hollow facebook_elements" onclick="facebook_signin()" id="facebook_login" style="width:100%; background-color:#3b5998; color:white;">
+    <div class="button hollow facebook_elements" onclick="facebook_signin()" id="facebook_login" style="width:100%; background-color:#3b5998; color:white; display:none;">
         <span style="float:left;">
             <img src="<?php echo get_theme_file_uri('/assets/images/flogo-HexRBG-Wht-72.png') ?>" style="width:20px;" />
         </span>

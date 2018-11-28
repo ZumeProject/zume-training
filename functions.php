@@ -16,6 +16,7 @@ require_once 'functions/activator.php';
 $wpdb->zume_logging = $wpdb->prefix . 'zume_logging';
 require_once( 'functions/post-types/video-post-type.php' );
 require_once( 'functions/post-types/pdf-download-post-type.php' );
+require_once( 'functions/log-rocket-tracking.php' );
 
 /**
  * We want to make sure migrations are run on updates.
@@ -39,7 +40,6 @@ require_once( 'functions/zume-polylang-integration.php' ); // Adds support for m
 
 // Zume Theme Files
 require_once( 'functions/login/zume-login.php' ); // Customize the login page
-//require_once( 'functions/login/zume-register.php' ); // new Zume registration process
 require_once( 'functions/enqueue-scripts.php' ); // Register scripts and stylesheets
 require_once( 'functions/utilities/tgm-config.php' ); // monitors required plugin dependencies
 require_once( 'functions/utilities/theme-support.php' ); // Theme support options
