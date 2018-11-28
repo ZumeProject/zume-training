@@ -332,24 +332,24 @@ switch ($request_action) {
                         <div class="grid-x grid-padding-x grid-padding-y">
                             <div class="cell center" style="padding-bottom: 0;">
                                 <h2 style="font-weight: bolder;">
-                                    <?php esc_html_e( "Let's get started.") ?>
+                                    <?php esc_html_e( "Let's get started." ) ?>
                                 </h2>
-                                <span style="color:gray;"><?php esc_html_e( "Sign up using:") ?></span>
+                                <span style="color:gray;"><?php esc_html_e( "Sign up using:" ) ?></span>
                             </div>
 
                             <div class="cell">
 
                                 <p class="google_elements" style="display:none;">
-                                    <?php zume_google_sign_in_button( ) ?>
+                                    <?php zume_google_sign_in_button() ?>
                                 </p>
                                 <p class="facebook_elements" style="display:none;">
-                                    <?php zume_facebook_login_button( ); ?>
+                                    <?php zume_facebook_login_button(); ?>
                                 </p>
 
                                 <span><hr /></span>
                                 <div class="button hollow" onclick="jQuery('#email_signup_form').toggle();" style="width:100%;">
                                     <span style="float:left;">
-                                        <img src="<?php echo get_theme_file_uri('/assets/images/public_mail_hollow.png') ?>" style="width:20px;" />
+                                        <img src="<?php echo esc_url( get_theme_file_uri( '/assets/images/public_mail_hollow.png' ) ) ?>" style="width:20px;" />
                                     </span>
                                     <?php esc_attr_e( 'Email', 'zume' ) ?>
                                 </div>
@@ -446,7 +446,7 @@ switch ($request_action) {
                         <div class="grid-x grid-padding-x grid-padding-y">
                             <div class="cell center">
                                 <img src="<?php echo esc_url( get_theme_file_uri( '/assets/images/zume-logo-white.png' ) ) ?>" />
-                                <p><span style="color:gray;"><?php esc_html_e( "Sign in using:") ?></span></p>
+                                <p><span style="color:gray;"><?php esc_html_e( "Sign in using:" ) ?></span></p>
                             </div>
                             <div class="cell small-6">
                                 <?php zume_google_sign_in_button() ?>

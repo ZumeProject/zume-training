@@ -93,6 +93,10 @@ class Zume_User_Registration
             return new WP_Error( __METHOD__, 'Failed Google Verification of User Token' ); // Invalid ID token
         }
 
+        if ( empty( $user_email ) ) {
+            return new WP_Error( __METHOD__, __( 'Email is a required permission for login and registration.', 'zume' ) );
+        }
+
 
         $user_id = $this->query_google_email( $user_email );
         // if no google_sso_email found and user with email does not exist
@@ -281,7 +285,6 @@ class Zume_User_Registration
                 'app_id' => get_option( 'dt_facebook_sso_pub_key' ),
                 'app_secret' => get_option( 'dt_facebook_sso_sec_key' ),
                 'default_graph_version' => 'v3.2',
-                //                'default_access_token' => $params['token'],
             ]);
         } catch ( Exception $exception ) {
             return new WP_Error( __METHOD__, __( 'Failed to connect with Facebook. Try again.', 'zume' ), $exception );
@@ -309,7 +312,12 @@ class Zume_User_Registration
             return new WP_Error( __METHOD__, __( 'Error with looking up user with Facebook. Sorry for the inconvenience.', 'zume' ), $e->getMessage() );
         }
 
+        if ( empty( $user_email ) ) {
+            return new WP_Error( __METHOD__, __( 'Email is a required permission for login and registration.', 'zume' ) );
+        }
+
         $user_id = $this->query_facebook_email( $user_email );
+
         // if no google_sso_email found and user with email does not exist
         if ( empty( $user_id ) && ! email_exists( $user_email ) ) {
 
@@ -367,7 +375,7 @@ class Zume_User_Registration
 
 
         // add google id if needed
-        if ( ! ( $facebook_user_id = get_user_meta( $user_id, 'facebook_sso_id' ) ) ) {
+        if ( ! get_user_meta( $user_id, 'facebook_sso_id' ) ) {
             update_user_meta( $user_id, 'facebook_sso_id', $facebook_user_id );
         }
 
@@ -688,7 +696,7 @@ function zume_google_sign_in_button( $label = 'signin') {
     ?>
     <div class="button hollow google_elements" id="google_signinButton" style="width:100%;">
         <span style="float:left;">
-            <img src="<?php echo get_theme_file_uri('/assets/images/g-logo.png') ?>" style="width:20px;" />
+            <img src="<?php echo esc_url( get_theme_file_uri( '/assets/images/g-logo.png' ) ) ?>" style="width:20px;" />
         </span>
         <?php esc_attr_e( 'Google', 'zume' ) ?>
     </div>
@@ -772,7 +780,7 @@ function zume_google_link_account_button() {
     ?>
     <div class="button hollow google_elements" id="google_signinButton" style="width:100%;">
         <span style="float:left;">
-            <img src="<?php echo get_theme_file_uri('/assets/images/g-logo.png') ?>" style="width:20px;" />
+            <img src="<?php echo esc_url( get_theme_file_uri( '/assets/images/g-logo.png' ) ) ?>" style="width:20px;" />
         </span>
         <?php esc_attr_e( 'Google', 'zume' ) ?>
     </div>
@@ -897,7 +905,7 @@ function zume_facebook_login_button() {
     </script>
     <div class="button hollow facebook_elements" onclick="facebook_signin()" id="facebook_login" style="width:100%; background-color:#3b5998; color:white; display:none;">
         <span style="float:left;">
-            <img src="<?php echo get_theme_file_uri('/assets/images/flogo-HexRBG-Wht-72.png') ?>" style="width:20px;" />
+            <img src="<?php echo esc_url( get_theme_file_uri( '/assets/images/flogo-HexRBG-Wht-72.png' ) ) ?>" style="width:20px;" />
         </span>
         <?php esc_attr_e( 'Facebook', 'zume' ) ?>
     </div>
@@ -989,7 +997,7 @@ function zume_facebook_link_account_button() {
     </script>
     <div class="button hollow facebook_elements" onclick="facebook_signin()"  id="facebook_login" style="width:100%; background-color:#3b5998; color:white; display:none;">
         <span style="float:left;">
-            <img src="<?php echo get_theme_file_uri('/assets/images/flogo-HexRBG-Wht-72.png') ?>" style="width:20px;" />
+            <img src="<?php echo esc_url( get_theme_file_uri( '/assets/images/flogo-HexRBG-Wht-72.png' ) ) ?>" style="width:20px;" />
         </span>
         <?php esc_attr_e( 'Facebook', 'zume' ) ?>
     </div>
