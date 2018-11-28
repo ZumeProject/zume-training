@@ -692,53 +692,6 @@ function zume_spinner( $size = '15', $echo = true ) {
     }
 }
 
-function zume_google_sign_in_button( $label = 'signin') {
-    ?>
-    <div class="button hollow google_elements" id="google_signinButton" style="width:100%;">
-        <span style="float:left;">
-            <img src="<?php echo esc_url( get_theme_file_uri( '/assets/images/g-logo.png' ) ) ?>" style="width:20px;" />
-        </span>
-        <?php esc_attr_e( 'Google', 'zume' ) ?>
-    </div>
-    <div id="google_error"></div>
-
-    <script>
-        jQuery('#google_signinButton').click(function() {
-            auth2.signIn().then(onSignIn);
-        });
-
-        function onSignIn(googleUser) {
-            // Useful data for your client-side scripts:
-            jQuery('#google_signinButton').attr('style', 'background-color: grey; width:100%;').append(' <?php zume_spinner( '15' ) ?>');
-
-            let data = {
-                "token": googleUser.getAuthResponse().id_token
-            };
-            jQuery.ajax({
-                type: "POST",
-                data: JSON.stringify(data),
-                contentType: "application/json; charset=utf-8",
-                dataType: "json",
-                url: '<?php echo esc_url( rest_url( '/zume/v1/register_via_google' ) ) ?>',
-                beforeSend: function(xhr) {
-                    xhr.setRequestHeader('X-WP-Nonce', '<?php echo esc_attr( wp_create_nonce( 'wp_rest' ) ) ?>');
-                },
-            })
-                .done(function (data) {
-                    console.log(data)
-                    window.location = "<?php echo esc_url( esc_url( site_url() ) ) ?>"
-                })
-                .fail(function (err) {
-                    signOut()
-                    jQuery('#google_error').text( err.responseJSON['message'] )
-                    console.log("error")
-                    console.log(err)
-                })
-        }
-    </script>
-    <?php
-}
-
 function zume_signup_header() {
     ?>
     <!--Google Sign in-->
@@ -774,11 +727,57 @@ function zume_signup_header() {
     <?php
 }
 
+function zume_google_sign_in_button( $type = 'signin' ) {
+    ?>
+    <div class="button hollow google_elements" id="google_signinButton" style="width:100%;display:none;">
+        <span style="float:left;">
+            <img src="<?php echo esc_url( get_theme_file_uri( '/assets/images/g-logo.png' ) ) ?>" style="width:20px;" />
+        </span>
+        <?php esc_attr_e( 'Google', 'zume' ) ?>
+    </div>
+    <div id="google_error"></div>
+
+    <script>
+        jQuery('#google_signinButton').click(function() {
+            auth2.signIn().then(onSignIn);
+        });
+
+        function onSignIn(googleUser) {
+            // Useful data for your client-side scripts:
+            jQuery('#google_signinButton').attr('style', 'background-color: grey; width:100%;').append(' <?php zume_spinner( '15' ) ?>');
+
+            let data = {
+                "token": googleUser.getAuthResponse().id_token
+            };
+            jQuery.ajax({
+                type: "POST",
+                data: JSON.stringify(data),
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                url: '<?php echo esc_url( rest_url( '/zume/v1/register_via_google' ) ) ?>',
+                beforeSend: function(xhr) {
+                    xhr.setRequestHeader('X-WP-Nonce', '<?php echo esc_attr( wp_create_nonce( 'wp_rest' ) ) ?>');
+                },
+            })
+                .done(function (data) {
+                    console.log(data)
+                    window.location = "<?php echo esc_url( zume_dashboard_url() ) ?>"
+                })
+                .fail(function (err) {
+                    signOut()
+                    jQuery('#google_error').text( err.responseJSON['message'] )
+                    console.log("error")
+                    console.log(err)
+                })
+        }
+    </script>
+    <?php
+}
 
 function zume_google_link_account_button() {
     $label = __( 'Link with Google', 'zume' );
     ?>
-    <div class="button hollow google_elements" id="google_signinButton" style="width:100%;">
+    <div class="button hollow google_elements" id="google_signinButton" style="width:100%; display:none;">
         <span style="float:left;">
             <img src="<?php echo esc_url( get_theme_file_uri( '/assets/images/g-logo.png' ) ) ?>" style="width:20px;" />
         </span>
@@ -883,7 +882,7 @@ function zume_facebook_login_button() {
                         .done(function (data) {
                             console.log(data)
                             if ( data ) {
-                                window.location = "<?php echo esc_url( site_url() ) ?>"
+                                window.location = "<?php echo esc_url( zume_dashboard_url() ) ?>"
                             }
                         })
                         .fail(function (err) {
