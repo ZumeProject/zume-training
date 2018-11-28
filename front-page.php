@@ -47,7 +47,14 @@ if ( is_user_logged_in() ) {
                 </div>
 
                 <div class="grid-x grid-margin-x grid-margin-y vertical-padding" style="max-width:100%; margin:0; background:white; padding:17px; color: #0A246A; font-size: 24px">
-                    <div class="cell show-for-small-only center"><a href="<?php echo esc_url( zume_register_url( zume_current_language() ) ); ?>" alt="Register" class="button large center " style="background:white; color:#323a68; font-family:'europa-regular'; padding:0.5em 2em"><?php esc_html_e( 'Get Started', 'zume' ) ?></a></div>
+                    <div class="cell show-for-small-only center">
+                        <a href="<?php echo esc_url( zume_register_url( zume_current_language() ) ); ?>" alt="Register" class="button large center " style="background:white; color:#323a68; font-family:'europa-regular'; padding:0.5em 2em">
+                            <?php esc_html_e( 'Get Started', 'zume' ) ?>
+                        </a>
+                        <a href="<?php echo esc_url( zume_login_url( zume_current_language() ) ); ?>" alt="Login" class="button large center" style="background:white; color:#323a68; font-family:'europa-regular'; padding:0.5em 2em">
+                            <?php esc_html_e( 'Login', 'zume' ) ?>
+                        </a>
+                    </div>
                     <div class="medium-3 small-2 cell"></div>
                     <div class="medium-6 small-8 cell center">
                         <?php esc_html_e( "Zúme Training is an on-line and in-life learning experience designed for small groups who follow Jesus to learn how to obey His Great Commission and make disciples who multiply.", 'zume' ) ?>
