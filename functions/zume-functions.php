@@ -10,9 +10,8 @@ function zume_force_login() {
 
     // if user is not logged in redirect to login
     if ( ! is_user_logged_in() ) {
-        wp_safe_redirect( zume_login_url( zume_current_language() ) );
+        wp_safe_redirect( zume_login_url( ) );
         exit;
-//        auth_redirect();
     }
 }
 
