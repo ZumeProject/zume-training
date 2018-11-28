@@ -7,7 +7,7 @@
 
 function zume_add_logrocket_to_head() {
 $user = wp_get_current_user();
-if ( ! is_admin() ) :
+if ( ! is_admin() && 'https://zumeproject.com' == site_url() ) :
 ?>
 <script src="https://cdn.logrocket.io/LogRocket.min.js" crossorigin="anonymous"></script>
 <script>window.LogRocket && window.LogRocket.init('mkpicf/zumeproject');</script>
