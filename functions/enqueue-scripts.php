@@ -76,6 +76,8 @@ function zume_site_scripts() {
                 "failed_to_remove" => esc_html__( 'Failed to remove item.', 'zume' ),
                 "failed_to_change" => esc_html__( 'Failed to change item.', 'zume' ),
                 "print_copyright" => esc_html__( 'Three Month Plan - Zúme Project', 'zume' ),
+                "we_got_it" => esc_html__( 'We got it!', 'zume' ),
+                "we_got_it_message" => esc_html__( 'We\'re a volunteer network, so give us a few days. We\'ll reach out to you soon as possible!', 'zume' )
             ]
         )
     );

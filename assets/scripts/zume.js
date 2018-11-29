@@ -289,4 +289,45 @@ function print_element(divId) {
 }
 
 
+function send_coaching_request() {
+    let spinner = jQuery('#request_spinner')
+    spinner.html('<img src="'+ zumeMaps.theme_uri +'/assets/images/spinner.svg" style="width: 40px; vertical-align:top; margin-left: 5px;" />')
 
+    let name = jQuery('#zume_full_name').val()
+    let phone = jQuery('#zume_phone_number').val()
+    let email = jQuery('#user_email').val()
+    let address = jQuery('#address_profile').val()
+    let preference = jQuery('#zume_contact_preference').val()
+    let affiliation_key = jQuery('#zume_affiliation_key').val()
+
+    let data = {
+        "zume_full_name": name,
+        "zume_phone_number": phone,
+        "user_email": email,
+        "address_profile": address,
+        "zume_contact_preference": preference,
+        "zume_affiliation_key": affiliation_key
+    }
+    console.log(data)
+
+    jQuery.ajax({
+        type: "POST",
+        data: JSON.stringify(data),
+        contentType: "application/json; charset=utf-8",
+        dataType: "json",
+        url: zumeMaps.root + 'zume/v1/send_coaching_request',
+        beforeSend: function(xhr) {
+            xhr.setRequestHeader('X-WP-Nonce', zumeMaps.nonce);
+        },
+    })
+        .done(function (data) {
+            console.log(data)
+            jQuery('#coach-modal-title').empty().html(zumeMaps.translations.we_got_it)
+            jQuery('#coaching-request-form-section').empty().html("<div class='grid-x'><div class='cell center'><p>"+ zumeMaps.translations.we_got_it_message+"</p></div></div>")
+        })
+        .fail(function (err) {
+            console.log("error")
+            console.log(err)
+            spinner.empty().html( '&nbsp;Oops. Something went wrong. Try again!')
+        })
+}
