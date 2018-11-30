@@ -225,7 +225,7 @@ class Zume_Integration_Endpoints
 
         // updated user record with submitted record
         if ( isset( $result['status'] ) && 'OK' === $result['status'] ) {
-            update_user_meta( $user->ID, 'zume_transferred', 1 );
+            update_user_meta( $user->ID, 'zume_transferred', current_time('timestamp' ) );
             return __( 'Successfully send!' );
         } else {
             update_user_meta( $user->ID, 'zume_transferred', 0 );

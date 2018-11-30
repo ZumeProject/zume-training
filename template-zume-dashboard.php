@@ -1045,14 +1045,13 @@ endif; // check if $zume_colead_groups is no empty
 /********************************************************************************************* -->
 <!-- REQUEST COACHING -->
 <!-- *********************************************************************************************/
-if ( true  ) : // reset variable without coleader data // @todo build section to be a visitor greeting modal
     ?>
     <!-- Edit current groups section -->
     <div class="small reveal" id="new-registration-tour" data-reveal>
         <h1 class="primary-color" id="coach-modal-title"><?php echo esc_html__( 'Connect Me to a Coach', 'zume' ) ?></h1>
         <hr>
 
-        <?php if ( true ) : ?>
+        <?php if ( ! $transfer_time = get_user_meta( $zume_user->ID, 'zume_transferred', true ) ) : ?>
 
         <div class="grid-x" id="coaching-request-form-section">
             <div class="cell">
@@ -1175,7 +1174,11 @@ if ( true  ) : // reset variable without coleader data // @todo build section to
                                 <input id="zume_contact_preference2" name="zume_contact_preference" type="radio" value="text" data-abide-ignore>
                                 <label for="zume_contact_preference2"><?php esc_attr_e( 'Text', 'zume' ) ?></label>
                                 <input id="zume_contact_preference3" name="zume_contact_preference" type="radio" value="phone" data-abide-ignore>
-                                <label for="zume_contact_preference3"><?php esc_attr_e( 'Phone', 'zume' ) ?></label>
+                                <label for="zume_contact_preference3"><?php esc_attr_e( 'Phone', 'zume' ) ?></label><br>
+                                <input id="zume_contact_preference3" name="zume_contact_preference" type="radio" value="whatsapp" data-abide-ignore>
+                                <label for="zume_contact_preference3"><?php esc_attr_e( 'WhatsApp', 'zume' ) ?></label>
+                                <input id="zume_contact_preference3" name="zume_contact_preference" type="radio" value="other" data-abide-ignore>
+                                <label for="zume_contact_preference3"><?php esc_attr_e( 'Other', 'zume' ) ?></label>
                             </fieldset>
 
                         </td>
@@ -1216,24 +1219,30 @@ if ( true  ) : // reset variable without coleader data // @todo build section to
         <button class="close-button" data-close aria-label="Close modal" type="button">
             <span aria-hidden="true">&times;</span>
         </button>
-    </div>
 
     <?php else: ?>
 
     <!-- Already submitted -->
     <div class="grid-x">
         <div class="cell">
-
+            <div class="grid-x">
+                <div class="cell callout warning">
+                    <?php esc_html_e( 'Thank you. You have already requested a coach connection.', 'zume' ) ?> (<?php echo date_i18n('m-d-Y', esc_attr( $transfer_time ) ) ?>)
+                </div>
+            </div>
         </div>
     </div>
 
+    <button class="close-button" data-close aria-label="Close modal" type="button">
+        <span aria-hidden="true">&times;</span>
+    </button>
+
     <?php endif; ?>
 
-<?php
-//
-endif;
-?>
+</div> <!-- End of reveal -->
 
 <?php
+
 do_action( 'zume_dashboard_footer' );
+
 get_footer();
