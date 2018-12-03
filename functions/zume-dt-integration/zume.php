@@ -60,7 +60,7 @@ class Zume_Integration
         $user_data = $this->get_transfer_user_array( $user_id );
 
         // check if user has groups, if so then stop.
-        $groups = Zume_Dashboard::get_current_user_groups( $user_id );
+        $groups = $this->get_all_groups( $user_id );
         if ( ! empty( $groups ) ) {
             foreach ( $groups as $key => $group ) {
                 $groups[$key]['zume_check_sum'] = md5( serialize( $group ) );
@@ -98,6 +98,32 @@ class Zume_Integration
         $result = zume_integration_remote_send( 'coaching_request', $site['url'], $args );
         $body = json_decode( wp_remote_retrieve_body( $result ), true );
         return $body;
+    }
+
+    public function get_all_groups( $user_id ) {
+        // check if user has groups, if so then stop.
+        $groups = Zume_Dashboard::get_current_user_groups( $user_id );
+        if ( ! empty( $groups ) ) {
+            foreach ( $groups as $key => $group ) {
+                $groups[$key]['zume_check_sum'] = md5( serialize( $group ) );
+            }
+        }
+
+        $user = get_user_by( 'id', $user_id );
+        $zume_colead_groups = Zume_Dashboard::get_colead_groups( 'accepted', $user );
+        if ( ! empty( $zume_colead_groups ) ) {
+            foreach ( $zume_colead_groups as $zume_colead_key => $zume_colead_value ) {
+                $groups[ $zume_colead_key ] = $zume_colead_value;
+                $groups[ $zume_colead_key ]['zume_check_sum'] = md5( serialize( $zume_colead_value ) );
+            }
+        }
+
+        if ( ! empty( $groups ) ) {
+            $groups['groups_check_sum'] = md5( serialize( $groups ) );
+            return $groups;
+        } else {
+            return [];
+        }
     }
 
 

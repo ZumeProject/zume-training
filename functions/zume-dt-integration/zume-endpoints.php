@@ -88,6 +88,8 @@ class Zume_Integration_Endpoints
             && ! empty( $params['zume_foreign_key'] )
             && isset( $params['zume_check_sum'] )
             && ! empty( $params['zume_check_sum'] )
+            && isset( $params['zume_groups_check_sum'] )
+            && ! empty( $params['zume_groups_check_sum'] )
             && isset( $params['type'] )
             && ! empty( $params['type'] )
             ) {
@@ -99,20 +101,24 @@ class Zume_Integration_Endpoints
                         return new WP_Error( 'user_lookup_failure', 'Did not find user.' );
                     }
 
-                    // prepare user data
-                    $zume = new Zume_Integration();
-                    $user_data = $zume->get_transfer_user_array( $user_id );
-
                     // check supplied check_sum
                     $check_sum = get_user_meta( $user_id, 'zume_check_sum', true );
-                    if ( $check_sum == $params['zume_check_sum'] ) {
+                    $zume_groups_check_sum = get_user_meta( $user_id, 'zume_groups_check_sum', true );
+
+                    if ( $check_sum == $params['zume_check_sum'] && $zume_groups_check_sum == $params['zume_groups_check_sum'] ) {
                         return [
                         'status' => 'OK'
                         ];
                     } else {
+                        // prepare user data
+                        $zume = new Zume_Integration();
+                        $user_data = $zume->get_transfer_user_array( $user_id );
+                        $group_data = $zume->get_all_groups( $user_id );
+
                         return [
                         'status' => 'Update_Needed',
                         'raw_record' => $user_data,
+                        'raw_group_records' => $group_data,
                         ];
                     }
                 } elseif ( $params['type'] === 'group' ) {
