@@ -61,20 +61,6 @@ class Zume_Integration
 
         // check if user has groups, if so then stop.
         $groups = $this->get_all_groups( $user_id );
-        if ( ! empty( $groups ) ) {
-            foreach ( $groups as $key => $group ) {
-                $groups[$key]['zume_check_sum'] = md5( serialize( $group ) );
-            }
-        }
-
-        $zume_colead_groups = Zume_Dashboard::get_colead_groups();
-        if ( ! empty( $zume_colead_groups ) ) {
-            foreach ( $zume_colead_groups as $zume_colead_key => $zume_colead_value ) {
-                $groups[ $zume_colead_key ] = $zume_colead_value;
-                $groups[ $zume_colead_key ]['zume_check_sum'] = md5( serialize( $zume_colead_value ) );
-            }
-        }
-
 
         // Get target site for transfer
         $site_key = $this->filter_for_site_key( $user_data, $user_id );

@@ -1045,7 +1045,7 @@ endif; // check if $zume_colead_groups is no empty
 /********************************************************************************************* -->
 <!-- REQUEST COACHING -->
 <!-- *********************************************************************************************/
-    ?>
+?>
     <!-- Edit current groups section -->
     <div class="small reveal" id="new-registration-tour" data-reveal>
         <h1 class="primary-color" id="coach-modal-title"><?php echo esc_html__( 'Connect Me to a Coach', 'zume' ) ?></h1>
@@ -1066,7 +1066,7 @@ endif; // check if $zume_colead_groups is no empty
 
                     <div class="cell small-6">
                         <i class="fi-compass secondary-color" style="font-size:4em; vertical-align: middle;"></i>
-                        &nbsp;<span style="font-size:2em; vertical-align: middle;"><?php esc_html_e( 'Advocates', 'zume') ?></span>
+                        &nbsp;<span style="font-size:2em; vertical-align: middle;"><?php esc_html_e( 'Advocates', 'zume' ) ?></span>
                         <p><?php esc_html_e( 'A coach is someone who will come alongside you as you implement the Zúme tools and training.', 'zume' ) ?></p>
                     </div>
 
@@ -1078,7 +1078,7 @@ endif; // check if $zume_colead_groups is no empty
 
                     <div class="cell small-6">
                         <i class="fi-dollar secondary-color" style="font-size:4em; vertical-align: middle;"></i>
-                        &nbsp;<span style="font-size:2em; vertical-align: middle;text-wrap: none;"><?php esc_html_e( "It's Free", 'zume') ?></span>
+                        &nbsp;<span style="font-size:2em; vertical-align: middle;text-wrap: none;"><?php esc_html_e( "It's Free", 'zume' ) ?></span>
                         <p><?php esc_html_e( 'Coaching is free. You can opt out at any time.', 'zume' ) ?></p>
                     </div>
 
@@ -1220,14 +1220,14 @@ endif; // check if $zume_colead_groups is no empty
             <span aria-hidden="true">&times;</span>
         </button>
 
-    <?php else: ?>
+    <?php else : ?>
 
     <!-- Already submitted -->
     <div class="grid-x">
         <div class="cell">
             <div class="grid-x">
                 <div class="cell callout warning">
-                    <?php esc_html_e( 'Thank you. You have already requested a coach connection.', 'zume' ) ?> (<?php echo date_i18n('m-d-Y', esc_attr( $transfer_time ) ) ?>)
+                    <?php esc_html_e( 'Thank you. You have already requested a coach connection.', 'zume' ) ?> (<?php echo esc_attr( date_i18n( 'm-d-Y', esc_attr( $transfer_time ) ) ) ?>)
                 </div>
             </div>
         </div>

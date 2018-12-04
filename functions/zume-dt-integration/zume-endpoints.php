@@ -231,11 +231,11 @@ class Zume_Integration_Endpoints
 
         // updated user record with submitted record
         if ( isset( $result['status'] ) && 'OK' === $result['status'] ) {
-            update_user_meta( $user->ID, 'zume_transferred', current_time('timestamp' ) );
+            update_user_meta( $user->ID, 'zume_transferred', current_time( 'timestamp' ) );
             return __( 'Successfully send!' );
         } else {
             update_user_meta( $user->ID, 'zume_transferred', 0 );
-            $result->add( 'error_message', __('Failed to send request. Please try again.' ) );
+            $result->add( 'error_message', __( 'Failed to send request. Please try again.' ) );
             return $result;
         }
     }
