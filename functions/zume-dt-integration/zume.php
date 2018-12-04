@@ -68,10 +68,13 @@ class Zume_Integration
         }
 
         $zume_colead_groups = Zume_Dashboard::get_colead_groups();
-        foreach ( $zume_colead_groups as $zume_colead_key => $zume_colead_value ) {
-            $groups[ $zume_colead_key ] = $zume_colead_value;
-            $groups[ $zume_colead_key ]['zume_check_sum'] = md5( serialize( $zume_colead_value ) );
+        if ( ! empty( $zume_colead_groups ) ) {
+            foreach ( $zume_colead_groups as $zume_colead_key => $zume_colead_value ) {
+                $groups[ $zume_colead_key ] = $zume_colead_value;
+                $groups[ $zume_colead_key ]['zume_check_sum'] = md5( serialize( $zume_colead_value ) );
+            }
         }
+
 
         // Get target site for transfer
         $site_key = $this->filter_for_site_key( $user_data, $user_id );
