@@ -62,6 +62,12 @@ function zume_get_translation( $post_id, $slug = 'en' ) {
     }
 }
 
+/**
+ * @param        $page_title
+ * @param string $slug
+ *
+ * @return string|\WP_Error
+ */
 function zume_get_posts_translation_url( $page_title, $slug = 'en' ) {
 
     if ( function_exists( 'pll_the_languages' ) ) {

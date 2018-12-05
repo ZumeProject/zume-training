@@ -195,7 +195,12 @@ function zume_register_url( $current_language = null ) {
         $current_language = zume_current_language();
     }
     if ( 'en' != $current_language && ! empty( $current_language ) ) {
-        $url = zume_get_posts_translation_url( 'Login', $current_language ) . '/?action=register';
+        $trans_url = zume_get_posts_translation_url( 'Login', $current_language );
+        if ( empty( $trans_url ) || is_wp_error( $trans_url ) ) {
+            $url = site_url() . '/login/?action=register';
+        } else {
+            $url = zume_get_posts_translation_url( 'Login', $current_language ) . '/?action=register';
+        }
     } else {
         $url = site_url() . '/login/?action=register';
     }

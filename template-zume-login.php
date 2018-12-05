@@ -458,7 +458,7 @@ switch ($request_action) {
                                 <div class="wp_login_form">
                                     <?php
                                     $args = array(
-                                        'redirect' => site_url(),
+                                        'redirect' => zume_dashboard_url(),
                                         'id_username' => 'user',
                                         'id_password' => 'pass',
                                         'value_remember' => true,

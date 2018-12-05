@@ -231,14 +231,14 @@ class Zume_Overview_Content {
         ?>
         <br>
         <div class="grid-x grid-margin-x">
-            <div class="large-1 cell"></div>
-            <div class="large-10 cell center">
+            <div class="large-3 small-1 cell"></div>
+            <div class="large-6 small-10 cell center">
                 <div class="callout">
                     <p class="center padding-bottom"><?php echo esc_html__( 'Go to the Dashboard to select your Group and start the next session', 'zume' ) ?></p>
                     <p class="center"><a href="<?php echo esc_html( zume_dashboard_url() ); ?>" class="button large"><?php echo esc_html__( 'Dashboard', 'zume' ) ?></a></p>
                 </div>
             </div>
-            <div class="large-1 cell"></div>
+            <div class="large-3 small-1 cell"></div>
         </div>
 
         <?php
