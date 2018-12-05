@@ -1,14 +1,16 @@
 msgid ""
 msgstr ""
-"Plural-Forms: nplurals=1; plural=0;\n"
 "Project-Id-Version: Zúme Project\n"
-"POT-Creation-Date: 2018-09-24 12:50-0600\n"
-"PO-Revision-Date: 2018-10-29 07:10+0700\n"
+"POT-Creation-Date: 2018-12-05 07:01-0700\n"
+"PO-Revision-Date: 2018-12-05 07:14-0700\n"
+"Last-Translator: \n"
 "Language-Team: \n"
+"Language: id_ID\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.2\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 2.1.1\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-Flags-xgettext: --add-comments=translators:\n"
 "X-Poedit-WPHeader: style.css\n"
@@ -16,22 +18,19 @@ msgstr ""
 "X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
 "esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
 "_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
-"Last-Translator: \n"
-"Language: id_ID\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 
-#: 404.php:12
-msgid "Epic 404 - Article Not Found"
-msgstr "Epik 404 - artikel tidak ditemukan"
+#: front-page.php:52 front-page.php:171
+msgid "Get Started"
+msgstr "Memulai"
 
-#: 404.php:16
-msgid ""
-"The article you were looking for was not found, but maybe try looking again!"
-msgstr ""
-"Artikel yang Anda cari tidak ditemukan, tetapi mungkin coba mencari lagi!"
+#: front-page.php:55 functions/zume-polylang-integration.php:148
+#: template-zume-login.php:382
+msgid "Login"
+msgstr "Masuk"
 
-#: front-page.php:52
+#: front-page.php:60
 msgid ""
 "Zúme Training is an on-line and in-life learning experience designed for "
 "small groups who follow Jesus to learn how to obey His Great Commission and "
@@ -42,11 +41,11 @@ msgstr ""
 "bagaimana untuk mematuhi Amanat AgungNya dan menjadikan murid-murid yang "
 "berlipat ganda."
 
-#: front-page.php:65
+#: front-page.php:73
 msgid "Zúme consists of 10 sessions, 2 hours each:"
 msgstr "Zúme terdiri dari 10 sesi, masing-masing 2 jam :"
 
-#: front-page.php:73 template-zume-about.php:74
+#: front-page.php:81 template-zume-about.php:74
 msgid ""
 "Video and Audio to help your group understand basic principles of "
 "multiplying disciples."
@@ -54,20 +53,20 @@ msgstr ""
 "Video dan Audio untuk membantu kelompok Anda memahami prinsip-prinsip dasar "
 "melipat gandakan murid."
 
-#: front-page.php:81 template-zume-about.php:75
+#: front-page.php:89 template-zume-about.php:75
 msgid "Group Discussions to help your group think through what’s being shared."
 msgstr ""
 "Diskusi kelompok untuk membantu kelompok Anda memikirkan apa yang sedang "
 "dibagi."
 
-#: front-page.php:89 template-zume-about.php:76
+#: front-page.php:97 template-zume-about.php:76
 msgid ""
 "Simple Exercises to help your group put what you’re learning into practice."
 msgstr ""
 "Latihan sederhana untuk membantu kelompok Anda mempraktekkan apa yang Anda "
 "pelajari."
 
-#: front-page.php:97 template-zume-about.php:77
+#: front-page.php:105 template-zume-about.php:77
 msgid ""
 "Session Challenges to help your group keep learning and growing between "
 "sessions."
@@ -75,31 +74,27 @@ msgstr ""
 "Sesi tantangan untuk membantu kelompok Anda terus belajar dan tumbuh di sela-"
 "sela sesi."
 
-#: front-page.php:110
+#: front-page.php:118
 msgid "Want to start the training?"
 msgstr "Ingin memulai pelatihan?"
 
-#: front-page.php:124
+#: front-page.php:132
 msgid "It's as easy as 1-2-3"
 msgstr "Itu semudah 1-2-3"
 
-#: front-page.php:133
+#: front-page.php:141
 msgid "Sign up"
 msgstr "Mendaftar"
 
-#: front-page.php:143
+#: front-page.php:151
 msgid "Invite some friends"
 msgstr "Undang teman"
 
-#: front-page.php:153
+#: front-page.php:161
 msgid "Host a training"
 msgstr "Memimpin pelatihan"
 
-#: front-page.php:163
-msgid "Get Started"
-msgstr "Memulai"
-
-#: front-page.php:194
+#: front-page.php:204
 msgid "Find out more about Zúme"
 msgstr "Cari tahu lebih jau tentang Zume"
 
@@ -112,7 +107,7 @@ msgid "Coach Leader"
 msgstr "Pemimpin Pembimbingan"
 
 #: functions/enqueue-scripts.php:55 functions/enqueue-scripts.php:57
-#: template-zume-dashboard.php:895 template-zume-dashboard.php:1008
+#: template-zume-dashboard.php:905 template-zume-dashboard.php:1018
 msgid "Cancel"
 msgstr "Batal"
 
@@ -125,7 +120,6 @@ msgid "Finish"
 msgstr "Selesai"
 
 #: functions/enqueue-scripts.php:59 functions/utilities/menu.php:108
-#: template-zume-register.php:568
 msgid "Next"
 msgstr "Berikutnya"
 
@@ -137,8 +131,8 @@ msgstr "Sebelumnya"
 msgid "Loading..."
 msgstr "Memuat."
 
-#: functions/enqueue-scripts.php:75 template-zume-dashboard.php:859
-#: template-zume-dashboard.php:893
+#: functions/enqueue-scripts.php:75 template-zume-dashboard.php:869
+#: template-zume-dashboard.php:903
 msgid "Delete"
 msgstr "Hapus"
 
@@ -154,88 +148,164 @@ msgstr "Gagal mengubah item."
 msgid "Three Month Plan - Zúme Project"
 msgstr "Rencana Tiga Bulan - Proyek Zume"
 
-#: functions/login/registration.php:98
-msgid "First Name (optional for coaching)"
-msgstr "Nama Pertama (pilihan untuk pembimbingan)"
-
-#: functions/login/registration.php:102
-msgid "Last Name (optional for coaching)"
-msgstr "Nama Terakhir (pilihan untuk pembimbingan)"
-
-#: functions/login/registration.php:106
-msgid "Phone Number (optional for coaching)"
-msgstr "Nomor Telepon (pilihan untuk pembimbingan)"
-
-#: functions/login/registration.php:110
-msgid "Address (optional for coaching)"
-msgstr "Alamat (pilihan untuk pembimbingan)"
-
-#: functions/login/registration.php:121
-msgid "Affiliation Key (optional)"
-msgstr "Afiliasi (pilihan)"
-
-#: functions/login/registration.php:145
-msgid ""
-"<strong>ERROR</strong>: We can not recognize this address as valid location. "
-"Please, check spelling."
+#: functions/enqueue-scripts.php:79
+msgid "We got it!"
 msgstr ""
-"<strong>ERROR</strong>: Kami tidak mengenali alamat ini sebagai alamat yang "
-"sah. Silakan periksa ejaannya."
 
-#: functions/login/registration.php:260 template-zume-profile.php:89
-msgid "Phone Number"
-msgstr "Nomor Telepon"
-
-#: functions/login/registration.php:261
-msgid "User Address"
-msgstr "Alamat Pengguna"
-
-#: functions/login/registration.php:262
-msgid "GeoCoded IP"
-msgstr "GeoCoded IP"
-
-#: functions/multi-role/class-user-edit.php:84
-#: functions/multi-role/functions-admin.php:145
-msgid "Roles"
-msgstr "Peranan"
-
-#: functions/multi-role/class-user-edit.php:89
-msgid "User Roles"
-msgstr "Peranan Pengguna"
-
-#: functions/multi-role/functions-admin.php:38
-#: functions/post-types/pdf-download-post-type.php:136
-#: functions/post-types/video-post-type.php:136
-#: functions/zume-dt-integration/site-link-post-type.php:315
-#: functions/zume-dt-integration/site-link-post-type.php:316
-msgid "Edit"
-msgstr "Sunting"
-
-#: functions/multi-role/functions-admin.php:39
-msgid "OK"
-msgstr "OK"
-
-#: functions/multi-role/functions-admin.php:40
-#, php-format
-msgid "Grant %s capability"
-msgstr "Diberikan %s kapabilitas"
-
-#: functions/multi-role/functions-admin.php:41
-#, php-format
-msgid "Deny %s capability"
-msgstr "Ditolak %s kapabilitas"
-
-#: functions/multi-role/functions-admin.php:42
+#: functions/enqueue-scripts.php:80
 msgid ""
-"Are you sure you want to delete this role? This is a permanent action and "
-"cannot be undone."
+"We're a volunteer network, so give us a few days. We'll reach out to you "
+"soon as possible!"
 msgstr ""
-"Apakah Anda yakin ingin menghapus peranan ini? Ini tindakan yang permanen "
-"dan tidak dapat dibatalkan."
 
-#: functions/multi-role/functions-admin.php:174
-msgid "None"
-msgstr "Tidak ada"
+#: functions/login/zume-login.php:97 functions/login/zume-login.php:316
+msgid "Email is a required permission for login and registration."
+msgstr ""
+
+#: functions/login/zume-login.php:209 functions/login/zume-login.php:441
+msgid "No user found."
+msgstr ""
+
+#: functions/login/zume-login.php:280 functions/login/zume-login.php:406
+msgid "You are missing your sign-in token. Try signing in again."
+msgstr ""
+
+#: functions/login/zume-login.php:290 functions/login/zume-login.php:416
+msgid "Failed to connect with Facebook. Try again."
+msgstr "Gagal terhubung dengan URL yang disediakan."
+
+#: functions/login/zume-login.php:309 functions/login/zume-login.php:432
+msgid "Facebook user lookup error. Sorry for the inconvenience."
+msgstr ""
+
+#: functions/login/zume-login.php:312 functions/login/zume-login.php:435
+msgid "Error with looking up user with Facebook. Sorry for the inconvenience."
+msgstr ""
+
+#: functions/login/zume-login.php:536
+msgid "There are some errors in your form."
+msgstr ""
+
+#: functions/login/zume-login.php:541 template-zume-dashboard.php:1122
+#: template-zume-dashboard.php:1173 template-zume-login.php:354
+#: template-zume-profile.php:127
+msgid "Email"
+msgstr "Email"
+
+#: functions/login/zume-login.php:545 template-zume-login.php:242
+msgid "Password Required"
+msgstr "Dibutuhkan"
+
+#: functions/login/zume-login.php:548 template-zume-login.php:245
+msgid "Password required"
+msgstr ""
+
+#: functions/login/zume-login.php:554 template-zume-login.php:252
+msgid "Re-enter Password"
+msgstr ""
+
+#: functions/login/zume-login.php:557 template-zume-login.php:255
+msgid "Passwords do not match. Please, try again."
+msgstr ""
+
+#: functions/login/zume-login.php:566
+#: functions/zume-polylang-integration.php:149 template-zume-login.php:481
+msgid "Register"
+msgstr "Mendaftar"
+
+#: functions/login/zume-login.php:609
+msgid "Missing captcha response. How did you do that?"
+msgstr ""
+
+#: functions/login/zume-login.php:622
+msgid "Captcha failure. Try again, if you are human."
+msgstr ""
+
+#: functions/login/zume-login.php:628
+msgid "Missing email or password."
+msgstr ""
+
+#: functions/login/zume-login.php:647
+msgid "Sorry. This email is already registered."
+msgstr ""
+
+#: functions/login/zume-login.php:658
+msgid "Something went wrong. Sorry. Could you try again?"
+msgstr "Ada yang salah dengan Plugins API."
+
+#: functions/login/zume-login.php:680
+msgid "No new user found."
+msgstr ""
+
+#: functions/login/zume-login.php:736 functions/login/zume-login.php:784
+msgid "Google"
+msgstr "Kunci Google"
+
+#: functions/login/zume-login.php:778
+msgid "Link with Google"
+msgstr ""
+
+#: functions/login/zume-login.php:909 functions/login/zume-login.php:1001
+msgid "Facebook"
+msgstr ""
+
+#: functions/login/zume-login.php:1142
+msgid "Missing username or email address."
+msgstr ""
+
+#: functions/login/zume-login.php:1148
+msgid "ERROR: Enter a username or email address."
+msgstr ""
+
+#: functions/login/zume-login.php:1152
+msgid "ERROR: There is no user registered with that email address."
+msgstr ""
+
+#: functions/login/zume-login.php:1157
+msgid "ERROR: There is no user registered with that username."
+msgstr ""
+
+#: functions/login/zume-login.php:1177
+msgid "<strong>ERROR</strong>: Invalid username or email."
+msgstr ""
+
+#: functions/login/zume-login.php:1200
+msgid "Someone has requested a password reset for the following account:"
+msgstr ""
+
+#. translators: %s: site name
+#: functions/login/zume-login.php:1202
+#, php-format
+msgid "Site Name: %s"
+msgstr "Nama Situs:"
+
+#. translators: %s: user login
+#: functions/login/zume-login.php:1204
+#, php-format
+msgid "Username: %s"
+msgstr "Nama pengguna"
+
+#: functions/login/zume-login.php:1205
+msgid "If this was a mistake, just ignore this email and nothing will happen."
+msgstr ""
+
+#: functions/login/zume-login.php:1206
+msgid "To reset your password, visit the following address:"
+msgstr ""
+
+#. translators: Password reset email subject. %s: Site name
+#: functions/login/zume-login.php:1210
+#, php-format
+msgid "[%s] Password Reset"
+msgstr ""
+
+#: functions/login/zume-login.php:1240
+msgid "The email could not be sent."
+msgstr ""
+
+#: functions/login/zume-login.php:1240
+msgid "Possible reason: your host may have disabled the mail() function."
+msgstr ""
 
 #: functions/post-types/pdf-download-post-type.php:131
 #: functions/post-types/pdf-download-post-type.php:132
@@ -248,14 +318,17 @@ msgstr "Semua Unduhan Zume"
 
 #: functions/post-types/pdf-download-post-type.php:134
 #: functions/post-types/video-post-type.php:134
-#: functions/zume-dt-integration/site-link-post-type.php:313
-#: functions/zume-dt-integration/site-link-post-type.php:314
 msgid "Add New"
 msgstr "Tambhakan Baru"
 
 #: functions/post-types/pdf-download-post-type.php:135
 msgid "Add New Zume Download"
 msgstr "Tambahkan Unduhan Zume Baru"
+
+#: functions/post-types/pdf-download-post-type.php:136
+#: functions/post-types/video-post-type.php:136
+msgid "Edit"
+msgstr "Sunting"
 
 #: functions/post-types/pdf-download-post-type.php:137
 msgid "Edit Zume Download"
@@ -275,13 +348,11 @@ msgstr "Cari Unduhan Zume"
 
 #: functions/post-types/pdf-download-post-type.php:141
 #: functions/post-types/video-post-type.php:141
-#: functions/zume-dt-integration/site-link-post-type.php:320
 msgid "Nothing found in the Database."
 msgstr "Tidak ditemukan dalam Basis Data."
 
 #: functions/post-types/pdf-download-post-type.php:142
 #: functions/post-types/video-post-type.php:142
-#: functions/zume-dt-integration/site-link-post-type.php:321
 msgid "Nothing found in Trash"
 msgstr "Tidak ditemukan dalam Tempat Sampah"
 
@@ -293,13 +364,11 @@ msgstr "Katalog video Zume untuk video bahasa"
 #. translators: Publish box date format, see http://php.net/date
 #: functions/post-types/pdf-download-post-type.php:256
 #: functions/post-types/video-post-type.php:256
-#: functions/zume-dt-integration/site-link-post-type.php:430
 msgid "M j, Y @ G:i"
 msgstr "M j, Y @ G:i"
 
 #: functions/post-types/pdf-download-post-type.php:451
 #: functions/post-types/video-post-type.php:459
-#: functions/zume-dt-integration/site-link-post-type.php:893
 msgid "Enter the title here"
 msgstr "Masukkan judul di sini"
 
@@ -361,456 +430,6 @@ msgstr "Pertama"
 msgid "Last"
 msgstr "Terakhir"
 
-#: functions/utilities/tgm-plugin-activation-class.php:334
-msgid "Install Required Plugins"
-msgstr "Pemasangan Membutuhkan Plugins"
-
-#: functions/utilities/tgm-plugin-activation-class.php:335
-msgid "Install Plugins"
-msgstr "Pasang Plugins "
-
-#. translators: %s: plugin name.
-#: functions/utilities/tgm-plugin-activation-class.php:337
-#, php-format
-msgid "Installing Plugin: %s"
-msgstr "Sedang Memaasang Plugins: %s"
-
-#. translators: %s: plugin name.
-#: functions/utilities/tgm-plugin-activation-class.php:339
-#, php-format
-msgid "Updating Plugin: %s"
-msgstr "Memperbaharui Plugins %s"
-
-#: functions/utilities/tgm-plugin-activation-class.php:340
-msgid "Something went wrong with the plugin API."
-msgstr "Ada yang salah dengan Plugins API."
-
-#. translators: 1: plugin name(s).
-#: functions/utilities/tgm-plugin-activation-class.php:343
-#, php-format
-msgid "This theme requires the following plugin: %1$s."
-msgid_plural "This theme requires the following plugins: %1$s."
-msgstr[0] "Tema ini membutuhkan plugin berikut: %1$s."
-
-#. translators: 1: plugin name(s).
-#: functions/utilities/tgm-plugin-activation-class.php:349
-#, php-format
-msgid "This theme recommends the following plugin: %1$s."
-msgid_plural "This theme recommends the following plugins: %1$s."
-msgstr[0] "Tema ini merekomendasikan plugin berikut: %1$s."
-
-#. translators: 1: plugin name(s).
-#: functions/utilities/tgm-plugin-activation-class.php:355
-#, php-format
-msgid ""
-"The following plugin needs to be updated to its latest version to ensure "
-"maximum compatibility with this theme: %1$s."
-msgid_plural ""
-"The following plugins need to be updated to their latest version to ensure "
-"maximum compatibility with this theme: %1$s."
-msgstr[0] ""
-"Plugin berikut perlu diperbarui ke versi terbaru untuk memastikan "
-"kompatibilitas maksimum dengan tema ini: %1$ s."
-
-#. translators: 1: plugin name(s).
-#: functions/utilities/tgm-plugin-activation-class.php:361
-#, php-format
-msgid "There is an update available for: %1$s."
-msgid_plural "There are updates available for the following plugins: %1$s."
-msgstr[0] "Ada pembaharuan yang tersedia untuk: %1$ s."
-
-#. translators: 1: plugin name(s).
-#: functions/utilities/tgm-plugin-activation-class.php:367
-#, php-format
-msgid "The following required plugin is currently inactive: %1$s."
-msgid_plural "The following required plugins are currently inactive: %1$s."
-msgstr[0] "Plugin yang diperlukan berikut ini saat ini tidak aktif: %1$ s."
-
-#. translators: 1: plugin name(s).
-#: functions/utilities/tgm-plugin-activation-class.php:373
-#, php-format
-msgid "The following recommended plugin is currently inactive: %1$s."
-msgid_plural "The following recommended plugins are currently inactive: %1$s."
-msgstr[0] ""
-"Plugin yang direkomendasikan berikut ini saat ini tidak aktif: %1$ s."
-
-#: functions/utilities/tgm-plugin-activation-class.php:378
-msgid "Begin installing plugin"
-msgid_plural "Begin installing plugins"
-msgstr[0] "Mulai memasang plugin"
-
-#: functions/utilities/tgm-plugin-activation-class.php:383
-msgid "Begin updating plugin"
-msgid_plural "Begin updating plugins"
-msgstr[0] "Mulai memperbaharui plugin"
-
-#: functions/utilities/tgm-plugin-activation-class.php:388
-msgid "Begin activating plugin"
-msgid_plural "Begin activating plugins"
-msgstr[0] "Mulai mengaktifkan plugin"
-
-#: functions/utilities/tgm-plugin-activation-class.php:392
-msgid "Return to Required Plugins Installer"
-msgstr "Kembali ke Pemasang Plugin yang Dibutuhkan"
-
-#: functions/utilities/tgm-plugin-activation-class.php:393
-#: functions/utilities/tgm-plugin-activation-class.php:920
-#: functions/utilities/tgm-plugin-activation-class.php:2626
-#: functions/utilities/tgm-plugin-activation-class.php:3675
-msgid "Return to the Dashboard"
-msgstr "Kembali ke Dasbor"
-
-#: functions/utilities/tgm-plugin-activation-class.php:394
-#: functions/utilities/tgm-plugin-activation-class.php:3252
-msgid "Plugin activated successfully."
-msgstr "Plugin berhasil diaktifkan"
-
-#: functions/utilities/tgm-plugin-activation-class.php:395
-#: functions/utilities/tgm-plugin-activation-class.php:3045
-msgid "The following plugin was activated successfully:"
-msgid_plural "The following plugins were activated successfully:"
-msgstr[0] "Plugin berikut ini berhasil diaktifkan"
-
-#. translators: 1: plugin name.
-#: functions/utilities/tgm-plugin-activation-class.php:397
-#, php-format
-msgid "No action taken. Plugin %1$s was already active."
-msgstr "Tidak melakukan apa-apa. Plugin %1$s sudah aktif"
-
-#. translators: 1: plugin name.
-#: functions/utilities/tgm-plugin-activation-class.php:399
-#, php-format
-msgid ""
-"Plugin not activated. A higher version of %s is needed for this theme. "
-"Please update the plugin."
-msgstr ""
-"Plugin tidak diaktifkan. Versi yang lebih tinggi dari %s diperlukan untuk "
-"tema ini. Perbarui plugin."
-
-#. translators: 1: dashboard link.
-#: functions/utilities/tgm-plugin-activation-class.php:401
-#, php-format
-msgid "All plugins installed and activated successfully. %1$s"
-msgstr "Semua plugin berhasil dipasang dan diaktifkan. %1$ s"
-
-#: functions/utilities/tgm-plugin-activation-class.php:402
-msgid "Dismiss this notice"
-msgstr "Abaikan pemberitahuan ini"
-
-#: functions/utilities/tgm-plugin-activation-class.php:403
-msgid ""
-"There are one or more required or recommended plugins to install, update or "
-"activate."
-msgstr ""
-"Ada satu atau lebih plugin yang diperlukan atau yang disarankan untuk "
-"diinstal, diperbarui atau diaktifkan."
-
-#: functions/utilities/tgm-plugin-activation-class.php:404
-msgid "Please contact the administrator of this site for help."
-msgstr "Hubungi administrator situs ini untuk membantu."
-
-#: functions/utilities/tgm-plugin-activation-class.php:607
-msgid "This plugin needs to be updated to be compatible with your theme."
-msgstr "Plugin ini perlu diperbaharui agar kompatibel dengan tema Anda."
-
-#: functions/utilities/tgm-plugin-activation-class.php:608
-msgid "Update Required"
-msgstr "Diperlukan pembaharuan"
-
-#: functions/utilities/tgm-plugin-activation-class.php:725
-msgid "Set the parent_slug config variable instead."
-msgstr "Menetapkan variabel konfigurasi parent_slug sebagai gantinya."
-
-#: functions/utilities/tgm-plugin-activation-class.php:1027
-msgid ""
-"The remote plugin package does not contain a folder with the desired slug "
-"and renaming did not work."
-msgstr ""
-"Paket plugin jarak jauh tidak berisi folder dengan siput yang diinginkan dan "
-"penggantian nama tidak dapat dilakukan."
-
-#: functions/utilities/tgm-plugin-activation-class.php:1027
-#: functions/utilities/tgm-plugin-activation-class.php:1030
-msgid ""
-"Please contact the plugin provider and ask them to package their plugin "
-"according to the WordPress guidelines."
-msgstr ""
-"Silakan menghubungi penyedia plugin dan meminta mereka untuk mengemas  "
-"plugin sesuai dengan pedoman WordPress."
-
-#: functions/utilities/tgm-plugin-activation-class.php:1030
-msgid ""
-"The remote plugin package consists of more than one file, but the files are "
-"not packaged in a folder."
-msgstr ""
-"Paket plugin jarak jauh terdiri dari lebih dari satu file, tetapi file tidak "
-"dikemas dalam folder."
-
-#: functions/utilities/tgm-plugin-activation-class.php:1214
-#: functions/utilities/tgm-plugin-activation-class.php:3041
-msgctxt "plugin A *and* plugin B"
-msgid "and"
-msgstr "plugin A \"and\" plugin B and"
-
-#. translators: %s: version number
-#: functions/utilities/tgm-plugin-activation-class.php:2075
-#, php-format
-msgid "TGMPA v%s"
-msgstr "TGMPA v%s"
-
-#: functions/utilities/tgm-plugin-activation-class.php:2366
-msgid "Required"
-msgstr "Dibutuhkan"
-
-#: functions/utilities/tgm-plugin-activation-class.php:2369
-msgid "Recommended"
-msgstr "Direkomendasikan"
-
-#: functions/utilities/tgm-plugin-activation-class.php:2385
-msgid "WordPress Repository"
-msgstr "Penyimpanan WordPress"
-
-#: functions/utilities/tgm-plugin-activation-class.php:2388
-msgid "External Source"
-msgstr "Sumber Eksternal"
-
-#: functions/utilities/tgm-plugin-activation-class.php:2391
-msgid "Pre-Packaged"
-msgstr "Pra-kemas"
-
-#: functions/utilities/tgm-plugin-activation-class.php:2408
-msgid "Not Installed"
-msgstr "Tidak Terpasang"
-
-#: functions/utilities/tgm-plugin-activation-class.php:2412
-msgid "Installed But Not Activated"
-msgstr "Terpasang Tapi Tidak Aktif"
-
-#: functions/utilities/tgm-plugin-activation-class.php:2414
-msgid "Active"
-msgstr "Aktif"
-
-#: functions/utilities/tgm-plugin-activation-class.php:2420
-msgid "Required Update not Available"
-msgstr "Pembaharuan yang Dibutuhkan Tidak Tersedia"
-
-#: functions/utilities/tgm-plugin-activation-class.php:2423
-msgid "Requires Update"
-msgstr "Pembaharuan yang Dibutuhkan"
-
-#: functions/utilities/tgm-plugin-activation-class.php:2426
-msgid "Update recommended"
-msgstr "Pembeharuan Direkomendasikan"
-
-#. translators: 1: install status, 2: update status
-#: functions/utilities/tgm-plugin-activation-class.php:2435
-#, php-format
-msgctxt "Install/Update Status"
-msgid "%1$s, %2$s"
-msgstr "%1$s, %2$s"
-
-#. translators: 1: number of plugins.
-#: functions/utilities/tgm-plugin-activation-class.php:2481
-#, php-format
-msgctxt "plugins"
-msgid "All <span class=\"count\">(%s)</span>"
-msgid_plural "All <span class=\"count\">(%s)</span>"
-msgstr[0] "Semua <span class=\"count\">(%s)</span>"
-
-#. translators: 1: number of plugins.
-#: functions/utilities/tgm-plugin-activation-class.php:2485
-#, php-format
-msgid "To Install <span class=\"count\">(%s)</span>"
-msgid_plural "To Install <span class=\"count\">(%s)</span>"
-msgstr[0] "Untuk Memasang <span class=\"count\">(%s)</span>"
-
-#. translators: 1: number of plugins.
-#: functions/utilities/tgm-plugin-activation-class.php:2489
-#, php-format
-msgid "Update Available <span class=\"count\">(%s)</span>"
-msgid_plural "Update Available <span class=\"count\">(%s)</span>"
-msgstr[0] "Pembaharuan Tersedia <span class=\"count\">(%s)</span>"
-
-#. translators: 1: number of plugins.
-#: functions/utilities/tgm-plugin-activation-class.php:2493
-#, php-format
-msgid "To Activate <span class=\"count\">(%s)</span>"
-msgid_plural "To Activate <span class=\"count\">(%s)</span>"
-msgstr[0] "Untuk Mengaktifkan <span class=\"count\">(%s)</span>"
-
-#: functions/utilities/tgm-plugin-activation-class.php:2575
-msgctxt "as in: \"version nr unknown\""
-msgid "unknown"
-msgstr "tidak dikenal"
-
-#: functions/utilities/tgm-plugin-activation-class.php:2583
-msgid "Installed version:"
-msgstr "Versi yang Terpasang:"
-
-#: functions/utilities/tgm-plugin-activation-class.php:2591
-msgid "Minimum required version:"
-msgstr "Version minimum yang dibutuhkan"
-
-#: functions/utilities/tgm-plugin-activation-class.php:2603
-msgid "Available version:"
-msgstr "Versi yang Tersedia"
-
-#: functions/utilities/tgm-plugin-activation-class.php:2626
-msgid "No plugins to install, update or activate."
-msgstr "Tidak ada plugin untuk dipasang, diperbaharui atau diaktifkan"
-
-#: functions/utilities/tgm-plugin-activation-class.php:2640
-msgid "Plugin"
-msgstr "Plugin"
-
-#: functions/utilities/tgm-plugin-activation-class.php:2641
-msgid "Source"
-msgstr "Sumber"
-
-#: functions/utilities/tgm-plugin-activation-class.php:2642
-msgid "Type"
-msgstr "Jenis"
-
-#: functions/utilities/tgm-plugin-activation-class.php:2646
-msgid "Version"
-msgstr "Versi"
-
-#: functions/utilities/tgm-plugin-activation-class.php:2647
-msgid "Status"
-msgstr "Status"
-
-#. translators: %2$s: plugin name in screen reader markup
-#: functions/utilities/tgm-plugin-activation-class.php:2696
-#, php-format
-msgid "Install %2$s"
-msgstr "Pasang %2$s"
-
-#. translators: %2$s: plugin name in screen reader markup
-#: functions/utilities/tgm-plugin-activation-class.php:2701
-#, php-format
-msgid "Update %2$s"
-msgstr "Perbaharui %2$s"
-
-#. translators: %2$s: plugin name in screen reader markup
-#: functions/utilities/tgm-plugin-activation-class.php:2707
-#, php-format
-msgid "Activate %2$s"
-msgstr "Aktifkan %2$s"
-
-#: functions/utilities/tgm-plugin-activation-class.php:2777
-msgid "Upgrade message from the plugin author:"
-msgstr "Perbaharui pesan dari penulis plugin:"
-
-#: functions/utilities/tgm-plugin-activation-class.php:2810
-msgid "Install"
-msgstr "Pasang"
-
-#: functions/utilities/tgm-plugin-activation-class.php:2816
-#: functions/zume-dt-integration/menu-and-tabs.php:262
-#: template-zume-dashboard.php:854
-msgid "Update"
-msgstr "Perbaharui"
-
-#: functions/utilities/tgm-plugin-activation-class.php:2819
-msgid "Activate"
-msgstr "Aktifkan"
-
-#: functions/utilities/tgm-plugin-activation-class.php:2850
-msgid "No plugins were selected to be installed. No action taken."
-msgstr ""
-"Tidak ada plugin yang dipilih untuk dipasang. Tidak ada tindakan yang "
-"diambil."
-
-#: functions/utilities/tgm-plugin-activation-class.php:2852
-msgid "No plugins were selected to be updated. No action taken."
-msgstr ""
-"Tidak ada plugin yang dipilih untuk diperbaharui. Tidak ada tindakan yang "
-"diambil."
-
-#: functions/utilities/tgm-plugin-activation-class.php:2893
-msgid "No plugins are available to be installed at this time."
-msgstr "Tidak ada plugin yang tersedia untuk dipasang saat ini."
-
-#: functions/utilities/tgm-plugin-activation-class.php:2895
-msgid "No plugins are available to be updated at this time."
-msgstr "Tidak ada plugin yang tersedia untuk diperbaharui saat ini."
-
-#: functions/utilities/tgm-plugin-activation-class.php:3001
-msgid "No plugins were selected to be activated. No action taken."
-msgstr ""
-"Tidak ada plugin yang dipilih untuk diaktifkan. Tidak ada tindakan yang "
-"diambil."
-
-#: functions/utilities/tgm-plugin-activation-class.php:3027
-msgid "No plugins are available to be activated at this time."
-msgstr "Tidak ada plugin yang tersedia untuk diaktifkan saaat ini."
-
-#: functions/utilities/tgm-plugin-activation-class.php:3251
-msgid "Plugin activation failed."
-msgstr "Pengaktifan plugin gagal"
-
-#. translators: 1: plugin name, 2: action number 3: total number of actions.
-#: functions/utilities/tgm-plugin-activation-class.php:3593
-#, php-format
-msgid "Updating Plugin %1$s (%2$d/%3$d)"
-msgstr "Memperbaharui Plugin %1$s (%2$d/%3$d)"
-
-#. translators: 1: plugin name, 2: error message.
-#: functions/utilities/tgm-plugin-activation-class.php:3596
-#, php-format
-msgid "An error occurred while installing %1$s: <strong>%2$s</strong>."
-msgstr ""
-"Terjadi kesalahan sewaktu melakukan pemasangan  %1$s: <strong>%2$s</strong>."
-
-#. translators: 1: plugin name.
-#: functions/utilities/tgm-plugin-activation-class.php:3598
-#, php-format
-msgid "The installation of %1$s failed."
-msgstr "Pemasangan %1$s gagal."
-
-#: functions/utilities/tgm-plugin-activation-class.php:3602
-msgid ""
-"The installation and activation process is starting. This process may take a "
-"while on some hosts, so please be patient."
-msgstr ""
-"Proses pemasangan dan aktivasi dimulai. Proses ini mungkin memakan waktu "
-"lama di beberapa penyedia situs, jadi harap bersabar."
-
-#. translators: 1: plugin name.
-#: functions/utilities/tgm-plugin-activation-class.php:3604
-#: functions/utilities/tgm-plugin-activation-class.php:3612
-#, php-format
-msgid "%1$s done."
-msgstr "%1$s selesai."
-
-#: functions/utilities/tgm-plugin-activation-class.php:3605
-msgid "All installations and activations have been completed."
-msgstr "Semua pemasangan dan aktivasi sudah selesai"
-
-#. translators: 1: plugin name, 2: action number 3: total number of actions.
-#: functions/utilities/tgm-plugin-activation-class.php:3607
-#, php-format
-msgid "Installing and Activating Plugin %1$s (%2$d/%3$d)"
-msgstr "Pemasangan dan aktivasi Plugin %1$s (%2$d/%3$d)"
-
-#: functions/utilities/tgm-plugin-activation-class.php:3610
-msgid ""
-"The installation process is starting. This process may take a while on some "
-"hosts, so please be patient."
-msgstr ""
-"Proses pemasangan dan aktivasi dimulai. Proses ini mungkin memakan waktu "
-"lama di beberapa penyedia situs, jadi harap bersabar."
-
-#: functions/utilities/tgm-plugin-activation-class.php:3613
-msgid "All installations have been completed."
-msgstr "Semua pemasangan sudah selesai"
-
-#. translators: 1: plugin name, 2: action number 3: total number of actions.
-#: functions/utilities/tgm-plugin-activation-class.php:3615
-#, php-format
-msgid "Installing Plugin %1$s (%2$d/%3$d)"
-msgstr "Pemasangan Plugin %1$s (%2$d/%3$d)"
-
 #: functions/zume-course.php:164
 msgid "( Key not available. Check dashboard. )"
 msgstr "(Kunci tidak tersedia. Periksa dasbor.)"
@@ -861,7 +480,7 @@ msgstr ""
 "bahwa setiap anggota kelompok Anda memiliki salinan bahan-bahan yang "
 "tercetak untuk sesi-sesi di masa depan."
 
-#: functions/zume-course.php:359 template-zume-dashboard.php:505
+#: functions/zume-course.php:359 template-zume-dashboard.php:515
 #: template-zume-resources.php:38
 msgid "Download Guidebook"
 msgstr "Unduh Buku Panduan"
@@ -3389,262 +3008,69 @@ msgstr ""
 msgid "No Name"
 msgstr "Tanpa Nama"
 
-#: functions/zume-dt-integration/menu-and-tabs.php:49
-msgid "Zume"
-msgstr "Zume"
+#: functions/zume-functions.php:294 template-zume-dashboard.php:1107
+#: template-zume-profile.php:80
+msgid "Phone Number"
+msgstr "Nomor Telepon"
 
-#: functions/zume-dt-integration/menu-and-tabs.php:58
-msgid "You do not have sufficient permissions to access this page."
-msgstr "Anda tidak memiliki izin yang memadai untuk mengakses laman ini."
+#: functions/zume-functions.php:295
+msgid "User Address"
+msgstr "Alamat Pengguna"
 
-#: functions/zume-dt-integration/menu-and-tabs.php:61
-msgid "DISCIPLE TOOLS - INTEGRATION"
-msgstr "ALAT MURID - INTEGRASI"
+#: functions/zume-functions.php:296
+msgid "GeoCoded IP"
+msgstr "GeoCoded IP"
 
-#: functions/zume-dt-integration/menu-and-tabs.php:68
-#: functions/zume-polylang-integration.php:128
-msgid "Settings"
-msgstr "Pengaturan"
-
-#: functions/zume-dt-integration/menu-and-tabs.php:72
-msgid "Google Keys"
-msgstr "Kunci Google"
-
-#: functions/zume-dt-integration/menu-and-tabs.php:76
-msgid "Languages"
-msgstr "Bahasa"
-
-#: functions/zume-dt-integration/menu-and-tabs.php:243
-msgid "Set Default Transfer Site"
-msgstr "Tetapkan Situs Transferr Default"
-
-#: functions/zume-dt-integration/site-link-post-type.php:312
-msgid "All"
-msgstr "Semua"
-
-#: functions/zume-dt-integration/site-link-post-type.php:317
-msgid "New"
-msgstr "Baru"
-
-#: functions/zume-dt-integration/site-link-post-type.php:318
-msgid "View"
-msgstr "Lihat"
-
-#: functions/zume-dt-integration/site-link-post-type.php:319
-msgid "Search"
-msgstr "Cari"
-
-#: functions/zume-dt-integration/site-link-post-type.php:362
-#: functions/zume-dt-integration/site-link-post-type.php:745
-msgid "Status:"
-msgstr "Status:"
-
-#: functions/zume-dt-integration/site-link-post-type.php:365
-#: functions/zume-dt-integration/site-link-post-type.php:748
-msgid "Checking Status"
-msgstr "Memeriksa Status"
-
-#: functions/zume-dt-integration/site-link-post-type.php:387
-#: functions/zume-dt-integration/site-link-post-type.php:839
-msgid "Linked"
-msgstr "Ditautkan"
-
-#: functions/zume-dt-integration/site-link-post-type.php:442
-msgid "Manage Site Link"
-msgstr "Kelola Tautan Situs"
-
-#: functions/zume-dt-integration/site-link-post-type.php:443
-msgid "Configuration"
-msgstr "Konfigurasi"
-
-#: functions/zume-dt-integration/site-link-post-type.php:665
-msgid "Token"
-msgstr "Token"
-
-#: functions/zume-dt-integration/site-link-post-type.php:666
-msgid ""
-"If you have a token from another site, just clear token above and replace it."
-msgstr ""
-"Jika Anda memiliki token dari situs lain, hilangkan saja token di atas dan "
-"gantikan itu."
-
-#: functions/zume-dt-integration/site-link-post-type.php:673
-msgid "Site 1"
-msgstr "Situs 1"
-
-#: functions/zume-dt-integration/site-link-post-type.php:674
-#: functions/zume-dt-integration/site-link-post-type.php:682
-msgid "Use just the host name. Example: www.website.com"
-msgstr "Menggunakan hanya nama host. Contoh: Www.website.com"
-
-#: functions/zume-dt-integration/site-link-post-type.php:681
-msgid "Site 2"
-msgstr "Situs 2"
-
-#: functions/zume-dt-integration/site-link-post-type.php:689
-msgid "Approved IP Address"
-msgstr "Alamat IP yang Disetujui"
-
-#: functions/zume-dt-integration/site-link-post-type.php:690
-msgid ""
-"Enter an approved ip address to restrict responses of this connection. "
-"(format: xxx.xxx.xxx.xxx)"
-msgstr ""
-"Masukkan alamat IP yang disetujui untuk membatasi respons sambungan ini. "
-"(format: Xxx. Xxx. Xxx. Xxx)"
-
-#: functions/zume-dt-integration/site-link-post-type.php:696
-msgid "Connection Type"
-msgstr "Tipe Sambungan"
-
-#: functions/zume-dt-integration/site-link-post-type.php:697
-msgid ""
-"This adds permissions needed for the labeled task. If you have trouble with "
-"a connection succeeding, and a task failing. This permission setting may be "
-"the reason."
-msgstr ""
-"Ini menambah izin yang diperlukan untuk tugas berlabel. Jika Anda mengalami "
-"masalah dengan sambungan berhasil, dan tugas gagal. Pengaturan izin ini "
-"mungkin menjadi alasan."
-
-#: functions/zume-dt-integration/site-link-post-type.php:703
-msgid "DT Site"
-msgstr "Situs DT"
-
-#: functions/zume-dt-integration/site-link-post-type.php:704
-msgid "Is this connection to a Disciple Tools/Wordpress system."
-msgstr ""
-"Adalah sambungan ini untuk seorang Disciple Tools (Alat Murid)/sistem "
-"Wordpress."
-
-#: functions/zume-dt-integration/site-link-post-type.php:707
-msgid "Yes, connected to another DT site (default)"
-msgstr "Ya, terhubung ke situs DT lain (default)"
-
-#: functions/zume-dt-integration/site-link-post-type.php:708
-msgid "No, connection for a non-Disciple Tools system."
-msgstr "Tidak, sambungan untuk sistem alat non-murid."
-
-#: functions/zume-dt-integration/site-link-post-type.php:767
-msgid "Consider Checking:"
-msgstr "Pertimbangkan untuk Memeriksa:"
-
-#: functions/zume-dt-integration/site-link-post-type.php:770
-msgid ""
-"Check if the target site is setup with identical configuration information."
-msgstr ""
-"Periksa apakah situs target telah terpasang dengan informasi konfigurasi "
-"identik."
-
-#: functions/zume-dt-integration/site-link-post-type.php:773
-msgid ""
-"Check if HTTPS/SSL is enabled on both sites. Due to the transfer of data "
-"between these sites, SSL encryption is required for both sites to protect "
-"the data exchange."
-msgstr ""
-"Periksa apakah HTTPS/SSL telah diaktifkan di kedua situs. Karena transfer "
-"data antara situs ini, enkripsi SSL diperlukan untuk kedua situs untuk "
-"melindungi pertukaran data."
-
-#: functions/zume-dt-integration/site-link-post-type.php:776
-msgid ""
-"Check if the server timestamps are identical. Mismatched server times will "
-"cause decryption key failures. Your server timestamp"
-msgstr ""
-"Periksa apakah timestamps server sudah sama. Server tidak cocok akan "
-"menyebabkan kegagalan dekripsi. Timestamp server Anda"
-
-#: functions/zume-dt-integration/site-link-post-type.php:793
-msgid "Current Site"
-msgstr "Situs Ini"
-
-#: functions/zume-dt-integration/site-link-post-type.php:795
-msgid "Timestamp"
-msgstr "Timestamp"
-
-#: functions/zume-dt-integration/site-link-post-type.php:797
-msgid "Compare this number to linked site. It should be identical."
-msgstr "Bandingkan angka ini dengan situs terkait. Nilainya harus sama."
-
-#: functions/zume-dt-integration/site-link-post-type.php:840
-msgid "Not Linked"
-msgstr "Tidak Terhubung"
-
-#: functions/zume-dt-integration/site-link-post-type.php:841
-msgid "Failed to connect with the URL provided."
-msgstr "Gagal terhubung dengan URL yang disediakan."
-
-#: functions/zume-dt-integration/zume-hooks.php:132
-msgid "Visibility"
-msgstr "Visibilitas"
-
-#: functions/zume-dt-integration/zume-hooks.php:135
-msgid "Public (Default)"
-msgstr "Publik (Default)"
-
-#: functions/zume-dt-integration/zume-hooks.php:135
-msgid "Private"
-msgstr "Pribadi"
-
-#: functions/zume-dt-integration/zume-hooks.php:139
-#: template-zume-profile.php:136
-msgid "Affiliation Key"
-msgstr "Kunci Afiliasi"
-
-#: functions/zume-polylang-integration.php:122
+#: functions/zume-polylang-integration.php:138
 msgid "Home"
 msgstr "Beranda"
 
-#: functions/zume-polylang-integration.php:123 template-zume-overview.php:238
+#: functions/zume-polylang-integration.php:139 template-zume-overview.php:238
 msgid "Dashboard"
 msgstr "Dasbor"
 
-#: functions/zume-polylang-integration.php:124
+#: functions/zume-polylang-integration.php:140
 msgid "About"
 msgstr "Tentang"
 
-#: functions/zume-polylang-integration.php:125
+#: functions/zume-polylang-integration.php:141
 msgid "Resources"
 msgstr "Sumber-sumber"
 
-#: functions/zume-polylang-integration.php:126
+#: functions/zume-polylang-integration.php:142
 msgid "FAQs"
 msgstr "FAQs (Pertanyaan yang sering ditanyakan)"
 
-#: functions/zume-polylang-integration.php:127
+#: functions/zume-polylang-integration.php:143
 msgid "Overview"
 msgstr "Tinjauan"
 
-#: functions/zume-polylang-integration.php:129
+#: functions/zume-polylang-integration.php:144
+msgid "Settings"
+msgstr "Pengaturan"
+
+#: functions/zume-polylang-integration.php:145
 msgid "Profile"
 msgstr "Profil"
 
-#: functions/zume-polylang-integration.php:130
+#: functions/zume-polylang-integration.php:146
 msgid "Admin"
 msgstr "Admin"
 
-#: functions/zume-polylang-integration.php:131
+#: functions/zume-polylang-integration.php:147
 msgid "Logout"
 msgstr "Keluar"
 
-#: functions/zume-polylang-integration.php:132
-msgid "Login"
-msgstr "Masuk"
-
-#: functions/zume-polylang-integration.php:133 template-zume-login.php:40
-msgid "Register"
-msgstr "Mendaftar"
-
-#: functions/zume-polylang-integration.php:134 template-zume-3plan.php:43
-#: template-zume-dashboard.php:522
-msgid "Three Month Plan"
+#. Template Name of the plugin/theme
+#: functions/zume-polylang-integration.php:150
+msgid "Three-Month Plan"
 msgstr "Rencana Tiga-Bulanan"
 
-#: functions/zume-polylang-integration.php:135 template-zume-progress.php:15
+#: functions/zume-polylang-integration.php:151 template-zume-progress.php:15
 msgid "Progress"
 msgstr "Kemajuan"
 
-#: functions/zume-polylang-integration.php:136
+#: functions/zume-polylang-integration.php:152
 msgid "Stats"
 msgstr "Statistik"
 
@@ -3763,86 +3189,6 @@ msgstr "Selamat Datang!"
 msgid "I want to make disciples who multiply!"
 msgstr "Saya ingin membuat murid yang berlipat ganda!"
 
-#: functions/zume-welcome-messages.php:104
-msgid "Title 1"
-msgstr "Judul 1"
-
-#: functions/zume-welcome-messages.php:105
-msgid "Message1"
-msgstr "Pesan1"
-
-#: functions/zume-welcome-messages.php:110
-msgid "Title 2"
-msgstr "Judul 2"
-
-#: functions/zume-welcome-messages.php:111
-msgid "Message2"
-msgstr "Pesan2"
-
-#: functions/zume-welcome-messages.php:116
-msgid "Title 3"
-msgstr "Judul 3"
-
-#: functions/zume-welcome-messages.php:117
-msgid "Message3"
-msgstr "Pesan3"
-
-#: functions/zume-welcome-messages.php:122
-msgid "Title 4"
-msgstr "Judul 4"
-
-#: functions/zume-welcome-messages.php:123
-msgid "Message4"
-msgstr "Pesan4"
-
-#: functions/zume-welcome-messages.php:128
-msgid "Title 5"
-msgstr "Judul 5"
-
-#: functions/zume-welcome-messages.php:129
-msgid "Message5"
-msgstr "Pesan5"
-
-#: functions/zume-welcome-messages.php:134
-msgid "Title 6"
-msgstr "Judul 6"
-
-#: functions/zume-welcome-messages.php:135
-msgid "Message6"
-msgstr "Pesan6"
-
-#: functions/zume-welcome-messages.php:140
-msgid "Title 7"
-msgstr "Judul 7"
-
-#: functions/zume-welcome-messages.php:141
-msgid "Message7"
-msgstr "Pesan7"
-
-#: functions/zume-welcome-messages.php:146
-msgid "Title 8"
-msgstr "Judul 8"
-
-#: functions/zume-welcome-messages.php:147
-msgid "Message8"
-msgstr "Pesan8"
-
-#: functions/zume-welcome-messages.php:152
-msgid "Title 9"
-msgstr "Judul 9"
-
-#: functions/zume-welcome-messages.php:153
-msgid "Message9"
-msgstr "Pesan9"
-
-#: functions/zume-welcome-messages.php:158
-msgid "Title 10"
-msgstr "Judul 10"
-
-#: functions/zume-welcome-messages.php:159
-msgid "Message10"
-msgstr "Pesan10"
-
 #: parts/content-missing.php:4
 msgid "Oops, Page Not Found!"
 msgstr "Oops, Laman Tidak Ditemukan!"
@@ -3866,6 +3212,10 @@ msgstr "Laman:"
 #: parts/nav-offcanvas-topbar.php:43
 msgid "Menu"
 msgstr "Menu"
+
+#: template-zume-3plan.php:43 template-zume-dashboard.php:532
+msgid "Three Month Plan"
+msgstr "Rencana Tiga-Bulanan"
 
 #: template-zume-3plan.php:45
 msgid ""
@@ -3930,11 +3280,12 @@ msgstr "Ditautkan Ke"
 msgid "Unlink Group"
 msgstr "Lepaskan Tautan Kelompok"
 
-#: template-zume-3plan.php:164 template-zume-profile.php:148
+#: template-zume-3plan.php:164 template-zume-dashboard.php:1199
+#: template-zume-profile.php:193
 msgid "Oh snap!"
 msgstr "Aduh!"
 
-#: template-zume-3plan.php:166 template-zume-profile.php:151
+#: template-zume-3plan.php:166 template-zume-profile.php:196
 msgid "Save"
 msgstr "Simpan"
 
@@ -3963,7 +3314,8 @@ msgid "About Zúme Project"
 msgstr "Tentang Proyek Zume"
 
 #: template-zume-about.php:38 template-zume-about.php:55
-#: template-zume-faq.php:197 template-zume-progress.php:101
+#: template-zume-faq.php:197 template-zume-privacy-policy.php:185
+#: template-zume-progress.php:101
 msgid ""
 "Zúme uses an online training platform to equip participants in basic "
 "disciple-making and simple church planting multiplication principles, "
@@ -3974,12 +3326,12 @@ msgstr ""
 "gereja sederhana yang berlipat-ganda. "
 
 #: template-zume-about.php:50 template-zume-faq.php:192
-#: template-zume-progress.php:96
+#: template-zume-privacy-policy.php:180 template-zume-progress.php:96
 msgid "Goals of the Zúme Project:"
 msgstr "Sasaran Proyek Zume"
 
 #: template-zume-about.php:52 template-zume-faq.php:194
-#: template-zume-progress.php:98
+#: template-zume-privacy-policy.php:182 template-zume-progress.php:98
 msgid ""
 "Zúme means yeast in Greek. In Matthew 13:33, Jesus is quoted as saying, "
 "\"The Kingdom of Heaven is like a woman who took yeast and mixed it into a "
@@ -4098,9 +3450,8 @@ msgstr "sunting"
 msgid "Meeting Time"
 msgstr "Waktu Pertemuan"
 
-#: template-zume-dashboard.php:132 template-zume-dashboard.php:652
-#: template-zume-dashboard.php:790 template-zume-dashboard.php:949
-#: template-zume-profile.php:105
+#: template-zume-dashboard.php:132 template-zume-dashboard.php:662
+#: template-zume-dashboard.php:800 template-zume-dashboard.php:959
 msgid "Address"
 msgstr "Alamat"
 
@@ -4108,7 +3459,7 @@ msgstr "Alamat"
 msgid "Members"
 msgstr "Anggota"
 
-#: template-zume-dashboard.php:137 template-zume-dashboard.php:732
+#: template-zume-dashboard.php:137 template-zume-dashboard.php:742
 msgid "Key"
 msgstr "Kunci"
 
@@ -4319,7 +3670,7 @@ msgstr "Pembimbingan Setaraf"
 msgid "Session videos will be added as you complete sessions."
 msgstr "Sesi video akan ditambahkan waktu Anda menyelesaikan sesi."
 
-#: template-zume-dashboard.php:419 template-zume-dashboard.php:537
+#: template-zume-dashboard.php:419 template-zume-dashboard.php:547
 msgid "Archived Groups"
 msgstr "Kelompok-kelompok yang Diarsipkan"
 
@@ -4327,63 +3678,67 @@ msgstr "Kelompok-kelompok yang Diarsipkan"
 msgid "activate"
 msgstr "aktifkan"
 
-#: template-zume-dashboard.php:490
+#: template-zume-dashboard.php:488
+msgid "Get a Coach"
+msgstr "Pembimbingan"
+
+#: template-zume-dashboard.php:500
 msgid "Join me on the Zúme Project"
 msgstr "Bergabung Bersama saya di Proyek Zume"
 
-#: template-zume-dashboard.php:491
+#: template-zume-dashboard.php:501
 msgid "Invite to Zúme"
 msgstr "Undang ke Zume"
 
-#: template-zume-dashboard.php:558
+#: template-zume-dashboard.php:568
 msgid "Networks"
 msgstr "Jaringan"
 
-#: template-zume-dashboard.php:599
+#: template-zume-dashboard.php:609
 msgid "Create Group"
 msgstr "Buat Kelompok"
 
-#: template-zume-dashboard.php:608 template-zume-dashboard.php:743
-#: template-zume-dashboard.php:940
+#: template-zume-dashboard.php:618 template-zume-dashboard.php:753
+#: template-zume-dashboard.php:950
 msgid "Group Name"
 msgstr "Nama Kelompok"
 
-#: template-zume-dashboard.php:614
+#: template-zume-dashboard.php:624
 msgid "Number of Group Members (including you)"
 msgstr "Jumlah anggota kelompok (termasuk Anda)"
 
-#: template-zume-dashboard.php:645 template-zume-dashboard.php:782
-#: template-zume-dashboard.php:946
+#: template-zume-dashboard.php:655 template-zume-dashboard.php:792
+#: template-zume-dashboard.php:956
 msgid "Planned Meeting Time"
 msgstr "Waktu Pertemuan yang Direncanakan"
 
-#: template-zume-dashboard.php:646 template-zume-dashboard.php:784
+#: template-zume-dashboard.php:656 template-zume-dashboard.php:794
 msgid "example: Saturday 7PM"
 msgstr "Contoh: Sabtu jam 7 malam"
 
-#: template-zume-dashboard.php:664 template-zume-dashboard.php:802
-#: template-zume-profile.php:118
+#: template-zume-dashboard.php:674 template-zume-dashboard.php:812
+#: template-zume-dashboard.php:1157 template-zume-profile.php:109
 msgid "Validate"
 msgstr "Validasi"
 
-#: template-zume-dashboard.php:682 template-zume-dashboard.php:822
-#: template-zume-dashboard.php:960
+#: template-zume-dashboard.php:692 template-zume-dashboard.php:832
+#: template-zume-dashboard.php:970
 msgid "Coleaders or additional participants"
 msgstr "Pembantu Pemimpin atau peserta tambahan"
 
-#: template-zume-dashboard.php:690 template-zume-dashboard.php:844
+#: template-zume-dashboard.php:700 template-zume-dashboard.php:854
 msgid "Add"
 msgstr "Tambahkan"
 
-#: template-zume-dashboard.php:697
+#: template-zume-dashboard.php:707 template-zume-dashboard.php:1202
 msgid "Submit"
 msgstr "Serahkan"
 
-#: template-zume-dashboard.php:722
+#: template-zume-dashboard.php:732
 msgid "Edit Group"
 msgstr "Sunting Kelompok"
 
-#: template-zume-dashboard.php:723
+#: template-zume-dashboard.php:733
 msgid ""
 "You are the owner of this group. All changes to the group details must be "
 "done through \n"
@@ -4393,19 +3748,19 @@ msgstr ""
 "dilakukan melalui \n"
 "Anda. "
 
-#: template-zume-dashboard.php:738
+#: template-zume-dashboard.php:748
 msgid "Change Key"
 msgstr "Ubah Kunci"
 
-#: template-zume-dashboard.php:750 template-zume-dashboard.php:943
+#: template-zume-dashboard.php:760 template-zume-dashboard.php:953
 msgid "Number of Participants"
 msgstr "Jumlah Peserta"
 
-#: template-zume-dashboard.php:793
+#: template-zume-dashboard.php:803
 msgid "example: 1000 Broadway, Denver, CO 80126"
 msgstr "contoh: Jl Broadway no 100, Denver, CO 80126"
 
-#: template-zume-dashboard.php:824
+#: template-zume-dashboard.php:834
 msgid ""
 "Adding a coleader or additional participants gives them access to this group "
 "on their Zúme dashboard once they have signed up and logged in using the "
@@ -4424,19 +3779,23 @@ msgstr ""
 "Catatan: Mereka tidak akan menerima email sistem dari zúme dengan undangan "
 "ini, Anda akan perlu untuk meminta mereka untuk mendaftar."
 
-#: template-zume-dashboard.php:857
+#: template-zume-dashboard.php:864
+msgid "Update"
+msgstr "Perbaharui"
+
+#: template-zume-dashboard.php:867
 msgid "Archive"
 msgstr "Arsip"
 
-#: template-zume-dashboard.php:887
+#: template-zume-dashboard.php:897
 msgid "ARE YOU SURE YOU WANT TO DELETE THIS GROUP?"
 msgstr "APAKAH ANDA YAKIN INGIN MENHAPUS KELOMPOK INI?"
 
-#: template-zume-dashboard.php:924
+#: template-zume-dashboard.php:934
 msgid "View Group"
 msgstr "Lihat Kelompok"
 
-#: template-zume-dashboard.php:927
+#: template-zume-dashboard.php:937
 msgid ""
 "You are a participant or coleader of this group and can view the group \n"
 "                        details and lead the group through a session, but "
@@ -4451,19 +3810,19 @@ msgstr ""
 "peserta. Tolong, untuk membuat permintaan perubahan gunakan akun  "
 "melaluipemilik grup  . "
 
-#: template-zume-dashboard.php:936
+#: template-zume-dashboard.php:946
 msgid "Group Owner"
 msgstr "Pemilik Kelompok"
 
-#: template-zume-dashboard.php:981
+#: template-zume-dashboard.php:991
 msgid "Remove Group"
 msgstr "Hapus Kelompok"
 
-#: template-zume-dashboard.php:995
+#: template-zume-dashboard.php:1005
 msgid "ARE YOU SURE YOU WANT TO REMOVE THIS GROUP?"
 msgstr "APAKAH ANDA YAKIN INGIN MENHAPUS KELOMPOK INI?"
 
-#: template-zume-dashboard.php:996
+#: template-zume-dashboard.php:1006
 msgid ""
 "To reverse this action, the owner of the group must re-invite you to the "
 "group again."
@@ -4471,9 +3830,96 @@ msgstr ""
 "Untuk membalikkan tindakan ini, pemilik kelompok ini harus mengundang-"
 "kembali Anda kedalam kelompok lagi."
 
-#: template-zume-dashboard.php:1003
+#: template-zume-dashboard.php:1013
 msgid "Remove"
 msgstr "Hapus"
+
+#: template-zume-dashboard.php:1051
+msgid "Connect Me to a Coach"
+msgstr ""
+
+#: template-zume-dashboard.php:1063
+msgid "Coaches"
+msgstr "Pembimbingan"
+
+#: template-zume-dashboard.php:1064
+msgid ""
+"Our network of volunteer coaches are people like you, people who are "
+"passionate about loving God, loving others, and obeying the Great Commission."
+msgstr ""
+
+#: template-zume-dashboard.php:1069
+msgid "Advocates"
+msgstr ""
+
+#: template-zume-dashboard.php:1070
+msgid ""
+"A coach is someone who will come alongside you as you implement the Zúme "
+"tools and training."
+msgstr ""
+
+#: template-zume-dashboard.php:1075
+msgid "Local"
+msgstr ""
+
+#: template-zume-dashboard.php:1076
+msgid ""
+"On submitting this request, we will do our best to connect you with a coach "
+"near you."
+msgstr ""
+
+#: template-zume-dashboard.php:1081
+msgid "It's Free"
+msgstr ""
+
+#: template-zume-dashboard.php:1082
+msgid "Coaching is free. You can opt out at any time."
+msgstr ""
+
+#: template-zume-dashboard.php:1092 template-zume-profile.php:63
+msgid "Name"
+msgstr "Tanpa Nama"
+
+#: template-zume-dashboard.php:1096 template-zume-dashboard.php:1097
+#: template-zume-profile.php:67 template-zume-profile.php:68
+msgid "First and last name"
+msgstr "Nama Pertama"
+
+#: template-zume-dashboard.php:1135
+msgid "Email is required."
+msgstr ""
+
+#: template-zume-dashboard.php:1143
+msgid "City"
+msgstr ""
+
+#: template-zume-dashboard.php:1168
+msgid "How should we contact you?"
+msgstr ""
+
+#: template-zume-dashboard.php:1175
+msgid "Text"
+msgstr ""
+
+#: template-zume-dashboard.php:1177
+msgid "Phone"
+msgstr ""
+
+#: template-zume-dashboard.php:1179
+msgid "WhatsApp"
+msgstr ""
+
+#: template-zume-dashboard.php:1181
+msgid "Other"
+msgstr ""
+
+#: template-zume-dashboard.php:1188 template-zume-profile.php:180
+msgid "Affiliation Key"
+msgstr "Kunci Afiliasi"
+
+#: template-zume-dashboard.php:1230
+msgid "Thank you. You have already requested a coach connection."
+msgstr ""
 
 #: template-zume-faq.php:20
 msgid "Zúme FAQs"
@@ -4889,17 +4335,59 @@ msgstr ""
 "dapat menggunakan platform pesan yang mereka lebih suka (iMessage, WhatsApp, "
 "Facebook Group, dll) untuk komunikasi kelompok lebih lanjut."
 
-#: template-zume-login.php:43
+#: template-zume-login.php:73
+msgid ""
+"Your password reset link appears to be invalid. Please request a new link "
+"below."
+msgstr ""
+
+#: template-zume-login.php:75
+msgid "Your password reset link has expired. Please request a new link below."
+msgstr ""
+
+#: template-zume-login.php:108 template-zume-login.php:465
+msgid "Email Address"
+msgstr "Alamat email:"
+
+#: template-zume-login.php:119
+msgid "Get New Password"
+msgstr "Lupa Sandi Zume"
+
+#: template-zume-login.php:174
+msgid "The passwords do not match."
+msgstr ""
+
+#: template-zume-login.php:275
+msgid "Reset Password"
+msgstr "Lupa Sandi Zume"
+
+#: template-zume-login.php:335
+msgid "Let's get started."
+msgstr "Bagaimana Memulai"
+
+#: template-zume-login.php:337
+msgid "Sign up using:"
+msgstr "Mendaftar"
+
+#: template-zume-login.php:384 template-zume-login.php:483
 msgid "Lost your password?"
 msgstr "Kehilangan sandi Anda?"
 
-#: template-zume-logout.php:22
-msgid "You have been logged out."
-msgstr "Anda sudah dikeluarkan"
+#: template-zume-login.php:401
+msgid "Invalid request."
+msgstr ""
 
-#: template-zume-logout.php:24
-msgid "Back to home page"
-msgstr "Kembali ke Beranda"
+#: template-zume-login.php:410
+msgid "Invalid key"
+msgstr "Tidak dapat menemukan kunci:"
+
+#: template-zume-login.php:432
+msgid "User action confirmed."
+msgstr ""
+
+#: template-zume-login.php:449
+msgid "Sign in using:"
+msgstr ""
 
 #: template-zume-overview.php:71 template-zume-overview.php:84
 msgid "Sessions Overview"
@@ -5255,35 +4743,191 @@ msgstr ""
 "KELOMPOK PEMBIMBINGAN SETARAF  —  Bagilah ke dalam kelompok dua atau tiga "
 "orang dan kerjakan format kelompok pembimbingan setaraf. (60 menit)"
 
-#: template-zume-profile.php:22
+#: template-zume-privacy-policy.php:22
+msgid "Zúme Privacy Policy"
+msgstr "Proyek Zume"
+
+#: template-zume-privacy-policy.php:32
+msgid ""
+"This privacy policy has been compiled to better serve those who are "
+"concerned with how their \"Personally Identifiable Information\" (PII) is "
+"being used online. PII, as described in US privacy law and information "
+"security, is information that can be used on its own or with other "
+"information to identify, contact, or locate a single person, or to identify "
+"an individual in context. Please read our privacy policy carefully to get a "
+"clear understanding of how we collect, use, protect or otherwise handle your "
+"Personally Identifiable Information in accordance with our website."
+msgstr ""
+
+#: template-zume-privacy-policy.php:38
+msgid "What permissions do the social sign-on logins ask for?"
+msgstr ""
+
+#: template-zume-privacy-policy.php:41
+msgid ""
+"Public Profile. This includes certain User’s Data such as id, name, picture, "
+"gender, and their locale."
+msgstr ""
+
+#: template-zume-privacy-policy.php:44
+msgid "Email Address."
+msgstr "Alamat email:"
+
+#: template-zume-privacy-policy.php:52
+msgid ""
+"What personal information do we collect from the people through our website?"
+msgstr ""
+
+#: template-zume-privacy-policy.php:55
+msgid "Information in the Basic Social Profile (if used) and email."
+msgstr ""
+
+#: template-zume-privacy-policy.php:58
+msgid "Session and course activity."
+msgstr ""
+
+#: template-zume-privacy-policy.php:61
+msgid ""
+"General location telemetry, so we know in what countries our training is "
+"being used."
+msgstr ""
+
+#: template-zume-privacy-policy.php:69
+msgid "When do we collect information?"
+msgstr "Informasi Proyek"
+
+#: template-zume-privacy-policy.php:72
+msgid "We collect your information at login."
+msgstr ""
+
+#: template-zume-privacy-policy.php:75
+msgid "We also track your progress through the training course."
+msgstr ""
+
+#: template-zume-privacy-policy.php:83
+msgid "How do we use your information?"
+msgstr ""
+
+#: template-zume-privacy-policy.php:86
+msgid ""
+"We use your information to create a user account in the zume system based on "
+"your email address."
+msgstr ""
+
+#: template-zume-privacy-policy.php:89
+msgid ""
+"We will email you with basic transactional emails like password reset "
+"requests and other system notifications."
+msgstr ""
+
+#: template-zume-privacy-policy.php:92
+msgid ""
+"We email occasional reminders and encouragements depending on your progress "
+"through the training."
+msgstr ""
+
+#: template-zume-privacy-policy.php:100
+msgid "How do we protect your information?"
+msgstr ""
+
+#: template-zume-privacy-policy.php:102
+msgid ""
+"While we use encryption to protect sensitive information transmitted online, "
+"we also protect your information offline. Only team members who need the "
+"information to perform a specific job (for example, web administrator or "
+"customer service) are granted access to personally identifiable information."
+msgstr ""
+
+#: template-zume-privacy-policy.php:105
+msgid ""
+"Your personal information is contained behind secured networks and is only "
+"accessible by a limited number of persons who have special access rights to "
+"such systems, and are required to keep the information confidential. In "
+"addition, all sensitive/credit information you supply is encrypted via "
+"Secure Socket Layer (SSL) technology."
+msgstr ""
+
+#: template-zume-privacy-policy.php:108
+msgid ""
+"We implement a variety of security measures when a user submits, or accesses "
+"their information to maintain the safety of your personal information."
+msgstr ""
+
+#: template-zume-privacy-policy.php:115
+msgid "Do we use \"cookies\"?"
+msgstr ""
+
+#: template-zume-privacy-policy.php:117
+msgid ""
+"Any use of Cookies - or of other tracking tools - by this Application or by "
+"the owners of third party services used by this Application, unless stated "
+"otherwise, serves to identify Users and remember their preferences, for the "
+"sole purpose of providing the service required by the User."
+msgstr ""
+
+#: template-zume-privacy-policy.php:120
+msgid "Personal Data collected: name, email."
+msgstr ""
+
+#: template-zume-privacy-policy.php:127
+msgid "Your Access to and Control Over Information."
+msgstr ""
+
+#: template-zume-privacy-policy.php:129
+msgid ""
+"You may opt out of any future contact from us at any time. You can do the "
+"following at any time by contacting us via our contact email address:"
+msgstr ""
+
+#: template-zume-privacy-policy.php:132
+msgid "See what data we have about you, if any."
+msgstr ""
+
+#: template-zume-privacy-policy.php:136
+msgid "Change/correct any data we have about you."
+msgstr ""
+
+#: template-zume-privacy-policy.php:139
+msgid "Have us delete any data we have about you."
+msgstr ""
+
+#: template-zume-privacy-policy.php:142
+msgid "Express any concern you have about our use of your data."
+msgstr ""
+
+#: template-zume-privacy-policy.php:150
+msgid "Updates"
+msgstr "Perbaharui"
+
+#: template-zume-privacy-policy.php:152
+msgid ""
+"Our Privacy Policy may change from time to time and all updates will be "
+"posted on this page."
+msgstr ""
+
+#: template-zume-profile.php:31
 msgid "Your Profile"
 msgstr "Profil Anda"
 
-#: template-zume-profile.php:25
+#: template-zume-profile.php:36
 msgid "edit image @ gravatar.com"
 msgstr "sunting gambar @ gravatar.com"
 
-#: template-zume-profile.php:33
-msgid "User Name"
-msgstr "Nama Pengguna"
+#: template-zume-profile.php:96
+msgid "Your City"
+msgstr ""
 
-#: template-zume-profile.php:36
-msgid "(can not change)"
-msgstr "(tidak dapat diubah)"
+#: template-zume-profile.php:147
+msgid "Linked Facebook Account"
+msgstr ""
 
-#: template-zume-profile.php:41 template-zume-profile.php:45
-#: template-zume-profile.php:46
-msgid "First Name"
-msgstr "Nama Pertama"
+#: template-zume-profile.php:154 template-zume-profile.php:170
+msgid "Unlink"
+msgstr "Lepaskan Tautan Kelompok"
 
-#: template-zume-profile.php:56 template-zume-profile.php:60
-#: template-zume-profile.php:61
-msgid "Last Name"
-msgstr "Nama Terkahir"
-
-#: template-zume-profile.php:71
-msgid "Email"
-msgstr "Email"
+#: template-zume-profile.php:163
+msgid "Linked Google Account"
+msgstr ""
 
 #: template-zume-progress.php:23
 msgid "Phase 1"
@@ -5305,310 +4949,6 @@ msgstr "Menyumbang untuk terjemahan Zúme"
 msgid "Phase 3"
 msgstr "Fase 3"
 
-#: template-zume-register.php:111
-msgid "Site Name:"
-msgstr "Nama Situs:"
-
-#: template-zume-register.php:112
-msgid "Site Domain:"
-msgstr "Domain Situs:"
-
-#: template-zume-register.php:126
-msgid "sitename"
-msgstr "namasitus"
-
-#: template-zume-register.php:128
-msgid "domain"
-msgstr "domain"
-
-#. translators: %s: site address
-#: template-zume-register.php:132
-#, php-format
-msgid "Your address will be %s."
-msgstr "Alamat Anda adalah  %s."
-
-#: template-zume-register.php:132
-msgid ""
-"Must be at least 4 characters, letters and numbers only. It cannot be "
-"changed, so choose carefully!"
-msgstr ""
-"Harus minimal 4 karakter, huruf dan angka saja. Tidak dapat diubah, Jadi "
-"pilihlah dengan hati-hati!"
-
-#: template-zume-register.php:137
-msgid "Site Title:"
-msgstr "Judul Situs"
-
-#: template-zume-register.php:151
-msgid "Site Language:"
-msgstr "Bahasa situs"
-
-#: template-zume-register.php:178
-msgid "Privacy:"
-msgstr "Privasi:"
-
-#: template-zume-register.php:179
-msgid "Allow search engines to index this site."
-msgstr "Izinkan mesin pencari untuk mengindeks situs ini."
-
-#: template-zume-register.php:183
-msgid "Yes"
-msgstr "Ya"
-
-#: template-zume-register.php:187
-msgid "No"
-msgstr "Tidak"
-
-#: template-zume-register.php:234
-msgid "Username:"
-msgstr "Nama pengguna"
-
-#: template-zume-register.php:239
-msgid "(Must be at least 4 characters, letters and numbers only.)"
-msgstr "(Harus minimal 4 karakter, huruf dan angka saja.)"
-
-#: template-zume-register.php:242
-msgid "Email&nbsp;Address:"
-msgstr "Alamat email:"
-
-#: template-zume-register.php:246
-msgid ""
-"We send your registration email to this address. (Double-check your email "
-"address before continuing.)"
-msgstr ""
-"Kami mengirimkan email pendaftaran Anda ke alamat ini. (Periksa alamat email "
-"Anda sebelum melanjutkan.)"
-
-#: template-zume-register.php:313
-#, php-format
-msgid "Get <em>another</em> %s site in seconds"
-msgstr "Dapatkan situs <em>lain</em> %s dalam sekejap"
-
-#: template-zume-register.php:316
-msgid "There was a problem, please correct the form below and try again."
-msgstr "Ada masalah, silahkan perbaiki formulir di bawah dan coba lagi."
-
-#: template-zume-register.php:319
-#, php-format
-msgid ""
-"Welcome back, %s. By filling out the form below, you can <strong>add another "
-"site to your account</strong>. There is no limit to the number of sites you "
-"can have, so create to your heart&#8217;s content, but write responsibly!"
-msgstr ""
-"Selamat datang kembali, %s. Dengan mengisi formulir di bawah ini, Anda dapat "
-"<strong>menambahkan situs lain ke akun Anda</strong>. Tidak ada batasan "
-"jumlah situs yang Anda dapat, sehingga buatlah situs sepuas hati Anda , tapi "
-"menulislah dengan cara yang bertanggung jawab!"
-
-#: template-zume-register.php:325
-msgid "Sites you are already a member of:"
-msgstr "Situs di mana Anda sudah menjadi anggota:"
-
-#: template-zume-register.php:334
-msgid ""
-"If you&#8217;re not going to use a great site domain, leave it for a new "
-"user. Now have at it!"
-msgstr ""
-"Jika Anda tidak akan menggunakan domain situs besar, tinggalkanlah untuk "
-"pengguna baru. Sekarang milikilah itu!"
-
-#: template-zume-register.php:349
-msgid "Create Site"
-msgstr "Buat Situs"
-
-#. translators: %s: site name
-#: template-zume-register.php:474
-#, php-format
-msgid "The site %s is yours."
-msgstr "Situs ini %s milik Anda."
-
-#. translators: 1: link to new site, 2: login URL, 3: username
-#: template-zume-register.php:479
-#, php-format
-msgid ""
-"%1$s is your new site. <a href=\"%2$s\">Log in</a> as &#8220;%3$s&#8221; "
-"using your existing password."
-msgstr ""
-"%1$s adalah situs baru Anda . <a href=\"%2$s\">Masuk </a> as &#8220;"
-"%3$s&#8221; dengan sandi lama Anda."
-
-#. translators: %s: name of the network
-#: template-zume-register.php:544
-#, php-format
-msgid "Get your own %s account in seconds"
-msgstr "Dapatkan %s akun Anda dalam sekejap"
-
-#: template-zume-register.php:561
-msgid "Gimme a site!"
-msgstr "Beri saya situs!"
-
-#: template-zume-register.php:564
-msgid "Just a username, please."
-msgstr "Hanya nama pemakai"
-
-#. translators: %s: username
-#: template-zume-register.php:614
-#, php-format
-msgid "%s is your new username"
-msgstr "%s adalah nama pemakai Anda yang baru"
-
-#: template-zume-register.php:615
-msgid ""
-"But, before you can start using your new username, <strong>you must activate "
-"it</strong>."
-msgstr ""
-"Namun, sebelum Anda dapat mulai menggunakan nama pengguna baru, <strong>Anda "
-"harus mengaktifkannya</strong>."
-
-#. translators: %s: email address
-#: template-zume-register.php:617 template-zume-register.php:764
-#, php-format
-msgid "Check your inbox at %s and click the link given."
-msgstr "Periksa kotak masuk pada %s dan klik tautan yang diberikan."
-
-#: template-zume-register.php:618
-msgid ""
-"If you do not activate your username within two days, you will have to sign "
-"up again."
-msgstr ""
-"Jika Anda tidak mengaktifkan nama pengguna dalam waktu dua hari, Anda harus "
-"mendaftar lagi."
-
-#: template-zume-register.php:684
-msgid "Signup"
-msgstr "Mendaftar"
-
-#. translators: %s: site address
-#: template-zume-register.php:760
-#, php-format
-msgid "Congratulations! Your new site, %s, is almost ready."
-msgstr "Selamat! Situs baru, %s, sudah hampir siap."
-
-#: template-zume-register.php:762
-msgid ""
-"But, before you can start using your site, <strong>you must activate it</"
-"strong>."
-msgstr ""
-"Namun, sebelum Anda dapat mulai menggunakan nama pengguna baru, <strong>Anda "
-"harus mengaktifkannya</strong>."
-
-#: template-zume-register.php:765
-msgid ""
-"If you do not activate your site within two days, you will have to sign up "
-"again."
-msgstr ""
-"Jika Anda tidak mengaktifkan nama pengguna dalam waktu dua hari, Anda harus "
-"mendaftar lagi."
-
-#: template-zume-register.php:766
-msgid "Still waiting for your email?"
-msgstr "Masih menunggu email Anda?"
-
-#: template-zume-register.php:768
-msgid ""
-"If you haven&#8217;t received your email yet, there are a number of things "
-"you can do:"
-msgstr ""
-"Jika Anda belum menerima email, ada beberapa hal yang dapat Anda lakukan:"
-
-#: template-zume-register.php:770
-msgid ""
-"Wait a little longer. Sometimes delivery of email can be delayed by "
-"processes outside of our control."
-msgstr ""
-"Tunggu sebentar. Kadang-kadang pengiriman email dapat tertunda karena proses "
-"di luar kendali kami."
-
-#: template-zume-register.php:771
-msgid ""
-"Check the junk or spam folder of your email client. Sometime emails wind up "
-"there by mistake."
-msgstr ""
-"Periksa folder spam atau sampah email Anda. Kadang-kadang email masuk kes "
-"ana tanpa sengaja."
-
-#. translators: %s: email address
-#: template-zume-register.php:774
-#, php-format
-msgid ""
-"Have you entered your email correctly? You have entered %s, if it&#8217;s "
-"incorrect, you will not receive your email."
-msgstr ""
-"Sudahkan Anda memasukkan email Anda dengan benar? Anda telah memasukkan %s, "
-"jika itu &#8217; s salah, Anda tidak akan menerima email Anda."
-
-#: template-zume-register.php:831
-msgid "Greetings Network Administrator!"
-msgstr "Salam, Pengelola Jaringan!"
-
-#: template-zume-register.php:836
-msgid "The network currently disallows registrations."
-msgstr "Jaringan saat ini tidak mengizinkan pendaftaran."
-
-#: template-zume-register.php:839
-msgid "The network currently allows site registrations."
-msgstr "Jaringan saat ini memungkinkan pendaftaran situs."
-
-#: template-zume-register.php:842
-msgid "The network currently allows user registrations."
-msgstr "Jaringan saat ini memungkinkan pendaftaran pengguna."
-
-#: template-zume-register.php:845
-msgid "The network currently allows both site and user registrations."
-msgstr "Jaringan saat ini memungkinkan pendaftaran situs dan pengguna."
-
-#. translators: %s: network settings URL
-#: template-zume-register.php:852
-#, php-format
-msgid ""
-"To change or disable registration go to your <a href=\"%s\">Options page</a>."
-msgstr ""
-"Untuk mengubah atau menonaktifkan pendaftaran buka <a href=\"%s\"> halaman "
-"pilihan</a>."
-
-#: template-zume-register.php:860
-msgid "Registration has been disabled."
-msgstr "Pendaftaran telah dinonaktifkan."
-
-#. translators: %s: login URL
-#: template-zume-register.php:864
-#, php-format
-msgid ""
-"You must first <a href=\"%s\">log in</a>, and then you can create a new site."
-msgstr ""
-"Anda harus  <a href=\"%s\"> masuk</a> dahulu, dan kemudian Anda dapat "
-"membuat situs baru."
-
-#: template-zume-register.php:871
-msgid "User registration has been disabled."
-msgstr "Pendaftaran pengguna sudah dinonaktifkan"
-
-#: template-zume-register.php:877
-msgid "Site registration has been disabled."
-msgstr "Pendaftaran situis sudah dinonaktifkan"
-
-#: template-zume-register.php:897
-msgid "Sorry, new registrations are not allowed at this time."
-msgstr "Maaf, pendaftaran baru tidak diizinkan sekarang."
-
-#: template-zume-register.php:898
-msgid "You are logged in already. No need to register again!"
-msgstr "Anda sudah masuk ke situs, tidak perlu mendaftar lagi"
-
-#. translators: %s: site address
-#: template-zume-register.php:906
-#, php-format
-msgid ""
-"The site you were looking for, %s, does not exist, but you can create it now!"
-msgstr ""
-"Situs yang Anda cari, %s, tidak ada, tetapi Anda dapat membuatnya sekarang"
-
-#. translators: %s: site address
-#: template-zume-register.php:910
-#, php-format
-msgid "The site you were looking for, %s, does not exist."
-msgstr "Situs yang Anda cari, %s, tidak ada"
-
 #: template-zume-resources.php:20
 msgid "RESOURCES"
 msgstr "SUMBER DAYA"
@@ -5628,18 +4968,6 @@ msgstr "Informasi Proyek"
 #: template-zume-resources.php:64
 msgid "Language Translation Progress"
 msgstr "Kemajuan Penerjemahan Bahasa"
-
-#: template-zume-stats.php:21
-msgid "Groups Locations"
-msgstr "Lokasi Kelompok"
-
-#: template-zume-stats.php:26
-msgid "Translation Progress"
-msgstr "Kemajuan Penerjemahan"
-
-#: template-zume-stats.php:32
-msgid "Progress for Each Language"
-msgstr "Kemajuan untuk Setiap Bahasa"
 
 #. Theme Name of the plugin/theme
 msgid "Zúme Project"
@@ -5662,20 +4990,16 @@ msgid "https://github.com/ZumeProject"
 msgstr "https://github.com/ZumeProject"
 
 #. Template Name of the plugin/theme
-msgid "Zúme Stats"
-msgstr "Statistik Zume"
-
-#. Template Name of the plugin/theme
-msgid "Zume Logout"
-msgstr "Keluar dari Zume"
-
-#. Template Name of the plugin/theme
 msgid "Zume About"
 msgstr "Tentang Zune"
 
 #. Template Name of the plugin/theme
 msgid "Zume Resources"
 msgstr "Sumber Daya Zume"
+
+#. Template Name of the plugin/theme
+msgid "Zume Privacy Policy"
+msgstr ""
 
 #. Template Name of the plugin/theme
 msgid "Zúme Progress"
@@ -5690,24 +5014,12 @@ msgid "Zume Profile"
 msgstr "Profil Zume"
 
 #. Template Name of the plugin/theme
-msgid "Zume Register"
-msgstr "Pendaftaran Zume"
-
-#. Template Name of the plugin/theme
 msgid "Zúme Overview"
 msgstr "Tinjuaan Zume"
 
 #. Template Name of the plugin/theme
-msgid "Three-Month Plan"
-msgstr "Rencana Tiga-Bulanan"
-
-#. Template Name of the plugin/theme
 msgid "Zúme FAQ"
 msgstr "Pertanyaan yang Sering Ditanyakan tentang Zume"
-
-#. Template Name of the plugin/theme
-msgid "Zume Forgot Password"
-msgstr "Lupa Sandi Zume"
 
 #. Template Name of the plugin/theme
 msgid "Zúme Dashboard"
@@ -5720,3 +5032,814 @@ msgstr "Beranda Lebar Penuh"
 #. Template Name of the plugin/theme
 msgid "Zúme Course"
 msgstr "Kursus Zume"
+
+#~ msgid "Epic 404 - Article Not Found"
+#~ msgstr "Epik 404 - artikel tidak ditemukan"
+
+#~ msgid ""
+#~ "The article you were looking for was not found, but maybe try looking "
+#~ "again!"
+#~ msgstr ""
+#~ "Artikel yang Anda cari tidak ditemukan, tetapi mungkin coba mencari lagi!"
+
+#~ msgid "First Name (optional for coaching)"
+#~ msgstr "Nama Pertama (pilihan untuk pembimbingan)"
+
+#~ msgid "Last Name (optional for coaching)"
+#~ msgstr "Nama Terakhir (pilihan untuk pembimbingan)"
+
+#~ msgid "Phone Number (optional for coaching)"
+#~ msgstr "Nomor Telepon (pilihan untuk pembimbingan)"
+
+#~ msgid "Address (optional for coaching)"
+#~ msgstr "Alamat (pilihan untuk pembimbingan)"
+
+#~ msgid "Affiliation Key (optional)"
+#~ msgstr "Afiliasi (pilihan)"
+
+#~ msgid ""
+#~ "<strong>ERROR</strong>: We can not recognize this address as valid "
+#~ "location. Please, check spelling."
+#~ msgstr ""
+#~ "<strong>ERROR</strong>: Kami tidak mengenali alamat ini sebagai alamat "
+#~ "yang sah. Silakan periksa ejaannya."
+
+#~ msgid "Roles"
+#~ msgstr "Peranan"
+
+#~ msgid "User Roles"
+#~ msgstr "Peranan Pengguna"
+
+#~ msgid "OK"
+#~ msgstr "OK"
+
+#~ msgid "Grant %s capability"
+#~ msgstr "Diberikan %s kapabilitas"
+
+#~ msgid "Deny %s capability"
+#~ msgstr "Ditolak %s kapabilitas"
+
+#~ msgid ""
+#~ "Are you sure you want to delete this role? This is a permanent action and "
+#~ "cannot be undone."
+#~ msgstr ""
+#~ "Apakah Anda yakin ingin menghapus peranan ini? Ini tindakan yang permanen "
+#~ "dan tidak dapat dibatalkan."
+
+#~ msgid "None"
+#~ msgstr "Tidak ada"
+
+#~ msgid "Install Required Plugins"
+#~ msgstr "Pemasangan Membutuhkan Plugins"
+
+#~ msgid "Install Plugins"
+#~ msgstr "Pasang Plugins "
+
+#~ msgid "Installing Plugin: %s"
+#~ msgstr "Sedang Memaasang Plugins: %s"
+
+#~ msgid "Updating Plugin: %s"
+#~ msgstr "Memperbaharui Plugins %s"
+
+#~ msgid "This theme requires the following plugin: %1$s."
+#~ msgid_plural "This theme requires the following plugins: %1$s."
+#~ msgstr[0] "Tema ini membutuhkan plugin berikut: %1$s."
+
+#~ msgid "This theme recommends the following plugin: %1$s."
+#~ msgid_plural "This theme recommends the following plugins: %1$s."
+#~ msgstr[0] "Tema ini merekomendasikan plugin berikut: %1$s."
+
+#~ msgid ""
+#~ "The following plugin needs to be updated to its latest version to ensure "
+#~ "maximum compatibility with this theme: %1$s."
+#~ msgid_plural ""
+#~ "The following plugins need to be updated to their latest version to "
+#~ "ensure maximum compatibility with this theme: %1$s."
+#~ msgstr[0] ""
+#~ "Plugin berikut perlu diperbarui ke versi terbaru untuk memastikan "
+#~ "kompatibilitas maksimum dengan tema ini: %1$ s."
+
+#~ msgid "There is an update available for: %1$s."
+#~ msgid_plural "There are updates available for the following plugins: %1$s."
+#~ msgstr[0] "Ada pembaharuan yang tersedia untuk: %1$ s."
+
+#~ msgid "The following required plugin is currently inactive: %1$s."
+#~ msgid_plural "The following required plugins are currently inactive: %1$s."
+#~ msgstr[0] "Plugin yang diperlukan berikut ini saat ini tidak aktif: %1$ s."
+
+#~ msgid "The following recommended plugin is currently inactive: %1$s."
+#~ msgid_plural ""
+#~ "The following recommended plugins are currently inactive: %1$s."
+#~ msgstr[0] ""
+#~ "Plugin yang direkomendasikan berikut ini saat ini tidak aktif: %1$ s."
+
+#~ msgid "Begin installing plugin"
+#~ msgid_plural "Begin installing plugins"
+#~ msgstr[0] "Mulai memasang plugin"
+
+#~ msgid "Begin updating plugin"
+#~ msgid_plural "Begin updating plugins"
+#~ msgstr[0] "Mulai memperbaharui plugin"
+
+#~ msgid "Begin activating plugin"
+#~ msgid_plural "Begin activating plugins"
+#~ msgstr[0] "Mulai mengaktifkan plugin"
+
+#~ msgid "Return to Required Plugins Installer"
+#~ msgstr "Kembali ke Pemasang Plugin yang Dibutuhkan"
+
+#~ msgid "Return to the Dashboard"
+#~ msgstr "Kembali ke Dasbor"
+
+#~ msgid "Plugin activated successfully."
+#~ msgstr "Plugin berhasil diaktifkan"
+
+#~ msgid "The following plugin was activated successfully:"
+#~ msgid_plural "The following plugins were activated successfully:"
+#~ msgstr[0] "Plugin berikut ini berhasil diaktifkan"
+
+#~ msgid "No action taken. Plugin %1$s was already active."
+#~ msgstr "Tidak melakukan apa-apa. Plugin %1$s sudah aktif"
+
+#~ msgid ""
+#~ "Plugin not activated. A higher version of %s is needed for this theme. "
+#~ "Please update the plugin."
+#~ msgstr ""
+#~ "Plugin tidak diaktifkan. Versi yang lebih tinggi dari %s diperlukan untuk "
+#~ "tema ini. Perbarui plugin."
+
+#~ msgid "All plugins installed and activated successfully. %1$s"
+#~ msgstr "Semua plugin berhasil dipasang dan diaktifkan. %1$ s"
+
+#~ msgid "Dismiss this notice"
+#~ msgstr "Abaikan pemberitahuan ini"
+
+#~ msgid ""
+#~ "There are one or more required or recommended plugins to install, update "
+#~ "or activate."
+#~ msgstr ""
+#~ "Ada satu atau lebih plugin yang diperlukan atau yang disarankan untuk "
+#~ "diinstal, diperbarui atau diaktifkan."
+
+#~ msgid "Please contact the administrator of this site for help."
+#~ msgstr "Hubungi administrator situs ini untuk membantu."
+
+#~ msgid "This plugin needs to be updated to be compatible with your theme."
+#~ msgstr "Plugin ini perlu diperbaharui agar kompatibel dengan tema Anda."
+
+#~ msgid "Update Required"
+#~ msgstr "Diperlukan pembaharuan"
+
+#~ msgid "Set the parent_slug config variable instead."
+#~ msgstr "Menetapkan variabel konfigurasi parent_slug sebagai gantinya."
+
+#~ msgid ""
+#~ "The remote plugin package does not contain a folder with the desired slug "
+#~ "and renaming did not work."
+#~ msgstr ""
+#~ "Paket plugin jarak jauh tidak berisi folder dengan siput yang diinginkan "
+#~ "dan penggantian nama tidak dapat dilakukan."
+
+#~ msgid ""
+#~ "Please contact the plugin provider and ask them to package their plugin "
+#~ "according to the WordPress guidelines."
+#~ msgstr ""
+#~ "Silakan menghubungi penyedia plugin dan meminta mereka untuk mengemas  "
+#~ "plugin sesuai dengan pedoman WordPress."
+
+#~ msgid ""
+#~ "The remote plugin package consists of more than one file, but the files "
+#~ "are not packaged in a folder."
+#~ msgstr ""
+#~ "Paket plugin jarak jauh terdiri dari lebih dari satu file, tetapi file "
+#~ "tidak dikemas dalam folder."
+
+#~ msgctxt "plugin A *and* plugin B"
+#~ msgid "and"
+#~ msgstr "plugin A \"and\" plugin B and"
+
+#~ msgid "TGMPA v%s"
+#~ msgstr "TGMPA v%s"
+
+#~ msgid "Recommended"
+#~ msgstr "Direkomendasikan"
+
+#~ msgid "WordPress Repository"
+#~ msgstr "Penyimpanan WordPress"
+
+#~ msgid "External Source"
+#~ msgstr "Sumber Eksternal"
+
+#~ msgid "Pre-Packaged"
+#~ msgstr "Pra-kemas"
+
+#~ msgid "Not Installed"
+#~ msgstr "Tidak Terpasang"
+
+#~ msgid "Installed But Not Activated"
+#~ msgstr "Terpasang Tapi Tidak Aktif"
+
+#~ msgid "Active"
+#~ msgstr "Aktif"
+
+#~ msgid "Required Update not Available"
+#~ msgstr "Pembaharuan yang Dibutuhkan Tidak Tersedia"
+
+#~ msgid "Requires Update"
+#~ msgstr "Pembaharuan yang Dibutuhkan"
+
+#~ msgid "Update recommended"
+#~ msgstr "Pembeharuan Direkomendasikan"
+
+#~ msgctxt "Install/Update Status"
+#~ msgid "%1$s, %2$s"
+#~ msgstr "%1$s, %2$s"
+
+#~ msgctxt "plugins"
+#~ msgid "All <span class=\"count\">(%s)</span>"
+#~ msgid_plural "All <span class=\"count\">(%s)</span>"
+#~ msgstr[0] "Semua <span class=\"count\">(%s)</span>"
+
+#~ msgid "To Install <span class=\"count\">(%s)</span>"
+#~ msgid_plural "To Install <span class=\"count\">(%s)</span>"
+#~ msgstr[0] "Untuk Memasang <span class=\"count\">(%s)</span>"
+
+#~ msgid "Update Available <span class=\"count\">(%s)</span>"
+#~ msgid_plural "Update Available <span class=\"count\">(%s)</span>"
+#~ msgstr[0] "Pembaharuan Tersedia <span class=\"count\">(%s)</span>"
+
+#~ msgid "To Activate <span class=\"count\">(%s)</span>"
+#~ msgid_plural "To Activate <span class=\"count\">(%s)</span>"
+#~ msgstr[0] "Untuk Mengaktifkan <span class=\"count\">(%s)</span>"
+
+#~ msgctxt "as in: \"version nr unknown\""
+#~ msgid "unknown"
+#~ msgstr "tidak dikenal"
+
+#~ msgid "Installed version:"
+#~ msgstr "Versi yang Terpasang:"
+
+#~ msgid "Minimum required version:"
+#~ msgstr "Version minimum yang dibutuhkan"
+
+#~ msgid "Available version:"
+#~ msgstr "Versi yang Tersedia"
+
+#~ msgid "No plugins to install, update or activate."
+#~ msgstr "Tidak ada plugin untuk dipasang, diperbaharui atau diaktifkan"
+
+#~ msgid "Plugin"
+#~ msgstr "Plugin"
+
+#~ msgid "Source"
+#~ msgstr "Sumber"
+
+#~ msgid "Type"
+#~ msgstr "Jenis"
+
+#~ msgid "Version"
+#~ msgstr "Versi"
+
+#~ msgid "Status"
+#~ msgstr "Status"
+
+#~ msgid "Install %2$s"
+#~ msgstr "Pasang %2$s"
+
+#~ msgid "Update %2$s"
+#~ msgstr "Perbaharui %2$s"
+
+#~ msgid "Activate %2$s"
+#~ msgstr "Aktifkan %2$s"
+
+#~ msgid "Upgrade message from the plugin author:"
+#~ msgstr "Perbaharui pesan dari penulis plugin:"
+
+#~ msgid "Install"
+#~ msgstr "Pasang"
+
+#~ msgid "Activate"
+#~ msgstr "Aktifkan"
+
+#~ msgid "No plugins were selected to be installed. No action taken."
+#~ msgstr ""
+#~ "Tidak ada plugin yang dipilih untuk dipasang. Tidak ada tindakan yang "
+#~ "diambil."
+
+#~ msgid "No plugins were selected to be updated. No action taken."
+#~ msgstr ""
+#~ "Tidak ada plugin yang dipilih untuk diperbaharui. Tidak ada tindakan yang "
+#~ "diambil."
+
+#~ msgid "No plugins are available to be installed at this time."
+#~ msgstr "Tidak ada plugin yang tersedia untuk dipasang saat ini."
+
+#~ msgid "No plugins are available to be updated at this time."
+#~ msgstr "Tidak ada plugin yang tersedia untuk diperbaharui saat ini."
+
+#~ msgid "No plugins were selected to be activated. No action taken."
+#~ msgstr ""
+#~ "Tidak ada plugin yang dipilih untuk diaktifkan. Tidak ada tindakan yang "
+#~ "diambil."
+
+#~ msgid "No plugins are available to be activated at this time."
+#~ msgstr "Tidak ada plugin yang tersedia untuk diaktifkan saaat ini."
+
+#~ msgid "Plugin activation failed."
+#~ msgstr "Pengaktifan plugin gagal"
+
+#~ msgid "Updating Plugin %1$s (%2$d/%3$d)"
+#~ msgstr "Memperbaharui Plugin %1$s (%2$d/%3$d)"
+
+#~ msgid "An error occurred while installing %1$s: <strong>%2$s</strong>."
+#~ msgstr ""
+#~ "Terjadi kesalahan sewaktu melakukan pemasangan  %1$s: <strong>%2$s</"
+#~ "strong>."
+
+#~ msgid "The installation of %1$s failed."
+#~ msgstr "Pemasangan %1$s gagal."
+
+#~ msgid ""
+#~ "The installation and activation process is starting. This process may "
+#~ "take a while on some hosts, so please be patient."
+#~ msgstr ""
+#~ "Proses pemasangan dan aktivasi dimulai. Proses ini mungkin memakan waktu "
+#~ "lama di beberapa penyedia situs, jadi harap bersabar."
+
+#~ msgid "%1$s done."
+#~ msgstr "%1$s selesai."
+
+#~ msgid "All installations and activations have been completed."
+#~ msgstr "Semua pemasangan dan aktivasi sudah selesai"
+
+#~ msgid "Installing and Activating Plugin %1$s (%2$d/%3$d)"
+#~ msgstr "Pemasangan dan aktivasi Plugin %1$s (%2$d/%3$d)"
+
+#~ msgid ""
+#~ "The installation process is starting. This process may take a while on "
+#~ "some hosts, so please be patient."
+#~ msgstr ""
+#~ "Proses pemasangan dan aktivasi dimulai. Proses ini mungkin memakan waktu "
+#~ "lama di beberapa penyedia situs, jadi harap bersabar."
+
+#~ msgid "All installations have been completed."
+#~ msgstr "Semua pemasangan sudah selesai"
+
+#~ msgid "Installing Plugin %1$s (%2$d/%3$d)"
+#~ msgstr "Pemasangan Plugin %1$s (%2$d/%3$d)"
+
+#~ msgid "Zume"
+#~ msgstr "Zume"
+
+#~ msgid "You do not have sufficient permissions to access this page."
+#~ msgstr "Anda tidak memiliki izin yang memadai untuk mengakses laman ini."
+
+#~ msgid "DISCIPLE TOOLS - INTEGRATION"
+#~ msgstr "ALAT MURID - INTEGRASI"
+
+#~ msgid "Languages"
+#~ msgstr "Bahasa"
+
+#~ msgid "Set Default Transfer Site"
+#~ msgstr "Tetapkan Situs Transferr Default"
+
+#~ msgid "All"
+#~ msgstr "Semua"
+
+#~ msgid "New"
+#~ msgstr "Baru"
+
+#~ msgid "View"
+#~ msgstr "Lihat"
+
+#~ msgid "Search"
+#~ msgstr "Cari"
+
+#~ msgid "Status:"
+#~ msgstr "Status:"
+
+#~ msgid "Checking Status"
+#~ msgstr "Memeriksa Status"
+
+#~ msgid "Linked"
+#~ msgstr "Ditautkan"
+
+#~ msgid "Manage Site Link"
+#~ msgstr "Kelola Tautan Situs"
+
+#~ msgid "Configuration"
+#~ msgstr "Konfigurasi"
+
+#~ msgid "Token"
+#~ msgstr "Token"
+
+#~ msgid ""
+#~ "If you have a token from another site, just clear token above and replace "
+#~ "it."
+#~ msgstr ""
+#~ "Jika Anda memiliki token dari situs lain, hilangkan saja token di atas "
+#~ "dan gantikan itu."
+
+#~ msgid "Site 1"
+#~ msgstr "Situs 1"
+
+#~ msgid "Use just the host name. Example: www.website.com"
+#~ msgstr "Menggunakan hanya nama host. Contoh: Www.website.com"
+
+#~ msgid "Site 2"
+#~ msgstr "Situs 2"
+
+#~ msgid "Approved IP Address"
+#~ msgstr "Alamat IP yang Disetujui"
+
+#~ msgid ""
+#~ "Enter an approved ip address to restrict responses of this connection. "
+#~ "(format: xxx.xxx.xxx.xxx)"
+#~ msgstr ""
+#~ "Masukkan alamat IP yang disetujui untuk membatasi respons sambungan ini. "
+#~ "(format: Xxx. Xxx. Xxx. Xxx)"
+
+#~ msgid "Connection Type"
+#~ msgstr "Tipe Sambungan"
+
+#~ msgid ""
+#~ "This adds permissions needed for the labeled task. If you have trouble "
+#~ "with a connection succeeding, and a task failing. This permission setting "
+#~ "may be the reason."
+#~ msgstr ""
+#~ "Ini menambah izin yang diperlukan untuk tugas berlabel. Jika Anda "
+#~ "mengalami masalah dengan sambungan berhasil, dan tugas gagal. Pengaturan "
+#~ "izin ini mungkin menjadi alasan."
+
+#~ msgid "DT Site"
+#~ msgstr "Situs DT"
+
+#~ msgid "Is this connection to a Disciple Tools/Wordpress system."
+#~ msgstr ""
+#~ "Adalah sambungan ini untuk seorang Disciple Tools (Alat Murid)/sistem "
+#~ "Wordpress."
+
+#~ msgid "Yes, connected to another DT site (default)"
+#~ msgstr "Ya, terhubung ke situs DT lain (default)"
+
+#~ msgid "No, connection for a non-Disciple Tools system."
+#~ msgstr "Tidak, sambungan untuk sistem alat non-murid."
+
+#~ msgid "Consider Checking:"
+#~ msgstr "Pertimbangkan untuk Memeriksa:"
+
+#~ msgid ""
+#~ "Check if the target site is setup with identical configuration "
+#~ "information."
+#~ msgstr ""
+#~ "Periksa apakah situs target telah terpasang dengan informasi konfigurasi "
+#~ "identik."
+
+#~ msgid ""
+#~ "Check if HTTPS/SSL is enabled on both sites. Due to the transfer of data "
+#~ "between these sites, SSL encryption is required for both sites to protect "
+#~ "the data exchange."
+#~ msgstr ""
+#~ "Periksa apakah HTTPS/SSL telah diaktifkan di kedua situs. Karena transfer "
+#~ "data antara situs ini, enkripsi SSL diperlukan untuk kedua situs untuk "
+#~ "melindungi pertukaran data."
+
+#~ msgid ""
+#~ "Check if the server timestamps are identical. Mismatched server times "
+#~ "will cause decryption key failures. Your server timestamp"
+#~ msgstr ""
+#~ "Periksa apakah timestamps server sudah sama. Server tidak cocok akan "
+#~ "menyebabkan kegagalan dekripsi. Timestamp server Anda"
+
+#~ msgid "Current Site"
+#~ msgstr "Situs Ini"
+
+#~ msgid "Timestamp"
+#~ msgstr "Timestamp"
+
+#~ msgid "Compare this number to linked site. It should be identical."
+#~ msgstr "Bandingkan angka ini dengan situs terkait. Nilainya harus sama."
+
+#~ msgid "Not Linked"
+#~ msgstr "Tidak Terhubung"
+
+#~ msgid "Visibility"
+#~ msgstr "Visibilitas"
+
+#~ msgid "Public (Default)"
+#~ msgstr "Publik (Default)"
+
+#~ msgid "Private"
+#~ msgstr "Pribadi"
+
+#~ msgid "Title 1"
+#~ msgstr "Judul 1"
+
+#~ msgid "Message1"
+#~ msgstr "Pesan1"
+
+#~ msgid "Title 2"
+#~ msgstr "Judul 2"
+
+#~ msgid "Message2"
+#~ msgstr "Pesan2"
+
+#~ msgid "Title 3"
+#~ msgstr "Judul 3"
+
+#~ msgid "Message3"
+#~ msgstr "Pesan3"
+
+#~ msgid "Title 4"
+#~ msgstr "Judul 4"
+
+#~ msgid "Message4"
+#~ msgstr "Pesan4"
+
+#~ msgid "Title 5"
+#~ msgstr "Judul 5"
+
+#~ msgid "Message5"
+#~ msgstr "Pesan5"
+
+#~ msgid "Title 6"
+#~ msgstr "Judul 6"
+
+#~ msgid "Message6"
+#~ msgstr "Pesan6"
+
+#~ msgid "Title 7"
+#~ msgstr "Judul 7"
+
+#~ msgid "Message7"
+#~ msgstr "Pesan7"
+
+#~ msgid "Title 8"
+#~ msgstr "Judul 8"
+
+#~ msgid "Message8"
+#~ msgstr "Pesan8"
+
+#~ msgid "Title 9"
+#~ msgstr "Judul 9"
+
+#~ msgid "Message9"
+#~ msgstr "Pesan9"
+
+#~ msgid "Title 10"
+#~ msgstr "Judul 10"
+
+#~ msgid "Message10"
+#~ msgstr "Pesan10"
+
+#~ msgid "You have been logged out."
+#~ msgstr "Anda sudah dikeluarkan"
+
+#~ msgid "Back to home page"
+#~ msgstr "Kembali ke Beranda"
+
+#~ msgid "User Name"
+#~ msgstr "Nama Pengguna"
+
+#~ msgid "(can not change)"
+#~ msgstr "(tidak dapat diubah)"
+
+#~ msgid "Last Name"
+#~ msgstr "Nama Terkahir"
+
+#~ msgid "Site Domain:"
+#~ msgstr "Domain Situs:"
+
+#~ msgid "sitename"
+#~ msgstr "namasitus"
+
+#~ msgid "domain"
+#~ msgstr "domain"
+
+#~ msgid "Your address will be %s."
+#~ msgstr "Alamat Anda adalah  %s."
+
+#~ msgid ""
+#~ "Must be at least 4 characters, letters and numbers only. It cannot be "
+#~ "changed, so choose carefully!"
+#~ msgstr ""
+#~ "Harus minimal 4 karakter, huruf dan angka saja. Tidak dapat diubah, Jadi "
+#~ "pilihlah dengan hati-hati!"
+
+#~ msgid "Site Title:"
+#~ msgstr "Judul Situs"
+
+#~ msgid "Site Language:"
+#~ msgstr "Bahasa situs"
+
+#~ msgid "Privacy:"
+#~ msgstr "Privasi:"
+
+#~ msgid "Allow search engines to index this site."
+#~ msgstr "Izinkan mesin pencari untuk mengindeks situs ini."
+
+#~ msgid "Yes"
+#~ msgstr "Ya"
+
+#~ msgid "No"
+#~ msgstr "Tidak"
+
+#~ msgid "(Must be at least 4 characters, letters and numbers only.)"
+#~ msgstr "(Harus minimal 4 karakter, huruf dan angka saja.)"
+
+#~ msgid ""
+#~ "We send your registration email to this address. (Double-check your email "
+#~ "address before continuing.)"
+#~ msgstr ""
+#~ "Kami mengirimkan email pendaftaran Anda ke alamat ini. (Periksa alamat "
+#~ "email Anda sebelum melanjutkan.)"
+
+#~ msgid "Get <em>another</em> %s site in seconds"
+#~ msgstr "Dapatkan situs <em>lain</em> %s dalam sekejap"
+
+#~ msgid "There was a problem, please correct the form below and try again."
+#~ msgstr "Ada masalah, silahkan perbaiki formulir di bawah dan coba lagi."
+
+#~ msgid ""
+#~ "Welcome back, %s. By filling out the form below, you can <strong>add "
+#~ "another site to your account</strong>. There is no limit to the number of "
+#~ "sites you can have, so create to your heart&#8217;s content, but write "
+#~ "responsibly!"
+#~ msgstr ""
+#~ "Selamat datang kembali, %s. Dengan mengisi formulir di bawah ini, Anda "
+#~ "dapat <strong>menambahkan situs lain ke akun Anda</strong>. Tidak ada "
+#~ "batasan jumlah situs yang Anda dapat, sehingga buatlah situs sepuas hati "
+#~ "Anda , tapi menulislah dengan cara yang bertanggung jawab!"
+
+#~ msgid "Sites you are already a member of:"
+#~ msgstr "Situs di mana Anda sudah menjadi anggota:"
+
+#~ msgid ""
+#~ "If you&#8217;re not going to use a great site domain, leave it for a new "
+#~ "user. Now have at it!"
+#~ msgstr ""
+#~ "Jika Anda tidak akan menggunakan domain situs besar, tinggalkanlah untuk "
+#~ "pengguna baru. Sekarang milikilah itu!"
+
+#~ msgid "Create Site"
+#~ msgstr "Buat Situs"
+
+#~ msgid "The site %s is yours."
+#~ msgstr "Situs ini %s milik Anda."
+
+#~ msgid ""
+#~ "%1$s is your new site. <a href=\"%2$s\">Log in</a> as &#8220;%3$s&#8221; "
+#~ "using your existing password."
+#~ msgstr ""
+#~ "%1$s adalah situs baru Anda . <a href=\"%2$s\">Masuk </a> as &#8220;"
+#~ "%3$s&#8221; dengan sandi lama Anda."
+
+#~ msgid "Get your own %s account in seconds"
+#~ msgstr "Dapatkan %s akun Anda dalam sekejap"
+
+#~ msgid "Gimme a site!"
+#~ msgstr "Beri saya situs!"
+
+#~ msgid "Just a username, please."
+#~ msgstr "Hanya nama pemakai"
+
+#~ msgid "%s is your new username"
+#~ msgstr "%s adalah nama pemakai Anda yang baru"
+
+#~ msgid ""
+#~ "But, before you can start using your new username, <strong>you must "
+#~ "activate it</strong>."
+#~ msgstr ""
+#~ "Namun, sebelum Anda dapat mulai menggunakan nama pengguna baru, "
+#~ "<strong>Anda harus mengaktifkannya</strong>."
+
+#~ msgid "Check your inbox at %s and click the link given."
+#~ msgstr "Periksa kotak masuk pada %s dan klik tautan yang diberikan."
+
+#~ msgid ""
+#~ "If you do not activate your username within two days, you will have to "
+#~ "sign up again."
+#~ msgstr ""
+#~ "Jika Anda tidak mengaktifkan nama pengguna dalam waktu dua hari, Anda "
+#~ "harus mendaftar lagi."
+
+#~ msgid "Signup"
+#~ msgstr "Mendaftar"
+
+#~ msgid "Congratulations! Your new site, %s, is almost ready."
+#~ msgstr "Selamat! Situs baru, %s, sudah hampir siap."
+
+#~ msgid ""
+#~ "But, before you can start using your site, <strong>you must activate it</"
+#~ "strong>."
+#~ msgstr ""
+#~ "Namun, sebelum Anda dapat mulai menggunakan nama pengguna baru, "
+#~ "<strong>Anda harus mengaktifkannya</strong>."
+
+#~ msgid ""
+#~ "If you do not activate your site within two days, you will have to sign "
+#~ "up again."
+#~ msgstr ""
+#~ "Jika Anda tidak mengaktifkan nama pengguna dalam waktu dua hari, Anda "
+#~ "harus mendaftar lagi."
+
+#~ msgid "Still waiting for your email?"
+#~ msgstr "Masih menunggu email Anda?"
+
+#~ msgid ""
+#~ "If you haven&#8217;t received your email yet, there are a number of "
+#~ "things you can do:"
+#~ msgstr ""
+#~ "Jika Anda belum menerima email, ada beberapa hal yang dapat Anda lakukan:"
+
+#~ msgid ""
+#~ "Wait a little longer. Sometimes delivery of email can be delayed by "
+#~ "processes outside of our control."
+#~ msgstr ""
+#~ "Tunggu sebentar. Kadang-kadang pengiriman email dapat tertunda karena "
+#~ "proses di luar kendali kami."
+
+#~ msgid ""
+#~ "Check the junk or spam folder of your email client. Sometime emails wind "
+#~ "up there by mistake."
+#~ msgstr ""
+#~ "Periksa folder spam atau sampah email Anda. Kadang-kadang email masuk kes "
+#~ "ana tanpa sengaja."
+
+#~ msgid ""
+#~ "Have you entered your email correctly? You have entered %s, if it&#8217;s "
+#~ "incorrect, you will not receive your email."
+#~ msgstr ""
+#~ "Sudahkan Anda memasukkan email Anda dengan benar? Anda telah memasukkan "
+#~ "%s, jika itu &#8217; s salah, Anda tidak akan menerima email Anda."
+
+#~ msgid "Greetings Network Administrator!"
+#~ msgstr "Salam, Pengelola Jaringan!"
+
+#~ msgid "The network currently disallows registrations."
+#~ msgstr "Jaringan saat ini tidak mengizinkan pendaftaran."
+
+#~ msgid "The network currently allows site registrations."
+#~ msgstr "Jaringan saat ini memungkinkan pendaftaran situs."
+
+#~ msgid "The network currently allows user registrations."
+#~ msgstr "Jaringan saat ini memungkinkan pendaftaran pengguna."
+
+#~ msgid "The network currently allows both site and user registrations."
+#~ msgstr "Jaringan saat ini memungkinkan pendaftaran situs dan pengguna."
+
+#~ msgid ""
+#~ "To change or disable registration go to your <a href=\"%s\">Options page</"
+#~ "a>."
+#~ msgstr ""
+#~ "Untuk mengubah atau menonaktifkan pendaftaran buka <a href=\"%s\"> "
+#~ "halaman pilihan</a>."
+
+#~ msgid "Registration has been disabled."
+#~ msgstr "Pendaftaran telah dinonaktifkan."
+
+#~ msgid ""
+#~ "You must first <a href=\"%s\">log in</a>, and then you can create a new "
+#~ "site."
+#~ msgstr ""
+#~ "Anda harus  <a href=\"%s\"> masuk</a> dahulu, dan kemudian Anda dapat "
+#~ "membuat situs baru."
+
+#~ msgid "User registration has been disabled."
+#~ msgstr "Pendaftaran pengguna sudah dinonaktifkan"
+
+#~ msgid "Site registration has been disabled."
+#~ msgstr "Pendaftaran situis sudah dinonaktifkan"
+
+#~ msgid "Sorry, new registrations are not allowed at this time."
+#~ msgstr "Maaf, pendaftaran baru tidak diizinkan sekarang."
+
+#~ msgid "You are logged in already. No need to register again!"
+#~ msgstr "Anda sudah masuk ke situs, tidak perlu mendaftar lagi"
+
+#~ msgid ""
+#~ "The site you were looking for, %s, does not exist, but you can create it "
+#~ "now!"
+#~ msgstr ""
+#~ "Situs yang Anda cari, %s, tidak ada, tetapi Anda dapat membuatnya sekarang"
+
+#~ msgid "The site you were looking for, %s, does not exist."
+#~ msgstr "Situs yang Anda cari, %s, tidak ada"
+
+#~ msgid "Groups Locations"
+#~ msgstr "Lokasi Kelompok"
+
+#~ msgid "Translation Progress"
+#~ msgstr "Kemajuan Penerjemahan"
+
+#~ msgid "Progress for Each Language"
+#~ msgstr "Kemajuan untuk Setiap Bahasa"
+
+#~ msgid "Zúme Stats"
+#~ msgstr "Statistik Zume"
+
+#~ msgid "Zume Logout"
+#~ msgstr "Keluar dari Zume"
+
+#~ msgid "Zume Register"
+#~ msgstr "Pendaftaran Zume"

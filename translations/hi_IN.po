@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Zúme Project\n"
-"POT-Creation-Date: 2018-11-26 12:26-0700\n"
-"PO-Revision-Date: 2018-11-26 12:28-0700\n"
+"POT-Creation-Date: 2018-12-05 07:01-0700\n"
+"PO-Revision-Date: 2018-12-05 07:15-0700\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: hi\n"
@@ -20,15 +20,15 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 
-#: 404.php:12
-msgid "Epic 404 - Article Not Found"
-msgstr "बीज-प्रश्न ४०४ - उल्लेख नहीं मिला"
+#: front-page.php:52 front-page.php:171
+msgid "Get Started"
+msgstr "आरंभ करें"
 
-#: 404.php:16
-msgid "The article you were looking for was not found, but maybe try looking again!"
-msgstr "आप जो लेख के लिए देख रहे थे नहीं मिला, लेकिन शायद फिर से देखने की कोशिश कीजिए!"
+#: front-page.php:55 functions/zume-polylang-integration.php:148 template-zume-login.php:382
+msgid "Login"
+msgstr "लॉग-इन"
 
-#: front-page.php:52
+#: front-page.php:60
 msgid ""
 "Zúme Training is an on-line and in-life learning experience designed for small groups who follow Jesus "
 "to learn how to obey His Great Commission and make disciples who multiply."
@@ -36,51 +36,47 @@ msgstr ""
 "Zúme प्रशिक्षण एक ऑन - लाइन और जीवन में सीखने का अनुभव है जो उन छोटे समूहों के लिए डिज़ाइन किया गया है जो यीशु के पीछे "
 "चलते है यह सीखने के लिए की कैसे हम उसके महान आदेश का पालन कर सकते है और शिष्य बनाये जो बढ़ते रहे ।"
 
-#: front-page.php:65
+#: front-page.php:73
 msgid "Zúme consists of 10 sessions, 2 hours each:"
 msgstr "Zúme 10 सत्रों में बटा हुआ हैं, प्रत्येक २ घंटो में:"
 
-#: front-page.php:73 template-zume-about.php:74
+#: front-page.php:81 template-zume-about.php:74
 msgid "Video and Audio to help your group understand basic principles of multiplying disciples."
 msgstr "वीडियो और ऑडियो आपके समूह को बुनियादी सिद्धांत समझाने और शिष्यों को बढ़ाने में मदद करने के लिए है ।"
 
-#: front-page.php:81 template-zume-about.php:75
+#: front-page.php:89 template-zume-about.php:75
 msgid "Group Discussions to help your group think through what’s being shared."
 msgstr "समूह चर्चाएं आपके समूह को यह सोचने में मदद करने के लिए है कि क्या साझा किया जा रहा है ।"
 
-#: front-page.php:89 template-zume-about.php:76
+#: front-page.php:97 template-zume-about.php:76
 msgid "Simple Exercises to help your group put what you’re learning into practice."
 msgstr "सरल अभ्यास जो आपके समूह की मदद करेगा की जो आप सीख रहे हैं उसे अपने क्रियाओं में ढालने के लिए ।"
 
-#: front-page.php:97 template-zume-about.php:77
+#: front-page.php:105 template-zume-about.php:77
 msgid "Session Challenges to help your group keep learning and growing between sessions."
 msgstr "सत्र की चुनौतियों द्वारा सत्रों के बीच में आपके समूह को सीखने और बढ़ते रहने में मदद मिलती है ।"
 
-#: front-page.php:110
+#: front-page.php:118
 msgid "Want to start the training?"
 msgstr "प्रशिक्षण शुरू करना चाहते हैं?"
 
-#: front-page.php:124
+#: front-page.php:132
 msgid "It's as easy as 1-2-3"
 msgstr "यह 1-2-3 के रूप में आसान है"
 
-#: front-page.php:133
+#: front-page.php:141
 msgid "Sign up"
 msgstr "साइन अप"
 
-#: front-page.php:143
+#: front-page.php:151
 msgid "Invite some friends"
 msgstr "कुछ दोस्तों को आमंत्रित करें"
 
-#: front-page.php:153
+#: front-page.php:161
 msgid "Host a training"
 msgstr "प्रशिक्षण की मेज़बानी करें"
 
-#: front-page.php:163
-msgid "Get Started"
-msgstr "आरंभ करें"
-
-#: front-page.php:196
+#: front-page.php:204
 msgid "Find out more about Zúme"
 msgstr "Zúme के बारे में अधिक जानकारी प्राप्त करें"
 
@@ -92,8 +88,8 @@ msgstr "कोच"
 msgid "Coach Leader"
 msgstr "कोच लीडर"
 
-#: functions/enqueue-scripts.php:55 functions/enqueue-scripts.php:57 template-zume-dashboard.php:895
-#: template-zume-dashboard.php:1008
+#: functions/enqueue-scripts.php:55 functions/enqueue-scripts.php:57 template-zume-dashboard.php:905
+#: template-zume-dashboard.php:1018
 msgid "Cancel"
 msgstr "रद्द करें"
 
@@ -105,7 +101,7 @@ msgstr "वर्तमान चरण:"
 msgid "Finish"
 msgstr "समाप्त"
 
-#: functions/enqueue-scripts.php:59 functions/utilities/menu.php:108 template-register-old.php:568
+#: functions/enqueue-scripts.php:59 functions/utilities/menu.php:108
 msgid "Next"
 msgstr "अगला"
 
@@ -117,7 +113,7 @@ msgstr "पिछला"
 msgid "Loading..."
 msgstr "लोडिंग..."
 
-#: functions/enqueue-scripts.php:75 template-zume-dashboard.php:859 template-zume-dashboard.php:893
+#: functions/enqueue-scripts.php:75 template-zume-dashboard.php:869 template-zume-dashboard.php:903
 msgid "Delete"
 msgstr "हटाएँ"
 
@@ -133,190 +129,173 @@ msgstr "यह विषय बदलने में विफल ।"
 msgid "Three Month Plan - Zúme Project"
 msgstr "तीन माह की योजना-Zúme परियोजना"
 
-#: functions/login/zume-login.php:207 functions/login/zume-login.php:435
+#: functions/enqueue-scripts.php:79
+msgid "We got it!"
+msgstr ""
+
+#: functions/enqueue-scripts.php:80
+msgid "We're a volunteer network, so give us a few days. We'll reach out to you soon as possible!"
+msgstr ""
+
+#: functions/login/zume-login.php:97 functions/login/zume-login.php:316
+msgid "Email is a required permission for login and registration."
+msgstr ""
+
+#: functions/login/zume-login.php:209 functions/login/zume-login.php:441
 msgid "No user found."
 msgstr ""
 
-#: functions/login/zume-login.php:278 functions/login/zume-login.php:400
+#: functions/login/zume-login.php:280 functions/login/zume-login.php:406
 msgid "You are missing your sign-in token. Try signing in again."
 msgstr ""
 
-#: functions/login/zume-login.php:289 functions/login/zume-login.php:410
+#: functions/login/zume-login.php:290 functions/login/zume-login.php:416
 #, fuzzy
 #| msgid "Failed to connect with the URL provided."
 msgid "Failed to connect with Facebook. Try again."
 msgstr "मुहैया किए गए URL के साथ कनेक्ट होने में विफल ।"
 
-#: functions/login/zume-login.php:308 functions/login/zume-login.php:426
+#: functions/login/zume-login.php:309 functions/login/zume-login.php:432
 msgid "Facebook user lookup error. Sorry for the inconvenience."
 msgstr ""
 
-#: functions/login/zume-login.php:311 functions/login/zume-login.php:429
+#: functions/login/zume-login.php:312 functions/login/zume-login.php:435
 msgid "Error with looking up user with Facebook. Sorry for the inconvenience."
 msgstr ""
 
-#: functions/login/zume-login.php:531
+#: functions/login/zume-login.php:536
 msgid "There are some errors in your form."
 msgstr ""
 
-#: functions/login/zume-login.php:536 template-zume-profile.php:129
+#: functions/login/zume-login.php:541 template-zume-dashboard.php:1122 template-zume-dashboard.php:1173
+#: template-zume-login.php:354 template-zume-profile.php:127
 msgid "Email"
 msgstr "ईमेल"
 
-#: functions/login/zume-login.php:540 template-zume-login.php:265
+#: functions/login/zume-login.php:545 template-zume-login.php:242
 #, fuzzy
 #| msgid "Required"
 msgid "Password Required"
 msgstr "आवश्यक"
 
-#: functions/login/zume-login.php:543 template-zume-login.php:268
+#: functions/login/zume-login.php:548 template-zume-login.php:245
 msgid "Password required"
 msgstr ""
 
-#: functions/login/zume-login.php:550 template-zume-login.php:275
+#: functions/login/zume-login.php:554 template-zume-login.php:252
 msgid "Re-enter Password"
 msgstr ""
 
-#: functions/login/zume-login.php:553 template-zume-login.php:278
+#: functions/login/zume-login.php:557 template-zume-login.php:255
 msgid "Passwords do not match. Please, try again."
 msgstr ""
 
-#: functions/login/zume-login.php:562 functions/zume-polylang-integration.php:143
-#: template-zume-login.php:491
+#: functions/login/zume-login.php:566 functions/zume-polylang-integration.php:149
+#: template-zume-login.php:481
 msgid "Register"
 msgstr "पंजीकरण"
 
-#: functions/login/zume-login.php:619
+#: functions/login/zume-login.php:609
 msgid "Missing captcha response. How did you do that?"
 msgstr ""
 
-#: functions/login/zume-login.php:632
+#: functions/login/zume-login.php:622
 msgid "Captcha failure. Try again, if you are human."
 msgstr ""
 
-#: functions/login/zume-login.php:638
+#: functions/login/zume-login.php:628
 msgid "Missing email or password."
 msgstr ""
 
-#: functions/login/zume-login.php:657
-#, php-format
-msgid "Sorry. This email is already registered. %s Go to Login %s"
+#: functions/login/zume-login.php:647
+msgid "Sorry. This email is already registered."
 msgstr ""
 
-#: functions/login/zume-login.php:668
+#: functions/login/zume-login.php:658
 #, fuzzy
 #| msgid "Something went wrong with the plugin API."
 msgid "Something went wrong. Sorry. Could you try again?"
 msgstr "प्लग-इन एपीआई के साथ कुछ गलत हुआ है ।"
 
-#: functions/login/zume-login.php:690
+#: functions/login/zume-login.php:680
 msgid "No new user found."
 msgstr ""
 
-#: functions/login/zume-login.php:700
-msgid "Register with Google"
-msgstr ""
+#: functions/login/zume-login.php:736 functions/login/zume-login.php:784
+#, fuzzy
+#| msgid "Google Keys"
+msgid "Google"
+msgstr "Google कुंजियां"
 
-#: functions/login/zume-login.php:702
-msgid "Sign in with Google"
-msgstr ""
-
-#: functions/login/zume-login.php:736
-msgid "Failed to authenticate your Google account. Try again."
-msgstr ""
-
-#: functions/login/zume-login.php:747
+#: functions/login/zume-login.php:778
 msgid "Link with Google"
 msgstr ""
 
-#: functions/login/zume-login.php:862
-msgid "Link Facebook"
+#: functions/login/zume-login.php:909 functions/login/zume-login.php:1001
+msgid "Facebook"
+msgstr "Facebook"
+
+#: functions/login/zume-login.php:1142
+#, fuzzy
+#| msgid "User Address"
+msgid "Missing username or email address."
+msgstr "यूजर एड्रेस"
+
+#: functions/login/zume-login.php:1148
+#, fuzzy
+#| msgid "User Address"
+msgid "ERROR: Enter a username or email address."
+msgstr "यूजर एड्रेस"
+
+#: functions/login/zume-login.php:1152
+msgid "ERROR: There is no user registered with that email address."
 msgstr ""
 
-#: functions/login/zume-login.php:938
-msgid "Failed to authenticate your Facebook account. Try again."
+#: functions/login/zume-login.php:1157
+msgid "ERROR: There is no user registered with that username."
 msgstr ""
 
-#: functions/login/zume-login.php:964
-msgid "Login Facebook"
-msgstr ""
-
-#: functions/login/zume-login.php:1089
-msgid "<strong>ERROR</strong>: Enter a username or email address."
-msgstr ""
-
-#: functions/login/zume-login.php:1093
-msgid "<strong>ERROR</strong>: There is no user registered with that email address."
-msgstr ""
-
-#: functions/login/zume-login.php:1114
+#: functions/login/zume-login.php:1177
 msgid "<strong>ERROR</strong>: Invalid username or email."
 msgstr ""
 
-#: functions/login/zume-login.php:1137
+#: functions/login/zume-login.php:1200
 msgid "Someone has requested a password reset for the following account:"
 msgstr ""
 
 #. translators: %s: site name
-#: functions/login/zume-login.php:1139
-#, fuzzy, php-format
-#| msgid "Site Name:"
+#: functions/login/zume-login.php:1202
+#, php-format
 msgid "Site Name: %s"
-msgstr "साइट का नाम:"
+msgstr "साइट का नाम: %s"
 
 #. translators: %s: user login
-#: functions/login/zume-login.php:1141
-#, fuzzy, php-format
-#| msgid "Username:"
+#: functions/login/zume-login.php:1204
+#, php-format
 msgid "Username: %s"
-msgstr "उपयोगकर्ता:"
+msgstr "प्रयोक्ता नाम: %s"
 
-#: functions/login/zume-login.php:1142
+#: functions/login/zume-login.php:1205
 msgid "If this was a mistake, just ignore this email and nothing will happen."
 msgstr ""
 
-#: functions/login/zume-login.php:1143
+#: functions/login/zume-login.php:1206
 msgid "To reset your password, visit the following address:"
 msgstr ""
 
 #. translators: Password reset email subject. %s: Site name
-#: functions/login/zume-login.php:1147
+#: functions/login/zume-login.php:1210
 #, php-format
 msgid "[%s] Password Reset"
 msgstr ""
 
-#: functions/login/zume-login.php:1177
+#: functions/login/zume-login.php:1240
 msgid "The email could not be sent."
 msgstr ""
 
-#: functions/login/zume-login.php:1177
+#: functions/login/zume-login.php:1240
 msgid "Possible reason: your host may have disabled the mail() function."
 msgstr ""
-
-#: functions/login/zume-register.php:141
-msgid "First Name (optional for coaching)"
-msgstr "प्रथम नाम (कोचिंग के लिए वैकल्पिक)"
-
-#: functions/login/zume-register.php:145
-msgid "Last Name (optional for coaching)"
-msgstr "अंतिम नाम (कोचिंग के लिए वैकल्पिक)"
-
-#: functions/login/zume-register.php:149
-msgid "Phone Number (optional for coaching)"
-msgstr "फोन नंबर (कोचिंग के लिए वैकल्पिक)"
-
-#: functions/login/zume-register.php:153
-msgid "Address (optional for coaching)"
-msgstr "पता (कोचिंग के लिए वैकल्पिक)"
-
-#: functions/login/zume-register.php:164
-msgid "Affiliation Key (optional)"
-msgstr "संबद्धता कुंजी (वैकल्पिक)"
-
-#: functions/login/zume-register.php:188
-msgid ""
-"<strong>ERROR</strong>: We can not recognize this address as valid location. Please, check spelling."
-msgstr "<strong>ERROR</strong>: हम इस पते के वैध स्थान को नहीं पहचान पा रहे। कृपया शब्दों की जांच करें ।"
 
 #: functions/post-types/pdf-download-post-type.php:131 functions/post-types/pdf-download-post-type.php:132
 msgid "Zume Download"
@@ -480,7 +459,7 @@ msgstr ""
 "आप इस सत्र के लिए एक डिजिटल PDF के साथ आगे बढ़ सकेंगे, लेकिन कृपया सुनिश्चित करें कि आपके समूह के प्रत्येक सदस्यों के पास "
 "भविष्य के सत्रों के लिए सामग्रियों की प्रिंटेड कॉपी साथ हो ।"
 
-#: functions/zume-course.php:359 template-zume-dashboard.php:505 template-zume-resources.php:38
+#: functions/zume-course.php:359 template-zume-dashboard.php:515 template-zume-resources.php:38
 msgid "Download Guidebook"
 msgstr "डाउनलोड गाइडबुक"
 
@@ -2491,72 +2470,68 @@ msgstr ""
 msgid "No Name"
 msgstr "कोई नाम नहीं"
 
-#: functions/zume-functions.php:291 template-zume-profile.php:182
+#: functions/zume-functions.php:294 template-zume-dashboard.php:1107 template-zume-profile.php:80
 msgid "Phone Number"
 msgstr "फ़ोन नंबर"
 
-#: functions/zume-functions.php:292
+#: functions/zume-functions.php:295
 msgid "User Address"
 msgstr "यूजर एड्रेस"
 
-#: functions/zume-functions.php:293
+#: functions/zume-functions.php:296
 msgid "GeoCoded IP"
 msgstr "GeoCoded आईपी"
 
-#: functions/zume-polylang-integration.php:132
+#: functions/zume-polylang-integration.php:138
 msgid "Home"
 msgstr "होम"
 
-#: functions/zume-polylang-integration.php:133 template-zume-overview.php:238
+#: functions/zume-polylang-integration.php:139 template-zume-overview.php:238
 msgid "Dashboard"
 msgstr "डैशबोर्ड"
 
-#: functions/zume-polylang-integration.php:134
+#: functions/zume-polylang-integration.php:140
 msgid "About"
 msgstr "बारे में"
 
-#: functions/zume-polylang-integration.php:135
+#: functions/zume-polylang-integration.php:141
 msgid "Resources"
 msgstr "संसाधने"
 
-#: functions/zume-polylang-integration.php:136
+#: functions/zume-polylang-integration.php:142
 msgid "FAQs"
 msgstr "अक्सर पूछे जाने वाले प्रश्न"
 
-#: functions/zume-polylang-integration.php:137
+#: functions/zume-polylang-integration.php:143
 msgid "Overview"
 msgstr "अवलोकन"
 
-#: functions/zume-polylang-integration.php:138
+#: functions/zume-polylang-integration.php:144
 msgid "Settings"
 msgstr "सेटिंग्स"
 
-#: functions/zume-polylang-integration.php:139
+#: functions/zume-polylang-integration.php:145
 msgid "Profile"
 msgstr "प्रोफाइल"
 
-#: functions/zume-polylang-integration.php:140
+#: functions/zume-polylang-integration.php:146
 msgid "Admin"
 msgstr "व्यवस्थापक"
 
-#: functions/zume-polylang-integration.php:141
+#: functions/zume-polylang-integration.php:147
 msgid "Logout"
 msgstr "लॉगआउट"
 
-#: functions/zume-polylang-integration.php:142 template-zume-login.php:390
-msgid "Login"
-msgstr "लॉग-इन"
-
 #. Template Name of the plugin/theme
-#: functions/zume-polylang-integration.php:144
+#: functions/zume-polylang-integration.php:150
 msgid "Three-Month Plan"
 msgstr "तीन माह की योजना"
 
-#: functions/zume-polylang-integration.php:145 template-zume-progress.php:15
+#: functions/zume-polylang-integration.php:151 template-zume-progress.php:15
 msgid "Progress"
 msgstr "प्रगति"
 
-#: functions/zume-polylang-integration.php:146
+#: functions/zume-polylang-integration.php:152
 msgid "Stats"
 msgstr "आँकड़े"
 
@@ -2666,267 +2641,7 @@ msgstr "पृष्ठ:"
 msgid "Menu"
 msgstr "मेनू"
 
-#: template-register-old.php:111
-msgid "Site Name:"
-msgstr "साइट का नाम:"
-
-#: template-register-old.php:112
-msgid "Site Domain:"
-msgstr "साइट डोमेन:"
-
-#: template-register-old.php:126
-msgid "sitename"
-msgstr "साइट का नाम"
-
-#: template-register-old.php:128
-msgid "domain"
-msgstr "डोमेन"
-
-#. translators: %s: site address
-#: template-register-old.php:132
-#, php-format
-msgid "Your address will be %s."
-msgstr "आपका पता %s होगा ।"
-
-#: template-register-old.php:132
-msgid ""
-"Must be at least 4 characters, letters and numbers only. It cannot be changed, so choose carefully!"
-msgstr "केवल कम से कम ४ वर्ण, अक्षर और संख्या होनी चाहिए । इसे बदला नहीं जा सकता, इसलिए सावधानी से चुनें!"
-
-#: template-register-old.php:137
-msgid "Site Title:"
-msgstr "साइट शीर्षक:"
-
-#: template-register-old.php:151
-msgid "Site Language:"
-msgstr "साइट भाषा:"
-
-#: template-register-old.php:178
-msgid "Privacy:"
-msgstr "गोपनीयता:"
-
-#: template-register-old.php:179
-msgid "Allow search engines to index this site."
-msgstr "खोज इंजन को इस साइट को अनुक्रमित करने दें ।"
-
-#: template-register-old.php:183
-msgid "Yes"
-msgstr "हाँ"
-
-#: template-register-old.php:187
-msgid "No"
-msgstr "नहीं"
-
-#: template-register-old.php:234
-msgid "Username:"
-msgstr "उपयोगकर्ता:"
-
-#: template-register-old.php:239
-msgid "(Must be at least 4 characters, letters and numbers only.)"
-msgstr "(केवल ४ वर्णों, अक्षरों और संख्याओं का होना आवश्यक है.)"
-
-#: template-register-old.php:242
-msgid "Email&nbsp;Address:"
-msgstr "ईमेल &nbsp; पता:"
-
-#: template-register-old.php:246
-msgid ""
-"We send your registration email to this address. (Double-check your email address before continuing.)"
-msgstr "हम इस पते पर आपका पंजीकरण ईमेल भेजते हैं । (जारी रखने से पहले अपने ईमेल पते को एक बार फिर से जांचें)"
-
-#: template-register-old.php:313
-#, php-format
-msgid "Get <em>another</em> %s site in seconds"
-msgstr "प्राप्त करें <em> एक और</em> %s साइट कुछ ही क्षणों में"
-
-#: template-register-old.php:316
-msgid "There was a problem, please correct the form below and try again."
-msgstr "एक समस्या थी, कृपया नीचे दिए गए फ़ॉर्म को सुधारें और पुन: प्रयास करें ।"
-
-#: template-register-old.php:319
-#, php-format
-msgid ""
-"Welcome back, %s. By filling out the form below, you can <strong>add another site to your account</"
-"strong>. There is no limit to the number of sites you can have, so create to your heart&#8217;s "
-"content, but write responsibly!"
-msgstr ""
-"वापस स्वागत है, %s. नीचे दिए फॉर्म को भरने से, आप अपने अकाउंट </strong> में एक और साइट <strong> जोड़ सकते हैं । आप "
-"अगणित साइट्स पा सकते है; साइटों की संख्या की कोई सीमा नहीं है, इसलिए अपने मन को बनाएं &#8217;s सामग्री, लेकिन "
-"जिम्मेदारी से लिखो!"
-
-#: template-register-old.php:325
-msgid "Sites you are already a member of:"
-msgstr "साइट्स जो आप पहले से ही सदस्य हैं:"
-
-#: template-register-old.php:334
-msgid "If you&#8217;re not going to use a great site domain, leave it for a new user. Now have at it!"
-msgstr ""
-"यदि आप &#8217; एक महान साइट डोमेन का उपयोग नहीं कर रहें, तो यह एक नए उपयोगकर्ता के लिए छोड़ दें । अब कोशिश करो!"
-
-#: template-register-old.php:349
-msgid "Create Site"
-msgstr "साइट बनाएं"
-
-#. translators: %s: site name
-#: template-register-old.php:474
-#, php-format
-msgid "The site %s is yours."
-msgstr "साइट %s आपकी है ।"
-
-#. translators: 1: link to new site, 2: login URL, 3: username
-#: template-register-old.php:479
-#, php-format
-msgid ""
-"%1$s is your new site. <a href=\"%2$s\">Log in</a> as &#8220;%3$s&#8221; using your existing password."
-msgstr ""
-"%1$s आपकी नई साइट है । <a href=\"%2$s\"> लॉग इन </a> as &#8220;%3$s&#8221; अपना मौजूदा पासवर्ड का उपयोग करें "
-"।"
-
-#. translators: %s: name of the network
-#: template-register-old.php:544
-#, php-format
-msgid "Get your own %s account in seconds"
-msgstr "कुछ ही क्षणों में अपना %s खाता प्राप्त करें"
-
-#: template-register-old.php:561
-msgid "Gimme a site!"
-msgstr "गिंमी एक साईट!"
-
-#: template-register-old.php:564
-msgid "Just a username, please."
-msgstr "सिर्फ एक उपयोगकर्ता नाम, कृपया ।"
-
-#. translators: %s: username
-#: template-register-old.php:614
-#, php-format
-msgid "%s is your new username"
-msgstr "%s आपका नया उपयोगकर्ता नाम है"
-
-#: template-register-old.php:615
-msgid "But, before you can start using your new username, <strong>you must activate it</strong>."
-msgstr ""
-"लेकिन, इससे पहले कि आप अपने नए उपयोगकर्ता नाम का उपयोग शुरू करें, <strong> आपको इसे सक्रिय करना होगा </strong>."
-
-#. translators: %s: email address
-#: template-register-old.php:617 template-register-old.php:764
-#, php-format
-msgid "Check your inbox at %s and click the link given."
-msgstr "आपका इनबॉक्स %s पर जांचें और दिए गए लिंक पर क्लिक करें ।"
-
-#: template-register-old.php:618
-msgid "If you do not activate your username within two days, you will have to sign up again."
-msgstr "यदि आप अपने उपयोगकर्ता नाम को दो दिनों के भीतर सक्रिय नहीं करते हैं, तो आपको फिर से साइन-अप करना होगा ।"
-
-#: template-register-old.php:684
-msgid "Signup"
-msgstr "साइन-अप "
-
-#. translators: %s: site address
-#: template-register-old.php:760
-#, php-format
-msgid "Congratulations! Your new site, %s, is almost ready."
-msgstr "बधाइयाँ! आपकी नई साइट, %s, लगभग तैयार है ।"
-
-#: template-register-old.php:762
-msgid "But, before you can start using your site, <strong>you must activate it</strong>."
-msgstr "लेकिन, इससे पहले कि आप अपनी साइट का उपयोग शुरू करें, <strong> आपको इसे सक्रिय करना होगा </strong>."
-
-#: template-register-old.php:765
-msgid "If you do not activate your site within two days, you will have to sign up again."
-msgstr "यदि आप अपनी साइट को दो दिनों के भीतर सक्रिय नहीं करते हैं, तो आपको फिर से साइन-अप करना होगा ।"
-
-#: template-register-old.php:766
-msgid "Still waiting for your email?"
-msgstr "अभी भी अपने ईमेल के लिए इंतज़ार कर रहे हैं?"
-
-#: template-register-old.php:768
-msgid "If you haven&#8217;t received your email yet, there are a number of things you can do:"
-msgstr "यदि आप &#8217; अभी तक अपना ईमेल प्राप्त नहीं किए, तो भी आप बहुत सारी चिजें कर सकते हैं:"
-
-#: template-register-old.php:770
-msgid ""
-"Wait a little longer. Sometimes delivery of email can be delayed by processes outside of our control."
-msgstr "थोड़ी देर रुकिए । कई बार ईमेल का वितरण हमारे नियंत्रण के बाहर प्रक्रियाओं द्वारा विलंबित किया जा सकता है ।"
-
-#: template-register-old.php:771
-msgid "Check the junk or spam folder of your email client. Sometime emails wind up there by mistake."
-msgstr "अपने ईमेल क्लाइंट का जंक या स्पैम फ़ोल्डर की जांच करें । कभी-कभी गलती से इमेल्स वहां पहुँच जाते हैं ।"
-
-#. translators: %s: email address
-#: template-register-old.php:774
-#, php-format
-msgid ""
-"Have you entered your email correctly? You have entered %s, if it&#8217;s incorrect, you will not "
-"receive your email."
-msgstr ""
-"क्या आपने अपना ईमेल सही तरीके से दर्ज किया है? आपने %s दर्ज किया है, यदि यह &#8217; s गलत है, तो आपको अपना ईमेल "
-"प्राप्त नहीं होगा ।"
-
-#: template-register-old.php:831
-msgid "Greetings Network Administrator!"
-msgstr "अभिवादन नेटवर्क व्यवस्थापक!"
-
-#: template-register-old.php:836
-msgid "The network currently disallows registrations."
-msgstr "नेटवर्क वर्तमान में पंजीकरण को अस्वीकृत कर देता है ।"
-
-#: template-register-old.php:839
-msgid "The network currently allows site registrations."
-msgstr "नेटवर्क वर्तमान में साइट पंजीकरण की अनुमति देता है ।"
-
-#: template-register-old.php:842
-msgid "The network currently allows user registrations."
-msgstr "नेटवर्क वर्तमान में उपयोगकर्ता पंजीकरण की अनुमति देता है ।"
-
-#: template-register-old.php:845
-msgid "The network currently allows both site and user registrations."
-msgstr "नेटवर्क वर्तमान में साइट और उपयोगकर्ता दोनों पंजीकरण की अनुमति देता है ।"
-
-#. translators: %s: network settings URL
-#: template-register-old.php:852
-#, php-format
-msgid "To change or disable registration go to your <a href=\"%s\">Options page</a>."
-msgstr "पंजीकरण बदलने या अक्षम करने के लिए अपने <a href=\"%s\"> विकल्प पृष्ठ </a> पर जाएँ."
-
-#: template-register-old.php:860
-msgid "Registration has been disabled."
-msgstr "पंजीकरण अक्षम कर दिया गया है ।"
-
-#. translators: %s: login URL
-#: template-register-old.php:864
-#, php-format
-msgid "You must first <a href=\"%s\">log in</a>, and then you can create a new site."
-msgstr "आपको पहले <a href =\"%s\"> लॉग-इन</a> होना है, और फिर आप नई साइट बना सकते हैं ।"
-
-#: template-register-old.php:871
-msgid "User registration has been disabled."
-msgstr "उपयोगकर्ता पंजीकरण अक्षम कर दिया गया है ।"
-
-#: template-register-old.php:877
-msgid "Site registration has been disabled."
-msgstr "साइट पंजीकरण अक्षम कर दिया गया है ।"
-
-#: template-register-old.php:897
-msgid "Sorry, new registrations are not allowed at this time."
-msgstr "क्षमा करें, इस समय नए पंजीकरण की अनुमति नहीं है ।"
-
-#: template-register-old.php:898
-msgid "You are logged in already. No need to register again!"
-msgstr "आप पहले से ही लॉग-इन हैं । फिर से पंजीकरण करने की जरूरत नहीं!"
-
-#. translators: %s: site address
-#: template-register-old.php:906
-#, php-format
-msgid "The site you were looking for, %s, does not exist, but you can create it now!"
-msgstr "जिस साइट को आप खोज रहे थे, %s, मौजूद नहीं है, लेकिन आप इसे अभी बना सकते हैं!"
-
-#. translators: %s: site address
-#: template-register-old.php:910
-#, php-format
-msgid "The site you were looking for, %s, does not exist."
-msgstr "जिस साइट को आप खोज रहे थे, %s, मौजूद नहीं है ।"
-
-#: template-zume-3plan.php:43 template-zume-dashboard.php:522
+#: template-zume-3plan.php:43 template-zume-dashboard.php:532
 msgid "Three Month Plan"
 msgstr "तीन माह की योजना"
 
@@ -2987,11 +2702,11 @@ msgstr "से जुड़ा"
 msgid "Unlink Group"
 msgstr "समूह छोड़ दे (अनलिंक करें)"
 
-#: template-zume-3plan.php:164 template-zume-profile.php:241
+#: template-zume-3plan.php:164 template-zume-dashboard.php:1199 template-zume-profile.php:193
 msgid "Oh snap!"
 msgstr "ओह स्नैप!"
 
-#: template-zume-3plan.php:166 template-zume-profile.php:244
+#: template-zume-3plan.php:166 template-zume-profile.php:196
 msgid "Save"
 msgstr "सेव करें"
 
@@ -3020,7 +2735,7 @@ msgid "About Zúme Project"
 msgstr "Zúme परियोजना के बारे में"
 
 #: template-zume-about.php:38 template-zume-about.php:55 template-zume-faq.php:197
-#: template-zume-progress.php:101
+#: template-zume-privacy-policy.php:185 template-zume-progress.php:101
 msgid ""
 "Zúme uses an online training platform to equip participants in basic disciple-making and simple church "
 "planting multiplication principles, processes, and practices."
@@ -3028,11 +2743,13 @@ msgstr ""
 "Zúme एक ऑनलाइन प्रशिक्षण मंच का उपयोग करता है प्रतिभागियों को बुनियादी शिष्य बनाने में और सरल चर्च स्थापित करने द्वारा "
 "बढ़ने के सिद्धांत, प्रक्रियाएं, और प्रथाओं में लैस करने के लिए।"
 
-#: template-zume-about.php:50 template-zume-faq.php:192 template-zume-progress.php:96
+#: template-zume-about.php:50 template-zume-faq.php:192 template-zume-privacy-policy.php:180
+#: template-zume-progress.php:96
 msgid "Goals of the Zúme Project:"
 msgstr "Zúme परियोजना के लक्ष्य:"
 
-#: template-zume-about.php:52 template-zume-faq.php:194 template-zume-progress.php:98
+#: template-zume-about.php:52 template-zume-faq.php:194 template-zume-privacy-policy.php:182
+#: template-zume-progress.php:98
 msgid ""
 "Zúme means yeast in Greek. In Matthew 13:33, Jesus is quoted as saying, \"The Kingdom of Heaven is like "
 "a woman who took yeast and mixed it into a large amount of flour until it was all leavened.\" This "
@@ -3138,8 +2855,8 @@ msgstr "एडिट करें"
 msgid "Meeting Time"
 msgstr "बैठक का समय"
 
-#: template-zume-dashboard.php:132 template-zume-dashboard.php:652 template-zume-dashboard.php:790
-#: template-zume-dashboard.php:949 template-zume-profile.php:198
+#: template-zume-dashboard.php:132 template-zume-dashboard.php:662 template-zume-dashboard.php:800
+#: template-zume-dashboard.php:959
 msgid "Address"
 msgstr "पता"
 
@@ -3147,7 +2864,7 @@ msgstr "पता"
 msgid "Members"
 msgstr "सदस्य"
 
-#: template-zume-dashboard.php:137 template-zume-dashboard.php:732
+#: template-zume-dashboard.php:137 template-zume-dashboard.php:742
 msgid "Key"
 msgstr "कुंजी"
 
@@ -3347,7 +3064,7 @@ msgstr "सहकर्मी सलाह"
 msgid "Session videos will be added as you complete sessions."
 msgstr "जैसे ही आप सत्रों को पूरा करेंगे, सत्र के वीडियोस जोड़ें जायेंगे।"
 
-#: template-zume-dashboard.php:419 template-zume-dashboard.php:537
+#: template-zume-dashboard.php:419 template-zume-dashboard.php:547
 msgid "Archived Groups"
 msgstr "संग्रहीत समूह"
 
@@ -3355,77 +3072,84 @@ msgstr "संग्रहीत समूह"
 msgid "activate"
 msgstr "सक्रिय करें"
 
-#: template-zume-dashboard.php:490
+#: template-zume-dashboard.php:488
+#, fuzzy
+#| msgid "Coach"
+msgid "Get a Coach"
+msgstr "कोच"
+
+#: template-zume-dashboard.php:500
 msgid "Join me on the Zúme Project"
 msgstr "मुझे Zúme परियोजना पर संमिलित करें"
 
-#: template-zume-dashboard.php:491
+#: template-zume-dashboard.php:501
 msgid "Invite to Zúme"
 msgstr "Zúme को आमंत्रित करें"
 
-#: template-zume-dashboard.php:558
+#: template-zume-dashboard.php:568
 msgid "Networks"
 msgstr "नेटवर्क"
 
-#: template-zume-dashboard.php:599
+#: template-zume-dashboard.php:609
 msgid "Create Group"
 msgstr "समूह बनाएं"
 
-#: template-zume-dashboard.php:608 template-zume-dashboard.php:743 template-zume-dashboard.php:940
+#: template-zume-dashboard.php:618 template-zume-dashboard.php:753 template-zume-dashboard.php:950
 msgid "Group Name"
 msgstr "समूह का नाम"
 
-#: template-zume-dashboard.php:614
+#: template-zume-dashboard.php:624
 msgid "Number of Group Members (including you)"
 msgstr "समूह के सदस्यों की संख्या (आप सहित)"
 
-#: template-zume-dashboard.php:645 template-zume-dashboard.php:782 template-zume-dashboard.php:946
+#: template-zume-dashboard.php:655 template-zume-dashboard.php:792 template-zume-dashboard.php:956
 msgid "Planned Meeting Time"
 msgstr "नियोजित बैठक समय"
 
-#: template-zume-dashboard.php:646 template-zume-dashboard.php:784
+#: template-zume-dashboard.php:656 template-zume-dashboard.php:794
 msgid "example: Saturday 7PM"
 msgstr "उदाहरण: शनिवार ७"
 
-#: template-zume-dashboard.php:664 template-zume-dashboard.php:802 template-zume-profile.php:211
+#: template-zume-dashboard.php:674 template-zume-dashboard.php:812 template-zume-dashboard.php:1157
+#: template-zume-profile.php:109
 msgid "Validate"
 msgstr "मान्य"
 
-#: template-zume-dashboard.php:682 template-zume-dashboard.php:822 template-zume-dashboard.php:960
+#: template-zume-dashboard.php:692 template-zume-dashboard.php:832 template-zume-dashboard.php:970
 msgid "Coleaders or additional participants"
 msgstr "सह नेता या अतिरिक्त सहभागी"
 
-#: template-zume-dashboard.php:690 template-zume-dashboard.php:844
+#: template-zume-dashboard.php:700 template-zume-dashboard.php:854
 msgid "Add"
 msgstr "जोड़ें"
 
-#: template-zume-dashboard.php:697
+#: template-zume-dashboard.php:707 template-zume-dashboard.php:1202
 msgid "Submit"
 msgstr "जमा करें"
 
-#: template-zume-dashboard.php:722
+#: template-zume-dashboard.php:732
 msgid "Edit Group"
 msgstr "समूह संपादित करें"
 
-#: template-zume-dashboard.php:723
+#: template-zume-dashboard.php:733
 msgid ""
 "You are the owner of this group. All changes to the group details must be done through \n"
 "                you."
 msgstr "आप इस समूह के मालिक हैं । समूह विवरण में सभी परिवर्तन आपके माध्यम से किए जाने चाहिए."
 
-#: template-zume-dashboard.php:738
+#: template-zume-dashboard.php:748
 msgid "Change Key"
 msgstr "कुंजी परिवर्तित करें"
 
-#: template-zume-dashboard.php:750 template-zume-dashboard.php:943
+#: template-zume-dashboard.php:760 template-zume-dashboard.php:953
 msgid "Number of Participants"
 msgstr "प्रतिभागियों की संख्या"
 
-#: template-zume-dashboard.php:793
+#: template-zume-dashboard.php:803
 msgid "example: 1000 Broadway, Denver, CO 80126"
 msgstr "उदाहरण: १००० ब्रॉडवे, डेनवर, CO ८०१२६"
 
-#: template-zume-dashboard.php:824
+#: template-zume-dashboard.php:834
 msgid ""
 "Adding a coleader or additional participants gives them access to this group on their Zúme dashboard "
 "once they have signed up and logged in using the email address you add. When they login to their "
@@ -3439,23 +3163,23 @@ msgstr ""
 "विवरण को बदल नहीं सकते हैं. नोट: उन्हें इस निमंत्रण के साथ Zúme द्वारा कोई सिस्टम ईमेल नहीं प्राप्त होगा, आपको उन्हें साइन-"
 "अप करने के लिए पूछना होगा ।"
 
-#: template-zume-dashboard.php:854
+#: template-zume-dashboard.php:864
 msgid "Update"
 msgstr "अपडेट (अद्यतन) करें"
 
-#: template-zume-dashboard.php:857
+#: template-zume-dashboard.php:867
 msgid "Archive"
 msgstr "पुरालेख"
 
-#: template-zume-dashboard.php:887
+#: template-zume-dashboard.php:897
 msgid "ARE YOU SURE YOU WANT TO DELETE THIS GROUP?"
 msgstr "क्या आप निश्चयपूर्वक इस समूह को हटाना चाहते हैं?"
 
-#: template-zume-dashboard.php:924
+#: template-zume-dashboard.php:934
 msgid "View Group"
 msgstr "समूह देखें"
 
-#: template-zume-dashboard.php:927
+#: template-zume-dashboard.php:937
 msgid ""
 "You are a participant or coleader of this group and can view the group \n"
 "                        details and lead the group through a session, but cannot change the details of "
@@ -3467,25 +3191,112 @@ msgstr ""
 "सकता हैं या सहभागियों \n"
 "को जोड़ नहीं सकते हैं । कृपया समूह के मालिक के माध्यम से परिवर्तन का अनुरोध करें ।"
 
-#: template-zume-dashboard.php:936
+#: template-zume-dashboard.php:946
 msgid "Group Owner"
 msgstr "समूह के मालिक"
 
-#: template-zume-dashboard.php:981
+#: template-zume-dashboard.php:991
 msgid "Remove Group"
 msgstr "समूह को हटाएँ"
 
-#: template-zume-dashboard.php:995
+#: template-zume-dashboard.php:1005
 msgid "ARE YOU SURE YOU WANT TO REMOVE THIS GROUP?"
 msgstr "क्या आप निश्चयपूर्वक इस समूह को हटाना चाहते हैं?"
 
-#: template-zume-dashboard.php:996
+#: template-zume-dashboard.php:1006
 msgid "To reverse this action, the owner of the group must re-invite you to the group again."
 msgstr "इस क्रिया को उलटने के लिए, समूह के मालिक को फिर से आपको समूह में पुन: आमंत्रित करना होगा ।"
 
-#: template-zume-dashboard.php:1003
+#: template-zume-dashboard.php:1013
 msgid "Remove"
 msgstr "हटाइए"
+
+#: template-zume-dashboard.php:1051
+msgid "Connect Me to a Coach"
+msgstr ""
+
+#: template-zume-dashboard.php:1063
+#, fuzzy
+#| msgid "Coach"
+msgid "Coaches"
+msgstr "कोच"
+
+#: template-zume-dashboard.php:1064
+msgid ""
+"Our network of volunteer coaches are people like you, people who are passionate about loving God, "
+"loving others, and obeying the Great Commission."
+msgstr ""
+
+#: template-zume-dashboard.php:1069
+msgid "Advocates"
+msgstr ""
+
+#: template-zume-dashboard.php:1070
+msgid "A coach is someone who will come alongside you as you implement the Zúme tools and training."
+msgstr ""
+
+#: template-zume-dashboard.php:1075
+msgid "Local"
+msgstr ""
+
+#: template-zume-dashboard.php:1076
+msgid "On submitting this request, we will do our best to connect you with a coach near you."
+msgstr ""
+
+#: template-zume-dashboard.php:1081
+msgid "It's Free"
+msgstr ""
+
+#: template-zume-dashboard.php:1082
+msgid "Coaching is free. You can opt out at any time."
+msgstr ""
+
+#: template-zume-dashboard.php:1092 template-zume-profile.php:63
+msgid "Name"
+msgstr "नाम"
+
+#: template-zume-dashboard.php:1096 template-zume-dashboard.php:1097 template-zume-profile.php:67
+#: template-zume-profile.php:68
+#, fuzzy
+#| msgid "First Name"
+msgid "First and last name"
+msgstr "प्रथम नाम"
+
+#: template-zume-dashboard.php:1135
+msgid "Email is required."
+msgstr ""
+
+#: template-zume-dashboard.php:1143
+msgid "City"
+msgstr "शहर"
+
+#: template-zume-dashboard.php:1168
+msgid "How should we contact you?"
+msgstr ""
+
+#: template-zume-dashboard.php:1175
+msgid "Text"
+msgstr ""
+
+#: template-zume-dashboard.php:1177
+msgid "Phone"
+msgstr ""
+
+#: template-zume-dashboard.php:1179
+msgid "WhatsApp"
+msgstr ""
+
+#: template-zume-dashboard.php:1181
+msgid "Other"
+msgstr "अन्य"
+
+#: template-zume-dashboard.php:1188 template-zume-profile.php:180
+msgid "Affiliation Key"
+msgstr "संबद्धता कुंजी"
+
+#: template-zume-dashboard.php:1230
+msgid "Thank you. You have already requested a coach connection."
+msgstr ""
 
 #: template-zume-faq.php:20
 msgid "Zúme FAQs"
@@ -3817,50 +3628,63 @@ msgstr ""
 "सदस्य उन सभी सामग्रियों को जब वे चाहते हैं पा सकते हैं । इसके बाद समूह किसी भी मेसेजिंग प्लेटफॉर्म का इस्तेमाल कर सकता है "
 "जिसे वे पसंद करते हैं (iMessage, व्हाट्सएप्प, फेसबुक ग्रुप आदि) आगे ग्रुप कम्युनिकेशन (समूह संपर्क) के लिए ।"
 
-#: template-zume-login.php:91
+#: template-zume-login.php:73
 msgid "Your password reset link appears to be invalid. Please request a new link below."
 msgstr ""
 
-#: template-zume-login.php:93
+#: template-zume-login.php:75
 msgid "Your password reset link has expired. Please request a new link below."
 msgstr ""
 
-#: template-zume-login.php:129
-#, fuzzy
-#| msgid "User Address"
-msgid "Username or Email Address"
-msgstr "यूजर एड्रेस"
+#: template-zume-login.php:108 template-zume-login.php:465
+msgid "Email Address"
+msgstr "ईमेल पता"
 
-#: template-zume-login.php:140
-#, fuzzy
+#: template-zume-login.php:119
 msgid "Get New Password"
-msgstr "Zume पासवर्ड भूल गए"
+msgstr "नया पासवर्ड प्राप्त करें"
 
-#: template-zume-login.php:197
+#: template-zume-login.php:174
 msgid "The passwords do not match."
 msgstr ""
 
-#: template-zume-login.php:298
+#: template-zume-login.php:275
 #, fuzzy
 msgid "Reset Password"
 msgstr "Zume पासवर्ड भूल गए"
 
-#: template-zume-login.php:392 template-zume-login.php:493
+#: template-zume-login.php:335
+#, fuzzy
+#| msgid "How to get started:"
+msgid "Let's get started."
+msgstr "कैसे आरंभ करें:"
+
+#: template-zume-login.php:337
+#, fuzzy
+#| msgid "Sign up"
+msgid "Sign up using:"
+msgstr "साइन अप"
+
+#: template-zume-login.php:384 template-zume-login.php:483
 msgid "Lost your password?"
 msgstr "आपका पासवर्ड खो गया है?"
 
-#: template-zume-login.php:409
+#: template-zume-login.php:401
 msgid "Invalid request."
 msgstr ""
 
-#: template-zume-login.php:418
+#: template-zume-login.php:410
 #, fuzzy
 #| msgid "Unable to find key:"
 msgid "Invalid key"
 msgstr "कुंजी ढूंढने में असमर्थ:"
 
-#: template-zume-login.php:440
+#: template-zume-login.php:432
 msgid "User action confirmed."
+msgstr ""
+
+#: template-zume-login.php:449
+msgid "Sign in using:"
 msgstr ""
 
 #: template-zume-overview.php:71 template-zume-overview.php:84
@@ -4145,47 +3969,186 @@ msgid ""
 msgstr ""
 "सहकर्मी सलाह समूह - दो या तीन के समूह में बट जाएं और सहकर्मी सलाह समूह के प्रारूप के अनुसार कार्य करें । (६० मिनिट)"
 
-#: template-zume-profile.php:53
+#: template-zume-privacy-policy.php:22
+#, fuzzy
+#| msgid "Zúme Project"
+msgid "Zúme Privacy Policy"
+msgstr "Zúme परियोजना"
+
+#: template-zume-privacy-policy.php:32
+msgid ""
+"This privacy policy has been compiled to better serve those who are concerned with how their "
+"\"Personally Identifiable Information\" (PII) is being used online. PII, as described in US privacy law "
+"and information security, is information that can be used on its own or with other information to "
+"identify, contact, or locate a single person, or to identify an individual in context. Please read our "
+"privacy policy carefully to get a clear understanding of how we collect, use, protect or otherwise "
+"handle your Personally Identifiable Information in accordance with our website."
+msgstr ""
+
+#: template-zume-privacy-policy.php:38
+msgid "What permissions do the social sign-on logins ask for?"
+msgstr ""
+
+#: template-zume-privacy-policy.php:41
+msgid ""
+"Public Profile. This includes certain User’s Data such as id, name, picture, gender, and their locale."
+msgstr ""
+
+#: template-zume-privacy-policy.php:44
+#, fuzzy
+#| msgid "Email&nbsp;Address:"
+msgid "Email Address."
+msgstr "ईमेल &nbsp; पता:"
+
+#: template-zume-privacy-policy.php:52
+msgid "What personal information do we collect from the people through our website?"
+msgstr ""
+
+#: template-zume-privacy-policy.php:55
+msgid "Information in the Basic Social Profile (if used) and email."
+msgstr ""
+
+#: template-zume-privacy-policy.php:58
+msgid "Session and course activity."
+msgstr ""
+
+#: template-zume-privacy-policy.php:61
+msgid "General location telemetry, so we know in what countries our training is being used."
+msgstr ""
+
+#: template-zume-privacy-policy.php:69
+#, fuzzy
+#| msgid "Project Information"
+msgid "When do we collect information?"
+msgstr "परियोजना की जानकारी"
+
+#: template-zume-privacy-policy.php:72
+msgid "We collect your information at login."
+msgstr ""
+
+#: template-zume-privacy-policy.php:75
+msgid "We also track your progress through the training course."
+msgstr ""
+
+#: template-zume-privacy-policy.php:83
+msgid "How do we use your information?"
+msgstr ""
+
+#: template-zume-privacy-policy.php:86
+msgid "We use your information to create a user account in the zume system based on your email address."
+msgstr ""
+
+#: template-zume-privacy-policy.php:89
+msgid ""
+"We will email you with basic transactional emails like password reset requests and other system "
+"notifications."
+msgstr ""
+
+#: template-zume-privacy-policy.php:92
+msgid "We email occasional reminders and encouragements depending on your progress through the training."
+msgstr ""
+
+#: template-zume-privacy-policy.php:100
+msgid "How do we protect your information?"
+msgstr ""
+
+#: template-zume-privacy-policy.php:102
+msgid ""
+"While we use encryption to protect sensitive information transmitted online, we also protect your "
+"information offline. Only team members who need the information to perform a specific job (for example, "
+"web administrator or customer service) are granted access to personally identifiable information."
+msgstr ""
+
+#: template-zume-privacy-policy.php:105
+msgid ""
+"Your personal information is contained behind secured networks and is only accessible by a limited "
+"number of persons who have special access rights to such systems, and are required to keep the "
+"information confidential. In addition, all sensitive/credit information you supply is encrypted via "
+"Secure Socket Layer (SSL) technology."
+msgstr ""
+
+#: template-zume-privacy-policy.php:108
+msgid ""
+"We implement a variety of security measures when a user submits, or accesses their information to "
+"maintain the safety of your personal information."
+msgstr ""
+
+#: template-zume-privacy-policy.php:115
+msgid "Do we use \"cookies\"?"
+msgstr ""
+
+#: template-zume-privacy-policy.php:117
+msgid ""
+"Any use of Cookies - or of other tracking tools - by this Application or by the owners of third party "
+"services used by this Application, unless stated otherwise, serves to identify Users and remember their "
+"preferences, for the sole purpose of providing the service required by the User."
+msgstr ""
+
+#: template-zume-privacy-policy.php:120
+msgid "Personal Data collected: name, email."
+msgstr ""
+
+#: template-zume-privacy-policy.php:127
+msgid "Your Access to and Control Over Information."
+msgstr ""
+
+#: template-zume-privacy-policy.php:129
+msgid ""
+"You may opt out of any future contact from us at any time. You can do the following at any time by "
+"contacting us via our contact email address:"
+msgstr ""
+
+#: template-zume-privacy-policy.php:132
+msgid "See what data we have about you, if any."
+msgstr ""
+
+#: template-zume-privacy-policy.php:136
+msgid "Change/correct any data we have about you."
+msgstr ""
+
+#: template-zume-privacy-policy.php:139
+msgid "Have us delete any data we have about you."
+msgstr ""
+
+#: template-zume-privacy-policy.php:142
+msgid "Express any concern you have about our use of your data."
+msgstr ""
+
+#: template-zume-privacy-policy.php:150
+#, fuzzy
+#| msgid "Update"
+msgid "Updates"
+msgstr "अपडेट (अद्यतन) करें"
+
+#: template-zume-privacy-policy.php:152
+msgid "Our Privacy Policy may change from time to time and all updates will be posted on this page."
+msgstr ""
+
+#: template-zume-profile.php:31
 msgid "Your Profile"
 msgstr "आपकी प्रोफ़ाइल"
 
-#: template-zume-profile.php:58
+#: template-zume-profile.php:36
 msgid "edit image @ gravatar.com"
 msgstr "छवि संपादित करें @ gravatar.com"
 
-#: template-zume-profile.php:91
-msgid "User Name"
-msgstr "उपयोगकर्ता का नाम"
+#: template-zume-profile.php:96
+msgid "Your City"
+msgstr ""
 
-#: template-zume-profile.php:94
-msgid "(can not change)"
-msgstr "(नहीं बदल सकते हैं)"
-
-#: template-zume-profile.php:99 template-zume-profile.php:103 template-zume-profile.php:104
-msgid "First Name"
-msgstr "प्रथम नाम"
-
-#: template-zume-profile.php:114 template-zume-profile.php:118 template-zume-profile.php:119
-msgid "Last Name"
-msgstr "अंतिम नाम"
-
-#: template-zume-profile.php:149
+#: template-zume-profile.php:147
 msgid "Linked Facebook Account"
 msgstr ""
 
-#: template-zume-profile.php:156 template-zume-profile.php:172
+#: template-zume-profile.php:154 template-zume-profile.php:170
 #, fuzzy
 #| msgid "Unlink Group"
 msgid "Unlink"
 msgstr "समूह छोड़ दे (अनलिंक करें)"
 
-#: template-zume-profile.php:165
+#: template-zume-profile.php:163
 msgid "Linked Google Account"
 msgstr ""
-
-#: template-zume-profile.php:229
-msgid "Affiliation Key"
-msgstr "संबद्धता कुंजी"
 
 #: template-zume-progress.php:23
 msgid "Phase 1"
@@ -4227,18 +4190,6 @@ msgstr "परियोजना की जानकारी"
 msgid "Language Translation Progress"
 msgstr "भाषा अनुवाद प्रगति"
 
-#: template-zume-stats.php:21
-msgid "Groups Locations"
-msgstr "समूह स्थान"
-
-#: template-zume-stats.php:26
-msgid "Translation Progress"
-msgstr "अनुवाद प्रगति"
-
-#: template-zume-stats.php:32
-msgid "Progress for Each Language"
-msgstr "प्रत्येक भाषा के लिए प्रगति"
-
 #. Theme Name of the plugin/theme
 msgid "Zúme Project"
 msgstr "Zúme परियोजना"
@@ -4260,16 +4211,16 @@ msgid "https://github.com/ZumeProject"
 msgstr "https://github.com/ZumeProject"
 
 #. Template Name of the plugin/theme
-msgid "Zúme Stats"
-msgstr "Zúme आँकड़े"
-
-#. Template Name of the plugin/theme
 msgid "Zume About"
 msgstr "Zume के बारे में"
 
 #. Template Name of the plugin/theme
 msgid "Zume Resources"
 msgstr "Zume संसाधन"
+
+#. Template Name of the plugin/theme
+msgid "Zume Privacy Policy"
+msgstr ""
 
 #. Template Name of the plugin/theme
 msgid "Zúme Progress"
@@ -4302,6 +4253,231 @@ msgstr "पूर्ण चौड़ाई होम"
 #. Template Name of the plugin/theme
 msgid "Zúme Course"
 msgstr "Zúme कोर्स"
+
+#~ msgid "Epic 404 - Article Not Found"
+#~ msgstr "बीज-प्रश्न ४०४ - उल्लेख नहीं मिला"
+
+#~ msgid "The article you were looking for was not found, but maybe try looking again!"
+#~ msgstr "आप जो लेख के लिए देख रहे थे नहीं मिला, लेकिन शायद फिर से देखने की कोशिश कीजिए!"
+
+#~ msgid "First Name (optional for coaching)"
+#~ msgstr "प्रथम नाम (कोचिंग के लिए वैकल्पिक)"
+
+#~ msgid "Last Name (optional for coaching)"
+#~ msgstr "अंतिम नाम (कोचिंग के लिए वैकल्पिक)"
+
+#~ msgid "Phone Number (optional for coaching)"
+#~ msgstr "फोन नंबर (कोचिंग के लिए वैकल्पिक)"
+
+#~ msgid "Address (optional for coaching)"
+#~ msgstr "पता (कोचिंग के लिए वैकल्पिक)"
+
+#~ msgid "Affiliation Key (optional)"
+#~ msgstr "संबद्धता कुंजी (वैकल्पिक)"
+
+#~ msgid ""
+#~ "<strong>ERROR</strong>: We can not recognize this address as valid location. Please, check spelling."
+#~ msgstr "<strong>ERROR</strong>: हम इस पते के वैध स्थान को नहीं पहचान पा रहे। कृपया शब्दों की जांच करें ।"
+
+#~ msgid "Site Name:"
+#~ msgstr "साइट का नाम:"
+
+#~ msgid "Site Domain:"
+#~ msgstr "साइट डोमेन:"
+
+#~ msgid "sitename"
+#~ msgstr "साइट का नाम"
+
+#~ msgid "domain"
+#~ msgstr "डोमेन"
+
+#~ msgid "Your address will be %s."
+#~ msgstr "आपका पता %s होगा ।"
+
+#~ msgid ""
+#~ "Must be at least 4 characters, letters and numbers only. It cannot be changed, so choose carefully!"
+#~ msgstr "केवल कम से कम ४ वर्ण, अक्षर और संख्या होनी चाहिए । इसे बदला नहीं जा सकता, इसलिए सावधानी से चुनें!"
+
+#~ msgid "Site Title:"
+#~ msgstr "साइट शीर्षक:"
+
+#~ msgid "Site Language:"
+#~ msgstr "साइट भाषा:"
+
+#~ msgid "Privacy:"
+#~ msgstr "गोपनीयता:"
+
+#~ msgid "Allow search engines to index this site."
+#~ msgstr "खोज इंजन को इस साइट को अनुक्रमित करने दें ।"
+
+#~ msgid "Yes"
+#~ msgstr "हाँ"
+
+#~ msgid "No"
+#~ msgstr "नहीं"
+
+#~ msgid "Username:"
+#~ msgstr "उपयोगकर्ता:"
+
+#~ msgid "(Must be at least 4 characters, letters and numbers only.)"
+#~ msgstr "(केवल ४ वर्णों, अक्षरों और संख्याओं का होना आवश्यक है.)"
+
+#~ msgid ""
+#~ "We send your registration email to this address. (Double-check your email address before continuing.)"
+#~ msgstr "हम इस पते पर आपका पंजीकरण ईमेल भेजते हैं । (जारी रखने से पहले अपने ईमेल पते को एक बार फिर से जांचें)"
+
+#~ msgid "Get <em>another</em> %s site in seconds"
+#~ msgstr "प्राप्त करें <em> एक और</em> %s साइट कुछ ही क्षणों में"
+
+#~ msgid "There was a problem, please correct the form below and try again."
+#~ msgstr "एक समस्या थी, कृपया नीचे दिए गए फ़ॉर्म को सुधारें और पुन: प्रयास करें ।"
+
+#~ msgid ""
+#~ "Welcome back, %s. By filling out the form below, you can <strong>add another site to your account</"
+#~ "strong>. There is no limit to the number of sites you can have, so create to your heart&#8217;s "
+#~ "content, but write responsibly!"
+#~ msgstr ""
+#~ "वापस स्वागत है, %s. नीचे दिए फॉर्म को भरने से, आप अपने अकाउंट </strong> में एक और साइट <strong> जोड़ सकते हैं । आप "
+#~ "अगणित साइट्स पा सकते है; साइटों की संख्या की कोई सीमा नहीं है, इसलिए अपने मन को बनाएं &#8217;s सामग्री, लेकिन "
+#~ "जिम्मेदारी से लिखो!"
+
+#~ msgid "Sites you are already a member of:"
+#~ msgstr "साइट्स जो आप पहले से ही सदस्य हैं:"
+
+#~ msgid "If you&#8217;re not going to use a great site domain, leave it for a new user. Now have at it!"
+#~ msgstr ""
+#~ "यदि आप &#8217; एक महान साइट डोमेन का उपयोग नहीं कर रहें, तो यह एक नए उपयोगकर्ता के लिए छोड़ दें । अब कोशिश "
+#~ "करो!"
+
+#~ msgid "Create Site"
+#~ msgstr "साइट बनाएं"
+
+#~ msgid "The site %s is yours."
+#~ msgstr "साइट %s आपकी है ।"
+
+#~ msgid ""
+#~ "%1$s is your new site. <a href=\"%2$s\">Log in</a> as &#8220;%3$s&#8221; using your existing "
+#~ "password."
+#~ msgstr ""
+#~ "%1$s आपकी नई साइट है । <a href=\"%2$s\"> लॉग इन </a> as &#8220;%3$s&#8221; अपना मौजूदा पासवर्ड का उपयोग "
+#~ "करें ।"
+
+#~ msgid "Get your own %s account in seconds"
+#~ msgstr "कुछ ही क्षणों में अपना %s खाता प्राप्त करें"
+
+#~ msgid "Gimme a site!"
+#~ msgstr "गिंमी एक साईट!"
+
+#~ msgid "Just a username, please."
+#~ msgstr "सिर्फ एक उपयोगकर्ता नाम, कृपया ।"
+
+#~ msgid "%s is your new username"
+#~ msgstr "%s आपका नया उपयोगकर्ता नाम है"
+
+#~ msgid "But, before you can start using your new username, <strong>you must activate it</strong>."
+#~ msgstr ""
+#~ "लेकिन, इससे पहले कि आप अपने नए उपयोगकर्ता नाम का उपयोग शुरू करें, <strong> आपको इसे सक्रिय करना होगा </strong>."
+
+#~ msgid "Check your inbox at %s and click the link given."
+#~ msgstr "आपका इनबॉक्स %s पर जांचें और दिए गए लिंक पर क्लिक करें ।"
+
+#~ msgid "If you do not activate your username within two days, you will have to sign up again."
+#~ msgstr "यदि आप अपने उपयोगकर्ता नाम को दो दिनों के भीतर सक्रिय नहीं करते हैं, तो आपको फिर से साइन-अप करना होगा ।"
+
+#~ msgid "Signup"
+#~ msgstr "साइन-अप "
+
+#~ msgid "Congratulations! Your new site, %s, is almost ready."
+#~ msgstr "बधाइयाँ! आपकी नई साइट, %s, लगभग तैयार है ।"
+
+#~ msgid "But, before you can start using your site, <strong>you must activate it</strong>."
+#~ msgstr "लेकिन, इससे पहले कि आप अपनी साइट का उपयोग शुरू करें, <strong> आपको इसे सक्रिय करना होगा </strong>."
+
+#~ msgid "If you do not activate your site within two days, you will have to sign up again."
+#~ msgstr "यदि आप अपनी साइट को दो दिनों के भीतर सक्रिय नहीं करते हैं, तो आपको फिर से साइन-अप करना होगा ।"
+
+#~ msgid "Still waiting for your email?"
+#~ msgstr "अभी भी अपने ईमेल के लिए इंतज़ार कर रहे हैं?"
+
+#~ msgid "If you haven&#8217;t received your email yet, there are a number of things you can do:"
+#~ msgstr "यदि आप &#8217; अभी तक अपना ईमेल प्राप्त नहीं किए, तो भी आप बहुत सारी चिजें कर सकते हैं:"
+
+#~ msgid ""
+#~ "Wait a little longer. Sometimes delivery of email can be delayed by processes outside of our control."
+#~ msgstr "थोड़ी देर रुकिए । कई बार ईमेल का वितरण हमारे नियंत्रण के बाहर प्रक्रियाओं द्वारा विलंबित किया जा सकता है ।"
+
+#~ msgid "Check the junk or spam folder of your email client. Sometime emails wind up there by mistake."
+#~ msgstr "अपने ईमेल क्लाइंट का जंक या स्पैम फ़ोल्डर की जांच करें । कभी-कभी गलती से इमेल्स वहां पहुँच जाते हैं ।"
+
+#~ msgid ""
+#~ "Have you entered your email correctly? You have entered %s, if it&#8217;s incorrect, you will not "
+#~ "receive your email."
+#~ msgstr ""
+#~ "क्या आपने अपना ईमेल सही तरीके से दर्ज किया है? आपने %s दर्ज किया है, यदि यह &#8217; s गलत है, तो आपको अपना ईमेल "
+#~ "प्राप्त नहीं होगा ।"
+
+#~ msgid "Greetings Network Administrator!"
+#~ msgstr "अभिवादन नेटवर्क व्यवस्थापक!"
+
+#~ msgid "The network currently disallows registrations."
+#~ msgstr "नेटवर्क वर्तमान में पंजीकरण को अस्वीकृत कर देता है ।"
+
+#~ msgid "The network currently allows site registrations."
+#~ msgstr "नेटवर्क वर्तमान में साइट पंजीकरण की अनुमति देता है ।"
+
+#~ msgid "The network currently allows user registrations."
+#~ msgstr "नेटवर्क वर्तमान में उपयोगकर्ता पंजीकरण की अनुमति देता है ।"
+
+#~ msgid "The network currently allows both site and user registrations."
+#~ msgstr "नेटवर्क वर्तमान में साइट और उपयोगकर्ता दोनों पंजीकरण की अनुमति देता है ।"
+
+#~ msgid "To change or disable registration go to your <a href=\"%s\">Options page</a>."
+#~ msgstr "पंजीकरण बदलने या अक्षम करने के लिए अपने <a href=\"%s\"> विकल्प पृष्ठ </a> पर जाएँ."
+
+#~ msgid "Registration has been disabled."
+#~ msgstr "पंजीकरण अक्षम कर दिया गया है ।"
+
+#~ msgid "You must first <a href=\"%s\">log in</a>, and then you can create a new site."
+#~ msgstr "आपको पहले <a href =\"%s\"> लॉग-इन</a> होना है, और फिर आप नई साइट बना सकते हैं ।"
+
+#~ msgid "User registration has been disabled."
+#~ msgstr "उपयोगकर्ता पंजीकरण अक्षम कर दिया गया है ।"
+
+#~ msgid "Site registration has been disabled."
+#~ msgstr "साइट पंजीकरण अक्षम कर दिया गया है ।"
+
+#~ msgid "Sorry, new registrations are not allowed at this time."
+#~ msgstr "क्षमा करें, इस समय नए पंजीकरण की अनुमति नहीं है ।"
+
+#~ msgid "You are logged in already. No need to register again!"
+#~ msgstr "आप पहले से ही लॉग-इन हैं । फिर से पंजीकरण करने की जरूरत नहीं!"
+
+#~ msgid "The site you were looking for, %s, does not exist, but you can create it now!"
+#~ msgstr "जिस साइट को आप खोज रहे थे, %s, मौजूद नहीं है, लेकिन आप इसे अभी बना सकते हैं!"
+
+#~ msgid "The site you were looking for, %s, does not exist."
+#~ msgstr "जिस साइट को आप खोज रहे थे, %s, मौजूद नहीं है ।"
+
+#~ msgid "User Name"
+#~ msgstr "उपयोगकर्ता का नाम"
+
+#~ msgid "(can not change)"
+#~ msgstr "(नहीं बदल सकते हैं)"
+
+#~ msgid "Last Name"
+#~ msgstr "अंतिम नाम"
+
+#~ msgid "Groups Locations"
+#~ msgstr "समूह स्थान"
+
+#~ msgid "Translation Progress"
+#~ msgstr "अनुवाद प्रगति"
+
+#~ msgid "Progress for Each Language"
+#~ msgstr "प्रत्येक भाषा के लिए प्रगति"
+
+#~ msgid "Zúme Stats"
+#~ msgstr "Zúme आँकड़े"
 
 #~ msgid "Roles"
 #~ msgstr "भूमिकाएं"
@@ -4620,9 +4796,6 @@ msgstr "Zúme कोर्स"
 
 #~ msgid "DISCIPLE TOOLS - INTEGRATION"
 #~ msgstr "शिष्य के उपकरण - एकीकरण"
-
-#~ msgid "Google Keys"
-#~ msgstr "Google कुंजियां"
 
 #~ msgid "Languages"
 #~ msgstr "भाषाएँ"

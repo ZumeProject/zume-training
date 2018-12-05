@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Zúme Project\n"
-"POT-Creation-Date: 2018-11-26 12:26-0700\n"
-"PO-Revision-Date: 2018-11-26 12:27-0700\n"
+"POT-Creation-Date: 2018-12-05 07:01-0700\n"
+"PO-Revision-Date: 2018-12-05 07:18-0700\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: es\n"
@@ -20,18 +20,22 @@ msgstr ""
 "_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
+"X-Poedit-SearchPathExcluded-1: vendor\n"
+"X-Poedit-SearchPathExcluded-2: functions/zume-dt-integration\n"
+"X-Poedit-SearchPathExcluded-3: functions/multi-role\n"
+"X-Poedit-SearchPathExcluded-4: node_modules\n"
+"X-Poedit-SearchPathExcluded-5: .\n"
 
-#: 404.php:12
-msgid "Epic 404 - Article Not Found"
-msgstr "Épico 404 - Artículo no Encontrado"
+#: front-page.php:52 front-page.php:171
+msgid "Get Started"
+msgstr "Comienza"
 
-#: 404.php:16
-msgid ""
-"The article you were looking for was not found, but maybe try looking again!"
-msgstr ""
-"El contenido que está buscando no se encontró, pero puede intentar de nuevo!"
+#: front-page.php:55 functions/zume-polylang-integration.php:148
+#: template-zume-login.php:382
+msgid "Login"
+msgstr "Iniciar Sesión"
 
-#: front-page.php:52
+#: front-page.php:60
 msgid ""
 "Zúme Training is an on-line and in-life learning experience designed for "
 "small groups who follow Jesus to learn how to obey His Great Commission and "
@@ -41,11 +45,11 @@ msgstr ""
 "diseñado para grupos pequeños que siguen a Jesús para aprender a obedecer su "
 "Gran Comisión y hacer discípulos que se multiplican."
 
-#: front-page.php:65
+#: front-page.php:73
 msgid "Zúme consists of 10 sessions, 2 hours each:"
 msgstr "Zúme consta en 10 sesiones, 2 horas cada una:"
 
-#: front-page.php:73 template-zume-about.php:74
+#: front-page.php:81 template-zume-about.php:74
 msgid ""
 "Video and Audio to help your group understand basic principles of "
 "multiplying disciples."
@@ -53,19 +57,19 @@ msgstr ""
 "Video y Audio para ayudar a tu grupo a entender principios básicos de la "
 "multiplicación de discípulos."
 
-#: front-page.php:81 template-zume-about.php:75
+#: front-page.php:89 template-zume-about.php:75
 msgid "Group Discussions to help your group think through what’s being shared."
 msgstr ""
 "Discusión de Grupo para ayudar a tu grupo a considerar detalladamente lo que "
 "se esta compartiendo."
 
-#: front-page.php:89 template-zume-about.php:76
+#: front-page.php:97 template-zume-about.php:76
 msgid ""
 "Simple Exercises to help your group put what you’re learning into practice."
 msgstr ""
 "Ejercicios simples para ayudar a tu grupo a poner en practica lo aprendido."
 
-#: front-page.php:97 template-zume-about.php:77
+#: front-page.php:105 template-zume-about.php:77
 msgid ""
 "Session Challenges to help your group keep learning and growing between "
 "sessions."
@@ -73,31 +77,27 @@ msgstr ""
 "Retos de Sesión para ayudar a tu grupo a seguir aprendiendo y creciendo "
 "entre sesiones."
 
-#: front-page.php:110
+#: front-page.php:118
 msgid "Want to start the training?"
 msgstr "¿Quieres comenzar el entrenamiento?"
 
-#: front-page.php:124
+#: front-page.php:132
 msgid "It's as easy as 1-2-3"
 msgstr "Es tan fácil como contar hasta 3"
 
-#: front-page.php:133
+#: front-page.php:141
 msgid "Sign up"
 msgstr "Regístrate"
 
-#: front-page.php:143
+#: front-page.php:151
 msgid "Invite some friends"
 msgstr "Invita a algunos amigos"
 
-#: front-page.php:153
+#: front-page.php:161
 msgid "Host a training"
 msgstr "Organiza un entrenamiento"
 
-#: front-page.php:163
-msgid "Get Started"
-msgstr "Comienza"
-
-#: front-page.php:196
+#: front-page.php:204
 msgid "Find out more about Zúme"
 msgstr "Obtén más información sobre Zúme"
 
@@ -110,7 +110,7 @@ msgid "Coach Leader"
 msgstr "Líder de Entrenamiento"
 
 #: functions/enqueue-scripts.php:55 functions/enqueue-scripts.php:57
-#: template-zume-dashboard.php:895 template-zume-dashboard.php:1008
+#: template-zume-dashboard.php:905 template-zume-dashboard.php:1018
 msgid "Cancel"
 msgstr "Cancelar"
 
@@ -123,7 +123,6 @@ msgid "Finish"
 msgstr "Finalizar"
 
 #: functions/enqueue-scripts.php:59 functions/utilities/menu.php:108
-#: template-register-old.php:568
 msgid "Next"
 msgstr "Siguiente"
 
@@ -135,8 +134,8 @@ msgstr "Anterior"
 msgid "Loading..."
 msgstr "Cargando…"
 
-#: functions/enqueue-scripts.php:75 template-zume-dashboard.php:859
-#: template-zume-dashboard.php:893
+#: functions/enqueue-scripts.php:75 template-zume-dashboard.php:869
+#: template-zume-dashboard.php:903
 msgid "Delete"
 msgstr "Eliminar"
 
@@ -152,194 +151,177 @@ msgstr "Error al cambiar el artículo."
 msgid "Three Month Plan - Zúme Project"
 msgstr "Plan de Tres Meses - Proyecto Zúme"
 
-#: functions/login/zume-login.php:207 functions/login/zume-login.php:435
-msgid "No user found."
+#: functions/enqueue-scripts.php:79
+msgid "We got it!"
 msgstr ""
 
-#: functions/login/zume-login.php:278 functions/login/zume-login.php:400
+#: functions/enqueue-scripts.php:80
+msgid ""
+"We're a volunteer network, so give us a few days. We'll reach out to you "
+"soon as possible!"
+msgstr ""
+
+#: functions/login/zume-login.php:97 functions/login/zume-login.php:316
+msgid "Email is a required permission for login and registration."
+msgstr ""
+
+#: functions/login/zume-login.php:209 functions/login/zume-login.php:441
+msgid "No user found."
+msgstr "Ningún usuario encontrado."
+
+#: functions/login/zume-login.php:280 functions/login/zume-login.php:406
 msgid "You are missing your sign-in token. Try signing in again."
 msgstr ""
 
-#: functions/login/zume-login.php:289 functions/login/zume-login.php:410
+#: functions/login/zume-login.php:290 functions/login/zume-login.php:416
 #, fuzzy
 #| msgid "Failed to connect with the URL provided."
 msgid "Failed to connect with Facebook. Try again."
 msgstr "No se ha podido conectar con el URL proporcionado."
 
-#: functions/login/zume-login.php:308 functions/login/zume-login.php:426
+#: functions/login/zume-login.php:309 functions/login/zume-login.php:432
 msgid "Facebook user lookup error. Sorry for the inconvenience."
 msgstr ""
 
-#: functions/login/zume-login.php:311 functions/login/zume-login.php:429
+#: functions/login/zume-login.php:312 functions/login/zume-login.php:435
 msgid "Error with looking up user with Facebook. Sorry for the inconvenience."
 msgstr ""
 
-#: functions/login/zume-login.php:531
+#: functions/login/zume-login.php:536
 msgid "There are some errors in your form."
-msgstr ""
+msgstr "Hay errores en el llenado del formulario."
 
-#: functions/login/zume-login.php:536 template-zume-profile.php:129
+#: functions/login/zume-login.php:541 template-zume-dashboard.php:1122
+#: template-zume-dashboard.php:1173 template-zume-login.php:354
+#: template-zume-profile.php:127
 msgid "Email"
 msgstr "Correo"
 
-#: functions/login/zume-login.php:540 template-zume-login.php:265
-#, fuzzy
-#| msgid "Required"
+#: functions/login/zume-login.php:545 template-zume-login.php:242
 msgid "Password Required"
-msgstr "Requerido"
+msgstr "Se requiere contraseña"
 
-#: functions/login/zume-login.php:543 template-zume-login.php:268
+#: functions/login/zume-login.php:548 template-zume-login.php:245
 msgid "Password required"
-msgstr ""
+msgstr "Se requiere contraseña"
 
-#: functions/login/zume-login.php:550 template-zume-login.php:275
+#: functions/login/zume-login.php:554 template-zume-login.php:252
 msgid "Re-enter Password"
-msgstr ""
+msgstr "Repite la contraseña"
 
-#: functions/login/zume-login.php:553 template-zume-login.php:278
+#: functions/login/zume-login.php:557 template-zume-login.php:255
 msgid "Passwords do not match. Please, try again."
 msgstr ""
 
-#: functions/login/zume-login.php:562
-#: functions/zume-polylang-integration.php:143 template-zume-login.php:491
+#: functions/login/zume-login.php:566
+#: functions/zume-polylang-integration.php:149 template-zume-login.php:481
 msgid "Register"
 msgstr "Registro"
 
-#: functions/login/zume-login.php:619
+#: functions/login/zume-login.php:609
 msgid "Missing captcha response. How did you do that?"
 msgstr ""
 
-#: functions/login/zume-login.php:632
+#: functions/login/zume-login.php:622
 msgid "Captcha failure. Try again, if you are human."
 msgstr ""
 
-#: functions/login/zume-login.php:638
+#: functions/login/zume-login.php:628
 msgid "Missing email or password."
 msgstr ""
 
-#: functions/login/zume-login.php:657
-#, php-format
-msgid "Sorry. This email is already registered. %s Go to Login %s"
+#: functions/login/zume-login.php:647
+msgid "Sorry. This email is already registered."
 msgstr ""
 
-#: functions/login/zume-login.php:668
+#: functions/login/zume-login.php:658
 #, fuzzy
 #| msgid "Something went wrong with the plugin API."
 msgid "Something went wrong. Sorry. Could you try again?"
 msgstr "Algo salió mal con el complemento API."
 
-#: functions/login/zume-login.php:690
+#: functions/login/zume-login.php:680
 msgid "No new user found."
 msgstr ""
 
-#: functions/login/zume-login.php:700
-msgid "Register with Google"
-msgstr ""
+#: functions/login/zume-login.php:736 functions/login/zume-login.php:784
+msgid "Google"
+msgstr "Google"
 
-#: functions/login/zume-login.php:702
-msgid "Sign in with Google"
-msgstr ""
-
-#: functions/login/zume-login.php:736
-msgid "Failed to authenticate your Google account. Try again."
-msgstr ""
-
-#: functions/login/zume-login.php:747
+#: functions/login/zume-login.php:778
 msgid "Link with Google"
 msgstr ""
 
-#: functions/login/zume-login.php:862
-msgid "Link Facebook"
-msgstr ""
-
-#: functions/login/zume-login.php:938
-msgid "Failed to authenticate your Facebook account. Try again."
-msgstr ""
-
-#: functions/login/zume-login.php:964
-msgid "Login Facebook"
-msgstr ""
-
-#: functions/login/zume-login.php:1089
-msgid "<strong>ERROR</strong>: Enter a username or email address."
-msgstr ""
-
-#: functions/login/zume-login.php:1093
-msgid ""
-"<strong>ERROR</strong>: There is no user registered with that email address."
-msgstr ""
-
-#: functions/login/zume-login.php:1114
-msgid "<strong>ERROR</strong>: Invalid username or email."
-msgstr ""
-
-#: functions/login/zume-login.php:1137
-msgid "Someone has requested a password reset for the following account:"
-msgstr ""
-
-#. translators: %s: site name
-#: functions/login/zume-login.php:1139
-#, fuzzy, php-format
-#| msgid "First Name"
-msgid "Site Name: %s"
-msgstr "Nombre"
-
-#. translators: %s: user login
-#: functions/login/zume-login.php:1141
-#, fuzzy, php-format
-#| msgid "User Name"
-msgid "Username: %s"
-msgstr "Nombre de Usuario"
+#: functions/login/zume-login.php:909 functions/login/zume-login.php:1001
+msgid "Facebook"
+msgstr "Facebook"
 
 #: functions/login/zume-login.php:1142
-msgid "If this was a mistake, just ignore this email and nothing will happen."
+#, fuzzy
+#| msgid "User Address"
+msgid "Missing username or email address."
+msgstr "Dirección del Usuario"
+
+#: functions/login/zume-login.php:1148
+#, fuzzy
+#| msgid "User Address"
+msgid "ERROR: Enter a username or email address."
+msgstr "Dirección del Usuario"
+
+#: functions/login/zume-login.php:1152
+msgid "ERROR: There is no user registered with that email address."
 msgstr ""
 
-#: functions/login/zume-login.php:1143
-msgid "To reset your password, visit the following address:"
+#: functions/login/zume-login.php:1157
+msgid "ERROR: There is no user registered with that username."
 msgstr ""
+
+#: functions/login/zume-login.php:1177
+msgid "<strong>ERROR</strong>: Invalid username or email."
+msgstr ""
+"<strong>ERROR</strong>: Nombre de usuario o correo electrónico incorrecto."
+
+#: functions/login/zume-login.php:1200
+msgid "Someone has requested a password reset for the following account:"
+msgstr ""
+"Alguien ha solicitado un restablecimiento de contraseña para la siguiente "
+"cuenta:"
+
+#. translators: %s: site name
+#: functions/login/zume-login.php:1202
+#, php-format
+msgid "Site Name: %s"
+msgstr "Nombre del sitio: %s"
+
+#. translators: %s: user login
+#: functions/login/zume-login.php:1204
+#, php-format
+msgid "Username: %s"
+msgstr "Nombre de usuario: %s"
+
+#: functions/login/zume-login.php:1205
+msgid "If this was a mistake, just ignore this email and nothing will happen."
+msgstr "Si esto fue un error, ignore este correo electrónico y no pasará nada."
+
+#: functions/login/zume-login.php:1206
+msgid "To reset your password, visit the following address:"
+msgstr "Para restablecer su contraseña, visite la siguiente dirección:"
 
 #. translators: Password reset email subject. %s: Site name
-#: functions/login/zume-login.php:1147
+#: functions/login/zume-login.php:1210
 #, php-format
 msgid "[%s] Password Reset"
-msgstr ""
+msgstr "[%s] Restablecer contraseña"
 
-#: functions/login/zume-login.php:1177
+#: functions/login/zume-login.php:1240
 msgid "The email could not be sent."
-msgstr ""
+msgstr "No se pudo enviar el correo electrónico."
 
-#: functions/login/zume-login.php:1177
+#: functions/login/zume-login.php:1240
 msgid "Possible reason: your host may have disabled the mail() function."
 msgstr ""
-
-#: functions/login/zume-register.php:141
-msgid "First Name (optional for coaching)"
-msgstr "Primer Nombre (opcional para entrenamiento)"
-
-#: functions/login/zume-register.php:145
-msgid "Last Name (optional for coaching)"
-msgstr "Apellido (opcional para entrenamiento)"
-
-#: functions/login/zume-register.php:149
-msgid "Phone Number (optional for coaching)"
-msgstr "Número de Teléfono (opcional para entrenamiento)"
-
-#: functions/login/zume-register.php:153
-msgid "Address (optional for coaching)"
-msgstr "Dirección (opcional para entrenamiento)"
-
-#: functions/login/zume-register.php:164
-msgid "Affiliation Key (optional)"
-msgstr "Clave de Afiliación (opcional)"
-
-#: functions/login/zume-register.php:188
-msgid ""
-"<strong>ERROR</strong>: We can not recognize this address as valid location. "
-"Please, check spelling."
-msgstr ""
-"<strong>ERROR</strong>: No podemos reconocer esta dirección como valida. Por "
-"favor, revisa la ortografía."
+"Posible motivo: tu proveedor de hosting puede haber deshabilitado la función "
+"mail()."
 
 #: functions/post-types/pdf-download-post-type.php:131
 #: functions/post-types/pdf-download-post-type.php:132
@@ -514,7 +496,7 @@ msgstr ""
 "asegúrate de que cada miembro de tu grupo tenga una copia impresa de los "
 "materiales para las sesiones futuras."
 
-#: functions/zume-course.php:359 template-zume-dashboard.php:505
+#: functions/zume-course.php:359 template-zume-dashboard.php:515
 #: template-zume-resources.php:38
 msgid "Download Guidebook"
 msgstr "Descargar la Guía"
@@ -3024,74 +3006,71 @@ msgstr ""
 msgid "No Name"
 msgstr "Sin nombre"
 
-#: functions/zume-functions.php:291 template-zume-profile.php:182
+#: functions/zume-functions.php:294 template-zume-dashboard.php:1107
+#: template-zume-profile.php:80
 msgid "Phone Number"
 msgstr "Número de Teléfono"
 
-#: functions/zume-functions.php:292
+#: functions/zume-functions.php:295
 msgid "User Address"
 msgstr "Dirección del Usuario"
 
-#: functions/zume-functions.php:293
+#: functions/zume-functions.php:296
 msgid "GeoCoded IP"
 msgstr "GeoCoded IP"
 
-#: functions/zume-polylang-integration.php:132
+#: functions/zume-polylang-integration.php:138
 msgid "Home"
 msgstr "Inicio"
 
-#: functions/zume-polylang-integration.php:133 template-zume-overview.php:238
+#: functions/zume-polylang-integration.php:139 template-zume-overview.php:238
 msgid "Dashboard"
 msgstr "Panel de Control"
 
-#: functions/zume-polylang-integration.php:134
+#: functions/zume-polylang-integration.php:140
 msgid "About"
 msgstr "Sobre"
 
-#: functions/zume-polylang-integration.php:135
+#: functions/zume-polylang-integration.php:141
 msgid "Resources"
 msgstr "Recursos"
 
-#: functions/zume-polylang-integration.php:136
+#: functions/zume-polylang-integration.php:142
 msgid "FAQs"
 msgstr "Preguntas Frecuentes"
 
-#: functions/zume-polylang-integration.php:137
+#: functions/zume-polylang-integration.php:143
 msgid "Overview"
 msgstr "Resumen"
 
-#: functions/zume-polylang-integration.php:138
+#: functions/zume-polylang-integration.php:144
 msgid "Settings"
 msgstr "Configuraciones"
 
-#: functions/zume-polylang-integration.php:139
+#: functions/zume-polylang-integration.php:145
 msgid "Profile"
 msgstr "Perfil"
 
-#: functions/zume-polylang-integration.php:140
+#: functions/zume-polylang-integration.php:146
 msgid "Admin"
 msgstr "Administrador"
 
-#: functions/zume-polylang-integration.php:141
+#: functions/zume-polylang-integration.php:147
 msgid "Logout"
 msgstr "Cerrar Sesión"
 
-#: functions/zume-polylang-integration.php:142 template-zume-login.php:390
-msgid "Login"
-msgstr "Iniciar Sesión"
-
 #. Template Name of the plugin/theme
-#: functions/zume-polylang-integration.php:144
+#: functions/zume-polylang-integration.php:150
 #, fuzzy
 #| msgid "Three Month Plan"
 msgid "Three-Month Plan"
 msgstr "Plan de Tres Meses"
 
-#: functions/zume-polylang-integration.php:145 template-zume-progress.php:15
+#: functions/zume-polylang-integration.php:151 template-zume-progress.php:15
 msgid "Progress"
 msgstr "Progreso"
 
-#: functions/zume-polylang-integration.php:146
+#: functions/zume-polylang-integration.php:152
 msgid "Stats"
 msgstr "Estadísticas"
 
@@ -3232,300 +3211,7 @@ msgstr "Páginas:"
 msgid "Menu"
 msgstr "Menú"
 
-#: template-register-old.php:111
-#, fuzzy
-#| msgid "First Name"
-msgid "Site Name:"
-msgstr "Nombre"
-
-#: template-register-old.php:112
-msgid "Site Domain:"
-msgstr ""
-
-#: template-register-old.php:126
-msgid "sitename"
-msgstr ""
-
-#: template-register-old.php:128
-msgid "domain"
-msgstr ""
-
-#. translators: %s: site address
-#: template-register-old.php:132
-#, php-format
-msgid "Your address will be %s."
-msgstr ""
-
-#: template-register-old.php:132
-msgid ""
-"Must be at least 4 characters, letters and numbers only. It cannot be "
-"changed, so choose carefully!"
-msgstr ""
-
-#: template-register-old.php:137
-msgid "Site Title:"
-msgstr ""
-
-#: template-register-old.php:151
-msgid "Site Language:"
-msgstr ""
-
-#: template-register-old.php:178
-#, fuzzy
-#| msgid "Private"
-msgid "Privacy:"
-msgstr "Privado"
-
-#: template-register-old.php:179
-msgid "Allow search engines to index this site."
-msgstr ""
-
-#: template-register-old.php:183
-msgid "Yes"
-msgstr ""
-
-#: template-register-old.php:187
-#, fuzzy
-#| msgid "None"
-msgid "No"
-msgstr "Ninguno"
-
-#: template-register-old.php:234
-#, fuzzy
-#| msgid "User Name"
-msgid "Username:"
-msgstr "Nombre de Usuario"
-
-#: template-register-old.php:239
-msgid "(Must be at least 4 characters, letters and numbers only.)"
-msgstr ""
-
-#: template-register-old.php:242
-msgid "Email&nbsp;Address:"
-msgstr ""
-
-#: template-register-old.php:246
-msgid ""
-"We send your registration email to this address. (Double-check your email "
-"address before continuing.)"
-msgstr ""
-
-#: template-register-old.php:313
-#, php-format
-msgid "Get <em>another</em> %s site in seconds"
-msgstr ""
-
-#: template-register-old.php:316
-msgid "There was a problem, please correct the form below and try again."
-msgstr ""
-
-#: template-register-old.php:319
-#, php-format
-msgid ""
-"Welcome back, %s. By filling out the form below, you can <strong>add another "
-"site to your account</strong>. There is no limit to the number of sites you "
-"can have, so create to your heart&#8217;s content, but write responsibly!"
-msgstr ""
-
-#: template-register-old.php:325
-msgid "Sites you are already a member of:"
-msgstr ""
-
-#: template-register-old.php:334
-msgid ""
-"If you&#8217;re not going to use a great site domain, leave it for a new "
-"user. Now have at it!"
-msgstr ""
-
-#: template-register-old.php:349
-#, fuzzy
-#| msgid "Current Site"
-msgid "Create Site"
-msgstr "Sitio Actual"
-
-#. translators: %s: site name
-#: template-register-old.php:474
-#, php-format
-msgid "The site %s is yours."
-msgstr ""
-
-#. translators: 1: link to new site, 2: login URL, 3: username
-#: template-register-old.php:479
-#, php-format
-msgid ""
-"%1$s is your new site. <a href=\"%2$s\">Log in</a> as &#8220;%3$s&#8221; "
-"using your existing password."
-msgstr ""
-
-#. translators: %s: name of the network
-#: template-register-old.php:544
-#, php-format
-msgid "Get your own %s account in seconds"
-msgstr ""
-
-#: template-register-old.php:561
-msgid "Gimme a site!"
-msgstr ""
-
-#: template-register-old.php:564
-msgid "Just a username, please."
-msgstr ""
-
-#. translators: %s: username
-#: template-register-old.php:614
-#, php-format
-msgid "%s is your new username"
-msgstr ""
-
-#: template-register-old.php:615
-msgid ""
-"But, before you can start using your new username, <strong>you must activate "
-"it</strong>."
-msgstr ""
-
-#. translators: %s: email address
-#: template-register-old.php:617 template-register-old.php:764
-#, php-format
-msgid "Check your inbox at %s and click the link given."
-msgstr ""
-
-#: template-register-old.php:618
-msgid ""
-"If you do not activate your username within two days, you will have to sign "
-"up again."
-msgstr ""
-
-#: template-register-old.php:684
-#, fuzzy
-#| msgid "Sign up"
-msgid "Signup"
-msgstr "Regístrate"
-
-#. translators: %s: site address
-#: template-register-old.php:760
-#, fuzzy, php-format
-#| msgid "Congratulations! You've completed Session 1."
-msgid "Congratulations! Your new site, %s, is almost ready."
-msgstr "¡Felicitaciones! Has completado la Sesión 1."
-
-#: template-register-old.php:762
-msgid ""
-"But, before you can start using your site, <strong>you must activate it</"
-"strong>."
-msgstr ""
-
-#: template-register-old.php:765
-msgid ""
-"If you do not activate your site within two days, you will have to sign up "
-"again."
-msgstr ""
-
-#: template-register-old.php:766
-msgid "Still waiting for your email?"
-msgstr ""
-
-#: template-register-old.php:768
-msgid ""
-"If you haven&#8217;t received your email yet, there are a number of things "
-"you can do:"
-msgstr ""
-
-#: template-register-old.php:770
-msgid ""
-"Wait a little longer. Sometimes delivery of email can be delayed by "
-"processes outside of our control."
-msgstr ""
-
-#: template-register-old.php:771
-msgid ""
-"Check the junk or spam folder of your email client. Sometime emails wind up "
-"there by mistake."
-msgstr ""
-
-#. translators: %s: email address
-#: template-register-old.php:774
-#, php-format
-msgid ""
-"Have you entered your email correctly? You have entered %s, if it&#8217;s "
-"incorrect, you will not receive your email."
-msgstr ""
-
-#: template-register-old.php:831
-msgid "Greetings Network Administrator!"
-msgstr ""
-
-#: template-register-old.php:836
-msgid "The network currently disallows registrations."
-msgstr ""
-
-#: template-register-old.php:839
-msgid "The network currently allows site registrations."
-msgstr ""
-
-#: template-register-old.php:842
-msgid "The network currently allows user registrations."
-msgstr ""
-
-#: template-register-old.php:845
-msgid "The network currently allows both site and user registrations."
-msgstr ""
-
-#. translators: %s: network settings URL
-#: template-register-old.php:852
-#, php-format
-msgid ""
-"To change or disable registration go to your <a href=\"%s\">Options page</a>."
-msgstr ""
-
-#: template-register-old.php:860
-#, fuzzy
-#| msgid "All installations have been completed."
-msgid "Registration has been disabled."
-msgstr "Todas las instalaciones han sido completadas."
-
-#. translators: %s: login URL
-#: template-register-old.php:864
-#, php-format
-msgid ""
-"You must first <a href=\"%s\">log in</a>, and then you can create a new site."
-msgstr ""
-
-#: template-register-old.php:871
-msgid "User registration has been disabled."
-msgstr ""
-
-#: template-register-old.php:877
-msgid "Site registration has been disabled."
-msgstr ""
-
-#: template-register-old.php:897
-#, fuzzy
-#| msgid "No plugins are available to be installed at this time."
-msgid "Sorry, new registrations are not allowed at this time."
-msgstr "Ningún complemento está disponible para ser instalado en este momento."
-
-#: template-register-old.php:898
-msgid "You are logged in already. No need to register again!"
-msgstr ""
-
-#. translators: %s: site address
-#: template-register-old.php:906
-#, fuzzy, php-format
-#| msgid ""
-#| "The article you were looking for was not found, but maybe try looking "
-#| "again!"
-msgid ""
-"The site you were looking for, %s, does not exist, but you can create it now!"
-msgstr ""
-"El contenido que está buscando no se encontró, pero puede intentar de nuevo!"
-
-#. translators: %s: site address
-#: template-register-old.php:910
-#, php-format
-msgid "The site you were looking for, %s, does not exist."
-msgstr ""
-
-#: template-zume-3plan.php:43 template-zume-dashboard.php:522
+#: template-zume-3plan.php:43 template-zume-dashboard.php:532
 msgid "Three Month Plan"
 msgstr "Plan de Tres Meses"
 
@@ -3592,11 +3278,12 @@ msgstr "Enlazar a"
 msgid "Unlink Group"
 msgstr "Desvincular grupo"
 
-#: template-zume-3plan.php:164 template-zume-profile.php:241
+#: template-zume-3plan.php:164 template-zume-dashboard.php:1199
+#: template-zume-profile.php:193
 msgid "Oh snap!"
 msgstr "¡oh no!"
 
-#: template-zume-3plan.php:166 template-zume-profile.php:244
+#: template-zume-3plan.php:166 template-zume-profile.php:196
 msgid "Save"
 msgstr "Guardar"
 
@@ -3625,7 +3312,8 @@ msgid "About Zúme Project"
 msgstr "Sobre Proyecto Zúme"
 
 #: template-zume-about.php:38 template-zume-about.php:55
-#: template-zume-faq.php:197 template-zume-progress.php:101
+#: template-zume-faq.php:197 template-zume-privacy-policy.php:185
+#: template-zume-progress.php:101
 #, fuzzy
 #| msgid ""
 #| "Make disciples in every Omega District globally, using an online training "
@@ -3643,12 +3331,12 @@ msgstr ""
 "procesos y prácticas multiplicadoras de la plantación de iglesias simples."
 
 #: template-zume-about.php:50 template-zume-faq.php:192
-#: template-zume-progress.php:96
+#: template-zume-privacy-policy.php:180 template-zume-progress.php:96
 msgid "Goals of the Zúme Project:"
 msgstr "Metas del Proyecto Zúme:"
 
 #: template-zume-about.php:52 template-zume-faq.php:194
-#: template-zume-progress.php:98
+#: template-zume-privacy-policy.php:182 template-zume-progress.php:98
 #, fuzzy
 #| msgid ""
 #| "Zúme means yeast in Greek. In Matthew 13:33, Jesus is quoted as saying, "
@@ -3774,9 +3462,8 @@ msgstr "editar"
 msgid "Meeting Time"
 msgstr "Tiempo de Reunión"
 
-#: template-zume-dashboard.php:132 template-zume-dashboard.php:652
-#: template-zume-dashboard.php:790 template-zume-dashboard.php:949
-#: template-zume-profile.php:198
+#: template-zume-dashboard.php:132 template-zume-dashboard.php:662
+#: template-zume-dashboard.php:800 template-zume-dashboard.php:959
 msgid "Address"
 msgstr "Dirección"
 
@@ -3784,7 +3471,7 @@ msgstr "Dirección"
 msgid "Members"
 msgstr "Miembros"
 
-#: template-zume-dashboard.php:137 template-zume-dashboard.php:732
+#: template-zume-dashboard.php:137 template-zume-dashboard.php:742
 msgid "Key"
 msgstr "Clave"
 
@@ -3995,7 +3682,7 @@ msgstr "Tutoría entre Pares"
 msgid "Session videos will be added as you complete sessions."
 msgstr "Los videos de sesión se agregarán a medida que completes las sesiones."
 
-#: template-zume-dashboard.php:419 template-zume-dashboard.php:537
+#: template-zume-dashboard.php:419 template-zume-dashboard.php:547
 msgid "Archived Groups"
 msgstr "Grupos Archivados"
 
@@ -4003,63 +3690,69 @@ msgstr "Grupos Archivados"
 msgid "activate"
 msgstr "activar"
 
-#: template-zume-dashboard.php:490
+#: template-zume-dashboard.php:488
+#, fuzzy
+#| msgid "Coach"
+msgid "Get a Coach"
+msgstr "Entrenador"
+
+#: template-zume-dashboard.php:500
 msgid "Join me on the Zúme Project"
 msgstr "Únete a mi en el Proyecto Zúme"
 
-#: template-zume-dashboard.php:491
+#: template-zume-dashboard.php:501
 msgid "Invite to Zúme"
 msgstr "Invitar a Zúme"
 
-#: template-zume-dashboard.php:558
+#: template-zume-dashboard.php:568
 msgid "Networks"
-msgstr ""
+msgstr "Redes"
 
-#: template-zume-dashboard.php:599
+#: template-zume-dashboard.php:609
 msgid "Create Group"
 msgstr "Crear Grupo"
 
-#: template-zume-dashboard.php:608 template-zume-dashboard.php:743
-#: template-zume-dashboard.php:940
+#: template-zume-dashboard.php:618 template-zume-dashboard.php:753
+#: template-zume-dashboard.php:950
 msgid "Group Name"
 msgstr "Nombre del Grupo"
 
-#: template-zume-dashboard.php:614
+#: template-zume-dashboard.php:624
 msgid "Number of Group Members (including you)"
 msgstr "Número de Miembros del Grupo (incluyéndote)"
 
-#: template-zume-dashboard.php:645 template-zume-dashboard.php:782
-#: template-zume-dashboard.php:946
+#: template-zume-dashboard.php:655 template-zume-dashboard.php:792
+#: template-zume-dashboard.php:956
 msgid "Planned Meeting Time"
 msgstr "Tiempo de Reunión Planificado"
 
-#: template-zume-dashboard.php:646 template-zume-dashboard.php:784
+#: template-zume-dashboard.php:656 template-zume-dashboard.php:794
 msgid "example: Saturday 7PM"
 msgstr "ejemplo: Sábado 7PM"
 
-#: template-zume-dashboard.php:664 template-zume-dashboard.php:802
-#: template-zume-profile.php:211
+#: template-zume-dashboard.php:674 template-zume-dashboard.php:812
+#: template-zume-dashboard.php:1157 template-zume-profile.php:109
 msgid "Validate"
 msgstr "Validar"
 
-#: template-zume-dashboard.php:682 template-zume-dashboard.php:822
-#: template-zume-dashboard.php:960
+#: template-zume-dashboard.php:692 template-zume-dashboard.php:832
+#: template-zume-dashboard.php:970
 msgid "Coleaders or additional participants"
 msgstr "Co-líderes o participantes adicionales"
 
-#: template-zume-dashboard.php:690 template-zume-dashboard.php:844
+#: template-zume-dashboard.php:700 template-zume-dashboard.php:854
 msgid "Add"
 msgstr "Agregar"
 
-#: template-zume-dashboard.php:697
+#: template-zume-dashboard.php:707 template-zume-dashboard.php:1202
 msgid "Submit"
 msgstr "Enviar"
 
-#: template-zume-dashboard.php:722
+#: template-zume-dashboard.php:732
 msgid "Edit Group"
 msgstr "Editar Grupo"
 
-#: template-zume-dashboard.php:723
+#: template-zume-dashboard.php:733
 msgid ""
 "You are the owner of this group. All changes to the group details must be "
 "done through \n"
@@ -4069,19 +3762,19 @@ msgstr ""
 "deben hacerse a través de\n"
 "                 ti."
 
-#: template-zume-dashboard.php:738
+#: template-zume-dashboard.php:748
 msgid "Change Key"
 msgstr "Cambiar Clave"
 
-#: template-zume-dashboard.php:750 template-zume-dashboard.php:943
+#: template-zume-dashboard.php:760 template-zume-dashboard.php:953
 msgid "Number of Participants"
 msgstr "Número de Participantes"
 
-#: template-zume-dashboard.php:793
+#: template-zume-dashboard.php:803
 msgid "example: 1000 Broadway, Denver, CO 80126"
 msgstr "ejemplo: 100 Broadway, Denver, CO 80126"
 
-#: template-zume-dashboard.php:824
+#: template-zume-dashboard.php:834
 msgid ""
 "Adding a coleader or additional participants gives them access to this group "
 "on their Zúme dashboard once they have signed up and logged in using the "
@@ -4092,23 +3785,23 @@ msgid ""
 "with this invitation, you will need to ask them to sign up."
 msgstr ""
 
-#: template-zume-dashboard.php:854
+#: template-zume-dashboard.php:864
 msgid "Update"
 msgstr "Actualizar"
 
-#: template-zume-dashboard.php:857
+#: template-zume-dashboard.php:867
 msgid "Archive"
 msgstr "Archivo"
 
-#: template-zume-dashboard.php:887
+#: template-zume-dashboard.php:897
 msgid "ARE YOU SURE YOU WANT TO DELETE THIS GROUP?"
 msgstr "¿ESTÁS SEGURO QUE QUIERES ELIMINAR ESTE GRUPO?"
 
-#: template-zume-dashboard.php:924
+#: template-zume-dashboard.php:934
 msgid "View Group"
 msgstr "Ver Grupo"
 
-#: template-zume-dashboard.php:927
+#: template-zume-dashboard.php:937
 msgid ""
 "You are a participant or coleader of this group and can view the group \n"
 "                        details and lead the group through a session, but "
@@ -4123,19 +3816,19 @@ msgstr ""
 "                         participantes. Por favor, hacer solicitudes "
 "directamente al propietario del grupo."
 
-#: template-zume-dashboard.php:936
+#: template-zume-dashboard.php:946
 msgid "Group Owner"
 msgstr "Propietario de Grupo"
 
-#: template-zume-dashboard.php:981
+#: template-zume-dashboard.php:991
 msgid "Remove Group"
 msgstr "Eliminar Grupo"
 
-#: template-zume-dashboard.php:995
+#: template-zume-dashboard.php:1005
 msgid "ARE YOU SURE YOU WANT TO REMOVE THIS GROUP?"
 msgstr "¿ESTÁS SEGURO QUE QUIERES REMOVER ESTE GRUPO?"
 
-#: template-zume-dashboard.php:996
+#: template-zume-dashboard.php:1006
 msgid ""
 "To reverse this action, the owner of the group must re-invite you to the "
 "group again."
@@ -4143,9 +3836,100 @@ msgstr ""
 "Para revertir esta acción, el propietario del grupo debe volver a invitarte "
 "al grupo nuevamente."
 
-#: template-zume-dashboard.php:1003
+#: template-zume-dashboard.php:1013
 msgid "Remove"
 msgstr "Eliminar"
+
+#: template-zume-dashboard.php:1051
+msgid "Connect Me to a Coach"
+msgstr ""
+
+#: template-zume-dashboard.php:1063
+#, fuzzy
+#| msgid "Coach"
+msgid "Coaches"
+msgstr "Entrenador"
+
+#: template-zume-dashboard.php:1064
+msgid ""
+"Our network of volunteer coaches are people like you, people who are "
+"passionate about loving God, loving others, and obeying the Great Commission."
+msgstr ""
+
+#: template-zume-dashboard.php:1069
+msgid "Advocates"
+msgstr ""
+
+#: template-zume-dashboard.php:1070
+msgid ""
+"A coach is someone who will come alongside you as you implement the Zúme "
+"tools and training."
+msgstr ""
+
+#: template-zume-dashboard.php:1075
+msgid "Local"
+msgstr "Local"
+
+#: template-zume-dashboard.php:1076
+msgid ""
+"On submitting this request, we will do our best to connect you with a coach "
+"near you."
+msgstr ""
+
+#: template-zume-dashboard.php:1081
+msgid "It's Free"
+msgstr ""
+
+#: template-zume-dashboard.php:1082
+msgid "Coaching is free. You can opt out at any time."
+msgstr ""
+
+#: template-zume-dashboard.php:1092 template-zume-profile.php:63
+msgid "Name"
+msgstr "Nombre"
+
+#: template-zume-dashboard.php:1096 template-zume-dashboard.php:1097
+#: template-zume-profile.php:67 template-zume-profile.php:68
+#, fuzzy
+#| msgid "First Name"
+msgid "First and last name"
+msgstr "Nombre"
+
+#: template-zume-dashboard.php:1135
+msgid "Email is required."
+msgstr "Correo electrónico requerido."
+
+#: template-zume-dashboard.php:1143
+msgid "City"
+msgstr "Ciudad"
+
+#: template-zume-dashboard.php:1168
+msgid "How should we contact you?"
+msgstr ""
+
+#: template-zume-dashboard.php:1175
+msgid "Text"
+msgstr "Texto"
+
+#: template-zume-dashboard.php:1177
+msgid "Phone"
+msgstr "Teléfono"
+
+#: template-zume-dashboard.php:1179
+msgid "WhatsApp"
+msgstr "WhatsApp"
+
+#: template-zume-dashboard.php:1181
+msgid "Other"
+msgstr "Otro"
+
+#: template-zume-dashboard.php:1188 template-zume-profile.php:180
+msgid "Affiliation Key"
+msgstr "Clave de Afiliación"
+
+#: template-zume-dashboard.php:1230
+msgid "Thank you. You have already requested a coach connection."
+msgstr ""
 
 #: template-zume-faq.php:20
 msgid "Zúme FAQs"
@@ -4565,50 +4349,66 @@ msgid ""
 "etc.) for further group communication."
 msgstr ""
 
-#: template-zume-login.php:91
+#: template-zume-login.php:73
 msgid ""
 "Your password reset link appears to be invalid. Please request a new link "
 "below."
 msgstr ""
+"Su enlace de restablecimiento de contraseña no es válido. Por favor, "
+"solicite un nuevo enlace a continuación."
 
-#: template-zume-login.php:93
+#: template-zume-login.php:75
 msgid "Your password reset link has expired. Please request a new link below."
 msgstr ""
+"Su enlace de restablecimiento de contraseña ha caducado. Por favor, solicite "
+"un nuevo enlace a continuación."
 
-#: template-zume-login.php:129
-#, fuzzy
-#| msgid "User Address"
-msgid "Username or Email Address"
-msgstr "Dirección del Usuario"
+#: template-zume-login.php:108 template-zume-login.php:465
+msgid "Email Address"
+msgstr "Dirección de correo electrónico"
 
-#: template-zume-login.php:140
+#: template-zume-login.php:119
 msgid "Get New Password"
-msgstr ""
+msgstr "Obtener nueva contraseña"
 
-#: template-zume-login.php:197
+#: template-zume-login.php:174
 msgid "The passwords do not match."
-msgstr ""
+msgstr "Las contraseñas no coinciden."
 
-#: template-zume-login.php:298
+#: template-zume-login.php:275
 msgid "Reset Password"
-msgstr ""
+msgstr "Restablecer contraseña"
 
-#: template-zume-login.php:392 template-zume-login.php:493
-msgid "Lost your password?"
-msgstr ""
-
-#: template-zume-login.php:409
-msgid "Invalid request."
-msgstr ""
-
-#: template-zume-login.php:418
+#: template-zume-login.php:335
 #, fuzzy
-#| msgid "Unable to find key:"
-msgid "Invalid key"
-msgstr "No se puede encontrar la clave:"
+#| msgid "How to get started:"
+msgid "Let's get started."
+msgstr "Cómo comenzar:"
 
-#: template-zume-login.php:440
+#: template-zume-login.php:337
+#, fuzzy
+#| msgid "Sign up"
+msgid "Sign up using:"
+msgstr "Regístrate"
+
+#: template-zume-login.php:384 template-zume-login.php:483
+msgid "Lost your password?"
+msgstr "¿Perdiste tu contraseña?"
+
+#: template-zume-login.php:401
+msgid "Invalid request."
+msgstr "Petición incorrecta."
+
+#: template-zume-login.php:410
+msgid "Invalid key"
+msgstr "Clave no válida"
+
+#: template-zume-login.php:432
 msgid "User action confirmed."
+msgstr ""
+
+#: template-zume-login.php:449
+msgid "Sign in using:"
 msgstr ""
 
 #: template-zume-overview.php:71 template-zume-overview.php:84
@@ -4964,49 +4764,197 @@ msgstr ""
 "GRUPOS DE TUTORÍA ENTRE PARES — Divídanse en grupos de dos o tres y trabajen "
 "en el formato de Grupos de Tutoría entre Pares. (60 minutos)"
 
-#: template-zume-profile.php:53
+#: template-zume-privacy-policy.php:22
+#, fuzzy
+#| msgid "Zúme Project"
+msgid "Zúme Privacy Policy"
+msgstr "Proyecto Zúme"
+
+#: template-zume-privacy-policy.php:32
+msgid ""
+"This privacy policy has been compiled to better serve those who are "
+"concerned with how their \"Personally Identifiable Information\" (PII) is "
+"being used online. PII, as described in US privacy law and information "
+"security, is information that can be used on its own or with other "
+"information to identify, contact, or locate a single person, or to identify "
+"an individual in context. Please read our privacy policy carefully to get a "
+"clear understanding of how we collect, use, protect or otherwise handle your "
+"Personally Identifiable Information in accordance with our website."
+msgstr ""
+
+#: template-zume-privacy-policy.php:38
+msgid "What permissions do the social sign-on logins ask for?"
+msgstr ""
+
+#: template-zume-privacy-policy.php:41
+msgid ""
+"Public Profile. This includes certain User’s Data such as id, name, picture, "
+"gender, and their locale."
+msgstr ""
+
+#: template-zume-privacy-policy.php:44
+#, fuzzy
+#| msgid "User Address"
+msgid "Email Address."
+msgstr "Dirección del Usuario"
+
+#: template-zume-privacy-policy.php:52
+msgid ""
+"What personal information do we collect from the people through our website?"
+msgstr ""
+
+#: template-zume-privacy-policy.php:55
+msgid "Information in the Basic Social Profile (if used) and email."
+msgstr ""
+
+#: template-zume-privacy-policy.php:58
+msgid "Session and course activity."
+msgstr ""
+
+#: template-zume-privacy-policy.php:61
+msgid ""
+"General location telemetry, so we know in what countries our training is "
+"being used."
+msgstr ""
+
+#: template-zume-privacy-policy.php:69
+#, fuzzy
+#| msgid "Project Information"
+msgid "When do we collect information?"
+msgstr "Información de Programa"
+
+#: template-zume-privacy-policy.php:72
+msgid "We collect your information at login."
+msgstr ""
+
+#: template-zume-privacy-policy.php:75
+msgid "We also track your progress through the training course."
+msgstr ""
+
+#: template-zume-privacy-policy.php:83
+msgid "How do we use your information?"
+msgstr ""
+
+#: template-zume-privacy-policy.php:86
+msgid ""
+"We use your information to create a user account in the zume system based on "
+"your email address."
+msgstr ""
+
+#: template-zume-privacy-policy.php:89
+msgid ""
+"We will email you with basic transactional emails like password reset "
+"requests and other system notifications."
+msgstr ""
+
+#: template-zume-privacy-policy.php:92
+msgid ""
+"We email occasional reminders and encouragements depending on your progress "
+"through the training."
+msgstr ""
+
+#: template-zume-privacy-policy.php:100
+msgid "How do we protect your information?"
+msgstr ""
+
+#: template-zume-privacy-policy.php:102
+msgid ""
+"While we use encryption to protect sensitive information transmitted online, "
+"we also protect your information offline. Only team members who need the "
+"information to perform a specific job (for example, web administrator or "
+"customer service) are granted access to personally identifiable information."
+msgstr ""
+
+#: template-zume-privacy-policy.php:105
+msgid ""
+"Your personal information is contained behind secured networks and is only "
+"accessible by a limited number of persons who have special access rights to "
+"such systems, and are required to keep the information confidential. In "
+"addition, all sensitive/credit information you supply is encrypted via "
+"Secure Socket Layer (SSL) technology."
+msgstr ""
+
+#: template-zume-privacy-policy.php:108
+msgid ""
+"We implement a variety of security measures when a user submits, or accesses "
+"their information to maintain the safety of your personal information."
+msgstr ""
+
+#: template-zume-privacy-policy.php:115
+msgid "Do we use \"cookies\"?"
+msgstr ""
+
+#: template-zume-privacy-policy.php:117
+msgid ""
+"Any use of Cookies - or of other tracking tools - by this Application or by "
+"the owners of third party services used by this Application, unless stated "
+"otherwise, serves to identify Users and remember their preferences, for the "
+"sole purpose of providing the service required by the User."
+msgstr ""
+
+#: template-zume-privacy-policy.php:120
+msgid "Personal Data collected: name, email."
+msgstr ""
+
+#: template-zume-privacy-policy.php:127
+msgid "Your Access to and Control Over Information."
+msgstr ""
+
+#: template-zume-privacy-policy.php:129
+msgid ""
+"You may opt out of any future contact from us at any time. You can do the "
+"following at any time by contacting us via our contact email address:"
+msgstr ""
+
+#: template-zume-privacy-policy.php:132
+msgid "See what data we have about you, if any."
+msgstr ""
+
+#: template-zume-privacy-policy.php:136
+msgid "Change/correct any data we have about you."
+msgstr ""
+
+#: template-zume-privacy-policy.php:139
+msgid "Have us delete any data we have about you."
+msgstr ""
+
+#: template-zume-privacy-policy.php:142
+msgid "Express any concern you have about our use of your data."
+msgstr ""
+
+#: template-zume-privacy-policy.php:150
+msgid "Updates"
+msgstr "Actualizaciones"
+
+#: template-zume-privacy-policy.php:152
+msgid ""
+"Our Privacy Policy may change from time to time and all updates will be "
+"posted on this page."
+msgstr ""
+
+#: template-zume-profile.php:31
 msgid "Your Profile"
 msgstr "Tu Perfil"
 
-#: template-zume-profile.php:58
+#: template-zume-profile.php:36
 msgid "edit image @ gravatar.com"
 msgstr "editar imagen @ gravatar.com"
 
-#: template-zume-profile.php:91
-msgid "User Name"
-msgstr "Nombre de Usuario"
+#: template-zume-profile.php:96
+msgid "Your City"
+msgstr "Tu ciudad"
 
-#: template-zume-profile.php:94
-msgid "(can not change)"
-msgstr "(no puede cambiar)"
-
-#: template-zume-profile.php:99 template-zume-profile.php:103
-#: template-zume-profile.php:104
-msgid "First Name"
-msgstr "Nombre"
-
-#: template-zume-profile.php:114 template-zume-profile.php:118
-#: template-zume-profile.php:119
-msgid "Last Name"
-msgstr "Apellido"
-
-#: template-zume-profile.php:149
+#: template-zume-profile.php:147
 msgid "Linked Facebook Account"
 msgstr ""
 
-#: template-zume-profile.php:156 template-zume-profile.php:172
-#, fuzzy
-#| msgid "Unlink Group"
+#: template-zume-profile.php:154 template-zume-profile.php:170
 msgid "Unlink"
-msgstr "Desvincular grupo"
+msgstr "Desvincular"
 
-#: template-zume-profile.php:165
+#: template-zume-profile.php:163
 msgid "Linked Google Account"
 msgstr ""
-
-#: template-zume-profile.php:229
-msgid "Affiliation Key"
-msgstr "Clave de Afiliación"
 
 #: template-zume-progress.php:23
 msgid "Phase 1"
@@ -5048,18 +4996,6 @@ msgstr "Información de Programa"
 msgid "Language Translation Progress"
 msgstr "Progreso de Traducción de Idioma"
 
-#: template-zume-stats.php:21
-msgid "Groups Locations"
-msgstr "Ubicaciones de Grupos"
-
-#: template-zume-stats.php:26
-msgid "Translation Progress"
-msgstr "Progreso de Traducción"
-
-#: template-zume-stats.php:32
-msgid "Progress for Each Language"
-msgstr "Progreso de Cada Idioma"
-
 #. Theme Name of the plugin/theme
 msgid "Zúme Project"
 msgstr "Proyecto Zúme"
@@ -5088,12 +5024,6 @@ msgstr "https://github.com/ChasmSolutions"
 
 #. Template Name of the plugin/theme
 #, fuzzy
-#| msgid "Zúme FAQs"
-msgid "Zúme Stats"
-msgstr "Preguntas Frecuentes Zúme"
-
-#. Template Name of the plugin/theme
-#, fuzzy
 #| msgid "About"
 msgid "Zume About"
 msgstr "Sobre"
@@ -5103,6 +5033,10 @@ msgstr "Sobre"
 #| msgid "Resources"
 msgid "Zume Resources"
 msgstr "Recursos"
+
+#. Template Name of the plugin/theme
+msgid "Zume Privacy Policy"
+msgstr ""
 
 #. Template Name of the plugin/theme
 #, fuzzy
@@ -5149,6 +5083,118 @@ msgstr ""
 #| msgid "How Zúme Works"
 msgid "Zúme Course"
 msgstr "Cómo Funciona Zúme"
+
+#~ msgid "Epic 404 - Article Not Found"
+#~ msgstr "Épico 404 - Artículo no Encontrado"
+
+#~ msgid ""
+#~ "The article you were looking for was not found, but maybe try looking "
+#~ "again!"
+#~ msgstr ""
+#~ "El contenido que está buscando no se encontró, pero puede intentar de "
+#~ "nuevo!"
+
+#~ msgid "First Name (optional for coaching)"
+#~ msgstr "Primer Nombre (opcional para entrenamiento)"
+
+#~ msgid "Last Name (optional for coaching)"
+#~ msgstr "Apellido (opcional para entrenamiento)"
+
+#~ msgid "Phone Number (optional for coaching)"
+#~ msgstr "Número de Teléfono (opcional para entrenamiento)"
+
+#~ msgid "Address (optional for coaching)"
+#~ msgstr "Dirección (opcional para entrenamiento)"
+
+#~ msgid "Affiliation Key (optional)"
+#~ msgstr "Clave de Afiliación (opcional)"
+
+#~ msgid ""
+#~ "<strong>ERROR</strong>: We can not recognize this address as valid "
+#~ "location. Please, check spelling."
+#~ msgstr ""
+#~ "<strong>ERROR</strong>: No podemos reconocer esta dirección como valida. "
+#~ "Por favor, revisa la ortografía."
+
+#, fuzzy
+#~| msgid "First Name"
+#~ msgid "Site Name:"
+#~ msgstr "Nombre"
+
+#, fuzzy
+#~| msgid "Private"
+#~ msgid "Privacy:"
+#~ msgstr "Privado"
+
+#, fuzzy
+#~| msgid "None"
+#~ msgid "No"
+#~ msgstr "Ninguno"
+
+#, fuzzy
+#~| msgid "User Name"
+#~ msgid "Username:"
+#~ msgstr "Nombre de Usuario"
+
+#, fuzzy
+#~| msgid "Current Site"
+#~ msgid "Create Site"
+#~ msgstr "Sitio Actual"
+
+#, fuzzy
+#~| msgid "Sign up"
+#~ msgid "Signup"
+#~ msgstr "Regístrate"
+
+#, fuzzy
+#~| msgid "Congratulations! You've completed Session 1."
+#~ msgid "Congratulations! Your new site, %s, is almost ready."
+#~ msgstr "¡Felicitaciones! Has completado la Sesión 1."
+
+#, fuzzy
+#~| msgid "All installations have been completed."
+#~ msgid "Registration has been disabled."
+#~ msgstr "Todas las instalaciones han sido completadas."
+
+#, fuzzy
+#~| msgid "No plugins are available to be installed at this time."
+#~ msgid "Sorry, new registrations are not allowed at this time."
+#~ msgstr ""
+#~ "Ningún complemento está disponible para ser instalado en este momento."
+
+#, fuzzy
+#~| msgid ""
+#~| "The article you were looking for was not found, but maybe try looking "
+#~| "again!"
+#~ msgid ""
+#~ "The site you were looking for, %s, does not exist, but you can create it "
+#~ "now!"
+#~ msgstr ""
+#~ "El contenido que está buscando no se encontró, pero puede intentar de "
+#~ "nuevo!"
+
+#~ msgid "User Name"
+#~ msgstr "Nombre de Usuario"
+
+#~ msgid "(can not change)"
+#~ msgstr "(no puede cambiar)"
+
+#~ msgid "Last Name"
+#~ msgstr "Apellido"
+
+#~ msgid "Groups Locations"
+#~ msgstr "Ubicaciones de Grupos"
+
+#~ msgid "Translation Progress"
+#~ msgstr "Progreso de Traducción"
+
+#~ msgid "Progress for Each Language"
+#~ msgstr "Progreso de Cada Idioma"
+
+#, fuzzy
+#~| msgid "Zúme FAQs"
+#~ msgid "Zúme Stats"
+#~ msgstr "Preguntas Frecuentes Zúme"
 
 #~ msgid "Roles"
 #~ msgstr "Roles"
@@ -5585,9 +5631,6 @@ msgstr "Cómo Funciona Zúme"
 #~ msgid "DISCIPLE TOOLS - INTEGRATION"
 #~ msgstr "HERRAMIENTAS DE DISCÍPULO - INTEGRACIÓN"
 
-#~ msgid "Google Keys"
-#~ msgstr "Claves de Google"
-
 #~ msgid "Title 1"
 #~ msgstr "Título 1"
 
@@ -5669,12 +5712,6 @@ msgstr "Cómo Funciona Zúme"
 #~ msgid "Your Assigned People"
 #~ msgstr "Tus Personas Asignadas"
 
-#~ msgid "Name"
-#~ msgstr "Nombre"
-
-#~ msgid "Phone"
-#~ msgstr "Teléfono"
-
 #~ msgid "Last Active"
 #~ msgstr "Última Vez Activo"
 
@@ -5689,9 +5726,6 @@ msgstr "Cómo Funciona Zúme"
 
 #~ msgid "Assign"
 #~ msgstr "Asignar"
-
-#~ msgid "Your Coach"
-#~ msgstr "Tu Entrenador"
 
 #~ msgid "Invitations"
 #~ msgstr "Invitaciones"
