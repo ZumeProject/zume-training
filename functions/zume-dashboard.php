@@ -524,10 +524,12 @@ class Zume_Dashboard {
      *
      * @return array
      */
-    public static function get_colead_groups( $status = 'accepted' ) {
+    public static function get_colead_groups( $status = 'accepted', $user = null ) {
         global $wpdb;
         $prepared = [];
-        $user = get_user_by( 'id', get_current_user_id() );
+        if ( is_null( $user ) ) {
+            $user = get_user_by( 'id', get_current_user_id() );
+        }
         $results = $wpdb->get_results($wpdb->prepare(
             "SELECT *
                         FROM `$wpdb->usermeta`

@@ -101,6 +101,8 @@ class Zume_REST_API {
                 }
             ),
         ) );
+
+
     }
 
     /**
@@ -234,6 +236,7 @@ class Zume_REST_API {
             return new WP_Error( "log_param_error", "Please provide a valid address", array( 'status' => 400 ) );
         }
     }
+
 
 }
 Zume_REST_API::instance();

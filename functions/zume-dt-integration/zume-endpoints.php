@@ -58,6 +58,14 @@ class Zume_Integration_Endpoints
             ]
         );
 
+        $private_namespace = 'zume/v1';
+        register_rest_route( $private_namespace, '/send_coaching_request', array(
+            array(
+                'methods'         => WP_REST_Server::CREATABLE,
+                'callback'        => array( $this, 'send_coaching_request' ),
+            ),
+        ) );
+
     }
 
     /**
@@ -80,6 +88,8 @@ class Zume_Integration_Endpoints
             && ! empty( $params['zume_foreign_key'] )
             && isset( $params['zume_check_sum'] )
             && ! empty( $params['zume_check_sum'] )
+            && isset( $params['zume_groups_check_sum'] )
+            && ! empty( $params['zume_groups_check_sum'] )
             && isset( $params['type'] )
             && ! empty( $params['type'] )
             ) {
@@ -91,20 +101,24 @@ class Zume_Integration_Endpoints
                         return new WP_Error( 'user_lookup_failure', 'Did not find user.' );
                     }
 
-                    // prepare user data
-                    $zume = new Zume_Integration();
-                    $user_data = $zume->get_transfer_user_array( $user_id );
-
                     // check supplied check_sum
                     $check_sum = get_user_meta( $user_id, 'zume_check_sum', true );
-                    if ( $check_sum == $params['zume_check_sum'] ) {
+                    $zume_groups_check_sum = get_user_meta( $user_id, 'zume_groups_check_sum', true );
+
+                    if ( $check_sum == $params['zume_check_sum'] && $zume_groups_check_sum == $params['zume_groups_check_sum'] ) {
                         return [
                         'status' => 'OK'
                         ];
                     } else {
+                        // prepare user data
+                        $zume = new Zume_Integration();
+                        $user_data = $zume->get_transfer_user_array( $user_id );
+                        $group_data = $zume->get_all_groups( $user_id );
+
                         return [
                         'status' => 'Update_Needed',
                         'raw_record' => $user_data,
+                        'raw_group_records' => $group_data,
                         ];
                     }
                 } elseif ( $params['type'] === 'group' ) {
@@ -182,6 +196,47 @@ class Zume_Integration_Endpoints
             }
         } else {
             return new WP_Error( 'failed_authentication', 'Failed id and/or token authentication.' );
+        }
+    }
+
+    public function send_coaching_request( WP_REST_Request $request ) {
+        $params = $request->get_params();
+        $user = wp_get_current_user();
+
+        // get new elements and update profile
+        if ( isset( $params['zume_full_name'] ) && ! empty( $params['zume_full_name'] ) ) {
+            update_user_meta( $user->ID, 'zume_full_name', $params['zume_full_name'] );
+        } else {
+            return new WP_Error( __METHOD__, 'Missing name.' );
+        }
+        if ( isset( $params['zume_phone_number'] ) && ! empty( $params['zume_phone_number'] ) ) {
+            update_user_meta( $user->ID, 'zume_phone_number', $params['zume_phone_number'] );
+        }
+        if ( isset( $params['address_profile'] ) && ! empty( $params['address_profile'] ) ) {
+            update_user_meta( $user->ID, 'address_profile', $params['address_profile'] );
+        }
+        if ( isset( $params['zume_contact_preference'] ) && ! empty( $params['zume_contact_preference'] ) ) {
+            update_user_meta( $user->ID, 'zume_contact_preference', $params['zume_contact_preference'] );
+        }
+        if ( isset( $params['zume_affiliation_key'] ) && ! empty( $params['zume_affiliation_key'] ) ) {
+            update_user_meta( $user->ID, 'zume_affiliation_key', $params['zume_affiliation_key'] );
+        }
+
+        // submit for a transfer
+        $object = new Zume_Integration();
+        $result = $object->send_coaching_request_transfer( $user->ID );
+
+        dt_write_log( __METHOD__ );
+        dt_write_log( $result );
+
+        // updated user record with submitted record
+        if ( isset( $result['status'] ) && 'OK' === $result['status'] ) {
+            update_user_meta( $user->ID, 'zume_transferred', current_time( 'timestamp' ) );
+            return __( 'Successfully send!' );
+        } else {
+            update_user_meta( $user->ID, 'zume_transferred', 0 );
+            $result->add( 'error_message', __( 'Failed to send request. Please try again.' ) );
+            return $result;
         }
     }
 }

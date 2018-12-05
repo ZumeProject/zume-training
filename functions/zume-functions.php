@@ -73,11 +73,8 @@ function zume_update_user_contact_info() {
     $args['ID'] = $user_id;
 
     // build user name variables
-    if ( isset( $_POST['first_name'] ) ) {
-        $args['first_name'] = sanitize_text_field( wp_unslash( $_POST['first_name'] ) );
-    }
-    if ( isset( $_POST['last_name'] ) ) {
-        $args['last_name'] = sanitize_text_field( wp_unslash( $_POST['last_name'] ) );
+    if ( isset( $_POST['zume_full_name'] ) ) {
+        update_user_meta( $user_id, 'zume_full_name', sanitize_text_field( wp_unslash( $_POST['zume_full_name'] ) ) );
     }
     if ( isset( $_POST['user_email'] ) && !empty( $_POST['user_email'] ) ) {
         $args['user_email'] = sanitize_email( wp_unslash( $_POST['user_email'] ) );

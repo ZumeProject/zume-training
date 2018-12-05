@@ -53,6 +53,70 @@ class Zume_Integration
         return;
     }
 
+    public function send_coaching_request_transfer( $user_id ) {
+        dt_write_log( __METHOD__ );
+
+        // Get prepared data for user
+        $user_data = $this->get_transfer_user_array( $user_id );
+
+        // check if user has groups, if so then stop.
+        $groups = $this->get_all_groups( $user_id );
+
+        // Get target site for transfer
+        $site_key = $this->filter_for_site_key( $user_data, $user_id );
+        if ( ! $site_key ) {
+            dt_write_log( __METHOD__ . ' (Failure: filter_for_site_key)' );
+            return new WP_Error( __METHOD__, 'Failure: filter_for_site_key' ); // no sites setup
+        }
+
+        $site = zume_integration_get_site_details( $site_key );
+        if ( ! $site ) {
+            dt_write_log( __METHOD__ . ' (Failure: zume_integration_get_site_details)' );
+            return new WP_Error( __METHOD__, 'Failure: zume_integration_get_site_details' );
+        }
+
+        // Send remote request
+        $args = [
+            'method' => 'POST',
+            'body' => [
+                'transfer_token' => $site['transfer_token'],
+                'raw_user' => $user_data,
+                'raw_groups' => $groups,
+            ]
+        ];
+        $result = zume_integration_remote_send( 'coaching_request', $site['url'], $args );
+        $body = json_decode( wp_remote_retrieve_body( $result ), true );
+        return $body;
+    }
+
+    public function get_all_groups( $user_id ) {
+        // check if user has groups, if so then stop.
+        $groups = Zume_Dashboard::get_current_user_groups( $user_id );
+        if ( ! empty( $groups ) ) {
+            foreach ( $groups as $key => $group ) {
+                $groups[$key]['zume_check_sum'] = md5( serialize( $group ) );
+            }
+        }
+
+        $user = get_user_by( 'id', $user_id );
+        $zume_colead_groups = Zume_Dashboard::get_colead_groups( 'accepted', $user );
+        if ( ! empty( $zume_colead_groups ) ) {
+            foreach ( $zume_colead_groups as $zume_colead_key => $zume_colead_value ) {
+                $groups[ $zume_colead_key ] = $zume_colead_value;
+                $groups[ $zume_colead_key ]['zume_check_sum'] = md5( serialize( $zume_colead_value ) );
+            }
+        }
+
+        if ( ! empty( $groups ) ) {
+            $groups['groups_check_sum'] = md5( serialize( $groups ) );
+            return $groups;
+        } else {
+            return [];
+        }
+    }
+
+
+
     public function send_three_month_plan_transfer( $user_id ) {
         dt_write_log( __METHOD__ );
 
@@ -202,12 +266,16 @@ class Zume_Integration
         $user = get_user_by( 'id', $user_id );
         $user_meta = zume_get_user_meta( $user->ID );
 
-        $user_meta['first_name'] = $user_meta['first_name'] ?? '';
-        $user_meta['last_name'] = $user_meta['last_name'] ?? '';
-
-        $full_name = trim( $user_meta['first_name'] . ' ' . $user_meta['last_name'] );
+        $full_name = $user_meta['zume_full_name'] ?? '';
         if ( empty( $full_name ) ) {
-            $full_name = null;
+            $user_meta['first_name'] = $user_meta['first_name'] ?? '';
+            $user_meta['last_name'] = $user_meta['last_name'] ?? '';
+
+            $full_name = trim( $user_meta['first_name'] . ' ' . $user_meta['last_name'] );
+
+            if ( empty( $full_name ) ) {
+                $full_name = $user_meta['nickname'] ?: $user->data->display_name;
+            }
         }
 
         $three_month_plan = get_user_meta( get_current_user_id(), 'three_month_plan', true );
@@ -220,7 +288,7 @@ class Zume_Integration
         $zume_colead_groups = $this->get_colead_groups_for_user( $user->data->user_email );
 
         $prepared_user_data = [
-            'title' => sanitize_text_field( wp_unslash( ucwords( $full_name ?: $user_meta['nickname'] ?: $user->data->display_name ) ) ),
+            'title' => sanitize_text_field( wp_unslash( ucwords( $full_name ) ) ),
             'user_login' => $user->data->user_login,
             'first_name' => sanitize_text_field( wp_unslash( $user_meta['first_name'] ?? '' ) ),
             'last_name' => sanitize_text_field( wp_unslash( $user_meta['last_name'] ?? '' ) ),
