@@ -764,7 +764,11 @@ function zume_google_sign_in_button( $type = 'signin' ) {
                     window.location = "<?php echo esc_url( zume_dashboard_url() ) ?>"
                 })
                 .fail(function (err) {
-                    jQuery('#google_error').text( err.responseJSON['message'] )
+                    if ( err.responseJSON['message'] ) {
+                        jQuery('#google_error').text( err.responseJSON['message'] )
+                    } else {
+                        jQuery('#google_error').html( 'Oops. Something went wrong.' )
+                    }
                     console.log("error")
                     console.log(err)
                 })
@@ -809,7 +813,11 @@ function zume_google_link_account_button() {
                     window.location = "<?php echo esc_url( zume_profile_url() ) ?>"
                 })
                 .fail(function (err) {
-                    jQuery('#google_error').text( err.responseJSON['message'] )
+                    if ( err.responseJSON['message'] ) {
+                        jQuery('#google_error').text( err.responseJSON['message'] )
+                    } else {
+                        jQuery('#google_error').html( 'Oops. Something went wrong.' )
+                    }
                     console.log("error")
                     console.log(err)
                 })
@@ -885,7 +893,11 @@ function zume_facebook_login_button() {
                             }
                         })
                         .fail(function (err) {
-                            jQuery('#facebook_error').text( err.responseJSON['message'] )
+                            if ( err.responseJSON['message'] ) {
+                                jQuery('#google_error').text( err.responseJSON['message'] )
+                            } else {
+                                jQuery('#google_error').html( 'Oops. Something went wrong.' )
+                            }
                             console.log("error")
                             console.log(err)
                         })
@@ -977,7 +989,11 @@ function zume_facebook_link_account_button() {
                             window.location = "<?php echo esc_url( zume_profile_url() ) ?>"
                         })
                         .fail(function (err) {
-                            jQuery('#facebook_error').text( err.responseJSON['message'] )
+                            if ( err.responseJSON['message'] ) {
+                                jQuery('#google_error').text( err.responseJSON['message'] )
+                            } else {
+                                jQuery('#google_error').html( 'Oops. Something went wrong.' )
+                            }
                             console.log("error")
                             console.log(err)
                         })
