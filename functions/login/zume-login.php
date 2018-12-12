@@ -764,7 +764,6 @@ function zume_google_sign_in_button( $type = 'signin' ) {
                     window.location = "<?php echo esc_url( zume_dashboard_url() ) ?>"
                 })
                 .fail(function (err) {
-                    signOut()
                     jQuery('#google_error').text( err.responseJSON['message'] )
                     console.log("error")
                     console.log(err)
