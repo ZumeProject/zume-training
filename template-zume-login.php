@@ -148,7 +148,7 @@ switch ($request_action) {
             wp_safe_redirect( remove_query_arg( array( 'key', 'login' ) ) );
             exit;
         }
-        dt_write_log($_COOKIE );
+        dt_write_log( $_COOKIE );
         if ( isset( $_COOKIE[ $rp_cookie ] ) && 0 < strpos( sanitize_text_field( wp_unslash( $_COOKIE[ $rp_cookie ] ) ), ':' ) ) {
             list( $rp_login, $rp_key ) = explode( ':', sanitize_text_field( wp_unslash( $_COOKIE[ $rp_cookie ] ) ), 2 );
             $user = check_password_reset_key( $rp_key, $rp_login );
@@ -188,7 +188,7 @@ switch ($request_action) {
                     <div class="cell callout medium-6 large-4">
                         <div class="grid-x grid-padding-x grid-padding-y">
                             <div class="cell center"><img src="<?php echo esc_url( get_theme_file_uri( '/assets/images/zume-logo-white.png' ) ) ?>" /></div>
-                            <div class="cell"><?php echo sprintf( 'Your password is reset. %s You can login %', '<a href="' . esc_url( zume_login_url( $current_language ) ) . '">', '</a>' ) ?></div>
+                            <div class="cell"><?php echo sprintf( 'Your password is reset. %s You can login %', '<a href="/login">', '</a>' ) ?></div>
                         </div>
                     </div>
                     <div class="cell medium-3 large-4"></div>

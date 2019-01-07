@@ -1321,6 +1321,7 @@ function zume_get_password_reset_key( $user ) {
     // Now insert the key, hashed, into the DB.
     if ( empty( $wp_hasher ) ) {
         require_once ABSPATH . WPINC . '/class-phpass.php';
+        // @codingStandardsIgnoreLine
         $wp_hasher = new PasswordHash( 8, true );
     }
     $hashed = time() . ':' . $wp_hasher->HashPassword( $key );
@@ -1358,12 +1359,18 @@ add_filter( 'login_headertitle', 'zume_login_title' );
 function zume_redirect_login_page() {
     if ( isset( $_SERVER['REQUEST_URI'] ) && !empty( $_SERVER['REQUEST_URI'] ) ) {
         $login_page  = zume_get_posts_translation_url( 'Login', zume_current_language() );
-        $page_viewed = basename( sanitize_text_field( wp_unslash( $_SERVER['REQUEST_URI'] ) ) );
+        $page_viewed = substr( basename( sanitize_text_field( wp_unslash( $_SERVER['REQUEST_URI'] ) ) ), 0, 12 );
 
-        if ( $page_viewed == "wp-login.php" && isset( $_GET['rp']) ) {
-
+        if ( $page_viewed == "wp-login.php" && isset( $_GET['action'] ) && $_GET['action'] === 'rp' ) {
+            return;
         }
-        else if ( $page_viewed == "wp-login.php" && isset( $_SERVER['REQUEST_METHOD'] ) && $_SERVER['REQUEST_METHOD'] == 'GET') {
+
+        if ( $page_viewed == "wp-login.php" && isset( $_GET['action'] ) && $_GET['action'] === 'resetpass' ) {
+            wp_redirect( $login_page . '?action=successful-password-reset' );
+            exit;
+        }
+
+        if ( $page_viewed == "wp-login.php" && isset( $_SERVER['REQUEST_METHOD'] ) && $_SERVER['REQUEST_METHOD'] == 'GET' ) {
             wp_redirect( $login_page );
             exit;
         }
