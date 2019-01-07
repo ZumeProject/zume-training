@@ -34,7 +34,7 @@ function zume_the_languages( $args = [] ) {
 function zume_current_language() {
     if ( function_exists( 'pll_the_languages' ) ) {
         $current_language = pll_current_language();
-        return $current_language ? $current_language : 'en';
+        return ( ! empty( $current_language ) ) ? $current_language : 'en';
     }
     else {
         return 'en';

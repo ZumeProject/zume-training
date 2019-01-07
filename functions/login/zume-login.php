@@ -1196,21 +1196,23 @@ function zume_retrieve_password() {
     // Redefining user_login ensures we return the right case in the email.
     $user_login = $user_data->user_login;
     $user_email = $user_data->user_email;
-    $key = get_password_reset_key( $user_data );
+    $key = zume_get_password_reset_key( $user_data );
 
     if ( is_wp_error( $key ) ) {
         return $key;
     }
 
-    if ( is_multisite() ) {
-        $site_name = get_network()->site_name;
-    } else {
-        /*
-         * The blogname option is escaped with esc_html on the way into the database
-         * in sanitize_option we want to reverse this for the plain text arena of emails.
-         */
-        $site_name = wp_specialchars_decode( get_option( 'blogname' ), ENT_QUOTES );
-    }
+    $site_name = wp_specialchars_decode( get_option( 'blogname' ), ENT_QUOTES );
+//    @note removed for zume multisite.
+//    if ( is_multisite() ) {
+//        $site_name = get_network()->site_name;
+//    } else {
+//        /*
+//         * The blogname option is escaped with esc_html on the way into the database
+//         * in sanitize_option we want to reverse this for the plain text arena of emails.
+//         */
+//        $site_name = wp_specialchars_decode( get_option( 'blogname' ), ENT_QUOTES );
+//    }
 
     $message = __( 'Someone has requested a password reset for the following account:' ) . "\r\n\r\n";
     /* translators: %s: site name */
@@ -1219,7 +1221,7 @@ function zume_retrieve_password() {
     $message .= sprintf( __( 'Username: %s' ), $user_login ) . "\r\n\r\n";
     $message .= __( 'If this was a mistake, just ignore this email and nothing will happen.' ) . "\r\n\r\n";
     $message .= __( 'To reset your password, visit the following address:' ) . "\r\n\r\n";
-    $message .= '<' . zume_login_url() . "?action=rp&key=$key&login=" . rawurlencode( $user_login ) . ">\r\n";
+    $message .= '<' . zume_site_url() . "/wp-login.php?action=rp&key=$key&login=" . rawurlencode( $user_login ) . ">\r\n";
 
     /* translators: Password reset email subject. %s: Site name */
     $title = sprintf( __( '[%s] Password Reset' ), $site_name );
@@ -1257,6 +1259,79 @@ function zume_retrieve_password() {
 
     return true;
 }
+
+function zume_get_password_reset_key( $user ) {
+    global $wpdb, $wp_hasher;
+
+    /**
+     * Fires before a new password is retrieved.
+     *
+     * Use the {@see 'retrieve_password'} hook instead.
+     *
+     * @since 1.5.0
+     * @deprecated 1.5.1 Misspelled. Use 'retrieve_password' hook instead.
+     *
+     * @param string $user_login The user login name.
+     */
+    do_action( 'retreive_password', $user->user_login );
+
+    /**
+     * Fires before a new password is retrieved.
+     *
+     * @since 1.5.1
+     *
+     * @param string $user_login The user login name.
+     */
+    do_action( 'retrieve_password', $user->user_login );
+
+    $allow = true;
+//    if ( is_multisite() && is_user_spammy( $user ) ) {
+//        $allow = false;
+//    }
+
+    /**
+     * Filters whether to allow a password to be reset.
+     *
+     * @since 2.7.0
+     *
+     * @param bool $allow         Whether to allow the password to be reset. Default true.
+     * @param int  $user_data->ID The ID of the user attempting to reset a password.
+     */
+    $allow = apply_filters( 'allow_password_reset', $allow, $user->ID );
+
+    if ( ! $allow ) {
+        return new WP_Error( 'no_password_reset', __( 'Password reset is not allowed for this user' ) );
+    } elseif ( is_wp_error( $allow ) ) {
+        return $allow;
+    }
+
+    // Generate something random for a password reset key.
+    $key = wp_generate_password( 20, false );
+
+    /**
+     * Fires when a password reset key is generated.
+     *
+     * @since 2.5.0
+     *
+     * @param string $user_login The username for the user.
+     * @param string $key        The generated password reset key.
+     */
+    do_action( 'retrieve_password_key', $user->user_login, $key );
+
+    // Now insert the key, hashed, into the DB.
+    if ( empty( $wp_hasher ) ) {
+        require_once ABSPATH . WPINC . '/class-phpass.php';
+        $wp_hasher = new PasswordHash( 8, true );
+    }
+    $hashed = time() . ':' . $wp_hasher->HashPassword( $key );
+    $key_saved = $wpdb->update( $wpdb->users, array( 'user_activation_key' => $hashed ), array( 'user_login' => $user->user_login ) );
+    if ( false === $key_saved ) {
+        return new WP_Error( 'no_password_key_update', __( 'Could not save password reset key to database.' ) );
+    }
+
+    return $key;
+}
+
 /**
  * Changes the logo link from wordpress.org to your site
  */
@@ -1285,7 +1360,10 @@ function zume_redirect_login_page() {
         $login_page  = zume_get_posts_translation_url( 'Login', zume_current_language() );
         $page_viewed = basename( sanitize_text_field( wp_unslash( $_SERVER['REQUEST_URI'] ) ) );
 
-        if ( isset( $_SERVER['REQUEST_METHOD'] ) && $page_viewed == "wp-login.php" && $_SERVER['REQUEST_METHOD'] == 'GET') {
+        if ( $page_viewed == "wp-login.php" && isset( $_GET['rp']) ) {
+
+        }
+        else if ( $page_viewed == "wp-login.php" && isset( $_SERVER['REQUEST_METHOD'] ) && $_SERVER['REQUEST_METHOD'] == 'GET') {
             wp_redirect( $login_page );
             exit;
         }
