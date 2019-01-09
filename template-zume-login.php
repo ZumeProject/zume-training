@@ -448,6 +448,15 @@ switch ($request_action) {
                                 <img src="<?php echo esc_url( get_theme_file_uri( '/assets/images/zume-logo-white.png' ) ) ?>" />
                                 <p><span style="color:gray;"><?php esc_html_e( "Sign in using:" ) ?></span></p>
                             </div>
+                            <?php
+                            if ( isset( $_GET['login'] ) && $_GET['login'] === 'failed' ) {
+                                ?>
+                                <div class="callout warning cell center">
+                                    <?php echo esc_html( 'Username or password does not match. Try again.' ); ?>
+                                </div>
+                                <?php
+                            }
+                            ?>
                             <div class="cell small-6">
                                 <?php zume_google_sign_in_button() ?>
                             </div>
