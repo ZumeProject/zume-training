@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Zúme Project\n"
 "POT-Creation-Date: 2018-12-05 07:01-0700\n"
-"PO-Revision-Date: 2018-12-05 07:18-0700\n"
+"PO-Revision-Date: 2019-01-15 11:51-0700\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: es\n"
@@ -153,17 +153,20 @@ msgstr "Plan de Tres Meses - Proyecto Zúme"
 
 #: functions/enqueue-scripts.php:79
 msgid "We got it!"
-msgstr ""
+msgstr "¡Lo conseguimos!"
 
 #: functions/enqueue-scripts.php:80
 msgid ""
 "We're a volunteer network, so give us a few days. We'll reach out to you "
 "soon as possible!"
 msgstr ""
+"Somos una red de voluntarios, así que danos unos días. ¡Nos comunicaremos "
+"contigo lo antes posible!"
 
 #: functions/login/zume-login.php:97 functions/login/zume-login.php:316
 msgid "Email is a required permission for login and registration."
 msgstr ""
+"Un correo electrónico es permiso requerido para iniciar sesión y registrarse."
 
 #: functions/login/zume-login.php:209 functions/login/zume-login.php:441
 msgid "No user found."
@@ -172,20 +175,22 @@ msgstr "Ningún usuario encontrado."
 #: functions/login/zume-login.php:280 functions/login/zume-login.php:406
 msgid "You are missing your sign-in token. Try signing in again."
 msgstr ""
+"Te hace falta tu ficha de inicio de sesión. Intenta iniciar sesión de nuevo."
 
 #: functions/login/zume-login.php:290 functions/login/zume-login.php:416
-#, fuzzy
-#| msgid "Failed to connect with the URL provided."
 msgid "Failed to connect with Facebook. Try again."
-msgstr "No se ha podido conectar con el URL proporcionado."
+msgstr "Error al conectar con Facebook. Inténtalo de nuevo."
 
 #: functions/login/zume-login.php:309 functions/login/zume-login.php:432
 msgid "Facebook user lookup error. Sorry for the inconvenience."
 msgstr ""
+"Error de búsqueda de usuario en Facebook. Lo sentimos por los inconvenientes "
+"ocasionados."
 
 #: functions/login/zume-login.php:312 functions/login/zume-login.php:435
 msgid "Error with looking up user with Facebook. Sorry for the inconvenience."
 msgstr ""
+"Error al buscar usuario con Facebook. Lo sentimos por el inconveniente."
 
 #: functions/login/zume-login.php:536
 msgid "There are some errors in your form."
@@ -211,7 +216,7 @@ msgstr "Repite la contraseña"
 
 #: functions/login/zume-login.php:557 template-zume-login.php:255
 msgid "Passwords do not match. Please, try again."
-msgstr ""
+msgstr "Las contraseñas no coinciden. Por favor vuelve a intentarlo."
 
 #: functions/login/zume-login.php:566
 #: functions/zume-polylang-integration.php:149 template-zume-login.php:481
@@ -220,29 +225,27 @@ msgstr "Registro"
 
 #: functions/login/zume-login.php:609
 msgid "Missing captcha response. How did you do that?"
-msgstr ""
+msgstr "Falta respuesta captcha. ¿Cómo haces eso?"
 
 #: functions/login/zume-login.php:622
 msgid "Captcha failure. Try again, if you are human."
-msgstr ""
+msgstr "Error de Captcha. Intenta de nuevo, si eres humano."
 
 #: functions/login/zume-login.php:628
 msgid "Missing email or password."
-msgstr ""
+msgstr "Falta un correo electrónico o contraseña."
 
 #: functions/login/zume-login.php:647
 msgid "Sorry. This email is already registered."
-msgstr ""
+msgstr "Lo sentimos. Este correo electrónico ya está registrado."
 
 #: functions/login/zume-login.php:658
-#, fuzzy
-#| msgid "Something went wrong with the plugin API."
 msgid "Something went wrong. Sorry. Could you try again?"
-msgstr "Algo salió mal con el complemento API."
+msgstr "Algo salió mal. Lo sentimos. ¿Puedes intentarlo de nuevo?"
 
 #: functions/login/zume-login.php:680
 msgid "No new user found."
-msgstr ""
+msgstr "Ningún nuevo usuario encontrado."
 
 #: functions/login/zume-login.php:736 functions/login/zume-login.php:784
 msgid "Google"
@@ -250,31 +253,29 @@ msgstr "Google"
 
 #: functions/login/zume-login.php:778
 msgid "Link with Google"
-msgstr ""
+msgstr "Enlazar con Google"
 
 #: functions/login/zume-login.php:909 functions/login/zume-login.php:1001
 msgid "Facebook"
 msgstr "Facebook"
 
 #: functions/login/zume-login.php:1142
-#, fuzzy
-#| msgid "User Address"
 msgid "Missing username or email address."
-msgstr "Dirección del Usuario"
+msgstr "Falta el nombre de usuario o la dirección de correo electrónico."
 
 #: functions/login/zume-login.php:1148
-#, fuzzy
-#| msgid "User Address"
 msgid "ERROR: Enter a username or email address."
-msgstr "Dirección del Usuario"
+msgstr "ERROR: Ingrese un nombre de usuario o dirección de correo electrónico."
 
 #: functions/login/zume-login.php:1152
 msgid "ERROR: There is no user registered with that email address."
 msgstr ""
+"ERROR: No hay ningún usuario registrado con esa dirección de correo "
+"electrónico."
 
 #: functions/login/zume-login.php:1157
 msgid "ERROR: There is no user registered with that username."
-msgstr ""
+msgstr "ERROR: No hay ningún usuario registrado con ese nombre de usuario."
 
 #: functions/login/zume-login.php:1177
 msgid "<strong>ERROR</strong>: Invalid username or email."
@@ -3061,8 +3062,6 @@ msgstr "Cerrar Sesión"
 
 #. Template Name of the plugin/theme
 #: functions/zume-polylang-integration.php:150
-#, fuzzy
-#| msgid "Three Month Plan"
 msgid "Three-Month Plan"
 msgstr "Plan de Tres Meses"
 
@@ -3314,21 +3313,14 @@ msgstr "Sobre Proyecto Zúme"
 #: template-zume-about.php:38 template-zume-about.php:55
 #: template-zume-faq.php:197 template-zume-privacy-policy.php:185
 #: template-zume-progress.php:101
-#, fuzzy
-#| msgid ""
-#| "Make disciples in every Omega District globally, using an online training "
-#| "platform focused on equipping participants in the basic disciple-making "
-#| "and simple church planting multiplication principles, processes, and "
-#| "practices."
 msgid ""
 "Zúme uses an online training platform to equip participants in basic "
 "disciple-making and simple church planting multiplication principles, "
 "processes, and practices."
 msgstr ""
-"Haz discípulos en todos los Distritos Omega en todo el mundo, utilizando una "
-"plataforma de entrenamiento en linea enfocada en equipar a los participantes "
-"en los principios básicos de la creación de discípulos y de los principios, "
-"procesos y prácticas multiplicadoras de la plantación de iglesias simples."
+"Zúme utiliza una plataforma de entrenamiento en línea para equipara a los "
+"participantes en la creación básica de discípulos y en principios, procesos "
+"y prácticas simples de multiplicación de iglesias."
 
 #: template-zume-about.php:50 template-zume-faq.php:192
 #: template-zume-privacy-policy.php:180 template-zume-progress.php:96
@@ -3337,14 +3329,6 @@ msgstr "Metas del Proyecto Zúme:"
 
 #: template-zume-about.php:52 template-zume-faq.php:194
 #: template-zume-privacy-policy.php:182 template-zume-progress.php:98
-#, fuzzy
-#| msgid ""
-#| "Zúme means yeast in Greek. In Matthew 13:33, Jesus is quoted as saying, "
-#| "\"The Kingdom of Heaven is like a woman who took yeast and mixed it into "
-#| "a large amount of flour until it was all leavened.\" This illustrates how "
-#| "ordinary people, using ordinary resources, can have an extraordinary "
-#| "impact for the Kingdom of God. Zúme aims to equip and empower ordinary "
-#| "believers to reach every neighborhood."
 msgid ""
 "Zúme means yeast in Greek. In Matthew 13:33, Jesus is quoted as saying, "
 "\"The Kingdom of Heaven is like a woman who took yeast and mixed it into a "
@@ -3358,7 +3342,8 @@ msgstr ""
 "mezcló en una cantidad grande de masa hasta que se fermento.” Esto muestra "
 "como personas comunes, utilizando recursos comunes, pueden hacer un gran "
 "impacto en el Reino de Dios. Zúme pretende equipar y entrenar a creyentes "
-"para que lleguen a cada vecindario."
+"comunes para saturar el mundo con la multiplicación de discípulos en nuestra "
+"generación."
 
 #: template-zume-about.php:72
 msgid "Zúme consists of 10 sessions, 2 hours each"
@@ -3420,7 +3405,7 @@ msgstr "Regresa a tu panel de control"
 
 #: template-zume-course.php:11
 msgid "You do not have a valid nonce. Where did you come from? "
-msgstr ""
+msgstr "No tienes un nonce válido. ¿De dónde vienes?"
 
 #: template-zume-course.php:23
 msgid "Cannot find this group."
@@ -3691,10 +3676,8 @@ msgid "activate"
 msgstr "activar"
 
 #: template-zume-dashboard.php:488
-#, fuzzy
-#| msgid "Coach"
 msgid "Get a Coach"
-msgstr "Entrenador"
+msgstr "Conseguir un entrenador"
 
 #: template-zume-dashboard.php:500
 msgid "Join me on the Zúme Project"
@@ -3784,6 +3767,14 @@ msgid ""
 "details of the group. Note: they will not receive a system email from Zúme "
 "with this invitation, you will need to ask them to sign up."
 msgstr ""
+"Añadir a un co-líder o participante adicional les da acceso a este grupo en "
+"su panel de control Zúme una vez que hayan iniciado sesión utilizando la "
+"dirección de correo electrónico que añádadas. Cuando inician sesión en su "
+"panel de control verán una invitación tuya en el lado derecho de la "
+"pantalla. Agregarlos a este grupo les permite facilitar un entrenamiento, "
+"pero no pueden cambiar ningún detalle del grupo. Nota: no recibirán un "
+"correo del sistema Zúme con esta invitación, les tendrás que pedir que se "
+"registren."
 
 #: template-zume-dashboard.php:864
 msgid "Update"
@@ -3842,29 +3833,32 @@ msgstr "Eliminar"
 
 #: template-zume-dashboard.php:1051
 msgid "Connect Me to a Coach"
-msgstr ""
+msgstr "Conectarme con un entrenador"
 
 #: template-zume-dashboard.php:1063
-#, fuzzy
-#| msgid "Coach"
 msgid "Coaches"
-msgstr "Entrenador"
+msgstr "Entrenadores"
 
 #: template-zume-dashboard.php:1064
 msgid ""
 "Our network of volunteer coaches are people like you, people who are "
 "passionate about loving God, loving others, and obeying the Great Commission."
 msgstr ""
+"Nuestra red de entrenadores voluntarios son personas como tu, personas que "
+"están apasionadas con amar a Dios, amar a los demás y obedecer la Gran "
+"Comisión."
 
 #: template-zume-dashboard.php:1069
 msgid "Advocates"
-msgstr ""
+msgstr "Defensores"
 
 #: template-zume-dashboard.php:1070
 msgid ""
 "A coach is someone who will come alongside you as you implement the Zúme "
 "tools and training."
 msgstr ""
+"Un entrenador es alguien que te acompañara a medida que implementas las "
+"herramientas y el entrenamiento Zúme."
 
 #: template-zume-dashboard.php:1075
 msgid "Local"
@@ -3875,14 +3869,17 @@ msgid ""
 "On submitting this request, we will do our best to connect you with a coach "
 "near you."
 msgstr ""
+"Al enviar una solicitud, haremos todo lo posible para conectarte con un "
+"entrenador cerca de ti. "
 
 #: template-zume-dashboard.php:1081
 msgid "It's Free"
-msgstr ""
+msgstr "Es gratis"
 
 #: template-zume-dashboard.php:1082
 msgid "Coaching is free. You can opt out at any time."
 msgstr ""
+"El entrenamiento es gratis. Puedes optar por salirte en cualquier momento."
 
 #: template-zume-dashboard.php:1092 template-zume-profile.php:63
 msgid "Name"
@@ -3890,10 +3887,8 @@ msgstr "Nombre"
 
 #: template-zume-dashboard.php:1096 template-zume-dashboard.php:1097
 #: template-zume-profile.php:67 template-zume-profile.php:68
-#, fuzzy
-#| msgid "First Name"
 msgid "First and last name"
-msgstr "Nombre"
+msgstr "Nombre nombre y apellido"
 
 #: template-zume-dashboard.php:1135
 msgid "Email is required."
@@ -3905,7 +3900,7 @@ msgstr "Ciudad"
 
 #: template-zume-dashboard.php:1168
 msgid "How should we contact you?"
-msgstr ""
+msgstr "¿Cómo deberíamos contactarte?"
 
 #: template-zume-dashboard.php:1175
 msgid "Text"
@@ -3929,7 +3924,7 @@ msgstr "Clave de Afiliación"
 
 #: template-zume-dashboard.php:1230
 msgid "Thank you. You have already requested a coach connection."
-msgstr ""
+msgstr "Gracias. Ya has solicitado una conexión con un entrenador."
 
 #: template-zume-faq.php:20
 msgid "Zúme FAQs"
@@ -4158,13 +4153,6 @@ msgid "PHASE 1"
 msgstr "FASE 1"
 
 #: template-zume-faq.php:117 template-zume-progress.php:33
-#, fuzzy
-#| msgid ""
-#| "Focuses on the United States in English. The initial goal is for there to "
-#| "be a training group of four to twelve people in each census tract in the "
-#| "country. Each of these training groups will start two first-generation "
-#| "churches which will then begin to reproduce. There are about 75,000 "
-#| "census tracts so this will mean 150,000 first-generation churches."
 msgid ""
 "The first phase focuses on the United States and English. The initial goal "
 "is to catalyze a training group of four to twelve people per every 5,000 "
@@ -4173,28 +4161,18 @@ msgid ""
 "for the United States is to start more than 65,000 English-language Zúme "
 "groups and 130,000 churches."
 msgstr ""
-"Enfocado en los Estados Unidos en Inglés. El objetivo inicial es que exista "
-"un grupo de entrenamiento de cuatro a doce personas en cada tramo censal del "
-"país. Cada uno de estos grupos de entrenamiento comenzarán dos iglesias de "
-"primera generación que luego comenzarán a reproducirse. Hay aproximadamente "
-"75,000 secciones censales por lo que esto significará 150,000 iglesias de "
-"primera generación."
+"La primera fase se centra en los Estados Unidos e inglés. El objetivo "
+"inicial es canalizar a un grupo de cuatro a doce personas por cada 5,000 "
+"personas en el país. Cada uno de estos grupos de entrenamiento tendrá el "
+"reto de comenzar dos iglesias de primera generación que también deberán "
+"reproducirse. El objetivo para los Estados Unidos es comenzar más de 65,000 "
+"grupo Zúme en el idioma inglés y 130,000 iglesias."
 
 #: template-zume-faq.php:120
 msgid "PHASE 2"
 msgstr "FASE 2"
 
 #: template-zume-faq.php:121 template-zume-progress.php:55
-#, fuzzy
-#| msgid ""
-#| "The second phase will include coaching these Phase One churches through "
-#| "the reproduction process, as well as delivering the project in other "
-#| "major world languages. The project will start in the following languages: "
-#| "Arabic, Bengali, Bhojpuri, Burmese, Chinese (Mandarin), Chinese "
-#| "(Cantonese), Farsi, French, German, Gujarati, Hausa, Hindi, Indonesian, "
-#| "Italian, Japanese, Kannada, Korean, Maithili, Malayalam, Marathi, Oriya, "
-#| "Panjabi (Eastern), Panjabi (Western), Portuguese, Russian, Spanish, "
-#| "Swahili, Tamil, Telugu, Thai, Turkish, Urdu, Vietnamese, Yoruba."
 msgid ""
 "The second phase focuses on coaching these Phase 1 churches through the "
 "reproduction process, as well as delivering the project in other major world "
@@ -4205,14 +4183,14 @@ msgid ""
 "(Eastern), Panjabi (Western), Portuguese, Russian, Somali, Spanish, Swahili, "
 "Tamil, Telugu, Thai, Turkish, Urdu, Vietnamese, Yoruba."
 msgstr ""
-"La segunda fase incluirá el entrenamiento de estas iglesias de la fase uno a "
-"través del proceso de reproducción y la entrega del proyecto en otros "
-"idiomas del mundo. El proyecto comenzará en los siguientes idiomas: Árabe, "
-"Bengalí, Bhojpuri, Birmano, Chino (Mandarín), Chino (Cantonés), Farsi, "
-"Francés, Alemán, Gujarati, Hausa, Hindi, Indonesio, Italiano, Japonés, "
-"Kannada, Coreano, Maithili , Malayalam, Marathi, Oriya, Panjabi (Oriental), "
-"Panjabi (Occidental), Portugués, Ruso, Español, Swahili, Tamil, Telugu, "
-"Tailandés, Turco, Urdu, Vietnamita, Yoruba."
+"La segunda fase se centra en entrenar a estas iglesias de la Fase 1 a través "
+"del proceso de reproducción, así como en la entrega del proyecto en otros "
+"idiomas importantes del mundo. El proyecto comenzará en los siguientes "
+"idiomas: Amharic, Árabe, Bengalí, Bhojpuri, Birmano, Chino (Mandarín), Chino "
+"(Cantonés), Farsi, Francés, Alemán, Gujarati, Hausa, Hindi, Indonesio, "
+"Italiano, Japonés, Kannada, Coreano , Maithili, Malayalam, Marathi, Oriya, "
+"Panjabi (Este), Panjabi (Occidental), Portugués, Ruso, Somalí, Español, "
+"Swahili, Tamil, Telugu, Tailandés, Turco, Urdu, Vietnamita, Yoruba."
 
 #: template-zume-faq.php:125
 msgid "PHASE 3"
@@ -4228,6 +4206,14 @@ msgid ""
 "Zúme training group and two simple churches among every 50,000 people "
 "outside the US."
 msgstr ""
+"La tercera fase se centra en las iglesias de Fase 1 y Fase 2 para "
+"movilizarse globalmente con una visión para hacer discípulos en cada lugar, "
+"en cada grupo de personas. El Proyecto Zúme está disponible para saturar el "
+"mundo con la multiplicación de discípulos en nuestra generación. Para "
+"acelerar nuestra misión, hemos desarrollado y proporcionamos una solución de "
+"mapeo que permitirá a los equipos trabajar estratégicamente hacia la meta de "
+"un grupo de capacitación Zúme y dos iglesias simples en cada 50,000 personas "
+"fuera de los EE.UU."
 
 #: template-zume-faq.php:133
 msgid "Why is it called Zúme?"
@@ -4338,7 +4324,7 @@ msgstr ""
 
 #: template-zume-faq.php:165
 msgid "Does Zúme offer a way for me to chat with people in my group?"
-msgstr ""
+msgstr "¿Zúme ofrece una manera de chatear con personas en mi grupo?"
 
 #: template-zume-faq.php:166
 msgid ""
@@ -4348,6 +4334,11 @@ msgid ""
 "messaging platform that they prefer (iMessage, WhatsApp, Facebook group, "
 "etc.) for further group communication."
 msgstr ""
+"En este momento no. Recomendamos que cada miembro de tu grupo cree un inicio "
+"de sesión y sea agregado a tu grupo Zúme. De esta manera cada miembro tendrá "
+"acceso a todo el material cuando lo desee. Luego, el grupo puede utilizar "
+"cualquier plataforma de mensajería que prefiera (iMessage, WhatsApp, grupo "
+"Facebook, etc.) para mayor comunicación grupal."
 
 #: template-zume-login.php:73
 msgid ""
@@ -4380,16 +4371,12 @@ msgid "Reset Password"
 msgstr "Restablecer contraseña"
 
 #: template-zume-login.php:335
-#, fuzzy
-#| msgid "How to get started:"
 msgid "Let's get started."
-msgstr "Cómo comenzar:"
+msgstr "Comencemos."
 
 #: template-zume-login.php:337
-#, fuzzy
-#| msgid "Sign up"
 msgid "Sign up using:"
-msgstr "Regístrate"
+msgstr "Regístrate utilizando:"
 
 #: template-zume-login.php:384 template-zume-login.php:483
 msgid "Lost your password?"
@@ -4405,11 +4392,11 @@ msgstr "Clave no válida"
 
 #: template-zume-login.php:432
 msgid "User action confirmed."
-msgstr ""
+msgstr "Acción del usuario confirmada."
 
 #: template-zume-login.php:449
 msgid "Sign in using:"
-msgstr ""
+msgstr "Inicia sesión utilizando:"
 
 #: template-zume-overview.php:71 template-zume-overview.php:84
 msgid "Sessions Overview"
@@ -4765,10 +4752,8 @@ msgstr ""
 "en el formato de Grupos de Tutoría entre Pares. (60 minutos)"
 
 #: template-zume-privacy-policy.php:22
-#, fuzzy
-#| msgid "Zúme Project"
 msgid "Zúme Privacy Policy"
-msgstr "Proyecto Zúme"
+msgstr "Política de privacidad Zúme"
 
 #: template-zume-privacy-policy.php:32
 msgid ""
@@ -4781,81 +4766,103 @@ msgid ""
 "clear understanding of how we collect, use, protect or otherwise handle your "
 "Personally Identifiable Information in accordance with our website."
 msgstr ""
+"Esta política de privacidad ha sido copiada para servir mejor a aquellos que "
+"están preocupados por el uso de su “Información de Identificación "
+"Personal” (PII) en línea. PII, como se describe en la ley de privacidad y "
+"seguridad de información de los EE.UU., es información que puede ser "
+"utilizada sola o con otra información para identificar, contactar, o "
+"localizar a una solo persona, o identificar a una persona en contexto. Por "
+"favor lee nuestra política de privacidad detenidamente para comprender como "
+"recopilamos, utilizamos, protegemos o manejamos tu información de "
+"identificación personal de acuerdo con nuestro sitio web."
 
 #: template-zume-privacy-policy.php:38
 msgid "What permissions do the social sign-on logins ask for?"
 msgstr ""
+"¿Qué permisos son necesarios para iniciar sección en las redes sociales?"
 
 #: template-zume-privacy-policy.php:41
 msgid ""
 "Public Profile. This includes certain User’s Data such as id, name, picture, "
 "gender, and their locale."
 msgstr ""
+"Perfil Publico. Esto incluye ciertos datos del usuario, como identificación, "
+"nombre, imagen, género y su ubicación."
 
 #: template-zume-privacy-policy.php:44
-#, fuzzy
-#| msgid "User Address"
 msgid "Email Address."
-msgstr "Dirección del Usuario"
+msgstr "Dirección del correo electrónico."
 
 #: template-zume-privacy-policy.php:52
 msgid ""
 "What personal information do we collect from the people through our website?"
 msgstr ""
+"¿Qué información personal recopilamos de la persona a través de nuestro "
+"sitio web?"
 
 #: template-zume-privacy-policy.php:55
 msgid "Information in the Basic Social Profile (if used) and email."
 msgstr ""
+"Información en el Perfil Social Básico (si se utiliza) y correo electrónico."
 
 #: template-zume-privacy-policy.php:58
 msgid "Session and course activity."
-msgstr ""
+msgstr "Actividad de sesión y curso."
 
 #: template-zume-privacy-policy.php:61
 msgid ""
 "General location telemetry, so we know in what countries our training is "
 "being used."
 msgstr ""
+"Telemetría de ubicación general, para saber en qué países se está utilizando "
+"nuestro entrenamiento."
 
 #: template-zume-privacy-policy.php:69
-#, fuzzy
-#| msgid "Project Information"
 msgid "When do we collect information?"
-msgstr "Información de Programa"
+msgstr "¿Cuándo recopilamos información?"
 
 #: template-zume-privacy-policy.php:72
 msgid "We collect your information at login."
-msgstr ""
+msgstr "Recopilamos tu información al iniciar sesión."
 
 #: template-zume-privacy-policy.php:75
 msgid "We also track your progress through the training course."
 msgstr ""
+"También hacemos un seguimiento de tu progreso a través del curso de "
+"formación."
 
 #: template-zume-privacy-policy.php:83
 msgid "How do we use your information?"
-msgstr ""
+msgstr "¿Cómo utilizamos tu información?"
 
 #: template-zume-privacy-policy.php:86
 msgid ""
 "We use your information to create a user account in the zume system based on "
 "your email address."
 msgstr ""
+"Utilizamos tu información para crear una cuenta de usuario en el sistema "
+"zúme basado en tu dirección de correo electrónico."
 
 #: template-zume-privacy-policy.php:89
 msgid ""
 "We will email you with basic transactional emails like password reset "
 "requests and other system notifications."
 msgstr ""
+"Te enviaremos un correo electrónico con correos electrónicos transnacionales "
+"básicos como solicitudes de restablecimiento de contraseña y otras "
+"notificaciones del sistema."
 
 #: template-zume-privacy-policy.php:92
 msgid ""
 "We email occasional reminders and encouragements depending on your progress "
 "through the training."
 msgstr ""
+"Te enviamos por correo electrónico recordatorios y estímulos ocasionales "
+"dependiendo de tu progreso a través del entrenamiento."
 
 #: template-zume-privacy-policy.php:100
 msgid "How do we protect your information?"
-msgstr ""
+msgstr "¿Cómo protegemos tu información?"
 
 #: template-zume-privacy-policy.php:102
 msgid ""
@@ -4864,6 +4871,11 @@ msgid ""
 "information to perform a specific job (for example, web administrator or "
 "customer service) are granted access to personally identifiable information."
 msgstr ""
+"Aunque utilizamos el cifrado para proteger la información confidencial que "
+"se transmite en línea, también protegemos tu información fuera de línea. "
+"Solo miembros del equipo que necesitan la información para realizar un "
+"trabajo específico (por ejemplo, administrador web o servicio al cliente) "
+"tienen acceso a información de identificación personal."
 
 #: template-zume-privacy-policy.php:105
 msgid ""
@@ -4873,16 +4885,24 @@ msgid ""
 "addition, all sensitive/credit information you supply is encrypted via "
 "Secure Socket Layer (SSL) technology."
 msgstr ""
+"Tu información personal se encuentra en redes seguras y solamente es "
+"accesible para un número limitado de personas que tienen derechos especiales "
+"de acceso a dichos sistemas y están obligados a mantener la información "
+"confidencial. Además, toda información confidencial/crediticia es cifrada "
+"mediante la tecnología Secure Socket Layer (SSL)."
 
 #: template-zume-privacy-policy.php:108
 msgid ""
 "We implement a variety of security measures when a user submits, or accesses "
 "their information to maintain the safety of your personal information."
 msgstr ""
+"Implementamos una variedad de medidas de seguridad cuando un usuario envía o "
+"accede a su información para mantener la seguridad de tu información "
+"personal."
 
 #: template-zume-privacy-policy.php:115
 msgid "Do we use \"cookies\"?"
-msgstr ""
+msgstr "¿Utilizamos cookies?"
 
 #: template-zume-privacy-policy.php:117
 msgid ""
@@ -4891,36 +4911,46 @@ msgid ""
 "otherwise, serves to identify Users and remember their preferences, for the "
 "sole purpose of providing the service required by the User."
 msgstr ""
+"Cualquier uso de Cookies, o de cualquier otra herramienta de seguimiento, "
+"por esta aplicación o por los propietarios de servicios de terceros, "
+"utilizados por esta aplicación, a menos que se indique lo contrario, sirve "
+"para identificar a los usuarios y recordar sus preferencias, con el único "
+"propósito de proporcionar el servicio requerido por el usuario."
 
 #: template-zume-privacy-policy.php:120
 msgid "Personal Data collected: name, email."
-msgstr ""
+msgstr "Datos personales recopilados: nombre, correo electrónico."
 
 #: template-zume-privacy-policy.php:127
 msgid "Your Access to and Control Over Information."
-msgstr ""
+msgstr "Tu acceso y control de la información."
 
 #: template-zume-privacy-policy.php:129
 msgid ""
 "You may opt out of any future contact from us at any time. You can do the "
 "following at any time by contacting us via our contact email address:"
 msgstr ""
+"Puedes optar por no tener ningún tipo de comunicación futura con nosotros en "
+"cualquier momento. Puedes hacer lo siguiente en cualquier momento "
+"contactándonos a través de nuestra dirección de correo electrónico de "
+"contacto:"
 
 #: template-zume-privacy-policy.php:132
 msgid "See what data we have about you, if any."
-msgstr ""
+msgstr "Ve que datos tenemos sobre ti, si los hay."
 
 #: template-zume-privacy-policy.php:136
 msgid "Change/correct any data we have about you."
-msgstr ""
+msgstr "Cambia/corrige cualquier dato que tengamos sobre ti."
 
 #: template-zume-privacy-policy.php:139
 msgid "Have us delete any data we have about you."
-msgstr ""
+msgstr "Haz que eliminemos cualquier dato que tengamos sobre ti."
 
 #: template-zume-privacy-policy.php:142
 msgid "Express any concern you have about our use of your data."
 msgstr ""
+"Expresa cualquier preocupación que tengas sobre nuestro uso de sus datos."
 
 #: template-zume-privacy-policy.php:150
 msgid "Updates"
@@ -4931,6 +4961,8 @@ msgid ""
 "Our Privacy Policy may change from time to time and all updates will be "
 "posted on this page."
 msgstr ""
+"Nuestra política de privacidad puede cambiar de vez en cuando y todas las "
+"actualizaciones serán publicadas en esta página."
 
 #: template-zume-profile.php:31
 msgid "Your Profile"
@@ -4946,7 +4978,7 @@ msgstr "Tu ciudad"
 
 #: template-zume-profile.php:147
 msgid "Linked Facebook Account"
-msgstr ""
+msgstr "Cuenta de Facebook enlazada"
 
 #: template-zume-profile.php:154 template-zume-profile.php:170
 msgid "Unlink"
@@ -4954,7 +4986,7 @@ msgstr "Desvincular"
 
 #: template-zume-profile.php:163
 msgid "Linked Google Account"
-msgstr ""
+msgstr "Cuenta de Google enlazada"
 
 #: template-zume-progress.php:23
 msgid "Phase 1"
@@ -5001,8 +5033,6 @@ msgid "Zúme Project"
 msgstr "Proyecto Zúme"
 
 #. Theme URI of the plugin/theme
-#, fuzzy
-#| msgid "https://github.com/ChasmSolutions/zume-project-theme"
 msgid "https://github.com/ZumeProject/zume-project-multilingual"
 msgstr "https://github.com/ChasmSolutions/zume-project-theme"
 
@@ -5011,78 +5041,56 @@ msgid "Zúme Project for multiplying disciples."
 msgstr "Proyecto Zúme para multiplicar discípulos."
 
 #. Author of the plugin/theme
-#, fuzzy
-#| msgid "#ZumeProject"
 msgid "Zume Project"
-msgstr "#ProyectoZúme"
+msgstr "Proyecto Zúme"
 
 #. Author URI of the plugin/theme
-#, fuzzy
-#| msgid "https://github.com/ChasmSolutions"
 msgid "https://github.com/ZumeProject"
 msgstr "https://github.com/ChasmSolutions"
 
 #. Template Name of the plugin/theme
-#, fuzzy
-#| msgid "About"
 msgid "Zume About"
-msgstr "Sobre"
+msgstr "Sobre Zúme"
 
 #. Template Name of the plugin/theme
-#, fuzzy
-#| msgid "Resources"
 msgid "Zume Resources"
-msgstr "Recursos"
+msgstr "Recursos Zúme"
 
 #. Template Name of the plugin/theme
 msgid "Zume Privacy Policy"
-msgstr ""
+msgstr "Política de Privacidad Zúme"
 
 #. Template Name of the plugin/theme
-#, fuzzy
-#| msgid "Zúme Project"
 msgid "Zúme Progress"
-msgstr "Proyecto Zúme"
+msgstr "Proyectos Zúme"
 
 #. Template Name of the plugin/theme
-#, fuzzy
-#| msgid "Login"
 msgid "Zume Login"
-msgstr "Iniciar Sesión"
+msgstr "Iniciar Sesión Zúme"
 
 #. Template Name of the plugin/theme
-#, fuzzy
-#| msgid "Your Profile"
 msgid "Zume Profile"
-msgstr "Tu Perfil"
+msgstr "Perfil Zúme"
 
 #. Template Name of the plugin/theme
-#, fuzzy
-#| msgid "Overview"
 msgid "Zúme Overview"
-msgstr "Resumen"
+msgstr "Resumen Zúme"
 
 #. Template Name of the plugin/theme
-#, fuzzy
-#| msgid "Zúme FAQs"
 msgid "Zúme FAQ"
 msgstr "Preguntas Frecuentes Zúme"
 
 #. Template Name of the plugin/theme
-#, fuzzy
-#| msgid "Dashboard"
 msgid "Zúme Dashboard"
-msgstr "Panel de Control"
+msgstr "Panel de Control Zúme"
 
 #. Template Name of the plugin/theme
 msgid "Full Width Home"
-msgstr ""
+msgstr "Ancho Completo de Página de Inicio"
 
 #. Template Name of the plugin/theme
-#, fuzzy
-#| msgid "How Zúme Works"
 msgid "Zúme Course"
-msgstr "Cómo Funciona Zúme"
+msgstr "Curso Zúme"
 
 #~ msgid "Epic 404 - Article Not Found"
 #~ msgstr "Épico 404 - Artículo no Encontrado"
