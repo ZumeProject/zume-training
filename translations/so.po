@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Zúme Project\n"
 "POT-Creation-Date: 2018-12-05 07:01-0700\n"
-"PO-Revision-Date: 2018-12-05 07:13-0700\n"
+"PO-Revision-Date: 2019-01-17 14:32+0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: en\n"
@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 2.1.1\n"
+"X-Generator: Poedit 2.2\n"
 "X-Poedit-Basepath: ../..\n"
 "X-Poedit-Flags-xgettext: --add-comments=translators:\n"
 "X-Poedit-WPHeader: style.css\n"
@@ -31,7 +31,7 @@ msgstr ""
 
 #: front-page.php:52 front-page.php:171
 msgid "Get Started"
-msgstr "Halkan hoose ka bilow:"
+msgstr "Biloow"
 
 #: front-page.php:55 functions/zume-polylang-integration.php:148
 #: template-zume-login.php:382
@@ -51,7 +51,7 @@ msgstr ""
 
 #: front-page.php:73
 msgid "Zúme consists of 10 sessions, 2 hours each:"
-msgstr ""
+msgstr "Zúme wuxuu ka kooban yahay 10 kulan, oo kiiba yahay 2 saacadood :"
 
 #: front-page.php:81 template-zume-about.php:74
 msgid ""
@@ -146,53 +146,60 @@ msgstr "Tir"
 
 #: functions/enqueue-scripts.php:76
 msgid "Failed to remove item."
-msgstr ""
+msgstr "Waad ku guul darraysatay inaad sheydan tirto."
 
 #: functions/enqueue-scripts.php:77
 msgid "Failed to change item."
-msgstr ""
+msgstr "Waad ku guul darraysatay inaad sheyadan beddesho."
 
 #: functions/enqueue-scripts.php:78
 msgid "Three Month Plan - Zúme Project"
-msgstr "Ujeeddooyinka Mashruuca Zúme:"
+msgstr "Qorshe Saddex Bilood ah - Mashruuca Zúme"
 
 #: functions/enqueue-scripts.php:79
 msgid "We got it!"
-msgstr ""
+msgstr "Waannu helnay!"
 
 #: functions/enqueue-scripts.php:80
 msgid ""
 "We're a volunteer network, so give us a few days. We'll reach out to you "
 "soon as possible!"
 msgstr ""
+"Shabakad iskood wax u qabta ayaannu nahay, marka dhowr maalmood na sii. Sida "
+"ugu macquulsan ayaannu kugu soo gaadhi doonnaa!"
 
 #: functions/login/zume-login.php:97 functions/login/zume-login.php:316
 msgid "Email is a required permission for login and registration."
-msgstr ""
+msgstr "Iimayl ayaa lagaa doonayaa si aad u gashid oo d isu diywaangelisid."
 
 #: functions/login/zume-login.php:209 functions/login/zume-login.php:441
 msgid "No user found."
-msgstr ""
+msgstr "Adeegsade lama helin."
 
 #: functions/login/zume-login.php:280 functions/login/zume-login.php:406
 msgid "You are missing your sign-in token. Try signing in again."
-msgstr ""
+msgstr "You are missing your sign-in token. Try signing in again."
 
 #: functions/login/zume-login.php:290 functions/login/zume-login.php:416
 msgid "Failed to connect with Facebook. Try again."
 msgstr ""
+"Waad ku guul darraysatay inaad Fayshbooga ku xidhto. Isku day mar kale."
 
 #: functions/login/zume-login.php:309 functions/login/zume-login.php:432
 msgid "Facebook user lookup error. Sorry for the inconvenience."
 msgstr ""
+"Adeegsadaha Faysbuuggoow qaladka eeg. Waannu ka xun nahay kaamilid "
+"la'aantaada."
 
 #: functions/login/zume-login.php:312 functions/login/zume-login.php:435
 msgid "Error with looking up user with Facebook. Sorry for the inconvenience."
 msgstr ""
+"Khalad ayaa galay sida adeegsaduhu Facebook wax ugu baaray. Waan ka xunnahay "
+"buuxin la'aantaas."
 
 #: functions/login/zume-login.php:536
 msgid "There are some errors in your form."
-msgstr ""
+msgstr "Qaladaad\".\"."
 
 #: functions/login/zume-login.php:541 template-zume-dashboard.php:1122
 #: template-zume-dashboard.php:1173 template-zume-login.php:354
@@ -202,19 +209,19 @@ msgstr "Iimayl"
 
 #: functions/login/zume-login.php:545 template-zume-login.php:242
 msgid "Password Required"
-msgstr ""
+msgstr "Fure Ayaa Lagaa Doonayaa"
 
 #: functions/login/zume-login.php:548 template-zume-login.php:245
 msgid "Password required"
-msgstr ""
+msgstr "Fure ayaa la doonayaa"
 
 #: functions/login/zume-login.php:554 template-zume-login.php:252
 msgid "Re-enter Password"
-msgstr ""
+msgstr "Dibu geli furaha"
 
 #: functions/login/zume-login.php:557 template-zume-login.php:255
 msgid "Passwords do not match. Please, try again."
-msgstr ""
+msgstr "Furayaashu ma kavcayaan. Fadlan, isku day mar kale."
 
 #: functions/login/zume-login.php:566
 #: functions/zume-polylang-integration.php:149 template-zume-login.php:481
@@ -224,172 +231,169 @@ msgstr "Is diwaangeli"
 #: functions/login/zume-login.php:609
 msgid "Missing captcha response. How did you do that?"
 msgstr ""
+"Lagaama hayo jawaabta xaqiijinta kaa tahay. Sidee ayaad middan ku samaysay?"
 
 #: functions/login/zume-login.php:622
 msgid "Captcha failure. Try again, if you are human."
-msgstr ""
+msgstr "Xaqiijin guul darraysatay. Mar kale isku day haddaad aadane tahay."
 
 #: functions/login/zume-login.php:628
 msgid "Missing email or password."
-msgstr ""
+msgstr "Fure ama Iimayl ayaa maqan."
 
 #: functions/login/zume-login.php:647
 msgid "Sorry. This email is already registered."
-msgstr ""
+msgstr "Waan ka xun nahay. Iimaylkan horay ayuu u diwaan gashanaa."
 
 #: functions/login/zume-login.php:658
 msgid "Something went wrong. Sorry. Could you try again?"
-msgstr ""
+msgstr "Wax ayaa qaldamay. Waan ka xunnahay. Miyaad isku dayeysaa mar kale?"
 
 #: functions/login/zume-login.php:680
 msgid "No new user found."
-msgstr ""
+msgstr "Ma jiro adeegsade cusub oo la helay."
 
 #: functions/login/zume-login.php:736 functions/login/zume-login.php:784
 msgid "Google"
-msgstr ""
+msgstr "Google"
 
 #: functions/login/zume-login.php:778
 msgid "Link with Google"
-msgstr ""
+msgstr "Ku xidhiidhi Google"
 
 #: functions/login/zume-login.php:909 functions/login/zume-login.php:1001
 msgid "Facebook"
-msgstr ""
+msgstr "Facebook"
 
 #: functions/login/zume-login.php:1142
-#, fuzzy
-#| msgid "User Address"
 msgid "Missing username or email address."
-msgstr "Cinwaanka Adeegsadaha"
+msgstr "Cinwaanka Adeegsadaha ama iimaylka."
 
 #: functions/login/zume-login.php:1148
-#, fuzzy
-#| msgid "User Address"
 msgid "ERROR: Enter a username or email address."
-msgstr "Cinwaanka Adeegsadaha"
+msgstr "Cinwaanka Adeegsadaha ama iimaylka\".\"."
 
 #: functions/login/zume-login.php:1152
 msgid "ERROR: There is no user registered with that email address."
-msgstr ""
+msgstr "ERROR: Ma jiro adeegsi loo dinwaan geliyey magac cinwaaneedkan."
 
 #: functions/login/zume-login.php:1157
 msgid "ERROR: There is no user registered with that username."
-msgstr ""
+msgstr "ERROR: Ma jiro adeegsi loo dinwaan geliyey magac adegsigaas."
 
 #: functions/login/zume-login.php:1177
 msgid "<strong>ERROR</strong>: Invalid username or email."
-msgstr ""
+msgstr "<strong>ERROR</strong>: magac adeegsade iyo iimayl aan jirin."
 
 #: functions/login/zume-login.php:1200
 msgid "Someone has requested a password reset for the following account:"
-msgstr ""
+msgstr "Qof ayaa fure u codsaday akoonka soo socda:"
 
 #. translators: %s: site name
 #: functions/login/zume-login.php:1202
-#, fuzzy, php-format
-#| msgid "Site Name:"
+#, php-format
 msgid "Site Name: %s"
-msgstr "Magaca Koowaad"
+msgstr "Magaca Barta: %s"
 
 #. translators: %s: user login
 #: functions/login/zume-login.php:1204
-#, fuzzy, php-format
-#| msgid "Username:"
+#, php-format
 msgid "Username: %s"
-msgstr "Magaca Adeegsadaha"
+msgstr "Magaca Adeegsadaha:%s"
 
 #: functions/login/zume-login.php:1205
 msgid "If this was a mistake, just ignore this email and nothing will happen."
 msgstr ""
+"Hadday middani qalad ahayd, isaga tag iimaylka wax dhacayaana ma jiraan."
 
 #: functions/login/zume-login.php:1206
 msgid "To reset your password, visit the following address:"
-msgstr ""
+msgstr "Si aad iimaylkaaga dib ugu hagaajisid , booqo cinwaanka soo socda:"
 
 #. translators: Password reset email subject. %s: Site name
 #: functions/login/zume-login.php:1210
 #, php-format
 msgid "[%s] Password Reset"
-msgstr ""
+msgstr "[%s] Dibu Hagaajin Fure"
 
 #: functions/login/zume-login.php:1240
 msgid "The email could not be sent."
-msgstr ""
+msgstr "Iimaylku ma dirsamayo."
 
 #: functions/login/zume-login.php:1240
 msgid "Possible reason: your host may have disabled the mail() function."
 msgstr ""
+"Sabab macquul ah: martidaadii ayaa tabar tirtay iimaylka() shaqadiisii."
 
 #: functions/post-types/pdf-download-post-type.php:131
 #: functions/post-types/pdf-download-post-type.php:132
 msgid "Zume Download"
-msgstr ""
+msgstr "Soodegsiga Zume"
 
 #: functions/post-types/pdf-download-post-type.php:133
 msgid "All Zume Downloads"
-msgstr ""
+msgstr "Soodegsiyada Zuume Oo Dhan"
 
 #: functions/post-types/pdf-download-post-type.php:134
 #: functions/post-types/video-post-type.php:134
 msgid "Add New"
-msgstr ""
+msgstr "Kudar Mid Cusub"
 
 #: functions/post-types/pdf-download-post-type.php:135
 msgid "Add New Zume Download"
-msgstr ""
+msgstr "Kudar Soodegsi Cusub oo Zume Ah"
 
 #: functions/post-types/pdf-download-post-type.php:136
 #: functions/post-types/video-post-type.php:136
 msgid "Edit"
-msgstr ""
+msgstr "Tafatir"
 
 #: functions/post-types/pdf-download-post-type.php:137
 msgid "Edit Zume Download"
-msgstr ""
+msgstr "Tafatir Soodegsiga Zume"
 
 #: functions/post-types/pdf-download-post-type.php:138
 msgid "New Zume Download"
-msgstr ""
+msgstr "Soodegsi Cusub oo Zume ah"
 
 #: functions/post-types/pdf-download-post-type.php:139
 msgid "View Zume Download"
-msgstr ""
+msgstr "Eeg Soodegsiga Zume"
 
 #: functions/post-types/pdf-download-post-type.php:140
 msgid "Search Zume Downloads"
-msgstr ""
+msgstr "Raadi Soodegsiyo Cusub Oo Zume Ah"
 
 #: functions/post-types/pdf-download-post-type.php:141
 #: functions/post-types/video-post-type.php:141
 msgid "Nothing found in the Database."
-msgstr ""
+msgstr "Waxba lagama dhex helin Kagyd macluumeedka."
 
 #: functions/post-types/pdf-download-post-type.php:142
 #: functions/post-types/video-post-type.php:142
 msgid "Nothing found in Trash"
-msgstr ""
+msgstr "Waxba lagama dhex helin Meesha Qashinsaarka"
 
 #: functions/post-types/pdf-download-post-type.php:145
 #: functions/post-types/video-post-type.php:145
 msgid "Zume video catalog for language videos"
-msgstr ""
+msgstr "Tabbeellaha muuqaallada Zume ee luuqadaha muuqaalladooda"
 
 #. translators: Publish box date format, see http://php.net/date
 #: functions/post-types/pdf-download-post-type.php:256
 #: functions/post-types/video-post-type.php:256
 msgid "M j, Y @ G:i"
-msgstr ""
+msgstr "M j, Y @ G:i"
 
 #: functions/post-types/pdf-download-post-type.php:451
 #: functions/post-types/video-post-type.php:459
 msgid "Enter the title here"
-msgstr ""
+msgstr "Ka geli cinwaanka halkan"
 
 #: functions/post-types/video-post-type.php:131
 #: functions/post-types/video-post-type.php:132
 msgid "Zume Video"
-msgstr ""
+msgstr "Muuqaalka Zume"
 
 #: functions/post-types/video-post-type.php:133
 msgid "All Zume Videos"
@@ -397,7 +401,7 @@ msgstr "Soo degso Muuqaalka Kobcinta Zume"
 
 #: functions/post-types/video-post-type.php:135
 msgid "Add New Zume Video"
-msgstr ""
+msgstr "Kudar Muuqaal Cusub oo Zume Ah"
 
 #: functions/post-types/video-post-type.php:137
 msgid "Edit Zume Video"
@@ -413,28 +417,28 @@ msgstr "Muuqaalka Guudmarka"
 
 #: functions/post-types/video-post-type.php:140
 msgid "Search Zume Videos"
-msgstr ""
+msgstr "Raadi Muuqaallada Zume"
 
 #: functions/utilities/cleanup.php:76
 msgid "Read"
-msgstr ""
+msgstr "Akhri"
 
 #: functions/utilities/cleanup.php:76
 msgid "... Read more &raquo;"
-msgstr ""
+msgstr "... In badan ka akhri &raquo;"
 
 #: functions/utilities/cleanup.php:98
 #, php-format
 msgid "Posts by %s"
-msgstr ""
+msgstr "Waxaa boosto gareeyay %s"
 
 #: functions/utilities/menu.php:5
 msgid "The Main Menu"
-msgstr ""
+msgstr "Meenuuga Weyn"
 
 #: functions/utilities/menu.php:6
 msgid "Footer Links"
-msgstr ""
+msgstr "Xidhiidhada hoos ku yaal"
 
 #: functions/utilities/menu.php:94
 msgid "First"
@@ -446,7 +450,7 @@ msgstr "Magaca Labaad"
 
 #: functions/zume-course.php:164
 msgid "( Key not available. Check dashboard. )"
-msgstr ""
+msgstr "(Botonka lama heli karo. ka eeg tusmada guud.)"
 
 #: functions/zume-course.php:183
 msgid "Session"
@@ -500,7 +504,7 @@ msgstr "Soo degso Buuggahagaha"
 
 #: functions/zume-course.php:371
 msgid "Group Prayer (5min)"
-msgstr ""
+msgstr "Duco Koox ahaaneed (5daqiiqo)"
 
 #: functions/zume-course.php:381
 msgid ""
@@ -521,7 +525,7 @@ msgstr ""
 #: functions/zume-course.php:2922 functions/zume-course.php:2977
 #: functions/zume-course.php:3347
 msgid "Watch and Discuss (15min)"
-msgstr ""
+msgstr "Daawo oo Falangee (15daqiiqo)"
 
 #: functions/zume-course.php:402 functions/zume-course.php:445
 #: functions/zume-course.php:494 functions/zume-course.php:810
@@ -592,7 +596,9 @@ msgstr "Marka aad ka fikirto kainisaad, maxa maskaxadaad ku soo dhaca?"
 msgid ""
 "What's the difference between that picture and what's described in the video "
 "as a \"Simple Church\"?"
-msgstr "Maxaa farqiya oo u dhexeeya taswiirta."
+msgstr ""
+"Maxaa farqiya oo u dhexeeya taswiirta iyo waxa muuqaalka laga hadlay "
+"\"Kaniisad Fudud\"?"
 
 #: functions/zume-course.php:476
 msgid "Which one do you think would be easier to multiply and why?"
@@ -625,7 +631,7 @@ msgstr ""
 #: functions/zume-course.php:954 functions/zume-course.php:1523
 #: functions/zume-course.php:1763 functions/zume-course.php:3392
 msgid "Listen and Read Along (3min)"
-msgstr ""
+msgstr "Dhegayso oo Sii Akhri (3daqiiqo)"
 
 #: functions/zume-course.php:545 functions/zume-course.php:598
 #: functions/zume-course.php:867 functions/zume-course.php:960
@@ -660,7 +666,7 @@ msgstr ""
 
 #: functions/zume-course.php:582
 msgid "Zúme Video Scripts: S.O.A.P.S."
-msgstr "Qoraalka muqaalka Zúme: ee SOAPS"
+msgstr "Qoraalka muqaalka Zúme: ee SOAPS\".\"."
 
 #: functions/zume-course.php:601 template-zume-dashboard.php:291
 msgid "Accountability Groups"
@@ -806,6 +812,8 @@ msgstr "Mashruuca Zúme"
 msgid ""
 "Take a picture of your S.O.A.P.S. Bible study and share it on social media."
 msgstr ""
+"Masawir ka qaad barashadaada Baybalka ee S.O.A.P.S. oo dadka kula wadaag "
+"baraha bulshada."
 
 #: functions/zume-course.php:753
 msgid "WELCOME BACK!"
@@ -942,7 +950,7 @@ msgstr ""
 
 #: functions/zume-course.php:860
 msgid "Listen and Read Along (2min)"
-msgstr ""
+msgstr "Dhegayso oo Sii Akhri (2daqiiqo)"
 
 #: functions/zume-course.php:870 template-zume-dashboard.php:294
 msgid "Prayer Cycle"
@@ -970,7 +978,7 @@ msgstr "Qoraalka muqaalka ee Zúme: Kulan duco"
 
 #: functions/zume-course.php:914
 msgid "Practice the Prayer Cycle (60min)"
-msgstr ""
+msgstr "Dhaqangeli Salaadda Wareegga ah (60daqiiqo)"
 
 #: functions/zume-course.php:920
 msgid "LEAVE"
@@ -1070,11 +1078,11 @@ msgid ""
 msgstr ""
 "Mid walba oo kooxdaada ka mid ahu miyuu 30 kii daqiiqadood ee xigay ku "
 "qaatay inuu buuxiyo xidhiidhadiisa isaga oo isticmaalaya \"Taxa 100-ka\" "
-"qaybta kuugu jirta Buuggahagaha Zúme."
+"qaybta kuugu jirta Buuggahagaha Zúme. "
 
 #: functions/zume-course.php:1044
 msgid "Congratulations on finishing Session 2! "
-msgstr "Hambalyo waxaad dhammaysay Kulankii 2!"
+msgstr "Hambalyo waxaad dhammaysay Kulankii 2! "
 
 #: functions/zume-course.php:1067
 msgid ""
@@ -1110,6 +1118,8 @@ msgid ""
 "Think others could use the 60-minute prayer tool? Share about it on social "
 "media."
 msgstr ""
+"Ka fakar kuwee kale oo adeegsan kara habka salaadda 60-daqiiqo ah? Baraha "
+"bulshada dadka kula wadaag."
 
 #: functions/zume-course.php:1105 functions/zume-course.php:1476
 #: functions/zume-course.php:1893 functions/zume-course.php:2143
@@ -1193,7 +1203,7 @@ msgstr ""
 
 #: functions/zume-course.php:1198 functions/zume-course.php:1313
 msgid "Read and Discuss (15min)"
-msgstr ""
+msgstr "Akhri oo Falanqee (15daqiiqo)"
 
 #: functions/zume-course.php:1207
 msgid ""
@@ -1241,7 +1251,7 @@ msgid ""
 "share His Good News?"
 msgstr ""
 "Sababtee baad ugu malaynaysaa in Ciise uu doortay dad caadi iska ah isagoo "
-"awooday inuu siyaabo kale Warkiise Wanaagsan ugu gudbin lahaa?."
+"awooday inuu siyaabo kale Warkiise Wanaagsan ugu gudbin lahaa?"
 
 #: functions/zume-course.php:1226
 msgid ""
@@ -1355,7 +1365,7 @@ msgstr ""
 
 #: functions/zume-course.php:1402
 msgid "Congratulations on finishing Session 3! "
-msgstr "Hambalyo waxaad dhammaysay Kulankii 3!"
+msgstr "Hambalyo waxaad dhammaysay Kulankii 3! "
 
 #: functions/zume-course.php:1424
 msgid ""
@@ -1380,6 +1390,8 @@ msgstr ""
 #: functions/zume-course.php:1445
 msgid "What’s been your Zúme highlight? Tell others about it on social media."
 msgstr ""
+"Maxay ahaayeen waxyaabihii Zúme kuugu doorka roonaa? Kuwa kale ugu sheeg "
+"baraha bulshada."
 
 #: functions/zume-course.php:1456
 msgid ""
@@ -1450,7 +1462,7 @@ msgstr "Qoraallada Muuqaalka Zúme: Markhaatifur"
 
 #: functions/zume-course.php:1578
 msgid "Practice Sharing your Testimony (45min)"
-msgstr ""
+msgstr "Dhaqangeli Lawadaagista Markhaafurkaaga (45daqiiqo)"
 
 #: functions/zume-course.php:1588
 msgid ""
@@ -1603,7 +1615,7 @@ msgstr "Qoraallada Muuqaalka Zúme: Cashada Rabbiga"
 
 #: functions/zume-course.php:1818
 msgid "Practice the Lord's Supper (10min)"
-msgstr ""
+msgstr "Dhaqangeliya Cashada Rabbiga (10 daqiiqo)"
 
 #: functions/zume-course.php:1828
 msgid ""
@@ -1639,6 +1651,8 @@ msgstr ""
 #: functions/zume-course.php:1876 functions/zume-course.php:2802
 msgid "What’s the best thing you got today? Share about it on social media."
 msgstr ""
+"Maxay ahaayeen waxa ugu fiican eed maanta heshay? Kula wadaag baraha "
+"bulshada."
 
 #: functions/zume-course.php:1903
 msgid "At the end of the last session, everyone in your group in two ways:"
@@ -1675,7 +1689,7 @@ msgstr ""
 
 #: functions/zume-course.php:1934 functions/zume-course.php:2225
 msgid "Listen and Read Along (15min)"
-msgstr ""
+msgstr "Dhegayso oo Sii Akhri (15daqiiqo)"
 
 #: functions/zume-course.php:1943 template-zume-dashboard.php:307
 msgid "Prayer Walking"
@@ -1829,6 +1843,8 @@ msgid ""
 "Take a picture of something you see on your prayer walk and post it on "
 "social media. "
 msgstr ""
+"Sawir ka qaado wixii aad ku aragtay salaaddaadii socodka oo ku boosto garee "
+"baraha bulshada. "
 
 #: functions/zume-course.php:2154
 msgid "You were asked to spend some time Prayer Walking"
@@ -1982,6 +1998,8 @@ msgid ""
 "Got a Christian brother or sister who might like Zúme? Share it with them on "
 "social media."
 msgstr ""
+"Ma heshay walaal Masiixi ah oo rag ama dumar ah oo Zúme jeclaaday> Kula "
+"wadaag baraha bulshada."
 
 #: functions/zume-course.php:2404
 msgid ""
@@ -2061,7 +2079,7 @@ msgstr "Maxay u ekaan lahayd in la tababbaro qof sidaa ah?"
 
 #: functions/zume-course.php:2501
 msgid "Practice and Discuss (90min)"
-msgstr ""
+msgstr "Dhaqangeli oo Falanqee (90daqiiqo)"
 
 #: functions/zume-course.php:2511
 msgid ""
@@ -2154,6 +2172,8 @@ msgid ""
 "Hop on LIVE and tell the world what you just learned and where they could "
 "learn it too."
 msgstr ""
+"Muuqaalka tooska ah gal oo adduunka u sheeg wixii aad baratay iyo halka ay "
+"kuwa kale ka baran karaan."
 
 #: functions/zume-course.php:2621
 msgid ""
@@ -2238,7 +2258,7 @@ msgstr "In la isku keeno maxay qaadanaysaa?"
 
 #: functions/zume-course.php:2719
 msgid "Practice 3/3 Group (90min)"
-msgstr ""
+msgstr "Dhaqangeli Kooxda 3/3 (90daqiiqo)"
 
 #: functions/zume-course.php:2729
 msgid ""
@@ -2274,7 +2294,7 @@ msgstr ""
 
 #: functions/zume-course.php:2773
 msgid "Congratulations! You've completed Session 8. "
-msgstr "Hambalyo! waxaad dhammaysay Kulankii 8."
+msgstr "Hambalyo! waxaad dhammaysay Kulankii 8. "
 
 #: functions/zume-course.php:2781
 msgid ""
@@ -2444,7 +2464,7 @@ msgstr ""
 
 #: functions/zume-course.php:3027
 msgid "Create a Three Month Plan (30min)"
-msgstr ""
+msgstr "Abuur Qorshe Saddex Bilood ah (30daqiiqo)"
 
 #: functions/zume-course.php:3037
 msgid ""
@@ -2479,10 +2499,12 @@ msgstr ""
 msgid ""
 "You can use the printed version in your Zúme Guidebook or our online version."
 msgstr ""
+"Waxaad isticmaali kartaa qaybta aad daabacatay ee Buuggaaga hagaha Zúme ama "
+"toos ayaad u daabacan kartaa."
 
 #: functions/zume-course.php:3046
 msgid "Online \"Three Month Plan\""
-msgstr ""
+msgstr "\"Qorshe Saddex Bilood\" oo toos ah"
 
 #: functions/zume-course.php:3058
 msgid ""
@@ -2490,6 +2512,9 @@ msgid ""
 "their dashboard. They can connect their plan with this group by adding the "
 "following key:"
 msgstr ""
+"Kaqaybgalayaashu waxa ay qorshahooda saddexda bilood ah ka geli karaan "
+"shaxda ku jira muuqaalkooda guud. Qorshahooda ayey kooxdan ku soo xidhiidhin "
+"karaan iyaga oo raacinaya botonkan:"
 
 #: functions/zume-course.php:3078
 msgid ""
@@ -2506,20 +2531,24 @@ msgid ""
 "It's a Blessing to ... S.O.A.P.S. Bible Reading, Accountability Groups, "
 "Prayer Cycle"
 msgstr ""
+"Waa barako ... Akhrinta Baybalka S.O.A.P.S. Kooxaga Masuuliyadeed, Salaadda "
+"Wareegga ah"
 
 #: functions/zume-course.php:3085
 msgid ""
 "It's a Great Blessing to ... Share your 3-Minute Testimony and God's Story, "
 "Prayer Walking"
 msgstr ""
+"Waa Barako Kaweyn ... Lawadaagista Markhaatifurkaaga 3-daqiiqo iyo "
+"Qisooyinka Ilaah iyo Salaadda Socodka"
 
 #: functions/zume-course.php:3088
 msgid "It's a Greater Blessing to ... Start a 3/3rds Group"
-msgstr ""
+msgstr "Waa Barako Kasii Weyn ... Bilaabista Kooxda 3/3"
 
 #: functions/zume-course.php:3091
 msgid "It's the Greatest Blessing to ... Start a Zúme Group"
-msgstr ""
+msgstr "Waa Barakada Uguweyn ... Bilaabiista Koox Zúme"
 
 #: functions/zume-course.php:3099
 msgid "LISTEN"
@@ -2547,6 +2576,12 @@ msgid ""
 "login, you’ll find the Three Month Plan under Settings. You can also find "
 "the Three Month Plan on your Dashboard."
 msgstr ""
+"Inta wakhtigaaga kaaga hadhsan oo dhan waxa aad isticmaashaa xaanshida "
+"shaqada ee Qorshaha Saddexda Bilood. Qayb yar oo waraaq ah ayad ku qoran "
+"kartaaa. haddii aad ku xidhantay ZúmeProject.com foomkaaga ku xidhiidhsan "
+"kooxdaada ayaad buuxin kartaa. Marka aad gashid, waxaad heli doontaa Qorshe "
+"Saddex Bilood ah Habaybta hoosteeda. Waxaad sidoo kale Qorshe Saddex Bilood "
+"ah ka heli kartaa Muuqaalkaaga Guud."
 
 #: functions/zume-course.php:3113
 msgid ""
@@ -2561,11 +2596,11 @@ msgstr ""
 
 #: functions/zume-course.php:3126
 msgid "Share you Plan (30min)"
-msgstr ""
+msgstr "La wadaag Qorshahaaga (30daqiiqo)"
 
 #: functions/zume-course.php:3135
 msgid "In groups of two or three (15 minutes)"
-msgstr ""
+msgstr "Kooxo ka kooban labo ama saddex (15daqiiqo)"
 
 #: functions/zume-course.php:3137
 msgid ""
@@ -2585,7 +2620,7 @@ msgstr ""
 
 #: functions/zume-course.php:3146
 msgid "In your full training Group (15 minutes)"
-msgstr ""
+msgstr "Koox Tababbar oo dhammays tiran (15daqiiqo)"
 
 #: functions/zume-course.php:3148
 msgid ""
@@ -2597,6 +2632,12 @@ msgid ""
 "do this together now. Just go to the Three-Month Plan under Settings and "
 "link the form to your group."
 msgstr ""
+"Gorfee oo horumari qorshe kooxeed adiga oo degaankaaga ka bilaabaya Kooxo "
+"3/3 oo Tababbarka Zúme ah. Waxaa laga yaabaa in dhowr kooxdaada ka mid ah ay "
+"dhammeeyeen oo kaydiyeen Qorshahaaga Saddex Bilood. Haddii kooxdaada aanu "
+"buuxin nuqulka dhitijaalka ah ee Qorshaha Saddex Bilood, waxaan kugula "
+"talinaynaa in aad middan wadajir u samaysaan haddeer. Tag Qorshe Saddex "
+"Bilood ah ee ku hoos jira Habaynta oo foomka ku xidh kooxdaada."
 
 #: functions/zume-course.php:3151
 msgid ""
@@ -2677,10 +2718,12 @@ msgid ""
 "Excited to help a new Zúme group get started? Share about Zúme on social "
 "media and let people know where they can get started."
 msgstr ""
+"Maku faraxda inaad caawisid koox cusub oo Zúme ah oo ka bilaabantay baraha "
+"bulshada oo dadkuna ogaadeen halka ay ka bilaaban karaan."
 
 #: functions/zume-course.php:3216
 msgid "Looking Back"
-msgstr ""
+msgstr "Dibu Eegis"
 
 #: functions/zume-course.php:3218
 msgid "Welcome back to Zúme Training!"
@@ -2741,11 +2784,11 @@ msgstr ""
 
 #: functions/zume-course.php:3262
 msgid "Activity (10min)"
-msgstr ""
+msgstr "Hawlqabad (10daqiiqo)"
 
 #: functions/zume-course.php:3264
 msgid "Asses yourself using the coaching checklist."
-msgstr ""
+msgstr "Hawshaada fuli adiga oo adeegsanaya liiska hubinta."
 
 #: functions/zume-course.php:3269
 msgid "ASSESS"
@@ -2800,8 +2843,8 @@ msgid ""
 "If you understand and can train the basics on the Tool – check the YELLOW "
 "column"
 msgstr ""
-"haddii aad ganaysid oo aad inta aasaasiga ah Qalabka ku tababbari kartid - "
-"baadh shaxda HURUUDDA."
+"Haddii aad ganaysid oo aad inta aasaasiga ah Qalabka ku tababbari kartid - "
+"baadh shaxda HURUUDDA"
 
 #: functions/zume-course.php:3288
 msgid ""
@@ -2983,6 +3026,8 @@ msgid ""
 "To help others become and make disciples, share this www.ZumeProject.com "
 "link today! It'll soon be in 37 languages."
 msgstr ""
+"Si aad kuwa kale ugu caawisid in ay xer sameeyaan, maantadan la wadaag www."
+"ZumeProject.com! Durba waxa uu noqon doonaa 37 luuqadood."
 
 #: functions/zume-dashboard.php:77 functions/zume-dashboard.php:108
 #: functions/zume-dashboard.php:191
@@ -3045,105 +3090,131 @@ msgstr "Ka bax"
 #. Template Name of the plugin/theme
 #: functions/zume-polylang-integration.php:150
 msgid "Three-Month Plan"
-msgstr ""
+msgstr "Qorshe Saddex-Bilood Ah"
 
 #: functions/zume-polylang-integration.php:151 template-zume-progress.php:15
 msgid "Progress"
-msgstr ""
+msgstr "Horumar"
 
 #: functions/zume-polylang-integration.php:152
 msgid "Stats"
-msgstr ""
+msgstr "Caddayn"
 
 #: functions/zume-three-month-plan.php:80
 msgid ""
 "I will share My Story [Testimony] and God’s Story [the Gospel] with the "
 "following individuals:"
 msgstr ""
+"Waxaan Sheekadayda [Markhaatifur] iyo Ilaah Qisooyinkiisa [Injiilka] la "
+"wadaagi doonaa shakhsiyaadka soo socda:"
 
 #: functions/zume-three-month-plan.php:81
 msgid ""
 "I will invite the following people to begin an Accountability Group with me:"
 msgstr ""
+"Waxaan Kooxahan soo socda ku caawin doonaa in ay Kooxo Masuuliyadeed ila "
+"bilaabaan:"
 
 #: functions/zume-three-month-plan.php:82
 msgid ""
 "I will challenge the following people to begin their own Accountability "
 "Groups and train them how to do it:"
 msgstr ""
+"Waxaan dadkan soo socda ku adkayn doonaa inay iskood u bilowdaan Kooxahooda "
+"Masuuliyadeed una tababbaraan sidii ay u samayn lahaayeen:"
 
 #: functions/zume-three-month-plan.php:83
 msgid "I will invite the following people to begin a 3/3 Group with me:"
 msgstr ""
+"Waxaan dadkan soo socda ku casuumi doonaa inay kooxaha 3/3 ila bilaabaan:"
 
 #: functions/zume-three-month-plan.php:84
 msgid ""
 "I will challenge the following people to begin their own 3/3 Groups and "
 "train them how to do it:"
 msgstr ""
+"Waxaan dadkan soo socda ku adkayn doonaa inay iskood u bilaabaan Kooxaha 3/3 "
+"una tababbaraan sida loo sameeyo:"
 
 #: functions/zume-three-month-plan.php:85
 msgid ""
 "I will invite the following people to participate in a 3/3 Hope or Discover "
 "Group [see Appendix of Zúme Guidebook]"
 msgstr ""
+"Waxaan dadkan soo socda ku casuumi doonaa inay ka qayb galaan kooxaha 3/3 "
+"kuwa Rajada ama Kooxda Shaacinta [eeg tusmo hoosaadda Buuggahagaha Zúme]"
 
 #: functions/zume-three-month-plan.php:86
 msgid ""
 "I will invite the following people to participate in Prayer Walking with me:"
 msgstr ""
+"Waxaan dadkan soo socda ku cawuumi doonaa inay Salaadda Socodka igala qayb "
+"galaan:"
 
 #: functions/zume-three-month-plan.php:87
 msgid "I will Prayer Walk once every [days / weeks / months]."
 msgstr ""
+"Waxaan Salaadda Socodka samayn doonaa mar [maalintii / toddobaadkii / "
+"bishii]."
 
 #: functions/zume-three-month-plan.php:88
 msgid ""
 "I will equip the following people to share their story and God’s Story and "
 "make a List of 100 of the people in their relational network:"
 msgstr ""
+"Waxaan dadkan soo socda u qalabayn doonaa dadka  la wadaagaan "
+"sheekooyinkooda iyo Ilaah Qisooyinkiisa oo ay xidhiidhkooda ku darsadaan "
+"dadka ku jira Liiska 100-ka:"
 
 #: functions/zume-three-month-plan.php:89
 msgid ""
 "I will challenge the following people to use the Prayer Cycle tool on a "
 "periodic basis:"
 msgstr ""
+"Waxaan dadkan soo socda ku caawin doonaa inay adeegsadaan habka Salaadda "
+"Wareegga ah oo ay wakhtiyeeyaan:"
 
 #: functions/zume-three-month-plan.php:90
 msgid "I will use the Prayer Cycle tool once every [days / weeks / months]."
 msgstr ""
+"Waxaan Salaadda Wareegga ah samayn doonaa mar [maalintii / toddobaadkii / "
+"bishii]."
 
 #: functions/zume-three-month-plan.php:91
 msgid ""
 "I will invite the following people to be part of a Leadership Cell that I "
 "will lead:"
 msgstr ""
+"Waxaan dadkan soo socda ku casuumi doonaa inay qayb ka noqdaan Hoggaaminta "
+"Unugga ah ee aan hoggaamin doono:"
 
 #: functions/zume-three-month-plan.php:92
 msgid ""
 "I will encourage the following people to go through this Zúme Training "
 "course:"
 msgstr ""
+"Waxaan dadkan soo socda ku dhiirri gelin doonaa inay dhex tibaaxaan Koorsada "
+"Tababbarka Zúme:"
 
 #: functions/zume-three-month-plan.php:93
 msgid "Other commitments:"
-msgstr ""
+msgstr "Muhiimado kale:"
 
 #: functions/zume-three-month-plan.php:139
 msgid "Unable to save three month plan."
-msgstr ""
+msgstr "Ma awoodo inuu kaydiyo qorsha saddexda bilood ah."
 
 #: functions/zume-three-month-plan.php:143
 msgid "Unable to find key:"
-msgstr ""
+msgstr "Botonka lama heli karo:"
 
 #: functions/zume-welcome-messages.php:98
 msgid "Welcome!"
-msgstr "Ku soo Dhawoow Zume"
+msgstr "Soo Dhawoow!"
 
 #: functions/zume-welcome-messages.php:99
 msgid "I want to make disciples who multiply!"
-msgstr ""
+msgstr "Waxaan rabaa inaan sameeyo xer badata!"
 
 #: parts/content-missing.php:4
 msgid "Oops, Page Not Found!"
@@ -3171,7 +3242,7 @@ msgstr "Meenu"
 
 #: template-zume-3plan.php:43 template-zume-dashboard.php:532
 msgid "Three Month Plan"
-msgstr ""
+msgstr "Qorshe Saddex Bilood Ah"
 
 #: template-zume-3plan.php:45
 msgid ""
@@ -3179,6 +3250,10 @@ msgid ""
 "help you identify specific action steps post Zúme Training. Further "
 "instructions about the Three Month Plan are found in Session 9."
 msgstr ""
+"Qorshaha Saddex Bilood waxa uu qayb ka yahay Kulanka tababbarka 9. Waxaa "
+"loogu talo galay inuu kaa caawiyo falimo qaas ah oo ku boosto garaysan "
+"Tababbarka Zúme. Tilmaamo dheeraad ah oo ku saabsan Qorshaha Saddex Bilood "
+"ayaa laga helayaa Kulanka 9aad."
 
 #: template-zume-3plan.php:46
 msgid ""
@@ -3186,16 +3261,23 @@ msgid ""
 "Click on your group name below the \"Link to a Group with a Group Key\" "
 "field or check with your group leader to get the 5 digit code."
 msgstr ""
+"Waxaad Qoshaha Saddex Bilood ku xidhiidhin kartaa kooxc adiga oo ku daraya "
+"botonka kooxda. Ka guji magaca kooxdaad meesha hoose ah \"Koox ku xidhiidhi "
+"adiga oo adeegsanaya Botonka Kooxda\" ama hubi in hoggaamiyaha kooxdu uu "
+"hayo koodhaka 5ta god."
 
 #: template-zume-3plan.php:47
 msgid ""
 "If you have completed a live training event, you can use the group key your "
 "trainer gives you to connect your plan with your training group."
 msgstr ""
+"Waxaad dhammaysatay tababbarkii muuqaalka tooska ahaa, waxaad isticmaali "
+"kartaa furaha kooxda ee uu tababbaruhu ku siiyey si aad qorshahaaga ugu "
+"xidho kooxdaada tababbarka."
 
 #: template-zume-3plan.php:59
 msgid "My Plan"
-msgstr ""
+msgstr "Qorshahayga"
 
 #: template-zume-3plan.php:60
 msgid "Plans in Your Groups"
@@ -3203,23 +3285,23 @@ msgstr "Kooxahaaga"
 
 #: template-zume-3plan.php:77
 msgid "Link to a Group with a Group Key (optional)"
-msgstr ""
+msgstr "Koox ku xidh Koox kale adiga oo isticmaalaha furaha kooxda (doorasho)"
 
 #: template-zume-3plan.php:80
 msgid "example: ABC12"
-msgstr ""
+msgstr "tusaale: BTJ12"
 
 #: template-zume-3plan.php:89
 msgid "Link"
-msgstr ""
+msgstr "Kuxidh"
 
 #: template-zume-3plan.php:96
 msgid "Add one of your groups? "
-msgstr "Kooxdadu waa imisa?"
+msgstr "Ku dar mid kooxdaada ka mid ah? "
 
 #: template-zume-3plan.php:118
 msgid "Linked to"
-msgstr ""
+msgstr "Lagu xidhiidhiyey"
 
 #: template-zume-3plan.php:125
 msgid "Unlink Group"
@@ -3236,23 +3318,23 @@ msgstr "Kaydi"
 
 #: template-zume-3plan.php:167
 msgid "Reset"
-msgstr ""
+msgstr "Dib u habee"
 
 #: template-zume-3plan.php:168
 msgid "Print Saved Plan"
-msgstr ""
+msgstr "Daabac Qorshaha Lakaydiyey"
 
 #: template-zume-3plan.php:179
 msgid "not answered"
-msgstr ""
+msgstr "lagama jawaabin"
 
 #: template-zume-3plan.php:229
 msgid "Print"
-msgstr ""
+msgstr "Daabac"
 
 #: template-zume-3plan.php:243
 msgid "No plans linked to this group."
-msgstr ""
+msgstr "Ma jiro qoshe ku xidhiidhsan kooxdan."
 
 #: template-zume-about.php:18
 msgid "About Zúme Project"
@@ -3296,7 +3378,7 @@ msgstr ""
 
 #: template-zume-about.php:72
 msgid "Zúme consists of 10 sessions, 2 hours each"
-msgstr ""
+msgstr "Zúme wuxuu ka kooban yahay 10 kulan, oo kiiba yahay 2 saacadood"
 
 #: template-zume-about.php:89
 msgid "How to get started:"
@@ -3311,6 +3393,8 @@ msgid ""
 "Invite 3-11 friends. A minimum group of 3-4 is needed for the practice and "
 "elements of the training."
 msgstr ""
+"Casuum 3-11 saaxiib. Kooxda ugu yar ee la doonayo waa 3-4 ee dhaqan gelinaya "
+"hawlaha tababbarka."
 
 #: template-zume-about.php:95
 msgid "Schedule a time to get together with your friends."
@@ -3351,15 +3435,15 @@ msgstr "Kunnoqo muqaalkagi guud"
 
 #: template-zume-course.php:11
 msgid "You do not have a valid nonce. Where did you come from? "
-msgstr ""
+msgstr "Mahaysatid ku gelid shaqaynaysa. Halkee baad ka timid? "
 
 #: template-zume-course.php:23
 msgid "Cannot find this group."
-msgstr ""
+msgstr "Kooxdan lama heli karo."
 
 #: template-zume-course.php:23
 msgid "Head back to your dashboard and try again"
-msgstr "Kunnoqo muqaalkaaga guud oo mar kale isku day."
+msgstr "Kunnoqo muqaalkaaga guud oo mar kale isku day"
 
 #: template-zume-course.php:27
 msgid "You are missing a correct group or session number."
@@ -3383,7 +3467,7 @@ msgstr "Kooxahaaga"
 
 #: template-zume-dashboard.php:119
 msgid "view"
-msgstr "Guudmar"
+msgstr "guudmar"
 
 #: template-zume-dashboard.php:125
 msgid "edit"
@@ -3404,11 +3488,11 @@ msgstr "Xubnaha"
 
 #: template-zume-dashboard.php:137 template-zume-dashboard.php:742
 msgid "Key"
-msgstr ""
+msgstr "Boton"
 
 #: template-zume-dashboard.php:181
 msgid "Start Next Session "
-msgstr "Bilow Kulan Cusub"
+msgstr "Bilow Kulan Cusub "
 
 #: template-zume-dashboard.php:193
 msgid "Archive Group"
@@ -3416,15 +3500,15 @@ msgstr "Kooxda Kaydka"
 
 #: template-zume-dashboard.php:228
 msgid "invites you to join"
-msgstr ""
+msgstr "waxaad ku casuman tahay inaad ku soo xidhantid"
 
 #: template-zume-dashboard.php:234
 msgid "Accept"
-msgstr ""
+msgstr "Aqbal"
 
 #: template-zume-dashboard.php:236
 msgid "Decline"
-msgstr ""
+msgstr "Qaaddac"
 
 #: template-zume-dashboard.php:255
 msgid "You have no active groups"
@@ -3432,7 +3516,7 @@ msgstr "Ma haysid kooxo shaqaynaya"
 
 #: template-zume-dashboard.php:257
 msgid "We recommend at least 3-11 people for a group."
-msgstr ""
+msgstr "Waxaan ku talinaynaa in ugu yaraan kooxdu ahaa 3-11 qof."
 
 #: template-zume-dashboard.php:258
 msgid ""
@@ -3440,6 +3524,8 @@ msgid ""
 "approved coleader/participant list. To start your own group, use the button "
 "below."
 msgstr ""
+"Waxaad kooxda jira ku xidhmi kartaa marka masuulka kooxdu iimaylkaaga ku "
+"daro oo uu ka qayb gale toos ah kuu aqoosado."
 
 #: template-zume-dashboard.php:266
 msgid "Start New Group"
@@ -3596,7 +3682,7 @@ msgstr "Kulanka 1"
 
 #: template-zume-dashboard.php:323
 msgid "Coaching Checklist"
-msgstr ""
+msgstr "Liiska Tijaabinta Hagaha"
 
 #: template-zume-dashboard.php:324
 msgid "Leadership in Networks"
@@ -3620,22 +3706,20 @@ msgid "activate"
 msgstr "kici"
 
 #: template-zume-dashboard.php:488
-#, fuzzy
-#| msgid "Coach"
 msgid "Get a Coach"
-msgstr "Tababbare"
+msgstr "Hel ababbare"
 
 #: template-zume-dashboard.php:500
 msgid "Join me on the Zúme Project"
-msgstr "Ujeeddooyinka Mashruuca Zúme:"
+msgstr "Igula soo xidhan Mashruuca Zúme"
 
 #: template-zume-dashboard.php:501
 msgid "Invite to Zúme"
-msgstr ""
+msgstr "Ku casuum Zúme"
 
 #: template-zume-dashboard.php:568
 msgid "Networks"
-msgstr ""
+msgstr "Iskuxidhada"
 
 #: template-zume-dashboard.php:609
 msgid "Create Group"
@@ -3657,7 +3741,7 @@ msgstr "Wakhti Kulan la Qorsheeyay"
 
 #: template-zume-dashboard.php:656 template-zume-dashboard.php:794
 msgid "example: Saturday 7PM"
-msgstr ""
+msgstr "tusaale: Sabtida 7PM"
 
 #: template-zume-dashboard.php:674 template-zume-dashboard.php:812
 #: template-zume-dashboard.php:1157 template-zume-profile.php:109
@@ -3667,7 +3751,7 @@ msgstr "Ansixi"
 #: template-zume-dashboard.php:692 template-zume-dashboard.php:832
 #: template-zume-dashboard.php:970
 msgid "Coleaders or additional participants"
-msgstr ""
+msgstr "Kaaliyaha hoggaammiyaha ama ka qaybgaleyaal dheeraad ah"
 
 #: template-zume-dashboard.php:700 template-zume-dashboard.php:854
 msgid "Add"
@@ -3687,10 +3771,13 @@ msgid ""
 "done through \n"
 "                you."
 msgstr ""
+"Waxaad tahay masuulka kooxda. Waxa faallooyinka kooxda laga beddelayo waa "
+"inay soo maraan \n"
+"                adiga."
 
 #: template-zume-dashboard.php:748
 msgid "Change Key"
-msgstr ""
+msgstr "Beddel Botonka"
 
 #: template-zume-dashboard.php:760 template-zume-dashboard.php:953
 msgid "Number of Participants"
@@ -3698,7 +3785,7 @@ msgstr "Tirada ka Qaybgalayaasha"
 
 #: template-zume-dashboard.php:803
 msgid "example: 1000 Broadway, Denver, CO 80126"
-msgstr ""
+msgstr "tusaale: 1000 Broadway, Denver, CO 80126"
 
 #: template-zume-dashboard.php:834
 msgid ""
@@ -3710,6 +3797,12 @@ msgid ""
 "details of the group. Note: they will not receive a system email from Zúme "
 "with this invitation, you will need to ask them to sign up."
 msgstr ""
+"In lagu daro hoggaamiye ku xigeen ama ka qaybgaleyaal dheeraad ah waxay "
+"siinaysaa inay koooxdan Zúme muuqaalkooda guudisla marka ay galaan oo ay "
+"isticmaalaam cinwaanka iimaylka aad ku dartay. Marka ay galaan muuqaalkooda "
+"guud waxa ay dhanka midig ee shaashadda ku arkayaan casuumaadda adiga kaa "
+"timid. Xusuusnow: wax iimayl ah casumaaddan kagama helayaan Zúme, waxaad u "
+"baahan tahay inaad weyddiiso inay is diwaan geliyaan."
 
 #: template-zume-dashboard.php:864
 msgid "Update"
@@ -3721,7 +3814,7 @@ msgstr "Kayd"
 
 #: template-zume-dashboard.php:897
 msgid "ARE YOU SURE YOU WANT TO DELETE THIS GROUP?"
-msgstr ""
+msgstr "MA HUBTAA INAAD KOOXDAN TIRAYSID?"
 
 #: template-zume-dashboard.php:934
 msgid "View Group"
@@ -3735,6 +3828,12 @@ msgid ""
 "                        participants. Please, make change requests through "
 "the group owner."
 msgstr ""
+"Marka aad u tahay kaqaybgale  amd hoggaam xigeen kooxdan adiga ayaa dulmar "
+"ku samayn kara kooxda \n"
+"                        faahfaahinnadooda oo kulanka oo dhan kooxda ku "
+"hoggaamin kara, balse ma beddeli kartid faahfaahinnada\n"
+"                        kooxda kumana dari kartid kaqaybgaleyaal. Fadlan, ka "
+"dalbo in maammulka marka wax la beddelayo."
 
 #: template-zume-dashboard.php:946
 msgid "Group Owner"
@@ -3746,90 +3845,93 @@ msgstr "Koox Abuur"
 
 #: template-zume-dashboard.php:1005
 msgid "ARE YOU SURE YOU WANT TO REMOVE THIS GROUP?"
-msgstr ""
+msgstr "MA HUBTAA INAAD KOOXDAN TIRAYSID?"
 
 #: template-zume-dashboard.php:1006
 msgid ""
 "To reverse this action, the owner of the group must re-invite you to the "
 "group again."
 msgstr ""
+"Marka aad ficilkan ka hor timaaddo, waa in maammulaha kooxdu uu dib kuugu "
+"casumaa kooxda."
 
 #: template-zume-dashboard.php:1013
 msgid "Remove"
-msgstr ""
+msgstr "Kaqaad"
 
 #: template-zume-dashboard.php:1051
 msgid "Connect Me to a Coach"
-msgstr ""
+msgstr "Iguxidh Tababbaraha"
 
 #: template-zume-dashboard.php:1063
-#, fuzzy
-#| msgid "Coach"
 msgid "Coaches"
-msgstr "Tababbare"
+msgstr "Tababbareyaasha"
 
 #: template-zume-dashboard.php:1064
 msgid ""
 "Our network of volunteer coaches are people like you, people who are "
 "passionate about loving God, loving others, and obeying the Great Commission."
 msgstr ""
+"Tababbarayaasha shabakaddan waa dad mutadawiciin adigoo kale ah, dad "
+"naxariis u haya jacaylka Ilaah, jacaylka kuwa kale, iyo addeecista Amarka "
+"Weyn."
 
 #: template-zume-dashboard.php:1069
 msgid "Advocates"
-msgstr ""
+msgstr "Uhadleyaal"
 
 #: template-zume-dashboard.php:1070
 msgid ""
 "A coach is someone who will come alongside you as you implement the Zúme "
 "tools and training."
 msgstr ""
+"Tababbaruhu waa mid qiimayn doona sida aad u hir gelinaysid waxqabadka iyo "
+"tababbarrada Zúme."
 
 #: template-zume-dashboard.php:1075
 msgid "Local"
-msgstr ""
+msgstr "Degaanka"
 
 #: template-zume-dashboard.php:1076
 msgid ""
 "On submitting this request, we will do our best to connect you with a coach "
 "near you."
 msgstr ""
+"Marka aad codsigan soo dhiibatid waxaan inta karaakeenna isku dayi doonnaa "
+"inaan kugu xidhno tababbaraha kuugu dhow."
 
 #: template-zume-dashboard.php:1081
 msgid "It's Free"
-msgstr ""
+msgstr "Waa Fasax"
 
 #: template-zume-dashboard.php:1082
 msgid "Coaching is free. You can opt out at any time."
-msgstr ""
+msgstr "Tababbaristu waa lacag la'aan. Xilligaad rabto ayaan dooran kartaa."
 
 #: template-zume-dashboard.php:1092 template-zume-profile.php:63
-#, fuzzy
-#| msgid "No Name"
 msgid "Name"
 msgstr "Magac"
 
 #: template-zume-dashboard.php:1096 template-zume-dashboard.php:1097
 #: template-zume-profile.php:67 template-zume-profile.php:68
-#, fuzzy
-#| msgid "First Name"
 msgid "First and last name"
-msgstr "Magaca Koowaad"
+msgstr "Magaca Koowaad iyo kan labaad"
 
 #: template-zume-dashboard.php:1135
 msgid "Email is required."
-msgstr ""
+msgstr "Iimayl ayaa lagaa rabaa."
 
 #: template-zume-dashboard.php:1143
 msgid "City"
-msgstr ""
+msgstr "Magaalo"
 
 #: template-zume-dashboard.php:1168
 msgid "How should we contact you?"
-msgstr ""
+msgstr "Sideen kuula soo xidhiidhnaa?"
 
 #: template-zume-dashboard.php:1175
 msgid "Text"
-msgstr ""
+msgstr "Qoraal"
 
 #: template-zume-dashboard.php:1177
 msgid "Phone"
@@ -3837,19 +3939,19 @@ msgstr "Telefoon"
 
 #: template-zume-dashboard.php:1179
 msgid "WhatsApp"
-msgstr ""
+msgstr "WhatsApp"
 
 #: template-zume-dashboard.php:1181
 msgid "Other"
-msgstr ""
+msgstr "Mid kale"
 
 #: template-zume-dashboard.php:1188 template-zume-profile.php:180
 msgid "Affiliation Key"
-msgstr ""
+msgstr "Furaha Dalladdaa Guud"
 
 #: template-zume-dashboard.php:1230
 msgid "Thank you. You have already requested a coach connection."
-msgstr ""
+msgstr "Mahadsanid. Waxaad durbadiiba codsatay la xidhiidhka tababbaraha."
 
 #: template-zume-faq.php:20
 msgid "Zúme FAQs"
@@ -3895,6 +3997,9 @@ msgid ""
 "website. Participants who view the media when present with the group no "
 "longer need an email address for the group to begin."
 msgstr ""
+"Ugu yaraan hal qof oo kooxda ka mid ah waa inuu lahaa akoon iimayl oo ay "
+"baraha bulshada ugula xidhiidhaan. Kaqaybgaleyaasha dusha ka eegaya uma "
+"baahna ciwaan iimayl oo ay kooxda u bilaabaan."
 
 #: template-zume-faq.php:51
 msgid "How can I preview the lessons before starting a training event?"
@@ -3957,6 +4062,9 @@ msgid ""
 "navigate through the session. From the Dashboard you can click the session "
 "number of the group and go directly to that session."
 msgstr ""
+"Isticmaal botonka  \"Kiihore\" iyo \"Kanxiga\" ee kulanka si aad kulan u "
+"kicisid. Qaybta Muuqaalkaguud ayaad nambarka kulanka ee kooxda ka "
+"tuujinaysaa oo kulankaas ayaad toos u abbaaraysaa."
 
 #: template-zume-faq.php:79
 msgid "There are lots of DMM or CPM trainers, so why is Zúme needed?"
@@ -4116,6 +4224,13 @@ msgid ""
 "Zúme training group and two simple churches among every 50,000 people "
 "outside the US."
 msgstr ""
+"Wejiga saddexaad wuxuu diiradda saarayaa Wejiga 1 iyo Wejiga 2 oo ah sidii "
+"kaniisadda caalamka loogu qalabayn lahaa  aragtida ah in meel walba xer laga "
+"sameeyo, iyo dad walba. Mashruuca Zúme wuxuu u taagan yahay in caalamka "
+"xerta lagu badiyo facan aan haatan joogno. Si aan ujeedkeenna u dhaqaajinno, "
+"waxaan horumarinay oo aan keeni doonnaa qariidad kooxaha u sahlaysa inay "
+"tababbarka Zúme ee kooxaha kaga dhex shaqeeyaan oo ah in labo kabniisadood "
+"laga dhex heli 50,000 ee qofba Maraykanka dibaddiisa."
 
 #: template-zume-faq.php:133
 msgid "Why is it called Zúme?"
@@ -4188,7 +4303,7 @@ msgstr ""
 
 #: template-zume-faq.php:150
 msgid "Who can see my Three-Month Plan?"
-msgstr ""
+msgstr "Miyaan arki karaa Qorshahayga Saddex-Bilood?"
 
 #: template-zume-faq.php:151
 msgid ""
@@ -4197,30 +4312,40 @@ msgid ""
 "will also be visible to your coach. If you do not want coaching, go to your "
 "profile and set coaching preference to \"Decline Coaching\"."
 msgstr ""
+"Adiga keliya ayaa arki kara qorshahaaga, illaa aad kooxdaada ku xidhiidhisid "
+"mooyaane, dabadeed hoggaamiyaha kooxda iyo ku xigeenka ayaa arki kara "
+"Qorshahaaga Saddex Bilood. Sidoo kale waxaa qorshahaaga arki kara "
+"tababbarahaaga. haddaanad tababbare doonayn, tag faylka ciwaankaaga oo "
+"hagaaji tixraaca tababbaraha adoo tegaya \"Diid Tababbare\"."
 
 #: template-zume-faq.php:155
 msgid "Can I print my Three-Month Plan?"
-msgstr ""
+msgstr "Miyaan daabici karaa Qorshahayga Saddex-Bilood?"
 
 #: template-zume-faq.php:156
 msgid ""
 "Yes, make sure you save you plan first, then just scroll to the bottom of "
 "your plan and click on the \"Print Saved Plan\" button."
 msgstr ""
+"Haa, iska hubi inaad marka koobaad kaydisid qorshahaaga, dabadeed ku soo "
+"jiid meesha hoose ee qorshahaaga oo guji \"Daabac Qordhaha Lakaydiyey\" "
+"botonkiisa."
 
 #: template-zume-faq.php:160
 msgid "Can I edit my Three-Month Plan later?"
-msgstr ""
+msgstr "Miyaan goor dambe tafatiri karaa Qorshahayga Saddex-Bilood?"
 
 #: template-zume-faq.php:161
 msgid ""
 "Yes, you can go back to your plan at any time and edit it. Make sure you "
 "click, \"Save\" at the bottom of your plan."
 msgstr ""
+"Haa, waxaad dib ugu laaban kartaa oo aad tafatiri kartaa maqti kasta. Hubi "
+"inaad gujisid botonka \"Kaydi\"ee qorshahaaga."
 
 #: template-zume-faq.php:165
 msgid "Does Zúme offer a way for me to chat with people in my group?"
-msgstr ""
+msgstr "Miyuu Zúme i soonayaa qaab aan kula sheekaysto dadka ku jira kooxda?"
 
 #: template-zume-faq.php:166
 msgid ""
@@ -4230,66 +4355,67 @@ msgid ""
 "messaging platform that they prefer (iMessage, WhatsApp, Facebook group, "
 "etc.) for further group communication."
 msgstr ""
+"Ma ahan waqtigan. Waxaan kuu sheegaynaa in xubin walba oo kooxda ka mid ah "
+"ay is diwaangelin samayso oo ay ku jirto kooxdaada Zúme. Sidan ayey xubin "
+"walba hawlqabad ugu yeelanaysaa qalabka mar kastoo ay doonaan. Dabaadeed "
+"sida ay doonaan ayey kooxdu farriimaha isu weydaarsan karaan sida (iMessag, "
+"WhatsApp, Facebook group, IWM.) oo ah xidhiidhada dheeraadka ah."
 
 #: template-zume-login.php:73
 msgid ""
 "Your password reset link appears to be invalid. Please request a new link "
 "below."
 msgstr ""
+"Waxay u muuqataa in lambarkaaga sirta aanu jirin. Fadlan xidhiidh cusub hoos "
+"ka dalbo."
 
 #: template-zume-login.php:75
 msgid "Your password reset link has expired. Please request a new link below."
-msgstr ""
+msgstr "Furahaaga xidhiidhku wuu dhacay. Fadlan xidhiidh cusub hoos ka fdalbo."
 
 #: template-zume-login.php:108 template-zume-login.php:465
-#, fuzzy
-#| msgid "Address"
 msgid "Email Address"
-msgstr "Cinwaanka"
+msgstr "Cinwaanka Iimaylka"
 
 #: template-zume-login.php:119
 msgid "Get New Password"
-msgstr ""
+msgstr "Yeelo fure cusub"
 
 #: template-zume-login.php:174
 msgid "The passwords do not match."
-msgstr ""
+msgstr "Furayaashu ma kacayaan."
 
 #: template-zume-login.php:275
 msgid "Reset Password"
-msgstr ""
+msgstr "Dib u hagaaji furaha"
 
 #: template-zume-login.php:335
-#, fuzzy
-#| msgid "How to get started:"
 msgid "Let's get started."
-msgstr "Sida loo bilaabayo:"
+msgstr "Aan bilowno\".\"."
 
 #: template-zume-login.php:337
-#, fuzzy
-#| msgid "Sign up"
 msgid "Sign up using:"
-msgstr "Is diwaangeli"
+msgstr "Is diwaangeli adoo adeegsanaya:"
 
 #: template-zume-login.php:384 template-zume-login.php:483
 msgid "Lost your password?"
-msgstr ""
+msgstr "Ma furahaagii baad lumisay?"
 
 #: template-zume-login.php:401
 msgid "Invalid request."
-msgstr ""
+msgstr "Codsi aan saxnayn."
 
 #: template-zume-login.php:410
 msgid "Invalid key"
-msgstr ""
+msgstr "Boton aan saxnayn"
 
 #: template-zume-login.php:432
 msgid "User action confirmed."
-msgstr ""
+msgstr "Dalabkii adeegsadaha waa la xaqiijiyey."
 
 #: template-zume-login.php:449
 msgid "Sign in using:"
-msgstr ""
+msgstr "Gal adigoo isticmaalaya:"
 
 #: template-zume-overview.php:71 template-zume-overview.php:84
 msgid "Sessions Overview"
@@ -4309,7 +4435,7 @@ msgstr "Tag Muuqaalkaguud si aad u dooratid kooxdaada oo bilow kulanka xiga"
 #: template-zume-overview.php:967 template-zume-overview.php:1045
 #: template-zume-overview.php:1122 template-zume-overview.php:1224
 msgid "Concepts"
-msgstr "Ujeeddooyin:"
+msgstr "Ujeeddooyin"
 
 #: template-zume-overview.php:286
 msgid ""
@@ -4341,7 +4467,7 @@ msgstr ""
 #: template-zume-overview.php:804 template-zume-overview.php:912
 #: template-zume-overview.php:1245
 msgid "Tools"
-msgstr "Qalab:"
+msgstr "Qalab"
 
 #: template-zume-overview.php:329
 msgid ""
@@ -4367,7 +4493,7 @@ msgstr ""
 #: template-zume-overview.php:1066 template-zume-overview.php:1167
 #: template-zume-overview.php:1278
 msgid "Practice"
-msgstr "Dhaqangeli:"
+msgstr "Dhaqangeli"
 
 #: template-zume-overview.php:361
 msgid ""
@@ -4643,10 +4769,8 @@ msgstr ""
 "shaqeeya nidaamka Soosaarista Kooxaha Wax Haga. (60 daqiiqo)"
 
 #: template-zume-privacy-policy.php:22
-#, fuzzy
-#| msgid "Zúme Project"
 msgid "Zúme Privacy Policy"
-msgstr "Mashruuca Zúme"
+msgstr "Siyaadadda Ugaarka Ah Zúme"
 
 #: template-zume-privacy-policy.php:32
 msgid ""
@@ -4659,81 +4783,100 @@ msgid ""
 "clear understanding of how we collect, use, protect or otherwise handle your "
 "Personally Identifiable Information in accordance with our website."
 msgstr ""
+"Siyaasaddan degsan ee gaarka ah waxaa loogu talo galay inay si hagaagsan ugu "
+"shaqayso kuwa danaynaya sida \"Warbixinta Shaqsi ahaaneed ee Lacaddayn karo"
+"\" iyo sida toos ahaan loogu isticmaali karo. (PII) waa qaab Maraykanka laga "
+"dhex adeegsado oo ah xeerka amaan ee warbixinnada loo xaqiijiyo, loola "
+"xidhiidho, ama qof gaar ah loo eegto, ama shaqsi lagu ogaado guud ahaan. "
+"Fadlan si taxaddar leh u akhri siyaasadda noo gaarka ah si aad fahan cad uga "
+"heshid sida aan u ururinno, u isticmaalno tan kalena aan u dhawrno "
+"Warbixinta Shaqsi ahaaneed ee Lacaddayn karo ee uu baraheenna bulshadu ka "
+"leedahay."
 
 #: template-zume-privacy-policy.php:38
 msgid "What permissions do the social sign-on logins ask for?"
-msgstr ""
+msgstr "Oggolaansho noocee ah ayey gelista iyo diwaangelintu doonayaan?"
 
 #: template-zume-privacy-policy.php:41
 msgid ""
 "Public Profile. This includes certain User’s Data such as id, name, picture, "
 "gender, and their locale."
 msgstr ""
+"Public Profile. Kan waxaa ku jira macluumaadka adeegsadaha oo dhan sida "
+"Aqoonsi, magac, masawir, asalka qofka, iyo degaankooda."
 
 #: template-zume-privacy-policy.php:44
-#, fuzzy
-#| msgid "User Address"
 msgid "Email Address."
-msgstr "Cinwaanka Adeegsadaha"
+msgstr "Cinwaanka iimaylka \".\"."
 
 #: template-zume-privacy-policy.php:52
 msgid ""
 "What personal information do we collect from the people through our website?"
-msgstr ""
+msgstr "Maxaa warbixin ah oo aan dadka kaga ururinaa website-ka?"
 
 #: template-zume-privacy-policy.php:55
 msgid "Information in the Basic Social Profile (if used) and email."
 msgstr ""
+"Warbixinta Faylka Cinwaanka ee Aasaasiga ah (haddii la isticmaalo) ama "
+"iimayl."
 
 #: template-zume-privacy-policy.php:58
 msgid "Session and course activity."
-msgstr ""
+msgstr "Waxqabadyada kulabnka iyo koorsada."
 
 #: template-zume-privacy-policy.php:61
 msgid ""
 "General location telemetry, so we know in what countries our training is "
 "being used."
 msgstr ""
+"Ogaanshaha guud ee barta, waxaan ku ogaannaa waddammada tababbarradeenna "
+"lagu dhe isticmaalay."
 
 #: template-zume-privacy-policy.php:69
-#, fuzzy
-#| msgid "Project Information"
 msgid "When do we collect information?"
-msgstr "Warbixinta Mashruuca"
+msgstr "Goormaannu warbixinta urursanaa?"
 
 #: template-zume-privacy-policy.php:72
 msgid "We collect your information at login."
-msgstr ""
+msgstr "Waxaan warbixintaada ku ururinaynaa gelidda."
 
 #: template-zume-privacy-policy.php:75
 msgid "We also track your progress through the training course."
 msgstr ""
+"Sidoo kale waxaa horumarkaaga ku calaamadinnaa inta tababbarka kooraska lagu "
+"guda jiro."
 
 #: template-zume-privacy-policy.php:83
 msgid "How do we use your information?"
-msgstr ""
+msgstr "Sideen u isticmaalnaa warbixintaada?"
 
 #: template-zume-privacy-policy.php:86
 msgid ""
 "We use your information to create a user account in the zume system based on "
 "your email address."
 msgstr ""
+"Waxaa warbixintaada u adeegsannaa inaan akoon adeegsi ku abuurno oo habka "
+"zume ku dhex jira kuna xidhan ciwaanka iimaylkaaga."
 
 #: template-zume-privacy-policy.php:89
 msgid ""
 "We will email you with basic transactional emails like password reset "
 "requests and other system notifications."
 msgstr ""
+"Waxaan kuu soo diri doonnaa iimayllo farriin ah sida dib u habaynta furaha "
+"iyo farriimaha habka codsiyada kale."
 
 #: template-zume-privacy-policy.php:92
 msgid ""
 "We email occasional reminders and encouragements depending on your progress "
 "through the training."
 msgstr ""
+"Waxaan soo dirnaa iimayl xusuusinno iyo dhiirrigelinno ah oo ku xidhan hadba "
+"sida qofku horumar uga sameeyo tababbarka."
 
 #: template-zume-privacy-policy.php:100
 msgid "How do we protect your information?"
-msgstr ""
+msgstr "Sideen u xafidnaa warbixintaada?"
 
 #: template-zume-privacy-policy.php:102
 msgid ""
@@ -4742,6 +4885,9 @@ msgid ""
 "information to perform a specific job (for example, web administrator or "
 "customer service) are granted access to personally identifiable information."
 msgstr ""
+"Marka aan dahaarista ku samaynayno si aan u difaacno warbixintaada tooska "
+"loo soo gudbiyey, waxaan sidoo kale kuu difaacaynaa warbixintaada aan qadka "
+"tooska ah ku jirin."
 
 #: template-zume-privacy-policy.php:105
 msgid ""
@@ -4751,16 +4897,24 @@ msgid ""
 "addition, all sensitive/credit information you supply is encrypted via "
 "Secure Socket Layer (SSL) technology."
 msgstr ""
+"Xogtaada shaqis ahaaneed waxa ay ku dhex jirtaa shabakad iskuxidh oo aad u "
+"adag shaqsiyaad kooban ayaana kara inay habkaas gaadhaan, oo si kalsooni leh "
+"ayaa xogtaas loo ilaalinayaa. taas waxaa dheer, xogta aadka in loo ilaaliyo "
+"u baahan waxaa lagu dahaaraa Secure Socket Layer (SSL) oo ah farsamo casri "
+"ah."
 
 #: template-zume-privacy-policy.php:108
 msgid ""
 "We implement a variety of security measures when a user submits, or accesses "
 "their information to maintain the safety of your personal information."
 msgstr ""
+"Waxaan samaynaa qaabab kala duwan oo ammaanka adkaynta ah marka adeegsaduhu "
+"soo gudbiyo, oo aan warbixinnadooda ula soconaa si ay warbixintaada shaqsi "
+"aahaaneed kuugu amaan gasho."
 
 #: template-zume-privacy-policy.php:115
 msgid "Do we use \"cookies\"?"
-msgstr ""
+msgstr "Ma isticmaalna \"cookies\"?"
 
 #: template-zume-privacy-policy.php:117
 msgid ""
@@ -4769,40 +4923,44 @@ msgid ""
 "otherwise, serves to identify Users and remember their preferences, for the "
 "sole purpose of providing the service required by the User."
 msgstr ""
+"Isticmaalka Cookies- ama agabka wax lagu raadiya-  ee  Codsigan ama xaqle "
+"labaad oo raba inu isticmaalo shaqada codsigan, iyada oo l acadeeyo mooye, "
+"waxa aay aqoonsanysa Isticmaalaha kaasii oo aay u xasuusanayso, waxa yaabaha "
+"uu bahana ee loogu adeegayeey Isticmaalaha."
 
 #: template-zume-privacy-policy.php:120
 msgid "Personal Data collected: name, email."
-msgstr ""
+msgstr "Data shakhsi ahaaneed oo la ururiyey: magac, iimayl."
 
 #: template-zume-privacy-policy.php:127
 msgid "Your Access to and Control Over Information."
-msgstr ""
+msgstr "Awoodda aad u leedahay Xadaynta Warbixinta."
 
 #: template-zume-privacy-policy.php:129
 msgid ""
 "You may opt out of any future contact from us at any time. You can do the "
 "following at any time by contacting us via our contact email address:"
 msgstr ""
+"Markaad doontid ayaad mustaqbalka iska saari kartaa xidhgiidhkeenna. Waxaad "
+"nagula socon kartaa oo nagula soo xidhiidhi kartaa cinwaanka iimaylkeenna:"
 
 #: template-zume-privacy-policy.php:132
 msgid "See what data we have about you, if any."
-msgstr ""
+msgstr "Eeg wixii xog kayda ee kugu saabsan, hadday jiraan."
 
 #: template-zume-privacy-policy.php:136
 msgid "Change/correct any data we have about you."
-msgstr ""
+msgstr "Beddelka/sixidda wixii macluumaad adiga kugu saabsan."
 
 #: template-zume-privacy-policy.php:139
 msgid "Have us delete any data we have about you."
-msgstr ""
+msgstr "Noo fasax inaan tirno wixii macluumaad adiga kugu saabsan."
 
 #: template-zume-privacy-policy.php:142
 msgid "Express any concern you have about our use of your data."
-msgstr ""
+msgstr "Caddee haddii aad wax qabtid in aan xogtaada kaydsan isticmaalno."
 
 #: template-zume-privacy-policy.php:150
-#, fuzzy
-#| msgid "Update"
 msgid "Updates"
 msgstr "Xog cusub"
 
@@ -4811,6 +4969,8 @@ msgid ""
 "Our Privacy Policy may change from time to time and all updates will be "
 "posted on this page."
 msgstr ""
+"Siyaasadda aan ku dhaqaanaa had iyo goor way is beddeshaa wixii xog cusub "
+"ahna bogga ayaa lagu boosto garaynayaaa."
 
 #: template-zume-profile.php:31
 msgid "Your Profile"
@@ -4821,36 +4981,32 @@ msgid "edit image @ gravatar.com"
 msgstr "edit image @ gravatar.com"
 
 #: template-zume-profile.php:96
-#, fuzzy
-#| msgid "Your Coach"
 msgid "Your City"
-msgstr "TABABBARAHAAGA"
+msgstr "Magaaladaada"
 
 #: template-zume-profile.php:147
 msgid "Linked Facebook Account"
-msgstr ""
+msgstr "Xidhiidh akoonka Facebook ga"
 
 #: template-zume-profile.php:154 template-zume-profile.php:170
-#, fuzzy
-#| msgid "Unlink Group"
 msgid "Unlink"
-msgstr "Kooxda Tafatirka"
+msgstr "Kabax xidhiidhka"
 
 #: template-zume-profile.php:163
 msgid "Linked Google Account"
-msgstr ""
+msgstr "Ku xidhan Akoonka Google"
 
 #: template-zume-progress.php:23
 msgid "Phase 1"
-msgstr ""
+msgstr "Wejiga 1"
 
 #: template-zume-progress.php:45
 msgid "Phase 2"
-msgstr ""
+msgstr "Wejiga 2"
 
 #: template-zume-progress.php:62
 msgid "YOU can help get Zúme into other languages!"
-msgstr ""
+msgstr "Waxaad caawimaad ka qaadan kartaa inaad Zúme ku heshid luuqad kale!"
 
 #: template-zume-progress.php:63
 msgid "Donate to the translation of Zúme"
@@ -4858,7 +5014,7 @@ msgstr "Dhaqaale sii tarjumaadda Zúme"
 
 #: template-zume-progress.php:74
 msgid "Phase 3"
-msgstr ""
+msgstr "Wejiga 3"
 
 #: template-zume-resources.php:20
 msgid "RESOURCES"
@@ -4902,7 +5058,7 @@ msgstr "https://github.com/ChasmSolutions"
 
 #. Template Name of the plugin/theme
 msgid "Zume About"
-msgstr "KuSaabsan"
+msgstr "Ku Saabsan"
 
 #. Template Name of the plugin/theme
 msgid "Zume Resources"
@@ -4910,7 +5066,7 @@ msgstr "Ilaha"
 
 #. Template Name of the plugin/theme
 msgid "Zume Privacy Policy"
-msgstr ""
+msgstr "Siyaasadda U Degsan Zume"
 
 #. Template Name of the plugin/theme
 msgid "Zúme Progress"
@@ -4938,7 +5094,7 @@ msgstr "Muuqaalguud"
 
 #. Template Name of the plugin/theme
 msgid "Full Width Home"
-msgstr ""
+msgstr "Ballaca Buuxa Ee Hooyga"
 
 #. Template Name of the plugin/theme
 msgid "Zúme Course"
