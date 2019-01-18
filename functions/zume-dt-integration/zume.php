@@ -278,7 +278,7 @@ class Zume_Integration
             }
         }
 
-        $three_month_plan = get_user_meta( get_current_user_id(), 'three_month_plan', true );
+        $three_month_plan = get_user_meta( $user_id, 'three_month_plan', true );
         if ( class_exists( 'Zume_Three_Month_Plan' ) ) {
             $three_month_plan = Zume_Three_Month_Plan::plan_items_filter( $three_month_plan );
         }
