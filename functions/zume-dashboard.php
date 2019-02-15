@@ -267,9 +267,9 @@ class Zume_Dashboard {
         if ( isset( $args['new_coleader'] ) && ! empty( $args['new_coleader'] && is_array( $args['new_coleader'] ) ) ) { // test if new coleader added
             foreach ( $args['new_coleader'] as $coleader ) { // loop potential additions
 
-                $coleader = trim( $coleader );
+                $coleader = trim( strtolower( $coleader ) );
                 // check if empty
-                if ( empty( $coleader ) || ! is_email( $coleader )) {
+                if ( empty( $coleader ) || ! is_email( $coleader ) ) {
                     continue;
                 }
 
