@@ -129,7 +129,7 @@ Template Name: Zume Privacy Policy
                                 <?php esc_html_e( 'You may opt out of any future contact from us at any time. You can do the following at any time by contacting us via our contact email address:', 'zume' ) ?>
                             </p>
                             <p>
-                                <?php esc_html_e( 'See what data we have about you, if any.', 'zume' ) ?>
+                                <?php esc_html_e( 'See what data we\'ve aggregated from your activities with us.', 'zume' ) ?>
                             </p>
                             <ul>
                                 <li>
