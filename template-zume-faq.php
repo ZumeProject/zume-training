@@ -137,7 +137,7 @@ Template Name: Zúme FAQ
                     <div class="cell">
                         <hr>
                         <h3 class="secondary"><?php esc_html_e( 'What languages will the training be translated into?', 'zume' ) ?></h3>
-                        <?php esc_html_e( 'The project will start in the following languages and made available to those wishing to translate the training and tools into additional languages: Arabic, Bengali, Bhojpuri, Burmese, Chinese (Mandarin), Chinese (Cantonese), Farsi, French, German, Gujarati, Hausa, Hindi, Indonesian, Italian, Japanese, Kannada, Korean, Maithili, Malayalam, Marathi, Oriya, Panjabi (Eastern), Panjabi (Western), Portuguese, Russian, Spanish, Swahili, Tamil, Telugu, Thai, Turkish, Urdu, Vietnamese, Yoruba.', 'zume' ) ?>
+                        <?php esc_html_e( 'The project will start in the following languages and made available to those wishing to translate the training and tools into additional languages: Amharic, Arabic, Bengali, Bhojpuri, Burmese, Chinese (Mandarin), Chinese (Cantonese), Farsi, French, German, Gujarati, Hausa, Hindi, Indonesian, Italian, Japanese, Kannada, Korean, Kurdish, Lao, Maithili, Malayalam, Marathi, Oriya, Panjabi (Eastern), Panjabi (Western), Portuguese, Russian, Somali, Spanish, Swahili, Tamil, Telugu, Thai, Turkish, Urdu, Vietnamese, Yoruba.', 'zume' ) ?>
                     </div>
                     <!-- Item -->
                     <div class="cell">
