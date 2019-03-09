@@ -1,0 +1,3367 @@
+msgid ""
+msgstr ""
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Project-Id-Version: Zúme Project\n"
+"POT-Creation-Date: 2018-12-05 07:01-0700\n"
+"PO-Revision-Date: 2019-03-08 08:50+0530\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.2.1\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-Flags-xgettext: --add-comments=translators:\n"
+"X-Poedit-WPHeader: style.css\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"Last-Translator: \n"
+"Language: te_IN\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+"X-Poedit-SearchPathExcluded-1: functions/zume-dt-integration\n"
+"X-Poedit-SearchPathExcluded-2: functions/multi-role\n"
+"X-Poedit-SearchPathExcluded-3: vendor\n"
+"X-Poedit-SearchPathExcluded-4: node_modules\n"
+"X-Poedit-SearchPathExcluded-5: functions/utilities/tgm-plugin-activation-class.php\n"
+"X-Poedit-SearchPathExcluded-6: functions/utilities/tgm-config.php\n"
+
+#: front-page.php:52 front-page.php:171
+msgid "Get Started"
+msgstr "ప్రారంభించండి"
+
+#: front-page.php:55 functions/zume-polylang-integration.php:148
+#: template-zume-login.php:382
+msgid "Login"
+msgstr "లాగిన్ (ప్రవేశించుట)"
+
+#: front-page.php:60
+msgid "Zúme Training is an on-line and in-life learning experience designed for small groups who follow Jesus to learn how to obey His Great Commission and make disciples who multiply."
+msgstr "జుమ్ శిక్షణ ఆన్ లైన్ ద్వారా జీవితములో అనుభవపూర్వకముగా యేసు యొక్క గొప్ప ఆజ్ఞకు విధేయత చూపుతూ శిష్యులను విస్తరింపజేయుట కొరకు చిన్న చిన్న గుంపులుగా నేర్చుకొనుటకు రూపొందించబడినది."
+
+#: front-page.php:73
+msgid "Zúme consists of 10 sessions, 2 hours each:"
+msgstr "జుమ్ లో పది తరగతులు, ఒక్కొక్కటి రెండు గంటల చొప్పున ఉంటాయి:"
+
+#: front-page.php:81 template-zume-about.php:74
+msgid "Video and Audio to help your group understand basic principles of multiplying disciples."
+msgstr "ఈ వీడియో ఆడియోలు శిష్యులను విస్తరింపజేయుట కొరకు ప్రాథమిక సూత్రాలను తెలియజేయుచున్నాయి."
+
+#: front-page.php:89 template-zume-about.php:75
+msgid "Group Discussions to help your group think through what’s being shared."
+msgstr "గుంపుగా కలసి చర్చించుట ద్వారా పంచుకోబడిన దానిని ఆలోచించుట కొరకు సహాయపడుతుంది."
+
+#: front-page.php:97 template-zume-about.php:76
+msgid "Simple Exercises to help your group put what you’re learning into practice."
+msgstr "సామాన్యమైన అభ్యాసములు మీగుంపు నేర్చుకొనిన దానిని ఆచరణలో పెట్టుటకు సహాయపడతాయి."
+
+#: front-page.php:105 template-zume-about.php:77
+msgid "Session Challenges to help your group keep learning and growing between sessions."
+msgstr "మీగుంపు నేర్చుకుంటూ ఎదుగుతూ ఉండటానికి తరగతి యొక్క సవాళ్లు తరగతికి తరగతికి మధ్యలో సహాయపడతాయి."
+
+#: front-page.php:118
+msgid "Want to start the training?"
+msgstr "శిక్షణ ప్రారంభించాలని అనుకుంటున్నారా?"
+
+#: front-page.php:132
+msgid "It's as easy as 1-2-3"
+msgstr "ఇది 1-2-3 అంత సులభము"
+
+#: front-page.php:141
+msgid "Sign up"
+msgstr "సైన్ అప్ (నమోదు)"
+
+#: front-page.php:151
+msgid "Invite some friends"
+msgstr "కొంతమంది స్నేహితులను ఆహ్వానించండి"
+
+#: front-page.php:161
+msgid "Host a training"
+msgstr "శిక్షణకు ఆతిధ్యమివ్వండి"
+
+#: front-page.php:204
+msgid "Find out more about Zúme"
+msgstr "జుమ్ గురించి మరింత తెలుసుకోండి"
+
+#: functions/activator.php:55
+msgid "Coach"
+msgstr "శిక్షకుడు"
+
+#: functions/activator.php:65
+msgid "Coach Leader"
+msgstr "శిక్షణాధికారి"
+
+#: functions/enqueue-scripts.php:55 functions/enqueue-scripts.php:57
+#: template-zume-dashboard.php:905 template-zume-dashboard.php:1018
+msgid "Cancel"
+msgstr "రద్దు"
+
+#: functions/enqueue-scripts.php:56
+msgid "Current Step:"
+msgstr "ప్రస్తుత దశ:"
+
+#: functions/enqueue-scripts.php:58
+msgid "Finish"
+msgstr "ముగించండి"
+
+#: functions/enqueue-scripts.php:59 functions/utilities/menu.php:108
+msgid "Next"
+msgstr "తరువాత"
+
+#: functions/enqueue-scripts.php:60 functions/utilities/menu.php:98
+msgid "Previous"
+msgstr "గత"
+
+#: functions/enqueue-scripts.php:61
+msgid "Loading..."
+msgstr "లోడింగ్ (నింపబడుతూ)..."
+
+#: functions/enqueue-scripts.php:75 template-zume-dashboard.php:869
+#: template-zume-dashboard.php:903
+msgid "Delete"
+msgstr "తొలగించు"
+
+#: functions/enqueue-scripts.php:76
+msgid "Failed to remove item."
+msgstr "అంశాన్ని తొలగించడంలో విఫలమైంది."
+
+#: functions/enqueue-scripts.php:77
+msgid "Failed to change item."
+msgstr "అంశాన్ని మార్చడంలో విఫలమైంది."
+
+#: functions/enqueue-scripts.php:78
+msgid "Three Month Plan - Zúme Project"
+msgstr "జుమ్ పథకం (ప్రాజెక్ట్)- మూడు నెలల ప్రణాళిక"
+
+#: functions/enqueue-scripts.php:79
+msgid "We got it!"
+msgstr "మాకు అర్థమైంది!"
+
+#: functions/enqueue-scripts.php:80
+msgid "We're a volunteer network, so give us a few days. We'll reach out to you soon as possible!"
+msgstr "మేము ఒక స్వచ్చంద నెట్వర్క్ గా ఉన్నాము, కాబట్టి మాకు కొన్ని రోజులు ఇవ్వండి. సాధ్యమైనంత త్వరగా మేం మీ వద్దకు చేరుకుంటాం!"
+
+#: functions/login/zume-login.php:97 functions/login/zume-login.php:316
+msgid "Email is a required permission for login and registration."
+msgstr "లాగిన్ మరియు నమోదు కొరకు ఇమెయిల్ అనుమతి అవసరము."
+
+#: functions/login/zume-login.php:209 functions/login/zume-login.php:441
+msgid "No user found."
+msgstr "వినియోగదారు కనుగొనబడలేదు."
+
+#: functions/login/zume-login.php:280 functions/login/zume-login.php:406
+msgid "You are missing your sign-in token. Try signing in again."
+msgstr "మీ సైన్-ఇన్ టోకెన్ (చిహ్నము) మిస్ అయింది. మళ్లీ సైన్ ఇన్ చేయడానికి ప్రయత్నించండి."
+
+#: functions/login/zume-login.php:290 functions/login/zume-login.php:416
+msgid "Failed to connect with Facebook. Try again."
+msgstr "పేస్ బుక్ తో అనుసంధానించడంలో విఫలమైంది. మళ్ళీ ప్రయత్నించండి."
+
+#: functions/login/zume-login.php:309 functions/login/zume-login.php:432
+msgid "Facebook user lookup error. Sorry for the inconvenience."
+msgstr "పేస్ బుక్ వినియోగదారుని దగ్గరలోపం. అసౌకర్యానికి క్షమించండి."
+
+#: functions/login/zume-login.php:312 functions/login/zume-login.php:435
+msgid "Error with looking up user with Facebook. Sorry for the inconvenience."
+msgstr "పేస్ బుక్ వినియోగదారుని తో లోపం ఏర్పడింది. అసౌకర్యానికి క్షమించండి."
+
+#: functions/login/zume-login.php:536
+msgid "There are some errors in your form."
+msgstr "మీ నమూనా లో కొన్ని తప్పులు ఉన్నాయి."
+
+#: functions/login/zume-login.php:541 template-zume-dashboard.php:1122
+#: template-zume-dashboard.php:1173 template-zume-login.php:354
+#: template-zume-profile.php:127
+msgid "Email"
+msgstr "ఇమెయిల్"
+
+#: functions/login/zume-login.php:545 template-zume-login.php:242
+msgid "Password Required"
+msgstr "అనుమతిపదం (పాస్వర్డ్) అవసరం"
+
+#: functions/login/zume-login.php:548 template-zume-login.php:245
+msgid "Password required"
+msgstr "అనుమతిపదం (పాస్వర్డ్) అవసరం"
+
+#: functions/login/zume-login.php:554 template-zume-login.php:252
+msgid "Re-enter Password"
+msgstr "అనుమతిపదాన్ని(పాస్వర్డ్) తిరిగి నమోదు చేయండి"
+
+#: functions/login/zume-login.php:557 template-zume-login.php:255
+msgid "Passwords do not match. Please, try again."
+msgstr "అనుమతిపదాలు (పాస్వర్డ్స్) జతకావడం లేదు. దయచేసి, మళ్లీ ప్రయత్నించండి."
+
+#: functions/login/zume-login.php:566
+#: functions/zume-polylang-integration.php:149 template-zume-login.php:481
+msgid "Register"
+msgstr "నమోదు"
+
+#: functions/login/zume-login.php:609
+msgid "Missing captcha response. How did you do that?"
+msgstr "ధ్రువీకరణ కోడ్ ని తప్పారు. అది ఎలా చేశారు?"
+
+#: functions/login/zume-login.php:622
+msgid "Captcha failure. Try again, if you are human."
+msgstr "ధ్రువీకరణ కోడ్ ని తప్పారు. మీరు మానవుడిగా ఉంటే మళ్లీ ప్రయత్నించండి."
+
+#: functions/login/zume-login.php:628
+msgid "Missing email or password."
+msgstr "ఇమెయిల్ లేదా పాస్వర్డ్ మరచిపోయారు."
+
+#: functions/login/zume-login.php:647
+msgid "Sorry. This email is already registered."
+msgstr "క్షమించండి. ఈ ఇమెయిల్ ఇప్పటికే నమోదు చేయబడింది."
+
+#: functions/login/zume-login.php:658
+msgid "Something went wrong. Sorry. Could you try again?"
+msgstr "ఏదో తప్పు జరిగింది. క్షమించండి. మళ్లీ ప్రయత్నించగలరా?"
+
+#: functions/login/zume-login.php:680
+msgid "No new user found."
+msgstr "కొత్త వినియోగదారు (యూజర్) కనుగొనబడలేదు."
+
+#: functions/login/zume-login.php:736 functions/login/zume-login.php:784
+msgid "Google"
+msgstr "గూగుల్"
+
+#: functions/login/zume-login.php:778
+msgid "Link with Google"
+msgstr "గూగుల్ తో జతచేయండి"
+
+#: functions/login/zume-login.php:909 functions/login/zume-login.php:1001
+msgid "Facebook"
+msgstr "ఫేస్ బుక్"
+
+#: functions/login/zume-login.php:1142
+msgid "Missing username or email address."
+msgstr "వినియోగదారు పేరు లేదా ఇమెయిల్ చిరునామా దొరుకుటలేదు."
+
+#: functions/login/zume-login.php:1148
+msgid "ERROR: Enter a username or email address."
+msgstr "తప్పు : వినియోగదారు పేరు లేదా ఇమెయిల్ చిరునామాను నమోదు చేయండి."
+
+#: functions/login/zume-login.php:1152
+msgid "ERROR: There is no user registered with that email address."
+msgstr "తప్పు : ఆ ఇమెయిల్ చిరునామాతో ఏ వినియోగదారు నమోదు కాలేదు."
+
+#: functions/login/zume-login.php:1157
+msgid "ERROR: There is no user registered with that username."
+msgstr "తప్పు : ఆ పేరుతో ఏ వినియోగదారు నమోదు కాలేదు."
+
+#: functions/login/zume-login.php:1177
+msgid "<strong>ERROR</strong>: Invalid username or email."
+msgstr "పెద్ద తప్పు : చెల్లని వినియోగదారు పేరు లేదా ఇమెయిల్."
+
+#: functions/login/zume-login.php:1200
+msgid "Someone has requested a password reset for the following account:"
+msgstr "ఈ కింది ఖాతాకు ఒక అనుమతిపదం ( పాస్వర్డ్ ) మరలా చేయమని కోరుచున్నారు:"
+
+#. translators: %s: site name
+#: functions/login/zume-login.php:1202
+#, php-format
+msgid "Site Name: %s"
+msgstr "సైటు (ప్రదేశము) పేరు: %s"
+
+#. translators: %s: user login
+#: functions/login/zume-login.php:1204
+#, php-format
+msgid "Username: %s"
+msgstr "వినియోగదారు పేరు: %s"
+
+#: functions/login/zume-login.php:1205
+msgid "If this was a mistake, just ignore this email and nothing will happen."
+msgstr "ఒకవేళ ఇది తప్పు అయితే, ఈ ఇమెయిల్ ని పట్టించుకోకండి. ఏమి జరగదు."
+
+#: functions/login/zume-login.php:1206
+msgid "To reset your password, visit the following address:"
+msgstr "మీరు మరలా అనుమతిపదం ( పాస్వర్డ్ ) చేసుకోవటానికి, ఈ క్రింది లింక్ సందర్శించండి:"
+
+#. translators: Password reset email subject. %s: Site name
+#: functions/login/zume-login.php:1210
+#, php-format
+msgid "[%s] Password Reset"
+msgstr "[ %s] పాస్వర్డ్ మరలా చేయాలి"
+
+#: functions/login/zume-login.php:1240
+msgid "The email could not be sent."
+msgstr "ఇమెయిల్ పంపడం సాధ్యం కాలేదు."
+
+#: functions/login/zume-login.php:1240
+msgid "Possible reason: your host may have disabled the mail() function."
+msgstr "సాధ్యమైన కారణం: మీ హోస్ట్ (అనుమతిదారు) మెయిల్ () విధిని నిలిపివేసి ఉండవచ్చు."
+
+#: functions/post-types/pdf-download-post-type.php:131
+#: functions/post-types/pdf-download-post-type.php:132
+msgid "Zume Download"
+msgstr "జుమ్ డౌన్లోడ్ (పొందుకొనుము)"
+
+#: functions/post-types/pdf-download-post-type.php:133
+msgid "All Zume Downloads"
+msgstr "జుమ్ లోని అన్నీపొందుకొనుము"
+
+#: functions/post-types/pdf-download-post-type.php:134
+#: functions/post-types/video-post-type.php:134
+msgid "Add New"
+msgstr "కొత్తది జోడించు"
+
+#: functions/post-types/pdf-download-post-type.php:135
+msgid "Add New Zume Download"
+msgstr "కొత్త జుమ్ డౌన్లోడ్ జోడించండి"
+
+#: functions/post-types/pdf-download-post-type.php:136
+#: functions/post-types/video-post-type.php:136
+msgid "Edit"
+msgstr "సంపాదకత్వం"
+
+#: functions/post-types/pdf-download-post-type.php:137
+msgid "Edit Zume Download"
+msgstr "జుమ్ డౌన్లోడ్ సంపాదకత్వం చేయండి"
+
+#: functions/post-types/pdf-download-post-type.php:138
+msgid "New Zume Download"
+msgstr "క్రొత్త జుమ్ డౌన్లోడ్"
+
+#: functions/post-types/pdf-download-post-type.php:139
+msgid "View Zume Download"
+msgstr "జుమ్ డౌన్లోడ్ చూడండి"
+
+#: functions/post-types/pdf-download-post-type.php:140
+msgid "Search Zume Downloads"
+msgstr "జుమ్ డౌన్లోడ్స్ ను వెదకండి"
+
+#: functions/post-types/pdf-download-post-type.php:141
+#: functions/post-types/video-post-type.php:141
+msgid "Nothing found in the Database."
+msgstr "డేటాబేస్ లో (పొందుపర్చిన వాటిలో) ఏమీ కనుగొనబడలేదు."
+
+#: functions/post-types/pdf-download-post-type.php:142
+#: functions/post-types/video-post-type.php:142
+msgid "Nothing found in Trash"
+msgstr "తొలగింపబడిన వాటిలో ఏమీ కనపడలేదు"
+
+#: functions/post-types/pdf-download-post-type.php:145
+#: functions/post-types/video-post-type.php:145
+msgid "Zume video catalog for language videos"
+msgstr "వివిధ భాషల వీడియోల కొరకు జుమ్ వీడియో పట్టిక"
+
+#. translators: Publish box date format, see http://php.net/date
+#: functions/post-types/pdf-download-post-type.php:256
+#: functions/post-types/video-post-type.php:256
+msgid "M j, Y @ G:i"
+msgstr "ఎం జె, వై @ జి:ఐ"
+
+#: functions/post-types/pdf-download-post-type.php:451
+#: functions/post-types/video-post-type.php:459
+msgid "Enter the title here"
+msgstr "శీర్షికను (టైటిల్) ఇక్కడ నమోదు చేయండి"
+
+#: functions/post-types/video-post-type.php:131
+#: functions/post-types/video-post-type.php:132
+msgid "Zume Video"
+msgstr "జుమ్ వీడియో"
+
+#: functions/post-types/video-post-type.php:133
+msgid "All Zume Videos"
+msgstr "అన్ని జుమ్ వీడియోలు"
+
+#: functions/post-types/video-post-type.php:135
+msgid "Add New Zume Video"
+msgstr "కొత్త జుమ్ వీడియో చేర్చండి"
+
+#: functions/post-types/video-post-type.php:137
+msgid "Edit Zume Video"
+msgstr "జుమ్ వీడియో సంపాదకత్వం చేయండి"
+
+#: functions/post-types/video-post-type.php:138
+msgid "New Zume Video"
+msgstr "కొత్త జుమ్ వీడియో"
+
+#: functions/post-types/video-post-type.php:139
+msgid "View Zume Video"
+msgstr "జుమ్ వీడియో చూడండి"
+
+#: functions/post-types/video-post-type.php:140
+msgid "Search Zume Videos"
+msgstr "జుమ్ వీడియోలను వెదకండి"
+
+#: functions/utilities/cleanup.php:76
+msgid "Read"
+msgstr "చదవండి"
+
+#: functions/utilities/cleanup.php:76
+msgid "... Read more &raquo;"
+msgstr ".......ఇంకా చదవండి &raquo;"
+
+#: functions/utilities/cleanup.php:98
+#, php-format
+msgid "Posts by %s"
+msgstr "%s ద్వారా పోస్ట్ లు"
+
+#: functions/utilities/menu.php:5
+msgid "The Main Menu"
+msgstr "ప్రధాన పట్టిక (మెను)"
+
+#: functions/utilities/menu.php:6
+msgid "Footer Links"
+msgstr "క్రిందనున్న (ఫుట్టర్) లింకులు"
+
+#: functions/utilities/menu.php:94
+msgid "First"
+msgstr "మొదటి"
+
+#: functions/utilities/menu.php:111
+msgid "Last"
+msgstr "చివరి"
+
+#: functions/zume-course.php:164
+msgid "( Key not available. Check dashboard. )"
+msgstr "(కీ (కీలక పదం) అందుబాటులో లేదు. డ్యాష్ బోర్డ్ చెక్ చేయండి. )"
+
+#: functions/zume-course.php:183
+msgid "Session"
+msgstr "తరగతి (సెషన్ )"
+
+#: functions/zume-course.php:284
+msgid "Welcome to Session"
+msgstr "తరగతికి (సెషన్ కు) స్వాగతం"
+
+#: functions/zume-course.php:285
+msgid "Which are you doing right now?"
+msgstr "ప్రస్తుతం మీరు ఏది చేస్తున్నారు?"
+
+#: functions/zume-course.php:286
+msgid "Facilitating a Group"
+msgstr "ఒక గుంపును ప్రోత్సహించుట"
+
+#: functions/zume-course.php:290
+msgid "Exploring the Session Content"
+msgstr "తరగతి మూలం (సెషన్ కంటెంట్) ను అన్వేషించడం"
+
+#: functions/zume-course.php:305
+msgid "How many are with you?"
+msgstr "మీతో ఎంతమంది ఉన్నారు?"
+
+#: functions/zume-course.php:320
+msgid "Continue"
+msgstr "కొనసాగించండి"
+
+#: functions/zume-course.php:340
+msgid "Welcome to Zúme"
+msgstr "జుమ్ కు స్వాగతం"
+
+#: functions/zume-course.php:348
+msgid "Download"
+msgstr "డౌన్లోడ్ (పొందుకొనుము)"
+
+#: functions/zume-course.php:352
+msgid "You will be able to follow along on a digital PDF for this session, but please make sure that each member of your group has a printed copy of the materials for future sessions."
+msgstr "ఈ సెషన్ కొరకు మీరు డిజిటల్ pdf ని డౌన్లోడ్ చేసుకొని అక్కడ చెప్పిన విధంగా మీరు కొనసాగించవచ్చు, అయితే మీ గ్రూపుకు చెందిన ప్రతి సభ్యుడు రాబోయే తరగతుల (సెషన్) కొరకు ముద్రించబడిన కాపీని కలిగి ఉండునట్లుగా దయచేసి ధృవీకరించుకోండి."
+
+#: functions/zume-course.php:359 template-zume-dashboard.php:515
+#: template-zume-resources.php:38
+msgid "Download Guidebook"
+msgstr "మార్గనిర్దేశ పుస్తకము పొందుకొనుము (డౌన్ లోడ్ గైడ్ బుక్)"
+
+#: functions/zume-course.php:371
+msgid "Group Prayer (5min)"
+msgstr "బృంద ప్రార్ధన (5ని:)"
+
+#: functions/zume-course.php:381
+msgid "Begin with prayer. Spiritual insight and transformation is not possible without the Holy Spirit. Take time as a group to invite Him to guide you over this session."
+msgstr "ప్రార్ధనతో ప్రారంభించండి. పరిశుద్ధాత్మ లేనిదే ఆత్మీయ గ్రహింపు, పరివర్తన సాధ్యం కాదు. ఈ తరగతిలో ఆయన నడిపింపు కొరకు ఆయనను ఆహ్వానించడానికి అందరూ కలసి కొంచెం సమయం ప్రార్ధనలో గడపండి."
+
+#: functions/zume-course.php:394 functions/zume-course.php:437
+#: functions/zume-course.php:486 functions/zume-course.php:803
+#: functions/zume-course.php:1154 functions/zume-course.php:1239
+#: functions/zume-course.php:1604 functions/zume-course.php:1660
+#: functions/zume-course.php:1712 functions/zume-course.php:1990
+#: functions/zume-course.php:2182 functions/zume-course.php:2435
+#: functions/zume-course.php:2652 functions/zume-course.php:2869
+#: functions/zume-course.php:2922 functions/zume-course.php:2977
+#: functions/zume-course.php:3347
+msgid "Watch and Discuss (15min)"
+msgstr "చూడండి మరియు చర్చించండి (15ని;)"
+
+#: functions/zume-course.php:402 functions/zume-course.php:445
+#: functions/zume-course.php:494 functions/zume-course.php:810
+#: functions/zume-course.php:1160 functions/zume-course.php:1245
+#: functions/zume-course.php:1610 functions/zume-course.php:1666
+#: functions/zume-course.php:1718 functions/zume-course.php:1996
+#: functions/zume-course.php:2188 functions/zume-course.php:2300
+#: functions/zume-course.php:2441 functions/zume-course.php:2658
+#: functions/zume-course.php:2877 functions/zume-course.php:2930
+#: functions/zume-course.php:2985 functions/zume-course.php:3353
+#: functions/zume-course.php:3501
+msgid "WATCH"
+msgstr "చూడండి"
+
+#: functions/zume-course.php:404
+msgid "God uses ordinary people doing simple things to make a big impact. Watch this video on how God works."
+msgstr "దేవుడు చిన్న విషయాలకు సాధారణ ప్రజలను ఉపయోగించి పెద్దమొత్తంలో ప్రభావాన్ని చూపిస్తాడు. దేవుడు ఎలా పనిచేస్తాడో ఈ వీడియోలో చూడండి."
+
+#: functions/zume-course.php:420
+msgid "Zúme Video Scripts: Welcome"
+msgstr "జుమ్ వీడియో స్క్రిప్ట్స్(లిపి): స్వాగతం"
+
+#: functions/zume-course.php:426 functions/zume-course.php:470
+#: functions/zume-course.php:523 functions/zume-course.php:843
+#: functions/zume-course.php:934 functions/zume-course.php:1184
+#: functions/zume-course.php:1219 functions/zume-course.php:1272
+#: functions/zume-course.php:1362 functions/zume-course.php:1639
+#: functions/zume-course.php:1694 functions/zume-course.php:1746
+#: functions/zume-course.php:2022 functions/zume-course.php:2213
+#: functions/zume-course.php:2274 functions/zume-course.php:2481
+#: functions/zume-course.php:2542 functions/zume-course.php:2701
+#: functions/zume-course.php:2908 functions/zume-course.php:2960
+#: functions/zume-course.php:3015 functions/zume-course.php:3144
+#: functions/zume-course.php:3319 functions/zume-course.php:3380
+msgid "DISCUSS"
+msgstr "చర్చించండి"
+
+#: functions/zume-course.php:428
+msgid "If Jesus intended every one of His followers to obey His Great Commission, why do so few actually make disciples?"
+msgstr "యేసు తన అనుచరుల్లో ప్రతి ఒక్కరు తన గొప్ప ఆజ్ఞకు లోబడాలని ఉద్దేశి౦చి ఉంటే, మరి కొ౦దరు మాత్రమే శిష్యులను ఎ౦దుకు చేస్తున్నారు?"
+
+#: functions/zume-course.php:447
+msgid "What is a disciple? And how do you make one? How do you teach a follower of Jesus to do what He told us in His Great Commission – to obey all of His commands?"
+msgstr "శిష్యుడు అంటే ఏమిటి? మీరు ఒక శిష్యుడిని ఎలా తయారు చేస్తారు? యేసు మనకిచ్చిన గొప్ప ఆజ్ఞ - ఆయన ఆజ్ఞలన్నిటికీ విధేయత చూపటం అనునవి యేసుని ఒక అనుచరునికి మీరు ఎలా బోధిస్తారు?"
+
+#: functions/zume-course.php:464
+msgid "Zúme Video Scripts: Teach Them to Obey"
+msgstr "జుమ్ వీడియో స్క్రిప్ట్స్(లిపి) : వారికి విధేయత నేర్పించండి"
+
+#: functions/zume-course.php:473
+msgid "When you think of a church, what comes to mind?"
+msgstr "మీరు ఒక చర్చి గురించి ఆలోచించినపుడు, మీ మనస్సులో ఏం అనిపిస్తుంది?"
+
+#: functions/zume-course.php:474
+msgid "What's the difference between that picture and what's described in the video as a \"Simple Church\"?"
+msgstr "మీరు ఛాయాచిత్రంలో చూసిన దానికి మరియు వీడియోలో \"సామాన్యమైన సంఘము\" గా వివరించబడిన దానికి మధ్య వ్యత్యాసమేమిటి?"
+
+#: functions/zume-course.php:476
+msgid "Which one do you think would be easier to multiply and why?"
+msgstr "విస్తరింపజేయటానికి ఏది సులభమని మీరు అనుకుంటున్నారు, ఎందుకు?"
+
+#: functions/zume-course.php:496
+msgid "We breathe in. We breathe out. We're alive. Spiritual Breathing is like that, too."
+msgstr "మనం శ్వాస లోపలికి తీసుకుంటాం. శ్వాస బయటకు విడుస్తాము. మనము సజీవంగా ఉన్నాము అనడానికి ఇదే ఆధారం, ఆత్మీయ శ్వాస కూడా ఇలాంటిదే."
+
+#: functions/zume-course.php:516
+msgid "Zúme Video Scripts: Spiritual Breathing"
+msgstr "జుమ్ వీడియో స్క్రిప్ట్స్(లిపి) : ఆధ్యాత్మిక శ్వాస"
+
+#: functions/zume-course.php:526
+msgid "Why is it essential to learn to hear and recognize God's voice?"
+msgstr "దేవుని స్వరాన్ని వినడాన్ని, గుర్తించడాన్ని నేర్చుకోవాల్సిన అవసర౦ ఎ౦దుకు ఉ౦ది?"
+
+#: functions/zume-course.php:527
+msgid "Is hearing and responding to the Lord really like breathing? Why or why not?"
+msgstr "ప్రభువు స్వరము వినుట మరియు స్పందించుట అనునవి నిజముగా శ్వాస తీసుకొనుట, వదులుట లాంటివా? ఎందుకు లేదా ఎందుకు కాదు?"
+
+#: functions/zume-course.php:537 functions/zume-course.php:590
+#: functions/zume-course.php:954 functions/zume-course.php:1523
+#: functions/zume-course.php:1763 functions/zume-course.php:3392
+msgid "Listen and Read Along (3min)"
+msgstr "వినండి మరియు వెంట చదవండి (3ని:)"
+
+#: functions/zume-course.php:545 functions/zume-course.php:598
+#: functions/zume-course.php:867 functions/zume-course.php:960
+#: functions/zume-course.php:1204 functions/zume-course.php:1319
+#: functions/zume-course.php:1529 functions/zume-course.php:1769
+#: functions/zume-course.php:1940 functions/zume-course.php:2231
+#: functions/zume-course.php:3398
+msgid "READ"
+msgstr "చదవండి"
+
+#: functions/zume-course.php:547
+msgid "S.O.A.P.S. Bible Reading"
+msgstr "S.O.A.P.S. బైబిలు అధ్యయనం"
+
+#: functions/zume-course.php:548
+msgid "Hearing from God regularly is a key element in our personal relationship with Him, and in our ability to stay obediently engaged in what He is doing around us."
+msgstr "దేవుని ను౦డి క్రమముగా వినుట అనునది ఆయనతో మనకున్నవ్యక్తిగత స౦బ౦ధములో ఒక కీలకమైన అ౦శ౦, మరియు ఆయన మన చుట్టూ తాను చేస్తున్న పనిలో మనం విధేయతతో నిమగ్నమై ఉ౦డడ౦ మన సామర్థ్యానికి స౦బ౦ధి౦చిన విషయ౦."
+
+#: functions/zume-course.php:561
+msgid "Find the \"S.O.A.P.S. Bible Reading\" section in your Zúme Guidebook and listen to the audio overview."
+msgstr "మీ జుమ్ మార్గనిర్దేశ పుస్తకంలో “S.O.A.P.S. బైబిల్ అధ్యయన” విభాగాన్ని కనుగొనండి మరియు ఆడియో సారాంశాన్ని వినండి."
+
+#: functions/zume-course.php:582
+msgid "Zúme Video Scripts: S.O.A.P.S."
+msgstr "జుమ్ వీడియో స్క్రిప్ట్స్(లిపి) : S.O.A.P.S."
+
+#: functions/zume-course.php:601 template-zume-dashboard.php:291
+msgid "Accountability Groups"
+msgstr "బాధ్యతగల (జవాబుదారీ) సమూహాలు"
+
+#: functions/zume-course.php:604
+msgid "The Bible tells us that every follower of Jesus will one day be held accountable for what we do and say and think. Accountability Groups are a great way to get ready!"
+msgstr "యేసు అనుచరులైన ప్రతి ఒక్కరు చేసే పనికి, ఆలోచనకి, మాట్లాడే ప్రతిమాటకి ఒకరోజు దేవుని దగ్గర జవాబు చెప్పవలసి వస్తుంది అని బైబిల్ మనకు చెప్పుచున్నది. జవాబుదారీతనం గల గుంపులు సిద్ధపాటు కలిగియుండుటకు ఒక గొప్ప మార్గము!"
+
+#: functions/zume-course.php:616
+msgid "Find the \"Accountability Groups\" section in your Zúme Guidebook, and listen to the audio below."
+msgstr "మీ జుమ్ మార్గనిర్దేశ పుస్తకంలో “జవాబుదారీతనం గల గుంపులు” విభాగాన్ని కనుగొనండి, మరియు క్రిందనున్న ఆడియో వినండి."
+
+#: functions/zume-course.php:638
+msgid "Zúme Video Scripts: Accountability Groups"
+msgstr "జుమ్ వీడియో స్క్రిప్ట్స్(లిపి) : జవాబుదారీతనం గల గుంపులు"
+
+#: functions/zume-course.php:646
+msgid "Practice (45min)"
+msgstr "సాధన (45ని:)"
+
+#: functions/zume-course.php:654
+msgid "BREAK UP"
+msgstr "విడిపోవటం"
+
+#: functions/zume-course.php:655
+msgid "Break into groups of two or three people of the same gender."
+msgstr "ఒకే లింగం కలిగిన ఇద్దరు లేదా ముగ్గురు వ్యక్తుల సమూహాలుగా విడిపోవుట."
+
+#: functions/zume-course.php:661 functions/zume-course.php:713
+#: functions/zume-course.php:1072 functions/zume-course.php:1429
+#: functions/zume-course.php:1860 functions/zume-course.php:2110
+#: functions/zume-course.php:2359 functions/zume-course.php:2575
+#: functions/zume-course.php:2786 functions/zume-course.php:3133
+#: functions/zume-course.php:3181
+msgid "SHARE"
+msgstr "పంచుకొనుట"
+
+#: functions/zume-course.php:664
+msgid "Spend the next 45 minutes working together through Accountability Questions – List 2 in the \"Accountability Groups\" section of your"
+msgstr "తదుపరి 45 నిమిషాలు జవాబుదారీతనం ప్రశ్నల ద్వారా కలిసి పనిచేయండి – మీ యొక్క \"జవాబుదారీతనం గల గుంపులు\" విభాగంలో 2వ జాబితా"
+
+#: functions/zume-course.php:668
+msgid "Zúme Guidebook"
+msgstr "జుమ్ మార్గనిర్దేశ పుస్తకం"
+
+#: functions/zume-course.php:679 functions/zume-course.php:1041
+#: functions/zume-course.php:1399 functions/zume-course.php:1843
+#: functions/zume-course.php:2097 functions/zume-course.php:2329
+#: functions/zume-course.php:2558 functions/zume-course.php:2769
+#: functions/zume-course.php:3162
+msgid "LOOKING FORWARD"
+msgstr "ముందుకు చూడటం"
+
+#: functions/zume-course.php:683
+msgid "Congratulations! You've completed Session 1."
+msgstr "అభినందనలు! మీరు సెషన్ 1 (మొదటి తరగతి ) పూర్తి చేశారు."
+
+#: functions/zume-course.php:695 functions/zume-course.php:1054
+#: functions/zume-course.php:1412 functions/zume-course.php:1847
+#: functions/zume-course.php:2343
+msgid "Below are next steps to take in preparation for the next session."
+msgstr "తరువాతి తరగతి (సెషన్) కొరకు సిద్దపడుటకు క్రింద కొన్నితదుపరి దశలు ఉన్నాయి."
+
+#: functions/zume-course.php:705 functions/zume-course.php:1065
+#: functions/zume-course.php:1422 functions/zume-course.php:1853
+#: functions/zume-course.php:2103 functions/zume-course.php:2352
+#: functions/zume-course.php:2568 functions/zume-course.php:2779
+#: functions/zume-course.php:3172
+msgid "OBEY"
+msgstr "పాటించండి"
+
+#: functions/zume-course.php:707
+msgid "Begin practicing the S.O.A.P.S. Bible reading between now and your next meeting. Focus on Matthew 5-7, read it at least once a day. Keep a daily journal using the S.O.A.P.S. format."
+msgstr "ఇప్పటి నుండి మరల కలిసే వరకు S.O.A.P.S. బైబిల్ అధ్యయనం చేయండి. మత్తయి 5-7 పై దృష్టి సారించి, కనీసం రోజుకు ఒకసారైనా చదవండి. S.O.A.P.S. నమూనాను ఉపయోగించి దినచర్య పుస్తకాన్ని పెట్టండి."
+
+#: functions/zume-course.php:715
+msgid "Spend time asking God who He might want you to start an Accountability Group with using the tools you've learned in this session. Share this person’s name with the group before you go. Reach out to that person about starting an Accountability Group and meeting with you weekly."
+msgstr "ఈ తరగతిలో మీరు నేర్చుకున్నవాటిని ఉపయోగించి ఎవరితో 'జవాబుదారీతనం గుంపు' ప్రారంభించాలని దేవుడు కోరుతున్నాడో ప్రార్థనలో ఆయనను అడగండి. ఆ వ్యక్తిని కలవక ముందు అతని యొక్క పేరును గుంపుతో పంచుకోండి. 'జవాబుదారీతనం గుంపు' ప్రారంభించాలని మీతో ప్రతి వారము కలవాలని అతనిని కలసి తెలియజేయండి."
+
+#: functions/zume-course.php:723 functions/zume-course.php:790
+#: functions/zume-course.php:1079 functions/zume-course.php:1131
+#: functions/zume-course.php:1436 functions/zume-course.php:1499
+#: functions/zume-course.php:1867 functions/zume-course.php:1915
+#: functions/zume-course.php:2117 functions/zume-course.php:2162
+#: functions/zume-course.php:2366 functions/zume-course.php:2415
+#: functions/zume-course.php:2582 functions/zume-course.php:2632
+#: functions/zume-course.php:2793 functions/zume-course.php:2849
+#: functions/zume-course.php:3075 functions/zume-course.php:3189
+#: functions/zume-course.php:3242
+msgid "PRAY"
+msgstr "ప్రార్థన"
+
+#: functions/zume-course.php:726
+msgid "Pray that God helps you be obedient to Him and invite Him to work in you and those around you!"
+msgstr "దేవుడు మీలోను, మీ చుట్టూ ఉన్న వారిలోను పనిచేయాలని ఆహ్వానించి, మీరు ఆయనకు విధేయులుగా ఉండునట్లు సహాయము చేయమని ప్రార్థించండి!"
+
+#: functions/zume-course.php:732 functions/zume-course.php:1086
+#: functions/zume-course.php:1443 functions/zume-course.php:1874
+#: functions/zume-course.php:2124 functions/zume-course.php:2373
+#: functions/zume-course.php:2589 functions/zume-course.php:2800
+#: functions/zume-course.php:3197
+msgid "#ZumeProject"
+msgstr "#జుమ్ ప్రాజెక్ట్ (పథకం)"
+
+#: functions/zume-course.php:734
+msgid "Take a picture of your S.O.A.P.S. Bible study and share it on social media."
+msgstr "మీ S.O.A.P.S. బైబిలు అధ్యయనానికి స౦బ౦ధి౦చిన ఒక చిత్రాన్ని తీసుకొని దాన్ని సామాజిక మాధ్యమంలో పంచుకోండి."
+
+#: functions/zume-course.php:753
+msgid "WELCOME BACK!"
+msgstr "పునః స్వాగతం!"
+
+#: functions/zume-course.php:759
+msgid "DOWNLOAD"
+msgstr "(పొందుకొనుము) డౌన్లోడ్"
+
+#: functions/zume-course.php:761
+msgid "Does everyone have a printed copy of the Zúme Guidebook? If not, please be sure that someone can download the Guidebook and that everyone has access to some paper and a pen or pencil."
+msgstr "ప్రతి ఒక్కరు జుమ్ మార్గనిర్దేశ పుస్తక ముద్రణా ప్రతిని కలిగి ఉన్నారా? ఒకవేళ లేకపోతే, దయచేసి ఎవరైనా ఒకరు మార్గనిర్దేశ పుస్తకమును డౌన్ లోడ్ చేసుకొని ప్రతి ఒక్కరికి ఏదో కాగితము, ఒక పెన్ను లేదా పెన్సిల్ కలిగియుండునట్లుగా ధృవీకరించుకోండి."
+
+#: functions/zume-course.php:767
+msgid "DOWNLOAD GUIDEBOOK"
+msgstr "మార్గనిర్దేశ పుస్తకము పొందుకొనుము (డౌన్ లోడ్ గైడ్ బుక్)"
+
+#: functions/zume-course.php:774 functions/zume-course.php:1111
+#: functions/zume-course.php:1482 functions/zume-course.php:1900
+#: functions/zume-course.php:2149 functions/zume-course.php:2398
+#: functions/zume-course.php:2613 functions/zume-course.php:2827
+#: functions/zume-course.php:3223
+msgid "CHECK-IN"
+msgstr "పరిశీలించుట"
+
+#: functions/zume-course.php:776 functions/zume-course.php:1114
+#: functions/zume-course.php:2615 functions/zume-course.php:2831
+#: functions/zume-course.php:3225
+msgid "Before getting started, take some time to check-in."
+msgstr "మొదలు పెట్టడానికి ముందు, కొంత సమయం పరిశీలించటానికి తీసుకోండి."
+
+#: functions/zume-course.php:778 functions/zume-course.php:1118
+#: functions/zume-course.php:1484 functions/zume-course.php:2151
+#: functions/zume-course.php:2400 functions/zume-course.php:2617
+#: functions/zume-course.php:2833 functions/zume-course.php:3227
+msgid "At the end of the last session, everyone in your group was challenged in two ways:"
+msgstr "ముందు తరగతి చివర్లో, మీ గుంపులో ఉన్న ప్రతి ఒక్కరూ రెండు విధాలుగా సవాలు చేయబడినారు:"
+
+#: functions/zume-course.php:781
+msgid "You were asked to begin practicing the S.O.A.P.S. Bible reading method and keeping a daily journal."
+msgstr "మీరు S.O.A.P.S. బైబిలు పఠన పద్ధతిని ఆచరిస్తూ, ఒక దినచర్య పుస్తకాన్ని ప్రారంభించాలని కోరబడినారు."
+
+#: functions/zume-course.php:783
+msgid "You were encouraged to reach out to someone about starting an Accountability Group."
+msgstr "ఒక జవాబుదారీతనం ఉన్న బృందాన్ని ప్రారంభించడం గురించి మీరు ఎవరినైనా చేరుకోవాలని ప్రోత్సహించబడినారు."
+
+#: functions/zume-course.php:785 functions/zume-course.php:1126
+#: functions/zume-course.php:1493 functions/zume-course.php:1910
+#: functions/zume-course.php:2157 functions/zume-course.php:2410
+#: functions/zume-course.php:2627 functions/zume-course.php:2842
+msgid "Take a few moments to see how your group did this week."
+msgstr "మీ బృందం ఈ వారం ఎలా పనిచేసిందో చూడడానికి కొన్ని నిమిషములు కేటాయంచండి."
+
+#: functions/zume-course.php:792
+msgid "Ask if anyone in the group has specific needs they would like the group to pray for. Ask someone to pray and ask God to help in the areas the group shared. Be sure to thank God that He promises in His Word to listen and act when His people pray. And, as always, ask God's Holy Spirit to lead your time, together."
+msgstr "బృందంలోని ఎవరికైనా నిర్ధిష్ట అవసరాలు ఉన్నాయా అని తెలుసుకొని బృందంలో ఉన్న ఎవరినైనా ఆయొక్క అవసరాల గురించి ప్రార్థన చేయమని అడగండి. తండ్రియైన దేవుడు ప్రజలు ప్రార్ధించినప్పుడు ఆలకించి, ఉత్తరమిచ్చెదనని తన వాక్య౦లో వాగ్దాన౦ చేసిన దేవునికి కృతజ్ఞతలు తెలుపుకోవాలి. మరియు, ఎల్లప్పుడూ మీ సమయాన్ని పరిశుద్దాత్మ దేవునితో కలిసి నడిపించమని తండ్రియైన దేవుడిని అడగండి."
+
+#: functions/zume-course.php:813
+msgid "If we want to make disciples who multiply – spiritual producers and not just consumers – then we need to learn and share four main ways God makes everyday followers more like Jesus:"
+msgstr "మనము శిష్యులను అభివృద్ధి చేసే శిష్యులను తయారుచేయాలనుకుంటే - కేవలము వినియోగదారుల వలే కాక ఆధ్యాత్మిక ఉత్పత్తిదారులుగా తయారు చేయాలనుకుంటే - యేసు వలె శిష్యులను ప్రతిరోజూ తయారుచేయాలి అంటే మనం నేర్చుకొనవలసిన మరియు పంచుకోవలసిన నాలుగు ప్రధాన మార్గాలను, దేవుడు ఏర్పరచినాడు:"
+
+#: functions/zume-course.php:815
+msgid "Prayer"
+msgstr "ప్రార్థన"
+
+#: functions/zume-course.php:816
+msgid "Scripture"
+msgstr "లేఖనము"
+
+#: functions/zume-course.php:817
+msgid "Body Life"
+msgstr "శారీరక జీవితం"
+
+#: functions/zume-course.php:818
+msgid "Persecution and Suffering"
+msgstr "హి౦సలు మరియు బాధలు"
+
+#: functions/zume-course.php:837
+msgid "Zúme Video Scripts: Producers vs Consumers"
+msgstr "జుమ్ వీడియో స్క్రిప్ట్స్(లిపి) : నిర్మాతలు వెర్సెస్ వినియోగదారులు"
+
+#: functions/zume-course.php:846
+msgid "Of the four areas detailed above (prayer, God's Word, etc.), which ones do you already practice?"
+msgstr "పైన వివరణాత్మకంగా ఉన్న నాలుగు విషయాలలో (ప్రార్థన, దేవుని వాక్యము మొదలైనవి), వీటిలో మీరు ఇప్పటికే సాధన చేసినవి ఏమిటి?"
+
+#: functions/zume-course.php:848
+msgid "Which ones do you feel unsure about?"
+msgstr "మీకు ఏవి స్పష్టంగా తెలియవు?"
+
+#: functions/zume-course.php:849
+msgid "How ready do you feel when it comes to training others?"
+msgstr "మీరు ఇతరులకు శిక్షణ ఇవ్వడం కొరకు ఎంత సిద్ధంగా ఉన్నట్లు భావిస్తారు?"
+
+#: functions/zume-course.php:860
+msgid "Listen and Read Along (2min)"
+msgstr "వినండి మరియు వెంట చదవండి (2 ని:)"
+
+#: functions/zume-course.php:870 template-zume-dashboard.php:294
+msgid "Prayer Cycle"
+msgstr "ప్రార్థనా చక్రం"
+
+#: functions/zume-course.php:871
+msgid "The Bible tells us that prayer is our chance to speak to and hear from the same God who created us!"
+msgstr "ప్రార్ధన అనేది, మనలను సృష్టి౦చిన దేవుని మాటలను వినడానికి మరియు ఆయనతో మాట్లాడటానికి ఒక మంచి అవకాశము అని పరిశుద్ధ గ్రంధం (బైబిల్) చెపుతుంది!"
+
+#: functions/zume-course.php:881
+msgid "Find the \"Prayer Cycle\" section in your Zúme Guidebook, and listen to the audio below."
+msgstr "మీ జుమ్ మార్గనిర్దేశ పుస్తకంలో”ప్రార్థనా చక్రం\" విభాగాన్ని కనుగొనండి, మరియు దిగువ ఆడియో వినండి."
+
+#: functions/zume-course.php:903
+msgid "Zúme Video Scripts: Prayer Cycle"
+msgstr "జుమ్ వీడియో స్క్రిప్ట్స్(లిపి) : ప్రార్థనా చక్రం"
+
+#: functions/zume-course.php:914
+msgid "Practice the Prayer Cycle (60min)"
+msgstr "ప్రార్ధనా చక్రాన్ని అభ్యాసం చేయాలి (60ని:)"
+
+#: functions/zume-course.php:920
+msgid "LEAVE"
+msgstr "వదలండి (సెలవు)"
+
+#: functions/zume-course.php:922
+msgid "Spend the next 60 minutes in prayer individually, using the exercises in \"The Prayer Cycle\" section of the Zúme Guidebook as a guide."
+msgstr "తదుపరి 60 నిమిషాలు వ్యక్తిగతంగా ప్రార్థనలో గడపండి, మీ జుమ్ మార్గనిర్దేశ పుస్తకం ఆధారంగా \"ప్రార్థనా చక్రం\" విభాగంలో అభ్యాసాలను ఉపయోగించండి."
+
+#: functions/zume-course.php:927
+msgid "RETURN"
+msgstr "తిరిగిరండి"
+
+#: functions/zume-course.php:929
+msgid "Set a time for the group to return and reconnect. Be sure to add a few extra minutes for everyone to both find a quiet place to pray and to make their way back to the group."
+msgstr "తిరిగివచ్చి బృందముతో కలవడానికి ఒక సమయమును ఏర్పాటు చేసుకోండి. ప్రతి ఒక్కరు ప్రార్థన చేయడానికి ఒక నిశ్శబ్ద ప్రదేశాన్ని కనుగొని మరియు తిరిగి సమూహంలో చేరడానికి వారికి కొన్ని అదనపు నిమిషాలను జతచెయ్యాలని గుర్తుంచుకోండి."
+
+#: functions/zume-course.php:937
+msgid "What is your reaction to spending an hour in prayer?"
+msgstr "ప్రార్ధనలో ఒక గంట గడుపుచున్నందుకు మీ స్పందన ఏమిటి?"
+
+#: functions/zume-course.php:938
+msgid "How do you feel?"
+msgstr "మీకు ఎలా అనిపిస్తుంది?"
+
+#: functions/zume-course.php:939
+msgid "Did you learn or hear anything?"
+msgstr "మీరు ఏదైనా నేర్చుకున్నారా లేదా విన్నారా?"
+
+#: functions/zume-course.php:940
+msgid "What would life be like if you made this kind of prayer a regular habit?"
+msgstr "ఈ విధమైన ప్రార్థనను మీరు క్రమ౦గా అలవాటుగా చేసుకున్న యెడల మీ జీవిత౦ ఎలా ఉ౦టు౦ది?"
+
+#: functions/zume-course.php:963 template-zume-dashboard.php:295
+msgid "List of 100"
+msgstr "100 మంది జాబితా"
+
+#: functions/zume-course.php:966
+msgid "God has already given us the relationships we need to “Go and make disciples.” These are our family, friends, neighbors, co-workers and classmates – people we’ve known all our lives or maybe just met."
+msgstr "మనం వెళ్లి శిష్యులను చేయటానికి, దేవుడు మనకు అవసరమైన కుటుంబం, స్నేహితులు, పొరుగువారు, తోటి పనివారు మరియు మనతో చదువుకున్నవారు వంటి అన్ని స౦బ౦ధాలను ఇచ్చాడు - మన జీవితాలు పూర్తిగా తెలిసినవారు లేదా అప్పుడే కలసినవారు."
+
+#: functions/zume-course.php:969
+msgid "Being good stewards of these relationships is the first step in multiplying disciples. Start by making a list."
+msgstr "ఈ సంబంధాలలో మంచి నిర్వాహకులుగా ఉండటం అనేది శిష్యులను తయారుచేయటానికి మొదటి మెట్టు. జాబితా తయారు చేయడం ద్వారా ప్రారంభించండి."
+
+#: functions/zume-course.php:980
+msgid "Find the \"List of 100\" section in your Zúme Guidebook, and listen to the audio below."
+msgstr "మీ జుమ్ మార్గనిర్దేశ పుస్తకంలోని ' ' 100 మంది జాబితా ' ' విభాగాన్ని కనుగొనండి మరియు దిగువ ఆడియోని వినండి."
+
+#: functions/zume-course.php:1002
+msgid "Zúme Video Scripts: List of 100"
+msgstr "జుమ్ వీడియో స్క్రిప్ట్స్(లిపి): 100 మంది జాబితా"
+
+#: functions/zume-course.php:1013
+msgid "Project (30min)"
+msgstr "పథకం (ప్రాజెక్ట్ ) 30ని:"
+
+#: functions/zume-course.php:1023
+msgid "Create your own list of 100"
+msgstr "మీరు స్వంతముగా 100 మంది జాబితా తయారుచేసుకోండి"
+
+#: functions/zume-course.php:1025
+msgid "Have everyone in your group take the next 30 minutes to fill out their own inventory of relationships using the form in the \"List of 100\" section in your Zúme Guidebook. "
+msgstr "మీ జుమ్ మార్గనిర్దేశ పుస్తకంలోని ' ' 100 మంది జాబితా ' 'విభాగంలోని (ఫారాన్ని) నమూనా ఉపయోగించి తమ స్వంత జాబితాని నింపడానికి మీ బృందములో ఉన్న ప్రతి ఒక్కరూ మరో 30 నిమిషాలు తీసుకోండి."
+
+#: functions/zume-course.php:1044
+msgid "Congratulations on finishing Session 2! "
+msgstr "అభినందనలు! మీరు సెషన్ 2 (రెండవ తరగతి) పూర్తి చేశారు"
+
+#: functions/zume-course.php:1067
+msgid "Spend time this week praying for five people from your List of 100 that you marked as an \"Unbeliever\" or \"Unknown.\" Ask God to prepare their hearts to be open to His story."
+msgstr "మీరు ఒక \"అవిశ్వాసి\" లేదా \"తెలియని వారు\" గా మార్క్ చేసిన మీ 100 మంది జాబితా నుండి ఐదుగురి వ్యక్తుల కొరకు ప్రార్థించుటకు ఈ వారం సమయం వెచ్చించండి. తనను గూర్చి గ్రహించుటకు వారి హృదయాలను సిద్ధం చేయమని దేవుడిని అడగండి."
+
+#: functions/zume-course.php:1074
+msgid "Ask God who He wants you to share the List of 100 tool with. Share this person's name with the group before you go and reach out to them before the next session."
+msgstr "100 మంది జాబితాలో మీరు ఎవరితో పంచుకోవాలని ఆయన కోరుచున్నాడో దేవుడిని అడగండి. మీరు ముందు ఈ వ్యక్తి యొక్క పేరును బృందముతో పంచుకొని తరువాతి తరగతికి ముందుగా వెళ్లి వారిని కలవండి."
+
+#: functions/zume-course.php:1081 functions/zume-course.php:1438
+#: functions/zume-course.php:1869
+msgid "Pray that God help you be obedient to Him and invite Him to work in you and those around you!"
+msgstr "దేవుడు మీలోను , మీ చుట్టూ ఉన్న వారిలోను పనిచేయాలని ఆహ్వానించి, మీరు ఆయనకు విధేయులుగా ఉండునట్లు సహాయము చేయమని ప్రార్థించండి!"
+
+#: functions/zume-course.php:1088
+msgid "Think others could use the 60-minute prayer tool? Share about it on social media."
+msgstr "ఈ 60 నిమిషాల ప్రార్ధనా ఉపకరణాన్ని ఇతరులు ఉపయోగించవచ్చని భావిస్తున్నారా? దాని గురించి సామాజిక మాధ్యమంలో పంచుకొండి."
+
+#: functions/zume-course.php:1105 functions/zume-course.php:1476
+#: functions/zume-course.php:1893 functions/zume-course.php:2143
+#: functions/zume-course.php:2392 functions/zume-course.php:2607
+#: functions/zume-course.php:2819
+msgid "LOOKING BACK"
+msgstr "వెనక్కి తిరిగి చూచుట"
+
+#: functions/zume-course.php:1122
+msgid "You were asked to pray for five people from your List of 100 that you marked as an \"Unbeliever\" or \"Unknown.\""
+msgstr "మీరు ఒక \"అవిశ్వాసి\" లేదా \"తెలియని వారు\" గా మార్క్ చేసిన మీ 100 మంది జాబితా నుండి ఐదుగురి వ్యక్తుల కొరకు ప్రార్థించమని కోరబడినారు."
+
+#: functions/zume-course.php:1123
+msgid "You were encouraged to share how to make a List of 100 with someone."
+msgstr "100 మంది కలిగిన జాబితాను ఎలా తయారు చేయాలో ఎవరితోనైనా పంచుకోమని మీరు ప్రోత్సహించబడినారు."
+
+#: functions/zume-course.php:1133 functions/zume-course.php:1502
+#: functions/zume-course.php:1917
+msgid "Pray and thank God for the results and invite His Holy Spirit to lead your time together."
+msgstr "ఫలితముల కొరకు దేవునికి కృతజ్ఞతలు చెప్పి, మీ సహవాసములో పరిశుద్ధాత్మ దేవుని నడిపింపు కొరకు ఆయనను ఆహ్వానించండి."
+
+#: functions/zume-course.php:1138 functions/zume-course.php:1507
+#: functions/zume-course.php:1922 functions/zume-course.php:2169
+#: functions/zume-course.php:2422 functions/zume-course.php:2639
+#: functions/zume-course.php:2857 functions/zume-course.php:3034
+#: functions/zume-course.php:3249
+msgid "OVERVIEW"
+msgstr "సారాంశము"
+
+#: functions/zume-course.php:1140
+msgid "In this session, you’ll learn how God’s Spiritual Economy works and how God invests more in those who are faithful with what they've already been given. You'll also learn two more tools for making disciples – sharing God’s Story from Creation to Judgement and Baptism."
+msgstr "ఈ తరగతిలో, దేవుని ఆధ్యాత్మిక ఆర్థిక వ్యవస్థ ఎలా పనిచేస్తుందో, అప్పగింపబడిన వాటిలో నమ్మకస్థులైన వారిపై దేవుడు ఇంకా ఎక్కువ పెట్టుబడి ఎలా పెడతాడో మీరు తెలుసుకుంటారు. మరియు మీరు మరో రెండు ఉపకరణాలు (విధానాలు) శిష్యులను తయారు చేయడానికి నేర్చుకుంటారు – సృష్టి ఆరంభం నుండి తీర్పు మరియు బాప్తిస్మము వరకు దేవుని కథను పంచుకోవడం."
+
+#: functions/zume-course.php:1142 functions/zume-course.php:1511
+msgid "Then, when you're ready, get started!"
+msgstr "మీరు సిద్ధంగా ఉన్నప్పుడు, మొదలు పెట్టండి!"
+
+#: functions/zume-course.php:1162
+msgid "In this broken world, people feel rewarded when they take, when they receive and when they gain more than those around them. But God's Spiritual Economy is different – God invests more in those who are faithful with what they've already been given."
+msgstr "విరిగిన ఈ లోక౦లో ప్రజలు తమ చుట్టూ ఉన్నవారి క౦టే ఎక్కువ తీసుకున్నప్పుడు, స్వీకరి౦చినప్పుడు మరియు స౦పాది౦చుకున్నప్పుడు ఎంతో గొప్పగా భావిస్తారు. కానీ దేవుని ఆధ్యాత్మిక ఆర్థిక వ్యవస్థ విభిన్నము - ముందుగా అప్పగింపబడిన వాటిలో నమ్మకస్థులైన వారిపై దేవుడు ఇంకా ఎక్కువ పెట్టుబడి పెడతాడు."
+
+#: functions/zume-course.php:1179
+msgid "Zúme Video Scripts: Spiritual Economy"
+msgstr "జుమ్ వీడియో స్క్రిప్ట్స్(లిపి) : ఆధ్యాత్మిక ఆర్థిక వ్యవస్థ"
+
+#: functions/zume-course.php:1186
+msgid "What are some differences you see between God's Spiritual Economy and our earthly way of getting things done?"
+msgstr "దేవుని ఆధ్యాత్మిక వ్యవస్థకు మరియు మన భూస౦బ౦ధమైన విధానాలకు మీరు గమనించిన కొన్ని తేడాలు ఏమిటి?"
+
+#: functions/zume-course.php:1198 functions/zume-course.php:1313
+msgid "Read and Discuss (15min)"
+msgstr "చదవండి మరియు చర్చించడం (15ని:)"
+
+#: functions/zume-course.php:1207
+msgid "Jesus said, “You will receive power when the Holy Spirit comes upon you. And you will be my witnesses, telling people about me everywhere – in Jerusalem, throughout Judea, in Samaria, and to the ends of the earth.”"
+msgstr "యేసు చెప్పెను, \"పరిశుద్ధాత్మ మీ మీదికి వచ్చునప్పుడు మీరు శక్తినొందెదరు గనుక మీరు యెరూషలేములోను, యూదయ సమరయ దేశములయందంతటను భూదిగంతముల వరకును, నాకు సాక్షులైయు౦దురు.\""
+
+#: functions/zume-course.php:1210
+msgid "Jesus believed in His followers so much, He trusted them to tell His story. Then He sent them around the world to do it. Now, He’s sending us."
+msgstr "యేసు తన అనుచరులను ఎ౦తో నమ్మాడు, తన కథ చెప్పమని వాళ్లను నమ్మాడు. ఆ తర్వాత దాన్ని చేయడానికి ప్రపంచ వ్యాప్తంగా వారిని పంపాడు. ఇప్పుడు, ఆయన మనలను పంపుచున్నాడు."
+
+#: functions/zume-course.php:1213
+msgid "There’s no one “best way” to tell God’s story (also called The Gospel), because the best way will depend on who you’re sharing with. Every disciple should learn to tell God’s Story in a way that’s true to scripture and connects with the audience they’re sharing with."
+msgstr "దేవుని కథ (సువార్త అని కూడా పిలవబడుతుంది) చెప్పడానికి ఒక \"ఉత్తమ మార్గం\" అనేది లేదు, ఎందుకంటే ఆ ఉత్తమ మార్గం మీరు ఎవరితో పంచుకుంటున్నారో వారిపై ఆధారపడి ఉంటుంది. ప్రతి శిష్యుడు దేవుని కథను, ఒక విధంగా లేఖనానికి సంబంధించిన సత్యం మరియు వారు పంచుకుంటున్న ప్రేక్షకులతో కలిపే విధంగా చెప్పడం నేర్చుకోవాలి."
+
+#: functions/zume-course.php:1222
+msgid "What comes to mind when you hear God's command to be His \"witness\" and to tell His story?"
+msgstr "మీరు “దేవుని సాక్షి గా” ఉండాలని మరియు ఆయన సువార్త చెప్పాలని దేవుని ఆజ్ఞ మొదటిగా విన్నప్పుడు మీ మనస్సులో ఏం అనిపించింది?"
+
+#: functions/zume-course.php:1224
+msgid "Why do you think Jesus chose ordinary people instead of some other way to share His Good News?"
+msgstr "యేసు తన సువార్తను ప౦చుకోవడానికి వేరే మార్గ౦కన్నా సాధారణ ప్రజలను ఎ౦దుకు ఎ౦పిక చేసుకుంటారని అనుకుంటున్నారు?"
+
+#: functions/zume-course.php:1226
+msgid "What would it take for you to feel more comfortable sharing God's Story?"
+msgstr "మీరు మరి౦త సులువుగా, సౌకర్యవ౦త౦గా దేవుని కథను పంచుకోవటానికి మీకు ఏమి కావాలనిపిస్తు౦ది?"
+
+#: functions/zume-course.php:1247 template-zume-dashboard.php:298
+msgid "The Gospel"
+msgstr "సువార్త"
+
+#: functions/zume-course.php:1248
+msgid "One way to share God’s Good News is by telling God’s Story from Creation to Judgement – from the beginning of humankind all the way to the end of this age."
+msgstr "దేవుని సువార్తను ప౦చుకోవడానికి ఒక మార్గ౦, దేవుని కథను సృష్టి ను౦డి తీర్పు వరకు చెప్పడ౦ ద్వారా – మానవజాతి ఆర౦భమైనదాని ను౦డి ఈ యుగపు చివరి వరకు."
+
+#: functions/zume-course.php:1266
+msgid "Zúme Video Scripts: The Gospel"
+msgstr "జుమ్ వీడియో స్క్రిప్ట్స్(లిపి) : సువార్త"
+
+#: functions/zume-course.php:1275
+msgid "What do you learn about mankind from this story?"
+msgstr "ఈ కథ నుండి మానవజాతి గూర్చి మీరు ఏమి నేర్చుకుంటారు?"
+
+#: functions/zume-course.php:1276
+msgid "What do you learn about God?"
+msgstr "దేవుని గూర్చి మీరు ఏమి నేర్చుకుంటారు?"
+
+#: functions/zume-course.php:1277
+msgid "Do you think it would be easier or harder to share God's Story by telling a story like this?"
+msgstr "దేవుని సువార్తను ఇలా ఒక కథగా చెప్పటం సులభమనుకుంటున్నారా లేక కష్టమనుకుంటున్నారా?"
+
+#: functions/zume-course.php:1289
+msgid "PRACTICE SHARING GOD'S STORY (45min)"
+msgstr "దేవుని కథను పంచుకోవడం సాధన చేయండి (45ని:)"
+
+#: functions/zume-course.php:1298
+msgid "Break into groups of two or three people and spend the next 45 minutes practicing telling God's Story. You can use the using the Activity instructions for \"God's Story\" found in your Zúme Guidebook."
+msgstr "ఇద్దరు లేదా ముగ్గురు వ్యక్తులుగా విడిపోయి, తదుపరి 45 నిమిషాలు దేవుని కథను చెప్పడం సాధన చేయండి. మీ జుమ్ మార్గనిర్దేశ పుస్తకంలో కనిపించే \"దేవుని కథ\" కోసం ఉపయోగించదగిన కార్యాచరణ సూచనలను ఉపయోగించి చేయవచ్చు."
+
+#: functions/zume-course.php:1322 template-zume-dashboard.php:299
+msgid "Baptism"
+msgstr "బాప్తిస్మము"
+
+#: functions/zume-course.php:1325
+msgid "Jesus said, “Go and make disciples of all nations, BAPTIZING them in the name of the Father and of the Son and of the Holy Spirit…”"
+msgstr "యేసు చెప్పెను, \"మీరు వెళ్లి సమస్త జనులను శిష్యులనుగా చేయుడి, తండ్రియొక్కయు కుమారునియొక్కయు పరిశుద్ధాత్మయొక్కయు నామములోనికి వారికి బాప్తిస్మమిచ్చుచు ...\""
+
+#: functions/zume-course.php:1336
+msgid "Find the \"Baptism\" section in your Zúme Guidebook, and listen to the audio below."
+msgstr "మీ జుమ్ మార్గనిర్దేశ పుస్తకంలో ”బాప్తిస్మము\" విభాగాన్ని కనుగొనండి, మరియు దిగువ ఆడియో వినండి."
+
+#: functions/zume-course.php:1357
+msgid "Zúme Video Scripts: Baptism"
+msgstr "జుమ్ వీడియో స్క్రిప్ట్స్(లిపి): బాప్తిస్మము"
+
+#: functions/zume-course.php:1365
+msgid "Have you ever baptized someone?"
+msgstr "మీరు ఎప్పుడైనా ఎవరికైనా బాప్తిస్మ౦ ఇచ్చారా?"
+
+#: functions/zume-course.php:1366
+msgid "Would you even consider it?"
+msgstr "మీరు ఎప్పుడైనా దానిని పరిగణలోకి తీసుకున్నారా?"
+
+#: functions/zume-course.php:1367
+msgid "If the Great Commission is for every follower of Jesus, does that mean every follower is allowed to baptize others? Why or why not?"
+msgstr "గొప్ప ఆజ్ఞ యేసు యొక్క ప్రతి అనుచరుడి కోసం అయితే, దానర్థం ప్రతి అనుచరుడు ఇతరులకు బాప్తిస్మమివ్వవచ్చనా? ఎందుకు లేక ఎందుకు కాదు?"
+
+#: functions/zume-course.php:1380
+msgid "IMPORTANT REMINDER – Have you been baptized?"
+msgstr "ముఖ్యమైన జ్ఞాపకము – మీరు బాప్తిస్మం తీసుకున్నారా?"
+
+#: functions/zume-course.php:1383
+msgid "If not, then we encourage you to plan this before even one more session of this training. Invite your group to be a part of this important day when you celebrate saying \"yes\" to Jesus."
+msgstr "లేకపోతే, ఈ శిక్షణ యొక్క మరొక తరగతికి ముందే బాప్తిస్మము తీసుకోవాలని ప్రోత్సహిస్తున్నాము. యేసుని ఆజ్ఞకు \"అవును\" అని చెప్పే ఈ ముఖ్యమైన వేడుకలో భాగముగా మీ బృందాన్ని ఆహ్వానించండి."
+
+#: functions/zume-course.php:1402
+msgid "Congratulations on finishing Session 3! "
+msgstr "అభినందనలు! మీరు సెషన్ 3 (3వ తరగతి)పూర్తి చేశారు."
+
+#: functions/zume-course.php:1424
+msgid "Spend time this week practicing God's Story, and then share it with at least one person from your List of 100 that you marked as \"Unbeliever\" or \"Unknown.\""
+msgstr "దేవుని కథను (సువార్తను) ఈ వారం సాధనచేస్తూ, మీరు ఒక \"అవిశ్వాసి\" లేదా \"తెలియని వారు\" గా మార్క్ చేసిన మీ 100 మంది జాబితా నుండి కనీసం ఒకరికి పంచుకోండి."
+
+#: functions/zume-course.php:1431
+msgid "Ask God who He wants you to train to use the Creation to Judgment story (or some other way to share God's Story). Share this person's name with the group before you go."
+msgstr "సృష్టి నుండి తీర్పు కథను (లేదా మరొక విధముగా సువార్తను) మీరు ఎవరితో పంచుకోవాలని ఆయన కోరుచున్నాడో దేవుడిని అడగండి. మీరు ముందు ఈ వ్యక్తి యొక్క పేరును బృందముతో పంచుకొని తరువాత వెళ్ళండి."
+
+#: functions/zume-course.php:1445
+msgid "What’s been your Zúme highlight? Tell others about it on social media."
+msgstr "మీ జుమ్ ముఖ్యాంశాలు ఏమిటి? వాటి గురించి ఇతరులకు సామాజిక మాధ్యమంలో చెప్పండి."
+
+#: functions/zume-course.php:1456
+msgid "IMPORTANT REMINDER – Your group will be celebrating the Lord's Supper next session. Be sure to remember the supplies (bread and wine / juice)."
+msgstr "ముఖ్యమైన జ్ఞాపకము – మీ బృందము తదుపరి తరగతిలో ప్రభువు రాత్రి భోజనం జరుపుకుంటుంది. అవసరమైనవి (రొట్టె మరియు ద్రాక్షారసము) ఖచ్చితంగా గుర్తు పెట్టుకోండి."
+
+#: functions/zume-course.php:1487
+msgid "You were asked to share God’s Story with at least one person from your List of 100 that you marked as \"Unbeliever\" or \"Unknown.\""
+msgstr "మీరు ఒక \"అవిశ్వాసి\" లేదా \"తెలియని వారు\" గా మార్క్ చేసిన మీ 100 మంది జాబితా నుండి కనీసం ఒకరికి దేవుని కథను( సువార్తను) పంచుకొనమని కోరబడినారు."
+
+#: functions/zume-course.php:1490
+msgid "You were encouraged to train someone to use the Creation to Judgement story (or some other way to share God’s Story) with someone."
+msgstr "సృష్టి నుండి తీర్పు కథను (లేదా మరొక విధముగా సువార్తను) పంచుకొనుటకు మీరు ఎవరికైనా తర్ఫీదు ఇవ్వమని ప్రోత్సహించబడినారు."
+
+#: functions/zume-course.php:1509
+msgid "In this session, you'll learn how God's plan is for every follower to multiply! You’ll discover how disciples multiply far and fast when they start to see where God’s Kingdom isn’t. And, you'll learn another great tool for inviting others into God's family is as simple as telling our story."
+msgstr "ఈ తరగతిలో ప్రతి అనుచరుడు ఎలా ఫలించి అభివృద్ధి చెందాలో మీరు నేర్చుకుంటారు! శిష్యులు దేవుని రాజ్య సువార్త లేని ప్రాంతాలను చూసి, ఎంత త్వరగా ఎంత దూరముగా విస్తరించారో మీరు కనుగొంటారు. మరియు మీరు దేవుని కుటుంబంలోకి ఇతరులను ఆహ్వానించడం కోసం మరొక గొప్ప సాధనంగా, సులువుగా మన కథను(సాక్ష్యము) చెప్పుటను నేర్చుకుంటారు."
+
+#: functions/zume-course.php:1532
+msgid "3-Minute Testimony"
+msgstr "3 నిమిషాల సాక్ష్యము"
+
+#: functions/zume-course.php:1535
+msgid "As followers of Jesus, we are “witnesses\" for Him, because we “testify” about the impact Jesus has had on our lives. Your story of your relationship with God is called your Testimony. It's powerful, and it's something no one can share better than you."
+msgstr "యేసు అనుచరులుగా మన౦ ఆయన కోస౦ \"సాక్షులుగా\" ఉన్నాము, ఎ౦దుక౦టే యేసు మన జీవితాలపై చూపిన ప్రభావ౦ గురి౦చి మన౦ ' సాక్ష్యమివ్వవచ్చు.' మీ కథ - మీ దేవునితో మీకున్న సంబంధమే మీ సాక్ష్యమని అంటారు. ఇది శక్తివంతమైనది మరియు ఇది మీ కంటే మెరుగ్గా ఎవరూ పంచుకోలేరు."
+
+#: functions/zume-course.php:1546
+msgid "Find the \"3-Minute Testimony\" section in your Zúme Guidebook, and listen to the audio below."
+msgstr "మీ జుమ్ మార్గనిర్దేశ పుస్తకంలో “3-నిమిషాల సాక్ష్యము” విభాగాన్ని కనుగొనండి, మరియు క్రింది ఆడియో వినండి."
+
+#: functions/zume-course.php:1567
+msgid "Zúme Video Scripts: Testimony"
+msgstr "జుమ్ వీడియో స్క్రిప్ట్స్(లిపి) : సాక్ష్యము"
+
+#: functions/zume-course.php:1578
+msgid "Practice Sharing your Testimony (45min)"
+msgstr "మీ సాక్ష్యమును పంచుకోవడం సాధన చేయండి (45ని:)"
+
+#: functions/zume-course.php:1588
+msgid "Break into groups of two or three and and spend the next 45 minutes practicing sharing your Testimony using the Activity instructions on page 15 of your Zúme Guidebook."
+msgstr "ఇద్దరు లేదా ముగ్గురు వ్యక్తులుగా విడిపోయి, తదుపరి 45 నిమిషాలు మీ జుమ్ మార్గనిర్దేశ పుస్తకంలో 15వ పేజీలోని కార్యాచరణ సూచనలను ఉపయోగించి మీ సాక్ష్యమును చెప్పడం సాధన చేయండి."
+
+#: functions/zume-course.php:1612
+msgid "What is God's greatest blessing for His children? Making disciples who multiply!"
+msgstr "దేవుని పిల్లలకు దేవుడిచ్చే గొప్ప ఆశీర్వాదం ఏమిటి? శిష్యులను విస్తరింప చేసే శిష్యులను తయారు చేయడం!"
+
+#: functions/zume-course.php:1614
+msgid "What if you could learn a simple pattern for making not just one follower of Jesus but entire spiritual families who multiply for generations to come?"
+msgstr "కేవల౦ ఒక్క యేసు అనుచరుని కాక, తరతరాలుగా విస్తరి౦చగల ఆత్మీయ కుటు౦బాలను తయారుచేయగల ఒక సామాన్యమైన మాదిరిని నీవు నేర్చుకుంటే ఎలా ఉంటుంది?"
+
+#: functions/zume-course.php:1632
+msgid "Zúme Video Scripts: Greatest Blessing"
+msgstr "జుమ్ వీడియో స్క్రిప్ట్స్(లిపి) : గొప్ప ఆశీర్వాదం"
+
+#: functions/zume-course.php:1643
+msgid "Is this the pattern you were taught when you first began to follow Jesus? If not, what was different?"
+msgstr "మీరు మొదట యేసును అనుసరి౦చినప్పుడు మీకు బోధి౦చిన నమూనా ఇదేనా? అదికాకపోతే, దానికి దీనికి వ్యత్యాసం ఏమిటి?"
+
+#: functions/zume-course.php:1645
+msgid "After you came to faith, how long was it before you began to disciple others?"
+msgstr "మీరు విశ్వాస౦లోకి వచ్చిన తర్వాత, ప్రాధమికంగా ఇతరులను శిష్యులుగా తయారు చెయ్యడానికి మీకు ఎ౦త కాల౦ పట్టింది?"
+
+#: functions/zume-course.php:1646
+msgid "What do you think would happen if new followers started sharing and discipling others, immediately?"
+msgstr "కొత్త అనుచరులు అయినవారు వెంటనే ఇతరులతో కలిసి పంచుకున్నప్పుడు మరియు శిష్యులను చేయ మొదలు పెడితే, ఏమి జరుగుతుందని మీరు భావిస్తారు?"
+
+#: functions/zume-course.php:1668
+msgid "What do ducklings have to do with disciple making? They lead and follow at the same time."
+msgstr "శిష్యులను చేసే పనిలో బాతు పిల్లలు (కొత్త అనుచరులు) ఏమి చేస్తారు? వారు అదే సమయంలో వెంబడిస్తూ మరియు నడిపిస్తూ ఉంటారు."
+
+#: functions/zume-course.php:1686
+msgid "Zúme Video Scripts: Duckling Discipleship"
+msgstr "జుమ్ వీడియో స్క్రిప్ట్స్(లిపి) : బాతు పిల్ల శిష్యరికం"
+
+#: functions/zume-course.php:1697
+msgid "What is one area of discipleship (reading/understanding the Bible, praying, sharing God's Story, etc.) that you want to learn more about? Who is someone that could help you learn?"
+msgstr "మీరు శిష్యరికంలో ఇంకా అధికముగా తెలుసుకోవాలని అనుకుంటున్న (బైబిల్ ని చదవడం/అర్థం చేసుకోవడం, ప్రార్థించటం, దేవుని కథను పంచుకోవడం మొదలైనవి) ఒక విషయం ఏమిటి? మీరు నేర్చుకోవడానికి సహాయపడే వ్యక్తి ఎవరు?"
+
+#: functions/zume-course.php:1699
+msgid "What is one area of discipleship that you feel you could share with others? Who is someone that you could share with?"
+msgstr "మీరు శిష్యరికంలోని ఏ విషయాన్ని ఇతరులతో పంచుకోవచ్చని భావిస్తున్నారు? మీరు పంచుకోగల ఆ వ్యక్తి ఎవరు?"
+
+#: functions/zume-course.php:1720
+msgid "Have you ever stopped to think about where God's Kingdom... isn't?"
+msgstr "దేవుని రాజ్య౦ ఎక్కడ లేదు అనే విషయం మీరు ఎప్పుడైనా ఆలోచించుట మానివేశారా?"
+
+#: functions/zume-course.php:1722
+msgid "Have you ever visited a home or a neighborhood or even a city where it seemed as if God was just... missing? These are usually the places where God wants to work the most."
+msgstr "మీరు ఎప్పుడైనా దేవుడు కేవలం... తప్పిపోయినట్లుగా అనిపించిన ఒక కుటుంబం లేదా ఒక పొరుగు ప్రాంతము లేదా ఒక నగరాన్ని సందర్శించరా? ఈ ప్రాంతాలు సాధారణంగా దేవుడు ఎక్కువగా పని చేయాలనుకుంటున్న ప్రదేశాలు."
+
+#: functions/zume-course.php:1740
+msgid "Zúme Video Scripts: Eyes to See"
+msgstr "జుమ్ వీడియో స్క్రిప్ట్స్(లిపి) : చూచుటకు నేత్రాలు"
+
+#: functions/zume-course.php:1749
+msgid "Who are you more comfortable sharing with -- people you already know or people you haven't met, yet?"
+msgstr "ఇంతకుముందే తెలిసిన వారితోనా లేదా ఇంకా ఎప్పుడూ కలవని వారితోనా - ఎవరితో పంచుకోవటం మీకు సౌకర్యంగా ఉంటుంది?"
+
+#: functions/zume-course.php:1751
+msgid "Why do you think that is?"
+msgstr "మీరు అది అని ఎందుకు అనుకుంటున్నారు?"
+
+#: functions/zume-course.php:1752
+msgid "How could you get better at sharing with people you're less comfortable with?"
+msgstr "మీకు అంతగా సౌకర్యవంతంగా లేని వ్యక్తులతో ఇంకా మెరుగుగా పంచుకోవటానికి ఎలా చేస్తారు?"
+
+#: functions/zume-course.php:1772
+msgid "The Lord's Supper"
+msgstr "ప్రభువు రాత్రి భోజన౦"
+
+#: functions/zume-course.php:1775
+msgid "Jesus said, “I am the living bread that came down from heaven. Whoever eats this bread will live forever. This bread is my flesh, which I will give for the life of the world.”"
+msgstr "\"పరలోకమునుండి దిగి వచ్చిన జీవాహారము నేనే. ఎవడైనను ఈ ఆహారము భుజించితే వాడెల్లప్పుడును జీవించును; మరియు నేనిచ్చు ఆహారము లోకమునకు జీవముకొరకైన నా శరీరమే.\" అని యేసు చెప్పెను."
+
+#: functions/zume-course.php:1786
+msgid "Find \"The Lord's Supper\" section in your Zúme Guidebook, and listen to the audio below."
+msgstr "“ప్రభువు రాత్రి భోజన౦” అనే విభాగాన్ని మీ జుమ్ మార్గదర్శ పుస్తకంలో కనుగొని, ఈ క్రింది ఆడియో వినండి."
+
+#: functions/zume-course.php:1807
+msgid "Zúme Video Scripts: Lord's Supper"
+msgstr "జుమ్ వీడియో స్క్రిప్ట్స్(లిపి): ప్రభువు రాత్రి భోజన౦"
+
+#: functions/zume-course.php:1818
+msgid "Practice the Lord's Supper (10min)"
+msgstr "ప్రభువు రాత్రి భోజనము ఆచరించండి (10 ని:)"
+
+#: functions/zume-course.php:1828
+msgid "Spend the next 10 minutes celebrating The Lord's Supper with your group using the pattern on page 15 of your Zúme Guidebook."
+msgstr "మీ జుమ్ మార్గదర్శ పుస్తకం యొక్క 15 వ పేజీలో నమూనాను ఉపయోగించి మీ బృందంతో కలసి ప్రభువు రాత్రి భోజనం జరుపుకొనుటకు 10 నిమిషాలపాటు గడపండి."
+
+#: functions/zume-course.php:1846
+msgid "Congratulations on finishing Session 4!"
+msgstr "4వ తరగతి పూర్తిచేసినందుకు అభినందనలు!"
+
+#: functions/zume-course.php:1855
+msgid "Spend time this week practicing your 3-Minute Testimony, and then share it with at least one person from your List of 100 that you marked as \"Unbeliever\" or \"Unknown.\""
+msgstr "మీ 3 నిమిషాల సాక్ష్యమును ఈ వారం సాధన చేస్తూ, మీరు ఒక \"అవిశ్వాసి\" లేదా \"తెలియని వారు\" గా మార్క్ చేసిన మీ 100 మంది జాబితా నుండి కనీసం ఒకరికి పంచుకోండి."
+
+#: functions/zume-course.php:1862
+msgid "Ask God who He wants you to train with the 3-Minute Testimony tool. Share this person's name with the group before you go."
+msgstr "3 నిమిషాల సాక్ష్యపు సాధనంతో మీరు ఎవరికి శిక్షణ ఇవ్వాలని దేవుడు కోరుచున్నాడో అడగండి. మీరు వెళ్లడానికి ముందు ఈ వ్యక్తి యొక్క పేరును బృందముతో పంచుకోండి."
+
+#: functions/zume-course.php:1876 functions/zume-course.php:2802
+msgid "What’s the best thing you got today? Share about it on social media."
+msgstr "ఈ రోజు మీరు పొందిన ఉత్తమమైనది ఏమిటి? దాని గురించి సామాజిక మాధ్యమంలో పంచుకోండి."
+
+#: functions/zume-course.php:1903
+msgid "At the end of the last session, everyone in your group in two ways:"
+msgstr "ముందు తరగతి చివర్లో, మీ బృందములో ఉన్న ప్రతి ఒక్కరూ రెండు విధాలుగా ఉన్నారు:"
+
+#: functions/zume-course.php:1906
+msgid "You were asked to share your 3-Minute Testimony with at least one person on your List of 100."
+msgstr "మీ 3 నిమిషాల సాక్ష్యాన్ని మీ జాబితాలో ఉన్న 100 మందిలో కనీసం ఒక వ్యక్తితో అయినా పంచుకోమని మిమ్మల్ని అడిగాము."
+
+#: functions/zume-course.php:1908
+msgid "You were encouraged to train someone else with the 3-Minute Testimony tool."
+msgstr "3 నిమిషాల సాక్ష్యపు సాధనంతో ఇంకెవరికైనా మీరు శిక్షణ ఇవ్వాలని ప్రోత్సహించబడినారు."
+
+#: functions/zume-course.php:1924
+msgid "In this session, you’ll learn how Prayer Walking is a powerful way to prepare a neighborhood for Jesus, and you'll learn a simple but powerful pattern for prayer that will help you meet and make new disciples along the way."
+msgstr "యేసు కొరకు పొరుగువారిని సిద్ధపరచుటలో ప్రార్థనా నడక ఎంత శక్తివంతమైనదో మీరు ఈ తరగతిలో నేర్చుకుంటారు మరియు ఆ క్రమములో నూతన వ్యక్తులను కలసి శిష్యులుగా చేయుటకు ఒక సామాన్యమైన కానీ శక్తివంతమైన నమూనాను నేర్చుకుంటారు."
+
+#: functions/zume-course.php:1934 functions/zume-course.php:2225
+msgid "Listen and Read Along (15min)"
+msgstr "వినండి మరియు వెంట చదవండి (15 ని:)"
+
+#: functions/zume-course.php:1943 template-zume-dashboard.php:307
+msgid "Prayer Walking"
+msgstr "ప్రార్ధనా నడక"
+
+#: functions/zume-course.php:1946
+msgid "Prayer Walking is a simple way to obey God’s command to pray for others. And it's just what it sounds like – praying to God while walking around!"
+msgstr "ప్రార్ధనా నడక అనేది ఇతరుల కొరకు ప్రార్థించమనే దేవుని ఆజ్ఞకు లోబడటానికి ఒక సులభమైన మార్గము. మరియు ఇది కేవలం ఇట్లానే ఉంటుంది – నలుప్రక్కలా నడుస్తూ దేవుని ప్రార్థించుట!"
+
+#: functions/zume-course.php:1957
+msgid "Find the \"Prayer Walking\" section in your Zúme Guidebook, and listen to the audio below."
+msgstr "మీ జుమ్ మార్గనిర్దేశ పుస్తకంలో ”ప్రార్థనా నడక\" విభాగాన్ని కనుగొనండి, మరియు దిగువ ఆడియో వినండి."
+
+#: functions/zume-course.php:1978
+msgid "Zúme Video Scripts: Prayer Walking"
+msgstr "జుమ్ వీడియో స్క్రిప్ట్స్(లిపి) : ప్రార్థనా నడక"
+
+#: functions/zume-course.php:1998
+msgid "Disciple-making can be rapidly advanced by finding a person of peace, even in a place where followers of Jesus are few and far between. How do you know when you have found a person of peace and what do you when you find them?"
+msgstr "యేసు అనుచరులు కొద్దిమ౦ది మరియు దూర దూర౦గా ఉన్న ప్రాంతంలోనైనా నెమ్మదిగా (ఆశక్తిగా) ఉన్న వ్యక్తిని కనుగొనడ౦ ద్వారా అతి వేగముగా శిష్యులను తయారు చేయగలము. నెమ్మదిగా (ఆశక్తిగా) ఉన్న వ్యక్తి అని మీకెలా తెలుస్తుంది మరియు వారిని కనుగొన్నప్పుడు మీరేమి చేస్తారు?"
+
+#: functions/zume-course.php:2016
+msgid "Zúme Video Scripts: Person of Peace"
+msgstr "జుమ్ వీడియో స్క్రిప్ట్స్(లిపి) : నెమ్మది గల వ్యక్తి"
+
+#: functions/zume-course.php:2026
+msgid "Can someone who has a \"bad reputation\" (like the Samaritan woman or the demon-possessed man in the Gadarenes) really be a Person of Peace? Why or why not?"
+msgstr "\"అపకీర్తి\" కలిగిన ఒకరు (సమరయ స్త్రీ లేదా గెరాసేనుల దేశములోనున్న అపవిత్రాత్మ పట్టినవాడు వంటివారు) నిజముగా నెమ్మది కలిగిన వ్యక్తా? ఎందుకు లేక ఎందుకు కాదు?"
+
+#: functions/zume-course.php:2029
+msgid "What is a community or segment of society near you that seems to have little (or no) Kingdom presence? How could a Person of Peace (someone who is OPEN, HOSPITABLE, KNOWS OTHERS and SHARES) accelerate the spread of the Gospel in that community?"
+msgstr "కొంచెము రాజ్యపు ఉనికిని కలిగినట్లున్న(లేదా లేకపోయిన) ఒక సంఘము లేదా సమాజములోని ఒక భాగము మీకు దగ్గరలోనిది ఏమిటి? నెమ్మది గల ఒక వ్యక్తి (సానుకూలంగా, ఆథిత్యుడుగా, ఇతరుల గూర్చి తెలసినవాడుగా మరియు పంచుకొనువాడుగా నున్న ఒక వ్యక్తి) ఆ సమాజములో సువార్తను ఎలా వేగవంతముగా వ్యాపింపజేయగలడు?"
+
+#: functions/zume-course.php:2043
+msgid "Practice the B.L.E.S.S. Prayer (15min)"
+msgstr "B.L.E.S.S. ప్రార్థన సాధన చేయండి (15 ని:)"
+
+#: functions/zume-course.php:2053
+msgid "Break into groups of two or three and practicing the B.L.E.S.S. Prayer. The prayer pattern can be found in the Zúme Guidebook. Practice praying the five areas of the B.L.E.S.S. Prayer."
+msgstr "ఇద్దరు లేదా ముగ్గురుగా విడిపోయి B.L.E.S.S. ప్రార్థన సాధన చేయండి. జుమ్ మార్గనిర్దేశ పుస్తకంలో ప్రార్థనా నమూనాను కనుగొనగలరు. B.L.E.S.S. ప్రార్థనలోని 5 అంశాలను గూర్చి ప్రార్థించుట సాధన చేయండి."
+
+#: functions/zume-course.php:2068
+msgid "Prayer Walking (60-90min)"
+msgstr "ప్రార్ధనా నడక (60-90 ని:)"
+
+#: functions/zume-course.php:2078
+msgid "Break into groups of two or three and go out into the community to practice Prayer Walking."
+msgstr "ఇద్దరు లేదా ముగ్గురుగా విడిపోయి సమాజములోనికి వెళ్ళి ప్రార్థనా నడకను సాధన చేయండి."
+
+#: functions/zume-course.php:2079
+msgid "Choosing a location can be as simple as walking outside from where you are now, or you could plan to go to a specific destination."
+msgstr "ఇప్పుడు మీరున్న చోటు నుండి బయటకు వెళ్ళటమే ఒక ప్రదేశాన్ని ఎన్నుకోవడం లేదా ఒక నిర్ధిష్టమైన గమ్యస్థానానికి వెళ్ళడానికి ప్రణాళిక చేయవచ్చు."
+
+#: functions/zume-course.php:2080
+msgid "Go as God leads, and plan on spending 60-90 minutes on this activity."
+msgstr "దేవుడు ఎలా నడిపిస్తే అలా వెళ్ళండి ఈ కార్యాచరణపై 60-90 నిమిషాలు కేటాయించడానికి ప్రణాళిక సిద్దం చేసుకోండి."
+
+#: functions/zume-course.php:2089
+msgid "The session ends with a prayer walking activity."
+msgstr "ప్రార్థనా నడక కార్యాచరణతో తరగతి ముగుస్తుంది."
+
+#: functions/zume-course.php:2091
+msgid "Read through the Obey, Share, and Pray sections, below, before you head out!"
+msgstr "మీరు బయలుదేరక ముందు క్రిందనున్న, విధేయత, పంచుకోవటం మరియు ప్రార్థనా విభాగాలను చదవండి!"
+
+#: functions/zume-course.php:2105
+msgid "Spend time this week practicing Prayer Walking by going out alone or with a small group at least once."
+msgstr "మీరు ఒంటరిగా లేదా చిన్నబృందముగా ఈ వారములో ఒక్కసారైనా నడుస్తూ ప్రార్థించుటను సాధన చేయండి."
+
+#: functions/zume-course.php:2112
+msgid "Spend time asking God who He might want you to share the Prayer Walking tool with before your group meets again. Share this person’s name with the group before you go."
+msgstr "మీ బృందం మరలా కలిసే లోపుగా ప్రార్థనా నడక సాధనాన్ని ఎవరితో పంచుకోవాలో దేవుని అడుగుటకు సమయం గడపండి. మీరు వెళ్లడానికి ముందు ఆ వ్యక్తి పేరును బృందముతో పంచుకోండి."
+
+#: functions/zume-course.php:2119
+msgid "Before you go out on your Prayer Walking activity, be sure to pray with your group to end your time together. Thank God that He loves the lost, the last and the least – including us! Ask Him to prepare your heart and the heart of those you'll meet during your walk to be open to His work."
+msgstr "మీరు మీ ప్రార్థనా నడక కార్యాచరణకు బయటకు వెళ్ళడానికి ముందు, మీ సమయం కలిసి ముగించునట్లు మీ బృందంతో ప్రార్థించుటకు నిర్ధారించుకోండి. ఆయన తప్పిపోయిన, చివరి మరియు అతిచిన్నదైన దానిని - మనలను కూడా ప్రేమిస్తున్నందుకు దేవునికి వందనములు. మీ హృదయాన్ని అదేవిధంగా నడక సమయంలో మీరు కలుసుకునే వారి హృదయాన్ని, తన పనికి సానుకూలంగా సిద్ధపరచమని ఆయన్ని అడగండి."
+
+#: functions/zume-course.php:2126
+msgid "Take a picture of something you see on your prayer walk and post it on social media. "
+msgstr "ప్రార్థనా నడకలో మీరు చూసిన ఏదైనా ఒక దానిని ఫోటో తీసి దానిని సామాజిక మాధ్యమంలో పంచుకోండి."
+
+#: functions/zume-course.php:2154
+msgid "You were asked to spend some time Prayer Walking"
+msgstr "ప్రార్థనా నడకకు కొంత సమయం గడపమని మిమ్ములను అడిగారు"
+
+#: functions/zume-course.php:2155
+msgid "You were encouraged to share the Prayer Walking tool with someone else."
+msgstr "ప్రార్థనా నడక సాధనాన్ని మరెవరితోనైనా పంచుకోమని మీరు ప్రోత్సహించబడినారు."
+
+#: functions/zume-course.php:2164
+msgid "Pray and thank God for the results, ask Him to help when you find it hard to obey, and invite His Holy Spirit to lead your time together."
+msgstr "ఆ ఫలితాల కోస౦ ప్రార్థిస్తూ, దేవునికి కృతజ్ఞతలు తెలియజేసి, విధేయత చూపి౦చడ౦ కష్ట౦గా ఉన్నప్పుడు సహాయ౦ చేయమని ఆయనను అడగ౦డి, మరియు మీరు కలిసి గడిపే సమయాన్ని నడిపి౦చమని ఆయన పరిశుద్ధాత్మను ఆహ్వాని౦చ౦డి."
+
+#: functions/zume-course.php:2171
+msgid "In this session, you’ll learn how God uses faithful followers – even if they're brand new – much more than ones with years of knowledge and training who just won't obey. And you'll get a first look at a way to meet together that helps disciples multiply even faster."
+msgstr "దేవుడు నమ్మకమైన అనుచరులను, వారెంత కొత్తవారు అయినా - సంవత్సరాల తరబడి జ్ఞానము మరియు శిక్షణ ఉన్నప్పటికీ విధేయత లేనివారి కంటే ఎక్కువగా ఎలా ఉపయోగిస్తాడు అనేది ఈ తరగతిలో మీరు నేర్చుకుంటారు. మరియు మీరు శిష్యులను వేగంగా అభివృద్ధి పరచుటకు మీ కలయిక ఎంత దోహదం చేస్తుందో ఒక మొదటి సూచన పొందుతారు."
+
+#: functions/zume-course.php:2190
+msgid "When we help multiply disciples, we need to make sure we're reproducing the right things. It's important what disciples know – but it's much more important what they DO with what they know."
+msgstr "శిష్యులను విస్తరింపజేయడానికి మన౦ సహాయ౦ చేస్తునప్పుడు, మన౦ సరైన విషయాలను పునరుత్పత్తి చేస్తున్నామని నిర్ధారించుకోవల్సిన అవసరం ఉంది. శిష్యులకు ఏమి తెలుసు అనేది ముఖ్యం – అయితే వారు తెలిసిన దానితో ఏమి చేస్తున్నారు అనేది ఇంకా చాలా ముఖ్యం."
+
+#: functions/zume-course.php:2208
+msgid "Zúme Video Scripts: Faithfulness"
+msgstr "జుమ్ వీడియో స్క్రిప్ట్స్(లిపి) : విశ్వాస్యత"
+
+#: functions/zume-course.php:2215
+msgid "Think about God's commands that you already know. How \"faithful\" are you in terms of obeying and sharing those things?"
+msgstr "మీకు ఇప్పటికే తెలిసిన దేవుని ఆజ్ఞల గురి౦చి ఆలోచి౦చ౦డి. మీరు వాటికి విధేయత చూపి౦చడ౦ మరియు వాటిని ప౦చుకోవడ౦ విషయ౦లో \"నమ్మకమైనవారు\"గా ఎలా ఉన్నారు?"
+
+#: functions/zume-course.php:2234
+msgid "3/3 Groups Format"
+msgstr "3/3 బృందముల ఏర్పాటు"
+
+#: functions/zume-course.php:2237
+msgid "Jesus said, “Where two or three have gathered together in My name, I am there in their midst.”"
+msgstr "\"ఏలయనగా ఇద్దరు ముగ్గురు నా నామమున ఎక్కడ కూడుకొందురో అక్కడ నేను వారి మధ్యన ఉందునని ... .\" యేసు చెప్పెను"
+
+#: functions/zume-course.php:2248
+msgid "Find the \"3/3 Group Format\" section in your Zúme Guidebook, and listen to the audio below."
+msgstr "మీ జుమ్ మార్గదర్శ పుస్తకంలోని \"3/3బృంద ఏర్పాటు\" విభాగాన్ని కనుగొనండి, మరియు దిగువ ఆడియోని వినండి."
+
+#: functions/zume-course.php:2269
+msgid "Zúme Video Scripts: 3/3 Group"
+msgstr "జుమ్ వీడియో స్క్రిప్ట్స్(లిపి) : 3/3 బృందము"
+
+#: functions/zume-course.php:2278
+msgid "Did you notice any differences between a 3/3 Group and a Bible Study or Small Group you've been a part of (or have heard about) in the past? If so, how would those differences impact the group?"
+msgstr "మీరు గతంలో హాజరైన ( లేదా వినిన) ఒక బైబిల్ అధ్యయన తరగతి లేదా చిన్న సమూహం మరియు ఒక 3/3 బృందము మధ్య ఏవైనా తేడాలు గమనించారా? అలాగైతే, ఆ తేడాలు బృందము మీద ఎలా౦టి ప్రభావ౦ చూపిస్తాయి?"
+
+#: functions/zume-course.php:2281
+msgid "Could a 3/3 Group be considered a Simple Church? Why or why not?"
+msgstr "ఒక 3/3 బృందాన్ని ఒక సాధారణ సంఘముగా పరిగణించవచ్ఛా? ఎందుకు లేక ఎందుకు కాదు?"
+
+#: functions/zume-course.php:2294
+msgid "MODEL 3/3 GROUP"
+msgstr "3/3 బృందము మాదిరి"
+
+#: functions/zume-course.php:2303
+msgid "A 3/3 Group is a way for followers of Jesus to meet, pray, learn, grow, fellowship and practice obeying and sharing what they've learned. In this way a 3/3 Group is not just a small group but a Simple Church."
+msgstr "ఒక 3/3 బృందము యేసు అనుచరులు కలియుటకు, ప్రార్థించుటకు, నేర్చుకొనుటకు, ఎదుగుటకు, సహవాసమునకు మరియు విధేయతను అవలంబించుటకు మరియు వారు నేర్చుకున్నవాటిని పంచుకొనుటకు ఒక మార్గము. ఈ విధంగా ఒక 3/3 బృందము కేవలం ఒక చిన్న సమూహం కాదు కాని ఒక సాధారణ సంఘము."
+
+#: functions/zume-course.php:2306
+msgid "In the following video, you'll see a live demonstration of a 3/3 group meeting together."
+msgstr "ఈ క్రింది వీడియోలో, మీరు ఒక 3/3 బృంద సమావేశమును ప్రత్యక్ష ప్రదర్శన ద్వారా చూస్తారు."
+
+#: functions/zume-course.php:2333
+msgid "Congratulations on finishing Session 6!"
+msgstr "తరగతి 6 ముగిసినందుకు అభినందనలు!"
+
+#: functions/zume-course.php:2354
+msgid "Spend time this week practicing Faithfulness by obeying and sharing at least one of God's commands that you already know."
+msgstr "మీకు ఇప్పటికే తెలిసిన దేవుని ఆజ్ఞలలో ఒకదానికైనా మీరు విధేయత చూపి౦చడ౦ మరియు ప౦చుకోవడ౦ విషయ౦లో విశ్వాస్యతను సాధనచేస్తూ ఈ వారము గడపండి."
+
+#: functions/zume-course.php:2361
+msgid "Think about what you have heard and learned about Faithfulness in this session, and ask God who He wants you to share it with. Share this person’s name with the group before you go."
+msgstr "మీరు ఈ తరగతిలో విశ్వాస్యతను గురి౦చి ఏమి విన్నారో, నేర్చుకున్నారో వాటిని గురి౦చి ఆలోచి౦చ౦డి, మరియు మీరు దాన్ని ఎవరితో ప౦చుకోవాలని ఆయన కోరుచున్నాడో దేవుణ్ణి అడగ౦డి. మీరు వెళ్లడానికి ముందు ఈ వ్యక్తి యొక్క పేరును బృందముతో పంచుకోండి."
+
+#: functions/zume-course.php:2368
+msgid "Thank God for His Faithfulness – for fulfilling every promise He's ever made. Ask Him to help you and your group become even more Faithful to Him."
+msgstr "ఆయన చేసిన ప్రతి వాగ్దానాన్ని నెరవేర్చుచున్న ఆయన యొక్క విశ్వాస్యతను బట్టి దేవునికి కృతజ్ఞతలు చెప్పండి. మీరు మరియు మీ బృందము ఆయనకు మరింత నమ్మకముగా నుండునట్లు సహాయము చేయమని ఆయనను అడగండి."
+
+#: functions/zume-course.php:2375
+msgid "Got a Christian brother or sister who might like Zúme? Share it with them on social media."
+msgstr "జుమ్ ను ఇష్టపడుచున్న ఒక క్రైస్తవ సహోదరుడు లేదా సహోదరిని సంపాదించినారా? వారితో సామాజిక మాధ్యమంలో పంచుకోండి."
+
+#: functions/zume-course.php:2404
+msgid "You were asked to practice Faithfulness by obeying and sharing one of God's commands."
+msgstr "దేవుని ఆజ్ఞలలో ఒకదానికైనా మీరు విధేయత చూపి౦చడ౦ మరియు ప౦చుకోవడ౦ విషయ౦లో విశ్వాస్యతను సాధన చేయమని మీరు అడగబడినారు."
+
+#: functions/zume-course.php:2407
+msgid "You were encouraged to share the importance of Faithfulness with someone else."
+msgstr "మరెవరితోనైనా విశ్వాస్యత యొక్క ప్రాముఖ్యతను పంచుకొనుమని ప్రోత్సహించబడినారు."
+
+#: functions/zume-course.php:2417
+msgid "Pray and thank God for the group's commitment to faithfully following Jesus and invite God's Holy Spirit to lead your time together."
+msgstr "యేసును అనుసరించుటలో బృందము యొక్క నిబద్ధతను బట్టి దేవుని ప్రార్థించి కృతజ్ఞతలు చెప్పండి మరియు మీరు కలసి గడిపే సమయమును నడిపించమని దేవుని పరిశుద్ధాత్మను ఆహ్వానించండి."
+
+#: functions/zume-course.php:2424
+msgid "In this session, you’ll learn a Training Cycle that helps disciples go from one to many and turns a mission into a movement. You'll also practice the 3/3 Groups Format and learn how the way you meet can impact the way you multiply."
+msgstr "మీరు ఈ తరగతిలో శిష్యులు ఒకరి నుండి అనేకమందిని మరియు ఒక చిన్న బృందాన్ని ఒక ఉద్యమముగా మార్చుటకు సహాయము చేయగల ఒక శిక్షణా చక్రమును నేర్చుకుంటారు. మీరు 3/3 బృందముల ఏర్పాటును సాధనచేస్తూ, మీరు అనేకులను విస్తరింపజేయుటకు మీ సమావేశము ఏ విధముగా ప్రభావము చూపగలదో కూడా నేర్చుకుంటారు."
+
+#: functions/zume-course.php:2444
+msgid "Have you ever learned how to ride a bicycle? Have you ever helped someone else learn? If so, chances are you already know the Training Cycle."
+msgstr "సైకిల్ తొక్కడం ఎలాగో ఎప్పుడైనా నేర్చుకున్నారా? ఎవరైనా నేర్చుకోవడానికి మీరు ఎప్పుడైనా సహాయం చేశారా? అలాగైతే, మీకు శిక్షణ చక్ర౦ ఇప్పటికే తెలియడానికి అవకాశము ఉంది."
+
+#: functions/zume-course.php:2455
+msgid "Find the \"Training Cycle\" section in your Zúme Guidebook. When you're ready, watch this video, and then discuss the questions below."
+msgstr "మీ జుమ్ మార్గదర్శక పుస్తకంలో \"శిక్షణా చక్రము\" విభాగాన్ని కనుగొనండి. మీరు సిద్ధంగా ఉన్నప్పుడు, ఈ వీడియోను చూడండి, ఆ తర్వాత దిగువ ప్రశ్నల గురించి చర్చించండి."
+
+#: functions/zume-course.php:2476
+msgid "Zúme Video Scripts: Training Cycle"
+msgstr "జుమ్ వీడియో స్క్రిప్ట్స్(లిపి) : శిక్షణా చక్రము"
+
+#: functions/zume-course.php:2484
+msgid "Have you ever been a part of a Training Cycle?"
+msgstr "మీరు ఎప్పుడైనా శిక్షణా చక్రములో పాల్గొన్నారా?"
+
+#: functions/zume-course.php:2485
+msgid "Who did you train? Or who trained you?"
+msgstr "మీరు ఎవరికి శిక్షణ ఇచ్చారు? లేదా మీకు ఎవరు శిక్షణ ఇచ్చారు?"
+
+#: functions/zume-course.php:2487
+msgid "Could the same person be at different parts of the Training Cycle while learning different skills?"
+msgstr "విభిన్న నైపుణ్యాలను నేర్చుకునేటప్పుడు ఒకే వ్యక్తి శిక్షణా చక్రములో విభిన్నభాగాల్లో ఉండగలడా?"
+
+#: functions/zume-course.php:2489
+msgid "What would it look like to train someone like that?"
+msgstr "ఇలా ఒకరికి శిక్షణ ఇవ్వడం అంటే ఏమనిపిస్తుంది?"
+
+#: functions/zume-course.php:2501
+msgid "Practice and Discuss (90min)"
+msgstr "సాధన చేయండి మరియు చర్చించండి. (90 ని:)"
+
+#: functions/zume-course.php:2511
+msgid "Have your entire group spend the next 90 minutes practicing the 3/3 Groups Format. Refer to the Zúme Guidebook if you need a reminder about the pattern."
+msgstr "మీ బృందమంతా తదుపరి 90 నిమిషాలు 3/3 బృందముల ఏర్పాటును సాధన చేయండి. నమూనా అవసరమైతే మీ జుమ్ మార్గదర్శక పుస్తకంలో తిరిగి చూసి జ్ఞాపకం తెచ్చుకోండి."
+
+#: functions/zume-course.php:2521 functions/zume-course.php:2740
+#: functions/zume-course.php:3468
+msgid "PRACTICE"
+msgstr "సాధన చేయండి"
+
+#: functions/zume-course.php:2526
+msgid "LOOK BACK – Use last week's Session Challenges to practice \"Faithfulness\" in the Look Back section."
+msgstr "వెనక్కి తిరిగి చూడండి - వెనక్కిచూడండి సమయంలోగత వారములో జరిగిన తరగతి యొక్క సవాళ్ళను ఉపయోగించి \"విశ్వాస్యతను\" సాధన చేయండి."
+
+#: functions/zume-course.php:2529
+msgid "LOOK UP – Use Mark 5:1-20 as your group's reading passage and answer questions 1-4 during the Look Up section."
+msgstr "పైకి చూడండి - 'పైకి చూడండి' సమయంలో మీ బృంద అధ్యయన భాగముగా మార్కు 5:1-20 ఉపయోగించి 1-4 ప్రశ్నలకు సమాధానం ఇవ్వండి."
+
+#: functions/zume-course.php:2532
+msgid "LOOK FORWARD – Use questions 5, 6, and 7 in the Look Forward section to develop how you will Obey, Train and Share."
+msgstr "ముందుకు చూడండి – ముందుకు చూడండి' ఈ సమయంలో 5, 6, 7 ప్రశ్నలను ఉపయోగించి మీరు విధేయత చూపుటలో, శిక్షణలో మరియు పంచుకొనుటలో అభివృద్ధి పొందండి."
+
+#: functions/zume-course.php:2536 functions/zume-course.php:2757
+msgid "REMEMBER – Each section should take about 1/3 (or 30 minutes) of your practice time."
+msgstr "గుర్తుంచుకోండి – ప్రతి విభాగానికి మీ సాధన సమయం నుండి సుమారు 1/3 (లేదా 30 నిమిషాలు) తీసుకోవాలి."
+
+#: functions/zume-course.php:2545
+msgid "What did you like best about the 3/3 Group? Why?"
+msgstr "3/3 బృందము గురించి మీకు ఏది అత్యుత్తమంగా నచ్చినది? ఎందుకు?"
+
+#: functions/zume-course.php:2546
+msgid "What was the most challenging? Why?"
+msgstr "అత్యంత సవాలుతో కూడినది ఏమిటి? ఎందుకు?"
+
+#: functions/zume-course.php:2562
+msgid "Congratulations on finishing Session 7!"
+msgstr "7వ తరగతి పూర్తిచేసినందుకు అభినందనలు!"
+
+#: functions/zume-course.php:2570
+msgid "Spend time this week obeying, training, and sharing based on the commitments you've made during your 3/3 Group practice."
+msgstr "3/3 బృంద సాధన సమయంలో మీరు చేసిన సమర్పణను బట్టి విధేయత చూపుటలో, శిక్షణలో మరియు పంచుకొనుటలో ఈ వారము సమయం గడపండి."
+
+#: functions/zume-course.php:2577
+msgid "Pray and ask God who He wants you to share the 3/3 Group format with before your group meets again. Share this person’s name with the group before you go."
+msgstr "మీ బృందమంతా తిరిగి సమావేశం కాక మునుపు ఎవరితో '3/3 బృంద ఏర్పాటు'ను పంచుకోవాలని ఆయన కోరుచున్నాడో ప్రార్థనలో దేవునిని అడగండి. మీరు ముందు ఈ వ్యక్తి యొక్క పేరును బృందముతో పంచుకోండి."
+
+#: functions/zume-course.php:2584
+msgid "Thank God that He loves us enough to invite us into His most important work – growing His family!"
+msgstr "దేవుడు తన అత్యంత ప్రాముఖ్యమైన పనిలోకి మనల్ని ఆహ్వానించడానికి చాలినంతగా ఆయన మనలను ప్రేమించినందుకు దేవునికి కృతజ్ఞతలు - ఆయన కుటుంబము పెరుగుచున్నది!"
+
+#: functions/zume-course.php:2591
+msgid "Hop on LIVE and tell the world what you just learned and where they could learn it too."
+msgstr "ప్రత్యక్షముగా ప్రసారం (హాప్ ఆన్ లైవ్) చేసి మీరు ఇప్పుడే నేర్చుకున్నదేమిటి, వారు కూడా ఎక్కడ నేర్చుకోగలరో ప్రపంచానికి తెలియ చెప్పండి."
+
+#: functions/zume-course.php:2621
+msgid "You were asked to practice obeying, training, and sharing based on your commitments during 3/3 Group practice."
+msgstr "3/3 బృంద సాధన సమయంలో మీరు చేసిన సమర్పణను బట్టి విధేయత చూపుటలో, శిక్షణలో మరియు పంచుకొనుటలో సాధన చేయమని మీరు అడగబడినారు."
+
+#: functions/zume-course.php:2624
+msgid "You were encouraged to share the 3/3 Group Format with someone else."
+msgstr "3/3 బృంద ఏర్పాటును మరొకరితో పంచుకోమని మీరు ప్రోత్సహించబడినారు."
+
+#: functions/zume-course.php:2634
+msgid "Pray and thank God for giving your group the energy, the focus and the faithfulness to come so far in this training. Ask God to have His Holy Spirit remind everyone in the group that they can do nothing without Him!"
+msgstr "ఈ శిక్షణలో ఇంతవరకు కొనసాగుటకు మీ బృందమునకు దేవుడిచ్చిన శక్తి, దృష్టి (ఏకాగ్రత), మరియు విశ్వాస్యతను బట్టి ప్రార్థిస్తూ కృతజ్ఞతలు చెప్పండి. దేవుని పరిశుద్ధాత్మ లేకుండా ఎవరూ ఏమీ చేయలేరని మీ బృందములో ప్రతి ఒక్కరికీ ఆయనను గుర్తుచేయమని దేవుని అడగండి!"
+
+#: functions/zume-course.php:2641
+msgid "In this session, you’ll learn how Leadership Cells prepare followers in a short time to become leaders for a lifetime. You'll learn how serving others is Jesus' strategy for leadership. And you'll spend time practicing as a 3/3 Group, again."
+msgstr "ఈ తరగతిలో, నాయకత్వ శిబిరము (లీడర్షిప్ సెల్స్) అనుచరులను తక్కువ సమయంలో ఒక జీవితకాలం పాటు నాయకులుగా ఎలా సిద్ధపరచగలవో మీరు నేర్చుకుంటారు. నాయకత్వ వ్యూహం, ఎలా ఇతరులకు సేవ చేయడం అంటే యేసుకు చేయడమో నేర్చుకుంటారు. మరియు మరలా మీరు ఒక 3/3 బృందంగా సాధనా సమయం గడుపుతారు."
+
+#: functions/zume-course.php:2661
+msgid "Jesus said, “Whoever wishes to become great among you shall be your servant.”"
+msgstr "\"మీలో ఎవడు ముఖ్యుడై యుండగోరునో వాడు మీ దాసుడై యుండవలెను.\" అని యేసు చెప్పెను."
+
+#: functions/zume-course.php:2664
+msgid "Jesus radically reversed our understanding of leadership by teaching us that if we feel called to lead, then we are being called to serve. A Leadership Cell is a way someone who feels called to lead can develop their leadership by practicing serving."
+msgstr "నాయకత్వ౦ గురి౦చి మన అవగాహనను యేసు ఇలా భోదించుట ద్వారా తిప్పిచెప్పారు. మన౦ నడిపి౦చటానికి పిలువబడినామని భావిస్తున్నట్లైతే, సేవ చేయడానికి పిలువబడుతున్నాము. నడిపి౦చటానికి పిలువబడినామని భావిస్తున్నవారెవరైనా తమ నాయకత్వాన్నిసేవ చేయడ౦ ద్వారా వృద్ధిచేసుకోవటానికి నాయకత్వ శిబిరము ఒక మార్గము."
+
+#: functions/zume-course.php:2675
+msgid "Find the \"Leadership Cells\" section in your Zúme Guidebook. When you're ready, watch and discuss this video."
+msgstr "మీ జుమ్ మార్గదర్శక పుస్తకంలో \"నాయకత్వ శిబిరములు\" విభాగాన్ని కనుగొనండి. మీరు సిద్ధంగా ఉన్నప్పుడు, ఈ వీడియోను చూడండి మరియు చర్చించండి."
+
+#: functions/zume-course.php:2696
+msgid "Zúme Video Scripts: Leadership Cells"
+msgstr "జుమ్ వీడియో స్క్రిప్ట్స్(లిపి): నాయకత్వ శిబిరములు"
+
+#: functions/zume-course.php:2705
+msgid "Is there a group of followers of Jesus you know that are already meeting or would be willing to meet and form a Leadership Cell to learn Zúme Training?"
+msgstr "ఇప్పటికే సమావేశమవుతున్న యేసు అనుచరుల ఒక బృందము లేదా కలసి నాయకత్వ శిబిరముగా ఏర్పడి జుమ్ శిక్షణ నేర్చుకొనుటకు ఇష్టపడుతున్నవారు మీకు తెలుసా?"
+
+#: functions/zume-course.php:2707
+msgid "What would it take to bring them together?"
+msgstr "వారిని కలిపి తీసుకురావడానికి ఏం చేయాలి?"
+
+#: functions/zume-course.php:2719
+msgid "Practice 3/3 Group (90min)"
+msgstr "3/3 బృంద సాధన చేయండి (90ని:)"
+
+#: functions/zume-course.php:2729
+msgid "Have your entire group spend the next 90 minutes practicing the 3/3 Groups Format."
+msgstr "తదుపరి 90 నిమిషాలు మీ బృందమంతా కలసి 3/3 బృందముల ఏర్పాటును సాధన చేయండి."
+
+#: functions/zume-course.php:2747
+msgid "LOOK BACK – Use last session’s Obey, Train, and Share challenges to check-in with each other."
+msgstr "తిరిగి చూడండి – గత తరగతి యొక్క విధేయత, శిక్షణ మరియు పంచుకొనుటలోని సవాళ్ళను ఒకరితో ఒకరు పంచుకోండి."
+
+#: functions/zume-course.php:2750
+msgid "LOOK UP – Use Acts 2:42-47 as your group’s reading passage and answer questions 1- 4."
+msgstr "పైకి చూడండి – అపొస్తలుల కార్యములు 2:42-47 ను మీ బృంద పఠన భాగముగా ఉపయోగించుకుని 1-4 ప్రశ్నలకు జవాబులను చెప్పండి."
+
+#: functions/zume-course.php:2753
+msgid "LOOK FORWARD – Use questions 5, 6, and 7 to develop how you will Obey, Train and Share."
+msgstr "ముందుకు చూడండి – మీరు విధేయత, శిక్షణ మరియు పంచుకొనుటలో అభివృద్ధి చెందుటకు 5, 6, 7 ప్రశ్నలను ఉపయోగించండి."
+
+#: functions/zume-course.php:2773
+msgid "Congratulations! You've completed Session 8. "
+msgstr "8వ తరగతి పూర్తిచేసినందుకు అభినందనలు!"
+
+#: functions/zume-course.php:2781
+msgid "Spend time again this week obeying, sharing, and training based on the commitments you've made during this session's 3/3 Group practice."
+msgstr "3/3 బృంద సాధన సమయంలో మీరు చేసిన సమర్పణను బట్టి విధేయత చూపుటలో, శిక్షణలో మరియు పంచుకొనుటలో మరలా ఈ వారం సమయం గడపండి."
+
+#: functions/zume-course.php:2788
+msgid "Pray and ask God who He wants you to share the Leadership Cell tool with before your group meets again. Share this person’s name with the group before you go."
+msgstr "మీ బృందమంతా తిరిగి సమావేశం కాక మునుపు ఎవరితో 'నాయకత్వ శిబిరము'ను పంచుకోవాలని ఆయన కోరుచున్నాడో ప్రార్థనలో దేవునిని అడగండి. మీరు ముందు ఈ వ్యక్తి యొక్క పేరును బృందముతో పంచుకోండి."
+
+#: functions/zume-course.php:2795
+msgid "Thank God for sending Jesus to show us that real leaders are real servants. Thank Jesus for showing us the greatest service possible is giving up our own lives for others."
+msgstr "నిజమైన నాయకులు నిజమైన సేవకులు అని మనకు చూపించటానికి యేసును ప౦పినందుకు దేవునికి కృతజ్ఞతలు చెప్పండి. ఇతరుల కొరకు మన జీవితములను అర్పించుటయే సాధ్యమైన౦త గొప్ప సేవగా మనకు చూపి౦చిన యేసునకు కృతజ్ఞతలు తెలియజేయండి."
+
+#: functions/zume-course.php:2836
+msgid "You were asked to practice Obeying, Training, and Sharing based on your commitments during last session's 3/3 Group practice."
+msgstr "గత తరగతి యొక్క 3/3 బృంద సాధన సమయంలో మీరు చేసిన సమర్పణను బట్టి విధేయత చూపుటలో, శిక్షణలో మరియు పంచుకొనుటలో సాధన చేయమని మీరు అడగబడినారు."
+
+#: functions/zume-course.php:2839
+msgid "You were encouraged to share the Leadership Cells tool with someone else."
+msgstr "నాయకత్వ శిబిరముల గురి౦చి మరొకరితో పంచుకోమని మీరు ప్రోత్సహించబడినారు."
+
+#: functions/zume-course.php:2851
+msgid "Pray and thank God that His ways are not our ways and His thoughts are not our thoughts. Ask Him to give each member of your group the mind of Christ — always focused on His Father's work. Ask the Holy Spirit to lead your time together and make it the best session yet."
+msgstr "ప్రార్ధిస్తూ, ఆయన మార్గములు మన మార్గములు కావు మరియు ఆయన ఆలోచనలు మన ఆలోచనలు కావు అని దేవునికి కృతజ్ఞతలు తెలుపుదాము. మీ బృందములోని ప్రతి సభ్యునికీ, ఎల్లప్పుడూ తన త౦డ్రి పని మీదే దృష్టి నిలిపిన క్రీస్తు మనస్సు ఇవ్వమని ఆయనను అడగ౦డి. మీరు కలసి గడిపే సమయమును నడిపించమని, ఇది ఇంకా అత్యుత్తమ తరగతిగా ఉండాలని పరిశుద్ధాత్మను అడగండి."
+
+#: functions/zume-course.php:2859
+msgid "In this session, you’ll learn how linear patterns hold back kingdom growth and how Non-Sequential thinking helps you multiply disciples. You'll discover how much time matters in disciple-making and how to accelerate Pace. You’ll learn how followers of Jesus can be a Part of Two Churches to help turn faithful, spiritual families into a growing city-wide body of believers. Finally, you'll learn how a simple Three Month Plan can focus your efforts and multiply your effectiveness in growing God's family exponentially."
+msgstr "ఈ తరగతిలో సరళ నమూనాలు రాజ్య ఎదుగుదలను ఎలా నొక్కి పట్టి ఉంచుతాయో మరియు శిష్యులను విస్తరింపజేయుటకు సరళీకృతం కాని ఆలోచన ఎలా సహాయపడుతుందో మీరు నేర్చుకుంటారు. శిష్యులను తయారుచేసే పనిలో ఎ౦త సమయ౦ కావాలో మరియు వేగాన్నిఎలా మరింత వేగవంతం చేయాలనే విషయాలను మీరు కనుగొంటారు. యేసు అనుచరులు రె౦డు సంఘములలో భాగ౦గా ఉండుట వలన నమ్మకమైన, ఆత్మీయ కుటు౦బాలు, నగరవ్యాప్తముగా ఎదుగుచున్న విశ్వాసుల శరీర౦గా మారడానికి సహాయ౦ చేయగలరని మీరు నేర్చుకుంటారు. చివరిగా మీరు, దేవుని కుటుంబం విశేషముగా ఎదుగుటకు, ఒక సామాన్యమైన మూడు నెలల ప్రణాళిక మీ ప్రయత్నాలను మరియు మీ సామర్థతను ఏవిధంగా విస్తరింప చేస్తుందో మీరు నేర్చుకుంటారు."
+
+#: functions/zume-course.php:2880
+msgid "When people think about disciples multiplying, they often think of it as a step-by-step process. The problem with that is — that's not how it works best!"
+msgstr "శిష్యులు విస్తరించుటను గూర్చి ప్రజలు ఆలోచించినప్పుడు, ఇది క్రమ క్రమముగా జరిగే ప్రక్రియగా వారు ఆలోచిస్తారు. దానితో సమస్య ఏమిటంటే - అది అలా సరిగ్గా పనిచేయదు!"
+
+#: functions/zume-course.php:2900
+msgid "Zúme Video Scripts: Non-Sequential"
+msgstr "జుమ్ వీడియో స్క్రిప్ట్స్(లిపి) : సరళీకృతం కాని"
+
+#: functions/zume-course.php:2911
+msgid "What is the most exciting idea you heard in this video? Why?"
+msgstr "ఈ వీడియోలో మీరు విన్న అత్యంత ఉత్తేజకరమైన ఆలోచన ఏమిటి? ఎందుకు?"
+
+#: functions/zume-course.php:2912
+msgid "What is the most challenging idea? Why?"
+msgstr "అత్యంత సవాలుతో కూడిన ఆలోచన ఏమిటి? ఎందుకు?"
+
+#: functions/zume-course.php:2932
+msgid "Multiplying matters and multiplying quickly matters even more. Pace matters because where we all spend our eternity — an existence that outlasts time — is determined in the very short time we call “life.“"
+msgstr "విస్తరింపజేసే విషయాలు మరియు వేగముగా విస్తరింపజేసే విషయాలు మరింత ఎక్కువగా. వేగమైన విషయాలు ఎందుకంటే మనమంతా నిత్యత్వములో ఎక్కడ గడపబోతున్నామో - సమయానికి అతీతమైన ఉనికి - 'జీవితం' అనే అతి తక్కువ సమయంలో నిర్ణయించబడినది."
+
+#: functions/zume-course.php:2952
+msgid "Zúme Video Scripts: Pace"
+msgstr "జుమ్ వీడియో స్క్రిప్ట్స్(లిపి): వేగము"
+
+#: functions/zume-course.php:2963
+msgid "Why is pace important?"
+msgstr "వేగము ఎందుకు ముఖ్యమైనది?"
+
+#: functions/zume-course.php:2965
+msgid "What do you need to change in your thinking, your actions, or your attitude to be better aligned with God's priority for pace?"
+msgstr "వేగ౦ కొరకు దేవుని ప్రాధాన్యతతో మీరు మరి౦త సమముగా ఉ౦డటానికి మీ ఆలోచనా విధానంలో, మీ చర్యలలో లేక మీ వైఖరిలో మీరు ఎలా౦టి మార్పులు చేసుకోవలసిన అవసరం వుంది?"
+
+#: functions/zume-course.php:2967
+msgid "What is one thing you can do starting this week that will make a difference?"
+msgstr "ఈ వారం నుండి ఒక వ్యత్యాసమును (ప్రత్యేకతను) చూపగల ఒక విషయం మీరు ఏమి చేయగలరు?"
+
+#: functions/zume-course.php:2987
+msgid "Jesus taught us that we are to stay close — to live as a small, spiritual family, to love and give our lives to one another, to celebrate and suffer — together. However, Jesus also taught us to leave our homes and loved ones behind and be willing to go anywhere — and everywhere — to share and start new spiritual families. So how can we do both? When you're ready, watch the video below and discuss the question that follows."
+msgstr "ఒక చిన్నమందగా జీవించుటకు, ఆత్మీయ కుటు౦బ౦గా, ఒకరినొకరు ప్రేమించుటకు మరియు ఒకరికొకరు మన జీవితాలను అర్పించుకొనుటకు, కలసి వేడుక చేసుకొనుటకు మరియు శ్రమపడుటకు మన౦ సన్నిహిత౦గా ఉ౦డాలని యేసు నేర్పించారు. ఎట్లయినను, సువార్తను పంచుకొనుటకు మరియు నూతన ఆత్మీయ కుటు౦బములను ప్రారంభించుటకు, మనము మన కుటు౦బములను, ప్రేమించే వారిని వెనక్కి విడిచి ఎక్కడికైనను మరియు ప్రతిచోటికి వెళ్ళుటకు సిద్దపడవలెనని కూడా యేసు చెప్పారు. మరి మనము రెండూ ఎలా చేయగలం? మీరు సిద్ధంగా ఉన్నప్పుడు, ఈ క్రింది వీడియోను చూడండి మరియు ఇవ్వబడిన ఆ ప్రశ్నను చర్చించండి."
+
+#: functions/zume-course.php:3007
+msgid "Zúme Video Scripts: Two Churches"
+msgstr "జుమ్ వీడియో స్క్రిప్ట్స్(లిపి) : రెండు సంఘములు"
+
+#: functions/zume-course.php:3017
+msgid "What are some advantages of maintaining a consistent spiritual family that gives birth to new ones that grow and multiply instead of continually growing a family and splitting it in order to grow?"
+msgstr "ఒక కుటు౦బమును పెంచుతూ మరియు దాని ఎదుగుదల కోసం విడగొట్టే బదులు, క్రొత్తవారికి జన్మనిచ్చి వారిని పెంచి మరియు విస్తరింపజేసే ఒక స్థిరమైన ఆత్మీయ కుటు౦బమును నిర్వహించుటలో గల కొన్ని ప్రయోజనాలు ఏమిటి?"
+
+#: functions/zume-course.php:3027
+msgid "Create a Three Month Plan (30min)"
+msgstr "మూడు నెలల ప్రణాళికను చేయండి (30 ని:)"
+
+#: functions/zume-course.php:3037
+msgid "In His Bible, God says, \"I know the plans I have for you, plans to prosper you and not to harm you, plans to give you hope and a future.\" God makes plans, and He expects us to make plans, too. He teaches us through His Word and His work to look ahead, see a better tomorrow, make a plan for how to get there, and then prepare the resources we'll need on the way."
+msgstr "దేవుడు తన పరిశుద్ధ గ్రంథములో \"నేను మిమ్మును గూర్చి ఉద్దేశించిన సంగతులను నేనెరుగుదును, రాబోవు కాల మందు మీకు నిరీక్షణకలుగునట్లుగా అవి సమాధానకరమైన ఉద్దేశములేగాని హానికరమైనవి కావు;\" ఇదే యెహోవా వాక్కు. దేవుడు ప్రణాళికలను చేస్తాడు మరియు మనం కూడా చేయాలని ఆశిస్తాడు. ఆయన వాక్యము మరియు ఆయన పని ద్వారా చూచుటకు, ఒక మంచి రేపటికి చూచుటకు, అక్కడికి చేరుటకు ఒక ప్రణాళికను ఎలా చేయాలి ఆతర్వాత మార్గములో మనకు అవసరమయ్యే వనరులను సిద్ధపరచుకొనుటట అనునవి మనకు నేర్పిస్తారు."
+
+#: functions/zume-course.php:3040
+msgid "A Three Month Plan is a tool you can use to help focus your attention and efforts and keep them aligned with God's priorities for making disciples who multiply. Spend the next 30 minutes praying over, reading through, and then completing the commitments listed in the Three Month Plan."
+msgstr "విస్తరింపజేసే శిష్యులను తయారు చేయడానికి సహాయకరముగా, దేవుని ప్రాధాన్యతలతో సమముగా మీ ఏకాగ్రతా దృష్టి మరియు ప్రయత్నాలు చేయగలగడానికి ఈ మూడు నెలల ప్రణాళికను ఒక ఉపకరణముగా ఉపయోగి౦చవచ్చును. తరువాత 30 నిమిషాలపాటు మూడు నెలల ప్రణాళికను చదువుటకు, ప్రార్థించుటకు, ఆ తర్వాత దాని జాబితాలోని నిబద్ధతలను పూర్తి చేయుటకు గడపండి."
+
+#: functions/zume-course.php:3043
+msgid "You can use the printed version in your Zúme Guidebook or our online version."
+msgstr "మీ జుమ్ మార్గదర్శక పుస్తకం లేదా మన ఆన్లైన్లో పొందుపర్చిన భాగమును మీరు ఉపయోగి౦చవచ్చును."
+
+#: functions/zume-course.php:3046
+msgid "Online \"Three Month Plan\""
+msgstr "ఆన్ లైన్ (ఇంటర్ నెట్ )లో \"మూడు నెలల ప్రణాళిక\""
+
+#: functions/zume-course.php:3058
+msgid "Participants can access their own three month plan on the side column of their dashboard. They can connect their plan with this group by adding the following key:"
+msgstr "పాల్గొనువారు తమ సొంత మూడు నెలల ప్రణాళికను వారి డాష్ బోర్డులో ప్రక్కనున్న వరుసలో పొందుపరచవచ్చును. ఇవ్వబడిన సూచన ననుసరించి వారు తమ ప్రణాళికను ఈ బృందముతో కలుపుకొనవచ్చును:"
+
+#: functions/zume-course.php:3078
+msgid "Ask God what He specifically wants you to do with the basic disciple-making tools and techniques you have learned over these last nine sessions. You can remember them in terms of the Greatest Blessing."
+msgstr "గత తొమ్మిది తరగతులలో మీరు నేర్చుకున్న, ప్రాథమికంగా శిష్యులను తయారుచేసే విషయాలు, పద్ధతులతో మీరు ఖచ్చితంగా ఏమి చేయాలని దేవుడు కోరుతున్నాడో ఆయనను అడగ౦డి. అత్యున్నత ఆశీర్వాదపరంగా వాటిని మీరు గుర్తుంచుకోవచ్చు."
+
+#: functions/zume-course.php:3082
+msgid "It's a Blessing to ... S.O.A.P.S. Bible Reading, Accountability Groups, Prayer Cycle"
+msgstr "ఇది ఒక ఆశీర్వాదము........ S.O.A.P.S. బైబిల్ పఠనము, జవాబుదారీ బృందాలు, ప్రార్థనా చక్రములకు"
+
+#: functions/zume-course.php:3085
+msgid "It's a Great Blessing to ... Share your 3-Minute Testimony and God's Story, Prayer Walking"
+msgstr "ఇది ఒక గొప్పఆశీర్వాదము........ మీ 3 నిమిషముల సాక్ష్యం మరియు దేవుని కథ (సువార్త) ను పంచుకొనుటకు, ప్రార్థనా నడకకు"
+
+#: functions/zume-course.php:3088
+msgid "It's a Greater Blessing to ... Start a 3/3rds Group"
+msgstr "ఇది ఒక మరింత గొప్పఆశీర్వాదము........ఒక 3/3 బృందము ప్రారంభించుటకు"
+
+#: functions/zume-course.php:3091
+msgid "It's the Greatest Blessing to ... Start a Zúme Group"
+msgstr "ఇదే అత్యున్నత ఆశీర్వాదము........ఒక జుమ్ బృందము ప్రారంభించుటకు"
+
+#: functions/zume-course.php:3099
+msgid "LISTEN"
+msgstr "వినండి"
+
+#: functions/zume-course.php:3101
+msgid "Take at least 10 minutes to be as quiet as possible and listen intently to what God has to say and what He chooses to reveal. Make an effort to hear His voice."
+msgstr "సాధ్యమైనంత నిశ్శబ్ధంగా కనీసం 10 నిమిషాలు తీసుకొని, దేవుడు ఏమి చెప్పబోవుచున్నాడో మరియు ఆయన ఏమి వెల్లడిస్తాడోనని శ్రద్ధగా వినండి. ఆయన స్వరాన్ని వినే ప్రయత్నం చేయండి."
+
+#: functions/zume-course.php:3107
+msgid "COMPLETE"
+msgstr "ముగించండి"
+
+#: functions/zume-course.php:3110
+msgid "Use the rest of your time to complete the Three Month Plan worksheet. You can write it out on a piece of paper. If you are logged in to ZúmeProject.com you can fill out your form digitally and link it to your group. Once you login, you’ll find the Three Month Plan under Settings. You can also find the Three Month Plan on your Dashboard."
+msgstr "మూడు నెలల ప్రణాళికా పత్రమును పూర్తి చేయడం కొరకు మీ యొక్క మిగిలిన సమయాన్ని ఉపయోగించండి. దాన్ని కాగితం ముక్కపై రాసుకోవచ్చు. మీరు ZúmeProject.com లో లాగిన్ (ప్రవేశించితే) అయితే మీ పత్రాన్ని డిజిటల్ గా (కంప్యూటర్లోనే) నింపి మీ బృందముకు అనుసంధానించవచ్చు. మీరు లాగిన్ చేసిన (ప్రవేశించిన) తరువాత, సెట్టింగ్ లలో మూడు నెలల ప్రణాళికని మీరు కనుగొనవచ్చు. మీ డ్యాష్ బోర్డులో కూడా మీరు మూడు నెలల ప్రణాళికని కనుగొనవచ్చు."
+
+#: functions/zume-course.php:3113
+msgid "You do not have to commit to every item, and there is room for other items not already on the list. Do your best to align your commitments to what you have heard God reveal to you about His will."
+msgstr "మీరు ప్రతి అంశానికి భాధ్యునిగా ఉండనక్కరలేదు, మరియు ఇప్పటికే జాబితాలో లేని ఇతర అంశాలకు స్థానం ఉంది. దేవుడు మీకు బయలుపర్చినట్లుగా మీరు విన్న తన చిత్తమునకు మీరు ఇచ్చిన హామీలన్నిటినీ సమలేఖనం చేయడానికి శాయశక్తులా ప్రయత్నం చేయండి."
+
+#: functions/zume-course.php:3126
+msgid "Share you Plan (30min)"
+msgstr "మీరు ప్రణాళికను పంచుకోండి (30ని:)"
+
+#: functions/zume-course.php:3135
+msgid "In groups of two or three (15 minutes)"
+msgstr "ఇద్దరు లేదా ముగ్గురున్న బృందాలలో (15 నిమిషాలు)"
+
+#: functions/zume-course.php:3137
+msgid "Take turns sharing your Three Month Plans with each other. Take time to ask questions about things you might not understand about plans and how the others will meet their commitments. Ask them to do the same for you and your plan. Find a training partner(s) that is willing to check in with you to report on progress and challenges and ask questions after 1, 2, 3, 4, 6, 8 and 12 weeks. Commit to doing the same for them."
+msgstr "ఒకరి తర్వాత ఒకరు మీ మూడు నెలల ప్రణాళికలను ఒకరితో ఒకరు పంచుకోండి. ప్రణాళికల గురించి మీకు అర్థం కాని విషయాలు మరియు ఇతరులు వారి హామీలను ఎలా తీరుస్తారు అనే విషయాల గురించి ప్రశ్నలు అడగడానికి సమయం తీసుకోండి. మిమ్మును మరియు మీ ప్రణాళికను గూర్చి అలానే వారిని అడగమనండి. మీతో కలసి పురోగతి మరియు సవాళ్లను నివేదించడానికి మరియు 1, 2, 3, 4, 6, 8 మరియు 12 వారాల తరువాత ప్రశ్నలను అడగడం కొరకు సిద్ధంగా ఉన్న శిక్షణా భాగస్వామి (లు) ని కనుగొనండి. వారి కోసం మీరు అలాగే చేయండి."
+
+#: functions/zume-course.php:3146
+msgid "In your full training Group (15 minutes)"
+msgstr "మీ పూర్తి శిక్షణా బృందములో (15 నిమిషాలు)"
+
+#: functions/zume-course.php:3148
+msgid "Discuss and develop a group plan for starting at least two new 3/3 Groups or Zúme Training Groups in your area. Several of your group members may have just completed and saved your individual Three-Month Plans to your Zúme group. On this step, if no one from your group has filled out a digital copy on the website of your Three-Month Plan, it is highly recommended that you do this together now. Just go to the Three-Month Plan under Settings and link the form to your group."
+msgstr "మీ ప్రాంతంలో కనీసం రెండు కొత్త 3/3 బృందాలు లేదా జుమ్ శిక్షణా బృందాలను ప్రారంభించడం కొరకు ఒక బృంద ప్రణాళికని చర్చించండి మరియు అభివృద్ధి చేయండి. మీ బృంద సభ్యుల్లో చాలా మంది కేవలం పూర్తి చేసి, మీ వ్యక్తిగత మూడు నెలల ప్రణాళికలను మీ జుమ్ బృందమునకు భద్రపరచి ఉండవచ్చు. ఈ దశలో, మీ బృందం నుంచి ఎవరూ మీ మూడు నెలల ప్రణాళికని (వెబ్ సైట్ పై డిజిటల్ కాపీని) కంప్యూటర్లో నింపనట్లయితే, ఇప్పుడు మీరు కలిసి దీనిని చేయాలని అత్యంత సిఫారసు చేస్తున్నాము. కేవలం సెట్టింగ్ లలో మూడు నెలల ప్రణాళికకు వెళ్లండి మరియు పత్రాన్ని మీ బృందానికి అనుసంధానించండి."
+
+#: functions/zume-course.php:3151
+msgid "Remember, your goal is to start Simple Churches that multiply. 3/3 Groups and Zúme Training Groups are two ways to do that. Discuss and decide whether these new Groups will be connected to an existing local church or network or whether you’ll start a new network out of your Zúme Training Group."
+msgstr "గుర్తుంచుకోండి, విస్తరింపజేసే సామాన్య సంఘములను ప్రారంభించుటయే మీ లక్ష్యము. 3/3 బృందాలు మరియు జుమ్ శిక్షణా బృందాలు ఆ విధంగా చేయడానికి రెండు మార్గాలు. ఈ కొత్త బృందాలు ఇప్పటికే స్థానికంగా ఉన్నసంఘానికి లేదా నెట్ వర్క్ కు(సముదాయానికి) జత చేయబడినాయా లేదా మీ జుమ్ శిక్షణా బృందముతో కొత్త నెట్ వర్క్ ని(సముదాయాన్ని) ప్రారంభించాలా అనే విషయాన్ని చర్చించండి మరియు నిర్ణయించుకోండి."
+
+#: functions/zume-course.php:3165
+msgid "Congratulations! You've completed Session 9."
+msgstr "9వ తరగతి పూర్తిచేసినందుకు అభినందనలు."
+
+#: functions/zume-course.php:3174
+msgid "You may not know it, but you now have more practical training on starting simple churches and making disciples who multiply than many pastors and missionaries around the world!"
+msgstr "ఇది మీకు తెలియకపోవచ్చు, కానీ మీరు ఇప్పుడు సాధారణ సంఘములను ప్రారంభించుట, ప్రపంచవ్యాప్తంగా అనేక పాస్టర్లు మరియు మిషనరీల కంటే ఎక్కువ మందిని విస్తరింపచేయగల శిష్యులను తయారుచేయడం గురించి మరింత ఆచరణాత్మక శిక్షణ పొందియున్నారు!"
+
+#: functions/zume-course.php:3175
+msgid "Set aside time on your calendar each week to continue to work on your Three Month Plan, and plan check-ins with your training partner at the end of week 1, 2, 3, 4, 6, 8, and 12. Each time you're together, ask about their results and share yours, making sure you're both working through your plans. Prayerfully consider continuing as an ongoing spiritual family committed to multiplying disciples."
+msgstr "మీ మూడు నెలల ప్రణాళికలో పని కొనసాగించడానికి ప్రతి వారం మీ క్యాలెండర్ లో సమయాన్ని కేటాయించండి. మరియు వారం 1, 2, 3, 4, 6, 8, 12 చివర్లో మీ శిక్షణా భాగస్వామితో పరిశీలించుటకు ప్రణాళిక చేసుకోండి. మీరు కలిసి ఉన్న ప్రతిసారి, వారి ఫలితాల గురించి అడగండి మరియు మీ ఫలితాలు చెప్పండి, మీరిద్దరూ ప్రణాళికాబద్దంగా పనిచేస్తున్నారా అని ధృవీకరించుకోవాలి. నిబద్దత కలిగి శిష్యులను విస్తరింప చేసే ఒక ఆధ్యాత్మిక కుటు౦బముగా కొనసాగాలని ప్రార్థనాపూర్వక౦గా పరిగణించండి."
+
+#: functions/zume-course.php:3183
+msgid "Pray and ask God who He would have you share Zúme Training with by launching a Leadership Cell of future Zúme Training leaders."
+msgstr "భవిష్య జుమ్ శిక్షణా నాయకుల ఒక నాయకత్వ శిబిరమును ప్రారంభించుట ద్వారా మీరు జుమ్ శిక్షణ ఎవరితో పంచుకోవాలో దేవుని ప్రార్థించి అడగండి."
+
+#: functions/zume-course.php:3191
+msgid "Be sure to pray with your group before you end your time together. Thank God that He has created and gifted you with exactly the right talents to make a difference in His kingdom. Ask Him for wisdom to use the strengths He has given you and to find other followers who help cover your weaknesses. Pray that He would make you fruitful and multiply — this was His plan from the very beginning. Pray that God help you be obedient to Him and invite Him to work in you and those around you!"
+msgstr "మీరు మీ సమావేశాన్ని ముగించడానికి ముందు మీ బృందంతో కలిసి ప్రార్థన చేసుకోండి. తన రాజ్యంలో ఒక విభిన్నతకు, ఆయన మిమ్మల్ని సృష్టించి మరియు ఖచ్చితంగా సరైన తలాంతులను మీకు బహుమానంగా ఇచ్చినందుకు దేవుడికి కృతజ్ఞతలు. దేవుడు మీకిచ్చిన శక్తి సామర్ఢ్యములను ఉపయోగించుకోవటానికి మరియు మీ బలహీనతలను కప్పిపుచ్చుకోవడానికి సహాయపడే ఇతర అనుచరులను కనుగొనడానికి వివేకం కోసం ఆయన్ని అడగండి. ఆయన మిమ్మల్ని ఫలప్రద౦ చేసి విస్తరి౦పజేయాలని ప్రార్థి౦చండి — ఇది ఆయన మొదటి ను౦డి చేసిన ప్రణాళిక. మీరు ఆయనికి విధేయత చూపుటకు సహాయపడమని మరియు మీలోను, మీ చుట్టూ ఉన్నవారిలోనూ పనిచేయమని ఆయనను ఆహ్వానించి ప్రార్థించండి!"
+
+#: functions/zume-course.php:3199
+msgid "Excited to help a new Zúme group get started? Share about Zúme on social media and let people know where they can get started."
+msgstr "కొత్త జుమ్ బృందం ప్రారంభించుటకు సహాయపడటానికి ఉత్తేజింపబడుచున్నారా? సామాజిక మాధ్యమంలో జుమ్ గురించి పంచుకోండి మరియు వారు ఎక్కడ ప్రారంభించగలరో ప్రజలకు తెలియజేయండి."
+
+#: functions/zume-course.php:3216
+msgid "Looking Back"
+msgstr "వెనక్కి తిరిగి చూచుట"
+
+#: functions/zume-course.php:3218
+msgid "Welcome back to Zúme Training!"
+msgstr "జుమ్ శిక్షణకు పునఃస్వాగతం!"
+
+#: functions/zume-course.php:3231
+msgid "You were asked to prayerfully consider continuing as an ongoing spiritual family committed to multiplying disciples."
+msgstr "నిబద్దత కలిగి శిష్యులను విస్తరింప చేసే ఒక ఆధ్యాత్మిక కుటు౦బముగా కొనసాగాలని ప్రార్థనా పూర్వక౦గా పరిగణించమని మీరు అడగబడినారు."
+
+#: functions/zume-course.php:3234
+msgid "You were encouraged to share Zúme Training by launching a Leadership Cell of future Zúme Training leaders."
+msgstr "భవిష్య జుమ్ శిక్షణా నాయకుల ఒక నాయకత్వ శిబిరమును ప్రారంభించుట ద్వారా మీరు జుమ్ శిక్షణను పంచుకొనమని ప్రోత్సహించబడినారు."
+
+#: functions/zume-course.php:3237
+msgid "Take a few moments to see how your group has been doing with these items and their Three Month Plans since you've last met."
+msgstr "మీరు గతసారి కలుసుకున్నప్పటి నుంచి, మీ బృందము ఈ అంశాలు మరియు వారి యొక్క మూడు నెలల ప్రణాళికలతో ఎలా చేస్తున్నారో చూడటానికి కొన్నిక్షణాలు తీసుకోండి."
+
+#: functions/zume-course.php:3244
+msgid "Pray and thank God that He is faithful to complete His good work in us. Ask Him to give your group clear heads and open hearts to the great things He wants to do in and through you. Ask the Holy Spirit to lead your time together and thank Him for His faithfulness, too. He got you through!"
+msgstr "ఆయన తన మ౦చి పనిని మనలో పూర్తి చేయడానికి నమ్మక౦గా ఉన్నాడని దేవునికి ప్రార్థి౦చి కృతజ్ఞతలు తెలపండి.ఆయన మీలోను, మీ ద్వారాను చేయాలనుకునే గొప్ప విషయాలకు, మీ బృందమునకు నిర్మలమైన తలంపులు, తెరవబడిన హృదయాలను ఇవ్వమని ఆయనను అడగండి. మీ సమావేశ సమయాన్ని నడపమని పరిశుద్ధాత్మను అడగండి మరియు ఆయన విశ్వసనీయత పట్ల కూడా ఆయనకు కృతజ్ఞతలు చెప్పండి. ఆయన మీయందున్నారు!"
+
+#: functions/zume-course.php:3251
+msgid "In this advanced training session, you’ll take a look at how you can level-up your Coaching Strengths with a quick checklist assessment. You’ll learn how Leadership in Networks allows a growing group of small churches to work together to accomplish even more. And you’ll learn how to develop Peer Mentoring Groups that take leaders to a whole new level of growth."
+msgstr "ఈ ఉన్నత శిక్షణా తరగతిలో, ఒక త్వరితగతి అంచనా ద్వారా మీ శిక్షణా సామర్థ్యములను మీరు ఎలా పెంచుకోగలరో మీరు చూస్తారు. ఒక ఎదుగుచున్న చిన్న సంఘముల సముదాయము మరెక్కువ సాధించుట కొరకు కలసి పనిచేయుటకు, అనుసంధానించబడిన నాయకత్వము ఎలా అనుమతిస్తుందో మీరు నేర్చుకుంటారు. నాయకులను పూర్తిగా ఒక కొత్త స్థాయి ఎదుగుదలకు తీసుకెళ్ళే (పీర్ మెంటరింగ్ గ్రూప్స్) తోటివారిని శిష్యరికం చేసే బృందాలు అభివృద్ధి చేయడం ఎలాగో నేర్చుకుంటారు."
+
+#: functions/zume-course.php:3262
+msgid "Activity (10min)"
+msgstr "కార్యాచరణ (10 నిమి)"
+
+#: functions/zume-course.php:3264
+msgid "Asses yourself using the coaching checklist."
+msgstr "శిక్షణా పరిశీలన పట్టికను ఉపయోగించి మిమ్మల్ని మీరు అంచనా వేసుకోండి."
+
+#: functions/zume-course.php:3269
+msgid "ASSESS"
+msgstr "అంచనా వేసుకోండి"
+
+#: functions/zume-course.php:3271
+msgid "The Coaching Checklist is a powerful tool you can use to quickly assess your own strengths and vulnerabilities when it comes to making disciples who multiply. It's also a powerful tool you can use to help others – and others can use to help you."
+msgstr "విస్తరింపజేసే శిష్యులను తయారు చేయుటలో మీ సొంత శక్తి సామర్థ్యములను మరియు బలహీనపరచు విషయాలను త్వరితగతి అంచనా వేయుటకు శిక్షణా పరిశీలన పట్టిక అనేది ఒక శక్తివంతమైన సాధనము. మీరు ఇతరులకు సహాయం చేయడానికి – మరియు ఇతరులు మీకు సహాయం చేయడానికి కూడా ఇది ఒక శక్తివంతమైన సాధనముగా ఉపయోగించవచ్చు."
+
+#: functions/zume-course.php:3273
+msgid "Find the Coaching Checklist section in your Zúme Guidebook, and take this quick (5-minutes or less) self-assessment:"
+msgstr "మీ జుమ్ మార్గదర్శక పుస్తకంలో శిక్షణా పరిశీలన పట్టిక విభాగాన్నీ కనుగొని మీకు మీరే త్వరితగతి (5ని: లేక అంతకన్నా తక్కువ) అంచనా వేయండి:"
+
+#: functions/zume-course.php:3276
+msgid "Read through the Disciple Training Tools in the far left column of the Checklist."
+msgstr "పరిశీలన పట్టికలో ఎడమ వైపు చివర ఉన్న వరుసలో శిష్యుని శిక్షణా సాధనములను చదవండి."
+
+#: functions/zume-course.php:3277
+msgid "Mark each one of the Training Tools, using the following method:"
+msgstr "దిగువ పేర్కొన్న విధానాన్ని ఉపయోగించి శిక్షణా సాధనములలో ప్రతిదానికి గుర్తు పెట్టండి:"
+
+#: functions/zume-course.php:3279
+msgid "If you're unfamiliar or don't understand the Tool – check the BLACK column"
+msgstr "ఆ సాధనము మీకు తెలియకపోతే లేక అర్థంకాకపోతే నలుపు (BLACK) వరుసను పరిశీలించండి"
+
+#: functions/zume-course.php:3282
+msgid "If you're somewhat familiar but still not sure about the Tool – check the RED column"
+msgstr "ఇప్పుడు మీకు ఆ సాధనము కొంత తెలిసినా కానీ ఇంకా అర్థంకానట్లుంటే ఎరుపు (RED) వరుసను పరిశీలించండి"
+
+#: functions/zume-course.php:3285
+msgid "If you understand and can train the basics on the Tool – check the YELLOW column"
+msgstr "మీరు అర్థంచేసుకొని మరియు ఆ సాధనముపై ప్రాథమికాంశాలు శిక్షణ ఇవ్వగలిగితే పసుపు (YELLOW) వరుసను పరిశీలించండి"
+
+#: functions/zume-course.php:3288
+msgid "If you feel confident and can effectively train the Tool – check the GREEN column"
+msgstr "మీరు సమర్థవంతంగా భావించి మరియు ఆ సాధనముపై ప్రభావవంతముగా శిక్షణ ఇవ్వగలిగితే పచ్చ (GREEN) వరుసను పరిశీలించండి"
+
+#: functions/zume-course.php:3311
+msgid "Zúme Video Scripts: Coaching Checklist"
+msgstr "జుమ్ వీడియో స్క్రిప్ట్స్(లిపి) : శిక్షణా పరిశీలన పట్టిక"
+
+#: functions/zume-course.php:3322
+msgid "Which Training Tools did you feel you would be able to train well?"
+msgstr "ఏ శిక్షణా సాధనములలో మీరు బాగా శిక్షణ చేయగలరని అనుకుంటున్నారు?"
+
+#: functions/zume-course.php:3323
+msgid "Which ones made you feel vulnerable as a trainer?"
+msgstr "ఒక శిక్షకుడిగా మిమ్ములను భాదపరుస్తున్నట్లున్న విషయాలు ఏవి?"
+
+#: functions/zume-course.php:3324
+msgid "Are there any Training Tools that you would add or subtract from the Checklist? Why?"
+msgstr "పరిశీలన పట్టికకు మీరు ఏవైనా శిక్షణా సాధనములను కలపాలని లేదా తీసివేయాలని అనుకుంటున్నారా? ఎందుకు?"
+
+#: functions/zume-course.php:3333
+msgid "REMEMBER – Be sure to share your Coaching Checklist results with training partner or other mentor. If you're helping coach or mentor someone, use this tool to help you assess which areas need your attention and training."
+msgstr "గుర్తుంచుకోండి - మీ శిక్షణా పరిశీలన పట్టికని శిక్షణా భాగస్వామితో లేదా ఇతర శిక్షకునితో పంచుకోండి. మీరు ఎవరికైనా సహాయక శిక్షకుడిగా లేదా సలహాదారుగా ఉంటే, మీయొక్క శ్రద్ద మరియు శిక్షణ ఏ ప్రాంతాల్లో అవసరమో అంచనా వేయటానికి ఈ సాధనం ఉపయోగించండి."
+
+#: functions/zume-course.php:3355
+msgid "What happens to churches as they grow and start new churches that start new churches? How do they stay connected and live life together as an extended, spiritual family? They become a network!"
+msgstr "సంఘములు ఎదుగుచూ, నూతన సంఘములను ప్రారంభించే నూతన సంఘములను ప్రారంభిస్తే ఏమి జరుగుతుంది? ఒక విస్తరించిన, ఆత్మీయ కుటుంబముగా కలసి జీవించుటకు దగ్గరగా ఎలా ఉంటారు? వారు ఒకరితో ఒకరు అనుసంధానించబడతారు!"
+
+#: functions/zume-course.php:3374
+msgid "Zúme Video Scripts: Leadership in Networks"
+msgstr "జుమ్ వీడియో స్క్రిప్ట్స్(లిపి): అనుసంధానించబడిన వాటిలో(నెట్ వర్క్స్ లో) నాయకత్వము"
+
+#: functions/zume-course.php:3382
+msgid "Are there advantages when networks of simple churches are connected by deep, personal relationships? What are some examples that come to mind?"
+msgstr "కలపబడిన సాధారణ సంఘములు వ్యక్తిగత సంబంధాల ద్వారా లోతుగా అనుసంధానించబడి ఉంటే ప్రయోజనాలున్నాయా? మనసుకు వచ్చే కొన్ని ఉదాహరణలు ఏమిటి?"
+
+#: functions/zume-course.php:3401
+msgid "Peer Mentoring Groups"
+msgstr "(పీర్ మెంటరింగ్ గ్రూప్స్) తోటివారిని శిష్యరికం చేసే బృందాలు"
+
+#: functions/zume-course.php:3404
+msgid "Making disciples who make disciples means making leaders who make leaders. How do you develop stronger leaders? By teaching them how to love one another better. Peer Mentoring Groups help leaders love deeper."
+msgstr "శిష్యులను తయారుచేసే శిష్యులను తయారు చేయడమంటే నాయకులను తయారుచేసే నాయకులను తయారుచేయటం. మీరు బలమైన నాయకులను ఎలా అభివృద్ధి చేస్తారు? ఒకరినొకరు బాగా ప్రేమించడం ఎలాగో వారికి బోధించడం ద్వారా. తోటివారిని శిష్యరికం చేసే బృందాలు నాయకులు మరింత లోతుగా ప్రేమించటానికి సహాయపడతాయి."
+
+#: functions/zume-course.php:3407
+msgid "Find the Peer Mentoring Groups section in your Zúme Guidebook, and listen to the audio below."
+msgstr "మీ జుమ్ మార్గనిర్దేశ పుస్తకంలో “తోటివారిని శిష్యరికం చేసే బృందాలు” విభాగాన్ని కనుగొనండి, మరియు క్రిందనున్న ఆడియో వినండి."
+
+#: functions/zume-course.php:3427
+msgid "Zúme Video Scripts: Peer Mentoring Groups"
+msgstr "జుమ్ వీడియో స్క్రిప్ట్స్(లిపి) : తోటివారిని శిష్యరికం చేసే బృందాలు"
+
+#: functions/zume-course.php:3440
+msgid "Practice (60min)"
+msgstr "సాధన (60ని:)"
+
+#: functions/zume-course.php:3448
+msgid "Find the Peer Mentoring Groups section in your Zúme Training Guide, and follow these steps."
+msgstr "మీ జుమ్ మార్గదర్శక పుస్తకంలో తోటివారిని శిష్యరికం చేసే బృందాల విభాగాన్ని కనుగొనండి మరియు ఈ దశల్ని అనుసరించండి."
+
+#: functions/zume-course.php:3459
+msgid "GROUPS"
+msgstr "బృందాలు"
+
+#: functions/zume-course.php:3463
+msgid "Break into groups of two or three and work through the 3/3 sections of the Peer Mentoring Group format. Peer Mentoring is something that happens once a month or once a quarter and takes some time for the whole group to participate, so you will not have time for everyone to experience the full mentoring process in this session."
+msgstr "తోటివారిని శిష్యరికం చేసే బృందాల నమూనాలోని 3/3 విభాగాల ద్వారా పనిచేయటానికి ఇద్దరు లేదా ముగ్గురుగా విడిపోండి. తోటివారి శిష్యరికం అంటే ఒక నెలకు ఒకసారి లేదా ఒక త్రైమాసికానికి ఒకసారి జరుగుతుంది మరియు మొత్తం సమూహం పాల్గొనడానికి కొంత సమయం పడుతుంది, కాబట్టి మీకు ఈ సెషన్ లో పూర్తి శిష్యరికం విధానాన్ని అనుభవించడానికి అందరికీ సమయం ఉండదు."
+
+#: functions/zume-course.php:3470
+msgid "To practice, choose one person in your group to be the \"mentee\" for this session and have the other members spend time acting as Peer Mentors by working through the suggested questions list and providing guidance and encouragement for the Mentee's work."
+msgstr "అభ్యసించడానికి, ఈ తరగతిలో మీ బృందంలో ఒక వ్యక్తిని \"శిక్షణ పొందువానిగా \" ఎంచుకోండి మరియు ఇతర సభ్యులు తోటివారి శిక్షకులుగా నటించి, సూచించిన ప్రశ్నల జాబితా ద్వారా పనిచేయడం మరియు శిక్షణ పొందువాని యొక్క పనికి మార్గదర్శనం మరియు ప్రోత్సాహం అందించడం జరుగుతుంది."
+
+#: functions/zume-course.php:3472
+msgid "By the time you're finished, everyone should have a basic understanding of asking and answering."
+msgstr "మీకు ఈ శిక్షణ పూర్తయ్యే సమయానికి ప్రతి ఒక్కరికి అడగడం, సమాధానం చెప్పడం పట్ల ప్రాథమిక అవగాహన ఉండాలి."
+
+#: functions/zume-course.php:3481
+msgid "REMEMBER – Spend time studying the Four Fields Diagnostic Diagram and Generational Map in the Peer Mentoring Groups section of your Zúme Training Guide. Make sure everyone in your group has a basic understanding of these tools before asking the suggested questions."
+msgstr "గుర్తుంచుకోండి – మీ జుమ్ మార్గదర్శక పుస్తకంలో తోటివారిని శిష్యరికం చేసే బృందాల విభాగంలోని నాలుగు ప్రాంతాల విశ్లేషణ రేఖాచిత్రం మరియు తరాల పటము అధ్యయనం చేయడానికి సమయాన్ని వెచ్చించండి. సూచించిన ప్రశ్నలను అడిగే ముందు మీ బృందంలో ఉన్న ప్రతి ఒక్కరికి ఈ సాధనముల గురించి ప్రాథమిక అవగాహన ఉండేలా చూసుకోండి."
+
+#: functions/zume-course.php:3496
+msgid "CONGRATULATIONS ON COMPLETING ZÚME TRAINING!"
+msgstr "జుమ్ శిక్షణ పూర్తి చేసినందుకు అభినందనలు!"
+
+#: functions/zume-course.php:3503
+msgid "You and your group are now ready to take leadership to a new level! Here are a few more steps to help you KEEP growing!"
+msgstr "మీరు మరియు మీ బృందం ఇప్పుడు నాయకత్వాన్ని ఒక క్రొత్త స్థాయికి తీసుకెళ్లేందుకు సిద్ధంగా ఉన్నారు. మీరు ఎదుగుతూ ఉండేందుకు సహాయపడే మరికొన్ని దశలు ఇక్కడ ఉన్నాయి!"
+
+#: functions/zume-course.php:3520
+msgid "Zúme Video Scripts: Completion of Training"
+msgstr "జుమ్ వీడియో స్క్రిప్ట్స్(లిపి) : శిక్షణ పూర్తిచేయడం"
+
+#: functions/zume-course.php:3527
+msgid "ACT"
+msgstr "అమలుపరచండి"
+
+#: functions/zume-course.php:3529
+msgid "To help others become and make disciples, share this www.ZumeProject.com link today! It'll soon be in 37 languages."
+msgstr "శిష్యులు కావటానికి మరియు శిష్యులను చేయడానికి, ఇతరులకు సహాయపడటానికి, ఈ www.ZumeProject.com లింక్ ను నేడు ఇతరులతో పంచుకోండి! ఇది త్వరలో 37 భాషలలో ఉంటుంది."
+
+#: functions/zume-dashboard.php:77 functions/zume-dashboard.php:108
+#: functions/zume-dashboard.php:191
+msgid "No Name"
+msgstr "పేరు లేదు"
+
+#: functions/zume-functions.php:294 template-zume-dashboard.php:1107
+#: template-zume-profile.php:80
+msgid "Phone Number"
+msgstr "ఫోన్ నంబర్"
+
+#: functions/zume-functions.php:295
+msgid "User Address"
+msgstr "వినియోగదారు చిరునామా"
+
+#: functions/zume-functions.php:296
+msgid "GeoCoded IP"
+msgstr "జియోకోడ్ IP"
+
+#: functions/zume-polylang-integration.php:138
+msgid "Home"
+msgstr "ఇల్లు (ప్రధాన స్థలం)"
+
+#: functions/zume-polylang-integration.php:139 template-zume-overview.php:238
+msgid "Dashboard"
+msgstr "డాష్ బోర్డ్"
+
+#: functions/zume-polylang-integration.php:140
+msgid "About"
+msgstr "గురించి"
+
+#: functions/zume-polylang-integration.php:141
+msgid "Resources"
+msgstr "వనరులు"
+
+#: functions/zume-polylang-integration.php:142
+msgid "FAQs"
+msgstr "తరచుగా అడిగే ప్రశ్నలు (FAQs)"
+
+#: functions/zume-polylang-integration.php:143
+msgid "Overview"
+msgstr "సారాంశము"
+
+#: functions/zume-polylang-integration.php:144
+msgid "Settings"
+msgstr "సెట్టింగ్స్ (క్రమబద్దీకరించు)"
+
+#: functions/zume-polylang-integration.php:145
+msgid "Profile"
+msgstr "ఛాయారూపం (ప్రొఫైల్)"
+
+#: functions/zume-polylang-integration.php:146
+msgid "Admin"
+msgstr "పరిపాలన భాగం"
+
+#: functions/zume-polylang-integration.php:147
+msgid "Logout"
+msgstr "నిష్క్రమణ (లాగౌట్)"
+
+#. Template Name of the plugin/theme
+#: functions/zume-polylang-integration.php:150
+msgid "Three-Month Plan"
+msgstr "మూడు నెలల ప్రణాళిక"
+
+#: functions/zume-polylang-integration.php:151 template-zume-progress.php:15
+msgid "Progress"
+msgstr "ప్రగతి"
+
+#: functions/zume-polylang-integration.php:152
+msgid "Stats"
+msgstr "గణాంకాలు"
+
+#: functions/zume-three-month-plan.php:80
+msgid "I will share My Story [Testimony] and God’s Story [the Gospel] with the following individuals:"
+msgstr "నేను నా కథను [సాక్ష్యము] మరియు దేవుని కథను [సువార్త] ఈ క్రింది వ్యక్తులతో పంచుకుంటాను:"
+
+#: functions/zume-three-month-plan.php:81
+msgid "I will invite the following people to begin an Accountability Group with me:"
+msgstr "నాతో కలసి ఒక జవాబుదారీతనం బృందమును ప్రారంభించడం కొరకు ఈ దిగువ వ్యక్తులను నేను ఆహ్వానిస్తాను:"
+
+#: functions/zume-three-month-plan.php:82
+msgid "I will challenge the following people to begin their own Accountability Groups and train them how to do it:"
+msgstr "దిగువ పేర్కొన్న వ్యక్తులను తమ స్వంత జవాబుదారీ బృందమును ప్రారంభించడానికి సవాలు చేసి మరియు దానిని ఎలా చేయాలో వారికి శిక్షణ ఇస్తాను:"
+
+#: functions/zume-three-month-plan.php:83
+msgid "I will invite the following people to begin a 3/3 Group with me:"
+msgstr "నాతో కలసి ఒక 3/3 బృందమును ప్రారంభించడం కొరకు ఈ దిగువ వ్యక్తులను నేను ఆహ్వానిస్తాను:"
+
+#: functions/zume-three-month-plan.php:84
+msgid "I will challenge the following people to begin their own 3/3 Groups and train them how to do it:"
+msgstr "దిగువ పేర్కొన్న వ్యక్తులను తమ స్వంత 3/3 బృందమును ప్రారంభించడానికి సవాలు చేసి మరియు దానిని ఎలా చేయాలో వారికి శిక్షణ ఇస్తాను:"
+
+#: functions/zume-three-month-plan.php:85
+msgid "I will invite the following people to participate in a 3/3 Hope or Discover Group [see Appendix of Zúme Guidebook]"
+msgstr "నేను ఒక 3/3 నిరీక్షించు లేదా కనుగొను బృందములో పాల్గొనుటకు ఈ దిగువ వ్యక్తులను ఆహ్వానిస్తాను (జుమ్ మార్గదర్శక పుస్తకంలోని అనుబంధ పట్టికను చూడండి)"
+
+#: functions/zume-three-month-plan.php:86
+msgid "I will invite the following people to participate in Prayer Walking with me:"
+msgstr "నాతో కలసి ప్రార్థనా నడకలో పాల్గొనుటకు ఈ దిగువ వ్యక్తులను నేను ఆహ్వానిస్తాను:"
+
+#: functions/zume-three-month-plan.php:87
+msgid "I will Prayer Walk once every [days / weeks / months]."
+msgstr "ప్రతి (రోజు/వారం /నెల )ఒకసారి ప్రార్థనా నడక చేస్తాను."
+
+#: functions/zume-three-month-plan.php:88
+msgid "I will equip the following people to share their story and God’s Story and make a List of 100 of the people in their relational network:"
+msgstr "నేను ఈ క్రింది వ్యక్తులను వారి కథ మరియు దేవుని కథ పంచుకోవడానికి మరియు వారి సంబంధబాంధవ్యములలో 100 మంది జాబితా తయారు చేయటానికి సిద్ధపరుస్తాను:"
+
+#: functions/zume-three-month-plan.php:89
+msgid "I will challenge the following people to use the Prayer Cycle tool on a periodic basis:"
+msgstr "ఈ క్రింది వ్యక్తులను ఆయా సమయములలో ప్రార్ధనా చక్రం సాధనం ఉపయోగించడానికి సవాలు చేస్తాను:"
+
+#: functions/zume-three-month-plan.php:90
+msgid "I will use the Prayer Cycle tool once every [days / weeks / months]."
+msgstr "ప్రతి (రోజు/వారం /నెల )ఒకసారి ప్రార్థనా చక్రం సాధనం ఉపయోగిస్తాను."
+
+#: functions/zume-three-month-plan.php:91
+msgid "I will invite the following people to be part of a Leadership Cell that I will lead:"
+msgstr "నేను నడిపించే ఒక నాయకత్వ శిబిరంలో భాగంగా ఉండుటకు ఈ క్రింది వ్యక్తులను ఆహ్వానిస్తాను:"
+
+#: functions/zume-three-month-plan.php:92
+msgid "I will encourage the following people to go through this Zúme Training course:"
+msgstr "జుమ్ శిక్షణ ద్వారా వెళ్ళమని ఈ క్రింది వ్యక్తులను నేను ప్రోత్సహిస్తాను:"
+
+#: functions/zume-three-month-plan.php:93
+msgid "Other commitments:"
+msgstr "ఇతర తీర్మానములు :"
+
+#: functions/zume-three-month-plan.php:139
+msgid "Unable to save three month plan."
+msgstr "మూడు నెలల ప్రణాళికను భద్రపరచలేక పోవుట."
+
+#: functions/zume-three-month-plan.php:143
+msgid "Unable to find key:"
+msgstr "కీ కనుగొనలేక పోవుట:"
+
+#: functions/zume-welcome-messages.php:98
+msgid "Welcome!"
+msgstr "స్వాగతం!"
+
+#: functions/zume-welcome-messages.php:99
+msgid "I want to make disciples who multiply!"
+msgstr "విస్తరింపజేసే శిష్యులను తయారు చేయాలనుకుంటున్నాను!"
+
+#: parts/content-missing.php:4
+msgid "Oops, Page Not Found!"
+msgstr "అయ్యో, పేజీ కనుగొనబడలేదు!"
+
+#: parts/content-missing.php:8
+msgid "Uh Oh. Something is missing. Try double checking things."
+msgstr "ఓహో, ఏదో లోపించింది. రెండోసారి తనిఖీ చేయటానికి ప్రయత్నించండి."
+
+#: parts/loop-archive.php:9
+msgid "Read more..."
+msgstr "ఇంకా చదవండి..."
+
+#: parts/loop-archive.php:13 parts/loop-single.php:15
+msgid "Tags:"
+msgstr "గుర్తింపు కొరకు జతచేయబడినవి (టాగ్స్)"
+
+#: parts/loop-single.php:14
+msgid "Pages:"
+msgstr "పేజీలు:"
+
+#: parts/nav-offcanvas-topbar.php:43
+msgid "Menu"
+msgstr "ప్రధాన పట్టిక (మెను)"
+
+#: template-zume-3plan.php:43 template-zume-dashboard.php:532
+msgid "Three Month Plan"
+msgstr "మూడు నెలల ప్రణాళిక"
+
+#: template-zume-3plan.php:45
+msgid "The Three Month Plan is part of the Session 9 training. It is designed to help you identify specific action steps post Zúme Training. Further instructions about the Three Month Plan are found in Session 9."
+msgstr "శిక్షణలోని 9వ తరగతిలో మూడు నెలల ప్రణాళిక భాగమైయున్నది. ఇది మీకు జుమ్ శిక్షణ తర్వాత నిర్దిష్ట కార్యరూప దశలను గుర్తించుటకు సహాయపడునట్లు రూపొందించబడినది. మూడు నెలల ప్రణాళికను గూర్చి తదుపరి సూచనలు 9వ తరగతిలో కనుగొనబడతాయి."
+
+#: template-zume-3plan.php:46
+msgid "You can connect your Three Month Plan to a group by adding the group key. Click on your group name below the \"Link to a Group with a Group Key\" field or check with your group leader to get the 5 digit code."
+msgstr "బృంద కీని జోడించడం ద్వారా మీ మూడు నెలల ప్రణాళికని ఒక బృందముకు మీరు కలపవచ్చు. దిగువనున్న మీ బృందము పేరు మీద \"ఒక బృంద కీ తో నున్న ఒక బృందము యొక్క పట్టిక (లింక్)\" క్లిక్ చేయండి లేదా 5 అంకెల సంకేతము పొందేందుకు మీ బృంద నాయకుడిని సంప్రదించండి."
+
+#: template-zume-3plan.php:47
+msgid "If you have completed a live training event, you can use the group key your trainer gives you to connect your plan with your training group."
+msgstr "మీరు ఒక ప్రత్యక్ష శిక్షణా కార్యక్రమాన్ని పూర్తి చేసినట్లయితే, మీ శిక్షణా బృందముతో మీ ప్రణాళికను కలపటానికి, మీ శిక్షకుడు ఇచ్చే బృంద కీని ఉపయోగించవచ్చును."
+
+#: template-zume-3plan.php:59
+msgid "My Plan"
+msgstr "నా ప్రణాళిక"
+
+#: template-zume-3plan.php:60
+msgid "Plans in Your Groups"
+msgstr "మీ యొక్క బృందములలో ప్రణాళికలు"
+
+#: template-zume-3plan.php:77
+msgid "Link to a Group with a Group Key (optional)"
+msgstr "బృంద కీతో ఒక బృందముకు అనుసంధానించుట (తప్పనిసరికాదు)"
+
+#: template-zume-3plan.php:80
+msgid "example: ABC12"
+msgstr "ఉదాహరణ: ABC12"
+
+#: template-zume-3plan.php:89
+msgid "Link"
+msgstr "లింక్"
+
+#: template-zume-3plan.php:96
+msgid "Add one of your groups? "
+msgstr "మీ బృందముల్లో ఒకదానిని జోడించండి? "
+
+#: template-zume-3plan.php:118
+msgid "Linked to"
+msgstr "అనుసంధానించటానికి"
+
+#: template-zume-3plan.php:125
+msgid "Unlink Group"
+msgstr "బృందమును విడదీయు"
+
+#: template-zume-3plan.php:164 template-zume-dashboard.php:1199
+#: template-zume-profile.php:193
+msgid "Oh snap!"
+msgstr "అయ్యో తక్షణమే!"
+
+#: template-zume-3plan.php:166 template-zume-profile.php:196
+msgid "Save"
+msgstr "భద్రపరచండి"
+
+#: template-zume-3plan.php:167
+msgid "Reset"
+msgstr "తిరిగి సమకూర్చండి"
+
+#: template-zume-3plan.php:168
+msgid "Print Saved Plan"
+msgstr "భద్రపర్చిన ప్రణాళికను ముద్రించండి"
+
+#: template-zume-3plan.php:179
+msgid "not answered"
+msgstr "జవాబు చెప్పబడలేదు"
+
+#: template-zume-3plan.php:229
+msgid "Print"
+msgstr "ముద్రించండి"
+
+#: template-zume-3plan.php:243
+msgid "No plans linked to this group."
+msgstr "ఈ బృందముతో ఏ ప్రణాళికలు అనుసంధానించబడలేదు."
+
+#: template-zume-about.php:18
+msgid "About Zúme Project"
+msgstr "జుమ్ పథకం (ప్రాజెక్ట్) గురించి"
+
+#: template-zume-about.php:38 template-zume-about.php:55
+#: template-zume-faq.php:197 template-zume-privacy-policy.php:185
+#: template-zume-progress.php:101
+msgid "Zúme uses an online training platform to equip participants in basic disciple-making and simple church planting multiplication principles, processes, and practices."
+msgstr "ప్రాధమికంగా శిష్యులను తయారు చేయుటకు మరియు సాధారణ సంఘ స్థాపనకు కావలసిన విస్తరణ సూత్రాలు, ప్రక్రియలు మరియు అభ్యాసములలో పాల్గొనువారిని సిద్ధపరచుటకు ఒక అంతర్జాల శిక్షణా వేదికను జుమ్ ఉపయోగిస్తుంది."
+
+#: template-zume-about.php:50 template-zume-faq.php:192
+#: template-zume-privacy-policy.php:180 template-zume-progress.php:96
+msgid "Goals of the Zúme Project:"
+msgstr "జుమ్ పథకం (ప్రాజెక్ట్) యొక్క లక్ష్యాలు:"
+
+#: template-zume-about.php:52 template-zume-faq.php:194
+#: template-zume-privacy-policy.php:182 template-zume-progress.php:98
+msgid "Zúme means yeast in Greek. In Matthew 13:33, Jesus is quoted as saying, \"The Kingdom of Heaven is like a woman who took yeast and mixed it into a large amount of flour until it was all leavened.\" This illustrates how ordinary people, using ordinary resources, can have an extraordinary impact for the Kingdom of God. Zúme aims to equip and empower ordinary believers to saturate the globe with multiplying disciples in our generation."
+msgstr "జుమ్ అంటే గ్రీకులో పుల్లని పిండి అని అర్థం. మత్తయి 13:33 లో యేసు ఇలా అన్నాడు, “పరలోకరాజ్యము, ఒక స్త్రీ తీసికొని పిండి అంతయు పులిసి పొంగువరకు మూడు కుంచముల పిండిలో దాచి పెట్టిన పుల్లని పిండిని పోలియున్నది.” సాధారణ ప్రజలు సాధారణ వనరులను ఉపయోగించి, దేవుని రాజ్యానికి అసాధారణ ప్రభావాన్ని ఎలా చూపగలరో ఇది ఉదహరిస్తోంది. మన తరంలో శిష్యులను విస్తరి౦పజేయడం ద్వారా భూగోళాన్ని సంపూర్ణ౦ చేయడానికి సాధారణ విశ్వాసులకు సన్నద్ధతను, శక్తియుక్తిని కలిగి౦చడమే జుమ్ లక్ష్యం."
+
+#: template-zume-about.php:72
+msgid "Zúme consists of 10 sessions, 2 hours each"
+msgstr "జుమ్ లో పది తరగతులు, ఒక్కొక్కటి రెండు గంటల చొప్పున ఉంటాయి"
+
+#: template-zume-about.php:89
+msgid "How to get started:"
+msgstr "ఎలా మొదలు పెట్టాలి:"
+
+#: template-zume-about.php:91
+msgid "If you haven't created a login yet, please do so."
+msgstr "ఒకవేళ మీరు ఇంకా లాగిన్ (ప్రవేశం) సృష్టించనట్లయితే, దయచేసి దానిని చేయండి."
+
+#: template-zume-about.php:93
+msgid "Invite 3-11 friends. A minimum group of 3-4 is needed for the practice and elements of the training."
+msgstr "3-11 మంది స్నేహితులను ఆహ్వానించండి. శిక్షణ యొక్క సాధన మరియు మూలకాలకు కనీసం 3-4 గురి బృందము అవసరమవుతుంది."
+
+#: template-zume-about.php:95
+msgid "Schedule a time to get together with your friends."
+msgstr "మీ స్నేహితులతో కలిసి గడుపుటకు ఒక సమయాన్ని కేటాయించండి."
+
+#: template-zume-about.php:96
+msgid "Make sure you have access to an internet-enabled device."
+msgstr "అంతర్జాలమును (ఇంటర్ నెట్) వినియోగించగలిగిన ఒక పరికరము మీకుండునట్లుగా చూసుకోండి."
+
+#: template-zume-about.php:108
+msgid "Optional prep for your first meeting:"
+msgstr "మీ మొదటి కూడిక కొరకు ఇష్టప్రకారమైన సిద్ధపాటు:"
+
+#: template-zume-about.php:110
+msgid "Download the Zúme Guidebook."
+msgstr "జుమ్ మార్గదర్శక పుస్తకము పొందుకొనుము (డౌన్ లోడ్ జుమ్ గైడ్ బుక్)"
+
+#: template-zume-about.php:111
+msgid "If you'd like, you can print out copies for the members of your group."
+msgstr "ఒకవేళ మీకిష్టమైతే, మీ బృంద సభ్యుల కొరకు మీరు ప్రతులను ముద్రించుకోవచ్చు."
+
+#: template-zume-about.php:112
+msgid "Consider connecting to a TV or projector so everyone in your group can view the content."
+msgstr "టీవీ లేదా ప్రొజెక్టర్ (తెరపై చూపు పరికరము) నకు అనుసంధానించుట ద్వారా మీ బృందములో ప్రతి ఒక్కరూ ఆ విషయాన్ని వీక్షించగలరు."
+
+#: template-zume-course.php:8
+msgid "You are missing a group or session number."
+msgstr "ఒక బృందము లేక ఒక తరగతి సంఖ్య మీకు లోపిస్తున్నది."
+
+#: template-zume-course.php:8 template-zume-course.php:11
+#: template-zume-course.php:27
+msgid "Head back to your dashboard"
+msgstr "మీ డ్యాష్ బోర్డ్ కు వెనుదిరగండి"
+
+#: template-zume-course.php:11
+msgid "You do not have a valid nonce. Where did you come from? "
+msgstr "మీకు చెల్లుబాటు అయ్యేది లేదు. మీరు ఎక్కడి నుంచి వచ్చారు?"
+
+#: template-zume-course.php:23
+msgid "Cannot find this group."
+msgstr "ఈ బృందాన్ని కనుగొనలేము."
+
+#: template-zume-course.php:23
+msgid "Head back to your dashboard and try again"
+msgstr "మీ డ్యాష్ బోర్డ్ కు వెనుదిరగండి మరియు తిరిగి ప్రయత్నించండి"
+
+#: template-zume-course.php:27
+msgid "You are missing a correct group or session number."
+msgstr "ఒక సరైన బృందము లేక తరగతి సంఖ్య మీకు లోపిస్తున్నది."
+
+#: template-zume-course.php:85
+msgid "You need a correctly formatted URL. This can happen if you came here from somewhere other than the dashboard."
+msgstr "మీకు సరిగ్గా ఆకృతి చేయబడిన URL (అంతర్జాలములో ఒక ఖచ్చితమైన చిరునామా గల వనరుల ప్రత్యేక నమూనా) అవసరం. డాష్ బోర్డు కాకుండా ఎక్కడో ఒకచోట నుంచి ఇక్కడకు వచ్చి ఉంటే ఇలా జరగవచ్చు."
+
+#: template-zume-course.php:85
+msgid "Head back to your dashboard and try again."
+msgstr "మీ డ్యాష్ బోర్డ్ కు వెనుదిరగండి మరియు తిరిగి ప్రయత్నించండి."
+
+#: template-zume-dashboard.php:83
+msgid "Your Groups"
+msgstr "మీ బృందములు"
+
+#: template-zume-dashboard.php:119
+msgid "view"
+msgstr "వీక్షించండి"
+
+#: template-zume-dashboard.php:125
+msgid "edit"
+msgstr "సంపాదకత్వం"
+
+#: template-zume-dashboard.php:130
+msgid "Meeting Time"
+msgstr "సమావేశ సమయం"
+
+#: template-zume-dashboard.php:132 template-zume-dashboard.php:662
+#: template-zume-dashboard.php:800 template-zume-dashboard.php:959
+msgid "Address"
+msgstr "చిరునామా"
+
+#: template-zume-dashboard.php:134
+msgid "Members"
+msgstr "సభ్యులు"
+
+#: template-zume-dashboard.php:137 template-zume-dashboard.php:742
+msgid "Key"
+msgstr "కీలకం (కీ)"
+
+#: template-zume-dashboard.php:181
+msgid "Start Next Session "
+msgstr "తదుపరి తరగతి ప్రారంభించండి"
+
+#: template-zume-dashboard.php:193
+msgid "Archive Group"
+msgstr "గత (ప్రాచీన) బృందము"
+
+#: template-zume-dashboard.php:228
+msgid "invites you to join"
+msgstr "మిమ్మల్ని చేరమని ఆహ్వానిస్తుంది"
+
+#: template-zume-dashboard.php:234
+msgid "Accept"
+msgstr "అంగీకరించు"
+
+#: template-zume-dashboard.php:236
+msgid "Decline"
+msgstr "నిరాకరించు"
+
+#: template-zume-dashboard.php:255
+msgid "You have no active groups"
+msgstr "మీకు ఎలాంటి చురుకైన బృందములు లేవు"
+
+#: template-zume-dashboard.php:257
+msgid "We recommend at least 3-11 people for a group."
+msgstr "ఒక బృందముకు కనీసం 3-11 మందిని సిఫార్సు చేస్తున్నాము."
+
+#: template-zume-dashboard.php:258
+msgid "You can join a current group when the group owner adds your email to the approved coleader/participant list. To start your own group, use the button below."
+msgstr "బృంద యజమాని మీ ఇమెయిల్ ను ఆమోదించబడ్డ సహ నాయకుడు/పాల్గొనేవారి జాబితాకు జోడించినప్పుడు మీరు ఒక ప్రస్తుత బృందములో చేరవచ్చు. మీ స్వంత బృందమును ప్రారంభించడానికి దిగువ బటన్ ఉపయోగించండి."
+
+#: template-zume-dashboard.php:266
+msgid "Start New Group"
+msgstr "కొత్త బృందమును ప్రారంభించండి"
+
+#: template-zume-dashboard.php:278
+msgid "Video Library"
+msgstr "వీడియో లైబ్రరీ"
+
+#: template-zume-dashboard.php:279
+msgid "of 32 videos"
+msgstr "యొక్క 32 వీడియోలు"
+
+#: template-zume-dashboard.php:284
+msgid "Overview Video"
+msgstr "వీడియో సారాంశము"
+
+#: template-zume-dashboard.php:285
+msgid "How Zúme Works"
+msgstr "జుమ్ ఎలా పని చేస్తుంది"
+
+#: template-zume-dashboard.php:286 template-zume-overview.php:92
+#: template-zume-overview.php:214
+msgid "Session 1"
+msgstr "తరగతి 1"
+
+#: template-zume-dashboard.php:287
+msgid "Welcome to Zume"
+msgstr "జుమ్ కు స్వాగతం"
+
+#: template-zume-dashboard.php:288
+msgid "Teach Them to Obey"
+msgstr "వారికి విధేయత నేర్పించండి"
+
+#: template-zume-dashboard.php:289
+msgid "Spiritual Breathing"
+msgstr "ఆధ్యాత్మిక శ్వాస"
+
+#: template-zume-dashboard.php:290
+msgid "S.O.A.P.S Bible Reading"
+msgstr "ఎస్. ఓ. ఎ. పి. యస్ బైబిల్ పఠనం"
+
+#: template-zume-dashboard.php:292 template-zume-overview.php:102
+#: template-zume-overview.php:215
+msgid "Session 2"
+msgstr "తరగతి 2"
+
+#: template-zume-dashboard.php:293
+msgid "Producers vs Consumers"
+msgstr "నిర్మాతలు వెర్సెస్ వినియోగదారులు"
+
+#: template-zume-dashboard.php:296 template-zume-overview.php:112
+#: template-zume-overview.php:216
+msgid "Session 3"
+msgstr "తరగతి 3"
+
+#: template-zume-dashboard.php:297
+msgid "Spiritual Economy"
+msgstr "ఆధ్యాత్మిక ఆర్థిక వ్యవస్థ"
+
+#: template-zume-dashboard.php:300 template-zume-overview.php:122
+#: template-zume-overview.php:217
+msgid "Session 4"
+msgstr "తరగతి 4"
+
+#: template-zume-dashboard.php:301
+msgid "3 Minute Testimony"
+msgstr "3 నిమిషాల సాక్ష్యము"
+
+#: template-zume-dashboard.php:302
+msgid "Greatest Blessing"
+msgstr "అతి గొప్ప ఆశీర్వాదము"
+
+#: template-zume-dashboard.php:303
+msgid "Duckling Discipleship"
+msgstr "బాతు పిల్ల శిష్యరికం"
+
+#: template-zume-dashboard.php:304
+msgid "Eyes to See"
+msgstr "చూచుటకు నేత్రాలు"
+
+#: template-zume-dashboard.php:305
+msgid "Lord's Supper"
+msgstr "ప్రభువు రాత్రి భోజన౦"
+
+#: template-zume-dashboard.php:306 template-zume-overview.php:132
+#: template-zume-overview.php:218
+msgid "Session 5"
+msgstr "తరగతి 5"
+
+#: template-zume-dashboard.php:308
+msgid "Person of Peace"
+msgstr "నెమ్మది గల వ్యక్తి"
+
+#: template-zume-dashboard.php:309 template-zume-overview.php:143
+#: template-zume-overview.php:219
+msgid "Session 6"
+msgstr "తరగతి 6"
+
+#: template-zume-dashboard.php:310
+msgid "Faithfulness"
+msgstr "విశ్వాస్యత"
+
+#: template-zume-dashboard.php:311
+msgid "3/3 Group"
+msgstr "3/3 బృందము"
+
+#: template-zume-dashboard.php:312
+msgid "3/3 Group Live"
+msgstr "ప్రత్యక్ష 3/3 బృందము"
+
+#: template-zume-dashboard.php:313 template-zume-overview.php:154
+#: template-zume-overview.php:220
+msgid "Session 7"
+msgstr "తరగతి 7"
+
+#: template-zume-dashboard.php:314
+msgid "Training Cycle"
+msgstr "శిక్షణా చక్రము"
+
+#: template-zume-dashboard.php:315 template-zume-overview.php:165
+#: template-zume-overview.php:221
+msgid "Session 8"
+msgstr "తరగతి 8"
+
+#: template-zume-dashboard.php:316
+msgid "Leadership Cells"
+msgstr "నాయకత్వ శిబిరములు"
+
+#: template-zume-dashboard.php:317 template-zume-overview.php:176
+#: template-zume-overview.php:222
+msgid "Session 9"
+msgstr "తరగతి 9"
+
+#: template-zume-dashboard.php:318
+msgid "Non-Sequential"
+msgstr "సరళీకృతం కాని"
+
+#: template-zume-dashboard.php:319
+msgid "Pace"
+msgstr "వేగము"
+
+#: template-zume-dashboard.php:320
+msgid "Part of Two Churches"
+msgstr "రె౦డు సంఘములలో భాగ౦గా"
+
+#: template-zume-dashboard.php:321
+msgid "Completion of Training"
+msgstr "శిక్షణ పూర్తిచేయడం"
+
+#: template-zume-dashboard.php:322 template-zume-overview.php:223
+msgid "Session 10"
+msgstr "తరగతి 10"
+
+#: template-zume-dashboard.php:323
+msgid "Coaching Checklist"
+msgstr "శిక్షణా పరిశీలన పట్టిక"
+
+#: template-zume-dashboard.php:324
+msgid "Leadership in Networks"
+msgstr "అనుసంధానించబడిన వాటిలో (నెట్ వర్క్స్ లో) నాయకత్వము"
+
+#: template-zume-dashboard.php:325
+msgid "Peer Mentoring"
+msgstr "(పీర్ మెంటరింగ్) తోటివారిని శిష్యరికం చేయటం"
+
+#: template-zume-dashboard.php:398
+msgid "Session videos will be added as you complete sessions."
+msgstr "మీరు తరగతులు పూర్తి చేసిన తరువాత తరగతుల వీడియోలు జోడించబడతాయి."
+
+#: template-zume-dashboard.php:419 template-zume-dashboard.php:547
+msgid "Archived Groups"
+msgstr "స్తంభించిన (ప్రాచీన) బృందములు"
+
+#: template-zume-dashboard.php:435
+msgid "activate"
+msgstr "పనిచేయునట్లు చేయు"
+
+#: template-zume-dashboard.php:488
+msgid "Get a Coach"
+msgstr "ఒక శిక్షకుని పొందండి"
+
+#: template-zume-dashboard.php:500
+msgid "Join me on the Zúme Project"
+msgstr "జుమ్ పథకం (ప్రాజెక్ట్ )పై నాతో కలవండి"
+
+#: template-zume-dashboard.php:501
+msgid "Invite to Zúme"
+msgstr "జుమ్ కు ఆహ్వానించండి"
+
+#: template-zume-dashboard.php:568
+msgid "Networks"
+msgstr "అనుసంధానించబడినవి (నెట్ వర్క్స్)"
+
+#: template-zume-dashboard.php:609
+msgid "Create Group"
+msgstr "బృందమును సృష్టించండి"
+
+#: template-zume-dashboard.php:618 template-zume-dashboard.php:753
+#: template-zume-dashboard.php:950
+msgid "Group Name"
+msgstr "బృందము పేరు"
+
+#: template-zume-dashboard.php:624
+msgid "Number of Group Members (including you)"
+msgstr "బృంద సభ్యుల సంఖ్య (మీతో సహా)"
+
+#: template-zume-dashboard.php:655 template-zume-dashboard.php:792
+#: template-zume-dashboard.php:956
+msgid "Planned Meeting Time"
+msgstr "ప్రణాళిక చేసిన సమావేశ సమయం"
+
+#: template-zume-dashboard.php:656 template-zume-dashboard.php:794
+msgid "example: Saturday 7PM"
+msgstr "ఉదా: శనివారం సాయంత్రం 7 గం: లకు"
+
+#: template-zume-dashboard.php:674 template-zume-dashboard.php:812
+#: template-zume-dashboard.php:1157 template-zume-profile.php:109
+msgid "Validate"
+msgstr "నిర్ధారించండి"
+
+#: template-zume-dashboard.php:692 template-zume-dashboard.php:832
+#: template-zume-dashboard.php:970
+msgid "Coleaders or additional participants"
+msgstr "సహ నాయకులు లేదా అదనపు భాగస్వాములు"
+
+#: template-zume-dashboard.php:700 template-zume-dashboard.php:854
+msgid "Add"
+msgstr "కలపండి"
+
+#: template-zume-dashboard.php:707 template-zume-dashboard.php:1202
+msgid "Submit"
+msgstr "సమర్పించండి"
+
+#: template-zume-dashboard.php:732
+msgid "Edit Group"
+msgstr "బృందమును సంపాదకత్వం చేయండి"
+
+#: template-zume-dashboard.php:733
+msgid ""
+"You are the owner of this group. All changes to the group details must be done through \n"
+"                you."
+msgstr "మీరు ఈ బృందమునకు యజమాని. బృంద వివరాలకు సంబందించిన అన్ని మార్పులు మీ ద్వారా తప్పక చేయాలి."
+
+#: template-zume-dashboard.php:748
+msgid "Change Key"
+msgstr "కీలక పదం(కీ) మార్చండి"
+
+#: template-zume-dashboard.php:760 template-zume-dashboard.php:953
+msgid "Number of Participants"
+msgstr "పాల్గొనేవారి సంఖ్య"
+
+#: template-zume-dashboard.php:803
+msgid "example: 1000 Broadway, Denver, CO 80126"
+msgstr "ఉదా: 1000 బ్రాడ్వే, డెన్వర్, CO 80126"
+
+#: template-zume-dashboard.php:834
+msgid "Adding a coleader or additional participants gives them access to this group on their Zúme dashboard once they have signed up and logged in using the email address you add. When they login to their dashboard they will see an invitation from you on the right side of the screen. Adding them to this group allows them to facilitate a training but they cannot change any details of the group. Note: they will not receive a system email from Zúme with this invitation, you will need to ask them to sign up."
+msgstr "ఒక సహానాయకుడు లేదా అదనపు సహభాగులను జోడించడం ద్వారా, వారు మీరు జోడించిన ఇమెయిల్ చిరునామాను ఉపయోగించి ప్రవేశించిన తరువాత జుమ్ డ్యాష్ బోర్డులో ప్రవేశించుటకు అనుమతి పొందుతారు. వారు తమ డ్యాష్ బోర్డులో ప్రవేశించినప్పుడు, తెరపై కుడివైపున మీ నుంచి ఆహ్వానం కనిపిస్తుంది. వారిని ఈ బృందమునకు జోడించడం ద్వారా శిక్షణ సులభంగా పొందుటకు అనుమతి పొందుతారు, అయితే బృందము యొక్క ఎలాంటి వివరాలను వారు మార్చలేరు. గమనిక: వారు ఈ ఆహ్వానంతో జుమ్ నుండి ఒక సిస్టమ్ ఇమెయిల్ ని అందుకోరు, మీరు వారిని నమోదు చేయమని వారిని అడగాలి."
+
+#: template-zume-dashboard.php:864
+msgid "Update"
+msgstr "నవీకరణ"
+
+#: template-zume-dashboard.php:867
+msgid "Archive"
+msgstr "గత (ఉపయోగించని)"
+
+#: template-zume-dashboard.php:897
+msgid "ARE YOU SURE YOU WANT TO DELETE THIS GROUP?"
+msgstr "ఈ బృందమును మీరు ఖచ్చితంగా తీసివేయాలని అనుకుంటున్నారా?"
+
+#: template-zume-dashboard.php:934
+msgid "View Group"
+msgstr "బృందమును వీక్షించండి"
+
+#: template-zume-dashboard.php:937
+msgid ""
+"You are a participant or coleader of this group and can view the group \n"
+"                        details and lead the group through a session, but cannot change the details of the group or add \n"
+"                        participants. Please, make change requests through the group owner."
+msgstr "మీరు ఈ బృందమునకు చెందిన ఒక సభ్యుడు లేదా సహానాయకుడు మరియు బృంద వివరాలను వీక్షించవచ్చు మరియు తరగతి ద్వారా బృందమును నడిపించవచ్చు, అయితే బృందము యొక్క వివరాలను మార్చలేరు లేదా ఇతరులను జోడించలేరు. దయచేసి, బృంద యజమాని ద్వారా మార్పులను విన్నవించండి."
+
+#: template-zume-dashboard.php:946
+msgid "Group Owner"
+msgstr "బృంద యజమాని"
+
+#: template-zume-dashboard.php:991
+msgid "Remove Group"
+msgstr "బృందాన్ని తొలగించు"
+
+#: template-zume-dashboard.php:1005
+msgid "ARE YOU SURE YOU WANT TO REMOVE THIS GROUP?"
+msgstr "ఈ గ్రూపును మీరు కచ్చితంగా తొలగించాలని అనుకుంటున్నారా?"
+
+#: template-zume-dashboard.php:1006
+msgid "To reverse this action, the owner of the group must re-invite you to the group again."
+msgstr "ఈ చర్యను త్రిప్పుటకు, బృంద యజమాని మిమ్ములను ఖచ్చితంగా మరలా బృందమునకు ఆహ్వానించాలి."
+
+#: template-zume-dashboard.php:1013
+msgid "Remove"
+msgstr "తొలగించండి"
+
+#: template-zume-dashboard.php:1051
+msgid "Connect Me to a Coach"
+msgstr "నన్ను ఒక శిక్షకునితో కలపండి"
+
+#: template-zume-dashboard.php:1063
+msgid "Coaches"
+msgstr "శిక్షకులు"
+
+#: template-zume-dashboard.php:1064
+msgid "Our network of volunteer coaches are people like you, people who are passionate about loving God, loving others, and obeying the Great Commission."
+msgstr "మాతో కలపబడిన స్వచ్చంధ శిక్షకులంతా మీవంటి వారే, దేవుని ప్రేమించడం, ఇతరులను ప్రేమించడం మరియు గొప్ప ఆజ్ఞకు విధేయత చూపడం వంటి వాటిలో తీవ్రత కలిగినవారు."
+
+#: template-zume-dashboard.php:1069
+msgid "Advocates"
+msgstr "ఉత్తరవాదులు (సహకారులు)"
+
+#: template-zume-dashboard.php:1070
+msgid "A coach is someone who will come alongside you as you implement the Zúme tools and training."
+msgstr "శిక్షకుడు అంటే మీరు జుమ్ సాధనాలు మరియు శిక్షణని అమలు చేసేటప్పుడు మీతోపాటు ఉండి చూసుకునేవాడు."
+
+#: template-zume-dashboard.php:1075
+msgid "Local"
+msgstr "స్థానిక"
+
+#: template-zume-dashboard.php:1076
+msgid "On submitting this request, we will do our best to connect you with a coach near you."
+msgstr "ఈ వినతిని సమర్పించుటను బట్టి మీ దగ్గరలో ఉన్న శిక్షకుడితో మిమ్మును కలవడం కొరకు మేం శాయశక్తులా ప్రయత్నం చేస్తాం."
+
+#: template-zume-dashboard.php:1081
+msgid "It's Free"
+msgstr "ఇది ఉచితం"
+
+#: template-zume-dashboard.php:1082
+msgid "Coaching is free. You can opt out at any time."
+msgstr "శిక్షణ ఉచితం. ఏ సమయంలోనైనా ఎంపిక చేసుకోవచ్చు."
+
+#: template-zume-dashboard.php:1092 template-zume-profile.php:63
+msgid "Name"
+msgstr "పేరు"
+
+#: template-zume-dashboard.php:1096 template-zume-dashboard.php:1097
+#: template-zume-profile.php:67 template-zume-profile.php:68
+msgid "First and last name"
+msgstr "మొదటి మరియు చివరి పేరు"
+
+#: template-zume-dashboard.php:1135
+msgid "Email is required."
+msgstr "ఇమెయిల్ అవసరం."
+
+#: template-zume-dashboard.php:1143
+msgid "City"
+msgstr "నగరం"
+
+#: template-zume-dashboard.php:1168
+msgid "How should we contact you?"
+msgstr "మేము మిమ్మల్ని ఎలా సంప్రదించాలి?"
+
+#: template-zume-dashboard.php:1175
+msgid "Text"
+msgstr "సందేశం (పంపండి)"
+
+#: template-zume-dashboard.php:1177
+msgid "Phone"
+msgstr "ఫోన్ (చేయండి)"
+
+#: template-zume-dashboard.php:1179
+msgid "WhatsApp"
+msgstr "వాట్సాప్"
+
+#: template-zume-dashboard.php:1181
+msgid "Other"
+msgstr "ఇతర"
+
+#: template-zume-dashboard.php:1188 template-zume-profile.php:180
+msgid "Affiliation Key"
+msgstr "అనుబంధ కీ"
+
+#: template-zume-dashboard.php:1230
+msgid "Thank you. You have already requested a coach connection."
+msgstr "ధన్యవాదాలు. ఒక శిక్షకుడితో కలపమని మీరు ఇప్పటికే అభ్యర్థించారు."
+
+#: template-zume-faq.php:20
+msgid "Zúme FAQs"
+msgstr "జుమ్ తరచుగా అడిగే ప్రశ్నలు (FAQs)"
+
+#: template-zume-faq.php:30
+msgid "Is it really 100 percent free?"
+msgstr "ఇది నిజంగా 100 శాతం ఉచితం?"
+
+#: template-zume-faq.php:31
+msgid "Yes. There are no premium versions, no trial periods, no follow-on sales of products. We feel strongly that Kingdom ventures should be sacrificially offered freely."
+msgstr "అవును. ఎలాంటి బహుమతి రకాలు లేవు, ప్రయత్న గడువు లేదు, తరువాత ఉత్పత్తుల యొక్క అమ్మకాలు లేవు. దేవుని రాజ్య పథకాలు ఉచితంగా త్యాగముతో అర్పించవలెనని మేము బలముగా భావిస్తాము."
+
+#: template-zume-faq.php:37
+msgid "How old do you have to be to take the training?"
+msgstr "శిక్షణ తీసుకోవడానికి మీకు ఎంత వయస్సు ఉండాలి?"
+
+#: template-zume-faq.php:38
+msgid "We recommend the training for people from 13-years-old and up. If you think you have a child younger than that who can benefit, by all means let them participate."
+msgstr "13 ఏళ్ళు మరియు ఆపై వయస్సు గల వ్యక్తులకు శిక్షణను మేము సిఫార్సు చేస్తున్నాము. ఒకవేళ మీకు ఈ వయస్సు కంటే తక్కువ ఉన్న ఒక చిన్న బిడ్డ ఉంటే ఆ బిడ్డకు దీనిని నేర్చుకోవడంవల్ల మేలు కలుగుతుంది అని భావిస్తే వారిని పాల్గొననివ్వడి."
+
+#: template-zume-faq.php:44
+msgid "What if someone wants to be trained and doesn’t have an e-mail address?"
+msgstr "ఒకవేళ ఎవరైనా శిక్షణ పొందాలనుకుని మరియు వారికి ఇ-మెయిల్ చిరునామా లేకపోతే ఏమిటి?"
+
+#: template-zume-faq.php:45
+msgid "At least one person in the group will have to have an e-mail account they actually use so that they can login and access all of the features of the website. Participants who view the media when present with the group no longer need an email address for the group to begin."
+msgstr "బృందములోని కనీసం ఒక వ్యక్తి అయినా ఉపయోగించుచున్న ఈ-మెయిల్ ఖాతాను కలిగివుంటే వారు వెబ్ సైట్ యొక్క అన్ని లక్షణాల (ఫీచర్ల)కు ప్రవేశించి అందుబాటులో ఉండవచ్చు. ఎవరైతే బృందముతో ఉన్నప్పుడు మీడియాను (మాధ్యమము) వీక్షిస్తారో, వారితో బృందము ప్రారంభించడానికి ఇక ఇమెయిల్ చిరునామా అవసరం లేదు."
+
+#: template-zume-faq.php:51
+msgid "How can I preview the lessons before starting a training event?"
+msgstr "ఒక శిక్షణ కార్యక్రమం ప్రారంభించడానికి ముందు నేను పాఠాలను ముందుగా ఎలా చూడగలుగుతాను?"
+
+#: template-zume-faq.php:52
+msgid "Check out the “Overview” section. It highlights the concepts, the tools, and what your group will practice for each session."
+msgstr "\"అవలోకనం\"(సారాంశము) విభాగాన్ని ఒకసారి సరిచూడండి. ఇది భావనలు, సాధనాలు మరియు ప్రతి తరగతి కొరకు మీ గ్రూపు ఏమి ఆచరిస్తుందో వాటిని ప్రధానంగా గుర్తిస్తుంది."
+
+#: template-zume-faq.php:58
+msgid "What is the content of the training?"
+msgstr "శిక్షణ యొక్క విషయం (కంటెంట్) ఏమిటి?"
+
+#: template-zume-faq.php:59
+msgid "You can view an overview of the content in the content section, or download the guidebook and review the course content, or login and start a group but at the first page of the session choose \"Exploring Session\". This will let you go through the course content without marking it as completed."
+msgstr "విషయసూచికలో ఉన్నటివంటి విభాగం అయిన విషయ సారాంశమును మీరు వీక్షించవచ్చు లేదా మార్గదర్శక పుస్తకం ని డౌన్ లోడ్ చేసుకొని, శిక్షణలో ఉన్న విషయాన్ని సమీక్షించి, లేదా లాగిన్ (ప్రవేశం) చేసి ఒక బృందమును ప్రారంభించండి. అయితే తరగతి యొక్క మొదటి పేజీలో \"అన్వేషించే తరగతి\" ఎంచుకోండి. ఇది పూర్తయినట్టు గుర్తింపు చేయకుండానే శిక్షణా విషయం ద్వారా మీరు శిక్షణకు వెళ్లడానికి ఇది వీలు చేస్తుంది."
+
+#: template-zume-faq.php:65
+msgid "I want to make copies of the manual (Guidebook) before the training. How can I do that?"
+msgstr "శిక్షణకు ముందు ముద్రణ (మార్గదర్శ పుస్తక) ప్రతులను చేయాలనుకుంటున్నాను. నేను ఎలా చేయవచ్చు?"
+
+#: template-zume-faq.php:66
+msgid "You can always find the Guidebook by hovering over the “About” tab on the top of every page."
+msgstr "ప్రతి పేజీ యొక్క పైన ఉన్న ''గురించి'' ట్యాబ్ మీదకి రావటం ద్వారా మీరు ఎప్పుడూ మార్గదర్శ పుస్తకాన్ని కనుగొనవచ్చు."
+
+#: template-zume-faq.php:72
+msgid "I accidentally hit the next button and I want to go back and view a video again. How do I navigate?"
+msgstr "నేను అనుకోకుండా తరువాత బటన్ కొట్టాను నేను వెనక్కి వెళ్లి మళ్ళీ ఒక వీడియో వీక్షించాలనుకుంటున్నాను. నేను ఎలా వెళ్లగలుగుతాను?"
+
+#: template-zume-faq.php:73
+msgid "Use the \"Previous\" and \"Next\" buttons at the bottom of the session to navigate through the session. From the Dashboard you can click the session number of the group and go directly to that session."
+msgstr "తరగతి లో సంచరించటం కొరకు తరగతి యొక్క దిగువన “మునుపటి” మరియు “తదుపరి” బటన్లను ఉపయోగించండి. డ్యాష్ బోర్డ్ నుంచి మీరు బృందము యొక్క తరగతి సంఖ్యను (క్లిక్ ) నొక్కగలరు మరియు నేరుగా ఆ తరగతికి వెళతారు."
+
+#: template-zume-faq.php:79
+msgid "There are lots of DMM or CPM trainers, so why is Zúme needed?"
+msgstr "ఎంతోమంది ఉన్నతమైన లేదా భ్రహ్మాండమైన (DMM or CPM) శిక్షకులు ఉన్నారు, కాబట్టి జుమ్ ఎందుకు అవసరం?"
+
+#: template-zume-faq.php:80
+msgid "Live training is better than online training. Online training should never replace live training events. Unfortunately, due to limitations of access, awareness, availability, scheduling, and many other reasons, many people who can and should have access to live training events don’t have access. Zúme is an attempt to provide a high-quality entry level substitute for such people. It uses the same principles as many of the live training types available from others. In addition, we find that once a person is trained with Zúme, they can very easily turn around and launch their own group and facilitate training for others using Zúme. This is a powerful opportunity for multiplying disciple-making principles."
+msgstr "అంతర్జాల (ఆన్ లైన్) శిక్షణ కంటే ప్రత్యక్ష శిక్షణ ఉత్తమమైనది. ఆన్ లైన్ శిక్షణ ప్రత్యక్ష శిక్షణ కార్యక్రమములను ఎన్నడూ భర్తీ చేయలేదు. కానీ దురదృష్టవశాత్తు, పరిమితమైన అందుబాట్లు, అవగాహన, లభ్యత, అధికారిక ప్రకటన, మరియు ఇంకా అనేక ఇతర కారణాల వల్ల, అనేక మంది వ్యక్తులు ప్రత్యక్ష శిక్షణా తరగతులకు హాజరు కాగలిగి యుండినప్పటికీ హాజరు కాలేక పోతున్నారు. జుమ్ అటువంటి వారికి అధిక నాణ్యత గల ప్రవేశస్థాయి ప్రత్యామ్నాయాన్ని అందించడానికి చేసే ప్రయత్నం. ఇతరుల నుంచి లభించే అనేక రకాల ప్రత్యక్ష శిక్షణల వలెనే అవే సిద్ధాంతాలను ఉపయోగిస్తుంటారు. అదేవిధంగా, ఒక వ్యక్తి జుమ్ నుండి శిక్షణ పొందినప్పుడు, వారు చాలా సులభంగా నేర్చుకొన్న దానితో వారి స్వంత బృందమును ప్రారంభించి మరియు జుమ్ ను ఉపయోగించి ఇతరులకు శిక్షణను సులభతరం చేయవచ్చు. విస్తరింపజేసే శిష్యులను చేసే సూత్రాలను పాటించడానికి ఇది ఒక శక్తివ౦తమైన అవకాశ౦."
+
+#: template-zume-faq.php:86
+msgid "What is the statement of faith for Zúme?"
+msgstr "జుమ్ విశ్వాస ప్రకటన ఏమిటి?"
+
+#: template-zume-faq.php:87
+msgid "Since Zúme is not run by an organization, there is not a formal statement of faith. All of us involved, however, would agree on the Lausanne Covenant."
+msgstr "జుమ్ ఒక సంస్థ ద్వారా నడపబడుట లేదు కాబట్టి, ఒక నామమాత్రపు విశ్వాస ప్రకటన లేదు. అయితే, పాల్గొనే మనమంతా ప్రపంచ వ్యాప్త సువార్తికరణ అనే నిబంధనని అంగీకరిస్తాము."
+
+#: template-zume-faq.php:93
+msgid "Can I do the training by myself?"
+msgstr "నాకు నేను శిక్షణ చేయగలనా?"
+
+#: template-zume-faq.php:94
+msgid "No. There are essential training exercises and practice sessions which require other participants to complete. At least 3-4 people need to be present at every session, or you will not be able to experience the full training."
+msgstr "లేదు. ఇతర సహభాగులతో ఆచరించడానికి అవసరమైన శిక్షణ అభ్యాసములు మరియు సాధనా తరగతులు ఉంటాయి. ప్రతి తరగతిలో కనీసం 3-4 మంది వ్యక్తులు అవసరం అవుతారు లేదా మొత్తం శిక్షణను మీరు పూర్తిచెయ్యలేరు."
+
+#: template-zume-faq.php:100
+msgid "Who is the training appropriate for?"
+msgstr "శిక్షణ ఎవరికి తగినది?"
+
+#: template-zume-faq.php:101
+msgid "The training is appropriate for followers of Christ who are 13-years-old or older and who are able to read. In the future, there may be a version produced that is appropriate for non-literate people, but this is not that version. We believe every person who fits this profile should take the training."
+msgstr "చదవగలిగిన, 13 ఏళ్లు లేదా ఆపైవయస్సు కలిగిన క్రీస్తు అనుచరులకు ఈ శిక్షణ తగినదే. భవిష్యత్తులో, నిరక్ష్యరాస్యులైన వ్యక్తులకు తగిన విధంగా ఈ శిక్షణ ను ఉత్పత్తి చేసే సంస్కరణ ఉండవచ్చు, కానీ ఇప్పుడు ఉన్నది ఆ సంస్కరణ కాదు. ఇప్పుడున్నటు వంటి ఆకృతికి సరిపోయే ప్రతి వ్యక్తి ఈ శిక్షణ తీసుకోవాలని మేము నమ్ముచున్నాము."
+
+#: template-zume-faq.php:107
+msgid "Who owns Zúme?"
+msgstr "జుమ్ ఎవరి సొంతము?"
+
+#: template-zume-faq.php:108
+msgid "There is no organization that is “running” the Zúme Project and the project is not an organization. It is a coalition of people who have a heart to carry out Christ’s command to make disciples of every people group on earth and expand His Kingdom to every place until His will is done on earth as it is in heaven. The idea for the project originated in a meeting of the Jonathan Project leadership but has since spread far beyond that group. The Jonathan Project is a consortium of people committed to multiplying disciples around the world."
+msgstr "జుమ్ పథకంను ఏ సంస్థ నడిపించుట లేదు మరియు జుమ్ ఒక సంస్థ కాదు. ఇది కొంతమంది ప్రజలు హృదయపూర్వక౦గా యేసు ఇచ్చినటువంటి ఆజ్ఞను నెరవేర్చడానికి, సర్వలోకమునకు వెళ్లి సర్వ సృష్టికి సువార్త అందించడానికి, ప్రతి దేశం, గ్రామంలో దేవుని రాజ్య విస్తరణకు, దేవుని చిత్తము పరలోకమందు నెరవేరుచున్నట్లు భూమియందును నెరవేరునట్లు భారం కలిగిన వారి కలయిక. జుమ్ పథకం యొక్క ఆలోచన యోనాతాను పథకం యొక్క నాయకత్వ సమావేశములో ఉద్భవించింది, కానీ ఇప్పుడు ఆ సమూహం దాటి సుదూరంగా వ్యాపించింది. యోనాతాను పథకం ప్రపంచ వ్యాప్తంగా శిష్యులను అభివృద్ధి పరచడం కోసం కట్టుబడి ఉన్న ప్రజల ఒప్పందం."
+
+#: template-zume-faq.php:114
+msgid "What are the three phases that are planned?"
+msgstr "ప్రణాళిక చేయబడ్డ మూడు దశలు ఏవి?"
+
+#: template-zume-faq.php:116
+msgid "PHASE 1"
+msgstr "దశ 1"
+
+#: template-zume-faq.php:117 template-zume-progress.php:33
+msgid "The first phase focuses on the United States and English. The initial goal is to catalyze a training group of four to twelve people per every 5,000 people in the country. Each of these training groups will be challenged to start two first-generation churches which should also reproduce. The target for the United States is to start more than 65,000 English-language Zúme groups and 130,000 churches."
+msgstr "మొదటి దశ సంయుక్త రాష్ట్రాలు (అమెరికా) మరియు ఆంగ్లభాష పై దృష్టి పెడుతుంది. దేశంలోని ప్రతి 5,000 మందికి నాలుగు నుంచి పన్నెండు మంది చొప్పున కలిగిన శిక్షణా బృందాన్ని పురికొల్పడమే తొలి లక్ష్యం. వీటిలో ప్రతి శిక్షణా బృందము రెండు మొదటి తరం సంఘములు, అవి కూడ తిరిగి పునరుత్పత్తి చేసే సంఘములను ప్రారంభించాలని సవాలు చేయబడుతుంది. సంయుక్త రాష్ట్రాలు (అమెరికా) కోసం లక్ష్యం 65,000 కంటే ఎక్కువ ఆంగ్ల భాష జుమ్ (zúme) బృందాలు మరియు 130,000 సంఘములు ప్రారంభించడం."
+
+#: template-zume-faq.php:120
+msgid "PHASE 2"
+msgstr "దశ 2"
+
+#: template-zume-faq.php:121 template-zume-progress.php:55
+msgid "The second phase focuses on coaching these Phase 1 churches through the reproduction process, as well as delivering the project in other major world languages. The project will start in the following languages: Ahmaric, Arabic, Bengali, Bhojpuri, Burmese, Chinese (Mandarin), Chinese (Cantonese), Farsi, French, German, Gujarati, Hausa, Hindi, Indonesian, Italian, Japanese, Kannada, Korean, Maithili, Malayalam, Marathi, Oriya, Panjabi (Eastern), Panjabi (Western), Portuguese, Russian, Somali, Spanish, Swahili, Tamil, Telugu, Thai, Turkish, Urdu, Vietnamese, Yoruba."
+msgstr "రెండో దశ, మొదటి దశలో ప్రారంభించబడిన సంఘములకు పునరుత్పత్తి ప్రక్రియ ద్వారా శిక్షణ నిచ్చుటకు, అలాగే ఇతర ప్రధాన ప్రపంచ భాషలలో వ్యవస్థను పంపిణీ చేయుటకు దృష్టి పెడుతుంది. ఈ వ్యవస్థ క్రింద భాషలలో ప్రారంభం అవుతుంది: అహ్మారిక్, అరబిక్, బెంగాలీ, భోజపురి, బర్మీస్, చైనీస్ (మాండరిన్), చైనీస్ (కాంటోనీస్), ఫార్సీ, ఫ్రెంచ్, జర్మన్, గుజరాతీ, హాసా, హిందీ, ఇండోనేషియన్, ఇటాలియన్, జపనీస్, కన్నడ, కొరియన్, మైథిలీ, మలయాళం, మరాఠీ, ఒరియా, పంజాబీ (తూర్పు), పంజాబీ (పశ్చిమ), పోర్చుగీస్, రష్యన్, సోమాలి, స్పానిష్, స్వహిలి, తమిళం, తెలుగు, థాయ్, టర్కిష్, ఉర్దూ, వియత్నమీస్, యోరుబా."
+
+#: template-zume-faq.php:125
+msgid "PHASE 3"
+msgstr "దశ 3"
+
+#: template-zume-faq.php:126 template-zume-progress.php:84
+msgid "The third phase focuses Phase 1 and Phase 2 churches to mobilize globally with a vision to make disciples in every place, among every people group. Zúme Project exists to saturate the globe with multiplying disciples in our generation. To accelerate our mission, we have developed and will deliver a mapping solution allowing teams to work strategically towards the goal of a Zúme training group and two simple churches among every 50,000 people outside the US."
+msgstr "మూడవ దశ, మొదటి దశ మరియు రెండవ దశ సంఘములు శిష్యులను తయారు చేసే ఒక దర్శనముతో, ప్రతి చోట ప్రతి జాతిలో నుండి ప్రపంచవ్యాప్తంగా సమకూర్చుకోవటానికి దృష్టిని కేంద్రీకరిస్తుంది. జుమ్ పథకం మన తరంలో శిష్యులను విస్తరింపజేసి భూగోళాన్ని నింపడానికి ఉనికిలో ఉంది. మా మిషన్ ని వేగవంతం చేయడం కొరకు, మరియు యుఎస్ (అమెరికా) కు వెలుపల ఉన్న ప్రతి 50,000 మంది వ్యక్తుల మధ్య ఒక జుమ్ శిక్షణ బృందము మరియు రెండు సాధారణ సంఘముల ఏర్పాటే లక్ష్యంగా బృందములు వ్యూహాత్మకంగా పనిచేయడానికి (పట) పరిష్కారములు అభివృద్ధి చేసి పంపిణీ చేస్తున్నాము."
+
+#: template-zume-faq.php:133
+msgid "Why is it called Zúme?"
+msgstr "ఇది జుమ్ అని ఎందుకు పిలవబడుతున్నది?"
+
+#: template-zume-faq.php:134
+msgid "Zúme means yeast in Greek. In Matthew 13:33 Jesus is quoted as saying, “The Kingdom of Heaven is like a woman who took yeast and mixed it into a large amount of flour until it was all leavened.” This illustrates how ordinary people, using ordinary resources, can have an extraordinary impact for the Kingdom of God. Zúme aims to equip and empower ordinary believers to reach every neighborhood."
+msgstr "జుమ్ అంటే గ్రీకులో పులిపిండి అని అర్థం. మత్తయి 13:33 యేసు ఇలా చెప్పసాగాడు, \"పరలోకరాజ్యము, ఒక స్త్రీ తీసికొని పిండి అంతయు పులిసి పొంగువరకు మూడు కుంచముల పిండిలో దాచి పెట్టిన పుల్లని పిండిని పోలియున్నది.\" సాధారణ ప్రజలు సాధారణ వనరులను ఉపయోగించి, దేవుని రాజ్యానికి అసాధారణ ప్రభావాన్నిఎలా చూపగలరో ఇది ఉదహరిస్తోంది. ప్రతి పొరుగు వారిని చేరుకోవడానికి సాధారణ విశ్వాసులను సన్నద్ధం చేయడం మరియు శక్తివంతం చేయడమే జుమ్ లక్ష్యం."
+
+#: template-zume-faq.php:139
+msgid "What languages will the training be translated into?"
+msgstr "ఆ శిక్షణను ఏ భాషలలో అనువదిస్తారు?"
+
+#: template-zume-faq.php:140
+msgid "The project will start in the following languages and made available to those wishing to translate the training and tools into additional languages: Arabic, Bengali, Bhojpuri, Burmese, Chinese (Mandarin), Chinese (Cantonese), Farsi, French, German, Gujarati, Hausa, Hindi, Indonesian, Italian, Japanese, Kannada, Korean, Maithili, Malayalam, Marathi, Oriya, Panjabi (Eastern), Panjabi (Western), Portuguese, Russian, Spanish, Swahili, Tamil, Telugu, Thai, Turkish, Urdu, Vietnamese, Yoruba."
+msgstr "ఈ పథకం దిగువ భాషల్లో ప్రారంభం అవుతుంది మరియు శిక్షణ మరియు సాధనాలని మరిన్ని భాషలలో అనువదించాలని కోరుకుంటున్న వారికి అందుబాటులో ఉంటుంది: అరబిక్, బెంగాలీ, భోజపురి, బర్మీస్, చైనీస్(మాండరిన్), చైనీస్ (కాంటోనీస్), ఫార్సీ, ఫ్రెంచ్, జర్మన్, గుజరాతీ, హాసా, హిందీ, ఇండోనేషియన్, ఇటాలియన్, జపనీస్, కన్నడం, కొరియన్, మైథిలీ, మలయాళం, మరాఠీ, ఒరియా, పంజాబీ (తూర్పు), పంజాబీ (పశ్చిమ), పోర్చుగీస్, రష్యన్, స్పానిష్, స్వాహిలి, తమిళం, తెలుగు, థాయ్, టర్కిష్, ఉర్దూ, వియత్నమీస్, యోరుబా."
+
+#: template-zume-faq.php:145
+msgid "How are the groups started by trainees aligned or organized?"
+msgstr "శిక్షణదారులు క్రమపర్చబడటం లేదా వ్యవస్థీకృతంగా ఉండటం ద్వారా గ్రూపులు ఏవిధంగా ప్రారంభమవుతున్నాయి?"
+
+#: template-zume-faq.php:146
+msgid "It depends. If the trainees come out of a particular church or denomination or network then the most natural thing is for the newly formed groups to be connected with those existing churches, denomination, or network. If desired, however, a new network can be formed from the groups that start. A third alternative would be for the new groups to join with other already existing networks of simple churches. Many of the people involved in developing Zúme come from such networks so we can help arrange that if desired."
+msgstr "అది వారిమీద ఆధారపడి ఉంటుంది. ఒకవేళ శిక్షణదారులు ఒక నిర్ధిష్ట సంఘము లేదా వర్గీకరణ లేదా నెట్ వర్క్(అనుసంధానించబడిన బృందము) నుంచి వచ్చినట్లయితే, కొత్తగా ఏర్పడ్డ బృందాలు ఇప్పటికే ఉన్న సంఘములకు, వర్గీకరణ లేదా నెట్ వర్క్ లతో అనుసంధానం కావడం అనేది అత్యంత సహజమైన విషయం. అయితే కావలిస్తే, ప్రారంభించే బృందాల నుంచి కొత్త నెట్ వర్క్ రూపుదిద్దుకోవచ్చు. మూడో ప్రత్యామ్నాయం ఏమిటంటే కొత్త బృందాలు ఇప్పటికే అనుసంధానించబడి ఉన్న (నెట్ వర్క్) సాధారణ సంఘములతో కలవడం. జుమ్ ను అభివృద్ధిపరుస్తున్న వారిలో అనేక మంది వ్యక్తులు అటువంటి నెట్ వర్క్ ల నుండి వచ్ఛారు, కావున, కావాలనుకుంటే ఆ విధంగా ఏర్పాటు చేయడానికి మేం సహాయపడగలం."
+
+#: template-zume-faq.php:150
+msgid "Who can see my Three-Month Plan?"
+msgstr "నా మూడు నెలల ప్రణాళికను ఎవరు చూడగలరు?"
+
+#: template-zume-faq.php:151
+msgid "Only you see your plan, unless you link it to your group, then the group leader and coleaders will be able to see your Three-Month Plan. Your plan will also be visible to your coach. If you do not want coaching, go to your profile and set coaching preference to \"Decline Coaching\"."
+msgstr "మీరు మాత్రమే మీ ప్రణాళికని చూస్తారు, దానిని మీరు మీ బృందముకు అనుసంధానించినట్లైతే, అప్పుడు మీ బృంద నాయకుడు మరియు సహనాయకులు మీ మూడు నెలల ప్రణాళికని చూడగలుగుతారు. మీ ప్రణాళిక మీ శిక్షకునికి కు కూడా కనబడనుంది. మీరు శిక్షణ కోరుకోకపోతే, మీ ప్రొఫైల్ (ఛాయారూపం) కు వెళ్లి “శిక్షణ నిరాకరించు\" ను శిక్షణా ప్రాధాన్యతగా ఏర్పాటు చేయండి."
+
+#: template-zume-faq.php:155
+msgid "Can I print my Three-Month Plan?"
+msgstr "నా మూడు నెలల ప్రణాళికని నేను ముద్రించుకోవచ్చా?"
+
+#: template-zume-faq.php:156
+msgid "Yes, make sure you save you plan first, then just scroll to the bottom of your plan and click on the \"Print Saved Plan\" button."
+msgstr "అవును, మీరు ముందుగా మీ ప్రణాళికని భద్రపరుచుకోండి (సేవ్ చేయండి), తరువాత మీ ప్రణాళిక క్రిందకి రండి మరియు \"ప్రింట్ సేవ్డ్ ప్లాన్\" బటన్ మీద క్లిక్ చేయండి."
+
+#: template-zume-faq.php:160
+msgid "Can I edit my Three-Month Plan later?"
+msgstr "తరువాత నా మూడు నెలల ప్రణాళికని నేను (ఎడిట్) మార్చుకోవచ్చా?"
+
+#: template-zume-faq.php:161
+msgid "Yes, you can go back to your plan at any time and edit it. Make sure you click, \"Save\" at the bottom of your plan."
+msgstr "అవును, మీరు ఏ సమయంలోనైనా మీ ప్రణాళికకు తిరిగి వెళ్లి, దానిని మార్చుకోవచ్చు. మీ ప్రణాళిక దిగువన \"సేవ్\" నొక్కినట్లు (భద్రపరచినట్లు) నిర్ధారించుకోండి."
+
+#: template-zume-faq.php:165
+msgid "Does Zúme offer a way for me to chat with people in my group?"
+msgstr "నా బృందములోని వ్యక్తులతో ముచ్చడించడానికి (చాట్ చేయడానికి) జుమ్ ఒక మార్గాన్ని ఇస్తుందా?"
+
+#: template-zume-faq.php:166
+msgid "Not at this time. We recommend that every member of your group create a login and get added to your Zúme group. This way every member will have access to all of the material whenever they want. Then the group can use any messaging platform that they prefer (iMessage, WhatsApp, Facebook group, etc.) for further group communication."
+msgstr "ఈ సమయంలో కాదు. మీ బృందము యొక్క ప్రతి సభ్యుడు ప్రవేశం పొంది (లాగిన్ సృష్టించి), మీ జుమ్ బృందముకు కలపబడాలని మేం సిఫారసు చేస్తున్నాం. ఈ విధంగా ప్రతి సభ్యుడికి ఎప్పుడు కావాలంటే అప్పుడు అన్ని విషయాలను చూసే సదుపాయం ఉంటుంది. తరువాత ఆ బృందము తదుపరి సమాచారం కొరకు, వారు కావాలనుకున్న ఏదైనా వర్తమాన వేదికను (మెసేజింగ్ ఫ్లాట్ ఫారం) (ఐ మెసేజ్, వాట్సాప్, ఫేస్ బుక్ గ్రూపు మొదలైనవి) ఉపయోగించవచ్చు."
+
+#: template-zume-login.php:73
+msgid "Your password reset link appears to be invalid. Please request a new link below."
+msgstr "మీ పాస్ వర్డ్ రీసెట్ లింక్ (అనుమతి పదంను తిరిగి సమకూర్చుపట్టిక) చెల్లుబాటులో లేనట్లుంది. దయచేసి ఒక కొత్త లింక్ ను అభ్యర్దించండి."
+
+#: template-zume-login.php:75
+msgid "Your password reset link has expired. Please request a new link below."
+msgstr "మీ పాస్ వర్డ్ రీసెట్ లింక్ (అనుమతి పదంను తిరిగి సమకూర్చుపట్టిక) చెల్లుబాటులో లేదు. దయచేసి ఒక కొత్త లింక్ ను అభ్యర్దించండి."
+
+#: template-zume-login.php:108 template-zume-login.php:465
+msgid "Email Address"
+msgstr "ఇ-మెయిల్ చిరునామ"
+
+#: template-zume-login.php:119
+msgid "Get New Password"
+msgstr "కొత్త అనుమతి పదాన్ని పొందండి"
+
+#: template-zume-login.php:174
+msgid "The passwords do not match."
+msgstr "అనుమతిపదాలు (పాస్వర్డ్స్) జతకావడం లేదు."
+
+#: template-zume-login.php:275
+msgid "Reset Password"
+msgstr "అనుమతి పదంను తిరిగి సమకూర్చండి"
+
+#: template-zume-login.php:335
+msgid "Let's get started."
+msgstr "మనం మొదలు పెట్టుకుందాం."
+
+#: template-zume-login.php:337
+msgid "Sign up using:"
+msgstr "సైన్ అప్ (నమోదు) ఉపయోగించి:"
+
+#: template-zume-login.php:384 template-zume-login.php:483
+msgid "Lost your password?"
+msgstr "అనుమతిపదం (పాస్వర్డ్) పోగొట్టుకున్నారా?"
+
+#: template-zume-login.php:401
+msgid "Invalid request."
+msgstr "చెల్లని వినతి."
+
+#: template-zume-login.php:410
+msgid "Invalid key"
+msgstr "చెల్లని కీలక పదం (కీ)"
+
+#: template-zume-login.php:432
+msgid "User action confirmed."
+msgstr "వినియోగదారు చర్య ధృవీకరించబడింది."
+
+#: template-zume-login.php:449
+msgid "Sign in using:"
+msgstr "సైన్ ఇన్ (ప్రవేశం) ఉపయోగించి:"
+
+#: template-zume-overview.php:71 template-zume-overview.php:84
+msgid "Sessions Overview"
+msgstr "తరగతుల సారాంశము"
+
+#: template-zume-overview.php:187
+msgid "Session 10 - Advanced Training"
+msgstr "తరగతి 10 - ఉన్నత స్థాయి శిక్షణ"
+
+#: template-zume-overview.php:237
+msgid "Go to the Dashboard to select your Group and start the next session"
+msgstr "మీ బృందమును ఎంచుకోవడం కొరకు డ్యాష్ బోర్డుకు వెళ్లండి మరియు తరువాత తరగతిని ప్రారంభించండి"
+
+#: template-zume-overview.php:277 template-zume-overview.php:405
+#: template-zume-overview.php:527 template-zume-overview.php:638
+#: template-zume-overview.php:783 template-zume-overview.php:891
+#: template-zume-overview.php:967 template-zume-overview.php:1045
+#: template-zume-overview.php:1122 template-zume-overview.php:1224
+msgid "Concepts"
+msgstr "భావనలు"
+
+#: template-zume-overview.php:286
+msgid "WELCOME TO ZÚME — You'll see how God uses ordinary people doing simple things to make a big impact."
+msgstr "జుమ్ కు స్వాగతం — ఒక పెద్ద ప్రభావాన్నిచూపటానికి దేవుడు సామాన్యమైన విషయాలు చేసే సాధారణ ప్రజలను ఎలా ఉపయోగిస్తాడు అనేది మీరు చూస్తారు."
+
+#: template-zume-overview.php:297
+msgid "TEACH THEM TO OBEY — Discover the essence of being a disciple, making a disciple, and what is the church."
+msgstr "విధేయతను వారికి నేర్పించండి - శిష్యునిగా ఉ౦డడ౦, శిష్యుని తయారుచేయటం, మరియు సంఘము అంటే ఏమిటి అనే సారాంశాన్ని కనుక్కొనండి."
+
+#: template-zume-overview.php:308
+msgid "SPIRITUAL BREATHING — Being a disciple means we hear from God and we obey God."
+msgstr "ఆధ్యాత్మిక శ్వాస — శిష్యునిగా ఉండటం అంటే మనము దేవుని నుండి వింటాము మరియు మనము దేవునికి విధేయత చూపిస్తాము."
+
+#: template-zume-overview.php:319 template-zume-overview.php:426
+#: template-zume-overview.php:561 template-zume-overview.php:683
+#: template-zume-overview.php:804 template-zume-overview.php:912
+#: template-zume-overview.php:1245
+msgid "Tools"
+msgstr "సాధనాలు"
+
+#: template-zume-overview.php:329
+msgid "S.O.A.P.S. BIBLE READING — a tool for daily Bible study that helps you understand, obey, and share God’s Word."
+msgstr "S.O.A.P.S. బైబిలు పఠనము - దేవుని వాక్యాన్ని అర్థ౦ చేసుకోవడానికి, విధేయత చూపి౦చటానికి, వాటిని ప౦చుకోవడానికి మీకు సహాయపడే రోజువారీ బైబిలు అధ్యయనానికి ఒక పనిముట్టు."
+
+#: template-zume-overview.php:341
+msgid "ACCOUNTABILITY GROUPS — a tool for two or three people of the same gender to meet weekly and encourage each other in areas that are going well and reveal areas that need correction."
+msgstr "జవాబుదారి బృందాలు — ఒకే లింగానికి చెందిన ఇద్దరు లేదా ముగ్గురు వ్యక్తులు వారానికి ఒకసారి కలిసే, బాగా జరుగుతున్న ప్రాంతాల్లో ఒకరినొకరు ప్రోత్సహించుకోవడానికి మరియు దిద్దుబాటు అవసరమైన చర్యలను బహిర్గతం చేసుకోవడానికి ఒక సాధనము."
+
+#: template-zume-overview.php:352 template-zume-overview.php:460
+#: template-zume-overview.php:582 template-zume-overview.php:716
+#: template-zume-overview.php:825 template-zume-overview.php:988
+#: template-zume-overview.php:1066 template-zume-overview.php:1167
+#: template-zume-overview.php:1278
+msgid "Practice"
+msgstr "సాధన చేయండి"
+
+#: template-zume-overview.php:361
+msgid "ACCOUNTABILITY GROUPS — Break into groups of two or three people to work through the Accountability Questions. (45 minutes)"
+msgstr "జవాబుదారి బృందాలు - ఇద్దరు లేదా ముగ్గురు వ్యక్తులుగా విడిపోయి జవాబుదారీతనంతో కూడిన ప్రశ్నలపై పనిచేయండి. (45 నిమిషాలు)"
+
+#: template-zume-overview.php:415
+msgid "PRODUCERS VS. CONSUMERS — You'll discover the four main ways God makes everyday followers more like Jesus."
+msgstr "నిర్మాతలు వర్సెస్ వినియోగదారులు - దేవుడు అనుదిన అనుచరులను మరింత యేసుని వలె నుండుటకు చేసే నాలుగు ప్రధాన మార్గాలను మీరు కనుగొంటారు."
+
+#: template-zume-overview.php:436
+msgid "PRAYER CYCLE — See how easy it is to spend an hour in prayer."
+msgstr "ప్రార్థనా చక్రం — ప్రార్ధనలో ఒక గంట గడపడం ఎంత సులభమో చూడండి."
+
+#: template-zume-overview.php:448
+msgid "LIST OF 100 — a tool designed to help you be a good steward of your relationships."
+msgstr "100 మంది జాబితా — మీరు మీ సంబంధాలలో ఒక మంచి గృహనిర్వాహకుడిగా నుండుటకు సహాయపడటానికి రూపొందించబడిన ఒక సాధనం."
+
+#: template-zume-overview.php:470
+msgid "PRAYER CYCLE — Spend 60 minutes in prayer individually."
+msgstr "ప్రార్థనా చక్రం — ప్రార్థనలో 60 నిమిషాలు వ్యక్తిగతంగా గడపండి."
+
+#: template-zume-overview.php:480
+msgid "LIST OF 100 — Create your own list of 100. (30 minutes)"
+msgstr "100 మంది జాబితా - మీరు స్వంతముగా 100 మంది జాబితాను సృష్టించండి. (30 నిమిషాలు)"
+
+#: template-zume-overview.php:537
+msgid "SPIRITUAL ECONOMY — Learn how God's economy is different from the world's. God invests more in those who are faithful with what they've already been given."
+msgstr "ఆధ్యాత్మిక ఆర్థిక వ్యవస్థ — దేవుని ఆర్థిక వ్యవస్థ ఈ లోక వ్యవస్థతో ఎలా భిన్నముగా ఉంటుందో నేర్చుకోండి. ఇప్పటికే ఇచ్చిన దానిలో ఎవరైతే నమ్మకస్థులై ఉంటారో వారి మీద దేవుడు ఎక్కువ పెట్టుబడి పెడతాడు."
+
+#: template-zume-overview.php:549
+msgid "THE GOSPEL — Learn a way to share God’s Good News from the beginning of humanity all the way to the end of this age."
+msgstr "సువార్త — మానవుని మనుగడ ప్రారంభము నుండి యుగాంతము వరకు నున్న దేవుని సువార్తను పంచుకొను ఒక మార్గమును నేర్చుకోండి."
+
+#: template-zume-overview.php:571
+msgid "BAPTISM — Jesus said, “Go and make disciples of all nations, BAPTIZING them in the name of the Father and of the Son and of the Holy Spirit…” Learn how to put this into practice."
+msgstr "బాప్తిస్మ౦ — యేసు చెప్పెను, “మీరు వెళ్ళి సమస్త జనులను శిష్యులనుగా చేయుడి; తండ్రియొక్కయు కుమారునియొక్కయు పరిశుద్ధాత్మయొక్కయు నామములోనికి వారికి బాప్తిస్మమిచ్చుచు…” దీన్ని ఆచరణలో పెట్టడమెలా అనేది నేర్చుకోండి."
+
+#: template-zume-overview.php:592
+msgid "SHARE GOD’S STORY — Break into groups of two or three and practice sharing God’s Story. (45 minutes)"
+msgstr "దేవుని కథను పంచుకోండి — ఇద్దరు లేదా ముగ్గురు బృందాలుగా విడిపోవాలి మరియు దేవుని కథను పంచుకోవడం సాధన చేయాలి. (45 నిమిషాలు)"
+
+#: template-zume-overview.php:648
+msgid "GREATEST BLESSING — Learn a simple pattern of making not just one follower of Jesus but entire spiritual families who multiply for generations to come."
+msgstr "అత్య౦త గొప్ప ఆశీర్వాద౦ — కేవల౦ ఒక్క యేసు అనుచరునుని మాత్రమే కాక, రాబోవు తరములలో విస్తరి౦పజేసే అన్ని ఆధ్యాత్మిక కుటు౦బాలను తయారు చేయడానికి ఒక సామాన్యమైన పద్ధతిని నేర్చుకు౦టారు."
+
+#: template-zume-overview.php:660
+msgid "EYES TO SEE — Begin to see where God’s Kingdom isn’t. These are usually the places where God wants to work the most."
+msgstr "చూచుటకు కన్నులు - దేవునిరాజ్యం ఎక్కడ లేదో చూచుట ప్రారంభించండి. సాధారణంగా ఇటువంటి ప్రదేశాలలోనే ఎక్కువ పనిచేయాలని దేవుడు కోరుకుంటాడు."
+
+#: template-zume-overview.php:672
+msgid "DUCKLING DISCIPLESHIP — Learn what ducklings have to do with disciple-making."
+msgstr "బాతు పిల్ల శిష్యరికం — శిష్యులను చేసే పనిలో బాతుపిల్లలు ఏమి చేయాలో నేర్చుకోండి."
+
+#: template-zume-overview.php:693
+msgid "3-MINUTE TESTIMONY — Learn how to share your testimony in three minutes by sharing how Jesus has impacted your life."
+msgstr "3 నిమిషాల సాక్ష్య౦ — యేసు మీ జీవితాన్ని ఎలా ప్రభావిత౦ చేశారో మీ సాక్ష్యాన్ని మూడు నిమిషాల్లో ఎలా ప౦చుకోవాలో నేర్చుకో౦డి."
+
+#: template-zume-overview.php:705
+msgid "THE LORD'S SUPPER — It’s a simple way to celebrate our intimate connection and ongoing relationship with Jesus. Learn a simple way to celebrate."
+msgstr "ప్రభువు రాత్రి భోజన౦ — యేసుతో మనకున్న సన్నిహిత సహవాస స౦బ౦ధ కొనసాగి౦పుని వేడుక చేసుకోవడానికి ఇది ఒక సామాన్యమైన మార్గ౦. జరుపుకొనుటకు ఒక సామాన్యమైన మార్గ౦ నేర్చుకోండి."
+
+#: template-zume-overview.php:726
+msgid "SHARING YOUR TESTIMONY — Break into groups of two or three and practice sharing your Testimony with others. (45 minutes)"
+msgstr "మీ సాక్ష్యాన్నిపంచుకోవడం — ఇద్దరు లేదా ముగ్గురు సమూహాలుగా విడిపోయి మరియు మీ సాక్ష్యాన్ని ఇతరులతో పంచుకోవడం సాధన చేయండి. (45 నిమిషాలు)"
+
+#: template-zume-overview.php:738
+msgid "THE LORD'S SUPPER — Take time as a group to do this together. (10 minutes)"
+msgstr "ప్రభువు రాత్రి భోజన౦ — ఒక బృందముగా కలిసి ఇలా చేయడానికి సమయ౦ తీసుకోండి. (10 నిమిషాలు)"
+
+#: template-zume-overview.php:793
+msgid "PERSON OF PEACE — Learn who a person of peace might be and how to know when you've found one."
+msgstr "నెమ్మది గల వ్యక్తి — నెమ్మది గల వ్యక్తి అంటే ఎవరు, మీరు ఒక వ్యక్తిని కనుగొన్నప్పుడు అతను నెమ్మది గలిగిన వ్యక్తి అని తెలుసుకోవడం ఎలా అని నేర్చుకుంటారు."
+
+#: template-zume-overview.php:814
+msgid "PRAYER WALKING — It’s a simple way to obey God’s command to pray for others. And it's just what it sounds like — praying to God while walking around!"
+msgstr "ప్రార్ధనా నడక - ఇది ఇతరుల కొరకు ప్రార్థించమనే దేవుని ఆజ్ఞకు లోబడటానికి ఒక సులభమైన మార్గము. మరియు ఇది కేవలం ఇట్లానే ఉంటుంది – నలుప్రక్కలా నడుస్తూ దేవుని ప్రార్థించుట!"
+
+#: template-zume-overview.php:835
+msgid "B.L.E.S.S. PRAYER — Practice a simple mnemonic to remind you of ways to pray for others. (15 minutes)"
+msgstr "B.L.E.S.S. ప్రార్థన — ఇతరుల కోస౦ ప్రార్థి౦చే మార్గాలను మీకు గుర్తుచేయడానికి సామాన్యమైన ఒక జ్ఞాపకమును సాధన చేయండి. (15 నిమిషాలు)"
+
+#: template-zume-overview.php:845
+msgid "PRAYER WALKING — Break into groups of two or three and go out into the community to practice Prayer Walking. (60-90 minutes)"
+msgstr "ప్రార్థన నడక — ఇద్దరు లేదా ముగ్గురు బృందాలుగా విడిపోయి బయట సమాజంలోకి వెళ్ళి ప్రార్ధనా నడకను సాధన చేయండి. (60-90 నిమిషాలు)"
+
+#: template-zume-overview.php:901
+msgid "FAITHFULNESS — It's important what disciples know — but it's much more important what they DO with what they know."
+msgstr "విశ్వాస్యత — శిష్యులకు ఏమి తెలుసు అనే విషయ౦ ప్రాముఖ్యమే - కానీ వారికి తెలిసిన దానితో వారు ఏమి చేయాలి అన్నది అతి ప్రాముఖ్య౦."
+
+#: template-zume-overview.php:922
+msgid "3/3 GROUP FORMAT — A 3/3 Group is a way for followers of Jesus to meet, pray, learn, grow, fellowship and practice obeying and sharing what they've learned. In this way, a 3/3 Group is not just a small group but a Simple Church. (80 minutes)"
+msgstr "3/3 బృంద ఏర్పాటు — ఒక 3/3 బృందం, యేసు అనుచరులు కలవటానికి, ప్రార్ధించటానికి, నేర్చుకోవడానికి, ఎదగడానికి, సహవాసం, విధేయత మరియు పంచుకోవడంలో వారు నేర్చుకున్న దానిని సాధన చేయడానికి ఒక మార్గము."
+
+#: template-zume-overview.php:977
+msgid "TRAINING CYCLE — Learn the training cycle and consider how it applies to disciple making."
+msgstr "శిక్షణా చక్రం — శిక్షణా చక్రాన్ని నేర్చుకుని అది శిష్యుని తయారీకి ఎలా వర్తిస్తుందో పరిగణించండి.."
+
+#: template-zume-overview.php:998 template-zume-overview.php:1076
+msgid "3/3 GROUP — Your entire group will spend 90 minutes practicing the 3/3 Group Format."
+msgstr "3/3 బృందము - 90 నిమిషాలు మీ బృందమంతా కలసి 3/3 బృందముల ఏర్పాటును సాధన చేయండి."
+
+#: template-zume-overview.php:1055
+msgid "LEADERSHIP CELLS — A Leadership Cell is a way someone who feels called to lead can develop their leadership by practicing serving."
+msgstr "నాయకత్వ శిబిరాలు - ఎవరైతే నడిపించుటకు పిలవబడినామని తలుస్తారో వారు తమ నాయకత్వమును అభివృద్ధి చేసుకొనుటకు, సేవచేయుటను సాధన చేయుటకు నాయకత్వ శిబిరము ఒక మార్గము."
+
+#: template-zume-overview.php:1132
+msgid "NON-SEQUENTIAL — See how disciple making doesn't have to be linear. Multiple things can happen at the same time."
+msgstr "సరళీకృతం కాని - శిష్యులను తయారు చేయడం అనేది ఎలా క్రమంగా ఉండనక్కరలేదో చూడండి. ఒకే సమయంలో పలు విషయాలు జరగవచ్చు."
+
+#: template-zume-overview.php:1144
+msgid "PACE — Multiplying matters and multiplying quickly matters even more. See why pace matters."
+msgstr "వేగము — విస్తరణ ముఖ్య విషయం మరియు ఇంకా త్వర త్వరగా విస్తరించడం ముఖ్యం. వేగం ఎందుకు ప్రాముఖ్యమో చూడండి."
+
+#: template-zume-overview.php:1156
+msgid "PART OF TWO CHURCHES — Learn how to obey Jesus' commands by going AND staying."
+msgstr "రెండు సంఘములలో భాగము - వెళ్లడం మరియు ఉ౦డడ౦ ద్వారా యేసుని ఆజ్ఞలకు లోబడడ౦ ఎలాగో నేర్చుకోండి."
+
+#: template-zume-overview.php:1177
+msgid "3-MONTH PLAN — Create and share your plan for how you will implement the Zúme tools over the next three months. (60 minutes)"
+msgstr "3 నెలల ప్రణాళిక — రాబోయే మూడు నెలలకు మీరు జుమ్ సాధనములను ఎలా అమలు చేస్తారు అనే దాని కొరకు మీ ప్రణాళికని సృష్టించండి మరియు పంచుకోండి. (60 నిమిషాలు)"
+
+#: template-zume-overview.php:1234
+msgid "LEADERSHIP IN NETWORKS — Learn how multiplying churches stay connected and live life together as an extended, spiritual family."
+msgstr "అనుసంధానించబడిన వాటిలో (నెట్వర్కుల్లో) నాయకత్వ౦ — విస్తరించే సంఘాలు కలపబడి ఉండటం మరియు ఒక విస్తరించబడిన, ఆధ్యాత్మిక కుటు౦బ౦గా కలిసి జీవి౦చడ౦ ఎలాగో నేర్చుకు౦టా౦."
+
+#: template-zume-overview.php:1255
+msgid "COACHING CHECKLIST — The Coaching Checklist is a powerful tool you can use to quickly assess your own strengths and vulnerabilities when it comes to making disciples who multiply."
+msgstr "శిక్షణ పరిశీలపట్టిక — విస్తరింపజేసే శిష్యులను తయారుచేసే విషయానికొచ్చేసరికి, మీ స్వంత సామర్థ్యాలు మరియు నష్టపరిచే విషయాలను త్వరగా అంచనా వేయటానికి ఈ శిక్షణ పరిశీలపట్టిక ఒక శక్తివంతమైన సాధనం."
+
+#: template-zume-overview.php:1266
+msgid "PEER MENTORING GROUPS — This is a group that consists of people who are leading and starting 3/3 Groups. It also follows a 3/3 format and is a powerful way to assess the spiritual health of God’s work in your area."
+msgstr "పీర్ మెంటరింగ్ గుంపులు — ఇది ప్రముఖ 3/3 గ్రూపులను ప్రారంభించే వ్యక్తులను కలిగి ఉండే సమూహం. ఇది కూడా ఒక 3/3 ఆకృతిని అనుసరిస్తుంది మరియు మీ ప్రాంతంలో దేవుని పని యొక్క ఆధ్యాత్మిక ఆరోగ్యాన్ని అంచనా వేయడానికి ఒక శక్తివంతమైన మార్గంగా ఉంది."
+
+#: template-zume-overview.php:1289
+msgid "PEER MENTORING GROUPS — Break into groups of two or three and work through the Peer Mentoring Group format. (60 minutes)"
+msgstr "తోటివారిని శిష్యరికం చేసే బృందాలు - ఇద్దరు లేదా ముగ్గురు సమూహాలుగా విడిపోయి మరియు తోటివారిని శిష్యరికం చేసే బృందాల నిర్మాణం ద్వారా పనిచేయండి. (60 నిమిషాలు)"
+
+#: template-zume-privacy-policy.php:22
+msgid "Zúme Privacy Policy"
+msgstr "జుమ్ గోప్యతా విధానం"
+
+#: template-zume-privacy-policy.php:32
+msgid "This privacy policy has been compiled to better serve those who are concerned with how their \"Personally Identifiable Information\" (PII) is being used online. PII, as described in US privacy law and information security, is information that can be used on its own or with other information to identify, contact, or locate a single person, or to identify an individual in context. Please read our privacy policy carefully to get a clear understanding of how we collect, use, protect or otherwise handle your Personally Identifiable Information in accordance with our website."
+msgstr "ఆన్ లైన్ లో తమ “వ్యక్తిగతంగా గుర్తించగల సమాచారం” (పిఐఐ) ఎలా ఉపయోగించబడుతుందనే ఆందోళన ఉన్నవారికి మరింత మెరుగ్గా సేవలందించేందుకు ఈ గోప్యతా విధానం సంకలనం చేయబడింది. పిఐఐ, యుఎస్ (అమెరికా) గోప్యతా చట్టం మరియు సమాచార భద్రత లో వివరించిన విధంగా, దాని స్వంతంగా లేదా ఇతర సమాచారంతో గుర్తించడానికి, సంప్రదించడానికి లేదా ఒక వ్యక్తిని గుర్తించేందుకు, లేదా సందర్భంలో ఒక వ్యక్తిని గుర్తించేందుకు ఉపయోగించే సమాచారం. మా వెబ్ సైట్ కు అనుగుణంగా మీ వ్యక్తిగతంగా గుర్తించే సమాచారాన్ని మేం ఏవిధంగా సేకరిస్తాం, ఎలా ఉపయోగిస్తాం, భద్రపరుస్తాం లేదా మరోవిధంగా ఎలా నిర్వహిస్తాం అనే దానిపై స్పష్టమైన అవగాహన పొందడం కొరకు దయచేసి మా గోప్యతా పాలసీని జాగ్రత్తగా చదవండి."
+
+#: template-zume-privacy-policy.php:38
+msgid "What permissions do the social sign-on logins ask for?"
+msgstr "సాంఘీకముగా ప్రవేశము కొరకు (సోషల్ సైన్ ఆన్ లాగిన్స్) ఏ అనుమతులు అడగవచ్చు?"
+
+#: template-zume-privacy-policy.php:41
+msgid "Public Profile. This includes certain User’s Data such as id, name, picture, gender, and their locale."
+msgstr "అందరికి కనిపించే వ్యక్తిత్వవర్ణన (పబ్లిక్ ప్రొఫైల్). దీనిలో ఐడి(గుర్తింపు), పేరు, ఫోటో, లింగం, మరియు వారి స్థానికత వంటి నిర్దిష్ట వినియోగదారుని సమాచారం ఉంటుంది."
+
+#: template-zume-privacy-policy.php:44
+msgid "Email Address."
+msgstr "ఇ-మెయిల్ చిరునామా."
+
+#: template-zume-privacy-policy.php:52
+msgid "What personal information do we collect from the people through our website?"
+msgstr "మా వెబ్ సైట్ ద్వారా వ్యక్తుల నుంచి మేం ఎటువంటి వ్యక్తిగత సమాచారాన్ని సేకరిస్తాం?"
+
+#: template-zume-privacy-policy.php:55
+msgid "Information in the Basic Social Profile (if used) and email."
+msgstr "ప్రాథమిక సామాజిక ప్రొఫైల్ (ఉపయోగపడితే) మరియు ఇమెయిల్ లో సమాచారం."
+
+#: template-zume-privacy-policy.php:58
+msgid "Session and course activity."
+msgstr "తరగతి మరియు నిర్దిష్ట సమయంలో నేర్చుకునే విద్యా కార్యకలాపం."
+
+#: template-zume-privacy-policy.php:61
+msgid "General location telemetry, so we know in what countries our training is being used."
+msgstr "సాధారణ స్థానాలను చూపించే సాధనం, అందువలన మన శిక్షణ ఏ దేశాలలో ఉపయోగిస్తున్నారో మాకు తెలుస్తుంది."
+
+#: template-zume-privacy-policy.php:69
+msgid "When do we collect information?"
+msgstr "మేము సమాచారాన్ని ఎప్పుడు సేకరిస్తాము?"
+
+#: template-zume-privacy-policy.php:72
+msgid "We collect your information at login."
+msgstr "లాగిన్ (ప్రవేశం) వద్ద మీ సమాచారాన్ని మేం సేకరిస్తాం."
+
+#: template-zume-privacy-policy.php:75
+msgid "We also track your progress through the training course."
+msgstr "మీరు పొందే శిక్షణ ద్వారా మీ పురోగతిని కూడా మేము తెలుసుకుంటాం."
+
+#: template-zume-privacy-policy.php:83
+msgid "How do we use your information?"
+msgstr "మేము మీ సమాచారాన్ని ఎలా ఉపయోగిస్తాము?"
+
+#: template-zume-privacy-policy.php:86
+msgid "We use your information to create a user account in the zume system based on your email address."
+msgstr "మీ ఇమెయిల్ చిరునామా ఆధారంగా జుమ్ వ్యవస్థలో వినియోగదారు ఖాతాను రూపొందించేందుకు మేము మీ సమాచారాన్ని ఉపయోగిస్తాము."
+
+#: template-zume-privacy-policy.php:89
+msgid "We will email you with basic transactional emails like password reset requests and other system notifications."
+msgstr "పాస్వర్డ్ (అనుమతి పదం) సమకూర్పు వినతులు మరియు ఇతర కంప్యూటర్ ప్రకటనల వంటి ప్రాథమిక వ్యవహారములను మీకు ఇమెయిల్ చేస్తాము."
+
+#: template-zume-privacy-policy.php:92
+msgid "We email occasional reminders and encouragements depending on your progress through the training."
+msgstr "శిక్షణ ద్వారా మీ పురోగతిని బట్టి మేం అప్పుడప్పుడు మీకు జ్ఞాపకం చేయడానికి మరియు ప్రోత్సాహించడానికి ఇమెయిల్ చేస్తాం."
+
+#: template-zume-privacy-policy.php:100
+msgid "How do we protect your information?"
+msgstr "మీ సమాచారాన్ని మేము ఎలా భద్రంగా ఉంచుతాం?"
+
+#: template-zume-privacy-policy.php:102
+msgid "While we use encryption to protect sensitive information transmitted online, we also protect your information offline. Only team members who need the information to perform a specific job (for example, web administrator or customer service) are granted access to personally identifiable information."
+msgstr "ఆన్ లైన్ లో దాఖలు అయిన సున్నితమైన సమాచారాన్ని రక్షించడానికి మేము గుప్తీకరణ ఉపయోగించే సమయంలో, మేము మీ సమాచారాన్ని పరోక్షంగా కూడా రక్షిస్తాం. ఒక నిర్దిష్ట పనిని నిర్వహించడానికి సమాచారం అవసరమైన జట్టు సభ్యులు మాత్రమే (ఉదాహరణకు, వెబ్ నిర్వాహకుడు లేదా వినియోగ సేవాదారుడు) వ్యక్తిగతంగా గుర్తించగల సమాచారమును పొందు అర్హతగలదు."
+
+#: template-zume-privacy-policy.php:105
+msgid "Your personal information is contained behind secured networks and is only accessible by a limited number of persons who have special access rights to such systems, and are required to keep the information confidential. In addition, all sensitive/credit information you supply is encrypted via Secure Socket Layer (SSL) technology."
+msgstr "మీ వ్యక్తిగత సమాచారం సురక్షిత నెట్ వర్క్ ల వెనక ఉంటుంది మరియు అటువంటి సిస్టమ్లకు ప్రత్యేక పరిమితి మరియు హక్కులు ఉన్న వ్యక్తుల ద్వారా మాత్రమే చూడగలుగుతారు, ఈ సమాచారాన్ని గోప్యంగా ఉంచడం అవసరం. అదనంగా, మీరు దాఖలు చేసే అన్ని సున్నితమైన/జమచేసిన సమాచారం సురక్షితమైన కోడ్ లేయర్ (SSL) అనే సాంకేతికత ద్వారా గుప్తీకరించబడుతుంది."
+
+#: template-zume-privacy-policy.php:108
+msgid "We implement a variety of security measures when a user submits, or accesses their information to maintain the safety of your personal information."
+msgstr "ఒక వినియోగదారుడు అప్పగించిన లేదా మీ వ్యక్తిగత సమాచారమును భద్రముగా కాపాడుటకు వారు ప్రవేశింపనిచ్చిన సమాచారమును భద్రపరచుటకు అనేక విధాలైన భద్రతా విధానాలను అమలుచేస్తాం."
+
+#: template-zume-privacy-policy.php:115
+msgid "Do we use \"cookies\"?"
+msgstr "మన౦ \"కుకీలు\" ఉపయోగిస్తామా?"
+
+#: template-zume-privacy-policy.php:117
+msgid "Any use of Cookies - or of other tracking tools - by this Application or by the owners of third party services used by this Application, unless stated otherwise, serves to identify Users and remember their preferences, for the sole purpose of providing the service required by the User."
+msgstr "కుకీలు లేదా ఇతర జాడ తెలుసుకునే సాధనాల యొక్క ఏదైనా ఉపయోగం-ఈ దరఖాస్తు ద్వారా లేదా ఈ దరఖాస్తు ద్వారా ఉపయోగించే తృతీయ పక్ష సేవల యజమానుల ద్వారా, మరోవిధంగా పేర్కొనబడనట్లయితే, వినియోగదారులను గుర్తించడం మరియు వారి యొక్క ప్రాధాన్యతలను గుర్తుంచుకోవడం, వినియోగదారునికి అవసరమైన సేవలను అందించడమే ఏకైక ఉద్దేశ్యం."
+
+#: template-zume-privacy-policy.php:120
+msgid "Personal Data collected: name, email."
+msgstr "సేకరించిన వ్యక్తిగత సమాచారం: పేరు, ఇమెయిల్."
+
+#: template-zume-privacy-policy.php:127
+msgid "Your Access to and Control Over Information."
+msgstr "సమాచారముపై మీ ఆధిపత్యము మరియు అందుబాటు."
+
+#: template-zume-privacy-policy.php:129
+msgid "You may opt out of any future contact from us at any time. You can do the following at any time by contacting us via our contact email address:"
+msgstr "ఏ సమయంలోనైనా మా నుంచి ఏమైనా భవిష్యత్తు సంప్రదింపులను మీరు నిలిపివేయవచ్చు. మా సంప్రదింపు ఇమెయిల్ చిరునామా ద్వారా మమ్మల్ని సంప్రదించి మీరు ఏ సమయంలోనైనా ఈ క్రింది విధంగా చేయవచ్చు:"
+
+#: template-zume-privacy-policy.php:132
+msgid "See what data we have about you, if any."
+msgstr "మీ గురించి ఏవైనా ఉంటే, మాకు ఎటువంటి సమాచారము ఉందో చూడండి."
+
+#: template-zume-privacy-policy.php:136
+msgid "Change/correct any data we have about you."
+msgstr "మాకున్న మీ సమాచారంలో ఏవైనా మార్పు/సరి చేయండి."
+
+#: template-zume-privacy-policy.php:139
+msgid "Have us delete any data we have about you."
+msgstr "మాకున్న మీ సమాచారంలో ఏవైనా తొలగించనివ్వడి."
+
+#: template-zume-privacy-policy.php:142
+msgid "Express any concern you have about our use of your data."
+msgstr "మీ సమాచారాన్ని మేము ఉపయోగించడంలో ఏవైనా భయాలు ఉంటే తెలపండి."
+
+#: template-zume-privacy-policy.php:150
+msgid "Updates"
+msgstr "తాజా సమాచారము"
+
+#: template-zume-privacy-policy.php:152
+msgid "Our Privacy Policy may change from time to time and all updates will be posted on this page."
+msgstr "మా గోప్యతా విధానం ఎప్పటికప్పుడు మారవచ్చు మరియు తాజా సమాచారమంతా ఈ పేజీపై ఉంచబడుతుంది."
+
+#: template-zume-profile.php:31
+msgid "Your Profile"
+msgstr "మీ ప్రొఫైల్ (ఛాయారూపం)"
+
+#: template-zume-profile.php:36
+msgid "edit image @ gravatar.com"
+msgstr "edit image @ gravatar.com"
+
+#: template-zume-profile.php:96
+msgid "Your City"
+msgstr "మీ పట్టణం"
+
+#: template-zume-profile.php:147
+msgid "Linked Facebook Account"
+msgstr "లింక్ చేయబడిన పేస్ బుక్ ఖాతా"
+
+#: template-zume-profile.php:154 template-zume-profile.php:170
+msgid "Unlink"
+msgstr "విడదీయు"
+
+#: template-zume-profile.php:163
+msgid "Linked Google Account"
+msgstr "లింక్ చేయబడిన గూగుల్ ఖాతా"
+
+#: template-zume-progress.php:23
+msgid "Phase 1"
+msgstr "దశ 1"
+
+#: template-zume-progress.php:45
+msgid "Phase 2"
+msgstr "దశ 2"
+
+#: template-zume-progress.php:62
+msgid "YOU can help get Zúme into other languages!"
+msgstr "ఇతర భాషల్లో జుమ్ ను పొందడానికి మీరు సహాయం చేయవచ్చు!"
+
+#: template-zume-progress.php:63
+msgid "Donate to the translation of Zúme"
+msgstr "జుమ్ అనువాదమును బహూకరించండి"
+
+#: template-zume-progress.php:74
+msgid "Phase 3"
+msgstr "దశ 3"
+
+#: template-zume-resources.php:20
+msgid "RESOURCES"
+msgstr "వనరులు"
+
+#: template-zume-resources.php:29
+msgid "Promotional Materials"
+msgstr "ప్రచార సామాగ్రి"
+
+#: template-zume-resources.php:47
+msgid "Download Zume Overview Video"
+msgstr "జుమ్ వీడియో సారాంశము పొందుకొనుము (డౌన్లోడ్)"
+
+#: template-zume-resources.php:55
+msgid "Project Information"
+msgstr "పథక (ప్రాజెక్ట్) సమాచారం"
+
+#: template-zume-resources.php:64
+msgid "Language Translation Progress"
+msgstr "భాషా అనువాద పురోగతి"
+
+#. Theme Name of the plugin/theme
+msgid "Zúme Project"
+msgstr "జుమ్ పథకం (ప్రాజెక్ట్ )"
+
+#. Theme URI of the plugin/theme
+msgid "https://github.com/ZumeProject/zume-project-multilingual"
+msgstr "https://github.com/ZumeProject/zume-project-multilingual"
+
+#. Description of the plugin/theme
+msgid "Zúme Project for multiplying disciples."
+msgstr "శిష్యులను విస్తరింపజేయుటకు జుమ్ పథకం"
+
+#. Author of the plugin/theme
+msgid "Zume Project"
+msgstr "జుమ్ పథకం (ప్రాజెక్ట్ )"
+
+#. Author URI of the plugin/theme
+msgid "https://github.com/ZumeProject"
+msgstr "https://github.com/ZumeProject"
+
+#. Template Name of the plugin/theme
+msgid "Zume About"
+msgstr "జుమ్ గురించి"
+
+#. Template Name of the plugin/theme
+msgid "Zume Resources"
+msgstr "జుమ్ వనరులు"
+
+#. Template Name of the plugin/theme
+msgid "Zume Privacy Policy"
+msgstr "జుమ్ గోప్యతా విధానం"
+
+#. Template Name of the plugin/theme
+msgid "Zúme Progress"
+msgstr "జుమ్ ప్రగతి"
+
+#. Template Name of the plugin/theme
+msgid "Zume Login"
+msgstr "జుమ్ లాగిన్ (ప్రవేశించుట)"
+
+#. Template Name of the plugin/theme
+msgid "Zume Profile"
+msgstr "జుమ్ ప్రొఫైల్ (ఛాయారూపం)"
+
+#. Template Name of the plugin/theme
+msgid "Zúme Overview"
+msgstr "జుమ్ సారాంశము"
+
+#. Template Name of the plugin/theme
+msgid "Zúme FAQ"
+msgstr "జుమ్ తరచుగా అడిగే ప్రశ్న (FAQ)"
+
+#. Template Name of the plugin/theme
+msgid "Zúme Dashboard"
+msgstr "జుమ్ డాష్ బోర్డ్"
+
+#. Template Name of the plugin/theme
+msgid "Full Width Home"
+msgstr "పూర్తి వెడల్పు (ప్రధాన స్థలం) గృహం"
+
+#. Template Name of the plugin/theme
+msgid "Zúme Course"
+msgstr "జుమ్ (కోర్సు) విద్యా భాగము"
