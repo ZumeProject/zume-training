@@ -64,7 +64,7 @@ function zume_dra_disable_via_filters() {
  */
 function zume_dra_only_allow_logged_in_rest_access( $access ) {
 
-    /*
+    /**
      * Disable the built in Wordpress API because it opens all users and contacts to anyone who is logged in.
      */
     if ( isset( $_SERVER['REQUEST_URI'] ) && strpos( sanitize_text_field( wp_unslash( $_SERVER['REQUEST_URI'] ) ), '/wp-json/wp/' ) !== false ) {
