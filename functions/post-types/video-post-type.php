@@ -273,7 +273,7 @@ class Zume_Video_Post_Type
      */
     public function meta_box_setup() {
         add_meta_box( $this->post_type . '_scribes', 'Video Scribes', array( $this, 'load_video_meta_box' ), $this->post_type, 'normal', 'high' );
-        add_meta_box( $this->post_type . '_toolkit', 'Audio Toolkit', array( $this, 'load_audio_meta_box' ), $this->post_type, 'normal', 'high' );
+//        add_meta_box( $this->post_type . '_toolkit', 'Audio Toolkit', array( $this, 'load_audio_meta_box' ), $this->post_type, 'normal', 'high' );
     } // End meta_box_setup()
 
     /**
@@ -498,14 +498,14 @@ class Zume_Video_Post_Type
             'description' => '',
             'type'        => 'link',
             'default'     => '248176918',
-            'section'     => 'toolkit',
+            'section'     => 'scribe',
         ];
         $fields['5'] = [
             'name'        => 'Accountability Groups (5)',
             'description' => '',
             'type'        => 'link',
             'default'     => '248177083',
-            'section'     => 'toolkit',
+            'section'     => 'scribe',
         ];
         $fields['6'] = [
             'name'        => 'Producers vs Consumers (6)',
@@ -519,14 +519,14 @@ class Zume_Video_Post_Type
             'description' => '',
             'type'        => 'link',
             'default'     => '248177053',
-            'section'     => 'toolkit',
+            'section'     => 'scribe',
         ];
         $fields['8'] = [
             'name'        => 'List of 100 (8)',
             'description' => '',
             'type'        => 'link',
             'default'     => '248177079',
-            'section'     => 'toolkit',
+            'section'     => 'scribe',
         ];
         $fields['9'] = [
             'name'        => 'Spiritual Economy (9)',
@@ -547,14 +547,14 @@ class Zume_Video_Post_Type
             'description' => '',
             'type'        => 'link',
             'default'     => '248150621',
-            'section'     => 'toolkit',
+            'section'     => 'scribe',
         ];
         $fields['12'] = [
             'name'        => '3 Minute Testimony (12)',
             'description' => '',
             'type'        => 'link',
             'default'     => '248177254',
-            'section'     => 'toolkit',
+            'section'     => 'scribe',
         ];
         $fields['13'] = [
             'name'        => 'Greatest Blessing (13)',
@@ -582,14 +582,14 @@ class Zume_Video_Post_Type
             'description' => '',
             'type'        => 'link',
             'default'     => '248150969',
-            'section'     => 'toolkit',
+            'section'     => 'scribe',
         ];
         $fields['17'] = [
             'name'        => 'Prayer Walking (17)',
             'description' => '',
             'type'        => 'link',
             'default'     => '248150722',
-            'section'     => 'toolkit',
+            'section'     => 'scribe',
         ];
         $fields['18'] = [
             'name'        => 'Person of Peace (18)',
@@ -610,7 +610,7 @@ class Zume_Video_Post_Type
             'description' => '',
             'type'        => 'link',
             'default'     => '248184750',
-            'section'     => 'toolkit',
+            'section'     => 'scribe',
         ];
         $fields['21'] = [
             'name'        => '3|3 Group Live (21)',
@@ -666,7 +666,7 @@ class Zume_Video_Post_Type
             'description' => '',
             'type'        => 'link',
             'default'     => '248150334',
-            'section'     => 'toolkit',
+            'section'     => 'scribe',
         ];
         $fields['29'] = [
             'name'        => 'Leadership in Networks (29)',
@@ -680,7 +680,7 @@ class Zume_Video_Post_Type
             'description' => '',
             'type'        => 'link',
             'default'     => '248150042',
-            'section'     => 'toolkit',
+            'section'     => 'scribe',
         ];
         $fields['31'] = [
             'name'        => 'Overview (31)',
@@ -690,6 +690,235 @@ class Zume_Video_Post_Type
             'section'     => 'scribe',
         ];
         $fields['32'] = [
+            'name'        => 'How Zume Works (32)',
+            'description' => '',
+            'type'        => 'link',
+            'default'     => '248149797',
+            'section'     => 'scribe',
+        ];
+
+        /**
+         * Alternate Video
+         */
+
+        $fields['alt_1'] = [
+            'name'        => 'Welcome to Zume (1)',
+            'description' => '',
+            'type'        => 'link',
+            'default'     => '247062938',
+            'section'     => 'scribe',
+        ];
+        $fields['alt_2'] = [
+            'name'        => 'Teach them to Obey (2)',
+            'description' => '',
+            'type'        => 'link',
+            'default'     => '247382094',
+            'section'     => 'scribe',
+        ];
+        $fields['alt_3'] = [
+            'name'        => 'Spiritual Breathing (3)',
+            'description' => '',
+            'type'        => 'link',
+            'default'     => '247063777',
+            'section'     => 'scribe',
+        ];
+        $fields['alt_4'] = [
+            'name'        => 'S.O.A.P.S. (4)',
+            'description' => '',
+            'type'        => 'link',
+            'default'     => '248176918',
+            'section'     => 'scribe',
+        ];
+        $fields['alt_5'] = [
+            'name'        => 'Accountability Groups (5)',
+            'description' => '',
+            'type'        => 'link',
+            'default'     => '248177083',
+            'section'     => 'scribe',
+        ];
+        $fields['alt_6'] = [
+            'name'        => 'Producers vs Consumers (6)',
+            'description' => '',
+            'type'        => 'link',
+            'default'     => '247063338',
+            'section'     => 'scribe',
+        ];
+        $fields['alt_7'] = [
+            'name'        => 'Prayer Cycle (7)',
+            'description' => '',
+            'type'        => 'link',
+            'default'     => '248177053',
+            'section'     => 'scribe',
+        ];
+        $fields['alt_8'] = [
+            'name'        => 'List of 100 (8)',
+            'description' => '',
+            'type'        => 'link',
+            'default'     => '248177079',
+            'section'     => 'scribe',
+        ];
+        $fields['alt_9'] = [
+            'name'        => 'Spiritual Economy (9)',
+            'description' => '',
+            'type'        => 'link',
+            'default'     => '247064680',
+            'section'     => 'scribe',
+        ];
+        $fields['alt_10'] = [
+            'name'        => 'The Gospel (10)',
+            'description' => '',
+            'type'        => 'link',
+            'default'     => '247064875',
+            'section'     => 'scribe',
+        ];
+        $fields['alt_11'] = [
+            'name'        => 'Baptism (11)',
+            'description' => '',
+            'type'        => 'link',
+            'default'     => '248150621',
+            'section'     => 'scribe',
+        ];
+        $fields['alt_12'] = [
+            'name'        => '3 Minute Testimony (12)',
+            'description' => '',
+            'type'        => 'link',
+            'default'     => '248177254',
+            'section'     => 'scribe',
+        ];
+        $fields['alt_13'] = [
+            'name'        => 'Greatest Blessing (13)',
+            'description' => '',
+            'type'        => 'link',
+            'default'     => '247064323',
+            'section'     => 'scribe',
+        ];
+        $fields['alt_14'] = [
+            'name'        => 'Duckling Discipleship (14)',
+            'description' => '',
+            'type'        => 'link',
+            'default'     => '247378271',
+            'section'     => 'scribe',
+        ];
+        $fields['alt_15'] = [
+            'name'        => 'Eyes to See (15)',
+            'description' => '',
+            'type'        => 'link',
+            'default'     => '247065338',
+            'section'     => 'scribe',
+        ];
+        $fields['alt_16'] = [
+            'name'        => 'Lord\'s Supper (16)',
+            'description' => '',
+            'type'        => 'link',
+            'default'     => '248150969',
+            'section'     => 'scribe',
+        ];
+        $fields['alt_17'] = [
+            'name'        => 'Prayer Walking (17)',
+            'description' => '',
+            'type'        => 'link',
+            'default'     => '248150722',
+            'section'     => 'scribe',
+        ];
+        $fields['alt_18'] = [
+            'name'        => 'Person of Peace (18)',
+            'description' => '',
+            'type'        => 'link',
+            'default'     => '248149796',
+            'section'     => 'scribe',
+        ];
+        $fields['alt_19'] = [
+            'name'        => 'Faithfulness (19)',
+            'description' => '',
+            'type'        => 'link',
+            'default'     => '247065912',
+            'section'     => 'scribe',
+        ];
+        $fields['alt_20'] = [
+            'name'        => '3|3 Groups (20)',
+            'description' => '',
+            'type'        => 'link',
+            'default'     => '248184750',
+            'section'     => 'scribe',
+        ];
+        $fields['alt_21'] = [
+            'name'        => '3|3 Group Live (21)',
+            'description' => '',
+            'type'        => 'link',
+            'default'     => '249724003',
+            'section'     => 'scribe',
+        ];
+        $fields['alt_22'] = [
+            'name'        => 'Training Cycle (22)',
+            'description' => '',
+            'type'        => 'link',
+            'default'     => '247066070',
+            'section'     => 'scribe',
+        ];
+        $fields['alt_23'] = [
+            'name'        => 'Leadership Cells (23)',
+            'description' => '',
+            'type'        => 'link',
+            'default'     => '247376979',
+            'section'     => 'scribe',
+        ];
+        $fields['alt_24'] = [
+            'name'        => 'Non-Sequential (24)',
+            'description' => '',
+            'type'        => 'link',
+            'default'     => '247377353',
+            'section'     => 'scribe',
+        ];
+        $fields['alt_25'] = [
+            'name'        => 'Pace (25)',
+            'description' => '',
+            'type'        => 'link',
+            'default'     => '247076726',
+            'section'     => 'scribe',
+        ];
+        $fields['alt_26'] = [
+            'name'        => 'Part of Two Churches (26)',
+            'description' => '',
+            'type'        => 'link',
+            'default'     => '247077391',
+            'section'     => 'scribe',
+        ];
+        $fields['alt_27'] = [
+            'name'        => 'Completion of Training (27)',
+            'description' => '',
+            'type'        => 'link',
+            'default'     => '247078031',
+            'section'     => 'scribe',
+        ];
+        $fields['alt_28'] = [
+            'name'        => 'Coaching Checklist (28)',
+            'description' => '',
+            'type'        => 'link',
+            'default'     => '248150334',
+            'section'     => 'scribe',
+        ];
+        $fields['alt_29'] = [
+            'name'        => 'Leadership in Networks (29)',
+            'description' => '',
+            'type'        => 'link',
+            'default'     => '247077671',
+            'section'     => 'scribe',
+        ];
+        $fields['alt_30'] = [
+            'name'        => 'Peer Mentoring (30)',
+            'description' => '',
+            'type'        => 'link',
+            'default'     => '248150042',
+            'section'     => 'scribe',
+        ];
+        $fields['alt_31'] = [
+            'name'        => 'Overview (31)',
+            'description' => '',
+            'type'        => 'link',
+            'default'     => '248149800',
+            'section'     => 'scribe',
+        ];
+        $fields['alt_32'] = [
             'name'        => 'How Zume Works (32)',
             'description' => '',
             'type'        => 'link',
