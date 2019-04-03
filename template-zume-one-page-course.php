@@ -43,52 +43,52 @@ get_header();
                     <div class="tabs-panel is-active" id="panel1">
                         <h1 class="center"><?php esc_html_e( 'Session 1', 'zume' ) ?></h1><br>
                         <hr>
-                        <?php Zume_Course_Content::get_course_content_1(); ?>
+                        <?php Zume_Course_Content::get_course_content_1( true ); ?>
                     </div>
                     <div class="tabs-panel" id="panel2">
                         <h1 class="center"><?php esc_html_e( 'Session 2', 'zume' ) ?></h1><br>
                         <hr>
-                        <?php Zume_Course_Content::get_course_content_2(); ?>
+                        <?php Zume_Course_Content::get_course_content_2(true ); ?>
                     </div>
                     <div class="tabs-panel" id="panel3">
                         <h1 class="center"><?php esc_html_e( 'Session 3', 'zume' ) ?></h1><br>
                         <hr>
-                        <?php Zume_Course_Content::get_course_content_3(); ?>
+                        <?php Zume_Course_Content::get_course_content_3(true ); ?>
                     </div>
                     <div class="tabs-panel" id="panel4">
                         <h1 class="center"><?php esc_html_e( 'Session 4', 'zume' ) ?></h1><br>
                         <hr>
-                        <?php Zume_Course_Content::get_course_content_4(); ?>
+                        <?php Zume_Course_Content::get_course_content_4(true ); ?>
                     </div>
                     <div class="tabs-panel" id="panel5">
                         <h1 class="center"><?php esc_html_e( 'Session 5', 'zume' ) ?></h1><br>
                         <hr>
-                        <?php Zume_Course_Content::get_course_content_5(); ?>
+                        <?php Zume_Course_Content::get_course_content_5(true ); ?>
                     </div>
                     <div class="tabs-panel" id="panel6">
                         <h1 class="center"><?php esc_html_e( 'Session 6', 'zume' ) ?></h1><br>
                         <hr>
-                        <?php Zume_Course_Content::get_course_content_6(); ?>
+                        <?php Zume_Course_Content::get_course_content_6(true ); ?>
                     </div>
                     <div class="tabs-panel" id="panel7">
                         <h1 class="center"><?php esc_html_e( 'Session 7', 'zume' ) ?></h1><br>
                         <hr>
-                        <?php Zume_Course_Content::get_course_content_7(); ?>
+                        <?php Zume_Course_Content::get_course_content_7(true ); ?>
                     </div>
                     <div class="tabs-panel" id="panel8">
                         <h1 class="center"><?php esc_html_e( 'Session 8', 'zume' ) ?></h1><br>
                         <hr>
-                        <?php Zume_Course_Content::get_course_content_8(); ?>
+                        <?php Zume_Course_Content::get_course_content_8(true ); ?>
                     </div>
                     <div class="tabs-panel" id="panel9">
                         <h1 class="center"><?php esc_html_e( 'Session 9', 'zume' ) ?></h1><br>
                         <hr>
-                        <?php Zume_Course_Content::get_course_content_9(); ?>
+                        <?php Zume_Course_Content::get_course_content_9(true ); ?>
                     </div>
                     <div class="tabs-panel" id="panel10">
                         <h1 class="center"><?php esc_html_e( 'Session 10', 'zume' ) ?></h1><br>
                         <hr>
-                        <?php Zume_Course_Content::get_course_content_10(); ?>
+                        <?php Zume_Course_Content::get_course_content_10(true ); ?>
                     </div>
                 </div>
 
