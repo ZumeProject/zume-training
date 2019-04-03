@@ -28,16 +28,16 @@ get_header();
             <div id="main" class="large-12 cell" role="main">
 
                 <ul class="tabs" data-tabs id="example-tabs">
-                    <li class="tabs-title is-active"><a href="#panel1" aria-selected="true">1</a></li>
-                    <li class="tabs-title"><a data-tabs-target="panel2" href="#panel2">2</a></li>
-                    <li class="tabs-title"><a data-tabs-target="panel3" href="#panel2">3</a></li>
-                    <li class="tabs-title"><a data-tabs-target="panel4" href="#panel2">4</a></li>
-                    <li class="tabs-title"><a data-tabs-target="panel5" href="#panel2">5</a></li>
-                    <li class="tabs-title"><a data-tabs-target="panel6" href="#panel2">6</a></li>
-                    <li class="tabs-title"><a data-tabs-target="panel7" href="#panel2">7</a></li>
-                    <li class="tabs-title"><a data-tabs-target="panel8" href="#panel2">8</a></li>
-                    <li class="tabs-title"><a data-tabs-target="panel9" href="#panel2">9</a></li>
-                    <li class="tabs-title"><a data-tabs-target="panel10" href="#panel2">10</a></li>
+                    <li class="tabs-title is-active"><a href="#panel1" aria-selected="true"><?php esc_html_e( 'Session 1', 'zume' ) ?></a></li>
+                    <li class="tabs-title"><a data-tabs-target="panel2" href="#panel2"><?php esc_html_e( 'Session 2', 'zume' ) ?></a></li>
+                    <li class="tabs-title"><a data-tabs-target="panel3" href="#panel2"><?php esc_html_e( 'Session 3', 'zume' ) ?></a></li>
+                    <li class="tabs-title"><a data-tabs-target="panel4" href="#panel2"><?php esc_html_e( 'Session 4', 'zume' ) ?></a></li>
+                    <li class="tabs-title"><a data-tabs-target="panel5" href="#panel2"><?php esc_html_e( 'Session 5', 'zume' ) ?></a></li>
+                    <li class="tabs-title"><a data-tabs-target="panel6" href="#panel2"><?php esc_html_e( 'Session 6', 'zume' ) ?></a></li>
+                    <li class="tabs-title"><a data-tabs-target="panel7" href="#panel2"><?php esc_html_e( 'Session 7', 'zume' ) ?></a></li>
+                    <li class="tabs-title"><a data-tabs-target="panel8" href="#panel2"><?php esc_html_e( 'Session 8', 'zume' ) ?></a></li>
+                    <li class="tabs-title"><a data-tabs-target="panel9" href="#panel2"><?php esc_html_e( 'Session 9', 'zume' ) ?></a></li>
+                    <li class="tabs-title"><a data-tabs-target="panel10" href="#panel2"><?php esc_html_e( 'Session 10', 'zume' ) ?></a></li>
                 </ul>
                 <div class="tabs-content" data-tabs-content="example-tabs">
                     <div class="tabs-panel is-active" id="panel1">
@@ -100,6 +100,7 @@ get_header();
            jQuery('#zume-main-menu').empty()
            jQuery('#webWidget').remove()
            jQuery('#launcher').remove()
+           jQuery('#nav-menu').remove()
        })
     </script>
 
