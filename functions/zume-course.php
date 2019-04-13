@@ -3516,7 +3516,7 @@ class Zume_Course_Content {
                 <div class="step-title cell">
                     <?php esc_html_e( "Activity (10min)", 'zume' ) ?>
                 </div> <!-- step-title cell -->
-                <div class="center cell step-header"><?php esc_html_e( "Asses yourself using the coaching checklist.", 'zume' ) ?></div>
+                <div class="center cell step-header"><?php esc_html_e( "Assess yourself using the coaching checklist.", 'zume' ) ?></div>
             </div> <!-- grid-x -->
 
             <!-- Activity Block  -->
