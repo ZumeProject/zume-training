@@ -1771,7 +1771,7 @@ msgid "Activity (10min)"
 msgstr "కార్యాచరణ (10 నిమి)"
 
 #: functions/zume-course.php:3264
-msgid "Asses yourself using the coaching checklist."
+msgid "Assess yourself using the coaching checklist."
 msgstr "శిక్షణా పరిశీలన పట్టికను ఉపయోగించి మిమ్మల్ని మీరు అంచనా వేసుకోండి."
 
 #: functions/zume-course.php:3269

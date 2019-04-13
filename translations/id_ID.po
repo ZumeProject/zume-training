@@ -2761,7 +2761,7 @@ msgid "Activity (10min)"
 msgstr "Aktivitas (10min)"
 
 #: functions/zume-course.php:3264
-msgid "Asses yourself using the coaching checklist."
+msgid "Assess yourself using the coaching checklist."
 msgstr "Nilai diri Anda sendiri menggunakan daftar periksa pembinaan."
 
 #: functions/zume-course.php:3269
