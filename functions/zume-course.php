@@ -2414,7 +2414,7 @@ class Zume_Course_Content {
         <section>
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="step-title cell">
-                    <?php esc_html_e( "Listen and Read Along (15min)", 'zume' ) ?>
+                    <?php esc_html_e( "Listen and Practice (75 min)", 'zume' ) ?>
                 </div> <!-- step-title cell -->
             </div> <!-- grid-x -->
 
@@ -2426,7 +2426,10 @@ class Zume_Course_Content {
                         <?php esc_html_e( "3/3 Groups Format", 'zume' ) ?>
                     </p>
                     <p>
-                        <?php esc_html_e( "Jesus said, “Where two or three have gathered together in My name, I am there in their midst.”", 'zume' ) ?>
+                        <?php esc_html_e( "A 3/3 Group is a way for followers of Jesus to meet, pray, learn, grow, fellowship, and practice obeying and sharing what they've learned. In this way, a 3/3 Group is not just a small group but a Simple Church.", 'zume' ) ?>
+                    </p>
+                    <p>
+                        <?php esc_html_e( 'In the following video, you’ll be coached through an interactive 3/3 Group where you’ll learn a principle and then “press pause” and practice it with the group.', 'zume' ) ?>
                     </p>
                 </div>
             </div> <!-- grid-x -->
@@ -2437,7 +2440,7 @@ class Zume_Course_Content {
                 <div class="large-9 cell activity-description well">
                     <div class="grid-x grid-padding-x grid-padding-y center" >
                         <div class="cell session-boxes">
-                            <?php esc_html_e( "Find the \"3/3 Group Format\" section in your Zúme Guidebook, and listen to the audio below.", 'zume' ) ?>
+                            <?php esc_html_e( 'Find the "3/3 Group Format" section in your Zúme Guidebook, and watch the video below.', 'zume' ) ?>
                         </div>
                     </div>
                 </div>
@@ -2448,14 +2451,15 @@ class Zume_Course_Content {
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="small-12 small-centered cell video-section">
 
-                    <!-- 20 -->
+
+                    <!-- 21 -->
                     <?php if ( $alt_video ) : ?>
                         <video width="960" height="540" style="border: 1px solid lightgrey;margin: 0 15%;" controls>
-                            <source src="<?php echo esc_url( Zume_Course::get_alt_video_by_key( 'alt_20' ) ) ?>" type="video/mp4">
+                            <source src="<?php echo esc_url( Zume_Course::get_alt_video_by_key( 'alt_21' ) ) ?>" type="video/mp4">
                             Your browser does not support the video tag.
                         </video>
                     <?php else : ?>
-                        <iframe style="border: 1px solid lightgrey;"  src="<?php echo esc_url( Zume_Course::get_video_by_key( '20' ) ) ?>" width="560" height="315"
+                        <iframe style="border: 1px solid lightgrey;"  src="<?php echo esc_url( Zume_Course::get_video_by_key( '21' ) ) ?>" width="560" height="315"
                                 frameborder="1"
                                 webkitallowfullscreen mozallowfullscreen allowfullscreen>
                         </iframe>
@@ -2486,49 +2490,7 @@ class Zume_Course_Content {
             </div> <!-- grid-x -->
         </section>
 
-        <!-- Step -->
-        <h3></h3>
-        <section>
-            <!-- Step Title -->
-            <div class="grid-x grid-margin-x grid-margin-y">
-                <div class="step-title cell">
-                    <?php esc_html_e( "MODEL 3/3 GROUP", 'zume' ) ?>
-                </div> <!-- step-title cell -->
-            </div> <!-- grid-x -->
 
-            <!-- Activity Block  -->
-            <div class="grid-x grid-margin-x grid-margin-y">
-                <div class="large-3 cell activity-title"><?php esc_html_e( 'WATCH', 'zume' ) ?></div>
-                <div class="large-9 cell activity-description">
-                    <p>
-                        <?php esc_html_e( "A 3/3 Group is a way for followers of Jesus to meet, pray, learn, grow, fellowship and practice obeying and sharing what they've learned. In this way a 3/3 Group is not just a small group but a Simple Church.", 'zume' ) ?>
-                    </p>
-                    <p>
-                        <?php esc_html_e( "In the following video, you'll see a live demonstration of a 3/3 group meeting together.", 'zume' ) ?>
-                    </p>
-                </div>
-            </div> <!-- grid-x -->
-
-            <!-- Video block -->
-            <div class="grid-x grid-margin-x grid-margin-y">
-                <div class="small-12 small-centered cell video-section">
-
-                    <!-- 21 -->
-                    <?php if ( $alt_video ) : ?>
-                        <video width="960" height="540" style="border: 1px solid lightgrey;margin: 0 15%;" controls>
-                            <source src="<?php echo esc_url( Zume_Course::get_alt_video_by_key( 'alt_21' ) ) ?>" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                    <?php else : ?>
-                        <iframe style="border: 1px solid lightgrey;"  src="<?php echo esc_url( Zume_Course::get_video_by_key( '21' ) ) ?>" width="560" height="315"
-                                frameborder="1"
-                                webkitallowfullscreen mozallowfullscreen allowfullscreen>
-                        </iframe>
-                    <?php endif; ?>
-
-                </div>
-            </div> <!-- grid-x -->
-        </section>
 
         <!-- Step -->
         <h3></h3>
