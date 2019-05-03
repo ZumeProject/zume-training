@@ -143,16 +143,16 @@ switch ($request_action) {
         list( $rp_path ) = explode( '?', wp_unslash( $_SERVER['REQUEST_URI'] ) );
         $rp_cookie = 'wp-resetpass-' . COOKIEHASH;
         if ( isset( $_GET['key'] ) && isset( $_GET['login'] ) ) {
-            $value = sprintf( '%s:%s', sanitize_text_field( wp_unslash( $_GET['login'] ) ), sanitize_key( wp_unslash( $_GET['key'] ) ) );
+            $value = sprintf( '%s:%s', wp_unslash( $_GET['login'] ), wp_unslash( $_GET['key'] ) );
             setcookie( $rp_cookie, $value, 0, $rp_path, COOKIE_DOMAIN, is_ssl(), true );
             wp_safe_redirect( remove_query_arg( array( 'key', 'login' ) ) );
             exit;
         }
         dt_write_log( $_COOKIE );
         if ( isset( $_COOKIE[ $rp_cookie ] ) && 0 < strpos( sanitize_text_field( wp_unslash( $_COOKIE[ $rp_cookie ] ) ), ':' ) ) {
-            list( $rp_login, $rp_key ) = explode( ':', sanitize_text_field( wp_unslash( $_COOKIE[ $rp_cookie ] ) ), 2 );
-            $user = check_password_reset_key( $rp_key, $rp_login );
-            if ( isset( $_POST['pass1'] ) && isset( $_POST['rp_key'] ) && ! hash_equals( $rp_key, sanitize_key( wp_unslash( $_POST['rp_key'] ) ) ) ) {
+            list( $rp_login, $rp_key ) = explode( ':', wp_unslash( $_COOKIE[ $rp_cookie ] ), 2 );
+            $user                      = check_password_reset_key( $rp_key, $rp_login );
+            if ( isset( $_POST['pass1'] ) && ! hash_equals( $rp_key, $_POST['rp_key'] ) ) {
                 $user = false;
             }
         } else {
@@ -163,19 +163,30 @@ switch ($request_action) {
             setcookie( $rp_cookie, ' ', time() - YEAR_IN_SECONDS, $rp_path, COOKIE_DOMAIN, is_ssl(), true );
             if ( $user && $user->get_error_code() === 'expired_key' ) {
                 wp_redirect( site_url( 'login/?action=lostpassword&error=expiredkey' ) );
-            } else { wp_redirect( site_url( 'login/?action=lostpassword&error=invalidkey' ) );
+            } else {
+                wp_redirect( site_url( 'login/?action=lostpassword&error=invalidkey' ) );
             }
             exit;
         }
 
         $form_errors = new WP_Error();
 
-        if ( isset( $_POST['pass1'] ) && isset( $_POST['pass2'] ) && $_POST['pass1'] != $_POST['pass2'] ) {
+        if ( isset( $_POST['pass1'] ) && $_POST['pass1'] != $_POST['pass2'] ) {
             $form_errors->add( 'password_reset_mismatch', __( 'The passwords do not match.' ) );
         }
 
+        /**
+         * Fires before the password reset procedure is validated.
+         *
+         * @since 3.5.0
+         *
+         * @param object           $errors WP Error object.
+         * @param WP_User|WP_Error $user   WP_User object if the login and reset key match. WP_Error object otherwise.
+         */
+        do_action( 'validate_password_reset', $form_errors, $user );
+
         if ( ( ! $form_errors->get_error_code() ) && isset( $_POST['pass1'] ) && !empty( $_POST['pass1'] ) ) {
-            reset_password( $user, sanitize_text_field( wp_unslash( $_POST['pass1'] ) ) );
+            reset_password( $user, $_POST['pass1'] );
             setcookie( $rp_cookie, ' ', time() - YEAR_IN_SECONDS, $rp_path, COOKIE_DOMAIN, is_ssl(), true );
 
             get_header();
