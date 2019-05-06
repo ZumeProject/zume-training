@@ -199,14 +199,14 @@ switch ($request_action) {
                     <div class="cell callout medium-6 large-4">
                         <div class="grid-x grid-padding-x grid-padding-y">
                             <div class="cell center"><img src="<?php echo esc_url( get_theme_file_uri( '/assets/images/zume-logo-white.png' ) ) ?>" /></div>
-                            <div class="cell"><?php echo sprintf( 'Your password is reset. %s You can login %', '<a href="/login">', '</a>' ) ?></div>
+                            <div class="cell"><?php echo sprintf( 'Your password is reset. %s You can login here %', '<a href="' . esc_url( zume_login_url( $current_language ) ) . '">', '</a>' ) ?></div>
                         </div>
                     </div>
                     <div class="cell medium-3 large-4"></div>
                 </div>
             </div>
             <?php
-            login_footer();
+            get_footer();
             exit;
         }
 

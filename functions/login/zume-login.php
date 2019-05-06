@@ -1221,7 +1221,7 @@ function zume_retrieve_password() {
     $message .= sprintf( __( 'Username: %s' ), $user_login ) . "\r\n\r\n";
     $message .= __( 'If this was a mistake, just ignore this email and nothing will happen.' ) . "\r\n\r\n";
     $message .= __( 'To reset your password, visit the following address:' ) . "\r\n\r\n";
-    $message .= '<' . zume_site_url() . "/wp-login.php?action=rp&key=$key&login=" . rawurlencode( $user_login ) . ">\r\n";
+    $message .= '<' . zume_login_url() . "?action=rp&key=$key&login=" . rawurlencode( $user_login ) . ">\r\n";
 
     /* translators: Password reset email subject. %s: Site name */
     $title = sprintf( __( '[%s] Password Reset' ), $site_name );
@@ -1366,7 +1366,7 @@ function zume_redirect_login_page() {
         }
 
         if ( $page_viewed == "wp-login.php" && isset( $_GET['action'] ) && $_GET['action'] === 'resetpass' ) {
-            wp_redirect( $login_page . '?action=successful-password-reset' );
+            wp_redirect( $login_page . '?action=resetpass' );
             exit;
         }
 

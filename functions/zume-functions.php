@@ -161,6 +161,9 @@ function zume_home_url( $current_language = null ) {
 }
 
 function zume_login_url( $current_language = null ) {
+    if ( strpos( $current_language, "http" ) !== false ){
+        $current_language = null;
+    }
     if ( is_null( $current_language ) ) {
         $current_language = zume_current_language();
     }
