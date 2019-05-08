@@ -321,7 +321,7 @@ class Zume_Mailchimp_Integration {
                         if ( is_wp_error( $response ) ) {
                             error_log( $response );
                         }
-                        if ( !isset( $response["response"]["code"] ) || $response["response"]["code"] != 204 ){
+                        if ( !isset( $response["response"]["code"] ) || ( $response["response"]["code"] != 204 && $response["response"]["code"] != 404 ) ){
                             return false;
                         }
                     }
