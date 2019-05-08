@@ -321,6 +321,9 @@ class Zume_Mailchimp_Integration {
                         if ( is_wp_error( $response ) ) {
                             error_log( $response );
                         }
+                        if ( !isset( $response["response"]["code"] ) || $response["response"]["code"] != 204 ){
+                            return false;
+                        }
                     }
                 }
                 update_user_meta( $user->ID, 'synced_mailchimp', 1 );
