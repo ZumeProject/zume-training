@@ -206,7 +206,7 @@ class Zume_Mailchimp_Integration {
                     if ( empty( $mailchimp_emails_sent ) ){
                         $mailchimp_emails_sent = [];
                     }
-                    if ( !in_array( $completed_key, $mailchimp_emails_sent ) && false ){
+                    if ( !in_array( $completed_key, $mailchimp_emails_sent ) ){
                         $mailchimp_emails_sent[] = $completed_key;
                         update_user_meta( $member->ID, 'mailchimp_emails_sent', $mailchimp_emails_sent );
                         $automation_url = "https://us14.api.mailchimp.com/3.0/automations/" . $session_workflow['workflow_id'] . "/emails/" . $session_workflow['workflow_email_id'] . "/queue";
@@ -279,6 +279,7 @@ class Zume_Mailchimp_Integration {
                 ), ARRAY_A );
 
                 $tags = [];
+//                @todo remove closed groups and groups you have not accepted
                 foreach ( $groups as $group ) {
                     $group_data = maybe_unserialize( $group["meta_value"] );
                     for ( $i = 1; $i < $group_data["next_session"]; $i ++ ) {
