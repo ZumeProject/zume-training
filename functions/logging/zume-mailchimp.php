@@ -206,7 +206,7 @@ class Zume_Mailchimp_Integration {
                     if ( empty( $mailchimp_emails_sent ) ){
                         $mailchimp_emails_sent = [];
                     }
-                    if ( !in_array( $completed_key, $mailchimp_emails_sent ) ){
+                    if ( !in_array( $completed_key, $mailchimp_emails_sent ) && false ){
                         $mailchimp_emails_sent[] = $completed_key;
                         update_user_meta( $member->ID, 'mailchimp_emails_sent', $mailchimp_emails_sent );
                         $automation_url = "https://us14.api.mailchimp.com/3.0/automations/" . $session_workflow['workflow_id'] . "/emails/" . $session_workflow['workflow_email_id'] . "/queue";
@@ -271,13 +271,13 @@ class Zume_Mailchimp_Integration {
                     "SELECT *
                     FROM `$wpdb->usermeta`
                     WHERE meta_key LIKE %s
-                    AND user_id = %s
+                    AND ( user_id = %s OR meta_value LIKE %s )
                    ",
                     $wpdb->esc_like( 'zume_group_' ) . '%',
-                    $user->ID
+                    $user->ID,
+                    '%'. $wpdb->esc_like( $user->user_email ). '%'
                 ), ARRAY_A );
 
-                $member_emails = [];
                 $tags = [];
                 foreach ( $groups as $group ) {
                     $group_data = maybe_unserialize( $group["meta_value"] );
@@ -285,13 +285,6 @@ class Zume_Mailchimp_Integration {
                         $tag = "completed_" . $i;
                         if ( !in_array( $tag, $tags )){
                             $tags[] = $tag;
-                        }
-                    }
-                    $members   = $group_data["coleaders"] ?? [];
-                    $members[] = $user->user_email;
-                    foreach ( $members as $member_email ) {
-                        if ( !in_array( $member_email, $member_emails ) ){
-                            $member_emails[] = $member_email;
                         }
                     }
                 }
@@ -302,34 +295,30 @@ class Zume_Mailchimp_Integration {
                         "status" => "active"
                     ];
                 }
-                foreach ( $member_emails as $member_email){
-                    $member_user = get_user_by( "email", $member_email );
-                    if ( $member_user && !empty( $tags ) ) {
-                        //update tags
-                        $user_hash = md5( strtolower( $member_email ) );
-                        $tag_url   = "https://us14.api.mailchimp.com/3.0/lists/dcc3f0b14e/members/$user_hash/tags";
-                        $response  = wp_remote_post( $tag_url, [
-                            "body"        => json_encode( [
-                                "tags" => $tags_data
-                            ] ),
-                            "headers"     => [
-                                "Authorization" => "tags $api_key",
-                                'Content-Type'  => 'application/json; charset=utf-8'
-                            ],
-                            'data_format' => 'body',
-                        ] );
-                        if ( is_wp_error( $response ) ) {
-                            error_log( $response );
-                        }
-                        if ( !isset( $response["response"]["code"] ) || ( $response["response"]["code"] != 204 && $response["response"]["code"] != 404 ) ){
-                            return false;
-                        }
+                if ( !empty( $tags ) ) {
+                    //update tags
+                    $user_hash = md5( strtolower( $user->user_email ) );
+                    $tag_url   = "https://us14.api.mailchimp.com/3.0/lists/dcc3f0b14e/members/$user_hash/tags";
+                    $response  = wp_remote_post( $tag_url, [
+                        "body"        => json_encode( [
+                            "tags" => $tags_data
+                        ] ),
+                        "headers"     => [
+                            "Authorization" => "tags $api_key",
+                            'Content-Type'  => 'application/json; charset=utf-8'
+                        ],
+                        'data_format' => 'body',
+                    ] );
+                    if ( is_wp_error( $response ) ) {
+                        error_log( $response );
+                    }
+                    if ( !isset( $response["response"]["code"] ) || ( $response["response"]["code"] != 204 && $response["response"]["code"] != 404 ) ){
+                        return false;
                     }
                 }
                 update_user_meta( $user->ID, 'synced_mailchimp', 1 );
             }
         }
-
     }
 }
 
