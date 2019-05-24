@@ -62,7 +62,18 @@ class Zume_Site_Stats
 
         // Registered people
         $hero_stats['registered_people'] = self::query_registered_people();
-        $hero_stats['total_languages'] = count( pll_languages_list() );
+        // languages
+        $language = 0;
+        $dir_scan = scandir( get_template_directory() . '/translations/' );
+        if ( ! empty( $dir_scan ) ) {
+            foreach ( $dir_scan as $file ) {
+                if (  preg_match( '/.po/', $file ) ) {
+                    $language++;
+                }
+            }
+        }
+        $hero_stats['total_languages'] = $language;
+
         $countries = [];
 
         // Loop group details
