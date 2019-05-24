@@ -65,7 +65,7 @@ class Zume_Integration_Hook_Groups extends Zume_Integration_Hook_Base {
     }
 
     public function __construct() {
-        add_action( 'zume_session_complete', [ &$this, 'hooks_session_complete' ], 10, 4 );
+//        add_action( 'zume_session_complete', [ &$this, 'hooks_session_complete' ], 10, 4 ); // @remove to disable session 8 transfer
 
         parent::__construct();
     }
