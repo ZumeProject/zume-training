@@ -193,6 +193,11 @@ class Zume_Mailchimp_Integration {
      * add a tag saying the user completed the session
      */
     public function session_complete_hook( $zume_group_key, $zume_session, $owner_id, $current_user_id ){
+        // @todo add english filter
+        if ( get_user_meta( get_current_user_id(), 'zume_language', true ) !== 'en' ) {
+            return;
+        }
+
         $this->options = get_option( 'zume_mailchimp' );
         $api_key = $this->options["api_key"];
         $session_workflow = $this->get_session_mailchimp_key( $zume_session );
