@@ -210,8 +210,7 @@ if ( ! class_exists( 'Site_Link_System' ) ) {
             if ( ! isset( $_SERVER['HTTPS'] ) ) {
                 dt_write_log( __METHOD__ . ': Server does not have the HTTPS parameter set.' );
                 return false;
-            }
-            elseif ( ! ( 'on' === $_SERVER['HTTPS'] ) ) {
+            } elseif ( ! ( 'on' === $_SERVER['HTTPS'] ) ) {
                 dt_write_log( __METHOD__ . ': Failed https challenge' );
                 return false;
             }
