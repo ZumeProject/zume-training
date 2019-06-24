@@ -61,6 +61,7 @@ require_once( 'functions/zume-stats.php' ); // zume logging of critical path act
 require_once( 'functions/zume-three-month-plan.php' );
 
 require_once( 'functions/logging/zume-mailchimp.php' ); // zume logging of critical path actions
+require_once( 'functions/zume-dt-integration/zume-dashboard-sync.php' ); // zume dashboard sync
 
 // REST API
 require_once( 'functions/zume-rest-api.php' );
