@@ -46,7 +46,7 @@ msgstr "Want to start the training?"
 
 #: front-page.php:132
 msgid "It's as easy as 1-2-3"
-msgstr "It's as easy as 1-2-3-4"
+msgstr "It's as easy as 1-2-3"
 
 #: front-page.php:141
 msgid "Sign up"
