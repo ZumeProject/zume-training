@@ -200,7 +200,7 @@ if ( is_user_logged_in() ) {
             <div class="grid-x ">
                 <div class="small-8 medium-3 small-centered cell center vertical-padding">
                     <br>
-                    <a href="<?php echo esc_url( site_url( '/' ) . $zume_current_lang ) . '/about'; ?>" class="button large center " >
+                    <a href="<?php echo esc_url( zume_about_url() ) ?>" class="button large center " >
                         <?php esc_html_e( 'Find out more about Zúme', 'zume' ) ?></a>
                     <br>
                 </div>
