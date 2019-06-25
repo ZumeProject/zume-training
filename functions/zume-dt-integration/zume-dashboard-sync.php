@@ -1,7 +1,6 @@
 <?php
 add_filter( 'https_ssl_verify', '__return_false' );
-add_filter( 'http_request_args', function( $params, $url )
-{
+add_filter( 'http_request_args', function( $params, $url ) {
     // find out if this is the request you are targeting and if not: abort
     add_filter( 'https_ssl_verify', '__return_false' );
 

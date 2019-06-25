@@ -4,9 +4,7 @@ Template Name: Full Width Home
 */
 
 $zume_current_lang = zume_current_language();
-//if ( is_user_logged_in() ) {
-////    wp_redirect( '/' . $zume_current_lang . '/dashboard' );
-//}
+
 ?>
 <?php get_header(); ?>
 
@@ -16,7 +14,28 @@ $zume_current_lang = zume_current_language();
 
         <div id="main" class="cell" role="main">
 
-            <!-- Add if -->
+
+            <?php
+            $args = [
+                'page_id' => zume_alternate_home_id() ,
+                'post_status' => 'publish'
+            ];
+            $zume_content_query = new WP_Query( $args );
+
+            if ( $zume_content_query->post_count ) {  // custom page check
+
+                while ( $zume_content_query->have_posts() ) : $zume_content_query->the_post();
+                    ?>
+
+                    <div class="entry">
+
+                        <?php the_content(); ?>
+
+                    </div>
+
+                <?php endwhile; ?>
+
+            <?php } else { // end custom home page ?>
 
             <!----------------------------------->
             <!-- VIDEO RIBBON -->
@@ -179,13 +198,17 @@ $zume_current_lang = zume_current_language();
 
             <br clear />
 
-            <?php
+                <?php
             /******************************************************************
              * WHAT OTHERS ARE SAYING RIBBON
              *******************************************************************/
-            $zume_content_query = new WP_Query( 'page_id=' . zume_home_id() );
-            while ($zume_content_query->have_posts()) : $zume_content_query->the_post();
-                ?>
+                $args = [
+                'page_id' => zume_home_id(),
+                'post_status' => 'any'
+                ];
+                $zume_content_query = new WP_Query( $args );
+                while ( $zume_content_query->have_posts() ) : $zume_content_query->the_post();
+                    ?>
 
                 <div class="entry">
 
@@ -193,10 +216,7 @@ $zume_current_lang = zume_current_language();
 
                 </div>
 
-            <?php endwhile; ?>
-
-
-
+                <?php endwhile; ?>
 
             <!-- Find out more link -->
             <div class="grid-x ">
@@ -207,6 +227,14 @@ $zume_current_lang = zume_current_language();
                     <br>
                 </div>
             </div>
+
+
+
+
+
+
+            <?php } // end custom page if ?>
+
 
         </div> <!-- end #main -->
 

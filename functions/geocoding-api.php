@@ -53,7 +53,7 @@ if ( ! class_exists( 'Disciple_Tools_Google_Geocode_API' ) ) {
             $url_address = 'https://maps.googleapis.com/maps/api/geocode/json?address=' . $address . '&key=' . self::key();
             $details     = json_decode( self::url_get_contents( $url_address ), true );
 
-            if ( $details[ 'status' ] == 'ZERO_RESULTS' ) {
+            if ( $details['status'] == 'ZERO_RESULTS' ) {
                 return false;
             } else {
                 switch ( $type ) {
@@ -61,8 +61,8 @@ if ( ! class_exists( 'Disciple_Tools_Google_Geocode_API' ) ) {
                         return true;
                         break;
                     case 'coordinates_only':
-                        $g_lat = $details[ 'results' ][ 0 ][ 'geometry' ][ 'location' ][ 'lat' ];
-                        $g_lng = $details[ 'results' ][ 0 ][ 'geometry' ][ 'location' ][ 'lng' ];
+                        $g_lat = $details['results'][0]['geometry']['location']['lat'];
+                        $g_lng = $details['results'][0]['geometry']['location']['lng'];
 
                         return [
                             'lng' => $g_lng,
@@ -71,9 +71,9 @@ if ( ! class_exists( 'Disciple_Tools_Google_Geocode_API' ) ) {
                         ];
                         break;
                     case 'core':
-                        $g_lat               = $details[ 'results' ][ 0 ][ 'geometry' ][ 'location' ][ 'lat' ];
-                        $g_lng               = $details[ 'results' ][ 0 ][ 'geometry' ][ 'location' ][ 'lng' ];
-                        $g_formatted_address = $details[ 'results' ][ 0 ][ 'formatted_address' ];
+                        $g_lat               = $details['results'][0]['geometry']['location']['lat'];
+                        $g_lng               = $details['results'][0]['geometry']['location']['lng'];
+                        $g_formatted_address = $details['results'][0]['formatted_address'];
 
                         return [
                             'lng'               => $g_lng,
@@ -84,10 +84,10 @@ if ( ! class_exists( 'Disciple_Tools_Google_Geocode_API' ) ) {
                         break;
                     case 'all_points':
                         return [
-                            'center'            => $details[ 'results' ][ 0 ][ 'geometry' ][ 'location' ],
-                            'northeast'         => $details[ 'results' ][ 0 ][ 'geometry' ][ 'bounds' ][ 'northeast' ],
-                            'southwest'         => $details[ 'results' ][ 0 ][ 'geometry' ][ 'bounds' ][ 'southwest' ],
-                            'formatted_address' => $details[ 'results' ][ 0 ][ 'formatted_address' ],
+                            'center'            => $details['results'][0]['geometry']['location'],
+                            'northeast'         => $details['results'][0]['geometry']['bounds']['northeast'],
+                            'southwest'         => $details['results'][0]['geometry']['bounds']['southwest'],
+                            'formatted_address' => $details['results'][0]['formatted_address'],
                             'raw'               => $details,
                         ];
                         break;
@@ -121,7 +121,7 @@ if ( ! class_exists( 'Disciple_Tools_Google_Geocode_API' ) ) {
             $url_address = 'https://maps.googleapis.com/maps/api/geocode/json?address=' . $address . '&components=' . $component_string . '&key=' . self::key();
             $details     = json_decode( self::url_get_contents( $url_address ), true );
 
-            if ( $details[ 'status' ] == 'ZERO_RESULTS' ) {
+            if ( $details['status'] == 'ZERO_RESULTS' ) {
                 return false;
             } else {
                 return $details;
@@ -143,7 +143,7 @@ if ( ! class_exists( 'Disciple_Tools_Google_Geocode_API' ) ) {
             $url_address = 'https://maps.googleapis.com/maps/api/geocode/json?latlng=' . $latlng . '&result_type=' . $result_type . '&key=' . self::key();
             $details     = json_decode( self::url_get_contents( $url_address ), true );
 
-            if ( $details[ 'status' ] == 'ZERO_RESULTS' ) {
+            if ( $details['status'] == 'ZERO_RESULTS' ) {
                 return false;
             } else {
                 return $details; // raw response
@@ -186,7 +186,7 @@ if ( ! class_exists( 'Disciple_Tools_Google_Geocode_API' ) ) {
                 return false;
             }
 
-            $latlng = $details[ 'latitude' ] . ',' . $details[ 'longitude' ];
+            $latlng = $details['latitude'] . ',' . $details['longitude'];
             $raw    = self::query_google_api( $latlng, 'core' );
 
             return $raw;
@@ -218,14 +218,14 @@ if ( ! class_exists( 'Disciple_Tools_Google_Geocode_API' ) ) {
          */
         public static function get_real_ip_address() {
             $ip = '';
-            if ( ! empty( $_SERVER[ 'HTTP_CLIENT_IP' ] ) )   //check ip from share internet
+            if ( ! empty( $_SERVER['HTTP_CLIENT_IP'] ) )   //check ip from share internet
             {
-                $ip = sanitize_text_field( wp_unslash( $_SERVER[ 'HTTP_CLIENT_IP' ] ) );
-            } else if ( ! empty( $_SERVER[ 'HTTP_X_FORWARDED_FOR' ] ) )   //to check ip is pass from proxy
+                $ip = sanitize_text_field( wp_unslash( $_SERVER['HTTP_CLIENT_IP'] ) );
+            } else if ( ! empty( $_SERVER['HTTP_X_FORWARDED_FOR'] ) )   //to check ip is pass from proxy
             {
-                $ip = sanitize_text_field( wp_unslash( $_SERVER[ 'HTTP_X_FORWARDED_FOR' ] ) );
-            } else if ( ! empty( $_SERVER[ 'REMOTE_ADDR' ] ) ) {
-                $ip = sanitize_text_field( wp_unslash( $_SERVER[ 'REMOTE_ADDR' ] ) );
+                $ip = sanitize_text_field( wp_unslash( $_SERVER['HTTP_X_FORWARDED_FOR'] ) );
+            } else if ( ! empty( $_SERVER['REMOTE_ADDR'] ) ) {
+                $ip = sanitize_text_field( wp_unslash( $_SERVER['REMOTE_ADDR'] ) );
             }
 
             return $ip;
@@ -267,21 +267,21 @@ if ( ! class_exists( 'Disciple_Tools_Google_Geocode_API' ) ) {
          */
         public static function parse_raw_result( array $raw_response, $item ) {
 
-            if ( empty( $raw_response ) || ! isset( $raw_response[ 'status' ] ) || ! isset( $raw_response[ 'results' ][ 0 ] ) ) {
+            if ( empty( $raw_response ) || ! isset( $raw_response['status'] ) || ! isset( $raw_response['results'][0] ) ) {
                 return false;
             }
-            if ( ! ( 'OK' == $raw_response[ 'status' ] ) ) {
+            if ( ! ( 'OK' == $raw_response['status'] ) ) {
                 return false;
             }
 
-            $raw = $raw_response[ 'results' ][ 0 ];
+            $raw = $raw_response['results'][0];
 
             switch ( $item ) {
 
                 case 'country':
-                    foreach ( $raw[ 'address_components' ] as $component ) {
-                        if ( 'country' == $component[ 'types' ][ 0 ] ) {
-                            return $component[ 'long_name' ];
+                    foreach ( $raw['address_components'] as $component ) {
+                        if ( 'country' == $component['types'][0] ) {
+                            return $component['long_name'];
                         }
                     }
 
@@ -289,9 +289,9 @@ if ( ! class_exists( 'Disciple_Tools_Google_Geocode_API' ) ) {
                     break;
 
                 case 'country_short_name':
-                    foreach ( $raw[ 'address_components' ] as $component ) {
-                        if ( 'country' == $component[ 'types' ][ 0 ] ) {
-                            return $component[ 'short_name' ];
+                    foreach ( $raw['address_components'] as $component ) {
+                        if ( 'country' == $component['types'][0] ) {
+                            return $component['short_name'];
                         }
                     }
 
@@ -299,9 +299,9 @@ if ( ! class_exists( 'Disciple_Tools_Google_Geocode_API' ) ) {
                     break;
 
                 case 'admin1':
-                    foreach ( $raw[ 'address_components' ] as $component ) {
-                        if ( 'administrative_area_level_1' == $component[ 'types' ][ 0 ] ) {
-                            return $component[ 'long_name' ];
+                    foreach ( $raw['address_components'] as $component ) {
+                        if ( 'administrative_area_level_1' == $component['types'][0] ) {
+                            return $component['long_name'];
                         }
                     }
 
@@ -309,9 +309,9 @@ if ( ! class_exists( 'Disciple_Tools_Google_Geocode_API' ) ) {
                     break;
 
                 case 'administrative_area_level_1':
-                    foreach ( $raw[ 'address_components' ] as $component ) {
-                        if ( 'administrative_area_level_1' == $component[ 'types' ][ 0 ] ) {
-                            return $component[ 'long_name' ];
+                    foreach ( $raw['address_components'] as $component ) {
+                        if ( 'administrative_area_level_1' == $component['types'][0] ) {
+                            return $component['long_name'];
                         }
                     }
 
@@ -319,9 +319,9 @@ if ( ! class_exists( 'Disciple_Tools_Google_Geocode_API' ) ) {
                     break;
 
                 case 'admin2':
-                    foreach ( $raw[ 'address_components' ] as $component ) {
-                        if ( 'administrative_area_level_2' == $component[ 'types' ][ 0 ] ) {
-                            return $component[ 'long_name' ];
+                    foreach ( $raw['address_components'] as $component ) {
+                        if ( 'administrative_area_level_2' == $component['types'][0] ) {
+                            return $component['long_name'];
                         }
                     }
 
@@ -329,9 +329,9 @@ if ( ! class_exists( 'Disciple_Tools_Google_Geocode_API' ) ) {
                     break;
 
                 case 'administrative_area_level_2':
-                    foreach ( $raw[ 'address_components' ] as $component ) {
-                        if ( 'administrative_area_level_2' == $component[ 'types' ][ 0 ] ) {
-                            return $component[ 'long_name' ];
+                    foreach ( $raw['address_components'] as $component ) {
+                        if ( 'administrative_area_level_2' == $component['types'][0] ) {
+                            return $component['long_name'];
                         }
                     }
 
@@ -339,9 +339,9 @@ if ( ! class_exists( 'Disciple_Tools_Google_Geocode_API' ) ) {
                     break;
 
                 case 'admin3':
-                    foreach ( $raw[ 'address_components' ] as $component ) {
-                        if ( 'administrative_area_level_3' == $component[ 'types' ][ 0 ] ) {
-                            return $component[ 'long_name' ];
+                    foreach ( $raw['address_components'] as $component ) {
+                        if ( 'administrative_area_level_3' == $component['types'][0] ) {
+                            return $component['long_name'];
                         }
                     }
 
@@ -349,9 +349,9 @@ if ( ! class_exists( 'Disciple_Tools_Google_Geocode_API' ) ) {
                     break;
 
                 case 'administrative_area_level_3':
-                    foreach ( $raw[ 'address_components' ] as $component ) {
-                        if ( 'administrative_area_level_3' == $component[ 'types' ][ 0 ] ) {
-                            return $component[ 'long_name' ];
+                    foreach ( $raw['address_components'] as $component ) {
+                        if ( 'administrative_area_level_3' == $component['types'][0] ) {
+                            return $component['long_name'];
                         }
                     }
 
@@ -359,9 +359,9 @@ if ( ! class_exists( 'Disciple_Tools_Google_Geocode_API' ) ) {
                     break;
 
                 case 'locality':
-                    foreach ( $raw[ 'address_components' ] as $component ) {
-                        if ( 'locality' == $component[ 'types' ][ 0 ] ) {
-                            return $component[ 'long_name' ];
+                    foreach ( $raw['address_components'] as $component ) {
+                        if ( 'locality' == $component['types'][0] ) {
+                            return $component['long_name'];
                         }
                     }
 
@@ -369,9 +369,9 @@ if ( ! class_exists( 'Disciple_Tools_Google_Geocode_API' ) ) {
                     break;
 
                 case 'neighborhood':
-                    foreach ( $raw[ 'address_components' ] as $component ) {
-                        if ( 'neighborhood' == $component[ 'types' ][ 0 ] ) {
-                            return $component[ 'long_name' ];
+                    foreach ( $raw['address_components'] as $component ) {
+                        if ( 'neighborhood' == $component['types'][0] ) {
+                            return $component['long_name'];
                         }
                     }
 
@@ -379,9 +379,9 @@ if ( ! class_exists( 'Disciple_Tools_Google_Geocode_API' ) ) {
                     break;
 
                 case 'postal_code':
-                    foreach ( $raw[ 'address_components' ] as $component ) {
-                        if ( 'postal_code' == $component[ 'types' ][ 0 ] ) {
-                            return $component[ 'long_name' ];
+                    foreach ( $raw['address_components'] as $component ) {
+                        if ( 'postal_code' == $component['types'][0] ) {
+                            return $component['long_name'];
                         }
                     }
 
@@ -389,82 +389,82 @@ if ( ! class_exists( 'Disciple_Tools_Google_Geocode_API' ) ) {
                     break;
 
                 case 'address_components':
-                    return $raw[ 'address_components' ] ?? false;
+                    return $raw['address_components'] ?? false;
                     break;
 
                 case 'formatted_address':
-                    return $raw[ 'formatted_address' ] ?? false;
+                    return $raw['formatted_address'] ?? false;
                     break;
 
                 case 'latlng':
-                    $location = $raw[ 'geometry' ][ 'location' ] ?? false;
+                    $location = $raw['geometry']['location'] ?? false;
                     if ( ! $location ) {
                         return false;
                     }
 
-                    return $location[ 'lat' ] . ',' . $location[ 'lng' ];
+                    return $location['lat'] . ',' . $location['lng'];
                     break;
 
                 case 'geometry':
-                    return $raw[ 'geometry' ] ?? false;
+                    return $raw['geometry'] ?? false;
                     break;
 
                 case 'bounds':
-                    return $raw[ 'geometry' ][ 'bounds' ] ?? false;
+                    return $raw['geometry']['bounds'] ?? false;
                     break;
 
                 case 'viewport':
-                    return $raw[ 'geometry' ][ 'viewport' ] ?? false;
+                    return $raw['geometry']['viewport'] ?? false;
                     break;
 
                 case 'location':
-                    return $raw[ 'geometry' ][ 'location' ] ?? false;
+                    return $raw['geometry']['location'] ?? false;
                     break;
 
                 case 'lat':
-                    return $raw[ 'geometry' ][ 'location' ][ 'lat' ] ?? false;
+                    return $raw['geometry']['location']['lat'] ?? false;
                     break;
 
                 case 'lng':
-                    return $raw[ 'geometry' ][ 'location' ][ 'lng' ] ?? false;
+                    return $raw['geometry']['location']['lng'] ?? false;
                     break;
 
                 case 'northeast':
-                    return $raw[ 'geometry' ][ 'viewport' ][ 'northeast' ] ?? false;
+                    return $raw['geometry']['viewport']['northeast'] ?? false;
                     break;
 
                 case 'northeast_lat':
-                    return $raw[ 'geometry' ][ 'viewport' ][ 'northeast' ][ 'lat' ] ?? false;
+                    return $raw['geometry']['viewport']['northeast']['lat'] ?? false;
                     break;
 
                 case 'northeast_lng':
-                    return $raw[ 'geometry' ][ 'viewport' ][ 'northeast' ][ 'lng' ] ?? false;
+                    return $raw['geometry']['viewport']['northeast']['lng'] ?? false;
                     break;
 
                 case 'southwest':
-                    return $raw[ 'geometry' ][ 'viewport' ][ 'southwest' ] ?? false;
+                    return $raw['geometry']['viewport']['southwest'] ?? false;
                     break;
 
                 case 'southwest_lat':
-                    return $raw[ 'geometry' ][ 'viewport' ][ 'southwest' ][ 'lat' ] ?? false;
+                    return $raw['geometry']['viewport']['southwest']['lat'] ?? false;
                     break;
 
                 case 'southwest_lng':
-                    return $raw[ 'geometry' ][ 'viewport' ][ 'southwest' ][ 'lng' ] ?? false;
+                    return $raw['geometry']['viewport']['southwest']['lng'] ?? false;
                     break;
 
                 case 'location_type':
-                    return $raw[ 'geometry' ][ 'location_type' ] ?? false;
+                    return $raw['geometry']['location_type'] ?? false;
                     break;
 
                 case 'place_id':
-                    return $raw[ 'place_id' ] ?? false;
+                    return $raw['place_id'] ?? false;
                     break;
 
                 case 'political':
                     $political = [];
-                    foreach ( $raw[ 'address_components' ] as $component ) {
-                        $designation = $component[ 'types' ][ 1 ] ?? '';
+                    foreach ( $raw['address_components'] as $component ) {
+                        $designation = $component['types'][1] ?? '';
                         if ( 'political' == $designation ) {
                             $political[] = $component;
                         }
@@ -486,7 +486,7 @@ if ( ! class_exists( 'Disciple_Tools_Google_Geocode_API' ) ) {
                      * - route
                      * - street_address
                      */
-                    return $raw[ 'types' ][ 0 ] ?? false;
+                    return $raw['types'][0] ?? false;
                     break;
 
                 case 'base_name':
@@ -496,14 +496,14 @@ if ( ! class_exists( 'Disciple_Tools_Google_Geocode_API' ) ) {
                      * If the queried item was "Phoenix, AZ, US", "self" will return "Phoenix".
                      * Using "self" is more reliable than using post title, because the post title can be changed.
                      */
-                    return $raw[ 'address_components' ][ 0 ][ 'long_name' ];
+                    return $raw['address_components'][0]['long_name'];
                     break;
 
                 case 'base_name_full':
                     /**
                      * Returns the full array address component.
                      */
-                    return $raw[ 'address_components' ][ 0 ];
+                    return $raw['address_components'][0];
                     break;
 
                 case 'full': // useful for running a raw result though the array check at the beginning of the function
@@ -524,50 +524,50 @@ if ( ! class_exists( 'Disciple_Tools_Google_Geocode_API' ) ) {
          */
         public static function test_raw_result( array $raw_response, $item ): bool {
 
-            if ( empty( $raw_response ) || ! isset( $raw_response[ 'status' ] ) || ! isset( $raw_response[ 'results' ][ 0 ] ) ) {
+            if ( empty( $raw_response ) || ! isset( $raw_response['status'] ) || ! isset( $raw_response['results'][0] ) ) {
                 return false;
             }
-            if ( ! ( 'OK' == $raw_response[ 'status' ] ) ) {
+            if ( ! ( 'OK' == $raw_response['status'] ) ) {
                 return false;
             }
 
-            $raw = $raw_response[ 'results' ][ 0 ];
+            $raw = $raw_response['results'][0];
 
             switch ( $item ) {
                 case 'is_country':
-                    return $raw[ 'types' ][ 0 ] == 'country';
+                    return $raw['types'][0] == 'country';
                     break;
 
                 case 'is_admin1':
-                    return $raw[ 'types' ][ 0 ] == 'administrative_area_level_1';
+                    return $raw['types'][0] == 'administrative_area_level_1';
                     break;
 
                 case 'is_admin2':
-                    return $raw[ 'types' ][ 0 ] == 'administrative_area_level_2';
+                    return $raw['types'][0] == 'administrative_area_level_2';
                     break;
 
                 case 'is_admin3':
-                    return $raw[ 'types' ][ 0 ] == 'administrative_area_level_3';
+                    return $raw['types'][0] == 'administrative_area_level_3';
                     break;
 
                 case 'is_admin4':
-                    return $raw[ 'types' ][ 0 ] == 'administrative_area_level_4';
+                    return $raw['types'][0] == 'administrative_area_level_4';
                     break;
 
                 case 'locality':
-                    return $raw[ 'types' ][ 0 ] == 'locality';
+                    return $raw['types'][0] == 'locality';
                     break;
 
                 case 'neighborhood':
-                    return $raw[ 'types' ][ 0 ] == 'locality';
+                    return $raw['types'][0] == 'locality';
                     break;
 
                 case 'route':
-                    return $raw[ 'types' ][ 0 ] == 'locality';
+                    return $raw['types'][0] == 'locality';
                     break;
 
                 case 'street_address':
-                    return $raw[ 'types' ][ 0 ] == 'locality';
+                    return $raw['types'][0] == 'locality';
                     break;
 
                 default:
@@ -577,11 +577,11 @@ if ( ! class_exists( 'Disciple_Tools_Google_Geocode_API' ) ) {
         }
 
         public static function check_valid_request_result( $raw_result ): bool {
-            if ( empty( $raw_result ) || ! isset( $raw_result[ 'status' ] ) || ! isset( $raw_result[ 'results' ][ 0 ] ) ) {
+            if ( empty( $raw_result ) || ! isset( $raw_result['status'] ) || ! isset( $raw_result['results'][0] ) ) {
                 return false;
             }
 
-            if ( 'OK' == $raw_result[ 'status' ] && isset( $raw_result[ 'results' ][ 0 ] ) ) {
+            if ( 'OK' == $raw_result['status'] && isset( $raw_result['results'][0] ) ) {
                 return true;
             }
 
