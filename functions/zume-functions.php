@@ -286,6 +286,15 @@ function zume_home_id() {
     return $id;
 }
 
+function zume_alternate_home_id() {
+    $current_lang = zume_current_language();
+    $id = zume_get_home_translation_id( 'Alternate Home', $current_lang );
+    if ( is_wp_error( $id ) || empty( $id ) ) {
+        return false;
+    }
+    return $id;
+}
+
 /***********************************************************************************************************************
  *
  * ADMIN AREA

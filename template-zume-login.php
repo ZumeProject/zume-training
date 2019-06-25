@@ -139,7 +139,7 @@ switch ($request_action) {
 
     case 'resetpass' :
     case 'rp' :
-        // @codingStandardsIgnoreLine
+        // @codingStandardsIgnoreStart
         list( $rp_path ) = explode( '?', wp_unslash( $_SERVER['REQUEST_URI'] ) );
         $rp_cookie = 'wp-resetpass-' . COOKIEHASH;
         if ( isset( $_GET['key'] ) && isset( $_GET['login'] ) ) {
@@ -158,6 +158,7 @@ switch ($request_action) {
         } else {
             $user = false;
         }
+
 
         if ( ! $user || is_wp_error( $user ) ) {
             setcookie( $rp_cookie, ' ', time() - YEAR_IN_SECONDS, $rp_path, COOKIE_DOMAIN, is_ssl(), true );
@@ -188,7 +189,7 @@ switch ($request_action) {
         if ( ( ! $form_errors->get_error_code() ) && isset( $_POST['pass1'] ) && !empty( $_POST['pass1'] ) ) {
             reset_password( $user, $_POST['pass1'] );
             setcookie( $rp_cookie, ' ', time() - YEAR_IN_SECONDS, $rp_path, COOKIE_DOMAIN, is_ssl(), true );
-
+        // @codingStandardsIgnoreEnd
             get_header();
             ?>
             <div id="content">
