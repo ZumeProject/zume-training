@@ -19,15 +19,15 @@ function zume_force_login() {
 /*
  * Redirects logged on users from home page requests to dashboard.
  */
-function zume_dashboard_redirect() {
-    global $post;
-    if ( is_user_logged_in() && isset( $post )) {
-        if ($post->post_name == 'home') {
-            wp_redirect( zume_dashboard_url() );
-        }
-    }
-}
-add_action( 'template_redirect', 'zume_dashboard_redirect' );
+//function zume_dashboard_redirect() {
+//    global $post;
+//    if ( is_user_logged_in() && isset( $post )) {
+////        if ($post->post_name == 'home') {
+////            wp_redirect( zume_dashboard_url() );
+////        }
+//    }
+//}
+//add_action( 'template_redirect', 'zume_dashboard_redirect' );
 
 
 // Remove admin bar on the front end.

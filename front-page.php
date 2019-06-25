@@ -4,9 +4,9 @@ Template Name: Full Width Home
 */
 
 $zume_current_lang = zume_current_language();
-if ( is_user_logged_in() ) {
-    wp_redirect( '/' . $zume_current_lang . '/dashboard' );
-}
+//if ( is_user_logged_in() ) {
+////    wp_redirect( '/' . $zume_current_lang . '/dashboard' );
+//}
 ?>
 <?php get_header(); ?>
 
@@ -15,6 +15,8 @@ if ( is_user_logged_in() ) {
     <div id="inner-content grid-x grid-padding-x">
 
         <div id="main" class="cell" role="main">
+
+            <!-- Add if -->
 
             <!----------------------------------->
             <!-- VIDEO RIBBON -->
