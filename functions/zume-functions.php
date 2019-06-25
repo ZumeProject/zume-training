@@ -207,9 +207,11 @@ function zume_register_url( $current_language = null ) {
     return $url;
 }
 
-function zume_dashboard_url() {
-    $current_lang = zume_current_language();
-    $url = zume_get_posts_translation_url( 'dashboard', $current_lang );
+function zume_dashboard_url( $current_language = null ) {
+    if ( is_null( $current_language ) ) {
+        $current_language = zume_current_language();
+    }
+    $url = zume_get_posts_translation_url( 'dashboard', $current_language );
     return $url;
 }
 

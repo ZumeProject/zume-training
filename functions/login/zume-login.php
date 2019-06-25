@@ -674,7 +674,7 @@ class Zume_User_Registration
             wp_set_current_user( $user_id, $user->user_login );
             wp_set_auth_cookie( $user_id );
             do_action( 'wp_login', $user->user_login, $user );
-            wp_safe_redirect( zume_home_url( $current_language ) );
+            wp_safe_redirect( zume_dashboard_url( $current_language ) );
             exit;
         } else {
             $error->add( __METHOD__, __( 'No new user found.', 'zume' ) );
