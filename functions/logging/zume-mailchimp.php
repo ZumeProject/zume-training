@@ -244,7 +244,7 @@ class Zume_Mailchimp_Integration {
         // @todo add english filter
         $allowed_languages = [ "en", "ar" ];
         $user_lang = get_user_meta( get_current_user_id(), 'zume_language', true );
-        if ( in_array( $user_lang, $allowed_languages ) ) {
+        if ( !in_array( $user_lang, $allowed_languages ) ) {
             return;
         }
 
