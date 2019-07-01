@@ -120,50 +120,98 @@ class Zume_Mailchimp_Integration {
         );
     }
 
-    public function get_session_mailchimp_key( $session ){
+    public function get_session_mailchimp_key( $session, $user_lang ){
         $sessions = [
-            "1" => [
-                "workflow_id" => "d03393c000",
-                "workflow_email_id" => "d82e85e7e0"
+            "en" => [
+                "1" => [
+                    "workflow_id" => "d03393c000",
+                    "workflow_email_id" => "d82e85e7e0"
+                ],
+                "2" => [
+                    "workflow_id" => "31e37f560c",
+                    "workflow_email_id" => "21c409c528"
+                ],
+                "3" => [
+                    "workflow_id" => "410761da92",
+                    "workflow_email_id" => "a34de58b7c"
+                ],
+                "4" => [
+                    "workflow_id" => "b314e148ca",
+                    "workflow_email_id" => "6e089a5446"
+                ],
+                "5" => [
+                    "workflow_id" => "29f7b2444a",
+                    "workflow_email_id" => "17935f0df8"
+                ],
+                "6" => [
+                    "workflow_id" => "deb158f30d",
+                    "workflow_email_id" => "16c4897891"
+                ],
+                "7" => [
+                    "workflow_id" => "bc4ca5edde",
+                    "workflow_email_id" => "377b4a7a15"
+                ],
+                "8" => [
+                    "workflow_id" => "e3539d0421",
+                    "workflow_email_id" => "635d3a5c00"
+                ],
+                "9" => [
+                    "workflow_id" => "dbadd46358",
+                    "workflow_email_id" => "68e5ac464d"
+                ],
+                "10" => [
+                    "workflow_id" => "a34c19efc1",
+                    "workflow_email_id" => "54cd7a3562"
+                ]
             ],
-            "2" => [
-                "workflow_id" => "31e37f560c",
-                "workflow_email_id" => "21c409c528"
-            ],
-            "3" => [
-                "workflow_id" => "410761da92",
-                "workflow_email_id" => "a34de58b7c"
-            ],
-            "4" => [
-                "workflow_id" => "b314e148ca",
-                "workflow_email_id" => "6e089a5446"
-            ],
-            "5" => [
-                "workflow_id" => "29f7b2444a",
-                "workflow_email_id" => "17935f0df8"
-            ],
-            "6" => [
-                "workflow_id" => "deb158f30d",
-                "workflow_email_id" => "16c4897891"
-            ],
-            "7" => [
-                "workflow_id" => "bc4ca5edde",
-                "workflow_email_id" => "377b4a7a15"
-            ],
-            "8" => [
-                "workflow_id" => "e3539d0421",
-                "workflow_email_id" => "635d3a5c00"
-            ],
-            "9" => [
-                "workflow_id" => "dbadd46358",
-                "workflow_email_id" => "68e5ac464d"
-            ],
-            "10" => [
-                "workflow_id" => "a34c19efc1",
-                "workflow_email_id" => "54cd7a3562"
+            "ar" => [
+                "1" => [
+                    "workflow_id" => "01357bcec5",
+                    "workflow_email_id" => "358c68f49f"
+                ],
+                "2" => [
+                    "workflow_id" => "63657c9a4b",
+                    "workflow_email_id" => "5e9fe17b39"
+                ],
+                "3" => [
+                    "workflow_id" => "1cd43272f6",
+                    "workflow_email_id" => "4b8743d30e"
+                ],
+                "4" => [
+                    "workflow_id" => "2b3b9df137",
+                    "workflow_email_id" => "fb1ea2e36f"
+                ],
+                "5" => [
+                    "workflow_id" => "971e93b186",
+                    "workflow_email_id" => "6ddb3eab14"
+                ],
+                "6" => [
+                    "workflow_id" => "896778bed5",
+                    "workflow_email_id" => "ebdb1a85f0"
+                ],
+                "7" => [
+                    "workflow_id" => "14c2c44fd6",
+                    "workflow_email_id" => "29da656b72"
+                ],
+                "8" => [
+                    "workflow_id" => "0b13303517",
+                    "workflow_email_id" => "6cdf3b6a12"
+                ],
+                "9" => [
+                    "workflow_id" => "c546bc27f3",
+                    "workflow_email_id" => "cf9ea7242a"
+                ],
+                "10" => [
+                    "workflow_id" => "129b0ed280",
+                    "workflow_email_id" => "5d35ac8455"
+                ]
             ]
         ];
-        return $sessions[$session];
+        if ( isset( $sessions[$user_lang][$session] ) ){
+            return $sessions[$user_lang][$session];
+        } else {
+            return [];
+        }
     }
 
     public function get_group_members( $group_key ){
@@ -194,13 +242,15 @@ class Zume_Mailchimp_Integration {
      */
     public function session_complete_hook( $zume_group_key, $zume_session, $owner_id, $current_user_id ){
         // @todo add english filter
-        if ( get_user_meta( get_current_user_id(), 'zume_language', true ) !== 'en' ) {
+        $allowed_languages = [ "en", "ar" ];
+        $user_lang = get_user_meta( get_current_user_id(), 'zume_language', true );
+        if ( in_array( $user_lang, $allowed_languages ) ) {
             return;
         }
 
         $this->options = get_option( 'zume_mailchimp' );
         $api_key = $this->options["api_key"];
-        $session_workflow = $this->get_session_mailchimp_key( $zume_session );
+        $session_workflow = $this->get_session_mailchimp_key( $zume_session, $user_lang );
         $members_emails = $this->get_group_members( $zume_group_key );
         $completed_key = "completed_" . $zume_session;
         if ( !empty( $api_key ) && !empty( $session_workflow ) ) {
