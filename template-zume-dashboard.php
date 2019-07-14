@@ -657,7 +657,7 @@ do_action( 'zume_dashboard_header' );
                            type="text" value="" name="meeting_time" id="meeting_time" required/>
                 </div>
 
-                <!-- New Address
+                <!-- New Address -->
                 <div class="cell">
                     <label for="validate_addressnew"><?php echo esc_html__( 'Address', 'zume' ) ?></label>
                     <div class="input-group">
@@ -686,7 +686,7 @@ do_action( 'zume_dashboard_header' );
                         check_address('new')
                     });
                 </script>
-                -->
+
 
                 <!-- Add coleaders -->
                 <div class="cell padding-top">
