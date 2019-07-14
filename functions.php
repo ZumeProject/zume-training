@@ -69,6 +69,7 @@ require_once( 'functions/zume-rest-api.php' );
 // Locations System
 require_once( 'functions/geocoding-api.php' ); // @todo retire?
 require_once( 'functions/ip-location-api.php' );
+require_once( 'functions/mapbox-location-api.php' );
 
 // Zume - DT - Integration
 require_once( 'functions/zume-dt-integration/site-link-post-type.php' );
