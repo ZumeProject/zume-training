@@ -24,8 +24,7 @@ if ( ! class_exists( 'Mapbox_Location_API' ) ) {
 
         /** Singleton @var null  */
         private static $_instance = null;
-        public static function instance()
-        {
+        public static function instance() {
             if ( is_null( self::$_instance ) ) {
                 self::$_instance = new self();
             }
@@ -49,8 +48,8 @@ if ( ! class_exists( 'Mapbox_Location_API' ) ) {
 
         public function query_mapbox_with_lnglat( $longitude, $latitutde ) {
             $mapbox_key = self::get_key();
-            $json = file_get_contents('https://api.mapbox.com/geocoding/v5/mapbox.places/'. $longitude. ',' . $latitutde . '.json?access_token=' . $mapbox_key  );
-            dt_write_log($json);
+            $json = file_get_contents( 'https://api.mapbox.com/geocoding/v5/mapbox.places/'. $longitude. ',' . $latitutde . '.json?access_token=' . $mapbox_key );
+            dt_write_log( $json );
             return $json;
         }
 
@@ -59,8 +58,8 @@ if ( ! class_exists( 'Mapbox_Location_API' ) ) {
 
             $address = urlencode( $address );
 
-            $json = file_get_contents('https://api.mapbox.com/geocoding/v5/mapbox.places/'. $address . '.json?access_token=' . $mapbox_key  );
-            dt_write_log($json);
+            $json = file_get_contents( 'https://api.mapbox.com/geocoding/v5/mapbox.places/'. $address . '.json?access_token=' . $mapbox_key );
+            dt_write_log( $json );
             return $json;
         }
 
@@ -132,16 +131,14 @@ if ( ! class_exists( 'Mapbox_Location_API' ) ) {
         public function print_section_info() {
             print 'Enter the api key you received from <a href="https://mapbox.com/" target="_blank">mapbox.com</a>:';
 //            dt_write_log(Mapbox_Location_API::instance()->query_mapbox_with_lnglat( -118.521456965901, 33.9018913203336 ) );
-            dt_write_log(Mapbox_Location_API::instance()->query_mapbox_with_address( '9134 Woodland Dr. Highlands Ranch, CO' ) );
         }
         public function mapbox_api_key_callback() {
             printf(
                 '<input type="text" class="regular-text" id="mapbox_api_key" name="mapbox_location_key[mapbox_api_key]" value="%s" />',
-                isset( $this->options['mapbox_api_key'] ) ? '*******' . substr( $this->options['mapbox_api_key'], -4, 4 ) : ''
+                isset( $this->options['mapbox_api_key'] ) ? '*******' . esc_html( substr( $this->options['mapbox_api_key'], -4, 4 ) ) : ''
             );
         }
         /** END OPTIONS PAGE */
     }
     Mapbox_Location_API::instance();
 }
-
