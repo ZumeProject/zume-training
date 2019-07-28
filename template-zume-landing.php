@@ -33,6 +33,8 @@ if ( have_posts() ) {  while ( have_posts() ) { ?>
             </div>
 
         </div> <!-- end #inner-content -->
+
+        <div style="width:100%; height:3px; background-color: #2CA2E2;"></div>
         <!----------------------------------->
         <!-- VIDEO RIBBON -->
         <!----------------------------------->
@@ -54,7 +56,7 @@ if ( have_posts() ) {  while ( have_posts() ) { ?>
                 </div>
                 <div class="medium-3 small-2 cell"></div>
             </div>
-            
+
 
 
             <div class="grid-x grid-margin-x grid-margin-y vertical-padding" style="max-width:900px; margin:0 auto; padding:17px; color: white; font-size: 24px">
