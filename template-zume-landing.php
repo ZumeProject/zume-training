@@ -51,7 +51,7 @@ if ( have_posts() ) {  while ( have_posts() ) { ?>
     </div> <!-- cell -->
 </div> <!-- content -->
 
-<?php
+        <?php
 } // end while
 } // end if
 get_footer();
