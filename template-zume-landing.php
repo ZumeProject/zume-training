@@ -13,9 +13,9 @@ if ( have_posts() ) {  while ( have_posts() ) { ?>
             <div class="grid-x grid-margin-x grid-margin-y vertical-padding" style="max-width:100%; margin:0; background:white; padding:17px">
                 <div class="medium-2 small-1 cell"></div>
                 <div class="medium-8 small-10 cell center">
-                    <h3 style="margin-bottom:0px">
+                    <h1 style="margin-bottom:0px;color: #323a68;">
                         <strong><?php the_title(); ?></strong>
-                    </h3>
+                    </h1>
                 </div>
                 <div class="medium-2 small-1 cell"></div>
             </div>
