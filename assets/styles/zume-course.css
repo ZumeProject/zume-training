@@ -252,11 +252,13 @@ button.btn.btn-large.next-step.zume-purple.uppercase.bg-white.font-zume-purple.b
     h3 {
         font-size: 24px
     }
+    div.activity-description {
+        border-left: 0px;
+    }
 }
 
 /*  (landscape phones, 576px and up) */
 @media (min-width: 576px) {
-
     .wistia_embed {
         height: 300px;
     }
@@ -275,6 +277,7 @@ button.btn.btn-large.next-step.zume-purple.uppercase.bg-white.font-zume-purple.b
     }
     div.activity-description {
         font-size: 1.5rem;
+        border-left: 0px;
     }
 
     .easy-1-2-3 h4 {
@@ -338,8 +341,14 @@ button.btn.btn-large.next-step.zume-purple.uppercase.bg-white.font-zume-purple.b
         height: 450px;
     }
 
+}
 
-
+div.activity-description-no-border {
+    padding: 12px 0 12px 0;
+    text-align: left;
+    float: right;
+    width: 68%;
+    font-size: 1.5rem;
 }
 
 /*Extra large devices (large desktops, 1200px and up)*/
