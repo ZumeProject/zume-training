@@ -22,6 +22,7 @@ class Zume_Keys_Tab
      * @return void
      */
     public function content() {
+
         ?>
         <form method="post">
 
@@ -37,6 +38,11 @@ class Zume_Keys_Tab
                             <?php $this->google_captcha_key_metabox() ?>
                             <br>
                             <?php $this->facebook_sso_key_metabox() ?>
+                            <br>
+                            <?php
+                            DT_Mapbox_API::metabox_for_admin();
+
+                            ?>
 
                         </div><!-- end post-body-content -->
                         <div id="postbox-container-1" class="postbox-container">
@@ -54,7 +60,7 @@ class Zume_Keys_Tab
     public function google_map_api_key_metabox() {
         $this->handle_post();
 
-        $current_key = get_option( 'dt_map_key' );
+        $current_key = get_option( 'google_map_key' );
         ?>
         <form method="post">
             <?php wp_nonce_field( 'zume_google_map_key_' . get_current_user_id() . '_nonce', 'zume_google_map_key' . get_current_user_id() ) ?>
@@ -122,20 +128,80 @@ class Zume_Keys_Tab
 
                     if ( isset( $default_keys[ $submitted_key ] ) ) { // check if set
                         if ( $default_keys[ $submitted_key ] <= $count ) { // check if it is a valid default key number
-                            update_option( 'dt_map_key', $default_keys[ $submitted_key ] );
+                            update_option( 'google_map_key', $default_keys[ $submitted_key ] );
                         }
                     }
                 } else {
                     $key = $default_keys[ rand( 0, $count ) ];
-                    update_option( 'dt_map_key', $key );
+                    update_option( 'google_map_key', $key );
                 }
             }
             else {
                     dt_write_log( 'not empty zume_google_map_key' );
-                update_option( 'dt_map_key', trim( sanitize_text_field( wp_unslash( $_POST['zume_google_map_key'] ) ) ) );
+                update_option( 'google_map_key', trim( sanitize_text_field( wp_unslash( $_POST['zume_google_map_key'] ) ) ) );
                 return;
             }
         }
+    }
+
+    public function mapbox_map_api_key_metabox() {
+        $this->handle_post();
+
+        $current_key = get_option( 'mapbox_map_key' );
+        ?>
+        <form method="post">
+            <?php wp_nonce_field( 'zume_google_map_key_' . get_current_user_id() . '_nonce', 'zume_google_map_key' . get_current_user_id() ) ?>
+            <table class="widefat striped">
+                <thead>
+                <th colspan="2">Google Maps API Key</th>
+                </thead>
+                <tbody>
+                <?php if ( $this->is_default_key( $current_key ) ) : ?>
+                    <tr>
+                        <td style="max-width:150px;">
+                            <label>Default Keys<br><span style="font-size:.8em; ">( You can begin with
+                                    these keys, but because of popularity, these keys can hit their
+                                    limits. It is recommended that you get your own private key from
+                                    Google.)</span></label>
+                        </td>
+
+                        <td>
+                            <select name="default_keys" style="width: 100%;" <?php echo $this->is_default_key( $current_key ) ? '' : 'disabled' ?>>
+                                <?php
+                                $default_keys = zume_default_google_api_keys();
+                                foreach ( $default_keys as $key => $value ) {
+                                    echo '<option value="'.esc_attr( $key ).'" ';
+                                    if ( array_search( $current_key, $default_keys ) == $key ) {
+                                        echo 'selected';
+                                    }
+                                    $number = $key + 1;
+                                    echo '>Starter Key ' . esc_attr( $number ) . '</option>';
+                                }
+                                ?>
+                            </select>
+                        </td>
+                    </tr>
+                <?php endif; ?>
+
+                <tr>
+                    <td>
+                        <label>Add Your Own Key</label><br>
+                        <span style="font-size:.8em;">(clear key and save to remove key)</span>
+                    </td>
+                    <td>
+                        <input type="text" name="zume_google_map_key" id="zume_google_map_key" style="width: 100%;" value="<?php echo $this->is_default_key( $current_key ) ? '' : esc_attr( $current_key ) ?>"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <br><span style="float:right;"><button type="submit" class="button float-right">Save</button></span>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </form>
+
+        <?php
     }
 
     public function is_default_key( $current_key ): bool

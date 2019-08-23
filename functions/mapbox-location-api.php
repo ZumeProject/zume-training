@@ -142,3 +142,4 @@ if ( ! class_exists( 'Mapbox_Location_API' ) ) {
     }
     Mapbox_Location_API::instance();
 }
+

@@ -52,6 +52,7 @@ if ( ! class_exists( 'Disciple_Tools_Google_Geocode_API' ) ) {
             $address     = urlencode( trim( $address ) );
             $url_address = 'https://maps.googleapis.com/maps/api/geocode/json?address=' . $address . '&key=' . self::key();
             $details     = json_decode( self::url_get_contents( $url_address ), true );
+            dt_write_log($url_address);
 
             if ( $details['status'] == 'ZERO_RESULTS' ) {
                 return false;

@@ -37,6 +37,7 @@ class Zume_Integration_Menu
     public function __construct() {
         $this->token = 'zume';
         add_action( "admin_menu", [ $this, "register_menu" ] );
+        DT_Mapbox_API::load_admin_header();
 
     } // End __construct()
 
@@ -118,6 +119,7 @@ class Zume_Integration_Menu
                     $this->tab_zume_settings();
                     break;
                 case "third_party_keys":
+
                     $object = new Zume_Keys_Tab();
                     $object->content();
                     break;
