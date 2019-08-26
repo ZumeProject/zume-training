@@ -15,16 +15,21 @@ if ( ! file_exists( $disciple_tools_theme ) ) {
 }
 
 // Load Mapping Symlink
-if ( ! is_link(  get_theme_file_path() . '/functions/dt-mapping' ) ) {
-    error_log('fail: ' . get_theme_file_path() . '/functions/dt-mapping' );
-}
-
-if ( ! file_exists( 'dt-mapping/geocode-api/google-api.php' ) ) {
-    require_once( $disciple_tools_theme . 'dt-mapping/geocode-api/google-api.php' );
-}
-if ( ! file_exists( 'dt-mapping/geocode-api/ipstack-api.php' ) ) {
-    require_once( $disciple_tools_theme . 'dt-mapping/geocode-api/ipstack-api.php' );
-}
-if ( ! file_exists( 'dt-mapping/geocode-api/mapbox-api.php' ) ) {
-    require_once( $disciple_tools_theme . 'dt-mapping/geocode-api/mapbox-api.php' );
+$symlink_mapping_folder = get_theme_file_path() . '/functions/dt-mapping/';
+if ( is_link(  $symlink_mapping_folder ) ) {
+    // load through sym
+    $dir = scandir( $symlink_mapping_folder . 'geocode-api/' );
+    foreach ( $dir as $file ) {
+        if ( 'php' === substr( $file, -3, 3 ) ) {
+            require_once( $symlink_mapping_folder . 'geocode-api/' . $file );
+        }
+    }
+} else {
+    // load direct
+    $dir = scandir( $disciple_tools_theme . 'dt-mapping/geocode-api/' );
+    foreach ( $dir as $file ) {
+        if ( 'php' === substr( $file, -3, 3 ) ) {
+            require_once( $disciple_tools_theme . 'dt-mapping/geocode-api/' . $file );
+        }
+    }
 }
