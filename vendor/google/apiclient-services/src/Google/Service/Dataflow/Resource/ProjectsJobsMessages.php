@@ -26,14 +26,22 @@
 class Google_Service_Dataflow_Resource_ProjectsJobsMessages extends Google_Service_Resource
 {
   /**
-   * Request the job status. (messages.listProjectsJobsMessages)
+   * Request the job status.
+   *
+   * To request the status of a job, we recommend using
+   * `projects.locations.jobs.messages.list` with a [regional endpoint]
+   * (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints). Using
+   * `projects.jobs.messages.list` is not recommended, as you can only request the
+   * status of jobs that are running in `us-central1`.
+   * (messages.listProjectsJobsMessages)
    *
    * @param string $projectId A project id.
    * @param string $jobId The job to get messages about.
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string location The location which contains the job specified by
-   * job_id.
+   * @opt_param string location The [regional endpoint]
+   * (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints) that
+   * contains the job specified by job_id.
    * @opt_param string endTime Return only messages with timestamps < end_time.
    * The default is now (i.e. return up to the latest messages available).
    * @opt_param string pageToken If supplied, this should be the value of

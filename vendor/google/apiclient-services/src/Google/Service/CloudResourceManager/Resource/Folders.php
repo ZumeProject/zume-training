@@ -155,8 +155,8 @@ class Google_Service_CloudResourceManager_Resource_Folders extends Google_Servic
    * failure, a FolderOperationError categorizing the failure cause will be
    * returned - if the failure occurs synchronously then the FolderOperationError
    * will be returned via the Status.details field and if it occurs asynchronously
-   * then the FolderOperation will be returned via the the Operation.error field.
-   * In addition, the Operation.metadata field will be populated with a
+   * then the FolderOperation will be returned via the Operation.error field. In
+   * addition, the Operation.metadata field will be populated with a
    * FolderOperation message as an aid to stateless clients. Folder moves will be
    * rejected if they violate either the naming, height or fanout constraints
    * described in the CreateFolder documentation. The caller must have

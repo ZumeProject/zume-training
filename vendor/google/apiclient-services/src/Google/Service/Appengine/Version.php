@@ -63,10 +63,13 @@ class Google_Service_Appengine_Version extends Google_Collection
   public $runtime;
   public $runtimeApiVersion;
   public $runtimeChannel;
+  public $runtimeMainExecutablePath;
   public $servingStatus;
   public $threadsafe;
   public $versionUrl;
   public $vm;
+  protected $vpcAccessConnectorType = 'Google_Service_Appengine_VpcAccessConnector';
+  protected $vpcAccessConnectorDataType = '';
   public $zones;
 
   /**
@@ -399,6 +402,14 @@ class Google_Service_Appengine_Version extends Google_Collection
   {
     return $this->runtimeChannel;
   }
+  public function setRuntimeMainExecutablePath($runtimeMainExecutablePath)
+  {
+    $this->runtimeMainExecutablePath = $runtimeMainExecutablePath;
+  }
+  public function getRuntimeMainExecutablePath()
+  {
+    return $this->runtimeMainExecutablePath;
+  }
   public function setServingStatus($servingStatus)
   {
     $this->servingStatus = $servingStatus;
@@ -430,6 +441,20 @@ class Google_Service_Appengine_Version extends Google_Collection
   public function getVm()
   {
     return $this->vm;
+  }
+  /**
+   * @param Google_Service_Appengine_VpcAccessConnector
+   */
+  public function setVpcAccessConnector(Google_Service_Appengine_VpcAccessConnector $vpcAccessConnector)
+  {
+    $this->vpcAccessConnector = $vpcAccessConnector;
+  }
+  /**
+   * @return Google_Service_Appengine_VpcAccessConnector
+   */
+  public function getVpcAccessConnector()
+  {
+    return $this->vpcAccessConnector;
   }
   public function setZones($zones)
   {

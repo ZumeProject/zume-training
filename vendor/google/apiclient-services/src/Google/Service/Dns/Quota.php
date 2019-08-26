@@ -21,6 +21,8 @@ class Google_Service_Dns_Quota extends Google_Collection
   public $dnsKeysPerManagedZone;
   public $kind;
   public $managedZones;
+  public $managedZonesPerNetwork;
+  public $networksPerManagedZone;
   public $resourceRecordsPerRrset;
   public $rrsetAdditionsPerChange;
   public $rrsetDeletionsPerChange;
@@ -52,6 +54,22 @@ class Google_Service_Dns_Quota extends Google_Collection
   public function getManagedZones()
   {
     return $this->managedZones;
+  }
+  public function setManagedZonesPerNetwork($managedZonesPerNetwork)
+  {
+    $this->managedZonesPerNetwork = $managedZonesPerNetwork;
+  }
+  public function getManagedZonesPerNetwork()
+  {
+    return $this->managedZonesPerNetwork;
+  }
+  public function setNetworksPerManagedZone($networksPerManagedZone)
+  {
+    $this->networksPerManagedZone = $networksPerManagedZone;
+  }
+  public function getNetworksPerManagedZone()
+  {
+    return $this->networksPerManagedZone;
   }
   public function setResourceRecordsPerRrset($resourceRecordsPerRrset)
   {

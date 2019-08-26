@@ -22,6 +22,7 @@ class Google_Service_Vision_AnnotateFileResponse extends Google_Collection
   protected $inputConfigDataType = '';
   protected $responsesType = 'Google_Service_Vision_AnnotateImageResponse';
   protected $responsesDataType = 'array';
+  public $totalPages;
 
   /**
    * @param Google_Service_Vision_InputConfig
@@ -50,5 +51,13 @@ class Google_Service_Vision_AnnotateFileResponse extends Google_Collection
   public function getResponses()
   {
     return $this->responses;
+  }
+  public function setTotalPages($totalPages)
+  {
+    $this->totalPages = $totalPages;
+  }
+  public function getTotalPages()
+  {
+    return $this->totalPages;
   }
 }

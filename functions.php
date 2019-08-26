@@ -67,10 +67,8 @@ require_once( 'functions/zume-dt-integration/zume-dashboard-sync.php' ); // zume
 require_once( 'functions/zume-rest-api.php' );
 
 // Locations System
-require_once( 'functions/geocoding/geocoding-api.php' ); // @todo retire?
-require_once( 'functions/geocoding/ipstack-api.php' );
-require_once( 'functions/geocoding/mapbox-api-config.php' );
-require_once( 'functions/geocoding/mapbox-api.php' );
+require_once( 'functions/disciple-tools-dependency-checker.php' );
+require_once( 'functions/mapbox-api-config.php');
 
 // Zume - DT - Integration
 require_once( 'functions/zume-dt-integration/site-link-post-type.php' );

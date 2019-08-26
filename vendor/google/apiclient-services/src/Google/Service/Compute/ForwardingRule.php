@@ -24,6 +24,7 @@ class Google_Service_Compute_ForwardingRule extends Google_Collection
   );
   public $iPAddress;
   public $iPProtocol;
+  public $allPorts;
   public $backendService;
   public $creationTimestamp;
   public $description;
@@ -38,6 +39,8 @@ class Google_Service_Compute_ForwardingRule extends Google_Collection
   public $ports;
   public $region;
   public $selfLink;
+  public $serviceLabel;
+  public $serviceName;
   public $subnetwork;
   public $target;
 
@@ -56,6 +59,14 @@ class Google_Service_Compute_ForwardingRule extends Google_Collection
   public function getIPProtocol()
   {
     return $this->iPProtocol;
+  }
+  public function setAllPorts($allPorts)
+  {
+    $this->allPorts = $allPorts;
+  }
+  public function getAllPorts()
+  {
+    return $this->allPorts;
   }
   public function setBackendService($backendService)
   {
@@ -168,6 +179,22 @@ class Google_Service_Compute_ForwardingRule extends Google_Collection
   public function getSelfLink()
   {
     return $this->selfLink;
+  }
+  public function setServiceLabel($serviceLabel)
+  {
+    $this->serviceLabel = $serviceLabel;
+  }
+  public function getServiceLabel()
+  {
+    return $this->serviceLabel;
+  }
+  public function setServiceName($serviceName)
+  {
+    $this->serviceName = $serviceName;
+  }
+  public function getServiceName()
+  {
+    return $this->serviceName;
   }
   public function setSubnetwork($subnetwork)
   {

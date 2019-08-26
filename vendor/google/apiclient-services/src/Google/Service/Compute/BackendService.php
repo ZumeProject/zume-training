@@ -26,6 +26,7 @@ class Google_Service_Compute_BackendService extends Google_Collection
   protected $connectionDrainingType = 'Google_Service_Compute_ConnectionDraining';
   protected $connectionDrainingDataType = '';
   public $creationTimestamp;
+  public $customRequestHeaders;
   public $description;
   public $enableCDN;
   public $fingerprint;
@@ -102,6 +103,14 @@ class Google_Service_Compute_BackendService extends Google_Collection
   public function getCreationTimestamp()
   {
     return $this->creationTimestamp;
+  }
+  public function setCustomRequestHeaders($customRequestHeaders)
+  {
+    $this->customRequestHeaders = $customRequestHeaders;
+  }
+  public function getCustomRequestHeaders()
+  {
+    return $this->customRequestHeaders;
   }
   public function setDescription($description)
   {

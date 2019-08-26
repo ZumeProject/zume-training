@@ -7,7 +7,7 @@ assets/scss/.sass-cache/*
 node_modules/*
 bower_components/*
 
-
+vendor/*
 vendor/bin/*
 vendor/dealerdirect/*
 vendor/squizlabs/*

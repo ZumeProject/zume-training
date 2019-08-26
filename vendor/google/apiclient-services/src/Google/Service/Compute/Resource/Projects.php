@@ -52,8 +52,8 @@ class Google_Service_Compute_Resource_Projects extends Google_Service_Resource
     return $this->call('disableXpnHost', array($params), "Google_Service_Compute_Operation");
   }
   /**
-   * Disable a serivce resource (a.k.a service project) associated with this host
-   * project. (projects.disableXpnResource)
+   * Disable a service resource (also known as service project) associated with
+   * this host project. (projects.disableXpnResource)
    *
    * @param string $project Project ID for this request.
    * @param Google_Service_Compute_ProjectsDisableXpnResourceRequest $postBody

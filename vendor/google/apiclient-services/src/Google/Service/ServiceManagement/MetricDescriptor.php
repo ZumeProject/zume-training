@@ -22,6 +22,7 @@ class Google_Service_ServiceManagement_MetricDescriptor extends Google_Collectio
   public $displayName;
   protected $labelsType = 'Google_Service_ServiceManagement_LabelDescriptor';
   protected $labelsDataType = 'array';
+  public $launchStage;
   protected $metadataType = 'Google_Service_ServiceManagement_MetricDescriptorMetadata';
   protected $metadataDataType = '';
   public $metricKind;
@@ -59,6 +60,14 @@ class Google_Service_ServiceManagement_MetricDescriptor extends Google_Collectio
   public function getLabels()
   {
     return $this->labels;
+  }
+  public function setLaunchStage($launchStage)
+  {
+    $this->launchStage = $launchStage;
+  }
+  public function getLaunchStage()
+  {
+    return $this->launchStage;
   }
   /**
    * @param Google_Service_ServiceManagement_MetricDescriptorMetadata

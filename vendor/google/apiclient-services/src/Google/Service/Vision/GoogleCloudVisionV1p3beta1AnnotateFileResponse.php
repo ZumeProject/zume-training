@@ -22,6 +22,7 @@ class Google_Service_Vision_GoogleCloudVisionV1p3beta1AnnotateFileResponse exten
   protected $inputConfigDataType = '';
   protected $responsesType = 'Google_Service_Vision_GoogleCloudVisionV1p3beta1AnnotateImageResponse';
   protected $responsesDataType = 'array';
+  public $totalPages;
 
   /**
    * @param Google_Service_Vision_GoogleCloudVisionV1p3beta1InputConfig
@@ -50,5 +51,13 @@ class Google_Service_Vision_GoogleCloudVisionV1p3beta1AnnotateFileResponse exten
   public function getResponses()
   {
     return $this->responses;
+  }
+  public function setTotalPages($totalPages)
+  {
+    $this->totalPages = $totalPages;
+  }
+  public function getTotalPages()
+  {
+    return $this->totalPages;
   }
 }

@@ -23,7 +23,6 @@ class Google_Service_Testing_TestSpecification extends Google_Model
   protected $androidRoboTestDataType = '';
   protected $androidTestLoopType = 'Google_Service_Testing_AndroidTestLoop';
   protected $androidTestLoopDataType = '';
-  public $autoGoogleLogin;
   public $disablePerformanceMetrics;
   public $disableVideoRecording;
   protected $iosTestSetupType = 'Google_Service_Testing_IosTestSetup';
@@ -75,14 +74,6 @@ class Google_Service_Testing_TestSpecification extends Google_Model
   public function getAndroidTestLoop()
   {
     return $this->androidTestLoop;
-  }
-  public function setAutoGoogleLogin($autoGoogleLogin)
-  {
-    $this->autoGoogleLogin = $autoGoogleLogin;
-  }
-  public function getAutoGoogleLogin()
-  {
-    return $this->autoGoogleLogin;
   }
   public function setDisablePerformanceMetrics($disablePerformanceMetrics)
   {
