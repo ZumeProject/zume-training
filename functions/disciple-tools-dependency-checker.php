@@ -17,8 +17,6 @@ if ( ! file_exists( $disciple_tools_theme ) ) {
 // Load Mapping Symlink
 if ( ! is_link(  get_theme_file_path() . '/functions/dt-mapping' ) ) {
     error_log('fail: ' . get_theme_file_path() . '/functions/dt-mapping' );
-//    symlink($disciple_tools_theme . 'dt-mapping', './');
-    shell_exec('ln -s ../../disciple-tools-theme/dt-mapping/ ./');
 }
 
 if ( ! file_exists( 'dt-mapping/geocode-api/google-api.php' ) ) {
