@@ -6,30 +6,23 @@ if ( !defined( 'ABSPATH' ) ) { exit; } // Exit if accessed directly
  * inside the themes folder with this theme.
  */
 
-// Setup Disciple Tools
+// Setup Disciple Tools Path
 $disciple_tools_theme = ABSPATH . 'wp-content/themes/disciple-tools-theme/';
-
 if ( ! file_exists( $disciple_tools_theme ) ) {
     error_log( 'Disciple Tools Theme not found. Please, install Disciple Tools Theme.' );
     exit;
 }
 
-// Load Mapping Symlink
+// Load Geocoder Files
 $symlink_mapping_folder = get_theme_file_path() . '/functions/dt-mapping/';
 if ( is_link(  $symlink_mapping_folder ) ) {
-    // load through sym
-    $dir = scandir( $symlink_mapping_folder . 'geocode-api/' );
-    foreach ( $dir as $file ) {
-        if ( 'php' === substr( $file, -3, 3 ) ) {
-            require_once( $symlink_mapping_folder . 'geocode-api/' . $file );
-        }
-    }
+    require_once( $symlink_mapping_folder . 'geocode-api/api-loader.php' );
 } else {
-    // load direct
-    $dir = scandir( $disciple_tools_theme . 'dt-mapping/geocode-api/' );
-    foreach ( $dir as $file ) {
-        if ( 'php' === substr( $file, -3, 3 ) ) {
-            require_once( $disciple_tools_theme . 'dt-mapping/geocode-api/' . $file );
-        }
-    }
+    symlink( $disciple_tools_theme . 'dt-mapping/', getcwd() );
+    require_once( $disciple_tools_theme . 'dt-mapping/geocode-api/api-loader.php' );
+}
+
+// Test if symlink exists
+function dt_mapping_exists() {
+    return is_link(  get_theme_file_path() . '/functions/dt-mapping/' );
 }
