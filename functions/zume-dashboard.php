@@ -61,7 +61,7 @@ class Zume_Dashboard {
             }
         }
 
-        $results = Disciple_Tools_Google_Geocode_API::geocode_ip_address( $args['ip_address'] );
+        $results = DT_Ipstack_API::geocode_ip_address( $args['ip_address'] );
         if ( $results ) {
             $args['ip_lng'] = $results['lng'];
             $args['ip_lat'] = $results['lat'];
@@ -252,7 +252,7 @@ class Zume_Dashboard {
 
         $args['ip_address'] = $args['ip_address'] ?? Disciple_Tools_Google_Geocode_API::get_real_ip_address();
         if ( isset( $args['ip_address'] ) && ! empty( $args['ip_address'] ) ) {
-            $results = Disciple_Tools_Google_Geocode_API::geocode_ip_address( $args['ip_address'] );
+            $results = DT_Ipstack_API::geocode_ip_address( $args['ip_address'] );
             if ( $results ) {
                 $args['ip_lng'] = $results['lng'];
                 $args['ip_lat'] = $results['lat'];
@@ -307,8 +307,8 @@ class Zume_Dashboard {
         if ( ! $group_meta ) {
             return false;
         }
-        $group_meta['ip_address'] = Disciple_Tools_Google_Geocode_API::get_real_ip_address();
-        $results = Disciple_Tools_Google_Geocode_API::geocode_ip_address( $group_meta['ip_address'] );
+        $group_meta['ip_address'] = DT_Ipstack_API::get_real_ip_address();
+        $results = DT_Ipstack_API::geocode_ip_address( $group_meta['ip_address'] );
         $group_meta['ip_lng'] = $results['lng'];
         $group_meta['ip_lat'] = $results['lat'];
         $group_meta['ip_raw_location'] = $results['raw'];

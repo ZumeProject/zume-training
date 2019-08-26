@@ -121,10 +121,10 @@ function zume_update_user_ip_address_and_location( $user_id = null ) {
         $user_id = get_current_user_id();
     }
     // Geocode and store ip address
-    $ip_address = Disciple_Tools_Google_Geocode_API::get_real_ip_address();
+    $ip_address = DT_Ipstack_API::get_real_ip_address();
     update_user_meta( $user_id, 'zume_recent_ip', $ip_address );
 
-    $ip_results = Disciple_Tools_Google_Geocode_API::geocode_ip_address( $ip_address );
+    $ip_results = DT_Ipstack_API::geocode_ip_address( $ip_address );
 
     update_user_meta( $user_id, 'zume_lng_from_ip', $ip_results['lng'] );
     update_user_meta( $user_id, 'zume_lat_from_ip', $ip_results['lat'] );
