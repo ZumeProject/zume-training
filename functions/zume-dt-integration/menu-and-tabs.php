@@ -37,7 +37,10 @@ class Zume_Integration_Menu
     public function __construct() {
         $this->token = 'zume';
         add_action( "admin_menu", [ $this, "register_menu" ] );
-        DT_Mapbox_API::load_admin_header();
+
+        if ( class_exists( 'DT_Mapbox_API' ) ) {
+            DT_Mapbox_API::load_admin_header();
+        }
 
     } // End __construct()
 

@@ -15,7 +15,7 @@ if ( ! file_exists( $disciple_tools_theme ) ) {
 
 // Load Geocoder Files
 $symlink_mapping_folder = get_theme_file_path() . '/functions/dt-mapping/';
-if ( is_link(  $symlink_mapping_folder ) ) {
+if ( is_link( $symlink_mapping_folder ) ) {
     require_once( $symlink_mapping_folder . 'geocode-api/api-loader.php' );
 } else {
     require_once( $disciple_tools_theme . 'dt-mapping/geocode-api/api-loader.php' );
