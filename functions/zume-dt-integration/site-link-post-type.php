@@ -503,7 +503,7 @@ if ( ! class_exists( 'Site_Link_System' ) ) {
                     strtolower( $this->singular ),
                     // translators: Publish box date format, see http://php.net/date
                     '<strong>' . date_i18n( __( 'M j, Y @ G:i' ),
-                        strtotime( $post->post_date ) ) . '</strong>',
+                    strtotime( $post->post_date ) ) . '</strong>',
                     '',
                     ''
                 ),
@@ -514,8 +514,8 @@ if ( ! class_exists( 'Site_Link_System' ) ) {
         }
 
         public function meta_box_setup() {
-            add_meta_box( $this->post_type . '_details' . hash( 'sha256' , self::get_current_site_base_url() ), __( 'Manage Site Link' ), [ $this, 'meta_box_load_management_box' ], $this->post_type, 'normal', 'high' );
-            add_meta_box( $this->post_type . '_instructions'  . hash( 'sha256' , self::get_current_site_base_url() ), __( 'Configuration' ), [ $this, 'meta_box_configuration_box' ], $this->post_type, 'normal', 'high' );
+            add_meta_box( $this->post_type . '_details' . hash( 'sha256', self::get_current_site_base_url() ), __( 'Manage Site Link' ), [ $this, 'meta_box_load_management_box' ], $this->post_type, 'normal', 'high' );
+            add_meta_box( $this->post_type . '_instructions'  . hash( 'sha256', self::get_current_site_base_url() ), __( 'Configuration' ), [ $this, 'meta_box_configuration_box' ], $this->post_type, 'normal', 'high' );
         }
 
         public function meta_box_content( $section = 'info' ) {

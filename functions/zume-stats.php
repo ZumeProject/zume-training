@@ -150,7 +150,7 @@ class Zume_Stats{
         return $analytics;
     }
 
-    public function get_first_profile_id($analytics) {
+    public function get_first_profile_id( $analytics) {
         // Get the user's first view (profile) ID.
 
         // Get the list of accounts for the authorized user.
@@ -189,7 +189,7 @@ class Zume_Stats{
         }
     }
 
-    public function get_results($analytics, $profile_id) {
+    public function get_results( $analytics, $profile_id) {
         // Calls the Core Reporting API and queries for the number of sessions
         // for the last seven days.
         return $analytics->data_ga->get(
@@ -204,7 +204,7 @@ class Zume_Stats{
         );
     }
 
-    public function return_results($results) {
+    public function return_results( $results) {
         // Parses the response from the Core Reporting API and prints
         // the profile name and total sessions.
         if ( count( $results->getRows() ) > 0 ) {

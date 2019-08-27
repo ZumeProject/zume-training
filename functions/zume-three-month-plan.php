@@ -136,11 +136,17 @@ class Zume_Three_Month_Plan
 
         $result = update_user_meta( get_current_user_id(), 'three_month_plan', $plan );
         if ( ! $result ) {
-            return [ 'status' => 'Fail', 'message' => __( 'Unable to save three month plan.', 'zume' ) ];
+            return [
+            'status' => 'Fail',
+            'message' => __( 'Unable to save three month plan.', 'zume' )
+            ];
         }
 
         if ( $public_key_error ) {
-            return [ 'status' => 'Public_Key_Error', 'message' => __( 'Unable to find key:', 'zume' ) . ' ' . $plan['public_key'] ];
+            return [
+            'status' => 'Public_Key_Error',
+            'message' => __( 'Unable to find key:', 'zume' ) . ' ' . $plan['public_key']
+            ];
         }
 
         do_action( 'zume_update_three_month_plan', get_current_user_id(), $plan );
