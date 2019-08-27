@@ -68,7 +68,6 @@ require_once( 'functions/zume-rest-api.php' );
 
 // Locations System
 require_once( 'functions/disciple-tools-api.php' );
-require_once( 'functions/mapbox-api-config.php');
 
 // Zume - DT - Integration
 require_once( 'functions/zume-dt-integration/site-link-post-type.php' );
