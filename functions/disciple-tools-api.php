@@ -25,3 +25,11 @@ if ( is_link( $symlink_mapping_folder ) ) {
 function dt_mapping_exists() {
     return is_link(  get_theme_file_path() . '/functions/dt-mapping/' );
 }
+
+function dt_mapbox_api() {
+    if ( class_exists( 'DT_Mapbox_API' ) ) {
+        return new DT_Mapbox_API();
+    } else {
+        return (object) (boolean) (string) (int) (array) new StdClass;;
+    }
+}

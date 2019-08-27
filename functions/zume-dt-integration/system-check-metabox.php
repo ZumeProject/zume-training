@@ -28,7 +28,7 @@ class System_Check_Metabox
                 $empty_field = true;
             }
             if ( $empty_field && ! empty( $result['ip_address'] ) ) {
-                $raw = DT_Ipstack_API::geocode_ip_address( $result['ip_address'] );
+                $raw = DT_Ipapi_API::geocode_ip_address( $result['ip_address'] );
                 if ( ! $raw ) {
                     $report[] = $result['ID'] . ' FAIL';
                     continue;
@@ -67,7 +67,7 @@ class System_Check_Metabox
                 $empty_field = true;
             }
             if ( $empty_field && ! empty( $fields['address'] ) ) {
-                $google_result = Disciple_Tools_Google_Geocode_API::query_google_api( $fields['address'], $type = 'core' ); // get google api info
+                $google_result = DT_Mapbox_API::forward_lookup( $fields['address'], $type = 'core' ); // get google api info
                 if ( $google_result ) {
 
                     $fields['lng'] = $google_result['lng'];
@@ -114,7 +114,7 @@ class System_Check_Metabox
                 $empty_field = true;
             }
             if ( $empty_field && ! empty( $fields['ip_address'] ) ) {
-                $results = DT_Ipstack_API::geocode_ip_address( $fields['ip_address'] );
+                $results = DT_Ipapi_API::geocode_ip_address( $fields['ip_address'] );
                 if ( $results ) {
                     $fields['ip_lng'] = $results['lng'];
                     $fields['ip_lat'] = $results['lat'];
@@ -157,7 +157,7 @@ class System_Check_Metabox
                 dt_write_log( $value );
                 continue;
             }
-            $results = Disciple_Tools_Google_Geocode_API::query_google_api( trim( sanitize_text_field( wp_unslash( $value['meta_value'] ) ) ), 'core' );
+            $results = DT_Mapbox_API::forward_lookup( trim( sanitize_text_field( wp_unslash( $value['meta_value'] ) ) ), 'core' );
 
             if ( $results ) {
                 update_user_meta( $value['user_id'], 'zume_user_lng', $results['lng'] );

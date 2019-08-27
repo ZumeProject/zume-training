@@ -611,7 +611,7 @@ do_action( 'zume_dashboard_header' );
             <?php wp_nonce_field( get_current_user_id(), 'zume_nonce' ) ?>
             <input type="hidden" name="type" value="create"/>
             <input type="hidden" name="ip_address"
-                   value="<?php echo esc_html( DT_Ipstack_API::get_real_ip_address() ); ?>"/>
+                   value="<?php echo esc_html( DT_Ipapi_API::get_real_ip_address() ); ?>"/>
             <div class="grid-x grid-margin-x">
                 <!--Group Name-->
                 <div class="cell">
