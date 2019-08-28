@@ -128,21 +128,21 @@ class Zume_Video_Post_Type
             // let's now add all the options for this post type
             array(
             'labels' => array(
-                'name' => __( 'Zume Video', 'zume' ), /* This is the Title of the Group */
-                'singular_name' => __( 'Zume Video', 'zume' ), /* This is the individual type */
-                'all_items' => __( 'All Zume Videos', 'zume' ), /* the all items menu item */
-                'add_new' => __( 'Add New', 'zume' ), /* The add new menu item */
-                'add_new_item' => __( 'Add New Zume Video', 'zume' ), /* Add New Display Title */
-                'edit' => __( 'Edit', 'zume' ), /* Edit Dialog */
-                'edit_item' => __( 'Edit Zume Video', 'zume' ), /* Edit Display Title */
-                'new_item' => __( 'New Zume Video', 'zume' ), /* New Display Title */
-                'view_item' => __( 'View Zume Video', 'zume' ), /* View Display Title */
-                'search_items' => __( 'Search Zume Videos', 'zume' ), /* Search Custom Type Title */
-                'not_found' => __( 'Nothing found in the Database.', 'zume' ), /* This displays if there are no entries yet */
-                'not_found_in_trash' => __( 'Nothing found in Trash', 'zume' ), /* This displays if there is nothing in the trash */
+                'name' => 'Zume Video', /* This is the Title of the Group */
+                'singular_name' => 'Zume Video', /* This is the individual type */
+                'all_items' => 'All Zume Videos', /* the all items menu item */
+                'add_new' => 'Add New', /* The add new menu item */
+                'add_new_item' => 'Add New Zume Video', /* Add New Display Title */
+                'edit' => 'Edit', /* Edit Dialog */
+                'edit_item' => 'Edit Zume Video', /* Edit Display Title */
+                'new_item' => 'New Zume Video', /* New Display Title */
+                'view_item' => 'View Zume Video', /* View Display Title */
+                'search_items' => 'Search Zume Videos', /* Search Custom Type Title */
+                'not_found' => 'Nothing found in the Database.', /* This displays if there are no entries yet */
+                'not_found_in_trash' => 'Nothing found in Trash', /* This displays if there is nothing in the trash */
                 'parent_item_colon' => ''
             ), /* end of arrays */
-                  'description' => __( 'Zume video catalog for language videos', 'zume' ), /* Custom Type Description */
+                  'description' => 'Zume video catalog for language videos', /* Custom Type Description */
                   'public' => false,
                   'publicly_queryable' => false,
                   'exclude_from_search' => true,
@@ -256,7 +256,7 @@ class Zume_Video_Post_Type
                 $this->singular,
                 strtolower( $this->singular ),
                 // translators: Publish box date format, see http://php.net/date
-                '<strong>' . date_i18n( __( 'M j, Y @ G:i' ),
+                '<strong>' . date_i18n(  'M j, Y @ G:i',
                 strtotime( $post->post_date ) ) . '</strong>',
                 '<a target="_blank" href="' . esc_url( get_permalink( $post->ID ) ) . '">',
                 '</a>'
@@ -472,7 +472,7 @@ class Zume_Video_Post_Type
      */
     public function enter_title_here( $title ) {
         if ( get_post_type() == $this->post_type ) {
-            $title = __( 'Enter the title here', 'zume' );
+            $title = 'Enter the title here';
         }
 
         return $title;
