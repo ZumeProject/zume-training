@@ -67,7 +67,15 @@ require_once( 'functions/zume-dt-integration/zume-dashboard-sync.php' ); // zume
 require_once( 'functions/zume-rest-api.php' );
 
 // Locations System
-require_once( 'functions/disciple-tools-api.php' );
+
+if ( file_exists( trailingslashit( get_theme_file_path() ) . 'dt-mapping/geocoder-api/api-loader.php') ) {
+    require_once( $symlink_mapping_folder . 'geocode-api/api-loader.php' );
+}
+else {
+    $disciple_tools_theme = ABSPATH . 'wp-content/themes/disciple-tools-theme/';
+    require_once( $disciple_tools_theme . 'dt-mapping/geocode-api/api-loader.php' );
+}
+
 
 // Zume - DT - Integration
 require_once( 'functions/zume-dt-integration/site-link-post-type.php' );

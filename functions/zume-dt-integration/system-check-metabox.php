@@ -28,7 +28,7 @@ class System_Check_Metabox
                 $empty_field = true;
             }
             if ( $empty_field && ! empty( $result['ip_address'] ) ) {
-                $raw = DT_Ipapi_API::geocode_ip_address( $result['ip_address'] );
+                $raw = DT_Ipstack_API::geocode_ip_address( $result['ip_address'] );
                 if ( ! $raw ) {
                     $report[] = $result['ID'] . ' FAIL';
                     continue;
@@ -114,7 +114,7 @@ class System_Check_Metabox
                 $empty_field = true;
             }
             if ( $empty_field && ! empty( $fields['ip_address'] ) ) {
-                $results = DT_Ipapi_API::geocode_ip_address( $fields['ip_address'] );
+                $results = DT_Ipstack_API::geocode_ip_address( $fields['ip_address'] );
                 if ( $results ) {
                     $fields['ip_lng'] = $results['lng'];
                     $fields['ip_lat'] = $results['lat'];
