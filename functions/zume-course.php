@@ -223,6 +223,7 @@ class Zume_Course_Content {
                         a history entry, and without scrolling or jumping, and
                         without triggering hashchange */ ?>
                         history.replaceState(null, null, newHash);
+                        jQuery("html, body").animate({ scrollTop: 0 }, "fast");
                     },
 
                     onFinishing: function (event, currentIndex) {
