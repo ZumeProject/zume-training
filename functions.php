@@ -68,13 +68,25 @@ require_once( 'functions/zume-rest-api.php' );
 
 // Locations System
 
-if ( file_exists( trailingslashit( get_theme_file_path() ) . 'dt-mapping/geocoder-api/api-loader.php') ) {
-    require_once( $symlink_mapping_folder . 'geocode-api/api-loader.php' );
+//if ( file_exists( trailingslashit( get_theme_file_path() ) . 'dt-mapping/geocoder-api/api-loader.php') ) {
+//    require_once( trailingslashit( get_theme_file_path() ) . 'dt-mapping/geocoder-api/api-loader.php' );
+//}
+//else {
+//    $disciple_tools_theme = ABSPATH . 'wp-content/themes/disciple-tools-theme/';
+//    require_once( $disciple_tools_theme . 'dt-mapping/geocode-api/api-loader.php' );
+//}
+/**
+ * dt-mapping
+ */
+/**
+ * Load useful function from the theme
+ */
+if ( !defined( 'DT_FUNCTIONS_READY' ) ){
+    require_once ABSPATH . '/wp-content/themes/disciple-tools-theme/dt-core/global-functions.php';
 }
-else {
-    $disciple_tools_theme = ABSPATH . 'wp-content/themes/disciple-tools-theme/';
-    require_once( $disciple_tools_theme . 'dt-mapping/geocode-api/api-loader.php' );
-}
+require_once( get_template_directory() . '/dt-mapping/mapping-module-config.php' ); // configuration file for mapping module
+DT_Mapping_Module_Config::instance();
+require_once( get_template_directory() . '/dt-mapping/mapping.php' ); // load for mapping module
 
 
 // Zume - DT - Integration
