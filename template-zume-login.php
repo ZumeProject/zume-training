@@ -70,9 +70,9 @@ switch ($request_action) {
 
         if ( isset( $_GET['error'] ) ) {
             if ( 'invalidkey' == $_GET['error'] ) {
-                $form_errors->add( 'invalidkey', __( 'Your password reset link appears to be invalid. Please request a new link below.' ) );
+                $form_errors->add( 'invalidkey', __( 'Your password reset link appears to be invalid. Please request a new link below.', 'zume' ) );
             } elseif ( 'expiredkey' == $_GET['error'] ) {
-                $form_errors->add( 'expiredkey', __( 'Your password reset link has expired. Please request a new link below.' ) );
+                $form_errors->add( 'expiredkey', __( 'Your password reset link has expired. Please request a new link below.', 'zume' ) );
             }
         }
 
@@ -105,7 +105,7 @@ switch ($request_action) {
                                     <form name="lostpasswordform" id="lostpasswordform" action="<?php echo esc_url( zume_lostpassword_url( $current_language ) ); ?>" method="post">
                                         <?php wp_nonce_field( 'retrieve_password', 'retrieve_password_nonce', false, true ) ?>
                                         <p>
-                                            <label for="user_login" ><?php esc_html_e( 'Email Address' ); ?><br />
+                                            <label for="user_login" ><?php echo esc_html__( 'Email Address', 'zume' ); ?><br />
                                                 <input type="text" name="user_login" id="user_login" class="input" value="<?php echo esc_attr( $user_login_response ); ?>" size="20" /></label>
                                         </p>
                                         <?php
@@ -116,10 +116,10 @@ switch ($request_action) {
                                          */
                                         do_action( 'lostpassword_form' ); ?>
                                         <input type="hidden" name="redirect_to" value="<?php echo esc_attr( $redirect_to ); ?>" />
-                                        <p class="submit"><input type="submit" name="wp-submit" id="wp-submit" class="button button-primary button-large" value="<?php esc_attr_e( 'Get New Password' ); ?>" /></p>
+                                        <p class="submit"><input type="submit" name="wp-submit" id="wp-submit" class="button button-primary button-large" value="<?php echo esc_html__( 'Get New Password', 'zume' ); ?>" /></p>
                                     </form>
                                     <?php elseif ( $sent ): ?>
-                                        <?php echo esc_html( 'Your password reset email has been sent. Check your email or junk mail for the link to reset your password.' ) ?>
+                                        <?php echo esc_html__( 'Your password reset email has been sent. Check your email or junk mail for the link to reset your password.', 'zume' ) ?>
                                     <?php endif; ?>
 
                                 </div>
@@ -173,7 +173,7 @@ switch ($request_action) {
         $form_errors = new WP_Error();
 
         if ( isset( $_POST['pass1'] ) && $_POST['pass1'] != $_POST['pass2'] ) {
-            $form_errors->add( 'password_reset_mismatch', __( 'The passwords do not match.' ) );
+            $form_errors->add( 'password_reset_mismatch', __( 'The passwords do not match.', 'zume' ) );
         }
 
         /**
@@ -284,7 +284,7 @@ switch ($request_action) {
                                         do_action( 'resetpass_form', $user );
                                         ?>
                                         <input type="hidden" name="rp_key" value="<?php echo esc_attr( $rp_key ); ?>" />
-                                        <p class="submit"><input type="submit" name="wp-submit" id="wp-submit" class="button button-primary button-large" value="<?php esc_attr_e( 'Reset Password' ); ?>" /></p>
+                                        <p class="submit"><input type="submit" name="wp-submit" id="wp-submit" class="button button-primary button-large" value="<?php esc_html_e( 'Reset Password' ); ?>" /></p>
                                     </form>
 
                                 </div>
@@ -344,7 +344,7 @@ switch ($request_action) {
                         <div class="grid-x grid-padding-x grid-padding-y">
                             <div class="cell center" style="padding-bottom: 0;">
                                 <h2 style="font-weight: bolder;">
-                                    <?php esc_html_e( "Let's get started." ) ?>
+                                    <?php echo esc_html__( "Let's get started.", 'zume' ) ?>
                                 </h2>
                                 <span style="color:gray;"><?php esc_html_e( "Sign up using:" ) ?></span>
                             </div>
@@ -410,7 +410,7 @@ switch ($request_action) {
 
     case 'confirmation' :
         if ( ! isset( $_GET['request_id'] ) ) {
-            wp_die( esc_attr__( 'Invalid request.' ) );
+            wp_die( esc_html__( 'Invalid request.', 'zume' ) );
         }
 
         $request_id = (int) $_GET['request_id'];
@@ -419,7 +419,7 @@ switch ($request_action) {
             $key    = sanitize_text_field( wp_unslash( $_GET['confirm_key'] ) );
             $result = wp_validate_user_request_key( $request_id, $key );
         } else {
-            $result = new WP_Error( 'invalid_key', __( 'Invalid key' ) );
+            $result = new WP_Error( 'invalid_key', __( 'Invalid key', 'zume' ) );
         }
 
         if ( is_wp_error( $result ) ) {
@@ -441,7 +441,7 @@ switch ($request_action) {
 
         $message = _wp_privacy_account_request_confirmed_message( $request_id );
 
-        login_header( __( 'User action confirmed.' ), $message );
+        login_header( __( 'User action confirmed.', 'zume' ), $message );
         login_footer();
     exit; // @todo possibly remove
 
@@ -483,7 +483,7 @@ switch ($request_action) {
                                         'id_username' => 'user',
                                         'id_password' => 'pass',
                                         'value_remember' => true,
-                                        'label_username' => __( 'Email Address' ),
+                                        'label_username' => __( 'Email Address', 'zume' ),
                                         );
                                         wp_login_form( $args );
                                     ?>
