@@ -90,7 +90,7 @@ class Zume_User_Registration
 
         } else {
             dt_write_log( $payload );
-            return new WP_Error( __METHOD__, 'Failed Google Verification of User Token' ); // Invalid ID token
+            return new WP_Error( __METHOD__, __( 'Failed Google Verification of User Token', 'zume' ) ); // Invalid ID token
         }
 
         if ( empty( $user_email ) ) {
@@ -206,7 +206,7 @@ class Zume_User_Registration
         $current_user_id = get_current_user_id();
         $current_userdata = get_userdata( $current_user_id );
         if ( empty( $current_user_id ) || empty( $current_userdata ) ) {
-            return new WP_Error( __METHOD__, __( 'No user found.', 'zume' ) );
+            return new WP_Error( __METHOD__, 'No user found.' );
         }
 
         if ( ! ( $google_email === $current_userdata->user_email ) ) { // if current user email is not the same as the facebook email
@@ -215,13 +215,13 @@ class Zume_User_Registration
             $another_user_id_with_facebook_email = email_exists( $google_email );
             if ( $another_user_id_with_facebook_email ) {
 
-                return new WP_Error( __METHOD__, 'Facebook email already linked with another account. Login to this account or use forgot password tool to access account.' );
+                return new WP_Error( __METHOD__, __( 'Facebook email already linked with another account. Login to this account or use forgot password tool to access account.', 'zume' ) );
             }
 
             // test if another wp user is linked with the facebook email account
             $existing_link = $this->query_facebook_email( $google_email );
             if ( $existing_link ) {
-                return new WP_Error( __METHOD__, 'Facebook already linked with another account.' );
+                return new WP_Error( __METHOD__, __( 'Facebook already linked with another account.', 'zume' ) );
             }
         }
 
@@ -446,13 +446,13 @@ class Zume_User_Registration
             // test if another wp user account is established with the facebook email
             $another_user_id_with_facebook_email = email_exists( $facebook_email );
             if ( $another_user_id_with_facebook_email ) {
-                return new WP_Error( __METHOD__, 'Facebook email already linked with another account. Login to this account or use forgot password tool to access account.' );
+                return new WP_Error( __METHOD__, __( 'Facebook email already linked with another account. Login to this account or use forgot password tool to access account.', 'zume' ) );
             }
 
             // test if another wp user is linked with the facebook email account
             $existing_link = $this->query_facebook_email( $facebook_email );
             if ( $existing_link ) {
-                return new WP_Error( __METHOD__, 'Facebook already linked with another account.' );
+                return new WP_Error( __METHOD__, __( 'Facebook already linked with another account.', 'zume' ) );
             }
         }
 
@@ -533,7 +533,7 @@ class Zume_User_Registration
             <form action="" method="post" data-abide novalidate>
                 <?php wp_nonce_field( 'login_form', 'login_form_nonce' ) ?>
                 <div data-abide-error class="alert callout" style="display: none;">
-                    <p><i class="fi-alert"></i><?php esc_html_e( 'There are some errors in your form.' ) ?></p>
+                    <p><i class="fi-alert"></i><?php esc_html_e( 'There are some errors in your form.', 'zume' ) ?></p>
                 </div>
                 <div class="grid-container">
                     <div class="grid-x grid-margin-x">
@@ -545,7 +545,7 @@ class Zume_User_Registration
                             <label><?php esc_html_e( 'Password Required' ) ?> <strong>*</strong>
                                 <input type="password" id="password" name="password" placeholder="yeti4preZ" aria-errormessage="password-error-1" required >
                                 <span class="form-error" id="password-error-1">
-                                <?php esc_html_e( 'Password required' ) ?>
+                                <?php esc_html_e( 'Password required', 'zume' ) ?>
                               </span>
                             </label>
                             <meter max="4" id="password-strength-meter" value="0"></meter>
@@ -554,7 +554,7 @@ class Zume_User_Registration
                             <label><?php esc_html_e( 'Re-enter Password' ) ?> <strong>*</strong>
                                 <input type="password" placeholder="yeti4preZ" aria-errormessage="password-error-2" data-equalto="password">
                                 <span class="form-error" id="password-error-2">
-                                <?php esc_html_e( 'Passwords do not match. Please, try again.' ) ?>
+                                <?php esc_html_e( 'Passwords do not match. Please, try again.', 'zume' ) ?>
                               </span>
                             </label>
                         </div>
@@ -563,7 +563,7 @@ class Zume_User_Registration
                         <div class="g-recaptcha" id="g-recaptcha"></div><br>
                     </div>
                     <div class="cell small-12">
-                        <input type="submit" class="button button-primary" id="submit"  value="<?php esc_html_e( 'Register' ) ?>" disabled />
+                        <input type="submit" class="button button-primary" id="submit"  value="<?php esc_html_e( 'Register', 'zume' ) ?>" disabled />
                     </div>
                 </div>
             </form>
@@ -816,7 +816,7 @@ function zume_google_link_account_button() {
                     if ( err.responseJSON['message'] ) {
                         jQuery('#google_error').text( err.responseJSON['message'] )
                     } else {
-                        jQuery('#google_error').html( 'Oops. Something went wrong.' )
+                        jQuery('#google_error').html( '<?php esc_html_e( 'Oops. Something went wrong.', 'zume' ); ?>' )
                     }
                     console.log("error")
                     console.log(err)
@@ -896,7 +896,7 @@ function zume_facebook_login_button() {
                             if ( err.responseJSON['message'] ) {
                                 jQuery('#google_error').text( err.responseJSON['message'] )
                             } else {
-                                jQuery('#google_error').html( 'Oops. Something went wrong.' )
+                                jQuery('#google_error').html( '<?php esc_html_e( 'Oops. Something went wrong.', 'zume' ); ?>' )
                             }
                             console.log("error")
                             console.log(err)
@@ -1147,29 +1147,29 @@ function zume_retrieve_password() {
     $errors = new WP_Error();
 
     if ( ! ( isset( $_POST['retrieve_password_nonce'] ) && wp_verify_nonce( sanitize_text_field( wp_unslash( $_POST['retrieve_password_nonce'] ) ), 'retrieve_password' ) ) ) {
-        $errors->add( __METHOD__, 'Missing form verification. Refresh and try again.' );
+        $errors->add( __METHOD__, __( 'Missing form verification. Refresh and try again.', 'zume' ) );
         return $errors;
     }
 
     if ( isset( $_POST['user_login'] ) ) {
         $user_login = trim( sanitize_text_field( wp_unslash( $_POST['user_login'] ) ) );
     } else {
-        $errors->add( __METHOD__, __( 'Missing username or email address.' ) );
+        $errors->add( __METHOD__, __( 'Missing username or email address.', 'zume'  ) );
         return $errors;
     }
 
 
     if ( empty( $user_login ) ) {
-        $errors->add( __METHOD__, __( 'ERROR: Enter a username or email address.' ) );
+        $errors->add( __METHOD__, __( 'ERROR: Enter a username or email address.', 'zume'  ) );
     } elseif ( strpos( $user_login, '@' ) ) {
         $user_data = get_user_by( 'email', $user_login );
         if ( empty( $user_data ) ) {
-            $errors->add( __METHOD__, __( 'ERROR: There is no user registered with that email address.' ) );
+            $errors->add( __METHOD__, __( 'ERROR: There is no user registered with that email address.', 'zume'  ) );
         }
     } else {
         $user_data = get_user_by( 'login', $user_login );
         if ( empty( $user_data ) ) {
-            $errors->add( __METHOD__, __( 'ERROR: There is no user registered with that username.' ) );
+            $errors->add( __METHOD__, __( 'ERROR: There is no user registered with that username.', 'zume'  ) );
         }
     }
 
@@ -1189,7 +1189,7 @@ function zume_retrieve_password() {
     }
 
     if ( ! $user_data ) {
-        $errors->add( 'invalidcombo', __( '<strong>ERROR</strong>: Invalid username or email.' ) );
+        $errors->add( 'invalidcombo', __( 'ERROR: Invalid username or email.', 'zume' ) );
         return $errors;
     }
 
@@ -1254,7 +1254,7 @@ function zume_retrieve_password() {
     $message = apply_filters( 'retrieve_password_message', $message, $key, $user_login, $user_data );
 
     if ( $message && ! wp_mail( $user_email, wp_specialchars_decode( $title ), $message ) ) {
-        wp_die( esc_html__( 'The email could not be sent.' ) . "<br />\n" . esc_html__( 'Possible reason: your host may have disabled the mail() function.' ) );
+        wp_die( esc_html__( 'The email could not be sent.' ) . "<br />\n" . esc_html__( 'Possible reason: your host may have disabled the mail() function.', 'zume' ) );
     }
 
     return true;
@@ -1300,7 +1300,7 @@ function zume_get_password_reset_key( $user ) {
     $allow = apply_filters( 'allow_password_reset', $allow, $user->ID );
 
     if ( ! $allow ) {
-        return new WP_Error( 'no_password_reset', __( 'Password reset is not allowed for this user' ) );
+        return new WP_Error( 'no_password_reset', __( 'Password reset is not allowed for this user', 'zume' ) );
     } elseif ( is_wp_error( $allow ) ) {
         return $allow;
     }
@@ -1327,7 +1327,7 @@ function zume_get_password_reset_key( $user ) {
     $hashed = time() . ':' . $wp_hasher->HashPassword( $key );
     $key_saved = $wpdb->update( $wpdb->users, array( 'user_activation_key' => $hashed ), array( 'user_login' => $user->user_login ) );
     if ( false === $key_saved ) {
-        return new WP_Error( 'no_password_key_update', __( 'Could not save password reset key to database.' ) );
+        return new WP_Error( 'no_password_key_update', __( 'Could not save password reset key to database.', 'zume' ) );
     }
 
     return $key;
@@ -1444,15 +1444,3 @@ add_action( 'wp_login', 'zume_login_update_ip_info', 10, 2 );
 function zume_login_update_ip_info( $user_login, $user ) {
     zume_update_user_ip_address_and_location( $user->ID );
 }
-
-/**
- * LOGIN
- */
-
-
-
-
-
-
-
-
