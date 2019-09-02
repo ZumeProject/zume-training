@@ -6,7 +6,7 @@ zume_force_login();
 
 if ( ! empty( $_POST ) ) { // test if post submitted
     // validate nonce
-//    zume_write_log( $_POST );
+//    dt_write_log( $_POST );
     if ( isset( $_POST['zume_nonce'] ) && wp_verify_nonce( sanitize_key( wp_unslash( $_POST['zume_nonce'] ) ), get_current_user_id() ) ) { // verify that the form came from this page
         // remove excess nonce elements
         if ( isset( $_POST['zume_nonce'] ) ) {
@@ -36,7 +36,7 @@ if ( ! empty( $_POST ) ) { // test if post submitted
                     Zume_Dashboard::delete_coleader( $zume_user->user_email, sanitize_key( wp_unslash( $_POST['key'] ) ), sanitize_key( wp_unslash( $_POST['owner'] ) ) );
                 }
             } else {
-                zume_write_log( 'Failed to filter' );
+                dt_write_log( 'Failed to filter' );
             }
         }
     } // endif nonce

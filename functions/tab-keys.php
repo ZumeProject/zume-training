@@ -31,6 +31,8 @@ class Zume_Keys_Tab
                     <div id="post-body" class="metabox-holder columns-1">
                         <div id="post-body-content">
 
+                            <?php DT_Ipstack_API::metabox_for_admin(); ?>
+                            <br>
                             <?php $this->google_map_api_key_metabox() ?>
                             <br>
                             <?php $this->google_sso_key_metabox() ?>

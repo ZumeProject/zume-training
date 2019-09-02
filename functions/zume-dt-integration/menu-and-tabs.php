@@ -152,11 +152,11 @@ class Zume_Integration_Menu
 
 
         $this->site_default_metabox();
-        $this->session_complete_transfer_metabox();
-        $this->check_for_session_limit_transfers();
-        $this->check_for_location_data_installed();
-        $this->reset_location_data_installed();
-        $this->quality_check_metabox();
+//        $this->session_complete_transfer_metabox();
+//        $this->check_for_session_limit_transfers();
+//        $this->check_for_location_data_installed();
+//        $this->reset_location_data_installed();
+//        $this->quality_check_metabox();
 
         // begin right column template
         $this->template( 'right_column' );

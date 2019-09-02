@@ -16,6 +16,19 @@ get_header();
                 </div>
             </div>
 
+            <!-- Add Map if Available -->
+            <?php
+            /**
+             * Additional Resources section
+             */
+            if (have_posts()) :
+                while (have_posts()) :
+                    the_post();
+                    the_content();
+                endwhile;
+            endif;
+            ?>
+
             <!-- Phase 1 Title -->
             <div class="grid-x grid-margin-x grid-margin-y " >
                 <div class="medium-12 small-12 cell center">
