@@ -8,6 +8,11 @@ define( 'ZUME_DOMAIN', 'zume' );
 define( 'ZUME_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
 define( 'ZUME_VERSION', '1.0' );
 
+// Zume theme requires presence of Disciple Tools Theme to be installed
+if ( ! file_exists( get_theme_root() . '/disciple-tools-theme/functions.php' ) ) {
+    exit;
+}
+
 /**
  * Add custom table
  */
