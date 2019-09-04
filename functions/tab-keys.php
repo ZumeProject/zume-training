@@ -42,8 +42,6 @@ class Zume_Keys_Tab
                             <?php $this->facebook_sso_key_metabox() ?>
                             <br>
                             <?php
-                            DT_Mapbox_API::metabox_for_admin();
-
                             ?>
 
                         </div><!-- end post-body-content -->
