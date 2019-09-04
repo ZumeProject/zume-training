@@ -38,6 +38,9 @@ class Zume_Integration_Menu
         $this->token = 'zume';
         add_action( "admin_menu", [ $this, "register_menu" ] );
 
+        if ( ! class_exists( 'DT_Mapbox_API') ) {
+            disciple_tools_load_dependencies( 'dt-mapping/geocode-api/mapbox-api.php' );
+        }
         DT_Mapbox_API::load_admin_header();
 
     } // End __construct()

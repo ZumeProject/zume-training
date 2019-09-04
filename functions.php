@@ -4,15 +4,6 @@
  */
 require_once( 'functions/utilities/debugger-log.php' ); // debug logger used for development.
 
-define( 'ZUME_DOMAIN', 'zume' );
-define( 'ZUME_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
-define( 'ZUME_VERSION', '1.0' );
-
-// Zume theme requires presence of Disciple Tools Theme to be installed
-if ( ! file_exists( get_theme_root() . '/disciple-tools-theme/functions.php' ) ) {
-    exit;
-}
-
 /**
  * Add custom table
  */
@@ -71,27 +62,24 @@ require_once( 'functions/zume-dt-integration/zume-dashboard-sync.php' ); // zume
 // REST API
 require_once( 'functions/zume-rest-api.php' );
 
-// Locations System
-$disciple_tools_path = get_theme_root() . '/disciple-tools-theme/';
-require_once( $disciple_tools_path . 'dt-mapping/mapping-module-config.php' ); // configuration file for mapping module
-DT_Mapping_Module_Config::instance();
-require_once(  $disciple_tools_path . 'dt-mapping/mapping.php' ); // load for mapping module
+
 
 // Zume - DT - Integration
 require_once( 'functions/zume-dt-integration/site-link-post-type.php' );
 Site_Link_System::instance();
 require_once( 'functions/zume-dt-integration/wp-async-request.php' );
-require_once( 'functions/tab-keys.php' );
-require_once( 'functions/zume-dt-integration/menu-and-tabs.php' );
 require_once( 'functions/zume-dt-integration/zume.php' );
 require_once( 'functions/zume-dt-integration/zume-hooks.php' );
 require_once( 'functions/zume-dt-integration/zume-async-send.php' );
 require_once( 'functions/zume-dt-integration/zume-endpoints.php' );
 require_once( 'functions/zume-dt-integration/zume-site-stats.php' );
-require_once( 'functions/zume-dt-integration/system-check-metabox.php' );
+
 
 if ( is_admin() ) {
+    require_once( 'functions/tab-keys.php' );
+    require_once( 'functions/zume-dt-integration/menu-and-tabs.php' );
     require_once( 'functions/zume-resource-metabox.php' ); // zume logging of critical path actions
+    require_once( 'functions/zume-dt-integration/system-check-metabox.php' );
 }
 
 
