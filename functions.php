@@ -13,6 +13,8 @@ $wpdb->zume_logging = $wpdb->prefix . 'zume_logging';
 require_once( 'functions/post-types/video-post-type.php' );
 require_once( 'functions/post-types/pdf-download-post-type.php' );
 
+
+
 /**
  * We want to make sure migrations are run on updates.
  *
