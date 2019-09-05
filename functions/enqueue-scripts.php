@@ -48,7 +48,7 @@ function zume_site_scripts() {
         wp_enqueue_script( 'comment-reply' );
     }
 
-    zume_enqueue_script( 'jquery-steps', 'assets/scripts/jquery.steps.js', array( 'jquery' ), true );
+    wp_enqueue_script( 'jquery-steps', get_template_directory_uri() . '/assets/scripts/jquery.steps.js', array( 'jquery' ), 1.1, true );
     wp_localize_script(
         "jquery-steps", "stepsSettings", array(
             "translations" => [
@@ -63,7 +63,7 @@ function zume_site_scripts() {
         )
     );
 
-    zume_enqueue_script( 'zume', 'assets/scripts/zume.js', array( 'jquery' ), true );
+    wp_enqueue_script( 'zume', get_template_directory_uri() . '/assets/scripts/zume.js', array( 'jquery' ), 1.1, true );
     wp_localize_script(
         "zume", "zumeMaps", array(
             'root' => esc_url_raw( rest_url() ),
