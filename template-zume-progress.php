@@ -10,11 +10,7 @@ get_header();
 <div id="content" class="grid-x grid-padding-x"><div class="cell">
     <div id="inner-content" class="grid-x grid-margin-x">
         <div class="cell">
-            <div class="grid-x grid-margin-y grid-padding-y">
-                <div class="cell center">
-                    <h2 ><?php esc_html_e( 'Progress', 'zume' ) ?></h2>
-                </div>
-            </div>
+
 
             <!-- Add Map if Available -->
             <?php
@@ -26,6 +22,15 @@ get_header();
                     the_post();
                     the_content();
                 endwhile;
+
+                else:
+                ?>
+                    <div class="grid-x grid-margin-y grid-padding-y">
+                        <div class="cell center">
+                            <h2 ><?php esc_html_e( 'Progress', 'zume' ) ?></h2>
+                        </div>
+                    </div>
+                <?php
             endif;
             ?>
 
