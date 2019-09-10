@@ -251,20 +251,20 @@ switch ($request_action) {
                                         <input type="hidden" id="user_login" value="<?php echo esc_attr( $rp_login ); ?>" autocomplete="off" />
 
                                         <p>
-                                            <label><?php esc_html_e( 'Password Required' ) ?> <strong>*</strong>
+                                            <label><?php esc_html_e( 'Password Required', 'zume' ) ?> <strong>*</strong>
                                                 <input type="password" id="pass1" name="pass1" placeholder="yeti4preZ" aria-errormessage="password-error-1" required >
                                                 <span class="form-error" id="password-error-1">
-                                                    <?php esc_html_e( 'Password required' ) ?>
+                                                    <?php esc_html_e( 'Password required', 'zume' ) ?>
                                                 </span>
                                             </label>
                                             <meter max="4" id="password-strength-meter" value="0"></meter>
                                             <p id="password-strength-text"></p>
                                         </p>
                                         <p>
-                                            <label><?php esc_html_e( 'Re-enter Password' ) ?> <strong>*</strong>
+                                            <label><?php esc_html_e( 'Re-enter Password', 'zume' ) ?> <strong>*</strong>
                                                 <input type="password" name="pass2" placeholder="yeti4preZ" aria-errormessage="password-error-2" data-equalto="pass1">
                                                 <span class="form-error" id="password-error-2">
-                                                    <?php esc_html_e( 'Passwords do not match. Please, try again.' ) ?>
+                                                    <?php esc_html_e( 'Passwords do not match. Please, try again.', 'zume' ) ?>
                                                 </span>
                                             </label>
                                         </p>
@@ -284,7 +284,9 @@ switch ($request_action) {
                                         do_action( 'resetpass_form', $user );
                                         ?>
                                         <input type="hidden" name="rp_key" value="<?php echo esc_attr( $rp_key ); ?>" />
-                                        <p class="submit"><input type="submit" name="wp-submit" id="wp-submit" class="button button-primary button-large" value="<?php esc_html_e( 'Reset Password' ); ?>" /></p>
+
+                                        <p class="submit"><input type="submit" name="wp-submit" id="wp-submit" class="button button-primary button-large" value="<?php esc_html_e( 'Reset Password', 'zume' ); ?>" /></p>
+
                                     </form>
 
                                 </div>
@@ -346,7 +348,7 @@ switch ($request_action) {
                                 <h2 style="font-weight: bolder;">
                                     <?php echo esc_html__( "Let's get started.", 'zume' ) ?>
                                 </h2>
-                                <span style="color:gray;"><?php esc_html_e( "Sign up using:" ) ?></span>
+                                <span style="color:gray;"><?php esc_html_e( 'Sign up using:', 'zume' ) ?></span>
                             </div>
 
                             <div class="cell">
@@ -391,9 +393,9 @@ switch ($request_action) {
                         <p>
                             <?php if ( ! isset( $_GET['checkemail'] ) || ! in_array( wp_unslash( $_GET['checkemail'] ), array( 'confirm', 'newpass' ) ) ) : ?>
 
-                                <a href="<?php echo esc_url( zume_login_url( $current_language ) ) ?>"><?php esc_html_e( 'Login' ) ?></a>
+                                <a href="<?php echo esc_url( zume_login_url( $current_language ) ) ?>"><?php esc_html_e( 'Login', 'zume' ) ?></a>
                                 &nbsp;|&nbsp;
-                                <a href="<?php echo esc_url( zume_lostpassword_url( $current_language ) ); ?>"><?php esc_html_e( 'Lost your password?' ); ?></a>
+                                <a href="<?php echo esc_url( zume_lostpassword_url( $current_language ) ); ?>"><?php esc_html_e( 'Lost your password?', 'zume' ); ?></a>
 
                             <?php endif; ?>
                         </p>
@@ -458,13 +460,13 @@ switch ($request_action) {
                         <div class="grid-x grid-padding-x grid-padding-y">
                             <div class="cell center">
                                 <img src="<?php echo esc_url( get_theme_file_uri( '/assets/images/zume-logo-white.png' ) ) ?>" />
-                                <p><span style="color:gray;"><?php esc_html_e( "Sign in using:" ) ?></span></p>
+                                <p><span style="color:gray;"><?php esc_html_e( "Sign in using:", 'zume' ) ?></span></p>
                             </div>
                             <?php
                             if ( isset( $_GET['login'] ) && $_GET['login'] === 'failed' ) {
                                 ?>
                                 <div class="callout warning cell center">
-                                    <?php echo esc_html( 'Username or password does not match. Try again.' ); ?>
+                                    <?php echo esc_html__( 'Username or password does not match. Try again.', 'zume' ); ?>
                                 </div>
                                 <?php
                             }
@@ -499,9 +501,9 @@ switch ($request_action) {
                         <p>
                         <?php if ( ! isset( $_GET['checkemail'] ) || ! in_array( wp_unslash( $_GET['checkemail'] ), array( 'confirm', 'newpass' ) ) ) : ?>
 
-                            <a href="<?php echo esc_url( zume_register_url( $current_language ) ) ?>"><?php esc_html_e( 'Register' ) ?></a>
+                            <a href="<?php echo esc_url( zume_register_url( $current_language ) ) ?>"><?php esc_html_e( 'Register', 'zume' ) ?></a>
                             &nbsp;|&nbsp;
-                            <a href="<?php echo esc_url( zume_lostpassword_url( $current_language ) ); ?>"><?php esc_html_e( 'Lost your password?' ); ?></a>
+                            <a href="<?php echo esc_url( zume_lostpassword_url( $current_language ) ); ?>"><?php esc_html_e( 'Lost your password?', 'zume' ); ?></a>
 
                         <?php endif; ?>
                         </p>
