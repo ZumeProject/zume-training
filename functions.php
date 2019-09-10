@@ -4,9 +4,8 @@
  */
 require_once( 'functions/utilities/debugger-log.php' ); // debug logger used for development.
 
-define( 'ZUME_DOMAIN', 'zume' );
-define( 'ZUME_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
-define( 'ZUME_VERSION', '1.0' );
+require_once( 'dt-mapping/loader.php' );
+new DT_Mapping_Module_Loader('theme');
 
 /**
  * Add custom table
@@ -16,6 +15,8 @@ require_once 'functions/activator.php';
 $wpdb->zume_logging = $wpdb->prefix . 'zume_logging';
 require_once( 'functions/post-types/video-post-type.php' );
 require_once( 'functions/post-types/pdf-download-post-type.php' );
+
+
 
 /**
  * We want to make sure migrations are run on updates.
@@ -66,26 +67,24 @@ require_once( 'functions/zume-dt-integration/zume-dashboard-sync.php' ); // zume
 // REST API
 require_once( 'functions/zume-rest-api.php' );
 
-// Locations System
-require_once( 'functions/geocoding-api.php' ); // @todo retire?
-require_once( 'functions/ip-location-api.php' );
-require_once( 'functions/mapbox-location-api.php' );
+
 
 // Zume - DT - Integration
 require_once( 'functions/zume-dt-integration/site-link-post-type.php' );
 Site_Link_System::instance();
 require_once( 'functions/zume-dt-integration/wp-async-request.php' );
-require_once( 'functions/tab-keys.php' );
-require_once( 'functions/zume-dt-integration/menu-and-tabs.php' );
 require_once( 'functions/zume-dt-integration/zume.php' );
 require_once( 'functions/zume-dt-integration/zume-hooks.php' );
 require_once( 'functions/zume-dt-integration/zume-async-send.php' );
 require_once( 'functions/zume-dt-integration/zume-endpoints.php' );
 require_once( 'functions/zume-dt-integration/zume-site-stats.php' );
-require_once( 'functions/zume-dt-integration/system-check-metabox.php' );
+
 
 if ( is_admin() ) {
+    require_once( 'functions/tab-keys.php' );
+    require_once( 'functions/zume-dt-integration/menu-and-tabs.php' );
     require_once( 'functions/zume-resource-metabox.php' ); // zume logging of critical path actions
+    require_once( 'functions/zume-dt-integration/system-check-metabox.php' );
 }
 
 

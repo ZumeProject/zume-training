@@ -132,7 +132,10 @@ class Zume_Integration_Metabox extends Zume_Integration_Hook_Base {
             'name'        => __( 'Visibility' ),
             'description' => 'Private keeps the site connection from being listed on registration and profile.',
             'type'        => 'key_select',
-            'default'     => [ '0' => __( 'Public (Default)' ), '1' => __( 'Private' ) ],
+            'default'     => [
+        '0' => __( 'Public (Default)' ),
+        '1' => __( 'Private' )
+            ],
             'section'     => 'zume',
             ];
         $fields['affiliation_key'] = [

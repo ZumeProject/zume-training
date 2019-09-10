@@ -34,22 +34,28 @@ class Google_Service_CloudKMS extends Google_Service
   /** View and manage your data across Google Cloud Platform services. */
   const CLOUD_PLATFORM =
       "https://www.googleapis.com/auth/cloud-platform";
+  /** View and manage your keys and secrets stored in Cloud Key Management Service. */
+  const CLOUDKMS =
+      "https://www.googleapis.com/auth/cloudkms";
 
   public $projects_locations;
   public $projects_locations_keyRings;
   public $projects_locations_keyRings_cryptoKeys;
   public $projects_locations_keyRings_cryptoKeys_cryptoKeyVersions;
+  public $projects_locations_keyRings_importJobs;
   
   /**
    * Constructs the internal representation of the CloudKMS service.
    *
-   * @param Google_Client $client
+   * @param Google_Client $client The client used to deliver requests.
+   * @param string $rootUrl The root URL used for requests to the service.
    */
-  public function __construct(Google_Client $client)
+  public function __construct(Google_Client $client, $rootUrl = null)
   {
     parent::__construct($client);
-    $this->rootUrl = 'https://cloudkms.googleapis.com/';
+    $this->rootUrl = $rootUrl ?: 'https://cloudkms.googleapis.com/';
     $this->servicePath = '';
+    $this->batchPath = 'batch';
     $this->version = 'v1';
     $this->serviceName = 'cloudkms';
 
@@ -78,10 +84,6 @@ class Google_Service_CloudKMS extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'filter' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
                 'pageToken' => array(
                   'location' => 'query',
                   'type' => 'string',
@@ -89,6 +91,10 @@ class Google_Service_CloudKMS extends Google_Service
                 'pageSize' => array(
                   'location' => 'query',
                   'type' => 'integer',
+                ),
+                'filter' => array(
+                  'location' => 'query',
+                  'type' => 'string',
                 ),
               ),
             ),
@@ -134,6 +140,10 @@ class Google_Service_CloudKMS extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
+                'options.requestedPolicyVersion' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
+                ),
               ),
             ),'list' => array(
               'path' => 'v1/{+parent}/keyRings',
@@ -144,7 +154,15 @@ class Google_Service_CloudKMS extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
+                'filter' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
                 'pageToken' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'orderBy' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -196,6 +214,10 @@ class Google_Service_CloudKMS extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                 ),
+                'skipInitialVersionCreation' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ),
               ),
             ),'decrypt' => array(
               'path' => 'v1/{+name}:decrypt',
@@ -236,6 +258,10 @@ class Google_Service_CloudKMS extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
+                'options.requestedPolicyVersion' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
+                ),
               ),
             ),'list' => array(
               'path' => 'v1/{+parent}/cryptoKeys',
@@ -246,15 +272,23 @@ class Google_Service_CloudKMS extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'pageSize' => array(
-                  'location' => 'query',
-                  'type' => 'integer',
-                ),
                 'versionView' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
+                'filter' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
                 'pageToken' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'pageSize' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
+                ),
+                'orderBy' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -373,6 +407,16 @@ class Google_Service_CloudKMS extends Google_Service
                   'required' => true,
                 ),
               ),
+            ),'import' => array(
+              'path' => 'v1/{+parent}/cryptoKeyVersions:import',
+              'httpMethod' => 'POST',
+              'parameters' => array(
+                'parent' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+              ),
             ),'list' => array(
               'path' => 'v1/{+parent}/cryptoKeyVersions',
               'httpMethod' => 'GET',
@@ -381,6 +425,14 @@ class Google_Service_CloudKMS extends Google_Service
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
+                ),
+                'orderBy' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'filter' => array(
+                  'location' => 'query',
+                  'type' => 'string',
                 ),
                 'pageToken' => array(
                   'location' => 'query',
@@ -414,6 +466,100 @@ class Google_Service_CloudKMS extends Google_Service
               'httpMethod' => 'POST',
               'parameters' => array(
                 'name' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+              ),
+            ),
+          )
+        )
+    );
+    $this->projects_locations_keyRings_importJobs = new Google_Service_CloudKMS_Resource_ProjectsLocationsKeyRingsImportJobs(
+        $this,
+        $this->serviceName,
+        'importJobs',
+        array(
+          'methods' => array(
+            'create' => array(
+              'path' => 'v1/{+parent}/importJobs',
+              'httpMethod' => 'POST',
+              'parameters' => array(
+                'parent' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'importJobId' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+              ),
+            ),'get' => array(
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'GET',
+              'parameters' => array(
+                'name' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+              ),
+            ),'getIamPolicy' => array(
+              'path' => 'v1/{+resource}:getIamPolicy',
+              'httpMethod' => 'GET',
+              'parameters' => array(
+                'resource' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'options.requestedPolicyVersion' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
+                ),
+              ),
+            ),'list' => array(
+              'path' => 'v1/{+parent}/importJobs',
+              'httpMethod' => 'GET',
+              'parameters' => array(
+                'parent' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'pageSize' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
+                ),
+                'filter' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'pageToken' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'orderBy' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+              ),
+            ),'setIamPolicy' => array(
+              'path' => 'v1/{+resource}:setIamPolicy',
+              'httpMethod' => 'POST',
+              'parameters' => array(
+                'resource' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+              ),
+            ),'testIamPermissions' => array(
+              'path' => 'v1/{+resource}:testIamPermissions',
+              'httpMethod' => 'POST',
+              'parameters' => array(
+                'resource' => array(
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,

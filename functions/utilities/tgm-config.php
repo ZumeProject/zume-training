@@ -60,10 +60,10 @@ function zume_register_required_plugins() {
             'required' => true,
         ),
 //        array(
-//            'name' => 'Easy WP SMTP',
+//            'name' => 'Disciple Tools',
 //            'slug' => 'easy-wp-smtp',
-//            'version' => '1.3.1',
-//            'required' => false,
+//            'version' => '0.22.2',
+//            'required' => true,
 //        ),
         array(
             'name' => 'Infinite WP',

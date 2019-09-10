@@ -117,9 +117,9 @@ class Zume_REST_API {
         $params = $request->get_json_params();
         if ( isset( $params['address'] ) ){
 
-            $result = Disciple_Tools_Google_Geocode_API::query_google_api( $params['address'] );
+            $result = DT_Mapbox_API::lookup( $params['address'] );
 
-            if ( $result['status'] == 'OK'){
+            if ( isset( $result['features'] ) ){
                 return $result;
             } else {
                 return new WP_Error( "tract_status_error", 'Zero Results', array( 'status' => 400 ) );

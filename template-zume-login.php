@@ -284,7 +284,9 @@ switch ($request_action) {
                                         do_action( 'resetpass_form', $user );
                                         ?>
                                         <input type="hidden" name="rp_key" value="<?php echo esc_attr( $rp_key ); ?>" />
+
                                         <p class="submit"><input type="submit" name="wp-submit" id="wp-submit" class="button button-primary button-large" value="<?php esc_html_e( 'Reset Password', 'zume' ); ?>" /></p>
+
                                     </form>
 
                                 </div>

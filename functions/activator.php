@@ -9,7 +9,7 @@ function zume_theme_setup() {
 class Zume_Activator
 {
     public static function activate() {
-        $version = ZUME_VERSION;
+        $version = 1.0;
         self::create_tables( $version );
 
         self::add_coach_role();

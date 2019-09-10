@@ -65,19 +65,19 @@ function zume_remove_recent_comments_style() {
 }
 
 // Remove injected CSS from gallery
-function zume_gallery_style($css) {
+function zume_gallery_style( $css) {
     return preg_replace( "!<style type='text/css'>(.*?)</style>!s", '', $css );
 }
 
 // This removes the annoying […] to a Read More link
-function zume_excerpt_more($more) {
+function zume_excerpt_more( $more) {
     global $post;
     // edit here if you like
     return '<a class="excerpt-read-more" href="' . get_permalink( $post->ID ) . '" title="' . __( 'Read', 'zume' ) . get_the_title( $post->ID ) . '">' . __( '... Read more &raquo;', 'zume' ) . '</a>';
 }
 
 //  Stop WordPress from using the sticky class (which conflicts with Foundation), and style WordPress sticky posts using the .wp-sticky class instead
-function zume_remove_sticky_class($classes) {
+function zume_remove_sticky_class( $classes) {
     if ( in_array( 'sticky', $classes ) ) {
         $classes = array_diff( $classes, array( "sticky" ) );
         $classes[] = 'wp-sticky';

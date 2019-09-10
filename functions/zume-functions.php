@@ -61,7 +61,7 @@ function zume_custom_menu_page_removing() {
 add_action( 'admin_menu', 'zume_custom_menu_page_removing' );
 
 
-function zume_update_user_contact_info() {
+function zume_update_user_contact_info() { dt_write_log($_POST);
     $user_id = get_current_user_id();
 
     // validate nonce
@@ -87,13 +87,13 @@ function zume_update_user_contact_info() {
             update_user_meta( $user_id, 'zume_user_address', sanitize_text_field( wp_unslash( $_POST['zume_user_address'] ) ) );
         }
         else {
-            $results = Disciple_Tools_Google_Geocode_API::query_google_api( trim( sanitize_text_field( wp_unslash( $_POST['zume_user_address'] ) ) ), 'core' );
+            $results = DT_Mapbox_API::lookup( trim( sanitize_text_field( wp_unslash( $_POST['zume_user_address'] ) ) ) );
 
-            if ( $results ) {
+            if ( isset( $results['features'] ) ) {
                 update_user_meta( $user_id, 'zume_user_address', trim( sanitize_text_field( wp_unslash( $_POST['zume_user_address'] ) ) ) );
-                update_user_meta( $user_id, 'zume_user_lng', $results['lng'] );
-                update_user_meta( $user_id, 'zume_user_lat', $results['lat'] );
-                update_user_meta( $user_id, 'zume_raw_location', $results['raw'] );
+                update_user_meta( $user_id, 'zume_user_lng', DT_Mapbox_API::parse_raw_result( $results, 'longitude', true ) );
+                update_user_meta( $user_id, 'zume_user_lat', DT_Mapbox_API::parse_raw_result( $results, 'latitude', true ) );
+                update_user_meta( $user_id, 'zume_raw_location', $results );
             }
         }
     }
@@ -121,14 +121,15 @@ function zume_update_user_ip_address_and_location( $user_id = null ) {
         $user_id = get_current_user_id();
     }
     // Geocode and store ip address
-    $ip_address = Disciple_Tools_Google_Geocode_API::get_real_ip_address();
+    $ip_address = DT_Ipstack_API::get_real_ip_address();
     update_user_meta( $user_id, 'zume_recent_ip', $ip_address );
 
-    $ip_results = Disciple_Tools_Google_Geocode_API::geocode_ip_address( $ip_address );
-
-    update_user_meta( $user_id, 'zume_lng_from_ip', $ip_results['lng'] );
-    update_user_meta( $user_id, 'zume_lat_from_ip', $ip_results['lat'] );
-    update_user_meta( $user_id, 'zume_raw_location_from_ip', $ip_results['raw'] );
+    $ip_results = DT_Ipstack_API::geocode_ip_address( $ip_address );
+    if ( isset( $ip_results['ip'] ) ) {
+        update_user_meta( $user_id, 'zume_lng_from_ip', DT_Ipstack_API::parse_raw_result( $ip_results, 'longitude' ) );
+        update_user_meta( $user_id, 'zume_lat_from_ip', DT_Ipstack_API::parse_raw_result( $ip_results, 'latitude' ) );
+        update_user_meta( $user_id, 'zume_raw_location_from_ip', $ip_results );
+    }
 }
 
 

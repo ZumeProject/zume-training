@@ -98,7 +98,7 @@ class Zume_Migration_Engine
             }
             update_option( 'dt_migration_lock', '1' );
 
-            zume_write_log( date( " Y-m-d H:i:s T" ) . " Starting migrating to number $activating_migration_number" );
+            dt_write_log( date( " Y-m-d H:i:s T" ) . " Starting migrating to number $activating_migration_number" );
             try {
                 $migration->up();
             } catch (Throwable $e) {
@@ -111,7 +111,7 @@ class Zume_Migration_Engine
                 throw $e;
             }
             update_option( 'dt_migration_number', (string) $activating_migration_number );
-            zume_write_log( date( " Y-m-d H:i:s T" ) . " Done migrating to number $activating_migration_number" );
+            dt_write_log( date( " Y-m-d H:i:s T" ) . " Done migrating to number $activating_migration_number" );
 
             update_option( 'dt_migration_lock', '0' );
 
@@ -127,9 +127,9 @@ class Zume_Migration_Engine
     protected static function sanity_check_expected_tables( array $expected_tables ) {
         global $wpdb;
         foreach ( $expected_tables as $name => $table ) {
-                zume_write_log( $table );
+                dt_write_log( $table );
             if ( preg_match( '/\b IF NOT EXISTS \b/i', $table ) ) {
-                zume_write_log( '@error' );
+                dt_write_log( '@error' );
                 throw new Exception( "Table definition of $name should not contain 'IF NOT EXISTS'" );
             } elseif ( !preg_match( '/\b' . preg_quote( $name ) . '\b/', $table ) ) {
                 throw new Exception( "Expected to find table name in table definition of $name" );

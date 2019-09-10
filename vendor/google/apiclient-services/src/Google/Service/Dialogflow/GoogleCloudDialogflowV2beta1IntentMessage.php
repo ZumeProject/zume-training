@@ -33,6 +33,12 @@ class Google_Service_Dialogflow_GoogleCloudDialogflowV2beta1IntentMessage extend
   public $platform;
   protected $quickRepliesType = 'Google_Service_Dialogflow_GoogleCloudDialogflowV2beta1IntentMessageQuickReplies';
   protected $quickRepliesDataType = '';
+  protected $rbmCarouselRichCardType = 'Google_Service_Dialogflow_GoogleCloudDialogflowV2beta1IntentMessageRbmCarouselCard';
+  protected $rbmCarouselRichCardDataType = '';
+  protected $rbmStandaloneRichCardType = 'Google_Service_Dialogflow_GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCard';
+  protected $rbmStandaloneRichCardDataType = '';
+  protected $rbmTextType = 'Google_Service_Dialogflow_GoogleCloudDialogflowV2beta1IntentMessageRbmText';
+  protected $rbmTextDataType = '';
   protected $simpleResponsesType = 'Google_Service_Dialogflow_GoogleCloudDialogflowV2beta1IntentMessageSimpleResponses';
   protected $simpleResponsesDataType = '';
   protected $suggestionsType = 'Google_Service_Dialogflow_GoogleCloudDialogflowV2beta1IntentMessageSuggestions';
@@ -159,6 +165,48 @@ class Google_Service_Dialogflow_GoogleCloudDialogflowV2beta1IntentMessage extend
   public function getQuickReplies()
   {
     return $this->quickReplies;
+  }
+  /**
+   * @param Google_Service_Dialogflow_GoogleCloudDialogflowV2beta1IntentMessageRbmCarouselCard
+   */
+  public function setRbmCarouselRichCard(Google_Service_Dialogflow_GoogleCloudDialogflowV2beta1IntentMessageRbmCarouselCard $rbmCarouselRichCard)
+  {
+    $this->rbmCarouselRichCard = $rbmCarouselRichCard;
+  }
+  /**
+   * @return Google_Service_Dialogflow_GoogleCloudDialogflowV2beta1IntentMessageRbmCarouselCard
+   */
+  public function getRbmCarouselRichCard()
+  {
+    return $this->rbmCarouselRichCard;
+  }
+  /**
+   * @param Google_Service_Dialogflow_GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCard
+   */
+  public function setRbmStandaloneRichCard(Google_Service_Dialogflow_GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCard $rbmStandaloneRichCard)
+  {
+    $this->rbmStandaloneRichCard = $rbmStandaloneRichCard;
+  }
+  /**
+   * @return Google_Service_Dialogflow_GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCard
+   */
+  public function getRbmStandaloneRichCard()
+  {
+    return $this->rbmStandaloneRichCard;
+  }
+  /**
+   * @param Google_Service_Dialogflow_GoogleCloudDialogflowV2beta1IntentMessageRbmText
+   */
+  public function setRbmText(Google_Service_Dialogflow_GoogleCloudDialogflowV2beta1IntentMessageRbmText $rbmText)
+  {
+    $this->rbmText = $rbmText;
+  }
+  /**
+   * @return Google_Service_Dialogflow_GoogleCloudDialogflowV2beta1IntentMessageRbmText
+   */
+  public function getRbmText()
+  {
+    return $this->rbmText;
   }
   /**
    * @param Google_Service_Dialogflow_GoogleCloudDialogflowV2beta1IntentMessageSimpleResponses

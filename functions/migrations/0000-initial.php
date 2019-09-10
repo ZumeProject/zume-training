@@ -23,8 +23,8 @@ class Zume_Migration_0000 extends Zume_Migration {
 				) ENGINE=InnoDB  DEFAULT CHARSET=utf8;";
             dbDelta( $sql1 );
         } else {
-            zume_write_log( __METHOD__ );
-            zume_write_log( 'checked for table' );
+            dt_write_log( __METHOD__ );
+            dt_write_log( 'checked for table' );
         }
     }
 
@@ -37,8 +37,8 @@ class Zume_Migration_0000 extends Zume_Migration {
         try {
             $this->test_expected_tables();
         } catch ( Exception $e ) {
-            zume_write_log( __METHOD__ );
-            zume_write_log( $e );
+            dt_write_log( __METHOD__ );
+            dt_write_log( $e );
         }
     }
 

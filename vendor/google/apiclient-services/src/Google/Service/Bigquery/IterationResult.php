@@ -15,14 +15,31 @@
  * the License.
  */
 
-class Google_Service_Bigquery_IterationResult extends Google_Model
+class Google_Service_Bigquery_IterationResult extends Google_Collection
 {
+  protected $collection_key = 'clusterInfos';
+  protected $clusterInfosType = 'Google_Service_Bigquery_ClusterInfo';
+  protected $clusterInfosDataType = 'array';
   public $durationMs;
   public $evalLoss;
   public $index;
   public $learnRate;
   public $trainingLoss;
 
+  /**
+   * @param Google_Service_Bigquery_ClusterInfo
+   */
+  public function setClusterInfos($clusterInfos)
+  {
+    $this->clusterInfos = $clusterInfos;
+  }
+  /**
+   * @return Google_Service_Bigquery_ClusterInfo
+   */
+  public function getClusterInfos()
+  {
+    return $this->clusterInfos;
+  }
   public function setDurationMs($durationMs)
   {
     $this->durationMs = $durationMs;

@@ -201,8 +201,8 @@ class Zume_Overview_Content {
 
         <?php if ( is_user_logged_in() ) {
             self::next_session_block();
-}
-?>
+        }
+        ?>
 
         <?php
     }

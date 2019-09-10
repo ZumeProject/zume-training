@@ -143,6 +143,9 @@ class Google_Service_Digitalassetlinks_Resource_Assetlinks extends Google_Servic
    * into the DER format, compute the SHA-256 hash of that string and represent
    * the result as a hexstring (that is, uppercase hexadecimal representations of
    * each octet, separated by colons).
+   * @opt_param string source.androidApp.packageName Android App assets are
+   * naturally identified by their Java package name. For example, the Google Maps
+   * app uses the package name `com.google.android.apps.maps`. REQUIRED
    * @opt_param string source.web.site Web assets are identified by a URL that
    * contains only the scheme, hostname and port parts.  The format is
    *
@@ -172,9 +175,6 @@ class Google_Service_Digitalassetlinks_Resource_Assetlinks extends Google_Servic
    *   *   `http://www.google.com/`       (wrong scheme)   *
    * `https://google.com/`          (hostname does not match)   *
    * `https://www.google.com:444/`  (port does not match) REQUIRED
-   * @opt_param string source.androidApp.packageName Android App assets are
-   * naturally identified by their Java package name. For example, the Google Maps
-   * app uses the package name `com.google.android.apps.maps`. REQUIRED
    * @return Google_Service_Digitalassetlinks_CheckResponse
    */
   public function check($optParams = array())

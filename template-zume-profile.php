@@ -115,9 +115,9 @@ add_action( 'wp_head', 'zume_signup_header' );
                             </div>
 
                             <?php if ( ! empty( $zume_user_meta['zume_user_address'] ) && ! empty( $zume_user_meta['zume_user_lng'] ) && ! empty( $zume_user_meta['zume_user_lat'] ) ) : ?>
-                            <div id="map" >
-                                <img src="https://maps.googleapis.com/maps/api/staticmap?center=<?php echo esc_attr( $zume_user_meta['zume_user_lat'] ) . ',' . esc_attr( $zume_user_meta['zume_user_lng'] ) ?>&zoom=5&size=600x250&markers=color:red|<?php echo esc_attr( $zume_user_meta['zume_user_lat'] ) . ',' . esc_attr( $zume_user_meta['zume_user_lng'] ) ?>&key=<?php echo esc_attr( Disciple_Tools_Google_Geocode_API::key() ); ?>" />
-                            </div>
+                                <div id="map" >
+                                    <img src="<?php echo DT_Mapbox_API::static_map( $zume_user_meta['zume_user_lng'], $zume_user_meta['zume_user_lat'] ) ?>" />
+                                </div>
                             <?php endif; ?>
                         </td>
                     </tr>

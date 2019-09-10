@@ -10,7 +10,6 @@ if ( ! defined( 'ABSPATH' ) ) {
  */
 class Zume_Languages_Tab
 {
-
     public function content() {
         ?>
         <form method="post">

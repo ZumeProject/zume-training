@@ -23,13 +23,11 @@ if ( !defined( 'ABSPATH' ) ) {
  *          0.1.16 Added https filter, capability filter for token verification
  *          0.1.17 Added type column to admin list
  *          0.1.18 Added listing function by site type
+ *          0.1.19 Added unique identifiers to the metaboxes to remove conflicts.
  */
 if ( ! class_exists( 'Site_Link_System' ) ) {
 
-    // @phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals
-    // @codingStandardsIgnoreLine
-    class Site_Link_System
-    {
+    class Site_Link_System {
 
         /*****************************************************************************************************************
          * PRIMARY INTEGRATION SECTION
@@ -134,41 +132,35 @@ if ( ! class_exists( 'Site_Link_System' ) ) {
             global $wpdb;
 
             if ( ! is_array( $type_name ) ) {
-                dt_write_log( new WP_Error( __METHOD__, '$type_name is not an array' ) );
+                dt_write_log( new WP_Error( __METHOD__, '$type_name is not an array.' ) );
                 return [];
             }
 
-            $type_string = '';
-            $i = 0;
-            foreach ( $type_name as $name ) {
-                if ( ! ( 0 === $i ) ) {
-                    $type_string .= ',';
-                }
-                $type_string .= $name;
-            }
+            $type_string = array_map( 'sanitize_text_field', wp_unslash( $type_name ) );
+            $type_string = "'" . implode( "','", $type_string ) . "'";
 
             switch ( $format ) {
 
                 case 'name_list':
-                    $results = $wpdb->get_results( $wpdb->prepare(
-                        "SELECT ID as id, post_title as name 
-                        FROM $wpdb->posts 
-                          JOIN $wpdb->postmeta 
-                          ON $wpdb->posts.ID=$wpdb->postmeta.post_id 
-                            AND meta_key = 'type' 
-                        WHERE meta_value IN (%s)", $type_string ), ARRAY_A );
+                    $results = $wpdb->get_results(
+                        "SELECT ID as id, post_title as name
+                        FROM $wpdb->posts
+                          JOIN $wpdb->postmeta
+                          ON $wpdb->posts.ID=$wpdb->postmeta.post_id
+                            AND meta_key = 'type'
+                        WHERE meta_value IN ($type_string)", ARRAY_A ); //@phpcs:ignore
 
                     return $results;
                     break;
 
                 case 'post_ids':
-                    $results = $wpdb->get_col( $wpdb->prepare(
-                        "SELECT id 
-                        FROM $wpdb->posts 
-                          JOIN $wpdb->postmeta 
-                          ON $wpdb->posts.ID=$wpdb->postmeta.post_id 
-                            AND meta_key = 'type' 
-                        WHERE meta_value IN (%s)", $type_string ) );
+                    $results = $wpdb->get_col(
+                        "SELECT id
+                        FROM $wpdb->posts
+                          JOIN $wpdb->postmeta
+                          ON $wpdb->posts.ID=$wpdb->postmeta.post_id
+                            AND meta_key = 'type'
+                        WHERE meta_value IN ($type_string)" ); //@phpcs:ignore
 
                     return $results;
                     break;
@@ -207,12 +199,16 @@ if ( ! class_exists( 'Site_Link_System' ) ) {
         public static function verify_transfer_token( $transfer_token ): bool
         {
             // challenge https connection
-            if ( ! isset( $_SERVER['HTTPS'] ) ) {
-                dt_write_log( __METHOD__ . ': Server does not have the HTTPS parameter set.' );
-                return false;
-            } elseif ( ! ( 'on' === $_SERVER['HTTPS'] ) ) {
-                dt_write_log( __METHOD__ . ': Failed https challenge' );
-                return false;
+            if ( WP_DEBUG !== true ) {
+                if ( !isset( $_SERVER['HTTPS'] ) ) {
+                    dt_write_log( __METHOD__ . ': Server does not have the HTTPS parameter set.' );
+
+                    return false;
+                } elseif ( !( 'on' === $_SERVER['HTTPS'] ) ) {
+                    dt_write_log( __METHOD__ . ': Failed https challenge' );
+
+                    return false;
+                }
             }
 
             // challenge empty token
@@ -263,7 +259,12 @@ if ( ! class_exists( 'Site_Link_System' ) ) {
              * Use the $connection_type to filter for the correct type
              * Update and return the $capabilities array
              */
-            $capabilities = apply_filters( 'site_link_type_capabilities', $connection_type, $capabilities = [] );
+            $args = [
+                'connection_type' => $connection_type,
+                'capabilities' => [],
+            ];
+            $args = apply_filters( 'site_link_type_capabilities', $args );
+            $capabilities = $args['capabilities'];
 
             // Challenge if $capabilities is a valid array
             if ( is_array( $capabilities ) && ! empty( $capabilities ) ) {
@@ -413,16 +414,16 @@ if ( ! class_exists( 'Site_Link_System' ) ) {
             switch ( $column_name ) {
                 case 'linked':
                     if ( get_post_meta( $post->ID, 'non_wp', true ) ) {
-                        echo '<span>' . esc_html( 'Non-DT Site Connection' ) . '</span>';
+                        echo '<span>' . esc_html( 'Non-Disciple.Tools Site Connection' ) . '</span>';
                     }
                     elseif ( $this->is_key_locked( $post->ID ) ) {
                         ?>
 
                         <span >
-                        <?php esc_html_e( 'Status:' ) ?>
+                        <?php esc_html_e( 'Status:', "disciple_tools" ) ?>
                             <strong>
                                 <span id="<?php echo esc_attr( md5( $post->ID ) ); ?>-status">
-                                    <?php esc_html_e( 'Checking Status' ) ?>
+                                    <?php esc_html_e( 'Checking Status', "disciple_tools" ) ?>
                                 </span>
                             </strong>
                         </span>
@@ -438,7 +439,10 @@ if ( ! class_exists( 'Site_Link_System' ) ) {
                     break;
 
                 case 'type':
-                    echo esc_html( ucwords( str_replace( '_', ' ', get_post_meta( $post->ID, 'type', true ) ) ) );
+                    $link_type = get_post_meta( $post->ID, 'type', true );
+                    $options = apply_filters( 'site_link_type', [] );
+                    $link_type_name = isset( $options[ $link_type ] ) ? $options[ $link_type ] : ucwords( str_replace( '_', ' ', $link_type ) );
+                    echo esc_html( $link_type_name );
                     break;
 
                 default:
@@ -510,8 +514,8 @@ if ( ! class_exists( 'Site_Link_System' ) ) {
         }
 
         public function meta_box_setup() {
-            add_meta_box( $this->post_type . '_details', __( 'Manage Site Link' ), [ $this, 'meta_box_load_management_box' ], $this->post_type, 'normal', 'high' );
-            add_meta_box( $this->post_type . '_instructions', __( 'Configuration' ), [ $this, 'meta_box_configuration_box' ], $this->post_type, 'normal', 'high' );
+            add_meta_box( $this->post_type . '_details' . hash( 'sha256', self::get_current_site_base_url() ), __( 'Manage Site Link' ), [ $this, 'meta_box_load_management_box' ], $this->post_type, 'normal', 'high' );
+            add_meta_box( $this->post_type . '_instructions'  . hash( 'sha256', self::get_current_site_base_url() ), __( 'Configuration' ), [ $this, 'meta_box_configuration_box' ], $this->post_type, 'normal', 'high' );
         }
 
         public function meta_box_content( $section = 'info' ) {
@@ -755,6 +759,13 @@ if ( ! class_exists( 'Site_Link_System' ) ) {
                 'default'     => '',
                 'section'     => 'site',
             ];
+            $fields['type'] = [
+                'name'        => __( 'Connection Type' ),
+                'description' => __( 'This adds permissions needed for the labeled task. If you have trouble with a connection succeeding, and a task failing. This permission setting may be the reason.' ),
+                'type'        => 'key_select',
+                'default'     => apply_filters( 'site_link_type', $permission = [ "" => "" ] ),
+                'section'     => 'site',
+            ];
 
             $fields['approved_ip_address'] = [
                 'name'        => __( 'Approved IP Address' ),
@@ -763,20 +774,14 @@ if ( ! class_exists( 'Site_Link_System' ) ) {
                 'default'     => '',
                 'section'     => 'non_wp',
             ];
-            $fields['type'] = [
-                'name'        => __( 'Connection Type' ),
-                'description' => __( 'This adds permissions needed for the labeled task. If you have trouble with a connection succeeding, and a task failing. This permission setting may be the reason.' ),
-                'type'        => 'key_select',
-                'default'     => apply_filters( 'site_link_type', $permission = [ "" => "" ] ),
-                'section'     => 'non_wp',
-            ];
+
             $fields['non_wp'] = [
-                'name'        => __( 'DT Site' ),
+                'name'        => __( 'Disciple.Tools Site' ),
                 'description' => __( 'Is this connection to a Disciple Tools/Wordpress system.' ),
                 'type'        => 'key_select',
                 'default'     => [
-                    0 => __( 'Yes, connected to another DT site (default)' ),
-                    1 => __( 'No, connection for a non-Disciple Tools system.' )
+                    0 => __( 'Yes, connected to another Disciple.Tools site (default)' ),
+                    1 => __( 'No, connection for a non-Disciple.Tools system.' )
                 ],
                 'section'     => 'non_wp',
             ];
@@ -862,9 +867,9 @@ if ( ! class_exists( 'Site_Link_System' ) ) {
 
                     <!-- Footer Information -->
                     <p><?php esc_attr_e( 'Current Site' ) ?>: <span
-                                class="info-color"><?php echo esc_html( self::get_current_site_base_url() ); ?></span></p>
+                            class="info-color"><?php echo esc_html( self::get_current_site_base_url() ); ?></span></p>
                     <p class="text-small"><?php esc_attr_e( 'Timestamp' ) ?>: <span
-                                class="info-color"><?php echo esc_attr( current_time( 'Y-m-d H:i', 1 ) ) ?></span>
+                            class="info-color"><?php echo esc_attr( current_time( 'Y-m-d H:i', 1 ) ) ?></span>
                         <em>( <?php esc_attr_e( 'Compare this number to linked site. It should be identical.' ) ?> )</em></p>
 
                     <?php
@@ -904,13 +909,13 @@ if ( ! class_exists( 'Site_Link_System' ) ) {
             if ( $this->post_type === $pt ) {
 
                 echo "<script type='text/javascript'>
-    
+
                 function check_link_status( transfer_token, url, id ) {
-    
+
                 let linked = '" . esc_attr__( 'Linked' ) . "';
                 let not_linked = '" . esc_attr__( 'Not Linked' ) . "';
                 let not_found = '" . esc_attr__( 'Failed to connect with the URL provided.' ) . "';
-    
+
                 return jQuery.ajax({
                     type: 'POST',
                     data: JSON.stringify({ \"transfer_token\": transfer_token } ),
@@ -952,8 +957,6 @@ if ( ! class_exists( 'Site_Link_System' ) ) {
                         /*border is optional*/
                         cursor: pointer;
                         }
-                        #postbox-container-3 {display:none;}
-                        #postbox-container-4 {display:none;}
                         </style>";
 
             }
@@ -1018,7 +1021,7 @@ if ( ! class_exists( 'Site_Link_System' ) ) {
             return true;
         }
 
-        public function build_cached_option() {
+        public static function build_cached_option() {
             global $wpdb;
 
             $results = $wpdb->get_results(  "
@@ -1266,6 +1269,26 @@ if ( ! class_exists( 'Site_Link_System' ) ) {
             delete_option( $prefix . '_api_keys' );
         }
 
+        // Adds the type of connection to the site link system
+        public function default_site_link_type( $type ) {
+            $type['create_contacts'] = __( 'Create Contacts', 'disciple_tools' );
+            $type['create_update_contacts'] = __( 'Create and Update contacts', 'disciple_tools' );
+            return $type;
+        }
+
+        // Add the specific capabilities needed for the site to site linking.
+        public function default_site_link_capabilities( $args ) {
+            if ( 'create_contacts' === $args['connection_type'] ) {
+                $args['capabilities'][] = 'create_contacts';
+            }
+            if ( 'create_update_contacts' === $args['connection_type'] ) {
+                $args['capabilities'][] = 'create_contacts';
+                $args['capabilities'][] = 'update_any_contacts';
+            }
+
+            return $args;
+        }
+
         /**
          * Variables and Singleton
          */
@@ -1315,6 +1338,9 @@ if ( ! class_exists( 'Site_Link_System' ) ) {
                     }
                 }
             }
+
+            add_filter( 'site_link_type', [ $this, 'default_site_link_type' ], 10, 1 );
+            add_filter( 'site_link_type_capabilities', [ $this, 'default_site_link_capabilities' ], 10, 1 );
         } // End __construct()
 
     } // End Class

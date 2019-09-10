@@ -1387,7 +1387,7 @@ function zume_custom_login_failed() {
 add_action( 'wp_login_failed', 'zume_custom_login_failed' );
 
 /* Where to go if any of the fields were empty */
-function zume_verify_user_pass($user, $username, $password) {
+function zume_verify_user_pass( $user, $username, $password) {
     $login_page  = zume_get_posts_translation_url( 'Login', zume_current_language() );
     if ($username == "" || $password == "") {
         wp_redirect( $login_page . "?login=empty" );

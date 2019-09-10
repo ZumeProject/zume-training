@@ -249,7 +249,7 @@ class Zume_Mailchimp_Integration {
         }
 
         $this->options = get_option( 'zume_mailchimp' );
-        $api_key = $this->options["api_key"];
+        $api_key = $this->options["api_key"] ?? false;
         $session_workflow = $this->get_session_mailchimp_key( $zume_session, $user_lang );
         $members_emails = $this->get_group_members( $zume_group_key );
         $completed_key = "completed_" . $zume_session;

@@ -22,7 +22,7 @@ function zume_top_nav() {
 
 // Big thanks to Brett Mason (https://github.com/brettsmason) for the awesome walker
 class Zume_Topbar_Menu_Walker extends Walker_Nav_Menu {
-    public function start_lvl(&$output, $depth = 0, $args = array() ) {
+    public function start_lvl( &$output, $depth = 0, $args = array() ) {
         $indent = str_repeat( "\t", $depth );
         $output .= "\n$indent<ul class=\"menu\">\n";
     }
@@ -42,7 +42,7 @@ function zume_off_canvas_nav() {
 }
 
 class Zume_Off_Canvas_Menu_Walker extends Walker_Nav_Menu {
-    public function start_lvl(&$output, $depth = 0, $args = array() ) {
+    public function start_lvl( &$output, $depth = 0, $args = array() ) {
         $indent = str_repeat( "\t", $depth );
         $output .= "\n$indent<ul class=\"vertical menu\">\n";
     }
