@@ -120,35 +120,35 @@ msgstr "We got it!"
 
 #: functions/enqueue-scripts.php:80
 msgid "We're a volunteer network, so give us a few days. We'll reach out to you soon as possible!"
-msgstr "We're a volunteer network, so give us a few days. We'll reach out to you soon as possible!"
+msgstr "Siamo un gruppo di volontari. Faremo il possibile per contattarvi al piú presto."
 
 #: functions/login/zume-login.php:97 functions/login/zume-login.php:316
 msgid "Email is a required permission for login and registration."
-msgstr "Email is a required permission for login and registration."
+msgstr "L'email è necessaria per la registrazione ed il login."
 
 #: functions/login/zume-login.php:209 functions/login/zume-login.php:441
 msgid "No user found."
-msgstr "No user found."
+msgstr "Utente non trovato."
 
 #: functions/login/zume-login.php:280 functions/login/zume-login.php:406
 msgid "You are missing your sign-in token. Try signing in again."
-msgstr "You are missing your sign-in token. Try signing in again."
+msgstr "Token per il login mancante, si prega di riprovare."
 
 #: functions/login/zume-login.php:290 functions/login/zume-login.php:416
 msgid "Failed to connect with Facebook. Try again."
-msgstr "Failed to connect with Facebook. Try again."
+msgstr "Connessione a Facebook fallita. Riprovare."
 
 #: functions/login/zume-login.php:309 functions/login/zume-login.php:432
 msgid "Facebook user lookup error. Sorry for the inconvenience."
-msgstr "Facebook user lookup error. Sorry for the inconvenience."
+msgstr "Errore nella ricerca dell'utente Facebook spiacenti per l'inconveniente."
 
 #: functions/login/zume-login.php:312 functions/login/zume-login.php:435
 msgid "Error with looking up user with Facebook. Sorry for the inconvenience."
-msgstr "Error with looking up user with Facebook. Sorry for the inconvenience."
+msgstr "Errore nella ricerca dell'utente Facebook spiacenti per l'inconveniente."
 
 #: functions/login/zume-login.php:536
 msgid "There are some errors in your form."
-msgstr "There are some errors in your form."
+msgstr "Ci sono errori nel modulo."
 
 #: functions/login/zume-login.php:541 template-zume-dashboard.php:1122
 #: template-zume-dashboard.php:1173 template-zume-login.php:365
@@ -158,19 +158,19 @@ msgstr "Email"
 
 #: functions/login/zume-login.php:545 template-zume-login.php:253
 msgid "Password Required"
-msgstr "Password Required"
+msgstr "É richesta la Password"
 
 #: functions/login/zume-login.php:548 template-zume-login.php:256
 msgid "Password required"
-msgstr "Password required"
+msgstr "É richesta la password"
 
 #: functions/login/zume-login.php:554 template-zume-login.php:263
 msgid "Re-enter Password"
-msgstr "Re-enter Password"
+msgstr "Reinserire la Password"
 
 #: functions/login/zume-login.php:557 template-zume-login.php:266
 msgid "Passwords do not match. Please, try again."
-msgstr "Passwords do not match. Please, try again."
+msgstr "Le password non coincidono si prega di reprovare."
 
 #: functions/login/zume-login.php:566
 #: functions/zume-polylang-integration.php:149 template-zume-login.php:501
@@ -179,27 +179,27 @@ msgstr "Registrati"
 
 #: functions/login/zume-login.php:609
 msgid "Missing captcha response. How did you do that?"
-msgstr "Missing captcha response. How did you do that?"
+msgstr "Risposta al captcha mancante. Si prega di riprovare."
 
 #: functions/login/zume-login.php:622
 msgid "Captcha failure. Try again, if you are human."
-msgstr "Captcha failure. Try again, if you are human."
+msgstr "Risposta al captcha mancante. Si prega di riprovare."
 
 #: functions/login/zume-login.php:628
 msgid "Missing email or password."
-msgstr "Missing email or password."
+msgstr "Email o password mancanti."
 
 #: functions/login/zume-login.php:647
 msgid "Sorry. This email is already registered."
-msgstr "Sorry. This email is already registered."
+msgstr "Spiacenti, ma questa email è giá registrata."
 
 #: functions/login/zume-login.php:658
 msgid "Something went wrong. Sorry. Could you try again?"
-msgstr "Something went wrong. Sorry. Could you try again?"
+msgstr "Spiacenti, c'è state un imprevisto. Si prega di riprovare."
 
 #: functions/login/zume-login.php:680
 msgid "No new user found."
-msgstr "No new user found."
+msgstr "Utente non trovato."
 
 #: functions/login/zume-login.php:736 functions/login/zume-login.php:787
 msgid "Google"
@@ -215,19 +215,19 @@ msgstr "Facebook"
 
 #: functions/login/zume-login.php:1157
 msgid "Missing username or email address."
-msgstr "Missing username or email address."
+msgstr "Nome utente o email mancanti."
 
 #: functions/login/zume-login.php:1163
 msgid "ERROR: Enter a username or email address."
-msgstr "ERROR: Enter a username or email address."
+msgstr "ERRORE: Inserire nome utente o email."
 
 #: functions/login/zume-login.php:1167
 msgid "ERROR: There is no user registered with that email address."
-msgstr "ERROR: There is no user registered with that email address."
+msgstr "ERROR: Nome utente non registrato con quel l'indirizzo email."
 
 #: functions/login/zume-login.php:1172
 msgid "ERROR: There is no user registered with that username."
-msgstr "ERROR: There is no user registered with that username."
+msgstr "ERRORE: Nome utente o email non validi."
 
 #: functions/login/zume-login.php:1192
 msgid "<strong>ERROR</strong>: Invalid username or email."
@@ -235,12 +235,12 @@ msgstr "<strong>ERROR</strong>: Invalid username or email."
 
 #: functions/login/zume-login.php:1217
 msgid "Someone has requested a password reset for the following account:"
-msgstr "Someone has requested a password reset for the following account:"
+msgstr "É stato richiesto il reset della password per il seguente account email."
 
 #. translators: %s: site name
 #: functions/login/zume-login.php:1219
 msgid "Site Name: %s"
-msgstr "Site Name: %s"
+msgstr "Nome del sito:%s"
 
 #. translators: %s: user login
 #: functions/login/zume-login.php:1221
@@ -249,24 +249,24 @@ msgstr "Username: %s"
 
 #: functions/login/zume-login.php:1222
 msgid "If this was a mistake, just ignore this email and nothing will happen."
-msgstr "If this was a mistake, just ignore this email and nothing will happen."
+msgstr "In caso di errore, ignorare questa email per lasciare tutto invariato."
 
 #: functions/login/zume-login.php:1223
 msgid "To reset your password, visit the following address:"
-msgstr "To reset your password, visit the following address:"
+msgstr "Per effettuare il reset della password, visitare il seguente sito."
 
 #. translators: Password reset email subject. %s: Site name
 #: functions/login/zume-login.php:1227
 msgid "[%s] Password Reset"
-msgstr "[%s] Password Reset"
+msgstr "Reset passaword"
 
 #: functions/login/zume-login.php:1257
 msgid "The email could not be sent."
-msgstr "The email could not be sent."
+msgstr "L'email non è stata spedita."
 
 #: functions/login/zume-login.php:1257
 msgid "Possible reason: your host may have disabled the mail() function."
-msgstr "Possible reason: your host may have disabled the mail() function."
+msgstr "Possibili motivi: l'host potrebbe aver disabilitato le funzioni email."
 
 #: functions/post-types/pdf-download-post-type.php:131
 #: functions/post-types/pdf-download-post-type.php:132
@@ -392,7 +392,7 @@ msgstr "Ultimo"
 
 #: functions/zume-course.php:179
 msgid "( Key not available. Check dashboard. )"
-msgstr "( Tasto non disponibile. Controllare la dashboard. )"
+msgstr "( Tasto non disponibile. Controllare la bacheca. )"
 
 #: functions/zume-course.php:198
 msgid "Session"
@@ -679,7 +679,7 @@ msgstr "BENTORNATI!"
 
 #: functions/zume-course.php:824
 msgid "DOWNLOAD"
-msgstr "Download"
+msgstr "DOWNLOAD"
 
 #: functions/zume-course.php:826
 msgid "Does everyone have a printed copy of the Zúme Guidebook? If not, please be sure that someone can download the Guidebook and that everyone has access to some paper and a pen or pencil."
@@ -2471,7 +2471,7 @@ msgstr "attivare"
 
 #: template-zume-dashboard.php:488
 msgid "Get a Coach"
-msgstr "Get a Coach"
+msgstr "Richiedi un Coach"
 
 #: template-zume-dashboard.php:500
 msgid "Join me on the Zúme Project"
@@ -2594,68 +2594,68 @@ msgstr "Rimuovi"
 
 #: template-zume-dashboard.php:1051
 msgid "Connect Me to a Coach"
-msgstr "Connect Me to a Coach"
+msgstr "Connettimi ad un Coach"
 
 #: template-zume-dashboard.php:1063
 msgid "Coaches"
-msgstr "Coaches"
+msgstr "Tutor"
 
 #: template-zume-dashboard.php:1064
 msgid "Our network of volunteer coaches are people like you, people who are passionate about loving God, loving others, and obeying the Great Commission."
-msgstr "Our network of volunteer coaches are people like you, people who are passionate about loving God, loving others, and obeying the Great Commission."
+msgstr "Il nostro network di couch è formato da voluntary, persona come te che am"
 
 #: template-zume-dashboard.php:1069
 msgid "Advocates"
-msgstr "Advocates"
+msgstr "Sostenitori"
 
 #: template-zume-dashboard.php:1070
 msgid "A coach is someone who will come alongside you as you implement the Zúme tools and training."
-msgstr "A coach is someone who will come alongside you as you implement the Zúme tools and training."
+msgstr "Un coach è qualcuno che ti affianca per aiutarti ad utilizzare gli strumenti del corso Zù"
 
 #: template-zume-dashboard.php:1075
 msgid "Local"
-msgstr "Local"
+msgstr "Territorio"
 
 #: template-zume-dashboard.php:1076
 msgid "On submitting this request, we will do our best to connect you with a coach near you."
-msgstr "On submitting this request, we will do our best to connect you with a coach near you."
+msgstr "Alla ricezione della presente richiesta faremo del nostro meglio nel mettervi in contatto con il coach a voi più vicino."
 
 #: template-zume-dashboard.php:1081
 msgid "It's Free"
-msgstr "It's Free"
+msgstr "È Gratis"
 
 #: template-zume-dashboard.php:1082
 msgid "Coaching is free. You can opt out at any time."
-msgstr "Coaching is free. You can opt out at any time."
+msgstr "Coaching è gratis e potrete rinunciare in qualsiasi momento."
 
 #: template-zume-dashboard.php:1092 template-zume-profile.php:63
 msgid "Name"
-msgstr "Name"
+msgstr "Nome"
 
 #: template-zume-dashboard.php:1096 template-zume-dashboard.php:1097
 #: template-zume-profile.php:67 template-zume-profile.php:68
 msgid "First and last name"
-msgstr "First and last name"
+msgstr "Nome e cognome"
 
 #: template-zume-dashboard.php:1135
 msgid "Email is required."
-msgstr "Email is required."
+msgstr "È necessaria l'email."
 
 #: template-zume-dashboard.php:1143
 msgid "City"
-msgstr "City"
+msgstr "Città"
 
 #: template-zume-dashboard.php:1168
 msgid "How should we contact you?"
-msgstr "How should we contact you?"
+msgstr "Come possiamo contattarti?"
 
 #: template-zume-dashboard.php:1175
 msgid "Text"
-msgstr "Text"
+msgstr "Testo"
 
 #: template-zume-dashboard.php:1177
 msgid "Phone"
-msgstr "Phone"
+msgstr "Telefono"
 
 #: template-zume-dashboard.php:1179
 msgid "WhatsApp"
@@ -2663,7 +2663,7 @@ msgstr "WhatsApp"
 
 #: template-zume-dashboard.php:1181
 msgid "Other"
-msgstr "Other"
+msgstr "Altro"
 
 #: template-zume-dashboard.php:1188 template-zume-profile.php:180
 msgid "Affiliation Key"
@@ -2671,7 +2671,7 @@ msgstr "Codice di appartenenza"
 
 #: template-zume-dashboard.php:1230
 msgid "Thank you. You have already requested a coach connection."
-msgstr "Thank you. You have already requested a coach connection."
+msgstr "Hai già richiesto di metterti in contatto con un coach. Grazie."
 
 #: template-zume-faq.php:20
 msgid "Zúme FAQs"
@@ -2859,35 +2859,35 @@ msgstr "Non in questo momento. Suggeriamo che ogni membro del voto gruppo crei u
 
 #: template-zume-login.php:73
 msgid "Your password reset link appears to be invalid. Please request a new link below."
-msgstr "Your password reset link appears to be invalid. Please request a new link below."
+msgstr "Il link per il reset della password non è valido. Si prega di richiedere un nuovo link qui sotto."
 
 #: template-zume-login.php:75
 msgid "Your password reset link has expired. Please request a new link below."
-msgstr "Your password reset link has expired. Please request a new link below."
+msgstr "Il link per il reset della password è scaduto. Si prega di richiedere un nuovo link qui sotto."
 
 #: template-zume-login.php:108 template-zume-login.php:485
 msgid "Email Address"
-msgstr "Email Address"
+msgstr "indirizzo email"
 
 #: template-zume-login.php:119
 msgid "Get New Password"
-msgstr "Get New Password"
+msgstr "Ricevi una nuova password"
 
 #: template-zume-login.php:175
 msgid "The passwords do not match."
-msgstr "The passwords do not match."
+msgstr "Le password non coincidono."
 
 #: template-zume-login.php:286
 msgid "Reset Password"
-msgstr "Reset Password"
+msgstr "Reset della Password"
 
 #: template-zume-login.php:346
 msgid "Let's get started."
-msgstr "Let's get started."
+msgstr "Iniziamo."
 
 #: template-zume-login.php:348
 msgid "Sign up using:"
-msgstr "Sign up using:"
+msgstr "Registrarsi usando:"
 
 #: template-zume-login.php:395 template-zume-login.php:503
 msgid "Lost your password?"
@@ -2895,19 +2895,19 @@ msgstr "Password dimenticata?"
 
 #: template-zume-login.php:412
 msgid "Invalid request."
-msgstr "Invalid request."
+msgstr "Richiesta non valida."
 
 #: template-zume-login.php:421
 msgid "Invalid key"
-msgstr "Invalid key"
+msgstr "Chiave non valida"
 
 #: template-zume-login.php:443
 msgid "User action confirmed."
-msgstr "User action confirmed."
+msgstr "Azione dell'utente confermata."
 
 #: template-zume-login.php:460
 msgid "Sign in using:"
-msgstr "Sign in using:"
+msgstr "Accedere usando:"
 
 #: template-zume-overview.php:71 template-zume-overview.php:84
 msgid "Sessions Overview"
@@ -3102,7 +3102,7 @@ msgstr "GRUPPI DI MENTORI ALLA PARI- Dividetevi in gruppi di due o tre e lavorat
 
 #: template-zume-privacy-policy.php:22
 msgid "Zúme Privacy Policy"
-msgstr "Zúme Privacy Policy"
+msgstr "Informative sulla Riservatezza"
 
 #: template-zume-privacy-policy.php:32
 msgid "This privacy policy has been compiled to better serve those who are concerned with how their \"Personally Identifiable Information\" (PII) is being used online. PII, as described in US privacy law and information security, is information that can be used on its own or with other information to identify, contact, or locate a single person, or to identify an individual in context. Please read our privacy policy carefully to get a clear understanding of how we collect, use, protect or otherwise handle your Personally Identifiable Information in accordance with our website."
@@ -3114,15 +3114,15 @@ msgstr "What permissions do the social sign-on logins ask for?"
 
 #: template-zume-privacy-policy.php:41
 msgid "Public Profile. This includes certain User’s Data such as id, name, picture, gender, and their locale."
-msgstr "Public Profile. This includes certain User’s Data such as id, name, picture, gender, and their locale."
+msgstr "Profilo pubblico. Esso include alcuni dati dell'utente come ?, nome, foto, sesso, città."
 
 #: template-zume-privacy-policy.php:44
 msgid "Email Address."
-msgstr "Email Address."
+msgstr "Indirizzo email."
 
 #: template-zume-privacy-policy.php:52
 msgid "What personal information do we collect from the people through our website?"
-msgstr "What personal information do we collect from the people through our website?"
+msgstr "Quali informazioni personali raccogliamo dalle persone tramite il nostro sito?"
 
 #: template-zume-privacy-policy.php:55
 msgid "Information in the Basic Social Profile (if used) and email."
@@ -3130,51 +3130,51 @@ msgstr "Information in the Basic Social Profile (if used) and email."
 
 #: template-zume-privacy-policy.php:58
 msgid "Session and course activity."
-msgstr "Session and course activity."
+msgstr "Sessione e attività del corso."
 
 #: template-zume-privacy-policy.php:61
 msgid "General location telemetry, so we know in what countries our training is being used."
-msgstr "General location telemetry, so we know in what countries our training is being used."
+msgstr "Telemetria di localizzazione generale per sapere in quali paesi è stata usata questa formazione."
 
 #: template-zume-privacy-policy.php:69
 msgid "When do we collect information?"
-msgstr "When do we collect information?"
+msgstr "Quando raccogliamo informazioni?"
 
 #: template-zume-privacy-policy.php:72
 msgid "We collect your information at login."
-msgstr "We collect your information at login."
+msgstr "Raccogliamo le tue informazioni all'accesso."
 
 #: template-zume-privacy-policy.php:75
 msgid "We also track your progress through the training course."
-msgstr "We also track your progress through the training course."
+msgstr "Tracciamo anche il tuo progresso tramite la formazione."
 
 #: template-zume-privacy-policy.php:83
 msgid "How do we use your information?"
-msgstr "How do we use your information?"
+msgstr "Come usiamo le tue informazioni?"
 
 #: template-zume-privacy-policy.php:86
 msgid "We use your information to create a user account in the zume system based on your email address."
-msgstr "We use your information to create a user account in the zume system based on your email address."
+msgstr "Usiamo le tue informazioni per creare un account utente nel sistema Zùme in base all'indirizzo email fornito."
 
 #: template-zume-privacy-policy.php:89
 msgid "We will email you with basic transactional emails like password reset requests and other system notifications."
-msgstr "We will email you with basic transactional emails like password reset requests and other system notifications."
+msgstr "Ti invieremo delle email tramite messaggi di transazione base come richiesta reset password o altre notifiche di sistema."
 
 #: template-zume-privacy-policy.php:92
 msgid "We email occasional reminders and encouragements depending on your progress through the training."
-msgstr "We email occasional reminders and encouragements depending on your progress through the training."
+msgstr "Invieremo di tanto in tanto qualche promemoria e incoraggiamento sulla base dei tuoi progressi nella formazione."
 
 #: template-zume-privacy-policy.php:100
 msgid "How do we protect your information?"
-msgstr "How do we protect your information?"
+msgstr "Come proteggiamo le tue informazioni?"
 
 #: template-zume-privacy-policy.php:102
 msgid "While we use encryption to protect sensitive information transmitted online, we also protect your information offline. Only team members who need the information to perform a specific job (for example, web administrator or customer service) are granted access to personally identifiable information."
-msgstr "While we use encryption to protect sensitive information transmitted online, we also protect your information offline. Only team members who need the information to perform a specific job (for example, web administrator or customer service) are granted access to personally identifiable information."
+msgstr "Usiamo il criptaggio per proteggere le informazioni sensibili trasmesse online, ma  proteggiamo anche quelle offline. Solo ai membri del team che hanno bisogno di informazioni per compiere un'azione specifica (per esempio l'amministratore del sito o l'addetto al servizio clienti) è autorizzato l'accesso ad informazioni personalmente identificabili."
 
 #: template-zume-privacy-policy.php:105
 msgid "Your personal information is contained behind secured networks and is only accessible by a limited number of persons who have special access rights to such systems, and are required to keep the information confidential. In addition, all sensitive/credit information you supply is encrypted via Secure Socket Layer (SSL) technology."
-msgstr "Your personal information is contained behind secured networks and is only accessible by a limited number of persons who have special access rights to such systems, and are required to keep the information confidential. In addition, all sensitive/credit information you supply is encrypted via Secure Socket Layer (SSL) technology."
+msgstr "Le tue informazioni personali sono contenute in reti sicure e sono accessibili solo ad un numero limitato di persone che hanno un accesso speciale a tali sistemi richiesto per mantenere la riservatezza delle informazioni. Inoltre tutte le informazioni sensibili da voi fornite sono criptate da una tecnologia...."
 
 #: template-zume-privacy-policy.php:108
 msgid "We implement a variety of security measures when a user submits, or accesses their information to maintain the safety of your personal information."
@@ -3182,7 +3182,7 @@ msgstr "We implement a variety of security measures when a user submits, or acce
 
 #: template-zume-privacy-policy.php:115
 msgid "Do we use \"cookies\"?"
-msgstr "Do we use \"cookies\"?"
+msgstr "Usiamo \"cookies\"?"
 
 #: template-zume-privacy-policy.php:117
 msgid "Any use of Cookies - or of other tracking tools - by this Application or by the owners of third party services used by this Application, unless stated otherwise, serves to identify Users and remember their preferences, for the sole purpose of providing the service required by the User."
@@ -3190,39 +3190,39 @@ msgstr "Any use of Cookies - or of other tracking tools - by this Application or
 
 #: template-zume-privacy-policy.php:120
 msgid "Personal Data collected: name, email."
-msgstr "Personal Data collected: name, email."
+msgstr "Dati personali raccolti: nome, email."
 
 #: template-zume-privacy-policy.php:127
 msgid "Your Access to and Control Over Information."
-msgstr "Your Access to and Control Over Information."
+msgstr "Accesso e controllo delle tue informazioni."
 
 #: template-zume-privacy-policy.php:129
 msgid "You may opt out of any future contact from us at any time. You can do the following at any time by contacting us via our contact email address:"
-msgstr "You may opt out of any future contact from us at any time. You can do the following at any time by contacting us via our contact email address:"
+msgstr "Puoi rifiutare qualunque contatto nostro in qualsiasi momento. Puoi farlo "
 
 #: template-zume-privacy-policy.php:132
 msgid "See what data we have about you, if any."
-msgstr "See what data we have about you, if any."
+msgstr "Verificare quali dati tuoi sono in nostro possesso."
 
 #: template-zume-privacy-policy.php:136
 msgid "Change/correct any data we have about you."
-msgstr "Change/correct any data we have about you."
+msgstr "Cambiare/correggere dati che sono in nostro possesso."
 
 #: template-zume-privacy-policy.php:139
 msgid "Have us delete any data we have about you."
-msgstr "Have us delete any data we have about you."
+msgstr "Permettici di cancellare i tuoi dati in nostro possesso."
 
 #: template-zume-privacy-policy.php:142
 msgid "Express any concern you have about our use of your data."
-msgstr "Express any concern you have about our use of your data."
+msgstr "Esprimi qualsiasi timore riguardo all'utilizzo dei tuoi dati."
 
 #: template-zume-privacy-policy.php:150
 msgid "Updates"
-msgstr "Updates"
+msgstr "Aggiornamenti"
 
 #: template-zume-privacy-policy.php:152
 msgid "Our Privacy Policy may change from time to time and all updates will be posted on this page."
-msgstr "Our Privacy Policy may change from time to time and all updates will be posted on this page."
+msgstr "L'informativa sulla privacy potrebbe subire dei cambiamenti di tanto in tanto, tutti gli aggiornamenti saranno pubblicati su questa pagina."
 
 #: template-zume-profile.php:31
 msgid "Your Profile"
@@ -3234,19 +3234,19 @@ msgstr "modifica immagine @ gravatar.com"
 
 #: template-zume-profile.php:96
 msgid "Your City"
-msgstr "Your City"
+msgstr "La tua città"
 
 #: template-zume-profile.php:147
 msgid "Linked Facebook Account"
-msgstr "Linked Facebook Account"
+msgstr "Account Facebook collegato"
 
 #: template-zume-profile.php:154 template-zume-profile.php:170
 msgid "Unlink"
-msgstr "Unlink"
+msgstr "Scollegare"
 
 #: template-zume-profile.php:163
 msgid "Linked Google Account"
-msgstr "Linked Google Account"
+msgstr "Account Google collegato"
 
 #: template-zume-progress.php:23
 msgid "Phase 1"
@@ -3326,7 +3326,7 @@ msgstr "Risorse Zume"
 #. Template Name of the plugin/theme
 #: 
 msgid "Zume Privacy Policy"
-msgstr "Zume Privacy Policy"
+msgstr "Informativa sulla privacy Zùme"
 
 #. Template Name of the plugin/theme
 #: 
@@ -3370,11 +3370,11 @@ msgstr "Corso Zúme"
 
 #: functions/login/zume-login.php:1303
 msgid "Password reset is not allowed for this user"
-msgstr "Password reset is not allowed for this user"
+msgstr "Reset passaword non concessa a questo utente"
 
 #: functions/login/zume-login.php:1330
 msgid "Could not save password reset key to database."
-msgstr "Could not save password reset key to database"
+msgstr "Non è stato possibile salvare la chiave di reset passaword nel database"
 
 #: functions/restrict-rest-api.php:71
 msgid "The Wordpress built in API is disabled."
@@ -3382,19 +3382,19 @@ msgstr "The Wordpress built in API is disabled"
 
 #: functions/zume-course.php:2417
 msgid "Listen and Practice (75 min)"
-msgstr "Listen and Practice (75 min)"
+msgstr "Ascoltare e Praticare (75 min)"
 
 #: functions/zume-course.php:2429
 msgid "A 3/3 Group is a way for followers of Jesus to meet, pray, learn, grow, fellowship, and practice obeying and sharing what they've learned. In this way, a 3/3 Group is not just a small group but a Simple Church."
-msgstr "A 3/3 Group is a way for followers of Jesus to meet, pray, learn, grow, fellowship, and practice obeying and sharing what they've learned. In this way, a 3/3 Group is not just a small group but a Simple Church."
+msgstr "copiare"
 
 #: functions/zume-course.php:2432
 msgid "In the following video, you’ll be coached through an interactive 3/3 Group where you’ll learn a principle and then “press pause” and practice it with the group."
-msgstr "In the following video, you'll be coached through an interactive 3/3 Group where you'll learn a principle and then \"press pause\" and practice it with the group. "
+msgstr "Nel video seguente sarai formato attraverso un Gruppo 3/3 interattivo dove imparerai un principio da praticare con il gruppo dopo aver premuto su pausa."
 
 #: functions/zume-course.php:2443
 msgid "Find the \"3/3 Group Format\" section in your Zúme Guidebook, and watch the video below."
-msgstr "Find the \"3/3 Group Format\" section in your Zúme Guidebook, and watch the video."
+msgstr "Ricerca la sezione \"Format del Gruppo 3/3\" nel manuale Zùme e guarda il video."
 
 #: functions/zume-course.php:3481
 msgid "Assess yourself using the coaching checklist."
@@ -3402,23 +3402,23 @@ msgstr "Assess yourself using the coaching checklist."
 
 #: template-zume-faq.php:121
 msgid "The second phase focuses on coaching these Phase 1 churches through the reproduction process, as well as delivering the project in other major world languages. The project will start in the following languages: Amharic, Arabic, Bengali, Bhojpuri, Burmese, Chinese (Mandarin), Chinese (Cantonese), Farsi, French, German, Gujarati, Hausa, Hindi, Indonesian, Italian, Japanese, Kannada, Korean, Kurdish, Lao, Maithili, Malayalam, Marathi, Oriya, Panjabi (Eastern), Panjabi (Western), Portuguese, Russian, Somali, Spanish, Swahili, Tamil, Telugu, Thai, Turkish, Urdu, Vietnamese, Yoruba."
-msgstr "The second phase focuses on coaching these Phase 1 churches through the reproduction process, as well as delivering the project in other major world languages. The project will start in the following languages: Amharic, Arabic, Bengali, Bhojpuri, Burmese, Chinese (Mandarin), Chinese (Cantonese), Farsi, French, German, Gujarati, Hausa, Hindi, Indonesian, Italian, Japanese, Kannada, Korean, Kurdish, Lao, Maithili, Malayalam, Marathi, Oriya, Panjabi (Eastern), Panjabi (Western), Portuguese, Russian, Somali, Spanish, Swahili, Tamil, Telugu, Thai, Turkish, Urdu, Vietnamese, Yoruba."
+msgstr "copiare"
 
 #: template-zume-faq.php:140
 msgid "The project will start in the following languages and made available to those wishing to translate the training and tools into additional languages: Amharic, Arabic, Bengali, Bhojpuri, Burmese, Chinese (Mandarin), Chinese (Cantonese), Farsi, French, German, Gujarati, Hausa, Hindi, Indonesian, Italian, Japanese, Kannada, Korean, Kurdish, Lao, Maithili, Malayalam, Marathi, Oriya, Panjabi (Eastern), Panjabi (Western), Portuguese, Russian, Somali, Spanish, Swahili, Tamil, Telugu, Thai, Turkish, Urdu, Vietnamese, Yoruba."
-msgstr "The project will start in the following languages and made available to those wishing to translate the training and tools into additional languages: Amharic, Arabic, Bengali, Bhojpuri, Burmese, Chinese (Mandarin), Chinese (Cantonese), Farsi, French, German, Gujarati, Hausa, Hindi, Indonesian, Italian, Japanese, Kannada, Korean, Kurdish, Lao, Maithili, Malayalam, Marathi, Oriya, Panjabi (Eastern), Panjabi (Western), Portuguese, Russian, Somali, Spanish, Swahili, Tamil, Telugu, Thai, Turkish, Urdu, Vietnamese, Yoruba."
+msgstr "copiare"
 
 #: template-zume-faq.php:141
 msgid "To see the most updated progress go to "
-msgstr "To see the most updated progress go to"
+msgstr "Per visualizzare gli aggiornamenti principali, andare su"
 
 #: template-zume-faq.php:142
 msgid "Language Translation Progress."
-msgstr "Language Translation Progress."
+msgstr "copiare"
 
 #: template-zume-privacy-policy.php:132
 msgid "See what data we've aggregated from your activities with us."
-msgstr "See what data we've aggregated from your activities with us."
+msgstr "Verifica quali dati abbiamo riunito dalle tue attività con noi."
 
 #. Template Name of the plugin/theme
 #: 
