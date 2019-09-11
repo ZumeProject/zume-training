@@ -275,7 +275,7 @@ function zume_images_uri( $sub_folder = '' ) {
 }
 
 function zume_files_uri() {
-    return site_url( '/wp-content/themes/zume-project-multilingual/downloads/' ) . zume_current_language() . '/';
+    return 'https://storage.googleapis.com/zume-file-mirror/' . zume_current_language() . '/';
 }
 
 function zume_home_id() {
