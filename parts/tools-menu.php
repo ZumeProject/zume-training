@@ -12,7 +12,7 @@
                     <li class="li-section"><strong>Becoming a Disciple</strong>
                         <ul>
                             <li><a href="#">Ordinary People, Big Impact</a></li>
-                            <li><a href="#">Producers vs. Consumers</a></li>
+                            <li><a href="/producers-vs-consumers/">Producers vs. Consumers</a></li>
                             <li><a href="#">Faithfulness</a></li>
                             <li><a href="#">S.O.A.P.S.</a></li>
                             <li><a href="#">Spiritual Breathing</a></li>
@@ -31,7 +31,7 @@
                             <li><a href="#">Spiritual Economy</a></li>
                             <li><a href="#">Prayer Walking</a></li>
                             <li><a href="#">BLESS Prayer</a></li>
-                            <li><a href="#">Person of Peace</a></li>
+                            <li><a href="/person-of-peace">Person of Peace</a></li>
                             <li><a href="#">List of 100</a></li>
                             <li><a href="#">Gospel</a></li>
                             <li><a href="#">Testimony</a></li>
