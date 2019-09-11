@@ -162,7 +162,8 @@ class Zume_Course {
         if ( 'video_overview' == $meta_key ) {
             return $video_id;
         }
-        return trailingslashit( get_stylesheet_directory_uri() ) . 'downloads/' . $current_lang . '/' . $video_id;
+//        return trailingslashit( get_stylesheet_directory_uri() ) . 'downloads/' . $current_lang . '/' . $video_id;
+        return 'https://storage.googleapis.com/zume-file-mirror/' . $current_lang . '/' . $video_id;
     }
 
     public static function get_group_public_key( $zume_group_key ) {
@@ -371,7 +372,7 @@ class Zume_Course_Content {
                     <p>
                         <a class="button large text-uppercase"
                            href="<?php echo esc_url( Zume_Course::get_download_by_key( '33' ) ) ?>"
-                           target="_blank" rel="noopener noreferrer">
+                           target="_blank" rel="noopener noreferrer nofollow">
                             <?php esc_html_e( 'Download Guidebook', 'zume' ) ?>
                         </a>
                     </p>
@@ -438,7 +439,7 @@ class Zume_Course_Content {
 
                     <p class="center hide-for-small-only">
                         <a href="<?php echo esc_url( Zume_Course::get_download_by_key( '34' ) ) ?>"
-                           target="_blank" rel="noopener noreferrer"><img
+                           target="_blank" rel="noopener noreferrer nofollow"><img
                                 src="<?php echo esc_url( zume_images_uri( 'course' ) ) ?>download-icon-150x150.png"
                                 alt=""
                                 width="35" height="35" class="alignnone size-thumbnail wp-image-3274"
@@ -492,7 +493,7 @@ class Zume_Course_Content {
 
                     <p class="center hide-for-small-only"><a
                             href="<?php echo esc_url( Zume_Course::get_download_by_key( '35' ) ) ?>"
-                            target="_blank" rel="noopener noreferrer"><img
+                            target="_blank" rel="noopener noreferrer nofollow"><img
                                 src="<?php echo esc_url( zume_images_uri( 'course' ) ) ?>download-icon-150x150.png"
                                 alt=""
                                 width="35" height="35" class="alignnone size-thumbnail wp-image-3274"
@@ -554,7 +555,7 @@ class Zume_Course_Content {
 
                     <p class="center hide-for-small-only"><a
                             href="<?php echo esc_url( Zume_Course::get_download_by_key( '36' ) ) ?>"
-                            target="_blank" rel="noopener noreferrer"><img
+                            target="_blank" rel="noopener noreferrer nofollow"><img
                                 src="<?php echo esc_url( zume_images_uri( 'course' ) ) ?>download-icon-150x150.png"
                                 alt=""
                                 width="35" height="35" class="alignnone size-thumbnail wp-image-3274"
@@ -631,7 +632,7 @@ class Zume_Course_Content {
                     <?php endif; ?>
 
                     <p class="center hide-for-small-only"><a href="<?php echo esc_url( Zume_Course::get_download_by_key( '37' ) ) ?>"
-                                                             target="_blank" rel="noopener noreferrer"><img
+                                                             target="_blank" rel="noopener noreferrer nofollow"><img
                                 src="<?php echo esc_url( zume_images_uri( 'course' ) ) ?>download-icon-150x150.png"
                                 alt=""
                                 width="35" height="35" class="alignnone size-thumbnail wp-image-3274"
@@ -697,7 +698,7 @@ class Zume_Course_Content {
 
                     <p class="center hide-for-small-only"><a
                             href="<?php echo esc_url( Zume_Course::get_download_by_key( '38' ) ) ?>"
-                            target="_blank" rel="noopener noreferrer"><img
+                            target="_blank" rel="noopener noreferrer nofollow"><img
                                 src="<?php echo esc_url( zume_images_uri( 'course' ) ) ?>download-icon-150x150.png"
                                 alt=""
                                 width="35" height="35" class="alignnone size-thumbnail wp-image-3274"
@@ -730,7 +731,7 @@ class Zume_Course_Content {
                     <?php esc_html_e( 'Spend the next 45 minutes working together through Accountability Questions – List 2 in the "Accountability Groups" section of your', 'zume' ) ?>
                     <a class="btn btn-large next-step zume-purple uppercase bg-white font-zume-purple big-btn btn-wide"
                        href="<?php echo esc_url( Zume_Course::get_download_by_key( '33' ) ) ?>"
-                       target="_blank" rel="noopener noreferrer"><i
+                       target="_blank" rel="noopener noreferrer nofollow"><i
                             class="glyphicon glyphicon-download-alt"></i> <?php esc_html_e( 'Zúme Guidebook', 'zume' ) ?></a>.
 
                 </div>
@@ -829,7 +830,7 @@ class Zume_Course_Content {
                     <p>
                         <a class="button large text-uppercase"
                            href="<?php echo esc_url( Zume_Course::get_download_by_key( '33' ) ) ?>"
-                           target="_blank" rel="noopener noreferrer">
+                           target="_blank" rel="noopener noreferrer nofollow">
                             <?php esc_html_e( 'DOWNLOAD GUIDEBOOK', 'zume' ) ?>
                         </a>
                     </p>
@@ -905,7 +906,7 @@ class Zume_Course_Content {
 
                     <p class="center hide-for-small-only"><a
                             href="<?php echo esc_url( Zume_Course::get_download_by_key( '39' ) ) ?>"
-                            target="_blank" rel="noopener noreferrer"><img
+                            target="_blank" rel="noopener noreferrer nofollow"><img
                                 src="<?php echo esc_url( zume_images_uri( 'course' ) ) ?>download-icon-150x150.png"
                                 alt=""
                                 width="35" height="35" class="alignnone size-thumbnail wp-image-3274"
@@ -980,7 +981,7 @@ class Zume_Course_Content {
 
                     <p class="center hide-for-small-only"><a
                             href="<?php echo esc_url( Zume_Course::get_download_by_key( '40' ) ) ?>"
-                            target="_blank" rel="noopener noreferrer"><img
+                            target="_blank" rel="noopener noreferrer nofollow"><img
                                 src="<?php echo esc_url( zume_images_uri( 'course' ) ) ?>download-icon-150x150.png"
                                 alt=""
                                 width="35" height="35" class="alignnone size-thumbnail wp-image-3274"
@@ -1089,7 +1090,7 @@ class Zume_Course_Content {
 
                     <p class="center hide-for-small-only"><a
                             href="<?php echo esc_url( Zume_Course::get_download_by_key( '41' ) ) ?>"
-                            target="_blank" rel="noopener noreferrer"><img
+                            target="_blank" rel="noopener noreferrer nofollow"><img
                                 src="<?php echo esc_url( zume_images_uri( 'course' ) ) ?>download-icon-150x150.png"
                                 alt=""
                                 width="35" height="35" class="alignnone size-thumbnail wp-image-3274"
@@ -1274,7 +1275,7 @@ class Zume_Course_Content {
                         </iframe>
                     <?php endif; ?>
 
-                    <p class="center hide-for-small-only"><a target="_blank" rel="noopener noreferrer"
+                    <p class="center hide-for-small-only"><a target="_blank" rel="noopener noreferrer nofollow"
                                                              href="<?php echo esc_url( Zume_Course::get_download_by_key( '42' ) ) ?>"><img
                                 src="<?php echo esc_url( zume_images_uri( 'course' ) ) ?>download-icon-150x150.png"
                                 alt=""
@@ -1370,7 +1371,7 @@ class Zume_Course_Content {
                         </iframe>
                     <?php endif; ?>
 
-                    <p class="center hide-for-small-only"><a target="_blank" rel="noopener noreferrer"
+                    <p class="center hide-for-small-only"><a target="_blank" rel="noopener noreferrer nofollow"
                                                              href="<?php echo esc_url( Zume_Course::get_download_by_key( '43' ) ) ?>"><img
                                 src="<?php echo esc_url( zume_images_uri( 'course' ) ) ?>download-icon-150x150.png"
                                 alt=""
@@ -1470,7 +1471,7 @@ class Zume_Course_Content {
                         </iframe>
                     <?php endif; ?>
 
-                    <p class="center hide-for-small-only"><a target="_blank" rel="noopener noreferrer"
+                    <p class="center hide-for-small-only"><a target="_blank" rel="noopener noreferrer nofollow"
                                                              href="<?php echo esc_url( Zume_Course::get_download_by_key( '44' ) ) ?>"><img
                                 src="<?php echo esc_url( zume_images_uri( 'course' ) ) ?>download-icon-150x150.png"
                                 alt=""
@@ -1690,7 +1691,7 @@ class Zume_Course_Content {
 
                     <p class="center hide-for-small-only"><a
                             href="<?php echo esc_url( Zume_Course::get_download_by_key( '45' ) ) ?>"
-                            target="_blank" rel="noopener noreferrer"><img
+                            target="_blank" rel="noopener noreferrer nofollow"><img
                                 src="<?php echo esc_url( zume_images_uri( 'course' ) ) ?>download-icon-150x150.png"
                                 alt=""
                                 width="35" height="35" class="alignnone size-thumbnail wp-image-3274"
@@ -1764,7 +1765,7 @@ class Zume_Course_Content {
 
                     <p class="center hide-for-small-only"><a
                             href="<?php echo esc_url( Zume_Course::get_download_by_key( '46' ) ) ?>"
-                            target="_blank" rel="noopener noreferrer"><img
+                            target="_blank" rel="noopener noreferrer nofollow"><img
                                 src="<?php echo esc_url( zume_images_uri( 'course' ) ) ?>download-icon-150x150.png"
                                 alt=""
                                 width="35" height="35" class="alignnone size-thumbnail wp-image-3274"
@@ -1827,7 +1828,7 @@ class Zume_Course_Content {
 
                     <p class="center hide-for-small-only">
                         <a href="<?php echo esc_url( Zume_Course::get_download_by_key( '47' ) ) ?>"
-                           target="_blank" rel="noopener noreferrer"><img
+                           target="_blank" rel="noopener noreferrer nofollow"><img
                                 src="<?php echo esc_url( zume_images_uri( 'course' ) ) ?>download-icon-150x150.png"
                                 alt=""
                                 width="35" height="35" class="alignnone size-thumbnail wp-image-3274"
@@ -1890,7 +1891,7 @@ class Zume_Course_Content {
 
                     <p class="center hide-for-small-only"><a
                             href="<?php echo esc_url( Zume_Course::get_download_by_key( '48' ) ) ?>"
-                            target="_blank" rel="noopener noreferrer"><img
+                            target="_blank" rel="noopener noreferrer nofollow"><img
                                 src="<?php echo esc_url( zume_images_uri( 'course' ) ) ?>download-icon-150x150.png"
                                 alt=""
                                 width="35" height="35" class="alignnone size-thumbnail wp-image-3274"
@@ -1966,7 +1967,7 @@ class Zume_Course_Content {
 
                     <p class="center hide-for-small-only"><a
                             href="<?php echo esc_url( Zume_Course::get_download_by_key( '49' ) ) ?>"
-                            target="_blank" rel="noopener noreferrer"><img
+                            target="_blank" rel="noopener noreferrer nofollow"><img
                                 src="<?php echo esc_url( zume_images_uri( 'course' ) ) ?>download-icon-150x150.png"
                                 alt=""
                                 width="35" height="35" class="alignnone size-thumbnail wp-image-3274"
@@ -2146,7 +2147,7 @@ class Zume_Course_Content {
 
                     <p class="center hide-for-small-only"><a
                             href="<?php echo esc_url( Zume_Course::get_download_by_key( '50' ) ) ?>"
-                            target="_blank" rel="noopener noreferrer"><img
+                            target="_blank" rel="noopener noreferrer nofollow"><img
                                 src="<?php echo esc_url( zume_images_uri( 'course' ) ) ?>download-icon-150x150.png"
                                 alt=""
                                 width="35" height="35" class="alignnone size-thumbnail wp-image-3274"
@@ -2193,7 +2194,7 @@ class Zume_Course_Content {
                     <?php endif; ?>
 
                     <p class="center hide-for-small-only"><a href="<?php echo esc_url( Zume_Course::get_download_by_key( '51' ) ) ?>"
-                                                             target="_blank" rel="noopener noreferrer"><img
+                                                             target="_blank" rel="noopener noreferrer nofollow"><img
                                 src="<?php echo esc_url( zume_images_uri( 'course' ) ) ?>download-icon-150x150.png"
                                 alt=""
                                 width="35" height="35" class="alignnone size-thumbnail wp-image-3274"
@@ -2394,7 +2395,7 @@ class Zume_Course_Content {
 
                     <p class="center hide-for-small-only"><a
                             href="<?php echo esc_url( Zume_Course::get_download_by_key( '52' ) ) ?>"
-                            target="_blank" rel="noopener noreferrer"><img
+                            target="_blank" rel="noopener noreferrer nofollow"><img
                                 src="<?php echo esc_url( zume_images_uri( 'course' ) ) ?>download-icon-150x150.png"
                                 alt=""
                                 width="35" height="35" class="alignnone size-thumbnail wp-image-3274"
@@ -2468,7 +2469,7 @@ class Zume_Course_Content {
 
                     <p class="center hide-for-small-only"><a
                             href="<?php echo esc_url( Zume_Course::get_download_by_key( '53' ) ) ?>"
-                            target="_blank" rel="noopener noreferrer"><img
+                            target="_blank" rel="noopener noreferrer nofollow"><img
                                 src="<?php echo esc_url( zume_images_uri( 'course' ) ) ?>download-icon-150x150.png"
                                 alt=""
                                 width="35" height="35" class="alignnone size-thumbnail wp-image-3274"
@@ -2651,7 +2652,7 @@ class Zume_Course_Content {
 
                     <p class="center hide-for-small-only"><a
                             href="<?php echo esc_url( Zume_Course::get_download_by_key( '54' ) ) ?>"
-                            target="_blank" rel="noopener noreferrer"><img
+                            target="_blank" rel="noopener noreferrer nofollow"><img
                                 src="<?php echo esc_url( zume_images_uri( 'course' ) ) ?>download-icon-150x150.png"
                                 alt=""
                                 width="35" height="35" class="alignnone size-thumbnail wp-image-3274"
@@ -2880,7 +2881,7 @@ class Zume_Course_Content {
 
                     <p class="center hide-for-small-only"><a
                             href="<?php echo esc_url( Zume_Course::get_download_by_key( '55' ) ) ?>"
-                            target="_blank" rel="noopener noreferrer"><img
+                            target="_blank" rel="noopener noreferrer nofollow"><img
                                 src="<?php echo esc_url( zume_images_uri( 'course' ) ) ?>download-icon-150x150.png"
                                 alt=""
                                 width="35" height="35" class="alignnone size-thumbnail wp-image-3274"
@@ -3092,7 +3093,7 @@ class Zume_Course_Content {
 
                     <p class="center hide-for-small-only">
                         <a href="<?php echo esc_url( Zume_Course::get_download_by_key( '56' ) ) ?>"
-                           target="_blank" rel="noopener noreferrer" >
+                           target="_blank" rel="noopener noreferrer nofollow" >
                             <img class="alignnone size-thumbnail wp-image-3274"
                                  style="vertical-align: text-bottom;"
                                  src="<?php echo esc_url( zume_images_uri( 'course' ) ) ?>download-icon-150x150.png"
@@ -3153,7 +3154,7 @@ class Zume_Course_Content {
 
                     <p class="center hide-for-small-only">
                         <a  href="<?php echo esc_url( Zume_Course::get_download_by_key( '57' ) ) ?>"
-                            target="_blank" rel="noopener noreferrer" ><img
+                            target="_blank" rel="noopener noreferrer nofollow" ><img
                                 class="alignnone size-thumbnail wp-image-3274"
                                 style="vertical-align: text-bottom;"
                                 src="<?php echo esc_url( zume_images_uri( 'course' ) ) ?>download-icon-150x150.png"
@@ -3217,7 +3218,7 @@ class Zume_Course_Content {
 
                     <p class="center hide-for-small-only">
                         <a  href="<?php echo esc_url( Zume_Course::get_download_by_key( '58' ) ) ?>"
-                            target="_blank" rel="noopener noreferrer">
+                            target="_blank" rel="noopener noreferrer nofollow">
                             <img class="alignnone size-thumbnail wp-image-3274"
                                  style="vertical-align: text-bottom;"
                                  src="<?php echo esc_url( zume_images_uri( 'course' ) ) ?>download-icon-150x150.png"
@@ -3530,7 +3531,7 @@ class Zume_Course_Content {
 
                     <p class="center hide-for-small-only">
                         <a  href="<?php echo esc_url( Zume_Course::get_download_by_key( '60' ) ) ?>"
-                            target="_blank" rel="noopener noreferrer">
+                            target="_blank" rel="noopener noreferrer nofollow">
                             <img    src="<?php echo esc_url( zume_images_uri( 'course' ) ) ?>download-icon-150x150.png"
                                     alt=""
                                     width="35" height="35" class="alignnone size-thumbnail wp-image-3274"
@@ -3603,7 +3604,7 @@ class Zume_Course_Content {
 
                     <p class="center hide-for-small-only">
                         <a  href="<?php echo esc_url( Zume_Course::get_download_by_key( '61' ) ) ?>"
-                            target="_blank" rel="noopener noreferrer">
+                            target="_blank" rel="noopener noreferrer nofollow">
                             <img    src="<?php echo esc_url( zume_images_uri( 'course' ) ) ?>download-icon-150x150.png"
                                     alt=""
                                     width="35" height="35" class="alignnone size-thumbnail wp-image-3274"
@@ -3664,7 +3665,7 @@ class Zume_Course_Content {
 
                     <p class="center hide-for-small-only">
                         <a  href="<?php echo esc_url( Zume_Course::get_download_by_key( '62' ) ) ?>"
-                            target="_blank" rel="noopener noreferrer">
+                            target="_blank" rel="noopener noreferrer nofollow">
                             <img    src="<?php echo esc_url( zume_images_uri( 'course' ) ) ?>download-icon-150x150.png"
                                     alt=""
                                     width="35" height="35" class="alignnone size-thumbnail wp-image-3274"
@@ -3767,7 +3768,7 @@ class Zume_Course_Content {
 
                             <p class="center hide-for-small-only">
                                 <a  href="<?php echo esc_url( Zume_Course::get_download_by_key( '59' ) ) ?>"
-                                    target="_blank" rel="noopener noreferrer">
+                                    target="_blank" rel="noopener noreferrer nofollow">
                                     <img src="<?php echo esc_url( zume_images_uri( 'course' ) ) ?>download-icon-150x150.png"
                                          alt="" width="35" height="35" class="alignnone size-thumbnail wp-image-3274"
                                          style="vertical-align: text-bottom"/>
