@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "Project-Id-Version: Zúme Project\n"
-"POT-Creation-Date: 2019-09-27 14:14-0600\n"
+"POT-Creation-Date: 2019-09-27 14:35-0600\n"
 "PO-Revision-Date: 2018-03-06 11:15-0700\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -118,6 +118,7 @@ msgstr ""
 
 #: front-page.php:76 functions/zume-polylang-integration.php:148
 #: template-zume-landing.php:50 template-zume-login.php:396
+#: template-zume-login.php:491
 msgid "Login"
 msgstr ""
 
@@ -302,7 +303,7 @@ msgid "Passwords do not match. Please, try again."
 msgstr ""
 
 #: functions/login/zume-login.php:566
-#: functions/zume-polylang-integration.php:149 template-zume-login.php:504
+#: functions/zume-polylang-integration.php:149 template-zume-login.php:507
 msgid "Register"
 msgstr ""
 
@@ -3629,7 +3630,7 @@ msgstr ""
 msgid "Sign up using:"
 msgstr ""
 
-#: template-zume-login.php:398 template-zume-login.php:506
+#: template-zume-login.php:398 template-zume-login.php:509
 msgid "Lost your password?"
 msgstr ""
 
@@ -3651,6 +3652,14 @@ msgstr ""
 
 #: template-zume-login.php:469
 msgid "Username or password does not match. Try again."
+msgstr ""
+
+#: template-zume-login.php:489
+msgid "Password"
+msgstr ""
+
+#: template-zume-login.php:490
+msgid "Remember Me"
 msgstr ""
 
 #: template-zume-overview.php:71 template-zume-overview.php:84
