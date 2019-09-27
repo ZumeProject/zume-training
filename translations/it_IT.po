@@ -18,7 +18,7 @@ msgstr "Accedi"
 
 #: front-page.php:60
 msgid "Zúme Training is an on-line and in-life learning experience designed for small groups who follow Jesus to learn how to obey His Great Commission and make disciples who multiply."
-msgstr "Zúme Training è un'esperienza di apprendimento on-line e nella vita, pensata per piccoli gruppi che seguono Gesù per imparare ad obbedire al Gran Mandato e a fare discepoli che si moltiplicano."
+msgstr "Zúme Training è un'esperienza di apprendimento on-line e nella vita, pensata per piccoli gruppi che seguono Gesù per imparare ad ubbedire al Gran Mandato e a fare discepoli che si moltiplicano."
 
 #: front-page.php:73
 msgid "Zúme consists of 10 sessions, 2 hours each:"
@@ -116,7 +116,7 @@ msgstr "Piano Trimestrale - Zúme Project"
 
 #: functions/enqueue-scripts.php:79
 msgid "We got it!"
-msgstr "We got it!"
+msgstr "Ho capito!"
 
 #: functions/enqueue-scripts.php:80
 msgid "We're a volunteer network, so give us a few days. We'll reach out to you soon as possible!"
@@ -140,11 +140,11 @@ msgstr "Connessione a Facebook fallita. Riprovare."
 
 #: functions/login/zume-login.php:309 functions/login/zume-login.php:432
 msgid "Facebook user lookup error. Sorry for the inconvenience."
-msgstr "Errore nella ricerca dell'utente Facebook spiacenti per l'inconveniente."
+msgstr "Errore nella ricerca dell'utente Facebook. Spiacenti per l'inconveniente."
 
 #: functions/login/zume-login.php:312 functions/login/zume-login.php:435
 msgid "Error with looking up user with Facebook. Sorry for the inconvenience."
-msgstr "Errore nella ricerca dell'utente Facebook spiacenti per l'inconveniente."
+msgstr "Errore nella ricerca dell'utente Facebook.Spiacenti per l'inconveniente."
 
 #: functions/login/zume-login.php:536
 msgid "There are some errors in your form."
@@ -170,7 +170,7 @@ msgstr "Reinserire la Password"
 
 #: functions/login/zume-login.php:557 template-zume-login.php:266
 msgid "Passwords do not match. Please, try again."
-msgstr "Le password non coincidono si prega di reprovare."
+msgstr "Le password non coincidono. Si prega di riprovare."
 
 #: functions/login/zume-login.php:566
 #: functions/zume-polylang-integration.php:149 template-zume-login.php:501
@@ -179,11 +179,11 @@ msgstr "Registrati"
 
 #: functions/login/zume-login.php:609
 msgid "Missing captcha response. How did you do that?"
-msgstr "Risposta al captcha mancante. Si prega di riprovare."
+msgstr "Risposta al captcha mancante. Come hai fatto?"
 
 #: functions/login/zume-login.php:622
 msgid "Captcha failure. Try again, if you are human."
-msgstr "Risposta al captcha mancante. Si prega di riprovare."
+msgstr "Captcha fallito. Si prega di riprovare, se sei un umano."
 
 #: functions/login/zume-login.php:628
 msgid "Missing email or password."
@@ -195,7 +195,7 @@ msgstr "Spiacenti, ma questa email è giá registrata."
 
 #: functions/login/zume-login.php:658
 msgid "Something went wrong. Sorry. Could you try again?"
-msgstr "Spiacenti, c'è state un imprevisto. Si prega di riprovare."
+msgstr "Spiacenti, c'è stato un imprevisto. Si prega di riprovare."
 
 #: functions/login/zume-login.php:680
 msgid "No new user found."
@@ -215,7 +215,7 @@ msgstr "Facebook"
 
 #: functions/login/zume-login.php:1157
 msgid "Missing username or email address."
-msgstr "Nome utente o email mancanti."
+msgstr "Nome utente o email mancante."
 
 #: functions/login/zume-login.php:1163
 msgid "ERROR: Enter a username or email address."
@@ -223,15 +223,15 @@ msgstr "ERRORE: Inserire nome utente o email."
 
 #: functions/login/zume-login.php:1167
 msgid "ERROR: There is no user registered with that email address."
-msgstr "ERROR: Nome utente non registrato con quel l'indirizzo email."
+msgstr "ERRORE: Nome utente non registrato con quell'indirizzo email."
 
 #: functions/login/zume-login.php:1172
 msgid "ERROR: There is no user registered with that username."
-msgstr "ERRORE: Nome utente o email non validi."
+msgstr "ERRORE: Nome utente non registrato con quella username."
 
 #: functions/login/zume-login.php:1192
 msgid "<strong>ERROR</strong>: Invalid username or email."
-msgstr "<strong>ERROR</strong>: Invalid username or email."
+msgstr "<strong>ERRORE</strong>: Username o email non valida."
 
 #: functions/login/zume-login.php:1217
 msgid "Someone has requested a password reset for the following account:"
@@ -258,7 +258,7 @@ msgstr "Per effettuare il reset della password, visitare il seguente sito."
 #. translators: Password reset email subject. %s: Site name
 #: functions/login/zume-login.php:1227
 msgid "[%s] Password Reset"
-msgstr "Reset passaword"
+msgstr "[%s] Reset password"
 
 #: functions/login/zume-login.php:1257
 msgid "The email could not be sent."
@@ -402,6 +402,12 @@ msgstr "Sessione"
 msgid "Welcome to Session"
 msgstr "Benvenuti nella Sessione"
 
+#. What is the context of the question?
+#. Could the question refer to something already mentioned? 
+#. "Which" seem to refer to a list of things, as to say "Which [of these/those] are you doing right now?"
+#. 
+#. In that case, would a better translation be:
+#. "Quale stai facendo in questo momento?"
 #: functions/zume-course.php:300
 msgid "Which are you doing right now?"
 msgstr "Cosa stai facendo in questo momento?"
@@ -430,6 +436,9 @@ msgstr "Benvenuti in Zúme"
 msgid "Download"
 msgstr "Download"
 
+#. I would like to suggest a slight change of the sentence, just to make it flow more quickly
+#. 
+#. "Potrete seguire questa sessione tramite un file PDF, ma assicuratevi gentilmente che ogni membro del vostro gruppo abbia una stampa del materiale per le sessioni successive"
 #: functions/zume-course.php:367
 msgid "You will be able to follow along on a digital PDF for this session, but please make sure that each member of your group has a printed copy of the materials for future sessions."
 msgstr "Sarete in grado di seguire con un PDF digitale per questa sessione, ma assicuratevi gentilmente che ogni membro del vostro gruppo abbia una copia stampata del materiale per le sessioni successive."
@@ -775,7 +784,7 @@ msgstr "Ciclo di Preghiera"
 
 #: functions/zume-course.php:945
 msgid "The Bible tells us that prayer is our chance to speak to and hear from the same God who created us!"
-msgstr "La Bibbia ci dice che la preghiera è la nostra opportunità di parlare e di ascoltare dallo stesso Dio che ci ha creati!"
+msgstr "La Bibbia ci dice che la preghiera è la nostra opportunità per parlare e ascoltare dallo stesso Dio che ci ha creati!"
 
 #: functions/zume-course.php:955
 msgid "Find the \"Prayer Cycle\" section in your Zúme Guidebook, and listen to the audio below."
@@ -1553,7 +1562,7 @@ msgstr "Pregate e ringraziate Dio che le Sue vie non sono le nostre vie e i Suoi
 
 #: functions/zume-course.php:3049
 msgid "In this session, you’ll learn how linear patterns hold back kingdom growth and how Non-Sequential thinking helps you multiply disciples. You'll discover how much time matters in disciple-making and how to accelerate Pace. You’ll learn how followers of Jesus can be a Part of Two Churches to help turn faithful, spiritual families into a growing city-wide body of believers. Finally, you'll learn how a simple Three Month Plan can focus your efforts and multiply your effectiveness in growing God's family exponentially."
-msgstr "In questa sessione impareremo come dei modelli lineari trattengano la crescita del regno e come un pensiero non sequenziale aiuti la moltiplicazione dei discepoli. Scopriremo quanto sia importante il tempo nel fare discepoli e come accelerare la nostra velocità. Impareremo come i seguaci di Gesù possono essere una Parte di Due Chiese che aiuti delle famiglie fedeli e spirituali a trasformarsi in un corpo di credenti che cresce alla larghezza di una città. Alla fine impareremo come un semplice Piano di 3 Mesi possa aiutare a focalizzare i nostri sforzi e a moltiplicare la nostra efficacia nel far crescere la famiglia di Dio in modo esponenziale."
+msgstr "In questa sessione impareremo come dei modelli lineari trattengano la crescita del regno e come un pensiero non sequenziale aiuti la moltiplicazione dei discepoli. Scopriremo quanto sia importante il tempo nel fare discepoli e come accelerare la nostra velocità. Impareremo come i seguaci di Gesù possono essere una Parte di Due Chiese che aiuti delle famiglie fedeli e spirituali a trasformarsi in un corpo di credenti che cresce alla larghezza di una città. Alla fine impareremo come un semplice Piano Trimestrale possa aiutare a focalizzare i nostri sforzi e a moltiplicare la nostra efficacia nel far crescere la famiglia di Dio in modo esponenziale."
 
 #: functions/zume-course.php:3070
 msgid "When people think about disciples multiplying, they often think of it as a step-by-step process. The problem with that is — that's not how it works best!"
@@ -1605,7 +1614,7 @@ msgstr "Quali sono alcuni vantaggi di mantenere una costante famiglia spirituale
 
 #: functions/zume-course.php:3244
 msgid "Create a Three Month Plan (30min)"
-msgstr "Creare un piano trimestrale (30min)"
+msgstr "Creare un Piano Trimestrale (30min)"
 
 #: functions/zume-course.php:3254
 msgid "In His Bible, God says, \"I know the plans I have for you, plans to prosper you and not to harm you, plans to give you hope and a future.\" God makes plans, and He expects us to make plans, too. He teaches us through His Word and His work to look ahead, see a better tomorrow, make a plan for how to get there, and then prepare the resources we'll need on the way."
@@ -1613,7 +1622,7 @@ msgstr "Nella Bibbia, Dio dice: “Infatti io so i pensieri che medito per voi�
 
 #: functions/zume-course.php:3257
 msgid "A Three Month Plan is a tool you can use to help focus your attention and efforts and keep them aligned with God's priorities for making disciples who multiply. Spend the next 30 minutes praying over, reading through, and then completing the commitments listed in the Three Month Plan."
-msgstr "Un Piano di 3 Mesi è uno strumento che si può usare per aiutare a focalizzare la vostra attenzione e i vostri sforzi e tenerli allineati alle priorità di Dio del fare discepoli che si moltiplicano. Trascorrete i prossimi 30 minuti pregando, leggendo e contemplando gli impegni sottoscritti nella sezione del Piano di 3 Mesi."
+msgstr "Un Piano Trimestrale è uno strumento che si può usare per aiutare a focalizzare la vostra attenzione e i vostri sforzi e tenerli allineati alle priorità di Dio del fare discepoli che si moltiplicano. Trascorrete i prossimi 30 minuti pregando, leggendo e contemplando gli impegni sottoscritti nella sezione del Piano di 3 Mesi."
 
 #: functions/zume-course.php:3260
 msgid "You can use the printed version in your Zúme Guidebook or our online version."
@@ -1621,7 +1630,7 @@ msgstr "È possibile utilizzare la versione stampata della Guida Zúme o quella 
 
 #: functions/zume-course.php:3263
 msgid "Online \"Three Month Plan\""
-msgstr "Online \"Piano trimestrale”"
+msgstr "Online \"Piano Trimestrale”"
 
 #: functions/zume-course.php:3275
 msgid "Participants can access their own three month plan on the side column of their dashboard. They can connect their plan with this group by adding the following key:"
@@ -1665,7 +1674,7 @@ msgstr "Usate il resto del tempo per completare il modulo del Piano Trimestrale.
 
 #: functions/zume-course.php:3330
 msgid "You do not have to commit to every item, and there is room for other items not already on the list. Do your best to align your commitments to what you have heard God reveal to you about His will."
-msgstr "Usate il resto del vostro tempo per compilare il modulo del Piano di 3 Mesi. Non dovete impegnarvi per ogni elemento, c’è spazio anche per altri elementi non ancora presenti sulla lista. Fate del vostro meglio per allineare i vostri impegni a ciò che avete sentito da Dio come rivelazione per voi riguardo la Sua Fedeltà."
+msgstr "Non dovete impegnarvi per ogni elemento, c’è spazio anche per altri elementi non ancora presenti sulla lista. Fate del vostro meglio per allineare i vostri impegni a ciò che avete sentito da Dio come rivelazione per voi riguardo la Sua Fedeltà."
 
 #: functions/zume-course.php:3343
 msgid "Share you Plan (30min)"
@@ -1806,7 +1815,7 @@ msgstr "Ci sono altri Strumenti di Formazione che aggiungereste o togliereste da
 
 #: functions/zume-course.php:3559
 msgid "REMEMBER – Be sure to share your Coaching Checklist results with training partner or other mentor. If you're helping coach or mentor someone, use this tool to help you assess which areas need your attention and training."
-msgstr "DA RICORDARE - Assicuratevi di condividere i risultati della vostra Lista di Tutoraggio con i partner di formazione o altri mentori. Se state formando qualcuno o gli state facendo da mentore, usate questo strumento per valutare quali aree necessitano di attenzione e formazione."
+msgstr "DA RICORDARE - Assicuratevi di condividere i risultati della vostra Checklist di Tutoraggio con i partner di formazione o altri mentori. Se state formando qualcuno o gli state facendo da mentore, usate questo strumento per valutare quali aree necessitano di attenzione e formazione."
 
 #: functions/zume-course.php:3581
 msgid "What happens to churches as they grow and start new churches that start new churches? How do they stay connected and live life together as an extended, spiritual family? They become a network!"
@@ -2146,7 +2155,7 @@ msgstr "Obiettivi di Zúme Project:"
 #: template-zume-about.php:52 template-zume-faq.php:196
 #: template-zume-privacy-policy.php:182 template-zume-progress.php:98
 msgid "Zúme means yeast in Greek. In Matthew 13:33, Jesus is quoted as saying, \"The Kingdom of Heaven is like a woman who took yeast and mixed it into a large amount of flour until it was all leavened.\" This illustrates how ordinary people, using ordinary resources, can have an extraordinary impact for the Kingdom of God. Zúme aims to equip and empower ordinary believers to saturate the globe with multiplying disciples in our generation."
-msgstr "Zúme significa lievito in greco. In Matteo 13:33, viene menzionato quando Gesù dice: “Il regno dei cieli è simile al lievito che una donna prende e nasconde in tre misure di farina, finché la pasta sia tutta lievitata”. Questo illustra come le persone comuni, utilizzando risorse ordinarie, possono avere un impatto straordinario per il Regno di Dio. Zúme mira a preparare e a dare potenza a comuni credenti per riempire la Terra grazie alla moltiplicazione dei discepoli nella nostra generazione."
+msgstr "Zúme significa lievito in greco. In Matteo 13:33, esso viene menzionato quando Gesù dice: “Il regno dei cieli è simile al lievito che una donna prende e nasconde in tre misure di farina, finché la pasta sia tutta lievitata”. Questo illustra come le persone comuni, utilizzando risorse ordinarie, possono avere un impatto straordinario per il Regno di Dio. Zúme mira a preparare e a dare potenza a comuni credenti per riempire la Terra grazie alla moltiplicazione dei discepoli nella nostra generazione."
 
 #: template-zume-about.php:72
 msgid "Zúme consists of 10 sessions, 2 hours each"
@@ -2178,7 +2187,7 @@ msgstr "Preparazione facoltativa per il vostro primo incontro:"
 
 #: template-zume-about.php:110
 msgid "Download the Zúme Guidebook."
-msgstr "Scarica la Guida Zúme."
+msgstr "Scarica il manuale Zúme."
 
 #: template-zume-about.php:111
 msgid "If you'd like, you can print out copies for the members of your group."
@@ -2280,7 +2289,7 @@ msgstr "Si consigliano almeno 3-11 persone per gruppo."
 
 #: template-zume-dashboard.php:258
 msgid "You can join a current group when the group owner adds your email to the approved coleader/participant list. To start your own group, use the button below."
-msgstr "Puoi far parte di un gruppo quando il titolare del gruppo aggiunge la tua email all'elenco dei collaboratori/partecipanti approvati. Per dare inizio al proprio gruppo, utilizzare il pulsante qui sotto."
+msgstr "Puoi far parte di un gruppo quando il titolare del gruppo aggiunge la tua email all'elenco dei collaboratori/partecipanti approvati. Per dare inizio al proprio gruppo, utilizzare il pulsante qui di seguito."
 
 #: template-zume-dashboard.php:266
 msgid "Start New Group"
@@ -2471,7 +2480,7 @@ msgstr "attivare"
 
 #: template-zume-dashboard.php:488
 msgid "Get a Coach"
-msgstr "Richiedi un Coach"
+msgstr "Richiedi un tutor"
 
 #: template-zume-dashboard.php:500
 msgid "Join me on the Zúme Project"
@@ -2548,7 +2557,7 @@ msgstr "esempio: 1000 Broadway, Denver, CO 80126"
 
 #: template-zume-dashboard.php:834
 msgid "Adding a coleader or additional participants gives them access to this group on their Zúme dashboard once they have signed up and logged in using the email address you add. When they login to their dashboard they will see an invitation from you on the right side of the screen. Adding them to this group allows them to facilitate a training but they cannot change any details of the group. Note: they will not receive a system email from Zúme with this invitation, you will need to ask them to sign up."
-msgstr "Aggiungendo un collaboratore di altri partecipanti dai loro accesso a questo gruppo dalla loro bacheca Zúme dopo essersi registrati ed aver effettuato l'accesso utilizzando l'indirizzo e-mail che hai aggiunto. Quando si collegano alla loro bacheca, vedranno un invito da parte tua sul lato destro dello schermo. Aggiungerli al gruppo permette loro di promuovere una formazione, senza poter cambiare i dettagli del gruppo. Nota: non riceveranno un'e-mail di sistema da Zúme con questo invito, è necessario chiedere loro di iscriversi."
+msgstr "Aggiungendo un collaboratore o altri partecipanti dai loro accesso a questo gruppo dalla loro bacheca Zúme dopo essersi registrati ed aver effettuato l'accesso utilizzando l'indirizzo e-mail che hai aggiunto. Quando si collegano alla loro bacheca, vedranno un invito da parte tua sul lato destro dello schermo. Aggiungerli al gruppo permette loro di promuovere una formazione, senza dover cambiare i dettagli del gruppo. Nota: non riceveranno un'e-mail di sistema da Zúme con questo invito, è necessario chiedere loro di iscriversi."
 
 #: template-zume-dashboard.php:864
 msgid "Update"
@@ -2594,7 +2603,7 @@ msgstr "Rimuovi"
 
 #: template-zume-dashboard.php:1051
 msgid "Connect Me to a Coach"
-msgstr "Connettimi ad un Coach"
+msgstr "Mettimi in contatto con un tutor"
 
 #: template-zume-dashboard.php:1063
 msgid "Coaches"
@@ -2602,7 +2611,7 @@ msgstr "Tutor"
 
 #: template-zume-dashboard.php:1064
 msgid "Our network of volunteer coaches are people like you, people who are passionate about loving God, loving others, and obeying the Great Commission."
-msgstr "Il nostro network di couch è formato da voluntary, persona come te che am"
+msgstr "La nostra rete di tutor volontari è formata da persone come te, persone che sono appassionate per amare Dio, amare gli altri ed ubbidire al Gran Mandato."
 
 #: template-zume-dashboard.php:1069
 msgid "Advocates"
@@ -2610,7 +2619,7 @@ msgstr "Sostenitori"
 
 #: template-zume-dashboard.php:1070
 msgid "A coach is someone who will come alongside you as you implement the Zúme tools and training."
-msgstr "Un coach è qualcuno che ti affianca per aiutarti ad utilizzare gli strumenti del corso Zù"
+msgstr "Un tutor è qualcuno che ti affianca per aiutarti ad utilizzare gli strumenti di Zùme training."
 
 #: template-zume-dashboard.php:1075
 msgid "Local"
@@ -2618,15 +2627,15 @@ msgstr "Territorio"
 
 #: template-zume-dashboard.php:1076
 msgid "On submitting this request, we will do our best to connect you with a coach near you."
-msgstr "Alla ricezione della presente richiesta faremo del nostro meglio nel mettervi in contatto con il coach a voi più vicino."
+msgstr "Alla ricezione della presente richiesta, faremo del nostro meglio nel mettervi in contatto con il tutor a voi più vicino."
 
 #: template-zume-dashboard.php:1081
 msgid "It's Free"
-msgstr "È Gratis"
+msgstr "È gratis"
 
 #: template-zume-dashboard.php:1082
 msgid "Coaching is free. You can opt out at any time."
-msgstr "Coaching è gratis e potrete rinunciare in qualsiasi momento."
+msgstr "Il tutoraggio è gratis e potrete rinunciare in qualsiasi momento."
 
 #: template-zume-dashboard.php:1092 template-zume-profile.php:63
 msgid "Name"
@@ -2671,7 +2680,7 @@ msgstr "Codice di appartenenza"
 
 #: template-zume-dashboard.php:1230
 msgid "Thank you. You have already requested a coach connection."
-msgstr "Hai già richiesto di metterti in contatto con un coach. Grazie."
+msgstr "Hai già richiesto di metterti in contatto con un tutor. Grazie."
 
 #: template-zume-faq.php:20
 msgid "Zúme FAQs"
@@ -2691,7 +2700,7 @@ msgstr "Quanti anni devi avere per prendere parte alla formazione?"
 
 #: template-zume-faq.php:38
 msgid "We recommend the training for people from 13-years-old and up. If you think you have a child younger than that who can benefit, by all means let them participate."
-msgstr "Consigliamo la formazione a persone dai 13 anni in su. Se hai un figlio più giovane e pensi che possa trarne beneficio, lascialo comunque partecipare."
+msgstr "Consigliamo la formazione a persone dai 13 anni in sù. Se hai un figlio più piccolo e pensi che possa trarne beneficio, lascialo comunque partecipare."
 
 #: template-zume-faq.php:44
 msgid "What if someone wants to be trained and doesn’t have an e-mail address?"
@@ -2699,7 +2708,7 @@ msgstr "Cosa fare se qualcuno volesse essere formato  e non ha un indirizzo e-ma
 
 #: template-zume-faq.php:45
 msgid "At least one person in the group will have to have an e-mail account they actually use so that they can login and access all of the features of the website. Participants who view the media when present with the group no longer need an email address for the group to begin."
-msgstr "Almeno una persona del gruppo dovrà avere un account di posta elettronica attivo per poter effettuare il login e accedere a tutte le funzionalità del sito web. I partecipanti che visualizzano i contenuti multimediali quando sono insieme al gruppo non hanno bisogno di un indirizzo e-mail per iniziare il gruppo."
+msgstr "Almeno una persona del gruppo dovrà avere un account di posta elettronica attivo per poter effettuare il login e accedere a tutte le funzionalità del sito web. I partecipanti, che visualizzano i contenuti multimediali quando sono insieme al gruppo, non hanno bisogno di un indirizzo e-mail per iniziare il gruppo."
 
 #: template-zume-faq.php:51
 msgid "How can I preview the lessons before starting a training event?"
@@ -2735,7 +2744,7 @@ msgstr "Utilizzare i pulsanti \"Precedente\" e \"Successivo\" in fondo alla sess
 
 #: template-zume-faq.php:79
 msgid "There are lots of DMM or CPM trainers, so why is Zúme needed?"
-msgstr "Ci sono molti formatori DMM (Movimenti di Moltiplicazione del Discepolato) o CPM (Movimenti di Fondazione di Chiese) , quindi perché serve Zúme?"
+msgstr "Ci sono molti formatori MMD (Movimenti di Moltiplicazione del Discepolato) o MFC (Movimenti di Fondazione di Chiese) , quindi perché serve Zúme?"
 
 #: template-zume-faq.php:80
 msgid "Live training is better than online training. Online training should never replace live training events. Unfortunately, due to limitations of access, awareness, availability, scheduling, and many other reasons, many people who can and should have access to live training events don’t have access. Zúme is an attempt to provide a high-quality entry level substitute for such people. It uses the same principles as many of the live training types available from others. In addition, we find that once a person is trained with Zúme, they can very easily turn around and launch their own group and facilitate training for others using Zúme. This is a powerful opportunity for multiplying disciple-making principles."
@@ -2759,11 +2768,11 @@ msgstr "No. Ci sono esercizi di formazione essenziali e sessioni di pratica che 
 
 #: template-zume-faq.php:100
 msgid "Who is the training appropriate for?"
-msgstr "Per chi è appropriata la formazione?"
+msgstr "Per chi è indicata la formazione?"
 
 #: template-zume-faq.php:101
 msgid "The training is appropriate for followers of Christ who are 13-years-old or older and who are able to read. In the future, there may be a version produced that is appropriate for non-literate people, but this is not that version. We believe every person who fits this profile should take the training."
-msgstr "La formazione è indicata per i seguaci di Cristo che hanno dai 13 anni in sù e che sono in grado di leggere. In futuro, potrebbe essere prodotta una versione adatta a persone non alfabetizzate, ma non è ancora disponibile. Crediamo che ogni persona che corrisponde a questo profilo dovrebbe seguire la formazione."
+msgstr "La formazione è indicata per i seguaci di Cristo che hanno dai 13 anni in sù e che sono in grado di leggere. In futuro, potrebbe essere prodotta una versione adatta a persone non alfabetizzate, ma non è ancora disponibile. Crediamo che ogni persona, corrispondente a questo profilo, dovrebbe seguire la formazione."
 
 #: template-zume-faq.php:107
 msgid "Who owns Zúme?"
@@ -2771,7 +2780,7 @@ msgstr "Chi detiene Zúme?"
 
 #: template-zume-faq.php:108
 msgid "There is no organization that is “running” the Zúme Project and the project is not an organization. It is a coalition of people who have a heart to carry out Christ’s command to make disciples of every people group on earth and expand His Kingdom to every place until His will is done on earth as it is in heaven. The idea for the project originated in a meeting of the Jonathan Project leadership but has since spread far beyond that group. The Jonathan Project is a consortium of people committed to multiplying disciples around the world."
-msgstr "Non esiste un'organizzazione che \"gestisce\" Zúme Project e il progetto non è un'organizzazione. È una coalizione di persone che hanno il cuore di eseguire il comandamento di Cristo di fare discepoli di tutti i popoli sulla Terra ed espandere il Suo regno in ogni luogo cosicché sia fatta la Sua volontà come in cielo così in Terra . L'idea del progetto è nata da una riunione del Jonathan Project leadership, ma da allora si è diffusa ben oltre quel gruppo. Il Jonathan Project è un consorzio di persone impegnate a moltiplicare discepoli in tutto il mondo."
+msgstr "Non esiste un'organizzazione che \"gestisce\" Zúme Project e il progetto non è un'organizzazione. È una coalizione di persone che hanno il cuore di eseguire il comandamento di Cristo di fare discepoli di tutti i popoli sulla Terra ed espandere il Suo regno in ogni luogo cosicché sia fatta la Sua volontà come in cielo così in Terra. L'idea del progetto è nata da una riunione del Jonathan Project leadership, ma da allora si è diffusa ben oltre quel gruppo. Il Jonathan Project è un consorzio di persone impegnate a moltiplicare discepoli in tutto il mondo."
 
 #: template-zume-faq.php:114
 msgid "What are the three phases that are planned?"
@@ -2807,7 +2816,7 @@ msgstr "Perché si chiama Zúme?"
 
 #: template-zume-faq.php:134
 msgid "Zúme means yeast in Greek. In Matthew 13:33 Jesus is quoted as saying, “The Kingdom of Heaven is like a woman who took yeast and mixed it into a large amount of flour until it was all leavened.” This illustrates how ordinary people, using ordinary resources, can have an extraordinary impact for the Kingdom of God. Zúme aims to equip and empower ordinary believers to reach every neighborhood."
-msgstr "Zúme significa lievito in greco. In Matteo 13:33, viene menzionato quando Gesù dice: “Il regno dei cieli è simile al lievito che una donna prende e nasconde in tre misure di farina, finché la pasta sia tutta lievitata”. Questo illustra come le persone comuni, utilizzando risorse ordinarie, possono avere un impatto straordinario per il Regno di Dio. Zúme mira a preparare e a dare potenza a credenti comuni per raggiungere ogni quartiere."
+msgstr "Zúme significa lievito in greco. In Matteo 13:33, esso viene menzionato quando Gesù dice: “Il regno dei cieli è simile al lievito che una donna prende e nasconde in tre misure di farina, finché la pasta sia tutta lievitata”. Questo illustra come le persone comuni, utilizzando risorse ordinarie, possono avere un impatto straordinario per il Regno di Dio. Zúme mira a preparare e a dare potenza a credenti comuni per raggiungere ogni quartiere."
 
 #: template-zume-faq.php:139
 msgid "What languages will the training be translated into?"
@@ -2815,7 +2824,7 @@ msgstr "In quali lingue sarà tradotta la formazione?"
 
 #: template-zume-faq.php:140
 msgid "The project will start in the following languages and made available to those wishing to translate the training and tools into additional languages: Arabic, Bengali, Bhojpuri, Burmese, Chinese (Mandarin), Chinese (Cantonese), Farsi, French, German, Gujarati, Hausa, Hindi, Indonesian, Italian, Japanese, Kannada, Korean, Maithili, Malayalam, Marathi, Oriya, Panjabi (Eastern), Panjabi (Western), Portuguese, Russian, Spanish, Swahili, Tamil, Telugu, Thai, Turkish, Urdu, Vietnamese, Yoruba."
-msgstr "Il progetto inizierà nelle seguenti lingue e sarà messo a disposizione di coloro che desiderano tradurre la formazione e gli strumenti in altre lingue: Arabo, bengalese, bhojpuri, birmano, cinese (mandarino), cinese (cantonese), farsi, francese, tedesco, gujarati, hausa, hindi, indonesiano, italiano, giapponese, kannada, coreano, maithili, malayalam, marathi, oriya, panjabi (orientale), panjabi (occidentale), portoghese, russo, spagnolo, swahili, tamil, telugu, thai, turco, urdu, vietnamita, yoruba."
+msgstr "Il progetto inizierà nelle seguenti lingue e sarà messo a disposizione di coloro che desiderano tradurre la formazione e gli strumenti in altre lingue: arabo, bengalese, bhojpuri, birmano, cinese (mandarino), cinese (cantonese), farsi, francese, tedesco, gujarati, hausa, hindi, indonesiano, italiano, giapponese, kannada, coreano, maithili, malayalam, marathi, oriya, panjabi (orientale), panjabi (occidentale), portoghese, russo, spagnolo, swahili, tamil, telugu, thai, turco, urdu, vietnamita, yoruba."
 
 #: template-zume-faq.php:147
 msgid "How are the groups started by trainees aligned or organized?"
@@ -2835,7 +2844,7 @@ msgstr "Solo tu vedi il tuo piano, a meno che non lo colleghi al tuo gruppo, all
 
 #: template-zume-faq.php:157
 msgid "Can I print my Three-Month Plan?"
-msgstr "Posso stampare il mio piano trimestrale?"
+msgstr "Posso stampare il mio Piano Trimestrale?"
 
 #: template-zume-faq.php:158
 msgid "Yes, make sure you save you plan first, then just scroll to the bottom of your plan and click on the \"Print Saved Plan\" button."
@@ -2843,7 +2852,7 @@ msgstr "Sì, assicurati di salvare prima il piano, poi scorri fino in fondo al p
 
 #: template-zume-faq.php:162
 msgid "Can I edit my Three-Month Plan later?"
-msgstr "Posso modificare il mio piano trimestrale in seguito?"
+msgstr "Posso modificare il mio Piano Trimestrale in seguito?"
 
 #: template-zume-faq.php:163
 msgid "Yes, you can go back to your plan at any time and edit it. Make sure you click, \"Save\" at the bottom of your plan."
@@ -2855,15 +2864,15 @@ msgstr "Zúme mi offre un modo per chattare con le persone del mio gruppo?"
 
 #: template-zume-faq.php:168
 msgid "Not at this time. We recommend that every member of your group create a login and get added to your Zúme group. This way every member will have access to all of the material whenever they want. Then the group can use any messaging platform that they prefer (iMessage, WhatsApp, Facebook group, etc.) for further group communication."
-msgstr "Non in questo momento. Suggeriamo che ogni membro del voto gruppo crei un login e venga aggiunto al gruppo Zúme. In questo modo ogni membro avrà accesso a tutto il materiale in qualsiasi momento. In seguito il gruppo può utilizzare la piattaforma di messaggistica preferita (Telegram, WhatsApp, Facebook, ecc.) per ulteriori comunicazioni di gruppo."
+msgstr "Non in questo momento. Suggeriamo che ogni membro del vosto gruppo crei un login e venga aggiunto al gruppo Zúme. In questo modo ogni membro avrà accesso a tutto il materiale in qualsiasi momento. In seguito il gruppo potrà utilizzare la piattaforma di messaggistica preferita (Telegram, WhatsApp, Facebook, ecc.) per ulteriori comunicazioni di gruppo."
 
 #: template-zume-login.php:73
 msgid "Your password reset link appears to be invalid. Please request a new link below."
-msgstr "Il link per il reset della password non è valido. Si prega di richiedere un nuovo link qui sotto."
+msgstr "Il link per il reset della password non è valido. Si prega di richiedere un nuovo link qui di seguito."
 
 #: template-zume-login.php:75
 msgid "Your password reset link has expired. Please request a new link below."
-msgstr "Il link per il reset della password è scaduto. Si prega di richiedere un nuovo link qui sotto."
+msgstr "Il link per il reset della password è scaduto. Si prega di richiedere un nuovo link qui di seguito."
 
 #: template-zume-login.php:108 template-zume-login.php:485
 msgid "Email Address"
@@ -2899,7 +2908,7 @@ msgstr "Richiesta non valida."
 
 #: template-zume-login.php:421
 msgid "Invalid key"
-msgstr "Chiave non valida"
+msgstr "Codice non valido"
 
 #: template-zume-login.php:443
 msgid "User action confirmed."
@@ -2970,11 +2979,11 @@ msgstr "GRUPPI DI CORRESPONSABILITÀ - Dividetevi in gruppi di due o tre persone
 
 #: template-zume-overview.php:415
 msgid "PRODUCERS VS. CONSUMERS — You'll discover the four main ways God makes everyday followers more like Jesus."
-msgstr "PRODUTTORI VS. CONSUMATORI - Scoprirete quattro modi principali in cui Dio rende i seguaci comuni più simili a Gesù."
+msgstr "PRODUTTORI VS. CONSUMATORI - Scoprirete quattro modi principali in cui Dio rende comuni seguaci più simili a Gesù."
 
 #: template-zume-overview.php:436
 msgid "PRAYER CYCLE — See how easy it is to spend an hour in prayer."
-msgstr "CICLO DI PREGHIERA - Guarda come è facile trascorrere un'ora in preghiera."
+msgstr "CICLO DI PREGHIERA - Guarda com'è facile trascorrere un'ora in preghiera."
 
 #: template-zume-overview.php:448
 msgid "LIST OF 100 — a tool designed to help you be a good steward of your relationships."
@@ -2998,7 +3007,7 @@ msgstr "IL VANGELO - Impara un modo per condividere la Buona Notizia di Dio dall
 
 #: template-zume-overview.php:571
 msgid "BAPTISM — Jesus said, “Go and make disciples of all nations, BAPTIZING them in the name of the Father and of the Son and of the Holy Spirit…” Learn how to put this into practice."
-msgstr "BATTESIMO - Gesù disse: \"Andate e fate miei discepoli tutti i popoli, BATTEZZANDOLI nel nome del Padre e del Figlio e dello Spirito Santo....\". Imparate a mettere ciò  in pratica."
+msgstr "BATTESIMO - Gesù disse: \"Andate e fate miei discepoli tutti i popoli, BATTEZZANDOLI nel nome del Padre e del Figlio e dello Spirito Santo....\". Imparate a mettere ciò in pratica."
 
 #: template-zume-overview.php:592
 msgid "SHARE GOD’S STORY — Break into groups of two or three and practice sharing God’s Story. (45 minutes)"
@@ -3026,7 +3035,7 @@ msgstr "LA CENA DEL SIGNORE - È un modo semplice di celebrare il nostro legame 
 
 #: template-zume-overview.php:726
 msgid "SHARING YOUR TESTIMONY — Break into groups of two or three and practice sharing your Testimony with others. (45 minutes)"
-msgstr "CONDIVIDERE LA TUA TESTIMONIA - Dividetevi  in gruppi di due o tre e fate pratica condividendo la vostra Testimonianza con altri. (45 minuti)"
+msgstr "CONDIVIDERE LA TUA TESTIMONIANZA - Dividetevi  in gruppi di due o tre e fate pratica condividendo la vostra Testimonianza con altri. (45 minuti)"
 
 #: template-zume-overview.php:738
 msgid "THE LORD'S SUPPER — Take time as a group to do this together. (10 minutes)"
@@ -3038,7 +3047,7 @@ msgstr "LA PERSONA DI PACE - Imparate a riconoscere chi potrebbe essere una pers
 
 #: template-zume-overview.php:814
 msgid "PRAYER WALKING — It’s a simple way to obey God’s command to pray for others. And it's just what it sounds like — praying to God while walking around!"
-msgstr "LA CAMMINATA DI PREGHIERA- E' un modo semplice per obbedire al comandamento di Dio di pregare per gli altri. Ed è proprio questo: pregare Dio mentre si cammina!"
+msgstr "LA CAMMINATA DI PREGHIERA- E' un modo semplice per ubbedire al comandamento di Dio di pregare per gli altri. Ed è proprio questo: pregare Dio mentre si cammina!"
 
 #: template-zume-overview.php:835
 msgid "B.L.E.S.S. PRAYER — Practice a simple mnemonic to remind you of ways to pray for others. (15 minutes)"
@@ -3054,7 +3063,7 @@ msgstr "FEDELTÀ - È importante ciò che i discepoli conoscono – ma è molto 
 
 #: template-zume-overview.php:922
 msgid "3/3 GROUP FORMAT — A 3/3 Group is a way for followers of Jesus to meet, pray, learn, grow, fellowship and practice obeying and sharing what they've learned. In this way, a 3/3 Group is not just a small group but a Simple Church. (80 minutes)"
-msgstr "FORMAT GRUPPO 3/3- Un gruppo 3/3 è un modo per i seguaci di Gesù di incontrarsi, pregare, imparare, crescere, avere comunione e praticare ubbidendo e condividendo quanto appreso. In questo modo, un Gruppo 3/3 non è solo un piccolo gruppo ma una Chiesa Semplice. (80 minuti)"
+msgstr "FORMAT GRUPPO 3/3- Un gruppo 3/3 è un modo per i seguaci di Gesù di incontrarsi, pregare, imparare, crescere, avere comunione e praticare ubbidendo e condividendo quanto appreso. In questo modo, un Gruppo 3/3 non è solo un piccolo gruppo, ma una Chiesa Semplice. (80 minuti)"
 
 #: template-zume-overview.php:977
 msgid "TRAINING CYCLE — Learn the training cycle and consider how it applies to disciple making."
@@ -3074,11 +3083,11 @@ msgstr "NON SEQUENZIALE - Considerate che il fare i discepoli non deve essere li
 
 #: template-zume-overview.php:1144
 msgid "PACE — Multiplying matters and multiplying quickly matters even more. See why pace matters."
-msgstr "VELOCITA - E importante moltiplicarsi e ma lo è ancora di più farlo rapidamente. Scoprite perché è importante la velocità."
+msgstr "VELOCITÀ - E importante moltiplicarsi e ma lo è ancora di più farlo rapidamente. Scoprite perché è importante la velocità."
 
 #: template-zume-overview.php:1156
 msgid "PART OF TWO CHURCHES — Learn how to obey Jesus' commands by going AND staying."
-msgstr "PARTE DI DUE CHIESE - Impara ad obbedire ai comandamenti di Gesù quando si va o quando si rimane."
+msgstr "PARTE DI DUE CHIESE - Impara ad ubbedire ai comandamenti di Gesù quando si va o quando si rimane."
 
 #: template-zume-overview.php:1177
 msgid "3-MONTH PLAN — Create and share your plan for how you will implement the Zúme tools over the next three months. (60 minutes)"
@@ -3102,15 +3111,15 @@ msgstr "GRUPPI DI MENTORI ALLA PARI- Dividetevi in gruppi di due o tre e lavorat
 
 #: template-zume-privacy-policy.php:22
 msgid "Zúme Privacy Policy"
-msgstr "Informative sulla Riservatezza"
+msgstr "Informativa sulla privacy"
 
 #: template-zume-privacy-policy.php:32
 msgid "This privacy policy has been compiled to better serve those who are concerned with how their \"Personally Identifiable Information\" (PII) is being used online. PII, as described in US privacy law and information security, is information that can be used on its own or with other information to identify, contact, or locate a single person, or to identify an individual in context. Please read our privacy policy carefully to get a clear understanding of how we collect, use, protect or otherwise handle your Personally Identifiable Information in accordance with our website."
-msgstr "This privacy policy has been compiled to better serve those who are concerned with how their \"Personally Identifiable Information\" (PII) is being used online. PII, as described in US privacy law and information security, is information that can be used on its own or with other information to identify, contact, or locate a single person, or to identify an individual in context. Please read our privacy policy carefully to get a clear understanding of how we collect, use, protect or otherwise handle your Personally Identifiable Information in accordance with our website."
+msgstr "L'informativa sulla privacy è stata elaborata per soddisfare al meglio coloro che sono coinvolti nel trattamento online delle \"informazioni personalmente identificabili\".IPI, come descritto dalla legge americana sulla privacy e sulla sicurezza delle informazioni, riguarda informazioni che possono essere utilizzate autonomamente o insieme ad altre informazioni per identificare, contattare o localizzare una singola persona o identificare un individuo in un contesto. Si prega di leggere attentamente la nostra informativa sulla privacy in modo da avere una chiara comprensione di come raccogliamo, utilizziamo, proteggiamo o altrimenti trattiamo le vostre informazioni personalmente identificabili in accordo al nostro sito."
 
 #: template-zume-privacy-policy.php:38
 msgid "What permissions do the social sign-on logins ask for?"
-msgstr "What permissions do the social sign-on logins ask for?"
+msgstr "Quali autorizzazioni richiedono gli accessi ai social network?"
 
 #: template-zume-privacy-policy.php:41
 msgid "Public Profile. This includes certain User’s Data such as id, name, picture, gender, and their locale."
@@ -3126,7 +3135,7 @@ msgstr "Quali informazioni personali raccogliamo dalle persone tramite il nostro
 
 #: template-zume-privacy-policy.php:55
 msgid "Information in the Basic Social Profile (if used) and email."
-msgstr "Information in the Basic Social Profile (if used) and email."
+msgstr "Informazione sul Profilo Sociale e email."
 
 #: template-zume-privacy-policy.php:58
 msgid "Session and course activity."
@@ -3158,7 +3167,7 @@ msgstr "Usiamo le tue informazioni per creare un account utente nel sistema Zùm
 
 #: template-zume-privacy-policy.php:89
 msgid "We will email you with basic transactional emails like password reset requests and other system notifications."
-msgstr "Ti invieremo delle email tramite messaggi di transazione base come richiesta reset password o altre notifiche di sistema."
+msgstr "Ti invieremo delle email tramite messaggi di operazioni base come richiesta reset password o altre notifiche di sistema."
 
 #: template-zume-privacy-policy.php:92
 msgid "We email occasional reminders and encouragements depending on your progress through the training."
@@ -3174,11 +3183,11 @@ msgstr "Usiamo il criptaggio per proteggere le informazioni sensibili trasmesse 
 
 #: template-zume-privacy-policy.php:105
 msgid "Your personal information is contained behind secured networks and is only accessible by a limited number of persons who have special access rights to such systems, and are required to keep the information confidential. In addition, all sensitive/credit information you supply is encrypted via Secure Socket Layer (SSL) technology."
-msgstr "Le tue informazioni personali sono contenute in reti sicure e sono accessibili solo ad un numero limitato di persone che hanno un accesso speciale a tali sistemi richiesto per mantenere la riservatezza delle informazioni. Inoltre tutte le informazioni sensibili da voi fornite sono criptate da una tecnologia...."
+msgstr "Le tue informazioni personali sono contenute in reti sicure e sono accessibili solo ad un numero limitato di persone che hanno un accesso speciale a tali sistemi, accesso richiesto per mantenere la riservatezza delle informazioni. Inoltre tutte le informazioni sensibili da voi fornite sono criptate da una tecnologia Secure Socket Layer (SSL)."
 
 #: template-zume-privacy-policy.php:108
 msgid "We implement a variety of security measures when a user submits, or accesses their information to maintain the safety of your personal information."
-msgstr "We implement a variety of security measures when a user submits, or accesses their information to maintain the safety of your personal information."
+msgstr "Mettiamo in atto misure di sicurezza quando un utente trasmette o accede alle informazioni in modo da garantire la sicurezza delle tue informazioni personali."
 
 #: template-zume-privacy-policy.php:115
 msgid "Do we use \"cookies\"?"
@@ -3186,7 +3195,7 @@ msgstr "Usiamo \"cookies\"?"
 
 #: template-zume-privacy-policy.php:117
 msgid "Any use of Cookies - or of other tracking tools - by this Application or by the owners of third party services used by this Application, unless stated otherwise, serves to identify Users and remember their preferences, for the sole purpose of providing the service required by the User."
-msgstr "Any use of Cookies - or of other tracking tools - by this Application or by the owners of third party services used by this Application, unless stated otherwise, serves to identify Users and remember their preferences, for the sole purpose of providing the service required by the User."
+msgstr "Qualsiasi uso di cookies- o di altri strumenti di monitoraggio - da questa applicazione o da parte dei proprietari di servizi terzi utilizzati da questa applicazione, se non diversamente indicato, serve a identificare gli utenti e a ricordare le loro preferenze, con l'unico scopo di fornire il servizio richiesto dall'utente."
 
 #: template-zume-privacy-policy.php:120
 msgid "Personal Data collected: name, email."
@@ -3198,15 +3207,15 @@ msgstr "Accesso e controllo delle tue informazioni."
 
 #: template-zume-privacy-policy.php:129
 msgid "You may opt out of any future contact from us at any time. You can do the following at any time by contacting us via our contact email address:"
-msgstr "Puoi rifiutare qualunque contatto nostro in qualsiasi momento. Puoi farlo "
+msgstr "Puoi rifiutare qualunque contatto nostro in qualsiasi momento. Puoi farlo contattandoci via email."
 
 #: template-zume-privacy-policy.php:132
 msgid "See what data we have about you, if any."
-msgstr "Verificare quali dati tuoi sono in nostro possesso."
+msgstr "Verificare quali dei tuoi dati sono in nostro possesso."
 
 #: template-zume-privacy-policy.php:136
 msgid "Change/correct any data we have about you."
-msgstr "Cambiare/correggere dati che sono in nostro possesso."
+msgstr "Cambiare/correggere i dati che sono in nostro possesso."
 
 #: template-zume-privacy-policy.php:139
 msgid "Have us delete any data we have about you."
@@ -3242,7 +3251,7 @@ msgstr "Account Facebook collegato"
 
 #: template-zume-profile.php:154 template-zume-profile.php:170
 msgid "Unlink"
-msgstr "Scollegare"
+msgstr "Rimuovere"
 
 #: template-zume-profile.php:163
 msgid "Linked Google Account"
@@ -3258,7 +3267,7 @@ msgstr "Fase 2"
 
 #: template-zume-progress.php:62
 msgid "YOU can help get Zúme into other languages!"
-msgstr "Tu puoi aiutarci a tradurre Zúme in altre lingue!"
+msgstr "TU puoi aiutarci a tradurre Zúme in altre lingue!"
 
 #: template-zume-progress.php:63
 msgid "Donate to the translation of Zúme"
@@ -3356,7 +3365,7 @@ msgstr "Zúme FAQ"
 #. Template Name of the plugin/theme
 #: 
 msgid "Zúme Dashboard"
-msgstr "Zúme Bacheca"
+msgstr "Bacheca Zúme"
 
 #. Template Name of the plugin/theme
 #: 
@@ -3374,11 +3383,11 @@ msgstr "Reset passaword non concessa a questo utente"
 
 #: functions/login/zume-login.php:1330
 msgid "Could not save password reset key to database."
-msgstr "Non è stato possibile salvare la chiave di reset passaword nel database"
+msgstr "Non è stato possibile salvare il codice di reset passaword nel database"
 
 #: functions/restrict-rest-api.php:71
 msgid "The Wordpress built in API is disabled."
-msgstr "The Wordpress built in API is disabled"
+msgstr "Il Wordpress realizzato in API non è abilitato"
 
 #: functions/zume-course.php:2417
 msgid "Listen and Practice (75 min)"
@@ -3386,7 +3395,7 @@ msgstr "Ascoltare e Praticare (75 min)"
 
 #: functions/zume-course.php:2429
 msgid "A 3/3 Group is a way for followers of Jesus to meet, pray, learn, grow, fellowship, and practice obeying and sharing what they've learned. In this way, a 3/3 Group is not just a small group but a Simple Church."
-msgstr "copiare"
+msgstr "Un gruppo di 3/3 è un modo per i seguaci di Gesù di incontrarsi, pregare, imparare, crescere, avere comunione, imparare ad ubbidire e condividere quanto appreso. In questo senso un Gruppo di 3/3 non è soltanto un piccolo gruppo, ma una Chiesa Semplice."
 
 #: functions/zume-course.php:2432
 msgid "In the following video, you’ll be coached through an interactive 3/3 Group where you’ll learn a principle and then “press pause” and practice it with the group."
@@ -3398,15 +3407,15 @@ msgstr "Ricerca la sezione \"Format del Gruppo 3/3\" nel manuale Zùme e guarda 
 
 #: functions/zume-course.php:3481
 msgid "Assess yourself using the coaching checklist."
-msgstr "Assess yourself using the coaching checklist."
+msgstr "Valuta te stesso usando la checklist di tutoraggio."
 
 #: template-zume-faq.php:121
 msgid "The second phase focuses on coaching these Phase 1 churches through the reproduction process, as well as delivering the project in other major world languages. The project will start in the following languages: Amharic, Arabic, Bengali, Bhojpuri, Burmese, Chinese (Mandarin), Chinese (Cantonese), Farsi, French, German, Gujarati, Hausa, Hindi, Indonesian, Italian, Japanese, Kannada, Korean, Kurdish, Lao, Maithili, Malayalam, Marathi, Oriya, Panjabi (Eastern), Panjabi (Western), Portuguese, Russian, Somali, Spanish, Swahili, Tamil, Telugu, Thai, Turkish, Urdu, Vietnamese, Yoruba."
-msgstr "copiare"
+msgstr "La seconda fase si concentra sul tutoraggio delle chiese della fase 1 attraverso il processo di riproduzione, così come la realizzazione del progetto in altre lingue del mondo. Il progetto inizierà nelle seguenti lingue: amarico, arabo, bengalese, bhojpuri, birmano, cinese (mandarino), cinese (cantonese), farsi, francese, tedesco, gujarati, hausa, hindi, indonesiano, italiano, giapponese, kannada, coreano, maithili, malayalam, marathi, oriya, panjabi (orientale), panjabi (occidentale), portoghese, russo, somalo, spagnolo, swahili, tamil, telugu, tailandese, turco, urdu, vietnamita, yoruba."
 
 #: template-zume-faq.php:140
 msgid "The project will start in the following languages and made available to those wishing to translate the training and tools into additional languages: Amharic, Arabic, Bengali, Bhojpuri, Burmese, Chinese (Mandarin), Chinese (Cantonese), Farsi, French, German, Gujarati, Hausa, Hindi, Indonesian, Italian, Japanese, Kannada, Korean, Kurdish, Lao, Maithili, Malayalam, Marathi, Oriya, Panjabi (Eastern), Panjabi (Western), Portuguese, Russian, Somali, Spanish, Swahili, Tamil, Telugu, Thai, Turkish, Urdu, Vietnamese, Yoruba."
-msgstr "copiare"
+msgstr "Il progetto inizierà nelle seguenti lingue e sarà messo a disposizione di coloro che desiderano tradurre la formazione e gli strumenti in altre lingue: Arabo, bengalese, bhojpuri, birmano, cinese (mandarino), cinese (cantonese), farsi, francese, tedesco, gujarati, hausa, hindi, indonesiano, italiano, giapponese, kannada, coreano, maithili, malayalam, marathi, oriya, panjabi (orientale), panjabi (occidentale), portoghese, russo, spagnolo, swahili, tamil, telugu, thai, turco, urdu, vietnamita, yoruba."
 
 #: template-zume-faq.php:141
 msgid "To see the most updated progress go to "
@@ -3414,7 +3423,7 @@ msgstr "Per visualizzare gli aggiornamenti principali, andare su"
 
 #: template-zume-faq.php:142
 msgid "Language Translation Progress."
-msgstr "copiare"
+msgstr "Progressi nella traduzione linguistica."
 
 #: template-zume-privacy-policy.php:132
 msgid "See what data we've aggregated from your activities with us."
@@ -3423,5 +3432,5 @@ msgstr "Verifica quali dati abbiamo riunito dalle tue attività con noi."
 #. Template Name of the plugin/theme
 #: 
 msgid "Zúme One Page Course"
-msgstr "Zúme One Page Course"
+msgstr "Corso Zùme di una pagina"
 
