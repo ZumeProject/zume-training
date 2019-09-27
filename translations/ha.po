@@ -3372,58 +3372,58 @@ msgstr "Zúme Course"
 
 #: functions/login/zume-login.php:1303
 msgid "Password reset is not allowed for this user"
-msgstr ""
+msgstr "Password reset is not allowed for this user"
 
 #: functions/login/zume-login.php:1330
 msgid "Could not save password reset key to database."
-msgstr ""
+msgstr "Could not save password reset key to database"
 
 #: functions/restrict-rest-api.php:71
 msgid "The Wordpress built in API is disabled."
-msgstr ""
+msgstr "The Wordpress built in API is disabled"
 
 #: functions/zume-course.php:2417
 msgid "Listen and Practice (75 min)"
-msgstr ""
+msgstr "Listen and Practice (75 min)"
 
 #: functions/zume-course.php:2429
 msgid "A 3/3 Group is a way for followers of Jesus to meet, pray, learn, grow, fellowship, and practice obeying and sharing what they've learned. In this way, a 3/3 Group is not just a small group but a Simple Church."
-msgstr ""
+msgstr "A 3/3 Group is a way for followers of Jesus to meet, pray, learn, grow, fellowship, and practice obeying and sharing what they've learned. In this way, a 3/3 Group is not just a small group but a Simple Church."
 
 #: functions/zume-course.php:2432
 msgid "In the following video, you’ll be coached through an interactive 3/3 Group where you’ll learn a principle and then “press pause” and practice it with the group."
-msgstr ""
+msgstr "In the following video, you'll be coached through an interactive 3/3 Group where you'll learn a principle and then \"press pause\" and practice it with the group. "
 
 #: functions/zume-course.php:2443
 msgid "Find the \"3/3 Group Format\" section in your Zúme Guidebook, and watch the video below."
-msgstr ""
+msgstr "Find the \"3/3 Group Format\" section in your Zúme Guidebook, and watch the video."
 
 #: functions/zume-course.php:3481
 msgid "Assess yourself using the coaching checklist."
-msgstr ""
+msgstr "Assess yourself using the coaching checklist."
 
 #: template-zume-faq.php:121
 msgid "The second phase focuses on coaching these Phase 1 churches through the reproduction process, as well as delivering the project in other major world languages. The project will start in the following languages: Amharic, Arabic, Bengali, Bhojpuri, Burmese, Chinese (Mandarin), Chinese (Cantonese), Farsi, French, German, Gujarati, Hausa, Hindi, Indonesian, Italian, Japanese, Kannada, Korean, Kurdish, Lao, Maithili, Malayalam, Marathi, Oriya, Panjabi (Eastern), Panjabi (Western), Portuguese, Russian, Somali, Spanish, Swahili, Tamil, Telugu, Thai, Turkish, Urdu, Vietnamese, Yoruba."
-msgstr ""
+msgstr "The second phase focuses on coaching these Phase 1 churches through the reproduction process, as well as delivering the project in other major world languages. The project will start in the following languages: Amharic, Arabic, Bengali, Bhojpuri, Burmese, Chinese (Mandarin), Chinese (Cantonese), Farsi, French, German, Gujarati, Hausa, Hindi, Indonesian, Italian, Japanese, Kannada, Korean, Kurdish, Lao, Maithili, Malayalam, Marathi, Oriya, Panjabi (Eastern), Panjabi (Western), Portuguese, Russian, Somali, Spanish, Swahili, Tamil, Telugu, Thai, Turkish, Urdu, Vietnamese, Yoruba."
 
 #: template-zume-faq.php:140
 msgid "The project will start in the following languages and made available to those wishing to translate the training and tools into additional languages: Amharic, Arabic, Bengali, Bhojpuri, Burmese, Chinese (Mandarin), Chinese (Cantonese), Farsi, French, German, Gujarati, Hausa, Hindi, Indonesian, Italian, Japanese, Kannada, Korean, Kurdish, Lao, Maithili, Malayalam, Marathi, Oriya, Panjabi (Eastern), Panjabi (Western), Portuguese, Russian, Somali, Spanish, Swahili, Tamil, Telugu, Thai, Turkish, Urdu, Vietnamese, Yoruba."
-msgstr ""
+msgstr "The project will start in the following languages and made available to those wishing to translate the training and tools into additional languages: Amharic, Arabic, Bengali, Bhojpuri, Burmese, Chinese (Mandarin), Chinese (Cantonese), Farsi, French, German, Gujarati, Hausa, Hindi, Indonesian, Italian, Japanese, Kannada, Korean, Kurdish, Lao, Maithili, Malayalam, Marathi, Oriya, Panjabi (Eastern), Panjabi (Western), Portuguese, Russian, Somali, Spanish, Swahili, Tamil, Telugu, Thai, Turkish, Urdu, Vietnamese, Yoruba."
 
 #: template-zume-faq.php:141
 msgid "To see the most updated progress go to "
-msgstr ""
+msgstr "To see the most updated progress go to"
 
 #: template-zume-faq.php:142
 msgid "Language Translation Progress."
-msgstr ""
+msgstr "Language Translation Progress."
 
 #: template-zume-privacy-policy.php:132
 msgid "See what data we've aggregated from your activities with us."
-msgstr ""
+msgstr "See what data we've aggregated from your activities with us."
 
 #. Template Name of the plugin/theme
 #: 
 msgid "Zúme One Page Course"
-msgstr ""
+msgstr "Zúme One Page Course"
 
