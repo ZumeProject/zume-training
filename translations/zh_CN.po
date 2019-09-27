@@ -3372,15 +3372,15 @@ msgstr "「天国酵母」Zúme 课程"
 
 #: functions/login/zume-login.php:1303
 msgid "Password reset is not allowed for this user"
-msgstr "Password reset is not allowed for this user"
+msgstr "此用户不得重设密码"
 
 #: functions/login/zume-login.php:1330
 msgid "Could not save password reset key to database."
-msgstr "Could not save password reset key to database"
+msgstr "无法于资料库储存密码重设金钥"
 
 #: functions/restrict-rest-api.php:71
 msgid "The Wordpress built in API is disabled."
-msgstr "The Wordpress built in API is disabled"
+msgstr "API内建之Wordpress系统失效"
 
 #: functions/zume-course.php:2417
 msgid "Listen and Practice (75 min)"
@@ -3388,11 +3388,11 @@ msgstr "聆听与操练（75分钟）"
 
 #: functions/zume-course.php:2429
 msgid "A 3/3 Group is a way for followers of Jesus to meet, pray, learn, grow, fellowship, and practice obeying and sharing what they've learned. In this way, a 3/3 Group is not just a small group but a Simple Church."
-msgstr "A 3/3 Group is a way for followers of Jesus to meet, pray, learn, grow, fellowship, and practice obeying and sharing what they've learned. In this way, a 3/3 Group is not just a small group but a Simple Church."
+msgstr "三合一小组是一种能让耶稣跟随者聚集、祷告、学习、成长、团契以及实践遵行和分享他们所学一切的方式。于此，三合一小组不仅仅只是小组，而是微型教会。"
 
 #: functions/zume-course.php:2432
 msgid "In the following video, you’ll be coached through an interactive 3/3 Group where you’ll learn a principle and then “press pause” and practice it with the group."
-msgstr "In the following video, you'll be coached through an interactive 3/3 Group where you'll learn a principle and then \"press pause\" and practice it with the group. "
+msgstr "接下来的影片要透过互动式的三合一小组来培训你。我们会告诉你一个准则，之后将影片按「暂停」，先在小组中实作。"
 
 #: functions/zume-course.php:2443
 msgid "Find the \"3/3 Group Format\" section in your Zúme Guidebook, and watch the video below."
@@ -3400,7 +3400,7 @@ msgstr "请翻到「天国酵母」手册「三合一小组」这课﹐并一起
 
 #: functions/zume-course.php:3481
 msgid "Assess yourself using the coaching checklist."
-msgstr "Assess yourself using the coaching checklist."
+msgstr "请使用教练指南清单来自我评估。"
 
 #: template-zume-faq.php:121
 msgid "The second phase focuses on coaching these Phase 1 churches through the reproduction process, as well as delivering the project in other major world languages. The project will start in the following languages: Amharic, Arabic, Bengali, Bhojpuri, Burmese, Chinese (Mandarin), Chinese (Cantonese), Farsi, French, German, Gujarati, Hausa, Hindi, Indonesian, Italian, Japanese, Kannada, Korean, Kurdish, Lao, Maithili, Malayalam, Marathi, Oriya, Panjabi (Eastern), Panjabi (Western), Portuguese, Russian, Somali, Spanish, Swahili, Tamil, Telugu, Thai, Turkish, Urdu, Vietnamese, Yoruba."
@@ -3412,18 +3412,18 @@ msgstr "这套门徒训练目前有这些语言︰华语﹑粤语﹑英语、法
 
 #: template-zume-faq.php:141
 msgid "To see the most updated progress go to "
-msgstr "To see the most updated progress go to"
+msgstr "欲知最新进展，请至"
 
 #: template-zume-faq.php:142
 msgid "Language Translation Progress."
-msgstr "Language Translation Progress."
+msgstr "语言翻译进展。"
 
 #: template-zume-privacy-policy.php:132
 msgid "See what data we've aggregated from your activities with us."
-msgstr "See what data we've aggregated from your activities with us."
+msgstr "查看你的历程记录"
 
 #. Template Name of the plugin/theme
 #: 
 msgid "Zúme One Page Course"
-msgstr "Zúme One Page Course"
+msgstr "「天国酵母」单张课程"
 
