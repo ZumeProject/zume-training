@@ -2,7 +2,7 @@
 /*
 Template Name: Zume Login
 */
-
+$zendesk_enable = true;
 
 /**
  * Catch Logout Request and Process Immediately

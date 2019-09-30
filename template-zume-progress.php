@@ -2,7 +2,7 @@
 /*
 Template Name: Zúme Progress
 */
-
+$zendesk_enable = true;
 get_header();
 
 ?>

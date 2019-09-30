@@ -48,20 +48,22 @@ function zume_site_scripts() {
         wp_enqueue_script( 'comment-reply' );
     }
 
-    wp_enqueue_script( 'jquery-steps', get_template_directory_uri() . '/assets/scripts/jquery.steps.js', array( 'jquery' ), 1.1, true );
-    wp_localize_script(
-        "jquery-steps", "stepsSettings", array(
-            "translations" => [
-                "cancel" => esc_html__( 'Cancel', 'zume' ),
-                "current:" => esc_html__( 'Current Step:', 'zume' ),
-                "pagination" => esc_html__( 'Cancel', 'zume' ),
-                "finish" => esc_html__( 'Finish', 'zume' ),
-                "next" => esc_html__( 'Next', 'zume' ),
-                "previous" => esc_html__( 'Previous', 'zume' ),
-                "loading" => esc_html__( 'Loading...', 'zume' ),
-            ]
-        )
-    );
+    if ( 'template-zume-course.php' === basename( get_page_template() ) ) {
+        wp_enqueue_script( 'jquery-steps', get_template_directory_uri() . '/assets/scripts/jquery.steps.js', array( 'jquery' ), 1.1, true );
+        wp_localize_script(
+            "jquery-steps", "stepsSettings", array(
+                "translations" => [
+                    "cancel" => esc_html__( 'Cancel', 'zume' ),
+                    "current:" => esc_html__( 'Current Step:', 'zume' ),
+                    "pagination" => esc_html__( 'Cancel', 'zume' ),
+                    "finish" => esc_html__( 'Finish', 'zume' ),
+                    "next" => esc_html__( 'Next', 'zume' ),
+                    "previous" => esc_html__( 'Previous', 'zume' ),
+                    "loading" => esc_html__( 'Loading...', 'zume' ),
+                ]
+            )
+        );
+    }
 
     wp_enqueue_script( 'zume', get_template_directory_uri() . '/assets/scripts/zume.js', array( 'jquery' ), 1.1, true );
     wp_localize_script(
@@ -89,22 +91,6 @@ function zume_site_scripts() {
     wp_style_add_data( 'zume_dashboard_style', 'rtl', 'replace' );
 
     wp_enqueue_style( 'foundations-icons', get_template_directory_uri() .'/assets/styles/foundation-icons/foundation-icons.css', array(), '3' );
-
-//      @todo Rebuild the statistics lookups for Zume stats
-    $stats = Zume_Stats::instance();
-    $url_path = trim( parse_url( add_query_arg( array() ), PHP_URL_PATH ), '/' );
-    if ("stats" === $url_path){
-        wp_enqueue_script( 'google-charts', 'https://www.gstatic.com/charts/loader.js', array(), '1' );
-        wp_enqueue_script( 'stats', get_template_directory_uri() . '/assets/scripts/stats.js', array( 'jquery', 'google-charts' ), '1', false );
-        wp_localize_script(
-            "stats", "wpApiSettings", array(
-                "locations" => $stats->get_group_locations(),
-                "sizes" => $stats->get_group_sizes(),
-                "steps" => $stats->get_group_steps(),
-            )
-        );
-
-    }
 
 }
 add_action( 'wp_enqueue_scripts', 'zume_site_scripts', 999 );

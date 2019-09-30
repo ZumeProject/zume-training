@@ -2,6 +2,7 @@
 /*
 Template Name: Zume Privacy Policy
 */
+$zendesk_enable = true;
 ?>
 
 <?php get_header(); ?>
