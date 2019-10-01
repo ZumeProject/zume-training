@@ -1346,7 +1346,6 @@ endif; // check if $zume_colead_groups is no empty
         <h1 class="primary-color" id="coach-modal-title"><?php echo esc_html__( 'Connect Me to a Coach', 'zume' ) ?></h1>
         <hr>
 
-        <?php if ( ! $transfer_time = get_user_meta( $zume_user->ID, 'zume_transferred', true ) ) : ?>
 
         <div class="grid-x" id="coaching-request-form-section">
             <div class="cell">
@@ -1514,25 +1513,6 @@ endif; // check if $zume_colead_groups is no empty
         <button class="close-button" data-close aria-label="Close modal" type="button">
             <span aria-hidden="true">&times;</span>
         </button>
-
-    <?php else : ?>
-
-    <!-- Already submitted -->
-    <div class="grid-x">
-        <div class="cell">
-            <div class="grid-x">
-                <div class="cell callout warning">
-                    <?php esc_html_e( 'Thank you. You have already requested a coach connection.', 'zume' ) ?> (<?php echo esc_attr( date_i18n( 'm-d-Y', esc_attr( $transfer_time ) ) ) ?>)
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <button class="close-button" data-close aria-label="Close modal" type="button">
-        <span aria-hidden="true">&times;</span>
-    </button>
-
-    <?php endif; ?>
 
 </div> <!-- End of reveal -->
 
