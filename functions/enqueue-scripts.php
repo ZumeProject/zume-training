@@ -90,22 +90,6 @@ function zume_site_scripts() {
 
     wp_enqueue_style( 'foundations-icons', get_template_directory_uri() .'/assets/styles/foundation-icons/foundation-icons.css', array(), '3' );
 
-//      @todo Rebuild the statistics lookups for Zume stats
-    $stats = Zume_Stats::instance();
-    $url_path = trim( parse_url( add_query_arg( array() ), PHP_URL_PATH ), '/' );
-    if ("stats" === $url_path){
-        wp_enqueue_script( 'google-charts', 'https://www.gstatic.com/charts/loader.js', array(), '1' );
-        wp_enqueue_script( 'stats', get_template_directory_uri() . '/assets/scripts/stats.js', array( 'jquery', 'google-charts' ), '1', false );
-        wp_localize_script(
-            "stats", "wpApiSettings", array(
-                "locations" => $stats->get_group_locations(),
-                "sizes" => $stats->get_group_sizes(),
-                "steps" => $stats->get_group_steps(),
-            )
-        );
-
-    }
-
 }
 add_action( 'wp_enqueue_scripts', 'zume_site_scripts', 999 );
 
