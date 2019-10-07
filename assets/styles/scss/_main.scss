@@ -130,14 +130,9 @@ NAVIGATION STYLES
 	}
 }
 
-.zume-logo-in-top-bar {
-    padding: 0;
-    max-width: 79px;
-}
 
-.menu > li.zume-logo-in-top-bar > a {
-    padding: 0;
-}
+
+
 
 /*********************
 POSTS & CONTENT STYLES
@@ -1059,4 +1054,13 @@ ul.orbit-container {
 
 .lowercase {
 	text-transform: lowercase !important;
+}
+
+.zume-logo-in-top-bar img {
+    padding: 0;
+    height: 35px;
+    width: 240px;
+}
+.menu > li.zume-logo-in-top-bar > a {
+    padding: 0;
 }

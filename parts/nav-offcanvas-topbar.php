@@ -21,8 +21,7 @@
             <ul class="menu">
                 <li class="zume-logo-in-top-bar">
                     <a href="<?php echo is_user_logged_in() ? esc_url( zume_dashboard_url() ) : esc_url( zume_home_url() ); ?>">
-                        <img src="<?php echo esc_attr( zume_images_uri() ); ?>zume-logo-white.png"
-                             class="zume-logo-in-top-bar">
+                        <img src="<?php echo esc_attr( zume_images_uri() ); ?>zume-training-logo.svg" alt="Zume Logo" >
                     </a>
                 </li>
             </ul>
