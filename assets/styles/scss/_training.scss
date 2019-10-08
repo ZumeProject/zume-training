@@ -1,0 +1,44 @@
+#training {
+    h1 {
+        font-size: 32px;
+        font-weight: 900;
+        line-height: 1.3em;
+        color: $primary-color;
+    }
+    h2 {
+        font-size: 32px;
+        font-weight: 300;
+        line-height: 1.3em;
+    }
+    .t-description {
+        color: $dark-gray;
+        font-size: .8rem;
+        line-height: 1rem;
+        margin-bottom: .5rem;
+        font-weight: 100;
+    }
+    .t-ad-message {
+        font-weight:600;
+        font-size: 1.2rem;
+        margin-bottom:0;
+    }
+    .t-length {
+        color: $dark-gray;
+        font-weight: 100;
+        text-align: right;
+    }
+    .t-activities {
+        color: $dark-gray;
+        //font-style: italic;
+        font-weight: 100;
+    }
+    .start {
+        text-align: right;
+    }
+    .toggle-icons {
+        font-size:1.2rem;
+        text-align: right;
+        cursor: pointer;
+        color: $dark-gray;
+    }
+}

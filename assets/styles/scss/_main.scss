@@ -245,67 +245,6 @@ POSTS & CONTENT STYLES
 }
 
 
-#buddypress {
-    input[type=submit], input[type=reset], input[type=button] {
-        background: $white;
-        border: 0;
-        color: $primary-color;
-        font-size: medium;
-        cursor: pointer;
-        outline: $primary-color solid 1px;
-        padding: $global-button-padding;
-        text-align: center;
-        text-decoration: none;
-        -webkit-border-radius: $global-radius;
-        -moz-border-radius: $global-radius;
-        border-radius: $global-radius;
-        margin: 2px;
-
-        &:hover {
-            background: $primary-color;
-            border: 0;
-            color: $white;
-            font-size: medium;
-            cursor: pointer;
-            outline: $primary-color solid 1px;
-            padding: $global-button-padding;
-            text-align: center;
-            text-decoration: none;
-            -webkit-border-radius: $global-radius;
-            -moz-border-radius: $global-radius;
-            border-radius: $global-radius;
-            margin: 2px;
-        }
-    }
-}
-
-
-
-/*********************
-IMAGE GALLERY STYLES
-*********************/
-	.gallery {
-
-		dl {
-
-			a {}
-
-			img {}
-
-		}
-
-		dt {}
-
-		dd {}
-
-}
-
-// Gallery caption styles
-.gallery-caption {}
-.size-full {}
-.size-large {}
-.size-medium {}
-.size-thumbnail {}
 
 /*********************
 PAGE NAVI STYLES
