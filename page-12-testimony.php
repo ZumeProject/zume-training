@@ -41,7 +41,68 @@ if (have_posts()) :
 
                     <!-- Center column -->
                     <div class="large-8 small-12 cell" id="training-content">
+                        <section>
+                            <!-- Listen and Read Along -->
 
+                            <div class="grid-x grid-margin-x grid-margin-y">
+                                <div class="step-title cell">
+                                    <?php esc_html_e( 'Listen and Read Along (3min)', 'zume' ) ?>
+                                </div> <!-- step-title cell -->
+                            </div> <!-- grid-x -->
+
+                            <!-- Activity Block  -->
+                            <div class="grid-x grid-margin-x grid-margin-y">
+                                <div class="large-3 cell activity-title"><?php esc_html_e( "READ", 'zume' ) ?></div>
+                                <div class="large-9 cell activity-description">
+                                    <p class="read-section">
+                                        <?php esc_html_e( "3-Minute Testimony", 'zume' ) ?>
+                                    </p>
+                                    <p>
+                                        <?php esc_html_e( 'As followers of Jesus, we are “witnesses" for Him, because we “testify” about the impact Jesus has had on our lives. Your story of your relationship with God is called your Testimony. It\'s powerful, and it\'s something no one can share better than you.', 'zume' ) ?>
+                                    </p>
+                                </div>
+                            </div> <!-- grid-x -->
+
+                            <!-- Inset Block -->
+                            <div class="grid-x grid-margin-x grid-margin-y single">
+                                <div class="cell auto"></div>
+                                <div class="large-9 cell activity-description well">
+                                    <div class="grid-x grid-padding-x grid-padding-y center" >
+                                        <div class="cell session-boxes">
+                                            <?php esc_html_e( "Find the \"3-Minute Testimony\" section in your Zúme Guidebook, and listen to the audio below.", 'zume' ) ?>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="cell auto"></div>
+                            </div> <!-- grid-x -->
+
+                            <!-- Video block -->
+                            <div class="grid-x grid-margin-x grid-margin-y">
+                                <div class="small-12 small-centered cell video-section">
+
+                                    <!-- 12 -->
+                                    <?php if ( $alt_video ) : ?>
+                                        <video width="960" height="540" style="border: 1px solid lightgrey;margin: 0 15%;" controls>
+                                            <source src="<?php echo esc_url( Zume_Course::get_alt_video_by_key( 'alt_12' ) ) ?>" type="video/mp4">
+                                            Your browser does not support the video tag.
+                                        </video>
+                                    <?php else : ?>
+                                        <iframe style="border: 1px solid lightgrey;"  src="<?php echo esc_url( Zume_Course::get_video_by_key( '12' ) ) ?>" width="560" height="315"
+                                                frameborder="1"
+                                                webkitallowfullscreen mozallowfullscreen allowfullscreen>
+                                        </iframe>
+                                    <?php endif; ?>
+
+                                    <p class="center hide-for-small-only"><a
+                                            href="<?php echo esc_url( Zume_Course::get_download_by_key( '45' ) ) ?>"
+                                            target="_blank" rel="noopener noreferrer nofollow"><img
+                                                src="<?php echo esc_url( zume_images_uri( 'course' ) ) ?>download-icon-150x150.png"
+                                                alt=""
+                                                width="35" height="35" class="alignnone size-thumbnail wp-image-3274"
+                                                style="vertical-align: text-bottom"/> <?php esc_html_e( "Zúme Video Scripts: Testimony", 'zume' ) ?></a></p>
+                                </div>
+                            </div> <!-- grid-x -->
+                        </section>
                     </div>
 
                     <div class="large-2 cell"></div><!-- Side spacer -->

@@ -58,7 +58,7 @@ class Zume_Integration_Menu
             wp_die( esc_attr__( 'You do not have sufficient permissions to access this page.' ) );
         }
 
-        $title = 'DISCIPLE TOOLS - INTEGRATION';
+        $title = 'Zume Training';
 
         $link = 'admin.php?page=' . $this->token . '&tab=';
 
@@ -118,7 +118,6 @@ class Zume_Integration_Menu
                     $this->tab_zume_settings();
                     break;
                 case "third_party_keys":
-
                     $object = new Zume_Keys_Tab();
                     $object->content();
                     break;

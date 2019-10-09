@@ -42,6 +42,65 @@ if (have_posts()) :
                     <!-- Center column -->
                     <div class="large-8 small-12 cell" id="training-content">
 
+                        <section><!-- Step Title -->
+                            <div class="grid-x grid-margin-x grid-margin-y">
+                                <div class="step-title cell"><?php esc_html_e( 'Watch and Discuss (15min)', 'zume' ) ?></div>
+                                <!-- step-title cell -->
+
+                            </div>
+                            <!-- grid-x -->
+
+                            <!-- Activity Block -->
+                            <div class="grid-x grid-margin-x grid-margin-y">
+                                <div class="large-3 cell activity-title"><?php esc_html_e( 'WATCH', 'zume' ) ?></div>
+                                <div class="large-9 cell activity-description">
+                                    <?php esc_html_e( 'What is a disciple? And how do you make one? How do you teach a follower of Jesus to do what He told us in His Great Commission – to obey all of His commands?', 'zume' ) ?>
+                                </div>
+                            </div>
+
+                            <div class="grid-x grid-margin-x grid-margin-y">
+                                <div class="small-12 small-centered cell video-section">
+
+
+                                    <!-- 2 -->
+                                    <?php if ( $alt_video ) : ?>
+                                        <video width="960" height="540" style="border: 1px solid lightgrey;margin: 0 15%;" controls>
+                                            <source src="<?php echo esc_url( Zume_Course::get_alt_video_by_key( 'alt_2' ) ) ?>" type="video/mp4">
+                                            Your browser does not support the video tag.
+                                        </video>
+                                    <?php else : ?>
+                                        <iframe style="border: 1px solid lightgrey;"  src="<?php echo esc_url( Zume_Course::get_video_by_key( '2' ) ) ?>" width="560" height="315"
+                                                frameborder="1"
+                                                webkitallowfullscreen mozallowfullscreen allowfullscreen>
+                                        </iframe>
+                                    <?php endif; ?>
+
+                                    <p class="center hide-for-small-only"><a
+                                            href="<?php echo esc_url( Zume_Course::get_download_by_key( '35' ) ) ?>"
+                                            target="_blank" rel="noopener noreferrer nofollow"><img
+                                                src="<?php echo esc_url( zume_images_uri( 'course' ) ) ?>download-icon-150x150.png"
+                                                alt=""
+                                                width="35" height="35" class="alignnone size-thumbnail wp-image-3274"
+                                                style="vertical-align: text-bottom"/> <?php esc_html_e( 'Zúme Video Scripts: Teach Them to Obey', 'zume' ) ?></a></p>
+                                </div>
+                            </div>
+                            <!-- grid-x -->
+                            <!-- Activity Block -->
+                            <div class="grid-x grid-margin-x grid-margin-y">
+                                <div class="large-3 cell activity-title"><?php esc_html_e( 'DISCUSS', 'zume' ) ?></div>
+                                <div class="large-9 cell activity-description">
+                                    <ol class="rectangle-list">
+                                        <li><?php esc_html_e( 'When you think of a church, what comes to mind?', 'zume' ) ?></li>
+                                        <li><?php esc_html_e( 'What\'s the difference between that picture and what\'s described in the video as a "Simple Church"?', 'zume' ) ?>
+                                        </li>
+                                        <li><?php esc_html_e( 'Which one do you think would be easier to multiply and why?', 'zume' ) ?></li>
+                                    </ol>
+                                </div>
+                            </div>
+                            <!-- grid-x -->
+
+                        </section>
+
                     </div>
 
                     <div class="large-2 cell"></div><!-- Side spacer -->

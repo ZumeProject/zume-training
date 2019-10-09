@@ -41,7 +41,63 @@ if (have_posts()) :
 
                     <!-- Center column -->
                     <div class="large-8 small-12 cell" id="training-content">
+                        <section><!-- Step Title -->
+                            <div class="grid-x grid-margin-x grid-margin-y">
+                                <div class="step-title cell"><?php esc_html_e( 'Watch and Discuss (15min)', 'zume' ) ?></div>
+                                <!-- step-title cell -->
 
+                            </div>
+                            <!-- grid-x -->
+
+                            <!-- Activity Block -->
+                            <div class="grid-x grid-margin-x grid-margin-y">
+                                <div class="large-3 cell activity-title"><?php esc_html_e( 'WATCH', 'zume' ) ?></div>
+                                <div class="large-9 cell activity-description">
+                                    <?php esc_html_e( "Jesus taught us that we are to stay close — to live as a small, spiritual family, to love and give our lives to one another, to celebrate and suffer — together. However, Jesus also taught us to leave our homes and loved ones behind and be willing to go anywhere — and everywhere — to share and start new spiritual families. So how can we do both? When you're ready, watch the video below and discuss the question that follows.", 'zume' ) ?>
+                                </div>
+                            </div>
+                            <!-- grid-x -->
+
+                            <!-- Video block -->
+                            <div class="grid-x grid-margin-x grid-margin-y vertical-padding">
+                                <div class="small-12 small-centered cell video-section">
+
+                                    <!-- 26 -->
+                                    <?php if ( $alt_video ) : ?>
+                                        <video width="960" height="540" style="border: 1px solid lightgrey;margin: 0 15%;" controls>
+                                            <source src="<?php echo esc_url( Zume_Course::get_alt_video_by_key( 'alt_26' ) ) ?>" type="video/mp4">
+                                            Your browser does not support the video tag.
+                                        </video>
+                                    <?php else : ?>
+                                        <iframe style="border: 1px solid lightgrey;"  src="<?php echo esc_url( Zume_Course::get_video_by_key( '26' ) ) ?>" width="560" height="315"
+                                                frameborder="1"
+                                                webkitallowfullscreen mozallowfullscreen allowfullscreen>
+                                        </iframe>
+                                    <?php endif; ?>
+
+                                    <p class="center hide-for-small-only">
+                                        <a  href="<?php echo esc_url( Zume_Course::get_download_by_key( '58' ) ) ?>"
+                                            target="_blank" rel="noopener noreferrer nofollow">
+                                            <img class="alignnone size-thumbnail wp-image-3274"
+                                                 style="vertical-align: text-bottom;"
+                                                 src="<?php echo esc_url( zume_images_uri( 'course' ) ) ?>download-icon-150x150.png"
+                                                 alt="" width="35" height="35"/>
+                                            <?php esc_html_e( "Zúme Video Scripts: Two Churches", 'zume' ) ?>
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                            <!-- grid-x -->
+                            <!-- Activity Block -->
+                            <div class="grid-x grid-margin-x grid-margin-y">
+                                <div class="large-3 cell activity-title"><?php esc_html_e( 'DISCUSS', 'zume' ) ?></div>
+                                <div class="large-9 cell activity-description">
+                                    <?php esc_html_e( "What are some advantages of maintaining a consistent spiritual family that gives birth to new ones that grow and multiply instead of continually growing a family and splitting it in order to grow?", 'zume' ) ?>
+                                </div>
+                            </div>
+                            <!-- grid-x -->
+
+                        </section><!-- Step -->
                     </div>
 
                     <div class="large-2 cell"></div><!-- Side spacer -->

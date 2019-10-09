@@ -7,6 +7,8 @@ require_once( 'functions/utilities/debugger-log.php' ); // debug logger used for
 require_once( 'dt-mapping/loader.php' );
 new DT_Mapping_Module_Loader('theme');
 
+
+
 /**
  * Add custom table
  */
@@ -86,7 +88,6 @@ if ( is_admin() ) {
     require_once( 'functions/zume-resource-metabox.php' ); // zume logging of critical path actions
     require_once( 'functions/zume-dt-integration/system-check-metabox.php' );
 }
-
 
 /**
  * redirect all logins to the home page

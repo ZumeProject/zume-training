@@ -216,6 +216,14 @@ function zume_dashboard_url( $current_language = null ) {
     return $url;
 }
 
+function zume_training_url( $current_language = null ) {
+    if ( is_null( $current_language ) ) {
+        $current_language = zume_current_language();
+    }
+    $url = zume_get_posts_translation_url( 'training', $current_language );
+    return $url;
+}
+
 function zume_course_url() {
     $current_lang = zume_current_language();
     $url = zume_get_posts_translation_url( 'course', $current_lang );
@@ -296,6 +304,49 @@ function zume_alternate_home_id() {
     return $id;
 }
 
+function zume_landing_page_post_id( int $number ) : int {
+    /**
+     * These are the root post ids for the english page, which is used to find the translation page in the
+     * polylang system.
+     */
+    $list = [
+        1 => 20715, // God uses ordinary people
+        2 => 20718, // teach them to obey
+        3 => 20719, // spiritual breathing
+        4 => 20720, // soaps bible reading
+        5 => 20721, // accountability groups
+        6 => 20722, // consumers vs producers
+        7 => 20723, // prayer cycle
+        8 => 20724, // list of 100
+        9 => 20725, // kingdom economy
+        10 => 20726, // the gospel
+        11 => 20727, // baptism
+        12 => 20728, // 3-minute testimony
+        13 => 20729, // greatest blessing
+        14 => 20730, // duckling discipleship
+        15 => 20731, // seeing where God's kingdom isn't
+        16 => 20732, // the lord's supper
+        17 => 20733, // prayer walking
+        18 => 20735, // person of peace
+        19 => 20734, // bless prayer
+        20 => 20736, // faithfulness
+        21 => 20737, // 3/3 group pattern
+        22 => 20738, // training cycle
+        23 => 20739, // leadership cells
+        24 => 20740, // non-sequential
+        25 => 20741, // pace
+        26 => 20742, // part of two churches
+        27 => 19848, // 3-month plan
+        28 => 20743, // coaching checklist
+        29 => 20744, // leadership in networks
+        30 => 20745, // peer mentoring groups
+        31 => 20746, // four fields tool
+        32 => 20747, // generation mapping
+    ];
+
+    return $list[$number] ?? 0;
+}
+
 /***********************************************************************************************************************
  *
  * ADMIN AREA
@@ -341,3 +392,6 @@ function zume_mu_show_custom_column_content( $value, $column_name, $user_id ) {
 
 } // end theme_show_user_zip_code_data
 add_action( 'manage_users_custom_column', 'zume_mu_show_custom_column_content', 10, 3 );
+
+
+

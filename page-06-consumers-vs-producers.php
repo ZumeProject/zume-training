@@ -42,6 +42,71 @@ if (have_posts()) :
                     <!-- Center column -->
                     <div class="large-8 small-12 cell" id="training-content">
 
+                        <section>
+                            <!-- Step Title -->
+                            <div class="grid-x grid-margin-x grid-margin-y">
+                                <div class="step-title cell">
+                                    <?php esc_html_e( 'Watch and Discuss (15min)', 'zume' ) ?>
+                                </div> <!-- step-title cell -->
+                            </div> <!-- grid-x -->
+
+                            <!-- Activity Block  -->
+                            <div class="grid-x grid-margin-x grid-margin-y">
+                                <div class="large-3 cell activity-title">
+                                    <?php esc_html_e( 'WATCH', 'zume' ) ?>
+                                </div>
+                                <div class="large-9 cell activity-description">
+                                    <?php esc_html_e( 'If we want to make disciples who multiply – spiritual producers and not just consumers – then we need to learn and share four main ways God makes everyday followers more like Jesus:', 'zume' ) ?>
+                                    <ul style="padding:0;">
+                                        <li><?php esc_html_e( 'Prayer', 'zume' ) ?></li>
+                                        <li><?php esc_html_e( 'Scripture', 'zume' ) ?></li>
+                                        <li><?php esc_html_e( 'Body Life', 'zume' ) ?></li>
+                                        <li><?php esc_html_e( 'Persecution and Suffering', 'zume' ) ?></li>
+                                    </ul>
+                                </div>
+                            </div> <!-- grid-x -->
+
+                            <!-- Video block -->
+                            <div class="grid-x grid-margin-x grid-margin-y">
+                                <div class="small-12 small-centered cell video-section">
+
+                                    <!-- 6 -->
+                                    <?php if ( $alt_video ) : ?>
+                                        <video width="960" height="540" style="border: 1px solid lightgrey;margin: 0 15%;" controls>
+                                            <source src="<?php echo esc_url( Zume_Course::get_alt_video_by_key( 'alt_6' ) ) ?>" type="video/mp4">
+                                            Your browser does not support the video tag.
+                                        </video>
+                                    <?php else : ?>
+                                        <iframe style="border: 1px solid lightgrey;"  src="<?php echo esc_url( Zume_Course::get_video_by_key( '6' ) ) ?>" width="560" height="315"
+                                                frameborder="1"
+                                                webkitallowfullscreen mozallowfullscreen allowfullscreen>
+                                        </iframe>
+                                    <?php endif; ?>
+
+                                    <p class="center hide-for-small-only"><a
+                                            href="<?php echo esc_url( Zume_Course::get_download_by_key( '39' ) ) ?>"
+                                            target="_blank" rel="noopener noreferrer nofollow"><img
+                                                src="<?php echo esc_url( zume_images_uri( 'course' ) ) ?>download-icon-150x150.png"
+                                                alt=""
+                                                width="35" height="35" class="alignnone size-thumbnail wp-image-3274"
+                                                style="vertical-align: text-bottom"/> <?php esc_html_e( "Zúme Video Scripts: Producers vs Consumers", 'zume' ) ?></a>
+                                    </p>
+                                </div>
+                            </div> <!-- grid-x -->
+                            <!-- Activity Block  -->
+                            <div class="grid-x grid-margin-x grid-margin-y">
+                                <div class="large-3 cell activity-title"><?php esc_html_e( 'DISCUSS', 'zume' ) ?></div>
+                                <div class="large-9 cell activity-description">
+                                    <ol>
+                                        <li><?php esc_html_e( 'Of the four areas detailed above (prayer, God\'s Word, etc.), which ones do you already practice?', 'zume' ) ?>
+                                        </li>
+                                        <li> <?php esc_html_e( 'Which ones do you feel unsure about?', 'zume' ) ?></li>
+                                        <li> <?php esc_html_e( 'How ready do you feel when it comes to training others?', 'zume' ) ?></li>
+                                    </ol>
+                                </div>
+                            </div> <!-- grid-x -->
+                        </section>
+
                     </div>
 
                     <div class="large-2 cell"></div><!-- Side spacer -->
