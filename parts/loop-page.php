@@ -5,7 +5,7 @@
     <?php
     global $post;
     if ($post->post_parent == 'groups'){?>
-        <h1 class="page-title"><?php the_title();?></h1>
+        <h1 class="page-title center"><?php the_title();?></h1>
     <?php } else { ?>
       <!--<h1 class="page-title"><?php /*the_title(); */?></h1>-->
     <?php } ?>
