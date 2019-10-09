@@ -4,12 +4,6 @@
 <?php
     $zume_is_logged_in = is_user_logged_in();
 
-    // adds the current language to the nav url
-//if ( zume_has_polylang() ) {
-//    $zume_current_language_slug = zume_the_languages() . '/';
-//} else {
-//    $zume_current_language_slug = '';
-//}
 ?>
 
 <div class="top-bar" id="top-bar-menu">

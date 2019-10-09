@@ -7,7 +7,11 @@ get_header();
 
 <div id="training">
     <div  id="inner-content" class="grid-x padding-top-1">
+        <!-------------------------------------------------------------------------------------------------------------
 
+        Challenge section (logged out)
+
+        ------------------------------------------------------------------------------------------------------------->
         <?php if( ! is_user_logged_in() ) : ?>
         <div id="challenge" class="cell">
             <div class="grid-x ">
@@ -34,6 +38,9 @@ get_header();
             </div>
         </div> <!-- end #challenge-->
         <?php endif; ?>
+        <!-------------------------------------------------------------------------------------------------------------
+        End Challenge
+        -------------------------------------------------------------------------------------------------------------->
 
         <div id="course" class="cell">
             <div class="grid-x">
@@ -41,21 +48,47 @@ get_header();
 
                 <div class="large-10 cell"><!-- Center Column -->
 
-                    <div class="callout">
-                        <div class="grid-x">
-                            <div class="cell small-1"></div>
-                            <div class="cell small-10 center text-uppercase">
-                                <h1><?php echo esc_html__("Zúme Training", 'zume') ?></span></h1>
-                                <p class="t-description"><?php echo esc_html__("10 Sessions, 2 hours each, for groups of 3 - 12", 'zume' ) ?></p>
+                    <!--------------------------------------------------------------------------------------------------
 
+                    Tabs (logged in)
+
+                    --------------------------------------------------------------------------------------------------->
+                    <?php if( is_user_logged_in() ) : ?>
+                        <ul class="tabs" data-tabs id="training-tabs">
+                            <li class="tabs-title is-active"><a href="#panel1" aria-selected="true">Course</a></li>
+                            <li class="tabs-title"><a data-tabs-target="panel2" href="#panel2">My Groups</a></li>
+                            <li class="tabs-title"><a data-tabs-target="panel3" href="#panel3">My Progress</a></li>
+                        </ul>
+                    <?php endif; ?>
+
+                    <!-- Training Content Wrapper-->
+                    <div class="callout<?php if( is_user_logged_in() ) : ?> tabs-content<?php endif; ?>" id="zume-training-course" data-tabs-content="training-tabs">
+                        <!----------------------------------------------------------------------------------------------
+
+                        Course Tab
+
+                        ----------------------------------------------------------------------------------------------->
+                        <div class="tabs-panel is-active" id="panel1">
+
+                            <!-- Training content header -->
+                            <?php if( ! is_user_logged_in() ) : ?>
+                            <div class="grid-x">
+                                <div class="cell center text-uppercase">
+                                    <h1><?php echo esc_html__("Zúme Training", 'zume') ?></span></h1>
+                                    <p class="t-description"><?php echo esc_html__("10 Sessions, 2 hours each, for groups of 3 - 12", 'zume' ) ?></p>
+                                </div>
+                                <div class="cell">
+                                    <hr />
+                                </div>
                             </div>
-                            <div class="cell small-1 align-right">
-                                <a class="text-small" onclick="toggle_extra()">show/hide</a><br>
-                                <i class="fi-list toggle-icons" onclick="toggle_columns(1)"></i> <i class="fi-thumbnails toggle-icons" onclick="toggle_columns(0)"></i>
+
+                            <?php endif; ?>
+
+                            <div class="grid-x grid-padding-x grid-padding-y">
+
+                            <div class="cell small padding-top-0 center">
+                                <a onclick="toggle_columns(1)">1 column</a> | <a onclick="toggle_columns(2)">2 columns</a> | <a onclick="toggle_extra()">toggle extra info</a>
                             </div>
-                        </div>
-                        <hr>
-                        <div class="grid-x grid-padding-x grid-padding-y">
 
                             <!-- Session 1 -->
                             <div class="cell small-12 medium-6 session">
@@ -609,6 +642,23 @@ get_header();
                             </div>
                         </div>
 
+                        </div>
+                        <!----------------------------------------------------------------------------------------------
+
+                        My Groups Tab (logged in)
+
+                        ----------------------------------------------------------------------------------------------->
+                        <div class="tabs-panel" id="panel2">
+                            <p>Suspendisse dictum feugiat nisl ut dapibus.  Vivamus hendrerit arcu sed erat molestie vehicula. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor.  Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor.</p>
+                        </div>
+                        <!----------------------------------------------------------------------------------------------
+
+                        My Progress Tab (logged in)
+
+                        ----------------------------------------------------------------------------------------------->
+                        <div class="tabs-panel" id="panel3">
+                            <p>Suspendisse dictum feugiat nisl ut dapibus.  Vivamus hendrerit arcu sed erat molestie vehicula. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor.  Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor.</p>
+                        </div>
                     </div> <!-- end #callout -->
 
                 </div> <!-- end center column -->
