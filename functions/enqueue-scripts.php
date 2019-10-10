@@ -67,9 +67,46 @@ function zume_site_scripts() {
 
     if ( 'template-zume-training.php' === basename( get_page_template() ) ) {
         wp_enqueue_script( 'zumeTraining', get_template_directory_uri() . '/assets/scripts/training.js', array( 'jquery' ), filemtime( get_theme_file_path() . '/assets/scripts/training.js' ), true );
+        $current_language = zume_current_language();
         wp_localize_script(
             "zumeTraining", "zumeTraining", array(
-                "translations" => []
+                "current_language" => $current_language,
+                "translations" => [
+                    'titles' => [
+                        1 => esc_html( zume_get_landing_title(1, $current_language) ),
+                        2 => esc_html( zume_get_landing_title(2, $current_language) ),
+                        3 => esc_html( zume_get_landing_title(3, $current_language) ),
+                        4 => esc_html( zume_get_landing_title(4, $current_language) ),
+                        5 => esc_html( zume_get_landing_title(5, $current_language) ),
+                        6 => esc_html( zume_get_landing_title(6, $current_language) ),
+                        7 => esc_html( zume_get_landing_title(7, $current_language) ),
+                        8 => esc_html( zume_get_landing_title(8, $current_language) ),
+                        9 => esc_html( zume_get_landing_title(9, $current_language) ),
+                        10 => esc_html( zume_get_landing_title(10, $current_language) ),
+                        11 => esc_html( zume_get_landing_title(11, $current_language) ),
+                        12 => esc_html( zume_get_landing_title(12, $current_language) ),
+                        13 => esc_html( zume_get_landing_title(13, $current_language) ),
+                        14 => esc_html( zume_get_landing_title(14, $current_language) ),
+                        15 => esc_html( zume_get_landing_title(15, $current_language) ),
+                        16 => esc_html( zume_get_landing_title(16, $current_language) ),
+                        17 => esc_html( zume_get_landing_title(17, $current_language) ),
+                        18 => esc_html( zume_get_landing_title(18, $current_language) ),
+                        19 => esc_html( zume_get_landing_title(19, $current_language) ),
+                        20 => esc_html( zume_get_landing_title(20, $current_language) ),
+                        21 => esc_html( zume_get_landing_title(21, $current_language) ),
+                        22 => esc_html( zume_get_landing_title(22, $current_language) ),
+                        23 => esc_html( zume_get_landing_title(23, $current_language) ),
+                        24 => esc_html( zume_get_landing_title(24, $current_language) ),
+                        25 => esc_html( zume_get_landing_title(25, $current_language) ),
+                        26 => esc_html( zume_get_landing_title(26, $current_language) ),
+                        27 => esc_html( zume_get_landing_title(27, $current_language) ),
+                        28 => esc_html( zume_get_landing_title(28, $current_language) ),
+                        29 => esc_html( zume_get_landing_title(29, $current_language) ),
+                        30 => esc_html( zume_get_landing_title(30, $current_language) ),
+                        31 => esc_html( zume_get_landing_title(31, $current_language) ),
+                        32 => esc_html( zume_get_landing_title(32, $current_language) ),
+                    ]
+                ]
             )
         );
     }

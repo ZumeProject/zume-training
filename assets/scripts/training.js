@@ -92,7 +92,7 @@ function get_progress() {
 div.append(`
 <div class="cell">
     <div class="grid-y">
-       <div class="cell">
+       <div class="cell padding-bottom-3">
             <div class="grid-x grid-padding-x grid-padding-y center">
                 <div class="cell small-3">
                     <div class="circle-background">29</div>
@@ -108,8 +108,123 @@ div.append(`
                 </div>
             </div>
         </div>
-       <div class="cell">list</div>
-       <div class="cell">description</div>
+       <div class="cell">
+            <div class="grid-x grid-padding-x">
+                  <div class="cell medium-6">
+                    <div class="grid-y">
+                        <div class="cell">
+                        ${zumeTraining.translations.titles[1]}
+                        </div>
+                        <div class="cell">
+                        ${zumeTraining.translations.titles[2]}
+                        </div>
+                        <div class="cell">
+                        ${zumeTraining.translations.titles[3]}
+                        </div>
+                        <div class="cell">
+                        ${zumeTraining.translations.titles[4]}
+                        </div>
+                        <div class="cell">
+                        ${zumeTraining.translations.titles[5]}
+                        </div>
+                        <div class="cell">
+                        ${zumeTraining.translations.titles[6]}
+                        </div>
+                        <div class="cell">
+                        ${zumeTraining.translations.titles[7]}
+                        </div>
+                        <div class="cell">
+                        ${zumeTraining.translations.titles[8]}
+                        </div>
+                        <div class="cell">
+                        ${zumeTraining.translations.titles[9]}
+                        </div>
+                        <div class="cell">
+                        ${zumeTraining.translations.titles[10]}
+                        </div>
+                        <div class="cell">
+                        ${zumeTraining.translations.titles[11]}
+                        </div>
+                        <div class="cell">
+                        ${zumeTraining.translations.titles[12]}
+                        </div>
+                        <div class="cell">
+                        ${zumeTraining.translations.titles[13]}
+                        </div>
+                        <div class="cell">
+                        ${zumeTraining.translations.titles[14]}
+                        </div>
+                        <div class="cell">
+                        ${zumeTraining.translations.titles[15]}
+                        </div>
+                        <div class="cell">
+                        ${zumeTraining.translations.titles[16]}
+                        </div>
+                        <div class="cell">
+                        ${zumeTraining.translations.titles[17]}
+                        </div>
+                        <div class="cell">
+                        ${zumeTraining.translations.titles[18]}
+                        </div>
+                        <div class="cell">
+                        ${zumeTraining.translations.titles[19]}
+                        </div>
+                        <div class="cell">
+                        ${zumeTraining.translations.titles[20]}
+                        </div>
+                        <div class="cell">
+                        ${zumeTraining.translations.titles[21]}
+                        </div>
+                        <div class="cell">
+                        ${zumeTraining.translations.titles[22]}
+                        </div>
+                        <div class="cell">
+                        ${zumeTraining.translations.titles[23]}
+                        </div>
+                        <div class="cell">
+                        ${zumeTraining.translations.titles[24]}
+                        </div>
+                        <div class="cell">
+                        ${zumeTraining.translations.titles[25]}
+                        </div>
+                        <div class="cell">
+                        ${zumeTraining.translations.titles[26]}
+                        </div>
+                        <div class="cell">
+                        ${zumeTraining.translations.titles[27]}
+                        </div>
+                        <div class="cell">
+                        ${zumeTraining.translations.titles[28]}
+                        </div>
+                        <div class="cell">
+                        ${zumeTraining.translations.titles[29]}
+                        </div>
+                        <div class="cell">
+                        ${zumeTraining.translations.titles[30]}
+                        </div>
+                        <div class="cell">
+                        ${zumeTraining.translations.titles[31]}
+                        </div>
+                        <div class="cell">
+                        ${zumeTraining.translations.titles[32]}
+                        </div>
+                        
+                        
+                    </div>
+                  </div>
+                  <div class="cell medium-6">
+                    HEARD<br>
+                    "Heard" means gain knowledge. You have moved from not knowing about a tool or concept to knowing about it.<br>
+                    OBEYED<br>
+                    "Obeyed" means taking personal action. Obeying with tools might look like beginning to use them with others, while obeying with concepts might look like changing thinking or priorities.<br>
+                    SHARED<br>
+                    "Shared" means you helped someone else hear. This step is essential to truly understanding the concept or tool and preparing you to train others.<br>
+                    TRAINED<br>
+                    "Trained" means to coach someone else to obey and share. More than sharing knowledge, you have helped them become a sharer of the tool or concept.<br>
+                  </div>
+            </div>
+        </div>
+       
     </div>
 </div>
       
