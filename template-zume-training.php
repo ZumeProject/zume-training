@@ -54,10 +54,10 @@ get_header();
 
                     --------------------------------------------------------------------------------------------------->
                     <?php if( is_user_logged_in() ) : ?>
-                        <ul class="tabs" data-tabs id="training-tabs">
+                        <ul class="tabs" data-tabs id="training-tabs" data-deep-link="true" data-deep-link-smudge="true">
                             <li class="tabs-title is-active"><a href="#panel1" aria-selected="true">Course</a></li>
                             <li class="tabs-title"><a data-tabs-target="panel2" href="#panel2" onclick="get_groups()">My Groups</a></li>
-                            <li class="tabs-title"><a data-tabs-target="panel3" href="#panel3">My Progress</a></li>
+                            <li class="tabs-title"><a data-tabs-target="panel3" href="#panel3" onclick="get_progress()">My Progress</a></li>
                         </ul>
                     <?php endif; ?>
 
@@ -662,7 +662,7 @@ get_header();
 
                         ----------------------------------------------------------------------------------------------->
                         <div class="tabs-panel" id="panel3">
-                            <p>Suspendisse dictum feugiat nisl ut dapibus.  Vivamus hendrerit arcu sed erat molestie vehicula. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor.  Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor.</p>
+                            <div class="grid-x" id="progress-stats"><div class="loader">Loading...</div></div>
                         </div>
                     </div> <!-- end #callout -->
 

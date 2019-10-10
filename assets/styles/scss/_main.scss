@@ -87,34 +87,18 @@ NAVIGATION STYLES
 *********************/
 .top-bar {
 	background-color: $white;
+    padding: 10px 0;
     border-bottom: 1px solid $light-gray;
 
 	ul {
 		background-color: $white;
 	}
 
-	.title-area {
-		z-index: 1;
-	}
+    @media ( max-width: $breakpoint-medium ) {
 
-  .top-bar-left {
-      width: 20%;
-  }
-
-  .top-bar-right {
-    width: 60%;
-
-  }
-}
-.menu {
-
-  .submenu {
-
-  }
+    }
 
 }
-
-
 
 .off-canvas-list {
 	ul {
@@ -139,7 +123,7 @@ POSTS & CONTENT STYLES
 *********************/
 #content {
 	#inner-content {
-		padding: 1rem 0rem;
+		padding: 1rem 0;
 	}
 }
 
@@ -995,14 +979,38 @@ ul.orbit-container {
 	text-transform: lowercase !important;
 }
 
-.zume-logo-in-top-bar img {
+.zume-logo-in-top-bar {
     padding: 0;
     height: 35px;
     width: 180px;
+    background-image: url( $global-images-url + 'zume-training-logo.svg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+
+    @media ( max-width: $breakpoint-medium ) {
+        background-image: url( $global-images-url + 'zume-logo.svg');
+        width: 65px;
+        height: 30px;
+        padding-right:5px;
+    }
 }
-.menu > li.zume-logo-in-top-bar > a {
-    padding: 0;
+#lang-menu select {
+    max-width: 180px;
+    float:right;
+
+    @media ( max-width: $breakpoint-medium ) {
+
+    }
 }
+
+.mobile-menu {
+
+    @media ( max-width: $breakpoint-medium ) {
+        float: right;
+        padding: .5em;
+    }
+}
+
 
 hr {
     max-width:100%;

@@ -44,4 +44,18 @@
     .tabs-panel {
         padding: 0;
     }
+    .circle-background {
+        font-size:5em;
+        text-align: center;
+        margin: 0 auto;
+        width:1.5em;
+        height:1.5em;
+        color: $white;
+        background-color: $secondary-color;
+        border-radius: 50%;
+
+        @media (max-width: $breakpoint-medium ) {
+            font-size: 2em;
+        }
+    }
 }
