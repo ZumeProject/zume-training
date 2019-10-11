@@ -42,6 +42,9 @@
         cursor: pointer;
         color: $light-black;
     }
+    .hide-extra {
+        display:none;
+    }
 
     // Tabs
     .tabs-panel {

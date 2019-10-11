@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: 08 - List of 100
+Template Name: 08 - Relational Stewardship List of 100
 */
 get_header();
 if (have_posts()) :

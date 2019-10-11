@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: 01 - Uses Ordinary People
+Template Name: 01 - God Uses Ordinary People
 */
 get_header();
 $alt_video = false;

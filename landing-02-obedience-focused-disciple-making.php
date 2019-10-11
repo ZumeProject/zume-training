@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: 02 - Teach to Obey
+Template Name: 02 - Obedience Focused Disciple Making
 */
 get_header();
 if (have_posts()) :

@@ -87,8 +87,9 @@ $current_language = zume_current_language();
 
                             <div class="grid-x grid-padding-x grid-padding-y">
 
-                            <div class="cell small padding-top-0 center">
-                                <a onclick="toggle_columns(1)"><?php echo esc_html__("1 column", 'zume' ) ?></a> | <a onclick="toggle_columns(2)"><?php echo esc_html__("2 columns", 'zume' ) ?></a> | <a onclick="toggle_extra()"><?php echo esc_html__("toggle extra info", 'zume' ) ?></a>
+                            <div class="cell small padding-top-0 padding-bottom-0">
+                                <button id="column_button" type="button" class="button primary hollow tiny float-right" onclick="toggle_column()"><?php echo esc_html__("Single Column", 'zume' ) ?></button>
+                                <button id="extra_button" type="button" class="button primary hollow tiny float-right" onclick="toggle_extra()"><?php echo esc_html__("Show Extra", 'zume' ) ?></button>
                             </div>
 
                             <!-- Session 1 -->
@@ -98,7 +99,7 @@ $current_language = zume_current_language();
                                     <div class="cell small-3 medium-2 start">
                                         <a href="" class="button hollow"><?php echo esc_html__("Start", 'zume' ) ?></a>
                                     </div>
-                                    <div class="cell small-9 medium-10 t-activities hide-extra">
+                                    <div class="cell small-9 medium-10 t-activities hide-extra" style="display:none;">
                                         <?php echo esc_html__("Prayer, Overview", 'zume' ) ?>
                                     </div>
                                     <div class="cell small-3 medium-2 t-length hide-extra">
@@ -536,7 +537,8 @@ $current_language = zume_current_language();
                                         <?php echo esc_html__("15 min", 'zume' ) ?>
                                     </div>
                                     <div class="cell small-9 medium-10">
-                                        <a href="<?php echo esc_url( zume_get_landing_translation_url( 27, $current_language ) ) ?>"><?php echo esc_html( zume_get_landing_title( 27, $current_language ) ) ?> <?php echo ( is_user_logged_in() ) ? '' : '('. esc_html__("login required", 'zume' )  . ')'; ?></a><br>
+                                        <a href="<?php echo esc_url( zume_get_landing_translation_url( 27, $current_language ) ) ?>"><?php echo esc_html( zume_get_landing_title( 27, $current_language ) ) ?>
+                                            <?php echo ( is_user_logged_in() ) ? '' : '('. esc_html__("login required", 'zume' )  . ')'; ?></a><br>
                                         <p class="t-description"><?php echo esc_html__("Create and share your plan for how you will implement the Zúme tools over the next three months.", 'zume') ?></p>
                                     </div>
                                     <div class="cell small-3 medium-2 t-length hide-extra">

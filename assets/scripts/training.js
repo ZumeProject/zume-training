@@ -9,18 +9,6 @@ jQuery(document).ready(function(){
 })
 
 
-function toggle_columns(i) {
-  if ( i === 1 ) {
-    jQuery('.session').removeClass('medium-6')
-  } else {
-    jQuery('.session').addClass('medium-6')
-  }
-}
-
-function toggle_extra() {
-  jQuery('.hide-extra').toggle();
-}
-
 function get_groups() {
   let div = jQuery('#group-list')
   div.empty()
@@ -343,6 +331,28 @@ function progress_icons_listener() {
       console.log(item.attr('id') + ' added')
     }
   })
+}
+function toggle_column() {
+  let item = jQuery('#column_button')
+  if ( item.hasClass("hollow") ) {
+    item.removeClass('hollow')
+    jQuery('.session').removeClass('medium-6')
+    console.log('single')
+  } else {
+    item.addClass('hollow')
+    jQuery('.session').addClass('medium-6')
+    console.log('double')
+  }
+}
+function toggle_extra() {
+  let item = jQuery('#extra_button')
+  if ( item.hasClass("hollow") ) {
+    item.removeClass('hollow')
+    jQuery('.hide-extra').show();
+  } else {
+    item.addClass('hollow')
+    jQuery('.hide-extra').hide();
+  }
 }
 
 function add_progress ( stage_id, concept_id ) {
