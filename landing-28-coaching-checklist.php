@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: 27 - Coaching Checklist
+Template Name: 28 - Coaching Checklist
 */
 get_header();
 if (have_posts()) :

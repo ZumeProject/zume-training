@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: 30 - Four Fields
+Template Name: 19 - Bless  Prayer
 */
 get_header();
 if (have_posts()) :

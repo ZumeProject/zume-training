@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: 28 - Leadership in Networks
+Template Name: 20 - Faithfulness
 */
 get_header();
 if (have_posts()) :
@@ -53,7 +53,7 @@ if (have_posts()) :
                             <div class="grid-x grid-margin-x grid-margin-y">
                                 <div class="large-3 cell activity-title"><?php esc_html_e( 'WATCH', 'zume' ) ?></div>
                                 <div class="large-9 cell activity-description">
-                                    <?php esc_html_e( "What happens to churches as they grow and start new churches that start new churches? How do they stay connected and live life together as an extended, spiritual family? They become a network!", 'zume' ) ?>
+                                    <?php esc_html_e( "When we help multiply disciples, we need to make sure we're reproducing the right things. It's important what disciples know – but it's much more important what they DO with what they know.", 'zume' ) ?>
                                 </div>
                             </div> <!-- grid-x -->
 
@@ -61,35 +61,33 @@ if (have_posts()) :
                             <div class="grid-x grid-margin-x grid-margin-y">
                                 <div class="small-12 small-centered cell video-section">
 
-                                    <!-- 29 -->
+                                    <!-- 19 -->
                                     <?php if ( $alt_video ) : ?>
                                         <video width="960" height="540" style="border: 1px solid lightgrey;margin: 0 15%;" controls>
-                                            <source src="<?php echo esc_url( Zume_Course::get_alt_video_by_key( 'alt_29' ) ) ?>" type="video/mp4">
+                                            <source src="<?php echo esc_url( Zume_Course::get_alt_video_by_key( 'alt_19' ) ) ?>" type="video/mp4">
                                             Your browser does not support the video tag.
                                         </video>
                                     <?php else : ?>
-                                        <iframe style="border: 1px solid lightgrey;"  src="<?php echo esc_url( Zume_Course::get_video_by_key( '29' ) ) ?>" width="560" height="315"
+                                        <iframe style="border: 1px solid lightgrey;"  src="<?php echo esc_url( Zume_Course::get_video_by_key( '19' ) ) ?>" width="560" height="315"
                                                 frameborder="1"
                                                 webkitallowfullscreen mozallowfullscreen allowfullscreen>
                                         </iframe>
                                     <?php endif; ?>
 
-
-                                    <p class="center hide-for-small-only">
-                                        <a  href="<?php echo esc_url( Zume_Course::get_download_by_key( '61' ) ) ?>"
-                                            target="_blank" rel="noopener noreferrer nofollow">
-                                            <img    src="<?php echo esc_url( zume_images_uri( 'course' ) ) ?>download-icon-150x150.png"
-                                                    alt=""
-                                                    width="35" height="35" class="alignnone size-thumbnail wp-image-3274"
-                                                    style="vertical-align: text-bottom"/> <?php esc_html_e( "Zúme Video Scripts: Leadership in Networks", 'zume' ) ?></a>
-                                    </p>
+                                    <p class="center hide-for-small-only"><a
+                                            href="<?php echo esc_url( Zume_Course::get_download_by_key( '52' ) ) ?>"
+                                            target="_blank" rel="noopener noreferrer nofollow"><img
+                                                src="<?php echo esc_url( zume_images_uri( 'course' ) ) ?>download-icon-150x150.png"
+                                                alt=""
+                                                width="35" height="35" class="alignnone size-thumbnail wp-image-3274"
+                                                style="vertical-align: text-bottom"/> <?php esc_html_e( "Zúme Video Scripts: Faithfulness", 'zume' ) ?></a></p>
                                 </div>
                             </div> <!-- grid-x -->
                             <!-- Activity Block  -->
                             <div class="grid-x grid-margin-x grid-margin-y">
                                 <div class="large-3 cell activity-title"><?php esc_html_e( 'DISCUSS', 'zume' ) ?></div>
                                 <div class="large-9 cell activity-description">
-                                    <?php esc_html_e( "Are there advantages when networks of simple churches are connected by deep, personal relationships? What are some examples that come to mind?", 'zume' ) ?>
+                                    <?php esc_html_e( "Think about God's commands that you already know. How \"faithful\" are you in terms of obeying and sharing those things?", 'zume' ) ?>
                                 </div>
                             </div> <!-- grid-x -->
                         </section>

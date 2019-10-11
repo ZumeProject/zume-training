@@ -152,4 +152,10 @@
             height: 40px;
         }
     }
+    .stat-landing-title {
+        font-size: 2em;
+        @media (max-width: $breakpoint-medium ) {
+
+        }
+    }
 }

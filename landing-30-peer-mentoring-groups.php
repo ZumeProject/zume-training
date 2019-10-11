@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: 31 - Generational Map
+Template Name: 30 - Peer Mentoring
 */
 get_header();
 if (have_posts()) :
@@ -41,7 +41,59 @@ if (have_posts()) :
 
                     <!-- Center column -->
                     <div class="large-8 small-12 cell" id="training-content">
+                        <section>
+                            <div class="grid-x grid-margin-x grid-margin-y">
+                                <div class="step-title cell">
+                                    <?php esc_html_e( 'Listen and Read Along (3min)', 'zume' ) ?>
+                                </div> <!-- step-title cell -->
+                            </div> <!-- grid-x -->
 
+                            <!-- Activity Block  -->
+                            <div class="grid-x grid-margin-x grid-margin-y">
+                                <div class="large-3 cell activity-title"><?php esc_html_e( "READ", 'zume' ) ?></div>
+                                <div class="large-9 cell activity-description">
+                                    <p class="read-section">
+                                        <?php esc_html_e( "Peer Mentoring Groups", 'zume' ) ?>
+                                    </p>
+                                    <p>
+                                        <?php esc_html_e( "Making disciples who make disciples means making leaders who make leaders. How do you develop stronger leaders? By teaching them how to love one another better. Peer Mentoring Groups help leaders love deeper.", 'zume' ) ?>
+                                    </p>
+                                    <p>
+                                        <?php esc_html_e( "Find the Peer Mentoring Groups section in your Zúme Guidebook, and listen to the audio below.", 'zume' ) ?>
+                                    </p>
+                                </div>
+                            </div> <!-- grid-x -->
+
+                            <!-- Video block -->
+                            <div class="grid-x grid-margin-x grid-margin-y">
+                                <div class="small-12 small-centered cell video-section">
+
+                                    <!-- 30 -->
+                                    <?php if ( $alt_video ) : ?>
+                                        <video width="960" height="540" style="border: 1px solid lightgrey;margin: 0 15%;" controls>
+                                            <source src="<?php echo esc_url( Zume_Course::get_alt_video_by_key( 'alt_30' ) ) ?>" type="video/mp4">
+                                            Your browser does not support the video tag.
+                                        </video>
+                                    <?php else : ?>
+                                        <iframe style="border: 1px solid lightgrey;"  src="<?php echo esc_url( Zume_Course::get_video_by_key( '30' ) ) ?>" width="560" height="315"
+                                                frameborder="1"
+                                                webkitallowfullscreen mozallowfullscreen allowfullscreen>
+                                        </iframe>
+                                    <?php endif; ?>
+
+                                    <p class="center hide-for-small-only">
+                                        <a  href="<?php echo esc_url( Zume_Course::get_download_by_key( '62' ) ) ?>"
+                                            target="_blank" rel="noopener noreferrer nofollow">
+                                            <img    src="<?php echo esc_url( zume_images_uri( 'course' ) ) ?>download-icon-150x150.png"
+                                                    alt=""
+                                                    width="35" height="35" class="alignnone size-thumbnail wp-image-3274"
+                                                    style="vertical-align: text-bottom"/>
+                                            <?php esc_html_e( "Zúme Video Scripts: Peer Mentoring Groups", 'zume' ) ?>
+                                        </a>
+                                    </p>
+                                </div>
+                            </div> <!-- grid-x -->
+                        </section>
                     </div>
 
                     <div class="large-2 cell"></div><!-- Side spacer -->

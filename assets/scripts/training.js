@@ -345,4 +345,8 @@ function progress_icons_listener() {
   })
 }
 
+function add_progress ( stage_id, concept_id ) {
+
+}
+
 
