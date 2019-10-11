@@ -4,6 +4,7 @@ jQuery(document).ready(function(){
   }
   if( '#panel3' === window.location.hash  ) {
     get_progress()
+    progress_icons_listener()
   }
 })
 
@@ -118,108 +119,206 @@ div.append(`
         </div>
        <div class="cell">
             <div class="grid-x grid-padding-x">
-                  <div class="cell medium-3 hide-for-small-only"></div>
-                  <div class="cell medium-6">
-                    <div class="grid-y progress-list">
+                <div class="cell medium-1 hide-for-small-only"></div>
+                  <div class="cell medium-5">
+                      <div class="grid-x grid-padding-x progress-list">
+                          <div class="cell p-session-separator">
+                          ${zumeTraining.translations.sessions[1]}
+                          </div>
+                          <div class="cell ">
+                            <span class="show-for-small-only"><a href="${zumeTraining.translations.urls[1]}">${zumeTraining.translations.titles[1]}</a></span> 
+                            <i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i> 
+                            <span class="hide-for-small-only"><a href="${zumeTraining.translations.urls[1]}">${zumeTraining.translations.titles[1]}</a></span>
+                          </div>
+                          <div class="cell ">
+                            <span class="show-for-small-only"><a href="${zumeTraining.translations.urls[2]}">${zumeTraining.translations.titles[2]}</a></span>
+                            <i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i> 
+                            <span class="hide-for-small-only"><a href="${zumeTraining.translations.urls[2]}">${zumeTraining.translations.titles[2]}</a></span>
+                          </div>
+                          <div class="cell ">
+                            <span class="show-for-small-only"><a href="${zumeTraining.translations.urls[3]}">${zumeTraining.translations.titles[3]}</a></span>
+                            <i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i> 
+                            <span class="hide-for-small-only"><a href="${zumeTraining.translations.urls[3]}">${zumeTraining.translations.titles[3]}</a></span>
+                          </div>
+                          <div class="cell ">
+                            <span class="show-for-small-only"><a href="${zumeTraining.translations.urls[4]}">${zumeTraining.translations.titles[4]}</a></span>
+                            <i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i> 
+                            <span class="hide-for-small-only"><a href="${zumeTraining.translations.urls[4]}">${zumeTraining.translations.titles[4]}</a></span>
+                          </div>
+                          <div class="cell ">
+                            <span class="show-for-small-only"><a href="${zumeTraining.translations.urls[5]}">${zumeTraining.translations.titles[5]}</a></span>
+                            <i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i> 
+                            <span class="hide-for-small-only"><a href="${zumeTraining.translations.urls[5]}">${zumeTraining.translations.titles[5]}</a></span>
+                          </div>
+                          <div class="cell p-session-separator padding-top-1">
+                          ${zumeTraining.translations.sessions[2]}</a>
+                          </div>
+                          <div class="cell ">
+                            <span class="show-for-small-only"><a href="${zumeTraining.translations.urls[6]}">${zumeTraining.translations.titles[6]}</a></span>
+                            <i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i> 
+                            <span class="hide-for-small-only"><a href="${zumeTraining.translations.urls[6]}">${zumeTraining.translations.titles[6]}</a></span>
+                          </div>
+                          <div class="cell ">
+                            <span class="show-for-small-only"><a href="${zumeTraining.translations.urls[7]}">${zumeTraining.translations.titles[7]}</a></span>
+                            <i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i> 
+                            <span class="hide-for-small-only"><a href="${zumeTraining.translations.urls[7]}">${zumeTraining.translations.titles[7]}</a></span>
+                          </div>
+                          <div class="cell ">
+                          <span class="show-for-small-only"><a href="${zumeTraining.translations.urls[8]}">${zumeTraining.translations.titles[8]}</a></span>
+                          <i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i> 
+                          <span class="hide-for-small-only"><a href="${zumeTraining.translations.urls[8]}">${zumeTraining.translations.titles[8]}</a></span>
+                          </div>
+                          <div class="cell p-session-separator padding-top-1">
+                          ${zumeTraining.translations.sessions[3]}</a>
+                          </div>
+                          <div class="cell ">
+                          <span class="show-for-small-only"><a href="${zumeTraining.translations.urls[9]}">${zumeTraining.translations.titles[9]}</a></span>
+                          <i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i> 
+                          <span class="hide-for-small-only"><a href="${zumeTraining.translations.urls[9]}">${zumeTraining.translations.titles[9]}</a></span>
+                          </div>
+                          <div class="cell ">
+                          <span class="show-for-small-only"><a href="${zumeTraining.translations.urls[10]}">${zumeTraining.translations.titles[10]}</a></span>
+                          <i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i> 
+                          <span class="hide-for-small-only"><a href="${zumeTraining.translations.urls[10]}">${zumeTraining.translations.titles[10]}</a></span>
+                          </div>
+                          <div class="cell ">
+                          <span class="show-for-small-only"><a href="${zumeTraining.translations.urls[11]}">${zumeTraining.translations.titles[11]}</a></span>
+                          <i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i> 
+                          <span class="hide-for-small-only"><a href="${zumeTraining.translations.urls[11]}">${zumeTraining.translations.titles[11]}</a></span>
+                          </div>
+                          <div class="cell p-session-separator padding-top-1">
+                          ${zumeTraining.translations.sessions[4]}</a>
+                          </div>
+                          <div class="cell ">
+                          <span class="show-for-small-only"><a href="${zumeTraining.translations.urls[12]}">${zumeTraining.translations.titles[12]}</a></span>
+                          <i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i> 
+                          <span class="hide-for-small-only"><a href="${zumeTraining.translations.urls[12]}">${zumeTraining.translations.titles[12]}</a></span>
+                          </div>
+                          <div class="cell ">
+                          <span class="show-for-small-only"><a href="${zumeTraining.translations.urls[13]}">${zumeTraining.translations.titles[13]}</a></span>
+                          <i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i> 
+                          <span class="hide-for-small-only"><a href="${zumeTraining.translations.urls[13]}">${zumeTraining.translations.titles[13]}</a></span>
+                          </div>
+                          <div class="cell ">
+                          <span class="show-for-small-only"><a href="${zumeTraining.translations.urls[14]}">${zumeTraining.translations.titles[14]}</a></span>
+                          <i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i> 
+                          <span class="hide-for-small-only"><a href="${zumeTraining.translations.urls[14]}">${zumeTraining.translations.titles[14]}</a></span>
+                          </div>
+                          <div class="cell">
+                          <span class="show-for-small-only"><a href="${zumeTraining.translations.urls[15]}">${zumeTraining.translations.titles[15]}</a></span>
+                          <i class="p-icon "></i><i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i> 
+                          <span class="hide-for-small-only"><a href="${zumeTraining.translations.urls[15]}">${zumeTraining.translations.titles[15]}</a></span>
+                          </div>
+                          <div class="cell">
+                          <span class="show-for-small-only"><a href="${zumeTraining.translations.urls[16]}">${zumeTraining.translations.titles[16]}</a></span>
+                          <i class="p-icon "></i><i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i> 
+                          <span class="hide-for-small-only"><a href="${zumeTraining.translations.urls[16]}">${zumeTraining.translations.titles[16]}</a></span>
+                          </div>
+                            <div class="cell p-session-separator padding-top-1">
+                          ${zumeTraining.translations.sessions[5]}</a>
+                          </div>
                         <div class="cell">
-                        <i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i> <span>${zumeTraining.translations.titles[1]}</span>
+                        <span class="show-for-small-only"><a href="${zumeTraining.translations.urls[17]}">${zumeTraining.translations.titles[17]}</a></span>
+                        <i class="p-icon "></i><i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i> 
+                        <span class="hide-for-small-only"><a href="${zumeTraining.translations.urls[17]}">${zumeTraining.translations.titles[17]}</a></span>
                         </div>
                         <div class="cell">
-                        <i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i> <span>${zumeTraining.translations.titles[2]}</span>
+                        <span class="show-for-small-only"><a href="${zumeTraining.translations.urls[18]}">${zumeTraining.translations.titles[18]}</a></span>
+                        <i class="p-icon "></i><i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i> 
+                        <span class="hide-for-small-only"><a href="${zumeTraining.translations.urls[18]}">${zumeTraining.translations.titles[18]}</a></span>
                         </div>
                         <div class="cell">
-                        <i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i> <span>${zumeTraining.translations.titles[3]}</span>
+                        <span class="show-for-small-only"><a href="${zumeTraining.translations.urls[19]}">${zumeTraining.translations.titles[19]}</a></span>
+                        <i class="p-icon "></i><i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i> 
+                        <span class="hide-for-small-only"><a href="${zumeTraining.translations.urls[19]}">${zumeTraining.translations.titles[19]}</a></span>
+                        </div>
+                      </div>
+                  </div>
+                  <div class="cell medium-5">
+                    <div class="grid-x grid-padding-x progress-list">
+                        <div class="cell p-session-separator session-6-column-top">
+                          ${zumeTraining.translations.sessions[6]}</a>
+                          </div>
+                        <div class="cell">
+                        <span class="show-for-small-only"><a href="${zumeTraining.translations.urls[20]}">${zumeTraining.translations.titles[20]}</a></span>
+                        <i class="p-icon "></i><i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i> 
+                        <span class="hide-for-small-only"><a href="${zumeTraining.translations.urls[20]}">${zumeTraining.translations.titles[20]}</a></span>
                         </div>
                         <div class="cell">
-                        <i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i> <span>${zumeTraining.translations.titles[4]}</span>
+                        <span class="show-for-small-only"><a href="${zumeTraining.translations.urls[21]}">${zumeTraining.translations.titles[21]}</a></span>
+                        <i class="p-icon "></i><i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i> 
+                        <span class="hide-for-small-only"><a href="${zumeTraining.translations.urls[21]}">${zumeTraining.translations.titles[21]}</a></span>
+                        </div>
+                        <div class="cell p-session-separator padding-top-1">
+                          ${zumeTraining.translations.sessions[7]}</a>
+                          </div>
+                        <div class="cell">
+                        <span class="show-for-small-only"><a href="${zumeTraining.translations.urls[22]}">${zumeTraining.translations.titles[22]}</a></span>
+                        <i class="p-icon "></i><i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i> 
+                        <span class="hide-for-small-only"><a href="${zumeTraining.translations.urls[22]}">${zumeTraining.translations.titles[22]}</a></span>
+                        </div>
+                        <div class="cell p-session-separator padding-top-1">
+                          ${zumeTraining.translations.sessions[8]}</a>
+                          </div>
+                        <div class="cell">
+                        <span class="show-for-small-only"><a href="${zumeTraining.translations.urls[23]}">${zumeTraining.translations.titles[23]}</a></span>
+                        <i class="p-icon "></i><i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i> 
+                        <span class="hide-for-small-only"><a href="${zumeTraining.translations.urls[23]}">${zumeTraining.translations.titles[23]}</a></span>
+                        </div>
+                        <div class="cell p-session-separator padding-top-1">
+                          ${zumeTraining.translations.sessions[9]}</a>
+                          </div>
+                        <div class="cell">
+                        <span class="show-for-small-only"><a href="${zumeTraining.translations.urls[24]}">${zumeTraining.translations.titles[24]}</a></span>
+                        <i class="p-icon "></i><i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i> 
+                        <span class="hide-for-small-only"><a href="${zumeTraining.translations.urls[24]}">${zumeTraining.translations.titles[24]}</a></span>
                         </div>
                         <div class="cell">
-                        <i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i> <span>${zumeTraining.translations.titles[5]}</span>
+                        <span class="show-for-small-only"><a href="${zumeTraining.translations.urls[25]}">${zumeTraining.translations.titles[25]}</a></span>
+                        <i class="p-icon "></i><i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i> 
+                        <span class="hide-for-small-only"><a href="${zumeTraining.translations.urls[25]}">${zumeTraining.translations.titles[25]}</a></span>
                         </div>
                         <div class="cell">
-                        <i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i> <span>${zumeTraining.translations.titles[6]}</span>
+                        <span class="show-for-small-only"><a href="${zumeTraining.translations.urls[26]}">${zumeTraining.translations.titles[26]}</a></span>
+                        <i class="p-icon "></i><i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i> 
+                        <span class="hide-for-small-only"><a href="${zumeTraining.translations.urls[26]}">${zumeTraining.translations.titles[26]}</a></span>
                         </div>
                         <div class="cell">
-                        <i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i> <span>${zumeTraining.translations.titles[7]}</span>
+                        <span class="show-for-small-only"><a href="${zumeTraining.translations.urls[27]}">${zumeTraining.translations.titles[27]}</a></span>
+                        <i class="p-icon "></i><i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i> 
+                        <span class="hide-for-small-only"><a href="${zumeTraining.translations.urls[27]}">${zumeTraining.translations.titles[27]}</a></span>
+                        </div>
+                        <div class="cell p-session-separator padding-top-1">
+                          ${zumeTraining.translations.sessions[10]}</a>
+                          </div>
+                        <div class="cell">
+                        <span class="show-for-small-only"><a href="${zumeTraining.translations.urls[28]}">${zumeTraining.translations.titles[28]}</a></span>
+                        <i class="p-icon "></i><i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i> 
+                        <span class="hide-for-small-only"><a href="${zumeTraining.translations.urls[28]}">${zumeTraining.translations.titles[28]}</a></span>
                         </div>
                         <div class="cell">
-                        <i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i> <span>${zumeTraining.translations.titles[8]}</span>
+                        <span class="show-for-small-only"><a href="${zumeTraining.translations.urls[29]}">${zumeTraining.translations.titles[29]}</a></span>
+                        <i class="p-icon "></i><i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i> 
+                        <span class="hide-for-small-only"><a href="${zumeTraining.translations.urls[29]}">${zumeTraining.translations.titles[29]}</a></span>
                         </div>
                         <div class="cell">
-                        <i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i> <span>${zumeTraining.translations.titles[9]}</span>
+                        <span class="show-for-small-only"><a href="${zumeTraining.translations.urls[30]}">${zumeTraining.translations.titles[30]}</a></span>
+                        <i class="p-icon "></i><i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i> 
+                        <span class="hide-for-small-only"><a href="${zumeTraining.translations.urls[30]}">${zumeTraining.translations.titles[30]}</a></span>
                         </div>
                         <div class="cell">
-                        <i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i> <span>${zumeTraining.translations.titles[10]}</span>
+                        <span class="show-for-small-only"><a href="${zumeTraining.translations.urls[31]}">${zumeTraining.translations.titles[31]}</a></span>
+                        <i class="p-icon "></i><i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i> 
+                        <span class="hide-for-small-only"><a href="${zumeTraining.translations.urls[31]}">${zumeTraining.translations.titles[31]}</a></span>
                         </div>
                         <div class="cell">
-                        <i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i> <span>${zumeTraining.translations.titles[11]}</span>
-                        </div>
-                        <div class="cell">
-                        <i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i> <span>${zumeTraining.translations.titles[12]}</span>
-                        </div>
-                        <div class="cell">
-                        <i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i> <span>${zumeTraining.translations.titles[13]}</span>
-                        </div>
-                        <div class="cell">
-                        <i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i> <span>${zumeTraining.translations.titles[14]}</span>
-                        </div>
-                        <div class="cell">
-                        <i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i> <span>${zumeTraining.translations.titles[15]}</span>
-                        </div>
-                        <div class="cell">
-                        <i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i> <span>${zumeTraining.translations.titles[16]}</span>
-                        </div>
-                        <div class="cell">
-                        <i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i> <span>${zumeTraining.translations.titles[17]}</span>
-                        </div>
-                        <div class="cell">
-                        <i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i> <span>${zumeTraining.translations.titles[18]}</span>
-                        </div>
-                        <div class="cell">
-                        <i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i> <span>${zumeTraining.translations.titles[19]}</span>
-                        </div>
-                        <div class="cell">
-                        <i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i> <span>${zumeTraining.translations.titles[20]}</span>
-                        </div>
-                        <div class="cell">
-                        <i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i> <span>${zumeTraining.translations.titles[21]}</span>
-                        </div>
-                        <div class="cell">
-                        <i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i> <span>${zumeTraining.translations.titles[22]}</span>
-                        </div>
-                        <div class="cell">
-                        <i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i> <span>${zumeTraining.translations.titles[23]}</span>
-                        </div>
-                        <div class="cell">
-                        <i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i> <span>${zumeTraining.translations.titles[24]}</span>
-                        </div>
-                        <div class="cell">
-                        <i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i> <span>${zumeTraining.translations.titles[25]}</span>
-                        </div>
-                        <div class="cell">
-                        <i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i> <span>${zumeTraining.translations.titles[26]}</span>
-                        </div>
-                        <div class="cell">
-                        <i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i> <span>${zumeTraining.translations.titles[27]}</span>
-                        </div>
-                        <div class="cell">
-                        <i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i> <span>${zumeTraining.translations.titles[28]}</span>
-                        </div>
-                        <div class="cell">
-                        <i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i> <span>${zumeTraining.translations.titles[29]}</span>
-                        </div>
-                        <div class="cell">
-                        <i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i> <span>${zumeTraining.translations.titles[30]}</span>
-                        </div>
-                        <div class="cell">
-                        <i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i> <span>${zumeTraining.translations.titles[31]}</span>
-                        </div>
-                        <div class="cell">
-                        <i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i> <span>${zumeTraining.translations.titles[32]}</span>
+                        <span class="show-for-small-only"><a href="${zumeTraining.translations.urls[32]}">${zumeTraining.translations.titles[32]}</a></span>
+                        <i class="p-icon "></i><i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i> 
+                        <span class="hide-for-small-only"><a href="${zumeTraining.translations.urls[32]}">${zumeTraining.translations.titles[32]}</a></span>
                         </div>
                     </div>
-                    <div class="cell medium-3 hide-for-small-only"></div>
                   </div>
+                  <div class="cell medium-1 hide-for-small-only"></div>
             </div>
         </div>
        
@@ -227,9 +326,13 @@ div.append(`
 </div>
       
 `)
+  progress_icons_listener()
 }
 
 jQuery(document).ready(function(){
+  progress_icons_listener()
+})
+function progress_icons_listener() {
   jQuery('.p-icon').on( 'click', function(){
     let item = jQuery(this)
     if ( item.hasClass("complete") ) {
@@ -238,6 +341,6 @@ jQuery(document).ready(function(){
       item.addClass('complete')
     }
   })
-})
+}
 
 

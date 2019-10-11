@@ -8,12 +8,12 @@
 
 <div class="grid-x top-bar">
     <div class="cell hide-for-small-only medium-1"></div>
-    <div class="cell small-3 large-2" id="top-logo-div">
+    <div class="cell small-3" id="top-logo-div">
         <a href="<?php echo is_user_logged_in() ? esc_url( zume_dashboard_url() ) : esc_url( zume_home_url() ); ?>">
             <div class="zume-logo-in-top-bar"></div>
         </a>
     </div>
-    <div class="cell large-5 show-for-large center" id="top-full-menu-div-wrapper">
+    <div class="cell large-4 show-for-large center" id="top-full-menu-div-wrapper">
         <div id="top-full-menu-div">
             <?php zume_top_nav(); ?>
         </div>
