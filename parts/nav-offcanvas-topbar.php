@@ -8,16 +8,18 @@
 
 <div class="grid-x top-bar">
     <div class="cell hide-for-small-only medium-1"></div>
-    <div class="cell small-3 large-2">
+    <div class="cell small-3 large-2" id="top-logo-div">
         <a href="<?php echo is_user_logged_in() ? esc_url( zume_dashboard_url() ) : esc_url( zume_home_url() ); ?>">
             <div class="zume-logo-in-top-bar"></div>
         </a>
     </div>
-    <div class="cell large-5 show-for-large">
-        <?php zume_top_nav(); ?>
+    <div class="cell large-5 show-for-large center" id="top-full-menu-div-wrapper">
+        <div id="top-full-menu-div">
+            <?php zume_top_nav(); ?>
+        </div>
     </div>
-    <div class="cell small-6 medium-3"><div id="lang-menu"><?php zume_the_languages( array( 'dropdown' => 1 ) ); ?></div></div>
-    <div class="cell small-3 show-for-small hide-for-large">
+    <div class="cell small-6 medium-3" id="top-lang-div"><div id="lang-menu"><?php zume_the_languages( array( 'dropdown' => 1 ) ); ?></div></div>
+    <div class="cell small-3 show-for-small hide-for-large" id="top-mobile-menu-div">
         <div class="mobile-menu">
             <a data-toggle="off-canvas"><?php esc_html_e( 'Menu', 'zume' ); ?></a>
         </div>

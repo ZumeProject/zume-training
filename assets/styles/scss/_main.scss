@@ -97,7 +97,39 @@ NAVIGATION STYLES
     @media ( max-width: $breakpoint-medium ) {
 
     }
+}
 
+#top-logo-div {
+
+    @media ( max-width: $breakpoint-medium ) {
+
+    }
+}
+#top-full-menu-div-wrapper {
+    ul {
+        text-align: center;
+    }
+    li {
+        text-align: left;
+    }
+}
+#top-full-menu-div {
+    margin: 0 auto;
+    display: inline-block;
+
+    @media ( max-width: $breakpoint-medium ) {
+
+    }
+}
+#top-mobile-menu-div {
+    @media ( max-width: $breakpoint-medium ) {
+
+    }
+}
+#top-lang-div {
+    @media ( max-width: $breakpoint-medium ) {
+
+    }
 }
 
 .off-canvas-list {

@@ -95,132 +95,130 @@ div.append(`
        <div class="cell padding-bottom-3">
             <div class="grid-x grid-padding-x grid-padding-y center">
                 <div class="cell small-3">
+                    <div class="progress-stat-title">Heard</div>
                     <div class="circle-background">29</div>
+                    <div class="progress-description">"Heard" means gain knowledge. You have moved from not knowing about a tool or concept to knowing about it.</div>
                 </div>
                 <div class="cell small-3">
+                    <div class="progress-stat-title">Obeyed</div>
                     <div class="circle-background">21</div>
+                    <div class="progress-description">"Obeyed" means taking personal action. Obeying with tools might look like beginning to use them with others, while obeying with concepts might look like changing thinking or priorities.</div>
                 </div>
                 <div class="cell small-3">
+                    <div class="progress-stat-title">Shared</div>
                     <div class="circle-background">13</div>
+                    <div class="progress-description">"Shared" means you helped someone else hear. This step is essential to truly understanding the concept or tool and preparing you to train others.</div>
                 </div>
                 <div class="cell small-3 center">
+                    <div class="progress-stat-title">Trained</div>
                     <div class="circle-background">6</div>
+                    <div class="progress-description">"Trained" means to coach someone else to obey and share. More than sharing knowledge, you have helped them become a sharer of the tool or concept.</div>
                 </div>
             </div>
         </div>
        <div class="cell">
             <div class="grid-x grid-padding-x">
+                  <div class="cell medium-3 hide-for-small-only"></div>
                   <div class="cell medium-6">
-                    <div class="grid-y">
+                    <div class="grid-y progress-list">
                         <div class="cell">
-                        ${zumeTraining.translations.titles[1]}
+                        <i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i> <span>${zumeTraining.translations.titles[1]}</span>
                         </div>
                         <div class="cell">
-                        ${zumeTraining.translations.titles[2]}
+                        <i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i> <span>${zumeTraining.translations.titles[2]}</span>
                         </div>
                         <div class="cell">
-                        ${zumeTraining.translations.titles[3]}
+                        <i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i> <span>${zumeTraining.translations.titles[3]}</span>
                         </div>
                         <div class="cell">
-                        ${zumeTraining.translations.titles[4]}
+                        <i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i> <span>${zumeTraining.translations.titles[4]}</span>
                         </div>
                         <div class="cell">
-                        ${zumeTraining.translations.titles[5]}
+                        <i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i> <span>${zumeTraining.translations.titles[5]}</span>
                         </div>
                         <div class="cell">
-                        ${zumeTraining.translations.titles[6]}
+                        <i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i> <span>${zumeTraining.translations.titles[6]}</span>
                         </div>
                         <div class="cell">
-                        ${zumeTraining.translations.titles[7]}
+                        <i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i> <span>${zumeTraining.translations.titles[7]}</span>
                         </div>
                         <div class="cell">
-                        ${zumeTraining.translations.titles[8]}
+                        <i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i> <span>${zumeTraining.translations.titles[8]}</span>
                         </div>
                         <div class="cell">
-                        ${zumeTraining.translations.titles[9]}
+                        <i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i> <span>${zumeTraining.translations.titles[9]}</span>
                         </div>
                         <div class="cell">
-                        ${zumeTraining.translations.titles[10]}
+                        <i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i> <span>${zumeTraining.translations.titles[10]}</span>
                         </div>
                         <div class="cell">
-                        ${zumeTraining.translations.titles[11]}
+                        <i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i> <span>${zumeTraining.translations.titles[11]}</span>
                         </div>
                         <div class="cell">
-                        ${zumeTraining.translations.titles[12]}
+                        <i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i> <span>${zumeTraining.translations.titles[12]}</span>
                         </div>
                         <div class="cell">
-                        ${zumeTraining.translations.titles[13]}
+                        <i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i> <span>${zumeTraining.translations.titles[13]}</span>
                         </div>
                         <div class="cell">
-                        ${zumeTraining.translations.titles[14]}
+                        <i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i> <span>${zumeTraining.translations.titles[14]}</span>
                         </div>
                         <div class="cell">
-                        ${zumeTraining.translations.titles[15]}
+                        <i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i> <span>${zumeTraining.translations.titles[15]}</span>
                         </div>
                         <div class="cell">
-                        ${zumeTraining.translations.titles[16]}
+                        <i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i> <span>${zumeTraining.translations.titles[16]}</span>
                         </div>
                         <div class="cell">
-                        ${zumeTraining.translations.titles[17]}
+                        <i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i> <span>${zumeTraining.translations.titles[17]}</span>
                         </div>
                         <div class="cell">
-                        ${zumeTraining.translations.titles[18]}
+                        <i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i> <span>${zumeTraining.translations.titles[18]}</span>
                         </div>
                         <div class="cell">
-                        ${zumeTraining.translations.titles[19]}
+                        <i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i> <span>${zumeTraining.translations.titles[19]}</span>
                         </div>
                         <div class="cell">
-                        ${zumeTraining.translations.titles[20]}
+                        <i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i> <span>${zumeTraining.translations.titles[20]}</span>
                         </div>
                         <div class="cell">
-                        ${zumeTraining.translations.titles[21]}
+                        <i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i> <span>${zumeTraining.translations.titles[21]}</span>
                         </div>
                         <div class="cell">
-                        ${zumeTraining.translations.titles[22]}
+                        <i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i> <span>${zumeTraining.translations.titles[22]}</span>
                         </div>
                         <div class="cell">
-                        ${zumeTraining.translations.titles[23]}
+                        <i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i> <span>${zumeTraining.translations.titles[23]}</span>
                         </div>
                         <div class="cell">
-                        ${zumeTraining.translations.titles[24]}
+                        <i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i> <span>${zumeTraining.translations.titles[24]}</span>
                         </div>
                         <div class="cell">
-                        ${zumeTraining.translations.titles[25]}
+                        <i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i> <span>${zumeTraining.translations.titles[25]}</span>
                         </div>
                         <div class="cell">
-                        ${zumeTraining.translations.titles[26]}
+                        <i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i> <span>${zumeTraining.translations.titles[26]}</span>
                         </div>
                         <div class="cell">
-                        ${zumeTraining.translations.titles[27]}
+                        <i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i> <span>${zumeTraining.translations.titles[27]}</span>
                         </div>
                         <div class="cell">
-                        ${zumeTraining.translations.titles[28]}
+                        <i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i> <span>${zumeTraining.translations.titles[28]}</span>
                         </div>
                         <div class="cell">
-                        ${zumeTraining.translations.titles[29]}
+                        <i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i> <span>${zumeTraining.translations.titles[29]}</span>
                         </div>
                         <div class="cell">
-                        ${zumeTraining.translations.titles[30]}
+                        <i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i> <span>${zumeTraining.translations.titles[30]}</span>
                         </div>
                         <div class="cell">
-                        ${zumeTraining.translations.titles[31]}
+                        <i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i> <span>${zumeTraining.translations.titles[31]}</span>
                         </div>
                         <div class="cell">
-                        ${zumeTraining.translations.titles[32]}
+                        <i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i> <span>${zumeTraining.translations.titles[32]}</span>
                         </div>
-                        
-                        
                     </div>
-                  </div>
-                  <div class="cell medium-6">
-                    HEARD<br>
-                    "Heard" means gain knowledge. You have moved from not knowing about a tool or concept to knowing about it.<br>
-                    OBEYED<br>
-                    "Obeyed" means taking personal action. Obeying with tools might look like beginning to use them with others, while obeying with concepts might look like changing thinking or priorities.<br>
-                    SHARED<br>
-                    "Shared" means you helped someone else hear. This step is essential to truly understanding the concept or tool and preparing you to train others.<br>
-                    TRAINED<br>
-                    "Trained" means to coach someone else to obey and share. More than sharing knowledge, you have helped them become a sharer of the tool or concept.<br>
+                    <div class="cell medium-3 hide-for-small-only"></div>
                   </div>
             </div>
         </div>
@@ -230,5 +228,16 @@ div.append(`
       
 `)
 }
+
+jQuery(document).ready(function(){
+  jQuery('.p-icon').on( 'click', function(){
+    let item = jQuery(this)
+    if ( item.hasClass("complete") ) {
+      item.removeClass('complete')
+    } else {
+      item.addClass('complete')
+    }
+  })
+})
 
 

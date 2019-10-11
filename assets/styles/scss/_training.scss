@@ -1,4 +1,5 @@
 #training {
+    // General
     h1 {
         font-size: 32px;
         font-weight: 900;
@@ -11,7 +12,7 @@
         line-height: 1.3em;
     }
     .t-description {
-        color: $dark-gray;
+        color: $light-black;
         font-size: .8rem;
         line-height: 1rem;
         margin-bottom: .5rem;
@@ -23,14 +24,13 @@
         margin-bottom:0;
     }
     .t-length {
-        color: $dark-gray;
+        color: $light-black;
         font-weight: 100;
         text-align: right;
     }
     .t-activities {
-        color: $dark-gray;
-        //font-style: italic;
-        font-weight: 100;
+        color: $light-black;
+        font-weight: 300;
     }
     .start {
         text-align: right;
@@ -39,23 +39,84 @@
         font-size:1.2rem;
         text-align: right;
         cursor: pointer;
-        color: $dark-gray;
+        color: $light-black;
     }
+
+    // Tabs
     .tabs-panel {
         padding: 0;
     }
+
+    // Groups Panel
+
+    // Progress Panel
     .circle-background {
-        font-size:5em;
+        font-size:4.7em;
+        line-height: 1.7em;
         text-align: center;
         margin: 0 auto;
-        width:1.5em;
-        height:1.5em;
+        width:1.7em;
+        height:1.7em;
         color: $white;
         background-color: $secondary-color;
         border-radius: 50%;
+        vertical-align: middle;
 
         @media (max-width: $breakpoint-medium ) {
-            font-size: 2em;
+            font-size: 2.2em;
+        }
+    }
+    .progress-stat-title {
+        font-size:2.5em;
+        text-transform: uppercase;
+
+        @media (max-width: $breakpoint-medium ) {
+            font-size:1em;
+        }
+    }
+    .progress-description {
+        color: $light-black;
+        padding: 1em;
+        font-size: .8em;
+
+        @media (max-width: $breakpoint-medium ) {
+            display: none;
+        }
+    }
+    .p-icon {
+        border: 1px solid $secondary-color;
+        border-radius: 50%;
+        width: 20px;
+        height: 20px;
+        margin:0 3px;
+        display: inline-block;
+        vertical-align: middle;
+
+        @media (max-width: $breakpoint-medium ) {
+            margin:0 10px;
+            width: 30px;
+            height: 30px;
+        }
+    }
+    .complete {
+        background-color: $secondary-color;
+    }
+    .progress-list {
+
+        span {
+            font-size: 1em;
+            vertical-align: middle;
+            line-height: 1em;
+        }
+
+        @media (max-width: $breakpoint-medium ) {
+            text-align: center;
+
+            span {
+                font-size: 1.3em;
+                display: block;
+                padding:5px 0 10px;
+            }
         }
     }
 }
