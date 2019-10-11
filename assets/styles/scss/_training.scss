@@ -1,4 +1,4 @@
-#training {
+.training {
     // General
     h1 {
         font-size: 32px;
@@ -134,6 +134,22 @@
     .session-6-column-top {
         @media (max-width: $breakpoint-medium ) {
             padding-top:1em;
+        }
+    }
+
+    // landing pages
+    .p-icon-landing {
+        border: 1px solid $secondary-color;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        display: inline-block;
+        vertical-align: middle;
+
+        @media (max-width: $breakpoint-medium ) {
+            margin:0 10px;
+            width: 40px;
+            height: 40px;
         }
     }
 }

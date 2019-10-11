@@ -127,27 +127,27 @@ div.append(`
                           </div>
                           <div class="cell ">
                             <span class="show-for-small-only"><a href="${zumeTraining.translations.urls[1]}">${zumeTraining.translations.titles[1]}</a></span> 
-                            <i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i> 
+                            <i class="p-icon" id="1h"></i><i class="p-icon" id="1o"></i><i class="p-icon" id="1s"></i><i class="p-icon" id="1t"></i> 
                             <span class="hide-for-small-only"><a href="${zumeTraining.translations.urls[1]}">${zumeTraining.translations.titles[1]}</a></span>
                           </div>
                           <div class="cell ">
                             <span class="show-for-small-only"><a href="${zumeTraining.translations.urls[2]}">${zumeTraining.translations.titles[2]}</a></span>
-                            <i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i> 
+                            <i class="p-icon" id="2h"></i><i class="p-icon" id="2o"></i><i class="p-icon" id="2s"></i><i class="p-icon" id="2t"></i>
                             <span class="hide-for-small-only"><a href="${zumeTraining.translations.urls[2]}">${zumeTraining.translations.titles[2]}</a></span>
                           </div>
                           <div class="cell ">
                             <span class="show-for-small-only"><a href="${zumeTraining.translations.urls[3]}">${zumeTraining.translations.titles[3]}</a></span>
-                            <i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i> 
+                            <i class="p-icon" id="3h"></i><i class="p-icon" id="3o"></i><i class="p-icon" id="3s"></i><i class="p-icon" id="3t"></i>
                             <span class="hide-for-small-only"><a href="${zumeTraining.translations.urls[3]}">${zumeTraining.translations.titles[3]}</a></span>
                           </div>
                           <div class="cell ">
                             <span class="show-for-small-only"><a href="${zumeTraining.translations.urls[4]}">${zumeTraining.translations.titles[4]}</a></span>
-                            <i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i> 
+                            <i class="p-icon" id="4h"></i><i class="p-icon" id="4o"></i><i class="p-icon" id="4s"></i><i class="p-icon" id="4t"></i>
                             <span class="hide-for-small-only"><a href="${zumeTraining.translations.urls[4]}">${zumeTraining.translations.titles[4]}</a></span>
                           </div>
                           <div class="cell ">
                             <span class="show-for-small-only"><a href="${zumeTraining.translations.urls[5]}">${zumeTraining.translations.titles[5]}</a></span>
-                            <i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i> 
+                            <i class="p-icon" id="5h"></i><i class="p-icon" id="5o"></i><i class="p-icon" id="5s"></i><i class="p-icon" id="5t"></i>
                             <span class="hide-for-small-only"><a href="${zumeTraining.translations.urls[5]}">${zumeTraining.translations.titles[5]}</a></span>
                           </div>
                           <div class="cell p-session-separator padding-top-1">
@@ -155,17 +155,17 @@ div.append(`
                           </div>
                           <div class="cell ">
                             <span class="show-for-small-only"><a href="${zumeTraining.translations.urls[6]}">${zumeTraining.translations.titles[6]}</a></span>
-                            <i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i> 
+                            <i class="p-icon" id="6h"></i><i class="p-icon" id="6o"></i><i class="p-icon" id="6s"></i><i class="p-icon" id="6t"></i>
                             <span class="hide-for-small-only"><a href="${zumeTraining.translations.urls[6]}">${zumeTraining.translations.titles[6]}</a></span>
                           </div>
                           <div class="cell ">
                             <span class="show-for-small-only"><a href="${zumeTraining.translations.urls[7]}">${zumeTraining.translations.titles[7]}</a></span>
-                            <i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i> 
+                            <i class="p-icon" id="7h"></i><i class="p-icon" id="7o"></i><i class="p-icon" id="7s"></i><i class="p-icon" id="7t"></i>
                             <span class="hide-for-small-only"><a href="${zumeTraining.translations.urls[7]}">${zumeTraining.translations.titles[7]}</a></span>
                           </div>
                           <div class="cell ">
                           <span class="show-for-small-only"><a href="${zumeTraining.translations.urls[8]}">${zumeTraining.translations.titles[8]}</a></span>
-                          <i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i> 
+                          <i class="p-icon" id="8h"></i><i class="p-icon" id="8o"></i><i class="p-icon" id="8s"></i><i class="p-icon" id="8t"></i>
                           <span class="hide-for-small-only"><a href="${zumeTraining.translations.urls[8]}">${zumeTraining.translations.titles[8]}</a></span>
                           </div>
                           <div class="cell p-session-separator padding-top-1">
@@ -173,17 +173,17 @@ div.append(`
                           </div>
                           <div class="cell ">
                           <span class="show-for-small-only"><a href="${zumeTraining.translations.urls[9]}">${zumeTraining.translations.titles[9]}</a></span>
-                          <i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i> 
+                          <i class="p-icon" id="9h"></i><i class="p-icon" id="9o"></i><i class="p-icon" id="9s"></i><i class="p-icon" id="9t"></i>
                           <span class="hide-for-small-only"><a href="${zumeTraining.translations.urls[9]}">${zumeTraining.translations.titles[9]}</a></span>
                           </div>
                           <div class="cell ">
                           <span class="show-for-small-only"><a href="${zumeTraining.translations.urls[10]}">${zumeTraining.translations.titles[10]}</a></span>
-                          <i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i> 
+                          <i class="p-icon" id="10h"></i><i class="p-icon" id="10o"></i><i class="p-icon" id="10s"></i><i class="p-icon" id="10t"></i>
                           <span class="hide-for-small-only"><a href="${zumeTraining.translations.urls[10]}">${zumeTraining.translations.titles[10]}</a></span>
                           </div>
                           <div class="cell ">
                           <span class="show-for-small-only"><a href="${zumeTraining.translations.urls[11]}">${zumeTraining.translations.titles[11]}</a></span>
-                          <i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i> 
+                          <i class="p-icon" id="11h"></i><i class="p-icon" id="11o"></i><i class="p-icon" id="11s"></i><i class="p-icon" id="11t"></i>
                           <span class="hide-for-small-only"><a href="${zumeTraining.translations.urls[11]}">${zumeTraining.translations.titles[11]}</a></span>
                           </div>
                           <div class="cell p-session-separator padding-top-1">
@@ -191,27 +191,27 @@ div.append(`
                           </div>
                           <div class="cell ">
                           <span class="show-for-small-only"><a href="${zumeTraining.translations.urls[12]}">${zumeTraining.translations.titles[12]}</a></span>
-                          <i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i> 
+                          <i class="p-icon" id="12h"></i><i class="p-icon" id="12o"></i><i class="p-icon" id="12s"></i><i class="p-icon" id="12t"></i>
                           <span class="hide-for-small-only"><a href="${zumeTraining.translations.urls[12]}">${zumeTraining.translations.titles[12]}</a></span>
                           </div>
                           <div class="cell ">
                           <span class="show-for-small-only"><a href="${zumeTraining.translations.urls[13]}">${zumeTraining.translations.titles[13]}</a></span>
-                          <i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i> 
+                          <i class="p-icon" id="13h"></i><i class="p-icon" id="13o"></i><i class="p-icon" id="13s"></i><i class="p-icon" id="13t"></i>
                           <span class="hide-for-small-only"><a href="${zumeTraining.translations.urls[13]}">${zumeTraining.translations.titles[13]}</a></span>
                           </div>
                           <div class="cell ">
                           <span class="show-for-small-only"><a href="${zumeTraining.translations.urls[14]}">${zumeTraining.translations.titles[14]}</a></span>
-                          <i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i> 
+                          <i class="p-icon" id="14h"></i><i class="p-icon" id="14o"></i><i class="p-icon" id="14s"></i><i class="p-icon" id="14t"></i>
                           <span class="hide-for-small-only"><a href="${zumeTraining.translations.urls[14]}">${zumeTraining.translations.titles[14]}</a></span>
                           </div>
                           <div class="cell">
                           <span class="show-for-small-only"><a href="${zumeTraining.translations.urls[15]}">${zumeTraining.translations.titles[15]}</a></span>
-                          <i class="p-icon "></i><i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i> 
+                          <i class="p-icon" id="15h"></i><i class="p-icon" id="15o"></i><i class="p-icon" id="15s"></i><i class="p-icon" id="15t"></i>
                           <span class="hide-for-small-only"><a href="${zumeTraining.translations.urls[15]}">${zumeTraining.translations.titles[15]}</a></span>
                           </div>
                           <div class="cell">
                           <span class="show-for-small-only"><a href="${zumeTraining.translations.urls[16]}">${zumeTraining.translations.titles[16]}</a></span>
-                          <i class="p-icon "></i><i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i> 
+                          <i class="p-icon" id="16h"></i><i class="p-icon" id="16o"></i><i class="p-icon" id="16s"></i><i class="p-icon" id="16t"></i>
                           <span class="hide-for-small-only"><a href="${zumeTraining.translations.urls[16]}">${zumeTraining.translations.titles[16]}</a></span>
                           </div>
                             <div class="cell p-session-separator padding-top-1">
@@ -219,17 +219,17 @@ div.append(`
                           </div>
                         <div class="cell">
                         <span class="show-for-small-only"><a href="${zumeTraining.translations.urls[17]}">${zumeTraining.translations.titles[17]}</a></span>
-                        <i class="p-icon "></i><i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i> 
+                        <i class="p-icon" id="17h"></i><i class="p-icon" id="17o"></i><i class="p-icon" id="17s"></i><i class="p-icon" id="17t"></i>
                         <span class="hide-for-small-only"><a href="${zumeTraining.translations.urls[17]}">${zumeTraining.translations.titles[17]}</a></span>
                         </div>
                         <div class="cell">
                         <span class="show-for-small-only"><a href="${zumeTraining.translations.urls[18]}">${zumeTraining.translations.titles[18]}</a></span>
-                        <i class="p-icon "></i><i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i> 
+                        <i class="p-icon" id="18h"></i><i class="p-icon" id="18o"></i><i class="p-icon" id="18s"></i><i class="p-icon" id="18t"></i>
                         <span class="hide-for-small-only"><a href="${zumeTraining.translations.urls[18]}">${zumeTraining.translations.titles[18]}</a></span>
                         </div>
                         <div class="cell">
                         <span class="show-for-small-only"><a href="${zumeTraining.translations.urls[19]}">${zumeTraining.translations.titles[19]}</a></span>
-                        <i class="p-icon "></i><i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i> 
+                        <i class="p-icon" id="19h"></i><i class="p-icon" id="19o"></i><i class="p-icon" id="19s"></i><i class="p-icon" id="19t"></i>
                         <span class="hide-for-small-only"><a href="${zumeTraining.translations.urls[19]}">${zumeTraining.translations.titles[19]}</a></span>
                         </div>
                       </div>
@@ -241,12 +241,12 @@ div.append(`
                           </div>
                         <div class="cell">
                         <span class="show-for-small-only"><a href="${zumeTraining.translations.urls[20]}">${zumeTraining.translations.titles[20]}</a></span>
-                        <i class="p-icon "></i><i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i> 
+                        <i class="p-icon" id="20h"></i><i class="p-icon" id="20o"></i><i class="p-icon" id="20s"></i><i class="p-icon" id="20t"></i>
                         <span class="hide-for-small-only"><a href="${zumeTraining.translations.urls[20]}">${zumeTraining.translations.titles[20]}</a></span>
                         </div>
                         <div class="cell">
                         <span class="show-for-small-only"><a href="${zumeTraining.translations.urls[21]}">${zumeTraining.translations.titles[21]}</a></span>
-                        <i class="p-icon "></i><i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i> 
+                        <i class="p-icon" id="21h"></i><i class="p-icon" id="21o"></i><i class="p-icon" id="21s"></i><i class="p-icon" id="21t"></i>
                         <span class="hide-for-small-only"><a href="${zumeTraining.translations.urls[21]}">${zumeTraining.translations.titles[21]}</a></span>
                         </div>
                         <div class="cell p-session-separator padding-top-1">
@@ -254,7 +254,7 @@ div.append(`
                           </div>
                         <div class="cell">
                         <span class="show-for-small-only"><a href="${zumeTraining.translations.urls[22]}">${zumeTraining.translations.titles[22]}</a></span>
-                        <i class="p-icon "></i><i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i> 
+                        <i class="p-icon" id="22h"></i><i class="p-icon" id="22o"></i><i class="p-icon" id="22s"></i><i class="p-icon" id="22t"></i>
                         <span class="hide-for-small-only"><a href="${zumeTraining.translations.urls[22]}">${zumeTraining.translations.titles[22]}</a></span>
                         </div>
                         <div class="cell p-session-separator padding-top-1">
@@ -262,7 +262,7 @@ div.append(`
                           </div>
                         <div class="cell">
                         <span class="show-for-small-only"><a href="${zumeTraining.translations.urls[23]}">${zumeTraining.translations.titles[23]}</a></span>
-                        <i class="p-icon "></i><i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i> 
+                        <i class="p-icon" id="23h"></i><i class="p-icon" id="23o"></i><i class="p-icon" id="23s"></i><i class="p-icon" id="23t"></i>
                         <span class="hide-for-small-only"><a href="${zumeTraining.translations.urls[23]}">${zumeTraining.translations.titles[23]}</a></span>
                         </div>
                         <div class="cell p-session-separator padding-top-1">
@@ -270,22 +270,22 @@ div.append(`
                           </div>
                         <div class="cell">
                         <span class="show-for-small-only"><a href="${zumeTraining.translations.urls[24]}">${zumeTraining.translations.titles[24]}</a></span>
-                        <i class="p-icon "></i><i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i> 
+                        <i class="p-icon" id="24h"></i><i class="p-icon" id="24o"></i><i class="p-icon" id="24s"></i><i class="p-icon" id="24t"></i>
                         <span class="hide-for-small-only"><a href="${zumeTraining.translations.urls[24]}">${zumeTraining.translations.titles[24]}</a></span>
                         </div>
                         <div class="cell">
                         <span class="show-for-small-only"><a href="${zumeTraining.translations.urls[25]}">${zumeTraining.translations.titles[25]}</a></span>
-                        <i class="p-icon "></i><i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i> 
+                        <i class="p-icon" id="25h"></i><i class="p-icon" id="25o"></i><i class="p-icon" id="25s"></i><i class="p-icon" id="25t"></i>
                         <span class="hide-for-small-only"><a href="${zumeTraining.translations.urls[25]}">${zumeTraining.translations.titles[25]}</a></span>
                         </div>
                         <div class="cell">
                         <span class="show-for-small-only"><a href="${zumeTraining.translations.urls[26]}">${zumeTraining.translations.titles[26]}</a></span>
-                        <i class="p-icon "></i><i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i> 
+                        <i class="p-icon" id="26h"></i><i class="p-icon" id="26o"></i><i class="p-icon" id="26s"></i><i class="p-icon" id="26t"></i>
                         <span class="hide-for-small-only"><a href="${zumeTraining.translations.urls[26]}">${zumeTraining.translations.titles[26]}</a></span>
                         </div>
                         <div class="cell">
                         <span class="show-for-small-only"><a href="${zumeTraining.translations.urls[27]}">${zumeTraining.translations.titles[27]}</a></span>
-                        <i class="p-icon "></i><i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i> 
+                        <i class="p-icon" id="27h"></i><i class="p-icon" id="27o"></i><i class="p-icon" id="27s"></i><i class="p-icon" id="27t"></i>
                         <span class="hide-for-small-only"><a href="${zumeTraining.translations.urls[27]}">${zumeTraining.translations.titles[27]}</a></span>
                         </div>
                         <div class="cell p-session-separator padding-top-1">
@@ -293,27 +293,27 @@ div.append(`
                           </div>
                         <div class="cell">
                         <span class="show-for-small-only"><a href="${zumeTraining.translations.urls[28]}">${zumeTraining.translations.titles[28]}</a></span>
-                        <i class="p-icon "></i><i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i> 
+                        <i class="p-icon" id="28h"></i><i class="p-icon" id="28o"></i><i class="p-icon" id="28s"></i><i class="p-icon" id="28t"></i>
                         <span class="hide-for-small-only"><a href="${zumeTraining.translations.urls[28]}">${zumeTraining.translations.titles[28]}</a></span>
                         </div>
                         <div class="cell">
                         <span class="show-for-small-only"><a href="${zumeTraining.translations.urls[29]}">${zumeTraining.translations.titles[29]}</a></span>
-                        <i class="p-icon "></i><i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i> 
+                        <i class="p-icon" id="29h"></i><i class="p-icon" id="29o"></i><i class="p-icon" id="29s"></i><i class="p-icon" id="29t"></i>
                         <span class="hide-for-small-only"><a href="${zumeTraining.translations.urls[29]}">${zumeTraining.translations.titles[29]}</a></span>
                         </div>
                         <div class="cell">
                         <span class="show-for-small-only"><a href="${zumeTraining.translations.urls[30]}">${zumeTraining.translations.titles[30]}</a></span>
-                        <i class="p-icon "></i><i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i> 
+                        <i class="p-icon" id="30h"></i><i class="p-icon" id="30o"></i><i class="p-icon" id="30s"></i><i class="p-icon" id="30t"></i>
                         <span class="hide-for-small-only"><a href="${zumeTraining.translations.urls[30]}">${zumeTraining.translations.titles[30]}</a></span>
                         </div>
                         <div class="cell">
                         <span class="show-for-small-only"><a href="${zumeTraining.translations.urls[31]}">${zumeTraining.translations.titles[31]}</a></span>
-                        <i class="p-icon "></i><i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i> 
+                        <i class="p-icon" id="31h"></i><i class="p-icon" id="31o"></i><i class="p-icon" id="31s"></i><i class="p-icon" id="31t"></i>
                         <span class="hide-for-small-only"><a href="${zumeTraining.translations.urls[31]}">${zumeTraining.translations.titles[31]}</a></span>
                         </div>
                         <div class="cell">
                         <span class="show-for-small-only"><a href="${zumeTraining.translations.urls[32]}">${zumeTraining.translations.titles[32]}</a></span>
-                        <i class="p-icon "></i><i class="p-icon"></i><i class="p-icon"></i><i class="p-icon"></i> 
+                        <i class="p-icon" id="32h"></i><i class="p-icon" id="32o"></i><i class="p-icon" id="32s"></i><i class="p-icon" id="32t"></i>
                         <span class="hide-for-small-only"><a href="${zumeTraining.translations.urls[32]}">${zumeTraining.translations.titles[32]}</a></span>
                         </div>
                     </div>
@@ -337,8 +337,10 @@ function progress_icons_listener() {
     let item = jQuery(this)
     if ( item.hasClass("complete") ) {
       item.removeClass('complete')
+      console.log(item.attr('id') + ' removed')
     } else {
       item.addClass('complete')
+      console.log(item.attr('id') + ' added')
     }
   })
 }

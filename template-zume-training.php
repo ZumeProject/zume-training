@@ -6,7 +6,7 @@ get_header();
 $current_language = zume_current_language();
 ?>
 
-<div id="training">
+<div class="training">
     <div  id="inner-content" class="grid-x padding-top-1">
         <!-------------------------------------------------------------------------------------------------------------
 
