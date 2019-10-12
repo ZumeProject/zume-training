@@ -1,7 +1,7 @@
 <?php
 if ( ! defined( 'ABSPATH' ) ) { exit; } // Exit if accessed directly
 
-class Zume_User_Progress {
+class Zume_User {
     public static $progress_key = 'zume_progress';
 
     public static function default_progress_array() {
@@ -141,12 +141,13 @@ class Zume_User_Progress {
         if ( empty( $user_id) ) {
             $user_id = get_current_user_id();
         }
+        $progress = get_user_meta( $user_id, self::$progress_key, true );
 
-        if ( $progress = get_user_meta( $user_id, self::$progress_key ) ) {
+        if ( empty( $progress ) || ! is_array( $progress ) ) {
             update_user_meta( $user_id, self::$progress_key, self::default_progress_array() );
-            $progress = get_user_meta( $user_id, self::$progress_key );
+            $progress = get_user_meta( $user_id, self::$progress_key, true );
         }
 
-        return $progress;
+        return maybe_unserialize( $progress );
     }
 }

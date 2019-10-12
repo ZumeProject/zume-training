@@ -6,11 +6,38 @@ jQuery(document).ready(function(){
   if( '#panel3' === window.location.hash  ) {
     console.log(zumeTraining)
     get_progress()
-    progress_icons_listener()
   }
 })
 
+/**
+ * COURSE PANEL
+ */
+function toggle_column() {
+  let item = jQuery('#column_button')
+  if ( item.hasClass("hollow") ) {
+    item.removeClass('hollow')
+    jQuery('.session').removeClass('medium-6')
+    console.log('single')
+  } else {
+    item.addClass('hollow')
+    jQuery('.session').addClass('medium-6')
+    console.log('double')
+  }
+}
+function toggle_extra() {
+  let item = jQuery('#extra_button')
+  if ( item.hasClass("hollow") ) {
+    item.removeClass('hollow')
+    jQuery('.hide-extra').show();
+  } else {
+    item.addClass('hollow')
+    jQuery('.hide-extra').hide();
+  }
+}
 
+/**
+ * GROUP PANEL
+ */
 function get_groups() {
   let groups = zumeTraining.groups
 
@@ -247,7 +274,7 @@ function check_address( key ) {
   }
 }
 function save_new_location( key ) {
-  
+
   console.log('new location')
   console.log(key)
 
@@ -257,13 +284,12 @@ function save_new_location( key ) {
 
 
 /**
- * PROGRESS SECTION
+ * PROGRESS PANEL
  */
 
 function get_progress() {
   let div = jQuery('#progress-stats')
   div.empty()
-
 
 div.append(`
 <div class="cell">
@@ -500,45 +526,35 @@ div.append(`
     </div>
 </div>      
 `)
+  load_progress()
   progress_icons_listener()
 }
 
-jQuery(document).ready(function(){
-  progress_icons_listener()
-})
+
 function progress_icons_listener() {
   jQuery('.p-icon').on( 'click', function(){
     let item = jQuery(this)
     if ( item.hasClass("complete") ) {
       item.removeClass('complete')
+
+      // @todo add REST update
+
       console.log(item.attr('id') + ' removed')
     } else {
       item.addClass('complete')
+
+      // @todo add REST update
+
       console.log(item.attr('id') + ' added')
     }
   })
 }
-function toggle_column() {
-  let item = jQuery('#column_button')
-  if ( item.hasClass("hollow") ) {
-    item.removeClass('hollow')
-    jQuery('.session').removeClass('medium-6')
-    console.log('single')
-  } else {
-    item.addClass('hollow')
-    jQuery('.session').addClass('medium-6')
-    console.log('double')
-  }
-}
-function toggle_extra() {
-  let item = jQuery('#extra_button')
-  if ( item.hasClass("hollow") ) {
-    item.removeClass('hollow')
-    jQuery('.hide-extra').show();
-  } else {
-    item.addClass('hollow')
-    jQuery('.hide-extra').hide();
-  }
+function load_progress() {
+  jQuery.each( zumeTraining.progress, function(i,v) {
+      if ( v ) {
+        jQuery('#'+i).addClass('complete')
+      }
+  })
 }
 
 function add_progress ( stage_id, concept_id ) {

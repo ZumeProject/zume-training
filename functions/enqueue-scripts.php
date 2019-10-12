@@ -98,7 +98,7 @@ function zume_site_scripts() {
                 'current_user_id' => get_current_user_id(),
                 "current_language" => $current_language,
                 "groups" => Zume_Dashboard::get_all_groups(),
-                "progress" => Zume_User_Progress::get_user_progress(),
+                "progress" => Zume_User::get_user_progress(),
                 'urls' => [
                     1 => esc_url( zume_get_landing_translation_url(1, $current_language) ),
                     2 => esc_url( zume_get_landing_translation_url(2, $current_language) ),
