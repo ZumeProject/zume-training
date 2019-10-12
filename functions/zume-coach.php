@@ -1,5 +1,4 @@
 <?php
-
 /**
  * Zume Coach Class
  *
@@ -8,6 +7,8 @@
  * @since 0.1
  * @package Zume
  */
+
+// @todo class may not be necessary. Coaching features might be deprecated.
 
 if ( ! defined( 'ABSPATH' ) ) { exit; // Exit if accessed directly
 }

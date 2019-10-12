@@ -52,6 +52,22 @@
     }
 
     // Groups Panel
+    .member-list {
+        font-size: 1em;
+        font-weight:300;
+    }
+    .column-header {
+        font-size: 1.2em;
+        font-weight:500;
+    }
+    .g-session-icon {
+        border: 1px solid $primary-color;
+        width: 15px;
+        height: 15px;
+        display: inline-block;
+        vertical-align: middle;
+    }
+
 
     // Progress Panel
     .circle-background {

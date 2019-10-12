@@ -1,8 +1,10 @@
 jQuery(document).ready(function(){
   if( '#panel2' === window.location.hash  ) {
+    console.log(zumeTraining)
     get_groups()
   }
   if( '#panel3' === window.location.hash  ) {
+    console.log(zumeTraining)
     get_progress()
     progress_icons_listener()
   }
@@ -15,10 +17,94 @@ function get_groups() {
 
   let groups = [ // @todo make an ajax call
     {
-      title: 'Group 1'
+      owner               : 2,
+      group_name          : 'Group 1',
+      key                 : 'zume_group_98878234',
+      public_key          : 'kdjsn',
+      members             : 1,
+      meeting_time        : '',
+      address             : '',
+      lng                 : '',
+      lat                 : '',
+      raw_location        : [],
+      ip_address          : '',
+      ip_lng              : '',
+      ip_lat              : '',
+      ip_raw_location     : [],
+      created_date        : '',
+      next_session        : 1,
+      session_1           : false,
+      session_1_complete  : '',
+      session_2           : false,
+      session_2_complete  : '',
+      session_3           : false,
+      session_3_complete  : '',
+      session_4           : false,
+      session_4_complete  : '',
+      session_5           : false,
+      session_5_complete  : '',
+      session_6           : false,
+      session_6_complete  : '',
+      session_7           : false,
+      session_7_complete  : '',
+      session_8           : false,
+      session_8_complete  : '',
+      session_9           : false,
+      session_9_complete  : '',
+      session_10          : false,
+      session_10_complete : '',
+      last_modified_date  : '',
+      closed              : false,
+      coleaders           : [],
+      coleaders_accepted  : [],
+      coleaders_declined  : [],
+      three_month_plans   : [],
+      foreign_key         : ''
     },
     {
-      title: 'Group 2'
+      owner               : 2,
+      group_name          : 'Group 2',
+      key                 : 'zume_group_98878234',
+      public_key          : 'kdjsn',
+      members             : 1,
+      meeting_time        : '',
+      address             : '',
+      lng                 : '',
+      lat                 : '',
+      raw_location        : [],
+      ip_address          : '',
+      ip_lng              : '',
+      ip_lat              : '',
+      ip_raw_location     : [],
+      created_date        : '',
+      next_session        : 1,
+      session_1           : false,
+      session_1_complete  : '',
+      session_2           : false,
+      session_2_complete  : '',
+      session_3           : false,
+      session_3_complete  : '',
+      session_4           : false,
+      session_4_complete  : '',
+      session_5           : false,
+      session_5_complete  : '',
+      session_6           : false,
+      session_6_complete  : '',
+      session_7           : false,
+      session_7_complete  : '',
+      session_8           : false,
+      session_8_complete  : '',
+      session_9           : false,
+      session_9_complete  : '',
+      session_10          : false,
+      session_10_complete : '',
+      last_modified_date  : '',
+      closed              : false,
+      coleaders           : [],
+      coleaders_accepted  : [],
+      coleaders_declined  : [],
+      three_month_plans   : [],
+      foreign_key         : ''
     }
   ]
 
@@ -26,44 +112,59 @@ function get_groups() {
     div.append(`
 <div class="cell group-section border-bottom padding-bottom-2 margin-bottom-2">
     <div class="grid-x grid-padding-x">
-       <div class="cell">
-       <h2>${v.title}</h2></div>
-      <div class="cell small-4">
-          Sessions<br>
-          &#9724; Session 1<br>
-          &#9724; Session 2<br>
-          &#9724; Session 3<br>
-          &#9724; Session 4<br>
-          &#9724; Session 5<br>
-          &#9724; Session 6<br>
-          &#9723; Session 7<br>
-          &#9723; Session 8<br>
-          &#9723; Session 9<br>
-          &#9723; Session 10<br>
+       <div class="cell"><!--Full width top -->
+        <h2>${v.group_name}</h2>
+       </div>
+      <div class="cell small-4"> <!-- Column 1 -->
+         <div class="grid-y">
+            <div class="cell"><a href=""><i class="g-session-icon complete"></i> Session 1</a></div>    
+            <div class="cell"><a href=""><i class="g-session-icon"></i> Session 2</a></div>    
+            <div class="cell"><a href=""><i class="g-session-icon"></i> Session 3</a></div>    
+            <div class="cell"><a href=""><i class="g-session-icon"></i> Session 4</a></div>    
+            <div class="cell"><a href=""><i class="g-session-icon"></i> Session 5</a></div>    
+            <div class="cell"><a href=""><i class="g-session-icon"></i> Session 6</a></div>    
+            <div class="cell"><a href=""><i class="g-session-icon"></i> Session 7</a></div>    
+            <div class="cell"><a href=""><i class="g-session-icon"></i> Session 8</a></div>    
+            <div class="cell"><a href=""><i class="g-session-icon"></i> Session 9</a></div>    
+            <div class="cell"><a href=""><i class="g-session-icon"></i> Session 10</a></div>    
+         </div>
       </div>
-      <div class="cell small-4">
+      <div class="cell small-4"> <!-- Column 2 -->
           <div class="grid-y">
+                <div class="cell column-header">
+                    Members
+                </div>
                 <div class="cell padding-bottom-1">
-                    Members<br>
                     <select><option>16</option></select><br>
                 </div>
+                <div class="cell column-header">
+                    Members List (optional)
+                </div>
                 <div class="cell">
-                    Members List (optional)<br>
-                    Name email@email.com <br>
-                    Name email@email.com <br>
-                    Name email@email.com <br>
-                    Name email@email.com <br>
-                    Name email@email.com <br>
-                    Name email@email.com <br>
-                    <i class="fi-plus"></i> add
+                    <div class="grid-y member-list">
+                      <div class="cell">Name email@email.com</div>    
+                      <div class="cell">Name email@email.com</div>    
+                      <div class="cell">Name email@email.com</div>    
+                    </div>
+                </div>
+                <div class="cell add-member">
+                    <button type="button" class="button clear" onclick="add_member()"><i class="fi-plus"></i> add</button>
                 </div>
           </div>
-          
-          
       </div>
-      <div class="cell small-4">
-          Location<br>
-          <i class="fi-plus"></i> add
+      <div class="cell small-4"> <!-- Column 3 -->
+          <div class="grid-y">
+              <div class="cell">
+                <span class="column-header">Location</span>
+              </div>
+               <div class="cell">
+                
+              </div>
+              <div class="cell">
+                <button type="button" class="button clear" onclick="add_location()"><i class="fi-plus"></i> add</button>
+              </div>
+          </div>
+          
       </div>
     </div>
 </div>
@@ -359,4 +460,72 @@ function add_progress ( stage_id, concept_id ) {
 
 }
 
+function add_member() {
+  jQuery('.add-member').empty().append(`
+  <hr>
+  <input type="text" placeholder="nickname" />
+  <input type="text" placeholder="email" />
+  <button type="button" class="button small" onclick="save_new_member()">Save</button> 
+  `)
+}
+function save_new_member() {
+  let i = jQuery('.add-member input[type=text]')
+  jQuery.each()
+  console.log(i)
+
+  jQuery('.add-member').empty().append(`<button type="button" class="button clear" onclick="add_member()"><i class="fi-plus"></i> add</button>`)
+}
+
+function add_location() {
+
+}
+
+
+/*
+$active_keys = [
+'owner'               => get_current_user_id(),
+'group_name'          => __( 'No Name', 'zume' ),
+'key'                 => self::get_unique_group_key(),
+'public_key'          => self::get_unique_public_key(),
+'members'             => 1,
+'meeting_time'        => '',
+'address'             => '',
+'lng'                 => '',
+'lat'                 => '',
+'raw_location'        => [],
+'ip_address'          => '',
+'ip_lng'              => '',
+'ip_lat'              => '',
+'ip_raw_location'     => [],
+'created_date'        => current_time( 'mysql' ),
+'next_session'        => '1',
+'session_1'           => false,
+'session_1_complete'  => '',
+'session_2'           => false,
+'session_2_complete'  => '',
+'session_3'           => false,
+'session_3_complete'  => '',
+'session_4'           => false,
+'session_4_complete'  => '',
+'session_5'           => false,
+'session_5_complete'  => '',
+'session_6'           => false,
+'session_6_complete'  => '',
+'session_7'           => false,
+'session_7_complete'  => '',
+'session_8'           => false,
+'session_8_complete'  => '',
+'session_9'           => false,
+'session_9_complete'  => '',
+'session_10'          => false,
+'session_10_complete' => '',
+'last_modified_date'  => current_time( 'mysql' ),
+'closed'              => false,
+'coleaders'           => [],
+'coleaders_accepted'  => [],
+'coleaders_declined'  => [],
+'three_month_plans'   => [],
+'foreign_key'         => bin2hex( random_bytes( 40 ) ),
+];
+ */
 
