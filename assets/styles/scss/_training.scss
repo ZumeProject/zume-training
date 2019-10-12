@@ -51,6 +51,13 @@
         padding: 0;
     }
 
+    // Course Panel
+    #display-buttons {
+        button {
+            margin: 0 1px;
+        }
+    }
+
     // Groups Panel
     .member-list {
         font-size: 1em;
@@ -66,6 +73,28 @@
         height: 15px;
         display: inline-block;
         vertical-align: middle;
+    }
+    .member {
+        padding-left: 10px;
+        color: $light-black;
+        font-weight:300;
+        font-size: 1em;
+
+        span.delete {
+            font-size: .8em;
+            color: red;
+            display:none;
+            cursor:pointer;
+        }
+    }
+    #possible-results-new {
+        font-size: .8em;
+        #multiple-resultsnew {
+            font-size: .8em;
+        }
+    }
+    .location-result-buttons {
+        display: none;
     }
 
 

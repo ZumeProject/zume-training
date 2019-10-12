@@ -62,6 +62,7 @@ require_once( 'functions/zume-welcome-messages.php' ); // zume welcome messages
 require_once( 'functions/logging/zume-logging.php' ); // zume logging of critical path actions
 require_once( 'functions/zume-stats.php' ); // zume logging of critical path actions
 require_once( 'functions/zume-three-month-plan.php' );
+require_once( 'functions/zume-user.php' );
 
 require_once( 'functions/logging/zume-mailchimp.php' ); // zume logging of critical path actions
 require_once( 'functions/zume-dt-integration/zume-dashboard-sync.php' ); // zume dashboard sync

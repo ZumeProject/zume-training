@@ -797,4 +797,26 @@ class Zume_Dashboard {
         }
     }
 
+    public static function get_all_groups( int $user_id = null ) : array {
+        $groups = [];
+        if ( empty( $user_id) ) {
+            $user_id = get_current_user_id();
+        }
+        $owned_groups = self::get_current_user_groups( $user_id );
+        $colead_groups = self::get_colead_groups( $user_id );
+
+        if ( ! empty( $owned_groups ) ) {
+            foreach ( $owned_groups as $g ) {
+                $groups[] = $g;
+            }
+        }
+        if ( ! empty( $colead_groups ) ) {
+            foreach ( $colead_groups as $g ) {
+                $groups[] = $g;
+            }
+        }
+
+        return $groups;
+    }
+
 }

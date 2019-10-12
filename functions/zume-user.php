@@ -2,6 +2,7 @@
 if ( ! defined( 'ABSPATH' ) ) { exit; } // Exit if accessed directly
 
 class Zume_User_Progress {
+    public static $progress_key = 'zume_progress';
 
     public static function default_progress_array() {
         return [
@@ -134,5 +135,18 @@ class Zume_User_Progress {
             '32s' => '',
             '32t' => '',
         ];
+    }
+
+    public static function get_user_progress( int $user_id = null ) : array {
+        if ( empty( $user_id) ) {
+            $user_id = get_current_user_id();
+        }
+
+        if ( $progress = get_user_meta( $user_id, self::$progress_key ) ) {
+            update_user_meta( $user_id, self::$progress_key, self::default_progress_array() );
+            $progress = get_user_meta( $user_id, self::$progress_key );
+        }
+
+        return $progress;
     }
 }

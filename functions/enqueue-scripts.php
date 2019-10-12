@@ -63,18 +63,76 @@ function zume_site_scripts() {
                 ]
             )
         );
+
+    }
+
+    if ( 'template-zume-training.php' !== basename( get_page_template() ) ) { /* @todo check necessary page loading. Loading on too many pages? */
+        wp_enqueue_script('zume', get_template_directory_uri() . '/assets/scripts/zume.js', array('jquery'), 1.1, true);
+        wp_localize_script(
+            "zume", "zumeMaps", array(
+                'root' => esc_url_raw(rest_url()),
+                'nonce' => wp_create_nonce('wp_rest'),
+                'current_user_login' => wp_get_current_user()->user_login,
+                'current_user_id' => get_current_user_id(),
+                'theme_uri' => get_stylesheet_directory_uri(),
+                "translations" => [
+                    "delete" => esc_html__('Delete', 'zume'),
+                    "failed_to_remove" => esc_html__('Failed to remove item.', 'zume'),
+                    "failed_to_change" => esc_html__('Failed to change item.', 'zume'),
+                    "print_copyright" => esc_html__('Three Month Plan - Zúme Project', 'zume'),
+                    "we_got_it" => esc_html__('We got it!', 'zume'),
+                    "we_got_it_message" => esc_html__('We\'re a volunteer network, so give us a few days. We\'ll reach out to you soon as possible!', 'zume')
+                ]
+            )
+        );
     }
 
     if ( 'template-zume-training.php' === basename( get_page_template() ) ) {
         wp_enqueue_script( 'zumeTraining', get_template_directory_uri() . '/assets/scripts/training.js', array( 'jquery' ), filemtime( get_theme_file_path() . '/assets/scripts/training.js' ), true );
         $current_language = zume_current_language();
-
-
-
         wp_localize_script(
             "zumeTraining", "zumeTraining", array(
+                'root' => esc_url_raw(rest_url()),
+                'theme_uri' => get_stylesheet_directory_uri(),
+                'nonce' => wp_create_nonce( 'wp_rest' ),
+                'current_user_id' => get_current_user_id(),
                 "current_language" => $current_language,
-                "user_meta" => zume_get_user_meta( get_current_user_id() ),
+                "groups" => Zume_Dashboard::get_all_groups(),
+                "progress" => Zume_User_Progress::get_user_progress(),
+                'urls' => [
+                    1 => esc_url( zume_get_landing_translation_url(1, $current_language) ),
+                    2 => esc_url( zume_get_landing_translation_url(2, $current_language) ),
+                    3 => esc_url( zume_get_landing_translation_url(3, $current_language) ),
+                    4 => esc_url( zume_get_landing_translation_url(4, $current_language) ),
+                    5 => esc_url( zume_get_landing_translation_url(5, $current_language) ),
+                    6 => esc_url( zume_get_landing_translation_url(6, $current_language) ),
+                    7 => esc_url( zume_get_landing_translation_url(7, $current_language) ),
+                    8 => esc_url( zume_get_landing_translation_url(8, $current_language) ),
+                    9 => esc_url( zume_get_landing_translation_url(9, $current_language) ),
+                    10 => esc_url( zume_get_landing_translation_url(10, $current_language) ),
+                    11 => esc_url( zume_get_landing_translation_url(11, $current_language) ),
+                    12 => esc_url( zume_get_landing_translation_url(12, $current_language) ),
+                    13 => esc_url( zume_get_landing_translation_url(13, $current_language) ),
+                    14 => esc_url( zume_get_landing_translation_url(14, $current_language) ),
+                    15 => esc_url( zume_get_landing_translation_url(15, $current_language) ),
+                    16 => esc_url( zume_get_landing_translation_url(16, $current_language) ),
+                    17 => esc_url( zume_get_landing_translation_url(17, $current_language) ),
+                    18 => esc_url( zume_get_landing_translation_url(18, $current_language) ),
+                    19 => esc_url( zume_get_landing_translation_url(19, $current_language) ),
+                    20 => esc_url( zume_get_landing_translation_url(20, $current_language) ),
+                    21 => esc_url( zume_get_landing_translation_url(21, $current_language) ),
+                    22 => esc_url( zume_get_landing_translation_url(22, $current_language) ),
+                    23 => esc_url( zume_get_landing_translation_url(23, $current_language) ),
+                    24 => esc_url( zume_get_landing_translation_url(24, $current_language) ),
+                    25 => esc_url( zume_get_landing_translation_url(25, $current_language) ),
+                    26 => esc_url( zume_get_landing_translation_url(26, $current_language) ),
+                    27 => esc_url( zume_get_landing_translation_url(27, $current_language) ),
+                    28 => esc_url( zume_get_landing_translation_url(28, $current_language) ),
+                    29 => esc_url( zume_get_landing_translation_url(29, $current_language) ),
+                    30 => esc_url( zume_get_landing_translation_url(30, $current_language) ),
+                    31 => esc_url( zume_get_landing_translation_url(31, $current_language) ),
+                    32 => esc_url( zume_get_landing_translation_url(32, $current_language) ),
+                ],
                 "translations" => [
                     'titles' => [
                         1 => esc_html( zume_get_landing_title(1, $current_language) ),
@@ -143,64 +201,14 @@ function zume_site_scripts() {
                         30 => __('Session 30', 'zume'),
                         31 => __('Session 31', 'zume'),
                         32 => __('Session 32', 'zume'),
-                    ],
-                    'urls' => [
-                        1 => esc_url( zume_get_landing_translation_url(1, $current_language) ),
-                        2 => esc_url( zume_get_landing_translation_url(2, $current_language) ),
-                        3 => esc_url( zume_get_landing_translation_url(3, $current_language) ),
-                        4 => esc_url( zume_get_landing_translation_url(4, $current_language) ),
-                        5 => esc_url( zume_get_landing_translation_url(5, $current_language) ),
-                        6 => esc_url( zume_get_landing_translation_url(6, $current_language) ),
-                        7 => esc_url( zume_get_landing_translation_url(7, $current_language) ),
-                        8 => esc_url( zume_get_landing_translation_url(8, $current_language) ),
-                        9 => esc_url( zume_get_landing_translation_url(9, $current_language) ),
-                        10 => esc_url( zume_get_landing_translation_url(10, $current_language) ),
-                        11 => esc_url( zume_get_landing_translation_url(11, $current_language) ),
-                        12 => esc_url( zume_get_landing_translation_url(12, $current_language) ),
-                        13 => esc_url( zume_get_landing_translation_url(13, $current_language) ),
-                        14 => esc_url( zume_get_landing_translation_url(14, $current_language) ),
-                        15 => esc_url( zume_get_landing_translation_url(15, $current_language) ),
-                        16 => esc_url( zume_get_landing_translation_url(16, $current_language) ),
-                        17 => esc_url( zume_get_landing_translation_url(17, $current_language) ),
-                        18 => esc_url( zume_get_landing_translation_url(18, $current_language) ),
-                        19 => esc_url( zume_get_landing_translation_url(19, $current_language) ),
-                        20 => esc_url( zume_get_landing_translation_url(20, $current_language) ),
-                        21 => esc_url( zume_get_landing_translation_url(21, $current_language) ),
-                        22 => esc_url( zume_get_landing_translation_url(22, $current_language) ),
-                        23 => esc_url( zume_get_landing_translation_url(23, $current_language) ),
-                        24 => esc_url( zume_get_landing_translation_url(24, $current_language) ),
-                        25 => esc_url( zume_get_landing_translation_url(25, $current_language) ),
-                        26 => esc_url( zume_get_landing_translation_url(26, $current_language) ),
-                        27 => esc_url( zume_get_landing_translation_url(27, $current_language) ),
-                        28 => esc_url( zume_get_landing_translation_url(28, $current_language) ),
-                        29 => esc_url( zume_get_landing_translation_url(29, $current_language) ),
-                        30 => esc_url( zume_get_landing_translation_url(30, $current_language) ),
-                        31 => esc_url( zume_get_landing_translation_url(31, $current_language) ),
-                        32 => esc_url( zume_get_landing_translation_url(32, $current_language) ),
                     ]
+
                 ]
             )
         );
     }
 
-    wp_enqueue_script( 'zume', get_template_directory_uri() . '/assets/scripts/zume.js', array( 'jquery' ), 1.1, true );
-    wp_localize_script(
-        "zume", "zumeMaps", array(
-            'root' => esc_url_raw( rest_url() ),
-            'nonce' => wp_create_nonce( 'wp_rest' ),
-            'current_user_login' => wp_get_current_user()->user_login,
-            'current_user_id' => get_current_user_id(),
-            'theme_uri' => get_stylesheet_directory_uri(),
-            "translations" => [
-                "delete" => esc_html__( 'Delete', 'zume' ),
-                "failed_to_remove" => esc_html__( 'Failed to remove item.', 'zume' ),
-                "failed_to_change" => esc_html__( 'Failed to change item.', 'zume' ),
-                "print_copyright" => esc_html__( 'Three Month Plan - Zúme Project', 'zume' ),
-                "we_got_it" => esc_html__( 'We got it!', 'zume' ),
-                "we_got_it_message" => esc_html__( 'We\'re a volunteer network, so give us a few days. We\'ll reach out to you soon as possible!', 'zume' )
-            ]
-        )
-    );
+
 
     wp_enqueue_style( 'foundations-icons', get_template_directory_uri() .'/assets/styles/foundation-icons/foundation-icons.css', array(), '3' );
 
