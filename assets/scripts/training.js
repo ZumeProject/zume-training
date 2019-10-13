@@ -12,16 +12,28 @@ jQuery(document).ready(function(){
 /**
  * COURSE PANEL
  */
+// listeners
+jQuery(document).ready(function(){
+  if ( getCookie( 'extra' ) === "on") {
+    jQuery('#extra_button').removeClass('hollow')
+    jQuery('.hide-extra').show();
+  }
+  if ( getCookie( 'columns' ) === "single") {
+    jQuery('#column_button').removeClass('hollow')
+    jQuery('.session').removeClass('medium-6')
+  }
+})
+// functions
 function toggle_column() {
   let item = jQuery('#column_button')
   if ( item.hasClass("hollow") ) {
     item.removeClass('hollow')
     jQuery('.session').removeClass('medium-6')
-    console.log('single')
+    setCookie('columns', 'single', 30)
   } else {
     item.addClass('hollow')
     jQuery('.session').addClass('medium-6')
-    console.log('double')
+    setCookie('columns', 'double', 30)
   }
 }
 function toggle_extra() {
@@ -29,9 +41,39 @@ function toggle_extra() {
   if ( item.hasClass("hollow") ) {
     item.removeClass('hollow')
     jQuery('.hide-extra').show();
+    setCookie('extra', 'on', 30)
   } else {
     item.addClass('hollow')
     jQuery('.hide-extra').hide();
+    setCookie('extra', 'off', 30)
+  }
+}
+function setCookie(cname, cvalue, exdays) {
+  var d = new Date();
+  d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+  var expires = "expires="+d.toUTCString();
+  document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+function getCookie(cname) {
+  var name = cname + "=";
+  var ca = document.cookie.split(';');
+  for(var i = 0; i < ca.length; i++) {
+    var c = ca[i];
+    while (c.charAt(0) === ' ') {
+      c = c.substring(1);
+    }
+    if (c.indexOf(name) === 0) {
+      return c.substring(name.length, c.length);
+    }
+  }
+  return "";
+}
+function checkCookie( cname ) {
+  var setting = getCookie( cname );
+  if ( getCookie( 'extra' ) === "on") {
+    let item = jQuery('#extra_button')
+    item.removeClass('hollow')
+    jQuery('.hide-extra').show();
   }
 }
 
