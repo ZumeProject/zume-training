@@ -1,3 +1,6 @@
+_ = _ || window.lodash // make sure lodash is defined so plugins like gutenberg don't break it.
+// const { __, _x, _n, _nx } = wp.i18n;
+
 jQuery(document).ready(function(){
   if( '#panel2' === window.location.hash  ) {
     console.log(zumeTraining)
@@ -67,14 +70,6 @@ function getCookie(cname) {
     }
   }
   return "";
-}
-function checkCookie( cname ) {
-  var setting = getCookie( cname );
-  if ( getCookie( 'extra' ) === "on") {
-    let item = jQuery('#extra_button')
-    item.removeClass('hollow')
-    jQuery('.hide-extra').show();
-  }
 }
 
 /**
@@ -579,13 +574,13 @@ function progress_icons_listener() {
     if ( item.hasClass("complete") ) {
       item.removeClass('complete')
 
-      // @todo add REST update
+      API.update_progress( item.attr('id'), 'off' )
 
       console.log(item.attr('id') + ' removed')
     } else {
       item.addClass('complete')
 
-      // @todo add REST update
+      API.update_progress( item.attr('id'), 'on' )
 
       console.log(item.attr('id') + ' added')
     }
@@ -604,57 +599,43 @@ function add_progress ( stage_id, concept_id ) {
 }
 
 
+/**
+ * REST API
+ *
+ */
+window.API = {
 
-function add_location() {
+  update_progress: (key, state) => makeRequest('POST', 'progress/edit', { key: key, state: state }),
 
 }
+function makeRequest (type, url, data, base = 'zume/v1/') {
+  const options = {
+    type: type,
+    contentType: 'application/json; charset=utf-8',
+    dataType: 'json',
+    url: url.startsWith('http') ? url : `${zumeTraining.root}${base}${url}`,
+    beforeSend: xhr => {
+      xhr.setRequestHeader('X-WP-Nonce', zumeTraining.nonce);
+    }
+  }
 
+  if (data) {
+    options.data = JSON.stringify(data)
+  }
 
-/*
-$active_keys = [
-'owner'               => get_current_user_id(),
-'group_name'          => __( 'No Name', 'zume' ),
-'key'                 => self::get_unique_key(),
-'public_key'          => self::get_unique_public_key(),
-'members'             => 1,
-'meeting_time'        => '',
-'address'             => '',
-'lng'                 => '',
-'lat'                 => '',
-'raw_location'        => [],
-'ip_address'          => '',
-'ip_lng'              => '',
-'ip_lat'              => '',
-'ip_raw_location'     => [],
-'created_date'        => current_time( 'mysql' ),
-'next_session'        => '1',
-'session_1'           => false,
-'session_1_complete'  => '',
-'session_2'           => false,
-'session_2_complete'  => '',
-'session_3'           => false,
-'session_3_complete'  => '',
-'session_4'           => false,
-'session_4_complete'  => '',
-'session_5'           => false,
-'session_5_complete'  => '',
-'session_6'           => false,
-'session_6_complete'  => '',
-'session_7'           => false,
-'session_7_complete'  => '',
-'session_8'           => false,
-'session_8_complete'  => '',
-'session_9'           => false,
-'session_9_complete'  => '',
-'session_10'          => false,
-'session_10_complete' => '',
-'last_modified_date'  => current_time( 'mysql' ),
-'closed'              => false,
-'coleaders'           => [],
-'coleaders_accepted'  => [],
-'coleaders_declined'  => [],
-'three_month_plans'   => [],
-'foreign_key'         => bin2hex( random_bytes( 40 ) ),
-];
- */
-
+  return jQuery.ajax(options)
+}
+function handleAjaxError (err) {
+  if (_.get(err, "statusText") !== "abortPromise" && err.responseText){
+    console.trace("error")
+    console.log(err)
+    // jQuery("#errors").append(err.responseText)
+  }
+}
+jQuery(document).ajaxComplete((event, xhr, settings) => {
+  if (_.get(xhr, 'responseJSON.data.status') === 401) {
+    window.location.replace('/login');
+  }
+}).ajaxError((event, xhr) => {
+  handleAjaxError(xhr)
+})

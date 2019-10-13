@@ -88,7 +88,10 @@ function zume_site_scripts() {
     }
 
     if ( 'template-zume-training.php' === basename( get_page_template() ) ) {
-        wp_enqueue_script( 'zumeTraining', get_template_directory_uri() . '/assets/scripts/training.js', array( 'jquery' ), filemtime( get_theme_file_path() . '/assets/scripts/training.js' ), true );
+        wp_register_script( 'lodash', 'https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.11/lodash.min.js', false, '4.17.11' );
+        wp_enqueue_script( 'lodash' );
+
+        wp_enqueue_script( 'zumeTraining', get_template_directory_uri() . '/assets/scripts/training.js', array( 'jquery', 'lodash', 'wp-i18n' ), filemtime( get_theme_file_path() . '/assets/scripts/training.js' ), true );
         $current_language = zume_current_language();
         wp_localize_script(
             "zumeTraining", "zumeTraining", array(

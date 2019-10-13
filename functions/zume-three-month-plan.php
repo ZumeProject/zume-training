@@ -254,7 +254,7 @@ class Zume_Three_Month_Plan
      * Unlink a plan from a group
      *
      * @param $group_key
-     *
+     * @return bool
      */
     public static function unlink_plan_from_group( $group_key ) {
 
@@ -266,12 +266,12 @@ class Zume_Three_Month_Plan
 
         // REMOVE FROM GROUP
         if ( empty( $group_key ) ) {
-            return;
+            return false;
         }
 
         $group_meta = Zume_Dashboard::get_group_by_key( $group_key );
         if ( ! $group_meta ) {
-            return;
+            return false;
         }
 
         // validate the current user is listed in the three_month_plans section
@@ -286,7 +286,7 @@ class Zume_Three_Month_Plan
             update_user_meta( $group_meta['owner'], $group_meta['key'], $group_meta );
 
         }
-        return;
+        return true;
     }
 
 }

@@ -4,8 +4,8 @@ if ( ! defined( 'ABSPATH' ) ) { exit; } // Exit if accessed directly
 class Zume_User {
     public static $progress_key = 'zume_progress';
 
-    public static function default_progress_array() {
-        return [
+    public static function verify_progress_array( $args ) {
+        $defaults = [
             '1h' => '',
             '1o' => '',
             '1s' => '',
@@ -135,8 +135,16 @@ class Zume_User {
             '32s' => '',
             '32t' => '',
         ];
+
+        return wp_parse_args( $args, $defaults );
     }
 
+    /**
+     * CREATE && READ
+     *
+     * @param int|null $user_id
+     * @return array
+     */
     public static function get_user_progress( int $user_id = null ) : array {
         if ( empty( $user_id) ) {
             $user_id = get_current_user_id();
@@ -144,10 +152,38 @@ class Zume_User {
         $progress = get_user_meta( $user_id, self::$progress_key, true );
 
         if ( empty( $progress ) || ! is_array( $progress ) ) {
-            update_user_meta( $user_id, self::$progress_key, self::default_progress_array() );
+            update_user_meta( $user_id, self::$progress_key, self::verify_progress_array([]) );
             $progress = get_user_meta( $user_id, self::$progress_key, true );
         }
 
-        return maybe_unserialize( $progress );
+        return self::verify_progress_array( $progress );
     }
+
+    /**
+     * UPDATE && DELETE
+     *
+     * @param $key
+     * @param $state
+     * @param null $user_id
+     *
+     * @return int|bool
+     */
+    public static function update_user_progress( $key, $state, $user_id = null ) {
+        if ( empty( $user_id ) ) {
+            $user_id = get_current_user_id();
+        }
+        $user_progress = self::get_user_progress( $user_id );
+        if ( ! isset( $user_progress[$key] ) ) {
+            return false;
+        }
+
+        if ( empty( $state ) || 'off' === $state ) {
+            $user_progress[$key] = '';
+            return update_user_meta( $user_id, self::$progress_key, $user_progress );
+        } else {
+            $user_progress[$key] = time();
+            return update_user_meta( $user_id, self::$progress_key, $user_progress );
+        }
+    }
+
 }

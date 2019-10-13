@@ -62,15 +62,7 @@ class Zume_REST_API {
             ),
         ) );
 
-        register_rest_route( $namespace, '/coleaders_delete', array(
-            array(
-                'methods'         => WP_REST_Server::CREATABLE,
-                'callback'        => array( $this, 'coleader_delete' ),
-                "permission_callback" => function () {
-                    return current_user_can( 'zume' );
-                }
-            ),
-        ) );
+
 
         register_rest_route( $namespace, '/change_public_key', array(
             array(
@@ -102,7 +94,24 @@ class Zume_REST_API {
             ),
         ) );
 
-
+        register_rest_route( $namespace, '/coleaders_delete', array(
+            array(
+                'methods'         => WP_REST_Server::CREATABLE,
+                'callback'        => array( $this, 'coleader_delete' ),
+                "permission_callback" => function () {
+                    return current_user_can( 'zume' );
+                }
+            ),
+        ) );
+        register_rest_route( $namespace, '/progress/edit', array(
+            array(
+                'methods'         => WP_REST_Server::CREATABLE,
+                'callback'        => array( $this, 'progress_edit' ),
+                "permission_callback" => function () {
+                    return current_user_can( 'zume' );
+                }
+            ),
+        ) );
     }
 
     /**
@@ -236,7 +245,22 @@ class Zume_REST_API {
             return new WP_Error( "log_param_error", "Please provide a valid address", array( 'status' => 400 ) );
         }
     }
-
+    /**
+     * Update Session Complete
+     *
+     * @param WP_REST_Request $request
+     * @access public
+     * @since 0.1
+     * @return string|WP_Error
+     */
+    public function progress_edit( WP_REST_Request $request){
+        $params = $request->get_params();
+        if ( isset( $params['key'] ) && ! empty( $params['key'] ) && isset( $params['state'] ) ) {
+            return Zume_User::update_user_progress( $params['key'], $params['state'] );
+        } else {
+            return new WP_Error( "log_param_error", "Please provide a valid address", array( 'status' => 400 ) );
+        }
+    }
 
 }
 Zume_REST_API::instance();
