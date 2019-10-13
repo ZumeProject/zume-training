@@ -335,22 +335,22 @@ div.append(`
             <div class="grid-x grid-padding-x grid-padding-y center">
                 <div class="cell small-3">
                     <div class="progress-stat-title">Heard</div>
-                    <div class="circle-background">29</div>
+                    <div class="circle-background" id="h_total">0</div>
                     <div class="progress-description">"Heard" means gain knowledge. You have moved from not knowing about a tool or concept to knowing about it.</div>
                 </div>
                 <div class="cell small-3">
                     <div class="progress-stat-title">Obeyed</div>
-                    <div class="circle-background">21</div>
+                    <div class="circle-background" id="o_total">0</div>
                     <div class="progress-description">"Obeyed" means taking personal action. Obeying with tools might look like beginning to use them with others, while obeying with concepts might look like changing thinking or priorities.</div>
                 </div>
                 <div class="cell small-3">
                     <div class="progress-stat-title">Shared</div>
-                    <div class="circle-background">13</div>
+                    <div class="circle-background" id="s_total">0</div>
                     <div class="progress-description">"Shared" means you helped someone else hear. This step is essential to truly understanding the concept or tool and preparing you to train others.</div>
                 </div>
                 <div class="cell small-3 center">
                     <div class="progress-stat-title">Trained</div>
-                    <div class="circle-background">6</div>
+                    <div class="circle-background" id="t_total">0</div>
                     <div class="progress-description">"Trained" means to coach someone else to obey and share. More than sharing knowledge, you have helped them become a sharer of the tool or concept.</div>
                 </div>
             </div>
@@ -565,6 +565,7 @@ div.append(`
 `)
   load_progress()
   progress_icons_listener()
+  load_progress_totals()
 }
 
 
@@ -576,13 +577,17 @@ function progress_icons_listener() {
 
       API.update_progress( item.attr('id'), 'off' )
 
-      console.log(item.attr('id') + ' removed')
+      zumeTraining.progress[item.attr('id')] = ''
+
+      load_progress_totals()
     } else {
       item.addClass('complete')
 
       API.update_progress( item.attr('id'), 'on' )
+      
+      zumeTraining.progress[item.attr('id')] = Date.now()
 
-      console.log(item.attr('id') + ' added')
+      load_progress_totals()
     }
   })
 }
@@ -593,9 +598,22 @@ function load_progress() {
       }
   })
 }
-
-function add_progress ( stage_id, concept_id ) {
-
+function load_progress_totals() {
+  let total = {
+    'h': 0,
+    'o': 0,
+    's': 0,
+    't': 0,
+  }
+  jQuery.each( zumeTraining.progress, function(i,v) {
+    if ( v ) {
+      total[i.charAt(i.length - 1)]++
+    }
+  })
+  jQuery('#h_total').html(total['h'])
+  jQuery('#o_total').html(total['o'])
+  jQuery('#s_total').html(total['s'])
+  jQuery('#t_total').html(total['t'])
 }
 
 
