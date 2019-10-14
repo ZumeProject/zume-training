@@ -131,6 +131,9 @@ class Zume_v4_REST_API {
             case 'coleaders_add':
                 return Zume_v4_Groups::add_coleader( $params['key'], $params['value'] );
                 break;
+            case 'coleaders_delete':
+                return Zume_v4_Groups::delete_coleader( $params['value'], $params['key'] );
+                break;
             default:
                 return new WP_Error( __METHOD__, "Incorrect type", array( 'status' => 400 ) );
                 break;

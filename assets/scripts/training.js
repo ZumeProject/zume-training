@@ -169,6 +169,7 @@ function edit_group_name( key, i ) {
       </div>
     </div>
   `) /* end html */
+  jQuery('#edit_group_name_'+key).focus()
 }
 function save_group_name( key, i ) {
   let new_name = jQuery('#edit_group_name_'+key).val()
@@ -178,7 +179,6 @@ function save_group_name( key, i ) {
 
     zumeTraining.groups[i].group_name = _.escape( new_name )
 
-    console.log(new_name)
   }
   write_group_name( key, i )
 }
@@ -211,6 +211,9 @@ function save_member_count( key, i ) {
   let count = jQuery('#member_count_'+key).val()
 
   if ( count ) {
+    if ( zumeTraining.groups[i].coleaders_accepted.length > count ) {
+      count = zumeTraining.groups[i].coleaders_accepted.length
+    }
     API.update_group( key, _.escape( count ), 'members' )
 
     zumeTraining.groups[i].members = _.escape( count )
@@ -222,8 +225,10 @@ function save_member_count( key, i ) {
 function write_members_list( key, i ) {
   let div = jQuery('#member_list_'+key)
   div.empty()
-  jQuery.each( zumeTraining.groups[i].coleaders, function(i,v) {
-    div.append('<div class="cell member">'+v+' <span class="delete" onclick="">delete</span></div>')
+  jQuery.each( zumeTraining.groups[i].coleaders, function(ib,v) {
+    if ( v !== undefined ) {
+      div.append(`<div class="cell member">${v} <span class="delete" onclick="delete_member_list_item( '${key}', ${i}, ${ib}, '${v}' )">${__('delete', 'zume')}</span></div>`)
+    }
   })
 }
 function edit_new_member_list( key, i ) {
@@ -233,6 +238,7 @@ function edit_new_member_list( key, i ) {
   <button type="button" class="button small" onclick="save_new_member('${key}', ${i})">Save</button> 
   <button type="button" class="button small hollow" onclick="write_member_list_button('${key}', ${i})">Cancel</button> 
   `)
+  jQuery('#email_'+key).focus()
 }
 function write_member_list_button( key, i ) {
   jQuery('#add_member_'+key).empty().append(`
@@ -242,19 +248,29 @@ function write_member_list_button( key, i ) {
 function save_new_member( key, i ) {
   let email = jQuery('#email_' + key).val()
 
-  console.log(zumeTraining.groups[i].coleaders)
-
   if ( email && _.indexOf( zumeTraining.groups[i].coleaders, email ) < 0 ) {
     API.update_group( key, email, 'coleaders_add' )
 
     zumeTraining.groups[i].coleaders[zumeTraining.groups[i].coleaders.length++] = _.escape( email )
   }
+
   write_members_list(key, i)
   write_member_list_button( key, i )
   listen_hover_member_list()
 }
 function listen_hover_member_list() {
   jQuery('.member').hover( function(){jQuery(this).children().show()}, function(){jQuery(this).children().hide()})
+}
+function delete_member_list_item( key, i, ib, email ) {
+  if ( email ) {
+    API.update_group( key, email, 'coleaders_delete' )
+console.log( zumeTraining.groups[i].coleaders[ib] )
+    delete zumeTraining.groups[i].coleaders[ib]
+  }
+
+  write_members_list(key, i)
+  write_member_list_button( key, i )
+  listen_hover_member_list()
 }
 
 function load_location_add_button( key ) {

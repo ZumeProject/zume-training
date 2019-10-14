@@ -364,39 +364,7 @@ class Zume_v4_Groups {
         return in_array( $email_address, $group_meta['coleaders_accepted'] );
     }
 
-    public static function delete_coleader( $email, $group_id, $user_id = null ) {
 
-        if ( is_null( $user_id ) ) {
-            $user_id = get_current_user_id();
-        }
-
-        $group = get_user_meta( $user_id, $group_id, true );
-        $group = self::verify_group_array_filter( $group );
-        $group_prev = $group;
-
-        if ( empty( $group ) ) {
-            return [ 'status' => 'Permission failure' ];
-        }
-
-        if ( empty( $email ) ) {
-            return [ 'status' => 'Email failure' ];
-        }
-
-        if ( empty( $group['coleaders'] ) ) {
-            return [ 'status' => 'Coleader not present' ];
-        }
-
-        foreach ( $group['coleaders'] as $key => $coleader ) {
-            if ( $email == $coleader) {
-                unset( $group['coleaders'][$key] );
-                unset( $group['coleaders_accepted'][$key] );
-                unset( $group['coleaders_declined'][$key] );
-                update_user_meta( $user_id, $group_id, $group, $group_prev );
-                return [ 'status' => 'OK' ];
-            }
-        }
-        return [ 'status' => 'Coleader not found' ];
-    }
 
     /**
      * Gets the displayable list of Colead Groups
@@ -892,8 +860,42 @@ class Zume_v4_Groups {
         }
 
         $modified_group['coleaders'][] = sanitize_email( wp_unslash( $value ) );
-dt_write_log( 'here');
+
         return update_user_meta( get_current_user_id(), $key, $modified_group, $group );
+    }
+
+    public static function delete_coleader( $email, $group_id, $user_id = null ) {
+
+        if ( is_null( $user_id ) ) {
+            $user_id = get_current_user_id();
+        }
+
+        $group = get_user_meta( $user_id, $group_id, true );
+        $group = self::verify_group_array_filter( $group );
+        $group_prev = $group;
+
+        if ( empty( $group ) ) {
+            return [ 'status' => 'Permission failure' ];
+        }
+
+        if ( empty( $email ) ) {
+            return [ 'status' => 'Email failure' ];
+        }
+
+        if ( empty( $group['coleaders'] ) ) {
+            return [ 'status' => 'Coleader not present' ];
+        }
+
+        foreach ( $group['coleaders'] as $key => $coleader ) {
+            if ( $email == $coleader) {
+                unset( $group['coleaders'][$key] );
+                unset( $group['coleaders_accepted'][$key] );
+                unset( $group['coleaders_declined'][$key] );
+                update_user_meta( $user_id, $group_id, $group, $group_prev );
+                return [ 'status' => 'OK' ];
+            }
+        }
+        return [ 'status' => 'Coleader not found' ];
     }
 
 }
