@@ -3,8 +3,11 @@
 Template Name: 20 - Faithfulness
 */
 get_header();
+$session_number = 20;
 if (have_posts()) :
     while (have_posts()) : the_post();
+        $session_number = 20;
+        set_query_var( 'session_number', absint( $session_number ) )
         ?>
 
         <!-- Wrappers -->
@@ -25,7 +28,7 @@ if (have_posts()) :
                             <strong><?php the_title(); ?></strong>
                         </h1>
                         <p>
-                            <a href="/dashboard"><?php echo esc_html__( 'This concept comes from the Zúme Training Course', 'zume' ) ?> - <?php echo esc_html__('Session', 'zume' ) ?> 5</a>.
+                            <a href="<?php echo esc_url( zume_training_url() ) ?>"><?php echo esc_html__( 'This concept comes from the Zúme Training Course', 'zume' ) ?> - <?php echo esc_html__('Session', 'zume' ) ?> 5</a>.
                         </p>
                     </div>
 

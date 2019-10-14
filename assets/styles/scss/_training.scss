@@ -10,6 +10,14 @@
         font-size: 32px;
         font-weight: 300;
         line-height: 1.3em;
+        color: $primary-color;
+    }
+    .h2-caption {
+        color: $primary-color;
+        font-size: 1rem;
+        line-height: 1rem;
+        margin-bottom: .5rem;
+        font-weight: 300;
     }
     .t-description {
         color: $light-black;
@@ -140,6 +148,7 @@
         margin:0 3px;
         display: inline-block;
         vertical-align: middle;
+        cursor: pointer;
 
         @media (max-width: $breakpoint-medium ) {
             margin:0 10px;
@@ -183,6 +192,15 @@
         @media (max-width: $breakpoint-medium ) {
             padding-top:1em;
         }
+    }
+
+    .h-line {
+        border-bottom: 1px solid black;
+
+    }
+    .v-line {
+        height: 20px;
+        border-left: 1px solid black;
     }
 
     // landing pages

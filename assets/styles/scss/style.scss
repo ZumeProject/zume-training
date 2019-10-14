@@ -85,11 +85,12 @@ CSS file.
 @include foundation-prototype-spacing;
 
 // Import your custom styles
+@import "course";
+@import "dashboard";
 @import "global";
 @import "main";
 @import "groups";
 @import "spritecongratulations";
 @import "laptop";
 @import "training";
-@import "course";
-@import "dashboard";
+

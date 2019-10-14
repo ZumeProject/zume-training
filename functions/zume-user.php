@@ -181,6 +181,9 @@ class Zume_User {
             $user_progress[$key] = '';
             return update_user_meta( $user_id, self::$progress_key, $user_progress );
         } else {
+            if ( ! empty( $user_progress[$key] ) ) { // don't update to a new timestamp, if timestamp exists
+                return false;
+            }
             $user_progress[$key] = time();
             return update_user_meta( $user_id, self::$progress_key, $user_progress );
         }

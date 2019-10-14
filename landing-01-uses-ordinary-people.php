@@ -4,10 +4,10 @@ Template Name: 01 - God Uses Ordinary People
 */
 get_header();
 $alt_video = false;
-$session_number = 1;
-
 if (have_posts()) :
     while (have_posts()) : the_post();
+        $session_number = 1;
+        set_query_var( 'session_number', absint( $session_number ) )
         ?>
 
         <!-- Wrappers -->
@@ -28,7 +28,7 @@ if (have_posts()) :
                             <strong><?php the_title(); ?></strong>
                         </h1>
                         <p>
-                            <a href="/training"><?php echo esc_html__( 'This concept comes from the Zúme Training Course', 'zume' ) ?> - <?php echo esc_html__('Session', 'zume' ) ?> <?php echo esc_html( $session_number ) ?></a>.
+                            <a href="<?php echo esc_url( zume_training_url() ) ?>"><?php echo esc_html__( 'This concept comes from the Zúme Training Course', 'zume' ) ?> - <?php echo esc_html__('Session', 'zume' ) ?> <?php echo esc_html( $session_number ) ?></a>.
                         </p>
                     </div>
 
