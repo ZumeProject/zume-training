@@ -107,6 +107,9 @@
 
 
     // Progress Panel
+    .clickable {
+        cursor: pointer;
+    }
     .circle-background {
         font-size:4.7em;
         line-height: 1.7em;
@@ -138,6 +141,22 @@
 
         @media (max-width: $breakpoint-medium ) {
             display: none;
+        }
+    }
+    .help-question-mark {
+        font-size: .8em;
+        color: $secondary-color;
+        border: 1px solid $secondary-color;
+        border-radius: 50%;
+        width: 20px;
+        height: 20px;
+        display: inline-block;
+        vertical-align: middle;
+        cursor: pointer;
+
+        @media (max-width: $breakpoint-medium ) {
+            width: 30px;
+            height: 30px;
         }
     }
     .p-icon {
@@ -199,7 +218,7 @@
 
     }
     .v-line {
-        height: 20px;
+        height: 40px;
         border-left: 1px solid black;
     }
 

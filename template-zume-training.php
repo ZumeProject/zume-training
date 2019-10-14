@@ -69,7 +69,7 @@ $current_language = zume_current_language();
                         Course Tab
 
                         ----------------------------------------------------------------------------------------------->
-                        <div class="tabs-panel is-active" id="panel1">
+                        <div class="tabs-panel is-active" id="panel1" style="display:none;">
 
                             <!-- Training content header -->
                             <?php if( ! is_user_logged_in() ) : ?>
@@ -676,6 +676,14 @@ $current_language = zume_current_language();
         </div> <!-- end #challenge-->
     </div> <!-- end #inner-content -->
 </div> <!-- end #content -->
+
+<!-- Multi-use Modal-->
+<div class="reveal" id="training-modal" data-reveal>
+    <div id="training-modal-content"></div>
+    <button class="close-button" data-close aria-label="Close modal" type="button">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
 
 <?php
 

@@ -1,7 +1,10 @@
 _ = _ || window.lodash // make sure lodash is defined so plugins like gutenberg don't break it.
-// const { __, _x, _n, _nx } = wp.i18n;
+const { __, _x, _n, _nx } = wp.i18n;
 
 jQuery(document).ready(function(){
+  if( ! window.location.hash || '#panel1' === window.location.hash ) {
+    jQuery('#panel1').show()
+  }
   if( '#panel2' === window.location.hash  ) {
     console.log(zumeTraining)
     get_groups()
@@ -332,34 +335,31 @@ div.append(`
 <div class="cell">
     <div class="grid-y">
         <div class="cell center padding-1">
-            <h2 class="padding-bottom-0">Training Progress</h2>
-            <span class="h2-caption">31 Tools and Concepts</span>
+            <span class="hide-for-small-only" style="position:absolute; right:15px;"><a onclick="load_host_description()" class="help-question-mark">?</a></span>
+            <h2 class="padding-bottom-0">${__('Training Progress', 'zume')}</h2>
+            <span class="h2-caption">${__('31 Tools and Concepts', 'zume')}</span> 
         </div>
-       <div class="cell">
+       <div class="cell clickable" onclick="load_host_description()">
             <div class="grid-x grid-padding-x grid-padding-y center">
                 <div class="cell small-3">
-                    <div class="progress-stat-title">Heard</div>
-<!--                    <div class="progress-description">"Heard" means gain knowledge. You have moved from not knowing about a tool or concept to knowing about it.</div>-->
+                    <div class="progress-stat-title">${__('Heard', 'zume')}</div>
                     <div class="circle-background" id="h_total">0</div>
                 </div>
                 <div class="cell small-3">
-                    <div class="progress-stat-title">Obeyed</div>
-<!--                    <div class="progress-description">"Obeyed" means taking personal action. Obeying with tools might look like beginning to use them with others, while obeying with concepts might look like changing thinking or priorities.</div>-->
+                    <div class="progress-stat-title" onclick="load_host_description()" >${__('Obeyed', 'zume')}</div>
                     <div class="circle-background" id="o_total">0</div>
                 </div>
                 <div class="cell small-3">
-                    <div class="progress-stat-title">Shared</div>
-<!--                    <div class="progress-description">"Shared" means you helped someone else hear. This step is essential to truly understanding the concept or tool and preparing you to train others.</div>-->
+                    <div class="progress-stat-title" onclick="load_host_description()" >${__('Shared', 'zume')}</div>
                     <div class="circle-background" id="s_total">0</div>
                 </div>
                 <div class="cell small-3 center">
-                    <div class="progress-stat-title">Trained</div>
-<!--                    <div class="progress-description">"Trained" means to coach someone else to obey and share. More than sharing knowledge, you have helped them become a sharer of the tool or concept.</div>-->
+                    <div class="progress-stat-title" onclick="load_host_description()" >${__('Trained', 'zume')}</div>
                     <div class="circle-background" id="t_total">0</div>
                 </div>
             </div>
         </div>
-        <div class="cell">
+        <div class="cell clickable" onclick="load_host_description()">
              <div class="grid-x">
                 <div class="cell small-3"><div class="grid-x"><div class="cell small-6"></div><div class="cell small-6 v-line h-line"></div></div></div>
                 <div class="cell small-3"><div class="grid-x"><div class="cell small-6 h-line"></div><div class="cell small-6 v-line h-line"></div></div></div>
@@ -368,16 +368,15 @@ div.append(`
             </div>
             <div class="grid-x">
                 <div class="cell"><div class="grid-x"><div class="cell small-6"></div><div class="cell small-6 v-line"></div></div></div>
+                <div class="cell center padding-1 hide-for-small-only"><i class="p-icon complete"></i> ${__('Heard', 'zume')} <i class="p-icon complete"></i> ${__('Obeyed', 'zume')} <i class="p-icon complete"></i> ${__('Shared', 'zume')} <i class="p-icon complete"></i> ${__('Trained', 'zume')}</div>
+                <div class="cell padding-bottom-1 hide-for-small-only"><div class="grid-x"><div class="cell small-6"></div><div class="cell small-6 v-line"></div></div></div>
                 <div class="cell center"><i class="p-icon complete"></i><i class="p-icon complete"></i><i class="p-icon complete"></i><i class="p-icon complete"></i></div>
             </div>
         </div>
-       <div class="cell padding-1">
-        <hr>
-       </div>
+       <div class="cell padding-1"><hr></div>
        <div class="cell center padding-bottom-1">
-          <h2>Tracking</h2>
-          <span class="h2-caption">Check off your progress on each of the concepts.</span><br>
-          <span class="h2-caption"><i class="p-icon complete"></i> Heard <i class="p-icon complete"></i> Obeyed <i class="p-icon complete"></i> Shared <i class="p-icon complete"></i> Trained</span>
+          <h2>${__('Checklist', 'zume')}</h2>
+          <span class="h2-caption">${__('Click the circles and check off your progress on each of the concepts.', 'zume')}</span><br>
        </div>
        <div class="cell padding-top-1">
             <div class="grid-x grid-padding-x">
@@ -389,27 +388,27 @@ div.append(`
                           </div>
                           <div class="cell ">
                             <span class="show-for-small-only"><a href="${zumeTraining.urls[1]}">${zumeTraining.translations.titles[1]}</a></span> 
-                            <i class="p-icon" id="1h"></i><i class="p-icon" id="1o"></i><i class="p-icon" id="1s"></i><i class="p-icon" id="1t"></i> 
+                            <i class="p-icon" id="1h" title="${__('Heard', 'zume')}"></i><i class="p-icon" id="1o" title="${__('Obeyed', 'zume')}"></i><i class="p-icon" id="1s" title="${__('Shared', 'zume')}"></i><i class="p-icon" id="1t" title="${__('Trained', 'zume')}"></i>
                             <span class="hide-for-small-only"><a href="${zumeTraining.urls[1]}">${zumeTraining.translations.titles[1]}</a></span>
                           </div>
                           <div class="cell ">
                             <span class="show-for-small-only"><a href="${zumeTraining.urls[2]}">${zumeTraining.translations.titles[2]}</a></span>
-                            <i class="p-icon" id="2h"></i><i class="p-icon" id="2o"></i><i class="p-icon" id="2s"></i><i class="p-icon" id="2t"></i>
+                            <i class="p-icon" id="2h" title="${__('Heard', 'zume')}"></i><i class="p-icon" id="2o" title="${__('Obeyed', 'zume')}"></i><i class="p-icon" id="2s" title="${__('Shared', 'zume')}"></i><i class="p-icon" id="2t" title="${__('Trained', 'zume')}"></i>
                             <span class="hide-for-small-only"><a href="${zumeTraining.urls[2]}">${zumeTraining.translations.titles[2]}</a></span>
                           </div>
                           <div class="cell ">
                             <span class="show-for-small-only"><a href="${zumeTraining.urls[3]}">${zumeTraining.translations.titles[3]}</a></span>
-                            <i class="p-icon" id="3h"></i><i class="p-icon" id="3o"></i><i class="p-icon" id="3s"></i><i class="p-icon" id="3t"></i>
+                            <i class="p-icon" id="3h" title="${__('Heard', 'zume')}"></i><i class="p-icon" id="3o" title="${__('Obeyed', 'zume')}"></i><i class="p-icon" id="3s" title="${__('Shared', 'zume')}"></i><i class="p-icon" id="3t" title="${__('Trained', 'zume')}"></i>
                             <span class="hide-for-small-only"><a href="${zumeTraining.urls[3]}">${zumeTraining.translations.titles[3]}</a></span>
                           </div>
                           <div class="cell ">
                             <span class="show-for-small-only"><a href="${zumeTraining.urls[4]}">${zumeTraining.translations.titles[4]}</a></span>
-                            <i class="p-icon" id="4h"></i><i class="p-icon" id="4o"></i><i class="p-icon" id="4s"></i><i class="p-icon" id="4t"></i>
+                            <i class="p-icon" id="4h" title="${__('Heard', 'zume')}"></i><i class="p-icon" id="4o" title="${__('Obeyed', 'zume')}"></i><i class="p-icon" id="4s" title="${__('Shared', 'zume')}"></i><i class="p-icon" id="4t" title="${__('Trained', 'zume')}"></i>
                             <span class="hide-for-small-only"><a href="${zumeTraining.urls[4]}">${zumeTraining.translations.titles[4]}</a></span>
                           </div>
                           <div class="cell ">
                             <span class="show-for-small-only"><a href="${zumeTraining.urls[5]}">${zumeTraining.translations.titles[5]}</a></span>
-                            <i class="p-icon" id="5h"></i><i class="p-icon" id="5o"></i><i class="p-icon" id="5s"></i><i class="p-icon" id="5t"></i>
+                            <i class="p-icon" id="5h" title="${__('Heard', 'zume')}"></i><i class="p-icon" id="5o" title="${__('Obeyed', 'zume')}"></i><i class="p-icon" id="5s" title="${__('Shared', 'zume')}"></i><i class="p-icon" id="5t" title="${__('Trained', 'zume')}"></i>
                             <span class="hide-for-small-only"><a href="${zumeTraining.urls[5]}">${zumeTraining.translations.titles[5]}</a></span>
                           </div>
                           <div class="cell p-session-separator padding-top-1">
@@ -417,17 +416,17 @@ div.append(`
                           </div>
                           <div class="cell ">
                             <span class="show-for-small-only"><a href="${zumeTraining.urls[6]}">${zumeTraining.translations.titles[6]}</a></span>
-                            <i class="p-icon" id="6h"></i><i class="p-icon" id="6o"></i><i class="p-icon" id="6s"></i><i class="p-icon" id="6t"></i>
+                            <i class="p-icon" id="6h" title="${__('Heard', 'zume')}"></i><i class="p-icon" id="6o" title="${__('Obeyed', 'zume')}"></i><i class="p-icon" id="6s" title="${__('Shared', 'zume')}"></i><i class="p-icon" id="6t" title="${__('Trained', 'zume')}"></i>
                             <span class="hide-for-small-only"><a href="${zumeTraining.urls[6]}">${zumeTraining.translations.titles[6]}</a></span>
                           </div>
                           <div class="cell ">
                             <span class="show-for-small-only"><a href="${zumeTraining.urls[7]}">${zumeTraining.translations.titles[7]}</a></span>
-                            <i class="p-icon" id="7h"></i><i class="p-icon" id="7o"></i><i class="p-icon" id="7s"></i><i class="p-icon" id="7t"></i>
+                            <i class="p-icon" id="7h" title="${__('Heard', 'zume')}"></i><i class="p-icon" id="7o" title="${__('Obeyed', 'zume')}"></i><i class="p-icon" id="7s" title="${__('Shared', 'zume')}"></i><i class="p-icon" id="7t" title="${__('Trained', 'zume')}"></i>
                             <span class="hide-for-small-only"><a href="${zumeTraining.urls[7]}">${zumeTraining.translations.titles[7]}</a></span>
                           </div>
                           <div class="cell ">
                           <span class="show-for-small-only"><a href="${zumeTraining.urls[8]}">${zumeTraining.translations.titles[8]}</a></span>
-                          <i class="p-icon" id="8h"></i><i class="p-icon" id="8o"></i><i class="p-icon" id="8s"></i><i class="p-icon" id="8t"></i>
+                          <i class="p-icon" id="8h" title="${__('Heard', 'zume')}"></i><i class="p-icon" id="8o" title="${__('Obeyed', 'zume')}"></i><i class="p-icon" id="8s" title="${__('Shared', 'zume')}"></i><i class="p-icon" id="8t" title="${__('Trained', 'zume')}"></i>
                           <span class="hide-for-small-only"><a href="${zumeTraining.urls[8]}">${zumeTraining.translations.titles[8]}</a></span>
                           </div>
                           <div class="cell p-session-separator padding-top-1">
@@ -435,17 +434,17 @@ div.append(`
                           </div>
                           <div class="cell ">
                           <span class="show-for-small-only"><a href="${zumeTraining.urls[9]}">${zumeTraining.translations.titles[9]}</a></span>
-                          <i class="p-icon" id="9h"></i><i class="p-icon" id="9o"></i><i class="p-icon" id="9s"></i><i class="p-icon" id="9t"></i>
+                          <i class="p-icon" id="9h" title="${__('Heard', 'zume')}"></i><i class="p-icon" id="9o" title="${__('Obeyed', 'zume')}"></i><i class="p-icon" id="9s" title="${__('Shared', 'zume')}"></i><i class="p-icon" id="9t" title="${__('Trained', 'zume')}"></i>
                           <span class="hide-for-small-only"><a href="${zumeTraining.urls[9]}">${zumeTraining.translations.titles[9]}</a></span>
                           </div>
                           <div class="cell ">
                           <span class="show-for-small-only"><a href="${zumeTraining.urls[10]}">${zumeTraining.translations.titles[10]}</a></span>
-                          <i class="p-icon" id="10h"></i><i class="p-icon" id="10o"></i><i class="p-icon" id="10s"></i><i class="p-icon" id="10t"></i>
+                          <i class="p-icon" id="10h" title="${__('Heard', 'zume')}"></i><i class="p-icon" id="10o" title="${__('Obeyed', 'zume')}"></i><i class="p-icon" id="10s" title="${__('Shared', 'zume')}"></i><i class="p-icon" id="10t" title="${__('Trained', 'zume')}"></i>
                           <span class="hide-for-small-only"><a href="${zumeTraining.urls[10]}">${zumeTraining.translations.titles[10]}</a></span>
                           </div>
                           <div class="cell ">
                           <span class="show-for-small-only"><a href="${zumeTraining.urls[11]}">${zumeTraining.translations.titles[11]}</a></span>
-                          <i class="p-icon" id="11h"></i><i class="p-icon" id="11o"></i><i class="p-icon" id="11s"></i><i class="p-icon" id="11t"></i>
+                          <i class="p-icon" id="11h" title="${__('Heard', 'zume')}"></i><i class="p-icon" id="11o" title="${__('Obeyed', 'zume')}"></i><i class="p-icon" id="11s" title="${__('Shared', 'zume')}"></i><i class="p-icon" id="11t" title="${__('Trained', 'zume')}"></i>
                           <span class="hide-for-small-only"><a href="${zumeTraining.urls[11]}">${zumeTraining.translations.titles[11]}</a></span>
                           </div>
                           <div class="cell p-session-separator padding-top-1">
@@ -453,27 +452,27 @@ div.append(`
                           </div>
                           <div class="cell ">
                           <span class="show-for-small-only"><a href="${zumeTraining.urls[12]}">${zumeTraining.translations.titles[12]}</a></span>
-                          <i class="p-icon" id="12h"></i><i class="p-icon" id="12o"></i><i class="p-icon" id="12s"></i><i class="p-icon" id="12t"></i>
+                          <i class="p-icon" id="12h" title="${__('Heard', 'zume')}"></i><i class="p-icon" id="12o" title="${__('Obeyed', 'zume')}"></i><i class="p-icon" id="12s" title="${__('Shared', 'zume')}"></i><i class="p-icon" id="12t" title="${__('Trained', 'zume')}"></i>
                           <span class="hide-for-small-only"><a href="${zumeTraining.urls[12]}">${zumeTraining.translations.titles[12]}</a></span>
                           </div>
                           <div class="cell ">
                           <span class="show-for-small-only"><a href="${zumeTraining.urls[13]}">${zumeTraining.translations.titles[13]}</a></span>
-                          <i class="p-icon" id="13h"></i><i class="p-icon" id="13o"></i><i class="p-icon" id="13s"></i><i class="p-icon" id="13t"></i>
+                          <i class="p-icon" id="13h" title="${__('Heard', 'zume')}"></i><i class="p-icon" id="13o" title="${__('Obeyed', 'zume')}"></i><i class="p-icon" id="13s" title="${__('Shared', 'zume')}"></i><i class="p-icon" id="13t" title="${__('Trained', 'zume')}"></i>
                           <span class="hide-for-small-only"><a href="${zumeTraining.urls[13]}">${zumeTraining.translations.titles[13]}</a></span>
                           </div>
                           <div class="cell ">
                           <span class="show-for-small-only"><a href="${zumeTraining.urls[14]}">${zumeTraining.translations.titles[14]}</a></span>
-                          <i class="p-icon" id="14h"></i><i class="p-icon" id="14o"></i><i class="p-icon" id="14s"></i><i class="p-icon" id="14t"></i>
+                          <i class="p-icon" id="14h" title="${__('Heard', 'zume')}"></i><i class="p-icon" id="14o" title="${__('Obeyed', 'zume')}"></i><i class="p-icon" id="14s" title="${__('Shared', 'zume')}"></i><i class="p-icon" id="14t" title="${__('Trained', 'zume')}"></i>
                           <span class="hide-for-small-only"><a href="${zumeTraining.urls[14]}">${zumeTraining.translations.titles[14]}</a></span>
                           </div>
                           <div class="cell">
                           <span class="show-for-small-only"><a href="${zumeTraining.urls[15]}">${zumeTraining.translations.titles[15]}</a></span>
-                          <i class="p-icon" id="15h"></i><i class="p-icon" id="15o"></i><i class="p-icon" id="15s"></i><i class="p-icon" id="15t"></i>
+                          <i class="p-icon" id="15h" title="${__('Heard', 'zume')}"></i><i class="p-icon" id="15o" title="${__('Obeyed', 'zume')}"></i><i class="p-icon" id="15s" title="${__('Shared', 'zume')}"></i><i class="p-icon" id="15t" title="${__('Trained', 'zume')}"></i>
                           <span class="hide-for-small-only"><a href="${zumeTraining.urls[15]}">${zumeTraining.translations.titles[15]}</a></span>
                           </div>
                           <div class="cell">
                           <span class="show-for-small-only"><a href="${zumeTraining.urls[16]}">${zumeTraining.translations.titles[16]}</a></span>
-                          <i class="p-icon" id="16h"></i><i class="p-icon" id="16o"></i><i class="p-icon" id="16s"></i><i class="p-icon" id="16t"></i>
+                          <i class="p-icon" id="16h" title="${__('Heard', 'zume')}"></i><i class="p-icon" id="16o" title="${__('Obeyed', 'zume')}"></i><i class="p-icon" id="16s" title="${__('Shared', 'zume')}"></i><i class="p-icon" id="16t" title="${__('Trained', 'zume')}"></i>
                           <span class="hide-for-small-only"><a href="${zumeTraining.urls[16]}">${zumeTraining.translations.titles[16]}</a></span>
                           </div>
                             <div class="cell p-session-separator padding-top-1">
@@ -481,17 +480,17 @@ div.append(`
                           </div>
                         <div class="cell">
                         <span class="show-for-small-only"><a href="${zumeTraining.urls[17]}">${zumeTraining.translations.titles[17]}</a></span>
-                        <i class="p-icon" id="17h"></i><i class="p-icon" id="17o"></i><i class="p-icon" id="17s"></i><i class="p-icon" id="17t"></i>
+                        <i class="p-icon" id="17h" title="${__('Heard', 'zume')}"></i><i class="p-icon" id="17o" title="${__('Obeyed', 'zume')}"></i><i class="p-icon" id="17s" title="${__('Shared', 'zume')}"></i><i class="p-icon" id="17t" title="${__('Trained', 'zume')}"></i>
                         <span class="hide-for-small-only"><a href="${zumeTraining.urls[17]}">${zumeTraining.translations.titles[17]}</a></span>
                         </div>
                         <div class="cell">
                         <span class="show-for-small-only"><a href="${zumeTraining.urls[18]}">${zumeTraining.translations.titles[18]}</a></span>
-                        <i class="p-icon" id="18h"></i><i class="p-icon" id="18o"></i><i class="p-icon" id="18s"></i><i class="p-icon" id="18t"></i>
+                        <i class="p-icon" id="18h" title="${__('Heard', 'zume')}"></i><i class="p-icon" id="18o" title="${__('Obeyed', 'zume')}"></i><i class="p-icon" id="18s" title="${__('Shared', 'zume')}"></i><i class="p-icon" id="18t" title="${__('Trained', 'zume')}"></i>
                         <span class="hide-for-small-only"><a href="${zumeTraining.urls[18]}">${zumeTraining.translations.titles[18]}</a></span>
                         </div>
                         <div class="cell">
                         <span class="show-for-small-only"><a href="${zumeTraining.urls[19]}">${zumeTraining.translations.titles[19]}</a></span>
-                        <i class="p-icon" id="19h"></i><i class="p-icon" id="19o"></i><i class="p-icon" id="19s"></i><i class="p-icon" id="19t"></i>
+                        <i class="p-icon" id="19h" title="${__('Heard', 'zume')}"></i><i class="p-icon" id="19o" title="${__('Obeyed', 'zume')}"></i><i class="p-icon" id="19s" title="${__('Shared', 'zume')}"></i><i class="p-icon" id="19t" title="${__('Trained', 'zume')}"></i>
                         <span class="hide-for-small-only"><a href="${zumeTraining.urls[19]}">${zumeTraining.translations.titles[19]}</a></span>
                         </div>
                       </div>
@@ -503,12 +502,12 @@ div.append(`
                           </div>
                         <div class="cell">
                         <span class="show-for-small-only"><a href="${zumeTraining.urls[20]}">${zumeTraining.translations.titles[20]}</a></span>
-                        <i class="p-icon" id="20h"></i><i class="p-icon" id="20o"></i><i class="p-icon" id="20s"></i><i class="p-icon" id="20t"></i>
+                        <i class="p-icon" id="20h" title="${__('Heard', 'zume')}"></i><i class="p-icon" id="20o" title="${__('Obeyed', 'zume')}"></i><i class="p-icon" id="20s" title="${__('Shared', 'zume')}"></i><i class="p-icon" id="20t" title="${__('Trained', 'zume')}"></i>
                         <span class="hide-for-small-only"><a href="${zumeTraining.urls[20]}">${zumeTraining.translations.titles[20]}</a></span>
                         </div>
                         <div class="cell">
                         <span class="show-for-small-only"><a href="${zumeTraining.urls[21]}">${zumeTraining.translations.titles[21]}</a></span>
-                        <i class="p-icon" id="21h"></i><i class="p-icon" id="21o"></i><i class="p-icon" id="21s"></i><i class="p-icon" id="21t"></i>
+                        <i class="p-icon" id="21h" title="${__('Heard', 'zume')}"></i><i class="p-icon" id="21o" title="${__('Obeyed', 'zume')}"></i><i class="p-icon" id="21s" title="${__('Shared', 'zume')}"></i><i class="p-icon" id="21t" title="${__('Trained', 'zume')}"></i>
                         <span class="hide-for-small-only"><a href="${zumeTraining.urls[21]}">${zumeTraining.translations.titles[21]}</a></span>
                         </div>
                         <div class="cell p-session-separator padding-top-1">
@@ -516,7 +515,7 @@ div.append(`
                           </div>
                         <div class="cell">
                         <span class="show-for-small-only"><a href="${zumeTraining.urls[22]}">${zumeTraining.translations.titles[22]}</a></span>
-                        <i class="p-icon" id="22h"></i><i class="p-icon" id="22o"></i><i class="p-icon" id="22s"></i><i class="p-icon" id="22t"></i>
+                        <i class="p-icon" id="22h" title="${__('Heard', 'zume')}"></i><i class="p-icon" id="22o" title="${__('Obeyed', 'zume')}"></i><i class="p-icon" id="22s" title="${__('Shared', 'zume')}"></i><i class="p-icon" id="22t" title="${__('Trained', 'zume')}"></i>
                         <span class="hide-for-small-only"><a href="${zumeTraining.urls[22]}">${zumeTraining.translations.titles[22]}</a></span>
                         </div>
                         <div class="cell p-session-separator padding-top-1">
@@ -524,7 +523,7 @@ div.append(`
                           </div>
                         <div class="cell">
                         <span class="show-for-small-only"><a href="${zumeTraining.urls[23]}">${zumeTraining.translations.titles[23]}</a></span>
-                        <i class="p-icon" id="23h"></i><i class="p-icon" id="23o"></i><i class="p-icon" id="23s"></i><i class="p-icon" id="23t"></i>
+                        <i class="p-icon" id="23h" title="${__('Heard', 'zume')}"></i><i class="p-icon" id="23o" title="${__('Obeyed', 'zume')}"></i><i class="p-icon" id="23s" title="${__('Shared', 'zume')}"></i><i class="p-icon" id="23t" title="${__('Trained', 'zume')}"></i>
                         <span class="hide-for-small-only"><a href="${zumeTraining.urls[23]}">${zumeTraining.translations.titles[23]}</a></span>
                         </div>
                         <div class="cell p-session-separator padding-top-1">
@@ -532,22 +531,22 @@ div.append(`
                           </div>
                         <div class="cell">
                         <span class="show-for-small-only"><a href="${zumeTraining.urls[24]}">${zumeTraining.translations.titles[24]}</a></span>
-                        <i class="p-icon" id="24h"></i><i class="p-icon" id="24o"></i><i class="p-icon" id="24s"></i><i class="p-icon" id="24t"></i>
+                        <i class="p-icon" id="24h" title="${__('Heard', 'zume')}"></i><i class="p-icon" id="24o" title="${__('Obeyed', 'zume')}"></i><i class="p-icon" id="24s" title="${__('Shared', 'zume')}"></i><i class="p-icon" id="24t" title="${__('Trained', 'zume')}"></i>
                         <span class="hide-for-small-only"><a href="${zumeTraining.urls[24]}">${zumeTraining.translations.titles[24]}</a></span>
                         </div>
                         <div class="cell">
                         <span class="show-for-small-only"><a href="${zumeTraining.urls[25]}">${zumeTraining.translations.titles[25]}</a></span>
-                        <i class="p-icon" id="25h"></i><i class="p-icon" id="25o"></i><i class="p-icon" id="25s"></i><i class="p-icon" id="25t"></i>
+                        <i class="p-icon" id="25h" title="${__('Heard', 'zume')}"></i><i class="p-icon" id="25o" title="${__('Obeyed', 'zume')}"></i><i class="p-icon" id="25s" title="${__('Shared', 'zume')}"></i><i class="p-icon" id="25t" title="${__('Trained', 'zume')}"></i>
                         <span class="hide-for-small-only"><a href="${zumeTraining.urls[25]}">${zumeTraining.translations.titles[25]}</a></span>
                         </div>
                         <div class="cell">
                         <span class="show-for-small-only"><a href="${zumeTraining.urls[26]}">${zumeTraining.translations.titles[26]}</a></span>
-                        <i class="p-icon" id="26h"></i><i class="p-icon" id="26o"></i><i class="p-icon" id="26s"></i><i class="p-icon" id="26t"></i>
+                        <i class="p-icon" id="26h" title="${__('Heard', 'zume')}"></i><i class="p-icon" id="26o" title="${__('Obeyed', 'zume')}"></i><i class="p-icon" id="26s" title="${__('Shared', 'zume')}"></i><i class="p-icon" id="26t" title="${__('Trained', 'zume')}"></i>
                         <span class="hide-for-small-only"><a href="${zumeTraining.urls[26]}">${zumeTraining.translations.titles[26]}</a></span>
                         </div>
                         <div class="cell">
                         <span class="show-for-small-only"><a href="${zumeTraining.urls[27]}">${zumeTraining.translations.titles[27]}</a></span>
-                        <i class="p-icon" id="27h"></i><i class="p-icon" id="27o"></i><i class="p-icon" id="27s"></i><i class="p-icon" id="27t"></i>
+                        <i class="p-icon" id="27h" title="${__('Heard', 'zume')}"></i><i class="p-icon" id="27o" title="${__('Obeyed', 'zume')}"></i><i class="p-icon" id="27s" title="${__('Shared', 'zume')}"></i><i class="p-icon" id="27t" title="${__('Trained', 'zume')}"></i>
                         <span class="hide-for-small-only"><a href="${zumeTraining.urls[27]}">${zumeTraining.translations.titles[27]}</a></span>
                         </div>
                         <div class="cell p-session-separator padding-top-1">
@@ -555,27 +554,27 @@ div.append(`
                           </div>
                         <div class="cell">
                         <span class="show-for-small-only"><a href="${zumeTraining.urls[28]}">${zumeTraining.translations.titles[28]}</a></span>
-                        <i class="p-icon" id="28h"></i><i class="p-icon" id="28o"></i><i class="p-icon" id="28s"></i><i class="p-icon" id="28t"></i>
+                        <i class="p-icon" id="28h" title="${__('Heard', 'zume')}"></i><i class="p-icon" id="28o" title="${__('Obeyed', 'zume')}"></i><i class="p-icon" id="28s" title="${__('Shared', 'zume')}"></i><i class="p-icon" id="28t" title="${__('Trained', 'zume')}"></i>
                         <span class="hide-for-small-only"><a href="${zumeTraining.urls[28]}">${zumeTraining.translations.titles[28]}</a></span>
                         </div>
                         <div class="cell">
                         <span class="show-for-small-only"><a href="${zumeTraining.urls[29]}">${zumeTraining.translations.titles[29]}</a></span>
-                        <i class="p-icon" id="29h"></i><i class="p-icon" id="29o"></i><i class="p-icon" id="29s"></i><i class="p-icon" id="29t"></i>
+                        <i class="p-icon" id="29h" title="${__('Heard', 'zume')}"></i><i class="p-icon" id="29o" title="${__('Obeyed', 'zume')}"></i><i class="p-icon" id="29s" title="${__('Shared', 'zume')}"></i><i class="p-icon" id="29t" title="${__('Trained', 'zume')}"></i>
                         <span class="hide-for-small-only"><a href="${zumeTraining.urls[29]}">${zumeTraining.translations.titles[29]}</a></span>
                         </div>
                         <div class="cell">
                         <span class="show-for-small-only"><a href="${zumeTraining.urls[30]}">${zumeTraining.translations.titles[30]}</a></span>
-                        <i class="p-icon" id="30h"></i><i class="p-icon" id="30o"></i><i class="p-icon" id="30s"></i><i class="p-icon" id="30t"></i>
+                        <i class="p-icon" id="30h" title="${__('Heard', 'zume')}"></i><i class="p-icon" id="30o" title="${__('Obeyed', 'zume')}"></i><i class="p-icon" id="30s" title="${__('Shared', 'zume')}"></i><i class="p-icon" id="30t" title="${__('Trained', 'zume')}"></i>
                         <span class="hide-for-small-only"><a href="${zumeTraining.urls[30]}">${zumeTraining.translations.titles[30]}</a></span>
                         </div>
                         <div class="cell">
                         <span class="show-for-small-only"><a href="${zumeTraining.urls[31]}">${zumeTraining.translations.titles[31]}</a></span>
-                        <i class="p-icon" id="31h"></i><i class="p-icon" id="31o"></i><i class="p-icon" id="31s"></i><i class="p-icon" id="31t"></i>
+                        <i class="p-icon" id="31h" title="${__('Heard', 'zume')}"></i><i class="p-icon" id="31o" title="${__('Obeyed', 'zume')}"></i><i class="p-icon" id="31s" title="${__('Shared', 'zume')}"></i><i class="p-icon" id="31t" title="${__('Trained', 'zume')}"></i>
                         <span class="hide-for-small-only"><a href="${zumeTraining.urls[31]}">${zumeTraining.translations.titles[31]}</a></span>
                         </div>
                         <div class="cell">
                         <span class="show-for-small-only"><a href="${zumeTraining.urls[32]}">${zumeTraining.translations.titles[32]}</a></span>
-                        <i class="p-icon" id="32h"></i><i class="p-icon" id="32o"></i><i class="p-icon" id="32s"></i><i class="p-icon" id="32t"></i>
+                        <i class="p-icon" id="32h" title="${__('Heard', 'zume')}"></i><i class="p-icon" id="32o" title="${__('Obeyed', 'zume')}"></i><i class="p-icon" id="32s" title="${__('Shared', 'zume')}"></i><i class="p-icon" id="32t" title="${__('Trained', 'zume')}"></i>
                         <span class="hide-for-small-only"><a href="${zumeTraining.urls[32]}">${zumeTraining.translations.titles[32]}</a></span>
                         </div>
                     </div>
@@ -583,9 +582,7 @@ div.append(`
                   <div class="cell medium-1 hide-for-small-only"></div>
             </div>
         </div>
-        <div class="cell padding-2">
-            
-        </div>
+        <div class="cell padding-2"></div>
     </div> <!-- grid-y -->
 </div> <!-- cell -->    
 `)
@@ -641,7 +638,19 @@ function load_progress_totals() {
   jQuery('#s_total').html(total['s'])
   jQuery('#t_total').html(total['t'])
 }
+function load_host_description() {
+  jQuery('#training-modal-content').empty().html(`
+    <h2>Definitions</h2>
+    <table>
+        <tr><td>Heard</td><td>"Heard" means you gained awareness. You have moved from not knowing about a tool or concept to knowing about it.</td></tr>
+        <tr><td>Obeyed</td><td>"Obeyed" means you took personal action to practice or apply a concept or tool. Obeying with tools might look like beginning to use them with others, while obeying with concepts might look like changing thinking or priorities.</td></tr>
+        <tr><td>Shared</td><td>"Shared" means you helped someone else hear. This step is essential to truly understanding the concept or tool and preparing you to train others.</td></tr>
+        <tr><td>Trained</td><td>"Trained" means you coached someone else to hear, obey and share. More than sharing knowledge with someone, you have helped them become a sharer of the tool or concept.</td></tr>
+    </table>
+  `)
 
+  jQuery('#training-modal').foundation('open')
+}
 
 /**
  * REST API
