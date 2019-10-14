@@ -1,7 +1,9 @@
 <?php
-if ( ! defined( 'ABSPATH' ) ) { exit; } // Exit if accessed directly
+/**
+ *
+ */
 
-class Zume_User {
+class Zume_v4_Progress {
     public static $progress_key = 'zume_progress';
 
     public static function verify_progress_array( $args ) {
@@ -188,5 +190,4 @@ class Zume_User {
             return update_user_meta( $user_id, self::$progress_key, $user_progress );
         }
     }
-
 }

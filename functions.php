@@ -7,7 +7,16 @@ require_once( 'functions/utilities/debugger-log.php' ); // debug logger used for
 require_once( 'dt-mapping/loader.php' );
 new DT_Mapping_Module_Loader('theme');
 
-
+/**
+ * We want to make sure migrations are run on updates.
+ * @see https://www.sitepoint.com/wordpress-plugin-updates-right-way/
+ */
+try {
+    require_once( 'functions/class-migration-engine.php' );
+    Zume_Migration_Engine::migrate( 0 );
+} catch ( Throwable $e ) {
+    new WP_Error( 'migration_error', 'Migration engine failed to migrate.' );
+}
 
 /**
  * Add custom table
@@ -21,25 +30,12 @@ require_once( 'functions/post-types/pdf-download-post-type.php' );
 
 
 /**
- * We want to make sure migrations are run on updates.
- *
- * @see https://www.sitepoint.com/wordpress-plugin-updates-right-way/
- */
-try {
-    require_once( 'functions/class-migration-engine.php' );
-    Zume_Migration_Engine::migrate( 0 );
-} catch ( Throwable $e ) {
-    new WP_Error( 'migration_error', 'Migration engine failed to migrate.' );
-}
-
-/**
  * INCLUDED FILES
  */
 
 // Language Files
 require_once( 'translations/translation.php' ); // Adds support for multiple languages
 require_once( 'functions/zume-polylang-integration.php' ); // Adds support for multiple languages
-
 // Zume Theme Files
 require_once( 'functions/login/zume-login.php' ); // Customize the login page
 require_once( 'functions/enqueue-scripts.php' ); // Register scripts and stylesheets
@@ -64,7 +60,12 @@ require_once( 'functions/zume-stats.php' ); // zume logging of critical path act
 require_once( 'functions/zume-three-month-plan.php' );
 
 // zume 4.0
-require_once( 'functions/zume-user.php' );
+require_once( 'functions/zume-v4-rest-api.php' );
+require_once( 'functions/zume-v4-users.php' );
+require_once( 'functions/zume-v4-groups.php' );
+require_once( 'functions/zume-v4-progress.php' );
+
+
 
 require_once( 'functions/logging/zume-mailchimp.php' ); // zume logging of critical path actions
 require_once( 'functions/zume-dt-integration/zume-dashboard-sync.php' ); // zume dashboard sync

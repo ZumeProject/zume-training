@@ -53,6 +53,9 @@
     .hide-extra {
         display:none;
     }
+    .hide-for-load {
+        display:none;
+    }
 
     // Tabs
     .tabs-panel {
@@ -103,6 +106,13 @@
     }
     .location-result-buttons {
         display: none;
+    }
+    .group-name {
+        cursor: pointer;
+    }
+    .group-name-input {
+        width:33%;
+        display: inline-block;
     }
 
 
@@ -241,7 +251,7 @@
     // landing pages
     .landing-part {
         height:700px;
-        border: 1px solid $light-black;
+        border: 1px solid $primary-color;
         @media (max-width: $breakpoint-medium ) {
         }
     }

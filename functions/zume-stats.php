@@ -6,6 +6,7 @@
  */
 //require_once __DIR__ . '../../vendor/autoload.php';
 
+// @todo Remove deprecated class
 class Zume_Stats{
 
     /**

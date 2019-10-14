@@ -15,6 +15,8 @@ jQuery(document).ready(function(){
   }
 })
 
+
+
 /**
  * COURSE PANEL
  */
@@ -30,7 +32,7 @@ jQuery(document).ready(function(){
   }
 })
 function show_panel1() {
-  jQuery('#panel1').show()
+  jQuery('.hide-for-load').removeClass('hide-for-load')
 }
 // functions
 function toggle_column() {
@@ -90,9 +92,7 @@ function get_groups() {
     div.append(`
   <div class="cell group-section border-bottom padding-bottom-2 margin-bottom-2">
     <div class="grid-x grid-padding-x">
-       <div class="cell padding-bottom-1"><!--Full width top -->
-        <h2>${v.group_name}</h2>
-       </div>
+      <div class="cell padding-bottom-1 group-name small-6"  id="group_name_${v.key}"><!--Full width top --></div><div class="small-6"></div>
       <div class="cell small-2"> <!-- Column 1 -->
          <div class="grid-y" id="session_list_${v.key}">
             <div class="cell"><a href=""><i class="g-session-icon" id="s1${v.key}"></i> Session 1</a></div>    
@@ -109,11 +109,11 @@ function get_groups() {
       </div> <!-- Column 1 -->
       <div class="cell small-4">
           <div class="grid-y">
-                <div class="cell column-header">Members</div>
+                <div class="cell column-header">${__('Members', 'zume')}</div>
                 <div class="cell padding-bottom-1">
-                    <select id="member_count_${v.key}"><!-- member count --></select>
+                    <select class="member-count" onchange="save_member_count('${v.key}', ${i})" id="member_count_${v.key}"><!-- member count --></select>
                 </div>
-                <div class="cell column-header">Members List (optional)</div>
+                <div class="cell column-header">${__('Members List (optional)', 'zume')}</div>
                 <div class="cell">
                     <div class="grid-y" id="member_list_${v.key}"><!-- member list --></div>
                 </div>
@@ -123,7 +123,7 @@ function get_groups() {
       <div class="cell small-4"> <!-- Column 3 -->
           <div class="grid-y">
               <div class="cell">
-                <span class="column-header">Location</span>
+                <span class="column-header">${__('Location', 'zume')}</span>
               </div>
               <div class="cell" id="map_${v.key}"><!-- Map Section--></div>
               <div class="cell" id="add_location_${v.key}"><!-- Add Location Field --></div>
@@ -140,20 +140,50 @@ function get_groups() {
 </div>
     `)
 
-    add_member_count( v.key, v )
-    add_session_progress( v.key, v )
-    add_members_list( v.key, v )
-    load_member_add_button( v.key )
+    write_group_name(v.key, i )
+    write_member_count( v.key, v )
+    write_session_progress( v.key, v )
+    write_members_list( v.key, i )
+    write_member_list_button( v.key, i )
     load_location_add_button( v.key )
 
   }) /* end .each loop*/
 }
 // listeners
 jQuery(document).ready(function(){
-  jQuery('.member').hover( function(){jQuery(this).children().show()}, function(){jQuery(this).children().hide()})
+  listen_hover_member_list()
 })
 // functions
-function add_session_progress( key, group ) {
+function write_group_name( key, i ) {
+  jQuery('#group_name_'+key).empty().html(`<h2 onclick="edit_group_name('${key}', ${i})">${zumeTraining.groups[i].group_name}</h2>`)
+}
+function edit_group_name( key, i ) {
+  jQuery('#group_name_'+key).empty().html(`
+    <div class="input-group">
+      <input class="input-group-field" type="text" id="edit_group_name_${key}" value="${zumeTraining.groups[i].group_name}">
+      <div class="input-group-button">
+        <input type="button" class="button" onclick="save_group_name('${key}', ${i})" value="Save">
+      </div>
+      <div class="input-group-button">
+        <input type="button" class="button hollow" onclick="write_group_name('${key}', ${i} )" value="Cancel">
+      </div>
+    </div>
+  `) /* end html */
+}
+function save_group_name( key, i ) {
+  let new_name = jQuery('#edit_group_name_'+key).val()
+  if ( new_name ) {
+
+    API.update_group( key, _.escape( new_name ), 'group_name' )
+
+    zumeTraining.groups[i].group_name = _.escape( new_name )
+
+    console.log(new_name)
+  }
+  write_group_name( key, i )
+}
+
+function write_session_progress( key, group ) {
   let i = 1
   while ( i < 11) {
     if( group['session_'+i] ) {
@@ -162,7 +192,8 @@ function add_session_progress( key, group ) {
     i++;
   }
 }
-function add_member_count( key, group ) {
+
+function write_member_count( key, group ) {
     let list = ''
     let i = 1
     while ( i < 30) {
@@ -176,36 +207,54 @@ function add_member_count( key, group ) {
 
     jQuery('#member_count_' + key ).empty().append(list)
 }
-function add_members_list( key, group ) {
+function save_member_count( key, i ) {
+  let count = jQuery('#member_count_'+key).val()
+
+  if ( count ) {
+    API.update_group( key, _.escape( count ), 'members' )
+
+    zumeTraining.groups[i].members = _.escape( count )
+
+    console.log(count)
+  }
+}
+
+function write_members_list( key, i ) {
   let div = jQuery('#member_list_'+key)
   div.empty()
-  jQuery.each( group.coleaders, function(i,v) {
+  jQuery.each( zumeTraining.groups[i].coleaders, function(i,v) {
     div.append('<div class="cell member">'+v+' <span class="delete" onclick="">delete</span></div>')
   })
 }
-function add_member_fields( key ) {
+function edit_new_member_list( key, i ) {
   jQuery('#add_member_'+key).empty().append(`
   <hr>
-  <input type="text" placeholder="nickname" id="name_${key}" />
   <input type="text" placeholder="email" id="email_${key}" />
-  <button type="button" class="button small" onclick="save_new_member('${key}')">Save</button> 
-  <button type="button" class="button small hollow" onclick="load_member_add_button('${key}')">Cancel</button> 
+  <button type="button" class="button small" onclick="save_new_member('${key}', ${i})">Save</button> 
+  <button type="button" class="button small hollow" onclick="write_member_list_button('${key}', ${i})">Cancel</button> 
   `)
 }
-function load_member_add_button( key ) {
+function write_member_list_button( key, i ) {
   jQuery('#add_member_'+key).empty().append(`
-    <button type="button" class="button clear" onclick="add_member_fields('${key}')"><i class="fi-plus"></i> add</button>
+    <button type="button" class="button clear" onclick="edit_new_member_list('${key}', ${i})"><i class="fi-plus"></i> add</button>
   `)
 }
-function save_new_member( key ) {
-  let name = jQuery('#name_' + key ).val()
+function save_new_member( key, i ) {
   let email = jQuery('#email_' + key).val()
 
-  // @todo add REST submit of new member
-  console.log( name + ' ' + email )
+  console.log(zumeTraining.groups[i].coleaders)
 
-  load_member_add_button( key )
+  if ( email && _.indexOf( zumeTraining.groups[i].coleaders, email ) < 0 ) {
+    API.update_group( key, email, 'coleaders_add' )
 
+    zumeTraining.groups[i].coleaders[zumeTraining.groups[i].coleaders.length++] = _.escape( email )
+  }
+  write_members_list(key, i)
+  write_member_list_button( key, i )
+  listen_hover_member_list()
+}
+function listen_hover_member_list() {
+  jQuery('.member').hover( function(){jQuery(this).children().show()}, function(){jQuery(this).children().hide()})
 }
 
 function load_location_add_button( key ) {
@@ -326,10 +375,10 @@ function save_new_location( key ) {
 
 
 
+
 /**
  * PROGRESS PANEL
  */
-
 function get_progress() {
   let div = jQuery('#progress-stats')
   div.empty()
@@ -669,14 +718,15 @@ function load_host_description() {
 
 /**
  * REST API
- *
  */
 window.API = {
 
-  update_progress: (key, state) => makeRequest('POST', 'progress/edit', { key: key, state: state }),
+  update_progress: (key, state) => makeRequest('POST', 'progress/update', { key: key, state: state }),
+
+  update_group: ( key, value, item ) => makeRequest('POST', 'groups/update', { key: key, value: value, item: item }),
 
 }
-function makeRequest (type, url, data, base = 'zume/v1/') {
+function makeRequest (type, url, data, base = 'zume/v4/') {
   const options = {
     type: type,
     contentType: 'application/json; charset=utf-8',

@@ -3,7 +3,7 @@
 Template Name: Training
 */
 get_header();
-$current_language = zume_current_language();
+$current_language = zume_current_language(); dt_write_log( empty( $fake['nothear'] ?? null ) );
 ?>
 
 <div class="training">
@@ -69,7 +69,7 @@ $current_language = zume_current_language();
                         Course Tab
 
                         ----------------------------------------------------------------------------------------------->
-                        <div class="tabs-panel is-active" id="panel1" style="display:none;">
+                        <div class="tabs-panel is-active hide-for-load" id="panel1">
 
                             <!-- Training content header -->
                             <?php if( ! is_user_logged_in() ) : ?>
@@ -652,6 +652,11 @@ $current_language = zume_current_language();
 
                         ----------------------------------------------------------------------------------------------->
                         <div class="tabs-panel" id="panel2">
+                            <div class="grid-x">
+                                <div class="cell center border-bottom margin-bottom-2">
+                                    <button class="button hollow small" type="button"><?php echo esc_html__("Add Group", 'zume' ) ?></button>
+                                </div>
+                            </div>
                             <div class="grid-x" id="group-list"><div class="loader">Loading...</div></div>
                             <div class="grid-x">
                                 <div class="cell center">

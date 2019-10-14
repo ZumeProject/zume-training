@@ -66,7 +66,10 @@ function zume_site_scripts() {
 
     }
 
-    if ( 'template-zume-training.php' !== basename( get_page_template() ) ) { /* @todo check necessary page loading. Loading on too many pages? */
+    /**
+     * Zume 3.0 Features
+     */
+    if ( 'template-zume-training.php' !== basename( get_page_template() ) && 'landing' !== substr( basename( get_page_template() ), 0, 7 ) ) { /* @todo check necessary page loading. Loading on too many pages? */
         wp_enqueue_script('zume', get_template_directory_uri() . '/assets/scripts/zume.js', array('jquery'), 1.1, true);
         wp_localize_script(
             "zume", "zumeMaps", array(
@@ -87,6 +90,9 @@ function zume_site_scripts() {
         );
     }
 
+    /**
+     Zume 4.0
+     */
     if ( 'template-zume-training.php' === basename( get_page_template() ) || 'landing' === substr( basename( get_page_template() ), 0, 7 )   ) {
         wp_register_script( 'lodash', 'https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.11/lodash.min.js', false, '4.17.11' );
         wp_enqueue_script( 'lodash' );
@@ -100,8 +106,8 @@ function zume_site_scripts() {
                 'nonce' => wp_create_nonce( 'wp_rest' ),
                 'current_user_id' => get_current_user_id(),
                 "current_language" => $current_language,
-                "groups" => Zume_Dashboard::get_all_groups(),
-                "progress" => Zume_User::get_user_progress(),
+                "groups" => Zume_v4_Groups::get_all_groups(),
+                "progress" => Zume_v4_Progress::get_user_progress(),
                 'urls' => [
                     1 => esc_url( zume_get_landing_translation_url(1, $current_language) ),
                     2 => esc_url( zume_get_landing_translation_url(2, $current_language) ),
