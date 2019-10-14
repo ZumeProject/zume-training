@@ -3,7 +3,7 @@ const { __, _x, _n, _nx } = wp.i18n;
 
 jQuery(document).ready(function(){
   if( ! window.location.hash || '#panel1' === window.location.hash ) {
-    jQuery('#panel1').show()
+    show_panel1()
   }
   if( '#panel2' === window.location.hash  ) {
     console.log(zumeTraining)
@@ -29,6 +29,9 @@ jQuery(document).ready(function(){
     jQuery('.session').removeClass('medium-6')
   }
 })
+function show_panel1() {
+  jQuery('#panel1').show()
+}
 // functions
 function toggle_column() {
   let item = jQuery('#column_button')
@@ -337,7 +340,7 @@ div.append(`
         <div class="cell center padding-1">
             <span class="hide-for-small-only" style="position:absolute; right:15px;"><a onclick="load_host_description()" class="help-question-mark">?</a></span>
             <h2 class="padding-bottom-0">${__('Training Progress', 'zume')}</h2>
-            <span class="h2-caption">${__('31 Tools and Concepts', 'zume')}</span> 
+            <span class="h2-caption">${__('32 Tools and Concepts', 'zume')}</span> 
         </div>
        <div class="cell clickable" onclick="load_host_description()">
             <div class="grid-x grid-padding-x grid-padding-y center">
@@ -368,9 +371,9 @@ div.append(`
             </div>
             <div class="grid-x">
                 <div class="cell"><div class="grid-x"><div class="cell small-6"></div><div class="cell small-6 v-line"></div></div></div>
-                <div class="cell center padding-1 hide-for-small-only"><i class="p-icon complete"></i> ${__('Heard', 'zume')} <i class="p-icon complete"></i> ${__('Obeyed', 'zume')} <i class="p-icon complete"></i> ${__('Shared', 'zume')} <i class="p-icon complete"></i> ${__('Trained', 'zume')}</div>
+                <div class="cell center padding-1 hide-for-small-only"><i class="p-icon-style-only complete"></i> ${__('Heard', 'zume')} <i class="p-icon-style-only"></i> ${__('Obeyed', 'zume')} <i class="p-icon-style-only"></i> ${__('Shared', 'zume')} <i class="p-icon-style-only"></i> ${__('Trained', 'zume')}</div>
                 <div class="cell padding-bottom-1 hide-for-small-only"><div class="grid-x"><div class="cell small-6"></div><div class="cell small-6 v-line"></div></div></div>
-                <div class="cell center"><i class="p-icon complete"></i><i class="p-icon complete"></i><i class="p-icon complete"></i><i class="p-icon complete"></i></div>
+                <div class="cell center"><i class="p-icon-style-only complete"></i><i class="p-icon-style-only"></i><i class="p-icon-style-only"></i><i class="p-icon-style-only"></i></div>
             </div>
         </div>
        <div class="cell padding-1"><hr></div>
@@ -640,13 +643,25 @@ function load_progress_totals() {
 }
 function load_host_description() {
   jQuery('#training-modal-content').empty().html(`
-    <h2>Definitions</h2>
+<style>.p-icon-help {
+        border: 1px solid #00aeff;
+        border-radius: 50%;
+        background-color: #00aeff;
+        width: 20px;
+        height: 20px;
+        margin:0 3px;
+        display: inline-block;
+        vertical-align: middle;
+    }</style>
+    <p><strong>Progress Overview</strong></p>
+    <p>There are 32 concepts and tools in Zúme training. Each concept or tool is intended to be practiced personally and trained into others. Use the progression of "heard", "obeyed", "shared", and "trained" as a way of tracking your mastery of the disciple-making training.</p>
+    <p><strong>Definitions</strong></p>
     <table>
-        <tr><td>Heard</td><td>"Heard" means you gained awareness. You have moved from not knowing about a tool or concept to knowing about it.</td></tr>
-        <tr><td>Obeyed</td><td>"Obeyed" means you took personal action to practice or apply a concept or tool. Obeying with tools might look like beginning to use them with others, while obeying with concepts might look like changing thinking or priorities.</td></tr>
-        <tr><td>Shared</td><td>"Shared" means you helped someone else hear. This step is essential to truly understanding the concept or tool and preparing you to train others.</td></tr>
-        <tr><td>Trained</td><td>"Trained" means you coached someone else to hear, obey and share. More than sharing knowledge with someone, you have helped them become a sharer of the tool or concept.</td></tr>
-    </table>
+    <tr><td style="white-space: nowrap"><i class="p-icon-help"></i> Heard</td><td>"Heard" means you gained awareness. You have moved from not knowing about a tool or concept to knowing about it.</td></tr>
+    <tr><td style="white-space: nowrap"><i class="p-icon-help"></i> Obeyed</td><td>"Obeyed" means you took personal action to practice or apply a concept or tool. Obeying with tools might look like beginning to use them with others, while obeying with concepts might look like changing thinking or priorities.</td></tr>
+    <tr><td style="white-space: nowrap"><i class="p-icon-help"></i> Shared</td><td>"Shared" means you helped someone else hear. This step is essential to truly understanding the concept or tool and preparing you to train others.</td></tr>
+    <tr><td style="white-space: nowrap"><i class="p-icon-help"></i> Trained</td><td>"Trained" means you coached someone else to hear, obey and share. More than sharing knowledge with someone, you have helped them become a sharer of the tool or concept.</td></tr>
+</table>
   `)
 
   jQuery('#training-modal').foundation('open')

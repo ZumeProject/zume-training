@@ -135,7 +135,7 @@ if (have_posts()) :
 
                     <!-- Center column -->
                     <div class="large-8 small-12 cell">
-                        <hr>
+
                         <div class="grid-x grid-margin-x grid-margin-y">
                             <div class="large-12 cell activity-description-no-border center">
                                 <h3 class="center"><?php echo esc_html__('Video Transcript', 'zume' ) ?></h3>

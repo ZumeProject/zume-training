@@ -1,8 +1,9 @@
-<?php extract( $wp_query->query_vars ); ?>
+<?php extract( $wp_query->query_vars ); // gets the variables set in the template ?>
+
 <?php /** Logged in */ if ( is_user_logged_in() ) : ?>
 
-    <hr>
-    <div class="grid-x grid-margin-x grid-margin-y training">
+<div class="training margin-top-3 margin-bottom-3">
+    <div class="grid-x grid-margin-x grid-margin-y landing-part">
         <div class="small-12 small-centered cell center landing">
             <h2><?php echo esc_html__("Great job! Here's your progress with this concept", 'zume' ) ?>:</h2>
         </div>
@@ -37,18 +38,23 @@
             })
         </script>
     </div>
-
+</div>
 <?php endif; ?>
+
+
+
+
 
 <?php /** Not logged in */ if ( ! is_user_logged_in() ) : ?>
 
-    <hr>
-    <div class="grid-x grid-margin-x grid-margin-y training">
+<div class="training margin-top-3 margin-bottom-3">
+    <div class="grid-x grid-margin-x grid-margin-y landing-part">
         <div class="small-12 small-centered cell center landing">
             <?php echo esc_html__("You've heard the concept. We challenge you to live it, share it, and train others!", 'zume' ) ?><br>
             <a href="<?php echo zume_login_url() ?>" class="button large">Login</a> <a href="<?php echo zume_register_url() ?>" class="button large">Register</a>
 
         </div>
     </div>
+</div>
 
 <?php endif; ?>

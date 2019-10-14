@@ -175,6 +175,22 @@
             height: 30px;
         }
     }
+    .p-icon-style-only {
+        border: 1px solid $secondary-color;
+        border-radius: 50%;
+        width: 20px;
+        height: 20px;
+        margin:0 3px;
+        display: inline-block;
+        vertical-align: middle;
+        cursor: pointer;
+
+        @media (max-width: $breakpoint-medium ) {
+            margin:0 10px;
+            width: 30px;
+            height: 30px;
+        }
+    }
     .complete {
         background-color: $secondary-color;
     }
@@ -223,6 +239,12 @@
     }
 
     // landing pages
+    .landing-part {
+        height:700px;
+        border: 1px solid $light-black;
+        @media (max-width: $breakpoint-medium ) {
+        }
+    }
     .p-icon-landing {
         border: 1px solid $secondary-color;
         border-radius: 50%;
