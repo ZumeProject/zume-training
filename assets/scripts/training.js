@@ -392,19 +392,66 @@ function save_new_location( key ) {
 }
 
 function write_meta_column( key, i ) {
-  jQuery('#meta_column_'+key).empty().append(`
+  if ( indexMismatch(key,i) ) {
+    return false;
+  }
+
+  let div = jQuery('#meta_column_'+key)
+  div.empty().append(`
   <div class="cell"><button type="button" onclick="open_session( ${zumeTraining.groups[i].next_session}, '${key}' )" class="button expanded">${__('Next Session', 'zume')} ${zumeTraining.groups[i].next_session}</button><!-- Next session --></div>
-  <div class="cell"><button type="button" class="button clear small">${__('Archive', 'zume')}</button> <button type="button" class="button clear small">${__('Delete', 'zume')}</button></div>
   `)
+
+  // if owner of the group
+  if ( isOwner( key, i ) ) {
+    div.append(`<div class="cell center"><button type="button" class="button clear small">${__('Archive', 'zume')}</button></div>`)
+  }
 }
 
 function open_session( session_number, key ) {
-  jQuery('#training-modal-content').empty().html(`
-  Load Session ${session_number}<br>
-  For Group ${key}
+  if ( key /** logged in */) {
+    jQuery('#training-modal-content').empty().html(`
+    <div class="center">
+        <h2>Welcome to Session ${session_number}</h2>
+        add group selection dropdown
+        and add member count check
+        <button type="submit" class="button hollow large">${__('Continue', 'zume')}</button>
+    </div>
   `)
+  } else {
+    jQuery('#training-modal-content').empty().html(`
+    <div class="grid-y padding-top-1">
+        <div class="cell"><h2 class="center">Welcome to Session ${session_number}</h2></div>
+        <div class="cell callout primary-color margin-2">
+            <div class="grid-x padding-right-2 padding-left-2 grid-padding-y" id="not-logged-in">
+                <div class="cell center list-head"><h3>You're missing out. <br>Register Now!</h3></div> 
+                <div class="cell list-reasons"><span class="list-head"></span><ul><li>track your personal training progress</li><li>access group planning tools</li> <li>connect with a coach</li> <li>add your effort to the global vision!</li></div> 
+                <div class="cell center"><a href="${_.escape( zumeTraining.site_urls.register ) }" class="button expanded large">${__('Register for Free', 'zume')}</a><a href="${_.escape( zumeTraining.site_urls.login )}" type="submit" class="button clear padding-bottom-0">${__('Login', 'zume')}</a></div> 
+            </div>
+        </div>
+        <div class="cell center"><button type="submit" class="center button hollow large">${__('Continue', 'zume')}</button></div>
+    </div>
+  `)
+  }
 
   jQuery('#training-modal').foundation('open')
+}
+
+/** Tests if current user is owner */
+function isOwner( key, i ) {
+  if ( indexMismatch(key,i) ) {
+    return false;
+  }
+  if ( parseInt( zumeTraining.current_user_id ) !== parseInt( zumeTraining.groups[i].owner ) ) {
+    return false;
+  }
+  return true;
+}
+/** Tests if key and index are the referring to the same array */
+function indexMismatch( key, i) {
+  if ( zumeTraining.groups[i].key !== key ) {
+    return true;
+  }
+  return false;
 }
 
 
