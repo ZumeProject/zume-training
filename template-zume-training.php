@@ -654,7 +654,7 @@ $current_language = zume_current_language(); dt_write_log( empty( $fake['nothear
                         <div class="tabs-panel" id="panel2">
                             <div class="grid-x">
                                 <div class="cell center border-bottom margin-bottom-2">
-                                    <button class="button hollow small" type="button"><?php echo esc_html__("Add Group", 'zume' ) ?></button>
+                                    <button class="button hollow small" type="button"><i class="fi-plus"></i> <?php echo esc_html__("Add Group", 'zume' ) ?></button>
                                 </div>
                             </div>
                             <div class="grid-x" id="group-list"><div class="loader">Loading...</div></div>

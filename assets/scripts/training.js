@@ -130,11 +130,7 @@ function get_groups() {
           </div>
       </div> <!-- Column 3 -->
       <div class="cell small-2">
-            <div class="grid-y">
-                <div class="cell"><button type="button" class="button small">Next Session</button></div>
-                <div class="cell"><button type="button" class="button clear small">Archive</button></div>
-                <div class="cell"><button type="button" class="button clear small">Delete</button></div>
-            </div>
+            <div class="grid-y" id="meta_column_${v.key}"><!-- Meta column buttons --></div>
       </div> <!-- Column 4 -->
     </div>
 </div>
@@ -146,6 +142,7 @@ function get_groups() {
     write_members_list( v.key, i )
     write_member_list_button( v.key, i )
     load_location_add_button( v.key )
+    write_meta_column( v.key, i )
 
   }) /* end .each loop*/
 }
@@ -224,10 +221,15 @@ function save_member_count( key, i ) {
 
 function write_members_list( key, i ) {
   let div = jQuery('#member_list_'+key)
+  let verified
   div.empty()
   jQuery.each( zumeTraining.groups[i].coleaders, function(ib,v) {
     if ( v !== undefined ) {
-      div.append(`<div class="cell member">${v} <span class="delete" onclick="delete_member_list_item( '${key}', ${i}, ${ib}, '${v}' )">${__('delete', 'zume')}</span></div>`)
+      verified = ''
+      if ( _.indexOf( zumeTraining.groups[i].coleaders_accepted, v ) >= 0 ) {
+        verified = `<i class="fi-check secondary-color" title="${__('Accepted invitation', 'zume')}"></i>`
+      }
+      div.append(`<div class="cell member">${v} ${verified} <span class="delete" onclick="delete_member_list_item( '${key}', ${i}, ${ib}, '${v}' )">${__('delete', 'zume')}</span></div>`)
     }
   })
 }
@@ -259,7 +261,7 @@ function save_new_member( key, i ) {
   listen_hover_member_list()
 }
 function listen_hover_member_list() {
-  jQuery('.member').hover( function(){jQuery(this).children().show()}, function(){jQuery(this).children().hide()})
+  jQuery('.member').hover( function(){jQuery(this).children(".delete").show()}, function(){jQuery(this).children(".delete").hide()})
 }
 function delete_member_list_item( key, i, ib, email ) {
   if ( email ) {
@@ -389,7 +391,21 @@ function save_new_location( key ) {
   load_location_add_button( key )
 }
 
+function write_meta_column( key, i ) {
+  jQuery('#meta_column_'+key).empty().append(`
+  <div class="cell"><button type="button" onclick="open_session( ${zumeTraining.groups[i].next_session}, '${key}' )" class="button expanded">${__('Next Session', 'zume')} ${zumeTraining.groups[i].next_session}</button><!-- Next session --></div>
+  <div class="cell"><button type="button" class="button clear small">${__('Archive', 'zume')}</button> <button type="button" class="button clear small">${__('Delete', 'zume')}</button></div>
+  `)
+}
 
+function open_session( session_number, key ) {
+  jQuery('#training-modal-content').empty().html(`
+  Load Session ${session_number}<br>
+  For Group ${key}
+  `)
+
+  jQuery('#training-modal').foundation('open')
+}
 
 
 /**

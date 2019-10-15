@@ -88,7 +88,7 @@ class Zume_v4_Groups {
      * @param $args
      * @return bool|WP_Error
      */
-    public static function edit_group( $args ) { dt_write_log( $args );
+    public static function edit_group( $args ) {
         // Check if this user can edit this group
         $current_user_id = get_current_user_id();
         $group_meta = get_user_meta( $current_user_id, $args['key'], true );
@@ -767,6 +767,8 @@ class Zume_v4_Groups {
             }
         }
 
+
+
         return $group_meta;
     }
 
@@ -799,14 +801,17 @@ class Zume_v4_Groups {
 
         if ( ! empty( $owned_groups ) ) {
             foreach ( $owned_groups as $g ) {
-                $groups[] = $g;
+                $groups[$g['last_modified_date']] = $g;
             }
         }
         if ( ! empty( $colead_groups ) ) {
             foreach ( $colead_groups as $g ) {
-                $groups[] = $g;
+                $groups[$g['last_modified_date']] = $g;
             }
         }
+
+        krsort( $groups );
+        $groups = array_values( $groups );
 
         return $groups;
     }
@@ -822,6 +827,8 @@ class Zume_v4_Groups {
         }
 
         $modified_group['group_name'] = sanitize_text_field( wp_unslash( $value ) );
+
+        self::filter_last_modified_to_now( $modified_group ); // add new timestamp
 
         return update_user_meta( get_current_user_id(), $key, $modified_group, $group );
     }
@@ -842,6 +849,8 @@ class Zume_v4_Groups {
 
         $modified_group['members'] = sanitize_text_field( wp_unslash( absint ($value ) ) );
 
+        self::filter_last_modified_to_now( $modified_group ); // add new timestamp
+
         return update_user_meta( get_current_user_id(), $key, $modified_group, $group );
     }
 
@@ -861,6 +870,10 @@ class Zume_v4_Groups {
 
         $modified_group['coleaders'][] = sanitize_email( wp_unslash( $value ) );
 
+        sort( $modified_group['coleaders'] ); // reindex
+
+        self::filter_last_modified_to_now( $modified_group );
+
         return update_user_meta( get_current_user_id(), $key, $modified_group, $group );
     }
 
@@ -870,11 +883,10 @@ class Zume_v4_Groups {
             $user_id = get_current_user_id();
         }
 
-        $group = get_user_meta( $user_id, $group_id, true );
-        $group = self::verify_group_array_filter( $group );
-        $group_prev = $group;
+        $modified_group = $group = get_user_meta( $user_id, $group_id, true );
+        $modified_group = self::verify_group_array_filter( $modified_group );
 
-        if ( empty( $group ) ) {
+        if ( empty( $modified_group ) ) {
             return [ 'status' => 'Permission failure' ];
         }
 
@@ -882,20 +894,30 @@ class Zume_v4_Groups {
             return [ 'status' => 'Email failure' ];
         }
 
-        if ( empty( $group['coleaders'] ) ) {
+        if ( empty( $modified_group['coleaders'] ) ) {
             return [ 'status' => 'Coleader not present' ];
         }
 
-        foreach ( $group['coleaders'] as $key => $coleader ) {
-            if ( $email == $coleader) {
-                unset( $group['coleaders'][$key] );
-                unset( $group['coleaders_accepted'][$key] );
-                unset( $group['coleaders_declined'][$key] );
-                update_user_meta( $user_id, $group_id, $group, $group_prev );
+        foreach ( $modified_group['coleaders'] as $key => $coleader ) {
+            if ( $email === $coleader) {
+                unset( $modified_group['coleaders'][$key] );
+                unset( $modified_group['coleaders_accepted'][$key] );
+                unset( $modified_group['coleaders_declined'][$key] );
+
+                sort( $modified_group['coleaders'] ); //
+
+                self::filter_last_modified_to_now( $modified_group ); // add new timestamp
+
+                update_user_meta( $user_id, $group_id, $modified_group, $group );
                 return [ 'status' => 'OK' ];
             }
         }
         return [ 'status' => 'Coleader not found' ];
+    }
+
+    public static function filter_last_modified_to_now( &$group ) : array {
+        $group['last_modified_date'] = time();
+        return $group;
     }
 
 }
