@@ -48,11 +48,24 @@
 <?php /** Not logged in */ if ( ! is_user_logged_in() ) : ?>
 
 <div class="training margin-top-3 margin-bottom-3">
-    <div class="grid-x grid-margin-x grid-margin-y landing-part">
-        <div class="small-12 small-centered cell center landing">
-            <?php echo esc_html__("You've heard the concept. We challenge you to live it, share it, and train others!", 'zume' ) ?><br>
-            <a href="<?php echo zume_login_url() ?>" class="button large">Login</a> <a href="<?php echo zume_register_url() ?>" class="button large">Register</a>
+    <div class="grid-x padding-2 landing-part">
 
+        <div class="cell center"><h2><?php echo esc_html__("You're missing out.", 'zume' ) ?> <?php echo esc_html__("Register Now!", 'zume' ) ?></h2></div>
+        <div class="cell list-reasons">
+            <ul>
+                <li><?php echo esc_html__("track your personal training progress", 'zume' ) ?></li>
+                <li><?php echo esc_html__("access group planning tools", 'zume' ) ?></li>
+                <li><?php echo esc_html__("connect with a coach", 'zume' ) ?></li>
+                <li><?php echo esc_html__("add your effort to the global vision!", 'zume' ) ?></li>
+            </ul>
+        </div>
+        <div class="cell center">
+            <a href="<?php echo zume_register_url() ?>" class="button large secondary register-button" style="width:400px"><?php echo esc_html__("Register for Free", 'zume' ) ?></a><br><a href="<?php echo esc_url( zume_login_url() ) ?>" class="button clear"><?php echo esc_html__("Login", 'zume' ) ?></a>
+        </div>
+        <div class="cell"><hr></div>
+        <div class="cell center">
+            <p><?php echo esc_html__("Zúme uses an online training platform to equip participants in basic disciple-making and simple church planting multiplication principles, processes, and practices.", 'zume' ) ?></p>
+            <p><a class="button hollow" href="<?php echo esc_url( zume_training_url() ) ?>"><?php echo esc_html__("See Entire Training", 'zume' ) ?></a></p>
         </div>
     </div>
 </div>

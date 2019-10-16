@@ -653,11 +653,10 @@ $current_language = zume_current_language();
                         ----------------------------------------------------------------------------------------------->
                         <div class="tabs-panel" id="panel2">
                             <div class="grid-x">
-                                <div class="cell center border-bottom margin-bottom-2" id="add_group_container">
-                                    <button class="button hollow small add-group-button" type="button"><i class="fi-plus"></i> <?php echo esc_html__("Add Group", 'zume' ) ?></button>
-                                </div>
+                                <div class="cell center border-bottom margin-bottom-2" id="add_group_container"><!-- add button--></div>
                             </div>
                             <div class="grid-x" id="group-list"><div class="loader">Loading...</div></div>
+                            <div id="archive-list"><!-- archive section--></div>
                         </div>
                         <!----------------------------------------------------------------------------------------------
 

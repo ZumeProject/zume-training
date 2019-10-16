@@ -134,6 +134,20 @@ class Zume_v4_REST_API {
             case 'coleaders_delete':
                 return Zume_v4_Groups::delete_coleader( $params['value'], $params['key'] );
                 break;
+            case 'archive_group':
+                $result = Zume_v4_Groups::archive_group( $params['key'] );
+                if ( $result ) {
+                    return Zume_v4_Groups::get_all_groups( get_current_user_id() );
+                }
+                return false;
+                break;
+            case 'activate_group':
+                $result = Zume_v4_Groups::activate_group( $params['key'] );
+                if ( $result ) {
+                    return Zume_v4_Groups::get_all_groups( get_current_user_id() );
+                }
+                return false;
+                break;
             default:
                 return new WP_Error( __METHOD__, "Incorrect type", array( 'status' => 400 ) );
                 break;

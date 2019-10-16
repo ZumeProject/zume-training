@@ -36,7 +36,11 @@ class Zume_v4_Groups {
      */
     public function __construct() { } // End __construct()
 
-
+    /**
+     * @version 4
+     * @param $args
+     * @return bool|false|int
+     */
     public static function create_group( $args ) {
 
         // Validate post data
@@ -197,27 +201,50 @@ class Zume_v4_Groups {
         do_action( 'zume_delete_group', $user_id, $group_key );
     }
 
-    public static function closed_group( $group_key ) {
+    /**
+     * @version 4
+     *
+     * @param $group_key
+     * @return bool|int|WP_Error
+     */
+    public static function archive_group( $group_key ) {
         $user_id = get_current_user_id();
-        $user_meta = get_user_meta( $user_id, $group_key, true );
-        if ( empty( $user_meta ) ) {
+
+        $modified_group = $group = get_user_meta( $user_id, $group_key, true );
+        if ( empty( $modified_group ) ) {
             return new WP_Error( 'no_group_match', 'Hey, you cheating? No, group with id found for you.' );
         }
-        $user_meta['closed'] = true;
-        update_user_meta( $user_id, $group_key, $user_meta );
+        $modified_group['closed'] = true;
+
+        self::filter_last_modified_to_now( $modified_group );
+
+        $result = update_user_meta( $user_id, $group_key, $modified_group, $group );
 
         do_action( 'zume_close_group', $user_id, $group_key );
+
+        return $result;
     }
 
+    /**
+     * @version 4
+     * @param $group_id
+     * @return bool|int
+     */
     public static function activate_group( $group_id ) {
-        $group_meta = get_user_meta( get_current_user_id(), $group_id, true );
-        $group_meta = self::verify_group_array_filter( $group_meta );
 
-        $group_meta['closed'] = false;
+        $modified_group = $group = get_user_meta( get_current_user_id(), $group_id, true );
 
-        update_user_meta( get_current_user_id(), $group_id, $group_meta );
+        $modified_group = self::verify_group_array_filter( $modified_group );
+
+        $modified_group['closed'] = false;
+
+        self::filter_last_modified_to_now( $modified_group );
+
+        $result = update_user_meta( get_current_user_id(), $group_id, $modified_group, $group );
 
         do_action( 'zume_activate_group', get_current_user_id(), $group_id );
+
+        return $result;
     }
 
     public static function get_highest_session( $user_id ) {
@@ -669,6 +696,7 @@ class Zume_v4_Groups {
      * If passed a group array, it will verify that all required keys are present, add any missing, and return
      * group array. ex.group_array_filter( $group_meta )
      *
+     * @version 4
      * @param $group_meta
      * @param bool $new
      * @return array|mixed
@@ -773,6 +801,10 @@ class Zume_v4_Groups {
         return $group_meta;
     }
 
+    /**
+     * @version 4
+     * @return string
+     */
     public static function get_unique_group_key() {
         global $wpdb;
         $duplicate_check = 1;
@@ -783,6 +815,10 @@ class Zume_v4_Groups {
         return $group_key;
     }
 
+    /**
+     * @version 4
+     * @return mixed|string
+     */
     public static function get_unique_public_key() {
         $key = hash( 'sha256', time() . rand( 0, 100000 ) );
         $key = str_replace( '0', '', $key );
@@ -792,6 +828,11 @@ class Zume_v4_Groups {
         return $key;
     }
 
+    /**
+     * @version 4
+     * @param int|null $user_id
+     * @return array
+     */
     public static function get_all_groups( int $user_id = null ) : array {
         $groups = [];
         if ( empty( $user_id) ) {
@@ -817,6 +858,12 @@ class Zume_v4_Groups {
         return $groups;
     }
 
+    /**
+     * @version 4
+     * @param $key
+     * @param $value
+     * @return array|bool|int|mixed|WP_Error
+     */
     public static function update_group_name( $key, $value ) {
         $modified_group = $group = self::get_current_user_group( $key );
         if ( is_wp_error( $group ) ) {
@@ -834,6 +881,12 @@ class Zume_v4_Groups {
         return update_user_meta( get_current_user_id(), $key, $modified_group, $group );
     }
 
+    /**
+     * @version 4
+     * @param $key
+     * @param $value
+     * @return array|bool|int|mixed|WP_Error
+     */
     public static function update_member_count( $key, $value ) {
         $modified_group = $group = self::get_current_user_group( $key );
         if ( is_wp_error( $group ) ) {
@@ -855,6 +908,12 @@ class Zume_v4_Groups {
         return update_user_meta( get_current_user_id(), $key, $modified_group, $group );
     }
 
+    /**
+     * @version 4
+     * @param $key
+     * @param $value
+     * @return array|bool|int|mixed|WP_Error
+     */
     public static function add_coleader( $key, $value ) {
         $modified_group = $group = self::get_current_user_group( $key );
         if ( is_wp_error( $group ) ) {
@@ -878,6 +937,13 @@ class Zume_v4_Groups {
         return update_user_meta( get_current_user_id(), $key, $modified_group, $group );
     }
 
+    /**
+     * @version 4
+     * @param $email
+     * @param $group_id
+     * @param null $user_id
+     * @return array
+     */
     public static function delete_coleader( $email, $group_id, $user_id = null ) {
 
         if ( is_null( $user_id ) ) {
@@ -916,6 +982,11 @@ class Zume_v4_Groups {
         return [ 'status' => 'Coleader not found' ];
     }
 
+    /**
+     * @version 4
+     * @param $group
+     * @return array
+     */
     public static function filter_last_modified_to_now( &$group ) : array {
         $group['last_modified_date'] = time();
         return $group;
