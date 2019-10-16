@@ -8,6 +8,8 @@
  * @since 0.1
  */
 
+// @todo deprecated after 4.0
+
 if ( ! defined( 'ABSPATH' ) ) { exit; // Exit if accessed directly
 }
 

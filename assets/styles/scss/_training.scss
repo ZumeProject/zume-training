@@ -31,6 +31,12 @@
         font-weight:600;
         font-size: 1.2rem;
         margin-bottom:0;
+
+        @media (max-width: $breakpoint-medium ) {
+            font-weight:500;
+            font-size: 1rem;
+            margin-bottom:0;
+        }
     }
     .t-length {
         color: $light-black;
@@ -66,6 +72,56 @@
     #display-buttons {
         button {
             margin: 0 1px;
+            float:right;
+        }
+        @media (max-width: $breakpoint-medium ) {
+            button {
+                margin: 0 auto 20px;
+                text-align: center;
+            }
+
+            #column_button {
+                display:none;
+            }
+        }
+    }
+    .register-button {
+        color:white;
+        border:0;
+        margin:0;
+
+        @media (max-width: $breakpoint-medium ) {
+            width:100%;
+            margin-top: 20px;
+        }
+    }
+    .list-head {
+        font-size: 1.5em;
+        font-weight: 300;
+    }
+    .list-reasons {
+        max-width: 300px;
+        margin:0 auto;
+        justify-content: center;
+
+        ul {
+            list-style: none;
+            margin-left: 0;
+            padding-left: 0;
+        }
+        li {
+            padding-left: 1em;
+            text-indent: -1em;
+        }
+
+        li:before {
+            content: "\2714";
+            padding-right: 5px;
+            color: green;
+
+        }
+        @media (max-width: $breakpoint-medium ) {
+
         }
     }
 
@@ -114,6 +170,9 @@
     .group-name-input {
         width:33%;
         display: inline-block;
+    }
+    .add-group-input {
+        height:fit-content;
     }
 
 
@@ -251,7 +310,7 @@
 
     // landing pages
     .landing-part {
-        height:700px;
+        //height:700px;
         border: 1px solid $primary-color;
         @media (max-width: $breakpoint-medium ) {
         }
@@ -276,4 +335,5 @@
 
         }
     }
+
 }

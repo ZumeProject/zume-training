@@ -3,6 +3,7 @@ const { __, _x, _n, _nx } = wp.i18n;
 
 jQuery(document).ready(function(){
   if( ! window.location.hash || '#panel1' === window.location.hash ) {
+    console.log(zumeTraining)
     show_panel1()
   }
   if( '#panel2' === window.location.hash  ) {
@@ -13,6 +14,19 @@ jQuery(document).ready(function(){
     console.log(zumeTraining)
     get_progress()
   }
+  // click listener for submenu
+  jQuery('#top-full-menu-div a').on('click',function() {
+    console.log(window.location.hash)
+    if( '#panel1' === this.hash ) {
+      show_panel1()
+    }
+    if( '#panel2' === this.hash  ) {
+      get_groups()
+    }
+    if( '#panel3' === this.hash  ) {
+      get_progress()
+    }
+  })
 })
 
 
@@ -149,6 +163,7 @@ function get_groups() {
 // listeners
 jQuery(document).ready(function(){
   listen_hover_member_list()
+  listen_add_group_button()
 })
 // functions
 function write_group_name( key, i ) {
@@ -419,21 +434,59 @@ function open_session( session_number, key ) {
   `)
   } else {
     jQuery('#training-modal-content').empty().html(`
-    <div class="grid-y padding-top-1">
+    <div class="grid-y padding-top-1 training">
         <div class="cell"><h2 class="center">Welcome to Session ${session_number}</h2></div>
         <div class="cell callout primary-color margin-2">
             <div class="grid-x padding-right-2 padding-left-2 grid-padding-y" id="not-logged-in">
                 <div class="cell center list-head"><h3>You're missing out. <br>Register Now!</h3></div> 
-                <div class="cell list-reasons"><span class="list-head"></span><ul><li>track your personal training progress</li><li>access group planning tools</li> <li>connect with a coach</li> <li>add your effort to the global vision!</li></div> 
-                <div class="cell center"><a href="${_.escape( zumeTraining.site_urls.register ) }" class="button expanded large">${__('Register for Free', 'zume')}</a><a href="${_.escape( zumeTraining.site_urls.login )}" type="submit" class="button clear padding-bottom-0">${__('Login', 'zume')}</a></div> 
+                <div class="cell list-reasons">
+                    <ul>
+                    <li>${__('track your personal training progress', 'zume')}</li>
+                    <li>${__('access group planning tools', 'zume')}</li> 
+                    <li>${__('connect with a coach', 'zume')}</li> 
+                    <li>${__('add your effort to the global vision!', 'zume')}</li>
+                    </ul>
+                </div> 
+                <div class="cell center"><a href="${_.escape( zumeTraining.site_urls.register ) }" class="button expanded large secondary register-button">${__('Register for Free', 'zume')}</a><a href="${_.escape( zumeTraining.site_urls.login )}" type="submit" class="button clear padding-bottom-0">${__('Login', 'zume')}</a></div> 
             </div>
         </div>
-        <div class="cell center"><button type="submit" class="center button hollow large">${__('Continue', 'zume')}</button></div>
+        <div class="cell center margin-bottom-1"><button type="submit" class="center button hollow">${__('Continue', 'zume')}</button></div>
     </div>
   `)
   }
 
   jQuery('#training-modal').foundation('open')
+}
+
+function listen_add_group_button() {
+  jQuery('.add-group-button').on('click', function(){
+    console.log('yes')
+    jQuery(this).parent().empty().html(`
+<div class="grid-x">
+    <div class="cell input-group" id="new-group">
+        <input type="text" class="input-group-field add-group-input" placeholder="${__('Group Name', 'zume')}" title="${__('Group Name', 'zume')}" name="group_name" /> 
+        <input type="number" placeholder="${__('Number of Members', 'zume')}" title="${__('Number of Members', 'zume')}" class="input-group-field add-group-input" name="members" /> 
+        <button type="button" class="button" onclick="save_new_group()">${__('Save', 'zume')}</button> 
+        <button type="button" class="button hollow">${__('Cancel', 'zume')}</button>
+    </div>
+</div>
+`)
+  })
+}
+function save_new_group() {
+  let group_name = jQuery('#new-group input[name=group_name]').val()
+  let members = jQuery('#new-group input[name=members]').val()
+
+  if ( group_name && members ) {
+    API.create_group( _.escape( group_name ), _.escape( members ) ).done(function(data) {
+      zumeTraining.groups = data
+      // @todo replace add group button
+      get_groups()
+    })
+      .fail(function(e){
+        console.log(e)
+      })
+  }
 }
 
 /** Tests if current user is owner */
@@ -467,7 +520,7 @@ div.append(`
     <div class="grid-y">
         <div class="cell center padding-1">
             <span class="hide-for-small-only" style="position:absolute; right:15px;"><a onclick="load_host_description()" class="help-question-mark">?</a></span>
-            <h2 class="padding-bottom-0">${__('Training Progress', 'zume')}</h2>
+            <h2 class="padding-bottom-0">${__('Progress', 'zume')}</h2>
             <span class="h2-caption">${__('32 Tools and Concepts', 'zume')}</span> 
         </div>
        <div class="cell clickable" onclick="load_host_description()">
@@ -721,8 +774,6 @@ div.append(`
   progress_icons_listener()
   load_progress_totals()
 }
-
-
 function progress_icons_listener() {
   jQuery('.p-icon').on( 'click', function(){
     let item = jQuery(this)
@@ -803,6 +854,8 @@ window.API = {
   update_progress: (key, state) => makeRequest('POST', 'progress/update', { key: key, state: state }),
 
   update_group: ( key, value, item ) => makeRequest('POST', 'groups/update', { key: key, value: value, item: item }),
+
+  create_group: ( group_name, members ) => makeRequest('POST', 'groups/create', { name: group_name, members: members }),
 
 }
 function makeRequest (type, url, data, base = 'zume/v4/') {

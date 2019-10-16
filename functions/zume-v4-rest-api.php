@@ -143,13 +143,21 @@ class Zume_v4_REST_API {
 
     public function groups_create( WP_REST_Request $request){
         $params = $request->get_params();
-        if ( ! isset( $params['key'] ) || ! isset( $params['value'] ) || ! isset( $params['item'] ) ) {
+        if ( ! isset( $params['name'] ) || ! isset( $params['members'] ) ) {
             return new WP_Error( "log_param_error", "Missing parameters", array( 'status' => 400 ) );
         }
 
-        // @todo
-
-        return true;
+        $args = [
+            'group_name' => sanitize_text_field( wp_unslash( $params['name'] ) ),
+            'members' => sanitize_text_field( wp_unslash( $params['members'] ) ),
+        ];
+        $meta_id = Zume_v4_Groups::create_group( $args );
+        if ( $meta_id ) {
+            return Zume_v4_Groups::get_all_groups( get_current_user_id() );
+        } else {
+            dt_write_log(__METHOD__ . ': Failed to create new group.');
+            return false;
+        }
     }
     public function groups_read( WP_REST_Request $request){
         return Zume_v4_Groups::get_all_groups();

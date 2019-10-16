@@ -104,56 +104,6 @@ class Zume_REST_API {
             ),
         ) );
 
-        /* Zume 4.0 */
-        /* Progress */
-        register_rest_route( $namespace, '/progress/update', array(
-            array(
-                'methods'         => WP_REST_Server::CREATABLE,
-                'callback'        => array( $this, 'progress_update' ),
-                "permission_callback" => function () {
-                    return current_user_can( 'zume' );
-                }
-            ),
-        ) );
-
-        /* Groups */
-        register_rest_route( $namespace, '/groups/create', array(
-            array(
-                'methods'         => WP_REST_Server::CREATABLE,
-                'callback'        => array( $this, 'groups_create' ),
-                "permission_callback" => function () {
-                    return current_user_can( 'zume' );
-                }
-            ),
-        ) );
-        register_rest_route( $namespace, '/groups/read', array(
-            array(
-                'methods'         => WP_REST_Server::CREATABLE,
-                'callback'        => array( $this, 'groups_read' ),
-                "permission_callback" => function () {
-                    return current_user_can( 'zume' );
-                }
-            ),
-        ) );
-        register_rest_route( $namespace, '/groups/update', array(
-            array(
-                'methods'         => WP_REST_Server::CREATABLE,
-                'callback'        => array( $this, 'groups_update' ),
-                "permission_callback" => function () {
-                    return current_user_can( 'zume' );
-                }
-            ),
-        ) );
-
-        register_rest_route( $namespace, '/groups/delete', array(
-            array(
-                'methods'         => WP_REST_Server::CREATABLE,
-                'callback'        => array( $this, 'groups_delete' ),
-                "permission_callback" => function () {
-                    return current_user_can( 'zume' );
-                }
-            ),
-        ) );
     }
 
     /**
@@ -288,63 +238,7 @@ class Zume_REST_API {
         }
     }
 
-    public function progress_update( WP_REST_Request $request){
-        $params = $request->get_params();
-        if ( isset( $params['key'] ) && ! empty( $params['key'] ) && isset( $params['state'] ) ) {
-            return Zume_User::update_user_progress( $params['key'], $params['state'] );
-        } else {
-            return new WP_Error( "log_param_error", "Please provide a valid address", array( 'status' => 400 ) );
-        }
-    }
 
-    public function groups_update( WP_REST_Request $request){
-        $params = $request->get_params();
-        if ( empty( $params['key'] ?? null ) || empty( $params['value'] ?? null ) || empty( $params['item'] ?? null ) ) {
-            return new WP_Error( __METHOD__, "Missing parameters", array( 'status' => 400 ) );
-        }
-
-        switch( $params['item'] ) {
-            case 'group_name':
-
-                break;
-            case 'members':
-            default:
-                return new WP_Error( __METHOD__, "Incorrect type", array( 'status' => 400 ) );
-                break;
-        }
-
-        return true;
-    }
-    public function groups_create( WP_REST_Request $request){
-        $params = $request->get_params();
-        if ( ! isset( $params['key'] ) || ! isset( $params['value'] ) || ! isset( $params['item'] ) ) {
-            return new WP_Error( "log_param_error", "Missing parameters", array( 'status' => 400 ) );
-        }
-
-        // @todo
-
-        return true;
-    }
-    public function groups_read( WP_REST_Request $request){
-        $params = $request->get_params();
-        if ( ! isset( $params['key'] ) || ! isset( $params['value'] ) || ! isset( $params['item'] ) ) {
-            return new WP_Error( "log_param_error", "Missing parameters", array( 'status' => 400 ) );
-        }
-
-        // @todo
-
-        return true;
-    }
-    public function groups_delete( WP_REST_Request $request){
-        $params = $request->get_params();
-        if ( ! isset( $params['key'] ) || ! isset( $params['value'] ) || ! isset( $params['item'] ) ) {
-            return new WP_Error( "log_param_error", "Missing parameters", array( 'status' => 400 ) );
-        }
-
-        // @todo
-
-        return true;
-    }
 
 }
 Zume_REST_API::instance();

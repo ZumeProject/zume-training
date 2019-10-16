@@ -3,6 +3,7 @@
 Template Name: 29 - Leadership in Networks
 */
 get_header();
+$alt_video = false;
 if (have_posts()) :
     while (have_posts()) : the_post();
         $session_number = 29;
@@ -27,7 +28,7 @@ if (have_posts()) :
                             <strong><?php the_title(); ?></strong>
                         </h1>
                         <p>
-                            <a href="<?php echo esc_url( zume_training_url() ) ?>"><?php echo esc_html__( 'This concept comes from the Zúme Training Course', 'zume' ) ?> - <?php echo esc_html__('Session', 'zume' ) ?> <?php echo esc_html( $session_number ) ?></a>.
+                            <a href="<?php echo esc_url( zume_training_url() ) ?>"><?php echo esc_html__( 'This concept comes from the Zúme Training Course', 'zume' ) ?></a> - <a onclick="open_session(<?php echo esc_attr( $session_number ); ?>)"> <?php echo esc_html__('Session', 'zume' ) ?> <?php echo esc_html( $session_number ) ?></a>.
                         </p>
                     </div>
 
@@ -110,7 +111,7 @@ if (have_posts()) :
                     <!-- Center column -->
                     <div class="large-8 small-12 cell">
 
-                        <?php get_template_part( 'parts/p', 'share' ); ?>
+                        <?php get_template_part( 'parts/content', 'share' ); ?>
 
                     </div>
                     <div class="large-2 cell"></div><!-- Side spacer -->
@@ -144,6 +145,8 @@ if (have_posts()) :
                 </div> <!-- grid-x -->
 
             </div> <!-- end #inner-content --></div> <!-- end #content -->
+
+    <?php get_template_part( "parts/content", "modal"); ?>
 
     <?php
     endwhile;

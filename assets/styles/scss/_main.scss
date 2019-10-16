@@ -1163,36 +1163,9 @@ hr {
 // end css spinner
 
 
-#not-logged-in {
-    .list-head {
-        font-size: 1.5em;
-        font-weight: 300;
-    }
-
-    .list-reasons {
-        max-width: 300px;
-        margin:0 auto;
-        justify-content: center;
-
-        ul {
-            list-style: none;
-            margin-left: 0;
-            padding-left: 0;
-        }
-        li {
-            padding-left: 1em;
-            text-indent: -1em;
-        }
-
-        li:before {
-            content: "\2714";
-            padding-right: 5px;
-            color: green;
-
-        }
-    }
-
-    @media (max-width: $breakpoint-medium ) {
-
+@media ( max-width: $breakpoint-medium ) {
+    .callout {
+        margin-right: 7px;
+        margin-left: 7px;
     }
 }

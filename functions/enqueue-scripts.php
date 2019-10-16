@@ -48,24 +48,6 @@ function zume_site_scripts() {
         wp_enqueue_script( 'comment-reply' );
     }
 
-    if ( 'template-zume-course.php' === basename( get_page_template() ) ) {
-        wp_enqueue_script( 'jquery-steps', get_template_directory_uri() . '/assets/scripts/jquery.steps.js', array( 'jquery' ), 1.1, true );
-        wp_localize_script(
-            "jquery-steps", "stepsSettings", array(
-                "translations" => [
-                    "cancel" => esc_html__( 'Cancel', 'zume' ),
-                    "current:" => esc_html__( 'Current Step:', 'zume' ),
-                    "pagination" => esc_html__( 'Cancel', 'zume' ),
-                    "finish" => esc_html__( 'Finish', 'zume' ),
-                    "next" => esc_html__( 'Next', 'zume' ),
-                    "previous" => esc_html__( 'Previous', 'zume' ),
-                    "loading" => esc_html__( 'Loading...', 'zume' ),
-                ]
-            )
-        );
-
-    }
-
     /**
      * Zume 3.0 Features
      */
@@ -90,10 +72,29 @@ function zume_site_scripts() {
         );
     }
 
+    if ( 'template-zume-course.php' === basename( get_page_template() ) /* 3.0 */ || 'template-zume-course-v4.php' === basename( get_page_template() ) /* 4.0 */ ) {
+        wp_enqueue_script( 'jquery-steps', get_template_directory_uri() . '/assets/scripts/jquery.steps.js', array( 'jquery' ), 1.1, true );
+        wp_localize_script(
+            "jquery-steps", "stepsSettings", array(
+                "translations" => [
+                    "cancel" => esc_html__( 'Cancel', 'zume' ),
+                    "current:" => esc_html__( 'Current Step:', 'zume' ),
+                    "pagination" => esc_html__( 'Cancel', 'zume' ),
+                    "finish" => esc_html__( 'Finish', 'zume' ),
+                    "next" => esc_html__( 'Next', 'zume' ),
+                    "previous" => esc_html__( 'Previous', 'zume' ),
+                    "loading" => esc_html__( 'Loading...', 'zume' ),
+                ]
+            )
+        );
+    }
+
     /**
      Zume 4.0
      */
-    if ( 'template-zume-training.php' === basename( get_page_template() ) || 'landing' === substr( basename( get_page_template() ), 0, 7 )   ) {
+    if ( 'template-zume-training.php' === basename( get_page_template() )
+        || 'landing' === substr( basename( get_page_template() ), 0, 7 )
+        || 'template-zume-course-v4.php' === basename( get_page_template() ) ) {
         wp_register_script( 'lodash', 'https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.11/lodash.min.js', false, '4.17.11' );
         wp_enqueue_script( 'lodash' );
 

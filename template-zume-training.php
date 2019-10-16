@@ -3,7 +3,7 @@
 Template Name: Training
 */
 get_header();
-$current_language = zume_current_language(); dt_write_log( empty( $fake['nothear'] ?? null ) );
+$current_language = zume_current_language();
 ?>
 
 <div class="training">
@@ -28,7 +28,7 @@ $current_language = zume_current_language(); dt_write_log( empty( $fake['nothear
                                 <p class="t-ad-message"><?php echo esc_html__("Plan your group, add members, track your progress, connect with a coach, and add your effort to the global vision!", 'zume' ) ?></p>
                             </div>
                             <div class="cell medium-4">
-                                <a href="" class="button secondary large" style="color:white;border:0;"><?php echo esc_html__("Register Forever Free", 'zume' ) ?></a>
+                                <a href="<?php echo esc_url( zume_register_url( $current_language ) ) ?>" class="button secondary large register-button" ><?php echo esc_html__("Register Forever Free", 'zume' ) ?></a>
                             </div>
                         </div>
                     </div><!-- end #callout -->
@@ -58,7 +58,7 @@ $current_language = zume_current_language(); dt_write_log( empty( $fake['nothear
                         <ul class="tabs" data-tabs id="training-tabs" data-deep-link="true" data-deep-link-smudge="true">
                             <li class="tabs-title is-active"><a href="#panel1" aria-selected="true" onclick="show_panel1()"><?php echo esc_html__("Course", 'zume' ) ?></a></li>
                             <li class="tabs-title"><a data-tabs-target="panel2" href="#panel2" onclick="get_groups()"><?php echo esc_html__("My Groups", 'zume' ) ?></a></li>
-                            <li class="tabs-title"><a data-tabs-target="panel3" href="#panel3" onclick="get_progress()"><?php echo esc_html__("My Progress", 'zume' ) ?></a></li>
+                            <li class="tabs-title"><a data-tabs-target="panel3" href="#panel3" onclick="get_progress()"><?php echo esc_html__("My Checklist", 'zume' ) ?></a></li>
                         </ul>
                     <?php endif; ?>
 
@@ -88,8 +88,8 @@ $current_language = zume_current_language(); dt_write_log( empty( $fake['nothear
                             <div class="grid-x grid-padding-x grid-padding-y">
 
                             <div class="cell small padding-top-0 padding-bottom-0" id="display-buttons">
-                                <button id="column_button" type="button" class="button primary hollow tiny float-right" onclick="toggle_column()"><?php echo esc_html__("Single Column", 'zume' ) ?></button>
-                                <button id="extra_button" type="button" class="button primary hollow tiny float-right" onclick="toggle_extra()"><?php echo esc_html__("Show Session Plan", 'zume' ) ?></button>
+                                <button id="column_button" type="button" class="button primary hollow tiny" onclick="toggle_column()"><?php echo esc_html__("Single Column", 'zume' ) ?></button>
+                                <button id="extra_button" type="button" class="button primary hollow tiny" onclick="toggle_extra()"><?php echo esc_html__("Show Session Plan", 'zume' ) ?></button>
                             </div>
 
                             <!-- Session 1 -->
@@ -653,16 +653,11 @@ $current_language = zume_current_language(); dt_write_log( empty( $fake['nothear
                         ----------------------------------------------------------------------------------------------->
                         <div class="tabs-panel" id="panel2">
                             <div class="grid-x">
-                                <div class="cell center border-bottom margin-bottom-2">
-                                    <button class="button hollow small" type="button"><i class="fi-plus"></i> <?php echo esc_html__("Add Group", 'zume' ) ?></button>
+                                <div class="cell center border-bottom margin-bottom-2" id="add_group_container">
+                                    <button class="button hollow small add-group-button" type="button"><i class="fi-plus"></i> <?php echo esc_html__("Add Group", 'zume' ) ?></button>
                                 </div>
                             </div>
                             <div class="grid-x" id="group-list"><div class="loader">Loading...</div></div>
-                            <div class="grid-x">
-                                <div class="cell center">
-                                    <button class="button hollow small" type="button"><?php echo esc_html__("Add Group", 'zume' ) ?></button>
-                                </div>
-                            </div>
                         </div>
                         <!----------------------------------------------------------------------------------------------
 
@@ -682,13 +677,7 @@ $current_language = zume_current_language(); dt_write_log( empty( $fake['nothear
     </div> <!-- end #inner-content -->
 </div> <!-- end #content -->
 
-<!-- Multi-use Modal-->
-<div class="reveal" id="training-modal" data-reveal>
-    <div id="training-modal-content"></div>
-    <button class="close-button" data-close aria-label="Close modal" type="button">
-        <span aria-hidden="true">&times;</span>
-    </button>
-</div>
+<?php get_template_part( "parts/content", "modal"); ?>
 
 <?php
 

@@ -36,6 +36,7 @@ class Zume_v4_Groups {
      */
     public function __construct() { } // End __construct()
 
+
     public static function create_group( $args ) {
 
         // Validate post data
@@ -65,7 +66,7 @@ class Zume_v4_Groups {
 
         $new_group = wp_parse_args( $args, $group_values );
 
-        if ( __( 'No Name', 'zume' ) == $new_group['group_name'] ) {
+        if ( __( 'No Name', 'zume' ) === $new_group['group_name'] ) {
             return false;
         }
 
@@ -714,7 +715,7 @@ class Zume_v4_Groups {
             'session_9_complete'  => '',
             'session_10'          => false,
             'session_10_complete' => '',
-            'last_modified_date'  => current_time( 'mysql' ),
+            'last_modified_date'  => time(),
             'closed'              => false,
             'coleaders'           => [],
             'coleaders_accepted'  => [],
