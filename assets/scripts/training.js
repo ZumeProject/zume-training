@@ -428,12 +428,12 @@ function write_meta_column( key, i ) {
 
   let div = jQuery('#meta_column_'+key)
   div.empty().append(`
-  <div class="cell"><button type="button" onclick="open_session( ${zumeTraining.groups[i].next_session}, '${key}' )" class="button expanded">${__('Next Session', 'zume')} ${zumeTraining.groups[i].next_session}</button><!-- Next session --></div>
+  <div class="cell"><button type="button" onclick="open_session( ${zumeTraining.groups[i].next_session}, '${key}' );" class="button expanded">${__('Next Session', 'zume')} ${zumeTraining.groups[i].next_session}</button><!-- Next session --></div>
   `)
 
   // if owner of the group
   if ( isOwner( key, i ) ) {
-    div.append(`<div class="cell center"><button type="button" class="button clear small" onclick="archive_group( '${key}', ${i})">${__('Archive', 'zume')}</button></div>`)
+    div.append(`<div class="cell center"><button type="button" class="button clear small" onclick="archive_group( '${key}', ${i} );">${__('Archive', 'zume')}</button></div>`)
   }
 }
 
@@ -506,18 +506,33 @@ function save_new_group() {
       })
   }
 }
-function archive_group( key, i ) {
+function archive_group( key, i, verified ) {
   if ( ! isOwner(key,i) ) {
     return false;
   }
 
-  API.update_group( key, 'closed', 'archive_group' ).done(function(data) {
-    zumeTraining.groups = data
-    get_groups()
-  })
-    .fail(function(e){
-      console.log(e)
+  if ( verified ) {
+    API.update_group( key, 'closed', 'archive_group' ).done(function(data) {
+      zumeTraining.groups = data
+      get_groups()
     })
+      .fail(function(e){
+        console.log(e)
+      })
+  } else {
+    jQuery('#training-modal-content').empty().append(`
+    <div class="grid-x grid-padding-y training">
+        <div class="cell center">
+            Are you sure you want to archive this group?
+        </div>
+        <div class="cell center">
+        <button type="button" class="center button" onclick="archive_group( '${key}', ${i}, 1 )" data-close aria-label="Close modal">${__('Archive', 'zume')}</button> 
+        <button type="button" class="center button hollow" data-close aria-label="Close modal">${__('Cancel', 'zume')}</button>
+        </div>
+    </div>
+  `)
+    jQuery('#training-modal').foundation('open')
+  }
 }
 function write_view_archive_button() {
   let div = jQuery('#archive-list')
@@ -542,7 +557,7 @@ function open_archive_groups() {
         <div class="cell">
             <table>${list}</table>
         </div>
-        <div class="cell center margin-bottom-1"><button type="submit" class="center button hollow">${__('Continue', 'zume')}</button></div>
+        <div class="cell center margin-bottom-1"><button type="button" class="center button hollow" data-close aria-label="Close modal">${__('Close', 'zume')}</button></div>
     </div>
   `)
 
