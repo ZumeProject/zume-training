@@ -359,7 +359,7 @@ class Zume_Dashboard {
             $key_beginning = substr( $key, 0, 10 );
             if ( 'zume_group' == $key_beginning ) { // check if zume_group
                 $value = maybe_unserialize( $v );
-                $next_session = Zume_Course::get_next_session( $value );
+                $next_session = self::get_next_session( $value );
                 if ( $highest_session < $next_session ) {
                     $highest_session = $next_session;
                 }
@@ -370,13 +370,84 @@ class Zume_Dashboard {
             $key_beginning = substr( $key, 0, 10 );
             if ( 'zume_group' == $key_beginning ) { // check if zume_group
                 $value = maybe_unserialize( $v );
-                $next_session = Zume_Course::get_next_session( $value );
+                $next_session = self::get_next_session( $value );
                 if ( $highest_session < $next_session ) {
                     $highest_session = $next_session;
                 }
             }
         }
         return $highest_session;
+    }
+
+    /**
+     * @version 3
+     * @param $group_meta
+     * @return int
+     */
+    public static function get_next_session( $group_meta ) {
+
+        if ( $group_meta['session_1'] == false ) {
+            return 1;
+        }
+        if ( $group_meta['session_2'] == false ) {
+            return 2;
+        }
+        if ( $group_meta['session_3'] == false ) {
+            return 3;
+        }
+        if ( $group_meta['session_4'] == false ) {
+            return 4;
+        }
+        if ( $group_meta['session_5'] == false ) {
+            return 5;
+        }
+        if ( $group_meta['session_6'] == false ) {
+            return 6;
+        }
+        if ( $group_meta['session_7'] == false ) {
+            return 7;
+        }
+        if ( $group_meta['session_8'] == false ) {
+            return 8;
+        }
+        if ( $group_meta['session_9'] == false ) {
+            return 9;
+        }
+        if ( $group_meta['session_10'] == false ) {
+            return 10;
+        }
+        if ( $group_meta['session_10'] == true ) {
+            return 11;
+        }
+        return 0;
+
+    }
+
+    public static function update_session_complete( $group_key, $session_id, $user_id = '' ) {
+        if ( empty( $user_id ) ) {
+            $user_id = get_current_user_id();
+        }
+        $group_meta = get_user_meta( $user_id, $group_key, true );
+        if ( empty( $group_meta ) ) {
+            return false;
+        }
+
+        // update current session complete
+        $session_key = 'session_' . $session_id;
+        $group_meta[ $session_key ] = true;
+        $session_date_key = $session_key . '_complete';
+        if ( '' == $group_meta[ $session_date_key ] ) {
+            $group_meta[ $session_date_key ] = current_time( 'mysql' );
+        }
+
+        // update next session
+        $next_session = self::get_next_session( $group_meta );
+        $group_meta['next_session'] = $next_session;
+
+        update_user_meta( $user_id, $group_key, $group_meta );
+
+        return true;
+
     }
 
     public static function get_available_videos_count( $next_session ) {

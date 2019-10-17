@@ -106,6 +106,7 @@ function zume_site_scripts() {
                 'theme_uri' => get_stylesheet_directory_uri(),
                 'nonce' => wp_create_nonce( 'wp_rest' ),
                 'current_user_id' => get_current_user_id(),
+                'logged_in' => is_user_logged_in(),
                 "current_language" => $current_language,
                 "groups" => ( is_user_logged_in() ) ? Zume_v4_Groups::get_all_groups() : [],
                 "progress" => ( is_user_logged_in() ) ? Zume_v4_Progress::get_user_progress() : [],
@@ -147,6 +148,7 @@ function zume_site_scripts() {
                   'login' => esc_url( zume_login_url( $current_language ) ),
                   'register' => esc_url( zume_register_url( $current_language ) ),
                   'training' => esc_url( zume_training_url( $current_language) ),
+                  'course' => esc_url( zume_course_url() ),
                 ],
                 "translations" => [
                     'titles' => [

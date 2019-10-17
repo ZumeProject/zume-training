@@ -56,7 +56,7 @@ require_once( 'functions/zume-functions.php' ); // general zume functions
 require_once( 'functions/zume-dashboard.php' ); // zume dashboard
 require_once( 'functions/zume-welcome-messages.php' ); // zume welcome messages
 require_once( 'functions/logging/zume-logging.php' ); // zume logging of critical path actions
-require_once( 'functions/zume-stats.php' ); // zume logging of critical path actions
+require_once( 'functions/zume-stats.php' ); // @todo remove zume logging of critical path actions
 require_once( 'functions/zume-three-month-plan.php' );
 
 // zume 4.0
@@ -64,6 +64,8 @@ require_once( 'functions/zume-v4-rest-api.php' );
 require_once( 'functions/zume-v4-users.php' );
 require_once( 'functions/zume-v4-groups.php' );
 require_once( 'functions/zume-v4-progress.php' );
+require_once( 'functions/zume-content.php' );
+
 
 
 

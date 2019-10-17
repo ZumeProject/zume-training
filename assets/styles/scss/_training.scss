@@ -12,6 +12,10 @@
         line-height: 1.3em;
         color: $primary-color;
     }
+    .secondary {
+        color: $white;
+        border:0;
+    }
     .h2-caption {
         color: $primary-color;
         font-size: 1rem;
@@ -141,6 +145,7 @@
         height: 15px;
         display: inline-block;
         vertical-align: middle;
+        cursor:pointer;
     }
     .member {
         padding-left: 10px;

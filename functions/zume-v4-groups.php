@@ -195,15 +195,23 @@ class Zume_v4_Groups {
         }
     }
 
+    /**
+     * @version 4
+     * @param $group_key
+     * @return bool
+     */
     public static function delete_group( $group_key ) {
         $user_id = get_current_user_id();
-        delete_user_meta( $user_id, $group_key );
+
+        $result = delete_user_meta( $user_id, $group_key );
+
         do_action( 'zume_delete_group', $user_id, $group_key );
+
+        return $result;
     }
 
     /**
      * @version 4
-     *
      * @param $group_key
      * @return bool|int|WP_Error
      */
@@ -254,7 +262,7 @@ class Zume_v4_Groups {
             $key_beginning = substr( $key, 0, 10 );
             if ( 'zume_group' == $key_beginning ) { // check if zume_group
                 $value = maybe_unserialize( $v );
-                $next_session = Zume_Course::get_next_session( $value );
+                $next_session = self::get_next_session( $value );
                 if ( $highest_session < $next_session ) {
                     $highest_session = $next_session;
                 }
@@ -265,13 +273,81 @@ class Zume_v4_Groups {
             $key_beginning = substr( $key, 0, 10 );
             if ( 'zume_group' == $key_beginning ) { // check if zume_group
                 $value = maybe_unserialize( $v );
-                $next_session = Zume_Course::get_next_session( $value );
+                $next_session = self::get_next_session( $value );
                 if ( $highest_session < $next_session ) {
                     $highest_session = $next_session;
                 }
             }
         }
         return $highest_session;
+    }
+
+    /**
+     * @version 4
+     * @param $zume_group_key
+     * @return string|void
+     */
+    public static function get_group_public_key( $zume_group_key ) {
+        global $wpdb;
+        $zume_group_meta = $wpdb->get_var( $wpdb->prepare( "
+            SELECT meta_value 
+            FROM $wpdb->usermeta 
+            WHERE meta_key = %s
+        ",
+            $zume_group_key
+        ));
+
+        if ( ! $zume_group_meta ) {
+            return __( '( Key not available. Check dashboard. )', 'zume' );
+        }
+
+        $zume_group_meta = self::verify_group_array_filter( $zume_group_meta );
+
+        return $zume_group_meta['public_key'] ?? '';
+    }
+
+    /**
+     * @version 4
+     * @param array $group_meta
+     * @return int
+     */
+    public static function get_next_session( array $group_meta ) : int {
+
+        if ( $group_meta['session_1'] === false ) {
+            return 1;
+        }
+        if ( $group_meta['session_2'] === false ) {
+            return 2;
+        }
+        if ( $group_meta['session_3'] === false ) {
+            return 3;
+        }
+        if ( $group_meta['session_4'] === false ) {
+            return 4;
+        }
+        if ( $group_meta['session_5'] === false ) {
+            return 5;
+        }
+        if ( $group_meta['session_6'] === false ) {
+            return 6;
+        }
+        if ( $group_meta['session_7'] === false ) {
+            return 7;
+        }
+        if ( $group_meta['session_8'] === false ) {
+            return 8;
+        }
+        if ( $group_meta['session_9'] === false ) {
+            return 9;
+        }
+        if ( $group_meta['session_10'] === false ) {
+            return 10;
+        }
+        if ( $group_meta['session_10'] === true ) {
+            return 11;
+        }
+        return 1;
+
     }
 
     public static function get_available_videos_count( $next_session ) {
@@ -515,22 +591,7 @@ class Zume_v4_Groups {
         do_action( 'zume_coleader_invitation_response', $user->ID, $group_key, $decision );
     }
 
-    /**
-     * Gets the group array by the group key
-     *
-     * @param $group_key
-     * @return array|bool
-     */
-    public static function get_group_by_key( $group_key ) {
-        global $wpdb;
-        $result = $wpdb->get_var( $wpdb->prepare( "SELECT meta_value FROM $wpdb->usermeta WHERE meta_key = %s", $group_key ) );
-        if ( empty( $result ) ) {
-            return false;
-        }
 
-        $group_meta = self::verify_group_array_filter( $result );
-        return $group_meta;
-    }
 
     /**
      * Gets user owned groups
@@ -796,8 +857,6 @@ class Zume_v4_Groups {
             }
         }
 
-
-
         return $group_meta;
     }
 
@@ -843,11 +902,15 @@ class Zume_v4_Groups {
 
         if ( ! empty( $owned_groups ) ) {
             foreach ( $owned_groups as $g ) {
+                $check_sum = hash( 'sha256', serialize($g ) );
+                $g['zume_check_sum'] = $check_sum;
                 $groups[$g['last_modified_date']] = $g;
             }
         }
         if ( ! empty( $colead_groups ) ) {
             foreach ( $colead_groups as $g ) {
+                $check_sum = hash( 'sha256', serialize($g ) );
+                $g['zume_check_sum'] = $check_sum;
                 $groups[$g['last_modified_date']] = $g;
             }
         }
@@ -860,11 +923,48 @@ class Zume_v4_Groups {
 
     /**
      * @version 4
-     * @param $key
-     * @param $value
+     * @param $group_key
+     * @return array|bool
+     */
+    public static function get_group_by_key( $group_key ) {
+        global $wpdb;
+
+        $group_meta = $wpdb->get_var( $wpdb->prepare( "SELECT meta_value FROM $wpdb->usermeta WHERE meta_key = %s", $group_key ) );
+        if ( empty( $group_meta ) ) {
+            return false;
+        }
+
+        return self::verify_group_array_filter( $group_meta );
+    }
+
+    /**
+     * @version 4
+     * @param string $foreign_key
+     * @return array
+     */
+    public static function get_group_by_foreign_key( string $foreign_key ) : array {
+        global $wpdb;
+        $group = $wpdb->get_var( $wpdb->prepare( "
+            SELECT meta_value FROM $wpdb->usermeta WHERE meta_key LIKE %s AND meta_value LIKE %s LIMIT 1
+        ",
+            $wpdb->esc_like( 'zume_group' ) . '%',
+            '%' . $wpdb->esc_like( $foreign_key ) . '%'
+        ) );
+
+        if ( empty( $group ) ) {
+            return [];
+        }
+
+        return self::verify_group_array_filter( $group );
+    }
+
+    /**
+     * @version 4
+     * @param string $key
+     * @param string $value
      * @return array|bool|int|mixed|WP_Error
      */
-    public static function update_group_name( $key, $value ) {
+    public static function update_group_name( string $key, string $value ) {
         $modified_group = $group = self::get_current_user_group( $key );
         if ( is_wp_error( $group ) ) {
             return $group;
@@ -879,6 +979,68 @@ class Zume_v4_Groups {
         self::filter_last_modified_to_now( $modified_group ); // add new timestamp
 
         return update_user_meta( get_current_user_id(), $key, $modified_group, $group );
+    }
+
+
+    /**
+     * @version 4
+     * @param string $key
+     * @param int $session_number
+     * @param bool $toggle
+     * @return bool|int
+     */
+    public static function update_group_session_status( string $key, $session_number, bool $toggle = false ) {
+
+        // get current userid
+        $user = get_user_by( 'id', get_current_user_id() );
+        $user_id = $user->ID;
+        $user_email = $user->user_email;
+
+        // get group by key
+        $modified_group = $group = self::get_group_by_key( $key );
+        if ( empty( $modified_group )  ) {
+            return false;
+        }
+
+        // test if userid is owner
+        if ( intval( $group['owner'] ) !== intval( $user_id ) ) {
+            // test if useremail is in coleaders
+            if ( array_search( $user_email, $group['coleaders'] ) === false ) {
+                dt_write_log( new WP_Error(__METHOD__, 'Did not find matching owner id or coleader id for group.'));
+                return false;
+            }
+        }
+
+        // update session and time
+        if ( ! isset( $modified_group['session_'.$session_number] ) ) {
+            dt_write_log( new WP_Error(__METHOD__, 'Did not find matching session number.'));
+            return false;
+        }
+
+        /**
+         * Toggle status
+         * @note toggle allows removal of session information
+         */
+        if ( ! $modified_group['session_'.$session_number] ) {
+            /* current session is false  = add session */
+            $modified_group['session_'.$session_number] = true;
+            $modified_group['session_'.$session_number.'_complete'] = current_time( 'mysql' );
+            $modified_group['next_session'] = self::get_next_session( $modified_group );
+
+        }  else if ( $modified_group['session_'.$session_number] && $toggle ) {
+            /* current session is true, toggle is true = remove session */
+            $modified_group['session_'.$session_number] = false;
+            $modified_group['session_'.$session_number.'_complete'] = '';
+            $modified_group['next_session'] = self::get_next_session( $modified_group );
+
+        } else {
+            /* current session is true, toggle is false = do nothing */
+            return false;
+        }
+
+        self::filter_last_modified_to_now( $modified_group ); // add new timestamp
+
+        return update_user_meta( $group['owner'], $group['key'], $modified_group, $group );
     }
 
     /**

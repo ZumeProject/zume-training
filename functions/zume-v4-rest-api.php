@@ -134,6 +134,9 @@ class Zume_v4_REST_API {
             case 'coleaders_delete':
                 return Zume_v4_Groups::delete_coleader( $params['value'], $params['key'] );
                 break;
+            case 'session_complete':
+                return Zume_v4_Groups::update_group_session_status( $params['key'], $params['value'], true );
+                break;
             case 'archive_group':
                 $result = Zume_v4_Groups::archive_group( $params['key'] );
                 if ( $result ) {
@@ -143,6 +146,13 @@ class Zume_v4_REST_API {
                 break;
             case 'activate_group':
                 $result = Zume_v4_Groups::activate_group( $params['key'] );
+                if ( $result ) {
+                    return Zume_v4_Groups::get_all_groups( get_current_user_id() );
+                }
+                return false;
+                break;
+            case 'delete_group':
+                $result = Zume_v4_Groups::delete_group( $params['key'] );
                 if ( $result ) {
                     return Zume_v4_Groups::get_all_groups( get_current_user_id() );
                 }

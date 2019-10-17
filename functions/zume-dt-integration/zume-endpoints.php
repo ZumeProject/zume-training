@@ -123,14 +123,14 @@ class Zume_Integration_Endpoints
                     }
                 } elseif ( $params['type'] === 'group' ) {
                     // get user_id by zume foreign key
-                    $group = Zume_Integration::get_group_by_foreign_key( $params['zume_foreign_key'] );
+                    $group = Zume_v4_Groups::get_group_by_foreign_key( $params['zume_foreign_key'] );
                     if ( empty( $group ) ) {
                         return new WP_Error( 'group_lookup_failure', 'Did not find group.' );
                     }
 
                     // prepare user data
                     $zume = new Zume_Integration();
-                    $group_meta = $zume->get_transfer_group_array( $group['group_key'], $group['user_id'] );
+                    $group_meta = $zume->get_transfer_group_array( $group['key'], $group['owner'] );
 
                     // check supplied check_sum
                     $check_sum = $group_meta['zume_check_sum'];

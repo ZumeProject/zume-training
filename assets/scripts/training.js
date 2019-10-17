@@ -111,18 +111,7 @@ function get_groups() {
       <div class="grid-x grid-padding-x">
         <div class="cell padding-bottom-1 group-name small-6"  id="group_name_${v.key}"><!--Full width top --></div><div class="small-6"></div>
         <div class="cell small-2"> <!-- Column 1 -->
-           <div class="grid-y" id="session_list_${v.key}">
-              <div class="cell"><a href=""><i class="g-session-icon" id="s1${v.key}"></i> Session 1</a></div>    
-              <div class="cell"><a href=""><i class="g-session-icon" id="s2${v.key}"></i> Session 2</a></div>    
-              <div class="cell"><a href=""><i class="g-session-icon" id="s3${v.key}"></i> Session 3</a></div>    
-              <div class="cell"><a href=""><i class="g-session-icon" id="s4${v.key}"></i> Session 4</a></div>    
-              <div class="cell"><a href=""><i class="g-session-icon" id="s5${v.key}"></i> Session 5</a></div>    
-              <div class="cell"><a href=""><i class="g-session-icon" id="s6${v.key}"></i> Session 6</a></div>    
-              <div class="cell"><a href=""><i class="g-session-icon" id="s7${v.key}"></i> Session 7</a></div>    
-              <div class="cell"><a href=""><i class="g-session-icon" id="s8${v.key}"></i> Session 8</a></div>    
-              <div class="cell"><a href=""><i class="g-session-icon" id="s9${v.key}"></i> Session 9</a></div>    
-              <div class="cell"><a href=""><i class="g-session-icon" id="s10${v.key}"></i> Session 10</a></div>
-           </div>
+           <div class="grid-y" id="session_list_${v.key}"><!-- Session List --></div>
         </div> <!-- Column 1 -->
         <div class="cell small-4">
             <div class="grid-y">
@@ -156,7 +145,7 @@ function get_groups() {
       write_add_group_button()
       write_group_name(v.key, i )
       write_member_count( v.key, v )
-      write_session_progress( v.key, v )
+      write_session_progress( v.key, i )
       write_members_list( v.key, i )
       write_member_list_button( v.key, i )
       load_location_add_button( v.key )
@@ -210,14 +199,52 @@ function save_group_name( key, i ) {
   write_group_name( key, i )
 }
 
-function write_session_progress( key, group ) {
-  let i = 1
-  while ( i < 11) {
-    if( group['session_'+i] ) {
-      jQuery('#s'+i+key).addClass('complete')
+function write_session_progress( key, i ) {
+  let div = jQuery('#session_list_'+key)
+  let group = zumeTraining.groups[i]
+
+  div.empty().append(`
+  <div class="cell"><i class="g-session-icon" id="s1${key}" onclick="save_session_status('${key}', ${i}, 1)"></i> <a href="${get_course_url_with_params( i, 1 )}">${__('Session', 'zume')} 1</a></div>    
+  <div class="cell"><i class="g-session-icon" id="s2${key}" onclick="save_session_status('${key}', ${i}, 2)"></i> <a href="${get_course_url_with_params( i, 2 )}">${__('Session', 'zume')} 2</a></div>    
+  <div class="cell"><i class="g-session-icon" id="s3${key}" onclick="save_session_status('${key}', ${i}, 3)"></i> <a href="${get_course_url_with_params( i, 3 )}">${__('Session', 'zume')} 3</a></div>    
+  <div class="cell"><i class="g-session-icon" id="s4${key}" onclick="save_session_status('${key}', ${i}, 4)"></i> <a href="${get_course_url_with_params( i, 4 )}">${__('Session', 'zume')} 4</a></div>    
+  <div class="cell"><i class="g-session-icon" id="s5${key}" onclick="save_session_status('${key}', ${i}, 5)"></i> <a href="${get_course_url_with_params( i, 5 )}">${__('Session', 'zume')} 5</a></div>    
+  <div class="cell"><i class="g-session-icon" id="s6${key}" onclick="save_session_status('${key}', ${i}, 6)"></i> <a href="${get_course_url_with_params( i, 6 )}">${__('Session', 'zume')} 6</a></div>    
+  <div class="cell"><i class="g-session-icon" id="s7${key}" onclick="save_session_status('${key}', ${i}, 7)"></i> <a href="${get_course_url_with_params( i, 7 )}">${__('Session', 'zume')} 7</a></div>    
+  <div class="cell"><i class="g-session-icon" id="s8${key}" onclick="save_session_status('${key}', ${i}, 8)"></i> <a href="${get_course_url_with_params( i, 8 )}">${__('Session', 'zume')} 8</a></div>    
+  <div class="cell"><i class="g-session-icon" id="s9${key}" onclick="save_session_status('${key}', ${i}, 9)"></i> <a href="${get_course_url_with_params( i, 9 )}">${__('Session', 'zume')} 9</a></div>    
+  <div class="cell"><i class="g-session-icon" id="s10${key}" onclick="save_session_status('${key}', ${i}, 10)"></i> <a href="${get_course_url_with_params( i, 10 )}">${__('Session', 'zume')} 10</a></div>
+  `)
+
+  let x = 1
+  while ( x < 11) {
+    if( group['session_'+x] ) {
+      jQuery('#s'+x+key).addClass('complete')
     }
-    i++;
+    x++;
   }
+}
+function save_session_status( key, i, session_number ) {
+
+  // pre-toggle assuming success
+  let item = jQuery('#s'+session_number+key)
+  if ( item.hasClass("complete") ) {
+    item.removeClass('complete')
+  } else {
+    item.addClass('complete')
+  }
+
+  API.update_group( key, session_number, 'session_complete' ).fail(function(e){
+      // reverse toggle
+      if ( item.hasClass("complete") ) {
+        item.removeClass('complete')
+      } else {
+        item.addClass('complete')
+      }
+      alert('Connection to server failed. Try again.')
+      conole.log('update group session status fail')
+      console.log(e)
+    })
 }
 
 function write_member_count( key, group ) {
@@ -425,29 +452,27 @@ function write_meta_column( key, i ) {
   if ( indexMismatch(key,i) ) {
     return false;
   }
-
   let div = jQuery('#meta_column_'+key)
-  div.empty().append(`
-  <div class="cell"><button type="button" onclick="open_session( ${zumeTraining.groups[i].next_session}, '${key}' );" class="button expanded">${__('Next Session', 'zume')} ${zumeTraining.groups[i].next_session}</button><!-- Next session --></div>
-  `)
+  div.empty()
+
+  if ( zumeTraining.groups[i].next_session > 10 ) {
+    div.append(`<div class="cell center">${__('Course Complete', 'zume')}</div>`)
+  } else {
+    div.append(`
+      <div class="cell"><button type="button" onclick="open_session( ${zumeTraining.groups[i].next_session}, '${key}', ${i} );" class="button expanded">${__('Next Session', 'zume')} ${zumeTraining.groups[i].next_session}</button><!-- Next session --></div>
+     `)
+  }
 
   // if owner of the group
   if ( isOwner( key, i ) ) {
     div.append(`<div class="cell center"><button type="button" class="button clear small" onclick="archive_group( '${key}', ${i} );">${__('Archive', 'zume')}</button></div>`)
   }
 }
-
-function open_session( session_number, key ) {
-  if ( key /** logged in */) {
-    jQuery('#training-modal-content').empty().html(`
-    <div class="center">
-        <h2>Welcome to Session ${session_number}</h2>
-        add group selection dropdown
-        and add member count check
-        <button type="submit" class="button hollow large">${__('Continue', 'zume')}</button>
-    </div>
-  `)
-  } else {
+function get_course_url_with_params( i, session_number ) {
+  return zumeTraining.site_urls.course + '?group=' + zumeTraining.groups[i].foreign_key + '&session=' + session_number
+}
+function open_session( session_number, key, i ) {
+  if ( ! zumeTraining.logged_in ) {
     jQuery('#training-modal-content').empty().html(`
     <div class="grid-y padding-top-1 training">
         <div class="cell"><h2 class="center">Welcome to Session ${session_number}</h2></div>
@@ -466,6 +491,22 @@ function open_session( session_number, key ) {
             </div>
         </div>
         <div class="cell center margin-bottom-1"><button type="submit" class="center button hollow">${__('Continue', 'zume')}</button></div>
+    </div>
+  `)
+  } else if ( key /** logged in */) {
+    window.location = get_course_url_with_params( i, session_number )
+    return;
+  } else { /* no key */
+    jQuery('#training-modal-content').empty().html(`
+    <div class="grid-y padding-top-1 grid-padding-y training">
+      <div class="cell"><h2 class="center">Session ${session_number}</h2></div>
+      <div class="cell center">
+        add group selection dropdown<br>
+        and add member count check
+      </div>
+      <div class="cell center margin-bottom-1">
+        <button type="submit" class="center button">${__('Continue', 'zume')}</button>
+      </div>
     </div>
   `)
   }
@@ -523,7 +564,7 @@ function archive_group( key, i, verified ) {
     jQuery('#training-modal-content').empty().append(`
     <div class="grid-x grid-padding-y training">
         <div class="cell center">
-            Are you sure you want to archive this group?
+            ${__('Are you sure you want to archive this group?', 'zume')}
         </div>
         <div class="cell center">
         <button type="button" class="center button" onclick="archive_group( '${key}', ${i}, 1 )" data-close aria-label="Close modal">${__('Archive', 'zume')}</button> 
@@ -539,16 +580,17 @@ function write_view_archive_button() {
   div.empty()
   div.append(`
   <div class="grid-x padding-top-2">
-    <div class="cell center"><button type="button" class="button hollow" onclick="open_archive_groups()" >Show Archived Groups</button> </div>
+    <div class="cell center"><button type="button" class="button hollow" onclick="open_archive_groups()" >${__('Show Archived Groups', 'zume')}</button> </div>
   </div>
   `)
-
 }
 function open_archive_groups() {
   let list = ''
   jQuery.each( zumeTraining.groups, function(i,v) {
     if ( v.closed === true ) {
-      list += '<tr id="archive_'+v.key+'"><td>'+v.group_name+'</td><td><button type="button" class="button clear padding-bottom-0" onclick="activate_group(\''+v.key+'\', '+i+')">Re-Activate</button></td><td><button type="button" class="button alert clear padding-bottom-0">Delete Forever</button></td></tr>'
+      list += '<tr id="archive_'+v.key+'"><td>'+v.group_name+'</td>' +
+        '<td><button type="button" class="button clear padding-bottom-0" onclick="activate_group(\''+v.key+'\', '+i+')">'+__('Re-Activate', 'zume')+'</button></td>' +
+        '<td><button type="button" class="button alert clear padding-bottom-0" onclick="delete_group( \''+v.key+'\', '+i+' )">'+__('Delete Forever', 'zume')+'</button></td></tr>'
     }
   })
   jQuery('#training-modal-content').empty().append(`
@@ -570,12 +612,43 @@ function activate_group( key, i ) {
 
   API.update_group( key, 'activate', 'activate_group' ).done(function(data) {
     zumeTraining.groups = data
-    jQuery('#archive_'+key).remove()
     get_groups()
+    open_archive_groups()
   })
     .fail(function(e){
       console.log(e)
     })
+}
+function delete_group( key, i, verified ) {
+  if ( ! isOwner(key,i) ) {
+    return false;
+  }
+
+  if ( verified ) {
+    API.update_group( key, 'delete', 'delete_group' ).done(function(data) {
+      zumeTraining.groups = data
+      get_groups()
+      open_archive_groups()
+    })
+      .fail(function(e){
+        console.log('delete_group error')
+        console.log(e)
+      })
+  } else {
+    jQuery('#training-modal-content').empty().append(`
+    <div class="grid-x grid-padding-y training">
+        <div class="cell center">
+            ${__('Are you sure you want to delete this group?', 'zume')}
+        </div>
+        <div class="cell center">${zumeTraining.groups[i].group_name}</div>
+        <div class="cell center">
+        <button type="button" class="center button" onclick="delete_group( '${key}', ${i}, 1 )" >${__('Delete Forever', 'zume')}</button> 
+        <button type="button" class="center button hollow" onclick="open_archive_groups()">${__('Cancel', 'zume')}</button>
+        </div>
+    </div>
+  `)
+    jQuery('#training-modal').foundation('open')
+  }
 }
 
 /** Tests if current user is owner */
@@ -860,10 +933,10 @@ div.append(`
 </div> <!-- cell -->    
 `)
   load_progress()
-  progress_icons_listener()
+  listen_progress_item()
   load_progress_totals()
 }
-function progress_icons_listener() {
+function listen_progress_item() {
   jQuery('.p-icon').on( 'click', function(){
     let item = jQuery(this)
     if ( item.hasClass("complete") ) {
