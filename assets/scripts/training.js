@@ -204,16 +204,16 @@ function write_session_progress( key, i ) {
   let group = zumeTraining.groups[i]
 
   div.empty().append(`
-  <div class="cell"><i class="g-session-icon" id="s1${key}" onclick="save_session_status('${key}', ${i}, 1)"></i> <a href="${get_course_url_with_params( i, 1 )}">${__('Session', 'zume')} 1</a></div>    
-  <div class="cell"><i class="g-session-icon" id="s2${key}" onclick="save_session_status('${key}', ${i}, 2)"></i> <a href="${get_course_url_with_params( i, 2 )}">${__('Session', 'zume')} 2</a></div>    
-  <div class="cell"><i class="g-session-icon" id="s3${key}" onclick="save_session_status('${key}', ${i}, 3)"></i> <a href="${get_course_url_with_params( i, 3 )}">${__('Session', 'zume')} 3</a></div>    
-  <div class="cell"><i class="g-session-icon" id="s4${key}" onclick="save_session_status('${key}', ${i}, 4)"></i> <a href="${get_course_url_with_params( i, 4 )}">${__('Session', 'zume')} 4</a></div>    
-  <div class="cell"><i class="g-session-icon" id="s5${key}" onclick="save_session_status('${key}', ${i}, 5)"></i> <a href="${get_course_url_with_params( i, 5 )}">${__('Session', 'zume')} 5</a></div>    
-  <div class="cell"><i class="g-session-icon" id="s6${key}" onclick="save_session_status('${key}', ${i}, 6)"></i> <a href="${get_course_url_with_params( i, 6 )}">${__('Session', 'zume')} 6</a></div>    
-  <div class="cell"><i class="g-session-icon" id="s7${key}" onclick="save_session_status('${key}', ${i}, 7)"></i> <a href="${get_course_url_with_params( i, 7 )}">${__('Session', 'zume')} 7</a></div>    
-  <div class="cell"><i class="g-session-icon" id="s8${key}" onclick="save_session_status('${key}', ${i}, 8)"></i> <a href="${get_course_url_with_params( i, 8 )}">${__('Session', 'zume')} 8</a></div>    
-  <div class="cell"><i class="g-session-icon" id="s9${key}" onclick="save_session_status('${key}', ${i}, 9)"></i> <a href="${get_course_url_with_params( i, 9 )}">${__('Session', 'zume')} 9</a></div>    
-  <div class="cell"><i class="g-session-icon" id="s10${key}" onclick="save_session_status('${key}', ${i}, 10)"></i> <a href="${get_course_url_with_params( i, 10 )}">${__('Session', 'zume')} 10</a></div>
+  <div class="cell"><i class="g-session-icon" id="s1${key}" onclick="save_session_status('${key}', ${i}, 1)"></i> <a href="${get_course_url_with_params(1, i )}">${__('Session', 'zume')} 1</a></div>    
+  <div class="cell"><i class="g-session-icon" id="s2${key}" onclick="save_session_status('${key}', ${i}, 2)"></i> <a href="${get_course_url_with_params(2, i )}">${__('Session', 'zume')} 2</a></div>    
+  <div class="cell"><i class="g-session-icon" id="s3${key}" onclick="save_session_status('${key}', ${i}, 3)"></i> <a href="${get_course_url_with_params(3, i )}">${__('Session', 'zume')} 3</a></div>    
+  <div class="cell"><i class="g-session-icon" id="s4${key}" onclick="save_session_status('${key}', ${i}, 4)"></i> <a href="${get_course_url_with_params(4, i )}">${__('Session', 'zume')} 4</a></div>    
+  <div class="cell"><i class="g-session-icon" id="s5${key}" onclick="save_session_status('${key}', ${i}, 5)"></i> <a href="${get_course_url_with_params(5, i )}">${__('Session', 'zume')} 5</a></div>    
+  <div class="cell"><i class="g-session-icon" id="s6${key}" onclick="save_session_status('${key}', ${i}, 6)"></i> <a href="${get_course_url_with_params(6, i )}">${__('Session', 'zume')} 6</a></div>    
+  <div class="cell"><i class="g-session-icon" id="s7${key}" onclick="save_session_status('${key}', ${i}, 7)"></i> <a href="${get_course_url_with_params(7, i )}">${__('Session', 'zume')} 7</a></div>    
+  <div class="cell"><i class="g-session-icon" id="s8${key}" onclick="save_session_status('${key}', ${i}, 8)"></i> <a href="${get_course_url_with_params(8, i )}">${__('Session', 'zume')} 8</a></div>    
+  <div class="cell"><i class="g-session-icon" id="s9${key}" onclick="save_session_status('${key}', ${i}, 9)"></i> <a href="${get_course_url_with_params(9, i )}">${__('Session', 'zume')} 9</a></div>    
+  <div class="cell"><i class="g-session-icon" id="s10${key}" onclick="save_session_status('${key}', ${i}, 10)"></i> <a href="${get_course_url_with_params(10, i )}">${__('Session', 'zume')} 10</a></div>
   `)
 
   let x = 1
@@ -268,11 +268,9 @@ function save_member_count( key, i ) {
     if ( zumeTraining.groups[i].coleaders_accepted.length > count ) {
       count = zumeTraining.groups[i].coleaders_accepted.length
     }
-    API.update_group( key, _.escape( count ), 'members' )
-
-    zumeTraining.groups[i].members = _.escape( count )
-
-    console.log(count)
+    API.update_group( key, _.escape( count ), 'members' ).done(function(data){
+      zumeTraining.groups[i].members = _.escape( count )
+    })
   }
 }
 
@@ -468,8 +466,12 @@ function write_meta_column( key, i ) {
     div.append(`<div class="cell center"><button type="button" class="button clear small" onclick="archive_group( '${key}', ${i} );">${__('Archive', 'zume')}</button></div>`)
   }
 }
-function get_course_url_with_params( i, session_number ) {
-  return zumeTraining.site_urls.course + '?group=' + zumeTraining.groups[i].foreign_key + '&session=' + session_number
+function get_course_url_with_params( session_number, i ) {
+  if ( i === undefined ) {
+    return zumeTraining.site_urls.course + '?session=' + session_number
+  } else {
+    return zumeTraining.site_urls.course + '?group=' + zumeTraining.groups[i].foreign_key + '&session=' + session_number
+  }
 }
 function open_session( session_number, key, i ) {
   if ( ! zumeTraining.logged_in ) {
@@ -494,17 +496,17 @@ function open_session( session_number, key, i ) {
     </div>
   `)
   } else if ( key /** logged in */) {
-    window.location = get_course_url_with_params( i, session_number )
+    window.location = get_course_url_with_params( session_number, i )
     return;
   } else { /* no key */
 
     let list = ''
     jQuery.each(zumeTraining.groups, function(i,v){
       if ( v.closed !== true ) {
-        list += '<option value="'+_.escape( v.foreign_key )+'">'+_.escape( v.group_name )+'</option>'
+        list += '<option value="'+i+'">'+_.escape( v.group_name )+'</option>'
       }
     })
-    list += '<option>------------</option><option>Not Leading a Group</option><option value="create_new">Create New Group</option>'
+    list += '<option>------------</option><option value="none">Not Leading a Group</option><option value="create_new">Create New Group</option>'
 
     jQuery('#training-modal-content').empty().html(`
       <div class="grid-y padding-top-1 grid-padding-y training">
@@ -515,7 +517,7 @@ function open_session( session_number, key, i ) {
           <div id="create_new_group"></div>
         </div>
         <div class="cell center margin-bottom-1" id="continue_button">
-          <button type="submit" class="center button large">${__('Continue', 'zume')}</button>
+          <button type="submit" class="center button large" onclick="continue_to_session( ${session_number} )">${__('Continue', 'zume')}</button>
         </div>
       </div>
     `)
@@ -555,7 +557,7 @@ function save_new_group_and_continue( session_number ) {
   if ( group_name && members ) {
     API.create_group( _.escape( group_name ), _.escape( members ) ).done(function(data) {
       zumeTraining.groups = data
-      window.location = get_course_url_with_params(0, session_number )
+      window.location = get_course_url_with_params( session_number, 0 )
     })
       .fail(function(e){
         alert('Connection to server failed. Try again.')
@@ -564,7 +566,14 @@ function save_new_group_and_continue( session_number ) {
       })
   }
 }
-
+function continue_to_session( session_number ) {
+  let item = jQuery('#group_selection').val()
+  if( item === 'none' || item === 'create_new' ) {
+    window.location = get_course_url_with_params( session_number )
+  } else {
+    window.location = get_course_url_with_params( session_number, item )
+  }
+}
 
 function write_add_group_button() {
   jQuery('#add_group_container').html(`<button class="button hollow small add-group-button" type="button"><i class="fi-plus"></i> ${__('Add Group', 'zume')}</button>`)
