@@ -497,22 +497,75 @@ function open_session( session_number, key, i ) {
     window.location = get_course_url_with_params( i, session_number )
     return;
   } else { /* no key */
+
+    let list = ''
+    jQuery.each(zumeTraining.groups, function(i,v){
+      if ( v.closed !== true ) {
+        list += '<option value="'+_.escape( v.foreign_key )+'">'+_.escape( v.group_name )+'</option>'
+      }
+    })
+    list += '<option>------------</option><option>Not Leading a Group</option><option value="create_new">Create New Group</option>'
+
     jQuery('#training-modal-content').empty().html(`
-    <div class="grid-y padding-top-1 grid-padding-y training">
-      <div class="cell"><h2 class="center">Session ${session_number}</h2></div>
-      <div class="cell center">
-        add group selection dropdown<br>
-        and add member count check
+      <div class="grid-y padding-top-1 grid-padding-y training">
+        <div class="cell"><h2 class="center">${__('Session', 'zume')} ${session_number}</h2></div>
+        <div class="cell center">
+        ${__('Which group are you leading?', 'zume')}<br>
+          <select onchange="check_group_selection(${session_number})" id="group_selection">${list}</select><br>
+          <div id="create_new_group"></div>
+        </div>
+        <div class="cell center margin-bottom-1" id="continue_button">
+          <button type="submit" class="center button large">${__('Continue', 'zume')}</button>
+        </div>
       </div>
-      <div class="cell center margin-bottom-1">
-        <button type="submit" class="center button">${__('Continue', 'zume')}</button>
-      </div>
-    </div>
-  `)
+    `)
+
   }
 
   jQuery('#training-modal').foundation('open')
 }
+function check_group_selection( session_number ){
+  let item = jQuery('#group_selection')
+  let new_div = jQuery('#create_new_group')
+  let button = jQuery('#continue_button')
+
+  if ( item.val() === 'create_new' ) {
+    console.log('create new')
+    new_div.empty().append(`
+    <hr>
+    <div class="grid-x">
+      <div class="cell center" id="new-group">
+          <input type="text" class="input-group-field add-group-input" placeholder="${__('Group Name', 'zume')}" title="${__('Group Name', 'zume')}" name="group_name" id="group_name" /> <br>
+          <input type="number" placeholder="${__('Number of Members', 'zume')}" title="${__('Number of Members', 'zume')}" class="input-group-field add-group-input" name="members" /> <br>
+          <button type="button" class="button" onclick="save_new_group_and_continue(${session_number})">${__('Save', 'zume')}</button> 
+          <button type="button" class="button hollow" onclick="open_session(${session_number})">${__('Cancel', 'zume')}</button>
+      </div>
+  </div>
+  `)
+    button.hide()
+  } else {
+    new_div.empty()
+    button.show()
+  }
+}
+function save_new_group_and_continue( session_number ) {
+  let group_name = jQuery('#new-group input[name=group_name]').val()
+  let members = jQuery('#new-group input[name=members]').val()
+
+  if ( group_name && members ) {
+    API.create_group( _.escape( group_name ), _.escape( members ) ).done(function(data) {
+      zumeTraining.groups = data
+      window.location = get_course_url_with_params(0, session_number )
+    })
+      .fail(function(e){
+        alert('Connection to server failed. Try again.')
+        console.log('error making new group')
+        console.log(e)
+      })
+  }
+}
+
+
 function write_add_group_button() {
   jQuery('#add_group_container').html(`<button class="button hollow small add-group-button" type="button"><i class="fi-plus"></i> ${__('Add Group', 'zume')}</button>`)
   jQuery('.add-group-button').on('click', function(){
@@ -520,9 +573,9 @@ function write_add_group_button() {
     jQuery(this).parent().empty().html(`
 <div class="grid-x">
     <div class="cell input-group" id="new-group">
-        <input type="text" class="input-group-field add-group-input" placeholder="${__('Group Name', 'zume')}" title="${__('Group Name', 'zume')}" name="group_name" id="group_name" /> 
-        <input type="number" placeholder="${__('Number of Members', 'zume')}" title="${__('Number of Members', 'zume')}" class="input-group-field add-group-input" name="members" /> 
-        <button type="button" class="button" onclick="save_new_group()">${__('Save', 'zume')}</button> 
+        <input type="text" class="input-group-field add-group-input" placeholder="${__('Group Name', 'zume')}" title="${__('Group Name', 'zume')}" name="group_name" id="group_name" />
+        <input type="number" placeholder="${__('Number of Members', 'zume')}" title="${__('Number of Members', 'zume')}" class="input-group-field add-group-input" name="members" />
+        <button type="button" class="button" onclick="save_new_group()">${__('Save', 'zume')}</button>
         <button type="button" class="button hollow" onclick="write_add_group_button()">${__('Cancel', 'zume')}</button>
     </div>
 </div>
@@ -567,7 +620,7 @@ function archive_group( key, i, verified ) {
             ${__('Are you sure you want to archive this group?', 'zume')}
         </div>
         <div class="cell center">
-        <button type="button" class="center button" onclick="archive_group( '${key}', ${i}, 1 )" data-close aria-label="Close modal">${__('Archive', 'zume')}</button> 
+        <button type="button" class="center button" onclick="archive_group( '${key}', ${i}, 1 )" data-close aria-label="Close modal">${__('Archive', 'zume')}</button>
         <button type="button" class="center button hollow" data-close aria-label="Close modal">${__('Cancel', 'zume')}</button>
         </div>
     </div>
@@ -642,7 +695,7 @@ function delete_group( key, i, verified ) {
         </div>
         <div class="cell center">${zumeTraining.groups[i].group_name}</div>
         <div class="cell center">
-        <button type="button" class="center button" onclick="delete_group( '${key}', ${i}, 1 )" >${__('Delete Forever', 'zume')}</button> 
+        <button type="button" class="center button" onclick="delete_group( '${key}', ${i}, 1 )" >${__('Delete Forever', 'zume')}</button>
         <button type="button" class="center button hollow" onclick="open_archive_groups()">${__('Cancel', 'zume')}</button>
         </div>
     </div>
@@ -683,7 +736,7 @@ div.append(`
         <div class="cell center padding-1">
             <span class="hide-for-small-only" style="position:absolute; right:15px;"><a onclick="load_host_description()" class="help-question-mark">?</a></span>
             <h2 class="padding-bottom-0">${__('Progress', 'zume')}</h2>
-            <span class="h2-caption">${__('32 Tools and Concepts', 'zume')}</span> 
+            <span class="h2-caption">${__('32 Tools and Concepts', 'zume')}</span>
         </div>
        <div class="cell clickable" onclick="load_host_description()">
             <div class="grid-x grid-padding-x grid-padding-y center">
@@ -733,7 +786,7 @@ div.append(`
                           ${zumeTraining.translations.sessions[1]}
                           </div>
                           <div class="cell ">
-                            <span class="show-for-small-only"><a href="${zumeTraining.urls[1]}">${zumeTraining.translations.titles[1]}</a></span> 
+                            <span class="show-for-small-only"><a href="${zumeTraining.urls[1]}">${zumeTraining.translations.titles[1]}</a></span>
                             <i class="p-icon" id="1h" title="${__('Heard', 'zume')}"></i><i class="p-icon" id="1o" title="${__('Obeyed', 'zume')}"></i><i class="p-icon" id="1s" title="${__('Shared', 'zume')}"></i><i class="p-icon" id="1t" title="${__('Trained', 'zume')}"></i>
                             <span class="hide-for-small-only"><a href="${zumeTraining.urls[1]}">${zumeTraining.translations.titles[1]}</a></span>
                           </div>
@@ -930,7 +983,7 @@ div.append(`
         </div>
         <div class="cell padding-2"></div>
     </div> <!-- grid-y -->
-</div> <!-- cell -->    
+</div> <!-- cell -->
 `)
   load_progress()
   listen_progress_item()

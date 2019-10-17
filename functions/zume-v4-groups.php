@@ -57,7 +57,11 @@ class Zume_v4_Groups {
             }
         }
 
-        $results = DT_Ipstack_API::geocode_ip_address( $args['ip_address'] );
+        if ( isset( $args['ip_address'] ) ) {
+            $results = DT_Ipstack_API::geocode_ip_address( $args['ip_address'] );
+        } else {
+            $results = DT_Ipstack_API::geocode_ip_address( DT_Ipstack_API::get_real_ip_address() );
+        }
         if ( isset( $results['id'] ) ) {
             $args['ip_lng'] = $results['longitude'];
             $args['ip_lat'] = $results['latitude'];
@@ -81,11 +85,7 @@ class Zume_v4_Groups {
         return $result;
 
     }
-
-
-
-
-
+    
 
     /**
      * Edit Group
