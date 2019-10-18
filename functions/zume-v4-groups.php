@@ -462,6 +462,7 @@ class Zume_v4_Groups {
     }
 
     public static function has_coleader_accepted( $email_address, $group_key ) {
+
         $group_meta = get_user_meta( get_current_user_id(), $group_key, true );
         $group_meta = self::verify_group_array_filter( $group_meta );
 
@@ -475,22 +476,22 @@ class Zume_v4_Groups {
      * These groups have the user email added to their record
      * These groups have user email listed as accepted for coleadership
      *
+     * @version 4
      * @return array
      */
-    public static function get_colead_groups( $status = 'accepted', $user = null ) {
+    public static function get_colead_groups( $status = 'accepted' ) : array {
         global $wpdb;
         $prepared = [];
-        if ( is_null( $user ) ) {
-            $user = get_user_by( 'id', get_current_user_id() );
-        }
-        $results = $wpdb->get_results($wpdb->prepare(
-            "SELECT *
+        $user = get_user_by( 'id', get_current_user_id() );
+
+        $results = $wpdb->get_col( $wpdb->prepare(
+            "SELECT meta_value
                         FROM `$wpdb->usermeta`
                         WHERE meta_key LIKE %s
                           AND meta_value LIKE %s",
             $wpdb->esc_like( 'zume_group_' ).'%',
             '%'. $wpdb->esc_like( $user->user_email ). '%'
-        ), ARRAY_A );
+        ) );
         if ( empty( $results ) ) {
             return $prepared;
         }
@@ -498,16 +499,21 @@ class Zume_v4_Groups {
         switch ( $status ) {
             case 'accepted':
                 foreach ( $results as $v ){
-                    $zume_key = $v['meta_key'];
-                    $zume_value = maybe_unserialize( $v['meta_value'] );
-                    $zume_value = self::verify_group_array_filter( $zume_value );
+                    $zume_value = self::verify_group_array_filter( $v );
 
-                    if ( in_array( $user->user_email, $zume_value['coleaders'] ) && // is added as coleader
-                        in_array( $user->user_email, $zume_value['coleaders_accepted'] ) && // is accepted
-                        ! in_array( $user->user_email, $zume_value['coleaders_declined'] ) ) // not declined
-                    {
-                        $zume_value['no_edit'] = true; // tags record as no owned
-                        $prepared[$zume_key] = $zume_value;
+                    // skip if they are not in coleaders list
+                    if ( ! in_array( $user->user_email, $zume_value['coleaders'] ) ) {
+                        continue;
+                    }
+
+                    // skip if they have declined
+                    if ( in_array( $user->user_email, $zume_value['coleaders_declined'] ) ) {
+                        continue;
+                    }
+
+                    // if they have already accepted
+                    if ( in_array( $user->user_email, $zume_value['coleaders_accepted'] ) ) {
+                        $prepared[$zume_value['key']] = $zume_value;
                     }
                 }
 
@@ -515,44 +521,53 @@ class Zume_v4_Groups {
 
             case 'waiting_acceptance':
                 foreach ( $results as $v ){
-                    $zume_key = $v['meta_key'];
-                    $zume_value = maybe_unserialize( $v['meta_value'] );
-                    $zume_value = self::verify_group_array_filter( $zume_value );
+                    $zume_value = self::verify_group_array_filter( $v );
 
-                    // if not a currently listed coleader or is in the declined list
-                    if ( in_array( $user->user_email, $zume_value['coleaders'] ) && // is added as coleader
-                        ! in_array( $user->user_email, $zume_value['coleaders_declined'] ) && // not declined
-                        ! in_array( $user->user_email, $zume_value['coleaders_accepted'] ) )  // not accepted
-                    {
-                        $zume_value['no_edit'] = true; // tags record as no owned
-                        $prepared[$zume_key] = $zume_value;
+                    // skip if they are not in coleaders list
+                    if ( ! in_array( $user->user_email, $zume_value['coleaders'] ) ) {
+                        continue;
                     }
-                }
 
+                    // skip if they have declined
+                    if ( in_array( $user->user_email, $zume_value['coleaders_declined'] ) ) {
+                        continue;
+                    }
+
+                    // skip if they have already accepted
+                    if ( in_array( $user->user_email, $zume_value['coleaders_accepted'] ) ) {
+                        continue;
+                    }
+
+                    $prepared[$zume_value['key']] = $zume_value;
+                }
                 break;
 
             case 'waiting_acceptance_minimum':
                 foreach ( $results as $v ){
-                    $zume_key = $v['meta_key'];
-                    $zume_value = maybe_unserialize( $v['meta_value'] );
-                    $zume_value = self::verify_group_array_filter( $zume_value );
+                    $zume_value = self::verify_group_array_filter( $v );
 
-                    // if not a currently listed coleader or is in the declined list
-                    if ( in_array( $user->user_email, $zume_value['coleaders'] ) && // is added as coleader
-                        ! in_array( $user->user_email, $zume_value['coleaders_declined'] ) && // not declined
-                        ! in_array( $user->user_email, $zume_value['coleaders_accepted'] ) )  // not accepted
-                    {
-                        $zume_value['no_edit'] = true; // tags record as not owned
+                    // skip if they are not in coleaders list
+                    if ( ! in_array( $user->user_email, $zume_value['coleaders'] ) ) {
+                        continue;
+                    }
 
-                        $user = get_user_by('id', $zume_value['owner'] );
-                        if ( $user ) {
-                            $prepared[] = [
-                                'key' => $zume_key,
-                                'owner' => $user->display_name,
-                                'group_name' => $zume_value['group_name'],
-                            ];
-                        }
+                    // skip if they have declined
+                    if ( in_array( $user->user_email, $zume_value['coleaders_declined'] ) ) {
+                        continue;
+                    }
 
+                    // skip if they have already accepted
+                    if ( in_array( $user->user_email, $zume_value['coleaders_accepted'] ) ) {
+                        continue;
+                    }
+
+                    $user = get_user_by('id', $zume_value['owner'] );
+                    if ( $user ) {
+                        $prepared[] = [
+                            'key' => $zume_value['key'],
+                            'owner' => $user->display_name,
+                            'group_name' => $zume_value['group_name'],
+                        ];
                     }
                 }
 
@@ -560,20 +575,19 @@ class Zume_v4_Groups {
 
             case 'declined':
                 foreach ( $results as $v ){
-                    $zume_key = $v['meta_key'];
-                    $zume_value = maybe_unserialize( $v['meta_value'] );
-                    $zume_value = self::verify_group_array_filter( $zume_value );
+                    $zume_value = self::verify_group_array_filter( $v );
 
-                    if ( in_array( $user->user_email, $zume_value['coleaders_declined'] ) ) // is declined
-                    {
-                        $zume_value['no_edit'] = true; // tags record as no owned
-                        $prepared[$zume_key] = $zume_value;
+                    // if they have declined
+                    if ( in_array( $user->user_email, $zume_value['coleaders_declined'] ) ) {
+                        $prepared[$zume_value['key']] = $zume_value;
                     }
+
                 }
                 break;
             default:
                 break;
         }
+
         return $prepared;
     }
 
@@ -584,34 +598,60 @@ class Zume_v4_Groups {
      * @return bool
      */
     public static function coleader_invitation_response( $key, $decision ) {
-
-        // query
         global $wpdb;
         $result = $wpdb->get_var( $wpdb->prepare( "SELECT meta_value FROM $wpdb->usermeta WHERE meta_key = %s",  $key ) );
-        if ( empty( $results ) ) {
+        if ( empty( $result ) ) {
+            dt_write_log(__METHOD__ . ': Could not find ' . $key );
             return false;
         }
-        if ( 'accepted' === $decision || 'declined' === $decision ) {
+        $modified_group = $group = self::verify_group_array_filter( $result );
 
-            $user = get_user_by( 'id', get_current_user_id() );
+        $user = get_user_by( 'id', get_current_user_id() );
 
-            $modified_group = $group = self::verify_group_array_filter( $result );
+        switch( $decision ) {
+            case 'accepted':
+                // skip if they are not in coleaders list
+                if ( ! in_array( $user->user_email, $modified_group['coleaders'] ) ) {
+                    return false;
+                }
 
-            // qualify that current user has invitation from this group
-            if ( in_array( $user->user_email, $modified_group['coleaders'] ) // is added as coleader
-                && ! in_array( $user->user_email, $modified_group['coleaders_declined'] ) // not declined
-                && ! in_array( $user->user_email, $modified_group['coleaders_accepted' ] )
-            )
-            {
-                array_push( $modified_group['coleaders_'.$decision], $user->user_email );
+                if ( in_array( $user->user_email, $modified_group['coleaders_accepted'] ) ) {
+                    return false;
+                }
+
+                array_push( $modified_group['coleaders_accepted'], $user->user_email );
+
+                if ( ( $index = array_search( $user->user_email, $modified_group['coleaders_declined'] ) ) !== false) {
+                    unset($modified_group['coleaders_declined'][$index]);
+                }
+
                 update_user_meta( $modified_group['owner'], $modified_group['key'], $modified_group, $group );
-            }
 
-            do_action( 'zume_coleader_invitation_response', $user->ID,  $key, $decision );
+                break;
+            case 'declined':
+                // skip if they are not in coleaders list
+                if ( ! in_array( $user->user_email, $modified_group['coleaders'] ) ) {
+                    return false;
+                }
 
-            return true;
+                if ( in_array( $user->user_email, $modified_group['coleaders_declined'] ) ) {
+                    return false;
+                }
+
+                array_push( $modified_group['coleaders_declined'], $user->user_email );
+
+                if ( ( $index = array_search( $user->user_email, $modified_group['coleaders_accepted'] ) ) !== false) {
+                    unset($modified_group['coleaders_accepted'][$index]);
+                }
+
+                update_user_meta( $modified_group['owner'], $modified_group['key'], $modified_group, $group );
+
+                break;
         }
-        return false;
+
+        do_action( 'zume_coleader_invitation_response', $user->ID,  $key, $decision );
+
+        return true;
     }
 
     /**
@@ -919,7 +959,7 @@ class Zume_v4_Groups {
             $user_id = get_current_user_id();
         }
         $owned_groups = self::get_current_user_groups( $user_id );
-        $colead_groups = self::get_colead_groups( $user_id );
+        $colead_groups = self::get_colead_groups( 'accepted', $user_id );
 
         if ( ! empty( $owned_groups ) ) {
             foreach ( $owned_groups as $g ) {

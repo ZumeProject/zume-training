@@ -102,11 +102,12 @@ function getCookie(cname) {
 function get_groups() {
   let groups = zumeTraining.groups
 
-  let div = jQuery('#group-list')
-  div.empty()
-  jQuery.each(groups, function(i,v) {
-    if ( v.closed !== true ) {
-    div.append(`
+  if ( groups.length > 0 ) {
+    let div = jQuery('#group-list')
+    div.empty()
+    jQuery.each(groups, function(i,v) {
+      if ( v.closed !== true ) {
+        div.append(`
     <div class="cell group-section border-bottom padding-bottom-2 margin-bottom-2">
       <div class="grid-x grid-padding-x">
         <div class="cell padding-bottom-1 group-name small-6"  id="group_name_${v.key}"><!--Full width top --></div><div class="small-6"></div>
@@ -142,34 +143,41 @@ function get_groups() {
   </div>
       `)
 
-      write_add_group_button()
-      write_group_name(v.key, i )
-      write_member_count( v.key, v )
-      write_session_progress( v.key, i )
-      write_members_list( v.key, i )
-      write_member_list_button( v.key, i )
-      load_location_add_button( v.key )
-      write_meta_column( v.key, i )
+        /* load features per group */
+        write_group_name(v.key, i )
+        write_member_count( v.key, v )
+        write_session_progress( v.key, i )
+        write_members_list( v.key, i )
+        write_member_list_button( v.key, i )
+        load_location_add_button( v.key )
+        write_meta_column( v.key, i )
 
-  }/* end if closed */}) /* end .each loop*/
+      }/* end if closed */}) /* end .each loop*/
 
-  /** ARCHIVE LIST */
-  let archive_exists = false
-  jQuery.each(groups, function(i,v) {
-    if ( v.closed === true ) {
-      archive_exists = true
+    /** ARCHIVE LIST */
+    let archive_exists = false
+    jQuery.each(groups, function(i,v) {
+      if ( v.closed === true ) {
+        archive_exists = true
+      }
+    })
+    if ( archive_exists ) {
+      write_view_archive_button()
     }
+
+
+
+  } /* if not empty */
+
+  // load listeners for group tab
+  jQuery(document).ready(function(){
+    listen_hover_member_list()
+    write_add_group_button()
+    write_invitation_list()
   })
-  if ( archive_exists ) {
-    write_view_archive_button()
-  }
 
 }
-// listeners
-jQuery(document).ready(function(){
-  listen_hover_member_list()
-  write_invitation_list()
-})
+
 // functions
 function write_group_name( key, i ) {
   jQuery('#group_name_'+key).empty().html(`<h2 onclick="edit_group_name('${key}', ${i})">${zumeTraining.groups[i].group_name}</h2>`)
@@ -638,8 +646,10 @@ function save_invitation_response( key, answer ) {
   API.update_group( key, answer, 'coleader_invitation_response' ).done(function(data){
     console.log(data)
     if ( data ) {
-      zumeTraining.groups = data
+      zumeTraining.groups = data.groups
+      zumeTraining.invitations = data.invitations
       get_groups()
+      write_invitation_list()
     }
   })
     .fail(function(e){

@@ -166,7 +166,10 @@ class Zume_v4_REST_API {
             case 'coleader_invitation_response':
                 $result = Zume_v4_Groups::coleader_invitation_response( $params['key'], $params['value'] );
                 if ( $result ) {
-                    return Zume_v4_Groups::get_all_groups( get_current_user_id() );
+                    return [
+                        'invitations' => Zume_v4_Groups::get_colead_groups( 'waiting_acceptance_minimum' ),
+                        'groups' => Zume_v4_Groups::get_all_groups( get_current_user_id() ),
+                    ];
                 }
                 return false;
                 break;

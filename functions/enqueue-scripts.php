@@ -110,7 +110,7 @@ function zume_site_scripts() {
                 "current_language" => $current_language,
                 "groups" => ( is_user_logged_in() ) ? Zume_v4_Groups::get_all_groups() : [],
                 "progress" => ( is_user_logged_in() ) ? Zume_v4_Progress::get_user_progress() : [],
-                "invitations" => Zume_v4_Groups::get_colead_groups( 'waiting_acceptance_minimum' ) ?? [],
+                "invitations" => ( is_user_logged_in() ) ? Zume_v4_Groups::get_colead_groups( 'waiting_acceptance_minimum' ) : [],
                 'urls' => [
                     1 => esc_url( zume_get_landing_translation_url(1, $current_language) ),
                     2 => esc_url( zume_get_landing_translation_url(2, $current_language) ),
