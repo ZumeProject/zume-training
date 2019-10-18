@@ -88,8 +88,8 @@ $current_language = zume_current_language();
                             <div class="grid-x grid-padding-x grid-padding-y">
 
                             <div class="cell small padding-top-0 padding-bottom-0" id="display-buttons">
-                                <button id="column_button" type="button" class="button primary-button-hollow tiny" onclick="toggle_column()"><?php echo esc_html__("Single Column", 'zume' ) ?></button>
-                                <button id="extra_button" type="button" class="button primary-button-hollow tiny" onclick="toggle_extra()"><?php echo esc_html__("Show Session Plan", 'zume' ) ?></button>
+                                <button id="column_button" type="button" class="button hollow tiny" onclick="toggle_column()"><?php echo esc_html__("Single Column", 'zume' ) ?></button>
+                                <button id="extra_button" type="button" class="button hollow tiny" onclick="toggle_extra()"><?php echo esc_html__("Show Session Plan", 'zume' ) ?></button>
                             </div>
 
                             <!-- Session 1 -->

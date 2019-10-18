@@ -612,7 +612,6 @@ function save_new_group() {
 }
 
 function write_invitation_list() {
-
   if ( zumeTraining.invitations.length > 0 ) {
 
     let div = jQuery('#invitation-list')
@@ -816,15 +815,16 @@ div.append(`
             </div>
             <div class="grid-x">
                 <div class="cell"><div class="grid-x"><div class="cell small-6"></div><div class="cell small-6 v-line"></div></div></div>
-                <div class="cell center padding-1 hide-for-small-only"><i class="p-icon-style-only complete"></i> ${__('Heard', 'zume')} <i class="p-icon-style-only"></i> ${__('Obeyed', 'zume')} <i class="p-icon-style-only"></i> ${__('Shared', 'zume')} <i class="p-icon-style-only"></i> ${__('Trained', 'zume')}</div>
+                <div class="cell center padding-1 hide-for-small-only"><i class="p-icon-style-only complete"></i> ${__('Heard', 'zume')} <i class="p-icon-style-only complete"></i> ${__('Obeyed', 'zume')} <i class="p-icon-style-only complete"></i> ${__('Shared', 'zume')} <i class="p-icon-style-only complete"></i> ${__('Trained', 'zume')}</div>
                 <div class="cell padding-bottom-1 hide-for-small-only"><div class="grid-x"><div class="cell small-6"></div><div class="cell small-6 v-line"></div></div></div>
-                <div class="cell center"><i class="p-icon-style-only complete"></i><i class="p-icon-style-only"></i><i class="p-icon-style-only"></i><i class="p-icon-style-only"></i></div>
+                <div class="cell center"><i class="p-icon-style-only complete"></i><i class="p-icon-style-only complete"></i><i class="p-icon-style-only complete"></i><i class="p-icon-style-only complete"></i></div>
             </div>
         </div>
        <div class="cell padding-1"><hr></div>
        <div class="cell center padding-bottom-1">
           <h2>${__('Checklist', 'zume')}</h2>
           <span class="h2-caption">${__('Click the circles and check off your progress on each of the concepts.', 'zume')}</span><br>
+          <span class="h2-caption"><i class="p-icon-style-only complete"></i> ${__('Heard', 'zume')} <i class="p-icon-style-only complete"></i> ${__('Obeyed', 'zume')} <i class="p-icon-style-only complete"></i> ${__('Shared', 'zume')} <i class="p-icon-style-only complete"></i> ${__('Trained', 'zume')}</span>
        </div>
        <div class="cell padding-top-1">
             <div class="grid-x grid-padding-x">
