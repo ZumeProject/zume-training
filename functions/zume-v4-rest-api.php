@@ -109,9 +109,11 @@ class Zume_v4_REST_API {
     public function progress_update( WP_REST_Request $request){
         $params = $request->get_params();
         if ( isset( $params['key'] ) && ! empty( $params['key'] ) && isset( $params['state'] ) ) {
+            $params['key'] = sanitize_text_field( wp_unslash( $params['key'] ) );
+            $params['state'] = sanitize_text_field( wp_unslash( $params['state'] ) );
             return Zume_v4_Progress::update_user_progress( $params['key'], $params['state'] );
         } else {
-            return new WP_Error( "log_param_error", "Please provide a valid address", array( 'status' => 400 ) );
+            return new WP_Error( __METHOD__, "Missing parameters", array( 'status' => 400 ) );
         }
     }
 
@@ -120,6 +122,9 @@ class Zume_v4_REST_API {
         if ( empty( $params['key'] ?? null ) || empty( $params['value'] ?? null ) || empty( $params['item'] ?? null ) ) {
             return new WP_Error( __METHOD__, "Missing parameters", array( 'status' => 400 ) );
         }
+        $params['key'] = sanitize_text_field( wp_unslash( $params['key'] ) );
+        $params['value'] = sanitize_text_field( wp_unslash( $params['value'] ) );
+        $params['item'] = sanitize_text_field( wp_unslash( $params['item'] ) );
 
         switch( $params['item'] ) {
             case 'group_name':
@@ -153,6 +158,13 @@ class Zume_v4_REST_API {
                 break;
             case 'delete_group':
                 $result = Zume_v4_Groups::delete_group( $params['key'] );
+                if ( $result ) {
+                    return Zume_v4_Groups::get_all_groups( get_current_user_id() );
+                }
+                return false;
+                break;
+            case 'coleader_invitation_response':
+                $result = Zume_v4_Groups::coleader_invitation_response( $params['key'], $params['value'] );
                 if ( $result ) {
                     return Zume_v4_Groups::get_all_groups( get_current_user_id() );
                 }

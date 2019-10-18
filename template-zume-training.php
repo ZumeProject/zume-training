@@ -28,7 +28,7 @@ $current_language = zume_current_language();
                                 <p class="t-ad-message"><?php echo esc_html__("Plan your group, add members, track your progress, connect with a coach, and add your effort to the global vision!", 'zume' ) ?></p>
                             </div>
                             <div class="cell medium-4">
-                                <a href="<?php echo esc_url( zume_register_url( $current_language ) ) ?>" class="button secondary large register-button" ><?php echo esc_html__("Register Forever Free", 'zume' ) ?></a>
+                                <a href="<?php echo esc_url( zume_register_url( $current_language ) ) ?>" class="button large secondary-button" ><?php echo esc_html__("Register Forever Free", 'zume' ) ?></a>
                             </div>
                         </div>
                     </div><!-- end #callout -->
@@ -88,8 +88,8 @@ $current_language = zume_current_language();
                             <div class="grid-x grid-padding-x grid-padding-y">
 
                             <div class="cell small padding-top-0 padding-bottom-0" id="display-buttons">
-                                <button id="column_button" type="button" class="button primary hollow tiny" onclick="toggle_column()"><?php echo esc_html__("Single Column", 'zume' ) ?></button>
-                                <button id="extra_button" type="button" class="button primary hollow tiny" onclick="toggle_extra()"><?php echo esc_html__("Show Session Plan", 'zume' ) ?></button>
+                                <button id="column_button" type="button" class="button primary-button-hollow tiny" onclick="toggle_column()"><?php echo esc_html__("Single Column", 'zume' ) ?></button>
+                                <button id="extra_button" type="button" class="button primary-button-hollow tiny" onclick="toggle_extra()"><?php echo esc_html__("Show Session Plan", 'zume' ) ?></button>
                             </div>
 
                             <!-- Session 1 -->
@@ -97,7 +97,7 @@ $current_language = zume_current_language();
                                 <div class="grid-x grid-padding-x">
                                     <div class="cell small-9 medium-10"><h2><?php echo esc_html__( 'Session 1', 'zume' ) ?></h2></div>
                                     <div class="cell small-3 medium-2 start">
-                                        <a onclick="open_session( 1 )" class="button hollow"><?php echo esc_html__("Start", 'zume' ) ?></a>
+                                        <a onclick="open_session( 1 )" class="button primary-button-hollow"><?php echo esc_html__("Start", 'zume' ) ?></a>
                                     </div>
                                     <div class="cell small-9 medium-10 t-activities hide-extra" style="display:none;">
                                         <?php echo esc_html__("Prayer, Overview", 'zume' ) ?>
@@ -160,7 +160,7 @@ $current_language = zume_current_language();
                                 <div class="grid-x grid-padding-x">
                                     <div class="cell small-9 medium-10"><h2><?php echo esc_html__( 'Session 2', 'zume' ) ?></h2></div>
                                     <div class="cell small-3 medium-2 start">
-                                        <a onclick="open_session( 2 )" class="button hollow"><?php echo esc_html__("Start", 'zume' ) ?></a>
+                                        <a onclick="open_session( 2 )" class="button primary-button-hollow"><?php echo esc_html__("Start", 'zume' ) ?></a>
                                     </div>
                                     <div class="cell small-9 medium-10 t-activities hide-extra">
                                         <?php echo esc_html__("Check-in, Prayer, Overview", 'zume' ) ?>
@@ -221,7 +221,7 @@ $current_language = zume_current_language();
                                 <div class="grid-x grid-padding-x">
                                     <div class="cell small-9 medium-10"><h2><?php echo esc_html__( 'Session 3', 'zume' ) ?></h2></div>
                                     <div class="cell small-3 medium-2 start">
-                                        <a onclick="open_session( 3 )" class="button hollow"><?php echo esc_html__("Start", 'zume' ) ?></a>
+                                        <a onclick="open_session( 3 )" class="button primary-button-hollow"><?php echo esc_html__("Start", 'zume' ) ?></a>
                                     </div>
                                     <div class="cell small-9 medium-10 t-activities hide-extra">
                                         <?php echo esc_html__("Check-in, Prayer, Overview", 'zume' ) ?>
@@ -276,7 +276,7 @@ $current_language = zume_current_language();
                                 <div class="grid-x grid-padding-x">
                                     <div class="cell small-9 medium-10"><h2><?php echo esc_html__( 'Session 4', 'zume' ) ?></h2></div>
                                     <div class="cell small-3 medium-2 start">
-                                        <a onclick="open_session( 4 )" class="button hollow"><?php echo esc_html__("Start", 'zume' ) ?></a>
+                                        <a onclick="open_session( 4 )" class="button primary-button-hollow"><?php echo esc_html__("Start", 'zume' ) ?></a>
                                     </div>
                                     <div class="cell small-9 medium-10 t-activities hide-extra">
                                         <?php echo esc_html__("Check-in, Prayer, Overview", 'zume' ) ?>
@@ -345,7 +345,7 @@ $current_language = zume_current_language();
                                 <div class="grid-x grid-padding-x">
                                     <div class="cell small-9 medium-10"><h2><?php echo esc_html__( 'Session 5', 'zume' ) ?></h2></div>
                                     <div class="cell small-3 medium-2 start">
-                                        <a onclick="open_session( 5 )" class="button hollow"><?php echo esc_html__("Start", 'zume' ) ?></a>
+                                        <a onclick="open_session( 5 )" class="button primary-button-hollow"><?php echo esc_html__("Start", 'zume' ) ?></a>
                                     </div>
                                     <div class="cell small-9 medium-10 t-activities hide-extra">
                                         <?php echo esc_html__("Check-in, Prayer, Overview", 'zume' ) ?>
@@ -400,7 +400,7 @@ $current_language = zume_current_language();
                                 <div class="grid-x grid-padding-x">
                                     <div class="cell small-9 medium-10"><h2><?php echo esc_html__( 'Session 6', 'zume' ) ?></h2></div>
                                     <div class="cell small-3 medium-2 start">
-                                        <a onclick="open_session( 6 )" class="button hollow"><?php echo esc_html__("Start", 'zume' ) ?></a>
+                                        <a onclick="open_session( 6 )" class="button primary-button-hollow"><?php echo esc_html__("Start", 'zume' ) ?></a>
                                     </div>
                                     <div class="cell small-9 medium-10 t-activities hide-extra">
                                         <?php echo esc_html__("Check-in, Prayer, Overview", 'zume' ) ?>
@@ -437,7 +437,7 @@ $current_language = zume_current_language();
                                 <div class="grid-x grid-padding-x">
                                     <div class="cell small-9 medium-10"><h2><?php echo esc_html__( 'Session 7', 'zume' ) ?></h2></div>
                                     <div class="cell small-3 medium-2 start">
-                                        <a onclick="open_session( 7 )" class="button hollow"><?php echo esc_html__("Start", 'zume' ) ?></a>
+                                        <a onclick="open_session( 7 )" class="button primary-button-hollow"><?php echo esc_html__("Start", 'zume' ) ?></a>
                                     </div>
                                     <div class="cell small-9 medium-10">
                                         <a href="<?php echo esc_url( zume_get_landing_translation_url( 22, $current_language ) ) ?>"><?php echo esc_html( zume_get_landing_title( 22, $current_language ) ) ?></a><br>
@@ -472,7 +472,7 @@ $current_language = zume_current_language();
                                 <div class="grid-x grid-padding-x">
                                     <div class="cell small-9 medium-10"><h2><?php echo esc_html__( 'Session 8', 'zume' ) ?></h2></div>
                                     <div class="cell small-3 medium-2 start">
-                                        <a onclick="open_session( 8 )" class="button hollow"><?php echo esc_html__("Start", 'zume' ) ?></a>
+                                        <a onclick="open_session( 8 )" class="button primary-button-hollow"><?php echo esc_html__("Start", 'zume' ) ?></a>
                                     </div>
                                     <div class="cell small-9 medium-10 t-activities hide-extra">
                                         <?php echo esc_html__("Check-in, Prayer, Overview", 'zume' ) ?>
@@ -507,7 +507,7 @@ $current_language = zume_current_language();
                                 <div class="grid-x grid-padding-x">
                                     <div class="cell small-9 medium-10"><h2><?php echo esc_html__( 'Session 9', 'zume' ) ?></h2></div>
                                     <div class="cell small-3 medium-2 start">
-                                        <a onclick="open_session( 9 )"class="button hollow"><?php echo esc_html__("Start", 'zume' ) ?></a>
+                                        <a onclick="open_session( 9 )"class="button primary-button-hollow"><?php echo esc_html__("Start", 'zume' ) ?></a>
                                     </div>
                                     <div class="cell small-9 medium-10 t-activities hide-extra">
                                         <?php echo esc_html__("Check-in, Prayer, Overview", 'zume' ) ?>
@@ -570,7 +570,7 @@ $current_language = zume_current_language();
                                 <div class="grid-x grid-padding-x">
                                     <div class="cell small-9 medium-10"><h2><?php echo esc_html__( 'Session 10', 'zume' ) ?></h2></div>
                                     <div class="cell small-3 medium-2 start">
-                                        <a onclick="open_session( 10 )" class="button hollow"><?php echo esc_html__("Start", 'zume' ) ?></a>
+                                        <a onclick="open_session( 10 )" class="button primary-button-hollow"><?php echo esc_html__("Start", 'zume' ) ?></a>
                                     </div>
                                     <div class="cell small-9 medium-10 t-activities hide-extra">
                                         <?php echo esc_html__("Check-in, Prayer, Overview", 'zume' ) ?>
@@ -652,10 +652,9 @@ $current_language = zume_current_language();
 
                         ----------------------------------------------------------------------------------------------->
                         <div class="tabs-panel" id="panel2">
-                            <div class="grid-x">
-                                <div class="cell center border-bottom margin-bottom-2" id="add_group_container"><!-- add button--></div>
-                            </div>
-                            <div class="grid-x" id="group-list"><div class="loader">Loading...</div></div>
+                            <div class="grid-x"><div class="cell center border-bottom " id="add_group_container"><!-- add button--></div></div>
+                            <div id="invitation-list"><!-- invitation section--></div>
+                            <div class="grid-x margin-top-2" id="group-list"><!-- group list --></div>
                             <div id="archive-list"><!-- archive section--></div>
                         </div>
                         <!----------------------------------------------------------------------------------------------

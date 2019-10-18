@@ -511,7 +511,6 @@ class Zume_v4_Groups {
                     }
                 }
 
-                return $prepared;
                 break;
 
             case 'waiting_acceptance':
@@ -530,7 +529,33 @@ class Zume_v4_Groups {
                     }
                 }
 
-                return $prepared;
+                break;
+
+            case 'waiting_acceptance_minimum':
+                foreach ( $results as $v ){
+                    $zume_key = $v['meta_key'];
+                    $zume_value = maybe_unserialize( $v['meta_value'] );
+                    $zume_value = self::verify_group_array_filter( $zume_value );
+
+                    // if not a currently listed coleader or is in the declined list
+                    if ( in_array( $user->user_email, $zume_value['coleaders'] ) && // is added as coleader
+                        ! in_array( $user->user_email, $zume_value['coleaders_declined'] ) && // not declined
+                        ! in_array( $user->user_email, $zume_value['coleaders_accepted'] ) )  // not accepted
+                    {
+                        $zume_value['no_edit'] = true; // tags record as not owned
+
+                        $user = get_user_by('id', $zume_value['owner'] );
+                        if ( $user ) {
+                            $prepared[] = [
+                                'key' => $zume_key,
+                                'owner' => $user->display_name,
+                                'group_name' => $zume_value['group_name'],
+                            ];
+                        }
+
+                    }
+                }
+
                 break;
 
             case 'declined':
@@ -547,51 +572,47 @@ class Zume_v4_Groups {
                 }
                 break;
             default:
-                return [];
                 break;
         }
+        return $prepared;
     }
 
-    public static function coleader_invitation_response( $response ) {
-        global $wpdb;
-        $user = get_user_by( 'id', get_current_user_id() );
-
-        if ( isset( $response['accept'] ) ) {
-            $decision = 'accepted';
-            $group_key = $response['accept'];
-
-        } elseif ( isset( $response['decline'] ) ) {
-            $decision = 'declined';
-            $group_key = $response['decline'];
-        } else {
-            return;
-        }
+    /**
+     * @version 4
+     * @param $key
+     * @param $decision
+     * @return bool
+     */
+    public static function coleader_invitation_response( $key, $decision ) {
 
         // query
-        $results = $wpdb->get_results( $wpdb->prepare( "SELECT * FROM $wpdb->usermeta WHERE meta_key = %s", $group_key ), ARRAY_A );
+        global $wpdb;
+        $result = $wpdb->get_var( $wpdb->prepare( "SELECT meta_value FROM $wpdb->usermeta WHERE meta_key = %s",  $key ) );
         if ( empty( $results ) ) {
-            return;
+            return false;
         }
-        // process request
-        foreach ( $results as $result ) {
-            $group_meta = self::verify_group_array_filter( $result['meta_value'] );
-            $group_user_id = $result['user_id'];
+        if ( 'accepted' === $decision || 'declined' === $decision ) {
+
+            $user = get_user_by( 'id', get_current_user_id() );
+
+            $modified_group = $group = self::verify_group_array_filter( $result );
 
             // qualify that current user has invitation from this group
-            if ( in_array( $user->user_email, $group_meta['coleaders'] ) && // is added as coleader
-                ! in_array( $user->user_email, $group_meta['coleaders_declined'] ) ) // not declined
+            if ( in_array( $user->user_email, $modified_group['coleaders'] ) // is added as coleader
+                && ! in_array( $user->user_email, $modified_group['coleaders_declined'] ) // not declined
+                && ! in_array( $user->user_email, $modified_group['coleaders_accepted' ] )
+            )
             {
-                if ( ! in_array( $user->user_email, $group_meta['coleaders_'.$decision] ) ) { // test for potential duplicate
-                    array_push( $group_meta['coleaders_'.$decision], $user->user_email );
-                    update_user_meta( $group_user_id, $group_key, $group_meta );
-                }
+                array_push( $modified_group['coleaders_'.$decision], $user->user_email );
+                update_user_meta( $modified_group['owner'], $modified_group['key'], $modified_group, $group );
             }
+
+            do_action( 'zume_coleader_invitation_response', $user->ID,  $key, $decision );
+
+            return true;
         }
-
-        do_action( 'zume_coleader_invitation_response', $user->ID, $group_key, $decision );
+        return false;
     }
-
-
 
     /**
      * Gets user owned groups

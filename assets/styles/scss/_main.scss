@@ -151,17 +151,17 @@ select {
 }
 
 #top-full-menu-div ul li {
-    border-left: 2px solid white;
-    border-right: 2px solid white;
+    border-left: 2px solid $white;
+    border-right: 2px solid $white;
 }
 
 #top-full-menu-div ul a:hover {
     background: #2CACE2;
-    color: white;
+    color: $white;
 }
 #top-full-menu-div ul.dropdown.menu .is-active>a{
     background: #2CACE2;
-    color: white;
+    color: $white;
 }
 .front-page-social-image {
     display: block;
@@ -189,10 +189,10 @@ select {
 }
 
 .dropdown.menu.medium-horizontal>li.is-dropdown-submenu-parent.active>a:after {
-    border-color: white transparent transparent;
+    border-color: $white transparent transparent;
 }
 .dropdown.menu.medium-horizontal>li.is-dropdown-submenu-parent:hover>a:after {
-    border-color: white transparent transparent;
+    border-color: $white transparent transparent;
 }
 
 .group-title {
@@ -320,13 +320,103 @@ POSTS & CONTENT STYLES
 .post-password-form input[type="submit"] {
 	@include button;
 }
-
-.button {
-  border: solid 1px $primary-color;
+.primary-button {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 0 1rem;
+    font-family: inherit;
+    padding: .85em 1em;
+    -webkit-appearance: none;
+    border: 1px solid $primary-color;
+    border-radius: 0;
+    transition: none;
+    font-size: .9rem;
+    line-height: 1;
+    font-weight: 400;
+    text-align: center;
+    cursor: pointer;
+    background-color: $primary-color;
+    color: $white;
+    text-decoration: none;
 
     &:hover {
-      background: $primary-color;
-      color: white;
+        background-color: $white;
+        color: $primary-color;
+        border: 1px solid $primary-color;
+    }
+
+}
+.primary-button-hollow {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 0 1rem;
+    font-family: inherit;
+    padding: .85em 1em;
+    -webkit-appearance: none;
+    border-radius: 0;
+    transition: none;
+    font-size: .9rem;
+    line-height: 1;
+    font-weight: 400;
+    text-align: center;
+    cursor: pointer;
+    color: $primary-color;
+    text-decoration: none;
+    border: 1px solid $primary-color;
+    background-color: $white;
+
+    &:hover {
+        background-color: $primary-color;
+        color: $white;
+    }
+}
+.secondary-button {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 0 1rem;
+    font-family: inherit;
+    padding: .85em 1em;
+    -webkit-appearance: none;
+    border: 1px solid $secondary-color;
+    border-radius: 0;
+    transition: none;
+    font-size: .9rem;
+    line-height: 1;
+    font-weight: 400;
+    text-align: center;
+    cursor: pointer;
+    background-color: $secondary-color;
+    color: $white;
+    text-decoration: none;
+
+    &:hover {
+        background-color: $white;
+        color: $secondary-color;
+        border: 1px solid $secondary-color;
+    }
+}
+.secondary-button-hollow {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 0 1rem;
+    font-family: inherit;
+    padding: .85em 1em;
+    -webkit-appearance: none;
+    border-radius: 0;
+    transition: none;
+    font-size: .9rem;
+    line-height: 1;
+    font-weight: 400;
+    text-align: center;
+    cursor: pointer;
+    color: $secondary-color;
+    text-decoration: none;
+    border: 1px solid $secondary-color;
+    background-color: $white;
+
+    &:hover {
+        background-color: $secondary-color;
+        color: $white;
     }
 }
 
@@ -885,7 +975,7 @@ JQUERY STEPS WIZARD
         border: solid 1px $primary-color;
         &:hover {
             background: $primary-color;
-            color: white;
+            color: $white;
         }
     }
 }
@@ -900,7 +990,7 @@ ul.orbit-container {
 	width: 90%;
 	font-weight: 700;
 	font-size: 1.2rem;
-	color: white;
+	color: $white;
 	margin: 0 auto;
 }
 
@@ -937,7 +1027,7 @@ ul.orbit-container {
 }
 .coach-item__intro {
     flex: 0 0 210px;
-    white-space: nowrap;
+    $white-space: nowrap;
 }
 .coach-item__text {
     flex: 1 0;
@@ -973,7 +1063,7 @@ ul.orbit-container {
 
         &.active {
             background-color: #323a68;
-            color: white;
+            color: $white;
         }
 
         & > span {
@@ -1033,10 +1123,6 @@ ul.orbit-container {
 	@include switch-size(3rem, 6rem, 0.75rem);
 }
 
-//iframe {
-//	border: 1px solid #ececec !important;
-//}
-
 .switch {
 	margin-bottom: 0;
 	height:0;
@@ -1044,7 +1130,7 @@ ul.orbit-container {
 
 .blue-ribbon {
 	background-color: #21336A;
-	color: white;
+	color: $white;
 	padding-top: 20px;
 	padding-bottom: 10px;
 	margin-top: 20px;
@@ -1054,7 +1140,7 @@ ul.orbit-container {
 	padding-left: 0.9375rem;
 	padding-right: 0.9375rem;
 	h3 {
-		color: white;
+		color: $white;
 	}
 }
 @media only screen and (min-width: 40em) { .blue-ribbon {

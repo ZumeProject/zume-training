@@ -60,12 +60,12 @@
             </ul>
         </div>
         <div class="cell center">
-            <a href="<?php echo zume_register_url() ?>" class="button large secondary register-button" style="width:400px"><?php echo esc_html__("Register for Free", 'zume' ) ?></a><br><a href="<?php echo esc_url( zume_login_url() ) ?>" class="button clear"><?php echo esc_html__("Login", 'zume' ) ?></a>
+            <a href="<?php echo zume_register_url() ?>" class="button large secondary-button" style="width:400px"><?php echo esc_html__("Register for Free", 'zume' ) ?></a><br><a href="<?php echo esc_url( zume_login_url() ) ?>" class="button clear"><?php echo esc_html__("Login", 'zume' ) ?></a>
         </div>
         <div class="cell"><hr></div>
         <div class="cell center">
             <p><?php echo esc_html__("Zúme uses an online training platform to equip participants in basic disciple-making and simple church planting multiplication principles, processes, and practices.", 'zume' ) ?></p>
-            <p><a class="button hollow" href="<?php echo esc_url( zume_training_url() ) ?>"><?php echo esc_html__("See Entire Training", 'zume' ) ?></a></p>
+            <p><a class="button primary-button-hollow" href="<?php echo esc_url( zume_training_url() ) ?>"><?php echo esc_html__("See Entire Training", 'zume' ) ?></a></p>
         </div>
     </div>
 </div>
