@@ -149,8 +149,9 @@ function get_groups() {
         write_session_progress( v.key, i )
         write_members_list( v.key, i )
         write_member_list_button( v.key, i )
-        load_location_add_button( v.key )
+        load_location_add_button( v.key, i )
         write_meta_column( v.key, i )
+        write_member_list_hover_delete( v.key, i )
 
       }/* end if closed */}) /* end .each loop*/
 
@@ -164,14 +165,10 @@ function get_groups() {
     if ( archive_exists ) {
       write_view_archive_button()
     }
-
-
-
   } /* if not empty */
 
   // load listeners for group tab
   jQuery(document).ready(function(){
-    listen_hover_member_list()
     write_add_group_button()
     write_invitation_list()
   })
@@ -235,15 +232,16 @@ function write_session_progress( key, i ) {
 }
 function save_session_status( key, i, session_number ) {
 
-  // pre-toggle assuming success
-  let item = jQuery('#s'+session_number+key)
-  if ( item.hasClass("complete") ) {
-    item.removeClass('complete')
-  } else {
-    item.addClass('complete')
-  }
+  if ( isOwner(key,i)) {
+    // pre-toggle assuming success
+    let item = jQuery('#s'+session_number+key)
+    if ( item.hasClass("complete") ) {
+      item.removeClass('complete')
+    } else {
+      item.addClass('complete')
+    }
 
-  API.update_group( key, session_number, 'session_complete' ).fail(function(e){
+    API.update_group( key, session_number, 'session_complete' ).fail(function(e){
       // reverse toggle
       if ( item.hasClass("complete") ) {
         item.removeClass('complete')
@@ -254,6 +252,8 @@ function save_session_status( key, i, session_number ) {
       conole.log('update group session status fail')
       console.log(e)
     })
+  }
+
 }
 
 function write_member_count( key, group ) {
@@ -307,9 +307,11 @@ function edit_new_member_list( key, i ) {
   jQuery('#email_'+key).focus()
 }
 function write_member_list_button( key, i ) {
-  jQuery('#add_member_'+key).empty().append(`
+  if ( isOwner( key, i ) ) {
+    jQuery('#add_member_'+key).empty().append(`
     <button type="button" class="button clear" onclick="edit_new_member_list('${key}', ${i})"><i class="fi-plus"></i> ${__('add', 'zume')}</button>
   `)
+  }
 }
 function save_new_member( key, i ) {
   let email = jQuery('#email_' + key).val()
@@ -322,27 +324,31 @@ function save_new_member( key, i ) {
 
   write_members_list(key, i)
   write_member_list_button( key, i )
-  listen_hover_member_list()
+  write_member_list_hover_delete( key, i )
 }
-function listen_hover_member_list() {
-  jQuery('.member').hover( function(){jQuery(this).children(".delete").show()}, function(){jQuery(this).children(".delete").hide()})
+function write_member_list_hover_delete( key, i ) {
+  if ( isOwner(key,i)) {
+    jQuery('.member').hover( function(){jQuery(this).children(".delete").show()}, function(){jQuery(this).children(".delete").hide()})
+  }
 }
 function delete_member_list_item( key, i, ib, email ) {
   if ( email ) {
     API.update_group( key, email, 'coleaders_delete' )
-console.log( zumeTraining.groups[i].coleaders[ib] )
+
     delete zumeTraining.groups[i].coleaders[ib]
   }
 
   write_members_list(key, i)
   write_member_list_button( key, i )
-  listen_hover_member_list()
+  write_member_list_hover_delete( key, i )
 }
 
-function load_location_add_button( key ) {
-  jQuery('#add_location_'+key).empty().append(`
+function load_location_add_button( key, i ) {
+  if ( isOwner( key, i ) ) {
+    jQuery('#add_location_'+key).empty().append(`
     <button type="button" class="button clear" onclick="add_location_fields('${key}')"><i class="fi-plus"></i> ${__('new', 'zume')}</button>
   `)
+  }
 }
 function add_location_fields( key ) {
   jQuery('#add_location_'+key).empty().append(`
