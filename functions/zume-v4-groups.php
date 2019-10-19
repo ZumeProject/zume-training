@@ -561,11 +561,11 @@ class Zume_v4_Groups {
                         continue;
                     }
 
-                    $user = get_user_by('id', $zume_value['owner'] );
-                    if ( $user ) {
+                    $user_owner = get_user_by('id', $zume_value['owner'] );
+                    if ( $user_owner && $user->user_email !== $user_owner->user_email /* i.e. reject invitation to self */ ) {
                         $prepared[] = [
                             'key' => $zume_value['key'],
-                            'owner' => $user->display_name,
+                            'owner' => $user_owner->display_name,
                             'group_name' => $zume_value['group_name'],
                         ];
                     }
