@@ -148,7 +148,9 @@ if ( ! class_exists( 'Site_Link_System' ) ) {
                           JOIN $wpdb->postmeta
                           ON $wpdb->posts.ID=$wpdb->postmeta.post_id
                             AND meta_key = 'type'
-                        WHERE meta_value IN ($type_string)", ARRAY_A ); //@phpcs:ignore
+                        WHERE $wpdb->posts.post_type = 'site_link_system' 
+                        AND $wpdb->posts.post_status = 'publish'
+                        AND meta_value IN ($type_string)", ARRAY_A ); //@phpcs:ignore
 
                     return $results;
                     break;
@@ -160,7 +162,9 @@ if ( ! class_exists( 'Site_Link_System' ) ) {
                           JOIN $wpdb->postmeta
                           ON $wpdb->posts.ID=$wpdb->postmeta.post_id
                             AND meta_key = 'type'
-                        WHERE meta_value IN ($type_string)" ); //@phpcs:ignore
+                        WHERE $wpdb->posts.post_type = 'site_link_system' 
+                        AND $wpdb->posts.post_status = 'publish'
+                        AND meta_value IN ($type_string)" ); //@phpcs:ignore
 
                     return $results;
                     break;
@@ -236,8 +240,9 @@ if ( ! class_exists( 'Site_Link_System' ) ) {
 
             // add prepared permissions to the current_user object
             $connection_type = get_post_meta( self::get_post_id_by_site_key( $decrypted_key ), 'type', true );
+            $site_link_label = isset( $keys[$decrypted_key]["label"] ) ? $keys[$decrypted_key]["label"] : __( "Site Link", 'disciple_tools' );
             if ( ! empty( $connection_type ) ) {
-                self::add_capabilities_required_by_type( $connection_type );
+                self::add_capabilities_required_by_type( $connection_type, $site_link_label, $decrypted_key );
             }
 
             return true;
@@ -253,8 +258,10 @@ if ( ! class_exists( 'Site_Link_System' ) ) {
          *      and giving the current_user the specific permissions needed for the tasks done during the site to site link.
          *
          * @param $connection_type
+         * @param string $site_link_label
+         * @param string $site_key
          */
-        public static function add_capabilities_required_by_type( $connection_type ) {
+        public static function add_capabilities_required_by_type( $connection_type, $site_link_label = "Site Link", $site_key = '' ) {
             /**
              * Use the $connection_type to filter for the correct type
              * Update and return the $capabilities array
@@ -272,6 +279,10 @@ if ( ! class_exists( 'Site_Link_System' ) ) {
 
                 foreach ( $capabilities as $capability ) {
                     $current_user->add_cap( $capability );
+                }
+                $current_user->display_name = $site_link_label;
+                if ( $site_key ){
+                    $current_user->site_key = $site_key;
                 }
             }
         }
@@ -368,19 +379,19 @@ if ( ! class_exists( 'Site_Link_System' ) ) {
         public function register_post_type() {
             $args = [
                 'labels' => [
-                    'name'               => $this->plural, /* This is the Title of the Group */
-                    'singular_name'      => $this->singular, /* This is the individual type */
-                    'all_items'          => __( 'All' ) . ' ' . $this->plural, /* the all items menu item */
-                    'add_new'            => __( 'Add New' ), /* The add new menu item */
-                    'add_new_item'       => __( 'Add New' ) . ' ' . $this->singular, /* Add New Display Title */
-                    'edit'               => __( 'Edit' ), /* Edit Dialog */
-                    'edit_item'          => __( 'Edit' ) . ' ' . $this->singular, /* Edit Display Title */
-                    'new_item'           => __( 'New' ) . ' ' . $this->singular, /* New Display Title */
-                    'view_item'          => __( 'View' ) . ' ' . $this->singular, /* View Display Title */
-                    'search_items'       => __( 'Search' ) . ' ' . $this->plural, /* Search Custom Type Title */
-                    'not_found'          => __( 'Nothing found in the Database.' ), /* This displays if there are no entries yet */
-                    'not_found_in_trash' => __( 'Nothing found in Trash' ), /* This displays if there is nothing in the trash */
-                    'parent_item_colon'  => ''
+                        'name'               => $this->plural, /* This is the Title of the Group */
+                        'singular_name'      => $this->singular, /* This is the individual type */
+                        'all_items'          => __( 'All' ) . ' ' . $this->plural, /* the all items menu item */
+                        'add_new'            => __( 'Add New' ), /* The add new menu item */
+                        'add_new_item'       => __( 'Add New' ) . ' ' . $this->singular, /* Add New Display Title */
+                        'edit'               => __( 'Edit' ), /* Edit Dialog */
+                        'edit_item'          => __( 'Edit' ) . ' ' . $this->singular, /* Edit Display Title */
+                        'new_item'           => __( 'New' ) . ' ' . $this->singular, /* New Display Title */
+                        'view_item'          => __( 'View' ) . ' ' . $this->singular, /* View Display Title */
+                        'search_items'       => __( 'Search' ) . ' ' . $this->plural, /* Search Custom Type Title */
+                        'not_found'          => __( 'Nothing found in the Database.' ), /* This displays if there are no entries yet */
+                        'not_found_in_trash' => __( 'Nothing found in Trash' ), /* This displays if there is nothing in the trash */
+                        'parent_item_colon'  => ''
                 ], /* end of arrays */
 
                 'public'              => false,
@@ -453,8 +464,8 @@ if ( ! class_exists( 'Site_Link_System' ) ) {
         public function register_custom_column_headings( $defaults ) {
 
             $new_columns = array(
-                'linked' => __( 'Linked' ),
-                'type' => __( 'Type' )
+            'linked' => __( 'Linked' ),
+            'type' => __( 'Type' )
             );
 
             $last_item = [];
@@ -703,7 +714,7 @@ if ( ! class_exists( 'Site_Link_System' ) ) {
 
                 // Escape and confirm format of the URL fields.
                 if ( 'url' == $field_data[ $f ]['type'] ) {
-                    if ( strpos( ${$f}, 'http' ) !== false || strpos( ${$f}, '//' ) !== false || strpos( ${$f}, '/' ) !== false ) {
+                    if ( strpos( ${$f}, 'http' ) !== false || strpos( ${$f}, '//' ) !== false ) {
                         ${$f} = parse_url( ${$f}, PHP_URL_HOST );
                     }
                 }
@@ -867,9 +878,9 @@ if ( ! class_exists( 'Site_Link_System' ) ) {
 
                     <!-- Footer Information -->
                     <p><?php esc_attr_e( 'Current Site' ) ?>: <span
-                            class="info-color"><?php echo esc_html( self::get_current_site_base_url() ); ?></span></p>
+                                class="info-color"><?php echo esc_html( self::get_current_site_base_url() ); ?></span></p>
                     <p class="text-small"><?php esc_attr_e( 'Timestamp' ) ?>: <span
-                            class="info-color"><?php echo esc_attr( current_time( 'Y-m-d H:i', 1 ) ) ?></span>
+                                class="info-color"><?php echo esc_attr( current_time( 'Y-m-d H:i', 1 ) ) ?></span>
                         <em>( <?php esc_attr_e( 'Compare this number to linked site. It should be identical.' ) ?> )</em></p>
 
                     <?php
@@ -960,6 +971,29 @@ if ( ! class_exists( 'Site_Link_System' ) ) {
                         </style>";
 
             }
+            $uri = $this->get_url_path();
+
+            if ( $uri && ( strpos( $uri, 'edit.php' ) && strpos( $uri, 'post_type=site_link_system' ) ) || ( strpos( $uri, 'post-new.php' ) && strpos( $uri, 'post_type=site_link_system' ) ) ) : ?>
+                <script>
+                  jQuery(function($) {
+                    $(`<div><a href="https://disciple-tools.readthedocs.io/en/latest/Disciple_Tools_Theme/getting_started/admin.html?highlight=transfer#site-links" style="margin-bottom:15px;" target="_blank">
+                        <img style="height:15px" class="help-icon" src="<?php echo esc_html( get_template_directory_uri() . '/dt-assets/images/help.svg' ) ?>"/>
+                        Site link documentation</a></div>`).insertAfter(
+                        '#wpbody-content .wrap .wp-header-end:eq(0)')
+                  });
+                </script>
+            <?php endif;
+        }
+
+        public function get_url_path() {
+            if ( isset( $_SERVER["HTTP_HOST"] ) ) {
+                $url  = ( !isset( $_SERVER["HTTPS"] ) || @( $_SERVER["HTTPS"] != 'on' ) ) ? 'http://'. sanitize_text_field( wp_unslash( $_SERVER["HTTP_HOST"] ) ) : 'https://'. sanitize_text_field( wp_unslash( $_SERVER["HTTP_HOST"] ) );
+                if ( isset( $_SERVER["REQUEST_URI"] ) ) {
+                    $url .= sanitize_text_field( wp_unslash( $_SERVER["REQUEST_URI"] ) );
+                }
+                return trim( str_replace( get_site_url(), "", $url ), '/' );
+            }
+            return '';
         }
 
         public function enter_title_here( $title ) {

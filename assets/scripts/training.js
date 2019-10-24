@@ -399,6 +399,7 @@ function validate_training_group_address(user_address, key ){
     .done(function (data) {
       // check if multiple results
       if( data.features.length > 1 ) {
+        console.log(data)
 
         jQuery('#map_'+key).empty()
         jQuery('#validate_address_button'+key).val('Validate Another?')

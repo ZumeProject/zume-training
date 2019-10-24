@@ -93,10 +93,11 @@ class Zume_v4_REST_API {
             ),
         ) );
 
-        register_rest_route( $namespace, '/groups/delete', array(
+        /** Locations */
+        register_rest_route( $namespace, '/locations/validate_address', array(
             array(
                 'methods'         => WP_REST_Server::CREATABLE,
-                'callback'        => array( $this, 'groups_delete' ),
+                'callback'        => array( $this, 'validate_by_address' ),
                 "permission_callback" => function () {
                     return current_user_can( 'zume' );
                 }
@@ -201,15 +202,29 @@ class Zume_v4_REST_API {
     public function groups_read( WP_REST_Request $request){
         return Zume_v4_Groups::get_all_groups();
     }
-    public function groups_delete( WP_REST_Request $request){
-        $params = $request->get_params();
-        if ( ! isset( $params['key'] ) || ! isset( $params['value'] ) || ! isset( $params['item'] ) ) {
-            return new WP_Error( "log_param_error", "Missing parameters", array( 'status' => 400 ) );
+
+    /**
+     * Get tract from submitted address
+     *
+     * @param WP_REST_Request $request
+     * @access public
+     * @since 0.1
+     * @return string|WP_Error The contact on success
+     */
+    public function validate_by_address( WP_REST_Request $request){
+        $params = $request->get_json_params();
+        if ( isset( $params['address'] ) ){
+
+            $result = DT_Mapbox_API::lookup( $params['address'] );
+
+            if ( isset( $result['features'] ) ){
+                return $result;
+            } else {
+                return new WP_Error( "tract_status_error", 'Zero Results', array( 'status' => 400 ) );
+            }
+        } else {
+            return new WP_Error( "tract_param_error", "Please provide a valid address", array( 'status' => 400 ) );
         }
-
-        // @todo
-
-        return true;
     }
 
 }
