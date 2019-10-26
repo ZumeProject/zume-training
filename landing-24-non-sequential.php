@@ -28,7 +28,7 @@ if (have_posts()) :
                             <strong><?php the_title(); ?></strong>
                         </h1>
                         <p>
-                            <a href="<?php echo esc_url( zume_training_url() ) ?>"><?php echo esc_html__( 'This concept comes from the Zúme Training Course', 'zume' ) ?></a> - <a onclick="open_session(<?php echo esc_attr( $session_number ); ?>)"> <?php echo esc_html__('Session', 'zume' ) ?> 5</a>.
+                            <a href="<?php echo esc_url( zume_training_url() ) ?>"><?php echo esc_html__( 'This concept comes from the Zúme Training Course', 'zume' ) ?></a> - <a onclick="open_session(<?php echo esc_attr( $session_number ); ?>)"> <?php echo esc_html__('Session', 'zume' ) ?> <?php echo esc_html( $session_number ) ?></a>.
                         </p>
                     </div>
 
@@ -155,9 +155,9 @@ if (have_posts()) :
                 </div> <!-- grid-x -->
 
             </div> <!-- end #inner-content --></div> <!-- end #content -->
-    
+
     <?php get_template_part( "parts/content", "modal"); ?>
-    
+
     <?php
     endwhile;
 endif;

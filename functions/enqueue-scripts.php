@@ -107,6 +107,7 @@ function zume_site_scripts() {
                 'nonce' => wp_create_nonce( 'wp_rest' ),
                 'current_user_id' => get_current_user_id(),
                 'logged_in' => is_user_logged_in(),
+                'map_key' => DT_Mapbox_API::get_key(),
                 "current_language" => $current_language,
                 "groups" => ( is_user_logged_in() ) ? Zume_v4_Groups::get_all_groups() : [],
                 "progress" => ( is_user_logged_in() ) ? Zume_v4_Progress::get_user_progress() : [],

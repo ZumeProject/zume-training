@@ -30,11 +30,16 @@
             </div>
         </div>
         <div class="cell center">
-            <p><a href="<?php echo esc_url( zume_training_url() ) ?>" class="button large"><?php echo esc_html__("Return to Training", 'zume' ) ?></a> <a href="" class="button large">Start Session <?php echo esc_attr( $session_number ) ?></a></p>
+            <p><a href="<?php echo esc_url( zume_training_url() ) ?>#panel1" class="button primary-button-hollow large"><?php echo esc_html__("Course", 'zume' ) ?></a>
+                <a href="<?php echo esc_url( zume_training_url() ) ?>#panel2" class="button primary-button-hollow large"><?php echo esc_html__("Groups", 'zume' ) ?></a>
+                <a href="<?php echo esc_url( zume_training_url() ) ?>#panel3" class="button primary-button-hollow large"><?php echo esc_html__("Checklist", 'zume' ) ?></a>
+                <a onclick="open_session( <?php echo esc_attr( $session_number ) ?> )" class="button primary-button-hollow large"><?php echo esc_html__("Start Session", 'zume' ) ?></a>
+            </p>
         </div>
         <script>
             jQuery(document).ready(function(){
                 window.API.update_progress( '<?php echo esc_attr( $session_number ) ?>h', 'on' )
+                load_progress()
             })
         </script>
     </div>
