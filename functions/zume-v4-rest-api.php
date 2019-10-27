@@ -94,18 +94,16 @@ class Zume_v4_REST_API {
         ) );
 
         /** Locations */
-        register_rest_route( $namespace, '/locations/validate_address', array(
+        register_rest_route( $namespace, '/locations/update', array(
             array(
                 'methods'         => WP_REST_Server::CREATABLE,
-                'callback'        => array( $this, 'validate_by_address' ),
+                'callback'        => array( $this, 'location_update' ),
                 "permission_callback" => function () {
                     return current_user_can( 'zume' );
                 }
             ),
         ) );
     }
-
-
 
     public function progress_update( WP_REST_Request $request){
         $params = $request->get_params();
@@ -180,7 +178,6 @@ class Zume_v4_REST_API {
         }
     }
 
-
     public function groups_create( WP_REST_Request $request){
         $params = $request->get_params();
         if ( ! isset( $params['name'] ) || ! isset( $params['members'] ) ) {
@@ -199,29 +196,19 @@ class Zume_v4_REST_API {
             return false;
         }
     }
+
     public function groups_read( WP_REST_Request $request){
         return Zume_v4_Groups::get_all_groups();
     }
 
-    /**
-     * Get tract from submitted address
-     *
-     * @param WP_REST_Request $request
-     * @access public
-     * @since 0.1
-     * @return string|WP_Error The contact on success
-     */
-    public function validate_by_address( WP_REST_Request $request){
+    public function location_update( WP_REST_Request $request){
         $params = $request->get_json_params();
-        if ( isset( $params['address'] ) ){
-
-            $result = DT_Mapbox_API::lookup( $params['address'] );
-
-            if ( isset( $result['features'] ) ){
-                return $result;
-            } else {
-                return new WP_Error( "tract_status_error", 'Zero Results', array( 'status' => 400 ) );
+        if ( isset( $params['key'] ) ) {
+            $result = Zume_v4_Groups::update_location( $params['key'], $params );
+            if ( $result ) {
+                return Zume_v4_Groups::get_all_groups( get_current_user_id() );
             }
+            return false;
         } else {
             return new WP_Error( "tract_param_error", "Please provide a valid address", array( 'status' => 400 ) );
         }

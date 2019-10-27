@@ -157,7 +157,7 @@ function get_groups() {
         write_session_progress( v.key, i )
         write_members_list( v.key, i )
         write_member_list_button( v.key, i )
-        load_location_add_button( v.key, i )
+        write_location_add_button( v.key, i )
         write_meta_column( v.key, i )
         write_member_list_hover_delete( v.key, i )
 
@@ -351,48 +351,41 @@ function delete_member_list_item( key, i, ib, email ) {
   write_member_list_hover_delete( key, i )
 }
 
-function load_location_add_button( key, i ) {
-  if ( isOwner( key, i ) ) {
-    jQuery('#add_location_'+_.escape( key )).empty().append(`
-    <button type="button" class="button clear" onclick="add_location_lookup_map('${_.escape( key )}')"><i class="fi-plus"></i> ${__('new', 'zume')}</button>
-  `)
-  }
-}
-function add_location_lookup_map( key ) {
 
-  if ( window.mapbox_scripts_loaded !== true ) {
-    jQuery.when(
-      jQuery.getScript( "https://api.mapbox.com/mapbox-gl-js/v1.1.0/mapbox-gl.js?ver=1.1.0" ),
-      jQuery.getScript( "https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.4.0/mapbox-gl-geocoder.min.js" ),
-      jQuery.Deferred(function( deferred ){
-        jQuery( deferred.resolve );
-      })
-    ).done(function(){
-      window.mapbox_scripts_loaded = true;
-      load_mapbox( key )
-    });
-  } else {
-    load_mapbox( key )
+function add_location_lookup_map( key, i ) {
+  let div =  jQuery('#training-modal-content')
+  if ( typeof mapboxgl !== undefined ) {
+    div.empty()
   }
+
+  jQuery.when(
+    jQuery.getScript( "https://api.mapbox.com/mapbox-gl-js/v1.1.0/mapbox-gl.js?ver=1.1.0" ),
+    jQuery.getScript( "https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.4.0/mapbox-gl-geocoder.min.js" ),
+    jQuery.Deferred(function( deferred ){
+      jQuery( deferred.resolve );
+    })
+  ).done(function(){
+    load_mapbox( key, i )
+  });
 
   jQuery('#training-modal').foundation('open')
 
-  function load_mapbox( key) {
-    let div =  jQuery('#training-modal-content')
-
+  function load_mapbox( key, i) {
     div.empty()
     div.append(`<link rel="stylesheet" id="mapbox-gl-css-css" href="https://api.mapbox.com/mapbox-gl-js/v1.1.0/mapbox-gl.css?ver=1.1.0" type="text/css" media="all">`)
     div.append(`<link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.4.0/mapbox-gl-geocoder.css" type="text/css">`)
-    div.append(`<style>.mapboxgl-ctrl-geocoder { min-width:100%;}</style>
+    div.append(`<style>.mapboxgl-ctrl-top-right.mapboxgl-ctrl{width:100% !important;margin:10px !important;}</style>
       <div class="grid-x grid-padding-y">
-        <div class="cell"><div id='geocoder' class='geocoder' style="padding-top: 10px;"></div></div>
+        <div class="cell center padding-vertical-0">${__('Zoom, click, or search for your location.', 'zume')}<br><button type="button" onclick="activate_geolocation()" class="button tiny primary-button-hollow margin-top-1">${__('find you current location', 'zume')}</button> </div>
         <div class="cell"><div class="map" id='map' style="width:100%;height:400px;"></div></div>
         <div class="cell center">
-          <div id="result_display"></div>
-          <button type="button" onclick="save_new_location( '${_.escape( key )}')" class="button primary-button-hollow">Save this location</button>
+          <button type="button" onclick="save_new_location( '${_.escape( key )}', ${_.escape( i )} )" id="result_display" class="button primary-button-hollow">${__('Save', 'zume')}</button>
         </div>
       </div>
     `)
+    /***********************************
+     * Map
+     ***********************************/
     mapboxgl.accessToken = zumeTraining.map_key;
     var map = new mapboxgl.Map({
       container: 'map',
@@ -402,34 +395,11 @@ function add_location_lookup_map( key ) {
     });
 
 
-    let display = jQuery('#result_display')
-
-    map.addControl(new mapboxgl.NavigationControl());
-
-    var geocoder = new MapboxGeocoder({
-      accessToken: mapboxgl.accessToken,
-      types: 'country region district postcode locality neighborhood address place', //'country region district postcode locality neighborhood address place',
-      marker: {color: 'orange'},
-      mapboxgl: mapboxgl
-    });
-
-    document.getElementById('geocoder').appendChild(geocoder.onAdd(map));
-
-    // After Search Result
-    geocoder.on('result', function(e) { // respond to search
-      geocoder._removeMarker()
-      window.active_marker = new mapboxgl.Marker()
-        .setLngLat(e.result.center)
-        .addTo(map);
-      console.log(e)
-
-      window.current_search_result = e
-    })
-
-    // click
+    /***********************************
+     * Click
+     ***********************************/
     map.on('click', function (e) {
       console.log(e)
-      jQuery('#result_display').empty().append(window.spinner);
 
       let lng = e.lngLat.lng
       let lat = e.lngLat.lat
@@ -444,11 +414,50 @@ function add_location_lookup_map( key ) {
         .addTo(map);
       console.log(active_marker)
 
-      window.current_search_result = e
+      jQuery('#result_display').html(`${__('Save Clicked Location', 'zume')}`)
+
+      window.current_search_result = {
+        lng: lng,
+        lat: lat,
+        action: 'click',
+        level: 'lnglat',
+        context: false,
+      }
     });
 
+    /***********************************
+     * Search
+     ***********************************/
+    var geocoder = new MapboxGeocoder({
+      accessToken: mapboxgl.accessToken,
+      types: 'country region district locality neighborhood address place',
+      mapboxgl: mapboxgl
+    });
+    map.addControl(geocoder);
+    geocoder.on('result', function(e) { // respond to search
+      console.log(e)
+      if ( window.active_marker ) {
+        window.active_marker.remove()
+      }
+      window.active_marker = new mapboxgl.Marker()
+        .setLngLat(e.result.center)
+        .addTo(map);
+      geocoder._removeMarker()
 
-    // User Personal Geocode Control
+      jQuery('#result_display').html(`${__('Save Searched Location', 'zume')}`)
+
+      window.current_search_result = {
+        lng: ( e.result.center[0] || false ),
+        lat: ( e.result.center[1] || false ),
+        action: 'search',
+        level: ( e.result.place_type[0] || false ),
+        context: ( e.result.context || false ),
+      }
+    })
+
+    /***********************************
+     * Geolocate Browser
+     ***********************************/
     let userGeocode = new mapboxgl.GeolocateControl({
       positionOptions: {
         enableHighAccuracy: true
@@ -460,17 +469,12 @@ function add_location_lookup_map( key ) {
       showUserLocation: false
     })
     map.addControl(userGeocode);
-
-    setTimeout(function() {
-      jQuery(".mapboxgl-ctrl-geolocate").click();
-    },3000);
-
     userGeocode.on('geolocate', function(e) { // respond to search
+      console.log(e)
       if ( window.active_marker ) {
         window.active_marker.remove()
       }
-      console.log(e)
-      jQuery('#result_display').empty().append(window.spinner);
+
       let lat = e.coords.latitude
       let lng = e.coords.longitude
 
@@ -479,125 +483,57 @@ function add_location_lookup_map( key ) {
         .setLngLat([lng,lat])
         .addTo(map);
 
+      jQuery('#result_display').html(`${__('Save Current Location', 'zume')}`)
 
-      window.current_search_result = e
-
+      window.current_search_result = {
+        lng: lng,
+        lat: lat,
+        action: 'geolocate',
+        level: 'lnglat',
+        context: false,
+      }
     })
+
+    if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+      map.addControl(new mapboxgl.NavigationControl());
+    }
 
   }
 }
-
-function add_location_fields( key ) {
-  jQuery('#add_location_'+_.escape( key )).empty().append(`
-  <div class="cell">
-      <div class="input-group">
-          <input type="text"
-                 placeholder="example: 1000 Broadway, Denver, CO 80126"
-                 class="profile-input input-group-field"
-                 name="validate_address"
-                 id="validate_address_${_.escape( key )}"
-                 value=""
-          />
-          <div class="input-group-button">
-              <input type="button" class="button primary-button"
-                     onclick="validate_training_group_address( jQuery('#validate_address_${_.escape( key )}').val(), '${_.escape( key )}')"
-                     value="Validate"
-                     id="validate_address_buttonnew">
-          </div>
-      </div>
-      <div class="possible-results-new" id="possible_results_${_.escape( key )}">
-          <input type="hidden" name="address" id="address_new" value=""/>
-      </div>
-      <div class="location-result-buttons" id="location_result_buttons_${_.escape( key )}">
-        <button type="button" class="button small" onclick="save_new_location('${_.escape( key )}')">${__('Save', 'zume')}</button> 
-        <button type="button" class="button small hollow" onclick="load_location_add_button('${_.escape( key )}')">${__('Cancel', 'zume')}</button>
-      </div>
-    
-  </div>
-  `)
-  jQuery('#validate_addressnew_'+key).keyup(function () {
-    check_address( key )
-  });
+function activate_geolocation() {
+  jQuery(".mapboxgl-ctrl-geolocate").click();
 }
-function validate_training_group_address(user_address, key ){
-  jQuery('#map_'+key).empty()
-  jQuery('#possible-results'+key).empty().append('<span class="spinner"><img src="' + _.escape( zumeTraining.theme_uri ) + '/assets/images/spinner.svg" style="height:20px;" /></span>')
-  let data = {"address": user_address };
-  return jQuery.ajax({
-    type: "POST",
-    data: JSON.stringify(data),
-    contentType: "application/json; charset=utf-8",
-    dataType: "json",
-    url: zumeTraining.root + 'zume/v1/locations/validate_address',
-    beforeSend: function(xhr) {
-      xhr.setRequestHeader('X-WP-Nonce', zumeTraining.nonce);
-    },
+function save_new_location( key, i ) {
+  if ( window.current_search_result === undefined || window.current_search_result === false ) {
+    jQuery('#result_display').html(`${__("You haven't selected anything yet. Click, search, or allow auto location.", 'zume')}`)
+    return;
+  }
+  window.current_search_result['key'] = key
+
+  API.update_location( window.current_search_result ).done(function(data){
+    console.log(data)
+    zumeTraining.groups = data // set new group data
+    write_location_add_button( key, 0 ) // write new location section
+    window.current_search_result = false // wipe search results
+    jQuery('#training-modal').foundation('close') // close modal
   })
-    .done(function (data) {
-      // check if multiple results
-      if( data.features.length > 1 ) {
-        console.log(data)
 
-        jQuery('#map_'+_.escape( key )).empty()
-        jQuery('#validate_address_button'+_.escape( key )).val(__('Validate Another?', 'zume'))
-
-        jQuery('#possible_results_'+key).empty().append(`<fieldset id="multiple-results${_.escape( key )}"><legend>${ __('We found these matches:', 'zume')}</legend></fieldset>`)
-
-        jQuery.each( data.features, function( index, value ) {
-          let checked = ''
-          if( index === 0 ) {
-            checked = 'checked'
-          }
-          jQuery('#multiple-results'+_.escape( key )).append( '<input type="radio" name="address" id="address'+_.escape( index )+'" value="'+value.place_name+'" '+checked+' /><label for="address'+index+'">'+value.place_name+'</label><br>')
-        })
-
-        jQuery('#location_result_buttons_'+_.escape( key )).show()
-      }
-      else
-      {
-        jQuery('#map_'+key).empty()
-        jQuery('#validate_address_button'+key).val('Validate Another?')
-        jQuery('#possible-results'+_.escape( key )).empty().append(`<fieldset id="multiple-results${_.escape( key )}"><legend>${__('We found this match. Is this correct?', 'zume')}</legend><input type="radio" name="address" id="address" value="${__('data.features[0].place_name', 'zume')}" checked/><label for="address">${__('data.features[0].place_name', 'zume')}</label></fieldset>`)
-
-      }
-    })
-    .fail(function (err) {
-      console.log("error")
-      console.log(err)
-      jQuery('#map_'+key).empty()
-      jQuery('#validate_address_button'+key).val('Validate Another?')
-      jQuery('#possible-results'+key).empty().append(`<fieldset id="multiple-results${_.escape(key)}"><legend>${__('We found no matching locations. Check your address and validate again.', 'zume')}</legend></fieldset>`)
-    })
 }
-function check_address( key ) {
-
-  let val_address = jQuery('#validate_address' + key).val()
-  let default_address = jQuery('#address_' + key).val()
-  let results_address = jQuery('#multiple-results' + key).length
-
-  if (val_address === default_address) // exactly same values
-  {
-    jQuery('#submit_' + key).removeAttr('disabled')
+function write_location_add_button( key, i ) {
+  let group = zumeTraining.groups[i]
+  if ( group.lng && isOwner( key, i ) ) {
+    jQuery('#add_location_'+_.escape( key ))
+      .empty()
+      .append(`<img width="400" src="https://api.mapbox.com/styles/v1/mapbox/streets-v9/static/pin-m-marker+0096ff(${_.escape( group.lng )},${_.escape( group.lat )})/${_.escape( group.lng )},${_.escape( group.lat )},${( group.zoom || 6 )},0/400x275@2x?access_token=${_.escape( zumeTraining.map_key )}" alt="Mapbox Map" />`)
+      .append(`<br><button type="button" class="button clear" onclick="add_location_lookup_map('${_.escape( key )}', ${_.escape( i )})"><i class="fi-plus"></i> ${__('edit', 'zume')}</button>`)
   }
-  else if (results_address) // check if fieldset exists by validation
-  {
-    jQuery('#submit_' + key).removeAttr('disabled')
-  }
-  else if (val_address.length === 0) // check if fieldset exists by validation
-  {
-    jQuery('#submit_' + key).removeAttr('disabled')
-  }
-  else {
-    jQuery('#submit_' + key).attr('disabled', 'disabled')
+  else if ( isOwner( key, i ) ) {
+    jQuery('#add_location_'+_.escape( key )).empty().append(`
+    <button type="button" class="button clear" onclick="add_location_lookup_map('${_.escape( key )}', ${_.escape( i )})"><i class="fi-plus"></i> ${__('new', 'zume')}</button>
+  `)
   }
 }
-function save_new_location( key ) {
 
-  console.log('new location')
-  console.log(window.current_search_result)
-
-  // load_location_add_button( key )
-}
 
 function write_meta_column( key, i ) {
   if ( indexMismatch(key,i) ) {
@@ -1272,6 +1208,8 @@ window.API = {
   update_group: ( key, value, item ) => makeRequest('POST', 'groups/update', { key: key, value: value, item: item }),
 
   create_group: ( group_name, members ) => makeRequest('POST', 'groups/create', { name: group_name, members: members }),
+
+  update_location: ( data ) => makeRequest('POST', 'locations/update', data ),
 
 }
 function makeRequest (type, url, data, base = 'zume/v4/') {

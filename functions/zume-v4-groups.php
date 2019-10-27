@@ -174,26 +174,7 @@ class Zume_v4_Groups {
         return true;
     }
 
-    public static function update_ip_address( $group_key ) {
-        $status = false;
-        $group_meta = self::get_group_by_key( $group_key );
-        if ( ! $group_meta ) {
-            return false;
-        }
-        $group_meta['ip_address'] = DT_Ipstack_API::get_real_ip_address();
-        $results = DT_Ipstack_API::geocode_ip_address( $group_meta['ip_address'] );
-        if ( isset( $results['ip'] ) ) {
-            $group_meta['ip_lng'] = $results['longitude'];
-            $group_meta['ip_lat'] = $results['latitude'];
-            $group_meta['ip_raw_location'] = $results;
-            $status = update_user_meta( $group_meta['owner'], $group_meta['key'], $group_meta );
-        }
-        if ( $status ) {
-            return true;
-        } else {
-            return false;
-        }
-    }
+
 
     /**
      * @version 4
@@ -836,12 +817,17 @@ class Zume_v4_Groups {
             'members'             => 1,
             'meeting_time'        => '',
             'address'             => '',
+            'grid_id'             => false,
+            'lnglat_level'        => '',
+            'zoom'                => 3,
             'lng'                 => '',
             'lat'                 => '',
             'raw_location'        => [],
             'ip_address'          => '',
             'ip_lng'              => '',
             'ip_lat'              => '',
+            'ip_lnglat_level'     => '',
+            'ip_grid_id'          => false,
             'ip_raw_location'     => [],
             'created_date'        => current_time( 'mysql' ),
             'next_session'        => '1',
@@ -959,7 +945,7 @@ class Zume_v4_Groups {
             $user_id = get_current_user_id();
         }
         $owned_groups = self::get_current_user_groups( $user_id );
-        $colead_groups = self::get_colead_groups( 'accepted', $user_id );
+        $colead_groups = self::get_colead_groups( 'accepted' );
 
         if ( ! empty( $owned_groups ) ) {
             foreach ( $owned_groups as $g ) {
@@ -1125,6 +1111,93 @@ class Zume_v4_Groups {
         }
 
         $modified_group['members'] = sanitize_text_field( wp_unslash( absint ($value ) ) );
+
+        self::filter_last_modified_to_now( $modified_group ); // add new timestamp
+
+        return update_user_meta( get_current_user_id(), $key, $modified_group, $group );
+    }
+
+    /**
+     * @version 4
+     * @param string $key
+     * @param array $args
+     * @return bool|int|WP_Error
+     */
+    public static function update_location( string $key, array $args ) {
+        $modified_group = $group = self::get_current_user_group( $key );
+        if ( is_wp_error( $group ) ) {
+            return $group;
+        }
+
+        if ( ! isset( $args ) ) {
+            return new WP_Error( __METHOD__, 'No value provided.');
+        }
+
+        if ( ! class_exists( 'Location_Grid_Geocoder' ) || ! class_exists( 'DT_Mapbox_API' ) ) {
+            require_once( '../dt-mapping/loader.php' );
+            new DT_Mapping_Module_Loader('theme');
+        }
+
+        $modified_group['lng'] = $args['lng'];
+        $modified_group['lat'] = $args['lat'];
+        $modified_group['lnglat_level'] = $args['level'];
+        $modified_group['zoom'] = DT_Mapbox_API::get_zoom( $args['level'] );
+
+        $grid = new Location_Grid_Geocoder();
+        $lg_lookup = $grid->get_grid_id_by_lnglat( $args['lng'], $args['lat'] );
+        if ( $lg_lookup ) {
+            $modified_group['grid_id'] = (int) $lg_lookup['grid_id'];
+        }
+
+        self::filter_last_modified_to_now( $modified_group ); // add new timestamp
+
+        return update_user_meta( get_current_user_id(), $key, $modified_group, $group );
+    }
+
+    /**
+     * @version 4
+     * @param string $key
+     * @return bool|int|WP_Error
+     */
+    public static function update_ip_address( string $key ) {
+
+        $modified_group = $group = self::get_current_user_group( $key );
+        if ( is_wp_error( $group ) ) {
+            return $group;
+        }
+
+        if ( ! isset( $args ) ) {
+            return new WP_Error( __METHOD__, 'No value provided.');
+        }
+
+        $modified_group['ip_address'] = DT_Ipstack_API::get_real_ip_address();
+
+        $results = DT_Ipstack_API::geocode_ip_address( $modified_group['ip_address'] );
+        if ( isset( $results['ip'] ) ) {
+            $modified_group['ip_lng'] = $results['longitude'];
+            $modified_group['ip_lat'] = $results['latitude'];
+
+            // corresponding these results to mapbox labels for levels.
+            if ( ! empty( $results['city'] ) ) {
+                $modified_group['ip_lnglat_level'] = 'place';
+            }
+            else if ( ! empty( $results['region_name'] ) ) {
+                $modified_group['ip_lnglat_level'] = 'region';
+            }
+            else if ( ! empty( $results['country_name'] ) ) {
+                $modified_group['ip_lnglat_level'] = 'country';
+            }
+            else {
+                $modified_group['ip_lnglat_level'] = 'lnglat';
+            }
+
+
+            $grid = new Location_Grid_Geocoder();
+            $lg_lookup = $grid->get_grid_id_by_lnglat( $modified_group['ip_lng'], $modified_group['ip_lat'] );
+            if ( $lg_lookup ) {
+                $modified_group['ip_grid_id'] = (int) $lg_lookup['grid_id'];
+            }
+        }
 
         self::filter_last_modified_to_now( $modified_group ); // add new timestamp
 
