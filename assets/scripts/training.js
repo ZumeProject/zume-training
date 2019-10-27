@@ -10,10 +10,18 @@ jQuery(document).ready(function(){
     show_panel1()
   }
   if( '#panel2' === window.location.hash  ) {
+    if ( ! zumeTraining.logged_in ) {
+      show_panel1()
+    }
+
     console.log(zumeTraining)
     get_groups()
   }
   if( '#panel3' === window.location.hash  ) {
+    if ( ! zumeTraining.logged_in ) {
+      show_panel1()
+    }
+
     console.log(zumeTraining)
     get_progress()
   }
@@ -351,10 +359,134 @@ function load_location_add_button( key, i ) {
   }
 }
 function add_location_lookup_map( key ) {
-  jQuery('#add_location_'+_.escape( key )).empty().append(`
-  
-  `)
+
+  if ( window.mapbox_scripts_loaded !== true ) {
+    jQuery.when(
+      jQuery.getScript( "https://api.mapbox.com/mapbox-gl-js/v1.1.0/mapbox-gl.js?ver=1.1.0" ),
+      jQuery.getScript( "https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.4.0/mapbox-gl-geocoder.min.js" ),
+      jQuery.Deferred(function( deferred ){
+        jQuery( deferred.resolve );
+      })
+    ).done(function(){
+      window.mapbox_scripts_loaded = true;
+      load_mapbox( key )
+    });
+  } else {
+    load_mapbox( key )
+  }
+
+  jQuery('#training-modal').foundation('open')
+
+  function load_mapbox( key) {
+    let div =  jQuery('#training-modal-content')
+
+    div.empty()
+    div.append(`<link rel="stylesheet" id="mapbox-gl-css-css" href="https://api.mapbox.com/mapbox-gl-js/v1.1.0/mapbox-gl.css?ver=1.1.0" type="text/css" media="all">`)
+    div.append(`<link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.4.0/mapbox-gl-geocoder.css" type="text/css">`)
+    div.append(`<style>.mapboxgl-ctrl-geocoder { min-width:100%;}</style>
+      <div class="grid-x grid-padding-y">
+        <div class="cell"><div id='geocoder' class='geocoder' style="padding-top: 10px;"></div></div>
+        <div class="cell"><div class="map" id='map' style="width:100%;height:400px;"></div></div>
+        <div class="cell center">
+          <div id="result_display"></div>
+          <button type="button" onclick="save_new_location( '${_.escape( key )}')" class="button primary-button-hollow">Save this location</button>
+        </div>
+      </div>
+    `)
+    mapboxgl.accessToken = zumeTraining.map_key;
+    var map = new mapboxgl.Map({
+      container: 'map',
+      style: 'mapbox://styles/mapbox/streets-v11',
+      center: [-20, 30],
+      zoom: 1
+    });
+
+
+    let display = jQuery('#result_display')
+
+    map.addControl(new mapboxgl.NavigationControl());
+
+    var geocoder = new MapboxGeocoder({
+      accessToken: mapboxgl.accessToken,
+      types: 'country region district postcode locality neighborhood address place', //'country region district postcode locality neighborhood address place',
+      marker: {color: 'orange'},
+      mapboxgl: mapboxgl
+    });
+
+    document.getElementById('geocoder').appendChild(geocoder.onAdd(map));
+
+    // After Search Result
+    geocoder.on('result', function(e) { // respond to search
+      geocoder._removeMarker()
+      window.active_marker = new mapboxgl.Marker()
+        .setLngLat(e.result.center)
+        .addTo(map);
+      console.log(e)
+
+      window.current_search_result = e
+    })
+
+    // click
+    map.on('click', function (e) {
+      console.log(e)
+      jQuery('#result_display').empty().append(window.spinner);
+
+      let lng = e.lngLat.lng
+      let lat = e.lngLat.lat
+      window.active_lnglat = [lng,lat]
+
+      // add marker
+      if ( window.active_marker ) {
+        window.active_marker.remove()
+      }
+      window.active_marker = new mapboxgl.Marker()
+        .setLngLat(e.lngLat )
+        .addTo(map);
+      console.log(active_marker)
+
+      window.current_search_result = e
+    });
+
+
+    // User Personal Geocode Control
+    let userGeocode = new mapboxgl.GeolocateControl({
+      positionOptions: {
+        enableHighAccuracy: true
+      },
+      marker: {
+        color: 'orange'
+      },
+      trackUserLocation: false,
+      showUserLocation: false
+    })
+    map.addControl(userGeocode);
+
+    setTimeout(function() {
+      jQuery(".mapboxgl-ctrl-geolocate").click();
+    },3000);
+
+    userGeocode.on('geolocate', function(e) { // respond to search
+      if ( window.active_marker ) {
+        window.active_marker.remove()
+      }
+      console.log(e)
+      jQuery('#result_display').empty().append(window.spinner);
+      let lat = e.coords.latitude
+      let lng = e.coords.longitude
+
+      window.active_lnglat = [lng,lat]
+      window.active_marker = new mapboxgl.Marker()
+        .setLngLat([lng,lat])
+        .addTo(map);
+
+
+      window.current_search_result = e
+
+    })
+
+  }
 }
+
 function add_location_fields( key ) {
   jQuery('#add_location_'+_.escape( key )).empty().append(`
   <div class="cell">
@@ -462,9 +594,9 @@ function check_address( key ) {
 function save_new_location( key ) {
 
   console.log('new location')
-  console.log(key)
+  console.log(window.current_search_result)
 
-  load_location_add_button( key )
+  // load_location_add_button( key )
 }
 
 function write_meta_column( key, i ) {
@@ -1172,32 +1304,4 @@ jQuery(document).ajaxComplete((event, xhr, settings) => {
   }
 }).ajaxError((event, xhr) => {
   handleAjaxError(xhr)
-})
-
-window.geocodeAPI = {
-  address: ( address ) => codeRequest( address ),
-}
-function format_geocode_request( data ) {
-  let endpoint = 'https://api.mapbox.com/geocoding/v5/mapbox.places/'
-  let query = encodeURI( _.escape( data.trim() ) ) + '.json'
-  let map_key = '?access_token=' + zumeTraining.map_key
-  let types = '&types=country,region,place'
-  return endpoint + query + map_key + types
-}
-function parse_geocode_response( data ) {
-  let list = [
-
-  ]
-  jQuery.each(data.features, function(i,v) {
-    console.log( v.context )
-  })
-}
-jQuery(document).ready(function(){
-
-
-
-  jQuery.get( format_geocode_request('Denver, Colorado')).done(function(data){
-    console.log(data)
-    parse_geocode_response( data )
-  })
 })
