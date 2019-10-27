@@ -125,7 +125,7 @@ class Zume_v4_REST_API {
         $params['value'] = sanitize_text_field( wp_unslash( $params['value'] ) );
         $params['item'] = sanitize_text_field( wp_unslash( $params['item'] ) );
 
-        switch( $params['item'] ) {
+        switch ( $params['item'] ) {
             case 'group_name':
                 return Zume_v4_Groups::update_group_name( $params['key'], $params['value'] );
                 break;
@@ -192,7 +192,7 @@ class Zume_v4_REST_API {
         if ( $meta_id ) {
             return Zume_v4_Groups::get_all_groups( get_current_user_id() );
         } else {
-            dt_write_log(__METHOD__ . ': Failed to create new group.');
+            dt_write_log( __METHOD__ . ': Failed to create new group.' );
             return false;
         }
     }

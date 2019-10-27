@@ -11,7 +11,7 @@ if (have_posts()) :
         ?>
 
         <!-- Wrappers -->
-        <div id="content" class="grid-x grid-padding-x"><div  id="inner-content" class="cell">
+        <div id="content" class="grid-x grid-padding-x training"><div  id="inner-content" class="cell">
 
                 <!------------------------------------------------------------------------------------------------>
                 <!-- Title section -->
@@ -28,7 +28,7 @@ if (have_posts()) :
                             <strong><?php the_title(); ?></strong>
                         </h1>
                         <p>
-                            <a href="<?php echo esc_url( zume_training_url() ) ?>"><?php echo esc_html__( 'This concept comes from the Zúme Training Course', 'zume' ) ?></a> - <a onclick="open_session(<?php echo esc_attr( $session_number ); ?>)"> <?php echo esc_html__('Session', 'zume' ) ?> <?php echo esc_html( $session_number ) ?></a>.
+                            <a href="<?php echo esc_url( zume_training_url() ) ?>"><?php echo esc_html__( 'This concept comes from the Zúme Training Course', 'zume' ) ?></a> - <a onclick="open_session(<?php echo esc_attr( $session_number ); ?>)"> <?php echo esc_html__( 'Session', 'zume' ) ?> <?php echo esc_html( $session_number ) ?></a>.
                         </p>
                     </div>
 
@@ -46,18 +46,21 @@ if (have_posts()) :
                     <div class="large-8 small-12 cell" id="training-content">
 
                         <section><!-- Step Title -->
-                            <div class="grid-x grid-margin-x grid-margin-y">
-                                <div class="step-title cell"><?php esc_html_e( 'Watch and Discuss (15min)', 'zume' ) ?></div>
-                                <!-- step-title cell -->
 
-                            </div>
-                            <!-- grid-x -->
 
                             <!-- Activity Block -->
                             <div class="grid-x grid-margin-x grid-margin-y">
-                                <div class="large-3 cell activity-title"><?php esc_html_e( 'WATCH', 'zume' ) ?></div>
-                                <div class="large-9 cell activity-description">
-                                    <?php esc_html_e( 'We breathe in. We breathe out. We\'re alive. Spiritual Breathing is like that, too.', 'zume' ) ?>
+                                <div class="cell content-large">
+                                    <p>We breathe in. We breathe out. Life. Breathing is just as important in God’s
+                                        Kingdom.</p>
+
+                                    <p>In the Kingdom, we breathe IN when we HEAR from God. In the Kingdom we breathe
+                                        OUT when we ACT on what we hear from God. We breathe OUT when we OBEY.</p>
+
+                                    <p>The good news for every follower of Jesus is that when we breathe IN and HEAR
+                                        from God and when we breathe OUT and OBEY what we hear and SHARE with others
+                                        what we’ve heard - God will speak even more clearly.</p>
+
                                 </div>
                             </div>
                             <!-- grid-x -->
@@ -65,8 +68,6 @@ if (have_posts()) :
                             <!-- Video block -->
                             <div class="grid-x grid-margin-x grid-margin-y">
                                 <div class="small-12 small-centered cell video-section">
-
-
                                     <!-- 3 -->
                                     <?php if ( $alt_video ) : ?>
                                         <video width="960" height="540" style="border: 1px solid lightgrey;margin: 0 15%;" controls>
@@ -80,22 +81,15 @@ if (have_posts()) :
                                         </iframe>
                                     <?php endif; ?>
 
-
-                                    <p class="center hide-for-small-only"><a
-                                            href="<?php echo esc_url( Zume_Course::get_download_by_key( '36' ) ) ?>"
-                                            target="_blank" rel="noopener noreferrer nofollow"><img
-                                                src="<?php echo esc_url( zume_images_uri( 'course' ) ) ?>download-icon-150x150.png"
-                                                alt=""
-                                                width="35" height="35" class="alignnone size-thumbnail wp-image-3274"
-                                                style="vertical-align: text-bottom"/> <?php esc_html_e( 'Zúme Video Scripts: Spiritual Breathing', 'zume' ) ?></a>
-                                    </p>
                                 </div>
                             </div>
                             <!-- grid-x -->
                             <!-- Activity Block -->
                             <div class="grid-x grid-margin-x grid-margin-y">
-                                <div class="large-3 cell activity-title"><?php esc_html_e( 'DISCUSS', 'zume' ) ?></div>
-                                <div class="large-9 cell activity-description">
+                                <div class="cell content-large center">
+                                    <h3 class="center"><?php echo esc_html__( 'Ask Yourself', 'zume' ) ?></h3>
+                                </div>
+                                <div class="cell content-large">
                                     <ol class="rectangle-list">
                                         <li><?php esc_html_e( 'Why is it essential to learn to hear and recognize God\'s voice?', 'zume' ) ?></li>
                                         <li><?php esc_html_e( 'Is hearing and responding to the Lord really like breathing? Why or why not?', 'zume' ) ?></li>
@@ -138,10 +132,10 @@ if (have_posts()) :
                     <div class="large-8 small-12 cell">
 
                         <div class="grid-x grid-margin-x grid-margin-y">
-                            <div class="large-12 cell activity-description-no-border center">
-                                <h3 class="center"><?php echo esc_html__('Video Transcript', 'zume' ) ?></h3>
+                            <div class="cell content-large center">
+                                <h3 class="center"><?php echo esc_html__( 'Video Transcript', 'zume' ) ?></h3>
                             </div>
-                            <div class="large-12 cell activity-description-no-border">
+                            <div class="cell content-large">
 
                                 <?php the_content(); ?>
 
@@ -156,9 +150,9 @@ if (have_posts()) :
 
             </div> <!-- end #inner-content --></div> <!-- end #content -->
 
-    <?php get_template_part( "parts/content", "modal"); ?>
+        <?php get_template_part( "parts/content", "modal" ); ?>
 
-    <?php
+        <?php
     endwhile;
 endif;
 get_footer();

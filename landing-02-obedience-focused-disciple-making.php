@@ -11,7 +11,7 @@ if (have_posts()) :
         ?>
 
         <!-- Wrappers -->
-        <div id="content" class="grid-x grid-padding-x"><div  id="inner-content" class="cell">
+        <div id="content" class="grid-x grid-padding-x training"><div  id="inner-content" class="cell">
 
                 <!------------------------------------------------------------------------------------------------>
                 <!-- Title section -->
@@ -28,7 +28,7 @@ if (have_posts()) :
                             <strong><?php the_title(); ?></strong>
                         </h1>
                         <p>
-                            <a href="<?php echo esc_url( zume_training_url() ) ?>"><?php echo esc_html__( 'This concept comes from the Zúme Training Course', 'zume' ) ?></a> - <a onclick="open_session(<?php echo esc_attr( $session_number ); ?>)"> <?php echo esc_html__('Session', 'zume' ) ?> <?php echo esc_html( $session_number ) ?></a>.
+                            <a href="<?php echo esc_url( zume_training_url() ) ?>"><?php echo esc_html__( 'This concept comes from the Zúme Training Course', 'zume' ) ?></a> - <a onclick="open_session(<?php echo esc_attr( $session_number ); ?>)"> <?php echo esc_html__( 'Session', 'zume' ) ?> <?php echo esc_html( $session_number ) ?></a>.
                         </p>
                     </div>
 
@@ -45,25 +45,32 @@ if (have_posts()) :
                     <!-- Center column -->
                     <div class="large-8 small-12 cell" id="training-content">
 
-                        <section><!-- Step Title -->
-                            <div class="grid-x grid-margin-x grid-margin-y">
-                                <div class="step-title cell"><?php esc_html_e( 'Watch and Discuss (15min)', 'zume' ) ?></div>
-                                <!-- step-title cell -->
-
-                            </div>
-                            <!-- grid-x -->
+                        <section>
 
                             <!-- Activity Block -->
                             <div class="grid-x grid-margin-x grid-margin-y">
-                                <div class="large-3 cell activity-title"><?php esc_html_e( 'WATCH', 'zume' ) ?></div>
-                                <div class="large-9 cell activity-description">
-                                    <?php esc_html_e( 'What is a disciple? And how do you make one? How do you teach a follower of Jesus to do what He told us in His Great Commission – to obey all of His commands?', 'zume' ) ?>
+                                <div class="cell content-large">
+                                    <p>What is a disciple? And how do you make one?</p>
+
+                                    <p>How do you teach a follower of Jesus to obey all of His commands? How do you take
+                                        someone who’s lived their life as a captive of the world and equip them to
+                                        become a citizen of God’s kingdom?</p>
+
+                                    <p>What is a church?</p>
+
+                                    <p>You may be used to thinking of the church as a building - a place where you go.
+                                        But God’s Word talks about the church as a gathering - a people you belong
+                                        to.</p>
+
+                                    <p>Simple churches are spiritual families with Jesus as their center and their King.
+                                        Simple churches are spiritual families who Love God, Love Others and Make
+                                        Disciples who Multiply.</p>
+
                                 </div>
                             </div>
 
                             <div class="grid-x grid-margin-x grid-margin-y">
                                 <div class="small-12 small-centered cell video-section">
-
 
                                     <!-- 2 -->
                                     <?php if ( $alt_video ) : ?>
@@ -78,24 +85,18 @@ if (have_posts()) :
                                         </iframe>
                                     <?php endif; ?>
 
-                                    <p class="center hide-for-small-only"><a
-                                            href="<?php echo esc_url( Zume_Course::get_download_by_key( '35' ) ) ?>"
-                                            target="_blank" rel="noopener noreferrer nofollow"><img
-                                                src="<?php echo esc_url( zume_images_uri( 'course' ) ) ?>download-icon-150x150.png"
-                                                alt=""
-                                                width="35" height="35" class="alignnone size-thumbnail wp-image-3274"
-                                                style="vertical-align: text-bottom"/> <?php esc_html_e( 'Zúme Video Scripts: Teach Them to Obey', 'zume' ) ?></a></p>
                                 </div>
                             </div>
                             <!-- grid-x -->
                             <!-- Activity Block -->
                             <div class="grid-x grid-margin-x grid-margin-y">
-                                <div class="large-3 cell activity-title"><?php esc_html_e( 'DISCUSS', 'zume' ) ?></div>
-                                <div class="large-9 cell activity-description">
+                                <div class="cell content-large center">
+                                    <h3 class="center"><?php echo esc_html__( 'Ask Yourself', 'zume' ) ?></h3>
+                                </div>
+                                <div class="cell content-large">
                                     <ol class="rectangle-list">
                                         <li><?php esc_html_e( 'When you think of a church, what comes to mind?', 'zume' ) ?></li>
-                                        <li><?php esc_html_e( 'What\'s the difference between that picture and what\'s described in the video as a "Simple Church"?', 'zume' ) ?>
-                                        </li>
+                                        <li><?php esc_html_e( "What's the difference between that picture and what's described in the video as a 'Simple Church'?", 'zume' ) ?></li>
                                         <li><?php esc_html_e( 'Which one do you think would be easier to multiply and why?', 'zume' ) ?></li>
                                     </ol>
                                 </div>
@@ -136,10 +137,10 @@ if (have_posts()) :
                     <div class="large-8 small-12 cell">
 
                         <div class="grid-x grid-margin-x grid-margin-y">
-                            <div class="large-12 cell activity-description-no-border center">
-                                <h3 class="center"><?php echo esc_html__('Video Transcript', 'zume' ) ?></h3>
+                            <div class="large-12 cell content-large center">
+                                <h3 class="center"><?php echo esc_html__( 'Video Transcript', 'zume' ) ?></h3>
                             </div>
-                            <div class="large-12 cell activity-description-no-border">
+                            <div class="large-12 cell content-large">
 
                                 <?php the_content(); ?>
 
@@ -154,9 +155,9 @@ if (have_posts()) :
 
             </div> <!-- end #inner-content --></div> <!-- end #content -->
 
-    <?php get_template_part( "parts/content", "modal"); ?>
+        <?php get_template_part( "parts/content", "modal" ); ?>
 
-    <?php
+        <?php
     endwhile;
 endif;
 get_footer();

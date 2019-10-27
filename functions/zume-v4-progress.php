@@ -148,13 +148,13 @@ class Zume_v4_Progress {
      * @return array
      */
     public static function get_user_progress( int $user_id = null ) : array {
-        if ( empty( $user_id) ) {
+        if ( empty( $user_id ) ) {
             $user_id = get_current_user_id();
         }
         $progress = get_user_meta( $user_id, self::$progress_key, true );
 
         if ( empty( $progress ) || ! is_array( $progress ) ) {
-            update_user_meta( $user_id, self::$progress_key, self::verify_progress_array([]) );
+            update_user_meta( $user_id, self::$progress_key, self::verify_progress_array( [] ) );
             $progress = get_user_meta( $user_id, self::$progress_key, true );
         }
 

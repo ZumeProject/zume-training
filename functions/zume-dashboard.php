@@ -870,7 +870,7 @@ class Zume_Dashboard {
 
     public static function get_all_groups( int $user_id = null ) : array {
         $groups = [];
-        if ( empty( $user_id) ) {
+        if ( empty( $user_id ) ) {
             $user_id = get_current_user_id();
         }
         $owned_groups = self::get_current_user_groups( $user_id );

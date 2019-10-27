@@ -5,7 +5,7 @@
 require_once( 'functions/utilities/debugger-log.php' ); // debug logger used for development.
 
 require_once( 'dt-mapping/loader.php' );
-new DT_Mapping_Module_Loader('theme');
+new DT_Mapping_Module_Loader( 'theme' );
 
 /**
  * We want to make sure migrations are run on updates.

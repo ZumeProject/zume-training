@@ -524,12 +524,12 @@ function write_location_add_button( key, i ) {
   if ( group.lng && isOwner( key, i ) ) {
     jQuery('#add_location_'+_.escape( key ))
       .empty()
-      .append(`<img width="400" src="https://api.mapbox.com/styles/v1/mapbox/streets-v9/static/pin-m-marker+0096ff(${_.escape( group.lng )},${_.escape( group.lat )})/${_.escape( group.lng )},${_.escape( group.lat )},${( group.zoom || 6 )},0/400x275@2x?access_token=${_.escape( zumeTraining.map_key )}" alt="Mapbox Map" />`)
-      .append(`<br><button type="button" class="button clear" onclick="add_location_lookup_map('${_.escape( key )}', ${_.escape( i )})"><i class="fi-plus"></i> ${__('edit', 'zume')}</button>`)
+      .append(`<img width="400" src="https://api.mapbox.com/styles/v1/mapbox/streets-v9/static/pin-m-marker+0096ff(${_.escape( group.lng )},${_.escape( group.lat )})/${_.escape( group.lng )},${_.escape( group.lat )},${( group.zoom || 6 )},0/400x250@2x?access_token=${_.escape( zumeTraining.map_key )}" alt="Mapbox Map" />`)
+      .append(`<br><button type="button" class="button clear" onclick="add_location_lookup_map('${_.escape( key )}', ${_.escape( i )})"><i class="fi-plus"></i> ${__('update', 'zume')}</button>`)
   }
   else if ( isOwner( key, i ) ) {
     jQuery('#add_location_'+_.escape( key )).empty().append(`
-    <button type="button" class="button clear" onclick="add_location_lookup_map('${_.escape( key )}', ${_.escape( i )})"><i class="fi-plus"></i> ${__('new', 'zume')}</button>
+    <button type="button" class="button clear" onclick="add_location_lookup_map('${_.escape( key )}', ${_.escape( i )})"><i class="fi-plus"></i> ${__('add', 'zume')}</button>
   `)
   }
 }

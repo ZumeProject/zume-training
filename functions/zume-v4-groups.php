@@ -542,7 +542,7 @@ class Zume_v4_Groups {
                         continue;
                     }
 
-                    $user_owner = get_user_by('id', $zume_value['owner'] );
+                    $user_owner = get_user_by( 'id', $zume_value['owner'] );
                     if ( $user_owner && $user->user_email !== $user_owner->user_email /* i.e. reject invitation to self */ ) {
                         $prepared[] = [
                             'key' => $zume_value['key'],
@@ -562,7 +562,6 @@ class Zume_v4_Groups {
                     if ( in_array( $user->user_email, $zume_value['coleaders_declined'] ) ) {
                         $prepared[$zume_value['key']] = $zume_value;
                     }
-
                 }
                 break;
             default:
@@ -580,16 +579,16 @@ class Zume_v4_Groups {
      */
     public static function coleader_invitation_response( $key, $decision ) {
         global $wpdb;
-        $result = $wpdb->get_var( $wpdb->prepare( "SELECT meta_value FROM $wpdb->usermeta WHERE meta_key = %s",  $key ) );
+        $result = $wpdb->get_var( $wpdb->prepare( "SELECT meta_value FROM $wpdb->usermeta WHERE meta_key = %s", $key ) );
         if ( empty( $result ) ) {
-            dt_write_log(__METHOD__ . ': Could not find ' . $key );
+            dt_write_log( __METHOD__ . ': Could not find ' . $key );
             return false;
         }
         $modified_group = $group = self::verify_group_array_filter( $result );
 
         $user = get_user_by( 'id', get_current_user_id() );
 
-        switch( $decision ) {
+        switch ( $decision ) {
             case 'accepted':
                 // skip if they are not in coleaders list
                 if ( ! in_array( $user->user_email, $modified_group['coleaders'] ) ) {
@@ -603,7 +602,7 @@ class Zume_v4_Groups {
                 array_push( $modified_group['coleaders_accepted'], $user->user_email );
 
                 if ( ( $index = array_search( $user->user_email, $modified_group['coleaders_declined'] ) ) !== false) {
-                    unset($modified_group['coleaders_declined'][$index]);
+                    unset( $modified_group['coleaders_declined'][$index] );
                 }
 
                 update_user_meta( $modified_group['owner'], $modified_group['key'], $modified_group, $group );
@@ -622,7 +621,7 @@ class Zume_v4_Groups {
                 array_push( $modified_group['coleaders_declined'], $user->user_email );
 
                 if ( ( $index = array_search( $user->user_email, $modified_group['coleaders_accepted'] ) ) !== false) {
-                    unset($modified_group['coleaders_accepted'][$index]);
+                    unset( $modified_group['coleaders_accepted'][$index] );
                 }
 
                 update_user_meta( $modified_group['owner'], $modified_group['key'], $modified_group, $group );
@@ -630,7 +629,7 @@ class Zume_v4_Groups {
                 break;
         }
 
-        do_action( 'zume_coleader_invitation_response', $user->ID,  $key, $decision );
+        do_action( 'zume_coleader_invitation_response', $user->ID, $key, $decision );
 
         return true;
     }
@@ -941,7 +940,7 @@ class Zume_v4_Groups {
      */
     public static function get_all_groups( int $user_id = null ) : array {
         $groups = [];
-        if ( empty( $user_id) ) {
+        if ( empty( $user_id ) ) {
             $user_id = get_current_user_id();
         }
         $owned_groups = self::get_current_user_groups( $user_id );
@@ -949,14 +948,14 @@ class Zume_v4_Groups {
 
         if ( ! empty( $owned_groups ) ) {
             foreach ( $owned_groups as $g ) {
-                $check_sum = hash( 'sha256', serialize($g ) );
+                $check_sum = hash( 'sha256', serialize( $g ) );
                 $g['zume_check_sum'] = $check_sum;
                 $groups[$g['last_modified_date']] = $g;
             }
         }
         if ( ! empty( $colead_groups ) ) {
             foreach ( $colead_groups as $g ) {
-                $check_sum = hash( 'sha256', serialize($g ) );
+                $check_sum = hash( 'sha256', serialize( $g ) );
                 $g['zume_check_sum'] = $check_sum;
                 $groups[$g['last_modified_date']] = $g;
             }
@@ -1045,7 +1044,7 @@ class Zume_v4_Groups {
 
         // get group by key
         $modified_group = $group = self::get_group_by_key( $key );
-        if ( empty( $modified_group )  ) {
+        if ( empty( $modified_group ) ) {
             return false;
         }
 
@@ -1053,14 +1052,14 @@ class Zume_v4_Groups {
         if ( intval( $group['owner'] ) !== intval( $user_id ) ) {
             // test if useremail is in coleaders
             if ( array_search( $user_email, $group['coleaders'] ) === false ) {
-                dt_write_log( new WP_Error(__METHOD__, 'Did not find matching owner id or coleader id for group.'));
+                dt_write_log( new WP_Error( __METHOD__, 'Did not find matching owner id or coleader id for group.' ) );
                 return false;
             }
         }
 
         // update session and time
         if ( ! isset( $modified_group['session_'.$session_number] ) ) {
-            dt_write_log( new WP_Error(__METHOD__, 'Did not find matching session number.'));
+            dt_write_log( new WP_Error( __METHOD__, 'Did not find matching session number.' ) );
             return false;
         }
 
@@ -1103,14 +1102,14 @@ class Zume_v4_Groups {
         }
 
         if ( empty( $value ) ) {
-            return new WP_Error( __METHOD__, 'No value provided.');
+            return new WP_Error( __METHOD__, 'No value provided.' );
         }
 
         if ( absint( $value ) < count( $group['coleaders_accepted'] ) ) {
             $value = count( $group['coleaders_accepted'] );
         }
 
-        $modified_group['members'] = sanitize_text_field( wp_unslash( absint ($value ) ) );
+        $modified_group['members'] = sanitize_text_field( wp_unslash( absint( $value ) ) );
 
         self::filter_last_modified_to_now( $modified_group ); // add new timestamp
 
@@ -1130,12 +1129,12 @@ class Zume_v4_Groups {
         }
 
         if ( ! isset( $args ) ) {
-            return new WP_Error( __METHOD__, 'No value provided.');
+            return new WP_Error( __METHOD__, 'No value provided.' );
         }
 
         if ( ! class_exists( 'Location_Grid_Geocoder' ) || ! class_exists( 'DT_Mapbox_API' ) ) {
             require_once( '../dt-mapping/loader.php' );
-            new DT_Mapping_Module_Loader('theme');
+            new DT_Mapping_Module_Loader( 'theme' );
         }
 
         $modified_group['lng'] = $args['lng'];
@@ -1167,7 +1166,7 @@ class Zume_v4_Groups {
         }
 
         if ( ! isset( $args ) ) {
-            return new WP_Error( __METHOD__, 'No value provided.');
+            return new WP_Error( __METHOD__, 'No value provided.' );
         }
 
         $modified_group['ip_address'] = DT_Ipstack_API::get_real_ip_address();
@@ -1217,11 +1216,11 @@ class Zume_v4_Groups {
         }
 
         if ( empty( $value ) ) {
-            return new WP_Error( __METHOD__, 'No value provided.');
+            return new WP_Error( __METHOD__, 'No value provided.' );
         }
 
         if ( array_search( $value, $modified_group['coleaders'] ) ) {
-            return new WP_Error( __METHOD__, 'Email already added.');
+            return new WP_Error( __METHOD__, 'Email already added.' );
         }
 
         $modified_group['coleaders'][] = sanitize_email( wp_unslash( $value ) );
@@ -1267,8 +1266,7 @@ class Zume_v4_Groups {
                 unset( $modified_group['coleaders_accepted'][$key] );
                 unset( $modified_group['coleaders_declined'][$key] );
 
-                sort( $modified_group['coleaders'] ); //
-
+                sort( $modified_group['coleaders'] );
                 self::filter_last_modified_to_now( $modified_group ); // add new timestamp
 
                 update_user_meta( $user_id, $group_id, $modified_group, $group );

@@ -11,7 +11,7 @@ if (have_posts()) :
         ?>
 
         <!-- Wrappers -->
-        <div id="content" class="grid-x grid-padding-x"><div  id="inner-content" class="cell">
+        <div id="content" class="grid-x grid-padding-x training"><div  id="inner-content" class="cell">
 
                 <!------------------------------------------------------------------------------------------------>
                 <!-- Title section -->
@@ -28,7 +28,7 @@ if (have_posts()) :
                             <strong><?php the_title(); ?></strong>
                         </h1>
                         <p>
-                            <a href="<?php echo esc_url( zume_training_url() ) ?>"><?php echo esc_html__( 'This concept comes from the Zúme Training Course', 'zume' ) ?></a> - <a onclick="open_session(<?php echo esc_attr( $session_number ); ?>)"> <?php echo esc_html__('Session', 'zume' ) ?> <?php echo esc_html( $session_number ) ?></a>.
+                            <a href="<?php echo esc_url( zume_training_url() ) ?>"><?php echo esc_html__( 'This concept comes from the Zúme Training Course', 'zume' ) ?></a> - <a onclick="open_session(<?php echo esc_attr( $session_number ); ?>)"> <?php echo esc_html__( 'Session', 'zume' ) ?> <?php echo esc_html( $session_number ) ?></a>.
                         </p>
                     </div>
 
@@ -46,26 +46,19 @@ if (have_posts()) :
                     <div class="large-8 small-12 cell" id="training-content">
 
                         <section>
-                            <!-- Step Title -->
-                            <div class="grid-x grid-margin-x grid-margin-y">
-                                <div class="step-title cell">
-                                    <?php esc_html_e( 'Watch and Discuss (15min)', 'zume' ) ?>
-                                </div> <!-- step-title cell -->
-                            </div> <!-- grid-x -->
 
                             <!-- Activity Block  -->
                             <div class="grid-x grid-margin-x grid-margin-y">
-                                <div class="large-3 cell activity-title">
-                                    <?php esc_html_e( 'WATCH', 'zume' ) ?>
-                                </div>
-                                <div class="large-9 cell activity-description">
-                                    <?php esc_html_e( 'If we want to make disciples who multiply – spiritual producers and not just consumers – then we need to learn and share four main ways God makes everyday followers more like Jesus:', 'zume' ) ?>
-                                    <ul style="padding:0;">
-                                        <li><?php esc_html_e( 'Prayer', 'zume' ) ?></li>
-                                        <li><?php esc_html_e( 'Scripture', 'zume' ) ?></li>
-                                        <li><?php esc_html_e( 'Body Life', 'zume' ) ?></li>
-                                        <li><?php esc_html_e( 'Persecution and Suffering', 'zume' ) ?></li>
-                                    </ul>
+
+                                <div class="cell content-large">
+                                    <p>In our broken world, people have rejected God’s plan, and many spend their energy
+                                        living out just part of God’s perfect equation. They LEARN but they don’t share.
+                                        They are are FILLED UP but they never pour out. They CONSUME but they don’t
+                                        produce.</p>
+
+                                    <p>If we’re going to make disciples who multiply, then we need to share with them
+                                        how they can be producers and not just consumers.</p>
+
                                 </div>
                             </div> <!-- grid-x -->
 
@@ -86,20 +79,14 @@ if (have_posts()) :
                                         </iframe>
                                     <?php endif; ?>
 
-                                    <p class="center hide-for-small-only"><a
-                                            href="<?php echo esc_url( Zume_Course::get_download_by_key( '39' ) ) ?>"
-                                            target="_blank" rel="noopener noreferrer nofollow"><img
-                                                src="<?php echo esc_url( zume_images_uri( 'course' ) ) ?>download-icon-150x150.png"
-                                                alt=""
-                                                width="35" height="35" class="alignnone size-thumbnail wp-image-3274"
-                                                style="vertical-align: text-bottom"/> <?php esc_html_e( "Zúme Video Scripts: Producers vs Consumers", 'zume' ) ?></a>
-                                    </p>
                                 </div>
                             </div> <!-- grid-x -->
                             <!-- Activity Block  -->
                             <div class="grid-x grid-margin-x grid-margin-y">
-                                <div class="large-3 cell activity-title"><?php esc_html_e( 'DISCUSS', 'zume' ) ?></div>
-                                <div class="large-9 cell activity-description">
+                                <div class="cell content-large center">
+                                    <h3 class="center"><?php echo esc_html__( 'Ask Yourself', 'zume' ) ?></h3>
+                                </div>
+                                <div class="cell content-large">
                                     <ol>
                                         <li><?php esc_html_e( 'Of the four areas detailed above (prayer, God\'s Word, etc.), which ones do you already practice?', 'zume' ) ?>
                                         </li>
@@ -142,10 +129,10 @@ if (have_posts()) :
                     <div class="large-8 small-12 cell">
 
                         <div class="grid-x grid-margin-x grid-margin-y">
-                            <div class="large-12 cell activity-description-no-border center">
-                                <h3 class="center"><?php echo esc_html__('Video Transcript', 'zume' ) ?></h3>
+                            <div class="large-12 cell content-large center">
+                                <h3 class="center"><?php echo esc_html__( 'Video Transcript', 'zume' ) ?></h3>
                             </div>
-                            <div class="large-12 cell activity-description-no-border">
+                            <div class="large-12 cell content-large">
 
                                 <?php the_content(); ?>
 
@@ -160,9 +147,9 @@ if (have_posts()) :
 
             </div> <!-- end #inner-content --></div> <!-- end #content -->
 
-    <?php get_template_part( "parts/content", "modal"); ?>
+        <?php get_template_part( "parts/content", "modal" ); ?>
 
-    <?php
+        <?php
     endwhile;
 endif;
 get_footer();

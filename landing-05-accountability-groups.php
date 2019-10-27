@@ -11,7 +11,7 @@ if (have_posts()) :
         ?>
 
         <!-- Wrappers -->
-        <div id="content" class="grid-x grid-padding-x"><div  id="inner-content" class="cell">
+        <div id="content" class="grid-x grid-padding-x training"><div  id="inner-content" class="cell">
 
                 <!------------------------------------------------------------------------------------------------>
                 <!-- Title section -->
@@ -28,7 +28,7 @@ if (have_posts()) :
                             <strong><?php the_title(); ?></strong>
                         </h1>
                         <p>
-                            <a href="<?php echo esc_url( zume_training_url() ) ?>"><?php echo esc_html__( 'This concept comes from the Zúme Training Course', 'zume' ) ?></a> - <a onclick="open_session(<?php echo esc_attr( $session_number ); ?>)"> <?php echo esc_html__('Session', 'zume' ) ?> <?php echo esc_html( $session_number ) ?></a>.
+                            <a href="<?php echo esc_url( zume_training_url() ) ?>"><?php echo esc_html__( 'This concept comes from the Zúme Training Course', 'zume' ) ?></a> - <a onclick="open_session(<?php echo esc_attr( $session_number ); ?>)"> <?php echo esc_html__( 'Session', 'zume' ) ?> <?php echo esc_html( $session_number ) ?></a>.
                         </p>
                     </div>
 
@@ -46,45 +46,28 @@ if (have_posts()) :
                     <div class="large-8 small-12 cell" id="training-content">
 
                         <section>
-                            <div class="grid-x grid-margin-x grid-margin-y">
-                                <div class="step-title cell"><?php esc_html_e( 'Listen and Read Along (3min)', 'zume' ) ?></div>
-                                <!-- step-title cell -->
-
-                            </div>
-                            <!-- grid-x -->
 
                             <!-- Activity Block -->
                             <div class="grid-x grid-margin-x grid-margin-y">
-                                <div class="large-3 cell activity-title"><?php esc_html_e( 'READ', 'zume' ) ?></div>
-                                <div class="large-9 cell activity-description">
-                                    <p class="read-section">
-                                        <?php esc_html_e( 'Accountability Groups', 'zume' ) ?>
-                                    </p>
-                                    <p>
-                                        <?php esc_html_e( 'The Bible tells us that every follower of Jesus will one day be held accountable for what we do and say and think. Accountability Groups are a great way to get ready!', 'zume' ) ?>
-                                    </p>
+                                <div class="cell content-large">
+                                    <p>Jesus shared many stories of accountability and told us many truths of how we
+                                        will be held responsible for what we do and say.</p>
+
+                                    <p>Accountability Groups are made up of two or three people of the same gender - men
+                                        with men, women with women - who meet once a week to discuss a set of questions
+                                        that help reveal areas where things are going right and other areas that need
+                                        correction.</p>
+
+                                    <p>Every follower of Jesus will be held accountable, so every follower of Jesus
+                                        should practice accountability with others.</p>
+
                                 </div>
                             </div>
                             <!-- grid-x -->
-
-                            <!-- Inset Block -->
-                            <div class="grid-x grid-margin-x grid-margin-y single">
-                                <div class="cell auto"></div>
-                                <div class="large-9 cell activity-description well">
-                                    <div class="grid-x grid-padding-x grid-padding-y center" >
-                                        <div class="cell session-boxes">
-                                            <?php esc_html_e( 'Find the "Accountability Groups" section in your Zúme Guidebook, and listen to the audio below.', 'zume' ) ?>
-                                        </div>
-                                    </div>
-
-                                </div>
-                                <div class="cell auto"></div>
-                            </div> <!-- grid-x -->
 
                             <!-- Video block -->
                             <div class="grid-x grid-margin-x grid-margin-y">
                                 <div class="small-12 small-centered cell video-section">
-
 
                                     <!-- 5 -->
                                     <?php if ( $alt_video ) : ?>
@@ -99,16 +82,106 @@ if (have_posts()) :
                                         </iframe>
                                     <?php endif; ?>
 
-                                    <p class="center hide-for-small-only"><a
-                                            href="<?php echo esc_url( Zume_Course::get_download_by_key( '38' ) ) ?>"
-                                            target="_blank" rel="noopener noreferrer nofollow"><img
-                                                src="<?php echo esc_url( zume_images_uri( 'course' ) ) ?>download-icon-150x150.png"
-                                                alt=""
-                                                width="35" height="35" class="alignnone size-thumbnail wp-image-3274"
-                                                style="vertical-align: text-bottom"/> <?php esc_html_e( 'Zúme Video Scripts: Accountability Groups', 'zume' ) ?></a>
                                 </div>
                             </div>
                             <!-- grid-x -->
+
+                            <!-- Activity Block -->
+                            <div class="grid-x grid-margin-x grid-margin-y">
+                                <div class="cell content-large">
+                                    <p>Accountability Groups are made up of two or three people of the same gender - men
+                                        with men,
+                                        women with women - who meet once a week to discuss a set of questions that help
+                                        reveal areas
+                                        where things are going right and other areas that need correction. They can even
+                                        meet by phone
+                                        if they’re unable to meet face-to-face. Everyone in the group needs to
+                                        understand that what is
+                                        shared is confidential.</p>
+                                    <p>Spend the
+                                        next 45 minutes working together through the Accountability Questions - List 2,
+                                        below. Since
+                                        you haven’t done a group reading before this session, just skip over the
+                                        questions about previous
+                                        readings. List 1 is a great option as you get further into training.</p>
+
+                                    <p>Accountability Questions - List 1</p>
+                                    <ul>
+                                        <li>Pray that we will become like Jesus.</li>
+                                        <li>How are you doing? How is your prayer life?</li>
+                                        <li>Do you have any sin to confess? [Relational, Sexual, Financial, Pride,
+                                            Integrity,
+                                            Submission
+                                            to Authority, etc.]
+                                        </li>
+                                        <li>Did you obey what God told you last time? Share details.</li>
+                                        <li>Did you pray for the “Unbelievers” on your relationship list this week? Did
+                                            you
+                                            have the
+                                            chance to share with any of them? Share details.
+                                        </li>
+                                        <li>Did you memorize a new verse this week? Quote it.</li>
+                                        <li>Did you read at least 25 chapters in the Bible this week?</li>
+                                        <li>What did God say to you this week from the Word?</li>
+                                        <li>What are you going to specifically do about it?</li>
+                                        <li>Did you meet with your 3/3 group this week? How did it go?</li>
+                                        <li>Did you model or assist someone in starting a new 3/3 group this week? Share
+                                            details.
+                                        </li>
+                                        <li>Do you see anything hindering my walk with Christ?</li>
+                                        <li>Did you have the opportunity to share the gospel this week? Share details.
+                                        </li>
+                                        <li>Practice 1-3 minute testimonies and the gospel right now.</li>
+                                        <li>Who can you invite to the group next week? If the group is four or more,
+                                            multiply
+                                            it.
+                                        </li>
+                                        <li>Close with prayer regarding what was shared.</li>
+                                    </ul>
+                                    <p>Accountability Questions - List 2</p>
+                                    <ul>
+                                        <li>How have your insights from last week’s reading shaped the way you think and
+                                            live?
+                                        </li>
+                                        <li>Who did you pass your insights from last week on to and how was it
+                                            received?
+                                        </li>
+                                        <li>How have you seen God at work?</li>
+                                        <li>Have you been a testimony this week to the greatness of Jesus Christ with
+                                            both your words and actions?
+                                        </li>
+                                        <li>Have you been exposed to sexually alluring material or allowed your mind to
+                                            entertain inappropriate sexual thoughts?
+                                        </li>
+                                        <li>Have you acknowledged God’s ownership in your use of money?</li>
+                                        <li>Have you coveted anything?</li>
+                                        <li>Have you hurt someone’s reputation or feelings by your words?</li>
+                                        <li>Have you been dishonest in word or action or exaggerated?</li>
+                                        <li>Have you given into an addictive [or lazy or undisciplined] behavior?</li>
+                                        <li>Have you been a slave to clothing, friends, work, or possessions?</li>
+                                        <li>Have you failed to forgive someone?</li>
+                                        <li>What worries or anxieties are you facing? Have you complained or grumbled?
+                                        </li>
+                                        <li>Have you maintained a thankful heart?</li>
+                                        <li>Have you been honoring, understanding and generous in your important
+                                            relationships?
+                                        </li>
+                                        <li>What temptations in thought, word, or action have you faced and how did you
+                                            respond?
+                                        </li>
+                                        <li>How have you taken opportunities to serve or bless others, especially
+                                            believers?
+                                        </li>
+                                        <li>Have you seen specific answers to prayer?</li>
+                                        <li>Did you complete the reading for the week?</li>
+                                    </ul>
+
+                                </div>
+                            </div>
+                            <!-- grid-x -->
+
+
+
                         </section>
 
                     </div>
@@ -143,10 +216,10 @@ if (have_posts()) :
                     <div class="large-8 small-12 cell">
 
                         <div class="grid-x grid-margin-x grid-margin-y">
-                            <div class="large-12 cell activity-description-no-border center">
-                                <h3 class="center"><?php echo esc_html__('Video Transcript', 'zume' ) ?></h3>
+                            <div class="large-12 cell content-large center">
+                                <h3 class="center"><?php echo esc_html__( 'Video Transcript', 'zume' ) ?></h3>
                             </div>
-                            <div class="large-12 cell activity-description-no-border">
+                            <div class="large-12 cell content-large">
 
                                 <?php the_content(); ?>
 
@@ -161,9 +234,9 @@ if (have_posts()) :
 
             </div> <!-- end #inner-content --></div> <!-- end #content -->
 
-    <?php get_template_part( "parts/content", "modal"); ?>
+        <?php get_template_part( "parts/content", "modal" ); ?>
 
-    <?php
+        <?php
     endwhile;
 endif;
 get_footer();

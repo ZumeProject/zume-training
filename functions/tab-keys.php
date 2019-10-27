@@ -41,9 +41,7 @@ class Zume_Keys_Tab
                             <br>
                             <?php $this->facebook_sso_key_metabox() ?>
                             <br>
-                            <?php
-                            ?>
-
+                            
                         </div><!-- end post-body-content -->
                         <div id="postbox-container-1" class="postbox-container">
                         </div><!-- postbox-container 1 -->
