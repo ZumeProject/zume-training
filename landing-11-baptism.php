@@ -50,29 +50,47 @@ if (have_posts()) :
 
                             <!-- Activity Block  -->
                             <div class="grid-x grid-margin-x grid-margin-y">
-                                <div class="large-3 cell activity-title"><?php esc_html_e( 'READ', 'zume' ) ?></div>
-                                <div class="large-9 cell activity-description">
-                                    <p class="read-section">
-                                        <?php esc_html_e( 'Baptism', 'zume' ) ?>
-                                    </p>
-                                    <p>
-                                        <?php esc_html_e( 'Jesus said, “Go and make disciples of all nations, BAPTIZING them in the name of the Father and of the Son and of the Holy Spirit…”', 'zume' ) ?>
-                                    </p>
-                                </div>
-                            </div> <!-- grid-x -->
+                                <div class="cell content-large">
+                                    <p>Baptism is a picture of our new life, soaked in the image of Jesus, transformed
+                                        in obedience to God. It is a picture of our death to sin, just as Jesus died for
+                                        our sins; a burial of our old way of life, just as Jesus was buried; a rebirth
+                                        to a new life in Christ, just as Jesus was resurrected and lives today.</p>
 
-                            <!-- Inset Block -->
-                            <div class="grid-x grid-margin-x grid-margin-y single">
-                                <div class="cell auto"></div>
-                                <div class="large-9 cell activity-description well">
-                                    <div class="grid-x grid-padding-x grid-padding-y center" >
-                                        <div class="cell session-boxes">
-                                            <?php esc_html_e( 'Find the "Baptism" section in your Zúme Guidebook, and listen to the audio below.', 'zume' ) ?>
-                                        </div>
-                                    </div>
+                                    <p>If you have never baptized someone before, it may seem intimidating, but it
+                                        shouldn’t be. Here are some simple steps.</p>
 
+                                    <p>Jesus said -- “go and make disciples of all nations, baptizing them in the name
+                                        of the Father and of the Son and of the Holy Spirit…”</p>
+
+                                    <p>Baptism - or Baptizo in the original Greek language - means a drenching or
+                                        submerging - like
+                                        when you dye a cloth and it soaks in the color and comes out transformed.
+                                        Baptism is a picture
+                                        of our new life, soaked in the image of Jesus, transformed in obedience to God.
+                                        It is a picture of
+                                        our death to sin, just as Jesus died for our sins; a burial of our old way of
+                                        life, just as Jesus was
+                                        buried; a rebirth to a new life in Christ, just as Jesus was resurrected and
+                                        lives today.</p>
+                                    <p>If you have never baptized someone before, it may seem intimidating, but it
+                                        shouldn’t be. Here are some simple steps:</p>
+                                    <p>1. Find some standing water, deep enough to allow the new disciple to be
+                                        submerged. This
+                                        can be a pond, river, lake or ocean. It could be a bathtub or another way to
+                                        gather water.</p>
+                                    <p>2. Let the disciple hold one of your hands with theirs and support their back
+                                        with the other.</p>
+                                    <p>3. Ask two questions like these to make sure they understand their decision.
+                                        “Have you received Jesus Christ as your Lord and Savior?”
+                                        “Will you obey and serve Him as your King for the rest of your life?”</p>
+                                    <p>4. If they answer “Yes,” to both, then say something like this:
+                                        “Because you’ve professed your faith in the Lord Jesus, I now baptize you in the
+                                        name of the Father, Son, and Holy Spirit.”</p>
+                                    <p>5. Help them lower into the water, submerge completely and raise them back up.
+                                        Congratulations! You’ve baptized a new follower of Jesus - a new citizen of
+                                        heaven - a new child
+                                        of the Living God. It’s time to celebrate!</p>
                                 </div>
-                                <div class="cell auto"></div>
                             </div> <!-- grid-x -->
 
                             <!-- Video block -->
@@ -99,7 +117,7 @@ if (have_posts()) :
                                 <div class="cell content-large center">
                                     <h3 class="center"><?php echo esc_html__( 'Ask Yourself', 'zume' ) ?></h3>
                                 </div>
-                                <div class="large-9 cell activity-description">
+                                <div class="cell content-large">
                                     <ol>
                                         <li><?php esc_html_e( 'Have you ever baptized someone?', 'zume' ) ?></li>
                                         <li><?php esc_html_e( 'Would you even consider it?', 'zume' ) ?></li>
@@ -109,24 +127,6 @@ if (have_posts()) :
                                 </div>
                             </div> <!-- grid-x -->
 
-                            <!-- Inset Block -->
-                            <div class="grid-x grid-margin-x grid-margin-y single">
-                                <div class="cell auto"></div>
-                                <div class="large-9 cell activity-description well">
-                                    <div class="grid-x grid-padding-x grid-padding-y center" >
-                                        <div class="cell session-boxes">
-                                            <p>
-                                                <?php esc_html_e( 'IMPORTANT REMINDER – Have you been baptized?', 'zume' ) ?>
-                                            </p>
-                                            <p>
-                                                <?php esc_html_e( 'If not, then we encourage you to plan this before even one more session of this training. Invite your group to be a part of this important day when you celebrate saying "yes" to Jesus.', 'zume' ) ?>
-                                            </p>
-                                        </div>
-                                    </div>
-
-                                </div>
-                                <div class="cell auto"></div>
-                            </div> <!-- grid-x -->
                         </section>
                     </div>
 

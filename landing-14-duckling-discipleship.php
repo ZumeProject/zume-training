@@ -50,9 +50,15 @@ if (have_posts()) :
 
                             <!-- Activity Block  -->
                             <div class="grid-x grid-margin-x grid-margin-y">
-                                <div class="large-3 cell activity-title"><?php esc_html_e( 'WATCH', 'zume' ) ?></div>
-                                <div class="large-9 cell activity-description">
-                                    <?php esc_html_e( "What do ducklings have to do with disciple making? They lead and follow at the same time.", 'zume' ) ?>
+                                <div class="cell content-large">
+                                    <p>No matter where you are in the world, it always looks the same. A Mother Duck
+                                        leads and her ducklings follow - one by one - all in a row. The Mother Duck
+                                        leads. The little ducks follow. But if you look even closer, you’ll see
+                                        something else is happening, too.</p>
+
+                                    <p>If you want to see God’s family grow far and grow in faithfulness, then think of
+                                        disciple-making like ducklings - become a follower and a leader at exactly the same time.</p>
+
                                 </div>
                             </div> <!-- grid-x -->
 
@@ -81,7 +87,7 @@ if (have_posts()) :
                                 <div class="cell content-large center">
                                     <h3 class="center"><?php echo esc_html__( 'Ask Yourself', 'zume' ) ?></h3>
                                 </div>
-                                <div class="large-9 cell activity-description">
+                                <div class="cell content-large">
                                     <ol>
                                         <li><?php esc_html_e( "What is one area of discipleship (reading/understanding the Bible, praying, sharing God's Story, etc.) that you want to learn more about? Who is someone that could help you learn?", 'zume' ) ?>
                                         </li>

@@ -51,7 +51,7 @@ if (have_posts()) :
                             <!-- Activity Block  -->
                             <div class="grid-x grid-margin-x grid-margin-y">
                                 <div class="large-3 cell activity-title"><?php esc_html_e( 'WATCH', 'zume' ) ?></div>
-                                <div class="large-9 cell activity-description">
+                                <div class="cell content-large">
                                     <?php esc_html_e( "Disciple-making can be rapidly advanced by finding a person of peace, even in a place where followers of Jesus are few and far between. How do you know when you have found a person of peace and what do you when you find them?", 'zume' ) ?>
                                 </div>
                             </div> <!-- grid-x -->
@@ -82,7 +82,7 @@ if (have_posts()) :
                                 <div class="cell content-large center">
                                     <h3 class="center"><?php echo esc_html__( 'Ask Yourself', 'zume' ) ?></h3>
                                 </div>
-                                <div class="large-9 cell activity-description">
+                                <div class="cell content-large">
                                     <ol>
                                         <li>
                                             <?php esc_html_e( "Can someone who has a \"bad reputation\" (like the Samaritan woman or the demon-possessed man in the Gadarenes) really be a Person of Peace? Why or why not?", 'zume' ) ?>

@@ -63,16 +63,13 @@ if (have_posts()) :
                                         list.</p>
 
                                 </div>
-                                <div class="cell center">
-                                    <a href="javascript:alert('add link')" class="button primary large">Download List of 100</a>
-                                </div>
+
+
                             </div> <!-- grid-x -->
 
                             <!-- Video block -->
                             <div class="grid-x grid-margin-x grid-margin-y">
                                 <div class="small-12 small-centered cell video-section">
-
-
                                     <!-- 8 -->
                                     <?php if ( $alt_video ) : ?>
                                         <video width="960" height="540" style="border: 1px solid lightgrey;margin: 0 15%;" controls>
@@ -88,6 +85,17 @@ if (have_posts()) :
 
                                 </div>
                             </div> <!-- grid-x -->
+
+                            <div class="grid-x">
+                                <div class="cell center">
+                                    <a href="javascript:alert('add link')" class="button primary large">Download List of 100</a>
+                                </div>
+                                <div class="cell center">
+                                    <img src="<?php echo get_theme_file_uri() . '/assets/images/temp/33_en_zume_guidebook 2_Page_08.jpg' ?>" />
+                                    <img src="<?php echo get_theme_file_uri() . '/assets/images/temp/33_en_zume_guidebook 2_Page_09.jpg' ?>" />
+                                    <img src="<?php echo get_theme_file_uri() . '/assets/images/temp/33_en_zume_guidebook 2_Page_10.jpg' ?>" />
+                                </div>
+                            </div>
                         </section>
 
                     </div>

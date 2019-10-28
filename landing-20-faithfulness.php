@@ -51,7 +51,7 @@ if (have_posts()) :
                             <!-- Activity Block  -->
                             <div class="grid-x grid-margin-x grid-margin-y">
                                 <div class="large-3 cell activity-title"><?php esc_html_e( 'WATCH', 'zume' ) ?></div>
-                                <div class="large-9 cell activity-description">
+                                <div class="cell content-large">
                                     <?php esc_html_e( "When we help multiply disciples, we need to make sure we're reproducing the right things. It's important what disciples know – but it's much more important what they DO with what they know.", 'zume' ) ?>
                                 </div>
                             </div> <!-- grid-x -->
@@ -80,7 +80,7 @@ if (have_posts()) :
                                 <div class="cell content-large center">
                                     <h3 class="center"><?php echo esc_html__( 'Ask Yourself', 'zume' ) ?></h3>
                                 </div>
-                                <div class="large-9 cell activity-description">
+                                <div class="cell content-large">
                                     <?php esc_html_e( "Think about God's commands that you already know. How \"faithful\" are you in terms of obeying and sharing those things?", 'zume' ) ?>
                                 </div>
                             </div> <!-- grid-x -->

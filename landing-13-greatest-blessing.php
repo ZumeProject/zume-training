@@ -48,20 +48,19 @@ if (have_posts()) :
                     <div class="large-8 small-12 cell" id="training-content">
                         <section>
 
-                            <!-- Step Title -->
-                            <div class="grid-x grid-margin-x grid-margin-y">
-                                <div class="step-title cell">
-                                    <?php esc_html_e( 'Watch and Discuss (15min)', 'zume' ) ?>
-                                </div> <!-- step-title cell -->
-                            </div> <!-- grid-x -->
-
                             <!-- Activity Block  -->
                             <div class="grid-x grid-margin-x grid-margin-y">
-                                <div class="large-3 cell activity-title"><?php esc_html_e( 'WATCH', 'zume' ) ?></div>
-                                <div class="large-9 cell activity-description">
-                                    <?php esc_html_e( "What is God's greatest blessing for His children? Making disciples who multiply!", 'zume' ) ?>
-                                    <br><br>
-                                    <?php esc_html_e( "What if you could learn a simple pattern for making not just one follower of Jesus but entire spiritual families who multiply for generations to come?", 'zume' ) ?>
+                                <div class="cell content-large">
+                                    <p>When someone chooses to follow Jesus, how do you help them move down the right
+                                        path? How do you help them become a producer in God’s kingdom and not just
+                                        another consumer? How do you help them receive all the blessings that God is
+                                        willing to give? I start by telling them this..</p>
+
+                                    <p>It is a blessing to follow Jesus. It is a great blessing to lead others to follow
+                                        Jesus. It is a greater blessing to start a new spiritual family.</p>
+
+                                    <p>It is the greatest blessing to equip others to start new spiritual families.</p>
+
                                 </div>
                             </div> <!-- grid-x -->
 
@@ -87,10 +86,10 @@ if (have_posts()) :
 
                             <!-- Activity Block  -->
                             <div class="grid-x grid-margin-x grid-margin-y">
-                                <div class="large-3 cell activity-title">
-                                    <?php esc_html_e( 'DISCUSS', 'zume' ) ?>
+                                <div class="cell content-large center">
+                                    <h3 class="center"><?php echo esc_html__( 'Ask Yourself', 'zume' ) ?></h3>
                                 </div>
-                                <div class="large-9 cell activity-description">
+                                <div class="cell content-large">
                                     <ol>
                                         <li><?php esc_html_e( "Is this the pattern you were taught when you first began to follow Jesus? If not, what was different?", 'zume' ) ?>
                                         </li>

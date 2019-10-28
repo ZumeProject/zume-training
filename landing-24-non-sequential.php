@@ -53,7 +53,7 @@ if (have_posts()) :
                                 <div class="large-3 cell activity-title">
                                     <?php esc_html_e( 'WATCH', 'zume' ) ?>
                                 </div>
-                                <div class="large-9 cell activity-description">
+                                <div class="cell content-large">
                                     <?php esc_html_e( "When people think about disciples multiplying, they often think of it as a step-by-step process. The problem with that is — that's not how it works best!", 'zume' ) ?>
                                 </div>
                             </div>
@@ -84,7 +84,7 @@ if (have_posts()) :
                                 <div class="cell content-large center">
                                     <h3 class="center"><?php echo esc_html__( 'Ask Yourself', 'zume' ) ?></h3>
                                 </div>
-                                <div class="large-9 cell activity-description">
+                                <div class="cell content-large">
                                     <ol>
                                         <li><?php esc_html_e( "What is the most exciting idea you heard in this video? Why?", 'zume' ) ?></li>
                                         <li><?php esc_html_e( "What is the most challenging idea? Why?", 'zume' ) ?></li>

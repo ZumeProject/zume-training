@@ -51,7 +51,7 @@ if (have_posts()) :
                             <!-- Activity Block  -->
                             <div class="grid-x grid-margin-x grid-margin-y">
                                 <div class="large-3 cell activity-title"><?php esc_html_e( 'WATCH', 'zume' ) ?></div>
-                                <div class="large-9 cell activity-description">
+                                <div class="cell content-large">
                                     <p>
                                         <?php esc_html_e( "Have you ever learned how to ride a bicycle? Have you ever helped someone else learn? If so, chances are you already know the Training Cycle.", 'zume' )?>
                                     </p>
@@ -95,7 +95,7 @@ if (have_posts()) :
                                 <div class="cell content-large center">
                                     <h3 class="center"><?php echo esc_html__( 'Ask Yourself', 'zume' ) ?></h3>
                                 </div>
-                                <div class="large-9 cell activity-description">
+                                <div class="cell content-large">
                                     <ol>
                                         <li><?php esc_html_e( "Have you ever been a part of a Training Cycle?", 'zume' ) ?></li>
                                         <li><?php esc_html_e( "Who did you train? Or who trained you?", 'zume' ) ?></li>

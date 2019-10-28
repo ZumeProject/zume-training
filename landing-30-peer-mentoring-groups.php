@@ -51,7 +51,7 @@ if (have_posts()) :
                             <!-- Activity Block  -->
                             <div class="grid-x grid-margin-x grid-margin-y">
                                 <div class="large-3 cell activity-title"><?php esc_html_e( "READ", 'zume' ) ?></div>
-                                <div class="large-9 cell activity-description">
+                                <div class="cell content-large">
                                     <p class="read-section">
                                         <?php esc_html_e( "Peer Mentoring Groups", 'zume' ) ?>
                                     </p>

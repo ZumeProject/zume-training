@@ -12,19 +12,19 @@
                 <div class="cell small-2"></div>
                 <div class="cell small-2 center">
                     <div class="stat-landing-title"><?php echo esc_html__( "Heard", 'zume' ) ?></div>
-                    <i class="p-icon-landing complete" id="<?php echo esc_attr( $session_number ) ?>h"></i>
+                    <i class="p-icon-landing complete" id="<?php echo esc_attr( $tool_number ) ?>h"></i>
                 </div>
                 <div class="cell small-2 center">
                     <div class="stat-landing-title"><?php echo esc_html__( "Obeyed", 'zume' ) ?></div>
-                    <i class="p-icon-landing" id="<?php echo esc_attr( $session_number ) ?>o"></i>
+                    <i class="p-icon-landing" id="<?php echo esc_attr( $tool_number ) ?>o"></i>
                 </div>
                 <div class="cell small-2 center">
                     <div class="stat-landing-title"><?php echo esc_html__( "Shared", 'zume' ) ?></div>
-                    <i class="p-icon-landing" id="<?php echo esc_attr( $session_number ) ?>s"></i>
+                    <i class="p-icon-landing" id="<?php echo esc_attr( $tool_number ) ?>s"></i>
                 </div>
                 <div class="cell small-2 center">
                     <div class="stat-landing-title"><?php echo esc_html__( "Trained", 'zume' ) ?></div>
-                    <i class="p-icon-landing" id="<?php echo esc_attr( $session_number ) ?>t"></i>
+                    <i class="p-icon-landing" id="<?php echo esc_attr( $tool_number ) ?>t"></i>
                 </div>
                 <div class="cell small-2"></div>
             </div>
@@ -38,7 +38,7 @@
         </div>
         <script>
             jQuery(document).ready(function(){
-                window.API.update_progress( '<?php echo esc_attr( $session_number ) ?>h', 'on' )
+                window.API.update_progress( '<?php echo esc_attr( $tool_number ) ?>h', 'on' )
                 load_progress()
             })
         </script>

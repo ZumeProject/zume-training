@@ -50,11 +50,18 @@ if (have_posts()) :
 
                             <!-- Activity Block  -->
                             <div class="grid-x grid-margin-x grid-margin-y">
-                                <div class="large-3 cell activity-title"><?php esc_html_e( 'WATCH', 'zume' ) ?></div>
-                                <div class="large-9 cell activity-description">
-                                    <?php esc_html_e( "Have you ever stopped to think about where God's Kingdom... isn't?", 'zume' ) ?>
-                                    <br><br>
-                                    <?php esc_html_e( "Have you ever visited a home or a neighborhood or even a city where it seemed as if God was just... missing? These are usually the places where God wants to work the most.", 'zume' ) ?>
+                                <div class="cell content-large">
+                                    <p>There are places all around us where God’s will is not being done on earth as it
+                                        is in heaven - giant gaps where brokenness, pain, persecution, suffering and
+                                        even death are a part of normal, everyday life.</p>
+
+                                    <p>Every disciple - every follower of Jesus - needs to be able to see not just where
+                                        God’s Kingdom is, but where God’s kingdom isn’t.</p>
+
+                                    <p>Opening our eyes to see where the Kingdom isn’t and reaching out through people
+                                        we know and people we don’t know yet is how disciples multiply and God’s Kingdom
+                                        grows far and fast.</p>
+
                                 </div>
                             </div> <!-- grid-x -->
 
@@ -83,7 +90,7 @@ if (have_posts()) :
                                 <div class="cell content-large center">
                                     <h3 class="center"><?php echo esc_html__( 'Ask Yourself', 'zume' ) ?></h3>
                                 </div>
-                                <div class="large-9 cell activity-description">
+                                <div class="cell content-large">
                                     <ol>
                                         <li><?php esc_html_e( "Who are you more comfortable sharing with -- people you already know or people you haven't met, yet?", 'zume' ) ?>
                                         </li>

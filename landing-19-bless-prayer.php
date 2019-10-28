@@ -46,6 +46,36 @@ if (have_posts()) :
 
                     <!-- Center column -->
                     <div class="large-8 small-12 cell" id="training-content">
+                        <section>
+                            <div class="grid-x grid-margin-x grid-margin-y">
+                                <div class="cell content-large">
+                                    Finally, here are five ways you can pray for people you meet during your Prayer Walk:
+                                    As you walk and pray, be alert for opportunities and listen for promptings by God’s Spirit to pray
+                                    for individuals and groups you meet along the way.
+                                    You can say, “We’re praying for this community, is there anything in particular we can pray for
+                                    you about?” Or say, “I’m praying for this area. Do you know anything in particular we should
+                                    pray for?” After listening to their response you can ask about their own needs. If they share, pray
+                                    for them right away. If the Lord leads, you may pray about other needs as well.
+                                    Zúme Guidebook / Page 18
+                                    Use the word B.L.E.S.S. to help you remember 5 different ways you can pray:
+                                    • Body [health]
+                                    • Labor [job and finances]
+                                    • Emotional [morale]
+                                    • Social [relationships]
+                                    • Spiritual [knowing and loving God more]
+                                    In most cases, people are grateful you care enough to pray.
+                                    If the person is not a Christian, your prayer may open the door to a spiritual conversation and an
+                                    opportunity to share your story and God’s story. You can invite them to be a part of a Bible study
+                                    or even host one in their home.
+                                    If the person is a Christian you can invite them to join your Prayer Walk or train them how they
+                                    can Prayer Walk and use simple steps like praying for areas of influence or the B.L.E.S.S. Prayer
+                                    to grow God’s family even more.
+                                    ACTIVITY [15 min] - Break into groups of two or three and spend the next 15 minutes practicing
+                                    the B.L.E.S.S. Prayer. Practice praying the 5 areas of the B.L.E.S.S. Prayer for someone AND
+                                    practice how you would train others to understand and use the B.L.E.S.S. Prayer, too.
+                                </div>
+                            </div>
+                        </section>
 
                     </div>
 
