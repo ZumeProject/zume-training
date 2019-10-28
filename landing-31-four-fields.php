@@ -7,7 +7,9 @@ $alt_video = false;
 if (have_posts()) :
     while (have_posts()) : the_post();
         $session_number = 31;
-        set_query_var( 'session_number', absint( $session_number ) )
+        set_query_var( 'session_number', absint( $session_number ) );
+        $tool_number = 3;
+        set_query_var( 'tool_number', absint( $tool_number ) );
         ?>
 
         <!-- Wrappers -->
@@ -77,10 +79,10 @@ if (have_posts()) :
                     <div class="large-8 small-12 cell">
 
                         <div class="grid-x grid-margin-x grid-margin-y">
-                            <div class="large-12 cell activity-description-no-border center">
+                            <div class="large-12 cell content-large center">
                                 <h3 class="center"><?php echo esc_html__( 'Video Transcript', 'zume' ) ?></h3>
                             </div>
-                            <div class="large-12 cell activity-description-no-border">
+                            <div class="large-12 cell content-large">
 
                                 <?php the_content(); ?>
 

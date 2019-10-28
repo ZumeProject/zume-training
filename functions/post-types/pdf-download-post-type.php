@@ -276,6 +276,7 @@ class Zume_PDF_Download_Post_Type
      */
     public function meta_box_setup() {
         add_meta_box( $this->post_type . '_scribes', 'Downloads', array( $this, 'load_downloads_meta_box' ), $this->post_type, 'normal', 'high' );
+        add_meta_box( $this->post_type . '_pages', 'Pages Download Assets', array( $this, 'load_pages_downloads_meta_box' ), $this->post_type, 'normal', 'high' );
         add_meta_box( $this->post_type . '_links', 'Links', array( $this, 'load_links_meta_box' ), $this->post_type, 'normal', 'high' );
     } // End meta_box_setup()
 
@@ -288,6 +289,9 @@ class Zume_PDF_Download_Post_Type
     public function load_downloads_meta_box() {
         echo 'Add only the filename with the .pdf extension. The file is added to the Theme in `zume-project-multilingual/files`.<br><br>The page title above needs to be the two character language code.<br><hr>';
         $this->meta_box_content( 'downloads' ); // prints
+    }
+    public function load_pages_downloads_meta_box() {
+        $this->meta_box_content( 'pages' ); // prints
     }
 
     /**
@@ -678,6 +682,162 @@ class Zume_PDF_Download_Post_Type
             'type'        => 'link',
             'default'     => '62_en_peer_mentoring.pdf',
             'section'     => 'downloads',
+        ];
+
+        /** Pieces Section */
+        $fields['71'] = [
+            'name'        => '(71) SOAPS',
+            'description' => '',
+            'type'        => 'link',
+            'default'     => '',
+            'section'     => 'pages',
+        ];
+        $fields['72'] = [
+            'name'        => '(72) Peer Mentoring Script ',
+            'description' => '',
+            'type'        => 'link',
+            'default'     => '',
+            'section'     => 'pages',
+        ];
+        $fields['73'] = [
+            'name'        => '(73) Peer Mentoring Script ',
+            'description' => '',
+            'type'        => 'link',
+            'default'     => '',
+            'section'     => 'pages',
+        ];
+        $fields['74'] = [
+            'name'        => '(74) Peer Mentoring Script ',
+            'description' => '',
+            'type'        => 'link',
+            'default'     => '',
+            'section'     => 'pages',
+        ];
+        $fields['75'] = [
+            'name'        => '(75) Peer Mentoring Script ',
+            'description' => '',
+            'type'        => 'link',
+            'default'     => '',
+            'section'     => 'pages',
+        ];
+        $fields['76'] = [
+            'name'        => '(76) Peer Mentoring Script ',
+            'description' => '',
+            'type'        => 'link',
+            'default'     => '',
+            'section'     => 'pages',
+        ];
+        $fields['77'] = [
+            'name'        => '(77) Peer Mentoring Script ',
+            'description' => '',
+            'type'        => 'link',
+            'default'     => '',
+            'section'     => 'pages',
+        ];
+        $fields['78'] = [
+            'name'        => '(78) Peer Mentoring Script ',
+            'description' => '',
+            'type'        => 'link',
+            'default'     => '',
+            'section'     => 'pages',
+        ];
+        $fields['79'] = [
+            'name'        => '(79) Peer Mentoring Script ',
+            'description' => '',
+            'type'        => 'link',
+            'default'     => '',
+            'section'     => 'pages',
+        ];
+        $fields['80'] = [
+            'name'        => '(80) Peer Mentoring Script ',
+            'description' => '',
+            'type'        => 'link',
+            'default'     => '',
+            'section'     => 'pages',
+        ];
+        $fields['81'] = [
+            'name'        => '(81) Peer Mentoring Script ',
+            'description' => '',
+            'type'        => 'link',
+            'default'     => '',
+            'section'     => 'pages',
+        ];
+        $fields['82'] = [
+            'name'        => '(82) Peer Mentoring Script ',
+            'description' => '',
+            'type'        => 'link',
+            'default'     => '',
+            'section'     => 'pages',
+        ];
+        $fields['83'] = [
+            'name'        => '(83) Peer Mentoring Script ',
+            'description' => '',
+            'type'        => 'link',
+            'default'     => '',
+            'section'     => 'pages',
+        ];
+        $fields['84'] = [
+            'name'        => '(84) Peer Mentoring Script ',
+            'description' => '',
+            'type'        => 'link',
+            'default'     => '',
+            'section'     => 'pages',
+        ];
+        $fields['85'] = [
+            'name'        => '(85) Peer Mentoring Script ',
+            'description' => '',
+            'type'        => 'link',
+            'default'     => '',
+            'section'     => 'pages',
+        ];
+        $fields['86'] = [
+            'name'        => '(86) Peer Mentoring Script ',
+            'description' => '',
+            'type'        => 'link',
+            'default'     => '',
+            'section'     => 'pages',
+        ];
+        $fields['87'] = [
+            'name'        => '(87) Peer Mentoring Script ',
+            'description' => '',
+            'type'        => 'link',
+            'default'     => '',
+            'section'     => 'pages',
+        ];
+        $fields['88'] = [
+            'name'        => '(88) Peer Mentoring Script ',
+            'description' => '',
+            'type'        => 'link',
+            'default'     => '',
+            'section'     => 'pages',
+        ];
+        $fields['89'] = [
+            'name'        => '(89) Peer Mentoring Script ',
+            'description' => '',
+            'type'        => 'link',
+            'default'     => '',
+            'section'     => 'pages',
+        ];
+        $fields['90'] = [
+            'name'        => '(90) Peer Mentoring Script ',
+            'description' => '',
+            'type'        => 'link',
+            'default'     => '',
+            'section'     => 'pages',
+        ];
+        $fields['91'] = [
+            'name'        => '(91) Peer Mentoring Script ',
+            'description' => '',
+            'type'        => 'link',
+            'default'     => '',
+            'section'     => 'pages',
+        ];
+        $fields['92'] = [
+            'name'        => '(92) Peer Mentoring Script ',
+            'description' => '',
+            'type'        => 'link',
+            'default'     => '',
+            'section'     => 'pages',
         ];
 
         /* Full links to files */

@@ -6,8 +6,10 @@ get_header();
 $alt_video = false;
 if (have_posts()) :
     while (have_posts()) : the_post();
-        $session_number = 7;
-        set_query_var( 'session_number', absint( $session_number ) )
+        $session_number = 2;
+        set_query_var( 'session_number', absint( $session_number ) );
+        $tool_number = 7;
+        set_query_var( 'tool_number', absint( $tool_number ) );
         ?>
 
         <!-- Wrappers -->
@@ -46,35 +48,70 @@ if (have_posts()) :
                     <div class="large-8 small-12 cell" id="training-content">
 
                         <section>
-                            <div class="grid-x grid-margin-x grid-margin-y">
-                                <div class="step-title cell">
-                                    <?php esc_html_e( 'Listen and Read Along (2min)', 'zume' ) ?>
-                                </div> <!-- step-title cell -->
-                            </div> <!-- grid-x -->
-
                             <!-- Activity Block  -->
                             <div class="grid-x grid-margin-x grid-margin-y">
-                                <div class="large-3 cell activity-title">
-                                    <?php esc_html_e( 'READ', 'zume' ) ?>
-                                </div>
-                                <div class="large-9 cell activity-description">
-                                    <p class="read-section"><?php esc_html_e( 'Prayer Cycle', 'zume' ) ?></p>
-                                    <p><?php esc_html_e( 'The Bible tells us that prayer is our chance to speak to and hear from the same God who created us!', 'zume' ) ?></p>
+                                <div class="cell content-large">
+                                    <p>The Prayer Cycle is a simple tool for practicing prayer that you can use by
+                                        yourself and share with any follower. In just 12 simple steps - 5 minutes each -
+                                        the Prayer Cycle guides you through twelve ways the Bible teaches us to pray. At
+                                        the end, you’ll have prayed for an hour.</p>
+
+                                    <p>The Bible tells us -- “Pray without ceasing.” Not many of us can say we do that.
+                                        But after this hour of prayer - you’ll be a step closer.</p>
+                                    <p><img src="<?php echo esc_url( zume_images_uri('pages')) ?>prayer-cycle-en.png" alt="prayer cycle" /> </p>
+                                    <p>In just 12 simple steps - 5 minutes each - this
+                                        Prayer Cycle guides you
+                                        through twelve ways the Bible teaches us to pray. At the end, you’ll have prayed
+                                        for an hour.
+                                    </p>
+                                    <p>PRAISE: Start your prayer hour by praising the Lord. Praise Him for things that
+                                        are on your mind
+                                        right now. Praise Him for one special thing He has done in your life in the past
+                                        week. Praise Him
+                                        for His goodness to your family. </p>
+                                    <p>WAIT: Spend time waiting on the Lord. Be silent and let Him pull together
+                                        reflections for you.</p>
+                                    <p>CONFESS: Ask the Holy Spirit to show you anything in your life that might be
+                                        displeasing
+                                        to Him. Ask Him to point out attitudes that are wrong, as well as specific acts
+                                        for which you
+                                        have not yet made a prayer of confession. Now confess that to the Lord so that
+                                        you might be
+                                        cleansed.</p>
+                                    <p>READ THE WORD: Spend time reading in the Psalms, in the prophets, and passages on
+                                        prayer located in the New Testament.</p>
+                                    <p>ASK: Make requests on behalf of yourself.</p>
+                                    <p>INTERCESSION: Make requests on behalf of others.</p>
+                                    <p>PRAY THE WORD: Pray specific passages. Scriptural prayers as well as a number of
+                                        psalms lend
+                                        themselves well to this purpose.</p>
+                                    <p>THANK: Give thanks to the Lord for the things in your life, on behalf of your
+                                        family, and on
+                                        behalf of your church.</p>
+                                    <p>SING: Sing songs of praise or worship or another hymn or spiritual song.</p>
+                                    <p>MEDITATE: Ask the Lord to speak to you. Have a pen and paper ready to record
+                                        impressions He
+                                        gives you.</p>
+                                    <p>LISTEN: Spend time merging the things you have read, things you have prayed and
+                                        things you
+                                        have sung and see how the Lord brings them all together to speak to you.</p>
+                                    <p>PRAISE: Praise the Lord for the time you have had to spend with Him and the
+                                        impressions He
+                                        has given you. Praise Him for His glorious attributes.</p>
+                                    <p>ACTIVITY [60 min] - Spend the next 60 minutes in prayer by individually working
+                                        through the exercises in the Prayer Cycle. Set a time for the group to return and reconnect.
+                                        Be sure to allow a few extra minutes for everyone to find a quiet place to pray and to make their
+                                        way back to the group.</p>
+                                    <p>From Dick Eastman’s book The Hour that Changes the World © 2002 by Dick Eastman,
+                                        Chosen Books, Grand Rapids, MI, used by permission.</p>
                                 </div>
                             </div> <!-- grid-x -->
 
                             <!-- Inset Block -->
                             <div class="grid-x grid-margin-x grid-margin-y single">
-                                <div class="cell auto"></div>
-                                <div class="large-9 cell activity-description well">
-                                    <div class="grid-x grid-padding-x grid-padding-y center" >
-                                        <div class="cell session-boxes">
-                                            <?php esc_html_e( 'Find the "Prayer Cycle" section in your Zúme Guidebook, and listen to the audio below.', 'zume' ) ?>
-                                        </div>
-                                    </div>
+                                <div class="large-9 cell ">
 
                                 </div>
-                                <div class="cell auto"></div>
                             </div> <!-- grid-x -->
 
                             <!-- Video block -->
@@ -94,13 +131,6 @@ if (have_posts()) :
                                         </iframe>
                                     <?php endif; ?>
 
-                                    <p class="center hide-for-small-only"><a
-                                            href="<?php echo esc_url( Zume_Course::get_download_by_key( '40' ) ) ?>"
-                                            target="_blank" rel="noopener noreferrer nofollow"><img
-                                                src="<?php echo esc_url( zume_images_uri( 'course' ) ) ?>download-icon-150x150.png"
-                                                alt=""
-                                                width="35" height="35" class="alignnone size-thumbnail wp-image-3274"
-                                                style="vertical-align: text-bottom"/> <?php esc_html_e( 'Zúme Video Scripts: Prayer Cycle', 'zume' ) ?></a></p>
                                 </div>
                             </div> <!-- grid-x -->
                         </section>

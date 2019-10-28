@@ -286,6 +286,11 @@ function zume_files_uri() {
     return 'https://storage.googleapis.com/zume-file-mirror/' . zume_current_language() . '/';
 }
 
+function zume_files_download_uri( $id ) {
+    // post id of downloads / meta field
+    return zume_files_uri() . '/' ;
+}
+
 function zume_home_id() {
     $current_lang = zume_current_language();
     $id = zume_get_home_translation_id( 'home', $current_lang );

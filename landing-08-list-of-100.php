@@ -6,8 +6,10 @@ get_header();
 $alt_video = false;
 if (have_posts()) :
     while (have_posts()) : the_post();
-        $session_number = 8;
-        set_query_var( 'session_number', absint( $session_number ) )
+        $session_number = 2;
+        set_query_var( 'session_number', absint( $session_number ) );
+        $tool_number = 8;
+        set_query_var( 'tool_number', absint( $tool_number ) );
         ?>
 
         <!-- Wrappers -->
@@ -46,41 +48,24 @@ if (have_posts()) :
                     <div class="large-8 small-12 cell" id="training-content">
 
                         <section>
-                            <!-- Listen and Read Along -->
-                            <div class="grid-x grid-margin-x grid-margin-y">
-                                <div class="step-title cell">
-                                    <?php esc_html_e( 'Listen and Read Along (3min)', 'zume' ) ?>
-                                </div> <!-- step-title cell -->
-                            </div> <!-- grid-x -->
 
                             <!-- Activity Block  -->
                             <div class="grid-x grid-margin-x grid-margin-y">
-                                <div class="large-3 cell activity-title"><?php esc_html_e( "READ", 'zume' ) ?></div>
-                                <div class="large-9 cell activity-description">
-                                    <p class="read-section">
-                                        <?php esc_html_e( 'List of 100', 'zume' ) ?>
-                                    </p>
-                                    <p>
-                                        <?php esc_html_e( 'God has already given us the relationships we need to “Go and make disciples.” These are our family, friends, neighbors, co-workers and classmates – people we’ve known all our lives or maybe just met.', 'zume' ) ?>
-                                    </p>
-                                    <p>
-                                        <?php esc_html_e( 'Being good stewards of these relationships is the first step in multiplying disciples. Start by making a list.', 'zume' ) ?>
-                                    </p>
-                                </div>
-                            </div> <!-- grid-x -->
+                                <div class="cell content-large">
+                                    <p>God has already given us the relationships we need to “Go and make
+                                        disciples.”</p>
 
-                            <!-- Inset Block -->
-                            <div class="grid-x grid-margin-x grid-margin-y single">
-                                <div class="cell auto"></div>
-                                <div class="large-9 cell activity-description well">
-                                    <div class="grid-x grid-padding-x grid-padding-y center" >
-                                        <div class="cell session-boxes">
-                                            <?php esc_html_e( 'Find the "List of 100" section in your Zúme Guidebook, and listen to the audio below.', 'zume' ) ?>
-                                        </div>
-                                    </div>
+                                    <p>These are our family, friends, neighbors, co-workers and classmates - people
+                                        we’ve known all our lives, people we’ve just met.</p>
+
+                                    <p>Being faithful with the people God has already put in our lives is a great first
+                                        step in multiplying disciples. And it can start with the simple step of making a
+                                        list.</p>
 
                                 </div>
-                                <div class="cell auto"></div>
+                                <div class="cell center">
+                                    <a href="javascript:alert('add link')" class="button primary large">Download List of 100</a>
+                                </div>
                             </div> <!-- grid-x -->
 
                             <!-- Video block -->
@@ -101,13 +86,6 @@ if (have_posts()) :
                                         </iframe>
                                     <?php endif; ?>
 
-                                    <p class="center hide-for-small-only"><a
-                                            href="<?php echo esc_url( Zume_Course::get_download_by_key( '41' ) ) ?>"
-                                            target="_blank" rel="noopener noreferrer nofollow"><img
-                                                src="<?php echo esc_url( zume_images_uri( 'course' ) ) ?>download-icon-150x150.png"
-                                                alt=""
-                                                width="35" height="35" class="alignnone size-thumbnail wp-image-3274"
-                                                style="vertical-align: text-bottom"/> <?php esc_html_e( "Zúme Video Scripts: List of 100", 'zume' ) ?></a></p>
                                 </div>
                             </div> <!-- grid-x -->
                         </section>

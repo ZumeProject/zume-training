@@ -7,7 +7,9 @@ $alt_video = false;
 if (have_posts()) :
     while (have_posts()) : the_post();
         $session_number = 25;
-        set_query_var( 'session_number', absint( $session_number ) )
+        set_query_var( 'session_number', absint( $session_number ) );
+        $tool_number = 3;
+        set_query_var( 'tool_number', absint( $tool_number ) );
         ?>
 
         <!-- Wrappers -->
@@ -45,12 +47,6 @@ if (have_posts()) :
                     <!-- Center column -->
                     <div class="large-8 small-12 cell" id="training-content">
                         <section><!-- Step Title -->
-                            <div class="grid-x grid-margin-x grid-margin-y">
-                                <div class="step-title cell"><?php esc_html_e( 'Watch and Discuss (15min)', 'zume' ) ?></div>
-                                <!-- step-title cell -->
-
-                            </div>
-                            <!-- grid-x -->
 
                             <!-- Activity Block -->
                             <div class="grid-x grid-margin-x grid-margin-y">
@@ -78,22 +74,14 @@ if (have_posts()) :
                                         </iframe>
                                     <?php endif; ?>
 
-                                    <p class="center hide-for-small-only">
-                                        <a  href="<?php echo esc_url( Zume_Course::get_download_by_key( '57' ) ) ?>"
-                                            target="_blank" rel="noopener noreferrer nofollow" ><img
-                                                class="alignnone size-thumbnail wp-image-3274"
-                                                style="vertical-align: text-bottom;"
-                                                src="<?php echo esc_url( zume_images_uri( 'course' ) ) ?>download-icon-150x150.png"
-                                                alt="" width="35" height="35"/>
-                                            <?php esc_html_e( "Zúme Video Scripts: Pace", 'zume' ) ?>
-                                        </a>
-                                    </p>
                                 </div>
                             </div>
                             <!-- grid-x -->
                             <!-- Activity Block -->
                             <div class="grid-x grid-margin-x grid-margin-y">
-                                <div class="large-3 cell activity-title"><?php esc_html_e( 'DISCUSS', 'zume' ) ?></div>
+                                <div class="cell content-large center">
+                                    <h3 class="center"><?php echo esc_html__( 'Ask Yourself', 'zume' ) ?></h3>
+                                </div>
                                 <div class="large-9 cell activity-description">
                                     <ol>
                                         <li><?php esc_html_e( "Why is pace important?", 'zume' ) ?></li>
@@ -139,10 +127,10 @@ if (have_posts()) :
                     <div class="large-8 small-12 cell">
 
                         <div class="grid-x grid-margin-x grid-margin-y">
-                            <div class="large-12 cell activity-description-no-border center">
+                            <div class="large-12 cell content-large center">
                                 <h3 class="center"><?php echo esc_html__( 'Video Transcript', 'zume' ) ?></h3>
                             </div>
-                            <div class="large-12 cell activity-description-no-border">
+                            <div class="large-12 cell content-large">
 
                                 <?php the_content(); ?>
 

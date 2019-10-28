@@ -145,6 +145,7 @@ function zume_site_scripts() {
                     30 => esc_url( zume_get_landing_translation_url( 30, $current_language ) ),
                     31 => esc_url( zume_get_landing_translation_url( 31, $current_language ) ),
                     32 => esc_url( zume_get_landing_translation_url( 32, $current_language ) ),
+
                 ],
                 'site_urls' => [
                   'login' => esc_url( zume_login_url( $current_language ) ),

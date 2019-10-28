@@ -6,8 +6,10 @@ get_header();
 $alt_video = false;
 if (have_posts()) :
     while (have_posts()) : the_post();
-        $session_number = 9;
-        set_query_var( 'session_number', absint( $session_number ) )
+        $session_number = 3;
+        set_query_var( 'session_number', absint( $session_number ) );
+        $tool_number = 9;
+        set_query_var( 'tool_number', absint( $tool_number ) );
         ?>
 
         <!-- Wrappers -->
@@ -46,18 +48,20 @@ if (have_posts()) :
                     <div class="large-8 small-12 cell" id="training-content">
                         <section>
 
-                            <!-- Step Title -->
-                            <div class="grid-x grid-margin-x grid-margin-y">
-                                <div class="step-title cell">
-                                    <?php esc_html_e( 'Watch and Discuss (15min)', 'zume' ) ?>
-                                </div> <!-- step-title cell -->
-                            </div> <!-- grid-x -->
-
                             <!-- Activity Block  -->
                             <div class="grid-x grid-margin-x grid-margin-y">
-                                <div class="large-3 cell activity-title"><?php esc_html_e( 'WATCH', 'zume' ) ?></div>
-                                <div class="large-9 cell activity-description">
-                                    <?php esc_html_e( 'In this broken world, people feel rewarded when they take, when they receive and when they gain more than those around them. But God\'s Spiritual Economy is different – God invests more in those who are faithful with what they\'ve already been given.', 'zume' ) ?>
+                                <div class="cell content-large">
+                                    <p>God shows us in His Kingdom economy we’re rewarded not by what we get - but by
+                                        what we give away.</p>
+
+                                    <p>When we are faithful to OBEY and SHARE what the Lord has shared with us, then He
+                                        promises to share even more. Jesus said - Whoever can be trusted with very
+                                        little can also be trusted with much.</p>
+
+                                    <p>This is the path to deeper insights, greater intimacy and living the abundant
+                                        life God created us to live. This is the way we can walk in the good works God
+                                        has already planned for us to do.</p>
+
                                 </div>
                             </div> <!-- grid-x -->
 
@@ -78,18 +82,14 @@ if (have_posts()) :
                                         </iframe>
                                     <?php endif; ?>
 
-                                    <p class="center hide-for-small-only"><a target="_blank" rel="noopener noreferrer nofollow"
-                                                                             href="<?php echo esc_url( Zume_Course::get_download_by_key( '42' ) ) ?>"><img
-                                                src="<?php echo esc_url( zume_images_uri( 'course' ) ) ?>download-icon-150x150.png"
-                                                alt=""
-                                                width="35" height="35" class="alignnone size-thumbnail wp-image-3274"
-                                                style="vertical-align: text-bottom"/> <?php esc_html_e( "Zúme Video Scripts: Spiritual Economy", 'zume' ) ?></a></p>
                                 </div>
                             </div> <!-- grid-x -->
                             <!-- Activity Block  -->
                             <div class="grid-x grid-margin-x grid-margin-y">
-                                <div class="large-3 cell activity-title"><?php esc_html_e( 'DISCUSS', 'zume' ) ?></div>
-                                <div class="large-9 cell activity-description">
+                                <div class="cell content-large center">
+                                    <h3 class="center"><?php echo esc_html__( 'Ask Yourself', 'zume' ) ?></h3>
+                                </div>
+                                <div class="cell content-large">
                                     <?php esc_html_e( 'What are some differences you see between God\'s Spiritual Economy and our earthly way of getting things done?', 'zume' ) ?>
                                 </div>
                             </div> <!-- grid-x -->
@@ -126,10 +126,10 @@ if (have_posts()) :
                     <div class="large-8 small-12 cell">
 
                         <div class="grid-x grid-margin-x grid-margin-y">
-                            <div class="large-12 cell activity-description-no-border center">
+                            <div class="large-12 cell content-large center">
                                 <h3 class="center"><?php echo esc_html__( 'Video Transcript', 'zume' ) ?></h3>
                             </div>
-                            <div class="large-12 cell activity-description-no-border">
+                            <div class="large-12 cell content-large">
 
                                 <?php the_content(); ?>
 

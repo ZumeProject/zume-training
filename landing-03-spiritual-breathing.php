@@ -6,8 +6,10 @@ get_header();
 $alt_video = false;
 if (have_posts()) :
     while (have_posts()) : the_post();
-        $session_number = 3;
-        set_query_var( 'session_number', absint( $session_number ) )
+        $session_number = 1;
+        set_query_var( 'session_number', absint( $session_number ) );
+        $tool_number = 3;
+        set_query_var( 'tool_number', absint( $tool_number ) );
         ?>
 
         <!-- Wrappers -->
@@ -46,7 +48,6 @@ if (have_posts()) :
                     <div class="large-8 small-12 cell" id="training-content">
 
                         <section><!-- Step Title -->
-
 
                             <!-- Activity Block -->
                             <div class="grid-x grid-margin-x grid-margin-y">

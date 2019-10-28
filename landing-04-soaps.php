@@ -6,8 +6,10 @@ get_header();
 $alt_video = false;
 if (have_posts()) :
     while (have_posts()) : the_post();
-        $session_number = 4;
-        set_query_var( 'session_number', absint( $session_number ) )
+        $session_number = 1;
+        set_query_var( 'session_number', absint( $session_number ) );
+        $tool_number = 4;
+        set_query_var( 'tool_number', absint( $tool_number ) );
         ?>
 
         <!-- Wrappers -->
