@@ -51,15 +51,9 @@ if (have_posts()) :
                             <!-- Activity Block  -->
                             <div class="grid-x grid-margin-x grid-margin-y">
                                 <div class="cell content-large">
-                                    <p>There are many ways to share God’s story.</p>
-
-                                    <p>The best way will depend on the person you’re sharing with and their view of the
-                                        world and their life experiences. God uses hearts willing to share to work on
-                                        hearts willing to hear.</p>
-
-                                    <p>One way to share God’s Story is by explaining what’s happened from God’s Creation
-                                        to His Judgement at the end of this age.</p>
-
+                                    <p><?php esc_html_e("There are many ways to share God’s story.", 'zume' ) ?></p>
+                                    <p><?php esc_html_e("The best way will depend on the person you’re sharing with and their view of the world and their life experiences. God uses hearts willing to share to work on hearts willing to hear.", 'zume' ) ?></p>
+                                    <p><?php esc_html_e("One way to share God’s Story is by explaining what’s happened from God’s Creation to His Judgement at the end of this age.", 'zume' ) ?></p>
                                 </div>
                             </div> <!-- grid-x -->
 
@@ -91,8 +85,7 @@ if (have_posts()) :
                                     <ol>
                                         <li><?php esc_html_e( 'What do you learn about mankind from this story?', 'zume' ) ?></li>
                                         <li><?php esc_html_e( 'What do you learn about God?', 'zume' ) ?></li>
-                                        <li><?php esc_html_e( 'Do you think it would be easier or harder to share God\'s Story by telling a story like this?', 'zume' ) ?>
-                                        </li>
+                                        <li><?php esc_html_e( 'Do you think it would be easier or harder to share God\'s Story by telling a story like this?', 'zume' ) ?></li>
                                     </ol>
                                 </div>
                             </div> <!-- grid-x -->
@@ -102,7 +95,6 @@ if (have_posts()) :
 
                     <div class="large-2 cell"></div><!-- Side spacer -->
                 </div> <!-- grid-x -->
-
 
                 <!------------------------------------------------------------------------------------------------>
                 <!-- Share section -->
@@ -116,33 +108,6 @@ if (have_posts()) :
                         <?php get_template_part( 'parts/content', 'share' ); ?>
 
                     </div>
-                    <div class="large-2 cell"></div><!-- Side spacer -->
-                </div> <!-- grid-x -->
-
-
-                <!------------------------------------------------------------------------------------------------>
-                <!-- Transcription section -->
-                <!------------------------------------------------------------------------------------------------>
-                <div class="grid-x">
-                    <div class="large-2 cell"></div><!-- Side spacer -->
-
-                    <!-- Center column -->
-                    <div class="large-8 small-12 cell">
-
-                        <div class="grid-x grid-margin-x grid-margin-y">
-                            <div class="large-12 cell content-large center">
-                                <h3 class="center"><?php echo esc_html__( 'Video Transcript', 'zume' ) ?></h3>
-                            </div>
-                            <div class="large-12 cell content-large">
-
-                                <?php the_content(); ?>
-
-                            </div>
-                        </div>
-
-                    </div>
-
-
                     <div class="large-2 cell"></div><!-- Side spacer -->
                 </div> <!-- grid-x -->
 

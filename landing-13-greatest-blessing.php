@@ -51,16 +51,9 @@ if (have_posts()) :
                             <!-- Activity Block  -->
                             <div class="grid-x grid-margin-x grid-margin-y">
                                 <div class="cell content-large">
-                                    <p>When someone chooses to follow Jesus, how do you help them move down the right
-                                        path? How do you help them become a producer in God’s kingdom and not just
-                                        another consumer? How do you help them receive all the blessings that God is
-                                        willing to give? I start by telling them this..</p>
-
-                                    <p>It is a blessing to follow Jesus. It is a great blessing to lead others to follow
-                                        Jesus. It is a greater blessing to start a new spiritual family.</p>
-
-                                    <p>It is the greatest blessing to equip others to start new spiritual families.</p>
-
+                                    <p><?php esc_html_e("When someone chooses to follow Jesus, how do you help them move down the right path? How do you help them become a producer in God’s kingdom and not just another consumer? How do you help them receive all the blessings that God is willing to give? I start by telling them this...", 'zume' ) ?></p>
+                                    <p><?php esc_html_e("It is a blessing to follow Jesus. It is a great blessing to lead others to follow Jesus. It is a greater blessing to start a new spiritual family.", 'zume' ) ?></p>
+                                    <p><?php esc_html_e("It is the greatest blessing to equip others to start new spiritual families.", 'zume' ) ?></p>
                                 </div>
                             </div> <!-- grid-x -->
 
@@ -91,11 +84,9 @@ if (have_posts()) :
                                 </div>
                                 <div class="cell content-large">
                                     <ol>
-                                        <li><?php esc_html_e( "Is this the pattern you were taught when you first began to follow Jesus? If not, what was different?", 'zume' ) ?>
-                                        </li>
+                                        <li><?php esc_html_e( "Is this the pattern you were taught when you first began to follow Jesus? If not, what was different?", 'zume' ) ?></li>
                                         <li><?php esc_html_e( "After you came to faith, how long was it before you began to disciple others?", 'zume' ) ?></li>
-                                        <li> <?php esc_html_e( "What do you think would happen if new followers started sharing and discipling others, immediately?", 'zume' ) ?>
-                                        </li>
+                                        <li><?php esc_html_e( "What do you think would happen if new followers started sharing and discipling others, immediately?", 'zume' ) ?></li>
                                     </ol>
                                 </div>
                             </div> <!-- grid-x -->
@@ -118,33 +109,6 @@ if (have_posts()) :
                         <?php get_template_part( 'parts/content', 'share' ); ?>
 
                     </div>
-                    <div class="large-2 cell"></div><!-- Side spacer -->
-                </div> <!-- grid-x -->
-
-
-                <!------------------------------------------------------------------------------------------------>
-                <!-- Transcription section -->
-                <!------------------------------------------------------------------------------------------------>
-                <div class="grid-x">
-                    <div class="large-2 cell"></div><!-- Side spacer -->
-
-                    <!-- Center column -->
-                    <div class="large-8 small-12 cell">
-
-                        <div class="grid-x grid-margin-x grid-margin-y">
-                            <div class="large-12 cell content-large center">
-                                <h3 class="center"><?php echo esc_html__( 'Video Transcript', 'zume' ) ?></h3>
-                            </div>
-                            <div class="large-12 cell content-large">
-
-                                <?php the_content(); ?>
-
-                            </div>
-                        </div>
-
-                    </div>
-
-
                     <div class="large-2 cell"></div><!-- Side spacer -->
                 </div> <!-- grid-x -->
 

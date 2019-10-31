@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "Project-Id-Version: Zúme Project\n"
-"POT-Creation-Date: 2019-10-31 11:25+0300\n"
+"POT-Creation-Date: 2019-10-31 22:05+0300\n"
 "PO-Revision-Date: 2018-03-06 11:15-0700\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -731,7 +731,7 @@ msgstr ""
 msgid "DISCUSS"
 msgstr ""
 
-#: functions/zume-content.php:267 landing-01-uses-ordinary-people.php:92
+#: functions/zume-content.php:267 landing-01-uses-ordinary-people.php:88
 msgid ""
 "If Jesus intended every one of His followers to obey His Great Commission, "
 "why do so few actually make disciples?"
@@ -2806,7 +2806,7 @@ msgstr ""
 msgid "Have you ever wondered how the church got started?"
 msgstr ""
 
-#: landing-01-uses-ordinary-people.php:89
+#: landing-01-uses-ordinary-people.php:85
 #: landing-02-obedience-focused-disciple-making.php:96
 #: landing-03-spiritual-breathing.php:91
 #: landing-06-consumers-vs-producers.php:89 landing-09-kingdom-economy.php:90
@@ -2822,7 +2822,7 @@ msgstr ""
 msgid "Ask Yourself"
 msgstr ""
 
-#: landing-01-uses-ordinary-people.php:132
+#: landing-01-uses-ordinary-people.php:128
 #: landing-02-obedience-focused-disciple-making.php:143
 #: landing-03-spiritual-breathing.php:137 landing-04-soaps.php:183
 #: landing-05-accountability-groups.php:222

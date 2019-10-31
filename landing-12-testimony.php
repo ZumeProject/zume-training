@@ -51,79 +51,23 @@ if (have_posts()) :
                             <!-- Activity Block  -->
                             <div class="grid-x grid-margin-x grid-margin-y">
                                 <div class="cell content-large">
-                                    <p>Jesus told His followers - “You are witnesses of these things.”</p>
-
-                                    <p>As followers of Jesus, we are “witnesses”, too - “testifying” about the impact
-                                        Jesus has had on on our lives. Your story of your relationship with God is
-                                        called your testimony.</p>
-
-                                    <p>Everybody has a story. This is a chance to practice yours.</p>
-
-                                    <p>Jesus told His followers - “You are witnesses of these things.”</p>
-                                    <p>As followers of Jesus, we are “witnesses”, too - “testifying” about the impact
-                                        Jesus has had on
-                                        our lives. Your story of your relationship with God is called your Testimony.
-                                        Everybody has a
-                                        story. Sharing your Testimony is a chance to practice yours.</p>
-                                    <p>There are endless ways to shape your story, but here are some ways that we’ve
-                                        seen work well:</p>
+                                    <p><?php esc_html_e("Jesus told His followers - “You are witnesses of these things.”", 'zume' ) ?></p>
+                                    <p><?php esc_html_e("Everybody has a story. This is a chance to practice yours.", 'zume' ) ?></p>
+                                    <p><?php esc_html_e("As followers of Jesus, we are “witnesses”, too - “testifying” about the impact Jesus has had on our lives. Your story of your relationship with God is called your Testimony. Everybody has a story. Sharing your Testimony is a chance to practice yours.", 'zume' ) ?></p>
+                                    <p><?php esc_html_e("There are endless ways to shape your story, but here are some ways that we’ve seen work well:", 'zume' ) ?></p>
                                     <ul>
-                                        <li>A Simple Statement - You can share a simple statement about why you chose
-                                            to
-                                            follow
-                                            Jesus. This works well for a brand new believer.
-                                        </li>
-                                        <li>Before and After - You can share your “before” and “after” story - what
-                                            your
-                                            life was like
-                                            before you knew Jesus and what your life your life is like now. Simple and
-                                            powerful.
-                                        </li>
-                                        <li>With and Without - You can share your “with” and “without” story - what
-                                            your
-                                            life is like
-                                            “with Jesus” and what it would be like “without Him”. This version of your
-                                            story
-                                            works well
-                                            if you came to faith at a young age.
-                                        </li>
+                                        <li><?php esc_html_e("A Simple Statement - You can share a simple statement about why you chose to follow Jesus. This works well for a brand new believer.", 'zume' ) ?></li>
+                                        <li><?php esc_html_e("Before and After - You can share your “before” and “after” story - what your life was like before you knew Jesus and what your life your life is like now. Simple and powerful.", 'zume' ) ?></li>
+                                        <li><?php esc_html_e("With and Without - You can share your “with” and “without” story - what your life is like “with Jesus” and what it would be like “without Him”. This version of your story works well if you came to faith at a young age.", 'zume' ) ?></li>
                                     </ul>
-                                    <p>When sharing your story, it’s helpful to think of it as part of a three-part
-                                        process:</p>
+                                    <p><?php esc_html_e("When sharing your story, it’s helpful to think of it as part of a three-part process:", 'zume' ) ?></p>
                                     <ul>
-                                        <li>Their Story - Ask the person you are talking with to share about their
-                                            spiritual journey.
-                                        </li>
-                                        <li>Your Story - Then share your Testimony shaped around their experience.
-                                        </li>
-                                        <li>God’s Story - Finally share God’s story in a way that connects with their
-                                            world-view, values and priorities.
-                                        </li>
+                                        <li><?php esc_html_e("Their Story - Ask the person you are talking with to share about their spiritual journey.", 'zume' ) ?></li>
+                                        <li><?php esc_html_e("Your Story - Then share your Testimony shaped around their experience.", 'zume' ) ?></li>
+                                        <li><?php esc_html_e("God’s Story - Finally share God’s story in a way that connects with their world-view, values and priorities.", 'zume' ) ?></li>
                                     </ul>
-                                    <p>Your Testimony doesn’t have to be lengthy or share too many details to be
-                                        impactful. In fact,
-                                        keeping your story to around 3-minutes will leave time for questions and deeper
-                                        conversation.
-                                        If you’re worried about how to get started - keep it simple. God can use your
-                                        story to change
-                                        lives, but remember - you’re the one who gets to tell it.</p>
-
-                                    <p>ACTIVITY [45 min] - Break into groups of two or three and
-                                        spend the next 45 minutes
-                                        practicing sharing your Testimony. Choose 5 people from your List of 100 that
-                                        you marked as an
-                                        “Unbeliever” or “Unknown.” Have someone pretend to be each of those five people,
-                                        and practice
-                                        your Testimony in a way that you think will make sense to that particular
-                                        person.
-                                        You can use any of the patterns detailed above or some other way you think will
-                                        work well for
-                                        the one you’re sharing with. After you’ve practiced, switch. Pretend to be
-                                        someone else’s five
-                                        people from their list. By the time you’re finished, you should be able to tell
-                                        your Testimony in
-                                        about 3 minutes or less.</p>
-
+                                    <p><?php esc_html_e("Your Testimony doesn’t have to be lengthy or share too many details to be impactful. In fact, keeping your story to around 3-minutes will leave time for questions and deeper conversation. If you’re worried about how to get started - keep it simple. God can use your story to change lives, but remember - you’re the one who gets to tell it.", 'zume' ) ?></p>
+                                    <p><?php esc_html_e("ACTIVITY [45 min] - Break into groups of two or three and spend the next 45 minutes practicing sharing your Testimony. Choose 5 people from your List of 100 that you marked as an “Unbeliever” or “Unknown.” Have someone pretend to be each of those five people, and practice your Testimony in a way that you think will make sense to that particular person. You can use any of the patterns detailed above or some other way you think will work well for the one you’re sharing with. After you’ve practiced, switch. Pretend to be someone else’s five people from their list. By the time you’re finished, you should be able to tell your Testimony in about 3 minutes or less.", 'zume' ) ?></p>
                                 </div>
                             </div> <!-- grid-x -->
 
@@ -165,33 +109,6 @@ if (have_posts()) :
                         <?php get_template_part( 'parts/content', 'share' ); ?>
 
                     </div>
-                    <div class="large-2 cell"></div><!-- Side spacer -->
-                </div> <!-- grid-x -->
-
-
-                <!------------------------------------------------------------------------------------------------>
-                <!-- Transcription section -->
-                <!------------------------------------------------------------------------------------------------>
-                <div class="grid-x">
-                    <div class="large-2 cell"></div><!-- Side spacer -->
-
-                    <!-- Center column -->
-                    <div class="large-8 small-12 cell">
-
-                        <div class="grid-x grid-margin-x grid-margin-y">
-                            <div class="large-12 cell content-large center">
-                                <h3 class="center"><?php echo esc_html__( 'Video Transcript', 'zume' ) ?></h3>
-                            </div>
-                            <div class="large-12 cell content-large">
-
-                                <?php the_content(); ?>
-
-                            </div>
-                        </div>
-
-                    </div>
-
-
                     <div class="large-2 cell"></div><!-- Side spacer -->
                 </div> <!-- grid-x -->
 

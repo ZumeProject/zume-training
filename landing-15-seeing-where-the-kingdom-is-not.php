@@ -37,7 +37,6 @@ if (have_posts()) :
                     <div class="medium-2 small-1 cell"></div><!-- Side spacer -->
                 </div>
 
-
                 <!------------------------------------------------------------------------------------------------>
                 <!-- Unique page content section -->
                 <!------------------------------------------------------------------------------------------------>
@@ -51,17 +50,9 @@ if (have_posts()) :
                             <!-- Activity Block  -->
                             <div class="grid-x grid-margin-x grid-margin-y">
                                 <div class="cell content-large">
-                                    <p>There are places all around us where God’s will is not being done on earth as it
-                                        is in heaven - giant gaps where brokenness, pain, persecution, suffering and
-                                        even death are a part of normal, everyday life.</p>
-
-                                    <p>Every disciple - every follower of Jesus - needs to be able to see not just where
-                                        God’s Kingdom is, but where God’s kingdom isn’t.</p>
-
-                                    <p>Opening our eyes to see where the Kingdom isn’t and reaching out through people
-                                        we know and people we don’t know yet is how disciples multiply and God’s Kingdom
-                                        grows far and fast.</p>
-
+                                    <p><?php esc_html_e("There are places all around us where God’s will is not being done on earth as it is in heaven - giant gaps where brokenness, pain, persecution, suffering and even death are a part of normal, everyday life.", 'zume' ) ?></p>
+                                    <p><?php esc_html_e("Every disciple - every follower of Jesus - needs to be able to see not just where God’s Kingdom is, but where God’s kingdom isn’t.", 'zume' ) ?></p>
+                                    <p><?php esc_html_e("Opening our eyes to see where the Kingdom isn’t and reaching out through people we know and people we don’t know yet is how disciples multiply and God’s Kingdom grows far and fast.", 'zume' ) ?></p>
                                 </div>
                             </div> <!-- grid-x -->
 
@@ -92,8 +83,7 @@ if (have_posts()) :
                                 </div>
                                 <div class="cell content-large">
                                     <ol>
-                                        <li><?php esc_html_e( "Who are you more comfortable sharing with -- people you already know or people you haven't met, yet?", 'zume' ) ?>
-                                        </li>
+                                        <li><?php esc_html_e( "Who are you more comfortable sharing with -- people you already know or people you haven't met, yet?", 'zume' ) ?></li>
                                         <li><?php esc_html_e( "Why do you think that is?", 'zume' ) ?></li>
                                         <li><?php esc_html_e( "How could you get better at sharing with people you're less comfortable with?", 'zume' ) ?></li>
                                     </ol>
@@ -118,33 +108,6 @@ if (have_posts()) :
                         <?php get_template_part( 'parts/content', 'share' ); ?>
 
                     </div>
-                    <div class="large-2 cell"></div><!-- Side spacer -->
-                </div> <!-- grid-x -->
-
-
-                <!------------------------------------------------------------------------------------------------>
-                <!-- Transcription section -->
-                <!------------------------------------------------------------------------------------------------>
-                <div class="grid-x">
-                    <div class="large-2 cell"></div><!-- Side spacer -->
-
-                    <!-- Center column -->
-                    <div class="large-8 small-12 cell">
-
-                        <div class="grid-x grid-margin-x grid-margin-y">
-                            <div class="large-12 cell content-large center">
-                                <h3 class="center"><?php echo esc_html__( 'Video Transcript', 'zume' ) ?></h3>
-                            </div>
-                            <div class="large-12 cell content-large">
-
-                                <?php the_content(); ?>
-
-                            </div>
-                        </div>
-
-                    </div>
-
-
                     <div class="large-2 cell"></div><!-- Side spacer -->
                 </div> <!-- grid-x -->
 

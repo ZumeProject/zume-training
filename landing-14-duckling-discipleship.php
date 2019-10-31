@@ -51,14 +51,8 @@ if (have_posts()) :
                             <!-- Activity Block  -->
                             <div class="grid-x grid-margin-x grid-margin-y">
                                 <div class="cell content-large">
-                                    <p>No matter where you are in the world, it always looks the same. A Mother Duck
-                                        leads and her ducklings follow - one by one - all in a row. The Mother Duck
-                                        leads. The little ducks follow. But if you look even closer, you’ll see
-                                        something else is happening, too.</p>
-
-                                    <p>If you want to see God’s family grow far and grow in faithfulness, then think of
-                                        disciple-making like ducklings - become a follower and a leader at exactly the same time.</p>
-
+                                    <p><?php esc_html_e("No matter where you are in the world, it always looks the same. A Mother Duck leads and her ducklings follow - one by one - all in a row. The Mother Duck leads. The little ducks follow. But if you look even closer, you’ll see something else is happening, too.", 'zume' ) ?></p>
+                                    <p><?php esc_html_e("If you want to see God’s family grow far and grow in faithfulness, then think of disciple-making like ducklings - become a follower and a leader at exactly the same time.", 'zume' ) ?></p>
                                 </div>
                             </div> <!-- grid-x -->
 
@@ -89,10 +83,8 @@ if (have_posts()) :
                                 </div>
                                 <div class="cell content-large">
                                     <ol>
-                                        <li><?php esc_html_e( "What is one area of discipleship (reading/understanding the Bible, praying, sharing God's Story, etc.) that you want to learn more about? Who is someone that could help you learn?", 'zume' ) ?>
-                                        </li>
-                                        <li> <?php esc_html_e( "What is one area of discipleship that you feel you could share with others? Who is someone that you could share with?", 'zume' ) ?>
-                                        </li>
+                                        <li><?php esc_html_e( "What is one area of discipleship (reading/understanding the Bible, praying, sharing God's Story, etc.) that you want to learn more about? Who is someone that could help you learn?", 'zume' ) ?></li>
+                                        <li> <?php esc_html_e( "What is one area of discipleship that you feel you could share with others? Who is someone that you could share with?", 'zume' ) ?></li>
                                     </ol>
                                 </div>
                             </div> <!-- grid-x -->
@@ -115,33 +107,6 @@ if (have_posts()) :
                         <?php get_template_part( 'parts/content', 'share' ); ?>
 
                     </div>
-                    <div class="large-2 cell"></div><!-- Side spacer -->
-                </div> <!-- grid-x -->
-
-
-                <!------------------------------------------------------------------------------------------------>
-                <!-- Transcription section -->
-                <!------------------------------------------------------------------------------------------------>
-                <div class="grid-x">
-                    <div class="large-2 cell"></div><!-- Side spacer -->
-
-                    <!-- Center column -->
-                    <div class="large-8 small-12 cell">
-
-                        <div class="grid-x grid-margin-x grid-margin-y">
-                            <div class="large-12 cell content-large center">
-                                <h3 class="center"><?php echo esc_html__( 'Video Transcript', 'zume' ) ?></h3>
-                            </div>
-                            <div class="large-12 cell content-large">
-
-                                <?php the_content(); ?>
-
-                            </div>
-                        </div>
-
-                    </div>
-
-
                     <div class="large-2 cell"></div><!-- Side spacer -->
                 </div> <!-- grid-x -->
 

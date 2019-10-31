@@ -24,7 +24,7 @@ if (have_posts()) :
                     <!-- Center column -->
                     <div class="medium-8 small-10 cell center">
 
-                        <img src="<?php echo esc_url( esc_url( get_theme_file_uri() )() ) ?>/assets/images/zume_images/V5.1/1Waving1Not.svg" width="200px" />
+                        <img src="<?php echo esc_url( get_theme_file_uri() ) ?>/assets/images/zume_images/V5.1/1Waving1Not.svg" width="200px" />
 
                         <h1>
                             <strong><?php the_title(); ?></strong>
@@ -52,18 +52,10 @@ if (have_posts()) :
                             <!-- Activity Block  -->
                             <div class="grid-x grid-margin-x grid-margin-y">
                                 <div class="cell content-large">
-                                    <p>God has already given us the relationships we need to “Go and make
-                                        disciples.”</p>
-
-                                    <p>These are our family, friends, neighbors, co-workers and classmates - people
-                                        we’ve known all our lives, people we’ve just met.</p>
-
-                                    <p>Being faithful with the people God has already put in our lives is a great first
-                                        step in multiplying disciples. And it can start with the simple step of making a
-                                        list.</p>
-
+                                    <p><?php esc_html_e("God has already given us the relationships we need to “Go and make disciples.”", 'zume' ) ?></p>
+                                    <p><?php esc_html_e("These are our family, friends, neighbors, co-workers and classmates - people we’ve known all our lives, people we’ve just met.", 'zume' ) ?></p>
+                                    <p><?php esc_html_e("Being faithful with the people God has already put in our lives is a great first step in multiplying disciples. And it can start with the simple step of making a list.", 'zume' ) ?></p>
                                 </div>
-
 
                             </div> <!-- grid-x -->
 
@@ -88,7 +80,7 @@ if (have_posts()) :
 
                             <div class="grid-x">
                                 <div class="cell center">
-                                    <a href="javascript:alert('add link')" class="button primary large">Download List of 100</a>
+                                    <a href="<?php echo esc_url( zume_files_uri() . '74_en_list_of_100.pdf' ) ?>" class="button primary large"><?php esc_html_e("Download List of 100", 'zume' ) ?></a>
                                 </div>
                                 <div class="cell center">
                                     <img src="<?php echo esc_url( get_theme_file_uri() ) . '/assets/images/temp/33_en_zume_guidebook 2_Page_08.jpg' ?>" />
@@ -96,6 +88,7 @@ if (have_posts()) :
                                     <img src="<?php echo esc_url( get_theme_file_uri() ) . '/assets/images/temp/33_en_zume_guidebook 2_Page_10.jpg' ?>" />
                                 </div>
                             </div>
+
                         </section>
 
                     </div>
@@ -119,32 +112,6 @@ if (have_posts()) :
                     <div class="large-2 cell"></div><!-- Side spacer -->
                 </div> <!-- grid-x -->
 
-
-                <!------------------------------------------------------------------------------------------------>
-                <!-- Transcription section -->
-                <!------------------------------------------------------------------------------------------------>
-                <div class="grid-x">
-                    <div class="large-2 cell"></div><!-- Side spacer -->
-
-                    <!-- Center column -->
-                    <div class="large-8 small-12 cell">
-
-                        <div class="grid-x grid-margin-x grid-margin-y">
-                            <div class="large-12 cell activity-description-no-border center">
-                                <h3 class="center"><?php echo esc_html__( 'Video Transcript', 'zume' ) ?></h3>
-                            </div>
-                            <div class="large-12 cell activity-description-no-border">
-
-                                <?php the_content(); ?>
-
-                            </div>
-                        </div>
-
-                    </div>
-
-
-                    <div class="large-2 cell"></div><!-- Side spacer -->
-                </div> <!-- grid-x -->
 
             </div> <!-- end #inner-content --></div> <!-- end #content -->
 
