@@ -24,7 +24,7 @@ if (have_posts()) :
                     <!-- Center column -->
                     <div class="medium-8 small-10 cell center">
 
-                        <img src="<?php echo get_theme_file_uri() ?>/assets/images/zume_images/V5.1/1Waving1Not.svg" width="200px" />
+                        <img src="<?php echo esc_url( get_theme_file_uri() ) ?>/assets/images/zume_images/V5.1/1Waving1Not.svg" width="200px" />
 
                         <h1>
                             <strong><?php the_title(); ?></strong>
@@ -52,22 +52,11 @@ if (have_posts()) :
                             <!-- Activity Block -->
                             <div class="grid-x grid-margin-x grid-margin-y">
                                 <div class="cell content-large">
-                                    <p>What is a disciple? And how do you make one?</p>
-
-                                    <p>How do you teach a follower of Jesus to obey all of His commands? How do you take
-                                        someone who’s lived their life as a captive of the world and equip them to
-                                        become a citizen of God’s kingdom?</p>
-
-                                    <p>What is a church?</p>
-
-                                    <p>You may be used to thinking of the church as a building - a place where you go.
-                                        But God’s Word talks about the church as a gathering - a people you belong
-                                        to.</p>
-
-                                    <p>Simple churches are spiritual families with Jesus as their center and their King.
-                                        Simple churches are spiritual families who Love God, Love Others and Make
-                                        Disciples who Multiply.</p>
-
+                                    <p><?php esc_html_e( "What is a disciple? And how do you make one?", 'zume' ) ?></p>
+                                    <p><?php esc_html_e( "How do you teach a follower of Jesus to obey all of His commands? How do you take someone who’s lived their life as a captive of the world and equip them to become a citizen of God’s kingdom?", 'zume' ) ?></p>
+                                    <p><?php esc_html_e( "What is a church?", 'zume' ) ?></p>
+                                    <p><?php esc_html_e( "You may be used to thinking of the church as a building - a place where you go. But God’s Word talks about the church as a gathering - a people you belong to.", 'zume' ) ?></p>
+                                    <p><?php esc_html_e( "Simple churches are spiritual families with Jesus as their center and their King. Simple churches are spiritual families who Love God, Love Others and Make Disciples who Multiply.", 'zume' ) ?></p>
                                 </div>
                             </div>
 
@@ -93,7 +82,7 @@ if (have_posts()) :
                             <!-- Activity Block -->
                             <div class="grid-x grid-margin-x grid-margin-y">
                                 <div class="cell content-large center">
-                                    <h3 class="center"><?php echo esc_html__( 'Ask Yourself', 'zume' ) ?></h3>
+                                    <h3 class="center"><?php esc_html_e( 'Ask Yourself', 'zume' ) ?></h3>
                                 </div>
                                 <div class="cell content-large">
                                     <ol class="rectangle-list">
@@ -125,32 +114,6 @@ if (have_posts()) :
                         <?php get_template_part( 'parts/content', 'share' ); ?>
 
                     </div>
-                    <div class="large-2 cell"></div><!-- Side spacer -->
-                </div> <!-- grid-x -->
-
-
-                <!------------------------------------------------------------------------------------------------>
-                <!-- Transcription section -->
-                <!------------------------------------------------------------------------------------------------>
-                <div class="grid-x">
-                    <div class="large-2 cell"></div><!-- Side spacer -->
-
-                    <!-- Center column -->
-                    <div class="large-8 small-12 cell">
-
-                        <div class="grid-x grid-margin-x grid-margin-y">
-                            <div class="large-12 cell content-large center">
-                                <h3 class="center"><?php echo esc_html__( 'Video Transcript', 'zume' ) ?></h3>
-                            </div>
-                            <div class="large-12 cell content-large">
-
-                                <?php the_content(); ?>
-
-                            </div>
-                        </div>
-
-                    </div>
-
 
                     <div class="large-2 cell"></div><!-- Side spacer -->
                 </div> <!-- grid-x -->

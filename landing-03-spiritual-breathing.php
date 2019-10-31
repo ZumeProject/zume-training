@@ -24,7 +24,7 @@ if (have_posts()) :
                     <!-- Center column -->
                     <div class="medium-8 small-10 cell center">
 
-                        <img src="<?php echo get_theme_file_uri() ?>/assets/images/zume_images/V5.1/1Waving1Not.svg" width="200px" />
+                        <img src="<?php echo esc_url( get_theme_file_uri() ) ?>/assets/images/zume_images/V5.1/1Waving1Not.svg" width="200px" />
 
                         <h1>
                             <strong><?php the_title(); ?></strong>
@@ -52,16 +52,9 @@ if (have_posts()) :
                             <!-- Activity Block -->
                             <div class="grid-x grid-margin-x grid-margin-y">
                                 <div class="cell content-large">
-                                    <p>We breathe in. We breathe out. Life. Breathing is just as important in God’s
-                                        Kingdom.</p>
-
-                                    <p>In the Kingdom, we breathe IN when we HEAR from God. In the Kingdom we breathe
-                                        OUT when we ACT on what we hear from God. We breathe OUT when we OBEY.</p>
-
-                                    <p>The good news for every follower of Jesus is that when we breathe IN and HEAR
-                                        from God and when we breathe OUT and OBEY what we hear and SHARE with others
-                                        what we’ve heard - God will speak even more clearly.</p>
-
+                                    <p><?php esc_html_e( "We breathe in. We breathe out. Life. Breathing is just as important in God’s Kingdom.", 'zume' ) ?></p>
+                                    <p><?php esc_html_e( "In the Kingdom, we breathe IN when we HEAR from God. In the Kingdom we breathe OUT when we ACT on what we hear from God. We breathe OUT when we OBEY.", 'zume' ) ?></p>
+                                    <p><?php esc_html_e( "The good news for every follower of Jesus is that when we breathe IN and HEAR from God and when we breathe OUT and OBEY what we hear and SHARE with others what we’ve heard - God will speak even more clearly.", 'zume' ) ?></p>
                                 </div>
                             </div>
                             <!-- grid-x -->
@@ -88,7 +81,7 @@ if (have_posts()) :
                             <!-- Activity Block -->
                             <div class="grid-x grid-margin-x grid-margin-y">
                                 <div class="cell content-large center">
-                                    <h3 class="center"><?php echo esc_html__( 'Ask Yourself', 'zume' ) ?></h3>
+                                    <h3 class="center"><?php esc_html_e( 'Ask Yourself', 'zume' ) ?></h3>
                                 </div>
                                 <div class="cell content-large">
                                     <ol class="rectangle-list">

@@ -24,7 +24,7 @@ if (have_posts()) :
                     <!-- Center column -->
                     <div class="medium-8 small-10 cell center">
 
-                        <img src="<?php echo get_theme_file_uri() ?>/assets/images/zume_images/V5.1/1Waving1Not.svg" width="200px" />
+                        <img src="<?php echo esc_url( get_theme_file_uri() ) ?>/assets/images/zume_images/V5.1/1Waving1Not.svg" width="200px" />
 
                         <h1>
                             <strong><?php the_title(); ?></strong>
@@ -46,7 +46,7 @@ if (have_posts()) :
 
                     <!-- Center column -->
                     <div class="large-8 small-12 cell" id="training-content">
-                        <img src="<?php echo zume_images_uri('/temp/') ?>four-fields.png" />
+                        <img src="<?php echo esc_url( zume_images_uri( '/temp/' ) ) ?>four-fields.png" />
                     </div>
 
                     <div class="large-2 cell"></div><!-- Side spacer -->

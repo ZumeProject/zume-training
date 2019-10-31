@@ -61,7 +61,7 @@ function zume_custom_menu_page_removing() {
 add_action( 'admin_menu', 'zume_custom_menu_page_removing' );
 
 
-function zume_update_user_contact_info() { dt_write_log( $_POST );
+function zume_update_user_contact_info() {
     $user_id = get_current_user_id();
 
     // validate nonce
@@ -288,7 +288,7 @@ function zume_files_uri() {
 
 function zume_files_download_uri( $id ) {
     // post id of downloads / meta field
-    return zume_files_uri() . '/' ;
+    return zume_files_uri() . '/';
 }
 
 function zume_home_id() {

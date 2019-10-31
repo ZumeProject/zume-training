@@ -1,12 +1,12 @@
 <?php
 
 /**
- * Class Zume_v4_Groups
+ * Class Zume_V4_Groups
  */
-class Zume_v4_Groups {
+class Zume_V4_Groups {
 
     /**
-     * Zume_v4_Groups The single instance of Zume_v4_Groups.
+     * Zume_V4_Groups The single instance of Zume_V4_Groups.
      * @var     object
      * @access  private
      * @since   0.1
@@ -14,13 +14,13 @@ class Zume_v4_Groups {
     private static $_instance = null;
 
     /**
-     * Main Zume_v4_Groups Instance
+     * Main Zume_V4_Groups Instance
      *
-     * Ensures only one instance of Zume_v4_Groups is loaded or can be loaded.
+     * Ensures only one instance of Zume_V4_Groups is loaded or can be loaded.
      *
      * @since 0.1
      * @static
-     * @return Zume_v4_Groups instance
+     * @return Zume_V4_Groups instance
      */
     public static function instance() {
         if ( is_null( self::$_instance ) ) {

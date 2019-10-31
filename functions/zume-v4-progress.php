@@ -3,7 +3,7 @@
  *
  */
 
-class Zume_v4_Progress {
+class Zume_V4_Progress {
     public static $progress_key = 'zume_progress';
 
     public static function verify_progress_array( $args ) {

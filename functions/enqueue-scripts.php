@@ -109,9 +109,9 @@ function zume_site_scripts() {
                 'logged_in' => is_user_logged_in(),
                 'map_key' => DT_Mapbox_API::get_key(),
                 "current_language" => $current_language,
-                "groups" => ( is_user_logged_in() ) ? Zume_v4_Groups::get_all_groups() : [],
-                "progress" => ( is_user_logged_in() ) ? Zume_v4_Progress::get_user_progress() : [],
-                "invitations" => ( is_user_logged_in() ) ? Zume_v4_Groups::get_colead_groups( 'waiting_acceptance_minimum' ) : [],
+                "groups" => ( is_user_logged_in() ) ? Zume_V4_Groups::get_all_groups() : [],
+                "progress" => ( is_user_logged_in() ) ? Zume_V4_Progress::get_user_progress() : [],
+                "invitations" => ( is_user_logged_in() ) ? Zume_V4_Groups::get_colead_groups( 'waiting_acceptance_minimum' ) : [],
                 'urls' => [
                     1 => esc_url( zume_get_landing_translation_url( 1, $current_language ) ),
                     2 => esc_url( zume_get_landing_translation_url( 2, $current_language ) ),

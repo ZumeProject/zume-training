@@ -123,7 +123,7 @@ class Zume_Integration_Endpoints
                     }
                 } elseif ( $params['type'] === 'group' ) {
                     // get user_id by zume foreign key
-                    $group = Zume_v4_Groups::get_group_by_foreign_key( $params['zume_foreign_key'] );
+                    $group = Zume_V4_Groups::get_group_by_foreign_key( $params['zume_foreign_key'] );
                     if ( empty( $group ) ) {
                         return new WP_Error( 'group_lookup_failure', 'Did not find group.' );
                     }

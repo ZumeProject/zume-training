@@ -3092,7 +3092,7 @@ class Zume_Course_Content {
                                         <?php
                                         if ( isset( $_GET['group'] ) ) {
                                             $zume_group_key = sanitize_key( wp_unslash( $_GET['group'] ) );
-                                            echo esc_attr( Zume_v4_Groups::get_group_public_key( $zume_group_key ) );
+                                            echo esc_attr( Zume_V4_Groups::get_group_public_key( $zume_group_key ) );
                                         }
                                         ?>
                                     </h2>

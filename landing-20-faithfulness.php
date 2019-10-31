@@ -23,7 +23,7 @@ if (have_posts()) :
                     <!-- Center column -->
                     <div class="medium-8 small-10 cell center">
 
-                        <img src="<?php echo get_theme_file_uri() ?>/assets/images/zume_images/V5.1/1Waving1Not.svg" width="200px" />
+                        <img src="<?php echo esc_url( get_theme_file_uri() ) ?>/assets/images/zume_images/V5.1/1Waving1Not.svg" width="200px" />
 
                         <h1>
                             <strong><?php the_title(); ?></strong>
@@ -84,7 +84,7 @@ if (have_posts()) :
                             <!-- Activity Block  -->
                             <div class="grid-x grid-margin-x grid-margin-y">
                                 <div class="cell content-large center">
-                                    <h3 class="center"><?php echo esc_html__( 'Ask Yourself', 'zume' ) ?></h3>
+                                    <h3 class="center"><?php esc_html_e( 'Ask Yourself', 'zume' ) ?></h3>
                                 </div>
                                 <div class="cell content-large">
                                     <?php esc_html_e( "Think about God's commands that you already know. How \"faithful\" are you in terms of obeying and sharing those things?", 'zume' ) ?>

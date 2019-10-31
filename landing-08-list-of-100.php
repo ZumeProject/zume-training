@@ -24,7 +24,7 @@ if (have_posts()) :
                     <!-- Center column -->
                     <div class="medium-8 small-10 cell center">
 
-                        <img src="<?php echo get_theme_file_uri() ?>/assets/images/zume_images/V5.1/1Waving1Not.svg" width="200px" />
+                        <img src="<?php echo esc_url( esc_url( get_theme_file_uri() )() ) ?>/assets/images/zume_images/V5.1/1Waving1Not.svg" width="200px" />
 
                         <h1>
                             <strong><?php the_title(); ?></strong>
@@ -91,9 +91,9 @@ if (have_posts()) :
                                     <a href="javascript:alert('add link')" class="button primary large">Download List of 100</a>
                                 </div>
                                 <div class="cell center">
-                                    <img src="<?php echo get_theme_file_uri() . '/assets/images/temp/33_en_zume_guidebook 2_Page_08.jpg' ?>" />
-                                    <img src="<?php echo get_theme_file_uri() . '/assets/images/temp/33_en_zume_guidebook 2_Page_09.jpg' ?>" />
-                                    <img src="<?php echo get_theme_file_uri() . '/assets/images/temp/33_en_zume_guidebook 2_Page_10.jpg' ?>" />
+                                    <img src="<?php echo esc_url( get_theme_file_uri() ) . '/assets/images/temp/33_en_zume_guidebook 2_Page_08.jpg' ?>" />
+                                    <img src="<?php echo esc_url( get_theme_file_uri() ) . '/assets/images/temp/33_en_zume_guidebook 2_Page_09.jpg' ?>" />
+                                    <img src="<?php echo esc_url( get_theme_file_uri() ) . '/assets/images/temp/33_en_zume_guidebook 2_Page_10.jpg' ?>" />
                                 </div>
                             </div>
                         </section>

@@ -24,7 +24,7 @@ if (have_posts()) :
                     <!-- Center column -->
                     <div class="medium-8 small-10 cell center">
 
-                        <img src="<?php echo get_theme_file_uri() ?>/assets/images/zume_images/V5.1/1Waving1Not.svg" width="200px" />
+                        <img src="<?php echo esc_url( get_theme_file_uri() ) ?>/assets/images/zume_images/V5.1/1Waving1Not.svg" width="200px" />
 
                         <h1>
                             <strong><?php the_title(); ?></strong>
@@ -53,14 +53,8 @@ if (have_posts()) :
                             <div class="grid-x grid-margin-x grid-margin-y">
 
                                 <div class="cell content-large">
-                                    <p>In our broken world, people have rejected God’s plan, and many spend their energy
-                                        living out just part of God’s perfect equation. They LEARN but they don’t share.
-                                        They are are FILLED UP but they never pour out. They CONSUME but they don’t
-                                        produce.</p>
-
-                                    <p>If we’re going to make disciples who multiply, then we need to share with them
-                                        how they can be producers and not just consumers.</p>
-
+                                    <p><?php esc_html_e( "In our broken world, people have rejected God’s plan, and many spend their energy living out just part of God’s perfect equation. They LEARN but they don’t share. They are are FILLED UP but they never pour out. They CONSUME but they don’t produce.", 'zume' ) ?></p>
+                                    <p><?php esc_html_e( "If we’re going to make disciples who multiply, then we need to share with them how they can be producers and not just consumers.", 'zume' ) ?></p>
                                 </div>
                             </div> <!-- grid-x -->
 
@@ -86,7 +80,7 @@ if (have_posts()) :
                             <!-- Activity Block  -->
                             <div class="grid-x grid-margin-x grid-margin-y">
                                 <div class="cell content-large center">
-                                    <h3 class="center"><?php echo esc_html__( 'Ask Yourself', 'zume' ) ?></h3>
+                                    <h3 class="center"><?php esc_html_e( 'Ask Yourself', 'zume' ) ?></h3>
                                 </div>
                                 <div class="cell content-large">
                                     <ol>
@@ -117,33 +111,6 @@ if (have_posts()) :
                         <?php get_template_part( 'parts/content', 'share' ); ?>
 
                     </div>
-                    <div class="large-2 cell"></div><!-- Side spacer -->
-                </div> <!-- grid-x -->
-
-
-                <!------------------------------------------------------------------------------------------------>
-                <!-- Transcription section -->
-                <!------------------------------------------------------------------------------------------------>
-                <div class="grid-x">
-                    <div class="large-2 cell"></div><!-- Side spacer -->
-
-                    <!-- Center column -->
-                    <div class="large-8 small-12 cell">
-
-                        <div class="grid-x grid-margin-x grid-margin-y">
-                            <div class="large-12 cell content-large center">
-                                <h3 class="center"><?php echo esc_html__( 'Video Transcript', 'zume' ) ?></h3>
-                            </div>
-                            <div class="large-12 cell content-large">
-
-                                <?php the_content(); ?>
-
-                            </div>
-                        </div>
-
-                    </div>
-
-
                     <div class="large-2 cell"></div><!-- Side spacer -->
                 </div> <!-- grid-x -->
 

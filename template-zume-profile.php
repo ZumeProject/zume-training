@@ -117,7 +117,7 @@ add_action( 'wp_head', 'zume_signup_header' );
 
                             <?php if ( ! empty( $zume_user_meta['zume_user_address'] ) && ! empty( $zume_user_meta['zume_user_lng'] ) && ! empty( $zume_user_meta['zume_user_lat'] ) ) : ?>
                                 <div id="map" >
-                                    <img src="<?php echo DT_Mapbox_API::static_map( $zume_user_meta['zume_user_lng'], $zume_user_meta['zume_user_lat'] ) ?>" />
+                                    <img src="<?php echo esc_url_raw( DT_Mapbox_API::static_map( $zume_user_meta['zume_user_lng'], $zume_user_meta['zume_user_lat'] ) ) ?>" />
                                 </div>
                             <?php endif; ?>
                         </td>

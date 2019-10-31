@@ -10,11 +10,11 @@ if ( isset( $_GET['session'] ) ) {
 $group = false;
 if ( isset( $_GET['group'] ) ) {
     $foreign_key = sanitize_text_field( wp_unslash( $_GET['group'] ) );
-    $group = Zume_v4_Groups::get_group_by_foreign_key( $foreign_key );
+    $group = Zume_V4_Groups::get_group_by_foreign_key( $foreign_key );
     if ( empty( $group ) || ! isset( $group['key'] ) ) {
         dt_write_log( 'Failed to find group for key '. $foreign_key );
     }
-    if ( ! Zume_v4_Groups::update_group_session_status( $group['key'], $session_id ) ) {
+    if ( ! Zume_V4_Groups::update_group_session_status( $group['key'], $session_id ) ) {
         dt_write_log( 'Failed to update session for '. $group['key'] );
     }
 }
