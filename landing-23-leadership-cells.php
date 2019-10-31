@@ -6,9 +6,9 @@ get_header();
 $alt_video = false;
 if (have_posts()) :
     while (have_posts()) : the_post();
-        $session_number = 23;
+        $session_number = 8;
         set_query_var( 'session_number', absint( $session_number ) );
-        $tool_number = 3;
+        $tool_number = 23;
         set_query_var( 'tool_number', absint( $tool_number ) );
         ?>
 
@@ -50,14 +50,18 @@ if (have_posts()) :
 
                             <!-- Activity Block  -->
                             <div class="grid-x grid-margin-x grid-margin-y">
-                                <div class="large-3 cell activity-title"><?php esc_html_e( 'WATCH', 'zume' ) ?></div>
                                 <div class="cell content-large">
-                                    <p>
-                                        <?php esc_html_e( "Jesus said, “Whoever wishes to become great among you shall be your servant.”", 'zume' ) ?>
-                                    </p>
-                                    <p>
-                                        <?php esc_html_e( "Jesus radically reversed our understanding of leadership by teaching us that if we feel called to lead, then we are being called to serve. A Leadership Cell is a way someone who feels called to lead can develop their leadership by practicing serving.", 'zume' ) ?>
-                                    </p>
+                                    <p>Leadership Cells equip individual believers in a short time to learn reproductive
+                                        patterns that last a lifetime. Leadership Cells help learners become leaders who
+                                        will then start new groups, train new churches, and begin more Leadership Cells
+                                        to grow God’s family.</p>
+
+                                    <p>Nomads, students, military personnel, seasonal workers who already follow Jesus
+                                        work great in a Leadership Cell. Because of their culture, their profession or
+                                        their season of life - they may have a hard time establishing an ongoing group,
+                                        but they can absolutely be trained how to start groups in each place they
+                                        travel.</p>
+
                                 </div>
                             </div> <!-- grid-x -->
 

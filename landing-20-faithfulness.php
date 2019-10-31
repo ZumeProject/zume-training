@@ -3,12 +3,11 @@
 Template Name: 20 - Faithfulness
 */
 get_header();
-$session_number = 20;
 if (have_posts()) :
     while (have_posts()) : the_post();
-        $session_number = 20;
+        $session_number = 6;
         set_query_var( 'session_number', absint( $session_number ) );
-        $tool_number = 3;
+        $tool_number = 20;
         set_query_var( 'tool_number', absint( $tool_number ) );
         ?>
 
@@ -50,9 +49,16 @@ if (have_posts()) :
 
                             <!-- Activity Block  -->
                             <div class="grid-x grid-margin-x grid-margin-y">
-                                <div class="large-3 cell activity-title"><?php esc_html_e( 'WATCH', 'zume' ) ?></div>
                                 <div class="cell content-large">
-                                    <?php esc_html_e( "When we help multiply disciples, we need to make sure we're reproducing the right things. It's important what disciples know – but it's much more important what they DO with what they know.", 'zume' ) ?>
+                                    <p>Faithfulness - more than knowledge - is something that can start as soon as
+                                        someone begins to follow Jesus. Faithfulness - more than training - is something
+                                        that can be measured by what we do with what we’ve been given.</p>
+
+                                    <p>If we OBEY and SHARE what we hear with others, we are faithful. If we hear but we
+                                        REFUSE to obey and share, we are unfaithful.</p>
+
+                                    <p>As we multiply disciples, let’s make sure we’re measuring the right things.</p>
+
                                 </div>
                             </div> <!-- grid-x -->
 

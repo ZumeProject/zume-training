@@ -6,9 +6,9 @@ get_header();
 $alt_video = false;
 if (have_posts()) :
     while (have_posts()) : the_post();
-        $session_number = 25;
+        $session_number = 9;
         set_query_var( 'session_number', absint( $session_number ) );
-        $tool_number = 3;
+        $tool_number = 25;
         set_query_var( 'tool_number', absint( $tool_number ) );
         ?>
 
@@ -50,9 +50,18 @@ if (have_posts()) :
 
                             <!-- Activity Block -->
                             <div class="grid-x grid-margin-x grid-margin-y">
-                                <div class="large-3 cell activity-title"><?php esc_html_e( 'WATCH', 'zume' ) ?></div>
                                 <div class="cell content-large">
-                                    <?php esc_html_e( "Multiplying matters and multiplying quickly matters even more. Pace matters because where we all spend our eternity — an existence that outlasts time — is determined in the very short time we call “life.“", 'zume' ) ?>
+                                    <p>Pace matters because where we all spend our eternity - an existence that outlasts
+                                        time - is determined in the short time we call “life”.</p>
+
+                                    <p>God’s Word tells us that God is patient with us - not wanting anyone to perish,
+                                        but everyone to turn around and follow Him. God gives us more time because He
+                                        knows we only have a short time to do all He’s called us to do and to reach all
+                                        He’s called us to reach.</p>
+
+                                    <p>To follow Jesus more closely, we have to pursue His people more quickly. We can’t
+                                        just take our time. We have to increase our PACE.</p>
+
                                 </div>
                             </div>
                             <!-- grid-x -->

@@ -6,9 +6,9 @@ get_header();
 $alt_video = false;
 if (have_posts()) :
     while (have_posts()) : the_post();
-        $session_number = 28;
+        $session_number = 10;
         set_query_var( 'session_number', absint( $session_number ) );
-        $tool_number = 3;
+        $tool_number = 28;
         set_query_var( 'tool_number', absint( $tool_number ) );
         ?>
 
@@ -50,8 +50,13 @@ if (have_posts()) :
 
                             <!-- Activity Block  -->
                             <div class="grid-x grid-margin-x grid-margin-y">
-                                <div class="large-3 cell activity-title"><?php esc_html_e( 'ASSESS', 'zume' ) ?></div>
                                 <div class="cell content-large">
+                                    The Coaching Checklist is a simple tool you can use to help guide you as you assist others through various parts of Zume Training like The Training Cycle or their List of 100.
+
+                                    What skills are you seeing develop in others? What areas still need to be developed?
+
+                                    Having a Coaching Checklist will help you stay focused and engaged as you develop followers of Jesus into leaders in God’s family, everywhere you go.
+
                                     <?php esc_html_e( "The Coaching Checklist is a powerful tool you can use to quickly assess your own strengths and vulnerabilities when it comes to making disciples who multiply. It's also a powerful tool you can use to help others – and others can use to help you.", 'zume' ) ?>
                                     <br><br>
                                     <?php esc_html_e( "Find the Coaching Checklist section in your Zúme Guidebook, and take this quick (5-minutes or less) self-assessment:", 'zume' ) ?>
@@ -74,6 +79,9 @@ if (have_posts()) :
                                             </ul>
                                         </li>
                                     </ol>
+                                </div>
+                                <div class="cell content-large">
+                                    <img src="<?php echo zume_images_uri('/temp/') ?>coaching-checklist.jpg" />
                                 </div>
                             </div> <!-- grid-x -->
 
@@ -110,17 +118,7 @@ if (have_posts()) :
                                     </ol>
                                 </div>
                             </div> <!-- grid-x -->
-                            <!-- Activity Block  -->
-                            <div class="grid-x grid-margin-x grid-margin-y single">
-                                <div class="large-9 cell activity-description well">
-                                    <div class="grid-x grid-padding-x grid-padding-y center" >
-                                        <div class="cell session-boxes">
-                                            <?php esc_html_e( "REMEMBER – Be sure to share your Coaching Checklist results with training partner or other mentor. If you're helping coach or mentor someone, use this tool to help you assess which areas need your attention and training.", 'zume' ) ?>
-                                        </div>
-                                    </div>
 
-                                </div>
-                            </div> <!-- grid-x -->
                         </section>
                     </div>
 

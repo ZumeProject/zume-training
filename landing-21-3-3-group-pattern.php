@@ -3,11 +3,12 @@
 Template Name: 21 - 3/3 Group Pattern
 */
 get_header();
-$session_number = 21;
 if (have_posts()) :
     while (have_posts()) : the_post();
-        $session_number = 21;
-        set_query_var( 'session_number', absint( $session_number ) )
+        $session_number = 6;
+        set_query_var( 'session_number', absint( $session_number ) );
+        $tool_number = 21;
+        set_query_var( 'tool_number', absint( $tool_number ) );
         ?>
 
         <!-- Wrappers -->
@@ -48,31 +49,21 @@ if (have_posts()) :
 
                             <!-- Activity Block  -->
                             <div class="grid-x grid-margin-x grid-margin-y">
-                                <div class="large-3 cell activity-title"><?php esc_html_e( "READ", 'zume' ) ?></div>
                                 <div class="cell content-large">
-                                    <p class="read-section">
-                                        <?php esc_html_e( "3/3 Groups Format", 'zume' ) ?>
-                                    </p>
-                                    <p>
-                                        <?php esc_html_e( "A 3/3 Group is a way for followers of Jesus to meet, pray, learn, grow, fellowship, and practice obeying and sharing what they've learned. In this way, a 3/3 Group is not just a small group but a Simple Church.", 'zume' ) ?>
-                                    </p>
-                                    <p>
-                                        <?php esc_html_e( 'In the following video, you’ll be coached through an interactive 3/3 Group where you’ll learn a principle and then “press pause” and practice it with the group.', 'zume' ) ?>
-                                    </p>
-                                </div>
-                            </div> <!-- grid-x -->
+                                    <p>A 3/3 (PRONOUNCE AS “Three-Thirds”) Group is one that divides their time together
+                                        into 3 parts, so that they can practice obeying some of the most important
+                                        things that Jesus commands. This is how it works:</p>
 
-                            <!-- Inset Block -->
-                            <div class="grid-x grid-margin-x grid-margin-y single">
-                                <div class="cell auto"></div>
-                                <div class="large-9 cell activity-description well">
-                                    <div class="grid-x grid-padding-x grid-padding-y center" >
-                                        <div class="cell session-boxes">
-                                            <?php esc_html_e( 'Find the "3/3 Group Format" section in your Zúme Guidebook, and watch the video below.', 'zume' ) ?>
-                                        </div>
-                                    </div>
+                                    <p>Look Back - The first third of the group’s time is spent looking back at what’s
+                                        happened since we’ve been together.</p>
+
+                                    <p>Look Up - The middle third of the group’s time is spent Looking Up for God’s
+                                        wisdom and direction through scripture, discussion and prayer.</p>
+
+                                    <p>Look Forward - The final third of the group’s time is spent Looking Forward to
+                                        how we can each apply and obey what we’ve learned.</p>
+
                                 </div>
-                                <div class="cell auto"></div>
                             </div> <!-- grid-x -->
 
                             <!-- Video block -->

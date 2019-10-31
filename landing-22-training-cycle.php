@@ -3,12 +3,11 @@
 Template Name: 22 - Training Cycle
 */
 get_header();
-$session_number = 22;
 if (have_posts()) :
     while (have_posts()) : the_post();
-        $session_number = 22;
+        $session_number = 7;
         set_query_var( 'session_number', absint( $session_number ) );
-        $tool_number = 3;
+        $tool_number = 22;
         set_query_var( 'tool_number', absint( $tool_number ) );
         ?>
 
@@ -50,26 +49,65 @@ if (have_posts()) :
 
                             <!-- Activity Block  -->
                             <div class="grid-x grid-margin-x grid-margin-y">
-                                <div class="large-3 cell activity-title"><?php esc_html_e( 'WATCH', 'zume' ) ?></div>
                                 <div class="cell content-large">
-                                    <p>
-                                        <?php esc_html_e( "Have you ever learned how to ride a bicycle? Have you ever helped someone else learn? If so, chances are you already know the Training Cycle.", 'zume' )?>
-                                    </p>
+
+                                    <p>Have you ever learned how to ride a bicycle? Have you ever helped someone else
+                                        learn? If so, chances are you already know THE TRAINING CYCLE. It’s as easy as MODEL,
+                                        ASSIST, WATCH and LEAVE. It works like this:</p>
+
+                                    <img src="<?php echo zume_images_uri( '/temp/') ?>training-cycle.png" />
+
+                                    <p>MODEL - Modeling is simply providing an example of a practice or tool. It is the
+                                        briefest part of
+                                        the training cycle. It usually only needs to be done once. It is simply creating
+                                        an awareness that
+                                        a practice or a tool exists and giving a general idea of what it looks like.
+                                        Modeling repeatedly is
+                                        not an effective way to equip someone. They need to be allowed to try the skill
+                                        themselves.
+                                        When a child sees someone riding a bicycle, that is the MODEL phase.</p>
+                                    <p>ASSIST - Assisting is allowing the learner to practice the skill. This takes
+                                        longer than the
+                                        modeling phase. It requires “hand-holding” on the part of the mentor. The mentor
+                                        needs to be
+                                        directive and take an active role in coaching the learner. This phase does not
+                                        last until the
+                                        learner is fully competent, but merely until they understand the basics of the
+                                        skill. If this phase
+                                        is continued too long, then the learner will develop a dependence on the mentor
+                                        and never
+                                        advance to full competence. The end of the assist phase should be marked by the
+                                        learner
+                                        starting to model for others. When a parent is holding onto the bicycle while a child is learning to keep his balance, that is
+                                        the ASSIST phase.</p>
+                                    <p>WATCH - Watching is the longest phase. It involves more indirect contact with the
+                                        learner. It
+                                        seeks to develop full competence in all facets of a skill. It may be ten times
+                                        or more as long as
+                                        the first two phases combined. As the learner progresses in skill, the contact
+                                        with the mentor
+                                        may become less regular and more ad hoc . In this phase the learner gradually
+                                        takes more
+                                        responsibility and initiative in the performance of the skill. Typically in
+                                        disciplemaking the mark
+                                        of the end of this phase is when the learner has passed on the skill
+                                        successfully to the fourth
+                                        generation through those whom he or she is coaching.
+                                        When a parent is observing a child ride a bicycle and ensuring they have
+                                        adequate skills and
+                                        knowledge to ride unsupervised, this is the WATCH phase.</p>
+                                    <p>LEAVE - Leaving is a sort of graduation when the learner becomes a peer of the
+                                        mentor. Periodic
+                                        contact and peer mentoring may continue to take place if the learner and mentor
+                                        are in the
+                                        same network.
+                                        When a parent releases a child to ride their bicycle completely unsupervised,
+                                        that is the LEAVE
+                                        phase.</p>
+
                                 </div>
                             </div> <!-- grid-x -->
 
-                            <!-- Inset Block -->
-                            <div class="grid-x grid-margin-x grid-margin-y single">
-                                <div class="cell auto"></div>
-                                <div class="large-9 cell activity-description well">
-                                    <div class="grid-x grid-padding-x grid-padding-y center" >
-                                        <div class="cell session-boxes">
-                                            <?php esc_html_e( "Find the \"Training Cycle\" section in your Zúme Guidebook. When you're ready, watch this video, and then discuss the questions below.", 'zume' ) ?>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="cell auto"></div>
-                            </div> <!-- grid-x -->
 
                             <!-- Video block -->
                             <div class="grid-x grid-margin-x grid-margin-y">

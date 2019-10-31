@@ -6,9 +6,9 @@ get_header();
 $alt_video = false;
 if (have_posts()) :
     while (have_posts()) : the_post();
-        $session_number = 26;
+        $session_number = 9;
         set_query_var( 'session_number', absint( $session_number ) );
-        $tool_number = 3;
+        $tool_number = 26;
         set_query_var( 'tool_number', absint( $tool_number ) );
         ?>
 
@@ -50,9 +50,14 @@ if (have_posts()) :
 
                             <!-- Activity Block -->
                             <div class="grid-x grid-margin-x grid-margin-y">
-                                <div class="large-3 cell activity-title"><?php esc_html_e( 'WATCH', 'zume' ) ?></div>
                                 <div class="cell content-large">
-                                    <?php esc_html_e( "Jesus taught us that we are to stay close — to live as a small, spiritual family, to love and give our lives to one another, to celebrate and suffer — together. However, Jesus also taught us to leave our homes and loved ones behind and be willing to go anywhere — and everywhere — to share and start new spiritual families. So how can we do both? When you're ready, watch the video below and discuss the question that follows.", 'zume' ) ?>
+                                    <p>Jesus instructed His followers that they should be
+                                        continuously starting new spiritual families, growing them to be more like
+                                        Jesus, and helping them learn how to start new spiritual families, too.</p>
+
+                                    <p>So how do these two things come together - how can we be a part of a church and
+                                        be in the process of starting new churches - all at the same time?</p>
+
                                 </div>
                             </div>
                             <!-- grid-x -->

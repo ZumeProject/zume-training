@@ -118,21 +118,21 @@ function get_groups() {
         div.append(`
     <div class="cell group-section border-bottom padding-bottom-2 margin-bottom-2">
       <div class="grid-x grid-padding-x">
-        <div class="cell padding-bottom-1 group-name small-6"  id="group_name_${v.key}"><!--Full width top --></div><div class="small-6"></div>
+        <div class="cell padding-bottom-1 group-name small-6"  id="group_name_${_.escape( v.key )}"><!--Full width top --></div><div class="small-6"></div>
         <div class="cell small-2"> <!-- Column 1 -->
-           <div class="grid-y" id="session_list_${v.key}"><!-- Session List --></div>
+           <div class="grid-y" id="session_list_${_.escape( v.key )}"><!-- Session List --></div>
         </div> <!-- Column 1 -->
         <div class="cell small-4">
             <div class="grid-y">
                   <div class="cell column-header">${__('Members', 'zume')}</div>
                   <div class="cell padding-bottom-1">
-                      <select class="member-count" onchange="save_member_count('${v.key}', ${i})" id="member_count_${v.key}"><!-- member count --></select>
+                      <select class="member-count" onchange="save_member_count('${_.escape( v.key )}', ${_.escape( i )})" id="member_count_${_.escape( v.key )}"><!-- member count --></select>
                   </div>
                   <div class="cell column-header">${__('Members List (optional)', 'zume')}</div>
                   <div class="cell">
-                      <div class="grid-y" id="member_list_${v.key}"><!-- member list --></div>
+                      <div class="grid-y" id="member_list_${_.escape( v.key )}"><!-- member list --></div>
                   </div>
-                  <div class="cell add-member" id="add_member_${v.key}"><!-- add member area --></div>
+                  <div class="cell add-member" id="add_member_${_.escape( v.key )}"><!-- add member area --></div>
             </div>
         </div> <!-- Column 2 -->
         <div class="cell small-4"> <!-- Column 3 -->
@@ -140,12 +140,12 @@ function get_groups() {
                 <div class="cell">
                   <span class="column-header">${__('Location', 'zume')}</span>
                 </div>
-                <div class="cell" id="map_${v.key}"><!-- Map Section--></div>
-                <div class="cell" id="add_location_${v.key}"><!-- Add Location Field --></div>
+                <div class="cell" id="map_${_.escape( v.key )}"><!-- Map Section--></div>
+                <div class="cell" id="add_location_${_.escape( v.key )}"><!-- Add Location Field --></div>
             </div>
         </div> <!-- Column 3 -->
         <div class="cell small-2">
-              <div class="grid-y" id="meta_column_${v.key}"><!-- Meta column buttons --></div>
+              <div class="grid-y" id="meta_column_${_.escape( v.key )}"><!-- Meta column buttons --></div>
         </div> <!-- Column 4 -->
       </div>
   </div>
@@ -185,17 +185,17 @@ function get_groups() {
 
 // functions
 function write_group_name( key, i ) {
-  jQuery('#group_name_'+key).empty().html(`<h2 onclick="edit_group_name('${key}', ${i})">${zumeTraining.groups[i].group_name}</h2>`)
+  jQuery('#group_name_'+key).empty().html(`<h2 onclick="edit_group_name('${_.escape( key )}', ${_.escape( i )})">${_.escape( zumeTraining.groups[i].group_name)}</h2>`)
 }
 function edit_group_name( key, i ) {
   jQuery('#group_name_'+key).empty().html(`
     <div class="input-group">
-      <input class="input-group-field" type="text" id="edit_group_name_${key}" value="${zumeTraining.groups[i].group_name}">
+      <input class="input-group-field" type="text" id="edit_group_name_${_.escape( key )}" value="${_.escape( zumeTraining.groups[i].group_name )}">
       <div class="input-group-button">
-        <input type="button" class="button" onclick="save_group_name('${key}', ${i})" value="Save">
+        <input type="button" class="button" onclick="save_group_name('${_.escape( key )}', ${_.escape( i )})" value="Save">
       </div>
       <div class="input-group-button">
-        <input type="button" class="button hollow" onclick="write_group_name('${key}', ${i} )" value="Cancel">
+        <input type="button" class="button hollow" onclick="write_group_name('${_.escape( key )}', ${_.escape( i )} )" value="Cancel">
       </div>
     </div>
   `) /* end html */
@@ -218,16 +218,16 @@ function write_session_progress( key, i ) {
   let group = zumeTraining.groups[i]
 
   div.empty().append(`
-  <div class="cell"><i class="g-session-icon" id="s1${key}" onclick="save_session_status('${key}', ${i}, 1)"></i> <a href="${get_course_url_with_params(1, i )}">${__('Session 1', 'zume')}</a></div>    
-  <div class="cell"><i class="g-session-icon" id="s2${key}" onclick="save_session_status('${key}', ${i}, 2)"></i> <a href="${get_course_url_with_params(2, i )}">${__('Session 2', 'zume')}</a></div>    
-  <div class="cell"><i class="g-session-icon" id="s3${key}" onclick="save_session_status('${key}', ${i}, 3)"></i> <a href="${get_course_url_with_params(3, i )}">${__('Session 3', 'zume')}</a></div>    
-  <div class="cell"><i class="g-session-icon" id="s4${key}" onclick="save_session_status('${key}', ${i}, 4)"></i> <a href="${get_course_url_with_params(4, i )}">${__('Session 4', 'zume')}</a></div>    
-  <div class="cell"><i class="g-session-icon" id="s5${key}" onclick="save_session_status('${key}', ${i}, 5)"></i> <a href="${get_course_url_with_params(5, i )}">${__('Session 5', 'zume')}</a></div>    
-  <div class="cell"><i class="g-session-icon" id="s6${key}" onclick="save_session_status('${key}', ${i}, 6)"></i> <a href="${get_course_url_with_params(6, i )}">${__('Session 6', 'zume')}</a></div>    
-  <div class="cell"><i class="g-session-icon" id="s7${key}" onclick="save_session_status('${key}', ${i}, 7)"></i> <a href="${get_course_url_with_params(7, i )}">${__('Session 7', 'zume')}</a></div>    
-  <div class="cell"><i class="g-session-icon" id="s8${key}" onclick="save_session_status('${key}', ${i}, 8)"></i> <a href="${get_course_url_with_params(8, i )}">${__('Session 8', 'zume')}</a></div>    
-  <div class="cell"><i class="g-session-icon" id="s9${key}" onclick="save_session_status('${key}', ${i}, 9)"></i> <a href="${get_course_url_with_params(9, i )}">${__('Session 9', 'zume')}</a></div>    
-  <div class="cell"><i class="g-session-icon" id="s10${key}" onclick="save_session_status('${key}', ${i}, 10)"></i> <a href="${get_course_url_with_params(10, i )}">${__('Session 10', 'zume')}</a></div>
+  <div class="cell"><i class="g-session-icon" id="s1${_.escape( key )}" onclick="save_session_status('${_.escape( key )}', ${_.escape( i )}, 1)"></i> <a href="${get_course_url_with_params(1, _.escape( i ) )}">${__('Session 1', 'zume')}</a></div>    
+  <div class="cell"><i class="g-session-icon" id="s2${_.escape( key )}" onclick="save_session_status('${_.escape( key )}', ${_.escape( i )}, 2)"></i> <a href="${get_course_url_with_params(2, _.escape( i ) )}">${__('Session 2', 'zume')}</a></div>    
+  <div class="cell"><i class="g-session-icon" id="s3${_.escape( key )}" onclick="save_session_status('${_.escape( key )}', ${_.escape( i )}, 3)"></i> <a href="${get_course_url_with_params(3, _.escape( i ) )}">${__('Session 3', 'zume')}</a></div>    
+  <div class="cell"><i class="g-session-icon" id="s4${_.escape( key )}" onclick="save_session_status('${_.escape( key )}', ${_.escape( i )}, 4)"></i> <a href="${get_course_url_with_params(4, _.escape( i ) )}">${__('Session 4', 'zume')}</a></div>    
+  <div class="cell"><i class="g-session-icon" id="s5${_.escape( key )}" onclick="save_session_status('${_.escape( key )}', ${_.escape( i )}, 5)"></i> <a href="${get_course_url_with_params(5, _.escape( i ) )}">${__('Session 5', 'zume')}</a></div>    
+  <div class="cell"><i class="g-session-icon" id="s6${_.escape( key )}" onclick="save_session_status('${_.escape( key )}', ${_.escape( i )}, 6)"></i> <a href="${get_course_url_with_params(6, _.escape( i ) )}">${__('Session 6', 'zume')}</a></div>    
+  <div class="cell"><i class="g-session-icon" id="s7${_.escape( key )}" onclick="save_session_status('${_.escape( key )}', ${_.escape( i )}, 7)"></i> <a href="${get_course_url_with_params(7, _.escape( i ) )}">${__('Session 7', 'zume')}</a></div>    
+  <div class="cell"><i class="g-session-icon" id="s8${_.escape( key )}" onclick="save_session_status('${_.escape( key )}', ${_.escape( i )}, 8)"></i> <a href="${get_course_url_with_params(8, _.escape( i ) )}">${__('Session 8', 'zume')}</a></div>    
+  <div class="cell"><i class="g-session-icon" id="s9${_.escape( key )}" onclick="save_session_status('${_.escape( key )}', ${_.escape( i )}, 9)"></i> <a href="${get_course_url_with_params(9, _.escape( i ) )}">${__('Session 9', 'zume')}</a></div>    
+  <div class="cell"><i class="g-session-icon" id="s10${_.escape( key )}" onclick="save_session_status('${_.escape( key )}', ${_.escape( i )}, 10)"></i> <a href="${get_course_url_with_params(10, _.escape( i ) )}">${__('Session 10', 'zume')}</a></div>
   `)
 
   let x = 1
@@ -249,30 +249,30 @@ function save_session_status( key, i, session_number ) {
       item.addClass('complete')
     }
 
-    API.update_group( key, session_number, 'session_complete' ).fail(function(e){
-      // reverse toggle
+    API.update_group( key, session_number, 'session_complete' )
+      .fail(function(e){
+      // if fail, reverse toggle
       if ( item.hasClass("complete") ) {
         item.removeClass('complete')
       } else {
         item.addClass('complete')
       }
-      alert('Connection to server failed. Try again.')
+      alert(`${__('Connection to server failed. Try again.', 'zume')}`)
       conole.log('update group session status fail')
       console.log(e)
     })
   }
 
 }
-
 function write_member_count( key, group ) {
     let list = ''
     let i = 1
     while ( i < 30) {
-      list += '<option value="'+i+'"';
+      list += '<option value="'+_.escape( i )+'"';
       if ( parseInt( group.members ) === i ) {
         list += ' selected'
       }
-      list += '>'+ i +'</option>'
+      list += '>'+ _.escape( i ) +'</option>'
       i++;
     }
 
@@ -285,12 +285,13 @@ function save_member_count( key, i ) {
     if ( zumeTraining.groups[i].coleaders_accepted.length > count ) {
       count = zumeTraining.groups[i].coleaders_accepted.length
     }
-    API.update_group( key, _.escape( count ), 'members' ).done(function(data){
-      zumeTraining.groups[i].members = _.escape( count )
-    })
+    API.update_group( key, _.escape( count ), 'members' )
+      .done(function(data)
+      {
+        zumeTraining.groups[i].members = _.escape( count )
+      })
   }
 }
-
 function write_members_list( key, i ) {
   let div = jQuery('#member_list_'+key)
   let verified
@@ -301,23 +302,23 @@ function write_members_list( key, i ) {
       if ( _.indexOf( zumeTraining.groups[i].coleaders_accepted, v ) >= 0 ) {
         verified = `<i class="fi-check secondary-color" title="${__('Accepted invitation', 'zume')}"></i>`
       }
-      div.append(`<div class="cell member">${v} ${verified} <span class="delete" onclick="delete_member_list_item( '${key}', ${i}, ${ib}, '${v}' )">${__('delete', 'zume')}</span></div>`)
+      div.append(`<div class="cell member">${_.escape( v )} ${_.escape( verified )} <span class="delete" onclick="delete_member_list_item( '${_.escape( key )}', ${_.escape( i )}, ${_.escape( ib )}, '${_.escape( v )}' )">${__('delete', 'zume')}</span></div>`)
     }
   })
 }
 function edit_new_member_list( key, i ) {
   jQuery('#add_member_'+key).empty().append(`
   <hr>
-  <input type="text" placeholder="email" id="email_${key}" />
-  <button type="button" class="button small" onclick="save_new_member('${key}', ${i})">${__('Save', 'zume')}</button> 
-  <button type="button" class="button small hollow" onclick="write_member_list_button('${key}', ${i})">${__('Cancel', 'zume')}</button> 
+  <input type="text" placeholder="email" id="email_${_.escape( key )}" />
+  <button type="button" class="button small" onclick="save_new_member('${_.escape( key )}', ${_.escape( i )})">${__('Save', 'zume')}</button> 
+  <button type="button" class="button small hollow" onclick="write_member_list_button('${_.escape( key )}', ${_.escape( i )})">${__('Cancel', 'zume')}</button> 
   `)
   jQuery('#email_'+key).focus()
 }
 function write_member_list_button( key, i ) {
   if ( isOwner( key, i ) ) {
     jQuery('#add_member_'+key).empty().append(`
-    <button type="button" class="button clear" onclick="edit_new_member_list('${key}', ${i})"><i class="fi-plus"></i> ${__('add', 'zume')}</button>
+    <button type="button" class="button clear" onclick="edit_new_member_list('${_.escape( key )}', ${_.escape( i )})"><i class="fi-plus"></i> ${__('add', 'zume')}</button>
   `)
   }
 }
@@ -345,7 +346,6 @@ function delete_member_list_item( key, i, ib, email ) {
 
     delete zumeTraining.groups[i].coleaders[ib]
   }
-
   write_members_list(key, i)
   write_member_list_button( key, i )
   write_member_list_hover_delete( key, i )
@@ -412,7 +412,6 @@ function add_location_lookup_map( key, i ) {
       window.active_marker = new mapboxgl.Marker()
         .setLngLat(e.lngLat )
         .addTo(map);
-      console.log(active_marker)
 
       jQuery('#result_display').html(`${__('Save Clicked Location', 'zume')}`)
 
@@ -524,7 +523,7 @@ function write_location_add_button( key, i ) {
   if ( group.lng && isOwner( key, i ) ) {
     jQuery('#add_location_'+_.escape( key ))
       .empty()
-      .append(`<img width="400" src="https://api.mapbox.com/styles/v1/mapbox/streets-v9/static/pin-m-marker+0096ff(${_.escape( group.lng )},${_.escape( group.lat )})/${_.escape( group.lng )},${_.escape( group.lat )},${( group.zoom || 6 )},0/400x250@2x?access_token=${_.escape( zumeTraining.map_key )}" alt="Mapbox Map" />`)
+      .append(`<img width="400" src="https://api.mapbox.com/styles/v1/mapbox/streets-v9/static/pin-m-marker+0096ff(${_.escape( group.lng )},${_.escape( group.lat )})/${_.escape( group.lng )},${_.escape( group.lat )},${( _.escape( group.zoom ) || 6 )},0/400x250@2x?access_token=${_.escape( zumeTraining.map_key )}" alt="Mapbox Map" />`)
       .append(`<br><button type="button" class="button clear" onclick="add_location_lookup_map('${_.escape( key )}', ${_.escape( i )})"><i class="fi-plus"></i> ${__('update', 'zume')}</button>`)
   }
   else if ( isOwner( key, i ) ) {
@@ -557,16 +556,16 @@ function write_meta_column( key, i ) {
 }
 function get_course_url_with_params( session_number, i ) {
   if ( i === undefined ) {
-    return zumeTraining.site_urls.course + '?session=' + session_number
+    return _.escape( zumeTraining.site_urls.course ) + '?session=' + _.escape( session_number )
   } else {
-    return zumeTraining.site_urls.course + '?group=' + zumeTraining.groups[i].foreign_key + '&session=' + session_number
+    return _.escape( zumeTraining.site_urls.course ) + '?group=' + _.escape( zumeTraining.groups[i].foreign_key ) + '&session=' + _.escape( session_number )
   }
 }
 function open_session( session_number, key, i ) {
   if ( ! zumeTraining.logged_in ) {
     jQuery('#training-modal-content').empty().html(`
     <div class="grid-y padding-top-1 training">
-        <div class="cell"><h2 class="center">${__('Welcome to Session', 'zume')} ${session_number}</h2></div>
+        <div class="cell"><h2 class="center">${__('Welcome to Session', 'zume')} ${_.escape( session_number )}</h2></div>
         <div class="cell callout primary-color margin-2">
             <div class="grid-x padding-right-2 padding-left-2 grid-padding-y" id="not-logged-in">
                 <div class="cell center list-head"><h3>${__("You're missing out.", 'zume')} <br>${__('Register Now!', 'zume')}</h3></div> 
@@ -606,7 +605,7 @@ function open_session( session_number, key, i ) {
           <div id="create_new_group"></div>
         </div>
         <div class="cell center margin-bottom-1" id="continue_button">
-          <button type="submit" class="center button large" onclick="continue_to_session( ${_.escape( session_number )} )">${__('Continue', 'zume')}</button>
+          <button type="submit" class="center button large" onclick="continue_to_session(${_.escape( session_number )} )">${__('Continue', 'zume')}</button>
         </div>
       </div>
     `)
@@ -644,12 +643,13 @@ function save_new_group_and_continue( session_number ) {
   let members = jQuery('#new-group input[name=members]').val()
 
   if ( group_name && members ) {
-    API.create_group( _.escape( group_name ), _.escape( members ) ).done(function(data) {
-      zumeTraining.groups = data
-      window.location = get_course_url_with_params( session_number, 0 )
-    })
+    API.create_group( _.escape( group_name ), _.escape( members ) )
+      .done(function(data) {
+        zumeTraining.groups = data
+        window.location = get_course_url_with_params( session_number, 0 )
+      })
       .fail(function(e){
-        alert('Connection to server failed. Try again.')
+        alert(`${__('Connection to server failed. Try again.', 'zume')}`)
         console.log('error making new group')
         console.log(e)
       })
@@ -686,11 +686,12 @@ function save_new_group() {
   let members = jQuery('#new-group input[name=members]').val()
 
   if ( group_name && members ) {
-    API.create_group( _.escape( group_name ), _.escape( members ) ).done(function(data) {
-      zumeTraining.groups = data
-      write_add_group_button()
-      get_groups()
-    })
+    API.create_group( _.escape( group_name ), _.escape( members ) )
+      .done(function(data) {
+        zumeTraining.groups = data
+        write_add_group_button()
+        get_groups()
+      })
       .fail(function(e){
         write_add_group_button()
         jQuery('#add_group_container').append(`
@@ -720,7 +721,6 @@ function write_invitation_list() {
     })
     div.append(`<hr></div>`)
   }
-
 }
 function save_invitation_response( key, answer ) {
   API.update_group( key, answer, 'coleader_invitation_response' ).done(function(data){
@@ -779,7 +779,7 @@ function open_archive_groups() {
   let list = ''
   jQuery.each( zumeTraining.groups, function(i,v) {
     if ( v.closed === true ) {
-      list += ''+ `<tr id="archive_${_.escape( v.key )}"><td>${_.escape( v.group_name )}</td><td><button type="button" class="button clear padding-bottom-0" onclick="activate_group('${_.escape( v.key )}', ${_.escape( i )})">${__('Re-Activate', 'zume')}</button></td><td><button type="button" class="button alert clear padding-bottom-0" onclick="delete_group( '${_.escape( v.key )}', ${_.escape( i )}} )">${__('Delete Forever', 'zume')}</button></td></tr>`
+      list += ''+ `<tr id="archive_${_.escape( v.key )}"><td>${_.escape( v.group_name )}</td><td><button type="button" class="button clear padding-bottom-0" onclick="activate_group('${_.escape( v.key )}', ${_.escape( i )})">${__('Re-Activate', 'zume')}</button></td><td><button type="button" class="button alert clear padding-bottom-0" onclick="delete_group('${_.escape( v.key )}', ${_.escape( i )}} )">${__('Delete Forever', 'zume')}</button></td></tr>`
     }
   })
   jQuery('#training-modal-content').empty().append(`
@@ -948,7 +948,7 @@ div.append(`
                             <span class="hide-for-small-only"><a href="${_.escape( zumeTraining.urls[5] )}">${_.escape( zumeTraining.translations.titles[5] )}</a></span>
                           </div>
                           <div class="cell p-session-separator padding-top-1">
-                          ${zumeTraining.translations.sessions[2]}</a>
+                          ${_.escape( zumeTraining.translations.sessions[2] )}</a>
                           </div>
                           <div class="cell ">
                             <span class="show-for-small-only"><a href="${_.escape( zumeTraining.urls[6] )}">${_.escape( zumeTraining.translations.titles[6] )}</a></span>
@@ -961,157 +961,157 @@ div.append(`
                             <span class="hide-for-small-only"><a href="${_.escape( zumeTraining.urls[7] )}">${_.escape( zumeTraining.translations.titles[7] )}</a></span>
                           </div>
                           <div class="cell ">
-                          <span class="show-for-small-only"><a href="${zumeTraining.urls[8]}">${zumeTraining.translations.titles[8]}</a></span>
+                          <span class="show-for-small-only"><a href="${_.escape( zumeTraining.urls[8] )}">${_.escape( zumeTraining.translations.titles[8] )}</a></span>
                           <i class="p-icon" id="8h" title="${__('Heard', 'zume')}"></i><i class="p-icon" id="8o" title="${__('Obeyed', 'zume')}"></i><i class="p-icon" id="8s" title="${__('Shared', 'zume')}"></i><i class="p-icon" id="8t" title="${__('Trained', 'zume')}"></i>
-                          <span class="hide-for-small-only"><a href="${zumeTraining.urls[8]}">${zumeTraining.translations.titles[8]}</a></span>
+                          <span class="hide-for-small-only"><a href="${_.escape( zumeTraining.urls[8] )}">${_.escape( zumeTraining.translations.titles[8] )}</a></span>
                           </div>
                           <div class="cell p-session-separator padding-top-1">
-                          ${zumeTraining.translations.sessions[3]}</a>
+                          ${_.escape( zumeTraining.translations.sessions[3] )}</a>
                           </div>
                           <div class="cell ">
-                          <span class="show-for-small-only"><a href="${zumeTraining.urls[9]}">${zumeTraining.translations.titles[9]}</a></span>
+                          <span class="show-for-small-only"><a href="${_.escape( zumeTraining.urls[9] )}">${_.escape( zumeTraining.translations.titles[9] )}</a></span>
                           <i class="p-icon" id="9h" title="${__('Heard', 'zume')}"></i><i class="p-icon" id="9o" title="${__('Obeyed', 'zume')}"></i><i class="p-icon" id="9s" title="${__('Shared', 'zume')}"></i><i class="p-icon" id="9t" title="${__('Trained', 'zume')}"></i>
-                          <span class="hide-for-small-only"><a href="${zumeTraining.urls[9]}">${zumeTraining.translations.titles[9]}</a></span>
+                          <span class="hide-for-small-only"><a href="${_.escape( zumeTraining.urls[9] )}">${_.escape( zumeTraining.translations.titles[9] )}</a></span>
                           </div>
                           <div class="cell ">
-                          <span class="show-for-small-only"><a href="${zumeTraining.urls[10]}">${zumeTraining.translations.titles[10]}</a></span>
+                          <span class="show-for-small-only"><a href="${_.escape( zumeTraining.urls[10] )}">${_.escape( zumeTraining.translations.titles[10] )}</a></span>
                           <i class="p-icon" id="10h" title="${__('Heard', 'zume')}"></i><i class="p-icon" id="10o" title="${__('Obeyed', 'zume')}"></i><i class="p-icon" id="10s" title="${__('Shared', 'zume')}"></i><i class="p-icon" id="10t" title="${__('Trained', 'zume')}"></i>
-                          <span class="hide-for-small-only"><a href="${zumeTraining.urls[10]}">${zumeTraining.translations.titles[10]}</a></span>
+                          <span class="hide-for-small-only"><a href="${_.escape( zumeTraining.urls[10] )}">${_.escape( zumeTraining.translations.titles[10] )}</a></span>
                           </div>
                           <div class="cell ">
-                          <span class="show-for-small-only"><a href="${zumeTraining.urls[11]}">${zumeTraining.translations.titles[11]}</a></span>
+                          <span class="show-for-small-only"><a href="${_.escape( zumeTraining.urls[11] )}">${_.escape( zumeTraining.translations.titles[11] )}</a></span>
                           <i class="p-icon" id="11h" title="${__('Heard', 'zume')}"></i><i class="p-icon" id="11o" title="${__('Obeyed', 'zume')}"></i><i class="p-icon" id="11s" title="${__('Shared', 'zume')}"></i><i class="p-icon" id="11t" title="${__('Trained', 'zume')}"></i>
-                          <span class="hide-for-small-only"><a href="${zumeTraining.urls[11]}">${zumeTraining.translations.titles[11]}</a></span>
+                          <span class="hide-for-small-only"><a href="${_.escape( zumeTraining.urls[11] )}">${_.escape( zumeTraining.translations.titles[11] )}</a></span>
                           </div>
                           <div class="cell p-session-separator padding-top-1">
-                          ${zumeTraining.translations.sessions[4]}</a>
+                          ${_.escape( zumeTraining.translations.sessions[4] )}</a>
                           </div>
                           <div class="cell ">
-                          <span class="show-for-small-only"><a href="${zumeTraining.urls[12]}">${zumeTraining.translations.titles[12]}</a></span>
+                          <span class="show-for-small-only"><a href="${_.escape( zumeTraining.urls[12] )}">${_.escape( zumeTraining.translations.titles[12] )}</a></span>
                           <i class="p-icon" id="12h" title="${__('Heard', 'zume')}"></i><i class="p-icon" id="12o" title="${__('Obeyed', 'zume')}"></i><i class="p-icon" id="12s" title="${__('Shared', 'zume')}"></i><i class="p-icon" id="12t" title="${__('Trained', 'zume')}"></i>
-                          <span class="hide-for-small-only"><a href="${zumeTraining.urls[12]}">${zumeTraining.translations.titles[12]}</a></span>
+                          <span class="hide-for-small-only"><a href="${_.escape( zumeTraining.urls[12] )}">${_.escape( zumeTraining.translations.titles[12] )}</a></span>
                           </div>
                           <div class="cell ">
-                          <span class="show-for-small-only"><a href="${zumeTraining.urls[13]}">${zumeTraining.translations.titles[13]}</a></span>
+                          <span class="show-for-small-only"><a href="${_.escape( zumeTraining.urls[13] )}">${_.escape( zumeTraining.translations.titles[13] )}</a></span>
                           <i class="p-icon" id="13h" title="${__('Heard', 'zume')}"></i><i class="p-icon" id="13o" title="${__('Obeyed', 'zume')}"></i><i class="p-icon" id="13s" title="${__('Shared', 'zume')}"></i><i class="p-icon" id="13t" title="${__('Trained', 'zume')}"></i>
-                          <span class="hide-for-small-only"><a href="${zumeTraining.urls[13]}">${zumeTraining.translations.titles[13]}</a></span>
+                          <span class="hide-for-small-only"><a href="${_.escape( zumeTraining.urls[13] )}">${_.escape( zumeTraining.translations.titles[13] )}</a></span>
                           </div>
                           <div class="cell ">
-                          <span class="show-for-small-only"><a href="${zumeTraining.urls[14]}">${zumeTraining.translations.titles[14]}</a></span>
+                          <span class="show-for-small-only"><a href="${_.escape( zumeTraining.urls[14] )}">${_.escape( zumeTraining.translations.titles[14] )}</a></span>
                           <i class="p-icon" id="14h" title="${__('Heard', 'zume')}"></i><i class="p-icon" id="14o" title="${__('Obeyed', 'zume')}"></i><i class="p-icon" id="14s" title="${__('Shared', 'zume')}"></i><i class="p-icon" id="14t" title="${__('Trained', 'zume')}"></i>
-                          <span class="hide-for-small-only"><a href="${zumeTraining.urls[14]}">${zumeTraining.translations.titles[14]}</a></span>
+                          <span class="hide-for-small-only"><a href="${_.escape( zumeTraining.urls[14] )}">${_.escape( zumeTraining.translations.titles[14] )}</a></span>
                           </div>
                           <div class="cell">
-                          <span class="show-for-small-only"><a href="${zumeTraining.urls[15]}">${zumeTraining.translations.titles[15]}</a></span>
+                          <span class="show-for-small-only"><a href="${_.escape( zumeTraining.urls[15] )}">${_.escape( zumeTraining.translations.titles[15] )}</a></span>
                           <i class="p-icon" id="15h" title="${__('Heard', 'zume')}"></i><i class="p-icon" id="15o" title="${__('Obeyed', 'zume')}"></i><i class="p-icon" id="15s" title="${__('Shared', 'zume')}"></i><i class="p-icon" id="15t" title="${__('Trained', 'zume')}"></i>
-                          <span class="hide-for-small-only"><a href="${zumeTraining.urls[15]}">${zumeTraining.translations.titles[15]}</a></span>
+                          <span class="hide-for-small-only"><a href="${_.escape( zumeTraining.urls[15] )}">${_.escape( zumeTraining.translations.titles[15] )}</a></span>
                           </div>
                           <div class="cell">
-                          <span class="show-for-small-only"><a href="${zumeTraining.urls[16]}">${zumeTraining.translations.titles[16]}</a></span>
+                          <span class="show-for-small-only"><a href="${_.escape( zumeTraining.urls[16] )}">${_.escape( zumeTraining.translations.titles[16] )}</a></span>
                           <i class="p-icon" id="16h" title="${__('Heard', 'zume')}"></i><i class="p-icon" id="16o" title="${__('Obeyed', 'zume')}"></i><i class="p-icon" id="16s" title="${__('Shared', 'zume')}"></i><i class="p-icon" id="16t" title="${__('Trained', 'zume')}"></i>
-                          <span class="hide-for-small-only"><a href="${zumeTraining.urls[16]}">${zumeTraining.translations.titles[16]}</a></span>
+                          <span class="hide-for-small-only"><a href="${_.escape( zumeTraining.urls[16] )}">${_.escape( zumeTraining.translations.titles[16] )}</a></span>
                           </div>
                             <div class="cell p-session-separator padding-top-1">
-                          ${zumeTraining.translations.sessions[5]}</a>
+                          ${_.escape( zumeTraining.translations.sessions[5] )}</a>
                           </div>
                         <div class="cell">
-                        <span class="show-for-small-only"><a href="${zumeTraining.urls[17]}">${zumeTraining.translations.titles[17]}</a></span>
+                        <span class="show-for-small-only"><a href="${_.escape( zumeTraining.urls[17] )}">${_.escape( zumeTraining.translations.titles[17] )}</a></span>
                         <i class="p-icon" id="17h" title="${__('Heard', 'zume')}"></i><i class="p-icon" id="17o" title="${__('Obeyed', 'zume')}"></i><i class="p-icon" id="17s" title="${__('Shared', 'zume')}"></i><i class="p-icon" id="17t" title="${__('Trained', 'zume')}"></i>
-                        <span class="hide-for-small-only"><a href="${zumeTraining.urls[17]}">${zumeTraining.translations.titles[17]}</a></span>
+                        <span class="hide-for-small-only"><a href="${_.escape( zumeTraining.urls[17] )}">${_.escape( zumeTraining.translations.titles[17] )}</a></span>
                         </div>
                         <div class="cell">
-                        <span class="show-for-small-only"><a href="${zumeTraining.urls[18]}">${zumeTraining.translations.titles[18]}</a></span>
+                        <span class="show-for-small-only"><a href="${_.escape( zumeTraining.urls[18] )}">${_.escape( zumeTraining.translations.titles[18] )}</a></span>
                         <i class="p-icon" id="18h" title="${__('Heard', 'zume')}"></i><i class="p-icon" id="18o" title="${__('Obeyed', 'zume')}"></i><i class="p-icon" id="18s" title="${__('Shared', 'zume')}"></i><i class="p-icon" id="18t" title="${__('Trained', 'zume')}"></i>
-                        <span class="hide-for-small-only"><a href="${zumeTraining.urls[18]}">${zumeTraining.translations.titles[18]}</a></span>
+                        <span class="hide-for-small-only"><a href="${_.escape( zumeTraining.urls[18] )}">${_.escape( zumeTraining.translations.titles[18] )}</a></span>
                         </div>
                         <div class="cell">
-                        <span class="show-for-small-only"><a href="${zumeTraining.urls[19]}">${zumeTraining.translations.titles[19]}</a></span>
+                        <span class="show-for-small-only"><a href="${_.escape( zumeTraining.urls[19] )}">${_.escape( zumeTraining.translations.titles[19] )}</a></span>
                         <i class="p-icon" id="19h" title="${__('Heard', 'zume')}"></i><i class="p-icon" id="19o" title="${__('Obeyed', 'zume')}"></i><i class="p-icon" id="19s" title="${__('Shared', 'zume')}"></i><i class="p-icon" id="19t" title="${__('Trained', 'zume')}"></i>
-                        <span class="hide-for-small-only"><a href="${zumeTraining.urls[19]}">${zumeTraining.translations.titles[19]}</a></span>
+                        <span class="hide-for-small-only"><a href="${_.escape( zumeTraining.urls[19] )}">${_.escape( zumeTraining.translations.titles[19] )}</a></span>
                         </div>
                       </div>
                   </div>
                   <div class="cell medium-5">
                     <div class="grid-x grid-padding-x progress-list">
                         <div class="cell p-session-separator session-6-column-top">
-                          ${zumeTraining.translations.sessions[6]}</a>
+                          ${_.escape( zumeTraining.translations.sessions[6] )}</a>
                           </div>
                         <div class="cell">
-                        <span class="show-for-small-only"><a href="${zumeTraining.urls[20]}">${zumeTraining.translations.titles[20]}</a></span>
+                        <span class="show-for-small-only"><a href="${_.escape( zumeTraining.urls[20] )}">${_.escape( zumeTraining.translations.titles[20] )}</a></span>
                         <i class="p-icon" id="20h" title="${__('Heard', 'zume')}"></i><i class="p-icon" id="20o" title="${__('Obeyed', 'zume')}"></i><i class="p-icon" id="20s" title="${__('Shared', 'zume')}"></i><i class="p-icon" id="20t" title="${__('Trained', 'zume')}"></i>
-                        <span class="hide-for-small-only"><a href="${zumeTraining.urls[20]}">${zumeTraining.translations.titles[20]}</a></span>
+                        <span class="hide-for-small-only"><a href="${_.escape( zumeTraining.urls[20] )}">${_.escape( zumeTraining.translations.titles[20] )}</a></span>
                         </div>
                         <div class="cell">
-                        <span class="show-for-small-only"><a href="${zumeTraining.urls[21]}">${zumeTraining.translations.titles[21]}</a></span>
+                        <span class="show-for-small-only"><a href="${_.escape( zumeTraining.urls[21] )}">${_.escape( zumeTraining.translations.titles[21] )}</a></span>
                         <i class="p-icon" id="21h" title="${__('Heard', 'zume')}"></i><i class="p-icon" id="21o" title="${__('Obeyed', 'zume')}"></i><i class="p-icon" id="21s" title="${__('Shared', 'zume')}"></i><i class="p-icon" id="21t" title="${__('Trained', 'zume')}"></i>
-                        <span class="hide-for-small-only"><a href="${zumeTraining.urls[21]}">${zumeTraining.translations.titles[21]}</a></span>
+                        <span class="hide-for-small-only"><a href="${_.escape( zumeTraining.urls[21] )}">${_.escape( zumeTraining.translations.titles[21] )}</a></span>
                         </div>
                         <div class="cell p-session-separator padding-top-1">
-                          ${zumeTraining.translations.sessions[7]}</a>
+                          ${_.escape( zumeTraining.translations.sessions[7] )}</a>
                           </div>
                         <div class="cell">
-                        <span class="show-for-small-only"><a href="${zumeTraining.urls[22]}">${zumeTraining.translations.titles[22]}</a></span>
+                        <span class="show-for-small-only"><a href="${_.escape( zumeTraining.urls[22] )}">${_.escape( zumeTraining.translations.titles[22] )}</a></span>
                         <i class="p-icon" id="22h" title="${__('Heard', 'zume')}"></i><i class="p-icon" id="22o" title="${__('Obeyed', 'zume')}"></i><i class="p-icon" id="22s" title="${__('Shared', 'zume')}"></i><i class="p-icon" id="22t" title="${__('Trained', 'zume')}"></i>
-                        <span class="hide-for-small-only"><a href="${zumeTraining.urls[22]}">${zumeTraining.translations.titles[22]}</a></span>
+                        <span class="hide-for-small-only"><a href="${_.escape( zumeTraining.urls[22] )}">${_.escape( zumeTraining.translations.titles[22] )}</a></span>
                         </div>
                         <div class="cell p-session-separator padding-top-1">
-                          ${zumeTraining.translations.sessions[8]}</a>
+                          ${_.escape( zumeTraining.translations.sessions[8] )}</a>
                           </div>
                         <div class="cell">
-                        <span class="show-for-small-only"><a href="${zumeTraining.urls[23]}">${zumeTraining.translations.titles[23]}</a></span>
+                        <span class="show-for-small-only"><a href="${_.escape( zumeTraining.urls[23] )}">${_.escape( zumeTraining.translations.titles[23] )}</a></span>
                         <i class="p-icon" id="23h" title="${__('Heard', 'zume')}"></i><i class="p-icon" id="23o" title="${__('Obeyed', 'zume')}"></i><i class="p-icon" id="23s" title="${__('Shared', 'zume')}"></i><i class="p-icon" id="23t" title="${__('Trained', 'zume')}"></i>
-                        <span class="hide-for-small-only"><a href="${zumeTraining.urls[23]}">${zumeTraining.translations.titles[23]}</a></span>
+                        <span class="hide-for-small-only"><a href="${_.escape( zumeTraining.urls[23] )}">${_.escape( zumeTraining.translations.titles[23] )}</a></span>
                         </div>
                         <div class="cell p-session-separator padding-top-1">
-                          ${zumeTraining.translations.sessions[9]}</a>
+                          ${_.escape( zumeTraining.translations.sessions[9] )}</a>
                           </div>
                         <div class="cell">
-                        <span class="show-for-small-only"><a href="${zumeTraining.urls[24]}">${zumeTraining.translations.titles[24]}</a></span>
+                        <span class="show-for-small-only"><a href="${_.escape( zumeTraining.urls[24] )}">${_.escape( zumeTraining.translations.titles[24] )}</a></span>
                         <i class="p-icon" id="24h" title="${__('Heard', 'zume')}"></i><i class="p-icon" id="24o" title="${__('Obeyed', 'zume')}"></i><i class="p-icon" id="24s" title="${__('Shared', 'zume')}"></i><i class="p-icon" id="24t" title="${__('Trained', 'zume')}"></i>
-                        <span class="hide-for-small-only"><a href="${zumeTraining.urls[24]}">${zumeTraining.translations.titles[24]}</a></span>
+                        <span class="hide-for-small-only"><a href="${_.escape( zumeTraining.urls[24] )}">${_.escape( zumeTraining.translations.titles[24] )}</a></span>
                         </div>
                         <div class="cell">
-                        <span class="show-for-small-only"><a href="${zumeTraining.urls[25]}">${zumeTraining.translations.titles[25]}</a></span>
+                        <span class="show-for-small-only"><a href="${_.escape( zumeTraining.urls[25] )}">${_.escape( zumeTraining.translations.titles[25] )}</a></span>
                         <i class="p-icon" id="25h" title="${__('Heard', 'zume')}"></i><i class="p-icon" id="25o" title="${__('Obeyed', 'zume')}"></i><i class="p-icon" id="25s" title="${__('Shared', 'zume')}"></i><i class="p-icon" id="25t" title="${__('Trained', 'zume')}"></i>
-                        <span class="hide-for-small-only"><a href="${zumeTraining.urls[25]}">${zumeTraining.translations.titles[25]}</a></span>
+                        <span class="hide-for-small-only"><a href="${_.escape( zumeTraining.urls[25] )}">${_.escape( zumeTraining.translations.titles[25] )}</a></span>
                         </div>
                         <div class="cell">
-                        <span class="show-for-small-only"><a href="${zumeTraining.urls[26]}">${zumeTraining.translations.titles[26]}</a></span>
+                        <span class="show-for-small-only"><a href="${_.escape( zumeTraining.urls[26] )}">${_.escape( zumeTraining.translations.titles[26] )}</a></span>
                         <i class="p-icon" id="26h" title="${__('Heard', 'zume')}"></i><i class="p-icon" id="26o" title="${__('Obeyed', 'zume')}"></i><i class="p-icon" id="26s" title="${__('Shared', 'zume')}"></i><i class="p-icon" id="26t" title="${__('Trained', 'zume')}"></i>
-                        <span class="hide-for-small-only"><a href="${zumeTraining.urls[26]}">${zumeTraining.translations.titles[26]}</a></span>
+                        <span class="hide-for-small-only"><a href="${_.escape( zumeTraining.urls[26] )}">${_.escape( zumeTraining.translations.titles[26] )}</a></span>
                         </div>
                         <div class="cell">
-                        <span class="show-for-small-only"><a href="${zumeTraining.urls[27]}">${zumeTraining.translations.titles[27]}</a></span>
+                        <span class="show-for-small-only"><a href="${_.escape( zumeTraining.urls[27] )}">${_.escape( zumeTraining.translations.titles[27] )}</a></span>
                         <i class="p-icon" id="27h" title="${__('Heard', 'zume')}"></i><i class="p-icon" id="27o" title="${__('Obeyed', 'zume')}"></i><i class="p-icon" id="27s" title="${__('Shared', 'zume')}"></i><i class="p-icon" id="27t" title="${__('Trained', 'zume')}"></i>
-                        <span class="hide-for-small-only"><a href="${zumeTraining.urls[27]}">${zumeTraining.translations.titles[27]}</a></span>
+                        <span class="hide-for-small-only"><a href="${_.escape( zumeTraining.urls[27] )}">${_.escape( zumeTraining.translations.titles[27] )}</a></span>
                         </div>
                         <div class="cell p-session-separator padding-top-1">
-                          ${zumeTraining.translations.sessions[10]}</a>
+                          ${_.escape( zumeTraining.translations.sessions[10] )}</a>
                           </div>
                         <div class="cell">
-                        <span class="show-for-small-only"><a href="${zumeTraining.urls[28]}">${zumeTraining.translations.titles[28]}</a></span>
+                        <span class="show-for-small-only"><a href="${_.escape( zumeTraining.urls[28] )}">${_.escape( zumeTraining.translations.titles[28] )}</a></span>
                         <i class="p-icon" id="28h" title="${__('Heard', 'zume')}"></i><i class="p-icon" id="28o" title="${__('Obeyed', 'zume')}"></i><i class="p-icon" id="28s" title="${__('Shared', 'zume')}"></i><i class="p-icon" id="28t" title="${__('Trained', 'zume')}"></i>
-                        <span class="hide-for-small-only"><a href="${zumeTraining.urls[28]}">${zumeTraining.translations.titles[28]}</a></span>
+                        <span class="hide-for-small-only"><a href="${_.escape( zumeTraining.urls[28] )}">${_.escape( zumeTraining.translations.titles[28] )}</a></span>
                         </div>
                         <div class="cell">
-                        <span class="show-for-small-only"><a href="${zumeTraining.urls[29]}">${zumeTraining.translations.titles[29]}</a></span>
+                        <span class="show-for-small-only"><a href="${_.escape( zumeTraining.urls[29] )}">${_.escape( zumeTraining.translations.titles[29] )}</a></span>
                         <i class="p-icon" id="29h" title="${__('Heard', 'zume')}"></i><i class="p-icon" id="29o" title="${__('Obeyed', 'zume')}"></i><i class="p-icon" id="29s" title="${__('Shared', 'zume')}"></i><i class="p-icon" id="29t" title="${__('Trained', 'zume')}"></i>
-                        <span class="hide-for-small-only"><a href="${zumeTraining.urls[29]}">${zumeTraining.translations.titles[29]}</a></span>
+                        <span class="hide-for-small-only"><a href="${_.escape( zumeTraining.urls[29] )}">${_.escape( zumeTraining.translations.titles[29] )}</a></span>
                         </div>
                         <div class="cell">
-                        <span class="show-for-small-only"><a href="${zumeTraining.urls[30]}">${zumeTraining.translations.titles[30]}</a></span>
+                        <span class="show-for-small-only"><a href="${_.escape( zumeTraining.urls[30] )}">${_.escape( zumeTraining.translations.titles[30] )}</a></span>
                         <i class="p-icon" id="30h" title="${__('Heard', 'zume')}"></i><i class="p-icon" id="30o" title="${__('Obeyed', 'zume')}"></i><i class="p-icon" id="30s" title="${__('Shared', 'zume')}"></i><i class="p-icon" id="30t" title="${__('Trained', 'zume')}"></i>
-                        <span class="hide-for-small-only"><a href="${zumeTraining.urls[30]}">${zumeTraining.translations.titles[30]}</a></span>
+                        <span class="hide-for-small-only"><a href="${_.escape( zumeTraining.urls[30] )}">${_.escape( zumeTraining.translations.titles[30] )}</a></span>
                         </div>
                         <div class="cell">
-                        <span class="show-for-small-only"><a href="${zumeTraining.urls[31]}">${zumeTraining.translations.titles[31]}</a></span>
+                        <span class="show-for-small-only"><a href="${_.escape( zumeTraining.urls[31] )}">${_.escape( zumeTraining.translations.titles[31] )}</a></span>
                         <i class="p-icon" id="31h" title="${__('Heard', 'zume')}"></i><i class="p-icon" id="31o" title="${__('Obeyed', 'zume')}"></i><i class="p-icon" id="31s" title="${__('Shared', 'zume')}"></i><i class="p-icon" id="31t" title="${__('Trained', 'zume')}"></i>
-                        <span class="hide-for-small-only"><a href="${zumeTraining.urls[31]}">${zumeTraining.translations.titles[31]}</a></span>
+                        <span class="hide-for-small-only"><a href="${_.escape( zumeTraining.urls[31] )}">${_.escape( zumeTraining.translations.titles[31] )}</a></span>
                         </div>
                         <div class="cell">
-                        <span class="show-for-small-only"><a href="${zumeTraining.urls[32]}">${zumeTraining.translations.titles[32]}</a></span>
+                        <span class="show-for-small-only"><a href="${_.escape( zumeTraining.urls[32] )}">${_.escape( zumeTraining.translations.titles[32] )}</a></span>
                         <i class="p-icon" id="32h" title="${__('Heard', 'zume')}"></i><i class="p-icon" id="32o" title="${__('Obeyed', 'zume')}"></i><i class="p-icon" id="32s" title="${__('Shared', 'zume')}"></i><i class="p-icon" id="32t" title="${__('Trained', 'zume')}"></i>
-                        <span class="hide-for-small-only"><a href="${zumeTraining.urls[32]}">${zumeTraining.translations.titles[32]}</a></span>
+                        <span class="hide-for-small-only"><a href="${_.escape( zumeTraining.urls[32] )}">${_.escape( zumeTraining.translations.titles[32] )}</a></span>
                         </div>
                     </div>
                   </div>

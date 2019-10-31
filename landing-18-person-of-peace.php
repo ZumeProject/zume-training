@@ -6,9 +6,9 @@ get_header();
 $alt_video = false;
 if (have_posts()) :
     while (have_posts()) : the_post();
-        $session_number = 18;
+        $session_number = 5;
         set_query_var( 'session_number', absint( $session_number ) );
-        $tool_number = 3;
+        $tool_number = 18;
         set_query_var( 'tool_number', absint( $tool_number ) );
         ?>
 
@@ -50,9 +50,23 @@ if (have_posts()) :
 
                             <!-- Activity Block  -->
                             <div class="grid-x grid-margin-x grid-margin-y">
-                                <div class="large-3 cell activity-title"><?php esc_html_e( 'WATCH', 'zume' ) ?></div>
                                 <div class="cell content-large">
-                                    <?php esc_html_e( "Disciple-making can be rapidly advanced by finding a person of peace, even in a place where followers of Jesus are few and far between. How do you know when you have found a person of peace and what do you when you find them?", 'zume' ) ?>
+                                    <p>When you want to make disciples in a place where not many - or maybe even any -
+                                        exist, then looking for a Person of Peace might be the most important thing you
+                                        do. A Person of Peace is:</p>
+
+                                    <p>Someone who is OPEN to hearing Your Story, God’s Story and the Good News of
+                                        Jesus.</p>
+
+                                    <p>Someone who is HOSPITABLE and WELCOMES you into their home or their workplace or
+                                        to join events with family and friends.</p>
+
+                                    <p>Someone who KNOWS OTHERS (or is KNOWN BY OTHERS) and who is excited to draw
+                                        together a small group or even a crowd.</p>
+
+                                    <p>Someone who is FAITHFUL and SHARES what they learn with others - even after
+                                        you’re gone.</p>
+
                                 </div>
                             </div> <!-- grid-x -->
 

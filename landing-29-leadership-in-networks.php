@@ -6,9 +6,9 @@ get_header();
 $alt_video = false;
 if (have_posts()) :
     while (have_posts()) : the_post();
-        $session_number = 29;
+        $session_number = 10;
         set_query_var( 'session_number', absint( $session_number ) );
-        $tool_number = 3;
+        $tool_number = 29;
         set_query_var( 'tool_number', absint( $tool_number ) );
         ?>
 
@@ -50,9 +50,18 @@ if (have_posts()) :
 
                             <!-- Activity Block  -->
                             <div class="grid-x grid-margin-x grid-margin-y">
-                                <div class="large-3 cell activity-title"><?php esc_html_e( 'WATCH', 'zume' ) ?></div>
                                 <div class="cell content-large">
-                                    <?php esc_html_e( "What happens to churches as they grow and start new churches that start new churches? How do they stay connected and live life together as an extended, spiritual family? They become a network!", 'zume' ) ?>
+                                    <p>So what happens to churches as they grow and start new churches that start new
+                                        churches that start new churches? How do they stay connected? How do they live
+                                        life together as an extended spiritual family?</p>
+
+                                    <p>The answer is that all of these simple churches are just like the cells in a
+                                        growing body and they connect and network into a city or regional church.</p>
+
+                                    <p>The churches are related. They share the same spiritual DNA. They are all
+                                        connected out of the same first multiplying family. And now -- with some
+                                        guidance - they come together as a larger body to do even more.</p>
+
                                 </div>
                             </div> <!-- grid-x -->
 

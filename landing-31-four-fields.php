@@ -6,9 +6,9 @@ get_header();
 $alt_video = false;
 if (have_posts()) :
     while (have_posts()) : the_post();
-        $session_number = 31;
+        $session_number = 10;
         set_query_var( 'session_number', absint( $session_number ) );
-        $tool_number = 3;
+        $tool_number = 31;
         set_query_var( 'tool_number', absint( $tool_number ) );
         ?>
 
@@ -46,7 +46,7 @@ if (have_posts()) :
 
                     <!-- Center column -->
                     <div class="large-8 small-12 cell" id="training-content">
-
+                        <img src="<?php echo zume_images_uri('/temp/') ?>four-fields.png" />
                     </div>
 
                     <div class="large-2 cell"></div><!-- Side spacer -->
