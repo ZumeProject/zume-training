@@ -2,6 +2,7 @@
 /*
 Template Name: Zume Resources
 */
+$zendesk_enable = true;
 ?>
 
 <?php get_header(); ?>

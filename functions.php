@@ -5,7 +5,18 @@
 require_once( 'functions/utilities/debugger-log.php' ); // debug logger used for development.
 
 require_once( 'dt-mapping/loader.php' );
-new DT_Mapping_Module_Loader('theme');
+new DT_Mapping_Module_Loader( 'theme' );
+
+/**
+ * We want to make sure migrations are run on updates.
+ * @see https://www.sitepoint.com/wordpress-plugin-updates-right-way/
+ */
+try {
+    require_once( 'functions/class-migration-engine.php' );
+    Zume_Migration_Engine::migrate( 0 );
+} catch ( Throwable $e ) {
+    new WP_Error( 'migration_error', 'Migration engine failed to migrate.' );
+}
 
 /**
  * Add custom table
@@ -19,25 +30,12 @@ require_once( 'functions/post-types/pdf-download-post-type.php' );
 
 
 /**
- * We want to make sure migrations are run on updates.
- *
- * @see https://www.sitepoint.com/wordpress-plugin-updates-right-way/
- */
-try {
-    require_once( 'functions/class-migration-engine.php' );
-    Zume_Migration_Engine::migrate( 0 );
-} catch ( Throwable $e ) {
-    new WP_Error( 'migration_error', 'Migration engine failed to migrate.' );
-}
-
-/**
  * INCLUDED FILES
  */
 
 // Language Files
 require_once( 'translations/translation.php' ); // Adds support for multiple languages
 require_once( 'functions/zume-polylang-integration.php' ); // Adds support for multiple languages
-
 // Zume Theme Files
 require_once( 'functions/login/zume-login.php' ); // Customize the login page
 require_once( 'functions/enqueue-scripts.php' ); // Register scripts and stylesheets
@@ -58,8 +56,18 @@ require_once( 'functions/zume-functions.php' ); // general zume functions
 require_once( 'functions/zume-dashboard.php' ); // zume dashboard
 require_once( 'functions/zume-welcome-messages.php' ); // zume welcome messages
 require_once( 'functions/logging/zume-logging.php' ); // zume logging of critical path actions
-require_once( 'functions/zume-stats.php' ); // zume logging of critical path actions
+require_once( 'functions/zume-stats.php' ); // @todo remove zume logging of critical path actions
 require_once( 'functions/zume-three-month-plan.php' );
+
+// zume 4.0
+require_once( 'functions/zume-v4-rest-api.php' );
+require_once( 'functions/zume-v4-users.php' );
+require_once( 'functions/zume-v4-groups.php' );
+require_once( 'functions/zume-v4-progress.php' );
+require_once( 'functions/zume-content.php' );
+
+
+
 
 require_once( 'functions/logging/zume-mailchimp.php' ); // zume logging of critical path actions
 require_once( 'functions/zume-dt-integration/zume-dashboard-sync.php' ); // zume dashboard sync
@@ -86,7 +94,6 @@ if ( is_admin() ) {
     require_once( 'functions/zume-resource-metabox.php' ); // zume logging of critical path actions
     require_once( 'functions/zume-dt-integration/system-check-metabox.php' );
 }
-
 
 /**
  * redirect all logins to the home page

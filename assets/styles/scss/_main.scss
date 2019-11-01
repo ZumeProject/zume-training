@@ -87,34 +87,50 @@ NAVIGATION STYLES
 *********************/
 .top-bar {
 	background-color: $white;
+    padding: 10px 0;
     border-bottom: 1px solid $light-gray;
 
 	ul {
 		background-color: $white;
 	}
 
-	.title-area {
-		z-index: 1;
-	}
+    @media ( max-width: $breakpoint-medium ) {
 
-  .top-bar-left {
-      width: 20%;
-  }
-
-  .top-bar-right {
-    width: 60%;
-
-  }
-}
-.menu {
-
-  .submenu {
-
-  }
-
+    }
 }
 
+#top-logo-div {
 
+    @media ( max-width: $breakpoint-medium ) {
+
+    }
+}
+#top-full-menu-div-wrapper {
+    ul {
+        text-align: center;
+    }
+    li {
+        text-align: left;
+    }
+}
+#top-full-menu-div {
+    margin: 0 auto;
+    display: inline-block;
+
+    @media ( max-width: $breakpoint-medium ) {
+
+    }
+}
+#top-mobile-menu-div {
+    @media ( max-width: $breakpoint-medium ) {
+
+    }
+}
+#top-lang-div {
+    @media ( max-width: $breakpoint-medium ) {
+
+    }
+}
 
 .off-canvas-list {
 	ul {
@@ -130,21 +146,86 @@ NAVIGATION STYLES
 	}
 }
 
-.zume-logo-in-top-bar {
-    padding: 0;
-    max-width: 79px;
+select {
+    margin: 0;
 }
 
-.menu > li.zume-logo-in-top-bar > a {
-    padding: 0;
+#top-full-menu-div ul li {
+    border-left: 2px solid $white;
+    border-right: 2px solid $white;
 }
+
+#top-full-menu-div ul a:hover {
+    background: #2CACE2;
+    color: $white;
+}
+#top-full-menu-div ul.dropdown.menu .is-active>a{
+    background: #2CACE2;
+    color: $white;
+}
+.front-page-social-image {
+    display: block;
+    max-height: 80px;
+    margin-bottom: 15px;
+}
+.front-page-social + div {
+    margin-bottom: 20px;
+}
+.off-canvas li.is-submenu-item {
+    padding-left: 1em;
+}
+
+@media only screen and (max-width: 639px) {
+    h2 {
+        font-size: 2em;
+    }
+    h3.secondary {
+        font-size: 1.5em;
+    }
+    h3.overview {
+        font-size: 1.5em;
+        font-weight: bold;
+    }
+}
+
+.dropdown.menu.medium-horizontal>li.is-dropdown-submenu-parent.active>a:after {
+    border-color: $white transparent transparent;
+}
+.dropdown.menu.medium-horizontal>li.is-dropdown-submenu-parent:hover>a:after {
+    border-color: $white transparent transparent;
+}
+
+.group-title {
+    font-size: 1.9375rem;
+}
+
+/* takes off border from the zendesk button */
+iframe#launcher {
+    border: none;
+}
+
+/* Resource Section */
+.resource-list {
+    list-style-type: none;
+}
+.resource-list li {
+    padding: .2em 0;
+}
+.resource-list li a {
+    color:white;
+    line-height: 1.5em;
+}
+
+
+
+
 
 /*********************
 POSTS & CONTENT STYLES
 *********************/
 #content {
 	#inner-content {
-		padding: 1rem 0rem;
+		padding: 1rem 0;
 	}
 }
 
@@ -239,78 +320,107 @@ POSTS & CONTENT STYLES
 .post-password-form input[type="submit"] {
 	@include button;
 }
-
-.button {
-  border: solid 1px $primary-color;
+.primary-button {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 0 1rem;
+    font-family: inherit;
+    padding: .85em 1em;
+    -webkit-appearance: none;
+    border: 1px solid $primary-color;
+    border-radius: 0;
+    transition: none;
+    font-size: .9rem;
+    line-height: 1;
+    font-weight: 400;
+    text-align: center;
+    cursor: pointer;
+    background-color: $primary-color;
+    color: $white;
+    text-decoration: none;
 
     &:hover {
-      background: $primary-color;
-      color: white;
-    }
-}
-
-
-#buddypress {
-    input[type=submit], input[type=reset], input[type=button] {
-        background: $white;
-        border: 0;
+        background-color: $white;
         color: $primary-color;
-        font-size: medium;
-        cursor: pointer;
-        outline: $primary-color solid 1px;
-        padding: $global-button-padding;
-        text-align: center;
-        text-decoration: none;
-        -webkit-border-radius: $global-radius;
-        -moz-border-radius: $global-radius;
-        border-radius: $global-radius;
-        margin: 2px;
+        border: 1px solid $primary-color;
+    }
 
-        &:hover {
-            background: $primary-color;
-            border: 0;
-            color: $white;
-            font-size: medium;
-            cursor: pointer;
-            outline: $primary-color solid 1px;
-            padding: $global-button-padding;
-            text-align: center;
-            text-decoration: none;
-            -webkit-border-radius: $global-radius;
-            -moz-border-radius: $global-radius;
-            border-radius: $global-radius;
-            margin: 2px;
-        }
+}
+.primary-button-hollow {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 0 1rem;
+    font-family: inherit;
+    padding: .85em 1em;
+    -webkit-appearance: none;
+    border-radius: 0;
+    transition: none;
+    font-size: .9rem;
+    line-height: 1;
+    font-weight: 400;
+    text-align: center;
+    cursor: pointer;
+    color: $primary-color;
+    text-decoration: none;
+    border: 1px solid $primary-color;
+    background-color: $white;
+
+    &:hover {
+        background-color: $primary-color;
+        color: $white;
+    }
+}
+.secondary-button {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 0 1rem;
+    font-family: inherit;
+    padding: .85em 1em;
+    -webkit-appearance: none;
+    border: 1px solid $secondary-color;
+    border-radius: 0;
+    transition: none;
+    font-size: .9rem;
+    line-height: 1;
+    font-weight: 400;
+    text-align: center;
+    cursor: pointer;
+    background-color: $secondary-color;
+    color: $white;
+    text-decoration: none;
+
+    &:hover {
+        background-color: $white;
+        color: $secondary-color;
+        border: 1px solid $secondary-color;
+    }
+}
+.secondary-button-hollow {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 0 1rem;
+    font-family: inherit;
+    padding: .85em 1em;
+    -webkit-appearance: none;
+    border-radius: 0;
+    transition: none;
+    font-size: .9rem;
+    line-height: 1;
+    font-weight: 400;
+    text-align: center;
+    cursor: pointer;
+    color: $secondary-color;
+    text-decoration: none;
+    border: 1px solid $secondary-color;
+    background-color: $white;
+
+    &:hover {
+        background-color: $secondary-color;
+        color: $white;
     }
 }
 
 
-
-/*********************
-IMAGE GALLERY STYLES
-*********************/
-	.gallery {
-
-		dl {
-
-			a {}
-
-			img {}
-
-		}
-
-		dt {}
-
-		dd {}
-
-}
-
-// Gallery caption styles
-.gallery-caption {}
-.size-full {}
-.size-large {}
-.size-medium {}
-.size-thumbnail {}
 
 /*********************
 PAGE NAVI STYLES
@@ -865,7 +975,7 @@ JQUERY STEPS WIZARD
         border: solid 1px $primary-color;
         &:hover {
             background: $primary-color;
-            color: white;
+            color: $white;
         }
     }
 }
@@ -880,7 +990,7 @@ ul.orbit-container {
 	width: 90%;
 	font-weight: 700;
 	font-size: 1.2rem;
-	color: white;
+	color: $white;
 	margin: 0 auto;
 }
 
@@ -917,7 +1027,7 @@ ul.orbit-container {
 }
 .coach-item__intro {
     flex: 0 0 210px;
-    white-space: nowrap;
+    $white-space: nowrap;
 }
 .coach-item__text {
     flex: 1 0;
@@ -953,7 +1063,7 @@ ul.orbit-container {
 
         &.active {
             background-color: #323a68;
-            color: white;
+            color: $white;
         }
 
         & > span {
@@ -1013,10 +1123,6 @@ ul.orbit-container {
 	@include switch-size(3rem, 6rem, 0.75rem);
 }
 
-//iframe {
-//	border: 1px solid #ececec !important;
-//}
-
 .switch {
 	margin-bottom: 0;
 	height:0;
@@ -1024,7 +1130,7 @@ ul.orbit-container {
 
 .blue-ribbon {
 	background-color: #21336A;
-	color: white;
+	color: $white;
 	padding-top: 20px;
 	padding-bottom: 10px;
 	margin-top: 20px;
@@ -1034,7 +1140,7 @@ ul.orbit-container {
 	padding-left: 0.9375rem;
 	padding-right: 0.9375rem;
 	h3 {
-		color: white;
+		color: $white;
 	}
 }
 @media only screen and (min-width: 40em) { .blue-ribbon {
@@ -1059,4 +1165,93 @@ ul.orbit-container {
 
 .lowercase {
 	text-transform: lowercase !important;
+}
+
+.zume-logo-in-top-bar {
+    padding: 0;
+    height: 35px;
+    width: 180px;
+    background-image: url( $global-images-url + 'zume-training-logo.svg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+
+    @media ( max-width: $breakpoint-medium ) {
+        background-image: url( $global-images-url + 'zume-logo.svg');
+        width: 65px;
+        height: 30px;
+        padding-right:5px;
+    }
+}
+#lang-menu select {
+    max-width: 180px;
+    float:right;
+
+    @media ( max-width: $breakpoint-medium ) {
+
+    }
+}
+
+.mobile-menu {
+
+    @media ( max-width: $breakpoint-medium ) {
+        float: right;
+        padding: .5em;
+    }
+}
+
+
+hr {
+    max-width:100%;
+}
+
+// css spinner
+// @link https://projects.lukehaas.me/css-loaders/
+.loader,
+.loader:after {
+    border-radius: 50%;
+    width: 1.2em;
+    height: 1.2em;
+}
+.loader {
+    font-size: 10px;
+    position: relative;
+    text-indent: -9999em;
+    border-top: 1.1em solid rgba(146,146,146, 0.2);
+    border-right: 1.1em solid rgba(146,146,146, 0.2);
+    border-bottom: 1.1em solid rgba(146,146,146, 0.2);
+    border-left: 1.1em solid #929292;
+    -webkit-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-animation: load8 1.1s infinite linear;
+    animation: load8 1.1s infinite linear;
+}
+@-webkit-keyframes load8 {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+@keyframes load8 {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+// end css spinner
+
+
+@media ( max-width: $breakpoint-medium ) {
+    .callout {
+        margin-right: 7px;
+        margin-left: 7px;
+    }
 }

@@ -1,23 +1,21 @@
+<?php
+/**
+ * Template part for displaying page content in page.php
+ */
+?>
+
 <article id="post-<?php the_ID(); ?>" <?php post_class( '' ); ?> role="article" itemscope itemtype="http://schema.org/WebPage">
 
-    <header class="article-header">
-
-    <?php
-    global $post;
-    if ($post->post_parent == 'groups'){?>
-        <h1 class="page-title center"><?php the_title();?></h1>
-    <?php } else { ?>
-      <!--<h1 class="page-title"><?php /*the_title(); */?></h1>-->
-    <?php } ?>
+    <header class="article-header center">
+        <h1 class="page-title vertical-padding"><?php the_title(); ?></h1>
     </header> <!-- end article header -->
 
-    <section class="entry-content" itemprop="articleBody">
+    <section class="entry-content" itemprop="text">
         <?php the_content(); ?>
-        <?php wp_link_pages(); ?>
     </section> <!-- end article section -->
 
     <footer class="article-footer">
-
+        <?php wp_link_pages(); ?>
     </footer> <!-- end article footer -->
 
     <?php comments_template(); ?>

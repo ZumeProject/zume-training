@@ -62,15 +62,7 @@ class Zume_REST_API {
             ),
         ) );
 
-        register_rest_route( $namespace, '/coleaders_delete', array(
-            array(
-                'methods'         => WP_REST_Server::CREATABLE,
-                'callback'        => array( $this, 'coleader_delete' ),
-                "permission_callback" => function () {
-                    return current_user_can( 'zume' );
-                }
-            ),
-        ) );
+
 
         register_rest_route( $namespace, '/change_public_key', array(
             array(
@@ -102,6 +94,15 @@ class Zume_REST_API {
             ),
         ) );
 
+        register_rest_route( $namespace, '/coleaders_delete', array(
+            array(
+                'methods'         => WP_REST_Server::CREATABLE,
+                'callback'        => array( $this, 'coleader_delete' ),
+                "permission_callback" => function () {
+                    return current_user_can( 'zume' );
+                }
+            ),
+        ) );
 
     }
 
@@ -236,6 +237,7 @@ class Zume_REST_API {
             return new WP_Error( "log_param_error", "Please provide a valid address", array( 'status' => 400 ) );
         }
     }
+
 
 
 }

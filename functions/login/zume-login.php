@@ -1154,22 +1154,22 @@ function zume_retrieve_password() {
     if ( isset( $_POST['user_login'] ) ) {
         $user_login = trim( sanitize_text_field( wp_unslash( $_POST['user_login'] ) ) );
     } else {
-        $errors->add( __METHOD__, __( 'Missing username or email address.', 'zume'  ) );
+        $errors->add( __METHOD__, __( 'Missing username or email address.', 'zume' ) );
         return $errors;
     }
 
 
     if ( empty( $user_login ) ) {
-        $errors->add( __METHOD__, __( 'ERROR: Enter a username or email address.', 'zume'  ) );
+        $errors->add( __METHOD__, __( 'ERROR: Enter a username or email address.', 'zume' ) );
     } elseif ( strpos( $user_login, '@' ) ) {
         $user_data = get_user_by( 'email', $user_login );
         if ( empty( $user_data ) ) {
-            $errors->add( __METHOD__, __( 'ERROR: There is no user registered with that email address.', 'zume'  ) );
+            $errors->add( __METHOD__, __( 'ERROR: There is no user registered with that email address.', 'zume' ) );
         }
     } else {
         $user_data = get_user_by( 'login', $user_login );
         if ( empty( $user_data ) ) {
-            $errors->add( __METHOD__, __( 'ERROR: There is no user registered with that username.', 'zume'  ) );
+            $errors->add( __METHOD__, __( 'ERROR: There is no user registered with that username.', 'zume' ) );
         }
     }
 

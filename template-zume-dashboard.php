@@ -3,6 +3,7 @@
 Template Name: Zúme Dashboard
 */
 zume_force_login();
+$zendesk_enable = true;
 
 if ( ! empty( $_POST ) ) { // test if post submitted
     // validate nonce

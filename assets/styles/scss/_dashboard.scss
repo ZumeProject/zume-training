@@ -1,0 +1,427 @@
+/* Zúme Dashboard overrides */
+
+
+
+/*--------------------------------------------------------------
+4.1 - Pagination
+--------------------------------------------------------------*/
+div.pagination {
+    /*background: #f4f4f4;*/
+    /*border: none;*/
+    /*color: #888;*/
+    /*font-size: 11px;*/
+    /*height: 19px;*/
+    /*margin: -20px -19px 0px -19px;*/
+    padding: 5px;
+    position: relative;
+}
+div.pagination .pag-count {
+    float: left;
+}
+div.pagination .pagination-links {
+    float: right;
+}
+div.pagination .pagination-links span,
+div.pagination .pagination-links a {
+    font-size: 12px;
+    padding: 0 5px;
+}
+div.pagination .pagination-links a:hover {
+    font-weight: bold;
+}
+noscript div.pagination {
+    margin-bottom: 15px;
+}
+div#pag-bottom {
+    margin-top: -1px;
+}
+#nav-above {
+    display: none;
+}
+.paged #nav-above {
+    display: block;
+}
+
+/*--------------------------------------------------------------
+3.3 - Lists
+--------------------------------------------------------------*/
+div.page ul,
+div.page ol,
+div.page dl,
+div.post ul,
+div.post ol,
+div.post dl {
+    margin: 0 0 18px 1.5em;
+}
+div.page ul,
+div.post ul {
+    list-style: square;
+}
+div.page ol,
+div.post ol {
+    list-style: decimal;
+}
+div.page ol ol,
+div.post ol ol {
+    list-style: lower-alpha;
+}
+div.page ol ol ol,
+div.post ol ol ol {
+    list-style: lower-roman;
+}
+dl {
+    margin-left: 0;
+}
+dt {
+    font-size: 14px;
+    font-weight: bold;
+}
+dd {
+    margin: 0 0 15px 0;
+}
+div.post ul ul,
+div.post ol ol,
+div.post ol ul,
+div.post ul ol,
+div.page ul ul,
+div.page ol ol,
+div.page ol ul,
+div.page ul ol {
+    margin-bottom: 0px;
+}
+
+
+/*-------------------------------------------------------------------------
+6.8 - Headers, Lists and Tabs - Activity, Groups, Blogs, Forums, Profiles
+-------------------------------------------------------------------------*/
+.item-body {
+    margin: 20px 0;
+}
+span.activity {
+    display: inline-block;
+    font-size: 11px;
+    opacity: 0.8;
+    padding: 1px 8px;
+}
+span.user-nicename {
+    color: #777;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: bold;
+}
+span.activity,
+div#message p {
+    border: 1px solid #e1ca82;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    font-weight: normal;
+    margin-top: 3px;
+    text-decoration: none;
+    background: #ffeaa6;
+    background-image: -webkit-linear-gradient(rgba(255, 255, 255, .5), rgba(255, 255, 255, 0));
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255, 255, 255, .5)), color-stop(100%,rgba(255, 255, 255, 0))); /* Chrome,Safari4+ */
+    background-image: -moz-linear-gradient(rgba(255, 255, 255, .5), rgba(255, 255, 255, 0));
+    background-image: -ms-linear-gradient(rgba(255, 255, 255, .5), rgba(255, 255, 255, 0));
+    background-image: -o-linear-gradient(rgba(255, 255, 255, .5), rgba(255, 255, 255, 0));
+    background-image: linear-gradient(rgba(255, 255, 255, .5), rgba(255, 255, 255, 0));
+}
+div#item-header {
+    overflow: hidden;
+}
+div#item-header div#item-header-content {
+    margin-left: 170px;
+}
+div#item-header h2 {
+    font-size: 28px;
+    line-height: 120%;
+    margin: 0 0 15px 0;
+}
+div#item-header h2 a {
+    color: #777;
+    text-decoration: none;
+}
+div#item-header img.avatar {
+    float: left;
+    margin: 0 15px 19px 0;
+}
+div#item-header h2 {
+    margin-bottom: 5px;
+}
+div#item-header span.activity,
+div#item-header h2 span.highlight {
+    font-size: 11px;
+    font-weight: normal;
+    line-height: 170%;
+    margin-bottom: 7px;
+    vertical-align: middle;
+}
+div#item-header h2 span.highlight {
+    font-size: 16px;
+}
+div#item-header h2 span.highlight span {
+    background: #a1dcfa;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    color: #fff;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 11px;
+    margin-bottom: 2px;
+    padding: 1px 4px;
+    position: relative;
+    right: -2px;
+    top: -2px;
+    vertical-align: middle;
+}
+div#item-header div#item-meta {
+    font-size: 14px;
+    color: #aaa;
+    overflow: hidden;
+    margin: 15px 0 5px 0;
+    padding-bottom: 10px;
+}
+div#item-header div#item-actions {
+    float: right;
+    margin: 0 0 15px 15px;
+    text-align: right;
+    width: 20%;
+}
+div#item-header div#item-actions h3 {
+    font-size: 12px;
+    margin: 0 0 5px 0;
+}
+div#item-header ul {
+    margin-bottom: 15px;
+    overflow: hidden;
+}
+div#item-header ul h5,
+div#item-header ul span,
+div#item-header ul hr {
+    display: none;
+}
+div#item-header ul li {
+    float: right;
+}
+div#item-header ul img.avatar,
+div#item-header ul.avatars img.avatar {
+    height: 30px;
+    margin: 2px;
+    width: 30px;
+}
+div#item-header div.generic-button,
+div#item-header a.button {
+    float: left;
+    margin: 10px 10px 0 0;
+}
+div#item-header div#message.info {
+    line-height: 80%;
+}
+ul.item-list {
+    width: 100%;
+}
+ul.item-list li.block {
+    border-bottom: 1px solid #eaeaea;
+    padding: 15px 0;
+    position: relative;
+}
+
+ul.item-list.activity-list li {
+    padding-bottom: 0;
+}
+ul.single-line li {
+    border: none;
+}
+ul.item-list li div.item-title,
+ul.item-list li h4 {
+    font-weight: bold;
+    font-size: 18px;
+    margin: 0;
+    width: 75%;
+}
+ul.item-list li div.item-title span {
+    color: #999;
+    font-size: 12px;
+}
+ul.item-list li div.item-desc {
+    color: #888;
+    font-size: 11px;
+    margin: 10px 0 0 64px;
+    width: 50%;
+}
+ul.item-list li div.action {
+    position: absolute;
+    top: 15px;
+    right: 0;
+    text-align: right;
+}
+ul.item-list li div.meta {
+    color: #888;
+    font-size: 11px;
+    margin-top: 10px;
+}
+ul.item-list li h5 span.small {
+    float: right;
+    font-size: 11px;
+    font-weight: normal;
+}
+div.item-list-tabs {
+    background: #eaeaea;
+    clear: left;
+    margin: 25px -19px 20px -19px;
+    overflow: hidden;
+}
+div.item-list-tabs ul li a {
+    text-decoration: none;
+    height: 20px;
+}
+div.item-list-tabs ul {
+    width: 100%;
+}
+div.item-list-tabs ul li {
+    float: left;
+    margin: 5px 0 0 5px;
+}
+div.item-list-tabs#subnav ul li {
+    margin-top: 0;
+}
+div.item-list-tabs ul li:first-child {
+    margin-left: 20px;
+}
+div.item-list-tabs ul li.last {
+    float: right;
+    margin: 7px 20px 0 0;
+}
+div.item-list-tabs#subnav ul li.last {
+    margin-top: 4px;
+}
+div.item-list-tabs ul li.last select {
+    max-width: 175px;
+}
+div.item-list-tabs ul li a,
+div.item-list-tabs ul li span {
+    display: block;
+    padding: 5px 10px;
+    text-decoration: none;
+}
+div.item-list-tabs ul li a span {
+    background: #1fb3dd;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    color: #fff;
+    display: inline;
+    font-size: 90%;
+    margin-left: 2px;
+    padding: 1px 6px;
+}
+div.item-list-tabs ul li.selected a,
+div.item-list-tabs ul li.current a {
+    background-color: #fff;
+    -moz-border-radius-topleft: 3px;
+    -webkit-border-top-left-radius: 3px;
+    -moz-border-radius-topright: 3px;
+    -webkit-border-top-right-radius: 3px;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    color: #555;
+    font-weight: bold;
+}
+div.item-list-tabs ul li.selected a span,
+div.item-list-tabs ul li.current a span,
+div.item-list-tabs ul li a:hover span {
+    background-color: #999;
+}
+div.item-list-tabs ul li.selected a span,
+div.item-list-tabs ul li.current a span {
+    background-color: #555;
+}
+ul li.loading a {
+    background-image: url( ../images/spinner.svg );
+    background-position: 92% 50%;
+    background-repeat: no-repeat;
+    padding-right: 30px !important;
+}
+div#item-nav ul li.loading a {
+    background-position: 88% 50%;
+}
+div.item-list-tabs#object-nav {
+    margin-top: 0;
+}
+div.item-list-tabs#subnav {
+    background: #fff;
+    border-bottom: 1px solid #eaeaea;
+    margin: -15px -19px 15px -19px;
+    min-height: 35px;
+    overflow: hidden;
+}
+div.item-list-tabs ul li.feed a {
+    background: url( ../images/rss.png ) center left no-repeat;
+    padding-left: 20px;
+}
+#admins-list li,
+#mods-list li,
+#members-list li {
+    overflow: auto;
+}
+
+/*--------------------------------------------------------------
+3.3 - Zúme Overrides
+--------------------------------------------------------------*/
+
+
+div.pagination {
+    background: none;
+
+    padding: 5px;
+    position: relative;
+
+}
+
+.pagination a {
+    color:black;
+}
+.pagination a:hover {
+    color:black;
+    background: #eaeaea;
+}
+.pagination .current {
+    padding:0;
+}
+.pagination .current a {
+    color:white;
+
+}
+.pagination .current a:hover {
+    color:black;
+    background: #eaeaea;
+}
+
+ul#groups-list.item-list {
+    margin-left: 0;
+    list-style-type: none;
+}
+
+ul#members-list.item-list {
+    margin-left: 0;
+    list-style-type: none;
+}
+
+#dashboard-avatar {
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+}
+
+.secondary-color {
+    color: #00aeff;
+}
+
+a.small {
+    font-size: small;
+}
+
+div.small {
+    font-size: small;
+}
+

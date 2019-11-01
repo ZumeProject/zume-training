@@ -1,0 +1,344 @@
+.training {
+    // General
+    h1 {
+        font-size: 32px;
+        font-weight: 900;
+        line-height: 1.3em;
+        color: $primary-color;
+    }
+    h2 {
+        font-size: 32px;
+        font-weight: 300;
+        line-height: 1.3em;
+        color: $primary-color;
+    }
+
+    .h2-caption {
+        color: $primary-color;
+        font-size: 1rem;
+        line-height: 1rem;
+        margin-bottom: .5rem;
+        font-weight: 300;
+    }
+    .t-description {
+        color: $light-black;
+        font-size: .8rem;
+        line-height: 1rem;
+        margin-bottom: .5rem;
+        font-weight: 100;
+    }
+
+    .t-ad-message {
+        font-weight:600;
+        font-size: 1.2rem;
+        margin-bottom:0;
+
+        @media (max-width: $breakpoint-medium ) {
+            font-weight:500;
+            font-size: 1rem;
+            margin-bottom:0;
+        }
+    }
+    .t-length {
+        color: $light-black;
+        font-weight: 100;
+        text-align: right;
+    }
+    .t-activities {
+        color: $light-black;
+        font-weight: 300;
+    }
+    .start {
+        text-align: right;
+    }
+    .toggle-icons {
+        font-size:1.2rem;
+        text-align: right;
+        cursor: pointer;
+        color: $light-black;
+    }
+    .hide-extra {
+        display:none;
+    }
+    .hide-for-load {
+        display:none;
+    }
+
+    // Tabs
+    .tabs-panel {
+        padding: 0;
+    }
+
+    // Course Panel
+    #display-buttons {
+        button {
+            margin: 0 1px;
+            float:right;
+        }
+        @media (max-width: $breakpoint-medium ) {
+            button {
+                margin: 0 auto 20px;
+                text-align: center;
+            }
+
+            #column_button {
+                display:none;
+            }
+        }
+    }
+    .list-head {
+        font-size: 1.5em;
+        font-weight: 300;
+    }
+    .list-reasons {
+        max-width: 300px;
+        margin:0 auto;
+        justify-content: center;
+
+        ul {
+            list-style: none;
+            margin-left: 0;
+            padding-left: 0;
+        }
+        li {
+            padding-left: 1em;
+            text-indent: -1em;
+        }
+
+        li:before {
+            content: "\2714";
+            padding-right: 5px;
+            color: green;
+
+        }
+        @media (max-width: $breakpoint-medium ) {
+
+        }
+    }
+
+
+    // Groups Panel
+    .member-list {
+        font-size: 1em;
+        font-weight:300;
+    }
+    .column-header {
+        font-size: 1.2em;
+        font-weight:500;
+    }
+    .g-session-icon {
+        border: 1px solid $primary-color;
+        width: 15px;
+        height: 15px;
+        display: inline-block;
+        vertical-align: middle;
+        cursor:pointer;
+    }
+    .member {
+        padding-left: 10px;
+        color: $light-black;
+        font-weight:300;
+        font-size: 1em;
+
+        span.delete {
+            font-size: .8em;
+            color: red;
+            display:none;
+            cursor:pointer;
+        }
+    }
+    #possible-results-new {
+        font-size: .8em;
+        #multiple-resultsnew {
+            font-size: .8em;
+        }
+    }
+    .location-result-buttons {
+        display: none;
+    }
+    .group-name {
+        cursor: pointer;
+    }
+    .group-name-input {
+        width:33%;
+        display: inline-block;
+    }
+    .add-group-input {
+        height:fit-content;
+    }
+
+
+    // Progress Panel
+    .clickable {
+        cursor: pointer;
+    }
+    .circle-background {
+        font-size:4.7em;
+        line-height: 1.7em;
+        text-align: center;
+        margin: 0 auto;
+        width:1.7em;
+        height:1.7em;
+        color: $white;
+        background-color: $secondary-color;
+        border-radius: 50%;
+        vertical-align: middle;
+
+        @media (max-width: $breakpoint-medium ) {
+            font-size: 2.2em;
+        }
+    }
+    .progress-stat-title {
+        font-size:2.5em;
+        text-transform: uppercase;
+
+        @media (max-width: $breakpoint-medium ) {
+            font-size:1em;
+        }
+    }
+    .progress-description {
+        color: $light-black;
+        padding: 1em;
+        font-size: .8em;
+
+        @media (max-width: $breakpoint-medium ) {
+            display: none;
+        }
+    }
+    .help-question-mark {
+        font-size: .8em;
+        color: $secondary-color;
+        border: 1px solid $secondary-color;
+        border-radius: 50%;
+        width: 20px;
+        height: 20px;
+        display: inline-block;
+        vertical-align: middle;
+        cursor: pointer;
+
+        @media (max-width: $breakpoint-medium ) {
+            width: 30px;
+            height: 30px;
+        }
+    }
+    .p-icon {
+        border: 1px solid $secondary-color;
+        border-radius: 50%;
+        width: 20px;
+        height: 20px;
+        margin:0 3px;
+        display: inline-block;
+        vertical-align: middle;
+        cursor: pointer;
+
+        @media (max-width: $breakpoint-medium ) {
+            margin:0 10px;
+            width: 30px;
+            height: 30px;
+        }
+    }
+    .p-icon-style-only {
+        border: 1px solid $secondary-color;
+        border-radius: 50%;
+        width: 20px;
+        height: 20px;
+        margin:0 3px;
+        display: inline-block;
+        vertical-align: middle;
+        cursor: pointer;
+
+        @media (max-width: $breakpoint-medium ) {
+            margin:0 10px;
+            width: 30px;
+            height: 30px;
+        }
+    }
+    .complete {
+        background-color: $secondary-color;
+    }
+    .progress-list {
+        span {
+            font-size: 1em;
+            vertical-align: middle;
+            line-height: 1em;
+            overflow-x: hidden;
+        }
+
+        @media (max-width: $breakpoint-medium ) {
+            text-align: center;
+
+            span {
+                font-size: 1.3em;
+                display: block;
+                padding:5px 0 10px;
+            }
+        }
+    }
+    .p-session-separator {
+        color: $light-black;
+        font-size: .8rem;
+        line-height: 1rem;
+        margin-bottom: .5rem;
+        font-weight: 100;
+
+        @media (max-width: $breakpoint-medium ) {
+            color: $secondary-color;
+        }
+    }
+    .session-6-column-top {
+        @media (max-width: $breakpoint-medium ) {
+            padding-top:1em;
+        }
+    }
+
+    .h-line {
+        border-bottom: 1px solid black;
+
+    }
+    .v-line {
+        height: 40px;
+        border-left: 1px solid black;
+    }
+
+    // landing pages
+    .landing-part {
+        //height:700px;
+        border: 1px solid $primary-color;
+        @media (max-width: $breakpoint-medium ) {
+        }
+    }
+    .p-icon-landing {
+        border: 1px solid $secondary-color;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        display: inline-block;
+        vertical-align: middle;
+
+        @media (max-width: $breakpoint-medium ) {
+            margin:0 10px;
+            width: 40px;
+            height: 40px;
+        }
+    }
+    .stat-landing-title {
+        font-size: 2em;
+        @media (max-width: $breakpoint-medium ) {
+
+        }
+    }
+    .content-large {
+        padding: 12px 0;
+        text-align: left;
+        float: right;
+        font-size: 1.5rem;
+    }
+    .inset {
+        padding: 0 2em;
+    }
+    div.video-section {
+        width:70%;
+        margin: 0 auto 2em !important;
+    }
+
+}

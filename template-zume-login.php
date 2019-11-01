@@ -2,7 +2,7 @@
 /*
 Template Name: Zume Login
 */
-
+$zendesk_enable = true;
 
 /**
  * Catch Logout Request and Process Immediately
@@ -148,7 +148,7 @@ switch ($request_action) {
             wp_safe_redirect( remove_query_arg( array( 'key', 'login' ) ) );
             exit;
         }
-        dt_write_log( $_COOKIE );
+
         if ( isset( $_COOKIE[ $rp_cookie ] ) && 0 < strpos( sanitize_text_field( wp_unslash( $_COOKIE[ $rp_cookie ] ) ), ':' ) ) {
             list( $rp_login, $rp_key ) = explode( ':', wp_unslash( $_COOKIE[ $rp_cookie ] ), 2 );
             $user                      = check_password_reset_key( $rp_key, $rp_login );

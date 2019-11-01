@@ -61,7 +61,7 @@ function zume_custom_menu_page_removing() {
 add_action( 'admin_menu', 'zume_custom_menu_page_removing' );
 
 
-function zume_update_user_contact_info() { dt_write_log($_POST);
+function zume_update_user_contact_info() {
     $user_id = get_current_user_id();
 
     // validate nonce
@@ -216,6 +216,14 @@ function zume_dashboard_url( $current_language = null ) {
     return $url;
 }
 
+function zume_training_url( $current_language = null ) {
+    if ( is_null( $current_language ) ) {
+        $current_language = zume_current_language();
+    }
+    $url = zume_get_posts_translation_url( 'training', $current_language );
+    return $url;
+}
+
 function zume_course_url() {
     $current_lang = zume_current_language();
     $url = zume_get_posts_translation_url( 'course', $current_lang );
@@ -278,6 +286,11 @@ function zume_files_uri() {
     return 'https://storage.googleapis.com/zume-file-mirror/' . zume_current_language() . '/';
 }
 
+function zume_files_download_uri( $id ) {
+    // post id of downloads / meta field
+    return zume_files_uri() . '/';
+}
+
 function zume_home_id() {
     $current_lang = zume_current_language();
     $id = zume_get_home_translation_id( 'home', $current_lang );
@@ -294,6 +307,49 @@ function zume_alternate_home_id() {
         return false;
     }
     return $id;
+}
+
+function zume_landing_page_post_id( int $number ) : int {
+    /**
+     * These are the root post ids for the english page, which is used to find the translation page in the
+     * polylang system.
+     */
+    $list = [
+        1 => 20730, // God uses ordinary people
+        2 => 20731, // teach them to obey
+        3 => 20732, // spiritual breathing
+        4 => 20733, // soaps bible reading
+        5 => 20735, // accountability groups
+        6 => 20737, // consumers vs producers
+        7 => 20738, // prayer cycle
+        8 => 20739, // list of 100
+        9 => 20740, // kingdom economy
+        10 => 20741, // the gospel
+        11 => 20742, // baptism
+        12 => 20743, // 3-minute testimony
+        13 => 20744, // greatest blessing
+        14 => 20745, // duckling discipleship
+        15 => 20746, // seeing where God's kingdom isn't
+        16 => 20747, // the lord's supper
+        17 => 20748, // prayer walking
+        18 => 20750, // person of peace
+        19 => 20749, // bless prayer
+        20 => 20751, // faithfulness
+        21 => 20752, // 3/3 group pattern
+        22 => 20753, // training cycle
+        23 => 20755, // leadership cells
+        24 => 20756, // non-sequential
+        25 => 20757, // pace
+        26 => 20758, // part of two churches
+        27 => 19848, // 3-month plan
+        28 => 20759, // coaching checklist
+        29 => 20760, // leadership in networks
+        30 => 20761, // peer mentoring groups
+        31 => 20762, // four fields tool
+        32 => 20763, // generation mapping
+    ];
+
+    return $list[$number] ?? 0;
 }
 
 /***********************************************************************************************************************
@@ -341,3 +397,6 @@ function zume_mu_show_custom_column_content( $value, $column_name, $user_id ) {
 
 } // end theme_show_user_zip_code_data
 add_action( 'manage_users_custom_column', 'zume_mu_show_custom_column_content', 10, 3 );
+
+
+

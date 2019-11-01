@@ -3,6 +3,7 @@
 Template Name: Three-Month Plan
 */
 zume_force_login();
+$zendesk_enable = true;
 
 /* Process $_POST content */
 $zume_error_message = '';

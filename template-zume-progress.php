@@ -2,7 +2,7 @@
 /*
 Template Name: Zúme Progress
 */
-
+$zendesk_enable = true;
 get_header();
 
 ?>
@@ -23,16 +23,16 @@ get_header();
                     the_content();
                 endwhile;
 
-                else:
-                ?>
+                else :
+                    ?>
                     <div class="grid-x grid-margin-y grid-padding-y">
                         <div class="cell center">
                             <h2 ><?php esc_html_e( 'Progress', 'zume' ) ?></h2>
                         </div>
                     </div>
-                <?php
+                    <?php
             endif;
-            ?>
+                ?>
 
             <!-- Phase 1 Title -->
             <div class="grid-x grid-margin-x grid-margin-y " >

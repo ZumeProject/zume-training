@@ -64,6 +64,7 @@
 
 // 1. Global
 // ---------
+$global-images-url: '/wp-content/themes/zume-project-multilingual/assets/images/';
 
 $global-font-size: 100%;
 $global-width: rem-calc(1200);
@@ -81,6 +82,7 @@ $foundation-palette: (
 $light-gray: #e6e6e6;
 $medium-gray: #cacaca;
 $dark-gray: #8a8a8a;
+$light-black: #0c0c0c;
 $black: #0a0a0a;
 $white: #fefefe;
 $body-background: $white;
@@ -114,6 +116,9 @@ $breakpoints: (
         xlarge: 1440px,
         xxlarge: 1640px,
 );
+$breakpoint-medium: 640px;
+$breakpoint-large: 1100px;
+$breakpoint-xlarge: 1440px;
 $print-breakpoint: large;
 $breakpoint-classes: (small medium large);
 

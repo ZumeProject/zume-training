@@ -8,6 +8,8 @@
  * @since 0.1
  */
 
+// @todo deprecated after 4.0
+
 if ( ! defined( 'ABSPATH' ) ) { exit; // Exit if accessed directly
 }
 
@@ -85,7 +87,6 @@ class Zume_Welcome_Messages {
         // group, next session 10
 
 
-//        $next_session = Zume_Course::get_next_session();
         // group, complete
         return self::get_message_text( $key = 'new' );
     }
