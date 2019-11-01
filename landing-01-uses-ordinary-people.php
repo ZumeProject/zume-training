@@ -56,9 +56,7 @@ if (have_posts()) :
                             <div class="grid-x grid-margin-x grid-margin-y">
                                 <div class="cell content-large">
                                     <p><?php echo esc_html__( "Have you ever wondered how the church got started?", 'zume' ) ?></p>
-
                                     <p><?php echo esc_html__( "The first church sent ordinary people around the world to tell others about Jesus. The first church sent ordinary people to stand before governors and generals and rulers and kings. The first church sent ordinary people to heal the sick, feed the hungry, raise the dead, and teach all of God’s commands to everyone in the world.", 'zume' ) ?></p>
-
                                     <p><?php echo esc_html__( "The first church sent ordinary people to change the world. And they did.", 'zume' ) ?></p>
                                 </div>
                             </div>
