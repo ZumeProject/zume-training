@@ -50,19 +50,10 @@ if (have_posts()) :
                             <!-- Activity Block  -->
                             <div class="grid-x grid-margin-x grid-margin-y">
                                 <div class="cell content-large">
-                                    <p>A 3/3 (PRONOUNCE AS “Three-Thirds”) Group is one that divides their time together
-                                        into 3 parts, so that they can practice obeying some of the most important
-                                        things that Jesus commands. This is how it works:</p>
-
-                                    <p>Look Back - The first third of the group’s time is spent looking back at what’s
-                                        happened since we’ve been together.</p>
-
-                                    <p>Look Up - The middle third of the group’s time is spent Looking Up for God’s
-                                        wisdom and direction through scripture, discussion and prayer.</p>
-
-                                    <p>Look Forward - The final third of the group’s time is spent Looking Forward to
-                                        how we can each apply and obey what we’ve learned.</p>
-
+                                    <p><?php esc_html_e("A 3/3 (PRONOUNCE AS “Three-Thirds”) Group is one that divides their time together into 3 parts, so that they can practice obeying some of the most important things that Jesus commands. This is how it works:", 'zume' ) ?></p>
+                                    <p><?php esc_html_e("Look Back - The first third of the group’s time is spent looking back at what’s happened since we’ve been together.", 'zume' ) ?></p>
+                                    <p><?php esc_html_e("Look Up - The middle third of the group’s time is spent Looking Up for God’s wisdom and direction through scripture, discussion and prayer.", 'zume' ) ?></p>
+                                    <p><?php esc_html_e("Look Forward - The final third of the group’s time is spent Looking Forward to how we can each apply and obey what we’ve learned.", 'zume' ) ?></p>
                                 </div>
                             </div> <!-- grid-x -->
 
@@ -121,33 +112,6 @@ if (have_posts()) :
                         <?php get_template_part( 'parts/content', 'share' ); ?>
 
                     </div>
-                    <div class="large-2 cell"></div><!-- Side spacer -->
-                </div> <!-- grid-x -->
-
-
-                <!------------------------------------------------------------------------------------------------>
-                <!-- Transcription section -->
-                <!------------------------------------------------------------------------------------------------>
-                <div class="grid-x">
-                    <div class="large-2 cell"></div><!-- Side spacer -->
-
-                    <!-- Center column -->
-                    <div class="large-8 small-12 cell">
-
-                        <div class="grid-x grid-margin-x grid-margin-y">
-                            <div class="large-12 cell content-large center">
-                                <h3 class="center"><?php echo esc_html__( 'Video Transcript', 'zume' ) ?></h3>
-                            </div>
-                            <div class="large-12 cell content-large">
-
-                                <?php the_content(); ?>
-
-                            </div>
-                        </div>
-
-                    </div>
-
-
                     <div class="large-2 cell"></div><!-- Side spacer -->
                 </div> <!-- grid-x -->
 

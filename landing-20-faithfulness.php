@@ -50,15 +50,9 @@ if (have_posts()) :
                             <!-- Activity Block  -->
                             <div class="grid-x grid-margin-x grid-margin-y">
                                 <div class="cell content-large">
-                                    <p>Faithfulness - more than knowledge - is something that can start as soon as
-                                        someone begins to follow Jesus. Faithfulness - more than training - is something
-                                        that can be measured by what we do with what we’ve been given.</p>
-
-                                    <p>If we OBEY and SHARE what we hear with others, we are faithful. If we hear but we
-                                        REFUSE to obey and share, we are unfaithful.</p>
-
-                                    <p>As we multiply disciples, let’s make sure we’re measuring the right things.</p>
-
+                                    <p><?php esc_html_e("Faithfulness - more than knowledge - is something that can start as soon as someone begins to follow Jesus. Faithfulness - more than training - is something that can be measured by what we do with what we’ve been given.", 'zume' ) ?></p>
+                                    <p><?php esc_html_e("If we OBEY and SHARE what we hear with others, we are faithful. If we hear but we REFUSE to obey and share, we are unfaithful.", 'zume' ) ?></p>
+                                    <p><?php esc_html_e("As we multiply disciples, let’s make sure we’re measuring the right things.", 'zume' ) ?></p>
                                 </div>
                             </div> <!-- grid-x -->
 
@@ -109,33 +103,6 @@ if (have_posts()) :
                         <?php get_template_part( 'parts/content', 'share' ); ?>
 
                     </div>
-                    <div class="large-2 cell"></div><!-- Side spacer -->
-                </div> <!-- grid-x -->
-
-
-                <!------------------------------------------------------------------------------------------------>
-                <!-- Transcription section -->
-                <!------------------------------------------------------------------------------------------------>
-                <div class="grid-x">
-                    <div class="large-2 cell"></div><!-- Side spacer -->
-
-                    <!-- Center column -->
-                    <div class="large-8 small-12 cell">
-
-                        <div class="grid-x grid-margin-x grid-margin-y">
-                            <div class="large-12 cell content-large center">
-                                <h3 class="center"><?php echo esc_html__( 'Video Transcript', 'zume' ) ?></h3>
-                            </div>
-                            <div class="large-12 cell content-large">
-
-                                <?php the_content(); ?>
-
-                            </div>
-                        </div>
-
-                    </div>
-
-
                     <div class="large-2 cell"></div><!-- Side spacer -->
                 </div> <!-- grid-x -->
 
