@@ -30,10 +30,9 @@ if (have_posts()) :
                             <strong><?php the_title(); ?></strong>
                         </h1>
                         <p>
-                            <a href="<?php echo esc_url( zume_training_url() ) ?>"><?php echo esc_html__( 'This concept comes from the Zúme Training Course', 'zume' ) ?></a>
-                            - <a onclick="open_session(<?php echo esc_attr( $session_number ); ?>)">
-                                <?php echo esc_html__( 'Session', 'zume' ) ?>
-                                <?php echo esc_html( $session_number ) ?></a>.
+                            <a onclick="open_session(<?php echo esc_attr( $session_number ); ?>)">
+                                <?php echo esc_html__( 'This concept can be found in session', 'zume' ) ?> <?php echo esc_html( $session_number ) ?>
+                            </a>.
                         </p>
                     </div>
 

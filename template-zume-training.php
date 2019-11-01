@@ -56,7 +56,7 @@ $current_language = zume_current_language();
                     --------------------------------------------------------------------------------------------------->
                     <?php if ( is_user_logged_in() ) : ?>
                         <ul class="tabs" data-tabs id="training-tabs" data-deep-link="true" data-deep-link-smudge="true">
-                            <li class="tabs-title is-active"><a href="#panel1" aria-selected="true" onclick="show_panel1()"><?php echo esc_html__( "Course", 'zume' ) ?></a></li>
+                            <li class="tabs-title is-active"><a href="#panel1" aria-selected="true" onclick="show_panel1()"><?php echo esc_html__( "Course Overview", 'zume' ) ?></a></li>
                             <li class="tabs-title"><a data-tabs-target="panel2" href="#panel2" onclick="get_groups()"><?php echo esc_html__( "My Groups", 'zume' ) ?></a></li>
                             <li class="tabs-title"><a data-tabs-target="panel3" href="#panel3" onclick="get_progress()"><?php echo esc_html__( "My Checklist", 'zume' ) ?></a></li>
                         </ul>

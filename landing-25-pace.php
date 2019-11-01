@@ -30,7 +30,7 @@ if (have_posts()) :
                             <strong><?php the_title(); ?></strong>
                         </h1>
                         <p>
-                            <a href="<?php echo esc_url( zume_training_url() ) ?>"><?php echo esc_html__( 'This concept comes from the Zúme Training Course', 'zume' ) ?></a> - <a onclick="open_session(<?php echo esc_attr( $session_number ); ?>)"> <?php echo esc_html__( 'Session', 'zume' ) ?> <?php echo esc_html( $session_number ) ?></a>.
+                            <a onclick="open_session(<?php echo esc_attr( $session_number ); ?>)"><?php echo esc_html__( 'This concept can be found in session', 'zume' ) ?> <?php echo esc_html( $session_number ) ?></a>.
                         </p>
                     </div>
 
@@ -51,17 +51,9 @@ if (have_posts()) :
                             <!-- Activity Block -->
                             <div class="grid-x grid-margin-x grid-margin-y">
                                 <div class="cell content-large">
-                                    <p>Pace matters because where we all spend our eternity - an existence that outlasts
-                                        time - is determined in the short time we call “life”.</p>
-
-                                    <p>God’s Word tells us that God is patient with us - not wanting anyone to perish,
-                                        but everyone to turn around and follow Him. God gives us more time because He
-                                        knows we only have a short time to do all He’s called us to do and to reach all
-                                        He’s called us to reach.</p>
-
-                                    <p>To follow Jesus more closely, we have to pursue His people more quickly. We can’t
-                                        just take our time. We have to increase our PACE.</p>
-
+                                    <p><?php esc_html_e("Pace matters because where we all spend our eternity - an existence that outlasts time - is determined in the short time we call “life”.", 'zume' ) ?></p>
+                                    <p><?php esc_html_e("God’s Word tells us that God is patient with us - not wanting anyone to perish, but everyone to turn around and follow Him. God gives us more time because He knows we only have a short time to do all He’s called us to do and to reach all He’s called us to reach.", 'zume' ) ?></p>
+                                    <p><?php esc_html_e("To follow Jesus more closely, we have to pursue His people more quickly. We can’t just take our time. We have to increase our PACE.", 'zume' ) ?></p>
                                 </div>
                             </div>
                             <!-- grid-x -->
@@ -122,33 +114,6 @@ if (have_posts()) :
                         <?php get_template_part( 'parts/content', 'share' ); ?>
 
                     </div>
-                    <div class="large-2 cell"></div><!-- Side spacer -->
-                </div> <!-- grid-x -->
-
-
-                <!------------------------------------------------------------------------------------------------>
-                <!-- Transcription section -->
-                <!------------------------------------------------------------------------------------------------>
-                <div class="grid-x">
-                    <div class="large-2 cell"></div><!-- Side spacer -->
-
-                    <!-- Center column -->
-                    <div class="large-8 small-12 cell">
-
-                        <div class="grid-x grid-margin-x grid-margin-y">
-                            <div class="large-12 cell content-large center">
-                                <h3 class="center"><?php echo esc_html__( 'Video Transcript', 'zume' ) ?></h3>
-                            </div>
-                            <div class="large-12 cell content-large">
-
-                                <?php the_content(); ?>
-
-                            </div>
-                        </div>
-
-                    </div>
-
-
                     <div class="large-2 cell"></div><!-- Side spacer -->
                 </div> <!-- grid-x -->
 

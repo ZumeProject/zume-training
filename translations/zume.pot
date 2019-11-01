@@ -2799,7 +2799,7 @@ msgstr ""
 #: landing-29-leadership-in-networks.php:33
 #: landing-30-peer-mentoring-groups.php:33 landing-31-four-fields.php:33
 #: landing-32-generational-map.php:33 landing-33-3_3_series.php:33
-msgid "This concept comes from the Zúme Training Course"
+msgid "This concept can be found in session"
 msgstr ""
 
 #: landing-01-uses-ordinary-people.php:55

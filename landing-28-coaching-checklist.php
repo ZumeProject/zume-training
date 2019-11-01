@@ -30,7 +30,7 @@ if (have_posts()) :
                             <strong><?php the_title(); ?></strong>
                         </h1>
                         <p>
-                            <a href="<?php echo esc_url( zume_training_url() ) ?>"><?php echo esc_html__( 'This concept comes from the Zúme Training Course', 'zume' ) ?></a> - <a onclick="open_session(<?php echo esc_attr( $session_number ); ?>)"> <?php echo esc_html__( 'Session', 'zume' ) ?> <?php echo esc_html( $session_number ) ?></a>.
+                            <a onclick="open_session(<?php echo esc_attr( $session_number ); ?>)"><?php echo esc_html__( 'This concept can be found in session', 'zume' ) ?> <?php echo esc_html( $session_number ) ?></a>.
                         </p>
                     </div>
 
@@ -51,12 +51,9 @@ if (have_posts()) :
                             <!-- Activity Block  -->
                             <div class="grid-x grid-margin-x grid-margin-y">
                                 <div class="cell content-large">
-                                    The Coaching Checklist is a simple tool you can use to help guide you as you assist others through various parts of Zume Training like The Training Cycle or their List of 100.
-
-                                    What skills are you seeing develop in others? What areas still need to be developed?
-
-                                    Having a Coaching Checklist will help you stay focused and engaged as you develop followers of Jesus into leaders in God’s family, everywhere you go.
-
+                                    <p><?php esc_html_e("The Coaching Checklist is a simple tool you can use to help guide you as you assist others through various parts of Zume Training like The Training Cycle or their List of 100.", 'zume' ) ?></p>
+                                    <p><?php esc_html_e("What skills are you seeing develop in others? What areas still need to be developed?", 'zume' ) ?></p>
+                                    <p><?php esc_html_e("Having a Coaching Checklist will help you stay focused and engaged as you develop followers of Jesus into leaders in God’s family, everywhere you go.", 'zume' ) ?></p>
                                     <?php esc_html_e( "The Coaching Checklist is a powerful tool you can use to quickly assess your own strengths and vulnerabilities when it comes to making disciples who multiply. It's also a powerful tool you can use to help others – and others can use to help you.", 'zume' ) ?>
                                     <br><br>
                                     <?php esc_html_e( "Find the Coaching Checklist section in your Zúme Guidebook, and take this quick (5-minutes or less) self-assessment:", 'zume' ) ?>
@@ -65,17 +62,10 @@ if (have_posts()) :
                                         <li><?php esc_html_e( "Read through the Disciple Training Tools in the far left column of the Checklist.", 'zume' ) ?></li>
                                         <li><?php esc_html_e( "Mark each one of the Training Tools, using the following method:", 'zume' ) ?>
                                             <ul>
-                                                <li> <?php esc_html_e( "If you're unfamiliar or don't understand the Tool – check the BLACK column", 'zume' ) ?>
-                                                </li>
-                                                <li>
-                                                    <?php esc_html_e( "If you're somewhat familiar but still not sure about the Tool – check the RED column", 'zume' ) ?>
-                                                </li>
-                                                <li>
-                                                    <?php esc_html_e( "If you understand and can train the basics on the Tool – check the YELLOW column", 'zume' ) ?>
-                                                </li>
-                                                <li>
-                                                    <?php esc_html_e( "If you feel confident and can effectively train the Tool – check the GREEN column", 'zume' ) ?>
-                                                </li>
+                                                <li><?php esc_html_e( "If you're unfamiliar or don't understand the Tool – check the BLACK column", 'zume' ) ?></li>
+                                                <li><?php esc_html_e( "If you're somewhat familiar but still not sure about the Tool – check the RED column", 'zume' ) ?></li>
+                                                <li><?php esc_html_e( "If you understand and can train the basics on the Tool – check the YELLOW column", 'zume' ) ?></li>
+                                                <li><?php esc_html_e( "If you feel confident and can effectively train the Tool – check the GREEN column", 'zume' ) ?></li>
                                             </ul>
                                         </li>
                                     </ol>
@@ -138,33 +128,6 @@ if (have_posts()) :
                         <?php get_template_part( 'parts/content', 'share' ); ?>
 
                     </div>
-                    <div class="large-2 cell"></div><!-- Side spacer -->
-                </div> <!-- grid-x -->
-
-
-                <!------------------------------------------------------------------------------------------------>
-                <!-- Transcription section -->
-                <!------------------------------------------------------------------------------------------------>
-                <div class="grid-x">
-                    <div class="large-2 cell"></div><!-- Side spacer -->
-
-                    <!-- Center column -->
-                    <div class="large-8 small-12 cell">
-
-                        <div class="grid-x grid-margin-x grid-margin-y">
-                            <div class="large-12 cell content-large center">
-                                <h3 class="center"><?php echo esc_html__( 'Video Transcript', 'zume' ) ?></h3>
-                            </div>
-                            <div class="large-12 cell content-large">
-
-                                <?php the_content(); ?>
-
-                            </div>
-                        </div>
-
-                    </div>
-
-
                     <div class="large-2 cell"></div><!-- Side spacer -->
                 </div> <!-- grid-x -->
 

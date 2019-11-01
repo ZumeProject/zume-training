@@ -30,7 +30,7 @@ if (have_posts()) :
                             <strong><?php the_title(); ?></strong>
                         </h1>
                         <p>
-                            <a href="<?php echo esc_url( zume_training_url() ) ?>"><?php echo esc_html__( 'This concept comes from the Zúme Training Course', 'zume' ) ?></a> - <a onclick="open_session(<?php echo esc_attr( $session_number ); ?>)"> <?php echo esc_html__( 'Session', 'zume' ) ?> <?php echo esc_html( $session_number ) ?></a>.
+                            <a onclick="open_session(<?php echo esc_attr( $session_number ); ?>)"><?php echo esc_html__( 'This concept can be found in session', 'zume' ) ?> <?php echo esc_html( $session_number ) ?></a>.
                         </p>
                     </div>
 
@@ -51,17 +51,8 @@ if (have_posts()) :
                             <!-- Activity Block  -->
                             <div class="grid-x grid-margin-x grid-margin-y">
                                 <div class="cell content-large">
-                                    <p>Leadership Cells equip individual believers in a short time to learn reproductive
-                                        patterns that last a lifetime. Leadership Cells help learners become leaders who
-                                        will then start new groups, train new churches, and begin more Leadership Cells
-                                        to grow God’s family.</p>
-
-                                    <p>Nomads, students, military personnel, seasonal workers who already follow Jesus
-                                        work great in a Leadership Cell. Because of their culture, their profession or
-                                        their season of life - they may have a hard time establishing an ongoing group,
-                                        but they can absolutely be trained how to start groups in each place they
-                                        travel.</p>
-
+                                    <p><?php esc_html_e("Leadership Cells equip individual believers in a short time to learn reproductive patterns that last a lifetime. Leadership Cells help learners become leaders who will then start new groups, train new churches, and begin more Leadership Cells to grow God’s family.", 'zume' ) ?></p>
+                                    <p><?php esc_html_e("Nomads, students, military personnel, seasonal workers who already follow Jesus work great in a Leadership Cell. Because of their culture, their profession or their season of life - they may have a hard time establishing an ongoing group, but they can absolutely be trained how to start groups in each place they travel.", 'zume' ) ?></p>
                                 </div>
                             </div> <!-- grid-x -->
 
@@ -104,9 +95,7 @@ if (have_posts()) :
                                 </div>
                                 <div class="cell content-large">
                                     <ol>
-                                        <li>
-                                            <?php esc_html_e( "Is there a group of followers of Jesus you know that are already meeting or would be willing to meet and form a Leadership Cell to learn Zúme Training?", 'zume' ) ?>
-                                        </li>
+                                        <li><?php esc_html_e( "Is there a group of followers of Jesus you know that are already meeting or would be willing to meet and form a Leadership Cell to learn Zúme Training?", 'zume' ) ?></li>
                                         <li> <?php esc_html_e( "What would it take to bring them together?", 'zume' ) ?></li>
                                     </ol>
                                 </div>
@@ -130,33 +119,6 @@ if (have_posts()) :
                         <?php get_template_part( 'parts/content', 'share' ); ?>
 
                     </div>
-                    <div class="large-2 cell"></div><!-- Side spacer -->
-                </div> <!-- grid-x -->
-
-
-                <!------------------------------------------------------------------------------------------------>
-                <!-- Transcription section -->
-                <!------------------------------------------------------------------------------------------------>
-                <div class="grid-x">
-                    <div class="large-2 cell"></div><!-- Side spacer -->
-
-                    <!-- Center column -->
-                    <div class="large-8 small-12 cell">
-
-                        <div class="grid-x grid-margin-x grid-margin-y">
-                            <div class="large-12 cell content-large center">
-                                <h3 class="center"><?php echo esc_html__( 'Video Transcript', 'zume' ) ?></h3>
-                            </div>
-                            <div class="large-12 cell content-large">
-
-                                <?php the_content(); ?>
-
-                            </div>
-                        </div>
-
-                    </div>
-
-
                     <div class="large-2 cell"></div><!-- Side spacer -->
                 </div> <!-- grid-x -->
 

@@ -322,9 +322,10 @@
         }
     }
     .stat-landing-title {
-        font-size: 2em;
-        @media (max-width: $breakpoint-medium ) {
+        font-size: 1.2em;
+        padding-bottom: 1em;
 
+        @media (max-width: $breakpoint-medium ) {
         }
     }
     .content-large {
@@ -339,6 +340,15 @@
     div.video-section {
         width:70%;
         margin: 0 auto 2em !important;
+
+        @media (max-width: $breakpoint-medium ) {
+            width:100%;
+        }
+    }
+    .landing-host-list {
+        div.small-1 {
+            margin: 0 1em;
+        }
     }
 
 }

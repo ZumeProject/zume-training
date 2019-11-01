@@ -30,7 +30,7 @@ if (have_posts()) :
                             <strong><?php the_title(); ?></strong>
                         </h1>
                         <p>
-                            <a href="<?php echo esc_url( zume_training_url() ) ?>"><?php echo esc_html__( 'This concept comes from the Zúme Training Course', 'zume' ) ?></a> - <a onclick="open_session(<?php echo esc_attr( $session_number ); ?>)"> <?php echo esc_html__( 'Session', 'zume' ) ?> <?php echo esc_html( $session_number ) ?></a>.
+                            <a onclick="open_session(<?php echo esc_attr( $session_number ); ?>)"><?php echo esc_html__( 'This concept can be found in session', 'zume' ) ?> <?php echo esc_html( $session_number ) ?></a>.
                         </p>
                     </div>
 
@@ -51,17 +51,9 @@ if (have_posts()) :
                             <!-- Activity Block  -->
                             <div class="grid-x grid-margin-x grid-margin-y">
                                 <div class="cell content-large">
-                                    <p>So what happens to churches as they grow and start new churches that start new
-                                        churches that start new churches? How do they stay connected? How do they live
-                                        life together as an extended spiritual family?</p>
-
-                                    <p>The answer is that all of these simple churches are just like the cells in a
-                                        growing body and they connect and network into a city or regional church.</p>
-
-                                    <p>The churches are related. They share the same spiritual DNA. They are all
-                                        connected out of the same first multiplying family. And now -- with some
-                                        guidance - they come together as a larger body to do even more.</p>
-
+                                    <p><?php esc_html_e("So what happens to churches as they grow and start new churches that start new churches that start new churches? How do they stay connected? How do they live life together as an extended spiritual family?", 'zume' ) ?></p>
+                                    <p><?php esc_html_e("The answer is that all of these simple churches are just like the cells in a growing body and they connect and network into a city or regional church.", 'zume' ) ?></p>
+                                    <p><?php esc_html_e("The churches are related. They share the same spiritual DNA. They are all connected out of the same first multiplying family. And now -- with some guidance - they come together as a larger body to do even more.", 'zume' ) ?></p>
                                 </div>
                             </div> <!-- grid-x -->
 
@@ -112,33 +104,6 @@ if (have_posts()) :
                         <?php get_template_part( 'parts/content', 'share' ); ?>
 
                     </div>
-                    <div class="large-2 cell"></div><!-- Side spacer -->
-                </div> <!-- grid-x -->
-
-
-                <!------------------------------------------------------------------------------------------------>
-                <!-- Transcription section -->
-                <!------------------------------------------------------------------------------------------------>
-                <div class="grid-x">
-                    <div class="large-2 cell"></div><!-- Side spacer -->
-
-                    <!-- Center column -->
-                    <div class="large-8 small-12 cell">
-
-                        <div class="grid-x grid-margin-x grid-margin-y">
-                            <div class="large-12 cell content-large center">
-                                <h3 class="center"><?php echo esc_html__( 'Video Transcript', 'zume' ) ?></h3>
-                            </div>
-                            <div class="large-12 cell content-large">
-
-                                <?php the_content(); ?>
-
-                            </div>
-                        </div>
-
-                    </div>
-
-
                     <div class="large-2 cell"></div><!-- Side spacer -->
                 </div> <!-- grid-x -->
 
