@@ -365,7 +365,7 @@ switch ($request_action) {
                                     <span style="float:left;">
                                         <img src="<?php echo esc_url( get_theme_file_uri( '/assets/images/public_mail_hollow.png' ) ) ?>" style="width:20px;" />
                                     </span>
-                                    <?php esc_attr_e( 'Email', 'zume' ) ?>
+                                    <?php esc_html_e( 'Email', 'zume' ) ?>
                                 </div>
 
                                 <div id="email_signup_form" style="display:none;">
@@ -486,6 +486,9 @@ switch ($request_action) {
                                         'id_password' => 'pass',
                                         'value_remember' => true,
                                         'label_username' => __( 'Email Address', 'zume' ),
+                                        'label_password' => __( 'Password', 'zume' ),
+                                        'label_remember' => __( 'Remember Me', 'zume' ),
+                                        'label_log_in' => __( 'Login', 'zume' ),
                                         );
                                         wp_login_form( $args );
                                     ?>

@@ -538,11 +538,11 @@ class Zume_User_Registration
                 <div class="grid-container">
                     <div class="grid-x grid-margin-x">
                         <div class="cell small-12">
-                            <label for="email"><?php esc_attr_e( 'Email' ) ?> <strong>*</strong></label>
+                            <label for="email"><?php esc_html_e( 'Email', 'zume' ) ?> <strong>*</strong></label>
                             <input type="text" name="email" id="email" value="" required pattern="email">
                         </div>
                         <div class="cell small-12">
-                            <label><?php esc_html_e( 'Password Required' ) ?> <strong>*</strong>
+                            <label><?php esc_html_e( 'Password Required', 'zume' ) ?> <strong>*</strong>
                                 <input type="password" id="password" name="password" placeholder="yeti4preZ" aria-errormessage="password-error-1" required >
                                 <span class="form-error" id="password-error-1">
                                 <?php esc_html_e( 'Password required', 'zume' ) ?>
@@ -551,7 +551,7 @@ class Zume_User_Registration
                             <meter max="4" id="password-strength-meter" value="0"></meter>
                         </div>
                         <div class="cell small-12">
-                            <label><?php esc_html_e( 'Re-enter Password' ) ?> <strong>*</strong>
+                            <label><?php esc_html_e( 'Re-enter Password', 'zume' ) ?> <strong>*</strong>
                                 <input type="password" placeholder="yeti4preZ" aria-errormessage="password-error-2" data-equalto="password">
                                 <span class="form-error" id="password-error-2">
                                 <?php esc_html_e( 'Passwords do not match. Please, try again.', 'zume' ) ?>
