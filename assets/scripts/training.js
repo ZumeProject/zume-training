@@ -302,7 +302,7 @@ function write_members_list( key, i ) {
       if ( _.indexOf( zumeTraining.groups[i].coleaders_accepted, v ) >= 0 ) {
         verified = `<i class="fi-check secondary-color" title="${__('Accepted invitation', 'zume')}"></i>`
       }
-      div.append(`<div class="cell member">${_.escape( v )} ${_.escape( verified )} <span class="delete" onclick="delete_member_list_item( '${_.escape( key )}', ${_.escape( i )}, ${_.escape( ib )}, '${_.escape( v )}' )">${__('delete', 'zume')}</span></div>`)
+      div.append(`<div class="cell member">${_.escape( v )} ${verified} <span class="delete" onclick="delete_member_list_item( '${_.escape( key )}', ${_.escape( i )}, ${_.escape( ib )}, '${_.escape( v )}' )">${__('delete', 'zume')}</span></div>`)
     }
   })
 }
