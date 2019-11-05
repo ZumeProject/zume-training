@@ -601,7 +601,7 @@ function open_session( session_number, key, i ) {
         <div class="cell"><h2 class="center">${__('Session', 'zume')} ${_.escape( session_number )}</h2></div>
         <div class="cell center">
         ${__('Which group are you leading?', 'zume')}<br>
-          <select onchange="check_group_selection(${_.escape( session_number )})" id="group_selection">${_.escape( list )}</select><br>
+          <select onchange="check_group_selection(${_.escape( session_number )})" id="group_selection">${list}</select><br>
           <div id="create_new_group"></div>
         </div>
         <div class="cell center margin-bottom-1" id="continue_button">
