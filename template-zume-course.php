@@ -56,7 +56,7 @@ get_header();
                     }
                     switch ( $zume_viewing ) {
                         case 'group':
-                            Zume_Course::update_session_complete( $zume_group_key, $zume_session, $zume_group_meta['owner'] );
+                            Zume_Dashboard::update_session_complete( $zume_group_key, $zume_session, $zume_group_meta['owner'] );
                             Zume_Course_Content::get_course_content( $zume_session );
                             Zume_Dashboard::update_ip_address( $zume_group_key );
 

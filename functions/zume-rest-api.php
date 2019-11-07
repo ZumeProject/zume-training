@@ -206,7 +206,7 @@ class Zume_REST_API {
         $params = $request->get_params();
         if ( isset( $params['group_key'] ) && isset( $params['session_id'] ) ) {
 
-            $result = Zume_Course::update_session_complete( $params['group_key'], $params['session_id'] );
+            $result = Zume_Dashboard::update_session_complete( $params['group_key'], $params['session_id'] );
 
             if ($result["status"] == true){
                 return 'success';
