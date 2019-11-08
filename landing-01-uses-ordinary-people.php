@@ -59,8 +59,8 @@ if (have_posts()) :
                                     <p><?php echo esc_html__( "The first church sent ordinary people to change the world. And they did.", 'zume' ) ?></p>
                                 </div>
                             </div>
-                            <div class="grid-x grid-margin-x grid-margin-y" style="margin-top:30px">
-                                <div class="small-12 small-centered cell video-section content-large">
+                            <div class="grid-x grid-margin-x grid-margin-y">
+                                <div class="small-12 small-centered cell video-section">
 
                                     <!-- 1 -->
                                     <?php if ( $alt_video ) : ?>

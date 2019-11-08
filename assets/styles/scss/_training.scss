@@ -69,6 +69,10 @@
         padding: 0;
     }
 
+    #inner-content {
+        padding: 1rem 1rem !important;
+    }
+
     // Course Panel
     #display-buttons {
         button {
@@ -339,7 +343,7 @@
     }
     div.video-section {
         width:70%;
-        margin: 0 auto 2em !important;
+        margin: 2em auto 2em !important;
 
         @media (max-width: $breakpoint-medium ) {
             width:100%;
