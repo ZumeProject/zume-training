@@ -24,7 +24,7 @@ if (have_posts()) :
                     <!-- Center column -->
                     <div class="medium-8 small-10 cell center">
 
-                        <img src="<?php echo esc_url( get_theme_file_uri() ) ?>/assets/images/zume_images/V5.1/1Waving1Not.svg" width="200px" />
+                        <img src="<?php echo esc_url( get_theme_file_uri() ) ?>/assets/images/pieces_pages/1-ordinary-people.png" />
 
                         <h1>
                             <strong><?php the_title(); ?></strong>
@@ -59,8 +59,8 @@ if (have_posts()) :
                                     <p><?php echo esc_html__( "The first church sent ordinary people to change the world. And they did.", 'zume' ) ?></p>
                                 </div>
                             </div>
-                            <div class="grid-x grid-margin-x grid-margin-y" >
-                                <div class="small-12 small-centered cell video-section">
+                            <div class="grid-x grid-margin-x grid-margin-y" style="margin-top:30px">
+                                <div class="small-12 small-centered cell video-section content-large">
 
                                     <!-- 1 -->
                                     <?php if ( $alt_video ) : ?>
