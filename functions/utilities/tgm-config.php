@@ -65,12 +65,12 @@ function zume_register_required_plugins() {
 //            'version' => '0.22.2',
 //            'required' => true,
 //        ),
-        array(
-            'name' => 'Infinite WP',
-            'slug' => 'iwp-client',
-            'version' => '1.6.6.3',
-            'required' => false,
-        ),
+//        array(
+//            'name' => 'Infinite WP',
+//            'slug' => 'iwp-client',
+//            'version' => '1.6.6.3',
+//            'required' => false,
+//        ),
 //        array(
 //            'name' => 'Analytics Cat',
 //            'slug' => 'analytics-cat',
