@@ -686,9 +686,9 @@ Zume_User_Registration::instance();
 
 function zume_spinner( $size = '15', $echo = true ) {
     if ( $echo ) {
-        ?><img src="<?php echo esc_url( site_url() ) ?>/wp-content/themes/zume-project-multilingual/assets/images/spinner.svg" width="<?php echo esc_attr( $size ) ?>px" /><?php
+        ?><img src="<?php echo esc_url( site_url() ) ?>/wp-content/themes/zume-training/assets/images/spinner.svg" width="<?php echo esc_attr( $size ) ?>px" /><?php
     } else {
-        return '<img src="'. esc_url( site_url() ) . '/wp-content/themes/zume-project-multilingual/assets/images/spinner.svg" width="'. $size .'px" />';
+        return '<img src="'. esc_url( site_url() ) . '/wp-content/themes/zume-training/assets/images/spinner.svg" width="'. $size .'px" />';
     }
 }
 

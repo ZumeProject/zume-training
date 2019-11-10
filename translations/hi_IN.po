@@ -4396,8 +4396,8 @@ msgid "Zúme Project"
 msgstr "Zúme परियोजना"
 
 #. Theme URI of the plugin/theme
-msgid "https://github.com/ZumeProject/zume-project-multilingual"
-msgstr "https://github.com/ZumeProject/zume-project-multilingual"
+msgid "https://github.com/ZumeProject/zume-training"
+msgstr "https://github.com/ZumeProject/zume-training"
 
 #. Description of the plugin/theme
 msgid "Zúme Project for multiplying disciples."

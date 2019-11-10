@@ -23,10 +23,10 @@ msgstr ""
 "X-Poedit-SearchPathExcluded-1: functions/utilities\n"
 "X-Poedit-SearchPathExcluded-2: functions/post-types\n"
 "X-Poedit-SearchPathExcluded-3: functions/multi-role\n"
-"X-Poedit-SearchPathExcluded-4: zume-project-multilingual/node_modules\n"
-"X-Poedit-SearchPathExcluded-5: zume-project-multilingual/functions/utilities/"
+"X-Poedit-SearchPathExcluded-4: zume-training/node_modules\n"
+"X-Poedit-SearchPathExcluded-5: zume-training/functions/utilities/"
 "tgm-plugin-activation-class.php\n"
-"X-Poedit-SearchPathExcluded-6: zume-project-multilingual/functions/utilities/"
+"X-Poedit-SearchPathExcluded-6: zume-training/functions/utilities/"
 "tgm-config.php\n"
 
 #: dt-mapping/columns/add-churches-column.php:57
@@ -5155,7 +5155,7 @@ msgid "Zúme Project"
 msgstr "Mashruuca Zúme"
 
 #. Theme URI of the plugin/theme
-msgid "https://github.com/ZumeProject/zume-project-multilingual"
+msgid "https://github.com/ZumeProject/zume-training"
 msgstr "https://github.com/ChasmSolutions/zume-project-theme"
 
 #. Description of the plugin/theme

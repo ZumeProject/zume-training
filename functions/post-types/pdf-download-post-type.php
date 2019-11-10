@@ -287,7 +287,7 @@ class Zume_PDF_Download_Post_Type
      * @since  0.1.0
      */
     public function load_downloads_meta_box() {
-        echo 'Add only the filename with the .pdf extension. The file is added to the Theme in `zume-project-multilingual/files`.<br><br>The page title above needs to be the two character language code.<br><hr>';
+        echo 'Add only the filename with the .pdf extension. The file is added to the Theme in `zume-training/files`.<br><br>The page title above needs to be the two character language code.<br><hr>';
         $this->meta_box_content( 'downloads' ); // prints
     }
     public function load_pages_downloads_meta_box() {

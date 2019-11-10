@@ -5142,8 +5142,8 @@ msgstr "জুমে প্রকল্প"
 
 #. Theme URI of the plugin/theme
 #, fuzzy
-msgid "https://github.com/ZumeProject/zume-project-multilingual"
-msgstr "https://github.com/ZumeProject/zume-project-multilingual"
+msgid "https://github.com/ZumeProject/zume-training"
+msgstr "https://github.com/ZumeProject/zume-training"
 
 #. Description of the plugin/theme
 #, fuzzy

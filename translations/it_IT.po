@@ -306,9 +306,9 @@ msgid "Welcome to Session"
 msgstr "Benvenuti nella Sessione"
 
 #. What is the context of the question?
-#. Could the question refer to something already mentioned? 
+#. Could the question refer to something already mentioned?
 #. "Which" seem to refer to a list of things, as to say "Which [of these/those] are you doing right now?"
-#. 
+#.
 #. In that case, would a better translation be:
 #. "Quale stai facendo in questo momento?"
 #: functions/zume-content.php:115
@@ -340,7 +340,7 @@ msgid "Download"
 msgstr "Download"
 
 #. I would like to suggest a slight change of the sentence, just to make it flow more quickly
-#. 
+#.
 #. "Potrete seguire questa sessione tramite un file PDF, ma assicuratevi gentilmente che ogni membro del vostro gruppo abbia una stampa del materiale per le sessioni successive"
 #: functions/zume-content.php:182
 msgid "You will be able to follow along on a digital PDF for this session, but please make sure that each member of your group has a printed copy of the materials for future sessions."
@@ -3219,82 +3219,82 @@ msgid "Language Translation Progress"
 msgstr "Progressi nella traduzione linguistica"
 
 #. Theme Name of the plugin/theme
-#: 
+#:
 msgid "Zúme Project"
 msgstr "Progetto Zúme"
 
 #. Theme URI of the plugin/theme
-#: 
-msgid "https://github.com/ZumeProject/zume-project-multilingual"
-msgstr "https://github.com/ZumeProject/zume-project-multilingual"
+#:
+msgid "https://github.com/ZumeProject/zume-training"
+msgstr "https://github.com/ZumeProject/zume-training"
 
 #. Description of the plugin/theme
-#: 
+#:
 msgid "Zúme Project for multiplying disciples."
 msgstr "Progetto Zúme per la moltiplicazione dei discepoli."
 
 #. Author of the plugin/theme
-#: 
+#:
 msgid "Zume Project"
 msgstr "Progetto Zume"
 
 #. Author URI of the plugin/theme
-#: 
+#:
 msgid "https://github.com/ZumeProject"
 msgstr "https://github.com/ZumeProject"
 
 #. Template Name of the plugin/theme
-#: 
+#:
 msgid "Zume About"
 msgstr "Info Zume"
 
 #. Template Name of the plugin/theme
-#: 
+#:
 msgid "Zume Resources"
 msgstr "Risorse Zume"
 
 #. Template Name of the plugin/theme
-#: 
+#:
 msgid "Zume Privacy Policy"
 msgstr "Informativa sulla privacy Zùme"
 
 #. Template Name of the plugin/theme
-#: 
+#:
 msgid "Zúme Progress"
 msgstr "Progressi Zúme"
 
 #. Template Name of the plugin/theme
-#: 
+#:
 msgid "Zume Login"
 msgstr "Accesso Zume"
 
 #. Template Name of the plugin/theme
-#: 
+#:
 msgid "Zume Profile"
 msgstr "Profilo Zume"
 
 #. Template Name of the plugin/theme
-#: 
+#:
 msgid "Zúme Overview"
 msgstr "Visione globale di Zúme"
 
 #. Template Name of the plugin/theme
-#: 
+#:
 msgid "Zúme FAQ"
 msgstr "Zúme FAQ"
 
 #. Template Name of the plugin/theme
-#: 
+#:
 msgid "Zúme Dashboard"
 msgstr "Bacheca Zúme"
 
 #. Template Name of the plugin/theme
-#: 
+#:
 msgid "Full Width Home"
 msgstr "Homepage completa"
 
 #. Template Name of the plugin/theme
-#: 
+#:
 msgid "Zúme Course"
 msgstr "Corso Zúme"
 
@@ -3351,7 +3351,7 @@ msgid "See what data we've aggregated from your activities with us."
 msgstr "Verifica quali dati abbiamo riunito dalle tue attività con noi."
 
 #. Template Name of the plugin/theme
-#: 
+#:
 msgid "Zúme One Page Course"
 msgstr "Corso Zùme di una pagina"
 
@@ -3474,12 +3474,12 @@ msgid "Remember Me"
 msgstr ""
 
 #. Template Name of the plugin/theme
-#: 
+#:
 msgid "Zume POP"
 msgstr ""
 
 #. Template Name of the plugin/theme
-#: 
+#:
 msgid "Zume Landing"
 msgstr ""
 
@@ -4760,172 +4760,172 @@ msgid "Practice - Generation Mapping"
 msgstr ""
 
 #. Template Name of the plugin/theme
-#: 
+#:
 msgid "29 - Leadership in Networks"
 msgstr ""
 
 #. Template Name of the plugin/theme
-#: 
+#:
 msgid "20 - Faithfulness"
 msgstr ""
 
 #. Template Name of the plugin/theme
-#: 
+#:
 msgid "10 - Gospel"
 msgstr ""
 
 #. Template Name of the plugin/theme
-#: 
+#:
 msgid "28 - Coaching Checklist"
 msgstr ""
 
 #. Template Name of the plugin/theme
-#: 
+#:
 msgid "05 - Accountability Groups"
 msgstr ""
 
 #. Template Name of the plugin/theme
-#: 
+#:
 msgid "18 - Person of Peace"
 msgstr ""
 
 #. Template Name of the plugin/theme
-#: 
+#:
 msgid "04 - SOAPS"
 msgstr ""
 
 #. Template Name of the plugin/theme
-#: 
+#:
 msgid "11 - Baptism"
 msgstr ""
 
 #. Template Name of the plugin/theme
-#: 
+#:
 msgid "30 - Peer Mentoring"
 msgstr ""
 
 #. Template Name of the plugin/theme
-#: 
+#:
 msgid "Training"
 msgstr ""
 
 #. Template Name of the plugin/theme
-#: 
+#:
 msgid "09 - Kingdom Economy"
 msgstr ""
 
 #. Template Name of the plugin/theme
-#: 
+#:
 msgid "33 - 3/3 Series"
 msgstr ""
 
 #. Template Name of the plugin/theme
-#: 
+#:
 msgid "08 - Relational Stewardship List of 100"
 msgstr ""
 
 #. Template Name of the plugin/theme
-#: 
+#:
 msgid "16 - The Lord's Supper"
 msgstr ""
 
 #. Template Name of the plugin/theme
-#: 
+#:
 msgid "19 - Bless  Prayer"
 msgstr ""
 
 #. Template Name of the plugin/theme
-#: 
+#:
 msgid "15 - Seeing Where the Kingdom Isn't"
 msgstr ""
 
 #. Template Name of the plugin/theme
-#: 
+#:
 msgid "22 - Training Cycle"
 msgstr ""
 
 #. Template Name of the plugin/theme
-#: 
+#:
 msgid "17 - Prayer Walking"
 msgstr ""
 
 #. Template Name of the plugin/theme
-#: 
+#:
 msgid "02 - Obedience Focused Disciple Making"
 msgstr ""
 
 #. Template Name of the plugin/theme
-#: 
+#:
 msgid "06 - Consumers vs Producers"
 msgstr ""
 
 #. Template Name of the plugin/theme
-#: 
+#:
 msgid "21 - 3/3 Group Pattern"
 msgstr ""
 
 #. Template Name of the plugin/theme
-#: 
+#:
 msgid "26 - Part of Two Churches"
 msgstr ""
 
 #. Template Name of the plugin/theme
-#: 
+#:
 msgid "14 - Duckling Discipleship"
 msgstr ""
 
 #. Template Name of the plugin/theme
-#: 
+#:
 msgid "13 - Greatest Blessing"
 msgstr ""
 
 #. Template Name of the plugin/theme
-#: 
+#:
 msgid "25 - Pace"
 msgstr ""
 
 #. Template Name of the plugin/theme
-#: 
+#:
 msgid "01 - God Uses Ordinary People"
 msgstr ""
 
 #. Template Name of the plugin/theme
-#: 
+#:
 msgid "07 - Prayer Cycle"
 msgstr ""
 
 #. Template Name of the plugin/theme
-#: 
+#:
 msgid "32 - Generational Map"
 msgstr ""
 
 #. Template Name of the plugin/theme
-#: 
+#:
 msgid "03 - Spiritual Breathing"
 msgstr ""
 
 #. Template Name of the plugin/theme
-#: 
+#:
 msgid "23 - Leadership Cells"
 msgstr ""
 
 #. Template Name of the plugin/theme
-#: 
+#:
 msgid "12 - Testimony"
 msgstr ""
 
 #. Template Name of the plugin/theme
-#: 
+#:
 msgid "31 - Four Fields"
 msgstr ""
 
 #. Template Name of the plugin/theme
-#: 
+#:
 msgid "24 - Non-Sequential"
 msgstr ""
 
 #. Template Name of the plugin/theme
-#: 
+#:
 msgid "Zúme Course v4"
 msgstr ""
 

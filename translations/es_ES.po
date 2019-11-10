@@ -5152,7 +5152,7 @@ msgid "Zúme Project"
 msgstr "Proyecto Zúme"
 
 #. Theme URI of the plugin/theme
-msgid "https://github.com/ZumeProject/zume-project-multilingual"
+msgid "https://github.com/ZumeProject/zume-training"
 msgstr "https://github.com/ChasmSolutions/zume-project-theme"
 
 #. Description of the plugin/theme
