@@ -353,12 +353,13 @@ function zume_landing_page_post_id( int $number ) : int {
 }
 
 function zume_v4_ready_language() {
-    $ready = [
-        'en'
-    ];
+    $ready = [];
+
+//    $ready['en'] = true;
+    
     $current = zume_current_language();
 
-    return array_search( $current, $ready );
+    return $ready[$current] ?? false;
 }
 
 /***********************************************************************************************************************
