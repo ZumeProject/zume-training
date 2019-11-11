@@ -56,19 +56,6 @@ if (have_posts()) :
                                 </div>
                             </div> <!-- grid-x -->
 
-                            <!-- Inset Block -->
-                            <div class="grid-x grid-margin-x grid-margin-y single">
-                                <div class="cell auto"></div>
-                                <div class="large-9 cell activity-description well">
-                                    <div class="grid-x grid-padding-x grid-padding-y center" >
-                                        <div class="cell session-boxes">
-                                            <?php esc_html_e( "Find the \"Leadership Cells\" section in your Zúme Guidebook. When you're ready, watch and discuss this video.", 'zume' ) ?>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="cell auto"></div>
-                            </div> <!-- grid-x -->
-
                             <!-- Video block -->
                             <div class="grid-x grid-margin-x grid-margin-y">
                                 <div class="small-12 small-centered cell video-section">
@@ -88,6 +75,8 @@ if (have_posts()) :
 
                                 </div>
                             </div> <!-- grid-x -->
+
+
                             <!-- Activity Block  -->
                             <div class="grid-x grid-margin-x grid-margin-y">
                                 <div class="cell content-large center">

@@ -82,7 +82,9 @@ if (have_posts()) :
                                     <h3 class="center"><?php esc_html_e( 'Ask Yourself', 'zume' ) ?></h3>
                                 </div>
                                 <div class="cell content-large">
-                                    <?php esc_html_e( "Are there advantages when networks of simple churches are connected by deep, personal relationships? What are some examples that come to mind?", 'zume' ) ?>
+                                    <ul>
+                                        <li><?php esc_html_e( "Are there advantages when networks of simple churches are connected by deep, personal relationships? What are some examples that come to mind?", 'zume' ) ?></li>
+                                    </ul>
                                 </div>
                             </div> <!-- grid-x -->
                         </section>

@@ -92,8 +92,9 @@ if (have_posts()) :
                                     <p><strong><?php esc_html_e("LISTEN", 'zume') ?></strong><br><?php esc_html_e("Spend time merging the things you have read, things you have prayed and things you have sung and see how the Lord brings them all together to speak to you.", 'zume' ) ?></p>
                                     <p><strong><?php esc_html_e("PRAISE", 'zume') ?></strong><br><?php esc_html_e("Praise the Lord for the time you have had to spend with Him and the impressions He has given you. Praise Him for His glorious attributes.", 'zume' ) ?></p>
                                     <p class="sub-caption"><?php esc_html_e("From Dick Eastman’s book The Hour that Changes the World © 2002 by Dick Eastman, Chosen Books, Grand Rapids, MI, used by permission.", 'zume' ) ?></p>
-
+                                    <p class="center"><a href="https://zumeproject.github.io/prayer-cycle/" target="_blank"><?php esc_html_e("Simple Prayer Cycle Timer App", 'zume' ) ?></a> </p>
                                 </div>
+
                             </div> <!-- grid-x -->
 
                             <!-- Activity Block -->

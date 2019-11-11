@@ -56,8 +56,13 @@ if (have_posts()) :
                                     <p><?php esc_html_e( "Having a Coaching Checklist will help you stay focused and engaged as you develop followers of Jesus into leaders in God’s family, everywhere you go.", 'zume' ) ?></p>
                                     <?php esc_html_e( "The Coaching Checklist is a powerful tool you can use to quickly assess your own strengths and vulnerabilities when it comes to making disciples who multiply. It's also a powerful tool you can use to help others – and others can use to help you.", 'zume' ) ?>
                                     <br><br>
-                                    <?php esc_html_e( "Find the Coaching Checklist section in your Zúme Guidebook, and take this quick (5-minutes or less) self-assessment:", 'zume' ) ?>
-                                    <br><br>
+                                    <?php esc_html_e( "Download the Coaching Checklist with the link below and take this quick (5-minutes or less) self-assessment:", 'zume' ) ?>
+                                    <div class="cell content-large center">
+                                        <img src="<?php echo esc_url( zume_images_uri( '/temp/' ) ) ?>coaching-checklist.jpg" alt="checklist" style="max-width:300px;" />
+                                    </div>
+                                    <div class="cell content-large center">
+                                        <a href="<?php echo esc_url( zume_files_uri() ) ?>84_en_coaching_checklist.pdf" class="button primary-button"><?php esc_html_e("Download Coaching Checklist", 'zume' ) ?></a>
+                                    </div>
                                     <ol>
                                         <li><?php esc_html_e( "Read through the Disciple Training Tools in the far left column of the Checklist.", 'zume' ) ?></li>
                                         <li><?php esc_html_e( "Mark each one of the Training Tools, using the following method:", 'zume' ) ?>
@@ -70,9 +75,7 @@ if (have_posts()) :
                                         </li>
                                     </ol>
                                 </div>
-                                <div class="cell content-large">
-                                    <img src="<?php echo esc_url( zume_images_uri( '/temp/' ) ) ?>coaching-checklist.jpg" />
-                                </div>
+
                             </div> <!-- grid-x -->
 
                             <!-- Video block -->

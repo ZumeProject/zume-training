@@ -53,14 +53,13 @@ if (have_posts()) :
                                     <p><?php esc_html_e( "When people think about disciples multiplying, they often think of it as a step-by-step process. First prayer. Then preparation. Then sharing God’s good news. Then building disciples. Then building churches. Then developing leaders. Then reproduction. When we learn this way, kingdom growth seems to be an easy-to-follow, linear and sequential process.", 'zume' ) ?></p>
                                     <p><?php esc_html_e( "One problem is that’s not how it always works.", 'zume' ) ?></p>
                                     <p><?php esc_html_e( "A bigger problem is that’s not how it often works best.", 'zume' ) ?></p>
-                                    <p><?php esc_html_e( "Leadership Cells are 3/3 Groups that only meet for a limited and pre-determined length of time [like this 9-session Zúme Training course]. The purpose is to equip a group of people to go out and establish their own groups or establish another leadership cell at the conclusion of the training period.", 'zume' ) ?></p>
-                                    <p><?php esc_html_e( "This approach can be used in several circumstances. It can be used with mobile population segments such as nomads, students, etc. It can be used if there numbers of people who are already Christians but for some reason it is not appropriate for them to form an ongoing group and they need to be trained to start their own groups. It can also be used if there is a situation where a number of people come to faith at the same time and there is not sufficient time or opportunity to do initial follow-up with them individually with the Greatest Blessing approach or some similar approach.", 'zume' ) ?></p>
+                                    <p><?php esc_html_e( "If we want to see the kingdom of God grow rapidly we need to expect and even encourage non-sequential growth.", 'zume' ) ?></p>
                                 </div>
                             </div>
                             <!-- grid-x -->
 
                             <!-- Video block -->
-                            <div class="grid-x grid-margin-x grid-margin-y vertical-padding">
+                            <div class="grid-x grid-margin-x grid-margin-y">
                                 <div class="small-12 small-centered cell video-section">
 
                                     <!-- 24 -->
@@ -86,8 +85,8 @@ if (have_posts()) :
                                 </div>
                                 <div class="cell content-large">
                                     <ol>
-                                        <li><?php esc_html_e( "What is the most exciting idea you heard in this video? Why?", 'zume' ) ?></li>
-                                        <li><?php esc_html_e( "What is the most challenging idea? Why?", 'zume' ) ?></li>
+                                        <li><?php esc_html_e( "Have you ever seen a new believer multiply quickly?", 'zume' ) ?></li>
+                                        <li><?php esc_html_e( "What things do we do that actually slow or stop this from happening intentionally or unintentionally?", 'zume' ) ?></li>
                                     </ol>
                                 </div>
                             </div>

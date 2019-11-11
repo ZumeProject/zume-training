@@ -58,7 +58,7 @@ if (have_posts()) :
                             <!-- grid-x -->
 
                             <!-- Video block -->
-                            <div class="grid-x grid-margin-x grid-margin-y vertical-padding">
+                            <div class="grid-x grid-margin-x grid-margin-y">
                                 <div class="small-12 small-centered cell video-section">
 
                                     <!-- 26 -->
@@ -83,7 +83,9 @@ if (have_posts()) :
                                     <h3 class="center"><?php esc_html_e( 'Ask Yourself', 'zume' ) ?></h3>
                                 </div>
                                 <div class="cell content-large">
-                                    <?php esc_html_e( "What are some advantages of maintaining a consistent spiritual family that gives birth to new ones that grow and multiply instead of continually growing a family and splitting it in order to grow?", 'zume' ) ?>
+                                    <ul>
+                                        <li><?php esc_html_e( "What are some advantages of maintaining a consistent spiritual family that gives birth to new ones that grow and multiply instead of continually growing a family and splitting it in order to grow?", 'zume' ) ?></li>
+                                    </ul>
                                 </div>
                             </div>
                             <!-- grid-x -->

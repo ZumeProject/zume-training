@@ -59,7 +59,7 @@ if (have_posts()) :
                             <!-- grid-x -->
 
                             <!-- Video block -->
-                            <div class="grid-x grid-margin-x grid-margin-y vertical-padding">
+                            <div class="grid-x grid-margin-x grid-margin-y">
                                 <div class="small-12 small-centered cell video-section">
 
                                     <!-- 25 -->
