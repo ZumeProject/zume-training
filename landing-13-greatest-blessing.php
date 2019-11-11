@@ -51,9 +51,9 @@ if (have_posts()) :
                             <!-- Activity Block  -->
                             <div class="grid-x grid-margin-x grid-margin-y">
                                 <div class="cell content-large">
-                                    <p><?php esc_html_e("When someone chooses to follow Jesus, how do you help them move down the right path? How do you help them become a producer in God’s kingdom and not just another consumer? How do you help them receive all the blessings that God is willing to give? I start by telling them this...", 'zume' ) ?></p>
-                                    <p><?php esc_html_e("It is a blessing to follow Jesus. It is a great blessing to lead others to follow Jesus. It is a greater blessing to start a new spiritual family.", 'zume' ) ?></p>
-                                    <p><?php esc_html_e("It is the greatest blessing to equip others to start new spiritual families.", 'zume' ) ?></p>
+                                    <p><?php esc_html_e( "When someone chooses to follow Jesus, how do you help them move down the right path? How do you help them become a producer in God’s kingdom and not just another consumer? How do you help them receive all the blessings that God is willing to give? I start by telling them this...", 'zume' ) ?></p>
+                                    <p><?php esc_html_e( "It is a blessing to follow Jesus. It is a great blessing to lead others to follow Jesus. It is a greater blessing to start a new spiritual family.", 'zume' ) ?></p>
+                                    <p><?php esc_html_e( "It is the greatest blessing to equip others to start new spiritual families.", 'zume' ) ?></p>
                                 </div>
                             </div> <!-- grid-x -->
 

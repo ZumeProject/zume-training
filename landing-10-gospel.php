@@ -51,9 +51,9 @@ if (have_posts()) :
                             <!-- Activity Block  -->
                             <div class="grid-x grid-margin-x grid-margin-y">
                                 <div class="cell content-large">
-                                    <p><?php esc_html_e("There are many ways to share God’s story.", 'zume' ) ?></p>
-                                    <p><?php esc_html_e("The best way will depend on the person you’re sharing with and their view of the world and their life experiences. God uses hearts willing to share to work on hearts willing to hear.", 'zume' ) ?></p>
-                                    <p><?php esc_html_e("One way to share God’s Story is by explaining what’s happened from God’s Creation to His Judgement at the end of this age.", 'zume' ) ?></p>
+                                    <p><?php esc_html_e( "There are many ways to share God’s story.", 'zume' ) ?></p>
+                                    <p><?php esc_html_e( "The best way will depend on the person you’re sharing with and their view of the world and their life experiences. God uses hearts willing to share to work on hearts willing to hear.", 'zume' ) ?></p>
+                                    <p><?php esc_html_e( "One way to share God’s Story is by explaining what’s happened from God’s Creation to His Judgement at the end of this age.", 'zume' ) ?></p>
                                 </div>
                             </div> <!-- grid-x -->
 

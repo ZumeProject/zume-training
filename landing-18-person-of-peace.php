@@ -51,11 +51,11 @@ if (have_posts()) :
                             <!-- Activity Block  -->
                             <div class="grid-x grid-margin-x grid-margin-y">
                                 <div class="cell content-large">
-                                    <p><?php esc_html_e("When you want to make disciples in a place where not many - or maybe even any - exist, then looking for a Person of Peace might be the most important thing you do. A Person of Peace is:", 'zume' ) ?></p>
-                                    <p><?php esc_html_e("Someone who is OPEN to hearing Your Story, God’s Story and the Good News of Jesus.", 'zume' ) ?></p>
-                                    <p><?php esc_html_e("Someone who is HOSPITABLE and WELCOMES you into their home or their workplace or to join events with family and friends.", 'zume' ) ?></p>
-                                    <p><?php esc_html_e("Someone who KNOWS OTHERS (or is KNOWN BY OTHERS) and who is excited to draw together a small group or even a crowd.", 'zume' ) ?></p>
-                                    <p><?php esc_html_e("Someone who is FAITHFUL and SHARES what they learn with others - even after you’re gone.", 'zume' ) ?></p>
+                                    <p><?php esc_html_e( "When you want to make disciples in a place where not many - or maybe even any - exist, then looking for a Person of Peace might be the most important thing you do. A Person of Peace is:", 'zume' ) ?></p>
+                                    <p><?php esc_html_e( "Someone who is OPEN to hearing Your Story, God’s Story and the Good News of Jesus.", 'zume' ) ?></p>
+                                    <p><?php esc_html_e( "Someone who is HOSPITABLE and WELCOMES you into their home or their workplace or to join events with family and friends.", 'zume' ) ?></p>
+                                    <p><?php esc_html_e( "Someone who KNOWS OTHERS (or is KNOWN BY OTHERS) and who is excited to draw together a small group or even a crowd.", 'zume' ) ?></p>
+                                    <p><?php esc_html_e( "Someone who is FAITHFUL and SHARES what they learn with others - even after you’re gone.", 'zume' ) ?></p>
                                 </div>
                             </div> <!-- grid-x -->
 

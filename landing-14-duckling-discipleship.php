@@ -51,8 +51,8 @@ if (have_posts()) :
                             <!-- Activity Block  -->
                             <div class="grid-x grid-margin-x grid-margin-y">
                                 <div class="cell content-large">
-                                    <p><?php esc_html_e("No matter where you are in the world, it always looks the same. A Mother Duck leads and her ducklings follow - one by one - all in a row. The Mother Duck leads. The little ducks follow. But if you look even closer, you’ll see something else is happening, too.", 'zume' ) ?></p>
-                                    <p><?php esc_html_e("If you want to see God’s family grow far and grow in faithfulness, then think of disciple-making like ducklings - become a follower and a leader at exactly the same time.", 'zume' ) ?></p>
+                                    <p><?php esc_html_e( "No matter where you are in the world, it always looks the same. A Mother Duck leads and her ducklings follow - one by one - all in a row. The Mother Duck leads. The little ducks follow. But if you look even closer, you’ll see something else is happening, too.", 'zume' ) ?></p>
+                                    <p><?php esc_html_e( "If you want to see God’s family grow far and grow in faithfulness, then think of disciple-making like ducklings - become a follower and a leader at exactly the same time.", 'zume' ) ?></p>
                                 </div>
                             </div> <!-- grid-x -->
 

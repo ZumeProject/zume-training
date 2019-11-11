@@ -49,21 +49,21 @@ if (have_posts()) :
                         <section>
                             <div class="grid-x grid-margin-x grid-margin-y">
                                 <div class="cell content-large">
-                                    <p><?php esc_html_e("Here are five ways you can pray for people you meet during your Prayer Walk:", 'zume' ) ?></p>
-                                    <p><?php esc_html_e("As you walk and pray, be alert for opportunities and listen for promptings by God’s Spirit to pray for individuals and groups you meet along the way.", 'zume' ) ?></p>
-                                    <p><?php esc_html_e("You can say, “We’re praying for this community, is there anything in particular we can pray for you about?” Or say, “I’m praying for this area. Do you know anything in particular we should pray for?” After listening to their response you can ask about their own needs. If they share, pray for them right away. If the Lord leads, you may pray about other needs as well.", 'zume' ) ?></p>
-                                    <p><?php esc_html_e("Use the word B.L.E.S.S. to help you remember 5 different ways you can pray:", 'zume' ) ?></p>
+                                    <p><?php esc_html_e( "Here are five ways you can pray for people you meet during your Prayer Walk:", 'zume' ) ?></p>
+                                    <p><?php esc_html_e( "As you walk and pray, be alert for opportunities and listen for promptings by God’s Spirit to pray for individuals and groups you meet along the way.", 'zume' ) ?></p>
+                                    <p><?php esc_html_e( "You can say, “We’re praying for this community, is there anything in particular we can pray for you about?” Or say, “I’m praying for this area. Do you know anything in particular we should pray for?” After listening to their response you can ask about their own needs. If they share, pray for them right away. If the Lord leads, you may pray about other needs as well.", 'zume' ) ?></p>
+                                    <p><?php esc_html_e( "Use the word B.L.E.S.S. to help you remember 5 different ways you can pray:", 'zume' ) ?></p>
                                     <ul>
-                                        <li><?php esc_html_e("Body [health]", 'zume' ) ?></li>
-                                        <li><?php esc_html_e("Labor [job and finances]", 'zume' ) ?></li>
-                                        <li><?php esc_html_e("Emotional [morale]", 'zume' ) ?></li>
-                                        <li><?php esc_html_e("Social [relationships]", 'zume' ) ?></li>
-                                        <li><?php esc_html_e("Spiritual [knowing and loving God more]", 'zume' ) ?></li>
+                                        <li><?php esc_html_e( "Body [health]", 'zume' ) ?></li>
+                                        <li><?php esc_html_e( "Labor [job and finances]", 'zume' ) ?></li>
+                                        <li><?php esc_html_e( "Emotional [morale]", 'zume' ) ?></li>
+                                        <li><?php esc_html_e( "Social [relationships]", 'zume' ) ?></li>
+                                        <li><?php esc_html_e( "Spiritual [knowing and loving God more]", 'zume' ) ?></li>
                                     </ul>
-                                    <p><?php esc_html_e("In most cases, people are grateful you care enough to pray.", 'zume' ) ?></p>
-                                    <p><?php esc_html_e("If the person is not a Christian, your prayer may open the door to a spiritual conversation and an opportunity to share your story and God’s story. You can invite them to be a part of a Bible study or even host one in their home.", 'zume' ) ?></p>
-                                    <p><?php esc_html_e("If the person is a Christian you can invite them to join your Prayer Walk or train them how they can Prayer Walk and use simple steps like praying for areas of influence or the B.L.E.S.S. Prayer to grow God’s family even more.", 'zume' ) ?></p>
-                                    <p><?php esc_html_e("ACTIVITY [15 min] - Break into groups of two or three and spend the next 15 minutes practicing the B.L.E.S.S. Prayer. Practice praying the 5 areas of the B.L.E.S.S. Prayer for someone AND practice how you would train others to understand and use the B.L.E.S.S. Prayer, too.", 'zume' ) ?></p>
+                                    <p><?php esc_html_e( "In most cases, people are grateful you care enough to pray.", 'zume' ) ?></p>
+                                    <p><?php esc_html_e( "If the person is not a Christian, your prayer may open the door to a spiritual conversation and an opportunity to share your story and God’s story. You can invite them to be a part of a Bible study or even host one in their home.", 'zume' ) ?></p>
+                                    <p><?php esc_html_e( "If the person is a Christian you can invite them to join your Prayer Walk or train them how they can Prayer Walk and use simple steps like praying for areas of influence or the B.L.E.S.S. Prayer to grow God’s family even more.", 'zume' ) ?></p>
+                                    <p><?php esc_html_e( "ACTIVITY [15 min] - Break into groups of two or three and spend the next 15 minutes practicing the B.L.E.S.S. Prayer. Practice praying the 5 areas of the B.L.E.S.S. Prayer for someone AND practice how you would train others to understand and use the B.L.E.S.S. Prayer, too.", 'zume' ) ?></p>
                                 </div>
                             </div>
                         </section>

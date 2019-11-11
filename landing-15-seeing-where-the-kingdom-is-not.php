@@ -50,9 +50,9 @@ if (have_posts()) :
                             <!-- Activity Block  -->
                             <div class="grid-x grid-margin-x grid-margin-y">
                                 <div class="cell content-large">
-                                    <p><?php esc_html_e("There are places all around us where God’s will is not being done on earth as it is in heaven - giant gaps where brokenness, pain, persecution, suffering and even death are a part of normal, everyday life.", 'zume' ) ?></p>
-                                    <p><?php esc_html_e("Every disciple - every follower of Jesus - needs to be able to see not just where God’s Kingdom is, but where God’s kingdom isn’t.", 'zume' ) ?></p>
-                                    <p><?php esc_html_e("Opening our eyes to see where the Kingdom isn’t and reaching out through people we know and people we don’t know yet is how disciples multiply and God’s Kingdom grows far and fast.", 'zume' ) ?></p>
+                                    <p><?php esc_html_e( "There are places all around us where God’s will is not being done on earth as it is in heaven - giant gaps where brokenness, pain, persecution, suffering and even death are a part of normal, everyday life.", 'zume' ) ?></p>
+                                    <p><?php esc_html_e( "Every disciple - every follower of Jesus - needs to be able to see not just where God’s Kingdom is, but where God’s kingdom isn’t.", 'zume' ) ?></p>
+                                    <p><?php esc_html_e( "Opening our eyes to see where the Kingdom isn’t and reaching out through people we know and people we don’t know yet is how disciples multiply and God’s Kingdom grows far and fast.", 'zume' ) ?></p>
                                 </div>
                             </div> <!-- grid-x -->
 

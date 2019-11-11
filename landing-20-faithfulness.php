@@ -50,9 +50,9 @@ if (have_posts()) :
                             <!-- Activity Block  -->
                             <div class="grid-x grid-margin-x grid-margin-y">
                                 <div class="cell content-large">
-                                    <p><?php esc_html_e("Faithfulness - more than knowledge - is something that can start as soon as someone begins to follow Jesus. Faithfulness - more than training - is something that can be measured by what we do with what we’ve been given.", 'zume' ) ?></p>
-                                    <p><?php esc_html_e("If we OBEY and SHARE what we hear with others, we are faithful. If we hear but we REFUSE to obey and share, we are unfaithful.", 'zume' ) ?></p>
-                                    <p><?php esc_html_e("As we multiply disciples, let’s make sure we’re measuring the right things.", 'zume' ) ?></p>
+                                    <p><?php esc_html_e( "Faithfulness - more than knowledge - is something that can start as soon as someone begins to follow Jesus. Faithfulness - more than training - is something that can be measured by what we do with what we’ve been given.", 'zume' ) ?></p>
+                                    <p><?php esc_html_e( "If we OBEY and SHARE what we hear with others, we are faithful. If we hear but we REFUSE to obey and share, we are unfaithful.", 'zume' ) ?></p>
+                                    <p><?php esc_html_e( "As we multiply disciples, let’s make sure we’re measuring the right things.", 'zume' ) ?></p>
                                 </div>
                             </div> <!-- grid-x -->
 

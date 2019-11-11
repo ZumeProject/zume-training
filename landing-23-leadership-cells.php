@@ -51,8 +51,8 @@ if (have_posts()) :
                             <!-- Activity Block  -->
                             <div class="grid-x grid-margin-x grid-margin-y">
                                 <div class="cell content-large">
-                                    <p><?php esc_html_e("Leadership Cells equip individual believers in a short time to learn reproductive patterns that last a lifetime. Leadership Cells help learners become leaders who will then start new groups, train new churches, and begin more Leadership Cells to grow God’s family.", 'zume' ) ?></p>
-                                    <p><?php esc_html_e("Nomads, students, military personnel, seasonal workers who already follow Jesus work great in a Leadership Cell. Because of their culture, their profession or their season of life - they may have a hard time establishing an ongoing group, but they can absolutely be trained how to start groups in each place they travel.", 'zume' ) ?></p>
+                                    <p><?php esc_html_e( "Leadership Cells equip individual believers in a short time to learn reproductive patterns that last a lifetime. Leadership Cells help learners become leaders who will then start new groups, train new churches, and begin more Leadership Cells to grow God’s family.", 'zume' ) ?></p>
+                                    <p><?php esc_html_e( "Nomads, students, military personnel, seasonal workers who already follow Jesus work great in a Leadership Cell. Because of their culture, their profession or their season of life - they may have a hard time establishing an ongoing group, but they can absolutely be trained how to start groups in each place they travel.", 'zume' ) ?></p>
                                 </div>
                             </div> <!-- grid-x -->
 

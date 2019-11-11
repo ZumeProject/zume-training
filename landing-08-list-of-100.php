@@ -52,9 +52,9 @@ if (have_posts()) :
                             <!-- Activity Block  -->
                             <div class="grid-x grid-margin-x grid-margin-y">
                                 <div class="cell content-large">
-                                    <p><?php esc_html_e("God has already given us the relationships we need to “Go and make disciples.”", 'zume' ) ?></p>
-                                    <p><?php esc_html_e("These are our family, friends, neighbors, co-workers and classmates - people we’ve known all our lives, people we’ve just met.", 'zume' ) ?></p>
-                                    <p><?php esc_html_e("Being faithful with the people God has already put in our lives is a great first step in multiplying disciples. And it can start with the simple step of making a list.", 'zume' ) ?></p>
+                                    <p><?php esc_html_e( "God has already given us the relationships we need to “Go and make disciples.”", 'zume' ) ?></p>
+                                    <p><?php esc_html_e( "These are our family, friends, neighbors, co-workers and classmates - people we’ve known all our lives, people we’ve just met.", 'zume' ) ?></p>
+                                    <p><?php esc_html_e( "Being faithful with the people God has already put in our lives is a great first step in multiplying disciples. And it can start with the simple step of making a list.", 'zume' ) ?></p>
                                 </div>
 
                             </div> <!-- grid-x -->
@@ -80,7 +80,7 @@ if (have_posts()) :
 
                             <div class="grid-x">
                                 <div class="cell center">
-                                    <a href="<?php echo esc_url( zume_files_uri() . '74_en_list_of_100.pdf' ) ?>" class="button primary large"><?php esc_html_e("Download List of 100", 'zume' ) ?></a>
+                                    <a href="<?php echo esc_url( zume_files_uri() . '74_en_list_of_100.pdf' ) ?>" class="button primary large"><?php esc_html_e( "Download List of 100", 'zume' ) ?></a>
                                 </div>
                                 <div class="cell center">
                                     <img src="<?php echo esc_url( get_theme_file_uri() ) . '/assets/images/temp/33_en_zume_guidebook 2_Page_08.jpg' ?>" />

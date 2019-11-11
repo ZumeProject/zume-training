@@ -51,8 +51,8 @@ if (have_posts()) :
                             <!-- Activity Block -->
                             <div class="grid-x grid-margin-x grid-margin-y">
                                 <div class="cell content-large">
-                                    <p><?php esc_html_e("Jesus instructed His followers that they should be continuously starting new spiritual families, growing them to be more like Jesus, and helping them learn how to start new spiritual families, too.", 'zume' ) ?></p>
-                                    <p><?php esc_html_e("So how do these two things come together - how can we be a part of a church and be in the process of starting new churches - all at the same time?", 'zume' ) ?></p>
+                                    <p><?php esc_html_e( "Jesus instructed His followers that they should be continuously starting new spiritual families, growing them to be more like Jesus, and helping them learn how to start new spiritual families, too.", 'zume' ) ?></p>
+                                    <p><?php esc_html_e( "So how do these two things come together - how can we be a part of a church and be in the process of starting new churches - all at the same time?", 'zume' ) ?></p>
                                 </div>
                             </div>
                             <!-- grid-x -->

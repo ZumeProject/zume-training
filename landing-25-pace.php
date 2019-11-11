@@ -51,9 +51,9 @@ if (have_posts()) :
                             <!-- Activity Block -->
                             <div class="grid-x grid-margin-x grid-margin-y">
                                 <div class="cell content-large">
-                                    <p><?php esc_html_e("Pace matters because where we all spend our eternity - an existence that outlasts time - is determined in the short time we call “life”.", 'zume' ) ?></p>
-                                    <p><?php esc_html_e("God’s Word tells us that God is patient with us - not wanting anyone to perish, but everyone to turn around and follow Him. God gives us more time because He knows we only have a short time to do all He’s called us to do and to reach all He’s called us to reach.", 'zume' ) ?></p>
-                                    <p><?php esc_html_e("To follow Jesus more closely, we have to pursue His people more quickly. We can’t just take our time. We have to increase our PACE.", 'zume' ) ?></p>
+                                    <p><?php esc_html_e( "Pace matters because where we all spend our eternity - an existence that outlasts time - is determined in the short time we call “life”.", 'zume' ) ?></p>
+                                    <p><?php esc_html_e( "God’s Word tells us that God is patient with us - not wanting anyone to perish, but everyone to turn around and follow Him. God gives us more time because He knows we only have a short time to do all He’s called us to do and to reach all He’s called us to reach.", 'zume' ) ?></p>
+                                    <p><?php esc_html_e( "To follow Jesus more closely, we have to pursue His people more quickly. We can’t just take our time. We have to increase our PACE.", 'zume' ) ?></p>
                                 </div>
                             </div>
                             <!-- grid-x -->

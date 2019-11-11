@@ -8,12 +8,11 @@ $zume_current_lang = zume_current_language();
 ?>
 <?php get_header(); ?>
 
-<div id="content" >
+<div id="content home" >
 
     <div id="inner-content grid-x grid-padding-x">
 
         <div id="main" class="cell" role="main">
-
 
             <?php
             $args = [
@@ -66,9 +65,10 @@ $zume_current_lang = zume_current_language();
                     <div class="medium-2 small-1 cell"></div>
                 </div>
 
-                <div class="grid-x grid-margin-x grid-margin-y vertical-padding" style="max-width:100%; margin:0; background:white; padding:17px; color: #0A246A; font-size: 24px">
+                <div class="grid-x white-section">
+
                     <?php if ( ! is_user_logged_in() ) : ?>
-                    <div class="cell show-for-small hide-for-large  center">
+                    <div class="cell show-for-small hide-for-large center">
                         <a href="<?php echo esc_url( zume_register_url( zume_current_language() ) ); ?>" alt="Register" class="button large center primary-button-hollow">
                             <?php esc_html_e( 'Get Started', 'zume' ) ?>
                         </a>
@@ -77,17 +77,24 @@ $zume_current_lang = zume_current_language();
                         </a>
                     </div>
                     <?php endif; ?>
-                    <div class="medium-3 small-2 cell"></div>
-                    <div class="medium-6 small-8 cell center">
-                        <?php esc_html_e( "Zúme Training is an on-line and in-life learning experience designed for small groups who follow Jesus to learn how to obey His Great Commission and make disciples who multiply.", 'zume' ) ?>
+
+                    <div class="small-1 medium-2 cell"></div>
+                    <div class="small-10 medium-8 cell center large-text">
+                        <div class="grid-x grid-margin-x grid-margin-y vertical-padding" >
+                            <div class="cell">
+                                <?php esc_html_e( "Zúme Training is an on-line and in-life learning experience designed for small groups who follow Jesus to learn how to obey His Great Commission and make disciples who multiply.", 'zume' ) ?>
+                            </div>
+                            <div class="cell center">
+                                <a href="<?php echo esc_url( zume_training_url( $zume_current_lang ) ) ?>" class="button secondary-button large" >Explore Training</a>
+                            </div>
+                            <div class="cell center">
+                                <img src="<?php echo esc_url( get_stylesheet_directory_uri() ) . '/assets/images/home/'; ?>zume-training.png" alt="Training Image">
+                            </div>
+                        </div>
                     </div>
-                    <div class="medium-3 small-2 cell"></div>
+                    <div class="small-1 medium-2 cell"></div>
                 </div>
-                <div class="grid-x grid-margin-x grid-margin-y vertical-padding" style="max-width:100%; margin:0; background:white; padding:17px; color: #0A246A; padding-top:0">
-                    <div class="cell center" style="margin-top:0">
-                        <img src="<?php echo esc_url( get_stylesheet_directory_uri() ) . '/assets/images/home/'; ?>zume-training.png">
-                    </div>
-                </div>
+
 
 
                 <div class="grid-x grid-margin-x grid-margin-y vertical-padding" style="max-width:900px; margin:0 auto; padding:17px; color: white; font-size: 24px">

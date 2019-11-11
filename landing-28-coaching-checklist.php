@@ -51,9 +51,9 @@ if (have_posts()) :
                             <!-- Activity Block  -->
                             <div class="grid-x grid-margin-x grid-margin-y">
                                 <div class="cell content-large">
-                                    <p><?php esc_html_e("The Coaching Checklist is a simple tool you can use to help guide you as you assist others through various parts of Zume Training like The Training Cycle or their List of 100.", 'zume' ) ?></p>
-                                    <p><?php esc_html_e("What skills are you seeing develop in others? What areas still need to be developed?", 'zume' ) ?></p>
-                                    <p><?php esc_html_e("Having a Coaching Checklist will help you stay focused and engaged as you develop followers of Jesus into leaders in God’s family, everywhere you go.", 'zume' ) ?></p>
+                                    <p><?php esc_html_e( "The Coaching Checklist is a simple tool you can use to help guide you as you assist others through various parts of Zume Training like The Training Cycle or their List of 100.", 'zume' ) ?></p>
+                                    <p><?php esc_html_e( "What skills are you seeing develop in others? What areas still need to be developed?", 'zume' ) ?></p>
+                                    <p><?php esc_html_e( "Having a Coaching Checklist will help you stay focused and engaged as you develop followers of Jesus into leaders in God’s family, everywhere you go.", 'zume' ) ?></p>
                                     <?php esc_html_e( "The Coaching Checklist is a powerful tool you can use to quickly assess your own strengths and vulnerabilities when it comes to making disciples who multiply. It's also a powerful tool you can use to help others – and others can use to help you.", 'zume' ) ?>
                                     <br><br>
                                     <?php esc_html_e( "Find the Coaching Checklist section in your Zúme Guidebook, and take this quick (5-minutes or less) self-assessment:", 'zume' ) ?>

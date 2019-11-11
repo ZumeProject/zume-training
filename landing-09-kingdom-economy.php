@@ -51,9 +51,9 @@ if (have_posts()) :
                             <!-- Activity Block  -->
                             <div class="grid-x grid-margin-x grid-margin-y">
                                 <div class="cell content-large">
-                                    <p><?php esc_html_e("God shows us in His Kingdom economy we’re rewarded not by what we get - but by what we give away.", 'zume' ) ?></p>
-                                    <p><?php esc_html_e("When we are faithful to OBEY and SHARE what the Lord has shared with us, then He promises to share even more. Jesus said - Whoever can be trusted with very little can also be trusted with much.", 'zume' ) ?></p>
-                                    <p><?php esc_html_e("This is the path to deeper insights, greater intimacy and living the abundant life God created us to live. This is the way we can walk in the good works God has already planned for us to do.", 'zume' ) ?></p>
+                                    <p><?php esc_html_e( "God shows us in His Kingdom economy we’re rewarded not by what we get - but by what we give away.", 'zume' ) ?></p>
+                                    <p><?php esc_html_e( "When we are faithful to OBEY and SHARE what the Lord has shared with us, then He promises to share even more. Jesus said - Whoever can be trusted with very little can also be trusted with much.", 'zume' ) ?></p>
+                                    <p><?php esc_html_e( "This is the path to deeper insights, greater intimacy and living the abundant life God created us to live. This is the way we can walk in the good works God has already planned for us to do.", 'zume' ) ?></p>
                                 </div>
                             </div> <!-- grid-x -->
 

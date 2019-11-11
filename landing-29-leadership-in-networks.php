@@ -51,9 +51,9 @@ if (have_posts()) :
                             <!-- Activity Block  -->
                             <div class="grid-x grid-margin-x grid-margin-y">
                                 <div class="cell content-large">
-                                    <p><?php esc_html_e("So what happens to churches as they grow and start new churches that start new churches that start new churches? How do they stay connected? How do they live life together as an extended spiritual family?", 'zume' ) ?></p>
-                                    <p><?php esc_html_e("The answer is that all of these simple churches are just like the cells in a growing body and they connect and network into a city or regional church.", 'zume' ) ?></p>
-                                    <p><?php esc_html_e("The churches are related. They share the same spiritual DNA. They are all connected out of the same first multiplying family. And now -- with some guidance - they come together as a larger body to do even more.", 'zume' ) ?></p>
+                                    <p><?php esc_html_e( "So what happens to churches as they grow and start new churches that start new churches that start new churches? How do they stay connected? How do they live life together as an extended spiritual family?", 'zume' ) ?></p>
+                                    <p><?php esc_html_e( "The answer is that all of these simple churches are just like the cells in a growing body and they connect and network into a city or regional church.", 'zume' ) ?></p>
+                                    <p><?php esc_html_e( "The churches are related. They share the same spiritual DNA. They are all connected out of the same first multiplying family. And now -- with some guidance - they come together as a larger body to do even more.", 'zume' ) ?></p>
                                 </div>
                             </div> <!-- grid-x -->
 
