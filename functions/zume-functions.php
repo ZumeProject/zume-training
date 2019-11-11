@@ -356,7 +356,7 @@ function zume_v4_ready_language() {
     $ready = [];
 
 //    $ready['en'] = true;
-    
+
     $current = zume_current_language();
 
     return $ready[$current] ?? false;

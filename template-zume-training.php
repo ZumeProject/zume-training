@@ -175,7 +175,7 @@ $current_language = zume_current_language();
                             <div class="cell small-12 medium-6 session">
                                 <div class="grid-x grid-padding-x">
                                     <div class="cell medium-10 overview-title"><h2><?php echo esc_html__( 'Session 2', 'zume' ) ?></h2></div>
-                                    <div class="cellmedium-2 start">
+                                    <div class="cell medium-2 start">
                                         <a onclick="open_session( 2 )" class="button primary-button-hollow"><?php echo esc_html__( "Start", 'zume' ) ?></a>
                                     </div>
                                     <div class="cell small-9 medium-10 t-activities hide-extra">
