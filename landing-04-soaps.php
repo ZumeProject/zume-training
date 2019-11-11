@@ -29,9 +29,9 @@ if (have_posts()) :
                         <h1>
                             <strong><?php the_title(); ?></strong>
                         </h1>
-                        <p>
-                            <a onclick="open_session(<?php echo esc_attr( $session_number ); ?>)"><?php echo esc_html__( 'This concept can be found in session', 'zume' ) ?> <?php echo esc_html( $session_number ) ?></a>.
-                        </p>
+                        <span class="sub-caption">
+                            <a onclick="open_session(<?php echo esc_attr( $session_number ); ?>)"><?php echo esc_html__( 'This concept can be found in session', 'zume' ) ?> <?php echo esc_html( $session_number ) ?></a>
+                        </span>
                     </div>
 
                     <div class="medium-2 small-1 cell"></div><!-- Side spacer -->
@@ -96,8 +96,6 @@ if (have_posts()) :
                             <div class="grid-x grid-margin-y">
                                 <div class="cell content-large">
                                     <p><?php esc_html_e( "As a follower of Jesus, we should be reading Scripture daily. A good guideline is to read through a minimum of 25-30 chapters in the Bible each week. Keeping a daily journal daily using the S.O.A.P.S. Bible Reading format will help you understand, obey and share even more. S.O.A.P.S. is:", 'zume' ) ?></p>
-                                </div>
-                                <div class="cell content-large">
                                     <ul>
                                         <li><?php esc_html_e( "Scripture: Write out one or more verses that are particularly meaningful to you, today.", 'zume' ) ?></li>
                                         <li><?php esc_html_e( "Observation: Rewrite those verses or key points in your own words to better understand.", 'zume' ) ?>
@@ -108,12 +106,27 @@ if (have_posts()) :
                                         </li>
                                         <li><?php esc_html_e( "Sharing: Ask God who He wants you to share with about what you’ve learned applied.", 'zume' ) ?></li>
                                     </ul>
-                                    <p><?php esc_html_e( "Here’s an example of S.O.A.P.S. at work:", 'zume' ) ?></p>
+
+                                    <h3><?php esc_html_e( "Here’s an example of S.O.A.P.S. at work:", 'zume' ) ?></h3>
                                     <p><?php esc_html_e( "S – “For my thoughts are not your thoughts, nor are your ways My ways,” declares the Lord. “For as the heavens are higher than the earth, so are My ways higher than your ways and My thoughts than your thoughts.” Isaiah 55:8-9", 'zume' ) ?></p>
                                     <p><?php esc_html_e( "O – As a human, I’m limited in what I know and what I know how to do. God is not limited in any way. He sees and knows EVERYTHING. He can do ANYTHING.", 'zume' ) ?></p>
                                     <p><?php esc_html_e( "A – Since God knows everything and His ways are best, I’ll have much more success in life if I follow Him instead of relying on my own way of doing things.", 'zume' ) ?></p>
                                     <p><?php esc_html_e( "P – Lord, I don’t know how to live a good life that pleases You and helps others. My ways lead to mistakes. My thoughts lead to hurt. Please teach me Your ways and Your thoughts, instead. Let your Holy Spirit guide me as I follow You.", 'zume' ) ?></p>
                                     <p><?php esc_html_e( "S – I will share these verses and this application with my friend, Steve, who is going through a difficult time and needs direction for important decisions he’s facing.", 'zume' ) ?></p>
+                                </div>
+                            </div>
+                            <!-- grid-x -->
+
+                            <!-- Activity Block -->
+                            <div class="grid-x grid-margin-x grid-margin-y">
+                                <div class="cell content-large center">
+                                    <h3 class="center"><?php esc_html_e( 'Ask Yourself', 'zume' ) ?></h3>
+                                </div>
+                                <div class="cell content-large">
+                                    <ol class="rectangle-list">
+                                        <li><?php esc_html_e( 'Is sharing important to the depth of my bible study?', 'zume' ) ?></li>
+                                        <li><?php esc_html_e( 'Who are the people in my circles that I can share with right now?', 'zume' ) ?></li>
+                                    </ol>
                                 </div>
                             </div>
                             <!-- grid-x -->

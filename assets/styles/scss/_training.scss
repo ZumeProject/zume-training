@@ -26,6 +26,10 @@
         line-height: 1rem;
         margin-bottom: .5rem;
         font-weight: 100;
+
+        @media (max-width: $breakpoint-medium ) {
+
+        }
     }
 
     .t-ad-message {
@@ -50,6 +54,16 @@
     }
     .start {
         text-align: right;
+
+        @media (max-width: $breakpoint-medium ) {
+            width:100%;
+            text-align: center;
+        }
+    }
+    .overview-title {
+        @media (max-width: $breakpoint-medium ) {
+            text-align: center;
+        }
     }
     .toggle-icons {
         font-size:1.2rem;
@@ -295,6 +309,15 @@
         }
     }
 
+    .session {
+        a {
+            font-weight: bold;
+        }
+        a.button {
+            font-weight: normal;
+        }
+    }
+
     .h-line {
         border-bottom: 1px solid black;
 
@@ -305,6 +328,13 @@
     }
 
     // landing pages
+    .landing {
+        h2 {
+            @media (max-width: $breakpoint-medium ) {
+                font-size: $large-text;
+            }
+        }
+    }
     .landing-part {
         //height:700px;
         border: 1px solid $primary-color;
@@ -320,23 +350,36 @@
         vertical-align: middle;
 
         @media (max-width: $breakpoint-medium ) {
-            margin:0 10px;
+            //margin:0 10px;
             width: 40px;
             height: 40px;
         }
     }
     .stat-landing-title {
-        font-size: 1.2em;
-        padding-bottom: 1em;
+        font-size:  $large-text;
+        text-align: center;
+        //padding-bottom: 1em;
 
         @media (max-width: $breakpoint-medium ) {
+            font-size: $small-text;
+            font-weight: bold;
+        }
+    }
+    .sub-caption {
+        font-size: $medium-text;
+
+        @media (max-width: $breakpoint-medium ) {
+            font-size: $small-text;
         }
     }
     .content-large {
         padding: 12px 0;
-        text-align: left;
-        float: right;
-        font-size: 1.5rem;
+        font-size: $large-text;
+
+        @media (max-width: $breakpoint-medium ) {
+            font-size: $medium-text;
+            padding: 8px 0;
+        }
     }
     .inset {
         padding: 0 2em;

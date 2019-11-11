@@ -28,9 +28,9 @@ if (have_posts()) :
                         <h1>
                             <strong><?php the_title(); ?></strong>
                         </h1>
-                        <p>
-                            <a onclick="open_session(<?php echo esc_attr( $session_number ); ?>)"><?php echo esc_html__( 'This concept can be found in session', 'zume' ) ?> <?php echo esc_html( $session_number ) ?></a>.
-                        </p>
+                        <span class="sub-caption">
+                            <a onclick="open_session(<?php echo esc_attr( $session_number ); ?>)"><?php echo esc_html__( 'This concept can be found in session', 'zume' ) ?> <?php echo esc_html( $session_number ) ?></a>
+                        </span>
                     </div>
 
                     <div class="medium-2 small-1 cell"></div><!-- Side spacer -->
@@ -81,9 +81,12 @@ if (have_posts()) :
                                     <h3 class="center"><?php esc_html_e( 'Ask Yourself', 'zume' ) ?></h3>
                                 </div>
                                 <div class="cell content-large">
-                                    <?php esc_html_e( "Think about God's commands that you already know. How \"faithful\" are you in terms of obeying and sharing those things?", 'zume' ) ?>
+                                    <ul class="rectangle-list">
+                                        <li><?php esc_html_e( "Think about God's commands that you already know. How \"faithful\" are you in terms of obeying and sharing those things?", 'zume' ) ?></li>
+                                    </ul>
                                 </div>
                             </div> <!-- grid-x -->
+
                         </section>
                     </div>
 

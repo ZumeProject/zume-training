@@ -29,9 +29,9 @@ if (have_posts()) :
                         <h1>
                             <strong><?php the_title(); ?></strong>
                         </h1>
-                        <p>
-                            <a onclick="open_session(<?php echo esc_attr( $session_number ); ?>)"><?php echo esc_html__( 'This concept can be found in session', 'zume' ) ?> <?php echo esc_html( $session_number ) ?></a>.
-                        </p>
+                        <span class="sub-caption">
+                            <a onclick="open_session(<?php echo esc_attr( $session_number ); ?>)"><?php echo esc_html__( 'This concept can be found in session', 'zume' ) ?> <?php echo esc_html( $session_number ) ?></a>
+                        </span>
                     </div>
 
                     <div class="medium-2 small-1 cell"></div><!-- Side spacer -->
@@ -79,15 +79,31 @@ if (have_posts()) :
                             </div> <!-- grid-x -->
 
                             <div class="grid-x">
+                                <div class="cell">
+                                    <div class="grid-x grid-padding-x center">
+                                        <div class="cell small-4"><img src="<?php echo esc_url( get_theme_file_uri() ) . '/assets/images/temp/33_en_zume_guidebook 2_Page_08.jpg' ?>" alt="list of 100 page 1" /></div>
+                                        <div class="cell small-4"><img src="<?php echo esc_url( get_theme_file_uri() ) . '/assets/images/temp/33_en_zume_guidebook 2_Page_09.jpg' ?>" alt="list of 100 page 2" /></div>
+                                        <div class="cell small-4"><img src="<?php echo esc_url( get_theme_file_uri() ) . '/assets/images/temp/33_en_zume_guidebook 2_Page_10.jpg' ?>" alt="list of 100 page 3" /></div>
+                                    </div>
+                                </div>
                                 <div class="cell center">
                                     <a href="<?php echo esc_url( zume_files_uri() . '74_en_list_of_100.pdf' ) ?>" class="button primary large"><?php esc_html_e( "Download List of 100", 'zume' ) ?></a>
                                 </div>
-                                <div class="cell center">
-                                    <img src="<?php echo esc_url( get_theme_file_uri() ) . '/assets/images/temp/33_en_zume_guidebook 2_Page_08.jpg' ?>" />
-                                    <img src="<?php echo esc_url( get_theme_file_uri() ) . '/assets/images/temp/33_en_zume_guidebook 2_Page_09.jpg' ?>" />
-                                    <img src="<?php echo esc_url( get_theme_file_uri() ) . '/assets/images/temp/33_en_zume_guidebook 2_Page_10.jpg' ?>" />
+                            </div>
+
+                            <!-- Activity Block -->
+                            <div class="grid-x grid-margin-x grid-margin-y">
+                                <div class="cell content-large center">
+                                    <h3 class="center"><?php esc_html_e( 'Ask Yourself', 'zume' ) ?></h3>
+                                </div>
+                                <div class="cell content-large">
+                                    <ol class="rectangle-list">
+                                        <li><?php esc_html_e( 'What names on this list could you share with in the next 24 hours?', 'zume' ) ?></li>
+                                        <li><?php esc_html_e( 'When is a regular time in the week when you can review this list and take steps to spiritually engage your personal network?', 'zume' ) ?></li>
+                                    </ol>
                                 </div>
                             </div>
+                            <!-- grid-x -->
 
                         </section>
 

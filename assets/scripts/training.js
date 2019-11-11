@@ -779,7 +779,7 @@ function open_archive_groups() {
   let list = ''
   jQuery.each( zumeTraining.groups, function(i,v) {
     if ( v.closed === true ) {
-      list += ''+ `<tr id="archive_${_.escape( v.key )}"><td>${_.escape( v.group_name )}</td><td><button type="button" class="button clear padding-bottom-0" onclick="activate_group('${_.escape( v.key )}', ${_.escape( i )})">${__('Re-Activate', 'zume')}</button></td><td><button type="button" class="button alert clear padding-bottom-0" onclick="delete_group('${_.escape( v.key )}', ${_.escape( i )}} )">${__('Delete Forever', 'zume')}</button></td></tr>`
+      list += ''+ `<tr id="archive_${_.escape( v.key )}"><td>${_.escape( v.group_name )}</td><td><button type="button" class="button clear padding-bottom-0" onclick="activate_group('${_.escape( v.key )}', ${_.escape( i )})">${__('Re-Activate', 'zume')}</button></td><td><button type="button" class="button alert clear padding-bottom-0" onclick="delete_group('${_.escape( v.key )}', ${_.escape( i )} )">${__('Delete Forever', 'zume')}</button></td></tr>`
     }
   })
   jQuery('#training-modal-content').empty().append(`

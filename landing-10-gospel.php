@@ -29,9 +29,9 @@ if (have_posts()) :
                         <h1>
                             <strong><?php the_title(); ?></strong>
                         </h1>
-                        <p>
-                            <a onclick="open_session(<?php echo esc_attr( $session_number ); ?>)"><?php echo esc_html__( 'This concept can be found in session', 'zume' ) ?> <?php echo esc_html( $session_number ) ?></a>.
-                        </p>
+                        <span class="sub-caption">
+                            <a onclick="open_session(<?php echo esc_attr( $session_number ); ?>)"><?php echo esc_html__( 'This concept can be found in session', 'zume' ) ?> <?php echo esc_html( $session_number ) ?></a>
+                        </span>
                     </div>
 
                     <div class="medium-2 small-1 cell"></div><!-- Side spacer -->
@@ -76,6 +76,7 @@ if (have_posts()) :
 
                                 </div>
                             </div> <!-- grid-x -->
+
                             <!-- Activity Block  -->
                             <div class="grid-x grid-margin-x grid-margin-y">
                                 <div class="cell content-large center">

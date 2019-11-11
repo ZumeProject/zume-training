@@ -29,9 +29,9 @@ if (have_posts()) :
                         <h1>
                             <strong><?php the_title(); ?></strong>
                         </h1>
-                        <p>
-                            <a onclick="open_session(<?php echo esc_attr( $session_number ); ?>)"><?php echo esc_html__( 'This concept can be found in session', 'zume' ) ?> <?php echo esc_html( $session_number ) ?></a>.
-                        </p>
+                        <span class="sub-caption">
+                            <a onclick="open_session(<?php echo esc_attr( $session_number ); ?>)"><?php echo esc_html__( 'This concept can be found in session', 'zume' ) ?> <?php echo esc_html( $session_number ) ?></a>
+                        </span>
                     </div>
 
                     <div class="medium-2 small-1 cell"></div><!-- Side spacer -->
@@ -67,7 +67,7 @@ if (have_posts()) :
                                         <li><?php esc_html_e( "God’s Story - Finally share God’s story in a way that connects with their world-view, values and priorities.", 'zume' ) ?></li>
                                     </ul>
                                     <p><?php esc_html_e( "Your Testimony doesn’t have to be lengthy or share too many details to be impactful. In fact, keeping your story to around 3-minutes will leave time for questions and deeper conversation. If you’re worried about how to get started - keep it simple. God can use your story to change lives, but remember - you’re the one who gets to tell it.", 'zume' ) ?></p>
-                                    <p><?php esc_html_e( "ACTIVITY [45 min] - Break into groups of two or three and spend the next 45 minutes practicing sharing your Testimony. Choose 5 people from your List of 100 that you marked as an “Unbeliever” or “Unknown.” Have someone pretend to be each of those five people, and practice your Testimony in a way that you think will make sense to that particular person. You can use any of the patterns detailed above or some other way you think will work well for the one you’re sharing with. After you’ve practiced, switch. Pretend to be someone else’s five people from their list. By the time you’re finished, you should be able to tell your Testimony in about 3 minutes or less.", 'zume' ) ?></p>
+
                                 </div>
                             </div> <!-- grid-x -->
 
@@ -90,6 +90,21 @@ if (have_posts()) :
 
                                 </div>
                             </div> <!-- grid-x -->
+
+                            <!-- Activity Block -->
+                            <div class="grid-x grid-margin-x grid-margin-y">
+                                <div class="cell content-large center">
+                                    <h3 class="center"><?php esc_html_e( 'Ask Yourself', 'zume' ) ?></h3>
+                                </div>
+                                <div class="cell content-large">
+                                    <ol class="rectangle-list">
+                                        <li><?php esc_html_e( 'What false fears keep us from sharing our testimony?', 'zume' ) ?></li>
+                                        <li><?php esc_html_e( 'What makes a testimony effective? Where does its power come from?', 'zume' ) ?></li>
+                                    </ol>
+                                </div>
+                            </div>
+                            <!-- grid-x -->
+
                         </section>
                     </div>
 

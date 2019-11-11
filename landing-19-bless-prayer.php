@@ -29,9 +29,9 @@ if (have_posts()) :
                         <h1>
                             <strong><?php the_title(); ?></strong>
                         </h1>
-                        <p>
-                            <a onclick="open_session(<?php echo esc_attr( $session_number ); ?>)"><?php echo esc_html__( 'This concept can be found in session', 'zume' ) ?> <?php echo esc_html( $session_number ) ?></a>.
-                        </p>
+                        <span class="sub-caption">
+                            <a onclick="open_session(<?php echo esc_attr( $session_number ); ?>)"><?php echo esc_html__( 'This concept can be found in session', 'zume' ) ?> <?php echo esc_html( $session_number ) ?></a>
+                        </span>
                     </div>
 
                     <div class="medium-2 small-1 cell"></div><!-- Side spacer -->
@@ -63,9 +63,22 @@ if (have_posts()) :
                                     <p><?php esc_html_e( "In most cases, people are grateful you care enough to pray.", 'zume' ) ?></p>
                                     <p><?php esc_html_e( "If the person is not a Christian, your prayer may open the door to a spiritual conversation and an opportunity to share your story and God’s story. You can invite them to be a part of a Bible study or even host one in their home.", 'zume' ) ?></p>
                                     <p><?php esc_html_e( "If the person is a Christian you can invite them to join your Prayer Walk or train them how they can Prayer Walk and use simple steps like praying for areas of influence or the B.L.E.S.S. Prayer to grow God’s family even more.", 'zume' ) ?></p>
-                                    <p><?php esc_html_e( "ACTIVITY [15 min] - Break into groups of two or three and spend the next 15 minutes practicing the B.L.E.S.S. Prayer. Practice praying the 5 areas of the B.L.E.S.S. Prayer for someone AND practice how you would train others to understand and use the B.L.E.S.S. Prayer, too.", 'zume' ) ?></p>
                                 </div>
                             </div>
+
+                            <!-- Activity Block -->
+                            <div class="grid-x grid-margin-x grid-margin-y">
+                                <div class="cell content-large center">
+                                    <h3 class="center"><?php esc_html_e( 'Ask Yourself', 'zume' ) ?></h3>
+                                </div>
+                                <div class="cell content-large">
+                                    <ol class="rectangle-list">
+                                        <li><?php esc_html_e( 'What fears do you have about asking to pray for strangers? What could God say to you that would take your fears away?', 'zume' ) ?></li>
+                                        <li><?php esc_html_e( 'What good things could happen if you risk to pray for someone, even a stranger?', 'zume' ) ?></li>
+                                    </ol>
+                                </div>
+                            </div>
+                            <!-- grid-x -->
                         </section>
 
                     </div>

@@ -28,9 +28,9 @@ if (have_posts()) :
                         <h1>
                             <strong><?php the_title(); ?></strong>
                         </h1>
-                        <p>
-                            <a onclick="open_session(<?php echo esc_attr( $session_number ); ?>)"><?php echo esc_html__( 'This concept can be found in session', 'zume' ) ?> <?php echo esc_html( $session_number ) ?></a>.
-                        </p>
+                        <span class="sub-caption">
+                            <a onclick="open_session(<?php echo esc_attr( $session_number ); ?>)"><?php echo esc_html__( 'This concept can be found in session', 'zume' ) ?> <?php echo esc_html( $session_number ) ?></a>
+                        </span>
                     </div>
 
                     <div class="medium-2 small-1 cell"></div><!-- Side spacer -->
@@ -68,7 +68,6 @@ if (have_posts()) :
                                     <p><?php esc_html_e( "EDUCATION - Look for and pray over Educational centers such as schools and administration buildings, vocational training centers, community colleges and universities. Pray for righteous educators to teach God’s truth and protect the minds of their students. Pray that God would intervene in every effort to promote lies or confusion. Pray that these places would send out wise citizens who have a heart to serve and lead.", 'zume' ) ?></p>
                                     <p><?php esc_html_e( "COMMUNICATION - Look for and pray over Communication centers such as radio stations, tv stations and newspaper publishers. Pray for God’s Story and the testimony of His followers to be spread throughout the city and around the world. Pray that His message is delivered through His medium to His multitudes and that God’s people everywhere will see God’s work.", 'zume' ) ?></p>
                                     <p><?php esc_html_e( "SPIRITUALITY - Look for and pray over Spiritual centers such as church buildings, mosques or temples. Pray that every spiritual seeker would find peace and comfort in Jesus and not be distracted or confused by any false religion.", 'zume' ) ?></p>
-                                    <p><?php esc_html_e( "ACTIVITY [60-90 min] - Break into groups of two or three and go out into the community to practice Prayer Walking. Choosing a location can be as simple as walking out from your current session or praying and planning a destination. Go as God leads, and plan on spending 60-90 minutes on this activity.", 'zume' ) ?></p>
                                 </div>
                             </div> <!-- grid-x -->
 
@@ -90,6 +89,20 @@ if (have_posts()) :
 
                                 </div>
                             </div> <!-- grid-x -->
+
+                            <!-- Activity Block -->
+                            <div class="grid-x grid-margin-x grid-margin-y">
+                                <div class="cell content-large center">
+                                    <h3 class="center"><?php esc_html_e( 'Ask Yourself', 'zume' ) ?></h3>
+                                </div>
+                                <div class="cell content-large">
+                                    <ol class="rectangle-list">
+                                        <li><?php esc_html_e( 'What are the normal places in your daily life that you could naturally prayer walk?', 'zume' ) ?></li>
+                                        <li><?php esc_html_e( 'What nearby locations could you prayer walk that are "dark" and could benefit from your prayer?', 'zume' ) ?></li>
+                                    </ol>
+                                </div>
+                            </div>
+                            <!-- grid-x -->
                         </section>
                     </div>
 

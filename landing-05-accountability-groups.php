@@ -29,9 +29,9 @@ if (have_posts()) :
                         <h1>
                             <strong><?php the_title(); ?></strong>
                         </h1>
-                        <p>
-                            <a onclick="open_session(<?php echo esc_attr( $session_number ); ?>)"><?php echo esc_html__( 'This concept can be found in session', 'zume' ) ?> <?php echo esc_html( $session_number ) ?></a>.
-                        </p>
+                        <span class="sub-caption">
+                            <a onclick="open_session(<?php echo esc_attr( $session_number ); ?>)"><?php echo esc_html__( 'This concept can be found in session', 'zume' ) ?> <?php echo esc_html( $session_number ) ?></a>
+                        </span>
                     </div>
 
                     <div class="medium-2 small-1 cell"></div><!-- Side spacer -->
@@ -85,7 +85,7 @@ if (have_posts()) :
                                 <div class="cell content-large">
                                     <p><?php esc_html_e( "Accountability Groups are made up of two or three people of the same gender - men with men, women with women - who meet once a week to discuss a set of questions that help reveal areas where things are going right and other areas that need correction. They can even meet by phone if they’re unable to meet face-to-face. Everyone in the group needs to understand that what is shared is confidential.", 'zume' ) ?></p>
                                     <p><?php esc_html_e( "Spend the next 45 minutes working together through the Accountability Questions - List 2, below. Since you haven’t done a group reading before this session, just skip over the questions about previous readings. List 1 is a great option as you get further into training.", 'zume' ) ?></p>
-                                    <p><?php esc_html_e( "Accountability Questions - List 1", 'zume' ) ?></p>
+                                    <h3><?php esc_html_e( "Accountability Questions - List 1", 'zume' ) ?></h3>
                                     <ol>
                                         <li><?php esc_html_e( "Pray that we will become like Jesus.", 'zume' ) ?></li>
                                         <li><?php esc_html_e( "How are you doing? How is your prayer life?", 'zume' ) ?></li>
@@ -104,7 +104,7 @@ if (have_posts()) :
                                         <li><?php esc_html_e( "Who can you invite to the group next week? If the group is four or more, multiply it.", 'zume' ) ?></li>
                                         <li><?php esc_html_e( "Close with prayer regarding what was shared.", 'zume' ) ?></li>
                                     </ol>
-                                    <p><?php esc_html_e( "Accountability Questions - List 2", 'zume' ) ?></p>
+                                    <h3><?php esc_html_e( "Accountability Questions - List 2", 'zume' ) ?></h3>
                                     <ol>
                                         <li><?php esc_html_e( "How have your insights from last week’s reading shaped the way you think and live?", 'zume' ) ?></li>
                                         <li><?php esc_html_e( "Who did you pass your insights from last week on to and how was it received?", 'zume' ) ?></li>
@@ -125,6 +125,20 @@ if (have_posts()) :
                                         <li><?php esc_html_e( "How have you taken opportunities to serve or bless others, especially believers?", 'zume' ) ?></li>
                                         <li><?php esc_html_e( "Have you seen specific answers to prayer?", 'zume' ) ?></li>
                                         <li><?php esc_html_e( "Did you complete the reading for the week?", 'zume' ) ?></li>
+                                    </ol>
+                                </div>
+                            </div>
+                            <!-- grid-x -->
+
+                            <!-- Activity Block -->
+                            <div class="grid-x grid-margin-x grid-margin-y">
+                                <div class="cell content-large center">
+                                    <h3 class="center"><?php esc_html_e( 'Ask Yourself', 'zume' ) ?></h3>
+                                </div>
+                                <div class="cell content-large">
+                                    <ol class="rectangle-list">
+                                        <li><?php esc_html_e( 'Who can I meet with regularly and engage these issues with? Pray and ask God to give you a name.', 'zume' ) ?></li>
+                                        <li><?php esc_html_e( 'What keeps you from this kind of intentionally with your personal holiness?', 'zume' ) ?></li>
                                     </ol>
                                 </div>
                             </div>
