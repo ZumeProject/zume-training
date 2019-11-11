@@ -352,6 +352,15 @@ function zume_landing_page_post_id( int $number ) : int {
     return $list[$number] ?? 0;
 }
 
+function zume_v4_ready_language() {
+    $ready = [
+        'en'
+    ];
+    $current = zume_current_language();
+
+    return array_search( $current, $ready );
+}
+
 /***********************************************************************************************************************
  *
  * ADMIN AREA
