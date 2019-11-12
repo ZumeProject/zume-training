@@ -69,31 +69,7 @@ if (have_posts()) :
                 </div> <!-- grid-x -->
 
 
-                <!------------------------------------------------------------------------------------------------>
-                <!-- Transcription section -->
-                <!------------------------------------------------------------------------------------------------>
-                <div class="grid-x">
-                    <div class="large-2 cell"></div><!-- Side spacer -->
 
-                    <!-- Center column -->
-                    <div class="large-8 small-12 cell">
-
-                        <div class="grid-x grid-margin-x grid-margin-y">
-                            <div class="large-12 cell content-large center">
-                                <h3 class="center"><?php echo esc_html__( 'Video Transcript', 'zume' ) ?></h3>
-                            </div>
-                            <div class="large-12 cell content-large">
-
-                                <?php the_content(); ?>
-
-                            </div>
-                        </div>
-
-                    </div>
-
-
-                    <div class="large-2 cell"></div><!-- Side spacer -->
-                </div> <!-- grid-x -->
 
             </div> <!-- end #inner-content --></div> <!-- end #content -->
 

@@ -56,7 +56,7 @@ if (have_posts()) :
                                     <hr>
                                 </div>
                             </div>
-
+                            <?php the_content(); ?>
                             <!-- Activity Block  -->
                             <div class="grid-x grid-margin-x grid-margin-y">
                                 <div class="cell content-large">
@@ -473,7 +473,7 @@ if (have_posts()) :
                             </div>
                             <div class="large-12 cell content-large">
 
-                                <?php the_content(); ?>
+
 
                             </div>
                         </div>

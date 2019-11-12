@@ -48,9 +48,6 @@ if (have_posts()) :
                     <div class="large-8 small-12 cell" id="training-content">
                         <section>
 
-
-
-
                             <!-- Video block -->
                             <div class="grid-x grid-margin-x grid-margin-y">
                                 <div class="small-12 small-centered cell video-section">
@@ -75,19 +72,13 @@ if (have_posts()) :
                             <div class="grid-x grid-margin-x grid-margin-y">
                                 <div class="cell content-large">
                                     <p><?php esc_html_e("Peer Mentoring Groups use leader-to-leader mentoring with individual followers of Jesus, with simple churches, with ministry organizations or even with a global simple church network that reaches around the world.", 'zume') ?></p>
-
+                                    <p><?php esc_html_e("Peer Mentoring Groups consists of people who are leading and starting 3/3 Groups. It also follows a 3/3 format and is a powerful way to assess the spiritual health of God’s work in your area.", 'zume') ?></p>
                                     <p><?php esc_html_e("Peer Mentoring Groups follow Jesus’ example of ministry from scripture, ask questions of one another and give feedback -- all using the same basic time structure as a 3/3 Group.", 'zume') ?></p>
 
-                                    <p><?php esc_html_e("The purpose of a Peer Mentoring Group is to provide a simple format for helping followers of Jesus grow through prayer, obedience, application and accountability. In other words -- “to love one another.”", 'zume') ?></p>
-
                                     <p><?php esc_html_e("Jesus said - “A new command I give you: Love one another. As I have loved you, so you must love one another. By this everyone will know that you are my disciples, if you love one another.”", 'zume') ?></p>
-
-                                    <p><?php esc_html_e("A Peer Mentoring Group is a group that consists of people who are leading and starting 3/3 Groups. It also follows a 3/3 format and is a powerful way to assess the spiritual health of God’s work in your area.", 'zume') ?></p>
-
-                                    <p><?php esc_html_e("Peer Mentoring Groups use leader-to-leader mentoring with individual followers of Jesus, with simple churches, with ministry organizations or even with a global simple church network that reaches around the world.", 'zume') ?></p>
-
-                                    <p><?php esc_html_e("Peer Mentoring Group participants look at objective indicators following Jesus’ strategy for ministry and ask questions and give feedback. These sessions are not meant to inflate anyone’s ego or make anyone feel inferior. They are meant to instruct and inspire.", 'zume') ?></p>
-
+                                    <p><?php esc_html_e("The purpose of a Peer Mentoring Group is to provide a simple format for helping followers of Jesus grow through prayer, obedience, application and accountability. In other words -- “to love one another.”", 'zume') ?></p>
+                                </div>
+                                <div class="cell content-large">
                                     <p><?php esc_html_e("Use this simple format:", 'zume') ?></p>
 
                                     <h3><?php esc_html_e("LOOK BACK [1/3 of your time]", 'zume') ?></h3>
@@ -96,7 +87,8 @@ if (have_posts()) :
                                     <p><?php esc_html_e("How well are you abiding in Christ? [Scripture, prayer, trust, obedience, key relationships?]", 'zume') ?></p>
                                     <p><?php esc_html_e("Did your group complete your action plans from the last session? Review them.", 'zume') ?></p>
 
-
+                                </div>
+                                <div class="cell content-large">
 
                                     <h3><?php esc_html_e("LOOK UP [1/3 of your time]", 'zume') ?></h3>
 
@@ -110,7 +102,8 @@ if (have_posts()) :
                                         <li><?php esc_html_e("Are there any questions from seasoned leaders or other participants?", 'zume' ) ?></li>
                                     </ol>
 
-
+                                </div>
+                                <div class="cell content-large">
                                     <h3><?php esc_html_e("LOOK FORWARD [1/3 of your time]", 'zume') ?></h3>
 
                                     <p><?php esc_html_e("Spend time in silent prayer with everyone in the group asking the Holy Spirit to show them how to answer these questions:", 'zume') ?></p>

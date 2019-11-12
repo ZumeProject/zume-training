@@ -460,3 +460,8 @@ dl, ol, ul {
     background-color: #E7F6FC;
     border: 1px solid #00aeff;
 }
+.course-steps.wizard>.steps li:not(:first-child):before {
+    @media (max-width: $breakpoint-medium ) {
+        border:0;
+    }
+}
