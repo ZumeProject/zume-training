@@ -213,6 +213,11 @@ function zume_dashboard_url( $current_language = null ) {
         $current_language = zume_current_language();
     }
     $url = zume_get_posts_translation_url( 'dashboard', $current_language );
+    /** @todo temporary strategy until full 4.0 conversion */
+    /** v4.0 conversion */
+    if ( zume_v4_ready_language() ) {
+        $url = zume_training_url( $current_language );
+    }
     return $url;
 }
 
@@ -355,7 +360,7 @@ function zume_landing_page_post_id( int $number ) : int {
 function zume_v4_ready_language() {
     $ready = [];
 
-//    $ready['en'] = true;
+    $ready['en'] = true;
 
     $current = zume_current_language();
 

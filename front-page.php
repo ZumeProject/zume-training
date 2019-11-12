@@ -68,7 +68,7 @@ $zume_current_lang = zume_current_language();
                 <div class="grid-x white-section">
 
                     <?php if ( ! is_user_logged_in() ) : ?>
-                    <div class="cell show-for-small hide-for-large center">
+                    <div class="cell show-for-small hide-for-large center padding-top-1">
                         <a href="<?php echo esc_url( zume_register_url( zume_current_language() ) ); ?>" alt="Register" class="button large center primary-button-hollow">
                             <?php esc_html_e( 'Get Started', 'zume' ) ?>
                         </a>
@@ -86,7 +86,7 @@ $zume_current_lang = zume_current_language();
                             </div>
                             <?php if ( zume_v4_ready_language() ) : ?>
                             <div class="cell center">
-                                <a href="<?php echo esc_url( zume_training_url( $zume_current_lang ) ) ?>" class="button secondary-button large" ><?php esc_html_e("Explore Training", 'zume' ) ?></a>
+                                <a href="<?php echo esc_url( zume_training_url( $zume_current_lang ) ) ?>" class="button primary-button-hollow large" ><?php esc_html_e("Explore Training", 'zume' ) ?></a>
                             </div>
                             <?php endif; ?>
                             <div class="cell center">
