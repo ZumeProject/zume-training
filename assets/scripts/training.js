@@ -118,11 +118,11 @@ function get_groups() {
         div.append(`
     <div class="cell group-section border-bottom padding-bottom-2 margin-bottom-2">
       <div class="grid-x grid-padding-x">
-        <div class="cell padding-bottom-1 group-name small-6"  id="group_name_${_.escape( v.key )}"><!--Full width top --></div><div class="small-6"></div>
+        <div class="cell padding-bottom-1 group-name medium-6"  id="group_name_${_.escape( v.key )}"><!--Full width top --></div><div class="hide-for-small-only medium-6"></div>
         <div class="cell small-2"> <!-- Column 1 -->
            <div class="grid-y" id="session_list_${_.escape( v.key )}"><!-- Session List --></div>
         </div> <!-- Column 1 -->
-        <div class="cell small-4">
+        <div class="cell medium-4">
             <div class="grid-y">
                   <div class="cell column-header">${__('Members', 'zume')}</div>
                   <div class="cell padding-bottom-1">
@@ -135,7 +135,7 @@ function get_groups() {
                   <div class="cell add-member" id="add_member_${_.escape( v.key )}"><!-- add member area --></div>
             </div>
         </div> <!-- Column 2 -->
-        <div class="cell small-4"> <!-- Column 3 -->
+        <div class="cell medium-4"> <!-- Column 3 -->
             <div class="grid-y">
                 <div class="cell">
                   <span class="column-header">${__('Location', 'zume')}</span>
@@ -144,7 +144,7 @@ function get_groups() {
                 <div class="cell" id="add_location_${_.escape( v.key )}"><!-- Add Location Field --></div>
             </div>
         </div> <!-- Column 3 -->
-        <div class="cell small-2">
+        <div class="cell medium-2">
               <div class="grid-y" id="meta_column_${_.escape( v.key )}"><!-- Meta column buttons --></div>
         </div> <!-- Column 4 -->
       </div>

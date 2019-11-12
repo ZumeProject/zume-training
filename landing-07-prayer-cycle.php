@@ -78,7 +78,7 @@ if (have_posts()) :
                             <div class="grid-x grid-margin-x grid-margin-y">
                                 <div class="cell content-large">
                                     <p><?php esc_html_e("In just 12 simple steps - 5 minutes each - this Prayer Cycle guides you through twelve ways the Bible teaches us to pray. At the end, you’ll have prayed for an hour.", 'zume' ) ?></p>
-                                    <p><img src="<?php echo esc_url( zume_images_uri( 'pages' ) ) ?>prayer-cycle-en.png" alt="prayer cycle" /></p>
+                                    <p class="center"><img src="<?php echo esc_url( zume_images_uri( 'pages' ) ) ?>prayer-cycle-en.png" alt="prayer cycle" style="max-width:600px;" /></p>
                                     <p><strong><?php esc_html_e("PRAISE", 'zume' ) ?></strong><br><?php esc_html_e("Start your prayer hour by praising the Lord. Praise Him for things that are on your mind right now. Praise Him for one special thing He has done in your life in the past week. Praise Him for His goodness to your family.", 'zume' ) ?></p>
                                     <p><strong><?php esc_html_e("WAIT", 'zume') ?></strong><br><?php esc_html_e("Spend time waiting on the Lord. Be silent and let Him pull together reflections for you.", 'zume' ) ?></p>
                                     <p><strong><?php esc_html_e("CONFESS", 'zume') ?></strong><br><?php esc_html_e("Ask the Holy Spirit to show you anything in your life that might be displeasing to Him. Ask Him to point out attitudes that are wrong, as well as specific acts for which you have not yet made a prayer of confession. Now confess that to the Lord so that you might be cleansed.", 'zume' ) ?></p>
@@ -92,7 +92,7 @@ if (have_posts()) :
                                     <p><strong><?php esc_html_e("LISTEN", 'zume') ?></strong><br><?php esc_html_e("Spend time merging the things you have read, things you have prayed and things you have sung and see how the Lord brings them all together to speak to you.", 'zume' ) ?></p>
                                     <p><strong><?php esc_html_e("PRAISE", 'zume') ?></strong><br><?php esc_html_e("Praise the Lord for the time you have had to spend with Him and the impressions He has given you. Praise Him for His glorious attributes.", 'zume' ) ?></p>
                                     <p class="sub-caption"><?php esc_html_e("From Dick Eastman’s book The Hour that Changes the World © 2002 by Dick Eastman, Chosen Books, Grand Rapids, MI, used by permission.", 'zume' ) ?></p>
-                                    <p class="center"><a href="https://zumeproject.github.io/prayer-cycle/" target="_blank"><?php esc_html_e("Simple Prayer Cycle Timer App", 'zume' ) ?></a> </p>
+                                    <p class="center"><a class="button primary-button-hollow large" href="https://zumeproject.github.io/prayer-cycle/" target="_blank"><?php esc_html_e("Try the Simple Prayer Cycle Timer App", 'zume' ) ?></a> </p>
                                 </div>
 
                             </div> <!-- grid-x -->
@@ -104,7 +104,7 @@ if (have_posts()) :
                                 </div>
                                 <div class="cell content-large">
                                     <ul class="rectangle-list">
-                                        <li><?php esc_html_e( 'What would you have to move or stop doing, in order to increase your prayer life?', 'zume' ) ?></li>
+                                        <li><?php esc_html_e( 'What must you rearrange or stop doing in order to increase your prayer life?', 'zume' ) ?></li>
                                     </ul>
                                 </div>
                             </div>
