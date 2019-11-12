@@ -48,6 +48,26 @@ if (have_posts()) :
                     <div class="large-8 small-12 cell" id="training-content">
                         <section>
 
+                            <!-- Video block -->
+                            <div class="grid-x grid-margin-x grid-margin-y">
+                                <div class="small-12 small-centered cell video-section">
+
+                                    <!-- 12 -->
+                                    <?php if ( $alt_video ) : ?>
+                                        <video width="960" height="540" style="border: 1px solid lightgrey;margin: 0 15%;" controls>
+                                            <source src="<?php echo esc_url( Zume_Course::get_alt_video_by_key( 'alt_12' ) ) ?>" type="video/mp4">
+                                            Your browser does not support the video tag.
+                                        </video>
+                                    <?php else : ?>
+                                        <iframe style="border: 1px solid lightgrey;"  src="<?php echo esc_url( Zume_Course::get_video_by_key( '12' ) ) ?>" width="560" height="315"
+                                                frameborder="1"
+                                                webkitallowfullscreen mozallowfullscreen allowfullscreen>
+                                        </iframe>
+                                    <?php endif; ?>
+
+                                </div>
+                            </div> <!-- grid-x -->
+
                             <!-- Activity Block  -->
                             <div class="grid-x grid-margin-x grid-margin-y">
                                 <div class="cell content-large">
@@ -71,25 +91,7 @@ if (have_posts()) :
                                 </div>
                             </div> <!-- grid-x -->
 
-                            <!-- Video block -->
-                            <div class="grid-x grid-margin-x grid-margin-y">
-                                <div class="small-12 small-centered cell video-section">
 
-                                    <!-- 12 -->
-                                    <?php if ( $alt_video ) : ?>
-                                        <video width="960" height="540" style="border: 1px solid lightgrey;margin: 0 15%;" controls>
-                                            <source src="<?php echo esc_url( Zume_Course::get_alt_video_by_key( 'alt_12' ) ) ?>" type="video/mp4">
-                                            Your browser does not support the video tag.
-                                        </video>
-                                    <?php else : ?>
-                                        <iframe style="border: 1px solid lightgrey;"  src="<?php echo esc_url( Zume_Course::get_video_by_key( '12' ) ) ?>" width="560" height="315"
-                                                frameborder="1"
-                                                webkitallowfullscreen mozallowfullscreen allowfullscreen>
-                                        </iframe>
-                                    <?php endif; ?>
-
-                                </div>
-                            </div> <!-- grid-x -->
 
                             <!-- Activity Block -->
                             <div class="grid-x grid-margin-x grid-margin-y">

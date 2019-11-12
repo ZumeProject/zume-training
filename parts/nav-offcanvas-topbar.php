@@ -21,7 +21,7 @@
     <div class="cell small-6 medium-2" id="top-lang-div"><div id="lang-menu"><?php zume_the_languages( array( 'dropdown' => 1 ) ); ?></div></div>
     <div class="cell small-3 medium-2 show-for-small hide-for-large" id="top-mobile-menu-div">
         <div class="mobile-menu">
-            <a data-toggle="off-canvas"><?php esc_html_e( 'Menu', 'zume' ); ?></a>
+            <a data-toggle="off-canvas" style="cursor:pointer;"><img src="<?php echo esc_url( zume_images_uri() . 'hamburger.svg' ) ?>" alt="menu" /></a>
         </div>
     </div>
     <div class="cell hide-for-small-only medium-1"></div>

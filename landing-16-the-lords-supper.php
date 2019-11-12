@@ -48,23 +48,6 @@ if (have_posts()) :
                     <div class="large-8 small-12 cell" id="training-content">
                         <section>
 
-                            <!-- Activity Block  -->
-                            <div class="grid-x grid-margin-x grid-margin-y">
-                                <div class="cell content-large">
-                                    <p><?php esc_html_e( "Jesus said - “I am the living bread that came down from heaven. Whoever eats this bread will live forever. This bread is my flesh, which I will give for the life of the world.”", 'zume' ) ?></p>
-                                    <p><?php esc_html_e( "Holy Communion or “The Lord’s Supper” is a way to celebrate our intimate connection and ongoing relationship with Jesus.", 'zume' ) ?></p>
-                                    <p><?php esc_html_e( "Here’s a simple way to celebrate --", 'zume' ) ?></p>
-                                    <p><?php esc_html_e( "When you gather as followers of Jesus, spend time in quiet meditation, silently considering and confessing your sins. When you are ready, have someone read this passage from scripture --", 'zume' ) ?></p>
-                                    <p><?php esc_html_e( "“For I received from the Lord that which I also delivered to you, that the Lord Jesus in the night in which He was betrayed took bread; and when He had given thanks, He broke it and said, “This is My body, which is for you; do this in remembrance of Me.” 1 Corinthians 11:23-24", 'zume' ) ?></p>
-                                    <p><?php esc_html_e( "Pass out bread you have set aside for your group, and eat. Continue the reading --", 'zume' ) ?></p>
-                                    <p><?php esc_html_e( "“In the same way, He took the cup also after supper, saying, ‘This cup is the new covenant in My blood; do this, as often as you drink it, in remembrance of Me.’” 1 Corinthians 11:25", 'zume' ) ?></p>
-                                    <p><?php esc_html_e( "Share the juice or wine you have set aside for your group, and drink. Finish the reading --", 'zume' ) ?></p>
-                                    <p><?php esc_html_e( "“For as often as you eat this bread and drink the cup, you proclaim the Lord’s death until He comes.” 1 Corinthians 11:26", 'zume' ) ?></p>
-                                    <p><?php esc_html_e( "Celebrate in prayer or singing. You have shared in The Lord’s Supper. You are His, and He is yours!", 'zume' ) ?></p>
-                                </div>
-                            </div> <!-- grid-x -->
-
-
                             <!-- Video block -->
                             <div class="grid-x grid-margin-x grid-margin-y">
                                 <div class="small-12 small-centered cell video-section">
@@ -84,6 +67,25 @@ if (have_posts()) :
 
                                 </div>
                             </div> <!-- grid-x -->
+
+                            <!-- Activity Block  -->
+                            <div class="grid-x grid-margin-x grid-margin-y">
+                                <div class="cell content-large">
+                                    <p><?php esc_html_e( "Jesus said - “I am the living bread that came down from heaven. Whoever eats this bread will live forever. This bread is my flesh, which I will give for the life of the world.”", 'zume' ) ?></p>
+                                    <p><?php esc_html_e( "Holy Communion or “The Lord’s Supper” is a way to celebrate our intimate connection and ongoing relationship with Jesus.", 'zume' ) ?></p>
+                                    <p><?php esc_html_e( "Here’s a simple way to celebrate --", 'zume' ) ?></p>
+                                    <p><?php esc_html_e( "When you gather as followers of Jesus, spend time in quiet meditation, silently considering and confessing your sins. When you are ready, have someone read this passage from scripture --", 'zume' ) ?></p>
+                                    <p><?php esc_html_e( "“For I received from the Lord that which I also delivered to you, that the Lord Jesus in the night in which He was betrayed took bread; and when He had given thanks, He broke it and said, “This is My body, which is for you; do this in remembrance of Me.” 1 Corinthians 11:23-24", 'zume' ) ?></p>
+                                    <p><?php esc_html_e( "Pass out bread you have set aside for your group, and eat. Continue the reading --", 'zume' ) ?></p>
+                                    <p><?php esc_html_e( "“In the same way, He took the cup also after supper, saying, ‘This cup is the new covenant in My blood; do this, as often as you drink it, in remembrance of Me.’” 1 Corinthians 11:25", 'zume' ) ?></p>
+                                    <p><?php esc_html_e( "Share the juice or wine you have set aside for your group, and drink. Finish the reading --", 'zume' ) ?></p>
+                                    <p><?php esc_html_e( "“For as often as you eat this bread and drink the cup, you proclaim the Lord’s death until He comes.” 1 Corinthians 11:26", 'zume' ) ?></p>
+                                    <p><?php esc_html_e( "Celebrate in prayer or singing. You have shared in The Lord’s Supper. You are His, and He is yours!", 'zume' ) ?></p>
+                                </div>
+                            </div> <!-- grid-x -->
+
+
+
 
                             <!-- Activity Block -->
                             <div class="grid-x grid-margin-x grid-margin-y">
