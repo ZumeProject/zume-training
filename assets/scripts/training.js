@@ -119,7 +119,7 @@ function get_groups() {
     <div class="cell group-section border-bottom padding-bottom-2 margin-bottom-2">
       <div class="grid-x grid-padding-x">
         <div class="cell padding-bottom-1 group-name medium-6"  id="group_name_${_.escape( v.key )}"><!--Full width top --></div><div class="hide-for-small-only medium-6"></div>
-        <div class="cell small-2"> <!-- Column 1 -->
+        <div class="cell medium-2 padding-bottom-1 "> <!-- Column 1 -->
            <div class="grid-y" id="session_list_${_.escape( v.key )}"><!-- Session List --></div>
         </div> <!-- Column 1 -->
         <div class="cell medium-4">
