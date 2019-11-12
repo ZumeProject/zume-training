@@ -123,21 +123,6 @@ if (have_posts()) :
                     <div class="large-2 cell"></div><!-- Side spacer -->
                 </div> <!-- grid-x -->
 
-
-                <!-- Activity Block  -->
-                <div class="grid-x grid-margin-x grid-margin-y">
-                    <div class="cell content-large center">
-                        <h3 class="center"><?php esc_html_e( 'Ask Yourself', 'zume' ) ?></h3>
-                    </div>
-                    <div class="cell content-large">
-                        <ul>
-                            <li><?php esc_html_e( "?", 'zume' ) ?></li>
-                        </ul>
-                    </div>
-                </div> <!-- grid-x -->
-
-            </div> <!-- end #inner-content --></div> <!-- end #content -->
-
         <?php get_template_part( "parts/content", "modal" ); ?>
 
         <?php
