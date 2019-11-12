@@ -71,7 +71,8 @@ $tool_number = $vars['tool_number'];
             </ul>
         </div>
         <div class="cell center">
-            <a href="<?php echo esc_url( zume_register_url() ) ?>" class="button large secondary-button" style="width:400px"><?php echo esc_html__( "Register for Free", 'zume' ) ?></a><br><a href="<?php echo esc_url( zume_login_url() ) ?>" class="button clear"><?php echo esc_html__( "Login", 'zume' ) ?></a>
+            <a href="<?php echo esc_url( zume_register_url() ) ?>" class="button large secondary-button" style="padding-right:2em;padding-left:2em;"><?php echo esc_html__( "Register for Free", 'zume' ) ?></a><br>
+            <a href="<?php echo esc_url( zume_login_url() ) ?>" class="button clear"><?php echo esc_html__( "Login", 'zume' ) ?></a>
         </div>
         <div class="cell"><hr></div>
         <div class="cell center">
