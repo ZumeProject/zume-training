@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "Project-Id-Version: Zúme Project\n"
-"POT-Creation-Date: 2019-11-02 08:59+0300\n"
+"POT-Creation-Date: 2019-11-12 13:25-0700\n"
 "PO-Revision-Date: 2018-03-06 11:15-0700\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -37,6 +37,7 @@ msgid "Contacts"
 msgstr ""
 
 #: dt-mapping/columns/add-groups-column.php:57 parts/content-share.php:40
+#: template-zume-training.php:68
 msgid "Groups"
 msgstr ""
 
@@ -45,135 +46,140 @@ msgid "Workers"
 msgstr ""
 
 #: dt-mapping/mapping-admin.php:166 dt-mapping/mapping-admin.php:167
-#: dt-mapping/mapping-admin.php:380 dt-mapping/mapping-module-config.php:76
-#: dt-mapping/mapping.php:154 dt-mapping/mapping.php:292
+#: dt-mapping/mapping-admin.php:374 dt-mapping/mapping-metrics.php:60
+#: dt-mapping/mapping-metrics.php:117 dt-mapping/mapping-module-config.php:76
+#: dt-mapping/mapping.php:145 dt-mapping/mapping.php:300
 msgid "Mapping"
 msgstr ""
 
-#: dt-mapping/mapping-admin.php:332
+#: dt-mapping/mapping-admin.php:326
 msgid "You do not have sufficient permissions to access this page."
 msgstr ""
 
-#: dt-mapping/mapping-admin.php:386
+#: dt-mapping/mapping-admin.php:380
 msgid "General Settings"
 msgstr ""
 
-#: dt-mapping/mapping-admin.php:392
+#: dt-mapping/mapping-admin.php:386
 msgid "Mapping Focus"
 msgstr ""
 
-#: dt-mapping/mapping-admin.php:398
+#: dt-mapping/mapping-admin.php:392
 msgid "Polygons"
 msgstr ""
 
-#: dt-mapping/mapping-admin.php:403
+#: dt-mapping/mapping-admin.php:397
 msgid "Levels"
 msgstr ""
 
-#: dt-mapping/mapping-admin.php:408
+#: dt-mapping/mapping-admin.php:402
 msgid "Geocoding"
 msgstr ""
 
-#: dt-mapping/mapping-admin.php:413
+#: dt-mapping/mapping-admin.php:407
 msgid "Locations List"
 msgstr ""
 
-#: dt-mapping/mapping-admin.php:418
+#: dt-mapping/mapping-admin.php:412
 msgid "Migration"
 msgstr ""
 
-#: dt-mapping/mapping-admin.php:424
+#: dt-mapping/mapping-admin.php:418
 msgid "Credits"
 msgstr ""
 
-#: dt-mapping/mapping.php:156
+#: dt-mapping/mapping-metrics.php:62 dt-mapping/mapping.php:147
 msgid "Map"
 msgstr ""
 
-#: dt-mapping/mapping.php:157
+#: dt-mapping/mapping-metrics.php:63 dt-mapping/mapping.php:148
 msgid "List"
 msgstr ""
 
-#: dt-mapping/mapping.php:293
+#: dt-mapping/mapping-metrics.php:118 dt-mapping/mapping.php:301
 msgid "Refresh Cached Data"
 msgstr ""
 
-#: dt-mapping/mapping.php:294
+#: dt-mapping/mapping-metrics.php:119 dt-mapping/mapping.php:302
 msgid "Population"
 msgstr ""
 
-#: dt-mapping/mapping.php:295 template-zume-dashboard.php:1387
-#: template-zume-profile.php:64
+#: dt-mapping/mapping-metrics.php:120 dt-mapping/mapping.php:303
+#: template-zume-dashboard.php:1387 template-zume-profile.php:64
 msgid "Name"
 msgstr ""
 
-#: dt-mapping/mapping.php:605 dt-mapping/mapping.php:701
+#: dt-mapping/mapping.php:604 dt-mapping/mapping.php:685
 msgid "World"
 msgstr ""
 
-#: front-page.php:73 front-page.php:192
+#: front-page.php:73 front-page.php:202
 msgid "Get Started"
 msgstr ""
 
 #: front-page.php:76 functions/zume-polylang-integration.php:239
-#: parts/content-share.php:74 template-zume-login.php:396
+#: parts/content-share.php:75 template-zume-login.php:396
 #: template-zume-login.php:491
 msgid "Login"
 msgstr ""
 
-#: front-page.php:81
+#: front-page.php:85
 msgid ""
 "Zúme Training is an on-line and in-life learning experience designed for "
 "small groups who follow Jesus to learn how to obey His Great Commission and "
 "make disciples who multiply."
 msgstr ""
 
-#: front-page.php:94
+#: front-page.php:89
+msgid "Explore Training"
+msgstr ""
+
+#: front-page.php:104
 msgid "Zúme consists of 10 sessions, 2 hours each:"
 msgstr ""
 
-#: front-page.php:102 template-zume-about.php:74
+#: front-page.php:112 template-zume-about.php:74
 msgid ""
 "Video and Audio to help your group understand basic principles of "
 "multiplying disciples."
 msgstr ""
 
-#: front-page.php:110 template-zume-about.php:75
+#: front-page.php:120 template-zume-about.php:75
 msgid "Group Discussions to help your group think through what’s being shared."
 msgstr ""
 
-#: front-page.php:118 template-zume-about.php:76
+#: front-page.php:128 template-zume-about.php:76
 msgid ""
 "Simple Exercises to help your group put what you’re learning into practice."
 msgstr ""
 
-#: front-page.php:126 template-zume-about.php:77
+#: front-page.php:136 template-zume-about.php:77
 msgid ""
 "Session Challenges to help your group keep learning and growing between "
 "sessions."
 msgstr ""
 
-#: front-page.php:139
+#: front-page.php:149
 msgid "Want to start the training?"
 msgstr ""
 
-#: front-page.php:153
+#: front-page.php:163
 msgid "It's as easy as 1-2-3"
 msgstr ""
 
-#: front-page.php:162
+#: front-page.php:172
 msgid "Sign up"
 msgstr ""
 
-#: front-page.php:172
+#: front-page.php:182
 msgid "Invite some friends"
 msgstr ""
 
-#: front-page.php:182
+#: front-page.php:192
 msgid "Host a training"
 msgstr ""
 
-#: front-page.php:226
+#: front-page.php:236
 msgid "Find out more about Zúme"
 msgstr ""
 
@@ -240,69 +246,69 @@ msgstr ""
 #: functions/enqueue-scripts.php:192 template-zume-dashboard.php:302
 #: template-zume-one-page-course.php:30 template-zume-one-page-course.php:43
 #: template-zume-overview.php:92 template-zume-overview.php:214
-#: template-zume-training.php:98
+#: template-zume-training.php:114
 msgid "Session 1"
 msgstr ""
 
 #: functions/enqueue-scripts.php:193 template-zume-dashboard.php:350
 #: template-zume-one-page-course.php:31 template-zume-one-page-course.php:48
 #: template-zume-overview.php:102 template-zume-overview.php:215
-#: template-zume-training.php:161
+#: template-zume-training.php:177
 msgid "Session 2"
 msgstr ""
 
 #: functions/enqueue-scripts.php:194 template-zume-dashboard.php:382
 #: template-zume-one-page-course.php:32 template-zume-one-page-course.php:53
 #: template-zume-overview.php:112 template-zume-overview.php:216
-#: template-zume-training.php:222
+#: template-zume-training.php:238
 msgid "Session 3"
 msgstr ""
 
 #: functions/enqueue-scripts.php:195 template-zume-dashboard.php:414
 #: template-zume-one-page-course.php:33 template-zume-one-page-course.php:58
 #: template-zume-overview.php:122 template-zume-overview.php:217
-#: template-zume-training.php:277
+#: template-zume-training.php:293
 msgid "Session 4"
 msgstr ""
 
 #: functions/enqueue-scripts.php:196 template-zume-dashboard.php:462
 #: template-zume-one-page-course.php:34 template-zume-one-page-course.php:63
 #: template-zume-overview.php:132 template-zume-overview.php:218
-#: template-zume-training.php:346
+#: template-zume-training.php:362
 msgid "Session 5"
 msgstr ""
 
 #: functions/enqueue-scripts.php:197 template-zume-dashboard.php:486
 #: template-zume-one-page-course.php:35 template-zume-one-page-course.php:68
 #: template-zume-overview.php:143 template-zume-overview.php:219
-#: template-zume-training.php:401
+#: template-zume-training.php:417
 msgid "Session 6"
 msgstr ""
 
 #: functions/enqueue-scripts.php:198 template-zume-dashboard.php:518
 #: template-zume-one-page-course.php:36 template-zume-one-page-course.php:73
 #: template-zume-overview.php:154 template-zume-overview.php:220
-#: template-zume-training.php:438
+#: template-zume-training.php:454
 msgid "Session 7"
 msgstr ""
 
 #: functions/enqueue-scripts.php:199 template-zume-dashboard.php:534
 #: template-zume-one-page-course.php:37 template-zume-one-page-course.php:78
 #: template-zume-overview.php:165 template-zume-overview.php:221
-#: template-zume-training.php:473
+#: template-zume-training.php:489
 msgid "Session 8"
 msgstr ""
 
 #: functions/enqueue-scripts.php:200 template-zume-dashboard.php:550
 #: template-zume-one-page-course.php:38 template-zume-one-page-course.php:83
 #: template-zume-overview.php:176 template-zume-overview.php:222
-#: template-zume-training.php:508
+#: template-zume-training.php:524
 msgid "Session 9"
 msgstr ""
 
 #: functions/enqueue-scripts.php:201 template-zume-dashboard.php:590
 #: template-zume-one-page-course.php:39 template-zume-one-page-course.php:88
-#: template-zume-overview.php:223 template-zume-training.php:571
+#: template-zume-overview.php:223 template-zume-training.php:587
 msgid "Session 10"
 msgstr ""
 
@@ -686,6 +692,7 @@ msgstr ""
 #: functions/zume-content.php:2654 functions/zume-content.php:2882
 #: functions/zume-content.php:2944 functions/zume-content.php:3008
 #: functions/zume-content.php:3394 functions/zume-content.php:3560
+#: landing-22-training-cycle.php:85
 msgid "WATCH"
 msgstr ""
 
@@ -1066,7 +1073,7 @@ msgstr ""
 msgid "Practice the Prayer Cycle (60min)"
 msgstr ""
 
-#: functions/zume-content.php:818
+#: functions/zume-content.php:818 landing-22-training-cycle.php:86
 msgid "LEAVE"
 msgstr ""
 
@@ -1233,7 +1240,7 @@ msgstr ""
 msgid "Zúme Video Scripts: Spiritual Economy"
 msgstr ""
 
-#: functions/zume-content.php:1103 landing-09-kingdom-economy.php:85
+#: functions/zume-content.php:1103 landing-09-kingdom-economy.php:87
 msgid ""
 "What are some differences you see between God's Spiritual Economy and our "
 "earthly way of getting things done?"
@@ -1296,15 +1303,15 @@ msgstr ""
 msgid "Zúme Video Scripts: The Gospel"
 msgstr ""
 
-#: functions/zume-content.php:1201 landing-10-gospel.php:86
+#: functions/zume-content.php:1201 landing-10-gospel.php:87
 msgid "What do you learn about mankind from this story?"
 msgstr ""
 
-#: functions/zume-content.php:1202 landing-10-gospel.php:87
+#: functions/zume-content.php:1202 landing-10-gospel.php:88
 msgid "What do you learn about God?"
 msgstr ""
 
-#: functions/zume-content.php:1203 landing-10-gospel.php:88
+#: functions/zume-content.php:1203 landing-10-gospel.php:89
 msgid ""
 "Do you think it would be easier or harder to share God's Story by telling a "
 "story like this?"
@@ -1341,15 +1348,15 @@ msgstr ""
 msgid "Zúme Video Scripts: Baptism"
 msgstr ""
 
-#: functions/zume-content.php:1300 landing-11-baptism.php:96
+#: functions/zume-content.php:1300 landing-11-baptism.php:99
 msgid "Have you ever baptized someone?"
 msgstr ""
 
-#: functions/zume-content.php:1301 landing-11-baptism.php:97
+#: functions/zume-content.php:1301 landing-11-baptism.php:100
 msgid "Would you even consider it?"
 msgstr ""
 
-#: functions/zume-content.php:1302 landing-11-baptism.php:98
+#: functions/zume-content.php:1302 landing-11-baptism.php:101
 msgid ""
 "If the Great Commission is for every follower of Jesus, does that mean every "
 "follower is allowed to baptize others? Why or why not?"
@@ -1463,18 +1470,18 @@ msgstr ""
 msgid "Zúme Video Scripts: Greatest Blessing"
 msgstr ""
 
-#: functions/zume-content.php:1596 landing-13-greatest-blessing.php:87
+#: functions/zume-content.php:1596 landing-13-greatest-blessing.php:86
 msgid ""
 "Is this the pattern you were taught when you first began to follow Jesus? If "
 "not, what was different?"
 msgstr ""
 
-#: functions/zume-content.php:1598 landing-13-greatest-blessing.php:88
+#: functions/zume-content.php:1598 landing-13-greatest-blessing.php:87
 msgid ""
 "After you came to faith, how long was it before you began to disciple others?"
 msgstr ""
 
-#: functions/zume-content.php:1599 landing-13-greatest-blessing.php:89
+#: functions/zume-content.php:1599 landing-13-greatest-blessing.php:88
 msgid ""
 "What do you think would happen if new followers started sharing and "
 "discipling others, immediately?"
@@ -1761,7 +1768,7 @@ msgstr ""
 msgid "Zúme Video Scripts: Faithfulness"
 msgstr ""
 
-#: functions/zume-content.php:2222 landing-20-faithfulness.php:84
+#: functions/zume-content.php:2222 landing-20-faithfulness.php:85
 msgid ""
 "Think about God's commands that you already know. How \"faithful\" are you "
 "in terms of obeying and sharing those things?"
@@ -1881,21 +1888,21 @@ msgstr ""
 msgid "Zúme Video Scripts: Training Cycle"
 msgstr ""
 
-#: functions/zume-content.php:2480 landing-22-training-cycle.php:92
+#: functions/zume-content.php:2480 landing-22-training-cycle.php:97
 msgid "Have you ever been a part of a Training Cycle?"
 msgstr ""
 
-#: functions/zume-content.php:2481 landing-22-training-cycle.php:93
+#: functions/zume-content.php:2481 landing-22-training-cycle.php:98
 msgid "Who did you train? Or who trained you?"
 msgstr ""
 
-#: functions/zume-content.php:2483 landing-22-training-cycle.php:94
+#: functions/zume-content.php:2483 landing-22-training-cycle.php:99
 msgid ""
 "Could the same person be at different parts of the Training Cycle while "
 "learning different skills?"
 msgstr ""
 
-#: functions/zume-content.php:2485 landing-22-training-cycle.php:95
+#: functions/zume-content.php:2485 landing-22-training-cycle.php:100
 msgid "What would it look like to train someone like that?"
 msgstr ""
 
@@ -2013,7 +2020,7 @@ msgid ""
 "by practicing serving."
 msgstr ""
 
-#: functions/zume-content.php:2671 landing-23-leadership-cells.php:65
+#: functions/zume-content.php:2671
 msgid ""
 "Find the \"Leadership Cells\" section in your Zúme Guidebook. When you're "
 "ready, watch and discuss this video."
@@ -2023,13 +2030,13 @@ msgstr ""
 msgid "Zúme Video Scripts: Leadership Cells"
 msgstr ""
 
-#: functions/zume-content.php:2710 landing-23-leadership-cells.php:98
+#: functions/zume-content.php:2710 landing-23-leadership-cells.php:87
 msgid ""
 "Is there a group of followers of Jesus you know that are already meeting or "
 "would be willing to meet and form a Leadership Cell to learn Zúme Training?"
 msgstr ""
 
-#: functions/zume-content.php:2712 landing-23-leadership-cells.php:99
+#: functions/zume-content.php:2712 landing-23-leadership-cells.php:88
 msgid "What would it take to bring them together?"
 msgstr ""
 
@@ -2127,11 +2134,11 @@ msgstr ""
 msgid "Zúme Video Scripts: Non-Sequential"
 msgstr ""
 
-#: functions/zume-content.php:2925 landing-24-non-sequential.php:89
+#: functions/zume-content.php:2925
 msgid "What is the most exciting idea you heard in this video? Why?"
 msgstr ""
 
-#: functions/zume-content.php:2926 landing-24-non-sequential.php:90
+#: functions/zume-content.php:2926
 msgid "What is the most challenging idea? Why?"
 msgstr ""
 
@@ -2175,7 +2182,7 @@ msgstr ""
 msgid "Zúme Video Scripts: Two Churches"
 msgstr ""
 
-#: functions/zume-content.php:3049 landing-26-part-of-two-churches.php:86
+#: functions/zume-content.php:3049 landing-26-part-of-two-churches.php:87
 msgid ""
 "What are some advantages of maintaining a consistent spiritual family that "
 "gives birth to new ones that grow and multiply instead of continually "
@@ -2246,7 +2253,7 @@ msgstr ""
 msgid "It's the Greatest Blessing to ... Start a Zúme Group"
 msgstr ""
 
-#: functions/zume-content.php:3131
+#: functions/zume-content.php:3131 landing-07-prayer-cycle.php:92
 msgid "LISTEN"
 msgstr ""
 
@@ -2425,40 +2432,40 @@ msgid ""
 "can use to help you."
 msgstr ""
 
-#: functions/zume-content.php:3305 landing-28-coaching-checklist.php:59
+#: functions/zume-content.php:3305
 msgid ""
 "Find the Coaching Checklist section in your Zúme Guidebook, and take this "
 "quick (5-minutes or less) self-assessment:"
 msgstr ""
 
-#: functions/zume-content.php:3308 landing-28-coaching-checklist.php:62
+#: functions/zume-content.php:3308 landing-28-coaching-checklist.php:67
 msgid ""
 "Read through the Disciple Training Tools in the far left column of the "
 "Checklist."
 msgstr ""
 
-#: functions/zume-content.php:3309 landing-28-coaching-checklist.php:63
+#: functions/zume-content.php:3309 landing-28-coaching-checklist.php:68
 msgid "Mark each one of the Training Tools, using the following method:"
 msgstr ""
 
-#: functions/zume-content.php:3311 landing-28-coaching-checklist.php:65
+#: functions/zume-content.php:3311 landing-28-coaching-checklist.php:70
 msgid ""
 "If you're unfamiliar or don't understand the Tool – check the BLACK column"
 msgstr ""
 
-#: functions/zume-content.php:3314 landing-28-coaching-checklist.php:66
+#: functions/zume-content.php:3314 landing-28-coaching-checklist.php:71
 msgid ""
 "If you're somewhat familiar but still not sure about the Tool – check the "
 "RED column"
 msgstr ""
 
-#: functions/zume-content.php:3317 landing-28-coaching-checklist.php:67
+#: functions/zume-content.php:3317 landing-28-coaching-checklist.php:72
 msgid ""
 "If you understand and can train the basics on the Tool – check the YELLOW "
 "column"
 msgstr ""
 
-#: functions/zume-content.php:3320 landing-28-coaching-checklist.php:68
+#: functions/zume-content.php:3320 landing-28-coaching-checklist.php:73
 msgid ""
 "If you feel confident and can effectively train the Tool – check the GREEN "
 "column"
@@ -2468,15 +2475,15 @@ msgstr ""
 msgid "Zúme Video Scripts: Coaching Checklist"
 msgstr ""
 
-#: functions/zume-content.php:3363 landing-28-coaching-checklist.php:105
+#: functions/zume-content.php:3363 landing-28-coaching-checklist.php:108
 msgid "Which Training Tools did you feel you would be able to train well?"
 msgstr ""
 
-#: functions/zume-content.php:3364 landing-28-coaching-checklist.php:106
+#: functions/zume-content.php:3364 landing-28-coaching-checklist.php:109
 msgid "Which ones made you feel vulnerable as a trainer?"
 msgstr ""
 
-#: functions/zume-content.php:3365 landing-28-coaching-checklist.php:107
+#: functions/zume-content.php:3365 landing-28-coaching-checklist.php:110
 msgid ""
 "Are there any Training Tools that you would add or subtract from the "
 "Checklist? Why?"
@@ -2500,7 +2507,7 @@ msgstr ""
 msgid "Zúme Video Scripts: Leadership in Networks"
 msgstr ""
 
-#: functions/zume-content.php:3432 landing-29-leadership-in-networks.php:85
+#: functions/zume-content.php:3432 landing-29-leadership-in-networks.php:86
 msgid ""
 "Are there advantages when networks of simple churches are connected by deep, "
 "personal relationships? What are some examples that come to mind?"
@@ -2603,16 +2610,16 @@ msgstr ""
 msgid "No Name"
 msgstr ""
 
-#: functions/zume-functions.php:365 template-zume-dashboard.php:1402
+#: functions/zume-functions.php:380 template-zume-dashboard.php:1402
 #: template-zume-profile.php:81
 msgid "Phone Number"
 msgstr ""
 
-#: functions/zume-functions.php:366
+#: functions/zume-functions.php:381
 msgid "User Address"
 msgstr ""
 
-#: functions/zume-functions.php:367
+#: functions/zume-functions.php:382
 msgid "GeoCoded IP"
 msgstr ""
 
@@ -2636,7 +2643,7 @@ msgstr ""
 msgid "FAQs"
 msgstr ""
 
-#: functions/zume-polylang-integration.php:234
+#: functions/zume-polylang-integration.php:234 template-zume-training.php:61
 msgid "Overview"
 msgstr ""
 
@@ -2780,8 +2787,8 @@ msgstr ""
 #: landing-24-non-sequential.php:32 landing-25-pace.php:33
 #: landing-26-part-of-two-churches.php:33 landing-28-coaching-checklist.php:33
 #: landing-29-leadership-in-networks.php:33
-#: landing-30-peer-mentoring-groups.php:33 landing-31-four-fields.php:33
-#: landing-32-generational-map.php:33 landing-33-3third-series.php:33
+#: landing-30-peer-mentoring-groups.php:33 landing-31-four-fields.php:31
+#: landing-32-generational-map.php:31 landing-33-3third-series.php:33
 msgid "This concept can be found in session"
 msgstr ""
 
@@ -2805,17 +2812,23 @@ msgstr ""
 
 #: landing-01-uses-ordinary-people.php:83
 #: landing-02-obedience-focused-disciple-making.php:85
-#: landing-03-spiritual-breathing.php:84
-#: landing-06-consumers-vs-producers.php:83 landing-09-kingdom-economy.php:82
-#: landing-10-gospel.php:82 landing-11-baptism.php:92
-#: landing-13-greatest-blessing.php:83 landing-14-duckling-discipleship.php:82
+#: landing-03-spiritual-breathing.php:84 landing-04-soaps.php:123
+#: landing-05-accountability-groups.php:136
+#: landing-06-consumers-vs-producers.php:83 landing-07-prayer-cycle.php:103
+#: landing-08-list-of-100.php:97 landing-09-kingdom-economy.php:83
+#: landing-10-gospel.php:83 landing-11-baptism.php:95
+#: landing-12-testimony.php:99 landing-13-greatest-blessing.php:82
+#: landing-14-duckling-discipleship.php:82
 #: landing-15-seeing-where-the-kingdom-is-not.php:82
-#: landing-18-person-of-peace.php:86 landing-20-faithfulness.php:81
-#: landing-21-3-3-group-pattern.php:83 landing-22-training-cycle.php:88
-#: landing-23-leadership-cells.php:94 landing-24-non-sequential.php:85
-#: landing-25-pace.php:84 landing-26-part-of-two-churches.php:83
-#: landing-28-coaching-checklist.php:101
+#: landing-16-the-lords-supper.php:93 landing-17-prayer-walking.php:110
+#: landing-18-person-of-peace.php:86 landing-19-bless-prayer.php:72
+#: landing-20-faithfulness.php:81 landing-21-3-3-group-pattern.php:83
+#: landing-22-training-cycle.php:93 landing-23-leadership-cells.php:83
+#: landing-24-non-sequential.php:84 landing-25-pace.php:84
+#: landing-26-part-of-two-churches.php:83 landing-28-coaching-checklist.php:104
 #: landing-29-leadership-in-networks.php:82
+#: landing-30-peer-mentoring-groups.php:127 landing-31-four-fields.php:95
+#: landing-32-generational-map.php:79
 msgid "Ask Yourself"
 msgstr ""
 
@@ -2874,11 +2887,6 @@ msgid ""
 "others what we’ve heard - God will speak even more clearly."
 msgstr ""
 
-#: landing-03-spiritual-breathing.php:130 landing-31-four-fields.php:83
-#: landing-32-generational-map.php:83 landing-33-3third-series.php:472
-msgid "Video Transcript"
-msgstr ""
-
 #: landing-04-soaps.php:55
 msgid ""
 "If every follower of Jesus is going to obey all that Jesus commanded, then "
@@ -2915,61 +2923,61 @@ msgid ""
 "format will help you understand, obey and share even more. S.O.A.P.S. is:"
 msgstr ""
 
-#: landing-04-soaps.php:102
+#: landing-04-soaps.php:100
 msgid ""
 "Scripture: Write out one or more verses that are particularly meaningful to "
 "you, today."
 msgstr ""
 
-#: landing-04-soaps.php:103
+#: landing-04-soaps.php:101
 msgid ""
 "Observation: Rewrite those verses or key points in your own words to better "
 "understand."
 msgstr ""
 
-#: landing-04-soaps.php:105
+#: landing-04-soaps.php:103
 msgid ""
 "Application: Think about what it means to obey these commands in your own "
 "life."
 msgstr ""
 
-#: landing-04-soaps.php:107
+#: landing-04-soaps.php:105
 msgid ""
 "Prayer: Write out a prayer telling God what you’ve learned and how you plan "
 "to obey."
 msgstr ""
 
-#: landing-04-soaps.php:109
+#: landing-04-soaps.php:107
 msgid ""
 "Sharing: Ask God who He wants you to share with about what you’ve learned "
 "applied."
 msgstr ""
 
-#: landing-04-soaps.php:111
+#: landing-04-soaps.php:110
 msgid "Here’s an example of S.O.A.P.S. at work:"
 msgstr ""
 
-#: landing-04-soaps.php:112
+#: landing-04-soaps.php:111
 msgid ""
 "S – “For my thoughts are not your thoughts, nor are your ways My ways,” "
 "declares the Lord. “For as the heavens are higher than the earth, so are My "
 "ways higher than your ways and My thoughts than your thoughts.” Isaiah 55:8-9"
 msgstr ""
 
-#: landing-04-soaps.php:113
+#: landing-04-soaps.php:112
 msgid ""
 "O – As a human, I’m limited in what I know and what I know how to do. God is "
 "not limited in any way. He sees and knows EVERYTHING. He can do ANYTHING."
 msgstr ""
 
-#: landing-04-soaps.php:114
+#: landing-04-soaps.php:113
 msgid ""
 "A – Since God knows everything and His ways are best, I’ll have much more "
 "success in life if I follow Him instead of relying on my own way of doing "
 "things."
 msgstr ""
 
-#: landing-04-soaps.php:115
+#: landing-04-soaps.php:114
 msgid ""
 "P – Lord, I don’t know how to live a good life that pleases You and helps "
 "others. My ways lead to mistakes. My thoughts lead to hurt. Please teach me "
@@ -2977,11 +2985,19 @@ msgid ""
 "follow You."
 msgstr ""
 
-#: landing-04-soaps.php:116
+#: landing-04-soaps.php:115
 msgid ""
 "S – I will share these verses and this application with my friend, Steve, "
 "who is going through a difficult time and needs direction for important "
 "decisions he’s facing."
+msgstr ""
+
+#: landing-04-soaps.php:127
+msgid "Is sharing important to the depth of my bible study?"
+msgstr ""
+
+#: landing-04-soaps.php:128
+msgid "Who are the people in my circles that I can share with right now?"
 msgstr ""
 
 #: landing-05-accountability-groups.php:55
@@ -3193,6 +3209,17 @@ msgstr ""
 msgid "Did you complete the reading for the week?"
 msgstr ""
 
+#: landing-05-accountability-groups.php:140
+msgid ""
+"Who can I meet with regularly and engage these issues with? Pray and ask God "
+"to give you a name."
+msgstr ""
+
+#: landing-05-accountability-groups.php:141
+msgid ""
+"What keeps you from this kind of intentionally with your personal holiness?"
+msgstr ""
+
 #: landing-06-consumers-vs-producers.php:56
 msgid ""
 "In our broken world, people have rejected God’s plan, and many spend their "
@@ -3205,6 +3232,152 @@ msgstr ""
 msgid ""
 "If we’re going to make disciples who multiply, then we need to share with "
 "them how they can be producers and not just consumers."
+msgstr ""
+
+#: landing-07-prayer-cycle.php:54
+msgid ""
+"The Prayer Cycle is a simple tool for practicing prayer that you can use by "
+"yourself and share with any follower. In just 12 simple steps - 5 minutes "
+"each - the Prayer Cycle guides you through twelve ways the Bible teaches us "
+"to pray. At the end, you’ll have prayed for an hour."
+msgstr ""
+
+#: landing-07-prayer-cycle.php:55
+msgid ""
+"The Bible tells us -- “Pray without ceasing.” Not many of us can say we do "
+"that. But after this hour of prayer - you’ll be a step closer."
+msgstr ""
+
+#: landing-07-prayer-cycle.php:80
+msgid ""
+"In just 12 simple steps - 5 minutes each - this Prayer Cycle guides you "
+"through twelve ways the Bible teaches us to pray. At the end, you’ll have "
+"prayed for an hour."
+msgstr ""
+
+#: landing-07-prayer-cycle.php:82 landing-07-prayer-cycle.php:93
+msgid "PRAISE"
+msgstr ""
+
+#: landing-07-prayer-cycle.php:82
+msgid ""
+"Start your prayer hour by praising the Lord. Praise Him for things that are "
+"on your mind right now. Praise Him for one special thing He has done in your "
+"life in the past week. Praise Him for His goodness to your family."
+msgstr ""
+
+#: landing-07-prayer-cycle.php:83
+msgid "WAIT"
+msgstr ""
+
+#: landing-07-prayer-cycle.php:83
+msgid ""
+"Spend time waiting on the Lord. Be silent and let Him pull together "
+"reflections for you."
+msgstr ""
+
+#: landing-07-prayer-cycle.php:84
+msgid "CONFESS"
+msgstr ""
+
+#: landing-07-prayer-cycle.php:84
+msgid ""
+"Ask the Holy Spirit to show you anything in your life that might be "
+"displeasing to Him. Ask Him to point out attitudes that are wrong, as well "
+"as specific acts for which you have not yet made a prayer of confession. Now "
+"confess that to the Lord so that you might be cleansed."
+msgstr ""
+
+#: landing-07-prayer-cycle.php:85
+msgid "READ THE WORD"
+msgstr ""
+
+#: landing-07-prayer-cycle.php:85
+msgid ""
+"Spend time reading in the Psalms, in the prophets, and passages on prayer "
+"located in the New Testament."
+msgstr ""
+
+#: landing-07-prayer-cycle.php:86
+msgid "ASK"
+msgstr ""
+
+#: landing-07-prayer-cycle.php:86
+msgid "Make requests on behalf of yourself."
+msgstr ""
+
+#: landing-07-prayer-cycle.php:87
+msgid "INTERCESSION"
+msgstr ""
+
+#: landing-07-prayer-cycle.php:87
+msgid "Make requests on behalf of others."
+msgstr ""
+
+#: landing-07-prayer-cycle.php:88
+msgid "PRAY THE WORD"
+msgstr ""
+
+#: landing-07-prayer-cycle.php:88
+msgid ""
+"Pray specific passages. Scriptural prayers as well as a number of psalms "
+"lend themselves well to this purpose."
+msgstr ""
+
+#: landing-07-prayer-cycle.php:89
+msgid "THANK"
+msgstr ""
+
+#: landing-07-prayer-cycle.php:89
+msgid ""
+"Give thanks to the Lord for the things in your life, on behalf of your "
+"family, and on behalf of your church."
+msgstr ""
+
+#: landing-07-prayer-cycle.php:90
+msgid "SING"
+msgstr ""
+
+#: landing-07-prayer-cycle.php:90
+msgid "Sing songs of praise or worship or another hymn or spiritual song."
+msgstr ""
+
+#: landing-07-prayer-cycle.php:91
+msgid "MEDITATE"
+msgstr ""
+
+#: landing-07-prayer-cycle.php:91
+msgid ""
+"Ask the Lord to speak to you. Have a pen and paper ready to record "
+"impressions He gives you."
+msgstr ""
+
+#: landing-07-prayer-cycle.php:92
+msgid ""
+"Spend time merging the things you have read, things you have prayed and "
+"things you have sung and see how the Lord brings them all together to speak "
+"to you."
+msgstr ""
+
+#: landing-07-prayer-cycle.php:93
+msgid ""
+"Praise the Lord for the time you have had to spend with Him and the "
+"impressions He has given you. Praise Him for His glorious attributes."
+msgstr ""
+
+#: landing-07-prayer-cycle.php:94
+msgid ""
+"From Dick Eastman’s book The Hour that Changes the World © 2002 by Dick "
+"Eastman, Chosen Books, Grand Rapids, MI, used by permission."
+msgstr ""
+
+#: landing-07-prayer-cycle.php:95
+msgid "Try the Simple Prayer Cycle Timer App"
+msgstr ""
+
+#: landing-07-prayer-cycle.php:107
+msgid ""
+"What must you rearrange or stop doing in order to increase your prayer life?"
 msgstr ""
 
 #: landing-08-list-of-100.php:55
@@ -3226,8 +3399,18 @@ msgid ""
 "of making a list."
 msgstr ""
 
-#: landing-08-list-of-100.php:83
+#: landing-08-list-of-100.php:90
 msgid "Download List of 100"
+msgstr ""
+
+#: landing-08-list-of-100.php:101
+msgid "What names on this list could you share with in the next 24 hours?"
+msgstr ""
+
+#: landing-08-list-of-100.php:102
+msgid ""
+"When is a regular time in the week when you can review this list and take "
+"steps to spiritually engage your personal network?"
 msgstr ""
 
 #: landing-09-kingdom-economy.php:54
@@ -3267,7 +3450,7 @@ msgid ""
 "Creation to His Judgement at the end of this age."
 msgstr ""
 
-#: landing-11-baptism.php:54
+#: landing-11-baptism.php:74
 msgid ""
 "Baptism is a picture of our new life, soaked in the image of Jesus, "
 "transformed in obedience to God. It is a picture of our death to sin, just "
@@ -3276,13 +3459,13 @@ msgid ""
 "and lives today."
 msgstr ""
 
-#: landing-11-baptism.php:55
+#: landing-11-baptism.php:75
 msgid ""
 "Jesus said -- “go and make disciples of all nations, baptizing them in the "
 "name of the Father and of the Son and of the Holy Spirit...”"
 msgstr ""
 
-#: landing-11-baptism.php:56
+#: landing-11-baptism.php:76
 msgid ""
 "Baptism - or Baptizo in the original Greek language - means a drenching or "
 "submerging - like when you dye a cloth and it soaks in the color and comes "
@@ -3293,55 +3476,55 @@ msgid ""
 "resurrected and lives today."
 msgstr ""
 
-#: landing-11-baptism.php:57
+#: landing-11-baptism.php:77
 msgid ""
 "If you have never baptized someone before, it may seem intimidating, but it "
 "shouldn’t be. Here are some simple steps:"
 msgstr ""
 
-#: landing-11-baptism.php:60
+#: landing-11-baptism.php:80
 msgid ""
 "Find some standing water, deep enough to allow the new disciple to be "
 "submerged. This can be a pond, river, lake or ocean. It could be a bathtub "
 "or another way to gather water."
 msgstr ""
 
-#: landing-11-baptism.php:61
+#: landing-11-baptism.php:81
 msgid ""
 "Let the disciple hold one of your hands with theirs and support their back "
 "with the other."
 msgstr ""
 
-#: landing-11-baptism.php:62
+#: landing-11-baptism.php:82
 msgid ""
 "Ask two questions like these to make sure they understand their decision. "
 "“Have you received Jesus Christ as your Lord and Savior?” “Will you obey and "
 "serve Him as your King for the rest of your life?”"
 msgstr ""
 
-#: landing-11-baptism.php:63
+#: landing-11-baptism.php:83
 msgid ""
 "If they answer “Yes,” to both, then say something like this: “Because you’ve "
 "professed your faith in the Lord Jesus, I now baptize you in the name of the "
 "Father, Son, and Holy Spirit.”"
 msgstr ""
 
-#: landing-11-baptism.php:64
+#: landing-11-baptism.php:84
 msgid ""
 "Help them lower into the water, submerge completely and raise them back up. "
 "Congratulations! You’ve baptized a new follower of Jesus - a new citizen of "
 "heaven - a new child of the Living God. It’s time to celebrate!"
 msgstr ""
 
-#: landing-12-testimony.php:54
+#: landing-12-testimony.php:74
 msgid "Jesus told His followers - “You are witnesses of these things.”"
 msgstr ""
 
-#: landing-12-testimony.php:55
+#: landing-12-testimony.php:75
 msgid "Everybody has a story. This is a chance to practice yours."
 msgstr ""
 
-#: landing-12-testimony.php:56
+#: landing-12-testimony.php:76
 msgid ""
 "As followers of Jesus, we are “witnesses”, too - “testifying” about the "
 "impact Jesus has had on our lives. Your story of your relationship with God "
@@ -3349,55 +3532,55 @@ msgid ""
 "chance to practice yours."
 msgstr ""
 
-#: landing-12-testimony.php:57
+#: landing-12-testimony.php:77
 msgid ""
 "There are endless ways to shape your story, but here are some ways that "
 "we’ve seen work well:"
 msgstr ""
 
-#: landing-12-testimony.php:59
+#: landing-12-testimony.php:79
 msgid ""
 "A Simple Statement - You can share a simple statement about why you chose to "
 "follow Jesus. This works well for a brand new believer."
 msgstr ""
 
-#: landing-12-testimony.php:60
+#: landing-12-testimony.php:80
 msgid ""
 "Before and After - You can share your “before” and “after” story - what your "
 "life was like before you knew Jesus and what your life your life is like "
 "now. Simple and powerful."
 msgstr ""
 
-#: landing-12-testimony.php:61
+#: landing-12-testimony.php:81
 msgid ""
 "With and Without - You can share your “with” and “without” story - what your "
 "life is like “with Jesus” and what it would be like “without Him”. This "
 "version of your story works well if you came to faith at a young age."
 msgstr ""
 
-#: landing-12-testimony.php:63
+#: landing-12-testimony.php:83
 msgid ""
 "When sharing your story, it’s helpful to think of it as part of a three-part "
 "process:"
 msgstr ""
 
-#: landing-12-testimony.php:65
+#: landing-12-testimony.php:85
 msgid ""
 "Their Story - Ask the person you are talking with to share about their "
 "spiritual journey."
 msgstr ""
 
-#: landing-12-testimony.php:66
+#: landing-12-testimony.php:86
 msgid "Your Story - Then share your Testimony shaped around their experience."
 msgstr ""
 
-#: landing-12-testimony.php:67
+#: landing-12-testimony.php:87
 msgid ""
 "God’s Story - Finally share God’s story in a way that connects with their "
 "world-view, values and priorities."
 msgstr ""
 
-#: landing-12-testimony.php:69
+#: landing-12-testimony.php:89
 msgid ""
 "Your Testimony doesn’t have to be lengthy or share too many details to be "
 "impactful. In fact, keeping your story to around 3-minutes will leave time "
@@ -3406,17 +3589,12 @@ msgid ""
 "remember - you’re the one who gets to tell it."
 msgstr ""
 
-#: landing-12-testimony.php:70
-msgid ""
-"ACTIVITY [45 min] - Break into groups of two or three and spend the next 45 "
-"minutes practicing sharing your Testimony. Choose 5 people from your List of "
-"100 that you marked as an “Unbeliever” or “Unknown.” Have someone pretend to "
-"be each of those five people, and practice your Testimony in a way that you "
-"think will make sense to that particular person. You can use any of the "
-"patterns detailed above or some other way you think will work well for the "
-"one you’re sharing with. After you’ve practiced, switch. Pretend to be "
-"someone else’s five people from their list. By the time you’re finished, you "
-"should be able to tell your Testimony in about 3 minutes or less."
+#: landing-12-testimony.php:103
+msgid "What false fears keep us from sharing our testimony?"
+msgstr ""
+
+#: landing-12-testimony.php:104
+msgid "What makes a testimony effective? Where does its power come from?"
 msgstr ""
 
 #: landing-13-greatest-blessing.php:54
@@ -3430,12 +3608,8 @@ msgstr ""
 #: landing-13-greatest-blessing.php:55
 msgid ""
 "It is a blessing to follow Jesus. It is a great blessing to lead others to "
-"follow Jesus. It is a greater blessing to start a new spiritual family."
-msgstr ""
-
-#: landing-13-greatest-blessing.php:56
-msgid ""
-"It is the greatest blessing to equip others to start new spiritual families."
+"follow Jesus. It is a greater blessing to start a new spiritual family. It "
+"is the greatest blessing to equip others to start new spiritual families."
 msgstr ""
 
 #: landing-14-duckling-discipleship.php:54
@@ -3473,31 +3647,31 @@ msgid ""
 "God’s Kingdom grows far and fast."
 msgstr ""
 
-#: landing-16-the-lords-supper.php:54
+#: landing-16-the-lords-supper.php:74
 msgid ""
 "Jesus said - “I am the living bread that came down from heaven. Whoever eats "
 "this bread will live forever. This bread is my flesh, which I will give for "
 "the life of the world.”"
 msgstr ""
 
-#: landing-16-the-lords-supper.php:55
+#: landing-16-the-lords-supper.php:75
 msgid ""
 "Holy Communion or “The Lord’s Supper” is a way to celebrate our intimate "
 "connection and ongoing relationship with Jesus."
 msgstr ""
 
-#: landing-16-the-lords-supper.php:56
+#: landing-16-the-lords-supper.php:76
 msgid "Here’s a simple way to celebrate --"
 msgstr ""
 
-#: landing-16-the-lords-supper.php:57
+#: landing-16-the-lords-supper.php:77
 msgid ""
 "When you gather as followers of Jesus, spend time in quiet meditation, "
 "silently considering and confessing your sins. When you are ready, have "
 "someone read this passage from scripture --"
 msgstr ""
 
-#: landing-16-the-lords-supper.php:58
+#: landing-16-the-lords-supper.php:78
 msgid ""
 "“For I received from the Lord that which I also delivered to you, that the "
 "Lord Jesus in the night in which He was betrayed took bread; and when He had "
@@ -3505,51 +3679,55 @@ msgid ""
 "this in remembrance of Me.” 1 Corinthians 11:23-24"
 msgstr ""
 
-#: landing-16-the-lords-supper.php:59
+#: landing-16-the-lords-supper.php:79
 msgid ""
 "Pass out bread you have set aside for your group, and eat. Continue the "
 "reading --"
 msgstr ""
 
-#: landing-16-the-lords-supper.php:60
+#: landing-16-the-lords-supper.php:80
 msgid ""
 "“In the same way, He took the cup also after supper, saying, ‘This cup is "
 "the new covenant in My blood; do this, as often as you drink it, in "
 "remembrance of Me.’” 1 Corinthians 11:25"
 msgstr ""
 
-#: landing-16-the-lords-supper.php:61
+#: landing-16-the-lords-supper.php:81
 msgid ""
 "Share the juice or wine you have set aside for your group, and drink. Finish "
 "the reading --"
 msgstr ""
 
-#: landing-16-the-lords-supper.php:62
+#: landing-16-the-lords-supper.php:82
 msgid ""
 "“For as often as you eat this bread and drink the cup, you proclaim the "
 "Lord’s death until He comes.” 1 Corinthians 11:26"
 msgstr ""
 
-#: landing-16-the-lords-supper.php:63
+#: landing-16-the-lords-supper.php:83
 msgid ""
 "Celebrate in prayer or singing. You have shared in The Lord’s Supper. You "
 "are His, and He is yours!"
 msgstr ""
 
-#: landing-17-prayer-walking.php:53
+#: landing-16-the-lords-supper.php:97
+msgid "What does the bible say is required and not required to take communion?"
+msgstr ""
+
+#: landing-17-prayer-walking.php:72
 msgid ""
 "Prayer Walking is just what it sounds like - praying to God while walking "
 "around."
 msgstr ""
 
-#: landing-17-prayer-walking.php:54 landing-17-prayer-walking.php:58
+#: landing-17-prayer-walking.php:73
 msgid ""
 "Instead of closing our eyes and bowing our heads, we keep our eyes open to "
 "the needs we see around us and bow our hearts to ask humbly for God to "
 "intervene."
 msgstr ""
 
-#: landing-17-prayer-walking.php:55
+#: landing-17-prayer-walking.php:74
 msgid ""
 "You can prayer walk in small groups of two or three or you can prayer walk "
 "by yourself. As you walk and pray, be alert for opportunities and listen for "
@@ -3557,7 +3735,7 @@ msgid ""
 "the way."
 msgstr ""
 
-#: landing-17-prayer-walking.php:56
+#: landing-17-prayer-walking.php:75
 msgid ""
 "God’s Word says that we should “petition, pray, intercede and give "
 "thanksgiving for all people, for kings and all those in authority -- that we "
@@ -3566,77 +3744,93 @@ msgid ""
 "come to a knowledge of the truth.”"
 msgstr ""
 
-#: landing-17-prayer-walking.php:57
+#: landing-17-prayer-walking.php:76
 msgid ""
 "Prayer Walking is a simple way to obey God’s command to pray for others. And "
 "it’s just what it sounds like - praying to God while walking around."
 msgstr ""
 
-#: landing-17-prayer-walking.php:59
-msgid ""
-"You can prayer walk in small groups of two or three or you can prayer walk "
-"by yourself. If you go in a group - try having everyone pray out loud, a "
-"conversation with God about what everyone is seeing and the needs that God "
-"brings to their hearts. If you go by yourself - try praying silently when "
-"alone and out loud when you pray with someone you meet along the way."
+#: landing-17-prayer-walking.php:83
+msgid "Four sources that can guide your prayer:"
 msgstr ""
 
-#: landing-17-prayer-walking.php:60
-msgid ""
-"Here are four ways you can know what to pray for during your Prayer Walk:"
+#: landing-17-prayer-walking.php:86
+msgid "OBSERVATION"
 msgstr ""
 
-#: landing-17-prayer-walking.php:61
+#: landing-17-prayer-walking.php:86
 msgid ""
-"OBSERVATION - What do you see? If you see a child’s toy in a yard, you might "
-"be prompted to pray for the neighborhood’s children, for families or for "
-"schools in the area."
+"What do you see? If you see a child’s toy in a yard, you might be prompted "
+"to pray for the neighborhood’s children, for families or for schools in the "
+"area."
 msgstr ""
 
-#: landing-17-prayer-walking.php:62
-msgid ""
-"RESEARCH - What do you know? If you’ve read up about the neighborhood, you "
-"might know something about the people who live there, or if the area suffers "
-"from crime or injustice. Pray about these things and ask God to act."
+#: landing-17-prayer-walking.php:87
+msgid "RESEARCH"
 msgstr ""
 
-#: landing-17-prayer-walking.php:63
+#: landing-17-prayer-walking.php:87
 msgid ""
-"REVELATION - The Holy Spirit may nudge your heart or bring an idea to mind "
-"for a particular need or area of prayer. Listen - and pray!"
+"What do you know? If you’ve read up about the neighborhood, you might know "
+"something about the people who live there, or if the area suffers from crime "
+"or injustice. Pray about these things and ask God to act."
 msgstr ""
 
-#: landing-17-prayer-walking.php:64
-msgid ""
-"SCRIPTURE - You may have read part of God’s Word in preparation for your "
-"walk or as you walk, the Holy Spirit may bring a Scripture to mind. Pray "
-"about that passage and how it might impact the people in that area."
+#: landing-17-prayer-walking.php:88
+msgid "REVELATION"
 msgstr ""
 
-#: landing-17-prayer-walking.php:65
+#: landing-17-prayer-walking.php:88
 msgid ""
-"Here are five areas of influence that you can focus on during your prayer "
-"walk:"
+"The Holy Spirit may nudge your heart or bring an idea to mind for a "
+"particular need or area of prayer. Listen - and pray!"
 msgstr ""
 
-#: landing-17-prayer-walking.php:66
-msgid ""
-"GOVERNMENT - Look for and pray over Government centers such as courthouses, "
-"commission buildings or law enforcement offices. Pray for the area’s "
-"protection, for justice and for godly wisdom for its leaders."
+#: landing-17-prayer-walking.php:89
+msgid "SCRIPTURE"
 msgstr ""
 
-#: landing-17-prayer-walking.php:67
+#: landing-17-prayer-walking.php:89
 msgid ""
-"BUSINESS AND COMMERCE - Look for and pray over Commercial centers such as "
-"financial districts or shopping area. Pray for righteous investments and "
-"good stewardship of resources. Pray for economic justice and opportunity and "
-"for generous and godly givers who put people before profits."
+"You may have read part of God’s Word in preparation for your walk or as you "
+"walk, the Holy Spirit may bring a Scripture to mind. Pray about that passage "
+"and how it might impact the people in that area."
 msgstr ""
 
-#: landing-17-prayer-walking.php:68
+#: landing-17-prayer-walking.php:94
+msgid "Five areas of influence on which to focus prayer:"
+msgstr ""
+
+#: landing-17-prayer-walking.php:97
+msgid "GOVERNMENT"
+msgstr ""
+
+#: landing-17-prayer-walking.php:97
 msgid ""
-"EDUCATION - Look for and pray over Educational centers such as schools and "
+"Look for and pray over Government centers such as courthouses, commission "
+"buildings or law enforcement offices. Pray for the area’s protection, for "
+"justice and for godly wisdom for its leaders."
+msgstr ""
+
+#: landing-17-prayer-walking.php:98
+msgid "BUSINESS AND COMMERCE"
+msgstr ""
+
+#: landing-17-prayer-walking.php:98
+msgid ""
+"Look for and pray over Commercial centers such as financial districts or "
+"shopping area. Pray for righteous investments and good stewardship of "
+"resources. Pray for economic justice and opportunity and for generous and "
+"godly givers who put people before profits."
+msgstr ""
+
+#: landing-17-prayer-walking.php:99
+msgid "EDUCATION"
+msgstr ""
+
+#: landing-17-prayer-walking.php:99
+msgid ""
+"Look for and pray over Educational centers such as schools and "
 "administration buildings, vocational training centers, community colleges "
 "and universities. Pray for righteous educators to teach God’s truth and "
 "protect the minds of their students. Pray that God would intervene in every "
@@ -3644,30 +3838,40 @@ msgid ""
 "wise citizens who have a heart to serve and lead."
 msgstr ""
 
-#: landing-17-prayer-walking.php:69
-msgid ""
-"COMMUNICATION - Look for and pray over Communication centers such as radio "
-"stations, tv stations and newspaper publishers. Pray for God’s Story and the "
-"testimony of His followers to be spread throughout the city and around the "
-"world. Pray that His message is delivered through His medium to His "
-"multitudes and that God’s people everywhere will see God’s work."
+#: landing-17-prayer-walking.php:100
+msgid "COMMUNICATION"
 msgstr ""
 
-#: landing-17-prayer-walking.php:70
+#: landing-17-prayer-walking.php:100
 msgid ""
-"SPIRITUALITY - Look for and pray over Spiritual centers such as church "
-"buildings, mosques or temples. Pray that every spiritual seeker would find "
-"peace and comfort in Jesus and not be distracted or confused by any false "
-"religion."
+"Look for and pray over Communication centers such as radio stations, tv "
+"stations and newspaper publishers. Pray for God’s Story and the testimony of "
+"His followers to be spread throughout the city and around the world. Pray "
+"that His message is delivered through His medium to His multitudes and that "
+"God’s people everywhere will see God’s work."
 msgstr ""
 
-#: landing-17-prayer-walking.php:71
+#: landing-17-prayer-walking.php:101
+msgid "SPIRITUALITY"
+msgstr ""
+
+#: landing-17-prayer-walking.php:101
 msgid ""
-"ACTIVITY [60-90 min] - Break into groups of two or three and go out into the "
-"community to practice Prayer Walking. Choosing a location can be as simple "
-"as walking out from your current session or praying and planning a "
-"destination. Go as God leads, and plan on spending 60-90 minutes on this "
-"activity."
+"Look for and pray over Spiritual centers such as church buildings, mosques "
+"or temples. Pray that every spiritual seeker would find peace and comfort in "
+"Jesus and not be distracted or confused by any false religion."
+msgstr ""
+
+#: landing-17-prayer-walking.php:114
+msgid ""
+"What are the normal places in your daily life that you could naturally "
+"prayer walk?"
+msgstr ""
+
+#: landing-17-prayer-walking.php:115
+msgid ""
+"What nearby locations could you prayer walk that are \"dark\" and could "
+"benefit from your prayer?"
 msgstr ""
 
 #: landing-18-person-of-peace.php:54
@@ -3765,12 +3969,16 @@ msgid ""
 "areas of influence or the B.L.E.S.S. Prayer to grow God’s family even more."
 msgstr ""
 
-#: landing-19-bless-prayer.php:66
+#: landing-19-bless-prayer.php:76
 msgid ""
-"ACTIVITY [15 min] - Break into groups of two or three and spend the next 15 "
-"minutes practicing the B.L.E.S.S. Prayer. Practice praying the 5 areas of "
-"the B.L.E.S.S. Prayer for someone AND practice how you would train others to "
-"understand and use the B.L.E.S.S. Prayer, too."
+"What fears do you have about asking to pray for strangers? What could God "
+"say to you that would take your fears away?"
+msgstr ""
+
+#: landing-19-bless-prayer.php:77
+msgid ""
+"What good things could happen if you risk to pray for someone, even a "
+"stranger?"
 msgstr ""
 
 #: landing-20-faithfulness.php:53
@@ -3816,58 +4024,70 @@ msgid ""
 "to how we can each apply and obey what we’ve learned."
 msgstr ""
 
-#: landing-22-training-cycle.php:54
+#: landing-22-training-cycle.php:53
 msgid ""
 "Have you ever learned how to ride a bicycle? Have you ever helped someone "
 "else learn? If so, chances are you already know THE TRAINING CYCLE. It’s as "
-"easy as MODEL, ASSIST, WATCH and LEAVE. It works like this:"
+"easy as MODEL, ASSIST, WATCH and LEAVE."
 msgstr ""
 
-#: landing-22-training-cycle.php:58
+#: landing-22-training-cycle.php:81
+msgid "The Training Cycle works like this:"
+msgstr ""
+
+#: landing-22-training-cycle.php:83
+msgid "MODEL"
+msgstr ""
+
+#: landing-22-training-cycle.php:83
 msgid ""
-"MODEL - Modeling is simply providing an example of a practice or tool. It is "
-"the briefest part of the training cycle. It usually only needs to be done "
-"once. It is simply creating an awareness that a practice or a tool exists "
-"and giving a general idea of what it looks like. Modeling repeatedly is not "
-"an effective way to equip someone. They need to be allowed to try the skill "
+"Modeling is simply providing an example of a practice or tool. It is the "
+"briefest part of the training cycle. It usually only needs to be done once. "
+"It is simply creating an awareness that a practice or a tool exists and "
+"giving a general idea of what it looks like. Modeling repeatedly is not an "
+"effective way to equip someone. They need to be allowed to try the skill "
 "themselves. When a child sees someone riding a bicycle, that is the MODEL "
 "phase."
 msgstr ""
 
-#: landing-22-training-cycle.php:59
-msgid ""
-"ASSIST - Assisting is allowing the learner to practice the skill. This takes "
-"longer than the modeling phase. It requires “hand-holding” on the part of "
-"the mentor. The mentor needs to be directive and take an active role in "
-"coaching the learner. This phase does not last until the learner is fully "
-"competent, but merely until they understand the basics of the skill. If this "
-"phase is continued too long, then the learner will develop a dependence on "
-"the mentor and never advance to full competence. The end of the assist phase "
-"should be marked by the learner starting to model for others. When a parent "
-"is holding onto the bicycle while a child is learning to keep his balance, "
-"that is the ASSIST phase."
+#: landing-22-training-cycle.php:84
+msgid "ASSIST"
 msgstr ""
 
-#: landing-22-training-cycle.php:60
+#: landing-22-training-cycle.php:84
 msgid ""
-"WATCH - Watching is the longest phase. It involves more indirect contact "
-"with the learner. It seeks to develop full competence in all facets of a "
-"skill. It may be ten times or more as long as the first two phases combined. "
-"As the learner progresses in skill, the contact with the mentor may become "
-"less regular and more ad hoc . In this phase the learner gradually takes "
-"more responsibility and initiative in the performance of the skill. "
-"Typically in disciplemaking the mark of the end of this phase is when the "
-"learner has passed on the skill successfully to the fourth generation "
-"through those whom he or she is coaching. When a parent is observing a child "
-"ride a bicycle and ensuring they have adequate skills and knowledge to ride "
-"unsupervised, this is the WATCH phase."
+"Assisting is allowing the learner to practice the skill. This takes longer "
+"than the modeling phase. It requires “hand-holding” on the part of the "
+"mentor. The mentor needs to be directive and take an active role in coaching "
+"the learner. This phase does not last until the learner is fully competent, "
+"but merely until they understand the basics of the skill. If this phase is "
+"continued too long, then the learner will develop a dependence on the mentor "
+"and never advance to full competence. The end of the assist phase should be "
+"marked by the learner starting to model for others. When a parent is holding "
+"onto the bicycle while a child is learning to keep his balance, that is the "
+"ASSIST phase."
 msgstr ""
 
-#: landing-22-training-cycle.php:61
+#: landing-22-training-cycle.php:85
 msgid ""
-"LEAVE - Leaving is a sort of graduation when the learner becomes a peer of "
-"the mentor. Periodic contact and peer mentoring may continue to take place "
-"if the learner and mentor are in the same network. When a parent releases a "
+"Watching is the longest phase. It involves more indirect contact with the "
+"learner. It seeks to develop full competence in all facets of a skill. It "
+"may be ten times or more as long as the first two phases combined. As the "
+"learner progresses in skill, the contact with the mentor may become less "
+"regular and more ad hoc . In this phase the learner gradually takes more "
+"responsibility and initiative in the performance of the skill. Typically in "
+"disciplemaking the mark of the end of this phase is when the learner has "
+"passed on the skill successfully to the fourth generation through those whom "
+"he or she is coaching. When a parent is observing a child ride a bicycle and "
+"ensuring they have adequate skills and knowledge to ride unsupervised, this "
+"is the WATCH phase."
+msgstr ""
+
+#: landing-22-training-cycle.php:86
+msgid ""
+"Leaving is a sort of graduation when the learner becomes a peer of the "
+"mentor. Periodic contact and peer mentoring may continue to take place if "
+"the learner and mentor are in the same network. When a parent releases a "
 "child to ride their bicycle completely unsupervised, that is the LEAVE phase."
 msgstr ""
 
@@ -3907,23 +4127,18 @@ msgstr ""
 
 #: landing-24-non-sequential.php:56
 msgid ""
-"Leadership Cells are 3/3 Groups that only meet for a limited and pre-"
-"determined length of time [like this 9-session Zúme Training course]. The "
-"purpose is to equip a group of people to go out and establish their own "
-"groups or establish another leadership cell at the conclusion of the "
-"training period."
+"If we want to see the kingdom of God grow rapidly we need to expect and even "
+"encourage non-sequential growth."
 msgstr ""
 
-#: landing-24-non-sequential.php:57
+#: landing-24-non-sequential.php:88
+msgid "Have you ever seen a new believer multiply quickly?"
+msgstr ""
+
+#: landing-24-non-sequential.php:89
 msgid ""
-"This approach can be used in several circumstances. It can be used with "
-"mobile population segments such as nomads, students, etc. It can be used if "
-"there numbers of people who are already Christians but for some reason it is "
-"not appropriate for them to form an ongoing group and they need to be "
-"trained to start their own groups. It can also be used if there is a "
-"situation where a number of people come to faith at the same time and there "
-"is not sufficient time or opportunity to do initial follow-up with them "
-"individually with the Greatest Blessing approach or some similar approach."
+"What things do we do that actually slow or stop this from happening "
+"intentionally or unintentionally?"
 msgstr ""
 
 #: landing-25-pace.php:54
@@ -3978,6 +4193,16 @@ msgid ""
 "develop followers of Jesus into leaders in God’s family, everywhere you go."
 msgstr ""
 
+#: landing-28-coaching-checklist.php:59
+msgid ""
+"Download the Coaching Checklist with the link below and take this quick (5-"
+"minutes or less) self-assessment:"
+msgstr ""
+
+#: landing-28-coaching-checklist.php:64
+msgid "Download Coaching Checklist"
+msgstr ""
+
 #: landing-29-leadership-in-networks.php:54
 msgid ""
 "So what happens to churches as they grow and start new churches that start "
@@ -3996,6 +4221,292 @@ msgid ""
 "The churches are related. They share the same spiritual DNA. They are all "
 "connected out of the same first multiplying family. And now -- with some "
 "guidance - they come together as a larger body to do even more."
+msgstr ""
+
+#: landing-30-peer-mentoring-groups.php:74
+msgid ""
+"Peer Mentoring Groups use leader-to-leader mentoring with individual "
+"followers of Jesus, with simple churches, with ministry organizations or "
+"even with a global simple church network that reaches around the world."
+msgstr ""
+
+#: landing-30-peer-mentoring-groups.php:75
+msgid ""
+"Peer Mentoring Groups consists of people who are leading and starting 3/3 "
+"Groups. It also follows a 3/3 format and is a powerful way to assess the "
+"spiritual health of God’s work in your area."
+msgstr ""
+
+#: landing-30-peer-mentoring-groups.php:76
+msgid ""
+"Peer Mentoring Groups follow Jesus’ example of ministry from scripture, ask "
+"questions of one another and give feedback -- all using the same basic time "
+"structure as a 3/3 Group."
+msgstr ""
+
+#: landing-30-peer-mentoring-groups.php:78
+msgid ""
+"Jesus said - “A new command I give you: Love one another. As I have loved "
+"you, so you must love one another. By this everyone will know that you are "
+"my disciples, if you love one another.”"
+msgstr ""
+
+#: landing-30-peer-mentoring-groups.php:79
+msgid ""
+"The purpose of a Peer Mentoring Group is to provide a simple format for "
+"helping followers of Jesus grow through prayer, obedience, application and "
+"accountability. In other words -- “to love one another.”"
+msgstr ""
+
+#: landing-30-peer-mentoring-groups.php:82
+msgid "Use this simple format:"
+msgstr ""
+
+#: landing-30-peer-mentoring-groups.php:84
+msgid "LOOK BACK [1/3 of your time]"
+msgstr ""
+
+#: landing-30-peer-mentoring-groups.php:86
+msgid ""
+"During the first third - spend time in prayer and care just like you would "
+"in a basic 3/3 Group. Then spend time looking at the group’s vision and "
+"faithfulness in previous commitments:"
+msgstr ""
+
+#: landing-30-peer-mentoring-groups.php:87
+msgid ""
+"How well are you abiding in Christ? [Scripture, prayer, trust, obedience, "
+"key relationships?]"
+msgstr ""
+
+#: landing-30-peer-mentoring-groups.php:88
+msgid ""
+"Did your group complete your action plans from the last session? Review them."
+msgstr ""
+
+#: landing-30-peer-mentoring-groups.php:93
+msgid "LOOK UP [1/3 of your time]"
+msgstr ""
+
+#: landing-30-peer-mentoring-groups.php:95
+msgid "Have the group discuss the following simple questions:"
+msgstr ""
+
+#: landing-30-peer-mentoring-groups.php:97
+msgid "How are you doing in each section of the Four Fields diagram?"
+msgstr ""
+
+#: landing-30-peer-mentoring-groups.php:98
+msgid "What is working well? What are your biggest challenges?"
+msgstr ""
+
+#: landing-30-peer-mentoring-groups.php:99
+msgid "Review your current generational map."
+msgstr ""
+
+#: landing-30-peer-mentoring-groups.php:100
+msgid "What challenged you or what did you find hard to understand?"
+msgstr ""
+
+#: landing-30-peer-mentoring-groups.php:101
+msgid "What is God showing you recently?"
+msgstr ""
+
+#: landing-30-peer-mentoring-groups.php:102
+msgid "Are there any questions from seasoned leaders or other participants?"
+msgstr ""
+
+#: landing-30-peer-mentoring-groups.php:107
+msgid "LOOK FORWARD [1/3 of your time]"
+msgstr ""
+
+#: landing-30-peer-mentoring-groups.php:109
+msgid ""
+"Spend time in silent prayer with everyone in the group asking the Holy "
+"Spirit to show them how to answer these questions:"
+msgstr ""
+
+#: landing-30-peer-mentoring-groups.php:111
+msgid ""
+"What action plans or goals would God have me put into practice before our "
+"next time together? [Use the Four Fields tool to help focus your work]"
+msgstr ""
+
+#: landing-30-peer-mentoring-groups.php:112
+msgid "How can my Mentor or other Group Members help me in this work?"
+msgstr ""
+
+#: landing-30-peer-mentoring-groups.php:114
+msgid "Finally spend time as a group talking to God in prayer."
+msgstr ""
+
+#: landing-30-peer-mentoring-groups.php:116
+msgid ""
+"Have the group pray so that each member is prayed for and ask God to prepare "
+"the hearts of all those the group will reach out to during their time apart."
+msgstr ""
+
+#: landing-30-peer-mentoring-groups.php:118
+msgid ""
+"Pray for God to give each member of the group the courage and strength to "
+"apply and obey what God has taught them in this session. If a seasoned "
+"leader needs to pray specifically for a younger leader, this is the perfect "
+"time for that prayer."
+msgstr ""
+
+#: landing-30-peer-mentoring-groups.php:120
+msgid ""
+"Since these groups often meet at a distance, you are unlikely to be able to "
+"celebrate The Lord’s Supper or share a meal, but be sure to make time to "
+"check-in about health and family and friends."
+msgstr ""
+
+#: landing-30-peer-mentoring-groups.php:131
+msgid ""
+"How is this format for peer mentoring different or similar to other peer "
+"mentoring you've experienced either at school or work?"
+msgstr ""
+
+#: landing-31-four-fields.php:59 template-zume-training.php:626
+msgid ""
+"The four fields diagnostic chart is a simple tool to be used by a leadership "
+"cell to reflect on the status of current efforts and the kingdom activity "
+"around them."
+msgstr ""
+
+#: landing-31-four-fields.php:62
+msgid ""
+"Use the tool in peer mentoring to review activity, people, and groups by "
+"categorizing them into the different fields, and asking each other core "
+"questions to surface points of action and next steps."
+msgstr ""
+
+#: landing-31-four-fields.php:66
+msgid "Empty Field"
+msgstr ""
+
+#: landing-31-four-fields.php:67
+msgid ""
+"Ask the question: Where or with whom [what people groups] are you planning "
+"to extend the Kingdom?"
+msgstr ""
+
+#: landing-31-four-fields.php:70
+msgid "Seeding Field"
+msgstr ""
+
+#: landing-31-four-fields.php:71
+msgid ""
+"Ask the question: Where or with whom are you sharing the good news of the "
+"Kingdom? How are you doing that?"
+msgstr ""
+
+#: landing-31-four-fields.php:74
+msgid "Growing Field"
+msgstr ""
+
+#: landing-31-four-fields.php:75
+msgid ""
+"Ask the question: How are you equipping people and growing them spiritually, "
+"individually and in their natural networks?"
+msgstr ""
+
+#: landing-31-four-fields.php:78
+msgid "Harvesting Field"
+msgstr ""
+
+#: landing-31-four-fields.php:79
+msgid ""
+"Ask the question: How are new spiritual families [simple churches] being "
+"formed?"
+msgstr ""
+
+#: landing-31-four-fields.php:82
+msgid "Multiplying Field"
+msgstr ""
+
+#: landing-31-four-fields.php:83
+msgid ""
+"Ask the question: With whom, how and when are you filtering for faithful "
+"people and equipping them and holding them accountable for reproduction?"
+msgstr ""
+
+#: landing-31-four-fields.php:87
+msgid ""
+"Jesus often pulled the disciples back, away from ministry to quieter places "
+"to review how the work was going. This simple tool is to help you and the co-"
+"leaders with you to follow this pattern of Jesus and to address all parts of "
+"your stewardship."
+msgstr ""
+
+#: landing-31-four-fields.php:99
+msgid ""
+"Who do you have that shares your passion that you can meet and review these "
+"questions with?"
+msgstr ""
+
+#: landing-32-generational-map.php:50
+msgid ""
+"Generation mapping is another simple tool to help leaders in a movement "
+"understand the growth around them. It helps show fruitful churches, which "
+"therefore deserve continued investment and attention. It helps show where "
+"there are stops in multiplication and training might be required."
+msgstr ""
+
+#: landing-32-generational-map.php:51
+msgid ""
+"Heath of the movement is a top concern for leaders. Fruitfulness is a top "
+"way to measure health."
+msgstr ""
+
+#: landing-32-generational-map.php:52
+msgid ""
+"A generation tree map can be drawn on a piece of paper or multiple pieces of "
+"paper."
+msgstr ""
+
+#: landing-32-generational-map.php:55
+msgid "Example of generation tree map"
+msgstr ""
+
+#: landing-32-generational-map.php:59
+msgid ""
+"Key information about the maturity of a group can be recorded with five "
+"simple fields (drawn similar to the four fields pattern):"
+msgstr ""
+
+#: landing-32-generational-map.php:62
+msgid "Number of seekers in group"
+msgstr ""
+
+#: landing-32-generational-map.php:63
+msgid "Number of baptized believers in group"
+msgstr ""
+
+#: landing-32-generational-map.php:64
+msgid "Number in accountability relationships"
+msgstr ""
+
+#: landing-32-generational-map.php:65
+msgid "Functioning as a church (Y/N)"
+msgstr ""
+
+#: landing-32-generational-map.php:66
+msgid "Number who have started another group"
+msgstr ""
+
+#: landing-32-generational-map.php:71
+msgid "Snapshot of group maturity"
+msgstr ""
+
+#: landing-32-generational-map.php:83
+msgid ""
+"If you can't draw a generation map now, do you believe God through you could "
+"one day?"
+msgstr ""
+
+#: landing-33-3third-series.php:472
+msgid "Video Transcript"
 msgstr ""
 
 #: parts/content-missing.php:4
@@ -4026,11 +4537,11 @@ msgstr ""
 msgid "Trained"
 msgstr ""
 
-#: parts/content-share.php:39 template-zume-training.php:59
+#: parts/content-share.php:39 template-zume-training.php:62
 msgid "Course Overview"
 msgstr ""
 
-#: parts/content-share.php:41
+#: parts/content-share.php:41 template-zume-training.php:74
 msgid "Checklist"
 msgstr ""
 
@@ -4066,7 +4577,7 @@ msgstr ""
 msgid "Register for Free"
 msgstr ""
 
-#: parts/content-share.php:78 template-zume-about.php:38
+#: parts/content-share.php:79 template-zume-about.php:38
 #: template-zume-about.php:55 template-zume-faq.php:199
 #: template-zume-privacy-policy.php:186 template-zume-progress.php:119
 msgid ""
@@ -4075,7 +4586,7 @@ msgid ""
 "processes, and practices."
 msgstr ""
 
-#: parts/content-share.php:79
+#: parts/content-share.php:80
 msgid "See Entire Training"
 msgstr ""
 
@@ -4089,10 +4600,6 @@ msgstr ""
 
 #: parts/loop-single.php:15
 msgid "Pages:"
-msgstr ""
-
-#: parts/nav-offcanvas-topbar.php:24
-msgid "Menu"
 msgstr ""
 
 #: template-zume-3plan.php:44 template-zume-dashboard.php:827
@@ -5577,371 +6084,374 @@ msgstr ""
 msgid "Register Forever Free"
 msgstr ""
 
-#: template-zume-training.php:60
+#: template-zume-training.php:69
 msgid "My Groups"
 msgstr ""
 
-#: template-zume-training.php:61
+#: template-zume-training.php:75
 msgid "My Checklist"
 msgstr ""
 
-#: template-zume-training.php:78
+#. Theme Name of the plugin/theme
+#: template-zume-training.php:94
 msgid "Zúme Training"
 msgstr ""
 
-#: template-zume-training.php:79
+#: template-zume-training.php:95
 msgid "10 Sessions, 2 hours each, for groups of 3 - 12"
 msgstr ""
 
-#: template-zume-training.php:91
+#: template-zume-training.php:107
 msgid "Single Column"
 msgstr ""
 
-#: template-zume-training.php:92
+#: template-zume-training.php:108
 msgid "Show Session Plan"
 msgstr ""
 
-#: template-zume-training.php:100 template-zume-training.php:163
-#: template-zume-training.php:224 template-zume-training.php:279
-#: template-zume-training.php:348 template-zume-training.php:403
-#: template-zume-training.php:440 template-zume-training.php:475
-#: template-zume-training.php:510 template-zume-training.php:573
+#: template-zume-training.php:116 template-zume-training.php:179
+#: template-zume-training.php:240 template-zume-training.php:295
+#: template-zume-training.php:364 template-zume-training.php:419
+#: template-zume-training.php:456 template-zume-training.php:491
+#: template-zume-training.php:526 template-zume-training.php:589
 msgid "Start"
 msgstr ""
 
-#: template-zume-training.php:103
+#: template-zume-training.php:119
 msgid "Prayer, Overview"
 msgstr ""
 
-#: template-zume-training.php:106 template-zume-training.php:153
-#: template-zume-training.php:169 template-zume-training.php:195
-#: template-zume-training.php:214 template-zume-training.php:230
-#: template-zume-training.php:243 template-zume-training.php:269
-#: template-zume-training.php:285 template-zume-training.php:338
-#: template-zume-training.php:354 template-zume-training.php:393
-#: template-zume-training.php:409 template-zume-training.php:430
-#: template-zume-training.php:465 template-zume-training.php:481
-#: template-zume-training.php:500 template-zume-training.php:516
-#: template-zume-training.php:563 template-zume-training.php:579
-#: template-zume-training.php:642
+#: template-zume-training.php:122 template-zume-training.php:169
+#: template-zume-training.php:185 template-zume-training.php:211
+#: template-zume-training.php:230 template-zume-training.php:246
+#: template-zume-training.php:259 template-zume-training.php:285
+#: template-zume-training.php:301 template-zume-training.php:354
+#: template-zume-training.php:370 template-zume-training.php:409
+#: template-zume-training.php:425 template-zume-training.php:446
+#: template-zume-training.php:481 template-zume-training.php:497
+#: template-zume-training.php:516 template-zume-training.php:532
+#: template-zume-training.php:579 template-zume-training.php:595
+#: template-zume-training.php:660
 msgid "5 min"
 msgstr ""
 
-#: template-zume-training.php:110
+#: template-zume-training.php:126
 msgid ""
 "You'll see how God uses ordinary people doing simple things to make a big "
 "impact."
 msgstr ""
 
-#: template-zume-training.php:113 template-zume-training.php:120
-#: template-zume-training.php:127 template-zume-training.php:134
-#: template-zume-training.php:141 template-zume-training.php:176
-#: template-zume-training.php:183 template-zume-training.php:202
-#: template-zume-training.php:237 template-zume-training.php:250
-#: template-zume-training.php:263 template-zume-training.php:292
-#: template-zume-training.php:305 template-zume-training.php:312
-#: template-zume-training.php:319 template-zume-training.php:326
-#: template-zume-training.php:361 template-zume-training.php:368
-#: template-zume-training.php:375 template-zume-training.php:381
-#: template-zume-training.php:416 template-zume-training.php:447
-#: template-zume-training.php:488 template-zume-training.php:523
-#: template-zume-training.php:530 template-zume-training.php:537
-#: template-zume-training.php:545 template-zume-training.php:586
-#: template-zume-training.php:599 template-zume-training.php:606
-#: template-zume-training.php:612 template-zume-training.php:618
+#: template-zume-training.php:129 template-zume-training.php:136
+#: template-zume-training.php:143 template-zume-training.php:150
+#: template-zume-training.php:157 template-zume-training.php:192
+#: template-zume-training.php:199 template-zume-training.php:218
+#: template-zume-training.php:253 template-zume-training.php:266
+#: template-zume-training.php:279 template-zume-training.php:308
+#: template-zume-training.php:321 template-zume-training.php:328
+#: template-zume-training.php:335 template-zume-training.php:342
+#: template-zume-training.php:377 template-zume-training.php:384
+#: template-zume-training.php:391 template-zume-training.php:397
+#: template-zume-training.php:432 template-zume-training.php:463
+#: template-zume-training.php:504 template-zume-training.php:539
+#: template-zume-training.php:546 template-zume-training.php:553
+#: template-zume-training.php:561 template-zume-training.php:602
+#: template-zume-training.php:615 template-zume-training.php:622
+#: template-zume-training.php:629 template-zume-training.php:636
 msgid "15 min"
 msgstr ""
 
-#: template-zume-training.php:117
+#: template-zume-training.php:133
 msgid ""
 "Discover the essence of being a disciple, making a disciple, and what is the "
 "church."
 msgstr ""
 
-#: template-zume-training.php:124
+#: template-zume-training.php:140
 msgid "Being a disciple means we hear from God and we obey God."
 msgstr ""
 
-#: template-zume-training.php:131
+#: template-zume-training.php:147
 msgid ""
 "A tool for daily Bible study that helps you understand, obey, and share "
 "God’s Word."
 msgstr ""
 
-#: template-zume-training.php:138
+#: template-zume-training.php:154
 msgid ""
 "A tool for two or three people of the same gender to meet weekly and "
 "encourage each other in areas that are going well and reveal areas that need "
 "correction."
 msgstr ""
 
-#: template-zume-training.php:144
+#: template-zume-training.php:160
 msgid "Practice - Accountability groups"
 msgstr ""
 
-#: template-zume-training.php:147 template-zume-training.php:256
-#: template-zume-training.php:298
+#: template-zume-training.php:163 template-zume-training.php:272
+#: template-zume-training.php:314
 msgid "45 min"
-msgstr ""
-
-#: template-zume-training.php:150 template-zume-training.php:211
-#: template-zume-training.php:266 template-zume-training.php:335
-#: template-zume-training.php:390 template-zume-training.php:427
-#: template-zume-training.php:462 template-zume-training.php:497
-#: template-zume-training.php:560 template-zume-training.php:639
-msgid "Looking Forward"
 msgstr ""
 
 #: template-zume-training.php:166 template-zume-training.php:227
 #: template-zume-training.php:282 template-zume-training.php:351
-#: template-zume-training.php:406 template-zume-training.php:478
-#: template-zume-training.php:513 template-zume-training.php:576
+#: template-zume-training.php:406 template-zume-training.php:443
+#: template-zume-training.php:478 template-zume-training.php:513
+#: template-zume-training.php:576 template-zume-training.php:657
+msgid "Looking Forward"
+msgstr ""
+
+#: template-zume-training.php:182 template-zume-training.php:243
+#: template-zume-training.php:298 template-zume-training.php:367
+#: template-zume-training.php:422 template-zume-training.php:494
+#: template-zume-training.php:529 template-zume-training.php:592
 msgid "Check-in, Prayer, Overview"
 msgstr ""
 
-#: template-zume-training.php:173
+#: template-zume-training.php:189
 msgid ""
 "You'll discover the four main ways God makes everyday followers more like "
 "Jesus."
 msgstr ""
 
-#: template-zume-training.php:180
+#: template-zume-training.php:196
 msgid "See how easy it is to spend an hour in prayer."
 msgstr ""
 
-#: template-zume-training.php:186
+#: template-zume-training.php:202
 msgid "Practice - Prayer Cycle"
 msgstr ""
 
-#: template-zume-training.php:189 template-zume-training.php:551
-#: template-zume-training.php:624
+#: template-zume-training.php:205 template-zume-training.php:567
+#: template-zume-training.php:642
 msgid "60 min"
 msgstr ""
 
-#: template-zume-training.php:192
+#: template-zume-training.php:208
 msgid "Discuss - Prayer Cycle"
 msgstr ""
 
-#: template-zume-training.php:199
+#: template-zume-training.php:215
 msgid "A tool designed to help you be a good steward of your relationships."
 msgstr ""
 
-#: template-zume-training.php:205
+#: template-zume-training.php:221
 msgid "Practice - Create List of 100"
 msgstr ""
 
-#: template-zume-training.php:208
+#: template-zume-training.php:224
 msgid "30 min"
 msgstr ""
 
-#: template-zume-training.php:234
+#: template-zume-training.php:250
 msgid ""
 "Learn how God's economy is different from the world's. God invests more in "
 "those who are faithful with what they've already been given."
 msgstr ""
 
-#: template-zume-training.php:240
+#: template-zume-training.php:256
 msgid "Discuss - Should every disciple share?"
 msgstr ""
 
-#: template-zume-training.php:247
+#: template-zume-training.php:263
 msgid ""
 "Learn a way to share God’s Good News from the beginning of humanity all the "
 "way to the end of this age."
 msgstr ""
 
-#: template-zume-training.php:253
+#: template-zume-training.php:269
 msgid "Practice - Sharing the Gospel"
 msgstr ""
 
-#: template-zume-training.php:260
+#: template-zume-training.php:276
 msgid ""
 "Jesus said, “Go and make disciples of all nations, BAPTIZING them in the "
 "name of the Father and of the Son and of the Holy Spirit…” Learn how to put "
 "this into practice."
 msgstr ""
 
-#: template-zume-training.php:289
+#: template-zume-training.php:305
 msgid ""
 "Learn how to share your testimony in three minutes by sharing how Jesus has "
 "impacted your life."
 msgstr ""
 
-#: template-zume-training.php:295
+#: template-zume-training.php:311
 msgid "Practice - Share your testimony"
 msgstr ""
 
-#: template-zume-training.php:302
+#: template-zume-training.php:318
 msgid ""
 "Learn a simple pattern of making not just one follower of Jesus but entire "
 "spiritual families who multiply for generations to come."
 msgstr ""
 
-#: template-zume-training.php:309
+#: template-zume-training.php:325
 msgid "Learn what ducklings have to do with disciple-making."
 msgstr ""
 
-#: template-zume-training.php:316
+#: template-zume-training.php:332
 msgid ""
 "Begin to see where God’s Kingdom isn’t. These are usually the places where "
 "God wants to work the most."
 msgstr ""
 
-#: template-zume-training.php:323
+#: template-zume-training.php:339
 msgid ""
 "It’s a simple way to celebrate our intimate connection and ongoing "
 "relationship with Jesus. Learn a simple way to celebrate."
 msgstr ""
 
-#: template-zume-training.php:329
+#: template-zume-training.php:345
 msgid "Practice - Lord's Supper"
 msgstr ""
 
-#: template-zume-training.php:332 template-zume-training.php:459
-#: template-zume-training.php:592 template-zume-training.php:630
-#: template-zume-training.php:636
+#: template-zume-training.php:348 template-zume-training.php:475
+#: template-zume-training.php:608 template-zume-training.php:648
+#: template-zume-training.php:654
 msgid "10 min"
 msgstr ""
 
-#: template-zume-training.php:358
+#: template-zume-training.php:374
 msgid ""
 "It’s a simple way to obey God’s command to pray for others. And it's just "
 "what it sounds like — praying to God while walking around!"
 msgstr ""
 
-#: template-zume-training.php:365
+#: template-zume-training.php:381
 msgid ""
 "Learn who a person of peace might be and how to know when you've found one."
 msgstr ""
 
-#: template-zume-training.php:372
+#: template-zume-training.php:388
 msgid "Practice a simple mnemonic to remind you of ways to pray for others."
 msgstr ""
 
-#: template-zume-training.php:378
+#: template-zume-training.php:394
 msgid "Practice - BLESS Prayer"
 msgstr ""
 
-#: template-zume-training.php:384
+#: template-zume-training.php:400
 msgid "Practice - Prayer Walking"
 msgstr ""
 
-#: template-zume-training.php:387 template-zume-training.php:453
-#: template-zume-training.php:494
+#: template-zume-training.php:403 template-zume-training.php:469
+#: template-zume-training.php:510
 msgid "90 min"
 msgstr ""
 
-#: template-zume-training.php:413
+#: template-zume-training.php:429
 msgid ""
 "It's important what disciples know — but it's much more important what they "
 "DO with what they know."
 msgstr ""
 
-#: template-zume-training.php:420
+#: template-zume-training.php:436
 msgid ""
 "A 3/3 Group is a way for followers of Jesus to meet, pray, learn, grow, "
 "fellowship and practice obeying and sharing what they've learned. In this "
 "way, a 3/3 Group is not just a small group but a Simple Church."
 msgstr ""
 
-#: template-zume-training.php:423
+#: template-zume-training.php:439
 msgid "75 min"
 msgstr ""
 
-#: template-zume-training.php:444
+#: template-zume-training.php:460
 msgid ""
 "Learn the training cycle and consider how it applies to disciple making."
 msgstr ""
 
-#: template-zume-training.php:450 template-zume-training.php:491
+#: template-zume-training.php:466 template-zume-training.php:507
 msgid "Practice - 3/3 Group"
 msgstr ""
 
-#: template-zume-training.php:456
+#: template-zume-training.php:472
 msgid "Discuss - 3/3 Group Experience"
 msgstr ""
 
-#: template-zume-training.php:485
+#: template-zume-training.php:501
 msgid ""
 "A Leadership Cell is a way someone who feels called to lead can develop "
 "their leadership by practicing serving."
 msgstr ""
 
-#: template-zume-training.php:520
+#: template-zume-training.php:536
 msgid ""
 "See how disciple making doesn't have to be linear. Multiple things can "
 "happen at the same time."
 msgstr ""
 
-#: template-zume-training.php:527
+#: template-zume-training.php:543
 msgid ""
 "Multiplying matters and multiplying quickly matters even more. See why pace "
 "matters."
 msgstr ""
 
-#: template-zume-training.php:534
+#: template-zume-training.php:550
 msgid "Learn how to obey Jesus' commands by going AND staying."
 msgstr ""
 
-#: template-zume-training.php:541
+#: template-zume-training.php:557
 msgid "login required"
 msgstr ""
 
-#: template-zume-training.php:542
+#: template-zume-training.php:558
 msgid ""
 "Create and share your plan for how you will implement the Zúme tools over "
 "the next three months."
 msgstr ""
 
-#: template-zume-training.php:548
+#: template-zume-training.php:564
 msgid "Practice - Create 3-Month Plan"
 msgstr ""
 
-#: template-zume-training.php:554
+#: template-zume-training.php:570
 msgid "Discuss - Share 3-Month Plan with group"
 msgstr ""
 
-#: template-zume-training.php:557
+#: template-zume-training.php:573
 msgid "20 min"
 msgstr ""
 
-#: template-zume-training.php:583
+#: template-zume-training.php:599
 msgid ""
 "A powerful tool you can use to quickly assess your own strengths and "
 "vulnerabilities when it comes to making disciples who multiply."
 msgstr ""
 
-#: template-zume-training.php:589
+#: template-zume-training.php:605
 msgid "Practice - Coaching Checklist Self-Assessment"
 msgstr ""
 
-#: template-zume-training.php:596
+#: template-zume-training.php:612
 msgid ""
 "Learn how multiplying churches stay connected and live life together as an "
 "extended, spiritual family."
 msgstr ""
 
-#: template-zume-training.php:603
+#: template-zume-training.php:619
 msgid ""
 "This is a group that consists of people who are leading and starting 3/3 "
 "Groups. It also follows a 3/3 format and is a powerful way to assess the "
 "spiritual health of God’s work in your area."
 msgstr ""
 
-#: template-zume-training.php:621
+#: template-zume-training.php:633
+msgid ""
+"Generation mapping is another simple tool to help leaders in a movement "
+"understand the growth around them."
+msgstr ""
+
+#: template-zume-training.php:639
 msgid "Practice - 3/3 Peer Mentoring"
 msgstr ""
 
-#: template-zume-training.php:627
+#: template-zume-training.php:645
 msgid "Practice - Four Fields"
 msgstr ""
 
-#: template-zume-training.php:633
+#: template-zume-training.php:651
 msgid "Practice - Generation Mapping"
-msgstr ""
-
-#. Theme Name of the plugin/theme
-msgid "Zúme Project"
 msgstr ""
 
 #. Theme URI of the plugin/theme
@@ -5949,11 +6459,11 @@ msgid "https://github.com/ZumeProject/zume-training"
 msgstr ""
 
 #. Description of the plugin/theme
-msgid "Zúme Project for multiplying disciples."
+msgid "Zúme Training for multiplying disciples."
 msgstr ""
 
 #. Author of the plugin/theme
-msgid "Zume Project"
+msgid "Zume Training"
 msgstr ""
 
 #. Author URI of the plugin/theme
