@@ -28,7 +28,7 @@ Template Name: Zúme FAQ
                     <div class="cell">
                         <hr>
                         <h3 class="secondary"><?php esc_html_e( 'Is it really 100 percent free?', 'zume' ) ?></h3>
-                        <?php esc_html_e( 'Yes. There are no premium versions, no trial periods, no follow-on sales of products. Freely we've received. Freely we give.', 'zume' ) ?>
+                        <?php esc_html_e( "Yes. There are no premium versions, no trial periods, no follow-on sales of products. Freely we've received. Freely we give.", 'zume' ) ?>
                     </div>
 
                     <!-- Item -->
