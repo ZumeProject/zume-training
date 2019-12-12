@@ -4,6 +4,7 @@ Template Name: Training
 */
 get_header();
 $current_language = zume_current_language();
+$zendesk_enable = true;
 ?>
 
 <div class="training">
