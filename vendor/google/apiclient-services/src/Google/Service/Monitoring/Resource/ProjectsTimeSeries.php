@@ -65,7 +65,8 @@ class Google_Service_Monitoring_Resource_ProjectsTimeSeries extends Google_Servi
    * maximum number of Points returned. If view is set to HEADERS, this is the
    * maximum number of TimeSeries returned.
    * @opt_param string orderBy Unsupported: must be left blank. The points in each
-   * time series are returned in reverse time order.
+   * time series are currently returned in reverse time order (most recent to
+   * oldest).
    * @opt_param string aggregation.crossSeriesReducer The approach to be used to
    * combine time series. Not all reducer functions may be applied to all time
    * series, depending on the metric type and the value type of the original time

@@ -623,14 +623,14 @@ $current_language = zume_current_language();
                                     </div>
                                     <div class="cell medium-10">
                                         <a href="<?php echo esc_url( zume_get_landing_translation_url( 31, $current_language ) ) ?>"><?php echo esc_html( zume_get_landing_title( 31, $current_language ) ) ?></a><br>
-                                        <p class="t-description"><?php esc_html_e("The four fields diagnostic chart is a simple tool to be used by a leadership cell to reflect on the status of current efforts and the kingdom activity around them.", 'zume') ?></p>
+                                        <p class="t-description"><?php esc_html_e( "The four fields diagnostic chart is a simple tool to be used by a leadership cell to reflect on the status of current efforts and the kingdom activity around them.", 'zume' ) ?></p>
                                     </div>
                                     <div class="cell medium-2 t-length hide-extra">
                                         <?php echo esc_html__( "15 min", 'zume' ) ?>
                                     </div>
                                     <div class="cell medium-10">
                                         <a href="<?php echo esc_url( zume_get_landing_translation_url( 32, $current_language ) ) ?>"><?php echo esc_html( zume_get_landing_title( 32, $current_language ) ) ?></a><br>
-                                        <p class="t-description"><?php esc_html_e("Generation mapping is another simple tool to help leaders in a movement understand the growth around them.", 'zume') ?></p>
+                                        <p class="t-description"><?php esc_html_e( "Generation mapping is another simple tool to help leaders in a movement understand the growth around them.", 'zume' ) ?></p>
                                     </div>
                                     <div class="cell medium-2 t-length hide-extra">
                                         <?php echo esc_html__( "15 min", 'zume' ) ?>

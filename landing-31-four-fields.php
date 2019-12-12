@@ -56,35 +56,35 @@ if (have_posts()) :
                             <div class="grid-x content-large">
                                 <div class="cell">
                                     <p>
-                                        <?php esc_html_e("The four fields diagnostic chart is a simple tool to be used by a leadership cell to reflect on the status of current efforts and the kingdom activity around them.", 'zume') ?>
+                                        <?php esc_html_e( "The four fields diagnostic chart is a simple tool to be used by a leadership cell to reflect on the status of current efforts and the kingdom activity around them.", 'zume' ) ?>
                                     </p>
                                     <p>
-                                        <?php esc_html_e("Use the tool in peer mentoring to review activity, people, and groups by categorizing them into the different fields, and asking each other core questions to surface points of action and next steps.", 'zume') ?>
+                                        <?php esc_html_e( "Use the tool in peer mentoring to review activity, people, and groups by categorizing them into the different fields, and asking each other core questions to surface points of action and next steps.", 'zume' ) ?>
                                     </p>
                                     <div class="inset">
                                         <p>
-                                            <strong><?php esc_html_e("Empty Field", 'zume') ?></strong><br>
-                                            <?php esc_html_e("Ask the question: Where or with whom [what people groups] are you planning to extend the Kingdom?", 'zume') ?>
+                                            <strong><?php esc_html_e( "Empty Field", 'zume' ) ?></strong><br>
+                                            <?php esc_html_e( "Ask the question: Where or with whom [what people groups] are you planning to extend the Kingdom?", 'zume' ) ?>
                                         </p>
                                         <p>
-                                            <strong><?php esc_html_e("Seeding Field", 'zume') ?></strong><br>
-                                            <?php esc_html_e("Ask the question: Where or with whom are you sharing the good news of the Kingdom? How are you doing that?", 'zume') ?>
+                                            <strong><?php esc_html_e( "Seeding Field", 'zume' ) ?></strong><br>
+                                            <?php esc_html_e( "Ask the question: Where or with whom are you sharing the good news of the Kingdom? How are you doing that?", 'zume' ) ?>
                                         </p>
                                         <p>
-                                            <strong><?php esc_html_e("Growing Field", 'zume') ?></strong><br>
-                                            <?php esc_html_e("Ask the question: How are you equipping people and growing them spiritually, individually and in their natural networks?", 'zume') ?>
+                                            <strong><?php esc_html_e( "Growing Field", 'zume' ) ?></strong><br>
+                                            <?php esc_html_e( "Ask the question: How are you equipping people and growing them spiritually, individually and in their natural networks?", 'zume' ) ?>
                                         </p>
                                         <p>
-                                            <strong><?php esc_html_e("Harvesting Field", 'zume') ?></strong><br>
-                                            <?php esc_html_e("Ask the question: How are new spiritual families [simple churches] being formed?", 'zume') ?>
+                                            <strong><?php esc_html_e( "Harvesting Field", 'zume' ) ?></strong><br>
+                                            <?php esc_html_e( "Ask the question: How are new spiritual families [simple churches] being formed?", 'zume' ) ?>
                                         </p>
                                         <p>
-                                            <strong><?php esc_html_e("Multiplying Field", 'zume') ?></strong><br>
-                                            <?php esc_html_e("Ask the question: With whom, how and when are you filtering for faithful people and equipping them and holding them accountable for reproduction?", 'zume') ?>
+                                            <strong><?php esc_html_e( "Multiplying Field", 'zume' ) ?></strong><br>
+                                            <?php esc_html_e( "Ask the question: With whom, how and when are you filtering for faithful people and equipping them and holding them accountable for reproduction?", 'zume' ) ?>
                                         </p>
                                     </div>
                                     <p>
-                                        <?php esc_html_e("Jesus often pulled the disciples back, away from ministry to quieter places to review how the work was going. This simple tool is to help you and the co-leaders with you to follow this pattern of Jesus and to address all parts of your stewardship.", 'zume') ?>
+                                        <?php esc_html_e( "Jesus often pulled the disciples back, away from ministry to quieter places to review how the work was going. This simple tool is to help you and the co-leaders with you to follow this pattern of Jesus and to address all parts of your stewardship.", 'zume' ) ?>
                                     </p>
                                 </div>
                             </div>

@@ -61,7 +61,7 @@ if (have_posts()) :
                                         <img src="<?php echo esc_url( zume_images_uri( '/temp/' ) ) ?>coaching-checklist.jpg" alt="checklist" style="max-width:300px;" />
                                     </div>
                                     <div class="cell content-large center">
-                                        <a href="<?php echo esc_url( zume_files_uri() ) ?>84_en_coaching_checklist.pdf" class="button primary-button"><?php esc_html_e("Download Coaching Checklist", 'zume' ) ?></a>
+                                        <a href="<?php echo esc_url( zume_files_uri() ) ?>84_en_coaching_checklist.pdf" class="button primary-button"><?php esc_html_e( "Download Coaching Checklist", 'zume' ) ?></a>
                                     </div>
                                     <ol>
                                         <li><?php esc_html_e( "Read through the Disciple Training Tools in the far left column of the Checklist.", 'zume' ) ?></li>

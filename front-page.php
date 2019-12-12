@@ -86,7 +86,7 @@ $zume_current_lang = zume_current_language();
                             </div>
                             <?php if ( zume_v4_ready_language() ) : ?>
                             <div class="cell center">
-                                <a href="<?php echo esc_url( zume_training_url( $zume_current_lang ) ) ?>" class="button primary-button-hollow large" ><?php esc_html_e("Explore Training", 'zume' ) ?></a>
+                                <a href="<?php echo esc_url( zume_training_url( $zume_current_lang ) ) ?>" class="button primary-button-hollow large" ><?php esc_html_e( "Explore Training", 'zume' ) ?></a>
                             </div>
                             <?php endif; ?>
                             <div class="cell center">

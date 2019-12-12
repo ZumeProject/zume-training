@@ -47,28 +47,28 @@ if (have_posts()) :
 
                         <div class="grid-x grid-padding-y content-large">
                             <div class="cell">
-                                <p><?php esc_html_e("Generation mapping is another simple tool to help leaders in a movement understand the growth around them. It helps show fruitful churches, which therefore deserve continued investment and attention. It helps show where there are stops in multiplication and training might be required.", 'zume') ?></p>
-                                <p><?php esc_html_e("Heath of the movement is a top concern for leaders. Fruitfulness is a top way to measure health.", 'zume') ?></p>
-                                <p><?php esc_html_e("A generation tree map can be drawn on a piece of paper or multiple pieces of paper.", 'zume') ?></p>
+                                <p><?php esc_html_e( "Generation mapping is another simple tool to help leaders in a movement understand the growth around them. It helps show fruitful churches, which therefore deserve continued investment and attention. It helps show where there are stops in multiplication and training might be required.", 'zume' ) ?></p>
+                                <p><?php esc_html_e( "Heath of the movement is a top concern for leaders. Fruitfulness is a top way to measure health.", 'zume' ) ?></p>
+                                <p><?php esc_html_e( "A generation tree map can be drawn on a piece of paper or multiple pieces of paper.", 'zume' ) ?></p>
                             </div>
                             <div class="cell center">
-                                <p class="sub-caption"><?php esc_html_e("Example of generation tree map", 'zume') ?></p>
+                                <p class="sub-caption"><?php esc_html_e( "Example of generation tree map", 'zume' ) ?></p>
                                 <img src="<?php echo esc_url( zume_images_uri( '/zume_images/' ) ) ?>generation-map-tree.svg" alt="generation mapping" style="max-width:600px;" />
                             </div>
                             <div class="cell">
-                                <p><?php esc_html_e("Key information about the maturity of a group can be recorded with five simple fields (drawn similar to the four fields pattern):", 'zume') ?></p>
+                                <p><?php esc_html_e( "Key information about the maturity of a group can be recorded with five simple fields (drawn similar to the four fields pattern):", 'zume' ) ?></p>
                                 <div class="inset">
                                     <ul>
-                                        <li><?php esc_html_e("Number of seekers in group", 'zume') ?></li>
-                                        <li><?php esc_html_e("Number of baptized believers in group", 'zume') ?></li>
-                                        <li><?php esc_html_e("Number in accountability relationships", 'zume') ?></li>
-                                        <li><?php esc_html_e("Functioning as a church (Y/N)", 'zume') ?></li>
-                                        <li><?php esc_html_e("Number who have started another group", 'zume') ?></li>
+                                        <li><?php esc_html_e( "Number of seekers in group", 'zume' ) ?></li>
+                                        <li><?php esc_html_e( "Number of baptized believers in group", 'zume' ) ?></li>
+                                        <li><?php esc_html_e( "Number in accountability relationships", 'zume' ) ?></li>
+                                        <li><?php esc_html_e( "Functioning as a church (Y/N)", 'zume' ) ?></li>
+                                        <li><?php esc_html_e( "Number who have started another group", 'zume' ) ?></li>
                                     </ul>
                                 </div>
                             </div>
                             <div class="cell center">
-                                <p class="sub-caption"><?php esc_html_e("Snapshot of group maturity", 'zume') ?></p>
+                                <p class="sub-caption"><?php esc_html_e( "Snapshot of group maturity", 'zume' ) ?></p>
                                 <img src="<?php echo esc_url( zume_images_uri( '/zume_images/' ) ) ?>generation-map-fields.svg" alt="generation mapping" style="max-width:600px;" />
                             </div>
                         </div>
