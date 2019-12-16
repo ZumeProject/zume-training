@@ -24,7 +24,7 @@ if (have_posts()) :
                     <!-- Center column -->
                     <div class="medium-8 small-10 cell center">
 
-                        <img src="<?php echo esc_url( get_theme_file_uri() ) ?>/assets/images/pieces_pages/1-ordinary-people.png" />
+                        <img src="<?php echo esc_url( get_theme_file_uri() ) ?>/assets/images/pieces_pages/1-ordinary-people.png" alt="<?php the_title(); ?>" />
 
                         <h1>
                             <strong><?php the_title(); ?></strong>
@@ -76,6 +76,18 @@ if (have_posts()) :
 
                                 </div>
                             </div>
+
+                            <!-- Activity Block -->
+                            <div class="grid-x grid-margin-x grid-margin-y">
+                                <div class="cell content-large">
+                                    <p><?php echo esc_html__( "Our dream is to do what Jesus said -- to help ordinary people around the world use small tools to make a big impact in God’s kingdom!", 'zume' ) ?></p>
+                                    <p><?php echo esc_html__( "Jesus’ final instructions to His followers were simple. He said — All authority in heaven and earth has been given to Me. Therefore — Go and Make Disciples of all nations baptizing them in the name of the Father, Son and Holy Spirit, Teaching them to obey all I have commanded, And I will be with you always - even to the end of the age.", 'zume' ) ?></p>
+                                    <p><?php echo esc_html__( "Jesus’ command was simple - Make Disciples.", 'zume' ) ?></p>
+                                    <p><?php echo esc_html__( "His instructions on how to do that were simple: (1) Make disciples wherever you’re going; (2) Make disciples by baptizing them in the name of the Father, Son and Holy Spirit; (3) Make disciples by teaching them to obey all He commanded.", 'zume' ) ?></p>
+                                    <p><?php echo esc_html__( "So what are the steps to make a disciple? (1) We make disciples all the time - wherever we’re going and as we go. (2) When someone decides to follow Jesus - they should be baptized. (3) As they grow - we should teach every disciple how to obey everything that Jesus commanded. Since one of the things He commanded is to make disciples, that means that every disciple who follows Jesus needs to learn how to make disciples too.", 'zume' ) ?></p>
+                                </div>
+                            </div>
+
                             <!-- grid-x -->
                             <!-- Activity Block -->
                             <div class="grid-x grid-margin-x grid-margin-y">
