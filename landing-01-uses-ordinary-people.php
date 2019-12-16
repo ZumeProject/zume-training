@@ -93,7 +93,7 @@ if (have_posts()) :
 
                             <!-- grid-x -->
                             <!-- Activity Block -->
-                            <div class="grid-x grid-margin-x grid-margin-y">
+                            <div class="grid-x grid-margin-x">
                                 <div class="cell content-large center">
                                     <h3 class="center"><?php esc_html_e( 'Ask Yourself', 'zume' ) ?></h3>
                                 </div>
