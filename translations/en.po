@@ -5469,125 +5469,125 @@ msgstr "Zume Training"
 
 #: landing-10-gospel.php:84
 msgid "Here is God’s Story of Good News -"
-msgstr ""
+msgstr "Here is God’s Story of Good News -"
 
 #: landing-10-gospel.php:85
 msgid "In the beginning, God made the whole world and everything in it. He created the FIRST MAN and the FIRST WOMAN. He placed them in a beautiful garden. He made them PART OF HIS FAMILY and had a CLOSE RELATIONSHIP with them. He created them to LIVE FOREVER. There was no such thing as death."
-msgstr ""
+msgstr "In the beginning, God made the whole world and everything in it. He created the FIRST MAN and the FIRST WOMAN. He placed them in a beautiful garden. He made them PART OF HIS FAMILY and had a CLOSE RELATIONSHIP with them. He created them to LIVE FOREVER. There was no such thing as death."
 
 #: landing-10-gospel.php:86
 msgid "Even in this perfect place, man rebelled against God and brought SIN and SUFFERING into the world. God BANISHED man from the garden. The relationship between man and God was BROKEN. Now man would have to face DEATH."
-msgstr ""
+msgstr "Even in this perfect place, man rebelled against God and brought SIN and SUFFERING into the world. God BANISHED man from the garden. The relationship between man and God was BROKEN. Now man would have to face DEATH."
 
 #: landing-10-gospel.php:87
 msgid "Over many hundreds of years, God kept sending MESSENGERS into the world. They reminded man of his sin but also told him of God’s FAITHFULNESS and PROMISE to send a SAVIOR into the world. The Savior would RESTORE the close relationship between God and Man. The Savior would RESCUE man from death. The Savior would give ETERNAL LIFE and be with man forever. "
-msgstr ""
+msgstr "Over many hundreds of years, God kept sending MESSENGERS into the world. They reminded man of his sin but also told him of God’s FAITHFULNESS and PROMISE to send a SAVIOR into the world. The Savior would RESTORE the close relationship between God and Man. The Savior would RESCUE man from death. The Savior would give ETERNAL LIFE and be with man forever."
 
 #: landing-10-gospel.php:88
 msgid "God loves us so much that when the time was right, He sent His Son into the world to be that Savior. Jesus was God’s Son. He was born into the world through a virgin. He lived a perfect life. He never sinned. Jesus taught people about God. He performed many miracles showing His great power. He cast out many demons. He healed many people. He made the blind see. He made the deaf hear. He made the lame walk. Jesus even raised the dead. Many religious leaders were THREATENED and JEALOUS of Jesus. They wanted Him killed. Since He never sinned, Jesus did not have to die. But He CHOSE to die as a SACRIFICE for all of us. His painful death covered up the sins of mankind. After this, Jesus was buried in a tomb."
-msgstr ""
+msgstr "God loves us so much that when the time was right, He sent His Son into the world to be that Savior. Jesus was God’s Son. He was born into the world through a virgin. He lived a perfect life. He never sinned. Jesus taught people about God. He performed many miracles showing His great power. He cast out many demons. He healed many people. He made the blind see. He made the deaf hear. He made the lame walk. Jesus even raised the dead. Many religious leaders were THREATENED and JEALOUS of Jesus. They wanted Him killed. Since He never sinned, Jesus did not have to die. But He CHOSE to die as a SACRIFICE for all of us. His painful death covered up the sins of mankind. After this, Jesus was buried in a tomb."
 
 #: landing-10-gospel.php:89
 msgid "God saw the SACRIFICE Jesus made and accepted it. God showed His acceptance by raising Jesus from the dead on the third day. God said that if we BELIEVE and RECEIVE Jesus’ sacrifice for our sins -- If we TURN AWAY from our sins and FOLLOW Jesus, God CLEANS US from all sin and WELCOMES us back into His family. God sends the HOLY SPIRIT to live inside us and make us able to follow Jesus."
-msgstr ""
+msgstr "God saw the SACRIFICE Jesus made and accepted it. God showed His acceptance by raising Jesus from the dead on the third day. God said that if we BELIEVE and RECEIVE Jesus’ sacrifice for our sins -- If we TURN AWAY from our sins and FOLLOW Jesus, God CLEANS US from all sin and WELCOMES us back into His family. God sends the HOLY SPIRIT to live inside us and make us able to follow Jesus."
 
 #: landing-10-gospel.php:90
 msgid "We are BAPTIZED in water to show and seal this restored relationship. As a symbol of death we are buried beneath the water. As a symbol of new life we are raised out of the water to follow Jesus. When Jesus rose from the dead, He spent 40 days on earth. Jesus taught His followers to go everywhere and tell the good news of His salvation to everyone around the world."
-msgstr ""
+msgstr "We are BAPTIZED in water to show and seal this restored relationship. As a symbol of death we are buried beneath the water. As a symbol of new life we are raised out of the water to follow Jesus. When Jesus rose from the dead, He spent 40 days on earth. Jesus taught His followers to go everywhere and tell the good news of His salvation to everyone around the world."
 
 #: landing-10-gospel.php:91
 msgid "Jesus said - Go and MAKE DISCIPLES of all nations, BAPTIZING them in the name of the Father, Son and Holy Spirit; and TEACHING them to obey all I have commanded. I will be with you always - even to the end of this age."
-msgstr ""
+msgstr "Jesus said - Go and MAKE DISCIPLES of all nations, BAPTIZING them in the name of the Father, Son and Holy Spirit; and TEACHING them to obey all I have commanded. I will be with you always - even to the end of this age."
 
 #: landing-10-gospel.php:92
 msgid "Jesus was then TAKEN UP before their eyes into heaven. One day, Jesus will COME AGAIN in the same way He left. He will PUNISH FOREVER those who did not love and obey Him. He will RECEIVE and REWARD FOREVER those who did love and obey Him. We will LIVE FOREVER with Him in a New Heaven and on a New Earth."
-msgstr ""
+msgstr "Jesus was then TAKEN UP before their eyes into heaven. One day, Jesus will COME AGAIN in the same way He left. He will PUNISH FOREVER those who did not love and obey Him. He will RECEIVE and REWARD FOREVER those who did love and obey Him. We will LIVE FOREVER with Him in a New Heaven and on a New Earth."
 
 #: landing-10-gospel.php:93
 msgid "I BELIEVED and RECEIVED the sacrifice Jesus made for my sins. He has made me clean and restored me as part of God’s family. He loves me, and I love Him and will live with Him forever in His kingdom. God loves you and wants you to receive this gift, as well. Would you like to do that right now?"
-msgstr ""
+msgstr "I BELIEVED and RECEIVED the sacrifice Jesus made for my sins. He has made me clean and restored me as part of God’s family. He loves me, and I love Him and will live with Him forever in His kingdom. God loves you and wants you to receive this gift, as well. Would you like to do that right now?"
 
 #: landing-21-3-3-group-pattern.php:87
 msgid "Care and Prayer: Take time to have each person share something they are thankful for. Then each person should share something they are struggling with. Have the person to their right pray for them about the items they share. If anyone is struggling with something that requires more attention, stay after to care for that person."
-msgstr ""
+msgstr "Care and Prayer: Take time to have each person share something they are thankful for. Then each person should share something they are struggling with. Have the person to their right pray for them about the items they share. If anyone is struggling with something that requires more attention, stay after to care for that person."
 
 #: landing-21-3-3-group-pattern.php:88
 msgid "Vision: Spend time singing together and tie the lyrics to the themes of loving God, loving others, sharing Jesus with others, starting new groups, and helping others do the same. Alternatively people could share Bible passages that communicate these themes."
-msgstr ""
+msgstr "Vision: Spend time singing together and tie the lyrics to the themes of loving God, loving others, sharing Jesus with others, starting new groups, and helping others do the same. Alternatively people could share Bible passages that communicate these themes."
 
 #: landing-21-3-3-group-pattern.php:89
 msgid "Check-in: Have each person share how they did regarding the commitments they wrote down from the previous week:"
-msgstr ""
+msgstr "Check-in: Have each person share how they did regarding the commitments they wrote down from the previous week:"
 
 #: landing-21-3-3-group-pattern.php:92
 msgid "How have you obeyed what you have learned?"
-msgstr ""
+msgstr "How have you obeyed what you have learned?"
 
 #: landing-21-3-3-group-pattern.php:93
 msgid "Who have you trained in what you have learned?"
-msgstr ""
+msgstr "Who have you trained in what you have learned?"
 
 #: landing-21-3-3-group-pattern.php:94
 msgid "With whom have you shared your story or God’s story?"
-msgstr ""
+msgstr "With whom have you shared your story or God’s story?"
 
 #: landing-21-3-3-group-pattern.php:97
 msgid "If they forgot to follow through on a commitment or did not have the opportunity to do so, then those commitments from the prior week should be added to this week’s commitments. If someone simply refuses to obey something they clearly heard from God then it should be treated as a church discipline issue."
-msgstr ""
+msgstr "If they forgot to follow through on a commitment or did not have the opportunity to do so, then those commitments from the prior week should be added to this week’s commitments. If someone simply refuses to obey something they clearly heard from God then it should be treated as a church discipline issue."
 
 #: landing-21-3-3-group-pattern.php:102
 msgid "Pray: Talk with God simply and briefly. Ask God to teach you this passage."
-msgstr ""
+msgstr "Pray: Talk with God simply and briefly. Ask God to teach you this passage."
 
 #: landing-21-3-3-group-pattern.php:103
 msgid "Read and Discuss: Read this week’s passage. Discuss the following questions:"
-msgstr ""
+msgstr "Read and Discuss: Read this week’s passage. Discuss the following questions:"
 
 #: landing-21-3-3-group-pattern.php:106
 msgid "What did you like about this passage?"
-msgstr ""
+msgstr "What did you like about this passage?"
 
 #: landing-21-3-3-group-pattern.php:107
 msgid "What did you find challenging or hard to understand about this passage?"
-msgstr ""
+msgstr "What did you find challenging or hard to understand about this passage?"
 
 #: landing-21-3-3-group-pattern.php:110
 msgid "Read this week’s passage again."
-msgstr ""
+msgstr "Read this week’s passage again."
 
 #: landing-21-3-3-group-pattern.php:113
 msgid "What can we learn about people from this passage?"
-msgstr ""
+msgstr "What can we learn about people from this passage?"
 
 #: landing-21-3-3-group-pattern.php:114
 msgid "What can we learn about God from this passage?"
-msgstr ""
+msgstr "What can we learn about God from this passage?"
 
 #: landing-21-3-3-group-pattern.php:120
 msgid "Obey. Train. Share. : Take at least five minutes in silent prayer. Have everyone in the group pray for the Holy Spirit to show them how to answer these questions, then make commitments. Everyone should write the commitments down so they can pray for people knowledgeably and hold them accountable. They may not hear something related to every question every week. They should note if they share a response which they are not sure they heard from God, but they think may be a good idea since the accountability will be handled at a different level in that case."
-msgstr ""
+msgstr "Obey. Train. Share. : Take at least five minutes in silent prayer. Have everyone in the group pray for the Holy Spirit to show them how to answer these questions, then make commitments. Everyone should write the commitments down so they can pray for people knowledgeably and hold them accountable. They may not hear something related to every question every week. They should note if they share a response which they are not sure they heard from God, but they think may be a good idea since the accountability will be handled at a different level in that case."
 
 #: landing-21-3-3-group-pattern.php:123
 msgid "How will I apply and obey this passage?"
-msgstr ""
+msgstr "How will I apply and obey this passage?"
 
 #: landing-21-3-3-group-pattern.php:124
 msgid "Who will I train or share with about this passage?"
-msgstr ""
+msgstr "Who will I train or share with about this passage?"
 
 #: landing-21-3-3-group-pattern.php:125
 msgid "Who does God want me to share my story [testimony] and/or God’s story with this week?"
-msgstr ""
+msgstr "Who does God want me to share my story [testimony] and/or God’s story with this week?"
 
 #: landing-21-3-3-group-pattern.php:128
 msgid "Practice: In groups of two or three, practice what you have committed to do in question 5, 6 or 7. For example, role-play a difficult conversation or facing a temptation; practice teaching today’s passage, or practice sharing the Gospel."
-msgstr ""
+msgstr "Practice: In groups of two or three, practice what you have committed to do in question 5, 6 or 7. For example, role-play a difficult conversation or facing a temptation; practice teaching today’s passage, or practice sharing the Gospel."
 
 #: landing-21-3-3-group-pattern.php:129
 msgid "Talk With God: In the same groups of two or three, pray for every member individually. Ask God to prepare the hearts of the people who will be hearing about Jesus this week. Ask Him to give you the strength and wisdom to be obedient to your commitments. This is the conclusion of the meeting."
-msgstr ""
+msgstr "Talk With God: In the same groups of two or three, pray for every member individually. Ask God to prepare the hearts of the people who will be hearing about Jesus this week. Ask Him to give you the strength and wisdom to be obedient to your commitments. This is the conclusion of the meeting."
 
 #: template-zume-faq.php:31
 msgid "Yes. There are no premium versions, no trial periods, no follow-on sales of products. Freely we've received. Freely we give."
-msgstr ""
+msgstr "Yes. There are no premium versions, no trial periods, no follow-on sales of products. Freely we've received. Freely we give."
 
