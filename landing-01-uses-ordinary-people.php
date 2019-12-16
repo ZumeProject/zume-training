@@ -60,6 +60,9 @@ if (have_posts()) :
                                 </div>
                             </div>
                             <div class="grid-x grid-margin-x grid-margin-y">
+                                <div class="cell content-large center">
+                                    <h3 class="center"><?php esc_html_e( 'Watch This Video', 'zume' ) ?></h3>
+                                </div>
                                 <div class="small-12 small-centered cell video-section">
 
                                     <!-- 1 -->
