@@ -54,8 +54,8 @@ if (have_posts()) :
                             <!-- Activity Block -->
                             <div class="grid-x grid-margin-x grid-margin-y">
                                 <div class="cell content-large">
-                                    <p><?php echo esc_html__( "Have you ever wondered how the church got started? In the beginning nobody was a professional. Good thing God had a plan that didn't require them. The fact is that God used ordinary people to start the rapid growth of the church.", 'zume' ) ?></p>
-                                    <p><?php echo esc_html__( "The first church sent ordinary people around the world to tell others about Jesus. The first church sent ordinary people to stand before governors and generals and rulers and kings. The first church sent ordinary people to heal the sick, feed the hungry, raise the dead, and teach all of God’s commands to everyone in the world.", 'zume' ) ?></p>
+                                    <p><?php echo esc_html__( "Have you ever wondered how the church got started? In the beginning nobody was a professional. Good thing God had a plan that didn't require them. God uses ordinary people today, just like he did to start the rapid growth of the church in the beginning.", 'zume' ) ?></p>
+                                    <p><?php echo esc_html__( "The first church sent ordinary people around the world to tell others about Jesus. It sent ordinary people to stand before governors and generals and rulers and kings. It sent ordinary people to heal the sick, feed the hungry, raise the dead, and teach all of God’s commands to everyone in the world.", 'zume' ) ?></p>
                                     <p><?php echo esc_html__( "The first church sent ordinary people to change the world. And they did.", 'zume' ) ?></p>
                                 </div>
                             </div>
@@ -84,6 +84,7 @@ if (have_posts()) :
                                 </div>
                                 <div class="cell  content-large">
                                     <ul><li><?php esc_html_e( 'If Jesus intended every one of His followers to obey His Great Commission, why do so few actually make disciples?', 'zume' ) ?></li></ul>
+                                    <ul><li><?php esc_html_e( 'Is the idea that God uses ordinary people different from what you had learned or assumed was the plan?', 'zume' ) ?></li></ul>
                                 </div>
                             </div>
                             <!-- grid-x -->
