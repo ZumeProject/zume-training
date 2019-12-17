@@ -92,9 +92,8 @@ if (have_posts()) :
                             <div class="grid-x grid-margin-x grid-margin-y">
                                 <div class="cell content-large">
                                     <p><?php esc_html_e( "Accountability Groups are made up of two or three people of the same gender - men with men, women with women - who meet once a week to discuss a set of questions that help reveal areas where things are going right and other areas that need correction. They can even meet by phone if they’re unable to meet face-to-face. Everyone in the group needs to understand that what is shared is confidential.", 'zume' ) ?></p>
-                                    <p><?php esc_html_e( "Spend the next 45 minutes working together through the Accountability Questions - List 2, below. Since you haven’t done a group reading before this session, just skip over the questions about previous readings. List 1 is a great option as you get further into training.", 'zume' ) ?></p>
                                     <h3><?php esc_html_e( "Accountability Questions - List 1", 'zume' ) ?></h3>
-                                    <ol>
+                                    <ol class="padding-horizontal-3">
                                         <li><?php esc_html_e( "Pray that we will become like Jesus.", 'zume' ) ?></li>
                                         <li><?php esc_html_e( "How are you doing? How is your prayer life?", 'zume' ) ?></li>
                                         <li><?php esc_html_e( "Do you have any sin to confess? [Relational, Sexual, Financial, Pride, Integrity, Submission to Authority, etc.]", 'zume' ) ?></li>
@@ -113,7 +112,7 @@ if (have_posts()) :
                                         <li><?php esc_html_e( "Close with prayer regarding what was shared.", 'zume' ) ?></li>
                                     </ol>
                                     <h3><?php esc_html_e( "Accountability Questions - List 2", 'zume' ) ?></h3>
-                                    <ol>
+                                    <ol class="padding-horizontal-3">
                                         <li><?php esc_html_e( "How have your insights from last week’s reading shaped the way you think and live?", 'zume' ) ?></li>
                                         <li><?php esc_html_e( "Who did you pass your insights from last week on to and how was it received?", 'zume' ) ?></li>
                                         <li><?php esc_html_e( "How have you seen God at work?", 'zume' ) ?></li>
