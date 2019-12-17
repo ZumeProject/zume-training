@@ -52,7 +52,7 @@ if (have_posts()) :
                             <!-- Activity Block -->
                             <div class="grid-x grid-margin-x grid-margin-y">
                                 <div class="cell content-large">
-                                    <p><?php esc_html_e( "It's important to have a simple definition of disciple and church, in order to know who we are supposed to be in Christ and who we can expect to be with in Christ.", 'zume' ) ?></p>
+                                    <p><?php esc_html_e( "It's important to have a simple definition of disciple and church, in order to know who we are supposed to be in Christ and who we should expect to be with in Christ.", 'zume' ) ?></p>
                                     <h3><?php esc_html_e( 'What is a disciple?', 'zume' ) ?></h3>
                                     <p><?php esc_html_e( "The meaning of the word disciple is a follower. So a disciple is a follower of God. Jesus said - All authority in heaven and earth has been given to Me. So in God’s kingdom, Jesus is our King. We are His citizens, subjects of His will. His desires, purposes, intentions, priorities and values are the highest and best. His Word is the law. So what is the law of the kingdom? What does Jesus tell His citizens to do?", 'zume' ) ?></p>
                                     <p><?php esc_html_e( "Jesus said -- Love the Lord God with all your heart, with all your soul, with all your mind and with all your strength. Jesus said -- Love your neighbor as yourself. Jesus said that God’s commands from the Old Testament, i.e. all the law and the prophets, can be summarized in these two things: Love God and Love People. Jesus also said: Make disciples and teach them to obey all that I’ve commanded.", 'zume' ) ?></p>
