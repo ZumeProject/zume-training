@@ -54,13 +54,15 @@ if (have_posts()) :
                                 <div class="cell content-large">
                                     <p><?php esc_html_e( "Spiritual breathing is hearing and obeying God ... all day, every day.", 'zume' ) ?></p>
                                     <p><?php esc_html_e( "In the Kingdom, we breathe IN when we HEAR from God. In the Kingdom we breathe OUT when we ACT on what we hear from God. We breathe OUT when we OBEY. We breathe in. We breathe out. Life.", 'zume' ) ?></p>
-                                    <p><?php esc_html_e( "The good news for every follower of Jesus is that when we breathe IN and HEAR from God and when we breathe OUT and OBEY what we hear and SHARE with others what we’ve heard - God will speak even more clearly.", 'zume' ) ?></p>
                                 </div>
                             </div>
                             <!-- grid-x -->
 
                             <!-- Video block -->
-                            <div class="grid-x grid-margin-x grid-margin-y">
+                            <div class="grid-x grid-margin-x">
+                                <div class="cell content-large center">
+                                    <h3 class="center"><?php esc_html_e( 'Watch This Video', 'zume' ) ?></h3>
+                                </div>
                                 <div class="small-12 small-centered cell video-section">
                                     <!-- 3 -->
                                     <?php if ( $alt_video ) : ?>
@@ -78,6 +80,27 @@ if (have_posts()) :
                                 </div>
                             </div>
                             <!-- grid-x -->
+
+                            <!-- Activity Block -->
+                            <div class="grid-x grid-margin-x grid-margin-y">
+                                <div class="cell content-large">
+                                    <h3><?php esc_html_e("Breath In", 'zume' ) ?></h3>
+                                    <p><?php esc_html_e("In the Kingdom, we breathe in when we hear from God through:", 'zume' ) ?></p>
+                                    <ol class="padding-horizontal-2">
+                                        <li><?php esc_html_e("HIS WORD - the Bible", 'zume' ) ?></li>
+                                        <li><?php esc_html_e("PRAYER - our conversations with him", 'zume' ) ?></li>
+                                        <li><?php esc_html_e("HIS BODY - the church, other followers of Jesus", 'zume' ) ?></li>
+                                        <li><?php esc_html_e("HIS WORKS - the events, experiences and sometimes even the persecutions and sufferings He allows His children to go through", 'zume' ) ?></li>
+                                    </ol>
+                                    <p><?php esc_html_e( "The good news for every follower of Jesus is that when we breathe IN and HEAR from God and when we breathe OUT and OBEY what we hear and SHARE with others what we’ve heard - God will speak even more clearly.", 'zume' ) ?></p>
+                                    <h3><?php esc_html_e("Breath Out", 'zume' ) ?></h3>
+                                    <p><?php esc_html_e("In the Kingdom we breathe OUT when we ACT on what we hear from God. We breathe OUT when we OBEY.", 'zume' ) ?></p>
+                                    <p><?php esc_html_e("Sometimes breathing out to OBEY means changing our thoughts, our words or our actions to bring them into alignment with Jesus and His will. Sometimes breathing out to OBEY means sharing what Jesus has shared with us - giving away what He gave us - so that others can be blessed just as God is blessing us.", 'zume' ) ?></p>
+                                    <p><?php esc_html_e("For a follower of Jesus - this breathing IN and breathing OUT is critical. It’s our very life.", 'zume' ) ?></p>
+                                </div>
+                            </div>
+                            <!-- grid-x -->
+
                             <!-- Activity Block -->
                             <div class="grid-x grid-margin-x grid-margin-y">
                                 <div class="cell content-large center">
