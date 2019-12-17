@@ -96,7 +96,7 @@ if (have_posts()) :
                                     </ul>
                                     <p><?php esc_html_e( "A spiritual family is made of followers of Jesus who Love God, Love People and Make Disciples and who meet together locally make up this last kind of church, the church at home or the simple church.", 'zume' ) ?></p>
                                     <p><?php esc_html_e("Simple churches are spiritual families with Jesus as their center and their King. They are spiritual families who Love God, Love Others and Make Disciples.", 'zume' ) ?></p>
-                                    <p><?php esc_html_e( "When groups of these simple churches connect to do something bigger, together, they can form a city or regional church. All of those simple churches networked into regions and stretched across history make up the universal church.", 'zume' ) ?></p>
+                                    <p><?php esc_html_e( "When groups of these simple churches connect to do something bigger, together, they can form a city or regional church. And when all of those simple churches networked into regions and stretched across history make up the universal church.", 'zume' ) ?></p>
                                 </div>
                             </div>
 
