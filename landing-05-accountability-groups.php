@@ -52,8 +52,8 @@ if (have_posts()) :
                             <!-- Activity Block -->
                             <div class="grid-x grid-margin-x">
                                 <div class="cell content-large">
-                                    <p><?php esc_html_e( "Every follower of Jesus will be held accountable, so every follower of Jesus should practice accountability with others. Jesus shared many stories of accountability and told us many truths of how we will be held responsible for what we do and say. So accountability groups are a natural expression of brothers and sisters walking together in the truth.", 'zume' ) ?></p>
-                                    <p><?php esc_html_e( " Accountability Groups are made up of two or three people of the same gender - men with men, women with women - who meet once a week to discuss a set of questions that help reveal areas where things are going right and other areas that need correction.", 'zume' ) ?></p>
+                                    <p><?php esc_html_e( "Every follower of Jesus will be held accountable, so every follower of Jesus should practice accountability with others. Jesus shared many stories of accountability and told us many truths of how we will be held responsible for what we do and say. So accountability groups are a natural expression of brothers and sisters walking together in truth and love.", 'zume' ) ?></p>
+                                    <p><?php esc_html_e( " Accountability Groups are made up of two or three people of the same gender - men with men, women with women - who meet once a week to discuss a set of questions that help reveal areas where things are going right and other areas that need correction. They can even meet by phone if they’re unable to meet face-to-face.", 'zume' ) ?></p>
                                 </div>
                             </div>
                             <!-- grid-x -->
@@ -90,7 +90,6 @@ if (have_posts()) :
                             <!-- Activity Block -->
                             <div class="grid-x grid-margin-x grid-margin-y">
                                 <div class="cell content-large">
-                                    <p><?php esc_html_e( "Accountability Groups are made up of two or three people of the same gender - men with men, women with women - who meet once a week to discuss a set of questions that help reveal areas where things are going right and other areas that need correction. They can even meet by phone if they’re unable to meet face-to-face. Everyone in the group needs to understand that what is shared is confidential.", 'zume' ) ?></p>
                                     <h3><?php esc_html_e( "Accountability Questions - List 1", 'zume' ) ?></h3>
                                     <ol class="padding-horizontal-3">
                                         <li><?php esc_html_e( "Pray that we will become like Jesus.", 'zume' ) ?></li>
