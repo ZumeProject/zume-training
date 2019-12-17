@@ -24,7 +24,7 @@ if (have_posts()) :
                     <!-- Center column -->
                     <div class="medium-8 small-10 cell center">
 
-                        <img src="<?php echo esc_url( get_theme_file_uri() ) ?>/assets/images/pieces_pages/4-greatest-blessing.png"/>
+                        <img src="<?php echo esc_url( get_theme_file_uri() ) ?>/assets/images/pieces_pages/4-greatest-blessing.png" alt="<?php the_title(); ?>" />
 
                         <h1>
                             <strong><?php the_title(); ?></strong>
