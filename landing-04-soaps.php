@@ -3,6 +3,7 @@
 Template Name: 04 - SOAPS
 */
 get_header();
+
 $alt_video = false;
 if (have_posts()) :
     while (have_posts()) : the_post();
@@ -52,16 +53,19 @@ if (have_posts()) :
                             <!-- Activity Block -->
                             <div class="grid-x grid-margin-x grid-margin-y">
                                 <div class="cell content-large">
-                                    <p><?php esc_html_e( "If every follower of Jesus is going to obey all that Jesus commanded, then they need to know what Jesus commands.", 'zume' ) ?></p>
+                                    <p><?php esc_html_e( "As a follower of Jesus, we should be reading Scripture daily. A good guideline is to read through a minimum of 25-30 chapters in the Bible each week. Keeping a daily journal daily using the S.O.A.P.S. Bible Reading format will help you understand, obey and share even more.", 'zume' ) ?></p>
 
                                     <p><?php esc_html_e( "SOAPS stands for:", 'zume' ) ?></p>
 
-                                    <ul class="padding-horizontal-1">
-                                        <li><?php esc_html_e( "Scripture", 'zume' ) ?></li>
-                                        <li><?php esc_html_e( "Observation", 'zume' ) ?></li>
-                                        <li><?php esc_html_e( "Application", 'zume' ) ?></li>
-                                        <li><?php esc_html_e( "Prayer", 'zume' ) ?></li>
-                                        <li><?php esc_html_e( "Sharing", 'zume' ) ?></li>
+                                    <ul>
+                                        <li><?php esc_html_e( "Scripture: Write out one or more verses that are particularly meaningful to you, today.", 'zume' ) ?></li>
+                                        <li><?php esc_html_e( "Observation: Rewrite those verses or key points in your own words to better understand.", 'zume' ) ?>
+                                        </li>
+                                        <li><?php esc_html_e( "Application: Think about what it means to obey these commands in your own life.", 'zume' ) ?>
+                                        </li>
+                                        <li><?php esc_html_e( "Prayer: Write out a prayer telling God what you’ve learned and how you plan to obey.", 'zume' ) ?>
+                                        </li>
+                                        <li><?php esc_html_e( "Sharing: Ask God who He wants you to share with about what you’ve learned applied.", 'zume' ) ?></li>
                                     </ul>
 
                                     <p><?php esc_html_e( "It’s a simple way to learn and remember an effective Bible study method that any follower of Jesus can use.", 'zume' ) ?></p>
@@ -73,6 +77,14 @@ if (have_posts()) :
 
                             <!-- Video block -->
                             <div class="grid-x grid-margin-x grid-margin-y">
+                                <div class="cell center">
+                                    <h3><?php esc_html_e("Listen and Read Along", 'zume' ) ?></h3>
+                                    <a class="button large text-uppercase"
+                                       href="<?php echo esc_url( Zume_Course::get_download_by_key( '33' ) ) ?>"
+                                       target="_blank" rel="noopener noreferrer nofollow">
+                                        <?php esc_html_e( 'Download Guidebook', 'zume' ) ?>
+                                    </a>
+                                </div>
                                 <div class="small-12 small-centered cell video-section">
 
                                     <!-- 4 -->
@@ -89,23 +101,15 @@ if (have_posts()) :
                                     <?php endif; ?>
 
                                 </div>
+
                             </div>
+
                             <!-- grid-x -->
 
                             <!-- Activity Block -->
                             <div class="grid-x grid-margin-y">
                                 <div class="cell content-large">
-                                    <p><?php esc_html_e( "As a follower of Jesus, we should be reading Scripture daily. A good guideline is to read through a minimum of 25-30 chapters in the Bible each week. Keeping a daily journal daily using the S.O.A.P.S. Bible Reading format will help you understand, obey and share even more. S.O.A.P.S. is:", 'zume' ) ?></p>
-                                    <ul>
-                                        <li><?php esc_html_e( "Scripture: Write out one or more verses that are particularly meaningful to you, today.", 'zume' ) ?></li>
-                                        <li><?php esc_html_e( "Observation: Rewrite those verses or key points in your own words to better understand.", 'zume' ) ?>
-                                        </li>
-                                        <li><?php esc_html_e( "Application: Think about what it means to obey these commands in your own life.", 'zume' ) ?>
-                                        </li>
-                                        <li><?php esc_html_e( "Prayer: Write out a prayer telling God what you’ve learned and how you plan to obey.", 'zume' ) ?>
-                                        </li>
-                                        <li><?php esc_html_e( "Sharing: Ask God who He wants you to share with about what you’ve learned applied.", 'zume' ) ?></li>
-                                    </ul>
+
 
                                     <h3><?php esc_html_e( "Here’s an example of S.O.A.P.S. at work:", 'zume' ) ?></h3>
                                     <p><?php esc_html_e( "S – “For my thoughts are not your thoughts, nor are your ways My ways,” declares the Lord. “For as the heavens are higher than the earth, so are My ways higher than your ways and My thoughts than your thoughts.” Isaiah 55:8-9", 'zume' ) ?></p>

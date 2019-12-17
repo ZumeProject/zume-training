@@ -54,7 +54,7 @@ if (have_posts()) :
                             <!-- Activity Block -->
                             <div class="grid-x grid-margin-x grid-margin-y">
                                 <div class="cell content-large">
-                                    <p><?php echo esc_html__( "Have you ever wondered how the church got started? In the beginning nobody was a professional. Good thing God had a plan that didn't require them. God uses ordinary people today, just like he did to start the rapid growth of the church in the beginning.", 'zume' ) ?></p>
+                                    <p><?php echo esc_html__( "Have you ever wondered how the church got started? In the beginning nobody was a professional. Surprised? Good thing God had a plan that didn't require professionals. God uses ordinary people. He did it to start the first movement of the church. And he does it today.", 'zume' ) ?></p>
                                     <p><?php echo esc_html__( "The first church sent ordinary people around the world to tell others about Jesus. It sent ordinary people to stand before governors and generals and rulers and kings. It sent ordinary people to heal the sick, feed the hungry, raise the dead, and teach all of God’s commands to everyone in the world.", 'zume' ) ?></p>
                                     <p><?php echo esc_html__( "The first church sent ordinary people to change the world. And they did.", 'zume' ) ?></p>
                                 </div>

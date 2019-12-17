@@ -50,7 +50,7 @@ if (have_posts()) :
                         <section>
 
                             <!-- Activity Block -->
-                            <div class="grid-x grid-margin-x grid-margin-y">
+                            <div class="grid-x grid-margin-x">
                                 <div class="cell content-large">
                                     <p><?php esc_html_e( "Jesus shared many stories of accountability and told us many truths of how we will be held responsible for what we do and say.", 'zume' ) ?></p>
                                     <p><?php esc_html_e( "Accountability Groups are made up of two or three people of the same gender - men with men, women with women - who meet once a week to discuss a set of questions that help reveal areas where things are going right and other areas that need correction.", 'zume' ) ?></p>
@@ -61,6 +61,14 @@ if (have_posts()) :
 
                             <!-- Video block -->
                             <div class="grid-x grid-margin-x grid-margin-y">
+                                <div class="cell center">
+                                    <h3><?php esc_html_e("Listen and Read Along", 'zume' ) ?></h3>
+                                    <a class="button large text-uppercase"
+                                       href="<?php echo esc_url( Zume_Course::get_download_by_key( '33' ) ) ?>"
+                                       target="_blank" rel="noopener noreferrer nofollow">
+                                        <?php esc_html_e( 'Download Guidebook', 'zume' ) ?>
+                                    </a>
+                                </div>
                                 <div class="small-12 small-centered cell video-section">
 
                                     <!-- 5 -->

@@ -49,7 +49,15 @@ if (have_posts()) :
                         <section>
 
                             <!-- Video block -->
-                            <div class="grid-x grid-margin-x grid-margin-y">
+                            <div class="grid-x grid-margin-x">
+                                <div class="cell center">
+                                    <h3><?php esc_html_e("Listen and Read Along", 'zume' ) ?></h3>
+                                    <a class="button large text-uppercase"
+                                       href="<?php echo esc_url( Zume_Course::get_download_by_key( '33' ) ) ?>"
+                                       target="_blank" rel="noopener noreferrer nofollow">
+                                        <?php esc_html_e( 'Download Guidebook', 'zume' ) ?>
+                                    </a>
+                                </div>
                                 <div class="small-12 small-centered cell video-section">
 
                                     <!-- 11 -->

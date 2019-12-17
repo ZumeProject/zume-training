@@ -2,6 +2,13 @@
 /*
 Template Name: 03 - Spiritual Breathing
 */
+
+// translation strings
+// title
+// focus phrase
+// Meta description
+
+
 get_header();
 $alt_video = false;
 if (have_posts()) :
@@ -83,7 +90,7 @@ if (have_posts()) :
                             <!-- Activity Block -->
                             <div class="grid-x grid-margin-x grid-margin-y">
                                 <div class="cell content-large">
-                                    <h3><?php esc_html_e("Breath In", 'zume' ) ?></h3>
+                                    <h3><?php esc_html_e("Breathe In", 'zume' ) ?></h3>
                                     <p><?php esc_html_e("In the Kingdom, we breathe in when we hear from God through:", 'zume' ) ?></p>
                                     <ol class="padding-horizontal-2">
                                         <li><?php esc_html_e("HIS WORD - the Bible", 'zume' ) ?></li>
@@ -92,7 +99,8 @@ if (have_posts()) :
                                         <li><?php esc_html_e("HIS WORKS - the events, experiences and sometimes even the persecutions and sufferings He allows His children to go through", 'zume' ) ?></li>
                                     </ol>
                                     <p><?php esc_html_e( "The good news for every follower of Jesus is that when we breathe IN and HEAR from God and when we breathe OUT and OBEY what we hear and SHARE with others what we’ve heard - God will speak even more clearly.", 'zume' ) ?></p>
-                                    <h3><?php esc_html_e("Breath Out", 'zume' ) ?></h3>
+
+                                    <h3><?php esc_html_e("Breathe Out", 'zume' ) ?></h3>
                                     <p><?php esc_html_e("In the Kingdom we breathe OUT when we ACT on what we hear from God. We breathe OUT when we OBEY.", 'zume' ) ?></p>
                                     <p><?php esc_html_e("Sometimes breathing out to OBEY means changing our thoughts, our words or our actions to bring them into alignment with Jesus and His will. Sometimes breathing out to OBEY means sharing what Jesus has shared with us - giving away what He gave us - so that others can be blessed just as God is blessing us.", 'zume' ) ?></p>
                                     <p><?php esc_html_e("For a follower of Jesus - this breathing IN and breathing OUT is critical. It’s our very life.", 'zume' ) ?></p>
