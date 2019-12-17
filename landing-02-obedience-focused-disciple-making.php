@@ -54,10 +54,10 @@ if (have_posts()) :
                                 <div class="cell content-large">
                                     <p><?php esc_html_e( "It's important to have a simple definition of disciple and church, in order to know who we are supposed to be in Christ and who we should expect to be with in Christ.", 'zume' ) ?></p>
                                     <h3><?php esc_html_e( 'What is a disciple?', 'zume' ) ?></h3>
-                                    <p><?php esc_html_e( "The meaning of the word disciple is a follower. So a disciple is a follower of God. Jesus said - All authority in heaven and earth has been given to Me. So in God’s kingdom, Jesus is our King. We are His citizens, subjects of His will. His desires, purposes, intentions, priorities and values are the highest and best. His Word is the law. So what is the law of the kingdom? What does Jesus tell His citizens to do?", 'zume' ) ?></p>
-                                    <p><?php esc_html_e( "Jesus said that God’s commands from the Old Testament, i.e. all the law and the prophets, can be summarized in these two things: Love God and Love People.", 'zume' ) ?></p>
-                                    <p><?php esc_html_e( "Jesus also said, make disciples and teach them to obey all that I’ve commanded. So then, since making disciples includes teaching them all that Jesus commanded, the New Testament can be summarized in this one thing: Make Disciples.", 'zume' ) ?></p>
-                                    <p><?php esc_html_e("A disciple is a follower of Jesus who loves God, loves people and makes disciples.", 'zume' ) ?></p>
+                                    <p><?php esc_html_e( 'The meaning of the word disciple is a follower. So a disciple is a follower of God. Jesus said, "All authority in heaven and earth has been given to Me." So in God’s kingdom, Jesus is our King. We are His citizens, subjects of His will. His desires, purposes, intentions, priorities and values are the highest and best. His Word is the law. So what is the law of the kingdom? What does Jesus tell His citizens to do?', 'zume' ) ?></p>
+                                    <p><?php esc_html_e( "Jesus taught that God’s commands from the Old Testament, i.e. all the law and the prophets, can be summarized in these two things: Love God and Love People.", 'zume' ) ?></p>
+                                    <p><?php esc_html_e( "Jesus also commanded us to make disciples and teach them to obey all that I’ve commanded. So then, since making disciples includes teaching them all that Jesus commanded, the New Testament can be summarized in this one thing: Make Disciples.", 'zume' ) ?></p>
+                                    <p><?php esc_html_e("Therefore, a disciple is a follower of Jesus who loves God, loves people and makes disciples.", 'zume' ) ?></p>
                                 </div>
                             </div>
 
@@ -94,7 +94,8 @@ if (have_posts()) :
                                         <li><?php esc_html_e("the city or regional church -- all the people who follow Jesus and live in or around a certain area of the world", 'zume' ) ?></li>
                                         <li><?php esc_html_e("the church at home -- all the people who follow Jesus and meet where one or more of them live", 'zume' ) ?></li>
                                     </ul>
-                                    <p><?php esc_html_e( "A spiritual family - followers of Jesus who Love God, Love People and Make Disciples and who meet together locally make up this last kind of church - the church at home or the simple church. Simple churches are spiritual families with Jesus as their center and their King. Simple churches are spiritual families who Love God, Love Others and Make Disciples who Multiply.", 'zume' ) ?></p>
+                                    <p><?php esc_html_e( "A spiritual family is made of followers of Jesus who Love God, Love People and Make Disciples and who meet together locally make up this last kind of church, the church at home or the simple church.", 'zume' ) ?></p>
+                                    <p><?php esc_html_e("Simple churches are spiritual families with Jesus as their center and their King. They are spiritual families who Love God, Love Others and Make Disciples.", 'zume' ) ?></p>
                                     <p><?php esc_html_e( "When groups of these simple churches connect to do something bigger, together, they can form a city or regional church. All of those simple churches networked into regions and stretched across history make up the universal church.", 'zume' ) ?></p>
                                 </div>
                             </div>
