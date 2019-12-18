@@ -51,6 +51,7 @@ if (have_posts()) :
 
                         <section><!-- Step Title -->
 
+                        <!-- pre-video block -->
                             <!-- Activity Block -->
                             <div class="grid-x grid-margin-x grid-margin-y">
                                 <div class="cell content-large">
@@ -59,6 +60,10 @@ if (have_posts()) :
                                     <p><?php echo esc_html__( "The first church sent ordinary people to change the world. And they did.", 'zume' ) ?></p>
                                 </div>
                             </div>
+
+
+
+                        <!-- video block -->
                             <div class="grid-x grid-margin-x grid-margin-y">
                                 <div class="cell content-large center">
                                     <h3 class="center"><?php esc_html_e( 'Watch This Video', 'zume' ) ?></h3>
@@ -80,6 +85,8 @@ if (have_posts()) :
                                 </div>
                             </div>
 
+
+                        <!-- post-video block -->
                             <!-- Activity Block -->
                             <div class="grid-x grid-margin-x grid-margin-y">
                                 <div class="cell content-large">
@@ -91,7 +98,10 @@ if (have_posts()) :
                                 </div>
                             </div>
 
-                            <!-- grid-x -->
+
+
+
+                        <!-- question block -->
                             <!-- Activity Block -->
                             <div class="grid-x grid-margin-x">
                                 <div class="cell content-large center">

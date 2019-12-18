@@ -59,12 +59,12 @@ function zume_register_required_plugins() {
             'version' => '6.7.0',
             'required' => true,
         ),
-//        array(
-//            'name' => 'Disciple Tools',
-//            'slug' => 'easy-wp-smtp',
-//            'version' => '0.22.2',
-//            'required' => true,
-//        ),
+        array(
+            'name' => 'Classic Editor',
+            'slug' => 'classic-editor',
+            'version' => '1.5',
+            'required' => true,
+        ),
 //        array(
 //            'name' => 'Infinite WP',
 //            'slug' => 'iwp-client',

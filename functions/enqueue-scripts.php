@@ -94,6 +94,7 @@ function zume_site_scripts() {
      */
     if ( 'template-zume-training.php' === basename( get_page_template() )
         || 'landing' === substr( basename( get_page_template() ), 0, 7 )
+        || 'template-pieces-page.php' === basename( get_page_template() )
         || 'template-zume-course-v4.php' === basename( get_page_template() ) ) {
         wp_register_script( 'lodash', 'https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.11/lodash.min.js', false, '4.17.11' );
         wp_enqueue_script( 'lodash' );

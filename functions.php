@@ -27,8 +27,9 @@ $wpdb->zume_logging = $wpdb->prefix . 'zume_logging';
 require_once( 'functions/post-types/video-post-type.php' );
 require_once( 'functions/post-types/pdf-download-post-type.php' );
 if ( is_admin() ) {
-    require_once( 'functions/post-types/metabox-for-pages.php' );
+    require_once( 'functions/post-types/pieces-page-metabox.php' );
 }
+
 
 
 
@@ -68,6 +69,7 @@ require_once( 'functions/zume-v4-rest-api.php' );
 require_once( 'functions/zume-v4-users.php' );
 require_once( 'functions/zume-v4-groups.php' );
 require_once( 'functions/zume-v4-progress.php' );
+require_once( 'functions/zume-v4-pieces.php' );
 require_once( 'functions/zume-content.php' );
 
 
