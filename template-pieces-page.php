@@ -22,7 +22,8 @@ if (have_posts()) :
         $session_number = $args['session_number'];
         $alt_video = $args['alt_video'];
         $image_url = $args['image_url'];
-        $audio = $args['audio']
+        $audio = $args['audio'];
+        $has_video = $args['has_video'];
 
         ?>
 
@@ -64,14 +65,15 @@ if (have_posts()) :
                 <section><!-- Step Title -->
 
                     <!-- pre-video block -->
-                    <!-- Activity Block -->
                     <div class="grid-x grid-margin-x grid-margin-y">
                         <div class="cell content-large">
                             <?php echo wp_kses_post( wpautop( $pre_video_content ) ) ?>
                         </div>
                     </div>
 
+
                     <!-- video block -->
+                    <?php if ($has_video) : ?>
                     <div class="grid-x grid-margin-x grid-margin-y">
                         <div class="cell content-large center">
 
@@ -102,10 +104,10 @@ if (have_posts()) :
 
                         </div>
                     </div>
+                    <?php endif; ?>
 
 
                     <!-- post-video block -->
-                    <!-- Activity Block -->
                     <div class="grid-x grid-margin-x grid-margin-y">
                         <div class="cell content-large">
                             <?php echo wp_kses_post( wpautop( $post_video_content ) ) ?>
@@ -114,7 +116,6 @@ if (have_posts()) :
 
 
                     <!-- question block -->
-                    <!-- Activity Block -->
                     <div class="grid-x grid-margin-x">
                         <div class="cell content-large center">
                             <h3 class="center"><?php esc_html_e( 'Ask Yourself', 'zume' ) ?></h3>
@@ -123,7 +124,6 @@ if (have_posts()) :
                             <?php echo wp_kses_post( wpautop( $ask_content ) ) ?>
                         </div>
                     </div>
-                    <!-- grid-x -->
 
                 </section>
 

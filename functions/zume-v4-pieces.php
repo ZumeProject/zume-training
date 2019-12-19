@@ -75,6 +75,42 @@ class Zume_V4_Pieces {
             32 => false,
         ];
 
+        // audio tools
+        $has_video = [
+            1 => true,
+            2 => true,
+            3 => true,
+            4 => true,
+            5 => true,
+            6 => true,
+            7 => true,
+            8 => true,
+            9 => true,
+            10 => true,
+            11 => true,
+            12 => true,
+            13 => true,
+            14 => true,
+            15 => true,
+            16 => true,
+            17 => true,
+            18 => true,
+            19 => false,
+            20 => true,
+            21 => true,
+            22 => true,
+            23 => true,
+            24 => true,
+            25 => true,
+            26 => true,
+            27 => true,
+            28 => true,
+            29 => true,
+            30 => true,
+            31 => true,
+            32 => true,
+        ];
+
         // get session from tool number
         if ( in_array( $tool_number, [1,2,3,4,5] ) ) {
             $session_number = 1;
@@ -112,6 +148,7 @@ class Zume_V4_Pieces {
         $data['session_number'] = $session_number;
         $data['alt_video'] = false;
         $data['audio'] = $audio_array[$tool_number] ?? false; // determine if is an audio tool
+        $data['has_video'] = $has_video[$tool_number] ?? true; // determine if is an audio tool
         $data['image_url'] = get_theme_file_uri() . $url_array[$tool_number];
 
 
