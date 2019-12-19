@@ -218,7 +218,7 @@ class Zume_V4_Pieces {
         $data['session_number'] = $session_number;
         $data['alt_video'] = false;
         $data['audio'] = $audio_array[$tool_number] ?? false; // determine if is an audio tool
-        $data['has_video'] = $has_video[$tool_number] ?? true;
+        $data['has_video'] = $has_video[$tool_number];
         $data['video_id'] = $video_id[$tool_number] ?? 0;
         $data['post_id'] = $post_id[$tool_number] ?? 0;
         $data['image_url'] = !empty($url_array[$tool_number]) ? get_theme_file_uri() . $url_array[$tool_number] : false;
