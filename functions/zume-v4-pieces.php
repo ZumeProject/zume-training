@@ -111,7 +111,7 @@ class Zume_V4_Pieces {
         $data['tool_number'] = $tool_number;
         $data['session_number'] = $session_number;
         $data['alt_video'] = false;
-        $data['audio'] = true; // determine if is an audio tool
+        $data['audio'] = $audio_array[$tool_number] ?? false; // determine if is an audio tool
         $data['image_url'] = get_theme_file_uri() . $url_array[$tool_number];
 
 
