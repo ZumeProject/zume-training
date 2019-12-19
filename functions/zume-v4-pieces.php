@@ -107,7 +107,7 @@ class Zume_V4_Pieces {
             28 => true,
             29 => true,
             30 => true,
-            31 => true,
+            31 => false,
             32 => true,
         ];
 
@@ -221,7 +221,7 @@ class Zume_V4_Pieces {
         $data['has_video'] = $has_video[$tool_number] ?? true;
         $data['video_id'] = $video_id[$tool_number] ?? 0;
         $data['post_id'] = $post_id[$tool_number] ?? 0;
-        $data['image_url'] = get_theme_file_uri() . $url_array[$tool_number];
+        $data['image_url'] = !empty($url_array[$tool_number]) ? get_theme_file_uri() . $url_array[$tool_number] : false;
 
 
 
