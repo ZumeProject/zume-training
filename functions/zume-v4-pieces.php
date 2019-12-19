@@ -60,7 +60,7 @@ class Zume_V4_Pieces {
             17 => true,
             18 => false,
             19 => false,
-            20 => true,
+            20 => false,
             21 => false,
             22 => false,
             23 => false,
