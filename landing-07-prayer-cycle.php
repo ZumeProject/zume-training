@@ -10,6 +10,9 @@ if (have_posts()) :
         set_query_var( 'session_number', absint( $session_number ) );
         $tool_number = 7;
         set_query_var( 'tool_number', absint( $tool_number ) );
+
+        $args = Zume_V4_Pieces::vars( $tool_number );
+        $image_url = $args['image_url'] ?? '';
         ?>
 
         <!-- Wrappers -->
@@ -24,7 +27,7 @@ if (have_posts()) :
                     <!-- Center column -->
                     <div class="medium-8 small-10 cell center">
 
-                        <img src="<?php echo esc_url( get_theme_file_uri() ) ?>/assets/images/pieces_pages/2-pray-day-night.svg" alt="<?php the_title(); ?>" />
+                        <img src="<?php echo esc_url( $image_url ) ?>" alt="<?php the_title(); ?>"  style="height:225px;" />
 
                         <h1>
                             <strong><?php the_title(); ?></strong>

@@ -10,6 +10,9 @@ if (have_posts()) :
         set_query_var( 'session_number', absint( $session_number ) );
         $tool_number = 32;
         set_query_var( 'tool_number', absint( $tool_number ) );
+
+        $args = Zume_V4_Pieces::vars( $tool_number );
+        $image_url = $args['image_url'] ?? '';
         ?>
 
         <!-- Wrappers -->
