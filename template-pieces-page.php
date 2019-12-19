@@ -13,7 +13,7 @@ if (have_posts()) :
         $pre_video_content = $meta['zume_pre_video_content'][0] ?? '';
         $post_video_content = $meta['zume_post_video_content'][0] ?? '';
         $ask_content = $meta['zume_ask_content'][0] ?? '';
-        $h1_title = $meta['zume_piece_h1'][0] ?? get_the_title( $post_id );
+        $h1_title = empty( $meta['zume_piece_h1'][0] ) ? get_the_title( $post_id ) : $meta['zume_piece_h1'][0];
 
         $args = Zume_V4_Pieces::vars( $tool_number );
         if ( empty( $args ) ) {
