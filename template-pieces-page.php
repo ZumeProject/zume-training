@@ -38,7 +38,7 @@ if (have_posts()) :
             <!-- Center column -->
             <div class="medium-8 small-10 cell center">
 
-                <img src="<?php echo esc_url( $image_url ) ?>" alt="<?php echo esc_html( $h1_title ) ?>" />
+                <img src="<?php echo esc_url( $image_url ) ?>" alt="<?php echo esc_html( $h1_title ) ?>" style="height:225px;"/>
 
                 <h1><?php echo esc_html( $h1_title ) ?></h1>
                 <span class="sub-caption">
