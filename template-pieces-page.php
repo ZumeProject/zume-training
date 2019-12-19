@@ -24,6 +24,7 @@ if (have_posts()) :
         $image_url = $args['image_url'];
         $audio = $args['audio'];
         $has_video = $args['has_video'];
+        $video_id = $args['video_id'];
 
         ?>
 
@@ -93,11 +94,11 @@ if (have_posts()) :
 
                             <?php if ( $alt_video ) : ?>
                                 <video width="960" height="540" style="border: 1px solid lightgrey;margin: 0 15%;" controls>
-                                    <source src="<?php echo esc_url( Zume_Course::get_alt_video_by_key( 'alt_'.$tool_number ) ) ?>" type="video/mp4">
+                                    <source src="<?php echo esc_url( Zume_Course::get_alt_video_by_key( 'alt_'.$video_id ) ) ?>" type="video/mp4">
                                     Your browser does not support the video tag.
                                 </video>
                             <?php else : ?>
-                                <iframe style="border: 1px solid lightgrey;"  src="<?php echo esc_url( Zume_Course::get_video_by_key( $tool_number ) ) ?>" width="560" height="315"
+                                <iframe style="border: 1px solid lightgrey;"  src="<?php echo esc_url( Zume_Course::get_video_by_key( $video_id ) ) ?>" width="560" height="315"
                                         frameborder="1" webkitallowfullscreen mozallowfullscreen allowfullscreen>
                                 </iframe>
                             <?php endif; ?>

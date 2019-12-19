@@ -111,6 +111,76 @@ class Zume_V4_Pieces {
             32 => true,
         ];
 
+        $video_id = [
+            1 => 1,
+            2 => 2,
+            3 => 3,
+            4 => 4,
+            5 => 5,
+            6 => 6,
+            7 => 7,
+            8 => 8,
+            9 => 9,
+            10 => 10,
+            11 => 11,
+            12 => 12,
+            13 => 13,
+            14 => 14,
+            15 => 15,
+            16 => 16,
+            17 => 17,
+            18 => 18,
+            19 => 19,
+            20 => 19,
+            21 => 20,
+            22 => 21,
+            23 => 22,
+            24 => 23,
+            25 => 24,
+            26 => 25,
+            27 => 26,
+            28 => 27,
+            29 => 28,
+            30 => 29,
+            31 => 30,
+            32 => 31,
+        ];
+
+        $post_id = [
+            1 => 20730, // God uses ordinary people
+            2 => 20731, // teach them to obey
+            3 => 20732, // spiritual breathing
+            4 => 20733, // soaps bible reading
+            5 => 20735, // accountability groups
+            6 => 20737, // consumers vs producers
+            7 => 20738, // prayer cycle
+            8 => 20739, // list of 100
+            9 => 20740, // kingdom economy
+            10 => 20741, // the gospel
+            11 => 20742, // baptism
+            12 => 20743, // 3-minute testimony
+            13 => 20744, // greatest blessing
+            14 => 20745, // duckling discipleship
+            15 => 20746, // seeing where God's kingdom isn't
+            16 => 20747, // the lord's supper
+            17 => 20748, // prayer walking
+            18 => 20750, // person of peace
+            19 => 20749, // bless prayer
+            20 => 20751, // faithfulness
+            21 => 20752, // 3/3 group pattern
+            22 => 20753, // training cycle
+            23 => 20755, // leadership cells
+            24 => 20756, // non-sequential
+            25 => 20757, // pace
+            26 => 20758, // part of two churches
+            27 => 19848, // 3-month plan
+            28 => 20759, // coaching checklist
+            29 => 20760, // leadership in networks
+            30 => 20761, // peer mentoring groups
+            31 => 20762, // four fields tool
+            32 => 20763, // generation mapping
+        ];
+
         // get session from tool number
         if ( in_array( $tool_number, [1,2,3,4,5] ) ) {
             $session_number = 1;
@@ -148,8 +218,11 @@ class Zume_V4_Pieces {
         $data['session_number'] = $session_number;
         $data['alt_video'] = false;
         $data['audio'] = $audio_array[$tool_number] ?? false; // determine if is an audio tool
-        $data['has_video'] = $has_video[$tool_number] ?? true; // determine if is an audio tool
+        $data['has_video'] = $has_video[$tool_number] ?? true;
+        $data['video_id'] = $video_id[$tool_number] ?? 0;
+        $data['post_id'] = $post_id[$tool_number] ?? 0;
         $data['image_url'] = get_theme_file_uri() . $url_array[$tool_number];
+
 
 
         return $data;
