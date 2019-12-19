@@ -108,7 +108,7 @@ class Zume_V4_Pieces {
             29 => true,
             30 => true,
             31 => false,
-            32 => true,
+            32 => false,
         ];
 
         $video_id = [
