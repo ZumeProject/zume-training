@@ -41,7 +41,7 @@ if (have_posts()) :
             <div class="medium-8 small-10 cell center">
 
                 <?php if ( ! empty( $image_url ) ) : ?>
-                    <img src="<?php echo esc_url( $image_url ) ?>" alt="<?php echo esc_html( $h1_title ) ?>" style="height:225px;"/>
+                    <img src="<?php echo esc_url( $image_url ) ?>" alt="<?php echo esc_html( $h1_title ) ?>" style="max-height:225px;"/>
                 <?php endif; ?>
 
                 <h1><?php echo esc_html( $h1_title ) ?></h1>
@@ -60,10 +60,9 @@ if (have_posts()) :
         <!-- Unique page content section -->
         <!------------------------------------------------------------------------------------------------>
         <div class="grid-x ">
-            <div class="large-2 cell"></div><!-- Side spacer -->
 
             <!-- Center column -->
-            <div class="large-8 small-12 cell" id="training-content">
+            <div class="cell center-content" id="training-content">
 
                 <section><!-- Step Title -->
 
@@ -77,36 +76,37 @@ if (have_posts()) :
 
                     <!-- video block -->
                     <?php if ($has_video) : ?>
-                    <div class="grid-x grid-margin-x grid-margin-y">
-                        <div class="cell content-large center">
+                        <div class="grid-x grid-margin-x grid-margin-y">
+                            <div class="cell content-large center">
 
-                            <?php if ( $audio ) :  ?>
-                                <h3><?php esc_html_e("Listen and Read Along", 'zume' ) ?></h3>
-                                <a class="button large text-uppercase"
-                                   href="<?php echo esc_url( Zume_Course::get_download_by_key( '33' ) ) ?>"
-                                   target="_blank" rel="noopener noreferrer nofollow">
-                                    <?php esc_html_e( 'Download Free Guidebook', 'zume' ) ?>
-                                </a>
-                            <?php else: ?>
-                                <h3 class="center"><?php esc_html_e( 'Watch This Video', 'zume' ) ?></h3>
-                            <?php endif; ?>
+                                <?php if ( $audio ) :  ?>
+                                    <h3><?php esc_html_e("Listen and Read Along", 'zume' ) ?></h3>
+                                    <a class="button large text-uppercase"
+                                       href="<?php echo esc_url( Zume_Course::get_download_by_key( '33' ) ) ?>"
+                                       target="_blank" rel="noopener noreferrer nofollow">
+                                        <?php esc_html_e( 'Download Free Guidebook', 'zume' ) ?>
+                                    </a>
+                                <?php else: ?>
+                                    <h3 class="center"><?php esc_html_e( 'Watch This Video', 'zume' ) ?></h3>
+                                <?php endif; ?>
+
+                                <div class="video-section">
+                                    <?php if ( $alt_video ) : ?>
+                                        <video width="960" height="540" style="border: 1px solid lightgrey;margin: 0 15%;" controls>
+                                            <source src="<?php echo esc_url( Zume_Course::get_alt_video_by_key( 'alt_'.$video_id ) ) ?>" type="video/mp4">
+                                            Your browser does not support the video tag.
+                                        </video>
+                                    <?php else : ?>
+                                        <iframe style="border: 1px solid lightgrey;"  src="<?php echo esc_url( Zume_Course::get_video_by_key( $video_id ) ) ?>" width="560" height="315"
+                                                frameborder="1" webkitallowfullscreen mozallowfullscreen allowfullscreen>
+                                        </iframe>
+                                    <?php endif; ?>
+                                </div>
+
+
+                            </div>
 
                         </div>
-                        <div class="small-12 small-centered cell video-section">
-
-                            <?php if ( $alt_video ) : ?>
-                                <video width="960" height="540" style="border: 1px solid lightgrey;margin: 0 15%;" controls>
-                                    <source src="<?php echo esc_url( Zume_Course::get_alt_video_by_key( 'alt_'.$video_id ) ) ?>" type="video/mp4">
-                                    Your browser does not support the video tag.
-                                </video>
-                            <?php else : ?>
-                                <iframe style="border: 1px solid lightgrey;"  src="<?php echo esc_url( Zume_Course::get_video_by_key( $video_id ) ) ?>" width="560" height="315"
-                                        frameborder="1" webkitallowfullscreen mozallowfullscreen allowfullscreen>
-                                </iframe>
-                            <?php endif; ?>
-
-                        </div>
-                    </div>
                     <?php endif; ?>
 
 
@@ -132,7 +132,6 @@ if (have_posts()) :
 
             </div>
 
-            <div class="large-2 cell"></div><!-- Side spacer -->
         </div> <!-- grid-x -->
 
 
