@@ -32,8 +32,8 @@ class Zume_Topbar_Menu_Walker extends Walker_Nav_Menu {
 function zume_off_canvas_nav() {
     wp_nav_menu(array(
          'container' => false,                           // Remove nav container
-         'menu_class' => 'vertical menu top-padding',       // Adding custom nav class
-         'items_wrap' => '<ul id="%1$s" class="%2$s" data-accordion-menu data-submenu-toggle="true">%3$s</ul>',
+         'menu_class' => 'vertical menu top-padding is-active',       // Adding custom nav class
+         'items_wrap' => '<ul id="%1$s" class="%2$s" data-accordion-menu data-submenu-toggle="true" aria-expanded="true">%3$s</ul>',
          'theme_location' => 'main-nav',                 // Where it's located in the theme
          'depth' => 5,                                   // Limit the depth of the nav
          'fallback_cb' => false,                         // Fallback function (see below)
@@ -44,7 +44,7 @@ function zume_off_canvas_nav() {
 class Zume_Off_Canvas_Menu_Walker extends Walker_Nav_Menu {
     public function start_lvl( &$output, $depth = 0, $args = array() ) {
         $indent = str_repeat( "\t", $depth );
-        $output .= "\n$indent<ul class=\"vertical menu\">\n";
+        $output .= "\n$indent<ul class=\"vertical is-active menu\">\n";
     }
 }
 
