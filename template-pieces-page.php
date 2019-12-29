@@ -29,7 +29,7 @@ if (have_posts()) :
         ?>
 
         <!-- Wrappers -->
-        <div id="content" class="grid-x grid-padding-x training"><div  id="inner-content" class="cell">
+        <div id="content" class="grid-x grid-padding-x training pieces"><div id="inner-content" class="cell">
 
         <!------------------------------------------------------------------------------------------------>
         <!-- Title section -->
