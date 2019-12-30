@@ -554,7 +554,7 @@ $zendesk_enable = true;
                                         <?php echo esc_html__( "15 min", 'zume' ) ?>
                                     </div>
                                     <div class="cell medium-10">
-                                        <a href="<?php echo esc_url( zume_get_landing_translation_url( 27, $current_language ) ) ?>"><?php echo esc_html( zume_get_landing_title( 27, $current_language ) ) ?>
+                                        <a href="<?php echo esc_url( zume_get_landing_translation_url( 27, $current_language ) ) ?>" rel=“nofollow”><?php echo esc_html( zume_get_landing_title( 27, $current_language ) ) ?>
                                             <?php echo ( is_user_logged_in() ) ? '' : '('. esc_html__( "login required", 'zume' )  . ')'; ?></a><br>
                                         <p class="t-description"><?php echo esc_html__( "Create and share your plan for how you will implement the Zúme tools over the next three months.", 'zume' ) ?></p>
                                     </div>
