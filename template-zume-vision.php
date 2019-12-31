@@ -18,7 +18,8 @@ get_header();
                 <div class="medium-1 cell"></div>
                 <div class="medium-10 cell center">
                     <div class="grid-x center">
-                        <div class="cell"><img src="<?php echo esc_url( zume_images_uri() )?>zume-logo.svg" style="max-height:100px" id="home-logo" alt="welcome-graphic" /></div>
+
+                        <div class="cell"><h1>Zúme Vision<img src="<?php echo esc_url( zume_images_uri() )?>zume-logo.svg" style="max-height:100px" id="home-logo" alt="welcome-graphic" /></h1></div>
                         <div class="cell"><p class="large-text"><?php echo sprintf( __( "to saturate the world with multiplying disciples %s in our generation.", 'zume' ), '<br>' ) ?></p></div>
                         <div class="cell"><img src="<?php echo esc_url( zume_images_uri() )?>vision/jesus-globe.png" alt="welcome-graphic" style="max-height:250px"  /></div>
                     </div>
