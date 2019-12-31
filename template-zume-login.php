@@ -20,7 +20,7 @@ if ( is_user_logged_in() ) {
 }
 
 
-add_action( 'wp_head', 'wp_no_robots' );
+//add_action( 'wp_head', 'wp_no_robots' );
 
 nocache_headers();
 
