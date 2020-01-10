@@ -89,7 +89,7 @@ class Zume_Multi_Role {
      * @access public
      * @var    array
      */
-    public $caps = [];
+    public $caps = array();
 
     /**
      * Array of granted capabilities that the role has.
@@ -98,7 +98,7 @@ class Zume_Multi_Role {
      * @access public
      * @var    array
      */
-    public $granted_caps = [];
+    public $granted_caps = array();
 
     /**
      * Array of denied capabilities that the role has.
@@ -107,7 +107,7 @@ class Zume_Multi_Role {
      * @access public
      * @var    array
      */
-    public $denied_caps = [];
+    public $denied_caps = array();
 
     /**
      * Return the role string in attempts to use the object as a string.

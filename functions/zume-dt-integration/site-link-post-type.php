@@ -100,10 +100,10 @@ if ( ! class_exists( 'Site_Link_System' ) ) {
                 return new WP_Error( __METHOD__, 'Could not create a transfer token for this post id.' );
             }
 
-            return [
+            return array(
                 'url' => $url,
                 'transfer_token' => $transfer_token,
-            ];
+            );
         }
 
         /**
@@ -114,7 +114,7 @@ if ( ! class_exists( 'Site_Link_System' ) ) {
          */
         public static function get_site_keys() {
             $prefix = self::$token;
-            $keys = get_option( $prefix . '_api_keys', [] );
+            $keys = get_option( $prefix . '_api_keys', array() );
 
             return $keys;
         }
@@ -134,7 +134,7 @@ if ( ! class_exists( 'Site_Link_System' ) ) {
 
             if ( ! is_array( $type_name ) ) {
                 dt_write_log( new WP_Error( __METHOD__, '$type_name is not an array.' ) );
-                return [];
+                return array();
             }
 
             $type_string = array_map( 'sanitize_text_field', wp_unslash( $type_name ) );
@@ -171,7 +171,7 @@ if ( ! class_exists( 'Site_Link_System' ) ) {
                     break;
 
                 default:
-                    return [];
+                    return array();
                     break;
             }
         }
@@ -272,10 +272,10 @@ if ( ! class_exists( 'Site_Link_System' ) ) {
              * Use the $connection_type to filter for the correct type
              * Update and return the $capabilities array
              */
-            $args = [
+            $args = array(
                 'connection_type' => $connection_type,
-                'capabilities' => [],
-            ];
+                'capabilities' => array(),
+            );
             $args = apply_filters( 'site_link_type_capabilities', $args );
             $capabilities = $args['capabilities'];
 
@@ -349,7 +349,7 @@ if ( ! class_exists( 'Site_Link_System' ) ) {
                 return;
             }
 
-            $approved_urls = [];
+            $approved_urls = array();
             foreach ( $keys as $key => $value ) {
                 $approved_urls[] = 'https://' . self::get_non_local_site( $value['site1'], $value['site2'] );
             }
@@ -384,8 +384,8 @@ if ( ! class_exists( 'Site_Link_System' ) ) {
          ************************************************************************************************************/
 
         public function register_post_type() {
-            $args = [
-                'labels' => [
+            $args = array(
+                'labels' => array(
                         'name'               => $this->plural, /* This is the Title of the Group */
                         'singular_name'      => $this->singular, /* This is the individual type */
                         'all_items'          => __( 'All' ) . ' ' . $this->plural, /* the all items menu item */
@@ -399,7 +399,7 @@ if ( ! class_exists( 'Site_Link_System' ) ) {
                         'not_found'          => __( 'Nothing found in the Database.' ), /* This displays if there are no entries yet */
                         'not_found_in_trash' => __( 'Nothing found in Trash' ), /* This displays if there is nothing in the trash */
                         'parent_item_colon'  => ''
-                ], /* end of arrays */
+                ), /* end of arrays */
 
                 'public'              => false,
                 'publicly_queryable'  => false,
@@ -408,16 +408,16 @@ if ( ! class_exists( 'Site_Link_System' ) ) {
                 'query_var'           => true,
                 'menu_position'       => $this->menu_position, /* this is what order you want it to appear in on the left hand side menu */
                 'menu_icon'           => 'dashicons-admin-links', /* the icon for the custom post type menu. uses built-in dashicons (CSS class name) */
-                'rewrite'             => [
+                'rewrite'             => array(
                     'slug' => $this->post_type,
                     'with_front' => false
-                ], /* you can specify its url slug */
+                ), /* you can specify its url slug */
                 'has_archive'         => false, /* you can rename the slug here */
                 'capability_type'     => 'post',
                 'hierarchical'        => false,
                 /* the next one is important, it tells what's enabled in the post editor */
-                'supports'            => [ 'title' ]
-            ]; /* end of options */
+                'supports'            => array( 'title' )
+            ); /* end of options */
 
             // @phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals
             // @codingStandardsIgnoreLine
@@ -458,7 +458,7 @@ if ( ! class_exists( 'Site_Link_System' ) ) {
 
                 case 'type':
                     $link_type = get_post_meta( $post->ID, 'type', true );
-                    $options = apply_filters( 'site_link_type', [] );
+                    $options = apply_filters( 'site_link_type', array() );
                     $link_type_name = isset( $options[ $link_type ] ) ? $options[ $link_type ] : ucwords( str_replace( '_', ' ', $link_type ) );
                     echo esc_html( $link_type_name );
                     break;
@@ -475,7 +475,7 @@ if ( ! class_exists( 'Site_Link_System' ) ) {
             'type' => __( 'Type' )
             );
 
-            $last_item = [];
+            $last_item = array();
 
             if ( isset( $defaults['date'] ) ) {
                 unset( $defaults['date'] );
@@ -501,7 +501,7 @@ if ( ! class_exists( 'Site_Link_System' ) ) {
         public function post_type_updated_messages( $messages ) {
             global $post;
 
-            $messages[ $this->post_type ] = [
+            $messages[ $this->post_type ] = array(
                 0  => '', // Unused. Messages start at index 1.
                 1  => sprintf(
                     '%1$s updated.',
@@ -526,14 +526,14 @@ if ( ! class_exists( 'Site_Link_System' ) ) {
                     ''
                 ),
                 10 => sprintf( '%1$s draft updated. %2$s%3$s%4$s', $this->singular, strtolower( $this->singular ), '', '' ),
-            ];
+            );
 
             return $messages;
         }
 
         public function meta_box_setup() {
-            add_meta_box( $this->post_type . '_details' . hash( 'sha256', self::get_current_site_base_url() ), __( 'Manage Site Link' ), [ $this, 'meta_box_load_management_box' ], $this->post_type, 'normal', 'high' );
-            add_meta_box( $this->post_type . '_instructions'  . hash( 'sha256', self::get_current_site_base_url() ), __( 'Configuration' ), [ $this, 'meta_box_configuration_box' ], $this->post_type, 'normal', 'high' );
+            add_meta_box( $this->post_type . '_details' . hash( 'sha256', self::get_current_site_base_url() ), __( 'Manage Site Link' ), array( $this, 'meta_box_load_management_box' ), $this->post_type, 'normal', 'high' );
+            add_meta_box( $this->post_type . '_instructions'  . hash( 'sha256', self::get_current_site_base_url() ), __( 'Configuration' ), array( $this, 'meta_box_configuration_box' ), $this->post_type, 'normal', 'high' );
         }
 
         public function meta_box_content( $section = 'info' ) {
@@ -751,58 +751,58 @@ if ( ! class_exists( 'Site_Link_System' ) ) {
         }
 
         public function meta_box_custom_fields_settings() {
-            $fields = [];
+            $fields = array();
 
             // Public Info
-            $fields['token'] = [
+            $fields['token'] = array(
                 'name'        => __( 'Token' ),
                 'description' => __( 'If you have a token from another site, just clear token above and replace it.' ),
                 'type'        => 'token',
                 'default'     => self::generate_token(),
                 'section'     => 'site',
-            ];
+            );
 
-            $fields['site1'] = [
+            $fields['site1'] = array(
                 'name'        => __( 'Site 1' ),
                 'description' => __( 'Use just the host name. Example: www.website.com' ),
                 'type'        => 'url',
                 'default'     => '',
                 'section'     => 'site',
-            ];
+            );
 
-            $fields['site2'] = [
+            $fields['site2'] = array(
                 'name'        => __( 'Site 2' ),
                 'description' => __( 'Use just the host name. Example: www.website.com' ),
                 'type'        => 'url',
                 'default'     => '',
                 'section'     => 'site',
-            ];
-            $fields['type'] = [
+            );
+            $fields['type'] = array(
                 'name'        => __( 'Connection Type' ),
                 'description' => __( 'This adds permissions needed for the labeled task. If you have trouble with a connection succeeding, and a task failing. This permission setting may be the reason.' ),
                 'type'        => 'key_select',
-                'default'     => apply_filters( 'site_link_type', $permission = [ "" => "" ] ),
+                'default'     => apply_filters( 'site_link_type', $permission = array( "" => "" ) ),
                 'section'     => 'site',
-            ];
+            );
 
-            $fields['approved_ip_address'] = [
+            $fields['approved_ip_address'] = array(
                 'name'        => __( 'Approved IP Address' ),
                 'description' => __( 'Enter an approved ip address to restrict responses of this connection. (format: xxx.xxx.xxx.xxx)' ),
                 'type'        => 'ip_address',
                 'default'     => '',
                 'section'     => 'non_wp',
-            ];
+            );
 
-            $fields['non_wp'] = [
+            $fields['non_wp'] = array(
                 'name'        => __( 'Disciple.Tools Site' ),
                 'description' => __( 'Is this connection to a Disciple Tools/Wordpress system.' ),
                 'type'        => 'key_select',
-                'default'     => [
+                'default'     => array(
                     0 => __( 'Yes, connected to another Disciple.Tools site (default)' ),
                     1 => __( 'No, connection for a non-Disciple.Tools system.' )
-                ],
+                ),
                 'section'     => 'non_wp',
-            ];
+            );
 
             // @phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals
             // @codingStandardsIgnoreLine
@@ -1083,16 +1083,16 @@ if ( ! class_exists( 'Site_Link_System' ) ) {
                 WHERE post.post_status = 'publish' AND post.post_type = 'site_link_system'
             ", ARRAY_A  );
 
-            $site_keys = [];
+            $site_keys = array();
             foreach ( $results as $result ) {
-                $site_keys[$result['site_key']] = [
+                $site_keys[$result['site_key']] = array(
                     'post_id'   => $result['post_id'],
                     'label'     => $result['label'],
                     'token'     => $result['token'],
                     'site1'     => $result['site1'],
                     'site2'     => $result['site2'],
                     'approved_ip_address' => $result['approved_ip_address'],
-                ];
+                );
             }
 
             update_option( self::$token . '_api_keys', $site_keys );
@@ -1166,12 +1166,12 @@ if ( ! class_exists( 'Site_Link_System' ) ) {
             $namespace = 'dt-public/v' . $version;
 
             register_rest_route(
-                $namespace, '/sites/site_link_check', [
-                    [
+                $namespace, '/sites/site_link_check', array(
+                    array(
                         'methods'  => WP_REST_Server::CREATABLE,
-                        'callback' => [ $this, 'site_link_check' ],
-                    ],
-                ]
+                        'callback' => array( $this, 'site_link_check' ),
+                    ),
+                )
             );
 
             // Enable cross origin resource requests (CORS) for approved sites.
@@ -1196,7 +1196,7 @@ if ( ! class_exists( 'Site_Link_System' ) ) {
                     return false;
                 }
             } else {
-                return new WP_Error( "site_check_error", "Malformed request", [ 'status' => 400 ] );
+                return new WP_Error( "site_check_error", "Malformed request", array( 'status' => 400 ) );
             }
         }
 
@@ -1359,29 +1359,29 @@ if ( ! class_exists( 'Site_Link_System' ) ) {
             $this->menu_position = $menu_position;
             $this->dashicon = $dashicon;
 
-            add_action( 'init', [ $this, 'register_post_type' ] );
-            add_action( 'rest_api_init', [ $this, 'add_api_routes' ] );
+            add_action( 'init', array( $this, 'register_post_type' ) );
+            add_action( 'rest_api_init', array( $this, 'add_api_routes' ) );
 
             if ( is_admin() ) {
                 global $pagenow;
 
-                add_action( 'admin_head', [ $this, 'scripts' ], 20 );
-                add_action( 'admin_menu', [ $this, 'meta_box_setup' ], 20 );
-                add_action( 'save_post', [ $this, 'meta_box_save' ] );
-                add_filter( 'enter_title_here', [ $this, 'enter_title_here' ] );
-                add_filter( 'post_updated_messages', [ $this, 'post_type_updated_messages' ] );
+                add_action( 'admin_head', array( $this, 'scripts' ), 20 );
+                add_action( 'admin_menu', array( $this, 'meta_box_setup' ), 20 );
+                add_action( 'save_post', array( $this, 'meta_box_save' ) );
+                add_filter( 'enter_title_here', array( $this, 'enter_title_here' ) );
+                add_filter( 'post_updated_messages', array( $this, 'post_type_updated_messages' ) );
 
                 if ( isset( $_GET['post_type'] ) ) {
                     $pt = sanitize_text_field( wp_unslash( $_GET['post_type'] ) );
                     if ( $pt === $this->post_type && $pagenow == 'edit.php' ) {
-                        add_filter( 'manage_edit-' . $this->post_type . '_columns', [ $this, 'register_custom_column_headings' ], 10, 1 );
-                        add_action( 'manage_posts_custom_column', [ $this, 'register_custom_columns' ], 10, 2 );
+                        add_filter( 'manage_edit-' . $this->post_type . '_columns', array( $this, 'register_custom_column_headings' ), 10, 1 );
+                        add_action( 'manage_posts_custom_column', array( $this, 'register_custom_columns' ), 10, 2 );
                     }
                 }
             }
 
-            add_filter( 'site_link_type', [ $this, 'default_site_link_type' ], 10, 1 );
-            add_filter( 'site_link_type_capabilities', [ $this, 'default_site_link_capabilities' ], 10, 1 );
+            add_filter( 'site_link_type', array( $this, 'default_site_link_type' ), 10, 1 );
+            add_filter( 'site_link_type_capabilities', array( $this, 'default_site_link_capabilities' ), 10, 1 );
         } // End __construct()
 
     } // End Class

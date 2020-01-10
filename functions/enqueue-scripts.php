@@ -60,14 +60,14 @@ function zume_site_scripts() {
                 'current_user_login' => wp_get_current_user()->user_login,
                 'current_user_id' => get_current_user_id(),
                 'theme_uri' => get_stylesheet_directory_uri(),
-                "translations" => [
+                "translations" => array(
                     "delete" => esc_html__( 'Delete', 'zume' ),
                     "failed_to_remove" => esc_html__( 'Failed to remove item.', 'zume' ),
                     "failed_to_change" => esc_html__( 'Failed to change item.', 'zume' ),
                     "print_copyright" => esc_html__( 'Three Month Plan - Zúme Project', 'zume' ),
                     "we_got_it" => esc_html__( 'We got it!', 'zume' ),
                     "we_got_it_message" => esc_html__( 'We\'re a volunteer network, so give us a few days. We\'ll reach out to you soon as possible!', 'zume' )
-                ]
+                )
             )
         );
     }
@@ -76,7 +76,7 @@ function zume_site_scripts() {
         wp_enqueue_script( 'jquery-steps', get_template_directory_uri() . '/assets/scripts/jquery.steps.js', array( 'jquery' ), 1.1, true );
         wp_localize_script(
             "jquery-steps", "stepsSettings", array(
-                "translations" => [
+                "translations" => array(
                     "cancel" => esc_html__( 'Cancel', 'zume' ),
                     "current:" => esc_html__( 'Current Step:', 'zume' ),
                     "pagination" => esc_html__( 'Cancel', 'zume' ),
@@ -84,7 +84,7 @@ function zume_site_scripts() {
                     "next" => esc_html__( 'Next', 'zume' ),
                     "previous" => esc_html__( 'Previous', 'zume' ),
                     "loading" => esc_html__( 'Loading...', 'zume' ),
-                ]
+                )
             )
         );
     }
@@ -110,10 +110,10 @@ function zume_site_scripts() {
                 'logged_in' => is_user_logged_in(),
                 'map_key' => DT_Mapbox_API::get_key(),
                 "current_language" => $current_language,
-                "groups" => ( is_user_logged_in() ) ? Zume_V4_Groups::get_all_groups() : [],
-                "progress" => ( is_user_logged_in() ) ? Zume_V4_Progress::get_user_progress() : [],
-                "invitations" => ( is_user_logged_in() ) ? Zume_V4_Groups::get_colead_groups( 'waiting_acceptance_minimum' ) : [],
-                'urls' => [
+                "groups" => ( is_user_logged_in() ) ? Zume_V4_Groups::get_all_groups() : array(),
+                "progress" => ( is_user_logged_in() ) ? Zume_V4_Progress::get_user_progress() : array(),
+                "invitations" => ( is_user_logged_in() ) ? Zume_V4_Groups::get_colead_groups( 'waiting_acceptance_minimum' ) : array(),
+                'urls' => array(
                     1 => esc_url( zume_get_landing_translation_url( 1, $current_language ) ),
                     2 => esc_url( zume_get_landing_translation_url( 2, $current_language ) ),
                     3 => esc_url( zume_get_landing_translation_url( 3, $current_language ) ),
@@ -147,15 +147,15 @@ function zume_site_scripts() {
                     31 => esc_url( zume_get_landing_translation_url( 31, $current_language ) ),
                     32 => esc_url( zume_get_landing_translation_url( 32, $current_language ) ),
 
-                ],
-                'site_urls' => [
+                ),
+                'site_urls' => array(
                   'login' => esc_url( zume_login_url( $current_language ) ),
                   'register' => esc_url( zume_register_url( $current_language ) ),
                   'training' => esc_url( zume_training_url( $current_language ) ),
                   'course' => esc_url( zume_course_url() ),
-                ],
-                "translations" => [
-                    'titles' => [
+                ),
+                "translations" => array(
+                    'titles' => array(
                         1 => esc_html( zume_get_landing_title( 1, $current_language ) ),
                         2 => esc_html( zume_get_landing_title( 2, $current_language ) ),
                         3 => esc_html( zume_get_landing_title( 3, $current_language ) ),
@@ -188,8 +188,8 @@ function zume_site_scripts() {
                         30 => esc_html( zume_get_landing_title( 30, $current_language ) ),
                         31 => esc_html( zume_get_landing_title( 31, $current_language ) ),
                         32 => esc_html( zume_get_landing_title( 32, $current_language ) ),
-                    ],
-                    'sessions' => [
+                    ),
+                    'sessions' => array(
                         1 => __( 'Session 1', 'zume' ),
                         2 => __( 'Session 2', 'zume' ),
                         3 => __( 'Session 3', 'zume' ),
@@ -222,9 +222,9 @@ function zume_site_scripts() {
                         30 => __( 'Session 30', 'zume' ),
                         31 => __( 'Session 31', 'zume' ),
                         32 => __( 'Session 32', 'zume' ),
-                    ]
+                    )
 
-                ]
+                )
             )
         );
     }

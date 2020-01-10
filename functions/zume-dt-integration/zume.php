@@ -38,15 +38,15 @@ class Zume_Integration
         }
 
         // Send remote request
-        $args = [
+        $args = array(
         'method' => 'POST',
-        'body' => [
+        'body' => array(
             'transfer_token' => $site['transfer_token'],
             'owner_raw_record' => $owner_user_data,
             'group_raw_record' => $zume_group_meta,
             'coleaders' => $coleaders,
-            ]
-        ];
+            )
+        );
         $result = zume_integration_remote_send( 'session_complete_transfer', $site['url'], $args );
 
         dt_write_log( $result );
@@ -76,14 +76,14 @@ class Zume_Integration
         }
 
         // Send remote request
-        $args = [
+        $args = array(
             'method' => 'POST',
-            'body' => [
+            'body' => array(
                 'transfer_token' => $site['transfer_token'],
                 'raw_user' => $user_data,
                 'raw_groups' => $groups,
-            ]
-        ];
+            )
+        );
         $result = zume_integration_remote_send( 'coaching_request', $site['url'], $args );
         $body = json_decode( wp_remote_retrieve_body( $result ), true );
         return $body;
@@ -111,7 +111,7 @@ class Zume_Integration
             $groups['groups_check_sum'] = md5( serialize( $groups ) );
             return $groups;
         } else {
-            return [];
+            return array();
         }
     }
 
@@ -143,13 +143,13 @@ class Zume_Integration
         }
 
         // Send remote request
-        $args = [
+        $args = array(
         'method' => 'POST',
-            'body' => [
+            'body' => array(
             'transfer_token' => $site['transfer_token'],
             'raw_record' => $user_data,
-            ]
-        ];
+            )
+        );
         $result = zume_integration_remote_send( 'three_month_plan_submitted', $site['url'], $args );
 
         dt_write_log( $result );
@@ -160,11 +160,11 @@ class Zume_Integration
         $group_meta = Zume_Dashboard::verify_group_array_filter( $group_meta );
 
         if ( empty( $group_meta['coleaders'] ) ) {
-            return [];
+            return array();
         }
 
         if ( empty( $group_meta['coleaders_accepted'] ) ) {
-            return [];
+            return array();
         }
 
         if ( ! empty( $group_meta['coleaders_declined'] ) ) {
@@ -174,7 +174,7 @@ class Zume_Integration
             }
         }
 
-        $coleaders = [];
+        $coleaders = array();
         foreach ( $group_meta['coleaders_accepted'] as $coleader_email ) {
             $user = get_user_by( 'email', $coleader_email );
             $user_data = $this->get_transfer_user_array( $user->ID );
@@ -287,7 +287,7 @@ class Zume_Integration
 
         $zume_colead_groups = $this->get_colead_groups_for_user( $user->data->user_email );
 
-        $prepared_user_data = [
+        $prepared_user_data = array(
             'title' => sanitize_text_field( wp_unslash( ucwords( $full_name ) ) ),
             'user_login' => $user->data->user_login,
             'first_name' => sanitize_text_field( wp_unslash( $user_meta['first_name'] ?? '' ) ),
@@ -306,11 +306,11 @@ class Zume_Integration
             'zume_lat_from_ip' => $user_meta['zume_lat_from_ip'] ?? '',
             'zume_raw_location_from_ip' => maybe_unserialize( sanitize_text_field( wp_unslash( $user_meta['zume_raw_location_from_ip'] ?? '' ) ) ),
             'zume_foreign_key' => $user_meta['zume_foreign_key'] ?? self::get_foreign_key( $user_id ),
-            'zume_three_month_plan' => $three_month_plan ?: [],
-            'zume_groups' => $zume_groups ?? [],
-            'zume_colead_groups' => $zume_colead_groups ?? [],
+            'zume_three_month_plan' => $three_month_plan ?: array(),
+            'zume_groups' => $zume_groups ?? array(),
+            'zume_colead_groups' => $zume_colead_groups ?? array(),
             'zume_affiliation_key' => sanitize_text_field( wp_unslash( $user_meta['zume_affiliation_key'] ?? '' ) ),
-        ];
+        );
 
         update_user_meta( $user_id, 'zume_check_sum', md5( serialize( $prepared_user_data ) ) );
         $prepared_user_data['zume_check_sum'] = md5( serialize( $prepared_user_data ) );
@@ -328,7 +328,7 @@ class Zume_Integration
             ));
 
             if ( ! $group_meta ) {
-                return [];
+                return array();
             }
         } else {
             $group_meta = get_user_meta( $owner_id, $zume_group_key, true );
@@ -340,7 +340,7 @@ class Zume_Integration
     }
 
     public function get_groups_for_user( $user_meta ) : array {
-        $groups = [];
+        $groups = array();
         foreach ( $user_meta as $zume_key => $v ) {
             $zume_key_beginning = substr( $zume_key, 0, 10 );
             if ( 'zume_group' == $zume_key_beginning ) {
@@ -355,7 +355,7 @@ class Zume_Integration
      */
     public function get_colead_groups_for_user( $user_email ) : array {
         global $wpdb;
-        $groups = [];
+        $groups = array();
         $results = $wpdb->get_results($wpdb->prepare(
             "SELECT *
                         FROM `$wpdb->usermeta`
@@ -528,10 +528,10 @@ function zume_integration_get_site_details( $site_key ) {
     $url = Site_Link_System::get_non_local_site( $site1, $site2 );
     $transfer_token = Site_Link_System::create_transfer_token_for_site( $site_key );
 
-    return [
+    return array(
         'url' => $url,
         'transfer_token' => $transfer_token
-    ];
+    );
 }
 
 function zume_get_public_site_links() {

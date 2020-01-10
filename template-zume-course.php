@@ -60,26 +60,26 @@ get_header();
                             Zume_Course_Content::get_course_content( $zume_session );
                             Zume_Dashboard::update_ip_address( $zume_group_key );
 
-                            zume_insert_log( [
+                            zume_insert_log( array(
                                 'user_id'  => get_current_user_id(),
                                 'group_id' => $zume_group_key,
                                 'page'     => 'course',
                                 'action'   => 'session_' . $zume_session,
                                 'meta'     => 'group_' . $zume_members,
-                            ] );
+                            ) );
 
                             do_action( 'zume_session_complete', $zume_group_key, $zume_session, $zume_group_meta['owner'], get_current_user_id() );
 
                             break;
                         case 'explore':
                             Zume_Course_Content::get_course_content( $zume_session );
-                            zume_insert_log( [
+                            zume_insert_log( array(
                                 'user_id'  => get_current_user_id(),
                                 'group_id' => $zume_group_key,
                                 'page'     => 'course',
                                 'action'   => 'session_' . $zume_session,
                                 'meta'     => 'explore',
-                            ] );
+                            ) );
                             break;
                         default:
                             wp_die( esc_html__( 'You need a correctly formatted URL. This can happen if you came here from somewhere other than the dashboard.', 'zume' ) . ' <a href="/">' . esc_html__( 'Head back to your dashboard and try again.', 'zume' ) . '</a>' );

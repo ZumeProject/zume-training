@@ -26,7 +26,7 @@ class Zume_Multi_Roles {
      */
     private static $_instance = null;
 
-    public $role_user_count = [];
+    public $role_user_count = array();
 
     /**
      * Main Zume_Multi_Roles Instance

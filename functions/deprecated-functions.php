@@ -14,7 +14,7 @@ class Deprecated {
         ), ARRAY_A );
 
         if ( ! $group ) {
-            return [];
+            return array();
         }
 
         return $group[0];

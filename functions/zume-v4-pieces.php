@@ -3,7 +3,7 @@
 class Zume_V4_Pieces {
     public static function vars( int $tool_number ) : array {
         // list of image urls
-        $url_array = [
+        $url_array = array(
             1 => '/assets/images/pieces_pages/1-ordinary-people.png',
             2 => '/assets/images/pieces_pages/1-follow-jesus-point.svg',
             3 => '/assets/images/pieces_pages/1-spiritual-breathing.png',
@@ -37,10 +37,10 @@ class Zume_V4_Pieces {
             31 => '',
             32 => '',
             33 => '/assets/images/zume_images/V5.1/1Waving1Not.svg',
-        ];
+        );
 
         // audio tools
-        $audio_array = [
+        $audio_array = array(
             1 => false,
             2 => false,
             3 => false,
@@ -73,10 +73,10 @@ class Zume_V4_Pieces {
             30 => true,
             31 => false,
             32 => false,
-        ];
+        );
 
         // audio tools
-        $has_video = [
+        $has_video = array(
             1 => true,
             2 => true,
             3 => true,
@@ -109,9 +109,9 @@ class Zume_V4_Pieces {
             30 => true,
             31 => false,
             32 => false,
-        ];
+        );
 
-        $video_id = [
+        $video_id = array(
             1 => 1,
             2 => 2,
             3 => 3,
@@ -144,9 +144,9 @@ class Zume_V4_Pieces {
             30 => 30,
             31 => 31,
             32 => 32,
-        ];
+        );
 
-        $post_id = [
+        $post_id = array(
             1 => 20730, // God uses ordinary people
             2 => 20731, // teach them to obey
             3 => 20732, // spiritual breathing
@@ -179,40 +179,40 @@ class Zume_V4_Pieces {
             30 => 20761, // peer mentoring groups
             31 => 20762, // four fields tool
             32 => 20763, // generation mapping
-        ];
+        );
 
         // get session from tool number
-        if ( in_array( $tool_number, [1,2,3,4,5] ) ) {
+        if ( in_array( $tool_number, array( 1,2,3,4,5 ) ) ) {
             $session_number = 1;
-        } else if ( in_array( $tool_number, [6,7,8] ) ) {
+        } else if ( in_array( $tool_number, array( 6,7,8 ) ) ) {
             $session_number = 2;
         }
-        else if ( in_array( $tool_number, [9,10,11] ) ) {
+        else if ( in_array( $tool_number, array( 9,10,11 ) ) ) {
             $session_number = 3;
         }
-        else if ( in_array( $tool_number, [12,13,14,15,16] ) ) {
+        else if ( in_array( $tool_number, array( 12,13,14,15,16 ) ) ) {
             $session_number = 4;
         }
-        else if ( in_array( $tool_number, [17,18,19] ) ) {
+        else if ( in_array( $tool_number, array( 17,18,19 ) ) ) {
             $session_number = 5;
         }
-        else if ( in_array( $tool_number, [20,21] ) ) {
+        else if ( in_array( $tool_number, array( 20,21 ) ) ) {
             $session_number = 6;
         }
-        else if ( in_array( $tool_number, [22] ) ) {
+        else if ( in_array( $tool_number, array( 22 ) ) ) {
             $session_number = 7;
         }
-        else if ( in_array( $tool_number, [23] ) ) {
+        else if ( in_array( $tool_number, array( 23 ) ) ) {
             $session_number = 8;
         }
-        else if ( in_array( $tool_number, [24,25,26,27] ) ) {
+        else if ( in_array( $tool_number, array( 24,25,26,27 ) ) ) {
             $session_number = 9;
         } else {
             $session_number = 10;
         }
 
 
-        $data = [];
+        $data = array();
 
         $data['tool_number'] = $tool_number;
         $data['session_number'] = $session_number;
@@ -221,7 +221,7 @@ class Zume_V4_Pieces {
         $data['has_video'] = $has_video[$tool_number];
         $data['video_id'] = $video_id[$tool_number] ?? 0;
         $data['post_id'] = $post_id[$tool_number] ?? 0;
-        $data['image_url'] = !empty($url_array[$tool_number]) ? get_theme_file_uri() . $url_array[$tool_number] : false;
+        $data['image_url'] = !empty( $url_array[$tool_number] ) ? get_theme_file_uri() . $url_array[$tool_number] : false;
 
 
 

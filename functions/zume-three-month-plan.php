@@ -26,16 +26,16 @@ class Zume_Three_Month_Plan
      */
     public static function plan_items_filter( $plan_meta = null ) {
         if ( is_null( $plan_meta ) ) {
-            $plan_meta = [];
+            $plan_meta = array();
         }
         elseif ( is_serialized( $plan_meta ) ) {
             $plan_meta = maybe_unserialize( $plan_meta );
         }
         elseif ( ! is_array( $plan_meta ) ) {
-            $plan_meta = [];
+            $plan_meta = array();
         }
 
-        $active_keys = [
+        $active_keys = array(
             'group_key' => '',
             'people_to_share_with' => '',
             'people_for_accountablity' => '',
@@ -51,11 +51,11 @@ class Zume_Three_Month_Plan
             'people_for_leadership_cell' => '',
             'people_for_zume' => '',
             'other_commitments' => '',
-        ];
-        $deprecated_keys = [
+        );
+        $deprecated_keys = array(
             'linked',
             'public_key',
-        ];
+        );
 
         // Active keys
         foreach ( $active_keys as $key => $value ) {
@@ -76,7 +76,7 @@ class Zume_Three_Month_Plan
     }
 
     public static function plan_labels( $key = null ) {
-        $active_plan_items = [
+        $active_plan_items = array(
             'people_to_share_with' => __( 'I will share My Story [Testimony] and God’s Story [the Gospel] with the following individuals:', 'zume' ),
             'people_for_accountablity' => __( 'I will invite the following people to begin an Accountability Group with me:', 'zume' ),
             'people_to_challenge' => __( 'I will challenge the following people to begin their own Accountability Groups and train them how to do it:', 'zume' ),
@@ -91,7 +91,7 @@ class Zume_Three_Month_Plan
             'people_for_leadership_cell' => __( 'I will invite the following people to be part of a Leadership Cell that I will lead:', 'zume' ),
             'people_for_zume' => __( 'I will encourage the following people to go through this Zúme Training course:', 'zume' ),
             'other_commitments' => __( 'Other commitments:', 'zume' ),
-        ];
+        );
 
         if ( is_null( $key ) ) {
             return $active_plan_items;
@@ -103,7 +103,7 @@ class Zume_Three_Month_Plan
 
     public static function edit_post( $submitted_plan ) {
 
-        $plan = [];
+        $plan = array();
         $current_plan = self::plan_items_filter( get_user_meta( get_current_user_id(), 'three_month_plan', true ) );
 
         $default_keys = array_keys( self::plan_labels() ); // get expected keys
@@ -136,22 +136,22 @@ class Zume_Three_Month_Plan
 
         $result = update_user_meta( get_current_user_id(), 'three_month_plan', $plan );
         if ( ! $result ) {
-            return [
+            return array(
             'status' => 'Fail',
             'message' => __( 'Unable to save three month plan.', 'zume' )
-            ];
+            );
         }
 
         if ( $public_key_error ) {
-            return [
+            return array(
             'status' => 'Public_Key_Error',
             'message' => __( 'Unable to find key:', 'zume' ) . ' ' . $plan['public_key']
-            ];
+            );
         }
 
         do_action( 'zume_update_three_month_plan', get_current_user_id(), $plan );
 
-        return [ 'status' => 'OK' ];
+        return array( 'status' => 'OK' );
     }
 
     public static function add_user_to_group_three_month_list( $group_key, $user_id ) {
@@ -186,11 +186,11 @@ class Zume_Three_Month_Plan
         $plan = self::plan_items_filter( get_user_meta( $user_id, 'three_month_plan', true ) );
         $labels = self::plan_labels();
 
-        $full = [
+        $full = array(
             'user' => $user,
             'plan' => $plan,
             'labels' => $labels,
-        ];
+        );
 
         if ( $full_plan ) {
             return $full;

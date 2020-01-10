@@ -65,7 +65,7 @@ if (have_posts()) :
                             <!-- Video block -->
                             <div class="grid-x grid-margin-x">
                                 <div class="cell center">
-                                    <h3><?php esc_html_e("Listen and Read Along", 'zume' ) ?></h3>
+                                    <h3><?php esc_html_e( "Listen and Read Along", 'zume' ) ?></h3>
                                     <a class="button large text-uppercase"
                                        href="<?php echo esc_url( Zume_Course::get_download_by_key( '33' ) ) ?>"
                                        target="_blank" rel="noopener noreferrer nofollow">

@@ -50,11 +50,11 @@ class Zume_Integration_Hook_Groups extends Zume_Integration_Hook_Base {
             try {
                 $send_new_user = new Zume_Integration_Session_Complete_Transfer();
                 $send_new_user->launch(
-                    [
+                    array(
                     'zume_group_key'    => $zume_group_key,
                     'owner_id'          => $owner_id,
                     'current_user_id'   => $current_user_id,
-                    ]
+                    )
                 );
             } catch ( Exception $e ) {
                 dt_write_log( '@' . __METHOD__ );
@@ -94,8 +94,8 @@ class Zume_Integration_Hook_User extends Zume_Integration_Hook_Base {
     }
 
     public function __construct() {
-        add_action( 'user_register', [ &$this, 'add_zume_foreign_key' ], 99, 1 );
-        add_action( 'wp_login', [ &$this, 'check_for_zume_default_meta' ], 10, 2 );
+        add_action( 'user_register', array( &$this, 'add_zume_foreign_key' ), 99, 1 );
+        add_action( 'wp_login', array( &$this, 'check_for_zume_default_meta' ), 10, 2 );
 
         parent::__construct();
     }
@@ -108,7 +108,7 @@ class Zume_Integration_Hook_User extends Zume_Integration_Hook_Base {
 class Zume_Integration_Metabox extends Zume_Integration_Hook_Base {
 
     public function meta_box_setup() {
-        add_meta_box( 'site_link_system_extensions', 'Zúme Configuration', [ $this, 'meta_box_extensions' ], 'site_link_system', 'normal', 'low' );
+        add_meta_box( 'site_link_system_extensions', 'Zúme Configuration', array( $this, 'meta_box_extensions' ), 'site_link_system', 'normal', 'low' );
     }
 
     public function meta_box_extensions() {
@@ -128,30 +128,30 @@ class Zume_Integration_Metabox extends Zume_Integration_Hook_Base {
 
     public function add_fields( $fields ) {
 
-        $fields['visibility'] = [
+        $fields['visibility'] = array(
             'name'        => __( 'Visibility' ),
             'description' => 'Private keeps the site connection from being listed on registration and profile.',
             'type'        => 'key_select',
-            'default'     => [
+            'default'     => array(
         '0' => __( 'Public (Default)' ),
         '1' => __( 'Private' )
-            ],
+            ),
             'section'     => 'zume',
-            ];
-        $fields['affiliation_key'] = [
+            );
+        $fields['affiliation_key'] = array(
             'name'        => __( 'Affiliation Key' ),
             'description' => '',
             'type'        => 'readonly',
             'default'     => Zume_Dashboard::get_unique_public_key(),
             'section'     => 'zume',
-        ];
+        );
 
         return $fields;
     }
 
     public function __construct() {
-        add_action( 'admin_menu', [ $this, 'meta_box_setup' ], 20 );
-        add_filter( 'site_link_fields_settings', [ $this, 'add_fields' ] );
+        add_action( 'admin_menu', array( $this, 'meta_box_setup' ), 20 );
+        add_filter( 'site_link_fields_settings', array( $this, 'add_fields' ) );
 
         parent::__construct();
     }

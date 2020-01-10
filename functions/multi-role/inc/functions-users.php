@@ -106,7 +106,7 @@ function zume_get_user_role_names( $user_id ) {
 
     $user = new WP_User( $user_id );
 
-    $names = [];
+    $names = array();
 
     foreach ( $user->roles as $role ) {
         $names[ $role ] = zume_multi_role_get_role_name( $role );

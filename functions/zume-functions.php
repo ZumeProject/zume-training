@@ -69,7 +69,7 @@ function zume_update_user_contact_info() {
         return new WP_Error( 'fail_nonce_verification', 'The form requires a valid nonce, in order to process.' );
     }
 
-    $args = [];
+    $args = array();
     $args['ID'] = $user_id;
 
     // build user name variables
@@ -319,7 +319,7 @@ function zume_landing_page_post_id( int $number ) : int {
      * These are the root post ids for the english page, which is used to find the translation page in the
      * polylang system.
      */
-    $list = [
+    $list = array(
         1 => 20730, // God uses ordinary people
         2 => 20731, // teach them to obey
         3 => 20732, // spiritual breathing
@@ -352,13 +352,13 @@ function zume_landing_page_post_id( int $number ) : int {
         30 => 20761, // peer mentoring groups
         31 => 20762, // four fields tool
         32 => 20763, // generation mapping
-    ];
+    );
 
     return $list[$number] ?? 0;
 }
 
 function zume_v4_ready_language() {
-    $ready = [];
+    $ready = array();
 
     $ready['en'] = true;
 

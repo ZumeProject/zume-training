@@ -66,20 +66,20 @@ class DT_Mapping_Module_Migration_0009 extends DT_Mapping_Module_Migration {
         }
 
         // load list to array, make geonameid key
-        $geonames_ref = [];
+        $geonames_ref = array();
         $geonmes_ref_raw = array_map( function( $v){return str_getcsv( $v, "\t" );
         }, file( $uploads_dir . "location_grid_download/geonames_ref_table.tsv" ) );
         if ( empty( $geonmes_ref_raw ) ) {
             throw new Exception( 'Failed to build array from remote file.' );
         }
         foreach ( $geonmes_ref_raw as $value ) {
-            $geonames_ref[$value[1]] = [
+            $geonames_ref[$value[1]] = array(
                 'grid_id' => $value[0],
                 'geonameid' => $value[1],
-            ];
+            );
         }
 
-        $migrated = get_option( "dt_mapping_migration_list", [] );
+        $migrated = get_option( "dt_mapping_migration_list", array() );
         foreach ( $migrated as $location_id => &$m ){
             if ( isset( $m["selected_geoname"] ) && !isset( $m["selected_location_grid"] ) ) {
                 if ( isset( $geonames_ref[ $m["selected_geoname"] ] ) ) {
@@ -103,7 +103,7 @@ class DT_Mapping_Module_Migration_0009 extends DT_Mapping_Module_Migration {
     }
 
     public function get_expected_tables(): array {
-        return [];
+        return array();
     }
 }
 

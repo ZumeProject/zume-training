@@ -11,12 +11,12 @@ Template Name: Zume About
         <div id="inner-content">
 
             <!-- Challenge -->
-            <div class="grid-x grid-margin-x grid-margin-y vertical-padding" style="max-width:100%; margin:0; background:white; padding:17px">
+            <div class="grid-x grid-margin-x">
                 <div class="medium-2 small-1 cell"></div>
                 <div class="medium-8 small-10 cell center">
-                    <h3 style="margin-bottom:0px">
-                        <strong><?php esc_html_e( 'About Zúme Project', 'zume' ) ?></strong>
-                    </h3>
+                    <h1 class="primary-color-text">
+                        <strong><?php esc_html_e( 'About Zúme Training', 'zume' ) ?></strong>
+                    </h1>
                 </div>
                 <div class="medium-2 small-1 cell"></div>
             </div>

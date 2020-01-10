@@ -36,7 +36,7 @@ class Disciple_Tools_Mapping_Queries {
         ", $grid_id ), ARRAY_A );
 
         if ( empty( $results ) ) {
-            $results = [];
+            $results = array();
         }
 
         wp_cache_set( 'get_by_grid_id', $results, $grid_id );
@@ -77,7 +77,7 @@ class Disciple_Tools_Mapping_Queries {
         ", $grid_id ), ARRAY_A );
 
         if ( empty( $results ) ) {
-            $results = [];
+            $results = array();
         }
 
         wp_cache_set( 'get_parent_by_grid_id', $results, $grid_id );
@@ -117,7 +117,7 @@ class Disciple_Tools_Mapping_Queries {
         ", $grid_id ), ARRAY_A );
 
         if ( empty( $results ) ) {
-            $results = [];
+            $results = array();
         }
 
         wp_cache_set( 'get_children_by_grid_id', $results, $grid_id );
@@ -129,7 +129,7 @@ class Disciple_Tools_Mapping_Queries {
         global $wpdb;
 
         if ( empty( $list ) ) {
-            return [];
+            return array();
         }
 
         $prepared_list = '';
@@ -186,7 +186,7 @@ class Disciple_Tools_Mapping_Queries {
         // phpcs:enable
 
         if ( empty( $results ) ) {
-            $results = [];
+            $results = array();
         }
 
         return $results;
@@ -254,7 +254,7 @@ class Disciple_Tools_Mapping_Queries {
         }
 
         if ( empty( $results ) ) {
-            $results = [];
+            $results = array();
         }
 
         return $results;
@@ -345,7 +345,7 @@ class Disciple_Tools_Mapping_Queries {
         }
 
         if ( empty( $results ) ) {
-            $results = [];
+            $results = array();
         }
 
         wp_cache_set( 'get_hierarchy', $results, $grid_id );
@@ -397,7 +397,7 @@ class Disciple_Tools_Mapping_Queries {
         ", $grid_id ), ARRAY_A );
 
         if ( empty( $results ) ) {
-            $results = [];
+            $results = array();
         }
 
         wp_cache_set( 'get_drilldown_by_grid_id', $results, $grid_id );
@@ -441,7 +441,7 @@ class Disciple_Tools_Mapping_Queries {
 //        ", ARRAY_A );
 
         if ( empty( $results ) ) {
-            $results = [];
+            $results = array();
         }
 
         wp_cache_set( 'get_regions', $results );
@@ -476,7 +476,7 @@ class Disciple_Tools_Mapping_Queries {
 //        ", ARRAY_A );
 
         if ( empty( $results ) ) {
-            $results = [];
+            $results = array();
         }
 
         return $results;
@@ -507,7 +507,7 @@ class Disciple_Tools_Mapping_Queries {
         ", ARRAY_A );
 
         if ( empty( $results ) ) {
-            $results = [];
+            $results = array();
         }
 
         return $results;
@@ -558,7 +558,7 @@ class Disciple_Tools_Mapping_Queries {
         ");
 
         if ( empty( $results ) ) {
-            $results = [];
+            $results = array();
         }
 
         wp_cache_set( 'counter', $results );
@@ -658,7 +658,7 @@ class Disciple_Tools_Mapping_Queries {
 
 
         if ( empty( $results ) ) {
-            $results = [];
+            $results = array();
         }
 
         return $results;
@@ -771,7 +771,7 @@ class Disciple_Tools_Mapping_Queries {
 
 
         if ( empty( $results ) ) {
-            $results = [];
+            $results = array();
         }
 
         return $results;
@@ -809,7 +809,7 @@ class Disciple_Tools_Mapping_Queries {
 
 
         if ( empty( $results ) ) {
-            $results = [];
+            $results = array();
         }
 
         wp_cache_set( 'get_location_grid_totals_for_countries', $results );
@@ -834,7 +834,7 @@ class Disciple_Tools_Mapping_Queries {
         ");
 
         if ( empty( $results ) ) {
-            $results = [];
+            $results = array();
         }
 
         wp_cache_set( 'active_admin0_grid_ids', $results );
@@ -859,7 +859,7 @@ class Disciple_Tools_Mapping_Queries {
         ");
 
         if ( empty( $results ) ) {
-            $results = [];
+            $results = array();
         }
 
         wp_cache_set( 'active_admin1_grid_ids', $results );
@@ -884,7 +884,7 @@ class Disciple_Tools_Mapping_Queries {
         ");
 
         if ( empty( $results ) ) {
-            $results = [];
+            $results = array();
         }
 
         wp_cache_set( 'active_admin2_grid_ids', $results );
@@ -960,10 +960,10 @@ class Disciple_Tools_Mapping_Queries {
         // phpcs:enable
 
         $total_rows = $wpdb->get_var( "SELECT found_rows();" );
-        return [
+        return array(
             'location_grid' => $location_grid,
             'total' => $total_rows
-        ];
+        );
     }
 
     public static function search_used_location_grid_by_name( $args ) {
@@ -1002,10 +1002,10 @@ class Disciple_Tools_Mapping_Queries {
             ARRAY_A
         );
         $total_rows = $wpdb->get_var( "SELECT found_rows();" );
-        return [
+        return array(
             'location_grid' => $location_grid,
             'total' => $total_rows
-        ];
+        );
     }
 
     public static function get_names_from_ids( $location_grid_ids ) {
@@ -1020,7 +1020,7 @@ class Disciple_Tools_Mapping_Queries {
                             WHERE grid_id IN ( $ids ) 
                         ", ARRAY_A );
         // phpcs:enable
-        $prepared = [];
+        $prepared = array();
         foreach ( $results as $row ){
             $prepared[$row["grid_id"]] = $row["alt_name"];
         }
@@ -1030,13 +1030,13 @@ class Disciple_Tools_Mapping_Queries {
     public static function get_location_grid_ids_and_names_for_post_ids( $post_ids ) {
         global $wpdb;
 
-        $prepared = [];
+        $prepared = array();
 
         foreach ( $post_ids as $post_id ) {
-            $prepared[$post_id] = [];
+            $prepared[$post_id] = array();
         }
         if ( empty( $post_ids ) ){
-            return [];
+            return array();
         }
         $joined_post_ids = dt_array_to_sql( $post_ids );
         // phpcs:disable
@@ -1058,16 +1058,16 @@ class Disciple_Tools_Mapping_Queries {
                             WHERE grid_id IN ( $joined_location_grid_ids ) 
                         ", ARRAY_A );
         // phpcs:enable
-        $mapped_location_grid_id_to_name = [];
+        $mapped_location_grid_id_to_name = array();
         foreach ( $location_grid_id_names as $location_grid ){
             $mapped_location_grid_id_to_name[$location_grid["grid_id"]] = $location_grid["alt_name"];
         }
         foreach ( $location_grids as $location_grid ){
             if ( isset( $mapped_location_grid_id_to_name[$location_grid["meta_value"]] ) ){
-                $prepared[$location_grid["post_id"]][] = [
+                $prepared[$location_grid["post_id"]][] = array(
                     "location_grid_id" => $location_grid["meta_value"],
                     "name" => $mapped_location_grid_id_to_name[$location_grid["meta_value"]]
-                ];
+                );
             }
         }
         return $prepared;

@@ -29,7 +29,7 @@ class DT_Mapping_Module_Migration_0000 extends DT_Mapping_Module_Migration {
      * @return array
      */
     public function get_expected_tables(): array {
-        return [];
+        return array();
     }
 
     /**

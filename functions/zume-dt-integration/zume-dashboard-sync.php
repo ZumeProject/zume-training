@@ -24,12 +24,12 @@ class Zume_Dashboard_Sync {
             add_action( 'admin_init', array( $this, 'page_init' ) );
         }
 
-        add_action( 'user_register', [ &$this, 'hooks_user_register' ] );
-        add_action( 'zume_update_profile', [ &$this, 'hooks_update_profile' ], 10, 1 );
-        add_action( 'zume_create_group', [ &$this, 'hooks_create_group' ], 10, 3 );
-        add_action( 'zume_activate_group', [ &$this, 'hooks_activate_group' ], 10, 2 );
-        add_action( 'zume_delete_group', [ &$this, 'hooks_delete_group' ], 10, 2 );
-        add_action( 'zume_close_group', [ &$this, 'hooks_close_group' ], 10, 2 );
+        add_action( 'user_register', array( &$this, 'hooks_user_register' ) );
+        add_action( 'zume_update_profile', array( &$this, 'hooks_update_profile' ), 10, 1 );
+        add_action( 'zume_create_group', array( &$this, 'hooks_create_group' ), 10, 3 );
+        add_action( 'zume_activate_group', array( &$this, 'hooks_activate_group' ), 10, 2 );
+        add_action( 'zume_delete_group', array( &$this, 'hooks_delete_group' ), 10, 2 );
+        add_action( 'zume_close_group', array( &$this, 'hooks_close_group' ), 10, 2 );
     }
 
     /**
@@ -169,13 +169,13 @@ class Zume_Dashboard_Sync {
         }
 
         // Send remote request
-        $args = [
+        $args = array(
             'method' => 'POST',
-            'body' => [
+            'body' => array(
                 'transfer_token' => $site['transfer_token'],
-                'create_contact' => [],
-            ]
-        ];
+                'create_contact' => array(),
+            )
+        );
         $result = zume_integration_remote_send( 'create_contact', $site['url'], $args );
 
         dt_write_log( $result );

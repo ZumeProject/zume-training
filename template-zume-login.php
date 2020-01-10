@@ -91,7 +91,10 @@ switch ($request_action) {
                     <div class="cell medium-3 large-4"></div>
                     <div class="cell callout medium-6 large-4">
                         <div class="grid-x grid-padding-x grid-padding-y">
-                            <div class="cell center"><img src="<?php echo esc_url( get_theme_file_uri( '/assets/images/zume-logo-white.png' ) ) ?>" /></div>
+                            <div class="cell center">
+                                <p><img src="<?php echo esc_url( get_theme_file_uri( '/assets/images/zume-logo-white.png' ) ) ?>" alt="zume logo" /></p>
+                                <h1 style="color:gray;font-size: 14px;margin:0;padding:5px;font-weight: normal;"><?php esc_html_e( "Get new password", 'zume' ) ?></h1>
+                            </div>
                             <?php if ( ! empty( $form_errors->errors ) ) : ?>
                                 <div class="cell alert callout">
                                     <?php
@@ -116,7 +119,7 @@ switch ($request_action) {
                                          */
                                         do_action( 'lostpassword_form' ); ?>
                                         <input type="hidden" name="redirect_to" value="<?php echo esc_attr( $redirect_to ); ?>" />
-                                        <p class="submit"><input type="submit" name="wp-submit" id="wp-submit" class="button button-primary button-large" value="<?php echo esc_html__( 'Get New Password', 'zume' ); ?>" /></p>
+                                        <p><input type="submit" name="wp-submit" id="wp-submit" class="button button-primary button-large" value="<?php echo esc_html__( 'Get New Password', 'zume' ); ?>" /></p>
                                     </form>
                                     <?php elseif ( $sent ): ?>
                                         <?php echo esc_html__( 'Your password reset email has been sent. Check your email or junk mail for the link to reset your password.', 'zume' ) ?>
@@ -237,7 +240,11 @@ switch ($request_action) {
                     <div class="cell medium-3 large-4"></div>
                     <div class="cell callout medium-6 large-4">
                         <div class="grid-x grid-padding-x grid-padding-y">
-                            <div class="cell center"><img src="<?php echo esc_url( get_theme_file_uri( '/assets/images/zume-logo-white.png' ) ) ?>" /></div>
+                            <div class="cell center">
+                                <img src="<?php echo esc_url( get_theme_file_uri( '/assets/images/zume-logo-white.png' ) ) ?>" alt="zume logo"/>
+                                <h1 style="color:gray;font-size: 14px;margin:0;padding:5px;font-weight: normal;"><?php esc_html_e( "Reset Password", 'zume' ) ?></h1>
+
+                            </div>
                             <?php if ( ! empty( $form_errors->errors ) ) :?>
                                 <div class="cell alert callout">
                                     <?php
@@ -285,7 +292,7 @@ switch ($request_action) {
                                         ?>
                                         <input type="hidden" name="rp_key" value="<?php echo esc_attr( $rp_key ); ?>" />
 
-                                        <p class="submit"><input type="submit" name="wp-submit" id="wp-submit" class="button button-primary button-large" value="<?php esc_html_e( 'Reset Password', 'zume' ); ?>" /></p>
+                                        <p><input type="submit" name="wp-submit" id="wp-submit" class="button button-primary button-large" value="<?php esc_html_e( 'Reset Password', 'zume' ); ?>" /></p>
 
                                     </form>
 
@@ -345,10 +352,10 @@ switch ($request_action) {
                     <div class="cell callout medium-6 large-4">
                         <div class="grid-x grid-padding-x grid-padding-y">
                             <div class="cell center" style="padding-bottom: 0;">
-                                <h2 style="font-weight: bolder;">
+                                <span style="font-weight: bolder;font-size:2.5em;">
                                     <?php echo esc_html__( "Let's get started.", 'zume' ) ?>
-                                </h2>
-                                <span style="color:gray;"><?php esc_html_e( 'Sign up using:', 'zume' ) ?></span>
+                                </span>
+                                <h1 style="color:gray;font-size: 14px;margin:0;padding:5px;font-weight: normal;"><?php esc_html_e( "Register", 'zume' ) ?></h1>
                             </div>
 
                             <div class="cell">
@@ -459,8 +466,8 @@ switch ($request_action) {
                     <div class="cell callout medium-6 large-4">
                         <div class="grid-x grid-padding-x grid-padding-y">
                             <div class="cell center">
-                                <img src="<?php echo esc_url( get_theme_file_uri( '/assets/images/zume-logo-white.png' ) ) ?>" />
-                                <p><span style="color:gray;"><?php esc_html_e( "Sign in using:", 'zume' ) ?></span></p>
+                                <img src="<?php echo esc_url( get_theme_file_uri( '/assets/images/zume-logo-white.png' ) ) ?>" alt="zume logo" />
+                                <h1 style="color:gray;font-size: 14px;margin:0;padding:5px;font-weight: normal;"><?php esc_html_e( "Login", 'zume' ) ?></h1>
                             </div>
                             <?php
                             if ( isset( $_GET['login'] ) && $_GET['login'] === 'failed' ) {

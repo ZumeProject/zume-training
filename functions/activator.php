@@ -53,20 +53,20 @@ class Zume_Activator
         }
         add_role(
             'coach', __( 'Coach' ),
-            [
+            array(
                 'coach' => true,
                 'zume' => true,
-            ]
+            )
         );
         if ( get_role( 'coach_leader' ) ) {
             remove_role( 'coach_leader' );
         }
         add_role(
             'coach_leader', __( 'Coach Leader' ),
-            [
+            array(
                 'coach_leader' => true,
                 'zume' => true,
-            ]
+            )
         );
         $role = get_role( 'administrator' );
         // If the administrator role exists, add required capabilities for the plugin.

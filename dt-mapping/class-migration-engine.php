@@ -37,7 +37,7 @@ class DT_Mapping_Module_Migration_Engine
             throw new Exception( "Could not scan migrations directory" );
         }
         $expected_migration_number = 0;
-        $rv = [];
+        $rv = array();
         foreach ( $filenames as $filename ) {
             if ( $filename[0] !== "." && $filename !== "abstract.php"){
                 if ( preg_match( '/^([0-9][0-9][0-9][0-9])(-.*)?\.php$/i', $filename, $matches ) ) {
@@ -104,12 +104,12 @@ class DT_Mapping_Module_Migration_Engine
             try {
                 $migration->up();
             } catch (Throwable $e) {
-                update_option( 'dt_mapping_module_migrate_last_error', [
+                update_option( 'dt_mapping_module_migrate_last_error', array(
                     'message' => $e->getMessage(),
                     'code' => $e->getCode(),
                     'trace' => $e->getTrace(),
                     'time' => time(),
-                ] );
+                ) );
                 throw $e;
             }
             update_option( 'dt_mapping_module_migration_number', (string) $activating_migration_number );

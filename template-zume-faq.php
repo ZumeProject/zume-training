@@ -15,9 +15,9 @@ Template Name: Zúme FAQ
 
             <div class="large-8 small-12 cell">
 
-                <div class="grid-x grid-margin-y grid-padding-y">
+                <div class="grid-x grid-margin-y">
                     <div class="cell center">
-                        <h2><?php esc_html_e( 'Zúme FAQs', 'zume' ) ?></h2>
+                        <h1 class="primary-color-text"><?php esc_html_e( 'Zúme FAQs', 'zume' ) ?></h1>
                     </div>
                 </div>
 
@@ -166,7 +166,7 @@ Template Name: Zúme FAQ
                         <hr>
                         <h3 class="secondary"><?php esc_html_e( 'Does Zúme offer a way for me to chat with people in my group?', 'zume' ) ?></h3>
                         <?php esc_html_e( 'Not at this time. We recommend that every member of your group create a login and get added to your Zúme group. This way every member will have access to all of the material whenever they want. Then the group can use any messaging platform that they prefer (iMessage, WhatsApp, Facebook group, etc.) for further group communication.', 'zume' ) ?>
-                    </div>                    
+                    </div>
 
                     <?php
                     /**

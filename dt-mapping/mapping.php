@@ -40,7 +40,7 @@ if ( ! class_exists( 'DT_Mapping_Module' ) ) {
             $this->namespace = "dt/v1";
             $this->public_namespace = "dt-public/v1";
             $this->endpoints = apply_filters( 'dt_mapping_module_endpoints', $this->default_endpoints() );
-            add_action( 'rest_api_init', [ $this, 'add_api_routes' ] );
+            add_action( 'rest_api_init', array( $this, 'add_api_routes' ) );
             /** End LOAD REST ENDPOINTS */
 
             /**
@@ -120,14 +120,14 @@ if ( ! class_exists( 'DT_Mapping_Module' ) ) {
 
             if ( 'mapping' === $url_base ) {
                 if ( 'mapping' === substr( $url_path, '0', $url_base_length ) ) {
-                    add_filter( 'dt_templates_for_urls', [ $this, 'add_url' ] ); // add custom URL
-                    add_filter( 'dt_metrics_menu', [ $this, 'menu' ], 99 );
-                    add_action( 'wp_enqueue_scripts', [ $this, 'drilldown_script' ], 89 );
-                    add_action( 'wp_enqueue_scripts', [ $this, 'scripts' ], 99 );
+                    add_filter( 'dt_templates_for_urls', array( $this, 'add_url' ) ); // add custom URL
+                    add_filter( 'dt_metrics_menu', array( $this, 'menu' ), 99 );
+                    add_action( 'wp_enqueue_scripts', array( $this, 'drilldown_script' ), 89 );
+                    add_action( 'wp_enqueue_scripts', array( $this, 'scripts' ), 99 );
                 }
             }
             else if ( $url_base === substr( $url_path, '0', $url_base_length ) ) {
-                add_action( 'wp_enqueue_scripts', [ $this, 'drilldown_script' ], 89 );
+                add_action( 'wp_enqueue_scripts', array( $this, 'drilldown_script' ), 89 );
             }
             /* End DEFAULT MAPPING DEFINITION */
 
@@ -170,7 +170,7 @@ if ( ! class_exists( 'DT_Mapping_Module' ) ) {
            // Mapping Script
             wp_enqueue_script( 'dt_mapping_js',
                 $dt_mapping['mapping_js_url'],
-                [
+                array(
                     'jquery',
                     'jquery-ui-core',
                     'amcharts-core',
@@ -178,16 +178,16 @@ if ( ! class_exists( 'DT_Mapping_Module' ) ) {
                     'amcharts-maps',
                     'mapping-drill-down',
                     'lodash'
-                ], $dt_mapping['mapping_js_version'], true
+                ), $dt_mapping['mapping_js_version'], true
             );
             wp_localize_script(
-                'dt_mapping_js', 'mappingModule', [
+                'dt_mapping_js', 'mappingModule', array(
                     'root' => esc_url_raw( rest_url() ),
                     'nonce' => wp_create_nonce( 'wp_rest' ),
                     'current_user_login' => wp_get_current_user()->user_login,
                     'current_user_id' => get_current_user_id(),
                     'mapping_module' => $this->localize_script(),
-                ]
+                )
             );
         }
 
@@ -196,27 +196,27 @@ if ( ! class_exists( 'DT_Mapping_Module' ) ) {
             global $dt_mapping;
             // Drill Down Tool
             $settings = apply_filters( 'dt_mapping_module_settings', $this->settings() );
-            wp_enqueue_script( 'mapping-drill-down', $dt_mapping['drill_down_js_url'], [ 'jquery', 'lodash' ], $dt_mapping['drill_down_js_version'] );
+            wp_enqueue_script( 'mapping-drill-down', $dt_mapping['drill_down_js_url'], array( 'jquery', 'lodash' ), $dt_mapping['drill_down_js_version'] );
             wp_localize_script(
                 'mapping-drill-down',
-                'drilldownModule', [
-                    'drilldown' => [
+                'drilldownModule', array(
+                    'drilldown' => array(
                         $settings['current_map'] => $this->drill_down_array( $settings['current_map'] )
-                    ],
+                    ),
                     "settings" => $this->drillown_settings(),
                     "current_map" => $settings["current_map"]
-                ]
+                )
             );
         }
 
         public function drillown_settings() {
             global $dt_mapping;
-            return [
+            return array(
                 'root' => esc_url_raw( rest_url() ),
                 'endpoints' => apply_filters( 'dt_mapping_module_endpoints', $this->default_endpoints() ),
                 'spinner' => '<img src="'. $dt_mapping['spinner'] . '" width="12px" />',
                 'spinner_large' => '<img src="'. $dt_mapping['spinner'] . '" width="24px" />',
-            ];
+            );
         }
 
         /**
@@ -228,11 +228,11 @@ if ( ! class_exists( 'DT_Mapping_Module' ) ) {
          * @return array
          */
         public function localize_script() {
-            $mapping_module = [
+            $mapping_module = array(
                 // 'data' => apply_filters( 'dt_mapping_module_data', $this->data() ),
                 'settings' => apply_filters( 'dt_mapping_module_settings', $this->settings() ),
                 'translations' => apply_filters( 'dt_mapping_module_translations', $this->translations() ),
-            ];
+            );
 
             /**
              * Full permissions
@@ -252,11 +252,11 @@ if ( ! class_exists( 'DT_Mapping_Module' ) ) {
              * No permissions, no data
              */
             else {
-                return [];
+                return array();
             }
         }
         public function data() {
-            $data = [];
+            $data = array();
 
             // top map list
             $data['top_map_list'] = $this->default_map_short_list();
@@ -271,14 +271,14 @@ if ( ! class_exists( 'DT_Mapping_Module' ) ) {
             }
 
             // set custom columns
-            $data['custom_column_labels'] = [];
-            $data['custom_column_data'] = [];
+            $data['custom_column_labels'] = array();
+            $data['custom_column_data'] = array();
 
             return $data;
         }
         public function settings() {
             global $dt_mapping;
-            $settings = [];
+            $settings = array();
 
             $settings['root'] = esc_url_raw( rest_url() );
             $settings['endpoints'] = $this->endpoints;
@@ -295,7 +295,7 @@ if ( ! class_exists( 'DT_Mapping_Module' ) ) {
         }
 
         public function translations() {
-            $translations = [];
+            $translations = array();
 
             $translations['title'] = __( "Mapping", "disciple_tools" );
             $translations['refresh_data'] = __( "Refresh Cached Data", "disciple_tools" );
@@ -312,10 +312,10 @@ if ( ! class_exists( 'DT_Mapping_Module' ) ) {
             if ( ! empty( $this->endpoints ) ) {
                 foreach ( $this->endpoints as $key => $endpoint ) {
                     register_rest_route(
-                        $endpoint['namespace'], $endpoint['route'], [
+                        $endpoint['namespace'], $endpoint['route'], array(
                             'methods'  => $endpoint['method'],
-                            'callback' => [ $this, $key ],
-                        ]
+                            'callback' => array( $this, $key ),
+                        )
                     );
                 }
             }
@@ -325,53 +325,53 @@ if ( ! class_exists( 'DT_Mapping_Module' ) ) {
         /************************************************************************************************************
          * ENDPOINTS
          ************************************************************************************************************/
-        public function default_endpoints( $endpoints = [] ) {
+        public function default_endpoints( $endpoints = array() ) {
             /** Defines a default length of cache. @var cache_length */
             $this->cache_length = apply_filters( 'dt_mapping_cache_length', 60 *60 );
 
-            $endpoints['get_default_map_data_endpoint'] = [
+            $endpoints['get_default_map_data_endpoint'] = array(
                 'namespace' => $this->namespace,
                 'route' => '/mapping_module/get_default_map_data',
                 'nonce' => wp_create_nonce( 'wp_rest' ),
                 'method' => 'POST',
-            ];
-            $endpoints['get_map_by_grid_id_endpoint'] = [
+            );
+            $endpoints['get_map_by_grid_id_endpoint'] = array(
                 'namespace' => $this->namespace,
                 'route' => '/mapping_module/get_map_by_grid_id',
                 'nonce' => wp_create_nonce( 'wp_rest' ),
                 'method' => 'POST',
-            ];
-            $endpoints['modify_location_endpoint'] = [
+            );
+            $endpoints['modify_location_endpoint'] = array(
                 'namespace' => $this->namespace,
                 'route' => '/mapping_module/modify_location',
                 'nonce' => wp_create_nonce( 'wp_rest' ),
                 'method' => 'POST',
-            ];
-            $endpoints['search_location_grid_by_name'] = [
+            );
+            $endpoints['search_location_grid_by_name'] = array(
                 'namespace' => $this->namespace,
                 'route' => '/mapping_module/search_location_grid_by_name',
                 'nonce' => wp_create_nonce( 'wp_rest' ),
                 'method' => 'GET',
-            ];
-            $endpoints['get_drilldown_endpoint'] = [
+            );
+            $endpoints['get_drilldown_endpoint'] = array(
                 'namespace' => $this->namespace,
                 'route' => '/mapping_module/get_drilldown',
                 'nonce' => wp_create_nonce( 'wp_rest' ),
                 'method' => 'POST',
-            ];
-            $endpoints['delete_transient_endpoint'] = [
+            );
+            $endpoints['delete_transient_endpoint'] = array(
                 'namespace' => $this->namespace,
                 'route' => '/mapping_module/delete_transient',
                 'nonce' => wp_create_nonce( 'wp_rest' ),
                 'method' => 'POST',
-            ];
+            );
             // add another endpoint here
             return $endpoints;
         }
 
         public function get_default_map_data_endpoint( WP_REST_Request $request ) {
             if ( ! $this->permissions ) {
-                return new WP_Error( __METHOD__, 'No permission', [ 'status' => 101 ] );
+                return new WP_Error( __METHOD__, 'No permission', array( 'status' => 101 ) );
             }
 
             if ( isset( $params['cached'] ) && ! empty( $params['cached'] ) ) {
@@ -393,7 +393,7 @@ if ( ! class_exists( 'DT_Mapping_Module' ) ) {
 
         public function get_map_by_grid_id_endpoint( WP_REST_Request $request ) {
             if ( ! current_user_can( 'view_mapping' ) && ! $this->permissions ) {
-                return new WP_Error( __METHOD__, 'No permission', [ 'status' => 101 ] );
+                return new WP_Error( __METHOD__, 'No permission', array( 'status' => 101 ) );
             }
             $params = $request->get_params();
 
@@ -419,13 +419,13 @@ if ( ! class_exists( 'DT_Mapping_Module' ) ) {
 
                 return $response;
             } else {
-                return new WP_Error( __METHOD__, 'Missing parameters.', [ 'status' => 400 ] );
+                return new WP_Error( __METHOD__, 'Missing parameters.', array( 'status' => 400 ) );
             }
         }
 
         public function modify_location_endpoint( WP_REST_Request $request ) {
             if ( ! $this->permissions ) {
-                return new WP_Error( 'permissions', 'No permissions for the action.', [ 'status' => 401 ] );
+                return new WP_Error( 'permissions', 'No permissions for the action.', array( 'status' => 401 ) );
             }
 
             $params = $request->get_params();
@@ -435,7 +435,7 @@ if ( ! class_exists( 'DT_Mapping_Module' ) ) {
 
         public function search_location_grid_by_name( WP_REST_Request $request ){
             if ( ! current_user_can( 'read_location' ) && ! $this->permissions ) {
-                return new WP_Error( __FUNCTION__, "No permissions to read locations", [ 'status' => 403 ] );
+                return new WP_Error( __FUNCTION__, "No permissions to read locations", array( 'status' => 403 ) );
             }
             $params = $request->get_params();
             $search = "";
@@ -448,28 +448,28 @@ if ( ! class_exists( 'DT_Mapping_Module' ) ) {
             }
             //search for only the locations that are currently in use
             if ( $filter === "used" ){
-                $locations = Disciple_Tools_Mapping_Queries::search_used_location_grid_by_name( [
+                $locations = Disciple_Tools_Mapping_Queries::search_used_location_grid_by_name( array(
                     "search_query" => $search,
-                ] );
+                ) );
             } else {
-                $locations = Disciple_Tools_Mapping_Queries::search_location_grid_by_name( [
+                $locations = Disciple_Tools_Mapping_Queries::search_location_grid_by_name( array(
                     "search_query" => $search,
                     "filter" => $filter
-                ] );
+                ) );
             }
 
-            $prepared = [];
+            $prepared = array();
             foreach ( $locations["location_grid"] as $location ){
-                $prepared[] = [
+                $prepared[] = array(
                     "name" => $location["label"],
                     "ID" => $location["grid_id"]
-                ];
+                );
             }
 
-            return [
+            return array(
                 'location_grid' => $prepared,
                 'total' => $locations["total"]
-            ];
+            );
         }
 
         public function get_drilldown_endpoint( WP_REST_Request $request ) {
@@ -495,13 +495,13 @@ if ( ! class_exists( 'DT_Mapping_Module' ) ) {
 
                 return $response;
             } else {
-                return new WP_Error( __METHOD__, 'Missing parameters.', [ 'status' => 400 ] );
+                return new WP_Error( __METHOD__, 'Missing parameters.', array( 'status' => 400 ) );
             }
         }
 
         public function delete_transient_endpoint( WP_REST_Request $request ) {
             if ( ! $this->permissions ) {
-                return new WP_Error( __METHOD__, 'No permission', [ 'status' => 101 ] );
+                return new WP_Error( __METHOD__, 'No permission', array( 'status' => 101 ) );
             }
             $params = $request->get_params();
 
@@ -516,7 +516,7 @@ if ( ! class_exists( 'DT_Mapping_Module' ) ) {
                 return true;
             }
 
-            return new WP_Error( __METHOD__, 'Missing parameters.', [ 'status' => 400 ] );
+            return new WP_Error( __METHOD__, 'Missing parameters.', array( 'status' => 400 ) );
         }
         /************************************************************************************************************
          * END ENDPOINTS
@@ -587,7 +587,7 @@ if ( ! class_exists( 'DT_Mapping_Module' ) ) {
 
 
 
-        private function drill_down_add_custom_locations( $know_parent, $reference, $list = [] ){
+        private function drill_down_add_custom_locations( $know_parent, $reference, $list = array() ){
             if ( (int) $reference["parent_id"] === (int) $know_parent ){
                 return array_reverse( $list );
             }
@@ -597,53 +597,53 @@ if ( ! class_exists( 'DT_Mapping_Module' ) ) {
         }
 
         private function drill_down_for_location( $reference, $default_select_first_level ){
-            $preset_array = [];
-            $preset_array[] = [
+            $preset_array = array();
+            $preset_array[] = array(
                 'parent' => 'world',
                 'selected' => 'world',
                 'selected_name' => __( 'World', 'disciple_tools' ),
                 'link' => true,
                 'active' => false,
-            ];
-            $preset_array[] = [
+            );
+            $preset_array[] = array(
                 'parent' => 'world',
                 'selected' => (int) $reference['admin0_grid_id'],
                 'selected_name' => $reference['admin0_name'],
                 'link' => true,
                 'active' => false,
-            ];
+            );
             foreach ( $reference as $r_key => $r_value ){
                 if ( strpos( $r_key, "_grid_id" ) !== false && $r_key !== "admin0_grid_id" ) {
                     $admin_level    = str_replace( "_grid_id", "", str_replace( "admin", "", $r_key ) );
                     if ( !empty( $r_value ) ) {
-                        $preset_array[] = [
+                        $preset_array[] = array(
                             'parent'        => (int) $reference[ "admin" . ( (int) $admin_level - 1 ) . "_grid_id" ] ?? 0,
                             'selected'      => (int) $reference[ $r_key ] ?? 0,
                             'selected_name' => $reference[ 'admin' . $admin_level . '_name' ],
                             'link'          => true,
                             'active'        => false,
-                        ];
+                        );
                     }
                 }
             }
 
             if ( (int) $reference["grid_id"] != (int) $preset_array[ sizeof( $preset_array ) - 1 ]['selected'] ){
-                $other_levels = $this->drill_down_add_custom_locations( $preset_array[ sizeof( $preset_array ) - 1 ]['selected'], $reference, [ $reference ] );
+                $other_levels = $this->drill_down_add_custom_locations( $preset_array[ sizeof( $preset_array ) - 1 ]['selected'], $reference, array( $reference ) );
                 foreach ( $other_levels as $level ) {
-                    $preset_array[] = [
+                    $preset_array[] = array(
                         'parent'        => (int) $level["parent_id"] ?? 0,
                         'selected'      => (int) $level["grid_id"] ?? 0,
                         'selected_name' => $level["name"],
                         'link'          => true,
                         'active'        => false
-                    ];
+                    );
                 }
             }
             $preset_array[ sizeof( $preset_array ) - 1 ]['active'] = true;
             $preset_array[ sizeof( $preset_array ) - 1 ]["self"] = $reference;
             $child_list = $this->format_location_grid_types( Disciple_Tools_Mapping_Queries::get_children_by_grid_id( $reference["grid_id"] ) );
             $deeper_levels = $this->get_deeper_levels( $child_list );
-            $preset_array[] = [
+            $preset_array[] = array(
                 'parent' => $preset_array[ sizeof( $preset_array ) - 1 ]["selected"],
                 'selected'      => 0,
                 'selected_name' => null,
@@ -651,7 +651,7 @@ if ( ! class_exists( 'DT_Mapping_Module' ) ) {
                 'active'        => false,
                 'deeper_levels' => $deeper_levels,
                 'list' => $child_list
-            ];
+            );
             return $preset_array;
         }
 
@@ -699,15 +699,15 @@ if ( ! class_exists( 'DT_Mapping_Module' ) ) {
                     }
                 }
 
-                $preset_array = [
-                    [
+                $preset_array = array(
+                    array(
                         'parent' => 'world',
                         'selected' => $selected_grid_id,
                         'selected_name' => $selected_name,
                         'link' => true,
                         'active' => false,
-                    ],
-                    [
+                    ),
+                    array(
                         'parent' => 'world',
                         'selected' => 0,
                         'selected_name' => '',
@@ -715,8 +715,8 @@ if ( ! class_exists( 'DT_Mapping_Module' ) ) {
                         'link' => false,
                         'active' => true,
                         'deeper_levels' => $deeper_levels,
-                    ]
-                ];
+                    )
+                );
 
                 wp_cache_set( 'drill_down_array_default', $preset_array );
                 return $preset_array;
@@ -737,11 +737,11 @@ if ( ! class_exists( 'DT_Mapping_Module' ) ) {
 
         public function get_default_map_data() {
 
-            $results = [ // set array defaults
-                'self' => [],
-                'children' => [],
-                'deeper_levels' => [],
-            ];
+            $results = array( // set array defaults
+                'self' => array(),
+                'children' => array(),
+                'deeper_levels' => array(),
+            );
 
             // get default setting for start level
             $starting_map_level = $this->default_map_settings();
@@ -766,7 +766,7 @@ if ( ! class_exists( 'DT_Mapping_Module' ) ) {
                         if ( ! $self ) {
                             return $this->get_world_map_data();
                         }
-                        $results['self'] = [
+                        $results['self'] = array(
                             'name' => $self['name'],
                             'id' => (int) $self['grid_id'],
                             'grid_id' => (int) $self['grid_id'],
@@ -774,7 +774,7 @@ if ( ! class_exists( 'DT_Mapping_Module' ) ) {
                             'population_formatted' => number_format( (int) $self['population'] ),
                             'latitude' => (float) $self['latitude'],
                             'longitude' => (float) $self['longitude'],
-                        ];
+                        );
 
                         // children
                         $children = Disciple_Tools_Mapping_Queries::get_children_by_grid_id( $grid_id );
@@ -813,7 +813,7 @@ if ( ! class_exists( 'DT_Mapping_Module' ) ) {
                             if ( ! $self ) {
                                 return $this->get_world_map_data();
                             }
-                            $results['self'] = [
+                            $results['self'] = array(
                                 'name' => $self['name'],
                                 'id' => (int) $self['grid_id'],
                                 'grid_id' => (int) $self['grid_id'],
@@ -821,7 +821,7 @@ if ( ! class_exists( 'DT_Mapping_Module' ) ) {
                                 'population_formatted' => number_format( (int) $self['population'] ),
                                 'latitude' => (float) $self['latitude'],
                                 'longitude' => (float) $self['longitude'],
-                            ];
+                            );
 
                             // children
                             $children = Disciple_Tools_Mapping_Queries::get_children_by_grid_id( $grid_id );
@@ -868,11 +868,11 @@ if ( ! class_exists( 'DT_Mapping_Module' ) ) {
             $level = apply_filters( 'dt_starting_map_level', get_option( 'dt_mapping_module_starting_map_level' ) );
 
             if ( ! $level || ! is_array( $level ) ) {
-                $level = [
+                $level = array(
                     'type' => 'world',
                     'parent' => 'world',
-                    'children' => [],
-                ];
+                    'children' => array(),
+                );
                 update_option( 'dt_mapping_module_starting_map_level', $level, false );
             }
 
@@ -888,7 +888,7 @@ if ( ! class_exists( 'DT_Mapping_Module' ) ) {
          * @return array
          */
         public function get_map_level_settings_by_grid_id( $grid_id ) {
-            $default_array = [];
+            $default_array = array();
 
             $row = Disciple_Tools_Mapping_Queries::get_by_grid_id( $grid_id );
             //            (
@@ -914,32 +914,32 @@ if ( ! class_exists( 'DT_Mapping_Module' ) ) {
 
             if ( ! empty( $row ) ) {
                 if ( $row['level_name'] === 'world' ) {
-                    $default_array = [
+                    $default_array = array(
                         'type' => 'world',
                         'parent' => 'world',
-                        'children' => []
-                    ];
+                        'children' => array()
+                    );
                 }
                 else if ( $row['level_name'] === 'admin0' ) {
-                    $default_array = [
+                    $default_array = array(
                         'type' => 'country',
                         'parent' => 'world',
-                        'children' => [ $grid_id ]
-                    ];
+                        'children' => array( $grid_id )
+                    );
                 }
                 else if ( $row['level_name'] === 'admin1' ) {
-                    $default_array = [
+                    $default_array = array(
                         'type' => 'state',
                         'parent' => $row['parent_id'],
-                        'children' => [ $grid_id ]
-                    ];
+                        'children' => array( $grid_id )
+                    );
                 }
                 else {
-                    $default_array = [
+                    $default_array = array(
                         'type' => $row['level_name'],
                         'parent' => $row['parent_id'],
-                        'children' => [ $grid_id ]
-                    ];
+                        'children' => array( $grid_id )
+                    );
                 }
             }
 
@@ -952,14 +952,14 @@ if ( ! class_exists( 'DT_Mapping_Module' ) ) {
          * @return array
          */
         public function default_map_short_list() : array {
-            $list = [];
+            $list = array();
             $default_map_settings = $this->default_map_settings();
 
             if ( $default_map_settings['type'] === 'world' ) {
-                $list = [ 'world' => 'World' ];
+                $list = array( 'world' => 'World' );
             }
             else if ( $default_map_settings['type'] !== 'world' && empty( $default_map_settings['children'] ) ) {
-                $list = [ 'world' => 'World' ];
+                $list = array( 'world' => 'World' );
             }
             else {
                 $children = Disciple_Tools_Mapping_Queries::get_by_grid_id_list( $default_map_settings['children'] );
@@ -978,12 +978,12 @@ if ( ! class_exists( 'DT_Mapping_Module' ) ) {
                 return $this->get_world_map_data();
             }
 
-            $results = [
-                'parent' => [],
-                'self' => [],
-                'children' => [],
-                'deeper_levels' => [],
-            ];
+            $results = array(
+                'parent' => array(),
+                'self' => array(),
+                'children' => array(),
+                'deeper_levels' => array(),
+            );
 
             // else if not world, build data from grid_id
             $parent = Disciple_Tools_Mapping_Queries::get_parent_by_grid_id( $grid_id );
@@ -1068,11 +1068,11 @@ if ( ! class_exists( 'DT_Mapping_Module' ) ) {
          * @return array
          */
         public function get_world_map_data() : array {
-            $results = [ // set array defaults
-                'self' => [],
-                'children' => [],
-                'deeper_levels' => [],
-            ];
+            $results = array( // set array defaults
+                'self' => array(),
+                'children' => array(),
+                'deeper_levels' => array(),
+            );
 
             $results['self'] = $this->format_location_grid_types( Disciple_Tools_Mapping_Queries::get_earth() );
             $results['self']['population_formatted'] = number_format( $results['self']['population'] ?? 0 );
@@ -1086,7 +1086,7 @@ if ( ! class_exists( 'DT_Mapping_Module' ) ) {
         public function get_countries_map_data() {
             $children = Disciple_Tools_Mapping_Queries::get_countries();
 
-            $results = [];
+            $results = array();
 
             if ( ! empty( $children ) ) {
                 // loop and modify types and population
@@ -1115,7 +1115,7 @@ if ( ! class_exists( 'DT_Mapping_Module' ) ) {
 
         public function get_deeper_levels( array $children ) {
 
-            $results = [];
+            $results = array();
             if ( ! empty( $children ) ) {
                 foreach ( $children as $index => $child ) {
                     $results[$child['grid_id']] = true;
@@ -1130,7 +1130,7 @@ if ( ! class_exists( 'DT_Mapping_Module' ) ) {
         }
 
         public function get_population_division() {
-            $data = [];
+            $data = array();
 
             $data['base'] = (int) get_option( 'dt_mapping_module_population', true );
 
@@ -1143,7 +1143,7 @@ if ( ! class_exists( 'DT_Mapping_Module' ) ) {
              *
              *              This would make the "United States" ( i.e. 6252001) use divisions of 5000
              */
-            $data['custom'] = apply_filters( 'dt_mapping_module_custom_population_divisions', [] );
+            $data['custom'] = apply_filters( 'dt_mapping_module_custom_population_divisions', array() );
 
             return $data;
         }
@@ -1189,7 +1189,7 @@ if ( ! class_exists( 'DT_Mapping_Module' ) ) {
             return $query;
         }
         public function get_post_locations( $post_id ) {
-            $list = [];
+            $list = array();
             $location_grid_list = get_post_meta( $post_id, 'location_grid' );
             if ( !empty( $location_grid_list ) ) {
                 $list = Disciple_Tools_Mapping_Queries::get_by_grid_id_list( $location_grid_list );
@@ -1200,7 +1200,7 @@ if ( ! class_exists( 'DT_Mapping_Module' ) ) {
         public function get_countries_grouped_by_region( $regions = null ): array {
             $regions = Disciple_Tools_Mapping_Queries::get_regions();
             $countries = Disciple_Tools_Mapping_Queries::get_countries();
-            $list = [];
+            $list = array();
 
             foreach ( $regions as $item ) {
                 $cc2 = explode( ',', $item['cc2'] );

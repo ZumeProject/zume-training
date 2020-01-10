@@ -16,10 +16,9 @@ $zendesk_enable = true;
 
             <?php if ( ! get_post_meta( get_the_ID(), 'zume_resource_hide_section', true ) ) : // Show/Hide default top section of resources ?>
 
-                <div class="grid-x grid-margin-x verticle-padding">
+                <div class="grid-x grid-margin-x">
                     <div class="cell center">
-                        <h2><?php esc_html_e( 'RESOURCES', 'zume' ) ?></h2>
-                        <br>
+                        <h1 class="primary-color-text"><?php esc_html_e( 'RESOURCES', 'zume' ) ?></h1>
                     </div>
                 </div>
 
@@ -72,19 +71,24 @@ $zendesk_enable = true;
 
             <?php endif; ?>
 
-            <div class="max-content-width grid-x grid-margin-x vertical-padding">
+            <div class="max-content-width grid-x grid-margin-x">
+                <div class="cell center">
+                    <h1 class="primary-color-text"><?php esc_html_e( 'Zúme Training Resources', 'zume' ) ?></h1>
+                </div>
 
-                <?php
-                /**
-                 * Additional Resources section
-                 */
-                if (have_posts()) :
-                    while (have_posts()) :
-                        the_post();
-                        the_content();
-                    endwhile;
-                endif;
-                ?>
+                <div class="cell">
+                    <?php
+                    /**
+                     * Additional Resources section
+                     */
+                    if (have_posts()) :
+                        while (have_posts()) :
+                            the_post();
+                            the_content();
+                        endwhile;
+                    endif;
+                    ?>
+                </div>
             </div>
 
         </div> <!-- end #main -->

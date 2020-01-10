@@ -45,7 +45,7 @@ class Zume_Coach {
      * @since   0.1
      */
     public function __construct() {
-        add_action( 'user_register', [ &$this, 'add_meta_data' ] );
+        add_action( 'user_register', array( &$this, 'add_meta_data' ) );
 
     } // End __construct()
 

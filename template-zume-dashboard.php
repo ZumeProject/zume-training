@@ -89,7 +89,7 @@ do_action( 'zume_dashboard_header' );
                                  * Groups
                                  */
                                 $zume_no_groups = 0;
-                                $zume_archived_groups = [];
+                                $zume_archived_groups = array();
 
                                 // add colead groups to array
                                 $zume_colead_groups = Zume_Dashboard::get_colead_groups();
@@ -281,345 +281,345 @@ do_action( 'zume_dashboard_header' );
                                     <hr>
                                     <div class="grid-x grid-margin-x"> <!-- Begin columns container -->
                                         <?php
-                                        $zume_videos = [
-                                            [
+                                        $zume_videos = array(
+                                            array(
                                         "name" => esc_html__( 'Overview Video', 'zume' ),
                                         "length" => "(2:07)",
                                         "key" => "31",
                                         "session" => -1,
                                         "title" => 0,
                                         "column" => 1
-                                            ],
-                                            [
+                                            ),
+                                            array(
                                             "name" => esc_html__( 'How Zúme Works', 'zume' ),
                                             "length" => "(3:22)",
                                             "key" => "32",
                                             "session" => -1,
                                             "title" => 0,
                                             "column" => 1
-                                            ],
-                                            [
+                                            ),
+                                            array(
                                             "name" => esc_html__( 'Session 1', 'zume' ),
                                             "length" => "",
                                             "key" => "",
                                             "session" => 1,
                                             "title" => 1,
                                             "column" => 1
-                                            ], // title
-                                            [
+                                            ), // title
+                                            array(
                                             "name" => esc_html__( 'Welcome to Zume', 'zume' ),
                                             "length" => "(3:07)",
                                             "key" => "1",
                                             "session" => 1,
                                             "title" => 0,
                                             "column" => 1
-                                            ],
-                                            [
+                                            ),
+                                            array(
                                             "name" => esc_html__( 'Teach Them to Obey', 'zume' ),
                                             "length" => "(4:01)",
                                             "key" => "2",
                                             "session" => 1,
                                             "title" => 0,
                                             "column" => 1
-                                            ],
-                                            [
+                                            ),
+                                            array(
                                             "name" => esc_html__( 'Spiritual Breathing', 'zume' ),
                                             "length" => "(5:46)",
                                             "key" => "3",
                                             "session" => 1,
                                             "title" => 0,
                                             "column" => 1
-                                            ],
-                                            [
+                                            ),
+                                            array(
                                             "name" => esc_html__( 'S.O.A.P.S Bible Reading', 'zume' ),
                                             "length" => "(3:22)",
                                             "key" => "4",
                                             "session" => 1,
                                             "title" => 0,
                                             "column" => 1
-                                            ],
-                                            [
+                                            ),
+                                            array(
                                             "name" => esc_html__( 'Accountability Groups', 'zume' ),
                                             "length" => "(1:10)",
                                             "key" => "5",
                                             "session" => 1,
                                             "title" => 0,
                                             "column" => 1
-                                            ],
-                                            [
+                                            ),
+                                            array(
                                             "name" => esc_html__( 'Session 2', 'zume' ),
                                             "length" => "",
                                             "key" => "",
                                             "session" => 2,
                                             "title" => 1,
                                             "column" => 1
-                                            ], // title
-                                            [
+                                            ), // title
+                                            array(
                                             "name" => esc_html__( 'Producers vs Consumers', 'zume' ),
                                             "length" => "(5:33)",
                                             "key" => "6",
                                             "session" => 2,
                                             "title" => 0,
                                             "column" => 1
-                                            ],
-                                            [
+                                            ),
+                                            array(
                                             "name" => esc_html__( 'Prayer Cycle', 'zume' ),
                                             "length" => "(1:10)",
                                             "key" => "7",
                                             "session" => 2,
                                             "title" => 0,
                                             "column" => 1
-                                            ],
-                                            [
+                                            ),
+                                            array(
                                             "name" => esc_html__( 'List of 100', 'zume' ),
                                             "length" => "(1:04)",
                                             "key" => "8",
                                             "session" => 2,
                                             "title" => 0,
                                             "column" => 1
-                                            ],
-                                            [
+                                            ),
+                                            array(
                                             "name" => esc_html__( 'Session 3', 'zume' ),
                                             "length" => "",
                                             "key" => "",
                                             "session" => 3,
                                             "title" => 1,
                                             "column" => 2
-                                            ], // title
-                                            [
+                                            ), // title
+                                            array(
                                             "name" => esc_html__( 'Spiritual Economy', 'zume' ),
                                             "length" => "(2:32)",
                                             "key" => "9",
                                             "session" => 3,
                                             "title" => 0,
                                             "column" => 2
-                                            ],
-                                            [
+                                            ),
+                                            array(
                                             "name" => esc_html__( 'The Gospel', 'zume' ),
                                             "length" => "(4:41)",
                                             "key" => "10",
                                             "session" => 3,
                                             "title" => 0,
                                             "column" => 2
-                                            ],
-                                            [
+                                            ),
+                                            array(
                                             "name" => esc_html__( 'Baptism', 'zume' ),
                                             "length" => "(3:22)",
                                             "key" => "11",
                                             "session" => 3,
                                             "title" => 0,
                                             "column" => 2
-                                            ],
-                                            [
+                                            ),
+                                            array(
                                             "name" => esc_html__( 'Session 4', 'zume' ),
                                             "length" => "",
                                             "key" => "",
                                             "session" => 4,
                                             "title" => 1,
                                             "column" => 2
-                                            ], // title
-                                            [
+                                            ), // title
+                                            array(
                                             "name" => esc_html__( '3 Minute Testimony', 'zume' ),
                                             "length" => "(2:26)",
                                             "key" => "12",
                                             "session" => 4,
                                             "title" => 0,
                                             "column" => 2
-                                            ],
-                                            [
+                                            ),
+                                            array(
                                             "name" => esc_html__( 'Greatest Blessing', 'zume' ),
                                             "length" => "(2:26)",
                                             "key" => "13",
                                             "session" => 4,
                                             "title" => 0,
                                             "column" => 2
-                                            ],
-                                            [
+                                            ),
+                                            array(
                                             "name" => esc_html__( 'Duckling Discipleship', 'zume' ),
                                             "length" => "(3:29)",
                                             "key" => "14",
                                             "session" => 4,
                                             "title" => 0,
                                             "column" => 2
-                                            ],
-                                            [
+                                            ),
+                                            array(
                                             "name" => esc_html__( 'Eyes to See', 'zume' ),
                                             "length" => "(6:08)",
                                             "key" => "15",
                                             "session" => 4,
                                             "title" => 0,
                                             "column" => 2
-                                            ],
-                                            [
+                                            ),
+                                            array(
                                             "name" => esc_html__( 'Lord\'s Supper', 'zume' ),
                                             "length" => "(1:54)",
                                             "key" => "16",
                                             "session" => 4,
                                             "title" => 0,
                                             "column" => 2
-                                            ],
-                                            [
+                                            ),
+                                            array(
                                             "name" => esc_html__( 'Session 5', 'zume' ),
                                             "length" => "",
                                             "key" => "",
                                             "session" => 5,
                                             "title" => 1,
                                             "column" => 2
-                                            ], // title
-                                            [
+                                            ), // title
+                                            array(
                                             "name" => esc_html__( 'Prayer Walking', 'zume' ),
                                             "length" => "(5:05)",
                                             "key" => "17",
                                             "session" => 5,
                                             "title" => 0,
                                             "column" => 2
-                                            ],
-                                            [
+                                            ),
+                                            array(
                                             "name" => esc_html__( 'Person of Peace', 'zume' ),
                                             "length" => "(5:45)",
                                             "key" => "18",
                                             "session" => 5,
                                             "title" => 0,
                                             "column" => 2
-                                            ],
-                                            [
+                                            ),
+                                            array(
                                             "name" => esc_html__( 'Session 6', 'zume' ),
                                             "length" => "",
                                             "key" => "",
                                             "session" => 6,
                                             "title" => 1,
                                             "column" => 3
-                                            ], // title
-                                            [
+                                            ), // title
+                                            array(
                                             "name" => esc_html__( 'Faithfulness', 'zume' ),
                                             "length" => "(2:35)",
                                             "key" => "19",
                                             "session" => 6,
                                             "title" => 0,
                                             "column" => 3
-                                            ],
-                                            [
+                                            ),
+                                            array(
                                             "name" => esc_html__( '3/3 Group', 'zume' ),
                                             "length" => "(3:28)",
                                             "key" => "20",
                                             "session" => 6,
                                             "title" => 0,
                                             "column" => 3
-                                            ],
-                                            [
+                                            ),
+                                            array(
                                             "name" => esc_html__( '3/3 Group Live', 'zume' ),
                                             "length" => "(1:19:00)",
                                             "key" => "21",
                                             "session" => 6,
                                             "title" => 0,
                                             "column" => 3
-                                            ],
-                                            [
+                                            ),
+                                            array(
                                             "name" => esc_html__( 'Session 7', 'zume' ),
                                             "length" => "",
                                             "key" => "",
                                             "session" => 7,
                                             "title" => 1,
                                             "column" => 3
-                                            ], // title
-                                            [
+                                            ), // title
+                                            array(
                                             "name" => esc_html__( 'Training Cycle', 'zume' ),
                                             "length" => "(4:12)",
                                             "key" => "22",
                                             "session" => 7,
                                             "title" => 0,
                                             "column" => 3
-                                            ],
-                                            [
+                                            ),
+                                            array(
                                             "name" => esc_html__( 'Session 8', 'zume' ),
                                             "length" => "",
                                             "key" => "",
                                             "session" => 8,
                                             "title" => 1,
                                             "column" => 3
-                                            ], // title
-                                            [
+                                            ), // title
+                                            array(
                                             "name" => esc_html__( 'Leadership Cells', 'zume' ),
                                             "length" => "(2:22)",
                                             "key" => "23",
                                             "session" => 8,
                                             "title" => 0,
                                             "column" => 3
-                                            ],
-                                            [
+                                            ),
+                                            array(
                                             "name" => esc_html__( 'Session 9', 'zume' ),
                                             "length" => "",
                                             "key" => "",
                                             "session" => 9,
                                             "title" => 1,
                                             "column" => 3
-                                            ], // title
-                                            [
+                                            ), // title
+                                            array(
                                             "name" => esc_html__( 'Non-Sequential', 'zume' ),
                                             "length" => "(3:58)",
                                             "key" => "24",
                                             "session" => 9,
                                             "title" => 0,
                                             "column" => 3
-                                            ],
-                                            [
+                                            ),
+                                            array(
                                             "name" => esc_html__( 'Pace', 'zume' ),
                                             "length" => "(2:53)",
                                             "key" => "25",
                                             "session" => 9,
                                             "title" => 0,
                                             "column" => 3
-                                            ],
-                                            [
+                                            ),
+                                            array(
                                             "name" => esc_html__( 'Part of Two Churches', 'zume' ),
                                             "length" => "(3:55)",
                                             "key" => "26",
                                             "session" => 9,
                                             "title" => 0,
                                             "column" => 3
-                                            ],
-                                            [
+                                            ),
+                                            array(
                                             "name" => esc_html__( 'Completion of Training', 'zume' ),
                                             "length" => "(2:35)",
                                             "key" => "27",
                                             "session" => 9,
                                             "title" => 0,
                                             "column" => 3
-                                            ],
-                                            [
+                                            ),
+                                            array(
                                             "name" => esc_html__( 'Session 10', 'zume' ),
                                             "length" => "",
                                             "key" => "",
                                             "session" => 10,
                                             "title" => 1,
                                             "column" => 3
-                                            ], // title
-                                            [
+                                            ), // title
+                                            array(
                                             "name" => esc_html__( 'Coaching Checklist', 'zume' ),
                                             "length" => "(1:22)",
                                             "key" => "28",
                                             "session" => 10,
                                             "title" => 0,
                                             "column" => 3
-                                            ],
-                                            [
+                                            ),
+                                            array(
                                             "name" => esc_html__( 'Leadership in Networks', 'zume' ),
                                             "length" => "(4:26)",
                                             "key" => "29",
                                             "session" => 10,
                                             "title" => 0,
                                             "column" => 3
-                                            ],
-                                            [
+                                            ),
+                                            array(
                                             "name" => esc_html__( 'Peer Mentoring', 'zume' ),
                                             "length" => "(4:15)",
                                             "key" => "30",
                                             "session" => 10,
                                             "title" => 0,
                                             "column" => 3
-                                            ],
+                                            ),
 
-                                        ];
+                                        );
                                         $zume_display_video_section = function ( $zume_video, $zume_highest_session ) {
                                             if ( $zume_highest_session > $zume_video["session"] && ! $zume_video["title"] ) {
                                                 ?>
@@ -868,7 +868,7 @@ do_action( 'zume_dashboard_header' );
                                     <div class="small-9 cell">
                                         <ul style="list-style-type: none;">
                                             <?php
-                                            $ordered_sites = [];
+                                            $ordered_sites = array();
                                             foreach ($zume_user_sites as $key => $value) {
                                                 $ordered_sites[$value->blogname] = $value->siteurl;
                                             }

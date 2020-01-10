@@ -22,7 +22,7 @@ function zume_has_polylang() {
     }
 }
 
-function zume_the_languages( $args = [] ) {
+function zume_the_languages( $args = array() ) {
     if ( function_exists( 'pll_the_languages' ) ) {
         return pll_the_languages( $args );
     }
@@ -225,7 +225,7 @@ function zume_get_home_translation_id( $page_title, $slug = 'en' ) {
 }
 
 // Navigation Translation Strings for Menu Titles
-$zume_navigation_menu = [
+$zume_navigation_menu = array(
     __( 'Home', 'zume' ),
     __( 'Dashboard', 'zume' ),
     __( 'About', 'zume' ),
@@ -241,4 +241,4 @@ $zume_navigation_menu = [
     __( 'Three-Month Plan', 'zume' ),
     __( 'Progress', 'zume' ),
     __( 'Stats', 'zume' ),
-];
+);

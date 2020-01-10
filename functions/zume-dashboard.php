@@ -48,7 +48,7 @@ class Zume_Dashboard {
     public static function create_group( $args ) {
 
         // Validate post data
-        $group_values = self::verify_group_array_filter( [], true );
+        $group_values = self::verify_group_array_filter( array(), true );
 
         if ( ! empty( $args['address'] ) ) {
             // Geo lookup address
@@ -103,7 +103,7 @@ class Zume_Dashboard {
             $group_meta = maybe_unserialize( $group_meta );
         }
 
-        $active_keys = [
+        $active_keys = array(
             'owner'               => get_current_user_id(),
             'group_name'          => __( 'No Name', 'zume' ),
             'key'                 => self::get_unique_group_key(),
@@ -113,11 +113,11 @@ class Zume_Dashboard {
             'address'             => '',
             'lng'                 => '',
             'lat'                 => '',
-            'raw_location'        => [],
+            'raw_location'        => array(),
             'ip_address'          => '',
             'ip_lng'              => '',
             'ip_lat'              => '',
-            'ip_raw_location'     => [],
+            'ip_raw_location'     => array(),
             'created_date'        => current_time( 'mysql' ),
             'next_session'        => '1',
             'session_1'           => false,
@@ -142,19 +142,19 @@ class Zume_Dashboard {
             'session_10_complete' => '',
             'last_modified_date'  => current_time( 'mysql' ),
             'closed'              => false,
-            'coleaders'           => [],
-            'coleaders_accepted'  => [],
-            'coleaders_declined'  => [],
-            'three_month_plans'   => [],
+            'coleaders'           => array(),
+            'coleaders_accepted'  => array(),
+            'coleaders_declined'  => array(),
+            'three_month_plans'   => array(),
             'foreign_key'         => bin2hex( random_bytes( 40 ) ),
-        ];
+        );
 
-        $deprecated_keys = [
+        $deprecated_keys = array(
                 // 'deprecated_key_name',
-        ];
+        );
 
         if ( ! is_array( $group_meta ) ) {
-            $group_meta = [];
+            $group_meta = array();
         }
 
         $trigger_update = false;
@@ -261,9 +261,9 @@ class Zume_Dashboard {
         }
 
         // Add coleaders
-        $args['coleaders'] = ( ! empty( $args['coleaders'] ) ) ? array_filter( $args['coleaders'] ) : []; // confirm or establish array variable.
-        $args['coleaders_accepted'] = ( ! empty( $args['coleaders_accepted'] ) ) ? array_filter( $args['coleaders_accepted'] ) : [];
-        $args['coleaders_declined'] = ( ! empty( $args['coleaders_declined'] ) ) ? array_filter( $args['coleaders_declined'] ) : [];
+        $args['coleaders'] = ( ! empty( $args['coleaders'] ) ) ? array_filter( $args['coleaders'] ) : array(); // confirm or establish array variable.
+        $args['coleaders_accepted'] = ( ! empty( $args['coleaders_accepted'] ) ) ? array_filter( $args['coleaders_accepted'] ) : array();
+        $args['coleaders_declined'] = ( ! empty( $args['coleaders_declined'] ) ) ? array_filter( $args['coleaders_declined'] ) : array();
         if ( isset( $args['new_coleader'] ) && ! empty( $args['new_coleader'] && is_array( $args['new_coleader'] ) ) ) { // test if new coleader added
             foreach ( $args['new_coleader'] as $coleader ) { // loop potential additions
 
@@ -579,15 +579,15 @@ class Zume_Dashboard {
         $group_prev = $group;
 
         if ( empty( $group ) ) {
-            return [ 'status' => 'Permission failure' ];
+            return array( 'status' => 'Permission failure' );
         }
 
         if ( empty( $email ) ) {
-            return [ 'status' => 'Email failure' ];
+            return array( 'status' => 'Email failure' );
         }
 
         if ( empty( $group['coleaders'] ) ) {
-            return [ 'status' => 'Coleader not present' ];
+            return array( 'status' => 'Coleader not present' );
         }
 
         foreach ( $group['coleaders'] as $key => $coleader ) {
@@ -596,10 +596,10 @@ class Zume_Dashboard {
                 unset( $group['coleaders_accepted'][$key] );
                 unset( $group['coleaders_declined'][$key] );
                 update_user_meta( $user_id, $group_id, $group, $group_prev );
-                return [ 'status' => 'OK' ];
+                return array( 'status' => 'OK' );
             }
         }
-        return [ 'status' => 'Coleader not found' ];
+        return array( 'status' => 'Coleader not found' );
     }
 
     /**
@@ -611,7 +611,7 @@ class Zume_Dashboard {
      */
     public static function get_colead_groups( $status = 'accepted', $user = null ) {
         global $wpdb;
-        $prepared = [];
+        $prepared = array();
         if ( is_null( $user ) ) {
             $user = get_user_by( 'id', get_current_user_id() );
         }
@@ -679,7 +679,7 @@ class Zume_Dashboard {
                 }
                 break;
             default:
-                return [];
+                return array();
                 break;
         }
     }
@@ -750,7 +750,7 @@ class Zume_Dashboard {
             $user_id = get_current_user_id();
         }
         $zume_user_meta = zume_get_user_meta( $user_id );
-        $groups = [];
+        $groups = array();
         foreach ( $zume_user_meta as $zume_key => $v ) {
             $zume_key_beginning = substr( $zume_key, 0, 10 );
             if ( 'zume_group' == $zume_key_beginning ) {
@@ -869,7 +869,7 @@ class Zume_Dashboard {
     }
 
     public static function get_all_groups( int $user_id = null ) : array {
-        $groups = [];
+        $groups = array();
         if ( empty( $user_id ) ) {
             $user_id = get_current_user_id();
         }

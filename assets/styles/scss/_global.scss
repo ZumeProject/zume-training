@@ -9,7 +9,7 @@ Stylesheet: Global Stylesheet
 POSTS & CONTENT STYLES
 *********************/
 .page-title {
-	
+
 	// Remove Foundation vcard styling from author page titles
 	.vcard {
 		border: 0px;
@@ -17,37 +17,41 @@ POSTS & CONTENT STYLES
 	}
 }
 
-// Post meta  
+// Post meta
 .byline {
 	color: #999;
 	time {}
 }
 
-// Entry content  
+.primary-color-text {
+    color: $primary-color;
+}
+
+// Entry content
 .entry-content {
-	
+
 	img {
 		max-width: 100%;
 		height: auto;
 	}
 
-	.alignleft, img.alignleft { 
-		margin-right: 1.5em; 
-		display: inline; 
-		float: left; 
+	.alignleft, img.alignleft {
+		margin-right: 1.5em;
+		display: inline;
+		float: left;
 	}
-	.alignright, img.alignright { 
-		margin-left: 1.5em; 
-		display: inline; 
-		float: right; 
+	.alignright, img.alignright {
+		margin-left: 1.5em;
+		display: inline;
+		float: right;
 	}
-	.aligncenter, img.aligncenter { 
-		margin-right: auto; 
-		margin-left: auto; 
-		display: block; 
-		clear: both; 
+	.aligncenter, img.aligncenter {
+		margin-right: auto;
+		margin-left: auto;
+		display: block;
+		clear: both;
 	}
-			
+
 	video, object {
 		max-width: 100%;
 		height: auto;
@@ -59,14 +63,14 @@ POSTS & CONTENT STYLES
 		padding: 10px;
 		}
 
-} 
+}
 
 .wp-caption {
 	max-width: 100%;
 	background: #eee;
 	padding: 5px;
 
-	// Images inside wp-caption  
+	// Images inside wp-caption
 	img {
 		max-width: 100%;
 		margin-bottom: 0;
@@ -78,7 +82,7 @@ POSTS & CONTENT STYLES
 		margin: 4px 0 7px;
 		text-align: center;
 	}
-} 
+}
 
 // Add Foundation styling to password protect button
 .post-password-form input[type="submit"] {
@@ -93,14 +97,14 @@ IMAGE GALLERY STYLES
 	margin-left: auto;
 	margin-right: auto;
 	margin-right: -15px;
-	margin-left: -15px; 
+	margin-left: -15px;
 }
 .gallery::before, .gallery::after {
 	content: ' ';
-	display: table; 
+	display: table;
 }
 .gallery::after {
-	clear: both; 
+	clear: both;
 }
 .gallery.gallery-columns-1 > dl {
 	@include grid-column;
@@ -130,10 +134,10 @@ IMAGE GALLERY STYLES
 	width: 100%;
 	float: left;
 	padding-left: 0.9375rem;
-	padding-right: 0.9375rem; 
+	padding-right: 0.9375rem;
 }
 .gallery dl:last-child:not(:first-child) {
-  float: right; 
+  float: right;
  }
 
 // Gallery caption styles
@@ -187,7 +191,7 @@ COMMENT STYLES
 			.alt {}
 			.odd {}
 			.even {}
-			.depth-1 {}           // Change number for different depth  
+			.depth-1 {}           // Change number for different depth
 			.byuser {}
 			.bypostauthor {}
 			.comment-author-admin {}
@@ -216,7 +220,7 @@ COMMENT STYLES
 	li.depth-4 {}
 	li.depth-5 {}
 
-	// General comment classes  
+	// General comment classes
 	.alt {}
 	.odd {
 	}
@@ -233,7 +237,7 @@ COMMENT STYLES
 	.thread-odd {}
 	.thread-even {}
 
-	// vcard  
+	// vcard
 	.vcard {
 		margin-left: 50px;
 
@@ -270,10 +274,10 @@ COMMENT STYLES
 			background: #fff;
 		}
 
-	} // end .commentlist .vcard  
+	} // end .commentlist .vcard
 
 
-	// comment meta  
+	// comment meta
 	.comment-meta {
 
 		a {}
@@ -286,7 +290,7 @@ COMMENT STYLES
 
 	}
 
-	// comment content  
+	// comment content
 	.comment_content {
 
 		p {
@@ -295,20 +299,20 @@ COMMENT STYLES
 			line-height: 1.5em;
 		}
 
-	} // end .commentlist .comment_content  
+	} // end .commentlist .comment_content
 
-	// comment reply link  
+	// comment reply link
 	.comment-reply-link {
 		float: right;
 
 		&:hover,
 		&:focus {
-		
+
 		}
 
-	} // end .commentlist .comment-reply-link  
+	} // end .commentlist .comment-reply-link
 
-} // end .commentlist  
+} // end .commentlist
 
 /*********************
 COMMENT FORM STYLES
@@ -344,7 +348,7 @@ COMMENT FORM STYLES
 				background: #fff;
 			}
 
-			// form validation  
+			// form validation
 			&:invalid {
 				outline: none;
 				border-color: #fbc2c4;
@@ -372,25 +376,25 @@ COMMENT FORM STYLES
 	}
 }
 
-// comment form title  
+// comment form title
 #comment-form-title {
 	margin: 0 0 1.1em;
 }
 
-// cancel comment reply link  
+// cancel comment reply link
 #cancel-comment-reply {
 	a {}
 }
 
-// logged in comments  
+// logged in comments
 .comments-logged-in-as {}
 
-// allowed tags  
+// allowed tags
 #allowed_tags {
 	margin: 1.5em 10px 0.7335em 0;
 }
 
-// No comments  
+// No comments
 .nocomments {
 	margin: 0 20px 1.1em;
 }
@@ -416,7 +420,7 @@ FOOTER STYLES
 	clear: both;
 	margin-top: 1em;
 }
-	
+
 /*********************
 VISUAL EDITOR STYLES
 *********************/

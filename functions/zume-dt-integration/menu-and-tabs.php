@@ -36,7 +36,7 @@ class Zume_Integration_Menu
      */
     public function __construct() {
         $this->token = 'zume';
-        add_action( "admin_menu", [ $this, "register_menu" ] );
+        add_action( "admin_menu", array( $this, "register_menu" ) );
 
     } // End __construct()
 
@@ -46,7 +46,7 @@ class Zume_Integration_Menu
      * @since 0.1.0
      */
     public function register_menu() {
-        add_menu_page( __( 'Zume' ), __( 'Zume' ), 'manage_options', $this->token, [ $this, 'zume_content' ], 'dashicons-admin-site', 5 );
+        add_menu_page( __( 'Zume' ), __( 'Zume' ), 'manage_options', $this->token, array( $this, 'zume_content' ), 'dashicons-admin-site', 5 );
     }
 
     /**
@@ -62,20 +62,20 @@ class Zume_Integration_Menu
 
         $link = 'admin.php?page=' . $this->token . '&tab=';
 
-        $tab_bar = [
-            [
+        $tab_bar = array(
+            array(
                 'key' => 'zume_settings',
                 'label' =>'Settings',
-            ],
-            [
+            ),
+            array(
                 'key' => 'third_party_keys',
                 'label' => 'API Keys',
-            ],
-            [
+            ),
+            array(
                 'key' => 'languages',
                 'label' =>'Languages',
-            ]
-        ];
+            )
+        );
 
         // determine active tabs
         $active_tab = 'zume_settings';
@@ -283,7 +283,7 @@ class Zume_Integration_Menu
                 update_option( 'zume_session_complete_transfer_level', $session_level );
             }
         }
-        $keys = [ 1,2,3,4,5,6,7,8,9,10 ];
+        $keys = array( 1,2,3,4,5,6,7,8,9,10 );
         $current_key = get_option( 'zume_session_complete_transfer_level' );
 
         ?>
@@ -326,7 +326,7 @@ class Zume_Integration_Menu
     }
 
     public function check_for_session_limit_transfers() {
-        $report = [];
+        $report = array();
 
         // Check for post
         if ( isset( $_POST['zume_check_for_transfer_nonce'] ) && ! empty( $_POST['zume_check_for_transfer_nonce'] ) && wp_verify_nonce( sanitize_text_field( wp_unslash( $_POST['zume_check_for_transfer_nonce'] ) ), 'zume_check_for_transfer_'. get_current_user_id() ) ) {
@@ -349,10 +349,10 @@ class Zume_Integration_Menu
                         try {
                             $send_new_user = new Zume_Integration_Session_Complete_Transfer();
                             $send_new_user->launch(
-                                [
+                                array(
                                     'zume_group_key'    => $fields['key'],
                                     'owner_id'          => $fields['owner'],
-                                ]
+                                )
                             );
                             $report[] = 'Transfered: ' . $fields['key'];
                         } catch ( Exception $e ) {
@@ -403,7 +403,7 @@ endforeach; ?>
     }
 
     public function check_for_location_data_installed( $force = false ) {
-        $report = [];
+        $report = array();
 
         // Check for post
         if ( isset( $_POST['zume_location_nonce'] ) && ! empty( $_POST['zume_location_nonce'] ) && wp_verify_nonce( sanitize_text_field( wp_unslash( $_POST['zume_location_nonce'] ) ), 'zume_location_'. get_current_user_id() ) ) {
@@ -521,13 +521,13 @@ endforeach; ?>
      *                    col_span sets the number of columns the header should span
      *                    striped can remove the striped class from the table
      */
-    public function box( $section, $title = '', $args = [] ) {
+    public function box( $section, $title = '', $args = array() ) {
 
-        $args = wp_parse_args( $args, [
+        $args = wp_parse_args( $args, array(
             'row_container' => true,
             'col_span' => 1,
             'striped' => true,
-        ] );
+        ) );
 
         switch ( $section ) {
             case 'top':

@@ -33,7 +33,7 @@ class Zume_Integration_Endpoints
      * @since   0.1.0
      */
     public function __construct() {
-        add_action( 'rest_api_init', [ $this, 'add_api_routes' ] );
+        add_action( 'rest_api_init', array( $this, 'add_api_routes' ) );
     } // End __construct()
 
     public function add_api_routes() {
@@ -41,21 +41,21 @@ class Zume_Integration_Endpoints
         $namespace = 'dt-public/v' . $version;
 
         register_rest_route(
-            $namespace, '/zume/check_for_update', [
-                [
+            $namespace, '/zume/check_for_update', array(
+                array(
                 'methods'  => WP_REST_Server::CREATABLE,
-                'callback' => [ $this, 'check_for_update' ],
-                ],
-            ]
+                'callback' => array( $this, 'check_for_update' ),
+                ),
+            )
         );
 
         register_rest_route(
-            $namespace, '/zume/get_project_stats', [
-                [
+            $namespace, '/zume/get_project_stats', array(
+                array(
                     'methods'  => WP_REST_Server::CREATABLE,
-                    'callback' => [ $this, 'get_project_stats' ],
-                ],
-            ]
+                    'callback' => array( $this, 'get_project_stats' ),
+                ),
+            )
         );
 
         $private_namespace = 'zume/v1';
@@ -106,20 +106,20 @@ class Zume_Integration_Endpoints
                     $zume_groups_check_sum = get_user_meta( $user_id, 'zume_groups_check_sum', true );
 
                     if ( $check_sum == $params['zume_check_sum'] && $zume_groups_check_sum == $params['zume_groups_check_sum'] ) {
-                        return [
+                        return array(
                         'status' => 'OK'
-                        ];
+                        );
                     } else {
                         // prepare user data
                         $zume = new Zume_Integration();
                         $user_data = $zume->get_transfer_user_array( $user_id );
                         $group_data = $zume->get_all_groups( $user_id );
 
-                        return [
+                        return array(
                         'status' => 'Update_Needed',
                         'raw_record' => $user_data,
                         'raw_group_records' => $group_data,
-                        ];
+                        );
                     }
                 } elseif ( $params['type'] === 'group' ) {
                     // get user_id by zume foreign key
@@ -135,14 +135,14 @@ class Zume_Integration_Endpoints
                     // check supplied check_sum
                     $check_sum = $group_meta['zume_check_sum'];
                     if ( $check_sum === $params['zume_check_sum'] ) {
-                        return [
+                        return array(
                         'status' => 'OK'
-                        ];
+                        );
                     } else {
-                        return [
+                        return array(
                         'status' => 'Update_Needed',
                         'raw_record' => $group_meta,
-                        ];
+                        );
                     }
                 } else {
                     return new WP_Error( 'malformed_type', 'Type must be either `contact` or `group`' );
@@ -168,28 +168,28 @@ class Zume_Integration_Endpoints
                 if ( get_transient( 'dt_zume_site_stats' ) ) {
                     $report = get_transient( 'dt_zume_site_stats' );
                     if ( $report['zume_stats_check_sum'] == $params['zume_stats_check_sum'] ) {
-                        return [
+                        return array(
                             'status' => 'OK'
-                        ];
+                        );
                     } else {
-                        return [
+                        return array(
                             'status' => 'Update_Needed',
                             'raw_record' => $report,
-                        ];
+                        );
                     }
                 }
 
                 $report = Zume_Site_Stats::build();
 
                 if ( $report['zume_stats_check_sum'] == $params['zume_stats_check_sum'] ) {
-                    return [
+                    return array(
                         'status' => 'OK'
-                    ];
+                    );
                 } else {
-                    return [
+                    return array(
                         'status' => 'Update_Needed',
                         'raw_record' => $report,
-                    ];
+                    );
                 }
             } else {
                 return new WP_Error( 'malformed_type', 'Missing check sum' );

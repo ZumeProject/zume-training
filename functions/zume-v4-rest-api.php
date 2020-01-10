@@ -165,10 +165,10 @@ class Zume_V4_REST_API {
             case 'coleader_invitation_response':
                 $result = Zume_V4_Groups::coleader_invitation_response( $params['key'], $params['value'] );
                 if ( $result ) {
-                    return [
+                    return array(
                         'invitations' => Zume_V4_Groups::get_colead_groups( 'waiting_acceptance_minimum' ),
                         'groups' => Zume_V4_Groups::get_all_groups( get_current_user_id() ),
-                    ];
+                    );
                 }
                 return false;
                 break;
@@ -184,10 +184,10 @@ class Zume_V4_REST_API {
             return new WP_Error( "log_param_error", "Missing parameters", array( 'status' => 400 ) );
         }
 
-        $args = [
+        $args = array(
             'group_name' => sanitize_text_field( wp_unslash( $params['name'] ) ),
             'members' => sanitize_text_field( wp_unslash( $params['members'] ) ),
-        ];
+        );
         $meta_id = Zume_V4_Groups::create_group( $args );
         if ( $meta_id ) {
             return Zume_V4_Groups::get_all_groups( get_current_user_id() );

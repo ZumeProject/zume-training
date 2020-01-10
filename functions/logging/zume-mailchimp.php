@@ -14,7 +14,7 @@ class Zume_Mailchimp_Integration {
             add_action( 'admin_menu', array( $this, 'add_plugin_page' ) );
             add_action( 'admin_init', array( $this, 'page_init' ) );
         }
-        add_action( 'zume_session_complete', [ $this, 'session_complete_hook' ], 50, 4 );
+        add_action( 'zume_session_complete', array( $this, 'session_complete_hook' ), 50, 4 );
     }
 
     /**
@@ -121,96 +121,96 @@ class Zume_Mailchimp_Integration {
     }
 
     public function get_session_mailchimp_key( $session, $user_lang ){
-        $sessions = [
-            "en" => [
-                "1" => [
+        $sessions = array(
+            "en" => array(
+                "1" => array(
                     "workflow_id" => "d03393c000",
                     "workflow_email_id" => "d82e85e7e0"
-                ],
-                "2" => [
+                ),
+                "2" => array(
                     "workflow_id" => "31e37f560c",
                     "workflow_email_id" => "21c409c528"
-                ],
-                "3" => [
+                ),
+                "3" => array(
                     "workflow_id" => "410761da92",
                     "workflow_email_id" => "a34de58b7c"
-                ],
-                "4" => [
+                ),
+                "4" => array(
                     "workflow_id" => "b314e148ca",
                     "workflow_email_id" => "6e089a5446"
-                ],
-                "5" => [
+                ),
+                "5" => array(
                     "workflow_id" => "29f7b2444a",
                     "workflow_email_id" => "17935f0df8"
-                ],
-                "6" => [
+                ),
+                "6" => array(
                     "workflow_id" => "deb158f30d",
                     "workflow_email_id" => "16c4897891"
-                ],
-                "7" => [
+                ),
+                "7" => array(
                     "workflow_id" => "bc4ca5edde",
                     "workflow_email_id" => "377b4a7a15"
-                ],
-                "8" => [
+                ),
+                "8" => array(
                     "workflow_id" => "e3539d0421",
                     "workflow_email_id" => "635d3a5c00"
-                ],
-                "9" => [
+                ),
+                "9" => array(
                     "workflow_id" => "dbadd46358",
                     "workflow_email_id" => "68e5ac464d"
-                ],
-                "10" => [
+                ),
+                "10" => array(
                     "workflow_id" => "a34c19efc1",
                     "workflow_email_id" => "54cd7a3562"
-                ]
-            ],
-            "ar" => [
-                "1" => [
+                )
+            ),
+            "ar" => array(
+                "1" => array(
                     "workflow_id" => "01357bcec5",
                     "workflow_email_id" => "358c68f49f"
-                ],
-                "2" => [
+                ),
+                "2" => array(
                     "workflow_id" => "63657c9a4b",
                     "workflow_email_id" => "5e9fe17b39"
-                ],
-                "3" => [
+                ),
+                "3" => array(
                     "workflow_id" => "1cd43272f6",
                     "workflow_email_id" => "4b8743d30e"
-                ],
-                "4" => [
+                ),
+                "4" => array(
                     "workflow_id" => "2b3b9df137",
                     "workflow_email_id" => "fb1ea2e36f"
-                ],
-                "5" => [
+                ),
+                "5" => array(
                     "workflow_id" => "971e93b186",
                     "workflow_email_id" => "6ddb3eab14"
-                ],
-                "6" => [
+                ),
+                "6" => array(
                     "workflow_id" => "896778bed5",
                     "workflow_email_id" => "ebdb1a85f0"
-                ],
-                "7" => [
+                ),
+                "7" => array(
                     "workflow_id" => "14c2c44fd6",
                     "workflow_email_id" => "29da656b72"
-                ],
-                "8" => [
+                ),
+                "8" => array(
                     "workflow_id" => "0b13303517",
                     "workflow_email_id" => "6cdf3b6a12"
-                ],
-                "9" => [
+                ),
+                "9" => array(
                     "workflow_id" => "c546bc27f3",
                     "workflow_email_id" => "cf9ea7242a"
-                ],
-                "10" => [
+                ),
+                "10" => array(
                     "workflow_id" => "129b0ed280",
                     "workflow_email_id" => "5d35ac8455"
-                ]
-            ]
-        ];
+                )
+            )
+        );
         if ( isset( $sessions[$user_lang][$session] ) ){
             return $sessions[$user_lang][$session];
         } else {
-            return [];
+            return array();
         }
     }
 
@@ -224,7 +224,7 @@ class Zume_Mailchimp_Integration {
             esc_sql( $group_key )
         ), ARRAY_A );
         if ( !isset( $results[0]["meta_value"] ) ) {
-            return [];
+            return array();
         }
         $group_meta = maybe_unserialize( $results[0]["meta_value"] );
         $members = $group_meta["coleaders"];
@@ -242,7 +242,7 @@ class Zume_Mailchimp_Integration {
      */
     public function session_complete_hook( $zume_group_key, $zume_session, $owner_id, $current_user_id ){
         // @todo add english filter
-        $allowed_languages = [ "en", "ar" ];
+        $allowed_languages = array( "en", "ar" );
         $user_lang = get_user_meta( get_current_user_id(), 'zume_language', true );
         if ( !in_array( $user_lang, $allowed_languages ) ) {
             return;
@@ -259,43 +259,43 @@ class Zume_Mailchimp_Integration {
                 if ( $member ) {
                     $mailchimp_emails_sent = get_user_meta( $member->ID, 'mailchimp_emails_sent', true );
                     if ( empty( $mailchimp_emails_sent ) ){
-                        $mailchimp_emails_sent = [];
+                        $mailchimp_emails_sent = array();
                     }
                     if ( !in_array( $completed_key, $mailchimp_emails_sent ) ){
                         $mailchimp_emails_sent[] = $completed_key;
                         update_user_meta( $member->ID, 'mailchimp_emails_sent', $mailchimp_emails_sent );
                         $automation_url = "https://us14.api.mailchimp.com/3.0/automations/" . $session_workflow['workflow_id'] . "/emails/" . $session_workflow['workflow_email_id'] . "/queue";
-                        $response       = wp_remote_post( $automation_url, [
-                            "body"        => json_encode( [
+                        $response       = wp_remote_post( $automation_url, array(
+                            "body"        => json_encode( array(
                                 "email_address" => $member->user_email,
-                            ] ),
-                            "headers"     => [
+                            ) ),
+                            "headers"     => array(
                                 "Authorization" => "auto $api_key",
                                 'Content-Type'  => 'application/json; charset=utf-8'
-                            ],
+                            ),
                             'data_format' => 'body',
-                        ] );
+                        ) );
                         if ( is_wp_error( $response ) ) {
                             error_log( $response );
                         }
 
-                        $tag_data   = [];
-                        $tag_data[] = [
+                        $tag_data   = array();
+                        $tag_data[] = array(
                             "name"   => $completed_key,
                             "status" => "active"
-                        ];
+                        );
                         $user_hash  = md5( strtolower( $member->user_email ) );
                         $tag_url    = "https://us14.api.mailchimp.com/3.0/lists/dcc3f0b14e/members/$user_hash/tags";
-                        $response   = wp_remote_post( $tag_url, [
-                            "body"        => json_encode( [
+                        $response   = wp_remote_post( $tag_url, array(
+                            "body"        => json_encode( array(
                                 "tags" => $tag_data
-                            ] ),
-                            "headers"     => [
+                            ) ),
+                            "headers"     => array(
                                 "Authorization" => "tags $api_key",
                                 'Content-Type'  => 'application/json; charset=utf-8'
-                            ],
+                            ),
                             'data_format' => 'body',
-                        ] );
+                        ) );
                         if ( is_wp_error( $response ) ) {
                             error_log( $response );
                         }
@@ -333,7 +333,7 @@ class Zume_Mailchimp_Integration {
                     '%'. $wpdb->esc_like( $user->user_email ). '%'
                 ), ARRAY_A );
 
-                $tags = [];
+                $tags = array();
 //                @todo remove closed groups and groups you have not accepted
                 foreach ( $groups as $group ) {
                     $group_data = maybe_unserialize( $group["meta_value"] );
@@ -344,27 +344,27 @@ class Zume_Mailchimp_Integration {
                         }
                     }
                 }
-                $tags_data = [];
+                $tags_data = array();
                 foreach ( $tags as $tag ){
-                    $tags_data[] = [
+                    $tags_data[] = array(
                         "name"   => $tag,
                         "status" => "active"
-                    ];
+                    );
                 }
                 if ( !empty( $tags ) ) {
                     //update tags
                     $user_hash = md5( strtolower( $user->user_email ) );
                     $tag_url   = "https://us14.api.mailchimp.com/3.0/lists/dcc3f0b14e/members/$user_hash/tags";
-                    $response  = wp_remote_post( $tag_url, [
-                        "body"        => json_encode( [
+                    $response  = wp_remote_post( $tag_url, array(
+                        "body"        => json_encode( array(
                             "tags" => $tags_data
-                        ] ),
-                        "headers"     => [
+                        ) ),
+                        "headers"     => array(
                             "Authorization" => "tags $api_key",
                             'Content-Type'  => 'application/json; charset=utf-8'
-                        ],
+                        ),
                         'data_format' => 'body',
-                    ] );
+                    ) );
                     if ( is_wp_error( $response ) ) {
                         error_log( $response );
                     }

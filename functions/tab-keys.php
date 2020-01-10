@@ -374,11 +374,11 @@ class Zume_Keys_Tab
 }
 
 function zume_default_google_api_keys() {
-    $default_keys = [
+    $default_keys = array(
         'AIzaSyBkI5W07GdlhQCqzf3F8VW2E_3mhdzR3s4',
         'AIzaSyAaaZusK9pa9eLuO0nlllGnbQPyXHfTGxQ',
         'AIzaSyBQOO1vujzL6BgkpOzYwZB89bJpGAlbBF8',
-    ];
+    );
 
     return $default_keys;
 }

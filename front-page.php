@@ -15,10 +15,10 @@ $zume_current_lang = zume_current_language();
         <div id="main" class="cell" role="main">
 
             <?php
-            $args = [
+            $args = array(
                 'page_id' => zume_alternate_home_id() ,
                 'post_status' => 'publish'
-            ];
+            );
             $zume_content_query = new WP_Query( $args );
 
             if ( $zume_content_query->post_count ) {  // custom page check
@@ -212,10 +212,10 @@ $zume_current_lang = zume_current_language();
             /******************************************************************
              * WHAT OTHERS ARE SAYING RIBBON
              *******************************************************************/
-                $args = [
+                $args = array(
                 'page_id' => zume_home_id(),
                 'post_status' => 'any'
-                ];
+                );
                 $zume_content_query = new WP_Query( $args );
                 while ( $zume_content_query->have_posts() ) : $zume_content_query->the_post();
                     ?>

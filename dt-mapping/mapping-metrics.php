@@ -14,7 +14,7 @@ class DT_Metrics_Mapping_Map_Chart {
     public $slug = 'map'; // lowercase
     public $js_object_name = 'wp_js_object'; // This object will be loaded into the metrics.js file by the wp_localize_script.
     public $js_file_name = 'mapping-metrics.js'; // should be full file name plus extension
-    public $permissions = [ 'view_any_contacts', 'view_project_metrics' ];
+    public $permissions = array( 'view_any_contacts', 'view_project_metrics' );
     public $namespace = null;
 
     public function __construct() {
@@ -36,18 +36,18 @@ class DT_Metrics_Mapping_Map_Chart {
 
         // only load map scripts if exact url
         if ( "metrics/$this->base_slug/$this->slug" === $url_path ) {
-            add_action( 'wp_enqueue_scripts', [ $this, 'mapping_scripts' ], 89 );
-            add_action( 'wp_enqueue_scripts', [ $this, 'map_scripts' ], 99 );
+            add_action( 'wp_enqueue_scripts', array( $this, 'mapping_scripts' ), 89 );
+            add_action( 'wp_enqueue_scripts', array( $this, 'map_scripts' ), 99 );
         }
         if ( "metrics/$this->base_slug/list" === $url_path ) {
             // add_action( 'wp_enqueue_scripts', [ $this, 'mapping_scripts' ], 89 );
-            add_action( 'wp_enqueue_scripts', [ $this, 'list_scripts' ], 99 );
+            add_action( 'wp_enqueue_scripts', array( $this, 'list_scripts' ), 99 );
         }
         if ( strpos( $url_path, 'metrics' ) === 0 ) {
-            add_filter( 'dt_templates_for_urls', [ $this, 'add_url' ] ); // add custom URL
-            add_filter( 'dt_metrics_menu', [ $this, 'menu' ], 99 );
+            add_filter( 'dt_templates_for_urls', array( $this, 'add_url' ) ); // add custom URL
+            add_filter( 'dt_metrics_menu', array( $this, 'menu' ), 99 );
         }
-        add_action( 'rest_api_init', [ $this, 'add_api_routes' ] );
+        add_action( 'rest_api_init', array( $this, 'add_api_routes' ) );
     }
 
     public function add_url( $template_for_url ) {
@@ -72,15 +72,15 @@ class DT_Metrics_Mapping_Map_Chart {
         // Map starter Script
         wp_enqueue_script( 'dt_'.$this->slug.'_script',
             get_template_directory_uri() . '/dt-mapping/' . $this->js_file_name,
-            [
+            array(
                 'jquery',
                 'dt_mapping_js'
-            ],
+            ),
             filemtime( get_theme_file_path() . '/dt-mapping/' . $this->js_file_name ),
             true
         );
         wp_localize_script(
-            'dt_'.$this->slug.'_script', $this->js_object_name, [
+            'dt_'.$this->slug.'_script', $this->js_object_name, array(
                 'rest_endpoints_base' => esc_url_raw( rest_url() ) . "dt-metrics/$this->base_slug/$this->slug",
                 'base_slug' => $this->base_slug,
                 'root' => esc_url_raw( rest_url() ),
@@ -88,7 +88,7 @@ class DT_Metrics_Mapping_Map_Chart {
                 'current_user_login' => wp_get_current_user()->user_login,
                 'current_user_id' => get_current_user_id(),
                 'translations' => $this->translations()
-            ]
+            )
         );
     }
 
@@ -113,7 +113,7 @@ class DT_Metrics_Mapping_Map_Chart {
     }
 
     public function translations() {
-        $translations = [];
+        $translations = array();
         $translations['title'] = __( "Mapping", "disciple_tools" );
         $translations['refresh_data'] = __( "Refresh Cached Data", "disciple_tools" );
         $translations['population'] = __( "Population", "disciple_tools" );
@@ -123,18 +123,18 @@ class DT_Metrics_Mapping_Map_Chart {
 
     public function add_api_routes() {
         register_rest_route(
-            $this->namespace, '/data', [
-                [
+            $this->namespace, '/data', array(
+                array(
                     'methods'  => "GET",
-                    'callback' => [ $this, 'mapping_endpoint' ],
-                ],
-            ]
+                    'callback' => array( $this, 'mapping_endpoint' ),
+                ),
+            )
         );
     }
 
     public function mapping_endpoint( WP_REST_Request $request ){
         if ( !$this->has_permission() ) {
-            return new WP_Error( "mapping", "Missing Permissions", [ 'status' => 400 ] );
+            return new WP_Error( "mapping", "Missing Permissions", array( 'status' => 400 ) );
         }
         $params = $request->get_params();
 
@@ -168,15 +168,15 @@ class DT_Metrics_Mapping_Map_Chart {
         // Map starter Script
         wp_enqueue_script( 'dt_'.$this->slug.'_script',
             get_template_directory_uri() . '/dt-mapping/' . $this->js_file_name,
-            [
+            array(
                 'jquery',
                 'datatable'
-            ],
+            ),
             filemtime( get_theme_file_path() . '/dt-mapping/' . $this->js_file_name ),
             true
         );
         wp_localize_script(
-            'dt_'.$this->slug.'_script', $this->js_object_name, [
+            'dt_'.$this->slug.'_script', $this->js_object_name, array(
                 'rest_endpoints_base' => esc_url_raw( rest_url() ) . "dt-metrics/$this->base_slug/$this->slug",
                 'base_slug' => $this->base_slug,
                 'root' => esc_url_raw( rest_url() ),
@@ -185,7 +185,7 @@ class DT_Metrics_Mapping_Map_Chart {
                 'current_user_id' => get_current_user_id(),
                 'translations' => $this->translations(),
                 'mapping_module' => DT_Mapping_Module::instance()->localize_script(),
-            ]
+            )
         );
     }
 }

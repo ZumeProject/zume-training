@@ -54,13 +54,13 @@ class Zume_Stats{
     public function get_group_locations(){
         global $wpdb;
         $groups = $wpdb->get_results( 'SELECT * FROM wp_usermeta WHERE meta_key LIKE "zume_group_%"' );
-        $result = [];
+        $result = array();
         foreach ( $groups as $group ){
             $fields = maybe_unserialize( $group->meta_value );
             if (isset( $fields["lat"] ) && !empty( $fields["lat"] ) && isset( $fields["lng"] ) && !empty( $fields["lng"] )){
-                $result[] = [ $fields["lat"], $fields["lng"] ];
+                $result[] = array( $fields["lat"], $fields["lng"] );
             } elseif (isset( $fields["ip_lat"] ) && !empty( $fields["ip_lat"] ) && isset( $fields["ip_lng"] ) && !empty( $fields["ip_lng"] ) ) {
-                $result[] = [ $fields["ip_lat"], $fields["ip_lng"] ];
+                $result[] = array( $fields["ip_lat"], $fields["ip_lng"] );
             }
         }
 
@@ -71,7 +71,7 @@ class Zume_Stats{
         global $wpdb;
 
         $groups = $wpdb->get_results( 'SELECT * FROM wp_usermeta WHERE meta_key LIKE "zume_group_%"' );
-        $counts = [];
+        $counts = array();
         foreach ($groups as $group){
             $fields = maybe_unserialize( $group->meta_value );
             if ( isset( $fields["members"] ) && intval( $fields["members"] )){
@@ -84,10 +84,10 @@ class Zume_Stats{
         }
 
         ksort( $counts );
-        $result = [ [ "Group Size", "Number of groups", [ "role" => "annotation" ] ] ];
+        $result = array( array( "Group Size", "Number of groups", array( "role" => "annotation" ) ) );
         foreach ($counts as $group_size => $occurrence){
             $string = $group_size . " members";
-            $result[] = [ $string, $occurrence, $occurrence ];
+            $result[] = array( $string, $occurrence, $occurrence );
         }
 
         return $result;
@@ -97,7 +97,7 @@ class Zume_Stats{
         global $wpdb;
 
         $groups = $wpdb->get_results( 'SELECT * FROM wp_usermeta WHERE meta_key LIKE "zume_group_%"' );
-        $count = [
+        $count = array(
             "More than 4 members" => 0,
             "session_1" =>0,
             "session_2" =>0,
@@ -109,7 +109,7 @@ class Zume_Stats{
             "session_8" =>0,
             "session_9" =>0,
             "session_10" =>0,
-        ];
+        );
         foreach ($groups as $group){
             $fields = maybe_unserialize( $group->meta_value );
             if ( isset( $fields["members"] ) && intval( $fields["members"] )){
@@ -125,9 +125,9 @@ class Zume_Stats{
             }
         }
 
-        $result = [ [ "Session", "number completed", [ "role" => "annotation" ] ] ];
+        $result = array( array( "Session", "number completed", array( "role" => "annotation" ) ) );
         foreach ( $count as $session => $number ){
-            $result[] = [ $session, $number, $number ];
+            $result[] = array( $session, $number, $number );
         }
 
         return $result;
@@ -145,7 +145,7 @@ class Zume_Stats{
         $client = new Google_Client();
         $client->setApplicationName( "Hello Analytics Reporting" );
         $client->setAuthConfig( self::$key_location );
-        $client->setScopes( [ 'https://www.googleapis.com/auth/analytics.readonly', 'https://www.googleapis.com/auth/youtube.force-ssl' ] );
+        $client->setScopes( array( 'https://www.googleapis.com/auth/analytics.readonly', 'https://www.googleapis.com/auth/youtube.force-ssl' ) );
         $analytics = new Google_Service_Analytics( $client );
 
         return $analytics;
@@ -238,7 +238,7 @@ class Zume_Stats{
         $client = new Google_Client();
         $client->setApplicationName( "Hello Analytics Reporting" );
         $client->setAuthConfig( self::$key_location );
-        $client->setScopes( [ 'https://www.googleapis.com/auth/youtube.force-ssl' ] );
+        $client->setScopes( array( 'https://www.googleapis.com/auth/youtube.force-ssl' ) );
         $service = new Google_Service_YouTube( $client );
 
         return $service;

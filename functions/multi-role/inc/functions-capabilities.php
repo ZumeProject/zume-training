@@ -65,7 +65,7 @@ function zume_multi_role_is_cap_editable( $cap ) {
 function zume_multi_role_get_cap_roles( $cap ) {
     global $wp_roles;
 
-    $_roles = [];
+    $_roles = array();
 
     foreach ( $wp_roles->role_objects as $role ) {
 
@@ -122,7 +122,7 @@ function zume_multi_role_get_role_capabilities() {
     global $wp_roles;
 
     // Set up an empty capabilities array.
-    $capabilities = [];
+    $capabilities = array();
 
     // Loop through each role object because we need to get the caps.
     foreach ( $wp_roles->role_objects as $key => $role ) {
@@ -151,13 +151,13 @@ function zume_multi_role_get_role_capabilities() {
  */
 function zume_multi_role_get_plugin_capabilities() {
 
-    return [
+    return array(
         'list_roles',       // View roles list.
         'create_roles',       // Create new roles.
         'delete_roles',       // Delete roles.
         'edit_roles',       // Edit a role's caps.
         'restrict_content' // Restrict content (content permissions component).
-    ];
+    );
 }
 
 /**
@@ -177,7 +177,7 @@ function zume_multi_role_get_plugin_capabilities() {
  */
 function zume_multi_role_get_wp_capabilities() {
 
-    return [
+    return array(
         'activate_plugins',
         'add_users',
         'create_users',
@@ -229,7 +229,7 @@ function zume_multi_role_get_wp_capabilities() {
         'update_plugins',
         'update_themes',
         'upload_files'
-    ];
+    );
 }
 
 /**
@@ -261,7 +261,7 @@ function zume_multi_role_check_for_cap( $cap = '' ) {
  */
 function zume_multi_role_get_hidden_caps() {
 
-    $caps = [];
+    $caps = array();
 
     // Unfiltered uploads.
     if ( is_multisite() || ! defined( 'ALLOW_UNFILTERED_UPLOADS' ) || ! ALLOW_UNFILTERED_UPLOADS ) {
@@ -322,7 +322,7 @@ function zume_multi_role_remove_hidden_caps( $caps ) {
  */
 function zume_multi_role_get_old_levels() {
 
-    return [
+    return array(
         'level_0',
         'level_1',
         'level_2',
@@ -334,7 +334,7 @@ function zume_multi_role_get_old_levels() {
         'level_8',
         'level_9',
         'level_10'
-    ];
+    );
 }
 
 /**
@@ -361,7 +361,7 @@ function zume_multi_role_remove_old_levels( $caps ) {
  */
 function zume_multi_role_new_role_default_capabilities() {
 
-    return apply_filters( 'zume_multi_role_new_role_default_capabilities', [ 'read' ] );
+    return apply_filters( 'zume_multi_role_new_role_default_capabilities', array( 'read' ) );
 }
 
 /**
@@ -375,5 +375,5 @@ function zume_multi_role_new_role_default_capabilities() {
  */
 function zume_multi_role_new_role_default_caps() {
 
-    return apply_filters( 'zume_multi_role_new_role_default_caps', [ 'read' => true ] );
+    return apply_filters( 'zume_multi_role_new_role_default_caps', array( 'read' => true ) );
 }

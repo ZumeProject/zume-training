@@ -37,7 +37,7 @@ final class Zume_Admin_User_Edit {
     public function __construct() {
 
         // Only run our customization on the 'user-edit.php' page in the admin.
-        add_action( 'load-user-edit.php', [ $this, 'load_user_edit' ] );
+        add_action( 'load-user-edit.php', array( $this, 'load_user_edit' ) );
     }
 
     /**
@@ -49,13 +49,13 @@ final class Zume_Admin_User_Edit {
      */
     public function load_user_edit() {
 
-        add_action( 'admin_head', [ $this, 'print_styles' ] );
+        add_action( 'admin_head', array( $this, 'print_styles' ) );
 
-        add_action( 'show_user_profile', [ $this, 'profile_fields' ] );
-        add_action( 'edit_user_profile', [ $this, 'profile_fields' ] );
+        add_action( 'show_user_profile', array( $this, 'profile_fields' ) );
+        add_action( 'edit_user_profile', array( $this, 'profile_fields' ) );
 
         // Must use `profile_update` to change role. Otherwise, WP will wipe it out.
-        add_action( 'profile_update', [ $this, 'role_update' ], 0 );
+        add_action( 'profile_update', array( $this, 'role_update' ), 0 );
     }
 
     /**

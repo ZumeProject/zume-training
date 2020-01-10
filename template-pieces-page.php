@@ -47,7 +47,7 @@ if (have_posts()) :
                 <h1><?php echo esc_html( $h1_title ) ?></h1>
                 <span class="sub-caption">
                     <a onclick="open_session(<?php echo esc_attr( $session_number ); ?>)">
-                        <?php echo sprintf( esc_html__( 'This concept is called "%s" in session %s of the Zúme Training', 'zume' ),  get_the_title( $post_id ), $session_number ) ?>
+                        <?php echo sprintf( esc_html__( 'This concept is called "%1$s" in session %2$s of the Zúme Training', 'zume' ), get_the_title( $post_id ), $session_number ) ?>
                     </a>
                 </span>
             </div>
@@ -80,13 +80,13 @@ if (have_posts()) :
                             <div class="cell content-large center">
 
                                 <?php if ( $audio ) :  ?>
-                                    <h3><?php esc_html_e("Listen and Read Along", 'zume' ) ?></h3>
+                                    <h3><?php esc_html_e( "Listen and Read Along", 'zume' ) ?></h3>
                                     <a class="button large text-uppercase"
                                        href="<?php echo esc_url( Zume_Course::get_download_by_key( '33' ) ) ?>"
                                        target="_blank" rel="noopener noreferrer nofollow">
                                         <?php esc_html_e( 'Download Free Guidebook', 'zume' ) ?>
                                     </a>
-                                <?php else: ?>
+                                <?php else : ?>
                                     <h3 class="center"><?php esc_html_e( 'Watch This Video', 'zume' ) ?></h3>
                                 <?php endif; ?>
 
@@ -237,7 +237,7 @@ if (have_posts()) :
 
         <?php get_template_part( "parts/content", "modal" ); ?>
 
-    <?php
+        <?php
     endwhile;
 endif;
 get_footer();

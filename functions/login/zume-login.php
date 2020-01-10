@@ -29,30 +29,30 @@ class Zume_User_Registration
 
     public function add_api_routes() {
         $namespace = 'zume/v1';
-        register_rest_route( $namespace, '/register_via_google', [
-            [
+        register_rest_route( $namespace, '/register_via_google', array(
+            array(
                 'methods'             => WP_REST_Server::CREATABLE,
-                'callback'            => [ $this, 'register_via_google' ],
-            ],
-        ] );
-        register_rest_route( $namespace, '/register_via_facebook', [
-            [
+                'callback'            => array( $this, 'register_via_google' ),
+            ),
+        ) );
+        register_rest_route( $namespace, '/register_via_facebook', array(
+            array(
                 'methods'             => WP_REST_Server::CREATABLE,
-                'callback'            => [ $this, 'register_via_facebook' ],
-            ],
-        ] );
-        register_rest_route( $namespace, '/link_account_via_google', [
-            [
+                'callback'            => array( $this, 'register_via_facebook' ),
+            ),
+        ) );
+        register_rest_route( $namespace, '/link_account_via_google', array(
+            array(
                 'methods'             => WP_REST_Server::CREATABLE,
-                'callback'            => [ $this, 'link_account_via_google' ],
-            ],
-        ] );
-        register_rest_route( $namespace, '/link_account_via_facebook', [
-            [
+                'callback'            => array( $this, 'link_account_via_google' ),
+            ),
+        ) );
+        register_rest_route( $namespace, '/link_account_via_facebook', array(
+            array(
                 'methods'             => WP_REST_Server::CREATABLE,
-                'callback'            => [ $this, 'link_account_via_facebook' ],
-            ],
-        ] );
+                'callback'            => array( $this, 'link_account_via_facebook' ),
+            ),
+        ) );
     }
 
     /**
@@ -75,7 +75,7 @@ class Zume_User_Registration
 
         \Firebase\JWT\JWT::$leeway = 300;
 
-        $client = new Google_Client( [ 'client_id' => $google_sso_key ] );  // Specify the CLIENT_ID of the app that accesses the backend
+        $client = new Google_Client( array( 'client_id' => $google_sso_key ) );  // Specify the CLIENT_ID of the app that accesses the backend
         $payload = $client->verifyIdToken( $google_token );
         if ( $payload ) {
             $google_user_id = $payload['sub'];
@@ -103,7 +103,7 @@ class Zume_User_Registration
         if ( empty( $user_id ) && ! email_exists( $user_email ) ) {
 
             // create a user from Google data
-            $userdata = [
+            $userdata = array(
                 'user_login'      => sanitize_user( $username, false ) . '_'. rand( 100, 999 ),
                 'user_url'        => sanitize_text_field( $picture_url ),
                 'user_pass'       => $random_password,  // When creating an user, `user_pass` is expected.
@@ -114,7 +114,7 @@ class Zume_User_Registration
                 'first_name'      => sanitize_text_field( $first_name ),
                 'last_name'       => sanitize_text_field( $last_name ),
                 'user_registered' => current_time( 'mysql' ),
-            ];
+            );
 
             $user_id = wp_insert_user( $userdata );
 
@@ -189,7 +189,7 @@ class Zume_User_Registration
 
         \Firebase\JWT\JWT::$leeway = 300;
 
-        $client = new Google_Client( [ 'client_id' => $google_sso_key ] );  // Specify the CLIENT_ID of the app that accesses the backend
+        $client = new Google_Client( array( 'client_id' => $google_sso_key ) );  // Specify the CLIENT_ID of the app that accesses the backend
         $payload = $client->verifyIdToken( $google_token );
         if ( $payload ) {
             $google_user_id = $payload['sub'];
@@ -281,11 +281,11 @@ class Zume_User_Registration
         }
 
         try {
-            $fb = new \Facebook\Facebook([
+            $fb = new \Facebook\Facebook(array(
                 'app_id' => get_option( 'dt_facebook_sso_pub_key' ),
                 'app_secret' => get_option( 'dt_facebook_sso_sec_key' ),
                 'default_graph_version' => 'v3.2',
-            ]);
+            ));
         } catch ( Exception $exception ) {
             return new WP_Error( __METHOD__, __( 'Failed to connect with Facebook. Try again.', 'zume' ), $exception );
         }
@@ -322,7 +322,7 @@ class Zume_User_Registration
         if ( empty( $user_id ) && ! email_exists( $user_email ) ) {
 
             // create a user from Google data
-            $userdata = [
+            $userdata = array(
                 'user_login'      => sanitize_user( $username, false ) . '_'. rand( 100, 999 ),
                 'user_pass'       => $random_password,  // When creating an user, `user_pass` is expected.
                 'user_nicename'   => sanitize_text_field( $user_nicename ),
@@ -332,7 +332,7 @@ class Zume_User_Registration
                 'first_name'      => sanitize_text_field( $first_name ),
                 'last_name'       => sanitize_text_field( $last_name ),
                 'user_registered' => current_time( 'mysql' ),
-            ];
+            );
 
             $user_id = wp_insert_user( $userdata );
 
@@ -407,11 +407,11 @@ class Zume_User_Registration
         }
 
         try {
-            $fb = new \Facebook\Facebook([
+            $fb = new \Facebook\Facebook(array(
                 'app_id' => get_option( 'dt_facebook_sso_pub_key' ),
                 'app_secret' => get_option( 'dt_facebook_sso_sec_key' ),
                 'default_graph_version' => 'v3.2',
-            ]);
+            ));
         } catch ( Exception $exception ) {
             return new WP_Error( __METHOD__, __( 'Failed to connect with Facebook. Try again.', 'zume' ), $exception );
         }
@@ -609,13 +609,13 @@ class Zume_User_Registration
             $error->add( __METHOD__, __( 'Missing captcha response. How did you do that?', 'zume' ) );
             return $error;
         }
-        $args = [
+        $args = array(
             'method' => 'POST',
-            'body' => [
+            'body' => array(
                 'secret' => get_option( 'dt_google_captcha_server_key' ),
                 'response' => trim( sanitize_text_field( wp_unslash( $_POST['g-recaptcha-response'] ) ) ),
-            ]
-        ];
+            )
+        );
         $post_result = wp_remote_post( 'https://www.google.com/recaptcha/api/siteverify', $args );
         $post_body = json_decode( wp_remote_retrieve_body( $post_result ), true );
         if ( ! isset( $post_body['success'] ) || false === $post_body['success'] ) {

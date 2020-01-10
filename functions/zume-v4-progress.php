@@ -7,7 +7,7 @@ class Zume_V4_Progress {
     public static $progress_key = 'zume_progress';
 
     public static function verify_progress_array( $args ) {
-        $defaults = [
+        $defaults = array(
             '1h' => '',
             '1o' => '',
             '1s' => '',
@@ -136,7 +136,7 @@ class Zume_V4_Progress {
             '32o' => '',
             '32s' => '',
             '32t' => '',
-        ];
+        );
 
         return wp_parse_args( $args, $defaults );
     }
@@ -154,7 +154,7 @@ class Zume_V4_Progress {
         $progress = get_user_meta( $user_id, self::$progress_key, true );
 
         if ( empty( $progress ) || ! is_array( $progress ) ) {
-            update_user_meta( $user_id, self::$progress_key, self::verify_progress_array( [] ) );
+            update_user_meta( $user_id, self::$progress_key, self::verify_progress_array( array() ) );
             $progress = get_user_meta( $user_id, self::$progress_key, true );
         }
 

@@ -7,7 +7,7 @@ if ( ! defined( 'ABSPATH' ) ) {
     exit;
 } // Exit if accessed directly
 
-function zume_insert_log( $args = [] ) {
+function zume_insert_log( $args = array() ) {
     Zume_Logging::insert( $args );
 }
 function zume_log_last_active( $user_id ) {
@@ -54,14 +54,14 @@ class Zume_Logging {
 
         $args = wp_parse_args(
             $args,
-            [
+            array(
                 'created_date' => current_time( 'mysql' ),
                 'user_id'      => get_current_user_id(),
                 'group_id'     => '',
                 'page'         => '',
                 'action'       => '',
                 'meta'         => '',
-            ]
+            )
         );
 
         // Make sure for non duplicate.
@@ -94,15 +94,15 @@ class Zume_Logging {
 
         $wpdb->insert(
             $wpdb->zume_logging,
-            [
+            array(
                 'created_date' => current_time( 'mysql' ),
                 'user_id'      => $args['user_id'],
                 'group_id'     => $args['group_id'],
                 'page'         => $args['page'],
                 'action'       => $args['action'],
                 'meta'         => $args['meta'],
-            ],
-            [ '%s', '%d', '%s', '%s', '%s', '%s' ]
+            ),
+            array( '%s', '%d', '%s', '%s', '%s', '%s' )
         );
 
         // Final action on insert.
@@ -110,54 +110,54 @@ class Zume_Logging {
     }
 
     public function __construct() {
-        add_action( 'wp_login', [ &$this, 'hooks_wp_login' ], 10, 2 );
-        add_action( 'wp_logout', [ &$this, 'hooks_wp_logout' ] );
-        add_action( 'delete_user', [ &$this, 'hooks_delete_user' ] );
-        add_action( 'user_register', [ &$this, 'hooks_user_register' ] );
-        add_action( 'zume_create_group', [ &$this, 'hooks_create_group' ], 10, 3 );
-        add_action( 'zume_delete_group', [ &$this, 'hooks_delete_group' ], 10, 2 );
-        add_action( 'zume_close_group', [ &$this, 'hooks_close_group' ], 10, 2 );
-        add_action( 'zume_activate_group', [ &$this, 'hooks_activate_group' ], 10, 2 );
-        add_action( 'zume_coleader_invitation_response', [ &$this, 'hooks_coleader_invitation_response' ], 99, 3 );
-        add_action( 'zume_update_profile', [ &$this, 'hooks_update_profile' ], 10, 1 );
-        add_action( 'zume_update_three_month_plan', [ &$this, 'hooks_update_three_month_plan' ], 10, 2 );
-        add_action( 'added_user_meta', [ &$this, 'hooks_affiliation_key' ], 20, 4 );
+        add_action( 'wp_login', array( &$this, 'hooks_wp_login' ), 10, 2 );
+        add_action( 'wp_logout', array( &$this, 'hooks_wp_logout' ) );
+        add_action( 'delete_user', array( &$this, 'hooks_delete_user' ) );
+        add_action( 'user_register', array( &$this, 'hooks_user_register' ) );
+        add_action( 'zume_create_group', array( &$this, 'hooks_create_group' ), 10, 3 );
+        add_action( 'zume_delete_group', array( &$this, 'hooks_delete_group' ), 10, 2 );
+        add_action( 'zume_close_group', array( &$this, 'hooks_close_group' ), 10, 2 );
+        add_action( 'zume_activate_group', array( &$this, 'hooks_activate_group' ), 10, 2 );
+        add_action( 'zume_coleader_invitation_response', array( &$this, 'hooks_coleader_invitation_response' ), 99, 3 );
+        add_action( 'zume_update_profile', array( &$this, 'hooks_update_profile' ), 10, 1 );
+        add_action( 'zume_update_three_month_plan', array( &$this, 'hooks_update_three_month_plan' ), 10, 2 );
+        add_action( 'added_user_meta', array( &$this, 'hooks_affiliation_key' ), 20, 4 );
     }
 
     public function hooks_wp_login( $user_login, $user ) {
         self::insert(
-            [
+            array(
                 'user_id'  => $user->ID,
                 'group_id' => '',
                 'page'     => 'login',
                 'action'   => 'logged_in',
                 'meta'     => '',
-            ]
+            )
         );
         update_user_meta( $user->ID, 'last_activity', current_time( 'mysql' ) );
     }
 
     public function hooks_user_register( $user_id ) {
         self::insert(
-            [
+            array(
                 'user_id'  => $user_id,
                 'group_id' => '',
                 'page'     => 'register',
                 'action'   => 'registered',
                 'meta'     => '',
-            ]
+            )
         );
     }
 
     public function hooks_delete_user( $user_id ) {
         self::insert(
-            [
+            array(
                 'user_id'  => $user_id,
                 'group_id' => '',
                 'page'     => 'delete_user',
                 'action'   => 'deleted',
                 'meta'     => '',
-            ]
+            )
         );
     }
 
@@ -165,98 +165,98 @@ class Zume_Logging {
         $user = wp_get_current_user();
 
         self::insert(
-            [
+            array(
                 'user_id'  => $user->ID,
                 'group_id' => '',
                 'page'     => 'logout',
                 'action'   => 'logged_out',
                 'meta'     => '',
-            ]
+            )
         );
     }
 
     public function hooks_create_group( $user_id, $group_key, $new_group ) {
         self::insert(
-            [
+            array(
                 'user_id'  => $user_id,
                 'group_id' => $group_key,
                 'page'     => 'dashboard',
                 'action'   => 'create_group',
                 'meta'     => '',
-            ]
+            )
         );
     }
 
     public function hooks_update_profile( $user_id ) {
         self::insert(
-            [
+            array(
                 'user_id'  => $user_id,
                 'group_id' => '',
                 'page'     => 'profile',
                 'action'   => 'update_profile',
                 'meta'     => '',
-            ]
+            )
         );
     }
 
     public function hooks_delete_group( $user_id, $group_key ) {
         self::insert(
-            [
+            array(
                 'user_id'  => $user_id,
                 'group_id' => $group_key,
                 'page'     => 'dashboard',
                 'action'   => 'delete_group',
                 'meta'     => '',
-            ]
+            )
         );
     }
 
     public function hooks_update_three_month_plan( $user_id, $plan ) {
         self::insert(
-            [
+            array(
                 'user_id'  => $user_id,
                 'group_id' => '',
                 'page'     => 'profile',
                 'action'   => 'update_three_month_plan',
                 'meta'     => '',
-            ]
+            )
         );
     }
 
     public function hooks_activate_group( $user_id, $group_key ) {
         self::insert(
-            [
+            array(
                 'user_id'  => $user_id,
                 'group_id' => $group_key,
                 'page'     => 'dashboard',
                 'action'   => 'activate_group',
                 'meta'     => '',
-            ]
+            )
         );
     }
 
     public function hooks_coleader_invitation_response( $user_id, $group_key, $decision ) {
         self::insert(
-            [
+            array(
                 'user_id'  => $user_id,
                 'group_id' => $group_key,
                 'page'     => 'dashboard',
                 'action'   => 'coleader_invitation_response',
                 'meta'     => $decision,
-            ]
+            )
         );
     }
 
     public function hooks_affiliation_key( $meta_id, $object_id, $meta_key, $_meta_value ) {
         if ( 'zume_affiliation_key' === $meta_key ) {
             self::insert(
-                [
+                array(
                     'user_id'  => $object_id,
                     'group_id' => '',
                     'page'     => 'profile',
                     'action'   => 'added_affiliate_key',
                     'meta'     => $_meta_value,
-                ]
+                )
             );
         }
 

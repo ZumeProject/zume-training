@@ -51,10 +51,10 @@ class Zume_Welcome_Messages {
         // get cached current message
         $current_message = get_user_meta( get_current_user_id(), 'zume_message', true );
         if ( ! $current_message ) {
-            $current_message = [
+            $current_message = array(
                 'key' => 'new',
                 'date' => current_time( 'mysql' ),
-            ];
+            );
             update_user_meta( get_current_user_id(), 'zume_message', $current_message );
             $current_message = get_user_meta( get_current_user_id(), 'zume_message', true );
         }
@@ -92,13 +92,13 @@ class Zume_Welcome_Messages {
     }
 
     public static function get_message_text( $key = 'new' ) { // @todo create the different messages for the different situations.
-        $message = [];
-        $message['new'] = [
+        $message = array();
+        $message['new'] = array(
                 'type' => 'new',
                 'name' => 'new_registration',
                 'title' => __( 'Welcome!', 'zume' ),
                 'message' => __( 'I want to make disciples who multiply!', 'zume' )
-        ];
+        );
 
 
         return $message[$key];

@@ -52,15 +52,15 @@ if ( ! class_exists( 'DT_Mapping_Module_Admin' ) ) {
                 return; // this allows you to control what environments the admin loads.
             }
 
-            add_action( "admin_menu", [ $this, 'register_menu' ] );
-            add_action( 'admin_notices', [ $this, 'dt_locations_migration_admin_notice' ] );
+            add_action( "admin_menu", array( $this, 'register_menu' ) );
+            add_action( 'admin_notices', array( $this, 'dt_locations_migration_admin_notice' ) );
             if ( is_admin() && isset( $_GET['page'] ) && 'dt_mapping_module' === $_GET['page'] ) {
                 $this->spinner = $dt_mapping['spinner'];
                 $this->nonce = wp_create_nonce( 'wp_rest' );
                 $this->current_user_id = get_current_user_id();
 
-                add_action( 'admin_head', [ $this, 'scripts' ] );
-                add_action( "admin_enqueue_scripts", [ $this, 'enqueue_drilldown_script' ] );
+                add_action( 'admin_head', array( $this, 'scripts' ) );
+                add_action( "admin_enqueue_scripts", array( $this, 'enqueue_drilldown_script' ) );
 
                 // load mapbox resources
                 if ( ! class_exists( 'DT_Mapbox_API' ) ) {
@@ -167,7 +167,7 @@ if ( ! class_exists( 'DT_Mapping_Module_Admin' ) ) {
                 __( 'Mapping', 'disciple_tools' ),
                 'manage_dt',
                 $this->token,
-                [ $this, 'content' ],
+                array( $this, 'content' ),
                 'dashicons-admin-site',
                 7
             );
@@ -208,17 +208,17 @@ if ( ! class_exists( 'DT_Mapping_Module_Admin' ) ) {
                                 SELECT alt_name as name FROM $wpdb->dt_location_grid WHERE grid_id = %d
                             ", $grid_id ) );
 
-                            return [
+                            return array(
                                 'status' => 'OK',
                                 'value'  => $name,
-                            ];
+                            );
                         } elseif ( $value ) {
                             $update_id = $wpdb->update(
                                 $wpdb->dt_location_grid,
-                                [ 'alt_name' => $value ],
-                                [ 'grid_id' => $grid_id ],
-                                [ '%s' ],
-                                [ '%d' ]
+                                array( 'alt_name' => $value ),
+                                array( 'grid_id' => $grid_id ),
+                                array( '%s' ),
+                                array( '%d' )
                             );
                             if ( $update_id ) {
                                 return true;
@@ -241,17 +241,17 @@ if ( ! class_exists( 'DT_Mapping_Module_Admin' ) ) {
                                 SELECT population FROM $wpdb->dt_location_grid WHERE grid_id = %d
                             ", $grid_id ) );
 
-                            return [
+                            return array(
                                 'status' => 'OK',
                                 'value'  => $population,
-                            ];
+                            );
                         } elseif ( $value ) {
                             $update_id = $wpdb->update(
                                 $wpdb->dt_location_grid,
-                                [ 'alt_population' => preg_replace( "/[^0-9.]/", "", $value ) ],
-                                [ 'grid_id' => $grid_id ],
-                                [ '%d' ],
-                                [ '%d' ]
+                                array( 'alt_population' => preg_replace( "/[^0-9.]/", "", $value ) ),
+                                array( 'grid_id' => $grid_id ),
+                                array( '%d' ),
+                                array( '%d' )
                             );
                             if ( $update_id ) {
                                 return true;
@@ -264,10 +264,10 @@ if ( ! class_exists( 'DT_Mapping_Module_Admin' ) ) {
                         if ( $value ) {
                             $update_id = $wpdb->update(
                                 $wpdb->dt_location_grid,
-                                [ 'longitude' => $value ],
-                                [ 'grid_id' => $grid_id ],
-                                [ '%f' ],
-                                [ '%s' ]
+                                array( 'longitude' => $value ),
+                                array( 'grid_id' => $grid_id ),
+                                array( '%f' ),
+                                array( '%s' )
                             );
                             if ( $update_id ) {
                                 return true;
@@ -280,10 +280,10 @@ if ( ! class_exists( 'DT_Mapping_Module_Admin' ) ) {
                         if ( $value ) {
                             $update_id = $wpdb->update(
                                 $wpdb->dt_location_grid,
-                                [ 'latitude' => $value ],
-                                [ 'grid_id' => $grid_id ],
-                                [ '%s' ],
-                                [ '%s' ]
+                                array( 'latitude' => $value ),
+                                array( 'grid_id' => $grid_id ),
+                                array( '%s' ),
+                                array( '%s' )
                             );
                             if ( $update_id ) {
                                 return true;
@@ -306,18 +306,18 @@ if ( ! class_exists( 'DT_Mapping_Module_Admin' ) ) {
 
                         $custom_grid_id = $this->add_sublocation_under_location_grid( $grid_id, $name, $population, $longitude, $latitude );
 
-                        return [
+                        return array(
                                 'name' => $name,
                                 'grid_id' => $custom_grid_id
-                        ];
+                        );
                         break;
                     default:
-                        return new WP_Error( __METHOD__, 'Missing parameters.', [ 'status' => 400 ] );
+                        return new WP_Error( __METHOD__, 'Missing parameters.', array( 'status' => 400 ) );
                         break;
                 }
             }
 
-            return new WP_Error( __METHOD__, 'Missing parameters.', [ 'status' => 400 ] );
+            return new WP_Error( __METHOD__, 'Missing parameters.', array( 'status' => 400 ) );
         }
 
         public function content() {
@@ -726,14 +726,14 @@ if ( ! class_exists( 'DT_Mapping_Module_Admin' ) ) {
              ******************************/
             if ( isset( $_POST['_wpnonce'] ) && wp_verify_nonce( sanitize_text_field( wp_unslash( $_POST['_wpnonce'] ) ), 'starting_map_level' . get_current_user_id() ) ) {
                 dt_write_log( $_POST );
-                $option = [];
+                $option = array();
 
                 // set focus
                 if ( isset( $_POST['focus_type'] ) && ! empty( $_POST['focus_type'] ) ) {
                     $option['type'] = sanitize_key( wp_unslash( $_POST['focus_type'] ) );
                     if ( $option['type'] !== $default_map_settings['type'] ) { // if focus changed, reset elements
                         $_POST['parent'] = 'world';
-                        $_POST['children'] = [];
+                        $_POST['children'] = array();
                     }
                 } else {
                     $option['type'] = $default_map_settings['type'];
@@ -748,7 +748,7 @@ if ( ! class_exists( 'DT_Mapping_Module_Admin' ) ) {
 
                 // set children
                 if ( $option['type'] === 'world' ) {
-                    $option['children'] = [];
+                    $option['children'] = array();
                 }
                 else if ( $option['type'] === 'country' && empty( $_POST['children'] ) ) {
                     $option['children'] = Disciple_Tools_Mapping_Queries::get_countries( true );
@@ -1050,23 +1050,23 @@ if ( ! class_exists( 'DT_Mapping_Module_Admin' ) ) {
              * https://raw.githubusercontent.com/DiscipleTools/location-grid-project/master/
              * https://s3.amazonaws.com/mapping-source/
              */
-            $mirror_list = [
-                'google' => [
+            $mirror_list = array(
+                'google' => array(
                     'key'   => 'google',
                     'label' => 'Google',
                     'url'   => 'https://storage.googleapis.com/location-grid-mirror/',
-                ],
-                'amazon' => [
+                ),
+                'amazon' => array(
                     'key'   => 'amazon',
                     'label' => 'Amazon',
                     'url'   => 'https://location-grid-mirror.s3.amazonaws.com/',
-                ],
-                'other'  => [
+                ),
+                'other'  => array(
                     'key'   => 'other',
                     'label' => 'Other',
                     'url'   => '',
-                ],
-            ];
+                ),
+            );
 
             // process post action
             if ( isset( $_POST['source'] )
@@ -1079,26 +1079,26 @@ if ( ! class_exists( 'DT_Mapping_Module_Admin' ) ) {
                 if ( $selection_key === 'other' && ! empty( $_POST['other_value'] ) ) { // must be set to other and have a url
                     $url = trailingslashit( sanitize_text_field( wp_unslash( $_POST['other_value'] ) ) );
                     if ( 'https://' === substr( $url, 0, 8 ) ) { // must begin with https
-                        $array = [
+                        $array = array(
                             'key'   => 'other',
                             'label' => 'Other',
                             'url'   => $url,
-                        ];
+                        );
                         update_option( 'dt_location_grid_mirror', $array, true );
                     }
                 } elseif ( $selection_key !== 'other' ) {
-                    $array = [
+                    $array = array(
                         'key'   => $selection_key,
                         'label' => $mirror_list[$selection_key]['label'],
                         'url'   => $mirror_list[$selection_key]['url'],
-                    ];
+                    );
                     update_option( 'dt_location_grid_mirror', $array, true );
                 }
             }
 
             $mirror = dt_get_location_grid_mirror();
 
-            set_error_handler( [ $this, "warning_handler" ], E_WARNING );
+            set_error_handler( array( $this, "warning_handler" ), E_WARNING );
             $list = file_get_contents( $mirror['url'] . 'low/1.geojson' );
             restore_error_handler();
 
@@ -1219,7 +1219,7 @@ if ( ! class_exists( 'DT_Mapping_Module_Admin' ) ) {
                 WHERE l.level > 2 AND l.level < 10 GROUP BY l.admin0_code, l.level;", ARRAY_A );
 
             // trim list
-            $list = [];
+            $list = array();
             foreach ( $installed_levels as $installed_level ) {
                 $list[$installed_level['admin0_code']] = $installed_level['admin0_code'];
             }
@@ -1563,7 +1563,7 @@ if ( ! class_exists( 'DT_Mapping_Module_Admin' ) ) {
             if ( isset( $_POST["location_migrate_nonce"] ) && wp_verify_nonce( sanitize_key( $_POST['location_migrate_nonce'] ), 'save' ) ) {
                 if ( isset( $_POST["run-migration"], $_POST["selected_location_grid"] ) ){
                     $select_location_grid = $this->dt_sanitize_array_html( $_POST["selected_location_grid"] ); //phpcs:ignore
-                    $saved_for_migration = get_option( "dt_mapping_migration_list", [] );
+                    $saved_for_migration = get_option( "dt_mapping_migration_list", array() );
                     foreach ( $select_location_grid as $location_id => $migration_values ){
                         if ( !empty( $location_id ) && !empty( $migration_values["migration_type"] ) ) {
                             $location_id = sanitize_text_field( wp_unslash( $location_id ) );
@@ -1587,12 +1587,12 @@ if ( ! class_exists( 'DT_Mapping_Module_Admin' ) ) {
                                 <p>Successfully ran action: <?php echo esc_html( $message )?></p>
                             </div>
                             <?php
-                            $saved_for_migration[$location_id] = [
+                            $saved_for_migration[$location_id] = array(
                                 "message" => $message,
                                 "migration_type" => $migration_type,
                                 "location_id" => $location_id,
                                 "selected_location_grid" => $selected_location_grid
-                            ];
+                            );
                         }
                     }
                     update_option( "dt_mapping_migration_list", $saved_for_migration, false );
@@ -1637,13 +1637,13 @@ if ( ! class_exists( 'DT_Mapping_Module_Admin' ) ) {
                 AND posts.post_status != 'trash'
                 GROUP BY posts.ID
             ", ARRAY_A );
-            $saved_for_migration = get_option( "dt_mapping_migration_list", [] );
+            $saved_for_migration = get_option( "dt_mapping_migration_list", array() );
 
             if ( $return ) {
-                return [
-                    'locations_with_records' => $locations_with_records ?: [],
-                    'saved_for_migration' => $saved_for_migration ?: [],
-                ];
+                return array(
+                    'locations_with_records' => $locations_with_records ?: array(),
+                    'saved_for_migration' => $saved_for_migration ?: array(),
+                );
             }
 
 
@@ -1750,7 +1750,7 @@ if ( ! class_exists( 'DT_Mapping_Module_Admin' ) ) {
                     })
                 </script>
             <?php }
-            $saved_for_migration = get_option( "dt_mapping_migration_list", [] );
+            $saved_for_migration = get_option( "dt_mapping_migration_list", array() );
             ?>
 
 
@@ -2203,7 +2203,7 @@ if ( ! class_exists( 'DT_Mapping_Module_Admin' ) ) {
             try {
                 DT_Mapping_Module_Migration_Engine::migrate( DT_Mapping_Module_Migration_Engine::$migration_number );
             } catch ( Throwable $e ) {
-                $migration_error = new WP_Error( 'migration_error', 'Migration engine for mapping module failed to migrate.', [ 'error' => $e ] );
+                $migration_error = new WP_Error( 'migration_error', 'Migration engine for mapping module failed to migrate.', array( 'error' => $e ) );
                 dt_write_log( $migration_error );
             }
         }
@@ -2321,7 +2321,7 @@ if ( ! class_exists( 'DT_Mapping_Module_Admin' ) ) {
             // save new record
             $result = $wpdb->insert(
                 $wpdb->dt_location_grid,
-                [
+                array(
                     'grid_id' => $custom_grid_id,
                     'name' => $name,
                     'level' => $level,
@@ -2342,8 +2342,8 @@ if ( ! class_exists( 'DT_Mapping_Module_Admin' ) ) {
                     'alt_name' => $name,
                     'alt_population' => $population,
                     'is_custom_location' => 1,
-                ],
-                [
+                ),
+                array(
                     '%d', // grid_id
                     '%s', // name
                     '%s', // level
@@ -2364,7 +2364,7 @@ if ( ! class_exists( 'DT_Mapping_Module_Admin' ) ) {
                     '%s', // alt_name
                     '%d', // alt_population
                     '%d' //is custom location
-                ]
+                )
             );
             if ( ! $result ){
                 dt_write_log( $wpdb->last_error );
@@ -2419,7 +2419,7 @@ if ( ! class_exists( 'DT_Mapping_Module_Admin' ) ) {
 
         public function migrate_user_filters_to_location_grid(){
             //get migrations
-            $migrated = get_option( "dt_mapping_migration_list", [] );
+            $migrated = get_option( "dt_mapping_migration_list", array() );
 //            get users with that have filters
 //            check for locations
 //            try converting to location_grid
@@ -2428,27 +2428,27 @@ if ( ! class_exists( 'DT_Mapping_Module_Admin' ) ) {
             $dir = wp_upload_dir();
             $uploads_dir = trailingslashit( $dir['basedir'] );
             // load list to array, make geonameid key
-            $geonames_ref = [];
+            $geonames_ref = array();
             $geonmes_ref_raw = array_map( function( $v){return str_getcsv( $v, "\t" );
             }, file( $uploads_dir . "location_grid_download/geonames_ref_table.tsv" ) );
             if ( empty( $geonmes_ref_raw ) ) {
                 throw new Exception( 'Failed to build array from remote file.' );
             }
             foreach ( $geonmes_ref_raw as $value ) {
-                $geonames_ref[$value[1]] = [
+                $geonames_ref[$value[1]] = array(
                     'grid_id' => $value[0],
                     'geonameid' => $value[1],
-                ];
+                );
             }
 
 
-            $users = get_users( [ "meta_key" => $wpdb->get_blog_prefix() . "saved_filters" ] );
+            $users = get_users( array( "meta_key" => $wpdb->get_blog_prefix() . "saved_filters" ) );
             foreach ( $users as $user ){
                 $save_filters = get_user_option( "saved_filters", $user->ID );
                 foreach ( $save_filters as $post_type => &$filters ){
                     foreach ( $filters as &$filter ){
                         if ( !empty( $filter["query"]["locations"] ) ){
-                            $location_grid = [];
+                            $location_grid = array();
                             foreach ( $filter["query"]["locations"] as $location ){
                                 if ( isset( $migrated[$location]["selected_location_grid"] ) ){
                                     $location_grid[] = $migrated[$location]["selected_location_grid"];
@@ -2466,7 +2466,7 @@ if ( ! class_exists( 'DT_Mapping_Module_Admin' ) ) {
                             }
                         }
                         if ( !empty( $filter["query"]["geonames"] ) ){
-                            $location_grid_ids = [];
+                            $location_grid_ids = array();
                             foreach ( $filter["query"]["geonames"] as $geoname ){
                                 if ( isset( $geonames_ref[ $geoname ] ) ) {
                                     $location_grid_ids[] = $geonames_ref[$geoname ]["grid_id"];

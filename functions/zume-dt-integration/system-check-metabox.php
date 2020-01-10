@@ -8,7 +8,7 @@ class System_Check_Metabox
 {
     public static function check_user_ip_geocode( $force = false ) {
         global $wpdb;
-        $report = [];
+        $report = array();
         // build user ip address locations
         // @codingStandardsIgnoreStart
         $results = $wpdb->get_results("
@@ -47,7 +47,7 @@ class System_Check_Metabox
 
     public static function check_group_address_geocode( $force = false ) {
         global $wpdb;
-        $report = [];
+        $report = array();
 
         $groups_meta = $wpdb->get_col(
             $wpdb->prepare( "
@@ -94,7 +94,7 @@ class System_Check_Metabox
 
     public static function check_group_ip_geocode( $force = false ) {
         global $wpdb;
-        $report = [];
+        $report = array();
 
         $groups_meta = $wpdb->get_col(
             $wpdb->prepare( "
@@ -139,7 +139,7 @@ class System_Check_Metabox
 
     public static function check_user_address_geocode( $force = false ) {
         global $wpdb;
-        $report = [];
+        $report = array();
 
         // build locations for users
         $users_with_addresses = $wpdb->get_results(
