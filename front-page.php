@@ -82,6 +82,7 @@ $zume_current_lang = zume_current_language();
                     <div class="small-10 medium-8 cell center large-text">
                         <div class="grid-x grid-margin-x grid-margin-y vertical-padding" >
                             <div class="cell" style="max-width:900px;margin-left:auto;margin-right:auto">
+                                <h1><?php esc_html_e("Zúme Training", 'zume' ) ?></h1>
                                 <?php esc_html_e( "Zúme Training is an on-line and in-life learning experience designed for small groups who follow Jesus to learn how to obey His Great Commission and make disciples who multiply.", 'zume' ) ?>
                             </div>
                             <?php if ( zume_v4_ready_language() ) : ?>
