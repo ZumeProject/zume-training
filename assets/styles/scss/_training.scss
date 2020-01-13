@@ -295,6 +295,10 @@
             }
         }
     }
+    .no-link {
+        cursor:default;
+        color:$black;
+    }
     .p-session-separator {
         color: $light-black;
         font-size: .8rem;

@@ -357,15 +357,7 @@ function zume_landing_page_post_id( int $number ) : int {
     return $list[$number] ?? 0;
 }
 
-function zume_v4_ready_language() {
-    $ready = array();
 
-    $ready['en'] = true;
-
-    $current = zume_current_language();
-
-    return $ready[$current] ?? false;
-}
 
 /***********************************************************************************************************************
  *

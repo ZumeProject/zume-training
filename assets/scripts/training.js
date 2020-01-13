@@ -1125,6 +1125,8 @@ div.append(`
   load_progress()
   listen_progress_item()
   load_progress_totals()
+
+  jQuery("a[href='']").addClass('no-link') // mute links that have no corresponding page.
 }
 function listen_progress_item() {
   jQuery('.p-icon').on( 'click', function(){
