@@ -123,35 +123,58 @@ $zendesk_enable = true;
                                         <?php echo esc_html__( "5 min", 'zume' ) ?>
                                     </div>
                                     <div class="cell medium-10">
-                                        <a href="<?php echo esc_url( zume_get_landing_translation_url( 1, $current_language ) ) ?>"><?php echo esc_html( zume_get_landing_title( 1, $current_language ) ) ?></a><br>
-                                        <p class="t-description"><?php esc_html_e( "You'll see how God uses ordinary people doing simple things to make a big impact.", 'zume' ) ?></p>
+                                        <?php if ( empty( zume_get_landing_title( 1, $current_language ) ) ) :
+                                            esc_html_e('God Uses Ordinary People', 'zume' );
+                                         else: ?>
+                                            <a href="<?php echo esc_url( zume_get_landing_translation_url( 1, $current_language ) ) ?>"><?php echo esc_html( zume_get_landing_title( 1, $current_language ) ) ?></a>
+                                        <?php endif; ?>
+
+                                        <br><p class="t-description"><?php esc_html_e( "You'll see how God uses ordinary people doing simple things to make a big impact.", 'zume' ) ?></p>
                                     </div>
                                     <div class="cell medium-2 t-length hide-extra">
                                         <?php echo esc_html__( "15 min", 'zume' ) ?>
                                     </div>
                                     <div class="cell medium-10">
-                                        <a href="<?php echo esc_url( zume_get_landing_translation_url( 2, $current_language ) ) ?>"><?php echo esc_html( zume_get_landing_title( 2, $current_language ) ) ?></a><br>
+                                        <?php if ( empty( zume_get_landing_title( 2, $current_language ) ) ) :
+                                            esc_html_e('Simple Definition of Disciple and Church', 'zume' );
+                                        else: ?>
+                                            <a href="<?php echo esc_url( zume_get_landing_translation_url( 2, $current_language ) ) ?>"><?php echo esc_html( zume_get_landing_title( 2, $current_language ) ) ?></a>
+                                        <?php endif; ?>
+
                                         <p class="t-description"><?php esc_html_e( 'Discover the essence of being a disciple, making a disciple, and what is the church.', 'zume' ) ?></p>
                                     </div>
                                     <div class="cell medium-2 t-length hide-extra">
                                         <?php echo esc_html__( "15 min", 'zume' ) ?>
                                     </div>
                                     <div class="cell medium-10">
-                                        <a href="<?php echo esc_url( zume_get_landing_translation_url( 3, $current_language ) ) ?>"><?php echo esc_html( zume_get_landing_title( 3, $current_language ) ) ?></a><br>
+                                        <?php if ( empty( zume_get_landing_title( 3, $current_language ) ) ) :
+                                            esc_html_e('Spiritual Breathing is Hearing and Obeying God', 'zume' );
+                                        else: ?>
+                                            <a href="<?php echo esc_url( zume_get_landing_translation_url( 3, $current_language ) ) ?>"><?php echo esc_html( zume_get_landing_title( 3, $current_language ) ) ?></a>
+                                        <?php endif; ?>
                                         <p class="t-description"><?php esc_html_e( 'Being a disciple means we hear from God and we obey God.', 'zume' ) ?></p>
                                     </div>
                                     <div class="cell medium-2 t-length hide-extra">
                                         <?php echo esc_html__( "15 min", 'zume' ) ?>
                                     </div>
                                     <div class="cell medium-10">
-                                        <a href="<?php echo esc_url( zume_get_landing_translation_url( 4, $current_language ) ) ?>"><?php echo esc_html( zume_get_landing_title( 4, $current_language ) ) ?></a><br>
+                                        <?php if ( empty( zume_get_landing_title( 4, $current_language ) ) ) :
+                                            esc_html_e('SOAPS Bible Reading', 'zume' );
+                                        else: ?>
+                                            <a href="<?php echo esc_url( zume_get_landing_translation_url( 4, $current_language ) ) ?>"><?php echo esc_html( zume_get_landing_title( 4, $current_language ) ) ?></a>
+                                        <?php endif; ?>
                                         <p class="t-description"><?php esc_html_e( 'A tool for daily Bible study that helps you understand, obey, and share God’s Word.', 'zume' ) ?></p>
                                     </div>
                                     <div class="cell medium-2 t-length hide-extra">
                                         <?php echo esc_html__( "15 min", 'zume' ) ?>
                                     </div>
                                     <div class="cell medium-10">
-                                        <a href="<?php echo esc_url( zume_get_landing_translation_url( 5, $current_language ) ) ?>"><?php echo esc_html( zume_get_landing_title( 5, $current_language ) ) ?></a><br>
+                                        <?php if ( empty( zume_get_landing_title( 5, $current_language ) ) ) :
+                                            esc_html_e('Accountability Groups', 'zume' );
+                                        else: ?>
+                                            <a href="<?php echo esc_url( zume_get_landing_translation_url( 5, $current_language ) ) ?>"><?php echo esc_html( zume_get_landing_title( 5, $current_language ) ) ?></a>
+                                        <?php endif; ?>
+
                                         <p class="t-description"><?php esc_html_e( 'A tool for two or three people of the same gender to meet weekly and encourage each other in areas that are going well and reveal areas that need correction.', 'zume' ) ?></p>
                                     </div>
                                     <div class="cell medium-2 t-length hide-extra">
@@ -186,14 +209,22 @@ $zendesk_enable = true;
                                         <?php echo esc_html__( "5 min", 'zume' ) ?>
                                     </div>
                                     <div class="cell medium-10">
-                                        <a href="<?php echo esc_url( zume_get_landing_translation_url( 6, $current_language ) ) ?>"><?php echo esc_html( zume_get_landing_title( 6, $current_language ) ) ?></a><br>
+                                        <?php if ( empty( zume_get_landing_title( 6, $current_language ) ) ) :
+                                            esc_html_e('Consumer vs Producer Lifestyle', 'zume' );
+                                        else: ?>
+                                            <a href="<?php echo esc_url( zume_get_landing_translation_url( 6, $current_language ) ) ?>"><?php echo esc_html( zume_get_landing_title( 6, $current_language ) ) ?></a>
+                                        <?php endif; ?>
                                         <p class="t-description"><?php echo esc_html__( "You'll discover the four main ways God makes everyday followers more like Jesus.", 'zume' ) ?></p>
                                     </div>
                                     <div class="cell medium-2 t-length hide-extra">
                                         <?php echo esc_html__( "15 min", 'zume' ) ?>
                                     </div>
                                     <div class="cell medium-10">
-                                        <a href="<?php echo esc_url( zume_get_landing_translation_url( 7, $current_language ) ) ?>"><?php echo esc_html( zume_get_landing_title( 7, $current_language ) ) ?></a><br>
+                                        <?php if ( empty( zume_get_landing_title( 7, $current_language ) ) ) :
+                                            esc_html_e('How to Spend an Hour in Prayer', 'zume' );
+                                        else: ?>
+                                            <a href="<?php echo esc_url( zume_get_landing_translation_url( 7, $current_language ) ) ?>"><?php echo esc_html( zume_get_landing_title( 7, $current_language ) ) ?></a>
+                                        <?php endif; ?>
                                         <p class="t-description"><?php echo esc_html__( 'See how easy it is to spend an hour in prayer.', 'zume' ) ?></p>
                                     </div>
                                     <div class="cell medium-2 t-length hide-extra">
@@ -212,7 +243,11 @@ $zendesk_enable = true;
                                         <?php echo esc_html__( "5 min", 'zume' ) ?>
                                     </div>
                                     <div class="cell medium-10">
-                                        <a href="<?php echo esc_url( zume_get_landing_translation_url( 8, $current_language ) ) ?>"><?php echo esc_html( zume_get_landing_title( 8, $current_language ) ) ?></a><br>
+                                        <?php if ( empty( zume_get_landing_title( 8, $current_language ) ) ) :
+                                            esc_html_e('Relational Stewardship - List of 100', 'zume' );
+                                        else: ?>
+                                            <a href="<?php echo esc_url( zume_get_landing_translation_url( 8, $current_language ) ) ?>"><?php echo esc_html( zume_get_landing_title( 8, $current_language ) ) ?></a>
+                                        <?php endif; ?>
                                         <p class="t-description"><?php echo esc_html__( 'A tool designed to help you be a good steward of your relationships.', 'zume' ) ?></p>
                                     </div>
                                     <div class="cell medium-2 t-length hide-extra">
@@ -247,7 +282,11 @@ $zendesk_enable = true;
                                         <?php echo esc_html__( "5 min", 'zume' ) ?>
                                     </div>
                                     <div class="cell medium-10">
-                                        <a href="<?php echo esc_url( zume_get_landing_translation_url( 9, $current_language ) ) ?>"><?php echo esc_html( zume_get_landing_title( 9, $current_language ) ) ?></a><br>
+                                        <?php if ( empty( zume_get_landing_title( 9, $current_language ) ) ) :
+                                            esc_html_e('The Kingdom Economy', 'zume' );
+                                        else: ?>
+                                            <a href="<?php echo esc_url( zume_get_landing_translation_url( 9, $current_language ) ) ?>"><?php echo esc_html( zume_get_landing_title( 9, $current_language ) ) ?></a>
+                                        <?php endif; ?>
                                         <p class="t-description"><?php echo esc_html__( "Learn how God's economy is different from the world's. God invests more in those who are faithful with what they've already been given.", 'zume' ) ?></p>
                                     </div>
                                     <div class="cell medium-2 t-length hide-extra">
@@ -260,7 +299,11 @@ $zendesk_enable = true;
                                         <?php echo esc_html__( "5 min", 'zume' ) ?>
                                     </div>
                                     <div class="cell medium-10">
-                                        <a href="<?php echo esc_url( zume_get_landing_translation_url( 10, $current_language ) ) ?>"><?php echo esc_html( zume_get_landing_title( 10, $current_language ) ) ?></a><br>
+                                        <?php if ( empty( zume_get_landing_title( 10, $current_language ) ) ) :
+                                            esc_html_e('The Gospel and How to Share It', 'zume' );
+                                        else: ?>
+                                            <a href="<?php echo esc_url( zume_get_landing_translation_url( 10, $current_language ) ) ?>"><?php echo esc_html( zume_get_landing_title( 10, $current_language ) ) ?></a>
+                                        <?php endif; ?>
                                         <p class="t-description"><?php echo esc_html__( "Learn a way to share God’s Good News from the beginning of humanity all the way to the end of this age.", 'zume' ) ?></p>
                                     </div>
                                     <div class="cell medium-2 t-length hide-extra">
@@ -273,7 +316,11 @@ $zendesk_enable = true;
                                         <?php echo esc_html__( "45 min", 'zume' ) ?>
                                     </div>
                                     <div class="cell medium-10">
-                                        <a href="<?php echo esc_url( zume_get_landing_translation_url( 11, $current_language ) ) ?>"><?php echo esc_html( zume_get_landing_title( 11, $current_language ) ) ?></a><br>
+                                        <?php if ( empty( zume_get_landing_title( 11, $current_language ) ) ) :
+                                            esc_html_e('Baptism and How to do it', 'zume' );
+                                        else: ?>
+                                            <a href="<?php echo esc_url( zume_get_landing_translation_url( 11, $current_language ) ) ?>"><?php echo esc_html( zume_get_landing_title( 11, $current_language ) ) ?></a>
+                                        <?php endif; ?>
                                         <p class="t-description"><?php echo esc_html__( 'Jesus said, “Go and make disciples of all nations, BAPTIZING them in the name of the Father and of the Son and of the Holy Spirit…” Learn how to put this into practice.', 'zume' ) ?></p>
                                     </div>
                                     <div class="cell medium-2 t-length hide-extra">
@@ -302,7 +349,11 @@ $zendesk_enable = true;
                                         <?php echo esc_html__( "5 min", 'zume' ) ?>
                                     </div>
                                     <div class="cell medium-10">
-                                        <a href="<?php echo esc_url( zume_get_landing_translation_url( 12, $current_language ) ) ?>"><?php echo esc_html( zume_get_landing_title( 12, $current_language ) ) ?></a><br>
+                                        <?php if ( empty( zume_get_landing_title( 12, $current_language ) ) ) :
+                                            esc_html_e('Prepare Your 3-Minute Testimony', 'zume' );
+                                        else: ?>
+                                            <a href="<?php echo esc_url( zume_get_landing_translation_url( 12, $current_language ) ) ?>"><?php echo esc_html( zume_get_landing_title( 12, $current_language ) ) ?></a>
+                                        <?php endif; ?>
                                         <p class="t-description"><?php echo esc_html__( "Learn how to share your testimony in three minutes by sharing how Jesus has impacted your life.", 'zume' ) ?></p>
                                     </div>
                                     <div class="cell medium-2 t-length hide-extra">
@@ -315,28 +366,44 @@ $zendesk_enable = true;
                                         <?php echo esc_html__( "45 min", 'zume' ) ?>
                                     </div>
                                     <div class="cell medium-10">
-                                        <a href="<?php echo esc_url( zume_get_landing_translation_url( 13, $current_language ) ) ?>"><?php echo esc_html( zume_get_landing_title( 13, $current_language ) ) ?></a><br>
+                                        <?php if ( empty( zume_get_landing_title( 13, $current_language ) ) ) :
+                                            esc_html_e('Vision Casting the Greatest Blessing', 'zume' );
+                                        else: ?>
+                                            <a href="<?php echo esc_url( zume_get_landing_translation_url( 13, $current_language ) ) ?>"><?php echo esc_html( zume_get_landing_title( 13, $current_language ) ) ?></a>
+                                        <?php endif; ?>
                                         <p class="t-description"><?php echo esc_html__( 'Learn a simple pattern of making not just one follower of Jesus but entire spiritual families who multiply for generations to come.', 'zume' ) ?></p>
                                     </div>
                                     <div class="cell medium-2 t-length hide-extra">
                                         <?php echo esc_html__( "15 min", 'zume' ) ?>
                                     </div>
                                     <div class="cell medium-10">
-                                        <a href="<?php echo esc_url( zume_get_landing_translation_url( 14, $current_language ) ) ?>"><?php echo esc_html( zume_get_landing_title( 14, $current_language ) ) ?></a><br>
+                                        <?php if ( empty( zume_get_landing_title( 14, $current_language ) ) ) :
+                                            esc_html_e('Duckling Discipleship - Leading Immediately', 'zume' );
+                                        else: ?>
+                                            <a href="<?php echo esc_url( zume_get_landing_translation_url( 14, $current_language ) ) ?>"><?php echo esc_html( zume_get_landing_title( 14, $current_language ) ) ?></a>
+                                        <?php endif; ?>
                                         <p class="t-description"><?php echo esc_html__( "Learn what ducklings have to do with disciple-making.", 'zume' ) ?></p>
                                     </div>
                                     <div class="cell small-3 medium-2 t-length hide-extra">
                                         <?php echo esc_html__( "15 min", 'zume' ) ?>
                                     </div>
                                     <div class="cell medium-10">
-                                        <a href="<?php echo esc_url( zume_get_landing_translation_url( 15, $current_language ) ) ?>"><?php echo esc_html( zume_get_landing_title( 15, $current_language ) ) ?></a><br>
+                                        <?php if ( empty( zume_get_landing_title( 15, $current_language ) ) ) :
+                                            esc_html_e("Eyes to See Where the Kingdom Isn't", 'zume' );
+                                        else: ?>
+                                            <a href="<?php echo esc_url( zume_get_landing_translation_url( 15, $current_language ) ) ?>"><?php echo esc_html( zume_get_landing_title( 15, $current_language ) ) ?></a>
+                                        <?php endif; ?>
                                         <p class="t-description"><?php echo esc_html__( 'Begin to see where God’s Kingdom isn’t. These are usually the places where God wants to work the most.', 'zume' ) ?></p>
                                     </div>
                                     <div class="cell medium-2 t-length hide-extra">
                                         <?php echo esc_html__( "15 min", 'zume' ) ?>
                                     </div>
                                     <div class="cell medium-10">
-                                        <a href="<?php echo esc_url( zume_get_landing_translation_url( 16, $current_language ) ) ?>"><?php echo esc_html( zume_get_landing_title( 16, $current_language ) ) ?></a><br>
+                                        <?php if ( empty( zume_get_landing_title( 16, $current_language ) ) ) :
+                                            esc_html_e("The Lord's Supper and How to Lead It", 'zume' );
+                                        else: ?>
+                                            <a href="<?php echo esc_url( zume_get_landing_translation_url( 16, $current_language ) ) ?>"><?php echo esc_html( zume_get_landing_title( 16, $current_language ) ) ?></a>
+                                        <?php endif; ?>
                                         <p class="t-description"><?php echo esc_html__( "It’s a simple way to celebrate our intimate connection and ongoing relationship with Jesus. Learn a simple way to celebrate.", 'zume' ) ?></p>
                                     </div>
                                     <div class="cell medium-2 t-length hide-extra">
@@ -371,21 +438,33 @@ $zendesk_enable = true;
                                         <?php echo esc_html__( "5 min", 'zume' ) ?>
                                     </div>
                                     <div class="cell medium-10">
-                                        <a href="<?php echo esc_url( zume_get_landing_translation_url( 17, $current_language ) ) ?>"><?php echo esc_html( zume_get_landing_title( 17, $current_language ) ) ?></a><br>
+                                        <?php if ( empty( zume_get_landing_title( 17, $current_language ) ) ) :
+                                            esc_html_e('Prayer Walking and How To Do It', 'zume' );
+                                        else: ?>
+                                            <a href="<?php echo esc_url( zume_get_landing_translation_url( 17, $current_language ) ) ?>"><?php echo esc_html( zume_get_landing_title( 17, $current_language ) ) ?></a>
+                                        <?php endif; ?>
                                         <p class="t-description"><?php echo esc_html__( "It’s a simple way to obey God’s command to pray for others. And it's just what it sounds like — praying to God while walking around!", 'zume' ) ?></p>
                                     </div>
                                     <div class="cell medium-2 t-length hide-extra">
                                         <?php echo esc_html__( "15 min", 'zume' ) ?>
                                     </div>
                                     <div class="cell medium-10">
-                                        <a href="<?php echo esc_url( zume_get_landing_translation_url( 18, $current_language ) ) ?>"><?php echo esc_html( zume_get_landing_title( 18, $current_language ) ) ?></a><br>
+                                        <?php if ( empty( zume_get_landing_title( 18, $current_language ) ) ) :
+                                            esc_html_e('A Person of Peace and How To Find One', 'zume' );
+                                        else: ?>
+                                            <a href="<?php echo esc_url( zume_get_landing_translation_url( 18, $current_language ) ) ?>"><?php echo esc_html( zume_get_landing_title( 18, $current_language ) ) ?></a>
+                                        <?php endif; ?>
                                         <p class="t-description"><?php echo esc_html__( "Learn who a person of peace might be and how to know when you've found one.", 'zume' ) ?></p>
                                     </div>
                                     <div class="cell medium-2 t-length hide-extra">
                                         <?php echo esc_html__( "15 min", 'zume' ) ?>
                                     </div>
                                     <div class="cell medium-10">
-                                        <a href="<?php echo esc_url( zume_get_landing_translation_url( 19, $current_language ) ) ?>"><?php echo esc_html( zume_get_landing_title( 19, $current_language ) ) ?></a><br>
+                                        <?php if ( empty( zume_get_landing_title( 19, $current_language ) ) ) :
+                                            esc_html_e('The BLESS Prayer Pattern', 'zume' );
+                                        else: ?>
+                                            <a href="<?php echo esc_url( zume_get_landing_translation_url( 19, $current_language ) ) ?>"><?php echo esc_html( zume_get_landing_title( 19, $current_language ) ) ?></a>
+                                        <?php endif; ?>
                                         <p class="t-description"><?php echo esc_html__( "Practice a simple mnemonic to remind you of ways to pray for others.", 'zume' ) ?></p>
                                     </div>
                                     <div class="cell medium-2 t-length hide-extra">
@@ -426,13 +505,22 @@ $zendesk_enable = true;
                                         <?php echo esc_html__( "5 min", 'zume' ) ?>
                                     </div>
                                     <div class="cell medium-10">
-                                        <a href="<?php echo esc_url( zume_get_landing_translation_url( 20, $current_language ) ) ?>"><?php echo esc_html( zume_get_landing_title( 20, $current_language ) ) ?></a><br>
+                                        <?php if ( empty( zume_get_landing_title( 20, $current_language ) ) ) :
+                                            esc_html_e('Faithfulness is Better Than Knowledge', 'zume' );
+                                        else: ?>
+                                            <a href="<?php echo esc_url( zume_get_landing_translation_url( 20, $current_language ) ) ?>"><?php echo esc_html( zume_get_landing_title( 20, $current_language ) ) ?></a>
+                                        <?php endif; ?>
                                         <p class="t-description"><?php echo esc_html__( "It's important what disciples know — but it's much more important what they DO with what they know.", 'zume' ) ?></p>
                                     </div>
                                     <div class="cell medium-2 t-length hide-extra">
                                         <?php echo esc_html__( "15 min", 'zume' ) ?>
                                     </div>
                                     <div class="cell medium-10">
+                                        <?php if ( empty( zume_get_landing_title( 21, $current_language ) ) ) :
+                                            esc_html_e('3/3 Group Meeting Pattern', 'zume' );
+                                        else: ?>
+                                            <a href="<?php echo esc_url( zume_get_landing_translation_url( 21, $current_language ) ) ?>"><?php echo esc_html( zume_get_landing_title( 21, $current_language ) ) ?></a>
+                                        <?php endif; ?>
                                         <a href="<?php echo esc_url( zume_get_landing_translation_url( 21, $current_language ) ) ?>"><?php echo esc_html( zume_get_landing_title( 21, $current_language ) ) ?></a><br>
                                         <p class="t-description"><?php echo esc_html__( "A 3/3 Group is a way for followers of Jesus to meet, pray, learn, grow, fellowship and practice obeying and sharing what they've learned. In this way, a 3/3 Group is not just a small group but a Simple Church.", 'zume' ) ?></p>
                                     </div>
@@ -457,7 +545,11 @@ $zendesk_enable = true;
                                         <a onclick="open_session( 7 )" class="button primary-button-hollow"><?php echo esc_html__( "Start", 'zume' ) ?></a>
                                     </div>
                                     <div class="cell medium-10">
-                                        <a href="<?php echo esc_url( zume_get_landing_translation_url( 22, $current_language ) ) ?>"><?php echo esc_html( zume_get_landing_title( 22, $current_language ) ) ?></a><br>
+                                        <?php if ( empty( zume_get_landing_title( 22, $current_language ) ) ) :
+                                            esc_html_e('Training Cycle for Maturing Disciples', 'zume' );
+                                        else: ?>
+                                            <a href="<?php echo esc_url( zume_get_landing_translation_url( 22, $current_language ) ) ?>"><?php echo esc_html( zume_get_landing_title( 22, $current_language ) ) ?></a>
+                                        <?php endif; ?>
                                         <p class="t-description"><?php echo esc_html__( "Learn the training cycle and consider how it applies to disciple making.", 'zume' ) ?></p>
                                     </div>
                                     <div class="cell medium-2 t-length hide-extra">
@@ -498,7 +590,11 @@ $zendesk_enable = true;
                                         <?php echo esc_html__( "5 min", 'zume' ) ?>
                                     </div>
                                     <div class="cell medium-10">
-                                        <a href="<?php echo esc_url( zume_get_landing_translation_url( 23, $current_language ) ) ?>"><?php echo esc_html( zume_get_landing_title( 23, $current_language ) ) ?></a><br>
+                                        <?php if ( empty( zume_get_landing_title( 23, $current_language ) ) ) :
+                                            esc_html_e('Leadership Cells', 'zume' );
+                                        else: ?>
+                                            <a href="<?php echo esc_url( zume_get_landing_translation_url( 23, $current_language ) ) ?>"><?php echo esc_html( zume_get_landing_title( 23, $current_language ) ) ?></a>
+                                        <?php endif; ?>
                                         <p class="t-description"><?php echo esc_html__( "A Leadership Cell is a way someone who feels called to lead can develop their leadership by practicing serving.", 'zume' ) ?></p>
                                     </div>
                                     <div class="cell medium-2 t-length hide-extra">
@@ -533,28 +629,40 @@ $zendesk_enable = true;
                                         <?php echo esc_html__( "5 min", 'zume' ) ?>
                                     </div>
                                     <div class="cell medium-10">
-                                        <a href="<?php echo esc_url( zume_get_landing_translation_url( 24, $current_language ) ) ?>"><?php echo esc_html( zume_get_landing_title( 24, $current_language ) ) ?></a><br>
+                                        <?php if ( empty( zume_get_landing_title( 24, $current_language ) ) ) :
+                                            esc_html_e('Expect Non-Sequential Growth', 'zume' );
+                                        else: ?>
+                                            <a href="<?php echo esc_url( zume_get_landing_translation_url( 24, $current_language ) ) ?>"><?php echo esc_html( zume_get_landing_title( 24, $current_language ) ) ?></a>
+                                        <?php endif; ?>
                                         <p class="t-description"><?php echo esc_html__( "See how disciple making doesn't have to be linear. Multiple things can happen at the same time.", 'zume' ) ?></p>
                                     </div>
                                     <div class="cell medium-2 t-length hide-extra">
                                         <?php echo esc_html__( "15 min", 'zume' ) ?>
                                     </div>
                                     <div class="cell medium-10">
-                                        <a href="<?php echo esc_url( zume_get_landing_translation_url( 25, $current_language ) ) ?>"><?php echo esc_html( zume_get_landing_title( 25, $current_language ) ) ?></a><br>
+                                        <?php if ( empty( zume_get_landing_title( 25, $current_language ) ) ) :
+                                            esc_html_e('Pace of Multiplication Matters', 'zume' );
+                                        else: ?>
+                                            <a href="<?php echo esc_url( zume_get_landing_translation_url( 25, $current_language ) ) ?>"><?php echo esc_html( zume_get_landing_title( 25, $current_language ) ) ?></a>
+                                        <?php endif; ?>
                                         <p class="t-description"><?php echo esc_html__( "Multiplying matters and multiplying quickly matters even more. See why pace matters.", 'zume' ) ?></p>
                                     </div>
                                     <div class="cell medium-2 t-length hide-extra">
                                         <?php echo esc_html__( "15 min", 'zume' ) ?>
                                     </div>
                                     <div class="cell medium-10">
-                                        <a href="<?php echo esc_url( zume_get_landing_translation_url( 26, $current_language ) ) ?>"><?php echo esc_html( zume_get_landing_title( 26, $current_language ) ) ?></a><br>
+                                        <?php if ( empty( zume_get_landing_title( 26, $current_language ) ) ) :
+                                            esc_html_e('Always Part of Two Churches', 'zume' );
+                                        else: ?>
+                                            <a href="<?php echo esc_url( zume_get_landing_translation_url( 26, $current_language ) ) ?>"><?php echo esc_html( zume_get_landing_title( 26, $current_language ) ) ?></a>
+                                        <?php endif; ?>
                                         <p class="t-description"><?php echo esc_html__( "Learn how to obey Jesus' commands by going AND staying.", 'zume' ) ?></p>
                                     </div>
                                     <div class="cell medium-2 t-length hide-extra">
                                         <?php echo esc_html__( "15 min", 'zume' ) ?>
                                     </div>
                                     <div class="cell medium-10">
-                                        <a href="<?php echo esc_url( zume_get_landing_translation_url( 27, $current_language ) ) ?>" rel=“nofollow”><?php echo esc_html( zume_get_landing_title( 27, $current_language ) ) ?>
+                                        <a href="<?php echo esc_url( zume_get_landing_translation_url( 27, $current_language ) ) ?>" rel=“nofollow”><?php esc_html_e('Three-Month Plan', 'zume' ); ?>
                                             <?php echo ( is_user_logged_in() ) ? '' : '('. esc_html__( "login required", 'zume' )  . ')'; ?></a><br>
                                         <p class="t-description"><?php echo esc_html__( "Create and share your plan for how you will implement the Zúme tools over the next three months.", 'zume' ) ?></p>
                                     </div>
