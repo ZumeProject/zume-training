@@ -38,11 +38,11 @@ if ( ! function_exists( 'dt_get_location_grid_mirror' ) ) {
     function dt_get_location_grid_mirror( $url_only = false ) {
         $mirror = get_option( 'dt_location_grid_mirror' );
         if ( empty( $mirror ) ) {
-            $array = array(
+            $array = [
                 'key'   => 'google',
                 'label' => 'Google',
                 'url'   => 'https://storage.googleapis.com/location-grid-mirror/',
-            );
+            ];
             update_option( 'dt_location_grid_mirror', $array, true );
             $mirror = $array;
         }
@@ -153,7 +153,7 @@ if ( ! isset( $dt_mapping['module_config_path'] ) ) {
 /** Add dt options */
 if ( ! isset( $dt_mapping['options'] ) ) {
     $all_options = wp_load_alloptions();
-    $dt_mapping['options'] = array();
+    $dt_mapping['options'] = [];
     foreach ( $all_options as $key => $value ) {
         if ( substr( $key, 0, 3 ) === 'dt_' ) {
             $dt_mapping['options'][$key] = $value;
@@ -174,10 +174,10 @@ if ( ! isset( $dt_mapping['spinner'] ) ) {
 /** Add theme info */
 if ( ! isset( $dt_mapping['theme'] ) ) {
     $wp_theme = wp_get_theme();
-    $dt_mapping['theme'] = array(
+    $dt_mapping['theme'] = [
         'current_theme_name' => $wp_theme->name,
         'current_theme_version' => $wp_theme->version,
-    );
+    ];
 }
 
 /** Add globals to global object */
@@ -194,7 +194,7 @@ require_once( 'class-migration-engine.php' );
 try {
     DT_Mapping_Module_Migration_Engine::migrate( DT_Mapping_Module_Migration_Engine::$migration_number );
 } catch ( Throwable $e ) {
-    $migration_error = new WP_Error( 'migration_error', 'Migration engine for mapping module failed to migrate.', array( 'error' => $e ) );
+    $migration_error = new WP_Error( 'migration_error', 'Migration engine for mapping module failed to migrate.', [ 'error' => $e ] );
     dt_write_log( $migration_error );
 }
 /*******************************************************************************************************************/

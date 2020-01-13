@@ -15,7 +15,7 @@ class DT_Mapping_Module_Migration_0007 extends DT_Mapping_Module_Migration {
         if ( ! isset( $wpdb->dt_geonames ) ) {
             $wpdb->dt_geonames = $wpdb->prefix . 'dt_geonames';
         }
-        $unmatched = array();
+        $unmatched = [];
 
         /* Test and see if there are any geoname records in the database, if not end script. */
         $count = $wpdb->get_var( "
@@ -96,17 +96,17 @@ class DT_Mapping_Module_Migration_0007 extends DT_Mapping_Module_Migration {
 
 
             // load list to array, make geonameid key
-            $geonames_ref = array();
+            $geonames_ref = [];
             $geonmes_ref_raw = array_map( function( $v){return str_getcsv( $v, "\t" );
             }, file( $uploads_dir . "location_grid_download/geonames_ref_table.tsv" ) );
             if ( empty( $geonmes_ref_raw ) ) {
                 throw new Exception( 'Failed to build array from remote file.' );
             }
             foreach ( $geonmes_ref_raw as $value ) {
-                $geonames_ref[$value[1]] = array(
+                $geonames_ref[$value[1]] = [
                     'grid_id' => $value[0],
                     'geonameid' => $value[1],
-                );
+                ];
             }
 
 
@@ -147,34 +147,34 @@ class DT_Mapping_Module_Migration_0007 extends DT_Mapping_Module_Migration {
                 if ( isset( $geonames_ref[$value['meta_value']] ) ) {
                     $wpdb->update(
                         $wpdb->postmeta,
-                        array(
+                        [
                             'meta_key' => 'location_grid',
                             'meta_value' => $geonames_ref[$value['meta_value']]['grid_id'],
 
-                        ),
-                        array(
+                        ],
+                        [
                             'post_id' => $value['post_id']
-                        ),
-                        array(
+                        ],
+                        [
                             '%s',
                             '%d'
-                        ),
-                        array(
+                        ],
+                        [
                             '%d'
-                        )
+                        ]
                     );
 
                     dt_write_log( 'match post_geonames: ' . $value['post_id'] );
                 } else {
                     if ( ! isset( $unmatched[$value['meta_value']] ) ) {
-                        $unmatched[$value['meta_value']] = array();
+                        $unmatched[$value['meta_value']] = [];
                     }
-                    $unmatched[$value['meta_value']][] = array(
+                    $unmatched[$value['meta_value']][] = [
                         'type' => 'post',
                         'id' => $value['post_id'],
                         'geonameid' => $value['meta_value'],
                         'geoname_row' => $wpdb->get_row( $wpdb->prepare( "SELECT * FROM $wpdb->dt_geonames WHERE geonameid = %s", $value['meta_value'] ), ARRAY_A ),
-                    );
+                    ];
 
                     dt_write_log( 'unmatch post_geonames: ' . $value['post_id'] );
                 }
@@ -188,34 +188,34 @@ class DT_Mapping_Module_Migration_0007 extends DT_Mapping_Module_Migration {
                 if ( isset( $geonames_ref[$value['meta_value']] ) ) {
                     $wpdb->update(
                         $wpdb->dt_activity_log,
-                        array(
+                        [
                             'meta_key' => 'location_grid',
                             'meta_value' => $geonames_ref[$value['meta_value']]['grid_id'],
 
-                        ),
-                        array(
+                        ],
+                        [
                             'histid' => $value['histid']
-                        ),
-                        array(
+                        ],
+                        [
                             '%s',
                             '%d'
-                        ),
-                        array(
+                        ],
+                        [
                             '%d'
-                        )
+                        ]
                     );
 
                     dt_write_log( 'match activity log: ' . $value['histid'] );
                 } else {
                     if ( ! isset( $unmatched[$value['meta_value']] ) ) {
-                        $unmatched[$value['meta_value']] = array();
+                        $unmatched[$value['meta_value']] = [];
                     }
-                    $unmatched[$value['meta_value']][] = array(
+                    $unmatched[$value['meta_value']][] = [
                         'type' => 'activity',
                         'id' => $value['histid'],
                         'geonameid' => $value['meta_value'],
                         'geoname_row' => $wpdb->get_row( $wpdb->prepare( "SELECT * FROM $wpdb->dt_geonames WHERE geonameid = %s", $value['meta_value'] ), ARRAY_A ),
-                    );
+                    ];
 
                     dt_write_log( 'unmatch activity log: ' . $value['histid'] );
                 }
@@ -224,7 +224,7 @@ class DT_Mapping_Module_Migration_0007 extends DT_Mapping_Module_Migration {
             // migrate focus
             $default_map_settings = get_option( 'dt_mapping_module_starting_map_level' );
             if ( !empty( $default_map_settings["children"] ) ){
-                $new_children = array();
+                $new_children = [];
                 foreach ( $default_map_settings["children"] as $c ){
                     if ( isset( $geonames_ref[$c] ) ) {
                         $new_children[] = $geonames_ref[$c]["grid_id"];
@@ -270,7 +270,7 @@ class DT_Mapping_Module_Migration_0007 extends DT_Mapping_Module_Migration {
 
                         $wpdb->insert(
                             $wpdb->dt_location_grid,
-                            array(
+                            [
                                 'grid_id'            => $custom_grid_id,
                                 'name'               => $value['name'],
                                 'level'              => $level,
@@ -296,8 +296,8 @@ class DT_Mapping_Module_Migration_0007 extends DT_Mapping_Module_Migration {
                                 'alt_population'     => empty( $value['alt_population'] ) ? $value['population'] : $value['alt_population'],
                                 'is_custom_location' => 1,
                                 'alt_name_changed'   => $value['alt_name_changed'],
-                            ),
-                            array(
+                            ],
+                            [
                                 '%d',
                                 '%s', // name
                                 '%d', // level
@@ -323,20 +323,20 @@ class DT_Mapping_Module_Migration_0007 extends DT_Mapping_Module_Migration {
                                 '%s', // alt_name
                                 '%d',
                                 '%d',
-                            )
+                            ]
                         );
 
                         dt_write_log( 'match custom location: ' . $custom_grid_id );
                     } else {
                         if ( !isset( $unmatched[ $value['geonameid'] ] ) ) {
-                            $unmatched[ $value['geonameid'] ] = array();
+                            $unmatched[ $value['geonameid'] ] = [];
                         }
-                        $unmatched[ $value['geonameid'] ][] = array(
+                        $unmatched[ $value['geonameid'] ][] = [
                             'type'        => 'custom_location',
                             'id'          => $value['geonameid'],
                             'geonameid'   => $value['geonameid'],
                             'geoname_row' => $wpdb->get_row( $wpdb->prepare( "SELECT * FROM $wpdb->dt_geonames WHERE geonameid = %s", $value['geonameid'] ), ARRAY_A ),
-                        );
+                        ];
 
                         dt_write_log( 'unmatch custom location: ' . $value['geonameid'] );
                     }
@@ -353,31 +353,31 @@ class DT_Mapping_Module_Migration_0007 extends DT_Mapping_Module_Migration {
                     if ( isset( $geonames_ref[ $value['geonameid'] ] ) ) {
                         $wpdb->update(
                             $wpdb->dt_location_grid,
-                            array(
+                            [
                                 'alt_population' => $value['alt_population'],
-                            ),
-                            array(
+                            ],
+                            [
                                 'grid_id' => $geonames_ref[ $value['geonameid'] ]['grid_id']
-                            ),
-                            array(
+                            ],
+                            [
                                 '%d'
-                            ),
-                            array(
+                            ],
+                            [
                                 '%d'
-                            )
+                            ]
                         );
 
                         dt_write_log( 'match custom population: ' . $geonames_ref[ $value['geonameid'] ]['grid_id'] );
                     } else {
                         if ( !isset( $unmatched[ $value['geonameid'] ] ) ) {
-                            $unmatched[ $value['geonameid'] ] = array();
+                            $unmatched[ $value['geonameid'] ] = [];
                         }
-                        $unmatched[ $value['geonameid'] ][] = array(
+                        $unmatched[ $value['geonameid'] ][] = [
                             'type'        => 'population',
                             'id'          => $value['geonameid'],
                             'geonameid'   => $value['geonameid'],
                             'geoname_row' => $wpdb->get_row( $wpdb->prepare( "SELECT * FROM $wpdb->dt_geonames WHERE geonameid = %s", $value['geonameid'] ), ARRAY_A ),
-                        );
+                        ];
 
                         dt_write_log( 'unmatch custom population: ' . $value['geonameid'] );
                     }
@@ -395,31 +395,31 @@ class DT_Mapping_Module_Migration_0007 extends DT_Mapping_Module_Migration {
                     if ( isset( $geonames_ref[ $value['geonameid'] ] ) ) {
                         $wpdb->update(
                             $wpdb->dt_location_grid,
-                            array(
+                            [
                                 'alt_name' => $value['alt_name'],
-                            ),
-                            array(
+                            ],
+                            [
                                 'grid_id' => $geonames_ref[ $value['geonameid'] ]['grid_id']
-                            ),
-                            array(
+                            ],
+                            [
                                 '%d'
-                            ),
-                            array(
+                            ],
+                            [
                                 '%d'
-                            )
+                            ]
                         );
 
                         dt_write_log( 'match custom names: ' . $geonames_ref[ $value['geonameid'] ]['grid_id'] );
                     } else {
                         if ( !isset( $unmatched[ $value['geonameid'] ] ) ) {
-                            $unmatched[ $value['geonameid'] ] = array();
+                            $unmatched[ $value['geonameid'] ] = [];
                         }
-                        $unmatched[ $value['geonameid'] ][] = array(
+                        $unmatched[ $value['geonameid'] ][] = [
                             'type'        => 'names',
                             'id'          => $value['geonameid'],
                             'geonameid'   => $value['geonameid'],
                             'geoname_row' => $wpdb->get_row( $wpdb->prepare( "SELECT * FROM $wpdb->dt_geonames WHERE geonameid = %s", $value['geonameid'] ), ARRAY_A ),
-                        );
+                        ];
 
                         dt_write_log( 'unmatch custom names: ' . $value['geonameid'] );
                     }
@@ -443,7 +443,7 @@ class DT_Mapping_Module_Migration_0007 extends DT_Mapping_Module_Migration {
     }
 
     public function get_expected_tables(): array {
-        return array();
+        return [];
     }
 }
 

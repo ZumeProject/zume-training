@@ -601,7 +601,8 @@ class Zume_V4_Groups {
 
                 array_push( $modified_group['coleaders_accepted'], $user->user_email );
 
-                if ( ( $index = array_search( $user->user_email, $modified_group['coleaders_declined'] ) ) !== false) {
+                $index = array_search( $user->user_email, $modified_group['coleaders_declined'] );
+                if ( $index !== false) {
                     unset( $modified_group['coleaders_declined'][$index] );
                 }
 
@@ -620,7 +621,8 @@ class Zume_V4_Groups {
 
                 array_push( $modified_group['coleaders_declined'], $user->user_email );
 
-                if ( ( $index = array_search( $user->user_email, $modified_group['coleaders_accepted'] ) ) !== false) {
+                $index = array_search( $user->user_email, $modified_group['coleaders_accepted'] );
+                if ( $index !== false) {
                     unset( $modified_group['coleaders_accepted'][$index] );
                 }
 

@@ -38,7 +38,7 @@ if ( strpos( $dir, 'wp-content/themes' ) ) {
 if ( file_exists( $mapping_url . 'geocode-api/location-grid-geocoder.php' ) ) {
     require_once( 'geocode-api/location-grid-geocoder.php' ); // Location grid geocoder
 } else {
-    echo json_encode( array( 'error' => 'did not find geocoder file' ) );
+    echo json_encode( [ 'error' => 'did not find geocoder file' ] );
     return;
 }
 

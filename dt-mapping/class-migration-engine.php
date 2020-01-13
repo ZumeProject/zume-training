@@ -37,7 +37,7 @@ class DT_Mapping_Module_Migration_Engine
             throw new Exception( "Could not scan migrations directory" );
         }
         $expected_migration_number = 0;
-        $rv = array();
+        $rv = [];
         foreach ( $filenames as $filename ) {
             if ( $filename[0] !== "." && $filename !== "abstract.php"){
                 if ( preg_match( '/^([0-9][0-9][0-9][0-9])(-.*)?\.php$/i', $filename, $matches ) ) {
@@ -100,20 +100,20 @@ class DT_Mapping_Module_Migration_Engine
             }
             update_option( 'dt_mapping_module_migration_lock', '1' );
 
-            error_log( date( " Y-m-d H:i:s T" ) . " Starting migrating to number $activating_migration_number" );
+            error_log( gmdate( " Y-m-d H:i:s T" ) . " Starting migrating to number $activating_migration_number" );
             try {
                 $migration->up();
             } catch (Throwable $e) {
-                update_option( 'dt_mapping_module_migrate_last_error', array(
+                update_option( 'dt_mapping_module_migrate_last_error', [
                     'message' => $e->getMessage(),
                     'code' => $e->getCode(),
                     'trace' => $e->getTrace(),
                     'time' => time(),
-                ) );
+                ] );
                 throw $e;
             }
             update_option( 'dt_mapping_module_migration_number', (string) $activating_migration_number );
-            error_log( date( " Y-m-d H:i:s T" ) . " Done migrating to number $activating_migration_number" );
+            error_log( gmdate( " Y-m-d H:i:s T" ) . " Done migrating to number $activating_migration_number" );
 
             update_option( 'dt_mapping_module_migration_lock', '0' );
 

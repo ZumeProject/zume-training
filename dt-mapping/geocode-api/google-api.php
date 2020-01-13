@@ -64,32 +64,32 @@ if ( ! class_exists( 'Disciple_Tools_Google_Geocode_API' ) ) {
                         $g_lat = $details['results'][0]['geometry']['location']['lat'];
                         $g_lng = $details['results'][0]['geometry']['location']['lng'];
 
-                        return array(
+                        return [
                             'lng' => $g_lng,
                             'lat' => $g_lat,
                             'raw' => $details,
-                        );
+                        ];
                         break;
                     case 'core':
                         $g_lat               = $details['results'][0]['geometry']['location']['lat'];
                         $g_lng               = $details['results'][0]['geometry']['location']['lng'];
                         $g_formatted_address = $details['results'][0]['formatted_address'];
 
-                        return array(
+                        return [
                             'lng'               => $g_lng,
                             'lat'               => $g_lat,
                             'formatted_address' => $g_formatted_address,
                             'raw'               => $details,
-                        );
+                        ];
                         break;
                     case 'all_points':
-                        return array(
+                        return [
                             'center'            => $details['results'][0]['geometry']['location'],
                             'northeast'         => $details['results'][0]['geometry']['bounds']['northeast'],
                             'southwest'         => $details['results'][0]['geometry']['bounds']['southwest'],
                             'formatted_address' => $details['results'][0]['formatted_address'],
                             'raw'               => $details,
-                        );
+                        ];
                         break;
                     default:
                         return $details; // raw response
@@ -98,14 +98,14 @@ if ( ! class_exists( 'Disciple_Tools_Google_Geocode_API' ) ) {
             }
         }
 
-        public static function query_google_api_with_components( $address, $components = array() ) {
+        public static function query_google_api_with_components( $address, $components = [] ) {
             $address = str_replace( '   ', ' ', $address );
             $address = str_replace( '  ', ' ', $address );
             $address = urlencode( trim( $address ) );
 
-            $components = wp_parse_args( $components, array(
+            $components = wp_parse_args( $components, [
                 'country' => '',
-            ) );
+            ] );
 
             $component_string = '';
             $i                = 0;
@@ -462,7 +462,7 @@ if ( ! class_exists( 'Disciple_Tools_Google_Geocode_API' ) ) {
                     break;
 
                 case 'political':
-                    $political = array();
+                    $political = [];
                     foreach ( $raw['address_components'] as $component ) {
                         $designation = $component['types'][1] ?? '';
                         if ( 'political' == $designation ) {

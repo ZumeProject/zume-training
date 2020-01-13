@@ -60,7 +60,7 @@ class Zume_Welcome_Messages {
         }
 
         // check if you need to recalulate
-        if ( ! $current_message['date'] > date( "Y-m-j H:i:s", strtotime( '1 day ago' ) ) ) {
+        if ( ! $current_message['date'] > gmdate( "Y-m-j H:i:s", strtotime( '1 day ago' ) ) ) {
             return self::get_message_text( $current_message['key'] );
         }
 

@@ -19,7 +19,7 @@ if ( ! class_exists( 'DT_Mapping_Module_Loader' ) ) {
                  * it can be included in functions like other globals:
                  *      global $dt_mapping;
                  */
-                $dt_mapping = array();
+                $dt_mapping = [];
             }
             if ( ! isset( $dt_mapping['environment'] ) ) {
                 /**

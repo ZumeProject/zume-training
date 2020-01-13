@@ -98,7 +98,7 @@ class Zume_Migration_Engine
             }
             update_option( 'dt_migration_lock', '1' );
 
-            dt_write_log( date( " Y-m-d H:i:s T" ) . " Starting migrating to number $activating_migration_number" );
+            dt_write_log( gmdate( " Y-m-d H:i:s T" ) . " Starting migrating to number $activating_migration_number" );
             try {
                 $migration->up();
             } catch (Throwable $e) {
@@ -111,7 +111,7 @@ class Zume_Migration_Engine
                 throw $e;
             }
             update_option( 'dt_migration_number', (string) $activating_migration_number );
-            dt_write_log( date( " Y-m-d H:i:s T" ) . " Done migrating to number $activating_migration_number" );
+            dt_write_log( gmdate( " Y-m-d H:i:s T" ) . " Done migrating to number $activating_migration_number" );
 
             update_option( 'dt_migration_lock', '0' );
 

@@ -7,13 +7,13 @@ get_header();
 
 if (have_posts()) :
     while (have_posts()) : the_post();
-        $post_id = get_the_ID();
-        $meta = get_post_meta( $post_id );
+        $postid = get_the_ID();
+        $meta = get_post_meta( $postid );
         $tool_number = $meta['zume_piece'][0] ?? 0;
         $pre_video_content = $meta['zume_pre_video_content'][0] ?? '';
         $post_video_content = $meta['zume_post_video_content'][0] ?? '';
         $ask_content = $meta['zume_ask_content'][0] ?? '';
-        $h1_title = empty( $meta['zume_piece_h1'][0] ) ? get_the_title( $post_id ) : $meta['zume_piece_h1'][0];
+        $h1_title = empty( $meta['zume_piece_h1'][0] ) ? get_the_title( $postid ) : $meta['zume_piece_h1'][0];
 
         $args = Zume_V4_Pieces::vars( $tool_number );
         if ( empty( $args ) ) {
@@ -47,7 +47,7 @@ if (have_posts()) :
                 <h1><?php echo esc_html( $h1_title ) ?></h1>
                 <span class="sub-caption">
                     <a onclick="open_session(<?php echo esc_attr( $session_number ); ?>)">
-                        <?php echo sprintf( esc_html__( 'This concept is called "%1$s" in session %2$s of the Zúme Training', 'zume' ), get_the_title( $post_id ), $session_number ) ?>
+                        <?php echo sprintf( esc_html__( 'This concept is called "%1$s" in session %2$s of the Zúme Training', 'zume' ), esc_html( get_the_title( $postid ) ), esc_attr( $session_number ) ) ?>
                     </a>
                 </span>
             </div>

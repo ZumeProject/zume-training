@@ -156,7 +156,8 @@ class Zume_User_Registration
         }
 
         // add google id if needed
-        if ( ! ( $google_id = get_user_meta( $user_id, 'google_sso_id' ) ) ) {
+        $google_id = get_user_meta( $user_id, 'google_sso_id' );
+        if ( empty( $google_id ) ) {
             update_user_meta( $user_id, 'google_sso_id', $google_user_id );
         }
 

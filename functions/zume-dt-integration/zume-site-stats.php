@@ -28,7 +28,7 @@ class Zume_Site_Stats
         $report['timestamp'] = current_time( 'mysql' );
 
         // store record until midnight
-        $midnight = mktime( 0, 0, 0, date( 'n' ), date( 'j' ) +1, date( 'Y' ) );
+        $midnight = mktime( 0, 0, 0, gmdate( 'n' ), gmdate( 'j' ) +1, gmdate( 'Y' ) );
         $the_time_until_midnight = $midnight - current_time( 'timestamp' );
         delete_transient( 'dt_zume_site_stats' );
         set_transient( 'dt_zume_site_stats', $report, $the_time_until_midnight );
@@ -90,7 +90,7 @@ class Zume_Site_Stats
                 }
 
                 // active people
-                $thirty_days_ago = date( 'Y-m-d H:i:s', strtotime( '-30 days' ) );
+                $thirty_days_ago = gmdate( 'Y-m-d H:i:s', strtotime( '-30 days' ) );
                 if ( $fields['session_1_complete'] > $thirty_days_ago ) {
                     $hero_stats['active_people'] = $hero_stats['active_people'] + $members_in_group;
                     $hero_stats['active_groups'] = $hero_stats['active_groups'] + 1;
@@ -434,7 +434,7 @@ class Zume_Site_Stats
         );
 
         foreach ( $results as $result ) {
-            $logins[] = array( date( 'M', strtotime( $result['date'] ) ), intval( $result['total'] ) );
+            $logins[] = array( gmdate( 'M', strtotime( $result['date'] ) ), intval( $result['total'] ) );
         }
 
         return $logins;
@@ -462,12 +462,12 @@ class Zume_Site_Stats
     public static function get_groups_progress_by_month() {
 
         // Get dates YYYY-M
-        $five_months_back = date( 'Y-n', strtotime( '-5 months -3 days' ) );
-        $four_months_back = date( 'Y-n', strtotime( '-4 months -3 days' ) );
-        $three_months_back = date( 'Y-n', strtotime( '-3 months -3 days' ) );
-        $two_months_back = date( 'Y-n', strtotime( '-2 months -3 days' ) );
-        $one_month_back = date( 'Y-n', strtotime( '-1 month -3 days' ) );
-        $this_month = date( 'Y-n' );
+        $five_months_back = gmdate( 'Y-n', strtotime( '-5 months -3 days' ) );
+        $four_months_back = gmdate( 'Y-n', strtotime( '-4 months -3 days' ) );
+        $three_months_back = gmdate( 'Y-n', strtotime( '-3 months -3 days' ) );
+        $two_months_back = gmdate( 'Y-n', strtotime( '-2 months -3 days' ) );
+        $one_month_back = gmdate( 'Y-n', strtotime( '-1 month -3 days' ) );
+        $this_month = gmdate( 'Y-n' );
 
         // build default date array
         $expected_dates = array(
@@ -498,7 +498,7 @@ class Zume_Site_Stats
                 'Average'
             ),
             array(
-                date( 'M', strtotime( '-5 months -3 days' ) ),
+                gmdate( 'M', strtotime( '-5 months -3 days' ) ),
                 $registered[$five_months_back],
                 $engaged[$five_months_back],
                 $trained[$five_months_back],
@@ -509,7 +509,7 @@ class Zume_Site_Stats
                 )) /6 )
             ),
             array(
-                date( 'M', strtotime( '-4 months -3 days' ) ),
+                gmdate( 'M', strtotime( '-4 months -3 days' ) ),
                 $registered[$four_months_back],
                 $engaged[$four_months_back],
                 $trained[$four_months_back],
@@ -520,7 +520,7 @@ class Zume_Site_Stats
                 )) /6 )
             ),
             array(
-                date( 'M', strtotime( '-3 months -3 days' ) ),
+                gmdate( 'M', strtotime( '-3 months -3 days' ) ),
                 $registered[$three_months_back],
                 $engaged[$three_months_back],
                 $trained[$three_months_back],
@@ -531,7 +531,7 @@ class Zume_Site_Stats
                 )) /6 )
             ),
             array(
-                date( 'M', strtotime( '-2 months -3 days' ) ),
+                gmdate( 'M', strtotime( '-2 months -3 days' ) ),
                 $registered[$two_months_back],
                 $engaged[$two_months_back],
                 $trained[$two_months_back],
@@ -542,7 +542,7 @@ class Zume_Site_Stats
                 )) /6 )
             ),
             array(
-                date( 'M', strtotime( '-1 month -3 days' ) ),
+                gmdate( 'M', strtotime( '-1 month -3 days' ) ),
                 $registered[$one_month_back],
                 $engaged[$one_month_back],
                 $trained[$one_month_back],
@@ -553,7 +553,7 @@ class Zume_Site_Stats
                 )) /6 )
             ),
             array(
-                date( 'M' ),
+                gmdate( 'M' ),
                 $registered[$this_month],
                 $engaged[$this_month],
                 $trained[$this_month],
@@ -571,12 +571,12 @@ class Zume_Site_Stats
     public static function get_people_progress_by_month() {
 
         // Get dates YYYY-M
-        $five_months_back = date( 'Y-n', strtotime( '-5 months -3 days' ) );
-        $four_months_back = date( 'Y-n', strtotime( '-4 months -3 days' ) );
-        $three_months_back = date( 'Y-n', strtotime( '-3 months -3 days' ) );
-        $two_months_back = date( 'Y-n', strtotime( '-2 months -3 days' ) );
-        $one_month_back = date( 'Y-n', strtotime( '-1 month -3 days' ) );
-        $this_month = date( 'Y-n' );
+        $five_months_back = gmdate( 'Y-n', strtotime( '-5 months -3 days' ) );
+        $four_months_back = gmdate( 'Y-n', strtotime( '-4 months -3 days' ) );
+        $three_months_back = gmdate( 'Y-n', strtotime( '-3 months -3 days' ) );
+        $two_months_back = gmdate( 'Y-n', strtotime( '-2 months -3 days' ) );
+        $one_month_back = gmdate( 'Y-n', strtotime( '-1 month -3 days' ) );
+        $this_month = gmdate( 'Y-n' );
 
         // build default date array
         $expected_dates = array(
@@ -607,7 +607,7 @@ class Zume_Site_Stats
                 'Average'
             ),
             array(
-                date( 'M', strtotime( '-5 months -3 days' ) ),
+                gmdate( 'M', strtotime( '-5 months -3 days' ) ),
                 $registered[$five_months_back],
                 $engaged[$five_months_back],
                 $trained[$five_months_back],
@@ -618,7 +618,7 @@ class Zume_Site_Stats
                 )) /6 )
             ),
             array(
-                date( 'M', strtotime( '-4 months -3 days' ) ),
+                gmdate( 'M', strtotime( '-4 months -3 days' ) ),
                 $registered[$four_months_back],
                 $engaged[$four_months_back],
                 $trained[$four_months_back],
@@ -629,7 +629,7 @@ class Zume_Site_Stats
                 )) /6 )
             ),
             array(
-                date( 'M', strtotime( '-3 months -3 days' ) ),
+                gmdate( 'M', strtotime( '-3 months -3 days' ) ),
                 $registered[$three_months_back],
                 $engaged[$three_months_back],
                 $trained[$three_months_back],
@@ -640,7 +640,7 @@ class Zume_Site_Stats
                 )) /6 )
             ),
             array(
-                date( 'M', strtotime( '-2 months -3 days' ) ),
+                gmdate( 'M', strtotime( '-2 months -3 days' ) ),
                 $registered[$two_months_back],
                 $engaged[$two_months_back],
                 $trained[$two_months_back],
@@ -651,7 +651,7 @@ class Zume_Site_Stats
                 )) /6 )
             ),
             array(
-                date( 'M', strtotime( '-1 month -3 days' ) ),
+                gmdate( 'M', strtotime( '-1 month -3 days' ) ),
                 $registered[$one_month_back],
                 $engaged[$one_month_back],
                 $trained[$one_month_back],
@@ -662,7 +662,7 @@ class Zume_Site_Stats
                 )) /6 )
             ),
             array(
-                date( 'M' ),
+                gmdate( 'M' ),
                 $registered[$this_month],
                 $engaged[$this_month],
                 $trained[$this_month],
@@ -679,12 +679,12 @@ class Zume_Site_Stats
 
     public static function get_active_by_month() {
         // Get dates YYYY-M
-        $five_months_back = date( 'Y-n', strtotime( '-5 months -3 days' ) );
-        $four_months_back = date( 'Y-n', strtotime( '-4 months -3 days' ) );
-        $three_months_back = date( 'Y-n', strtotime( '-3 months -3 days' ) );
-        $two_months_back = date( 'Y-n', strtotime( '-2 months -3 days' ) );
-        $one_month_back = date( 'Y-n', strtotime( '-1 month -3 days' ) );
-        $this_month = date( 'Y-n' );
+        $five_months_back = gmdate( 'Y-n', strtotime( '-5 months -3 days' ) );
+        $four_months_back = gmdate( 'Y-n', strtotime( '-4 months -3 days' ) );
+        $three_months_back = gmdate( 'Y-n', strtotime( '-3 months -3 days' ) );
+        $two_months_back = gmdate( 'Y-n', strtotime( '-2 months -3 days' ) );
+        $one_month_back = gmdate( 'Y-n', strtotime( '-1 month -3 days' ) );
+        $this_month = gmdate( 'Y-n' );
 
         // build default date array
         $expected_dates = array(
@@ -712,7 +712,7 @@ class Zume_Site_Stats
                 'Average'
             ),
             array(
-                date( 'M', strtotime( '-5 months -3 days' ) ),
+                gmdate( 'M', strtotime( '-5 months -3 days' ) ),
                 $active_groups[$five_months_back],
                 $active_people[$five_months_back],
                 $average = round(array_sum(array(
@@ -721,7 +721,7 @@ class Zume_Site_Stats
                 )) /6 )
             ),
             array(
-                date( 'M', strtotime( '-4 months -3 days' ) ),
+                gmdate( 'M', strtotime( '-4 months -3 days' ) ),
                 $active_groups[$four_months_back],
                 $active_people[$four_months_back],
                 $average = round(array_sum(array(
@@ -730,7 +730,7 @@ class Zume_Site_Stats
                 )) /6 )
             ),
             array(
-                date( 'M', strtotime( '-3 months -3 days' ) ),
+                gmdate( 'M', strtotime( '-3 months -3 days' ) ),
                 $active_groups[$three_months_back],
                 $active_people[$three_months_back],
                 $average = round(array_sum(array(
@@ -739,7 +739,7 @@ class Zume_Site_Stats
                 )) /6 )
             ),
             array(
-                date( 'M', strtotime( '-2 months -3 days' ) ),
+                gmdate( 'M', strtotime( '-2 months -3 days' ) ),
                 $active_groups[$two_months_back],
                 $active_people[$two_months_back],
                 $average = round(array_sum(array(
@@ -748,7 +748,7 @@ class Zume_Site_Stats
                 )) /6 )
             ),
             array(
-                date( 'M', strtotime( '-1 month -3 days' ) ),
+                gmdate( 'M', strtotime( '-1 month -3 days' ) ),
                 $active_groups[$one_month_back],
                 $active_people[$one_month_back],
                 $average = round(array_sum(array(
@@ -757,7 +757,7 @@ class Zume_Site_Stats
                 )) /6 )
             ),
             array(
-                date( 'M' ),
+                gmdate( 'M' ),
                 $active_groups[$this_month],
                 $active_people[$this_month],
                 $average = round(array_sum(array(

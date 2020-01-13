@@ -36,10 +36,10 @@ if ( ! class_exists( 'DT_Ipstack_API' ) ) {
          * GEOCODING
          *************************************************************************************************************/
         public static function geocode_ip_address( $ip_address, $type = null ) {
-            $data = array();
+            $data = [];
 
             if ( ! self::check_valid_ip_address( $ip_address ) ) {
-                return array( 'error' => 'Invalid IP Address' );
+                return [ 'error' => 'Invalid IP Address' ];
             }
 
             if ( is_null( $ip_address ) || empty( $ip_address ) ) {
@@ -70,7 +70,7 @@ if ( ! class_exists( 'DT_Ipstack_API' ) ) {
         public static function geocode_current_visitor() : array {
             $response = json_decode( self::url_get_contents( self::make_url( 'check' ) ), true );
             if ( isset( $response['success'] ) && ! $response['success'] ) {
-                return array();
+                return [];
             }
             return $response;
         }
@@ -271,31 +271,31 @@ if ( ! class_exists( 'DT_Ipstack_API' ) ) {
                     break;
 
                 case 'languages':
-                    return $raw_response['location']['languages'] ?? array();
+                    return $raw_response['location']['languages'] ?? [];
                     break;
 
                 case 'geoname_id':
-                    return $raw_response['location']['geoname_id'] ?? array();
+                    return $raw_response['location']['geoname_id'] ?? [];
                     break;
 
                 case 'capital':
-                    return $raw_response['location']['capital'] ?? array();
+                    return $raw_response['location']['capital'] ?? [];
                     break;
 
                 case 'country_flag':
-                    return $raw_response['location']['country_flag'] ?? array();
+                    return $raw_response['location']['country_flag'] ?? [];
                     break;
 
                 case 'country_flag_emoji':
-                    return $raw_response['location']['country_flag_emoji'] ?? array();
+                    return $raw_response['location']['country_flag_emoji'] ?? [];
                     break;
 
                 case 'country_flag_emoji_unicode':
-                    return $raw_response['location']['country_flag_emoji_unicode'] ?? array();
+                    return $raw_response['location']['country_flag_emoji_unicode'] ?? [];
                     break;
 
                 case 'calling_code':
-                    return $raw_response['location']['calling_code'] ?? array();
+                    return $raw_response['location']['calling_code'] ?? [];
                     break;
 
                 case 'lnglat':

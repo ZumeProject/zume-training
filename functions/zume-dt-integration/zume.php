@@ -219,7 +219,8 @@ class Zume_Integration
             // @todo build filter to return zume_affiliation
             dt_write_log( 'build zume_affiliation' );
         }
-        if ( $lang_site_key = $this->route_by_language( $user_data['zume_language'] ) ) {
+        $lang_site_key = $this->route_by_language( $user_data['zume_language'] );
+        if ( $lang_site_key ) {
             return $lang_site_key;
         }
 
@@ -274,7 +275,7 @@ class Zume_Integration
             $full_name = trim( $user_meta['first_name'] . ' ' . $user_meta['last_name'] );
 
             if ( empty( $full_name ) ) {
-                $full_name = $user_meta['nickname'] ?: $user->data->display_name;
+                $full_name = $user_meta['nickname'] ?? $user->data->display_name;
             }
         }
 

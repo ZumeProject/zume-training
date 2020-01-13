@@ -21,7 +21,7 @@ get_header();
 
                         <div class="cell border-bottom"><h1><?php esc_html_e( "The vision behind Zúme Training", 'zume' ) ?></h1></div>
                         <div class="cell padding-vertical-1"><img src="<?php echo esc_url( zume_images_uri() )?>zume-vision-logo.svg" style="max-height:100px" id="home-logo" alt="welcome-graphic" /></div>
-                        <div class="cell"><p class="large-text"><?php echo sprintf( __( "to saturate the world with multiplying disciples %s in our generation.", 'zume' ), '<br>' ) ?></p></div>
+                        <div class="cell"><p class="large-text"><?php esc_html_e( "to saturate the world with multiplying disciples", 'zume' ) ?><br><?php esc_html_e( 'in our generation.', 'zume' ) ?></p></div>
                         <div class="cell"><img src="<?php echo esc_url( zume_images_uri() )?>vision/jesus-globe.png" alt="welcome-graphic" style="max-height:250px"  /></div>
                     </div>
                 </div>

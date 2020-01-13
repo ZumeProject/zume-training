@@ -37,7 +37,7 @@ function zume_pieces_content( $post ) {
         }
         $post_number = zume_landing_page_post_id( $x );
         ?>
-        <option value="<?php echo $x ?>" <?php echo ( $selected ) ? 'selected' : ''; ?> ><?php echo $x . ' - '; echo get_the_title( $post_number ) ?></option>
+        <option value="<?php echo esc_attr( $x ) ?>" <?php echo ( $selected ) ? 'selected' : ''; ?> ><?php echo esc_attr( $x ) . ' - '; echo esc_html( get_the_title( $post_number ) ) ?></option>
         <?php
     }
     ?></select><br>    <h3>Piece Title (override) for the &lt;h1&gt;</h3>
@@ -84,15 +84,15 @@ function zume_pieces_save( $post_id ) {
         update_post_meta( $post_id, 'zume_piece_h1', sanitize_text_field( wp_unslash( $_POST['zume_piece_h1'] ) ) );
     }
     if ( isset( $_POST['zume_pre_video_content'] ) ) {
-        $my_data = wp_kses_post( $_POST['zume_pre_video_content'] );
+        $my_data = wp_kses_post( wp_unslash( $_POST['zume_pre_video_content'] ) );
         update_post_meta( $post_id, 'zume_pre_video_content', $my_data );
     }
     if ( isset( $_POST['zume_post_video_content'] ) ) {
-        $my_data = wp_kses_post( $_POST['zume_post_video_content'] );
+        $my_data = wp_kses_post( wp_unslash( $_POST['zume_post_video_content'] ) );
         update_post_meta( $post_id, 'zume_post_video_content', $my_data );
     }
     if ( isset( $_POST['zume_ask_content'] ) ) {
-        $my_data = wp_kses_post( $_POST['zume_ask_content'] );
+        $my_data = wp_kses_post( wp_unslash( $_POST['zume_ask_content'] ) );
         update_post_meta( $post_id, 'zume_ask_content', $my_data );
     }
 

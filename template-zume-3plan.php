@@ -177,7 +177,7 @@ $zume_groups = Zume_Dashboard::get_current_user_groups();
                                 /* Generate all rows */
                                 ?>
                                 <h3><strong>(<?php echo esc_attr( $zume_index ) ?>) <?php echo esc_html( $zume_label )?></strong></h3>
-                                <p><?php echo esc_html( $zume_three_month_plan[ $zume_key ] ?: __( 'not answered', 'zume' ) ) ?></p>
+                                <p><?php echo isset( $zume_three_month_plan[ $zume_key ] ) ? esc_html( $zume_three_month_plan[ $zume_key ] ) : esc_html__( 'not answered', 'zume' ); ?></p>
                                 <?php
                                 $zume_index++; // add increment
                             endforeach;
