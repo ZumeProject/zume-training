@@ -114,7 +114,7 @@ $zendesk_enable = true;
                                 <div class="grid-x grid-padding-x">
                                     <div class="cell medium-10 overview-title"><h2><?php echo esc_html__( 'Session 1', 'zume' ) ?></h2></div>
                                     <div class="cell medium-2 start">
-                                        <a onclick="open_session( 1 )" class="button primary-button-hollow"><?php echo esc_html__( "Start", 'zume' ) ?></a>
+                                        <a onclick="open_session( 1 )" class="button primary-button-hollow" id="start_session_1"><?php echo esc_html__( "Start", 'zume' ) ?></a>
                                     </div>
                                     <div class="cell small-9 medium-10 t-activities hide-extra" style="display:none;">
                                         <?php echo esc_html__( "Prayer, Overview", 'zume' ) ?>
@@ -209,7 +209,7 @@ $zendesk_enable = true;
                                 <div class="grid-x grid-padding-x">
                                     <div class="cell medium-10 overview-title"><h2><?php echo esc_html__( 'Session 2', 'zume' ) ?></h2></div>
                                     <div class="cell medium-2 start">
-                                        <a onclick="open_session( 2 )" class="button primary-button-hollow"><?php echo esc_html__( "Start", 'zume' ) ?></a>
+                                        <a onclick="open_session( 2 )" class="button primary-button-hollow" id="start_session_2"><?php echo esc_html__( "Start", 'zume' ) ?></a>
                                     </div>
                                     <div class="cell small-9 medium-10 t-activities hide-extra">
                                         <?php echo esc_html__( "Check-in, Prayer, Overview", 'zume' ) ?>
@@ -288,7 +288,7 @@ $zendesk_enable = true;
                                 <div class="grid-x grid-padding-x">
                                     <div class="cell medium-10 overview-title"><h2><?php echo esc_html__( 'Session 3', 'zume' ) ?></h2></div>
                                     <div class="cell small-3 medium-2 start">
-                                        <a onclick="open_session( 3 )" class="button primary-button-hollow"><?php echo esc_html__( "Start", 'zume' ) ?></a>
+                                        <a onclick="open_session( 3 )" class="button primary-button-hollow" id="start_session_3"><?php echo esc_html__( "Start", 'zume' ) ?></a>
                                     </div>
                                     <div class="cell small-9 medium-10 t-activities hide-extra">
                                         <?php echo esc_html__( "Check-in, Prayer, Overview", 'zume' ) ?>
@@ -361,7 +361,7 @@ $zendesk_enable = true;
                                 <div class="grid-x grid-padding-x">
                                     <div class="cell medium-10 overview-title"><h2><?php echo esc_html__( 'Session 4', 'zume' ) ?></h2></div>
                                     <div class="cell small-3 medium-2 start">
-                                        <a onclick="open_session( 4 )" class="button primary-button-hollow"><?php echo esc_html__( "Start", 'zume' ) ?></a>
+                                        <a onclick="open_session( 4 )" class="button primary-button-hollow" id="start_session_4"><?php echo esc_html__( "Start", 'zume' ) ?></a>
                                     </div>
                                     <div class="cell small-9 medium-10 t-activities hide-extra">
                                         <?php echo esc_html__( "Check-in, Prayer, Overview", 'zume' ) ?>
@@ -460,7 +460,7 @@ $zendesk_enable = true;
                                 <div class="grid-x grid-padding-x">
                                     <div class="cell medium-10 overview-title"><h2><?php echo esc_html__( 'Session 5', 'zume' ) ?></h2></div>
                                     <div class="cell small-3 medium-2 start">
-                                        <a onclick="open_session( 5 )" class="button primary-button-hollow"><?php echo esc_html__( "Start", 'zume' ) ?></a>
+                                        <a onclick="open_session( 5 )" class="button primary-button-hollow" id="start_session_5"><?php echo esc_html__( "Start", 'zume' ) ?></a>
                                     </div>
                                     <div class="cell small-9 medium-10 t-activities hide-extra">
                                         <?php echo esc_html__( "Check-in, Prayer, Overview", 'zume' ) ?>
@@ -533,7 +533,7 @@ $zendesk_enable = true;
                                 <div class="grid-x grid-padding-x">
                                     <div class="cell medium-10 overview-title"><h2><?php echo esc_html__( 'Session 6', 'zume' ) ?></h2></div>
                                     <div class="cell small-3 medium-2 start">
-                                        <a onclick="open_session( 6 )" class="button primary-button-hollow"><?php echo esc_html__( "Start", 'zume' ) ?></a>
+                                        <a onclick="open_session( 6 )" class="button primary-button-hollow" id="start_session_6"><?php echo esc_html__( "Start", 'zume' ) ?></a>
                                     </div>
                                     <div class="cell small-9 medium-10 t-activities hide-extra">
                                         <?php echo esc_html__( "Check-in, Prayer, Overview", 'zume' ) ?>
@@ -583,7 +583,7 @@ $zendesk_enable = true;
                                 <div class="grid-x grid-padding-x">
                                     <div class="cell medium-10 overview-title"><h2><?php echo esc_html__( 'Session 7', 'zume' ) ?></h2></div>
                                     <div class="cell small-3 medium-2 start">
-                                        <a onclick="open_session( 7 )" class="button primary-button-hollow"><?php echo esc_html__( "Start", 'zume' ) ?></a>
+                                        <a onclick="open_session( 7 )" class="button primary-button-hollow" id="start_session_7"><?php echo esc_html__( "Start", 'zume' ) ?></a>
                                     </div>
                                     <div class="cell medium-10">
                                         <?php if ( empty( zume_get_landing_title( 22, $current_language ) ) ) : ?>
@@ -624,7 +624,7 @@ $zendesk_enable = true;
                                 <div class="grid-x grid-padding-x">
                                     <div class="cell medium-10 overview-title"><h2><?php echo esc_html__( 'Session 8', 'zume' ) ?></h2></div>
                                     <div class="cell small-3 medium-2 start">
-                                        <a onclick="open_session( 8 )" class="button primary-button-hollow"><?php echo esc_html__( "Start", 'zume' ) ?></a>
+                                        <a onclick="open_session( 8 )" class="button primary-button-hollow" id="start_session_8"><?php echo esc_html__( "Start", 'zume' ) ?></a>
                                     </div>
                                     <div class="cell small-9 medium-10 t-activities hide-extra">
                                         <?php echo esc_html__( "Check-in, Prayer, Overview", 'zume' ) ?>
@@ -665,7 +665,7 @@ $zendesk_enable = true;
                                 <div class="grid-x grid-padding-x">
                                     <div class="cell medium-10 overview-title"><h2><?php echo esc_html__( 'Session 9', 'zume' ) ?></h2></div>
                                     <div class="cell small-3 medium-2 start">
-                                        <a onclick="open_session( 9 )"class="button primary-button-hollow"><?php echo esc_html__( "Start", 'zume' ) ?></a>
+                                        <a onclick="open_session( 9 )"class="button primary-button-hollow" id="start_session_9"><?php echo esc_html__( "Start", 'zume' ) ?></a>
                                     </div>
                                     <div class="cell small-9 medium-10 t-activities hide-extra">
                                         <?php echo esc_html__( "Check-in, Prayer, Overview", 'zume' ) ?>
@@ -746,7 +746,7 @@ $zendesk_enable = true;
                                 <div class="grid-x grid-padding-x">
                                     <div class="cell medium-10 overview-title"><h2><?php echo esc_html__( 'Session 10', 'zume' ) ?></h2></div>
                                     <div class="cell small-3 medium-2 start">
-                                        <a onclick="open_session( 10 )" class="button primary-button-hollow"><?php echo esc_html__( "Start", 'zume' ) ?></a>
+                                        <a onclick="open_session( 10 )" class="button primary-button-hollow" id="start_session_10"><?php echo esc_html__( "Start", 'zume' ) ?></a>
                                     </div>
                                     <div class="cell small-9 medium-10 t-activities hide-extra">
                                         <?php echo esc_html__( "Check-in, Prayer, Overview", 'zume' ) ?>
