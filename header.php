@@ -12,6 +12,7 @@
                 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
             })(window,document,'script','dataLayer','GTM-MSGWKV5');</script>
         <!-- End Google Tag Manager -->
+
         <meta charset="utf-8">
 
         <!-- Force IE to use the latest rendering engine available -->
@@ -55,25 +56,16 @@
                          src="https://www.facebook.com/tr?id=1552465945075453&ev=PageView&noscript=1"
             /></noscript>
         <!-- End Facebook Pixel Code -->
-
-        <!-- Global site tag (gtag.js) - Google Analytics -->
-        <?php // @codingStandardsIgnoreStart ?>
-        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-102207784-1"></script>
-        <?php // @codingStandardsIgnoreEnd ?>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-
-            gtag('config', 'UA-102207784-1');
-        </script>
-
+        
     </head>
 
     <!-- Uncomment this line if using the Off-Canvas Menu -->
 
     <body <?php body_class(); ?>>
-    
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MSGWKV5"
+                      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
 
         <div class="off-canvas-wrapper">
 
