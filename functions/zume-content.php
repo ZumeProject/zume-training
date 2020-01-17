@@ -560,7 +560,7 @@ class Zume_Course_Content {
                 </div>
                 <!-- step-title cell -->
                 <div class="center cell">
-                    <p><?php esc_html_e( 'Congratulations! You\'ve completed Session 1.', 'zume' ) ?></p>
+                    <p id="congratulations"><?php esc_html_e( 'Congratulations! You\'ve completed Session 1.', 'zume' ) ?></p>
 
                 </div>
             </div>
