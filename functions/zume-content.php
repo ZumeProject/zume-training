@@ -560,7 +560,7 @@ class Zume_Course_Content {
                 </div>
                 <!-- step-title cell -->
                 <div class="center cell">
-                    <p id="congratulations"><?php esc_html_e( 'Congratulations! You\'ve completed Session 1.', 'zume' ) ?></p>
+                    <p id="complete_session_1"><?php esc_html_e( 'Congratulations! You\'ve completed Session 1.', 'zume' ) ?></p>
 
                 </div>
             </div>
@@ -949,7 +949,7 @@ class Zume_Course_Content {
                     <?php esc_html_e( 'LOOKING FORWARD', 'zume' ) ?>
                 </div> <!-- step-title cell -->
                 <div class="center cell">
-                    <p><?php esc_html_e( 'Congratulations on finishing Session 2! ', 'zume' ) ?></p>
+                    <p id="complete_session_2"><?php esc_html_e( 'Congratulations on finishing Session 2! ', 'zume' ) ?></p>
                 </div>
             </div> <!-- grid-x -->
 
@@ -1334,7 +1334,7 @@ class Zume_Course_Content {
                     <?php esc_html_e( 'LOOKING FORWARD', 'zume' ) ?>
                 </div> <!-- step-title cell -->
                 <div class="center cell">
-                    <p><?php esc_html_e( 'Congratulations on finishing Session 3! ', 'zume' ) ?></p>
+                    <p id="complete_session_3"><?php esc_html_e( 'Congratulations on finishing Session 3! ', 'zume' ) ?></p>
                 </div>
             </div> <!-- grid-x -->
 
@@ -1823,7 +1823,7 @@ class Zume_Course_Content {
                     <?php esc_html_e( 'LOOKING FORWARD', 'zume' ) ?>
                 </div> <!-- step-title cell -->
                 <div class="center cell"><br>
-                    <p><?php esc_html_e( "Congratulations on finishing Session 4!", 'zume' ) ?></p>
+                    <p id="complete_session_4"><?php esc_html_e( "Congratulations on finishing Session 4!", 'zume' ) ?></p>
                     <p><?php esc_html_e( "Below are next steps to take in preparation for the next session.", 'zume' ) ?></p>
                 </div>
             </div> <!-- grid-x -->
@@ -2062,7 +2062,7 @@ class Zume_Course_Content {
         <section>
             <!-- Step Title -->
             <div class="grid-x grid-margin-x grid-margin-y">
-                <div class="step-title cell">
+                <div class="step-title cell" id="complete_session_5">
                     <?php esc_html_e( "Prayer Walking (60-90min)", 'zume' ) ?>
                 </div> <!-- grid-x -->
             </div>
@@ -2125,6 +2125,7 @@ class Zume_Course_Content {
                 </div>
             </div>
             <!-- grid-x -->
+
         </section>
         <?php
     }
@@ -2316,7 +2317,7 @@ class Zume_Course_Content {
                     <?php esc_html_e( 'LOOKING FORWARD', 'zume' ) ?>
                 </div> <!-- step-title cell -->
                 <div class="center cell">
-                    <p>
+                    <p  id="complete_session_6">
                         <?php esc_html_e( "Congratulations on finishing Session 6!", 'zume' ) ?></p>
                 </div>
             </div> <!-- grid-x -->
@@ -2554,7 +2555,7 @@ class Zume_Course_Content {
                     <?php esc_html_e( 'LOOKING FORWARD', 'zume' ) ?>
                 </div> <!-- step-title cell -->
                 <div class="center cell">
-                    <p>
+                    <p id="complete_session_7">
                         <?php esc_html_e( "Congratulations on finishing Session 7!", 'zume' ) ?></p>
                     <p>
                 </div>
@@ -2774,7 +2775,7 @@ class Zume_Course_Content {
                     <?php esc_html_e( 'LOOKING FORWARD', 'zume' ) ?>
                 </div> <!-- step-title cell -->
                 <div class="center cell">
-                    <p>
+                    <p id="complete_session_8">
                         <?php esc_html_e( "Congratulations! You've completed Session 8. ", 'zume' ) ?></p>
                     <p>
                 </div>
@@ -3193,7 +3194,7 @@ class Zume_Course_Content {
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="step-title cell"><?php esc_html_e( 'LOOKING FORWARD', 'zume' ) ?></div>
                 <!-- step-title cell -->
-                <div class="center vertical-padding">
+                <div class="center vertical-padding" id="complete_session_9">
                     <?php esc_html_e( "Congratulations! You've completed Session 9.", 'zume' ) ?>
                 </div>
             </div>
@@ -3551,7 +3552,7 @@ class Zume_Course_Content {
         <section>
             <!-- Step Title -->
             <div class="grid-x grid-margin-x grid-margin-y">
-                <div class="step-title cell" style="text-transform: uppercase">
+                <div class="step-title cell" style="text-transform: uppercase" id="complete_session_10">
                     <?php esc_html_e( "CONGRATULATIONS ON COMPLETING ZÚME TRAINING!", 'zume' ) ?>
                 </div> <!-- step-title cell -->
                 <div class="center cell">

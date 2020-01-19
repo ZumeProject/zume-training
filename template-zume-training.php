@@ -562,7 +562,6 @@ $zendesk_enable = true;
                                         <?php else : ?>
                                             <a href="<?php echo esc_url( zume_get_landing_translation_url( 21, $current_language ) ) ?>"><?php echo esc_html( zume_get_landing_title( 21, $current_language ) ) ?></a>
                                         <?php endif; ?>
-                                        <a href="<?php echo esc_url( zume_get_landing_translation_url( 21, $current_language ) ) ?>"><?php echo esc_html( zume_get_landing_title( 21, $current_language ) ) ?></a><br>
                                         <p class="t-description"><?php echo esc_html__( "A 3/3 Group is a way for followers of Jesus to meet, pray, learn, grow, fellowship and practice obeying and sharing what they've learned. In this way, a 3/3 Group is not just a small group but a Simple Church.", 'zume' ) ?></p>
                                     </div>
                                     <div class="cell medium-2 t-length hide-extra">
