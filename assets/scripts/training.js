@@ -1321,7 +1321,7 @@ function get_coach_request() {
                                        data-abide-ignore
                                 />
                                 <div class="input-group-button">
-                                    <input type="button" class="button" id="validate_address_button" value="Validate" onclick="validate_user_address( jQuery('#validate_address').val() )">
+                                    <input type="button" class="button" id="validate_address_button" value="Validate" onclick="validate_user_address_v4( jQuery('#validate_address').val() )">
                                 </div>
                             </div>
 
@@ -1373,7 +1373,7 @@ function get_coach_request() {
   }
 
   if ( fields.city ) {
-    validate_user_address( fields.city )
+    validate_user_address_v4( fields.city )
   }
 
   var elem = new Foundation.Abide(jQuery('#coaching-request-form'))
@@ -1387,7 +1387,7 @@ function get_coach_request() {
 function validate_request() {
   jQuery('#coaching-request-form').foundation('validateForm');
 }
-function validate_user_address(user_address){
+function validate_user_address_v4(user_address){
   jQuery('#map').empty()
   jQuery('#possible-results').empty().append('<span class="spinner"><img src="' + zumeTraining.theme_uri + '/assets/images/spinner.svg" style="height:20px;" /></span>')
 

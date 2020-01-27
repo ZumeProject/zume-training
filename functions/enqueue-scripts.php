@@ -93,6 +93,7 @@ function zume_site_scripts() {
      Zume 4.0
      */
     if ( 'template-zume-training.php' === basename( get_page_template() )
+        || 'template-zume-profile.php' === basename( get_page_template() )
         || 'landing' === substr( basename( get_page_template() ), 0, 7 )
         || 'template-pieces-page.php' === basename( get_page_template() )
         || 'template-zume-course-v4.php' === basename( get_page_template() ) ) {
@@ -116,7 +117,7 @@ function zume_site_scripts() {
                     'name' => $zume_user_meta['zume_full_name'] ?? $zume_user->data->display_name ?? $zume_user->user_login,
                     'email' => $zume_user->data->user_email,
                     'phone' => $zume_user_meta['zume_phone_number'] ?? false,
-                    'city' => $zume_user_meta['address_profile'] ?? false,
+                    'city' => $zume_user_meta['zume_user_address'] ?? false,
                     'affiliation_key' => $zume_user_meta['zume_affiliation_key'] ?? false,
                     'is_facebook_linked' => false, // @todo
                     'is_google_linked' => false, // @todo
