@@ -103,6 +103,15 @@ class Zume_V4_REST_API {
                 }
             ),
         ) );
+        register_rest_route( $namespace, '/coaching_request', array(
+            array(
+                'methods'         => WP_REST_Server::CREATABLE,
+                'callback'        => array( $this, 'coaching_request' ),
+                "permission_callback" => function () {
+                    return current_user_can( 'zume' );
+                }
+            ),
+        ) );
     }
 
     public function progress_update( WP_REST_Request $request){
@@ -212,6 +221,33 @@ class Zume_V4_REST_API {
         } else {
             return new WP_Error( "tract_param_error", "Please provide a valid address", array( 'status' => 400 ) );
         }
+    }
+
+    public function coaching_request( WP_REST_Request $request ) {
+        $params = $request->get_params();
+        if ( ! isset( $params['name'] ) ) {
+            return new WP_Error( "log_param_error", "Missing parameters", array( 'status' => 400 ) );
+        }
+
+        $args = array(
+            'name' => sanitize_text_field( wp_unslash( $params['name'] ) ),
+            'phone' => sanitize_text_field( wp_unslash( $params['phone'] ) ),
+            'email' => sanitize_text_field( wp_unslash( $params['email'] ) ),
+            'location' => sanitize_text_field( wp_unslash( $params['location'] ) ),
+            'preference' => sanitize_text_field( wp_unslash( $params['preference'] ) ),
+            'affiliation_key' => sanitize_text_field( wp_unslash( $params['affiliation_key'] ) ),
+        );
+
+        $args['success'] = true;
+        return $args;
+
+//        $meta_id = Zume_V4_Groups::create_group( $args );
+//        if ( $meta_id ) {
+//            return Zume_V4_Groups::get_all_groups( get_current_user_id() );
+//        } else {
+//            dt_write_log( __METHOD__ . ': Failed to create new group.' );
+//            return false;
+//        }
     }
 
 }

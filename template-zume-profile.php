@@ -8,6 +8,7 @@ $zendesk_enable = true;
 // We're not checking the nonce here because update_user_contact_info will
 // @codingStandardsIgnoreLine
 if( isset( $_POST[ 'user_update_nonce' ] ) ) {
+    dt_write_log($_POST);
     zume_update_user_contact_info();
 }
 /* Build variables for page */
@@ -112,7 +113,7 @@ add_action( 'wp_head', 'zume_signup_header' );
                             </div>
 
                             <div id="possible-results">
-                                <input type="hidden" name="address" id="address_profile" value="<?php echo isset( $zume_user_meta['zume_user_address'] ) ? esc_html( $zume_user_meta['zume_user_address'] ) : ''; ?>" />
+                                <input type="hidden" name="zume_user_address" id="address_profile" value="<?php echo isset( $zume_user_meta['zume_user_address'] ) ? esc_html( $zume_user_meta['zume_user_address'] ) : ''; ?>" />
                             </div>
 
                             <?php if ( ! empty( $zume_user_meta['zume_user_address'] ) && ! empty( $zume_user_meta['zume_user_lng'] ) && ! empty( $zume_user_meta['zume_user_lat'] ) ) : ?>

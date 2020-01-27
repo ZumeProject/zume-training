@@ -83,8 +83,8 @@ function zume_update_user_contact_info() {
         update_user_meta( $user_id, 'zume_phone_number', sanitize_text_field( wp_unslash( $_POST['zume_phone_number'] ) ) );
     }
     if ( isset( $_POST['zume_user_address'] ) ) {
-        if ( empty( $_POST['zume_user_address'] ) ) {
-            update_user_meta( $user_id, 'zume_user_address', sanitize_text_field( wp_unslash( $_POST['zume_user_address'] ) ) );
+        if ( empty( $_POST['validate_address'] ) ) {
+            update_user_meta( $user_id, 'zume_user_address', false );
         }
         else {
             $results = DT_Mapbox_API::lookup( trim( sanitize_text_field( wp_unslash( $_POST['zume_user_address'] ) ) ) );

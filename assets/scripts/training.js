@@ -25,6 +25,14 @@ jQuery(document).ready(function(){
     console.log(zumeTraining)
     get_progress()
   }
+  if( '#panel4' === window.location.hash  ) {
+    if ( ! zumeTraining.logged_in ) {
+      show_panel1()
+    }
+
+    console.log(zumeTraining)
+    get_coach_request()
+  }
   // click listener for submenu
   jQuery('#top-full-menu-div a').on('click',function() {
     console.log(window.location.hash)
@@ -1200,6 +1208,275 @@ function load_host_description() {
   jQuery('#training-modal').foundation('open')
 }
 
+/************
+ * Send Coaching Request
+ ************/
+
+function get_coach_request() {
+  let fields = zumeTraining.user_profile_fields
+  if ( ! zumeTraining.logged_in ) {
+    window.location = `${zumeTraining.site_urls.login}`
+  } else { /* logged in */
+    jQuery('#coach-request').empty().html(`
+    <div class="grid-x" id="coaching-request-form-section">
+        <div class="cell">
+        <h2 class="primary-color" id="coach-modal-title">${__('Connect Me to a Coach', 'zume')}</h2>
+            <hr>
+            <form data-abide novalidate id="coaching-request-form">
+                <div class="grid-x grid-padding-x" >
+
+                    <div class="cell small-6">
+                        <i class="fi-torsos-all secondary-color" style="font-size:4em; vertical-align: middle;"></i>
+                        &nbsp;<span style="font-size:2em; vertical-align: middle; text-wrap: none;">${__('Coaches', 'zume')}</span>
+                        <p>${__('Our network of volunteer coaches are people like you, people who are passionate about loving God, loving others, and obeying the Great Commission.', 'zume')}</p>
+                    </div>
+
+                    <div class="cell small-6">
+                        <i class="fi-compass secondary-color" style="font-size:4em; vertical-align: middle;"></i>
+                        &nbsp;<span style="font-size:2em; vertical-align: middle;">${__('Advocates', 'zume')}</span>
+                        <p>${__('A coach is someone who will come alongside you as you implement the Zúme tools and training.', 'zume')}</p>
+                    </div>
+
+                    <div class="cell small-6">
+                        <i class="fi-map secondary-color" style="font-size:4em; vertical-align: middle;"></i>
+                        &nbsp;<span style="font-size:2em; vertical-align: middle;">${__('Local', 'zume')}</span>
+                        <p>${__('On submitting this request, we will do our best to connect you with a coach near you.', 'zume')}</p>
+                    </div>
+
+                    <div class="cell small-6">
+                        <i class="fi-dollar secondary-color" style="font-size:4em; vertical-align: middle;"></i>
+                        &nbsp;<span style="font-size:2em; vertical-align: middle;text-wrap: none;">${__('It\'s Free', 'zume')}</span>
+                        <p>${__('Coaching is free. You can opt out at any time.', 'zume')}</p>
+                    </div>
+
+                </div>
+                <div data-abide-error class="alert callout" style="display: none;">
+                    <p><i class="fi-alert"></i> ${__('There are some errors in your form.', 'zume')}</p>
+                </div>
+                <table>
+                    <tr style="vertical-align: top;">
+                        <td>
+                            <label for="zume_full_name">${__('Name', 'zume')}</label>
+                        </td>
+                        <td>
+                            <input type="text"
+                                   placeholder="${__('First and last name', 'zume')}"
+                                   aria-describedby="${__('First and last name', 'zume')}"
+                                   class="profile-input"
+                                   id="zume_full_name"
+                                   name="zume_full_name"
+                                   value="${ fields.name }"
+                                   required />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="vertical-align: top;">
+                            <label for="zume_phone_number">${__('Phone Number', 'zume')}</label>
+                        </td>
+                        <td>
+                            <input type="tel"
+                                   placeholder="111-111-1111"
+                                   class="profile-input"
+                                   id="zume_phone_number"
+                                   name="zume_phone_number"
+                                   value="${fields.phone}"
+                                   data-abide-ignore
+                            />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="vertical-align: top;">
+                            <label for="user_email">${__('Email', 'zume')}</label>
+                        </td>
+                        <td>
+                            <input type="text"
+                                   class="profile-input"
+                                   placeholder="name@email.com"
+                                   id="user_email"
+                                   name="user_email"
+                                   value="${fields.email}"
+                                   required
+                                   readonly
+                            />
+                            <span class="form-error">
+                               ${__('Email is required.', 'zume')}
+                            </span>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td style="vertical-align: top;">
+                            <label for="validate_address">
+                                ${__('City', 'zume')}
+                            </label>
+                        </td>
+                        <td>
+                            <div class="input-group">
+                                <input type="text"
+                                       placeholder="example: Denver, CO 80120"
+                                       class="profile-input input-group-field"
+                                       id="validate_address"
+                                       name="validate_address"
+                                       value="${fields.city}"
+                                       data-abide-ignore
+                                />
+                                <div class="input-group-button">
+                                    <input type="button" class="button" id="validate_address_button" value="Validate" onclick="validate_user_address( jQuery('#validate_address').val() )">
+                                </div>
+                            </div>
+
+                            <div id="possible-results">
+                                <input type="radio" style="display:none;" name="address" id="address_profile" value="${fields.city}" checked="checked'"/>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="vertical-align: top;">
+                            <label>${__('How should we contact you?', 'zume')}</label>
+                        </td>
+                        <td>
+                            <fieldset>
+                                <input id="zume_contact_preference1" name="zume_contact_preference" class="zume_contact_preference" type="radio" value="email" checked data-abide-ignore>
+                                <label for="zume_contact_preference1">${__('Email', 'zume')}</label>
+                                <input id="zume_contact_preference2" name="zume_contact_preference" class="zume_contact_preference" type="radio" value="text" data-abide-ignore>
+                                <label for="zume_contact_preference2">${__('Text', 'zume')}</label>
+                                <input id="zume_contact_preference3" name="zume_contact_preference" class="zume_contact_preference" type="radio" value="phone" data-abide-ignore>
+                                <label for="zume_contact_preference3">${__('Phone', 'zume')}</label><br>
+                                <input id="zume_contact_preference4" name="zume_contact_preference" class="zume_contact_preference" type="radio" value="whatsapp" data-abide-ignore>
+                                <label for="zume_contact_preference4">${__('WhatsApp', 'zume')}</label>
+                                <input id="zume_contact_preference5" name="zume_contact_preference" class="zume_contact_preference" type="radio" value="other" data-abide-ignore>
+                                <label for="zume_contact_preference6">${__('Other', 'zume')}</label>
+                            </fieldset>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="vertical-align: top;">
+                            <label for="zume_affiliation_key">${__('Affiliation Key', 'zume')}</label>
+                        </td>
+                        <td>
+                            <input type="text" value="${fields.affiliation_key}"
+                                   id="zume_affiliation_key"
+                                   name="zume_affiliation_key" placeholder="" />
+                        </td>
+                    </tr>
+                </table>
+                <div data-abide-error  class="alert alert-box" style="display:none;" id="alert">
+                    <strong>${__('Oh snap!', 'zume')}</strong>
+                </div>
+                <div class="cell">
+                    <button class="button" type="button" onclick="validate_request()" id="submit_profile">${__('Submit', 'zume')}</button><span id="request_spinner"></span>
+                </div>
+            </form>
+        </div>
+    </div>
+  `)
+  }
+
+  if ( fields.city ) {
+    validate_user_address( fields.city )
+  }
+
+  var elem = new Foundation.Abide(jQuery('#coaching-request-form'))
+
+  jQuery(document)
+    .on("formvalid.zf.abide", function(ev,frm) {
+      send_coaching_request()
+    })
+
+}
+function validate_request() {
+  jQuery('#coaching-request-form').foundation('validateForm');
+}
+function validate_user_address(user_address){
+  jQuery('#map').empty()
+  jQuery('#possible-results').empty().append('<span class="spinner"><img src="' + zumeTraining.theme_uri + '/assets/images/spinner.svg" style="height:20px;" /></span>')
+
+  let root = 'https://api.mapbox.com/geocoding/v5/mapbox.places/'
+  let settings = '.json?types=region,place,neighborhood,address&limit=6&access_token='
+  let key = zumeTraining.map_key
+
+  let url = root + encodeURI( user_address ) + settings + key
+
+  jQuery('#validate_address_button').val('Validate Another?')
+
+  jQuery.get( url, function( data ) {
+
+    console.log(data)
+
+    // check if multiple results
+    if( data.features.length > 1 ) {
+
+      jQuery('#map').empty()
+      jQuery('#validate_address_button').val('Search Again?')
+
+      jQuery('#possible-results').empty().append('<fieldset id="multiple-results"><legend>Select one of these or search again.</legend></fieldset>')
+
+      jQuery.each( data.features, function( index, value ) {
+        let checked = ''
+        if( index === 0 ) {
+          checked = 'checked'
+        }
+        jQuery('#multiple-results').append( '<input type="radio" name="zume_user_address" id="zume_user_address'+index+'" value="'+value.id+'" '+checked+' /><label for="zume_user_address'+index+'">'+value.place_name+'</label><br>')
+      })
+    }
+    else
+    {
+      jQuery('#map').empty()
+      jQuery('#possible-results').empty().append('<fieldset id="multiple-results"><legend>We found this match. Is this correct? If not validate another.</legend><input type="radio" name="zume_user_address" id="zume_user_address" value="'+data.features[0].place_name+'" checked/><label for="zume_user_address">'+data.features[0].place_name+'</label></fieldset>')
+    }
+    jQuery('#submit_profile').removeAttr('disabled')
+
+  });
+
+}
+
+function send_coaching_request() {
+  let spinner = jQuery('#request_spinner')
+  spinner.html('<img src="'+ zumeTraining.theme_uri +'/assets/images/spinner.svg" style="width: 40px; vertical-align:top; margin-left: 5px;" />')
+
+  let name = jQuery('#zume_full_name').val()
+  let phone = jQuery('#zume_phone_number').val()
+  let email = jQuery('#user_email').val()
+  let preference = jQuery('input.zume_contact_preference:checked').val()
+  let affiliation_key = jQuery('#zume_affiliation_key').val()
+
+  // Get address
+  let location = jQuery('#possible-results input:checked').val()
+  if ( true ) {
+
+  }
+  // check for user provided address in input
+  // check for searched results
+  // jQuery('#multiple-results input:checked').val()
+  // get choosen search result
+  // get source of search result and pull the ( lng,lat,level,label,location_grid )
+
+  console.log(location)
+
+
+  let data = {
+    "name": name,
+    "phone": phone,
+    "email": email,
+    "location": location,
+    "preference": preference,
+    "affiliation_key": affiliation_key
+  }
+
+  API.coaching_request( data ).done(function(data) {
+    console.log(data)
+    spinner.empty().html('Success')
+  })
+    .fail(function(e){
+      console.log('coach_request error')
+      console.log(e)
+      spinner.empty().html( '&nbsp;Oops. Something went wrong. Try again!')
+    })
+}
+
+
+
+
 /**
  * REST API
  */
@@ -1212,6 +1489,8 @@ window.API = {
   create_group: ( group_name, members ) => makeRequest('POST', 'groups/create', { name: group_name, members: members }),
 
   update_location: ( data ) => makeRequest('POST', 'locations/update', data ),
+
+  coaching_request: ( data ) => makeRequest('POST', 'coaching_request', data ),
 
 }
 function makeRequest (type, url, data, base = 'zume/v4/') {

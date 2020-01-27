@@ -85,6 +85,14 @@
     .tabs-panel {
         padding: 0;
     }
+    .tabs-title>button {
+        display: block;
+        padding: 1.25rem 1.5rem;
+        font-size: .75rem;
+        line-height: 1;
+        color: #323a68;
+        cursor:pointer;
+    }
 
     #inner-content {
         padding: 1rem 1rem !important;

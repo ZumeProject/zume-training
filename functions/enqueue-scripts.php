@@ -99,6 +99,10 @@ function zume_site_scripts() {
         wp_register_script( 'lodash', 'https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.11/lodash.min.js', false, '4.17.11' );
         wp_enqueue_script( 'lodash' );
 
+        $zume_user = wp_get_current_user();
+        $zume_user_meta = zume_get_user_meta( $zume_user->ID );
+        dt_write_log($zume_user_meta);
+
         wp_enqueue_script( 'zumeTraining', get_template_directory_uri() . '/assets/scripts/training.js', array( 'jquery', 'lodash', 'wp-i18n' ), filemtime( get_theme_file_path() . '/assets/scripts/training.js' ), true );
         $current_language = zume_current_language();
         wp_localize_script(
@@ -107,6 +111,16 @@ function zume_site_scripts() {
                 'theme_uri' => get_stylesheet_directory_uri(),
                 'nonce' => wp_create_nonce( 'wp_rest' ),
                 'current_user_id' => get_current_user_id(),
+                'user_profile_fields' => [
+                    'id' => $zume_user->data->ID,
+                    'name' => $zume_user_meta['zume_full_name'] ?? $zume_user->data->display_name ?? $zume_user->user_login,
+                    'email' => $zume_user->data->user_email,
+                    'phone' => $zume_user_meta['zume_phone_number'] ?? false,
+                    'city' => $zume_user_meta['address_profile'] ?? false,
+                    'affiliation_key' => $zume_user_meta['zume_affiliation_key'] ?? false,
+                    'is_facebook_linked' => false, // @todo
+                    'is_google_linked' => false, // @todo
+                ],
                 'logged_in' => is_user_logged_in(),
                 'map_key' => DT_Mapbox_API::get_key(),
                 "current_language" => $current_language,

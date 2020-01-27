@@ -76,7 +76,14 @@ $zendesk_enable = true;
                                     <span class="hide-for-small-only"><?php echo esc_html__( "My Checklist", 'zume' ) ?></span>
                                 </a>
                             </li>
+                            <li class="tabs-title">
+                                <a data-tabs-target="panel4" href="#panel4" onclick="get_coach_request()">
+                                    <span class="show-for-small-only"><?php echo esc_html__( "Get Coach", 'zume' ) ?></span>
+                                    <span class="hide-for-small-only"><?php echo esc_html__( "Get a Coach", 'zume' ) ?></span>
+                                </a>
+                            </li>
                         </ul>
+
                     <?php endif; ?>
 
                     <!-- Training Content Wrapper-->
@@ -871,6 +878,14 @@ $zendesk_enable = true;
                         ----------------------------------------------------------------------------------------------->
                         <div class="tabs-panel" id="panel3">
                             <div class="grid-x" id="progress-stats"><div class="loader">Loading...</div></div>
+                        </div>
+                        <!----------------------------------------------------------------------------------------------
+
+                         Get a Coach (logged in)
+
+                         ----------------------------------------------------------------------------------------------->
+                        <div class="tabs-panel" id="panel4">
+                            <div class="grid-x" id="coach-request"><div class="loader">Loading...</div></div>
                         </div>
                     </div> <!-- end #callout -->
 
