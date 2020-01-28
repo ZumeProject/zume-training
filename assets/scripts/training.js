@@ -1222,7 +1222,7 @@ function get_coach_request() {
     if ( fields.location_grid_meta ) {
       window.location_grid_meta = fields.location_grid_meta
       window.mapbox_results = false
-      location_grid_meta_label = fields.location_grid_meta.label
+      // location_grid_meta_label = fields.location_grid_meta.label
     } else {
       window.location_grid_meta = false
       window.mapbox_results = false
@@ -1334,11 +1334,12 @@ function get_coach_request() {
                                 />
                                 <div class="input-group-button">
                                     <input type="button" class="button" id="validate_address_button" value="Validate" onclick="validate_user_address_v4( jQuery('#validate_address').val() )">
+                                    <input type="button" class="button hollow" value="Clear" onclick="clear_locations()" />
                                 </div>
                             </div>
 
                             <div id="possible-results">
-                                <input type="radio" style="display:none;" name="address" id="address_profile" value="0" checked="checked'"/>
+                                <input type="radio" style="display:none;" name="zume_user_address" id="zume_user_address" value="current" checked/>
                             </div>
                         </td>
                     </tr>
@@ -1399,6 +1400,11 @@ function get_coach_request() {
 function validate_request() {
   jQuery('#coaching-request-form').foundation('validateForm');
 }
+function clear_locations() {
+  jQuery('#validate_address').empty();
+  jQuery('#possible-results').empty().html(`<input type="radio" style="display:none;" name="address" id="address_profile" value="current" checked="checked'"/>`);
+
+}
 
 function validate_user_address_v4(user_address){
   jQuery('#map').empty()
@@ -1420,9 +1426,8 @@ function validate_user_address_v4(user_address){
 
     // check if multiple results
     if( data.features.length > 1 ) {
+
       jQuery('#validate_address_button').val('Search Again?')
-
-
       jQuery('#possible-results').empty().append('<fieldset id="multiple-results"><legend>Select one of these or search again.</legend></fieldset>')
 
       jQuery.each( data.features, function( index, value ) {
@@ -1430,7 +1435,7 @@ function validate_user_address_v4(user_address){
         if( index === 0 ) {
           checked = 'checked'
         }
-        jQuery('#multiple-results').append( '<input type="radio" name="zume_user_address" id="zume_user_address'+index+'" value="'+index+'" '+checked+' /><label for="zume_user_address'+index+'">'+value.place_name+'</label><br>')
+        jQuery('#multiple-results').append( '<input type="radio" name="zume_user_address" id="zume_user_address'+index+'" value="'+value.id+'" '+checked+' /><label for="zume_user_address'+index+'">'+value.place_name+'</label><br>')
       })
     }
     else
@@ -1454,22 +1459,32 @@ function send_coaching_request() {
   let preference = jQuery('input.zume_contact_preference:checked').val()
   let affiliation_key = jQuery('#zume_affiliation_key').val()
 
+  /******************************************************************/
   // Get address
   let location_grid_meta = false // base is false
   let selection_id = jQuery('#possible-results input:checked').val()
-  if ( window.location_grid_meta && selection_id === '0' ) { // check location_grid
+
+  // check if location grid
+  if ( window.location_grid_meta && selection_id === 'current' ) {
     location_grid_meta = window.location_grid_meta
-  } else if ( window.mapbox_results ) { // check for results
-
-    location_grid_meta = {
-      lng: window.mapbox_results.features[selection_id].center[0],
-      lat: window.mapbox_results.features[selection_id].center[1],
-      level: window.mapbox_results.features[selection_id].place_type[0],
-      label: window.mapbox_results.features[selection_id].place_name,
-      grid_id: false
-    }
-
   }
+  // check if mapbox results
+  else if ( window.mapbox_results ) {
+      // loop through features
+      jQuery.each( window.mapbox_results.features, function(i,v) {
+        if ( v.id === selection_id ) {
+          location_grid_meta = {
+            lng: v.center[0],
+            lat: v.center[1],
+            level: v.place_type[0],
+            label: v.place_name,
+            source: 'user',
+            grid_id: false
+          }
+        }
+      })
+  }
+  /******************************************************************/
 
   let data = {
     "name": name,
@@ -1480,7 +1495,8 @@ function send_coaching_request() {
     "affiliation_key": affiliation_key
   }
 
-  API.coaching_request( data ).done(function(data) {
+  API.coaching_request( data ).done( function(data) {
+    console.log('postsend')
     console.log(data)
     spinner.empty().html('Success')
   })

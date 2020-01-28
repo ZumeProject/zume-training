@@ -101,7 +101,7 @@ function zume_site_scripts() {
 
         $zume_user = wp_get_current_user();
         $zume_user_meta = zume_get_user_meta( $zume_user->ID );
-        dt_write_log($zume_user_meta);
+
 
         wp_enqueue_script( 'zumeTraining', get_template_directory_uri() . '/assets/scripts/training.js', array( 'jquery', 'lodash', 'wp-i18n' ), filemtime( get_theme_file_path() . '/assets/scripts/training.js' ), true );
         $current_language = zume_current_language();

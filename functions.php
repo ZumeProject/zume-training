@@ -74,7 +74,6 @@ require_once( 'functions/zume-content.php' );
 
 
 
-
 require_once( 'functions/logging/zume-mailchimp.php' ); // zume logging of critical path actions
 require_once( 'functions/zume-dt-integration/zume-dashboard-sync.php' ); // zume dashboard sync
 

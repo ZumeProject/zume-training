@@ -137,7 +137,7 @@ add_action( 'wp_head', 'zume_signup_header' );
                                    data-abide-ignore
                             />
                             <span class="form-error">
-                              Yo, you had better fill this out, it's required.
+                              <?php esc_html_e("This form is required.", 'zume' ) ?>
                             </span>
                         </td>
                     </tr>

@@ -233,10 +233,22 @@ class Zume_V4_REST_API {
             'name' => sanitize_text_field( wp_unslash( $params['name'] ) ),
             'phone' => sanitize_text_field( wp_unslash( $params['phone'] ) ),
             'email' => sanitize_text_field( wp_unslash( $params['email'] ) ),
-            'location' => sanitize_text_field( wp_unslash( $params['location'] ) ),
             'preference' => sanitize_text_field( wp_unslash( $params['preference'] ) ),
             'affiliation_key' => sanitize_text_field( wp_unslash( $params['affiliation_key'] ) ),
         );
+
+        // Build location_grid_meta
+        $args['location_grid_meta'] = false;
+        $geocoder = new Location_Grid_Geocoder();
+        if ( empty( $params['location_grid_meta'] ) ) {
+            // if no provided location, get ip address location
+            $ip_result = DT_Ipstack_API::geocode_current_visitor();
+            $args['location_grid_meta'] = $geocoder->convert_ip_result_to_location_grid_meta( $ip_result );
+        } else if ( empty( $params['location_grid_meta']['grid_id'] ) ) {
+            $grid = $geocoder->get_grid_id_by_lnglat( $params['location_grid_meta']['lng'], $params['location_grid_meta']['lat'] );
+            $params['location_grid_meta']['grid_id'] = (int) $grid['grid_id'];
+            $args['location_grid_meta'] = $params['location_grid_meta'];
+        }
 
         $args['success'] = true;
         return $args;
