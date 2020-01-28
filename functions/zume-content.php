@@ -1984,7 +1984,7 @@ class Zume_Course_Content {
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="large-3 cell activity-title"><?php esc_html_e( 'WATCH', 'zume' ) ?></div>
                 <div class="large-9 cell activity-description">
-                    <?php esc_html_e( "Disciple-making can be rapidly advanced by finding a person of peace, even in a place where followers of Jesus are few and far between. How do you know when you have found a person of peace and what do you when you find them?", 'zume' ) ?>
+                    <?php esc_html_e( "Disciple-making can be rapidly advanced by finding a person of peace, even in a place where followers of Jesus are few and far between. How do you know when you have found a person of peace and what do you do when you find them?", 'zume' ) ?>
                 </div>
             </div> <!-- grid-x -->
 
