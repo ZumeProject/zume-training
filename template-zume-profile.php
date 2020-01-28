@@ -112,7 +112,7 @@ add_action( 'wp_head', 'zume_signup_header' );
                             </div>
 
                             <div id="possible-results">
-                                <input type="hidden" name="zume_user_address" id="address_profile" value="<?php echo isset( $zume_user_meta['zume_user_address'] ) ? esc_html( $zume_user_meta['zume_user_address'] ) : ''; ?>" />
+                                <input type="radio" style="display:none;" name="zume_user_address" id="address_profile" value="<?php echo isset( $zume_user_meta['zume_user_address'] ) ? esc_html( $zume_user_meta['zume_user_address'] ) : ''; ?>" checked/>
                             </div>
 
                             <?php if ( ! empty( $zume_user_meta['zume_user_address'] ) && ! empty( $zume_user_meta['zume_user_lng'] ) && ! empty( $zume_user_meta['zume_user_lat'] ) ) : ?>

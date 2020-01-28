@@ -94,7 +94,6 @@ function zume_site_scripts() {
      */
     if ( 'template-zume-training.php' === basename( get_page_template() )
         || 'template-zume-profile.php' === basename( get_page_template() )
-        || 'landing' === substr( basename( get_page_template() ), 0, 7 )
         || 'template-pieces-page.php' === basename( get_page_template() )
         || 'template-zume-course-v4.php' === basename( get_page_template() ) ) {
         wp_register_script( 'lodash', 'https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.11/lodash.min.js', false, '4.17.11' );
@@ -118,6 +117,7 @@ function zume_site_scripts() {
                     'email' => $zume_user->data->user_email,
                     'phone' => $zume_user_meta['zume_phone_number'] ?? false,
                     'city' => $zume_user_meta['zume_user_address'] ?? false,
+                    'location_grid_meta' => $zume_user_meta['zume_user_address'] ?? false,
                     'affiliation_key' => $zume_user_meta['zume_affiliation_key'] ?? false,
                     'is_facebook_linked' => false, // @todo
                     'is_google_linked' => false, // @todo
