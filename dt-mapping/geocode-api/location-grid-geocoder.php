@@ -898,7 +898,7 @@ if ( ! class_exists( 'Location_Grid_Geocoder' ) ) {
             return $query;
         }
 
-        public function convert_ip_result_to_location_grid_meta ( $ip_result ) {
+        public function convert_ip_result_to_location_grid_meta( $ip_result ) {
             if ( empty( $ip_result ) ) {
                 return $ip_result;
             }
@@ -920,17 +920,17 @@ if ( ! class_exists( 'Location_Grid_Geocoder' ) ) {
                 $label = '';
             }
 
-            $grid_id = $this->get_grid_id_by_lnglat( $ip_result['longitude'], $ip_result['latitude'],  $ip_result['country_code'] );
+            $grid_id = $this->get_grid_id_by_lnglat( $ip_result['longitude'], $ip_result['latitude'], $ip_result['country_code'] );
 
             if ( empty( $label ) ) {
-              $label = $grid_id['name'] ?? '';
+                $label = $grid_id['name'] ?? '';
             }
 
             $location_grid_meta = [
                 'lng' => $ip_result['longitude'],
                 'lat' => $ip_result['latitude'],
                 'level' => 'place',
-                'label' =>  $label,
+                'label' => $label,
                 'source' => 'ip',
                 'grid_id' => $grid_id['grid_id'] ?? '',
             ];

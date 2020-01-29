@@ -362,7 +362,7 @@ class Zume_V4_REST_API {
             'affiliation' => $args['affiliation_key']
         ];
 
-
+        // build fields for transfer
         $fields = [
             "title" => $args['name'],
             "sources" => [
@@ -371,12 +371,10 @@ class Zume_V4_REST_API {
                 ],
             ],
             "contact_phone" => [
-                ["value" => $args['phone'] ],
+                [ "value" => $args['phone'] ],
             ],
-            'notes' => $notes,
+            "notes" => $notes,
         ];
-
-
 
         // Build location_grid_meta
         $geocoder = new Location_Grid_Geocoder();
@@ -396,13 +394,16 @@ class Zume_V4_REST_API {
 
         if ( $args['location_grid_meta'] ) {
             $fields['location_grid'] = [ "values" => [ [ "value" => $args['location_grid_meta']['grid_id'] ] ] ];
+            $coordinates = [];
+            $coordinates['values'][] = [
+                'value' => $args['location_grid_meta']
+            ];
+            $fields['location_grid_meta'] = $coordinates;
         }
-
-
 
         $site = Site_Link_System::get_site_connection_vars( 20125 ); // @todo remove hardcoded
         if ( ! $site ) {
-          return new WP_Error(__METHOD__, 'Missing site to site data' );
+            return new WP_Error( __METHOD__, 'Missing site to site data' );
         }
 
         $args = [
@@ -414,8 +415,6 @@ class Zume_V4_REST_API {
         ];
         return wp_remote_post( 'https://' . trailingslashit( $site['url'] ) . 'wp-json/dt/v1/contact/create', $args );
 
-
     }
-
 }
 Zume_V4_REST_API::instance();
