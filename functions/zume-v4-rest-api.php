@@ -339,6 +339,10 @@ class Zume_V4_REST_API {
         ];
     }
 
+    /**
+     * @param WP_REST_Request $request
+     * @return array|WP_Error
+     */
     public function coaching_request( WP_REST_Request $request ) {
         $params = $request->get_params();
         if ( ! isset( $params['name'] ) ) {
@@ -346,15 +350,35 @@ class Zume_V4_REST_API {
         }
 
         $args = array(
+            'id' => get_current_user_id(),
             'name' => sanitize_text_field( wp_unslash( $params['name'] ) ),
             'phone' => sanitize_text_field( wp_unslash( $params['phone'] ) ),
             'email' => sanitize_text_field( wp_unslash( $params['email'] ) ),
             'preference' => sanitize_text_field( wp_unslash( $params['preference'] ) ),
             'affiliation_key' => sanitize_text_field( wp_unslash( $params['affiliation_key'] ) ),
         );
+        $notes = [
+            'preference' => $args['preference'],
+            'affiliation' => $args['affiliation_key']
+        ];
+
+
+        $fields = [
+            "title" => $args['name'],
+            "sources" => [
+                "values" => [
+                    [ "value" => "zume_training" ],  //add new, or make sure it exists
+                ],
+            ],
+            "contact_phone" => [
+                ["value" => $args['phone'] ],
+            ],
+            'notes' => $notes,
+        ];
+
+
 
         // Build location_grid_meta
-        $args['location_grid_meta'] = false;
         $geocoder = new Location_Grid_Geocoder();
         if ( empty( $params['location_grid_meta'] ) ) {
             // if no provided location, get ip address location
@@ -364,18 +388,33 @@ class Zume_V4_REST_API {
             $grid = $geocoder->get_grid_id_by_lnglat( $params['location_grid_meta']['lng'], $params['location_grid_meta']['lat'] );
             $params['location_grid_meta']['grid_id'] = (int) $grid['grid_id'];
             $args['location_grid_meta'] = $params['location_grid_meta'];
+        } else if ( ! empty( $params['location_grid_meta'] ) ) {
+            $args['location_grid_meta'] = $params['location_grid_meta'];
+        } else {
+            $args['location_grid_meta'] = false;
         }
 
-        $args['success'] = true;
-        return $args;
+        if ( $args['location_grid_meta'] ) {
+            $fields['location_grid'] = [ "values" => [ [ "value" => $args['location_grid_meta']['grid_id'] ] ] ];
+        }
 
-//        $meta_id = Zume_V4_Groups::create_group( $args );
-//        if ( $meta_id ) {
-//            return Zume_V4_Groups::get_all_groups( get_current_user_id() );
-//        } else {
-//            dt_write_log( __METHOD__ . ': Failed to create new group.' );
-//            return false;
-//        }
+
+
+        $site = Site_Link_System::get_site_connection_vars( 20125 ); // @todo remove hardcoded
+        if ( ! $site ) {
+          return new WP_Error(__METHOD__, 'Missing site to site data' );
+        }
+
+        $args = [
+            'method' => 'POST',
+            'body' => $fields,
+            'headers' => [
+                'Authorization' => 'Bearer ' . $site['transfer_token'],
+            ],
+        ];
+        return wp_remote_post( 'https://' . trailingslashit( $site['url'] ) . 'wp-json/dt/v1/contact/create', $args );
+
+
     }
 
 }

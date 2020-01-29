@@ -443,3 +443,10 @@
     }
 
 }
+
+.loading {
+    background-image: url( ../images/spinner.svg );
+    background-position: 92% 50%;
+    background-repeat: no-repeat;
+    padding-right: 30px !important;
+}

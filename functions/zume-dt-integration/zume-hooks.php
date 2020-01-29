@@ -24,7 +24,7 @@ class Zume_Integration_Hooks
     public function __construct() {
         new Zume_Integration_Hook_User();
         new Zume_Integration_Hook_Groups();
-        new Zume_Integration_Metabox();
+//        new Zume_Integration_Metabox();
     }
 }
 Zume_Integration_Hooks::instance();
@@ -105,54 +105,54 @@ class Zume_Integration_Hook_User extends Zume_Integration_Hook_Base {
 /**
  * Class Zume_Integration_Hook_Groups
  */
-class Zume_Integration_Metabox extends Zume_Integration_Hook_Base {
-
-    public function meta_box_setup() {
-        add_meta_box( 'site_link_system_extensions', 'Zúme Configuration', array( $this, 'meta_box_extensions' ), 'site_link_system', 'normal', 'low' );
-    }
-
-    public function meta_box_extensions() {
-        Site_Link_System::instance()->meta_box_content( 'zume' );
-
-        global $post, $pagenow;
-        if ( ! ( $pagenow == 'post-new.php' ) ) {
-            echo '<table class="form-table"><tr><th scope="row" width="33%"><label>Affiliation URL</label></th><td>';
-            echo '<a href="' . esc_url( site_url() ) . '/local-signup/?affiliation=' . esc_attr( get_post_meta(
-                $post->ID,
-            'affiliation_key', true ) ) . '" target="">' . esc_url( site_url() ) . '/local-signup/?affiliation=' . esc_attr( get_post_meta(
-                $post->ID,
-            'affiliation_key', true ) ) . '</a>';
-            echo '</td></tr></table>';
-        }
-    }
-
-    public function add_fields( $fields ) {
-
-        $fields['visibility'] = array(
-            'name'        => __( 'Visibility' ),
-            'description' => 'Private keeps the site connection from being listed on registration and profile.',
-            'type'        => 'key_select',
-            'default'     => array(
-        '0' => __( 'Public (Default)' ),
-        '1' => __( 'Private' )
-            ),
-            'section'     => 'zume',
-            );
-        $fields['affiliation_key'] = array(
-            'name'        => __( 'Affiliation Key' ),
-            'description' => '',
-            'type'        => 'readonly',
-            'default'     => Zume_Dashboard::get_unique_public_key(),
-            'section'     => 'zume',
-        );
-
-        return $fields;
-    }
-
-    public function __construct() {
-        add_action( 'admin_menu', array( $this, 'meta_box_setup' ), 20 );
-        add_filter( 'site_link_fields_settings', array( $this, 'add_fields' ) );
-
-        parent::__construct();
-    }
-}
+//class Zume_Integration_Metabox extends Zume_Integration_Hook_Base {
+//
+//    public function meta_box_setup() {
+//        add_meta_box( 'site_link_system_extensions', 'Zúme Configuration', array( $this, 'meta_box_extensions' ), 'site_link_system', 'normal', 'low' );
+//    }
+//
+//    public function meta_box_extensions() {
+//        Site_Link_System::instance()->meta_box_content( 'zume' );
+//
+//        global $post, $pagenow;
+//        if ( ! ( $pagenow == 'post-new.php' ) ) {
+//            echo '<table class="form-table"><tr><th scope="row" width="33%"><label>Affiliation URL</label></th><td>';
+//            echo '<a href="' . esc_url( site_url() ) . '/local-signup/?affiliation=' . esc_attr( get_post_meta(
+//                $post->ID,
+//            'affiliation_key', true ) ) . '" target="">' . esc_url( site_url() ) . '/local-signup/?affiliation=' . esc_attr( get_post_meta(
+//                $post->ID,
+//            'affiliation_key', true ) ) . '</a>';
+//            echo '</td></tr></table>';
+//        }
+//    }
+//
+//    public function add_fields( $fields ) {
+//
+//        $fields['visibility'] = array(
+//            'name'        => __( 'Visibility' ),
+//            'description' => 'Private keeps the site connection from being listed on registration and profile.',
+//            'type'        => 'key_select',
+//            'default'     => array(
+//        '0' => __( 'Public (Default)' ),
+//        '1' => __( 'Private' )
+//            ),
+//            'section'     => 'zume',
+//            );
+//        $fields['affiliation_key'] = array(
+//            'name'        => __( 'Affiliation Key' ),
+//            'description' => '',
+//            'type'        => 'readonly',
+//            'default'     => Zume_Dashboard::get_unique_public_key(),
+//            'section'     => 'zume',
+//        );
+//
+//        return $fields;
+//    }
+//
+//    public function __construct() {
+//        add_action( 'admin_menu', array( $this, 'meta_box_setup' ), 20 );
+//        add_filter( 'site_link_fields_settings', array( $this, 'add_fields' ) );
+//
+//        parent::__construct();
+//    }
+//}

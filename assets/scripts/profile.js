@@ -2,10 +2,10 @@ _ = _ || window.lodash // make sure lodash is defined so plugins like gutenberg 
 const { __, _x, _n, _nx } = wp.i18n;
 
 jQuery(document).ready( function() {
-  get_profile()
+  write_profile()
 })
 
-function get_profile() {
+function write_profile() {
   let fields = zumeProfile.user_profile_fields
 
   if ( ! zumeProfile.logged_in ) {
@@ -25,10 +25,12 @@ function get_profile() {
 
 
     jQuery('#profile').empty().html(`
-    
+    <h3 class="section-header">${__('Your Profile', 'zume')}</h3>
+
+    <style>.label-column { vertical-align: top; width: 100px; white-space: nowrap;}</style>
     <table class="hover stack" id="profile-fields">
         <tr style="vertical-align: top;">
-            <td>
+            <td class="label-column">
                 <label for="zume_full_name">Name</label>
             </td>
             <td>
@@ -45,7 +47,7 @@ function get_profile() {
 
 
         <tr>
-            <td style="vertical-align: top;">
+            <td class="label-column">
                 <label for="zume_phone_number">${__('Phone', 'zume')}</label>
             </td>
             <td>
@@ -61,7 +63,7 @@ function get_profile() {
         </tr>
         
         <tr>
-            <td style="vertical-align: top;">
+            <td class="label-column">
                 <label for="user_email">${__('Email', 'zume')}</label>
             </td>
             <td>
@@ -80,7 +82,7 @@ function get_profile() {
         </tr>
         
         <tr>
-            <td style="vertical-align: top;">
+            <td class="label-column">
                 <label for="validate_address">
                     ${__('City', 'zume')}
                 </label>
@@ -93,10 +95,12 @@ function get_profile() {
                            id="validate_address"
                            name="validate_address"
                            value="${location_grid_meta_label}"
+                           onkeyup="validate_timer(jQuery(this).val())"
                            data-abide-ignore
                     />
                     <div class="input-group-button">
-                        <input type="button" class="button" id="validate_address_button" value="${__('Lookup', 'zume')}" onclick="validate_user_address_v4( jQuery('#validate_address').val() )">
+                        <button class="button hollow" id="validate_address_button" onclick="validate_user_address_v4( jQuery('#validate_address').val() )">${__('Lookup', 'zume')}</button>
+                        <button class="button hollow" id="spinner_button" style="display:none;"><img src="${zumeProfile.theme_uri}/assets/images/spinner.svg" alt="spinner" style="width: 18px;" /></button>
                         <input type="button" class="button hollow" value="${__('Reset', 'zume')}" onclick="clear_locations()" />
                     </div>
                 </div>
@@ -107,7 +111,7 @@ function get_profile() {
             </td>
         </tr>
         
-        <tr>
+        <tr class="label-column">
             <td style="vertical-align: top;">
                 <label for="zume_affiliation_key">${__('Affiliation Key', 'zume')}</label>
             </td>
@@ -117,7 +121,21 @@ function get_profile() {
             </td>
         </tr>
 
-        <tr id="facebook-row" style="display: none;">
+    </table>
+    
+    <div data-abide-error  class="alert alert-box" style="display:none;" id="alert">
+        <strong>${__('Oh snap!', 'zume')}</strong>
+    </div>
+
+<div class="grid-x">
+  <div class="cell center">
+      <button class="button" type="submit" onclick="validate_request()" id="submit_profile">${__('Save', 'zume')}</button> <span id="request_spinner"></span>
+  </div>
+</div>
+    
+    <h3>${__('Linked Accounts', 'zume')}</h3>
+    <table class="hover stack">
+    <tr id="facebook-row"  class="label-column" style="display: none;">
             <td style="vertical-align: top;">
                 <label>${__('Linked Facebook Account', 'zume')}</label>
             </td>
@@ -132,7 +150,7 @@ function get_profile() {
             </td>
         </tr>
         
-        <tr id="google-row" style="display: none;">
+        <tr id="google-row"  class="label-column" style="display: none;">
             <td style="vertical-align: top;">
                 <label for="google_email">${__('Linked Google Account', 'zume')}</label>
             </td>
@@ -146,14 +164,10 @@ function get_profile() {
                 </div>
             </td>
         </tr>
-
     </table>
+    
 
-    <div data-abide-error  class="alert alert-box" style="display:none;" id="alert">
-        <strong>${__('Oh snap!', 'zume')}</strong>
-    </div>
-
-    <button class="button" type="submit" onclick="validate_request()" id="submit_profile">${__('Save', 'zume')}</button> <span id="request_spinner"></span>
+    
   `)
   } /* end if */
 
@@ -164,29 +178,68 @@ function get_profile() {
     jQuery('#google-row').show()
   }
 
-  var elem = new Foundation.Abide(jQuery('#profile-fields'))
 
-  jQuery('#validate_address').keyup( function() {
+
+  // listeners for geocoding text box
+  let validate_address_textbox = jQuery('#validate_address')
+  validate_address_textbox.keyup( function() {
     check_address()
   });
+  validate_address_textbox.on('keypress',function(e) {
+    if(e.which === 13) {
+      validate_user_address_v4( validate_address_textbox.val() )
+      clear_timer()
+    }
+  });
+
+  // re-initiate foundation abide
+  var elem = new Foundation.Abide(jQuery('#profile-fields'))
+
+  // listener for abide form validation
   jQuery(document)
     .on("formvalid.zf.abide", function(ev,frm) {
       send_coaching_request()
     })
 
+
+
+
+}
+
+window.validate_timer_id = '';
+function validate_timer(user_address) {
+  // clear previous timer
+  clear_timer()
+
+  // toggle buttons
+  jQuery('#validate_address_button').hide()
+  jQuery('#spinner_button').show()
+
+  // set timer
+  window.validate_timer_id = setTimeout(function(){
+    // call geocoder
+    validate_user_address_v4(user_address)
+    // toggle buttons back
+    jQuery('#validate_address_button').show()
+    jQuery('#spinner_button').hide()
+  }, 1500);
+}
+
+function clear_timer() {
+  clearTimeout(window.validate_timer_id);
 }
 
 function validate_user_address_v4(user_address){
-  jQuery('#map').empty()
-  jQuery('#possible-results').empty().append(`<span class="spinner"><img src="${zumeProfile.theme_uri}/assets/images/spinner.svg" alt="spinner" style="height:20px;" /></span>`)
+
+  if ( user_address.length < 1 ) {
+    return;
+  }
 
   let root = 'https://api.mapbox.com/geocoding/v5/mapbox.places/'
   let settings = '.json?types=region,place,neighborhood,address&limit=6&access_token='
   let key = zumeProfile.map_key
 
   let url = root + encodeURI( user_address ) + settings + key
-
-  jQuery('#validate_address_button').val('Validate Another?')
 
   jQuery.get( url, function( data ) {
 
@@ -197,8 +250,7 @@ function validate_user_address_v4(user_address){
     // check if multiple results
     if( data.features.length > 1 ) {
 
-      jQuery('#validate_address_button').val('Lookup Again?')
-      jQuery('#possible-results').empty().append(`<fieldset id="multiple-results"><legend>${__('Select one of these or search again.', 'zume')}</legend></fieldset>`)
+      jQuery('#possible-results').empty().append(`<fieldset id="multiple-results"></fieldset>`)
 
       jQuery.each( data.features, function( index, value ) {
         let checked = ''
@@ -210,10 +262,23 @@ function validate_user_address_v4(user_address){
     }
     else
     {
-      jQuery('#map').empty()
       jQuery('#possible-results').empty().append(`<fieldset id="multiple-results"><legend>${__('We found this match. Is this correct? If not validate another.', 'zume')}</legend><input type="radio" name="zume_user_address" id="zume_user_address" value="${data.features[0].place_name}" checked/><label for="zume_user_address">${data.features[0].place_name}</label></fieldset>`)
     }
-    jQuery('#submit_profile').removeAttr('disabled')
+    jQuery('#submit_profile').removeAttr('disabled') // enable save button
+
+    // add responsive click event to populate text area
+    jQuery('#multiple-results input').on('click', function( ) {
+      // add selected to the text box
+      console.log( jQuery(this).val())
+
+      let selected_id = jQuery(this).val()
+      jQuery.each( window.mapbox_results.features, function(i,v) {
+        if ( v.id === selected_id ) {
+          jQuery('#validate_address').val(v.place_name)
+        }
+      })
+
+    })
 
   });
 
@@ -305,7 +370,6 @@ function check_address() {
   }
   let val_address = jQuery('#validate_address').val()
   let results_address = jQuery('#multiple-results').length
-  console.log('test')
 
   if (val_address === default_address) // exactly same values
   {
@@ -368,4 +432,15 @@ function unlink_google_sso() {
     })
 
 }
+
+/**     Type ahead experiment      **/
+
+
+
+
+
+
+
+
+
 
