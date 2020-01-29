@@ -112,6 +112,24 @@ class Zume_V4_REST_API {
                 }
             ),
         ) );
+        register_rest_route( $namespace, '/update_profile', array(
+            array(
+                'methods'         => WP_REST_Server::CREATABLE,
+                'callback'        => array( $this, 'update_profile' ),
+                "permission_callback" => function () {
+                    return current_user_can( 'zume' );
+                }
+            ),
+        ) );
+        register_rest_route( $namespace, '/unlink_profile', array(
+            array(
+                'methods'         => WP_REST_Server::CREATABLE,
+                'callback'        => array( $this, 'unlink_profile' ),
+                "permission_callback" => function () {
+                    return current_user_can( 'zume' );
+                }
+            ),
+        ) );
     }
 
     public function progress_update( WP_REST_Request $request){
@@ -221,6 +239,104 @@ class Zume_V4_REST_API {
         } else {
             return new WP_Error( "tract_param_error", "Please provide a valid address", array( 'status' => 400 ) );
         }
+    }
+
+    public function unlink_profile( WP_REST_Request $request){
+        $params = $request->get_json_params();
+        if ( isset( $params['type'] ) ) {
+            switch ( $params['type'] ) {
+                case 'facebook':
+                    delete_user_meta( get_current_user_id(), 'facebook_sso_email' );
+                    delete_user_meta( get_current_user_id(), 'facebook_sso_id' );
+                    delete_user_meta( get_current_user_id(), 'facebook_session_token' );
+                    break;
+                case 'google':
+                    delete_user_meta( get_current_user_id(), 'google_sso_email' );
+                    delete_user_meta( get_current_user_id(), 'google_sso_id' );
+                    delete_user_meta( get_current_user_id(), 'google_session_token' );
+                    break;
+                default:
+                    return new WP_Error( "tract_param_error", "Unable to unlink profile", array( 'status' => 400 ) );
+                    break;
+            }
+        } else {
+            return new WP_Error( "tract_param_error", "Unable to unlink profile", array( 'status' => 400 ) );
+        }
+        return true;
+    }
+
+    public function update_profile( WP_REST_Request $request){
+        $params = $request->get_json_params();
+        $user_info = get_userdata( get_current_user_id() );
+
+        // update name
+        $name = sanitize_text_field( wp_unslash( $params['name'] ) );
+        if ( empty( $name ) ) {
+            delete_user_meta( $user_info->ID, 'zume_full_name' );
+        } else {
+            update_user_meta( $user_info->ID, 'zume_full_name', $name );
+        }
+
+        // update phone
+        $phone = sanitize_text_field( wp_unslash( $params['phone'] ) );
+        if ( empty( $phone ) ) {
+            delete_user_meta( $user_info->ID, 'zume_phone_number' );
+        } else {
+            update_user_meta( $user_info->ID, 'zume_phone_number', $phone );
+        }
+
+        // update email
+        $email = sanitize_email( wp_unslash( $params['email'] ) );
+        if ( $email !== $user_info->ID && ! empty( $email ) ) {
+            $args = array();
+            $args['ID'] = $user_info->ID;
+            $args['user_email'] = $email;
+
+            $result = wp_update_user( $args );
+            if ( is_wp_error( $result ) ) {
+                return new WP_Error( 'fail_update_user_data', 'Error while updating user data in user table.' );
+            }
+        }
+
+        // update affiliation key
+        $affiliation_key = sanitize_text_field( wp_unslash( trim( $params['affiliation_key'] ) ) );
+        if ( empty( $affiliation_key ) ) {
+            delete_user_meta( $user_info->ID, 'zume_affiliation_key' );
+        } else {
+            update_user_meta( $user_info->ID, 'zume_affiliation_key', $affiliation_key );
+        }
+
+        // update location_grid_meta
+        if ( empty( $params['location_grid_meta'] ) ) {
+            delete_user_meta( $user_info->ID, 'location_grid_meta' );
+        } else {
+            $location_grid_meta = array_map( 'sanitize_text_field', wp_unslash( $params['location_grid_meta'] ) );
+            $lng = empty( $location_grid_meta['lng'] ) ? false : $location_grid_meta['lng'];
+            $lat = empty( $location_grid_meta['lat'] ) ? false : $location_grid_meta['lat'];
+            if ( $lng && $lat ) {
+                $geocoder = new Location_Grid_Geocoder();
+                $grid = $geocoder->get_grid_id_by_lnglat( $lng, $lat );
+                if ( isset( $grid['grid_id'] ) ) {
+                    $location_grid_meta['grid_id'] = $grid['grid_id'];
+                }
+            }
+
+            update_user_meta( $user_info->ID, 'location_grid_meta', $location_grid_meta );
+        }
+
+        $zume_user = wp_get_current_user();
+        $zume_user_meta = zume_get_user_meta( $zume_user->ID );
+
+        return [
+            'id' => $zume_user->data->ID,
+            'name' => $zume_user_meta['zume_full_name'] ?? '',
+            'email' => $zume_user->data->user_email,
+            'phone' => $zume_user_meta['zume_phone_number'] ?? '',
+            'location_grid_meta' => maybe_unserialize( $zume_user_meta['location_grid_meta'] ) ?? '',
+            'affiliation_key' => $zume_user_meta['zume_affiliation_key'] ?? '',
+            'facebook_sso_email' => $zume_user_meta['facebook_sso_email'] ?? false,
+            'google_sso_email' => $zume_user_meta['google_sso_email'] ?? false,
+        ];
     }
 
     public function coaching_request( WP_REST_Request $request ) {

@@ -1333,7 +1333,7 @@ function get_coach_request() {
                                        data-abide-ignore
                                 />
                                 <div class="input-group-button">
-                                    <input type="button" class="button" id="validate_address_button" value="Validate" onclick="validate_user_address_v4( jQuery('#validate_address').val() )">
+                                    <input type="button" class="button" id="validate_address_button" value="${__('Lookup', 'zume')}" onclick="validate_user_address_v4( jQuery('#validate_address').val() )">
                                     <input type="button" class="button hollow" value="Clear" onclick="clear_locations()" />
                                 </div>
                             </div>
@@ -1377,16 +1377,12 @@ function get_coach_request() {
                     <strong>${__('Oh snap!', 'zume')}</strong>
                 </div>
                 <div class="cell">
-                    <button class="button" type="button" onclick="validate_request()" id="submit_profile">${__('Submit', 'zume')}</button><span id="request_spinner"></span>
+                    <button class="button" type="button" onclick="validate_request()" id="submit_profile">${__('Submit', 'zume')}</button> <span id="request_spinner"></span>
                 </div>
             </form>
         </div>
     </div>
   `)
-  }
-
-  if ( fields.city ) {
-    validate_user_address_v4( fields.city )
   }
 
   var elem = new Foundation.Abide(jQuery('#coaching-request-form'))
@@ -1408,15 +1404,15 @@ function clear_locations() {
 
 function validate_user_address_v4(user_address){
   jQuery('#map').empty()
-  jQuery('#possible-results').empty().append('<span class="spinner"><img src="' + zumeTraining.theme_uri + '/assets/images/spinner.svg" style="height:20px;" /></span>')
+  jQuery('#possible-results').empty().append(`<span class="spinner"><img src="${zumeProfile.theme_uri}/assets/images/spinner.svg" alt="spinner" style="height:20px;" /></span>`)
 
   let root = 'https://api.mapbox.com/geocoding/v5/mapbox.places/'
   let settings = '.json?types=region,place,neighborhood,address&limit=6&access_token='
-  let key = zumeTraining.map_key
+  let key = zumeProfile.map_key
 
   let url = root + encodeURI( user_address ) + settings + key
 
-  jQuery('#validate_address_button').val('Validate Another?')
+  jQuery('#validate_address_button').val('Lookup Another?')
 
   jQuery.get( url, function( data ) {
 
@@ -1428,20 +1424,20 @@ function validate_user_address_v4(user_address){
     if( data.features.length > 1 ) {
 
       jQuery('#validate_address_button').val('Search Again?')
-      jQuery('#possible-results').empty().append('<fieldset id="multiple-results"><legend>Select one of these or search again.</legend></fieldset>')
+      jQuery('#possible-results').empty().append(`<fieldset id="multiple-results"><legend>${__('Select one of these or search again.', 'zume')}</legend></fieldset>`)
 
       jQuery.each( data.features, function( index, value ) {
         let checked = ''
         if( index === 0 ) {
           checked = 'checked'
         }
-        jQuery('#multiple-results').append( '<input type="radio" name="zume_user_address" id="zume_user_address'+index+'" value="'+value.id+'" '+checked+' /><label for="zume_user_address'+index+'">'+value.place_name+'</label><br>')
+        jQuery('#multiple-results').append( `<input type="radio" name="zume_user_address" id="zume_user_address${index}" value="${value.id}" ${checked} /><label for="zume_user_address${index}">${value.place_name}</label><br>`)
       })
     }
     else
     {
       jQuery('#map').empty()
-      jQuery('#possible-results').empty().append('<fieldset id="multiple-results"><legend>We found this match. Is this correct? If not validate another.</legend><input type="radio" name="zume_user_address" id="zume_user_address" value="'+data.features[0].place_name+'" checked/><label for="zume_user_address">'+data.features[0].place_name+'</label></fieldset>')
+      jQuery('#possible-results').empty().append(`<fieldset id="multiple-results"><legend>${__('We found this match. Is this correct? If not validate another.', 'zume')}</legend><input type="radio" name="zume_user_address" id="zume_user_address" value="${data.features[0].place_name}" checked/><label for="zume_user_address">${data.features[0].place_name}</label></fieldset>`)
     }
     jQuery('#submit_profile').removeAttr('disabled')
 
@@ -1451,7 +1447,7 @@ function validate_user_address_v4(user_address){
 
 function send_coaching_request() {
   let spinner = jQuery('#request_spinner')
-  spinner.html('<img src="'+ zumeTraining.theme_uri +'/assets/images/spinner.svg" style="width: 40px; vertical-align:top; margin-left: 5px;" />')
+  spinner.html( `<img src="${zumeTraining.theme_uri}/assets/images/spinner.svg" style="width: 40px; vertical-align:top; margin-left: 5px;" />` )
 
   let name = jQuery('#zume_full_name').val()
   let phone = jQuery('#zume_phone_number').val()
@@ -1459,7 +1455,7 @@ function send_coaching_request() {
   let preference = jQuery('input.zume_contact_preference:checked').val()
   let affiliation_key = jQuery('#zume_affiliation_key').val()
 
-  /******************************************************************/
+  /**************/
   // Get address
   let location_grid_meta = false // base is false
   let selection_id = jQuery('#possible-results input:checked').val()
@@ -1484,7 +1480,7 @@ function send_coaching_request() {
         }
       })
   }
-  /******************************************************************/
+  /**************/
 
   let data = {
     "name": name,
@@ -1506,7 +1502,28 @@ function send_coaching_request() {
       spinner.empty().html( '&nbsp;Oops. Something went wrong. Try again!')
     })
 }
+function check_address(key) {
 
+  let val_address = jQuery('#validate_address' + key).val()
+  let default_address = jQuery('#address_' + key).val()
+  let results_address = jQuery('#multiple-results' + key).length
+
+  if (val_address === default_address) // exactly same values
+  {
+    jQuery('#submit_' + key).removeAttr('disabled')
+  }
+  else if (results_address) // check if fieldset exists by validation
+  {
+    jQuery('#submit_' + key).removeAttr('disabled')
+  }
+  else if (val_address.length === 0) // check if fieldset exists by validation
+  {
+    jQuery('#submit_' + key).removeAttr('disabled')
+  }
+  else {
+    jQuery('#submit_' + key).attr('disabled', 'disabled')
+  }
+}
 
 
 
