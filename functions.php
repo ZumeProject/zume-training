@@ -2,15 +2,11 @@
 /**
  * Zume Project
  */
+
+// Debugging Functions
 require_once( 'functions/utilities/debugger-log.php' ); // debug logger used for development.
 
-require_once( 'dt-mapping/loader.php' );
-new DT_Mapping_Module_Loader( 'theme' );
-
-/**
- * We want to make sure migrations are run on updates.
- * @see https://www.sitepoint.com/wordpress-plugin-updates-right-way/
- */
+// Migration Engine
 try {
     require_once( 'functions/class-migration-engine.php' );
     Zume_Migration_Engine::migrate( 0 );
@@ -18,9 +14,7 @@ try {
     new WP_Error( 'migration_error', 'Migration engine failed to migrate.' );
 }
 
-/**
- * Add custom table
- */
+// Zume Tables Setup
 global $wpdb;
 require_once 'functions/activator.php';
 $wpdb->zume_logging = $wpdb->prefix . 'zume_logging';
@@ -30,17 +24,10 @@ if ( is_admin() ) {
     require_once( 'functions/post-types/pieces-page-metabox.php' );
 }
 
-
-
-
-
-/**
- * INCLUDED FILES
- */
-
 // Language Files
 require_once( 'translations/translation.php' ); // Adds support for multiple languages
 require_once( 'functions/zume-polylang-integration.php' ); // Adds support for multiple languages
+
 // Zume Theme Files
 require_once( 'functions/login/zume-login.php' ); // Customize the login page
 require_once( 'functions/enqueue-scripts.php' ); // Register scripts and stylesheets
@@ -54,32 +41,28 @@ require_once( 'functions/restrict-rest-api.php' ); // Restricts the default REST
 remove_action( 'rest_api_init', 'create_initial_rest_routes', 99 );
 require_once( 'functions/restrict-xml-rpc-pingback.php' ); // Restricts RPC vulnerability
 
-// Zume Core Files
+// Zume 3.0 Files to Deprecate after 4.0 upgrade
 require_once( 'functions/zume-course.php' ); // zume course
 $zume_course = Zume_Course::instance();
-require_once( 'functions/zume-functions.php' ); // general zume functions
 require_once( 'functions/zume-dashboard.php' ); // zume dashboard
-require_once( 'functions/zume-welcome-messages.php' ); // zume welcome messages
-require_once( 'functions/logging/zume-logging.php' ); // zume logging of critical path actions
-require_once( 'functions/zume-stats.php' ); // @todo remove zume logging of critical path actions
-require_once( 'functions/zume-three-month-plan.php' );
+require_once( 'functions/zume-rest-api.php' );
+// end 3.0
+
 
 // zume 4.0
+require_once( 'dt-mapping/loader.php' );
+new DT_Mapping_Module_Loader( 'theme' );
 require_once( 'functions/zume-v4-rest-api.php' );
 require_once( 'functions/zume-v4-users.php' );
 require_once( 'functions/zume-v4-groups.php' );
 require_once( 'functions/zume-v4-progress.php' );
 require_once( 'functions/zume-v4-pieces.php' );
 require_once( 'functions/zume-content.php' );
+require_once( 'functions/zume-three-month-plan.php' );
+require_once( 'functions/logging/zume-logging.php' ); // zume logging of critical path actions
 
-
-
+require_once( 'functions/zume-functions.php' ); // general zume functions
 require_once( 'functions/logging/zume-mailchimp.php' ); // zume logging of critical path actions
-require_once( 'functions/zume-dt-integration/zume-dashboard-sync.php' ); // zume dashboard sync
-
-// REST API
-require_once( 'functions/zume-rest-api.php' );
-
 
 
 // Zume - DT - Integration

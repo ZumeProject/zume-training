@@ -11,6 +11,8 @@
 
 if ( ! defined( 'ABSPATH' ) ) { exit; // Exit if accessed directly
 }
+// @todo delete after 4.0
+// unlink group and link group are the only endpoints that might move forward with 4.0
 
 class Zume_REST_API {
 

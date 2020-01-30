@@ -1,9 +1,9 @@
 <?php
 
 /**
- * Zume_Welcome_Messages
+ * Zume_Three_Month_Plan
  *
- * @class Zume_Welcome_Messages
+ * @class Zume_Three_Month_Plan
  * @version 0.1
  * @since 0.1
  */

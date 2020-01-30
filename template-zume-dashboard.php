@@ -749,7 +749,10 @@ do_action( 'zume_dashboard_header' );
                         /***********************************************************************************************
                          * WELCOME SECTION
                          **********************************************************************************************/
-                        $zume_message = Zume_Welcome_Messages::get_encouragement();
+                        $zume_message = [
+                            'title' => __( 'Welcome!', 'zume' ),
+                            'message' => __( 'I want to make disciples who multiply!', 'zume' )
+                        ];
                         ?>
                         <div class="callout show-for-large hide-for-small">
 
