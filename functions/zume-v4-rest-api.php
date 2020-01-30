@@ -427,7 +427,17 @@ class Zume_V4_REST_API {
         ];
 
 
-        return wp_remote_post( 'https://' . trailingslashit( $site['url'] ) . 'wp-json/dt/v1/contact/create', $args );
+        $result = wp_remote_post( 'https://' . trailingslashit( $site['url'] ) . 'wp-json/dt/v1/contact/create', $args );
+        if ( is_wp_error( $result ) ) {
+            return new WP_Error( 'failed_remote_post', $result->get_error_message() );
+        }
+        
+
+        $body = json_decode( $result['body'], true );
+
+        update_user_meta( get_current_user_id(), 'zume_global_network_contact_id', $body['post_id']);
+
+        return $result;
 
     }
 }
