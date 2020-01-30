@@ -410,7 +410,7 @@ class Zume_V4_REST_API {
             $fields['location_grid_meta'] = $coordinates;
             // load address field
             $fields['contact_address'] = [
-                [ "value" => $args['location_grid_meta']['label']],
+                [ "value" => $args['location_grid_meta']['label'] ],
             ];
         }
 
@@ -434,10 +434,12 @@ class Zume_V4_REST_API {
             return new WP_Error( 'failed_remote_post', $result->get_error_message() );
         }
 
-
         $body = json_decode( $result['body'], true );
 
-        update_user_meta( $user_id, 'zume_global_network_contact_id', $body['post_id']);
+        update_user_meta( $user_id, 'zume_global_network', [
+            "contact_id" => $body['post_id'],
+            "date_transferred" => time()
+        ] );
 
         return $result;
 

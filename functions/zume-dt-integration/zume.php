@@ -386,6 +386,10 @@ class Zume_Integration
         return $groups;
     }
 
+    /**
+     * @param $user_id
+     * @return mixed|string
+     */
     public static function get_foreign_key( $user_id ) {
         $key = get_user_meta( $user_id, 'zume_foreign_key', true );
         if ( empty( $key ) ) {

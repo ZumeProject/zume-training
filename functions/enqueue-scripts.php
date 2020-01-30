@@ -142,6 +142,7 @@ function zume_site_scripts() {
                     'affiliation_key' => $zume_user_meta['zume_affiliation_key'] ?? '',
                     'facebook_sso_email' => $zume_user_meta['facebook_sso_email'] ?? false,
                     'google_sso_email' => $zume_user_meta['google_sso_email'] ?? false,
+                    'zume_global_network' => $zume_user_meta['zume_global_network'] ?? false,
                 ],
                 'logged_in' => is_user_logged_in(),
                 'map_key' => DT_Mapbox_API::get_key(),
