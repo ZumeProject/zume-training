@@ -344,13 +344,13 @@ class Zume_V4_REST_API {
      * @return array|WP_Error
      */
     public function coaching_request( WP_REST_Request $request ) {
+        $user_id = get_current_user_id();
         $params = $request->get_params();
         if ( ! isset( $params['name'] ) ) {
             return new WP_Error( "log_param_error", "Missing parameters", array( 'status' => 400 ) );
         }
 
         $args = array(
-            'id' => get_current_user_id(),
             'name' => sanitize_text_field( wp_unslash( $params['name'] ) ),
             'phone' => sanitize_text_field( wp_unslash( $params['phone'] ) ),
             'email' => sanitize_text_field( wp_unslash( $params['email'] ) ),
@@ -361,6 +361,7 @@ class Zume_V4_REST_API {
             'preference' => 'Requested contact method is: ' .$args['preference'],
             'affiliation' => 'Requested affiliation is: ' . $args['affiliation_key']
         ];
+        $zume_foreign_key = Zume_Integration::get_foreign_key( $user_id );
 
         // build fields for transfer
         $fields = [
@@ -376,7 +377,8 @@ class Zume_V4_REST_API {
             "contact_email" => [
                 [ "value" => $args['email'] ],
             ],
-            'zume_training_id' => get_current_user_id(),
+            'zume_training_id' => $user_id,
+            'zume_foreign_key' => $zume_foreign_key,
             "notes" => $notes,
         ];
 
@@ -431,11 +433,11 @@ class Zume_V4_REST_API {
         if ( is_wp_error( $result ) ) {
             return new WP_Error( 'failed_remote_post', $result->get_error_message() );
         }
-        
+
 
         $body = json_decode( $result['body'], true );
 
-        update_user_meta( get_current_user_id(), 'zume_global_network_contact_id', $body['post_id']);
+        update_user_meta( $user_id, 'zume_global_network_contact_id', $body['post_id']);
 
         return $result;
 
