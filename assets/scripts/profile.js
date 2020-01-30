@@ -99,9 +99,7 @@ function write_profile() {
                            data-abide-ignore
                     />
                     <div class="input-group-button">
-                        <button class="button hollow" id="validate_address_button" onclick="validate_user_address_v4( jQuery('#validate_address').val() )">${__('Lookup', 'zume')}</button>
                         <button class="button hollow" id="spinner_button" style="display:none;"><img src="${zumeProfile.theme_uri}/assets/images/spinner.svg" alt="spinner" style="width: 18px;" /></button>
-                        <input type="button" class="button hollow" value="${__('Reset', 'zume')}" onclick="clear_locations()" />
                     </div>
                 </div>
 
@@ -129,7 +127,7 @@ function write_profile() {
 
 <div class="grid-x">
   <div class="cell center">
-      <button class="button" type="submit" onclick="validate_request()" id="submit_profile">${__('Save', 'zume')}</button> <span id="request_spinner"></span>
+      <button class="button" type="submit" onclick="load_form_validator()" id="submit_profile">${__('Save', 'zume')}</button> <span id="request_spinner"></span>
   </div>
 </div>
     
@@ -198,7 +196,7 @@ function write_profile() {
   // listener for abide form validation
   jQuery(document)
     .on("formvalid.zf.abide", function(ev,frm) {
-      send_coaching_request()
+      update_profile()
     })
 
 
@@ -206,13 +204,13 @@ function write_profile() {
 
 }
 
+// Delay lookup
 window.validate_timer_id = '';
 function validate_timer(user_address) {
   // clear previous timer
   clear_timer()
 
   // toggle buttons
-  jQuery('#validate_address_button').hide()
   jQuery('#spinner_button').show()
 
   // set timer
@@ -220,7 +218,6 @@ function validate_timer(user_address) {
     // call geocoder
     validate_user_address_v4(user_address)
     // toggle buttons back
-    jQuery('#validate_address_button').show()
     jQuery('#spinner_button').hide()
   }, 1500);
 }
@@ -228,6 +225,7 @@ function validate_timer(user_address) {
 function clear_timer() {
   clearTimeout(window.validate_timer_id);
 }
+// end Delay Lookup
 
 function validate_user_address_v4(user_address){
 
@@ -236,63 +234,82 @@ function validate_user_address_v4(user_address){
   }
 
   let root = 'https://api.mapbox.com/geocoding/v5/mapbox.places/'
-  let settings = '.json?types=region,place,neighborhood,address&limit=6&access_token='
+  let settings = '.json?types=country,region,postcode,district,place,locality,neighborhood,address&limit=6&access_token='
   let key = zumeProfile.map_key
 
   let url = root + encodeURI( user_address ) + settings + key
 
   jQuery.get( url, function( data ) {
 
-    console.log(data)
+    let possible_results = jQuery('#possible-results')
+    possible_results.empty().append(`<fieldset id="multiple-results"></fieldset>`)
+    let multiple_results = jQuery('#multiple-results')
+
+    if( data.features.length < 1 ) {
+      multiple_results.empty().append(`${__( 'No location matches found. Try a less specific address.', 'zume' )}`)
+    }
+
+    // Set globals
+    // console.log(data)
     window.location_grid_meta = false
     window.mapbox_results = data
 
-    // check if multiple results
-    if( data.features.length > 1 ) {
+    // loop results
+    jQuery.each( data.features, function( index, value ) {
+      let checked = ''
+      if( index === 0 ) {
+        checked = 'checked'
+      }
+      multiple_results.append( `<input type="radio" name="zume_user_address" id="zume_user_address${_.escape( index )}" value="${_.escape( value.id )}" ${_.escape( checked )} /><label for="zume_user_address${_.escape( index )}">${_.escape( value.place_name )}</label><br>`)
+    })
 
-      jQuery('#possible-results').empty().append(`<fieldset id="multiple-results"></fieldset>`)
+    // enable ability to save
+    jQuery('#submit_profile').removeAttr('disabled')
 
-      jQuery.each( data.features, function( index, value ) {
-        let checked = ''
-        if( index === 0 ) {
-          checked = 'checked'
-        }
-        jQuery('#multiple-results').append( `<input type="radio" name="zume_user_address" id="zume_user_address${index}" value="${value.id}" ${checked} /><label for="zume_user_address${index}">${value.place_name}</label><br>`)
-      })
-    }
-    else
-    {
-      jQuery('#possible-results').empty().append(`<fieldset id="multiple-results"><legend>${__('We found this match. Is this correct? If not validate another.', 'zume')}</legend><input type="radio" name="zume_user_address" id="zume_user_address" value="${data.features[0].place_name}" checked/><label for="zume_user_address">${data.features[0].place_name}</label></fieldset>`)
-    }
-    jQuery('#submit_profile').removeAttr('disabled') // enable save button
-
-    // add responsive click event to populate text area
+    // add responsive click event to populate text area, if selection is clicked. Expected user feedback.
     jQuery('#multiple-results input').on('click', function( ) {
-      // add selected to the text box
-      console.log( jQuery(this).val())
-
       let selected_id = jQuery(this).val()
       jQuery.each( window.mapbox_results.features, function(i,v) {
         if ( v.id === selected_id ) {
-          jQuery('#validate_address').val(v.place_name)
+          jQuery('#validate_address').val(_.escape( v.place_name ))
         }
       })
-
     })
 
-  });
+  }); // end get request
+} // end validate_user_address
 
-}
-function validate_request() {
+// form validator
+function load_form_validator() {
   jQuery('#profile-fields').foundation('validateForm');
 }
-function clear_locations() {
-  jQuery('#validate_address').val(zumeProfile.user_profile_fields.location_grid_meta.label);
-  jQuery('#possible-results').empty().html(`<input type="radio" style="display:none;" name="address" id="address_profile" value="current" checked"/>`);
+function check_address() {
+  let fields = zumeProfile.user_profile_fields
+  let default_address = ''
+  if ( fields.location_grid_meta ) {
+    default_address = fields.location_grid_meta.label
+  }
+  let val_address = jQuery('#validate_address').val()
+  let results_address = jQuery('#multiple-results').length
 
+  if (val_address === default_address) // exactly same values
+  {
+    jQuery('#submit_profile').removeAttr('disabled')
+  }
+  else if (results_address) // check if fieldset exists by validation
+  {
+    jQuery('#submit_profile').removeAttr('disabled')
+  }
+  else if (val_address.length === 0) // check if fieldset exists by validation
+  {
+    jQuery('#submit_profile').removeAttr('disabled')
+  }
+  else {
+    jQuery('#submit_profile').attr('disabled', 'disabled')
+  }
 }
 
-function send_coaching_request() {
+function update_profile() {
   let spinner = jQuery('#request_spinner')
   spinner.html(`<img src="${zumeProfile.theme_uri}/assets/images/spinner.svg" alt="spinner" style="width: 40px; vertical-align:top; margin-left: 5px;" />`)
 
@@ -362,31 +379,8 @@ function send_coaching_request() {
       console.log(err)
     })
 }
-function check_address() {
-  let fields = zumeProfile.user_profile_fields
-  let default_address = ''
-  if ( fields.location_grid_meta ) {
-    default_address = fields.location_grid_meta.label
-  }
-  let val_address = jQuery('#validate_address').val()
-  let results_address = jQuery('#multiple-results').length
 
-  if (val_address === default_address) // exactly same values
-  {
-    jQuery('#submit_profile').removeAttr('disabled')
-  }
-  else if (results_address) // check if fieldset exists by validation
-  {
-    jQuery('#submit_profile').removeAttr('disabled')
-  }
-  else if (val_address.length === 0) // check if fieldset exists by validation
-  {
-    jQuery('#submit_profile').removeAttr('disabled')
-  }
-  else {
-    jQuery('#submit_profile').attr('disabled', 'disabled')
-  }
-}
+
 function unlink_facebook_sso() {
   jQuery.ajax({
     type: "POST",
@@ -432,15 +426,3 @@ function unlink_google_sso() {
     })
 
 }
-
-/**     Type ahead experiment      **/
-
-
-
-
-
-
-
-
-
-

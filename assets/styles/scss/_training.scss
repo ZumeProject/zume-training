@@ -85,13 +85,47 @@
     .tabs-panel {
         padding: 0;
     }
-    .tabs-title>button {
-        display: block;
-        padding: 1.25rem 1.5rem;
-        font-size: .75rem;
-        line-height: 1;
-        color: #323a68;
-        cursor:pointer;
+    .tabs-title {
+        button {
+            display: block;
+            padding: 1.25rem 1.5rem;
+            font-size: .75rem;
+            line-height: 1;
+            color: #323a68;
+            cursor: pointer;
+
+            @media (max-width: $breakpoint-medium) {
+                padding: .8rem 1rem;
+            }
+        }
+        a {
+            @media (max-width: $breakpoint-medium) {
+                padding: .8rem 1rem;
+            }
+        }
+    }
+
+    // coaching request page
+    .coach-title {
+        font-size: $x-large-text;
+        vertical-align: middle;
+        text-wrap: none;
+
+        @media (max-width: $breakpoint-medium) {
+            font-size: $large-text;
+        }
+    }
+    .coach-body {
+        @media (max-width: $breakpoint-medium) {
+            font-size: $small-text;
+        }
+    }
+    .coach-icon {
+        font-size: $seriously-big-text;
+        vertical-align: middle;
+        @media (max-width: $breakpoint-medium) {
+            font-size: $x-jumbo-text;
+        }
     }
 
     #inner-content {
@@ -444,9 +478,7 @@
 
 }
 
-.loading {
-    background-image: url( ../images/spinner.svg );
-    background-position: 92% 50%;
-    background-repeat: no-repeat;
-    padding-right: 30px !important;
+#coaching-request-form-section {
+    max-width:1000px;
+    margin: 0 auto;
 }

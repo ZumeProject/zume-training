@@ -1232,33 +1232,33 @@ function get_coach_request() {
     jQuery('#coach-request').empty().html(`
     <div class="grid-x" id="coaching-request-form-section">
         <div class="cell">
-        <h2 class="primary-color" id="coach-modal-title">${__('Connect Me to a Coach', 'zume')}</h2>
-            <hr>
+        <h2 class="primary-color hide-for-small-only" id="coach-modal-title">${__('Connect Me to a Coach', 'zume')}</h2>
+            <hr class="hide-for-small-only">
             <form id="coaching-request-form" data-abide>
                 <div class="grid-x grid-padding-x" >
 
-                    <dv class="cell small-6">
+                    <dv class="cell medium-6">
                         <i class="fi-torsos-all secondary-color" style="font-size:4em; vertical-align: middle;"></i>
-                        &nbsp;<span style="font-size:2em; vertical-align: middle; text-wrap: none;">${__('Coaches', 'zume')}</span>
-                        <p>${__('Our network of volunteer coaches are people like you, people who are passionate about loving God, loving others, and obeying the Great Commission.', 'zume')}</p>
+                        &nbsp;<span class="coach-title">${__('Coaches', 'zume')}</span>
+                        <p class="coach-body">${__('Our network of volunteer coaches are people like you, people who are passionate about loving God, loving others, and obeying the Great Commission.', 'zume')}</p>
                     </dv>
 
-                    <div class="cell small-6">
+                    <div class="cell medium-6">
                         <i class="fi-compass secondary-color" style="font-size:4em; vertical-align: middle;"></i>
-                        &nbsp;<span style="font-size:2em; vertical-align: middle;">${__('Advocates', 'zume')}</span>
-                        <p>${__('A coach is someone who will come alongside you as you implement the Zúme tools and training.', 'zume')}</p>
+                        &nbsp;<span class="coach-title">${__('Advocates', 'zume')}</span>
+                        <p class="coach-body">${__('A coach is someone who will come alongside you as you implement the Zúme tools and training.', 'zume')}</p>
                     </div>
 
-                    <div class="cell small-6">
+                    <div class="cell medium-6">
                         <i class="fi-map secondary-color" style="font-size:4em; vertical-align: middle;"></i>
-                        &nbsp;<span style="font-size:2em; vertical-align: middle;">${__('Local', 'zume')}</span>
-                        <p>${__('On submitting this request, we will do our best to connect you with a coach near you.', 'zume')}</p>
+                        &nbsp;<span class="coach-title">${__('Local', 'zume')}</span>
+                        <p class="coach-body">${__('On submitting this request, we will do our best to connect you with a coach near you.', 'zume')}</p>
                     </div>
 
-                    <div class="cell small-6">
-                        <i class="fi-dollar secondary-color" style="font-size:4em; vertical-align: middle;"></i>
-                        &nbsp;<span style="font-size:2em; vertical-align: middle;text-wrap: none;">${__('It\'s Free', 'zume')}</span>
-                        <p>${__('Coaching is free. You can opt out at any time.', 'zume')}</p>
+                    <div class="cell medium-6">
+                        <i class="fi-dollar secondary-color coach-icon" style="font-size:4em; vertical-align: middle;"></i>
+                        &nbsp;<span class="coach-title">${__('It\'s Free', 'zume')}</span>
+                        <p class="coach-body">${__('Coaching is free. You can opt out at any time.', 'zume')}</p>
                     </div>
 
                 </div>
@@ -1277,7 +1277,7 @@ function get_coach_request() {
                                    class="profile-input"
                                    id="zume_full_name"
                                    name="zume_full_name"
-                                   value="${ fields.name }"
+                                   value="${ _.escape( fields.name ) }"
                                    required />
                         </td>
                     </tr>
@@ -1291,8 +1291,8 @@ function get_coach_request() {
                                    class="profile-input"
                                    id="zume_phone_number"
                                    name="zume_phone_number"
-                                   value="${fields.phone}"
-                                   data-abide-ignore
+                                   value="${_.escape( fields.phone )}"
+                                   required
                             />
                         </td>
                     </tr>
@@ -1306,7 +1306,7 @@ function get_coach_request() {
                                    placeholder="name@email.com"
                                    id="user_email"
                                    name="user_email"
-                                   value="${fields.email}"
+                                   value="${_.escape( fields.email )}"
                                    required
                                    readonly
                             />
@@ -1325,18 +1325,16 @@ function get_coach_request() {
                         <td>
                           <div class="input-group">
                               <input type="text"
-                                     placeholder="${__('example: Denver, CO 80120', 'zume')}"
+                                     placeholder="${__('What is your city or state or postal code?', 'zume')}"
                                      class="profile-input input-group-field"
                                      id="validate_address"
                                      name="validate_address"
-                                     value="${location_grid_meta_label}"
+                                     value="${_.escape( location_grid_meta_label )}"
                                      onkeyup="validate_timer(jQuery(this).val())"
-                                     data-abide-ignore
+                                     required
                               />
                               <div class="input-group-button">
-                                  <button class="button hollow" id="validate_address_button" onclick="validate_user_address_v4( jQuery('#validate_address').val() )">${__('Lookup', 'zume')}</button>
                                   <button class="button hollow" id="spinner_button" style="display:none;"><img src="${zumeTraining.theme_uri}/assets/images/spinner.svg" alt="spinner" style="width: 18px;" /></button>
-                                  <input type="button" class="button hollow" value="${__('Reset', 'zume')}" onclick="clear_locations()" />
                               </div>
                           </div>
           
@@ -1379,7 +1377,7 @@ function get_coach_request() {
                     <strong>${__('Oh snap!', 'zume')}</strong>
                 </div>
                 <div class="cell">
-                    <button class="button" type="button" onclick="validate_request()" id="submit_profile">${__('Submit', 'zume')}</button> <span id="request_spinner"></span>
+                    <button class="button" type="button" onclick="load_form_validator()" id="submit_request">${__('Submit', 'zume')}</button> <span id="request_spinner"></span>
                 </div>
             </form>
         </div>
@@ -1408,6 +1406,7 @@ function get_coach_request() {
 
 }
 
+// delay location lookup
 window.validate_timer_id = '';
 function validate_timer(user_address) {
   // clear previous timer
@@ -1429,6 +1428,7 @@ function validate_timer(user_address) {
 function clear_timer() {
   clearTimeout(window.validate_timer_id);
 }
+// end delay location lookup
 
 function validate_user_address_v4(user_address){
 
@@ -1437,60 +1437,81 @@ function validate_user_address_v4(user_address){
   }
 
   let root = 'https://api.mapbox.com/geocoding/v5/mapbox.places/'
-  let settings = '.json?types=region,place,neighborhood,address&limit=6&access_token='
+  let settings = '.json?types=country,region,postcode,district,place,locality,neighborhood,address&limit=6&access_token='
   let key = zumeTraining.map_key
 
   let url = root + encodeURI( user_address ) + settings + key
 
   jQuery.get( url, function( data ) {
 
-    console.log(data)
+    let possible_results = jQuery('#possible-results')
+    possible_results.empty().append(`<fieldset id="multiple-results"></fieldset>`)
+    let multiple_results = jQuery('#multiple-results')
+
+    if( data.features.length < 1 ) {
+      multiple_results.empty().append(`${__( 'No location matches found. Try a less specific address.', 'zume' )}`)
+    }
+
+    // Set globals
+    // console.log(data)
     window.location_grid_meta = false
     window.mapbox_results = data
 
-    // check if multiple results
-    if( data.features.length > 1 ) {
+    // loop results
+    jQuery.each( data.features, function( index, value ) {
+      let checked = ''
+      if( index === 0 ) {
+        checked = 'checked'
+      }
+      multiple_results.append( `<input type="radio" name="zume_user_address" id="zume_user_address${_.escape( index )}" value="${_.escape( value.id )}" ${_.escape( checked )} /><label for="zume_user_address${_.escape( index )}">${_.escape( value.place_name )}</label><br>`)
+    })
 
-      jQuery('#possible-results').empty().append(`<fieldset id="multiple-results"></fieldset>`)
-
-      jQuery.each( data.features, function( index, value ) {
-        let checked = ''
-        if( index === 0 ) {
-          checked = 'checked'
-        }
-        jQuery('#multiple-results').append( `<input type="radio" name="zume_user_address" id="zume_user_address${index}" value="${value.id}" ${checked} /><label for="zume_user_address${index}">${value.place_name}</label><br>`)
-      })
-    }
-    else
-    {
-      jQuery('#possible-results').empty().append(`<fieldset id="multiple-results"><legend>${__('We found this match. Is this correct? If not validate another.', 'zume')}</legend><input type="radio" name="zume_user_address" id="zume_user_address" value="${data.features[0].place_name}" checked/><label for="zume_user_address">${data.features[0].place_name}</label></fieldset>`)
-    }
-    jQuery('#submit_profile').removeAttr('disabled') // enable save button
-
-    // add responsive click event to populate text area
+    // add responsive click event to populate text area, if selection is clicked. Expected user feedback.
     jQuery('#multiple-results input').on('click', function( ) {
-      // add selected to the text box
-      console.log( jQuery(this).val())
-
       let selected_id = jQuery(this).val()
       jQuery.each( window.mapbox_results.features, function(i,v) {
         if ( v.id === selected_id ) {
-          jQuery('#validate_address').val(v.place_name)
+          jQuery('#validate_address').val(_.escape( v.place_name ))
         }
       })
-
     })
 
-  });
-}
+    // enable save button if not already enabled
+    jQuery('#submit_request').removeAttr('disabled')
 
-function validate_request() {
+  }); // end get request
+} // end validate_user_address
+
+function load_form_validator() {
   jQuery('#coaching-request-form').foundation('validateForm');
 }
-function clear_locations() {
-  jQuery('#validate_address').val(zumeTraining.user_profile_fields.location_grid_meta.label);
-  jQuery('#possible-results').empty().html(`<input type="radio" style="display:none;" name="address" id="address_profile" value="current" checked"/>`);
+function check_address(key) {
+
+  let fields = zumeTraining.user_profile_fields
+  let default_address = ''
+  if ( fields.location_grid_meta ) {
+    default_address = fields.location_grid_meta.label
+  }
+  let val_address = jQuery('#validate_address').val()
+  let results_address = jQuery('#multiple-results').length
+
+  if (val_address === default_address) // exactly same values
+  {
+    jQuery('#submit_request').removeAttr('disabled')
+  }
+  else if (results_address) // check if fieldset exists by validation
+  {
+    jQuery('#submit_request').removeAttr('disabled')
+  }
+  else if (val_address.length === 0) // check if fieldset exists by validation
+  {
+    jQuery('#submit_request').removeAttr('disabled')
+  }
+  else {
+    jQuery('#submit_request').attr('disabled', 'disabled')
+  }
 }
+
 
 function send_coaching_request() {
   let spinner = jQuery('#request_spinner')
@@ -1529,7 +1550,6 @@ function send_coaching_request() {
   }
   /**************/
 
-
   let data = {
     "name": name,
     "phone": phone,
@@ -1538,43 +1558,19 @@ function send_coaching_request() {
     "preference": preference,
     "affiliation_key": affiliation_key
   }
-  console.log( 'pre send')
-  console.log( data )
-  console.log( JSON.stringify( data ) )
 
   API.coaching_request( data ).done( function(data) {
     console.log('postsend')
     console.log(data)
-    spinner.empty().html('Success')
+    spinner.empty().html('Success') // @todo add vision fe
   })
     .fail(function(e){
       console.log('coach_request error')
       console.log(e)
-      spinner.empty().html( '&nbsp;Oops. Something went wrong. Try again!')
+      spinner.empty().html( `${__('Oops. Something went wrong. Try again!', 'zume')}`)
     })
 }
-function check_address(key) {
 
-  let val_address = jQuery('#validate_address' + key).val()
-  let default_address = jQuery('#address_' + key).val()
-  let results_address = jQuery('#multiple-results' + key).length
-
-  if (val_address === default_address) // exactly same values
-  {
-    jQuery('#submit_' + key).removeAttr('disabled')
-  }
-  else if (results_address) // check if fieldset exists by validation
-  {
-    jQuery('#submit_' + key).removeAttr('disabled')
-  }
-  else if (val_address.length === 0) // check if fieldset exists by validation
-  {
-    jQuery('#submit_' + key).removeAttr('disabled')
-  }
-  else {
-    jQuery('#submit_' + key).attr('disabled', 'disabled')
-  }
-}
 
 
 
