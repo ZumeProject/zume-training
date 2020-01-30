@@ -358,8 +358,8 @@ class Zume_V4_REST_API {
             'affiliation_key' => sanitize_text_field( wp_unslash( $params['affiliation_key'] ) ),
         );
         $notes = [
-            'preference' => $args['preference'],
-            'affiliation' => $args['affiliation_key']
+            'preference' => 'Requested contact method is: ' .$args['preference'],
+            'affiliation' => 'Requested affiliation is: ' . $args['affiliation_key']
         ];
 
         // build fields for transfer
@@ -373,8 +373,14 @@ class Zume_V4_REST_API {
             "contact_phone" => [
                 [ "value" => $args['phone'] ],
             ],
+            "contact_email" => [
+                [ "value" => $args['email'] ],
+            ],
+            'zume_training_id' => get_current_user_id(),
             "notes" => $notes,
         ];
+
+        // Additional fields that may or may not be present
 
         // Build location_grid_meta
         $geocoder = new Location_Grid_Geocoder();
@@ -398,8 +404,14 @@ class Zume_V4_REST_API {
             $coordinates['values'][] = [
                 'value' => $args['location_grid_meta']
             ];
+            // load location_grid_meta field
             $fields['location_grid_meta'] = $coordinates;
+            // load address field
+            $fields['contact_address'] = [
+                [ "value" => $args['location_grid_meta']['label']],
+            ];
         }
+
 
         $site = Site_Link_System::get_site_connection_vars( 20125 ); // @todo remove hardcoded
         if ( ! $site ) {
@@ -413,6 +425,8 @@ class Zume_V4_REST_API {
                 'Authorization' => 'Bearer ' . $site['transfer_token'],
             ],
         ];
+
+
         return wp_remote_post( 'https://' . trailingslashit( $site['url'] ) . 'wp-json/dt/v1/contact/create', $args );
 
     }
