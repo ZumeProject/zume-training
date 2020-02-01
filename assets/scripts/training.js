@@ -46,6 +46,8 @@ jQuery(document).ready(function(){
       get_progress()
     }
   })
+
+  write_network_tab()
 })
 
 
@@ -1262,7 +1264,6 @@ function get_coach_request() {
   // if no request submitted show coaching form
   else {
     write_request_form()
-
   }
 }
 
@@ -1604,6 +1605,42 @@ function send_coaching_request() {
     })
 }
 
+/**************************************************/
+// Network Links
+/**************************************************/
+function write_network_tab() {
+  if ( zumeTraining.zume_network_sites ) {
+    jQuery('#training-tabs').append(`
+        <li class="tabs-button float-right">
+           <button type="button" onclick="open_network_links()">
+                ${__('Zúme Network', 'zume')}
+           </button>
+       </li>`)
+  }
+}
+function open_network_links() {
+  let list = ''
+  jQuery.each( zumeTraining.zume_network_sites, function(i,v) {
+    list += '<li><a href="'+v.siteurl+'">' + v.blogname + '</a></li>'
+  })
+
+  jQuery('#training-modal-content').empty().html(`
+    <div class="grid-x training">
+        <div class="cell">
+            <h2 class="center">${__('Zúme Network', 'zume')}</h2>
+            <hr>
+            <ul class="center" style="list-style:none;">${list}</ul>
+            
+            <button class="close-button" data-close aria-label="Close modal" type="button">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        
+    </div>
+  `)
+
+  jQuery('#training-modal').foundation('open')
+}
 
 
 

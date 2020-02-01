@@ -86,6 +86,13 @@
         padding: 0;
     }
     .tabs-title {
+        a {
+            @media (max-width: $breakpoint-medium) {
+                padding: .8rem 1rem;
+            }
+        }
+    }
+    .tabs-button {
         button {
             display: block;
             padding: 1.25rem 1.5rem;
@@ -94,11 +101,6 @@
             color: #323a68;
             cursor: pointer;
 
-            @media (max-width: $breakpoint-medium) {
-                padding: .8rem 1rem;
-            }
-        }
-        a {
             @media (max-width: $breakpoint-medium) {
                 padding: .8rem 1rem;
             }

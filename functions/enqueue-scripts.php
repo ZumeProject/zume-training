@@ -150,6 +150,7 @@ function zume_site_scripts() {
                 "groups" => ( is_user_logged_in() ) ? Zume_V4_Groups::get_all_groups() : array(),
                 "progress" => ( is_user_logged_in() ) ? Zume_V4_Progress::get_user_progress() : array(),
                 "invitations" => ( is_user_logged_in() ) ? Zume_V4_Groups::get_colead_groups( 'waiting_acceptance_minimum' ) : array(),
+                "zume_network_sites" => ( is_user_logged_in() ) ? Zume_V4_Users::zume_network_sites() : array(),
                 'urls' => array(
                     1 => esc_url( zume_get_landing_translation_url( 1, $current_language ) ),
                     2 => esc_url( zume_get_landing_translation_url( 2, $current_language ) ),

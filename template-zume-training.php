@@ -82,6 +82,7 @@ $zendesk_enable = true;
                                     <span class="hide-for-small-only"><?php echo esc_html__( "Get a Coach", 'zume' ) ?></span>
                                 </a>
                             </li>
+
                         </ul>
 
                     <?php endif; ?>
@@ -887,6 +888,7 @@ $zendesk_enable = true;
                         <div class="tabs-panel" id="panel4">
                             <div class="grid-x" id="coach-request"><div class="loader">Loading...</div></div>
                         </div>
+
                     </div> <!-- end #callout -->
 
                 </div> <!-- end center column -->
