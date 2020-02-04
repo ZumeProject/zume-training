@@ -932,7 +932,7 @@ if ( ! class_exists( 'Location_Grid_Geocoder' ) ) {
                 'level' => 'place',
                 'label' => $label,
                 'source' => 'ip',
-                'grid_id' => $grid_id['grid_id'] ?? '',
+                'grid_id' => (int) $grid_id['grid_id'] ?? '',
             ];
 
             return $location_grid_meta;
