@@ -5,6 +5,9 @@ const { __, _x, _n, _nx } = wp.i18n;
  * PANEL LOADER
  */
 jQuery(document).ready(function(){
+
+
+
   if( ! window.location.hash || '#panel1' === window.location.hash ) {
     console.log(zumeTraining)
     show_panel1()
@@ -1612,8 +1615,11 @@ function write_network_tab() {
   if ( zumeTraining.zume_network_sites ) {
     jQuery('#training-tabs').append(`
         <li class="tabs-button float-right">
-           <button type="button" onclick="open_network_links()">
+           <button type="button" class="hide-for-small-only" onclick="open_network_links()">
                 ${__('Zúme Network', 'zume')}
+           </button>
+           <button type="button" class="show-for-small-only" onclick="open_network_links()">
+                <i class="fi-torsos-all"></i>
            </button>
        </li>`)
   }

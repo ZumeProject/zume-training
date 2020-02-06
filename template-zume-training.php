@@ -56,7 +56,7 @@ $zendesk_enable = true;
 
                     --------------------------------------------------------------------------------------------------->
                     <?php if ( is_user_logged_in() ) : ?>
-                        <ul class="tabs" data-tabs id="training-tabs" data-deep-link="true" data-deep-link-smudge="true">
+                        <ul class="tabs" data-tabs id="training-tabs" data-deep-link="true" data-deep-link-smudge="true" data-auto-focus="false">
                             <li class="tabs-title is-active">
                                 <a href="#panel1" aria-selected="true" onclick="show_panel1()">
                                     <span class="show-for-small-only"><?php echo esc_html__( "Overview", 'zume' ) ?></span>
@@ -78,7 +78,7 @@ $zendesk_enable = true;
                             </li>
                             <li class="tabs-title">
                                 <a data-tabs-target="panel4" href="#panel4" onclick="get_coach_request()">
-                                    <span class="show-for-small-only"><?php esc_html_e( "Get Coach", 'zume' ) ?></span>
+                                    <span class="show-for-small-only"><i class="fi-torso"></i></span>
                                     <span class="hide-for-small-only"><?php echo esc_html__( "Get a Coach", 'zume' ) ?></span>
                                 </a>
                             </li>
