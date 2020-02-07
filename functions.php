@@ -57,6 +57,7 @@ require_once( 'functions/zume-v4-users.php' );
 require_once( 'functions/zume-v4-groups.php' );
 require_once( 'functions/zume-v4-progress.php' );
 require_once( 'functions/zume-v4-pieces.php' );
+require_once( 'functions/zume-v4-seo-strings.php' );
 require_once( 'functions/zume-content.php' );
 require_once( 'functions/zume-three-month-plan.php' );
 require_once( 'functions/logging/zume-logging.php' ); // zume logging of critical path actions

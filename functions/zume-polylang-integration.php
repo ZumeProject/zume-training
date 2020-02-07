@@ -224,21 +224,3 @@ function zume_get_home_translation_id( $page_title, $slug = 'en' ) {
     }
 }
 
-// Navigation Translation Strings for Menu Titles
-$zume_navigation_menu = array(
-    __( 'Home', 'zume' ),
-    __( 'Dashboard', 'zume' ),
-    __( 'About', 'zume' ),
-    __( 'Resources', 'zume' ),
-    __( 'FAQs', 'zume' ),
-    __( 'Overview', 'zume' ),
-    __( 'Settings', 'zume' ),
-    __( 'Profile', 'zume' ),
-    __( 'Admin', 'zume' ),
-    __( 'Logout', 'zume' ),
-    __( 'Login', 'zume' ),
-    __( 'Register', 'zume' ),
-    __( 'Three-Month Plan', 'zume' ),
-    __( 'Progress', 'zume' ),
-    __( 'Stats', 'zume' ),
-);
