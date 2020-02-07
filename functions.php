@@ -94,6 +94,7 @@ function zume_v4_ready_language() {
     $ready = array();
 
     $ready['en'] = true;
+    $ready['pt'] = true;
 
     $current = zume_current_language();
 
