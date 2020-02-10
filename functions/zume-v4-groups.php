@@ -859,6 +859,13 @@ class Zume_V4_Groups {
             'coleaders_declined'  => array(),
             'three_month_plans'   => array(),
             'foreign_key'         => hash( 'sha256', time() . rand( 0, 100000 ) ),
+            'location_grid_meta'  => array(
+                'lng' => '',
+                'lat' => '',
+                'level' => '',
+                'label' => '',
+                'grid_id' => ''
+            )
         );
 
         $deprecated_keys = array(
@@ -1134,6 +1141,8 @@ class Zume_V4_Groups {
             return new WP_Error( __METHOD__, 'No value provided.' );
         }
 
+
+
         if ( ! class_exists( 'Location_Grid_Geocoder' ) || ! class_exists( 'DT_Mapbox_API' ) ) {
             require_once( '../dt-mapping/loader.php' );
             new DT_Mapping_Module_Loader( 'theme' );
@@ -1144,11 +1153,26 @@ class Zume_V4_Groups {
         $modified_group['lnglat_level'] = $args['level'];
         $modified_group['zoom'] = DT_Mapbox_API::get_zoom( $args['level'] );
 
+
         $grid = new Location_Grid_Geocoder();
         $lg_lookup = $grid->get_grid_id_by_lnglat( $args['lng'], $args['lat'] );
         if ( $lg_lookup ) {
             $modified_group['grid_id'] = (int) $lg_lookup['grid_id'];
         }
+
+        // levels
+        $label = $args['level'];
+        if ( 'lnglat' === $args['level'] ) {
+            $label = 'Location within ' . $lg_lookup['name'];
+        }
+
+        $modified_group['location_grid_meta'] = [
+            'lng' => $args['lng'],
+            'lat' => $args['lat'],
+            'level' => $args['level'],
+            'label' => $label,
+            'grid_id' => $lg_lookup['grid_id'] ?? false,
+        ];
 
         self::filter_last_modified_to_now( $modified_group ); // add new timestamp
 

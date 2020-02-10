@@ -4,7 +4,7 @@ if ( ! defined( 'ABSPATH' ) ) { exit; } // Exit if accessed directly
 class Zume_V4_Users {
     public static function zume_network_sites() {
         $zume_user_sites = get_blogs_of_user( get_current_user_id() );
-        dt_write_log( $zume_user_sites );
+
         unset( $zume_user_sites[1] );
         unset( $zume_user_sites[14] );
 
