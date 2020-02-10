@@ -112,6 +112,23 @@ function zume_site_scripts() {
                 ],
                 'logged_in' => is_user_logged_in(),
                 'map_key' => DT_Mapbox_API::get_key(),
+                'translations' => [
+                    'x1' => __('Your Profile', 'zume'),
+                    'x2' => __('First and last name', 'zume'),
+                    'x3' => __('Phone', 'zume'),
+                    'x4' => __('Email', 'zume'),
+                    'x5' => __('This form is required.', 'zume'),
+                    'x6' => __('City', 'zume'),
+                    'x7' => __('example: Denver, CO 80120', 'zume'),
+                    'x8' => __('Affiliation Key', 'zume'),
+                    'x9' => __('Oh snap!', 'zume'),
+                    'x10' => __('Save', 'zume'),
+                    'x11' => __('Linked Accounts', 'zume'),
+                    'x12' => __('Linked Facebook Account', 'zume'),
+                    'x13' => __('Unlink', 'zume'),
+                    'x14' => __('Linked Google Account', 'zume'),
+                    'x15' => __('No location matches found. Try a less specific address.', 'zume'),
+                ]
             )
         );
     }
