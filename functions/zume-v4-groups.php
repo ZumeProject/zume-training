@@ -1138,8 +1138,8 @@ class Zume_V4_Groups {
             return $group;
         }
 
-        if ( ! isset( $args ) ) {
-            return new WP_Error( __METHOD__, 'No value provided.' );
+        if ( ! isset( $args ) || ! isset( $args['lng'] ) || ! isset( $args['lat'] ) ) {
+            return new WP_Error( __METHOD__, 'Required params not provided.' );
         }
 
         if ( ! class_exists( 'Location_Grid_Geocoder' ) || ! class_exists( 'DT_Mapbox_API' ) ) {
@@ -1147,17 +1147,34 @@ class Zume_V4_Groups {
             new DT_Mapping_Module_Loader( 'theme' );
         }
 
+        $lng = sanitize_text_field( wp_unslash( $args['lng'] ) );
+        $lat = sanitize_text_field( wp_unslash( $args['lat'] ) );
+        $action = sanitize_text_field( wp_unslash( $args['action'] ) ); // click, search, geolocate
+        $label = sanitize_text_field( wp_unslash( $args['label'] ) );
+        $level = sanitize_text_field( wp_unslash( $args['level'] ) );
+
+        // set zoom
         $modified_group['zoom'] = DT_Mapbox_API::get_zoom( $args['level'] );
 
-        // location grid meta section
+        // get grid id
         $grid = new Location_Grid_Geocoder();
-        $lg_lookup = $grid->get_grid_id_by_lnglat( $args['lng'], $args['lat'] );
+        $lg_lookup = $grid->get_grid_id_by_lnglat( $lng, $lat );
         if ( $lg_lookup ) {
             $modified_group['grid_id'] = (int) $lg_lookup['grid_id'];
         }
 
-        $label = $args['label'];
-        $level = $args['level'];
+        switch( $action ) {
+            case 'geolocate':
+            case 'click':
+                $full_name = Disciple_Tools_Mapping_Queries::get_full_name_by_grid_id( $lg_lookup['grid_id'] );
+                $label = 'Location within ' . $full_name;
+                $level = 'district';
+                break;
+            case 'search':
+
+                break;
+        }
+
         if ( 'lnglat' === $level ) {
             $full_name = Disciple_Tools_Mapping_Queries::get_full_name_by_grid_id( $lg_lookup['grid_id'] );
             $label = 'Location within ' . $full_name;
@@ -1165,12 +1182,14 @@ class Zume_V4_Groups {
         }
 
         $modified_group['location_grid_meta'] = [
-            'lng' => $args['lng'],
-            'lat' => $args['lat'],
+            'lng' => $lng,
+            'lat' => $lat,
             'level' => $level,
             'label' => $label,
             'grid_id' => $lg_lookup['grid_id'] ?? false,
         ];
+
+        Location_Grid_Geocoder::verify_location_grid_meta_filter( $modified_group['location_grid_meta'] );
 
         self::filter_last_modified_to_now( $modified_group ); // add new timestamp
 

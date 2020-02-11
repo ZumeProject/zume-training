@@ -321,6 +321,8 @@ class Zume_V4_REST_API {
                 }
             }
 
+            Location_Grid_Geocoder::verify_location_grid_meta_filter( $location_grid_meta );
+
             update_user_meta( $user_info->ID, 'location_grid_meta', $location_grid_meta );
         }
 

@@ -431,6 +431,7 @@ function add_location_lookup_map( key, i ) {
         lat: lat,
         action: 'click',
         level: 'lnglat',
+        label: 'lnglat',
         context: false,
       }
     });
@@ -461,6 +462,7 @@ function add_location_lookup_map( key, i ) {
         lat: ( e.result.center[1] || false ),
         action: 'search',
         level: ( e.result.place_type[0] || false ),
+        label: e.result.place_name || false,
         context: ( e.result.context || false ),
       }
     })
@@ -500,6 +502,7 @@ function add_location_lookup_map( key, i ) {
         lat: lat,
         action: 'geolocate',
         level: 'lnglat',
+        label: 'lnglat',
         context: false,
       }
     })
