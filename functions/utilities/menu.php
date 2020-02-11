@@ -3,7 +3,7 @@
 register_nav_menus(
     array(
         'main-nav' => __( 'The Main Menu', 'zume' ),   // Main nav in header
-//        'footer-links' => __( 'Footer Links', 'zume' ) // Secondary nav in footer
+    //        'footer-links' => __( 'Footer Links', 'zume' ) // Secondary nav in footer
     )
 );
 
