@@ -1147,22 +1147,18 @@ class Zume_V4_Groups {
             new DT_Mapping_Module_Loader( 'theme' );
         }
 
-//        $modified_group['lng'] = $args['lng'];
-//        $modified_group['lat'] = $args['lat'];
-//        $modified_group['lnglat_level'] = $args['level'];
-
         $modified_group['zoom'] = DT_Mapbox_API::get_zoom( $args['level'] );
 
+        // location grid meta section
         $grid = new Location_Grid_Geocoder();
         $lg_lookup = $grid->get_grid_id_by_lnglat( $args['lng'], $args['lat'] );
         if ( $lg_lookup ) {
             $modified_group['grid_id'] = (int) $lg_lookup['grid_id'];
         }
 
-        // levels
-        $label = $args['level'];
+        $label = $args['label'];
         $level = $args['level'];
-        if ( 'lnglat' === $args['level'] ) {
+        if ( 'lnglat' === $level ) {
             $full_name = Disciple_Tools_Mapping_Queries::get_full_name_by_grid_id( $lg_lookup['grid_id'] );
             $label = 'Location within ' . $full_name;
             $level = 'district';
