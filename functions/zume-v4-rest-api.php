@@ -399,8 +399,10 @@ class Zume_V4_REST_API {
         } else if ( ! empty( $params['location_grid_meta'] ) ) {
             $args['location_grid_meta'] = $params['location_grid_meta'];
         } else {
-            $args['location_grid_meta'] = false;
+            $args['location_grid_meta'] = [];
         }
+
+        Location_Grid_Geocoder::verify_location_grid_meta_filter( $args['location_grid_meta'] );
 
         if ( $args['location_grid_meta'] ) {
             $fields['location_grid'] = [ "values" => [ [ "value" => $args['location_grid_meta']['grid_id'] ] ] ];
