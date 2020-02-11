@@ -47,13 +47,13 @@ class Zume_V4_Groups {
         $group_values = self::verify_group_array_filter( array(), true );
 
         if ( ! empty( $args['address'] ) ) {
-            // Geo lookup address
+            // Geo lookup address // @todo possibly remove
             $mapbox = DT_Mapbox_API::lookup( $args['address'] ); // get google api info
             if ( isset( $mapbox['features'] ) ) {
                 $args['lng'] = DT_Mapbox_API::parse_raw_result( $mapbox, 'longitude', true );
                 $args['lat'] = DT_Mapbox_API::parse_raw_result( $mapbox, 'latitude', true );
                 $args['address'] = DT_Mapbox_API::parse_raw_result( $mapbox, 'place_name', true );
-                $args['raw_location'] = $mapbox;
+//                $args['raw_location'] = $mapbox;
             }
         }
 
@@ -62,10 +62,10 @@ class Zume_V4_Groups {
         } else {
             $results = DT_Ipstack_API::geocode_ip_address( DT_Ipstack_API::get_real_ip_address() );
         }
-        if ( isset( $results['id'] ) ) {
-            $args['ip_lng'] = $results['longitude'];
-            $args['ip_lat'] = $results['latitude'];
-            $args['ip_raw_location'] = $results;
+        dt_write_log($results);
+        if ( ! ( isset( $results['success'] ) && $results['success'] === false ) ) {
+            $geocoder = new Location_Grid_Geocoder();
+            $args['ip_location_grid_meta'] = $geocoder->convert_ip_result_to_location_grid_meta( $results );
         }
 
         if ( isset( $args['type'] ) ) {
@@ -107,7 +107,7 @@ class Zume_V4_Groups {
             $args['address'] = '';
         }
         if ( isset( $args['address'] ) && ! ( $args['address'] == $group_meta['address'] ) && ! empty( $args['address'] ) ) {
-            // Geo lookup address
+            // Geo lookup address // @todo possibly remove
             $mapbox = DT_Mapbox_API::lookup( $args['address'] ); // get google api info
             if ( isset( $mapbox['features'] ) ) {
                 $group_meta['lng'] = '';
@@ -118,17 +118,16 @@ class Zume_V4_Groups {
                 $args['lng'] = DT_Mapbox_API::parse_raw_result( $mapbox, 'longitude', true );
                 $args['lat'] = DT_Mapbox_API::parse_raw_result( $mapbox, 'latitude', true );
                 $args['address'] = DT_Mapbox_API::parse_raw_result( $mapbox, 'place_name', true );
-                $args['raw_location'] = $mapbox;
+//                $args['raw_location'] = $mapbox;
             }
         }
 
         $args['ip_address'] = $args['ip_address'] ?? DT_Ipstack_API::get_real_ip_address();
         if ( isset( $args['ip_address'] ) && ! empty( $args['ip_address'] ) ) {
             $results = DT_Ipstack_API::geocode_ip_address( $args['ip_address'] );
-            if ( isset( $results['ip'] ) ) {
-                $args['ip_lng'] = $results['longitude'];
-                $args['ip_lat'] = $results['latitude'];
-                $args['ip_raw_location'] = $results;
+            if ( ! ( isset( $results['success'] ) && $results['success'] === false ) ) {
+                $geocoder = new Location_Grid_Geocoder();
+                $args['ip_location_grid_meta'] = $geocoder->convert_ip_result_to_location_grid_meta( $results );
             }
         }
 
@@ -164,7 +163,9 @@ class Zume_V4_Groups {
         if ( isset( $args['type'] ) ) { // keeps from storing the form parse info
             unset( $args['type'] );
         }
-        $args['last_modified_date'] = current_time( 'mysql' );
+//        $args['last_modified_date'] = current_time( 'mysql' );
+        self::filter_last_modified_to_now( $args );
+
         $args = wp_parse_args( $args, $group_meta );
 
         update_user_meta( $current_user_id, $args['key'], $args );
@@ -1141,18 +1142,16 @@ class Zume_V4_Groups {
             return new WP_Error( __METHOD__, 'No value provided.' );
         }
 
-
-
         if ( ! class_exists( 'Location_Grid_Geocoder' ) || ! class_exists( 'DT_Mapbox_API' ) ) {
             require_once( '../dt-mapping/loader.php' );
             new DT_Mapping_Module_Loader( 'theme' );
         }
 
-        $modified_group['lng'] = $args['lng'];
-        $modified_group['lat'] = $args['lat'];
-        $modified_group['lnglat_level'] = $args['level'];
-        $modified_group['zoom'] = DT_Mapbox_API::get_zoom( $args['level'] );
+//        $modified_group['lng'] = $args['lng'];
+//        $modified_group['lat'] = $args['lat'];
+//        $modified_group['lnglat_level'] = $args['level'];
 
+        $modified_group['zoom'] = DT_Mapbox_API::get_zoom( $args['level'] );
 
         $grid = new Location_Grid_Geocoder();
         $lg_lookup = $grid->get_grid_id_by_lnglat( $args['lng'], $args['lat'] );
@@ -1162,14 +1161,17 @@ class Zume_V4_Groups {
 
         // levels
         $label = $args['level'];
+        $level = $args['level'];
         if ( 'lnglat' === $args['level'] ) {
-            $label = 'Location within ' . $lg_lookup['name'];
+            $full_name = Disciple_Tools_Mapping_Queries::get_full_name_by_grid_id( $lg_lookup['grid_id'] );
+            $label = 'Location within ' . $full_name;
+            $level = 'district';
         }
 
         $modified_group['location_grid_meta'] = [
             'lng' => $args['lng'],
             'lat' => $args['lat'],
-            'level' => $args['level'],
+            'level' => $level,
             'label' => $label,
             'grid_id' => $lg_lookup['grid_id'] ?? false,
         ];

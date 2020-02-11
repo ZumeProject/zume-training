@@ -390,7 +390,7 @@ function add_location_lookup_map( key, i ) {
         <div class="cell center padding-vertical-0">${_.escape( i18n.str.x9 )/*Zoom, click, or search for your location.*/}<br><button type="button" onclick="activate_geolocation()" class="button tiny primary-button-hollow margin-top-1">${_.escape( i18n.str.x10 )/*find you current location*/}</button> </div>
         <div class="cell"><div class="map" id='map' style="width:100%;height:400px;"></div></div>
         <div class="cell center">
-          <button type="button" onclick="save_new_location( '${_.escape( key )}', ${_.escape( i )} )" id="result_display" class="button primary-button-hollow">${_.escape( i18n.str.x6 )/*find you current location*/}</button>
+          <button type="button" onclick="save_new_location( '${_.escape( key )}', ${_.escape( i )} )" id="result_display" class="button primary-button-hollow">${_.escape( i18n.str.x6 )/*find you current location*/}</button> <img src="${zumeTraining.theme_uri}/assets/images/spinner.svg" alt="spinner" class="spinner" style="width: 22px;display:none;" />
         </div>
       </div>
     `)
@@ -518,6 +518,7 @@ function save_new_location( key, i ) {
     jQuery('#result_display').html(`${_.escape( i18n.str.x14 )/*You haven't selected anything yet. Click, search, or allow auto location.*/}`)
     return;
   }
+  jQuery('.spinner').show()
   window.current_search_result['key'] = key
 
   API.update_location( window.current_search_result ).done(function(data){
@@ -534,7 +535,7 @@ function write_location_add_button( key, i ) {
   if ( group.lng && isOwner( key, i ) ) {
     jQuery('#add_location_'+_.escape( key ))
       .empty()
-      .append(`<img width="400" src="https://api.mapbox.com/styles/v1/mapbox/streets-v9/static/pin-m-marker+0096ff(${_.escape( group.lng )},${_.escape( group.lat )})/${_.escape( group.lng )},${_.escape( group.lat )},${( _.escape( group.zoom ) || 6 )},0/400x250@2x?access_token=${_.escape( zumeTraining.map_key )}" alt="Mapbox Map" />`)
+      .append(`<img width="400" src="https://api.mapbox.com/styles/v1/mapbox/streets-v9/static/pin-m-marker+0096ff(${_.escape( group.location_grid_meta.lng )},${_.escape( group.location_grid_meta.lat )})/${_.escape( group.location_grid_meta.lng )},${_.escape( group.location_grid_meta.lat )},${( _.escape( group.zoom ) || 6 )},0/400x250@2x?access_token=${_.escape( zumeTraining.map_key )}" alt="Mapbox Map" />`)
       .append(`<br><button type="button" class="button clear" onclick="add_location_lookup_map('${_.escape( key )}', ${_.escape( i )})"><i class="fi-plus"></i> ${_.escape( i18n.str.x15 )/*update*/}</button>`)
   }
   else if ( isOwner( key, i ) ) {
@@ -559,11 +560,14 @@ function write_meta_column( key, i ) {
       <div class="cell"><button type="button" onclick="open_session( ${_.escape( zumeTraining.groups[i].next_session )}, '${_.escape( key )}', ${_.escape( i )} );" class="button primary-button expanded">${_.escape( i18n.str.x17 )/*Next Session*/} ${_.escape( zumeTraining.groups[i].next_session )}</button><!-- Next session --></div>
      `)
   }
-
   // if owner of the group
   if ( isOwner( key, i ) ) {
     div.append(`<div class="cell center"><button type="button" class="button clear small" onclick="archive_group( '${_.escape( key )}', ${_.escape( i )} );">${_.escape( i18n.str.x18 )/*Archive*/}</button></div>`)
   }
+  if ( zumeTraining.groups[i].public_key ) {
+    div.append(`<div class="cell center"><span class="key-text">${_.escape( zumeTraining.groups[i].public_key )}</span></div>`)
+  }
+
 }
 function get_course_url_with_params( session_number, i ) {
   if ( i === undefined ) {
