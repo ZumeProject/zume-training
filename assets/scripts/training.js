@@ -1302,7 +1302,7 @@ function write_request_form() {
     jQuery('#form-container').empty().html(`
   <form id="coaching-request-form" data-abide>
       <div data-abide-error class="alert callout" style="display: none;">
-          <p><i class="fi-alert"></i> ${_.escape( i18n.string.x70 )/*There are some errors in your form.*/}</p>
+          <p><i class="fi-alert"></i> ${_.escape( i18n.str.x70 )/*There are some errors in your form.*/}</p>
       </div>
       <table class="request-form">
           <tr style="vertical-align: top;">
