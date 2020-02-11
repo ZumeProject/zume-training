@@ -432,6 +432,8 @@ function add_location_lookup_map( key, i ) {
         action: 'click',
         level: 'lnglat',
         label: 'lnglat',
+        source: 'user',
+        grid_id: '',
         context: false,
       }
     });
@@ -458,11 +460,13 @@ function add_location_lookup_map( key, i ) {
       jQuery('#result_display').html(`${i18n.str.x12/*Save Searched Location*/}`)
 
       window.current_search_result = {
-        lng: ( e.result.center[0] || false ),
-        lat: ( e.result.center[1] || false ),
+        lng: ( e.result.center[0] || '' ),
+        lat: ( e.result.center[1] || '' ),
         action: 'search',
-        level: ( e.result.place_type[0] || false ),
-        label: e.result.place_name || false,
+        level: ( e.result.place_type[0] || '' ),
+        label: e.result.place_name || '',
+        source: 'user',
+        grid_id: '',
         context: ( e.result.context || false ),
       }
     })
@@ -503,6 +507,8 @@ function add_location_lookup_map( key, i ) {
         action: 'geolocate',
         level: 'lnglat',
         label: 'lnglat',
+        source: 'user',
+        grid_id: '',
         context: false,
       }
     })

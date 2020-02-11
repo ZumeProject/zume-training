@@ -1149,9 +1149,10 @@ class Zume_V4_Groups {
 
         $lng = sanitize_text_field( wp_unslash( $args['lng'] ) );
         $lat = sanitize_text_field( wp_unslash( $args['lat'] ) );
-        $action = sanitize_text_field( wp_unslash( $args['action'] ) ); // click, search, geolocate
-        $label = sanitize_text_field( wp_unslash( $args['label'] ) );
-        $level = sanitize_text_field( wp_unslash( $args['level'] ) );
+        $action = sanitize_text_field( wp_unslash( $args['action'] ?? '' ) ); // click, search, geolocate
+        $label = sanitize_text_field( wp_unslash( $args['label'] ?? '' ) );
+        $level = sanitize_text_field( wp_unslash( $args['level'] ?? '' ) );
+        $source = sanitize_text_field( wp_unslash( $args['source'] ?? '' ) );
 
         // set zoom
         $modified_group['zoom'] = DT_Mapbox_API::get_zoom( $args['level'] );
@@ -1186,6 +1187,7 @@ class Zume_V4_Groups {
             'lat' => $lat,
             'level' => $level,
             'label' => $label,
+            'source' => $source,
             'grid_id' => $lg_lookup['grid_id'] ?? false,
         ];
 
