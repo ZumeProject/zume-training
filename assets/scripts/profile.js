@@ -1,5 +1,5 @@
 _ = _ || window.lodash // make sure lodash is defined so plugins like gutenberg don't break it.
-const i18n = zumeTraining.translations;
+const i18n = zumeProfile.translations;
 
 
 jQuery(document).ready( function() {
