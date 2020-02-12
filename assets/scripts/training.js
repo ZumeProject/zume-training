@@ -541,7 +541,7 @@ function save_new_location( key, i ) {
 }
 function write_location_add_button( key, i ) {
   let group = zumeTraining.groups[i]
-  if ( group.lng && isOwner( key, i ) ) {
+  if ( group.location_grid_meta.lng && isOwner( key, i ) ) {
     jQuery('#add_location_'+_.escape( key ))
       .empty()
       .append(`<img width="400" src="https://api.mapbox.com/styles/v1/mapbox/streets-v9/static/pin-m-marker+0096ff(${_.escape( group.location_grid_meta.lng )},${_.escape( group.location_grid_meta.lat )})/${_.escape( group.location_grid_meta.lng )},${_.escape( group.location_grid_meta.lat )},${( _.escape( group.zoom ) || 6 )},0/400x250@2x?access_token=${_.escape( zumeTraining.map_key )}" alt="Mapbox Map" />`)
