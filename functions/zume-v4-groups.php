@@ -1184,6 +1184,7 @@ class Zume_V4_Groups {
         }
 
         if ( 'lnglat' === $level ) {
+
             $full_name = Disciple_Tools_Mapping_Queries::get_full_name_by_grid_id( $lg_lookup['grid_id'] );
             $label = 'Location within ' . $full_name;
             $level = 'district';
