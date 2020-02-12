@@ -1174,20 +1174,15 @@ class Zume_V4_Groups {
         switch( $action ) {
             case 'geolocate':
             case 'click':
-                $full_name = Disciple_Tools_Mapping_Queries::get_full_name_by_grid_id( $lg_lookup['grid_id'] );
-                $label = 'Location within ' . $full_name;
-                $level = 'district';
+                $mapbox_result = DT_Mapbox_API::reverse_lookup( $lng, $lat );
+                $label = DT_Mapbox_API::parse_raw_result( $mapbox_result, 'full_location_name', true );
+                $level = 'place';
                 break;
+
             case 'search':
-
+            default:
+                // no modification necessary
                 break;
-        }
-
-        if ( 'lnglat' === $level ) {
-
-            $full_name = Disciple_Tools_Mapping_Queries::get_full_name_by_grid_id( $lg_lookup['grid_id'] );
-            $label = 'Location within ' . $full_name;
-            $level = 'district';
         }
 
         $modified_group['location_grid_meta'] = [
