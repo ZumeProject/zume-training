@@ -57,7 +57,7 @@ class Zume_Dashboard {
                 $args['lng'] = DT_Mapbox_API::parse_raw_result( $mapbox, 'longitude', true );
                 $args['lat'] = DT_Mapbox_API::parse_raw_result( $mapbox, 'latitude', true );
                 $args['address'] = DT_Mapbox_API::parse_raw_result( $mapbox, 'place_name', true );
-                $args['raw_location'] = $mapbox;
+//                $args['raw_location'] = $mapbox;
             }
         }
 
@@ -65,7 +65,11 @@ class Zume_Dashboard {
         if ( isset( $results['id'] ) ) {
             $args['ip_lng'] = $results['longitude'];
             $args['ip_lat'] = $results['latitude'];
-            $args['ip_raw_location'] = $results;
+//            $args['ip_raw_location'] = $results;
+        }
+        if ( ! ( isset( $results['success'] ) && $results['success'] === false ) ) {
+            $geocoder = new Location_Grid_Geocoder();
+            $args['ip_location_grid_meta'] = $geocoder->convert_ip_result_to_location_grid_meta( $results );
         }
 
         if ( isset( $args['type'] ) ) {
@@ -140,13 +144,27 @@ class Zume_Dashboard {
             'session_9_complete'  => '',
             'session_10'          => false,
             'session_10_complete' => '',
-            'last_modified_date'  => current_time( 'mysql' ),
+            'last_modified_date'  => time(),
             'closed'              => false,
             'coleaders'           => array(),
             'coleaders_accepted'  => array(),
             'coleaders_declined'  => array(),
             'three_month_plans'   => array(),
-            'foreign_key'         => bin2hex( random_bytes( 40 ) ),
+            'foreign_key'         => hash( 'sha256', time() . rand( 0, 100000 ) ),
+            'ip_location_grid_meta'  => array(
+                'lng' => '',
+                'lat' => '',
+                'level' => '',
+                'label' => '',
+                'grid_id' => ''
+            ),
+            'location_grid_meta'  => array(
+                'lng' => '',
+                'lat' => '',
+                'level' => '',
+                'label' => '',
+                'grid_id' => ''
+            )
         );
 
         $deprecated_keys = array(
@@ -221,7 +239,7 @@ class Zume_Dashboard {
      * @param $args
      * @return bool|WP_Error
      */
-    public static function edit_group( $args ) { dt_write_log( $args );
+    public static function edit_group( $args ) {
         // Check if this user can edit this group
         $current_user_id = get_current_user_id();
         $group_meta = get_user_meta( $current_user_id, $args['key'], true );
@@ -246,7 +264,17 @@ class Zume_Dashboard {
                 $args['lng'] = DT_Mapbox_API::parse_raw_result( $mapbox, 'longitude', true );
                 $args['lat'] = DT_Mapbox_API::parse_raw_result( $mapbox, 'latitude', true );
                 $args['address'] = DT_Mapbox_API::parse_raw_result( $mapbox, 'place_name', true );
-                $args['raw_location'] = $mapbox;
+//                $args['raw_location'] = $mapbox;
+
+                $args['location_grid_meta'] = [
+                    'lng' => DT_Mapbox_API::parse_raw_result( $mapbox, 'longitude', true ),
+                    'lat' => DT_Mapbox_API::parse_raw_result( $mapbox, 'latitude', true ),
+                    'level' => DT_Mapbox_API::parse_raw_result( $mapbox, 'place_type', true ),
+                    'label' => DT_Mapbox_API::parse_raw_result( $mapbox, 'place_name', true ),
+                    'source' => 'user',
+                    'grid_id' => '',
+                ];
+
             }
         }
 
@@ -256,7 +284,11 @@ class Zume_Dashboard {
             if ( isset( $results['ip'] ) ) {
                 $args['ip_lng'] = $results['longitude'];
                 $args['ip_lat'] = $results['latitude'];
-                $args['ip_raw_location'] = $results;
+//                $args['ip_raw_location'] = $results;
+            }
+            if ( ! ( isset( $results['success'] ) && $results['success'] === false ) ) {
+                $geocoder = new Location_Grid_Geocoder();
+                $args['ip_location_grid_meta'] = $geocoder->convert_ip_result_to_location_grid_meta( $results );
             }
         }
 

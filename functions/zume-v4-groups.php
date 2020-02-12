@@ -62,7 +62,7 @@ class Zume_V4_Groups {
         } else {
             $results = DT_Ipstack_API::geocode_ip_address( DT_Ipstack_API::get_real_ip_address() );
         }
-        dt_write_log( $results );
+
         if ( ! ( isset( $results['success'] ) && $results['success'] === false ) ) {
             $geocoder = new Location_Grid_Geocoder();
             $args['ip_location_grid_meta'] = $geocoder->convert_ip_result_to_location_grid_meta( $results );
@@ -860,6 +860,13 @@ class Zume_V4_Groups {
             'coleaders_declined'  => array(),
             'three_month_plans'   => array(),
             'foreign_key'         => hash( 'sha256', time() . rand( 0, 100000 ) ),
+            'ip_location_grid_meta'  => array(
+                'lng' => '',
+                'lat' => '',
+                'level' => '',
+                'label' => '',
+                'grid_id' => ''
+            ),
             'location_grid_meta'  => array(
                 'lng' => '',
                 'lat' => '',

@@ -59,7 +59,7 @@ class Zume_REST_API {
                 'methods'         => WP_REST_Server::CREATABLE,
                 'callback'        => array( $this, 'validate_by_address' ),
                 "permission_callback" => function () {
-                    return current_user_can( 'zume' );
+                    return ( current_user_can( 'zume' ) || current_user_can( 'subscriber' ) ) ;
                 }
             ),
         ) );
@@ -71,7 +71,7 @@ class Zume_REST_API {
                 'methods'         => WP_REST_Server::CREATABLE,
                 'callback'        => array( $this, 'change_public_key' ),
                 "permission_callback" => function () {
-                    return current_user_can( 'zume' );
+                    return ( current_user_can( 'zume' ) || current_user_can( 'subscriber' ) );
                 }
             ),
         ) );
@@ -81,7 +81,7 @@ class Zume_REST_API {
                 'methods'         => WP_REST_Server::CREATABLE,
                 'callback'        => array( $this, 'connect_plan_to_group' ),
                 "permission_callback" => function () {
-                    return current_user_can( 'zume' );
+                    return ( current_user_can( 'zume' ) || current_user_can( 'subscriber' ) );
                 }
             ),
         ) );
@@ -91,7 +91,7 @@ class Zume_REST_API {
                 'methods'         => WP_REST_Server::CREATABLE,
                 'callback'        => array( $this, 'unlink_plan_from_group' ),
                 "permission_callback" => function () {
-                    return current_user_can( 'zume' );
+                    return ( current_user_can( 'zume' ) || current_user_can( 'subscriber' ) );
                 }
             ),
         ) );
@@ -101,7 +101,7 @@ class Zume_REST_API {
                 'methods'         => WP_REST_Server::CREATABLE,
                 'callback'        => array( $this, 'coleader_delete' ),
                 "permission_callback" => function () {
-                    return current_user_can( 'zume' );
+                    return ( current_user_can( 'zume' ) || current_user_can( 'subscriber' ) );
                 }
             ),
         ) );

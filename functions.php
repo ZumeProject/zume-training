@@ -91,6 +91,9 @@ add_filter( 'login_redirect', function( $url, $query, $user ) {
     return zume_dashboard_url();
 }, 10, 3 );
 
+/**
+ * @return bool|mixed
+ */
 function zume_v4_ready_language() {
     $ready = array();
 
