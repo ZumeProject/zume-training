@@ -824,13 +824,11 @@ class Zume_V4_Groups {
             'zoom'                => 3,
             'lng'                 => '',
             'lat'                 => '',
-            'raw_location'        => array(),
             'ip_address'          => '',
             'ip_lng'              => '',
             'ip_lat'              => '',
             'ip_lnglat_level'     => '',
             'ip_grid_id'          => false,
-            'ip_raw_location'     => array(),
             'created_date'        => current_time( 'mysql' ),
             'next_session'        => '1',
             'session_1'           => false,
@@ -877,7 +875,9 @@ class Zume_V4_Groups {
         );
 
         $deprecated_keys = array(
-            // 'deprecated_key_name',
+            'ip_raw_location',
+            'raw_location'
+
         );
 
         if ( ! is_array( $group_meta ) ) {
@@ -1238,12 +1238,14 @@ class Zume_V4_Groups {
                 $modified_group['ip_lnglat_level'] = 'lnglat';
             }
 
-
             $grid = new Location_Grid_Geocoder();
             $lg_lookup = $grid->get_grid_id_by_lnglat( $modified_group['ip_lng'], $modified_group['ip_lat'] );
             if ( $lg_lookup ) {
                 $modified_group['ip_grid_id'] = (int) $lg_lookup['grid_id'];
             }
+
+            $geocoder = new Location_Grid_Geocoder();
+            $modified_group['ip_location_grid_meta'] = $geocoder->convert_ip_result_to_location_grid_meta( $results );
         }
 
         self::filter_last_modified_to_now( $modified_group ); // add new timestamp

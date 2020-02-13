@@ -215,6 +215,7 @@ function edit_group_name( key, i ) {
 function save_group_name( key, i ) {
   let new_name = jQuery('#edit_group_name_'+key).val()
   if ( new_name ) {
+    jQuery('#save-group').prop('disabled')
 
     API.update_group( key, _.escape( new_name ), 'group_name' )
 
@@ -698,7 +699,7 @@ function write_add_group_button() {
         <div class="cell input-group" id="new-group">
             <input type="text" class="input-group-field add-group-input" placeholder="${_.escape( i18n.str.x34 )/*Group Name*/}" title="${_.escape( i18n.str.x34 )/*Group Name*/}" name="group_name" id="group_name" />
             <input type="number" placeholder="${_.escape( i18n.str.x33 )/*Number of Members*/}" title="${_.escape( i18n.str.x33 )/*Number of Members*/}" class="input-group-field add-group-input" name="members" />
-            <button type="button" class="button" onclick="save_new_group()">${_.escape( i18n.str.x6 )/*Save*/}</button>
+            <button type="button" class="button" id="save-group"  onclick="save_new_group()">${_.escape( i18n.str.x6 )/*Save*/}</button>
             <button type="button" class="button hollow" onclick="write_add_group_button()">${_.escape( i18n.str.x7 )/*Cancel*/}</button>
         </div>
     </div>
@@ -711,6 +712,8 @@ function save_new_group() {
   let members = jQuery('#new-group input[name=members]').val()
 
   if ( group_name && members ) {
+    jQuery('#save-group').attr("disabled", true)
+
     API.create_group( _.escape( group_name ), _.escape( members ) )
       .done(function(data) {
         zumeTraining.groups = data

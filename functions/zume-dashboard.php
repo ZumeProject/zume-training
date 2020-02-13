@@ -117,11 +117,9 @@ class Zume_Dashboard {
             'address'             => '',
             'lng'                 => '',
             'lat'                 => '',
-            'raw_location'        => array(),
             'ip_address'          => '',
             'ip_lng'              => '',
             'ip_lat'              => '',
-            'ip_raw_location'     => array(),
             'created_date'        => current_time( 'mysql' ),
             'next_session'        => '1',
             'session_1'           => false,
@@ -168,7 +166,8 @@ class Zume_Dashboard {
         );
 
         $deprecated_keys = array(
-                // 'deprecated_key_name',
+            'raw_location',
+            'ip_raw_location'
         );
 
         if ( ! is_array( $group_meta ) ) {
