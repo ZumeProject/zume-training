@@ -35,7 +35,7 @@ function zume_enqueue_style( $handle, $rel_src, $deps = array(), $media = 'all' 
 function zume_site_scripts() {
     global $wp_styles; // Call global $wp_styles variable to add conditional wrapper around ie stylesheet the WordPress way
     $zume_user = wp_get_current_user();
-    $zume_user_meta = zume_get_user_meta( $zume_user->ID );
+    $zume_user_meta = ( is_user_logged_in() ) ? zume_get_user_meta( $zume_user->ID ) : [];
 
     // Adding scripts file in the footer
     zume_enqueue_script( 'site-js', 'assets/scripts/scripts.js', array( 'jquery' ), true );
@@ -149,17 +149,17 @@ function zume_site_scripts() {
                 'root' => esc_url_raw( rest_url() ),
                 'theme_uri' => get_stylesheet_directory_uri(),
                 'nonce' => wp_create_nonce( 'wp_rest' ),
-                'current_user_id' => get_current_user_id(),
+                'current_user_id' => ( is_user_logged_in() ) ? get_current_user_id() : 0,
                 'user_profile_fields' => [
-                    'id' => $zume_user->data->ID,
-                    'name' => $zume_user_meta['zume_full_name'] ?? '',
-                    'email' => $zume_user->data->user_email,
-                    'phone' => $zume_user_meta['zume_phone_number'] ?? '',
-                    'location_grid_meta' => maybe_unserialize( $zume_user_meta['location_grid_meta'] ) ?? '',
-                    'affiliation_key' => $zume_user_meta['zume_affiliation_key'] ?? '',
-                    'facebook_sso_email' => $zume_user_meta['facebook_sso_email'] ?? false,
-                    'google_sso_email' => $zume_user_meta['google_sso_email'] ?? false,
-                    'zume_global_network' => $zume_user_meta['zume_global_network'] ?? false,
+                    'id' => ( is_user_logged_in() ) ? $zume_user->data->ID ?? ''  : 0,
+                    'name' => ( is_user_logged_in() ) ? $zume_user_meta['zume_full_name'] ?? ''  : '',
+                    'email' => ( is_user_logged_in() ) ? $zume_user->data->user_email ?? ''  : '',
+                    'phone' => ( is_user_logged_in() ) ? $zume_user_meta['zume_phone_number'] ?? ''  : '',
+                    'location_grid_meta' => ( is_user_logged_in() ) ?  maybe_unserialize( $zume_user_meta['location_grid_meta'] ) : false,
+                    'affiliation_key' => ( is_user_logged_in() ) ? $zume_user_meta['zume_affiliation_key'] ?? '' : '',
+                    'facebook_sso_email' => ( is_user_logged_in() ) ? $zume_user_meta['facebook_sso_email'] ?? '' : false,
+                    'google_sso_email' => ( is_user_logged_in() ) ? $zume_user_meta['google_sso_email'] ?? ''  : false,
+                    'zume_global_network' => ( is_user_logged_in() ) ? $zume_user_meta['zume_global_network'] ?? ''  : false,
                 ],
                 'logged_in' => is_user_logged_in(),
                 'map_key' => DT_Mapbox_API::get_key(),
