@@ -130,6 +130,7 @@ class Zume_User_Registration
             add_user_meta( $user_id, 'zume_phone_number', null, true );
             add_user_meta( $user_id, 'zume_address', null, true );
             add_user_meta( $user_id, 'zume_affiliation_key', null, true );
+            add_user_meta( $user_id, 'location_grid_meta', get_location_grid_meta_array(), true );
 
             add_user_meta( $user_id, 'google_sso_email', $user_email, true );
 
@@ -351,6 +352,7 @@ class Zume_User_Registration
             add_user_meta( $user_id, 'zume_phone_number', null, true );
             add_user_meta( $user_id, 'zume_address', null, true );
             add_user_meta( $user_id, 'zume_affiliation_key', null, true );
+            add_user_meta( $user_id, 'location_grid_meta', get_location_grid_meta_array(), true );
 
             add_user_meta( $user_id, 'facebook_sso_email', $user_email, true );
 
@@ -670,6 +672,7 @@ class Zume_User_Registration
         add_user_meta( $user_id, 'zume_phone_number', null, true );
         add_user_meta( $user_id, 'zume_address', null, true );
         add_user_meta( $user_id, 'zume_affiliation_key', null, true );
+        add_user_meta( $user_id, 'location_grid_meta', get_location_grid_meta_array(), true );
 
         add_user_to_blog( get_current_blog_id(), $user_id, 'subscriber' ); // add user to ZumeProject site.
         add_user_to_blog( '12', $user_id, 'subscriber' ); // add user to Zume Vision
