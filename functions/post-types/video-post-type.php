@@ -712,6 +712,13 @@ class Zume_Video_Post_Type
             'default'     => '248149797',
             'section'     => 'scribe',
         );
+        $fields['33'] = array(
+            'name'        => 'Four Relationships (optional) (33)',
+            'description' => '',
+            'type'        => 'link',
+            'default'     => '331805074',
+            'section'     => 'scribe',
+        );
 
         /**
          * Alternate Video

@@ -1,24 +1,22 @@
 <?php get_header(); ?>
 
-    <div id="content">
+<div id="content">
 
-        <div id="inner-content" class="row">
+    <div id="inner-content grid-x grid-padding-x">
 
-            <main id="main" class="large-12 medium-12 columns" role="main">
+        <div id="simple-main" class="cell padding-top-1" role="main">
 
-                <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+            <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-                        <?php get_template_part( 'parts/loop', 'page' ); ?>
+                <?php the_content(); ?>
 
-                <?php endwhile;
-endif; ?>
+            <?php endwhile;
+            endif; ?>
 
-            </main> <!-- end #main -->
+        </div>
 
-            <?php //get_sidebar(); ?>
+    </div>
 
-        </div> <!-- end #inner-content -->
-
-    </div> <!-- end #content -->
+</div>
 
 <?php get_footer(); ?>

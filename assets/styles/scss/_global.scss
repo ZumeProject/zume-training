@@ -437,3 +437,24 @@ PLUGIN STYLES
     list-style: none outside none;
     margin: 0;
 }
+
+#page-content {
+    max-width: 1100px;
+    margin:0 auto;
+
+    .small-video {
+        width: 450px;
+    }
+
+    .inset {
+        padding: 0 2rem 0;
+    }
+    h3 {
+        padding-top: 2rem;
+        padding-bottom:1rem;
+    }
+    h4 {
+        font-weight: bold;
+        padding-top:1rem;
+    }
+}
