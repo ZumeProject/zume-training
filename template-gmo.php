@@ -213,7 +213,7 @@ $current_language = zume_current_language();
 </div> <!-- end #inner-content -->
 
 <!-- Goals of the Zume Project -->
-<div class="grid-x grid-margin-x grid-margin-y vertical-padding" style="background-color:#323A68;">
+<div class="grid-x grid-margin-x grid-margin-y grid-padding vertical-padding" style="background-color:#323A68;">
     <div class="large-2 cell"></div>
     <div class="cell large-8" style="color: white;">
         <h3 class="secondary" style="color: white;"><?php esc_html_e( 'Goals of the Zúme Project:', 'zume' ) ?></h3>
