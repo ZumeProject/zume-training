@@ -19,7 +19,7 @@ $current_language = zume_current_language();
                         <strong><?php esc_html_e("Welcome to God’s Family!", 'zume' ) ?></strong>
                     </h1>
 
-                    <p><?php esc_html_e('Below you will find videos and pages to help you learn what it means to be a follower of Jesus (i.e. a disciple) and to help others follow Jesus with you (i.e. make disciples).', "zume" ) ?></p>
+                    <p><?php esc_html_e('Below you will find videos and pages to help you learn what it means to be a follower of Jesus and to help others follow Jesus with you. A follower of Jesus is also called a disciple.', "zume" ) ?></p>
 
                     <p><?php esc_html_e('The lessons and concepts listed below can be explored on your own, but we recommend you stop now and ask, "Who else could I learn and practice these important things with?". If a name comes into your mind, reach out to them. If no name comes to mind, ask God to send you someone to join you on your journey.', 'zume' ) ?></p>
 
@@ -28,7 +28,7 @@ $current_language = zume_current_language();
                     </div>
 
 
-                    <h3><?php esc_html_e("What is a disciple of Jesus?", 'zume' ) ?></h3>
+                    <h3><?php esc_html_e("What is a follower of Jesus?", 'zume' ) ?></h3>
                     <div class="inset">
                         <p>
                             <strong><a href="https://zume.training/definition-of-disciple-and-church"><?php esc_html_e("Simple Definition of Disciple and Church", 'zume') ?></a></strong><br>
@@ -46,7 +46,7 @@ $current_language = zume_current_language();
                     </div>
 
 
-                    <h3><?php esc_html_e("What are the activities of a disciple?", 'zume') ?></h3>
+                    <h3><?php esc_html_e("What are the activities of a follower of Jesus?", 'zume') ?></h3>
                     <p>
                         <strong><a href="https://zume.training/consumer-vs-producer-lifestyle"><?php esc_html_e("Consumer vs Producer Lifestyle", 'zume') ?></a></strong><br>
                         <?php esc_html_e("You'll discover the four main ways God makes everyday followers more like Jesus.", 'zume') ?>
@@ -121,7 +121,7 @@ $current_language = zume_current_language();
                     </div>
 
 
-                    <h3><?php esc_html_e("How do I obey Jesus and help others become disciples with me?", 'zume') ?></h3>
+                    <h3><?php esc_html_e("How do I obey Jesus and help others become followers with me?", 'zume') ?></h3>
                     <p>
                         <em><?php esc_html_e('Then Jesus came to them and said, "All authority in heaven and on earth has been given to me. Therefore go and make disciples of all nations, baptizing them in the name of the Father and of the Son and of the Holy Spirit, and teaching them to obey everything I have commanded you. And surely I am with you always, to the very end of the age."', 'zume' ) ?></em>
                         (<a href="https://www.biblegateway.com/passage/?search=Matthew+28%3A18-20&version=NIV"><?php esc_html_e("Matthew 28:18-20", 'zume') ?></a>)
