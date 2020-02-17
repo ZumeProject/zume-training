@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "Project-Id-Version: Zúme Project\n"
-"POT-Creation-Date: 2020-02-16 09:41-0700\n"
+"POT-Creation-Date: 2020-02-17 07:27-0700\n"
 "PO-Revision-Date: 2018-03-06 11:15-0700\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -3162,227 +3162,6 @@ msgstr ""
 msgid "Mobile App"
 msgstr ""
 
-#: functions/zume-v4-seo-strings.php:28
-msgid ""
-"Zúme Training is an on-line and in-life learning experience designed for "
-"small groups who follow Jesus to learn how to obey His Great Commission. "
-"Best Disciple Making Movements training online."
-msgstr ""
-
-#: functions/zume-v4-seo-strings.php:29
-msgid ""
-"This 3/3 group meeting pattern can be used for a simple church (or home "
-"church), a leadership cell, or peer mentoring group."
-msgstr ""
-
-#: functions/zume-v4-seo-strings.php:30
-msgid ""
-"A Person of Peace is someone who is open to hearing the Good News of Jesus "
-"and is excited to draw others into the conversation about Him."
-msgstr ""
-
-#: functions/zume-v4-seo-strings.php:31
-msgid ""
-"Zúme training equips participants in basic disciple-making and simple church "
-"planting multiplication principles, processes, and practices."
-msgstr ""
-
-#: functions/zume-v4-seo-strings.php:32
-msgid ""
-"Jesus taught that we do and say matters now and in eternity. Accountability "
-"groups are no more than brothers and sisters walking together in truth and "
-"love."
-msgstr ""
-
-#: functions/zume-v4-seo-strings.php:33
-msgid ""
-"Members of a simple church can start new churches while still being a part "
-"of their primary church family. This can grow into a city-wide body of "
-"believers."
-msgstr ""
-
-#: functions/zume-v4-seo-strings.php:34
-msgid ""
-"Baptism is a picture of our new life, soaked in the image of Jesus, "
-"transformed in obedience to God. Here's a short guide on how to baptize "
-"someone."
-msgstr ""
-
-#: functions/zume-v4-seo-strings.php:35
-msgid ""
-"The coaching checklist is a simple tool you can use to help guide you as you "
-"assist others through various parts of disciple maturity or training like "
-"Zúme."
-msgstr ""
-
-#: functions/zume-v4-seo-strings.php:36
-msgid ""
-"Learn to help Christian followers of Jesus become a producers in their "
-"faith, not just a consumers. Disciples are to be doers of the word, not "
-"hearers only."
-msgstr ""
-
-#: functions/zume-v4-seo-strings.php:37
-msgid ""
-"To see God’s family grow far and grow in faithfulness, then think of "
-"disciple-making like ducklings. Become a follower and a leader at the same "
-"time."
-msgstr ""
-
-#: functions/zume-v4-seo-strings.php:38
-msgid ""
-"If we want to see the kingdom of God grow rapidly we need to expect and even "
-"encourage non-sequential growth."
-msgstr ""
-
-#: functions/zume-v4-seo-strings.php:39
-msgid "Every disciple needs to be equipped to see where the Kingdom isn’t."
-msgstr ""
-
-#: functions/zume-v4-seo-strings.php:40
-msgid ""
-"Faithfulness is better than knowledge when it comes to identifying who we "
-"should spend time with in making disciples who make disciples."
-msgstr ""
-
-#: functions/zume-v4-seo-strings.php:41
-msgid ""
-"Frequently asked questions about Zúme Training. Who runs Zúme? How much does "
-"it cost? What languages is it translated into?"
-msgstr ""
-
-#: functions/zume-v4-seo-strings.php:42
-msgid ""
-"The four fields tool is a diagnostic chart used by a leadership cell to "
-"reflect on the status of current efforts and the kingdom activity around "
-"them."
-msgstr ""
-
-#: functions/zume-v4-seo-strings.php:43
-msgid ""
-"Generational mapping helps leaders in a movement understand the growth "
-"around them. Here is a example of a generational map and the individual "
-"church layout"
-msgstr ""
-
-#: functions/zume-v4-seo-strings.php:44
-msgid ""
-"Learn how God uses ordinary people to tell others about Jesus. His plan has "
-"always been that disciples make disciples. We all have a role to play."
-msgstr ""
-
-#: functions/zume-v4-seo-strings.php:45
-msgid ""
-"Zúme Training is an on-line and in-life learning experience designed for "
-"small groups who follow Jesus to learn how to obey His Great Commission."
-msgstr ""
-
-#: functions/zume-v4-seo-strings.php:46
-msgid ""
-"Pace matters because our eternity is determined in the short time we call "
-"“life”. Over time a faster pace can result in exponetial growth of disciples."
-msgstr ""
-
-#: functions/zume-v4-seo-strings.php:47
-msgid ""
-"Use this peer mentoring group format for leader-to-leader mentoring, in "
-"order to strengthen individuals, simple churches, and even networks of "
-"churches."
-msgstr ""
-
-#: functions/zume-v4-seo-strings.php:48
-msgid ""
-"Prayer Walking is just what it sounds like - praying to God while walking "
-"around."
-msgstr ""
-
-#: functions/zume-v4-seo-strings.php:49
-msgid ""
-"Your story of your relationship with God is called your testimony. Everybody "
-"has a story. Sharing your testimony is a chance to practice yours."
-msgstr ""
-
-#: functions/zume-v4-seo-strings.php:50
-msgid ""
-"Be faithful with the people God has already put in you life. We call this "
-"relational stewardship. Making a list of 100 is a way to start!"
-msgstr ""
-
-#: functions/zume-v4-seo-strings.php:51
-msgid ""
-"Zúme Training resources are free tools for disciple-makers who want to make "
-"disciples wo multiply."
-msgstr ""
-
-#: functions/zume-v4-seo-strings.php:52
-msgid ""
-"It's important to have a simple definition of disciple and church. A "
-"disciple loves God, loves people, and makes disciples. A church is a "
-"spiritual family."
-msgstr ""
-
-#: functions/zume-v4-seo-strings.php:53
-msgid ""
-"The S.O.A.P.S. Bible Reading format will help you understand, obey and share "
-"even more. Use this tool to show others how to study the Bible."
-msgstr ""
-
-#: functions/zume-v4-seo-strings.php:54
-msgid ""
-"We breathe in. We breathe out. Life. In God’s Kingdom, spiritual breathing "
-"is hearing (breathing in) and obeying God (breathing out)."
-msgstr ""
-
-#: functions/zume-v4-seo-strings.php:55
-msgid ""
-"The BLESS prayer pattern gives five ways (Body, Labor, Emotional, Social, "
-"and Spiritual) you can pray for people you meet during your prayer walk."
-msgstr ""
-
-#: functions/zume-v4-seo-strings.php:56
-msgid ""
-"One way to share God’s Story is by explaining what’s happened from God’s "
-"Creation to His Judgement at the end of this age. Practice this story "
-"yourself."
-msgstr ""
-
-#: functions/zume-v4-seo-strings.php:57
-msgid ""
-"The kingdom economy is when we are faithful to OBEY and SHARE what the Lord "
-"has shared with us, then He promises to share even more."
-msgstr ""
-
-#: functions/zume-v4-seo-strings.php:58
-msgid ""
-"Holy Communion or “The Lord’s Supper” is a way to celebrate our intimate "
-"connection and ongoing relationship with Jesus. Here’s a simple way to lead "
-"it."
-msgstr ""
-
-#: functions/zume-v4-seo-strings.php:59
-msgid ""
-"The training cycle is used for maturing disciples through four distinct "
-"steps of spiritual growth. The steps include: MODEL, ASSIST, WATCH and LEAVE."
-msgstr ""
-
-#: functions/zume-v4-seo-strings.php:60
-msgid ""
-"Zúme is a community of practice for those who want to see disciple making "
-"movements. Let's saturate the world with multiplying disciples together."
-msgstr ""
-
-#: functions/zume-v4-seo-strings.php:61
-msgid ""
-"Find videos and pages to help you learn what it means to be a follower of "
-"Jesus and to help others follow Jesus with you."
-msgstr ""
-
-#: functions/zume-v4-seo-strings.php:62
-msgid ""
-"When someone chooses to follow Jesus, how do you help them move down the "
-"right path? Start by vision casting the greatest blessing awaiting them."
-msgstr ""
-
 #: parts/content-missing.php:4
 msgid "Oops, Page Not Found!"
 msgstr ""
@@ -3409,7 +3188,7 @@ msgstr ""
 msgid "Learn more about the Zúme.Vision"
 msgstr ""
 
-#: parts/content-share.php:85 template-gmo.php:224 template-pieces-page.php:220
+#: parts/content-share.php:85 template-gmo.php:226 template-pieces-page.php:220
 #: template-zume-about.php:38 template-zume-about.php:55
 #: template-zume-faq.php:199 template-zume-privacy-policy.php:186
 #: template-zume-progress.php:119
@@ -3680,17 +3459,17 @@ msgid ""
 "extended, spiritual family."
 msgstr ""
 
-#: template-gmo.php:208
+#: template-gmo.php:210
 msgid ""
 "Watch this important video explaining the 4 relationships of your new life."
 msgstr ""
 
-#: template-gmo.php:219 template-zume-about.php:50 template-zume-faq.php:194
+#: template-gmo.php:221 template-zume-about.php:50 template-zume-faq.php:194
 #: template-zume-privacy-policy.php:181 template-zume-progress.php:114
 msgid "Goals of the Zúme Project:"
 msgstr ""
 
-#: template-gmo.php:221 template-zume-about.php:52 template-zume-faq.php:196
+#: template-gmo.php:223 template-zume-about.php:52 template-zume-faq.php:196
 #: template-zume-privacy-policy.php:183 template-zume-progress.php:116
 msgid ""
 "Zúme means yeast in Greek. In Matthew 13:33, Jesus is quoted as saying, "
