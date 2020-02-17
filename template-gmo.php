@@ -203,8 +203,10 @@ $current_language = zume_current_language();
             </div>
         </div>
         <div class="cell center medium-4 padding-top-1">
-            <div class="small-video hide-for-small-only">
-                <iframe src="https://player.vimeo.com/video/331805074" width="640" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+            <div class="small-video hide-for-small-only" >
+                <div style="border:1px solid #e6e6e6">
+                    <iframe src="https://player.vimeo.com/video/331805074" width="640" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                </div>
                 <p><?php esc_html_e("Watch this important video explaining the 4 relationships of your new life.", 'zume' ) ?></p>
             </div>
         </div>
