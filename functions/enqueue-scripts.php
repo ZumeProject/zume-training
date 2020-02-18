@@ -151,15 +151,15 @@ function zume_site_scripts() {
                 'nonce' => wp_create_nonce( 'wp_rest' ),
                 'current_user_id' => ( is_user_logged_in() ) ? get_current_user_id() : 0,
                 'user_profile_fields' => [
-                    'id' => ( is_user_logged_in() ) ? $zume_user->data->ID ?? ''  : 0,
-                    'name' => ( is_user_logged_in() ) ? $zume_user_meta['zume_full_name'] ?? ''  : '',
-                    'email' => ( is_user_logged_in() ) ? $zume_user->data->user_email ?? ''  : '',
-                    'phone' => ( is_user_logged_in() ) ? $zume_user_meta['zume_phone_number'] ?? ''  : '',
-                    'location_grid_meta' => ( is_user_logged_in() ) ?  maybe_unserialize( $zume_user_meta['location_grid_meta'] ) : false,
+                    'id' => ( is_user_logged_in() ) ? $zume_user->data->ID ?? '' : 0,
+                    'name' => ( is_user_logged_in() ) ? $zume_user_meta['zume_full_name'] ?? '' : '',
+                    'email' => ( is_user_logged_in() ) ? $zume_user->data->user_email ?? '' : '',
+                    'phone' => ( is_user_logged_in() ) ? $zume_user_meta['zume_phone_number'] ?? '' : '',
+                    'location_grid_meta' => ( is_user_logged_in() ) ? maybe_unserialize( $zume_user_meta['location_grid_meta'] ) : false,
                     'affiliation_key' => ( is_user_logged_in() ) ? $zume_user_meta['zume_affiliation_key'] ?? '' : '',
                     'facebook_sso_email' => ( is_user_logged_in() ) ? $zume_user_meta['facebook_sso_email'] ?? '' : false,
-                    'google_sso_email' => ( is_user_logged_in() ) ? $zume_user_meta['google_sso_email'] ?? ''  : false,
-                    'zume_global_network' => ( is_user_logged_in() ) ? $zume_user_meta['zume_global_network'] ?? ''  : false,
+                    'google_sso_email' => ( is_user_logged_in() ) ? $zume_user_meta['google_sso_email'] ?? '' : false,
+                    'zume_global_network' => ( is_user_logged_in() ) ? $zume_user_meta['zume_global_network'] ?? '' : false,
                 ],
                 'logged_in' => is_user_logged_in(),
                 'map_key' => DT_Mapbox_API::get_key(),
@@ -352,6 +352,7 @@ function zume_site_scripts() {
                         'x93' => __( 'Add Group', 'zume' ),
                         'x94' => __( 'Group Name', 'zume' ),
                         'x95' => __( 'delete', 'zume' ),
+                        'x96' => __( 'Name', 'zume' ),
                     )
                 )
             )

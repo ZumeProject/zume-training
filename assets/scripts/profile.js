@@ -32,7 +32,7 @@ function write_profile() {
     <table class="hover stack" id="profile-fields">
         <tr style="vertical-align: top;">
             <td class="label-column">
-                <label for="zume_full_name">Name</label>
+                <label for="zume_full_name">${_.escape( i18n.x96 )/*Name*/}</label>
             </td>
             <td>
                 <input type="text"

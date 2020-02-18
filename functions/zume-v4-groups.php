@@ -1171,7 +1171,7 @@ class Zume_V4_Groups {
             $modified_group['grid_id'] = (int) $lg_lookup['grid_id'];
         }
 
-        switch( $action ) {
+        switch ( $action ) {
             case 'geolocate':
             case 'click':
                 $mapbox_result = DT_Mapbox_API::reverse_lookup( $lng, $lat );

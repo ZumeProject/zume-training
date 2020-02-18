@@ -130,7 +130,7 @@ function zume_update_user_ip_address_and_location( $user_id = null ) {
         update_user_meta( $user_id, 'zume_lat_from_ip', DT_Ipstack_API::parse_raw_result( $ip_results, 'latitude' ) );
         update_user_meta( $user_id, 'zume_raw_location_from_ip', $ip_results );
 
-        if ( class_exists( 'Location_Grid_Geocoder') ) {
+        if ( class_exists( 'Location_Grid_Geocoder' ) ) {
             $geocoder = new Location_Grid_Geocoder();
             update_user_meta( $user_id, 'ip_location_grid_meta', $geocoder->convert_ip_result_to_location_grid_meta( $ip_results ) );
 
