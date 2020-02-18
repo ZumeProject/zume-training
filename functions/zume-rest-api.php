@@ -59,7 +59,7 @@ class Zume_REST_API {
                 'methods'         => WP_REST_Server::CREATABLE,
                 'callback'        => array( $this, 'validate_by_address' ),
                 "permission_callback" => function () {
-                    return ( current_user_can( 'zume' ) || current_user_can( 'subscriber' ) ) ;
+                    return ( current_user_can( 'zume' ) || current_user_can( 'subscriber' ) );
                 }
             ),
         ) );
