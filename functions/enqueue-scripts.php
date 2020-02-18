@@ -128,6 +128,7 @@ function zume_site_scripts() {
                     'x13' => __( 'Unlink', 'zume' ),
                     'x14' => __( 'Linked Google Account', 'zume' ),
                     'x15' => __( 'No location matches found. Try a less specific address.', 'zume' ),
+                    'x16' => __( 'Name', 'zume' ),
                 ]
             )
         );
@@ -352,7 +353,7 @@ function zume_site_scripts() {
                         'x93' => __( 'Add Group', 'zume' ),
                         'x94' => __( 'Group Name', 'zume' ),
                         'x95' => __( 'delete', 'zume' ),
-                        'x96' => __( 'Name', 'zume' ),
+
                     )
                 )
             )
