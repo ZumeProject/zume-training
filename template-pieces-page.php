@@ -208,18 +208,18 @@ if (have_posts()) :
                                 </ul>
                             </div>
                             <div class="cell center">
-                                <a href="<?php echo esc_url( zume_register_url() ) ?>" class="button large secondary-button" style="padding-right:2em;padding-left:2em;"><?php echo esc_html__( "Register for Free", 'zume' ) ?></a><br>
-                                <a href="<?php echo esc_url( zume_login_url() ) ?>" class="button clear"><?php echo esc_html__( "Login", 'zume' ) ?></a>
+                                <a href="<?php echo esc_url( zume_register_url() ) ?>" class="button large secondary-button" id="pieces-registration" style="padding-right:2em;padding-left:2em;"><?php echo esc_html__( "Register for Free", 'zume' ) ?></a><br>
+                                <a href="<?php echo esc_url( zume_login_url() ) ?>" class="button clear" id="pieces-login"><?php echo esc_html__( "Login", 'zume' ) ?></a>
                             </div>
                             <div class="cell"><hr></div>
                             <div class="cell center">
                                 <p style="max-width:500px; margin:1em auto;"><?php echo esc_html__( "Zúme uses an online training platform to equip participants in basic disciple-making and simple church planting multiplication principles, processes, and practices.", 'zume' ) ?></p>
-                                <p><a class="button primary-button-hollow large" href="<?php echo esc_url( zume_training_url() ) ?>"><?php echo esc_html__( "See Entire Training", 'zume' ) ?></a></p>
+                                <p><a class="button primary-button-hollow large" id="pieces-see-training" href="<?php echo esc_url( zume_training_url() ) ?>"><?php echo esc_html__( "See Entire Training", 'zume' ) ?></a></p>
                             </div>
                             <div class="cell"><hr></div>
                             <div class="cell center">
                                 <p><?php echo esc_html__( "Zúme Training is freely offered as part of larger Zúme Vision.", 'zume' ) ?> </p>
-                                <p><a class="button large primary-button-hollow" href="https://zume.vision"><?php echo esc_html__( "Learn more about the Zúme.Vision", 'zume' ) ?></a></p>
+                                <p><a class="button large primary-button-hollow" href="https://zume.vision" id="pieces-vision"><?php echo esc_html__( "Learn more about the Zúme.Vision", 'zume' ) ?></a></p>
                             </div>
                         </div>
                     </div>
