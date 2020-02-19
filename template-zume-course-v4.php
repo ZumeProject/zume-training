@@ -25,11 +25,37 @@ if ( isset( $_GET['group'] ) ) {
 <script>
     /* Hide the language selector during the course, because switching wipes out the group key. */
     jQuery(document).ready(function() {
-        jQuery('#lang_choice_1').hide();
+        expand_course()
+        jQuery('a[href*="#finish"]').on('click', function() {
+
+        } )
     })
+    function collapse_course() {
+        jQuery('#collapse-course').remove()
+        jQuery('#expand-course').remove()
+        jQuery('.top-bar').show();
+        jQuery('.source-org').show();
+        jQuery('#top-lang-div').html(`<div id="expand-course"><i class="fi-arrows-expand" id="hide-course-top-bar" onclick="expand_course()"></i></div>`)
+    }
+    function expand_course() {
+        jQuery('#collapse-course').remove()
+        jQuery('#expand-course').remove()
+        jQuery('.top-bar').hide();
+        jQuery('.source-org').hide();
+        jQuery('body').append(`<div id="collapse-course"><i class="fi-arrows-compress" id="hide-course-top-bar" onclick="collapse_course()"></i></div>`)
+    }
+
 </script>
+<style>
+    #collapse-course {
+        position: absolute;
+        top: 10px;
+        right: 20px;
+        z-index: 100;
+    }
+</style>
 <div id="content" class="max-content-width">
-    <div id="inner-content" class="grid-x grid-margin-x">
+    <div id="inner-content" class="grid-x grid-margin-x grid-padding-x">
         <div id="main" class="large-12 cell" role="main">
 
             <?php Zume_Course_Content::get_course_content( $session_id ); ?>

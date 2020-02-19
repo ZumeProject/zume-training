@@ -465,3 +465,18 @@ dl, ol, ul {
         border:0;
     }
 }
+
+div.video-section {
+    width:50%;
+    margin: 0 auto 1em !important;
+
+    @media (max-width: $breakpoint-medium ) {
+        width:100%;
+    }
+}
+
+#hide-course-top-bar {
+    float:right;
+    color: $primary-color;
+    cursor:pointer;
+}

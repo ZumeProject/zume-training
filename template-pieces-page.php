@@ -78,7 +78,6 @@ if (have_posts()) :
                     <?php if ($has_video) : ?>
                         <div class="grid-x grid-margin-x grid-margin-y">
                             <div class="cell content-large center">
-
                                 <?php if ( $audio ) :  ?>
                                     <h3><?php esc_html_e( "Listen and Read Along", 'zume' ) ?></h3>
                                     <a class="button large text-uppercase"
@@ -102,10 +101,7 @@ if (have_posts()) :
                                         </iframe>
                                     <?php endif; ?>
                                 </div>
-
-
                             </div>
-
                         </div>
                     <?php endif; ?>
 

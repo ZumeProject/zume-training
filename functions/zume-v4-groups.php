@@ -269,14 +269,13 @@ class Zume_V4_Groups {
      * @param $zume_group_key
      * @return string|void
      */
-    public static function get_group_public_key( $zume_group_key ) {
+    public static function get_group_public_key_by_foreign_key( $zume_group_key ) {
         global $wpdb;
         $zume_group_meta = $wpdb->get_var( $wpdb->prepare( "
-            SELECT meta_value 
-            FROM $wpdb->usermeta 
-            WHERE meta_key = %s
+            SELECT meta_value FROM wp_usermeta WHERE meta_key LIKE %s AND meta_value LIKE %s
         ",
-            $zume_group_key
+            $wpdb->esc_like( 'zume_group' ) . '%',
+            '%' . $wpdb->esc_like( $zume_group_key ) . '%'
         ));
 
         if ( ! $zume_group_meta ) {

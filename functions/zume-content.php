@@ -38,11 +38,16 @@ class Zume_Course_Content {
                         without triggering hashchange */ ?>
                         history.replaceState(null, null, newHash);
                         jQuery("html, body").animate({ scrollTop: 0 }, "fast");
+                        jQuery('a[href*="#finish"]:visible').append(` <span class="spinner" style="display:none;"><img src="<?php echo esc_url( get_theme_file_uri() ) ?>/spinner.svg" width="30px" height="30px" /></span>`)
+
+                    },
+                    onFinishing: function (event, currentIndex) {
+                        jQuery('a[href*="#finish"]').css("background", "#fefefe").css("color", "#323a68")
+                        jQuery('.spinner').show( "complete", function() {
+                            location.replace('<?php echo esc_url( zume_dashboard_url() ) ?>')
+                        })
                     },
 
-                    onFinishing: function (event, currentIndex) {
-                        window.location.replace("<?php echo esc_url( zume_dashboard_url() ) ?>")
-                    },
                     // Removes the number from the title
                     titleTemplate: '<span class="number">#index#</span> #title#'
                 });
@@ -55,7 +60,6 @@ class Zume_Course_Content {
                         $("#session .steps a#session-t-" + stepIndex).click();
                     }
                 });
-
             });
 
         </script>
@@ -235,20 +239,22 @@ class Zume_Course_Content {
                 </div>
             </div>
             <div class="grid-x grid-margin-x grid-margin-y" >
-                <div class="small-12 small-centered cell video-section">
+                <div class="small-12 small-centered cell">
 
                     <!-- 1 -->
-                    <?php if ( $alt_video ) : ?>
-                        <video width="960" height="540" style="border: 1px solid lightgrey;margin: 0 15%;" controls>
-                            <source src="<?php echo esc_url( Zume_Course::get_alt_video_by_key( 'alt_1' ) ) ?>" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                    <?php else : ?>
-                        <iframe style="border: 1px solid lightgrey;"  src="<?php echo esc_url( Zume_Course::get_video_by_key( '1' ) ) ?>" width="560" height="315"
-                                frameborder="1"
-                                webkitallowfullscreen mozallowfullscreen allowfullscreen>
-                        </iframe>
-                    <?php endif; ?>
+                    <div class="video-section">
+                        <?php if ( $alt_video ) : ?>
+                            <video width="960" height="540" style="border: 1px solid lightgrey;margin: 0 15%;" controls>
+                                <source src="<?php echo esc_url( Zume_Course::get_alt_video_by_key( 'alt_1' ) ) ?>" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        <?php else : ?>
+                            <iframe style="border: 1px solid lightgrey;"  src="<?php echo esc_url( Zume_Course::get_video_by_key( '1' ) ) ?>" width="560" height="315"
+                                    frameborder="1"
+                                    webkitallowfullscreen mozallowfullscreen allowfullscreen>
+                            </iframe>
+                        <?php endif; ?>
+                    </div>
 
                     <p class="center hide-for-small-only">
                         <a href="<?php echo esc_url( Zume_Course::get_download_by_key( '34' ) ) ?>"
@@ -288,21 +294,26 @@ class Zume_Course_Content {
             </div>
 
             <div class="grid-x grid-margin-x grid-margin-y">
-                <div class="small-12 small-centered cell video-section">
+                <div class="small-12 small-centered cell">
 
 
                     <!-- 2 -->
-                    <?php if ( $alt_video ) : ?>
-                        <video width="960" height="540" style="border: 1px solid lightgrey;margin: 0 15%;" controls>
-                            <source src="<?php echo esc_url( Zume_Course::get_alt_video_by_key( 'alt_2' ) ) ?>" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                    <?php else : ?>
-                        <iframe style="border: 1px solid lightgrey;"  src="<?php echo esc_url( Zume_Course::get_video_by_key( '2' ) ) ?>" width="560" height="315"
-                                frameborder="1"
-                                webkitallowfullscreen mozallowfullscreen allowfullscreen>
-                        </iframe>
-                    <?php endif; ?>
+                    <div class="video-section">
+                        <?php if ($alt_video) : ?>
+                            <video width="960" height="540" style="border: 1px solid lightgrey;margin: 0 15%;" controls>
+                                <source src="<?php echo esc_url( Zume_Course::get_alt_video_by_key( 'alt_2' ) ) ?>"
+                                        type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        <?php else : ?>
+                            <iframe style="border: 1px solid lightgrey;"
+                                    src="<?php echo esc_url( Zume_Course::get_video_by_key( '2' ) ) ?>" width="560"
+                                    height="315"
+                                    frameborder="1"
+                                    webkitallowfullscreen mozallowfullscreen allowfullscreen>
+                            </iframe>
+                        <?php endif; ?>
+                    </div>
 
                     <p class="center hide-for-small-only"><a
                             href="<?php echo esc_url( Zume_Course::get_download_by_key( '35' ) ) ?>"
@@ -349,22 +360,26 @@ class Zume_Course_Content {
 
             <!-- Video block -->
             <div class="grid-x grid-margin-x grid-margin-y">
-                <div class="small-12 small-centered cell video-section">
+                <div class="small-12 small-centered cell">
 
 
                     <!-- 3 -->
-                    <?php if ( $alt_video ) : ?>
-                        <video width="960" height="540" style="border: 1px solid lightgrey;margin: 0 15%;" controls>
-                            <source src="<?php echo esc_url( Zume_Course::get_alt_video_by_key( 'alt_3' ) ) ?>" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                    <?php else : ?>
-                        <iframe style="border: 1px solid lightgrey;"  src="<?php echo esc_url( Zume_Course::get_video_by_key( '3' ) ) ?>" width="560" height="315"
-                                frameborder="1"
-                                webkitallowfullscreen mozallowfullscreen allowfullscreen>
-                        </iframe>
-                    <?php endif; ?>
-
+                    <div class="video-section">
+                        <?php if ($alt_video) : ?>
+                            <video width="960" height="540" style="border: 1px solid lightgrey;margin: 0 15%;" controls>
+                                <source src="<?php echo esc_url( Zume_Course::get_alt_video_by_key( 'alt_3' ) ) ?>"
+                                        type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        <?php else : ?>
+                            <iframe style="border: 1px solid lightgrey;"
+                                    src="<?php echo esc_url( Zume_Course::get_video_by_key( '3' ) ) ?>" width="560"
+                                    height="315"
+                                    frameborder="1"
+                                    webkitallowfullscreen mozallowfullscreen allowfullscreen>
+                            </iframe>
+                        <?php endif; ?>
+                    </div>
 
                     <p class="center hide-for-small-only"><a
                             href="<?php echo esc_url( Zume_Course::get_download_by_key( '36' ) ) ?>"
@@ -427,22 +442,27 @@ class Zume_Course_Content {
 
             <!-- Video block -->
             <div class="grid-x grid-margin-x grid-margin-y">
-                <div class="small-12 small-centered cell video-section">
+                <div class="small-12 small-centered cell">
 
 
 
                     <!-- 4 -->
-                    <?php if ( $alt_video ) : ?>
-                        <video width="960" height="540" style="border: 1px solid lightgrey;margin: 0 15%;" controls>
-                            <source src="<?php echo esc_url( Zume_Course::get_alt_video_by_key( 'alt_4' ) ) ?>" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                    <?php else : ?>
-                        <iframe style="border: 1px solid lightgrey;"  src="<?php echo esc_url( Zume_Course::get_video_by_key( '4' ) ) ?>" width="560" height="315"
-                                frameborder="1"
-                                webkitallowfullscreen mozallowfullscreen allowfullscreen>
-                        </iframe>
-                    <?php endif; ?>
+                    <div class="video-section">
+                        <?php if ($alt_video) : ?>
+                            <video width="960" height="540" style="border: 1px solid lightgrey;margin: 0 15%;" controls>
+                                <source src="<?php echo esc_url( Zume_Course::get_alt_video_by_key( 'alt_4' ) ) ?>"
+                                        type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        <?php else : ?>
+                            <iframe style="border: 1px solid lightgrey;"
+                                    src="<?php echo esc_url( Zume_Course::get_video_by_key( '4' ) ) ?>" width="560"
+                                    height="315"
+                                    frameborder="1"
+                                    webkitallowfullscreen mozallowfullscreen allowfullscreen>
+                            </iframe>
+                        <?php endif; ?>
+                    </div>
 
                     <p class="center hide-for-small-only"><a href="<?php echo esc_url( Zume_Course::get_download_by_key( '37' ) ) ?>"
                                                              target="_blank" rel="noopener noreferrer nofollow"><img
@@ -493,21 +513,26 @@ class Zume_Course_Content {
 
             <!-- Video block -->
             <div class="grid-x grid-margin-x grid-margin-y">
-                <div class="small-12 small-centered cell video-section">
+                <div class="small-12 small-centered cell">
 
 
                     <!-- 5 -->
-                    <?php if ( $alt_video ) : ?>
-                        <video width="960" height="540" style="border: 1px solid lightgrey;margin: 0 15%;" controls>
-                            <source src="<?php echo esc_url( Zume_Course::get_alt_video_by_key( 'alt_5' ) ) ?>" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                    <?php else : ?>
-                        <iframe style="border: 1px solid lightgrey;"  src="<?php echo esc_url( Zume_Course::get_video_by_key( '5' ) ) ?>" width="560" height="315"
-                                frameborder="1"
-                                webkitallowfullscreen mozallowfullscreen allowfullscreen>
-                        </iframe>
-                    <?php endif; ?>
+                    <div class="video-section">
+                        <?php if ($alt_video) : ?>
+                            <video width="960" height="540" style="border: 1px solid lightgrey;margin: 0 15%;" controls>
+                                <source src="<?php echo esc_url( Zume_Course::get_alt_video_by_key( 'alt_5' ) ) ?>"
+                                        type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        <?php else : ?>
+                            <iframe style="border: 1px solid lightgrey;"
+                                    src="<?php echo esc_url( Zume_Course::get_video_by_key( '5' ) ) ?>" width="560"
+                                    height="315"
+                                    frameborder="1"
+                                    webkitallowfullscreen mozallowfullscreen allowfullscreen>
+                            </iframe>
+                        <?php endif; ?>
+                    </div>
 
                     <p class="center hide-for-small-only"><a
                             href="<?php echo esc_url( Zume_Course::get_download_by_key( '38' ) ) ?>"
@@ -702,20 +727,25 @@ class Zume_Course_Content {
 
             <!-- Video block -->
             <div class="grid-x grid-margin-x grid-margin-y">
-                <div class="small-12 small-centered cell video-section">
+                <div class="small-12 small-centered cell">
 
                     <!-- 6 -->
-                    <?php if ( $alt_video ) : ?>
-                        <video width="960" height="540" style="border: 1px solid lightgrey;margin: 0 15%;" controls>
-                            <source src="<?php echo esc_url( Zume_Course::get_alt_video_by_key( 'alt_6' ) ) ?>" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                    <?php else : ?>
-                        <iframe style="border: 1px solid lightgrey;"  src="<?php echo esc_url( Zume_Course::get_video_by_key( '6' ) ) ?>" width="560" height="315"
-                                frameborder="1"
-                                webkitallowfullscreen mozallowfullscreen allowfullscreen>
-                        </iframe>
-                    <?php endif; ?>
+                    <div class="video-section">
+                        <?php if ($alt_video) : ?>
+                            <video width="960" height="540" style="border: 1px solid lightgrey;margin: 0 15%;" controls>
+                                <source src="<?php echo esc_url( Zume_Course::get_alt_video_by_key( 'alt_6' ) ) ?>"
+                                        type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        <?php else : ?>
+                            <iframe style="border: 1px solid lightgrey;"
+                                    src="<?php echo esc_url( Zume_Course::get_video_by_key( '6' ) ) ?>" width="560"
+                                    height="315"
+                                    frameborder="1"
+                                    webkitallowfullscreen mozallowfullscreen allowfullscreen>
+                            </iframe>
+                        <?php endif; ?>
+                    </div>
 
                     <p class="center hide-for-small-only"><a
                             href="<?php echo esc_url( Zume_Course::get_download_by_key( '39' ) ) ?>"
@@ -777,20 +807,25 @@ class Zume_Course_Content {
 
             <!-- Video block -->
             <div class="grid-x grid-margin-x grid-margin-y">
-                <div class="small-12 small-centered cell video-section">
+                <div class="small-12 small-centered cell">
 
                     <!-- 7 -->
-                    <?php if ( $alt_video ) : ?>
-                        <video width="960" height="540" style="border: 1px solid lightgrey;margin: 0 15%;" controls>
-                            <source src="<?php echo esc_url( Zume_Course::get_alt_video_by_key( 'alt_7' ) ) ?>" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                    <?php else : ?>
-                        <iframe style="border: 1px solid lightgrey;"  src="<?php echo esc_url( Zume_Course::get_video_by_key( '7' ) ) ?>" width="560" height="315"
-                                frameborder="1"
-                                webkitallowfullscreen mozallowfullscreen allowfullscreen>
-                        </iframe>
-                    <?php endif; ?>
+                    <div class="video-section">
+                        <?php if ($alt_video) : ?>
+                            <video width="960" height="540" style="border: 1px solid lightgrey;margin: 0 15%;" controls>
+                                <source src="<?php echo esc_url( Zume_Course::get_alt_video_by_key( 'alt_7' ) ) ?>"
+                                        type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        <?php else : ?>
+                            <iframe style="border: 1px solid lightgrey;"
+                                    src="<?php echo esc_url( Zume_Course::get_video_by_key( '7' ) ) ?>" width="560"
+                                    height="315"
+                                    frameborder="1"
+                                    webkitallowfullscreen mozallowfullscreen allowfullscreen>
+                            </iframe>
+                        <?php endif; ?>
+                    </div>
 
                     <p class="center hide-for-small-only"><a
                             href="<?php echo esc_url( Zume_Course::get_download_by_key( '40' ) ) ?>"
@@ -885,21 +920,26 @@ class Zume_Course_Content {
 
             <!-- Video block -->
             <div class="grid-x grid-margin-x grid-margin-y">
-                <div class="small-12 small-centered cell video-section">
+                <div class="small-12 small-centered cell">
 
 
                     <!-- 8 -->
-                    <?php if ( $alt_video ) : ?>
-                        <video width="960" height="540" style="border: 1px solid lightgrey;margin: 0 15%;" controls>
-                            <source src="<?php echo esc_url( Zume_Course::get_alt_video_by_key( 'alt_8' ) ) ?>" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                    <?php else : ?>
-                        <iframe style="border: 1px solid lightgrey;"  src="<?php echo esc_url( Zume_Course::get_video_by_key( '8' ) ) ?>" width="560" height="315"
-                                frameborder="1"
-                                webkitallowfullscreen mozallowfullscreen allowfullscreen>
-                        </iframe>
-                    <?php endif; ?>
+                    <div class="video-section">
+                        <?php if ($alt_video) : ?>
+                            <video width="960" height="540" style="border: 1px solid lightgrey;margin: 0 15%;" controls>
+                                <source src="<?php echo esc_url( Zume_Course::get_alt_video_by_key( 'alt_8' ) ) ?>"
+                                        type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        <?php else : ?>
+                            <iframe style="border: 1px solid lightgrey;"
+                                    src="<?php echo esc_url( Zume_Course::get_video_by_key( '8' ) ) ?>" width="560"
+                                    height="315"
+                                    frameborder="1"
+                                    webkitallowfullscreen mozallowfullscreen allowfullscreen>
+                            </iframe>
+                        <?php endif; ?>
+                    </div>
 
                     <p class="center hide-for-small-only"><a
                             href="<?php echo esc_url( Zume_Course::get_download_by_key( '41' ) ) ?>"
@@ -1073,20 +1113,25 @@ class Zume_Course_Content {
 
             <!-- Video block -->
             <div class="grid-x grid-margin-x grid-margin-y">
-                <div class="small-12 small-centered cell video-section">
+                <div class="small-12 small-centered cell">
 
                     <!-- 9 -->
-                    <?php if ( $alt_video ) : ?>
-                        <video width="960" height="540" style="border: 1px solid lightgrey;margin: 0 15%;" controls>
-                            <source src="<?php echo esc_url( Zume_Course::get_alt_video_by_key( 'alt_9' ) ) ?>" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                    <?php else : ?>
-                        <iframe style="border: 1px solid lightgrey;"  src="<?php echo esc_url( Zume_Course::get_video_by_key( '9' ) ) ?>" width="560" height="315"
-                                frameborder="1"
-                                webkitallowfullscreen mozallowfullscreen allowfullscreen>
-                        </iframe>
-                    <?php endif; ?>
+                    <div class="video-section">
+                        <?php if ($alt_video) : ?>
+                            <video width="960" height="540" style="border: 1px solid lightgrey;margin: 0 15%;" controls>
+                                <source src="<?php echo esc_url( Zume_Course::get_alt_video_by_key( 'alt_9' ) ) ?>"
+                                        type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        <?php else : ?>
+                            <iframe style="border: 1px solid lightgrey;"
+                                    src="<?php echo esc_url( Zume_Course::get_video_by_key( '9' ) ) ?>" width="560"
+                                    height="315"
+                                    frameborder="1"
+                                    webkitallowfullscreen mozallowfullscreen allowfullscreen>
+                            </iframe>
+                        <?php endif; ?>
+                    </div>
 
                     <p class="center hide-for-small-only"><a target="_blank" rel="noopener noreferrer nofollow"
                                                              href="<?php echo esc_url( Zume_Course::get_download_by_key( '42' ) ) ?>"><img
@@ -1169,20 +1214,25 @@ class Zume_Course_Content {
 
             <!-- Video block -->
             <div class="grid-x grid-margin-x grid-margin-y">
-                <div class="small-12 small-centered cell video-section">
+                <div class="small-12 small-centered cell">
 
                     <!-- 10 -->
-                    <?php if ( $alt_video ) : ?>
-                        <video width="960" height="540" style="border: 1px solid lightgrey;margin: 0 15%;" controls>
-                            <source src="<?php echo esc_url( Zume_Course::get_alt_video_by_key( 'alt_10' ) ) ?>" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                    <?php else : ?>
-                        <iframe style="border: 1px solid lightgrey;"  src="<?php echo esc_url( Zume_Course::get_video_by_key( '10' ) ) ?>" width="560" height="315"
-                                frameborder="1"
-                                webkitallowfullscreen mozallowfullscreen allowfullscreen>
-                        </iframe>
-                    <?php endif; ?>
+                    <div class="video-section">
+                        <?php if ($alt_video) : ?>
+                            <video width="960" height="540" style="border: 1px solid lightgrey;margin: 0 15%;" controls>
+                                <source src="<?php echo esc_url( Zume_Course::get_alt_video_by_key( 'alt_10' ) ) ?>"
+                                        type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        <?php else : ?>
+                            <iframe style="border: 1px solid lightgrey;"
+                                    src="<?php echo esc_url( Zume_Course::get_video_by_key( '10' ) ) ?>" width="560"
+                                    height="315"
+                                    frameborder="1"
+                                    webkitallowfullscreen mozallowfullscreen allowfullscreen>
+                            </iframe>
+                        <?php endif; ?>
+                    </div>
 
                     <p class="center hide-for-small-only"><a target="_blank" rel="noopener noreferrer nofollow"
                                                              href="<?php echo esc_url( Zume_Course::get_download_by_key( '43' ) ) ?>"><img
@@ -1269,20 +1319,25 @@ class Zume_Course_Content {
 
             <!-- Video block -->
             <div class="grid-x grid-margin-x grid-margin-y">
-                <div class="small-12 small-centered cell video-section">
+                <div class="small-12 small-centered cell">
 
                     <!-- 11 -->
-                    <?php if ( $alt_video ) : ?>
-                        <video width="960" height="540" style="border: 1px solid lightgrey;margin: 0 15%;" controls>
-                            <source src="<?php echo esc_url( Zume_Course::get_alt_video_by_key( 'alt_11' ) ) ?>" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                    <?php else : ?>
-                        <iframe style="border: 1px solid lightgrey;"  src="<?php echo esc_url( Zume_Course::get_video_by_key( '11' ) ) ?>" width="560" height="315"
-                                frameborder="1"
-                                webkitallowfullscreen mozallowfullscreen allowfullscreen>
-                        </iframe>
-                    <?php endif; ?>
+                    <div class="video-section">
+                        <?php if ($alt_video) : ?>
+                            <video width="960" height="540" style="border: 1px solid lightgrey;margin: 0 15%;" controls>
+                                <source src="<?php echo esc_url( Zume_Course::get_alt_video_by_key( 'alt_11' ) ) ?>"
+                                        type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        <?php else : ?>
+                            <iframe style="border: 1px solid lightgrey;"
+                                    src="<?php echo esc_url( Zume_Course::get_video_by_key( '11' ) ) ?>" width="560"
+                                    height="315"
+                                    frameborder="1"
+                                    webkitallowfullscreen mozallowfullscreen allowfullscreen>
+                            </iframe>
+                        <?php endif; ?>
+                    </div>
 
                     <p class="center hide-for-small-only"><a target="_blank" rel="noopener noreferrer nofollow"
                                                              href="<?php echo esc_url( Zume_Course::get_download_by_key( '44' ) ) ?>"><img
@@ -1487,20 +1542,25 @@ class Zume_Course_Content {
 
             <!-- Video block -->
             <div class="grid-x grid-margin-x grid-margin-y">
-                <div class="small-12 small-centered cell video-section">
+                <div class="small-12 small-centered cell">
 
                     <!-- 12 -->
-                    <?php if ( $alt_video ) : ?>
-                        <video width="960" height="540" style="border: 1px solid lightgrey;margin: 0 15%;" controls>
-                            <source src="<?php echo esc_url( Zume_Course::get_alt_video_by_key( 'alt_12' ) ) ?>" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                    <?php else : ?>
-                        <iframe style="border: 1px solid lightgrey;"  src="<?php echo esc_url( Zume_Course::get_video_by_key( '12' ) ) ?>" width="560" height="315"
-                                frameborder="1"
-                                webkitallowfullscreen mozallowfullscreen allowfullscreen>
-                        </iframe>
-                    <?php endif; ?>
+                    <div class="video-section">
+                        <?php if ($alt_video) : ?>
+                            <video width="960" height="540" style="border: 1px solid lightgrey;margin: 0 15%;" controls>
+                                <source src="<?php echo esc_url( Zume_Course::get_alt_video_by_key( 'alt_12' ) ) ?>"
+                                        type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        <?php else : ?>
+                            <iframe style="border: 1px solid lightgrey;"
+                                    src="<?php echo esc_url( Zume_Course::get_video_by_key( '12' ) ) ?>" width="560"
+                                    height="315"
+                                    frameborder="1"
+                                    webkitallowfullscreen mozallowfullscreen allowfullscreen>
+                            </iframe>
+                        <?php endif; ?>
+                    </div>
 
                     <p class="center hide-for-small-only"><a
                             href="<?php echo esc_url( Zume_Course::get_download_by_key( '45' ) ) ?>"
@@ -1561,20 +1621,25 @@ class Zume_Course_Content {
 
             <!-- Video block -->
             <div class="grid-x grid-margin-x grid-margin-y">
-                <div class="small-12 small-centered cell video-section">
+                <div class="small-12 small-centered cell">
 
                     <!-- 13 -->
-                    <?php if ( $alt_video ) : ?>
-                        <video width="960" height="540" style="border: 1px solid lightgrey;margin: 0 15%;" controls>
-                            <source src="<?php echo esc_url( Zume_Course::get_alt_video_by_key( 'alt_13' ) ) ?>" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                    <?php else : ?>
-                        <iframe style="border: 1px solid lightgrey;"  src="<?php echo esc_url( Zume_Course::get_video_by_key( '13' ) ) ?>" width="560" height="315"
-                                frameborder="1"
-                                webkitallowfullscreen mozallowfullscreen allowfullscreen>
-                        </iframe>
-                    <?php endif; ?>
+                    <div class="video-section">
+                        <?php if ($alt_video) : ?>
+                            <video width="960" height="540" style="border: 1px solid lightgrey;margin: 0 15%;" controls>
+                                <source src="<?php echo esc_url( Zume_Course::get_alt_video_by_key( 'alt_13' ) ) ?>"
+                                        type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        <?php else : ?>
+                            <iframe style="border: 1px solid lightgrey;"
+                                    src="<?php echo esc_url( Zume_Course::get_video_by_key( '13' ) ) ?>" width="560"
+                                    height="315"
+                                    frameborder="1"
+                                    webkitallowfullscreen mozallowfullscreen allowfullscreen>
+                            </iframe>
+                        <?php endif; ?>
+                    </div>
 
                     <p class="center hide-for-small-only"><a
                             href="<?php echo esc_url( Zume_Course::get_download_by_key( '46' ) ) ?>"
@@ -1624,20 +1689,25 @@ class Zume_Course_Content {
 
             <!-- Video block -->
             <div class="grid-x grid-margin-x grid-margin-y">
-                <div class="small-12 small-centered cell video-section">
+                <div class="small-12 small-centered cell">
 
                     <!-- 14 -->
-                    <?php if ( $alt_video ) : ?>
-                        <video width="960" height="540" style="border: 1px solid lightgrey;margin: 0 15%;" controls>
-                            <source src="<?php echo esc_url( Zume_Course::get_alt_video_by_key( 'alt_14' ) ) ?>" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                    <?php else : ?>
-                        <iframe style="border: 1px solid lightgrey;"  src="<?php echo esc_url( Zume_Course::get_video_by_key( '14' ) ) ?>" width="560" height="315"
-                                frameborder="1"
-                                webkitallowfullscreen mozallowfullscreen allowfullscreen>
-                        </iframe>
-                    <?php endif; ?>
+                    <div class="video-section">
+                        <?php if ($alt_video) : ?>
+                            <video width="960" height="540" style="border: 1px solid lightgrey;margin: 0 15%;" controls>
+                                <source src="<?php echo esc_url( Zume_Course::get_alt_video_by_key( 'alt_14' ) ) ?>"
+                                        type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        <?php else : ?>
+                            <iframe style="border: 1px solid lightgrey;"
+                                    src="<?php echo esc_url( Zume_Course::get_video_by_key( '14' ) ) ?>" width="560"
+                                    height="315"
+                                    frameborder="1"
+                                    webkitallowfullscreen mozallowfullscreen allowfullscreen>
+                            </iframe>
+                        <?php endif; ?>
+                    </div>
 
                     <p class="center hide-for-small-only">
                         <a href="<?php echo esc_url( Zume_Course::get_download_by_key( '47' ) ) ?>"
@@ -1687,20 +1757,25 @@ class Zume_Course_Content {
 
             <!-- Video block -->
             <div class="grid-x grid-margin-x grid-margin-y">
-                <div class="small-12 small-centered cell video-section">
+                <div class="small-12 small-centered cell">
 
                     <!-- 15 -->
-                    <?php if ( $alt_video ) : ?>
-                        <video width="960" height="540" style="border: 1px solid lightgrey;margin: 0 15%;" controls>
-                            <source src="<?php echo esc_url( Zume_Course::get_alt_video_by_key( 'alt_15' ) ) ?>" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                    <?php else : ?>
-                        <iframe style="border: 1px solid lightgrey;"  src="<?php echo esc_url( Zume_Course::get_video_by_key( '15' ) ) ?>" width="560" height="315"
-                                frameborder="1"
-                                webkitallowfullscreen mozallowfullscreen allowfullscreen>
-                        </iframe>
-                    <?php endif; ?>
+                    <div class="video-section">
+                        <?php if ($alt_video) : ?>
+                            <video width="960" height="540" style="border: 1px solid lightgrey;margin: 0 15%;" controls>
+                                <source src="<?php echo esc_url( Zume_Course::get_alt_video_by_key( 'alt_15' ) ) ?>"
+                                        type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        <?php else : ?>
+                            <iframe style="border: 1px solid lightgrey;"
+                                    src="<?php echo esc_url( Zume_Course::get_video_by_key( '15' ) ) ?>" width="560"
+                                    height="315"
+                                    frameborder="1"
+                                    webkitallowfullscreen mozallowfullscreen allowfullscreen>
+                            </iframe>
+                        <?php endif; ?>
+                    </div>
 
                     <p class="center hide-for-small-only"><a
                             href="<?php echo esc_url( Zume_Course::get_download_by_key( '48' ) ) ?>"
@@ -1763,20 +1838,25 @@ class Zume_Course_Content {
 
             <!-- Video block -->
             <div class="grid-x grid-margin-x grid-margin-y">
-                <div class="small-12 small-centered cell video-section">
+                <div class="small-12 small-centered cell">
 
                     <!-- 16 -->
-                    <?php if ( $alt_video ) : ?>
-                        <video width="960" height="540" style="border: 1px solid lightgrey;margin: 0 15%;" controls>
-                            <source src="<?php echo esc_url( Zume_Course::get_alt_video_by_key( 'alt_16' ) ) ?>" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                    <?php else : ?>
-                        <iframe style="border: 1px solid lightgrey;"  src="<?php echo esc_url( Zume_Course::get_video_by_key( '16' ) ) ?>" width="560" height="315"
-                                frameborder="1"
-                                webkitallowfullscreen mozallowfullscreen allowfullscreen>
-                        </iframe>
-                    <?php endif; ?>
+                    <div class="video-section">
+                        <?php if ($alt_video) : ?>
+                            <video width="960" height="540" style="border: 1px solid lightgrey;margin: 0 15%;" controls>
+                                <source src="<?php echo esc_url( Zume_Course::get_alt_video_by_key( 'alt_16' ) ) ?>"
+                                        type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        <?php else : ?>
+                            <iframe style="border: 1px solid lightgrey;"
+                                    src="<?php echo esc_url( Zume_Course::get_video_by_key( '16' ) ) ?>" width="560"
+                                    height="315"
+                                    frameborder="1"
+                                    webkitallowfullscreen mozallowfullscreen allowfullscreen>
+                            </iframe>
+                        <?php endif; ?>
+                    </div>
 
                     <p class="center hide-for-small-only"><a
                             href="<?php echo esc_url( Zume_Course::get_download_by_key( '49' ) ) ?>"
@@ -1943,20 +2023,25 @@ class Zume_Course_Content {
 
             <!-- Video block -->
             <div class="grid-x grid-margin-x grid-margin-y">
-                <div class="small-12 small-centered cell video-section">
+                <div class="small-12 small-centered cell">
 
                     <!-- 17 -->
-                    <?php if ( $alt_video ) : ?>
-                        <video width="960" height="540" style="border: 1px solid lightgrey;margin: 0 15%;" controls>
-                            <source src="<?php echo esc_url( Zume_Course::get_alt_video_by_key( 'alt_17' ) ) ?>" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                    <?php else : ?>
-                        <iframe style="border: 1px solid lightgrey;"  src="<?php echo esc_url( Zume_Course::get_video_by_key( '17' ) ) ?>" width="560" height="315"
-                                frameborder="1"
-                                webkitallowfullscreen mozallowfullscreen allowfullscreen>
-                        </iframe>
-                    <?php endif; ?>
+                    <div class="video-section">
+                        <?php if ($alt_video) : ?>
+                            <video width="960" height="540" style="border: 1px solid lightgrey;margin: 0 15%;" controls>
+                                <source src="<?php echo esc_url( Zume_Course::get_alt_video_by_key( 'alt_17' ) ) ?>"
+                                        type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        <?php else : ?>
+                            <iframe style="border: 1px solid lightgrey;"
+                                    src="<?php echo esc_url( Zume_Course::get_video_by_key( '17' ) ) ?>" width="560"
+                                    height="315"
+                                    frameborder="1"
+                                    webkitallowfullscreen mozallowfullscreen allowfullscreen>
+                            </iframe>
+                        <?php endif; ?>
+                    </div>
 
                     <p class="center hide-for-small-only"><a
                             href="<?php echo esc_url( Zume_Course::get_download_by_key( '50' ) ) ?>"
@@ -1991,20 +2076,25 @@ class Zume_Course_Content {
             <!-- Video block -->
             <div class="grid-x grid-margin-x grid-margin-y">
 
-                <div class="small-12 small-centered cell video-section">
+                <div class="small-12 small-centered cell">
 
                     <!-- 18 -->
-                    <?php if ( $alt_video ) : ?>
-                        <video width="960" height="540" style="border: 1px solid lightgrey;margin: 0 15%;" controls>
-                            <source src="<?php echo esc_url( Zume_Course::get_alt_video_by_key( 'alt_18' ) ) ?>" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                    <?php else : ?>
-                        <iframe style="border: 1px solid lightgrey;"  src="<?php echo esc_url( Zume_Course::get_video_by_key( '18' ) ) ?>" width="560" height="315"
-                                frameborder="1"
-                                webkitallowfullscreen mozallowfullscreen allowfullscreen>
-                        </iframe>
-                    <?php endif; ?>
+                    <div class="video-section">
+                        <?php if ($alt_video) : ?>
+                            <video width="960" height="540" style="border: 1px solid lightgrey;margin: 0 15%;" controls>
+                                <source src="<?php echo esc_url( Zume_Course::get_alt_video_by_key( 'alt_18' ) ) ?>"
+                                        type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        <?php else : ?>
+                            <iframe style="border: 1px solid lightgrey;"
+                                    src="<?php echo esc_url( Zume_Course::get_video_by_key( '18' ) ) ?>" width="560"
+                                    height="315"
+                                    frameborder="1"
+                                    webkitallowfullscreen mozallowfullscreen allowfullscreen>
+                            </iframe>
+                        <?php endif; ?>
+                    </div>
 
                     <p class="center hide-for-small-only"><a href="<?php echo esc_url( Zume_Course::get_download_by_key( '51' ) ) ?>"
                                                              target="_blank" rel="noopener noreferrer nofollow"><img
@@ -2192,20 +2282,25 @@ class Zume_Course_Content {
 
             <!-- Video block -->
             <div class="grid-x grid-margin-x grid-margin-y">
-                <div class="small-12 small-centered cell video-section">
+                <div class="small-12 small-centered cell">
 
                     <!-- 19 -->
-                    <?php if ( $alt_video ) : ?>
-                        <video width="960" height="540" style="border: 1px solid lightgrey;margin: 0 15%;" controls>
-                            <source src="<?php echo esc_url( Zume_Course::get_alt_video_by_key( 'alt_19' ) ) ?>" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                    <?php else : ?>
-                        <iframe style="border: 1px solid lightgrey;"  src="<?php echo esc_url( Zume_Course::get_video_by_key( '19' ) ) ?>" width="560" height="315"
-                                frameborder="1"
-                                webkitallowfullscreen mozallowfullscreen allowfullscreen>
-                        </iframe>
-                    <?php endif; ?>
+                    <div class="video-section">
+                        <?php if ($alt_video) : ?>
+                            <video width="960" height="540" style="border: 1px solid lightgrey;margin: 0 15%;" controls>
+                                <source src="<?php echo esc_url( Zume_Course::get_alt_video_by_key( 'alt_19' ) ) ?>"
+                                        type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        <?php else : ?>
+                            <iframe style="border: 1px solid lightgrey;"
+                                    src="<?php echo esc_url( Zume_Course::get_video_by_key( '19' ) ) ?>" width="560"
+                                    height="315"
+                                    frameborder="1"
+                                    webkitallowfullscreen mozallowfullscreen allowfullscreen>
+                            </iframe>
+                        <?php endif; ?>
+                    </div>
 
                     <p class="center hide-for-small-only"><a
                             href="<?php echo esc_url( Zume_Course::get_download_by_key( '52' ) ) ?>"
@@ -2265,21 +2360,26 @@ class Zume_Course_Content {
 
             <!-- Video block -->
             <div class="grid-x grid-margin-x grid-margin-y">
-                <div class="small-12 small-centered cell video-section">
+                <div class="small-12 small-centered cell">
 
 
                     <!-- 21 -->
-                    <?php if ( $alt_video ) : ?>
-                        <video width="960" height="540" style="border: 1px solid lightgrey;margin: 0 15%;" controls>
-                            <source src="<?php echo esc_url( Zume_Course::get_alt_video_by_key( 'alt_21' ) ) ?>" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                    <?php else : ?>
-                        <iframe style="border: 1px solid lightgrey;"  src="<?php echo esc_url( Zume_Course::get_video_by_key( '21' ) ) ?>" width="560" height="315"
-                                frameborder="1"
-                                webkitallowfullscreen mozallowfullscreen allowfullscreen>
-                        </iframe>
-                    <?php endif; ?>
+                    <div class="video-section">
+                        <?php if ($alt_video) : ?>
+                            <video width="960" height="540" style="border: 1px solid lightgrey;margin: 0 15%;" controls>
+                                <source src="<?php echo esc_url( Zume_Course::get_alt_video_by_key( 'alt_21' ) ) ?>"
+                                        type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        <?php else : ?>
+                            <iframe style="border: 1px solid lightgrey;"
+                                    src="<?php echo esc_url( Zume_Course::get_video_by_key( '21' ) ) ?>" width="560"
+                                    height="315"
+                                    frameborder="1"
+                                    webkitallowfullscreen mozallowfullscreen allowfullscreen>
+                            </iframe>
+                        <?php endif; ?>
+                    </div>
 
                     <p class="center hide-for-small-only"><a
                             href="<?php echo esc_url( Zume_Course::get_download_by_key( '53' ) ) ?>"
@@ -2449,20 +2549,25 @@ class Zume_Course_Content {
 
             <!-- Video block -->
             <div class="grid-x grid-margin-x grid-margin-y">
-                <div class="small-12 small-centered cell video-section">
+                <div class="small-12 small-centered cell">
 
                     <!-- 22 -->
-                    <?php if ( $alt_video ) : ?>
-                        <video width="960" height="540" style="border: 1px solid lightgrey;margin: 0 15%;" controls>
-                            <source src="<?php echo esc_url( Zume_Course::get_alt_video_by_key( 'alt_22' ) ) ?>" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                    <?php else : ?>
-                        <iframe style="border: 1px solid lightgrey;"  src="<?php echo esc_url( Zume_Course::get_video_by_key( '22' ) ) ?>" width="560" height="315"
-                                frameborder="1"
-                                webkitallowfullscreen mozallowfullscreen allowfullscreen>
-                        </iframe>
-                    <?php endif; ?>
+                    <div class="video-section">
+                        <?php if ($alt_video) : ?>
+                            <video width="960" height="540" style="border: 1px solid lightgrey;margin: 0 15%;" controls>
+                                <source src="<?php echo esc_url( Zume_Course::get_alt_video_by_key( 'alt_22' ) ) ?>"
+                                        type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        <?php else : ?>
+                            <iframe style="border: 1px solid lightgrey;"
+                                    src="<?php echo esc_url( Zume_Course::get_video_by_key( '22' ) ) ?>" width="560"
+                                    height="315"
+                                    frameborder="1"
+                                    webkitallowfullscreen mozallowfullscreen allowfullscreen>
+                            </iframe>
+                        <?php endif; ?>
+                    </div>
 
                     <p class="center hide-for-small-only"><a
                             href="<?php echo esc_url( Zume_Course::get_download_by_key( '54' ) ) ?>"
@@ -2678,20 +2783,25 @@ class Zume_Course_Content {
 
             <!-- Video block -->
             <div class="grid-x grid-margin-x grid-margin-y">
-                <div class="small-12 small-centered cell video-section">
+                <div class="small-12 small-centered cell">
 
                     <!-- 23 -->
-                    <?php if ( $alt_video ) : ?>
-                        <video width="960" height="540" style="border: 1px solid lightgrey;margin: 0 15%;" controls>
-                            <source src="<?php echo esc_url( Zume_Course::get_alt_video_by_key( 'alt_23' ) ) ?>" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                    <?php else : ?>
-                        <iframe style="border: 1px solid lightgrey;"  src="<?php echo esc_url( Zume_Course::get_video_by_key( '23' ) ) ?>" width="560" height="315"
-                                frameborder="1"
-                                webkitallowfullscreen mozallowfullscreen allowfullscreen>
-                        </iframe>
-                    <?php endif; ?>
+                    <div class="video-section">
+                        <?php if ($alt_video) : ?>
+                            <video width="960" height="540" style="border: 1px solid lightgrey;margin: 0 15%;" controls>
+                                <source src="<?php echo esc_url( Zume_Course::get_alt_video_by_key( 'alt_23' ) ) ?>"
+                                        type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        <?php else : ?>
+                            <iframe style="border: 1px solid lightgrey;"
+                                    src="<?php echo esc_url( Zume_Course::get_video_by_key( '23' ) ) ?>" width="560"
+                                    height="315"
+                                    frameborder="1"
+                                    webkitallowfullscreen mozallowfullscreen allowfullscreen>
+                            </iframe>
+                        <?php endif; ?>
+                    </div>
 
                     <p class="center hide-for-small-only"><a
                             href="<?php echo esc_url( Zume_Course::get_download_by_key( '55' ) ) ?>"
@@ -2890,20 +3000,25 @@ class Zume_Course_Content {
 
             <!-- Video block -->
             <div class="grid-x grid-margin-x grid-margin-y vertical-padding">
-                <div class="small-12 small-centered cell video-section">
+                <div class="small-12 small-centered cell">
 
                     <!-- 24 -->
-                    <?php if ( $alt_video ) : ?>
-                        <video width="960" height="540" style="border: 1px solid lightgrey;margin: 0 15%;" controls>
-                            <source src="<?php echo esc_url( Zume_Course::get_alt_video_by_key( 'alt_24' ) ) ?>" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                    <?php else : ?>
-                        <iframe style="border: 1px solid lightgrey;"  src="<?php echo esc_url( Zume_Course::get_video_by_key( '24' ) ) ?>" width="560" height="315"
-                                frameborder="1"
-                                webkitallowfullscreen mozallowfullscreen allowfullscreen>
-                        </iframe>
-                    <?php endif; ?>
+                    <div class="video-section">
+                        <?php if ($alt_video) : ?>
+                            <video width="960" height="540" style="border: 1px solid lightgrey;margin: 0 15%;" controls>
+                                <source src="<?php echo esc_url( Zume_Course::get_alt_video_by_key( 'alt_24' ) ) ?>"
+                                        type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        <?php else : ?>
+                            <iframe style="border: 1px solid lightgrey;"
+                                    src="<?php echo esc_url( Zume_Course::get_video_by_key( '24' ) ) ?>" width="560"
+                                    height="315"
+                                    frameborder="1"
+                                    webkitallowfullscreen mozallowfullscreen allowfullscreen>
+                            </iframe>
+                        <?php endif; ?>
+                    </div>
 
                     <p class="center hide-for-small-only">
                         <a href="<?php echo esc_url( Zume_Course::get_download_by_key( '56' ) ) ?>"
@@ -2951,20 +3066,25 @@ class Zume_Course_Content {
 
             <!-- Video block -->
             <div class="grid-x grid-margin-x grid-margin-y vertical-padding">
-                <div class="small-12 small-centered cell video-section">
+                <div class="small-12 small-centered cell">
 
                     <!-- 25 -->
-                    <?php if ( $alt_video ) : ?>
-                        <video width="960" height="540" style="border: 1px solid lightgrey;margin: 0 15%;" controls>
-                            <source src="<?php echo esc_url( Zume_Course::get_alt_video_by_key( 'alt_25' ) ) ?>" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                    <?php else : ?>
-                        <iframe style="border: 1px solid lightgrey;"  src="<?php echo esc_url( Zume_Course::get_video_by_key( '25' ) ) ?>" width="560" height="315"
-                                frameborder="1"
-                                webkitallowfullscreen mozallowfullscreen allowfullscreen>
-                        </iframe>
-                    <?php endif; ?>
+                    <div class="video-section">
+                        <?php if ($alt_video) : ?>
+                            <video width="960" height="540" style="border: 1px solid lightgrey;margin: 0 15%;" controls>
+                                <source src="<?php echo esc_url( Zume_Course::get_alt_video_by_key( 'alt_25' ) ) ?>"
+                                        type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        <?php else : ?>
+                            <iframe style="border: 1px solid lightgrey;"
+                                    src="<?php echo esc_url( Zume_Course::get_video_by_key( '25' ) ) ?>" width="560"
+                                    height="315"
+                                    frameborder="1"
+                                    webkitallowfullscreen mozallowfullscreen allowfullscreen>
+                            </iframe>
+                        <?php endif; ?>
+                    </div>
 
                     <p class="center hide-for-small-only">
                         <a  href="<?php echo esc_url( Zume_Course::get_download_by_key( '57' ) ) ?>"
@@ -3015,20 +3135,25 @@ class Zume_Course_Content {
 
             <!-- Video block -->
             <div class="grid-x grid-margin-x grid-margin-y vertical-padding">
-                <div class="small-12 small-centered cell video-section">
+                <div class="small-12 small-centered cell">
 
                     <!-- 26 -->
-                    <?php if ( $alt_video ) : ?>
-                        <video width="960" height="540" style="border: 1px solid lightgrey;margin: 0 15%;" controls>
-                            <source src="<?php echo esc_url( Zume_Course::get_alt_video_by_key( 'alt_26' ) ) ?>" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                    <?php else : ?>
-                        <iframe style="border: 1px solid lightgrey;"  src="<?php echo esc_url( Zume_Course::get_video_by_key( '26' ) ) ?>" width="560" height="315"
-                                frameborder="1"
-                                webkitallowfullscreen mozallowfullscreen allowfullscreen>
-                        </iframe>
-                    <?php endif; ?>
+                    <div class="video-section">
+                        <?php if ($alt_video) : ?>
+                            <video width="960" height="540" style="border: 1px solid lightgrey;margin: 0 15%;" controls>
+                                <source src="<?php echo esc_url( Zume_Course::get_alt_video_by_key( 'alt_26' ) ) ?>"
+                                        type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        <?php else : ?>
+                            <iframe style="border: 1px solid lightgrey;"
+                                    src="<?php echo esc_url( Zume_Course::get_video_by_key( '26' ) ) ?>" width="560"
+                                    height="315"
+                                    frameborder="1"
+                                    webkitallowfullscreen mozallowfullscreen allowfullscreen>
+                            </iframe>
+                        <?php endif; ?>
+                    </div>
 
                     <p class="center hide-for-small-only">
                         <a  href="<?php echo esc_url( Zume_Course::get_download_by_key( '58' ) ) ?>"
@@ -3093,7 +3218,7 @@ class Zume_Course_Content {
                                         <?php
                                         if ( isset( $_GET['group'] ) ) {
                                             $zume_group_key = sanitize_key( wp_unslash( $_GET['group'] ) );
-                                            echo esc_attr( Zume_V4_Groups::get_group_public_key( $zume_group_key ) );
+                                            echo esc_attr( Zume_V4_Groups::get_group_public_key_by_foreign_key( $zume_group_key ) );
                                         }
                                         ?>
                                     </h2>
@@ -3328,20 +3453,25 @@ class Zume_Course_Content {
 
             <!-- Video block -->
             <div class="grid-x grid-margin-x grid-margin-y">
-                <div class="small-12 small-centered cell video-section">
+                <div class="small-12 small-centered cell">
 
                     <!-- 28 -->
-                    <?php if ( $alt_video ) : ?>
-                        <video width="960" height="540" style="border: 1px solid lightgrey;margin: 0 15%;" controls>
-                            <source src="<?php echo esc_url( Zume_Course::get_alt_video_by_key( 'alt_28' ) ) ?>" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                    <?php else : ?>
-                        <iframe style="border: 1px solid lightgrey;"  src="<?php echo esc_url( Zume_Course::get_video_by_key( '28' ) ) ?>" width="560" height="315"
-                                frameborder="1"
-                                webkitallowfullscreen mozallowfullscreen allowfullscreen>
-                        </iframe>
-                    <?php endif; ?>
+                    <div class="video-section">
+                        <?php if ($alt_video) : ?>
+                            <video width="960" height="540" style="border: 1px solid lightgrey;margin: 0 15%;" controls>
+                                <source src="<?php echo esc_url( Zume_Course::get_alt_video_by_key( 'alt_28' ) ) ?>"
+                                        type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        <?php else : ?>
+                            <iframe style="border: 1px solid lightgrey;"
+                                    src="<?php echo esc_url( Zume_Course::get_video_by_key( '28' ) ) ?>" width="560"
+                                    height="315"
+                                    frameborder="1"
+                                    webkitallowfullscreen mozallowfullscreen allowfullscreen>
+                            </iframe>
+                        <?php endif; ?>
+                    </div>
 
                     <p class="center hide-for-small-only">
                         <a  href="<?php echo esc_url( Zume_Course::get_download_by_key( '60' ) ) ?>"
@@ -3400,21 +3530,25 @@ class Zume_Course_Content {
 
             <!-- Video block -->
             <div class="grid-x grid-margin-x grid-margin-y">
-                <div class="small-12 small-centered cell video-section">
+                <div class="small-12 small-centered cell">
 
                     <!-- 29 -->
-                    <?php if ( $alt_video ) : ?>
-                        <video width="960" height="540" style="border: 1px solid lightgrey;margin: 0 15%;" controls>
-                            <source src="<?php echo esc_url( Zume_Course::get_alt_video_by_key( 'alt_29' ) ) ?>" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                    <?php else : ?>
-                        <iframe style="border: 1px solid lightgrey;"  src="<?php echo esc_url( Zume_Course::get_video_by_key( '29' ) ) ?>" width="560" height="315"
-                                frameborder="1"
-                                webkitallowfullscreen mozallowfullscreen allowfullscreen>
-                        </iframe>
-                    <?php endif; ?>
-
+                    <div class="video-section">
+                        <?php if ($alt_video) : ?>
+                            <video width="960" height="540" style="border: 1px solid lightgrey;margin: 0 15%;" controls>
+                                <source src="<?php echo esc_url( Zume_Course::get_alt_video_by_key( 'alt_29' ) ) ?>"
+                                        type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        <?php else : ?>
+                            <iframe style="border: 1px solid lightgrey;"
+                                    src="<?php echo esc_url( Zume_Course::get_video_by_key( '29' ) ) ?>" width="560"
+                                    height="315"
+                                    frameborder="1"
+                                    webkitallowfullscreen mozallowfullscreen allowfullscreen>
+                            </iframe>
+                        <?php endif; ?>
+                    </div>
 
                     <p class="center hide-for-small-only">
                         <a  href="<?php echo esc_url( Zume_Course::get_download_by_key( '61' ) ) ?>"
@@ -3462,20 +3596,25 @@ class Zume_Course_Content {
 
             <!-- Video block -->
             <div class="grid-x grid-margin-x grid-margin-y">
-                <div class="small-12 small-centered cell video-section">
+                <div class="small-12 small-centered cell">
 
                     <!-- 30 -->
-                    <?php if ( $alt_video ) : ?>
-                        <video width="960" height="540" style="border: 1px solid lightgrey;margin: 0 15%;" controls>
-                            <source src="<?php echo esc_url( Zume_Course::get_alt_video_by_key( 'alt_30' ) ) ?>" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                    <?php else : ?>
-                        <iframe style="border: 1px solid lightgrey;"  src="<?php echo esc_url( Zume_Course::get_video_by_key( '30' ) ) ?>" width="560" height="315"
-                                frameborder="1"
-                                webkitallowfullscreen mozallowfullscreen allowfullscreen>
-                        </iframe>
-                    <?php endif; ?>
+                    <div class="video-section">
+                        <?php if ($alt_video) : ?>
+                            <video width="960" height="540" style="border: 1px solid lightgrey;margin: 0 15%;" controls>
+                                <source src="<?php echo esc_url( Zume_Course::get_alt_video_by_key( 'alt_30' ) ) ?>"
+                                        type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        <?php else : ?>
+                            <iframe style="border: 1px solid lightgrey;"
+                                    src="<?php echo esc_url( Zume_Course::get_video_by_key( '30' ) ) ?>" width="560"
+                                    height="315"
+                                    frameborder="1"
+                                    webkitallowfullscreen mozallowfullscreen allowfullscreen>
+                            </iframe>
+                        <?php endif; ?>
+                    </div>
 
                     <p class="center hide-for-small-only">
                         <a  href="<?php echo esc_url( Zume_Course::get_download_by_key( '62' ) ) ?>"
@@ -3565,20 +3704,26 @@ class Zume_Course_Content {
                     </div>
 
                     <div class="grid-x grid-margin-x grid-margin-y">
-                        <div class="small-12 small-centered cell video-section">
+                        <div class="small-12 small-centered cell">
 
                             <!-- 27 -->
-                            <?php if ( $alt_video ) : ?>
-                                <video width="960" height="540" style="border: 1px solid lightgrey;margin: 0 15%;" controls>
-                                    <source src="<?php echo esc_url( Zume_Course::get_alt_video_by_key( 'alt_27' ) ) ?>" type="video/mp4">
-                                    Your browser does not support the video tag.
-                                </video>
-                            <?php else : ?>
-                                <iframe style="border: 1px solid lightgrey;"  src="<?php echo esc_url( Zume_Course::get_video_by_key( '27' ) ) ?>" width="560" height="315"
-                                        frameborder="1"
-                                        webkitallowfullscreen mozallowfullscreen allowfullscreen>
-                                </iframe>
-                            <?php endif; ?>
+                            <div class="video-section">
+                                <?php if ($alt_video) : ?>
+                                    <video width="960" height="540" style="border: 1px solid lightgrey;margin: 0 15%;"
+                                           controls>
+                                        <source src="<?php echo esc_url( Zume_Course::get_alt_video_by_key( 'alt_27' ) ) ?>"
+                                                type="video/mp4">
+                                        Your browser does not support the video tag.
+                                    </video>
+                                <?php else : ?>
+                                    <iframe style="border: 1px solid lightgrey;"
+                                            src="<?php echo esc_url( Zume_Course::get_video_by_key( '27' ) ) ?>" width="560"
+                                            height="315"
+                                            frameborder="1"
+                                            webkitallowfullscreen mozallowfullscreen allowfullscreen>
+                                    </iframe>
+                                <?php endif; ?>
+                            </div>
 
                             <p class="center hide-for-small-only">
                                 <a  href="<?php echo esc_url( Zume_Course::get_download_by_key( '59' ) ) ?>"
