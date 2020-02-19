@@ -170,7 +170,7 @@ class Zume_Course_Content {
         <section ><!-- Step Title -->
 
             <div class="grid-x grid-margin-x grid-margin-y">
-                <div class="step-title cell" id="s01-1of9">
+                <div class="step-title cell">
                     <?php esc_html_e( 'Welcome to Zúme', 'zume' ) ?>
                 </div>
                 <!-- step-title cell -->
@@ -182,7 +182,7 @@ class Zume_Course_Content {
                     <?php esc_html_e( 'Download', 'zume' ) ?>
                 </div>
                 <div class="large-9 cell activity-description well">
-                    <p>
+                    <p id="s01-1of9">
                         <?php esc_html_e( 'You will be able to follow along on a digital PDF for this session, but please make sure that each member of your group has a printed copy of the materials for future sessions.', 'zume' ) ?>
                     </p>
 
