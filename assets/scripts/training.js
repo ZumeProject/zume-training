@@ -606,7 +606,7 @@ function open_session( session_number, key, i ) {
                 <div class="cell center"><a href="${_.escape( zumeTraining.site_urls.register ) }" class="button expanded large secondary-button">${_.escape( i18n.str.x26 )/*Register for Free*/}</a><a href="${_.escape( zumeTraining.site_urls.login )}" type="submit" class="button clear padding-bottom-0">${_.escape( i18n.str.x27 )/*Login*/}</a></div> 
             </div>
         </div>
-        <div class="cell center margin-bottom-1"><a class="center button hollow" onclick="continue_to_session( ${_.escape( session_number )} )" >${_.escape( i18n.str.x28 )/*Continue*/}</a>  <span class="spinner" style="display: none;"><img src="${zumeTraining.theme_uri}/spinner.svg" style="width:30px;height:30px;" alt="spinner" /></span></div>
+        <div class="cell center margin-bottom-1"><a class="center button hollow" id="continue-to-session" onclick="continue_to_session( ${_.escape( session_number )} )" >${_.escape( i18n.str.x28 )/*Continue*/}</a>  <span class="spinner" style="display: none;"><img src="${zumeTraining.theme_uri}/spinner.svg" style="width:30px;height:30px;" alt="spinner" /></span></div>
     </div>
   `)
   } else if ( key /** logged in */) {
@@ -631,7 +631,7 @@ function open_session( session_number, key, i ) {
           <div id="create_new_group"></div>
         </div>
         <div class="cell center margin-bottom-1" id="continue_button">
-          <button type="submit" class="center button large" onclick="continue_to_session(${_.escape( session_number )} )">${_.escape( i18n.str.x28 )/*Continue*/}</button> <span class="spinner" style="display: none;"><img src="${zumeTraining.theme_uri}/spinner.svg" style="width:30px;height:30px;" alt="spinner" /></span>
+          <button type="submit" class="center button large" id="continue-to-session" onclick="continue_to_session(${_.escape( session_number )} )">${_.escape( i18n.str.x28 )/*Continue*/}</button> <span class="spinner" style="display: none;"><img src="${zumeTraining.theme_uri}/spinner.svg" style="width:30px;height:30px;" alt="spinner" /></span>
         </div>
         
       </div>
