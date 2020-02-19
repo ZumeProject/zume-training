@@ -1102,7 +1102,10 @@ class Zume_V4_Groups {
 
         self::filter_last_modified_to_now( $modified_group ); // add new timestamp
 
+        do_action( 'zume_session_complete', $modified_group['key'], $session_number, $modified_group['owner'], get_current_user_id() );
+
         return update_user_meta( $group['owner'], $group['key'], $modified_group, $group );
+
     }
 
     /**
