@@ -587,7 +587,7 @@ class Zume_Course_Content {
         </section>
         <h3></h3>
         <section><!-- Step Title -->
-            <span id="s01-9of9"></span>
+            <span class="session-complete-panel" id="s01-9of9"></span>
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="step-title cell">
                     <?php esc_html_e( 'LOOKING FORWARD', 'zume' ) ?>
@@ -997,7 +997,7 @@ class Zume_Course_Content {
         <!-- Step -->
         <h3></h3>
         <section>
-            <span id="s02-7of7"></span>
+            <span class="session-complete-panel" id="s02-7of7"></span>
             <!-- Step Title -->
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="step-title cell">
@@ -1403,7 +1403,7 @@ class Zume_Course_Content {
         <!-- Step -->
         <h3></h3>
         <section>
-            <span id="s03-7of7"></span>
+            <span class="session-complete-panel" id="s03-7of7"></span>
             <!-- Step Title -->
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="step-title cell">
@@ -1926,7 +1926,7 @@ class Zume_Course_Content {
         <!-- Step -->
         <h3></h3>
         <section>
-            <span id="s04-9of9"></span>
+            <span class="session-complete-panel" id="s04-9of9"></span>
             <!-- Step Title -->
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="step-title cell">
@@ -2184,7 +2184,7 @@ class Zume_Course_Content {
         <!-- Step -->
         <h3></h3>
         <section>
-            <span id="s05-5of5"></span>
+            <span class="session-complete-panel" id="s05-5of5"></span>
             <!-- Step Title -->
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="step-title cell" id="complete_session_5">
@@ -2447,7 +2447,7 @@ class Zume_Course_Content {
         <!-- Step -->
         <h3></h3>
         <section>
-            <span id="s06-4of4"></span>
+            <span class="session-complete-panel" id="s06-4of4"></span>
             <!-- Step Title -->
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="step-title cell">
@@ -2694,7 +2694,7 @@ class Zume_Course_Content {
         <!-- Step -->
         <h3></h3>
         <section>
-            <span id="s07-4of4"></span>
+            <span class="session-complete-panel" id="s07-4of4"></span>
             <!-- Step Title -->
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="step-title cell">
@@ -2923,7 +2923,7 @@ class Zume_Course_Content {
         <!-- Step -->
         <h3></h3>
         <section>
-            <span id="s08-4of4"></span>
+            <span class="session-complete-panel" id="s08-4of4"></span>
             <!-- Step Title -->
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="step-title cell">
@@ -3367,7 +3367,7 @@ class Zume_Course_Content {
         </section><!-- Step -->
         <h3></h3>
         <section>
-            <span id="s09-7of7"></span>
+            <span class="session-complete-panel" id="s09-7of7"></span>
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="step-title cell"><?php esc_html_e( 'LOOKING FORWARD', 'zume' ) ?></div>
                 <!-- step-title cell -->
@@ -3746,7 +3746,7 @@ class Zume_Course_Content {
         <!-- Step -->
         <h3></h3>
         <section>
-            <span id="s10-6of6"></span>
+            <span class="session-complete-panel" id="s10-6of6"></span>
             <!-- Step Title -->
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="step-title cell" style="text-transform: uppercase" id="complete_session_10">
