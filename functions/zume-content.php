@@ -168,10 +168,9 @@ class Zume_Course_Content {
         ?>
         <h3></h3>
         <section ><!-- Step Title -->
-            <span id="s01-1of9"></span>
 
             <div class="grid-x grid-margin-x grid-margin-y">
-                <div class="step-title cell">
+                <div class="step-title cell" id="s01-1of9">
                     <?php esc_html_e( 'Welcome to Zúme', 'zume' ) ?>
                 </div>
                 <!-- step-title cell -->
