@@ -167,7 +167,7 @@ class Zume_Course_Content {
 
         ?>
         <h3></h3>
-        <section><!-- Step Title -->
+        <section id="s01-1of9"><!-- Step Title -->
 
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="step-title cell">
@@ -199,7 +199,7 @@ class Zume_Course_Content {
 
         </section>
         <h3></h3>
-        <section><!-- Step Title -->
+        <section id="s01-2of9"><!-- Step Title -->
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="step-title cell">
                     <?php esc_html_e( 'Group Prayer (5min)', 'zume' ) ?>
@@ -222,7 +222,7 @@ class Zume_Course_Content {
 
         </section>
         <h3></h3>
-        <section><!-- Step Title -->
+        <section id="s01-3of9"><!-- Step Title -->
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="step-title cell">
                     <?php esc_html_e( 'Watch and Discuss (15min)', 'zume' ) ?>
@@ -277,7 +277,7 @@ class Zume_Course_Content {
 
         </section>
         <h3></h3>
-        <section><!-- Step Title -->
+        <section id="s01-4of9"><!-- Step Title -->
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="step-title cell"><?php esc_html_e( 'Watch and Discuss (15min)', 'zume' ) ?></div>
                 <!-- step-title cell -->
@@ -341,7 +341,7 @@ class Zume_Course_Content {
 
         </section>
         <h3></h3>
-        <section><!-- Step Title -->
+        <section id="s01-5of9"><!-- Step Title -->
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="step-title cell"><?php esc_html_e( 'Watch and Discuss (15min)', 'zume' ) ?></div>
                 <!-- step-title cell -->
@@ -406,7 +406,7 @@ class Zume_Course_Content {
 
         </section>
         <h3></h3>
-        <section>
+        <section id="s01-6of9">
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="step-title cell"><?php esc_html_e( 'Listen and Read Along (3min)', 'zume' ) ?></div>
                 <!-- step-title cell -->
@@ -475,7 +475,7 @@ class Zume_Course_Content {
             <!-- grid-x -->
         </section>
         <h3></h3>
-        <section>
+        <section id="s01-7of9">
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="step-title cell"><?php esc_html_e( 'Listen and Read Along (3min)', 'zume' ) ?></div>
                 <!-- step-title cell -->
@@ -546,7 +546,7 @@ class Zume_Course_Content {
             <!-- grid-x -->
         </section>
         <h3></h3>
-        <section><!-- Step Title -->
+        <section id="s01-8of9"><!-- Step Title -->
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="step-title cell"><?php esc_html_e( 'Practice (45min)', 'zume' ) ?></div>
                 <!-- step-title cell -->
@@ -578,7 +578,7 @@ class Zume_Course_Content {
 
         </section>
         <h3></h3>
-        <section><!-- Step Title -->
+        <section id="s01-9of9"><!-- Step Title -->
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="step-title cell">
                     <?php esc_html_e( 'LOOKING FORWARD', 'zume' ) ?>
@@ -586,7 +586,6 @@ class Zume_Course_Content {
                 <!-- step-title cell -->
                 <div class="center cell">
                     <p id="complete_session_1"><?php esc_html_e( 'Congratulations! You\'ve completed Session 1.', 'zume' ) ?></p>
-
                 </div>
             </div>
             <!-- grid-x -->
@@ -651,7 +650,7 @@ class Zume_Course_Content {
 
         <!-- Step -->
         <h3></h3>
-        <section>
+        <section id="s02-1of7">
             <!-- Step Title -->
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="step-title cell">
@@ -701,7 +700,7 @@ class Zume_Course_Content {
 
         <!-- Step -->
         <h3></h3>
-        <section>
+        <section id="s02-2of7">
             <!-- Step Title -->
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="step-title cell">
@@ -773,7 +772,7 @@ class Zume_Course_Content {
 
         <!-- Step -->
         <h3></h3>
-        <section>
+        <section id="s02-3of7">
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="step-title cell">
                     <?php esc_html_e( 'Listen and Read Along (2min)', 'zume' ) ?>
@@ -840,7 +839,7 @@ class Zume_Course_Content {
 
         <!-- Step -->
         <h3></h3>
-        <section>
+        <section id="s02-4of7">
             <!-- Step Title -->
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="step-title cell">
@@ -880,7 +879,7 @@ class Zume_Course_Content {
 
         <!-- Step -->
         <h3></h3>
-        <section>
+        <section id="s02-5of7">
             <!-- Listen and Read Along -->
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="step-title cell">
@@ -954,7 +953,7 @@ class Zume_Course_Content {
 
         <!-- Step -->
         <h3></h3>
-        <section>
+        <section id="s02-6of7">
             <!-- Step Title -->
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="step-title cell">
@@ -982,7 +981,7 @@ class Zume_Course_Content {
 
         <!-- Step -->
         <h3></h3>
-        <section>
+        <section id="s02-7of7">
             <!-- Step Title -->
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="step-title cell">
@@ -1046,7 +1045,7 @@ class Zume_Course_Content {
 
         <!-- Step -->
         <h3></h3>
-        <section>
+        <section id="s03-1of7">
             <!-- Step Title -->
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="step-title cell">
@@ -1094,7 +1093,7 @@ class Zume_Course_Content {
 
         <!-- Step -->
         <h3></h3>
-        <section>
+        <section id="s03-2of7">
 
             <!-- Step Title -->
             <div class="grid-x grid-margin-x grid-margin-y">
@@ -1152,7 +1151,7 @@ class Zume_Course_Content {
 
         <!-- Step -->
         <h3></h3>
-        <section>
+        <section id="s03-3of7">
 
             <!-- Step Title -->
             <div class="grid-x grid-margin-x grid-margin-y">
@@ -1193,7 +1192,7 @@ class Zume_Course_Content {
 
         <!-- Step -->
         <h3></h3>
-        <section>
+        <section id="s03-4of7">
 
             <!-- Step Title -->
             <div class="grid-x grid-margin-x grid-margin-y">
@@ -1260,7 +1259,7 @@ class Zume_Course_Content {
 
         <!-- Step -->
         <h3></h3>
-        <section><!-- Step Title -->
+        <section id="s03-5of7"><!-- Step Title -->
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="step-title cell"><?php esc_html_e( 'PRACTICE SHARING GOD\'S STORY (45min)', 'zume' ) ?></div>
             </div>
@@ -1281,7 +1280,7 @@ class Zume_Course_Content {
 
         </section>
         <h3></h3>
-        <section>
+        <section id="s03-6of7">
 
             <!-- Step Title -->
             <div class="grid-x grid-margin-x grid-margin-y">
@@ -1382,7 +1381,7 @@ class Zume_Course_Content {
 
         <!-- Step -->
         <h3></h3>
-        <section>
+        <section id="s03-7of7">
             <!-- Step Title -->
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="step-title cell">
@@ -1459,7 +1458,7 @@ class Zume_Course_Content {
 
         <!-- Step -->
         <h3></h3>
-        <section>
+        <section id="s04-1of9">
             <!-- Step Title -->
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="step-title cell">
@@ -1505,7 +1504,7 @@ class Zume_Course_Content {
 
         <!-- Step -->
         <h3></h3>
-        <section>
+        <section id="s04-2of9">
             <!-- Listen and Read Along -->
 
             <div class="grid-x grid-margin-x grid-margin-y">
@@ -1575,7 +1574,7 @@ class Zume_Course_Content {
 
         <!-- Step -->
         <h3></h3>
-        <section>
+        <section id="s04-3of9">
             <!-- Step Title -->
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="step-title cell">
@@ -1600,7 +1599,7 @@ class Zume_Course_Content {
 
         <!-- Step -->
         <h3></h3>
-        <section>
+        <section id="s04-4of9">
 
             <!-- Step Title -->
             <div class="grid-x grid-margin-x grid-margin-y">
@@ -1670,7 +1669,7 @@ class Zume_Course_Content {
 
         <!-- Step -->
         <h3></h3>
-        <section>
+        <section id="s04-5of9">
 
             <!-- Step Title -->
             <div class="grid-x grid-margin-x grid-margin-y">
@@ -1737,7 +1736,7 @@ class Zume_Course_Content {
 
         <!-- Step -->
         <h3></h3>
-        <section>
+        <section id="s04-6of9">
             <!-- Step Title -->
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="step-title cell">
@@ -1803,7 +1802,7 @@ class Zume_Course_Content {
 
         <!-- Step -->
         <h3></h3>
-        <section>
+        <section id="s04-7of9">
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="step-title cell">
                     <?php esc_html_e( 'Listen and Read Along (3min)', 'zume' ) ?>
@@ -1871,7 +1870,7 @@ class Zume_Course_Content {
 
         <!-- Step -->
         <h3></h3>
-        <section>
+        <section id="s04-8of9">
             <!-- Step Title -->
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="step-title cell">
@@ -1896,7 +1895,7 @@ class Zume_Course_Content {
 
         <!-- Step -->
         <h3></h3>
-        <section>
+        <section id="s04-9of9">
             <!-- Step Title -->
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="step-title cell">
@@ -1946,7 +1945,7 @@ class Zume_Course_Content {
 
         <!-- Step -->
         <h3></h3>
-        <section>
+        <section id="s05-1of5">
             <!-- Step Title -->
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="step-title cell">
@@ -1988,7 +1987,7 @@ class Zume_Course_Content {
 
         <!-- Step -->
         <h3></h3>
-        <section>
+        <section id="s05-2of5">
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="step-title cell">
                     <?php esc_html_e( "Listen and Read Along (15min)", 'zume' ) ?>
@@ -2056,7 +2055,7 @@ class Zume_Course_Content {
 
         <!-- Step -->
         <h3></h3>
-        <section>
+        <section id="s05-3of5">
 
             <!-- Step Title -->
             <div class="grid-x grid-margin-x grid-margin-y">
@@ -2124,7 +2123,7 @@ class Zume_Course_Content {
 
         <!-- Step -->
         <h3></h3>
-        <section>
+        <section id="s05-4of5">
             <!-- Step Title -->
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="step-title cell">
@@ -2149,7 +2148,7 @@ class Zume_Course_Content {
 
         <!-- Step -->
         <h3></h3>
-        <section>
+        <section id="s05-5of5">
             <!-- Step Title -->
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="step-title cell" id="complete_session_5">
@@ -2225,7 +2224,7 @@ class Zume_Course_Content {
 
         <!-- Step -->
         <h3></h3>
-        <section>
+        <section id="s06-1of4">
             <!-- Step Title -->
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="step-title cell">
@@ -2264,7 +2263,7 @@ class Zume_Course_Content {
 
         <!-- Step -->
         <h3></h3>
-        <section>
+        <section id="s06-2of4">
             <!-- Step Title -->
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="step-title cell">
@@ -2322,7 +2321,7 @@ class Zume_Course_Content {
 
         <!-- Step -->
         <h3></h3>
-        <section>
+        <section id="s06-3of4">
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="step-title cell">
                     <?php esc_html_e( "Listen and Practice (75 min)", 'zume' ) ?>
@@ -2406,11 +2405,9 @@ class Zume_Course_Content {
             </div> <!-- grid-x -->
         </section>
 
-
-
         <!-- Step -->
         <h3></h3>
-        <section>
+        <section id="s06-4of4">
             <!-- Step Title -->
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="step-title cell">
@@ -2473,7 +2470,7 @@ class Zume_Course_Content {
 
         <!-- Step -->
         <h3></h3>
-        <section>
+        <section id="s07-1of4">
             <!-- Step Title -->
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="step-title cell">
@@ -2516,7 +2513,7 @@ class Zume_Course_Content {
 
         <!-- Step -->
         <h3></h3>
-        <section>
+        <section id="s07-2of4">
             <!-- Step Title -->
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="step-title cell">
@@ -2596,7 +2593,7 @@ class Zume_Course_Content {
 
         <!-- Step -->
         <h3></h3>
-        <section>
+        <section id="s07-3of4">
             <!-- Step Title -->
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="step-title cell">
@@ -2653,7 +2650,7 @@ class Zume_Course_Content {
 
         <!-- Step -->
         <h3></h3>
-        <section>
+        <section id="s07-4of4">
             <!-- Step Title -->
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="step-title cell">
@@ -2702,7 +2699,7 @@ class Zume_Course_Content {
         ?>
         <!-- Step -->
         <h3></h3>
-        <section>
+        <section id="s08-1of4">
             <!-- Step Title -->
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="step-title cell">
@@ -2747,7 +2744,7 @@ class Zume_Course_Content {
 
         <!-- Step -->
         <h3></h3>
-        <section>
+        <section id="s08-2of4">
             <!-- Step Title -->
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="step-title cell">
@@ -2828,7 +2825,7 @@ class Zume_Course_Content {
 
         <!-- Step -->
         <h3></h3>
-        <section>
+        <section id="s08-3of4">
             <!-- Step Title -->
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="step-title cell">
@@ -2878,7 +2875,7 @@ class Zume_Course_Content {
 
         <!-- Step -->
         <h3></h3>
-        <section>
+        <section id="s08-4of4">
             <!-- Step Title -->
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="step-title cell">
@@ -2929,7 +2926,7 @@ class Zume_Course_Content {
 
         <!-- Step -->
         <h3></h3>
-        <section><!-- Step Title -->
+        <section id="s09-1of7"><!-- Step Title -->
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="step-title cell">
                     <?php esc_html_e( 'LOOKING BACK', 'zume' ) ?>
@@ -2979,7 +2976,7 @@ class Zume_Course_Content {
 
         </section><!-- Step -->
         <h3></h3>
-        <section><!-- Step Title -->
+        <section id="s09-2of7"><!-- Step Title -->
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="step-title cell">
                     <?php esc_html_e( 'Watch and Discuss (15min)', 'zume' ) ?>
@@ -3047,7 +3044,7 @@ class Zume_Course_Content {
 
         </section><!-- Step -->
         <h3></h3>
-        <section><!-- Step Title -->
+        <section id="s09-3of7"><!-- Step Title -->
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="step-title cell"><?php esc_html_e( 'Watch and Discuss (15min)', 'zume' ) ?></div>
                 <!-- step-title cell -->
@@ -3116,7 +3113,7 @@ class Zume_Course_Content {
 
         </section><!-- Step -->
         <h3></h3>
-        <section><!-- Step Title -->
+        <section id="s09-4of7"><!-- Step Title -->
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="step-title cell"><?php esc_html_e( 'Watch and Discuss (15min)', 'zume' ) ?></div>
                 <!-- step-title cell -->
@@ -3179,7 +3176,7 @@ class Zume_Course_Content {
 
         </section><!-- Step -->
         <h3></h3>
-        <section><!-- Step Title -->
+        <section id="s09-5of7"><!-- Step Title -->
             <div class="grid-x grid-margin-x grid-margin-y">
 
                 <div class="step-title cell"><?php esc_html_e( "Create a Three Month Plan (30min)", 'zume' ) ?></div>
@@ -3279,7 +3276,7 @@ class Zume_Course_Content {
             </div>
         </section><!-- Step -->
         <h3></h3>
-        <section><!-- Step Title -->
+        <section id="s09-6of7"><!-- Step Title -->
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="step-title cell"> <?php esc_html_e( "Share you Plan (30min)", 'zume' ) ?></div>
                 <!-- step-title cell -->
@@ -3315,7 +3312,7 @@ class Zume_Course_Content {
 
         </section><!-- Step -->
         <h3></h3>
-        <section><!-- Step Title -->
+        <section id="s09-7of7"><!-- Step Title -->
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="step-title cell"><?php esc_html_e( 'LOOKING FORWARD', 'zume' ) ?></div>
                 <!-- step-title cell -->
@@ -3367,7 +3364,7 @@ class Zume_Course_Content {
 
         <!-- Step -->
         <h3></h3>
-        <section>
+        <section id="s10-1of6">
             <!-- Step Title -->
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="step-title cell">
@@ -3413,7 +3410,7 @@ class Zume_Course_Content {
 
         <!-- Step -->
         <h3></h3>
-        <section>
+        <section id="s10-2of6">
             <!-- Step Title -->
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="step-title cell">
@@ -3512,7 +3509,7 @@ class Zume_Course_Content {
 
         <!-- Step -->
         <h3></h3>
-        <section>
+        <section id="s10-3of6">
             <!-- Step Title -->
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="step-title cell">
@@ -3571,7 +3568,7 @@ class Zume_Course_Content {
 
         <!-- Step -->
         <h3></h3>
-        <section>
+        <section id="s10-4of6">
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="step-title cell">
                     <?php esc_html_e( 'Listen and Read Along (3min)', 'zume' ) ?>
@@ -3632,7 +3629,7 @@ class Zume_Course_Content {
 
         <!-- Step -->
         <h3></h3>
-        <section>
+        <section id="s10-5of6">
             <!-- Step Title -->
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="step-title cell">
@@ -3688,7 +3685,7 @@ class Zume_Course_Content {
 
         <!-- Step -->
         <h3></h3>
-        <section>
+        <section id="s10-6of6">
             <!-- Step Title -->
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="step-title cell" style="text-transform: uppercase" id="complete_session_10">
