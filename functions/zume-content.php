@@ -182,7 +182,7 @@ class Zume_Course_Content {
                     <?php esc_html_e( 'Download', 'zume' ) ?>
                 </div>
                 <div class="large-9 cell activity-description well">
-                    <p id="s01-1of9">
+                    <p id="s01on1of9">
                         <?php esc_html_e( 'You will be able to follow along on a digital PDF for this session, but please make sure that each member of your group has a printed copy of the materials for future sessions.', 'zume' ) ?>
                     </p>
 
