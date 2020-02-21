@@ -168,7 +168,7 @@ class Zume_Course_Content {
         ?>
         <h3></h3>
         <section ><!-- Step Title -->
-            <span id="s01on1of9"></span>
+            <div id="s01-1of9">
 
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="step-title cell">
@@ -197,7 +197,7 @@ class Zume_Course_Content {
                 </div>
             </div>
             <!-- grid-x -->
-
+            </div>
         </section>
         <h3></h3>
         <section><!-- Step Title -->
