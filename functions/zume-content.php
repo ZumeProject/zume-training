@@ -201,7 +201,7 @@ class Zume_Course_Content {
         </section>
         <h3></h3>
         <section><!-- Step Title -->
-            <span id="s01-2of9"></span>
+            <div id="s01-2of9">
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="step-title cell">
                     <?php esc_html_e( 'Group Prayer (5min)', 'zume' ) ?>
@@ -221,11 +221,11 @@ class Zume_Course_Content {
                 </div>
                 <div class="cell auto"></div>
             </div> <!-- grid-x -->
-
+            </div>
         </section>
         <h3></h3>
         <section><!-- Step Title -->
-            <span id="s01-3of9"></span>
+            <div id="s01-3of9">
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="step-title cell">
                     <?php esc_html_e( 'Watch and Discuss (15min)', 'zume' ) ?>
@@ -277,11 +277,11 @@ class Zume_Course_Content {
                 </div>
             </div>
             <!-- grid-x -->
-
+            </div>
         </section>
         <h3></h3>
         <section><!-- Step Title -->
-            <span id="s01-4of9"></span>
+            <div id="s01-4of9">
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="step-title cell"><?php esc_html_e( 'Watch and Discuss (15min)', 'zume' ) ?></div>
                 <!-- step-title cell -->
@@ -342,11 +342,11 @@ class Zume_Course_Content {
                 </div>
             </div>
             <!-- grid-x -->
-
+            </div>
         </section>
         <h3></h3>
         <section><!-- Step Title -->
-            <span id="s01-5of9"></span>
+            <div id="s01-5of9">
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="step-title cell"><?php esc_html_e( 'Watch and Discuss (15min)', 'zume' ) ?></div>
                 <!-- step-title cell -->
@@ -408,11 +408,11 @@ class Zume_Course_Content {
                 </div>
             </div>
             <!-- grid-x -->
-
+            </div>
         </section>
         <h3></h3>
         <section>
-            <span id="s01-6of9"></span>
+            <div id="s01-6of9">
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="step-title cell"><?php esc_html_e( 'Listen and Read Along (3min)', 'zume' ) ?></div>
                 <!-- step-title cell -->
@@ -479,10 +479,11 @@ class Zume_Course_Content {
                 </div>
             </div>
             <!-- grid-x -->
+            </div>
         </section>
         <h3></h3>
         <section>
-            <span id="s01-7of9"></span>
+            <div id="s01-7of9">
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="step-title cell"><?php esc_html_e( 'Listen and Read Along (3min)', 'zume' ) ?></div>
                 <!-- step-title cell -->
@@ -551,10 +552,11 @@ class Zume_Course_Content {
                 </div>
             </div>
             <!-- grid-x -->
+            </div>
         </section>
         <h3></h3>
         <section><!-- Step Title -->
-            <span id="s01-8of9"></span>
+            <div id="s01-8of9">
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="step-title cell"><?php esc_html_e( 'Practice (45min)', 'zume' ) ?></div>
                 <!-- step-title cell -->
@@ -583,11 +585,11 @@ class Zume_Course_Content {
                 </div>
             </div>
             <!-- grid-x -->
-
+            </div>
         </section>
         <h3></h3>
         <section><!-- Step Title -->
-            <span class="session-complete-panel" id="s01-9of9"></span>
+            <div class="session-complete-panel" id="s01-9of9">
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="step-title cell">
                     <?php esc_html_e( 'LOOKING FORWARD', 'zume' ) ?>
@@ -648,7 +650,7 @@ class Zume_Course_Content {
                 </div>
             </div>
             <!-- grid-x -->
-
+            </div>
         </section>
 
         <?php
