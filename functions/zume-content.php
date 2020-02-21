@@ -788,7 +788,7 @@ class Zume_Course_Content {
         <!-- Step -->
         <h3></h3>
         <section>
-            <div id="s03-1of7">
+            <div id="s02-3of7">
             <div class="grid-x grid-margin-x grid-margin-y">
                 <div class="step-title cell">
                     <?php esc_html_e( 'Listen and Read Along (2min)', 'zume' ) ?>
