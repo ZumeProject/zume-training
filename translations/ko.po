@@ -20,7 +20,7 @@ msgstr "로그인"
 
 #: front-page.php:86
 msgid "Zúme Training is an on-line and in-life learning experience designed for small groups who follow Jesus to learn how to obey His Great Commission and make disciples who multiply."
-msgstr "줌 훈련은 예수님을 따르며, 그 분의 지상 명령에 순종하며 제자 삼는 제자가 되기를 지망하는 소그룹을 위한 온라인 과정이며, 평생 학습 경험장입니다."
+msgstr "줌 훈련은 예수님을 따르며 그 분의 지상 명령에 순종하며 제자 삼는 제자가 되기를 지망하는 소그룹을 위한 평생 학습 경험장인 온라인 과정입니다."
 
 #: front-page.php:105
 msgid "Zúme consists of 10 sessions, 2 hours each:"
@@ -32,7 +32,7 @@ msgstr "영상 및 음성자료는 그룹이 제자 배가의 기본 원리를 �
 
 #: front-page.php:121 template-zume-about.php:75
 msgid "Group Discussions to help your group think through what’s being shared."
-msgstr "그룹 토의는 구성원들이 공유된 내용을 가지고 생각하도록 도와줍니다."
+msgstr "그룹 토의는 구성원들이 공유한 내용을 가지고 생각하도록 도와줍니다."
 
 #: front-page.php:129 template-zume-about.php:76
 msgid "Simple Exercises to help your group put what you’re learning into practice."
@@ -40,7 +40,7 @@ msgstr "간단한 연습은 구성원들이 배운 것을 적용하도록 도와
 
 #: front-page.php:137 template-zume-about.php:77
 msgid "Session Challenges to help your group keep learning and growing between sessions."
-msgstr "세션 챌린지는 그룹이 세션간에 계속 학습하고 성장하도록 도와줍니다."
+msgstr "매 과정의 과제는 당신의 그룹이 과정들사이에서 계속적으로 배우고 성장하도록 도와줍니다."
 
 #: front-page.php:150
 msgid "Want to start the training?"
@@ -48,11 +48,11 @@ msgstr "훈련을 시작하겠습니까?"
 
 #: front-page.php:164
 msgid "It's as easy as 1-2-3"
-msgstr "1-2-3 만큼 쉽습니다."
+msgstr "1-2-3처럼 쉽습니다."
 
 #: front-page.php:173
 msgid "Sign up"
-msgstr "Sign up"
+msgstr "회원 가입"
 
 #: front-page.php:183
 msgid "Invite some friends"
@@ -60,11 +60,11 @@ msgstr "친구 초대"
 
 #: front-page.php:193
 msgid "Host a training"
-msgstr "훈련"
+msgstr "훈련 진행"
 
 #: front-page.php:237
 msgid "Find out more about Zúme"
-msgstr "줌에 대해 더 찾아보기"
+msgstr "줌에 대해 더 알아보기"
 
 #: functions/activator.php:55
 msgid "Coach"
@@ -103,19 +103,19 @@ msgstr "불러오는 중 ..."
 #: functions/enqueue-scripts.php:66 template-zume-dashboard.php:1168
 #: template-zume-dashboard.php:1202
 msgid "Delete"
-msgstr "삭체"
+msgstr "삭제"
 
 #: functions/enqueue-scripts.php:67
 msgid "Failed to remove item."
-msgstr "항목을 제거하지 못했습니다."
+msgstr "항목 삭제 실패"
 
 #: functions/enqueue-scripts.php:68
 msgid "Failed to change item."
-msgstr "Failed to change item."
+msgstr "항목 변경 실패"
 
 #: functions/enqueue-scripts.php:69
 msgid "Three Month Plan - Zúme Project"
-msgstr "Three Month Plan - Zúme Project"
+msgstr "3개월 계획- 줌 프로젝트"
 
 #: functions/enqueue-scripts.php:70
 msgid "We got it!"
@@ -123,153 +123,153 @@ msgstr "받았어요!"
 
 #: functions/enqueue-scripts.php:71
 msgid "We're a volunteer network, so give us a few days. We'll reach out to you soon as possible!"
-msgstr "우리는 자원 봉사자 네트워크이므로 며칠 만 기다려주세요. 최대한 빨리 연락 드리겠습니다."
+msgstr "자원 봉사자 네트워크로 운영중입니다. 며칠 만 기다려주세요. 최대한 빨리 연락 드리겠습니다."
 
-#: functions/login/zume-login.php:97 functions/login/zume-login.php:319
+#: functions/login/zume-login.php:97 functions/login/zume-login.php:320
 msgid "Email is a required permission for login and registration."
-msgstr "이메일은 로그인 및 등록에 필요한 권한입니다."
+msgstr "이메일은 로그인 및 가입에 필요합니다."
 
-#: functions/login/zume-login.php:446
+#: functions/login/zume-login.php:448
 msgid "No user found."
 msgstr "사용자가 없습니다."
 
-#: functions/login/zume-login.php:283 functions/login/zume-login.php:411
+#: functions/login/zume-login.php:284 functions/login/zume-login.php:413
 msgid "You are missing your sign-in token. Try signing in again."
-msgstr "로그인 토큰이 없습니다. 다시 로그인하십시오."
+msgstr "회원가입을 하지 않았습니다. 회원가입을 다시 하십시오."
 
-#: functions/login/zume-login.php:293 functions/login/zume-login.php:421
+#: functions/login/zume-login.php:294 functions/login/zume-login.php:423
 msgid "Failed to connect with Facebook. Try again."
-msgstr "Facebook에 연결하지 못했습니다. 다시 시도하십시오."
+msgstr "페이스북에 연결하지 못했습니다. 다시 시도하십시오."
 
-#: functions/login/zume-login.php:312 functions/login/zume-login.php:437
+#: functions/login/zume-login.php:313 functions/login/zume-login.php:439
 msgid "Facebook user lookup error. Sorry for the inconvenience."
-msgstr "Facebook 사용자 조회 오류 불편을 드려 죄송합니다."
+msgstr "페이스북 사용자 조회에 오류가 발생했습니다. 불편을 드려 죄송합니다."
 
-#: functions/login/zume-login.php:315 functions/login/zume-login.php:440
+#: functions/login/zume-login.php:316 functions/login/zume-login.php:442
 msgid "Error with looking up user with Facebook. Sorry for the inconvenience."
-msgstr "Facebook에서 사용자를 찾는 중에 오류가 발생했습니다. 불편을 드려 죄송합니다."
+msgstr "페이스북에서 사용자를 찾는 중 오류가 발생했습니다. 불편을 드려 죄송합니다."
 
-#: functions/enqueue-scripts.php:329 functions/login/zume-login.php:541
+#: functions/enqueue-scripts.php:329 functions/login/zume-login.php:543
 msgid "There are some errors in your form."
 msgstr "양식에 약간의 오류가 있습니다."
 
 #: functions/enqueue-scripts.php:119 functions/enqueue-scripts.php:333
-#: functions/login/zume-login.php:546 template-zume-dashboard.php:1420
+#: functions/login/zume-login.php:548 template-zume-dashboard.php:1420
 #: template-zume-dashboard.php:1471 template-zume-login.php:375
 msgid "Email"
 msgstr "이메일"
 
-#: functions/login/zume-login.php:550 template-zume-login.php:261
+#: functions/login/zume-login.php:552 template-zume-login.php:261
 msgid "Password Required"
-msgstr "암호 필요"
+msgstr "비밀번호 필요"
 
-#: functions/login/zume-login.php:553 template-zume-login.php:264
+#: functions/login/zume-login.php:555 template-zume-login.php:264
 msgid "Password required"
-msgstr "암호 필요"
+msgstr "비밀번호 필요"
 
-#: functions/login/zume-login.php:559 template-zume-login.php:271
+#: functions/login/zume-login.php:561 template-zume-login.php:271
 msgid "Re-enter Password"
-msgstr "비밀번호를 다시 입력하세요"
+msgstr "비밀번호 재 입력"
 
-#: functions/login/zume-login.php:562 template-zume-login.php:274
+#: functions/login/zume-login.php:564 template-zume-login.php:274
 msgid "Passwords do not match. Please, try again."
 msgstr "비밀번호가 일치하지 않습니다. 다시 시도하십시오."
 
-#: functions/login/zume-login.php:571 functions/zume-v4-seo-strings.php:24
+#: functions/login/zume-login.php:573 functions/zume-v4-seo-strings.php:24
 #: template-zume-login.php:358 template-zume-login.php:514
 msgid "Register"
-msgstr "레지스터"
+msgstr "등록"
 
-#: functions/login/zume-login.php:614
+#: functions/login/zume-login.php:616
 msgid "Missing captcha response. How did you do that?"
-msgstr "보안 문자 응답이 없습니다. 당신은 그렇게 않았다 방법?"
+msgstr "보안 문자 응답이 없습니다. 어떻게 된 일일까요?"
 
-#: functions/login/zume-login.php:627
+#: functions/login/zume-login.php:629
 msgid "Captcha failure. Try again, if you are human."
-msgstr "보안 문자 오류. 당신이 인간이라면 다시 시도하십시오."
+msgstr "보안 문자 오류가 발생했습니다. 사람이면 다시 시도하십시오."
 
-#: functions/login/zume-login.php:633
+#: functions/login/zume-login.php:635
 msgid "Missing email or password."
-msgstr "이메일 또는 비밀번호가 없습니다."
+msgstr "이메일 또는 비밀번호가 누락되었습니다."
 
-#: functions/login/zume-login.php:652
+#: functions/login/zume-login.php:654
 msgid "Sorry. This email is already registered."
 msgstr "죄송합니다. 이 이메일은 이미 등록되었습니다."
 
-#: functions/login/zume-login.php:663
+#: functions/login/zume-login.php:665
 msgid "Something went wrong. Sorry. Could you try again?"
 msgstr "문제가 발생했습니다. 죄송합니다. 다시 시도해 주시겠습니까?"
 
-#: functions/login/zume-login.php:686
+#: functions/login/zume-login.php:689
 msgid "No new user found."
 msgstr "새로운 사용자가 없습니다."
 
-#: functions/login/zume-login.php:742 functions/login/zume-login.php:793
+#: functions/login/zume-login.php:745 functions/login/zume-login.php:796
 msgid "Google"
 msgstr "구글"
 
-#: functions/login/zume-login.php:787
+#: functions/login/zume-login.php:790
 msgid "Link with Google"
-msgstr "Google과 연결"
+msgstr "구글과 연결"
 
-#: functions/login/zume-login.php:926 functions/login/zume-login.php:1022
+#: functions/login/zume-login.php:929 functions/login/zume-login.php:1025
 msgid "Facebook"
-msgstr "페이스 북"
+msgstr "페이스북"
 
-#: functions/login/zume-login.php:1163
+#: functions/login/zume-login.php:1166
 msgid "Missing username or email address."
-msgstr "사용자 이름 또는 이메일 주소가 없습니다."
+msgstr "사용자 이름 또는 이메일 주소가 누락되었습니다."
 
-#: functions/login/zume-login.php:1169
+#: functions/login/zume-login.php:1172
 msgid "ERROR: Enter a username or email address."
 msgstr "오류 : 사용자 이름 또는 이메일 주소를 입력하십시오."
 
-#: functions/login/zume-login.php:1173
+#: functions/login/zume-login.php:1176
 msgid "ERROR: There is no user registered with that email address."
 msgstr "오류 : 해당 이메일 주소로 등록 된 사용자가 없습니다."
 
-#: functions/login/zume-login.php:1178
+#: functions/login/zume-login.php:1181
 msgid "ERROR: There is no user registered with that username."
 msgstr "오류 : 해당 사용자 이름으로 등록 된 사용자가 없습니다."
 
-#: functions/login/zume-login.php:1223
+#: functions/login/zume-login.php:1226
 msgid "Someone has requested a password reset for the following account:"
-msgstr "누군가 다음 계정에 대한 비밀번호 재설정을 요청했습니다."
+msgstr "다음 계정의 비밀번호에 대해 재설정 요청이 있습니다."
 
 #. translators: %s: site name
-#: functions/login/zume-login.php:1225
+#: functions/login/zume-login.php:1228
 msgid "Site Name: %s"
 msgstr "사이트 이름 : % s"
 
 #. translators: %s: user login
-#: functions/login/zume-login.php:1227
+#: functions/login/zume-login.php:1230
 msgid "Username: %s"
 msgstr "사용자 이름 : % s"
 
-#: functions/login/zume-login.php:1228
+#: functions/login/zume-login.php:1231
 msgid "If this was a mistake, just ignore this email and nothing will happen."
-msgstr "이것이 실수라면이 이메일을 무시하면 아무 일도 일어나지 않습니다."
+msgstr "실수로 보내진 것이면, 본 이메일을 무시하세요. 괜찮습니다."
 
-#: functions/login/zume-login.php:1229
+#: functions/login/zume-login.php:1232
 msgid "To reset your password, visit the following address:"
-msgstr "비밀번호를 재설정하려면 다음 주소를 방문하십시오."
+msgstr "비밀번호 재설정시 다음 주소를 방문하십시오."
 
 #. translators: Password reset email subject. %s: Site name
-#: functions/login/zume-login.php:1233
+#: functions/login/zume-login.php:1236
 msgid "[%s] Password Reset"
 msgstr "[% s] 비밀번호 재설정"
 
-#: functions/login/zume-login.php:1263
+#: functions/login/zume-login.php:1266
 msgid "The email could not be sent."
 msgstr "이메일을 보낼 수 없습니다."
 
-#: functions/login/zume-login.php:1263
+#: functions/login/zume-login.php:1266
 msgid "Possible reason: your host may have disabled the mail() function."
-msgstr "가능한 이유 : 호스트가 mail () 기능을 비활성화했을 수 있습니다."
+msgstr "가능한 원인 : 호스트가 메일 기능을 비활성화했을 수 있습니다."
 
 #: functions/utilities/cleanup.php:76
 msgid "Read"
-msgstr "읽다"
+msgstr "읽기"
 
 #: functions/utilities/cleanup.php:76
 msgid "... Read more &raquo;"
@@ -285,27 +285,27 @@ msgstr "메인 메뉴"
 
 #: functions/utilities/menu.php:94
 msgid "First"
-msgstr "먼저"
+msgstr "처음"
 
 #: functions/utilities/menu.php:111
 msgid "Last"
 msgstr "마지막"
 
-#: functions/zume-v4-groups.php:282
+#: functions/zume-v4-groups.php:283
 msgid "( Key not available. Check dashboard. )"
 msgstr "(키를 사용할 수 없습니다. 대시 보드를 확인하십시오.)"
 
 #: functions/enqueue-scripts.php:290 functions/zume-content.php:12
 msgid "Session"
-msgstr "세션"
+msgstr "과정"
 
 #: functions/enqueue-scripts.php:278 functions/zume-content.php:114
 msgid "Welcome to Session"
-msgstr "세션에 오신 것을 환영합니다"
+msgstr "과정에 오신 것을 환영합니다"
 
 #: functions/zume-content.php:115
 msgid "Which are you doing right now?"
-msgstr "지금 뭐하고 있습니까?"
+msgstr "지금 하고 있는 것은?"
 
 #: functions/zume-content.php:116
 msgid "Facilitating a Group"
@@ -313,19 +313,19 @@ msgstr "그룹 활성화"
 
 #: functions/zume-content.php:120
 msgid "Exploring the Session Content"
-msgstr "세션 내용 살펴보기"
+msgstr "과정 내용 알아보기"
 
 #: functions/zume-content.php:135
 msgid "How many are with you?"
-msgstr "당신은 몇 명입니까?"
+msgstr "함께 하는 인원이 몇 명입니까?"
 
 #: functions/enqueue-scripts.php:287 functions/zume-content.php:150
 msgid "Continue"
-msgstr "계속하다"
+msgstr "계속"
 
 #: functions/zume-content.php:170
 msgid "Welcome to Zúme"
-msgstr "주메에 오신 것을 환영합니다"
+msgstr "줌에 오신 것을 환영합니다"
 
 #: functions/zume-content.php:178
 msgid "Download"
@@ -333,20 +333,20 @@ msgstr "다운로드"
 
 #: functions/zume-content.php:182
 msgid "You will be able to follow along on a digital PDF for this session, but please make sure that each member of your group has a printed copy of the materials for future sessions."
-msgstr "이 세션에 대한 디지털 PDF를 확인할 수는 있지만 그룹의 각 구성원에게 향후 세션을 위해 인쇄 된 자료 사본이 있는지 확인하십시오."
+msgstr "이 과정은 디지털 PDF로 확인할 수 있습니다. 단 향후 과정들을 위해 그룹 각 구성원들이 인쇄 된 자료 사본을 받았는지 확인하십시오."
 
 #: functions/zume-content.php:189 functions/zume-v4-seo-strings.php:17
 #: template-zume-dashboard.php:813 template-zume-resources.php:38
 msgid "Download Guidebook"
-msgstr "가이드 북 다운로드"
+msgstr "가이드북 다운로드"
 
 #: functions/zume-content.php:201
 msgid "Group Prayer (5min)"
-msgstr "__ 기도 (5 분)"
+msgstr "그룹기도 (5 분)"
 
 #: functions/zume-content.php:211
 msgid "Begin with prayer. Spiritual insight and transformation is not possible without the Holy Spirit. Take time as a group to invite Him to guide you over this session."
-msgstr "기도로 시작하십시오. 성령 없이는 영적인 통찰과 변화가 불가능합니다. 그룹으로 시간을내어이 세션을 안내하도록 그분을 초대하십시오."
+msgstr "기도로 시작하십시오. 성령이 없이는 영적인 통찰과 변화가 불가능합니다. 시간을 내어 그분을 그룹으로 초대하고 이 과정을 인도하도록 구하십시오."
 
 #: functions/zume-content.php:224 functions/zume-content.php:276
 #: functions/zume-content.php:335 functions/zume-content.php:683
@@ -370,15 +370,15 @@ msgstr "보고 토론하기 (15 분)"
 #: functions/zume-content.php:2945 functions/zume-content.php:3009
 #: functions/zume-content.php:3395 functions/zume-content.php:3561
 msgid "WATCH"
-msgstr "손목 시계"
+msgstr "보기"
 
 #: functions/zume-content.php:234
 msgid "God uses ordinary people doing simple things to make a big impact. Watch this video on how God works."
-msgstr "하나님께서는 평범한 사람들이 간단한 일을해서 큰 영향을 미치게하셨습니다. 하나님의 작동 방식에 대한이 비디오를보십시오."
+msgstr "하나님께서는 평범한 사람들의 간단한 일을 통해 큰 영향을 미치게 합니다. 하나님의 일하심을 영상을 통해 확인하십시오."
 
 #: functions/zume-content.php:259
 msgid "Zúme Video Scripts: Welcome"
-msgstr "Zúme 비디오 스크립트 : 환영"
+msgstr "줌 영상 자막: 환영합니다"
 
 #: functions/zume-content.php:265 functions/zume-content.php:319
 #: functions/zume-content.php:382 functions/zume-content.php:732
@@ -393,7 +393,7 @@ msgstr "Zúme 비디오 스크립트 : 환영"
 #: functions/zume-content.php:3048 functions/zume-content.php:3177
 #: functions/zume-content.php:3361 functions/zume-content.php:3431
 msgid "DISCUSS"
-msgstr "논의하다"
+msgstr "토론"
 
 #: functions/zume-content.php:267
 msgid "If Jesus intended every one of His followers to obey His Great Commission, why do so few actually make disciples?"
@@ -448,11 +448,11 @@ msgstr "듣고 읽기 (3 분)"
 #: functions/zume-content.php:1920 functions/zume-content.php:2239
 #: functions/zume-content.php:3449
 msgid "READ"
-msgstr "보세요"
+msgstr "읽기"
 
 #: functions/zume-content.php:406
 msgid "S.O.A.P.S. Bible Reading"
-msgstr "S.O.A.P.S. 성서 읽기"
+msgstr "S.O.A.P.S. 성경 읽기"
 
 #: functions/zume-content.php:407
 msgid "Hearing from God regularly is a key element in our personal relationship with Him, and in our ability to stay obediently engaged in what He is doing around us."
@@ -467,7 +467,8 @@ msgid "Zúme Video Scripts: S.O.A.P.S."
 msgstr "Zúme 비디오 스크립트 : S.O.A.P.S."
 
 #: functions/enqueue-scripts.php:218 functions/zume-content.php:471
-#: template-zume-dashboard.php:342 template-zume-training.php:190
+#: template-gmo.php:92 template-zume-dashboard.php:342
+#: template-zume-training.php:190
 msgid "Accountability Groups"
 msgstr "책임 그룹"
 
@@ -635,7 +636,7 @@ msgstr "그룹에 속한 모든 사람에게 그룹이기도하고 싶은 특정
 msgid "If we want to make disciples who multiply – spiritual producers and not just consumers – then we need to learn and share four main ways God makes everyday followers more like Jesus:"
 msgstr "소비자뿐만 아니라 영적 생산자도 배가되는 제자를 만들고자한다면, 하나님 께서 일상의 추종자들을 예수처럼 더 낫게하는 네 가지 주요 방법을 배우고 공유해야합니다."
 
-#: functions/zume-content.php:695
+#: functions/zume-content.php:695 template-gmo.php:56
 msgid "Prayer"
 msgstr "기도"
 
@@ -1115,10 +1116,6 @@ msgstr "Zúme 가이드 북에서 \"기도 걷기\"섹션을 찾아 아래의 �
 #: functions/zume-content.php:1967
 msgid "Zúme Video Scripts: Prayer Walking"
 msgstr "Zúme 비디오 스크립트 :기도 걷기"
-
-#: functions/zume-content.php:1987
-msgid "Disciple-making can be rapidly advanced by finding a person of peace, even in a place where followers of Jesus are few and far between. How do you know when you have found a person of peace and what do you when you find them?"
-msgstr "예수를 따르는 사람들이 거의없고 멀리있는 곳에서도 평화로운 사람을 찾아서 제자를 삼는 것이 빠르게 진행될 수 있습니다. 평화로운 사람을 찾았을 때 어떻게 알 수 있습니까?"
 
 #: functions/zume-content.php:2014
 msgid "Zúme Video Scripts: Person of Peace"
@@ -1698,7 +1695,7 @@ msgid "Are there advantages when networks of simple churches are connected by de
 msgstr "단순한 교회의 네트워크가 깊은 개인적 관계에 의해 연결될 때 이점이 있습니까? 떠오르는 몇 가지 예는 무엇입니까?"
 
 #: functions/enqueue-scripts.php:243 functions/zume-content.php:3452
-#: template-zume-training.php:799
+#: template-gmo.php:186 template-zume-training.php:799
 msgid "Peer Mentoring Groups"
 msgstr "동료 멘토링 그룹"
 
@@ -1762,23 +1759,23 @@ msgstr "행위"
 msgid "To help others become and make disciples, share this www.ZumeProject.com link today! It'll soon be in 37 languages."
 msgstr "다른 사람들이 제자가되도록 도와 주려면 지금이 www.ZumeProject.com 링크를 공유하십시오! 곧 37 개 언어로 제공 될 예정입니다."
 
-#: functions/zume-dashboard.php:77 functions/zume-dashboard.php:108
-#: functions/zume-dashboard.php:191 functions/zume-v4-groups.php:77
-#: functions/zume-v4-groups.php:815 functions/zume-v4-groups.php:910
-#: functions/zume-v4-groups.php:1029
+#: functions/zume-dashboard.php:81 functions/zume-dashboard.php:112
+#: functions/zume-dashboard.php:208 functions/zume-v4-groups.php:77
+#: functions/zume-v4-groups.php:816 functions/zume-v4-groups.php:918
+#: functions/zume-v4-groups.php:1037
 msgid "No Name"
 msgstr "이름 없음"
 
-#: functions/enqueue-scripts.php:332 functions/zume-functions.php:372
+#: functions/enqueue-scripts.php:332 functions/zume-functions.php:391
 #: template-zume-dashboard.php:1405
 msgid "Phone Number"
 msgstr "전화 번호"
 
-#: functions/zume-functions.php:373
+#: functions/zume-functions.php:392
 msgid "User Address"
 msgstr "사용자 주소"
 
-#: functions/zume-functions.php:374
+#: functions/zume-functions.php:393
 msgid "GeoCoded IP"
 msgstr "지오 코딩 된 IP"
 
@@ -2002,19 +1999,19 @@ msgstr "인쇄"
 msgid "No plans linked to this group."
 msgstr "이 그룹에 연결된 계획이 없습니다."
 
-#: parts/content-share.php:85 template-pieces-page.php:220
+#: parts/content-share.php:85 template-gmo.php:226 template-pieces-page.php:220
 #: template-zume-about.php:38 template-zume-about.php:55
 #: template-zume-faq.php:199 template-zume-privacy-policy.php:186
 #: template-zume-progress.php:119
 msgid "Zúme uses an online training platform to equip participants in basic disciple-making and simple church planting multiplication principles, processes, and practices."
 msgstr "Zúme은 온라인 교육 플랫폼을 사용하여 기본 제자 만들기와 간단한 교회 개척 원리, 과정 및 실습에 참가자를 장비시킵니다."
 
-#: template-zume-about.php:50 template-zume-faq.php:194
+#: template-gmo.php:221 template-zume-about.php:50 template-zume-faq.php:194
 #: template-zume-privacy-policy.php:181 template-zume-progress.php:114
 msgid "Goals of the Zúme Project:"
 msgstr "Zúme 프로젝트의 목표 :"
 
-#: template-zume-about.php:52 template-zume-faq.php:196
+#: template-gmo.php:223 template-zume-about.php:52 template-zume-faq.php:196
 #: template-zume-privacy-policy.php:183 template-zume-progress.php:116
 msgid "Zúme means yeast in Greek. In Matthew 13:33, Jesus is quoted as saying, \"The Kingdom of Heaven is like a woman who took yeast and mixed it into a large amount of flour until it was all leavened.\" This illustrates how ordinary people, using ordinary resources, can have an extraordinary impact for the Kingdom of God. Zúme aims to equip and empower ordinary believers to saturate the globe with multiplying disciples in our generation."
 msgstr "Zúme은 그리스어로 효모를 의미합니다. 마태 복음 13 장 33 절에서 예수는 \"하늘 왕국은 누룩을 다 먹었을 때까지 많은 양의 밀가루를 섞은 여자와 같습니다\"라고 인용합니다. 이것은 평범한 사람들이 평범한 자원을 사용하여 어떻게 하느님의 왕국에 특별한 영향을 미칠 수 있는지를 보여줍니다. 주메 (Zúme)는 평범한 신자들이 우리 세대의 곱셈 제자들로 지구를 포화시킬 수 있도록 힘을 실어주고 자합니다."
@@ -2293,8 +2290,8 @@ msgstr "훈련주기"
 msgid "Session 8"
 msgstr "세션 8"
 
-#: functions/enqueue-scripts.php:236 template-zume-dashboard.php:542
-#: template-zume-training.php:645
+#: functions/enqueue-scripts.php:236 template-gmo.php:194
+#: template-zume-dashboard.php:542 template-zume-training.php:645
 msgid "Leadership Cells"
 msgstr "리더십 세포"
 
@@ -2327,13 +2324,13 @@ msgstr "훈련 완료"
 msgid "Session 10"
 msgstr "세션 10"
 
-#: functions/enqueue-scripts.php:241 template-zume-dashboard.php:598
-#: template-zume-training.php:767
+#: functions/enqueue-scripts.php:241 template-gmo.php:190
+#: template-zume-dashboard.php:598 template-zume-training.php:767
 msgid "Coaching Checklist"
 msgstr "코칭 점검표"
 
-#: functions/enqueue-scripts.php:242 template-zume-dashboard.php:606
-#: template-zume-training.php:786
+#: functions/enqueue-scripts.php:242 template-gmo.php:198
+#: template-zume-dashboard.php:606 template-zume-training.php:786
 msgid "Leadership in Networks"
 msgstr "네트워크의 리더십"
 
@@ -3211,11 +3208,11 @@ msgstr "전폭 홈"
 msgid "Zúme Course"
 msgstr "주메 코스"
 
-#: functions/login/zume-login.php:1309
+#: functions/login/zume-login.php:1312
 msgid "Password reset is not allowed for this user"
 msgstr "이 사용자의 비밀번호 재설정은 허용되지 않습니다"
 
-#: functions/login/zume-login.php:1336
+#: functions/login/zume-login.php:1339
 msgid "Could not save password reset key to database."
 msgstr "비밀번호 재설정 키를 데이터베이스에 저장할 수 없습니다."
 
@@ -3277,23 +3274,23 @@ msgstr "여러 떼"
 msgid "Failed Google Verification of User Token"
 msgstr "사용자 토큰의 Google 확인 실패"
 
-#: functions/login/zume-login.php:221 functions/login/zume-login.php:454
+#: functions/login/zume-login.php:222 functions/login/zume-login.php:456
 msgid "Facebook email already linked with another account. Login to this account or use forgot password tool to access account."
 msgstr "페이스 북 이메일은 이미 다른 계정과 연결되어 있습니다. 이 계정에 로그인하거나 비밀번호를 잊어 버린 도구를 사용하여 계정에 액세스하십시오."
 
-#: functions/login/zume-login.php:227 functions/login/zume-login.php:460
+#: functions/login/zume-login.php:228 functions/login/zume-login.php:462
 msgid "Facebook already linked with another account."
 msgstr "Facebook은 이미 다른 계정과 연결되어 있습니다."
 
-#: functions/login/zume-login.php:825 functions/login/zume-login.php:905
+#: functions/login/zume-login.php:828 functions/login/zume-login.php:908
 msgid "Oops. Something went wrong."
 msgstr "죄송합니다. 문제가 발생했습니다."
 
-#: functions/login/zume-login.php:1156
+#: functions/login/zume-login.php:1159
 msgid "Missing form verification. Refresh and try again."
 msgstr "양식 확인이 누락되었습니다. 새로 고침하고 다시 시도하십시오."
 
-#: functions/login/zume-login.php:1198
+#: functions/login/zume-login.php:1201
 msgid "ERROR: Invalid username or email."
 msgstr "오류 : 사용자 이름 또는 이메일이 잘못되었습니다."
 
@@ -3459,7 +3456,7 @@ msgstr "기도, 개요"
 msgid "5 min"
 msgstr "5 분"
 
-#: template-zume-training.php:142
+#: template-gmo.php:39 template-zume-training.php:142
 msgid "You'll see how God uses ordinary people doing simple things to make a big impact."
 msgstr "하나님 께서 평범한 사람들이 간단한 일을하는 데 큰 영향을 미치는 방법을 알게 될 것입니다."
 
@@ -3482,19 +3479,19 @@ msgstr "하나님 께서 평범한 사람들이 간단한 일을하는 데 큰 �
 msgid "15 min"
 msgstr "15 분"
 
-#: template-zume-training.php:156
+#: template-gmo.php:35 template-zume-training.php:156
 msgid "Discover the essence of being a disciple, making a disciple, and what is the church."
 msgstr "제자가되고, 제자를 만들고, 교회가 무엇인지의 본질을 발견하십시오."
 
-#: template-zume-training.php:169
+#: template-gmo.php:60 template-zume-training.php:169
 msgid "Being a disciple means we hear from God and we obey God."
 msgstr "제자가된다는 것은 하나님의 말씀을 듣고 하나님 께 순종한다는 것을 의미합니다."
 
-#: template-zume-training.php:182
+#: template-gmo.php:77 template-zume-training.php:182
 msgid "A tool for daily Bible study that helps you understand, obey, and share God’s Word."
 msgstr "하느님의 말씀을 이해하고 순종하며 나누는 데 도움이되는 매일의 성서 연구를위한 도구입니다."
 
-#: template-zume-training.php:195
+#: template-gmo.php:93 template-zume-training.php:195
 msgid "A tool for two or three people of the same gender to meet weekly and encourage each other in areas that are going well and reveal areas that need correction."
 msgstr "같은 성별의 두세 명의 사람들이 매주 만나고 잘 진행되고있는 지역에서 서로를 격려하고 수정이 필요한 분야를 밝힐 수있는 도구입니다."
 
@@ -3522,11 +3519,11 @@ msgstr "기대"
 msgid "Check-in, Prayer, Overview"
 msgstr "체크인,기도, 개요"
 
-#: template-zume-training.php:236
+#: template-gmo.php:52 template-zume-training.php:236
 msgid "You'll discover the four main ways God makes everyday followers more like Jesus."
 msgstr "하나님이 일상 추종자들을 예수처럼 더하게 만드는 네 가지 주요 방법을 발견하게 될 것입니다."
 
-#: template-zume-training.php:249
+#: template-gmo.php:64 template-zume-training.php:249
 msgid "See how easy it is to spend an hour in prayer."
 msgstr "한 시간 동안기도하는 것이 얼마나 쉬운 지보십시오."
 
@@ -3543,7 +3540,7 @@ msgstr "60 분"
 msgid "Discuss - Prayer Cycle"
 msgstr "토론-기도주기"
 
-#: template-zume-training.php:274
+#: template-gmo.php:156 template-zume-training.php:274
 msgid "A tool designed to help you be a good steward of your relationships."
 msgstr "관계를 잘 관리 할 수 ​​있도록 설계된 도구입니다."
 
@@ -3555,7 +3552,7 @@ msgstr "연습 문제-100리스트 만들기"
 msgid "30 min"
 msgstr "30 분"
 
-#: template-zume-training.php:315
+#: template-gmo.php:113 template-zume-training.php:315
 msgid "Learn how God's economy is different from the world's. God invests more in those who are faithful with what they've already been given."
 msgstr "하느님의 경제가 세상과 어떻게 다른지 배우십시오. 하나님께서는 이미 주신 것에 충실한 사람들에게 더 많은 것을 투자 하신다."
 
@@ -3563,7 +3560,7 @@ msgstr "하느님의 경제가 세상과 어떻게 다른지 배우십시오. �
 msgid "Discuss - Should every disciple share?"
 msgstr "토론-모든 제자들이 공유해야합니까?"
 
-#: template-zume-training.php:334
+#: template-gmo.php:160 template-zume-training.php:334
 msgid "Learn a way to share God’s Good News from the beginning of humanity all the way to the end of this age."
 msgstr "인류의 시작부터이 시대의 끝까지 하나님의 복음을 전하는 방법을 배우십시오."
 
@@ -3571,11 +3568,11 @@ msgstr "인류의 시작부터이 시대의 끝까지 하나님의 복음을 전
 msgid "Practice - Sharing the Gospel"
 msgstr "연습-복음 나누기"
 
-#: template-zume-training.php:353
+#: template-gmo.php:105 template-zume-training.php:353
 msgid "Jesus said, “Go and make disciples of all nations, BAPTIZING them in the name of the Father and of the Son and of the Holy Spirit…” Learn how to put this into practice."
 msgstr "예수께서는 이렇게 말씀하셨습니다.“가서 모든 민족을 제자로 삼아 아버지와 아들과 성령의 이름으로 침례를 받으십시오…”이것을 실천하는 법을 배우십시오."
 
-#: template-zume-training.php:388
+#: template-gmo.php:164 template-zume-training.php:388
 msgid "Learn how to share your testimony in three minutes by sharing how Jesus has impacted your life."
 msgstr "예수 께서 당신의 삶에 어떤 영향을 주 었는지 이야기함으로써 3 분 안에 간증을 나누는 방법을 배우십시오."
 
@@ -3583,7 +3580,7 @@ msgstr "예수 께서 당신의 삶에 어떤 영향을 주 었는지 이야기�
 msgid "Practice - Share your testimony"
 msgstr "연습-간증 공유"
 
-#: template-zume-training.php:407
+#: template-gmo.php:43 template-zume-training.php:407
 msgid "Learn a simple pattern of making not just one follower of Jesus but entire spiritual families who multiply for generations to come."
 msgstr "예수를 따르는 한 사람을 따르는 것이 아니라 여러 세대가 다가올 모든 영적 가족을 만드는 간단한 패턴을 배우십시오."
 
@@ -3591,11 +3588,11 @@ msgstr "예수를 따르는 한 사람을 따르는 것이 아니라 여러 세�
 msgid "Learn what ducklings have to do with disciple-making."
 msgstr "오리 새끼가 제자를 삼는 것과 어떤 관계가 있는지 알아보십시오."
 
-#: template-zume-training.php:433
+#: template-gmo.php:117 template-zume-training.php:433
 msgid "Begin to see where God’s Kingdom isn’t. These are usually the places where God wants to work the most."
 msgstr "하느님의 왕국이없는 곳을보기 시작하십시오. 이들은 대개 하나님 께서 가장 일하기를 원하시는 곳입니다."
 
-#: template-zume-training.php:446
+#: template-gmo.php:101 template-zume-training.php:446
 msgid "It’s a simple way to celebrate our intimate connection and ongoing relationship with Jesus. Learn a simple way to celebrate."
 msgstr "친밀한 관계와 예수와의 지속적인 관계를 축하하는 간단한 방법입니다. 축하하는 간단한 방법을 배우십시오."
 
@@ -3609,15 +3606,15 @@ msgstr "연습-주의 만찬"
 msgid "10 min"
 msgstr "10 분"
 
-#: template-zume-training.php:487
+#: template-gmo.php:177 template-zume-training.php:487
 msgid "It’s a simple way to obey God’s command to pray for others. And it's just what it sounds like — praying to God while walking around!"
 msgstr "다른 사람을 위해기도하라는 하느님의 명령에 순종하는 간단한 방법입니다. 그리고 그것은 주변에서 걷는 동안 하나님 께기도하는 것처럼 들립니다."
 
-#: template-zume-training.php:500
+#: template-gmo.php:173 template-zume-training.php:500
 msgid "Learn who a person of peace might be and how to know when you've found one."
 msgstr "평화로운 사람이 누구인지, 언제 발견했는지 아는 방법을 배우십시오."
 
-#: template-zume-training.php:513
+#: template-gmo.php:68 template-zume-training.php:513
 msgid "Practice a simple mnemonic to remind you of ways to pray for others."
 msgstr "간단한 니모닉을 연습하여 다른 사람을 위해기도하는 방법을 상기 시키십시오."
 
@@ -3634,11 +3631,11 @@ msgstr "연습-기도 걷기"
 msgid "90 min"
 msgstr "90 분"
 
-#: template-zume-training.php:560
+#: template-gmo.php:81 template-zume-training.php:560
 msgid "It's important what disciples know — but it's much more important what they DO with what they know."
 msgstr "제자들이 아는 것이 중요합니다. 그러나 그들이 아는 것으로 그들이하는 일이 훨씬 더 중요합니다."
 
-#: template-zume-training.php:573
+#: template-gmo.php:89 template-zume-training.php:573
 msgid "A 3/3 Group is a way for followers of Jesus to meet, pray, learn, grow, fellowship and practice obeying and sharing what they've learned. In this way, a 3/3 Group is not just a small group but a Simple Church."
 msgstr "3/3 그룹은 예수님을 따르는 사람들이 만나고, 배우고, 배우고, 성장하고, 교제하고, 순종하고 실천하는 방법입니다. 이런 식으로 3/3 그룹은 소규모 그룹이 아니라 단순한 교회입니다."
 
@@ -3646,7 +3643,7 @@ msgstr "3/3 그룹은 예수님을 따르는 사람들이 만나고, 배우고, 
 msgid "75 min"
 msgstr "75 분"
 
-#: template-zume-training.php:603
+#: template-gmo.php:140 template-zume-training.php:603
 msgid "Learn the training cycle and consider how it applies to disciple making."
 msgstr "훈련주기를 배우고 제자 만들기에 어떻게 적용되는지 고려하십시오."
 
@@ -3658,19 +3655,19 @@ msgstr "실습-3/3 그룹"
 msgid "Discuss - 3/3 Group Experience"
 msgstr "토론-3/3 그룹 경험"
 
-#: template-zume-training.php:650
+#: template-gmo.php:195 template-zume-training.php:650
 msgid "A Leadership Cell is a way someone who feels called to lead can develop their leadership by practicing serving."
 msgstr "지도력 세포 (Leadership Cell)는지도를 받으려는 사람이 봉사를 통해 지도력을 개발할 수있는 방법입니다."
 
-#: template-zume-training.php:691
+#: template-gmo.php:144 template-zume-training.php:691
 msgid "See how disciple making doesn't have to be linear. Multiple things can happen at the same time."
 msgstr "제자 삼는 일이 어떻게 선형 일 필요가 없는지보십시오. 여러 가지 일이 동시에 발생할 수 있습니다."
 
-#: template-zume-training.php:704
+#: template-gmo.php:148 template-zume-training.php:704
 msgid "Multiplying matters and multiplying quickly matters even more. See why pace matters."
 msgstr "문제를 곱하고 빠르게 곱하는 것이 더 중요합니다. 페이스가 왜 중요한지보십시오."
 
-#: template-zume-training.php:717
+#: template-gmo.php:97 template-zume-training.php:717
 msgid "Learn how to obey Jesus' commands by going AND staying."
 msgstr "가서 머물면서 예수의 명령에 순종하는 방법을 배우십시오."
 
@@ -3694,7 +3691,7 @@ msgstr "토론-그룹과 3 개월 계획 공유"
 msgid "20 min"
 msgstr "20 분"
 
-#: template-zume-training.php:772
+#: template-gmo.php:191 template-zume-training.php:772
 msgid "A powerful tool you can use to quickly assess your own strengths and vulnerabilities when it comes to making disciples who multiply."
 msgstr "제자가 많은 사람을 만들 때 자신의 강점과 취약점을 신속하게 평가하는 데 사용할 수있는 강력한 도구입니다."
 
@@ -3702,11 +3699,11 @@ msgstr "제자가 많은 사람을 만들 때 자신의 강점과 취약점을 �
 msgid "Practice - Coaching Checklist Self-Assessment"
 msgstr "연습-코칭 점검표 자체 평가"
 
-#: template-zume-training.php:791
+#: template-gmo.php:199 template-zume-training.php:791
 msgid "Learn how multiplying churches stay connected and live life together as an extended, spiritual family."
 msgstr "번성하는 교회들이 어떻게 확장되고 영적인 가족으로서 서로 연결되고 생활을 유지하는지 배우십시오."
 
-#: template-zume-training.php:804
+#: template-gmo.php:187 template-zume-training.php:804
 msgid "This is a group that consists of people who are leading and starting 3/3 Groups. It also follows a 3/3 format and is a powerful way to assess the spiritual health of God’s work in your area."
 msgstr "이 그룹은 3/3 그룹을 이끌고 시작하는 사람들로 구성됩니다. 또한 3/3 형식을 따르며 해당 지역에서 하나님의 사업의 영적 건강을 평가할 수있는 강력한 방법입니다."
 
@@ -3763,55 +3760,66 @@ msgstr "주메 교육"
 msgid "Yes. There are no premium versions, no trial periods, no follow-on sales of products. Freely we've received. Freely we give."
 msgstr "예. 프리미엄 버전, 평가판 기간, 후속 제품 판매는 없습니다. 우리는 자유롭게 받았습니다. 우리는 자유롭게 준다."
 
-#: functions/enqueue-scripts.php:214 template-zume-training.php:136
+#: functions/enqueue-scripts.php:214 template-gmo.php:38
+#: template-zume-training.php:136
 msgid "God Uses Ordinary People"
 msgstr "하나님은 평범한 사람들을 사용 하시다"
 
-#: functions/enqueue-scripts.php:215 template-zume-training.php:150
+#: functions/enqueue-scripts.php:215 template-gmo.php:34
+#: template-zume-training.php:150
 msgid "Simple Definition of Disciple and Church"
 msgstr "제자와 교회의 간단한 정의"
 
-#: functions/enqueue-scripts.php:216 template-zume-training.php:164
+#: functions/enqueue-scripts.php:216 template-gmo.php:59
+#: template-zume-training.php:164
 msgid "Spiritual Breathing is Hearing and Obeying God"
 msgstr "영적 호흡은 하나님의 말씀을 듣고 순종하는 것입니다"
 
-#: functions/enqueue-scripts.php:217 template-zume-training.php:177
+#: functions/enqueue-scripts.php:217 template-gmo.php:76
+#: template-zume-training.php:177
 msgid "SOAPS Bible Reading"
 msgstr "SOAPS 성경 읽기"
 
-#: functions/enqueue-scripts.php:219 template-zume-training.php:231
+#: functions/enqueue-scripts.php:219 template-gmo.php:51
+#: template-zume-training.php:231
 msgid "Consumer vs Producer Lifestyle"
 msgstr "소비자 대 생산자 라이프 스타일"
 
-#: functions/enqueue-scripts.php:220 template-zume-training.php:244
+#: functions/enqueue-scripts.php:220 template-gmo.php:63
+#: template-zume-training.php:244
 msgid "How to Spend an Hour in Prayer"
 msgstr "기도로 시간을 보내는 방법"
 
-#: functions/enqueue-scripts.php:221
+#: functions/enqueue-scripts.php:221 template-gmo.php:155
 msgid "Relational Stewardship – List of 100"
 msgstr "관계형 청지기 – 100 명"
 
-#: functions/enqueue-scripts.php:222 template-zume-training.php:310
+#: functions/enqueue-scripts.php:222 template-gmo.php:112
+#: template-zume-training.php:310
 msgid "The Kingdom Economy"
 msgstr "왕국 경제"
 
-#: functions/enqueue-scripts.php:223 template-zume-training.php:329
+#: functions/enqueue-scripts.php:223 template-gmo.php:159
+#: template-zume-training.php:329
 msgid "The Gospel and How to Share It"
 msgstr "복음과 그것을 나누는 방법"
 
-#: functions/enqueue-scripts.php:224 template-zume-training.php:348
+#: functions/enqueue-scripts.php:224 template-gmo.php:104
+#: template-zume-training.php:348
 msgid "Baptism and How To Do It"
 msgstr "침례와 그것을하는 방법"
 
-#: functions/enqueue-scripts.php:225 template-zume-training.php:383
+#: functions/enqueue-scripts.php:225 template-gmo.php:163
+#: template-zume-training.php:383
 msgid "Prepare Your 3-Minute Testimony"
 msgstr "3 분 간증을 준비하십시오"
 
-#: functions/enqueue-scripts.php:226 template-zume-training.php:402
+#: functions/enqueue-scripts.php:226 template-gmo.php:42
+#: template-zume-training.php:402
 msgid "Vision Casting the Greatest Blessing"
 msgstr "가장 큰 축복을주는 비전"
 
-#: functions/enqueue-scripts.php:227
+#: functions/enqueue-scripts.php:227 template-gmo.php:135
 msgid "Duckling Discipleship – Leading Immediately"
 msgstr "오리 제자 훈련 – 즉시 인도"
 
@@ -3823,39 +3831,48 @@ msgstr "왕국이없는 곳을 보는 눈"
 msgid "The Lord's Supper and How To Lead It"
 msgstr "주의 만찬과 인도하는 법"
 
-#: functions/enqueue-scripts.php:230 template-zume-training.php:482
+#: functions/enqueue-scripts.php:230 template-gmo.php:176
+#: template-zume-training.php:482
 msgid "Prayer Walking and How To Do It"
 msgstr "걷는기도와 그것을하는 방법"
 
-#: functions/enqueue-scripts.php:231 template-zume-training.php:495
+#: functions/enqueue-scripts.php:231 template-gmo.php:172
+#: template-zume-training.php:495
 msgid "A Person of Peace and How To Find One"
 msgstr "평화의 사람과 찾는 법"
 
-#: functions/enqueue-scripts.php:232 template-zume-training.php:508
+#: functions/enqueue-scripts.php:232 template-gmo.php:67
+#: template-zume-training.php:508
 msgid "The BLESS Prayer Pattern"
 msgstr "축복기도 패턴"
 
-#: functions/enqueue-scripts.php:233 template-zume-training.php:555
+#: functions/enqueue-scripts.php:233 template-gmo.php:80
+#: template-zume-training.php:555
 msgid "Faithfulness is Better Than Knowledge"
 msgstr "충실 함이 지식보다 낫다"
 
-#: functions/enqueue-scripts.php:234 template-zume-training.php:568
+#: functions/enqueue-scripts.php:234 template-gmo.php:88
+#: template-zume-training.php:568
 msgid "3/3 Group Meeting Pattern"
 msgstr "3/3 그룹 미팅 패턴"
 
-#: functions/enqueue-scripts.php:235 template-zume-training.php:598
+#: functions/enqueue-scripts.php:235 template-gmo.php:139
+#: template-zume-training.php:598
 msgid "Training Cycle for Maturing Disciples"
 msgstr "성숙한 제자 훈련주기"
 
-#: functions/enqueue-scripts.php:237 template-zume-training.php:686
+#: functions/enqueue-scripts.php:237 template-gmo.php:143
+#: template-zume-training.php:686
 msgid "Expect Non-Sequential Growth"
 msgstr "비 순차적 성장 기대"
 
-#: functions/enqueue-scripts.php:238 template-zume-training.php:699
+#: functions/enqueue-scripts.php:238 template-gmo.php:147
+#: template-zume-training.php:699
 msgid "Pace of Multiplication Matters"
 msgstr "곱셈의 속도"
 
-#: functions/enqueue-scripts.php:239 template-zume-training.php:712
+#: functions/enqueue-scripts.php:239 template-gmo.php:96
+#: template-zume-training.php:712
 msgid "Always Part of Two Churches"
 msgstr "항상 두 교회의 일부"
 
@@ -4237,5 +4254,91 @@ msgstr ""
 
 #: functions/enqueue-scripts.php:126
 msgid "Linked Accounts"
+msgstr ""
+
+#: template-gmo.php:19
+msgid "Welcome to God’s Family!"
+msgstr ""
+
+#: template-gmo.php:22
+msgid "Below you will find videos and pages to help you learn what it means to be a follower of Jesus and to help others follow Jesus with you. A follower of Jesus is also called a disciple."
+msgstr ""
+
+#: template-gmo.php:24
+msgid "The lessons and concepts listed below can be explored on your own, but we recommend you stop now and ask, \"Who else could I learn and practice these important things with?\". If a name comes into your mind, reach out to them. If no name comes to mind, ask God to send you someone to join you on your journey."
+msgstr ""
+
+#: template-gmo.php:31
+msgid "What is a follower of Jesus?"
+msgstr ""
+
+#: template-gmo.php:49
+msgid "What are the activities of a follower of Jesus?"
+msgstr ""
+
+#: template-gmo.php:73
+msgid "Bible Reading"
+msgstr ""
+
+#: template-gmo.php:85
+msgid "Community"
+msgstr ""
+
+#: template-gmo.php:100
+msgid "The Lord’s Supper and How To Lead It"
+msgstr ""
+
+#: template-gmo.php:109
+msgid "Sacrifice and Suffering"
+msgstr ""
+
+#: template-gmo.php:116
+msgid "Eyes to See Where The Kingdom Isn’t"
+msgstr ""
+
+#: template-gmo.php:124
+msgid "How do I obey Jesus and help others become followers with me?"
+msgstr ""
+
+#: template-gmo.php:126
+msgid "Then Jesus came to them and said, \"All authority in heaven and on earth has been given to me. Therefore go and make disciples of all nations, baptizing them in the name of the Father and of the Son and of the Holy Spirit, and teaching them to obey everything I have commanded you. And surely I am with you always, to the very end of the age.\""
+msgstr ""
+
+#: template-gmo.php:127
+msgid "Matthew 28:18-20"
+msgstr ""
+
+#: template-gmo.php:131
+msgid "Teaching others to obey and follow Jesus with you"
+msgstr ""
+
+#: template-gmo.php:136
+msgid "Learn what ducklings have to do with disciple-making"
+msgstr ""
+
+#: template-gmo.php:152
+msgid "Speaking to people YOU KNOW about Jesus"
+msgstr ""
+
+#: template-gmo.php:169
+msgid "Speaking to people YOU DON'T KNOW about Jesus"
+msgstr ""
+
+#: template-gmo.php:183
+msgid "What if many friends, family, and others start following Jesus with me?"
+msgstr ""
+
+#: template-gmo.php:210
+msgid "Watch this important video explaining the 4 relationships of your new life."
+msgstr ""
+
+#. Template Name of the plugin/theme
+#: 
+msgid "GMO - Welcome to Zúme"
+msgstr ""
+
+#. Template Name of the plugin/theme
+#: 
+msgid "Redirect to Training"
 msgstr ""
 
