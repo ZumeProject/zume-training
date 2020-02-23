@@ -4270,7 +4270,7 @@ msgstr "ज़ूमे शिक्षा दिहला में 32 बढ�
 
 #: functions/enqueue-scripts.php:315
 msgid "Definitions"
-msgstr ""
+msgstr "परिभाषाएं"
 
 #: functions/enqueue-scripts.php:316
 msgid "\"Heard\" means you gained awareness. You have moved from not knowing about a tool or concept to knowing about it."
@@ -4346,87 +4346,90 @@ msgstr "जोड़ी खाता"
 
 #: template-gmo.php:19
 msgid "Welcome to God’s Family!"
-msgstr ""
+msgstr "परमेश्‍वर के परिवार में राऊव स्‍वागत बा!"
 
 #: template-gmo.php:22
 msgid "Below you will find videos and pages to help you learn what it means to be a follower of Jesus and to help others follow Jesus with you. A follower of Jesus is also called a disciple."
-msgstr ""
+msgstr "नीचे रउवा के वीडियो अऊर पेज मिली जेकरा से रउवा के इ जाने में मदद मिली कि \n"
+"यीशु के विश्‍वासी होखे के का मतलब बा अऊर दूसरा के रउवा संगे यीशु के नकल करे में मदद करस। यीशु के विश्‍वासी के चेला भी कहल जाला।"
 
 #: template-gmo.php:24
 msgid "The lessons and concepts listed below can be explored on your own, but we recommend you stop now and ask, \"Who else could I learn and practice these important things with?\". If a name comes into your mind, reach out to them. If no name comes to mind, ask God to send you someone to join you on your journey."
-msgstr ""
+msgstr "नीचे दिहल गईल पाठ अऊर बढिया विचार के खुद के दम पर खोजल जा सकत बा, \n"
+"बाकी हम रउवा के सलाह देत बानी कि रउवा अब रूकी अऊर पूछी, ''हम एह खास चीज के संगे अऊर के सीख सकत बा?'' जदी रउवा दिमाग में केवनो नाम आवत बा, त उनकरा लगे पहॅुची। जदी केवनो नाम दिमाग में नईखे आवत, त परमेश्‍वर से कही कि रउवा के आपन यात्रा में शामिल होखे खातीर केहू के भेजे खातीर कहस।"
 
 #: template-gmo.php:31
 msgid "What is a follower of Jesus?"
-msgstr ""
+msgstr "यीशु के विश्‍वासी का बाड़न?"
 
 #: template-gmo.php:49
 msgid "What are the activities of a follower of Jesus?"
-msgstr ""
+msgstr "यीशु के विश्‍वासी के काम का बा?"
 
 #: template-gmo.php:73
 msgid "Bible Reading"
-msgstr ""
+msgstr "बाइबिल पढ़ल"
 
 #: template-gmo.php:85
 msgid "Community"
-msgstr ""
+msgstr "समूह"
 
 #: template-gmo.php:100
 msgid "The Lord’s Supper and How To Lead It"
-msgstr ""
+msgstr "प्रभु भोज अऊर इ कईसन अगुवाई करे खातीर"
 
 #: template-gmo.php:109
 msgid "Sacrifice and Suffering"
-msgstr ""
+msgstr "बलिदान अऊर दुःख"
 
 #: template-gmo.php:116
 msgid "Eyes to See Where The Kingdom Isn’t"
-msgstr ""
+msgstr "ऑख इ देखे खातीर कि राज कहवा नईखे"
 
 #: template-gmo.php:124
 msgid "How do I obey Jesus and help others become followers with me?"
-msgstr ""
+msgstr "हम यीशु के पालन (निभावल) कईसे करी अऊर दूसरा के हमरा संगे विश्‍वासी बने \n"
+"में मदद करी?"
 
 #: template-gmo.php:126
 msgid "Then Jesus came to them and said, \"All authority in heaven and on earth has been given to me. Therefore go and make disciples of all nations, baptizing them in the name of the Father and of the Son and of the Holy Spirit, and teaching them to obey everything I have commanded you. And surely I am with you always, to the very end of the age.\""
-msgstr ""
+msgstr "फेर यीशु ऊ लोग के लगे आके कहलन, कि ''सरग अऊर धरती के सब अधिकार हमरा के देहल गइल बा। एह से तोहन लोग जाके सब जातियन के लोगन के चेला बनाव जा, अऊर ओह लोग के बाप अऊर बेटा अऊर पवित्र आत्‍मा के नाम से बपतिस्‍मा द जा। अऊर ओह लोग के सब बात जवन तोहन लोग के हुकूम देले बानी, माने के सिखाव, अऊर देख लोग हम संसार के आखिरी तक हरमेशा तोहन लोग के साथे बानी।"
 
 #: template-gmo.php:127
 msgid "Matthew 28:18-20"
-msgstr ""
+msgstr "मत्‍ती 28:18-20"
 
 #: template-gmo.php:131
 msgid "Teaching others to obey and follow Jesus with you"
-msgstr ""
+msgstr "अपना संगे यीशु के पालन करे अऊर उनकर पालन करे के खातीर दूसरा के शिक्षा दिहल"
 
 #: template-gmo.php:136
 msgid "Learn what ducklings have to do with disciple-making"
-msgstr ""
+msgstr "जानी कि बत्तख के चूजा के चेला बनला से का मतलब बा।"
 
 #: template-gmo.php:152
 msgid "Speaking to people YOU KNOW about Jesus"
-msgstr ""
+msgstr "यीशु के बारे में रउवा लोगन के बतावल"
 
 #: template-gmo.php:169
 msgid "Speaking to people YOU DON'T KNOW about Jesus"
-msgstr ""
+msgstr "यीशु के बारे में जाने खातीर रउवा लोगन से बात कईल"
 
 #: template-gmo.php:183
 msgid "What if many friends, family, and others start following Jesus with me?"
-msgstr ""
+msgstr "का होई जदी कई दोस्‍त, परिवार अऊर दूसर लोग हमरा संगे यीशु के नकल कईल शुरू क देस?"
 
 #: template-gmo.php:210
 msgid "Watch this important video explaining the 4 relationships of your new life."
-msgstr ""
+msgstr "अपना नया जीवन के चार गो रिश्‍ता के समझत एह खास वीडियो के देखी"
 
 #. Template Name of the plugin/theme
 #: 
 msgid "GMO - Welcome to Zúme"
-msgstr ""
+msgstr "जी.एम.ओ. - ज़ूमे में राऊव स्‍वागत बा"
 
 #. Template Name of the plugin/theme
 #: 
 msgid "Redirect to Training"
-msgstr ""
+msgstr "शिक्षा पावला खातीर करीब वाला"
 
