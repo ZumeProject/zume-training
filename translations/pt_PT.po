@@ -24,7 +24,7 @@ msgstr "O Treinamento Zume é uma experiência de aprendizado online e presencia
 
 #: front-page.php:105
 msgid "Zúme consists of 10 sessions, 2 hours each:"
-msgstr "O Zume consiste em 10 sessões de 2 horas cada:"
+msgstr "O Zume consiste em 10 sessões, 2 horas cada:"
 
 #: front-page.php:113 template-zume-about.php:74
 msgid "Video and Audio to help your group understand basic principles of multiplying disciples."
