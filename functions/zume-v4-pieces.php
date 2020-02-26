@@ -8,7 +8,7 @@ class Zume_V4_Pieces {
             2 => '/assets/images/pieces_pages/1-follow-jesus-point.svg',
             3 => '/assets/images/pieces_pages/1-spiritual-breathing.png',
             4 => '/assets/images/pieces_pages/1-reading.svg',
-            5 => '/assets/images/pieces_pages/1-church-at-home.svg',
+            5 => '/assets/images/pieces_pages/accountability.png',
             6 => '/assets/images/pieces_pages/2-produce-consume.png',
             7 => '/assets/images/pieces_pages/2-pray-day-night.svg',
             8 => '/assets/images/pieces_pages/2-long-list.svg',
