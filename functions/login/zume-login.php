@@ -83,7 +83,7 @@ class Zume_User_Registration
             $user_nicename = $payload['name'];
             $first_name = $payload['given_name'];
             $last_name = $payload['family_name'];
-            $picture_url = $payload['picture'];
+//            $picture_url = $payload['picture'];
 
             $random_password = wp_generate_password( $length = 12, $include_standard_special_chars = false );
             $username = str_replace( ' ', '_', $payload['name'] );
@@ -105,7 +105,7 @@ class Zume_User_Registration
             // create a user from Google data
             $userdata = array(
                 'user_login'      => sanitize_user( $username, false ) . '_'. rand( 100, 999 ),
-                'user_url'        => sanitize_text_field( $picture_url ),
+//                'user_url'        => sanitize_text_field( $picture_url ),
                 'user_pass'       => $random_password,  // When creating an user, `user_pass` is expected.
                 'user_nicename'   => sanitize_text_field( $user_nicename ),
                 'user_email'      => sanitize_email( $user_email ),
