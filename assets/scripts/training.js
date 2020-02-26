@@ -279,11 +279,11 @@ function save_session_status( key, i, session_number ) {
 function write_member_count( key, group ) {
     let list = ''
     let i = 1
+    if ( group.members > 0 ){
+      list += '<option value="'+_.escape( group.members )+'" selected>'+_.escape( group.members )+'</option>'
+    }
     while ( i < 30) {
       list += '<option value="'+_.escape( i )+'"';
-      if ( parseInt( group.members ) === i ) {
-        list += ' selected'
-      }
       list += '>'+ _.escape( i ) +'</option>'
       i++;
     }
