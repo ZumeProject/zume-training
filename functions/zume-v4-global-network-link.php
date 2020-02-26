@@ -2,7 +2,7 @@
 
 add_action('zume_create_group', 'trigger_group_to_training_transfer', 10, 3 );
 function trigger_group_to_training_transfer( $user_id, $group_key, $group ) {
-    
+
     // build fields for transfer
     $fields = [
         "title" => $group['group_name'],
@@ -12,7 +12,7 @@ function trigger_group_to_training_transfer( $user_id, $group_key, $group ) {
         "status" => "new",
     ];
 
-    $site = Site_Link_System::get_site_connection_vars( 21033 ); // @todo remove hardcoded
+    $site = Site_Link_System::get_site_connection_vars( 21116 ); // @todo remove hardcoded
     if ( ! $site ) {
         return new WP_Error( __METHOD__, 'Missing site to site data' );
     }
