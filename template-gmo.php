@@ -6,12 +6,16 @@ $current_language = zume_current_language();
 ?>
 
 <?php get_header(); ?>
-
+<style>
+    a {
+        text-decoration: underline !important;
+    }
+</style>
 <div id="page-content" class="padding-top-1">
 
     <div class="grid-x grid-padding-x">
 
-        <div class="cell medium-8">
+        <div class="cell large-8">
             <!-- left column -->
             <div class="grid-x grid-margin-x vertical-padding">
                 <div class="cell">
@@ -23,8 +27,9 @@ $current_language = zume_current_language();
 
                     <p><?php esc_html_e( 'The lessons and concepts listed below can be explored on your own, but we recommend you stop now and ask, "Who else could I learn and practice these important things with?". If a name comes into your mind, reach out to them. If no name comes to mind, ask God to send you someone to join you on your journey.', 'zume' ) ?></p>
 
-                    <div class="show-for-small-only">
+                    <div class="center hide-for-large small-video" style="border:1px solid #e6e6e6">
                         <iframe src="https://player.vimeo.com/video/331805074" width="640" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                        <p><?php esc_html_e( "Watch this important video explaining the 4 relationships of your new life.", 'zume' ) ?></p>
                     </div>
 
 
@@ -202,7 +207,7 @@ $current_language = zume_current_language();
                 </div>
             </div>
         </div>
-        <div class="cell center medium-4 padding-top-1">
+        <div class="cell center large-4 padding-top-1">
             <div class="small-video hide-for-small-only" >
                 <div style="border:1px solid #e6e6e6">
                     <iframe src="https://player.vimeo.com/video/331805074" width="640" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
