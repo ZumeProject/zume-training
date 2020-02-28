@@ -44,9 +44,8 @@ $current_language = zume_current_language();
                     <br>
 
                     <p class="center"><strong>Bookmark this page as a future resource!</strong></p><br>
-                    <p>The sections below, will teach you what it means to be a follower of Jesus (i.e. a disciple).</p>
 
-<!--                    <p>--><?php //esc_html_e( 'The lessons and concepts listed below can be explored on your own, but we recommend you stop now and ask, "Who else could I learn and practice these important things with?". If a name comes into your mind, reach out to them. If no name comes to mind, ask God to send you someone to join you on your journey.', 'zume' ) ?><!--</p>-->
+                    <p>The sections below, will teach you what it means to be a disciple or follower of Jesus.</p>
 
                     <hr>
 
