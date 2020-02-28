@@ -444,6 +444,10 @@ PLUGIN STYLES
 
     .small-video {
         width: 450px;
+
+        @media (max-width: $breakpoint-medium ) {
+            width:100%;
+        }
     }
 
     .inset {
