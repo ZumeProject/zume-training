@@ -13,15 +13,16 @@ function trigger_group_to_training_transfer( $user_id, $group_key, $group ) {
         "status" => "new",
     ];
 
-    $site = Site_Link_System::get_site_connection_vars( 21116 ); // @todo remove hardcoded
+    $site = Site_Link_System::get_site_connection_vars( 21033 ); // @todo remove hardcoded
     if ( ! $site ) {
         return new WP_Error( __METHOD__, 'Missing site to site data' );
     }
 
     $args = [
         'method' => 'POST',
-        'body' => $fields,
+        'body' => json_encode( $fields ),
         'headers' => [
+            'Content-Type' => 'application/json',
             'Authorization' => 'Bearer ' . $site['transfer_token'],
         ],
     ];
@@ -32,6 +33,7 @@ function trigger_group_to_training_transfer( $user_id, $group_key, $group ) {
     }
 
     $body = json_decode( $result['body'], true );
+    dt_write_log($body);
 
     return $body;
 
