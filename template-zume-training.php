@@ -2,9 +2,31 @@
 /*
 Template Name: Training
 */
+
+
 get_header();
+
+if ( isset( $_GET['iframe'] ) && ! empty( $_GET['iframe'] ) ) {
+    $zendesk_enable = false;
+    ?>
+    <style>
+        #top-bar {
+            display:none;
+        }
+        #inner-footer {
+            display:none;
+        }
+        #challenge {
+            display:none;
+        }
+    </style>
+    <?php
+} else {
+    $zendesk_enable = true;
+}
+
 $current_language = zume_current_language();
-$zendesk_enable = true;
+
 ?>
 
 <div class="training">
@@ -118,7 +140,7 @@ $zendesk_enable = true;
                             </div>
 
                             <!-- Session 1 -->
-                            <div class="cell small-12 medium-6 session">
+                            <div class="cell small-12 large-6 session">
                                 <div class="grid-x grid-padding-x">
                                     <div class="cell medium-10 overview-title"><h2><?php echo esc_html__( 'Session 1', 'zume' ) ?></h2></div>
                                     <div class="cell medium-2 start">
@@ -213,7 +235,7 @@ $zendesk_enable = true;
                             </div>
 
                             <!-- Session 2 -->
-                            <div class="cell small-12 medium-6 session">
+                            <div class="cell small-12 large-6 session">
                                 <div class="grid-x grid-padding-x">
                                     <div class="cell medium-10 overview-title"><h2><?php echo esc_html__( 'Session 2', 'zume' ) ?></h2></div>
                                     <div class="cell medium-2 start">
@@ -292,7 +314,7 @@ $zendesk_enable = true;
                             </div>
 
                             <!-- Session 3 -->
-                            <div class="cell small-12 medium-6 session">
+                            <div class="cell small-12 large-6 session">
                                 <div class="grid-x grid-padding-x">
                                     <div class="cell medium-10 overview-title"><h2><?php echo esc_html__( 'Session 3', 'zume' ) ?></h2></div>
                                     <div class="cell small-3 medium-2 start">
@@ -365,7 +387,7 @@ $zendesk_enable = true;
                             </div>
 
                             <!-- Session 4 -->
-                            <div class="cell small-12 medium-6 session">
+                            <div class="cell small-12 large-6 session">
                                 <div class="grid-x grid-padding-x">
                                     <div class="cell medium-10 overview-title"><h2><?php echo esc_html__( 'Session 4', 'zume' ) ?></h2></div>
                                     <div class="cell small-3 medium-2 start">
@@ -464,7 +486,7 @@ $zendesk_enable = true;
                             </div>
 
                             <!-- Session 5 -->
-                            <div class="cell small-12 medium-6 session">
+                            <div class="cell small-12 large-6 session">
                                 <div class="grid-x grid-padding-x">
                                     <div class="cell medium-10 overview-title"><h2><?php echo esc_html__( 'Session 5', 'zume' ) ?></h2></div>
                                     <div class="cell small-3 medium-2 start">
@@ -537,7 +559,7 @@ $zendesk_enable = true;
                             </div>
 
                             <!-- Session 6 -->
-                            <div class="cell small-12 medium-6 session">
+                            <div class="cell small-12 large-6 session">
                                 <div class="grid-x grid-padding-x">
                                     <div class="cell medium-10 overview-title"><h2><?php echo esc_html__( 'Session 6', 'zume' ) ?></h2></div>
                                     <div class="cell small-3 medium-2 start">
@@ -586,7 +608,7 @@ $zendesk_enable = true;
                             </div>
 
                             <!-- Session 7 -->
-                            <div class="cell small-12 medium-6 session">
+                            <div class="cell small-12 large-6 session">
                                 <div class="grid-x grid-padding-x">
                                     <div class="cell medium-10 overview-title"><h2><?php echo esc_html__( 'Session 7', 'zume' ) ?></h2></div>
                                     <div class="cell small-3 medium-2 start">
@@ -627,7 +649,7 @@ $zendesk_enable = true;
                             </div>
 
                             <!-- Session 8 -->
-                            <div class="cell small-12 medium-6 session">
+                            <div class="cell small-12 large-6 session">
                                 <div class="grid-x grid-padding-x">
                                     <div class="cell medium-10 overview-title"><h2><?php echo esc_html__( 'Session 8', 'zume' ) ?></h2></div>
                                     <div class="cell small-3 medium-2 start">
@@ -668,7 +690,7 @@ $zendesk_enable = true;
                             </div>
 
                             <!-- Session 9 -->
-                            <div class="cell small-12 medium-6 session">
+                            <div class="cell small-12 large-6 session">
                                 <div class="grid-x grid-padding-x">
                                     <div class="cell medium-10 overview-title"><h2><?php echo esc_html__( 'Session 9', 'zume' ) ?></h2></div>
                                     <div class="cell small-3 medium-2 start">
@@ -749,7 +771,7 @@ $zendesk_enable = true;
                             </div>
 
                             <!-- Session 10 -->
-                            <div class="cell small-12 medium-6 session">
+                            <div class="cell small-12 large-6 session">
                                 <div class="grid-x grid-padding-x">
                                     <div class="cell medium-10 overview-title"><h2><?php echo esc_html__( 'Session 10', 'zume' ) ?></h2></div>
                                     <div class="cell small-3 medium-2 start">
