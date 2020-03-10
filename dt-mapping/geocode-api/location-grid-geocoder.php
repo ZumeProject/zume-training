@@ -975,33 +975,26 @@ if ( ! class_exists( 'Location_Grid_Geocoder' ) ) {
             $filtered_array['grid_id'] = isset( $location_grid_meta['grid_id'] ) ? sanitize_text_field( wp_unslash( $location_grid_meta['grid_id'] ) ) : '';
             $filtered_array['lng'] = isset( $location_grid_meta['lng'] ) ? sanitize_text_field( wp_unslash( $location_grid_meta['lng'] ) ) : '';
             $filtered_array['lat'] = isset( $location_grid_meta['lat'] ) ? sanitize_text_field( wp_unslash( $location_grid_meta['lat'] ) ) : '';
-            $filtered_array['level'] = isset( $location_grid_meta['level'] ) ? sanitize_text_field( wp_unslash( $location_grid_meta['level'] ) ) : 'place';
-            $filtered_array['source'] = isset( $location_grid_meta['source'] ) ? sanitize_text_field( wp_unslash( $location_grid_meta['source'] ) ) : 'user';
+            $filtered_array['level'] = ( isset( $location_grid_meta['level'] ) && ! empty( $location_grid_meta['level'] ) ) ? sanitize_text_field( wp_unslash( $location_grid_meta['level'] ) ) : 'place';
+            $filtered_array['source'] = ( isset( $location_grid_meta['source'] ) && ! empty( $location_grid_meta['source'] ) ) ? sanitize_text_field( wp_unslash( $location_grid_meta['source'] ) ) : 'user';
             $filtered_array['label'] = isset( $location_grid_meta['label'] ) ? sanitize_text_field( wp_unslash( $location_grid_meta['label'] ) ) : '';
 
             return $filtered_array;
         }
 
-        public function get_location_grid_meta( $type, array $args ) { // @todo not finished
+        public static function get_location_grid_meta_by_id( int $grid_meta_id ) {
             global $wpdb;
-
-            switch ( $type ) {
-                case 'grid_meta_id':
-
-                    break;
-
-                default:
-                    return [];
-                    break;
-            }
-
+            return $wpdb->get_row( $wpdb->prepare( "SELECT * FROM $wpdb->dt_location_grid_meta WHERE grid_meta_id = %d", $grid_meta_id ), ARRAY_A );
         }
 
         public function delete_location_grid_meta( int $post_id, $type, int $value, array $existing_post = null ) {
             global $wpdb;
 
+            $status = false;
+
             if ( 'all' === $type ) {
-                return $wpdb->delete( $wpdb->dt_location_grid_meta, [ "post_id" => $post_id ] );
+                $wpdb->delete( $wpdb->dt_location_grid_meta, [ "post_id" => $post_id ] );
+                $status = true;
             }
 
             if ( $value ) {
@@ -1013,43 +1006,48 @@ if ( ! class_exists( 'Location_Grid_Geocoder' ) ) {
                         delete_metadata_by_mid( 'post', $postmeta_id_location_grid );
                         $wpdb->delete( $wpdb->dt_location_grid_meta, [ "post_id" => $post_id, "grid_meta_id" => $value ] );
                         $wpdb->delete( $wpdb->postmeta, [ "post_id" => $post_id, "meta_key" => "location_grid_meta", "meta_value" => $value ] );
-                        return true;
+                        $status = true;
                         break;
 
                     default:
-                        return false;
                         break;
                 }
             }
 
-            return false;
+            return $status;
         }
-
-        public function update_location_grid_meta( $grid_meta_id ) {
-
-        }
-
-        public static function get_location_grid_meta_by_id( int $grid_meta_id ) {
-            global $wpdb;
-            return $wpdb->get_row( $wpdb->prepare( "SELECT * FROM $wpdb->dt_location_grid_meta WHERE grid_meta_id = %d", $grid_meta_id ), ARRAY_A );
-        }
-
 
         public function add_location_grid_meta( int $post_id, array $location_grid_meta ) {
             global $wpdb;
 
             $this->validate_location_grid_meta( $location_grid_meta );
 
-            $location_grid_postmeta_id = add_post_meta( $post_id, 'location_grid', $location_grid_meta['grid_id'] );
+            if ( empty( $location_grid_meta['lng'] ) || empty( $location_grid_meta['lat'] ) ) {
+                return new WP_Error(__METHOD__, 'Missing required lng or lat' );
+            }
+
+            if ( empty( $location_grid_meta['grid_id'] ) ) {
+                $grid = $this->get_grid_id_by_lnglat( $location_grid_meta['lng'], $location_grid_meta['lat'] );
+                if ( $grid ) {
+                    $location_grid_meta['grid_id'] = $grid['grid_id'];
+                } else {
+                    return new WP_Error(__METHOD__, 'Invalid lng or lat. Unable to retrieve grid_id' );
+                }
+            }
+
+            $postmeta_id_location_grid = add_post_meta( $post_id, 'location_grid', $location_grid_meta['grid_id'] );
+            if ( ! $postmeta_id_location_grid ) {
+                return new WP_Error(__METHOD__, 'Unable to create location_grid post meta and retrieve a key.' );
+            }
 
             $data = [
                 'post_id' => $post_id,
-                'postmeta_id_location_grid' => $location_grid_postmeta_id,
+                'postmeta_id_location_grid' => $postmeta_id_location_grid,
                 'grid_id' => $location_grid_meta['grid_id'],
                 'lng' => $location_grid_meta['lng'],
                 'lat' => $location_grid_meta['lat'],
-                'level' => $location_grid_meta['level'],
-                'source' => $location_grid_meta['source'],
+                'level' => empty( $location_grid_meta['level'] ) ? 'place' : $location_grid_meta['level'],
+                'source' => empty( $location_grid_meta['source'] ) ? 'user' : $location_grid_meta['source'],
                 'label' => $location_grid_meta['label'],
             ];
 
@@ -1064,11 +1062,18 @@ if ( ! class_exists( 'Location_Grid_Geocoder' ) ) {
                 '%s'
             ];
 
-            $wpdb->insert($wpdb->dt_location_grid_meta,$data,$format);
+            $id = $wpdb->insert($wpdb->dt_location_grid_meta,$data,$format);
+            if ( ! $id ) {
+                delete_meta( $postmeta_id_location_grid );
+                return new WP_Error(__METHOD__, 'Failed to insert location_grid_meta record.' );
+            }
 
-            $id = $wpdb->insert_id;
-
-            add_post_meta( $post_id, 'location_grid_meta', $id );
+            $location_grid_meta_mid = add_post_meta( $post_id, 'location_grid_meta', $id );
+            if ( ! $location_grid_meta_mid ) {
+                delete_meta( $postmeta_id_location_grid );
+                $this->delete_location_grid_meta( $post_id, 'grid_meta_id', $id );
+                return new WP_Error(__METHOD__, 'Failed to add location_grid_meta' );
+            }
 
             return $id;
 
