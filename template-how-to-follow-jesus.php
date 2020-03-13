@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: GMO - Welcome to Zúme
+Template Name: How to Follow Jesus
 */
 $current_language = zume_current_language();
 ?>
@@ -31,11 +31,11 @@ $current_language = zume_current_language();
                 <div class="cell">
 
                     <h1 class="primary-color-text center padding-bottom-2">
-                        <strong><?php esc_html_e( "Welcome to God’s Family!", 'zume' ) ?></strong>
+                        <strong><?php esc_html_e( "How to Follow Jesus", 'zume' ) ?></strong>
                     </h1>
 
                     <div class="center">
-                        <p><?php esc_html_e( "Watch this important video explaining the 4 relationships of your new life.", 'zume' ) ?></p>
+                        <p>Watch this important video explaining the 4 relationships of your life as a Jesus follower.</p>
                     </div>
                     <div class="center small-video" style="border:1px solid #e6e6e6">
                         <iframe src="https://player.vimeo.com/video/331805074" width="640" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
@@ -45,7 +45,7 @@ $current_language = zume_current_language();
 
                     <p class="center"><strong>Bookmark this page as a future resource!</strong></p><br>
 
-                    <p>The sections below, will teach you what it means to be a disciple or follower of Jesus.</p>
+                    <p class="center">The sections below, will teach you what it means to be a follower (disciple) of Jesus.</p>
 
                     <hr>
 
@@ -260,18 +260,23 @@ $current_language = zume_current_language();
 </div> <!-- end #inner-content -->
 
 <!-- Goals of the Zume Project -->
-<div class="grid-x grid-margin-x grid-margin-y grid-padding vertical-padding" style="background-color:#323A68;">
-    <div class="large-2 cell"></div>
-    <div class="cell large-8" style="color: white;">
-        <h3 class="secondary" style="color: white;"><?php esc_html_e( 'Goals of the Zúme Training:', 'zume' ) ?></h3>
-        <p>
-            <?php esc_html_e( 'Zúme means yeast in Greek. In Matthew 13:33, Jesus is quoted as saying, "The Kingdom of Heaven is like a woman who took yeast and mixed it into a large amount of flour until it was all leavened." This illustrates how ordinary people, using ordinary resources, can have an extraordinary impact for the Kingdom of God. Zúme aims to equip and empower ordinary believers to saturate the globe with multiplying disciples in our generation.', 'zume' ) ?>
-        </p>
-        <p>
-            <?php esc_html_e( 'Zúme uses an online training platform to equip participants in basic disciple-making and simple church planting multiplication principles, processes, and practices.', 'zume' ) ?>
-        </p>
+<div style="background-color:#323A68;">
+    <div class="page-content">
+        <div class="grid-x grid-margin-x grid-margin-y grid-padding vertical-padding" >
+            <div class="medium-2 cell"></div>
+            <div class="cell medium-8" style="color: white;">
+                <h3 class="secondary center" style="color: white;"><?php esc_html_e( 'Zúme Training', 'zume' ) ?></h3>
+                <p>
+                    <?php esc_html_e( 'Zúme means yeast in Greek. In Matthew 13:33, Jesus is quoted as saying, "The Kingdom of Heaven is like a woman who took yeast and mixed it into a large amount of flour until it was all leavened." This illustrates how ordinary people, using ordinary resources, can have an extraordinary impact for the Kingdom of God. Zúme aims to equip and empower ordinary believers to saturate the globe with multiplying disciples in our generation.', 'zume' ) ?>
+                </p>
+                <p>
+                    <?php esc_html_e( 'Zúme uses an online training platform to equip participants in basic disciple-making and simple church planting multiplication principles, processes, and practices.', 'zume' ) ?>
+                </p>
+                <p class="center"><br><a href="/training" class="button secondary-button large">See the Zúme Training Course</a> </p>
+            </div>
+            <div class="medium-2 cell"></div>
+        </div>
     </div>
-    <div class="large-2 cell"></div>
 </div>
 
 <?php get_footer(); ?>

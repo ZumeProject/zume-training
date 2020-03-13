@@ -201,7 +201,7 @@ if ( ! class_exists( 'Location_Grid_Geocoder' ) ) {
          */
         public function lnglat_test1( $results ) {
             if ( count( $results ) === 1 && ! empty( $results ) ) {
-                error_log( '1' );
+//                error_log( '1' );
                 // return test 1 results
                 foreach ( $results as $result ) {
                     if ( ! isset( $result['grid_id'] ) ) {
@@ -226,7 +226,7 @@ if ( ! class_exists( 'Location_Grid_Geocoder' ) ) {
          */
         public function lnglat_test2( $results, $longitude, $latitude ) {
             if ( count( $results ) > 1 && ! empty( $results ) ) {
-                error_log( '2' );
+//                error_log( '2' );
 
                 foreach ( $results as $result ) {
                     if ( $this->_this_grid_id( $result['grid_id'], $longitude, $latitude ) ) {
@@ -256,7 +256,7 @@ if ( ! class_exists( 'Location_Grid_Geocoder' ) ) {
          */
         public function lnglat_test3( $results, $longitude, $latitude ) {
             if ( ! empty( $this->geojson ) && ! empty( $results ) ) {
-                error_log( '3' );
+//                error_log( '3' );
 
                 $grid_id = $this->_grid_id_from_nearest_polygon_line( $results, $longitude, $latitude );
 
@@ -288,7 +288,7 @@ if ( ! class_exists( 'Location_Grid_Geocoder' ) ) {
         public function lnglat_test4( $longitude, $latitude ) {
             global $wpdb;
 
-            error_log( '4' );
+//            error_log( '4' );
 
             /**
              * No bounding set results,
@@ -646,7 +646,7 @@ if ( ! class_exists( 'Location_Grid_Geocoder' ) ) {
             global $wpdb;
 
             if ( is_null( $country_code ) ) {
-                error_log( 'no country code' );
+//                error_log( 'no country code' );
                 $query = $wpdb->get_results( $wpdb->prepare( "
                 SELECT g.*, a0.name as admin0_name, a1.name as admin1_name, a2.name as admin2_name, a3.name as admin3_name, a4.name as admin4_name, a5.name as admin5_name
                 FROM $wpdb->dt_location_grid as g
@@ -956,6 +956,7 @@ if ( ! class_exists( 'Location_Grid_Geocoder' ) ) {
                 $location_grid_meta = [
                     'grid_meta_id' => '',
                     'post_id' => '',
+                    'post_type' => '',
                     'grid_id' => '',
                     'lng' => '',
                     'lat' => '',
@@ -972,6 +973,7 @@ if ( ! class_exists( 'Location_Grid_Geocoder' ) ) {
 
             $filtered_array['grid_meta_id'] = isset( $location_grid_meta['grid_meta_id'] ) ? sanitize_text_field( wp_unslash( $location_grid_meta['grid_meta_id'] ) ) : '';
             $filtered_array['post_id'] = isset( $location_grid_meta['post_id'] ) ? sanitize_text_field( wp_unslash( $location_grid_meta['post_id'] ) ) : '';
+            $filtered_array['post_type'] = isset( $location_grid_meta['post_type'] ) ? sanitize_text_field( wp_unslash( $location_grid_meta['post_type'] ) ) : '';
             $filtered_array['grid_id'] = isset( $location_grid_meta['grid_id'] ) ? sanitize_text_field( wp_unslash( $location_grid_meta['grid_id'] ) ) : '';
             $filtered_array['lng'] = isset( $location_grid_meta['lng'] ) ? sanitize_text_field( wp_unslash( $location_grid_meta['lng'] ) ) : '';
             $filtered_array['lat'] = isset( $location_grid_meta['lat'] ) ? sanitize_text_field( wp_unslash( $location_grid_meta['lat'] ) ) : '';
@@ -1049,6 +1051,7 @@ if ( ! class_exists( 'Location_Grid_Geocoder' ) ) {
 
             $data = [
                 'post_id' => $post_id,
+                'post_type' => empty( $location_grid_meta['post_type'] ) ? get_post_type( $post_id ) : $location_grid_meta['post_type'],
                 'postmeta_id_location_grid' => $postmeta_id_location_grid,
                 'grid_id' => $location_grid_meta['grid_id'],
                 'lng' => $location_grid_meta['lng'],
@@ -1060,6 +1063,7 @@ if ( ! class_exists( 'Location_Grid_Geocoder' ) ) {
 
             $format = [
                 '%d',
+                '%s',
                 '%d',
                 '%d',
                 '%s',
