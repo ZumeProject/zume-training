@@ -74,11 +74,11 @@ function toggle_column() {
   let item = jQuery('#column_button')
   if ( item.hasClass("hollow") ) {
     item.removeClass('hollow')
-    jQuery('.session').removeClass('medium-6')
+    jQuery('.session').removeClass('large-6')
     setCookie('columns', 'single', 30)
   } else {
     item.addClass('hollow')
-    jQuery('.session').addClass('medium-6')
+    jQuery('.session').addClass('large-6')
     setCookie('columns', 'double', 30)
   }
 }
