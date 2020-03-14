@@ -1242,6 +1242,7 @@ function load_host_description() {
 function get_coach_request() {
 
     jQuery('#coach-request').empty().html(`
+    
     <div class="grid-x" id="coaching-request-form-section">
         <div class="cell">
         <h2 class="primary-color hide-for-small-only request-form" id="coach-modal-title">${_.escape( i18n.str.x61 )/*Connect Me to a Coach*/}</h2>
@@ -1274,7 +1275,7 @@ function get_coach_request() {
                     </div>
 
                 </div>
-                
+                <div id="already-submitted"></div>
                 <div id="form-container"></div>
             
         </div>
@@ -1282,14 +1283,12 @@ function get_coach_request() {
   `)
 
   // check if already submitted coaching request
+  write_request_form()
+
   if ( zumeTraining.user_profile_fields.zume_global_network ) {
-    jQuery('.request-form').hide()
     write_coaching_status()
   }
-  // if no request submitted show coaching form
-  else {
-    write_request_form()
-  }
+
 }
 
 function write_request_form() {
@@ -1458,10 +1457,10 @@ function write_request_form() {
 
 function write_coaching_status() {
   let fields = zumeTraining.user_profile_fields.zume_global_network
-  jQuery('.request-form').hide()
-  jQuery('#form-container').empty().html(`
+  jQuery('#already-submitted').empty().html(`
   <hr>
-  <h3>${_.escape( i18n.str.x86 )/*You have requested coaching.*/}</h3>
+  <h3 class="center">${_.escape( i18n.str.x86 )/*You have requested coaching.*/}</h3>
+  <hr>
   `)
 }
 
@@ -1621,6 +1620,7 @@ function send_coaching_request() {
   API.coaching_request( data ).done( function(data) {
     console.log('postsend')
     console.log(data)
+    jQuery('#coaching-request-form').hide()
     write_coaching_status()
   })
     .fail(function(e){
