@@ -107,9 +107,6 @@ class Zume_V4_REST_API {
             array(
                 'methods'         => WP_REST_Server::CREATABLE,
                 'callback'        => array( $this, 'coaching_request' ),
-                "permission_callback" => function () {
-                    return current_user_can( 'subscriber' );
-                }
             ),
         ) );
         register_rest_route( $namespace, '/update_profile', array(
@@ -310,18 +307,22 @@ class Zume_V4_REST_API {
         if ( empty( $params['location_grid_meta'] ) ) {
             delete_user_meta( $user_info->ID, 'location_grid_meta' );
         } else {
+            if ( ! class_exists( 'Location_Grid_Geocoder') ) {
+                require_once ( get_stylesheet_directory() . '/dt-mapping/geocode-api/location-grid-geocoder.php' );
+            }
+            $geocoder = new Location_Grid_Geocoder();
+
             $location_grid_meta = array_map( 'sanitize_text_field', wp_unslash( $params['location_grid_meta'] ) );
             $lng = empty( $location_grid_meta['lng'] ) ? false : $location_grid_meta['lng'];
             $lat = empty( $location_grid_meta['lat'] ) ? false : $location_grid_meta['lat'];
             if ( $lng && $lat ) {
-                $geocoder = new Location_Grid_Geocoder();
                 $grid = $geocoder->get_grid_id_by_lnglat( $lng, $lat );
                 if ( isset( $grid['grid_id'] ) ) {
                     $location_grid_meta['grid_id'] = $grid['grid_id'];
                 }
             }
 
-            Location_Grid_Geocoder::verify_location_grid_meta_filter( $location_grid_meta );
+            $geocoder->validate_location_grid_meta( $args['location_grid_meta'] );
 
             update_user_meta( $user_info->ID, 'location_grid_meta', $location_grid_meta );
         }
@@ -334,7 +335,7 @@ class Zume_V4_REST_API {
             'name' => $zume_user_meta['zume_full_name'] ?? '',
             'email' => $zume_user->data->user_email,
             'phone' => $zume_user_meta['zume_phone_number'] ?? '',
-            'location_grid_meta' => maybe_unserialize( $zume_user_meta['location_grid_meta'] ) ?? '',
+            'location_grid_meta' => ( empty( $zume_user_meta['location_grid_meta'] ?? '' ) ) ? [] : maybe_unserialize( $zume_user_meta['location_grid_meta'] ),
             'affiliation_key' => $zume_user_meta['zume_affiliation_key'] ?? '',
             'facebook_sso_email' => $zume_user_meta['facebook_sso_email'] ?? false,
             'google_sso_email' => $zume_user_meta['google_sso_email'] ?? false,
@@ -387,6 +388,9 @@ class Zume_V4_REST_API {
         // Additional fields that may or may not be present
 
         // Build location_grid_meta
+        if ( ! class_exists( 'Location_Grid_Geocoder') ) {
+            require_once ( get_stylesheet_directory() . '/dt-mapping/geocode-api/location-grid-geocoder.php' );
+        }
         $geocoder = new Location_Grid_Geocoder();
         if ( empty( $params['location_grid_meta'] ) ) {
             // if no provided location, get ip address location
@@ -402,7 +406,7 @@ class Zume_V4_REST_API {
             $args['location_grid_meta'] = [];
         }
 
-        Location_Grid_Geocoder::verify_location_grid_meta_filter( $args['location_grid_meta'] );
+        $geocoder->validate_location_grid_meta( $args['location_grid_meta'] );
 
         if ( $args['location_grid_meta'] ) {
             $fields['location_grid'] = [ "values" => [ [ "value" => $args['location_grid_meta']['grid_id'] ] ] ];

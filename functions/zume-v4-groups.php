@@ -1195,8 +1195,12 @@ class Zume_V4_Groups {
             'source' => $source,
             'grid_id' => $lg_lookup['grid_id'] ?? false,
         ];
+        if ( ! class_exists( 'Location_Grid_Geocoder') ) {
+            require_once ( get_stylesheet_directory() . '/dt-mapping/geocode-api/location-grid-geocoder.php' );
+        }
+        $geocoder = new Location_Grid_Geocoder();
 
-        Location_Grid_Geocoder::verify_location_grid_meta_filter( $modified_group['location_grid_meta'] );
+        $geocoder->validate_location_grid_meta( $modified_group['location_grid_meta'] );
 
         self::filter_last_modified_to_now( $modified_group ); // add new timestamp
 
