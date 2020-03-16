@@ -1195,8 +1195,8 @@ class Zume_V4_Groups {
             'source' => $source,
             'grid_id' => $lg_lookup['grid_id'] ?? false,
         ];
-        if ( ! class_exists( 'Location_Grid_Geocoder') ) {
-            require_once ( get_stylesheet_directory() . '/dt-mapping/geocode-api/location-grid-geocoder.php' );
+        if ( ! class_exists( 'Location_Grid_Geocoder' ) ) {
+            require_once( get_stylesheet_directory() . '/dt-mapping/geocode-api/location-grid-geocoder.php' );
         }
         $geocoder = new Location_Grid_Geocoder();
 

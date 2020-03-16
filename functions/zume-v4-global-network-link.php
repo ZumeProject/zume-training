@@ -1,6 +1,6 @@
 <?php
 
-add_action('zume_create_group', 'trigger_group_to_training_transfer', 10, 3 );
+add_action( 'zume_create_group', 'trigger_group_to_training_transfer', 10, 3 );
 function trigger_group_to_training_transfer( $user_id, $group_key, $group ) {
 
     // build fields for transfer
@@ -15,7 +15,7 @@ function trigger_group_to_training_transfer( $user_id, $group_key, $group ) {
 
     $site = Site_Link_System::get_site_connection_vars( 21116 ); // @todo remove hardcoded
     if ( ! $site ) {
-        dt_write_log(__METHOD__ . ' FAILED TO GET SITE LINK TO GLOBAL ');
+        dt_write_log( __METHOD__ . ' FAILED TO GET SITE LINK TO GLOBAL ' );
         return false;
     }
 
@@ -30,7 +30,7 @@ function trigger_group_to_training_transfer( $user_id, $group_key, $group ) {
 
     $result = wp_remote_post( 'https://' . trailingslashit( $site['url'] ) . 'wp-json/dt-posts/v2/trainings', $args );
     if ( is_wp_error( $result ) ) {
-        dt_write_log(__METHOD__ . ' TO CREATE TRAINING FOR ' . $group['name'] );
+        dt_write_log( __METHOD__ . ' TO CREATE TRAINING FOR ' . $group['name'] );
         return false;
     }
 
