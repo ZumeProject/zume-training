@@ -439,7 +439,7 @@ class Zume_V4_REST_API {
                 "date_transferred" => time()
             ] );
         }
-        
+
         return $result;
 
     }
