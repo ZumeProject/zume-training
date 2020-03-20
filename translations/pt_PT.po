@@ -20,11 +20,11 @@ msgstr "Login"
 
 #: front-page.php:86
 msgid "Zúme Training is an on-line and in-life learning experience designed for small groups who follow Jesus to learn how to obey His Great Commission and make disciples who multiply."
-msgstr "O Treinamento Zume é uma experiência de aprendizado online e presencial, projetada para pequenos grupos que seguem Jesus aprenderem como obedecer à Sua Grande Comissão e fazer discípulos que se multiplicam."
+msgstr "O Treinamento Zume é uma experiência de aprendizado online e presencial, projetada para que pequenos grupos que seguem Jesus aprendam como obedecer à Sua Grande Comissão e fazer discípulos que se multiplicam."
 
 #: front-page.php:105
 msgid "Zúme consists of 10 sessions, 2 hours each:"
-msgstr "O Zume consiste em 10 sessões, 2 horas cada:"
+msgstr "O Zume consiste em 10 sessões de 2 horas cada:"
 
 #: front-page.php:113 template-zume-about.php:74
 msgid "Video and Audio to help your group understand basic principles of multiplying disciples."
@@ -36,7 +36,7 @@ msgstr "Discussões em grupo para ajudar seu grupo a pensar no que está sendo c
 
 #: front-page.php:129 template-zume-about.php:76
 msgid "Simple Exercises to help your group put what you’re learning into practice."
-msgstr "Exercícios simples para ajudar seu grupo a colocar em prática o que você está aprendendo."
+msgstr "Exercícios simples para ajudar seu grupo a colocar em prática o que vocês estão aprendendo."
 
 #: front-page.php:137 template-zume-about.php:77
 msgid "Session Challenges to help your group keep learning and growing between sessions."
@@ -52,7 +52,7 @@ msgstr "É tão fácil como 1-2-3"
 
 #: front-page.php:173
 msgid "Sign up"
-msgstr "Registrar"
+msgstr "Registre-se"
 
 #: front-page.php:183
 msgid "Invite some friends"
