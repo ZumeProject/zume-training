@@ -125,145 +125,145 @@ msgstr "حصلنا عليه!"
 msgid "We're a volunteer network, so give us a few days. We'll reach out to you soon as possible!"
 msgstr "نحن شبكة متطوّعين، فامنحونا بضعة أيام. سنتواصل معكم في أقرب وقت ممكن!"
 
-#: functions/login/zume-login.php:97 functions/login/zume-login.php:319
+#: functions/login/zume-login.php:97 functions/login/zume-login.php:320
 msgid "Email is a required permission for login and registration."
 msgstr "العنوان الإلكترونيّ مطلوب للدّخول والتّسجيل."
 
-#: functions/login/zume-login.php:446
+#: functions/login/zume-login.php:448
 msgid "No user found."
 msgstr "لم يتم العثور على المُستخدم."
 
-#: functions/login/zume-login.php:283 functions/login/zume-login.php:411
+#: functions/login/zume-login.php:284 functions/login/zume-login.php:413
 msgid "You are missing your sign-in token. Try signing in again."
 msgstr "رمز تسجيل الدّخول الخاص بك غير موجود. حاول تسجيل الدّخول مرّة أخرى."
 
-#: functions/login/zume-login.php:293 functions/login/zume-login.php:421
+#: functions/login/zume-login.php:294 functions/login/zume-login.php:423
 msgid "Failed to connect with Facebook. Try again."
 msgstr "لم يتم التّواصل مع فيس بوك. حاول مرّة أخرى."
 
-#: functions/login/zume-login.php:312 functions/login/zume-login.php:437
+#: functions/login/zume-login.php:313 functions/login/zume-login.php:439
 msgid "Facebook user lookup error. Sorry for the inconvenience."
 msgstr "خطأ في إيجاد مُستخدم فيس بوك. نأسف لإزعاجكم."
 
-#: functions/login/zume-login.php:315 functions/login/zume-login.php:440
+#: functions/login/zume-login.php:316 functions/login/zume-login.php:442
 msgid "Error with looking up user with Facebook. Sorry for the inconvenience."
 msgstr "خطأ في البحث عن مُستخدم باستخدام فيس بوك. نأسف لإزعاجكم."
 
-#: functions/enqueue-scripts.php:329 functions/login/zume-login.php:541
+#: functions/enqueue-scripts.php:329 functions/login/zume-login.php:543
 msgid "There are some errors in your form."
 msgstr "استمارتكم تحتوي على بعض الأخطاء."
 
 #: functions/enqueue-scripts.php:119 functions/enqueue-scripts.php:333
-#: functions/login/zume-login.php:546 template-zume-dashboard.php:1420
+#: functions/login/zume-login.php:548 template-zume-dashboard.php:1420
 #: template-zume-dashboard.php:1471 template-zume-login.php:375
 msgid "Email"
 msgstr "العنوان الإلكترونيّ"
 
-#: functions/login/zume-login.php:550 template-zume-login.php:261
+#: functions/login/zume-login.php:552 template-zume-login.php:261
 msgid "Password Required"
 msgstr "كلمة المرور مطلوبة"
 
-#: functions/login/zume-login.php:553 template-zume-login.php:264
+#: functions/login/zume-login.php:555 template-zume-login.php:264
 msgid "Password required"
 msgstr "كلمة المرور مطلوبة"
 
-#: functions/login/zume-login.php:559 template-zume-login.php:271
+#: functions/login/zume-login.php:561 template-zume-login.php:271
 msgid "Re-enter Password"
 msgstr "اعِد ادخال كلمة المرور"
 
-#: functions/login/zume-login.php:562 template-zume-login.php:274
+#: functions/login/zume-login.php:564 template-zume-login.php:274
 msgid "Passwords do not match. Please, try again."
 msgstr "كلمة المرور غير مطابقة. حاول مرّة أخرى."
 
-#: functions/login/zume-login.php:571 functions/zume-v4-seo-strings.php:24
+#: functions/login/zume-login.php:573 functions/zume-v4-seo-strings.php:24
 #: template-zume-login.php:358 template-zume-login.php:514
 msgid "Register"
 msgstr "تسجيل"
 
-#: functions/login/zume-login.php:614
+#: functions/login/zume-login.php:616
 msgid "Missing captcha response. How did you do that?"
 msgstr "إجابة “captcha” ناقصة. كيف فعلت ذلك؟"
 
-#: functions/login/zume-login.php:627
+#: functions/login/zume-login.php:629
 msgid "Captcha failure. Try again, if you are human."
 msgstr "‫إجابة “captcha” فاشلة. حاول مجدّدًا إن كنت إنسان."
 
-#: functions/login/zume-login.php:633
+#: functions/login/zume-login.php:635
 msgid "Missing email or password."
 msgstr "غياب العنوان الإلكترونيّ أو كلمة المرور."
 
-#: functions/login/zume-login.php:652
+#: functions/login/zume-login.php:654
 msgid "Sorry. This email is already registered."
 msgstr "نأسف. لقد تمّ تسجيل هذا العنوان الإلكترونيّ سابقًا."
 
-#: functions/login/zume-login.php:663
+#: functions/login/zume-login.php:665
 msgid "Something went wrong. Sorry. Could you try again?"
 msgstr "هناك خطأ ما. نأسف. هلّا تحاول مرّة أخرى؟"
 
-#: functions/login/zume-login.php:686
+#: functions/login/zume-login.php:689
 msgid "No new user found."
 msgstr "لم يتم العثور على مُستخدم جديد."
 
-#: functions/login/zume-login.php:742 functions/login/zume-login.php:793
+#: functions/login/zume-login.php:745 functions/login/zume-login.php:796
 msgid "Google"
 msgstr "غوغل"
 
-#: functions/login/zume-login.php:787
+#: functions/login/zume-login.php:790
 msgid "Link with Google"
 msgstr "قم بالرّبط مع غوغل"
 
-#: functions/login/zume-login.php:926 functions/login/zume-login.php:1022
+#: functions/login/zume-login.php:929 functions/login/zume-login.php:1025
 msgid "Facebook"
 msgstr "فيس بوك"
 
-#: functions/login/zume-login.php:1163
+#: functions/login/zume-login.php:1166
 msgid "Missing username or email address."
 msgstr "‫غياب اسم المُستخدم أو العنوان الإلكترونيّ."
 
-#: functions/login/zume-login.php:1169
+#: functions/login/zume-login.php:1172
 msgid "ERROR: Enter a username or email address."
 msgstr "خطأ: أدخل اسم مُستخدم أو عنوان إلكترونيّ."
 
-#: functions/login/zume-login.php:1173
+#: functions/login/zume-login.php:1176
 msgid "ERROR: There is no user registered with that email address."
 msgstr "خطأ: لا يوجد مُستخدم مسجَّل لهذا العنوان الإلكترونيّ."
 
-#: functions/login/zume-login.php:1178
+#: functions/login/zume-login.php:1181
 msgid "ERROR: There is no user registered with that username."
 msgstr "خطأ: لا يوجد مُستخدم مسجَّل بهذا الاسم."
 
-#: functions/login/zume-login.php:1223
+#: functions/login/zume-login.php:1226
 msgid "Someone has requested a password reset for the following account:"
 msgstr "شخص ما طلب إعادة ضبط كلمة المرور للحساب التّالي:"
 
 #. translators: %s: site name
-#: functions/login/zume-login.php:1225
+#: functions/login/zume-login.php:1228
 msgid "Site Name: %s"
 msgstr "اسم الموقع: %s"
 
 #. translators: %s: user login
-#: functions/login/zume-login.php:1227
+#: functions/login/zume-login.php:1230
 msgid "Username: %s"
 msgstr "اسم المُستخدم: %s"
 
-#: functions/login/zume-login.php:1228
+#: functions/login/zume-login.php:1231
 msgid "If this was a mistake, just ignore this email and nothing will happen."
 msgstr "إذا كان هذا خطأ، تجاهل هذا البريد الإلكترونيّ ولن يحصل شيء."
 
-#: functions/login/zume-login.php:1229
+#: functions/login/zume-login.php:1232
 msgid "To reset your password, visit the following address:"
 msgstr "لإعادة ضبط كلمة المرور الخاصّة بك، قم بزيارة العنوان التّالي:"
 
 #. translators: Password reset email subject. %s: Site name
-#: functions/login/zume-login.php:1233
+#: functions/login/zume-login.php:1236
 msgid "[%s] Password Reset"
 msgstr "‫[%s] إعادة ضبط كلمة المرور"
 
-#: functions/login/zume-login.php:1263
+#: functions/login/zume-login.php:1266
 msgid "The email could not be sent."
 msgstr "لم نتمكّن مِن إرسال البريد الإلكترونيّ."
 
-#: functions/login/zume-login.php:1263
+#: functions/login/zume-login.php:1266
 msgid "Possible reason: your host may have disabled the mail() function."
 msgstr "السّبب المُحتمَل: ربما قام مضيفك بتعطيل وظيفة البريد الإكترونيّ."
 
@@ -291,7 +291,7 @@ msgstr "الأوّل"
 msgid "Last"
 msgstr "الأخير"
 
-#: functions/zume-v4-groups.php:282
+#: functions/zume-v4-groups.php:283
 msgid "( Key not available. Check dashboard. )"
 msgstr "( المُفتاح غير متوفر. تحقّق مِن لوحة المعلومات. )"
 
@@ -467,7 +467,8 @@ msgid "Zúme Video Scripts: S.O.A.P.S."
 msgstr "‫زومي ‫نصوص الفيديو: “درس الكتاب على طريقة .S.O.A.P.S”."
 
 #: functions/enqueue-scripts.php:218 functions/zume-content.php:471
-#: template-zume-dashboard.php:342 template-zume-training.php:190
+#: template-gmo.php:92 template-zume-dashboard.php:342
+#: template-zume-training.php:190
 msgid "Accountability Groups"
 msgstr "“مجموعات المساءلة”"
 
@@ -635,7 +636,7 @@ msgstr "اسأل إن كان أي شخص في المجموعة لديه احتي
 msgid "If we want to make disciples who multiply – spiritual producers and not just consumers – then we need to learn and share four main ways God makes everyday followers more like Jesus:"
 msgstr "إذا أردنا أن نصنع تلاميذ متضاعفين - منتجون روحيّون وليس مستهلكين فقط - فنحن بحاجة إلى أن نتعلّم ونشارك ٤ طُرق رئيسيّة يستخدمها الله لكي يجعل أتباع يسوع اليوميّين أكثر شبهًا به:"
 
-#: functions/zume-content.php:695
+#: functions/zume-content.php:695 template-gmo.php:56
 msgid "Prayer"
 msgstr "صلاة"
 
@@ -1115,10 +1116,6 @@ msgstr "‫‫ابحث عن فقرة “مسير الصلاة” في دليل �
 #: functions/zume-content.php:1967
 msgid "Zúme Video Scripts: Prayer Walking"
 msgstr "‫‫‫زومي ‫نصوص الفيديو: “مسير الصلاة”"
-
-#: functions/zume-content.php:1987
-msgid "Disciple-making can be rapidly advanced by finding a person of peace, even in a place where followers of Jesus are few and far between. How do you know when you have found a person of peace and what do you when you find them?"
-msgstr "يمكن تحقيق تقدّم سريع في تلمذة التّلميذ عبر إيجاد “إنسان السلام”، حتّى حيثما يكون أتباع يسوع قليلين ومتباعدين. كيف تعرف أنّك وجدت “إنسان السلام” وماذا يجب أن تفعل حين تجده؟"
 
 #: functions/zume-content.php:2014
 msgid "Zúme Video Scripts: Person of Peace"
@@ -1698,7 +1695,7 @@ msgid "Are there advantages when networks of simple churches are connected by de
 msgstr "هل هناك منافع نربحها عندما نقوم بإيصال شبكات الكنائس البسيطة سويًّا باستخدام العلاقات الشّخصيّة العميقة؟ ما هي بعض الأمثلة التي تتبادر إلى ذهنك؟"
 
 #: functions/enqueue-scripts.php:243 functions/zume-content.php:3452
-#: template-zume-training.php:799
+#: template-gmo.php:186 template-zume-training.php:799
 msgid "Peer Mentoring Groups"
 msgstr "“مجموعات الرفقاء الناصحين”"
 
@@ -1762,23 +1759,23 @@ msgstr "تصرّف"
 msgid "To help others become and make disciples, share this www.ZumeProject.com link today! It'll soon be in 37 languages."
 msgstr "لمساعدة الآخرين حتّى يصبحوا تلاميذ ويُتلمذوا، شارك هذا الرّابط www.ZumeProject.com اليوم! قريبًا سيصبح متوفّر بـ٣٧ لغة."
 
-#: functions/zume-dashboard.php:77 functions/zume-dashboard.php:108
-#: functions/zume-dashboard.php:191 functions/zume-v4-groups.php:77
-#: functions/zume-v4-groups.php:815 functions/zume-v4-groups.php:910
-#: functions/zume-v4-groups.php:1029
+#: functions/zume-dashboard.php:81 functions/zume-dashboard.php:112
+#: functions/zume-dashboard.php:208 functions/zume-v4-groups.php:77
+#: functions/zume-v4-groups.php:816 functions/zume-v4-groups.php:918
+#: functions/zume-v4-groups.php:1037
 msgid "No Name"
 msgstr "لا اسم"
 
-#: functions/enqueue-scripts.php:332 functions/zume-functions.php:372
+#: functions/enqueue-scripts.php:332 functions/zume-functions.php:391
 #: template-zume-dashboard.php:1405
 msgid "Phone Number"
 msgstr "رقم الهاتف"
 
-#: functions/zume-functions.php:373
+#: functions/zume-functions.php:392
 msgid "User Address"
 msgstr "عنوان المُستخدم"
 
-#: functions/zume-functions.php:374
+#: functions/zume-functions.php:393
 msgid "GeoCoded IP"
 msgstr "‫GeoCoded IP"
 
@@ -2002,19 +1999,19 @@ msgstr "طباعة"
 msgid "No plans linked to this group."
 msgstr "لم يتمّ ربط أيّة خطط بهذه المجموعة."
 
-#: parts/content-share.php:85 template-pieces-page.php:220
+#: parts/content-share.php:85 template-gmo.php:226 template-pieces-page.php:220
 #: template-zume-about.php:38 template-zume-about.php:55
 #: template-zume-faq.php:199 template-zume-privacy-policy.php:186
 #: template-zume-progress.php:119
 msgid "Zúme uses an online training platform to equip participants in basic disciple-making and simple church planting multiplication principles, processes, and practices."
 msgstr "يستخدم تدريب زومي منصّة تدريبيّة عبر الإنترنت لتجهيز المشاركين في أساسيّات التّلمذة، وأيضًا في مبادئ وإجراءات وممارسات زرع الكنائس البسيطة المتضاعفة."
 
-#: template-zume-about.php:50 template-zume-faq.php:194
+#: template-gmo.php:221 template-zume-about.php:50 template-zume-faq.php:194
 #: template-zume-privacy-policy.php:181 template-zume-progress.php:114
 msgid "Goals of the Zúme Project:"
 msgstr "أهداف مشروع زومي:"
 
-#: template-zume-about.php:52 template-zume-faq.php:196
+#: template-gmo.php:223 template-zume-about.php:52 template-zume-faq.php:196
 #: template-zume-privacy-policy.php:183 template-zume-progress.php:116
 msgid "Zúme means yeast in Greek. In Matthew 13:33, Jesus is quoted as saying, \"The Kingdom of Heaven is like a woman who took yeast and mixed it into a large amount of flour until it was all leavened.\" This illustrates how ordinary people, using ordinary resources, can have an extraordinary impact for the Kingdom of God. Zúme aims to equip and empower ordinary believers to saturate the globe with multiplying disciples in our generation."
 msgstr "الكلمة “زوميه” في اللّغة اليونانيّة تعني “الخميرة”. في متّى ١٣: ٣٣، يقول لنا يسوع “يُشْبِهُ مَلَكُوتُ السَّمَاوَاتِ خَمِيرَةً أَخَذَتْهَا امْرَأَةٌ وَخَبَّأَتْهَا فِي ثَلاَثَةِ أَكْيَالِ دَقِيق حَتَّى اخْتَمَرَ الْجَمِيعُ”. هذا يُظهِر كيف أنّ النّاس العاديّين الذين يستخدمون أدوات بسيطة قادرين على إحداث تأثير كبير في ملكوت الله! زومي يهدف إلى تجهيز وتمكين المؤمنين العاديّين ليملأوا العالم بتلاميذ متضاعفين في هذا الجيل."
@@ -2293,8 +2290,8 @@ msgstr "“دورة التدريب”"
 msgid "Session 8"
 msgstr "‫الجلسة ٨"
 
-#: functions/enqueue-scripts.php:236 template-zume-dashboard.php:542
-#: template-zume-training.php:645
+#: functions/enqueue-scripts.php:236 template-gmo.php:194
+#: template-zume-dashboard.php:542 template-zume-training.php:645
 msgid "Leadership Cells"
 msgstr "“خلايا القيادة”"
 
@@ -2327,13 +2324,13 @@ msgstr "“اكتمال الفيديو التدريبي”"
 msgid "Session 10"
 msgstr "‫الجلسة ١٠"
 
-#: functions/enqueue-scripts.php:241 template-zume-dashboard.php:598
-#: template-zume-training.php:767
+#: functions/enqueue-scripts.php:241 template-gmo.php:190
+#: template-zume-dashboard.php:598 template-zume-training.php:767
 msgid "Coaching Checklist"
 msgstr "“قائمة التدريب”"
 
-#: functions/enqueue-scripts.php:242 template-zume-dashboard.php:606
-#: template-zume-training.php:786
+#: functions/enqueue-scripts.php:242 template-gmo.php:198
+#: template-zume-dashboard.php:606 template-zume-training.php:786
 msgid "Leadership in Networks"
 msgstr "“القيادة في شبكات عمل”"
 
@@ -3210,11 +3207,11 @@ msgstr "عرض كامل للصّفحة الرئيسيّة"
 msgid "Zúme Course"
 msgstr "مقرّر زومي الدّراسي"
 
-#: functions/login/zume-login.php:1309
+#: functions/login/zume-login.php:1312
 msgid "Password reset is not allowed for this user"
 msgstr "لا يُسمح بإعادة تعيين كلمة المرور لهذا المستخدم"
 
-#: functions/login/zume-login.php:1336
+#: functions/login/zume-login.php:1339
 msgid "Could not save password reset key to database."
 msgstr "تعذر حفظ مفتاح إعادة تعيين كلمة المرور لقاعدة البيانات."
 
@@ -3270,167 +3267,174 @@ msgstr "دورة زومي بصفحة واحدة"
 #: functions/zume-v4-seo-strings.php:14 parts/content-share.php:40
 #: template-pieces-page.php:179 template-zume-training.php:69
 msgid "Groups"
-msgstr "Groups"
+msgstr "مجموعات"
 
 #: functions/login/zume-login.php:93
 msgid "Failed Google Verification of User Token"
-msgstr "Failed Google Verification of User Token"
+msgstr "فشل تحقق Google من رمز المستخدم"
 
-#: functions/login/zume-login.php:221 functions/login/zume-login.php:454
+#: functions/login/zume-login.php:222 functions/login/zume-login.php:456
 msgid "Facebook email already linked with another account. Login to this account or use forgot password tool to access account."
-msgstr "Facebook email already linked with another account. Login to this account or use forgot password tool to access account."
+msgstr "البريد الإلكتروني على Facebook مرتبط بحساب آخر. تسجيل الدخول إلى هذا الحساب أو استخدام أداة نسيت كلمة المرور للوصول إلى الحساب.\n"
+""
 
-#: functions/login/zume-login.php:227 functions/login/zume-login.php:460
+#: functions/login/zume-login.php:228 functions/login/zume-login.php:462
 msgid "Facebook already linked with another account."
-msgstr "Facebook already linked with another account."
+msgstr "متصل Facebook من خلال حساب آخر."
 
-#: functions/login/zume-login.php:825 functions/login/zume-login.php:905
+#: functions/login/zume-login.php:828 functions/login/zume-login.php:908
 msgid "Oops. Something went wrong."
-msgstr "Oops. Something went wrong."
+msgstr "حصل خطب ما."
 
-#: functions/login/zume-login.php:1156
+#: functions/login/zume-login.php:1159
 msgid "Missing form verification. Refresh and try again."
-msgstr "Missing form verification. Refresh and try again."
+msgstr "مفقود من التحقق. حدّث وحاول مرة أخرى"
 
-#: functions/login/zume-login.php:1198
+#: functions/login/zume-login.php:1201
 msgid "ERROR: Invalid username or email."
-msgstr "ERROR: Invalid username or email."
+msgstr "خطأ: اسم مستخدم أو بريد إلكتروني غير صالح.\n"
+""
 
 #: template-zume-login.php:125
 msgid "Your password reset email has been sent. Check your email or junk mail for the link to reset your password."
-msgstr "Your password reset email has been sent. Check your email or junk mail for the link to reset your password."
+msgstr "تم إرسال البريد الإلكتروني الخاص بإعادة تعيين كلمة المرور الخاصة بك. تحقق من بريدك الإلكتروني أو البريد غير المهم لمعرفة الرابط لإعادة تعيين كلمة المرور الخاصة بك.\n"
+""
 
 #: template-zume-login.php:476
 msgid "Username or password does not match. Try again."
-msgstr "Username or password does not match. Try again."
+msgstr "اسم المستخدم أو كلمة السر لا يتطابق. حاول مرّة أخرى."
 
 #: template-zume-login.php:496
 msgid "Password"
-msgstr "Password"
+msgstr "كلمة السر"
 
 #: template-zume-login.php:497
 msgid "Remember Me"
-msgstr "Remember Me"
+msgstr "تذكرني"
 
 #. Template Name of the plugin/theme
 #: 
 msgid "Zume Landing"
-msgstr "Zume Landing"
+msgstr "هبوط زومي "
 
 #: template-pieces-page.php:124
 msgid "Ask Yourself"
-msgstr "Ask Yourself"
+msgstr "اسأل نفسك"
 
 #: parts/content-share.php:13 template-pieces-page.php:152
 msgid "Great job! Here's your progress with this concept"
-msgstr "Great job! Here's your progress with this concept"
+msgstr "عمل عظيم! إليك تقدّمك مع هذا المفهوم"
 
 #: functions/enqueue-scripts.php:308 parts/content-share.php:19
 #: template-pieces-page.php:158
 msgid "Heard"
-msgstr "Heard"
+msgstr "استمع"
 
 #: functions/enqueue-scripts.php:309 parts/content-share.php:23
 #: template-pieces-page.php:162
 msgid "Obeyed"
-msgstr "Obeyed"
+msgstr "أطاع"
 
 #: functions/enqueue-scripts.php:310 parts/content-share.php:27
 #: template-pieces-page.php:166
 msgid "Shared"
-msgstr "Shared"
+msgstr "شارك"
 
 #: functions/enqueue-scripts.php:311 parts/content-share.php:31
 #: template-pieces-page.php:170
 msgid "Trained"
-msgstr "Trained"
+msgstr "درّب"
 
 #: functions/zume-v4-seo-strings.php:13 parts/content-share.php:39
 #: template-pieces-page.php:178 template-zume-training.php:63
 msgid "Course Overview"
-msgstr "Course Overview"
+msgstr "نظرة عامة على الدورة"
 
 #: functions/enqueue-scripts.php:312 functions/zume-v4-seo-strings.php:15
 #: parts/content-share.php:41 template-pieces-page.php:180
 #: template-zume-training.php:75
 msgid "Checklist"
-msgstr "Checklist"
+msgstr "قائمة التدقيق"
 
 #: parts/content-share.php:42 template-pieces-page.php:181
 msgid "Start Session"
-msgstr "Start Session"
+msgstr "بدء الجلسة"
 
 #: functions/enqueue-scripts.php:279 parts/content-share.php:70
 #: template-pieces-page.php:205
 msgid "You're missing out."
-msgstr "You're missing out."
+msgstr "أنت تفوّت الفرصة."
 
 #: functions/enqueue-scripts.php:280 parts/content-share.php:70
 #: template-pieces-page.php:205
 msgid "Register Now!"
-msgstr "Register Now!"
+msgstr "تسجّل الآن!"
 
 #: functions/enqueue-scripts.php:281 parts/content-share.php:73
 #: template-pieces-page.php:208
 msgid "track your personal training progress"
-msgstr "track your personal training progress"
+msgstr "تتبع التقدم التدريبي الخاص بك\n"
+""
 
 #: functions/enqueue-scripts.php:282 parts/content-share.php:74
 #: template-pieces-page.php:209
 msgid "access group planning tools"
-msgstr "access group planning tools"
+msgstr "الوصول إلى مجموعة أدوات التخطيط\n"
+""
 
 #: functions/enqueue-scripts.php:283 parts/content-share.php:75
 #: template-pieces-page.php:210
 msgid "connect with a coach"
-msgstr "connect with a coach"
+msgstr "اتّصل مع مدرّب"
 
 #: functions/enqueue-scripts.php:284 parts/content-share.php:76
 #: template-pieces-page.php:211
 msgid "add your effort to the global vision!"
-msgstr "add your effort to the global vision!"
+msgstr "أضف جهدك إلى الرؤية العالمية!\n"
+""
 
 #: functions/enqueue-scripts.php:285 parts/content-share.php:80
 #: template-pieces-page.php:215
 msgid "Register for Free"
-msgstr "Register for Free"
+msgstr "تسجّل مجانًا"
 
 #: parts/content-share.php:86 template-pieces-page.php:221
 msgid "See Entire Training"
-msgstr "See Entire Training"
+msgstr "انظر التدريب بأكمله"
 
 #: template-zume-training.php:29
 msgid "Plan your group, add members, track your progress, connect with a coach, and add your effort to the global vision!"
-msgstr "Plan your group, add members, track your progress, connect with a coach, and add your effort to the global vision!"
+msgstr "خطط فريقك، أضف أعضاء، تتبع تقدمك، اتّصل مع مدرّب، أضف جهدك الى الرؤية العالمية!"
 
 #: template-zume-training.php:32
 msgid "Register Forever Free"
-msgstr "Register Forever Free"
+msgstr "تسجّل الى الأبد مجانًا"
 
 #: template-zume-training.php:70
 msgid "My Groups"
-msgstr "My Groups"
+msgstr "مجموعاتي"
 
 #: template-zume-training.php:76
 msgid "My Checklist"
-msgstr "My Checklist"
+msgstr "قائمة التدقيق الخاصة بي"
 
 #. Theme Name of the plugin/theme
 #: front-page.php:85 template-zume-training.php:103
 msgid "Zúme Training"
-msgstr "Zúme Training"
+msgstr "تدريب زومي"
 
 #: template-zume-training.php:104
 msgid "10 Sessions, 2 hours each, for groups of 3 - 12"
-msgstr "10 Sessions, 2 hours each, for groups of 3 - 12"
+msgstr "10 جلسات، ساعتان لكلٍ منها، لمجموعات من 3 - 12\n"
+""
 
 #: template-zume-training.php:116
 msgid "Single Column"
-msgstr "Single Column"
+msgstr "عمود منفرد"
 
 #: template-zume-training.php:117
 msgid "Show Session Plan"
-msgstr "Show Session Plan"
+msgstr "عرض خطة الجلسة"
 
 #: template-zume-training.php:125 template-zume-training.php:220
 #: template-zume-training.php:299 template-zume-training.php:372
@@ -3438,11 +3442,11 @@ msgstr "Show Session Plan"
 #: template-zume-training.php:593 template-zume-training.php:634
 #: template-zume-training.php:675 template-zume-training.php:756
 msgid "Start"
-msgstr "Start"
+msgstr "ابدأ"
 
 #: template-zume-training.php:128
 msgid "Prayer, Overview"
-msgstr "Prayer, Overview"
+msgstr "صلاة، نظرة عامة"
 
 #: template-zume-training.php:131 template-zume-training.php:210
 #: template-zume-training.php:226 template-zume-training.php:264
@@ -3456,11 +3460,11 @@ msgstr "Prayer, Overview"
 #: template-zume-training.php:746 template-zume-training.php:762
 #: template-zume-training.php:857
 msgid "5 min"
-msgstr "5 min"
+msgstr "5 دقائق"
 
-#: template-zume-training.php:142
+#: template-gmo.php:39 template-zume-training.php:142
 msgid "You'll see how God uses ordinary people doing simple things to make a big impact."
-msgstr "You'll see how God uses ordinary people doing simple things to make a big impact."
+msgstr "سوف ترى كيف يستخدم الله أناس عاديون يقومون بأمور بسيطة لإحداث تأثيرًا كبيرًا. "
 
 #: template-zume-training.php:145 template-zume-training.php:159
 #: template-zume-training.php:172 template-zume-training.php:185
@@ -3479,32 +3483,34 @@ msgstr "You'll see how God uses ordinary people doing simple things to make a bi
 #: template-zume-training.php:794 template-zume-training.php:807
 #: template-zume-training.php:820 template-zume-training.php:833
 msgid "15 min"
-msgstr "15 min"
+msgstr "15 دقيقة"
 
-#: template-zume-training.php:156
+#: template-gmo.php:35 template-zume-training.php:156
 msgid "Discover the essence of being a disciple, making a disciple, and what is the church."
-msgstr "Discover the essence of being a disciple, making a disciple, and what is the church."
+msgstr "اكتشف جوهر أن تكون تلميذًا، أن تصنع تلميذًا، وما هي الكنيسة.\n"
+""
 
-#: template-zume-training.php:169
+#: template-gmo.php:60 template-zume-training.php:169
 msgid "Being a disciple means we hear from God and we obey God."
-msgstr "Being a disciple means we hear from God and we obey God."
+msgstr "أن نكون تلميذًا يعني أن نستمع من الله وأن نطيع الله.  "
 
-#: template-zume-training.php:182
+#: template-gmo.php:77 template-zume-training.php:182
 msgid "A tool for daily Bible study that helps you understand, obey, and share God’s Word."
-msgstr "A tool for daily Bible study that helps you understand, obey, and share God’s Word."
+msgstr "أداة لدرس كتاب يومي يساعدك على الفهم، الطاعة، ومشاركة كلمة الله. "
 
-#: template-zume-training.php:195
+#: template-gmo.php:93 template-zume-training.php:195
 msgid "A tool for two or three people of the same gender to meet weekly and encourage each other in areas that are going well and reveal areas that need correction."
-msgstr "A tool for two or three people of the same gender to meet weekly and encourage each other in areas that are going well and reveal areas that need correction."
+msgstr "أداة لاثنين أو ثلاثة أشخاص من نفس الجنس للقاء أسبوعيًا وتشجيع بعضهم البعض في المناطق التي تسير على ما يرام والكشف عن المناطق التي تحتاج إلى تصحيح.\n"
+""
 
 #: template-zume-training.php:201
 msgid "Practice - Accountability groups"
-msgstr "Practice - Accountability groups"
+msgstr "ممارسة- مجموعات المساءلة"
 
 #: template-zume-training.php:204 template-zume-training.php:343
 #: template-zume-training.php:397
 msgid "45 min"
-msgstr "45 min"
+msgstr "45 دقيقة"
 
 #: template-zume-training.php:207 template-zume-training.php:286
 #: template-zume-training.php:359 template-zume-training.php:458
@@ -3512,729 +3518,871 @@ msgstr "45 min"
 #: template-zume-training.php:621 template-zume-training.php:662
 #: template-zume-training.php:743 template-zume-training.php:854
 msgid "Looking Forward"
-msgstr "Looking Forward"
+msgstr "تطلع الى الأمام"
 
 #: template-zume-training.php:223 template-zume-training.php:302
 #: template-zume-training.php:375 template-zume-training.php:474
 #: template-zume-training.php:547 template-zume-training.php:637
 #: template-zume-training.php:678 template-zume-training.php:759
 msgid "Check-in, Prayer, Overview"
-msgstr "Check-in, Prayer, Overview"
+msgstr "تسجيل الدخول، صلاة، نظرة عامة"
 
-#: template-zume-training.php:236
+#: template-gmo.php:52 template-zume-training.php:236
 msgid "You'll discover the four main ways God makes everyday followers more like Jesus."
-msgstr "You'll discover the four main ways God makes everyday followers more like Jesus."
+msgstr "سوف تكتشف الطرق الأربعة الرئيسية التي يجعل بها الله أتباعه اليوميين أشبه بيسوع.\n"
+""
 
-#: template-zume-training.php:249
+#: template-gmo.php:64 template-zume-training.php:249
 msgid "See how easy it is to spend an hour in prayer."
-msgstr "See how easy it is to spend an hour in prayer."
+msgstr "أنظر كم من السهل القضاء ساعة واحدة في الصلاة. "
 
 #: template-zume-training.php:255
 msgid "Practice - Prayer Cycle"
-msgstr "Practice - Prayer Cycle"
+msgstr "ممارسة- دائرة الصلاة"
 
 #: template-zume-training.php:258 template-zume-training.php:734
 #: template-zume-training.php:839
 msgid "60 min"
-msgstr "60 min"
+msgstr "60 دقيقة"
 
 #: template-zume-training.php:261
 msgid "Discuss - Prayer Cycle"
-msgstr "Discuss - Prayer Cycle"
+msgstr "مناقشة- دائرة الصلاة"
 
-#: template-zume-training.php:274
+#: template-gmo.php:156 template-zume-training.php:274
 msgid "A tool designed to help you be a good steward of your relationships."
-msgstr "A tool designed to help you be a good steward of your relationships."
+msgstr "أداة مصممة لكي تساعدك أن تكون مضيف جيد لعلاقاتك. "
 
 #: template-zume-training.php:280
 msgid "Practice - Create List of 100"
-msgstr "Practice - Create List of 100"
+msgstr "ممارسة- إنشاء قائمة المئة "
 
 #: template-zume-training.php:283
 msgid "30 min"
-msgstr "30 min"
+msgstr "30 دقيقة"
 
-#: template-zume-training.php:315
+#: template-gmo.php:113 template-zume-training.php:315
 msgid "Learn how God's economy is different from the world's. God invests more in those who are faithful with what they've already been given."
-msgstr "Learn how God's economy is different from the world's. God invests more in those who are faithful with what they've already been given."
+msgstr "تعلم كيف اقتصاد الله مختلف عن اقتصاد العالم. الله يستثمر أكثر في أولئك الذين كانوا أمناء بما سبق وأعطاهم.\n"
+""
 
 #: template-zume-training.php:321
 msgid "Discuss - Should every disciple share?"
-msgstr "Discuss - Should every disciple share?"
+msgstr "ناقش- هل ينبغي على كل تلميذ أن يشارك؟"
 
-#: template-zume-training.php:334
+#: template-gmo.php:160 template-zume-training.php:334
 msgid "Learn a way to share God’s Good News from the beginning of humanity all the way to the end of this age."
-msgstr "Learn a way to share God’s Good News from the beginning of humanity all the way to the end of this age."
+msgstr "تعلم طريقة لكي تشارك بها أخبار الله السارة من بدء البشرية حتى نهاية هذا الزمان. "
 
 #: template-zume-training.php:340
 msgid "Practice - Sharing the Gospel"
-msgstr "Practice - Sharing the Gospel"
+msgstr "ممارسة- مشاركة الإنجيل"
 
-#: template-zume-training.php:353
+#: template-gmo.php:105 template-zume-training.php:353
 msgid "Jesus said, “Go and make disciples of all nations, BAPTIZING them in the name of the Father and of the Son and of the Holy Spirit…” Learn how to put this into practice."
-msgstr "Jesus said, “Go and make disciples of all nations, BAPTIZING them in the name of the Father and of the Son and of the Holy Spirit…” Learn how to put this into practice."
+msgstr "قال يسوع، \"فَاذْهَبُوا وَتَلْمِذُوا جَمِيعَ الأُمَمِ وَعَمِّدُوهُمْ بِاسْمِ الآب وَالابْنِ وَالرُّوحِ الْقُدُسِ.\" تعلم كيف ية وضع هذا موضع التنفيذ."
 
-#: template-zume-training.php:388
+#: template-gmo.php:164 template-zume-training.php:388
 msgid "Learn how to share your testimony in three minutes by sharing how Jesus has impacted your life."
-msgstr "Learn how to share your testimony in three minutes by sharing how Jesus has impacted your life."
+msgstr "تعلم كيف تشارك اختبارك خلال ثلاث دقائق من خلال مشاركة كيف أثّر يسوع في حياتك."
 
 #: template-zume-training.php:394
 msgid "Practice - Share your testimony"
-msgstr "Practice - Share your testimony"
+msgstr "ممارسة- شارك اختبارك"
 
-#: template-zume-training.php:407
+#: template-gmo.php:43 template-zume-training.php:407
 msgid "Learn a simple pattern of making not just one follower of Jesus but entire spiritual families who multiply for generations to come."
-msgstr "Learn a simple pattern of making not just one follower of Jesus but entire spiritual families who multiply for generations to come."
+msgstr "تعلم نمطًا بسيطًا من صنع ليس فقط من أتباع يسوع ولكن أيضًا عائلات روحية بأكملها التي تتضاعف لأجيال قادمة.\n"
+""
 
 #: template-zume-training.php:420
 msgid "Learn what ducklings have to do with disciple-making."
-msgstr "Learn what ducklings have to do with disciple-making."
+msgstr "تعلم ما علاقة فراخ البط مع صنع التلاميذ"
 
-#: template-zume-training.php:433
+#: template-gmo.php:117 template-zume-training.php:433
 msgid "Begin to see where God’s Kingdom isn’t. These are usually the places where God wants to work the most."
-msgstr "Begin to see where God’s Kingdom isn’t. These are usually the places where God wants to work the most."
+msgstr "ابدأ في رؤية أين ليس ملكوت الله. هذه هي أكثر الأماكن التي يريد الله العمل فيها. \n"
+""
 
-#: template-zume-training.php:446
+#: template-gmo.php:101 template-zume-training.php:446
 msgid "It’s a simple way to celebrate our intimate connection and ongoing relationship with Jesus. Learn a simple way to celebrate."
-msgstr "It’s a simple way to celebrate our intimate connection and ongoing relationship with Jesus. Learn a simple way to celebrate."
+msgstr "إنها طريقة بسيطة لكي نحتفل باتصالنا الحميمي وعلاقتنا المستمرّة مع يسوع. تعلم طريقة بسيطة لكي تحتفل. "
 
 #: template-zume-training.php:452
 msgid "Practice - Lord's Supper"
-msgstr "Practice - Lord's Supper"
+msgstr "ممارسة- العشاء الرباني"
 
 #: template-zume-training.php:455 template-zume-training.php:618
 #: template-zume-training.php:781 template-zume-training.php:845
 #: template-zume-training.php:851
 msgid "10 min"
-msgstr "10 min"
+msgstr "10 دقائق"
 
-#: template-zume-training.php:487
+#: template-gmo.php:177 template-zume-training.php:487
 msgid "It’s a simple way to obey God’s command to pray for others. And it's just what it sounds like — praying to God while walking around!"
-msgstr "It’s a simple way to obey God’s command to pray for others. And it's just what it sounds like — praying to God while walking around!"
+msgstr "إنها طريقة بسيطة لإطاعة وصية الله في الصلاة من أجل الآخرين. وهذا ما يبدو عليه الأمر - الصلاة لله أثناء التجول!\n"
+""
 
-#: template-zume-training.php:500
+#: template-gmo.php:173 template-zume-training.php:500
 msgid "Learn who a person of peace might be and how to know when you've found one."
-msgstr "Learn who a person of peace might be and how to know when you've found one."
+msgstr "تعرف على إنسان السلام وكيف تعرف أنك عثرت عليه.  "
 
-#: template-zume-training.php:513
+#: template-gmo.php:68 template-zume-training.php:513
 msgid "Practice a simple mnemonic to remind you of ways to pray for others."
-msgstr "Practice a simple mnemonic to remind you of ways to pray for others."
+msgstr "مارس أداة بسيطة للذاكرة لتذكيرك بطرق للصلاة من اجل الآخرين. "
 
 #: template-zume-training.php:519
 msgid "Practice - BLESS Prayer"
-msgstr "Practice - BLESS Prayer"
+msgstr "ممارسة- صلاة المباركة"
 
 #: template-zume-training.php:525
 msgid "Practice - Prayer Walking"
-msgstr "Practice - Prayer Walking"
+msgstr "ممارسة- صلاة المسير"
 
 #: template-zume-training.php:528 template-zume-training.php:612
 #: template-zume-training.php:659
 msgid "90 min"
-msgstr "90 min"
+msgstr "90 دقيقة"
 
-#: template-zume-training.php:560
+#: template-gmo.php:81 template-zume-training.php:560
 msgid "It's important what disciples know — but it's much more important what they DO with what they know."
-msgstr "It's important what disciples know — but it's much more important what they DO with what they know."
+msgstr "ما يعرفه التلاميذ مهم- لكن ما يصنعون بما يعرفونه أهم بكثير.\n"
+""
 
-#: template-zume-training.php:573
+#: template-gmo.php:89 template-zume-training.php:573
 msgid "A 3/3 Group is a way for followers of Jesus to meet, pray, learn, grow, fellowship and practice obeying and sharing what they've learned. In this way, a 3/3 Group is not just a small group but a Simple Church."
-msgstr "A 3/3 Group is a way for followers of Jesus to meet, pray, learn, grow, fellowship and practice obeying and sharing what they've learned. In this way, a 3/3 Group is not just a small group but a Simple Church."
+msgstr "مجموعة 3/3 هي طريقة لكي يلتقي بها تابعي يسوع، للصلاة، للتعلم، للنمو، للشركة وممارسة طاعة ومشاركة ما تعلموه. بهذه الطريقة، مجموعة 3/3 ليست مجموعة صغيرة فحسب، بل هي كنيسة بسيطة. "
 
 #: template-zume-training.php:576
 msgid "75 min"
-msgstr "75 min"
+msgstr "75 دقيقة"
 
-#: template-zume-training.php:603
+#: template-gmo.php:140 template-zume-training.php:603
 msgid "Learn the training cycle and consider how it applies to disciple making."
-msgstr "Learn the training cycle and consider how it applies to disciple making."
+msgstr "تعلم دورة التدريب والنظر في كيفية تطبيقه في صنع التلميذ.\n"
+""
 
 #: template-zume-training.php:609 template-zume-training.php:656
 msgid "Practice - 3/3 Group"
-msgstr "Practice - 3/3 Group"
+msgstr "ممارسة- مجموعة 3/3"
 
 #: template-zume-training.php:615
 msgid "Discuss - 3/3 Group Experience"
-msgstr "Discuss - 3/3 Group Experience"
+msgstr "مناقشة- تجربة المجموعة 3/3 "
 
-#: template-zume-training.php:650
+#: template-gmo.php:195 template-zume-training.php:650
 msgid "A Leadership Cell is a way someone who feels called to lead can develop their leadership by practicing serving."
-msgstr "A Leadership Cell is a way someone who feels called to lead can develop their leadership by practicing serving."
+msgstr "خلية القيادة هي طريقة يمكن لأي شخص يشعر أنه مدعو للقيادة أن يطور قيادته من خلال ممارسة الخدمة.\n"
+""
 
-#: template-zume-training.php:691
+#: template-gmo.php:144 template-zume-training.php:691
 msgid "See how disciple making doesn't have to be linear. Multiple things can happen at the same time."
-msgstr "See how disciple making doesn't have to be linear. Multiple things can happen at the same time."
+msgstr "انظر كيف أنه ليس من الضرورة أن يكون صنع التلاميذ خطيًا. أشياء متعددة ممكن أن تحصل في الوقت عينه. "
 
-#: template-zume-training.php:704
+#: template-gmo.php:148 template-zume-training.php:704
 msgid "Multiplying matters and multiplying quickly matters even more. See why pace matters."
-msgstr "Multiplying matters and multiplying quickly matters even more. See why pace matters."
+msgstr "التضاعف مهم والتضاعف بسرعة مهم أكثر بعد. أنظر لماذا السرعة مهمة."
 
-#: template-zume-training.php:717
+#: template-gmo.php:97 template-zume-training.php:717
 msgid "Learn how to obey Jesus' commands by going AND staying."
-msgstr "Learn how to obey Jesus' commands by going AND staying."
+msgstr "تعلم كيف تطيع وصايا يسوع من خلال الذهاب والبقاء."
 
 #: template-zume-training.php:724
 msgid "login required"
-msgstr "login required"
+msgstr "التسجيل مطلوب"
 
 #: template-zume-training.php:725
 msgid "Create and share your plan for how you will implement the Zúme tools over the next three months."
-msgstr "Create and share your plan for how you will implement the Zúme tools over the next three months."
+msgstr "قم بإنشاء ومشاركة خطتك لكيفية تطبيق أدوات زومي خلال الأشهر الثلاثة المقبلة.\n"
+""
 
 #: template-zume-training.php:731
 msgid "Practice - Create 3-Month Plan"
-msgstr "Practice - Create 3-Month Plan"
+msgstr "ممارسة- انشاء خطة لثلاث أشهر"
 
 #: template-zume-training.php:737
 msgid "Discuss - Share 3-Month Plan with group"
-msgstr "Discuss - Share 3-Month Plan with group"
+msgstr "ناقش- شارك خطة الثلاث أشهر مع مجموعة"
 
 #: template-zume-training.php:740
 msgid "20 min"
-msgstr "20 min"
+msgstr "20 دقيقة"
 
-#: template-zume-training.php:772
+#: template-gmo.php:191 template-zume-training.php:772
 msgid "A powerful tool you can use to quickly assess your own strengths and vulnerabilities when it comes to making disciples who multiply."
-msgstr "A powerful tool you can use to quickly assess your own strengths and vulnerabilities when it comes to making disciples who multiply."
+msgstr "أداة قوية يمكنك استخدامها لتقيّم بسرعة نقاط القوة والضعف الخاصة بك عندما يتعلق الأمر بصنع تلاميذ يتضاعفون.\n"
+""
 
 #: template-zume-training.php:778
 msgid "Practice - Coaching Checklist Self-Assessment"
-msgstr "Practice - Coaching Checklist Self-Assessment"
+msgstr "ممارسة- قائمة التدريب للتقييم الذاتي"
 
-#: template-zume-training.php:791
+#: template-gmo.php:199 template-zume-training.php:791
 msgid "Learn how multiplying churches stay connected and live life together as an extended, spiritual family."
-msgstr "Learn how multiplying churches stay connected and live life together as an extended, spiritual family."
+msgstr "تعلم كيف تبقى الكنائس المتضاعفة متّصلة وتحيا حياة سويًا كعائلة روحية ممتدّة. "
 
-#: template-zume-training.php:804
+#: template-gmo.php:187 template-zume-training.php:804
 msgid "This is a group that consists of people who are leading and starting 3/3 Groups. It also follows a 3/3 format and is a powerful way to assess the spiritual health of God’s work in your area."
-msgstr "This is a group that consists of people who are leading and starting 3/3 Groups. It also follows a 3/3 format and is a powerful way to assess the spiritual health of God’s work in your area."
+msgstr "هذه مجموعة تتألف من أشخاص يقودون ويبدأون مجموعات 3/3. إنها أيضًا تتبع تنسيق 3/3 وهي طريقة قوية لكي تقيّم الصحة الروحية لعمل الله في مجالك. "
 
 #: template-zume-training.php:836
 msgid "Practice - 3/3 Peer Mentoring"
-msgstr "Practice - 3/3 Peer Mentoring"
+msgstr "ممارسة- 3/3 إشراف الرفاق"
 
 #: template-zume-training.php:842
 msgid "Practice - Four Fields"
-msgstr "Practice - Four Fields"
+msgstr "ممارسة- أربعة مجالات"
 
 #: template-zume-training.php:848
 msgid "Practice - Generation Mapping"
-msgstr "Practice - Generation Mapping"
+msgstr "ممارسة- تخطيط الجيل"
 
 #. Template Name of the plugin/theme
 #: functions/zume-v4-seo-strings.php:11
 msgid "Training"
-msgstr "Training"
+msgstr "تدريب"
 
 #. Template Name of the plugin/theme
 #: 
 msgid "Zúme Course v4"
-msgstr "Zúme Course v4"
+msgstr "مواد زومي v4"
 
 #: front-page.php:90
 msgid "Explore Training"
-msgstr "Explore Training"
+msgstr "تدريب الإسكتشاف"
 
 #: template-zume-training.php:817
 msgid "The four fields diagnostic chart is a simple tool to be used by a leadership cell to reflect on the status of current efforts and the kingdom activity around them."
-msgstr "The four fields diagnostic chart is a simple tool to be used by a leadership cell to reflect on the status of current efforts and the kingdom activity around them."
+msgstr "يُعد مخطط تشخيص الحقول الأربعة أداة بسيطة تستخدمها خلية القيادة للتأمل في حالة الجهود الحالية ونشاط المملكة من حولهم."
 
 #: template-zume-training.php:830
 msgid "Generation mapping is another simple tool to help leaders in a movement understand the growth around them."
-msgstr "Generation mapping is another simple tool to help leaders in a movement understand the growth around them."
+msgstr "يُعد تخطيط الأجيال أداة بسيطة أخرى لمساعدة القادة في الحركة على فهم النمو من حولهم.\n"
+""
 
 #. Theme URI of the plugin/theme
 #: 
 msgid "https://github.com/ZumeProject/zume-training"
-msgstr "https://github.com/ZumeProject/zume-training"
+msgstr "https://github.com/ZumeProject/zume-training\n"
+""
 
 #. Description of the plugin/theme
 #: 
 msgid "Zúme Training for multiplying disciples."
-msgstr "Zúme Training for multiplying disciples."
+msgstr "تدريب زومي لمضاعفة التلاميذ"
 
 #. Author of the plugin/theme
 #: 
 msgid "Zume Training"
-msgstr "Zume Training"
+msgstr "تدريب زومي"
 
 #: template-zume-faq.php:31
 msgid "Yes. There are no premium versions, no trial periods, no follow-on sales of products. Freely we've received. Freely we give."
-msgstr "Yes. There are no premium versions, no trial periods, no follow-on sales of products. Freely we've received. Freely we give."
+msgstr "نعم. لا توجد إصدارات متميزة، ولا توجد فترات تجريبية، ولا توجد مبيعات متابعة للمنتجات. مجانًا أخذنا. مجانًا نعطي.\n"
+""
 
-#: functions/enqueue-scripts.php:214 template-zume-training.php:136
+#: functions/enqueue-scripts.php:214 template-gmo.php:38
+#: template-zume-training.php:136
 msgid "God Uses Ordinary People"
-msgstr ""
+msgstr "يستخدم الله أشخاص عاديين. "
 
-#: functions/enqueue-scripts.php:215 template-zume-training.php:150
+#: functions/enqueue-scripts.php:215 template-gmo.php:34
+#: template-zume-training.php:150
 msgid "Simple Definition of Disciple and Church"
-msgstr ""
+msgstr "تعريف بسيط للتلميذ والكنيسة"
 
-#: functions/enqueue-scripts.php:216 template-zume-training.php:164
+#: functions/enqueue-scripts.php:216 template-gmo.php:59
+#: template-zume-training.php:164
 msgid "Spiritual Breathing is Hearing and Obeying God"
-msgstr ""
+msgstr "التنفس الروحي هو استماع وطاعة الله"
 
-#: functions/enqueue-scripts.php:217 template-zume-training.php:177
+#: functions/enqueue-scripts.php:217 template-gmo.php:76
+#: template-zume-training.php:177
 msgid "SOAPS Bible Reading"
-msgstr ""
+msgstr "SOAPS قراءة الكتاب المقدس"
 
-#: functions/enqueue-scripts.php:219 template-zume-training.php:231
+#: functions/enqueue-scripts.php:219 template-gmo.php:51
+#: template-zume-training.php:231
 msgid "Consumer vs Producer Lifestyle"
-msgstr ""
+msgstr "نمط حياة المستهلك مقابل المنتج "
 
-#: functions/enqueue-scripts.php:220 template-zume-training.php:244
+#: functions/enqueue-scripts.php:220 template-gmo.php:63
+#: template-zume-training.php:244
 msgid "How to Spend an Hour in Prayer"
-msgstr ""
+msgstr "كيفية إمضاء ساعة في الصلاة"
 
-#: functions/enqueue-scripts.php:221
+#: functions/enqueue-scripts.php:221 template-gmo.php:155
 msgid "Relational Stewardship – List of 100"
-msgstr ""
+msgstr "الإشراف العلائقي - قائمة المئة "
 
-#: functions/enqueue-scripts.php:222 template-zume-training.php:310
+#: functions/enqueue-scripts.php:222 template-gmo.php:112
+#: template-zume-training.php:310
 msgid "The Kingdom Economy"
-msgstr ""
+msgstr "اقتصاد الملكوت"
 
-#: functions/enqueue-scripts.php:223 template-zume-training.php:329
+#: functions/enqueue-scripts.php:223 template-gmo.php:159
+#: template-zume-training.php:329
 msgid "The Gospel and How to Share It"
-msgstr ""
+msgstr "الإنجيل وكيفية مشاركته"
 
-#: functions/enqueue-scripts.php:224 template-zume-training.php:348
+#: functions/enqueue-scripts.php:224 template-gmo.php:104
+#: template-zume-training.php:348
 msgid "Baptism and How To Do It"
-msgstr ""
+msgstr "المعمودية وكيفية القيام به"
 
-#: functions/enqueue-scripts.php:225 template-zume-training.php:383
+#: functions/enqueue-scripts.php:225 template-gmo.php:163
+#: template-zume-training.php:383
 msgid "Prepare Your 3-Minute Testimony"
-msgstr ""
+msgstr "أعدّ شهادة الثلاث دقائق"
 
-#: functions/enqueue-scripts.php:226 template-zume-training.php:402
+#: functions/enqueue-scripts.php:226 template-gmo.php:42
+#: template-zume-training.php:402
 msgid "Vision Casting the Greatest Blessing"
-msgstr ""
+msgstr "سكب رؤية أعظم بركة"
 
-#: functions/enqueue-scripts.php:227
+#: functions/enqueue-scripts.php:227 template-gmo.php:135
 msgid "Duckling Discipleship – Leading Immediately"
-msgstr ""
+msgstr "تلمذة فرخ البطة- القيادة على الفور"
 
 #: functions/enqueue-scripts.php:228
 msgid "Eyes to See Where The Kingdom Isn't"
-msgstr ""
+msgstr "عيون لترى أين ملكوت الله غير موجود"
 
 #: functions/enqueue-scripts.php:229
 msgid "The Lord's Supper and How To Lead It"
-msgstr ""
+msgstr "العشاء الرباني وكيفية قيادته"
 
-#: functions/enqueue-scripts.php:230 template-zume-training.php:482
+#: functions/enqueue-scripts.php:230 template-gmo.php:176
+#: template-zume-training.php:482
 msgid "Prayer Walking and How To Do It"
-msgstr ""
+msgstr "صلاة المسير وكيفية فعلها"
 
-#: functions/enqueue-scripts.php:231 template-zume-training.php:495
+#: functions/enqueue-scripts.php:231 template-gmo.php:172
+#: template-zume-training.php:495
 msgid "A Person of Peace and How To Find One"
-msgstr ""
+msgstr "إنسان السلام وكيفية إيجاده"
 
-#: functions/enqueue-scripts.php:232 template-zume-training.php:508
+#: functions/enqueue-scripts.php:232 template-gmo.php:67
+#: template-zume-training.php:508
 msgid "The BLESS Prayer Pattern"
-msgstr ""
+msgstr "نمط صلاة المباركة"
 
-#: functions/enqueue-scripts.php:233 template-zume-training.php:555
+#: functions/enqueue-scripts.php:233 template-gmo.php:80
+#: template-zume-training.php:555
 msgid "Faithfulness is Better Than Knowledge"
-msgstr ""
+msgstr "الأمانة أفضل من المعرفة"
 
-#: functions/enqueue-scripts.php:234 template-zume-training.php:568
+#: functions/enqueue-scripts.php:234 template-gmo.php:88
+#: template-zume-training.php:568
 msgid "3/3 Group Meeting Pattern"
-msgstr ""
+msgstr "نمط لقاء مجموعة 3/3"
 
-#: functions/enqueue-scripts.php:235 template-zume-training.php:598
+#: functions/enqueue-scripts.php:235 template-gmo.php:139
+#: template-zume-training.php:598
 msgid "Training Cycle for Maturing Disciples"
-msgstr ""
+msgstr "دورة تدريب للتلاميذ النامين"
 
-#: functions/enqueue-scripts.php:237 template-zume-training.php:686
+#: functions/enqueue-scripts.php:237 template-gmo.php:143
+#: template-zume-training.php:686
 msgid "Expect Non-Sequential Growth"
-msgstr ""
+msgstr "توقع نمو غير متسلسل"
 
-#: functions/enqueue-scripts.php:238 template-zume-training.php:699
+#: functions/enqueue-scripts.php:238 template-gmo.php:147
+#: template-zume-training.php:699
 msgid "Pace of Multiplication Matters"
-msgstr ""
+msgstr "سرعة المضاعفة مهمة"
 
-#: functions/enqueue-scripts.php:239 template-zume-training.php:712
+#: functions/enqueue-scripts.php:239 template-gmo.php:96
+#: template-zume-training.php:712
 msgid "Always Part of Two Churches"
-msgstr ""
+msgstr "دائمًا جزء من كنيستين"
 
 #: functions/enqueue-scripts.php:244 template-zume-training.php:812
 msgid "Four Fields Tool"
-msgstr ""
+msgstr "أداة الأربع مجالات"
 
 #: functions/enqueue-scripts.php:245 template-zume-training.php:825
 msgid "Generational Mapping"
-msgstr ""
+msgstr "تخطيط الأجيال"
 
 #: parts/content-share.php:54 parts/content-share.php:90
 #: template-pieces-page.php:193 template-pieces-page.php:225
 msgid "Zúme Training is freely offered as part of larger Zúme Vision."
-msgstr ""
+msgstr "تدريب زومي مقدّم مجانًا كجزء من رؤية زومي الأكبر."
 
 #: parts/content-share.php:55 parts/content-share.php:91
 #: template-pieces-page.php:194 template-pieces-page.php:226
 msgid "Learn more about the Zúme.Vision"
-msgstr ""
+msgstr "تعلم أكثر عن رؤية زومي"
 
 #: template-pieces-page.php:50
 msgid "This concept is called \"%1$s\" in session %2$s of the Zúme Training"
-msgstr ""
+msgstr "يُسمى هذا المفهوم \"٪ 1 $ s\" في الجلسة ٪ 2 $ s من تدريب زومي\n"
+""
 
 #: template-pieces-page.php:83
 msgid "Listen and Read Along"
-msgstr ""
+msgstr "اسمتع واقرأ سويًا "
 
 #: template-pieces-page.php:87
 msgid "Download Free Guidebook"
-msgstr ""
+msgstr "حمّل الدليل المجاني"
 
 #: template-pieces-page.php:90
 msgid "Watch This Video"
-msgstr ""
+msgstr "شاهد هذا الفيديو"
 
 #: template-zume-about.php:18
 msgid "About Zúme Training"
-msgstr ""
+msgstr "عن تدريب زومي"
 
 #: template-zume-login.php:96
 msgid "Get new password"
-msgstr ""
+msgstr "احصل على كلمة سر جديدة"
 
 #: template-zume-resources.php:76
 msgid "Zúme Training Resources"
-msgstr ""
+msgstr "موارد تدريب زومي"
 
 #: template-zume-training.php:269
 msgid "Relational Stewardship - List of 100"
-msgstr ""
+msgstr "الإشراف العلائقي - قائمة المئة \n"
+""
 
 #: template-zume-training.php:415
 msgid "Duckling Discipleship - Leading Immediately"
-msgstr ""
+msgstr "تلمذة فرخ البطة- القيادة على الفور"
 
 #: template-zume-training.php:428
 msgid "Eyes to See Where the Kingdom Isn't"
-msgstr ""
+msgstr "عيون لترى الأماكن التي تفتقد الى ملكوت الله"
 
 #: template-zume-training.php:441
 msgid "The Lord's Supper and How to Lead It"
-msgstr ""
+msgstr "العشاء الرباني وكيفية قيادته"
 
 #: template-zume-vision.php:22
 msgid "The vision behind Zúme Training"
-msgstr ""
+msgstr "الرؤية وراء تدريب زومي"
 
 #: template-zume-vision.php:24
 msgid "to saturate the world with multiplying disciples"
-msgstr ""
+msgstr "لإشباع العالم مع تلاميذ يتضاعفون"
 
 #: template-zume-vision.php:24
 msgid "in our generation."
-msgstr ""
+msgstr "في جيلنا"
 
 #: template-zume-vision.php:31
 msgid "Learn More @ Zúme.Vision"
-msgstr ""
+msgstr "تعلم أكثر عن رؤية زومي"
 
 #: template-zume-vision.php:42
 msgid "Our Core Strategy"
-msgstr ""
+msgstr "إستراتيجيتنا الأساسية\n"
+""
 
 #: template-zume-vision.php:43
 msgid "Holiness, Prayer, Training Saturation, Church Saturation"
-msgstr ""
+msgstr "القداسة، الصلاة، تدريب الإشباع، إشباع الكنيسة"
 
 #: template-zume-vision.php:50
 msgid "Holiness, Obedience, and Love"
-msgstr ""
+msgstr "القداسة، الطاعة، المحبة"
 
 #: template-zume-vision.php:51
 msgid "We need to be disciples worth multiplying."
-msgstr ""
+msgstr "نحتاج أن نكون تلاميذ يستحقون التضاعف. "
 
 #: template-zume-vision.php:56
 msgid "Jesus is our measurement."
-msgstr ""
+msgstr "يسوع هو قياسنا"
 
 #: template-zume-vision.php:57
 msgid "Not you. Not me. Not history. Not ideals. Not rituals. Jesus and Jesus alone."
-msgstr ""
+msgstr "ليس انت. ليس انا. ليس التاريخ. ليس المثل العليا. ليست الطقوس. يسوع ويسوع وحده.\n"
+""
 
 #: template-zume-vision.php:58
 msgid "How he lived. What he said. How he loved. Everything. In this, we aspire to be marked by immediate, radical, costly obedience to Jesus, like the heroes of the faith that came before us."
-msgstr ""
+msgstr "كيف عاش. ماذا قال. كيف أحبّ. كل شيء. في هذا، نحن نطمح إلى أن نتميز بطاعة فورية وجذرية ومكلفة ليسوع، مثل أبطال الإيمان الذين أتوا قبلنا. "
 
 #: template-zume-vision.php:59
 msgid "Jesus is both the measurement and His Spirit is our hope to become like Him. And the day we see kingdom fruit surrounding our lives and the loves of our friends, it will be because his Spirit has moved through us."
-msgstr ""
+msgstr "يسوع هو القياس وروحه هو رجاءنا لكي نصبح مثله. واليوم الذي فيه نرى ثمار الملكوت تحيط بحياتنا وحياة أصدقائنا، سيكون هذا لأن روحه قد تحرّك من خلالنا. "
 
 #: template-zume-vision.php:80
 msgid "Extraordinary Prayer"
-msgstr ""
+msgstr "صلاة غير عادية"
 
 #: template-zume-vision.php:81
 msgid "Extraordinary prayer has proceeded every disciple making movement in history."
-msgstr ""
+msgstr "إن الصلاة الغير عادية جعلت كل حركة صُنع التلاميذ تتقدم خلال التاريخ. "
 
 #: template-zume-vision.php:87
 msgid "You have not because you ask not (James 4:2). If we want to see movement, we need to ask for it."
-msgstr ""
+msgstr "لَسْتُمْ تَمْتَلِكُونَ، لأَنَّكُمْ لاَ تَطْلُبُونَ (يعقوب 4: 2). إن كنّا نريد أن نرى حركة، نحتاج أن نطلب من أجلها. "
 
 #: template-zume-vision.php:106
 msgid "Training Saturation"
-msgstr ""
+msgstr "تدريب الإشباع"
 
 #: template-zume-vision.php:107
 msgid "(1 Training &#xF7; Population)"
-msgstr ""
+msgstr "(1 تدريب &#xF7; السكان)"
 
 #: template-zume-vision.php:110
 msgid "1 Training"
-msgstr ""
+msgstr "1 تدريب"
 
 #: template-zume-vision.php:112 template-zume-vision.php:148
 msgid "Every 5,000 People (North America)"
-msgstr ""
+msgstr "كل 5000 شخص (شمال أمريكا) "
 
 #: template-zume-vision.php:113 template-zume-vision.php:149
 msgid "Every 50,000 People (Globally)"
-msgstr ""
+msgstr "كل 50000 شخص (عالمًا)"
 
 #: template-zume-vision.php:119
 msgid "Disciple multiplication ideas are scriptural, but often missed. A simple training in multiplication principles can unlock even established believers from unfruitful lives."
-msgstr ""
+msgstr "أفكار مضاعفة التلاميذ هي كتابية، لكنها تُفوّت في الكثير من الأحيان. تدريبٌ بسيطٌ في مبادئ المضاعفة يمكن أن يُطلق حتى المؤمنين الراسخين من حياة غير مثمرة.\n"
+""
 
 #: template-zume-vision.php:120
 msgid "Live trainings are often best. But the people who need trained, so vastly extends beyond the live trainings available. Zume.Training is an online, in-life, on-demand training for groups to get paradigm-shifting multiplication training."
-msgstr ""
+msgstr "التدريبات المباشرة غالبًا ما تكون أفضل. لكن عدد الأشخاص الذين يحتاجون إلى تدريب يمتد إلى حد كبير إلى ما وراء التدريبات المتاحة. تدريب زومي عبارة عن تدريب عبر الإنترنت، في الحياة، بناء على الطلب للمجموعات للحصول على تحويل نموذج تدريب التضاعف. "
 
 #: template-zume-vision.php:121
 msgid "We suspect, especially in places where the church has been, we will need a training movement before we see a disciple making movement."
-msgstr ""
+msgstr "نحن نشك، خاصة في الأماكن التي كانت الكنيسة فيها، سنحتاج إلى حركة تدريب قبل أن نرى حركة صنع التلميذ."
 
 #: template-zume-vision.php:142
 msgid "Simple Church Saturation"
-msgstr ""
+msgstr "إشباع كنيسة بسيطة"
 
 #: template-zume-vision.php:143
 msgid "(2 Simple Churches &#xF7; Population)"
-msgstr ""
+msgstr "(كنيستان بسيطتان&#xF7; السكان)"
 
 #: template-zume-vision.php:146
 msgid "2 Simple Churches"
-msgstr ""
+msgstr "كنيستان بسيطتان"
 
 #: template-zume-vision.php:155
 msgid "Many churches in one place is a blessing, but many churches in many places is a greater blessing. And churches moving into places where there has never been a church one of the greatest blessings."
-msgstr ""
+msgstr "العديد من الكنائس في مكان واحد هي بركة، لكن العديد من الكنائس في أماكن عديدة هي بركة أكبر. وانتقال الكنائس إلى الأماكن التي لم تكن فيها كنيسة من قبل هي من أعظم البركات.\n"
+""
 
 #: template-zume-vision.php:156
 msgid "As the saying goes, \"Plan your trust, don't trust your plan\". We know it is the Father's heart to have families of believers in every tongue, tribe, and nation. He has also invited us to be his co-workers in reconciliation. So these goals of 1 training and 2 churches come from our trust in the one who can do it."
-msgstr ""
+msgstr "كما يقول المثل، \"خطط ثقتك، لا تثق في خطتك\". نحن نعلم أنه من قلب الآب وجود أسر مؤمنة بكل لسان وقبيلة وأمة. كما دعانا إلى أن نكون زملاءه في المصالحة. لذلك فإن هذه الأهداف المتمثلة في تدريب 1 وكنيستين تأتي من ثقتنا في الشخص الذي يمكنه القيام بذلك.\n"
+""
 
 #. Template Name of the plugin/theme
 #: 
 msgid "Pieces Page"
-msgstr ""
+msgstr "صفحة الأجزاء"
 
 #. Template Name of the plugin/theme
 #: 
 msgid "Zúme Vision"
-msgstr ""
+msgstr "رؤية زومي"
 
 #: functions/zume-content.php:1987
 msgid "Disciple-making can be rapidly advanced by finding a person of peace, even in a place where followers of Jesus are few and far between. How do you know when you have found a person of peace and what do you do when you find them?"
-msgstr "يمكن تحقيق تقدّم سريع في تلمذة التّلميذ عبر إيجاد “إنسان السلام”، حتّى حيثما يكون أتباع يسوع قليلين ومتباعدين. كيف تعرف أنّك وجدت “إنسان السلام” وماذا يجب أن تفعل حين تجده؟"
+msgstr "يمكن تحقيق تقدّم سريع في التلمذة عبر إيجاد إنسان السلام، حتّى حيثما يكون أتباع يسوع قليلين ومتباعدين. كيف تعرف أنّك وجدت إنسان السلام وماذا يجب أن تفعل حين تجده؟"
 
 #: functions/enqueue-scripts.php:120
 msgid "This form is required."
-msgstr ""
+msgstr "هذه الإستمارة مطلوبة"
 
 #: functions/enqueue-scripts.php:261
 msgid "Members List (optional)"
-msgstr ""
+msgstr "قائمة الأعضاء (اختياري)\n"
+""
 
 #: functions/enqueue-scripts.php:262
 msgid "Location"
-msgstr ""
+msgstr "الموقع"
 
 #: functions/enqueue-scripts.php:263
 msgid "Connection to server failed. Try again."
-msgstr ""
+msgstr "فشل الإتصال بالشبكة. حاول مرة أخرى. "
 
 #: functions/enqueue-scripts.php:264
 msgid "Accepted invitation"
-msgstr ""
+msgstr "قبل الدعوة"
 
 #: functions/enqueue-scripts.php:267
 msgid "add"
-msgstr ""
+msgstr "أضف"
 
 #: functions/enqueue-scripts.php:268
 msgid "Zoom, click, or search for your location."
-msgstr ""
+msgstr "التكبير، انقر فوق، أو ابحث عن موقعك.\n"
+""
 
 #: functions/enqueue-scripts.php:269
 msgid "find you current location"
-msgstr ""
+msgstr "جد موقعك الحالي"
 
 #: functions/enqueue-scripts.php:270
 msgid "Save Clicked Location"
-msgstr ""
+msgstr "حفظ الموقع المنقور "
 
 #: functions/enqueue-scripts.php:271
 msgid "Save Searched Location"
-msgstr ""
+msgstr "حفظ الموقع الذي تم البحث عنه"
 
 #: functions/enqueue-scripts.php:272
 msgid "Save Current Location"
-msgstr ""
+msgstr "حفظ الموقع الحالي"
 
 #: functions/enqueue-scripts.php:273
 msgid "You haven't selected anything yet. Click, search, or allow auto location."
-msgstr ""
+msgstr "لم تختر أي شيء بعد. انقر، ابحث، أو اسمح بموقع تلقائي"
 
 #: functions/enqueue-scripts.php:274
 msgid "update"
-msgstr ""
+msgstr "تحديث"
 
 #: functions/enqueue-scripts.php:275
 msgid "Course Complete"
-msgstr ""
+msgstr "اكتمال الدورة "
 
 #: functions/enqueue-scripts.php:276
 msgid "Next Session"
-msgstr ""
+msgstr "الجلسة التالية"
 
 #: functions/enqueue-scripts.php:288
 msgid "Not Leading a Group"
-msgstr ""
+msgstr "لا تقود مجموعة"
 
 #: functions/enqueue-scripts.php:289
 msgid "Create New Group"
-msgstr ""
+msgstr "انشاء مجموعة جديدة"
 
 #: functions/enqueue-scripts.php:291
 msgid "Which group are you leading?"
-msgstr ""
+msgstr "أي مجموعة تقودها؟"
 
 #: functions/enqueue-scripts.php:292
 msgid "Number of Members"
-msgstr ""
+msgstr "عدد الأعضاء"
 
 #: functions/enqueue-scripts.php:294
 msgid "Group addition failed. Try again."
-msgstr ""
+msgstr "فشلت إضافة المجموعة. حاول مرة أخرى. "
 
 #: functions/enqueue-scripts.php:298
 msgid "Are you sure you want to archive this group?"
-msgstr ""
+msgstr "هل أنت متأكد أنك تريد أرشفة هذه المجموعة؟\n"
+""
 
 #: functions/enqueue-scripts.php:299
 msgid "Show Archived Groups"
-msgstr ""
+msgstr "أظهر المجموعات المأرشفة"
 
 #: functions/enqueue-scripts.php:300
 msgid "Re-Activate"
-msgstr ""
+msgstr "إعادة التفعيل"
 
 #: functions/enqueue-scripts.php:301 functions/enqueue-scripts.php:305
 msgid "Delete Forever"
-msgstr ""
+msgstr "حذف الى الابد"
 
 #: functions/enqueue-scripts.php:303
 msgid "Close"
-msgstr ""
+msgstr "إغلاق"
 
 #: functions/enqueue-scripts.php:304
 msgid "Are you sure you want to delete this group?"
-msgstr ""
+msgstr "هل أنت متأكد أنك تريد حذف هذه المجموعة؟"
 
 #: functions/enqueue-scripts.php:307
 msgid "32 Tools and Concepts"
-msgstr ""
+msgstr "32 أداة ومفهوم"
 
 #: functions/enqueue-scripts.php:313
 msgid "Progress Overview"
-msgstr ""
+msgstr "نظرة عامة على التقدم"
 
 #: functions/enqueue-scripts.php:314
 msgid "There are 32 concepts and tools in Zúme training. Each concept or tool is intended to be practiced personally and trained into others. Use the progression of \"heard\", \"obeyed\", \"shared\", and \"trained\" as a way of tracking your mastery of the disciple-making training."
-msgstr ""
+msgstr "هناك 32 مفهوم وأداة في تدريب زومي. كل مفهوم أو أداة يُقصد الى أن يُمارس شخصيًا ويُدرّب به الآخرين. استخدم تقدم \"سُمع\"، \"أطاع\"، \"شارك\" \"وتدرّب\"  كوسيلة لتتبع إتقانك للتدريب على صنع التلميذ."
 
 #: functions/enqueue-scripts.php:315
 msgid "Definitions"
-msgstr ""
+msgstr "التعريفات"
 
 #: functions/enqueue-scripts.php:316
 msgid "\"Heard\" means you gained awareness. You have moved from not knowing about a tool or concept to knowing about it."
-msgstr ""
+msgstr "\"سُمع\" يعني أنك اكتشبت التوعية. لقد انتقلت من عدم معرفة أداة أو مفهموم الى المعرفة."
 
 #: functions/enqueue-scripts.php:317
 msgid "\"Obeyed\" means you took personal action to practice or apply a concept or tool. Obeying with tools might look like beginning to use them with others, while obeying with concepts might look like changing thinking or priorities."
-msgstr ""
+msgstr "\"أطاع\" يعني أنك اتخذت اجراءً شخصيًا لكي تمارس أو تطبق مفهوم أو أداة. قد تبدو الطاعة للأدوات في البداية لإستخدامها مع الآخرين، بينما الطاعة مع المفاهيم قد تبدو تغيير الفكر أو الأولويات. \n"
+"\n"
+" "
 
 #: functions/enqueue-scripts.php:318
 msgid "\"Shared\" means you helped someone else hear. This step is essential to truly understanding the concept or tool and preparing you to train others."
-msgstr ""
+msgstr "\"شارك\" يعني أنك ساعدت شخصًا آخر يسمع. هذه الخطوة ضرورية لفهم المفهوم أو الأداة حقًا وإعدادك لتدريب الآخرين."
 
 #: functions/enqueue-scripts.php:319
 msgid "\"Trained\" means you coached someone else to hear, obey and share. More than sharing knowledge with someone, you have helped them become a sharer of the tool or concept."
-msgstr ""
+msgstr "\"درّب\" يعني أنك دربت شخصًا آخر على السماع والطاعة والمشاركة. أكثر من مشاركة المعرفة مع شخص ما، لقد ساعدته في أن يصبح مشاركًا للأداة أو المفهوم.\n"
+""
 
 #: functions/enqueue-scripts.php:336
 msgid "What is your city or state or postal code?"
-msgstr ""
+msgstr "ما هي مدينتك أو الولاية أو الرمز البريدي؟\n"
+""
 
 #: functions/enqueue-scripts.php:342
 msgid "Affiliation Notes"
-msgstr ""
+msgstr "ملاحظات الانتماء\n"
+""
 
 #: functions/enqueue-scripts.php:345
 msgid "You have requested coaching."
-msgstr ""
+msgstr "لقد طلبت التدريب.\n"
+""
 
 #: functions/enqueue-scripts.php:130 functions/enqueue-scripts.php:346
 msgid "No location matches found. Try a less specific address."
-msgstr ""
+msgstr "لم يتم العثور على تطابقات الموقع. جرّب عنوانًا أقل تحديدًا.\n"
+""
 
 #: functions/enqueue-scripts.php:347
 msgid "Oops. Something went wrong. Try again!"
-msgstr ""
+msgstr " هناك خطأ ما. حاول مجددًا!\n"
+""
 
 #: functions/enqueue-scripts.php:348
 msgid "Zúme Network"
-msgstr ""
+msgstr "شبكة زومي"
 
 #: functions/enqueue-scripts.php:350
 msgid "Click the circles and check off your progress on each of the concepts."
-msgstr ""
+msgstr "انقر على الدوائر وتحقق من تقدمك في كل مفهوم. \n"
+""
 
 #: functions/enqueue-scripts.php:352
 msgid "Add Group"
-msgstr ""
+msgstr "إضافة مجموعة\n"
+""
 
 #: functions/enqueue-scripts.php:354
 msgid "delete"
-msgstr ""
+msgstr "حذف"
 
 #: functions/zume-v4-seo-strings.php:12
 msgid "Course"
-msgstr ""
+msgstr "دورة"
 
 #: functions/zume-v4-seo-strings.php:26
 msgid "Vision"
-msgstr ""
+msgstr "رؤية"
 
 #: functions/zume-v4-seo-strings.php:27
 msgid "Mobile App"
-msgstr ""
+msgstr "تطبيق الهاتف المحمول"
 
 #: functions/enqueue-scripts.php:122
 msgid "example: Denver, CO 80120"
-msgstr ""
+msgstr "مثلًا: دينفر، كو 80120"
 
 #: functions/enqueue-scripts.php:126
 msgid "Linked Accounts"
-msgstr ""
+msgstr "الحسابات المرتبطة"
+
+#: template-gmo.php:19
+msgid "Welcome to God’s Family!"
+msgstr "أهلًابك الى عائلة الله!"
+
+#: template-gmo.php:22
+msgid "Below you will find videos and pages to help you learn what it means to be a follower of Jesus and to help others follow Jesus with you. A follower of Jesus is also called a disciple."
+msgstr "ستجد أدناه مقاطع فيديو وصفحات لمساعدتك في معرفة ما يعنيه أن تكون من أتباع يسوع ومساعدة الآخرين على متابعة يسوع معك. تابع يسوع يُدعى أيضًا تلميذ. \n"
+""
+
+#: template-gmo.php:24
+msgid "The lessons and concepts listed below can be explored on your own, but we recommend you stop now and ask, \"Who else could I learn and practice these important things with?\". If a name comes into your mind, reach out to them. If no name comes to mind, ask God to send you someone to join you on your journey."
+msgstr "يمكن استكشاف الدروس والمفاهيم الواردة أدناه بنفسك، لكننا نوصيك أن تتقف الآن وتسأل، \"هل من شخص آخر يمكنني أن أتعلم وأمارس هذه الأشياء المهمة معهم؟\". إذا ظهر اسم في ذهنك، فتواصل معهم. إذا لم يتبادر أي اسم إلى ذهنك، اطلب من الله أن يرسل لك شخصًا للانضمام إليك في رحلتك.\n"
+""
+
+#: template-gmo.php:31
+msgid "What is a follower of Jesus?"
+msgstr "ما هو تابع يسوع؟"
+
+#: template-gmo.php:49
+msgid "What are the activities of a follower of Jesus?"
+msgstr "ما هي أنشطة تابع يسوع؟"
+
+#: template-gmo.php:73
+msgid "Bible Reading"
+msgstr "قراءة الكتاب المقدس"
+
+#: template-gmo.php:85
+msgid "Community"
+msgstr "الجماعة"
+
+#: template-gmo.php:100
+msgid "The Lord’s Supper and How To Lead It"
+msgstr "العشاء الرباني وكيفية قيادته"
+
+#: template-gmo.php:109
+msgid "Sacrifice and Suffering"
+msgstr "التضحية والمعاناة"
+
+#: template-gmo.php:116
+msgid "Eyes to See Where The Kingdom Isn’t"
+msgstr "عيون لترى الأماكن التي تفتقد الى ملكوت الله"
+
+#: template-gmo.php:124
+msgid "How do I obey Jesus and help others become followers with me?"
+msgstr "كيف أطيع يسوع وأساعد الآخرين ليصبحوا أتباع معي؟"
+
+#: template-gmo.php:126
+msgid "Then Jesus came to them and said, \"All authority in heaven and on earth has been given to me. Therefore go and make disciples of all nations, baptizing them in the name of the Father and of the Son and of the Holy Spirit, and teaching them to obey everything I have commanded you. And surely I am with you always, to the very end of the age.\""
+msgstr "فَتَقَدَّمَ يَسُوعُ وَكَلَّمَهُمْ قَائِلًا: «دُفِعَ إِلَيَّ كُلُّ سُلْطَانٍ فِي السَّمَاءِ وَعَلَى الأَرْضِ، فَاذْهَبُوا وَتَلْمِذُوا جَمِيعَ الأُمَمِ وَعَمِّدُوهُمْ بِاسْمِ الآب وَالابْنِ وَالرُّوحِ الْقُدُسِ. وَعَلِّمُوهُمْ أَنْ يَحْفَظُوا جَمِيعَ مَا أَوْصَيْتُكُمْ بِهِ. وَهَا أَنَا مَعَكُمْ كُلَّ الأَيَّامِ إِلَى انْقِضَاءِ الدَّهْرِ»."
+
+#: template-gmo.php:127
+msgid "Matthew 28:18-20"
+msgstr "متى 28: 18-20"
+
+#: template-gmo.php:131
+msgid "Teaching others to obey and follow Jesus with you"
+msgstr "تعليم الآخرين أن يطيعوا ويتبعوا يسوع معك\n"
+""
+
+#: template-gmo.php:136
+msgid "Learn what ducklings have to do with disciple-making"
+msgstr "تعلم ما علاقة فرخ البطة مع صُنع التلاميذ"
+
+#: template-gmo.php:152
+msgid "Speaking to people YOU KNOW about Jesus"
+msgstr "التكلم مع أشخاص تعرفهم عن يسوع"
+
+#: template-gmo.php:169
+msgid "Speaking to people YOU DON'T KNOW about Jesus"
+msgstr "التكلم مع أشخاص لا تعرفهم عن يسوع"
+
+#: template-gmo.php:183
+msgid "What if many friends, family, and others start following Jesus with me?"
+msgstr "ماذا لو بدأ العديد  من الأصدقاء، العائلة، وغيرهم في اتباع يسوع معي؟ "
+
+#: template-gmo.php:210
+msgid "Watch this important video explaining the 4 relationships of your new life."
+msgstr "شاهد هذا الفيديو المهم الذي يشرح العلاقات الأربع في حياتك الجديدة. "
+
+#. Template Name of the plugin/theme
+#: 
+msgid "GMO - Welcome to Zúme"
+msgstr "GMO- أهلًا بك الى زومي "
+
+#. Template Name of the plugin/theme
+#: 
+msgid "Redirect to Training"
+msgstr "إعادة التوجيه الى التدريب"
 
