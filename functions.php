@@ -85,6 +85,24 @@ if ( is_admin() ) {
     require_once( 'functions/zume-dt-integration/menu-and-tabs.php' );
     require_once( 'functions/zume-resource-metabox.php' ); // zume logging of critical path actions
     require_once( 'functions/zume-dt-integration/system-check-metabox.php' );
+
+    add_filter( 'manage_pages_columns', 'add_template_column' );
+    add_action( 'manage_pages_custom_column', 'add_template_value', 10, 2 );
+}
+
+function add_template_column( $cols ) {
+    $cols['template'] = __('Template');
+    return $cols;
+}
+function add_template_value( $column_name, $post_id ) {
+    if ( 'template' === $column_name ) {
+        $template = get_post_meta( $post_id, '_wp_page_template', true );
+        if ( isset($template) && $template ) {
+            echo $template;
+        } else {
+            echo __('None');
+        }
+    }
 }
 
 /**
@@ -107,3 +125,5 @@ function zume_v4_ready_language() {
 
     return $ready[$current] ?? false;
 }
+
+
