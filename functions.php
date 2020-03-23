@@ -123,6 +123,7 @@ function zume_v4_ready_language() {
     $ready['fr'] = true;
     $ready['ha'] = true;
     $ready['bho'] = true;
+    $ready['ar'] = true;
 
     $current = zume_current_language();
 
