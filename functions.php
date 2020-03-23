@@ -120,6 +120,7 @@ function zume_v4_ready_language() {
 
     $ready['en'] = true;
     $ready['pt'] = true;
+    $ready['fr'] = true;
 
     $current = zume_current_language();
 

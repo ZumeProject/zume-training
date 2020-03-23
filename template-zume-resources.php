@@ -27,7 +27,7 @@ $zendesk_enable = true;
                     <div class="grid-x grid-margin-x vertical-padding max-content-width">
                         <div class="medium-6 cell vertical-padding">
                             <h3 class="white"><?php esc_html_e( 'Promotional Materials', 'zume' ) ?></h3>
-                            <ul class="resource-list">
+                            <ul class="main-resource-list">
                                 <li>
                                     <a href="<?php echo esc_url( Zume_Course::get_download_by_key( '33' ) ) ?>"
                                        target="_blank" rel="noopener noreferrer">
@@ -53,7 +53,7 @@ $zendesk_enable = true;
                         </div>
                         <div class="medium-6 cell vertical-padding">
                             <h3 class="white"><?php esc_html_e( 'Project Information', 'zume' ) ?></h3>
-                            <ul class="resource-list">
+                            <ul class="main-resource-list">
                                 <li>
                                     <a href="https://docs.google.com/spreadsheets/d/12NUKhKfJl4ZnqegEdkHadlYMf2oHuEKIjNmyZI78TeA/edit?usp=sharing"
                                        target="_blank" rel="noopener noreferrer">
