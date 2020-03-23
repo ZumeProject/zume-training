@@ -136,6 +136,11 @@ function zume_get_landing_title( int $landing_id, $slug = 'en' ) {
         // find post by title
         $post_id = zume_landing_page_post_id( $landing_id );
 
+        $meta = get_post_meta( $post_id, 'zume_piece_h1', true );
+        if ( $meta ) {
+            return $meta;
+        }
+
         // get translation id by eng id
         if ( empty( $slug ) ) {
             $slug = 'en';
