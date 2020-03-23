@@ -3917,7 +3917,7 @@ msgstr "تعلم أكثر عن رؤية زومي"
 
 #: template-pieces-page.php:50
 msgid "This concept is called \"%1$s\" in session %2$s of the Zúme Training"
-msgstr "يُسمى هذا المفهوم \"٪1$s\" في الجلسة ٪2$s من تدريب زومي\n"
+msgstr "يُسمى هذا المفهوم \"%1$s\" في الجلسة %2$s من تدريب زومي\n"
 ""
 
 #: template-pieces-page.php:83
