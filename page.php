@@ -2,9 +2,9 @@
 
 <div id="content">
 
-    <div id="inner-content grid-x grid-padding-x">
+    <div id="inner-content grid-x grid-padding-x grid-margin-x training pieces">
 
-        <div id="simple-main" class="cell padding-top-1" role="main">
+        <div id="simple-main" class="cell padding-1" role="main">
 
             <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
