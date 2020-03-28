@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: How to Follow Jesus
+Template Name: What is a follower of Jesus?
 */
 $current_language = zume_current_language();
 ?>
@@ -31,7 +31,7 @@ $current_language = zume_current_language();
                 <div class="cell">
 
                     <h1 class="primary-color-text center padding-bottom-2">
-                        <strong><?php esc_html_e( "How to Follow Jesus", 'zume' ) ?></strong>
+                        <strong>How to Follow Jesus"</strong>
                     </h1>
 
                     <div class="center">

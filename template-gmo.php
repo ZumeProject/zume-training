@@ -263,7 +263,7 @@ $current_language = zume_current_language();
 <div class="grid-x grid-margin-x grid-margin-y grid-padding vertical-padding" style="background-color:#323A68;">
     <div class="large-2 cell"></div>
     <div class="cell large-8" style="color: white;">
-        <h3 class="secondary" style="color: white;"><?php esc_html_e( 'Goals of the Zúme Training:', 'zume' ) ?></h3>
+        <h3 class="secondary" style="color: white;"><?php echo esc_html( 'Goals of the Zúme Training:' ) ?></h3>
         <p>
             <?php esc_html_e( 'Zúme means yeast in Greek. In Matthew 13:33, Jesus is quoted as saying, "The Kingdom of Heaven is like a woman who took yeast and mixed it into a large amount of flour until it was all leavened." This illustrates how ordinary people, using ordinary resources, can have an extraordinary impact for the Kingdom of God. Zúme aims to equip and empower ordinary believers to saturate the globe with multiplying disciples in our generation.', 'zume' ) ?>
         </p>

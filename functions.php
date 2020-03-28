@@ -91,7 +91,7 @@ if ( is_admin() ) {
 }
 
 function add_template_column( $cols ) {
-    $cols['template'] = __('Template');
+    $cols['template'] = 'Template';
     return $cols;
 }
 function add_template_value( $column_name, $post_id ) {
@@ -100,7 +100,7 @@ function add_template_value( $column_name, $post_id ) {
         if ( isset($template) && $template ) {
             echo $template;
         } else {
-            echo __('None');
+            echo 'None';
         }
     }
 }

@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "Project-Id-Version: Zúme Project\n"
-"POT-Creation-Date: 2020-03-28 11:14-0600\n"
+"POT-Creation-Date: 2020-03-28 11:23-0600\n"
 "PO-Revision-Date: 2018-03-06 11:15-0700\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -103,14 +103,6 @@ msgstr ""
 
 #: front-page.php:237
 msgid "Find out more about Zúme"
-msgstr ""
-
-#: functions.php:94
-msgid "Template"
-msgstr ""
-
-#: functions.php:103
-msgid "None"
 msgstr ""
 
 #: functions/activator.php:55
@@ -3238,6 +3230,7 @@ msgid ""
 "Watch this important video explaining the 4 relationships of your new life."
 msgstr ""
 
+#. Template Name of the plugin/theme
 #: template-gmo.php:56 template-how-to-follow-jesus.php:56
 msgid "What is a follower of Jesus?"
 msgstr ""
@@ -3491,10 +3484,6 @@ msgid ""
 "extended, spiritual family."
 msgstr ""
 
-#: template-gmo.php:266
-msgid "Goals of the Zúme Training:"
-msgstr ""
-
 #: template-gmo.php:268 template-how-to-follow-jesus.php:270
 #: template-zume-about.php:52 template-zume-faq.php:196
 #: template-zume-privacy-policy.php:183 template-zume-progress.php:116
@@ -3505,11 +3494,6 @@ msgid ""
 "ordinary people, using ordinary resources, can have an extraordinary impact "
 "for the Kingdom of God. Zúme aims to equip and empower ordinary believers to "
 "saturate the globe with multiplying disciples in our generation."
-msgstr ""
-
-#. Template Name of the plugin/theme
-#: template-how-to-follow-jesus.php:34
-msgid "How to Follow Jesus"
 msgstr ""
 
 #: template-pieces-page.php:50
