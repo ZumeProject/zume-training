@@ -2013,7 +2013,7 @@ class Zume_Course_Content {
                     <?php esc_html_e( 'CHECK-IN', 'zume' ) ?>
                 </div>
                 <div class="large-9 cell activity-description">
-                    <?php esc_html_e( "At the end of the last session, everyone in your group in two ways:", 'zume' ) ?>
+                    <?php esc_html_e( "At the end of the last session, everyone in your group was challenged in two ways:", 'zume' ) ?>
                     <br><br>
                     <ol>
                         <li><?php esc_html_e( "You were asked to share your 3-Minute Testimony with at least one person on your List of 100.", 'zume' ) ?>
