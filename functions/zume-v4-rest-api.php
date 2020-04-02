@@ -127,6 +127,12 @@ class Zume_V4_REST_API {
                 }
             ),
         ) );
+        register_rest_route( $namespace, '/piece/(?P<id>\d+)', array(
+            array(
+                'methods'         => WP_REST_Server::READABLE,
+                'callback'        => array( $this, 'piece_content' ),
+            ),
+        ) );
     }
 
     public function progress_update( WP_REST_Request $request){
@@ -444,6 +450,14 @@ class Zume_V4_REST_API {
 
     }
 
+    public function piece_content( WP_REST_Request $request ) {
+        $params = $request->get_params();
+        if ( ! isset( $params['id'] ) ) {
+            return new WP_Error( "log_param_error", "Missing parameters", array( 'status' => 400 ) );
+        }
+        require_once( 'zume-gmo.php' );
+        return get_gmo_content( $params['id'] );
+    }
 
 }
 Zume_V4_REST_API::instance();

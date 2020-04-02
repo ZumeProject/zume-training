@@ -31,7 +31,7 @@ $current_language = zume_current_language();
                 <div class="cell">
 
                     <h1 class="primary-color-text center padding-bottom-2">
-                        <strong>How to Follow Jesus"</strong>
+                        <strong>How to Follow Jesus</strong>
                     </h1>
 
                     <div class="center">
