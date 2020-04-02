@@ -5,7 +5,8 @@ Template Name: GMO - Welcome to Zúme
 $current_language = zume_current_language();
 ?>
 
-<?php get_header(); ?>
+<?php get_header('gmo'); ?>
+
 <style>
     #page-content a {
         text-decoration: underline !important;
