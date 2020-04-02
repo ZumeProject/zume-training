@@ -165,7 +165,6 @@ function get_gmo_content( $postid ) {
                                         <a href="<?php echo esc_url( zume_training_url() ) ?>#panel1" class="button primary-button-hollow large"><?php echo esc_html__( "Course Overview", 'zume' ) ?></a>
                                         <a href="<?php echo esc_url( zume_training_url() ) ?>#panel2" class="button primary-button-hollow large"><?php echo esc_html__( "Groups", 'zume' ) ?></a>
                                         <a href="<?php echo esc_url( zume_training_url() ) ?>#panel3" class="button primary-button-hollow large"><?php echo esc_html__( "Checklist", 'zume' ) ?></a>
-                                        <a onclick="open_session( <?php echo esc_attr( $session_number ) ?> )" class="button primary-button-hollow large" id="session_start_<?php echo esc_attr( $session_number ) ?>"><?php echo esc_html__( "Start Session", 'zume' ) ?></a>
                                     </p>
                                 </div>
                                 <script>
