@@ -30,6 +30,9 @@ $current_language = zume_current_language();
     .accordion-content {
         border: 0;
     }
+    .flex-video, .responsive-embed {
+        margin-bottom:0 !important;
+    }
 </style>
 <script type="application/javascript">
     jQuery(document).ready(function() {
