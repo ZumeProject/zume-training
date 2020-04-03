@@ -82,7 +82,7 @@ $current_language = zume_current_language();
                         <p><?php esc_html_e( "Watch this important video explaining the 4 relationships of your new life.", 'zume' ) ?></p>
                     </div>
                     <div class="center small-video">
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/k6AYmR2nPSs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <iframe src="https://player.vimeo.com/video/403362200" width="640" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
                     </div>
 
                     <br>
