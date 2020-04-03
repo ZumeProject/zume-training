@@ -444,6 +444,28 @@ class Zume_V4_REST_API {
                 "contact_id" => $body['ID'],
                 "date_transferred" => time()
             ] );
+        } else {
+            $data = array(
+                'payload'   => json_encode( array(
+                        "channel"       =>  '#errors',
+                        "text"          =>  'Failed Coaching Request: ' . maybe_serialize( $body ) . ' --- ' . maybe_serialize( $fields ),
+                        "username"	    =>  'error-bot',
+                        "icon_emoji"    =>  'ghost'
+                    )
+                )
+            );
+            // Post our data via the slack webhook endpoint using wp_remote_post
+            $posting_to_slack = wp_remote_post( 'https://hooks.slack.com/services/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', array(
+                    'method' => 'POST',
+                    'timeout' => 30,
+                    'redirection' => 5,
+                    'httpversion' => '1.0',
+                    'blocking' => true,
+                    'headers' => array(),
+                    'body' => $data,
+                    'cookies' => array()
+                )
+            );
         }
 
         return $result;
