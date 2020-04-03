@@ -5,7 +5,7 @@ Template Name: GMO - Welcome to Zúme
 $current_language = zume_current_language();
 ?>
 
-<?php get_header('gmo'); ?>
+<?php get_header( 'gmo' ); ?>
 
 <style>
     #page-content a {
@@ -100,12 +100,12 @@ $current_language = zume_current_language();
                             <div class="accordion-content" data-tab-content>
                                 <div class="inset">
                                     <p>
-                                        <strong><a data-value="20731" class="gmo open-modal"><?php esc_html_e( "Simple Definition of Disciple and Church", 'zume' ) ?></a></strong><br>
-                                        <?php esc_html_e( "Discover the essence of being a disciple, making a disciple, and what is the church.", 'zume' ) ?>
-                                    </p>
-                                    <p>
                                         <strong><a data-value="20730" class="gmo open-modal"><?php esc_html_e( "God Uses Ordinary People", 'zume' ) ?></a></strong><br>
                                         <?php esc_html_e( "You'll see how God uses ordinary people doing simple things to make a big impact.", 'zume' ) ?>
+                                    </p>
+                                    <p>
+                                        <strong><a data-value="20731" class="gmo open-modal"><?php esc_html_e( "Simple Definition of Disciple and Church", 'zume' ) ?></a></strong><br>
+                                        <?php esc_html_e( "Discover the essence of being a disciple, making a disciple, and what is the church.", 'zume' ) ?>
                                     </p>
                                     <p>
                                         <a data-value="20744" class="gmo open-modal"><strong><?php esc_html_e( "Vision Casting the Greatest Blessing", 'zume' ) ?></strong></a><br>
@@ -292,7 +292,12 @@ $current_language = zume_current_language();
                     </ul>
 
                 </div> <!-- cell -->
+                <div class="cell padding-vertical-1 center" style="border-top:1px solid lightgrey">
+                    Zúme Training is a proud partner of the Godlife community.<br>
+                    <img src="<?php echo esc_url( get_stylesheet_directory_uri() ) ?>/assets/images/godlife-logo-small.png"  alt="God life logo" />
+                </div>
             </div> <!-- center grid-->
+
         </div> <!-- center column -->
 
         <div class="cell medium-2"></div>

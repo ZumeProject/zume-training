@@ -221,8 +221,8 @@ function get_gmo_content( $postid ) {
             </div> <!-- grid-x -->
             <?php
 
-    $contents = ob_get_contents();
-    ob_end_clean();
-    return $contents;
+            $contents = ob_get_contents();
+            ob_end_clean();
+            return $contents;
 
 }
