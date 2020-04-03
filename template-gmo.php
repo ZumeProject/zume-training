@@ -38,14 +38,14 @@ $current_language = zume_current_language();
     jQuery(document).ready(function() {
         let open_modal = function( id ) {
             let pieces = jQuery('#pieces-content')
-            pieces.html(`<span><img src="<?php echo get_stylesheet_directory_uri() . '/spinner.svg' ?>" width="30px;"></span>`)
+            pieces.html(`<span><img src="<?php echo esc_url( get_stylesheet_directory_uri() ) . '/spinner.svg' ?>" width="30px;"></span>`)
 
             jQuery.ajax({
                 type: "GET",
                 contentType: "application/json; charset=utf-8",
                 url: '<?php echo esc_url_raw( rest_url() ) ?>zume/v4/piece/' + id,
                 beforeSend: function(xhr) {
-                    xhr.setRequestHeader('X-WP-Nonce', '<?php echo wp_create_nonce( 'wp_rest' ) ?>' );
+                    xhr.setRequestHeader('X-WP-Nonce', '<?php echo esc_attr( wp_create_nonce( 'wp_rest' ) ) ?>' );
                 },
             })
                 .done(function (data) {

@@ -1,11 +1,12 @@
 <?php
 /*
-Template Name: GMO - Welcome to Zúme
+Template Name: How to Follow Jesus
 */
 $current_language = zume_current_language();
 ?>
 
 <?php get_header(); ?>
+
 <style>
     #page-content a {
         text-decoration: underline !important;
@@ -29,19 +30,22 @@ $current_language = zume_current_language();
     .accordion-content {
         border: 0;
     }
+    .flex-video, .responsive-embed {
+        margin-bottom:0 !important;
+    }
 </style>
 <script type="application/javascript">
     jQuery(document).ready(function() {
         let open_modal = function( id ) {
             let pieces = jQuery('#pieces-content')
-            pieces.html(`<span><img src="<?php echo get_stylesheet_directory_uri() . '/spinner.svg' ?>" width="30px;"></span>`)
+            pieces.html(`<span><img src="<?php echo esc_url( get_stylesheet_directory_uri() ) . '/spinner.svg' ?>" width="30px;"></span>`)
 
             jQuery.ajax({
                 type: "GET",
                 contentType: "application/json; charset=utf-8",
                 url: '<?php echo esc_url_raw( rest_url() ) ?>zume/v4/piece/' + id,
                 beforeSend: function(xhr) {
-                    xhr.setRequestHeader('X-WP-Nonce', '<?php echo wp_create_nonce( 'wp_rest' ) ?>' );
+                    xhr.setRequestHeader('X-WP-Nonce', '<?php echo esc_attr( wp_create_nonce( 'wp_rest' ) ) ?>' );
                 },
             })
                 .done(function (data) {
@@ -57,6 +61,7 @@ $current_language = zume_current_language();
             open_modal( jQuery(this).data('value') )
         })
     })
+
 </script>
 <div id="page-content" class="padding-top-1">
 
@@ -76,8 +81,8 @@ $current_language = zume_current_language();
                     <div class="center">
                         <p><?php esc_html_e( "Watch this important video explaining the 4 relationships of your new life.", 'zume' ) ?></p>
                     </div>
-                    <div class="center small-video" style="border:1px solid #e6e6e6">
-                        <iframe src="https://player.vimeo.com/video/403362200" width="640" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                    <div class="center small-video">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/k6AYmR2nPSs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
 
                     <br>
@@ -85,8 +90,6 @@ $current_language = zume_current_language();
                     <p class="center"><strong>Bookmark this page as a future resource!</strong></p><br>
 
                     <p>The sections below, will teach you what it means to be a follower (disciple) of Jesus.</p>
-
-
 
                     <ul class="accordion" data-accordion>
 
@@ -97,12 +100,12 @@ $current_language = zume_current_language();
                             <div class="accordion-content" data-tab-content>
                                 <div class="inset">
                                     <p>
-                                        <strong><a data-value="20731" class="gmo open-modal"><?php esc_html_e( "Simple Definition of Disciple and Church", 'zume' ) ?></a></strong><br>
-                                        <?php esc_html_e( "Discover the essence of being a disciple, making a disciple, and what is the church.", 'zume' ) ?>
-                                    </p>
-                                    <p>
                                         <strong><a data-value="20730" class="gmo open-modal"><?php esc_html_e( "God Uses Ordinary People", 'zume' ) ?></a></strong><br>
                                         <?php esc_html_e( "You'll see how God uses ordinary people doing simple things to make a big impact.", 'zume' ) ?>
+                                    </p>
+                                    <p>
+                                        <strong><a data-value="20731" class="gmo open-modal"><?php esc_html_e( "Simple Definition of Disciple and Church", 'zume' ) ?></a></strong><br>
+                                        <?php esc_html_e( "Discover the essence of being a disciple, making a disciple, and what is the church.", 'zume' ) ?>
                                     </p>
                                     <p>
                                         <a data-value="20744" class="gmo open-modal"><strong><?php esc_html_e( "Vision Casting the Greatest Blessing", 'zume' ) ?></strong></a><br>
@@ -289,7 +292,9 @@ $current_language = zume_current_language();
                     </ul>
 
                 </div> <!-- cell -->
+
             </div> <!-- center grid-->
+
         </div> <!-- center column -->
 
         <div class="cell medium-2"></div>
