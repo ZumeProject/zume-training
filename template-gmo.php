@@ -89,7 +89,7 @@ $current_language = zume_current_language();
 
                     <p class="center"><strong>Bookmark this page as a future resource!</strong></p><br>
 
-                    <p>The sections below, will teach you what it means to be a follower (disciple) of Jesus.</p>
+                    <p>The sections below will teach you what it means to be a follower (disciple) of Jesus.</p>
 
                     <ul class="accordion" data-accordion>
 
