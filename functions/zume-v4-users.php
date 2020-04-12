@@ -8,7 +8,7 @@ class Zume_V4_Users {
         unset( $zume_user_sites[1] );
         unset( $zume_user_sites[14] );
 
-        if ( count( $zume_user_sites ) > 1 ) {
+        if ( count( $zume_user_sites ) >= 1 ) {
             return $zume_user_sites;
         }
         return false;
