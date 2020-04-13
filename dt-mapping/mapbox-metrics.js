@@ -447,6 +447,9 @@ jQuery(document).ready(function() {
         map.on('dragend', function() {
           jQuery('#cross-hair').hide()
         })
+        map.on('dblclick', function(){
+          console.log('yes')
+        })
 
         // grid memory vars
         window.previous_grid_id = 0
