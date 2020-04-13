@@ -141,16 +141,16 @@ Template Name: GMO - Welcome to Zúme
                         <strong>Welcome to God’s family!</strong>
                     </h1>
 
-                    <div class="cell">
+                    <div class="cell padding-bottom-1">
                         <p>You’ve just made a decision to follow Jesus. Where do you go from here?</p>
                         <p>We are Zúme, a GodLife Community. Through Zúme, we want to give you free resources to grow in your faith and connect you to a community of people all around the world striving to grow in knowledge and faith of the hope that Jesus gives us. Let’s get started! </p>
                         <p>A great first step is this video that explains 4 relationships we all have with God, creation, others, and ourselves. We pray that as you watch that video God will lead you to think of several others who need to see it, and who will eventually join you in following Jesus. </p>
                     </div>
-                    <div class="center small-video">
+                    <div class="center small-video " style="border: 1px solid lightgrey">
                         <iframe src="https://player.vimeo.com/video/403362200" width="640" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
                     </div>
 
-                <div class="cell">
+                <div class="cell  padding-top-1">
 
                     <p>Next we have a collection of resources to help you follow Jesus. Bookmark, explore, and share these Biblical resources that are being used around the globe.</p>
 
