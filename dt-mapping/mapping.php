@@ -122,8 +122,8 @@ if ( ! class_exists( 'DT_Mapping_Module' ) ) {
                 if ( 'mapping' === substr( $url_path, '0', $url_base_length ) ) {
                     add_filter( 'dt_templates_for_urls', [ $this, 'add_url' ] ); // add custom URL
                     add_filter( 'dt_metrics_menu', [ $this, 'menu' ], 99 );
-                    add_action('wp_enqueue_scripts', [$this, 'drilldown_script'], 89);
-                    add_action('wp_enqueue_scripts', [$this, 'scripts'], 99);
+                    add_action( 'wp_enqueue_scripts', [ $this, 'drilldown_script' ], 89 );
+                    add_action( 'wp_enqueue_scripts', [ $this, 'scripts' ], 99 );
                 }
             }
             else if ( $url_base === substr( $url_path, '0', $url_base_length ) && ! DT_Mapbox_API::get_key() ) {
