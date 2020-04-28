@@ -19,6 +19,7 @@ msgid "Login"
 msgstr "Ingia"
 
 #: front-page.php:86
+#, fuzzy
 msgid "Zúme Training is an on-line and in-life learning experience designed for small groups who follow Jesus to learn how to obey His Great Commission and make disciples who multiply."
 msgstr "Mafundisho ya Zúme ni ya kimtandao na mafundisho ya kimaisha iliyobuniwa kwa ajili ya vikundi vidogo vinavyomfuata Yesu ili kujifunza jinsi ya kutii Agizo Kuu lake na kuwafanya wanafunzi wanaojizidisha."
 
@@ -345,6 +346,7 @@ msgid "Group Prayer (5min)"
 msgstr "Kikundi cha maombi (dakika 15)"
 
 #: functions/zume-content.php:217
+#, fuzzy
 msgid "Begin with prayer. Spiritual insight and transformation is not possible without the Holy Spirit. Take time as a group to invite Him to guide you over this session."
 msgstr "Anza kwa maombi. Uelewa wa kiroho na mabadiliko hauwezekani bila Roho Mtakatifu. Fanya muda kama kikundi kumwalika aongoze juu ya kipindi hiki."
 
@@ -396,10 +398,12 @@ msgid "DISCUSS"
 msgstr "JADILI"
 
 #: functions/zume-content.php:276
+#, fuzzy
 msgid "If Jesus intended every one of His followers to obey His Great Commission, why do so few actually make disciples?"
 msgstr "Ikiwa Yesu alitaka kila mmoja wa wafuasi wake kutii Agizo lake Kuu, kwa nini wachache tu ndio huwafanya wanafunzui?"
 
 #: functions/zume-content.php:296
+#, fuzzy
 msgid "What is a disciple? And how do you make one? How do you teach a follower of Jesus to do what He told us in His Great Commission – to obey all of His commands?"
 msgstr "Mwanafunzi ni nini?Na ni jinsi gani unafanya mmoja?Unafudishaje mfuasi wa Yesu kufanya kile alituambia katika  agizo lake-kitii amri zakre zote?"
 
@@ -412,6 +416,7 @@ msgid "When you think of a church, what comes to mind?"
 msgstr "Unapofikiria kuhusu kanisa, kitu gani huja mawazoni?"
 
 #: functions/zume-content.php:338
+#, fuzzy
 msgid "What's the difference between that picture and what's described in the video as a \"Simple Church\"?"
 msgstr "Kuna utofauti gani kati ya picha hiyo na kinachoelezwa kwenye video kama \"Kanisa vivi hivi\"?"
 
@@ -473,6 +478,7 @@ msgid "Accountability Groups"
 msgstr "Makundi ya Uwajibikaji"
 
 #: functions/zume-content.php:502
+#, fuzzy
 msgid "The Bible tells us that every follower of Jesus will one day be held accountable for what we do and say and think. Accountability Groups are a great way to get ready!"
 msgstr "Biblia inatuambia kwamba kila mfuasi wa Yesu siku moja atawajibika kwa kile tunachofanya na kusema na kufikiria. Makundi ya uwajibikaji ni njia nzuri ya kujiandaa!"
 
@@ -635,6 +641,7 @@ msgid "Ask if anyone in the group has specific needs they would like the group t
 msgstr "Uuliza ikiwa kuna mtu katika kundi aliye na mahitaji maalum ambayo angependa kundi liombee. Ambia mtu aombe na kumwomba Mungu kusaidia katika maeneo ambayo kundi ilichoshiriki. Hakikisha kumshukuru Mungu kwamba anaahidi katika Neno lake kusikiliza na kutenda wakati watu wake wanapoomba. Na, kama siku zote, mwombe Roho Mtakatifu wa Mungu kuongoza wakati wenu, pamoja."
 
 #: functions/zume-content.php:731
+#, fuzzy
 msgid "If we want to make disciples who multiply – spiritual producers and not just consumers – then we need to learn and share four main ways God makes everyday followers more like Jesus:"
 msgstr "Ikwa tunahitaji kufanya wanafunzi kuongezeka-kuzalisha kwa kiroho na sio watumiaj-hivyo tunahitaji kujifunza na kushiriki kwa njia nne ambazo Mungu hutengeneza kila siku  za wafuasi kuwa zaidi kama Yesu:"
 
@@ -797,6 +804,7 @@ msgstr "Umehimizwa kushirikiana jinsi ya kufanya Orodha ya 100 na mtu mwingine."
 
 #: functions/zume-content.php:1104 functions/zume-content.php:1527
 #: functions/zume-content.php:2030
+#, fuzzy
 msgid "Pray and thank God for the results and invite His Holy Spirit to lead your time together."
 msgstr "Omba na umshukuru Mungu kwa matokeo na mwambie Roho Mtakatifu wake kuongoza wakati wenu pamoja."
 
@@ -833,10 +841,12 @@ msgid "Read and Discuss (15min)"
 msgstr "Soma na Jadili (Dakika 15)"
 
 #: functions/zume-content.php:1196
+#, fuzzy
 msgid "Jesus said, “You will receive power when the Holy Spirit comes upon you. And you will be my witnesses, telling people about me everywhere – in Jerusalem, throughout Judea, in Samaria, and to the ends of the earth.”"
 msgstr "Yesu alisema, “mtapokea nguvu  wakati Rioho  Mtakatifu atawajiaeni.Na mtakuwa mashahidi wangu,kuelezea watu kuhusu mimi kila sehemu-kule Yerusalemu,Yudea yote,Samaria,na mwisho wa dunia.”"
 
 #: functions/zume-content.php:1199
+#, fuzzy
 msgid "Jesus believed in His followers so much, He trusted them to tell His story. Then He sent them around the world to do it. Now, He’s sending us."
 msgstr "Yesu aliwaamini wafuasi wake sana, aliwaamini kuelezea hadithi Yake. Kisha akawatuma kote ulimwenguni ili kufanya hivyo. Wakati huu, anatutuma sisi."
 
@@ -849,6 +859,7 @@ msgid "What comes to mind when you hear God's command to be His \"witness\" and 
 msgstr "Kitu gani hukujia mawazoni unaposikia amri ya Mungu ya kuwa \"shahidi\" wake na kusimulia hadithi yake?"
 
 #: functions/zume-content.php:1213
+#, fuzzy
 msgid "Why do you think Jesus chose ordinary people instead of some other way to share His Good News?"
 msgstr "Kwa nini unafikiria Yesu alyeu watu wa kawaida badala kutumia njia nyingine ya kushirikisha habari yake njema?"
 
@@ -893,6 +904,7 @@ msgid "Baptism"
 msgstr "Ubatizo"
 
 #: functions/zume-content.php:1332
+#, fuzzy
 msgid "Jesus said, “Go and make disciples of all nations, BAPTIZING them in the name of the Father and of the Son and of the Holy Spirit…”"
 msgstr "Yesu alisema, \"Nendeni makawafanye mataifa yote kuwa wanafunzi, mkiwabatiza kwa jina la Baba na la Mwana na la Roho Mtakatifu ...\""
 
@@ -913,6 +925,7 @@ msgid "Would you even consider it?"
 msgstr "Je! Unaweza kufikiria kufanya hivyo?"
 
 #: functions/zume-content.php:1388
+#, fuzzy
 msgid "If the Great Commission is for every follower of Jesus, does that mean every follower is allowed to baptize others? Why or why not?"
 msgstr "Ikiwa Agizo Kuu ni kwa kila mfuasi wa Yesu, je, hiyo inamaanisha kila mfuasi anaruhusiwa kubatiza wengine? Kwa nini au kwa nini sivyo?"
 
@@ -921,6 +934,7 @@ msgid "IMPORTANT REMINDER – Have you been baptized?"
 msgstr "Umuhimu wa anayekukumbusha-Umekua ukibatizwa?"
 
 #: functions/zume-content.php:1404
+#, fuzzy
 msgid "If not, then we encourage you to plan this before even one more session of this training. Invite your group to be a part of this important day when you celebrate saying \"yes\" to Jesus."
 msgstr "Ikiwa bado, basi tunawahimiza kupanga kufanya hivyo kabla hata kikao moja Zaidi ya mafundisho haya. Karibisha kundi lako kuwa sehemu ya siku hii muhimu wakati unasherehekea kusema \"ndiyo\" kwa Yesu."
 
@@ -985,6 +999,7 @@ msgid "What is God's greatest blessing for His children? Making disciples who mu
 msgstr "Je, baraka kuu ya Mungu kwa wanawe ni ipi? Kuwafanya wanafunzi wanajizidisha!"
 
 #: functions/zume-content.php:1658
+#, fuzzy
 msgid "What if you could learn a simple pattern for making not just one follower of Jesus but entire spiritual families who multiply for generations to come?"
 msgstr "Je, ingekuwaje ikiwa ungejifunza mfano rahisi kwa kufanya si mfuasi mmoja wa Yesu lakini jamaaa zote za kiroho ambazo wanajizidisha kwa vizazi vijavyo?"
 
@@ -993,6 +1008,7 @@ msgid "Zúme Video Scripts: Greatest Blessing"
 msgstr "Mwandiko wa Video wa  Zúme: Baraka Kuu"
 
 #: functions/zume-content.php:1701
+#, fuzzy
 msgid "Is this the pattern you were taught when you first began to follow Jesus? If not, what was different?"
 msgstr "Je, huu ndio mfano uliofundishwa wakati ulianza kumfuata Yesu? Ikiwa sivyo, utofauti ulikuwa nini?"
 
@@ -1049,6 +1065,7 @@ msgid "The Lord's Supper"
 msgstr "Meza ya Bwana"
 
 #: functions/zume-content.php:1869
+#, fuzzy
 msgid "Jesus said, “I am the living bread that came down from heaven. Whoever eats this bread will live forever. This bread is my flesh, which I will give for the life of the world.”"
 msgstr "Yesu akasema, \"Mimi ndimi mkate ushukao kutoka mbinguni. Yeyote aulaye mkate huu ataishi milele. Mkate huu ni mwili wangu, ambao nitakupa kwa ajili ya uzima wa ulimwengu. \".”"
 
@@ -1093,6 +1110,7 @@ msgid "You were encouraged to train someone else with the 3-Minute Testimony too
 msgstr "Ulihimizwa kufundisha mtu mwingine na Ushuhuda wa dakika 3-pia."
 
 #: functions/zume-content.php:2037
+#, fuzzy
 msgid "In this session, you’ll learn how Prayer Walking is a powerful way to prepare a neighborhood for Jesus, and you'll learn a simple but powerful pattern for prayer that will help you meet and make new disciples along the way."
 msgstr "Katika kipindi hiki, utajifunza jinsi Maombi ya Kutembea ni njia nzuri ya kumuandalia Yesu ujirani, na mtajifunza mfano rahisi lakini wenye nguvu wa maombi ambao itasaidia kukutana na kuwafanya wanafunzi wapya njiani."
 
@@ -1185,6 +1203,7 @@ msgid "You were encouraged to share the Prayer Walking tool with someone else."
 msgstr "Ulihimizwa kushiriki Maombi ya Kutembea na mtu mwingine."
 
 #: functions/zume-content.php:2314
+#, fuzzy
 msgid "Pray and thank God for the results, ask Him to help when you find it hard to obey, and invite His Holy Spirit to lead your time together."
 msgstr "Omba na umshukuru Mungu kwa matokeo, omba akusaidie wakati unapoona ni vigumu kutii, na mwalike Roho Mtakatifu wake kuongoza wakati wenu pamoja."
 
@@ -1217,6 +1236,7 @@ msgid "Did you notice any differences between a 3/3 Group and a Bible Study or S
 msgstr "Je, umeona tofauti yoyote kati ya Kundi la 3/3 na Masomo ya Biblia au Kundi ndogo ambayo umekuwa sehemu yake (au umewahi kusikia) katika siku za nyuma? Ikiwa ndivyo, utofauti hizo zinaathiri kundi hizo kiaje?"
 
 #: functions/zume-content.php:2467
+#, fuzzy
 msgid "Could a 3/3 Group be considered a Simple Church? Why or why not?"
 msgstr "Je, Kundi la 3/3 linaweza kuchukuliwa kama kanisa? kwa nini au kwa nini sivyo?"
 
@@ -1249,6 +1269,7 @@ msgid "You were encouraged to share the importance of Faithfulness with someon
 msgstr "Ulihimizwa kushiriki umuhimu wa Uaminifu na mtu mwingine."
 
 #: functions/zume-content.php:2572
+#, fuzzy
 msgid "Pray and thank God for the group's commitment to faithfully following Jesus and invite God's Holy Spirit to lead your time together."
 msgstr "Ombeni na kumshukuru Mungu kwa kujitolea kwa kundi kwa kumfuata Yesu kwa uaminifu na kumualika Roho Mtakatifu wa Mungu kuongoza muda wanu pamoja."
 
@@ -1350,30 +1371,37 @@ msgid "You were encouraged to share the 3/3 Group Format with someone else."
 msgstr "Uliulizwa kushiriki muundo wa 3/3 la kundi na mtu mwingine."
 
 #: functions/zume-content.php:2811
+#, fuzzy
 msgid "Pray and thank God for giving your group the energy, the focus and the faithfulness to come so far in this training. Ask God to have His Holy Spirit remind everyone in the group that they can do nothing without Him!"
 msgstr "Ombeni na kumshukuru Mungu kwa kumpa kundi lenu nguvu, lengo na uaminifu kufikia sasa katika mafundisho haya. Mwombe Mungu ili Roho Mtakatifu awakumbushe kila mtu katika kundi kwamba hawezi kufanya chochote bila Yeye!"
 
 #: functions/zume-content.php:2818
+#, fuzzy
 msgid "In this session, you’ll learn how Leadership Cells prepare followers in a short time to become leaders for a lifetime. You'll learn how serving others is Jesus' strategy for leadership. And you'll spend time practicing as a 3/3 Group, again."
 msgstr "Katika kipindi hiki, utajifunza jinsi Chembe za Uongozi huwaandaa wafuasi kwa muda mfupi kuwa viongozi kwa maisha yote. Utajifunza jinsi kutumikia wengine ni mkakati wa Yesu wa uongozi. Na utatumia muda kujizoeza kama Kundi la 3/3, tena."
 
 #: functions/zume-content.php:2840
+#, fuzzy
 msgid "Jesus said, “Whoever wishes to become great among you shall be your servant.”"
 msgstr "Yesu aliema, “Yeyote kati yenu anayetaka kuwa mkuu ni sharti awe mtumishi.”"
 
 #: functions/zume-content.php:2843
+#, fuzzy
 msgid "Jesus radically reversed our understanding of leadership by teaching us that if we feel called to lead, then we are being called to serve. A Leadership Cell is a way someone who feels called to lead can develop their leadership by practicing serving."
 msgstr "Yesu alirejesha nyuma kuelewa kwetu kuhusu uongozi kwa kutufundisha kwamba ikiwa tunasikia kuitwa kuongoza, basi tunaitwa kutumikia. Chembe cha Uongozi ni jinsi mtu anahisi meitwa kuongoza anaweza kuendeleza uongozi wao kwa kujizoeza kutumika."
 
 #: functions/zume-content.php:2854
+#, fuzzy
 msgid "Find the \"Leadership Cells\" section in your Zúme Guidebook. When you're ready, watch and discuss this video."
 msgstr "Tafuta sehemu ya \"Chembe ya Uongozi\" katika kitabu cha Mwongozo wa Zúme. Ukiwa tayari, tazama na mkajadili video hii."
 
 #: functions/zume-content.php:2889
+#, fuzzy
 msgid "Zúme Video Scripts: Leadership Cells"
 msgstr "Mwandiko wa Vidoe wa Zúme: Chembe ya Uongozi"
 
 #: functions/zume-content.php:2898
+#, fuzzy
 msgid "Is there a group of followers of Jesus you know that are already meeting or would be willing to meet and form a Leadership Cell to learn Zúme Training?"
 msgstr "Je, kuna kundi la wafuasi wa Yesu unajua kwamba tayari wamekutana au wako tayari kukutana na kuunda Chembe ya Uongozi kujifundisha Mafundisho ya Zúme?"
 
@@ -1414,6 +1442,7 @@ msgid "Pray and ask God who He wants you to share the Leadership Cell tool with 
 msgstr "Ombeni na kumwuliza Mungu mtu yule anataka ushiriiki naye chombo cha chembe ya uongozi kabla ya kundi lako kukutana tena. Shiriki jina la mtu huyu na kundi kabla ya kwenda.."
 
 #: functions/zume-content.php:2991
+#, fuzzy
 msgid "Thank God for sending Jesus to show us that real leaders are real servants. Thank Jesus for showing us the greatest service possible is giving up our own lives for others."
 msgstr "Mshukuru Mungu kwa kumtuma Yesu kutuonyesha kwamba viongozi halisi ni watumishi wa kweli. Asante Yesu kwa kutuonyesha huduma kubwa zaidi ni kutoa maisha yetu kwa wengine."
 
@@ -1426,6 +1455,7 @@ msgid "You were encouraged to share the Leadership Cells tool with someone else.
 msgstr "Ulihimizwa kushiriki Chembe ya Uongozi na mtu mwingine."
 
 #: functions/zume-content.php:3049
+#, fuzzy
 msgid "Pray and thank God that His ways are not our ways and His thoughts are not our thoughts. Ask Him to give each member of your group the mind of Christ — always focused on His Father's work. Ask the Holy Spirit to lead your time together and make it the best session yet."
 msgstr "Omba na umshukuru Mungu kwamba njia zake sio njia zetu na mawazo yake sio mawazo yetu. Mwambie ampe kila mwanachama wa kundi lako mawazo ya Kristo - daima alizingatia kazi ya Baba yake. Omba Roho Mtakatifu kuongoza wakati wako pamoja na kuifanya kikao bora zaidi."
 
@@ -1470,6 +1500,7 @@ msgid "What is one thing you can do starting this week that will make a differen
 msgstr "Ni kitu kimoja anachoweza kufanya juma kinachoweza kuleta utofauti?"
 
 #: functions/zume-content.php:3216
+#, fuzzy
 msgid "Jesus taught us that we are to stay close — to live as a small, spiritual family, to love and give our lives to one another, to celebrate and suffer — together. However, Jesus also taught us to leave our homes and loved ones behind and be willing to go anywhere — and everywhere — to share and start new spiritual families. So how can we do both? When you're ready, watch the video below and discuss the question that follows."
 msgstr "Jesus taught us that we are to stay close — to live as a small, spiritual family, to love and give our lives to one another, to celebrate and suffer — together. However, Jesus also taught us to leave our homes and loved ones behind and be willing to go anywhere — and everywhere — to share and start new spiritual families. So how can we do both? When you're ready, watch the video below and discuss the question that follows."
 
@@ -1566,6 +1597,7 @@ msgid "Discuss and develop a group plan for starting at least two new 3/3 Groups
 msgstr "Jadili na endeleza mpango wa kikundi kwa kuanza kwa angalau makundi mawili mapya ya thuluthi tatu au kufundisha makundi katika eneo lako.Wanachama wengi katika kundi huenda wamemaliza kuhudumia kila mmoja wa kundi la mpango wa Zume wa miezi mitatu.Katika hatua hii,ikiwa hakuna mmoja katikas kundi lako amejaza nakala ya dijitali kwa tovuti kwa mpango wako wa miezi mitatu,inathibitishwa kuwa mfanye pamoja sasa.Sasa nenda kwa mpango wa miezi mitatu chini ya mpangilio na utie wino fomu ya kundi lako."
 
 #: functions/zume-content.php:3397
+#, fuzzy
 msgid "Remember, your goal is to start Simple Churches that multiply. 3/3 Groups and Zúme Training Groups are two ways to do that. Discuss and decide whether these new Groups will be connected to an existing local church or network or whether you’ll start a new network out of your Zúme Training Group."
 msgstr "Kumbuka,lengo lako ni kuanzisha makanisa ya kiwango cha chini ambayo yataongezeka.Thulithi tatu na mafundisho ya Zume ni njia mbili za kufanya hivyo.Jadili na amua ikiwa haya makundi mapya yataungana na makanisa ya nyanjani yaliyoendelea au kuunganisha mtandao au ikiwa utaanzisha mtandao mya  kutoka kwa kundi lako la mafundisho ya Zume."
 
@@ -1614,6 +1646,7 @@ msgid "Take a few moments to see how your group has been doing with these items 
 msgstr "Chukua muda mfupi utaathimini jinsi kundi lako linavyoendelea na vifaa hivi na mpnago wa miezi mitatu tangu mkutane."
 
 #: functions/zume-content.php:3492
+#, fuzzy
 msgid "Pray and thank God that He is faithful to complete His good work in us. Ask Him to give your group clear heads and open hearts to the great things He wants to do in and through you. Ask the Holy Spirit to lead your time together and thank Him for His faithfulness, too. He got you through!"
 msgstr "Omba na umshukuru Mungu kwa kuwa ni mwaminifu kukamilisha kazi Yake nzuri ndani mwetu. Mwambie aipe kundi lako uwazi kufungua mioyo kwa mambo makuu anayotaka kufanya ndani na  kupitia kwako. Uliza Roho Mtakatifu kuongoza wakati wenu pamoja na kumshukuru kwa uaminifu wake, pia. Alikuwezeshea!"
 
@@ -1690,6 +1723,7 @@ msgid "Zúme Video Scripts: Leadership in Networks"
 msgstr "Mwandiko wa Zúme: Uongozi Mtandaoni"
 
 #: functions/zume-content.php:3661
+#, fuzzy
 msgid "Are there advantages when networks of simple churches are connected by deep, personal relationships? What are some examples that come to mind?"
 msgstr "Je, kuna faida wakati mitandao ya makanisa yanaunganishwa na mahusiano ya kina, ya kibinafsi? Ni mifano gani ambayo inakuja akilini?"
 
@@ -1874,6 +1908,7 @@ msgid "I will use the Prayer Cycle tool once every [days / weeks / months]."
 msgstr "Nitatumia kifaa cha maombi ya mzunguko mara moja kila (siku/wiki/miezi)."
 
 #: functions/zume-three-month-plan.php:91
+#, fuzzy
 msgid "I will invite the following people to be part of a Leadership Cell that I will lead:"
 msgstr "Nitaalika watu wafuatao kuwa sehemu ya uongozi seli ambayo nitaongoza:"
 
@@ -2004,6 +2039,7 @@ msgstr "Hakuna mpango umeunganishwa na kundi hili."
 #: template-zume-about.php:38 template-zume-about.php:55
 #: template-zume-faq.php:199 template-zume-privacy-policy.php:186
 #: template-zume-progress.php:119
+#, fuzzy
 msgid "Zúme uses an online training platform to equip participants in basic disciple-making and simple church planting multiplication principles, processes, and practices."
 msgstr "Zume hutumia mafundisho ya mtandao kuwa sehemu ya kuwapa washiriki vifaa vya kimsingi vya kutengeneza wanafunzi,na kanuni za kanisa kuongezeka,mchakato na mazoezi."
 
@@ -2286,6 +2322,7 @@ msgstr "Kikao cha 8"
 #: functions/enqueue-scripts.php:237 template-gmo.php:240
 #: template-how-to-follow-jesus.php:240 template-zume-dashboard.php:542
 #: template-zume-training.php:667
+#, fuzzy
 msgid "Leadership Cells"
 msgstr "Chembe za Uongozi"
 
@@ -2640,6 +2677,7 @@ msgid "Who is the training appropriate for?"
 msgstr "Mafundisho yanamfaa nani?"
 
 #: template-zume-faq.php:101
+#, fuzzy
 msgid "The training is appropriate for followers of Christ who are 13-years-old or older and who are able to read. In the future, there may be a version produced that is appropriate for non-literate people, but this is not that version. We believe every person who fits this profile should take the training."
 msgstr "Mafunzo hayo ni mwafaka kwa wafuasi wa Kristo ambao ni 13-miaka-kale au wakubwa na walio na uwezo wa kusoma. Katika siku zijazo, kunaweza kuwa na toleo zinazozalishwa ambalo ni sahihi kwa watu wasio kusoma, lakini hii si toleo hilo. Tunaamini kila mtu ambaye huzirai umbo hili inapaswa kuchukua mafunzo."
 
@@ -2676,6 +2714,7 @@ msgid "PHASE 3"
 msgstr "AWAMU YA 3"
 
 #: template-zume-faq.php:126 template-zume-progress.php:102
+#, fuzzy
 msgid "The third phase focuses Phase 1 and Phase 2 churches to mobilize globally with a vision to make disciples in every place, among every people group. Zúme Project exists to saturate the globe with multiplying disciples in our generation. To accelerate our mission, we have developed and will deliver a mapping solution allowing teams to work strategically towards the goal of a Zúme training group and two simple churches among every 50,000 people outside the US."
 msgstr "Awamu ya tatu inaangazia awamu ya 1 na ya 2 makanisa kuhimiza duniani ndito ya kutengeneza wanafunzi kila sehemu,miongoni mwa watu wa makundi.Mradi wa Zume upo na umejaa kwa kuongeza wanafunzi katika kizazi chetu.Kwa kuharakisha lengo letu,tumeanzisha na kutoa suluhisho la ramani kuruhusu vikundi kufanya kazi kwa mpango kuambatana na lengo la mafundisho ya Zume na makanisa ya chini miongoni mwa kila watu 50,000 nje ya Marekani."
 
@@ -2696,6 +2735,7 @@ msgid "How are the groups started by trainees aligned or organized?"
 msgstr "Je! Vikundi vinaanzishwaje na wasomi waliokaa au waliopangwa?"
 
 #: template-zume-faq.php:148
+#, fuzzy
 msgid "It depends. If the trainees come out of a particular church or denomination or network then the most natural thing is for the newly formed groups to be connected with those existing churches, denomination, or network. If desired, however, a new network can be formed from the groups that start. A third alternative would be for the new groups to join with other already existing networks of simple churches. Many of the people involved in developing Zúme come from such networks so we can help arrange that if desired."
 msgstr "Inategemea. Ikiwa wanafunzi wanatoka katika kanisa fulani au madhehebu au mtandao basi jambo la asili zaidi ni kwa makundi mapya yaliyounganishwa na makanisa yaliyopo, madhehebu au mtandao. Ikiwa unataka, hata hivyo, mtandao mpya unaweza kuundwa kutoka kwa vikundi vinavyoanza. Njia ya tatu itakuwa ni kwa makundi mapya kujiunga na mitandao mingine iliyopo tayari ya makanisa rahisi. Wengi wa watu wanaohusika katika kuendeleza Zume huja kutoka kwa mitandao hiyo ili tuweze kusaidia kupanga."
 
@@ -2835,6 +2875,7 @@ msgid "ACCOUNTABILITY GROUPS — Break into groups of two or three people to wor
 msgstr "VIKUNDI VYA UWAJIBIKAJI — Mkajigawanye kwa vikundi vya watu wawili au watatu na mkashughulikie Maswali ya Uwajibikaji. (dakika 45)"
 
 #: template-zume-overview.php:415
+#, fuzzy
 msgid "PRODUCERS VS. CONSUMERS — You'll discover the four main ways God makes everyday followers more like Jesus."
 msgstr "WAZALISHAJI NA WATUMIAJI — Utagundua njia nne ambazo Mungu mfuasi wa kila siku kuwa Zaidi kama Yesu."
 
@@ -2863,6 +2904,7 @@ msgid "THE GOSPEL — Learn a way to share God’s Good News from the beginning 
 msgstr "INJILI-Jifunze njia ya kushiriki njili ya Mungu kutoka mwanzo mwa mwanadamu hadi mwisho wa wakati huu."
 
 #: template-zume-overview.php:571
+#, fuzzy
 msgid "BAPTISM — Jesus said, “Go and make disciples of all nations, BAPTIZING them in the name of the Father and of the Son and of the Holy Spirit…” Learn how to put this into practice."
 msgstr "UBATIZO — Yesu alisema, “Nendeni mkawafanye mataifa kuwa wanafunzi, MKIWABATIZA kwa jina la Baba na la Mwana na la Roho Mtakatifu…” Jifunze jinsi ya kujizoeza hili."
 
@@ -2871,6 +2913,7 @@ msgid "SHARE GOD’S STORY — Break into groups of two or three and practice sh
 msgstr "SHIRIKI HADITHI YA MUNGU — Mkajigawanye katika vikundi vya watu wawili ama watatu na makjizoeze kusimulia Hadithi ya Mungu. (dakika 45)"
 
 #: template-zume-overview.php:648
+#, fuzzy
 msgid "GREATEST BLESSING — Learn a simple pattern of making not just one follower of Jesus but entire spiritual families who multiply for generations to come."
 msgstr "BARAKA KUU — Jifunze njia rahisi ya kufanya si mfuasi mmoja tu wa Yesu bali jamaa zote za kiroho ambazo zinajizidisha kwa vizazi vijavyo."
 
@@ -2887,6 +2930,7 @@ msgid "3-MINUTE TESTIMONY — Learn how to share your testimony in three minutes
 msgstr "USHUHUDA WA DAKIKA-3 — Jifunze jinsi ya kushiriki ushuda wako kwa dakika tatu kwa kushiriki jinsi Yesu amekupa vishindo katika maisha yako."
 
 #: template-zume-overview.php:705
+#, fuzzy
 msgid "THE LORD'S SUPPER — It’s a simple way to celebrate our intimate connection and ongoing relationship with Jesus. Learn a simple way to celebrate."
 msgstr "MEZA YA BWANA — Ni njia rahisi ya kusherehekea uhusiano wetu wa karibu na uhusiano unaoendelea na Yesu. Jifunze njia rahisi ya kusherehekea."
 
@@ -2919,6 +2963,7 @@ msgid "FAITHFULNESS — It's important what disciples know — but it's much mor
 msgstr "UAMINIFU — Kile wanachoelewa wanafunzi ya maana  — Lakini ni yamaana sana kwa kile WANACHOFANYA na yale wanafahamu."
 
 #: template-zume-overview.php:922
+#, fuzzy
 msgid "3/3 GROUP FORMAT — A 3/3 Group is a way for followers of Jesus to meet, pray, learn, grow, fellowship and practice obeying and sharing what they've learned. In this way, a 3/3 Group is not just a small group but a Simple Church. (80 minutes)"
 msgstr "MUUNDO WA KUNDI LA 3/3  — Kundi la 3/3 ni njia ya wanafunzi wa Yesu kukutana, kuomba kujifunza, kukua, ushirika na kujizoeza kutii na kushirikiana yale wamejifunza. Katika njia hii, kundi la 3/3 sio tu kundi ndogo bali kanisa (dakika 80)"
 
@@ -2931,6 +2976,7 @@ msgid "3/3 GROUP — Your entire group will spend 90 minutes practicing the 3/3 
 msgstr "KUNDI LA 3/3 — Kundi nzima litatumia dakika 90 likijizoeza muundo wa 3/3 la kundi."
 
 #: template-zume-overview.php:1055
+#, fuzzy
 msgid "LEADERSHIP CELLS — A Leadership Cell is a way someone who feels called to lead can develop their leadership by practicing serving."
 msgstr "CHEMBE ZA UONGOZI—Chembe ya Uongozi ni jinsi mtu anavyohisi ameitwa kuongoza anaweza kuendeleza uongozi kwa kujizoeza kuwa mtumishi."
 
@@ -2943,6 +2989,7 @@ msgid "PACE — Multiplying matters and multiplying quickly matters even more. S
 msgstr "KASI — Kujizidisha kunafaa na kujizidisha kwa haraka kunafaa hata zaidi. Angalia kwa nini kasi inafaa."
 
 #: template-zume-overview.php:1156
+#, fuzzy
 msgid "PART OF TWO CHURCHES — Learn how to obey Jesus' commands by going AND staying."
 msgstr "SEHEMU YA MAKANISA MAWILI — Jifunze jinsi ya kutii amri za Yesu kwa kwenda NA kuKaa."
 
@@ -3075,6 +3122,7 @@ msgid "Have us delete any data we have about you."
 msgstr "Tunafuta data yoyote tunayo kuhusu wewe."
 
 #: template-zume-privacy-policy.php:143
+#, fuzzy
 msgid "Express any concern you have about our use of your data."
 msgstr "Eleza wasiwasi wowote unao kuhusu matumizi yetu ya data yako."
 
