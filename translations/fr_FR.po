@@ -19,6 +19,7 @@ msgid "Login"
 msgstr "Se connecter"
 
 #: front-page.php:86
+#, fuzzy
 msgid "Zúme Training is an on-line and in-life learning experience designed for small groups who follow Jesus to learn how to obey His Great Commission and make disciples who multiply."
 msgstr "La formation Zúme est une expérience d'apprentissage en ligne et dans la vie conçue pour de petits groupes qui suivent Jésus afin qu'ils apprennent à obéir à Sa Grande Commission et à faire des disciples qui se multiplient."
 
@@ -345,6 +346,7 @@ msgid "Group Prayer (5min)"
 msgstr "Prière en groupe (5 min)"
 
 #: functions/zume-content.php:217
+#, fuzzy
 msgid "Begin with prayer. Spiritual insight and transformation is not possible without the Holy Spirit. Take time as a group to invite Him to guide you over this session."
 msgstr "Commencer par la prière. La perspicacité spirituelle et la transformation ne sont pas possibles sans l'Esprit Saint. Prendre le temps en groupe de l'inviter à vous guider au cours de cette séance."
 
@@ -396,10 +398,12 @@ msgid "DISCUSS"
 msgstr "DISCUTER"
 
 #: functions/zume-content.php:276
+#, fuzzy
 msgid "If Jesus intended every one of His followers to obey His Great Commission, why do so few actually make disciples?"
 msgstr "Si Jésus voulait que chacun de ses disciples obéisse à Sa Grande Commission, pourquoi si peu d'entre eux font-ils réellement des disciples?"
 
 #: functions/zume-content.php:296
+#, fuzzy
 msgid "What is a disciple? And how do you make one? How do you teach a follower of Jesus to do what He told us in His Great Commission – to obey all of His commands?"
 msgstr "Qu'est-ce qu'un disciple ? Et comment en faire un ? Comment enseigner à un disciple de Jésus à faire ce qu'Il nous a dit dans Sa Grande Commission : obéir à tous ses commandements ?"
 
@@ -412,6 +416,7 @@ msgid "When you think of a church, what comes to mind?"
 msgstr "Quand vous pensez à une église, qu'est-ce qui vous vient à l'esprit ?"
 
 #: functions/zume-content.php:338
+#, fuzzy
 msgid "What's the difference between that picture and what's described in the video as a \"Simple Church\"?"
 msgstr "Quelle est la différence entre cette image et ce qui est décrit dans la vidéo comme une «Église simple»?"
 
@@ -473,6 +478,7 @@ msgid "Accountability Groups"
 msgstr "Groupes d'encouragement mutuel"
 
 #: functions/zume-content.php:502
+#, fuzzy
 msgid "The Bible tells us that every follower of Jesus will one day be held accountable for what we do and say and think. Accountability Groups are a great way to get ready!"
 msgstr "La Bible nous dit que chaque disciple de Jésus sera un jour tenu responsable de ce qu'il fait, dit et pense. Les groupes d'encouragement mutuel sont un excellent moyen de se préparer!"
 
@@ -634,6 +640,7 @@ msgid "Ask if anyone in the group has specific needs they would like the group t
 msgstr "Demander si quelqu'un dans le groupe a des besoins spécifiques pour lesquels il aimerait que le groupe prie. Demander à quelqu'un de prier et demander de l'aide à Dieu dans les domaines que le groupe partage. Ne pas oublier de remercier Dieu d'avoir promis dans Sa Parole d'écouter et d'agir quand Son peuple prie. Et, comme toujours, demander à l'Esprit Saint de Dieu de diriger votre temps ensemble."
 
 #: functions/zume-content.php:731
+#, fuzzy
 msgid "If we want to make disciples who multiply – spiritual producers and not just consumers – then we need to learn and share four main ways God makes everyday followers more like Jesus:"
 msgstr "Si nous voulons faire des disciples qui se multiplient, des producteurs spirituels et pas seulement des consommateurs, nous devons alors apprendre et partager quatre façons principales que Dieu utilise pour rendre ses disciples de tous les jours davantage semblables à Jésus:"
 
@@ -796,6 +803,7 @@ msgstr "Vous avez été encouragé à partager comment faire une liste de 100 av
 
 #: functions/zume-content.php:1104 functions/zume-content.php:1527
 #: functions/zume-content.php:2030
+#, fuzzy
 msgid "Pray and thank God for the results and invite His Holy Spirit to lead your time together."
 msgstr "Prier et remercier Dieu pour les résultats et inviter Son Saint-Esprit à mener votre temps ensemble."
 
@@ -832,10 +840,12 @@ msgid "Read and Discuss (15min)"
 msgstr "Lire et discuter (15min)"
 
 #: functions/zume-content.php:1196
+#, fuzzy
 msgid "Jesus said, “You will receive power when the Holy Spirit comes upon you. And you will be my witnesses, telling people about me everywhere – in Jerusalem, throughout Judea, in Samaria, and to the ends of the earth.”"
 msgstr "Jésus a dit : \" Vous recevrez une puissance quand l'Esprit Saint viendra sur vous. Et vous serez mes témoins, parlant aux gens de moi partout: à Jérusalem, dans toute la Judée, en Samarie, et jusqu'aux extrémités de la terre.\""
 
 #: functions/zume-content.php:1199
+#, fuzzy
 msgid "Jesus believed in His followers so much, He trusted them to tell His story. Then He sent them around the world to do it. Now, He’s sending us."
 msgstr "Jésus croyait tellement en ses disciples qu'il leur faisait confiance pour raconter Son histoire. Puis il les a envoyés à travers le monde pour le faire. Maintenant, il nous envoie."
 
@@ -848,6 +858,7 @@ msgid "What comes to mind when you hear God's command to be His \"witness\" and 
 msgstr "Qu'est-ce qui vous vient à l'esprit lorsque vous entendez l'ordre de Dieu d'être Son « témoin » et de raconter Son histoire ?"
 
 #: functions/zume-content.php:1213
+#, fuzzy
 msgid "Why do you think Jesus chose ordinary people instead of some other way to share His Good News?"
 msgstr "Pourquoi pensez-vous que Jésus a choisi des gens ordinaires au lieu d'une autre façon de partager Sa Bonne Nouvelle?"
 
@@ -892,6 +903,7 @@ msgid "Baptism"
 msgstr "Baptême"
 
 #: functions/zume-content.php:1332
+#, fuzzy
 msgid "Jesus said, “Go and make disciples of all nations, BAPTIZING them in the name of the Father and of the Son and of the Holy Spirit…”"
 msgstr "Jésus a dit :  \"Allez faire des disciples de toutes les nations, en les BAPTISANT au nom du Père et du Fils et de l'Esprit Saint...\""
 
@@ -912,6 +924,7 @@ msgid "Would you even consider it?"
 msgstr "Est-ce que vous y réfléchiriez ?"
 
 #: functions/zume-content.php:1388
+#, fuzzy
 msgid "If the Great Commission is for every follower of Jesus, does that mean every follower is allowed to baptize others? Why or why not?"
 msgstr "Si la Grande Commission est pour chaque disciple de Jésus, cela signifie-t-il que chaque disciple est autorisé à baptiser les autres ? Pourquoi ou pourquoi pas ?"
 
@@ -920,6 +933,7 @@ msgid "IMPORTANT REMINDER – Have you been baptized?"
 msgstr "RAPPEL IMPORTANT : Avez-vous été baptisé?"
 
 #: functions/zume-content.php:1404
+#, fuzzy
 msgid "If not, then we encourage you to plan this before even one more session of this training. Invite your group to be a part of this important day when you celebrate saying \"yes\" to Jesus."
 msgstr "Si ce n'est pas le cas, nous vous encourageons à planifier cela avant même une séance de plus de cette formation. Inviter votre groupe à participer à cette journée importante où vous ferez la fête en disant « oui » à Jésus."
 
@@ -984,6 +998,7 @@ msgid "What is God's greatest blessing for His children? Making disciples who mu
 msgstr "Quelle est la plus grande bénédiction de Dieu pour ses enfants ? Faire des disciples qui se multiplient!"
 
 #: functions/zume-content.php:1658
+#, fuzzy
 msgid "What if you could learn a simple pattern for making not just one follower of Jesus but entire spiritual families who multiply for generations to come?"
 msgstr "Et si vous pouviez apprendre un modèle simple pour faire non seulement un disciple de Jésus, mais des familles spirituelles entières qui se multiplient pour les générations à venir?"
 
@@ -992,6 +1007,7 @@ msgid "Zúme Video Scripts: Greatest Blessing"
 msgstr "Script vidéo de Zúme : La plus grande bénédiction"
 
 #: functions/zume-content.php:1701
+#, fuzzy
 msgid "Is this the pattern you were taught when you first began to follow Jesus? If not, what was different?"
 msgstr "Est-ce le modèle qu'on vous a enseigné quand vous avez commencé à suivre Jésus? Sinon, qu'est-ce qui était différent ?"
 
@@ -1048,6 +1064,7 @@ msgid "The Lord's Supper"
 msgstr "La Sainte Cène"
 
 #: functions/zume-content.php:1869
+#, fuzzy
 msgid "Jesus said, “I am the living bread that came down from heaven. Whoever eats this bread will live forever. This bread is my flesh, which I will give for the life of the world.”"
 msgstr "Jésus dit : \" Je suis le pain vivant qui est descendu du ciel. Celui qui mange ce pain vivra éternellement. Ce pain est ma chair, que je donnerai pour la vie du monde.\""
 
@@ -1092,6 +1109,7 @@ msgid "You were encouraged to train someone else with the 3-Minute Testimony too
 msgstr "On vous a encouragé à former quelqu'un d'autre avec l'outil de témoignage de 3 minutes."
 
 #: functions/zume-content.php:2037
+#, fuzzy
 msgid "In this session, you’ll learn how Prayer Walking is a powerful way to prepare a neighborhood for Jesus, and you'll learn a simple but powerful pattern for prayer that will help you meet and make new disciples along the way."
 msgstr "Dans cette séance, vous apprendrez comment la marche de prière est un moyen puissant de préparer un quartier pour Jésus, et vous apprendrez un modèle simple mais puissant de prière qui vous aidera à rencontrer et à faire de nouveaux disciples le long du chemin."
 
@@ -1184,6 +1202,7 @@ msgid "You were encouraged to share the Prayer Walking tool with someone else."
 msgstr "On vous a encouragé à partager l'outil de marche de prière avec quelqu'un d'autre."
 
 #: functions/zume-content.php:2314
+#, fuzzy
 msgid "Pray and thank God for the results, ask Him to help when you find it hard to obey, and invite His Holy Spirit to lead your time together."
 msgstr "Prier et remercier Dieu pour les résultats, lui demander de l'aide quand vous avez du mal à obéir, et inviter son Saint-Esprit à mener votre temps ensemble."
 
@@ -1216,6 +1235,7 @@ msgid "Did you notice any differences between a 3/3 Group and a Bible Study or S
 msgstr "Avez-vous remarqué des différences entre un groupe 3/3 et une étude biblique ou un petit groupe duquel vous avez fait partie (ou entendu parler) dans le passé? Dans l'affirmative, quel impact ces différences auraient-elles sur le groupe?"
 
 #: functions/zume-content.php:2467
+#, fuzzy
 msgid "Could a 3/3 Group be considered a Simple Church? Why or why not?"
 msgstr "Un groupe 3/3 pourrait-il être considéré comme une Église simple ? Pourquoi ou pourquoi pas ?"
 
@@ -1248,6 +1268,7 @@ msgid "You were encouraged to share the importance of Faithfulness with someon
 msgstr "On vous a encouragé à partager l'importance de la fidélité avec quelqu'un d'autre."
 
 #: functions/zume-content.php:2572
+#, fuzzy
 msgid "Pray and thank God for the group's commitment to faithfully following Jesus and invite God's Holy Spirit to lead your time together."
 msgstr "Prier et remercier Dieu pour l'engagement du groupe à suivre fidèlement Jésus et inviter l'Esprit Saint de Dieu à mener votre temps ensemble."
 
@@ -1349,30 +1370,37 @@ msgid "You were encouraged to share the 3/3 Group Format with someone else."
 msgstr "Vous avez été encouragé à partager le format de groupe 3/3 avec quelqu'un d'autre."
 
 #: functions/zume-content.php:2811
+#, fuzzy
 msgid "Pray and thank God for giving your group the energy, the focus and the faithfulness to come so far in this training. Ask God to have His Holy Spirit remind everyone in the group that they can do nothing without Him!"
 msgstr "Prier et remercier Dieu d'avoir donné à votre groupe l'énergie, l'attention et la fidélité d'aller si loin dans cette formation. Demander à Dieu par son Saint-Esprit de rappeler à tous les membres du groupe qu'ils ne peuvent rien faire sans Lui !"
 
 #: functions/zume-content.php:2818
+#, fuzzy
 msgid "In this session, you’ll learn how Leadership Cells prepare followers in a short time to become leaders for a lifetime. You'll learn how serving others is Jesus' strategy for leadership. And you'll spend time practicing as a 3/3 Group, again."
 msgstr "Au cours de cette séance, vous apprendrez comment les cellules de leadership préparent les adeptes dans un court laps de temps à devenir des leaders pour toute une vie. Vous apprendrez comment le fait de servir les autres est la stratégie de Leadership de Jésus. Et vous passerez du temps à mettre en pratique le groupe 3/3, encore une fois."
 
 #: functions/zume-content.php:2840
+#, fuzzy
 msgid "Jesus said, “Whoever wishes to become great among you shall be your servant.”"
 msgstr "Jésus a dit : « Celui qui veut devenir grand parmi vous sera votre serviteur. »"
 
 #: functions/zume-content.php:2843
+#, fuzzy
 msgid "Jesus radically reversed our understanding of leadership by teaching us that if we feel called to lead, then we are being called to serve. A Leadership Cell is a way someone who feels called to lead can develop their leadership by practicing serving."
 msgstr "Jésus a radicalement inversé notre compréhension du leadership en nous enseignant que si nous nous sentons appelés à diriger, alors nous sommes appelés à servir. Une cellule de leadership est une façon pour quelqu'un qui se sent appelé à diriger de développer son leadership en pratiquant le service."
 
 #: functions/zume-content.php:2854
+#, fuzzy
 msgid "Find the \"Leadership Cells\" section in your Zúme Guidebook. When you're ready, watch and discuss this video."
 msgstr "Trouver la section « Cellules de leadership » dans votre guide Zúme. Lorsque vous êtes prêt, la regarder et discuter de cette vidéo."
 
 #: functions/zume-content.php:2889
+#, fuzzy
 msgid "Zúme Video Scripts: Leadership Cells"
 msgstr "Script vidéo de Zúme : Cellules de leadership"
 
 #: functions/zume-content.php:2898
+#, fuzzy
 msgid "Is there a group of followers of Jesus you know that are already meeting or would be willing to meet and form a Leadership Cell to learn Zúme Training?"
 msgstr "Y at-il un groupe de disciples de Jésus que vous connaissez qui se réunissent déjà  ou serait prêt à se réunir et à former une cellule de leadership pour apprendre la formation Zúme?"
 
@@ -1413,6 +1441,7 @@ msgid "Pray and ask God who He wants you to share the Leadership Cell tool with 
 msgstr "Prier et demander à Dieu avec qui Il veut que vous partagiez l'outil de cellule de leadership avant que votre groupe ne se réunisse à nouveau. Partager le nom de cette personne avec le groupe avant de partir."
 
 #: functions/zume-content.php:2991
+#, fuzzy
 msgid "Thank God for sending Jesus to show us that real leaders are real servants. Thank Jesus for showing us the greatest service possible is giving up our own lives for others."
 msgstr "Remercier Dieu d'avoir envoyé Jésus pour nous montrer que les vrais dirigeants sont de vrais serviteurs. Remercier Jésus de nous avoir montré que le plus grand service possible est d'abandonner notre propre vie pour les autres."
 
@@ -1425,6 +1454,7 @@ msgid "You were encouraged to share the Leadership Cells tool with someone else.
 msgstr "On vous a encouragé à partager l'outil Cellules de leadership avec quelqu'un d'autre."
 
 #: functions/zume-content.php:3049
+#, fuzzy
 msgid "Pray and thank God that His ways are not our ways and His thoughts are not our thoughts. Ask Him to give each member of your group the mind of Christ — always focused on His Father's work. Ask the Holy Spirit to lead your time together and make it the best session yet."
 msgstr "Prier et remercier Dieu du fait que Ses voies ne soient pas nos voies et Ses pensées ne sont pas nos pensées. Lui demander de donner à chaque membre de votre groupe l'esprit du Christ, toujours concentré sur l'œuvre de son Père. Demander à l'Esprit Saint de mener votre temps ensemble et d'en faire la meilleure de vos séances. "
 
@@ -1469,6 +1499,7 @@ msgid "What is one thing you can do starting this week that will make a differen
 msgstr "Quelle est l'une des choses que vous pouvez faire à partir de cette semaine qui fera une différence?"
 
 #: functions/zume-content.php:3216
+#, fuzzy
 msgid "Jesus taught us that we are to stay close — to live as a small, spiritual family, to love and give our lives to one another, to celebrate and suffer — together. However, Jesus also taught us to leave our homes and loved ones behind and be willing to go anywhere — and everywhere — to share and start new spiritual families. So how can we do both? When you're ready, watch the video below and discuss the question that follows."
 msgstr "Jésus nous a appris que nous devons rester proches — vivre comme une petite famille spirituelle, aimer et donner notre vie les uns aux autres, célébrer et souffrir ensemble. Cependant, Jésus nous a aussi appris à quitter nos maisons et nos proches et à être prêts à aller n'importe où — et partout — pour partager et fonder de nouvelles familles spirituelles. Alors, comment pouvons-nous faire les deux? Lorsque vous êtes prêt, regarder la vidéo ci-dessous et discuter de la question qui suit."
 
@@ -1565,6 +1596,7 @@ msgid "Discuss and develop a group plan for starting at least two new 3/3 Groups
 msgstr "Discuter et élaborer un plan de groupe pour démarrer au moins deux nouveaux groupes 3/3 ou groupes de formation Zúme dans votre région. Plusieurs membres de votre groupe viennent peut-être de terminer et d'enregistrer vos plans de trois mois individuels dans votre groupe Zúme. À cette étape, si personne de votre groupe n'a rempli une copie numérique sur le site Web de votre plan de trois mois, il est fortement recommandé que vous le fassiez ensemble maintenant. Il vous suffit d'aller au plan de trois mois sous Paramètres et de lier le formulaire à votre groupe."
 
 #: functions/zume-content.php:3397
+#, fuzzy
 msgid "Remember, your goal is to start Simple Churches that multiply. 3/3 Groups and Zúme Training Groups are two ways to do that. Discuss and decide whether these new Groups will be connected to an existing local church or network or whether you’ll start a new network out of your Zúme Training Group."
 msgstr "Rappelez-vous, votre but est de lancer des Églises simples qui se multiplient. Les groupes 3/3 et les groupes de formation Zúme sont deux façons de le faire. Discuter et décider si ces nouveaux groupes seront connectés à une église ou à un réseau local existant ou si vous démarrerez un nouveau réseau à partir de votre groupe de formation Zúme."
 
@@ -1613,6 +1645,7 @@ msgid "Take a few moments to see how your group has been doing with these items 
 msgstr "Prendre quelques instants pour voir comment votre groupe s'en est sorti concernant ces éléments et leurs plans de trois mois depuis votre dernière rencontre."
 
 #: functions/zume-content.php:3492
+#, fuzzy
 msgid "Pray and thank God that He is faithful to complete His good work in us. Ask Him to give your group clear heads and open hearts to the great things He wants to do in and through you. Ask the Holy Spirit to lead your time together and thank Him for His faithfulness, too. He got you through!"
 msgstr "Prier et remercier Dieu pour sa fidélité à accomplir Son bon travail en nous. Lui demander à ce que votre groupe ait les idées claires et les cœurs ouverts aux grandes choses qu'il veut faire en vous et à travers vous. Demander à l'Esprit Saint de mener votre temps ensemble, et le remercier pour Sa fidélité. Il vous a aidés durant toute la formation !"
 
@@ -1689,6 +1722,7 @@ msgid "Zúme Video Scripts: Leadership in Networks"
 msgstr "Script vidéo de Zúme : Leadership en réseaux"
 
 #: functions/zume-content.php:3661
+#, fuzzy
 msgid "Are there advantages when networks of simple churches are connected by deep, personal relationships? What are some examples that come to mind?"
 msgstr "Y a-t-il des avantages lorsque les réseaux d'églises simples sont reliés par des relations personnelles profondes? Quels sont les exemples qui viennent à l'esprit?"
 
@@ -1873,6 +1907,7 @@ msgid "I will use the Prayer Cycle tool once every [days / weeks / months]."
 msgstr "J'utiliserai l'outil de roue de prière une fois par [jour / semaine / mois]."
 
 #: functions/zume-three-month-plan.php:91
+#, fuzzy
 msgid "I will invite the following people to be part of a Leadership Cell that I will lead:"
 msgstr "J'inviterai les personnes suivantes à faire partie d'une cellule de leadership que je dirigerai :"
 
@@ -2003,6 +2038,7 @@ msgstr "Aucun plan lié à ce groupe."
 #: template-zume-about.php:38 template-zume-about.php:55
 #: template-zume-faq.php:199 template-zume-privacy-policy.php:186
 #: template-zume-progress.php:119
+#, fuzzy
 msgid "Zúme uses an online training platform to equip participants in basic disciple-making and simple church planting multiplication principles, processes, and practices."
 msgstr "Zúme utilise une plate-forme de formation en ligne pour équiper les participants dans les principes, les processus et les pratiques de base de la fabrication de disciples et de l'implantation d'églises simples."
 
@@ -2285,6 +2321,7 @@ msgstr "Séance 8"
 #: functions/enqueue-scripts.php:237 template-gmo.php:240
 #: template-how-to-follow-jesus.php:240 template-zume-dashboard.php:542
 #: template-zume-training.php:667
+#, fuzzy
 msgid "Leadership Cells"
 msgstr "Cellules de leadership"
 
@@ -2641,6 +2678,7 @@ msgid "Who is the training appropriate for?"
 msgstr "Pour qui la formation est-elle appropriée?"
 
 #: template-zume-faq.php:101
+#, fuzzy
 msgid "The training is appropriate for followers of Christ who are 13-years-old or older and who are able to read. In the future, there may be a version produced that is appropriate for non-literate people, but this is not that version. We believe every person who fits this profile should take the training."
 msgstr "La formation est appropriée pour les disciples du Christ qui sont âgés de 13 ans ou plus et qui sont capables de lire. À l'avenir, il pourrait y avoir une version produite appropriée pour les personnes non alphabétisées, mais ce n'est pas cette version-ci. Nous croyons que chaque personne correspondant à ce profil devrait suivre la formation."
 
@@ -2677,6 +2715,7 @@ msgid "PHASE 3"
 msgstr "PHASE 3"
 
 #: template-zume-faq.php:126 template-zume-progress.php:102
+#, fuzzy
 msgid "The third phase focuses Phase 1 and Phase 2 churches to mobilize globally with a vision to make disciples in every place, among every people group. Zúme Project exists to saturate the globe with multiplying disciples in our generation. To accelerate our mission, we have developed and will deliver a mapping solution allowing teams to work strategically towards the goal of a Zúme training group and two simple churches among every 50,000 people outside the US."
 msgstr "La troisième phase encourage les églises de phase 1 et de phase 2 à se mobiliser à l'échelle mondiale avec une vision de faire des disciples en tout lieu, parmi chaque groupe de personnes. Le Projet Zúme existe pour saturer le monde avec des disciples qui se multiplient dans notre génération. Pour accélérer notre mission, nous avons développé et fournirons une solution de cartographie permettant aux équipes de travailler stratégiquement vers l'objectif d'un groupe de formation Zúme et de deux églises simples parmi chaque 50 000 personnes en dehors des États-Unis."
 
@@ -2697,6 +2736,7 @@ msgid "How are the groups started by trainees aligned or organized?"
 msgstr "Comment les groupes commencés par des stagiaires s'alignent-ils les uns aux autres et s'organisent-ils ?"
 
 #: template-zume-faq.php:148
+#, fuzzy
 msgid "It depends. If the trainees come out of a particular church or denomination or network then the most natural thing is for the newly formed groups to be connected with those existing churches, denomination, or network. If desired, however, a new network can be formed from the groups that start. A third alternative would be for the new groups to join with other already existing networks of simple churches. Many of the people involved in developing Zúme come from such networks so we can help arrange that if desired."
 msgstr "Ça dépend. Si les stagiaires sortent d'une église ou d'une dénomination ou d'un réseau particulier, alors la chose la plus naturelle est que les groupes nouvellement formés soient connectés à ces églises, confessions ou réseaux existants. Si vous le souhaitez, cependant, un nouveau réseau peut être formé à partir des groupes qui démarrent. Une troisième alternative serait que les nouveaux groupes se joignent à d'autres réseaux déjà existants d'églises simples. Beaucoup de personnes impliquées dans le développement de Zúme  proviennent de ces réseaux afin que nous puissions aider à cela au besoin."
 
@@ -2836,6 +2876,7 @@ msgid "ACCOUNTABILITY GROUPS — Break into groups of two or three people to wor
 msgstr "GROUPES D'ENCOURAGEMENT MUTUEL :  Se répartir en groupes de deux ou trois personnes et répondre aux questions d'encouragement mutuel. (45 minutes)"
 
 #: template-zume-overview.php:415
+#, fuzzy
 msgid "PRODUCERS VS. CONSUMERS — You'll discover the four main ways God makes everyday followers more like Jesus."
 msgstr "PRODUCTEURS - CONSOMMATEURS : Découvrir les quatre façons principales que Dieu utilise pour rendre les disciples de tous les jours davantage comme Jésus."
 
@@ -2864,6 +2905,7 @@ msgid "THE GOSPEL — Learn a way to share God’s Good News from the beginning 
 msgstr "L' ÉVANGILE : Apprendre un moyen de partager la Bonne Nouvelle de Dieu depuis le début de l'humanité jusqu'à la fin de cet âge."
 
 #: template-zume-overview.php:571
+#, fuzzy
 msgid "BAPTISM — Jesus said, “Go and make disciples of all nations, BAPTIZING them in the name of the Father and of the Son and of the Holy Spirit…” Learn how to put this into practice."
 msgstr "BAPTÊME : Jésus a dit : \"Allez faire des disciples de toutes les nations, en les BAPTISANT au nom du Père et du Fils et de l'Esprit Saint...\"  Apprendre à mettre cela en pratique."
 
@@ -2872,6 +2914,7 @@ msgid "SHARE GOD’S STORY — Break into groups of two or three and practice sh
 msgstr "PARTAGER L'HISTOIRE DE DIEU :  Se répartir en groupes de deux ou trois et s'entraîner à partager l'histoire de Dieu. (45 minutes)"
 
 #: template-zume-overview.php:648
+#, fuzzy
 msgid "GREATEST BLESSING — Learn a simple pattern of making not just one follower of Jesus but entire spiritual families who multiply for generations to come."
 msgstr "LA PLUS GRANDE BÉNÉDICTION :  Apprendre un modèle simple de faire non seulement un disciple de Jésus, mais des familles spirituelles entières qui se multiplient pour les générations à venir."
 
@@ -2888,6 +2931,7 @@ msgid "3-MINUTE TESTIMONY — Learn how to share your testimony in three minutes
 msgstr "TÉMOIGNAGE DE 3 MINUTES : Apprendre à partager votre témoignage en trois minutes en partageant comment Jésus a eu un impact sur votre vie."
 
 #: template-zume-overview.php:705
+#, fuzzy
 msgid "THE LORD'S SUPPER — It’s a simple way to celebrate our intimate connection and ongoing relationship with Jesus. Learn a simple way to celebrate."
 msgstr "LA SAINTE CÈNE : C'est une façon simple de célébrer notre connexion intime et notre relation continue avec Jésus. Apprendre une façon simple de célébrer."
 
@@ -2920,6 +2964,7 @@ msgid "FAITHFULNESS — It's important what disciples know — but it's much mor
 msgstr "FIDÉLITÉ :  Ce que les disciples savent  est important, mais ce qu'ils FONT de ce qu'ils savent est beaucoup plus important."
 
 #: template-zume-overview.php:922
+#, fuzzy
 msgid "3/3 GROUP FORMAT — A 3/3 Group is a way for followers of Jesus to meet, pray, learn, grow, fellowship and practice obeying and sharing what they've learned. In this way, a 3/3 Group is not just a small group but a Simple Church. (80 minutes)"
 msgstr "GROUPE DE FORMAT 3/3 :  Un groupe 3/3 est un moyen pour les disciples de Jésus de se rencontrer, prier, apprendre, grandir, et de pratiquer l'obéissance et le partage de ce qu'ils ont appris. De cette façon, un groupe 3/3 n'est pas seulement un petit groupe, mais une Église simple. (80 minutes)"
 
@@ -2932,6 +2977,7 @@ msgid "3/3 GROUP — Your entire group will spend 90 minutes practicing the 3/3 
 msgstr "GROUPE 3/3 : Tout votre groupe passera 90 minutes à s'entraîner sur le format de groupe 3/3."
 
 #: template-zume-overview.php:1055
+#, fuzzy
 msgid "LEADERSHIP CELLS — A Leadership Cell is a way someone who feels called to lead can develop their leadership by practicing serving."
 msgstr "CELLULES DE LEADERSHIP : Une cellule de leadership est un moyen pour quelqu'un qui se sent appelé à diriger, de développer son leadership en pratiquant le service."
 
@@ -2944,6 +2990,7 @@ msgid "PACE — Multiplying matters and multiplying quickly matters even more. S
 msgstr "CADENCE :  Se multiplier, et se multiplier rapidement importe encore plus. Voir pourquoi la cadence est importante."
 
 #: template-zume-overview.php:1156
+#, fuzzy
 msgid "PART OF TWO CHURCHES — Learn how to obey Jesus' commands by going AND staying."
 msgstr "FAIRE PARTIE DE DEUX ÉGLISES :  Apprendre à obéir aux ordres de Jésus en allant ET en restant."
 
@@ -3076,6 +3123,7 @@ msgid "Have us delete any data we have about you."
 msgstr "Nous demander de supprimer toutes les données que nous avons à votre sujet."
 
 #: template-zume-privacy-policy.php:143
+#, fuzzy
 msgid "Express any concern you have about our use of your data."
 msgstr "Exprimer toute préoccupation que vous avez au sujet de notre utilisation de vos données."
 
