@@ -19,6 +19,7 @@ msgid "Login"
 msgstr "เข้าสู่ระบบ"
 
 #: front-page.php:86
+#, fuzzy
 msgid "Zúme Training is an on-line and in-life learning experience designed for small groups who follow Jesus to learn how to obey His Great Commission and make disciples who multiply."
 msgstr "การอบรมซูเม่คือการฝึกอบรมแบบออนไลน์และเรียนรู้ผ่านการฝึกฝนในชีวิตจริง ถูกออกแบบมาเพื่อกลุ่มขนาดเล็กที่ติดตามพระเยซูเพื่อเรียนรู้เรื่องการเชื่อฟังพระมหาบัญชาของพระองค์และการทวีจำนวนสาวก"
 
@@ -345,6 +346,7 @@ msgid "Group Prayer (5min)"
 msgstr "อธิษฐานกลุ่ม (5 นาที)"
 
 #: functions/zume-content.php:217
+#, fuzzy
 msgid "Begin with prayer. Spiritual insight and transformation is not possible without the Holy Spirit. Take time as a group to invite Him to guide you over this session."
 msgstr "โปรดเริ่มต้นด้วยการอธิษฐาน การหยั่งรู้ทางฝ่ายวิญญาณและการเปลี่ยนแปลงไม่อาจเกิดขึ้นได้โดยปราศจากพระวิญญาณบริสุทธิ์ โปรดใช้เวลาด้วยกันเป็นกลุ่มเชิญพระองค์เพื่อนำทางคุณในบทเรียนนี้"
 
@@ -396,10 +398,12 @@ msgid "DISCUSS"
 msgstr "อภิปราย"
 
 #: functions/zume-content.php:276
+#, fuzzy
 msgid "If Jesus intended every one of His followers to obey His Great Commission, why do so few actually make disciples?"
 msgstr "หากพระเยซูทรงประสงค์ให้ผู้ติดตามพระองค์ทุกคนเชื่อฟังพระมหาบัญชาของพระองค์ เหตุใดจึงมีเพียงแค่ไม่กี่คนที่สร้างสาวกอย่างแท้จริง?"
 
 #: functions/zume-content.php:296
+#, fuzzy
 msgid "What is a disciple? And how do you make one? How do you teach a follower of Jesus to do what He told us in His Great Commission – to obey all of His commands?"
 msgstr "สาวกคืออะไร? และคุณจะสร้างสาวกได้อย่างไร? คุณจะสอนสาวกคนหนึ่งของพระเยซูให้ทำตามสิ่งที่พระองค์บัญชาเราไว้ในพระมหาบัญชาได้อย่างไร – สอนเขาให้เชื่อฟังทุกสิ่งที่เราสั่งพวกท่านไว้?"
 
@@ -412,6 +416,7 @@ msgid "When you think of a church, what comes to mind?"
 msgstr "เมื่อคิดถึงคริสตจักรแห่งหนึ่ง คุณคิดถึงภาพใด?"
 
 #: functions/zume-content.php:338
+#, fuzzy
 msgid "What's the difference between that picture and what's described in the video as a \"Simple Church\"?"
 msgstr "อะไรคือความแตกต่างระหว่างภาพนั้นกับ “คริสตจักรบ้าน” ที่บรรยายไว้ในวิดีโอ?"
 
@@ -473,6 +478,7 @@ msgid "Accountability Groups"
 msgstr "กลุ่มที่มีความรับผิดชอบ"
 
 #: functions/zume-content.php:502
+#, fuzzy
 msgid "The Bible tells us that every follower of Jesus will one day be held accountable for what we do and say and think. Accountability Groups are a great way to get ready!"
 msgstr "พระคัมภีร์บอกเราว่าในวันหนึ่งผู้ติดตามพระเยซูทุกคนจะต้องรับผิดชอบในสิ่งที่เราทำ สิ่งที่เราพูดและสิ่งที่เราคิด เป็นวิธีอันดีเยี่ยมเพื่อเตรียมตัวเราให้พร้อมรับผิดชอบ!"
 
@@ -634,6 +640,7 @@ msgid "Ask if anyone in the group has specific needs they would like the group t
 msgstr "โปรดถามสมาชิกว่ามีใครต้องการให้กลุ่มอธิษฐานเผื่อเป็นพิเศษหรือไม่ ขอให้ใครคนหนึ่งอธิษฐานและขอพระเจ้าช่วยในสิ่งต่างๆ ที่กลุ่มได้เล่าสู่กันฟัง โปรดทำให้แน่ใจว่าคุณได้ขอบคุณพระเจ้าที่พระองค์ทรงสัญญาไว้ในพระวจนะของพระองค์ว่าพระองค์จะทรงฟังและกระทำการเมื่อประชากรของพระองค์อธิษฐาน และเหมือนกับทุกครั้ง ขอพระวิญญาณบริสุทธิ์ทรงนำพาเวลาที่พวกคุณจะใช้ด้วยกัน"
 
 #: functions/zume-content.php:731
+#, fuzzy
 msgid "If we want to make disciples who multiply – spiritual producers and not just consumers – then we need to learn and share four main ways God makes everyday followers more like Jesus:"
 msgstr "หากเราต้องการสร้างสาวกผู้ทวีจำนวน – สร้างเขาให้เป็นผู้ผลิตฝ่ายจิตวิญญาณไม่ใช่แค่เพียงผู้บริโภค เช่นนั้นแล้ว เราจำเป็นต้องเรียนรู้และบอกต่อวิธีหลักสี่วิธีที่พระเจ้าทรงทำให้ผู้ติดตามกลายเป็นเหมือนพระเยซูมากยิ่งขึ้น"
 
@@ -796,6 +803,7 @@ msgstr "คุณได้รับการหนุนใจให้เล่
 
 #: functions/zume-content.php:1104 functions/zume-content.php:1527
 #: functions/zume-content.php:2030
+#, fuzzy
 msgid "Pray and thank God for the results and invite His Holy Spirit to lead your time together."
 msgstr "อธิษฐานและขอบคุณพระเจ้าสำหรับผลต่างๆ ที่เกิดขึ้นและขอเชิญพระวิญญาณบริสุทธิ์ให้ทรงนำเวลาที่คุณใช้ด้วยกัน"
 
@@ -832,10 +840,12 @@ msgid "Read and Discuss (15min)"
 msgstr "อ่านและอภิปราย (15 นาที)"
 
 #: functions/zume-content.php:1196
+#, fuzzy
 msgid "Jesus said, “You will receive power when the Holy Spirit comes upon you. And you will be my witnesses, telling people about me everywhere – in Jerusalem, throughout Judea, in Samaria, and to the ends of the earth.”"
 msgstr "พระเยซูตรัสว่า  “แต่ท่านทั้งหลายจะได้รับฤทธิ์อำนาจเมื่อพระวิญญาณบริสุทธิ์เสด็จมาเหนือพวกท่าน และพวกท่านจะเป็นพยานฝ่ายเราในกรุงเยรูซาเล็ม และทั่วแคว้นยูเดียกับสะมาเรียจนถึงสุดปลายแผ่นดินโลก”"
 
 #: functions/zume-content.php:1199
+#, fuzzy
 msgid "Jesus believed in His followers so much, He trusted them to tell His story. Then He sent them around the world to do it. Now, He’s sending us."
 msgstr "พระเยซูทรงเชื่อในตัวสาวกของพระองค์อย่างยิ่ง พระองค์ทรงไว้ใจให้พวกเขาเล่าเรื่องราวของพระองค์ จากนั้นพระองค์ทรงส่งพวกเขาออกไปทั่วโลกเพื่อทำสิ่งนี้ และในขณะนี้ พระองค์กำลังส่งเราออกไป"
 
@@ -848,6 +858,7 @@ msgid "What comes to mind when you hear God's command to be His \"witness\" and 
 msgstr "เมื่อคุณได้ยินพระบัญชาของพระเจ้าให้เป็น “พยาน” ของพระองค์และบอกเล่าเรื่องราวของพระองค์ คุณคิดถึงอะไร?"
 
 #: functions/zume-content.php:1213
+#, fuzzy
 msgid "Why do you think Jesus chose ordinary people instead of some other way to share His Good News?"
 msgstr "คุณคิดว่าเหตุใดพระเยซูทรงเลือกคนธรรมดาสามัญแทนที่จะใช้วิธีอื่นในการบอกเล่าข่าวประเสริฐของพระองค์?"
 
@@ -892,6 +903,7 @@ msgid "Baptism"
 msgstr "บัพติศมา"
 
 #: functions/zume-content.php:1332
+#, fuzzy
 msgid "Jesus said, “Go and make disciples of all nations, BAPTIZING them in the name of the Father and of the Son and of the Holy Spirit…”"
 msgstr "พระเยซูตรัสว่า “จงไปสร้างสาวกจากมวลประชาชาติ ให้เขารับบัพติศมาในพระนามของพระบิดา พระบุตร และพระวิญญาณบริสุทธิ์...”"
 
@@ -912,6 +924,7 @@ msgid "Would you even consider it?"
 msgstr "คุณเคยคิดถึงเรื่องนี้หรือไม่?"
 
 #: functions/zume-content.php:1388
+#, fuzzy
 msgid "If the Great Commission is for every follower of Jesus, does that mean every follower is allowed to baptize others? Why or why not?"
 msgstr "หากพระมหาบัญชาเป็นพระบัญชาสำหรับผู้ติดตามพระเยซูทุกคนแล้วล่ะก็ นั่นหมายความว่าผู้ติดตามทุกคนได้รับอนุญาตเพื่อให้บัพติศมาผู้อื่นใช่หรือไม่ เหตุใดจึงใช่หรือไม่ใช่?"
 
@@ -920,6 +933,7 @@ msgid "IMPORTANT REMINDER – Have you been baptized?"
 msgstr "หมายเหตุสำคัญ – คุณได้รับบัพติศมาหรือยัง?"
 
 #: functions/zume-content.php:1404
+#, fuzzy
 msgid "If not, then we encourage you to plan this before even one more session of this training. Invite your group to be a part of this important day when you celebrate saying \"yes\" to Jesus."
 msgstr "หากยัง เราหนุนใจคุณให้วางแผนทำสิ่งนี้ก่อน กระทั่งก่อนจะเรียนบทเรียนต่อไปของการอบรมนี้ เชิญกลุ่มของคุณให้ร่วมเป็นส่วนหนึ่งของวันสำคัญนี้ในเวลาที่คุณตอบ “รับ” พระเยซู"
 
@@ -984,6 +998,7 @@ msgid "What is God's greatest blessing for His children? Making disciples who mu
 msgstr "อะไรคือพระพรที่ยิ่งใหญ่ที่สุดสำหรับลูกๆ ของพระองค์? การสร้างสาวกผู้ทวีจำนวนนั่นเอง!"
 
 #: functions/zume-content.php:1658
+#, fuzzy
 msgid "What if you could learn a simple pattern for making not just one follower of Jesus but entire spiritual families who multiply for generations to come?"
 msgstr "หากคุณมีโอกาสเรียนรู้รูปแบบง่ายๆ เพื่อการสร้างผู้ติดตามพระเยซูที่ไม่ใช่เพียงแค่หนึ่งคนแต่เป็นทั้งครอบครัวฝ่ายจิตวิญญาณที่จะทวีจำนวนออกไปอีกหลายรุ่นที่จะมาถึงล่ะ?"
 
@@ -992,6 +1007,7 @@ msgid "Zúme Video Scripts: Greatest Blessing"
 msgstr "สคริปท์วิดีโอซูเม่: พระพรที่ยิ่งใหญ่ที่สุด"
 
 #: functions/zume-content.php:1701
+#, fuzzy
 msgid "Is this the pattern you were taught when you first began to follow Jesus? If not, what was different?"
 msgstr "นี่คือรูปแบบที่คุณถูกสอนมาเมื่อคุณแรกติดตามพระเยซูหรือไม่? หากไม่ใช่ มีอะไรบ้างที่แตกต่าง?"
 
@@ -1048,6 +1064,7 @@ msgid "The Lord's Supper"
 msgstr "พิธีมหาสนิท/อาหารเย็นมื้อสุดท้าย"
 
 #: functions/zume-content.php:1869
+#, fuzzy
 msgid "Jesus said, “I am the living bread that came down from heaven. Whoever eats this bread will live forever. This bread is my flesh, which I will give for the life of the world.”"
 msgstr "พระเยซูตรัสว่า – “เราเป็นอาหารซึ่งให้ชีวิตที่ลงมาจากสวรรค์ ถ้าผู้ใดได้กินอาหารนี้ ผู้นั้นจะมีชีวิตอยู่ตลอดไป อาหารนี้คือเนื้อของเราซึ่งเราจะให้เพื่อโลกนี้จะได้มีชีวิต”"
 
@@ -1092,6 +1109,7 @@ msgid "You were encouraged to train someone else with the 3-Minute Testimony too
 msgstr "คุณได้รับการหนุนใจให้ฝึกใครสักคนให้ใช้เครื่องมือคำพยาน 3 นาที"
 
 #: functions/zume-content.php:2037
+#, fuzzy
 msgid "In this session, you’ll learn how Prayer Walking is a powerful way to prepare a neighborhood for Jesus, and you'll learn a simple but powerful pattern for prayer that will help you meet and make new disciples along the way."
 msgstr "ในบทเรียนนี้ เราจะเรียนรู้ว่าการเดินอธิษฐานเป็นวิธีอันทรงพลังเพียงใดเพื่อเตรียมพื้นที่หนึ่งๆ ไว้สำหรับพระเยซู และเราจะเรียนรู้รูปแบบเรียบง่ายแต่ทรงพลังในการอธิษฐานซึ่งจะช่วยเราให้ได้พบและได้สร้างสาวกใหม่ในระหว่างการเดินนั้นด้วย"
 
@@ -1184,6 +1202,7 @@ msgid "You were encouraged to share the Prayer Walking tool with someone else."
 msgstr "คุณได้รับการหนุนใจให้แบ่งปันเรื่องการเดินอธิษฐานกับใครบางคน"
 
 #: functions/zume-content.php:2314
+#, fuzzy
 msgid "Pray and thank God for the results, ask Him to help when you find it hard to obey, and invite His Holy Spirit to lead your time together."
 msgstr "อธิษฐานและขอบคุณพระเจ้าสำหรับผลต่างๆ ที่เกิดขึ้น ขอพระองค์ทรงช่วยเราเมื่อเรารู้สึกว่ายากที่จะเชื่อฟัง และขอเชิญพระวิญญาณบริสุทธิ์ให้ทรงนำเวลาที่คุณใช้ด้วยกัน"
 
@@ -1216,6 +1235,7 @@ msgid "Did you notice any differences between a 3/3 Group and a Bible Study or S
 msgstr "คุณสังเกตเห็นความแตกต่างระหว่างกลุ่ม 3/3 กับกลุ่มศึกษาพระคัมภีร์หรือกลุ่มย่อยที่คุณเคยเข้าร่วม (หรือเคยได้ยิน) มาก่อนหรือไม่? หากคุณเห็น ความแตกต่างเหล่านี้ส่งผลกระทบต่อกลุ่มอย่างไรบ้าง?"
 
 #: functions/zume-content.php:2467
+#, fuzzy
 msgid "Could a 3/3 Group be considered a Simple Church? Why or why not?"
 msgstr "กลุ่ม 3/3 จะถูกนับว่าเป็นคริสตจักรบ้านได้หรือไม่? เหตุใดจึงได้หรือไม่ได้?"
 
@@ -1248,6 +1268,7 @@ msgid "You were encouraged to share the importance of Faithfulness with someon
 msgstr "คุณได้รับการหนุนใจให้เล่าถึงความสำคัญของการเป็นคนสัตย์ซื่อกับใครบางคน"
 
 #: functions/zume-content.php:2572
+#, fuzzy
 msgid "Pray and thank God for the group's commitment to faithfully following Jesus and invite God's Holy Spirit to lead your time together."
 msgstr "อธิษฐานและขอบคุณพระเจ้าสำหรับสัญญาที่กลุ่มของคุณได้ให้ไว้ว่าจะสัตย์ซื่อในการติดตามพระเยซูและขอเชิญพระวิญญาณบริสุทธิ์ให้ทรงนำเวลาที่คุณใช้ด้วยกัน"
 
@@ -1349,30 +1370,37 @@ msgid "You were encouraged to share the 3/3 Group Format with someone else."
 msgstr "คุณได้รับการหนุนใจให้แบ่งปันรูปแบบ 3/3 กับใครคนหนึ่ง"
 
 #: functions/zume-content.php:2811
+#, fuzzy
 msgid "Pray and thank God for giving your group the energy, the focus and the faithfulness to come so far in this training. Ask God to have His Holy Spirit remind everyone in the group that they can do nothing without Him!"
 msgstr "อธิษฐานและขอบคุณพระเจ้าที่พระองค์ประทานพลังงาน การเพ่งสายตา และความสัตย์ซื่อให้กับกลุ่มของคุณเพื่อมาได้ไกลขนาดนี้ในการฝึกอบรมนี้ ขอพระเจ้าให้พระวิญญาณบริสุทธิ์ของพระองค์เตือนใจทุกคนในกลุ่มว่าเราไม่อาจทำอะไรได้เองเลยหากปราศจากพระองค์!"
 
 #: functions/zume-content.php:2818
+#, fuzzy
 msgid "In this session, you’ll learn how Leadership Cells prepare followers in a short time to become leaders for a lifetime. You'll learn how serving others is Jesus' strategy for leadership. And you'll spend time practicing as a 3/3 Group, again."
 msgstr "ในบทเรียนนี้ เราจะเรียนรู้ว่าหัวหน้ากลุ่มเซลส์จะเตรียมผู้ติดตามในระยะเวลาอันสั้นเพื่อให้พวกเขาขึ้นมาเป็นผู้นำตลอดชีวิตได้อย่างไร เราจะเรียนรู้ว่าการรับใช้ผู้อื่นเป็นกลยุทธ์ของพระเยซูในการเป็นผู้นำอย่างไร และเราจะใช้เวลาฝึกกลุ่ม 3/3 ด้วยกันอีกครั้งหนึ่ง"
 
 #: functions/zume-content.php:2840
+#, fuzzy
 msgid "Jesus said, “Whoever wishes to become great among you shall be your servant.”"
 msgstr "พระเยซูตรัสว่า – “แต่สำหรับพวกท่านไม่เป็นเช่นนั้น ตรงกันข้าม ใครอยากเป็นใหญ่ในพวกท่านต้องรับใช้พวกท่าน”"
 
 #: functions/zume-content.php:2843
+#, fuzzy
 msgid "Jesus radically reversed our understanding of leadership by teaching us that if we feel called to lead, then we are being called to serve. A Leadership Cell is a way someone who feels called to lead can develop their leadership by practicing serving."
 msgstr "พระเยซูพลิกสิ่งที่เราเข้าใจเรื่องผู้นำกลับไปอีกด้านทีเดียว พระองค์สอนเราว่าหากเราได้รับการทรงเรียกให้เป็นผู้นำ นั่นหมายความว่าพระองค์ทรงเรียกเราให้รับใช้ กลุ่มเซลส์ผู้นำคือวิธีที่ใครคนหนึ่งที่รู้สึกได้รับการเรียกให้นำจะสามารถพัฒนาความเป็นผู้นำของตนได้ด้วยการฝึกรับใช้"
 
 #: functions/zume-content.php:2854
+#, fuzzy
 msgid "Find the \"Leadership Cells\" section in your Zúme Guidebook. When you're ready, watch and discuss this video."
 msgstr "โปรดอ่าน “กลุ่มเซลส์ผู้นำ” ในคู่มือซูเม่ของคุณ เมื่อคุณพร้อมแล้ว โปรดดูวิดีโอนี้ จากนั้นอภิปราย"
 
 #: functions/zume-content.php:2889
+#, fuzzy
 msgid "Zúme Video Scripts: Leadership Cells"
 msgstr "สคริปท์วิดีโอซูเม่: กลุ่มเซสล์ผู้นำ"
 
 #: functions/zume-content.php:2898
+#, fuzzy
 msgid "Is there a group of followers of Jesus you know that are already meeting or would be willing to meet and form a Leadership Cell to learn Zúme Training?"
 msgstr "คุณรู้จักกลุ่มผู้ติดตามพระเยซูกลุ่มใดหรือไม่ที่มาพบปะกันเป็นประจำหรืออาจยินดีมาพบปะกันและตั้งกลุ่มผู้นำเซลส์ขึ้นมาเพื่อร่วมฝึกอบรมซูเม่ด้วยกัน?"
 
@@ -1413,6 +1441,7 @@ msgid "Pray and ask God who He wants you to share the Leadership Cell tool with 
 msgstr "อธิษฐานและขอพระเจ้าว่าพระองค์อยากให้คุณเล่าเรื่องกลุ่มเซลส์ผู้นำนี้ให้กับใครฟัง บอกชื่อคนๆ นั้นกับกลุ่มก่อนที่พวกคุณจะแยกย้ายกันไป"
 
 #: functions/zume-content.php:2991
+#, fuzzy
 msgid "Thank God for sending Jesus to show us that real leaders are real servants. Thank Jesus for showing us the greatest service possible is giving up our own lives for others."
 msgstr "ขอบคุณพระเจ้าที่พระองค์ทรงส่งพระเยซูเพื่อให้เราได้เห็นว่าผู้นำที่แท้จริงนั้นคือผู้รับใช้ที่แท้จริง ขอบคุณพระเยซูสำหรับการสำแดงให้เห็นการรับใช้ที่ยิ่งใหญ่ที่สุดที่จะเป็นไปได้ นั่นคือการสละชีวิตของเราเพื่อผู้อื่น"
 
@@ -1425,6 +1454,7 @@ msgid "You were encouraged to share the Leadership Cells tool with someone else.
 msgstr "คุณได้รับการหนุนใจให้แบ่งปันเรื่องกลุ่มเซลส์ผู้นำกับใครบางคน"
 
 #: functions/zume-content.php:3049
+#, fuzzy
 msgid "Pray and thank God that His ways are not our ways and His thoughts are not our thoughts. Ask Him to give each member of your group the mind of Christ — always focused on His Father's work. Ask the Holy Spirit to lead your time together and make it the best session yet."
 msgstr "อธิษฐานและขอบคุณพระเจ้าที่วิธีของพระองค์ไม่เหมือนวิธีของเรา และความคิดของพระองค์ก็ไม่ใช่ความคิดของเรา ขอพระองจะทรงประทานจิตใจอย่างพระคริสต์ให้กับทุกคนในกลุ่มของคุณ ที่จะเพ่งสายตาไปที่งานของพระบิดาเสมอ ขอพระวิญญาณบริสุทธิ์ทรงนำพาเวลาที่คุณใช้ร่วมกันนี้และทำให้บทเรียนนี้เป็นบทเรียนที่ยอดเยี่ยมที่สุดเท่าที่เคยทำมา"
 
@@ -1469,6 +1499,7 @@ msgid "What is one thing you can do starting this week that will make a differen
 msgstr "อะไรคืออย่างหนึ่งที่คุณจะทำได้ในสัปดาห์นี้เพื่อสร้างความแตกต่าง?"
 
 #: functions/zume-content.php:3216
+#, fuzzy
 msgid "Jesus taught us that we are to stay close — to live as a small, spiritual family, to love and give our lives to one another, to celebrate and suffer — together. However, Jesus also taught us to leave our homes and loved ones behind and be willing to go anywhere — and everywhere — to share and start new spiritual families. So how can we do both? When you're ready, watch the video below and discuss the question that follows."
 msgstr "พระเยซูทรงสอนเราว่าเราควรจะสนิทสนมกัน – มีชีวิตเป็นครอบครัวฝ่ายวิญญาณขนาดเล็กด้วยกัน รักกันและกันและมอบชีวิตของเราแก่กันและกัน ฉลองด้วยกัน ทนทุกข์ร่วมกัน อย่างไรก็ตาม พระเยซูทรงสอนเราไว้ด้วยว่าให้เราละบ้านของเราและคนรักของเราไว้เบื้องหลัง และยินดีที่จะออกไปยังที่ใดก็ตาม – และไปยังทุกที่ เพื่อแบ่งปันและเริ่มต้นครอบครัวใหม่ฝ่ายจิตวิญญาณ แล้วเราจะทำทั้งสองสิ่งนี้ได้อย่างไร? หกาคุณพร้อมแล้ว โปรดดูวิดีโอด้านล่างนี้และอภิปรายคำถามด้านล่างนี้"
 
@@ -1565,6 +1596,7 @@ msgid "Discuss and develop a group plan for starting at least two new 3/3 Groups
 msgstr "อภิปรายและจัดทำแผนหนึ่งขึ้นมาเพื่อเริ่มตั้งกลุ่ม 3/3 กลุ่มใหม่อย่างน้อย 2 กลุ่ม หรือตั้งกลุ่มฝึกอบรมซูเม่ในพื้นที่ของคุณ สมาชิกในกลุ่มของคุณหลายคนอาจพึ่งจะอบรมเสร็จเรียบร้อยและโปรดบันทึกแผน 30 เดือนของพวกคุณเอาไว้ในกลุ่มซูเม่ของคุณ ในขั้นนี้ หากยังไม่มีใครในกลุ่มของคุณได้กรอกข้อมูลแผนสามเดือนในเว๊ปไซด์ ขอแนะนำอย่างยิ่งว่าคุณควรทำด้วยกันเลยในเวลานี้ เพียงแค่เข้าไปในแผนสามเดือนภายใต้การตั้งค่าและลิงค์ฟอร์มนี้ไปยังกลุ่มของคุณ"
 
 #: functions/zume-content.php:3397
+#, fuzzy
 msgid "Remember, your goal is to start Simple Churches that multiply. 3/3 Groups and Zúme Training Groups are two ways to do that. Discuss and decide whether these new Groups will be connected to an existing local church or network or whether you’ll start a new network out of your Zúme Training Group."
 msgstr "โปรดจดจำว่าเป้าหมายของคุณคือการก่อตั้งคริสตจักรบ้านที่ทวีจำนวน กลุ่ม 3/3 และกลุ่มฝึกอบรมซูเม่คือสองวิธีในการทำสิ่งนั้น อภิปรายและตัดสินใจว่ากลุ่มใหม่เหล่านี้จะเชื่อมโยงกับคริสตจักรท้องถิ่นหรือเครือข่ายที่มีอยู่แล้วในพื้นที่ได้อย่างไร หรือคุณควรจะสร้างเครือข่ายใหม่ขึ้นมาจากกลุ่มฝึกอบรมซูเม่ของคุณ"
 
@@ -1613,6 +1645,7 @@ msgid "Take a few moments to see how your group has been doing with these items 
 msgstr "ก่อนที่เราจะเริ่มบทเรียนนี้ โปรดใช้เวลาสักครู่ตรวจเช็คกันและกันในหัวข้อเหล่านี้ รวมถึงแผนสามเดือนนับตั้งแต่ที่คุณพบกันครั้งที่แล้ว"
 
 #: functions/zume-content.php:3492
+#, fuzzy
 msgid "Pray and thank God that He is faithful to complete His good work in us. Ask Him to give your group clear heads and open hearts to the great things He wants to do in and through you. Ask the Holy Spirit to lead your time together and thank Him for His faithfulness, too. He got you through!"
 msgstr "อธิษฐานและขอบคุณพระเจ้าที่พระองค์ทรงสัตย์ซื่อในการดีของพระองค์ที่ทรงทำให้สำเร็จในตัวเรา ขอพระองค์ที่จะทรงประทานความคิดชัดเจนและให้กลุ่มของคุณมีใจเปิดรับสิ่งยิ่งใหญ่ที่พระองค์ทรงปรารถนาจะกระทำและกระทำผ่านพวกคุณ ขอพระวิญญาณบริสุทธิ์ทรงนำเวลาของคุณด้วยกันและขอบคุณพระองค์สำหรับความสัตย์ซื่อของพระองค์ด้วยเช่นกัน พระองค์ทรงช่วยให้คุณทำสำเร็จลุล่วง!"
 
@@ -1689,6 +1722,7 @@ msgid "Zúme Video Scripts: Leadership in Networks"
 msgstr "สคริปท์วิดีโอซูเม่: ความเป็นผู้นำในเครือข่ายของครอบครัวทางจิตวิญญาณ"
 
 #: functions/zume-content.php:3661
+#, fuzzy
 msgid "Are there advantages when networks of simple churches are connected by deep, personal relationships? What are some examples that come to mind?"
 msgstr "เมื่อเครือข่ายคริสตจักรบ้านหลายๆ แห่งมาเชื่อมต่อกันโดยมีความสัมพันธ์กันอย่างเหนียวแน่น สิ่งนี้ทำให้มีข้อได้เปรียบอย่างไรบ้าง? มีตัวอย่างใดที่เข้ามาในใจของคุณ?"
 
@@ -1873,6 +1907,7 @@ msgid "I will use the Prayer Cycle tool once every [days / weeks / months]."
 msgstr "ฉันจะใช้วงจรการอธิษฐานทุก (วัน/สัปดาห์/เดือน)"
 
 #: functions/zume-three-month-plan.php:91
+#, fuzzy
 msgid "I will invite the following people to be part of a Leadership Cell that I will lead:"
 msgstr "ฉันจะเชิญคนเหล่านี้ให้เป็นส่วนหนึ่งของเซลส์ผู้นำที่ฉันจะเป็นคนนำ"
 
@@ -2003,6 +2038,7 @@ msgstr "ไม่มีแผนใดลิงค์กับกลุ่มน
 #: template-zume-about.php:38 template-zume-about.php:55
 #: template-zume-faq.php:199 template-zume-privacy-policy.php:186
 #: template-zume-progress.php:119
+#, fuzzy
 msgid "Zúme uses an online training platform to equip participants in basic disciple-making and simple church planting multiplication principles, processes, and practices."
 msgstr "สร้างสาวกในทุกเขตโอเมก้าทั่วโลก โดยใช้การอบรมออนไลน์ที่มุ่งเน้นไปยังผู้ฝึกที่มีความพร้อมในการสร้างสาวกและการปลูกคริสตจักรบ้านทั้งในด้านหลักการทวีจำนวน ขั้นตอนการทำงานและการลงมือปฏิบัติ"
 
@@ -2285,6 +2321,7 @@ msgstr "บทเรียนที่ 8"
 #: functions/enqueue-scripts.php:237 template-gmo.php:240
 #: template-how-to-follow-jesus.php:240 template-zume-dashboard.php:542
 #: template-zume-training.php:667
+#, fuzzy
 msgid "Leadership Cells"
 msgstr "กลุ่มเซสล์ผู้นำ"
 
@@ -2641,6 +2678,7 @@ msgid "Who is the training appropriate for?"
 msgstr "การฝึกอบรมนี้เหมาะสมกับใครบ้าง?"
 
 #: template-zume-faq.php:101
+#, fuzzy
 msgid "The training is appropriate for followers of Christ who are 13-years-old or older and who are able to read. In the future, there may be a version produced that is appropriate for non-literate people, but this is not that version. We believe every person who fits this profile should take the training."
 msgstr "การฝึกอบรมนี้เหมาะสมกับผู้ติดตามพระคริสต์ที่มีอายุ 13 ปีขึ้นไปและเป็นผู้ที่อ่านหนังสือออก ในอนาคตอาจจะมีการทำเวอร์ชั่นที่เหมาะสมกับผู้ไม่รู้หนังสือ แต่ยังไม่ใช่เวอร์ชั่นนี้ เราเชื่อว่าทุกคนมีลักษณะตรงกับที่กล่าวมาควรได้ทำการฝึกอบรมนี้"
 
@@ -2677,6 +2715,7 @@ msgid "PHASE 3"
 msgstr "ระยะที่ 3"
 
 #: template-zume-faq.php:126 template-zume-progress.php:102
+#, fuzzy
 msgid "The third phase focuses Phase 1 and Phase 2 churches to mobilize globally with a vision to make disciples in every place, among every people group. Zúme Project exists to saturate the globe with multiplying disciples in our generation. To accelerate our mission, we have developed and will deliver a mapping solution allowing teams to work strategically towards the goal of a Zúme training group and two simple churches among every 50,000 people outside the US."
 msgstr "ระยะที่สามมุ่งเน้นไปที่ระยะ 1 และระยะ 2 ของคริสตจักรเพื่อระดมกำลังทั่วโลก โดยมีวิสัยทัศน์ที่จะสร้างสาวกทุกแห่งในทุกกลุ่ม โครงการซูเม่ มีอยู่เพื่อทำให้โลกอิ่มเอิบไปพร้อม ๆ กับสาวกที่ทวีคูณในยุคของเรา เพื่อเร่งภารกิจของเรา, เราได้พัฒนาและนำเสนอโซลูชันการทำแผนที่เพื่อให้ทีมสามารถทำงานอย่างมีกลยุทธ์เพื่อบรรลุเป้าหมายของการฝึกอบรม Zúme และตั้งคริสตจักรบ่านและเมืองที่เรียบง่ายในทุกๆ 50,000 คนที่อยู่นอกสหรัฐฯ"
 
@@ -2697,6 +2736,7 @@ msgid "How are the groups started by trainees aligned or organized?"
 msgstr "กลุ่มต่างๆ ที่เริ่มต้นโดยผู้ฝึกเหล่านี้จะมีการเข้ากลุ่มหรือมีโครงสร้างอย่างไร?"
 
 #: template-zume-faq.php:148
+#, fuzzy
 msgid "It depends. If the trainees come out of a particular church or denomination or network then the most natural thing is for the newly formed groups to be connected with those existing churches, denomination, or network. If desired, however, a new network can be formed from the groups that start. A third alternative would be for the new groups to join with other already existing networks of simple churches. Many of the people involved in developing Zúme come from such networks so we can help arrange that if desired."
 msgstr "ขึ้นอยู่กับแต่ละแห่ง หากผู้ฝึกมาจากคริสตจักรแห่งหนึ่ง หรือนิกายหนึ่ง หรือเครือข่ายหนึ่ง ในกรณีนั้นสิ่งที่เป็นธรรมชาติที่สุดก็คือกลุ่มใหม่นี้จะเชื่อมโยงกับคริสตจักร นิกาย หรือเครือข่ายที่มีอยู่แล้ว อย่างไรก็ตาม หากต้องการก็สามารถตั้งเครือข่ายใหม่ขึ้นมาได้จากหลายกลุ่มได้ ทางเลือกที่สามคือกลุ่มใหม่เหล่านั้นมาเข้าร่วมกับกลุ่มอื่นที่อยู่ในเครือข่ายของคริสตจักรบ้านอยู่แล้ว หลายคนที่มีส่วนในการพัฒนาซูเม่มาจากเครือข่ายคริสตจักรบ้าน ดังนั้น เราจึงสามารถช่วยจัดเรืองนี้ให้ได้หากต้องการ"
 
@@ -2836,6 +2876,7 @@ msgid "ACCOUNTABILITY GROUPS — Break into groups of two or three people to wor
 msgstr "กลุ่มที่มีความรับผิดชอบ - แบ่งกลุ่มอกเป็นกลุ่มละสองถึงสามคนเพื่อตอบคำถามโปร่งใสตรวจสอบได้ร่วมกัน (45 นาที)"
 
 #: template-zume-overview.php:415
+#, fuzzy
 msgid "PRODUCERS VS. CONSUMERS — You'll discover the four main ways God makes everyday followers more like Jesus."
 msgstr "ผู้ผลิต vs ผู้บริโภค - คุณจะได้พบกับสี่วิธีหลักที่พระเจ้าทำให้ผู้ติดตามทั่วไปสามารถเป็นเหมือนพระเยซูมากขึ้น"
 
@@ -2864,6 +2905,7 @@ msgid "THE GOSPEL — Learn a way to share God’s Good News from the beginning 
 msgstr "ข่าวประเสริฐ - เรียนรู้วิธีการเล่าข่าวประเสริฐจากจุดเริ่มต้นของมนุษยชาติไปจนถึงจุดสิ้นสุดของยุคนี้"
 
 #: template-zume-overview.php:571
+#, fuzzy
 msgid "BAPTISM — Jesus said, “Go and make disciples of all nations, BAPTIZING them in the name of the Father and of the Son and of the Holy Spirit…” Learn how to put this into practice."
 msgstr "บัพติศมา - “พระเยซูตรัสว่า - ดังนั้นจงไปสร้างสาวกจากมวลประชาชาติ ให้เขารับบัพติศมาในพระนามของพระบิดา พระบุตร และพระวิญญาณบริสุทธิ์...\" เรียนรู้ว่าจะนำสิ่งนี้ไปปฏิบัติจริงได้อย่างไร"
 
@@ -2872,6 +2914,7 @@ msgid "SHARE GOD’S STORY — Break into groups of two or three and practice sh
 msgstr "เล่าเรื่องราวของพระเจ้า - แบ่งกลุ่มๆ ละสองถึงสามคน จากนั้น ฝึกเล่าเรื่องราวของพระเจ้า (45 นาที)"
 
 #: template-zume-overview.php:648
+#, fuzzy
 msgid "GREATEST BLESSING — Learn a simple pattern of making not just one follower of Jesus but entire spiritual families who multiply for generations to come."
 msgstr "พระพรที่ยิ่งใหญ่ที่สุด - เรียนรู้รูปแบบง่ายในการสร้างผู้ติดตามพระเยซูไม่เพียงแค่หนึ่งคนแต่เป็นครอบครัวฝ่ายจิตวิญญาณทั้งครอบครัวที่จะทวีจำนวนออกเป็นอีกหลายรุ่นในอนาคต"
 
@@ -2888,6 +2931,7 @@ msgid "3-MINUTE TESTIMONY — Learn how to share your testimony in three minutes
 msgstr "คำพยาน 3 นาที - เรียนรู้วิธีเล่าคำพยานของคุณภายใน 3 นาทีโดยการเล่าว่าพระเยซูทรงมีผลกระทบกับชีวิตของคุณเพียงใด"
 
 #: template-zume-overview.php:705
+#, fuzzy
 msgid "THE LORD'S SUPPER — It’s a simple way to celebrate our intimate connection and ongoing relationship with Jesus. Learn a simple way to celebrate."
 msgstr "พิธีมหาสนิท/อาหารเย็นมื้อสุดท้ายของพระเยซู - วิธีง่ายๆ ในการฉลองความสัมพันธ์อันใกล้ชิดที่มีอย่างต่อเนื่องกับพระเยซู เรียนวิธีง่ายๆ ที่จะฉลองกัน"
 
@@ -2920,6 +2964,7 @@ msgid "FAITHFULNESS — It's important what disciples know — but it's much mor
 msgstr "ความสัตย์ซื่อ - เป็นเรื่องสำคัญว่าสาวกรู้อะไรบ้าง - แต่เป็นเรื่องที่สำคัญมากยิ่งกว่าว่าเขานำสิ่งที่เขารู้มาใช้ทำอะไร"
 
 #: template-zume-overview.php:922
+#, fuzzy
 msgid "3/3 GROUP FORMAT — A 3/3 Group is a way for followers of Jesus to meet, pray, learn, grow, fellowship and practice obeying and sharing what they've learned. In this way, a 3/3 Group is not just a small group but a Simple Church. (80 minutes)"
 msgstr "รูปแบบกลุ่ม 3/3 - กลุ่ม 3/3 คือวิธีหนึ่งที่ผู้ติดตามพระเยซูมาพบกัน อธิษฐาน เรียนรู้ เติบโต สามัคคีธรรม และฝึกเชื่อฟังและแบ่งปันเรื่องที่เขาได้เรียนรู้ ด้วยวิธีนี้ กลุ่ม 3/3 ไม่ใช่แค่เพียงกลุ่มเล็กๆ แต่เป็นคริสตจักรบ้าน (80 นาที)"
 
@@ -2932,6 +2977,7 @@ msgid "3/3 GROUP — Your entire group will spend 90 minutes practicing the 3/3 
 msgstr "กลุ่ม 3/3 - ทั้งกลุ่มจะใช้เวลาด้วยกัน 90 นาทีเพื่อฝึกทำกลุ่ม 3/3"
 
 #: template-zume-overview.php:1055
+#, fuzzy
 msgid "LEADERSHIP CELLS — A Leadership Cell is a way someone who feels called to lead can develop their leadership by practicing serving."
 msgstr "กลุ่มเซลส์ผู้นำ - กลุ่มเซลส์ผู้นำคือวิธีที่คนๆ หนึ่งได้รับการทรงเรียกให้นำซึ่งเขาสามารถพัฒนาความเป็นผู้นำของพวกเขาขึ้นมาได้ก็ด้วยการฝึกรับใช้ผู้อื่น"
 
@@ -2944,6 +2990,7 @@ msgid "PACE — Multiplying matters and multiplying quickly matters even more. S
 msgstr "การขับเคลื่อน - การทวีจำนวนเป็นเรื่องสำคัญและการทวีจำนวนอย่างรวดเร็วสำคัญเสียยิ่งกว่า มาดูกันว่าเหตุใดการขับเคลื่อนจึงมีความสำคัญ"
 
 #: template-zume-overview.php:1156
+#, fuzzy
 msgid "PART OF TWO CHURCHES — Learn how to obey Jesus' commands by going AND staying."
 msgstr "ส่วนหนึ่งของสองคริสตจักร - เรียนรู้ว่าจะเชื่อฟังพระบัญชาของพระเยซูด้วยการออกไปและการอยู่ที่นั่นได้อย่างไร"
 
@@ -3076,6 +3123,7 @@ msgid "Have us delete any data we have about you."
 msgstr "ให้เราลบข้อมูลที่เรามีเกี่ยวกับตัวคุณออก"
 
 #: template-zume-privacy-policy.php:143
+#, fuzzy
 msgid "Express any concern you have about our use of your data."
 msgstr "แสดงความกังวลใด ๆ ที่คุณมีเกี่ยวกับการใช้ข้อมูลของคุณ"
 
