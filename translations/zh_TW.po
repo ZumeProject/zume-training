@@ -346,7 +346,7 @@ msgstr "小組禱告﹙5 分鐘﹚"
 
 #: functions/zume-content.php:217
 msgid "Begin with prayer. Spiritual insight and transformation is not possible without the Holy Spirit. Take time as a group to invite Him to guide you over this session."
-msgstr "從禱告開始！若沒有聖靈的同在﹐就不可能有屬靈洞見與轉變。鼓勵弟兄姊妹撥出時間一起尋求神﹐祈求祂在這堂課中親自引導你們。"
+msgstr "從禱告開始！若沒有聖靈的同在，就不可能有屬靈洞見與轉變。鼓勵弟兄姊妹撥出時間一起尋求神，祈求祂在這堂課中親自引導你們。"
 
 #: functions/zume-content.php:231 functions/zume-content.php:286
 #: functions/zume-content.php:351 functions/zume-content.php:721
@@ -397,11 +397,11 @@ msgstr "討論"
 
 #: functions/zume-content.php:276
 msgid "If Jesus intended every one of His followers to obey His Great Commission, why do so few actually make disciples?"
-msgstr "如果耶穌要每一位跟隨祂的人遵守祂的大使命﹐為什麼只有少數人起來帶領門徒？"
+msgstr "如果耶穌要每一位跟隨祂的人遵守祂的大使命，為什麼只有少數人起來帶領門徒？"
 
 #: functions/zume-content.php:296
 msgid "What is a disciple? And how do you make one? How do you teach a follower of Jesus to do what He told us in His Great Commission – to obey all of His commands?"
-msgstr "什麼是門徒？要怎麼訓練門徒？如何帶領跟隨基督的人﹐做到祂大使命的要求——遵行祂所有的命令？"
+msgstr "什麼是門徒？要怎麼訓練門徒？如何帶領跟隨基督的人，做到祂大使命的要求——遵行祂所有的命令？"
 
 #: functions/zume-content.php:328
 msgid "Zúme Video Scripts: Teach Them to Obey"
@@ -413,7 +413,7 @@ msgstr "一提到教會﹐你們有什麼看法？你們馬上想到什麼？"
 
 #: functions/zume-content.php:338
 msgid "What's the difference between that picture and what's described in the video as a \"Simple Church\"?"
-msgstr "你們對教會的看法﹐和影片裡面描述的「微型教會」有什麼不同？"
+msgstr "你們對教會的看法，和影片裡面描述的「微型教會」有什麼不同？"
 
 #: functions/zume-content.php:340
 msgid "Which one do you think would be easier to multiply and why?"
@@ -460,7 +460,7 @@ msgstr "每天聆聽神的話語﹐是我們與神建立關係的要素﹐也使
 
 #: functions/zume-content.php:441
 msgid "Find the \"S.O.A.P.S. Bible Reading\" section in your Zúme Guidebook and listen to the audio overview."
-msgstr "翻到「天國酵母」手冊「SOAPS 香皂讀經法」的部份﹐一起來聽底下這段錄音。"
+msgstr "翻到「天國酵母」手冊「SOAPS 香皂讀經法」的部份，一起來聽底下這段錄音。"
 
 #: functions/zume-content.php:478
 msgid "Zúme Video Scripts: S.O.A.P.S."
@@ -474,7 +474,7 @@ msgstr "守望互勉小組"
 
 #: functions/zume-content.php:502
 msgid "The Bible tells us that every follower of Jesus will one day be held accountable for what we do and say and think. Accountability Groups are a great way to get ready!"
-msgstr "聖經告訴我們﹐每一位跟隨耶穌的人﹐都要在自己的行為﹑言語﹑思想上向神負責﹐「守望互勉小組」就是為此做準備的最好方式！"
+msgstr "聖經告訴我們，每一位跟隨耶穌的人，都要在自己的行為、言語、思想上向神負責，「守望互勉小組」就是為此做準備的最好方式！"
 
 #: functions/zume-content.php:514
 msgid "Find the \"Accountability Groups\" section in your Zúme Guidebook, and listen to the audio below."
@@ -562,7 +562,7 @@ msgstr "禱告"
 
 #: functions/zume-content.php:641
 msgid "Pray that God helps you be obedient to Him and invite Him to work in you and those around you!"
-msgstr "求神幫助大家都能順服於神﹐主居心中﹐讓祂來動工!"
+msgstr "求神幫助大家都能順服於神，主居心中，讓祂來動工!"
 
 #: functions/zume-content.php:647 functions/zume-content.php:1055
 #: functions/zume-content.php:1466 functions/zume-content.php:1985
@@ -837,7 +837,7 @@ msgstr "耶穌說︰「但聖靈降臨在你們身上﹐你們就必得著能力
 
 #: functions/zume-content.php:1199
 msgid "Jesus believed in His followers so much, He trusted them to tell His story. Then He sent them around the world to do it. Now, He’s sending us."
-msgstr "耶穌對跟隨祂的門徒充分信任﹐委以傳講福音故事的大任﹐甚至差遣他們去到全世界傳講﹐而現在﹐祂差遣我們來傳講這福音故事。"
+msgstr "耶穌對跟隨祂的門徒充分信任，委以傳講福音故事的大任，甚至差遣他們去到全世界傳講，而現在，祂差遣我們來傳講這福音故事。"
 
 #: functions/zume-content.php:1202
 msgid "There’s no one “best way” to tell God’s story (also called The Gospel), because the best way will depend on who you’re sharing with. Every disciple should learn to tell God’s Story in a way that’s true to scripture and connects with the audience they’re sharing with."
@@ -849,7 +849,7 @@ msgstr "當你聽見神命令你作祂的見證人，並宣揚祂的故事，你
 
 #: functions/zume-content.php:1213
 msgid "Why do you think Jesus chose ordinary people instead of some other way to share His Good News?"
-msgstr "你想耶穌怎麼揀選一般平凡的人來傳講祂好消息﹐為什麼？"
+msgstr "你想耶穌怎麼揀選一般平凡的人來傳講祂好消息，為什麼？"
 
 #: functions/zume-content.php:1215
 msgid "What would it take for you to feel more comfortable sharing God's Story?"
@@ -893,7 +893,7 @@ msgstr "給人施洗"
 
 #: functions/zume-content.php:1332
 msgid "Jesus said, “Go and make disciples of all nations, BAPTIZING them in the name of the Father and of the Son and of the Holy Spirit…”"
-msgstr "耶穌說︰「所以，你們要去﹐使萬民作我的門徒﹐奉父﹑子聖靈的名給他們施洗…」（太二十八19）"
+msgstr "耶穌說︰「所以，你們要去，使萬民作我的門徒，奉父、子聖靈的名給他們施洗…」（太二十八19）"
 
 #: functions/zume-content.php:1343
 msgid "Find the \"Baptism\" section in your Zúme Guidebook, and listen to the audio below."
@@ -913,7 +913,7 @@ msgstr "你想過為別人施洗嗎？"
 
 #: functions/zume-content.php:1388
 msgid "If the Great Commission is for every follower of Jesus, does that mean every follower is allowed to baptize others? Why or why not?"
-msgstr "如果耶穌吩咐所有跟隨祂的人來遵守大使命﹐那是否表示每一位真實跟隨耶穌的人都可以為別人施洗？為什麼可以？或為什麼不是這樣？"
+msgstr "如果耶穌吩咐所有跟隨祂的人來遵守大使命，那是否表示每一位真實跟隨耶穌的人都可以為別人施洗？為什麼可以？或為什麼不是這樣？"
 
 #: functions/zume-content.php:1401
 msgid "IMPORTANT REMINDER – Have you been baptized?"
@@ -921,7 +921,7 @@ msgstr "重要提醒︰請問你自己受洗了嗎？"
 
 #: functions/zume-content.php:1404
 msgid "If not, then we encourage you to plan this before even one more session of this training. Invite your group to be a part of this important day when you celebrate saying \"yes\" to Jesus."
-msgstr "如果還沒有﹐我們鼓勵你在下一堂門徒訓練課之前安排受洗﹐邀請跟你一起上課的組員也來﹐與你一同慶祝這個重要的日子﹐見證你跟隨耶穌的心志，在眾人面前說︰「是的！我願意跟隨主！」"
+msgstr "如果還沒有，我們鼓勵你在下一堂門徒訓練課之前安排受洗，邀請跟你一起上課的組員也來，與你一同慶祝這個重要的日子，見證你跟隨耶穌的心志，在眾人面前說︰「是的！我願意跟隨主！」"
 
 #: functions/zume-content.php:1425
 msgid "Congratulations on finishing Session 3! "
@@ -985,7 +985,7 @@ msgstr "神給祂兒女最好的祝福是什麼呢？就是祂會親自裝備跟
 
 #: functions/zume-content.php:1658
 msgid "What if you could learn a simple pattern for making not just one follower of Jesus but entire spiritual families who multiply for generations to come?"
-msgstr "如果有一個簡單的模式﹐讓你們不只是裝備一個又一個的人跟隨耶穌﹐更是像屬靈的家庭整個倍增，一代又一代繁衍不息﹐你願意學嗎？"
+msgstr "如果有一個簡單的模式，讓你們不只是裝備一個又一個的人跟隨耶穌，更是像屬靈的家庭整個倍增，一代又一代繁衍不息，你願意學嗎？"
 
 #: functions/zume-content.php:1690
 msgid "Zúme Video Scripts: Greatest Blessing"
@@ -993,7 +993,7 @@ msgstr "「天國酵母」影片稿︰最好的祝福"
 
 #: functions/zume-content.php:1701
 msgid "Is this the pattern you were taught when you first began to follow Jesus? If not, what was different?"
-msgstr "這種方式與你在初信主作主門徒時所學到的模式一樣嗎？如果不是﹐有哪些地方不一樣？"
+msgstr "這種方式與你在初信主作主門徒時所學到的模式一樣嗎？如果不是，有哪些地方不一樣？"
 
 #: functions/zume-content.php:1703
 msgid "After you came to faith, how long was it before you began to disciple others?"
@@ -1049,7 +1049,7 @@ msgstr "領聖餐"
 
 #: functions/zume-content.php:1869
 msgid "Jesus said, “I am the living bread that came down from heaven. Whoever eats this bread will live forever. This bread is my flesh, which I will give for the life of the world.”"
-msgstr "耶穌說︰「我就是從天上降下來生命的食物﹐人若吃了這食物﹐就必活到永遠。我要賜的食物就是我的肉﹐是為了世人的生命而賜的。」（約六51）"
+msgstr "耶穌說︰「我就是從天上降下來生命的食物，人若吃了這食物，就必活到永遠。我要賜的食物就是我的肉，是為了世人的生命而賜的。」（約六51）"
 
 #: functions/zume-content.php:1880
 msgid "Find \"The Lord's Supper\" section in your Zúme Guidebook, and listen to the audio below."
@@ -1093,7 +1093,7 @@ msgstr "又鼓勵你們去裝備別人來使用「三分鐘見證」這個工具
 
 #: functions/zume-content.php:2037
 msgid "In this session, you’ll learn how Prayer Walking is a powerful way to prepare a neighborhood for Jesus, and you'll learn a simple but powerful pattern for prayer that will help you meet and make new disciples along the way."
-msgstr "在這堂課﹐要學怎麼運用「行走禱告」這個有效的工具﹐去帶領街坊鄰里接受耶穌；並且透過禱告尋見合適的人，造就成為新的門徒。"
+msgstr "在這堂課，要學怎麼運用「行走禱告」這個有效的工具，去帶領街坊鄰里接受耶穌；並且透過禱告尋見合適的人，造就成為新的門徒。"
 
 #: functions/zume-content.php:2049
 msgid "Listen and Read Along (15min)"
@@ -1145,7 +1145,7 @@ msgstr "將大家分成兩到三人的小組﹐去附近社區操練「行走禱
 
 #: functions/zume-content.php:2227
 msgid "Choosing a location can be as simple as walking outside from where you are now, or you could plan to go to a specific destination."
-msgstr "你們可以在聚會地點就近進行﹐或者計劃好到特定地點做「行走禱告」。"
+msgstr "你們可以在聚會地點就近進行，或者計劃好到特定地點做「行走禱告」。"
 
 #: functions/zume-content.php:2228
 msgid "Go as God leads, and plan on spending 60-90 minutes on this activity."
@@ -1185,7 +1185,7 @@ msgstr "上一堂課鼓勵你向人分享「行走禱告」這個福音工具。
 
 #: functions/zume-content.php:2314
 msgid "Pray and thank God for the results, ask Him to help when you find it hard to obey, and invite His Holy Spirit to lead your time together."
-msgstr "為你們目前所看到的果效禱告感謝神﹐若有什麼困難求神幫助﹐也求聖靈繼續帶領教導。"
+msgstr "為你們目前所看到的果效禱告感謝神，若有什麼困難求神幫助，也求聖靈繼續帶領教導。"
 
 #: functions/zume-content.php:2321
 msgid "In this session, you’ll learn how God uses faithful followers – even if they're brand new – much more than ones with years of knowledge and training who just won't obey. And you'll get a first look at a way to meet together that helps disciples multiply even faster."
@@ -1350,7 +1350,7 @@ msgstr "上一堂課鼓勵你向人分享「三合一小組」聚會模式。"
 
 #: functions/zume-content.php:2811
 msgid "Pray and thank God for giving your group the energy, the focus and the faithfulness to come so far in this training. Ask God to have His Holy Spirit remind everyone in the group that they can do nothing without Him!"
-msgstr "禱告感謝神賜給你們有活力﹐能專注﹐且忠心於這個門徒訓練課程的學習。求聖靈提醒每一位記得﹐主說：「離了我﹐你們就不能做什麼。」（約十五5）"
+msgstr "禱告感謝神賜給你們有活力，能專注，且忠心於這個門徒訓練課程的學習。求聖靈提醒每一位記得，主說：「離了我，你們就不能做什麼。」（約十五5）"
 
 #: functions/zume-content.php:2818
 msgid "In this session, you’ll learn how Leadership Cells prepare followers in a short time to become leaders for a lifetime. You'll learn how serving others is Jesus' strategy for leadership. And you'll spend time practicing as a 3/3 Group, again."
@@ -1362,11 +1362,11 @@ msgstr "耶穌說︰「你們中間誰願為大﹐就必做你們的用人。」
 
 #: functions/zume-content.php:2843
 msgid "Jesus radically reversed our understanding of leadership by teaching us that if we feel called to lead, then we are being called to serve. A Leadership Cell is a way someone who feels called to lead can develop their leadership by practicing serving."
-msgstr "在此耶穌徹底顛覆我們對帶領者的看法﹐祂教導說﹐如果我們感到被呼召做領袖，其實就是蒙召來服侍人。所以那些自覺蒙神呼召帶領別人的人﹐可以先在「帶領者培育小組」裡操練各樣服侍﹐好鍛鍊個人的領導力。"
+msgstr "在此耶穌徹底顛覆我們對帶領者的看法﹐祂教導說﹐如果我們感到被呼召做領袖，其實就是蒙召來服侍人。所以那些自覺蒙神呼召帶領別人的人，可以先在「帶領者培育小組」裡操練各樣服侍，好鍛鍊個人的領導力。"
 
 #: functions/zume-content.php:2854
 msgid "Find the \"Leadership Cells\" section in your Zúme Guidebook. When you're ready, watch and discuss this video."
-msgstr "請翻到「天國酵母」手冊「帶領者培育小組」這課﹐並準備好觀看、討論接下來這段影片。"
+msgstr "請翻到「天國酵母」手冊「帶領者培育小組」這課，並準備好觀看、討論接下來這段影片。"
 
 #: functions/zume-content.php:2889
 msgid "Zúme Video Scripts: Leadership Cells"
@@ -1374,7 +1374,7 @@ msgstr "「天國酵母」影片稿︰帶領者培育小組"
 
 #: functions/zume-content.php:2898
 msgid "Is there a group of followers of Jesus you know that are already meeting or would be willing to meet and form a Leadership Cell to learn Zúme Training?"
-msgstr "你可知，有哪群弟兄姊妹已經穩定參與聚會﹐或願意另外組成一個「帶領者培育小組」﹐一同來學習「天國酵母」門徒訓練？"
+msgstr "你可知，有哪群弟兄姊妹已經穩定參與聚會，或願意另外組成一個「帶領者培育小組」，一同來學習「天國酵母」門徒訓練？"
 
 #: functions/zume-content.php:2900
 msgid "What would it take to bring them together?"
@@ -1414,7 +1414,7 @@ msgstr "禱告尋求在下次聚會之前﹐你要跟哪一位分享「帶領者
 
 #: functions/zume-content.php:2991
 msgid "Thank God for sending Jesus to show us that real leaders are real servants. Thank Jesus for showing us the greatest service possible is giving up our own lives for others."
-msgstr "感謝神差遣耶穌來﹐使我們看見榜樣：真正的領袖是謙卑服侍人的﹐甚至到為人捨命的地步。"
+msgstr "感謝神差遣耶穌來，使我們看見榜樣：真正的領袖是謙卑服侍人的，甚至到為人捨命的地步。"
 
 #: functions/zume-content.php:3034
 msgid "You were asked to practice Obeying, Training, and Sharing based on your commitments during last session's 3/3 Group practice."
@@ -1426,7 +1426,7 @@ msgstr "上一堂課鼓勵你找機會跟人分享介紹「帶領者培育小組
 
 #: functions/zume-content.php:3049
 msgid "Pray and thank God that His ways are not our ways and His thoughts are not our thoughts. Ask Him to give each member of your group the mind of Christ — always focused on His Father's work. Ask the Holy Spirit to lead your time together and make it the best session yet."
-msgstr "禱告感謝神﹐祂的道路高過我們的道路﹐祂的意念非同我們的意念﹐求祂給每一位組員都有基督的心——總是專注在天父的事上。求聖靈繼續幫助引導﹐讓這堂課成為你們到目前為止最棒的一堂。"
+msgstr "禱告感謝神，祂的道路高過我們的道路，祂的意念非同我們的意念，求祂給每一位組員都有基督的心——總是專注在天父的事上。求聖靈繼續幫助引導，讓這堂課成為你們到目前為止最棒的一堂。"
 
 #: functions/zume-content.php:3057
 msgid "In this session, you’ll learn how linear patterns hold back kingdom growth and how Non-Sequential thinking helps you multiply disciples. You'll discover how much time matters in disciple-making and how to accelerate Pace. You’ll learn how followers of Jesus can be a Part of Two Churches to help turn faithful, spiritual families into a growing city-wide body of believers. Finally, you'll learn how a simple Three Month Plan can focus your efforts and multiply your effectiveness in growing God's family exponentially."
@@ -1470,7 +1470,7 @@ msgstr "在這個星期﹐你可以做哪件帶來改變的事？"
 
 #: functions/zume-content.php:3216
 msgid "Jesus taught us that we are to stay close — to live as a small, spiritual family, to love and give our lives to one another, to celebrate and suffer — together. However, Jesus also taught us to leave our homes and loved ones behind and be willing to go anywhere — and everywhere — to share and start new spiritual families. So how can we do both? When you're ready, watch the video below and discuss the question that follows."
-msgstr "耶穌教導我們﹐我們要維持緊密的關係﹐如同屬靈小家庭一樣同甘共苦生活﹐彼此相愛﹐也為彼此捨命。但是﹐耶穌也教導我們﹐我們要離開自己的家以及所愛的人﹐願意去任何地方﹐所有的地方﹐去分享﹑成立新的屬靈家庭。我們要怎麼兼顧這兩個教導呢？準備好之後﹐一起來看底下的影片﹐接著討論更底下所列出的問題。"
+msgstr "耶穌教導我們，我們要維持緊密的關係，如同屬靈小家庭一樣同甘共苦生活，彼此相愛，也為彼此捨命。但是，耶穌也教導我們，我們要離開自己的家以及所愛的人，願意去任何地方，所有的地方，去分享、成立新的屬靈家庭。我們要怎麼兼顧這兩個教導呢？準備好之後，一起來看底下的影片，接著討論更底下所列出的問題。"
 
 #: functions/zume-content.php:3250
 msgid "Zúme Video Scripts: Two Churches"
@@ -1566,7 +1566,7 @@ msgstr "討論擬定出一個整體團隊計劃﹐如何在你們附近地區成
 
 #: functions/zume-content.php:3397
 msgid "Remember, your goal is to start Simple Churches that multiply. 3/3 Groups and Zúme Training Groups are two ways to do that. Discuss and decide whether these new Groups will be connected to an existing local church or network or whether you’ll start a new network out of your Zúme Training Group."
-msgstr "要記得﹐你們的目標是建立倍增的微型小教會﹐而「三合一小組」以及「天國酵母」門徒訓練團隊就是可以運用的兩個好方法。一起討論決定﹐這些新的小組﹐是要與現有的區域地方堂會或教會網絡連結﹐或者你們要從這個「天國酵母」門徒訓練小組開始﹐成立一個新的聯絡網。"
+msgstr "要記得，你們的目標是建立倍增的微型小教會，而「三合一小組」以及「天國酵母」門徒訓練團隊就是可以運用的兩個好方法。一起討論決定，這些新的小組，是要與現有的區域地方堂會或教會網絡連結，或者你們要從這個「天國酵母」門徒訓練小組開始，成立一個新的聯絡網。"
 
 #: functions/zume-content.php:3411
 msgid "Congratulations! You've completed Session 9."
@@ -1614,7 +1614,7 @@ msgstr "撥空檢視一下你的小組從上次聚會到現在﹐在以上事項
 
 #: functions/zume-content.php:3492
 msgid "Pray and thank God that He is faithful to complete His good work in us. Ask Him to give your group clear heads and open hearts to the great things He wants to do in and through you. Ask the Holy Spirit to lead your time together and thank Him for His faithfulness, too. He got you through!"
-msgstr "禱告並感謝神，因祂信實地在我們身上成就了美好的工﹐求神賜給你的小組成員清晰的頭腦，並敞開心扉接受祂要行在你們身上和透過你們行的大事。最後邀請聖靈引導你們聚集的時間，也感謝祂的信實，帶領你們走完這個門徒訓練！"
+msgstr "禱告並感謝神，因祂信實地在我們身上成就了美好的工，求神賜給你的小組成員清晰的頭腦，並敞開心扉接受祂要行在你們身上和透過你們行的大事。最後邀請聖靈引導你們聚集的時間，也感謝祂的信實，帶領你們走完這個門徒訓練！"
 
 #: functions/zume-content.php:3499
 msgid "In this advanced training session, you’ll take a look at how you can level-up your Coaching Strengths with a quick checklist assessment. You’ll learn how Leadership in Networks allows a growing group of small churches to work together to accomplish even more. And you’ll learn how to develop Peer Mentoring Groups that take leaders to a whole new level of growth."
@@ -1690,7 +1690,7 @@ msgstr "「天國酵母」影片稿︰領袖聯絡網"
 
 #: functions/zume-content.php:3661
 msgid "Are there advantages when networks of simple churches are connected by deep, personal relationships? What are some examples that come to mind?"
-msgstr "微型小教會之間、信徒之間形成互動頻繁、關係深厚的聯絡網﹐會有什麼好處？你可以馬上想到哪些例子嗎？"
+msgstr "微型小教會之間、信徒之間形成互動頻繁、關係深厚的聯絡網，會有什麼好處？你可以馬上想到哪些例子嗎？"
 
 #: functions/enqueue-scripts.php:244 functions/zume-content.php:3682
 #: template-gmo.php:232 template-how-to-follow-jesus.php:232
@@ -1874,7 +1874,7 @@ msgstr "我要每隔—﹙天/星期/月﹚操練一次「禱告循環圈」。"
 
 #: functions/zume-three-month-plan.php:91
 msgid "I will invite the following people to be part of a Leadership Cell that I will lead:"
-msgstr "我要邀請以下的人﹐加入我所帶領的「帶領者培育小組」做組員︰"
+msgstr "我要邀請以下的人，加入我所帶領的「帶領者培育小組」做組員︰"
 
 #: functions/zume-three-month-plan.php:92
 msgid "I will encourage the following people to go through this Zúme Training course:"
@@ -1902,7 +1902,7 @@ msgstr "我想要帶出有倍增力的門徒！"
 
 #: parts/content-missing.php:4
 msgid "Oops, Page Not Found!"
-msgstr "糟糕﹐找不到頁面！"
+msgstr "糟糕，找不到頁面！"
 
 #: parts/content-missing.php:8
 msgid "Uh Oh. Something is missing. Try double checking things."
@@ -2004,7 +2004,7 @@ msgstr "小組裡沒有已連結的規劃表。"
 #: template-zume-faq.php:199 template-zume-privacy-policy.php:186
 #: template-zume-progress.php:119
 msgid "Zúme uses an online training platform to equip participants in basic disciple-making and simple church planting multiplication principles, processes, and practices."
-msgstr "「天國酵母」是一個網路培訓平臺，裝備門徒訓練以及成立新教會所需的基本倍增原則﹑方法和實做操練。"
+msgstr "「天國酵母」是一個網路培訓平臺，裝備門徒訓練以及成立新教會所需的基本倍增原則、方法和實做操練。"
 
 #: template-zume-about.php:50 template-zume-faq.php:194
 #: template-zume-privacy-policy.php:181 template-zume-progress.php:114
@@ -2562,7 +2562,7 @@ msgstr "「天國酵母」Zúme常見問題"
 
 #: template-zume-faq.php:30
 msgid "Is it really 100 percent free?"
-msgstr "「天國酵母」Zúme真的是完全免費嗎？"
+msgstr "「天國酵母」Zúme真的是完全免費的嗎？"
 
 #: template-zume-faq.php:37
 msgid "How old do you have to be to take the training?"
@@ -2618,7 +2618,7 @@ msgstr "已經有很多DMM（門徒訓練）或CPM（植堂訓練）之類門徒
 
 #: template-zume-faq.php:80
 msgid "Live training is better than online training. Online training should never replace live training events. Unfortunately, due to limitations of access, awareness, availability, scheduling, and many other reasons, many people who can and should have access to live training events don’t have access. Zúme is an attempt to provide a high-quality entry level substitute for such people. It uses the same principles as many of the live training types available from others. In addition, we find that once a person is trained with Zúme, they can very easily turn around and launch their own group and facilitate training for others using Zúme. This is a powerful opportunity for multiplying disciple-making principles."
-msgstr "網路訓練課程，永遠比不上、也無法取代現實生活中的實際訓練。然而礙於種種限制﹐諸如欠缺管道﹑瞭解不周﹑實踐門檻高﹑時間有限等﹐許多人雖然需要累積實戰經驗、進行門徒訓練，卻始終無法開始。「天國酵母」Zúme 嘗試為這群人提供高品質、低門檻的入門訓練課程。它的模式跟其他實際訓練課程一樣，持有相同的原則。我們發現，受過「天國酵母」門徒訓練的人﹐不難上手組成屬於他們自己的小組﹐並推動其他人也開始使用「天國酵母」教材。這實在是一個推動弟兄姊妹帶門徒的好工具。"
+msgstr "網路訓練課程，永遠比不上、也無法取代現實生活中的實際訓練。然而礙於種種限制﹐諸如欠缺管道﹑瞭解不周、實踐門檻高、時間有限等，許多人雖然需要累積實戰經驗、進行門徒訓練，卻始終無法開始。「天國酵母」Zúme 嘗試為這群人提供高品質、低門檻的入門訓練課程。它的模式跟其他實際訓練課程一樣，持有相同的原則。我們發現，受過「天國酵母」門徒訓練的人，不難上手組成屬於他們自己的小組，並推動其他人也開始使用「天國酵母」教材。這實在是一個推動弟兄姊妹帶門徒的好工具。"
 
 #: template-zume-faq.php:86
 msgid "What is the statement of faith for Zúme?"
@@ -2642,7 +2642,7 @@ msgstr "這個門徒訓練適合哪些人？"
 
 #: template-zume-faq.php:101
 msgid "The training is appropriate for followers of Christ who are 13-years-old or older and who are able to read. In the future, there may be a version produced that is appropriate for non-literate people, but this is not that version. We believe every person who fits this profile should take the training."
-msgstr "這個門徒訓練適合給十三歲以上﹐能夠閱讀的基督門徒。我們認為任何一位合乎這條件的人﹐都最好都有機會學習這個門徒訓練課程。希望以後或許會有一種教材提供給無法閱讀的人，可惜現在這個版本還不行。"
+msgstr "這個門徒訓練適合給十三歲以上，能夠閱讀的基督門徒。我們認為任何一位合乎這條件的人，都最好都有機會學習這個門徒訓練課程。希望以後或許會有一種教材提供給無法閱讀的人，可惜現在這個版本還不行。"
 
 #: template-zume-faq.php:107
 msgid "Who owns Zúme?"
@@ -2678,7 +2678,7 @@ msgstr "第三階段"
 
 #: template-zume-faq.php:126 template-zume-progress.php:102
 msgid "The third phase focuses Phase 1 and Phase 2 churches to mobilize globally with a vision to make disciples in every place, among every people group. Zúme Project exists to saturate the globe with multiplying disciples in our generation. To accelerate our mission, we have developed and will deliver a mapping solution allowing teams to work strategically towards the goal of a Zúme training group and two simple churches among every 50,000 people outside the US."
-msgstr "第三個階段是著重在動員第一階段以及第二階段的教會﹐有全球性的異象，到世界各地方﹑族群中領人做主門徒。「天國酵母門徒訓練計畫」的成立，目標就在我們這個世代﹐讓全世界充滿倍增的門徒。為要儘速達成這使命，我們已經做出﹑也將會提供大家一個計劃地圖給所有的團隊。能夠有效達成預定的目標﹐就是要在每五萬人當中成立一個 「天國酵母」Zúme 門徒訓練團體﹐以及兩個微型教會。"
+msgstr "第三個階段是著重在動員第一階段以及第二階段的教會，有全球性的異象，到世界各地方、族群中領人做主門徒。「天國酵母門徒訓練計畫」的成立，目標就在我們這個世代，讓全世界充滿倍增的門徒。為要儘速達成這使命，我們已經做出、也將會提供大家一個計劃地圖給所有的團隊。能夠有效達成預定的目標，就是要在每五萬人當中成立一個 「天國酵母」Zúme 門徒訓練團體，以及兩個微型教會。"
 
 #: template-zume-faq.php:133
 msgid "Why is it called Zúme?"
@@ -2698,7 +2698,7 @@ msgstr "接受訓練的這些人所成立的小組﹐他們之間要如何彼此
 
 #: template-zume-faq.php:148
 msgid "It depends. If the trainees come out of a particular church or denomination or network then the most natural thing is for the newly formed groups to be connected with those existing churches, denomination, or network. If desired, however, a new network can be formed from the groups that start. A third alternative would be for the new groups to join with other already existing networks of simple churches. Many of the people involved in developing Zúme come from such networks so we can help arrange that if desired."
-msgstr "看情況﹐如果受訓的門徒原本就是來自同一個教會﹑教派，有自己的關係網絡﹐那麼最自然的方式就是與自己的教會﹑教派或關係網絡相互連結﹔但如有需要﹐也可以從這新開始的小組自行延伸出一個新聯絡網來。第三個選擇，就是將新成立的小組，加進現有的微型教會網絡中﹐彼此連結合作。許多參與開發「天國酵母」的人，來自這種的網路，因此如有需要﹐我們也可以幫你安排進適合的網絡中。"
+msgstr "看情況，如果受訓的門徒原本就是來自同一個教會、教派，有自己的關係網絡﹐那麼最自然的方式就是與自己的教會、教派或關係網絡相互連結；但如有需要，也可以從這新開始的小組自行延伸出一個新聯絡網來。第三個選擇，就是將新成立的小組，加進現有的微型教會網絡中，彼此連結合作。許多參與開發「天國酵母」的人，來自這種的網路，因此如有需要，我們也可以幫你安排進適合的網絡中。"
 
 #: template-zume-faq.php:152
 msgid "Who can see my Three-Month Plan?"
@@ -2734,7 +2734,7 @@ msgstr "目前沒有提供。我們建議小組的每位成員都註冊一個帳
 
 #: template-zume-login.php:73
 msgid "Your password reset link appears to be invalid. Please request a new link below."
-msgstr "你的密碼重設連結失效﹐請在底下重新申請新的連結。"
+msgstr "你的密碼重設連結失效，請在底下重新申請新的連結。"
 
 #: template-zume-login.php:75
 msgid "Your password reset link has expired. Please request a new link below."
@@ -2821,7 +2821,7 @@ msgstr "SOAPS香皂讀經法——運用這種每日研讀聖經的工具﹐更�
 
 #: template-zume-overview.php:341
 msgid "ACCOUNTABILITY GROUPS — a tool for two or three people of the same gender to meet weekly and encourage each other in areas that are going well and reveal areas that need correction."
-msgstr "守望互勉小組——由兩位到三位同性別的人組成小組﹐每個星期聚會一次﹐藉此小組彼此鼓勵做，切磋互勉。"
+msgstr "守望互勉小組——由兩位到三位同性別的人組成小組，每個星期聚會一次，藉此小組彼此鼓勵進步，切磋互勉。"
 
 #: template-zume-overview.php:352 template-zume-overview.php:460
 #: template-zume-overview.php:582 template-zume-overview.php:716
@@ -2837,7 +2837,7 @@ msgstr "守望互勉小組——分成兩到三人的小組﹐回答評量互勉
 
 #: template-zume-overview.php:415
 msgid "PRODUCERS VS. CONSUMERS — You'll discover the four main ways God makes everyday followers more like Jesus."
-msgstr "「生產者」還是「消費者」？——學習神所用的四個主要方式﹐使每一位跟隨主的門徒更像耶穌。"
+msgstr "「生產者」還是「消費者」？——學習神所用的四個主要方式，使每一位跟隨主的門徒更像耶穌。"
 
 #: template-zume-overview.php:436
 msgid "PRAYER CYCLE — See how easy it is to spend an hour in prayer."
@@ -2865,7 +2865,7 @@ msgstr "簡述福音——學習如何分享神救贖我們的好消息，這個
 
 #: template-zume-overview.php:571
 msgid "BAPTISM — Jesus said, “Go and make disciples of all nations, BAPTIZING them in the name of the Father and of the Son and of the Holy Spirit…” Learn how to put this into practice."
-msgstr "給人施洗——耶穌說︰「你們要去﹐使萬民作我的門徒﹐奉父﹑子聖靈的名給他們施洗…」我們也可以操練施洗。"
+msgstr "給人施洗——耶穌說︰「你們要去，使萬民作我的門徒，奉父，子聖靈的名給他們施洗…」我們也可以操練施洗。"
 
 #: template-zume-overview.php:592
 msgid "SHARE GOD’S STORY — Break into groups of two or three and practice sharing God’s Story. (45 minutes)"
@@ -2873,11 +2873,11 @@ msgstr "分享神的故事——分成兩到三人的小組﹐練習分享神的
 
 #: template-zume-overview.php:648
 msgid "GREATEST BLESSING — Learn a simple pattern of making not just one follower of Jesus but entire spiritual families who multiply for generations to come."
-msgstr "最好的祝福——這個簡單的模式﹐可以裝備人成為耶穌的門徒，從一個、兩個人，然後成為一個教會—屬靈的家，一直代代倍增延續。"
+msgstr "最好的祝福——這個簡單的模式，可以裝備人成為耶穌的門徒，從一個、兩個人，然後成為一個教會—屬靈的家，一直代代倍增延續。"
 
 #: template-zume-overview.php:660
 msgid "EYES TO SEE — Begin to see where God’s Kingdom isn’t. These are usually the places where God wants to work the most."
-msgstr "信心的眼光——在信心裡看到那麼多地方神的國還未臨到﹐而那裡是神最渴望動工的地方。"
+msgstr "信心的眼光——開始在信心裡看見神國還未臨到的地方，而那裡是神最渴望動工的地方。"
 
 #: template-zume-overview.php:672
 msgid "DUCKLING DISCIPLESHIP — Learn what ducklings have to do with disciple-making."
@@ -2885,7 +2885,7 @@ msgstr "小鴨門徒訓練法——小鴨？跟使人成為門徒有什麼關聯
 
 #: template-zume-overview.php:693
 msgid "3-MINUTE TESTIMONY — Learn how to share your testimony in three minutes by sharing how Jesus has impacted your life."
-msgstr "三分鐘見證——學了這課，你就可以在三分鐘內跟人分享自己的故事，見證耶穌如何改變了你。"
+msgstr "三分鐘見證——學了這課，你就可以在三分鐘內跟人分享自己的故事，見證耶穌如何改變了你的生命。"
 
 #: template-zume-overview.php:705
 msgid "THE LORD'S SUPPER — It’s a simple way to celebrate our intimate connection and ongoing relationship with Jesus. Learn a simple way to celebrate."
@@ -2901,15 +2901,15 @@ msgstr "領聖餐——撥出時間和全體小組成員一同守聖餐禮儀。
 
 #: template-zume-overview.php:793
 msgid "PERSON OF PEACE — Learn who a person of peace might be and how to know when you've found one."
-msgstr "找出平安之子——學習分辨誰是「平安之子」﹐以及如何知道已經找到他了。"
+msgstr "找出平安之子——學習分辨誰是「平安之子」，以及如何知道你已經找到這人。"
 
 #: template-zume-overview.php:814
 msgid "PRAYER WALKING — It’s a simple way to obey God’s command to pray for others. And it's just what it sounds like — praying to God while walking around!"
-msgstr "行走禱告——為人代禱﹐是遵從神命令最基本的；「行走禱告」﹐顧名思義︰邊走邊禱告，是一種很好的為人代禱的方式。"
+msgstr "行走禱告——是一個簡單的禱告方式，學習順服神要我們為他人禱告的命令。「行走禱告」按字面就知道，是「一面走路，一面禱告」的意思。"
 
 #: template-zume-overview.php:835
 msgid "B.L.E.S.S. PRAYER — Practice a simple mnemonic to remind you of ways to pray for others. (15 minutes)"
-msgstr "BLESS祝福禱告法——學習用這五個英文字母為人代禱，簡單易記。﹙15分鐘﹚"
+msgstr "BLESS祝福禱告法——學習用這五個簡單易記的英文字母為人代禱。﹙15分鐘﹚"
 
 #: template-zume-overview.php:845
 msgid "PRAYER WALKING — Break into groups of two or three and go out into the community to practice Prayer Walking. (60-90 minutes)"
@@ -2933,7 +2933,7 @@ msgstr "三合一小組——門徒訓練全體組員要用90分鐘的時間練�
 
 #: template-zume-overview.php:1055
 msgid "LEADERSHIP CELLS — A Leadership Cell is a way someone who feels called to lead can develop their leadership by practicing serving."
-msgstr "帶領者培育小組——蒙神呼召來帶領別人的人，可以在這帶領者培育小組裡，學習以服侍他人而帶出領導力"
+msgstr "帶領者培育小組——蒙神呼召來帶領別人的人，可以在這帶領者培育小組裡，學習以服侍他人而帶出領導力。"
 
 #: template-zume-overview.php:1132
 msgid "NON-SEQUENTIAL — See how disciple making doesn't have to be linear. Multiple things can happen at the same time."
@@ -2941,7 +2941,7 @@ msgstr "多管齊下的增長——一起學習突破傳統直線模式增長的
 
 #: template-zume-overview.php:1144
 msgid "PACE — Multiplying matters and multiplying quickly matters even more. See why pace matters."
-msgstr "加快步調——倍增固然很重要，使命急切，更快速地倍增更顯重要。一起來來看加快步調的所以然。"
+msgstr "加快步調——倍增很重要，快速地倍增更重要！讓我們一起來看看為什麼。"
 
 #: template-zume-overview.php:1156
 msgid "PART OF TWO CHURCHES — Learn how to obey Jesus' commands by going AND staying."
@@ -3001,7 +3001,7 @@ msgstr "課堂與課程活動。"
 
 #: template-zume-privacy-policy.php:62
 msgid "General location telemetry, so we know in what countries our training is being used."
-msgstr "因著地理位置收集﹐我們知道在哪些國家，「天國酵母」門徒訓練正被使用中。"
+msgstr "因著地理位置收集，我們知道在哪些國家，「天國酵母」門徒訓練正被使用中。"
 
 #: template-zume-privacy-policy.php:70
 msgid "When do we collect information?"
@@ -3262,42 +3262,40 @@ msgstr "「天國酵母」單張課程"
 
 #: functions/zume-v4-seo-strings.php:14 parts/content-share.php:40
 #: template-pieces-page.php:175 template-zume-training.php:91
-#, fuzzy
 msgid "Groups"
 msgstr "小組"
 
 #: functions/login/zume-login.php:93
 msgid "Failed Google Verification of User Token"
-msgstr "Failed Google Verification of User Token"
+msgstr "Google 使用者令牌驗證失敗"
 
 #: functions/login/zume-login.php:222 functions/login/zume-login.php:456
 msgid "Facebook email already linked with another account. Login to this account or use forgot password tool to access account."
-msgstr "Facebook email already linked with another account. Login to this account or use forgot password tool to access account."
+msgstr "臉書電子郵址已連結其他帳號。請以此帳號登入或是使用忘記密碼工具進入此帳號。"
 
 #: functions/login/zume-login.php:228 functions/login/zume-login.php:462
 msgid "Facebook already linked with another account."
-msgstr "Facebook already linked with another account."
+msgstr "臉書已連結其他帳號"
 
 #: functions/login/zume-login.php:828 functions/login/zume-login.php:908
 msgid "Oops. Something went wrong."
-msgstr "Oops. Something went wrong."
+msgstr "糟糕，出了點狀況。"
 
 #: functions/login/zume-login.php:1159
 msgid "Missing form verification. Refresh and try again."
-msgstr "Missing form verification. Refresh and try again."
+msgstr "遺漏格式驗證，請刷新並重試。"
 
 #: functions/login/zume-login.php:1201
 msgid "ERROR: Invalid username or email."
-msgstr "ERROR: Invalid username or email."
+msgstr "錯誤：無效的用戶名稱或電子郵址。"
 
 #: template-zume-login.php:125
 msgid "Your password reset email has been sent. Check your email or junk mail for the link to reset your password."
-msgstr "Your password reset email has been sent. Check your email or junk mail for the link to reset your password."
+msgstr "重設密碼的電子郵件已寄出，請至您的電子信箱收件匣或垃圾郵件資料匣查看連結以重設您的密碼。"
 
 #: template-zume-login.php:476
-#, fuzzy
 msgid "Username or password does not match. Try again."
-msgstr "用戶名或密碼不匹配。再試一次。"
+msgstr "用戶名或密碼不匹配，請再試一次。"
 
 #: template-zume-login.php:496
 msgid "Password"
@@ -3313,38 +3311,33 @@ msgstr "問問自己"
 
 #: parts/content-share.php:13 template-pieces-page.php:148
 msgid "Great job! Here's your progress with this concept"
-msgstr "Great job! Here's your progress with this concept"
+msgstr "做得好！這裡是你這項概念的進度。"
 
 #: functions/enqueue-scripts.php:309 parts/content-share.php:19
 #: template-pieces-page.php:154
-#, fuzzy
 msgid "Heard"
-msgstr "聽到神的話"
+msgstr "已聽見"
 
 #: functions/enqueue-scripts.php:310 parts/content-share.php:23
 #: template-pieces-page.php:158
-#, fuzzy
 msgid "Obeyed"
-msgstr "順從神的話"
+msgstr "已順服"
 
 #: functions/enqueue-scripts.php:311 parts/content-share.php:27
 #: template-pieces-page.php:162
-#, fuzzy
 msgid "Shared"
-msgstr "分享神的話"
+msgstr "已分享"
 
 #. Trained someone else, or have received training?
 #: functions/enqueue-scripts.php:312 parts/content-share.php:31
 #: template-pieces-page.php:166
-#, fuzzy
 msgid "Trained"
-msgstr "訓練"
+msgstr "已培訓"
 
 #: functions/zume-v4-seo-strings.php:13 parts/content-share.php:39
 #: template-pieces-page.php:174 template-zume-training.php:85
-#, fuzzy
 msgid "Course Overview"
-msgstr "課程大綱"
+msgstr "課程總覽"
 
 #: functions/enqueue-scripts.php:313 functions/zume-v4-seo-strings.php:15
 #: parts/content-share.php:41 template-pieces-page.php:176
@@ -3353,15 +3346,13 @@ msgid "Checklist"
 msgstr "教練指南"
 
 #: parts/content-share.php:42 template-pieces-page.php:177
-#, fuzzy
 msgid "Start Session"
 msgstr "開始課程"
 
 #: functions/enqueue-scripts.php:280 parts/content-share.php:70
 #: template-pieces-page.php:201
-#, fuzzy
 msgid "You're missing out."
-msgstr "不要錯過"
+msgstr "不要錯過！"
 
 #: functions/enqueue-scripts.php:281 parts/content-share.php:70
 #: template-pieces-page.php:201
@@ -3371,27 +3362,25 @@ msgstr "現在註冊！"
 #: functions/enqueue-scripts.php:282 parts/content-share.php:73
 #: template-pieces-page.php:204
 msgid "track your personal training progress"
-msgstr "track your personal training progress"
+msgstr "追蹤你的個人訓練進度"
 
 #: functions/enqueue-scripts.php:283 parts/content-share.php:74
 #: template-pieces-page.php:205
 msgid "access group planning tools"
-msgstr "access group planning tools"
+msgstr "進入小組規劃工具"
 
 #: functions/enqueue-scripts.php:284 parts/content-share.php:75
 #: template-pieces-page.php:206
-#, fuzzy
 msgid "connect with a coach"
 msgstr "與教練聯繫"
 
 #: functions/enqueue-scripts.php:285 parts/content-share.php:76
 #: template-pieces-page.php:207
 msgid "add your effort to the global vision!"
-msgstr "add your effort to the global vision!"
+msgstr "參與全球性的異象！"
 
 #: functions/enqueue-scripts.php:286 parts/content-share.php:80
 #: template-pieces-page.php:211
-#, fuzzy
 msgid "Register for Free"
 msgstr "免費註冊"
 
@@ -3401,10 +3390,9 @@ msgstr "查看整個培訓"
 
 #: template-zume-training.php:51
 msgid "Plan your group, add members, track your progress, connect with a coach, and add your effort to the global vision!"
-msgstr "Plan your group, add members, track your progress, connect with a coach, and add your effort to the global vision!"
+msgstr "成立小組、加入新成員、追蹤訓練進度、與教練聯繫並參與全球性的異象！"
 
 #: template-zume-training.php:54
-#, fuzzy
 msgid "Register Forever Free"
 msgstr "永久免費註冊"
 
@@ -3413,7 +3401,6 @@ msgid "My Groups"
 msgstr "我的小組"
 
 #: template-zume-training.php:98
-#, fuzzy
 msgid "My Checklist"
 msgstr "我的教練指南"
 
@@ -3424,18 +3411,16 @@ msgid "Zúme Training"
 msgstr "「天國酵母」(Zúme) 門徒訓練"
 
 #: template-zume-training.php:126
-#, fuzzy
 msgid "10 Sessions, 2 hours each, for groups of 3 - 12"
-msgstr "10個課程 , 每一堂課兩小時 , 一組可以有三到十二位"
+msgstr "十堂課 ，每堂課兩小時，人數為三至十二位。"
 
 #: template-zume-training.php:138
-#, fuzzy
 msgid "Single Column"
-msgstr "單列"
+msgstr "以單欄顯示"
 
 #: template-zume-training.php:139
 msgid "Show Session Plan"
-msgstr "Show Session Plan"
+msgstr "顯示課堂大綱"
 
 #: template-zume-training.php:147 template-zume-training.php:242
 #: template-zume-training.php:321 template-zume-training.php:394
@@ -3446,9 +3431,8 @@ msgid "Start"
 msgstr "開始"
 
 #: template-zume-training.php:150
-#, fuzzy
 msgid "Prayer, Overview"
-msgstr "禱告,"
+msgstr "禱告、總覽"
 
 #: template-zume-training.php:153 template-zume-training.php:232
 #: template-zume-training.php:248 template-zume-training.php:286
@@ -3467,7 +3451,7 @@ msgstr "5分鐘"
 #: template-gmo.php:66 template-how-to-follow-jesus.php:66
 #: template-zume-training.php:164
 msgid "You'll see how God uses ordinary people doing simple things to make a big impact."
-msgstr "You'll see how God uses ordinary people doing simple things to make a big impact."
+msgstr "你將看見神如何使用平凡人藉著微不足道的小事造成巨大的影響。"
 
 #: template-zume-training.php:167 template-zume-training.php:181
 #: template-zume-training.php:194 template-zume-training.php:207
@@ -3491,28 +3475,27 @@ msgstr "15分鐘"
 #: template-gmo.php:62 template-how-to-follow-jesus.php:62
 #: template-zume-training.php:178
 msgid "Discover the essence of being a disciple, making a disciple, and what is the church."
-msgstr "Discover the essence of being a disciple, making a disciple, and what is the church."
+msgstr "成為門徒﹑又使人成為門徒的精髓意義為何？教會又是什麼？"
 
 #: template-gmo.php:91 template-how-to-follow-jesus.php:91
 #: template-zume-training.php:191
 msgid "Being a disciple means we hear from God and we obey God."
-msgstr "Being a disciple means we hear from God and we obey God."
+msgstr "作為跟隨主的門徒就是要聆聽神的話﹐遵行神的吩咐。"
 
 #: template-gmo.php:108 template-how-to-follow-jesus.php:108
 #: template-zume-training.php:204
 msgid "A tool for daily Bible study that helps you understand, obey, and share God’s Word."
-msgstr "A tool for daily Bible study that helps you understand, obey, and share God’s Word."
+msgstr "運用這種每日研讀聖經的工具﹐更多明白﹑順服﹑分享神的話。"
 
 #: template-gmo.php:125 template-how-to-follow-jesus.php:125
 #: template-zume-training.php:217
-#, fuzzy
 msgid "A tool for two or three people of the same gender to meet weekly and encourage each other in areas that are going well and reveal areas that need correction."
-msgstr "守望小組是由兩位到三位同性別成員組成，一個禮拜見一次面，用問題討論的方式，幫助彼此找出哪些方面做得好，哪些方面需要改進。\n"
+msgstr "由兩位到三位同性別的人組成小組，每個星期聚會一次，藉此小組彼此鼓勵進步，切磋互勉。\n"
 ""
 
 #: template-zume-training.php:223
 msgid "Practice - Accountability groups"
-msgstr "練習 - 守望互勉小組"
+msgstr "操練 - 守望互勉小組"
 
 #: template-zume-training.php:226 template-zume-training.php:365
 #: template-zume-training.php:419
@@ -3531,23 +3514,22 @@ msgstr "前瞻"
 #: template-zume-training.php:397 template-zume-training.php:496
 #: template-zume-training.php:569 template-zume-training.php:659
 #: template-zume-training.php:700 template-zume-training.php:781
-#, fuzzy
 msgid "Check-in, Prayer, Overview"
-msgstr "彼此評估 , 禱告 , "
+msgstr "彼此評估、禱告、總覽"
 
 #: template-gmo.php:84 template-how-to-follow-jesus.php:84
 #: template-zume-training.php:258
 msgid "You'll discover the four main ways God makes everyday followers more like Jesus."
-msgstr "You'll discover the four main ways God makes everyday followers more like Jesus."
+msgstr "學習神所用的四個主要方式﹐使每一位跟隨主的門徒更像耶穌。"
 
 #: template-gmo.php:95 template-how-to-follow-jesus.php:95
 #: template-zume-training.php:271
 msgid "See how easy it is to spend an hour in prayer."
-msgstr "See how easy it is to spend an hour in prayer."
+msgstr "體驗用一整個鐘頭來禱告並不會很難呢。"
 
 #: template-zume-training.php:277
 msgid "Practice - Prayer Cycle"
-msgstr "練習 - 禱告循環圈"
+msgstr "操練 - 禱告循環圈"
 
 #: template-zume-training.php:280 template-zume-training.php:756
 #: template-zume-training.php:861
@@ -3560,14 +3542,12 @@ msgstr "討論 - 禱告循環圈"
 
 #: template-gmo.php:195 template-how-to-follow-jesus.php:195
 #: template-zume-training.php:296
-#, fuzzy
 msgid "A tool designed to help you be a good steward of your relationships."
-msgstr "這個簡單的工具，可用來協助你在自己的人際關係上多盡責任。"
+msgstr "這個簡單的工具可以幫助你成為人際網絡的好管家"
 
 #: template-zume-training.php:302
-#, fuzzy
 msgid "Practice - Create List of 100"
-msgstr "練習 - 列出一百位你已經認識的人，"
+msgstr "操練 - 列出「百人關注名單」"
 
 #: template-zume-training.php:305
 msgid "30 min"
@@ -3576,59 +3556,57 @@ msgstr "30分鐘"
 #: template-gmo.php:146 template-how-to-follow-jesus.php:146
 #: template-zume-training.php:337
 msgid "Learn how God's economy is different from the world's. God invests more in those who are faithful with what they've already been given."
-msgstr "Learn how God's economy is different from the world's. God invests more in those who are faithful with what they've already been given."
+msgstr "屬神的經濟學與屬世的經濟學有什麼不同？神看重那忠心於所託的人。"
 
 #: template-zume-training.php:343
-#, fuzzy
 msgid "Discuss - Should every disciple share?"
-msgstr "討論 - 每一個門徒都要分享嗎？"
+msgstr "討論 - 每一個門徒都應該要分享嗎？"
 
 #: template-gmo.php:199 template-how-to-follow-jesus.php:199
 #: template-zume-training.php:356
 msgid "Learn a way to share God’s Good News from the beginning of humanity all the way to the end of this age."
-msgstr "Learn a way to share God’s Good News from the beginning of humanity all the way to the end of this age."
+msgstr "學習如何分享神救贖我們的好消息，這個救贖的故事從人類起源一路邁開，直到世界的末了。"
 
 #: template-zume-training.php:362
 msgid "Practice - Sharing the Gospel"
-msgstr "練習 - 分享福音"
+msgstr "操練 - 分享福音"
 
 #: template-gmo.php:137 template-how-to-follow-jesus.php:137
 #: template-zume-training.php:375
-#, fuzzy
 msgid "Jesus said, “Go and make disciples of all nations, BAPTIZING them in the name of the Father and of the Son and of the Holy Spirit…” Learn how to put this into practice."
-msgstr "耶穌說：「你們要去，使萬民作我的門徒，奉父、子、聖靈的名給他們施洗...\" 學習如何應用這些話。"
+msgstr "耶穌說︰「你們要去﹐使萬民作我的門徒﹐奉父﹑子聖靈的名給他們施洗…」我們也可以操練施洗。"
 
 #: template-gmo.php:203 template-how-to-follow-jesus.php:203
 #: template-zume-training.php:410
 msgid "Learn how to share your testimony in three minutes by sharing how Jesus has impacted your life."
-msgstr "Learn how to share your testimony in three minutes by sharing how Jesus has impacted your life."
+msgstr "學習如何在三分鐘內跟人分享自己的故事，見證耶穌如何改變了你的生命。"
 
 #: template-zume-training.php:416
 msgid "Practice - Share your testimony"
-msgstr "練習 - 分享自己的見證"
+msgstr "操練 - 分享自己的見證"
 
 #: template-gmo.php:70 template-how-to-follow-jesus.php:70
 #: template-zume-training.php:429
 msgid "Learn a simple pattern of making not just one follower of Jesus but entire spiritual families who multiply for generations to come."
-msgstr "Learn a simple pattern of making not just one follower of Jesus but entire spiritual families who multiply for generations to come."
+msgstr "這個簡單的模式可以裝備人成為耶穌的門徒，從一個、兩個人，然後成為一個教會—屬靈的家，一直代代倍增延續。"
 
 #: template-zume-training.php:442
 msgid "Learn what ducklings have to do with disciple-making."
-msgstr "Learn what ducklings have to do with disciple-making."
+msgstr "小鴨？跟建造門徒有什麼關聯？"
 
 #: template-gmo.php:150 template-how-to-follow-jesus.php:150
 #: template-zume-training.php:455
 msgid "Begin to see where God’s Kingdom isn’t. These are usually the places where God wants to work the most."
-msgstr "Begin to see where God’s Kingdom isn’t. These are usually the places where God wants to work the most."
+msgstr "開始在信心裡看見神國還未臨到的地方，而那裡是神最渴望動工的地方。"
 
 #: template-gmo.php:133 template-how-to-follow-jesus.php:133
 #: template-zume-training.php:468
 msgid "It’s a simple way to celebrate our intimate connection and ongoing relationship with Jesus. Learn a simple way to celebrate."
-msgstr "It’s a simple way to celebrate our intimate connection and ongoing relationship with Jesus. Learn a simple way to celebrate."
+msgstr "領聖餐是又簡單又隆重的教會禮儀﹐是為記念主，並慶祝我們與耶穌之間那親密愈恆的關係。讓我們學習這個禮儀吧。"
 
 #: template-zume-training.php:474
 msgid "Practice - Lord's Supper"
-msgstr "練習 - 領聖餐"
+msgstr "操練 - 領聖餐"
 
 #: template-zume-training.php:477 template-zume-training.php:640
 #: template-zume-training.php:803 template-zume-training.php:867
@@ -3644,20 +3622,20 @@ msgstr "是一個簡單的禱告方式，學習順服神要我們為他人禱告
 #: template-gmo.php:212 template-how-to-follow-jesus.php:212
 #: template-zume-training.php:522
 msgid "Learn who a person of peace might be and how to know when you've found one."
-msgstr "Learn who a person of peace might be and how to know when you've found one."
+msgstr "學習分辨誰是「平安之子」，以及如何知道你已經找到這人。"
 
 #: template-gmo.php:99 template-how-to-follow-jesus.php:99
 #: template-zume-training.php:535
 msgid "Practice a simple mnemonic to remind you of ways to pray for others."
-msgstr "Practice a simple mnemonic to remind you of ways to pray for others."
+msgstr "學習用這五個簡單易記的英文字母為人代禱。"
 
 #: template-zume-training.php:541
 msgid "Practice - BLESS Prayer"
-msgstr "練習 - BLESS祝福禱告法"
+msgstr "操練 - BLESS祝福禱告法"
 
 #: template-zume-training.php:547
 msgid "Practice - Prayer Walking"
-msgstr "練習 - 行走禱告"
+msgstr "操練 - 行走禱告"
 
 #: template-zume-training.php:550 template-zume-training.php:634
 #: template-zume-training.php:681
@@ -3667,25 +3645,25 @@ msgstr "90分鐘"
 #: template-gmo.php:112 template-how-to-follow-jesus.php:112
 #: template-zume-training.php:582
 msgid "It's important what disciples know — but it's much more important what they DO with what they know."
-msgstr "It's important what disciples know — but it's much more important what they DO with what they know."
+msgstr "所知所學很重要，但更重要的是，真正的門徒是在「知道」之後會「做」出來。"
 
 #: template-gmo.php:121 template-how-to-follow-jesus.php:121
 #: template-zume-training.php:595
 msgid "A 3/3 Group is a way for followers of Jesus to meet, pray, learn, grow, fellowship and practice obeying and sharing what they've learned. In this way, a 3/3 Group is not just a small group but a Simple Church."
-msgstr "A 3/3 Group is a way for followers of Jesus to meet, pray, learn, grow, fellowship and practice obeying and sharing what they've learned. In this way, a 3/3 Group is not just a small group but a Simple Church."
+msgstr "三合一小組讓一群耶穌的跟隨者聚在一起禱告、學習、成長與交通，並操練順服主道、分享所學。於此，三合一小組不僅僅是一個小組，也是個微型教會。"
 
 #: template-zume-training.php:598
 msgid "75 min"
-msgstr "˙75分鐘"
+msgstr "75分鐘"
 
 #: template-gmo.php:179 template-how-to-follow-jesus.php:179
 #: template-zume-training.php:625
 msgid "Learn the training cycle and consider how it applies to disciple making."
-msgstr "Learn the training cycle and consider how it applies to disciple making."
+msgstr "學習循環培訓模式如何應用在門徒訓練上，以致不斷倍增能帶領人成為門徒的門徒。"
 
 #: template-zume-training.php:631 template-zume-training.php:678
 msgid "Practice - 3/3 Group"
-msgstr "練習 - 三合一小組聚會"
+msgstr "操練 - 三合一小組聚會"
 
 #: template-zume-training.php:637
 msgid "Discuss - 3/3 Group Experience"
@@ -3694,40 +3672,38 @@ msgstr "討論 - 三合一小組聚會經驗"
 #: template-gmo.php:241 template-how-to-follow-jesus.php:241
 #: template-zume-training.php:672
 msgid "A Leadership Cell is a way someone who feels called to lead can develop their leadership by practicing serving."
-msgstr "A Leadership Cell is a way someone who feels called to lead can develop their leadership by practicing serving."
+msgstr "蒙神呼召來帶領別人的人，可以在這帶領者培育小組裡，學習以服侍他人而帶出領導力。"
 
 #: template-gmo.php:183 template-how-to-follow-jesus.php:183
 #: template-zume-training.php:713
 msgid "See how disciple making doesn't have to be linear. Multiple things can happen at the same time."
-msgstr "See how disciple making doesn't have to be linear. Multiple things can happen at the same time."
+msgstr "一起學習突破傳統直線模式增長的門徒訓練方式，而以多管齊下，齊頭並進式帶動倍數增長。"
 
 #: template-gmo.php:187 template-how-to-follow-jesus.php:187
 #: template-zume-training.php:726
 msgid "Multiplying matters and multiplying quickly matters even more. See why pace matters."
-msgstr "Multiplying matters and multiplying quickly matters even more. See why pace matters."
+msgstr "倍增很重要，快速地倍增更重要！讓我們一起來看看為什麼。"
 
 #: template-gmo.php:129 template-how-to-follow-jesus.php:129
 #: template-zume-training.php:739
 msgid "Learn how to obey Jesus' commands by going AND staying."
-msgstr "Learn how to obey Jesus' commands by going AND staying."
+msgstr "學習如何在兩個教會既「去」也「留」同時進行，來促進具體遵守主的使命。"
 
 #: template-zume-training.php:746
-#, fuzzy
 msgid "login required"
-msgstr "要求登錄"
+msgstr "請先登入"
 
 #: template-zume-training.php:747
 msgid "Create and share your plan for how you will implement the Zúme tools over the next three months."
-msgstr "Create and share your plan for how you will implement the Zúme tools over the next three months."
+msgstr "擬定規劃你在接下來三個月裡，會如何施行應用「天國酵母」Zúme工具，再與組員分享。"
 
 #: template-zume-training.php:753
-#, fuzzy
 msgid "Practice - Create 3-Month Plan"
-msgstr "練習 - 制定一個三個月規劃"
+msgstr "操練 - 制定「三個月規劃」"
 
 #: template-zume-training.php:759
 msgid "Discuss - Share 3-Month Plan with group"
-msgstr "討論 - 分享你的三個月規劃"
+msgstr "討論 - 分享你的「三個月規劃」"
 
 #: template-zume-training.php:762
 msgid "20 min"
@@ -3736,16 +3712,16 @@ msgstr "20分鐘"
 #: template-gmo.php:237 template-how-to-follow-jesus.php:237
 #: template-zume-training.php:794
 msgid "A powerful tool you can use to quickly assess your own strengths and vulnerabilities when it comes to making disciples who multiply."
-msgstr "是個很棒的工具，用以快速的評估自己在倍增門徒的事工上有什麼優點和弱點。"
+msgstr "這是個很棒的工具﹐可以有效評估自己在使人成為倍增門徒的事工上有什麼優缺點。"
 
 #: template-zume-training.php:800
 msgid "Practice - Coaching Checklist Self-Assessment"
-msgstr "練習 - 教練指南-自我評估"
+msgstr "操練 - 教練指南自我評估表"
 
 #: template-gmo.php:245 template-how-to-follow-jesus.php:245
 #: template-zume-training.php:813
 msgid "Learn how multiplying churches stay connected and live life together as an extended, spiritual family."
-msgstr "Learn how multiplying churches stay connected and live life together as an extended, spiritual family."
+msgstr "正在操練門徒倍增的教會，學習如何彼此連結、一齊成長，開枝散葉成為屬靈的大家庭。"
 
 #: template-gmo.php:233 template-how-to-follow-jesus.php:233
 #: template-zume-training.php:826
@@ -3753,18 +3729,16 @@ msgid "This is a group that consists of people who are leading and starting 3/3 
 msgstr "「同儕切磋機制」就是一群組成、並帶領三合一小組聚會的人，遵循三合一聚會形式，來有效評估在你們負責的區域，所做的屬靈成果。"
 
 #: template-zume-training.php:858
-#, fuzzy
 msgid "Practice - 3/3 Peer Mentoring"
-msgstr "練習 - 三合一同儕切磋機制"
+msgstr "操練 - 三合一同儕切磋機制"
 
 #: template-zume-training.php:864
 msgid "Practice - Four Fields"
-msgstr "練習 - 四個領域診斷"
+msgstr "操練 - 四個領域診斷"
 
 #: template-zume-training.php:870
-#, fuzzy
 msgid "Practice - Generation Mapping"
-msgstr "練習 - 代映射"
+msgstr "操練 - 微型教會族譜"
 
 #. Template Name of the plugin/theme
 #: functions/zume-v4-seo-strings.php:11
@@ -3777,17 +3751,16 @@ msgid "Zúme Course v4"
 msgstr "Zúme「天國酵母」門徒訓練課程 v4"
 
 #: front-page.php:90
-#, fuzzy
 msgid "Explore Training"
 msgstr "探索訓練"
 
 #: template-zume-training.php:839
 msgid "The four fields diagnostic chart is a simple tool to be used by a leadership cell to reflect on the status of current efforts and the kingdom activity around them."
-msgstr "The four fields diagnostic chart is a simple tool to be used by a leadership cell to reflect on the status of current efforts and the kingdom activity around them."
+msgstr "領袖聯絡網可以使用「四個領域診斷圖」這個簡單的工具，來檢視群體當前的狀態以及周遭的神國事工。"
 
 #: template-zume-training.php:852
 msgid "Generation mapping is another simple tool to help leaders in a movement understand the growth around them."
-msgstr "Generation mapping is another simple tool to help leaders in a movement understand the growth around them."
+msgstr "微型教會族譜是另一個簡單的工具，可以幫助當中的帶領者們了解小組教會的成長狀況。"
 
 #. Theme URI of the plugin/theme
 #: 
@@ -3797,7 +3770,7 @@ msgstr "https://github.com/ZumeProject/zume-training"
 #. Description of the plugin/theme
 #: 
 msgid "Zúme Training for multiplying disciples."
-msgstr "Zúme Training for multiplying disciples."
+msgstr "「天國酵母」Zúme門徒倍增訓練"
 
 #. Author of the plugin/theme
 #: 
@@ -3806,582 +3779,583 @@ msgstr "「天國酵母」Zúme 門徒訓練"
 
 #: template-zume-faq.php:31
 msgid "Yes. There are no premium versions, no trial periods, no follow-on sales of products. Freely we've received. Freely we give."
-msgstr "Yes. There are no premium versions, no trial periods, no follow-on sales of products. Freely we've received. Freely we give."
+msgstr "是的。沒有premium會員版本，也沒有試用期，或是其他的後續產品銷售。我們白白的得到，也願意白白的給出去。"
 
 #: functions/enqueue-scripts.php:215 template-gmo.php:65
 #: template-how-to-follow-jesus.php:65 template-zume-training.php:158
 msgid "God Uses Ordinary People"
-msgstr ""
+msgstr "神使用平凡人"
 
 #: functions/enqueue-scripts.php:216 template-gmo.php:61
 #: template-how-to-follow-jesus.php:61 template-zume-training.php:172
 msgid "Simple Definition of Disciple and Church"
-msgstr ""
+msgstr "門徒與教會的簡單定義"
 
 #: functions/enqueue-scripts.php:217 template-gmo.php:90
 #: template-how-to-follow-jesus.php:90 template-zume-training.php:186
 msgid "Spiritual Breathing is Hearing and Obeying God"
-msgstr ""
+msgstr "屬靈呼吸是聆聽並遵行神的吩咐"
 
 #: functions/enqueue-scripts.php:218 template-gmo.php:107
 #: template-how-to-follow-jesus.php:107 template-zume-training.php:199
 msgid "SOAPS Bible Reading"
-msgstr ""
+msgstr "SOAPS香皂讀經法"
 
 #: functions/enqueue-scripts.php:220 template-gmo.php:83
 #: template-how-to-follow-jesus.php:83 template-zume-training.php:253
 msgid "Consumer vs Producer Lifestyle"
-msgstr ""
+msgstr "「生產者」還是「消費者」？"
 
 #: functions/enqueue-scripts.php:221 template-gmo.php:94
 #: template-how-to-follow-jesus.php:94 template-zume-training.php:266
 msgid "How to Spend an Hour in Prayer"
-msgstr ""
+msgstr "如何用一整個鐘頭來禱告"
 
 #: functions/enqueue-scripts.php:222 template-gmo.php:194
 #: template-how-to-follow-jesus.php:194
 msgid "Relational Stewardship – List of 100"
-msgstr ""
+msgstr "成為人際網絡的好管家——百人關注名單"
 
 #: functions/enqueue-scripts.php:223 template-gmo.php:145
 #: template-how-to-follow-jesus.php:145 template-zume-training.php:332
 msgid "The Kingdom Economy"
-msgstr ""
+msgstr "神國的經濟"
 
 #: functions/enqueue-scripts.php:224 template-gmo.php:198
 #: template-how-to-follow-jesus.php:198 template-zume-training.php:351
 msgid "The Gospel and How to Share It"
-msgstr ""
+msgstr "如何分享「福音」"
 
 #: functions/enqueue-scripts.php:225 template-gmo.php:136
 #: template-how-to-follow-jesus.php:136 template-zume-training.php:370
 msgid "Baptism and How To Do It"
-msgstr ""
+msgstr "如何「給人施洗」"
 
 #: functions/enqueue-scripts.php:226 template-gmo.php:202
 #: template-how-to-follow-jesus.php:202 template-zume-training.php:405
 msgid "Prepare Your 3-Minute Testimony"
-msgstr ""
+msgstr "準備你的「三分鐘見證」"
 
 #: functions/enqueue-scripts.php:227 template-gmo.php:69
 #: template-how-to-follow-jesus.php:69 template-zume-training.php:424
 msgid "Vision Casting the Greatest Blessing"
-msgstr ""
+msgstr "異象：「最好的祝福」"
 
 #: functions/enqueue-scripts.php:228 template-gmo.php:174
 #: template-how-to-follow-jesus.php:174
 msgid "Duckling Discipleship – Leading Immediately"
-msgstr ""
+msgstr "「小鴨門徒訓練法」- 馬上開始帶領"
 
 #: functions/enqueue-scripts.php:229
 msgid "Eyes to See Where The Kingdom Isn't"
-msgstr ""
+msgstr "看見神國還未臨到的地方"
 
 #: functions/enqueue-scripts.php:230
 msgid "The Lord's Supper and How To Lead It"
-msgstr ""
+msgstr "如何「領聖餐」"
 
 #: functions/enqueue-scripts.php:231 template-gmo.php:215
 #: template-how-to-follow-jesus.php:215 template-zume-training.php:504
 msgid "Prayer Walking and How To Do It"
-msgstr ""
+msgstr "如何「行走禱告」"
 
 #: functions/enqueue-scripts.php:232 template-gmo.php:211
 #: template-how-to-follow-jesus.php:211 template-zume-training.php:517
 msgid "A Person of Peace and How To Find One"
-msgstr ""
+msgstr "找出「平安之子」"
 
 #: functions/enqueue-scripts.php:233 template-gmo.php:98
 #: template-how-to-follow-jesus.php:98 template-zume-training.php:530
 msgid "The BLESS Prayer Pattern"
-msgstr ""
+msgstr "BLESS祝福禱告法"
 
 #: functions/enqueue-scripts.php:234 template-gmo.php:111
 #: template-how-to-follow-jesus.php:111 template-zume-training.php:577
 msgid "Faithfulness is Better Than Knowledge"
-msgstr ""
+msgstr "忠心比知識更重要"
 
 #: functions/enqueue-scripts.php:235 template-gmo.php:120
 #: template-how-to-follow-jesus.php:120 template-zume-training.php:590
 msgid "3/3 Group Meeting Pattern"
-msgstr ""
+msgstr "三合一小組聚會模式"
 
 #: functions/enqueue-scripts.php:236 template-gmo.php:178
 #: template-how-to-follow-jesus.php:178 template-zume-training.php:620
 msgid "Training Cycle for Maturing Disciples"
-msgstr ""
+msgstr "培訓循環不息"
 
 #: functions/enqueue-scripts.php:238 template-gmo.php:182
 #: template-how-to-follow-jesus.php:182 template-zume-training.php:708
 msgid "Expect Non-Sequential Growth"
-msgstr ""
+msgstr "多管齊下的增長"
 
 #: functions/enqueue-scripts.php:239 template-gmo.php:186
 #: template-how-to-follow-jesus.php:186 template-zume-training.php:721
 msgid "Pace of Multiplication Matters"
-msgstr ""
+msgstr "加快倍增步調"
 
 #: functions/enqueue-scripts.php:240 template-gmo.php:128
 #: template-how-to-follow-jesus.php:128 template-zume-training.php:734
 msgid "Always Part of Two Churches"
-msgstr ""
+msgstr "兩個教會並進"
 
 #: functions/enqueue-scripts.php:245 template-zume-training.php:834
 msgid "Four Fields Tool"
-msgstr ""
+msgstr "四個領域診斷圖"
 
 #: functions/enqueue-scripts.php:246 template-zume-training.php:847
 msgid "Generational Mapping"
-msgstr ""
+msgstr "微型教會族譜"
 
 #: parts/content-share.php:54 parts/content-share.php:90
 #: template-pieces-page.php:189 template-pieces-page.php:221
 msgid "Zúme Training is freely offered as part of larger Zúme Vision."
-msgstr ""
+msgstr "「天國酵母」Zúme 訓練由「天國酵母」Zúme 異象群體免費提供。"
 
 #: parts/content-share.php:55 parts/content-share.php:91
 #: template-pieces-page.php:190 template-pieces-page.php:222
 msgid "Learn more about the Zúme.Vision"
-msgstr ""
+msgstr "了解更多關於「天國酵母」Zúme 異象"
 
+#. I don't know how to make this work !
 #: template-pieces-page.php:50
 msgid "This concept is called \"%1$s\" in session %2$s of the Zúme Training"
-msgstr ""
+msgstr "這項概念是「天國酵母」Zúme 門徒訓練中的第 %2$s 堂課的 \"%1$s\" "
 
 #: template-pieces-page.php:82
 msgid "Listen and Read Along"
-msgstr ""
+msgstr "專心聽並跟著複誦"
 
 #: template-pieces-page.php:86
 msgid "Download Free Guidebook"
-msgstr ""
+msgstr "下載免費手冊"
 
 #: template-pieces-page.php:89
 msgid "Watch This Video"
-msgstr ""
+msgstr "觀賞影片"
 
 #: template-zume-about.php:18
 msgid "About Zúme Training"
-msgstr ""
+msgstr "關於「天國酵母」Zúme 門徒訓練"
 
 #: template-zume-login.php:96
 msgid "Get new password"
-msgstr ""
+msgstr "取得新的密碼"
 
 #: template-zume-resources.php:76
 msgid "Zúme Training Resources"
-msgstr ""
+msgstr "「天國酵母」Zúme 門徒訓練資源"
 
 #: template-zume-training.php:291
 msgid "Relational Stewardship - List of 100"
-msgstr ""
+msgstr "人際網絡的好管家——百人關注名單"
 
 #: template-zume-training.php:437
 msgid "Duckling Discipleship - Leading Immediately"
-msgstr ""
+msgstr "「小鴨門徒訓練法」- 馬上開始帶領"
 
 #: template-zume-training.php:450
 msgid "Eyes to See Where the Kingdom Isn't"
-msgstr ""
+msgstr "看見神國還未臨到的地方"
 
 #: template-zume-training.php:463
 msgid "The Lord's Supper and How to Lead It"
-msgstr ""
+msgstr "如何「領聖餐」"
 
 #: template-zume-vision.php:22
 msgid "The vision behind Zúme Training"
-msgstr ""
+msgstr "「天國酵母」Zúme 門徒訓練背後的異象"
 
 #: template-zume-vision.php:24
 msgid "to saturate the world with multiplying disciples"
-msgstr ""
+msgstr "在我們的世代讓世界充滿"
 
 #: template-zume-vision.php:24
 msgid "in our generation."
-msgstr ""
+msgstr "具有倍增力的門徒。"
 
 #: template-zume-vision.php:31
 msgid "Learn More @ Zúme.Vision"
-msgstr ""
+msgstr "了解更多 @ Zúme.Vision"
 
 #: template-zume-vision.php:42
 msgid "Our Core Strategy"
-msgstr ""
+msgstr "我們的核心策略"
 
 #: template-zume-vision.php:43
 msgid "Holiness, Prayer, Training Saturation, Church Saturation"
-msgstr ""
+msgstr "持守聖潔、禱告、完整的訓練、整全的教會"
 
 #: template-zume-vision.php:50
 msgid "Holiness, Obedience, and Love"
-msgstr ""
+msgstr "聖潔、順服和愛"
 
 #: template-zume-vision.php:51
 msgid "We need to be disciples worth multiplying."
-msgstr ""
+msgstr "我們必須當「值得被倍增」的門徒"
 
 #: template-zume-vision.php:56
 msgid "Jesus is our measurement."
-msgstr ""
+msgstr "「像耶穌」是我們的標準。"
 
 #: template-zume-vision.php:57
 msgid "Not you. Not me. Not history. Not ideals. Not rituals. Jesus and Jesus alone."
-msgstr ""
+msgstr "不是你，不是我，不是歷史，不是理想，不是儀式；標準是耶穌──唯有耶穌。"
 
 #: template-zume-vision.php:58
 msgid "How he lived. What he said. How he loved. Everything. In this, we aspire to be marked by immediate, radical, costly obedience to Jesus, like the heroes of the faith that came before us."
-msgstr ""
+msgstr "他如何在世上生活、如何教導、如何愛神愛人…等。我們渴望採取立即、激進的行動來付上代價順服他，如同那些在我們以先的信心偉人一般。"
 
 #: template-zume-vision.php:59
 msgid "Jesus is both the measurement and His Spirit is our hope to become like Him. And the day we see kingdom fruit surrounding our lives and the loves of our friends, it will be because his Spirit has moved through us."
-msgstr ""
+msgstr "耶穌不僅是我們的標準，他所賜下的聖靈是我們能夠變得像他的唯一盼望。有一天當我們終於看見自己的生命結出神國的果子，並且家人、朋友、城市被改變，也單單會是因為神的靈透過我們動工。"
 
 #: template-zume-vision.php:80
 msgid "Extraordinary Prayer"
-msgstr ""
+msgstr "極多的禱告"
 
 #: template-zume-vision.php:81
 msgid "Extraordinary prayer has proceeded every disciple making movement in history."
-msgstr ""
+msgstr "歷史上每一個歸主運動都有一個共通點──非常、非常大量的禱告。"
 
 #: template-zume-vision.php:87
 msgid "You have not because you ask not (James 4:2). If we want to see movement, we need to ask for it."
-msgstr ""
+msgstr "如果我們希望看見越來越多人跟隨耶穌，我們必須向神求。雅各書四章2節說「你們得不著，是因為你們不求。」"
 
 #: template-zume-vision.php:106
 msgid "Training Saturation"
-msgstr ""
+msgstr "訓練倍增"
 
 #: template-zume-vision.php:107
 msgid "(1 Training &#xF7; Population)"
-msgstr ""
+msgstr "(一個訓練 &#xF7; 人口)"
 
 #: template-zume-vision.php:110
 msgid "1 Training"
-msgstr ""
+msgstr "一個訓練"
 
 #: template-zume-vision.php:112 template-zume-vision.php:148
 msgid "Every 5,000 People (North America)"
-msgstr ""
+msgstr "每五千人(北美)"
 
 #: template-zume-vision.php:113 template-zume-vision.php:149
 msgid "Every 50,000 People (Globally)"
-msgstr ""
+msgstr "每五萬人(全球)"
 
 #: template-zume-vision.php:119
 msgid "Disciple multiplication ideas are scriptural, but often missed. A simple training in multiplication principles can unlock even established believers from unfruitful lives."
-msgstr ""
+msgstr "倍增門徒的概念在聖經上寫得很清楚，但常常被輕忽。一個簡單的、關於「倍增原則」如何運作的訓練可以使基督徒開始活出結果子的生命。"
 
 #: template-zume-vision.php:120
 msgid "Live trainings are often best. But the people who need trained, so vastly extends beyond the live trainings available. Zume.Training is an online, in-life, on-demand training for groups to get paradigm-shifting multiplication training."
-msgstr ""
+msgstr "現實生活中的實際訓練通常是最理想的，但是需要被訓練的人數時常遠遠超過可面對面訓練者所能觸及的數量。「天國酵母」Zúme 門徒訓練是一個線上、與生活貼近並符合需求的課程，提供小組典範轉移的門徒倍增訓練。"
 
 #: template-zume-vision.php:121
 msgid "We suspect, especially in places where the church has been, we will need a training movement before we see a disciple making movement."
-msgstr ""
+msgstr "我們發覺，尤其是在已經有教會足跡的地方，我們首先需要一個「培訓運動」，才能看見「歸主運動」。"
 
 #: template-zume-vision.php:142
 msgid "Simple Church Saturation"
-msgstr ""
+msgstr "微型教會飽和度"
 
 #: template-zume-vision.php:143
 msgid "(2 Simple Churches &#xF7; Population)"
-msgstr ""
+msgstr "(兩個微型教會 &#xF7; 人口)"
 
 #: template-zume-vision.php:146
 msgid "2 Simple Churches"
-msgstr ""
+msgstr "兩個微型教會"
 
 #: template-zume-vision.php:155
 msgid "Many churches in one place is a blessing, but many churches in many places is a greater blessing. And churches moving into places where there has never been a church one of the greatest blessings."
-msgstr ""
+msgstr "在同一個地方有許多教會是個祝福，而在各地能有許多教會是更大的祝褔；但教會若是能一個個去到那從未有過教會的未得之地，那將會是最大的祝福。"
 
 #: template-zume-vision.php:156
 msgid "As the saying goes, \"Plan your trust, don't trust your plan\". We know it is the Father's heart to have families of believers in every tongue, tribe, and nation. He has also invited us to be his co-workers in reconciliation. So these goals of 1 training and 2 churches come from our trust in the one who can do it."
-msgstr ""
+msgstr "「計畫信任神，但別信任你的計畫。」我們知道神的心意是在萬民、萬邦、萬族之中出現一群群的跟隨者，祂也邀請我們與祂同工，使人與祂和好。所以這些關於一個訓練、兩個教會的目標都出自於對那一位凡事都能的神之信任。"
 
 #. Template Name of the plugin/theme
 #: 
 msgid "Pieces Page"
-msgstr ""
+msgstr "分類頁面"
 
 #. Template Name of the plugin/theme
 #: 
 msgid "Zúme Vision"
-msgstr ""
+msgstr "「天國酵母」Zúme 異象"
 
 #: functions/zume-content.php:2129
 msgid "Disciple-making can be rapidly advanced by finding a person of peace, even in a place where followers of Jesus are few and far between. How do you know when you have found a person of peace and what do you do when you find them?"
-msgstr "即使在又遠又少有信耶穌的地方﹐如能找出當得平安的人﹐就是「平安之子」那麼門徒訓練還是可以進展得非常快。怎麼知道找到了當得平安的人？找到之後你們又該做什麼？"
+msgstr "即使在又遠又很少有人信耶穌的地方，如果能找出「平安之子」，那麼門徒訓練還是可以進展得非常快。怎麼知道找到了「平安之子」？找到之後你又該做什麼？"
 
 #: functions/enqueue-scripts.php:120
 msgid "This form is required."
-msgstr ""
+msgstr "這個項目是必填欄位。"
 
 #: functions/enqueue-scripts.php:262
 msgid "Members List (optional)"
-msgstr ""
+msgstr "成員名單﹙非必填欄位﹚"
 
 #: functions/enqueue-scripts.php:263
 msgid "Location"
-msgstr ""
+msgstr "位置"
 
 #: functions/enqueue-scripts.php:264
 msgid "Connection to server failed. Try again."
-msgstr ""
+msgstr "連接伺服器失敗，請再試一次。"
 
 #: functions/enqueue-scripts.php:265
 msgid "Accepted invitation"
-msgstr ""
+msgstr "已接受邀請"
 
 #: functions/enqueue-scripts.php:268
 msgid "add"
-msgstr ""
+msgstr "新增"
 
 #: functions/enqueue-scripts.php:269
 msgid "Zoom, click, or search for your location."
-msgstr ""
+msgstr "放大、縮小、點擊或搜尋你的位置。"
 
 #: functions/enqueue-scripts.php:270
 msgid "find you current location"
-msgstr ""
+msgstr "找到你的當前位置"
 
 #: functions/enqueue-scripts.php:271
 msgid "Save Clicked Location"
-msgstr ""
+msgstr "儲存點擊的位置"
 
 #: functions/enqueue-scripts.php:272
 msgid "Save Searched Location"
-msgstr ""
+msgstr "儲存搜尋的位置"
 
 #: functions/enqueue-scripts.php:273
 msgid "Save Current Location"
-msgstr ""
+msgstr "儲存當前的位置"
 
 #: functions/enqueue-scripts.php:274
 msgid "You haven't selected anything yet. Click, search, or allow auto location."
-msgstr ""
+msgstr "你尚未選擇任何位置。點擊、搜尋或允許自動定位。"
 
 #: functions/enqueue-scripts.php:275
 msgid "update"
-msgstr ""
+msgstr "更新"
 
 #: functions/enqueue-scripts.php:276
 msgid "Course Complete"
-msgstr ""
+msgstr "課程完成"
 
 #: functions/enqueue-scripts.php:277
 msgid "Next Session"
-msgstr ""
+msgstr "下一堂課"
 
 #: functions/enqueue-scripts.php:289
 msgid "Not Leading a Group"
-msgstr ""
+msgstr "沒有帶領小組"
 
 #: functions/enqueue-scripts.php:290
 msgid "Create New Group"
-msgstr ""
+msgstr "建立新小組"
 
 #: functions/enqueue-scripts.php:292
 msgid "Which group are you leading?"
-msgstr ""
+msgstr "你正帶領哪一個小組呢？"
 
 #: functions/enqueue-scripts.php:293
 msgid "Number of Members"
-msgstr ""
+msgstr "成員人數"
 
 #: functions/enqueue-scripts.php:295
 msgid "Group addition failed. Try again."
-msgstr ""
+msgstr "新增小組失敗，請再試一次。"
 
 #: functions/enqueue-scripts.php:299
 msgid "Are you sure you want to archive this group?"
-msgstr ""
+msgstr "你確定要封存這個小組嗎？"
 
 #: functions/enqueue-scripts.php:300
 msgid "Show Archived Groups"
-msgstr ""
+msgstr "顯示已封存的小組"
 
 #: functions/enqueue-scripts.php:301
 msgid "Re-Activate"
-msgstr ""
+msgstr "重新啟用"
 
 #: functions/enqueue-scripts.php:302 functions/enqueue-scripts.php:306
 msgid "Delete Forever"
-msgstr ""
+msgstr "永久刪除"
 
 #: functions/enqueue-scripts.php:304
 msgid "Close"
-msgstr ""
+msgstr "關閉"
 
 #: functions/enqueue-scripts.php:305
 msgid "Are you sure you want to delete this group?"
-msgstr ""
+msgstr "確定要刪除這個小組嗎？"
 
 #: functions/enqueue-scripts.php:308
 msgid "32 Tools and Concepts"
-msgstr ""
+msgstr "32項工具與概念"
 
 #: functions/enqueue-scripts.php:314
 msgid "Progress Overview"
-msgstr ""
+msgstr "進度總覽"
 
 #: functions/enqueue-scripts.php:315
 msgid "There are 32 concepts and tools in Zúme training. Each concept or tool is intended to be practiced personally and trained into others. Use the progression of \"heard\", \"obeyed\", \"shared\", and \"trained\" as a way of tracking your mastery of the disciple-making training."
-msgstr ""
+msgstr "在「天國酵母」Zúme門徒訓練中有32項概念與工具。每一項概念或工具都旨在個人的操練與訓練他人跟著一起做。以「已聽見」、「已順服」、「已分享」及「已培訓」的四種進程來追蹤你對於「建造門徒」訓練的掌握程度。"
 
 #: functions/enqueue-scripts.php:316
 msgid "Definitions"
-msgstr ""
+msgstr "定義"
 
 #: functions/enqueue-scripts.php:317
 msgid "\"Heard\" means you gained awareness. You have moved from not knowing about a tool or concept to knowing about it."
-msgstr ""
+msgstr "「已聽見」表示你已經得知了。原來你完全不知道這個工具或概念的存在，現在你知道了。"
 
 #: functions/enqueue-scripts.php:318
 msgid "\"Obeyed\" means you took personal action to practice or apply a concept or tool. Obeying with tools might look like beginning to use them with others, while obeying with concepts might look like changing thinking or priorities."
-msgstr ""
+msgstr "「已順服」表示你採取了行動去練習或運用這個概念或工具；順服可以是開始與其他人一起使用這個工具，或是改變自己的想法和優先順序。"
 
 #: functions/enqueue-scripts.php:319
 msgid "\"Shared\" means you helped someone else hear. This step is essential to truly understanding the concept or tool and preparing you to train others."
-msgstr ""
+msgstr "「已分享」表示你幫助了其他人「聽見」；這是關鍵的一步，使你真正了解一項概念或工具，並為培訓他人做準備。"
 
 #: functions/enqueue-scripts.php:320
 msgid "\"Trained\" means you coached someone else to hear, obey and share. More than sharing knowledge with someone, you have helped them become a sharer of the tool or concept."
-msgstr ""
+msgstr "「已培訓」表示你已經輔導他人聽見、順服及分享。不只是與別人分享知識而已，你已經幫助他們成為一位工具和概念的分享者。"
 
 #: functions/enqueue-scripts.php:337
 msgid "What is your city or state or postal code?"
-msgstr ""
+msgstr "你的城市的郵遞區號是什麼？"
 
 #: functions/enqueue-scripts.php:343
 msgid "Affiliation Notes"
-msgstr ""
+msgstr "註記所屬群體"
 
 #: functions/enqueue-scripts.php:346
 msgid "You have requested coaching."
-msgstr ""
+msgstr "你已要求安排教練。"
 
 #: functions/enqueue-scripts.php:130 functions/enqueue-scripts.php:347
 msgid "No location matches found. Try a less specific address."
-msgstr ""
+msgstr "未找到匹配的位置，請嘗試輸入較大範圍的地址。"
 
 #: functions/enqueue-scripts.php:348
 msgid "Oops. Something went wrong. Try again!"
-msgstr ""
+msgstr "糟糕，出了點狀況，請再試一次！"
 
 #: functions/enqueue-scripts.php:349
 msgid "Zúme Network"
-msgstr ""
+msgstr "「天國酵母」Zúme 聯絡網"
 
 #: functions/enqueue-scripts.php:351
 msgid "Click the circles and check off your progress on each of the concepts."
-msgstr ""
+msgstr "點擊圓圈並標註你在每項概念上的完成進度。"
 
 #: functions/enqueue-scripts.php:353
 msgid "Add Group"
-msgstr ""
+msgstr "新增小組"
 
 #: functions/enqueue-scripts.php:355
 msgid "delete"
-msgstr ""
+msgstr "刪除"
 
 #: functions/zume-v4-seo-strings.php:12
 msgid "Course"
-msgstr ""
+msgstr "課程"
 
 #: functions/zume-v4-seo-strings.php:26
 msgid "Vision"
-msgstr ""
+msgstr "異象"
 
 #: functions/zume-v4-seo-strings.php:27
 msgid "Mobile App"
-msgstr ""
+msgstr "手機App"
 
 #: functions/enqueue-scripts.php:122
 msgid "example: Denver, CO 80120"
-msgstr ""
+msgstr "範例︰103台北市大同區"
 
 #: functions/enqueue-scripts.php:126
 msgid "Linked Accounts"
-msgstr ""
+msgstr "所連結的帳號"
 
 #: template-gmo.php:34
 msgid "Welcome to God’s Family!"
-msgstr ""
+msgstr "歡迎來到神的大家庭！"
 
 #. Template Name of the plugin/theme
 #: template-gmo.php:56 template-how-to-follow-jesus.php:56
 msgid "What is a follower of Jesus?"
-msgstr ""
+msgstr "「耶穌的跟隨者」是什麼？"
 
 #: template-gmo.php:79 template-how-to-follow-jesus.php:79
 msgid "What are the activities of a follower of Jesus?"
-msgstr ""
+msgstr "「耶穌的跟隨者」會做什麼？"
 
 #: template-gmo.php:104 template-how-to-follow-jesus.php:104
 msgid "Bible Reading"
-msgstr ""
+msgstr "讀聖經"
 
 #: template-gmo.php:117 template-how-to-follow-jesus.php:117
 msgid "Community"
-msgstr ""
+msgstr "社群"
 
 #: template-gmo.php:132 template-how-to-follow-jesus.php:132
 msgid "The Lord’s Supper and How To Lead It"
-msgstr ""
+msgstr "操練如何領聖餐"
 
 #: template-gmo.php:142 template-how-to-follow-jesus.php:142
 msgid "Sacrifice and Suffering"
-msgstr ""
+msgstr "犧牲並受苦"
 
 #: template-gmo.php:149 template-how-to-follow-jesus.php:149
 msgid "Eyes to See Where The Kingdom Isn’t"
-msgstr ""
+msgstr "看見神國還未臨到的地方"
 
 #: template-gmo.php:161 template-how-to-follow-jesus.php:161
 msgid "How do I obey Jesus and help others become followers with me?"
-msgstr ""
+msgstr "我要如何順服耶穌並幫助他人和我一起成為耶穌的跟隨者？"
 
 #: template-gmo.php:165 template-how-to-follow-jesus.php:165
 msgid "Then Jesus came to them and said, \"All authority in heaven and on earth has been given to me. Therefore go and make disciples of all nations, baptizing them in the name of the Father and of the Son and of the Holy Spirit, and teaching them to obey everything I have commanded you. And surely I am with you always, to the very end of the age.\""
-msgstr ""
+msgstr "耶穌進前來，對他們說：「天上地下所有的權柄都賜給我了。所以，你們要去，使萬民作我的門徒，奉父、子、聖靈的名給他們施洗凡我所吩咐你們的，都教訓他們遵守，我就常與你們同在，直到世界的末了。」"
 
 #: template-gmo.php:166 template-how-to-follow-jesus.php:166
 msgid "Matthew 28:18-20"
-msgstr ""
+msgstr "馬太福音二十八章18-20節"
 
 #: template-gmo.php:170 template-how-to-follow-jesus.php:170
 msgid "Teaching others to obey and follow Jesus with you"
-msgstr ""
+msgstr "教導別人和你一起順服耶穌並跟隨他"
 
 #: template-gmo.php:175 template-how-to-follow-jesus.php:175
 msgid "Learn what ducklings have to do with disciple-making"
-msgstr ""
+msgstr "小鴨？跟建造門徒有什麼關聯？"
 
 #: template-gmo.php:191 template-how-to-follow-jesus.php:191
 msgid "Speaking to people YOU KNOW about Jesus"
-msgstr ""
+msgstr "和「你認識的人」談論耶穌"
 
 #: template-gmo.php:208 template-how-to-follow-jesus.php:208
 msgid "Speaking to people YOU DON'T KNOW about Jesus"
-msgstr ""
+msgstr "和「你不認識的人」談論耶穌"
 
 #: template-gmo.php:227 template-how-to-follow-jesus.php:227
 msgid "What if many friends, family, and others start following Jesus with me?"
-msgstr ""
+msgstr "如果許多朋友、家人和其他人開始和我一起跟隨耶穌，我應該怎麼做？"
 
 #: template-gmo.php:38
 msgid "Watch this important video explaining the 4 relationships of your new life."
-msgstr ""
+msgstr "觀賞這個重要的影片，學習你的新生命中將出現的四種關係。"
 
 #. Template Name of the plugin/theme
 #: 
 msgid "GMO - Welcome to Zúme"
-msgstr ""
+msgstr "GMO - 歡迎來到「天國酵母」Zúme"
 
 #. Template Name of the plugin/theme
 #: 
 msgid "Redirect to Training"
-msgstr ""
+msgstr "重新導向訓練"
 
