@@ -19,6 +19,7 @@ msgid "Login"
 msgstr "લોગ ઈન કરો"
 
 #: front-page.php:86
+#, fuzzy
 msgid "Zúme Training is an on-line and in-life learning experience designed for small groups who follow Jesus to learn how to obey His Great Commission and make disciples who multiply."
 msgstr "ઝુમ તાલીમ તો પ્રભુ ઈસુના મહાન આદેશનું પાલન કેવી રીતે કરવું અને કેવી રીતે શિષ્યો બનાવવા જેઓ વધારે શિષ્યો બનાવે તે વિશે નાના જૂથો માટે તૈયાર કરવામાં આવેલું શિક્ષણ અને ઓનલાઇન તાલીમ છે."
 
