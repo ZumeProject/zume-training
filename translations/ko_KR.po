@@ -1816,7 +1816,7 @@ msgstr "지오 코딩 IP"
 
 #: functions/zume-v4-seo-strings.php:5
 msgid "Home"
-msgstr "집"
+msgstr "홈"
 
 #: functions/zume-v4-seo-strings.php:6 template-zume-overview.php:238
 msgid "Dashboard"

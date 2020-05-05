@@ -19,6 +19,7 @@ msgid "Login"
 msgstr "Wo le"
 
 #: front-page.php:86
+#, fuzzy
 msgid "Zúme Training is an on-line and in-life learning experience designed for small groups who follow Jesus to learn how to obey His Great Commission and make disciples who multiply."
 msgstr "Ikẹkọ Zúme jẹ iriri ori ayelujara ati iriri ti ara ẹni ti a ṣe apẹrẹ fun awọn ẹgbẹ kekere ti o tẹle Jesu lati kọ ẹkọ bi o ṣe le gbọràn si Igbimọ nla Rẹ ati ṣe awọn ọmọ-ẹhin ti o pọ si."
 
@@ -345,6 +346,7 @@ msgid "Group Prayer (5min)"
 msgstr "Adura egbe (5min)"
 
 #: functions/zume-content.php:217
+#, fuzzy
 msgid "Begin with prayer. Spiritual insight and transformation is not possible without the Holy Spirit. Take time as a group to invite Him to guide you over this session."
 msgstr "Bere pelu adua, emi ijinle pelu irapada lai si emi mimo."
 
@@ -396,10 +398,12 @@ msgid "DISCUSS"
 msgstr "SALAYE"
 
 #: functions/zume-content.php:276
+#, fuzzy
 msgid "If Jesus intended every one of His followers to obey His Great Commission, why do so few actually make disciples?"
 msgstr "Ti jesu ba pinnu pe ki awon omo leyin oun gboran. kini idi ti o fi ni awon omo leyin"
 
 #: functions/zume-content.php:296
+#, fuzzy
 msgid "What is a disciple? And how do you make one? How do you teach a follower of Jesus to do what He told us in His Great Commission – to obey all of His commands?"
 msgstr "Wini an pe ni omo leyin"
 
@@ -412,6 +416,7 @@ msgid "When you think of a church, what comes to mind?"
 msgstr "Ti o ba ro nipa ile ijosin kan. kilo wa si o lokan"
 
 #: functions/zume-content.php:338
+#, fuzzy
 msgid "What's the difference between that picture and what's described in the video as a \"Simple Church\"?"
 msgstr "Kini iyato larin aworan ati nkan ti an pe ni ile ijosin to rorun"
 
@@ -473,6 +478,7 @@ msgid "Accountability Groups"
 msgstr "Egbe Isiro"
 
 #: functions/zume-content.php:502
+#, fuzzy
 msgid "The Bible tells us that every follower of Jesus will one day be held accountable for what we do and say and think. Accountability Groups are a great way to get ready!"
 msgstr "Bibeli so fun wa pe, gbogbo yin te n tele jesu, ni ojo kan e o royin ise te se, ohun te so ati ohun te ro. ki egbe isiro o gbaradi"
 
@@ -634,6 +640,7 @@ msgid "Ask if anyone in the group has specific needs they would like the group t
 msgstr "Beere boya enikeni ninu ẹgbẹ naa ba ni awọn aini pataki ti wọn yoo fẹ ki ẹgbẹ naa gbadura fun. Ni ki enikan gbadura ki o beere lọwọ Ọlọrun lati ṣe iranlọwọ ni awọn agbegbe ti ẹgbẹ na jiroro. rii daju pe e so fun Ọlọrun pe O ṣe ileri ninu Ọrọ Rẹ lati gbọ ati sise nigbati awọn eniyan Rẹ ba gbadura. Ati, ni igbagbogbo, beere Ẹmi Mimọ Ọlọrun lati dari akoko idarapo yin."
 
 #: functions/zume-content.php:731
+#, fuzzy
 msgid "If we want to make disciples who multiply – spiritual producers and not just consumers – then we need to learn and share four main ways God makes everyday followers more like Jesus:"
 msgstr "Ti a ba wa akeko pupo."
 
@@ -796,6 +803,7 @@ msgstr "A se iwuri fun lati pin akosile re. "
 
 #: functions/zume-content.php:1104 functions/zume-content.php:1527
 #: functions/zume-content.php:2030
+#, fuzzy
 msgid "Pray and thank God for the results and invite His Holy Spirit to lead your time together."
 msgstr "Gbadura ki o dupe lowo olohun kio pe emi mimo lati to o sona. "
 
@@ -832,10 +840,12 @@ msgid "Read and Discuss (15min)"
 msgstr "Ka kio salaye"
 
 #: functions/zume-content.php:1196
+#, fuzzy
 msgid "Jesus said, “You will receive power when the Holy Spirit comes upon you. And you will be my witnesses, telling people about me everywhere – in Jerusalem, throughout Judea, in Samaria, and to the ends of the earth.”"
 msgstr "Jesu wi pe, “Iwọ yoo gba agbara nigbati Ẹmi Mimọ ba ba le yin. Ẹnyin o si jẹ ẹlẹri mi, yoo sọ fun awọn eniyan nipa mi kaakiri - ni Jerusalẹmu, ni gbogbo Judea, ati ni Samaria, ati si opin ilẹ aye. ”"
 
 #: functions/zume-content.php:1199
+#, fuzzy
 msgid "Jesus believed in His followers so much, He trusted them to tell His story. Then He sent them around the world to do it. Now, He’s sending us."
 msgstr "Jesu gbagbo ninu awon egbe re, o ni igbgbo ninu won."
 
@@ -848,6 +858,7 @@ msgid "What comes to mind when you hear God's command to be His \"witness\" and 
 msgstr "Kilo wa si okan re ti o ba gburo olohun, eri ati itan."
 
 #: functions/zume-content.php:1213
+#, fuzzy
 msgid "Why do you think Jesus chose ordinary people instead of some other way to share His Good News?"
 msgstr "Kini idi ti jesu fi yan arinrin eniyan dipo iroyin ayo."
 
@@ -892,6 +903,7 @@ msgid "Baptism"
 msgstr "Baptisi"
 
 #: functions/zume-content.php:1332
+#, fuzzy
 msgid "Jesus said, “Go and make disciples of all nations, BAPTIZING them in the name of the Father and of the Son and of the Holy Spirit…”"
 msgstr "Jesu sope, lo kio wa egbe ninu aye .."
 
@@ -912,6 +924,7 @@ msgid "Would you even consider it?"
 msgstr "Se o le gbiyanju e ro?"
 
 #: functions/zume-content.php:1388
+#, fuzzy
 msgid "If the Great Commission is for every follower of Jesus, does that mean every follower is allowed to baptize others? Why or why not?"
 msgstr "Ti Igbimọ Nla naa wa fun gbogbo ọmọlẹhin Jesu, o yẹ ki iyẹn tumọ si pe o gba gbogbo ọmọ-ẹhin laaye lati baptisi awọn miiran? Kini idi tabi kilode?"
 
@@ -920,6 +933,7 @@ msgid "IMPORTANT REMINDER – Have you been baptized?"
 msgstr "Iranleti to se koko?"
 
 #: functions/zume-content.php:1404
+#, fuzzy
 msgid "If not, then we encourage you to plan this before even one more session of this training. Invite your group to be a part of this important day when you celebrate saying \"yes\" to Jesus."
 msgstr "Ti kii ba ṣe bẹ, lẹhinna a gba ọ niyanju lati gbero eyi ṣaaju paapaa igba diẹ diẹ ti ikẹkọ yii. Pe ẹgbẹ rẹ lati jẹ apakan ti ọjọ pataki yii nigbati o ṣe ayẹyẹ sisọ “bẹẹni” si Jesu."
 
@@ -984,6 +998,7 @@ msgid "What is God's greatest blessing for His children? Making disciples who mu
 msgstr "Pelu ibukun Olohun fun awon omore, seto egbe lopolopo!"
 
 #: functions/zume-content.php:1658
+#, fuzzy
 msgid "What if you could learn a simple pattern for making not just one follower of Jesus but entire spiritual families who multiply for generations to come?"
 msgstr "Seto ona to to lati da egbe "
 
@@ -992,6 +1007,7 @@ msgid "Zúme Video Scripts: Greatest Blessing"
 msgstr "Iwe ikosile fidio Zume, ibukun Olohun"
 
 #: functions/zume-content.php:1701
+#, fuzzy
 msgid "Is this the pattern you were taught when you first began to follow Jesus? If not, what was different?"
 msgstr "Se ona tio to tio fi tele jesu leleyi, kini iyato?"
 
@@ -1048,6 +1064,7 @@ msgid "The Lord's Supper"
 msgstr "Ounje Olohun"
 
 #: functions/zume-content.php:1869
+#, fuzzy
 msgid "Jesus said, “I am the living bread that came down from heaven. Whoever eats this bread will live forever. This bread is my flesh, which I will give for the life of the world.”"
 msgstr "Jesu ni, emi ni buredi lati oju orun, enikeni to ba je yio wa laye, buredi ni eran ara mi"
 
@@ -1092,6 +1109,7 @@ msgid "You were encouraged to train someone else with the 3-Minute Testimony too
 msgstr "O ni anfani lati ran elomiran lowo pelu ibukun iseju meta"
 
 #: functions/zume-content.php:2037
+#, fuzzy
 msgid "In this session, you’ll learn how Prayer Walking is a powerful way to prepare a neighborhood for Jesus, and you'll learn a simple but powerful pattern for prayer that will help you meet and make new disciples along the way."
 msgstr "Ninu ipin yi, wa mo itume adura se lagbara to"
 
@@ -1184,6 +1202,7 @@ msgid "You were encouraged to share the Prayer Walking tool with someone else."
 msgstr "Kio si ni igbiyanju lati pin rinrin Adura Pelu elomiran"
 
 #: functions/zume-content.php:2314
+#, fuzzy
 msgid "Pray and thank God for the results, ask Him to help when you find it hard to obey, and invite His Holy Spirit to lead your time together."
 msgstr "Gbadura kio si be Olohun kio ran o lowo nibi tio ba ti dogun lati gbo oro re ."
 
@@ -1216,6 +1235,7 @@ msgid "Did you notice any differences between a 3/3 Group and a Bible Study or S
 msgstr "Sse iyato wa larin ipin meteta ninu bibeli"
 
 #: functions/zume-content.php:2467
+#, fuzzy
 msgid "Could a 3/3 Group be considered a Simple Church? Why or why not?"
 msgstr "Se ipin keta leje soosi to rorun"
 
@@ -1248,6 +1268,7 @@ msgid "You were encouraged to share the importance of Faithfulness with someon
 msgstr "O ni igbiyanju lati pin koko ninu igbiyanju pelu elomiran."
 
 #: functions/zume-content.php:2572
+#, fuzzy
 msgid "Pray and thank God for the group's commitment to faithfully following Jesus and invite God's Holy Spirit to lead your time together."
 msgstr "Gbadura si olohun nipa igbiyanju ise egbe na."
 
@@ -1349,30 +1370,37 @@ msgid "You were encouraged to share the 3/3 Group Format with someone else."
 msgstr "O ni igbiyanju lati pin egbe"
 
 #: functions/zume-content.php:2811
+#, fuzzy
 msgid "Pray and thank God for giving your group the energy, the focus and the faithfulness to come so far in this training. Ask God to have His Holy Spirit remind everyone in the group that they can do nothing without Him!"
 msgstr "Gbadura ki o ki ni pa agba ra tio fun lati fi oju si eto eko yi. bere kolohun wa emi mimo ko ran awon egbe leti ninu ijo pe won o le se nkan nkan laisi Olohun."
 
 #: functions/zume-content.php:2818
+#, fuzzy
 msgid "In this session, you’ll learn how Leadership Cells prepare followers in a short time to become leaders for a lifetime. You'll learn how serving others is Jesus' strategy for leadership. And you'll spend time practicing as a 3/3 Group, again."
 msgstr "Ninu igba yii, iwọ yoo rii bi Awọn sẹẹli Alakoso ṣe mura awọn ọmọlẹyin ni akoko diẹ lati di awọn oludari fun igbesi aye rẹ. Iwọ yoo kọ ẹkọ bi sisẹ awọn elomiran ṣe jẹ ete ti Jesu fun olori. Ati pe iwọ yoo lo akoko adaṣe bi Ẹgbẹ 3/3, lẹẹkansii."
 
 #: functions/zume-content.php:2840
+#, fuzzy
 msgid "Jesus said, “Whoever wishes to become great among you shall be your servant.”"
 msgstr "Jesu so wipe, eni keni to ba gbagbo yio di eru Ohun."
 
 #: functions/zume-content.php:2843
+#, fuzzy
 msgid "Jesus radically reversed our understanding of leadership by teaching us that if we feel called to lead, then we are being called to serve. A Leadership Cell is a way someone who feels called to lead can develop their leadership by practicing serving."
 msgstr "Ni ipilẹṣẹ, Jesu tun ṣe atunṣe oye wa nipa idari nipasẹ nkọ wa pe ti a ba ro pe a ni lati ṣe olori, lẹhinna a pe wa lati ṣe iranṣẹ. Ẹjẹ Alakoso jẹ ọna ti ẹnikan ti o rilara pe a darukọ lati ṣe idagbasoke idagbasoke wọn nipa adaṣe iṣẹ iranṣẹ."
 
 #: functions/zume-content.php:2854
+#, fuzzy
 msgid "Find the \"Leadership Cells\" section in your Zúme Guidebook. When you're ready, watch and discuss this video."
 msgstr "Wa olumori ninu iwe itonisona Zume ."
 
 #: functions/zume-content.php:2889
+#, fuzzy
 msgid "Zúme Video Scripts: Leadership Cells"
 msgstr "Iwe ikosile fidio Zume."
 
 #: functions/zume-content.php:2898
+#, fuzzy
 msgid "Is there a group of followers of Jesus you know that are already meeting or would be willing to meet and form a Leadership Cell to learn Zúme Training?"
 msgstr "Se awon ero leyin jesu mo pe ipade wa ninu egbe Zume."
 
@@ -1413,6 +1441,7 @@ msgid "Pray and ask God who He wants you to share the Leadership Cell tool with 
 msgstr "Gbadra ki olohun o pin Oludari rere kan wa."
 
 #: functions/zume-content.php:2991
+#, fuzzy
 msgid "Thank God for sending Jesus to show us that real leaders are real servants. Thank Jesus for showing us the greatest service possible is giving up our own lives for others."
 msgstr "Jesu ni eni tio wa fi Oludari gidi han."
 
@@ -1425,6 +1454,7 @@ msgid "You were encouraged to share the Leadership Cells tool with someone else.
 msgstr "O ni anfani lati pin Olori."
 
 #: functions/zume-content.php:3049
+#, fuzzy
 msgid "Pray and thank God that His ways are not our ways and His thoughts are not our thoughts. Ask Him to give each member of your group the mind of Christ — always focused on His Father's work. Ask the Holy Spirit to lead your time together and make it the best session yet."
 msgstr "Gbadura ki o si mo pe ona re kii se ona wa, ero okan re kii se bi ero okan re, sofn ko fun gbogbo egbe re ni emi jes."
 
@@ -1469,6 +1499,7 @@ msgid "What is one thing you can do starting this week that will make a differen
 msgstr "Kilo le bere ni ose yi yi yio nipa?"
 
 #: functions/zume-content.php:3216
+#, fuzzy
 msgid "Jesus taught us that we are to stay close — to live as a small, spiritual family, to love and give our lives to one another, to celebrate and suffer — together. However, Jesus also taught us to leave our homes and loved ones behind and be willing to go anywhere — and everywhere — to share and start new spiritual families. So how can we do both? When you're ready, watch the video below and discuss the question that follows."
 msgstr "Jesu kowa ki a wa papo, kia gbe papo, lati feran ara wa?"
 
@@ -1565,6 +1596,7 @@ msgid "Discuss and develop a group plan for starting at least two new 3/3 Groups
 msgstr "Ṣe ijiroro ati dagbasoke eto ẹgbẹ kan fun bẹrẹ o kere ju meji Awọn ẹgbẹ 3/3 meji tabi Awọn ẹgbẹ Ikẹkọ Zúme ni agbegbe rẹ. Orisirisi awọn ọmọ ẹgbẹ ẹgbẹ rẹ le ti ṣẹṣẹ ṣe igbala awọn Eto Mẹtta Ọjọ mẹta si ẹgbẹ Zúme rẹ. Ni igbesẹ yii, ti ko ba si ẹnikan lati inu ẹgbẹ rẹ ti o daakọ ẹda oni-nọmba kan lori oju opo wẹẹbu ti Eto Oṣu Mẹta rẹ, o gba ọ niyanju pupọ pe ki o ṣe eyi lapapọ. Kan lọ si Eto Oṣu Mẹta naa labẹ Eto ki o so ọna kika pọ si ẹgbẹ rẹ."
 
 #: functions/zume-content.php:3397
+#, fuzzy
 msgid "Remember, your goal is to start Simple Churches that multiply. 3/3 Groups and Zúme Training Groups are two ways to do that. Discuss and decide whether these new Groups will be connected to an existing local church or network or whether you’ll start a new network out of your Zúme Training Group."
 msgstr "Ranti wipe ilepa re ninu siso soosi di pupo."
 
@@ -1613,6 +1645,7 @@ msgid "Take a few moments to see how your group has been doing with these items 
 msgstr "Ninu asiko re wa bi egbe sen se lati igba keyin ti e ti rira."
 
 #: functions/zume-content.php:3492
+#, fuzzy
 msgid "Pray and thank God that He is faithful to complete His good work in us. Ask Him to give your group clear heads and open hearts to the great things He wants to do in and through you. Ask the Holy Spirit to lead your time together and thank Him for His faithfulness, too. He got you through!"
 msgstr "Kooshi."
 
@@ -1689,6 +1722,7 @@ msgid "Zúme Video Scripts: Leadership in Networks"
 msgstr "Akosile Fidio Zume "
 
 #: functions/zume-content.php:3661
+#, fuzzy
 msgid "Are there advantages when networks of simple churches are connected by deep, personal relationships? What are some examples that come to mind?"
 msgstr "Se anfani wa ninu ise netiwoki ni soosi?"
 
@@ -1873,6 +1907,7 @@ msgid "I will use the Prayer Cycle tool once every [days / weeks / months]."
 msgstr "Ma lo gbigbadura ni ekan lojumo."
 
 #: functions/zume-three-month-plan.php:91
+#, fuzzy
 msgid "I will invite the following people to be part of a Leadership Cell that I will lead:"
 msgstr "Ma gba awon eyan niyanju lati je olori:"
 
@@ -2003,6 +2038,7 @@ msgstr "Kosi eto to sopo mo egbe yi."
 #: template-zume-about.php:38 template-zume-about.php:55
 #: template-zume-faq.php:199 template-zume-privacy-policy.php:186
 #: template-zume-progress.php:119
+#, fuzzy
 msgid "Zúme uses an online training platform to equip participants in basic disciple-making and simple church planting multiplication principles, processes, and practices."
 msgstr "Zume lo awon ohun elo ayelujara."
 
@@ -2285,6 +2321,7 @@ msgstr "Igba e le Kejo"
 #: functions/enqueue-scripts.php:237 template-gmo.php:240
 #: template-how-to-follow-jesus.php:240 template-zume-dashboard.php:542
 #: template-zume-training.php:667
+#, fuzzy
 msgid "Leadership Cells"
 msgstr "Olori Seli"
 
@@ -2639,6 +2676,7 @@ msgid "Who is the training appropriate for?"
 msgstr "Tani idanileko na wulo fun?"
 
 #: template-zume-faq.php:101
+#, fuzzy
 msgid "The training is appropriate for followers of Christ who are 13-years-old or older and who are able to read. In the future, there may be a version produced that is appropriate for non-literate people, but this is not that version. We believe every person who fits this profile should take the training."
 msgstr "Awon ni egbe omo eniyan kristi tio je omo oun metala tabi jubelo."
 
@@ -2675,6 +2713,7 @@ msgid "PHASE 3"
 msgstr "Ipin keta"
 
 #: template-zume-faq.php:126 template-zume-progress.php:102
+#, fuzzy
 msgid "The third phase focuses Phase 1 and Phase 2 churches to mobilize globally with a vision to make disciples in every place, among every people group. Zúme Project exists to saturate the globe with multiplying disciples in our generation. To accelerate our mission, we have developed and will deliver a mapping solution allowing teams to work strategically towards the goal of a Zúme training group and two simple churches among every 50,000 people outside the US."
 msgstr "Ipin keta da lori ipin alakoko ati elekeji."
 
@@ -2695,6 +2734,7 @@ msgid "How are the groups started by trainees aligned or organized?"
 msgstr "Bawo ni egbe nan se bere ?"
 
 #: template-zume-faq.php:148
+#, fuzzy
 msgid "It depends. If the trainees come out of a particular church or denomination or network then the most natural thing is for the newly formed groups to be connected with those existing churches, denomination, or network. If desired, however, a new network can be formed from the groups that start. A third alternative would be for the new groups to join with other already existing networks of simple churches. Many of the people involved in developing Zúme come from such networks so we can help arrange that if desired."
 msgstr "Kooshi"
 
@@ -2834,6 +2874,7 @@ msgid "ACCOUNTABILITY GROUPS — Break into groups of two or three people to wor
 msgstr "PIN EGBE SI ONA MEJI TABI META."
 
 #: template-zume-overview.php:415
+#, fuzzy
 msgid "PRODUCERS VS. CONSUMERS — You'll discover the four main ways God makes everyday followers more like Jesus."
 msgstr "E O MO ONA TI OLOHUN GBA LO EYAN."
 
@@ -2862,6 +2903,7 @@ msgid "THE GOSPEL — Learn a way to share God’s Good News from the beginning 
 msgstr "Mo ibasepo eniyan."
 
 #: template-zume-overview.php:571
+#, fuzzy
 msgid "BAPTISM — Jesus said, “Go and make disciples of all nations, BAPTIZING them in the name of the Father and of the Son and of the Holy Spirit…” Learn how to put this into practice."
 msgstr "Jesu ni e wa egbe jo lona kona."
 
@@ -2870,6 +2912,7 @@ msgid "SHARE GOD’S STORY — Break into groups of two or three and practice sh
 msgstr "Pin si ipin meji tabi meta ."
 
 #: template-zume-overview.php:648
+#, fuzzy
 msgid "GREATEST BLESSING — Learn a simple pattern of making not just one follower of Jesus but entire spiritual families who multiply for generations to come."
 msgstr "Wa ona lati je ki egbe mo igbiyanju won."
 
@@ -2886,6 +2929,7 @@ msgid "3-MINUTE TESTIMONY — Learn how to share your testimony in three minutes
 msgstr "Mo lati pin ohun iyinrere."
 
 #: template-zume-overview.php:705
+#, fuzzy
 msgid "THE LORD'S SUPPER — It’s a simple way to celebrate our intimate connection and ongoing relationship with Jesus. Learn a simple way to celebrate."
 msgstr "Ona lati se ipin"
 
@@ -2918,6 +2962,7 @@ msgid "FAITHFULNESS — It's important what disciples know — but it's much mor
 msgstr "Awon egbe rere ."
 
 #: template-zume-overview.php:922
+#, fuzzy
 msgid "3/3 GROUP FORMAT — A 3/3 Group is a way for followers of Jesus to meet, pray, learn, grow, fellowship and practice obeying and sharing what they've learned. In this way, a 3/3 Group is not just a small group but a Simple Church. (80 minutes)"
 msgstr "Bbi jesu o se ri egbe ."
 
@@ -2930,6 +2975,7 @@ msgid "3/3 GROUP — Your entire group will spend 90 minutes practicing the 3/3 
 msgstr "EGBE- gbogbo egbe yio lo iseju."
 
 #: template-zume-overview.php:1055
+#, fuzzy
 msgid "LEADERSHIP CELLS — A Leadership Cell is a way someone who feels called to lead can develop their leadership by practicing serving."
 msgstr "OLORI- oun ni eyan tio le dari."
 
@@ -2942,6 +2988,7 @@ msgid "PACE — Multiplying matters and multiplying quickly matters even more. S
 msgstr "PACE- isodi puponi kia kia "
 
 #: template-zume-overview.php:1156
+#, fuzzy
 msgid "PART OF TWO CHURCHES — Learn how to obey Jesus' commands by going AND staying."
 msgstr "APAKAN TI IJO MEJI- ko eko lori igboran jesu, ni pase jesu, pipase lilo ati duduro."
 
@@ -3074,6 +3121,7 @@ msgid "Have us delete any data we have about you."
 msgstr "Se oti pa data kankan re ninu eyi ta ni lowo wa."
 
 #: template-zume-privacy-policy.php:143
+#, fuzzy
 msgid "Express any concern you have about our use of your data."
 msgstr "Fi ifiyesi re han nipa lilo data re."
 

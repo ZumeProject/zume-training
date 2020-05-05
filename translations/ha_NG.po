@@ -19,6 +19,7 @@ msgid "Login"
 msgstr "Shiga"
 
 #: front-page.php:86
+#, fuzzy
 msgid "Zúme Training is an on-line and in-life learning experience designed for small groups who follow Jesus to learn how to obey His Great Commission and make disciples who multiply."
 msgstr "Zume Training ne akan layi da kuma ilimin rayuwa cikin tsari wanda aka tsara don kananan kungiyoyi waɗanda suke bin Yesu don koyan yadda zasu yi biyayya ga Babban kwamishina kuma su sanya almajirai masu yawa."
 
@@ -345,6 +346,7 @@ msgid "Group Prayer (5min)"
 msgstr "Addu'a kungiya (minti biyar)"
 
 #: functions/zume-content.php:217
+#, fuzzy
 msgid "Begin with prayer. Spiritual insight and transformation is not possible without the Holy Spirit. Take time as a group to invite Him to guide you over this session."
 msgstr "Fara da addu'a. Fahimtar ruhaniya da canji ba zai yiwu ba tare da Ruhu maitsarki. Timeauki lokaci a matsayinku don kira Shi don ya jagorance ku a wannan zaman."
 
@@ -396,10 +398,12 @@ msgid "DISCUSS"
 msgstr "TATTAUNA"
 
 #: functions/zume-content.php:276
+#, fuzzy
 msgid "If Jesus intended every one of His followers to obey His Great Commission, why do so few actually make disciples?"
 msgstr "Idan Yesu yana nufin kowane ɗayan mabiyansa yayi biyayya da Babban Kwamishina, me yasa mutane kaɗan ke yin almajirai?"
 
 #: functions/zume-content.php:296
+#, fuzzy
 msgid "What is a disciple? And how do you make one? How do you teach a follower of Jesus to do what He told us in His Great Commission – to obey all of His commands?"
 msgstr "Me almajiri yake? Kuma yaya kuke yin daya? Ta yaya zaka koyar da mai bin Yesu yayi abinda ya fada mana cikin Babban zatinsa - ka kiyaye duk dokokinSa?"
 
@@ -412,6 +416,7 @@ msgid "When you think of a church, what comes to mind?"
 msgstr "Idan kayi tunanin coci, menene ya shiga tunani?"
 
 #: functions/zume-content.php:338
+#, fuzzy
 msgid "What's the difference between that picture and what's described in the video as a \"Simple Church\"?"
 msgstr "Menene banbanci tsakanin wannan hoton da kuma abin da aka bayyana a bidiyon a matsayin \"Simple Church\"?"
 
@@ -473,6 +478,7 @@ msgid "Accountability Groups"
 msgstr "Rukunin Kungiyoyi"
 
 #: functions/zume-content.php:502
+#, fuzzy
 msgid "The Bible tells us that every follower of Jesus will one day be held accountable for what we do and say and think. Accountability Groups are a great way to get ready!"
 msgstr "Littafi Mai Tsarki tana gaya mana cewa kowace mai bin Yesu wata rana za a dauki alhakin abin da muke yi da fada da tunani. Raba Kungiyoyi na Raba Kudi sune babbar hanyar shirya!"
 
@@ -634,6 +640,7 @@ msgid "Ask if anyone in the group has specific needs they would like the group t
 msgstr "Tambayi ko akwai wani a rukunin da yake da takamaiman bukatun da suke so mahalarta su yi addu’a. Nemi wani yayi adu'a ka roki Allah ya taimaka a bangarorin da kungiyar ta rabawa. Tabbatar godewa Allah cewa yayi alkawura a cikin maganarsa cewa zai saurareni kuma yayi aiki lokacin da mutanen sa sukayi addu'a. Kuma, kamar yadda koyaushe, roƙi Ruhun Allah don ya jagoranci lokacinku, tare."
 
 #: functions/zume-content.php:731
+#, fuzzy
 msgid "If we want to make disciples who multiply – spiritual producers and not just consumers – then we need to learn and share four main ways God makes everyday followers more like Jesus:"
 msgstr "Idan muna son sanya almajirai masu haɓaka - masu samar da ruhaniya ba kawai masu cin kuɗi ba to lallai muna buƙatar koyon hanyoyi da manyan hanyoyi guda huɗu waɗanda Allah ya sa mabiyan yau da kullun su zama kamar Yesu:"
 
@@ -796,6 +803,7 @@ msgstr "An ƙarfafa ka ka raba yadda zaka yi Jerin 100 tare da wani."
 
 #: functions/zume-content.php:1104 functions/zume-content.php:1527
 #: functions/zume-content.php:2030
+#, fuzzy
 msgid "Pray and thank God for the results and invite His Holy Spirit to lead your time together."
 msgstr "Yi addu'a kuma gode wa Allah saboda sakamakon kuma kirawo da Ruhu Mai Tsarki don jagorantar lokacin ku tare."
 
@@ -832,10 +840,12 @@ msgid "Read and Discuss (15min)"
 msgstr "Karanta da Tattauna (minti goma sha biyar)"
 
 #: functions/zume-content.php:1196
+#, fuzzy
 msgid "Jesus said, “You will receive power when the Holy Spirit comes upon you. And you will be my witnesses, telling people about me everywhere – in Jerusalem, throughout Judea, in Samaria, and to the ends of the earth.”"
 msgstr "Yesu yace, \"Amma za ku sami iko sa'ad da Ruhu Mai Tsarki ya sauko muku, za ku kuma zama shaiduna a Urushalima, da duk kasar Yahudiya, da ta Samariya, har ya zuwa iyakar duniya\""
 
 #: functions/zume-content.php:1199
+#, fuzzy
 msgid "Jesus believed in His followers so much, He trusted them to tell His story. Then He sent them around the world to do it. Now, He’s sending us."
 msgstr "Yesu yayi imani da mabiyansa sosai, ya amince da su su ba da labarinsa. Sa’an nan Ya aika su a duniya su yi shi. Yanzu, yana aiko mana."
 
@@ -848,6 +858,7 @@ msgid "What comes to mind when you hear God's command to be His \"witness\" and 
 msgstr "Me zai tuna idan ka ji umarnin Allah na zama 'mai shaida kuma ka ba da labarinsa?"
 
 #: functions/zume-content.php:1213
+#, fuzzy
 msgid "Why do you think Jesus chose ordinary people instead of some other way to share His Good News?"
 msgstr "Me yasa kuke tsammani Yesu ya zaɓi talakawa maimakon wata hanya don yaɗa Bisharar sa?"
 
@@ -892,6 +903,7 @@ msgid "Baptism"
 msgstr "Baftisma"
 
 #: functions/zume-content.php:1332
+#, fuzzy
 msgid "Jesus said, “Go and make disciples of all nations, BAPTIZING them in the name of the Father and of the Son and of the Holy Spirit…”"
 msgstr "Yesu ya ce, \"Ku je ku almajirtar da dukkan al'ummai, ku yi musu BAFTISMA a cikin sunan Uba da na Da da na Ruhu Mai Tsarki...\""
 
@@ -912,6 +924,7 @@ msgid "Would you even consider it?"
 msgstr "Shin zakuyi la'akari da shi?"
 
 #: functions/zume-content.php:1388
+#, fuzzy
 msgid "If the Great Commission is for every follower of Jesus, does that mean every follower is allowed to baptize others? Why or why not?"
 msgstr "Idan Babbar umarni ta kasance ga kowane mai bin Yesu, wannan na nuna kowane an yarda an yi wa wasu baftisma? Me yasa ko me yasa ba?"
 
@@ -920,6 +933,7 @@ msgid "IMPORTANT REMINDER – Have you been baptized?"
 msgstr "MALAMIN MUHIMA Ka yi baftisma kuwa?"
 
 #: functions/zume-content.php:1404
+#, fuzzy
 msgid "If not, then we encourage you to plan this before even one more session of this training. Invite your group to be a part of this important day when you celebrate saying \"yes\" to Jesus."
 msgstr "Idan ba haka ba, to muna karfafa ka ka shirya wannan tun ma kafin kara zama daya na wannan horon. Gayyato rukunin ku kasance cikin wannan muhimmiyar ranar da kuka yi bikin kuna cewa \"Ee\" ga Yesu."
 
@@ -984,6 +998,7 @@ msgid "What is God's greatest blessing for His children? Making disciples who mu
 msgstr "Wace babbar albarkar Allah ga Hisya ?ansa? Yin almajirai wadanda suka ninka!"
 
 #: functions/zume-content.php:1658
+#, fuzzy
 msgid "What if you could learn a simple pattern for making not just one follower of Jesus but entire spiritual families who multiply for generations to come?"
 msgstr "Me za ku iya koyon hanya madaidaiciya domin ba mai bin Yesu guda ɗaya kawai ba amma dukkanin iyalai na ruhaniya waɗanda suke ƙaruwa don tsararraki masu zuwa?"
 
@@ -992,6 +1007,7 @@ msgid "Zúme Video Scripts: Greatest Blessing"
 msgstr "Rubutun Bidiyo Zume: Mafi girma albarka"
 
 #: functions/zume-content.php:1701
+#, fuzzy
 msgid "Is this the pattern you were taught when you first began to follow Jesus? If not, what was different?"
 msgstr "Shin wannan tsarin ne da aka koya muku lokacin da kuka fara bin Yesu? Idan ba haka ba, menene ya bambanta?"
 
@@ -1048,6 +1064,7 @@ msgid "The Lord's Supper"
 msgstr "Jibin Maraice na Ubangiji"
 
 #: functions/zume-content.php:1869
+#, fuzzy
 msgid "Jesus said, “I am the living bread that came down from heaven. Whoever eats this bread will live forever. This bread is my flesh, which I will give for the life of the world.”"
 msgstr "Jesu yace, \"Ni ne Gurasa rai da ya sauko daga Sama. Kowa ya ci Gurasan nan, zai rayu har abada. Har ma gurasar da zan bayar naman jikina ne, domin duniya ta rayu.\""
 
@@ -1092,6 +1109,7 @@ msgid "You were encouraged to train someone else with the 3-Minute Testimony too
 msgstr "An ƙarfafa ka ka horar da wani tare da kayan aikin Shaida na Minti uku."
 
 #: functions/zume-content.php:2037
+#, fuzzy
 msgid "In this session, you’ll learn how Prayer Walking is a powerful way to prepare a neighborhood for Jesus, and you'll learn a simple but powerful pattern for prayer that will help you meet and make new disciples along the way."
 msgstr "A cikin wannan zaman, zaku koyi yadda Tafiya Addu'a hanya ce mai ƙarfi don shirya mahalli ga Yesu, kuma zaku koyi tsarin mai sauki amma mai ƙarfi domin addu'ar da zai taimaka kun haɗu ku yi sabbin almajirai a hanya."
 
@@ -1184,6 +1202,7 @@ msgid "You were encouraged to share the Prayer Walking tool with someone else."
 msgstr "An karfafa ka ka raba kayan aikin tafiya da Addu'a tare da wani."
 
 #: functions/zume-content.php:2314
+#, fuzzy
 msgid "Pray and thank God for the results, ask Him to help when you find it hard to obey, and invite His Holy Spirit to lead your time together."
 msgstr "Yi addu'a ka gode wa Allah saboda sakamakon, rokon shi ya taimaka lokacin da wahala ka yi biyayya, ka gayyata Ruhunsa Mai Tsarki zai jagoranci lokacinku tare."
 
@@ -1216,6 +1235,7 @@ msgid "Did you notice any differences between a 3/3 Group and a Bible Study or S
 msgstr "Shin kun lura da wasu bambance-bambance tsakanin 3ungiyoyin 3/3 da Nazarin Littafi Mai Tsarki ko Grouparamin Groupan da kuka kasance ɓangare na (ko kun ji labarin) a da? Idan haka ne, ta yaya waɗannan bambance-bambancen zasu shafi kungiyar?"
 
 #: functions/zume-content.php:2467
+#, fuzzy
 msgid "Could a 3/3 Group be considered a Simple Church? Why or why not?"
 msgstr "Shin ana iya ɗaukar 3ungiyoyi 3/3 a matsayin Coci mai Sauƙi? Me yasa ko me yasa ba haka ba?"
 
@@ -1248,6 +1268,7 @@ msgid "You were encouraged to share the importance of Faithfulness with someon
 msgstr "An ƙarfafa ka ka raba mahimmancin aminci ga wani."
 
 #: functions/zume-content.php:2572
+#, fuzzy
 msgid "Pray and thank God for the group's commitment to faithfully following Jesus and invite God's Holy Spirit to lead your time together."
 msgstr "Yi addu'a ku gode wa Allah saboda jajircewar kungiyar ku bi Yesu da aminci da kuma gayyato Ruhun Allah."
 
@@ -1349,30 +1370,37 @@ msgid "You were encouraged to share the 3/3 Group Format with someone else."
 msgstr "An karfafa muku gwiwa ku rarraba Tsarin /ungiyar 3/3 tare da wani."
 
 #: functions/zume-content.php:2811
+#, fuzzy
 msgid "Pray and thank God for giving your group the energy, the focus and the faithfulness to come so far in this training. Ask God to have His Holy Spirit remind everyone in the group that they can do nothing without Him!"
 msgstr "Kuyi addu'a ku godewa Allah da ya baiwa rukunin ku kuzari, fifikon da amincin su zo har zuwa wannan horo. Nemi Allah ya sa Ruhunsa Mai Tsarki ya tunatar da kowa cikin kungiyar cewa ba za su iya yin komai ba tare da Shi!"
 
 #: functions/zume-content.php:2818
+#, fuzzy
 msgid "In this session, you’ll learn how Leadership Cells prepare followers in a short time to become leaders for a lifetime. You'll learn how serving others is Jesus' strategy for leadership. And you'll spend time practicing as a 3/3 Group, again."
 msgstr "A wannan zaman, zaku ji yadda Jagoran Jagoranci ke shirya mabiya a cikin dan kankanen lokaci su zama shugabanni tsawon rayuwa. Za ku koyi yadda bautar da wasu dabarun Yesu don jagoranci. Kuma zakuyi amfani da lokaci don aiwatarwa azaman 3/3 Group, sake."
 
 #: functions/zume-content.php:2840
+#, fuzzy
 msgid "Jesus said, “Whoever wishes to become great among you shall be your servant.”"
 msgstr "Yesu ya ce, \"Amma duk wanda yake son zama babba a cikinku, lalle ne ya zama baranku.\""
 
 #: functions/zume-content.php:2843
+#, fuzzy
 msgid "Jesus radically reversed our understanding of leadership by teaching us that if we feel called to lead, then we are being called to serve. A Leadership Cell is a way someone who feels called to lead can develop their leadership by practicing serving."
 msgstr "Yesu ya canza tunaninmu game da jagoranci ta hanyar koya mana cewa idan muna jin an kira mu jagoranci, to, ana kiran mu mu yi hidima. Kwayar Jagora hanya ce da wani wanda yake jin an kira shi ya jagoranci zai iya haɓaka jagorancirsu ta hanyar yin hidimtawa."
 
 #: functions/zume-content.php:2854
+#, fuzzy
 msgid "Find the \"Leadership Cells\" section in your Zúme Guidebook. When you're ready, watch and discuss this video."
 msgstr "Nemo sashin \"Jagoran Jagoranci\" a cikin Littafin Jagora na Zúme. Lokacin da kuka shirya, kallo kuma tattauna wannan bidiyon."
 
 #: functions/zume-content.php:2889
+#, fuzzy
 msgid "Zúme Video Scripts: Leadership Cells"
 msgstr "Rubutun bidiyo na Zúme: Kwayoyin jagoranci"
 
 #: functions/zume-content.php:2898
+#, fuzzy
 msgid "Is there a group of followers of Jesus you know that are already meeting or would be willing to meet and form a Leadership Cell to learn Zúme Training?"
 msgstr "Shin akwai wasu membobin mabiyan Yesu da kuka san cewa sun riga sun hallara ko zasu yarda ku haɗu kuma ku kirkiro Sashen jagoranci don koyan koyar da Zúme?"
 
@@ -1413,6 +1441,7 @@ msgid "Pray and ask God who He wants you to share the Leadership Cell tool with 
 msgstr "Yi addu'a ku roki Allah wanda yake so ku raba kayan aikin Jagoranci kafin kungiyarku ta sake haduwa. Raba sunan mutumin da rukunin mutanen kafin ku tafi."
 
 #: functions/zume-content.php:2991
+#, fuzzy
 msgid "Thank God for sending Jesus to show us that real leaders are real servants. Thank Jesus for showing us the greatest service possible is giving up our own lives for others."
 msgstr "Godiya ga Allah da ya aiko Yesu domin ya nuna mana cewa shugabanni na kwarai bayi ne. Na gode da Yesu saboda nuna mana mafi girman sabis wanda zai yiwu shine sadaukar da rayukan mu don wasu."
 
@@ -1425,6 +1454,7 @@ msgid "You were encouraged to share the Leadership Cells tool with someone else.
 msgstr "Anyi muku kwarin gwiwa don raba kayan aikin jagoran jagoranci tare da wani."
 
 #: functions/zume-content.php:3049
+#, fuzzy
 msgid "Pray and thank God that His ways are not our ways and His thoughts are not our thoughts. Ask Him to give each member of your group the mind of Christ — always focused on His Father's work. Ask the Holy Spirit to lead your time together and make it the best session yet."
 msgstr "Addu'a ku godewa Allah cewa hanyoyinsa ba hanyoyin mu bane kuma tunanin sa ba tunanin mu bane. Nemi Shi ya ba kowane ɗayan ƙungiyar ku hankalin Kristi — koyaushe ya mai da hankali ga aikin Ubansa. Tambayi Ruhu Mai Tsarki don jagorantar lokacin ku kuma kuyi shi mafi kyawun zaman tukuna."
 
@@ -1469,6 +1499,7 @@ msgid "What is one thing you can do starting this week that will make a differen
 msgstr "Wane abu guda ne zaka iya farawa daga wannan makon wanda zai kawo canji?"
 
 #: functions/zume-content.php:3216
+#, fuzzy
 msgid "Jesus taught us that we are to stay close — to live as a small, spiritual family, to love and give our lives to one another, to celebrate and suffer — together. However, Jesus also taught us to leave our homes and loved ones behind and be willing to go anywhere — and everywhere — to share and start new spiritual families. So how can we do both? When you're ready, watch the video below and discuss the question that follows."
 msgstr "Yesu ya koya mana cewa ya kamata mu kasance kusa - don rayuwa kamar ƙarami, iyali na ruhaniya, ƙauna da ba da rayukanmu ga juna, murnar da juna tare-. Koyaya, Yesu ya koya mana cewa mu bar gidajen mu da ƙaunatattunmu a shirye kuma mu kasance da son zuwa ko ina - kuma ko'ina - don raba da fara sababbin iyalai na ruhaniya. Don haka ta yaya zamu iya biyun? Lokacin da kuka shirya, kalli bidiyon da ke ƙasa kuma ku tattauna tambayar da ke gaba."
 
@@ -1565,6 +1596,7 @@ msgid "Discuss and develop a group plan for starting at least two new 3/3 Groups
 msgstr "Tattaunawa da haɓaka shirin ƙungiya don fara akalla sababbin twoungiyoyi 3/3 ko úungiyoyin Horar da Zúme a yankin ku. Da yawa daga cikin membobin ƙungiyar ku sun kammala kawai kuma sun adana shirinku na Watanni Uku-3 ga Zungiyar ku ta Zúme. A kan wannan matakin, idan babu wani daga rukunin ku da ya cika kwafin dijital a shafin yanar gizon Tsarinku na Watanni Uku, an ba ku shawara kuyi wannan tare yanzu. Kawai je zuwa Tsarin Watanni Uku a ƙarƙashin Saiti kuma ku danganta hanyar zuwa rukunin ku."
 
 #: functions/zume-content.php:3397
+#, fuzzy
 msgid "Remember, your goal is to start Simple Churches that multiply. 3/3 Groups and Zúme Training Groups are two ways to do that. Discuss and decide whether these new Groups will be connected to an existing local church or network or whether you’ll start a new network out of your Zúme Training Group."
 msgstr "Ka tuna, burin ka shine ka fara Saukakkun Ikklisiya masu yawa. /Ungiyoyi 3/3 da Trainingungiyoyin Horar da Zúme sune hanyoyi biyu don yin hakan. Tattauna kuma yanke shawara ko waɗannan sabbin Groungiyoyin za a haɗa su da cocin cocin da ke yanzu ko kuma hanyar sadarwa ko za ku fara sabon cibiyar sadarwa daga ofungiyar Horar da Zúme."
 
@@ -1613,6 +1645,7 @@ msgid "Take a few moments to see how your group has been doing with these items 
 msgstr "Yi ɗan lokaci kaɗan don ganin yadda ƙungiyar ku ta kasance tare da waɗannan abubuwan da Tsarin Watansu Uku tun lokacin da kuka haɗu da ƙarshe."
 
 #: functions/zume-content.php:3492
+#, fuzzy
 msgid "Pray and thank God that He is faithful to complete His good work in us. Ask Him to give your group clear heads and open hearts to the great things He wants to do in and through you. Ask the Holy Spirit to lead your time together and thank Him for His faithfulness, too. He got you through!"
 msgstr "Yi addu'a kuma gode Allah cewa Shi mai aminci ne don kammala kyakkyawan aikinsa a cikinmu. Nace masa ya ba kawunanku tabbatattun shuwagabanninsu kuma ku bude zukatansu ga manyan abubuwan da yake so ya aikata kuma ta hanyar ku. Tambayi Ruhu mai tsarki don jagorantar lokacin ku kuma gode masa saboda amincin sa. Ya same ka!"
 
@@ -1689,6 +1722,7 @@ msgid "Zúme Video Scripts: Leadership in Networks"
 msgstr "Rubutun Bidiyo na Zúme: Jagoranci a cikin Hanyoyin Sadarwa"
 
 #: functions/zume-content.php:3661
+#, fuzzy
 msgid "Are there advantages when networks of simple churches are connected by deep, personal relationships? What are some examples that come to mind?"
 msgstr "Ko akwai wata fa'ida yayin da hanyoyin haɗin majami'u masu sauƙi ke haɗa su da zurfi. dangantakar mutum? Waɗanne misalai ne suka zo hankali?"
 
@@ -1873,6 +1907,7 @@ msgid "I will use the Prayer Cycle tool once every [days / weeks / months]."
 msgstr "Zan yi amfani da kayan aikin Sallah sau daya a kowane [ranaku / sati / watanni]."
 
 #: functions/zume-three-month-plan.php:91
+#, fuzzy
 msgid "I will invite the following people to be part of a Leadership Cell that I will lead:"
 msgstr "Ina rashin lafiya na kira ga wadannan mutanen da su zama jagora a sashin Jagoranci wanda zan jagoranci:"
 
@@ -2003,6 +2038,7 @@ msgstr "Babu wani shiri da ya shafi wannan rukunin."
 #: template-zume-about.php:38 template-zume-about.php:55
 #: template-zume-faq.php:199 template-zume-privacy-policy.php:186
 #: template-zume-progress.php:119
+#, fuzzy
 msgid "Zúme uses an online training platform to equip participants in basic disciple-making and simple church planting multiplication principles, processes, and practices."
 msgstr "Zúme tana amfani da dandalin horo na kan layi don ba wa mahalarta damar yin almajirai da ingantattun ka'idodin dasa ikkilisiya mai sauƙi, tsari, da kuma ayyuka."
 
@@ -2285,6 +2321,7 @@ msgstr "Zaman takwas"
 #: functions/enqueue-scripts.php:237 template-gmo.php:240
 #: template-how-to-follow-jesus.php:240 template-zume-dashboard.php:542
 #: template-zume-training.php:667
+#, fuzzy
 msgid "Leadership Cells"
 msgstr "Kwayoyin jagoranci"
 
@@ -2640,6 +2677,7 @@ msgid "Who is the training appropriate for?"
 msgstr "Wanene horarwar da ta dace?"
 
 #: template-zume-faq.php:101
+#, fuzzy
 msgid "The training is appropriate for followers of Christ who are 13-years-old or older and who are able to read. In the future, there may be a version produced that is appropriate for non-literate people, but this is not that version. We believe every person who fits this profile should take the training."
 msgstr "Horarwar ta dace da mabiyan Kristi wadanda suka shekara 13 ko da suka girma kuma waɗanda suke iya karatu. Nan gaba, za a iya samar da sigar da ta dace da mutanen da ba su da ilimi, amma wannan ba sigar ba ce. Mun yi imanin duk mutumin da ya dace da wannan bayanin martabar ya kamata ya ɗauki horon."
 
@@ -2676,6 +2714,7 @@ msgid "PHASE 3"
 msgstr "LOKACI uku"
 
 #: template-zume-faq.php:126 template-zume-progress.php:102
+#, fuzzy
 msgid "The third phase focuses Phase 1 and Phase 2 churches to mobilize globally with a vision to make disciples in every place, among every people group. Zúme Project exists to saturate the globe with multiplying disciples in our generation. To accelerate our mission, we have developed and will deliver a mapping solution allowing teams to work strategically towards the goal of a Zúme training group and two simple churches among every 50,000 people outside the US."
 msgstr "Mataki na uku ya maida hankali ne kan majami'un 1 da Fasaha 2 don shirin dunkulewar duniya tare da hangen nesa zuwa almajirtar da mutane ko'ina, a cikin kowane rukuni. Zubme Project yana wanzu don duniya tare da almajirai masu yawa a cikin tsararrakinmu. Don hanzarta manufa, mun inganta kuma za ta ba da damar zana taswira don ba da damar ƙungiyoyi suyi aiki ta hanyar dabarun ƙungiyar horar da Zúme da kuma majami'u biyu masu sauƙi a tsakanin mutane 50,000 a wajen Amurka."
 
@@ -2696,6 +2735,7 @@ msgid "How are the groups started by trainees aligned or organized?"
 msgstr "Ta yaya ƙungiyoyi masu horo suka fara haɗa ƙungiyoyi da tsara su?"
 
 #: template-zume-faq.php:148
+#, fuzzy
 msgid "It depends. If the trainees come out of a particular church or denomination or network then the most natural thing is for the newly formed groups to be connected with those existing churches, denomination, or network. If desired, however, a new network can be formed from the groups that start. A third alternative would be for the new groups to join with other already existing networks of simple churches. Many of the people involved in developing Zúme come from such networks so we can help arrange that if desired."
 msgstr "Ya dogara. Idan masu koyon sana'o'in sun fito daga wani coci na musamman ko kuma ɗab'i ko cibiyar sadarwa to mafi kyawun halitta shine don sabbin kungiyoyin da za'a kafa tare da wadanda suke da su majami'u, ko ɗarika, ko hanyar sadarwa. Idan ana so, kodayake, ana iya ƙirƙirar sabon hanyar sadarwa daga ƙungiyoyin da suka fara. Madadin na uku zai kasance don sabon rukuni don shiga tare da sauran cibiyoyin sadarwa da ke kasancewa tuni na majami'u masu sauki. Yawancin mutanen da ke da hannu wajen haɓaka Zúme sun zo daga irin wannan hanyar sadarwa don haka muna iya taimakawa wajen shirya hakan idan ana so."
 
@@ -2835,6 +2875,7 @@ msgid "ACCOUNTABILITY GROUPS — Break into groups of two or three people to wor
 msgstr "GASKIYAR LABARI - Ka kasu kashi biyu zuwa mutane biyu don aiki ta hanyar Tambayoyi Masu Amfani da su. (Minti 45)"
 
 #: template-zume-overview.php:415
+#, fuzzy
 msgid "PRODUCERS VS. CONSUMERS — You'll discover the four main ways God makes everyday followers more like Jesus."
 msgstr "Masu samarwa VS. SAURARA - Za ku gano manyan hanyoyi guda huɗu da Allah yake sa mabiyan yau da kullun su zama kamar Yesu."
 
@@ -2863,6 +2904,7 @@ msgid "THE GOSPEL — Learn a way to share God’s Good News from the beginning 
 msgstr "LITTAFIN - Koyi hanyar da za a iya yada Labaran Allah daga farkon bil'adama duka hanyar zuwa ƙarshen wannan zamanin."
 
 #: template-zume-overview.php:571
+#, fuzzy
 msgid "BAPTISM — Jesus said, “Go and make disciples of all nations, BAPTIZING them in the name of the Father and of the Son and of the Holy Spirit…” Learn how to put this into practice."
 msgstr "BAFTISMA- Yesu ya ce, \"Ku je ku almajirtar da dukkan al'ummai, ku yi musu BAFTISMA a cikin sunan Uba da na Da da na Ruhu Mai Tsarki .. \"Koya yadda ake aiwatar da wannan."
 
@@ -2871,6 +2913,7 @@ msgid "SHARE GOD’S STORY — Break into groups of two or three and practice sh
 msgstr "SHAWARA LABARIN ALLAH - Ku kasu kashi biyu zuwa uku kuma kuyi musayar labarin Allah. (Minti arba'in da biyar)"
 
 #: template-zume-overview.php:648
+#, fuzzy
 msgid "GREATEST BLESSING — Learn a simple pattern of making not just one follower of Jesus but entire spiritual families who multiply for generations to come."
 msgstr "MAI GIRMA MAFARKI - Koyi tsari mai sauki na yin ba mai bin Yesu daya kawai ba dukan iyalai na ruhaniya waɗanda suke ninka don tsararraki masu zuwa."
 
@@ -2887,6 +2930,7 @@ msgid "3-MINUTE TESTIMONY — Learn how to share your testimony in three minutes
 msgstr "3-MINUTE TESTIMONY - Koyi yadda ake raba shaidarka a cikin mintuna uku ta hanyar raba yadda Yesu ya shafi rayuwar ka."
 
 #: template-zume-overview.php:705
+#, fuzzy
 msgid "THE LORD'S SUPPER — It’s a simple way to celebrate our intimate connection and ongoing relationship with Jesus. Learn a simple way to celebrate."
 msgstr "ABINCIN DAREN UBANGIJI-Hanya ce madaidaiciya domin murnar kusancinmu da dangantakarmu da Yesu. Koyi hanya mai sauƙi don bikin."
 
@@ -2919,6 +2963,7 @@ msgid "FAITHFULNESS — It's important what disciples know — but it's much mor
 msgstr "BANGASKIYA-Yana da mahimmanci abin da almajirai suka sani amma abin yafi muhimmanci shine Suna yin abin da suka sani."
 
 #: template-zume-overview.php:922
+#, fuzzy
 msgid "3/3 GROUP FORMAT — A 3/3 Group is a way for followers of Jesus to meet, pray, learn, grow, fellowship and practice obeying and sharing what they've learned. In this way, a 3/3 Group is not just a small group but a Simple Church. (80 minutes)"
 msgstr "3 / 3 GR0UP - Rukunin 3/3 hanya ce ta mabiyan Yesu don haduwa, addu’a, koyo, girma, 'yan uwa kuma kuyi biyayya tare da musayar abinda suka koya. Ta wannan hanyar, 3ungiyoyin 3/3 ba kawai ƙaramin rukuni ne amma Ikilisiya mai Sauƙi. (Minti Tamanin)"
 
@@ -2931,6 +2976,7 @@ msgid "3/3 GROUP — Your entire group will spend 90 minutes practicing the 3/3 
 msgstr "3 / 3 GROUP- Duk rukunin ku zasu dauki minti Tasa'in suna aiwatar da Tsarin Kungiya 3/3."
 
 #: template-zume-overview.php:1055
+#, fuzzy
 msgid "LEADERSHIP CELLS — A Leadership Cell is a way someone who feels called to lead can develop their leadership by practicing serving."
 msgstr "LEADERSHIP CELLS: - Kwayar Jagora hanya ce da wanda yaji an kira shi ya jagoranci haɓaka jagorancin su ta hanyar yin hidima."
 
@@ -2943,6 +2989,7 @@ msgid "PACE — Multiplying matters and multiplying quickly matters even more. S
 msgstr "PACE- Yin abubuwa da yawa da ninka abubuwa da sauri har ma fiye da haka. Duba dalilinda yasa batada matsala."
 
 #: template-zume-overview.php:1156
+#, fuzzy
 msgid "PART OF TWO CHURCHES — Learn how to obey Jesus' commands by going AND staying."
 msgstr "SASHE NA BIYU NA BIYU- Koyi yadda zaka yi biyayya ga dokokin Yesu ta hanyar tafiya DA tsaya."
 
@@ -3075,6 +3122,7 @@ msgid "Have us delete any data we have about you."
 msgstr "Bari mu share duk wani bayanan da muke dashi game da ku."
 
 #: template-zume-privacy-policy.php:143
+#, fuzzy
 msgid "Express any concern you have about our use of your data."
 msgstr "Bayyana duk wata damuwa da kake da ita game da amfani da bayananka."
 

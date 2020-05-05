@@ -16,15 +16,16 @@ msgstr "Başla"
 #: template-pieces-page.php:212 template-zume-login.php:403
 #: template-zume-login.php:470 template-zume-login.php:498
 msgid "Login"
-msgstr "Oturum aç"
+msgstr "Oturum açın"
 
 #: front-page.php:86
+#, fuzzy
 msgid "Zúme Training is an on-line and in-life learning experience designed for small groups who follow Jesus to learn how to obey His Great Commission and make disciples who multiply."
-msgstr "Zúme Eğitim'i İsa'nın insanlara verdiği Son Buyruğa nasıl itaat etmeyi ve öğrenci çoğaltacak olan öğrencilerin grupları şeklinde nasıl müjde paylaşmayı hem online hem yüz yüze olarak öğreten bir eğitimdir."
+msgstr "Zúme Eğitimi İsa'nın insanlara verdiği Son Buyruğa nasıl itaat etmeyi ve öğrenci çoğaltacak olan öğrencilerin grupları şeklinde nasıl müjde paylaşmayı hem online hem yüz yüze olarak öğreten bir eğitimdir."
 
 #: front-page.php:105
 msgid "Zúme consists of 10 sessions, 2 hours each:"
-msgstr "Zúme, her biri 2 saat olmak üzere 10 seanstan oluşur."
+msgstr "Zúme, her biri 2 saat olmak üzere 10 oturumdan oluşur."
 
 #: front-page.php:113 template-zume-about.php:74
 msgid "Video and Audio to help your group understand basic principles of multiplying disciples."
@@ -36,7 +37,7 @@ msgstr "Grubunuza neyin paylaşıldığını düşündürmek için grup tartış
 
 #: front-page.php:129 template-zume-about.php:76
 msgid "Simple Exercises to help your group put what you’re learning into practice."
-msgstr "Grubunuzun öğrendikleri şeyleri yapması için kolay egzersizler kullanır."
+msgstr "Grubunuzun öğrendikleri şeyleri yapması için kolay faaliyetleri kullanır."
 
 #: front-page.php:137 template-zume-about.php:77
 msgid "Session Challenges to help your group keep learning and growing between sessions."
@@ -211,7 +212,7 @@ msgstr "Google"
 
 #: functions/login/zume-login.php:790
 msgid "Link with Google"
-msgstr "Google ile bağlantı oluşur"
+msgstr "Google ile bağlantı oluştur"
 
 #: functions/login/zume-login.php:929 functions/login/zume-login.php:1025
 msgid "Facebook"
@@ -245,20 +246,20 @@ msgstr "Site adı:"
 #. translators: %s: user login
 #: functions/login/zume-login.php:1230
 msgid "Username: %s"
-msgstr "Kullanıcı:"
+msgstr "Kullanıcı adı:"
 
 #: functions/login/zume-login.php:1231
 msgid "If this was a mistake, just ignore this email and nothing will happen."
-msgstr "Eğer istemeyerek yaptıysanız, boş verin ve hiç birşey olmayacak."
+msgstr "Eğer istemeyerek yaptıysanız, dikkate almayınız."
 
 #: functions/login/zume-login.php:1232
 msgid "To reset your password, visit the following address:"
-msgstr "Şifreniz değiştirmek için, "
+msgstr "Şifreniz değiştirmek için, bu siteyi ziyaret edin: "
 
 #. translators: Password reset email subject. %s: Site name
 #: functions/login/zume-login.php:1236
 msgid "[%s] Password Reset"
-msgstr "Şifre Değiştirmek"
+msgstr "Şifre Sıfırlayın"
 
 #: functions/login/zume-login.php:1266
 msgid "The email could not be sent."
@@ -270,15 +271,15 @@ msgstr "Olabilecek sebep: Sunucunuz e-posta() işlevini devre dışı bırakmı�
 
 #: functions/utilities/cleanup.php:76
 msgid "Read"
-msgstr "Oku"
+msgstr "Okuyun"
 
 #: functions/utilities/cleanup.php:76
 msgid "... Read more &raquo;"
-msgstr "...Daha fazla oku"
+msgstr "...Daha fazla okuyun &raquo;"
 
 #: functions/utilities/cleanup.php:98
 msgid "Posts by %s"
-msgstr "Posts by %s"
+msgstr "Yanıtlar yazan %s"
 
 #: functions/utilities/menu.php:5
 msgid "The Main Menu"
@@ -286,11 +287,11 @@ msgstr "Ana Menü"
 
 #: functions/utilities/menu.php:94
 msgid "First"
-msgstr "Adı"
+msgstr "İsim"
 
 #: functions/utilities/menu.php:111
 msgid "Last"
-msgstr "Soyadı"
+msgstr "Soy isim"
 
 #: functions/zume-v4-groups.php:282
 msgid "( Key not available. Check dashboard. )"
@@ -300,13 +301,14 @@ msgstr "( Anahtar mevcut değil. Gösterge paneli kontrol edin. )"
 msgid "Session"
 msgstr "Oturum"
 
+#. In Turkish, the session number followed by a period should precede this text. For example: Welcome to session 3 would be '3. Oturuma Hoşgeldiniz' and as such, I added the {#.} at the beginning.
 #: functions/enqueue-scripts.php:279 functions/zume-content.php:118
 msgid "Welcome to Session"
-msgstr "Oturuma Hoşgeldiniz"
+msgstr "{#.} Oturuma Hoşgeldiniz"
 
 #: functions/zume-content.php:119
 msgid "Which are you doing right now?"
-msgstr "Şu an hangisi yapıyorsununz?"
+msgstr "Şu anda hangisini yapıyorsununz?"
 
 #: functions/zume-content.php:120
 msgid "Facilitating a Group"
@@ -318,23 +320,23 @@ msgstr "Oturum içeriğini araştırıyorum"
 
 #: functions/zume-content.php:139
 msgid "How many are with you?"
-msgstr "Kaş kişisiniz?"
+msgstr "Kaç kişisiniz?"
 
 #: functions/enqueue-scripts.php:288 functions/zume-content.php:154
 msgid "Continue"
-msgstr "Devam"
+msgstr "Devam Edin"
 
 #: functions/zume-content.php:175
 msgid "Welcome to Zúme"
-msgstr "Zúme Eğitim'e Hoşgeldiniz"
+msgstr "Zúme Eğitimi'ne Hoşgeldiniz"
 
 #: functions/zume-content.php:183
 msgid "Download"
-msgstr "İndir"
+msgstr "İndirin"
 
 #: functions/zume-content.php:187
 msgid "You will be able to follow along on a digital PDF for this session, but please make sure that each member of your group has a printed copy of the materials for future sessions."
-msgstr "Bu oturum için dijital bir PDF'yi takip edebileceksiniz, ancak lütfen grubunuzun her üyesinin gelecekteki oturumlar için materyallerin basılı bir kopyasına sahip olduğundan emin olun."
+msgstr "Bu oturum için dijital bir PDF'yi takip edebileceksiniz, ancak lütfen grubunuzdaki her üyenin, gelecekteki oturumlar için gerekli eşyalara (el kitapçığı, not defteri gibi) sahip olduğundan emin olun."
 
 #: functions/zume-content.php:194 functions/zume-v4-seo-strings.php:17
 #: template-zume-dashboard.php:813 template-zume-resources.php:38
@@ -346,8 +348,9 @@ msgid "Group Prayer (5min)"
 msgstr "Grup Duası (5 dk)"
 
 #: functions/zume-content.php:217
+#, fuzzy
 msgid "Begin with prayer. Spiritual insight and transformation is not possible without the Holy Spirit. Take time as a group to invite Him to guide you over this session."
-msgstr "Dua ile başla. Kutsal Ruh olmadan ruhsal içgörü ve dönüşüm mümkün değildir. Bir grup olarak O'nu bu oturumda size rehberlik etmesi için davet edin."
+msgstr "Dua ederek başlayın. Kutsal Ruh olmadan ruhsal içgörü ve dönüşüm mümkün değildir. Bir grup olarak O'nu bu oturumda size rehberlik etmesi için davet edin."
 
 #: functions/zume-content.php:231 functions/zume-content.php:286
 #: functions/zume-content.php:351 functions/zume-content.php:721
@@ -371,15 +374,15 @@ msgstr "İzleyip Tartışın (15 dk)"
 #: functions/zume-content.php:3144 functions/zume-content.php:3214
 #: functions/zume-content.php:3619 functions/zume-content.php:3799
 msgid "WATCH"
-msgstr "İZLE"
+msgstr "İZLEYİN"
 
 #: functions/zume-content.php:241
 msgid "God uses ordinary people doing simple things to make a big impact. Watch this video on how God works."
-msgstr "Tanrı sıradan insanları büyük bir etki yaratmak için basit şeyler yapıyor. Tanrı'nın nasıl çalıştığı ile ilgili bu videoyu izleyin."
+msgstr "Tanrı, büyük bir etki yaratmak için sıradan insanların yaşamlarında yaptıkları basit olayları kullanır. Tanrı'nın nasıl çalıştığı ile ilgili bu videoyu izleyin."
 
 #: functions/zume-content.php:268
 msgid "Zúme Video Scripts: Welcome"
-msgstr "Zúme Video Yazmaları: Hoşgeldiniz"
+msgstr "Zúme Video Yazıları: Hoşgeldiniz"
 
 #: functions/zume-content.php:274 functions/zume-content.php:334
 #: functions/zume-content.php:402 functions/zume-content.php:775
@@ -394,15 +397,17 @@ msgstr "Zúme Video Yazmaları: Hoşgeldiniz"
 #: functions/zume-content.php:3258 functions/zume-content.php:3390
 #: functions/zume-content.php:3583 functions/zume-content.php:3659
 msgid "DISCUSS"
-msgstr "TARTIŞ"
+msgstr "TARTIŞIN"
 
 #: functions/zume-content.php:276
+#, fuzzy
 msgid "If Jesus intended every one of His followers to obey His Great Commission, why do so few actually make disciples?"
-msgstr "Eğer İsa takipçilerinin her birini Son Buyruğa itaat etmeyi isteseydi, neden bu kadar azı gerçekten öğrenci yapıyor?"
+msgstr "Eğer İsa takipçileri’nin her birini Son Buyruğuna itaat etmeyi istediyse, neden gerçekten bu kadar az kişi öğrenci yetiştiriyor?"
 
 #: functions/zume-content.php:296
+#, fuzzy
 msgid "What is a disciple? And how do you make one? How do you teach a follower of Jesus to do what He told us in His Great Commission – to obey all of His commands?"
-msgstr "Öğrenci nedir? Peki nasıl yapılır? İsa'nın takipçisine Son Buyruğunda bize söylediklerini yapmasını nasıl öğretirsiniz - tüm emirlerine itaat etmeyi?"
+msgstr "Öğrenci nedir? Peki nasıl bir öğrenci yetiştirilir? İsa'nın takipçilerine Son Buyruğundaki söylediklerini yapmayı ve tüm emirlerine itaat etmeyi nasıl öğretirsiniz?"
 
 #: functions/zume-content.php:328
 msgid "Zúme Video Scripts: Teach Them to Obey"
@@ -413,34 +418,35 @@ msgid "When you think of a church, what comes to mind?"
 msgstr "Bir kilise düşündüğünüzde aklınıza ne geliyor?"
 
 #: functions/zume-content.php:338
+#, fuzzy
 msgid "What's the difference between that picture and what's described in the video as a \"Simple Church\"?"
-msgstr "Senin düşünceleriyle videodaki basit kilise anlatılan arasında ne farklar var?"
+msgstr "Senin düşüncelerin ile videoda anlatılan basit kilise arasındaki farklar nelerdir?"
 
 #: functions/zume-content.php:340
 msgid "Which one do you think would be easier to multiply and why?"
-msgstr "Hangisi daha kolay çoğaltılabileceğini sanıyorsunuz? Neden?"
+msgstr "Hangisinin daha kolay çoğaltılabileceğini düşünüyorsunuz? Neden?"
 
 #: functions/zume-content.php:361
 msgid "We breathe in. We breathe out. We're alive. Spiritual Breathing is like that, too."
-msgstr "Nefes alırız. Nefes veririz. Yaşarız. Ruhsal nefes de öyle."
+msgstr "Nefes alırız. Nefes veririz. Yaşarız. Ruhsal nefes de aynı şekilde."
 
 #: functions/zume-content.php:395
 msgid "Zúme Video Scripts: Spiritual Breathing"
-msgstr "Zúme video yazmaları: Ruhsal Nefes"
+msgstr "Zúme video yazıları: Ruhsal Nefes"
 
 #: functions/zume-content.php:405
 msgid "Why is it essential to learn to hear and recognize God's voice?"
-msgstr "Tanrı'nın sesini duymak ve tanımak neden gereklidir?"
+msgstr "Tanrı'nın sesini duymak ve onu tanımak neden gereklidir?"
 
 #: functions/zume-content.php:406
 msgid "Is hearing and responding to the Lord really like breathing? Why or why not?"
-msgstr "Rab'be dinlemek ve yanıtlamak gerçekten nefes gibi mi? Neden ya da neden olmasın?"
+msgstr "Rab'bi dinlemek ve O’nu yanıtlamak gerçekten nefes gibi midir? Neden ya da neden olmasın?"
 
 #: functions/zume-content.php:417 functions/zume-content.php:488
 #: functions/zume-content.php:905 functions/zume-content.php:1550
 #: functions/zume-content.php:1857 functions/zume-content.php:3673
 msgid "Listen and Read Along (3min)"
-msgstr "Dinle ve Birlikte Oku"
+msgstr "Dinleyin ve Birlikte Okuyun"
 
 #: functions/zume-content.php:425 functions/zume-content.php:496
 #: functions/zume-content.php:801 functions/zume-content.php:911
@@ -449,11 +455,11 @@ msgstr "Dinle ve Birlikte Oku"
 #: functions/zume-content.php:2055 functions/zume-content.php:2399
 #: functions/zume-content.php:3679
 msgid "READ"
-msgstr "OKU"
+msgstr "OKUYUN"
 
 #: functions/zume-content.php:427
 msgid "S.O.A.P.S. Bible Reading"
-msgstr "A.G.U.D.P. Kutsal Kitap Çalışması"
+msgstr "S.O.A.P.S. Bible Reading"
 
 #: functions/zume-content.php:428
 msgid "Hearing from God regularly is a key element in our personal relationship with Him, and in our ability to stay obediently engaged in what He is doing around us."
