@@ -56,7 +56,7 @@ class DT_Metrics_Mapping_Map_Chart {
         return $template_for_url;
     }
     public function menu( $content ) {
-        if ( DT_Mapbox_API::get_key() ) {
+        if (true ) {
             $content .= '
             <li><a href="">' . esc_html__( 'Locations', 'disciple_tools' ) . '</a>
                 <ul class="menu vertical nested" id="mapping-menu" aria-expanded="true">
@@ -104,12 +104,9 @@ class DT_Metrics_Mapping_Map_Chart {
         );
     }
 
-
-
     public function mapping_scripts() {
         DT_Mapping_Module::instance()->scripts();
     }
-
 
     public function data( $force_refresh = false ) {
         //get initial data

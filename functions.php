@@ -128,6 +128,7 @@ function zume_v4_ready_language() {
     $ready['ar'] = true;
     $ready['ko'] = true;
     $ready['or'] = true;
+    $ready['ru'] = true;
 
     $current = zume_current_language();
 
