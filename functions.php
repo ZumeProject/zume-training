@@ -131,6 +131,7 @@ function zume_v4_ready_language() {
     $ready['ru'] = true;
     $ready['yo'] = true;
     $ready['bn'] = true;
+    $ready['it'] = true;
 
     $current = zume_current_language();
 
