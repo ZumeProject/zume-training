@@ -137,6 +137,7 @@ function zume_v4_ready_language() {
     $ready['ta'] = true;
     $ready['zhtw'] = true;
     $ready['zhcn'] = true;
+    $ready['hi'] = true;
 
     $current = zume_current_language();
 
