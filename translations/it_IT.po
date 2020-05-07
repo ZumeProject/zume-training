@@ -21,7 +21,7 @@ msgstr "Accedi"
 #: front-page.php:86
 #, fuzzy
 msgid "Zúme Training is an on-line and in-life learning experience designed for small groups who follow Jesus to learn how to obey His Great Commission and make disciples who multiply."
-msgstr "Zúme Training è un'esperienza di apprendimento on-line e nella vita, pensata per piccoli gruppi che seguono Gesù per imparare ad ubbidire al Suo Grande Mandato e a fare discepoli che si moltiplicano."
+msgstr "Zúme Training è un'esperienza di apprendimento on-line e nella vita, pensata per piccoli gruppi che seguono Gesù per imparare come obbedire al Suo Grande Mandato e fare discepoli che si moltiplicano."
 
 #: front-page.php:105
 msgid "Zúme consists of 10 sessions, 2 hours each:"
@@ -873,7 +873,7 @@ msgstr "Cosa vi viene in mente quando sentite il comandamento di Dio di essere i
 #: functions/zume-content.php:1213
 #, fuzzy
 msgid "Why do you think Jesus chose ordinary people instead of some other way to share His Good News?"
-msgstr "Perché pensate che Gesù scelse persone comuni invece di qualsiasi altro modo per condividere la Buona Notizia?"
+msgstr "Perché pensate che Gesù scelse persone comuni invece di qualsiasi altro modo per condividere la Sua Buona Notizia?"
 
 #: functions/zume-content.php:1215
 msgid "What would it take for you to feel more comfortable sharing God's Story?"
@@ -897,7 +897,7 @@ msgstr "Cosa imparate dell’umanità da questa storia?"
 
 #: functions/zume-content.php:1281
 msgid "What do you learn about God?"
-msgstr "Cosa imparate di Dio?"
+msgstr "Cosa imparate su Dio?"
 
 #: functions/zume-content.php:1282
 msgid "Do you think it would be easier or harder to share God's Story by telling a story like this?"
@@ -1627,7 +1627,7 @@ msgstr "Fissate un tempo nel vostro calendario ogni settimana per continuare a l
 
 #: functions/zume-content.php:3429
 msgid "Pray and ask God who He would have you share Zúme Training with by launching a Leadership Cell of future Zúme Training leaders."
-msgstr "Avviate una Cellula di Leadership dei futuri leader di Zúme Training per pregare e chiedere a Dio con chi vorrebbe che condivideste Zúme Training."
+msgstr "Avviate una Cellula di Leadership dei futuri leader di Zúme Training per pregare e chiedere a Dio con chi vorrebbe che condividereste Zúme Training."
 
 #: functions/zume-content.php:3437
 msgid "Be sure to pray with your group before you end your time together. Thank God that He has created and gifted you with exactly the right talents to make a difference in His kingdom. Ask Him for wisdom to use the strengths He has given you and to find other followers who help cover your weaknesses. Pray that He would make you fruitful and multiply — this was His plan from the very beginning. Pray that God help you be obedient to Him and invite Him to work in you and those around you!"
@@ -2999,7 +2999,7 @@ msgstr "NON SEQUENZIALE - Considerate che il fare i discepoli non deve essere li
 
 #: template-zume-overview.php:1144
 msgid "PACE — Multiplying matters and multiplying quickly matters even more. See why pace matters."
-msgstr "VELOCITÀ - E importante moltiplicarsi e ma lo è ancora di più farlo rapidamente. Scoprite perché è importante la velocità."
+msgstr "VELOCITÀ - E' importante moltiplicarsi, ma lo è ancora di più farlo rapidamente. Scoprite perché è importante la velocità."
 
 #: template-zume-overview.php:1156
 #, fuzzy
@@ -3479,7 +3479,7 @@ msgstr "Layout a Colonna Singola"
 
 #: template-zume-training.php:139
 msgid "Show Session Plan"
-msgstr "Mostra Piano Dettagliato della Sessione"
+msgstr "Mostra il Piano della Sessione"
 
 #: template-zume-training.php:147 template-zume-training.php:242
 #: template-zume-training.php:321 template-zume-training.php:394
@@ -3491,7 +3491,7 @@ msgstr "Inizia"
 
 #: template-zume-training.php:150
 msgid "Prayer, Overview"
-msgstr "La Preghiera e Un Panorama di Zúme Training"
+msgstr "La Preghiera, Panoramica"
 
 #: template-zume-training.php:153 template-zume-training.php:232
 #: template-zume-training.php:248 template-zume-training.php:286
@@ -3641,7 +3641,7 @@ msgstr "Impara come condividere la tua testimonianza in tre minuti parlando di c
 
 #: template-zume-training.php:416
 msgid "Practice - Share your testimony"
-msgstr "Praticare Condividendo la Testimonianza"
+msgstr "Praticare -  Condividi la tua testimonianza"
 
 #: template-gmo.php:70 template-how-to-follow-jesus.php:70
 #: template-zume-training.php:429
@@ -3721,11 +3721,11 @@ msgstr "Imparate il ciclo di addestramento e considerate come si applica alla fo
 
 #: template-zume-training.php:631 template-zume-training.php:678
 msgid "Practice - 3/3 Group"
-msgstr "Praticare il Gruppo 3/3"
+msgstr "Praticare - il Gruppo 3/3"
 
 #: template-zume-training.php:637
 msgid "Discuss - 3/3 Group Experience"
-msgstr "Discutere - 3/3 Esperienza di Gruppo"
+msgstr "Discutere - L' esperienza del Gruppo 3/3"
 
 #: template-gmo.php:241 template-how-to-follow-jesus.php:241
 #: template-zume-training.php:672
@@ -3823,7 +3823,7 @@ msgstr "La generazione della mappatura è un altro semplice strumento per aiutar
 #. Theme URI of the plugin/theme
 #: 
 msgid "https://github.com/ZumeProject/zume-training"
-msgstr "github.com/ZumeProject/zume-training"
+msgstr "https://github.com/ZumeProject/zume-training"
 
 #. Description of the plugin/theme
 #: 
@@ -3862,7 +3862,7 @@ msgstr "Studio Biblico S.O.A.P.C."
 #: functions/enqueue-scripts.php:220 template-gmo.php:83
 #: template-how-to-follow-jesus.php:83 template-zume-training.php:253
 msgid "Consumer vs Producer Lifestyle"
-msgstr "Produttori vs Consumatori"
+msgstr "Lo Stile di Vita dei Produttori vs Consumatori"
 
 #: functions/enqueue-scripts.php:221 template-gmo.php:94
 #: template-how-to-follow-jesus.php:94 template-zume-training.php:266
@@ -3877,7 +3877,7 @@ msgstr "Lista dei 100"
 #: functions/enqueue-scripts.php:223 template-gmo.php:145
 #: template-how-to-follow-jesus.php:145 template-zume-training.php:332
 msgid "The Kingdom Economy"
-msgstr "Economia Spirituale"
+msgstr "L'Economia Spirituale di Dio"
 
 #: functions/enqueue-scripts.php:224 template-gmo.php:198
 #: template-how-to-follow-jesus.php:198 template-zume-training.php:351
@@ -3897,7 +3897,7 @@ msgstr "La Tua Testimonianza in 3 Minuti"
 #: functions/enqueue-scripts.php:227 template-gmo.php:69
 #: template-how-to-follow-jesus.php:69 template-zume-training.php:424
 msgid "Vision Casting the Greatest Blessing"
-msgstr "La Massima Benedizione"
+msgstr "Condividere la Visione la Massima Benedizione"
 
 #: functions/enqueue-scripts.php:228 template-gmo.php:174
 #: template-how-to-follow-jesus.php:174
@@ -3950,12 +3950,12 @@ msgstr "La Crescita Non Sequenziale"
 #: functions/enqueue-scripts.php:239 template-gmo.php:186
 #: template-how-to-follow-jesus.php:186 template-zume-training.php:721
 msgid "Pace of Multiplication Matters"
-msgstr "La Velocità della Moltiplicazione È Importante"
+msgstr "La Velocità della Moltiplicazione è Importante"
 
 #: functions/enqueue-scripts.php:240 template-gmo.php:128
 #: template-how-to-follow-jesus.php:128 template-zume-training.php:734
 msgid "Always Part of Two Churches"
-msgstr "Parte di Due Chiese"
+msgstr "Sempre Parte di Due Chiese"
 
 #: functions/enqueue-scripts.php:245 template-zume-training.php:834
 msgid "Four Fields Tool"
@@ -4005,7 +4005,7 @@ msgstr "Risorse della Formazione di Zúme "
 
 #: template-zume-training.php:291
 msgid "Relational Stewardship - List of 100"
-msgstr "Lista dei 100 - Amministrare Bene le Tue Relazioni"
+msgstr "Amministrare le Relazioni - La Lista dei 100"
 
 #: template-zume-training.php:437
 msgid "Duckling Discipleship - Leading Immediately"
@@ -4057,7 +4057,7 @@ msgstr "Gesù è la nostra misura"
 
 #: template-zume-vision.php:57
 msgid "Not you. Not me. Not history. Not ideals. Not rituals. Jesus and Jesus alone."
-msgstr "Non tu.  non io. Non la storia. Non gli ideali. Non i rituali. Gesù e solo Gesù"
+msgstr "Non tu.  Non io. Non la storia. Non gli ideali. Non i rituali. Gesù e solo Gesù"
 
 #: template-zume-vision.php:58
 msgid "How he lived. What he said. How he loved. Everything. In this, we aspire to be marked by immediate, radical, costly obedience to Jesus, like the heroes of the faith that came before us."
@@ -4085,7 +4085,7 @@ msgstr "Completamento della Formazione"
 
 #: template-zume-vision.php:107
 msgid "(1 Training &#xF7; Population)"
-msgstr "1 Formazione &#xF7; Popolazione"
+msgstr "(1 Formazione &#xF7; Popolazione)"
 
 #: template-zume-vision.php:110
 msgid "1 Training"
