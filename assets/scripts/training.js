@@ -46,6 +46,9 @@ jQuery(document).ready(function(){
     if( '#panel3' === this.hash  ) {
       get_progress()
     }
+    if( '#panel4' === this.hash  ) {
+      get_coach_request()
+    }
   })
 
   write_network_tab()
@@ -230,15 +233,15 @@ function write_session_progress( key, i ) {
   let group = zumeTraining.groups[i]
 
   div.empty().append(`
-  <div class="cell"><i class="g-session-icon" id="s1${_.escape( key )}" onclick="save_session_status('${_.escape( key )}', ${_.escape( i )}, 1)"></i> <a href="${get_course_url_with_params(1, _.escape( i ) )}">${_.escape( i18n.sessions[1] )}<!--Session 1--></a></div>    
-  <div class="cell"><i class="g-session-icon" id="s2${_.escape( key )}" onclick="save_session_status('${_.escape( key )}', ${_.escape( i )}, 2)"></i> <a href="${get_course_url_with_params(2, _.escape( i ) )}">${_.escape( i18n.sessions[2] )}<!--Session 2--></a></div>    
-  <div class="cell"><i class="g-session-icon" id="s3${_.escape( key )}" onclick="save_session_status('${_.escape( key )}', ${_.escape( i )}, 3)"></i> <a href="${get_course_url_with_params(3, _.escape( i ) )}">${_.escape( i18n.sessions[3] )}<!--Session 3--></a></div>    
-  <div class="cell"><i class="g-session-icon" id="s4${_.escape( key )}" onclick="save_session_status('${_.escape( key )}', ${_.escape( i )}, 4)"></i> <a href="${get_course_url_with_params(4, _.escape( i ) )}">${_.escape( i18n.sessions[4] )}<!--Session 4--></a></div>    
-  <div class="cell"><i class="g-session-icon" id="s5${_.escape( key )}" onclick="save_session_status('${_.escape( key )}', ${_.escape( i )}, 5)"></i> <a href="${get_course_url_with_params(5, _.escape( i ) )}">${_.escape( i18n.sessions[5] )}<!--Session 5--></a></div>    
-  <div class="cell"><i class="g-session-icon" id="s6${_.escape( key )}" onclick="save_session_status('${_.escape( key )}', ${_.escape( i )}, 6)"></i> <a href="${get_course_url_with_params(6, _.escape( i ) )}">${_.escape( i18n.sessions[6] )}<!--Session 6--></a></div>    
-  <div class="cell"><i class="g-session-icon" id="s7${_.escape( key )}" onclick="save_session_status('${_.escape( key )}', ${_.escape( i )}, 7)"></i> <a href="${get_course_url_with_params(7, _.escape( i ) )}">${_.escape( i18n.sessions[7] )}<!--Session 7--></a></div>    
-  <div class="cell"><i class="g-session-icon" id="s8${_.escape( key )}" onclick="save_session_status('${_.escape( key )}', ${_.escape( i )}, 8)"></i> <a href="${get_course_url_with_params(8, _.escape( i ) )}">${_.escape( i18n.sessions[8] )}<!--Session 8--></a></div>    
-  <div class="cell"><i class="g-session-icon" id="s9${_.escape( key )}" onclick="save_session_status('${_.escape( key )}', ${_.escape( i )}, 9)"></i> <a href="${get_course_url_with_params(9, _.escape( i ) )}">${_.escape( i18n.sessions[9] )}<!--Session 9--></a></div>    
+  <div class="cell"><i class="g-session-icon" id="s1${_.escape( key )}" onclick="save_session_status('${_.escape( key )}', ${_.escape( i )}, 1)"></i> <a href="${get_course_url_with_params(1, _.escape( i ) )}">${_.escape( i18n.sessions[1] )}<!--Session 1--></a></div>
+  <div class="cell"><i class="g-session-icon" id="s2${_.escape( key )}" onclick="save_session_status('${_.escape( key )}', ${_.escape( i )}, 2)"></i> <a href="${get_course_url_with_params(2, _.escape( i ) )}">${_.escape( i18n.sessions[2] )}<!--Session 2--></a></div>
+  <div class="cell"><i class="g-session-icon" id="s3${_.escape( key )}" onclick="save_session_status('${_.escape( key )}', ${_.escape( i )}, 3)"></i> <a href="${get_course_url_with_params(3, _.escape( i ) )}">${_.escape( i18n.sessions[3] )}<!--Session 3--></a></div>
+  <div class="cell"><i class="g-session-icon" id="s4${_.escape( key )}" onclick="save_session_status('${_.escape( key )}', ${_.escape( i )}, 4)"></i> <a href="${get_course_url_with_params(4, _.escape( i ) )}">${_.escape( i18n.sessions[4] )}<!--Session 4--></a></div>
+  <div class="cell"><i class="g-session-icon" id="s5${_.escape( key )}" onclick="save_session_status('${_.escape( key )}', ${_.escape( i )}, 5)"></i> <a href="${get_course_url_with_params(5, _.escape( i ) )}">${_.escape( i18n.sessions[5] )}<!--Session 5--></a></div>
+  <div class="cell"><i class="g-session-icon" id="s6${_.escape( key )}" onclick="save_session_status('${_.escape( key )}', ${_.escape( i )}, 6)"></i> <a href="${get_course_url_with_params(6, _.escape( i ) )}">${_.escape( i18n.sessions[6] )}<!--Session 6--></a></div>
+  <div class="cell"><i class="g-session-icon" id="s7${_.escape( key )}" onclick="save_session_status('${_.escape( key )}', ${_.escape( i )}, 7)"></i> <a href="${get_course_url_with_params(7, _.escape( i ) )}">${_.escape( i18n.sessions[7] )}<!--Session 7--></a></div>
+  <div class="cell"><i class="g-session-icon" id="s8${_.escape( key )}" onclick="save_session_status('${_.escape( key )}', ${_.escape( i )}, 8)"></i> <a href="${get_course_url_with_params(8, _.escape( i ) )}">${_.escape( i18n.sessions[8] )}<!--Session 8--></a></div>
+  <div class="cell"><i class="g-session-icon" id="s9${_.escape( key )}" onclick="save_session_status('${_.escape( key )}', ${_.escape( i )}, 9)"></i> <a href="${get_course_url_with_params(9, _.escape( i ) )}">${_.escape( i18n.sessions[9] )}<!--Session 9--></a></div>
   <div class="cell"><i class="g-session-icon" id="s10${_.escape( key )}" onclick="save_session_status('${_.escape( key )}', ${_.escape( i )}, 10)"></i> <a href="${get_course_url_with_params(10, _.escape( i ) )}">${_.escape( i18n.sessions[10] )}<!--Session 10--></a></div>
   `)
 
@@ -594,16 +597,16 @@ function open_session( session_number, key, i ) {
         <div class="cell"><h2 class="center">${_.escape( i18n.str.x19 )/*Welcome to Session*/} ${_.escape( session_number )}</h2></div>
         <div class="cell callout primary-color margin-2">
             <div class="grid-x padding-right-2 padding-left-2 grid-padding-y" id="not-logged-in">
-                <div class="cell center list-head"><h3>${_.escape( i18n.str.x20 )/*You're missing out*/} <br>${_.escape( i18n.str.x21 )/*Register Now!*/}</h3></div> 
+                <div class="cell center list-head"><h3>${_.escape( i18n.str.x20 )/*You're missing out*/} <br>${_.escape( i18n.str.x21 )/*Register Now!*/}</h3></div>
                 <div class="cell list-reasons">
                     <ul>
                     <li>${_.escape( i18n.str.x22 )/*track your personal training progress*/}</li>
-                    <li>${_.escape( i18n.str.x23 )/*access group planning tools*/}</li> 
-                    <li>${_.escape( i18n.str.x24 )/*connect with a coach*/}</li> 
+                    <li>${_.escape( i18n.str.x23 )/*access group planning tools*/}</li>
+                    <li>${_.escape( i18n.str.x24 )/*connect with a coach*/}</li>
                     <li>${_.escape( i18n.str.x25 )/*add your effort to the global vision!*/}</li>
                     </ul>
-                </div> 
-                <div class="cell center"><a href="${_.escape( zumeTraining.site_urls.register ) }" class="button expanded large secondary-button">${_.escape( i18n.str.x26 )/*Register for Free*/}</a><a href="${_.escape( zumeTraining.site_urls.login )}" type="submit" class="button clear padding-bottom-0">${_.escape( i18n.str.x27 )/*Login*/}</a></div> 
+                </div>
+                <div class="cell center"><a href="${_.escape( zumeTraining.site_urls.register ) }" class="button expanded large secondary-button">${_.escape( i18n.str.x26 )/*Register for Free*/}</a><a href="${_.escape( zumeTraining.site_urls.login )}" type="submit" class="button clear padding-bottom-0">${_.escape( i18n.str.x27 )/*Login*/}</a></div>
             </div>
         </div>
         <div class="cell center margin-bottom-1"><a class="center button hollow" id="continue-to-session" onclick="continue_to_session( ${_.escape( session_number )} )" >${_.escape( i18n.str.x28 )/*Continue*/}</a>  <span class="spinner" style="display: none;"><img src="${zumeTraining.theme_uri}/spinner.svg" style="width:30px;height:30px;" alt="spinner" /></span></div>
@@ -633,7 +636,7 @@ function open_session( session_number, key, i ) {
         <div class="cell center margin-bottom-1" id="continue_button">
           <button type="submit" class="center button large" id="continue-to-session" onclick="continue_to_session(${_.escape( session_number )} )">${_.escape( i18n.str.x28 )/*Continue*/}</button> <span class="spinner" style="display: none;"><img src="${zumeTraining.theme_uri}/spinner.svg" style="width:30px;height:30px;" alt="spinner" /></span>
         </div>
-        
+
       </div>
     `)
 
@@ -654,7 +657,7 @@ function check_group_selection( session_number ){
       <div class="cell center" id="new-group">
           <input type="text" class="input-group-field add-group-input" placeholder="${_.escape( i18n.str.x94 )/*Group Name*/}" title="${_.escape( i18n.str.x94 )/*Group Name*/}" name="group_name" id="group_name" /> <br>
           <input type="number" placeholder="${_.escape( i18n.str.x33 )/*Number of Members*/}" title="${_.escape( i18n.str.x33 )/*Number of Members*/}" class="input-group-field add-group-input" name="members" /> <br>
-          <button type="button" class="button" onclick="save_new_group_and_continue(${_.escape( session_number )})">${_.escape( i18n.str.x6 )/*Save*/}</button> 
+          <button type="button" class="button" onclick="save_new_group_and_continue(${_.escape( session_number )})">${_.escape( i18n.str.x6 )/*Save*/}</button>
           <button type="button" class="button hollow" onclick="open_session(${_.escape( session_number )})">${_.escape( i18n.str.x7 )/*Cancel*/}</button>
       </div>
   </div>
@@ -748,8 +751,8 @@ function write_invitation_list() {
                 <strong>${_.escape( v.owner )}</strong> ${_.escape( i18n.str.x36 )/*invites you to join*/} <strong>${_.escape( v.group_name )}</strong>
             </p>
             <p class="center">
-              <button type="button" onclick="save_invitation_response( '${_.escape( v.key )}', 'accepted' )" class="button">${_.escape( i18n.str.x37 )/*Accept*/}</button> 
-              <button type="button" onclick="save_invitation_response( '${_.escape( v.key )}', 'declined' )" class="button hollow">${_.escape( i18n.str.x38 )/*Decline*/}</button> 
+              <button type="button" onclick="save_invitation_response( '${_.escape( v.key )}', 'accepted' )" class="button">${_.escape( i18n.str.x37 )/*Accept*/}</button>
+              <button type="button" onclick="save_invitation_response( '${_.escape( v.key )}', 'declined' )" class="button hollow">${_.escape( i18n.str.x38 )/*Decline*/}</button>
             </p>
         </div>
       `)
@@ -1242,12 +1245,12 @@ function load_host_description() {
 function get_coach_request() {
 
     jQuery('#coach-request').empty().html(`
-    
+
     <div class="grid-x" id="coaching-request-form-section">
         <div class="cell">
         <h2 class="primary-color hide-for-small-only request-form" id="coach-modal-title">${_.escape( i18n.str.x61 )/*Connect Me to a Coach*/}</h2>
             <hr class="hide-for-small-only request-form">
-            
+
                 <div class="grid-x grid-padding-x" >
 
                     <dv class="cell medium-6">
@@ -1277,7 +1280,7 @@ function get_coach_request() {
                 </div>
                 <div id="already-submitted"></div>
                 <div id="form-container"></div>
-            
+
         </div>
     </div>
   `)
@@ -1658,12 +1661,12 @@ function open_network_links() {
             <h2 class="center">${i18n.str.x89/*Zúme Network*/}</h2>
             <hr>
             <ul class="center" style="list-style:none;">${list}</ul>
-            
+
             <button class="close-button" data-close aria-label="Close modal" type="button">
             <span aria-hidden="true">&times;</span>
             </button>
         </div>
-        
+
     </div>
   `)
 
