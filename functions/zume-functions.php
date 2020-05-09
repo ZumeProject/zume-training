@@ -132,7 +132,7 @@ function zume_update_user_ip_address_and_location( $user_id = null ) {
 
         if ( class_exists( 'Location_Grid_Geocoder' ) ) {
             $geocoder = new Location_Grid_Geocoder();
-            update_user_meta( $user_id, 'ip_location_grid_meta', $geocoder->convert_ip_result_to_location_grid_meta( $ip_results ) );
+            update_user_meta( $user_id, 'ip_location_grid_meta', Location_Grid_Meta::convert_ip_result_to_location_grid_meta( $ip_results ) );
 
         }
     }

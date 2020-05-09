@@ -328,7 +328,7 @@ class Zume_V4_REST_API {
                 }
             }
 
-            $geocoder->validate_location_grid_meta( $args['location_grid_meta'] );
+            Location_Grid_Meta::validate_location_grid_meta( $args['location_grid_meta'] );
 
             update_user_meta( $user_info->ID, 'location_grid_meta', $location_grid_meta );
         }
@@ -401,14 +401,14 @@ class Zume_V4_REST_API {
         if ( empty( $params['location_grid_meta'] ) ) {
             // if no provided location, get ip address location
             $ip_result = DT_Ipstack_API::geocode_current_visitor();
-            $args['location_grid_meta'] = $geocoder->convert_ip_result_to_location_grid_meta( $ip_result );
+            $args['location_grid_meta'] = Location_Grid_Meta::convert_ip_result_to_location_grid_meta( $ip_result );
         } else if ( ! empty( $params['location_grid_meta'] ) ) {
             $args['location_grid_meta'] = $params['location_grid_meta'];
         } else {
             $args['location_grid_meta'] = [];
         }
 
-        $geocoder->validate_location_grid_meta( $args['location_grid_meta'] );
+        Location_Grid_Meta::validate_location_grid_meta( $args['location_grid_meta'] );
 
         if ( $args['location_grid_meta'] ) {
             $fields['location_grid_meta'] = [

@@ -69,7 +69,7 @@ class Zume_Dashboard {
         }
         if ( ! ( isset( $results['success'] ) && $results['success'] === false ) ) {
             $geocoder = new Location_Grid_Geocoder();
-            $args['ip_location_grid_meta'] = $geocoder->convert_ip_result_to_location_grid_meta( $results );
+            $args['ip_location_grid_meta'] = Location_Grid_Meta::convert_ip_result_to_location_grid_meta( $results );
         }
 
         if ( isset( $args['type'] ) ) {
@@ -287,7 +287,7 @@ class Zume_Dashboard {
             }
             if ( ! ( isset( $results['success'] ) && $results['success'] === false ) ) {
                 $geocoder = new Location_Grid_Geocoder();
-                $args['ip_location_grid_meta'] = $geocoder->convert_ip_result_to_location_grid_meta( $results );
+                $args['ip_location_grid_meta'] = Location_Grid_Meta::convert_ip_result_to_location_grid_meta( $results );
             }
         }
 
@@ -826,9 +826,9 @@ class Zume_Dashboard {
         $public_key = self::filter_public_key( $public_key );
 
         $results = $wpdb->get_var( $wpdb->prepare( "
-                  SELECT meta_value 
-                  FROM $wpdb->usermeta 
-                  WHERE meta_key LIKE %s 
+                  SELECT meta_value
+                  FROM $wpdb->usermeta
+                  WHERE meta_key LIKE %s
                     AND meta_value LIKE %s LIMIT 1",
             $wpdb->esc_like( 'zume_group' ). '%',
             '%'.$wpdb->esc_like( $public_key ).'%'
