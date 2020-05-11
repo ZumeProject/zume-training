@@ -394,10 +394,13 @@ class Zume_V4_REST_API {
         // Additional fields that may or may not be present
 
         // Build location_grid_meta
-        if ( ! class_exists( 'Location_Grid_Geocoder' ) ) {
-            require_once( get_stylesheet_directory() . '/dt-mapping/geocode-api/location-grid-geocoder.php' );
+        if ( ! class_exists( 'Location_Grid_Meta' ) ) {
+            require_once( get_stylesheet_directory() . '/dt-mapping/location-grid-meta.php' );
         }
-        $geocoder = new Location_Grid_Geocoder();
+        if ( ! class_exists( 'DT_Ipstack_API' ) ) {
+            require_once( get_stylesheet_directory() . '/dt-mapping/geocode-api/ipstack-api.php' );
+        }
+
         if ( empty( $params['location_grid_meta'] ) ) {
             // if no provided location, get ip address location
             $ip_result = DT_Ipstack_API::geocode_current_visitor();
