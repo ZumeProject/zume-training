@@ -3836,12 +3836,6 @@ class Zume_Course_Content {
                         </div>
                     </div>
 
-                    <div class="grid-x grid-margin-x grid-margin-y">
-                        <div class="large-3 cell activity-title"><span><?php esc_html_e( 'ACT', 'zume' ) ?></span></div>
-                        <div class="large-9 cell activity-description">
-                            <?php esc_html_e( "To help others become and make disciples, share this www.ZumeProject.com link today! It'll soon be in 37 languages.", 'zume' ) ?>
-                        </div>
-                    </div>
                     <br><br>
                 </div>
             </div>
