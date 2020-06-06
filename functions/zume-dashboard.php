@@ -224,11 +224,16 @@ class Zume_Dashboard {
     }
 
     public static function get_unique_public_key() {
-        $key = bin2hex( random_bytes( 64 ) );
-        $key = str_replace( '0', '', $key );
-        $key = str_replace( 'O', '', $key );
-        $key = str_replace( 'o', '', $key );
-        $key = strtoupper( substr( $key, 0, 5 ) );
+        global $wpdb;
+        $duplicate_check = 1;
+        while ( $duplicate_check != 0 ) {
+            $key = hash( 'sha256', rand( 0, 100000 ) . uniqid( 'zume_' ) . time() . rand( 0, 100000 )  );
+            $key = str_replace( '0', '', $key );
+            $key = str_replace( 'O', '', $key );
+            $key = str_replace( 'o', '', $key );
+            $key = strtoupper( substr( $key, 0, 5 ) );
+            $duplicate_check = $wpdb->get_var( $wpdb->prepare( "SELECT count(*) FROM $wpdb->usermeta WHERE meta_key LIKE %s AND meta_value LIKE %s", $wpdb->esc_like( 'zume_group' ) . '%', '%public_key";s:5:"' . $wpdb->esc_like( $key ) . '%' ) );
+        }
         return $key;
     }
 
