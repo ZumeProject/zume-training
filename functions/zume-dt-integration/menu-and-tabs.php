@@ -142,9 +142,9 @@ class Zume_Integration_Menu
 
         // Runs validation of the database when page is loaded.
         $object = new Zume_Integration();
-        $object->verify_foreign_key_installed();
-        $object->verify_foreign_key_installed_on_group();
-        $object->verify_check_sum_installed();
+//        $object->verify_foreign_key_installed();
+//        $object->verify_foreign_key_installed_on_group();
+//        $object->verify_check_sum_installed();
 //        zume_get_public_site_links();
 
 
@@ -334,8 +334,8 @@ class Zume_Integration_Menu
                 global $wpdb;
                 $groups_meta = $wpdb->get_col(
                     $wpdb->prepare( "
-                  SELECT meta_value 
-                  FROM $wpdb->usermeta 
+                  SELECT meta_value
+                  FROM $wpdb->usermeta
                   WHERE meta_key LIKE %s LIMIT 10000", // @todo Returning all results, but at some point we should limit this
                         $wpdb->esc_like( 'zume_group' ).'%'
                     )
