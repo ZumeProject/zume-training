@@ -739,9 +739,10 @@ function save_new_group() {
 }
 
 function write_invitation_list() {
+  let div = jQuery('#invitation-list')
+  div.empty()
   if ( zumeTraining.invitations.length > 0 ) {
 
-    let div = jQuery('#invitation-list')
     div.empty().append(`<div class="grid-x grid-padding-y margin-1">`)
 
     jQuery.each(zumeTraining.invitations, function(i,v) {
