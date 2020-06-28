@@ -708,9 +708,13 @@ function write_add_group_button() {
     <div class="grid-x">
         <div class="cell input-group" id="new-group">
             <input type="text" class="input-group-field add-group-input" placeholder="${_.escape( i18n.str.x34 )/*Group Name*/}" title="${_.escape( i18n.str.x34 )/*Group Name*/}" name="group_name" id="group_name" />
-            <input type="number" placeholder="${_.escape( i18n.str.x33 )/*Number of Members*/}" title="${_.escape( i18n.str.x33 )/*Number of Members*/}" class="input-group-field add-group-input" name="members" />
+            <input type="number" placeholder="${_.escape( i18n.str.x33 )/*Number of Members*/}" title="${_.escape( i18n.str.x33 )/*Number of Members*/}" class="input-group-field add-group-input" min="1" max="500" name="members" />
+            <div class="input-group-button">
             <button type="button" class="button" id="save-group"  onclick="save_new_group()">${_.escape( i18n.str.x6 )/*Save*/}</button>
+            </div>
+            <div class="input-group-button">
             <button type="button" class="button hollow" onclick="write_add_group_button()">${_.escape( i18n.str.x7 )/*Cancel*/}</button>
+            </div>
         </div>
     </div>
     `)
@@ -720,6 +724,13 @@ function write_add_group_button() {
 function save_new_group() {
   let group_name = jQuery('#new-group input[name=group_name]').val()
   let members = jQuery('#new-group input[name=members]').val()
+
+  if ( members > 300 ) {
+    members = 300
+  }
+  if ( members < 1 ) {
+    members = 1
+  }
 
   if ( group_name && members ) {
     jQuery('#save-group').attr("disabled", true)

@@ -214,6 +214,15 @@ class Zume_V4_REST_API {
             return new WP_Error( "log_param_error", "Missing parameters", array( 'status' => 400 ) );
         }
 
+        $ip = DT_Ipstack_API::get_real_ip_address();
+        $hash_ip = hash('sha256', $ip );
+        if ( false !== get_transient( $hash_ip ) ) {
+            dt_write_log( __METHOD__ . ': Duplicate check on group creation triggered for ip:' . $ip );
+            return false;
+        } else {
+            set_transient( $hash_ip, true, 45 );
+        }
+
         $args = array(
             'group_name' => sanitize_text_field( wp_unslash( $params['name'] ) ),
             'members' => sanitize_text_field( wp_unslash( $params['members'] ) ),
