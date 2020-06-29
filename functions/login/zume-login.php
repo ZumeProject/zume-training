@@ -262,8 +262,8 @@ class Zume_User_Registration
     public function query_google_email( $email_address ) {
         global $wpdb;
         $result = $wpdb->get_var( $wpdb->prepare( "
-        SELECT user_id 
-        FROM $wpdb->usermeta 
+        SELECT user_id
+        FROM $wpdb->usermeta
         WHERE meta_key = 'google_sso_email'
           AND meta_value = %s
           LIMIT 1
@@ -490,8 +490,8 @@ class Zume_User_Registration
     public function query_facebook_email( $email_address ) {
         global $wpdb;
         $result = $wpdb->get_var( $wpdb->prepare( "
-        SELECT user_id 
-        FROM $wpdb->usermeta 
+        SELECT user_id
+        FROM $wpdb->usermeta
         WHERE meta_key = 'facebook_sso_email'
           AND meta_value = %s
           LIMIT 1

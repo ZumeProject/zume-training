@@ -746,6 +746,10 @@ function save_new_group() {
         jQuery('#add_group_container').append(`
     <br>${_.escape( i18n.str.x35 )/*Group addition failed. Try again.*/}`)
       })
+
+    if (typeof window.zume_vision_logging !== "undefined") {
+      window.zume_vision_logging({'action': 'started_group'} )
+    }
   }
 }
 
@@ -786,6 +790,12 @@ function save_invitation_response( key, answer ) {
       console.log('failed to accept')
       console.log(e)
     })
+
+  if (typeof window.zume_vision_logging !== "undefined") {
+    if ( 'accepted' === answer ) {
+      window.zume_vision_logging({'action': 'joined_group'} )
+    }
+  }
 }
 
 function archive_group( key, i, verified ) {
@@ -1643,6 +1653,10 @@ function send_coaching_request() {
       console.log(e)
       spinner.empty().html( `${i18n.str.x88/*Oops. Something went wrong. Try again!*/}`)
     })
+
+  if (typeof window.zume_vision_logging !== "undefined") {
+    window.zume_vision_logging({'action': 'requested_coach'} )
+  }
 }
 
 /**************************************************/

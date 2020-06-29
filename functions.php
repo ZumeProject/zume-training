@@ -60,7 +60,7 @@ require_once( 'functions/zume-v4-pieces.php' );
 require_once( 'functions/zume-v4-seo-strings.php' );
 require_once( 'functions/zume-content.php' );
 require_once( 'functions/zume-three-month-plan.php' );
-require_once( 'functions/logging/zume-logging.php' ); // zume logging of critical path actions
+//require_once( 'functions/logging/zume-logging.php' ); // zume logging of critical path actions
 
 require_once( 'functions/zume-functions.php' ); // general zume functions
 require_once( 'functions/logging/zume-mailchimp.php' ); // zume logging of critical path actions

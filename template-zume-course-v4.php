@@ -8,6 +8,7 @@ if ( isset( $_GET['session'] ) ) {
     $session_id = sanitize_text_field( wp_unslash( $_GET['session'] ) );
 }
 $group = false;
+$members = 1;
 if ( isset( $_GET['group'] ) ) {
     $foreign_key = sanitize_text_field( wp_unslash( $_GET['group'] ) );
     $group = Zume_V4_Groups::get_group_by_foreign_key( $foreign_key );
@@ -17,6 +18,8 @@ if ( isset( $_GET['group'] ) ) {
     if ( ! Zume_V4_Groups::update_group_session_status( $group['key'], $session_id ) ) {
         dt_write_log( 'Failed to update session for '. $group['key'] );
     }
+
+    $members = $group['members'] ?? 1;
 }
 ?>
 
@@ -26,9 +29,12 @@ if ( isset( $_GET['group'] ) ) {
     /* Hide the language selector during the course, because switching wipes out the group key. */
     jQuery(document).ready(function() {
         expand_course()
-        jQuery('a[href*="#finish"]').on('click', function() {
-
-        } )
+        if (typeof window.zume_vision_logging !== "undefined") {
+            window.zume_vision_logging({
+                'action': 'leading_<?php echo esc_attr($session_id) ?>',
+                'group_size': '<?php echo esc_attr($members) ?>'
+            })
+        }
     })
     function collapse_course() {
         jQuery('#collapse-course').remove()
