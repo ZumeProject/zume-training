@@ -237,7 +237,7 @@ if (have_posts()) :
             jQuery(document).ready(function(){
                 let has_scrolled = false
                 jQuery(document).scroll(function() {
-                    if (jQuery(document).scrollTop() >= 50 && has_scrolled === false ) {
+                    if (jQuery(document).scrollTop() >= 200 && has_scrolled === false ) {
                         window.zume_vision_logging({'action': 'studied_<?php echo esc_attr( $tool_number ) ?>' })
                         has_scrolled = true
                     }
