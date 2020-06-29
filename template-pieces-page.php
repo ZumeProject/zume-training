@@ -230,10 +230,24 @@ if (have_posts()) :
             <div class="large-2 cell"></div><!-- Side spacer -->
         </div> <!-- grid-x -->
 
-
         <?php get_template_part( "parts/content", "modal" ); ?>
+
+        <!-- zume vision logging -->
+        <script>
+            jQuery(document).ready(function(){
+                let has_scrolled = false
+                jQuery(document).scroll(function() {
+                    if (jQuery(document).scrollTop() >= 50 && has_scrolled === false ) {
+                        window.zume_vision_logging({'action': 'studied_<?php echo esc_attr( $tool_number ) ?>' })
+                        has_scrolled = true
+                    }
+                });
+            })
+        </script>
+        <!-- end zume vision logging -->
 
         <?php
     endwhile;
 endif;
+
 get_footer();
