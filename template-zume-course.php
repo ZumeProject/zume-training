@@ -35,6 +35,12 @@ get_header();
         /* Hide the language selector during the course, because switching wipes out the group key. */
         jQuery(document).ready(function() {
             jQuery('#lang_choice_1').hide();
+            if (typeof window.zume_vision_logging !== "undefined") {
+                window.zume_vision_logging({
+                    'action': 'leading_<?php echo esc_attr($session_id) ?>',
+                    'group_size': '<?php echo esc_attr($zume_group_meta['members'] ?? 1 ) ?>'
+                })
+            }
         })
     </script>
     <div id="content" class="max-content-width">
@@ -59,6 +65,8 @@ get_header();
                             Zume_Dashboard::update_session_complete( $zume_group_key, $zume_session, $zume_group_meta['owner'] );
                             Zume_Course_Content::get_course_content( $zume_session );
                             Zume_Dashboard::update_ip_address( $zume_group_key );
+
+
 
                             zume_insert_log( array(
                                 'user_id'  => get_current_user_id(),

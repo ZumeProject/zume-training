@@ -60,6 +60,7 @@ class Zume_Course_Content {
                         $("#session .steps a#session-t-" + stepIndex).click();
                     }
                 });
+
             });
 
         </script>
