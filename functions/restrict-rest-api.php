@@ -91,6 +91,13 @@ function zume_dra_only_allow_logged_in_rest_access( $access ) {
         $is_public = true;
     }
 
+    /**
+     * External integrations to a Disciple Tools site can be done through the /dt-public/ route, which is left open to non-logged in external access
+     */
+    if ( isset( $_SERVER['REQUEST_URI'] ) && strpos( sanitize_text_field( wp_unslash( $_SERVER['REQUEST_URI'] ) ), '/zume_vision_log/' ) !== false ) {
+        $is_public = true;
+    }
+
 
     if ( !is_user_logged_in() && !$is_public ) {
         return new WP_Error( 'rest_cannot_access', 'Only authenticated users can access the REST API.', array( 'status' => rest_authorization_required_code() ) );
