@@ -8,7 +8,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 } // Exit if accessed directly
 
 function zume_insert_log( $args = array() ) {
-    Zume_Logging::insert( $args );
+//    Zume_Logging::insert( $args );
 }
 function zume_log_last_active( $user_id ) {
     $time = current_time( 'mysql' );
@@ -110,17 +110,17 @@ class Zume_Logging {
     }
 
     public function __construct() {
-        add_action( 'wp_login', array( &$this, 'hooks_wp_login' ), 10, 2 );
+//        add_action( 'wp_login', array( &$this, 'hooks_wp_login' ), 10, 2 );
 //        add_action( 'wp_logout', array( &$this, 'hooks_wp_logout' ) );
 //        add_action( 'delete_user', array( &$this, 'hooks_delete_user' ) );
-        add_action( 'user_register', array( &$this, 'hooks_user_register' ) );
-        add_action( 'zume_create_group', array( &$this, 'hooks_create_group' ), 10, 3 );
+//        add_action( 'user_register', array( &$this, 'hooks_user_register' ) );
+//        add_action( 'zume_create_group', array( &$this, 'hooks_create_group' ), 10, 3 );
 //        add_action( 'zume_delete_group', array( &$this, 'hooks_delete_group' ), 10, 2 );
 //        add_action( 'zume_close_group', array( &$this, 'hooks_close_group' ), 10, 2 );
 //        add_action( 'zume_activate_group', array( &$this, 'hooks_activate_group' ), 10, 2 );
-        add_action( 'zume_coleader_invitation_response', array( &$this, 'hooks_coleader_invitation_response' ), 99, 3 );
+//        add_action( 'zume_coleader_invitation_response', array( &$this, 'hooks_coleader_invitation_response' ), 99, 3 );
 //        add_action( 'zume_update_profile', array( &$this, 'hooks_update_profile' ), 10, 1 );
-        add_action( 'zume_update_three_month_plan', array( &$this, 'hooks_update_three_month_plan' ), 10, 2 );
+//        add_action( 'zume_update_three_month_plan', array( &$this, 'hooks_update_three_month_plan' ), 10, 2 );
 //        add_action( 'added_user_meta', array( &$this, 'hooks_affiliation_key' ), 20, 4 );
     }
 
