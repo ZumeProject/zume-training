@@ -423,7 +423,7 @@ msgstr "Care credeți că ar fi mai ușor de multiplicat și de ce?"
 
 #: functions/zume-content.php:361
 msgid "We breathe in. We breathe out. We're alive. Spiritual Breathing is like that, too."
-msgstr "Înspirăm. Exspirăm. Suntem în viață. Respiratia spirituala este la fel."
+msgstr "Înspirăm. Expirăm. Suntem în viață. Respiratia spirituala este la fel."
 
 #: functions/zume-content.php:395
 msgid "Zúme Video Scripts: Spiritual Breathing"
@@ -431,7 +431,7 @@ msgstr "Transcriere video Zúme: Respirația spirituală "
 
 #: functions/zume-content.php:405
 msgid "Why is it essential to learn to hear and recognize God's voice?"
-msgstr "De ce este esențial să înveți să auziți și să recunoașteți vocea lui Dumnezeu?"
+msgstr "De ce este esențial să învățați să auziți și să recunoașteți vocea lui Dumnezeu?"
 
 #: functions/zume-content.php:406
 msgid "Is hearing and responding to the Lord really like breathing? Why or why not?"
@@ -576,7 +576,7 @@ msgstr "#ZumeProject"
 
 #: functions/zume-content.php:649
 msgid "Take a picture of your S.O.A.P.S. Bible study and share it on social media."
-msgstr "Faceți o poză a unui Studiu Biblic Devoțional în cinci pași și împărtășește-o pe rețelele de socializare."
+msgstr "Faceți o poză a unui Studiu Biblic Devoțional în cinci pași și împărtășiți-o pe rețelele de socializare."
 
 #: functions/zume-content.php:669
 msgid "WELCOME BACK!"
@@ -633,7 +633,7 @@ msgstr "Luați câteva momente pentru a vedea cum s-a isprăvit grupul dvs. săp
 
 #: functions/zume-content.php:708
 msgid "Ask if anyone in the group has specific needs they would like the group to pray for. Ask someone to pray and ask God to help in the areas the group shared. Be sure to thank God that He promises in His Word to listen and act when His people pray. And, as always, ask God's Holy Spirit to lead your time, together."
-msgstr "Întrebați dacă cineva din grup are nevoi specifice pentru care ar dori ca grupul să se roage. Cereți cuiva să se roage și să-I ceară lui Dumnezeu să ajute în domeniile pe care grupul le-a împărtășit. Muulțumiți-I lui Dumnezeu pentru că El promite în Cuvântul Său să asculte și să acționeze atunci când oamenii Lui se roagă. Și, ca întotdeauna, cereți-i Duhului Sfânt al lui Dumnezeu să vă conducă timpul vostru împreună."
+msgstr "Întrebați dacă cineva din grup are nevoi specifice pentru care ar dori ca grupul să se roage. Cereți cuiva să se roage și să-I ceară lui Dumnezeu să ajute în domeniile pe care grupul le-a împărtășit. Mulțumiți-I lui Dumnezeu pentru că El promite în Cuvântul Său să asculte și să acționeze atunci când oamenii Lui se roagă. Și, ca întotdeauna, cereți-i Duhului Sfânt al lui Dumnezeu să vă conducă timpul vostru împreună."
 
 #: functions/zume-content.php:731
 msgid "If we want to make disciples who multiply – spiritual producers and not just consumers – then we need to learn and share four main ways God makes everyday followers more like Jesus:"
@@ -766,7 +766,7 @@ msgstr "Felicitări pentru încheierea sesiunii 2!"
 
 #: functions/zume-content.php:1036
 msgid "Spend time this week praying for five people from your List of 100 that you marked as an \"Unbeliever\" or \"Unknown.\" Ask God to prepare their hearts to be open to His story."
-msgstr "Petreceți timp săptămâna aceasta rugându-vă pentru cinci persoane din lista dvs. de 100 pe care i-ați marcat drept „necredincios” sau „statul spiritual necunoscut”. Cereți lui Dumnezeu să le pregătească inimile pentru a fi deschiși să audă Istoria Lui."
+msgstr "Petreceți timp săptămâna aceasta rugându-vă pentru cinci persoane din lista dvs. de 100 pe care i-ați marcat drept „necredincios” sau „statut spiritual necunoscut”. Cereți lui Dumnezeu să le pregătească inimile pentru a fi deschiși să audă Istoria Lui."
 
 #: functions/zume-content.php:1043
 msgid "Ask God who He wants you to share the List of 100 tool with. Share this person's name with the group before you go and reach out to them before the next session."
@@ -3537,8 +3537,7 @@ msgstr "Practică - Ciclul de Rugăciune"
 #: template-zume-training.php:280 template-zume-training.php:756
 #: template-zume-training.php:861
 msgid "60 min"
-msgstr "\n"
-"60 min"
+msgstr "60 min"
 
 #: template-zume-training.php:283
 msgid "Discuss - Prayer Cycle"
@@ -4145,7 +4144,7 @@ msgstr "Actualizați"
 
 #: functions/enqueue-scripts.php:276
 msgid "Course Complete"
-msgstr "Curs Completat"
+msgstr "Prezentare generală"
 
 #: functions/enqueue-scripts.php:277
 msgid "Next Session"
