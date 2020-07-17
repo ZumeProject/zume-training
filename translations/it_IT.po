@@ -18,6 +18,7 @@ msgstr "Inizia"
 msgid "Login"
 msgstr "Accedi"
 
+#. ... che seguono Gesù per imparare come obbedire al Suo Grande Mandato e fare discepoli che moltiplicano.
 #: front-page.php:86
 #, fuzzy
 msgid "Zúme Training is an on-line and in-life learning experience designed for small groups who follow Jesus to learn how to obey His Great Commission and make disciples who multiply."
