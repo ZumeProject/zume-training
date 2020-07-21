@@ -12,9 +12,10 @@ msgid "Get Started"
 msgstr "시작"
 
 #: front-page.php:76 functions/enqueue-scripts.php:287
-#: functions/zume-v4-seo-strings.php:23 parts/content-share.php:81
-#: template-pieces-page.php:212 template-zume-login.php:403
-#: template-zume-login.php:470 template-zume-login.php:498
+#: functions/zume-gmo.php:202 functions/zume-v4-seo-strings.php:23
+#: parts/content-share.php:81 template-pieces-page.php:212
+#: template-zume-login.php:403 template-zume-login.php:470
+#: template-zume-login.php:498
 msgid "Login"
 msgstr "로그인"
 
@@ -85,15 +86,17 @@ msgstr "취소"
 msgid "Current Step:"
 msgstr "현재 단계"
 
-#: functions/enqueue-scripts.php:85
+#: functions/enqueue-scripts.php:85 translations/mobile-pwa-strings.php:35
 msgid "Finish"
 msgstr "완료"
 
 #: functions/enqueue-scripts.php:86 functions/utilities/menu.php:108
+#: translations/mobile-pwa-strings.php:34
 msgid "Next"
 msgstr "다음"
 
 #: functions/enqueue-scripts.php:87 functions/utilities/menu.php:98
+#: translations/mobile-pwa-strings.php:33
 msgid "Previous"
 msgstr "이전"
 
@@ -102,7 +105,7 @@ msgid "Loading..."
 msgstr "불러오는 중 ..."
 
 #: functions/enqueue-scripts.php:66 template-zume-dashboard.php:1168
-#: template-zume-dashboard.php:1202
+#: template-zume-dashboard.php:1202 translations/mobile-pwa-strings.php:26
 msgid "Delete"
 msgstr "삭제"
 
@@ -300,1489 +303,1489 @@ msgstr "(키를 사용할 수 없습니다. 대시 보드를 확인하십시오.
 msgid "Session"
 msgstr "과정"
 
-#: functions/enqueue-scripts.php:279 functions/zume-content.php:118
+#: functions/enqueue-scripts.php:279 functions/zume-content.php:119
 msgid "Welcome to Session"
 msgstr "과정에 오신 것을 환영합니다"
 
-#: functions/zume-content.php:119
+#: functions/zume-content.php:120
 msgid "Which are you doing right now?"
 msgstr "지금 하고 있는 것은 어떤 것입니까?"
 
-#: functions/zume-content.php:120
+#: functions/zume-content.php:121
 msgid "Facilitating a Group"
 msgstr "그룹 만들기"
 
-#: functions/zume-content.php:124
+#: functions/zume-content.php:125
 msgid "Exploring the Session Content"
 msgstr "과정 내용 알아보기"
 
-#: functions/zume-content.php:139
+#: functions/zume-content.php:140
 msgid "How many are with you?"
 msgstr "함께 하는 인원이 몇 명입니까?"
 
-#: functions/enqueue-scripts.php:288 functions/zume-content.php:154
+#: functions/enqueue-scripts.php:288 functions/zume-content.php:155
 msgid "Continue"
 msgstr "계속"
 
-#: functions/zume-content.php:175
+#: functions/zume-content.php:176
 msgid "Welcome to Zúme"
 msgstr "줌에 오신 것을 환영합니다"
 
-#: functions/zume-content.php:183
+#: functions/zume-content.php:184 translations/mobile-pwa-strings.php:23
 msgid "Download"
 msgstr "다운로드"
 
-#: functions/zume-content.php:187
+#: functions/zume-content.php:188
 msgid "You will be able to follow along on a digital PDF for this session, but please make sure that each member of your group has a printed copy of the materials for future sessions."
 msgstr "이 과정은 디지털 PDF로 확인할 수 있습니다. 단 향후 과정들을 위해 그룹 각 구성원들이 인쇄 된 자료 사본을 받았는지 확인하십시오."
 
-#: functions/zume-content.php:194 functions/zume-v4-seo-strings.php:17
+#: functions/zume-content.php:195 functions/zume-v4-seo-strings.php:17
 #: template-zume-dashboard.php:813 template-zume-resources.php:38
 msgid "Download Guidebook"
 msgstr "가이드북 다운로드"
 
-#: functions/zume-content.php:207
+#: functions/zume-content.php:208
 msgid "Group Prayer (5min)"
 msgstr "그룹기도 (5 분)"
 
-#: functions/zume-content.php:217
+#: functions/zume-content.php:218
 #, fuzzy
 msgid "Begin with prayer. Spiritual insight and transformation is not possible without the Holy Spirit. Take time as a group to invite Him to guide you over this session."
 msgstr "기도로 시작하십시오. 성령이 없이는 영적인 통찰과 변화가 불가능합니다. 성령님이 본 과정 가운데 함께 하시며 인도하도록 그 분을 초대하는 시간을 가지십시오."
 
-#: functions/zume-content.php:231 functions/zume-content.php:286
-#: functions/zume-content.php:351 functions/zume-content.php:721
-#: functions/zume-content.php:1127 functions/zume-content.php:1230
-#: functions/zume-content.php:1648 functions/zume-content.php:1721
-#: functions/zume-content.php:1790 functions/zume-content.php:2121
-#: functions/zume-content.php:2334 functions/zume-content.php:2592
-#: functions/zume-content.php:2831 functions/zume-content.php:3068
-#: functions/zume-content.php:3136 functions/zume-content.php:3206
-#: functions/zume-content.php:3613
+#: functions/zume-content.php:232 functions/zume-content.php:287
+#: functions/zume-content.php:352 functions/zume-content.php:722
+#: functions/zume-content.php:1128 functions/zume-content.php:1231
+#: functions/zume-content.php:1649 functions/zume-content.php:1722
+#: functions/zume-content.php:1791 functions/zume-content.php:2122
+#: functions/zume-content.php:2335 functions/zume-content.php:2593
+#: functions/zume-content.php:2832 functions/zume-content.php:3069
+#: functions/zume-content.php:3137 functions/zume-content.php:3207
+#: functions/zume-content.php:3614
 msgid "Watch and Discuss (15min)"
 msgstr "보고 토론하기 (15 분)"
 
-#: functions/zume-content.php:239 functions/zume-content.php:294
-#: functions/zume-content.php:359 functions/zume-content.php:728
-#: functions/zume-content.php:1133 functions/zume-content.php:1236
-#: functions/zume-content.php:1654 functions/zume-content.php:1727
-#: functions/zume-content.php:1796 functions/zume-content.php:2127
-#: functions/zume-content.php:2340 functions/zume-content.php:2598
-#: functions/zume-content.php:2837 functions/zume-content.php:3076
-#: functions/zume-content.php:3144 functions/zume-content.php:3214
-#: functions/zume-content.php:3619 functions/zume-content.php:3799
+#: functions/zume-content.php:240 functions/zume-content.php:295
+#: functions/zume-content.php:360 functions/zume-content.php:729
+#: functions/zume-content.php:1134 functions/zume-content.php:1237
+#: functions/zume-content.php:1655 functions/zume-content.php:1728
+#: functions/zume-content.php:1797 functions/zume-content.php:2128
+#: functions/zume-content.php:2341 functions/zume-content.php:2599
+#: functions/zume-content.php:2838 functions/zume-content.php:3077
+#: functions/zume-content.php:3145 functions/zume-content.php:3215
+#: functions/zume-content.php:3620 functions/zume-content.php:3800
 msgid "WATCH"
 msgstr "보기"
 
-#: functions/zume-content.php:241
+#: functions/zume-content.php:242
 msgid "God uses ordinary people doing simple things to make a big impact. Watch this video on how God works."
 msgstr "하나님께서는 평범한 사람들의 간단한 일들로 큰 영향력을 만듭니다. 하나님의 일하심을 영상을 통해 확인하십시오."
 
-#: functions/zume-content.php:268
+#: functions/zume-content.php:269
 msgid "Zúme Video Scripts: Welcome"
 msgstr "줌 영상 스크립트: 환영합니다"
 
-#: functions/zume-content.php:274 functions/zume-content.php:334
-#: functions/zume-content.php:402 functions/zume-content.php:775
-#: functions/zume-content.php:884 functions/zume-content.php:1171
-#: functions/zume-content.php:1208 functions/zume-content.php:1277
-#: functions/zume-content.php:1383 functions/zume-content.php:1697
-#: functions/zume-content.php:1769 functions/zume-content.php:1838
-#: functions/zume-content.php:2167 functions/zume-content.php:2379
-#: functions/zume-content.php:2460 functions/zume-content.php:2652
-#: functions/zume-content.php:2715 functions/zume-content.php:2894
-#: functions/zume-content.php:3121 functions/zume-content.php:3188
-#: functions/zume-content.php:3258 functions/zume-content.php:3390
-#: functions/zume-content.php:3583 functions/zume-content.php:3659
+#: functions/zume-content.php:275 functions/zume-content.php:335
+#: functions/zume-content.php:403 functions/zume-content.php:776
+#: functions/zume-content.php:885 functions/zume-content.php:1172
+#: functions/zume-content.php:1209 functions/zume-content.php:1278
+#: functions/zume-content.php:1384 functions/zume-content.php:1698
+#: functions/zume-content.php:1770 functions/zume-content.php:1839
+#: functions/zume-content.php:2168 functions/zume-content.php:2380
+#: functions/zume-content.php:2461 functions/zume-content.php:2653
+#: functions/zume-content.php:2716 functions/zume-content.php:2895
+#: functions/zume-content.php:3122 functions/zume-content.php:3189
+#: functions/zume-content.php:3259 functions/zume-content.php:3391
+#: functions/zume-content.php:3584 functions/zume-content.php:3660
 msgid "DISCUSS"
 msgstr "토론"
 
-#: functions/zume-content.php:276
+#: functions/zume-content.php:277
 #, fuzzy
 msgid "If Jesus intended every one of His followers to obey His Great Commission, why do so few actually make disciples?"
 msgstr "예수님이 모든 제자들이 그 분의 지상명령에 순종하기를 바라셨다면, 왜 실제로 제자 삼는 사람들이 이토록 적은걸까요?"
 
-#: functions/zume-content.php:296
+#: functions/zume-content.php:297
 #, fuzzy
 msgid "What is a disciple? And how do you make one? How do you teach a follower of Jesus to do what He told us in His Great Commission – to obey all of His commands?"
 msgstr "제자란 무엇입니까? 제자는 어떻게 삼는가요? 예수님의 제자가 그 분이 말씀하신 지상명령 즉 그 분의 모든 계명에 순종하도록 하려면 어떻게 가르쳐야 할까요?"
 
-#: functions/zume-content.php:328
+#: functions/zume-content.php:329
 msgid "Zúme Video Scripts: Teach Them to Obey"
 msgstr "줌 영상 스크립트 : 가르쳐 지키게 하십시오"
 
-#: functions/zume-content.php:337
+#: functions/zume-content.php:338
 msgid "When you think of a church, what comes to mind?"
 msgstr "교회를 생각하면 무엇이 ​​떠오르는가요?"
 
-#: functions/zume-content.php:338
+#: functions/zume-content.php:339
 #, fuzzy
 msgid "What's the difference between that picture and what's described in the video as a \"Simple Church\"?"
 msgstr "그 그림과 영상에서 묘사한 \"간단한 교회\"의 차이점은 무엇인가요?"
 
-#: functions/zume-content.php:340
+#: functions/zume-content.php:341
 msgid "Which one do you think would be easier to multiply and why?"
 msgstr "어느 것이 더 쉽게 배가할까요? 이유는 무엇인가요?"
 
-#: functions/zume-content.php:361
+#: functions/zume-content.php:362
 msgid "We breathe in. We breathe out. We're alive. Spiritual Breathing is like that, too."
 msgstr "우리는 숨을 들이 쉽니다. 우리는 숨을 내쉽니다. 우리에겐 생명이 있지요. 영적 호흡도 마찬가지입니다."
 
-#: functions/zume-content.php:395
+#: functions/zume-content.php:396
 msgid "Zúme Video Scripts: Spiritual Breathing"
 msgstr "줌 영상 스크립트 : 영적 호흡"
 
-#: functions/zume-content.php:405
+#: functions/zume-content.php:406
 msgid "Why is it essential to learn to hear and recognize God's voice?"
 msgstr "하나님의 음성을 듣고 인식하는 법을 배우는 것이 중요한 이유는 무엇입니까?"
 
-#: functions/zume-content.php:406
+#: functions/zume-content.php:407
 msgid "Is hearing and responding to the Lord really like breathing? Why or why not?"
 msgstr "주님의 말씀을 듣고 주님께 반응하는 것이 호흡하는 것과 실제로 같은 것일까요? 그 이유는 무엇인가요?"
 
-#: functions/zume-content.php:417 functions/zume-content.php:488
-#: functions/zume-content.php:905 functions/zume-content.php:1550
-#: functions/zume-content.php:1857 functions/zume-content.php:3673
+#: functions/zume-content.php:418 functions/zume-content.php:489
+#: functions/zume-content.php:906 functions/zume-content.php:1551
+#: functions/zume-content.php:1858 functions/zume-content.php:3674
 msgid "Listen and Read Along (3min)"
 msgstr "듣고 읽기 (3 분)"
 
-#: functions/zume-content.php:425 functions/zume-content.php:496
-#: functions/zume-content.php:801 functions/zume-content.php:911
-#: functions/zume-content.php:1193 functions/zume-content.php:1326
-#: functions/zume-content.php:1556 functions/zume-content.php:1863
-#: functions/zume-content.php:2055 functions/zume-content.php:2399
-#: functions/zume-content.php:3679
+#: functions/zume-content.php:426 functions/zume-content.php:497
+#: functions/zume-content.php:802 functions/zume-content.php:912
+#: functions/zume-content.php:1194 functions/zume-content.php:1327
+#: functions/zume-content.php:1557 functions/zume-content.php:1864
+#: functions/zume-content.php:2056 functions/zume-content.php:2400
+#: functions/zume-content.php:3680
 msgid "READ"
 msgstr "읽기"
 
-#: functions/zume-content.php:427
+#: functions/zume-content.php:428
 msgid "S.O.A.P.S. Bible Reading"
 msgstr "S.O.A.P.S. 성경 읽기"
 
-#: functions/zume-content.php:428
+#: functions/zume-content.php:429
 msgid "Hearing from God regularly is a key element in our personal relationship with Him, and in our ability to stay obediently engaged in what He is doing around us."
 msgstr "하나님의 음성을 정기적으로 듣는 것은 우리와 그 분과의 일대일 관계에서 하나의 중요한 요소이며, 그 분이 우리 주변에서 행하시는 일에 우리가 순종적으로 참여할 수 있는 능력이 되기도 합니다.  "
 
-#: functions/zume-content.php:441
+#: functions/zume-content.php:442
 msgid "Find the \"S.O.A.P.S. Bible Reading\" section in your Zúme Guidebook and listen to the audio overview."
 msgstr "줌 가이드 북에서 \"S.O.A.P.S. 성경 읽기\"과정을 찾고 오디오로 된 개요를 들어보십시오."
 
-#: functions/zume-content.php:478
+#: functions/zume-content.php:479
 msgid "Zúme Video Scripts: S.O.A.P.S."
 msgstr "줌 영상 스크립트 : S.O.A.P.S."
 
-#: functions/enqueue-scripts.php:219 functions/zume-content.php:499
-#: template-gmo.php:124 template-how-to-follow-jesus.php:124
+#: functions/enqueue-scripts.php:219 functions/zume-content.php:500
+#: template-gmo.php:229 template-how-to-follow-jesus.php:166
 #: template-zume-dashboard.php:342 template-zume-training.php:212
 msgid "Accountability Groups"
 msgstr "책임 그룹"
 
-#: functions/zume-content.php:502
+#: functions/zume-content.php:503
 #, fuzzy
 msgid "The Bible tells us that every follower of Jesus will one day be held accountable for what we do and say and think. Accountability Groups are a great way to get ready!"
 msgstr "성경은 모든 예수님을 따르는 자들은 언젠가 우리가 한 행동과 말, 생각에 책임지게 될 것이라고 말하고 있습니다. 책임 그룹은 이를 준비하기에 아주 좋은 방법입니다."
 
-#: functions/zume-content.php:514
+#: functions/zume-content.php:515
 msgid "Find the \"Accountability Groups\" section in your Zúme Guidebook, and listen to the audio below."
 msgstr "줌 가이드 북에서 \"책임 그룹\"과정을 찾은 뒤 아래의 오디오를 듣습니다."
 
-#: functions/zume-content.php:551
+#: functions/zume-content.php:552
 msgid "Zúme Video Scripts: Accountability Groups"
 msgstr "줌 영상 스크립트 : 책임 그룹"
 
-#: functions/zume-content.php:561
+#: functions/zume-content.php:562
 msgid "Practice (45min)"
 msgstr "연습 (45 분)"
 
-#: functions/zume-content.php:569
+#: functions/zume-content.php:570
 msgid "BREAK UP"
 msgstr "해체"
 
-#: functions/zume-content.php:570
+#: functions/zume-content.php:571
 msgid "Break into groups of two or three people of the same gender."
 msgstr "같은 성별의 2 ~ 3 명 그룹으로 나눕니다."
 
-#: functions/zume-content.php:576 functions/zume-content.php:628
-#: functions/zume-content.php:1041 functions/zume-content.php:1452
-#: functions/zume-content.php:1971 functions/zume-content.php:2258
-#: functions/zume-content.php:2512 functions/zume-content.php:2750
-#: functions/zume-content.php:2982 functions/zume-content.php:3379
-#: functions/zume-content.php:3427
+#: functions/zume-content.php:577 functions/zume-content.php:629
+#: functions/zume-content.php:1042 functions/zume-content.php:1453
+#: functions/zume-content.php:1972 functions/zume-content.php:2259
+#: functions/zume-content.php:2513 functions/zume-content.php:2751
+#: functions/zume-content.php:2983 functions/zume-content.php:3380
+#: functions/zume-content.php:3428
 msgid "SHARE"
 msgstr "나눔"
 
-#: functions/zume-content.php:579
+#: functions/zume-content.php:580
 msgid "Spend the next 45 minutes working together through Accountability Questions – List 2 in the \"Accountability Groups\" section of your"
 msgstr "다음 45 분 동안에는 \"책임 그룹\"과정의 책임 질문 – 목록 2에 대해 함께 나눠보세요. "
 
-#: functions/zume-content.php:583
+#: functions/zume-content.php:584
 msgid "Zúme Guidebook"
 msgstr "줌 가이드 북"
 
-#: functions/zume-content.php:595 functions/zume-content.php:1010
-#: functions/zume-content.php:1422 functions/zume-content.php:1954
-#: functions/zume-content.php:2245 functions/zume-content.php:2482
-#: functions/zume-content.php:2733 functions/zume-content.php:2965
-#: functions/zume-content.php:3408
+#: functions/zume-content.php:596 functions/zume-content.php:1011
+#: functions/zume-content.php:1423 functions/zume-content.php:1955
+#: functions/zume-content.php:2246 functions/zume-content.php:2483
+#: functions/zume-content.php:2734 functions/zume-content.php:2966
+#: functions/zume-content.php:3409
 msgid "LOOKING FORWARD"
 msgstr "앞을 보기"
 
-#: functions/zume-content.php:599
+#: functions/zume-content.php:600
 msgid "Congratulations! You've completed Session 1."
 msgstr "축하합니다! 1과정을 수료했습니다."
 
-#: functions/zume-content.php:610 functions/zume-content.php:1023
-#: functions/zume-content.php:1435 functions/zume-content.php:1958
-#: functions/zume-content.php:2496
+#: functions/zume-content.php:611 functions/zume-content.php:1024
+#: functions/zume-content.php:1436 functions/zume-content.php:1959
+#: functions/zume-content.php:2497
 msgid "Below are next steps to take in preparation for the next session."
 msgstr "아래는 다음 과정 준비를 위한 단계입니다."
 
-#: functions/zume-content.php:620 functions/zume-content.php:1034
-#: functions/zume-content.php:1445 functions/zume-content.php:1964
-#: functions/zume-content.php:2251 functions/zume-content.php:2505
-#: functions/zume-content.php:2743 functions/zume-content.php:2975
-#: functions/zume-content.php:3418
+#: functions/zume-content.php:621 functions/zume-content.php:1035
+#: functions/zume-content.php:1446 functions/zume-content.php:1965
+#: functions/zume-content.php:2252 functions/zume-content.php:2506
+#: functions/zume-content.php:2744 functions/zume-content.php:2976
+#: functions/zume-content.php:3419
 msgid "OBEY"
 msgstr "순종"
 
-#: functions/zume-content.php:622
+#: functions/zume-content.php:623
 msgid "Begin practicing the S.O.A.P.S. Bible reading between now and your next meeting. Focus on Matthew 5-7, read it at least once a day. Keep a daily journal using the S.O.A.P.S. format."
 msgstr "지금부터 다음 모임까지 S.O.A.P.S. 성경 읽기 연습을 시작하십시오. 마태복음 5-7 장에 초점을 맞추고, 적어도 하루에 한 번 읽으십시오. S.O.A.P.S. 양식으로 매일 기록하십시오."
 
-#: functions/zume-content.php:630
+#: functions/zume-content.php:631
 msgid "Spend time asking God who He might want you to start an Accountability Group with using the tools you've learned in this session. Share this person’s name with the group before you go. Reach out to that person about starting an Accountability Group and meeting with you weekly."
 msgstr "이 과정에서 배운 방법으로 누구하고 책임 그룹을 시작하기를 원하시는 지 하나님께 물어보는 시간을 가지십시오. 가기 전에 그 사람의 이름을 그룹과 공유하십시오. 책임 그룹의 시작과 매주 당신과의 만남을 위하여 그 사람을 연락하십시오."
 
-#: functions/zume-content.php:638 functions/zume-content.php:706
-#: functions/zume-content.php:1048 functions/zume-content.php:1102
-#: functions/zume-content.php:1459 functions/zume-content.php:1524
-#: functions/zume-content.php:1978 functions/zume-content.php:2028
-#: functions/zume-content.php:2265 functions/zume-content.php:2312
-#: functions/zume-content.php:2519 functions/zume-content.php:2570
-#: functions/zume-content.php:2757 functions/zume-content.php:2809
-#: functions/zume-content.php:2989 functions/zume-content.php:3047
-#: functions/zume-content.php:3319 functions/zume-content.php:3435
-#: functions/zume-content.php:3490
+#: functions/zume-content.php:639 functions/zume-content.php:707
+#: functions/zume-content.php:1049 functions/zume-content.php:1103
+#: functions/zume-content.php:1460 functions/zume-content.php:1525
+#: functions/zume-content.php:1979 functions/zume-content.php:2029
+#: functions/zume-content.php:2266 functions/zume-content.php:2313
+#: functions/zume-content.php:2520 functions/zume-content.php:2571
+#: functions/zume-content.php:2758 functions/zume-content.php:2810
+#: functions/zume-content.php:2990 functions/zume-content.php:3048
+#: functions/zume-content.php:3320 functions/zume-content.php:3436
+#: functions/zume-content.php:3491
 msgid "PRAY"
 msgstr "기도"
 
-#: functions/zume-content.php:641
+#: functions/zume-content.php:642
 msgid "Pray that God helps you be obedient to Him and invite Him to work in you and those around you!"
 msgstr "하나님께 순종할 수 있도록 도움을 청하고, 당신과 주변 사람들 안에서 일하시도록 그 분을 초대하십시오!"
 
-#: functions/zume-content.php:647 functions/zume-content.php:1055
-#: functions/zume-content.php:1466 functions/zume-content.php:1985
-#: functions/zume-content.php:2272 functions/zume-content.php:2526
-#: functions/zume-content.php:2764 functions/zume-content.php:2996
-#: functions/zume-content.php:3443
+#: functions/zume-content.php:648 functions/zume-content.php:1056
+#: functions/zume-content.php:1467 functions/zume-content.php:1986
+#: functions/zume-content.php:2273 functions/zume-content.php:2527
+#: functions/zume-content.php:2765 functions/zume-content.php:2997
+#: functions/zume-content.php:3444
 msgid "#ZumeProject"
 msgstr "#줌 프로젝트"
 
-#: functions/zume-content.php:649
+#: functions/zume-content.php:650
 msgid "Take a picture of your S.O.A.P.S. Bible study and share it on social media."
 msgstr "S.O.A.P.S. 성경 공부 인증샷을 찍어 소셜 미디어에 공유하십시오."
 
-#: functions/zume-content.php:669
+#: functions/zume-content.php:670
 msgid "WELCOME BACK!"
 msgstr "다시 오신 것을 환영합니다!"
 
-#: functions/zume-content.php:675
+#: functions/zume-content.php:676
 msgid "DOWNLOAD"
 msgstr "다운로드"
 
-#: functions/zume-content.php:677
+#: functions/zume-content.php:678
 msgid "Does everyone have a printed copy of the Zúme Guidebook? If not, please be sure that someone can download the Guidebook and that everyone has access to some paper and a pen or pencil."
 msgstr "줌 가이드북 사본을 모두 받으셨나요? 못 받으셨다면, 가이드북을 다운로드하십시오. 매 사람 앞에 종이와 필을 준비합니다."
 
-#: functions/zume-content.php:683
+#: functions/zume-content.php:684
 msgid "DOWNLOAD GUIDEBOOK"
 msgstr "가이드북 다운로드"
 
-#: functions/zume-content.php:690 functions/zume-content.php:1082
-#: functions/zume-content.php:1507 functions/zume-content.php:2013
-#: functions/zume-content.php:2299 functions/zume-content.php:2553
-#: functions/zume-content.php:2790 functions/zume-content.php:3025
-#: functions/zume-content.php:3471
+#: functions/zume-content.php:691 functions/zume-content.php:1083
+#: functions/zume-content.php:1508 functions/zume-content.php:2014
+#: functions/zume-content.php:2300 functions/zume-content.php:2554
+#: functions/zume-content.php:2791 functions/zume-content.php:3026
+#: functions/zume-content.php:3472
 msgid "CHECK-IN"
 msgstr "점검하기"
 
-#: functions/zume-content.php:692 functions/zume-content.php:1085
-#: functions/zume-content.php:2792 functions/zume-content.php:3029
-#: functions/zume-content.php:3473
+#: functions/zume-content.php:693 functions/zume-content.php:1086
+#: functions/zume-content.php:2793 functions/zume-content.php:3030
+#: functions/zume-content.php:3474
 msgid "Before getting started, take some time to check-in."
 msgstr "시작하기 전에 잠시 점검의 시간을 가지십시오."
 
-#: functions/zume-content.php:694 functions/zume-content.php:1089
-#: functions/zume-content.php:1509 functions/zume-content.php:2016
-#: functions/zume-content.php:2301 functions/zume-content.php:2555
-#: functions/zume-content.php:2794 functions/zume-content.php:3031
-#: functions/zume-content.php:3475
+#: functions/zume-content.php:695 functions/zume-content.php:1090
+#: functions/zume-content.php:1510 functions/zume-content.php:2017
+#: functions/zume-content.php:2302 functions/zume-content.php:2556
+#: functions/zume-content.php:2795 functions/zume-content.php:3032
+#: functions/zume-content.php:3476
 msgid "At the end of the last session, everyone in your group was challenged in two ways:"
 msgstr "지난 과정의 끝부분에 모든 그룹 구성원들은 두 가지 과제를 받았습니다:"
 
-#: functions/zume-content.php:697
+#: functions/zume-content.php:698
 msgid "You were asked to begin practicing the S.O.A.P.S. Bible reading method and keeping a daily journal."
 msgstr "하나는 S.O.A.P.S. 성경 일기 연습을 시작하고 매일 기록하는 것입니다."
 
-#: functions/zume-content.php:699
+#: functions/zume-content.php:700
 msgid "You were encouraged to reach out to someone about starting an Accountability Group."
 msgstr "다른 하나는 책임 그룹을 시작하기 위해 누군가를 연락하는 것입니다."
 
-#: functions/zume-content.php:701 functions/zume-content.php:1097
-#: functions/zume-content.php:1518 functions/zume-content.php:2023
-#: functions/zume-content.php:2307 functions/zume-content.php:2565
-#: functions/zume-content.php:2804 functions/zume-content.php:3040
+#: functions/zume-content.php:702 functions/zume-content.php:1098
+#: functions/zume-content.php:1519 functions/zume-content.php:2024
+#: functions/zume-content.php:2308 functions/zume-content.php:2566
+#: functions/zume-content.php:2805 functions/zume-content.php:3041
 msgid "Take a few moments to see how your group did this week."
 msgstr "이번 주에 그룹이 어떻게 수행했는지 잠시 돌아보십시오."
 
-#: functions/zume-content.php:708
+#: functions/zume-content.php:709
 msgid "Ask if anyone in the group has specific needs they would like the group to pray for. Ask someone to pray and ask God to help in the areas the group shared. Be sure to thank God that He promises in His Word to listen and act when His people pray. And, as always, ask God's Holy Spirit to lead your time, together."
 msgstr "구성원들에게 특별한 기도제목이 있는 분이 있는지 물어보십시오. 한 사람에게 기도를 부탁하여, 그룹이 나눈 영역에 대해 하나님이 도와주시기를 구하십시오. 말씀에서 자신의 백성들이 기도하면 들어주시겠다고 약속하신 하나님께 감사드리는 것을 잊지 마십시오. 그리고, 항상, 함께 하는 시간동안 하나님의 성령님이 인도해주시도록 간구하십시오."
 
-#: functions/zume-content.php:731
+#: functions/zume-content.php:732
 #, fuzzy
 msgid "If we want to make disciples who multiply – spiritual producers and not just consumers – then we need to learn and share four main ways God makes everyday followers more like Jesus:"
 msgstr "배가하는 제자-단지 소비자가 아닌 영적 생산자를 삼고 싶으면, 하나님이 날마다 더욱 예수님을 닮아가는 제자들로 만들어 줄 네 가지 주요 방법을 배우고 나눠야 한다."
 
-#: functions/zume-content.php:733 template-gmo.php:87
-#: template-how-to-follow-jesus.php:87
+#: functions/zume-content.php:734 template-gmo.php:192
+#: template-how-to-follow-jesus.php:129
 msgid "Prayer"
 msgstr "기도"
 
-#: functions/zume-content.php:734
+#: functions/zume-content.php:735
 msgid "Scripture"
 msgstr "성경"
 
-#: functions/zume-content.php:735
+#: functions/zume-content.php:736
 msgid "Body Life"
 msgstr "신자들로 구성된 예수님의 몸"
 
-#: functions/zume-content.php:736
+#: functions/zume-content.php:737
 msgid "Persecution and Suffering"
 msgstr "핍박과 고난"
 
-#: functions/zume-content.php:769
+#: functions/zume-content.php:770
 msgid "Zúme Video Scripts: Producers vs Consumers"
 msgstr "줌 영상 스크립트 : 생산자 대 소비자"
 
-#: functions/zume-content.php:778
+#: functions/zume-content.php:779
 msgid "Of the four areas detailed above (prayer, God's Word, etc.), which ones do you already practice?"
 msgstr "위에서 네 가지 자세한 영역(기도, 성경 등)중 이미 연습한 부분은 어떤 것인가요?"
 
-#: functions/zume-content.php:780
+#: functions/zume-content.php:781
 msgid "Which ones do you feel unsure about?"
 msgstr "어떤 부분에 아직 확신이 없는가요?"
 
-#: functions/zume-content.php:781
+#: functions/zume-content.php:782
 msgid "How ready do you feel when it comes to training others?"
 msgstr "다른 사람을 훈련시키는 것에는 어느 정도 준비가 되어 있습니까?"
 
-#: functions/zume-content.php:794
+#: functions/zume-content.php:795
 msgid "Listen and Read Along (2min)"
 msgstr "듣고 읽기 (2 분)"
 
-#: functions/zume-content.php:804 template-zume-dashboard.php:366
+#: functions/zume-content.php:805 template-zume-dashboard.php:366
 msgid "Prayer Cycle"
 msgstr "기도 사이클"
 
-#: functions/zume-content.php:805
+#: functions/zume-content.php:806
 msgid "The Bible tells us that prayer is our chance to speak to and hear from the same God who created us!"
 msgstr "성경은 기도는 우리를 만드신 하나님과 동일한 하나님으로부터 음성을 듣고 또 그 분께 말을 하는 기회라고 말합니다."
 
-#: functions/zume-content.php:815
+#: functions/zume-content.php:816
 msgid "Find the \"Prayer Cycle\" section in your Zúme Guidebook, and listen to the audio below."
 msgstr "줌 가이드북에서 \"기도 사이클\"과정을 찾은 뒤, 아래의 오디오를 듣습니다."
 
-#: functions/zume-content.php:851
+#: functions/zume-content.php:852
 msgid "Zúme Video Scripts: Prayer Cycle"
 msgstr "줌 영상 스크립트 :기도 사이클"
 
-#: functions/zume-content.php:864
+#: functions/zume-content.php:865
 msgid "Practice the Prayer Cycle (60min)"
 msgstr "기도 사이클 연습 (60 분)"
 
-#: functions/zume-content.php:870
+#: functions/zume-content.php:871
 msgid "LEAVE"
 msgstr "떠나기"
 
-#: functions/zume-content.php:872
+#: functions/zume-content.php:873
 msgid "Spend the next 60 minutes in prayer individually, using the exercises in \"The Prayer Cycle\" section of the Zúme Guidebook as a guide."
 msgstr "줌 가이드북의 \"기도 사이클\"과정에 있는 연습을 참고로, 아래 60 분 동안 개별 기도 시간을 가집니다."
 
-#: functions/zume-content.php:877
+#: functions/zume-content.php:878
 msgid "RETURN"
 msgstr "돌아오기"
 
-#: functions/zume-content.php:879
+#: functions/zume-content.php:880
 msgid "Set a time for the group to return and reconnect. Be sure to add a few extra minutes for everyone to both find a quiet place to pray and to make their way back to the group."
 msgstr "그룹에 돌아와 다시 모이는 시간을 정하십시오. 모든 사람이 조용한 곳을 찾아 기도한 뒤 다시 그룹으로 돌아올 수 있도록 몇 분 더 추가합니다."
 
-#: functions/zume-content.php:887
+#: functions/zume-content.php:888
 msgid "What is your reaction to spending an hour in prayer?"
 msgstr "기도로 한 시간을 보내는 것에 대한 당신의 반응은 무엇입니까?"
 
-#: functions/zume-content.php:888
+#: functions/zume-content.php:889
 msgid "How do you feel?"
 msgstr "어떤 느낌입니까?"
 
-#: functions/zume-content.php:889
+#: functions/zume-content.php:890
 msgid "Did you learn or hear anything?"
 msgstr "들었거나 배운 것이 있는지요?"
 
-#: functions/zume-content.php:890
+#: functions/zume-content.php:891
 msgid "What would life be like if you made this kind of prayer a regular habit?"
 msgstr "이런 기도방식을 규칙적인 습관으로 삼으면 당신의 인생은 어떤 모습일까요?"
 
-#: functions/zume-content.php:914 template-zume-dashboard.php:374
+#: functions/zume-content.php:915 template-zume-dashboard.php:374
 msgid "List of 100"
 msgstr "100인 명단"
 
-#: functions/zume-content.php:917
+#: functions/zume-content.php:918
 msgid "God has already given us the relationships we need to “Go and make disciples.” These are our family, friends, neighbors, co-workers and classmates – people we’ve known all our lives or maybe just met."
 msgstr "하나님은 우리에게 “가서 제자를 삼는”데 필요한 관계들을 이미 주셨습니다. 그들은 우리의 가족, 친구, 이웃, 동료, 학급 친구들로서- 우리가 평생 알고 지낸 사람들이거나 혹은 금방 만난 사람들입니다."
 
-#: functions/zume-content.php:920
+#: functions/zume-content.php:921
 msgid "Being good stewards of these relationships is the first step in multiplying disciples. Start by making a list."
 msgstr "이러한 관계를 잘 관리하는 것이 제자들을 배가하는 첫 번째 단계입니다. 명단부터 작성하시십시오."
 
-#: functions/zume-content.php:931
+#: functions/zume-content.php:932
 msgid "Find the \"List of 100\" section in your Zúme Guidebook, and listen to the audio below."
 msgstr "줌 가이드북에서 \"100인 명단\"과정을 찾은 뒤 아래의 오디오를 듣습니다."
 
-#: functions/zume-content.php:968
+#: functions/zume-content.php:969
 msgid "Zúme Video Scripts: List of 100"
 msgstr "줌 영상 스크립트 : 100인 명단"
 
-#: functions/zume-content.php:981
+#: functions/zume-content.php:982
 msgid "Project (30min)"
 msgstr "프로젝트 (30 분)"
 
-#: functions/zume-content.php:991
+#: functions/zume-content.php:992
 msgid "Create your own list of 100"
 msgstr "나만의 100인 명단 만들기"
 
-#: functions/zume-content.php:993
+#: functions/zume-content.php:994
 msgid "Have everyone in your group take the next 30 minutes to fill out their own inventory of relationships using the form in the \"List of 100\" section in your Zúme Guidebook. "
 msgstr "다음 30분은 모든 그룹 구성원들이 줌 가이드북의 \"100인 명단\"과정에 있는 양식을 이용하여, 그들의 관계 명단을 작성하도록 하십시오."
 
-#: functions/zume-content.php:1013
+#: functions/zume-content.php:1014
 msgid "Congratulations on finishing Session 2! "
 msgstr "2과정을 수료한 것을 축하합니다!"
 
-#: functions/zume-content.php:1036
+#: functions/zume-content.php:1037
 msgid "Spend time this week praying for five people from your List of 100 that you marked as an \"Unbeliever\" or \"Unknown.\" Ask God to prepare their hearts to be open to His story."
 msgstr "이번 주에 100인 명단에 있는 사람 중 “불신자”나 “불분명한 사람”으로 표시한 다섯 사람을 위해 기도하라. 그들이 마음을 열고 당신의 이야기에 귀 기울 수 있도록 해달라고 하나님께 기도하십시오."
 
-#: functions/zume-content.php:1043
+#: functions/zume-content.php:1044
 msgid "Ask God who He wants you to share the List of 100 tool with. Share this person's name with the group before you go and reach out to them before the next session."
 msgstr "100인 명단에 있는 사람 중 누구에게 나누기를 원하시는 지 하나님께 물어보십시오. 다음 과정 전에 가서 연락을 취하려는 사람들의 이름을 그룹 구성원들과 공유하십시오. "
 
-#: functions/zume-content.php:1050 functions/zume-content.php:1461
-#: functions/zume-content.php:1980
+#: functions/zume-content.php:1051 functions/zume-content.php:1462
+#: functions/zume-content.php:1981
 msgid "Pray that God help you be obedient to Him and invite Him to work in you and those around you!"
 msgstr "하나님께 순종할 수 있도록 도와주시고, 당신과 당신 주변 사람들 속에서 일해주시도록 하나님을 초청하는 기도를 하십시오! "
 
-#: functions/zume-content.php:1057
+#: functions/zume-content.php:1058
 msgid "Think others could use the 60-minute prayer tool? Share about it on social media."
 msgstr "다른 사람들도 60 분 기도 도구를 사용할 수 있을까요? 소셜 미디어에 공유해보세요."
 
-#: functions/zume-content.php:1076 functions/zume-content.php:1501
-#: functions/zume-content.php:2006 functions/zume-content.php:2293
-#: functions/zume-content.php:2547 functions/zume-content.php:2784
-#: functions/zume-content.php:3017
+#: functions/zume-content.php:1077 functions/zume-content.php:1502
+#: functions/zume-content.php:2007 functions/zume-content.php:2294
+#: functions/zume-content.php:2548 functions/zume-content.php:2785
+#: functions/zume-content.php:3018
 msgid "LOOKING BACK"
 msgstr "뒤를 보기"
 
-#: functions/zume-content.php:1093
+#: functions/zume-content.php:1094
 msgid "You were asked to pray for five people from your List of 100 that you marked as an \"Unbeliever\" or \"Unknown.\""
 msgstr "당신은 100인 명단에 있는 사람 중 “불신자”나 “불분명한 사람”으로 표시한 다섯 사람을 위해 기도하도록 요청 받았습니다."
 
-#: functions/zume-content.php:1094
+#: functions/zume-content.php:1095
 msgid "You were encouraged to share how to make a List of 100 with someone."
 msgstr "당신은 다른 사람과 100인 명단을 작성하는 방법을 공유하도록 권장 받았습니다."
 
-#: functions/zume-content.php:1104 functions/zume-content.php:1527
-#: functions/zume-content.php:2030
+#: functions/zume-content.php:1105 functions/zume-content.php:1528
+#: functions/zume-content.php:2031
 #, fuzzy
 msgid "Pray and thank God for the results and invite His Holy Spirit to lead your time together."
 msgstr "결과에 대해 하나님께 감사 기도드리고, 함께 하는 시간동안 인도해주시도록 성령님을 초대하십시오."
 
-#: functions/zume-content.php:1109 functions/zume-content.php:1532
-#: functions/zume-content.php:2035 functions/zume-content.php:2319
-#: functions/zume-content.php:2577 functions/zume-content.php:2816
-#: functions/zume-content.php:3055 functions/zume-content.php:3278
-#: functions/zume-content.php:3497
+#: functions/zume-content.php:1110 functions/zume-content.php:1533
+#: functions/zume-content.php:2036 functions/zume-content.php:2320
+#: functions/zume-content.php:2578 functions/zume-content.php:2817
+#: functions/zume-content.php:3056 functions/zume-content.php:3279
+#: functions/zume-content.php:3498
 msgid "OVERVIEW"
 msgstr "개요"
 
-#: functions/zume-content.php:1111
+#: functions/zume-content.php:1112
 msgid "In this session, you’ll learn how God’s Spiritual Economy works and how God invests more in those who are faithful with what they've already been given. You'll also learn two more tools for making disciples – sharing God’s Story from Creation to Judgement and Baptism."
 msgstr "이 과정에서는 하나님의 영적 경제가 작동하는 방식과 하나님이 어떻게 이미 받은 것에 충실한 사람들에게 더욱 투자하는 지에 대해 배우게 됩니다. 제자 삼기를 위한 두 가지 도구를 더 배울 것인데 이는 창조에서 심판, 그리고 세례에 이르기까지 하나님의 이야기를 나누는 것입니다. "
 
-#: functions/zume-content.php:1113 functions/zume-content.php:1536
+#: functions/zume-content.php:1114 functions/zume-content.php:1537
 msgid "Then, when you're ready, get started!"
 msgstr "준비가 되었으면, 시작하십시오!"
 
-#: functions/zume-content.php:1135
+#: functions/zume-content.php:1136
 msgid "In this broken world, people feel rewarded when they take, when they receive and when they gain more than those around them. But God's Spiritual Economy is different – God invests more in those who are faithful with what they've already been given."
 msgstr "이 깨어진 세상에서 사람들은 무언가를 받을 때, 주변 사람들보다 더 많이 얻을 때, 보상받았다고 느낍니다. 그러나 하나님의 영적 경제는 다릅니다- 하나님은 이미 받은 것에 충실한 사람들에게 더 많은 것을 투자합니다."
 
-#: functions/zume-content.php:1166
+#: functions/zume-content.php:1167
 msgid "Zúme Video Scripts: Spiritual Economy"
 msgstr "줌 영상 스크립트 : 영적 경제"
 
-#: functions/zume-content.php:1173
+#: functions/zume-content.php:1174
 msgid "What are some differences you see between God's Spiritual Economy and our earthly way of getting things done?"
 msgstr "하나님의 영적 경제와 우리가 세상에서 문제를 해결하는 방법 사이에는 어떤 차이점들이 있습니까?"
 
-#: functions/zume-content.php:1187 functions/zume-content.php:1320
+#: functions/zume-content.php:1188 functions/zume-content.php:1321
 msgid "Read and Discuss (15min)"
 msgstr "읽고 토론하기(15 분)"
 
-#: functions/zume-content.php:1196
+#: functions/zume-content.php:1197
 #, fuzzy
 msgid "Jesus said, “You will receive power when the Holy Spirit comes upon you. And you will be my witnesses, telling people about me everywhere – in Jerusalem, throughout Judea, in Samaria, and to the ends of the earth.”"
 msgstr "예수님이 말씀하시길 “오직 성령이 너희에게 임하시면 너희가 권능을 받고 예루살렘과 온 유대와 사마리아와 땅끝까지 이르러 내 증인이 되리라 하시니라.”"
 
-#: functions/zume-content.php:1199
+#: functions/zume-content.php:1200
 #, fuzzy
 msgid "Jesus believed in His followers so much, He trusted them to tell His story. Then He sent them around the world to do it. Now, He’s sending us."
 msgstr "예수님은 제자들에 대한 신뢰가 컸고, 그들이 그분의 이야기를 전할 것을 믿으셨습니다. 예수님은 그들을 세상으로 보내 전하게 했습니다. 그리고 지금, 그 분은 우리를 보내고 있습니다. "
 
-#: functions/zume-content.php:1202
+#: functions/zume-content.php:1203
 msgid "There’s no one “best way” to tell God’s story (also called The Gospel), because the best way will depend on who you’re sharing with. Every disciple should learn to tell God’s Story in a way that’s true to scripture and connects with the audience they’re sharing with."
 msgstr "하나님의 이야기(복음)를 전하는 \"최고의 방법\"은 없습니다. \"최고의 방법\"은 누구하고 전하느냐에 달렸기 때문입니다. 모든 제자들은 하나님의 이야기를 전할 때 성경에 충실하고 듣는 자와 연결하여 전하는 방법을 배워야 합니다. "
 
-#: functions/zume-content.php:1211
+#: functions/zume-content.php:1212
 msgid "What comes to mind when you hear God's command to be His \"witness\" and to tell His story?"
 msgstr "그 분의 “증인”이 되고, 그 분의 이야기를 전하라는 하나님의 명령을 듣고 어떤 생각이 들었나요? "
 
-#: functions/zume-content.php:1213
+#: functions/zume-content.php:1214
 #, fuzzy
 msgid "Why do you think Jesus chose ordinary people instead of some other way to share His Good News?"
 msgstr "예수님은 왜 다른 방법이 아닌 평범한 사람들을 선택해 자신의 좋은 소식을 전하도록 했을까요?"
 
-#: functions/zume-content.php:1215
+#: functions/zume-content.php:1216
 msgid "What would it take for you to feel more comfortable sharing God's Story?"
 msgstr "어떻게 하면 하나님의 이야기를 더 편하게 나눌 수 있을까요?"
 
-#: functions/zume-content.php:1238 template-zume-dashboard.php:398
+#: functions/zume-content.php:1239 template-zume-dashboard.php:398
 msgid "The Gospel"
 msgstr "복음"
 
-#: functions/zume-content.php:1239
+#: functions/zume-content.php:1240
 msgid "One way to share God’s Good News is by telling God’s Story from Creation to Judgement – from the beginning of humankind all the way to the end of this age."
 msgstr "하나님의 복음을 전하는 한 가지 방법은 창조부터 심판까지, 인류의 시작부터 이 시대의 끝까지의 하나님 이야기를 들려주는 것입니다."
 
-#: functions/zume-content.php:1271
+#: functions/zume-content.php:1272
 msgid "Zúme Video Scripts: The Gospel"
 msgstr "줌 영상 스크립트 : 복음"
 
-#: functions/zume-content.php:1280
+#: functions/zume-content.php:1281
 msgid "What do you learn about mankind from this story?"
 msgstr "이 이야기에서 인류에 대해 무엇을 배웠나요?"
 
-#: functions/zume-content.php:1281
+#: functions/zume-content.php:1282
 msgid "What do you learn about God?"
 msgstr "하나님에 대해 무엇을 배웠나요?"
 
-#: functions/zume-content.php:1282
+#: functions/zume-content.php:1283
 msgid "Do you think it would be easier or harder to share God's Story by telling a story like this?"
 msgstr "이런 이야기를 나눔으로써 하나님의 이야기를 나누는 것이 더 쉬워질까요 아니면 더 어려워질까요?"
 
-#: functions/zume-content.php:1295
+#: functions/zume-content.php:1296
 msgid "PRACTICE SHARING GOD'S STORY (45min)"
 msgstr "하나님 이야기 나누기 실천 (45 분)"
 
-#: functions/zume-content.php:1304
+#: functions/zume-content.php:1305
 msgid "Break into groups of two or three people and spend the next 45 minutes practicing telling God's Story. You can use the using the Activity instructions for \"God's Story\" found in your Zúme Guidebook."
 msgstr "2-3 명 그룹으로 나뉜뒤 다음 45 분 동안 하나님의 이야기를 전하는 연습을 해봅니다. 줌 가이드북의 \"하나님의 이야기\" 활동 안내서를 사용하실 수 있습니다."
 
-#: functions/zume-content.php:1329 template-zume-dashboard.php:406
+#: functions/zume-content.php:1330 template-zume-dashboard.php:406
 msgid "Baptism"
 msgstr "세례"
 
-#: functions/zume-content.php:1332
+#: functions/zume-content.php:1333
 #, fuzzy
 msgid "Jesus said, “Go and make disciples of all nations, BAPTIZING them in the name of the Father and of the Son and of the Holy Spirit…”"
 msgstr "예수님이 말씀하시길“가서 모든 민족을 제자로 삼아 아버지와 아들과 성령의 이름으로 세례를 주고...”"
 
-#: functions/zume-content.php:1343
+#: functions/zume-content.php:1344
 msgid "Find the \"Baptism\" section in your Zúme Guidebook, and listen to the audio below."
 msgstr "줌 가이드북에서 \"세례\"과정을 찾은 뒤 아래의 오디오를 듣습니다."
 
-#: functions/zume-content.php:1378
+#: functions/zume-content.php:1379
 msgid "Zúme Video Scripts: Baptism"
 msgstr "줌 영상 스크립트 : 세례"
 
-#: functions/zume-content.php:1386
+#: functions/zume-content.php:1387
 msgid "Have you ever baptized someone?"
 msgstr "다른 사람에게 세례를 준 적이 있습니까?"
 
-#: functions/zume-content.php:1387
+#: functions/zume-content.php:1388
 msgid "Would you even consider it?"
 msgstr "고려해 보겠습니까?"
 
-#: functions/zume-content.php:1388
+#: functions/zume-content.php:1389
 #, fuzzy
 msgid "If the Great Commission is for every follower of Jesus, does that mean every follower is allowed to baptize others? Why or why not?"
 msgstr "지상명령이 예수님의 모든 제자를 위한 것이라면, 그 모든 제자들이 다른 사람에게 세례를 주어도 될까요? 이유는 무엇인가요?"
 
-#: functions/zume-content.php:1401
+#: functions/zume-content.php:1402
 msgid "IMPORTANT REMINDER – Have you been baptized?"
 msgstr "중요 알림 – 세례를 받았습니까?"
 
-#: functions/zume-content.php:1404
+#: functions/zume-content.php:1405
 #, fuzzy
 msgid "If not, then we encourage you to plan this before even one more session of this training. Invite your group to be a part of this important day when you celebrate saying \"yes\" to Jesus."
 msgstr "아직 못받았다면, 본 훈련의 다음 과정으로 넘어가기 전에 세례 계획을 세울 것을 권장합니다. 예수님께 \"네\"라고 대답하는 중요한 날에 당신의 그룹을 초대하여 함께 축하하십시오."
 
-#: functions/zume-content.php:1425
+#: functions/zume-content.php:1426
 msgid "Congratulations on finishing Session 3! "
 msgstr "3과정 수료를 축하합니다!"
 
-#: functions/zume-content.php:1447
+#: functions/zume-content.php:1448
 msgid "Spend time this week practicing God's Story, and then share it with at least one person from your List of 100 that you marked as \"Unbeliever\" or \"Unknown.\""
 msgstr "이번 주엔 하나님의 이야기를 나누는 연습을 한 다음 100 인 명단에서 \"불신자\" 혹은 \"불분명한 자\"로 표시한 사람 중에서 적어도 한 명을 선택해 이야기를 나누십시오."
 
-#: functions/zume-content.php:1454
+#: functions/zume-content.php:1455
 msgid "Ask God who He wants you to train to use the Creation to Judgment story (or some other way to share God's Story). Share this person's name with the group before you go."
 msgstr "하나님께 창조부터 심판까지의 이야기(또는 하나님의 이야기를 나누는 다른 방법)로 누구를 훈련시키기를 원하시는지 물어보십시오. 가기 전에 그 사람의 이름을 그룹과 공유하십시오."
 
-#: functions/zume-content.php:1468
+#: functions/zume-content.php:1469
 msgid "What’s been your Zúme highlight? Tell others about it on social media."
 msgstr "당신에게 있어서 줌 과정의 하이라이트는 무엇입니까? 소셜 미디어를 통해 다른 사람들에게도 알리십시오."
 
-#: functions/zume-content.php:1479
+#: functions/zume-content.php:1480
 msgid "IMPORTANT REMINDER – Your group will be celebrating the Lord's Supper next session. Be sure to remember the supplies (bread and wine / juice)."
 msgstr "중요 알림 – 다음 과정 때 그룹내에서 성찬식을 합니다. 필요한 용품(빵과 와인/주스)을 가져오는 것을 잊지 마십시오."
 
-#: functions/zume-content.php:1512
+#: functions/zume-content.php:1513
 msgid "You were asked to share God’s Story with at least one person from your List of 100 that you marked as \"Unbeliever\" or \"Unknown.\""
 msgstr "당신은 \"불신자\"또는 \"불분명한 자\"로 표시 한 100인 명단에서 한 명 이상에게 하나님의 이야기를 나누도록 요청 받았습니다."
 
-#: functions/zume-content.php:1515
+#: functions/zume-content.php:1516
 msgid "You were encouraged to train someone to use the Creation to Judgement story (or some other way to share God’s Story) with someone."
 msgstr "당신은 창조부터 심판까지의 이야기(또는 하나님의 이야기를 나누는 다른 방법)로 누군가를 훈련시키도록 권장 받았습니다."
 
-#: functions/zume-content.php:1534
+#: functions/zume-content.php:1535
 msgid "In this session, you'll learn how God's plan is for every follower to multiply! You’ll discover how disciples multiply far and fast when they start to see where God’s Kingdom isn’t. And, you'll learn another great tool for inviting others into God's family is as simple as telling our story."
 msgstr "이 과정에서 당신은 하나님이 어떻게 모든 제자들이 배가하도록 계획하셨는 지에 대해 배우게 됩니다. 하나님 나라가 없는 곳을 보기 시작한 제자들이 어떻게 빠르고도 멀리 배가해 나가는지에 대해서도 알게 될 것입니다. 이 외에, 다른 사람들을 하나님 가족으로 초대하는 데 우리 자신의 이야기를 나누는 것처럼 간단한 또 하나의 훌륭한 방법을 배우게 될 것입니다.   "
 
-#: functions/zume-content.php:1559
+#: functions/zume-content.php:1560
 msgid "3-Minute Testimony"
 msgstr "3 분 간증"
 
-#: functions/zume-content.php:1562
+#: functions/zume-content.php:1563
 msgid "As followers of Jesus, we are “witnesses\" for Him, because we “testify” about the impact Jesus has had on our lives. Your story of your relationship with God is called your Testimony. It's powerful, and it's something no one can share better than you."
 msgstr "예수님을 따르는 사람들인 우리는 그 분의 \"증인\"입니다. 우리가 예수님이 우리 삶에 행하신 영향을 증거하고 있기 때문입니다. 하나님과 당신의 관계는 당신의 간증이라고 합니다. 이는 강력한 것으로, 다른 어떤 사람도 당신보다 더 잘 나눌 수 없습니다.  "
 
-#: functions/zume-content.php:1573
+#: functions/zume-content.php:1574
 msgid "Find the \"3-Minute Testimony\" section in your Zúme Guidebook, and listen to the audio below."
 msgstr "줌 가이드북에서 \"3 분 간증\"과정을 찾은 뒤 아래의 오디오를 듣습니다."
 
-#: functions/zume-content.php:1608
+#: functions/zume-content.php:1609
 msgid "Zúme Video Scripts: Testimony"
 msgstr "줌 영상 스크립트 : 간증"
 
-#: functions/zume-content.php:1621
+#: functions/zume-content.php:1622
 msgid "Practice Sharing your Testimony (45min)"
 msgstr "간증 나누기 연습 (45 분)"
 
-#: functions/zume-content.php:1631
+#: functions/zume-content.php:1632
 msgid "Break into groups of two or three and and spend the next 45 minutes practicing sharing your Testimony using the Activity instructions on page 15 of your Zúme Guidebook."
 msgstr "2-3명의 그룹으로 나뉜 뒤, 다음 45분 동안 줌 가이드북의 15페이지에 있는 활동 안내서를 참고하여 간증 나누기 연습을 하십시오. "
 
-#: functions/zume-content.php:1656
+#: functions/zume-content.php:1657
 msgid "What is God's greatest blessing for His children? Making disciples who multiply!"
 msgstr "하나님이 그 분의 자녀들에게 준 가장 큰 축복은 무엇입니까? 배가하는 제자를 삼으십시오!"
 
-#: functions/zume-content.php:1658
+#: functions/zume-content.php:1659
 #, fuzzy
 msgid "What if you could learn a simple pattern for making not just one follower of Jesus but entire spiritual families who multiply for generations to come?"
 msgstr "\n"
 "예수를 따르는 한 사람뿐 아니라 여러 세대가 다가올 모든 영적 가족을 만드는 간단한 패턴을 배울 수 있다면 어떨까요?"
 
-#: functions/zume-content.php:1690
+#: functions/zume-content.php:1691
 msgid "Zúme Video Scripts: Greatest Blessing"
 msgstr "줌 영상 스크립트 : 가장 큰 축복"
 
-#: functions/zume-content.php:1701
+#: functions/zume-content.php:1702
 #, fuzzy
 msgid "Is this the pattern you were taught when you first began to follow Jesus? If not, what was different?"
 msgstr "본 패턴이 당신이 처음 예수님을 따르기 시작할 때 배운 것이 맞나요? 아니라면, 어떤 점이 다른가요?"
 
-#: functions/zume-content.php:1703
+#: functions/zume-content.php:1704
 msgid "After you came to faith, how long was it before you began to disciple others?"
 msgstr "믿음을 가진 후 다른 사람들을 제자로 삼기까지 당신은 시간이 얼마나 걸렸나요?"
 
-#: functions/zume-content.php:1704
+#: functions/zume-content.php:1705
 msgid "What do you think would happen if new followers started sharing and discipling others, immediately?"
 msgstr "새로운 제자들이 바로 다른 사람들에게 전하며 제자 삼는다면 어떨까요?"
 
-#: functions/zume-content.php:1729
+#: functions/zume-content.php:1730
 msgid "What do ducklings have to do with disciple making? They lead and follow at the same time."
 msgstr "새끼 오리들은 제자 삼기와 어떤 연관이 있나요? 그들은 따르는 동시에 인도합니다."
 
-#: functions/zume-content.php:1761
+#: functions/zume-content.php:1762
 msgid "Zúme Video Scripts: Duckling Discipleship"
 msgstr "줌 영상 스크립트 : 새끼 오리 제자훈련"
 
-#: functions/zume-content.php:1772
+#: functions/zume-content.php:1773
 msgid "What is one area of discipleship (reading/understanding the Bible, praying, sharing God's Story, etc.) that you want to learn more about? Who is someone that could help you learn?"
 msgstr "제자 훈련 (성경 읽기 및 이해, 기도, 하나님의 이야기 등)에서 더 배우고 싶은 영역은 무엇입니까? 배우는 데 도움을 줄 수 사람은 누구인가요?"
 
-#: functions/zume-content.php:1774
+#: functions/zume-content.php:1775
 msgid "What is one area of discipleship that you feel you could share with others? Who is someone that you could share with?"
 msgstr "제자 훈련 중에서 다른 사람들과 나눌 수 있다고 느끼는 한 영역은 무엇입니까? 누구하고 나눌 수 있는가요?"
 
-#: functions/zume-content.php:1798
+#: functions/zume-content.php:1799
 msgid "Have you ever stopped to think about where God's Kingdom... isn't?"
 msgstr "하나님의 나라가 없는 곳에 대해 더이상 생각하지 않았던 적이 있나요?"
 
-#: functions/zume-content.php:1800
+#: functions/zume-content.php:1801
 msgid "Have you ever visited a home or a neighborhood or even a city where it seemed as if God was just... missing? These are usually the places where God wants to work the most."
 msgstr "하나님이 부재하는 것 같은 집, 이웃, 심지어 도시를 방문한 적이 있나요? 이런 곳들은 하나님이 가장 일하고 싶어하시는 곳입니다. "
 
-#: functions/zume-content.php:1832
+#: functions/zume-content.php:1833
 msgid "Zúme Video Scripts: Eyes to See"
 msgstr "줌 영상 스크립트 :볼 수 있는 눈 "
 
-#: functions/zume-content.php:1841
+#: functions/zume-content.php:1842
 msgid "Who are you more comfortable sharing with -- people you already know or people you haven't met, yet?"
 msgstr "이미 알고있는 사람 혹은 아직 만나보지 못한 사람, 당신은 이들 중 누구하고 더욱 편하게 나눌 수 있나요?"
 
-#: functions/zume-content.php:1843
+#: functions/zume-content.php:1844
 msgid "Why do you think that is?"
 msgstr "그렇게 생각하는 이유는 무엇인가요?"
 
-#: functions/zume-content.php:1844
+#: functions/zume-content.php:1845
 msgid "How could you get better at sharing with people you're less comfortable with?"
 msgstr "덜 편한 사람들과 잘 나누려면 어떻게 해야 할까요?"
 
-#: functions/zume-content.php:1866
+#: functions/zume-content.php:1867
 msgid "The Lord's Supper"
 msgstr "성찬"
 
-#: functions/zume-content.php:1869
+#: functions/zume-content.php:1870
 #, fuzzy
 msgid "Jesus said, “I am the living bread that came down from heaven. Whoever eats this bread will live forever. This bread is my flesh, which I will give for the life of the world.”"
 msgstr "예수님이 말씀하시길, \"나는 하늘에서 내려온 살아 있는 떡이니 사람이 이 떡을 먹으면 영생하리라. 내가 줄 떡은 곧 세상의 생명을 위한 내 살이니라 하시니라.\""
 
-#: functions/zume-content.php:1880
+#: functions/zume-content.php:1881
 msgid "Find \"The Lord's Supper\" section in your Zúme Guidebook, and listen to the audio below."
 msgstr "줌 가이드 북에서 \"성찬\"과정을 찾은 뒤, 아래의 오디오를 듣습니다."
 
-#: functions/zume-content.php:1915
+#: functions/zume-content.php:1916
 msgid "Zúme Video Scripts: Lord's Supper"
 msgstr "줌 영상 스크립트 :성찬"
 
-#: functions/zume-content.php:1928
+#: functions/zume-content.php:1929
 msgid "Practice the Lord's Supper (10min)"
 msgstr "성찬식을 가지십시오 (10 분)"
 
-#: functions/zume-content.php:1938
+#: functions/zume-content.php:1939
 msgid "Spend the next 10 minutes celebrating The Lord's Supper with your group using the pattern on page 15 of your Zúme Guidebook."
 msgstr "다음 10 분 동안에는 줌 가이드 북 15 페이지의 패턴을 사용하여, 그룹과 함께 성찬을 축하하십시오."
 
-#: functions/zume-content.php:1957
+#: functions/zume-content.php:1958
 msgid "Congratulations on finishing Session 4!"
 msgstr "4과정 수료를 축하합니다!"
 
-#: functions/zume-content.php:1966
+#: functions/zume-content.php:1967
 msgid "Spend time this week practicing your 3-Minute Testimony, and then share it with at least one person from your List of 100 that you marked as \"Unbeliever\" or \"Unknown.\""
 msgstr "이번 주엔 당신의 3 분 간증을 훈련하고, 100인 명단에서 \"불신자\" 혹은 \"불분명한 자\"로 표시한 사람들 중 한 명 이상에게 나누십시오. "
 
-#: functions/zume-content.php:1973
+#: functions/zume-content.php:1974
 msgid "Ask God who He wants you to train with the 3-Minute Testimony tool. Share this person's name with the group before you go."
 msgstr "하나님께 당신의 3 분 간증 도구로 누구를 훈련시키기를 원하시는지 물어보십시오. 가기 전에 그 사람의 이름을 그룹과 공유하십시오."
 
-#: functions/zume-content.php:1987 functions/zume-content.php:2998
+#: functions/zume-content.php:1988 functions/zume-content.php:2999
 msgid "What’s the best thing you got today? Share about it on social media."
 msgstr "오늘 가장 좋았던 것은 무엇입니까? 소셜 미디어에 공유해보십시오."
 
-#: functions/zume-content.php:2019
+#: functions/zume-content.php:2020
 msgid "You were asked to share your 3-Minute Testimony with at least one person on your List of 100."
 msgstr "당신은 자신의 3 분 간증을 100인 명단에 있는 한 명 이상과 공유하도록 요청 받았습니다."
 
-#: functions/zume-content.php:2021
+#: functions/zume-content.php:2022
 msgid "You were encouraged to train someone else with the 3-Minute Testimony tool."
 msgstr "당신은 3 분 간증 도구를 사용하여 다른 사람을 훈련시키도록 권장 받았습니다."
 
-#: functions/zume-content.php:2037
+#: functions/zume-content.php:2038
 #, fuzzy
 msgid "In this session, you’ll learn how Prayer Walking is a powerful way to prepare a neighborhood for Jesus, and you'll learn a simple but powerful pattern for prayer that will help you meet and make new disciples along the way."
 msgstr "이 과정에서는 걷기 기도가 어떻게 예수님을 위해 이웃을 준비시키는 강력한 방법으로 사용되는 지에 대해 배우고, 길에서 새로운 제자를 만나고 삼는 데 도움을 주는 간단하면서도 강력한 기도 패턴을 배우게 됩니다.  "
 
-#: functions/zume-content.php:2049
+#: functions/zume-content.php:2050
 msgid "Listen and Read Along (15min)"
 msgstr "듣고 읽기 (15 분)"
 
-#: functions/zume-content.php:2058 template-zume-dashboard.php:470
+#: functions/zume-content.php:2059 template-zume-dashboard.php:470
 msgid "Prayer Walking"
 msgstr "걷기 기도"
 
-#: functions/zume-content.php:2061
+#: functions/zume-content.php:2062
 msgid "Prayer Walking is a simple way to obey God’s command to pray for others. And it's just what it sounds like – praying to God while walking around!"
 msgstr "걷기 기도는 다른 사람들을 위해 기도하라는 하나님의 명령에 순종하는 간단한 방법입니다. 말 그대로- 걸으면서 하나님께 기도드리는 것입니다!"
 
-#: functions/zume-content.php:2072
+#: functions/zume-content.php:2073
 msgid "Find the \"Prayer Walking\" section in your Zúme Guidebook, and listen to the audio below."
 msgstr "줌 가이드 북에서 \"걷기 기도\"과정을 찾은 뒤 아래의 오디오를 듣습니다."
 
-#: functions/zume-content.php:2107
+#: functions/zume-content.php:2108
 msgid "Zúme Video Scripts: Prayer Walking"
 msgstr "줌 영상 스크립트 :걷기 기도"
 
-#: functions/zume-content.php:2161
+#: functions/zume-content.php:2162
 msgid "Zúme Video Scripts: Person of Peace"
 msgstr "줌 영상 스크립트 : 평화의 사람"
 
-#: functions/zume-content.php:2171
+#: functions/zume-content.php:2172
 msgid "Can someone who has a \"bad reputation\" (like the Samaritan woman or the demon-possessed man in the Gadarenes) really be a Person of Peace? Why or why not?"
 msgstr "\"악평\"(사마리아 여인이​​나 거라사인의 귀신 들린 남자처럼)을 가진 사람도 실제로 평화의 사람이 될 수 있을까요? 이유는 무엇인가요?"
 
-#: functions/zume-content.php:2174
+#: functions/zume-content.php:2175
 msgid "What is a community or segment of society near you that seems to have little (or no) Kingdom presence? How could a Person of Peace (someone who is OPEN, HOSPITABLE, KNOWS OTHERS and SHARES) accelerate the spread of the Gospel in that community?"
 msgstr "당신의 주변에서 하나님 나라 임재가 적어보이는(혹은 없어보이는) 지역 혹은 부분적 사회는 무엇인가요? 평화의 사람(열린 마음인, 환대하는, 다른 사람들을 알고 있는, 나누는 자)은 어떻게 그 지역에서 복음의 전파를 가속화 할 수 있을까요?    "
 
-#: functions/zume-content.php:2190
+#: functions/zume-content.php:2191
 msgid "Practice the B.L.E.S.S. Prayer (15min)"
 msgstr "B.L.E.S.S. 기도 연습 (15 분)"
 
-#: functions/zume-content.php:2200
+#: functions/zume-content.php:2201
 msgid "Break into groups of two or three and practicing the B.L.E.S.S. Prayer. The prayer pattern can be found in the Zúme Guidebook. Practice praying the five areas of the B.L.E.S.S. Prayer."
 msgstr "2-3명 그룹으로 나뉘어 B.L.E.S.S.기도를 연습하십시오. 기도 패턴은 줌 가이드북에서 찾을 수 있습니다. B.L.E.S.S.기도의 다섯 영역 기도를 연습하십시오. "
 
-#: functions/zume-content.php:2216
+#: functions/zume-content.php:2217
 msgid "Prayer Walking (60-90min)"
 msgstr "걷기 기도 (60-90 분)"
 
-#: functions/zume-content.php:2226
+#: functions/zume-content.php:2227
 msgid "Break into groups of two or three and go out into the community to practice Prayer Walking."
 msgstr "2-3 명 그룹으로 나뉘어 지역 사회로 나가 걷기 기도를 훈련하십시오."
 
-#: functions/zume-content.php:2227
+#: functions/zume-content.php:2228
 msgid "Choosing a location can be as simple as walking outside from where you are now, or you could plan to go to a specific destination."
 msgstr "지역 선정은 당장 현재 있는 곳에서 밖으로 나가 걷 듯 간단할 수 도 있고, 특정 지역을 목표로 삼아 미리 계획할 수도 있습니다. "
 
-#: functions/zume-content.php:2228
+#: functions/zume-content.php:2229
 msgid "Go as God leads, and plan on spending 60-90 minutes on this activity."
 msgstr "하나님의 인도하심을 따르십시오. 본 활동에 60-90 분을 사용할 것을 계획하십시오."
 
-#: functions/zume-content.php:2237
+#: functions/zume-content.php:2238
 msgid "The session ends with a prayer walking activity."
 msgstr "본 과정은 걷기 기도 활동으로 마무리합니다."
 
-#: functions/zume-content.php:2239
+#: functions/zume-content.php:2240
 msgid "Read through the Obey, Share, and Pray sections, below, before you head out!"
 msgstr "나가기 전에 순종, 나눔 및 기도 과정을 읽으십시오!"
 
-#: functions/zume-content.php:2253
+#: functions/zume-content.php:2254
 msgid "Spend time this week practicing Prayer Walking by going out alone or with a small group at least once."
 msgstr "이번 주에는 혼자 또는 소그룹과 함께 한 번 이상 걷기 기도 연습을 하십시오. "
 
-#: functions/zume-content.php:2260
+#: functions/zume-content.php:2261
 msgid "Spend time asking God who He might want you to share the Prayer Walking tool with before your group meets again. Share this person’s name with the group before you go."
 msgstr "다음 모임 전까지 걷기 기도 도구를 누구와 나누기를 원하시는 지 하나님께 물어보십시오. 가기 전에 그 사람의 이름을 그룹과 공유하십시오."
 
-#: functions/zume-content.php:2267
+#: functions/zume-content.php:2268
 msgid "Before you go out on your Prayer Walking activity, be sure to pray with your group to end your time together. Thank God that He loves the lost, the last and the least – including us! Ask Him to prepare your heart and the heart of those you'll meet during your walk to be open to His work."
 msgstr "걷기 기도 활동을 시작하기 전에 그룹과 함께 기도로 모임을 마무리하십시오. 잃어버린 자, 나중된 자이고 작은 자(우리를 포함)를 사랑하시는 하나님께 감사하십시오! 당신의 마음이 준비되고, 걸으며 만나게 될 사람들이 그 분의 일에 마음이 열려 있도록 하나님께 간구하십시오. "
 
-#: functions/zume-content.php:2274
+#: functions/zume-content.php:2275
 msgid "Take a picture of something you see on your prayer walk and post it on social media. "
 msgstr "걷기 기도를 하면서 본 것을 사진으로 찍어 소셜 미디어에 공유하십시오."
 
-#: functions/zume-content.php:2304
+#: functions/zume-content.php:2305
 msgid "You were asked to spend some time Prayer Walking"
 msgstr "당신은 걷기 기도 시간을 가지도록 요청 받았습니다."
 
-#: functions/zume-content.php:2305
+#: functions/zume-content.php:2306
 msgid "You were encouraged to share the Prayer Walking tool with someone else."
 msgstr "당신은 걷기 기도 도구를 다른 사람과 공유하도록 권장 받았습니다."
 
-#: functions/zume-content.php:2314
+#: functions/zume-content.php:2315
 #, fuzzy
 msgid "Pray and thank God for the results, ask Him to help when you find it hard to obey, and invite His Holy Spirit to lead your time together."
 msgstr "결과에 대해 하나님께 감사 기도드리고, 순종하는 것에 어려움을 느낄 때 그 분께 도움을 청하십시오. 함께 하는 시간을 인도해주시도록 성령님을 초대하십시오."
 
-#: functions/zume-content.php:2321
+#: functions/zume-content.php:2322
 msgid "In this session, you’ll learn how God uses faithful followers – even if they're brand new – much more than ones with years of knowledge and training who just won't obey. And you'll get a first look at a way to meet together that helps disciples multiply even faster."
 msgstr "이 과정에서는 하나님이 어떻게 신실한 제자들을- 그들이 신입일지라도- 수년간 지식과 훈련을 축적하고도 순종하지 않는 자들보다도 더 많이 사용해주시는 지 배우게 됩니다. 그리고 제자들이 더욱 빨리 배가되는 데 도움을 주는 방법을 보게 될 것입니다."
 
-#: functions/zume-content.php:2342
+#: functions/zume-content.php:2343
 msgid "When we help multiply disciples, we need to make sure we're reproducing the right things. It's important what disciples know – but it's much more important what they DO with what they know."
 msgstr "우리는 제자의 배가를 도우면서, 바른 것을 재생하고 있는지 꼭 확인해야 합니다. 제자들이 아는 것도 중요하지만, 그들이 아는 것으로 무엇을 하는지가 더욱 중요합니다. "
 
-#: functions/zume-content.php:2374
+#: functions/zume-content.php:2375
 msgid "Zúme Video Scripts: Faithfulness"
 msgstr "줌 영상 스크립트 : 신실함"
 
-#: functions/zume-content.php:2381
+#: functions/zume-content.php:2382
 msgid "Think about God's commands that you already know. How \"faithful\" are you in terms of obeying and sharing those things?"
 msgstr "당신이 이미 알고 있는 하나님의 명령에 대해 생각해보십시오. 그 명령들에 순종하며 나누는 면에서 당신은 얼마나“신실”한가요?"
 
-#: functions/zume-content.php:2402
+#: functions/zume-content.php:2403
 msgid "3/3 Groups Format"
 msgstr "3/3 그룹 양식"
 
-#: functions/zume-content.php:2455
+#: functions/zume-content.php:2456
 msgid "Zúme Video Scripts: 3/3 Group"
 msgstr "줌 영상 스크립트 : 3/3 그룹"
 
-#: functions/zume-content.php:2464
+#: functions/zume-content.php:2465
 msgid "Did you notice any differences between a 3/3 Group and a Bible Study or Small Group you've been a part of (or have heard about) in the past? If so, how would those differences impact the group?"
 msgstr "3/3 그룹과 당신이 참여했던(혹은 들었던) 성경 공부나 소그룹의 차이점을 발견했나요? 그렇다면, 그런 차이점이 그룹에 어떤 영향을 미치는가요?"
 
-#: functions/zume-content.php:2467
+#: functions/zume-content.php:2468
 #, fuzzy
 msgid "Could a 3/3 Group be considered a Simple Church? Why or why not?"
 msgstr "3/3 그룹을 단순한 교회로 보아도 될까요? 이유는 무엇인가요?"
 
-#: functions/zume-content.php:2486
+#: functions/zume-content.php:2487
 msgid "Congratulations on finishing Session 6!"
 msgstr "6과정 수료를 축하합니다!"
 
-#: functions/zume-content.php:2507
+#: functions/zume-content.php:2508
 msgid "Spend time this week practicing Faithfulness by obeying and sharing at least one of God's commands that you already know."
 msgstr "이번 주에 당신이 알고 있는 하나님의 명령 중 한 가지 이상에 순종하고 나눔으로써 신실함을 연습해보는 시간을 가지십시오."
 
-#: functions/zume-content.php:2514
+#: functions/zume-content.php:2515
 msgid "Think about what you have heard and learned about Faithfulness in this session, and ask God who He wants you to share it with. Share this person’s name with the group before you go."
 msgstr "이 과정에서 신실함에 관해 듣고 배운 것을 생각하고, 그것을 누구하고 나누기를 원하시는지 하나님께 물어보십시오. 가기 전에 그 사람의 이름을 그룹과 공유하십시오."
 
-#: functions/zume-content.php:2521
+#: functions/zume-content.php:2522
 msgid "Thank God for His Faithfulness – for fulfilling every promise He's ever made. Ask Him to help you and your group become even more Faithful to Him."
 msgstr "모든 약속을 이뤄주신 신실하신 하나님께 감사드립니다. 당신과 그룹이 그 분께 더욱 신실할 수 있도록 간구하십시오.   "
 
-#: functions/zume-content.php:2528
+#: functions/zume-content.php:2529
 msgid "Got a Christian brother or sister who might like Zúme? Share it with them on social media."
 msgstr "줌을 좋아할 만한 기독교인 형제, 자매가 있나요? 소셜 미디어로 그들에게 공유하십시오."
 
-#: functions/zume-content.php:2559
+#: functions/zume-content.php:2560
 msgid "You were asked to practice Faithfulness by obeying and sharing one of God's commands."
 msgstr "당신은 하나님의 명령 중 하나에 순종하고 나눔으로써 신실함을 연습하도록 요청 받았습니다."
 
-#: functions/zume-content.php:2562
+#: functions/zume-content.php:2563
 msgid "You were encouraged to share the importance of Faithfulness with someone else."
 msgstr "당신은 신실함의 중요성을 다른 사람과 나누도록 권장 받았습니다."
 
-#: functions/zume-content.php:2572
+#: functions/zume-content.php:2573
 #, fuzzy
 msgid "Pray and thank God for the group's commitment to faithfully following Jesus and invite God's Holy Spirit to lead your time together."
 msgstr "신실하게 예수님을 따르려는 그룹의 헌신에 대하여 하나님께 감사 기도를 드리십시오. 모임을 인도해주시도록 하나님의 성령을 초대하십시오. "
 
-#: functions/zume-content.php:2579
+#: functions/zume-content.php:2580
 msgid "In this session, you’ll learn a Training Cycle that helps disciples go from one to many and turns a mission into a movement. You'll also practice the 3/3 Groups Format and learn how the way you meet can impact the way you multiply."
 msgstr "이 과정에서는 제자들이 한 사람으로부터 많은 사람에게로, 사명에서 운동으로 움직이도록 도와주는 훈련 사이클에 대해 배우게 됩니다. 또한 3/3 그룹 양식을 연습하고, 당신의 만나는 방식이 당신의 배가에 영향줄 수 있다는 것을 배우게 됩니다."
 
-#: functions/zume-content.php:2601
+#: functions/zume-content.php:2602
 msgid "Have you ever learned how to ride a bicycle? Have you ever helped someone else learn? If so, chances are you already know the Training Cycle."
 msgstr "자전거 타기를 배운 적이 있습니까? 다른 사람이 배우는 것을 도와 준 적이 있습니까? 그렇다면, 당신은 이미 훈련 사이클을 알고있을 가능성이 있습니다."
 
-#: functions/zume-content.php:2612
+#: functions/zume-content.php:2613
 msgid "Find the \"Training Cycle\" section in your Zúme Guidebook. When you're ready, watch this video, and then discuss the questions below."
 msgstr "줌 가이드 북에서 \"훈련 사이클\"과정을 찾으십시오. 준비가 되면, 본 영상을 보고 아래 질문에 대해 토론하십시오."
 
-#: functions/zume-content.php:2647
+#: functions/zume-content.php:2648
 msgid "Zúme Video Scripts: Training Cycle"
 msgstr "줌 영상 스크립트 : 훈련 사이클"
 
-#: functions/zume-content.php:2655
+#: functions/zume-content.php:2656
 msgid "Have you ever been a part of a Training Cycle?"
 msgstr "훈련 사이클에 참여한 적이 있습니까?"
 
-#: functions/zume-content.php:2656
+#: functions/zume-content.php:2657
 msgid "Who did you train? Or who trained you?"
 msgstr "누구를 훈련시켰나요? 아니면 누가 당신을 훈련시켜주었나요?"
 
-#: functions/zume-content.php:2658
+#: functions/zume-content.php:2659
 msgid "Could the same person be at different parts of the Training Cycle while learning different skills?"
 msgstr "동일한 사람이 다른 기술을 배우는 동시에 훈련 사이클의 다른 부분에 속해 있어도 될까요?"
 
-#: functions/zume-content.php:2660
+#: functions/zume-content.php:2661
 msgid "What would it look like to train someone like that?"
 msgstr "그런 사람을 훈련시키는 것은 어떤 모습일까요?"
 
-#: functions/zume-content.php:2674
+#: functions/zume-content.php:2675
 msgid "Practice and Discuss (90min)"
 msgstr "연습과 토론 (90 분)"
 
-#: functions/zume-content.php:2684
+#: functions/zume-content.php:2685
 msgid "Have your entire group spend the next 90 minutes practicing the 3/3 Groups Format. Refer to the Zúme Guidebook if you need a reminder about the pattern."
 msgstr "모든 그룹 구성원들이 다음 90분 동안 3/3 그룹 양식을 연습하도록 하십시오. 패턴에 대한 제시가 필요하면 줌가이드 북을 참조하십시오."
 
-#: functions/zume-content.php:2694 functions/zume-content.php:2935
-#: functions/zume-content.php:3765
+#: functions/zume-content.php:2695 functions/zume-content.php:2936
+#: functions/zume-content.php:3766
 msgid "PRACTICE"
 msgstr "연습"
 
-#: functions/zume-content.php:2699
+#: functions/zume-content.php:2700
 msgid "LOOK BACK – Use last week's Session Challenges to practice \"Faithfulness\" in the Look Back section."
 msgstr "돌아 보기 – 지난주 과제를 사용하여 돌아 보기 과정의 \"신실함\"을 연습해보십시오."
 
-#: functions/zume-content.php:2702
+#: functions/zume-content.php:2703
 msgid "LOOK UP – Use Mark 5:1-20 as your group's reading passage and answer questions 1-4 during the Look Up section."
 msgstr "위를 보기 – 마가복음 5 : 1-20을 그룹 통독 구절로 사용하고, 위를 보기 과정의 1-4번 질문에 답하십시오."
 
-#: functions/zume-content.php:2705
+#: functions/zume-content.php:2706
 msgid "LOOK FORWARD – Use questions 5, 6, and 7 in the Look Forward section to develop how you will Obey, Train and Share."
 msgstr "앞을 보기– 앞을 보기 과정의 질문 5,6,7을 사용하여 순종, 훈련 및 나눔의 방법을 개발하십시오."
 
-#: functions/zume-content.php:2709 functions/zume-content.php:2952
+#: functions/zume-content.php:2710 functions/zume-content.php:2953
 msgid "REMEMBER – Each section should take about 1/3 (or 30 minutes) of your practice time."
 msgstr "기억하기 – 각 과정의 1/3 (또는 30 분)은 연습 시간으로 사용합니다."
 
-#: functions/zume-content.php:2718
+#: functions/zume-content.php:2719
 msgid "What did you like best about the 3/3 Group? Why?"
 msgstr "3/3 그룹에서 가장 좋았던 점은 무엇입니까? 이유는 무엇인가요?"
 
-#: functions/zume-content.php:2719
+#: functions/zume-content.php:2720
 msgid "What was the most challenging? Why?"
 msgstr "가장 어려웠던 점은 무엇입니까? 이유는 무엇인가요?"
 
-#: functions/zume-content.php:2737
+#: functions/zume-content.php:2738
 msgid "Congratulations on finishing Session 7!"
 msgstr "7과정 수료를 축하합니다!"
 
-#: functions/zume-content.php:2745
+#: functions/zume-content.php:2746
 msgid "Spend time this week obeying, training, and sharing based on the commitments you've made during your 3/3 Group practice."
 msgstr "이번 주에는 3/3 그룹 연습에서 한 약속에 따라 순종, 훈련 및 나눔의 시간을 보내십시오."
 
-#: functions/zume-content.php:2752
+#: functions/zume-content.php:2753
 msgid "Pray and ask God who He wants you to share the 3/3 Group format with before your group meets again. Share this person’s name with the group before you go."
 msgstr "다음 그룹 모임 전까지 누구와 3/3 그룹 양식을 나누기를 원하시는지 하나님께 기도로 물어보십시오. 가기 전에 그 사람의 이름을 그룹과 공유하십시오."
 
-#: functions/zume-content.php:2759
+#: functions/zume-content.php:2760
 msgid "Thank God that He loves us enough to invite us into His most important work – growing His family!"
 msgstr "하나님께서 그분의 가장 중요한 일, 즉 그분의 가정을 확대하는 일에 우리를 초대할만큼 사랑해주심에 감사를 드리십시오."
 
-#: functions/zume-content.php:2766
+#: functions/zume-content.php:2767
 msgid "Hop on LIVE and tell the world what you just learned and where they could learn it too."
 msgstr "인터넷에 접속하여 LIVE로 세상에 방금 배운 내용 및 그들이 배울 수 있는 곳도 함께 알리십시오."
 
-#: functions/zume-content.php:2798
+#: functions/zume-content.php:2799
 msgid "You were asked to practice obeying, training, and sharing based on your commitments during 3/3 Group practice."
 msgstr "3/3 그룹 연습에서 한 약속에 따라 순종, 훈련 및 나눔을 연습하도록 요청 받았습니다."
 
-#: functions/zume-content.php:2801
+#: functions/zume-content.php:2802
 msgid "You were encouraged to share the 3/3 Group Format with someone else."
 msgstr "3/3 그룹 양식을 다른 사람과 공유하도록 권장 받았습니다."
 
-#: functions/zume-content.php:2811
+#: functions/zume-content.php:2812
 #, fuzzy
 msgid "Pray and thank God for giving your group the energy, the focus and the faithfulness to come so far in this training. Ask God to have His Holy Spirit remind everyone in the group that they can do nothing without Him!"
 msgstr "훈련을 시작해서 지금까지 그룹에 활력과 집중력, 신실함을 주신 하나님께 감사기도 드리십시오. 하나님의 성령께 그분 없이는 아무 것도 할 수 없었음을 그룹 구성원들이 깨닫게 해달라고 간구하십시오."
 
-#: functions/zume-content.php:2818
+#: functions/zume-content.php:2819
 #, fuzzy
 msgid "In this session, you’ll learn how Leadership Cells prepare followers in a short time to become leaders for a lifetime. You'll learn how serving others is Jesus' strategy for leadership. And you'll spend time practicing as a 3/3 Group, again."
 msgstr "이 과정에서는 리더십 소그룹이 어떻게 제자들을 단기간에 평생 지도자로 준비시켜 주는지 그  방법에 대해 배우게 됩니다. 어떻게 다른 사람을 섬기는 것이 예수님의 리더십 전략인지도 배우게 됩니다. 3/3그룹으로 연습의 시간을 갖도록 합니다."
 
-#: functions/zume-content.php:2840
+#: functions/zume-content.php:2841
 #, fuzzy
 msgid "Jesus said, “Whoever wishes to become great among you shall be your servant.”"
 msgstr "예수님은 \"너희 중에 누구든지 크고자 하는 자는 너희를 섬기는 자가 된다\"고 말씀하셨습니다."
 
-#: functions/zume-content.php:2843
+#: functions/zume-content.php:2844
 #, fuzzy
 msgid "Jesus radically reversed our understanding of leadership by teaching us that if we feel called to lead, then we are being called to serve. A Leadership Cell is a way someone who feels called to lead can develop their leadership by practicing serving."
 msgstr "예수님은 지도자의 부름을 받은 것은 즉 섬기는 자의 부름을 받은 것이라며 리더십에 대한 우리의 이해를 근본적으로 뒤바꾸셨습니다. 리더십 소그룹은 지도자로 부름을 받은 자가 섬김의 훈련을 통해 그들의 리더십을 개발할 수 있는 하나의 방법입니다."
 
-#: functions/zume-content.php:2854
+#: functions/zume-content.php:2855
 #, fuzzy
 msgid "Find the \"Leadership Cells\" section in your Zúme Guidebook. When you're ready, watch and discuss this video."
 msgstr "줌 가이드 북에서 \"리더십 소그룹들\"과정을 찾으십시오. 준비가 되면 본 영상을 보고 토론하십시오."
 
-#: functions/zume-content.php:2889
+#: functions/zume-content.php:2890
 #, fuzzy
 msgid "Zúme Video Scripts: Leadership Cells"
 msgstr "줌 영상 스크립트 : 리더십 소그룹들"
 
 #. Maybe this sentance should be ...meeting AND would be... instead of OR?
-#: functions/zume-content.php:2898
+#: functions/zume-content.php:2899
 #, fuzzy
 msgid "Is there a group of followers of Jesus you know that are already meeting or would be willing to meet and form a Leadership Cell to learn Zúme Training?"
 msgstr "당신이 알고 있는 예수님의 제자들 중에는 이미 모임을 가지고 있는 혹은 줌 훈련을 배우기 위해 리더십 소그룹을 구성하고 만나기를 원하는 예수님의 제자들이 있는가요? "
 
-#: functions/zume-content.php:2900
+#: functions/zume-content.php:2901
 msgid "What would it take to bring them together?"
 msgstr "무엇으로 그들을 하나로 모을 수 있을까요? "
 
-#: functions/zume-content.php:2914
+#: functions/zume-content.php:2915
 msgid "Practice 3/3 Group (90min)"
 msgstr "3/3 그룹 연습 (90 분)"
 
-#: functions/zume-content.php:2924
+#: functions/zume-content.php:2925
 msgid "Have your entire group spend the next 90 minutes practicing the 3/3 Groups Format."
 msgstr "다음 90 분 동안 전체 그룹 구성원들과 함께 3/3 그룹 양식을 연습하십시오."
 
-#: functions/zume-content.php:2942
+#: functions/zume-content.php:2943
 msgid "LOOK BACK – Use last session’s Obey, Train, and Share challenges to check-in with each other."
 msgstr "돌아 보기 – 지난 과정의 순종, 훈련 및 나눔 과제를 사용하여 서로 점검하는 시간을 가집니다."
 
-#: functions/zume-content.php:2945
+#: functions/zume-content.php:2946
 msgid "LOOK UP – Use Acts 2:42-47 as your group’s reading passage and answer questions 1- 4."
 msgstr "위를 보기– 사도행전 2 : 42-47을 그룹 통독 구절로 사용하여 질문 1-4에 답하십시오."
 
-#: functions/zume-content.php:2948
+#: functions/zume-content.php:2949
 msgid "LOOK FORWARD – Use questions 5, 6, and 7 to develop how you will Obey, Train and Share."
 msgstr "앞을 보기 – 5, 6, 7 번 문제를 사용하여 순종, 훈련 및 나눔의 방법을 개발하십시오."
 
-#: functions/zume-content.php:2969
+#: functions/zume-content.php:2970
 msgid "Congratulations! You've completed Session 8. "
 msgstr "축하합니다! 8과정을 수료했습니다."
 
-#: functions/zume-content.php:2977
+#: functions/zume-content.php:2978
 msgid "Spend time again this week obeying, sharing, and training based on the commitments you've made during this session's 3/3 Group practice."
 msgstr "이번 주에도 3/3그룹 연습에서 한 약속에 따라 순종, 나눔 및 훈련의 시간을 가집니다."
 
-#: functions/zume-content.php:2984
+#: functions/zume-content.php:2985
 msgid "Pray and ask God who He wants you to share the Leadership Cell tool with before your group meets again. Share this person’s name with the group before you go."
 msgstr "다음 그룹 모임 전까지 리더십 소그룹 도구를 누구와 나누기를 원하시는지 하나님께 기도로 물어보십시오. 가기 전에 그 사람의 이름을 그룹과 공유하십시오."
 
-#: functions/zume-content.php:2991
+#: functions/zume-content.php:2992
 #, fuzzy
 msgid "Thank God for sending Jesus to show us that real leaders are real servants. Thank Jesus for showing us the greatest service possible is giving up our own lives for others."
 msgstr "진정한 섬기는 자가 진정한 지도자임을 예수님을 통해 보게 하신 하나님께 감사드립니다. 최고의 섬김이 다른 사람을 위해 자신의 목숨을 내어주는 것이 될 수도 있음을 보여주신 예수님 감사합니다."
 
-#: functions/zume-content.php:3034
+#: functions/zume-content.php:3035
 msgid "You were asked to practice Obeying, Training, and Sharing based on your commitments during last session's 3/3 Group practice."
 msgstr "당신은 지난 과정의 3/3 그룹 연습에서 한 약속에 따라 순종, 훈련 및 나눔을 연습하도록 요청 받았습니다."
 
-#: functions/zume-content.php:3037
+#: functions/zume-content.php:3038
 msgid "You were encouraged to share the Leadership Cells tool with someone else."
 msgstr "당신은 리더십 소그룹 도구를 다른 사람과 나누도록 권장 받았습니다."
 
-#: functions/zume-content.php:3049
+#: functions/zume-content.php:3050
 #, fuzzy
 msgid "Pray and thank God that His ways are not our ways and His thoughts are not our thoughts. Ask Him to give each member of your group the mind of Christ — always focused on His Father's work. Ask the Holy Spirit to lead your time together and make it the best session yet."
 msgstr "그분의 길이 우리의 길이 아니고, 그분의 생각이 우리의 생각이 아닌 것에 대해 감사드리며 기도하십시오. 그룹의 각 구성원들에게 그리스도의 마음을 주셔서 그들이 항상 그분의 아버지의 일에 집중할 수 있도록 간구하십시오. 성령님을 초청하여 그룹을 인도하게 하시어 최고의 과정이 되도록 하십시오."
 
-#: functions/zume-content.php:3057
+#: functions/zume-content.php:3058
 msgid "In this session, you’ll learn how linear patterns hold back kingdom growth and how Non-Sequential thinking helps you multiply disciples. You'll discover how much time matters in disciple-making and how to accelerate Pace. You’ll learn how followers of Jesus can be a Part of Two Churches to help turn faithful, spiritual families into a growing city-wide body of believers. Finally, you'll learn how a simple Three Month Plan can focus your efforts and multiply your effectiveness in growing God's family exponentially."
 msgstr "이 과정에서는 순차적 패턴이 나라 확장을 어떻게 저애하는지, 그리고 비순차적 생각이 어떻게 제자의 배가를 돕는지에 대해 배우게 됩니다. 제자 삼기에 있어서 시간의 중요성과 속도를 가속화하는 방법에 대해서도 알게 됩니다. 그리고 예수님의 제자들이 어떻게 두 교회의 한 부분이 되어 신실하고 영적인 가정을 성장하는 도시로 변화시킴으로써 신자의 몸을 확장시키는지에 대해서도 배우게 됩니다. 마지막으로, 단순한 3개월 계획이 어떻게 당신의 노력을 집중시킴으로써 하나님의 가족을 기하급수적으로 성장시키며 그 노력들을 배가시켜 주는지에 대해 배우게 됩니다."
 
-#: functions/zume-content.php:3079
+#: functions/zume-content.php:3080
 msgid "When people think about disciples multiplying, they often think of it as a step-by-step process. The problem with that is — that's not how it works best!"
 msgstr "사람들은 종종 제자 배가를 단계적인 과정으로 생각합니다. 그것의 문제점은, 그것이 최선의 작동 방식이 아니라는 것입니다! "
 
-#: functions/zume-content.php:3113
+#: functions/zume-content.php:3114
 msgid "Zúme Video Scripts: Non-Sequential"
 msgstr "줌 영상 스크립트 : 비순차적"
 
-#: functions/zume-content.php:3124
+#: functions/zume-content.php:3125
 msgid "What is the most exciting idea you heard in this video? Why?"
 msgstr "이 영상에서 가장 흥미로웠던 아이디어는 무엇입니까? 이유는 무엇인가요?"
 
-#: functions/zume-content.php:3125
+#: functions/zume-content.php:3126
 msgid "What is the most challenging idea? Why?"
 msgstr "가장 어려웠던 아이디어는 무엇입니까? 이유는 무엇인가요?"
 
-#: functions/zume-content.php:3146
+#: functions/zume-content.php:3147
 msgid "Multiplying matters and multiplying quickly matters even more. Pace matters because where we all spend our eternity — an existence that outlasts time — is determined in the very short time we call “life.“"
 msgstr "배가가 중요하나 신속한 배가는 더욱 중요합니다. 속도가 중요한 것은 우리 모두가 영생을 누릴 곳- 시간을 초월하는 존재가 매우 짧은 소위 말하는 '인생'에 의해 결정되기 때문입니다. "
 
-#: functions/zume-content.php:3180
+#: functions/zume-content.php:3181
 msgid "Zúme Video Scripts: Pace"
 msgstr "줌 영상 스크립트 : 속도"
 
-#: functions/zume-content.php:3191
+#: functions/zume-content.php:3192
 msgid "Why is pace important?"
 msgstr "속도가 왜 중요한가요?"
 
-#: functions/zume-content.php:3193
+#: functions/zume-content.php:3194
 msgid "What do you need to change in your thinking, your actions, or your attitude to be better aligned with God's priority for pace?"
 msgstr "속도에 대한 하나님의 우선 순위에 더 잘 부합하기 위해, 당신은 자신의 생각, 행동 또는 태도를 어떻게 바꾸어야 할까요?"
 
-#: functions/zume-content.php:3195
+#: functions/zume-content.php:3196
 msgid "What is one thing you can do starting this week that will make a difference?"
 msgstr "이번 주에 시작할 수 있는 변화를 위한 한 가지는 무엇일까요?"
 
-#: functions/zume-content.php:3216
+#: functions/zume-content.php:3217
 #, fuzzy
 msgid "Jesus taught us that we are to stay close — to live as a small, spiritual family, to love and give our lives to one another, to celebrate and suffer — together. However, Jesus also taught us to leave our homes and loved ones behind and be willing to go anywhere — and everywhere — to share and start new spiritual families. So how can we do both? When you're ready, watch the video below and discuss the question that follows."
 msgstr "예수님은 우리가 작은 영적인 가족으로 살며, 서로를 사랑하고 삶을 내어주며, 함께 축하하고 고통을 감당하며 친밀한 관계를 가질 것을 가르치셨습니다. 그러나 예수님은 또한 우리에게 집과 사랑하는 사람을 떠나 어디든지 가고, 그 곳에서 새로운 영적 가정을 이루라고 하셨습니다. 그렇다면 어떻게 둘 다 할 수 있을까요? 준비가 되었으면, 아래 영상을 보고 다음 질문에 대해 토론하십시오."
 
-#: functions/zume-content.php:3250
+#: functions/zume-content.php:3251
 msgid "Zúme Video Scripts: Two Churches"
 msgstr "줌 스크립트 : 두 교회"
 
-#: functions/zume-content.php:3260
+#: functions/zume-content.php:3261
 msgid "What are some advantages of maintaining a consistent spiritual family that gives birth to new ones that grow and multiply instead of continually growing a family and splitting it in order to grow?"
 msgstr "새로운 생명을 낳고 성장 및 배가시키는 일관된 영적 가정을 지속하는 것은 계속적으로 가족을 확장하고 또 성장하기 위해 나뉘는 것보다 어떤 이점이 있는가요?  "
 
-#: functions/zume-content.php:3271
+#: functions/zume-content.php:3272
 msgid "Create a Three Month Plan (30min)"
 msgstr "3 개월 계획 작성 (30 분)"
 
-#: functions/zume-content.php:3281
+#: functions/zume-content.php:3282
 msgid "In His Bible, God says, \"I know the plans I have for you, plans to prosper you and not to harm you, plans to give you hope and a future.\" God makes plans, and He expects us to make plans, too. He teaches us through His Word and His work to look ahead, see a better tomorrow, make a plan for how to get there, and then prepare the resources we'll need on the way."
 msgstr "하나님은 성경에서 다음과 같이 말씀하셨습니다. \"너희를 향한 나의 생각을 내가 아나니 평안이요 재앙이 아니니라 너희에게 미래와 희망을 주는 것이니라.\" 하나님은 계획을 세우십니다. 그리고 우리도 계획을 세우기를 기대하십니다. 그분은 자신의 말씀과 일하심으로 우리에게 앞을 보고, 더 나은 내일을 보도록 가르쳐주시며 어떻게 하면 거기에 닿을 수 있는지 계획을 세우고 우리가 가는 동안 필요한 자원을 마련해주십니다.  "
 
-#: functions/zume-content.php:3284
+#: functions/zume-content.php:3285
 msgid "A Three Month Plan is a tool you can use to help focus your attention and efforts and keep them aligned with God's priorities for making disciples who multiply. Spend the next 30 minutes praying over, reading through, and then completing the commitments listed in the Three Month Plan."
 msgstr "3개월 계획은 당신의 노력과 주의력을 집중시켜 배가하는 제자를 삼는 하나님의 우선 순위에 부합하도록 돕는 하나의 도구입니다. 다음 30분 기도와 말씀 통독을 하고, 3개월 계획에 나열된 약속들을 작성하십시오."
 
-#: functions/zume-content.php:3287
+#: functions/zume-content.php:3288
 msgid "You can use the printed version in your Zúme Guidebook or our online version."
 msgstr "인쇄된 줌 가이드북 버전이나 온라인 버전을 사용하실 수 있습니다."
 
-#: functions/zume-content.php:3290
+#: functions/zume-content.php:3291
 msgid "Online \"Three Month Plan\""
 msgstr "온라인 \"3 개월 계획\""
 
-#: functions/zume-content.php:3302
+#: functions/zume-content.php:3303
 msgid "Participants can access their own three month plan on the side column of their dashboard. They can connect their plan with this group by adding the following key:"
 msgstr "참가자들은 자신의 3개월 계획을 대시 보드 옆단에서 접속할 수 있습니다. 다음 키를 추가하여 그들의 계획을 본 그룹과 연결할 수 있습니다:"
 
-#: functions/zume-content.php:3322
+#: functions/zume-content.php:3323
 msgid "Ask God what He specifically wants you to do with the basic disciple-making tools and techniques you have learned over these last nine sessions. You can remember them in terms of the Greatest Blessing."
 msgstr "하나님께 제자 삼기의 기본 도구 및 지난 9개의 과정들에서 배운 기술들을 사용하여 당신이 어떤 구체적인 것들을 행하기를 원하시는지 물어보십시오.  가장 큰 축복의 관점으로 기억해보십시오. "
 
-#: functions/zume-content.php:3326
+#: functions/zume-content.php:3327
 msgid "It's a Blessing to ... S.O.A.P.S. Bible Reading, Accountability Groups, Prayer Cycle"
 msgstr "그것은 ... S.O.A.P.S. 성경 읽기, 책임 그룹, 기도 사이클에 축복입니다"
 
-#: functions/zume-content.php:3329
+#: functions/zume-content.php:3330
 msgid "It's a Great Blessing to ... Share your 3-Minute Testimony and God's Story, Prayer Walking"
 msgstr "그것은... 당신의 3 분 간증과 하나님의 이야기를 나누는 것, 걷기 기도에 큰 축복입니다"
 
-#: functions/zume-content.php:3332
+#: functions/zume-content.php:3333
 msgid "It's a Greater Blessing to ... Start a 3/3rds Group"
 msgstr "그것은... 3 / 3그룹을 시작하는 것에 더 큰 축복입니다"
 
-#: functions/zume-content.php:3335
+#: functions/zume-content.php:3336
 msgid "It's the Greatest Blessing to ... Start a Zúme Group"
 msgstr "그것은... 줌 그룹을 시작하는 것에 가장 큰 축복입니다"
 
-#: functions/zume-content.php:3343
+#: functions/zume-content.php:3344
 msgid "LISTEN"
 msgstr "듣기"
 
-#: functions/zume-content.php:3345
+#: functions/zume-content.php:3346
 msgid "Take at least 10 minutes to be as quiet as possible and listen intently to what God has to say and what He chooses to reveal. Make an effort to hear His voice."
 msgstr "최소 10분 동안은 잠잠히 하나님의 음성에 집중하고 그분이 보여주시려는 것에  주의를 돌리십시오. 그분의 음성을 듣기 위해 노력하십시오."
 
-#: functions/zume-content.php:3351
+#: functions/zume-content.php:3352
 msgid "COMPLETE"
 msgstr "완성"
 
-#: functions/zume-content.php:3354
+#: functions/zume-content.php:3355
 msgid "Use the rest of your time to complete the Three Month Plan worksheet. You can write it out on a piece of paper. If you are logged in to ZúmeProject.com you can fill out your form digitally and link it to your group. Once you login, you’ll find the Three Month Plan under Settings. You can also find the Three Month Plan on your Dashboard."
 msgstr "아래 시간에는 3개월 계획표를 작성하십시오. 종이에  적어도 됩니다. ZúmeProject.com에 로그인을 한 경우, 디지털 양식을 작성하여 그룹과 연결할 수 있습니다. 로그인하면 설정 아래 부분에 있는 3 개월 계획이 보입니다.  3 개월 계획은 대시 보드에서도 찾아볼 수 있습니다."
 
-#: functions/zume-content.php:3357
+#: functions/zume-content.php:3358
 msgid "You do not have to commit to every item, and there is room for other items not already on the list. Do your best to align your commitments to what you have heard God reveal to you about His will."
 msgstr "모든 사항을 다 선택할 필요는 없습니다. 목록에 없는 사항들을 위한 공간도 있습니다. 하나님이 당신한테 보여주신 그분의 뜻에 최대한 부합하는 약속들로 적으시길 바랍니다.  "
 
-#: functions/zume-content.php:3372
+#: functions/zume-content.php:3373
 msgid "Share you Plan (30min)"
 msgstr "계획을 공유하십시오 (30 분)"
 
-#: functions/zume-content.php:3381
+#: functions/zume-content.php:3382
 msgid "In groups of two or three (15 minutes)"
 msgstr "2-3 명 그룹으로 (15 분)"
 
-#: functions/zume-content.php:3383
+#: functions/zume-content.php:3384
 msgid "Take turns sharing your Three Month Plans with each other. Take time to ask questions about things you might not understand about plans and how the others will meet their commitments. Ask them to do the same for you and your plan. Find a training partner(s) that is willing to check in with you to report on progress and challenges and ask questions after 1, 2, 3, 4, 6, 8 and 12 weeks. Commit to doing the same for them."
 msgstr "돌아가면서 서로 자신의 3개월 계획을 나누십시오. 계획에 대해 이해하지 못한 부분이나 다른 사람들은 어떻게 그들의 약속을 이행할 것인지에 대해 물어보는 시간을 가지십시오. 다른 사람들도 당신과 당신의 계획에 대해 이 같이 하도록 요청하십시오. 당신과 함께 진행사항에 대한 보고 및 도전들을 점검하기를 원하는 연습 파트너를 찾으십시오. 1, 2, 3, 4, 6, 8 그리고 12주 후에 질문을 하십시오. 그들을 위해서도 이 같이 하십시오."
 
-#: functions/zume-content.php:3392
+#: functions/zume-content.php:3393
 msgid "In your full training Group (15 minutes)"
 msgstr "전체 훈련 그룹 내 (15 분)"
 
-#: functions/zume-content.php:3394
+#: functions/zume-content.php:3395
 msgid "Discuss and develop a group plan for starting at least two new 3/3 Groups or Zúme Training Groups in your area. Several of your group members may have just completed and saved your individual Three-Month Plans to your Zúme group. On this step, if no one from your group has filled out a digital copy on the website of your Three-Month Plan, it is highly recommended that you do this together now. Just go to the Three-Month Plan under Settings and link the form to your group."
 msgstr "현지에서 최소 2 개의 새로운 3/3 그룹 또는 줌 훈련 그룹을 시작하기 위한 그룹 계획을 논의하고 개발하십시오. 그룹 구성원 중 일부는 이미 각자의 3 개월 계획을 완성하고 본 줌 그룹에 저정했을 수 있습니다. 이 단계에서 만약 당신 그룹에서 아무도 웹사이트에서 3개월 계획 디지털 사본을 작성하지 않았다면, 지금 그들과 함께 작성할 것을 강력히 추천합니다. 설정 아래의 3개월 계획 양식을 링크로 그룹 내에 보내십시오."
 
-#: functions/zume-content.php:3397
+#: functions/zume-content.php:3398
 #, fuzzy
 msgid "Remember, your goal is to start Simple Churches that multiply. 3/3 Groups and Zúme Training Groups are two ways to do that. Discuss and decide whether these new Groups will be connected to an existing local church or network or whether you’ll start a new network out of your Zúme Training Group."
 msgstr "배가하는 단순한 교회를 시작하는 것이 목표임을 명심하십시오. 3/3그룹과 줌 훈련 그룹은 그 것을 가능케 하는 두 가지 방법입니다. 현존하는 지역 교회 혹은 네트워크와 연결된 새로운 그룹을 만들 것인지 아니면 당신의 줌 훈련 그룹으로 새로운 네트워크를 만들 것인지를 논의하고 결정하십시오. "
 
-#: functions/zume-content.php:3411
+#: functions/zume-content.php:3412
 msgid "Congratulations! You've completed Session 9."
 msgstr "축하합니다! 9과정을 수료했습니다."
 
-#: functions/zume-content.php:3420
+#: functions/zume-content.php:3421
 msgid "You may not know it, but you now have more practical training on starting simple churches and making disciples who multiply than many pastors and missionaries around the world!"
 msgstr "당신은 잘 모를 수 있지만, 단순한 교회를 시작하고 배가하는 제자 삼기에 대해 당신은 이미 전 세계의 많은 목사들과 선교사들보다 더 많은 실질적인 훈련을 받았습니다!"
 
-#: functions/zume-content.php:3421
+#: functions/zume-content.php:3422
 msgid "Set aside time on your calendar each week to continue to work on your Three Month Plan, and plan check-ins with your training partner at the end of week 1, 2, 3, 4, 6, 8, and 12. Each time you're together, ask about their results and share yours, making sure you're both working through your plans. Prayerfully consider continuing as an ongoing spiritual family committed to multiplying disciples."
 msgstr "당신의 달력에서 매주 3개월 계획을 위한 시간을 따로 정하십시오. 그리고 1, 2, 3, 4, 6, 8 그리고 12주 주말에 연습 파트너와 함께 계획을 점검해보십시오. 당신의 결과를 그들에게 알려주고 그들의 결과도 물어보아 둘 다 계획을 수행하고 있음을 확인하십시오. 제자 배가에 헌신하고 있는 진행 중인 영적 가정으로서 계속적으로 기도하는 마음으로 배려하십시오."
 
-#: functions/zume-content.php:3429
+#: functions/zume-content.php:3430
 msgid "Pray and ask God who He would have you share Zúme Training with by launching a Leadership Cell of future Zúme Training leaders."
 msgstr "하나님께 줌 훈련 미래 지도자들의 리더십 소그룹을 시작하며 줌 훈련을 누구와 나누기를 원하시는지 기도로 물어보십시오."
 
-#: functions/zume-content.php:3437
+#: functions/zume-content.php:3438
 msgid "Be sure to pray with your group before you end your time together. Thank God that He has created and gifted you with exactly the right talents to make a difference in His kingdom. Ask Him for wisdom to use the strengths He has given you and to find other followers who help cover your weaknesses. Pray that He would make you fruitful and multiply — this was His plan from the very beginning. Pray that God help you be obedient to Him and invite Him to work in you and those around you!"
 msgstr "기도로 그룹 모임을 마무리하십시오. 그분의 나라에서 변화를 일으킬 수 있는 가장 알맞은 재능으로 당신을 만드시고 은사를 주신 하나님께 감사드리십시오. 그분이 주신 힘을 잘 사용하도록 지혜를 주시고, 당신의 약점을 보완해 줄 다른 제자들을 붙여주시길 간구하십시오. 그분의 처음 계획대로 열매 맺고 번창하는 당신이 되게 해달라고 하나님께 기도를 드리십시오. 그분께 순종하도록 도우시고 당신 안에서 그리고 당신 주변 사람들안에서 일하시도록 그분을 초대하십시오. "
 
-#: functions/zume-content.php:3445
+#: functions/zume-content.php:3446
 msgid "Excited to help a new Zúme group get started? Share about Zúme on social media and let people know where they can get started."
 msgstr "새로운 줌 그룹을 시작하게 되어 기쁜가요? 줌을 소셜 미디어에 공유하여 다른 사람들에게도 시작할 수 있는 방법을 알려주세요. "
 
-#: functions/zume-content.php:3464
+#: functions/zume-content.php:3465
 msgid "Looking Back"
 msgstr "돌아 보기"
 
-#: functions/zume-content.php:3466
+#: functions/zume-content.php:3467
 msgid "Welcome back to Zúme Training!"
 msgstr "줌 훈련에 다시 온 것을 환영합니다!"
 
-#: functions/zume-content.php:3479
+#: functions/zume-content.php:3480
 msgid "You were asked to prayerfully consider continuing as an ongoing spiritual family committed to multiplying disciples."
 msgstr "당신은 제자 배가에 헌신하고 있는 진행 중인 영적 가정으로서 계속적으로 기도하는 마음으로 배려하도록 요청 받았습니다. "
 
-#: functions/zume-content.php:3482
+#: functions/zume-content.php:3483
 msgid "You were encouraged to share Zúme Training by launching a Leadership Cell of future Zúme Training leaders."
 msgstr "당신은 줌 훈련 미래 지도자들의 리더십 소그룹을 시작하며 줌 훈련을 나누도록 권장 받았습니다."
 
-#: functions/zume-content.php:3485
+#: functions/zume-content.php:3486
 msgid "Take a few moments to see how your group has been doing with these items and their Three Month Plans since you've last met."
 msgstr "지난 모임 이후에 당신의 그룹이 이러한 항목들과 3 개월 계획을 어떻게 수행하고 있었는지 확인하는 시간을 가지십시오."
 
-#: functions/zume-content.php:3492
+#: functions/zume-content.php:3493
 #, fuzzy
 msgid "Pray and thank God that He is faithful to complete His good work in us. Ask Him to give your group clear heads and open hearts to the great things He wants to do in and through you. Ask the Holy Spirit to lead your time together and thank Him for His faithfulness, too. He got you through!"
 msgstr "우리 안에서 선한 일을 시작하시고 신실하게 이뤄주시는 하나님께 감사기도를 드리십시오. 당신안에서 그리고 당신을 통해서 하시려는 큰 일에 그룹이 명확한 생각과 열린 마음을 가지도록 그분께 구하십시오. 성령님께 모임을 인도해주시도록 구하고, 그분의 신실하심에 감사하십시오."
 
-#: functions/zume-content.php:3499
+#: functions/zume-content.php:3500
 msgid "In this advanced training session, you’ll take a look at how you can level-up your Coaching Strengths with a quick checklist assessment. You’ll learn how Leadership in Networks allows a growing group of small churches to work together to accomplish even more. And you’ll learn how to develop Peer Mentoring Groups that take leaders to a whole new level of growth."
 msgstr "본 고급 훈련 과정에서는 신속한 평가표를 통해 당신의 코칭 강점을 강화시켜 줄 방법을 살펴봅니다. 리더십이 네트워크 속에서 어떻게 성장하고 있는 소형 교회 그룹들을 서로 협력하여 더 많은 성과를 달성하도록 해주는지에 대해 배우게 됩니다. 이 외에 지도자들을 새로운 차원의 성장으로 이끌어줄 동료 멘토 그룹을 개발하는 방법도 배우게 됩니다."
 
-#: functions/zume-content.php:3512
+#: functions/zume-content.php:3513
 msgid "Activity (10min)"
 msgstr "활동 (10 분)"
 
-#: functions/zume-content.php:3519
+#: functions/zume-content.php:3520
 msgid "ASSESS"
 msgstr "평가"
 
-#: functions/zume-content.php:3521
+#: functions/zume-content.php:3522
 msgid "The Coaching Checklist is a powerful tool you can use to quickly assess your own strengths and vulnerabilities when it comes to making disciples who multiply. It's also a powerful tool you can use to help others – and others can use to help you."
 msgstr "코칭 체크리스트는 배가하는 제자들을 삼을 때 자신의 강점과 약점을 신속히 평가해볼 수 있는 강력한 도구입니다. 또한 다른 사람들을 도울 수 있는, 다른 사람의 도움을 받을 수 있는 강력한 도구이기도 합니다. "
 
-#: functions/zume-content.php:3523
+#: functions/zume-content.php:3524
 msgid "Find the Coaching Checklist section in your Zúme Guidebook, and take this quick (5-minutes or less) self-assessment:"
 msgstr "줌 가이드북에서 코칭 체크리스트 과정을 찾아서 신속히(5 분 이내) 자체 평가를 해보십시오."
 
-#: functions/zume-content.php:3526
+#: functions/zume-content.php:3527
 msgid "Read through the Disciple Training Tools in the far left column of the Checklist."
 msgstr "체크리스트의 맨 왼쪽 열에 있는 제자 훈련 도구를 읽으십시오."
 
-#: functions/zume-content.php:3527
+#: functions/zume-content.php:3528
 msgid "Mark each one of the Training Tools, using the following method:"
 msgstr "다음 방법으로 각 훈련 도구를 표시하십시오."
 
-#: functions/zume-content.php:3529
+#: functions/zume-content.php:3530
 msgid "If you're unfamiliar or don't understand the Tool – check the BLACK column"
 msgstr "익숙하지 않거나 도구가 이해되지 않는 경우 – 검은 색 열을 확인하십시오"
 
-#: functions/zume-content.php:3532
+#: functions/zume-content.php:3533
 msgid "If you're somewhat familiar but still not sure about the Tool – check the RED column"
 msgstr "어느정도 익숙하지만 도구에 대해 잘 모르는 경우 – 빨간 색 열을 확인하십시오"
 
-#: functions/zume-content.php:3535
+#: functions/zume-content.php:3536
 msgid "If you understand and can train the basics on the Tool – check the YELLOW column"
 msgstr "도구의 기본 사항을 이해하고 교육 할 수 있는 경우- 노란색 열을 확인하십시오"
 
-#: functions/zume-content.php:3538
+#: functions/zume-content.php:3539
 msgid "If you feel confident and can effectively train the Tool – check the GREEN column"
 msgstr "자신감이 있으며 도구를 효과적으로 훈련시킬 수 있는 경우 – 녹색 열을 확인하십시오"
 
-#: functions/zume-content.php:3575
+#: functions/zume-content.php:3576
 msgid "Zúme Video Scripts: Coaching Checklist"
 msgstr "줌 영상 스크립트 : 코칭 체크리스트"
 
-#: functions/zume-content.php:3586
+#: functions/zume-content.php:3587
 msgid "Which Training Tools did you feel you would be able to train well?"
 msgstr "당신은 어떤 훈련 도구를 잘 훈련시킬 수 있을 것 같은가요?"
 
-#: functions/zume-content.php:3587
+#: functions/zume-content.php:3588
 msgid "Which ones made you feel vulnerable as a trainer?"
 msgstr "어떤 것이 훈련자인 당신에게 취약함을 느끼게 할까요?"
 
-#: functions/zume-content.php:3588
+#: functions/zume-content.php:3589
 msgid "Are there any Training Tools that you would add or subtract from the Checklist? Why?"
 msgstr "체크 리스트에서 추가하거나 빼려는 훈련 도구가 있나요? 이유는 무엇인가요?"
 
-#: functions/zume-content.php:3597
+#: functions/zume-content.php:3598
 msgid "REMEMBER – Be sure to share your Coaching Checklist results with training partner or other mentor. If you're helping coach or mentor someone, use this tool to help you assess which areas need your attention and training."
 msgstr "기억하세요 – 코칭 체크리스트 결과를 훈련 파트너 또는 다른 멘토와 공유하십시오. 코치를 돕고 있거나 누군가를 멘토링 하고 있다면, 이 도구를 사용하여 어떤 영역이 당신의 주의력과 훈련이 필요한지 평가해보십시오."
 
-#: functions/zume-content.php:3621
+#: functions/zume-content.php:3622
 msgid "What happens to churches as they grow and start new churches that start new churches? How do they stay connected and live life together as an extended, spiritual family? They become a network!"
 msgstr "교회가 성장하면서 새 교회를 개척하는 새 교회를 개척하면 어떨까요? 그들은 확장된 영적 가정으로서 어떻게 서로 연결되어 함께 생활하는가요? 그들은 네트워크를 만듭니다. "
 
-#: functions/zume-content.php:3653
+#: functions/zume-content.php:3654
 msgid "Zúme Video Scripts: Leadership in Networks"
 msgstr "줌 영상 스크립트 : 네트워크 속 리더십"
 
-#: functions/zume-content.php:3661
+#: functions/zume-content.php:3662
 #, fuzzy
 msgid "Are there advantages when networks of simple churches are connected by deep, personal relationships? What are some examples that come to mind?"
 msgstr "단순한 교회들의 네트워크가 서로 깊은 대인관계로 연결되어 있으면 어떤 이점이 있나요? 떠오르는 사례가 있나요?"
 
-#: functions/enqueue-scripts.php:244 functions/zume-content.php:3682
-#: template-gmo.php:232 template-how-to-follow-jesus.php:232
+#: functions/enqueue-scripts.php:244 functions/zume-content.php:3683
+#: template-gmo.php:337 template-how-to-follow-jesus.php:274
 #: template-zume-training.php:821
 msgid "Peer Mentoring Groups"
 msgstr "동료 멘토링 그룹"
 
-#: functions/zume-content.php:3685
+#: functions/zume-content.php:3686
 msgid "Making disciples who make disciples means making leaders who make leaders. How do you develop stronger leaders? By teaching them how to love one another better. Peer Mentoring Groups help leaders love deeper."
 msgstr "제자 삼는 제자를 삼는다는 것은 지도자를 세우는 지도자를 세우는 것입니다. 당신은 어떻게 더 강력한 지도자를 양성하나요? 서로를 더 잘 사랑하는 법을 가르치는 것으로 하지요. 동료 멘토링 그룹은 지도자들이 더욱 깊이 사랑하도록 도와줍니다.  "
 
-#: functions/zume-content.php:3688
+#: functions/zume-content.php:3689
 msgid "Find the Peer Mentoring Groups section in your Zúme Guidebook, and listen to the audio below."
 msgstr "줌 가이드북에서 동료 멘토링 그룹 과정을 찾아 아래의 오디오를 듣습니다."
 
-#: functions/zume-content.php:3722
+#: functions/zume-content.php:3723
 msgid "Zúme Video Scripts: Peer Mentoring Groups"
 msgstr "줌 영상 스크립트 : 동료 멘토링 그룹 "
 
-#: functions/zume-content.php:3737
+#: functions/zume-content.php:3738
 msgid "Practice (60min)"
 msgstr "연습 (60 분)"
 
-#: functions/zume-content.php:3745
+#: functions/zume-content.php:3746
 msgid "Find the Peer Mentoring Groups section in your Zúme Training Guide, and follow these steps."
 msgstr "줌 훈련 가이드에서 동료 멘토 그룹 과정을 찾은 뒤 다음 절차를 따르십시오."
 
-#: functions/zume-content.php:3756
+#: functions/zume-content.php:3757
 msgid "GROUPS"
 msgstr "그룹"
 
-#: functions/zume-content.php:3760
+#: functions/zume-content.php:3761
 msgid "Break into groups of two or three and work through the 3/3 sections of the Peer Mentoring Group format. Peer Mentoring is something that happens once a month or once a quarter and takes some time for the whole group to participate, so you will not have time for everyone to experience the full mentoring process in this session."
 msgstr "2-3명 그룹으로 나뉘어 3/3 과정의 동료 멘토링 양식에 따라 진행하십시오. 동료 멘토링은 전체 그룹 구성원이 참여하여 한 달에 한 번 또는 매 분기에 한 번 진행하는 것이므로, 이 과정에서 구성원 모두 멘토링 전 과정을 경험해 보기에는 시간이 충분하지 않습니다.   "
 
-#: functions/zume-content.php:3767
+#: functions/zume-content.php:3768
 msgid "To practice, choose one person in your group to be the \"mentee\" for this session and have the other members spend time acting as Peer Mentors by working through the suggested questions list and providing guidance and encouragement for the Mentee's work."
 msgstr "그룹에서 한 명을 찾아 \"멘티\"로 하고 다른 구성원들은 제시된 질문 목록들을 해결하고 멘티의 일을 지도 및 격려해주는 멘토 역할을 합니다.  "
 
-#: functions/zume-content.php:3769
+#: functions/zume-content.php:3770
 msgid "By the time you're finished, everyone should have a basic understanding of asking and answering."
 msgstr "마무리 될 때쯤 모든 구성원들은 질문과 응답에 대해 기본적으로 이해하게 됩니다."
 
-#: functions/zume-content.php:3778
+#: functions/zume-content.php:3779
 msgid "REMEMBER – Spend time studying the Four Fields Diagnostic Diagram and Generational Map in the Peer Mentoring Groups section of your Zúme Training Guide. Make sure everyone in your group has a basic understanding of these tools before asking the suggested questions."
 msgstr "기억하세요 – 줌 훈련 가이드의 동료 멘토링 그룹 과정에 있는 4가지 밭 진단법과 세대간 약도에 대해 배우십시오. 그룹의 모든 구성원들이 이러한 도구에 대해 기본적인 이해를 가지도록 합니다.  "
 
-#: functions/zume-content.php:3794
+#: functions/zume-content.php:3795
 msgid "CONGRATULATIONS ON COMPLETING ZÚME TRAINING!"
 msgstr "줌 훈련 수료를 축하합니다!"
 
-#: functions/zume-content.php:3801
+#: functions/zume-content.php:3802
 msgid "You and your group are now ready to take leadership to a new level! Here are a few more steps to help you KEEP growing!"
 msgstr "당신과 당신 그룹은 이제 리더십을 새로운 차원으로 상승시킬 준비가 되었습니다. 아래 당신이 계속 성장하도록 도울 수 있는 몇 가지 절차가 있습니다. "
 
-#: functions/zume-content.php:3833
+#: functions/zume-content.php:3834
 msgid "Zúme Video Scripts: Completion of Training"
 msgstr "줌 영상 스크립트 : 훈련 완료"
 
@@ -1797,7 +1800,7 @@ msgstr "다른 사람들이 제자가 되고, 제자를 삼도록 도우려면 �
 #: functions/zume-dashboard.php:81 functions/zume-dashboard.php:112
 #: functions/zume-dashboard.php:208 functions/zume-v4-groups.php:77
 #: functions/zume-v4-groups.php:815 functions/zume-v4-groups.php:917
-#: functions/zume-v4-groups.php:1036
+#: functions/zume-v4-groups.php:1041
 msgid "No Name"
 msgstr "이름 없음"
 
@@ -1814,7 +1817,7 @@ msgstr "사용자 주소"
 msgid "GeoCoded IP"
 msgstr "지오 코딩 IP"
 
-#: functions/zume-v4-seo-strings.php:5
+#: functions/zume-v4-seo-strings.php:5 translations/mobile-pwa-strings.php:11
 msgid "Home"
 msgstr "홈"
 
@@ -1822,7 +1825,7 @@ msgstr "홈"
 msgid "Dashboard"
 msgstr "대시보드"
 
-#: functions/zume-v4-seo-strings.php:7
+#: functions/zume-v4-seo-strings.php:7 translations/mobile-pwa-strings.php:13
 msgid "About"
 msgstr "대략"
 
@@ -1838,7 +1841,7 @@ msgstr "자주 묻는 질문"
 msgid "Overview"
 msgstr "개요"
 
-#: functions/zume-v4-seo-strings.php:19
+#: functions/zume-v4-seo-strings.php:19 translations/mobile-pwa-strings.php:14
 msgid "Settings"
 msgstr "설정"
 
@@ -2035,8 +2038,8 @@ msgstr "인쇄"
 msgid "No plans linked to this group."
 msgstr "이 그룹에 연결된 계획이 없습니다."
 
-#: parts/content-share.php:85 template-gmo.php:271
-#: template-how-to-follow-jesus.php:273 template-pieces-page.php:216
+#: functions/zume-gmo.php:206 parts/content-share.php:85 template-gmo.php:380
+#: template-how-to-follow-jesus.php:317 template-pieces-page.php:216
 #: template-zume-about.php:38 template-zume-about.php:55
 #: template-zume-faq.php:199 template-zume-privacy-policy.php:186
 #: template-zume-progress.php:119
@@ -2049,7 +2052,7 @@ msgstr "줌은 온라인 훈련 플랫폼을 사용하여 참가자들을 제자
 msgid "Goals of the Zúme Project:"
 msgstr "줌 프로젝트의 목표 :"
 
-#: template-gmo.php:268 template-how-to-follow-jesus.php:270
+#: template-gmo.php:377 template-how-to-follow-jesus.php:314
 #: template-zume-about.php:52 template-zume-faq.php:196
 #: template-zume-privacy-policy.php:183 template-zume-progress.php:116
 msgid "Zúme means yeast in Greek. In Matthew 13:33, Jesus is quoted as saying, \"The Kingdom of Heaven is like a woman who took yeast and mixed it into a large amount of flour until it was all leavened.\" This illustrates how ordinary people, using ordinary resources, can have an extraordinary impact for the Kingdom of God. Zúme aims to equip and empower ordinary believers to saturate the globe with multiplying disciples in our generation."
@@ -2111,11 +2114,11 @@ msgstr "대시 보드로 돌아가서 다시 시도하십시오"
 msgid "You are missing a correct group or session number."
 msgstr "올바른 그룹 또는 세션 번호가 없습니다."
 
-#: template-zume-course.php:85
+#: template-zume-course.php:93
 msgid "You need a correctly formatted URL. This can happen if you came here from somewhere other than the dashboard."
 msgstr "올바른 형식의 URL이 필요합니다. 대시 보드가 아닌 다른 곳을 통해 방문했을 경우 발생할 수 있습니다."
 
-#: template-zume-course.php:85
+#: template-zume-course.php:93
 msgid "Head back to your dashboard and try again."
 msgstr "대시 보드로 돌아가서 다시 시도하십시오."
 
@@ -2320,8 +2323,8 @@ msgstr "훈련 사이클"
 msgid "Session 8"
 msgstr "8과정"
 
-#: functions/enqueue-scripts.php:237 template-gmo.php:240
-#: template-how-to-follow-jesus.php:240 template-zume-dashboard.php:542
+#: functions/enqueue-scripts.php:237 template-gmo.php:345
+#: template-how-to-follow-jesus.php:282 template-zume-dashboard.php:542
 #: template-zume-training.php:667
 #, fuzzy
 msgid "Leadership Cells"
@@ -2356,14 +2359,14 @@ msgstr "훈련 수료"
 msgid "Session 10"
 msgstr "10과정"
 
-#: functions/enqueue-scripts.php:242 template-gmo.php:236
-#: template-how-to-follow-jesus.php:236 template-zume-dashboard.php:598
+#: functions/enqueue-scripts.php:242 template-gmo.php:341
+#: template-how-to-follow-jesus.php:278 template-zume-dashboard.php:598
 #: template-zume-training.php:789
 msgid "Coaching Checklist"
 msgstr "코칭 체크리스트"
 
-#: functions/enqueue-scripts.php:243 template-gmo.php:244
-#: template-how-to-follow-jesus.php:244 template-zume-dashboard.php:606
+#: functions/enqueue-scripts.php:243 template-gmo.php:349
+#: template-how-to-follow-jesus.php:286 template-zume-dashboard.php:606
 #: template-zume-training.php:808
 msgid "Leadership in Networks"
 msgstr "네트워크 속 리더십"
@@ -2469,7 +2472,7 @@ msgstr "예 : 1000 브로드웨이, 덴버, 콜로라도 80126"
 msgid "Adding a coleader or additional participants gives them access to this group on their Zúme dashboard once they have signed up and logged in using the email address you add. When they login to their dashboard they will see an invitation from you on the right side of the screen. Adding them to this group allows them to facilitate a training but they cannot change any details of the group. Note: they will not receive a system email from Zúme with this invitation, you will need to ask them to sign up."
 msgstr "당신이 추가한 이메일 주소로 가입과 로그인을 마친 지도자나 추가 참가자를 추가하면, 그들은 줌 대시보드에서 본 그룹에 접속할 수 있습니다. 그들은 대시보드에 로그인하여 화면 오른 쪽에 있는 당신의 초대장을 보게 됩니다. 본 그룹에 추가되면 그들은 훈련을 만들수 있지만 그룹의 세부 사항은 변경할 수 없습니다. 참고: 줌 시스템 이메일은 본 초대와 함께 발송되지 않으므로, 그들에게 가입할 것을 요청하십시오."
 
-#: template-zume-dashboard.php:1163
+#: template-zume-dashboard.php:1163 translations/mobile-pwa-strings.php:42
 msgid "Update"
 msgstr "업데이트"
 
@@ -3264,23 +3267,23 @@ msgstr "데이터베이스에 비밀번호 재설정 키를 저장할 수 없습
 msgid "The Wordpress built in API is disabled."
 msgstr "API에 설치된 워드프레스가 비활성화되어 있습니다."
 
-#: functions/zume-content.php:2393
+#: functions/zume-content.php:2394
 msgid "Listen and Practice (75 min)"
 msgstr "듣기 및 연습 (75 분)"
 
-#: functions/zume-content.php:2405
+#: functions/zume-content.php:2406
 msgid "A 3/3 Group is a way for followers of Jesus to meet, pray, learn, grow, fellowship, and practice obeying and sharing what they've learned. In this way, a 3/3 Group is not just a small group but a Simple Church."
 msgstr "3/3 그룹은 예수님을 따르는 사람들이 만나고, 배우고, 성장하고, 교제하며  배운 것에 순종하고 나누는 것을 훈련하는 방법입니다. 이런 면에서, 3/3 그룹은 소그룹이 아닌 단순한 교회입니다."
 
-#: functions/zume-content.php:2408
+#: functions/zume-content.php:2409
 msgid "In the following video, you’ll be coached through an interactive 3/3 Group where you’ll learn a principle and then “press pause” and practice it with the group."
 msgstr "아래 영상을 보며 원리를 익히게 될 대화형 3/3 그룹을 통해 지도를 받고, \"일시 정지\" 버튼을 누르고 그룹과 함께 연습하십시오."
 
-#: functions/zume-content.php:2419
+#: functions/zume-content.php:2420
 msgid "Find the \"3/3 Group Format\" section in your Zúme Guidebook, and watch the video below."
 msgstr "줌 가이드 북에서 \"3/3 그룹 양식\"과정을 찾아 아래 영상을 보십시오."
 
-#: functions/zume-content.php:3514
+#: functions/zume-content.php:3515
 msgid "Assess yourself using the coaching checklist."
 msgstr "코칭 체크리스트를 사용하여 자신을 평가해보십시오."
 
@@ -3309,8 +3312,9 @@ msgstr "당신과의 활동을 통해 집계한 데이터를 확인하십시오.
 msgid "Zúme One Page Course"
 msgstr "줌 1 페이지 과정"
 
-#: functions/zume-v4-seo-strings.php:14 parts/content-share.php:40
-#: template-pieces-page.php:175 template-zume-training.php:91
+#: functions/zume-gmo.php:166 functions/zume-v4-seo-strings.php:14
+#: parts/content-share.php:40 template-pieces-page.php:175
+#: template-zume-training.php:91
 msgid "Groups"
 msgstr "그룹"
 
@@ -3354,85 +3358,89 @@ msgstr "비밀번호"
 msgid "Remember Me"
 msgstr "기억하세요"
 
-#: template-pieces-page.php:120
+#: functions/zume-gmo.php:111 template-pieces-page.php:120
 msgid "Ask Yourself"
 msgstr "자신에게 물어보기"
 
-#: parts/content-share.php:13 template-pieces-page.php:148
+#: functions/zume-gmo.php:139 parts/content-share.php:13
+#: template-pieces-page.php:148
 msgid "Great job! Here's your progress with this concept"
 msgstr "훌륭해요! 본 개념에서 당신의 진행 상황은 다음과 같습니다."
 
-#: functions/enqueue-scripts.php:309 parts/content-share.php:19
-#: template-pieces-page.php:154
+#: functions/enqueue-scripts.php:309 functions/zume-gmo.php:145
+#: parts/content-share.php:19 template-pieces-page.php:154
 msgid "Heard"
 msgstr "들음"
 
-#: functions/enqueue-scripts.php:310 parts/content-share.php:23
-#: template-pieces-page.php:158
+#: functions/enqueue-scripts.php:310 functions/zume-gmo.php:149
+#: parts/content-share.php:23 template-pieces-page.php:158
 msgid "Obeyed"
 msgstr "순종함"
 
-#: functions/enqueue-scripts.php:311 parts/content-share.php:27
-#: template-pieces-page.php:162
+#: functions/enqueue-scripts.php:311 functions/zume-gmo.php:153
+#: parts/content-share.php:27 template-pieces-page.php:162
 msgid "Shared"
 msgstr "나눔"
 
-#: functions/enqueue-scripts.php:312 parts/content-share.php:31
-#: template-pieces-page.php:166
+#: functions/enqueue-scripts.php:312 functions/zume-gmo.php:157
+#: parts/content-share.php:31 template-pieces-page.php:166
 msgid "Trained"
 msgstr "훈련함"
 
-#: functions/zume-v4-seo-strings.php:13 parts/content-share.php:39
-#: template-pieces-page.php:174 template-zume-training.php:85
+#: functions/zume-gmo.php:165 functions/zume-v4-seo-strings.php:13
+#: parts/content-share.php:39 template-pieces-page.php:174
+#: template-zume-training.php:85
 msgid "Course Overview"
 msgstr "과정 미리보기"
 
-#: functions/enqueue-scripts.php:313 functions/zume-v4-seo-strings.php:15
-#: parts/content-share.php:41 template-pieces-page.php:176
-#: template-zume-training.php:97
+#: functions/enqueue-scripts.php:313 functions/zume-gmo.php:167
+#: functions/zume-v4-seo-strings.php:15 parts/content-share.php:41
+#: template-pieces-page.php:176 template-zume-training.php:97
 msgid "Checklist"
 msgstr "체크리스트"
 
 #: parts/content-share.php:42 template-pieces-page.php:177
+#: translations/mobile-pwa-strings.php:30
 msgid "Start Session"
 msgstr "과정 시작"
 
-#: functions/enqueue-scripts.php:280 parts/content-share.php:70
-#: template-pieces-page.php:201
+#: functions/enqueue-scripts.php:280 functions/zume-gmo.php:191
+#: parts/content-share.php:70 template-pieces-page.php:201
 msgid "You're missing out."
 msgstr "당신이 누락됐어요."
 
-#: functions/enqueue-scripts.php:281 parts/content-share.php:70
-#: template-pieces-page.php:201
+#: functions/enqueue-scripts.php:281 functions/zume-gmo.php:191
+#: parts/content-share.php:70 template-pieces-page.php:201
 msgid "Register Now!"
 msgstr "지금 가입하세요!"
 
-#: functions/enqueue-scripts.php:282 parts/content-share.php:73
-#: template-pieces-page.php:204
+#: functions/enqueue-scripts.php:282 functions/zume-gmo.php:194
+#: parts/content-share.php:73 template-pieces-page.php:204
 msgid "track your personal training progress"
 msgstr "개인 훈련 진행 상황을 확인"
 
-#: functions/enqueue-scripts.php:283 parts/content-share.php:74
-#: template-pieces-page.php:205
+#: functions/enqueue-scripts.php:283 functions/zume-gmo.php:195
+#: parts/content-share.php:74 template-pieces-page.php:205
 msgid "access group planning tools"
 msgstr "그룹 계획 도구에 접속"
 
-#: functions/enqueue-scripts.php:284 parts/content-share.php:75
-#: template-pieces-page.php:206
+#: functions/enqueue-scripts.php:284 functions/zume-gmo.php:196
+#: parts/content-share.php:75 template-pieces-page.php:206
 msgid "connect with a coach"
 msgstr "코치와 연결"
 
-#: functions/enqueue-scripts.php:285 parts/content-share.php:76
-#: template-pieces-page.php:207
+#: functions/enqueue-scripts.php:285 functions/zume-gmo.php:197
+#: parts/content-share.php:76 template-pieces-page.php:207
 msgid "add your effort to the global vision!"
 msgstr "글로벌 비전을 갖도록 노력을 더하십시오!"
 
-#: functions/enqueue-scripts.php:286 parts/content-share.php:80
-#: template-pieces-page.php:211
+#: functions/enqueue-scripts.php:286 functions/zume-gmo.php:201
+#: parts/content-share.php:80 template-pieces-page.php:211
 msgid "Register for Free"
 msgstr "무료 가입"
 
-#: parts/content-share.php:86 template-pieces-page.php:217
+#: functions/zume-gmo.php:207 parts/content-share.php:86
+#: template-pieces-page.php:217
 msgid "See Entire Training"
 msgstr "전체 훈련과정 보기"
 
@@ -3453,7 +3461,7 @@ msgid "My Checklist"
 msgstr "나의 체크리스트"
 
 #. Theme Name of the plugin/theme
-#: front-page.php:85 template-how-to-follow-jesus.php:268
+#: front-page.php:85 template-gmo.php:375 template-how-to-follow-jesus.php:312
 #: template-zume-training.php:125
 msgid "Zúme Training"
 msgstr "줌 교육"
@@ -3496,7 +3504,7 @@ msgstr "기도, 소개"
 msgid "5 min"
 msgstr "5 분"
 
-#: template-gmo.php:66 template-how-to-follow-jesus.php:66
+#: template-gmo.php:167 template-how-to-follow-jesus.php:104
 #: template-zume-training.php:164
 msgid "You'll see how God uses ordinary people doing simple things to make a big impact."
 msgstr "하나님이 평범한 사람들을 사용하여 간단한 일을 함으로써 큰 영향을 이루는 방법을 알게 됩니다."
@@ -3520,22 +3528,22 @@ msgstr "하나님이 평범한 사람들을 사용하여 간단한 일을 함으
 msgid "15 min"
 msgstr "15 분"
 
-#: template-gmo.php:62 template-how-to-follow-jesus.php:62
+#: template-gmo.php:171 template-how-to-follow-jesus.php:108
 #: template-zume-training.php:178
 msgid "Discover the essence of being a disciple, making a disciple, and what is the church."
 msgstr "제자 되기, 제자 삼기 및 교회의 본질을 알아보세요. "
 
-#: template-gmo.php:91 template-how-to-follow-jesus.php:91
+#: template-gmo.php:196 template-how-to-follow-jesus.php:133
 #: template-zume-training.php:191
 msgid "Being a disciple means we hear from God and we obey God."
 msgstr "제자가 된다는 것은 하나님의 말씀을 듣고 하나님께 순종한다는 것을 의미합니다."
 
-#: template-gmo.php:108 template-how-to-follow-jesus.php:108
+#: template-gmo.php:213 template-how-to-follow-jesus.php:150
 #: template-zume-training.php:204
 msgid "A tool for daily Bible study that helps you understand, obey, and share God’s Word."
 msgstr "하나님의 말씀을 이해하고 순종하며 나누는 데 도움이 되는 매일 성경 공부를 위한 방법입니다."
 
-#: template-gmo.php:125 template-how-to-follow-jesus.php:125
+#: template-gmo.php:230 template-how-to-follow-jesus.php:167
 #: template-zume-training.php:217
 msgid "A tool for two or three people of the same gender to meet weekly and encourage each other in areas that are going well and reveal areas that need correction."
 msgstr "같은 성별의 두 세 명의 사람들이 매주 만나 서로 잘 하는 영역에 대해 격려를 하고, 수정이 필요한 영역에 대해 밝혀주는 방법입니다."
@@ -3564,12 +3572,12 @@ msgstr "앞을 보기"
 msgid "Check-in, Prayer, Overview"
 msgstr "점검, 기도, 소개"
 
-#: template-gmo.php:84 template-how-to-follow-jesus.php:84
+#: template-gmo.php:189 template-how-to-follow-jesus.php:126
 #: template-zume-training.php:258
 msgid "You'll discover the four main ways God makes everyday followers more like Jesus."
 msgstr "하나님이 날마다 따르는 제자들을 더욱 예수님을 닮게 하시는 4가지 주요 방법을 발견하게 됩니다."
 
-#: template-gmo.php:95 template-how-to-follow-jesus.php:95
+#: template-gmo.php:200 template-how-to-follow-jesus.php:137
 #: template-zume-training.php:271
 msgid "See how easy it is to spend an hour in prayer."
 msgstr "한 시간 동안 기도하는 것이 얼마나 쉬운지요."
@@ -3587,7 +3595,7 @@ msgstr "60 분"
 msgid "Discuss - Prayer Cycle"
 msgstr "토론-기도 사이클"
 
-#: template-gmo.php:195 template-how-to-follow-jesus.php:195
+#: template-gmo.php:300 template-how-to-follow-jesus.php:237
 #: template-zume-training.php:296
 msgid "A tool designed to help you be a good steward of your relationships."
 msgstr "당신의 인맥을 잘 관리할 수 있도록 설계된 방법입니다."
@@ -3600,7 +3608,7 @@ msgstr "연습-100인 명단 작성"
 msgid "30 min"
 msgstr "30 분"
 
-#: template-gmo.php:146 template-how-to-follow-jesus.php:146
+#: template-gmo.php:251 template-how-to-follow-jesus.php:188
 #: template-zume-training.php:337
 msgid "Learn how God's economy is different from the world's. God invests more in those who are faithful with what they've already been given."
 msgstr "하나님의 경제가 세상 경제와 어떻게 다른지 배우십시오. 하나님은 이미 주신 것에 충실한 사람들에게 더 많은 것을 투자하십니다."
@@ -3609,7 +3617,7 @@ msgstr "하나님의 경제가 세상 경제와 어떻게 다른지 배우십시
 msgid "Discuss - Should every disciple share?"
 msgstr "토론-모든 제자들이 전해야 하나요?"
 
-#: template-gmo.php:199 template-how-to-follow-jesus.php:199
+#: template-gmo.php:304 template-how-to-follow-jesus.php:241
 #: template-zume-training.php:356
 msgid "Learn a way to share God’s Good News from the beginning of humanity all the way to the end of this age."
 msgstr "인류의 시작부터 이 시대의 끝까지 하나님의 복음을 전하는 방법을 배우십시오."
@@ -3618,12 +3626,12 @@ msgstr "인류의 시작부터 이 시대의 끝까지 하나님의 복음을 �
 msgid "Practice - Sharing the Gospel"
 msgstr "연습-복음 전하기"
 
-#: template-gmo.php:137 template-how-to-follow-jesus.php:137
+#: template-gmo.php:242 template-how-to-follow-jesus.php:179
 #: template-zume-training.php:375
 msgid "Jesus said, “Go and make disciples of all nations, BAPTIZING them in the name of the Father and of the Son and of the Holy Spirit…” Learn how to put this into practice."
 msgstr "예수님이 말씀하시길, “가서 모든 민족을 제자로 삼아 아버지와 아들과 성령의 이름으로 세례를 베풀고…” 이것을 실천하는 방법을 배우십시오."
 
-#: template-gmo.php:203 template-how-to-follow-jesus.php:203
+#: template-gmo.php:308 template-how-to-follow-jesus.php:245
 #: template-zume-training.php:410
 msgid "Learn how to share your testimony in three minutes by sharing how Jesus has impacted your life."
 msgstr "예수님이 당신의 삶에 어떤 영향을 주었는지 이야기하는 3 분 간증에 대해 배우십시오."
@@ -3632,7 +3640,7 @@ msgstr "예수님이 당신의 삶에 어떤 영향을 주었는지 이야기하
 msgid "Practice - Share your testimony"
 msgstr "연습-당신의 간증을 나눠주세요"
 
-#: template-gmo.php:70 template-how-to-follow-jesus.php:70
+#: template-gmo.php:175 template-how-to-follow-jesus.php:112
 #: template-zume-training.php:429
 msgid "Learn a simple pattern of making not just one follower of Jesus but entire spiritual families who multiply for generations to come."
 msgstr "예수님을 따르는 한 사람이 아닌, 배가하는 다음 세대를 만드는 영적 가정을 세우는 간단한 패턴을 배우십시오."
@@ -3641,12 +3649,12 @@ msgstr "예수님을 따르는 한 사람이 아닌, 배가하는 다음 세대�
 msgid "Learn what ducklings have to do with disciple-making."
 msgstr "새끼오리와 제자 삼기에 어떤 연관이 있는지 알아보세요."
 
-#: template-gmo.php:150 template-how-to-follow-jesus.php:150
+#: template-gmo.php:255 template-how-to-follow-jesus.php:192
 #: template-zume-training.php:455
 msgid "Begin to see where God’s Kingdom isn’t. These are usually the places where God wants to work the most."
 msgstr "하나님 나라가 닿지 않은 곳을 보기 시작하십시오. 이는 대부분 하나님이 가장 일하고 싶어 하시는 곳입니다."
 
-#: template-gmo.php:133 template-how-to-follow-jesus.php:133
+#: template-gmo.php:238 template-how-to-follow-jesus.php:175
 #: template-zume-training.php:468
 msgid "It’s a simple way to celebrate our intimate connection and ongoing relationship with Jesus. Learn a simple way to celebrate."
 msgstr "예수님과의 지속적이고 친밀한 관계를 축하하는 간단한 방법입니다. 축하하는 간단한 방법을 배우십시오."
@@ -3661,17 +3669,17 @@ msgstr "연습- 성찬"
 msgid "10 min"
 msgstr "10 분"
 
-#: template-gmo.php:216 template-how-to-follow-jesus.php:216
+#: template-gmo.php:321 template-how-to-follow-jesus.php:258
 #: template-zume-training.php:509
 msgid "It’s a simple way to obey God’s command to pray for others. And it's just what it sounds like — praying to God while walking around!"
 msgstr "이것은 다른 사람을 위해 기도하라는 하나님의 명령에 순종하는 간단한 방법입니다. 문장 그대로 주변을 걸으면서 하나님께 기도하는 것입니다."
 
-#: template-gmo.php:212 template-how-to-follow-jesus.php:212
+#: template-gmo.php:317 template-how-to-follow-jesus.php:254
 #: template-zume-training.php:522
 msgid "Learn who a person of peace might be and how to know when you've found one."
 msgstr "평화의 사람은 누구인지, 그들을 발견했을 때 알아보는 방법을 배우게 됩니다."
 
-#: template-gmo.php:99 template-how-to-follow-jesus.php:99
+#: template-gmo.php:204 template-how-to-follow-jesus.php:141
 #: template-zume-training.php:535
 msgid "Practice a simple mnemonic to remind you of ways to pray for others."
 msgstr "다른 사람을 위해 잊지 않고 기도하기 위하여 간단한 기억법을 연습해보세요.  "
@@ -3689,12 +3697,12 @@ msgstr "연습-걷기 기도"
 msgid "90 min"
 msgstr "90 분"
 
-#: template-gmo.php:112 template-how-to-follow-jesus.php:112
+#: template-gmo.php:217 template-how-to-follow-jesus.php:154
 #: template-zume-training.php:582
 msgid "It's important what disciples know — but it's much more important what they DO with what they know."
 msgstr "제자들이 무엇을 알고 있는냐는 중요합니다. 그러나 그들이 알고 있는 지식으로 무엇을 하는지는 더욱 중요합니다."
 
-#: template-gmo.php:121 template-how-to-follow-jesus.php:121
+#: template-gmo.php:226 template-how-to-follow-jesus.php:163
 #: template-zume-training.php:595
 msgid "A 3/3 Group is a way for followers of Jesus to meet, pray, learn, grow, fellowship and practice obeying and sharing what they've learned. In this way, a 3/3 Group is not just a small group but a Simple Church."
 msgstr "3/3 그룹은 예수님을 따르는 사람들이 만나고, 배우고, 성장하고, 교제하며  배운 것에 순종하고 나누는 것을 훈련하는 방법입니다. 이런 면에서, 3/3 그룹은 소그룹이 아닌 단순한 교회입니다. "
@@ -3703,7 +3711,7 @@ msgstr "3/3 그룹은 예수님을 따르는 사람들이 만나고, 배우고, 
 msgid "75 min"
 msgstr "75 분"
 
-#: template-gmo.php:179 template-how-to-follow-jesus.php:179
+#: template-gmo.php:284 template-how-to-follow-jesus.php:221
 #: template-zume-training.php:625
 msgid "Learn the training cycle and consider how it applies to disciple making."
 msgstr "훈련 사이클을 배우고 제자 삼기에 어떻게 적용되는지 생각해보십시오."
@@ -3716,22 +3724,22 @@ msgstr "연습-3/3 그룹"
 msgid "Discuss - 3/3 Group Experience"
 msgstr "토론-3/3 그룹 경험"
 
-#: template-gmo.php:241 template-how-to-follow-jesus.php:241
+#: template-gmo.php:346 template-how-to-follow-jesus.php:283
 #: template-zume-training.php:672
 msgid "A Leadership Cell is a way someone who feels called to lead can develop their leadership by practicing serving."
 msgstr "리더십 소그룹은 지도자로 부름을 받은 자가 섬김의 연습을 통해 리더십을 개발할 수 있는 방법입니다."
 
-#: template-gmo.php:183 template-how-to-follow-jesus.php:183
+#: template-gmo.php:288 template-how-to-follow-jesus.php:225
 #: template-zume-training.php:713
 msgid "See how disciple making doesn't have to be linear. Multiple things can happen at the same time."
 msgstr "제자 삼기가 꼭 순차적일 필요가 없는 것을 보게 됩니다. 배가는 동시 진행이 가능합니다. "
 
-#: template-gmo.php:187 template-how-to-follow-jesus.php:187
+#: template-gmo.php:292 template-how-to-follow-jesus.php:229
 #: template-zume-training.php:726
 msgid "Multiplying matters and multiplying quickly matters even more. See why pace matters."
 msgstr "배가는 중요합니다. 신속한 배가는 더욱 중요합니다. 속도가 왜 중요한지 알아보세요."
 
-#: template-gmo.php:129 template-how-to-follow-jesus.php:129
+#: template-gmo.php:234 template-how-to-follow-jesus.php:171
 #: template-zume-training.php:739
 msgid "Learn how to obey Jesus' commands by going AND staying."
 msgstr "가서 머물면서 예수님의 명령에 순종하는 방법을 배우십시오."
@@ -3756,7 +3764,7 @@ msgstr "토론-그룹과 3 개월 계획을 공유하십시오"
 msgid "20 min"
 msgstr "20 분"
 
-#: template-gmo.php:237 template-how-to-follow-jesus.php:237
+#: template-gmo.php:342 template-how-to-follow-jesus.php:279
 #: template-zume-training.php:794
 msgid "A powerful tool you can use to quickly assess your own strengths and vulnerabilities when it comes to making disciples who multiply."
 msgstr "배가하는 제자를 삼을 때 자신의 강점과 약점을 신속하게 평가해볼 수 있는 훌륭한 방법입니다."
@@ -3765,12 +3773,12 @@ msgstr "배가하는 제자를 삼을 때 자신의 강점과 약점을 신속�
 msgid "Practice - Coaching Checklist Self-Assessment"
 msgstr "연습-코칭 체크리스트 자체 평가"
 
-#: template-gmo.php:245 template-how-to-follow-jesus.php:245
+#: template-gmo.php:350 template-how-to-follow-jesus.php:287
 #: template-zume-training.php:813
 msgid "Learn how multiplying churches stay connected and live life together as an extended, spiritual family."
 msgstr "배가하는 교회들이 어떻게 서로 연결되고 확장된 영적인 가족으로서 함께 생활하는지 배우십시오."
 
-#: template-gmo.php:233 template-how-to-follow-jesus.php:233
+#: template-gmo.php:338 template-how-to-follow-jesus.php:275
 #: template-zume-training.php:826
 msgid "This is a group that consists of people who are leading and starting 3/3 Groups. It also follows a 3/3 format and is a powerful way to assess the spiritual health of God’s work in your area."
 msgstr "본 그룹은 3/3 그룹을 시작하여 이끌고 있는 사람들로 구성됩니다. 또한 3/3 양식을 따르며 해당 지역의 하나님의 일의 영적 건강을 평가해볼 수 있는 훌륭한 방법입니다.\n"
@@ -3829,68 +3837,68 @@ msgstr "줌 훈련"
 msgid "Yes. There are no premium versions, no trial periods, no follow-on sales of products. Freely we've received. Freely we give."
 msgstr "네. 프리미엄 버전이나 평가판 기간, 후속 제품 판매는 없습니다. 우리는 거저 받았습니다. 그리고 거저 줍니다."
 
-#: functions/enqueue-scripts.php:215 template-gmo.php:65
-#: template-how-to-follow-jesus.php:65 template-zume-training.php:158
+#: functions/enqueue-scripts.php:215 template-gmo.php:166
+#: template-how-to-follow-jesus.php:103 template-zume-training.php:158
 msgid "God Uses Ordinary People"
 msgstr "하나님은 평범한 사람들을 사용하십니다"
 
-#: functions/enqueue-scripts.php:216 template-gmo.php:61
-#: template-how-to-follow-jesus.php:61 template-zume-training.php:172
+#: functions/enqueue-scripts.php:216 template-gmo.php:170
+#: template-how-to-follow-jesus.php:107 template-zume-training.php:172
 msgid "Simple Definition of Disciple and Church"
 msgstr "제자와 교회의 간단한 정의"
 
-#: functions/enqueue-scripts.php:217 template-gmo.php:90
-#: template-how-to-follow-jesus.php:90 template-zume-training.php:186
+#: functions/enqueue-scripts.php:217 template-gmo.php:195
+#: template-how-to-follow-jesus.php:132 template-zume-training.php:186
 msgid "Spiritual Breathing is Hearing and Obeying God"
 msgstr "영적 호흡은 하나님의 말씀을 듣고 순종하는 것입니다"
 
-#: functions/enqueue-scripts.php:218 template-gmo.php:107
-#: template-how-to-follow-jesus.php:107 template-zume-training.php:199
+#: functions/enqueue-scripts.php:218 template-gmo.php:212
+#: template-how-to-follow-jesus.php:149 template-zume-training.php:199
 msgid "SOAPS Bible Reading"
 msgstr "SOAPS 성경 읽기"
 
-#: functions/enqueue-scripts.php:220 template-gmo.php:83
-#: template-how-to-follow-jesus.php:83 template-zume-training.php:253
+#: functions/enqueue-scripts.php:220 template-gmo.php:188
+#: template-how-to-follow-jesus.php:125 template-zume-training.php:253
 msgid "Consumer vs Producer Lifestyle"
 msgstr "소비자 대 생산자 생활 방식"
 
-#: functions/enqueue-scripts.php:221 template-gmo.php:94
-#: template-how-to-follow-jesus.php:94 template-zume-training.php:266
+#: functions/enqueue-scripts.php:221 template-gmo.php:199
+#: template-how-to-follow-jesus.php:136 template-zume-training.php:266
 msgid "How to Spend an Hour in Prayer"
 msgstr "기도로 시간을 보내는 방법"
 
-#: functions/enqueue-scripts.php:222 template-gmo.php:194
-#: template-how-to-follow-jesus.php:194
+#: functions/enqueue-scripts.php:222 template-gmo.php:299
+#: template-how-to-follow-jesus.php:236
 msgid "Relational Stewardship – List of 100"
 msgstr "관계 관리 – 100인 명단"
 
-#: functions/enqueue-scripts.php:223 template-gmo.php:145
-#: template-how-to-follow-jesus.php:145 template-zume-training.php:332
+#: functions/enqueue-scripts.php:223 template-gmo.php:250
+#: template-how-to-follow-jesus.php:187 template-zume-training.php:332
 msgid "The Kingdom Economy"
 msgstr "천국 경제"
 
-#: functions/enqueue-scripts.php:224 template-gmo.php:198
-#: template-how-to-follow-jesus.php:198 template-zume-training.php:351
+#: functions/enqueue-scripts.php:224 template-gmo.php:303
+#: template-how-to-follow-jesus.php:240 template-zume-training.php:351
 msgid "The Gospel and How to Share It"
 msgstr "복음 및 전하는 방법"
 
-#: functions/enqueue-scripts.php:225 template-gmo.php:136
-#: template-how-to-follow-jesus.php:136 template-zume-training.php:370
+#: functions/enqueue-scripts.php:225 template-gmo.php:241
+#: template-how-to-follow-jesus.php:178 template-zume-training.php:370
 msgid "Baptism and How To Do It"
 msgstr "세례 및 진행 방법"
 
-#: functions/enqueue-scripts.php:226 template-gmo.php:202
-#: template-how-to-follow-jesus.php:202 template-zume-training.php:405
+#: functions/enqueue-scripts.php:226 template-gmo.php:307
+#: template-how-to-follow-jesus.php:244 template-zume-training.php:405
 msgid "Prepare Your 3-Minute Testimony"
 msgstr "당신의 3분 간증을 준비하십시오"
 
-#: functions/enqueue-scripts.php:227 template-gmo.php:69
-#: template-how-to-follow-jesus.php:69 template-zume-training.php:424
+#: functions/enqueue-scripts.php:227 template-gmo.php:174
+#: template-how-to-follow-jesus.php:111 template-zume-training.php:424
 msgid "Vision Casting the Greatest Blessing"
 msgstr "가장 큰 축복을 주는 비전"
 
-#: functions/enqueue-scripts.php:228 template-gmo.php:174
-#: template-how-to-follow-jesus.php:174
+#: functions/enqueue-scripts.php:228 template-gmo.php:279
+#: template-how-to-follow-jesus.php:216
 msgid "Duckling Discipleship – Leading Immediately"
 msgstr "새끼 오리 제자 훈련 – 즉각적인 인도"
 
@@ -3902,48 +3910,48 @@ msgstr "하나님 나라가 닿지 않은 곳을 보는 눈"
 msgid "The Lord's Supper and How To Lead It"
 msgstr "성찬 및 인도하는 방법"
 
-#: functions/enqueue-scripts.php:231 template-gmo.php:215
-#: template-how-to-follow-jesus.php:215 template-zume-training.php:504
+#: functions/enqueue-scripts.php:231 template-gmo.php:320
+#: template-how-to-follow-jesus.php:257 template-zume-training.php:504
 msgid "Prayer Walking and How To Do It"
 msgstr "걷기 기도 및 진행 방법"
 
-#: functions/enqueue-scripts.php:232 template-gmo.php:211
-#: template-how-to-follow-jesus.php:211 template-zume-training.php:517
+#: functions/enqueue-scripts.php:232 template-gmo.php:316
+#: template-how-to-follow-jesus.php:253 template-zume-training.php:517
 msgid "A Person of Peace and How To Find One"
 msgstr "평화의 사람과 그를 찾는 방법"
 
-#: functions/enqueue-scripts.php:233 template-gmo.php:98
-#: template-how-to-follow-jesus.php:98 template-zume-training.php:530
+#: functions/enqueue-scripts.php:233 template-gmo.php:203
+#: template-how-to-follow-jesus.php:140 template-zume-training.php:530
 msgid "The BLESS Prayer Pattern"
 msgstr "BLESS 기도 패턴"
 
-#: functions/enqueue-scripts.php:234 template-gmo.php:111
-#: template-how-to-follow-jesus.php:111 template-zume-training.php:577
+#: functions/enqueue-scripts.php:234 template-gmo.php:216
+#: template-how-to-follow-jesus.php:153 template-zume-training.php:577
 msgid "Faithfulness is Better Than Knowledge"
 msgstr "신실함이 지식보다 낫습니다"
 
-#: functions/enqueue-scripts.php:235 template-gmo.php:120
-#: template-how-to-follow-jesus.php:120 template-zume-training.php:590
+#: functions/enqueue-scripts.php:235 template-gmo.php:225
+#: template-how-to-follow-jesus.php:162 template-zume-training.php:590
 msgid "3/3 Group Meeting Pattern"
 msgstr "3/3 그룹 모임 패턴"
 
-#: functions/enqueue-scripts.php:236 template-gmo.php:178
-#: template-how-to-follow-jesus.php:178 template-zume-training.php:620
+#: functions/enqueue-scripts.php:236 template-gmo.php:283
+#: template-how-to-follow-jesus.php:220 template-zume-training.php:620
 msgid "Training Cycle for Maturing Disciples"
 msgstr "성숙한 제자를 위한 훈련 사이클"
 
-#: functions/enqueue-scripts.php:238 template-gmo.php:182
-#: template-how-to-follow-jesus.php:182 template-zume-training.php:708
+#: functions/enqueue-scripts.php:238 template-gmo.php:287
+#: template-how-to-follow-jesus.php:224 template-zume-training.php:708
 msgid "Expect Non-Sequential Growth"
 msgstr "비순차적 성장을 기대"
 
-#: functions/enqueue-scripts.php:239 template-gmo.php:186
-#: template-how-to-follow-jesus.php:186 template-zume-training.php:721
+#: functions/enqueue-scripts.php:239 template-gmo.php:291
+#: template-how-to-follow-jesus.php:228 template-zume-training.php:721
 msgid "Pace of Multiplication Matters"
 msgstr "배가의 속도"
 
-#: functions/enqueue-scripts.php:240 template-gmo.php:128
-#: template-how-to-follow-jesus.php:128 template-zume-training.php:734
+#: functions/enqueue-scripts.php:240 template-gmo.php:233
+#: template-how-to-follow-jesus.php:170 template-zume-training.php:734
 msgid "Always Part of Two Churches"
 msgstr "항상 두 교회의 한 부분"
 
@@ -3955,11 +3963,13 @@ msgstr "4가지 밭 방법"
 msgid "Generational Mapping"
 msgstr "세대 매핑"
 
+#: functions/zume-gmo.php:179 functions/zume-gmo.php:211
 #: parts/content-share.php:54 parts/content-share.php:90
 #: template-pieces-page.php:189 template-pieces-page.php:221
 msgid "Zúme Training is freely offered as part of larger Zúme Vision."
 msgstr "줌 훈련은 더 큰 줌 비전의 일부이며 무료로 제공됩니다."
 
+#: functions/zume-gmo.php:180 functions/zume-gmo.php:212
 #: parts/content-share.php:55 parts/content-share.php:91
 #: template-pieces-page.php:190 template-pieces-page.php:222
 msgid "Learn more about the Zúme.Vision"
@@ -3969,15 +3979,15 @@ msgstr "Zúme.Vision에 대해 더 알아보기"
 msgid "This concept is called \"%1$s\" in session %2$s of the Zúme Training"
 msgstr "이 개념은 줌 훈련 \"% 2 $ s\" 과정의 \"% 1 $ s\"입니다."
 
-#: template-pieces-page.php:82
+#: functions/zume-gmo.php:73 template-pieces-page.php:82
 msgid "Listen and Read Along"
 msgstr "듣기 및 읽기"
 
-#: template-pieces-page.php:86
+#: functions/zume-gmo.php:77 template-pieces-page.php:86
 msgid "Download Free Guidebook"
 msgstr "무료 가이드북 다운로드"
 
-#: template-pieces-page.php:89
+#: functions/zume-gmo.php:80 template-pieces-page.php:89
 msgid "Watch This Video"
 msgstr "본 영상 보기"
 
@@ -4131,7 +4141,7 @@ msgstr "Pieces Page"
 msgid "Zúme Vision"
 msgstr "줌 비전"
 
-#: functions/zume-content.php:2129
+#: functions/zume-content.php:2130
 msgid "Disciple-making can be rapidly advanced by finding a person of peace, even in a place where followers of Jesus are few and far between. How do you know when you have found a person of peace and what do you do when you find them?"
 msgstr "예수님을 따르는 사람들이 거의 없이 극히 드문 곳에서도 평화의 사람을 찾음으로써 제자 삼기는 신속히 진행될 수 있습니다. 어떻게 평화의 사람을 알아볼 수 있으며, 찾은 뒤에는 무엇을 하나요?"
 
@@ -4332,67 +4342,67 @@ msgid "Welcome to God’s Family!"
 msgstr "하나님의 가족 됨을 환영합니다!"
 
 #. Template Name of the plugin/theme
-#: template-gmo.php:56 template-how-to-follow-jesus.php:56
+#: template-gmo.php:161 template-how-to-follow-jesus.php:98
 msgid "What is a follower of Jesus?"
 msgstr "예수님을 따르는 자란 누구인가요?"
 
-#: template-gmo.php:79 template-how-to-follow-jesus.php:79
+#: template-gmo.php:184 template-how-to-follow-jesus.php:121
 msgid "What are the activities of a follower of Jesus?"
 msgstr "예수님을 따르는 자들의 활동에는 어떤 것이 있나요?"
 
-#: template-gmo.php:104 template-how-to-follow-jesus.php:104
+#: template-gmo.php:209 template-how-to-follow-jesus.php:146
 msgid "Bible Reading"
 msgstr "성경 일기"
 
-#: template-gmo.php:117 template-how-to-follow-jesus.php:117
+#: template-gmo.php:222 template-how-to-follow-jesus.php:159
 msgid "Community"
 msgstr "지역 사회"
 
-#: template-gmo.php:132 template-how-to-follow-jesus.php:132
+#: template-gmo.php:237 template-how-to-follow-jesus.php:174
 msgid "The Lord’s Supper and How To Lead It"
 msgstr "성찬과 진행하는 방법"
 
-#: template-gmo.php:142 template-how-to-follow-jesus.php:142
+#: template-gmo.php:247 template-how-to-follow-jesus.php:184
 msgid "Sacrifice and Suffering"
 msgstr "희생과 고난"
 
-#: template-gmo.php:149 template-how-to-follow-jesus.php:149
+#: template-gmo.php:254 template-how-to-follow-jesus.php:191
 msgid "Eyes to See Where The Kingdom Isn’t"
 msgstr "천국이 닿지 않은 곳에서 볼 수 있는 눈"
 
-#: template-gmo.php:161 template-how-to-follow-jesus.php:161
+#: template-gmo.php:266 template-how-to-follow-jesus.php:203
 msgid "How do I obey Jesus and help others become followers with me?"
 msgstr "예수님께 순종하려면 어떻게 해야 하며, 다른 사람들도 나와 같이 제자가 되도록 도우려면 어떻게 해야 할까요?"
 
-#: template-gmo.php:165 template-how-to-follow-jesus.php:165
+#: template-gmo.php:270 template-how-to-follow-jesus.php:207
 msgid "Then Jesus came to them and said, \"All authority in heaven and on earth has been given to me. Therefore go and make disciples of all nations, baptizing them in the name of the Father and of the Son and of the Holy Spirit, and teaching them to obey everything I have commanded you. And surely I am with you always, to the very end of the age.\""
 msgstr "예수께서 나아와 말씀하여 이르시되, \"하늘과 땅의 모든 권세를 내게 주셨으니, 그러므로 너희는 가서 모든 민족을 제자로 삼아 아버지와 아들과 성령의 이름으로 세례를 베풀고 내가 너희에게 분부한 모든 것을 가르쳐 지키게 하라. 볼지어다 내가 세상 끝날까지 너희와 항상 함께 있으리라 하시니라.\""
 
-#: template-gmo.php:166 template-how-to-follow-jesus.php:166
+#: template-gmo.php:271 template-how-to-follow-jesus.php:208
 msgid "Matthew 28:18-20"
 msgstr "마태복음 28:18-20"
 
-#: template-gmo.php:170 template-how-to-follow-jesus.php:170
+#: template-gmo.php:275 template-how-to-follow-jesus.php:212
 msgid "Teaching others to obey and follow Jesus with you"
 msgstr "가르쳐 지키게 하고 당신과 함께 예수님을 따르게 하세요."
 
-#: template-gmo.php:175 template-how-to-follow-jesus.php:175
+#: template-gmo.php:280 template-how-to-follow-jesus.php:217
 msgid "Learn what ducklings have to do with disciple-making"
 msgstr "새끼오리와 제자 삼기가 어떤 연관이 있는지 알아보세요."
 
-#: template-gmo.php:191 template-how-to-follow-jesus.php:191
+#: template-gmo.php:296 template-how-to-follow-jesus.php:233
 msgid "Speaking to people YOU KNOW about Jesus"
 msgstr "지인에게 예수님을 전해보세요."
 
-#: template-gmo.php:208 template-how-to-follow-jesus.php:208
+#: template-gmo.php:313 template-how-to-follow-jesus.php:250
 msgid "Speaking to people YOU DON'T KNOW about Jesus"
 msgstr "모르는 사람에게 예수님을 전해보세요."
 
-#: template-gmo.php:227 template-how-to-follow-jesus.php:227
+#: template-gmo.php:332 template-how-to-follow-jesus.php:269
 msgid "What if many friends, family, and others start following Jesus with me?"
 msgstr "수많은 친구, 가정 그리고 기타 사람들이 나와 함께 예수님을 따르기 시작한다면 어떨까요?"
 
-#: template-gmo.php:38
+#: template-how-to-follow-jesus.php:82
 msgid "Watch this important video explaining the 4 relationships of your new life."
 msgstr "당신의 새로운 삶의 4가지 관계에 대해 설명한 다음 중요한 영상을 시청하세요. "
 
@@ -4405,4 +4415,109 @@ msgstr "GMO-줌에 온 것을 환영합니다"
 #: 
 msgid "Redirect to Training"
 msgstr "훈련으로 이동"
+
+#: translations/mobile-pwa-strings.php:9
+msgid "Yes"
+msgstr "예"
+
+#: translations/mobile-pwa-strings.php:10
+msgid "No"
+msgstr "아니"
+
+#: translations/mobile-pwa-strings.php:12
+msgid "Account"
+msgstr "계정"
+
+#: translations/mobile-pwa-strings.php:15
+msgid "Downloads"
+msgstr "다운로드"
+
+#: translations/mobile-pwa-strings.php:16
+msgid "Language"
+msgstr "언어"
+
+#: translations/mobile-pwa-strings.php:17
+msgid "Reset App"
+msgstr "앱 재설정"
+
+#: translations/mobile-pwa-strings.php:18
+msgid "Resetting the app will delete all app data. Are you sure you want to reset?"
+msgstr "앱을 재설정하면 모든 앱 데이터가 삭제됩니다. 재설정 하시겠습니까?"
+
+#: translations/mobile-pwa-strings.php:19
+msgid "Help"
+msgstr "도움"
+
+#: translations/mobile-pwa-strings.php:20
+msgid "Workbook"
+msgstr "학습장"
+
+#: translations/mobile-pwa-strings.php:21
+msgid "Sign Out"
+msgstr "로그 아웃"
+
+#: translations/mobile-pwa-strings.php:22
+msgid "Download all"
+msgstr "모두 다운로드"
+
+#: translations/mobile-pwa-strings.php:24
+msgid "Downloading"
+msgstr "다운로드 중"
+
+#: translations/mobile-pwa-strings.php:25
+msgid "Queued"
+msgstr "대기"
+
+#: translations/mobile-pwa-strings.php:27
+msgid "Do you want to clear these download errors?"
+msgstr "이 다운로드 오류를 지우시겠습니까?"
+
+#: translations/mobile-pwa-strings.php:28
+msgid "Tap to persist"
+msgstr "유지하려면 탭"
+
+#: translations/mobile-pwa-strings.php:29
+msgid "Select Language"
+msgstr "언어를 선택하십시오"
+
+#: translations/mobile-pwa-strings.php:31
+msgid "No sessions available"
+msgstr "사용 가능한 세션이 없습니다"
+
+#: translations/mobile-pwa-strings.php:32
+msgid "Exit"
+msgstr "출구"
+
+#: translations/mobile-pwa-strings.php:36
+msgid "Share"
+msgstr "공유"
+
+#: translations/mobile-pwa-strings.php:37
+msgid "Install"
+msgstr "설치"
+
+#: translations/mobile-pwa-strings.php:38
+msgid "This app can be installed to your device. Click to install this app"
+msgstr "이 앱은 기기에 설치할 수 있습니다. 이 앱을 설치하려면 클릭"
+
+#: translations/mobile-pwa-strings.php:39
+msgid "This app can be installed to your device. Please use the Chrome browser to do so."
+msgstr "이 앱은 기기에 설치할 수 있습니다. 그렇게하려면 Chrome 브라우저를 사용하십시오."
+
+#: translations/mobile-pwa-strings.php:40
+msgid "Learn more"
+msgstr "더 알아보기"
+
+#: translations/mobile-pwa-strings.php:41
+msgid "Tap on Safari's share icon and tap 'Add to Home Screen' to install this app."
+msgstr "Safari의 공유 아이콘을 누르고 '홈 화면에 추가'를 눌러이 앱을 설치하십시오."
+
+#: translations/mobile-pwa-strings.php:43
+msgid "A new version of this app is available. Click to update this app."
+msgstr "이 앱의 새 버전을 사용할 수 있습니다. 이 앱을 업데이트하려면 클릭하십시오."
+
+#. Template Name of the plugin/theme
+#: 
+msgid "How to Follow Jesus"
+msgstr "예수를 따르는 방법"
 

@@ -9,344 +9,344 @@ msgstr ""
 
 #: front-page.php:73 front-page.php:203
 msgid "Get Started"
-msgstr "Get Started"
+msgstr "始めましょう"
 
 #: front-page.php:76 functions/enqueue-scripts.php:287
 #: functions/zume-v4-seo-strings.php:23 parts/content-share.php:81
 #: template-pieces-page.php:212 template-zume-login.php:403
 #: template-zume-login.php:470 template-zume-login.php:498
 msgid "Login"
-msgstr "Login"
+msgstr "ログイン"
 
 #: front-page.php:86
 msgid "Zúme Training is an on-line and in-life learning experience designed for small groups who follow Jesus to learn how to obey His Great Commission and make disciples who multiply."
-msgstr "Zúme Training is an on-line and in-life learning experience designed for small groups who follow Jesus to learn how to obey His Great Commission and make disciples who multiply."
+msgstr "Zúmeトレーニングは、イエスに従うことで大委員会に従う方法を学び、倍加する弟子を作る方法を学ぶ小グループ向けに設計された、オンラインでの生活学習体験です。"
 
 #: front-page.php:105
 msgid "Zúme consists of 10 sessions, 2 hours each:"
-msgstr "Zúme consists of 10 sessions, 2 hours each:"
+msgstr "Zúme は、それぞれ2時間の10セッションで構成されます。"
 
 #: front-page.php:113 template-zume-about.php:74
 msgid "Video and Audio to help your group understand basic principles of multiplying disciples."
-msgstr "Video and Audio to help your group understand basic principles of multiplying disciples."
+msgstr "ビデオとオーディオは、あなたのグループは、乗算弟子たちの基本的な原理を理解するのに役立ちます。"
 
 #: front-page.php:121 template-zume-about.php:75
 msgid "Group Discussions to help your group think through what’s being shared."
-msgstr "Group Discussions to help your group think through what’s being shared."
+msgstr "グループディスカッションは、共有されている内容についてグループが考えるのに役立ちます。"
 
 #: front-page.php:129 template-zume-about.php:76
 msgid "Simple Exercises to help your group put what you’re learning into practice."
-msgstr "Simple Exercises to help your group put what you’re learning into practice."
+msgstr "簡単な練習問題は、グループが学習したことを実践するのに役立ちます。"
 
 #: front-page.php:137 template-zume-about.php:77
 msgid "Session Challenges to help your group keep learning and growing between sessions."
-msgstr "Session Challenges to help your group keep learning and growing between sessions."
+msgstr "グループがセッション間で学び、成長するのに役立つセッションの課題。"
 
 #: front-page.php:150
 msgid "Want to start the training?"
-msgstr "Want to start the training?"
+msgstr "トレーニングを始めたいですか？"
 
 #: front-page.php:164
 msgid "It's as easy as 1-2-3"
-msgstr "It's as easy as 1-2-3"
+msgstr "それは1-2-3と同じくらい簡単だとして、"
 
 #: front-page.php:173
 msgid "Sign up"
-msgstr "Sign up"
+msgstr "サインアップ"
 
 #: front-page.php:183
 msgid "Invite some friends"
-msgstr "Invite some friends"
+msgstr "友達を招待する"
 
 #: front-page.php:193
 msgid "Host a training"
-msgstr "Host a training"
+msgstr "トレーニングを主催する"
 
 #: front-page.php:237
 msgid "Find out more about Zúme"
-msgstr "Find out more about Zúme"
+msgstr "Xの詳細"
 
 #: functions/activator.php:55
 msgid "Coach"
-msgstr "Coach"
+msgstr "教師"
 
 #: functions/activator.php:65
 msgid "Coach Leader"
-msgstr "Coach Leader"
+msgstr "コーチの指導者"
 
 #: functions/enqueue-scripts.php:82 functions/enqueue-scripts.php:84
 #: functions/enqueue-scripts.php:267 template-zume-dashboard.php:1204
 #: template-zume-dashboard.php:1317
 msgid "Cancel"
-msgstr "Cancel"
+msgstr "キャンセル"
 
 #: functions/enqueue-scripts.php:83
 msgid "Current Step:"
-msgstr "Current Step:"
+msgstr "現在のステップ："
 
 #: functions/enqueue-scripts.php:85
 msgid "Finish"
-msgstr "Finish"
+msgstr "フィニッシュ"
 
 #: functions/enqueue-scripts.php:86 functions/utilities/menu.php:108
 msgid "Next"
-msgstr "Next"
+msgstr "次"
 
 #: functions/enqueue-scripts.php:87 functions/utilities/menu.php:98
 msgid "Previous"
-msgstr "Previous"
+msgstr "前"
 
 #: functions/enqueue-scripts.php:88
 msgid "Loading..."
-msgstr "Loading..."
+msgstr "ローチグ..."
 
 #: functions/enqueue-scripts.php:66 template-zume-dashboard.php:1168
 #: template-zume-dashboard.php:1202
 msgid "Delete"
-msgstr "Delete"
+msgstr "デリート"
 
 #: functions/enqueue-scripts.php:67
 msgid "Failed to remove item."
-msgstr "Failed to remove item."
+msgstr "アイテムの削除に失敗しました。"
 
 #: functions/enqueue-scripts.php:68
 msgid "Failed to change item."
-msgstr "Failed to change item."
+msgstr "アイテムの変更に失敗しました。"
 
 #: functions/enqueue-scripts.php:69
 msgid "Three Month Plan - Zúme Project"
-msgstr "Three Month Plan - Zúme Project"
+msgstr "3か月計画- Zúmeプロジェクト"
 
 #: functions/enqueue-scripts.php:70
 msgid "We got it!"
-msgstr "We got it!"
+msgstr "わかりました！"
 
 #: functions/enqueue-scripts.php:71
 msgid "We're a volunteer network, so give us a few days. We'll reach out to you soon as possible!"
-msgstr "We're a volunteer network, so give us a few days. We'll reach out to you soon as possible!"
+msgstr "私たちはボランティアネットワークですので、数日お待ちください。 できるだけ早くご連絡いたします。"
 
 #: functions/login/zume-login.php:97 functions/login/zume-login.php:320
 msgid "Email is a required permission for login and registration."
-msgstr "Email is a required permission for login and registration."
+msgstr "ログインと登録にはメールが必要です。"
 
 #: functions/login/zume-login.php:448
 msgid "No user found."
-msgstr "No user found."
+msgstr "どのユーザーが見つかりませんでした。"
 
 #: functions/login/zume-login.php:284 functions/login/zume-login.php:413
 msgid "You are missing your sign-in token. Try signing in again."
-msgstr "You are missing your sign-in token. Try signing in again."
+msgstr "ログイントークンがありません。 もう一度サインインしてみてください。"
 
 #: functions/login/zume-login.php:294 functions/login/zume-login.php:423
 msgid "Failed to connect with Facebook. Try again."
-msgstr "Failed to connect with Facebook. Try again."
+msgstr "Facebookとの接続に失敗しました。 再試行する。"
 
 #: functions/login/zume-login.php:313 functions/login/zume-login.php:439
 msgid "Facebook user lookup error. Sorry for the inconvenience."
-msgstr "Facebook user lookup error. Sorry for the inconvenience."
+msgstr "Facebookユーザー検索エラー。 ご不便おかけしてすみません。"
 
 #: functions/login/zume-login.php:316 functions/login/zume-login.php:442
 msgid "Error with looking up user with Facebook. Sorry for the inconvenience."
-msgstr "Error with looking up user with Facebook. Sorry for the inconvenience."
+msgstr "Facebookでユーザーを検索する際のエラー。 ご不便おかけしてすみません。"
 
 #: functions/enqueue-scripts.php:330 functions/login/zume-login.php:543
 msgid "There are some errors in your form."
-msgstr "There are some errors in your form."
+msgstr "フォームにエラーがあります。"
 
 #: functions/enqueue-scripts.php:119 functions/enqueue-scripts.php:334
 #: functions/login/zume-login.php:548 template-zume-dashboard.php:1420
 #: template-zume-dashboard.php:1471 template-zume-login.php:375
 msgid "Email"
-msgstr "Email"
+msgstr "Eメール"
 
 #: functions/login/zume-login.php:552 template-zume-login.php:261
 msgid "Password Required"
-msgstr "Password Required"
+msgstr "パスワードが必要"
 
 #: functions/login/zume-login.php:555 template-zume-login.php:264
 msgid "Password required"
-msgstr "Password required"
+msgstr "パスワードが必要"
 
 #: functions/login/zume-login.php:561 template-zume-login.php:271
 msgid "Re-enter Password"
-msgstr "Re-enter Password"
+msgstr "パスワード再入力"
 
 #: functions/login/zume-login.php:564 template-zume-login.php:274
 msgid "Passwords do not match. Please, try again."
-msgstr "Passwords do not match. Please, try again."
+msgstr "パスワードが一致していません。 もう一度お試しください。"
 
 #: functions/login/zume-login.php:573 functions/zume-v4-seo-strings.php:24
 #: template-zume-login.php:358 template-zume-login.php:514
 msgid "Register"
-msgstr "Register"
+msgstr "登録"
 
 #: functions/login/zume-login.php:616
 msgid "Missing captcha response. How did you do that?"
-msgstr "Missing captcha response. How did you do that?"
+msgstr "キャプチャ応答がありません。 どうやったの？"
 
 #: functions/login/zume-login.php:629
 msgid "Captcha failure. Try again, if you are human."
-msgstr "Captcha failure. Try again, if you are human."
+msgstr "キャプチャの失敗。 人間の場合は、もう一度やり直してください。"
 
 #: functions/login/zume-login.php:635
 msgid "Missing email or password."
-msgstr "Missing email or password."
+msgstr "Eメールやパスワードがありません。"
 
 #: functions/login/zume-login.php:654
 msgid "Sorry. This email is already registered."
-msgstr "Sorry. This email is already registered."
+msgstr "ごめんなさい。 このEメールはすでに登録されています。"
 
 #: functions/login/zume-login.php:665
 msgid "Something went wrong. Sorry. Could you try again?"
-msgstr "Something went wrong. Sorry. Could you try again?"
+msgstr "問題が発生しました。 ごめんなさい。 もう一度お試しいただけますか？"
 
 #: functions/login/zume-login.php:689
 msgid "No new user found."
-msgstr "No new user found."
+msgstr "新しいユーザーは見つかりませんでした。"
 
 #: functions/login/zume-login.php:745 functions/login/zume-login.php:796
 msgid "Google"
-msgstr "Google"
+msgstr "グーグル"
 
 #: functions/login/zume-login.php:790
 msgid "Link with Google"
-msgstr "Link with Google"
+msgstr "Googleとリンク"
 
 #: functions/login/zume-login.php:929 functions/login/zume-login.php:1025
 msgid "Facebook"
-msgstr "Facebook"
+msgstr "フェイスブック"
 
 #: functions/login/zume-login.php:1166
 msgid "Missing username or email address."
-msgstr "Missing username or email address."
+msgstr "ユーザー名または Eメールアドレスがありません。"
 
 #: functions/login/zume-login.php:1172
 msgid "ERROR: Enter a username or email address."
-msgstr "ERROR: Enter a username or email address."
+msgstr "エラー：ユーザー名またはメールアドレスを入力してください。"
 
 #: functions/login/zume-login.php:1176
 msgid "ERROR: There is no user registered with that email address."
-msgstr "ERROR: There is no user registered with that email address."
+msgstr "エラー：そのメールアドレスで登録されているユーザーはいません。"
 
 #: functions/login/zume-login.php:1181
 msgid "ERROR: There is no user registered with that username."
-msgstr "ERROR: There is no user registered with that username."
+msgstr "エラー：そのユーザー名で登録されているユーザーはいません。"
 
 #: functions/login/zume-login.php:1226
 msgid "Someone has requested a password reset for the following account:"
-msgstr "Someone has requested a password reset for the following account:"
+msgstr "誰かが次のアカウントのパスワードのリセットを要求しました："
 
 #. translators: %s: site name
 #: functions/login/zume-login.php:1228
 msgid "Site Name: %s"
-msgstr "Site Name: %s"
+msgstr "サイト名：％s"
 
 #. translators: %s: user login
 #: functions/login/zume-login.php:1230
 msgid "Username: %s"
-msgstr "Username: %s"
+msgstr "ユーザー名：％s"
 
 #: functions/login/zume-login.php:1231
 msgid "If this was a mistake, just ignore this email and nothing will happen."
-msgstr "If this was a mistake, just ignore this email and nothing will happen."
+msgstr "これが間違いだった場合は、このメールを無視してください。何も起こりません。"
 
 #: functions/login/zume-login.php:1232
 msgid "To reset your password, visit the following address:"
-msgstr "To reset your password, visit the following address:"
+msgstr "パスワードをリセットするには、次のアドレスにアクセスしてください。"
 
 #. translators: Password reset email subject. %s: Site name
 #: functions/login/zume-login.php:1236
 msgid "[%s] Password Reset"
-msgstr "[%s] Password Reset"
+msgstr "[％s]パスワードのリセット"
 
 #: functions/login/zume-login.php:1266
 msgid "The email could not be sent."
-msgstr "The email could not be sent."
+msgstr "Eメールを送信できませんでした。"
 
 #: functions/login/zume-login.php:1266
 msgid "Possible reason: your host may have disabled the mail() function."
-msgstr "Possible reason: your host may have disabled the mail() function."
+msgstr "考えられる理由：ホストがmail（）関数を無効にしている可能性があります。"
 
 #: functions/utilities/cleanup.php:76
 msgid "Read"
-msgstr "Read"
+msgstr "読んだ"
 
 #: functions/utilities/cleanup.php:76
 msgid "... Read more &raquo;"
-msgstr "... Read more &raquo;"
+msgstr "... 続きを読む &raquo;"
 
 #: functions/utilities/cleanup.php:98
 msgid "Posts by %s"
-msgstr "Posts by %s"
+msgstr "％s による投稿"
 
 #: functions/utilities/menu.php:5
 msgid "The Main Menu"
-msgstr "The Main Menu"
+msgstr "メインメニュー"
 
 #: functions/utilities/menu.php:94
 msgid "First"
-msgstr "First"
+msgstr "最初"
 
 #: functions/utilities/menu.php:111
 msgid "Last"
-msgstr "Last"
+msgstr "最終"
 
 #: functions/zume-v4-groups.php:282
 msgid "( Key not available. Check dashboard. )"
-msgstr "( Key not available. Check dashboard. )"
+msgstr "（鍵は使用できません。ダッシュボードを確認してください。）"
 
 #: functions/enqueue-scripts.php:291 functions/zume-content.php:12
 msgid "Session"
-msgstr "Session"
+msgstr "セッション"
 
 #: functions/enqueue-scripts.php:279 functions/zume-content.php:118
 msgid "Welcome to Session"
-msgstr "Welcome to Session"
+msgstr "セッションへようこそ"
 
 #: functions/zume-content.php:119
 msgid "Which are you doing right now?"
-msgstr "Which are you doing right now?"
+msgstr "どちらがあなたが今やっているの？"
 
 #: functions/zume-content.php:120
 msgid "Facilitating a Group"
-msgstr "Facilitating a Group"
+msgstr "グループを促進する"
 
 #: functions/zume-content.php:124
 msgid "Exploring the Session Content"
-msgstr "Exploring the Session Content"
+msgstr "セッションコンテンツの探索"
 
 #: functions/zume-content.php:139
 msgid "How many are with you?"
-msgstr "How many are with you?"
+msgstr "あなたとどのように多くのですか？"
 
 #: functions/enqueue-scripts.php:288 functions/zume-content.php:154
 msgid "Continue"
-msgstr "Continue"
+msgstr "継続する"
 
 #: functions/zume-content.php:175
 msgid "Welcome to Zúme"
-msgstr "Welcome to Zúme"
+msgstr "Zúme へようこそ"
 
 #: functions/zume-content.php:183
 msgid "Download"
-msgstr "Download"
+msgstr "ダウンロード"
 
 #: functions/zume-content.php:187
 msgid "You will be able to follow along on a digital PDF for this session, but please make sure that each member of your group has a printed copy of the materials for future sessions."
-msgstr "You will be able to follow along on a digital PDF for this session, but please make sure that each member of your group has a printed copy of the materials for future sessions."
+msgstr "このセッションのデジタルPDFをたどることができますが、グループの各メンバーが今後のセッションのために資料の印刷コピーを持っていることを確認してください。"
 
 #: functions/zume-content.php:194 functions/zume-v4-seo-strings.php:17
 #: template-zume-dashboard.php:813 template-zume-resources.php:38
 msgid "Download Guidebook"
-msgstr "Download Guidebook"
+msgstr "ガイドブックをダウンロード"
 
 #: functions/zume-content.php:207
 msgid "Group Prayer (5min)"
-msgstr "Group Prayer (5min)"
+msgstr "グループ祈り（5分）"
 
 #: functions/zume-content.php:217
 msgid "Begin with prayer. Spiritual insight and transformation is not possible without the Holy Spirit. Take time as a group to invite Him to guide you over this session."
-msgstr "Begin with prayer. Spiritual insight and transformation is not possible without the Holy Spirit. Take time as a group to invite Him to guide you over this session."
+msgstr "祈りから始めましょう。霊的な洞察と変容は、聖霊なくしては不可能です。グループで時間をとり、神にセッションを導くように誘います。"
 
 #: functions/zume-content.php:231 functions/zume-content.php:286
 #: functions/zume-content.php:351 functions/zume-content.php:721
@@ -358,7 +358,7 @@ msgstr "Begin with prayer. Spiritual insight and transformation is not possible 
 #: functions/zume-content.php:3136 functions/zume-content.php:3206
 #: functions/zume-content.php:3613
 msgid "Watch and Discuss (15min)"
-msgstr "Watch and Discuss (15min)"
+msgstr "視聴して話し合う（15分）"
 
 #: functions/zume-content.php:239 functions/zume-content.php:294
 #: functions/zume-content.php:359 functions/zume-content.php:728
@@ -370,15 +370,15 @@ msgstr "Watch and Discuss (15min)"
 #: functions/zume-content.php:3144 functions/zume-content.php:3214
 #: functions/zume-content.php:3619 functions/zume-content.php:3799
 msgid "WATCH"
-msgstr "WATCH"
+msgstr "見る"
 
 #: functions/zume-content.php:241
 msgid "God uses ordinary people doing simple things to make a big impact. Watch this video on how God works."
-msgstr "God uses ordinary people doing simple things to make a big impact. Watch this video on how God works."
+msgstr "神は大きな影響を与えるために単純なことをしている普通の人々を使用します。神がどのように機能するかについては、このビデオを見ます。"
 
 #: functions/zume-content.php:268
 msgid "Zúme Video Scripts: Welcome"
-msgstr "Zúme Video Scripts: Welcome"
+msgstr "Zúme ビデオスクリプト：ようこそ"
 
 #: functions/zume-content.php:274 functions/zume-content.php:334
 #: functions/zume-content.php:402 functions/zume-content.php:775
@@ -393,53 +393,53 @@ msgstr "Zúme Video Scripts: Welcome"
 #: functions/zume-content.php:3258 functions/zume-content.php:3390
 #: functions/zume-content.php:3583 functions/zume-content.php:3659
 msgid "DISCUSS"
-msgstr "DISCUSS"
+msgstr "話し合います"
 
 #: functions/zume-content.php:276
 msgid "If Jesus intended every one of His followers to obey His Great Commission, why do so few actually make disciples?"
-msgstr "If Jesus intended every one of His followers to obey His Great Commission, why do so few actually make disciples?"
+msgstr "イエスが彼の追随者の一人一人に彼の大委員会に従うことを意図したならば、なぜ実際に少数のみが弟子を作るのですか？"
 
 #: functions/zume-content.php:296
 msgid "What is a disciple? And how do you make one? How do you teach a follower of Jesus to do what He told us in His Great Commission – to obey all of His commands?"
-msgstr "What is a disciple? And how do you make one? How do you teach a follower of Jesus to do what He told us in His Great Commission – to obey all of His commands?"
+msgstr "弟子とは？そして、どうやって弟子を作るのですか？イエスの信奉者に、大委員会で彼が言ったことを実行するように、つまり彼のすべての命令に従うようにどのように教えますか？"
 
 #: functions/zume-content.php:328
 msgid "Zúme Video Scripts: Teach Them to Obey"
-msgstr "Zúme Video Scripts: Teach Them to Obey"
+msgstr "Zúme ビデオスクリプト：従うことを教える"
 
 #: functions/zume-content.php:337
 msgid "When you think of a church, what comes to mind?"
-msgstr "When you think of a church, what comes to mind?"
+msgstr "教会といえば何を思い浮かべますか？"
 
 #: functions/zume-content.php:338
 msgid "What's the difference between that picture and what's described in the video as a \"Simple Church\"?"
-msgstr "What's the difference between that picture and what's described in the video as a \"Simple Church\"?"
+msgstr "その絵とビデオで「シンプルな教会」と表現されているものの違いは何ですか？"
 
 #: functions/zume-content.php:340
 msgid "Which one do you think would be easier to multiply and why?"
-msgstr "Which one do you think would be easier to multiply and why?"
+msgstr "どれを掛けるほうが簡単だと思いますか、そしてその理由は？"
 
 #: functions/zume-content.php:361
 msgid "We breathe in. We breathe out. We're alive. Spiritual Breathing is like that, too."
-msgstr "We breathe in. We breathe out. We're alive. Spiritual Breathing is like that, too."
+msgstr "私たちは息を吸い込み、息を吐きます。 私たちは生きています。スピリチュアル呼吸もそうです。"
 
 #: functions/zume-content.php:395
 msgid "Zúme Video Scripts: Spiritual Breathing"
-msgstr "Zúme Video Scripts: Spiritual Breathing"
+msgstr "Zúme ビデオスクリプト：スピリチュアル呼吸"
 
 #: functions/zume-content.php:405
 msgid "Why is it essential to learn to hear and recognize God's voice?"
-msgstr "Why is it essential to learn to hear and recognize God's voice?"
+msgstr "なぜ神の声を聞いて認識することを学ぶことが不可欠なのですか？"
 
 #: functions/zume-content.php:406
 msgid "Is hearing and responding to the Lord really like breathing? Why or why not?"
-msgstr "Is hearing and responding to the Lord really like breathing? Why or why not?"
+msgstr "主の言うことを聞いて応答することは本当に呼吸が好きですか？ なぜか、なぜそうでないのか？"
 
 #: functions/zume-content.php:417 functions/zume-content.php:488
 #: functions/zume-content.php:905 functions/zume-content.php:1550
 #: functions/zume-content.php:1857 functions/zume-content.php:3673
 msgid "Listen and Read Along (3min)"
-msgstr "Listen and Read Along (3min)"
+msgstr "一緒に聞いて読む（3分）"
 
 #: functions/zume-content.php:425 functions/zume-content.php:496
 #: functions/zume-content.php:801 functions/zume-content.php:911
@@ -448,53 +448,53 @@ msgstr "Listen and Read Along (3min)"
 #: functions/zume-content.php:2055 functions/zume-content.php:2399
 #: functions/zume-content.php:3679
 msgid "READ"
-msgstr "READ"
+msgstr "読む"
 
 #: functions/zume-content.php:427
 msgid "S.O.A.P.S. Bible Reading"
-msgstr "S.O.A.P.S. Bible Reading"
+msgstr "S.O.A.P.S. 聖書の朗読"
 
 #: functions/zume-content.php:428
 msgid "Hearing from God regularly is a key element in our personal relationship with Him, and in our ability to stay obediently engaged in what He is doing around us."
-msgstr "Hearing from God regularly is a key element in our personal relationship with Him, and in our ability to stay obediently engaged in what He is doing around us."
+msgstr "定期的に神から聞くことは、神との個人的な関係において、そして神が私たちの周りで行っていることに素直に従事し続ける私たちの能力において重要な要素です。"
 
 #: functions/zume-content.php:441
 msgid "Find the \"S.O.A.P.S. Bible Reading\" section in your Zúme Guidebook and listen to the audio overview."
-msgstr "Find the \"S.O.A.P.S. Bible Reading\" section in your Zúme Guidebook and listen to the audio overview."
+msgstr "Zúme ガイドブックの「S.O.A.P.S. 聖書の朗読」セクションを見つけて、オーディオの概要を聞いてください。"
 
 #: functions/zume-content.php:478
 msgid "Zúme Video Scripts: S.O.A.P.S."
-msgstr "Zúme Video Scripts: S.O.A.P.S."
+msgstr "Zúme ビデオスクリプト：S.O.A.P.S."
 
 #: functions/enqueue-scripts.php:219 functions/zume-content.php:499
 #: template-gmo.php:124 template-how-to-follow-jesus.php:124
 #: template-zume-dashboard.php:342 template-zume-training.php:212
 msgid "Accountability Groups"
-msgstr "Accountability Groups"
+msgstr "責任グループ"
 
 #: functions/zume-content.php:502
 msgid "The Bible tells us that every follower of Jesus will one day be held accountable for what we do and say and think. Accountability Groups are a great way to get ready!"
-msgstr "The Bible tells us that every follower of Jesus will one day be held accountable for what we do and say and think. Accountability Groups are a great way to get ready!"
+msgstr "聖書は、イエスに従う者はいつでも、私たちが何を言おうとし、何を考えているかについて、いつか説明責任を負うと告げています。説明責任グループは、準備を整えるのに最適な方法です。"
 
 #: functions/zume-content.php:514
 msgid "Find the \"Accountability Groups\" section in your Zúme Guidebook, and listen to the audio below."
-msgstr "Find the \"Accountability Groups\" section in your Zúme Guidebook, and listen to the audio below."
+msgstr "Zúme ガイドブックの「責任グループ」セクションを見つけて、下の音声を聞いてください。"
 
 #: functions/zume-content.php:551
 msgid "Zúme Video Scripts: Accountability Groups"
-msgstr "Zúme Video Scripts: Accountability Groups"
+msgstr "Zúme ビデオスクリプト：責任グループ"
 
 #: functions/zume-content.php:561
 msgid "Practice (45min)"
-msgstr "Practice (45min)"
+msgstr "練習（45分）"
 
 #: functions/zume-content.php:569
 msgid "BREAK UP"
-msgstr "BREAK UP"
+msgstr "別れる"
 
 #: functions/zume-content.php:570
 msgid "Break into groups of two or three people of the same gender."
-msgstr "Break into groups of two or three people of the same gender."
+msgstr "同じ性別の2〜3人のグループに分割します。"
 
 #: functions/zume-content.php:576 functions/zume-content.php:628
 #: functions/zume-content.php:1041 functions/zume-content.php:1452
@@ -503,15 +503,15 @@ msgstr "Break into groups of two or three people of the same gender."
 #: functions/zume-content.php:2982 functions/zume-content.php:3379
 #: functions/zume-content.php:3427
 msgid "SHARE"
-msgstr "SHARE"
+msgstr "共有"
 
 #: functions/zume-content.php:579
 msgid "Spend the next 45 minutes working together through Accountability Questions – List 2 in the \"Accountability Groups\" section of your"
-msgstr "Spend the next 45 minutes working together through Accountability Questions – List 2 in the \"Accountability Groups\" section of your"
+msgstr "説明責任の質問で一緒に作業する次の45分を過ごすZúme ガイドブックの「責任グループ」"
 
 #: functions/zume-content.php:583
 msgid "Zúme Guidebook"
-msgstr "Zúme Guidebook"
+msgstr "セクションリスト2"
 
 #: functions/zume-content.php:595 functions/zume-content.php:1010
 #: functions/zume-content.php:1422 functions/zume-content.php:1954
@@ -519,17 +519,17 @@ msgstr "Zúme Guidebook"
 #: functions/zume-content.php:2733 functions/zume-content.php:2965
 #: functions/zume-content.php:3408
 msgid "LOOKING FORWARD"
-msgstr "LOOKING FORWARD"
+msgstr "先読み"
 
 #: functions/zume-content.php:599
 msgid "Congratulations! You've completed Session 1."
-msgstr "Congratulations! You've completed Session 1."
+msgstr "おめでとう！ セッション1を完了しました。"
 
 #: functions/zume-content.php:610 functions/zume-content.php:1023
 #: functions/zume-content.php:1435 functions/zume-content.php:1958
 #: functions/zume-content.php:2496
 msgid "Below are next steps to take in preparation for the next session."
-msgstr "Below are next steps to take in preparation for the next session."
+msgstr "以下は、次のセッションに備えるための次のステップです。"
 
 #: functions/zume-content.php:620 functions/zume-content.php:1034
 #: functions/zume-content.php:1445 functions/zume-content.php:1964
@@ -537,15 +537,16 @@ msgstr "Below are next steps to take in preparation for the next session."
 #: functions/zume-content.php:2743 functions/zume-content.php:2975
 #: functions/zume-content.php:3418
 msgid "OBEY"
-msgstr "OBEY"
+msgstr "従う"
 
 #: functions/zume-content.php:622
 msgid "Begin practicing the S.O.A.P.S. Bible reading between now and your next meeting. Focus on Matthew 5-7, read it at least once a day. Keep a daily journal using the S.O.A.P.S. format."
-msgstr "Begin practicing the S.O.A.P.S. Bible reading between now and your next meeting. Focus on Matthew 5-7, read it at least once a day. Keep a daily journal using the S.O.A.P.S. format."
+msgstr "今から次の集会までの間に、S.O.A.P.S.バイブルリーディングの練習を始めましょう。マシュー5-7に焦点を当て、少なくとも1日に1回は読んでください。\n"
+"S.O.A.P.S.形式を使用して日誌を付けます。"
 
 #: functions/zume-content.php:630
 msgid "Spend time asking God who He might want you to start an Accountability Group with using the tools you've learned in this session. Share this person’s name with the group before you go. Reach out to that person about starting an Accountability Group and meeting with you weekly."
-msgstr "Spend time asking God who He might want you to start an Accountability Group with using the tools you've learned in this session. Share this person’s name with the group before you go. Reach out to that person about starting an Accountability Group and meeting with you weekly."
+msgstr "このセッションで学習したツールを使用して責任グループを始めてほしいと思う人を神に尋ねる時間を割いてください。行く前に、この人の名前をグループと共有してください。責任グループを開始し、毎週あなたと会うことについて、その人に連絡してください。"
 
 #: functions/zume-content.php:638 functions/zume-content.php:706
 #: functions/zume-content.php:1048 functions/zume-content.php:1102
@@ -558,11 +559,11 @@ msgstr "Spend time asking God who He might want you to start an Accountability G
 #: functions/zume-content.php:3319 functions/zume-content.php:3435
 #: functions/zume-content.php:3490
 msgid "PRAY"
-msgstr "PRAY"
+msgstr "祈る"
 
 #: functions/zume-content.php:641
 msgid "Pray that God helps you be obedient to Him and invite Him to work in you and those around you!"
-msgstr "Pray that God helps you be obedient to Him and invite Him to work in you and those around you!"
+msgstr "神があなたが従順になるのを助けるように祈ってください。神をあなたとあなたの周りの人々の中で働くように誘ってください！"
 
 #: functions/zume-content.php:647 functions/zume-content.php:1055
 #: functions/zume-content.php:1466 functions/zume-content.php:1985
@@ -574,23 +575,24 @@ msgstr "#ZumeProject"
 
 #: functions/zume-content.php:649
 msgid "Take a picture of your S.O.A.P.S. Bible study and share it on social media."
-msgstr "Take a picture of your S.O.A.P.S. Bible study and share it on social media."
+msgstr "S.O.A.P.S.聖書研究の写真を撮って、ソーシャルメディアで共有します。"
 
 #: functions/zume-content.php:669
 msgid "WELCOME BACK!"
-msgstr "WELCOME BACK!"
+msgstr "お帰りなさい！"
 
 #: functions/zume-content.php:675
 msgid "DOWNLOAD"
-msgstr "DOWNLOAD"
+msgstr "ダウンロード"
 
 #: functions/zume-content.php:677
 msgid "Does everyone have a printed copy of the Zúme Guidebook? If not, please be sure that someone can download the Guidebook and that everyone has access to some paper and a pen or pencil."
-msgstr "Does everyone have a printed copy of the Zúme Guidebook? If not, please be sure that someone can download the Guidebook and that everyone has access to some paper and a pen or pencil."
+msgstr "全員がZガイドブックの印刷版を持っていますか？\n"
+"そうでない場合は、誰かがガイドブックをダウンロードでき、誰もが紙とペンにアクセスできることを確認してください。"
 
 #: functions/zume-content.php:683
 msgid "DOWNLOAD GUIDEBOOK"
-msgstr "DOWNLOAD GUIDEBOOK"
+msgstr "ガイドブックをダウンロード"
 
 #: functions/zume-content.php:690 functions/zume-content.php:1082
 #: functions/zume-content.php:1507 functions/zume-content.php:2013
@@ -598,13 +600,13 @@ msgstr "DOWNLOAD GUIDEBOOK"
 #: functions/zume-content.php:2790 functions/zume-content.php:3025
 #: functions/zume-content.php:3471
 msgid "CHECK-IN"
-msgstr "CHECK-IN"
+msgstr "チェックイン"
 
 #: functions/zume-content.php:692 functions/zume-content.php:1085
 #: functions/zume-content.php:2792 functions/zume-content.php:3029
 #: functions/zume-content.php:3473
 msgid "Before getting started, take some time to check-in."
-msgstr "Before getting started, take some time to check-in."
+msgstr "始める前に、チェックインに時間をかけてください。"
 
 #: functions/zume-content.php:694 functions/zume-content.php:1089
 #: functions/zume-content.php:1509 functions/zume-content.php:2016
@@ -612,192 +614,194 @@ msgstr "Before getting started, take some time to check-in."
 #: functions/zume-content.php:2794 functions/zume-content.php:3031
 #: functions/zume-content.php:3475
 msgid "At the end of the last session, everyone in your group was challenged in two ways:"
-msgstr "At the end of the last session, everyone in your group was challenged in two ways:"
+msgstr "前のセッションの終わりに、グループの全員が2つの方法でチャレンジされました。"
 
 #: functions/zume-content.php:697
 msgid "You were asked to begin practicing the S.O.A.P.S. Bible reading method and keeping a daily journal."
-msgstr "You were asked to begin practicing the S.O.A.P.S. Bible reading method and keeping a daily journal."
+msgstr "S.O.A.P.S.の練習を開始するように求められました。 聖書を読む方法と毎日の日記をつけます。"
 
 #: functions/zume-content.php:699
 msgid "You were encouraged to reach out to someone about starting an Accountability Group."
-msgstr "You were encouraged to reach out to someone about starting an Accountability Group."
+msgstr "責任グループの開始について誰かに連絡するように勧められました。"
 
 #: functions/zume-content.php:701 functions/zume-content.php:1097
 #: functions/zume-content.php:1518 functions/zume-content.php:2023
 #: functions/zume-content.php:2307 functions/zume-content.php:2565
 #: functions/zume-content.php:2804 functions/zume-content.php:3040
 msgid "Take a few moments to see how your group did this week."
-msgstr "Take a few moments to see how your group did this week."
+msgstr "少し時間を取って、今週のグループの様子を見てみましょう。"
 
 #: functions/zume-content.php:708
 msgid "Ask if anyone in the group has specific needs they would like the group to pray for. Ask someone to pray and ask God to help in the areas the group shared. Be sure to thank God that He promises in His Word to listen and act when His people pray. And, as always, ask God's Holy Spirit to lead your time, together."
-msgstr "Ask if anyone in the group has specific needs they would like the group to pray for. Ask someone to pray and ask God to help in the areas the group shared. Be sure to thank God that He promises in His Word to listen and act when His people pray. And, as always, ask God's Holy Spirit to lead your time, together."
+msgstr "祈る必要のある具体的な必要があるかどうかグループの誰かに尋ねます。\n"
+"誰かに祈ってもらい、共有されている事柄について神の助けを求めます。\n"
+"神は神の民が祈るときに耳を傾け行動することを約束されているので、神に感謝してください。そして、いつも一緒に神の聖霊にあなたの時間を導くように頼んでください。"
 
 #: functions/zume-content.php:731
 msgid "If we want to make disciples who multiply – spiritual producers and not just consumers – then we need to learn and share four main ways God makes everyday followers more like Jesus:"
-msgstr "If we want to make disciples who multiply – spiritual producers and not just consumers – then we need to learn and share four main ways God makes everyday followers more like Jesus:"
+msgstr "消費者だけでなく霊的な生産者も増やす弟子を作りたいのであれば、神が日々の追随者をイエスのようにする4つの主な方法を学び、共有する必要があります。"
 
 #: functions/zume-content.php:733 template-gmo.php:87
 #: template-how-to-follow-jesus.php:87
 msgid "Prayer"
-msgstr "Prayer"
+msgstr "祈り"
 
 #: functions/zume-content.php:734
 msgid "Scripture"
-msgstr "Scripture"
+msgstr "聖書"
 
 #: functions/zume-content.php:735
 msgid "Body Life"
-msgstr "Body Life"
+msgstr "ボディライフ"
 
 #: functions/zume-content.php:736
 msgid "Persecution and Suffering"
-msgstr "Persecution and Suffering"
+msgstr "迫害と苦しみ。"
 
 #: functions/zume-content.php:769
 msgid "Zúme Video Scripts: Producers vs Consumers"
-msgstr "Zúme Video Scripts: Producers vs Consumers"
+msgstr "Zúme ビデオスクリプト：生産者対消費者"
 
 #: functions/zume-content.php:778
 msgid "Of the four areas detailed above (prayer, God's Word, etc.), which ones do you already practice?"
-msgstr "Of the four areas detailed above (prayer, God's Word, etc.), which ones do you already practice?"
+msgstr "上で詳述四つの領域のうち、どれがすでに練習していますか？"
 
 #: functions/zume-content.php:780
 msgid "Which ones do you feel unsure about?"
-msgstr "Which ones do you feel unsure about?"
+msgstr "どれが不安だと思いますか？"
 
 #: functions/zume-content.php:781
 msgid "How ready do you feel when it comes to training others?"
-msgstr "How ready do you feel when it comes to training others?"
+msgstr "他人のトレーニングに関して、どの程度準備ができていますか？"
 
 #: functions/zume-content.php:794
 msgid "Listen and Read Along (2min)"
-msgstr "Listen and Read Along (2min)"
+msgstr "一緒に聞いて読む（2分）"
 
 #: functions/zume-content.php:804 template-zume-dashboard.php:366
 msgid "Prayer Cycle"
-msgstr "Prayer Cycle"
+msgstr "祈りのサイクル"
 
 #: functions/zume-content.php:805
 msgid "The Bible tells us that prayer is our chance to speak to and hear from the same God who created us!"
-msgstr "The Bible tells us that prayer is our chance to speak to and hear from the same God who created us!"
+msgstr "聖書は、祈りは私たちを創造したのと同じ神と話し、聞く機会であると私たちに告げています！"
 
 #: functions/zume-content.php:815
 msgid "Find the \"Prayer Cycle\" section in your Zúme Guidebook, and listen to the audio below."
-msgstr "Find the \"Prayer Cycle\" section in your Zúme Guidebook, and listen to the audio below."
+msgstr "Zúme ガイドブックの「祈りのサイクル」セクションを見つけて、下の音声を聞いてください。"
 
 #: functions/zume-content.php:851
 msgid "Zúme Video Scripts: Prayer Cycle"
-msgstr "Zúme Video Scripts: Prayer Cycle"
+msgstr "Zúme ビデオスクリプト：祈りのサイクル"
 
 #: functions/zume-content.php:864
 msgid "Practice the Prayer Cycle (60min)"
-msgstr "Practice the Prayer Cycle (60min)"
+msgstr "祈りのサイクルを練習する（60分）"
 
 #: functions/zume-content.php:870
 msgid "LEAVE"
-msgstr "LEAVE"
+msgstr "残す"
 
 #: functions/zume-content.php:872
 msgid "Spend the next 60 minutes in prayer individually, using the exercises in \"The Prayer Cycle\" section of the Zúme Guidebook as a guide."
-msgstr "Spend the next 60 minutes in prayer individually, using the exercises in \"The Prayer Cycle\" section of the Zúme Guidebook as a guide."
+msgstr "Zúme ガイドブックの「祈りのサイクル」セクションの練習をガイドとして使用し、次の60分間を個別に祈りの中で過ごします。"
 
 #: functions/zume-content.php:877
 msgid "RETURN"
-msgstr "RETURN"
+msgstr "戻る"
 
 #: functions/zume-content.php:879
 msgid "Set a time for the group to return and reconnect. Be sure to add a few extra minutes for everyone to both find a quiet place to pray and to make their way back to the group."
-msgstr "Set a time for the group to return and reconnect. Be sure to add a few extra minutes for everyone to both find a quiet place to pray and to make their way back to the group."
+msgstr "グループが戻って再接続する時間を設定します。全員が静かに祈る場所を見つけ、グループに戻るために、数分余分に追加してください。"
 
 #: functions/zume-content.php:887
 msgid "What is your reaction to spending an hour in prayer?"
-msgstr "What is your reaction to spending an hour in prayer?"
+msgstr "祈りの中で1時間過ごすことに対するあなたの反応は？"
 
 #: functions/zume-content.php:888
 msgid "How do you feel?"
-msgstr "How do you feel?"
+msgstr "気分はどうですか？"
 
 #: functions/zume-content.php:889
 msgid "Did you learn or hear anything?"
-msgstr "Did you learn or hear anything?"
+msgstr "何か学んだり聞いたりしましたか？"
 
 #: functions/zume-content.php:890
 msgid "What would life be like if you made this kind of prayer a regular habit?"
-msgstr "What would life be like if you made this kind of prayer a regular habit?"
+msgstr "あなたが習慣として定期的に祈るなら、あなたの人生はどうですか？"
 
 #: functions/zume-content.php:914 template-zume-dashboard.php:374
 msgid "List of 100"
-msgstr "List of 100"
+msgstr "百のリスト"
 
 #: functions/zume-content.php:917
 msgid "God has already given us the relationships we need to “Go and make disciples.” These are our family, friends, neighbors, co-workers and classmates – people we’ve known all our lives or maybe just met."
-msgstr "God has already given us the relationships we need to “Go and make disciples.” These are our family, friends, neighbors, co-workers and classmates – people we’ve known all our lives or maybe just met."
+msgstr "神は私たちに「行って弟子を作る」ために必要な関係をすでに与えてくださいました。これらは、私たちの家族、友人、隣人、同僚、クラスメートです。私たちがすべての人生で知っている、またはたぶん会ったばかりの人々です。"
 
 #: functions/zume-content.php:920
 msgid "Being good stewards of these relationships is the first step in multiplying disciples. Start by making a list."
-msgstr "Being good stewards of these relationships is the first step in multiplying disciples. Start by making a list."
+msgstr "これらの関係の優れた管理者になることは、弟子を増やす最初のステップです。 リストを作成することから始めます。"
 
 #: functions/zume-content.php:931
 msgid "Find the \"List of 100\" section in your Zúme Guidebook, and listen to the audio below."
-msgstr "Find the \"List of 100\" section in your Zúme Guidebook, and listen to the audio below."
+msgstr "Zúme ガイドブックの「百のリスト」セクションを見つけて、下の音声を聞いてください。"
 
 #: functions/zume-content.php:968
 msgid "Zúme Video Scripts: List of 100"
-msgstr "Zúme Video Scripts: List of 100"
+msgstr "Zúme ビデオスクリプト：百のリスト"
 
 #: functions/zume-content.php:981
 msgid "Project (30min)"
-msgstr "Project (30min)"
+msgstr "プロジェクト （30分）"
 
 #: functions/zume-content.php:991
 msgid "Create your own list of 100"
-msgstr "Create your own list of 100"
+msgstr "百のリストを作成する"
 
 #: functions/zume-content.php:993
 msgid "Have everyone in your group take the next 30 minutes to fill out their own inventory of relationships using the form in the \"List of 100\" section in your Zúme Guidebook. "
-msgstr "Have everyone in your group take the next 30 minutes to fill out their own inventory of relationships using the form in the \"List of 100\" section in your Zúme Guidebook. "
+msgstr "グループの全員に、関係の各自の目録に記入するために次の30分かかることを尋ねます。 Zúme ガイドブックの「百のリスト」セクションのフォームを使用してください。"
 
 #: functions/zume-content.php:1013
 msgid "Congratulations on finishing Session 2! "
-msgstr "Congratulations on finishing Session 2! "
+msgstr "セッション2の終了おめでとうございます！"
 
 #: functions/zume-content.php:1036
 msgid "Spend time this week praying for five people from your List of 100 that you marked as an \"Unbeliever\" or \"Unknown.\" Ask God to prepare their hearts to be open to His story."
-msgstr "Spend time this week praying for five people from your List of 100 that you marked as an \"Unbeliever\" or \"Unknown.\" Ask God to prepare their hearts to be open to His story."
+msgstr "今週は、「不信者」または「不明」とマークした100人のリストから5人のために祈ります。神に彼らの心を開いて神の話に心を開くように求めてください。"
 
 #: functions/zume-content.php:1043
 msgid "Ask God who He wants you to share the List of 100 tool with. Share this person's name with the group before you go and reach out to them before the next session."
-msgstr "Ask God who He wants you to share the List of 100 tool with. Share this person's name with the group before you go and reach out to them before the next session."
+msgstr "百のリストを誰と共有できるかを神に尋ねます。参加する前にグループの人の名前を共有し、次のセッションの前に連絡を取ります。"
 
 #: functions/zume-content.php:1050 functions/zume-content.php:1461
 #: functions/zume-content.php:1980
 msgid "Pray that God help you be obedient to Him and invite Him to work in you and those around you!"
-msgstr "Pray that God help you be obedient to Him and invite Him to work in you and those around you!"
+msgstr "神があなたが従順になるのを助けるように祈ってください。神をあなたとあなたの周りの人々の中で働くように誘ってください！"
 
 #: functions/zume-content.php:1057
 msgid "Think others could use the 60-minute prayer tool? Share about it on social media."
-msgstr "Think others could use the 60-minute prayer tool? Share about it on social media."
+msgstr "他の人が60分の祈りの道具を使うことができると思いますか？それについてソーシャルメディアで共有してください。"
 
 #: functions/zume-content.php:1076 functions/zume-content.php:1501
 #: functions/zume-content.php:2006 functions/zume-content.php:2293
 #: functions/zume-content.php:2547 functions/zume-content.php:2784
 #: functions/zume-content.php:3017
 msgid "LOOKING BACK"
-msgstr "LOOKING BACK"
+msgstr "振り返る"
 
 #: functions/zume-content.php:1093
 msgid "You were asked to pray for five people from your List of 100 that you marked as an \"Unbeliever\" or \"Unknown.\""
-msgstr "You were asked to pray for five people from your List of 100 that you marked as an \"Unbeliever\" or \"Unknown.\""
+msgstr "「不信者」または「不明」とマークした百のリストから5人が祈るように求められました。"
 
 #: functions/zume-content.php:1094
 msgid "You were encouraged to share how to make a List of 100 with someone."
-msgstr "You were encouraged to share how to make a List of 100 with someone."
+msgstr "百のリストを作成する方法を誰かと共有するように勧められました。"
 
 #: functions/zume-content.php:1104 functions/zume-content.php:1527
 #: functions/zume-content.php:2030
 msgid "Pray and thank God for the results and invite His Holy Spirit to lead your time together."
-msgstr "Pray and thank God for the results and invite His Holy Spirit to lead your time together."
+msgstr "結果を得るために、神への祈りと感謝を提供します。 一緒にあなたの時間を導くために神の聖霊を招待してください。"
 
 #: functions/zume-content.php:1109 functions/zume-content.php:1532
 #: functions/zume-content.php:2035 functions/zume-content.php:2319
@@ -805,315 +809,316 @@ msgstr "Pray and thank God for the results and invite His Holy Spirit to lead yo
 #: functions/zume-content.php:3055 functions/zume-content.php:3278
 #: functions/zume-content.php:3497
 msgid "OVERVIEW"
-msgstr "OVERVIEW"
+msgstr "概要"
 
 #: functions/zume-content.php:1111
 msgid "In this session, you’ll learn how God’s Spiritual Economy works and how God invests more in those who are faithful with what they've already been given. You'll also learn two more tools for making disciples – sharing God’s Story from Creation to Judgement and Baptism."
-msgstr "In this session, you’ll learn how God’s Spiritual Economy works and how God invests more in those who are faithful with what they've already been given. You'll also learn two more tools for making disciples – sharing God’s Story from Creation to Judgement and Baptism."
+msgstr "このセッションでは、神の霊的経済がどのように機能するかを学びます。 すでに与えられているものに忠実な人々に、神がもっと多くのことをどのように投資するかを見ていきます。また、弟子を作るための2つのツールを学びます。創造から判断、バプテスマまで、神の物語を共有することです。"
 
 #: functions/zume-content.php:1113 functions/zume-content.php:1536
 msgid "Then, when you're ready, get started!"
-msgstr "Then, when you're ready, get started!"
+msgstr "次に、準備ができたら、始めましょう！"
 
 #: functions/zume-content.php:1135
 msgid "In this broken world, people feel rewarded when they take, when they receive and when they gain more than those around them. But God's Spiritual Economy is different – God invests more in those who are faithful with what they've already been given."
-msgstr "In this broken world, people feel rewarded when they take, when they receive and when they gain more than those around them. But God's Spiritual Economy is different – God invests more in those who are faithful with what they've already been given."
+msgstr "この壊れた世界では、人々は自分が取るとき、受け取るとき、周りの人よりも多くを得るとき、やりがいを感じます。しかし、神の霊的経済は異なります。神はすでに与えられているものに忠実な人々にもっと投資します。"
 
 #: functions/zume-content.php:1166
 msgid "Zúme Video Scripts: Spiritual Economy"
-msgstr "Zúme Video Scripts: Spiritual Economy"
+msgstr "Zúme ビデオスクリプト：精神的な経済"
 
 #: functions/zume-content.php:1173
 msgid "What are some differences you see between God's Spiritual Economy and our earthly way of getting things done?"
-msgstr "What are some differences you see between God's Spiritual Economy and our earthly way of getting things done?"
+msgstr "神の霊的経済と私たちが地上で物事を成し遂げる方法の違いは何ですか？"
 
 #: functions/zume-content.php:1187 functions/zume-content.php:1320
 msgid "Read and Discuss (15min)"
-msgstr "Read and Discuss (15min)"
+msgstr "読んで話し合う（15分）"
 
 #: functions/zume-content.php:1196
 msgid "Jesus said, “You will receive power when the Holy Spirit comes upon you. And you will be my witnesses, telling people about me everywhere – in Jerusalem, throughout Judea, in Samaria, and to the ends of the earth.”"
-msgstr "Jesus said, “You will receive power when the Holy Spirit comes upon you. And you will be my witnesses, telling people about me everywhere – in Jerusalem, throughout Judea, in Samaria, and to the ends of the earth.”"
+msgstr "イエスは言われた、「聖霊があなたに臨むとき、あなたは力を受けるでしょう。そして、あなたは私の証人となり、エルサレム、ユダヤ中、サマリア、そして地球の果てに至るまで、どこにいても私について人々に話します。」"
 
 #: functions/zume-content.php:1199
 msgid "Jesus believed in His followers so much, He trusted them to tell His story. Then He sent them around the world to do it. Now, He’s sending us."
-msgstr "Jesus believed in His followers so much, He trusted them to tell His story. Then He sent them around the world to do it. Now, He’s sending us."
+msgstr "イエスは信者をとても信じていました。 それから彼はそれをするために世界中にそれらを送りました。 今、彼は私たちを送ってくれています。"
 
 #: functions/zume-content.php:1202
 msgid "There’s no one “best way” to tell God’s story (also called The Gospel), because the best way will depend on who you’re sharing with. Every disciple should learn to tell God’s Story in a way that’s true to scripture and connects with the audience they’re sharing with."
-msgstr "There’s no one “best way” to tell God’s story (also called The Gospel), because the best way will depend on who you’re sharing with. Every disciple should learn to tell God’s Story in a way that’s true to scripture and connects with the audience they’re sharing with."
+msgstr "神の物語（「福音」とも呼ばれます）を伝えるための単一の「最良の方法」はありません。なぜなら、最良の方法は、誰と共有するかに依存するためです。\n"
+"すべての弟子は、聖書に忠実であり、彼らが共有している聴衆とつながる方法で神の物語を話すことを学ぶべきです。"
 
 #: functions/zume-content.php:1211
 msgid "What comes to mind when you hear God's command to be His \"witness\" and to tell His story?"
-msgstr "What comes to mind when you hear God's command to be His \"witness\" and to tell His story?"
+msgstr "神の「証人」になり、神の物語を語るという命令を聞くと、何が思い浮かびますか？"
 
 #: functions/zume-content.php:1213
 msgid "Why do you think Jesus chose ordinary people instead of some other way to share His Good News?"
-msgstr "Why do you think Jesus chose ordinary people instead of some other way to share His Good News?"
+msgstr "イエス様が良い知らせを伝えるために、他の方法ではなく普通の人を選ばれたのはなぜですか。"
 
 #: functions/zume-content.php:1215
 msgid "What would it take for you to feel more comfortable sharing God's Story?"
-msgstr "What would it take for you to feel more comfortable sharing God's Story?"
+msgstr "神の話をより快適に共有するには、何が必要ですか？"
 
 #: functions/zume-content.php:1238 template-zume-dashboard.php:398
 msgid "The Gospel"
-msgstr "The Gospel"
+msgstr "福音"
 
 #: functions/zume-content.php:1239
 msgid "One way to share God’s Good News is by telling God’s Story from Creation to Judgement – from the beginning of humankind all the way to the end of this age."
-msgstr "One way to share God’s Good News is by telling God’s Story from Creation to Judgement – from the beginning of humankind all the way to the end of this age."
+msgstr "神の良いたよりを共有する1つの方法は、人類の始まりからこの時代の終わりまで、神の物語を創造から判断まで伝えることです。"
 
 #: functions/zume-content.php:1271
 msgid "Zúme Video Scripts: The Gospel"
-msgstr "Zúme Video Scripts: The Gospel"
+msgstr "Zúme ビデオスクリプト：福音"
 
 #: functions/zume-content.php:1280
 msgid "What do you learn about mankind from this story?"
-msgstr "What do you learn about mankind from this story?"
+msgstr "この物語から人類について何を学びますか？"
 
 #: functions/zume-content.php:1281
 msgid "What do you learn about God?"
-msgstr "What do you learn about God?"
+msgstr "あなたは神について何を学びますか？"
 
 #: functions/zume-content.php:1282
 msgid "Do you think it would be easier or harder to share God's Story by telling a story like this?"
-msgstr "Do you think it would be easier or harder to share God's Story by telling a story like this?"
+msgstr "このように語ることで、神の物語を共有する方が簡単または難しいと思いますか？"
 
 #: functions/zume-content.php:1295
 msgid "PRACTICE SHARING GOD'S STORY (45min)"
-msgstr "PRACTICE SHARING GOD'S STORY (45min)"
+msgstr "神の物語を共有する実践（45分）"
 
 #: functions/zume-content.php:1304
 msgid "Break into groups of two or three people and spend the next 45 minutes practicing telling God's Story. You can use the using the Activity instructions for \"God's Story\" found in your Zúme Guidebook."
-msgstr "Break into groups of two or three people and spend the next 45 minutes practicing telling God's Story. You can use the using the Activity instructions for \"God's Story\" found in your Zúme Guidebook."
+msgstr "2〜3人のグループに分かれます。 次の45分間を費やして、神の物語を話す練習をします。Zúme ガイドブックにある「神の物語」のアクティビティの説明を使用できます。"
 
 #: functions/zume-content.php:1329 template-zume-dashboard.php:406
 msgid "Baptism"
-msgstr "Baptism"
+msgstr "洗礼"
 
 #: functions/zume-content.php:1332
 msgid "Jesus said, “Go and make disciples of all nations, BAPTIZING them in the name of the Father and of the Son and of the Holy Spirit…”"
-msgstr "Jesus said, “Go and make disciples of all nations, BAPTIZING them in the name of the Father and of the Son and of the Holy Spirit…”"
+msgstr "イエスは言われました、「行って、すべての国の弟子を作り、父と子と聖霊の名によって彼らをバプテスマしてください…」。"
 
 #: functions/zume-content.php:1343
 msgid "Find the \"Baptism\" section in your Zúme Guidebook, and listen to the audio below."
-msgstr "Find the \"Baptism\" section in your Zúme Guidebook, and listen to the audio below."
+msgstr "Zúme ガイドブックの「洗礼」セクションを見つけて、下の音声を聞いてください。"
 
 #: functions/zume-content.php:1378
 msgid "Zúme Video Scripts: Baptism"
-msgstr "Zúme Video Scripts: Baptism"
+msgstr "Zúme ビデオスクリプト：洗礼"
 
 #: functions/zume-content.php:1386
 msgid "Have you ever baptized someone?"
-msgstr "Have you ever baptized someone?"
+msgstr "バプテスマを受けたことがありますか？"
 
 #: functions/zume-content.php:1387
 msgid "Would you even consider it?"
-msgstr "Would you even consider it?"
+msgstr "考えてもらえますか？"
 
 #: functions/zume-content.php:1388
 msgid "If the Great Commission is for every follower of Jesus, does that mean every follower is allowed to baptize others? Why or why not?"
-msgstr "If the Great Commission is for every follower of Jesus, does that mean every follower is allowed to baptize others? Why or why not?"
+msgstr "大委員会がイエスのすべての信者のためのものである場合、それはすべての信者が他の人々にバプテスマを授けることを許可されているということですか？ なぜか、なぜそうでないのか？"
 
 #: functions/zume-content.php:1401
 msgid "IMPORTANT REMINDER – Have you been baptized?"
-msgstr "IMPORTANT REMINDER – Have you been baptized?"
+msgstr "重要なお知らせ–バプテスマを受けましたか？"
 
 #: functions/zume-content.php:1404
 msgid "If not, then we encourage you to plan this before even one more session of this training. Invite your group to be a part of this important day when you celebrate saying \"yes\" to Jesus."
-msgstr "If not, then we encourage you to plan this before even one more session of this training. Invite your group to be a part of this important day when you celebrate saying \"yes\" to Jesus."
+msgstr "そうでない場合は、このトレーニングをさらに1回行う前に、この計画を立てることをお勧めします。 イエスに「はい」と言うことを祝うこの重要な日の一部になるようにグループを招待してください。"
 
 #: functions/zume-content.php:1425
 msgid "Congratulations on finishing Session 3! "
-msgstr "Congratulations on finishing Session 3! "
+msgstr "セッション3の終了おめでとうございます！"
 
 #: functions/zume-content.php:1447
 msgid "Spend time this week practicing God's Story, and then share it with at least one person from your List of 100 that you marked as \"Unbeliever\" or \"Unknown.\""
-msgstr "Spend time this week practicing God's Story, and then share it with at least one person from your List of 100 that you marked as \"Unbeliever\" or \"Unknown.\""
+msgstr "今週は、神の物語を実践する時間を過ごしましょう。 次に、「不信者」または「不明」としてマークされた百のリストから少なくとも1人と共有します。"
 
 #: functions/zume-content.php:1454
 msgid "Ask God who He wants you to train to use the Creation to Judgment story (or some other way to share God's Story). Share this person's name with the group before you go."
-msgstr "Ask God who He wants you to train to use the Creation to Judgment story (or some other way to share God's Story). Share this person's name with the group before you go."
+msgstr "創造から裁きまで（または他の方法で神の物語を共有するために）物語を共有してほしい相手を神に尋ねます。行く前に、この人の名前をグループと共有してください。"
 
 #: functions/zume-content.php:1468
 msgid "What’s been your Zúme highlight? Tell others about it on social media."
-msgstr "What’s been your Zúme highlight? Tell others about it on social media."
+msgstr "Zúme のハイライトは何ですか？ ソーシャルメディアでそのことを他の人に伝えます。"
 
 #: functions/zume-content.php:1479
 msgid "IMPORTANT REMINDER – Your group will be celebrating the Lord's Supper next session. Be sure to remember the supplies (bread and wine / juice)."
-msgstr "IMPORTANT REMINDER – Your group will be celebrating the Lord's Supper next session. Be sure to remember the supplies (bread and wine / juice)."
+msgstr "重要なお知らせ–あなたのグループは次のセッションで主の晩餐を祝います。 必需品（パンとワイン/ジュース）を忘れないでください。"
 
 #: functions/zume-content.php:1512
 msgid "You were asked to share God’s Story with at least one person from your List of 100 that you marked as \"Unbeliever\" or \"Unknown.\""
-msgstr "You were asked to share God’s Story with at least one person from your List of 100 that you marked as \"Unbeliever\" or \"Unknown.\""
+msgstr "「不信者」または「不明」とマークした百のリストから少なくとも1人の人物と神の物語を共有するように求められました。"
 
 #: functions/zume-content.php:1515
 msgid "You were encouraged to train someone to use the Creation to Judgement story (or some other way to share God’s Story) with someone."
-msgstr "You were encouraged to train someone to use the Creation to Judgement story (or some other way to share God’s Story) with someone."
+msgstr "創造から判断まで（または他の方法で神の物語を共有するために）物語を使うように誰かを訓練するように勧められました。"
 
 #: functions/zume-content.php:1534
 msgid "In this session, you'll learn how God's plan is for every follower to multiply! You’ll discover how disciples multiply far and fast when they start to see where God’s Kingdom isn’t. And, you'll learn another great tool for inviting others into God's family is as simple as telling our story."
-msgstr "In this session, you'll learn how God's plan is for every follower to multiply! You’ll discover how disciples multiply far and fast when they start to see where God’s Kingdom isn’t. And, you'll learn another great tool for inviting others into God's family is as simple as telling our story."
+msgstr "このセッションでは、神の計画がどのようにすべての信者が増殖するかを学びます！弟子たちが神の王国が存在しない場所を見始めたとき、弟子たちがどんどん速く成長するのを発見します。そして、あなたは私たちの物語を話すのと同じくらい簡単に他の人を神の家族に招待するためのもう一つの素晴らしいツールを学びます。"
 
 #: functions/zume-content.php:1559
 msgid "3-Minute Testimony"
-msgstr "3-Minute Testimony"
+msgstr "3分間の証言"
 
 #: functions/zume-content.php:1562
 msgid "As followers of Jesus, we are “witnesses\" for Him, because we “testify” about the impact Jesus has had on our lives. Your story of your relationship with God is called your Testimony. It's powerful, and it's something no one can share better than you."
-msgstr "As followers of Jesus, we are “witnesses\" for Him, because we “testify” about the impact Jesus has had on our lives. Your story of your relationship with God is called your Testimony. It's powerful, and it's something no one can share better than you."
+msgstr "イエスの追随者として、私たちはイエスの「証人」です。なぜなら、イエスが私たちの生活に与えた影響について「証言」するからです。神との関係の物語は、証言と呼ばれます。それは強力であり、誰もあなたより上手に共有できないものです。"
 
 #: functions/zume-content.php:1573
 msgid "Find the \"3-Minute Testimony\" section in your Zúme Guidebook, and listen to the audio below."
-msgstr "Find the \"3-Minute Testimony\" section in your Zúme Guidebook, and listen to the audio below."
+msgstr "Zúme ガイドブックの「3分間の証言」セクションを見つけて、下の音声を聞いてください。"
 
 #: functions/zume-content.php:1608
 msgid "Zúme Video Scripts: Testimony"
-msgstr "Zúme Video Scripts: Testimony"
+msgstr "Zúme ビデオスクリプト：証言"
 
 #: functions/zume-content.php:1621
 msgid "Practice Sharing your Testimony (45min)"
-msgstr "Practice Sharing your Testimony (45min)"
+msgstr "証言の共有の練習（45分）"
 
 #: functions/zume-content.php:1631
 msgid "Break into groups of two or three and and spend the next 45 minutes practicing sharing your Testimony using the Activity instructions on page 15 of your Zúme Guidebook."
-msgstr "Break into groups of two or three and and spend the next 45 minutes practicing sharing your Testimony using the Activity instructions on page 15 of your Zúme Guidebook."
+msgstr "2〜3人のグループに分かれて、次の45分間で証を共有する練習をします。 Zúme ガイドブックのアクティビティの説明を使用してください。"
 
 #: functions/zume-content.php:1656
 msgid "What is God's greatest blessing for His children? Making disciples who multiply!"
-msgstr "What is God's greatest blessing for His children? Making disciples who multiply!"
+msgstr "神様の子供たちに対する神の最大の祝福は何ですか？倍増する弟子作り！"
 
 #: functions/zume-content.php:1658
 msgid "What if you could learn a simple pattern for making not just one follower of Jesus but entire spiritual families who multiply for generations to come?"
-msgstr "What if you could learn a simple pattern for making not just one follower of Jesus but entire spiritual families who multiply for generations to come?"
+msgstr "世代を超えて増殖するイエスの霊的家族全体をイエスに従わせるための簡単なパターンを学べるとしたらどうでしょうか。"
 
 #: functions/zume-content.php:1690
 msgid "Zúme Video Scripts: Greatest Blessing"
-msgstr "Zúme Video Scripts: Greatest Blessing"
+msgstr "Zúme ビデオスクリプト：最高の祝福"
 
 #: functions/zume-content.php:1701
 msgid "Is this the pattern you were taught when you first began to follow Jesus? If not, what was different?"
-msgstr "Is this the pattern you were taught when you first began to follow Jesus? If not, what was different?"
+msgstr "これは、あなたが最初にイエスに従い始めたときに教えられたパターンですか？ そうでない場合、何が違いましたか？"
 
 #: functions/zume-content.php:1703
 msgid "After you came to faith, how long was it before you began to disciple others?"
-msgstr "After you came to faith, how long was it before you began to disciple others?"
+msgstr "信仰に至ってから、他の人を弟子に使い始めるまでにどのくらいかかりましたか？"
 
 #: functions/zume-content.php:1704
 msgid "What do you think would happen if new followers started sharing and discipling others, immediately?"
-msgstr "What do you think would happen if new followers started sharing and discipling others, immediately?"
+msgstr "新しいフォロワーがすぐに他の人を共有し、懲らしめたらどうなると思いますか？"
 
 #: functions/zume-content.php:1729
 msgid "What do ducklings have to do with disciple making? They lead and follow at the same time."
-msgstr "What do ducklings have to do with disciple making? They lead and follow at the same time."
+msgstr "アヒルの子と弟子を作ることは何が共通しているか？ 彼らは同時にリードし、フォローします。"
 
 #: functions/zume-content.php:1761
 msgid "Zúme Video Scripts: Duckling Discipleship"
-msgstr "Zúme Video Scripts: Duckling Discipleship"
+msgstr "Zúme ビデオスクリプト：子ガモの弟子"
 
 #: functions/zume-content.php:1772
 msgid "What is one area of discipleship (reading/understanding the Bible, praying, sharing God's Story, etc.) that you want to learn more about? Who is someone that could help you learn?"
-msgstr "What is one area of discipleship (reading/understanding the Bible, praying, sharing God's Story, etc.) that you want to learn more about? Who is someone that could help you learn?"
+msgstr "学びたい弟子の領域（聖書を理解し、祈りなど）は何ですか？"
 
 #: functions/zume-content.php:1774
 msgid "What is one area of discipleship that you feel you could share with others? Who is someone that you could share with?"
-msgstr "What is one area of discipleship that you feel you could share with others? Who is someone that you could share with?"
+msgstr "学びたい弟子の領域（聖書を理解し、祈りなど）は何ですか？あなたが学ぶのを助けることができる誰かは誰ですか？"
 
 #: functions/zume-content.php:1798
 msgid "Have you ever stopped to think about where God's Kingdom... isn't?"
-msgstr "Have you ever stopped to think about where God's Kingdom... isn't?"
+msgstr "神の王国が存在しない場所について考えるために立ち止まったことはありますか？"
 
 #: functions/zume-content.php:1800
 msgid "Have you ever visited a home or a neighborhood or even a city where it seemed as if God was just... missing? These are usually the places where God wants to work the most."
-msgstr "Have you ever visited a home or a neighborhood or even a city where it seemed as if God was just... missing? These are usually the places where God wants to work the most."
+msgstr "神がいないように感じられる家や近所に行ったことはありますか？これらは通常、神が最も働きたい場所です。"
 
 #: functions/zume-content.php:1832
 msgid "Zúme Video Scripts: Eyes to See"
-msgstr "Zúme Video Scripts: Eyes to See"
+msgstr "Zúme ビデオスクリプト：見る目"
 
 #: functions/zume-content.php:1841
 msgid "Who are you more comfortable sharing with -- people you already know or people you haven't met, yet?"
-msgstr "Who are you more comfortable sharing with -- people you already know or people you haven't met, yet?"
+msgstr "すでに知っている人やまだ会っていない人と共有する方が快適ですか？"
 
 #: functions/zume-content.php:1843
 msgid "Why do you think that is?"
-msgstr "Why do you think that is?"
+msgstr "なぜだと思いますか？"
 
 #: functions/zume-content.php:1844
 msgid "How could you get better at sharing with people you're less comfortable with?"
-msgstr "How could you get better at sharing with people you're less comfortable with?"
+msgstr "慣れていない人と共有するにはどうすればよいですか。"
 
 #: functions/zume-content.php:1866
 msgid "The Lord's Supper"
-msgstr "The Lord's Supper"
+msgstr "主の晩餐"
 
 #: functions/zume-content.php:1869
 msgid "Jesus said, “I am the living bread that came down from heaven. Whoever eats this bread will live forever. This bread is my flesh, which I will give for the life of the world.”"
-msgstr "Jesus said, “I am the living bread that came down from heaven. Whoever eats this bread will live forever. This bread is my flesh, which I will give for the life of the world.”"
+msgstr "イエスは言われました、「私は天から下って来た生きたパンです。 このパンを食べる人は誰でも永遠に生きます。 このパンは私の肉であり、私はそれを世界の生命のために与えます。」"
 
 #: functions/zume-content.php:1880
 msgid "Find \"The Lord's Supper\" section in your Zúme Guidebook, and listen to the audio below."
-msgstr "Find \"The Lord's Supper\" section in your Zúme Guidebook, and listen to the audio below."
+msgstr "Zúme ガイドブックで「主の晩餐」セクションを見つけて、下の音声を聞いてください。"
 
 #: functions/zume-content.php:1915
 msgid "Zúme Video Scripts: Lord's Supper"
-msgstr "Zúme Video Scripts: Lord's Supper"
+msgstr "Zúme ビデオスクリプト：主の晩餐"
 
 #: functions/zume-content.php:1928
 msgid "Practice the Lord's Supper (10min)"
-msgstr "Practice the Lord's Supper (10min)"
+msgstr "主の晩餐を実践する（10分）"
 
 #: functions/zume-content.php:1938
 msgid "Spend the next 10 minutes celebrating The Lord's Supper with your group using the pattern on page 15 of your Zúme Guidebook."
-msgstr "Spend the next 10 minutes celebrating The Lord's Supper with your group using the pattern on page 15 of your Zúme Guidebook."
+msgstr "Zúme ガイドブックのパターンを使用して、主の晩餐を祝う次の10分間をグループで過ごします。"
 
 #: functions/zume-content.php:1957
 msgid "Congratulations on finishing Session 4!"
-msgstr "Congratulations on finishing Session 4!"
+msgstr "セッション4の終了おめでとうございます！"
 
 #: functions/zume-content.php:1966
 msgid "Spend time this week practicing your 3-Minute Testimony, and then share it with at least one person from your List of 100 that you marked as \"Unbeliever\" or \"Unknown.\""
-msgstr "Spend time this week practicing your 3-Minute Testimony, and then share it with at least one person from your List of 100 that you marked as \"Unbeliever\" or \"Unknown.\""
+msgstr "次に、「不信者」または「不明」としてマークした百リストから少なくとも1人と共有します。"
 
 #: functions/zume-content.php:1973
 msgid "Ask God who He wants you to train with the 3-Minute Testimony tool. Share this person's name with the group before you go."
-msgstr "Ask God who He wants you to train with the 3-Minute Testimony tool. Share this person's name with the group before you go."
+msgstr "3分間の証言ツールを誰とトレーニングすべきかを神に尋ねます。行く前に、この人の名前をグループと共有してください。"
 
 #: functions/zume-content.php:1987 functions/zume-content.php:2998
 msgid "What’s the best thing you got today? Share about it on social media."
-msgstr "What’s the best thing you got today? Share about it on social media."
+msgstr "今日得た最高のものは何ですか？ それについてソーシャルメディアで共有してください。"
 
 #: functions/zume-content.php:2019
 msgid "You were asked to share your 3-Minute Testimony with at least one person on your List of 100."
-msgstr "You were asked to share your 3-Minute Testimony with at least one person on your List of 100."
+msgstr "3分間の証言を百のリストの少なくとも1人と共有するように求められました。"
 
 #: functions/zume-content.php:2021
 msgid "You were encouraged to train someone else with the 3-Minute Testimony tool."
-msgstr "You were encouraged to train someone else with the 3-Minute Testimony tool."
+msgstr "あなたが3分の証言ツールで他の誰かを訓練するために奨励されました。"
 
 #: functions/zume-content.php:2037
 msgid "In this session, you’ll learn how Prayer Walking is a powerful way to prepare a neighborhood for Jesus, and you'll learn a simple but powerful pattern for prayer that will help you meet and make new disciples along the way."
-msgstr "In this session, you’ll learn how Prayer Walking is a powerful way to prepare a neighborhood for Jesus, and you'll learn a simple but powerful pattern for prayer that will help you meet and make new disciples along the way."
+msgstr "このセッションでは、あなたはプレイヤウォーキングは、イエスのために近所を準備するための強力な方法である方法を学びます。また、あなたが道に沿って新しい弟子を満たすとする助けとなるでしょう祈りのためのシンプルかつ強力なパターンを学習します。"
 
 #: functions/zume-content.php:2049
 msgid "Listen and Read Along (15min)"
-msgstr "Listen and Read Along (15min)"
+msgstr "聞いて読む（15分）"
 
 #: functions/zume-content.php:2058 template-zume-dashboard.php:470
 msgid "Prayer Walking"
-msgstr "Prayer Walking"
+msgstr "プレイヤウォーキング"
 
 #: functions/zume-content.php:2061
 msgid "Prayer Walking is a simple way to obey God’s command to pray for others. And it's just what it sounds like – praying to God while walking around!"
-msgstr "Prayer Walking is a simple way to obey God’s command to pray for others. And it's just what it sounds like – praying to God while walking around!"
+msgstr "プレイヤウォーキングは、他の人のために祈るという神の命令に従う簡単な方法です。 そして歩き回っている間、それは本当に神に祈っています！"
 
 #: functions/zume-content.php:2072
 msgid "Find the \"Prayer Walking\" section in your Zúme Guidebook, and listen to the audio below."
-msgstr "Find the \"Prayer Walking\" section in your Zúme Guidebook, and listen to the audio below."
+msgstr "Zúme ガイドブックの「プレイヤウォーキング」セクションを見つけて、下の音声を聞いてください。"
 
 #: functions/zume-content.php:2107
 msgid "Zúme Video Scripts: Prayer Walking"
-msgstr "Zúme Video Scripts: Prayer Walking"
+msgstr "Zúme ビデオスクリプト：プレイヤウォーキング"
 
 #: functions/zume-content.php:2161
 msgid "Zúme Video Scripts: Person of Peace"
