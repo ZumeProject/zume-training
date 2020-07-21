@@ -12,9 +12,10 @@ msgid "Get Started"
 msgstr "શરૂઆત કરો"
 
 #: front-page.php:76 functions/enqueue-scripts.php:287
-#: functions/zume-v4-seo-strings.php:23 parts/content-share.php:81
-#: template-pieces-page.php:212 template-zume-login.php:403
-#: template-zume-login.php:470 template-zume-login.php:498
+#: functions/zume-gmo.php:202 functions/zume-v4-seo-strings.php:23
+#: parts/content-share.php:81 template-pieces-page.php:212
+#: template-zume-login.php:403 template-zume-login.php:470
+#: template-zume-login.php:498
 msgid "Login"
 msgstr "લોગ ઈન કરો"
 
@@ -85,15 +86,17 @@ msgstr "રદ કરો"
 msgid "Current Step:"
 msgstr "હાલનું પગલું:"
 
-#: functions/enqueue-scripts.php:85
+#: functions/enqueue-scripts.php:85 translations/mobile-pwa-strings.php:35
 msgid "Finish"
 msgstr "પૂરું કરો"
 
 #: functions/enqueue-scripts.php:86 functions/utilities/menu.php:108
+#: translations/mobile-pwa-strings.php:34
 msgid "Next"
 msgstr "આગામી"
 
 #: functions/enqueue-scripts.php:87 functions/utilities/menu.php:98
+#: translations/mobile-pwa-strings.php:33
 msgid "Previous"
 msgstr "અગાઉનું"
 
@@ -102,7 +105,7 @@ msgid "Loading..."
 msgstr "લોડિંગ..."
 
 #: functions/enqueue-scripts.php:66 template-zume-dashboard.php:1168
-#: template-zume-dashboard.php:1202
+#: template-zume-dashboard.php:1202 translations/mobile-pwa-strings.php:26
 msgid "Delete"
 msgstr "ડીલીટ"
 
@@ -300,1454 +303,1454 @@ msgstr "(કી ઉપલબ્ધ નથી. ડેશબોર્ડ તપા
 msgid "Session"
 msgstr "સેશન"
 
-#: functions/enqueue-scripts.php:279 functions/zume-content.php:118
+#: functions/enqueue-scripts.php:279 functions/zume-content.php:119
 msgid "Welcome to Session"
 msgstr "સેશનમાં તમારું સ્વાગત છે"
 
-#: functions/zume-content.php:119
+#: functions/zume-content.php:120
 msgid "Which are you doing right now?"
 msgstr "અત્યારે તમે શું કરી રહ્યા છો?"
 
-#: functions/zume-content.php:120
+#: functions/zume-content.php:121
 msgid "Facilitating a Group"
 msgstr "જૂથમાં સગવડ કરી આપવી"
 
-#: functions/zume-content.php:124
+#: functions/zume-content.php:125
 msgid "Exploring the Session Content"
 msgstr "સેશનની વિષયવસ્તુનું સંશોધન કરવું"
 
-#: functions/zume-content.php:139
+#: functions/zume-content.php:140
 msgid "How many are with you?"
 msgstr "તમારી પાસે કેટલા છે?"
 
-#: functions/enqueue-scripts.php:288 functions/zume-content.php:154
+#: functions/enqueue-scripts.php:288 functions/zume-content.php:155
 msgid "Continue"
 msgstr "ચાલુ રાખો"
 
-#: functions/zume-content.php:175
+#: functions/zume-content.php:176
 msgid "Welcome to Zúme"
 msgstr "ઝુમમાં તમારું સ્વાગત છે"
 
-#: functions/zume-content.php:183
+#: functions/zume-content.php:184 translations/mobile-pwa-strings.php:23
 msgid "Download"
 msgstr "ડાઉનલોડ"
 
-#: functions/zume-content.php:187
+#: functions/zume-content.php:188
 msgid "You will be able to follow along on a digital PDF for this session, but please make sure that each member of your group has a printed copy of the materials for future sessions."
 msgstr "આ સેશન માટે તમે ડિજીટલ પી.ડી.એફ. સાથે આગળ વધી શકશો, પરંતુ તમારા જૂથના દરેક વ્યક્તિ પાસે ભવિષ્યનાં સેશનોમાં નોંધની છાપેલી પ્રત હોય તેની ખાતરી કરો."
 
-#: functions/zume-content.php:194 functions/zume-v4-seo-strings.php:17
+#: functions/zume-content.php:195 functions/zume-v4-seo-strings.php:17
 #: template-zume-dashboard.php:813 template-zume-resources.php:38
 msgid "Download Guidebook"
 msgstr "માર્ગદર્શિકા પુસ્તક ડાઉનલોડ કરો"
 
-#: functions/zume-content.php:207
+#: functions/zume-content.php:208
 msgid "Group Prayer (5min)"
 msgstr "જૂથમાં પ્રાર્થના (૫ મિનિટ)"
 
-#: functions/zume-content.php:217
+#: functions/zume-content.php:218
 msgid "Begin with prayer. Spiritual insight and transformation is not possible without the Holy Spirit. Take time as a group to invite Him to guide you over this session."
 msgstr "પ્રાર્થનાથી શરૂઆત કરો. પવિત્ર આત્મા વગર આત્મિક અંતઃદૃષ્ટિ અને બદલાણ શક્ય નથી. જૂથ તરીકે આ સેશનમાં તમને દોરવણી આપે તે માટે પવિત્ર આત્માને આમંત્રણ આપો."
 
-#: functions/zume-content.php:231 functions/zume-content.php:286
-#: functions/zume-content.php:351 functions/zume-content.php:721
-#: functions/zume-content.php:1127 functions/zume-content.php:1230
-#: functions/zume-content.php:1648 functions/zume-content.php:1721
-#: functions/zume-content.php:1790 functions/zume-content.php:2121
-#: functions/zume-content.php:2334 functions/zume-content.php:2592
-#: functions/zume-content.php:2831 functions/zume-content.php:3068
-#: functions/zume-content.php:3136 functions/zume-content.php:3206
-#: functions/zume-content.php:3613
+#: functions/zume-content.php:232 functions/zume-content.php:287
+#: functions/zume-content.php:352 functions/zume-content.php:722
+#: functions/zume-content.php:1128 functions/zume-content.php:1231
+#: functions/zume-content.php:1649 functions/zume-content.php:1722
+#: functions/zume-content.php:1791 functions/zume-content.php:2122
+#: functions/zume-content.php:2335 functions/zume-content.php:2593
+#: functions/zume-content.php:2832 functions/zume-content.php:3069
+#: functions/zume-content.php:3137 functions/zume-content.php:3207
+#: functions/zume-content.php:3614
 msgid "Watch and Discuss (15min)"
 msgstr "જુઓ અને ચર્ચા કરો (૧૫ મિનિટ)"
 
-#: functions/zume-content.php:239 functions/zume-content.php:294
-#: functions/zume-content.php:359 functions/zume-content.php:728
-#: functions/zume-content.php:1133 functions/zume-content.php:1236
-#: functions/zume-content.php:1654 functions/zume-content.php:1727
-#: functions/zume-content.php:1796 functions/zume-content.php:2127
-#: functions/zume-content.php:2340 functions/zume-content.php:2598
-#: functions/zume-content.php:2837 functions/zume-content.php:3076
-#: functions/zume-content.php:3144 functions/zume-content.php:3214
-#: functions/zume-content.php:3619 functions/zume-content.php:3799
+#: functions/zume-content.php:240 functions/zume-content.php:295
+#: functions/zume-content.php:360 functions/zume-content.php:729
+#: functions/zume-content.php:1134 functions/zume-content.php:1237
+#: functions/zume-content.php:1655 functions/zume-content.php:1728
+#: functions/zume-content.php:1797 functions/zume-content.php:2128
+#: functions/zume-content.php:2341 functions/zume-content.php:2599
+#: functions/zume-content.php:2838 functions/zume-content.php:3077
+#: functions/zume-content.php:3145 functions/zume-content.php:3215
+#: functions/zume-content.php:3620 functions/zume-content.php:3800
 msgid "WATCH"
 msgstr "જુઓ"
 
-#: functions/zume-content.php:241
+#: functions/zume-content.php:242
 msgid "God uses ordinary people doing simple things to make a big impact. Watch this video on how God works."
 msgstr "પ્રભુ મોટી અસર ઉપજાવવા માટે સરળ કામો કરનારા સામાન્ય લોકોનો ઉપયોગ કરે છે. પ્રભુ કેવી રીતે કામ કરે છે તે વિશેનો આ વિડિયો જુઓ."
 
-#: functions/zume-content.php:268
+#: functions/zume-content.php:269
 msgid "Zúme Video Scripts: Welcome"
 msgstr "ઝુમ વિડિયો લખાણ: સ્વાગત"
 
-#: functions/zume-content.php:274 functions/zume-content.php:334
-#: functions/zume-content.php:402 functions/zume-content.php:775
-#: functions/zume-content.php:884 functions/zume-content.php:1171
-#: functions/zume-content.php:1208 functions/zume-content.php:1277
-#: functions/zume-content.php:1383 functions/zume-content.php:1697
-#: functions/zume-content.php:1769 functions/zume-content.php:1838
-#: functions/zume-content.php:2167 functions/zume-content.php:2379
-#: functions/zume-content.php:2460 functions/zume-content.php:2652
-#: functions/zume-content.php:2715 functions/zume-content.php:2894
-#: functions/zume-content.php:3121 functions/zume-content.php:3188
-#: functions/zume-content.php:3258 functions/zume-content.php:3390
-#: functions/zume-content.php:3583 functions/zume-content.php:3659
+#: functions/zume-content.php:275 functions/zume-content.php:335
+#: functions/zume-content.php:403 functions/zume-content.php:776
+#: functions/zume-content.php:885 functions/zume-content.php:1172
+#: functions/zume-content.php:1209 functions/zume-content.php:1278
+#: functions/zume-content.php:1384 functions/zume-content.php:1698
+#: functions/zume-content.php:1770 functions/zume-content.php:1839
+#: functions/zume-content.php:2168 functions/zume-content.php:2380
+#: functions/zume-content.php:2461 functions/zume-content.php:2653
+#: functions/zume-content.php:2716 functions/zume-content.php:2895
+#: functions/zume-content.php:3122 functions/zume-content.php:3189
+#: functions/zume-content.php:3259 functions/zume-content.php:3391
+#: functions/zume-content.php:3584 functions/zume-content.php:3660
 msgid "DISCUSS"
 msgstr "ચર્ચા"
 
-#: functions/zume-content.php:276
+#: functions/zume-content.php:277
 msgid "If Jesus intended every one of His followers to obey His Great Commission, why do so few actually make disciples?"
 msgstr "જો ઈસુનાં શિષ્યો તેના મહાન આદેશનું પાલન કરે એવી તેની ઇચ્છા હતી તો શા માટે ખૂબ થોડા લોકો શિષ્યો બનાવે છે?"
 
-#: functions/zume-content.php:296
+#: functions/zume-content.php:297
 msgid "What is a disciple? And how do you make one? How do you teach a follower of Jesus to do what He told us in His Great Commission – to obey all of His commands?"
 msgstr "શિષ્ય એટલે શું? તમે કેવી રીતે શિષ્ય બનાવી શકો? તમે કેવી રીતે ઈસુના શિષ્યને ઈસુએ તેના મહાન આદેશમાં જે કહ્યું છે એમ કરવાનું - તેની બધી આજ્ઞાઓ પાળવાનું શિક્ષણ આપી શકો?"
 
-#: functions/zume-content.php:328
+#: functions/zume-content.php:329
 msgid "Zúme Video Scripts: Teach Them to Obey"
 msgstr "ઝુમ વિડિયો લખાણ: તેમને આજ્ઞાપાનલ કરવાનું શીખવો"
 
-#: functions/zume-content.php:337
+#: functions/zume-content.php:338
 msgid "When you think of a church, what comes to mind?"
 msgstr "જ્યારે તમે મંડળી વિશે વિચાર કરો ત્યારે તમારા મનમાં કયો વિચાર આવે છે?"
 
-#: functions/zume-content.php:338
+#: functions/zume-content.php:339
 msgid "What's the difference between that picture and what's described in the video as a \"Simple Church\"?"
 msgstr "“સરળ મંડળી” તરીકેના ચિત્ર અને વિડિયોમાં જે જણાવેલ છે તેમાં કયો તફાવત છે?"
 
-#: functions/zume-content.php:340
+#: functions/zume-content.php:341
 msgid "Which one do you think would be easier to multiply and why?"
 msgstr "તમને શું લાગે છે શેની વૃદ્ધિ કરવી સરળ હશે? કેમ?"
 
-#: functions/zume-content.php:361
+#: functions/zume-content.php:362
 msgid "We breathe in. We breathe out. We're alive. Spiritual Breathing is like that, too."
 msgstr "આપણે શ્વાસોચ્છવાસ લઇએ છીએ. આપણે જીવતા છીએ. આત્મિક શ્વાસોચ્છવાસ પણ એવો જ છે."
 
-#: functions/zume-content.php:395
+#: functions/zume-content.php:396
 msgid "Zúme Video Scripts: Spiritual Breathing"
 msgstr "ઝુમ વિડિયો લખાણ: આત્મિક શ્વાસોચ્છવાસ"
 
-#: functions/zume-content.php:405
+#: functions/zume-content.php:406
 msgid "Why is it essential to learn to hear and recognize God's voice?"
 msgstr "શા માટે ઈશ્વરનો અવાજ સાંભળવાનું અને પારખવાનું શીખવું જરૂરી છે?"
 
-#: functions/zume-content.php:406
+#: functions/zume-content.php:407
 msgid "Is hearing and responding to the Lord really like breathing? Why or why not?"
 msgstr "શું ઈશ્વરનો અવાજ સાંભળવો અને તેનો પ્રતિભાવ આપવો શ્વાસોચ્છવાસ જેવું છે? શા માટે? શા માટે નહિ?"
 
-#: functions/zume-content.php:417 functions/zume-content.php:488
-#: functions/zume-content.php:905 functions/zume-content.php:1550
-#: functions/zume-content.php:1857 functions/zume-content.php:3673
+#: functions/zume-content.php:418 functions/zume-content.php:489
+#: functions/zume-content.php:906 functions/zume-content.php:1551
+#: functions/zume-content.php:1858 functions/zume-content.php:3674
 msgid "Listen and Read Along (3min)"
 msgstr "સાંભળો અને સાથે વાંચો (૩ મિનિટ)"
 
-#: functions/zume-content.php:425 functions/zume-content.php:496
-#: functions/zume-content.php:801 functions/zume-content.php:911
-#: functions/zume-content.php:1193 functions/zume-content.php:1326
-#: functions/zume-content.php:1556 functions/zume-content.php:1863
-#: functions/zume-content.php:2055 functions/zume-content.php:2399
-#: functions/zume-content.php:3679
+#: functions/zume-content.php:426 functions/zume-content.php:497
+#: functions/zume-content.php:802 functions/zume-content.php:912
+#: functions/zume-content.php:1194 functions/zume-content.php:1327
+#: functions/zume-content.php:1557 functions/zume-content.php:1864
+#: functions/zume-content.php:2056 functions/zume-content.php:2400
+#: functions/zume-content.php:3680
 msgid "READ"
 msgstr "વાંચો"
 
-#: functions/zume-content.php:427
+#: functions/zume-content.php:428
 msgid "S.O.A.P.S. Bible Reading"
 msgstr "S.O.A.P.S. બાઇબલ વાંચન"
 
-#: functions/zume-content.php:428
+#: functions/zume-content.php:429
 msgid "Hearing from God regularly is a key element in our personal relationship with Him, and in our ability to stay obediently engaged in what He is doing around us."
 msgstr "નિયમિતપણે પ્રભુનો અવાજ સાંભળવો અને પ્રભુ આપણી આસપાસ જે કંઇ કાર્યો કરે છે તેમાં પ્રભુને આધિન થવું એ તો પ્રભુ સાથેના આપણા વ્યક્તિગત સંબંધની ચાવીરૂપ બાબત છે."
 
-#: functions/zume-content.php:441
+#: functions/zume-content.php:442
 msgid "Find the \"S.O.A.P.S. Bible Reading\" section in your Zúme Guidebook and listen to the audio overview."
 msgstr "તમારી પાસેની ઝુમ માર્ગદર્શિકામાં આપવામાં આવેલ “S.O.A.P.S. બાઇબલ વાંચન” વિભાગ શોધો અને ઓડિયો સાંભળો."
 
-#: functions/zume-content.php:478
+#: functions/zume-content.php:479
 msgid "Zúme Video Scripts: S.O.A.P.S."
 msgstr "ઝુમ વિડિયો લખાણ: S.O.A.P.S."
 
-#: functions/enqueue-scripts.php:219 functions/zume-content.php:499
-#: template-gmo.php:124 template-how-to-follow-jesus.php:124
+#: functions/enqueue-scripts.php:219 functions/zume-content.php:500
+#: template-gmo.php:229 template-how-to-follow-jesus.php:166
 #: template-zume-dashboard.php:342 template-zume-training.php:212
 msgid "Accountability Groups"
 msgstr "જવાબદાર જૂથો"
 
-#: functions/zume-content.php:502
+#: functions/zume-content.php:503
 msgid "The Bible tells us that every follower of Jesus will one day be held accountable for what we do and say and think. Accountability Groups are a great way to get ready!"
 msgstr "બાઇબલ આપણને કહે છે કે ઈસુના દરેક શિષ્યએ જે કંઇ કર્યું છે, બોલ્યા છે અથવા વિચાર કર્યો છે તેનો હિસાબ આપવો પડશે. જવાબદાર જૂથો તો તેની તૈયારી કરવાનો સારો માર્ગ છે!"
 
-#: functions/zume-content.php:514
+#: functions/zume-content.php:515
 msgid "Find the \"Accountability Groups\" section in your Zúme Guidebook, and listen to the audio below."
 msgstr "તમારી ઝુમ માર્ગદર્શિકામાં “જવાબદાર જૂથો” નો વિભાગ શોધો અને નીચે આપેલ ઓડિયો સાંભળો."
 
-#: functions/zume-content.php:551
+#: functions/zume-content.php:552
 msgid "Zúme Video Scripts: Accountability Groups"
 msgstr "ઝુમ વિડિયો લખાણ: જવાબદાર જૂથો"
 
-#: functions/zume-content.php:561
+#: functions/zume-content.php:562
 msgid "Practice (45min)"
 msgstr "અભ્યાસ (૪૫ મિનિટ)"
 
-#: functions/zume-content.php:569
+#: functions/zume-content.php:570
 msgid "BREAK UP"
 msgstr "વિભાજીત થાઓ"
 
-#: functions/zume-content.php:570
+#: functions/zume-content.php:571
 msgid "Break into groups of two or three people of the same gender."
 msgstr "એક જ જાતિ (લિંગ)ના બે કે ત્રણ વ્યકિતઓના જૂથમાં વિભાજીત થાઓ."
 
-#: functions/zume-content.php:576 functions/zume-content.php:628
-#: functions/zume-content.php:1041 functions/zume-content.php:1452
-#: functions/zume-content.php:1971 functions/zume-content.php:2258
-#: functions/zume-content.php:2512 functions/zume-content.php:2750
-#: functions/zume-content.php:2982 functions/zume-content.php:3379
-#: functions/zume-content.php:3427
+#: functions/zume-content.php:577 functions/zume-content.php:629
+#: functions/zume-content.php:1042 functions/zume-content.php:1453
+#: functions/zume-content.php:1972 functions/zume-content.php:2259
+#: functions/zume-content.php:2513 functions/zume-content.php:2751
+#: functions/zume-content.php:2983 functions/zume-content.php:3380
+#: functions/zume-content.php:3428
 msgid "SHARE"
 msgstr "જણાવો"
 
-#: functions/zume-content.php:579
+#: functions/zume-content.php:580
 msgid "Spend the next 45 minutes working together through Accountability Questions – List 2 in the \"Accountability Groups\" section of your"
 msgstr "જવાબદારીને લગતાં પ્રશ્નો વિશે ચર્ચા કરવામાં ૪૫ મિનિટ ગાળો - “જવાબદાર જૂથો”માં બે યાદી બનાવો"
 
-#: functions/zume-content.php:583
+#: functions/zume-content.php:584
 msgid "Zúme Guidebook"
 msgstr "ઝુમ માર્ગદર્શિકા"
 
-#: functions/zume-content.php:595 functions/zume-content.php:1010
-#: functions/zume-content.php:1422 functions/zume-content.php:1954
-#: functions/zume-content.php:2245 functions/zume-content.php:2482
-#: functions/zume-content.php:2733 functions/zume-content.php:2965
-#: functions/zume-content.php:3408
+#: functions/zume-content.php:596 functions/zume-content.php:1011
+#: functions/zume-content.php:1423 functions/zume-content.php:1955
+#: functions/zume-content.php:2246 functions/zume-content.php:2483
+#: functions/zume-content.php:2734 functions/zume-content.php:2966
+#: functions/zume-content.php:3409
 msgid "LOOKING FORWARD"
 msgstr "આગળ જોવું"
 
-#: functions/zume-content.php:599
+#: functions/zume-content.php:600
 msgid "Congratulations! You've completed Session 1."
 msgstr "અભિનંદન! તમે સેશન ૧ પૂરું કર્યું છે."
 
-#: functions/zume-content.php:610 functions/zume-content.php:1023
-#: functions/zume-content.php:1435 functions/zume-content.php:1958
-#: functions/zume-content.php:2496
+#: functions/zume-content.php:611 functions/zume-content.php:1024
+#: functions/zume-content.php:1436 functions/zume-content.php:1959
+#: functions/zume-content.php:2497
 msgid "Below are next steps to take in preparation for the next session."
 msgstr "બીજા સેશનની તૈયારી માટે નીચે આગળનાં પગલાં આપેલ છે."
 
-#: functions/zume-content.php:620 functions/zume-content.php:1034
-#: functions/zume-content.php:1445 functions/zume-content.php:1964
-#: functions/zume-content.php:2251 functions/zume-content.php:2505
-#: functions/zume-content.php:2743 functions/zume-content.php:2975
-#: functions/zume-content.php:3418
+#: functions/zume-content.php:621 functions/zume-content.php:1035
+#: functions/zume-content.php:1446 functions/zume-content.php:1965
+#: functions/zume-content.php:2252 functions/zume-content.php:2506
+#: functions/zume-content.php:2744 functions/zume-content.php:2976
+#: functions/zume-content.php:3419
 msgid "OBEY"
 msgstr "આધિન થાઓ"
 
-#: functions/zume-content.php:622
+#: functions/zume-content.php:623
 msgid "Begin practicing the S.O.A.P.S. Bible reading between now and your next meeting. Focus on Matthew 5-7, read it at least once a day. Keep a daily journal using the S.O.A.P.S. format."
 msgstr "બીજી સભા થાય ત્યાં સુધીમાં અત્યારથી S.O.A.P.S. બાઇબલ વાંચનનો અભ્યાસ કરવાની શરૂઆત કરો. માથ્થી ૫-૭ પર ધ્યાન આપો, દિવસમાં ઓછામાં ઓછું એકવાર તેને વાંચો. S.O.A.P.S. પદ્ધતિનો ઉપયોગ કરીને દૈનિક નોંધ તૈયાર કરો."
 
-#: functions/zume-content.php:630
+#: functions/zume-content.php:631
 msgid "Spend time asking God who He might want you to start an Accountability Group with using the tools you've learned in this session. Share this person’s name with the group before you go. Reach out to that person about starting an Accountability Group and meeting with you weekly."
 msgstr "આ સેશનમાં તમે જે શીખ્યા છો તેનો ઉપયોગ કરીને કોણ જવાબદાર જૂથની શરૂઆત કરશે તે વિશે પ્રભુની દોરવણી પ્રાપ્ત કરવા માટે પ્રભુને વિનંતી કરો. તમે જાઓ તે પહેલા આ વ્યક્તિનું નામ જૂથમાં જણાવો. એક વ્યક્તિને જવાબદારીપૂર્વક જૂથ શરૂ કરવા અને અઠવાડીયામાં તમારી સાથે મળવા વિશે તે વ્યક્તિ સુધી પહોંચો."
 
-#: functions/zume-content.php:638 functions/zume-content.php:706
-#: functions/zume-content.php:1048 functions/zume-content.php:1102
-#: functions/zume-content.php:1459 functions/zume-content.php:1524
-#: functions/zume-content.php:1978 functions/zume-content.php:2028
-#: functions/zume-content.php:2265 functions/zume-content.php:2312
-#: functions/zume-content.php:2519 functions/zume-content.php:2570
-#: functions/zume-content.php:2757 functions/zume-content.php:2809
-#: functions/zume-content.php:2989 functions/zume-content.php:3047
-#: functions/zume-content.php:3319 functions/zume-content.php:3435
-#: functions/zume-content.php:3490
+#: functions/zume-content.php:639 functions/zume-content.php:707
+#: functions/zume-content.php:1049 functions/zume-content.php:1103
+#: functions/zume-content.php:1460 functions/zume-content.php:1525
+#: functions/zume-content.php:1979 functions/zume-content.php:2029
+#: functions/zume-content.php:2266 functions/zume-content.php:2313
+#: functions/zume-content.php:2520 functions/zume-content.php:2571
+#: functions/zume-content.php:2758 functions/zume-content.php:2810
+#: functions/zume-content.php:2990 functions/zume-content.php:3048
+#: functions/zume-content.php:3320 functions/zume-content.php:3436
+#: functions/zume-content.php:3491
 msgid "PRAY"
 msgstr "પ્રાર્થના કરો"
 
-#: functions/zume-content.php:641
+#: functions/zume-content.php:642
 msgid "Pray that God helps you be obedient to Him and invite Him to work in you and those around you!"
 msgstr "પ્રભુને આધીન થવા અને તમારામાં તથા તમારી આસપાસના લોકોમાં કાર્ય કરવા માટે પ્રભુની સહાય માગવા વિનંતી કરો."
 
-#: functions/zume-content.php:647 functions/zume-content.php:1055
-#: functions/zume-content.php:1466 functions/zume-content.php:1985
-#: functions/zume-content.php:2272 functions/zume-content.php:2526
-#: functions/zume-content.php:2764 functions/zume-content.php:2996
-#: functions/zume-content.php:3443
+#: functions/zume-content.php:648 functions/zume-content.php:1056
+#: functions/zume-content.php:1467 functions/zume-content.php:1986
+#: functions/zume-content.php:2273 functions/zume-content.php:2527
+#: functions/zume-content.php:2765 functions/zume-content.php:2997
+#: functions/zume-content.php:3444
 msgid "#ZumeProject"
 msgstr "#ઝુમ પ્રોજેક્ટ"
 
-#: functions/zume-content.php:649
+#: functions/zume-content.php:650
 msgid "Take a picture of your S.O.A.P.S. Bible study and share it on social media."
 msgstr "તમારા S.O.A.P.S. બાઇબલ અભ્યાસનો ફોટો લઇને સોશિયલ મિડિયામાં શેર કરો."
 
-#: functions/zume-content.php:669
+#: functions/zume-content.php:670
 msgid "WELCOME BACK!"
 msgstr "ફરીથી સ્વાગત છે!"
 
-#: functions/zume-content.php:675
+#: functions/zume-content.php:676
 msgid "DOWNLOAD"
 msgstr "ડાઉનલોડ"
 
-#: functions/zume-content.php:677
+#: functions/zume-content.php:678
 msgid "Does everyone have a printed copy of the Zúme Guidebook? If not, please be sure that someone can download the Guidebook and that everyone has access to some paper and a pen or pencil."
 msgstr "શું બધાની પાસે ઝુમ માર્ગદર્શિકાની પ્રત છે? જા ના, તો દરેક વ્યક્તિ આ માર્ગદર્શિકા ડાઉનલોડ કરે અને બધાની પાસે કાગળ, પેન અથવા પેન્સિલ છે કે નહિ તેની ખાતરી કરો."
 
-#: functions/zume-content.php:683
+#: functions/zume-content.php:684
 msgid "DOWNLOAD GUIDEBOOK"
 msgstr "માર્ગદર્શિકા ડાઉનલોડ કરો"
 
-#: functions/zume-content.php:690 functions/zume-content.php:1082
-#: functions/zume-content.php:1507 functions/zume-content.php:2013
-#: functions/zume-content.php:2299 functions/zume-content.php:2553
-#: functions/zume-content.php:2790 functions/zume-content.php:3025
-#: functions/zume-content.php:3471
+#: functions/zume-content.php:691 functions/zume-content.php:1083
+#: functions/zume-content.php:1508 functions/zume-content.php:2014
+#: functions/zume-content.php:2300 functions/zume-content.php:2554
+#: functions/zume-content.php:2791 functions/zume-content.php:3026
+#: functions/zume-content.php:3472
 msgid "CHECK-IN"
 msgstr "તપાસ-કરો"
 
-#: functions/zume-content.php:692 functions/zume-content.php:1085
-#: functions/zume-content.php:2792 functions/zume-content.php:3029
-#: functions/zume-content.php:3473
+#: functions/zume-content.php:693 functions/zume-content.php:1086
+#: functions/zume-content.php:2793 functions/zume-content.php:3030
+#: functions/zume-content.php:3474
 msgid "Before getting started, take some time to check-in."
 msgstr "શરૂઆત કરતાં પહેલાં તપાસ-કરો."
 
-#: functions/zume-content.php:694 functions/zume-content.php:1089
-#: functions/zume-content.php:1509 functions/zume-content.php:2016
-#: functions/zume-content.php:2301 functions/zume-content.php:2555
-#: functions/zume-content.php:2794 functions/zume-content.php:3031
-#: functions/zume-content.php:3475
+#: functions/zume-content.php:695 functions/zume-content.php:1090
+#: functions/zume-content.php:1510 functions/zume-content.php:2017
+#: functions/zume-content.php:2302 functions/zume-content.php:2556
+#: functions/zume-content.php:2795 functions/zume-content.php:3032
+#: functions/zume-content.php:3476
 msgid "At the end of the last session, everyone in your group was challenged in two ways:"
 msgstr "છેલ્લા સેશનના અંતે તમારા જૂથના દરેક વ્યક્તિઓને બે રીતે પડકાર આપવામાં આવ્યા હતા:"
 
-#: functions/zume-content.php:697
+#: functions/zume-content.php:698
 msgid "You were asked to begin practicing the S.O.A.P.S. Bible reading method and keeping a daily journal."
 msgstr "તમને S.O.A.P.S. બાઇબલ વાંચન પદ્ધતિનો અને દૈનિક નોંધ બનાવવાનો અભ્યાસ કરવાની શરૂઆત કરવાનું કહેવામાં આવ્યું હતું."
 
-#: functions/zume-content.php:699
+#: functions/zume-content.php:700
 msgid "You were encouraged to reach out to someone about starting an Accountability Group."
 msgstr "જવાબદાર જૂથની શરૂઆત કરે એવા વ્યક્તિને શોધવાનું તમને ઉત્તેજન આપવામાં આવ્યું હતું."
 
-#: functions/zume-content.php:701 functions/zume-content.php:1097
-#: functions/zume-content.php:1518 functions/zume-content.php:2023
-#: functions/zume-content.php:2307 functions/zume-content.php:2565
-#: functions/zume-content.php:2804 functions/zume-content.php:3040
+#: functions/zume-content.php:702 functions/zume-content.php:1098
+#: functions/zume-content.php:1519 functions/zume-content.php:2024
+#: functions/zume-content.php:2308 functions/zume-content.php:2566
+#: functions/zume-content.php:2805 functions/zume-content.php:3041
 msgid "Take a few moments to see how your group did this week."
 msgstr "આ અઠવાડિયે તમારા જૂથે કેવી રીતે કાર્ય કર્યું તે જાવા થોડો સમય ગાળો."
 
-#: functions/zume-content.php:708
+#: functions/zume-content.php:709
 msgid "Ask if anyone in the group has specific needs they would like the group to pray for. Ask someone to pray and ask God to help in the areas the group shared. Be sure to thank God that He promises in His Word to listen and act when His people pray. And, as always, ask God's Holy Spirit to lead your time, together."
 msgstr "જૂથનાં કોઇ વ્યક્તિની પાસે કોઇ ખાસ પ્રાર્થના વિનંતી હોય તો જણાવવા માટે સૂચન કરો. કોઇ વ્યક્તિને પ્રાર્થના સોંપો અને જૂથમાં પ્રભુ સહાય કરે તે માટે પ્રભુની સહાય માગો. પ્રભુએ પોતાના વચનમાં પોતાનાં લોકોની પ્રાર્થના સાંભળવાનું અને કાર્ય કરવાનું વચન આપ્યું છે તેની ખાતરી સાથે પ્રભુનો આભાર માનો. અને, હંમેશની જેમ પ્રભુનો પવિત્ર આત્મા તમને દોરે તે માટે વિનંતી કરો."
 
-#: functions/zume-content.php:731
+#: functions/zume-content.php:732
 msgid "If we want to make disciples who multiply – spiritual producers and not just consumers – then we need to learn and share four main ways God makes everyday followers more like Jesus:"
 msgstr "જો આપણે બીજા શિષ્યો બનાવનારા શિષ્યો બનાવવા હોય તો - ફક્ત ગ્રાહકો નહિ પણ આત્મિક ઉત્પાદકો - તો પ્રભુના શિષ્યોએ ઈસુ જેવા બનવા જે ચાર પગલાં અનુસરવાના છે તે શીખવાની અને જણાવવાની જરૂર છે:"
 
-#: functions/zume-content.php:733 template-gmo.php:87
-#: template-how-to-follow-jesus.php:87
+#: functions/zume-content.php:734 template-gmo.php:192
+#: template-how-to-follow-jesus.php:129
 msgid "Prayer"
 msgstr "પ્રાર્થના"
 
-#: functions/zume-content.php:734
+#: functions/zume-content.php:735
 msgid "Scripture"
 msgstr "વચન"
 
-#: functions/zume-content.php:735
+#: functions/zume-content.php:736
 msgid "Body Life"
 msgstr "શારીરિક જીવન"
 
-#: functions/zume-content.php:736
+#: functions/zume-content.php:737
 msgid "Persecution and Suffering"
 msgstr "સતાવણી અને દુઃખ સહન કરવું"
 
-#: functions/zume-content.php:769
+#: functions/zume-content.php:770
 msgid "Zúme Video Scripts: Producers vs Consumers"
 msgstr "ઝુમ વિડિયો લખાણ: ઉત્પાદકો વિ. ગ્રાહકો"
 
-#: functions/zume-content.php:778
+#: functions/zume-content.php:779
 msgid "Of the four areas detailed above (prayer, God's Word, etc.), which ones do you already practice?"
 msgstr "ઉપર જણાવેલ ચાર પગલાંમાંથી (પ્રાર્થના, પ્રભુનું વચન, વગેરે.,) કયાં પગલાં તમે પહેલેથી જ અનુસરો છો?"
 
-#: functions/zume-content.php:780
+#: functions/zume-content.php:781
 msgid "Which ones do you feel unsure about?"
 msgstr "કયા પગલાં વિશે તમને ખાતરી નથી?"
 
-#: functions/zume-content.php:781
+#: functions/zume-content.php:782
 msgid "How ready do you feel when it comes to training others?"
 msgstr "બીજાઓને તાલીમ આપવામાં તમે તમારી જાતને કેટલા તૈયાર માનો છો?"
 
-#: functions/zume-content.php:794
+#: functions/zume-content.php:795
 msgid "Listen and Read Along (2min)"
 msgstr "સાંભળો અને સાથે વાંચો (૨ મિનિટ)"
 
-#: functions/zume-content.php:804 template-zume-dashboard.php:366
+#: functions/zume-content.php:805 template-zume-dashboard.php:366
 msgid "Prayer Cycle"
 msgstr "પ્રાર્થનાનું ચક્ર"
 
-#: functions/zume-content.php:805
+#: functions/zume-content.php:806
 msgid "The Bible tells us that prayer is our chance to speak to and hear from the same God who created us!"
 msgstr "બાઇબલ આપણને કહે છે કે પ્રાર્થના તો જે દેવે આપણું સર્જન કર્યું છે તેની સાથે વાત કરવાની અને તેનું સાંભળવાની તક છે!"
 
-#: functions/zume-content.php:815
+#: functions/zume-content.php:816
 msgid "Find the \"Prayer Cycle\" section in your Zúme Guidebook, and listen to the audio below."
 msgstr "તમારી ઝુમ માર્ગદર્શિકામાં “પ્રાર્થનાના ચક્રનો” વિભાગ શોધીને નીચે આપેલ ઓડિયો સાંભળો."
 
-#: functions/zume-content.php:851
+#: functions/zume-content.php:852
 msgid "Zúme Video Scripts: Prayer Cycle"
 msgstr "ઝુમ વિડિયો લખાણ: પ્રાર્થનાનું ચક્ર"
 
-#: functions/zume-content.php:864
+#: functions/zume-content.php:865
 msgid "Practice the Prayer Cycle (60min)"
 msgstr "પ્રાર્થનાના ચક્રનો અભ્યાસ કરો (૬૦ મિનિટ)"
 
-#: functions/zume-content.php:870
+#: functions/zume-content.php:871
 msgid "LEAVE"
 msgstr "છુટા પડો"
 
-#: functions/zume-content.php:872
+#: functions/zume-content.php:873
 msgid "Spend the next 60 minutes in prayer individually, using the exercises in \"The Prayer Cycle\" section of the Zúme Guidebook as a guide."
 msgstr "ઝુમ માર્ગદર્શિકામાં આપવામાં આવેલ વિભાગ “પ્રાર્થનાના ચક્ર”માં જણાવેલ પદ્ધતિનો ઉપયોગ કરીને ૬૦ મિનિટ વ્યક્તિગત પ્રાર્થનામાં ગાળો."
 
-#: functions/zume-content.php:877
+#: functions/zume-content.php:878
 msgid "RETURN"
 msgstr "પાછા ફરો"
 
-#: functions/zume-content.php:879
+#: functions/zume-content.php:880
 msgid "Set a time for the group to return and reconnect. Be sure to add a few extra minutes for everyone to both find a quiet place to pray and to make their way back to the group."
 msgstr "જૂથના સભ્યો ફરીથી એકઠા થાય તે માટેનો સમય નિર્ધારીત કરો. જૂથનાં સભ્યો વ્યક્તિગત પ્રાર્થના કરવા એકાંતમાં જાય અને જૂથમાં પાછા ફરે તે માટે થોડી વધારે મિનિટો આપો."
 
-#: functions/zume-content.php:887
+#: functions/zume-content.php:888
 msgid "What is your reaction to spending an hour in prayer?"
 msgstr "પ્રાર્થનામાં એક કલાક ગાળવાની તમારી પ્રતિક્રિયા શું છે?"
 
-#: functions/zume-content.php:888
+#: functions/zume-content.php:889
 msgid "How do you feel?"
 msgstr "તમને કેવો અનુભવ થયો?"
 
-#: functions/zume-content.php:889
+#: functions/zume-content.php:890
 msgid "Did you learn or hear anything?"
 msgstr "શું તમે કંઇ શીખ્યા કે સાંભળ્યુ?"
 
-#: functions/zume-content.php:890
+#: functions/zume-content.php:891
 msgid "What would life be like if you made this kind of prayer a regular habit?"
 msgstr "જો તમે આવી પ્રાર્થનાને તમારી નિયમિત આદત બનાવો તો તમારું જીવન કેવું થશે?"
 
-#: functions/zume-content.php:914 template-zume-dashboard.php:374
+#: functions/zume-content.php:915 template-zume-dashboard.php:374
 msgid "List of 100"
 msgstr "૧૦૦ વ્યક્તિઓની યાદી"
 
-#: functions/zume-content.php:917
+#: functions/zume-content.php:918
 msgid "God has already given us the relationships we need to “Go and make disciples.” These are our family, friends, neighbors, co-workers and classmates – people we’ve known all our lives or maybe just met."
 msgstr "પ્રભુએ આપણને “જઇને શિષ્યો બનાવવા” માટે અગાઉથી સંબંધો આપ્યા છે. એ સંબંધો તો આપણા કુટુંબીજનો, મિત્રો, પડોશીઓ, સાથી કર્મચારીઓ, સહાધ્યાયીઓ કે જે લોકોને આપણે આપણા જીવનમાં જાણીએ છીએ અથવા હમણા જ મળ્યા હોય તે લોકો છે."
 
-#: functions/zume-content.php:920
+#: functions/zume-content.php:921
 msgid "Being good stewards of these relationships is the first step in multiplying disciples. Start by making a list."
 msgstr "આ સંબંધોના સારા કારભારી તરીકેનું પ્રથમ પગલું તો વૃદ્ધિ પામતાં શિષ્યો બનાવવાનું છે. યાદી બનાવવા દ્વારા તેની શરૂઆત કરો."
 
-#: functions/zume-content.php:931
+#: functions/zume-content.php:932
 msgid "Find the \"List of 100\" section in your Zúme Guidebook, and listen to the audio below."
 msgstr "તમારી ઝુમ માર્ગદર્શિકામાંથી “૧૦૦ વ્યક્તિઓની યાદી” શોધો અને નીચે આપેલ ઓડિયો સાંભળો."
 
-#: functions/zume-content.php:968
+#: functions/zume-content.php:969
 msgid "Zúme Video Scripts: List of 100"
 msgstr "ઝુમ વિડિયો લખાણ: ૧૦૦ વ્યક્તિઓની યાદી"
 
-#: functions/zume-content.php:981
+#: functions/zume-content.php:982
 msgid "Project (30min)"
 msgstr "પ્રોજેક્ટ (૩૦ મિનિટ)"
 
-#: functions/zume-content.php:991
+#: functions/zume-content.php:992
 msgid "Create your own list of 100"
 msgstr "તમારી પોતાની ૧૦૦ વ્યક્તિઓની યાદી બનાવો"
 
-#: functions/zume-content.php:993
+#: functions/zume-content.php:994
 msgid "Have everyone in your group take the next 30 minutes to fill out their own inventory of relationships using the form in the \"List of 100\" section in your Zúme Guidebook. "
 msgstr "તમારા જૂથનાં બધા જ સભ્યોએ ૩૦ મિનિટનો સમય લઇને તમારી ઝુમ માર્ગદર્શિકામાં “૧૦૦ વ્યક્તિઓની યાદી”ના વિભાગમાં જે ફોર્મ આપેલું છે તેને ભરવાનું છે."
 
-#: functions/zume-content.php:1013
+#: functions/zume-content.php:1014
 msgid "Congratulations on finishing Session 2! "
 msgstr "અભિનંદન! તમે બીજું સેશન પૂરું કર્યું છે!"
 
-#: functions/zume-content.php:1036
+#: functions/zume-content.php:1037
 msgid "Spend time this week praying for five people from your List of 100 that you marked as an \"Unbeliever\" or \"Unknown.\" Ask God to prepare their hearts to be open to His story."
 msgstr "૧૦૦ વ્યક્તિઓની યાદીમાંથી જે લોકોને તમે “અવિશ્વાસી” કે “ખોવાયેલ” વ્યક્તિઓ તરીકે લખ્યાં છે એવાં ૫ લોકોને માટે આ અઠવાડિયા દરમ્યાન પ્રાર્થનામાં સમય ગાળો."
 
-#: functions/zume-content.php:1043
+#: functions/zume-content.php:1044
 msgid "Ask God who He wants you to share the List of 100 tool with. Share this person's name with the group before you go and reach out to them before the next session."
 msgstr "૧૦૦ વ્યક્તિઓની યાદીમાંથી કોને તમે પ્રભુનું વચન જણાવો તે માટે પ્રભુને વિનંતી કરો અને જૂથમાં પણ એ વ્યક્તિનું નામ જણાવો અને બીજા સેશનમાં આવતા પહેલાં તે વ્યક્તિને સુવાર્તા આપો."
 
-#: functions/zume-content.php:1050 functions/zume-content.php:1461
-#: functions/zume-content.php:1980
+#: functions/zume-content.php:1051 functions/zume-content.php:1462
+#: functions/zume-content.php:1981
 msgid "Pray that God help you be obedient to Him and invite Him to work in you and those around you!"
 msgstr "પોતાને આધીન થવા પ્રભુ તમને મદદ કરે તે માટે પ્રભુની સહાય માગો અને તમારા કાર્યમાં તથા તમારી આસપાસના લોકોમાં પ્રભુ કાર્ય કરે તે માટે પ્રભુને આમંત્રણ આપો!"
 
-#: functions/zume-content.php:1057
+#: functions/zume-content.php:1058
 msgid "Think others could use the 60-minute prayer tool? Share about it on social media."
 msgstr "બીજાઓ ૬૦ મિનિટની પ્રાર્થનાની સામગ્રીનો ઉપયોગ કરી શકયા તે વિશે વિચાર કરો. સોશિયલ મિડિયા પર શેર કરો."
 
-#: functions/zume-content.php:1076 functions/zume-content.php:1501
-#: functions/zume-content.php:2006 functions/zume-content.php:2293
-#: functions/zume-content.php:2547 functions/zume-content.php:2784
-#: functions/zume-content.php:3017
+#: functions/zume-content.php:1077 functions/zume-content.php:1502
+#: functions/zume-content.php:2007 functions/zume-content.php:2294
+#: functions/zume-content.php:2548 functions/zume-content.php:2785
+#: functions/zume-content.php:3018
 msgid "LOOKING BACK"
 msgstr "પાછું વાળીને જુઓ"
 
-#: functions/zume-content.php:1093
+#: functions/zume-content.php:1094
 msgid "You were asked to pray for five people from your List of 100 that you marked as an \"Unbeliever\" or \"Unknown.\""
 msgstr "૧૦૦ વ્યક્તિઓની તમારી યાદીમાંથી તમે જે વ્યક્તિઓનું નામ “અવિશ્વાસી” કે “ખોવાયેલાં” વ્યક્તિઓમાં લખ્યું હતું તેમાંનાં પાંચ વ્યક્તિઓ માટે પ્રાર્થના કરવાનું તમને કહેવામાં આવ્યું હતું."
 
-#: functions/zume-content.php:1094
+#: functions/zume-content.php:1095
 msgid "You were encouraged to share how to make a List of 100 with someone."
 msgstr "કેવી રીતે ૧૦૦ વ્યક્તિઓની યાદી બનાવવી તે વિશે તમને ઉત્તેજન આપવામાં આવ્યું હતું."
 
-#: functions/zume-content.php:1104 functions/zume-content.php:1527
-#: functions/zume-content.php:2030
+#: functions/zume-content.php:1105 functions/zume-content.php:1528
+#: functions/zume-content.php:2031
 msgid "Pray and thank God for the results and invite His Holy Spirit to lead your time together."
 msgstr "પરિણામો માટે પ્રાર્થના કરો અને પ્રભુનો આભાર માનો અને દોરવણી માટે પવિત્ર આત્માને આમંત્રણ આપો."
 
-#: functions/zume-content.php:1109 functions/zume-content.php:1532
-#: functions/zume-content.php:2035 functions/zume-content.php:2319
-#: functions/zume-content.php:2577 functions/zume-content.php:2816
-#: functions/zume-content.php:3055 functions/zume-content.php:3278
-#: functions/zume-content.php:3497
+#: functions/zume-content.php:1110 functions/zume-content.php:1533
+#: functions/zume-content.php:2036 functions/zume-content.php:2320
+#: functions/zume-content.php:2578 functions/zume-content.php:2817
+#: functions/zume-content.php:3056 functions/zume-content.php:3279
+#: functions/zume-content.php:3498
 msgid "OVERVIEW"
 msgstr "નિરીક્ષણ"
 
-#: functions/zume-content.php:1111
+#: functions/zume-content.php:1112
 msgid "In this session, you’ll learn how God’s Spiritual Economy works and how God invests more in those who are faithful with what they've already been given. You'll also learn two more tools for making disciples – sharing God’s Story from Creation to Judgement and Baptism."
 msgstr "આ સેશનમાં પ્રભુનું આત્મિક અર્થતંત્ર કેવી રીતે કામ કરે છે અને વિશ્વાસુ લોકોને અગાઉથી જે આપવામાં આવ્યું છે તેમાં કેવી રીતે પ્રભુ વધારે રોકાણ કરે છે તેના વિશે શીખશો. શિષ્યો બનાવવા વિશેના બીજા બે સાધનો વિશે પણ તમે શીખશો - સૃષ્ટિના સર્જનની વાતથી માંડીને ન્યાય અને બાપ્તિસ્માની વાત. "
 
-#: functions/zume-content.php:1113 functions/zume-content.php:1536
+#: functions/zume-content.php:1114 functions/zume-content.php:1537
 msgid "Then, when you're ready, get started!"
 msgstr "જ્યારે તમે તૈયાર થાઓ ત્યારે શરૂ કરો!"
 
-#: functions/zume-content.php:1135
+#: functions/zume-content.php:1136
 msgid "In this broken world, people feel rewarded when they take, when they receive and when they gain more than those around them. But God's Spiritual Economy is different – God invests more in those who are faithful with what they've already been given."
 msgstr "આ પતિત જગતમાં જ્યારે લોકોને તેમની આસપાસના લોકો કરતાં વધારે પ્રાપ્ત થાય, મળે કે આપવામાં આવે ત્યારે તેમને પ્રતિફળ મળ્યાનો અનુભવ થાય છે. પરંતુ, ઈશ્વરનું આત્મિક અર્થતંત્ર અલગ છે - જેમને કંઇ આપવામાં આવ્યું છે અને તેમાં તેઓ વિશ્વાસુ છે તો પ્રભુ તેમના જીવનોમાં વધારે રોકાણ કરે છે."
 
-#: functions/zume-content.php:1166
+#: functions/zume-content.php:1167
 msgid "Zúme Video Scripts: Spiritual Economy"
 msgstr "ઝુમ વિડિયો લખાણ: આત્મિક અર્થતંત્ર"
 
-#: functions/zume-content.php:1173
+#: functions/zume-content.php:1174
 msgid "What are some differences you see between God's Spiritual Economy and our earthly way of getting things done?"
 msgstr "ઈશ્વરના આત્મિક અર્થતંત્ર અને આપણા પૃથ્વી પરના અર્થતંત્ર વચ્ચે તમને કયા તફાવતો જાવા મળે છે?"
 
-#: functions/zume-content.php:1187 functions/zume-content.php:1320
+#: functions/zume-content.php:1188 functions/zume-content.php:1321
 msgid "Read and Discuss (15min)"
 msgstr "વાંચો અને ચર્ચા કરો (૧૫ મિનિટ)"
 
-#: functions/zume-content.php:1196
+#: functions/zume-content.php:1197
 msgid "Jesus said, “You will receive power when the Holy Spirit comes upon you. And you will be my witnesses, telling people about me everywhere – in Jerusalem, throughout Judea, in Samaria, and to the ends of the earth.”"
 msgstr "ઈસુએ કહ્યું કે, “જ્યારે પવિત્ર આત્મા તમારા પર આવશે ત્યારે તમે સામર્થ્ય પામશો. અને તમે યરૂશાલેમમાં, યહૂદિયામાં, સમરૂનમાં અને પૃથ્વીના છેડા સુધી તમે મારા સાક્ષી થશો.” "
 
-#: functions/zume-content.php:1199
+#: functions/zume-content.php:1200
 msgid "Jesus believed in His followers so much, He trusted them to tell His story. Then He sent them around the world to do it. Now, He’s sending us."
 msgstr "ઈસુએ પોતાના શિષ્યો પર એટલો વિશ્વાસ કર્યો કે તેણે તેમના પર પોતાની સાક્ષી આપવાનો ભરોસો કર્યો. ત્યારબાદ તેણે તેમને પોતાની સાક્ષી આપવા માટે જગતમાં મોકલ્યા. તે આપણને મોકલે છે."
 
-#: functions/zume-content.php:1202
+#: functions/zume-content.php:1203
 msgid "There’s no one “best way” to tell God’s story (also called The Gospel), because the best way will depend on who you’re sharing with. Every disciple should learn to tell God’s Story in a way that’s true to scripture and connects with the audience they’re sharing with."
 msgstr "પ્રભુની વાત (સુવાર્તા) કહેવાની કોઇ “શ્રેષ્ઠ રીત” નથી, કેમ કે કોને તમે વાત કહી રહ્યા છો તેને ધ્યાનમાં રાખીને શ્રેષ્ઠ રીતે વાત કહી શકો છો. દરેક શિષ્યએ વચન મુજબ સાચી અને સાંભળનારાને લાગુ થાય એવી રીતે પ્રભુની વાત (સુવાર્તા) કહેતાં શીખવું જોઇએ."
 
-#: functions/zume-content.php:1211
+#: functions/zume-content.php:1212
 msgid "What comes to mind when you hear God's command to be His \"witness\" and to tell His story?"
 msgstr "જ્યારે તમે પ્રભુના “સાક્ષી” બનવાની પ્રભુની આજ્ઞા વિશે વિચારો ત્યારે તમારા મનમાં કઇ વાત આવે છે?"
 
-#: functions/zume-content.php:1213
+#: functions/zume-content.php:1214
 msgid "Why do you think Jesus chose ordinary people instead of some other way to share His Good News?"
 msgstr "શા માટે પોતાની સુવાર્તા પ્રગટ કરવા માટે પ્રભુએ બીજી કોઇ રીતને બદલે સામાન્ય લોકોને પસંદ કર્યા તે વિશે તમે શું વિચારો છો?"
 
-#: functions/zume-content.php:1215
+#: functions/zume-content.php:1216
 msgid "What would it take for you to feel more comfortable sharing God's Story?"
 msgstr "સુવાર્તા પ્રગટ કરતી વખતે ક્યારે તમને વધારે સરળતાનો અનુભવ થાય છે?"
 
-#: functions/zume-content.php:1238 template-zume-dashboard.php:398
+#: functions/zume-content.php:1239 template-zume-dashboard.php:398
 msgid "The Gospel"
 msgstr "સુવાર્તા"
 
-#: functions/zume-content.php:1239
+#: functions/zume-content.php:1240
 msgid "One way to share God’s Good News is by telling God’s Story from Creation to Judgement – from the beginning of humankind all the way to the end of this age."
 msgstr "પ્રભુની સુવાર્તા આપવાની એક રીત તો સૃષ્ટિના સર્જનથી ન્યાય કરવામાં આવશે ત્યાં સુધીની વાત કહેવાની છે - માણસજાતની શરૂઆતથી માંડીને તેના અંત સુધીની વાત."
 
-#: functions/zume-content.php:1271
+#: functions/zume-content.php:1272
 msgid "Zúme Video Scripts: The Gospel"
 msgstr "ઝુમ વિડિયો લખાણ: સુવાર્તા"
 
-#: functions/zume-content.php:1280
+#: functions/zume-content.php:1281
 msgid "What do you learn about mankind from this story?"
 msgstr "આ વાતમાંથી માણસજાત વિશે તમે શું શીખો છો?"
 
-#: functions/zume-content.php:1281
+#: functions/zume-content.php:1282
 msgid "What do you learn about God?"
 msgstr "તમે પ્રભુ વિશે શું શીખો છો?"
 
-#: functions/zume-content.php:1282
+#: functions/zume-content.php:1283
 msgid "Do you think it would be easier or harder to share God's Story by telling a story like this?"
 msgstr "શું તમને એમ લાગે છે કે આ રીતે સુવાર્તા આપવી સરળ કે કઠિન છે?"
 
-#: functions/zume-content.php:1295
+#: functions/zume-content.php:1296
 msgid "PRACTICE SHARING GOD'S STORY (45min)"
 msgstr "સુવાર્તા આપવાનો મહાવરો કરો (૪૫ મિનિટ)"
 
-#: functions/zume-content.php:1304
+#: functions/zume-content.php:1305
 msgid "Break into groups of two or three people and spend the next 45 minutes practicing telling God's Story. You can use the using the Activity instructions for \"God's Story\" found in your Zúme Guidebook."
 msgstr "બે કે ત્રણ વ્યક્તિઓના નાના જૂથોમાં વિભાજીત થઇને હવે પછીની ૪૫ મિનિટ સુવાર્તા આપવાનો મહાવરો કરો. તમારી ઝુમ માર્ગદર્શિકામાં આપવામાં આવેલ “સુવાર્તા” વિશેની પ્રાયોગિક સૂચનાઓનો ઉપયોગ કરી શકો છો."
 
-#: functions/zume-content.php:1329 template-zume-dashboard.php:406
+#: functions/zume-content.php:1330 template-zume-dashboard.php:406
 msgid "Baptism"
 msgstr "બાપ્તિસ્મા"
 
-#: functions/zume-content.php:1332
+#: functions/zume-content.php:1333
 msgid "Jesus said, “Go and make disciples of all nations, BAPTIZING them in the name of the Father and of the Son and of the Holy Spirit…”"
 msgstr "ઈસુએ કહ્યું કે, “જાઓ, અને સર્વ દેશનાઓને શિષ્યો બનાવો, બાપ, દીકરા તથા પવિત્ર આત્માને નામે બાપ્તિસ્મા આપતા જાઓ...”"
 
-#: functions/zume-content.php:1343
+#: functions/zume-content.php:1344
 msgid "Find the \"Baptism\" section in your Zúme Guidebook, and listen to the audio below."
 msgstr "તમારી ઝુમ માર્ગદર્શિકામાં “બાપ્તિસ્મા”ને લગતો વિભાગ શોધીને નીચે આપવામાં આવેલ ઓડિયો સાંભળો."
 
-#: functions/zume-content.php:1378
+#: functions/zume-content.php:1379
 msgid "Zúme Video Scripts: Baptism"
 msgstr "ઝુમ વિડિયો લખાણ: બાપ્તિસ્મા"
 
-#: functions/zume-content.php:1386
+#: functions/zume-content.php:1387
 msgid "Have you ever baptized someone?"
 msgstr "શું તમે ક્યારેય કોઇને બાપ્તિસ્મા આપ્યું છે?"
 
-#: functions/zume-content.php:1387
+#: functions/zume-content.php:1388
 msgid "Would you even consider it?"
 msgstr "શું તમે ક્યારે બાપ્તિસ્મા આપવાનો વિચાર કર્યો છે?"
 
-#: functions/zume-content.php:1388
+#: functions/zume-content.php:1389
 msgid "If the Great Commission is for every follower of Jesus, does that mean every follower is allowed to baptize others? Why or why not?"
 msgstr "જો મહાન આદેશ ઈસુના બધા જ શિષ્યોને માટે હતો તો શું તેનો અર્થ એ છે કે બધા જ શિષ્યોને બાપ્તિસમા આપવાની અનુમતિ છે? શા માટે? શા માટે નહિ?"
 
-#: functions/zume-content.php:1401
+#: functions/zume-content.php:1402
 msgid "IMPORTANT REMINDER – Have you been baptized?"
 msgstr "મહત્વની વાત યાદ કરાવવી - શું તમે બાપ્તિસ્મા પામ્યા છો?"
 
-#: functions/zume-content.php:1404
+#: functions/zume-content.php:1405
 msgid "If not, then we encourage you to plan this before even one more session of this training. Invite your group to be a part of this important day when you celebrate saying \"yes\" to Jesus."
 msgstr "જો ના, તો આ તાલીમના બીજા સેશન પહેલાં તેની યોજના બનાવો તે માટે અમે તમને ઉત્તેજન આપીએ છીએ. આ મહત્વના દિવસે જ્યારે તમે ઈસુને “હા” કહો છો ત્યારે તેની ઉજવણીમાં ભાગીદાર થવા માટે તમારા જૂથને આમંત્રણ આપો."
 
-#: functions/zume-content.php:1425
+#: functions/zume-content.php:1426
 msgid "Congratulations on finishing Session 3! "
 msgstr "ત્રીજું સેશન પૂરું કરવા માટે અભિનંદન!"
 
-#: functions/zume-content.php:1447
+#: functions/zume-content.php:1448
 msgid "Spend time this week practicing God's Story, and then share it with at least one person from your List of 100 that you marked as \"Unbeliever\" or \"Unknown.\""
 msgstr "આ અઠવાડિયે સુવાર્તા આપવા વિશે મહાવરો કરો અને ત્યારબાદ ૧૦૦ વ્યક્તિઓની તમારી યાદીમાંથી જેમનું નામ તમે “અવિશ્વાસી” વ્યક્તિઓમાં લખ્યું હોય એવા ઓછામાં ઓછા એક વ્યક્તિને સુવાર્તા આપો."
 
-#: functions/zume-content.php:1454
+#: functions/zume-content.php:1455
 msgid "Ask God who He wants you to train to use the Creation to Judgment story (or some other way to share God's Story). Share this person's name with the group before you go."
 msgstr "કોને તમે સૃષ્ટિના સર્જનથી ન્યાયની વાત (અથવા સુવાર્તા આપવાની બીજી કોઇ રીત) કહેવાની તાલીમ આપો તે વિશે પ્રભુની દોરવણી માગો. જૂથમાંથી જતાં પહેલાં તે વ્યક્તિનું નામ જૂથમાં જણાવો."
 
-#: functions/zume-content.php:1468
+#: functions/zume-content.php:1469
 msgid "What’s been your Zúme highlight? Tell others about it on social media."
 msgstr "તમારા જૂથની મુખ્ય વાતો કઇ હતી? સોશિયલ મિડિયા પર તે બીજાઓને જણાવો."
 
-#: functions/zume-content.php:1479
+#: functions/zume-content.php:1480
 msgid "IMPORTANT REMINDER – Your group will be celebrating the Lord's Supper next session. Be sure to remember the supplies (bread and wine / juice)."
 msgstr "મહત્વની વાત યાદ કરાવવી - હવે પછીના સેશનમાં તમારા જૂથમાં પ્રભુભોજન પળાવવામાં આવશે. સામગ્રી ખાતરી સાથે યાદ રાખો. (રોટલી અને દ્રાક્ષારસ)"
 
-#: functions/zume-content.php:1512
+#: functions/zume-content.php:1513
 msgid "You were asked to share God’s Story with at least one person from your List of 100 that you marked as \"Unbeliever\" or \"Unknown.\""
 msgstr "તમે ૧૦૦ વ્યક્તિઓની યાદી બનાવી હતી તેમાં જે વ્યક્તિનું નામ “અવિશ્વાસી” વ્યક્તિઓમાં લખ્યું હતું એવા ઓછામાં ઓછા એક વ્યક્તિને સુવાર્તા આપવાનું તમને કહેવામાં આવ્યું હતું."
 
-#: functions/zume-content.php:1515
+#: functions/zume-content.php:1516
 msgid "You were encouraged to train someone to use the Creation to Judgement story (or some other way to share God’s Story) with someone."
 msgstr "સૃષ્ટિના સર્જનથી ન્યાય સુધીની વાત (અથવા સુવાર્તા આપવાની બીજી કોઇ રીત) કોઇને શીખવવા માટે તમને ઉત્તેજન આપવામાં આવ્યું હતું."
 
-#: functions/zume-content.php:1534
+#: functions/zume-content.php:1535
 msgid "In this session, you'll learn how God's plan is for every follower to multiply! You’ll discover how disciples multiply far and fast when they start to see where God’s Kingdom isn’t. And, you'll learn another great tool for inviting others into God's family is as simple as telling our story."
 msgstr "આ સેશનમાં દરેક શિષ્યને માટે ગુણાત્મક વૃદ્ધિની ઈશ્વરની યોજના કેવી છે તે વિશે શીખશો! જ્યાં દેવનું રાજ્ય નથી તે સ્થળો જાવાની શરૂઆત કરવા દ્વારા તમે શોધી શકશો કે કેવી રીતે શિષ્યોની ઝડપથી વૃદ્ધિ થાય છે, અને બીજા લોકોને સુવાર્તા આપવા દ્વારા પ્રભુના કુટુંબમાં આમંત્રણ આપી શકો છો તે વિશેના બીજા મોટા સાધન વિશે પણ શીખશો."
 
-#: functions/zume-content.php:1559
+#: functions/zume-content.php:1560
 msgid "3-Minute Testimony"
 msgstr "૩ મિનિટની સાક્ષી"
 
-#: functions/zume-content.php:1562
+#: functions/zume-content.php:1563
 msgid "As followers of Jesus, we are “witnesses\" for Him, because we “testify” about the impact Jesus has had on our lives. Your story of your relationship with God is called your Testimony. It's powerful, and it's something no one can share better than you."
 msgstr "ઈસુના શિષ્યો તરીકે આપણે તેના “સાક્ષી” છીએ, કેમ કે ઈસુએ આપણા જીવનો પર જે અસર ઉપજાવી છે તેની આપણે સાક્ષી આપીએ છીએ. ઈશ્વર સાથેના તમારા સંબંધની વાતને તમારી સાક્ષી કહેવામાં આવે છે. તે સામર્થી છે અને તમારા સિવાય બીજી કોઇ વ્યક્તિ તેને વધારે સારી રીતે કહી શકે નહિ."
 
-#: functions/zume-content.php:1573
+#: functions/zume-content.php:1574
 msgid "Find the \"3-Minute Testimony\" section in your Zúme Guidebook, and listen to the audio below."
 msgstr "તમારી ઝુમ માર્ગદર્શિકામાં “૩ મિનિટની સાક્ષી”નો વિભાગ જુઓ અને નીચે આપેલ ઓડિયો સાંભળો."
 
-#: functions/zume-content.php:1608
+#: functions/zume-content.php:1609
 msgid "Zúme Video Scripts: Testimony"
 msgstr "ઝુમ વિડિયો લખાણ: સાક્ષી"
 
-#: functions/zume-content.php:1621
+#: functions/zume-content.php:1622
 msgid "Practice Sharing your Testimony (45min)"
 msgstr "તમારી સાક્ષી આપવાનો મહાવરો કરો (૪૫ મિનિટ)"
 
-#: functions/zume-content.php:1631
+#: functions/zume-content.php:1632
 msgid "Break into groups of two or three and and spend the next 45 minutes practicing sharing your Testimony using the Activity instructions on page 15 of your Zúme Guidebook."
 msgstr "બે કે ત્રણ વ્યક્તિના જૂથમાં વિભાજીત થાઓ અને ૪૫ મિનિટના સમયમાં ઝુમ માર્ગદર્શિકાના પાના નંબર ૧૫માં આપેલ સૂચનાઓ મુજબ તમારી સાક્ષી આપો."
 
-#: functions/zume-content.php:1656
+#: functions/zume-content.php:1657
 msgid "What is God's greatest blessing for His children? Making disciples who multiply!"
 msgstr "પોતાનાં બાળકો માટે પ્રભુનો કયો મોટો આશીર્વાદ છે? બીજા શિષ્યો બનાવનારા શિષ્યો બનાવવા!"
 
-#: functions/zume-content.php:1658
+#: functions/zume-content.php:1659
 msgid "What if you could learn a simple pattern for making not just one follower of Jesus but entire spiritual families who multiply for generations to come?"
 msgstr "જો તમે ફક્ત એક વ્યક્તિ જ નહિ પરંતુ આખા કુટુંબને ઈસુના શિષ્યો બનાવો અને તેઓ આવનારી પેઢીઓને શિષ્યો બનાવતા રહે તે માટેની સરળ પદ્ધતિ શીખો તો શું થશે?"
 
-#: functions/zume-content.php:1690
+#: functions/zume-content.php:1691
 msgid "Zúme Video Scripts: Greatest Blessing"
 msgstr "ઝુમ વિડિયો લખાણ: સૌથી મહાન આશીર્વાદ"
 
-#: functions/zume-content.php:1701
+#: functions/zume-content.php:1702
 msgid "Is this the pattern you were taught when you first began to follow Jesus? If not, what was different?"
 msgstr "જ્યારે તમે પ્રથમવાર ઈસુની પાછળ ચાલવાની શરૂઆત કરી ત્યારે તમને આ પદ્ધતિ શીખવવામાં આવી હતી?, જા ના, તો કયો તફાવત હતો?"
 
-#: functions/zume-content.php:1703
+#: functions/zume-content.php:1704
 msgid "After you came to faith, how long was it before you began to disciple others?"
 msgstr "વિશ્વાસમાં આવ્યા પછી બીજાઓને શિષ્યો બનાવવાની શરૂઆત કરવા તમે કેટલો સમય લીધો?"
 
-#: functions/zume-content.php:1704
+#: functions/zume-content.php:1705
 msgid "What do you think would happen if new followers started sharing and discipling others, immediately?"
 msgstr "જો નવા વિશ્વાસીઓ સાક્ષી આપવાની અને બીજાઓને શિષ્યો બનાવવાની તરત જ શરૂઆત કરે તો શું થશે?"
 
-#: functions/zume-content.php:1729
+#: functions/zume-content.php:1730
 msgid "What do ducklings have to do with disciple making? They lead and follow at the same time."
 msgstr "શિષ્યો બનાવવાની વાતમાં બતકના નાનાં બચ્ચાંનું ઉદાહરણ કેવું રહેશે? તેઓ એક જ સમયે પોતાની માની પાછળ ચાલે છે અને બીજા બચ્ચાંને દોરે પણ છે."
 
-#: functions/zume-content.php:1761
+#: functions/zume-content.php:1762
 msgid "Zúme Video Scripts: Duckling Discipleship"
 msgstr "ઝુમ વિડિયો લખાણ: બતકના નાનાં બચ્ચાં પાસેથી શિષ્યપણાની વાત શીખવી"
 
-#: functions/zume-content.php:1772
+#: functions/zume-content.php:1773
 msgid "What is one area of discipleship (reading/understanding the Bible, praying, sharing God's Story, etc.) that you want to learn more about? Who is someone that could help you learn?"
 msgstr "શિષ્યપણાના (બાઇબલ વાંચન કરવું/સમજવું, પ્રાર્થના કરવી, સુવાર્તા આપવી, વગેરે) કયા ક્ષેત્ર વિશે તમે વધારે શીખવા માગો છો? શીખવા માટે મદદ કરી શકો એવી વ્યક્તિ કોણ છે?"
 
-#: functions/zume-content.php:1774
+#: functions/zume-content.php:1775
 msgid "What is one area of discipleship that you feel you could share with others? Who is someone that you could share with?"
 msgstr "શિષ્યપણાનું એવું કયું ક્ષેત્ર છે જેના વિશે તમે બીજાઓને જણાવી શકો એવું તમને લાગે છે? તમે જેને જણાવી શકો તે વ્યક્તિ કોણ છે?"
 
-#: functions/zume-content.php:1798
+#: functions/zume-content.php:1799
 msgid "Have you ever stopped to think about where God's Kingdom... isn't?"
 msgstr "ઈશ્વરનું રાજ્ય ક્યાં છે એવો વિચાર કરીને તમે ક્યારેય રોકાઇ ગયા છો ખરા?"
 
-#: functions/zume-content.php:1800
+#: functions/zume-content.php:1801
 msgid "Have you ever visited a home or a neighborhood or even a city where it seemed as if God was just... missing? These are usually the places where God wants to work the most."
 msgstr "શું તમે એવા ઘર, સ્થળ કે શહેરની મુલાકાત લીધે છે જ્યાં તમને એવું લાગે કે અહીં પ્રભુની હાજરી હોવી જાઇએ? એ ક્ષેત્રો કે સ્થળો એવાં છે જ્યાં પ્રભુ કાર્ય કરવા માગે છે."
 
-#: functions/zume-content.php:1832
+#: functions/zume-content.php:1833
 msgid "Zúme Video Scripts: Eyes to See"
 msgstr "ઝુમ વિડિયો લખાણ: દેખતી આંખો"
 
-#: functions/zume-content.php:1841
+#: functions/zume-content.php:1842
 msgid "Who are you more comfortable sharing with -- people you already know or people you haven't met, yet?"
 msgstr "કોને સુવાર્તા જણાવવાનું તમને સહેલું લાગે છે? - જે લોકોને તમે અગાઉથી જાણો છો અથવા તો જેમને તમે હજુ સુધી કદી મળ્યા નથી તેમને?"
 
-#: functions/zume-content.php:1843
+#: functions/zume-content.php:1844
 msgid "Why do you think that is?"
 msgstr "શા માટે તમને એવું લાગે છે?"
 
-#: functions/zume-content.php:1844
+#: functions/zume-content.php:1845
 msgid "How could you get better at sharing with people you're less comfortable with?"
 msgstr "જેમને સુવાર્તા આપવામાં તમને ઓછી અનુકુળતાનો અનુભવ થાય થાય છે તેમની સાથે કેવી રીતે વધારે અનુકુળતા કે સરળતા પ્રાપ્ત કરી શકો?"
 
-#: functions/zume-content.php:1866
+#: functions/zume-content.php:1867
 msgid "The Lord's Supper"
 msgstr "પ્રભુની પ્રાર્થના"
 
-#: functions/zume-content.php:1869
+#: functions/zume-content.php:1870
 msgid "Jesus said, “I am the living bread that came down from heaven. Whoever eats this bread will live forever. This bread is my flesh, which I will give for the life of the world.”"
 msgstr "ઈસુએ કહ્યું કે, “આકાશમાંથી ઉતરેલી જીવંત રોટલી હું છું. જે કોઇ આ રોટલી ખાશે તે સદા જીવતો રહેશે. આ રોટલી તો મારું માંસ છે, જે આખા જગતના જીવનને સારુ હું આપીશ.”"
 
-#: functions/zume-content.php:1880
+#: functions/zume-content.php:1881
 msgid "Find \"The Lord's Supper\" section in your Zúme Guidebook, and listen to the audio below."
 msgstr "તમારી ઝુમ માર્ગદર્શિકામાં “પ્રભુભોજન”નો વિભાગ શોધો અને નીચે આપેલ ઓડિયો સાંભળો."
 
-#: functions/zume-content.php:1915
+#: functions/zume-content.php:1916
 msgid "Zúme Video Scripts: Lord's Supper"
 msgstr "ઝુમ વિડિયો લખાણ: પ્રભુભોજન"
 
-#: functions/zume-content.php:1928
+#: functions/zume-content.php:1929
 msgid "Practice the Lord's Supper (10min)"
 msgstr "પ્રભુભોજનનો મહાવરો કરો (૧૦ મિનિટ)"
 
-#: functions/zume-content.php:1938
+#: functions/zume-content.php:1939
 msgid "Spend the next 10 minutes celebrating The Lord's Supper with your group using the pattern on page 15 of your Zúme Guidebook."
 msgstr "તમારી ઝુમ માર્ગદર્શિકામાં પાના નંબર ૧૫ માં આપેલ પદ્ધતિનો ઉપયોગ કરીને તમારા જૂથની સાથે પ્રભુભોજનની ઉજવણી કરવામાં ૧૦ મિનિટનો સમય ગાળો."
 
-#: functions/zume-content.php:1957
+#: functions/zume-content.php:1958
 msgid "Congratulations on finishing Session 4!"
 msgstr "ચોથું સેશન પૂરું કરવા બદલ અભિનંદન!"
 
-#: functions/zume-content.php:1966
+#: functions/zume-content.php:1967
 msgid "Spend time this week practicing your 3-Minute Testimony, and then share it with at least one person from your List of 100 that you marked as \"Unbeliever\" or \"Unknown.\""
 msgstr "આ અઠવાડિયા દરમ્યાન તમારી ૩ મિનિટની સાક્ષી આપવાનો મહાવરો કરો અને ત્યારબાદ તમે ૧૦૦ વ્યક્તિઓની જે યાદી બનાવી છે તેમાં “અવિશ્વાસી” વ્યક્તિઓમાં જેમનું નામ હોય એવા ઓછામાં ઓછા એક વ્યક્તિને તમારી સાક્ષી આપો."
 
-#: functions/zume-content.php:1973
+#: functions/zume-content.php:1974
 msgid "Ask God who He wants you to train with the 3-Minute Testimony tool. Share this person's name with the group before you go."
 msgstr "કોને ૩ મિનિટની સાક્ષી આપવાનું શીખવવાની પ્રભુની ઇચ્છા છે તે માટે પ્રભુને પ્રાર્થના કરો. જૂથમાંથી જતા પહેલાં તે વ્યક્તિનું નામ જણાવો."
 
-#: functions/zume-content.php:1987 functions/zume-content.php:2998
+#: functions/zume-content.php:1988 functions/zume-content.php:2999
 msgid "What’s the best thing you got today? Share about it on social media."
 msgstr "આજે તમને કઇ શ્રેષ્ઠ વસ્તુ પ્રાપ્ત થઇ? સોશિયલ મિડિયા પર તે જણાવો."
 
-#: functions/zume-content.php:2019
+#: functions/zume-content.php:2020
 msgid "You were asked to share your 3-Minute Testimony with at least one person on your List of 100."
 msgstr "તમને ૧૦૦ વ્યક્તિઓની યાદીમાંથી ઓછામાં ઓછા એક વ્યક્તિને ૩ મિનિટની સાક્ષી આપવાનું કહેવામાં આવ્યું હતું."
 
-#: functions/zume-content.php:2021
+#: functions/zume-content.php:2022
 msgid "You were encouraged to train someone else with the 3-Minute Testimony tool."
 msgstr "કોઇ વ્યક્તિને ૩ મિનિટની સાક્ષી આપવાની તાલીમ આપવા માટે ઉત્તેજન આપવામાં આવ્યું હતું."
 
-#: functions/zume-content.php:2037
+#: functions/zume-content.php:2038
 msgid "In this session, you’ll learn how Prayer Walking is a powerful way to prepare a neighborhood for Jesus, and you'll learn a simple but powerful pattern for prayer that will help you meet and make new disciples along the way."
 msgstr "કેવી રીતે તમારા વિસ્તારને ઈસુને માટે તૈયાર કરી શકાય તે માટે ચાલતાં ચાલતાં પ્રાર્થના કરવી અને પ્રાર્થના કરવાની સરળ પરંતુ સામર્થી પદ્ધતિ કે જેનાથી તમે નવાં શિષ્યો બનાવી શકો તે વિશે શીખશો."
 
-#: functions/zume-content.php:2049
+#: functions/zume-content.php:2050
 msgid "Listen and Read Along (15min)"
 msgstr "સાંભળો અને સાથે મળીને વાંચો (૧૫ મિનિટ)"
 
-#: functions/zume-content.php:2058 template-zume-dashboard.php:470
+#: functions/zume-content.php:2059 template-zume-dashboard.php:470
 msgid "Prayer Walking"
 msgstr "ચાલતાં-ચાલતાં પ્રાર્થના કરવી"
 
-#: functions/zume-content.php:2061
+#: functions/zume-content.php:2062
 msgid "Prayer Walking is a simple way to obey God’s command to pray for others. And it's just what it sounds like – praying to God while walking around!"
 msgstr "ચાલતાં-ચાલતાં પ્રાર્થના કરવી એ તો બીજાઓ માટે પ્રાર્થના કરવાની પ્રભુની આજ્ઞા પાળવી તે છે. અને તે શબ્દનો અર્થ જ એવો થાય છે કે ચાલતાં-ચાલતાં પ્રભુને પ્રાર્થના કરવી!"
 
-#: functions/zume-content.php:2072
+#: functions/zume-content.php:2073
 msgid "Find the \"Prayer Walking\" section in your Zúme Guidebook, and listen to the audio below."
 msgstr "તમારી ઝુમ માર્ગદર્શિકામાં “ચાલતાં-ચાલતાં પ્રાર્થના કરવાનો” વિભાગ શોધો અને નીચે આપેલ ઓડિયો સાંભળો."
 
-#: functions/zume-content.php:2107
+#: functions/zume-content.php:2108
 msgid "Zúme Video Scripts: Prayer Walking"
 msgstr "ઝુમ વિડિયો લખાણ: ચાલતાં-ચાલતાં પ્રાર્થના કરવી"
 
-#: functions/zume-content.php:2161
+#: functions/zume-content.php:2162
 msgid "Zúme Video Scripts: Person of Peace"
 msgstr "ઝુમ વિડિયો લખાણ: શાંતિનો પુત્ર"
 
-#: functions/zume-content.php:2171
+#: functions/zume-content.php:2172
 msgid "Can someone who has a \"bad reputation\" (like the Samaritan woman or the demon-possessed man in the Gadarenes) really be a Person of Peace? Why or why not?"
 msgstr "જેનું નામ ખરાબ થયું હોય (જેમ કે સમરૂની સ્રી અથવા તો ગેરસાનીનો અશુદ્ધ આત્મા વળગેલ માણસ) શાંતિનો પુત્ર હોઇ શકે? શા માટે અથવા શા માટે નહિ?"
 
-#: functions/zume-content.php:2174
+#: functions/zume-content.php:2175
 msgid "What is a community or segment of society near you that seems to have little (or no) Kingdom presence? How could a Person of Peace (someone who is OPEN, HOSPITABLE, KNOWS OTHERS and SHARES) accelerate the spread of the Gospel in that community?"
 msgstr "તમારી આસપાસ એવો કયો સમાજ કે વિસ્તાર છે જ્યાં દેવના રાજ્યની હાજરી થોડી છે અથવા તો નથી? કેવી રીતે શાંતિનો પુત્ર (જે વ્યક્તિ આવકાર કરનાર, પરોણાગત કરનાર, બીજા લોકોને જાણનાર અને સંપર્ક કરનાર) તે સમાજમાં સુવાર્તા પ્રચારની ઝડપ વધારી શકે?"
 
-#: functions/zume-content.php:2190
+#: functions/zume-content.php:2191
 msgid "Practice the B.L.E.S.S. Prayer (15min)"
 msgstr "B.L.E.S.S. પ્રાર્થનાનો મહાવરો કરો (૧૫ મિનિટ)"
 
-#: functions/zume-content.php:2200
+#: functions/zume-content.php:2201
 msgid "Break into groups of two or three and practicing the B.L.E.S.S. Prayer. The prayer pattern can be found in the Zúme Guidebook. Practice praying the five areas of the B.L.E.S.S. Prayer."
 msgstr "બે કે ત્રણ વ્યક્તિઓના જૂથમાં વિભાજીત થઇને B.L.E.S.S. પ્રાર્થનાનો મહાવરો કરો. પ્રાર્થનાની આ પદ્ધતિ તમને ઝુમ માર્ગદર્શિકામાં જોવા મળશે. B.L.E.S.S. પ્રાર્થનાના પાંચ ક્ષેત્રો માટે પ્રાર્થના કરવાનો મહાવરો કરો."
 
-#: functions/zume-content.php:2216
+#: functions/zume-content.php:2217
 msgid "Prayer Walking (60-90min)"
 msgstr "ચાલતાં - ચાલતાં પ્રાર્થના કરવી (૬૦-૯૦ મિનિટ)"
 
-#: functions/zume-content.php:2226
+#: functions/zume-content.php:2227
 msgid "Break into groups of two or three and go out into the community to practice Prayer Walking."
 msgstr "બે કે ત્રણ વ્યક્તિઓનું જૂથ બનાવીને આસપાસના વિસ્તારમાં ચાલતાં-ચાલતાં પ્રાર્થના કરવાનો મહાવરો કરો."
 
-#: functions/zume-content.php:2227
+#: functions/zume-content.php:2228
 msgid "Choosing a location can be as simple as walking outside from where you are now, or you could plan to go to a specific destination."
 msgstr "કોઈ સ્થાન પસંદ કરવું એ તમે જ્યાં છો ત્યાંથી બહાર ચાલતા જવાય એટલું સરળ હોય અથવા તમે કોઈ ચોક્કસ સ્થાન નક્કી કરી જઈ શકો છો."
 
-#: functions/zume-content.php:2228
+#: functions/zume-content.php:2229
 msgid "Go as God leads, and plan on spending 60-90 minutes on this activity."
 msgstr "પ્રભુની દોરવણી મુજબ જાઓ અને આ કાર્યપ્રવૃત્તિમાં ૬૦-૯૦ મિનિટનો સમય ગાળો."
 
-#: functions/zume-content.php:2237
+#: functions/zume-content.php:2238
 msgid "The session ends with a prayer walking activity."
 msgstr "ચાલતાં-ચાલતાં પ્રાર્થના કરવાની પ્રવૃત્તિ સાથે આ સેશનનો અંત થાય છે."
 
-#: functions/zume-content.php:2239
+#: functions/zume-content.php:2240
 msgid "Read through the Obey, Share, and Pray sections, below, before you head out!"
 msgstr "સમાપ્ત કરતાં પહેલાં નીચે આપેલાં આજ્ઞાપાલન, સુવાર્તા પ્રચાર અને પ્રાર્થનાને લગતા વિભાગો વાંચો!"
 
-#: functions/zume-content.php:2253
+#: functions/zume-content.php:2254
 msgid "Spend time this week practicing Prayer Walking by going out alone or with a small group at least once."
 msgstr "આ અઠવાડિયા દરમ્યાન ચાલતાં-ચાલતાં પ્રાર્થના કરવા માટે એકલા અથવા નાના જૂથમાં ઓછામાં ઓછું એકવાર જાઓ અને તેનો મહાવરો કરો."
 
-#: functions/zume-content.php:2260
+#: functions/zume-content.php:2261
 msgid "Spend time asking God who He might want you to share the Prayer Walking tool with before your group meets again. Share this person’s name with the group before you go."
 msgstr "ફરી જૂથમાં એકઠા થાઓ તે પહેલાં કોની સાથે તમે ચાલતાં-ચાલતાં પ્રાર્થના કરવા જાઓ તે વિશે પ્રભુની દોરવણી માગો. જૂથમાંથી જતાં પહેલાં તે વ્યક્તિનું નામ જૂથમાં જણાવો."
 
-#: functions/zume-content.php:2267
+#: functions/zume-content.php:2268
 msgid "Before you go out on your Prayer Walking activity, be sure to pray with your group to end your time together. Thank God that He loves the lost, the last and the least – including us! Ask Him to prepare your heart and the heart of those you'll meet during your walk to be open to His work."
 msgstr "ચાલતાં-ચાલતાં પ્રાર્થના કરવાની શરૂઆત કરો તે પહેલાં તમારા જૂથમાં પ્રાર્થના કરવાનું ભૂલશો નહિ. પ્રભુ ખોવાયેલાંને, છેલ્લા છે તેમને અને સૌથી નાના (તેમાં આપણો પણ સમાવેશ થાય છે) છે તેમને પ્રેમ કરે છે. પ્રભુ તમારા હૃદયને અને ચાલતાં-ચાલતાં પ્રાર્થના કરવાના કાર્ય દરમ્યાન તૈયાર કરે અને તમે જેને મળો તેઓ પ્રભુના કાર્ય માટે ખુલ્લાં થાય તે માટે પ્રાર્થના કરો."
 
-#: functions/zume-content.php:2274
+#: functions/zume-content.php:2275
 msgid "Take a picture of something you see on your prayer walk and post it on social media. "
 msgstr "ચાલતાં-ચાલતાં પ્રાર્થના કરતી વખતે ફોટા પાડીને સોશિયલ મિડિયા પર પોસ્ટ કરો."
 
-#: functions/zume-content.php:2304
+#: functions/zume-content.php:2305
 msgid "You were asked to spend some time Prayer Walking"
 msgstr "તમને ચાલતાં-ચાલતાં પ્રાર્થના કરવામાં સમય ગાળવાનું કહેવામાં આવ્યું હતું"
 
-#: functions/zume-content.php:2305
+#: functions/zume-content.php:2306
 msgid "You were encouraged to share the Prayer Walking tool with someone else."
 msgstr "તમને બીજા લોકોને પણ ચાલતાં-ચાલતાં પ્રાર્થના કરવાના કાર્ય વિશે જણાવવા ઉત્તેજન આપવામાં આવ્યું હતું."
 
-#: functions/zume-content.php:2314
+#: functions/zume-content.php:2315
 msgid "Pray and thank God for the results, ask Him to help when you find it hard to obey, and invite His Holy Spirit to lead your time together."
 msgstr "પરિણામો માટે પ્રભુને પ્રાર્થના કરો અને પ્રભુનો આભાર માનો, જ્યારે તમને આધીન થવાનું કઠિન લાગે ત્યારે પ્રભુની સહાય માગો અને તે સમય દરમ્યાન પવિત્ર આત્માની દોરવણી માગો."
 
-#: functions/zume-content.php:2321
+#: functions/zume-content.php:2322
 msgid "In this session, you’ll learn how God uses faithful followers – even if they're brand new – much more than ones with years of knowledge and training who just won't obey. And you'll get a first look at a way to meet together that helps disciples multiply even faster."
 msgstr "આ સેશનમાં પ્રભુ કેવી રીતે વિશ્વાસુ શિષ્યોને - તેઓ તેમના આત્મિક જીવનમાં નવા હોય તો પણ વર્ષોથી જ્ઞાન અને તાલીમ પ્રાપ્ત કરી હોય પરંતુ આધીન ન થતાં હોય એવાં શિષ્યો કરતાં વધારે ઉપયોગ કરે છે તે વિશે શીખશો. તમે સાથે મળીને ઝડપથી બીજાં શિષ્યો બનાવવામાં મદદરૂપ થશો."
 
-#: functions/zume-content.php:2342
+#: functions/zume-content.php:2343
 msgid "When we help multiply disciples, we need to make sure we're reproducing the right things. It's important what disciples know – but it's much more important what they DO with what they know."
 msgstr "આપણે જ્યારે શિષ્યોની વૃદ્ધિ કરવામાં મદદરૂપ થઇએ છીએ ત્યારે આપણે સારી બાબતોનું ફરીથી ઉત્પાદન કરીએ છીએ તે વિશે ખાતરી રાખવાની જરૂર છે - પરંતુ તેઓ શું જાણે છે તેના કરતાં શું કરે છે તે વધારે મહત્વનું છે."
 
-#: functions/zume-content.php:2374
+#: functions/zume-content.php:2375
 msgid "Zúme Video Scripts: Faithfulness"
 msgstr "ઝુમ વિડિયો લખાણ: વિશ્વાસુપણું"
 
-#: functions/zume-content.php:2381
+#: functions/zume-content.php:2382
 msgid "Think about God's commands that you already know. How \"faithful\" are you in terms of obeying and sharing those things?"
 msgstr "તમે પહેલાંથી પ્રભુની જે આજ્ઞાઓ જાણો છો તેના વિશે વિચાર કરો. તમે પ્રભુને આધીન થવામાં અને તે વિશે બીજાઓને જણાવવામાં કેટલા “વિશ્વાસુ” છો?"
 
-#: functions/zume-content.php:2402
+#: functions/zume-content.php:2403
 msgid "3/3 Groups Format"
 msgstr "૩/૩ વ્યક્તિઓના જૂથમાં"
 
-#: functions/zume-content.php:2455
+#: functions/zume-content.php:2456
 msgid "Zúme Video Scripts: 3/3 Group"
 msgstr "ઝુમ વિડિયો લખાણ: ૩/૩ વ્યક્તિઓનું જૂથ"
 
-#: functions/zume-content.php:2464
+#: functions/zume-content.php:2465
 msgid "Did you notice any differences between a 3/3 Group and a Bible Study or Small Group you've been a part of (or have heard about) in the past? If so, how would those differences impact the group?"
 msgstr "શું તમને ભૂતકાળમાં તમે કોઇ બાઇબલ અભ્યાસના જૂથ કે નાના જૂથમાં સહભાગી થયા હોય (અથવા તેના વિશે સાંભળ્યું હોય) તેમાં અને ૩/૩ વ્યક્તિઓના જૂથ વચ્ચે કંઇ તફાવત માલૂમ પડે છે? જો હા, તો એ સઘળા તફાવતો કેવી રીતે જૂથને અસર કરે છે?"
 
-#: functions/zume-content.php:2467
+#: functions/zume-content.php:2468
 msgid "Could a 3/3 Group be considered a Simple Church? Why or why not?"
 msgstr "૩/૩ વ્યક્તિઓનું જૂથ સરળ મંડળી તરીકે વિચારી શકાય? શા માટે? શા માટે નહિ?"
 
-#: functions/zume-content.php:2486
+#: functions/zume-content.php:2487
 msgid "Congratulations on finishing Session 6!"
 msgstr "છઠ્ઠું સેશન પૂરું કરવા માટે અભિનંદન!"
 
-#: functions/zume-content.php:2507
+#: functions/zume-content.php:2508
 msgid "Spend time this week practicing Faithfulness by obeying and sharing at least one of God's commands that you already know."
 msgstr "આ અઠવાડિયા દરમ્યાન પ્રભુની ઓછામાં ઓછી એક આજ્ઞા વિશ્વાસુપણે પાળવા અને બીજાઓને તે વિશે જણાવવાનો મહાવરો કરવામાં સમય ગાળો."
 
-#: functions/zume-content.php:2514
+#: functions/zume-content.php:2515
 msgid "Think about what you have heard and learned about Faithfulness in this session, and ask God who He wants you to share it with. Share this person’s name with the group before you go."
 msgstr "આ સેશનમાં વિશ્વાસુપણા વિશે તમે જે સાંભળ્યું અને શીખ્યા તે વિશે વિચાર કરો અને કોને તે વિશે જણાવવું જોઇએ તે માટે પ્રભુને વિનંતી કરો. જૂથમાંથી જતા પહેલાં તે વ્યક્તિનું નામ જણાવો."
 
-#: functions/zume-content.php:2521
+#: functions/zume-content.php:2522
 msgid "Thank God for His Faithfulness – for fulfilling every promise He's ever made. Ask Him to help you and your group become even more Faithful to Him."
 msgstr "પ્રભુના વિશ્વાસુપણા માટે- તેણે જે વચનો આપ્યા તે પૂરાં કર્યાં તે માટે પ્રભુનો આભાર માનો. તમે અને તમારું જૂથ પ્રભુને વધારે વિશ્વાસુ રહી શકે તે માટે પ્રભુની સહાય માગો."
 
-#: functions/zume-content.php:2528
+#: functions/zume-content.php:2529
 msgid "Got a Christian brother or sister who might like Zúme? Share it with them on social media."
 msgstr "જેને ઝુમ પસંદ હોય એવા કોઇ ખ્રિસ્તી ભાઇ કે બહેન તમને મળ્યા? તેમની સાથે સોશિયલ મિડિયામાં જણાવો."
 
-#: functions/zume-content.php:2559
+#: functions/zume-content.php:2560
 msgid "You were asked to practice Faithfulness by obeying and sharing one of God's commands."
 msgstr "તમને પ્રભુની આજ્ઞા વિશ્વાસુપણે પાળવાનું અને બીજાઓને તે વિશે જણાવવાનું કહેવામાં આવ્યું હતું."
 
-#: functions/zume-content.php:2562
+#: functions/zume-content.php:2563
 msgid "You were encouraged to share the importance of Faithfulness with someone else."
 msgstr "તમને બીજા વ્યક્તિઓને વિશ્વાસુપણાનું મહત્વ જણાવવાનું ઉત્તેજન આપવામાં આવ્યું હતું."
 
-#: functions/zume-content.php:2572
+#: functions/zume-content.php:2573
 msgid "Pray and thank God for the group's commitment to faithfully following Jesus and invite God's Holy Spirit to lead your time together."
 msgstr "તમારા જૂથનું વિશ્વાસુપણે ઈસુની પાછળ ચાલવાનું જે સમર્પણ છે તેને માટે પ્રભુને પ્રાર્થના કરો અને પ્રભુનો આભાર માનો અને તમને દોરવણી આપવા માટે પવિત્ર આત્માને આમંત્રણ આપો."
 
-#: functions/zume-content.php:2579
+#: functions/zume-content.php:2580
 msgid "In this session, you’ll learn a Training Cycle that helps disciples go from one to many and turns a mission into a movement. You'll also practice the 3/3 Groups Format and learn how the way you meet can impact the way you multiply."
 msgstr "આ સેશનમાં તમે શિષ્યોની વૃદ્ધિ કરવામાં અને મિશનકાર્યને એક ચળવળમાં રૂપાંતરિત કરવા મદદરૂપ થતા તાલીમ ચક્ર વિશે શીખશો. તમે ૩/૩ વ્યક્તિઓના જૂથની પદ્ધતિનો મહાવરો પણ કરશો અને તમે જે રીતે મુલાકાત કરો છો તે કેવી રીતે વૃદ્ધિને અસર કરે છે તે વિશે પણ શીખી શકશો."
 
-#: functions/zume-content.php:2601
+#: functions/zume-content.php:2602
 msgid "Have you ever learned how to ride a bicycle? Have you ever helped someone else learn? If so, chances are you already know the Training Cycle."
 msgstr "શું તમે ક્યારેય સાઇકલ ચલાવતા શીખ્યા છો? શું તમે બીજા કોઇને શીખવ્યું છે? જો હા, તો તમે આ તાલીમ ચક્રને જાણતા હોવાની સંભાવના છે."
 
-#: functions/zume-content.php:2612
+#: functions/zume-content.php:2613
 msgid "Find the \"Training Cycle\" section in your Zúme Guidebook. When you're ready, watch this video, and then discuss the questions below."
 msgstr "તમારી ઝુમ માર્ગદર્શિકામાં “તાલીમ ચક્ર”ના વિભાગને જુઓ. જો તમે તૈયાર છો તો આ વિડિયો જુઓ અને નીચે આપેલ પ્રશ્નોની ચર્ચા કરો."
 
-#: functions/zume-content.php:2647
+#: functions/zume-content.php:2648
 msgid "Zúme Video Scripts: Training Cycle"
 msgstr "ઝુમ વિડિયો લખાણ: તાલીમ ચક્ર"
 
-#: functions/zume-content.php:2655
+#: functions/zume-content.php:2656
 msgid "Have you ever been a part of a Training Cycle?"
 msgstr "શું તમે ક્યારેય તાલીમ ચક્રમાં ભાગ લીધો છે?"
 
-#: functions/zume-content.php:2656
+#: functions/zume-content.php:2657
 msgid "Who did you train? Or who trained you?"
 msgstr "તમે કોને તાલીમ આપી? અથવા કોણ તમને તાલીમ આપી?"
 
-#: functions/zume-content.php:2658
+#: functions/zume-content.php:2659
 msgid "Could the same person be at different parts of the Training Cycle while learning different skills?"
 msgstr "વિવિધ આવડતો શીખતી વખતે તાલીમ ચક્રના વિવિધ ભાગોમાં એક જ વ્યક્તિ હોઇ શકે છે?"
 
-#: functions/zume-content.php:2660
+#: functions/zume-content.php:2661
 msgid "What would it look like to train someone like that?"
 msgstr "બીજા વ્યક્તિને તાલીમ આપવાનું કેવું લાગે છે?"
 
-#: functions/zume-content.php:2674
+#: functions/zume-content.php:2675
 msgid "Practice and Discuss (90min)"
 msgstr "મહાવરો કરો અને ચર્ચા કરો (૯૦ મિનિટ)"
 
-#: functions/zume-content.php:2684
+#: functions/zume-content.php:2685
 msgid "Have your entire group spend the next 90 minutes practicing the 3/3 Groups Format. Refer to the Zúme Guidebook if you need a reminder about the pattern."
 msgstr "તમારા આખા જૂથે ૩/૩ વ્યક્તિઓના જૂથમાં ૯૦ મિનિટ સુધી મહાવરો કરવાનો છે. જા તમને તે પદ્ધતિ યાદ કરાવવાની જરૂર છે તો તમારી ઝુમ માર્ગદર્શિકા જુઓ."
 
-#: functions/zume-content.php:2694 functions/zume-content.php:2935
-#: functions/zume-content.php:3765
+#: functions/zume-content.php:2695 functions/zume-content.php:2936
+#: functions/zume-content.php:3766
 msgid "PRACTICE"
 msgstr "મહાવરો કરો"
 
-#: functions/zume-content.php:2699
+#: functions/zume-content.php:2700
 msgid "LOOK BACK – Use last week's Session Challenges to practice \"Faithfulness\" in the Look Back section."
 msgstr "પાછું વાળીને જુઓ - પાછલા અઠવાડિયા દરમ્યાન “વિશ્વાસુપણા”નો મહાવરો કરવાનો પડકાર આપવામાં આવ્યો હતો તેનો ઉપયોગ કરો."
 
-#: functions/zume-content.php:2702
+#: functions/zume-content.php:2703
 msgid "LOOK UP – Use Mark 5:1-20 as your group's reading passage and answer questions 1-4 during the Look Up section."
 msgstr "ઉપર જુઓ - તમારા જૂથમાં માર્ક ૫ઃ૧-૨૦ વાંચો અને ૧-૪ પ્રશ્નોના ઉત્તરો આપો."
 
-#: functions/zume-content.php:2705
+#: functions/zume-content.php:2706
 msgid "LOOK FORWARD – Use questions 5, 6, and 7 in the Look Forward section to develop how you will Obey, Train and Share."
 msgstr "આગળ જુઓ - કેવી રીતે આધીન થવું, તાલીમ આપવી અને જણાવવું તેનો વિકાસ કરવા માટે ૫,૬ અને ૭ પ્રશ્નો જુઓ."
 
-#: functions/zume-content.php:2709 functions/zume-content.php:2952
+#: functions/zume-content.php:2710 functions/zume-content.php:2953
 msgid "REMEMBER – Each section should take about 1/3 (or 30 minutes) of your practice time."
 msgstr "યાદ રાખો - દરેક સેશનમાં ૧/૩ (૩૦ મિનિટ) મહાવરો કરવાનો સમય છે."
 
-#: functions/zume-content.php:2718
+#: functions/zume-content.php:2719
 msgid "What did you like best about the 3/3 Group? Why?"
 msgstr "૩/૩ વ્યક્તિઓના જૂથમાં તમને સૌથી સારું શું લાગ્યું? શા માટે?"
 
-#: functions/zume-content.php:2719
+#: functions/zume-content.php:2720
 msgid "What was the most challenging? Why?"
 msgstr "સૌથી વધારે પડકારજનક શું હતું? શા માટે?"
 
-#: functions/zume-content.php:2737
+#: functions/zume-content.php:2738
 msgid "Congratulations on finishing Session 7!"
 msgstr "સાતમું સેશન પૂરું કરવા માટે અભિનંદન!"
 
-#: functions/zume-content.php:2745
+#: functions/zume-content.php:2746
 msgid "Spend time this week obeying, training, and sharing based on the commitments you've made during your 3/3 Group practice."
 msgstr "આ અઠવાડિયા દરમ્યાન ૩/૩ વ્યક્તિઓના જૂથમાં મહાવરો કરવા દ્વારા તમે જે સમર્પણ કર્યું છે તે મુજબ આજ્ઞાપાલન કરો, તાલીમ આપો અને બીજાઓને જણાવો."
 
-#: functions/zume-content.php:2752
+#: functions/zume-content.php:2753
 msgid "Pray and ask God who He wants you to share the 3/3 Group format with before your group meets again. Share this person’s name with the group before you go."
 msgstr "ફરીથી જૂથમાં એકઠા થાઓ તે પહેલાં ૩/૩ વ્યક્તિઓના જૂથ વિશે કોને જણાવશો તે વિશે પ્રભુને પ્રાર્થના કરો. જૂથમાંથી જતાં પહેલાં તે વ્યક્તિનું નામ જણાવો."
 
-#: functions/zume-content.php:2759
+#: functions/zume-content.php:2760
 msgid "Thank God that He loves us enough to invite us into His most important work – growing His family!"
 msgstr "પ્રભુ આપણને પોતાના કુટુંબની વૃદ્ધિ કરવાના મહત્વનું કાર્ય કરવાનું આમંત્રણ આપે છે તે માટે પ્રભુનો આભાર માનો!"
 
-#: functions/zume-content.php:2766
+#: functions/zume-content.php:2767
 msgid "Hop on LIVE and tell the world what you just learned and where they could learn it too."
 msgstr "હમણાં તમે જે શીખ્યા અને બીજા લોકો તે વિશે ક્યાં શીખી શકે તે વિશે જગતને જણાવો."
 
-#: functions/zume-content.php:2798
+#: functions/zume-content.php:2799
 msgid "You were asked to practice obeying, training, and sharing based on your commitments during 3/3 Group practice."
 msgstr "૩/૩ વ્યક્તિઓના જૂથમાં તમે જે સમર્પણ કર્યું તેના આધારે તમને આજ્ઞાપાલન કરવાનો, તાલીમ આપવાનો અને બીજાઓને જણાવવાનો મહાવરો કરવાનું કહેવામાં આવ્યું હતું."
 
-#: functions/zume-content.php:2801
+#: functions/zume-content.php:2802
 msgid "You were encouraged to share the 3/3 Group Format with someone else."
 msgstr "તમને બીજા લોકોને ૩/૩ વ્યક્તિઓના જૂથની પદ્ધતિ વિશે જણાવવાનું ઉત્તેજન આપવામાં આવ્યું હતું."
 
-#: functions/zume-content.php:2811
+#: functions/zume-content.php:2812
 msgid "Pray and thank God for giving your group the energy, the focus and the faithfulness to come so far in this training. Ask God to have His Holy Spirit remind everyone in the group that they can do nothing without Him!"
 msgstr "આ તાલીમમાં અહીં સુધી આવવા માટે તમારા જૂથને બળ, લક્ષ્ય અને વિશ્વાસુપણું આપવા માટે પ્રભુને પ્રાર્થના કરો અને પ્રભુનો આભાર માનો. પવિત્ર આત્મા જૂથના દરેક વ્યક્તિને યાદ કરાવે કે તેઓ પ્રભુ વગર કંઇ કરી શકતા નથી તે માટે પ્રાર્થના કરો!"
 
-#: functions/zume-content.php:2818
+#: functions/zume-content.php:2819
 msgid "In this session, you’ll learn how Leadership Cells prepare followers in a short time to become leaders for a lifetime. You'll learn how serving others is Jesus' strategy for leadership. And you'll spend time practicing as a 3/3 Group, again."
 msgstr "આ સેશનમાં આગેવાનીના જૂથો કેવી રીતે ટૂંક સમયમાં જીવનભર આગેવાની આપી શકે એવા શિષ્યોને તૈયાર કરે છે તેના વિશે શીખશો. કેવી રીતે બીજાઓની સેવા કરવી તે આગેવાની આપવાની ઈસુની પદ્ધતિ છે તે વિશે તમે શીખશો અને ૩/૩ વ્યક્તિઓના જૂથમાં ફરીથી તેનો મહાવરો કરવામાં સમય ગાળશો."
 
-#: functions/zume-content.php:2840
+#: functions/zume-content.php:2841
 msgid "Jesus said, “Whoever wishes to become great among you shall be your servant.”"
 msgstr "ઈસુએ કહ્યું કે, “તમારામાં જે કોઇ મોટો થવા ચાહે તે સર્વનો દાસ થાય.”"
 
-#: functions/zume-content.php:2843
+#: functions/zume-content.php:2844
 msgid "Jesus radically reversed our understanding of leadership by teaching us that if we feel called to lead, then we are being called to serve. A Leadership Cell is a way someone who feels called to lead can develop their leadership by practicing serving."
 msgstr "જો આપણને લાગતું હોય કે આપણને આગેવાન બનવાનું તેડું આપવામાં આવ્યું છે તો આપણને સેવા કરવા માટે તેડવામાં આવ્યા છે એવું શિક્ષણ આપીને ઈસુએ તાર્કિક રીતે આગેવાની વિશેની આપણી સમજણને બદલી નાખી. આગેવાની આપવાના જૂથ તો જેમને એમ લાગે છે કે તેમને આગેવાની આપવાનું તેડું આપવામાં આવ્યું છે એવાં લોકો માટે સેવા આપવાનો અભ્યાસ કરીને આગેવાનીનો વિકાસ કરી શકે તે માટેનો માર્ગ છે."
 
-#: functions/zume-content.php:2854
+#: functions/zume-content.php:2855
 msgid "Find the \"Leadership Cells\" section in your Zúme Guidebook. When you're ready, watch and discuss this video."
 msgstr "તમારી ઝુમ માર્ગદર્શિકામાં “આગેવાનીના સમૂહો” નો વિભાગ શોધો. જ્યારે તમે તૈયાર થાઓ ત્યારે વિડિયો જુઓ અને ચર્ચા કરો."
 
-#: functions/zume-content.php:2889
+#: functions/zume-content.php:2890
 msgid "Zúme Video Scripts: Leadership Cells"
 msgstr "ઝુમ વિડિયો લખાણ: આગેવાનીના સમૂહો"
 
-#: functions/zume-content.php:2898
+#: functions/zume-content.php:2899
 msgid "Is there a group of followers of Jesus you know that are already meeting or would be willing to meet and form a Leadership Cell to learn Zúme Training?"
 msgstr "શું ઈસુના શિષ્યોનું એવા કોઇ જૂથ વિશે તમે જાણો છો કે જે પહેલાંથી એકત્ર થાય છે અથવા તો ઝુમ તાલીમ શીખવા માટે આગેવાનીનું સમૂહ શરૂ કરવા માટે મળવાની ઇચ્છા રાખે છે?"
 
-#: functions/zume-content.php:2900
+#: functions/zume-content.php:2901
 msgid "What would it take to bring them together?"
 msgstr "તેમને એકઠા મળવા માટે શેની જરૂર છે?"
 
-#: functions/zume-content.php:2914
+#: functions/zume-content.php:2915
 msgid "Practice 3/3 Group (90min)"
 msgstr "૩/૩ વ્યક્તિઓના જૂથમાં મહાવરો કરો (૯૦ મિનિટ)"
 
-#: functions/zume-content.php:2924
+#: functions/zume-content.php:2925
 msgid "Have your entire group spend the next 90 minutes practicing the 3/3 Groups Format."
 msgstr "તમારા આખા જૂથને ૩/૩/ વ્યક્તિઓના જૂથમાં ૯૦ મિનિટ મહાવરો કરવાનો સમય આપો."
 
-#: functions/zume-content.php:2942
+#: functions/zume-content.php:2943
 msgid "LOOK BACK – Use last session’s Obey, Train, and Share challenges to check-in with each other."
 msgstr "પાછળ જુઓ - પાછલા સેશનના આધીન થવું, શીખવવું અને બીજાઓ સાથે પડકારો વહેંચવા વિશેના મુદ્દાઓ વિશે એકબીજા સાથે વાત કરો."
 
-#: functions/zume-content.php:2945
+#: functions/zume-content.php:2946
 msgid "LOOK UP – Use Acts 2:42-47 as your group’s reading passage and answer questions 1- 4."
 msgstr "ઉપર જુઓ - તમારા જૂથમાં પ્રેરિતોના કૃત્યો ૨ઃ૪૨-૪૭ વાંચો અને ૧-૪ પ્રશ્નોના ઉત્તર આપો."
 
-#: functions/zume-content.php:2948
+#: functions/zume-content.php:2949
 msgid "LOOK FORWARD – Use questions 5, 6, and 7 to develop how you will Obey, Train and Share."
 msgstr "આગળ જુઓ - પ્રશ્ન ૫,૬ અને ૭ નો ઉપયોગ કરીને કેવી રીતે તમે આધીન થશો, શીખવશો અને જણાવશો તેનો વિકાસ કરો."
 
-#: functions/zume-content.php:2969
+#: functions/zume-content.php:2970
 msgid "Congratulations! You've completed Session 8. "
 msgstr "અભિનંદન! તમે આઠમું સેશન પૂરું કર્યું છે."
 
-#: functions/zume-content.php:2977
+#: functions/zume-content.php:2978
 msgid "Spend time again this week obeying, sharing, and training based on the commitments you've made during this session's 3/3 Group practice."
 msgstr "આ સેશનમાં ૩/૩ વ્યક્તિઓના જૂથમાં તમે જે મહાવરો કર્યો હતો તેના સમર્પણના આધારે આ અઠવાડિયા દરમ્યાન આધીન થવામાં, એકબીજાને જણાવવામાં અને તાલીમ આપવામાં સમય ગાળો."
 
-#: functions/zume-content.php:2984
+#: functions/zume-content.php:2985
 msgid "Pray and ask God who He wants you to share the Leadership Cell tool with before your group meets again. Share this person’s name with the group before you go."
 msgstr "ફરીથી જૂથમાં આવો તે પહેલાં તમે કોને આગેવાનીના સમૂહ વિશે જણાવો તેની દોરવણી પ્રાપ્ત કરવા વિશે પ્રભુને પ્રાર્થના કરો અને જૂથમાંથી જતાં પહેલાં તે વ્યક્તિનું નામ જણાવો."
 
-#: functions/zume-content.php:2991
+#: functions/zume-content.php:2992
 msgid "Thank God for sending Jesus to show us that real leaders are real servants. Thank Jesus for showing us the greatest service possible is giving up our own lives for others."
 msgstr "સાચા આગેવાનો તો સાચા સેવકો છે એ વાત આપણને બતાવવા ઈસુને મોકલી દેવા માટે પ્રભુનો આભાર માનો. ઈસુએ બીજાઓને માટે પોતાનો જીવ આપવા દ્વારા સૌથી મહાન સેવા બતાવી છે તે માટે ઈસુનો આભાર માનો."
 
-#: functions/zume-content.php:3034
+#: functions/zume-content.php:3035
 msgid "You were asked to practice Obeying, Training, and Sharing based on your commitments during last session's 3/3 Group practice."
 msgstr "પાછલા સેશનમાં તમને ૩/૩ વ્યક્તિઓના જૂથમાં તમારા સમર્પણના આધારે આધીન થવાનો, શીખવવાનો અને એકબીજાને જણાવવાનો મહાવરો કરવાનું કહેવામાં આવ્યું હતું."
 
-#: functions/zume-content.php:3037
+#: functions/zume-content.php:3038
 msgid "You were encouraged to share the Leadership Cells tool with someone else."
 msgstr "તમને બીજા કોઇ વ્યક્તિને આગેવાનીના સમૂહની વાત જણાવવા ઉત્તેજન આપવામાં આવ્યું હતું."
 
-#: functions/zume-content.php:3049
+#: functions/zume-content.php:3050
 msgid "Pray and thank God that His ways are not our ways and His thoughts are not our thoughts. Ask Him to give each member of your group the mind of Christ — always focused on His Father's work. Ask the Holy Spirit to lead your time together and make it the best session yet."
 msgstr "પ્રભુને પ્રાર્થના કરો અને પ્રભુનો આભાર માનો કે તેના માગો આપણા માર્ગો નથી અને તેનાં વિચારો આપણા વિચારો નથી. તમારા જૂથના દરેક સભ્યને ખ્રિસ્તનું મન આપે કે જે હંમેશા તેના પિતાના કાર્ય પર લક્ષ આપે છે તે માટે પ્રભુને વિનંતી કરો. પવિત્ર આત્મા તમને દોરવણી આપે અને તમારા સેશનને શ્રેષ્ઠ સેશન બનાવે તે માટે વિનંતી કરો."
 
-#: functions/zume-content.php:3057
+#: functions/zume-content.php:3058
 msgid "In this session, you’ll learn how linear patterns hold back kingdom growth and how Non-Sequential thinking helps you multiply disciples. You'll discover how much time matters in disciple-making and how to accelerate Pace. You’ll learn how followers of Jesus can be a Part of Two Churches to help turn faithful, spiritual families into a growing city-wide body of believers. Finally, you'll learn how a simple Three Month Plan can focus your efforts and multiply your effectiveness in growing God's family exponentially."
 msgstr "આ સેશનમાં કેવી રીતે રેખીય રચના રાજ્યની વૃદ્ધિને રોકી રાખે છે અને બિનપરંપરાગત વિચારસરણી શિષ્યોની વૃદ્ધિ કરવામાં મદદરૂપ થાય છે તે વિશે શીખશો. શિષ્ય બનાવવામાં સમય આપવો કેટલો મહત્વનો છે અને કેવી રીતે ઉતાવળ કરવી તે વિશે શીખી શકશો. કેવી રીતે ઈસુના શિષ્યો બે મંડળીમાં સહભાગી થવા દ્વારા વિશ્વાસુ અને શહેરમાં વૃદ્ધિ પામતાં આત્મિક કુટુંબો તરીકે રૂપાંતરિત થાય તે વિશે શીખી શકશો. અંતે, કેવી રીતે ત્રણ મહિનાની યોજના તમારા પ્રયત્નો પર લક્ષ આપી શકે અને પ્રભુના કુટુંબની વૃદ્ધિમાં અસરકારક બની શકે તે વિશે પણ શીખશો."
 
-#: functions/zume-content.php:3079
+#: functions/zume-content.php:3080
 msgid "When people think about disciples multiplying, they often think of it as a step-by-step process. The problem with that is — that's not how it works best!"
 msgstr "જ્યારે લોકો શિષ્યોની વૃદ્ધિ વિશે વિચાર કરે છે ત્યારે ઘણીવાર તેઓ ક્રમિક પ્રક્રિયા વિશે વિચાર કરે છે. તેમાં જે સમસ્યા છે તે એ છે કે - તે પ્રક્રિયા શ્રેષ્ઠ રીતે કામ કરતી નથી."
 
-#: functions/zume-content.php:3113
+#: functions/zume-content.php:3114
 msgid "Zúme Video Scripts: Non-Sequential"
 msgstr "ઝુમ વિડિયો લખાણ: બિનપરંપરાગત"
 
-#: functions/zume-content.php:3124
+#: functions/zume-content.php:3125
 msgid "What is the most exciting idea you heard in this video? Why?"
 msgstr "આ વિડિયોમાં તમે કયા સૌથી વધારે ઉત્તેજનાત્મક વિચાર વિશે સાંભળ્યું?"
 
-#: functions/zume-content.php:3125
+#: functions/zume-content.php:3126
 msgid "What is the most challenging idea? Why?"
 msgstr "કયો વિચાર સૌથી વધારે પડકારજનક છે? શા માટે?"
 
-#: functions/zume-content.php:3146
+#: functions/zume-content.php:3147
 msgid "Multiplying matters and multiplying quickly matters even more. Pace matters because where we all spend our eternity — an existence that outlasts time — is determined in the very short time we call “life.“"
 msgstr "વૃદ્ધિ પામવું મહત્વનું છે અને ઝડપથી વૃદ્ધિ પામવું તો વધારે મહત્વનું છે. ગતિ પણ ખૂબ જ મહત્વની છે કેમ કે આપણે બધા અનંતકાળ ક્યાં ગાળીશું તેનો નિર્ણય કરવા માટે આપણી પાસે ખૂબ જ થોડો સમય છે, તે “જીવન” તરીકે ઓળખાય છે."
 
-#: functions/zume-content.php:3180
+#: functions/zume-content.php:3181
 msgid "Zúme Video Scripts: Pace"
 msgstr "ઝુમ વિડિયો લખાણ: ગતિ"
 
-#: functions/zume-content.php:3191
+#: functions/zume-content.php:3192
 msgid "Why is pace important?"
 msgstr "શા માટે ગતિ મહત્વની છે?"
 
-#: functions/zume-content.php:3193
+#: functions/zume-content.php:3194
 msgid "What do you need to change in your thinking, your actions, or your attitude to be better aligned with God's priority for pace?"
 msgstr "તમારા વિચારો, કાર્ય અને વલણો ગતિ માટેની પ્રભુની અગ્રિમતા સાથે એક થાય તે માટે તમારે તેમાં કેવું બદલાણ લાવવાની જરૂર છે?"
 
-#: functions/zume-content.php:3195
+#: functions/zume-content.php:3196
 msgid "What is one thing you can do starting this week that will make a difference?"
 msgstr "તમે આ અઠવાડિયે એવું કયું એક કાર્ય કરશો જેનાથી તફાવત લાવી શકાય?"
 
-#: functions/zume-content.php:3216
+#: functions/zume-content.php:3217
 msgid "Jesus taught us that we are to stay close — to live as a small, spiritual family, to love and give our lives to one another, to celebrate and suffer — together. However, Jesus also taught us to leave our homes and loved ones behind and be willing to go anywhere — and everywhere — to share and start new spiritual families. So how can we do both? When you're ready, watch the video below and discuss the question that follows."
 msgstr "ઈસુએ આપણને શીખવ્યું છે કે આપણે સાથે મળીને રહેવાનું છે - એક નાના આત્મિક કુટુંબ તરીકે રહેવાનું છે અને એકબીજાને પ્રેમ કરવાનો છે તથા એકબીજા માટે જીવ આપવાનો છે, સાથે ઉજવણી કે દુઃખ સહન કરવાનું છે. પરંતુ ઈસુએ આપણને એવું પણ શીખવ્યું છે કે આપણે આપણા ઘરો અને વહાલાંઓને મૂકીને નવાં આત્મિક કુટુંબોની શરૂઆત કરવા માટે ગમે ત્યાં જવાનું છે. તો આ બંને કાર્યો આપણે કેવી રીતે કરી શકીએ? જ્યારે તમે તૈયાર થાઓ ત્યારે નીચે આપેલ વિડિયો જુઓ અને ત્યારબાદ પ્રશ્નોની ચર્ચા કરો."
 
-#: functions/zume-content.php:3250
+#: functions/zume-content.php:3251
 msgid "Zúme Video Scripts: Two Churches"
 msgstr "ઝુમ વિડિયો લખાણ: બે મંડળીઓ"
 
-#: functions/zume-content.php:3260
+#: functions/zume-content.php:3261
 msgid "What are some advantages of maintaining a consistent spiritual family that gives birth to new ones that grow and multiply instead of continually growing a family and splitting it in order to grow?"
 msgstr "જે કુટુંબ વૃદ્ધિ પામે અને વૃદ્ધિ પામવા તૂટતું રહે એવા કુટુંબને બદલે નવાં વૃદ્ધિ પામતાં કુટુંબોને જન્મ આપે એવાં આત્મિક કુટુંબની સુસંગતતા જાળવવાના કેટલાક લાભો કયા કયા છે?"
 
-#: functions/zume-content.php:3271
+#: functions/zume-content.php:3272
 msgid "Create a Three Month Plan (30min)"
 msgstr "ત્રણ મહિનાની યોજના બનાવો (૩૦ મિનિટ)"
 
-#: functions/zume-content.php:3281
+#: functions/zume-content.php:3282
 msgid "In His Bible, God says, \"I know the plans I have for you, plans to prosper you and not to harm you, plans to give you hope and a future.\" God makes plans, and He expects us to make plans, too. He teaches us through His Word and His work to look ahead, see a better tomorrow, make a plan for how to get there, and then prepare the resources we'll need on the way."
 msgstr "પ્રભુ પોતાના બાઇબલમાં કહે છે કે, “જે ઇરાદા હું તમારા વિશે રાખું છું તેઓને હું જાણું છું, એ ઇરાદા ભવિષ્યમાં તમને આશા આપવા માટે વિપત્તિ લગતા નહિ પણ શાંતિને લગતા છે.” પ્રભુ યોજનાઓ બનાવે છે અને આપણે પણ યોજનાઓ બનાવીએ એવી અપેક્ષા રાખે છે. તે પોતાના વચન અને કાર્ય દ્વારા આપણને આગળ સારી કાલને જાવાનું, ત્યાં પહોંચવા માટે યોજના બનાવવાનું અને તે માર્ગ પર ચાલવાનું શિક્ષણ આપે છે અને તે માર્ગ પર આપણને જે શ્રોતોની જરૂર પડશે તેને તૈયાર કરે છે."
 
-#: functions/zume-content.php:3284
+#: functions/zume-content.php:3285
 msgid "A Three Month Plan is a tool you can use to help focus your attention and efforts and keep them aligned with God's priorities for making disciples who multiply. Spend the next 30 minutes praying over, reading through, and then completing the commitments listed in the Three Month Plan."
 msgstr "૩ મહિનાની યોજના તો તમારા લક્ષ્ય અને પ્રયત્નોને મદદ કરવાના સાધન તરીકે ઉપયોગ કરી શકો અને વૃદ્ધિ કરનારા શિષ્યો બનાવવા માટે પ્રભુની અગ્રિમતાની સાથે તાલ મિલાવી શકે તે માટેની યોજના છે.  ૩ મહિનાની યોજનામાં જે યાદી આપેલ છે તે મુજબ પ્રાર્થના કરો, વાંચન કરો અને સમર્પણ પૂરા કરો."
 
-#: functions/zume-content.php:3287
+#: functions/zume-content.php:3288
 msgid "You can use the printed version in your Zúme Guidebook or our online version."
 msgstr "તમે પ્રકાશિત કરેલ ઝુમ માર્ગદર્શિકાનો અથવા અમારા ઓનલાઇન વર્ઝનનો ઉપયોગ કરી શકો છો."
 
-#: functions/zume-content.php:3290
+#: functions/zume-content.php:3291
 msgid "Online \"Three Month Plan\""
 msgstr "ઓનલાઇન “૩ મહિનાની યોજના”"
 
-#: functions/zume-content.php:3302
+#: functions/zume-content.php:3303
 msgid "Participants can access their own three month plan on the side column of their dashboard. They can connect their plan with this group by adding the following key:"
 msgstr "સહભાગીઓ તેમના ડેશબોર્ડની બાજુમાં ૩ મહિનાની યોજના પ્રાપ્ત કરી શકશે. તેઓ નીચે આપેલ ચાવીનો તેમાં સમાવેશ કરીને આ જૂથ સાથે તેમની યોજનાને સાંકળી શકે છે."
 
-#: functions/zume-content.php:3322
+#: functions/zume-content.php:3323
 msgid "Ask God what He specifically wants you to do with the basic disciple-making tools and techniques you have learned over these last nine sessions. You can remember them in terms of the Greatest Blessing."
 msgstr "આ નવ સેશનોમાં તમે શિષ્ય બનાવવાના મૂળભૂત સાધનો અને પદ્ધતિ વિશે શીખ્યા તેનો કેવી રીતે ઉપયોગ કરી શકો તે માટે પ્રભુને પ્રાર્થના કરો. તમે તેને સૌથી મહાન આશીર્વાદ તરીકે યાદ રાખી શકો છો."
 
-#: functions/zume-content.php:3326
+#: functions/zume-content.php:3327
 msgid "It's a Blessing to ... S.O.A.P.S. Bible Reading, Accountability Groups, Prayer Cycle"
 msgstr "S.O.A.P.S., બાઇબલ વાંચન, જવાબદાર જૂથો, પ્રાર્થનાનું ચક્ર તે આશીર્વાદરૂપ છે"
 
-#: functions/zume-content.php:3329
+#: functions/zume-content.php:3330
 msgid "It's a Great Blessing to ... Share your 3-Minute Testimony and God's Story, Prayer Walking"
 msgstr "૩ મિનિટની સાક્ષીની સાથે સુવાર્તા આપવી, ચાલતાં-ચાલતાં પ્રાર્થના કરવી તે એક મોટો આશીર્વાદ છે"
 
-#: functions/zume-content.php:3332
+#: functions/zume-content.php:3333
 msgid "It's a Greater Blessing to ... Start a 3/3rds Group"
 msgstr "૩/૩ વ્યક્તિઓના જૂથની શરૂઆત કરવી એક મોટો આશીર્વાદ છે"
 
-#: functions/zume-content.php:3335
+#: functions/zume-content.php:3336
 msgid "It's the Greatest Blessing to ... Start a Zúme Group"
 msgstr "ઝુમ જૂથની શરૂઆત કરવી તે મોટો આશીર્વાદ છે"
 
-#: functions/zume-content.php:3343
+#: functions/zume-content.php:3344
 msgid "LISTEN"
 msgstr "સાંભળો"
 
-#: functions/zume-content.php:3345
+#: functions/zume-content.php:3346
 msgid "Take at least 10 minutes to be as quiet as possible and listen intently to what God has to say and what He chooses to reveal. Make an effort to hear His voice."
 msgstr "પ્રભુ શું કહેવા માગે છે અને શું પ્રગટ કરવાની ઇચ્છા રાખે છે તે જાણવા માટે ઓછામાં ઓછો ૧૦ મિનિટનો સમય શાંત રહો. પ્રભુનો અવાજ સાંભળવાનો પ્રયત્ન કરો. "
 
-#: functions/zume-content.php:3351
+#: functions/zume-content.php:3352
 msgid "COMPLETE"
 msgstr "સમગ્ર"
 
-#: functions/zume-content.php:3354
+#: functions/zume-content.php:3355
 msgid "Use the rest of your time to complete the Three Month Plan worksheet. You can write it out on a piece of paper. If you are logged in to ZúmeProject.com you can fill out your form digitally and link it to your group. Once you login, you’ll find the Three Month Plan under Settings. You can also find the Three Month Plan on your Dashboard."
 msgstr "તમારો બાકીના સમયનો ઉપયોગ ૩ મહિનાની યોજનાની કાર્યપુસ્તિકા પૂરી કરવા માટે કરો. તમે કાગળ પર તે લખી શકો છો. જો તમે ZúmeProject.com પર લોગ ઇન કર્યું છે તો તમે તમારું ફોર્મ ડિજીટલી ભરીને તમારા જૂથ સાથે જોડી શકો છો. એકવાર તમે લોગ ઇન કરો પછી તમને સેટિંગ્સમાં ત્રણ મહિનાની યોજના જોવા મળશે. તમને તમારા ડેશબોર્ડ પર પણ ત્રણ મહિનાની યોજના જોવા મળશે."
 
-#: functions/zume-content.php:3357
+#: functions/zume-content.php:3358
 msgid "You do not have to commit to every item, and there is room for other items not already on the list. Do your best to align your commitments to what you have heard God reveal to you about His will."
 msgstr "તમારે બધી જ વસ્તુઓનું સમર્પણ કરવાનું નથી અને યાદીમાં ન હોય એવી વસ્તુઓ માટે પણ જગ્યા છે. પ્રભુએ પોતાની ઇચ્છા તરીકે તમને જે પ્રગટ કર્યું છે તેને સુસંગત થવા તમારાથી બનતા પ્રયત્નો કરો."
 
-#: functions/zume-content.php:3372
+#: functions/zume-content.php:3373
 msgid "Share you Plan (30min)"
 msgstr "તમારી યોજના જણાવો (૩૦ મિનિટ)"
 
-#: functions/zume-content.php:3381
+#: functions/zume-content.php:3382
 msgid "In groups of two or three (15 minutes)"
 msgstr "બે કે ત્રણ વ્યક્તિના જૂથમાં (૧૫ મિનિટ)"
 
-#: functions/zume-content.php:3383
+#: functions/zume-content.php:3384
 msgid "Take turns sharing your Three Month Plans with each other. Take time to ask questions about things you might not understand about plans and how the others will meet their commitments. Ask them to do the same for you and your plan. Find a training partner(s) that is willing to check in with you to report on progress and challenges and ask questions after 1, 2, 3, 4, 6, 8 and 12 weeks. Commit to doing the same for them."
 msgstr "વારાફરતી એકબીજાને તમારી ત્રણ મહિનાની યોજના જણાવો. યોજનાઓ વિશે અને કેવી રીતે બીજાઓ સમર્પણ કરશે તે વિશે તમે જે ન સમજ્યાં હોય એવાં પ્રશ્નો પૂછો. તેમને પણ તમારા માટે અને તમારી યોજના માટે એમ જ કરવાનું કહો. તમારી સાથે જાડાઇ શકે અને જેને તમે પ્રગતિ તથા પડકારોનો અહેવાલ આપી શકો અને ૧,૨,૩,૪,૬,૮ અને ૧૨ અઠવાડિયા પછી પ્રશ્નો પૂછી શકો એવા શીખવનાર સહાયક વ્યક્તિને શોધો. તેમના માટે પણ એવું જ કાર્ય કરવાનું સમર્પણ કરો."
 
-#: functions/zume-content.php:3392
+#: functions/zume-content.php:3393
 msgid "In your full training Group (15 minutes)"
 msgstr "તમારા પૂર્ણ તાલીમ જૂથમાં (૧૫ મિનિટ)"
 
-#: functions/zume-content.php:3394
+#: functions/zume-content.php:3395
 msgid "Discuss and develop a group plan for starting at least two new 3/3 Groups or Zúme Training Groups in your area. Several of your group members may have just completed and saved your individual Three-Month Plans to your Zúme group. On this step, if no one from your group has filled out a digital copy on the website of your Three-Month Plan, it is highly recommended that you do this together now. Just go to the Three-Month Plan under Settings and link the form to your group."
 msgstr "ઓછામાં ઓછા બે ૩/૩ વ્યક્તિઓના જૂથની શરૂઆત કરીને અથવા તમારા વિસ્તારમાં ઝુમ તાલીમ જૂથોની શરૂઆત કરીને જૂથ માટેની યોજનાની ચર્ચા અને વિકાસ કરો. તમારા જૂથનાં કેટલાંક સભ્યોએ તાજેતરમાં તમારા ઝુમ જૂથની તાલીમ પૂરી કરીને ત્રણ મહિનાની યોજના બનાવી હશે. જો આ સમયે તમારા જૂથનાં કોઇ વ્યક્તિએ વેબસાઇટ પર ત્રણ મહિનાની યોજના માટેની ડિજીટલ કોપી ભરી નથી તો સાથે મળીને અત્યારે તેમ કરો એવું સૂચન કરવામાં આવે છે. સેટિંગ્સમાં જઇને ત્રણ મહિનાની યોજનામાં જાઓ અને તમારા જૂથનું ફોર્મ ભરો."
 
-#: functions/zume-content.php:3397
+#: functions/zume-content.php:3398
 msgid "Remember, your goal is to start Simple Churches that multiply. 3/3 Groups and Zúme Training Groups are two ways to do that. Discuss and decide whether these new Groups will be connected to an existing local church or network or whether you’ll start a new network out of your Zúme Training Group."
 msgstr "યાદ રાખો કે તમારો ધ્યેય તો વૃદ્ધિ પામતી સરળ મંડળીઓ સ્થાપવાનો છે. આ કાર્ય કરવાની બે રીત તો ૩/૩ વ્યક્તિઓના જૂથ અને ઝુમ તાલીમ જૂથો છે. આ નવાં જૂથો સ્થાનિક મંડળીની કે જૂથની સાથે જોડાઇ શકે અથવા તમે તમારા ઝુમ તાલીમ જૂથ દ્વારા નવી શરૂઆત કરશો તે વિશે ચર્ચા અને નિર્ણય કરો."
 
-#: functions/zume-content.php:3411
+#: functions/zume-content.php:3412
 msgid "Congratulations! You've completed Session 9."
 msgstr "અભિનંદન! તમે નવમું સેશન પૂરું કર્યું છે."
 
-#: functions/zume-content.php:3420
+#: functions/zume-content.php:3421
 msgid "You may not know it, but you now have more practical training on starting simple churches and making disciples who multiply than many pastors and missionaries around the world!"
 msgstr "અભિનંદન! તમે નવમું સેશન પૂરું કર્યું છે."
 
-#: functions/zume-content.php:3421
+#: functions/zume-content.php:3422
 msgid "Set aside time on your calendar each week to continue to work on your Three Month Plan, and plan check-ins with your training partner at the end of week 1, 2, 3, 4, 6, 8, and 12. Each time you're together, ask about their results and share yours, making sure you're both working through your plans. Prayerfully consider continuing as an ongoing spiritual family committed to multiplying disciples."
 msgstr "તમારી ત્રણ મહિનાની યોજના મુજબ કાર્ય કરવા માટે તમારા કેલેન્ડરમાં દર અઠવાડિયે કેટલોક સમય અલગ કરો અને ૧,૨,૩,૪,૬,૮ અને ૧૨ અઠવાડિયાના અંતે તમારા તાલીમ સહયોગી સાથે મળીને યોજના બનાવો. જ્યારે તમે એકઠા થાઓ તયારે તેમનાં પરિણામો વિશે પૂછો અને તમારા પરિણામો તેમને જણાવો, તમે તમારી યોજના મુજબ કાર્ય કરો છો કે નહિ તે વિશે ખાતરી પામો. વૃદ્ધિ કરનારા શિષ્યોને સમર્પિત હોય એવા આત્મિક કુટુંબ તરીકે પ્રાર્થના સાથે આગળ વધો."
 
-#: functions/zume-content.php:3429
+#: functions/zume-content.php:3430
 msgid "Pray and ask God who He would have you share Zúme Training with by launching a Leadership Cell of future Zúme Training leaders."
 msgstr "ભવિષ્યમાં આગેવાનો માટે ઝુમ તાલીમની શરૂઆત કરવા દ્વારા કોને ઝુમ તાલીમ વિશે જણાવશો તે વિશે પ્રભુને પ્રાર્થના કરીને માર્ગદર્શન મેળવો."
 
-#: functions/zume-content.php:3437
+#: functions/zume-content.php:3438
 msgid "Be sure to pray with your group before you end your time together. Thank God that He has created and gifted you with exactly the right talents to make a difference in His kingdom. Ask Him for wisdom to use the strengths He has given you and to find other followers who help cover your weaknesses. Pray that He would make you fruitful and multiply — this was His plan from the very beginning. Pray that God help you be obedient to Him and invite Him to work in you and those around you!"
 msgstr "જૂથમાંથી છુટા પડતા પહેલાં પ્રાર્થના કરો. પોતાના રાજ્ય માટે કામ કરવા તમારું સર્જન કર્યું અને યોગ્ય તાલંતો આપ્યા તે માટે પ્રભુનો આભાર માનો. પ્રભુએ તમને જે બળ આપ્યું છે તેનો ઉપયોગ કરવાનું જ્ઞાન અને તમારી નબળાઇઓને દૂર કરવા બીજા શિષ્યો પૂરા પાડવા માટે પ્રભુને પ્રાર્થના કરો. પ્રભુ તમને ફળવંત કરે અને તમારી વૃદ્ધિ કરે તે માટે પ્રાર્થના કરો - શરૂઆતથી તમાર માટે આ પ્રભુની યોજના હતી. પ્રભુ પોતાને આધીન થવા તમને મદદ કરે અને તમારામાં તથા તમારી આસપાસના લોકોમાં કામ કરે તે માટે પ્રભુને આમંત્રણ આપો."
 
-#: functions/zume-content.php:3445
+#: functions/zume-content.php:3446
 msgid "Excited to help a new Zúme group get started? Share about Zúme on social media and let people know where they can get started."
 msgstr "શું તમે નવું ઝુમ જૂથ શરૂ કરવા ઉત્સાહિત છો? સોશિયલ મિડિયા પર શેર કરો અને ક્યાં તેની શરૂઆત કરી શકાય તે વિશે લોકોને જણાવો."
 
-#: functions/zume-content.php:3464
+#: functions/zume-content.php:3465
 msgid "Looking Back"
 msgstr "પાછળ જોવું"
 
-#: functions/zume-content.php:3466
+#: functions/zume-content.php:3467
 msgid "Welcome back to Zúme Training!"
 msgstr "ઝુમ તાલીમમાં ફરીથી તમારું સ્વાગત છે!"
 
-#: functions/zume-content.php:3479
+#: functions/zume-content.php:3480
 msgid "You were asked to prayerfully consider continuing as an ongoing spiritual family committed to multiplying disciples."
 msgstr "વૃદ્ધિ કરનારા શિષ્યો બનાવવાનું સમર્પણ કરેલ આત્મિક કુટુંબ તરીકે પ્રાર્થના સાથે આ કાર્ય ચાલુ રાખવાનું તમને કહેવામાં આવ્યું હતું."
 
-#: functions/zume-content.php:3482
+#: functions/zume-content.php:3483
 msgid "You were encouraged to share Zúme Training by launching a Leadership Cell of future Zúme Training leaders."
 msgstr "તમને ભવિષ્યના ઝુમ તાલીમના આગેવાનોને તૈયાર કરવા આગેવાનીના જૂથની શરૂઆત કરવાનું ઉત્તેજન આપવામાં આવ્યું હતું."
 
-#: functions/zume-content.php:3485
+#: functions/zume-content.php:3486
 msgid "Take a few moments to see how your group has been doing with these items and their Three Month Plans since you've last met."
 msgstr "તમારું જૂથ આ સઘળા કાર્યો કેવી રીતે કરે છે અને છેલ્લે તમે મળ્યા ત્યારથી ત્રણ મહિનાની યોજનાને કેવી રીતે અનુસરે છે તે જોવા માટે થોડી ક્ષણો ચર્ચા કરો."
 
-#: functions/zume-content.php:3492
+#: functions/zume-content.php:3493
 msgid "Pray and thank God that He is faithful to complete His good work in us. Ask Him to give your group clear heads and open hearts to the great things He wants to do in and through you. Ask the Holy Spirit to lead your time together and thank Him for His faithfulness, too. He got you through!"
 msgstr "પ્રભુ આપણામાં પોતાના સારા કાર્યને પૂરું કરવા માટે વિશ્વાસુ છે તે માટે પ્રભુનો આભાર માનો અને પ્રભુને પ્રાર્થના કરો. પ્રભુ તમારા જૂથમાં અને તમારા જૂથ દ્વારા જે કાર્યો કરવા માગે છે તે માટે તમારા જૂથને સ્પષ્ટ આગેવાનો આપે તે માટે પ્રાર્થના કરો. પ્રભુ પોતાના પવિત્ર આત્મા દ્વારા તમને દોરે તે માટે પ્રાર્થના કરો અને તેના વિશ્વાસુપણા માટે તેનો આભાર માનો! તે તમને પોતાની ઇચ્છા મુજબ દોરશે."
 
-#: functions/zume-content.php:3499
+#: functions/zume-content.php:3500
 msgid "In this advanced training session, you’ll take a look at how you can level-up your Coaching Strengths with a quick checklist assessment. You’ll learn how Leadership in Networks allows a growing group of small churches to work together to accomplish even more. And you’ll learn how to develop Peer Mentoring Groups that take leaders to a whole new level of growth."
 msgstr "આ અદ્યતન તાલીમ સેશનમાં શિક્ષણ આપવાના તમારા બળની તપાસ યાદીનું મૂલ્યાંકન કરી શકશો. તમે શીખી શકશો કે કેવી રીતે એકબીજા સાથે સંકળાઇને સાથે મળીને વધારે કામ કરવા દ્વારા નાની મંડળીઓના જૂથોની વૃદ્ધિ કરી શકાય છે. કેવી રીતે આગેવાનોને વૃદ્ધિના નવા સ્તર સુધી લઇ જવા માટે શિક્ષણ આપતા જૂથોનો વિકાસ કેવી રીતે કરી શકાય તે વિશે પણ શીખશો."
 
-#: functions/zume-content.php:3512
+#: functions/zume-content.php:3513
 msgid "Activity (10min)"
 msgstr "પ્રવૃત્તિ (૧૦ મિનિટ)"
 
-#: functions/zume-content.php:3519
+#: functions/zume-content.php:3520
 msgid "ASSESS"
 msgstr "મૂલ્યાંકન"
 
-#: functions/zume-content.php:3521
+#: functions/zume-content.php:3522
 msgid "The Coaching Checklist is a powerful tool you can use to quickly assess your own strengths and vulnerabilities when it comes to making disciples who multiply. It's also a powerful tool you can use to help others – and others can use to help you."
 msgstr "શિક્ષણની તપાસ યાદી તો વૃદ્ધિ કરનારા શિષ્યો બનાવવાના તમારા પોતાના બળ અને સંવેદનશીલતાનું મૂલ્યાંકન કરવાનું અસરકારક સાધન છે. બીજાઓને મદદ કરવા અને બીજાઓ તમને મદદ કરી શકે તે માટે પણ આ એક અસરકારક સાધન છે."
 
-#: functions/zume-content.php:3523
+#: functions/zume-content.php:3524
 msgid "Find the Coaching Checklist section in your Zúme Guidebook, and take this quick (5-minutes or less) self-assessment:"
 msgstr "તમારી ઝુમ માર્ગદર્શિકામાં શિક્ષણની તપાસ યાદી શોધો અને (૫ કે તેથી ઓછી મિનિટનો) સમય લઇને તમારી જાતનું મૂલ્યાંકન કરોઃ"
 
-#: functions/zume-content.php:3526
+#: functions/zume-content.php:3527
 msgid "Read through the Disciple Training Tools in the far left column of the Checklist."
 msgstr "તપાસ યાદીની ડાબી બાજુ શિષ્ય તાલીમ સાધનો વિશે વાંચો."
 
-#: functions/zume-content.php:3527
+#: functions/zume-content.php:3528
 msgid "Mark each one of the Training Tools, using the following method:"
 msgstr "નીચેની પદ્ધતિનો ઉપયોગ કરીને તાલીમના દરેક સાધનો પર નિશાની કરો:"
 
-#: functions/zume-content.php:3529
+#: functions/zume-content.php:3530
 msgid "If you're unfamiliar or don't understand the Tool – check the BLACK column"
 msgstr "જો તમે કોઇ સાધનથી અજાણ છો અથવા તેના વિશેની સમજણ નથી તો કાળા રંગના ખાનામાં નિશાની કરો"
 
-#: functions/zume-content.php:3532
+#: functions/zume-content.php:3533
 msgid "If you're somewhat familiar but still not sure about the Tool – check the RED column"
 msgstr "જો તમે કોઇ સાધનથી વાકેફ છો પણ તેના વિશે ખાતરી નથી તો લાલ રંગના ખાનામાં નિશાની કરો"
 
-#: functions/zume-content.php:3535
+#: functions/zume-content.php:3536
 msgid "If you understand and can train the basics on the Tool – check the YELLOW column"
 msgstr "જો તમે કોઇ સાધન વિશે સમજ્યા છો અને તેની મૂળભૂત બાબતોની તાલીમ આપી શકો તેમ છો તો પીળા ખાનામાં નિશાની કરો"
 
-#: functions/zume-content.php:3538
+#: functions/zume-content.php:3539
 msgid "If you feel confident and can effectively train the Tool – check the GREEN column"
 msgstr "જો તમને કોઇ સાધન વિશે આત્મવિશ્વાસ છે અને અસરકારક રીતે તાલીમ આપી શકો તેમ છો તો લીલા ખાનામાં નિશાની કરો."
 
-#: functions/zume-content.php:3575
+#: functions/zume-content.php:3576
 msgid "Zúme Video Scripts: Coaching Checklist"
 msgstr "ઝુમ વિડિયો લખાણ: શિક્ષણની તપાસ યાદી"
 
-#: functions/zume-content.php:3586
+#: functions/zume-content.php:3587
 msgid "Which Training Tools did you feel you would be able to train well?"
 msgstr "તાલીમના કયા સાધનો વિશે તમને એવું લાગે છે કે તમે સારી રીતે તાલીમ આપી શકશો?"
 
-#: functions/zume-content.php:3587
+#: functions/zume-content.php:3588
 msgid "Which ones made you feel vulnerable as a trainer?"
 msgstr "શિક્ષક તરીકે કઇ બાબત તમને સંવેદનશીલ બનાવે છે?"
 
-#: functions/zume-content.php:3588
+#: functions/zume-content.php:3589
 msgid "Are there any Training Tools that you would add or subtract from the Checklist? Why?"
 msgstr "તપાસ યાદીમાંથી એવા કોઇ તાલીમના સાધનો છે જેનો તમે ઉમેરો કે બાદબાકી કરશો? શા માટે?"
 
-#: functions/zume-content.php:3597
+#: functions/zume-content.php:3598
 msgid "REMEMBER – Be sure to share your Coaching Checklist results with training partner or other mentor. If you're helping coach or mentor someone, use this tool to help you assess which areas need your attention and training."
 msgstr "યાદ રાખો - તાલીમ સહાયક અથવા બીજા કોઇ શિક્ષકને શિક્ષણની તપાસ યાદીના પરિણામો ચોક્કસપણે જણાવશો. જો તમે મદદનીશ શિક્ષક અથવા તો કોઇને શિક્ષણ આપનાર શિક્ષક છો તો આ સાધનનો ઉપયોગ કયા ક્ષેત્રોમાં તમારે તાલીમ કે ધ્યાન આપવાની જરૂર છે તેનું મૂલ્યાંકન કરો."
 
-#: functions/zume-content.php:3621
+#: functions/zume-content.php:3622
 msgid "What happens to churches as they grow and start new churches that start new churches? How do they stay connected and live life together as an extended, spiritual family? They become a network!"
 msgstr "મંડળીઓની વૃદ્ધિ થાય ત્યારે અને નવી મંડળીઓ બીજી નવી મંડળીઓની શરૂઆત કરે ત્યારે શું થાય છે? કેવી રીતે તેઓ એકબીજાની સાથે સંકળાયેલી રહીને આત્મિક કુટુંબ તરીકે વૃદ્ધિ પામતી રહી શકે? તેઓ એક માળખું બને છે!"
 
-#: functions/zume-content.php:3653
+#: functions/zume-content.php:3654
 msgid "Zúme Video Scripts: Leadership in Networks"
 msgstr "ઝુમ વિડિયો લખાણ: માળખામાં આગેવાની"
 
-#: functions/zume-content.php:3661
+#: functions/zume-content.php:3662
 msgid "Are there advantages when networks of simple churches are connected by deep, personal relationships? What are some examples that come to mind?"
 msgstr "જ્યારે સરળ મંડળીઓનું માળખું ઊંડા વ્યક્તિગત સંબંધના સંપર્કમાં હોય તો તેના કોઇ લાભ છે? તમારા મનમાં કયા ઉદાહરણો આવે છે?"
 
-#: functions/enqueue-scripts.php:244 functions/zume-content.php:3682
-#: template-gmo.php:232 template-how-to-follow-jesus.php:232
+#: functions/enqueue-scripts.php:244 functions/zume-content.php:3683
+#: template-gmo.php:337 template-how-to-follow-jesus.php:274
 #: template-zume-training.php:821
 msgid "Peer Mentoring Groups"
 msgstr "સહકર્મીને શિક્ષણ આપવાના જૂથો"
 
-#: functions/zume-content.php:3685
+#: functions/zume-content.php:3686
 msgid "Making disciples who make disciples means making leaders who make leaders. How do you develop stronger leaders? By teaching them how to love one another better. Peer Mentoring Groups help leaders love deeper."
 msgstr "શિષ્યો બનાવનારા શિષ્યો બનાવવાનો અર્થ છે આગેવાનો બનાવનારા આગેવાનો બનાવવા. તમે કેવી રીતે મજબૂત આગેવાનો બનાવશો? એકબીજા પર સારી રીતે પ્રેમ રાખવાનું શિક્ષણ આપવા દ્વારા. સહકર્મીઓના શિક્ષણના જૂથો આગેવાનોને ઊંડો પ્રેમ કરવા માટે મદદરૂપ બને છે."
 
-#: functions/zume-content.php:3688
+#: functions/zume-content.php:3689
 msgid "Find the Peer Mentoring Groups section in your Zúme Guidebook, and listen to the audio below."
 msgstr "તમારી ઝુમ માર્ગદર્શિકામાં સહકર્મીઓના શિક્ષણના જૂથનો વિભાગ શોધો અને નીચે આપેલો ઓડિયો સાંભળો."
 
-#: functions/zume-content.php:3722
+#: functions/zume-content.php:3723
 msgid "Zúme Video Scripts: Peer Mentoring Groups"
 msgstr "ઝુમ વિડિયો લખાણ: સહકર્મીઓના શિક્ષણના જૂથો"
 
-#: functions/zume-content.php:3737
+#: functions/zume-content.php:3738
 msgid "Practice (60min)"
 msgstr "મહાવરો કરો (૬૦ મિનિટ)"
 
-#: functions/zume-content.php:3745
+#: functions/zume-content.php:3746
 msgid "Find the Peer Mentoring Groups section in your Zúme Training Guide, and follow these steps."
 msgstr "તમારી ઝુમ તાલીમ માર્ગદર્શિકામાં સહકર્મીઓના શિક્ષણ જૂથોનો વિભાગ શોધો અને નીચેનાં પગલાંને અનુસરો."
 
-#: functions/zume-content.php:3756
+#: functions/zume-content.php:3757
 msgid "GROUPS"
 msgstr "જૂથો"
 
-#: functions/zume-content.php:3760
+#: functions/zume-content.php:3761
 msgid "Break into groups of two or three and work through the 3/3 sections of the Peer Mentoring Group format. Peer Mentoring is something that happens once a month or once a quarter and takes some time for the whole group to participate, so you will not have time for everyone to experience the full mentoring process in this session."
 msgstr "બે કે ત્રણ વ્યક્તિઓના જૂથમાં વિભાજીત થાઓ અને ૩/૩ વ્યક્તિઓના જૂથની પદ્ધતિ મુજબ સહકર્મીઓના શિક્ષણના જૂથની પદ્ધતિના વિભાગ મુજબ કાર્ય કરો. સહકર્મીઓનું શિક્ષણ મહિનામાં એકવાર અથવા ત્રણ મહિનામાં એકવાર થતું કાર્ય છે અને તેમાં આખું જૂથ સહભાગી થાય છે, તેથી આ સેશનમાં બધાને શિક્ષણની પૂરી પ્રક્રિયાનો અનુભવ કરવાનો સમય મળતો નથી."
 
-#: functions/zume-content.php:3767
+#: functions/zume-content.php:3768
 msgid "To practice, choose one person in your group to be the \"mentee\" for this session and have the other members spend time acting as Peer Mentors by working through the suggested questions list and providing guidance and encouragement for the Mentee's work."
 msgstr "તેનો મહાવરો કરવા માટે તમારા જૂથમાંથી કોઇ વ્યક્તિને “વિદ્યાર્થી” બનાવો અને બીજા સભ્યો સહકર્મી શિક્ષકો તરીકે આપવામાં આવેલા પ્રશ્નોનો ઉપયોગ કરીને અને દોરવણી પૂરી પાડીને વિદ્યાર્થીના કાર્યમાં તેને ઉત્તેજન આપો."
 
-#: functions/zume-content.php:3769
+#: functions/zume-content.php:3770
 msgid "By the time you're finished, everyone should have a basic understanding of asking and answering."
 msgstr "આ કાર્ય પૂરું કરો ત્યાં સુધીમાં દરેકને પ્રશ્નો પૂછવાની અને ઉત્તર આપવાની મૂળભૂત સમજણ પ્રાપ્ત થવી જોઇએ."
 
-#: functions/zume-content.php:3778
+#: functions/zume-content.php:3779
 msgid "REMEMBER – Spend time studying the Four Fields Diagnostic Diagram and Generational Map in the Peer Mentoring Groups section of your Zúme Training Guide. Make sure everyone in your group has a basic understanding of these tools before asking the suggested questions."
 msgstr "યાદ રાખો - ચાર મેદાનોની તપાસના રેખાચિત્રનો અભ્યાસ અને તમારી ઝુમ તાલીમ માર્ગદર્શિકામાં સહકર્મીઓના શિક્ષણના જૂથમાં આપેલ પેઢીઓનો નક્શાનો અભ્યાસ કરો. તમારા જૂથના દરેકને પ્રશ્નો પૂછતા પહેલાં આ સાધનોની મૂળભૂત સમજણ પ્રાપ્ત થઇ છે કે નહિ તેની ખાતરી કરો."
 
-#: functions/zume-content.php:3794
+#: functions/zume-content.php:3795
 msgid "CONGRATULATIONS ON COMPLETING ZÚME TRAINING!"
 msgstr "ઝુમ તાલીમ પૂરી કરવા માટે અભિનંદન!"
 
-#: functions/zume-content.php:3801
+#: functions/zume-content.php:3802
 msgid "You and your group are now ready to take leadership to a new level! Here are a few more steps to help you KEEP growing!"
 msgstr "હવે તમે અને તમારું જૂથ નવા સ્તરની આગેવાની આપવા માટે તૈયાર છો! વૃદ્ધિ પામતા રહેવા માટેના બીજાં પગલાં આ પ્રમાણે છે!"
 
-#: functions/zume-content.php:3833
+#: functions/zume-content.php:3834
 msgid "Zúme Video Scripts: Completion of Training"
 msgstr "ઝુમ વિડિયો લખાણ: તાલીમની પૂર્ણતા"
 
@@ -1762,7 +1765,7 @@ msgstr "બીજાઓને મદદ કરવા અને શિષ્ય�
 #: functions/zume-dashboard.php:81 functions/zume-dashboard.php:112
 #: functions/zume-dashboard.php:208 functions/zume-v4-groups.php:77
 #: functions/zume-v4-groups.php:815 functions/zume-v4-groups.php:917
-#: functions/zume-v4-groups.php:1036
+#: functions/zume-v4-groups.php:1041
 msgid "No Name"
 msgstr "કોઇ નામ નહિ"
 
@@ -1779,7 +1782,7 @@ msgstr "વપરાશકારનું સરનામું"
 msgid "GeoCoded IP"
 msgstr "જીઓ કોડેડ આઇ.પી."
 
-#: functions/zume-v4-seo-strings.php:5
+#: functions/zume-v4-seo-strings.php:5 translations/mobile-pwa-strings.php:11
 msgid "Home"
 msgstr "મુખ્ય પાનું"
 
@@ -1787,7 +1790,7 @@ msgstr "મુખ્ય પાનું"
 msgid "Dashboard"
 msgstr "ડેશબોર્ડ"
 
-#: functions/zume-v4-seo-strings.php:7
+#: functions/zume-v4-seo-strings.php:7 translations/mobile-pwa-strings.php:13
 msgid "About"
 msgstr "વિશે"
 
@@ -1803,7 +1806,7 @@ msgstr "પ્રશ્નો અને તેના ઉત્તરો"
 msgid "Overview"
 msgstr "નિરીક્ષણ"
 
-#: functions/zume-v4-seo-strings.php:19
+#: functions/zume-v4-seo-strings.php:19 translations/mobile-pwa-strings.php:14
 msgid "Settings"
 msgstr "સેટિંગ્સ"
 
@@ -1999,8 +2002,8 @@ msgstr "પ્રિન્ટ"
 msgid "No plans linked to this group."
 msgstr "આ જૂથ સાથે કોઇ યોજના જોડેલ નથી."
 
-#: parts/content-share.php:85 template-gmo.php:271
-#: template-how-to-follow-jesus.php:273 template-pieces-page.php:216
+#: functions/zume-gmo.php:206 parts/content-share.php:85 template-gmo.php:380
+#: template-how-to-follow-jesus.php:317 template-pieces-page.php:216
 #: template-zume-about.php:38 template-zume-about.php:55
 #: template-zume-faq.php:199 template-zume-privacy-policy.php:186
 #: template-zume-progress.php:119
@@ -2012,7 +2015,7 @@ msgstr "ઝુમ તેના સહભાગીઓને શિષ્યો �
 msgid "Goals of the Zúme Project:"
 msgstr "ઝુમ પ્રોજેક્ટના ધ્યેય:"
 
-#: template-gmo.php:268 template-how-to-follow-jesus.php:270
+#: template-gmo.php:377 template-how-to-follow-jesus.php:314
 #: template-zume-about.php:52 template-zume-faq.php:196
 #: template-zume-privacy-policy.php:183 template-zume-progress.php:116
 msgid "Zúme means yeast in Greek. In Matthew 13:33, Jesus is quoted as saying, \"The Kingdom of Heaven is like a woman who took yeast and mixed it into a large amount of flour until it was all leavened.\" This illustrates how ordinary people, using ordinary resources, can have an extraordinary impact for the Kingdom of God. Zúme aims to equip and empower ordinary believers to saturate the globe with multiplying disciples in our generation."
@@ -2074,11 +2077,11 @@ msgstr "તમારા ડેશબોર્ડ પર પાછા જાઓ �
 msgid "You are missing a correct group or session number."
 msgstr "તમે સાચું જૂથ કે સેશન નંબર(ક્રમાંક) ભૂલી રહ્યા છો."
 
-#: template-zume-course.php:85
+#: template-zume-course.php:93
 msgid "You need a correctly formatted URL. This can happen if you came here from somewhere other than the dashboard."
 msgstr "તમારે સાચા ફોર્મેટનું URL લખવાની જરૂર છે. જા તમે ડેશબોર્ડ સિવાય અંદર પ્રવેશ્યા છો તો એમ થઇ શકે છે."
 
-#: template-zume-course.php:85
+#: template-zume-course.php:93
 msgid "Head back to your dashboard and try again."
 msgstr "તમારા ડેશબોર્ડમાં પાછા જાઓ અને ફરી પ્રયત્ન કરો."
 
@@ -2283,8 +2286,8 @@ msgstr "તાલીમ ચક્ર"
 msgid "Session 8"
 msgstr "સેશન ૮"
 
-#: functions/enqueue-scripts.php:237 template-gmo.php:240
-#: template-how-to-follow-jesus.php:240 template-zume-dashboard.php:542
+#: functions/enqueue-scripts.php:237 template-gmo.php:345
+#: template-how-to-follow-jesus.php:282 template-zume-dashboard.php:542
 #: template-zume-training.php:667
 msgid "Leadership Cells"
 msgstr "આગેવાનીના જૂથો"
@@ -2318,14 +2321,14 @@ msgstr "તાલીમની પૂર્ણતા"
 msgid "Session 10"
 msgstr "સેશન ૧૦"
 
-#: functions/enqueue-scripts.php:242 template-gmo.php:236
-#: template-how-to-follow-jesus.php:236 template-zume-dashboard.php:598
+#: functions/enqueue-scripts.php:242 template-gmo.php:341
+#: template-how-to-follow-jesus.php:278 template-zume-dashboard.php:598
 #: template-zume-training.php:789
 msgid "Coaching Checklist"
 msgstr "શિક્ષણની તપાસ યાદી"
 
-#: functions/enqueue-scripts.php:243 template-gmo.php:244
-#: template-how-to-follow-jesus.php:244 template-zume-dashboard.php:606
+#: functions/enqueue-scripts.php:243 template-gmo.php:349
+#: template-how-to-follow-jesus.php:286 template-zume-dashboard.php:606
 #: template-zume-training.php:808
 msgid "Leadership in Networks"
 msgstr "માળખામાં આગેવાની"
@@ -2432,7 +2435,7 @@ msgstr "ઉદાહરણ તરીકેઃ ૧૦૦૦ બ્રોડવે
 msgid "Adding a coleader or additional participants gives them access to this group on their Zúme dashboard once they have signed up and logged in using the email address you add. When they login to their dashboard they will see an invitation from you on the right side of the screen. Adding them to this group allows them to facilitate a training but they cannot change any details of the group. Note: they will not receive a system email from Zúme with this invitation, you will need to ask them to sign up."
 msgstr "સાથી આગેવાન કે સહભાગીનો ઉમેરો કરવાથી તેઓ નોંધણી કરાવશે અને તમે જે ઇ-મેઇલ એડ્રેસ ઉમેરશો તેનો ઉપયોગ કરીને તેઓ લોગ ઇન કરી શકશે તથા તેમને તેમનું પોતાનું ઝુમ ડેશબોર્ડ પ્રાપ્ત થશે. જ્યારે તેઓ તેમના ડેશબોર્ડમાં લોગ ઇન કરશે ત્યારે તેઓ તેમની સ્ક્રીનની જમણી તરફ તમારું આમંત્રણ જાઇ શકશે. તેમને આ જૂથમાં ઉમેરવાથી તેમને તાલીમ પ્રાપ્ત કરવાની અનુમતિ મળશે પરંતુ તેઓ જૂથની કોઇપણ વિગતોમાં ફેરફાર કરી શકશે નહિ. નોંધ : તેમને આ આમંત્રણથી ઝુમ દ્વારા સિસ્ટમ ઇ-મેઇલ પ્રાપ્ત થશે નહિ, તમારે તેમને નોંધણી કરવાનું કહેવું પડશે."
 
-#: template-zume-dashboard.php:1163
+#: template-zume-dashboard.php:1163 translations/mobile-pwa-strings.php:42
 msgid "Update"
 msgstr "અપડેટ કરો"
 
@@ -3217,23 +3220,23 @@ msgstr "ડેટાબેઝમાં પાસવર્ડ રીસેટ ક
 msgid "The Wordpress built in API is disabled."
 msgstr "API માં Wordpress બંધ છે"
 
-#: functions/zume-content.php:2393
+#: functions/zume-content.php:2394
 msgid "Listen and Practice (75 min)"
 msgstr "સાંભળો અને મહાવરો કરો (૭૫ મિનિટ)"
 
-#: functions/zume-content.php:2405
+#: functions/zume-content.php:2406
 msgid "A 3/3 Group is a way for followers of Jesus to meet, pray, learn, grow, fellowship, and practice obeying and sharing what they've learned. In this way, a 3/3 Group is not just a small group but a Simple Church."
 msgstr "ઈસુના શિષ્યોએ ૩/૩ વ્યક્તિઓના જૂથમાં એકઠા થઇને પ્રાર્થના કરવાની છે, શીખવાનું છે, સંગત કરવાની છે અને આધીન થવાનો મહાવરો કરવાનો છે અને તેઓ જે શીખ્યા છે તે એકબીજાને વહેંચવાનું છે. આવી રીતે ૩/૩ વ્યક્તિઓનું જૂથ ફક્ત એક નાનું જૂથ જ નહિ પણ સરળ મંડળી જેવું બને છે."
 
-#: functions/zume-content.php:2408
+#: functions/zume-content.php:2409
 msgid "In the following video, you’ll be coached through an interactive 3/3 Group where you’ll learn a principle and then “press pause” and practice it with the group."
 msgstr "નીચે આપવામાં આવેલ વિડિયોમાં તમને ૩/૩ વ્યક્તિઓના જૂથમાં પારસ્પરિક રીતે તાલીમ આપવામાં આવશે અને તમે તેમાં સિદ્ધાંત શીખશો ત્યારબાદ વિડિયોને રોકીને જૂથમાં મહાવરો કરો."
 
-#: functions/zume-content.php:2419
+#: functions/zume-content.php:2420
 msgid "Find the \"3/3 Group Format\" section in your Zúme Guidebook, and watch the video below."
 msgstr "તમારી ઝુમ માર્ગદર્શિકામાં “૩/૩ વ્યક્તિઓના જૂથની પદ્ધતિ” શોધો અને નીચે આપેલ વિડિયો જુઓ."
 
-#: functions/zume-content.php:3514
+#: functions/zume-content.php:3515
 msgid "Assess yourself using the coaching checklist."
 msgstr "શિક્ષણ તપાસ યાદીનો ઉપયોગ કરીને તમારી જાતનું મૂલ્યાંકન કરો."
 
@@ -3262,8 +3265,9 @@ msgstr "અમારી પાસે તમારી પ્રવૃત્તિ
 msgid "Zúme One Page Course"
 msgstr "ઝુમનો એક પાનાનો અભ્યાસક્રમ"
 
-#: functions/zume-v4-seo-strings.php:14 parts/content-share.php:40
-#: template-pieces-page.php:175 template-zume-training.php:91
+#: functions/zume-gmo.php:166 functions/zume-v4-seo-strings.php:14
+#: parts/content-share.php:40 template-pieces-page.php:175
+#: template-zume-training.php:91
 msgid "Groups"
 msgstr "જૂથો"
 
@@ -3307,85 +3311,89 @@ msgstr "પાસવર્ડ"
 msgid "Remember Me"
 msgstr "મને યાદ રાખો."
 
-#: template-pieces-page.php:120
+#: functions/zume-gmo.php:111 template-pieces-page.php:120
 msgid "Ask Yourself"
 msgstr "તમારી જાતને પ્રશ્ન પૂછો"
 
-#: parts/content-share.php:13 template-pieces-page.php:148
+#: functions/zume-gmo.php:139 parts/content-share.php:13
+#: template-pieces-page.php:148
 msgid "Great job! Here's your progress with this concept"
 msgstr "ખૂબ સરસ! આ વિચાર સાથે અહીં તમારી પ્રગતિ જણાવેલ છે"
 
-#: functions/enqueue-scripts.php:309 parts/content-share.php:19
-#: template-pieces-page.php:154
+#: functions/enqueue-scripts.php:309 functions/zume-gmo.php:145
+#: parts/content-share.php:19 template-pieces-page.php:154
 msgid "Heard"
 msgstr "સાંભળ્યું"
 
-#: functions/enqueue-scripts.php:310 parts/content-share.php:23
-#: template-pieces-page.php:158
+#: functions/enqueue-scripts.php:310 functions/zume-gmo.php:149
+#: parts/content-share.php:23 template-pieces-page.php:158
 msgid "Obeyed"
 msgstr "આજ્ઞા પાળી"
 
-#: functions/enqueue-scripts.php:311 parts/content-share.php:27
-#: template-pieces-page.php:162
+#: functions/enqueue-scripts.php:311 functions/zume-gmo.php:153
+#: parts/content-share.php:27 template-pieces-page.php:162
 msgid "Shared"
 msgstr "બીજાઓને જણાવ્યું"
 
-#: functions/enqueue-scripts.php:312 parts/content-share.php:31
-#: template-pieces-page.php:166
+#: functions/enqueue-scripts.php:312 functions/zume-gmo.php:157
+#: parts/content-share.php:31 template-pieces-page.php:166
 msgid "Trained"
 msgstr "તાલીમ આપી"
 
-#: functions/zume-v4-seo-strings.php:13 parts/content-share.php:39
-#: template-pieces-page.php:174 template-zume-training.php:85
+#: functions/zume-gmo.php:165 functions/zume-v4-seo-strings.php:13
+#: parts/content-share.php:39 template-pieces-page.php:174
+#: template-zume-training.php:85
 msgid "Course Overview"
 msgstr "અભ્યાસક્રમનું નિરીક્ષણ"
 
-#: functions/enqueue-scripts.php:313 functions/zume-v4-seo-strings.php:15
-#: parts/content-share.php:41 template-pieces-page.php:176
-#: template-zume-training.php:97
+#: functions/enqueue-scripts.php:313 functions/zume-gmo.php:167
+#: functions/zume-v4-seo-strings.php:15 parts/content-share.php:41
+#: template-pieces-page.php:176 template-zume-training.php:97
 msgid "Checklist"
 msgstr "તપાસ યાદી"
 
 #: parts/content-share.php:42 template-pieces-page.php:177
+#: translations/mobile-pwa-strings.php:30
 msgid "Start Session"
 msgstr "સત્ર શરૂ કરો"
 
-#: functions/enqueue-scripts.php:280 parts/content-share.php:70
-#: template-pieces-page.php:201
+#: functions/enqueue-scripts.php:280 functions/zume-gmo.php:191
+#: parts/content-share.php:70 template-pieces-page.php:201
 msgid "You're missing out."
 msgstr "તમે કંઈ ભૂલી રહ્યા છો."
 
-#: functions/enqueue-scripts.php:281 parts/content-share.php:70
-#: template-pieces-page.php:201
+#: functions/enqueue-scripts.php:281 functions/zume-gmo.php:191
+#: parts/content-share.php:70 template-pieces-page.php:201
 msgid "Register Now!"
 msgstr "હવે નોંધણી કરો!"
 
-#: functions/enqueue-scripts.php:282 parts/content-share.php:73
-#: template-pieces-page.php:204
+#: functions/enqueue-scripts.php:282 functions/zume-gmo.php:194
+#: parts/content-share.php:73 template-pieces-page.php:204
 msgid "track your personal training progress"
 msgstr "તમારી વ્યક્તિગત તાલીમની પ્રગતિ જુઓ"
 
-#: functions/enqueue-scripts.php:283 parts/content-share.php:74
-#: template-pieces-page.php:205
+#: functions/enqueue-scripts.php:283 functions/zume-gmo.php:195
+#: parts/content-share.php:74 template-pieces-page.php:205
 msgid "access group planning tools"
 msgstr "જૂથની યોજનાના સાધનો પ્રાપ્ત કરો"
 
-#: functions/enqueue-scripts.php:284 parts/content-share.php:75
-#: template-pieces-page.php:206
+#: functions/enqueue-scripts.php:284 functions/zume-gmo.php:196
+#: parts/content-share.php:75 template-pieces-page.php:206
 msgid "connect with a coach"
 msgstr "પ્રશિક્ષક સાથે સંપર્ક કરો"
 
-#: functions/enqueue-scripts.php:285 parts/content-share.php:76
-#: template-pieces-page.php:207
+#: functions/enqueue-scripts.php:285 functions/zume-gmo.php:197
+#: parts/content-share.php:76 template-pieces-page.php:207
 msgid "add your effort to the global vision!"
 msgstr "વૈશ્વિક દર્શન માટે તમારો પ્રયત્ન ઉમેરો!"
 
-#: functions/enqueue-scripts.php:286 parts/content-share.php:80
-#: template-pieces-page.php:211
+#: functions/enqueue-scripts.php:286 functions/zume-gmo.php:201
+#: parts/content-share.php:80 template-pieces-page.php:211
 msgid "Register for Free"
 msgstr "મફત નોંધણી કરો"
 
-#: parts/content-share.php:86 template-pieces-page.php:217
+#: functions/zume-gmo.php:207 parts/content-share.php:86
+#: template-pieces-page.php:217
 msgid "See Entire Training"
 msgstr "આખી તાલીમ જુઓ"
 
@@ -3406,7 +3414,7 @@ msgid "My Checklist"
 msgstr "મારી તપાસ યાદી"
 
 #. Theme Name of the plugin/theme
-#: front-page.php:85 template-how-to-follow-jesus.php:268
+#: front-page.php:85 template-gmo.php:375 template-how-to-follow-jesus.php:312
 #: template-zume-training.php:125
 msgid "Zúme Training"
 msgstr "ઝુમ તાલીમ"
@@ -3449,7 +3457,7 @@ msgstr "પ્રાર્થના, નિરીક્ષણ"
 msgid "5 min"
 msgstr "5 મિનિટ"
 
-#: template-gmo.php:66 template-how-to-follow-jesus.php:66
+#: template-gmo.php:167 template-how-to-follow-jesus.php:104
 #: template-zume-training.php:164
 msgid "You'll see how God uses ordinary people doing simple things to make a big impact."
 msgstr "પ્રભુ કેવી રીતે સામાન્ય લોકોના સરળ કાર્યો કરવા દ્વારા મોટી અસર ઉપજાવવા માટે ઉપયોગ કરે છે તે તમે જોશો."
@@ -3473,22 +3481,22 @@ msgstr "પ્રભુ કેવી રીતે સામાન્ય લો�
 msgid "15 min"
 msgstr "15 મિનિટ"
 
-#: template-gmo.php:62 template-how-to-follow-jesus.php:62
+#: template-gmo.php:171 template-how-to-follow-jesus.php:108
 #: template-zume-training.php:178
 msgid "Discover the essence of being a disciple, making a disciple, and what is the church."
 msgstr "શિષ્ય હોવાનું, શિષ્ય બનાવવાનું અને મંડળી શું છે તેનું મહત્ત્વ શોધો."
 
-#: template-gmo.php:91 template-how-to-follow-jesus.php:91
+#: template-gmo.php:196 template-how-to-follow-jesus.php:133
 #: template-zume-training.php:191
 msgid "Being a disciple means we hear from God and we obey God."
 msgstr "શિષ્ય હોવું એટલે આપણે પ્રભુની વાત સાંભળીએ અને તેને આધીન થઈએ."
 
-#: template-gmo.php:108 template-how-to-follow-jesus.php:108
+#: template-gmo.php:213 template-how-to-follow-jesus.php:150
 #: template-zume-training.php:204
 msgid "A tool for daily Bible study that helps you understand, obey, and share God’s Word."
 msgstr "દૈનિક બાઇબલ અભ્યાસ માટેનું સાધન તમને પ્રભુનાં વચનો સમજવા, આધીન થવા અને બીજાઓને જણાવવા માટે મદદરૂપ થશે."
 
-#: template-gmo.php:125 template-how-to-follow-jesus.php:125
+#: template-gmo.php:230 template-how-to-follow-jesus.php:167
 #: template-zume-training.php:217
 msgid "A tool for two or three people of the same gender to meet weekly and encourage each other in areas that are going well and reveal areas that need correction."
 msgstr "એક જ જાતિના બે વ્યક્તિઓ અઠવાડિયા દરમ્યાન મળીને એકબીજાને તેઓ જે ક્ષેત્રોમાં સારું કાર્ય કરી રહ્યા હોય તેમાં ઉત્તેજન આપે અને જે ક્ષેત્રોમાં સુધારાની જરૂર હોય તે વિશે જણાવે."
@@ -3517,12 +3525,12 @@ msgstr "આગળ જુઓ"
 msgid "Check-in, Prayer, Overview"
 msgstr "ચકાસણી કરો, પ્રાર્થના કરો અને નિરીક્ષણ કરો"
 
-#: template-gmo.php:84 template-how-to-follow-jesus.php:84
+#: template-gmo.php:189 template-how-to-follow-jesus.php:126
 #: template-zume-training.php:258
 msgid "You'll discover the four main ways God makes everyday followers more like Jesus."
 msgstr "પ્રભુ દરરોજ પોતાની પાછળ ચાલનારાઓને ઈસુ જેવાં બનાવે છે તે વિશેના ચાર માર્ગો તમે જોશો."
 
-#: template-gmo.php:95 template-how-to-follow-jesus.php:95
+#: template-gmo.php:200 template-how-to-follow-jesus.php:137
 #: template-zume-training.php:271
 msgid "See how easy it is to spend an hour in prayer."
 msgstr "એક કલાક પ્રાર્થનામાં ગાળવો કેટલું સરળ છે તે જુઓ."
@@ -3540,7 +3548,7 @@ msgstr "60 મિનિટ"
 msgid "Discuss - Prayer Cycle"
 msgstr "ચર્ચા કરો - પ્રાર્થનાનું ચક્ર"
 
-#: template-gmo.php:195 template-how-to-follow-jesus.php:195
+#: template-gmo.php:300 template-how-to-follow-jesus.php:237
 #: template-zume-training.php:296
 msgid "A tool designed to help you be a good steward of your relationships."
 msgstr "તમારા સંબંધોના સારા કારભારી બનવા માટે તમને મદદરૂપ થઈ શકે તે માટે તૈયાર કરવામાં આવેલું સાધન."
@@ -3553,7 +3561,7 @@ msgstr "અભ્યાસ કરો - 100 વ્યક્તિઓની યા
 msgid "30 min"
 msgstr "30 મિનિટ"
 
-#: template-gmo.php:146 template-how-to-follow-jesus.php:146
+#: template-gmo.php:251 template-how-to-follow-jesus.php:188
 #: template-zume-training.php:337
 msgid "Learn how God's economy is different from the world's. God invests more in those who are faithful with what they've already been given."
 msgstr "પ્રભુનું અર્થતંત્ર જગતના અર્થતંત્રથી કેવી રીતે અલગ છે તે શીખો. જેમને અગાઉથી જે કંઈ આપવામાં આવ્યું છે તેમાં તેઓ વિશ્વાસુ રહે છે તેમને પ્રભુ વધારે આપે છે."
@@ -3562,7 +3570,7 @@ msgstr "પ્રભુનું અર્થતંત્ર જગતના અ
 msgid "Discuss - Should every disciple share?"
 msgstr "ચર્ચા કરો - શું દરેક શિષ્યએ બીજાઓને જણાવવું જોઈએ?"
 
-#: template-gmo.php:199 template-how-to-follow-jesus.php:199
+#: template-gmo.php:304 template-how-to-follow-jesus.php:241
 #: template-zume-training.php:356
 msgid "Learn a way to share God’s Good News from the beginning of humanity all the way to the end of this age."
 msgstr "માણસજાતની શરૂઆતથી તેના અંત સુધીની વાત જણાવવા દ્વારા કેવી રીતે સુવાર્તા પ્રગટ કરી શકાય તે શીખો."
@@ -3571,12 +3579,12 @@ msgstr "માણસજાતની શરૂઆતથી તેના અંત
 msgid "Practice - Sharing the Gospel"
 msgstr "અભ્યાસ કરો - સુવાર્તા પ્રગટ કરવી."
 
-#: template-gmo.php:137 template-how-to-follow-jesus.php:137
+#: template-gmo.php:242 template-how-to-follow-jesus.php:179
 #: template-zume-training.php:375
 msgid "Jesus said, “Go and make disciples of all nations, BAPTIZING them in the name of the Father and of the Son and of the Holy Spirit…” Learn how to put this into practice."
 msgstr "ઈસુએ કહ્યું કે, ''તમે જઈને સર્વ દેશનાઓને શિષ્ય કરો; બાપ તથા દીકરા તથા પવિત્ર આત્માને નામે તેઓને બાપ્તિસ્મા આપતા જાઓ...'' આ કાર્યનો કેવી રીતે અભ્યાસ કરવો તે શીખો."
 
-#: template-gmo.php:203 template-how-to-follow-jesus.php:203
+#: template-gmo.php:308 template-how-to-follow-jesus.php:245
 #: template-zume-training.php:410
 msgid "Learn how to share your testimony in three minutes by sharing how Jesus has impacted your life."
 msgstr "ઈસુએ તમારા જીવન પર કેવી રીતે અસર ઉપજાવી છે તેની 3 મિનિટની સાક્ષી આપતાં શીખો."
@@ -3585,7 +3593,7 @@ msgstr "ઈસુએ તમારા જીવન પર કેવી રીત�
 msgid "Practice - Share your testimony"
 msgstr "અભ્યાસ કરો - તમારી સાક્ષી બીજાઓને જણાવવા વિશે"
 
-#: template-gmo.php:70 template-how-to-follow-jesus.php:70
+#: template-gmo.php:175 template-how-to-follow-jesus.php:112
 #: template-zume-training.php:429
 msgid "Learn a simple pattern of making not just one follower of Jesus but entire spiritual families who multiply for generations to come."
 msgstr "ફક્ત એક જ નહિ પરંતુ આખા કુટુંબો આત્મિક રીતે પ્રભુનાં શિષ્યો બને અને આવનારી પેઢીઓને પણ પ્રભુ પાસે લાવે તેની સરળ પદ્ધતિ શીખો."
@@ -3594,12 +3602,12 @@ msgstr "ફક્ત એક જ નહિ પરંતુ આખા કુટુ
 msgid "Learn what ducklings have to do with disciple-making."
 msgstr "શિષ્ય બનાવવાની પદ્ધતિમાં બતકનાં બચ્ચાંની વાત કેવી રીતે ઉપયોગી છે તે શીખો."
 
-#: template-gmo.php:150 template-how-to-follow-jesus.php:150
+#: template-gmo.php:255 template-how-to-follow-jesus.php:192
 #: template-zume-training.php:455
 msgid "Begin to see where God’s Kingdom isn’t. These are usually the places where God wants to work the most."
 msgstr "દેવનું રાજ્ય નથી તે જોવાની શરૂઆત કરો. આ એવાં ક્ષેત્રો છે જ્યાં પ્રભુ સૌથી વધારે કાર્ય કરવા માગે છે."
 
-#: template-gmo.php:133 template-how-to-follow-jesus.php:133
+#: template-gmo.php:238 template-how-to-follow-jesus.php:175
 #: template-zume-training.php:468
 msgid "It’s a simple way to celebrate our intimate connection and ongoing relationship with Jesus. Learn a simple way to celebrate."
 msgstr "આ તો પ્રભુ સાથેના આપણા ગાઢ સંબંધની ઉજવણી કરવાની સરળ રીત છે. તેની ઉજવણી કરવાની સરળ રીત શીખો."
@@ -3614,17 +3622,17 @@ msgstr "અભ્યાસ કરો - પ્રભુભોજન"
 msgid "10 min"
 msgstr "૧૦ મિનિટ"
 
-#: template-gmo.php:216 template-how-to-follow-jesus.php:216
+#: template-gmo.php:321 template-how-to-follow-jesus.php:258
 #: template-zume-training.php:509
 msgid "It’s a simple way to obey God’s command to pray for others. And it's just what it sounds like — praying to God while walking around!"
 msgstr "બીજાઓ માટે પ્રાર્થના કરવા માટેની પ્રભુની આજ્ઞાને આધીન થવાની આ એક સરળ રીત છે. અને તે એવું લાગે કે - ચાલતાં-ચાલતાં પ્રાર્થના કરવી."
 
-#: template-gmo.php:212 template-how-to-follow-jesus.php:212
+#: template-gmo.php:317 template-how-to-follow-jesus.php:254
 #: template-zume-training.php:522
 msgid "Learn who a person of peace might be and how to know when you've found one."
 msgstr "શાંતિના પુત્રને શોધો અને તમને તે મળ્યો છે તે કેવી રીતે જાણશો."
 
-#: template-gmo.php:99 template-how-to-follow-jesus.php:99
+#: template-gmo.php:204 template-how-to-follow-jesus.php:141
 #: template-zume-training.php:535
 msgid "Practice a simple mnemonic to remind you of ways to pray for others."
 msgstr "બીજાઓ માટે પ્રાર્થના કરવાની રીતો યાદ કરવાની પદ્ધતિનો અભ્યાસ કરો."
@@ -3642,12 +3650,12 @@ msgstr "અભ્યાસ કરો - ચાલતાં-ચાલતાં પ
 msgid "90 min"
 msgstr "૯૦ મિનિટ"
 
-#: template-gmo.php:112 template-how-to-follow-jesus.php:112
+#: template-gmo.php:217 template-how-to-follow-jesus.php:154
 #: template-zume-training.php:582
 msgid "It's important what disciples know — but it's much more important what they DO with what they know."
 msgstr "શિષ્યો શું જાણે છે તે મહત્ત્વનું છે - પરંતુ તેઓ જે જાણે છે તેનું શું કરે છે તે તેનાથી વધારે મહત્ત્વનું છે."
 
-#: template-gmo.php:121 template-how-to-follow-jesus.php:121
+#: template-gmo.php:226 template-how-to-follow-jesus.php:163
 #: template-zume-training.php:595
 msgid "A 3/3 Group is a way for followers of Jesus to meet, pray, learn, grow, fellowship and practice obeying and sharing what they've learned. In this way, a 3/3 Group is not just a small group but a Simple Church."
 msgstr "ઈસુના શિષ્યોનું 3/3 સભ્યોનું બનેલું જૂથ એકઠું થશે, પ્રાર્થના કરશે, શીખશે, વૃદ્ધિ પામશે, સંગત કરશે અને જે શીખ્યા છે તેનો અભ્યાસ કરીને તેને આધીન થશે અને બીજાઓને જણાવશે. આ રીતે 3/3 સભ્યોનું જૂથ એ ફક્ત એક નાનું જૂથ જ નહિ પરંતુ એક સરળ મંડળી બની જશે."
@@ -3656,7 +3664,7 @@ msgstr "ઈસુના શિષ્યોનું 3/3 સભ્યોનું
 msgid "75 min"
 msgstr "૭૫ મિનિટ"
 
-#: template-gmo.php:179 template-how-to-follow-jesus.php:179
+#: template-gmo.php:284 template-how-to-follow-jesus.php:221
 #: template-zume-training.php:625
 msgid "Learn the training cycle and consider how it applies to disciple making."
 msgstr "તાલીમ ચક્ર વિશે શીખો અને શિષ્યો બનાવવામાં તે કેવી રીતે ઉપયોગી થાય છે તેનો વિચાર કરો."
@@ -3669,22 +3677,22 @@ msgstr "અભ્યાસ કરો - 3/3 જૂથમાં"
 msgid "Discuss - 3/3 Group Experience"
 msgstr "ચર્ચા કરો - 3/3 જૂથનો અનુભવ"
 
-#: template-gmo.php:241 template-how-to-follow-jesus.php:241
+#: template-gmo.php:346 template-how-to-follow-jesus.php:283
 #: template-zume-training.php:672
 msgid "A Leadership Cell is a way someone who feels called to lead can develop their leadership by practicing serving."
 msgstr "આગેવાનીનું જૂથ તો એ સ્થાન છે જ્યાં જે વ્યક્તિને આગેવાની આપવાનું તેડું હોય તે વ્યક્તિ તેમાં સેવા આપવાનો અભ્યાસ કરીને તેના તેડાનો વિકાસ કરી શકે છે."
 
-#: template-gmo.php:183 template-how-to-follow-jesus.php:183
+#: template-gmo.php:288 template-how-to-follow-jesus.php:225
 #: template-zume-training.php:713
 msgid "See how disciple making doesn't have to be linear. Multiple things can happen at the same time."
 msgstr "કેવી રીતે શિષ્યો બનાવવાનું કાર્ય ફક્ત એક જ પ્રવૃત્તિ નથી તે જુઓ. એક જ સમયે ઘણાં કાર્યો થઈ શકે છે."
 
-#: template-gmo.php:187 template-how-to-follow-jesus.php:187
+#: template-gmo.php:292 template-how-to-follow-jesus.php:229
 #: template-zume-training.php:726
 msgid "Multiplying matters and multiplying quickly matters even more. See why pace matters."
 msgstr "વૃદ્ધિ કરવી અને ખાસ કરીને ઝડપથી વૃદ્ધિ કરવી તે મહત્ત્વનું છે. ઝડપ શા માટે મહત્ત્વની છે તે જુઓ."
 
-#: template-gmo.php:129 template-how-to-follow-jesus.php:129
+#: template-gmo.php:234 template-how-to-follow-jesus.php:171
 #: template-zume-training.php:739
 msgid "Learn how to obey Jesus' commands by going AND staying."
 msgstr "ઈસુની એ આજ્ઞા કે જાઓ અને સુવાર્તા પ્રગટ કરો તેને કેવી રીતે આધીન થવું તે શીખો."
@@ -3709,7 +3717,7 @@ msgstr "ચર્ચા કરો - જૂથમાં 3 મહિનાની �
 msgid "20 min"
 msgstr "૨૦ મિનિટ"
 
-#: template-gmo.php:237 template-how-to-follow-jesus.php:237
+#: template-gmo.php:342 template-how-to-follow-jesus.php:279
 #: template-zume-training.php:794
 msgid "A powerful tool you can use to quickly assess your own strengths and vulnerabilities when it comes to making disciples who multiply."
 msgstr "વૃદ્ધિ કરનારા શિષ્યો બનાવવા માટે તમારા બળ અને નિર્બળતાઓ વિશે ઝડપથી જાણવા માટેના એક સમર્થ સાધનનો ઉપયોગ કરી શકો છો."
@@ -3718,12 +3726,12 @@ msgstr "વૃદ્ધિ કરનારા શિષ્યો બનાવવ
 msgid "Practice - Coaching Checklist Self-Assessment"
 msgstr "અભ્યાસ કરો - પ્રશિક્ષણની તપાસ યાદી - સ્વમૂલ્યાંકન"
 
-#: template-gmo.php:245 template-how-to-follow-jesus.php:245
+#: template-gmo.php:350 template-how-to-follow-jesus.php:287
 #: template-zume-training.php:813
 msgid "Learn how multiplying churches stay connected and live life together as an extended, spiritual family."
 msgstr "વૃદ્ધિ પામતી મંડળીઓ કેવી રીતે એકબીજા સાથે સંપર્કમાં રહી શકે અને વિકાસ પામેલા આત્મિક કુટુંબ તરીકે સાથે મળીને જીવન જીવી શકે તે વિશે શીખો."
 
-#: template-gmo.php:233 template-how-to-follow-jesus.php:233
+#: template-gmo.php:338 template-how-to-follow-jesus.php:275
 #: template-zume-training.php:826
 msgid "This is a group that consists of people who are leading and starting 3/3 Groups. It also follows a 3/3 format and is a powerful way to assess the spiritual health of God’s work in your area."
 msgstr "આ જૂથમાં 3/3 જૂથમાં આગેવાની આપનાર અને તેની શરૂઆત કરનાર લોકોનો સમાવેશ થાય છે. તે 3/3 જૂથની પદ્ધતિને અનુસરે છે અને તમારા વિસ્તારમાં પ્રભુના કાર્યનું મૂલ્યાંકન કરવાનો સારો માર્ગ છે."
@@ -3781,68 +3789,68 @@ msgstr "ઝુમ તાલીમ"
 msgid "Yes. There are no premium versions, no trial periods, no follow-on sales of products. Freely we've received. Freely we give."
 msgstr "હા, તેની કોઈ અધિમૂલ્ય ધરાવતી આવૃત્તિઓ નથી, પ્રયત્ન કરવાના સમયો નથી, વેચાણની વસ્તુઓ નથી. આપણે મફત પામ્યાં છીએ, મફત આપવાનું છે."
 
-#: functions/enqueue-scripts.php:215 template-gmo.php:65
-#: template-how-to-follow-jesus.php:65 template-zume-training.php:158
+#: functions/enqueue-scripts.php:215 template-gmo.php:166
+#: template-how-to-follow-jesus.php:103 template-zume-training.php:158
 msgid "God Uses Ordinary People"
 msgstr "પ્રભુ સામાન્ય લોકોનો ઉપયોગ કરે છે"
 
-#: functions/enqueue-scripts.php:216 template-gmo.php:61
-#: template-how-to-follow-jesus.php:61 template-zume-training.php:172
+#: functions/enqueue-scripts.php:216 template-gmo.php:170
+#: template-how-to-follow-jesus.php:107 template-zume-training.php:172
 msgid "Simple Definition of Disciple and Church"
 msgstr "શિષ્ય અને મંડળીની સરળ વ્યાખ્યા"
 
-#: functions/enqueue-scripts.php:217 template-gmo.php:90
-#: template-how-to-follow-jesus.php:90 template-zume-training.php:186
+#: functions/enqueue-scripts.php:217 template-gmo.php:195
+#: template-how-to-follow-jesus.php:132 template-zume-training.php:186
 msgid "Spiritual Breathing is Hearing and Obeying God"
 msgstr "આત્મિક શ્વાસોચ્છવાસ તો પ્રભુની વાત સાંભળવી અને તેને આધીન થવું છે"
 
-#: functions/enqueue-scripts.php:218 template-gmo.php:107
-#: template-how-to-follow-jesus.php:107 template-zume-training.php:199
+#: functions/enqueue-scripts.php:218 template-gmo.php:212
+#: template-how-to-follow-jesus.php:149 template-zume-training.php:199
 msgid "SOAPS Bible Reading"
 msgstr "SOAPS બાઇબલ વાંચન"
 
-#: functions/enqueue-scripts.php:220 template-gmo.php:83
-#: template-how-to-follow-jesus.php:83 template-zume-training.php:253
+#: functions/enqueue-scripts.php:220 template-gmo.php:188
+#: template-how-to-follow-jesus.php:125 template-zume-training.php:253
 msgid "Consumer vs Producer Lifestyle"
 msgstr "ગ્રાહક અને ઉત્પાદકની જીવનશૈલી"
 
-#: functions/enqueue-scripts.php:221 template-gmo.php:94
-#: template-how-to-follow-jesus.php:94 template-zume-training.php:266
+#: functions/enqueue-scripts.php:221 template-gmo.php:199
+#: template-how-to-follow-jesus.php:136 template-zume-training.php:266
 msgid "How to Spend an Hour in Prayer"
 msgstr "કેવી રીતે એક કલાક પ્રાર્થનામાં ગાળવો"
 
-#: functions/enqueue-scripts.php:222 template-gmo.php:194
-#: template-how-to-follow-jesus.php:194
+#: functions/enqueue-scripts.php:222 template-gmo.php:299
+#: template-how-to-follow-jesus.php:236
 msgid "Relational Stewardship – List of 100"
 msgstr "સંબંધાત્મક કારભારીપણું - 100 વ્યક્તિઓની યાદી"
 
-#: functions/enqueue-scripts.php:223 template-gmo.php:145
-#: template-how-to-follow-jesus.php:145 template-zume-training.php:332
+#: functions/enqueue-scripts.php:223 template-gmo.php:250
+#: template-how-to-follow-jesus.php:187 template-zume-training.php:332
 msgid "The Kingdom Economy"
 msgstr "દેવના રાજ્યનું અર્થતંત્ર"
 
-#: functions/enqueue-scripts.php:224 template-gmo.php:198
-#: template-how-to-follow-jesus.php:198 template-zume-training.php:351
+#: functions/enqueue-scripts.php:224 template-gmo.php:303
+#: template-how-to-follow-jesus.php:240 template-zume-training.php:351
 msgid "The Gospel and How to Share It"
 msgstr "સુવાર્તા અને તેને કેવી રીતે વહેંચવી"
 
-#: functions/enqueue-scripts.php:225 template-gmo.php:136
-#: template-how-to-follow-jesus.php:136 template-zume-training.php:370
+#: functions/enqueue-scripts.php:225 template-gmo.php:241
+#: template-how-to-follow-jesus.php:178 template-zume-training.php:370
 msgid "Baptism and How To Do It"
 msgstr "બાપ્તિસ્મા અને તે કેવી રીતે કરવું"
 
-#: functions/enqueue-scripts.php:226 template-gmo.php:202
-#: template-how-to-follow-jesus.php:202 template-zume-training.php:405
+#: functions/enqueue-scripts.php:226 template-gmo.php:307
+#: template-how-to-follow-jesus.php:244 template-zume-training.php:405
 msgid "Prepare Your 3-Minute Testimony"
 msgstr "તમારી 3 મિનિટની સાક્ષી તૈયાર કરો"
 
-#: functions/enqueue-scripts.php:227 template-gmo.php:69
-#: template-how-to-follow-jesus.php:69 template-zume-training.php:424
+#: functions/enqueue-scripts.php:227 template-gmo.php:174
+#: template-how-to-follow-jesus.php:111 template-zume-training.php:424
 msgid "Vision Casting the Greatest Blessing"
 msgstr "દર્શન જણાવવું મોટામાં મોટો આશીર્વાદ છે"
 
-#: functions/enqueue-scripts.php:228 template-gmo.php:174
-#: template-how-to-follow-jesus.php:174
+#: functions/enqueue-scripts.php:228 template-gmo.php:279
+#: template-how-to-follow-jesus.php:216
 msgid "Duckling Discipleship – Leading Immediately"
 msgstr "બતકના બચ્ચાંના ઉદાહરણ દ્વારા શિષ્યપણાની વાત કરવી - તરત જ આગેવાની આપવી"
 
@@ -3854,49 +3862,49 @@ msgstr "જ્યાં દેવનું રાજ્ય નથી તે સ�
 msgid "The Lord's Supper and How To Lead It"
 msgstr "પ્રભુભોજન અને તેમાં કેવી રીતે આગેવાની આપવી"
 
-#: functions/enqueue-scripts.php:231 template-gmo.php:215
-#: template-how-to-follow-jesus.php:215 template-zume-training.php:504
+#: functions/enqueue-scripts.php:231 template-gmo.php:320
+#: template-how-to-follow-jesus.php:257 template-zume-training.php:504
 msgid "Prayer Walking and How To Do It"
 msgstr "ચાલતાં-ચાલતાં પ્રાર્થના કરવી અને તે કેવી રીતે કાર્ય કરવું"
 
-#: functions/enqueue-scripts.php:232 template-gmo.php:211
-#: template-how-to-follow-jesus.php:211 template-zume-training.php:517
+#: functions/enqueue-scripts.php:232 template-gmo.php:316
+#: template-how-to-follow-jesus.php:253 template-zume-training.php:517
 msgid "A Person of Peace and How To Find One"
 msgstr "શાંતિનો પુત્ર અને કેવી રીતે તે શોધવો"
 
-#: functions/enqueue-scripts.php:233 template-gmo.php:98
-#: template-how-to-follow-jesus.php:98 template-zume-training.php:530
+#: functions/enqueue-scripts.php:233 template-gmo.php:203
+#: template-how-to-follow-jesus.php:140 template-zume-training.php:530
 msgid "The BLESS Prayer Pattern"
 msgstr "BLESS પ્રાર્થનાની પદ્ધતિ"
 
-#: functions/enqueue-scripts.php:234 template-gmo.php:111
-#: template-how-to-follow-jesus.php:111 template-zume-training.php:577
+#: functions/enqueue-scripts.php:234 template-gmo.php:216
+#: template-how-to-follow-jesus.php:153 template-zume-training.php:577
 msgid "Faithfulness is Better Than Knowledge"
 msgstr "જ્ઞાન કરતાં વિશ્વાસુપણું વધારે સારું છે"
 
-#: functions/enqueue-scripts.php:235 template-gmo.php:120
-#: template-how-to-follow-jesus.php:120 template-zume-training.php:590
+#: functions/enqueue-scripts.php:235 template-gmo.php:225
+#: template-how-to-follow-jesus.php:162 template-zume-training.php:590
 msgid "3/3 Group Meeting Pattern"
 msgstr "3/3 જૂથની સભાની પદ્ધતિ\n"
 ""
 
-#: functions/enqueue-scripts.php:236 template-gmo.php:178
-#: template-how-to-follow-jesus.php:178 template-zume-training.php:620
+#: functions/enqueue-scripts.php:236 template-gmo.php:283
+#: template-how-to-follow-jesus.php:220 template-zume-training.php:620
 msgid "Training Cycle for Maturing Disciples"
 msgstr "પરિપક્વ થઈ રહેલા શિષ્યોનું તાલીમ ચક્ર"
 
-#: functions/enqueue-scripts.php:238 template-gmo.php:182
-#: template-how-to-follow-jesus.php:182 template-zume-training.php:708
+#: functions/enqueue-scripts.php:238 template-gmo.php:287
+#: template-how-to-follow-jesus.php:224 template-zume-training.php:708
 msgid "Expect Non-Sequential Growth"
 msgstr "બિનક્રમિક વૃદ્ધિની અપેક્ષા રાખવી"
 
-#: functions/enqueue-scripts.php:239 template-gmo.php:186
-#: template-how-to-follow-jesus.php:186 template-zume-training.php:721
+#: functions/enqueue-scripts.php:239 template-gmo.php:291
+#: template-how-to-follow-jesus.php:228 template-zume-training.php:721
 msgid "Pace of Multiplication Matters"
 msgstr "વૃદ્ધિની ઝડપ મહત્ત્વની છે"
 
-#: functions/enqueue-scripts.php:240 template-gmo.php:128
-#: template-how-to-follow-jesus.php:128 template-zume-training.php:734
+#: functions/enqueue-scripts.php:240 template-gmo.php:233
+#: template-how-to-follow-jesus.php:170 template-zume-training.php:734
 msgid "Always Part of Two Churches"
 msgstr "હંમેશા બે મંડળીઓના સભ્ય"
 
@@ -3908,11 +3916,13 @@ msgstr "ચાર ક્ષેત્રોનું સાધન"
 msgid "Generational Mapping"
 msgstr "પેઢીઓનું મૂલ્યાંકન"
 
+#: functions/zume-gmo.php:179 functions/zume-gmo.php:211
 #: parts/content-share.php:54 parts/content-share.php:90
 #: template-pieces-page.php:189 template-pieces-page.php:221
 msgid "Zúme Training is freely offered as part of larger Zúme Vision."
 msgstr "ઝુમ દર્શનના મોટા ભાગ તરીકે ઝુમ તાલીમ મફત આપવામાં આવે છે."
 
+#: functions/zume-gmo.php:180 functions/zume-gmo.php:212
 #: parts/content-share.php:55 parts/content-share.php:91
 #: template-pieces-page.php:190 template-pieces-page.php:222
 msgid "Learn more about the Zúme.Vision"
@@ -3922,15 +3932,15 @@ msgstr "ઝુમના દર્શન વિશે શીખો"
 msgid "This concept is called \"%1$s\" in session %2$s of the Zúme Training"
 msgstr "આ વિચારને ઝુમ તાલીમના %2$s સેશનના \"%1$s\" ભાગ તરીકે ઓળખવામાં આવે છે."
 
-#: template-pieces-page.php:82
+#: functions/zume-gmo.php:73 template-pieces-page.php:82
 msgid "Listen and Read Along"
 msgstr "સાંભળો અને સાથે-સાથે વાંચો"
 
-#: template-pieces-page.php:86
+#: functions/zume-gmo.php:77 template-pieces-page.php:86
 msgid "Download Free Guidebook"
 msgstr "મેળવો મફત માર્ગદર્શિકા"
 
-#: template-pieces-page.php:89
+#: functions/zume-gmo.php:80 template-pieces-page.php:89
 msgid "Watch This Video"
 msgstr "આ વિડિયો જુઓ"
 
@@ -4084,7 +4094,7 @@ msgstr "પાનાંના ટુકડા"
 msgid "Zúme Vision"
 msgstr "ઝુમ દર્શન"
 
-#: functions/zume-content.php:2129
+#: functions/zume-content.php:2130
 msgid "Disciple-making can be rapidly advanced by finding a person of peace, even in a place where followers of Jesus are few and far between. How do you know when you have found a person of peace and what do you do when you find them?"
 msgstr "જ્યાં ઈસુના શિષ્યો થોડાં છે અથવા તો છે જ નહિ ત્યાં શાંતિનો પુત્ર શોધવાથી શિષ્ય બનાવવાનું કાર્ય ઝડપથી થઇ શકે છે. તમે શાંતિના પુત્રને શોધ્યો છે અને તેને મળ્યા પછી તમે શું કરશો તે તમે કેવી રીતે જાણશો?"
 
@@ -4285,67 +4295,67 @@ msgid "Welcome to God’s Family!"
 msgstr "પ્રભુના કુટુંબમાં તમારું સ્વાગત છે!"
 
 #. Template Name of the plugin/theme
-#: template-gmo.php:56 template-how-to-follow-jesus.php:56
+#: template-gmo.php:161 template-how-to-follow-jesus.php:98
 msgid "What is a follower of Jesus?"
 msgstr "ઈસુની પાછળ ચાલનાર કોણ છે?"
 
-#: template-gmo.php:79 template-how-to-follow-jesus.php:79
+#: template-gmo.php:184 template-how-to-follow-jesus.php:121
 msgid "What are the activities of a follower of Jesus?"
 msgstr "ઈસુની પાછળ ચાલનારની પ્રવૃત્તિઓ કઈ-કઈ છે?"
 
-#: template-gmo.php:104 template-how-to-follow-jesus.php:104
+#: template-gmo.php:209 template-how-to-follow-jesus.php:146
 msgid "Bible Reading"
 msgstr "બાઇબલ વાંચન"
 
-#: template-gmo.php:117 template-how-to-follow-jesus.php:117
+#: template-gmo.php:222 template-how-to-follow-jesus.php:159
 msgid "Community"
 msgstr "લોક સમુદાય"
 
-#: template-gmo.php:132 template-how-to-follow-jesus.php:132
+#: template-gmo.php:237 template-how-to-follow-jesus.php:174
 msgid "The Lord’s Supper and How To Lead It"
 msgstr "પ્રભુભોજન અને કેવી રીતે તેમાં આગેવાની આપવી"
 
-#: template-gmo.php:142 template-how-to-follow-jesus.php:142
+#: template-gmo.php:247 template-how-to-follow-jesus.php:184
 msgid "Sacrifice and Suffering"
 msgstr "બલિદાન અને દુઃખ સહન કરવું"
 
-#: template-gmo.php:149 template-how-to-follow-jesus.php:149
+#: template-gmo.php:254 template-how-to-follow-jesus.php:191
 msgid "Eyes to See Where The Kingdom Isn’t"
 msgstr "જ્યાં દેવનું રાજ્ય નથી એવા સ્થળો જોનાર આંખો"
 
-#: template-gmo.php:161 template-how-to-follow-jesus.php:161
+#: template-gmo.php:266 template-how-to-follow-jesus.php:203
 msgid "How do I obey Jesus and help others become followers with me?"
 msgstr "હું કેવી રીતે ઈસુને આધીન થઈને બીજાઓને પણ મારી સાથે મળીને ઈસુની પાછળ ચાલવામાં મદદરૂપ બની શકું?"
 
-#: template-gmo.php:165 template-how-to-follow-jesus.php:165
+#: template-gmo.php:270 template-how-to-follow-jesus.php:207
 msgid "Then Jesus came to them and said, \"All authority in heaven and on earth has been given to me. Therefore go and make disciples of all nations, baptizing them in the name of the Father and of the Son and of the Holy Spirit, and teaching them to obey everything I have commanded you. And surely I am with you always, to the very end of the age.\""
 msgstr "અને ઈસુએ ત્યાં આવીને તેઓને કહ્યું કે, \"આકાશમાં તથા પૃથ્વી પર સર્વ અધિકાર મેન અપાયો છે. એ માટે તમે જઈને સર્વ દેશનાઓને શિષ્ય કરો; બાપ તથા દીકરા તથા પવિત્ર આત્માને નામે તેઓને બાપ્તિસ્મા આપતા જાઓ; મેં તમને જે જે આજ્ઞા કરી તે સર્વ પાળવાનું તેઓને શીખવતા જાઓ; અને જુઓ, જગતના અંત સુધી હું સર્વકાળ તમારી સાથે છું.\""
 
-#: template-gmo.php:166 template-how-to-follow-jesus.php:166
+#: template-gmo.php:271 template-how-to-follow-jesus.php:208
 msgid "Matthew 28:18-20"
 msgstr "માથ્થી 28:18-20"
 
-#: template-gmo.php:170 template-how-to-follow-jesus.php:170
+#: template-gmo.php:275 template-how-to-follow-jesus.php:212
 msgid "Teaching others to obey and follow Jesus with you"
 msgstr "તમારી સાથે બીજાઓને ઈસુની પાછળ ચાલવાનું અને તેની આજ્ઞાઓ પાળવાનું શીખવવું"
 
-#: template-gmo.php:175 template-how-to-follow-jesus.php:175
+#: template-gmo.php:280 template-how-to-follow-jesus.php:217
 msgid "Learn what ducklings have to do with disciple-making"
 msgstr "બતકનાં બચ્ચાંની વાત શિષ્યો બનાવવા વિશે શું જણાવે છે તે શીખો"
 
-#: template-gmo.php:191 template-how-to-follow-jesus.php:191
+#: template-gmo.php:296 template-how-to-follow-jesus.php:233
 msgid "Speaking to people YOU KNOW about Jesus"
 msgstr "તમે ઈસુ વિશે જે જાણો છો તે લોકોને કહેવું"
 
-#: template-gmo.php:208 template-how-to-follow-jesus.php:208
+#: template-gmo.php:313 template-how-to-follow-jesus.php:250
 msgid "Speaking to people YOU DON'T KNOW about Jesus"
 msgstr "તમે ઈસુ વિશે જે જાણતા નથી તે લોકોને કહેવું"
 
-#: template-gmo.php:227 template-how-to-follow-jesus.php:227
+#: template-gmo.php:332 template-how-to-follow-jesus.php:269
 msgid "What if many friends, family, and others start following Jesus with me?"
 msgstr "જો ઘણા મિત્રો, કુટુંબ અને બીજા લોકો પણ મારી સાથે ઈસુની પાછળ ચાલવાની શરૂઆત કરે તો શું થાય?"
 
-#: template-gmo.php:38
+#: template-how-to-follow-jesus.php:82
 msgid "Watch this important video explaining the 4 relationships of your new life."
 msgstr "તમારા નવા જીવનના 4 સંબંધો વિશે સમજણ આપતો આ મહત્ત્વનો વિડિયો જુઓ."
 
@@ -4358,4 +4368,109 @@ msgstr "GMO - ઝુમમાં તમારું સ્વાગત છે"
 #: 
 msgid "Redirect to Training"
 msgstr "ફરીથી તાલીમમાં પાછા ફરો"
+
+#: translations/mobile-pwa-strings.php:9
+msgid "Yes"
+msgstr "હા"
+
+#: translations/mobile-pwa-strings.php:10
+msgid "No"
+msgstr "ના"
+
+#: translations/mobile-pwa-strings.php:12
+msgid "Account"
+msgstr "ખાતું"
+
+#: translations/mobile-pwa-strings.php:15
+msgid "Downloads"
+msgstr "ડાઉનલોડ્સ"
+
+#: translations/mobile-pwa-strings.php:16
+msgid "Language"
+msgstr "ભાષા"
+
+#: translations/mobile-pwa-strings.php:17
+msgid "Reset App"
+msgstr "એપ્લિકેશન ફરીથી સેટ કરો"
+
+#: translations/mobile-pwa-strings.php:18
+msgid "Resetting the app will delete all app data. Are you sure you want to reset?"
+msgstr "એપ્લિકેશનને ફરીથી સેટ કરવાથી તમામ એપ્લિકેશન ડેટા કા willી નાખવામાં આવશે. શું તમે ખરેખર ફરીથી સેટ કરવા માંગો છો?"
+
+#: translations/mobile-pwa-strings.php:19
+msgid "Help"
+msgstr "સહાય કરો"
+
+#: translations/mobile-pwa-strings.php:20
+msgid "Workbook"
+msgstr "વર્કબુક"
+
+#: translations/mobile-pwa-strings.php:21
+msgid "Sign Out"
+msgstr "સાઇન આઉટ"
+
+#: translations/mobile-pwa-strings.php:22
+msgid "Download all"
+msgstr "બધા ડાઉનલોડ કરો"
+
+#: translations/mobile-pwa-strings.php:24
+msgid "Downloading"
+msgstr "ડાઉનલોડ કરી રહ્યું છે"
+
+#: translations/mobile-pwa-strings.php:25
+msgid "Queued"
+msgstr "કતારબદ્ધ"
+
+#: translations/mobile-pwa-strings.php:27
+msgid "Do you want to clear these download errors?"
+msgstr "શું તમે આ ડાઉનલોડ ભૂલોને સાફ કરવા માંગો છો?"
+
+#: translations/mobile-pwa-strings.php:28
+msgid "Tap to persist"
+msgstr "ચાલુ રાખવા માટે ટેપ કરો"
+
+#: translations/mobile-pwa-strings.php:29
+msgid "Select Language"
+msgstr "ભાષા પસંદ કરો"
+
+#: translations/mobile-pwa-strings.php:31
+msgid "No sessions available"
+msgstr "સત્ર ઉપલબ્ધ નથી"
+
+#: translations/mobile-pwa-strings.php:32
+msgid "Exit"
+msgstr "બહાર નીકળો"
+
+#: translations/mobile-pwa-strings.php:36
+msgid "Share"
+msgstr "શેર કરો"
+
+#: translations/mobile-pwa-strings.php:37
+msgid "Install"
+msgstr "સ્થાપિત કરો"
+
+#: translations/mobile-pwa-strings.php:38
+msgid "This app can be installed to your device. Click to install this app"
+msgstr "આ એપ્લિકેશન તમારા ઉપકરણ પર ઇન્સ્ટોલ કરી શકાય છે. આ એપ્લિકેશન ઇન્સ્ટોલ કરવા માટે ક્લિક કરો"
+
+#: translations/mobile-pwa-strings.php:39
+msgid "This app can be installed to your device. Please use the Chrome browser to do so."
+msgstr "આ એપ્લિકેશન તમારા ઉપકરણ પર ઇન્સ્ટોલ કરી શકાય છે. કૃપા કરીને આમ કરવા માટે ક્રોમ બ્રાઉઝરનો ઉપયોગ કરો."
+
+#: translations/mobile-pwa-strings.php:40
+msgid "Learn more"
+msgstr "વધુ શીખો"
+
+#: translations/mobile-pwa-strings.php:41
+msgid "Tap on Safari's share icon and tap 'Add to Home Screen' to install this app."
+msgstr "સફારીના શેર આયકન પર ટેપ કરો અને આ એપ્લિકેશનને ઇન્સ્ટોલ કરવા માટે 'હોમ સ્ક્રીન પર ઉમેરો' ટેપ કરો."
+
+#: translations/mobile-pwa-strings.php:43
+msgid "A new version of this app is available. Click to update this app."
+msgstr "આ એપ્લિકેશનનું નવું સંસ્કરણ ઉપલબ્ધ છે. આ એપ્લિકેશનને અપડેટ કરવા ક્લિક કરો."
+
+#. Template Name of the plugin/theme
+#: 
+msgid "How to Follow Jesus"
+msgstr "કેવી રીતે ઈસુને અનુસરો"
 
