@@ -5,7 +5,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: POEditor.com\n"
 "Project-Id-Version: Zúme Project\n"
-"Language: es\n"
+"Language: es-419\n"
 
 #: front-page.php:73 front-page.php:203
 msgid "Get Started"
