@@ -4517,3 +4517,7 @@ msgstr "या अ‍ॅपची नवीन आवृत्ती उपल�
 msgid "How to Follow Jesus"
 msgstr "येशू अनुसरण कसे"
 
+#: translations/mobile-pwa-strings.php:44
+msgid "Storage"
+msgstr "साठवण"
+
