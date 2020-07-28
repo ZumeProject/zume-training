@@ -4503,3 +4503,7 @@ msgstr "ਇਸ ਐਪ ਦਾ ਨਵਾਂ ਸੰਸਕਰਣ ਉਪਲਬਧ ਹ
 msgid "How to Follow Jesus"
 msgstr "ਯਿਸੂ ਨੂੰ ਕਿਸ ਦੀ ਪਾਲਣਾ ਕਰਨ ਲਈ"
 
+#: translations/mobile-pwa-strings.php:44
+msgid "Storage"
+msgstr "ਸਟੋਰੇਜ"
+
