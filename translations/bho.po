@@ -4506,106 +4506,110 @@ msgstr "शिक्षा पावला खातीर करीब वा�
 
 #: translations/mobile-pwa-strings.php:9
 msgid "Yes"
-msgstr ""
+msgstr "Yes"
 
 #: translations/mobile-pwa-strings.php:10
 msgid "No"
-msgstr ""
+msgstr "No"
 
 #: translations/mobile-pwa-strings.php:12
 msgid "Account"
-msgstr ""
+msgstr "Account"
 
 #: translations/mobile-pwa-strings.php:15
 msgid "Downloads"
-msgstr ""
+msgstr "Downloads"
 
 #: translations/mobile-pwa-strings.php:16
 msgid "Language"
-msgstr ""
+msgstr "Language"
 
 #: translations/mobile-pwa-strings.php:17
 msgid "Reset App"
-msgstr ""
+msgstr "Reset App"
 
 #: translations/mobile-pwa-strings.php:18
 msgid "Resetting the app will delete all app data. Are you sure you want to reset?"
-msgstr ""
+msgstr "Resetting the app will delete all app data. Are you sure you want to reset?"
 
 #: translations/mobile-pwa-strings.php:19
 msgid "Help"
-msgstr ""
+msgstr "Help"
 
 #: translations/mobile-pwa-strings.php:20
 msgid "Workbook"
-msgstr ""
+msgstr "Workbook"
 
 #: translations/mobile-pwa-strings.php:21
 msgid "Sign Out"
-msgstr ""
+msgstr "Sign Out"
 
 #: translations/mobile-pwa-strings.php:22
 msgid "Download all"
-msgstr ""
+msgstr "Download all"
 
 #: translations/mobile-pwa-strings.php:24
 msgid "Downloading"
-msgstr ""
+msgstr "Downloading"
 
 #: translations/mobile-pwa-strings.php:25
 msgid "Queued"
-msgstr ""
+msgstr "Queued"
 
 #: translations/mobile-pwa-strings.php:27
 msgid "Do you want to clear these download errors?"
-msgstr ""
+msgstr "Do you want to clear these download errors?"
 
 #: translations/mobile-pwa-strings.php:28
 msgid "Tap to persist"
-msgstr ""
+msgstr "Tap to persist"
 
 #: translations/mobile-pwa-strings.php:29
 msgid "Select Language"
-msgstr ""
+msgstr "Select Language"
 
 #: translations/mobile-pwa-strings.php:31
 msgid "No sessions available"
-msgstr ""
+msgstr "No sessions available"
 
 #: translations/mobile-pwa-strings.php:32
 msgid "Exit"
-msgstr ""
+msgstr "Exit"
 
 #: translations/mobile-pwa-strings.php:36
 msgid "Share"
-msgstr ""
+msgstr "Share"
 
 #: translations/mobile-pwa-strings.php:37
 msgid "Install"
-msgstr ""
+msgstr "Install"
 
 #: translations/mobile-pwa-strings.php:38
 msgid "This app can be installed to your device. Click to install this app"
-msgstr ""
+msgstr "This app can be installed to your device. Click to install this app"
 
 #: translations/mobile-pwa-strings.php:39
 msgid "This app can be installed to your device. Please use the Chrome browser to do so."
-msgstr ""
+msgstr "This app can be installed to your device. Please use the Chrome browser to do so."
 
 #: translations/mobile-pwa-strings.php:40
 msgid "Learn more"
-msgstr ""
+msgstr "Learn more"
 
 #: translations/mobile-pwa-strings.php:41
 msgid "Tap on Safari's share icon and tap 'Add to Home Screen' to install this app."
-msgstr ""
+msgstr "Tap on Safari's share icon and tap 'Add to Home Screen' to install this app."
 
 #: translations/mobile-pwa-strings.php:43
 msgid "A new version of this app is available. Click to update this app."
-msgstr ""
+msgstr "A new version of this app is available. Click to update this app."
 
 #. Template Name of the plugin/theme
 #: 
 msgid "How to Follow Jesus"
-msgstr ""
+msgstr "How to Follow Jesus"
+
+#: translations/mobile-pwa-strings.php:44
+msgid "Storage"
+msgstr "Storage"
 
