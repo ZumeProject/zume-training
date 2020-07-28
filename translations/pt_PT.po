@@ -4523,3 +4523,7 @@ msgstr "Uma nova versão deste aplicativo está disponível. Clique para atualiz
 msgid "How to Follow Jesus"
 msgstr "Como Seguir Jesus"
 
+#: translations/mobile-pwa-strings.php:44
+msgid "Storage"
+msgstr "Armazenamento"
+
