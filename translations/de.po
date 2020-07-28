@@ -4509,3 +4509,7 @@ msgstr "Eine neue Version dieser App ist verfügbar. Klicken Sie hier, um diese 
 msgid "How to Follow Jesus"
 msgstr "Wie man Jesus nachfolgt"
 
+#: translations/mobile-pwa-strings.php:44
+msgid "Storage"
+msgstr "Lager"
+
