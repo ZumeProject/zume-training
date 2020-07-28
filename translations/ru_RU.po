@@ -4520,3 +4520,7 @@ msgstr "Доступна новая версия этого приложения
 msgid "How to Follow Jesus"
 msgstr "Как следовать за Иисусом"
 
+#: translations/mobile-pwa-strings.php:44
+msgid "Storage"
+msgstr "Место хранения"
+

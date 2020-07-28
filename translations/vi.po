@@ -4469,3 +4469,7 @@ msgstr "Một phiên bản mới của ứng dụng này có sẵn. Nhấn vào 
 msgid "How to Follow Jesus"
 msgstr "Làm thế nào để theo Chúa Giêsu"
 
+#: translations/mobile-pwa-strings.php:44
+msgid "Storage"
+msgstr "Lưu trữ"
+

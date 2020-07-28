@@ -4476,3 +4476,7 @@ msgstr "O nouă versiune a acestei aplicații este disponibilă. Faceți clic pe
 msgid "How to Follow Jesus"
 msgstr "Cum să-L urmezi pe Isus"
 
+#: translations/mobile-pwa-strings.php:44
+msgid "Storage"
+msgstr "Depozitare"
+

@@ -4519,3 +4519,7 @@ msgstr "Ẹya tuntun ti app yii wa. Tẹ lati mu app yii dojuiwọn."
 msgid "How to Follow Jesus"
 msgstr "Bi a ṣe le tẹle Jesu"
 
+#: translations/mobile-pwa-strings.php:44
+msgid "Storage"
+msgstr "Ibi ipamọ"
+

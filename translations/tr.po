@@ -4477,3 +4477,7 @@ msgstr "Bu uygulamanın yeni bir sürümü mevcut. Bu uygulamayı güncellemek i
 msgid "How to Follow Jesus"
 msgstr "İsa Nasıl Takip Edilir"
 
+#: translations/mobile-pwa-strings.php:44
+msgid "Storage"
+msgstr "Depolama"
+
