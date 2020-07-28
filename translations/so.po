@@ -4502,3 +4502,7 @@ msgstr "Nooca cusub ee barnaamijkan ayaa la heli karaa. Guji si aad u cusbooneys
 msgid "How to Follow Jesus"
 msgstr "Sida loo raaco Ciise"
 
+#: translations/mobile-pwa-strings.php:44
+msgid "Storage"
+msgstr "Kaydinta"
+
