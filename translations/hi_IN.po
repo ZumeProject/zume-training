@@ -4606,3 +4606,7 @@ msgstr "इस ऐप का एक नया संस्करण उपलब
 msgid "How to Follow Jesus"
 msgstr "यीशु का अनुसरण कैसे करें"
 
+#: translations/mobile-pwa-strings.php:44
+msgid "Storage"
+msgstr "भंडारण"
+
