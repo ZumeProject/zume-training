@@ -4474,3 +4474,7 @@ msgstr "該應用程序有新版本可用。單擊以更新此應用程序。"
 msgid "How to Follow Jesus"
 msgstr "如何跟隨耶穌"
 
+#: translations/mobile-pwa-strings.php:44
+msgid "Storage"
+msgstr "存儲"
+
