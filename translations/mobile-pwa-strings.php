@@ -41,6 +41,7 @@ class Zume_PWA_Strings {
             __("Tap on Safari's share icon and tap 'Add to Home Screen' to install this app."),
             __("Update"),
             __("A new version of this app is available. Click to update this app."),
+            __("Storage"),
         ];
     }
 }
