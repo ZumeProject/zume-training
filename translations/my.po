@@ -4603,3 +4603,7 @@ msgstr "ဒီအက်ပလီကေးရှင်းအသစ်ကိုရ
 msgid "How to Follow Jesus"
 msgstr "ယေရှုနောက်သို့လိုက်နိုင်ပုံ"
 
+#: translations/mobile-pwa-strings.php:44
+msgid "Storage"
+msgstr "သိုလှောင်ခြင်း"
+
