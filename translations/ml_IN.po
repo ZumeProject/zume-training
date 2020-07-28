@@ -4477,3 +4477,7 @@ msgstr "ഈ അപ്ലിക്കേഷന്റെ പുതിയ പതി
 msgid "How to Follow Jesus"
 msgstr "യേശുവിനെ എങ്ങനെ പിന്തുടരാം"
 
+#: translations/mobile-pwa-strings.php:44
+msgid "Storage"
+msgstr "സംഭരണം"
+
