@@ -4519,3 +4519,7 @@ msgstr "ಈ ಅಪ್ಲಿಕೇಶನ್‌ನ ಹೊಸ ಆವೃತ್ತಿ
 msgid "How to Follow Jesus"
 msgstr "ಯೇಸುವನ್ನು ಹೇಗೆ ಅನುಸರಿಸುವುದು"
 
+#: translations/mobile-pwa-strings.php:44
+msgid "Storage"
+msgstr "ಸಂಗ್ರಹಣೆ"
+

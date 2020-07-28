@@ -4521,3 +4521,7 @@ msgstr "이 앱의 새 버전을 사용할 수 있습니다. 이 앱을 업데�
 msgid "How to Follow Jesus"
 msgstr "예수를 따르는 방법"
 
+#: translations/mobile-pwa-strings.php:44
+msgid "Storage"
+msgstr "저장"
+
