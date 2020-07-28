@@ -4562,3 +4562,7 @@ msgstr "يتوفر إصدار جديد من هذا التطبيق. انقر لت
 msgid "How to Follow Jesus"
 msgstr "كيف تتبع يسوع"
 
+#: translations/mobile-pwa-strings.php:44
+msgid "Storage"
+msgstr "تخزين"
+
