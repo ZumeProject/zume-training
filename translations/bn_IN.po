@@ -5233,3 +5233,7 @@ msgstr "এই অ্যাপ্লিকেশনটির একটি নত
 msgid "How to Follow Jesus"
 msgstr "কিভাবে যীশু অনুসরণ করুন"
 
+#: translations/mobile-pwa-strings.php:44
+msgid "Storage"
+msgstr "সংগ্রহস্থল"
+
