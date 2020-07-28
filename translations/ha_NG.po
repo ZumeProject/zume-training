@@ -4518,3 +4518,7 @@ msgstr "Akwai sabon sigar wannan app. Danna don sabunta wannan app."
 msgid "How to Follow Jesus"
 msgstr "Yadda za'a Bi Yesu"
 
+#: translations/mobile-pwa-strings.php:44
+msgid "Storage"
+msgstr "Adanawa"
+
