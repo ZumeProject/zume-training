@@ -4472,3 +4472,7 @@ msgstr "Una nueva versión de esta aplicación está disponible. Haz clic para a
 msgid "How to Follow Jesus"
 msgstr "Cómo seguir a Jesús"
 
+#: translations/mobile-pwa-strings.php:44
+msgid "Storage"
+msgstr "Almacenamiento"
+
