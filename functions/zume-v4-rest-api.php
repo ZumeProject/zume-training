@@ -215,7 +215,7 @@ class Zume_V4_REST_API {
         }
 
         $ip = DT_Ipstack_API::get_real_ip_address();
-        $hash_ip = hash('sha256', $ip );
+        $hash_ip = hash( 'sha256', $ip );
         if ( false !== get_transient( $hash_ip ) ) {
             dt_write_log( __METHOD__ . ': Duplicate check on group creation triggered for ip:' . $ip );
             return false;
@@ -459,10 +459,10 @@ class Zume_V4_REST_API {
         } else {
             $data = array(
                 'payload'   => json_encode( array(
-                        "channel"       =>  '#errors',
-                        "text"          =>  'Failed Coaching Request: ' . maybe_serialize( $body ) . ' --- ' . maybe_serialize( $fields ),
-                        "username"	    =>  'error-bot',
-                        "icon_emoji"    =>  'ghost'
+                        "channel"       => '#errors',
+                        "text"          => 'Failed Coaching Request: ' . maybe_serialize( $body ) . ' --- ' . maybe_serialize( $fields ),
+                        "username"      => 'error-bot',
+                        "icon_emoji"    => 'ghost'
                     )
                 )
             );

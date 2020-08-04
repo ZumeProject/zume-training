@@ -238,7 +238,7 @@ if (have_posts()) :
                 let has_scrolled = false
                 jQuery(document).scroll(function() {
                     if (jQuery(document).scrollTop() >= 200 && has_scrolled === false ) {
-                        window.zume_vision_logging({'action': 'studied_<?php echo esc_attr( $tool_number ) ?>', 'language': '<?php echo zume_current_language() ?>' })
+                        window.zume_vision_logging({'action': 'studied_<?php echo esc_attr( $tool_number ) ?>', 'language': '<?php echo esc_attr( zume_current_language() ) ?>' })
                         has_scrolled = true
                     }
                 });

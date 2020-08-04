@@ -227,7 +227,7 @@ class Zume_Dashboard {
         global $wpdb;
         $duplicate_check = 1;
         while ( $duplicate_check != 0 ) {
-            $key = hash( 'sha256', rand( 0, 100000 ) . uniqid( 'zume_' ) . time() . rand( 0, 100000 )  );
+            $key = hash( 'sha256', rand( 0, 100000 ) . uniqid( 'zume_' ) . time() . rand( 0, 100000 ) );
             $key = str_replace( '0', '', $key );
             $key = str_replace( 'O', '', $key );
             $key = str_replace( 'o', '', $key );
