@@ -33,6 +33,7 @@ if ( isset( $_GET['group'] ) ) {
             window.zume_vision_logging({
                 'action': 'leading_<?php echo esc_attr($session_id) ?>',
                 'group_size': '<?php echo esc_attr($members) ?>'
+                'language': '<?php echo zume_current_language() ?>'
             })
         }
     })

@@ -37,9 +37,10 @@ get_header();
             jQuery('#lang_choice_1').hide();
             if (typeof window.zume_vision_logging !== "undefined") {
                 window.zume_vision_logging({
-                    'action': 'leading_<?php echo esc_attr($session_id) ?>',
-                    'group_size': '<?php echo esc_attr($zume_group_meta['members'] ?? 1 ) ?>'
-                })
+                    'action': 'leading_<?php echo esc_attr($zume_session) ?>',
+                    'group_size': '<?php echo esc_attr($zume_group_meta['members'] ?? 1 ) ?>',
+                    'language': '<?php echo zume_current_language() ?>'
+            })
             }
         })
     </script>

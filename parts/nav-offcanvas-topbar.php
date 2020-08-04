@@ -6,7 +6,7 @@
 
 ?>
 
-<div class="grid-x margin-horizontal-1 top-bar" id="top-bar">
+<div class="grid-x grid-padding-x margin-horizontal-1 top-bar" id="top-bar">
 
     <div class="cell small-3 medium-2" id="top-logo-div">
         <a href="<?php echo is_user_logged_in() ? esc_url( zume_dashboard_url() ) : esc_url( zume_home_url() ); ?>">

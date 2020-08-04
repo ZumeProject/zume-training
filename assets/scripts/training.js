@@ -748,7 +748,7 @@ function save_new_group() {
       })
 
     if (typeof window.zume_vision_logging !== "undefined") {
-      window.zume_vision_logging({'action': 'started_group'} )
+      window.zume_vision_logging({'action': 'started_group', 'language': zumeTraining.current_language } )
     }
   }
 }
@@ -793,7 +793,7 @@ function save_invitation_response( key, answer ) {
 
   if (typeof window.zume_vision_logging !== "undefined") {
     if ( 'accepted' === answer ) {
-      window.zume_vision_logging({'action': 'joined_group'} )
+      window.zume_vision_logging({'action': 'joined_group', 'language': zumeTraining.current_language} )
     }
   }
 }
@@ -1655,7 +1655,7 @@ function send_coaching_request() {
     })
 
   if (typeof window.zume_vision_logging !== "undefined") {
-    window.zume_vision_logging({'action': 'requested_coach'} )
+    window.zume_vision_logging({'action': 'requested_coach', 'language': zumeTraining.current_language } )
   }
 }
 
