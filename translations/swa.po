@@ -3295,7 +3295,7 @@ msgstr "Mradi utaanza katika lugha zifuatazo na kupatikana kwa wale wanaotaka ku
 
 #: template-zume-faq.php:141
 msgid "To see the most updated progress go to "
-msgstr "Ili kuona maendeleo yaliyasasishwa zaidi nenda "
+msgstr "Ili kuona maendeleo yaliyasasishwa zaidi nenda kwa␣"
 
 #: template-zume-faq.php:142
 msgid "Language Translation Progress."
