@@ -1,0 +1,164 @@
+[
+  {
+    "enDisplayName": "English",
+    "code": "en",
+    "locale": "en",
+    "nativeName": "English"
+  },
+  {
+    "enDisplayName": "Bhojpuri",
+    "code": "bho",
+    "locale": "bho",
+    "nativeName": "भोजपुरी"
+  },
+  {
+    "enDisplayName": "Bengali (India)",
+    "code": "bn",
+    "locale": "bn_IN",
+    "nativeName": "বাংলা"
+  },
+  {
+    "enDisplayName": "French",
+    "code": "fr",
+    "locale": "fr_FR",
+    "nativeName": "Français"
+  },
+  {
+    "enDisplayName": "Hindi",
+    "code": "hi",
+    "locale": "hi_IN",
+    "nativeName": "हिंदी"
+  },
+  {
+    "enDisplayName": "Indonesian",
+    "code": "id",
+    "locale": "id_ID",
+    "nativeName": "Bahasa Indonesia"
+  },
+  {
+    "enDisplayName": "Italian",
+    "code": "it",
+    "locale": "it_IT",
+    "nativeName": "Italiano"
+  },
+  {
+    "enDisplayName": "Kannada",
+    "code": "kn",
+    "locale": "kn",
+    "nativeName": "ಕನ್ನಡ"
+  },
+  {
+    "enDisplayName": "Korean",
+    "code": "ko",
+    "locale": "ko_KR",
+    "nativeName": "한국어"
+  },
+  {
+    "enDisplayName": "Lao",
+    "code": "lo",
+    "locale": "lo",
+    "nativeName": "ພາສາລາວ"
+  },
+  {
+    "enDisplayName": "Mandarin (Simplified)",
+    "code": "zhcn",
+    "locale": "zh_CN",
+    "nativeName": "简体中文"
+  },
+  {
+    "enDisplayName": "Mandarin (Traditional)",
+    "code": "zhtw",
+    "locale": "zh_TW",
+    "nativeName": "繁體中文"
+  },
+  {
+    "enDisplayName": "Marathi",
+    "code": "mr",
+    "locale": "mr",
+    "nativeName": "मराठी"
+  },
+  {
+    "enDisplayName": "Malayalam",
+    "code": "ml",
+    "locale": "ml_IN",
+    "nativeName": "മലയാളം"
+  },
+  {
+    "enDisplayName": "Oriya",
+    "code": "or",
+    "locale": "or_IN",
+    "nativeName": "ଓଡ଼ିଆ"
+  },
+  {
+    "enDisplayName": "Panjabi",
+    "code": "pa",
+    "locale": "pa_IN",
+    "nativeName": "Apagibete"
+  },
+  {
+    "enDisplayName": "Portuguese",
+    "code": "pt",
+    "locale": "pt_PT",
+    "nativeName": "Português"
+  },
+  {
+    "enDisplayName": "Russian",
+    "code": "ru",
+    "locale": "ru_RU",
+    "nativeName": "русский"
+  },
+  {
+    "enDisplayName": "Romanian",
+    "code": "ro",
+    "locale": "ro_RO",
+    "nativeName": "Română"
+  },
+  {
+    "enDisplayName": "Spanish",
+    "code": "es",
+    "locale": "es",
+    "nativeName": "Español"
+  },
+  {
+    "enDisplayName": "Somali",
+    "code": "so",
+    "locale": "so",
+    "nativeName": "Soomaaliga"
+  },
+  {
+    "enDisplayName": "Swahili",
+    "code": "swa",
+    "locale": "swa",
+    "nativeName": "Kiswahili"
+  },
+  {
+    "enDisplayName": "Tamil",
+    "code": "ta",
+    "locale": "ta_IN",
+    "nativeName": "தமிழ்"
+  },
+  {
+    "enDisplayName": "Telugu",
+    "code": "te",
+    "locale": "te",
+    "nativeName": "తెలుగు"
+  },
+  {
+    "enDisplayName": "Thai",
+    "code": "th",
+    "locale": "th_TH",
+    "nativeName": "ไทย"
+  },
+  {
+    "enDisplayName": "Vietnamese",
+    "code": "vi",
+    "locale": "vi",
+    "nativeName": "Tiếng Việt"
+  },
+  {
+    "enDisplayName": "Yoruba",
+    "code": "yo",
+    "locale": "yo",
+    "nativeName": "Yorùbá"
+  }
+]
