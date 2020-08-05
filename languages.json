@@ -3,162 +3,217 @@
     "enDisplayName": "English",
     "code": "en",
     "locale": "en",
-    "nativeName": "English"
+    "nativeName": "English",
+    "rtl": false
+  },
+  {
+    "enDisplayName": "Arabic",
+    "code": "ar",
+    "locale": "ar_LB",
+    "nativeName": "العربية",
+    "rtl": true
+  },
+  {
+    "enDisplayName": "Arabic (JO)",
+    "code": "ar_jo",
+    "locale": "ar_JO",
+    "nativeName": "العربية - الأردن",
+    "rtl": true
   },
   {
     "enDisplayName": "Bhojpuri",
     "code": "bho",
     "locale": "bho",
-    "nativeName": "भोजपुरी"
+    "nativeName": "भोजपुरी",
+    "rtl": false
   },
   {
     "enDisplayName": "Bengali (India)",
     "code": "bn",
     "locale": "bn_IN",
-    "nativeName": "বাংলা"
+    "nativeName": "বাংলা",
+    "rtl": false
+  },
+  {
+    "enDisplayName": "Farsi/Persian",
+    "code": "fa",
+    "locale": "fa_IR",
+    "nativeName": "فارسی",
+    "rtl": true
   },
   {
     "enDisplayName": "French",
     "code": "fr",
     "locale": "fr_FR",
-    "nativeName": "Français"
+    "nativeName": "Français",
+    "rtl": false
+  },
+  {
+    "enDisplayName": "Hausa",
+    "code": "ha",
+    "locale": "ha_NG",
+    "nativeName": "هَوُسَ",
+    "rtl": true
   },
   {
     "enDisplayName": "Hindi",
     "code": "hi",
     "locale": "hi_IN",
-    "nativeName": "हिंदी"
+    "nativeName": "हिंदी",
+    "rtl": false
   },
   {
     "enDisplayName": "Indonesian",
     "code": "id",
     "locale": "id_ID",
-    "nativeName": "Bahasa Indonesia"
+    "nativeName": "Bahasa Indonesia",
+    "rtl": false
   },
   {
     "enDisplayName": "Italian",
     "code": "it",
     "locale": "it_IT",
-    "nativeName": "Italiano"
+    "nativeName": "Italiano",
+    "rtl": false
   },
   {
     "enDisplayName": "Kannada",
     "code": "kn",
     "locale": "kn",
-    "nativeName": "ಕನ್ನಡ"
+    "nativeName": "ಕನ್ನಡ",
+    "rtl": false
   },
   {
     "enDisplayName": "Korean",
     "code": "ko",
     "locale": "ko_KR",
-    "nativeName": "한국어"
+    "nativeName": "한국어",
+    "rtl": false
   },
   {
     "enDisplayName": "Lao",
     "code": "lo",
     "locale": "lo",
-    "nativeName": "ພາສາລາວ"
+    "nativeName": "ພາສາລາວ",
+    "rtl": false
   },
   {
     "enDisplayName": "Mandarin (Simplified)",
     "code": "zhcn",
     "locale": "zh_CN",
-    "nativeName": "简体中文"
+    "nativeName": "简体中文",
+    "rtl": false
   },
   {
     "enDisplayName": "Mandarin (Traditional)",
     "code": "zhtw",
     "locale": "zh_TW",
-    "nativeName": "繁體中文"
+    "nativeName": "繁體中文",
+    "rtl": false
   },
   {
     "enDisplayName": "Marathi",
     "code": "mr",
     "locale": "mr",
-    "nativeName": "मराठी"
+    "nativeName": "मराठी",
+    "rtl": false
   },
   {
     "enDisplayName": "Malayalam",
     "code": "ml",
     "locale": "ml_IN",
-    "nativeName": "മലയാളം"
+    "nativeName": "മലയാളം",
+    "rtl": false
   },
   {
     "enDisplayName": "Oriya",
     "code": "or",
     "locale": "or_IN",
-    "nativeName": "ଓଡ଼ିଆ"
+    "nativeName": "ଓଡ଼ିଆ",
+    "rtl": false
   },
   {
     "enDisplayName": "Panjabi",
     "code": "pa",
     "locale": "pa_IN",
-    "nativeName": "Apagibete"
+    "nativeName": "Apagibete",
+    "rtl": false
   },
   {
     "enDisplayName": "Portuguese",
     "code": "pt",
     "locale": "pt_PT",
-    "nativeName": "Português"
+    "nativeName": "Português",
+    "rtl": false
   },
   {
     "enDisplayName": "Russian",
     "code": "ru",
     "locale": "ru_RU",
-    "nativeName": "русский"
+    "nativeName": "русский",
+    "rtl": false
   },
   {
     "enDisplayName": "Romanian",
     "code": "ro",
     "locale": "ro_RO",
-    "nativeName": "Română"
+    "nativeName": "Română",
+    "rtl": false
   },
   {
     "enDisplayName": "Spanish",
     "code": "es",
     "locale": "es",
-    "nativeName": "Español"
+    "nativeName": "Español",
+    "rtl": false
   },
   {
     "enDisplayName": "Somali",
     "code": "so",
     "locale": "so",
-    "nativeName": "Soomaaliga"
+    "nativeName": "Soomaaliga",
+    "rtl": false
   },
   {
     "enDisplayName": "Swahili",
     "code": "swa",
     "locale": "swa",
-    "nativeName": "Kiswahili"
+    "nativeName": "Kiswahili",
+    "rtl": false
   },
   {
     "enDisplayName": "Tamil",
     "code": "ta",
     "locale": "ta_IN",
-    "nativeName": "தமிழ்"
+    "nativeName": "தமிழ்",
+    "rtl": false
   },
   {
     "enDisplayName": "Telugu",
     "code": "te",
     "locale": "te",
-    "nativeName": "తెలుగు"
+    "nativeName": "తెలుగు",
+    "rtl": false
   },
   {
     "enDisplayName": "Thai",
     "code": "th",
     "locale": "th_TH",
-    "nativeName": "ไทย"
+    "nativeName": "ไทย",
+    "rtl": false
   },
   {
     "enDisplayName": "Vietnamese",
     "code": "vi",
     "locale": "vi",
-    "nativeName": "Tiếng Việt"
+    "nativeName": "Tiếng Việt",
+    "rtl": false
   },
   {
     "enDisplayName": "Yoruba",
     "code": "yo",
     "locale": "yo",
-    "nativeName": "Yorùbá"
+    "nativeName": "Yorùbá",
+    "rtl": false
   }
 ]
