@@ -58,9 +58,7 @@ class Zume_V4_REST_API {
             array(
                 'methods'         => WP_REST_Server::CREATABLE,
                 'callback'        => array( $this, 'progress_update' ),
-                "permission_callback" => function () {
-                    return current_user_can( 'subscriber' );
-                }
+
             ),
         ) );
 
@@ -69,27 +67,21 @@ class Zume_V4_REST_API {
             array(
                 'methods'         => WP_REST_Server::CREATABLE,
                 'callback'        => array( $this, 'groups_create' ),
-                "permission_callback" => function () {
-                    return current_user_can( 'subscriber' );
-                }
+
             ),
         ) );
         register_rest_route( $namespace, '/groups/read', array(
             array(
                 'methods'         => WP_REST_Server::CREATABLE,
                 'callback'        => array( $this, 'groups_read' ),
-                "permission_callback" => function () {
-                    return current_user_can( 'subscriber' );
-                }
+
             ),
         ) );
         register_rest_route( $namespace, '/groups/update', array(
             array(
                 'methods'         => WP_REST_Server::CREATABLE,
                 'callback'        => array( $this, 'groups_update' ),
-                "permission_callback" => function () {
-                    return current_user_can( 'subscriber' );
-                }
+
             ),
         ) );
 
@@ -98,9 +90,7 @@ class Zume_V4_REST_API {
             array(
                 'methods'         => WP_REST_Server::CREATABLE,
                 'callback'        => array( $this, 'location_update' ),
-                "permission_callback" => function () {
-                    return current_user_can( 'subscriber' );
-                }
+
             ),
         ) );
         register_rest_route( $namespace, '/coaching_request', array(
@@ -113,18 +103,14 @@ class Zume_V4_REST_API {
             array(
                 'methods'         => WP_REST_Server::CREATABLE,
                 'callback'        => array( $this, 'update_profile' ),
-                "permission_callback" => function () {
-                    return current_user_can( 'subscriber' );
-                }
+
             ),
         ) );
         register_rest_route( $namespace, '/unlink_profile', array(
             array(
                 'methods'         => WP_REST_Server::CREATABLE,
                 'callback'        => array( $this, 'unlink_profile' ),
-                "permission_callback" => function () {
-                    return current_user_can( 'subscriber' );
-                }
+
             ),
         ) );
         register_rest_route( $namespace, '/piece/(?P<id>\d+)', array(
