@@ -55,6 +55,8 @@ $current_language = zume_current_language();
 
             jQuery('#pieces-wrapper').foundation('open')
 
+            window.zume_vision_logging({'action': 'studying_'+id, 'language': '<?php echo esc_attr( zume_current_language() ) ?>' })
+
         }
         jQuery('.open-modal').on('click', function() {
 
