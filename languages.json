@@ -49,6 +49,13 @@
     "rtl": false
   },
   {
+    "enDisplayName": "Gujarati",
+    "code": "gu",
+    "locale": "gu",
+    "nativeName": "ગુજરાતી",
+    "rtl": false
+  },
+  {
     "enDisplayName": "Hausa",
     "code": "ha",
     "locale": "ha_NG",

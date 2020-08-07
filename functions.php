@@ -143,6 +143,7 @@ function zume_v4_ready_language() {
     $ready['ml'] = true;
     $ready['vi'] = true;
     $ready['es'] = true;
+    $ready['gu'] = true;
 
     $current = zume_current_language();
 
