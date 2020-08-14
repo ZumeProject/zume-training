@@ -1,8 +1,8 @@
-[![Build Status](https://travis-ci.org/googleapis/google-api-php-client.svg?branch=master)](https://travis-ci.org/googleapis/google-api-php-client)
+![](https://github.com/googleapis/google-api-php-client/workflows/.github/workflows/tests.yml/badge.svg)
 
 # Google APIs Client Library for PHP #
 
-The Google API Client Library enables you to work with Google APIs such as Google+, Drive, or YouTube on your server.
+The Google API Client Library enables you to work with Google APIs such as Gmail, Drive or YouTube on your server.
 
 These client libraries are officially supported by Google.  However, the libraries are considered complete and are in maintenance mode. This means that we will address critical bugs and security issues but will not add any new features.
 
@@ -32,13 +32,68 @@ composer installed.
 Once composer is installed, execute the following command in your project root to install this library:
 
 ```sh
-composer require google/apiclient:"^2.0"
+composer require google/apiclient:"^2.7"
 ```
 
 Finally, be sure to include the autoloader:
 
 ```php
 require_once '/path/to/your-project/vendor/autoload.php';
+```
+
+This library relies on `google/apiclient-services`. That library provides up-to-date API wrappers for a large number of Google APIs. In order that users may make use of the latest API clients, this library does not pin to a specific version of `google/apiclient-services`. **In order to prevent the accidental installation of API wrappers with breaking changes**, it is highly recommended that you pin to the [latest version](https://github.com/googleapis/google-api-php-client-services/releases) yourself prior to using this library in production.
+
+#### Cleaning up unused services
+
+There are over 200 Google API services. The chances are good that you will not
+want them all. In order to avoid shipping these dependencies with your code,
+you can run the `Google_Task_Composer::cleanup` task and specify the services
+you want to keep in `composer.json`:
+
+```json
+{
+    "require": {
+        "google/apiclient": "^2.7"
+    },
+    "scripts": {
+        "post-update-cmd": "Google_Task_Composer::cleanup"
+    },
+    "extra": {
+        "google/apiclient-services": [
+            "Drive",
+            "YouTube"
+        ]
+    }
+}
+```
+
+This example will remove all services other than "Drive" and "YouTube" when
+`composer update` or a fresh `composer install` is run.
+
+**IMPORTANT**: If you add any services back in `composer.json`, you will need to
+remove the `vendor/google/apiclient-services` directory explicity for the
+change you made to have effect:
+
+```sh
+rm -r vendor/google/apiclient-services
+composer update
+```
+
+**NOTE**: This command performs an exact match on the service name, so to keep
+`YouTubeReporting` and `YouTubeAnalytics` as well, you'd need to add each of
+them explicitly:
+
+```json
+{
+    "extra": {
+        "google/apiclient-services": [
+            "Drive",
+            "YouTube",
+            "YouTubeAnalytics",
+            "YouTubeReporting"
+        ]
+    }
+}
 ```
 
 ### Download the Release
@@ -79,7 +134,7 @@ $service = new Google_Service_Books($client);
 $optParams = array('filter' => 'free-ebooks');
 $results = $service->volumes->listVolumes('Henry David Thoreau', $optParams);
 
-foreach ($results as $item) {
+foreach ($results->getItems() as $item) {
   echo $item['volumeInfo']['title'], "<br /> \n";
 }
 ```
@@ -241,6 +296,8 @@ The method used is a matter of preference, but *it will be very difficult to use
 ### Making HTTP Requests Directly ###
 
 If Google Authentication is desired for external applications, or a Google API is not available yet in this library, HTTP requests can be made directly.
+
+If you are installing this client only to authenticate your own HTTP client requests, you should use [`google/auth`](https://github.com/googleapis/google-auth-library-php#call-the-apis) instead.
 
 The `authorize` method returns an authorized [Guzzle Client](http://docs.guzzlephp.org/), so any request made using the client will contain the corresponding authorization.
 

@@ -28,7 +28,9 @@ class Google_Service_CloudHealthcare_Resource_ProjectsLocationsDatasetsDicomStor
   /**
    * DeleteInstance deletes an instance associated with the given study, series,
    * and SOP Instance UID. Delete requests are equivalent to the GET requests
-   * specified in the WADO-RS standard. (instances.delete)
+   * specified in the Retrieve transaction. Study and series search results can
+   * take a few seconds to be updated after an instance is deleted using
+   * DeleteInstance. (instances.delete)
    *
    * @param string $parent The name of the DICOM store that is being accessed. For
    * example, `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}
@@ -46,8 +48,9 @@ class Google_Service_CloudHealthcare_Resource_ProjectsLocationsDatasetsDicomStor
   }
   /**
    * RetrieveInstance returns instance associated with the given study, series,
-   * and SOP Instance UID. See http://dicom.nema.org/medical/dicom/current/output/
-   * html/part18.html#sect_10.4. (instances.retrieveInstance)
+   * and SOP Instance UID. See [RetrieveTransaction] (http://dicom.nema.org/medica
+   * l/dicom/current/output/html/part18.html#sect_10.4).
+   * (instances.retrieveInstance)
    *
    * @param string $parent The name of the DICOM store that is being accessed. For
    * example, `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}
@@ -67,8 +70,8 @@ class Google_Service_CloudHealthcare_Resource_ProjectsLocationsDatasetsDicomStor
   /**
    * RetrieveInstanceMetadata returns instance associated with the given study,
    * series, and SOP Instance UID presented as metadata with the bulk data
-   * removed. See http://dicom.nema.org/medical/dicom/current/output/html/part18.h
-   * tml#sect_10.4. (instances.retrieveMetadata)
+   * removed. See [RetrieveTransaction] (http://dicom.nema.org/medical/dicom/curre
+   * nt/output/html/part18.html#sect_10.4). (instances.retrieveMetadata)
    *
    * @param string $parent The name of the DICOM store that is being accessed. For
    * example, `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}
@@ -87,9 +90,9 @@ class Google_Service_CloudHealthcare_Resource_ProjectsLocationsDatasetsDicomStor
   }
   /**
    * RetrieveRenderedInstance returns instance associated with the given study,
-   * series, and SOP Instance UID in an acceptable Rendered Media Type. See http:/
-   * /dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.4.
-   * (instances.retrieveRendered)
+   * series, and SOP Instance UID in an acceptable Rendered Media Type. See
+   * [RetrieveTransaction] (http://dicom.nema.org/medical/dicom/current/output/htm
+   * l/part18.html#sect_10.4). (instances.retrieveRendered)
    *
    * @param string $parent The name of the DICOM store that is being accessed. For
    * example, `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}

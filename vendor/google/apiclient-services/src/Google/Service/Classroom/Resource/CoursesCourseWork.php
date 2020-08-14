@@ -127,19 +127,19 @@ class Google_Service_Classroom_Resource_CoursesCourseWork extends Google_Service
    * unspecified indicates that the server may assign a maximum.
    *
    * The server may return fewer than the specified number of results.
-   * @opt_param string courseWorkStates Restriction on the work status to return.
-   * Only courseWork that matches is returned. If unspecified, items with a work
-   * status of `PUBLISHED` is returned.
-   * @opt_param string orderBy Optional sort ordering for results. A comma-
-   * separated list of fields with an optional sort direction keyword. Supported
-   * fields are `updateTime` and `dueDate`. Supported direction keywords are `asc`
-   * and `desc`. If not specified, `updateTime desc` is the default behavior.
-   * Examples: `dueDate asc,updateTime desc`, `updateTime,dueDate desc`
    * @opt_param string pageToken nextPageToken value returned from a previous list
    * call, indicating that the subsequent page of results should be returned.
    *
    * The list request must be otherwise identical to the one that resulted in this
    * token.
+   * @opt_param string orderBy Optional sort ordering for results. A comma-
+   * separated list of fields with an optional sort direction keyword. Supported
+   * fields are `updateTime` and `dueDate`. Supported direction keywords are `asc`
+   * and `desc`. If not specified, `updateTime desc` is the default behavior.
+   * Examples: `dueDate asc,updateTime desc`, `updateTime,dueDate desc`
+   * @opt_param string courseWorkStates Restriction on the work status to return.
+   * Only courseWork that matches is returned. If unspecified, items with a work
+   * status of `PUBLISHED` is returned.
    * @return Google_Service_Classroom_ListCourseWorkResponse
    */
   public function listCoursesCourseWork($courseId, $optParams = array())
@@ -205,7 +205,7 @@ class Google_Service_Classroom_Resource_CoursesCourseWork extends Google_Service
    * invalid fields are specified. If a field supports empty values, it can be
    * cleared by specifying it in the update mask and not in the CourseWork object.
    * If a field that does not support empty values is included in the update mask
-   * and not set in the CourseWork object, an `INVALID_ARGUMENT` error will be
+   * and not set in the CourseWork object, an `INVALID_ARGUMENT` error is
    * returned.
    *
    * The following fields may be specified by teachers:

@@ -79,11 +79,11 @@ class Google_Service_SecurityCommandCenter_Resource_OrganizationsSources extends
    * list. Its format should be "organizations/[organization_id]".
    * @param array $optParams Optional parameters.
    *
+   * @opt_param int pageSize The maximum number of results to return in a single
+   * response. Default is 10, minimum is 1, maximum is 1000.
    * @opt_param string pageToken The value returned by the last
    * `ListSourcesResponse`; indicates that this is a continuation of a prior
    * `ListSources` call, and that the system should return the next page of data.
-   * @opt_param int pageSize The maximum number of results to return in a single
-   * response. Default is 10, minimum is 1, maximum is 1000.
    * @return Google_Service_SecurityCommandCenter_ListSourcesResponse
    */
   public function listOrganizationsSources($parent, $optParams = array())
@@ -97,7 +97,7 @@ class Google_Service_SecurityCommandCenter_Resource_OrganizationsSources extends
    *
    * @param string $name The relative resource name of this source. See:
    * https://cloud.google.com/apis/design/resource_names#relative_resource_name
-   * Example: "organizations/123/sources/456"
+   * Example: "organizations/{organization_id}/sources/{source_id}"
    * @param Google_Service_SecurityCommandCenter_Source $postBody
    * @param array $optParams Optional parameters.
    *

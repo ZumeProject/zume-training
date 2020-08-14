@@ -27,8 +27,9 @@ class Google_Service_CloudHealthcare_Resource_ProjectsLocationsDatasetsDicomStor
 {
   /**
    * DeleteSeries deletes all instances within the given study and series. Delete
-   * requests are equivalent to the GET requests specified in the WADO-RS
-   * standard. (series.delete)
+   * requests are equivalent to the GET requests specified in the Retrieve
+   * transaction. The method returns an Operation which will be marked successful
+   * when the deletion is complete. (series.delete)
    *
    * @param string $parent The name of the DICOM store that is being accessed. For
    * example, `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}
@@ -36,19 +37,19 @@ class Google_Service_CloudHealthcare_Resource_ProjectsLocationsDatasetsDicomStor
    * @param string $dicomWebPath The path of the DeleteSeries request. For
    * example, `studies/{study_uid}/series/{series_uid}`.
    * @param array $optParams Optional parameters.
-   * @return Google_Service_CloudHealthcare_HealthcareEmpty
+   * @return Google_Service_CloudHealthcare_Operation
    */
   public function delete($parent, $dicomWebPath, $optParams = array())
   {
     $params = array('parent' => $parent, 'dicomWebPath' => $dicomWebPath);
     $params = array_merge($params, $optParams);
-    return $this->call('delete', array($params), "Google_Service_CloudHealthcare_HealthcareEmpty");
+    return $this->call('delete', array($params), "Google_Service_CloudHealthcare_Operation");
   }
   /**
    * RetrieveSeriesMetadata returns instance associated with the given study and
-   * series, presented as metadata with the bulk data removed. See http://dicom.ne
-   * ma.org/medical/dicom/current/output/html/part18.html#sect_10.4.
-   * (series.retrieveMetadata)
+   * series, presented as metadata with the bulk data removed. See
+   * [RetrieveTransaction] (http://dicom.nema.org/medical/dicom/current/output/htm
+   * l/part18.html#sect_10.4). (series.retrieveMetadata)
    *
    * @param string $parent The name of the DICOM store that is being accessed. For
    * example, `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}
@@ -65,9 +66,9 @@ class Google_Service_CloudHealthcare_Resource_ProjectsLocationsDatasetsDicomStor
     return $this->call('retrieveMetadata', array($params), "Google_Service_CloudHealthcare_HttpBody");
   }
   /**
-   * RetrieveSeries returns all instances within the given study and series. See h
-   * ttp://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.4.
-   * (series.retrieveSeries)
+   * RetrieveSeries returns all instances within the given study and series. See
+   * [RetrieveTransaction] (http://dicom.nema.org/medical/dicom/current/output/htm
+   * l/part18.html#sect_10.4). (series.retrieveSeries)
    *
    * @param string $parent The name of the DICOM store that is being accessed. For
    * example, `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}
@@ -84,9 +85,9 @@ class Google_Service_CloudHealthcare_Resource_ProjectsLocationsDatasetsDicomStor
     return $this->call('retrieveSeries', array($params), "Google_Service_CloudHealthcare_HttpBody");
   }
   /**
-   * SearchForInstances returns a list of matching instances. See http://dicom.nem
-   * a.org/medical/dicom/current/output/html/part18.html#sect_10.6.
-   * (series.searchForInstances)
+   * SearchForInstances returns a list of matching instances. See [Search
+   * Transaction] (http://dicom.nema.org/medical/dicom/current/output/html/part18.
+   * html#sect_10.6). (series.searchForInstances)
    *
    * @param string $parent The name of the DICOM store that is being accessed. For
    * example, `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}

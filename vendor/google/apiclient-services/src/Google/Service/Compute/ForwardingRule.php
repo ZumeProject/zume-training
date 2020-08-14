@@ -25,11 +25,14 @@ class Google_Service_Compute_ForwardingRule extends Google_Collection
   public $iPAddress;
   public $iPProtocol;
   public $allPorts;
+  public $allowGlobalAccess;
   public $backendService;
   public $creationTimestamp;
   public $description;
+  public $fingerprint;
   public $id;
   public $ipVersion;
+  public $isMirroringCollector;
   public $kind;
   public $loadBalancingScheme;
   protected $metadataFiltersType = 'Google_Service_Compute_MetadataFilter';
@@ -70,6 +73,14 @@ class Google_Service_Compute_ForwardingRule extends Google_Collection
   {
     return $this->allPorts;
   }
+  public function setAllowGlobalAccess($allowGlobalAccess)
+  {
+    $this->allowGlobalAccess = $allowGlobalAccess;
+  }
+  public function getAllowGlobalAccess()
+  {
+    return $this->allowGlobalAccess;
+  }
   public function setBackendService($backendService)
   {
     $this->backendService = $backendService;
@@ -94,6 +105,14 @@ class Google_Service_Compute_ForwardingRule extends Google_Collection
   {
     return $this->description;
   }
+  public function setFingerprint($fingerprint)
+  {
+    $this->fingerprint = $fingerprint;
+  }
+  public function getFingerprint()
+  {
+    return $this->fingerprint;
+  }
   public function setId($id)
   {
     $this->id = $id;
@@ -109,6 +128,14 @@ class Google_Service_Compute_ForwardingRule extends Google_Collection
   public function getIpVersion()
   {
     return $this->ipVersion;
+  }
+  public function setIsMirroringCollector($isMirroringCollector)
+  {
+    $this->isMirroringCollector = $isMirroringCollector;
+  }
+  public function getIsMirroringCollector()
+  {
+    return $this->isMirroringCollector;
   }
   public function setKind($kind)
   {

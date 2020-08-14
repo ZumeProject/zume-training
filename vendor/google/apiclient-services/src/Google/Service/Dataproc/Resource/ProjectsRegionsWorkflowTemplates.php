@@ -119,8 +119,11 @@ class Google_Service_Dataproc_Resource_ProjectsRegionsWorkflowTemplates extends 
    * will complete when entire workflow is finished.The running workflow can be
    * aborted via operations.cancel. This will cause any inflight jobs to be
    * cancelled and workflow-owned clusters to be deleted.The Operation.metadata
-   * will be WorkflowMetadata. Also see Using WorkflowMetadata.On successful
-   * completion, Operation.response will be Empty. (workflowTemplates.instantiate)
+   * will be WorkflowMetadata (https://cloud.google.com/dataproc/docs/reference/rp
+   * c/google.cloud.dataproc.v1#workflowmetadata). Also see Using WorkflowMetadata
+   * (https://cloud.google.com/dataproc/docs/concepts/workflows/debugging#using_wo
+   * rkflowmetadata).On successful completion, Operation.response will be Empty.
+   * (workflowTemplates.instantiate)
    *
    * @param string $name Required. The resource name of the workflow template, as
    * described in https://cloud.google.com/apis/design/resource_names. For
@@ -148,8 +151,11 @@ class Google_Service_Dataproc_Resource_ProjectsRegionsWorkflowTemplates extends 
    * entire workflow is finished.The running workflow can be aborted via
    * operations.cancel. This will cause any inflight jobs to be cancelled and
    * workflow-owned clusters to be deleted.The Operation.metadata will be
-   * WorkflowMetadata. Also see Using WorkflowMetadata.On successful completion,
-   * Operation.response will be Empty. (workflowTemplates.instantiateInline)
+   * WorkflowMetadata (https://cloud.google.com/dataproc/docs/reference/rpc/google
+   * .cloud.dataproc.v1#workflowmetadata). Also see Using WorkflowMetadata (https:
+   * //cloud.google.com/dataproc/docs/concepts/workflows/debugging#using_workflowm
+   * etadata).On successful completion, Operation.response will be Empty.
+   * (workflowTemplates.instantiateInline)
    *
    * @param string $parent Required. The resource name of the region or location,
    * as described in https://cloud.google.com/apis/design/resource_names. For
@@ -188,10 +194,10 @@ class Google_Service_Dataproc_Resource_ProjectsRegionsWorkflowTemplates extends 
    * has the following format:  projects/{project_id}/locations/{location}
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string pageToken Optional. The page token, returned by a previous
-   * call, to request the next page of results.
    * @opt_param int pageSize Optional. The maximum number of results to return in
    * each response.
+   * @opt_param string pageToken Optional. The page token, returned by a previous
+   * call, to request the next page of results.
    * @return Google_Service_Dataproc_ListWorkflowTemplatesResponse
    */
   public function listProjectsRegionsWorkflowTemplates($parent, $optParams = array())
@@ -202,7 +208,8 @@ class Google_Service_Dataproc_Resource_ProjectsRegionsWorkflowTemplates extends 
   }
   /**
    * Sets the access control policy on the specified resource. Replaces any
-   * existing policy. (workflowTemplates.setIamPolicy)
+   * existing policy.Can return NOT_FOUND, INVALID_ARGUMENT, and PERMISSION_DENIED
+   * errors. (workflowTemplates.setIamPolicy)
    *
    * @param string $resource REQUIRED: The resource for which the policy is being
    * specified. See the operation documentation for the appropriate value for this

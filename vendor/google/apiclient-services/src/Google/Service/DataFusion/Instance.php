@@ -18,6 +18,8 @@
 class Google_Service_DataFusion_Instance extends Google_Collection
 {
   protected $collection_key = 'availableVersion';
+  protected $acceleratorsType = 'Google_Service_DataFusion_Accelerator';
+  protected $acceleratorsDataType = 'array';
   public $apiEndpoint;
   protected $availableVersionType = 'Google_Service_DataFusion_Version';
   protected $availableVersionDataType = 'array';
@@ -26,6 +28,7 @@ class Google_Service_DataFusion_Instance extends Google_Collection
   public $displayName;
   public $enableStackdriverLogging;
   public $enableStackdriverMonitoring;
+  public $gcsBucket;
   public $labels;
   public $name;
   protected $networkConfigType = 'Google_Service_DataFusion_NetworkConfig';
@@ -41,6 +44,20 @@ class Google_Service_DataFusion_Instance extends Google_Collection
   public $version;
   public $zone;
 
+  /**
+   * @param Google_Service_DataFusion_Accelerator
+   */
+  public function setAccelerators($accelerators)
+  {
+    $this->accelerators = $accelerators;
+  }
+  /**
+   * @return Google_Service_DataFusion_Accelerator
+   */
+  public function getAccelerators()
+  {
+    return $this->accelerators;
+  }
   public function setApiEndpoint($apiEndpoint)
   {
     $this->apiEndpoint = $apiEndpoint;
@@ -102,6 +119,14 @@ class Google_Service_DataFusion_Instance extends Google_Collection
   public function getEnableStackdriverMonitoring()
   {
     return $this->enableStackdriverMonitoring;
+  }
+  public function setGcsBucket($gcsBucket)
+  {
+    $this->gcsBucket = $gcsBucket;
+  }
+  public function getGcsBucket()
+  {
+    return $this->gcsBucket;
   }
   public function setLabels($labels)
   {

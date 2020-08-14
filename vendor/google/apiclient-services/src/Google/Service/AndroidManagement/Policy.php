@@ -21,6 +21,8 @@ class Google_Service_AndroidManagement_Policy extends Google_Collection
   public $accountTypesWithManagementDisabled;
   public $addUserDisabled;
   public $adjustVolumeDisabled;
+  protected $advancedSecurityOverridesType = 'Google_Service_AndroidManagement_AdvancedSecurityOverrides';
+  protected $advancedSecurityOverridesDataType = '';
   protected $alwaysOnVpnPackageType = 'Google_Service_AndroidManagement_AlwaysOnVpnPackage';
   protected $alwaysOnVpnPackageDataType = '';
   public $androidDevicePolicyTracks;
@@ -55,6 +57,8 @@ class Google_Service_AndroidManagement_Policy extends Google_Collection
   public $keyguardDisabled;
   public $keyguardDisabledFeatures;
   public $kioskCustomLauncherEnabled;
+  protected $kioskCustomizationType = 'Google_Service_AndroidManagement_KioskCustomization';
+  protected $kioskCustomizationDataType = '';
   public $locationMode;
   protected $longSupportMessageType = 'Google_Service_AndroidManagement_UserFacingMessage';
   protected $longSupportMessageDataType = '';
@@ -81,6 +85,8 @@ class Google_Service_AndroidManagement_Policy extends Google_Collection
   protected $permittedInputMethodsDataType = '';
   protected $persistentPreferredActivitiesType = 'Google_Service_AndroidManagement_PersistentPreferredActivity';
   protected $persistentPreferredActivitiesDataType = 'array';
+  protected $personalUsagePoliciesType = 'Google_Service_AndroidManagement_PersonalUsagePolicies';
+  protected $personalUsagePoliciesDataType = '';
   public $playStoreMode;
   protected $policyEnforcementRulesType = 'Google_Service_AndroidManagement_PolicyEnforcementRule';
   protected $policyEnforcementRulesDataType = 'array';
@@ -138,6 +144,20 @@ class Google_Service_AndroidManagement_Policy extends Google_Collection
   public function getAdjustVolumeDisabled()
   {
     return $this->adjustVolumeDisabled;
+  }
+  /**
+   * @param Google_Service_AndroidManagement_AdvancedSecurityOverrides
+   */
+  public function setAdvancedSecurityOverrides(Google_Service_AndroidManagement_AdvancedSecurityOverrides $advancedSecurityOverrides)
+  {
+    $this->advancedSecurityOverrides = $advancedSecurityOverrides;
+  }
+  /**
+   * @return Google_Service_AndroidManagement_AdvancedSecurityOverrides
+   */
+  public function getAdvancedSecurityOverrides()
+  {
+    return $this->advancedSecurityOverrides;
   }
   /**
    * @param Google_Service_AndroidManagement_AlwaysOnVpnPackage
@@ -401,6 +421,20 @@ class Google_Service_AndroidManagement_Policy extends Google_Collection
   {
     return $this->kioskCustomLauncherEnabled;
   }
+  /**
+   * @param Google_Service_AndroidManagement_KioskCustomization
+   */
+  public function setKioskCustomization(Google_Service_AndroidManagement_KioskCustomization $kioskCustomization)
+  {
+    $this->kioskCustomization = $kioskCustomization;
+  }
+  /**
+   * @return Google_Service_AndroidManagement_KioskCustomization
+   */
+  public function getKioskCustomization()
+  {
+    return $this->kioskCustomization;
+  }
   public function setLocationMode($locationMode)
   {
     $this->locationMode = $locationMode;
@@ -594,6 +628,20 @@ class Google_Service_AndroidManagement_Policy extends Google_Collection
   public function getPersistentPreferredActivities()
   {
     return $this->persistentPreferredActivities;
+  }
+  /**
+   * @param Google_Service_AndroidManagement_PersonalUsagePolicies
+   */
+  public function setPersonalUsagePolicies(Google_Service_AndroidManagement_PersonalUsagePolicies $personalUsagePolicies)
+  {
+    $this->personalUsagePolicies = $personalUsagePolicies;
+  }
+  /**
+   * @return Google_Service_AndroidManagement_PersonalUsagePolicies
+   */
+  public function getPersonalUsagePolicies()
+  {
+    return $this->personalUsagePolicies;
   }
   public function setPlayStoreMode($playStoreMode)
   {

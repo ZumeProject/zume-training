@@ -31,8 +31,8 @@ class Google_Service_FirebaseManagement_Resource_Projects extends Google_Service
    * manager/reference/rest/v1/projects).
    *
    * Since a FirebaseProject is actually also a GCP `Project`, a `FirebaseProject`
-   * uses underlying GCP identifiers (most importantly, the `projectId`) as its
-   * own for easy interop with GCP APIs.
+   * has the same underlying GCP identifiers (`projectNumber` and `projectId`).
+   * This allows for easy interop with Google APIs.
    *
    * The result of this call is an [`Operation`](../../v1beta1/operations). Poll
    * the `Operation` to track the provisioning process by calling GetOperation
@@ -48,15 +48,24 @@ class Google_Service_FirebaseManagement_Resource_Projects extends Google_Service
    * This method does not modify any billing account information on the underlying
    * GCP `Project`.
    *
-   * To call `AddFirebase`, a member must be an Editor or Owner for the existing
-   * GCP `Project`. Service accounts cannot call `AddFirebase`.
+   * To call `AddFirebase`, a project member or service account must have the
+   * following permissions (the IAM roles of Editor and Owner contain these
+   * permissions): `firebase.projects.update`, `resourcemanager.projects.get`,
+   * `serviceusage.services.enable`, and `serviceusage.services.get`.
    * (projects.addFirebase)
    *
    * @param string $project The resource name of the GCP `Project` to which
-   * Firebase resources will be added, in the format: projects/projectId After
-   * calling `AddFirebase`, the [`projectId`](https://cloud.google.com/resource-
-   * manager/reference/rest/v1/projects#Project.FIELDS.project_id) of the GCP
-   * `Project` is also the `projectId` of the FirebaseProject.
+   * Firebase resources will be added, in the format: projects/PROJECT_IDENTIFIER
+   * Refer to the `FirebaseProject`
+   * [`name`](../projects#FirebaseProject.FIELDS.name) field for details about
+   * PROJECT_IDENTIFIER values.
+   *
+   * After calling `AddFirebase`, the unique Project identifiers (
+   * [`projectNumber`](https://cloud.google.com/resource-
+   * manager/reference/rest/v1/projects#Project.FIELDS.project_number) and
+   * [`projectId`](https://cloud.google.com/resource-
+   * manager/reference/rest/v1/projects#Project.FIELDS.project_id)) of the
+   * underlying GCP `Project` are also the identifiers of the FirebaseProject.
    * @param Google_Service_FirebaseManagement_AddFirebaseRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_FirebaseManagement_Operation
@@ -68,27 +77,28 @@ class Google_Service_FirebaseManagement_Resource_Projects extends Google_Service
     return $this->call('addFirebase', array($params), "Google_Service_FirebaseManagement_Operation");
   }
   /**
-   * Links a FirebaseProject with an existing [Google Analytics
+   * Links the specified FirebaseProject with an existing [Google Analytics
    * account](http://www.google.com/analytics/).
    *
    * Using this call, you can either:
    *
-   * Specify an `analyticsAccountId` to provision a new Google Analytics property
-   * within the specified account and associate the new property with your
-   * `FirebaseProject`. Specify an existing `analyticsPropertyId` to associate the
-   * property with your `FirebaseProject`.
+   * Specify an `analyticsAccountId` to provision a new Google Analytics
+   * property within the specified account and associate the new property with
+   * the `FirebaseProject`. Specify an existing `analyticsPropertyId` to associate
+   * the property   with the `FirebaseProject`.
    *
    * Note that when you call `AddGoogleAnalytics`:
    *
-   * The first check determines if any existing data streams in the Google
-   * Analytics property correspond to any existing Firebase Apps in your
-   * `FirebaseProject` (based on the `packageName` or `bundleId` associated with
-   * the data stream). Then, as applicable, the data streams and apps are linked.
-   * Note that this auto-linking only applies to Android Apps and iOS Apps. If no
-   * corresponding data streams are found for your Firebase Apps, new data streams
-   * are provisioned in the Google Analytics property for each of your Firebase
-   * Apps. Note that a new data stream is always provisioned for a Web App even if
-   * it was previously associated with a data stream in your Analytics property.
+   * The first check determines if any existing data streams in the   Google
+   * Analytics property correspond to any existing Firebase Apps in the
+   * `FirebaseProject` (based on the `packageName` or `bundleId` associated   with
+   * the data stream). Then, as applicable, the data streams and apps are
+   * linked. Note that this auto-linking only applies to `AndroidApps` and
+   * `IosApps`. If no corresponding data streams are found for the Firebase Apps,
+   * new   data streams are provisioned in the Google Analytics property for each
+   * of   the Firebase Apps. Note that a new data stream is always provisioned for
+   * a Web App even if it was previously associated with a data stream in the
+   * Analytics property.
    *
    * Learn more about the hierarchy and structure of Google Analytics accounts in
    * the [Analytics
@@ -104,12 +114,12 @@ class Google_Service_FirebaseManagement_Resource_Projects extends Google_Service
    * [`error`](../../v1beta1/operations#Operation.FIELDS.error) is set to a
    * google.rpc.Status.
    *
-   * To call `AddGoogleAnalytics`, a member must be an Owner for the existing
-   * `FirebaseProject` and have the [`Edit`
+   * To call `AddGoogleAnalytics`, a project member must be an Owner for the
+   * existing `FirebaseProject` and have the [`Edit`
    * permission](https://support.google.com/analytics/answer/2884495) for the
    * Google Analytics account.
    *
-   * If a `FirebaseProject` already has Google Analytics enabled, and you call
+   * If the `FirebaseProject` already has Google Analytics enabled, and you call
    * `AddGoogleAnalytics` using an `analyticsPropertyId` that's different from the
    * currently associated property, then the call will fail. Analytics may have
    * already been enabled in the Firebase console or by specifying `timeZone` and
@@ -117,8 +127,11 @@ class Google_Service_FirebaseManagement_Resource_Projects extends Google_Service
    * [`AddFirebase`](../../v1beta1/projects/addFirebase).
    * (projects.addGoogleAnalytics)
    *
-   * @param string $parent The parent `FirebaseProject` to link to an existing
-   * Google Analytics account, in the format: projects/projectId
+   * @param string $parent The resource name of the FirebaseProject to link to an
+   * existing Google Analytics account, in the format: projects/PROJECT_IDENTIFIER
+   * Refer to the `FirebaseProject`
+   * [`name`](../projects#FirebaseProject.FIELDS.name) field for details about
+   * PROJECT_IDENTIFIER values.
    * @param Google_Service_FirebaseManagement_AddGoogleAnalyticsRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_FirebaseManagement_Operation
@@ -130,11 +143,12 @@ class Google_Service_FirebaseManagement_Resource_Projects extends Google_Service
     return $this->call('addGoogleAnalytics', array($params), "Google_Service_FirebaseManagement_Operation");
   }
   /**
-   * Gets the FirebaseProject identified by the specified resource name.
-   * (projects.get)
+   * Gets the specified FirebaseProject. (projects.get)
    *
-   * @param string $name The fully qualified resource name of the Project, in the
-   * format: projects/projectId
+   * @param string $name The resource name of the FirebaseProject, in the format:
+   * projects/PROJECT_IDENTIFIER Refer to the `FirebaseProject`
+   * [`name`](../projects#FirebaseProject.FIELDS.name) field for details about
+   * PROJECT_IDENTIFIER values.
    * @param array $optParams Optional parameters.
    * @return Google_Service_FirebaseManagement_FirebaseProject
    */
@@ -145,14 +159,17 @@ class Google_Service_FirebaseManagement_Resource_Projects extends Google_Service
     return $this->call('get', array($params), "Google_Service_FirebaseManagement_FirebaseProject");
   }
   /**
-   * Gets the configuration artifact used by servers to simplify initialization.
+   * Gets the configuration artifact associated with the specified
+   * FirebaseProject, which can be used by servers to simplify initialization.
    *
    * Typically, this configuration is used with the Firebase Admin SDK [initialize
    * App](https://firebase.google.com/docs/admin/setup#initialize_the_sdk)
    * command. (projects.getAdminSdkConfig)
    *
-   * @param string $name The fully qualified resource name of the Project, in the
-   * format: projects/projectId/adminSdkConfig
+   * @param string $name The resource name of the FirebaseProject, in the format:
+   * projects/PROJECT_IDENTIFIER/adminSdkConfig Refer to the `FirebaseProject`
+   * [`name`](../projects#FirebaseProject.FIELDS.name) field for details about
+   * PROJECT_IDENTIFIER values.
    * @param array $optParams Optional parameters.
    * @return Google_Service_FirebaseManagement_AdminSdkConfig
    */
@@ -163,15 +180,17 @@ class Google_Service_FirebaseManagement_Resource_Projects extends Google_Service
     return $this->call('getAdminSdkConfig', array($params), "Google_Service_FirebaseManagement_AdminSdkConfig");
   }
   /**
-   * Gets the Google Analytics details currently associated with a
+   * Gets the Google Analytics details currently associated with the specified
    * FirebaseProject.
    *
    * If the `FirebaseProject` is not yet linked to Google Analytics, then the
-   * response to `GetAnalyticsDetails` is NOT_FOUND.
+   * response to `GetAnalyticsDetails` is `NOT_FOUND`.
    * (projects.getAnalyticsDetails)
    *
-   * @param string $name The fully qualified resource name, in the format:
-   * projects/projectId/analyticsDetails
+   * @param string $name The resource name of the FirebaseProject, in the format:
+   * projects/PROJECT_IDENTIFIER/analyticsDetails Refer to the `FirebaseProject`
+   * [`name`](../projects#FirebaseProject.FIELDS.name) field for details about
+   * PROJECT_IDENTIFIER values.
    * @param array $optParams Optional parameters.
    * @return Google_Service_FirebaseManagement_AnalyticsDetails
    */
@@ -218,20 +237,27 @@ class Google_Service_FirebaseManagement_Resource_Projects extends Google_Service
     return $this->call('list', array($params), "Google_Service_FirebaseManagement_ListFirebaseProjectsResponse");
   }
   /**
-   * Updates the attributes of the FirebaseProject identified by the specified
-   * resource name.
+   * Updates the attributes of the specified FirebaseProject.
    *
    * All [query parameters](#query-parameters) are required. (projects.patch)
    *
-   * @param string $name The fully qualified resource name of the Project, in the
-   * format: projects/projectId
+   * @param string $name The resource name of the Project, in the format:
+   * projects/PROJECT_IDENTIFIER PROJECT_IDENTIFIER: the Project's
+   * [`ProjectNumber`](../projects#FirebaseProject.FIELDS.project_number)
+   * ***(recommended)*** or its
+   * [`ProjectId`](../projects#FirebaseProject.FIELDS.project_id). Learn more
+   * about using project identifiers in Google's [AIP 2510
+   * standard](https://google.aip.dev/cloud/2510). Note that the value for
+   * PROJECT_IDENTIFIER in any response body will be the `ProjectId`.
    * @param Google_Service_FirebaseManagement_FirebaseProject $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param string updateMask Specifies which fields to update.
    *
-   * If this list is empty, then no state will be updated. Note that the fields
-   * `name`, `project_id`, and `project_number` are all immutable.
+   * If this list is empty, then no state will be updated.
+   *
+   * Note that the fields `name`, `projectId`, and `projectNumber` are all
+   * immutable.
    * @return Google_Service_FirebaseManagement_FirebaseProject
    */
   public function patch($name, Google_Service_FirebaseManagement_FirebaseProject $postBody, $optParams = array())
@@ -241,7 +267,7 @@ class Google_Service_FirebaseManagement_Resource_Projects extends Google_Service
     return $this->call('patch', array($params), "Google_Service_FirebaseManagement_FirebaseProject");
   }
   /**
-   * Unlinks the specified `FirebaseProject` from its Google Analytics account.
+   * Unlinks the specified FirebaseProject from its Google Analytics account.
    *
    * This call removes the association of the specified `FirebaseProject` with its
    * current Google Analytics property. However, this call does not delete the
@@ -252,13 +278,16 @@ class Google_Service_FirebaseManagement_Resource_Projects extends Google_Service
    * calling [`AddGoogleAnalytics`](../../v1beta1/projects/addGoogleAnalytics) and
    * specifying the same `analyticsPropertyId`. For Android Apps and iOS Apps,
    * this call re-links data streams with their corresponding apps. However, for
-   * Web Apps, this call provisions a new data stream for each Web App.
+   * Web Apps, this call provisions a *new* data stream for each Web App.
    *
-   * To call `RemoveAnalytics`, a member must be an Owner for the
+   * To call `RemoveAnalytics`, a project member must be an Owner for the
    * `FirebaseProject`. (projects.removeAnalytics)
    *
-   * @param string $parent The parent `FirebaseProject` to unlink from its Google
-   * Analytics account, in the format: projects/projectId
+   * @param string $parent The resource name of the FirebaseProject to unlink from
+   * its Google Analytics account, in the format: projects/PROJECT_IDENTIFIER
+   * Refer to the `FirebaseProject`
+   * [`name`](../projects#FirebaseProject.FIELDS.name) field for details about
+   * PROJECT_IDENTIFIER values.
    * @param Google_Service_FirebaseManagement_RemoveAnalyticsRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_FirebaseManagement_FirebaseEmpty
@@ -270,19 +299,19 @@ class Google_Service_FirebaseManagement_Resource_Projects extends Google_Service
     return $this->call('removeAnalytics', array($params), "Google_Service_FirebaseManagement_FirebaseEmpty");
   }
   /**
-   * A convenience method that lists all available Apps for the specified
-   * FirebaseProject.
+   * Lists all available Apps for the specified FirebaseProject.
    *
-   * Typically, interaction with an App should be done using the platform-specific
-   * service, but some tool use-cases require a summary of all known Apps (such as
-   * for App selector interfaces). (projects.searchApps)
+   * This is a convenience method. Typically, interaction with an App should be
+   * done using the platform-specific service, but some tool use-cases require a
+   * summary of all known Apps (such as for App selector interfaces).
+   * (projects.searchApps)
    *
-   * @param string $parent The parent Project for which to list Apps, in the
-   * format: projects/projectId
+   * @param string $parent The parent FirebaseProject for which to list Apps, in
+   * the format: projects/PROJECT_IDENTIFIER Refer to the `FirebaseProject`
+   * [`name`](../projects#FirebaseProject.FIELDS.name) field for details about
+   * PROJECT_IDENTIFIER values.
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string pageToken Token returned from a previous call to
-   * `SearchFirebaseApps` indicating where in the set of Apps to resume listing.
    * @opt_param int pageSize The maximum number of Apps to return in the response.
    *
    * The server may return fewer than this value at its discretion. If no value is
@@ -290,6 +319,8 @@ class Google_Service_FirebaseManagement_Resource_Projects extends Google_Service
    * its own limit.
    *
    * This value cannot be negative.
+   * @opt_param string pageToken Token returned from a previous call to
+   * `SearchFirebaseApps` indicating where in the set of Apps to resume listing.
    * @return Google_Service_FirebaseManagement_SearchFirebaseAppsResponse
    */
   public function searchApps($parent, $optParams = array())

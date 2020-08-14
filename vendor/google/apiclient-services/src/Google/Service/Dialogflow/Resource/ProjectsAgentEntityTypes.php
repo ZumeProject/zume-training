@@ -67,12 +67,11 @@ class Google_Service_Dialogflow_Resource_ProjectsAgentEntityTypes extends Google
    * @param Google_Service_Dialogflow_GoogleCloudDialogflowV2EntityType $postBody
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string languageCode Optional. The language of entity synonyms
-   * defined in `entity_type`. If not specified, the agent's default language is
-   * used. [Many
-   * languages](https://cloud.google.com/dialogflow/docs/reference/language) are
-   * supported. Note: languages must be enabled in the agent before they can be
-   * used.
+   * @opt_param string languageCode Optional. The language used to access
+   * language-specific data. If not specified, the agent's default language is
+   * used. For more information, see [Multilingual intent and entity
+   * data](https://cloud.google.com/dialogflow/docs/agents-multilingual#intent-
+   * entity).
    * @return Google_Service_Dialogflow_GoogleCloudDialogflowV2EntityType
    */
   public function create($parent, Google_Service_Dialogflow_GoogleCloudDialogflowV2EntityType $postBody, $optParams = array())
@@ -102,11 +101,11 @@ class Google_Service_Dialogflow_Resource_ProjectsAgentEntityTypes extends Google
    * `projects//agent/entityTypes/`.
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string languageCode Optional. The language to retrieve entity
-   * synonyms for. If not specified, the agent's default language is used. [Many
-   * languages](https://cloud.google.com/dialogflow/docs/reference/language) are
-   * supported. Note: languages must be enabled in the agent before they can be
-   * used.
+   * @opt_param string languageCode Optional. The language used to access
+   * language-specific data. If not specified, the agent's default language is
+   * used. For more information, see [Multilingual intent and entity
+   * data](https://cloud.google.com/dialogflow/docs/agents-multilingual#intent-
+   * entity).
    * @return Google_Service_Dialogflow_GoogleCloudDialogflowV2EntityType
    */
   public function get($name, $optParams = array())
@@ -127,11 +126,11 @@ class Google_Service_Dialogflow_Resource_ProjectsAgentEntityTypes extends Google
    * a previous list request.
    * @opt_param int pageSize Optional. The maximum number of items to return in a
    * single page. By default 100 and at most 1000.
-   * @opt_param string languageCode Optional. The language to list entity synonyms
-   * for. If not specified, the agent's default language is used. [Many
-   * languages](https://cloud.google.com/dialogflow/docs/reference/language) are
-   * supported. Note: languages must be enabled in the agent before they can be
-   * used.
+   * @opt_param string languageCode Optional. The language used to access
+   * language-specific data. If not specified, the agent's default language is
+   * used. For more information, see [Multilingual intent and entity
+   * data](https://cloud.google.com/dialogflow/docs/agents-multilingual#intent-
+   * entity).
    * @return Google_Service_Dialogflow_GoogleCloudDialogflowV2ListEntityTypesResponse
    */
   public function listProjectsAgentEntityTypes($parent, $optParams = array())
@@ -149,14 +148,13 @@ class Google_Service_Dialogflow_Resource_ProjectsAgentEntityTypes extends Google
    * @param Google_Service_Dialogflow_GoogleCloudDialogflowV2EntityType $postBody
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string languageCode Optional. The language of entity synonyms
-   * defined in `entity_type`. If not specified, the agent's default language is
-   * used. [Many
-   * languages](https://cloud.google.com/dialogflow/docs/reference/language) are
-   * supported. Note: languages must be enabled in the agent before they can be
-   * used.
    * @opt_param string updateMask Optional. The mask to control which fields get
    * updated.
+   * @opt_param string languageCode Optional. The language used to access
+   * language-specific data. If not specified, the agent's default language is
+   * used. For more information, see [Multilingual intent and entity
+   * data](https://cloud.google.com/dialogflow/docs/agents-multilingual#intent-
+   * entity).
    * @return Google_Service_Dialogflow_GoogleCloudDialogflowV2EntityType
    */
   public function patch($name, Google_Service_Dialogflow_GoogleCloudDialogflowV2EntityType $postBody, $optParams = array())

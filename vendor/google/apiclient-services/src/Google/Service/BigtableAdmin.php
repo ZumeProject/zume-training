@@ -63,6 +63,7 @@ class Google_Service_BigtableAdmin extends Google_Service
   public $projects_instances;
   public $projects_instances_appProfiles;
   public $projects_instances_clusters;
+  public $projects_instances_clusters_backups;
   public $projects_instances_tables;
   public $projects_locations;
   
@@ -136,6 +137,10 @@ class Google_Service_BigtableAdmin extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
+                'pageSize' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
+                ),
                 'filter' => array(
                   'location' => 'query',
                   'type' => 'string',
@@ -143,10 +148,6 @@ class Google_Service_BigtableAdmin extends Google_Service
                 'pageToken' => array(
                   'location' => 'query',
                   'type' => 'string',
-                ),
-                'pageSize' => array(
-                  'location' => 'query',
-                  'type' => 'integer',
                 ),
               ),
             ),
@@ -336,13 +337,13 @@ class Google_Service_BigtableAdmin extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'ignoreWarnings' => array(
-                  'location' => 'query',
-                  'type' => 'boolean',
-                ),
                 'updateMask' => array(
                   'location' => 'query',
                   'type' => 'string',
+                ),
+                'ignoreWarnings' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
                 ),
               ),
             ),
@@ -408,6 +409,120 @@ class Google_Service_BigtableAdmin extends Google_Service
               'httpMethod' => 'PUT',
               'parameters' => array(
                 'name' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+              ),
+            ),
+          )
+        )
+    );
+    $this->projects_instances_clusters_backups = new Google_Service_BigtableAdmin_Resource_ProjectsInstancesClustersBackups(
+        $this,
+        $this->serviceName,
+        'backups',
+        array(
+          'methods' => array(
+            'create' => array(
+              'path' => 'v2/{+parent}/backups',
+              'httpMethod' => 'POST',
+              'parameters' => array(
+                'parent' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'backupId' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+              ),
+            ),'delete' => array(
+              'path' => 'v2/{+name}',
+              'httpMethod' => 'DELETE',
+              'parameters' => array(
+                'name' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+              ),
+            ),'get' => array(
+              'path' => 'v2/{+name}',
+              'httpMethod' => 'GET',
+              'parameters' => array(
+                'name' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+              ),
+            ),'getIamPolicy' => array(
+              'path' => 'v2/{+resource}:getIamPolicy',
+              'httpMethod' => 'POST',
+              'parameters' => array(
+                'resource' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+              ),
+            ),'list' => array(
+              'path' => 'v2/{+parent}/backups',
+              'httpMethod' => 'GET',
+              'parameters' => array(
+                'parent' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'filter' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'orderBy' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'pageToken' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'pageSize' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
+                ),
+              ),
+            ),'patch' => array(
+              'path' => 'v2/{+name}',
+              'httpMethod' => 'PATCH',
+              'parameters' => array(
+                'name' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'updateMask' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+              ),
+            ),'setIamPolicy' => array(
+              'path' => 'v2/{+resource}:setIamPolicy',
+              'httpMethod' => 'POST',
+              'parameters' => array(
+                'resource' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+              ),
+            ),'testIamPermissions' => array(
+              'path' => 'v2/{+resource}:testIamPermissions',
+              'httpMethod' => 'POST',
+              'parameters' => array(
+                'resource' => array(
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
@@ -506,6 +621,10 @@ class Google_Service_BigtableAdmin extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
+                'pageSize' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
+                ),
                 'view' => array(
                   'location' => 'query',
                   'type' => 'string',
@@ -514,16 +633,22 @@ class Google_Service_BigtableAdmin extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'pageSize' => array(
-                  'location' => 'query',
-                  'type' => 'integer',
-                ),
               ),
             ),'modifyColumnFamilies' => array(
               'path' => 'v2/{+name}:modifyColumnFamilies',
               'httpMethod' => 'POST',
               'parameters' => array(
                 'name' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+              ),
+            ),'restore' => array(
+              'path' => 'v2/{+parent}/tables:restore',
+              'httpMethod' => 'POST',
+              'parameters' => array(
+                'parent' => array(
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
@@ -582,13 +707,13 @@ class Google_Service_BigtableAdmin extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'pageToken' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
                 'pageSize' => array(
                   'location' => 'query',
                   'type' => 'integer',
+                ),
+                'pageToken' => array(
+                  'location' => 'query',
+                  'type' => 'string',
                 ),
               ),
             ),

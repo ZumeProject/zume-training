@@ -17,9 +17,10 @@
 
 class Google_Service_ServiceControl_Operation extends Google_Collection
 {
-  protected $collection_key = 'resources';
+  protected $collection_key = 'traceSpans';
   public $consumerId;
   public $endTime;
+  public $extensions;
   public $importance;
   public $labels;
   protected $logEntriesType = 'Google_Service_ServiceControl_LogEntry';
@@ -33,6 +34,8 @@ class Google_Service_ServiceControl_Operation extends Google_Collection
   protected $resourcesType = 'Google_Service_ServiceControl_ResourceInfo';
   protected $resourcesDataType = 'array';
   public $startTime;
+  protected $traceSpansType = 'Google_Service_ServiceControl_TraceSpan';
+  protected $traceSpansDataType = 'array';
   public $userLabels;
 
   public function setConsumerId($consumerId)
@@ -50,6 +53,14 @@ class Google_Service_ServiceControl_Operation extends Google_Collection
   public function getEndTime()
   {
     return $this->endTime;
+  }
+  public function setExtensions($extensions)
+  {
+    $this->extensions = $extensions;
+  }
+  public function getExtensions()
+  {
+    return $this->extensions;
   }
   public function setImportance($importance)
   {
@@ -146,6 +157,20 @@ class Google_Service_ServiceControl_Operation extends Google_Collection
   public function getStartTime()
   {
     return $this->startTime;
+  }
+  /**
+   * @param Google_Service_ServiceControl_TraceSpan
+   */
+  public function setTraceSpans($traceSpans)
+  {
+    $this->traceSpans = $traceSpans;
+  }
+  /**
+   * @return Google_Service_ServiceControl_TraceSpan
+   */
+  public function getTraceSpans()
+  {
+    return $this->traceSpans;
   }
   public function setUserLabels($userLabels)
   {

@@ -104,7 +104,7 @@ class Google_Service_Vision_Resource_ProjectsLocationsProductSets extends Google
    *
    * @param string $name Required. Resource name of the ProductSet to get.
    *
-   * Format is: `projects/PROJECT_ID/locations/LOG_ID/productSets/PRODUCT_SET_ID`
+   * Format is: `projects/PROJECT_ID/locations/LOC_ID/productSets/PRODUCT_SET_ID`
    * @param array $optParams Optional parameters.
    * @return Google_Service_Vision_ProductSet
    */

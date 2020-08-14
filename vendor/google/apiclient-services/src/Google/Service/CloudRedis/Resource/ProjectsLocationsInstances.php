@@ -29,7 +29,7 @@ class Google_Service_CloudRedis_Resource_ProjectsLocationsInstances extends Goog
    * Creates a Redis instance based on the specified tier and memory size.
    *
    * By default, the instance is accessible from the project's [default
-   * network](/compute/docs/networks-and-firewalls#networks).
+   * network](https://cloud.google.com/vpc/docs/vpc).
    *
    * The creation is executed asynchronously and callers may check the returned
    * operation to track its progress. Once the operation is completed the Redis
@@ -156,8 +156,9 @@ class Google_Service_CloudRedis_Resource_ProjectsLocationsInstances extends Goog
    * Lists all Redis instances owned by a project in either the specified location
    * (region) or all locations.
    *
-   * The location should have the following format: *
-   * `projects/{project_id}/locations/{location_id}`
+   * The location should have the following format:
+   *
+   * * `projects/{project_id}/locations/{location_id}`
    *
    * If `location_id` is specified as `-` (wildcard), then all regions available
    * to the project are queried, and the results are aggregated.
@@ -168,13 +169,13 @@ class Google_Service_CloudRedis_Resource_ProjectsLocationsInstances extends Goog
    * `location_id` refers to a GCP region.
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string pageToken The next_page_token value returned from a
-   * previous List request, if any.
+   * @opt_param string pageToken The `next_page_token` value returned from a
+   * previous ListInstances request, if any.
    * @opt_param int pageSize The maximum number of items to return.
    *
    * If not specified, a default value of 1000 will be used by the service.
    * Regardless of the page_size value, the response may include a partial list
-   * and a caller should only rely on response's next_page_token to determine if
+   * and a caller should only rely on response's `next_page_token` to determine if
    * there are more instances left to be queried.
    * @return Google_Service_CloudRedis_ListInstancesResponse
    */
@@ -198,8 +199,8 @@ class Google_Service_CloudRedis_Resource_ProjectsLocationsInstances extends Goog
    * Note: Redis instances are managed and addressed at regional level so
    * location_id here refers to a GCP region; however, users may choose which
    * specific zone (or collection of zones for cross-zone instances) an instance
-   * should be provisioned in. Refer to [location_id] and
-   * [alternative_location_id] fields for more details.
+   * should be provisioned in. Refer to location_id and alternative_location_id
+   * fields for more details.
    * @param Google_Service_CloudRedis_Instance $postBody
    * @param array $optParams Optional parameters.
    *
@@ -215,5 +216,22 @@ class Google_Service_CloudRedis_Resource_ProjectsLocationsInstances extends Goog
     $params = array('name' => $name, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
     return $this->call('patch', array($params), "Google_Service_CloudRedis_Operation");
+  }
+  /**
+   * Upgrades Redis instance to the newer Redis version specified in the request.
+   * (instances.upgrade)
+   *
+   * @param string $name Required. Redis instance resource name using the form:
+   * `projects/{project_id}/locations/{location_id}/instances/{instance_id}` where
+   * `location_id` refers to a GCP region.
+   * @param Google_Service_CloudRedis_UpgradeInstanceRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return Google_Service_CloudRedis_Operation
+   */
+  public function upgrade($name, Google_Service_CloudRedis_UpgradeInstanceRequest $postBody, $optParams = array())
+  {
+    $params = array('name' => $name, 'postBody' => $postBody);
+    $params = array_merge($params, $optParams);
+    return $this->call('upgrade', array($params), "Google_Service_CloudRedis_Operation");
   }
 }

@@ -24,6 +24,7 @@ class ComposerStaticInitd0591765ec8ba67494b1108f14665597
         array (
             'Psr\\Log\\' => 8,
             'Psr\\Http\\Message\\' => 17,
+            'Psr\\Http\\Client\\' => 16,
             'Psr\\Cache\\' => 10,
         ),
         'M' => 
@@ -60,6 +61,10 @@ class ComposerStaticInitd0591765ec8ba67494b1108f14665597
         'Psr\\Http\\Message\\' => 
         array (
             0 => __DIR__ . '/..' . '/psr/http-message/src',
+        ),
+        'Psr\\Http\\Client\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/psr/http-client/src',
         ),
         'Psr\\Cache\\' => 
         array (

@@ -35,17 +35,15 @@ class Google_Service_DLP_Resource_ProjectsLocationsContent extends Google_Servic
    * be all types, but may change over time as detectors are updated.
    * (content.deidentify)
    *
-   * @param string $parent The parent resource name, for example projects/my-
-   * project-id.
-   * @param string $location The geographic location to process de-identification.
-   * Reserved for future extensions.
+   * @param string $parent Parent resource name. - Format:projects/[PROJECT-ID] -
+   * Format:projects/[PROJECT-ID]/locations/[LOCATION-ID]
    * @param Google_Service_DLP_GooglePrivacyDlpV2DeidentifyContentRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_DLP_GooglePrivacyDlpV2DeidentifyContentResponse
    */
-  public function deidentify($parent, $location, Google_Service_DLP_GooglePrivacyDlpV2DeidentifyContentRequest $postBody, $optParams = array())
+  public function deidentify($parent, Google_Service_DLP_GooglePrivacyDlpV2DeidentifyContentRequest $postBody, $optParams = array())
   {
-    $params = array('parent' => $parent, 'location' => $location, 'postBody' => $postBody);
+    $params = array('parent' => $parent, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
     return $this->call('deidentify', array($params), "Google_Service_DLP_GooglePrivacyDlpV2DeidentifyContentResponse");
   }
@@ -60,17 +58,15 @@ class Google_Service_DLP_Resource_ProjectsLocationsContent extends Google_Servic
    * For how to guides, see https://cloud.google.com/dlp/docs/inspecting-images
    * and https://cloud.google.com/dlp/docs/inspecting-text, (content.inspect)
    *
-   * @param string $parent The parent resource name, for example projects/my-
-   * project-id.
-   * @param string $location The geographic location to process content
-   * inspection. Reserved for future extensions.
+   * @param string $parent Parent resource name. - Format:projects/[PROJECT-ID] -
+   * Format:projects/[PROJECT-ID]/locations/[LOCATION-ID]
    * @param Google_Service_DLP_GooglePrivacyDlpV2InspectContentRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_DLP_GooglePrivacyDlpV2InspectContentResponse
    */
-  public function inspect($parent, $location, Google_Service_DLP_GooglePrivacyDlpV2InspectContentRequest $postBody, $optParams = array())
+  public function inspect($parent, Google_Service_DLP_GooglePrivacyDlpV2InspectContentRequest $postBody, $optParams = array())
   {
-    $params = array('parent' => $parent, 'location' => $location, 'postBody' => $postBody);
+    $params = array('parent' => $parent, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
     return $this->call('inspect', array($params), "Google_Service_DLP_GooglePrivacyDlpV2InspectContentResponse");
   }
@@ -79,16 +75,15 @@ class Google_Service_DLP_Resource_ProjectsLocationsContent extends Google_Servic
    * https://cloud.google.com/dlp/docs/pseudonymization#re-
    * identification_in_free_text_code_example to learn more. (content.reidentify)
    *
-   * @param string $parent The parent resource name.
-   * @param string $location The geographic location to process content
-   * reidentification.  Reserved for future extensions.
+   * @param string $parent Required. The parent resource name. - Format:projects
+   * /[PROJECT-ID] - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID]
    * @param Google_Service_DLP_GooglePrivacyDlpV2ReidentifyContentRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_DLP_GooglePrivacyDlpV2ReidentifyContentResponse
    */
-  public function reidentify($parent, $location, Google_Service_DLP_GooglePrivacyDlpV2ReidentifyContentRequest $postBody, $optParams = array())
+  public function reidentify($parent, Google_Service_DLP_GooglePrivacyDlpV2ReidentifyContentRequest $postBody, $optParams = array())
   {
-    $params = array('parent' => $parent, 'location' => $location, 'postBody' => $postBody);
+    $params = array('parent' => $parent, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
     return $this->call('reidentify', array($params), "Google_Service_DLP_GooglePrivacyDlpV2ReidentifyContentResponse");
   }

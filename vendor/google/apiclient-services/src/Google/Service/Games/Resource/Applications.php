@@ -27,7 +27,7 @@ class Google_Service_Games_Resource_Applications extends Google_Service_Resource
 {
   /**
    * Retrieves the metadata of the application with the given ID. If the requested
-   * application is not available for the specified platformType, the returned
+   * application is not available for the specified `platformType`, the returned
    * response will not include any instance data. (applications.get)
    *
    * @param string $applicationId The application ID from the Google Play
@@ -47,13 +47,10 @@ class Google_Service_Games_Resource_Applications extends Google_Service_Resource
     return $this->call('get', array($params), "Google_Service_Games_Application");
   }
   /**
-   * Indicate that the the currently authenticated user is playing your
-   * application. (applications.played)
+   * Indicate that the currently authenticated user is playing your application.
+   * (applications.played)
    *
    * @param array $optParams Optional parameters.
-   *
-   * @opt_param string builtinGameId Override used only by built-in games in Play
-   * Games application.
    */
   public function played($optParams = array())
   {

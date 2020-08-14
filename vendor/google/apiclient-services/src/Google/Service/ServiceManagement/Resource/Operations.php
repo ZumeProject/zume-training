@@ -46,10 +46,10 @@ class Google_Service_ServiceManagement_Resource_Operations extends Google_Servic
    *
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string name Not used.
    * @opt_param string pageToken The standard list page token.
    * @opt_param int pageSize The maximum number of operations to return. If
    * unspecified, defaults to 50. The maximum value is 100.
+   * @opt_param string name Not used.
    * @opt_param string filter A string for filtering Operations.   The following
    * filter fields are supported
    *

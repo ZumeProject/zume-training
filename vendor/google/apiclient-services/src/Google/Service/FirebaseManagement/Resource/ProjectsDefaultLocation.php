@@ -33,16 +33,17 @@ class Google_Service_FirebaseManagement_Resource_ProjectsDefaultLocation extends
    * ucket](https://cloud.google.com/appengine/docs/standard/python/googlecloudsto
    * rageclient/setting-up-cloud-storage#activating_a_cloud_storage_bucket),
    * located in the specified
-   * [`location_id`](#body.request_body.FIELDS.location_id). This location must be
+   * [`locationId`](#body.request_body.FIELDS.location_id). This location must be
    * one of the available [GCP resource
-   * locations](https://firebase.google.com/docs/projects/locations).  After the
-   * default GCP resource location is finalized, or if it was already set, it
-   * cannot be changed. The default GCP resource location for the specified
-   * FirebaseProject might already be set because either the GCP `Project` already
-   * has an App Engine application or `FinalizeDefaultLocation` was previously
-   * called with a specified `location_id`. Any new calls to
-   * `FinalizeDefaultLocation` with a different specified `location_id` will
-   * return a 409 error.
+   * locations](https://firebase.google.com/docs/projects/locations).
+   *
+   * After the default GCP resource location is finalized, or if it was already
+   * set, it cannot be changed. The default GCP resource location for the
+   * specified `FirebaseProject` might already be set because either the
+   * underlying GCP `Project` already has an App Engine application or
+   * `FinalizeDefaultLocation` was previously called with a specified
+   * `locationId`. Any new calls to `FinalizeDefaultLocation` with a *different*
+   * specified `locationId` will return a 409 error.
    *
    * The result of this call is an [`Operation`](../../v1beta1/operations), which
    * can be used to track the provisioning process. The
@@ -59,11 +60,14 @@ class Google_Service_FirebaseManagement_Resource_ProjectsDefaultLocation extends
    *
    * All fields listed in the [request body](#request-body) are required.
    *
-   * To call `FinalizeDefaultLocation`, a member must be an Owner of the project.
+   * To call `FinalizeDefaultLocation`, a member must be an Owner of the Project.
    * (defaultLocation.finalize)
    *
-   * @param string $parent The resource name of the Project for which the default
-   * GCP resource location will be set, in the format: projects/projectId
+   * @param string $parent The resource name of the FirebaseProject for which the
+   * default GCP resource location will be set, in the format:
+   * projects/PROJECT_IDENTIFIER Refer to the `FirebaseProject`
+   * [`name`](../projects#FirebaseProject.FIELDS.name) field for details about
+   * PROJECT_IDENTIFIER values.
    * @param Google_Service_FirebaseManagement_FinalizeDefaultLocationRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_FirebaseManagement_Operation

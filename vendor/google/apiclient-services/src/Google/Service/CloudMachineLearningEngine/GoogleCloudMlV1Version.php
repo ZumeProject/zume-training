@@ -27,6 +27,8 @@ class Google_Service_CloudMachineLearningEngine_GoogleCloudMlV1Version extends G
   public $description;
   public $errorMessage;
   public $etag;
+  protected $explanationConfigType = 'Google_Service_CloudMachineLearningEngine_GoogleCloudMlV1ExplanationConfig';
+  protected $explanationConfigDataType = '';
   public $framework;
   public $isDefault;
   public $labels;
@@ -111,6 +113,20 @@ class Google_Service_CloudMachineLearningEngine_GoogleCloudMlV1Version extends G
   public function getEtag()
   {
     return $this->etag;
+  }
+  /**
+   * @param Google_Service_CloudMachineLearningEngine_GoogleCloudMlV1ExplanationConfig
+   */
+  public function setExplanationConfig(Google_Service_CloudMachineLearningEngine_GoogleCloudMlV1ExplanationConfig $explanationConfig)
+  {
+    $this->explanationConfig = $explanationConfig;
+  }
+  /**
+   * @return Google_Service_CloudMachineLearningEngine_GoogleCloudMlV1ExplanationConfig
+   */
+  public function getExplanationConfig()
+  {
+    return $this->explanationConfig;
   }
   public function setFramework($framework)
   {

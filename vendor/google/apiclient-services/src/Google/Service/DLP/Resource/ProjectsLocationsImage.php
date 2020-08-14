@@ -36,17 +36,15 @@ class Google_Service_DLP_Resource_ProjectsLocationsImage extends Google_Service_
    * be all types, but may change over time as detectors are updated.
    * (image.redact)
    *
-   * @param string $parent The parent resource name, for example projects/my-
-   * project-id.
-   * @param string $location The geographic location to process the request.
-   * Reserved for future extensions.
+   * @param string $parent The parent resource name. - Format:projects/[PROJECT-
+   * ID] - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID]
    * @param Google_Service_DLP_GooglePrivacyDlpV2RedactImageRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_DLP_GooglePrivacyDlpV2RedactImageResponse
    */
-  public function redact($parent, $location, Google_Service_DLP_GooglePrivacyDlpV2RedactImageRequest $postBody, $optParams = array())
+  public function redact($parent, Google_Service_DLP_GooglePrivacyDlpV2RedactImageRequest $postBody, $optParams = array())
   {
-    $params = array('parent' => $parent, 'location' => $location, 'postBody' => $postBody);
+    $params = array('parent' => $parent, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
     return $this->call('redact', array($params), "Google_Service_DLP_GooglePrivacyDlpV2RedactImageResponse");
   }

@@ -18,9 +18,27 @@
 class Google_Service_Container_AutoprovisioningNodePoolDefaults extends Google_Collection
 {
   protected $collection_key = 'oauthScopes';
+  protected $managementType = 'Google_Service_Container_NodeManagement';
+  protected $managementDataType = '';
   public $oauthScopes;
   public $serviceAccount;
+  protected $upgradeSettingsType = 'Google_Service_Container_UpgradeSettings';
+  protected $upgradeSettingsDataType = '';
 
+  /**
+   * @param Google_Service_Container_NodeManagement
+   */
+  public function setManagement(Google_Service_Container_NodeManagement $management)
+  {
+    $this->management = $management;
+  }
+  /**
+   * @return Google_Service_Container_NodeManagement
+   */
+  public function getManagement()
+  {
+    return $this->management;
+  }
   public function setOauthScopes($oauthScopes)
   {
     $this->oauthScopes = $oauthScopes;
@@ -36,5 +54,19 @@ class Google_Service_Container_AutoprovisioningNodePoolDefaults extends Google_C
   public function getServiceAccount()
   {
     return $this->serviceAccount;
+  }
+  /**
+   * @param Google_Service_Container_UpgradeSettings
+   */
+  public function setUpgradeSettings(Google_Service_Container_UpgradeSettings $upgradeSettings)
+  {
+    $this->upgradeSettings = $upgradeSettings;
+  }
+  /**
+   * @return Google_Service_Container_UpgradeSettings
+   */
+  public function getUpgradeSettings()
+  {
+    return $this->upgradeSettings;
   }
 }

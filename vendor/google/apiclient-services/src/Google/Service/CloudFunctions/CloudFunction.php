@@ -18,6 +18,7 @@
 class Google_Service_CloudFunctions_CloudFunction extends Google_Model
 {
   public $availableMemoryMb;
+  public $buildId;
   public $description;
   public $entryPoint;
   public $environmentVariables;
@@ -25,6 +26,7 @@ class Google_Service_CloudFunctions_CloudFunction extends Google_Model
   protected $eventTriggerDataType = '';
   protected $httpsTriggerType = 'Google_Service_CloudFunctions_HttpsTrigger';
   protected $httpsTriggerDataType = '';
+  public $ingressSettings;
   public $labels;
   public $maxInstances;
   public $name;
@@ -40,6 +42,7 @@ class Google_Service_CloudFunctions_CloudFunction extends Google_Model
   public $updateTime;
   public $versionId;
   public $vpcConnector;
+  public $vpcConnectorEgressSettings;
 
   public function setAvailableMemoryMb($availableMemoryMb)
   {
@@ -48,6 +51,14 @@ class Google_Service_CloudFunctions_CloudFunction extends Google_Model
   public function getAvailableMemoryMb()
   {
     return $this->availableMemoryMb;
+  }
+  public function setBuildId($buildId)
+  {
+    $this->buildId = $buildId;
+  }
+  public function getBuildId()
+  {
+    return $this->buildId;
   }
   public function setDescription($description)
   {
@@ -100,6 +111,14 @@ class Google_Service_CloudFunctions_CloudFunction extends Google_Model
   public function getHttpsTrigger()
   {
     return $this->httpsTrigger;
+  }
+  public function setIngressSettings($ingressSettings)
+  {
+    $this->ingressSettings = $ingressSettings;
+  }
+  public function getIngressSettings()
+  {
+    return $this->ingressSettings;
   }
   public function setLabels($labels)
   {
@@ -218,5 +237,13 @@ class Google_Service_CloudFunctions_CloudFunction extends Google_Model
   public function getVpcConnector()
   {
     return $this->vpcConnector;
+  }
+  public function setVpcConnectorEgressSettings($vpcConnectorEgressSettings)
+  {
+    $this->vpcConnectorEgressSettings = $vpcConnectorEgressSettings;
+  }
+  public function getVpcConnectorEgressSettings()
+  {
+    return $this->vpcConnectorEgressSettings;
   }
 }

@@ -47,6 +47,29 @@ class Google_Service_ServiceUsage_Resource_Services extends Google_Service_Resou
     return $this->call('batchEnable', array($params), "Google_Service_ServiceUsage_Operation");
   }
   /**
+   * Returns the service configurations and enabled states for a given list of
+   * services. (services.batchGet)
+   *
+   * @param string $parent Parent to retrieve services from. If this is set, the
+   * parent of all of the services specified in `names` must match this field. An
+   * example name would be: `projects/123` where `123` is the project number. The
+   * `BatchGetServices` method currently only supports projects.
+   * @param array $optParams Optional parameters.
+   *
+   * @opt_param string names Names of the services to retrieve.
+   *
+   * An example name would be: `projects/123/services/serviceusage.googleapis.com`
+   * where `123` is the project number. A single request can get a maximum of 30
+   * services at a time.
+   * @return Google_Service_ServiceUsage_BatchGetServicesResponse
+   */
+  public function batchGet($parent, $optParams = array())
+  {
+    $params = array('parent' => $parent);
+    $params = array_merge($params, $optParams);
+    return $this->call('batchGet', array($params), "Google_Service_ServiceUsage_BatchGetServicesResponse");
+  }
+  /**
    * Disable a service so that it can no longer be used with a project. This
    * prevents unintended usage that may cause unexpected billing charges or
    * security leaks.
@@ -128,12 +151,12 @@ class Google_Service_ServiceUsage_Resource_Services extends Google_Service_Resou
    * An example name would be: `projects/123` where `123` is the project number.
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string filter Only list services that conform to the given filter.
-   * The allowed filter strings are `state:ENABLED` and `state:DISABLED`.
-   * @opt_param string pageToken Token identifying which result to start with,
-   * which is returned by a previous list call.
    * @opt_param int pageSize Requested size of the next page of data. Requested
    * page size cannot exceed 200.  If not set, the default page size is 50.
+   * @opt_param string pageToken Token identifying which result to start with,
+   * which is returned by a previous list call.
+   * @opt_param string filter Only list services that conform to the given filter.
+   * The allowed filter strings are `state:ENABLED` and `state:DISABLED`.
    * @return Google_Service_ServiceUsage_ListServicesResponse
    */
   public function listServices($parent, $optParams = array())

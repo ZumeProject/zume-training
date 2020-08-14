@@ -17,15 +17,33 @@
 
 class Google_Service_Bigquery_EvaluationMetrics extends Google_Model
 {
+  protected $arimaForecastingMetricsType = 'Google_Service_Bigquery_ArimaForecastingMetrics';
+  protected $arimaForecastingMetricsDataType = '';
   protected $binaryClassificationMetricsType = 'Google_Service_Bigquery_BinaryClassificationMetrics';
   protected $binaryClassificationMetricsDataType = '';
   protected $clusteringMetricsType = 'Google_Service_Bigquery_ClusteringMetrics';
   protected $clusteringMetricsDataType = '';
   protected $multiClassClassificationMetricsType = 'Google_Service_Bigquery_MultiClassClassificationMetrics';
   protected $multiClassClassificationMetricsDataType = '';
+  protected $rankingMetricsType = 'Google_Service_Bigquery_RankingMetrics';
+  protected $rankingMetricsDataType = '';
   protected $regressionMetricsType = 'Google_Service_Bigquery_RegressionMetrics';
   protected $regressionMetricsDataType = '';
 
+  /**
+   * @param Google_Service_Bigquery_ArimaForecastingMetrics
+   */
+  public function setArimaForecastingMetrics(Google_Service_Bigquery_ArimaForecastingMetrics $arimaForecastingMetrics)
+  {
+    $this->arimaForecastingMetrics = $arimaForecastingMetrics;
+  }
+  /**
+   * @return Google_Service_Bigquery_ArimaForecastingMetrics
+   */
+  public function getArimaForecastingMetrics()
+  {
+    return $this->arimaForecastingMetrics;
+  }
   /**
    * @param Google_Service_Bigquery_BinaryClassificationMetrics
    */
@@ -67,6 +85,20 @@ class Google_Service_Bigquery_EvaluationMetrics extends Google_Model
   public function getMultiClassClassificationMetrics()
   {
     return $this->multiClassClassificationMetrics;
+  }
+  /**
+   * @param Google_Service_Bigquery_RankingMetrics
+   */
+  public function setRankingMetrics(Google_Service_Bigquery_RankingMetrics $rankingMetrics)
+  {
+    $this->rankingMetrics = $rankingMetrics;
+  }
+  /**
+   * @return Google_Service_Bigquery_RankingMetrics
+   */
+  public function getRankingMetrics()
+  {
+    return $this->rankingMetrics;
   }
   /**
    * @param Google_Service_Bigquery_RegressionMetrics
