@@ -51,7 +51,7 @@ $alt_video = zume_alt_video( $zume_current_lang );
                                     <div class="laptop__video-wrapper">
 
                                         <?php if ( $alt_video ) : ?>
-                                            <video style="width:640px;height:360px;" class="laptop__iframe" controls>
+                                            <video class="laptop__iframe" controls>
                                                 <source src="<?php echo esc_url( zume_mirror_url() . zume_current_language() . '/31.mp4' ) ?>" type="video/mp4">
                                                 Your browser does not support the video tag.
                                             </video>
