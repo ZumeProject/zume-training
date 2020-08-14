@@ -131,7 +131,7 @@ function zume_alt_video( $current_language = null ) {
     }
 
     if ( ! $alt_video ) {
-        $alt_video = ( 'in' === $current_language ); // @todo expand this if more than indonesian is a problem
+        $alt_video = ( 'id' === $current_language ); // @todo expand this if more than indonesian is a problem
     }
 
     return $alt_video;
