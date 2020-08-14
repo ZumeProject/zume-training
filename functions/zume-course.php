@@ -84,6 +84,7 @@ class Zume_Course {
     public static function get_download_by_key( $meta_key ) {
         // get language
         $current_lang = zume_current_language();
+        $current_mirror = zume_mirror_url();
         // get custom post type by language title
         $page = get_page_by_title( $current_lang, OBJECT, 'zume_download' );
         if ( ! $page ) {
@@ -97,8 +98,7 @@ class Zume_Course {
             return $video_id;
         }
 //        return trailingslashit( get_stylesheet_directory_uri() ) . 'downloads/' . $current_lang . '/' . $video_id;
-        return 'https://storage.googleapis.com/zume-file-mirror/' . $current_lang . '/' . $video_id;
+        return $current_mirror . $current_lang . '/' . $video_id;
     }
-
 
 }

@@ -100,7 +100,7 @@ function add_template_value( $column_name, $post_id ) {
     if ( 'template' === $column_name ) {
         $template = get_post_meta( $post_id, '_wp_page_template', true );
         if ( isset( $template ) && $template ) {
-            echo $template;
+            echo esc_html( $template );
         } else {
             echo 'None';
         }
@@ -113,6 +113,29 @@ function add_template_value( $column_name, $post_id ) {
 add_filter( 'login_redirect', function( $url, $query, $user ) {
     return zume_dashboard_url();
 }, 10, 3 );
+
+function zume_mirror_url(){
+    return 'https://storage.googleapis.com/zume-file-mirror/';
+}
+
+function zume_alt_video( $current_language = null ) {
+    $alt_video = false;
+
+    if ( ! $current_language ) {
+        $current_language = zume_current_language();
+    }
+
+    if ( false /* disabled until added */ ) {
+        // @todo add check for user preference
+        $alt_video = true;
+    }
+
+    if ( ! $alt_video ) {
+        $alt_video = ( 'in' === $current_language ); // @todo expand this if more than indonesian is a problem
+    }
+
+    return $alt_video;
+}
 
 /**
  * @return bool|mixed

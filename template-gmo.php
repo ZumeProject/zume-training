@@ -9,6 +9,7 @@ Template Name: GMO - Welcome to Zúme
 <html class="no-js" <?php language_attributes(); ?>>
 
 <head>
+    <?php // @phpcs:disable ?>
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
                 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -50,8 +51,10 @@ Template Name: GMO - Welcome to Zúme
 
 <body <?php body_class(); ?>>
 <!-- Google Tag Manager (noscript) -->
+
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NLZSL6S"
                   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<?php // @phpcs:enable ?>
 <!-- End Google Tag Manager (noscript) -->
 
 <div class="off-canvas-wrapper">

@@ -475,6 +475,23 @@ div.video-section {
     }
 }
 
+div.alt-video-section {
+    width:800px;
+    height:540px;
+    margin: 0 auto;
+
+    @media (max-width: $breakpoint-medium ) {
+    }
+}
+
+div.about-video-section {
+    width:640px;
+    margin: 0 auto;
+
+    @media (max-width: $breakpoint-medium ) {
+    }
+}
+
 #hide-course-top-bar {
     float:right;
     color: $primary-color;

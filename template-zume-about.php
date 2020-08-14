@@ -2,6 +2,10 @@
 /*
 Template Name: Zume About
 */
+
+$zume_current_lang = zume_current_language();
+$alt_video = zume_alt_video( $zume_current_lang );
+
 ?>
 
 <?php get_header(); ?>
@@ -26,12 +30,21 @@ Template Name: Zume About
 
                 <div class="large-8 small-12 cell">
 
-                    <!-- Video -->
-                    <div class="responsive-embed widescreen">
-                        <iframe allowFullScreen frameborder="0" height="564" mozallowfullscreen
-                                src="<?php echo esc_url( Zume_Course::get_video_by_key( '32' ) ) ?>" webkitAllowFullScreen
-                                width="640"></iframe>
-                    </div>
+                    <!-- 32 -->
+                    <?php if ( $alt_video ) : ?>
+                        <div class="about-video-section">
+                            <video style="border: 1px solid lightgrey;" controls>
+                                <source src="<?php echo esc_url( zume_mirror_url() . zume_current_language() . '/32.mp4' ) ?>" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                    <?php else : ?>
+                        <div class="responsive-embed widescreen">
+                            <iframe allowFullScreen frameborder="0" height="564" mozallowfullscreen
+                                    src="<?php echo esc_url( Zume_Course::get_video_by_key( '32' ) ) ?>" webkitAllowFullScreen
+                                    width="640"></iframe>
+                        </div>
+                    <?php endif; ?>
 
                     <div class="grid-x row vertical-padding">
                         <div class="cell ">

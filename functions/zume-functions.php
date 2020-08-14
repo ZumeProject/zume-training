@@ -306,7 +306,7 @@ function zume_images_uri( $sub_folder = '' ) {
 }
 
 function zume_files_uri() {
-    return 'https://storage.googleapis.com/zume-file-mirror/' . zume_current_language() . '/';
+    return zume_mirror_url() . zume_current_language() . '/';
 }
 
 function zume_files_download_uri() {

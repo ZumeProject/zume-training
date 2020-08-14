@@ -4,6 +4,7 @@ Template Name: Full Width Home
 */
 
 $zume_current_lang = zume_current_language();
+$alt_video = zume_alt_video( $zume_current_lang );
 
 ?>
 <?php get_header(); ?>
@@ -48,14 +49,22 @@ $zume_current_lang = zume_current_language();
                             <div class="laptop">
                                 <div class="laptop__screen">
                                     <div class="laptop__video-wrapper">
-                                        <iframe
+
+                                        <?php if ( $alt_video ) : ?>
+                                            <video style="width:640px;height:360px;" class="laptop__iframe" controls>
+                                                <source src="<?php echo esc_url( zume_mirror_url() . zume_current_language() . '/31.mp4' ) ?>" type="video/mp4">
+                                                Your browser does not support the video tag.
+                                            </video>
+                                        <?php else : ?>
+                                            <iframe
                                                 class="laptop__iframe"
                                                 width="640"
                                                 height="360"
                                                 frameborder="0"
                                                 allowfullscreen
                                                 src="<?php echo esc_url( Zume_Course::get_video_by_key( '31' ) ) ?>"
-                                        ></iframe>
+                                            ></iframe>
+                                        <?php endif; ?>
                                     </div>
                                 </div>
                             </div>
