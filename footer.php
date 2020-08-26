@@ -48,11 +48,6 @@
             $('.language-selector').on('click', function(e){
                 let lang = $(this).data('value')
                 let url = $(this).data('url')
-                let hash = window.location.hash
-                let regex = /train/g;
-                if ( url.match(regex) ) {
-                    url += hash
-                }
                 $('.language-selector:not(#row-'+lang+')').fadeTo("fast", 0.33)
                 window.location = url
             })
