@@ -1181,12 +1181,21 @@ ul.orbit-container {
         padding-right:5px;
     }
 }
-#lang-menu select {
-    max-width: 180px;
-    float:right;
 
+#lang-menu {
+    a {
+        max-width: 180px;
+        float:right;
+    }
     @media ( max-width: $breakpoint-medium ) {
 
+    }
+}
+
+.language-selector {
+    :hover {
+        background-color: $secondary-color;
+        cursor: pointer;
     }
 }
 

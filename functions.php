@@ -167,6 +167,7 @@ function zume_v4_ready_language() {
     $ready['vi'] = true;
     $ready['es'] = true;
     $ready['gu'] = true;
+    $ready['ja'] = true;
 
     $current = zume_current_language();
 

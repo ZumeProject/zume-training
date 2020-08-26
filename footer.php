@@ -16,8 +16,56 @@
 </footer> <!-- end .footer -->
 </div>  <!-- end .main-content -->
 </div> <!-- end .off-canvas-wrapper -->
-<?php wp_footer(); ?>
 
+
+<!-- language selector modal -->
+<div id="language-menu-reveal" class="reveal" data-reveal data-v-offset="50px">
+    <h3><img src="<?php echo zume_images_uri() ?>language.svg" style="width:25px;height:25px;" /> <?php esc_html_e("Language", 'zume' ) ?></h3>
+    <hr>
+    <table class="hover">
+        <?php
+        global $post;
+        $post_slug = $post->post_name;
+        $lang = zume_language_file();
+        $url_list = zume_get_url_list( get_the_ID() );
+        foreach( $lang as $item ){
+            if ( isset( $url_list[$item['code']] ) ) {
+                $url = $url_list[$item['code']];
+            } else {
+                $url = site_url() . '/' . $item['code'] . '/';
+            }
+            ?>
+            <tr class="language-selector" data-url="<?php echo $url ?>" data-value="<?php echo $item['code'] ?>" id="row-<?php echo $item['code'] ?>">
+                <td><?php echo $item['nativeName'] ?></td>
+                <td><?php echo $item['enDisplayName'] ?></td>
+            </tr>
+            <?php
+        }
+        ?>
+    </table>
+    <script>
+        jQuery(document).ready(function($){
+            $('.language-selector').on('click', function(e){
+                let lang = $(this).data('value')
+                let url = $(this).data('url')
+                let hash = window.location.hash
+                let regex = /train/g;
+                if ( url.match(regex) ) {
+                    url += hash
+                }
+                $('.language-selector:not(#row-'+lang+')').fadeTo("fast", 0.33)
+                window.location = url
+            })
+        })
+    </script>
+    <button class="close-button" data-close aria-label="Close modal" type="button">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+
+
+
+<?php wp_footer(); ?>
 
 <?php
 /**
@@ -29,6 +77,9 @@ if ( ! empty( $zendesk_enable ) ) : ?>
 <script>/*<![CDATA[*/window.zEmbed||function(e,t){var n,o,d,i,s,a=[],r=document.createElement("iframe");window.zEmbed=function(){a.push(arguments)},window.zE=window.zE||window.zEmbed,r.src="javascript:false",r.title="",r.role="presentation",(r.frameElement||r).style.cssText="display: none",d=document.getElementsByTagName("script"),d=d[d.length-1],d.parentNode.insertBefore(r,d),i=r.contentWindow,s=i.document;try{o=s}catch(c){n=document.domain,r.src='javascript:var d=document.open();d.domain="'+n+'";void(0);',o=s}o.open()._l=function(){var o=this.createElement("script");n&&(this.domain=n),o.id="js-iframe-async",o.src=e,this.t=+new Date,this.zendeskHost=t,this.zEQueue=a,this.body.appendChild(o)},o.write('<body onload="document._l();">'),o.close()}("https://assets.zendesk.com/embeddable_framework/main.js","zume.zendesk.com");/*]]>*/</script>
 <!-- End of Zendesk Widget script -->
 <?php endif; ?>
+
+
+
 
 </body>
 </html> <!-- end page -->

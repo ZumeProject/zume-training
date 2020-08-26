@@ -171,10 +171,10 @@ function zume_home_url( $current_language = null ) {
     if ( is_null( $current_language ) ) {
         $current_language = zume_current_language();
     }
-    if ( 'en' != $current_language ) {
-        $home_url = site_url() . '/' . $current_language;
-    } else {
+    if ( 'en' === $current_language ) {
         $home_url = site_url();
+    } else {
+        $home_url = site_url() . '/' . $current_language;
     }
     return $home_url;
 }
@@ -290,6 +290,8 @@ function zume_faq_url() {
 }
 
 
+
+
 /**
  * Returns the full URI of the images folder with the ending slash, either as images/ or as images/sub_folder/.
  *
@@ -308,6 +310,11 @@ function zume_images_uri( $sub_folder = '' ) {
 function zume_files_uri() {
     return zume_mirror_url() . zume_current_language() . '/';
 }
+
+function zume_language_file(){
+    return json_decode( file_get_contents( get_theme_file_path('/languages.json' ) ), true );
+}
+
 
 function zume_files_download_uri() {
     // post id of downloads / meta field

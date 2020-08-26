@@ -99,6 +99,23 @@ function zume_get_posts_translation_url( $page_title, $slug = 'en' ) {
     }
 }
 
+function zume_get_url_list( $page_id ) {
+    $list = [];
+
+    // get assoc list of urls for a base page
+    $terms = get_terms(['post_translations'] );
+    foreach( $terms as $term ){
+        $array = maybe_unserialize( $term->description);
+        if ( in_array( $page_id, $array ) ) {
+            foreach( $array as $index => $value ){
+                $list[$index] = get_permalink($value);
+            }
+            break;
+        }
+    }
+    return $list;
+}
+
 function zume_get_landing_translation_url( int $landing_id, $slug = 'en' ) {
 
     if ( function_exists( 'pll_the_languages' ) ) {
