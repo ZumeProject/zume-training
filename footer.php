@@ -34,6 +34,7 @@
             } else {
                 $url = site_url() . '/' . $item['code'] . '/';
             }
+            $url = site_url() . '/' . $item['code'] . '/';
             ?>
             <tr class="language-selector" data-url="<?php echo $url ?>" data-value="<?php echo $item['code'] ?>" id="row-<?php echo $item['code'] ?>">
                 <td><?php echo $item['nativeName'] ?></td>
