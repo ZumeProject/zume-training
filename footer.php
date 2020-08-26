@@ -27,14 +27,12 @@
         global $post;
         $post_slug = $post->post_name;
         $lang = zume_language_file();
-        $url_list = zume_get_url_list( get_the_ID() );
         foreach( $lang as $item ){
-            if ( isset( $url_list[$item['code']] ) ) {
-                $url = $url_list[$item['code']];
+            if ( 'en' === $item['code'] ) {
+                $url = site_url();
             } else {
                 $url = site_url() . '/' . $item['code'] . '/';
             }
-            $url = site_url() . '/' . $item['code'] . '/';
             ?>
             <tr class="language-selector" data-url="<?php echo $url ?>" data-value="<?php echo $item['code'] ?>" id="row-<?php echo $item['code'] ?>">
                 <td><?php echo $item['nativeName'] ?></td>

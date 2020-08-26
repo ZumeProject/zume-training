@@ -102,29 +102,31 @@ function zume_get_posts_translation_url( $page_title, $slug = 'en' ) {
 function zume_get_url_list( $page_id ) {
     global $wpdb;
     $list = [];
-    $home = $wpdb->get_var("SELECT description FROM $wpdb->term_taxonomy WHERE term_taxonomy_id = '51'");
-    $home = maybe_unserialize($home);
+//    $home = $wpdb->get_var("SELECT description FROM $wpdb->term_taxonomy WHERE term_taxonomy_id = '51'");
+//    $home = maybe_unserialize($home);
+//
+//    if ( in_array( '19850', $home) ){
+//        foreach( $home as $index => $value ){
+//            $list[$index] = get_permalink($value);
+//            break;
+//        }
+//    } else {
+//        // get assoc list of urls for a base page
+//
+//    }
 
-    if ( in_array( '19850', $home) ){
-        foreach( $home as $index => $value ){
-            $list[$index] = get_permalink($value);
-            break;
-        }
-    } else {
-        // get assoc list of urls for a base page
-        $terms = get_terms(['post_translations'] );
-        foreach( $terms as $term ){
-            $array = maybe_unserialize( $term->description);
-            if ( in_array( $page_id, $array ) ) {
-                foreach( $array as $index => $value ){
-                    $list[$index] = get_permalink($value);
-                }
-                break;
+    $terms = get_terms(['post_translations'] );
+    foreach( $terms as $term ){
+        $array = maybe_unserialize( $term->description);
+        if ( in_array( $page_id, $array ) ) {
+            foreach( $array as $index => $value ){
+                $list[$index] = get_permalink($value);
             }
+            break;
         }
     }
 
-
+dt_write_log($list);
     return $list;
 }
 
