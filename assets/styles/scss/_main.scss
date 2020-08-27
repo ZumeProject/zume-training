@@ -1188,15 +1188,20 @@ ul.orbit-container {
         float:right;
     }
     @media ( max-width: $breakpoint-medium ) {
-
+        float:none;
+        text-align:center;
     }
 }
 
-.language-selector {
-    :hover {
+#language-table {
+    tr:hover {
         background-color: $secondary-color;
         cursor: pointer;
     }
+
+}
+.language-selector {
+
 }
 
 .mobile-menu {
