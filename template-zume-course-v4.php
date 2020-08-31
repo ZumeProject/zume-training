@@ -25,6 +25,8 @@ if ( isset( $_GET['group'] ) ) {
 
 <?php get_header(); ?>
 
+<?php do_action('zume_movement_log_course', ['language' => zume_current_language(), 'session' => $session_id, 'members' =>  $members ] ) ?>
+
 <script>
     /* Hide the language selector during the course, because switching wipes out the group key. */
     jQuery(document).ready(function() {

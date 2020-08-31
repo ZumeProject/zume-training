@@ -104,7 +104,7 @@ $zume_groups = Zume_Dashboard::get_current_user_groups();
                                         // list groups available
                                         foreach ( $zume_groups as $zume_group ) {
                                             $zume_group_meta = Zume_Dashboard::verify_group_array_filter( $zume_group );
-                                            print '<a class="small" 
+                                            print '<a class="small"
                                             onclick="jQuery(\'#public_key\').val(\''.esc_attr( $zume_group_meta['public_key'] ) .'\')">
                                             (' . esc_attr( $zume_group_meta['group_name'] ) . ': ' . esc_attr( $zume_group_meta['public_key'] ) . ')
                                             </a> ';
@@ -253,5 +253,7 @@ endforeach; ?>
         </div>
     </div> <!--cell -->
 </div><!-- end #content -->
+
+<?php do_action( 'zume_movement_log_3mplan', ['language' => zume_current_language() ]) ?>
 
 <?php get_footer(); ?>

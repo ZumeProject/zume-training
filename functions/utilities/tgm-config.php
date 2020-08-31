@@ -65,6 +65,12 @@ function zume_register_required_plugins() {
             'version' => '1.5',
             'required' => true,
         ),
+        array(
+            'name' => 'Disciple Tools - Network Dashboard Remote',
+            'slug' => 'disciple-tools-network-dashboard-remote',
+            'version' => '1.0',
+            'required' => true,
+        ),
 //        array(
 //            'name' => 'Infinite WP',
 //            'slug' => 'iwp-client',

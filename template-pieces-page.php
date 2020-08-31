@@ -7,6 +7,7 @@ get_header();
 
 if (have_posts()) :
     while (have_posts()) : the_post();
+        $language = zume_current_language();
         $postid = get_the_ID();
         $meta = get_post_meta( $postid );
         $tool_number = $meta['zume_piece'][0] ?? 0;
@@ -244,6 +245,8 @@ if (have_posts()) :
                 });
             })
         </script>
+
+        <?php do_action('zume_movement_log_pieces', ['tool' => $tool_number, 'session' => $session_number, 'language' => $language ] ) ?>
         <!-- end zume vision logging -->
 
         <?php

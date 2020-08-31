@@ -78,8 +78,7 @@ require_once( 'functions/zume-dt-integration/zume-site-stats.php' );
 
 
 require_once( 'functions/zume-v4-global-network-link.php' );
-
-
+require_once( 'functions/network-dashboard-remote-integration.php' );
 
 
 if ( is_admin() ) {

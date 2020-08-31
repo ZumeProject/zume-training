@@ -749,6 +749,12 @@ function save_new_group() {
 
     if (typeof window.zume_vision_logging !== "undefined") {
       window.zume_vision_logging({'action': 'started_group', 'language': zumeTraining.current_language } )
+      window.movement_logging({
+        "action": "started_group",
+        "category": "leading",
+        "data-language": zumeTraining.current_language,
+        "data-note": "is creating a new training group!"
+      })
     }
   }
 }
@@ -794,6 +800,12 @@ function save_invitation_response( key, answer ) {
   if (typeof window.zume_vision_logging !== "undefined") {
     if ( 'accepted' === answer ) {
       window.zume_vision_logging({'action': 'joined_group', 'language': zumeTraining.current_language} )
+      window.movement_logging({
+        "action": "joined_group",
+        "category": "leading",
+        "data-language": zumeTraining.current_language,
+        "data-note": "is joining a training group!"
+      })
     }
   }
 }
@@ -1656,6 +1668,12 @@ function send_coaching_request() {
 
   if (typeof window.zume_vision_logging !== "undefined") {
     window.zume_vision_logging({'action': 'requested_coach', 'language': zumeTraining.current_language } )
+    window.movement_logging({
+      "action": "coaching",
+      "category": "joining",
+      "data-language": zumeTraining.current_language,
+      "data-note": "is requesting coaching from Zúme coaches!"
+    })
   }
 }
 
