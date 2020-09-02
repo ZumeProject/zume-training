@@ -246,7 +246,7 @@ if (have_posts()) :
             })
         </script>
 
-        <?php do_action('zume_movement_log_pieces', ['tool' => $tool_number, 'session' => $session_number, 'language' => $language ] ) ?>
+        <?php do_action('zume_movement_log_pieces', ['tool' => $tool_number, 'session' => $session_number, 'language' => $language, 'title' => get_the_title( zume_landing_page_post_id( $tool_number ) ) ] ) ?>
         <!-- end zume vision logging -->
 
         <?php

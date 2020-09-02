@@ -26,7 +26,7 @@ function zume_get_english_language_name( $language_code ){
 }
 
 add_action( 'zume_movement_log_pieces', 'zume_movement_log_pieces', 10, 1 );
-function zume_movement_log_pieces( $args = ['tool' => '', 'session' => '', 'language' => '' ] ) {
+function zume_movement_log_pieces( $args = ['tool' => '', 'session' => '', 'language' => '', 'title' => '' ] ) {
     ?>
     <script>
         jQuery(document).ready(function(){
@@ -40,6 +40,7 @@ function zume_movement_log_pieces( $args = ['tool' => '', 'session' => '', 'lang
                         "data-language_name": "<?php echo esc_html( zume_get_english_language_name( $args['language'] ) ) ?>",
                         "data-session": "<?php echo esc_attr( $args['session'] ) ?>",
                         "data-tool": "<?php echo esc_attr( $args['tool'] ) ?>",
+                        "data-title": "<?php echo esc_attr( $args['title'] ) ?>",
                         "data-group_size": "1",
                         "data-note": "is studying"
                     })
