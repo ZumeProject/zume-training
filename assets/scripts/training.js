@@ -801,10 +801,10 @@ function save_invitation_response( key, answer ) {
     if ( 'accepted' === answer ) {
       window.zume_vision_logging({'action': 'joined_group', 'language': zumeTraining.current_language} )
       window.movement_logging({
-        "action": "joined_group",
+        "action": "building_group",
         "category": "leading",
         "data-language": zumeTraining.current_language,
-        "data-note": "is joining a training group!"
+        "data-note": "is building a training group!"
       })
     }
   }
