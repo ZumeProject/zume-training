@@ -78,6 +78,7 @@ function zume_dra_only_allow_logged_in_rest_access( $access ) {
     if ( isset( $_SERVER['REQUEST_URI'] ) && strpos( sanitize_text_field( wp_unslash( $_SERVER['REQUEST_URI'] ) ), '/zume/' ) !== false ) {
         $is_public = true;
     }
+
     /**
      * Android app uses jwt authentication plugin which needs public access.
      */
@@ -95,6 +96,10 @@ function zume_dra_only_allow_logged_in_rest_access( $access ) {
      * External integrations to a Disciple Tools site can be done through the /dt-public/ route, which is left open to non-logged in external access
      */
     if ( isset( $_SERVER['REQUEST_URI'] ) && strpos( sanitize_text_field( wp_unslash( $_SERVER['REQUEST_URI'] ) ), '/zume_vision_log/' ) !== false ) {
+        $is_public = true;
+    }
+
+    if ( isset( $_SERVER['REQUEST_URI'] ) && strpos( sanitize_text_field( wp_unslash( $_SERVER['REQUEST_URI'] ) ), '/movement_logging/' ) !== false ) {
         $is_public = true;
     }
 
