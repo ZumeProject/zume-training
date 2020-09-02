@@ -750,7 +750,7 @@ function save_new_group() {
     if (typeof window.zume_vision_logging !== "undefined") {
       window.zume_vision_logging({'action': 'started_group', 'language': zumeTraining.current_language } )
       window.movement_logging({
-        "action": "started_group",
+        "action": "starting_group",
         "category": "leading",
         "data-language": zumeTraining.current_language,
         "data-note": "is creating a new training group!"
