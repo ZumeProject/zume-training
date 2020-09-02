@@ -27,6 +27,7 @@ if ( is_admin() ) {
 // Language Files
 require_once( 'translations/translation.php' ); // Adds support for multiple languages
 require_once( 'functions/zume-polylang-integration.php' ); // Adds support for multiple languages
+require_once( 'functions/network-dashboard-remote-integration.php' );
 
 // Zume Theme Files
 require_once( 'functions/login/zume-login.php' ); // Customize the login page
@@ -78,7 +79,6 @@ require_once( 'functions/zume-dt-integration/zume-site-stats.php' );
 
 
 require_once( 'functions/zume-v4-global-network-link.php' );
-require_once( 'functions/network-dashboard-remote-integration.php' );
 
 
 if ( is_admin() ) {

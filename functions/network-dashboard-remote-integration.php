@@ -11,6 +11,19 @@
  * training.js:803 in function save_invitation_response()
  * training.js:1670 in function send_coaching_request()
  */
+function zume_get_english_language_name( $language_code ){
+    if ( 'en' === $language_code ) {
+        return 'English';
+    } else {
+        $languages = json_decode( file_get_contents(get_template_directory() . '/languages.json'), true );
+        foreach( $languages as $language ){
+            if ( $language_code === $language['code'] ) {
+                return $language['enDisplayName'];
+            }
+        }
+        return ''; // empty if no match
+    }
+}
 
 add_action( 'zume_movement_log_pieces', 'zume_movement_log_pieces', 10, 1 );
 function zume_movement_log_pieces( $args = ['tool' => '', 'session' => '', 'language' => '' ] ) {
@@ -23,7 +36,8 @@ function zume_movement_log_pieces( $args = ['tool' => '', 'session' => '', 'lang
                     window.movement_logging({
                         "action": "<?php echo esc_attr( $args['tool'] ) ?>",
                         "category": "studying",
-                        "data-language": "<?php echo esc_attr( $args['language'] ) ?>",
+                        "data-language_code": "<?php echo esc_attr( $args['language'] ) ?>",
+                        "data-language_name": "<?php echo esc_html( zume_get_english_language_name( $args['language'] ) ) ?>",
                         "data-session": "<?php echo esc_attr( $args['session'] ) ?>",
                         "data-tool": "<?php echo esc_attr( $args['tool'] ) ?>",
                         "data-group_size": "1",
@@ -46,7 +60,8 @@ function zume_movement_log_course( $args = ['members' => '', 'session' => '', 'l
                 window.movement_logging({
                     "action": "<?php echo esc_attr($args['session']) ?>",
                     "category": "leading",
-                    "data-language": "<?php echo esc_attr($args['language']) ?>",
+                    "data-language_code": "<?php echo esc_attr($args['language']) ?>",
+                    "data-language_name": "<?php echo esc_html( zume_get_english_language_name( $args['language'] ) ) ?>",
                     "data-session": "<?php echo esc_attr($args['session']) ?>",
                     "data-group_size": "<?php echo esc_attr($args['members']) ?>",
                     "data-note": "is leading a group of <?php echo esc_attr($args['members']) ?> through session <?php echo esc_attr($args['session']) ?>"
@@ -67,7 +82,8 @@ function zume_movement_log_3mplan( $args = [ 'language' => '' ] ){
                     window.movement_logging({
                         "action": "updated_3_month",
                         "category": "committing",
-                        "data-language": "<?php echo esc_attr($args['language']) ?>",
+                        "data-language_code": "<?php echo esc_attr($args['language']) ?>",
+                        "data-language_name": "<?php echo esc_html( zume_get_english_language_name( $args['language'] ) ) ?>",
                         "data-note": "made a three month plan!"
                     })
                 }
@@ -80,10 +96,12 @@ function zume_movement_log_3mplan( $args = [ 'language' => '' ] ){
 add_action( 'user_register', 'zume_movement_log_register', 99, 1 );
 function zume_movement_log_register( $user_id ){
     if ( class_exists( 'Network_Dashboard_Remote_Log') ) {
+        $language_code = zume_current_language();
         Network_Dashboard_Remote_Log::log([
             "action" => "zume_training",
             "category" => "joining",
-            "data-language" => zume_current_language(),
+            "data-language_code" => $language_code,
+            "data-language_name" => zume_get_english_language_name( $language_code ),
             "data-note" => "is registering for Zúme Training!"
         ]);
     }

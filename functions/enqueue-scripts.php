@@ -165,6 +165,7 @@ function zume_site_scripts() {
                 'logged_in' => is_user_logged_in(),
                 'map_key' => DT_Mapbox_API::get_key(),
                 "current_language" => $current_language,
+                "current_language_name" => zume_get_english_language_name( $current_language ),
                 "groups" => ( is_user_logged_in() ) ? Zume_V4_Groups::get_all_groups() : array(),
                 "progress" => ( is_user_logged_in() ) ? Zume_V4_Progress::get_user_progress() : array(),
                 "invitations" => ( is_user_logged_in() ) ? Zume_V4_Groups::get_colead_groups( 'waiting_acceptance_minimum' ) : array(),

@@ -15,26 +15,10 @@ function zume_force_login() {
     }
 }
 
-
-/*
- * Redirects logged on users from home page requests to dashboard.
- */
-//function zume_dashboard_redirect() {
-//    global $post;
-//    if ( is_user_logged_in() && isset( $post )) {
-////        if ($post->post_name == 'home') {
-////            wp_redirect( zume_dashboard_url() );
-////        }
-//    }
-//}
-//add_action( 'template_redirect', 'zume_dashboard_redirect' );
-
-
 // Remove admin bar on the front end.
 if ( ! current_user_can( 'administrator' ) ) {
     add_filter( 'show_admin_bar', '__return_false' );
 }
-
 
 /**
  * Remove menu items for coaches in the admin dashboard.
