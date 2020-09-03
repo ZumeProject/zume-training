@@ -30,18 +30,13 @@ if ( ! isset( $zume_user_meta[ $zume_group_key ] ) ) { // check if owner of grou
 
 get_header();
 
+do_action('zume_movement_log_course', ['language' => zume_current_language(), 'session' => $zume_session, 'members' => $zume_group_meta['members'] ?? 1 ])
+
 ?>
     <script>
         /* Hide the language selector during the course, because switching wipes out the group key. */
         jQuery(document).ready(function() {
             jQuery('#lang_choice_1').hide();
-            if (typeof window.zume_vision_logging !== "undefined") {
-                window.zume_vision_logging({
-                    'action': 'leading_<?php echo esc_attr( $zume_session ) ?>',
-                    'group_size': '<?php echo esc_attr( $zume_group_meta['members'] ?? 1 ) ?>',
-                    'language': '<?php echo esc_attr( zume_current_language() ) ?>'
-            })
-            }
         })
     </script>
     <div id="content" class="max-content-width">

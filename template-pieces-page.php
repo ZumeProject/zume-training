@@ -233,19 +233,6 @@ if (have_posts()) :
 
         <?php get_template_part( "parts/content", "modal" ); ?>
 
-        <!-- zume vision logging -->
-        <script>
-            jQuery(document).ready(function(){
-                let has_scrolled = false
-                jQuery(document).scroll(function() {
-                    if (jQuery(document).scrollTop() >= 200 && has_scrolled === false ) {
-                        window.zume_vision_logging({'action': 'studied_<?php echo esc_attr( $tool_number ) ?>', 'language': '<?php echo esc_attr( zume_current_language() ) ?>' })
-                        has_scrolled = true
-                    }
-                });
-            })
-        </script>
-
         <?php do_action('zume_movement_log_pieces', ['tool' => $tool_number, 'session' => $session_number, 'language' => $language, 'title' => get_the_title( zume_landing_page_post_id( $tool_number ) ) ] ) ?>
         <!-- end zume vision logging -->
 

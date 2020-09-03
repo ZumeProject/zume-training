@@ -50,12 +50,22 @@ $current_language = zume_current_language();
             })
                 .done(function (data) {
                     pieces.html(data)
+
+                    window.movement_logging({
+                        "action": id,
+                        "category": "studying",
+                        "data-language_code": "<?php echo esc_attr( $current_language ) ?>",
+                        "data-language_name": "<?php echo esc_html( zume_get_english_language_name( $current_language ) ) ?>",
+                        "data-session": "",
+                        "data-tool": id,
+                        "data-title": "How to Follow Jesus",
+                        "data-group_size": "1",
+                        "data-note": "is studying"
+                    })
                 })
 
 
             jQuery('#pieces-wrapper').foundation('open')
-
-            window.zume_vision_logging({'action': 'studying_'+id, 'language': '<?php echo esc_attr( zume_current_language() ) ?>' })
 
         }
         jQuery('.open-modal').on('click', function() {

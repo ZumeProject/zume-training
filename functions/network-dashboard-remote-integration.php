@@ -57,7 +57,7 @@ function zume_movement_log_course( $args = ['members' => '', 'session' => '', 'l
     ?>
     <script>
         jQuery(document).ready(function(){
-            if (typeof window.zume_vision_logging !== "undefined") {
+            if (typeof window.movement_logging !== "undefined") {
                 window.movement_logging({
                     "action": "<?php echo esc_attr($args['session']) ?>",
                     "category": "leading",
@@ -79,7 +79,7 @@ function zume_movement_log_3mplan( $args = [ 'language' => '' ] ){
     <script>
         jQuery(document).ready(function(){
             jQuery('#submit_profile').on('click', function(){
-                if (typeof window.zume_vision_logging !== "undefined") {
+                if (typeof window.movement_logging !== "undefined") {
                     window.movement_logging({
                         "action": "updated_3_month",
                         "category": "committing",
