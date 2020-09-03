@@ -118,18 +118,20 @@ $current_language = zume_current_language();
                 .done(function (data) {
                     pieces.html(data)
 
-                    window.movement_logging({
-                        "action": id,
-                        "category": "studying",
-                        "data-language_code": "<?php echo esc_attr( $current_language ) ?>",
-                        "data-language_name": "<?php echo esc_html( zume_get_english_language_name( $current_language ) ) ?>",
-                        "data-session": "",
-                        "data-tool": id,
-                        "data-title": "Welcome to God's Family",
-                        "data-group_size": "1",
-                        "data-note": "is studying"
-                    })
+
                 })
+
+            window.movement_logging({
+                "action": id,
+                "category": "studying",
+                "data-language_code": "<?php echo esc_attr( $current_language ) ?>",
+                "data-language_name": "<?php echo esc_html( zume_get_english_language_name( $current_language ) ) ?>",
+                "data-session": "",
+                "data-tool": id,
+                "data-title": "Welcome to God's Family",
+                "data-group_size": "1",
+                "data-note": "is studying"
+            })
 
 
             jQuery('#pieces-wrapper').foundation('open')
