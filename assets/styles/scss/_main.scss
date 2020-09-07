@@ -1186,11 +1186,13 @@ ul.orbit-container {
     a {
         max-width: 180px;
         float:right;
+
+        @media ( max-width: $breakpoint-medium ) {
+            max-width: 100%;
+            text-align:center;
+        }
     }
-    @media ( max-width: $breakpoint-medium ) {
-        float:none;
-        text-align:center;
-    }
+
 }
 
 #language-table {

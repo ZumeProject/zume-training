@@ -19,7 +19,7 @@
 
 
 <!-- language selector modal -->
-<div id="language-menu-reveal" class="reveal" data-reveal data-v-offset="50px">
+<div id="language-menu-reveal" class="reveal" data-reveal data-v-offset="0">
     <h3><img src="<?php echo zume_images_uri() ?>language.svg" style="width:25px;height:25px;" /> <?php esc_html_e("Language", 'zume' ) ?></h3>
     <hr>
     <table class="hover" id="language-table">
