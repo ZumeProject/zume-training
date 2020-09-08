@@ -142,36 +142,11 @@ function zume_alt_video( $current_language = null ) {
 function zume_v4_ready_language() {
     $ready = array();
 
-    $ready['en'] = true;
-    $ready['pt'] = true;
-    $ready['fr'] = true;
-    $ready['ha'] = true;
-    $ready['bho'] = true;
-    $ready['ar'] = true;
-    $ready['ko'] = true;
-    $ready['or'] = true;
-    $ready['ru'] = true;
-    $ready['yo'] = true;
-    $ready['bn'] = true;
-    $ready['it'] = true;
-    $ready['te'] = true;
-    $ready['mr'] = true;
-    $ready['ta'] = true;
-    $ready['zhtw'] = true;
-    $ready['zhcn'] = true;
-    $ready['hi'] = true;
-    $ready['pa'] = true;
-    $ready['lo'] = true;
-    $ready['ml'] = true;
-    $ready['vi'] = true;
-    $ready['es'] = true;
-    $ready['gu'] = true;
-    $ready['ja'] = true;
-    $ready['ro'] = true;
+    $ready['id'] = false;
 
     $current = zume_current_language();
 
-    return $ready[$current] ?? false;
+    return $ready[$current] ?? true;
 }
 
 

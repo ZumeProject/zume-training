@@ -49,6 +49,13 @@
     "rtl": false
   },
   {
+    "enDisplayName": "German",
+    "code": "de",
+    "locale": "de_DE",
+    "nativeName": "Deutsch",
+    "rtl": false
+  },
+  {
     "enDisplayName": "Gujarati",
     "code": "gu",
     "locale": "gu",
