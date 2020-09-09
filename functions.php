@@ -28,6 +28,7 @@ if ( is_admin() ) {
 require_once( 'translations/translation.php' ); // Adds support for multiple languages
 require_once( 'functions/zume-polylang-integration.php' ); // Adds support for multiple languages
 require_once( 'functions/network-dashboard-remote-integration.php' );
+require_once( 'functions/yoast-integration.php' );
 
 // Zume Theme Files
 require_once( 'functions/login/zume-login.php' ); // Customize the login page
@@ -155,5 +156,7 @@ function zume_v4_ready_language() {
 
     return $ready[$current] ?? true;
 }
+
+
 
 
