@@ -296,7 +296,7 @@ function zume_files_uri() {
 }
 
 function zume_language_file(){
-    return json_decode( file_get_contents( get_theme_file_path('/languages.json' ) ), true );
+    return json_decode( file_get_contents( get_theme_file_path( '/languages.json' ) ), true );
 }
 
 

@@ -115,18 +115,18 @@ function zume_get_url_list( $page_id ) {
 //
 //    }
 
-    $terms = get_terms(['post_translations'] );
-    foreach( $terms as $term ){
-        $array = maybe_unserialize( $term->description);
+    $terms = get_terms( [ 'post_translations' ] );
+    foreach ( $terms as $term ){
+        $array = maybe_unserialize( $term->description );
         if ( in_array( $page_id, $array ) ) {
-            foreach( $array as $index => $value ){
-                $list[$index] = get_permalink($value);
+            foreach ( $array as $index => $value ){
+                $list[$index] = get_permalink( $value );
             }
             break;
         }
     }
 
-dt_write_log($list);
+    dt_write_log( $list );
     return $list;
 }
 

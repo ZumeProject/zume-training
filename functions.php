@@ -93,6 +93,7 @@ if ( is_admin() ) {
 
 function add_template_column( $cols ) {
     $cols['template'] = 'Template';
+    $cols['has_image'] = 'SEO Image';
     return $cols;
 }
 function add_template_value( $column_name, $post_id ) {
@@ -102,6 +103,12 @@ function add_template_value( $column_name, $post_id ) {
             echo esc_html( $template );
         } else {
             echo 'None';
+        }
+    }
+    if ( 'has_image' === $column_name ) {
+        $image_id = get_post_meta( $post_id, '_thumbnail_id', true );
+        if ( isset( $image_id ) && ! empty( $image_id ) ) {
+            echo '<a href="' . esc_url( admin_url() ) . 'post.php?post='. esc_attr( $image_id ).'&action=edit">&#9989;</a>';
         }
     }
 }

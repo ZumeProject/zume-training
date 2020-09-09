@@ -254,6 +254,6 @@ endforeach; ?>
     </div> <!--cell -->
 </div><!-- end #content -->
 
-<?php do_action( 'zume_movement_log_3mplan', ['language' => zume_current_language() ]) ?>
+<?php do_action( 'zume_movement_log_3mplan', [ 'language' => zume_current_language() ] ) ?>
 
 <?php get_footer(); ?>

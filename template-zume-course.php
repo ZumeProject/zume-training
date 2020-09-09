@@ -30,7 +30,11 @@ if ( ! isset( $zume_user_meta[ $zume_group_key ] ) ) { // check if owner of grou
 
 get_header();
 
-do_action('zume_movement_log_course', ['language' => zume_current_language(), 'session' => $zume_session, 'members' => $zume_group_meta['members'] ?? 1 ])
+do_action( 'zume_movement_log_course', [
+    'language' => zume_current_language(),
+    'session' => $zume_session,
+    'members' => $zume_group_meta['members'] ?? 1
+] )
 
 ?>
     <script>

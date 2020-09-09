@@ -233,7 +233,12 @@ if (have_posts()) :
 
         <?php get_template_part( "parts/content", "modal" ); ?>
 
-        <?php do_action('zume_movement_log_pieces', ['tool' => $tool_number, 'session' => $session_number, 'language' => $language, 'title' => get_the_title( zume_landing_page_post_id( $tool_number ) ) ] ) ?>
+        <?php do_action( 'zume_movement_log_pieces', [
+            'tool' => $tool_number,
+            'session' => $session_number,
+            'language' => $language,
+            'title' => get_the_title( zume_landing_page_post_id( $tool_number ) )
+        ] ) ?>
         <!-- end zume vision logging -->
 
         <?php
