@@ -90,7 +90,7 @@ function zume_get_posts_translation_url( $page_title, $slug = 'en' ) {
 
         $trans_object = get_post( $trans_id, OBJECT );
 
-        $trans_url = site_url( '/' )  . $trans_object->post_name;
+        $trans_url = site_url( '/' )  . $trans_object->post_name . '/';
 
         return $trans_url;
     }
@@ -152,7 +152,7 @@ function zume_get_landing_translation_url( int $landing_id, $slug = 'en' ) {
 
         $trans_object = get_post( $trans_id, OBJECT );
 
-        $trans_url = site_url( '/' )  . $trans_object->post_name;
+        $trans_url = site_url( '/' )  . $trans_object->post_name . '/';
 
         return $trans_url;
     }
@@ -217,7 +217,7 @@ function zume_get_concept_translation_url( $page_title, $slug = 'en' ) {
 
         $trans_object = get_post( $trans_id, OBJECT );
 
-        $trans_url = site_url( '/' )  . $trans_object->post_name;
+        $trans_url = site_url( '/' )  . $trans_object->post_name . '/';
 
         return $trans_url;
     }

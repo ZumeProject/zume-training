@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "Project-Id-Version: Zúme Project\n"
-"POT-Creation-Date: 2020-09-11 13:52-0600\n"
+"POT-Creation-Date: 2020-09-11 14:46-0600\n"
 "PO-Revision-Date: 2018-03-06 11:15-0700\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -3030,7 +3030,7 @@ msgid "Great job! Here's your progress with this concept"
 msgstr ""
 
 #: functions/zume-gmo.php:168 functions/zume-v4-seo-strings.php:13
-#: parts/content-share.php:39 template-gmo.php:424 template-pieces-page.php:175
+#: parts/content-share.php:39 template-pieces-page.php:175
 #: template-zume-training.php:85
 msgid "Course Overview"
 msgstr ""
@@ -3538,6 +3538,11 @@ msgid ""
 "saturate the globe with multiplying disciples in our generation."
 msgstr ""
 
+#: template-gmo.php:424 template-how-to-follow-jesus.php:354
+#: template-zume-about.php:22
+msgid "About Zúme Training"
+msgstr ""
+
 #. Template Name of the plugin/theme
 #: template-how-to-follow-jesus.php:94
 msgid "How to Follow Jesus"
@@ -3637,10 +3642,6 @@ msgstr ""
 
 #: template-zume-3plan.php:244
 msgid "No plans linked to this group."
-msgstr ""
-
-#: template-zume-about.php:22
-msgid "About Zúme Training"
 msgstr ""
 
 #: template-zume-about.php:63 template-zume-faq.php:194
