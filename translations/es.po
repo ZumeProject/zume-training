@@ -3976,7 +3976,7 @@ msgstr "Aprende más sobre el Zúme.Vision"
 
 #: template-pieces-page.php:50
 msgid "This concept is called \"%1$s\" in session %2$s of the Zúme Training"
-msgstr "Este concepto se llama \"% 1 $ s\" en la sesión% 2 $ s del entrenamiento Zúme"
+msgstr "Este concepto se llama \"%1$s\" en la sesión %2$s del entrenamiento Zúme"
 
 #: functions/zume-gmo.php:73 template-pieces-page.php:82
 msgid "Listen and Read Along"
