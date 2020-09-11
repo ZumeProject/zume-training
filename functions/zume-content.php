@@ -66,37 +66,38 @@ class Zume_Course_Content {
         </script>
         <div id="session" class="course-steps">
             <?php
-
+            $zume_current_lang = zume_current_language();
+            $alt_video = zume_alt_video( $zume_current_lang );
             switch ( $session_id ) {
                 case '1':
-                    self::get_course_content_1();
+                    self::get_course_content_1($alt_video);
                     break;
                 case '2':
-                    self::get_course_content_2();
+                    self::get_course_content_2($alt_video);
                     break;
                 case '3':
-                    self::get_course_content_3();
+                    self::get_course_content_3($alt_video);
                     break;
                 case '4':
-                    self::get_course_content_4();
+                    self::get_course_content_4($alt_video);
                     break;
                 case '5':
-                    self::get_course_content_5();
+                    self::get_course_content_5($alt_video);
                     break;
                 case '6':
-                    self::get_course_content_6();
+                    self::get_course_content_6($alt_video);
                     break;
                 case '7':
-                    self::get_course_content_7();
+                    self::get_course_content_7($alt_video);
                     break;
                 case '8':
-                    self::get_course_content_8();
+                    self::get_course_content_8($alt_video);
                     break;
                 case '9':
-                    self::get_course_content_9();
+                    self::get_course_content_9($alt_video);
                     break;
                 case '10':
-                    self::get_course_content_10();
+                    self::get_course_content_10($alt_video);
                     break;
                 default:
                     break;

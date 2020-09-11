@@ -3,6 +3,7 @@
 Template Name: How to Follow Jesus
 */
 $current_language = zume_current_language();
+$alt_video = zume_alt_video( $current_language );
 ?>
 
 <?php get_header(); ?>
@@ -87,21 +88,40 @@ $current_language = zume_current_language();
                 <div class="cell">
 
                     <h1 class="primary-color-text center padding-bottom-2">
-                        <strong>How to Follow Jesus</strong>
+                        <strong><?php esc_html_e("How to Follow Jesus", 'zume' ) ?></strong>
                     </h1>
 
                     <div class="center">
                         <p><?php esc_html_e( "Watch this important video explaining the 4 relationships of your new life.", 'zume' ) ?></p>
                     </div>
                     <div class="center small-video">
-                        <iframe src="https://player.vimeo.com/video/403362200" width="640" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                        <?php if ( $alt_video ) : ?>
+                            <div class="alt-video-section">
+                                <video style="border: 1px solid lightgrey;" controls>
+                                    <source src="<?php echo esc_url( zume_mirror_url() . zume_current_language() ) . '/68.mp4' ?>" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+                        <?php elseif ( ! empty( $url_68 = Zume_Course::get_video_by_key( '68' ) ) ) : ?>
+                            <iframe style="border: 1px solid lightgrey;"  src="<?php echo esc_url( Zume_Course::get_video_by_key( '68' ) ) ?>" width="640" height="360"
+                                    frameborder="0"
+                                    allow="autoplay; fullscreen"
+                                    webkitallowfullscreen mozallowfullscreen allowfullscreen>
+                            </iframe>
+                        <?php else: ?>
+                            <iframe style="border: 1px solid lightgrey;"  src="<?php echo esc_url( Zume_Course::get_video_by_key( '10' ) ) ?>#t=1m" width="640" height="360"
+                                    frameborder="0"
+                                    allow="autoplay; fullscreen"
+                                    webkitallowfullscreen mozallowfullscreen allowfullscreen>
+                            </iframe>
+                        <?php endif; ?>
                     </div>
 
                     <br>
 
-                    <p class="center"><strong>Bookmark this page as a future resource!</strong></p><br>
+                    <p class="center"><strong><?php esc_html_e("Bookmark this page as a future resource!", 'zume' ) ?></strong></p><br>
 
-                    <p>The sections below, will teach you what it means to be a follower (disciple) of Jesus.</p>
+                    <p><?php esc_html_e("The sections below, will teach you what it means to be a follower (disciple) of Jesus.", 'zume' ) ?></p>
 
                     <ul class="accordion" data-accordion>
 

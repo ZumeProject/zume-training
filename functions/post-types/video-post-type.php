@@ -276,7 +276,7 @@ class Zume_Video_Post_Type
      */
     public function meta_box_setup() {
         add_meta_box( $this->post_type . '_scribes', 'Video Scribes', array( $this, 'load_video_meta_box' ), $this->post_type, 'normal', 'high' );
-        add_meta_box( $this->post_type . '_alt_video', 'Alternate Videos', array( $this, 'load_alt_video_meta_box' ), $this->post_type, 'normal', 'high' );
+//        add_meta_box( $this->post_type . '_alt_video', 'Alternate Videos', array( $this, 'load_alt_video_meta_box' ), $this->post_type, 'normal', 'high' );
     } // End meta_box_setup()
 
     /**
@@ -712,11 +712,11 @@ class Zume_Video_Post_Type
             'default'     => '248149797',
             'section'     => 'scribe',
         );
-        $fields['33'] = array(
-            'name'        => 'Four Relationships (optional) (33)',
+        $fields['68'] = array(
+            'name'        => 'Four Relationships (68)',
             'description' => '',
             'type'        => 'link',
-            'default'     => '331805074',
+            'default'     => '',
             'section'     => 'scribe',
         );
 
@@ -724,230 +724,230 @@ class Zume_Video_Post_Type
          * Alternate Video
          */
 
-        $fields['alt_1'] = array(
-            'name'        => 'Welcome to Zume (1)',
-            'description' => '',
-            'type'        => 'alt_link',
-            'default'     => '',
-            'section'     => 'alt_video',
-        );
-        $fields['alt_2'] = array(
-            'name'        => 'Teach them to Obey (2)',
-            'description' => '',
-            'type'        => 'alt_link',
-            'default'     => '',
-            'section'     => 'alt_video',
-        );
-        $fields['alt_3'] = array(
-            'name'        => 'Spiritual Breathing (3)',
-            'description' => '',
-            'type'        => 'alt_link',
-            'default'     => '',
-            'section'     => 'alt_video',
-        );
-        $fields['alt_4'] = array(
-            'name'        => 'S.O.A.P.S. (4)',
-            'description' => '',
-            'type'        => 'alt_link',
-            'default'     => '',
-            'section'     => 'alt_video',
-        );
-        $fields['alt_5'] = array(
-            'name'        => 'Accountability Groups (5)',
-            'description' => '',
-            'type'        => 'alt_link',
-            'default'     => '',
-            'section'     => 'alt_video',
-        );
-        $fields['alt_6'] = array(
-            'name'        => 'Producers vs Consumers (6)',
-            'description' => '',
-            'type'        => 'alt_link',
-            'default'     => '',
-            'section'     => 'alt_video',
-        );
-        $fields['alt_7'] = array(
-            'name'        => 'Prayer Cycle (7)',
-            'description' => '',
-            'type'        => 'alt_link',
-            'default'     => '',
-            'section'     => 'alt_video',
-        );
-        $fields['alt_8'] = array(
-            'name'        => 'List of 100 (8)',
-            'description' => '',
-            'type'        => 'alt_link',
-            'default'     => '',
-            'section'     => 'alt_video',
-        );
-        $fields['alt_9'] = array(
-            'name'        => 'Spiritual Economy (9)',
-            'description' => '',
-            'type'        => 'alt_link',
-            'default'     => '',
-            'section'     => 'alt_video',
-        );
-        $fields['alt_10'] = array(
-            'name'        => 'The Gospel (10)',
-            'description' => '',
-            'type'        => 'alt_link',
-            'default'     => '',
-            'section'     => 'alt_video',
-        );
-        $fields['alt_11'] = array(
-            'name'        => 'Baptism (11)',
-            'description' => '',
-            'type'        => 'alt_link',
-            'default'     => '',
-            'section'     => 'alt_video',
-        );
-        $fields['alt_12'] = array(
-            'name'        => '3 Minute Testimony (12)',
-            'description' => '',
-            'type'        => 'alt_link',
-            'default'     => '',
-            'section'     => 'alt_video',
-        );
-        $fields['alt_13'] = array(
-            'name'        => 'Greatest Blessing (13)',
-            'description' => '',
-            'type'        => 'alt_link',
-            'default'     => '',
-            'section'     => 'alt_video',
-        );
-        $fields['alt_14'] = array(
-            'name'        => 'Duckling Discipleship (14)',
-            'description' => '',
-            'type'        => 'alt_link',
-            'default'     => '',
-            'section'     => 'alt_video',
-        );
-        $fields['alt_15'] = array(
-            'name'        => 'Eyes to See (15)',
-            'description' => '',
-            'type'        => 'alt_link',
-            'default'     => '',
-            'section'     => 'alt_video',
-        );
-        $fields['alt_16'] = array(
-            'name'        => 'Lord\'s Supper (16)',
-            'description' => '',
-            'type'        => 'alt_link',
-            'default'     => '',
-            'section'     => 'alt_video',
-        );
-        $fields['alt_17'] = array(
-            'name'        => 'Prayer Walking (17)',
-            'description' => '',
-            'type'        => 'alt_link',
-            'default'     => '',
-            'section'     => 'alt_video',
-        );
-        $fields['alt_18'] = array(
-            'name'        => 'Person of Peace (18)',
-            'description' => '',
-            'type'        => 'alt_link',
-            'default'     => '',
-            'section'     => 'alt_video',
-        );
-        $fields['alt_19'] = array(
-            'name'        => 'Faithfulness (19)',
-            'description' => '',
-            'type'        => 'alt_link',
-            'default'     => '',
-            'section'     => 'alt_video',
-        );
-        $fields['alt_20'] = array(
-            'name'        => '3|3 Groups (20)',
-            'description' => '',
-            'type'        => 'alt_link',
-            'default'     => '',
-            'section'     => 'alt_video',
-        );
-        $fields['alt_21'] = array(
-            'name'        => '3|3 Group Live (21)',
-            'description' => '',
-            'type'        => 'alt_link',
-            'default'     => '',
-            'section'     => 'alt_video',
-        );
-        $fields['alt_22'] = array(
-            'name'        => 'Training Cycle (22)',
-            'description' => '',
-            'type'        => 'alt_link',
-            'default'     => '',
-            'section'     => 'alt_video',
-        );
-        $fields['alt_23'] = array(
-            'name'        => 'Leadership Cells (23)',
-            'description' => '',
-            'type'        => 'alt_link',
-            'default'     => '',
-            'section'     => 'alt_video',
-        );
-        $fields['alt_24'] = array(
-            'name'        => 'Non-Sequential (24)',
-            'description' => '',
-            'type'        => 'alt_link',
-            'default'     => '',
-            'section'     => 'alt_video',
-        );
-        $fields['alt_25'] = array(
-            'name'        => 'Pace (25)',
-            'description' => '',
-            'type'        => 'alt_link',
-            'default'     => '',
-            'section'     => 'alt_video',
-        );
-        $fields['alt_26'] = array(
-            'name'        => 'Part of Two Churches (26)',
-            'description' => '',
-            'type'        => 'alt_link',
-            'default'     => '',
-            'section'     => 'alt_video',
-        );
-        $fields['alt_27'] = array(
-            'name'        => 'Completion of Training (27)',
-            'description' => '',
-            'type'        => 'alt_link',
-            'default'     => '',
-            'section'     => 'alt_video',
-        );
-        $fields['alt_28'] = array(
-            'name'        => 'Coaching Checklist (28)',
-            'description' => '',
-            'type'        => 'alt_link',
-            'default'     => '',
-            'section'     => 'alt_video',
-        );
-        $fields['alt_29'] = array(
-            'name'        => 'Leadership in Networks (29)',
-            'description' => '',
-            'type'        => 'alt_link',
-            'default'     => '',
-            'section'     => 'alt_video',
-        );
-        $fields['alt_30'] = array(
-            'name'        => 'Peer Mentoring (30)',
-            'description' => '',
-            'type'        => 'alt_link',
-            'default'     => '',
-            'section'     => 'alt_video',
-        );
-        $fields['alt_31'] = array(
-            'name'        => 'Overview (31)',
-            'description' => '',
-            'type'        => 'alt_link',
-            'default'     => '',
-            'section'     => 'alt_video',
-        );
-        $fields['alt_32'] = array(
-            'name'        => 'How Zume Works (32)',
-            'description' => '',
-            'type'        => 'alt_link',
-            'default'     => '',
-            'section'     => 'alt_video',
-        );
+//        $fields['alt_1'] = array(
+//            'name'        => 'Welcome to Zume (1)',
+//            'description' => '',
+//            'type'        => 'alt_link',
+//            'default'     => '',
+//            'section'     => 'alt_video',
+//        );
+//        $fields['alt_2'] = array(
+//            'name'        => 'Teach them to Obey (2)',
+//            'description' => '',
+//            'type'        => 'alt_link',
+//            'default'     => '',
+//            'section'     => 'alt_video',
+//        );
+//        $fields['alt_3'] = array(
+//            'name'        => 'Spiritual Breathing (3)',
+//            'description' => '',
+//            'type'        => 'alt_link',
+//            'default'     => '',
+//            'section'     => 'alt_video',
+//        );
+//        $fields['alt_4'] = array(
+//            'name'        => 'S.O.A.P.S. (4)',
+//            'description' => '',
+//            'type'        => 'alt_link',
+//            'default'     => '',
+//            'section'     => 'alt_video',
+//        );
+//        $fields['alt_5'] = array(
+//            'name'        => 'Accountability Groups (5)',
+//            'description' => '',
+//            'type'        => 'alt_link',
+//            'default'     => '',
+//            'section'     => 'alt_video',
+//        );
+//        $fields['alt_6'] = array(
+//            'name'        => 'Producers vs Consumers (6)',
+//            'description' => '',
+//            'type'        => 'alt_link',
+//            'default'     => '',
+//            'section'     => 'alt_video',
+//        );
+//        $fields['alt_7'] = array(
+//            'name'        => 'Prayer Cycle (7)',
+//            'description' => '',
+//            'type'        => 'alt_link',
+//            'default'     => '',
+//            'section'     => 'alt_video',
+//        );
+//        $fields['alt_8'] = array(
+//            'name'        => 'List of 100 (8)',
+//            'description' => '',
+//            'type'        => 'alt_link',
+//            'default'     => '',
+//            'section'     => 'alt_video',
+//        );
+//        $fields['alt_9'] = array(
+//            'name'        => 'Spiritual Economy (9)',
+//            'description' => '',
+//            'type'        => 'alt_link',
+//            'default'     => '',
+//            'section'     => 'alt_video',
+//        );
+//        $fields['alt_10'] = array(
+//            'name'        => 'The Gospel (10)',
+//            'description' => '',
+//            'type'        => 'alt_link',
+//            'default'     => '',
+//            'section'     => 'alt_video',
+//        );
+//        $fields['alt_11'] = array(
+//            'name'        => 'Baptism (11)',
+//            'description' => '',
+//            'type'        => 'alt_link',
+//            'default'     => '',
+//            'section'     => 'alt_video',
+//        );
+//        $fields['alt_12'] = array(
+//            'name'        => '3 Minute Testimony (12)',
+//            'description' => '',
+//            'type'        => 'alt_link',
+//            'default'     => '',
+//            'section'     => 'alt_video',
+//        );
+//        $fields['alt_13'] = array(
+//            'name'        => 'Greatest Blessing (13)',
+//            'description' => '',
+//            'type'        => 'alt_link',
+//            'default'     => '',
+//            'section'     => 'alt_video',
+//        );
+//        $fields['alt_14'] = array(
+//            'name'        => 'Duckling Discipleship (14)',
+//            'description' => '',
+//            'type'        => 'alt_link',
+//            'default'     => '',
+//            'section'     => 'alt_video',
+//        );
+//        $fields['alt_15'] = array(
+//            'name'        => 'Eyes to See (15)',
+//            'description' => '',
+//            'type'        => 'alt_link',
+//            'default'     => '',
+//            'section'     => 'alt_video',
+//        );
+//        $fields['alt_16'] = array(
+//            'name'        => 'Lord\'s Supper (16)',
+//            'description' => '',
+//            'type'        => 'alt_link',
+//            'default'     => '',
+//            'section'     => 'alt_video',
+//        );
+//        $fields['alt_17'] = array(
+//            'name'        => 'Prayer Walking (17)',
+//            'description' => '',
+//            'type'        => 'alt_link',
+//            'default'     => '',
+//            'section'     => 'alt_video',
+//        );
+//        $fields['alt_18'] = array(
+//            'name'        => 'Person of Peace (18)',
+//            'description' => '',
+//            'type'        => 'alt_link',
+//            'default'     => '',
+//            'section'     => 'alt_video',
+//        );
+//        $fields['alt_19'] = array(
+//            'name'        => 'Faithfulness (19)',
+//            'description' => '',
+//            'type'        => 'alt_link',
+//            'default'     => '',
+//            'section'     => 'alt_video',
+//        );
+//        $fields['alt_20'] = array(
+//            'name'        => '3|3 Groups (20)',
+//            'description' => '',
+//            'type'        => 'alt_link',
+//            'default'     => '',
+//            'section'     => 'alt_video',
+//        );
+//        $fields['alt_21'] = array(
+//            'name'        => '3|3 Group Live (21)',
+//            'description' => '',
+//            'type'        => 'alt_link',
+//            'default'     => '',
+//            'section'     => 'alt_video',
+//        );
+//        $fields['alt_22'] = array(
+//            'name'        => 'Training Cycle (22)',
+//            'description' => '',
+//            'type'        => 'alt_link',
+//            'default'     => '',
+//            'section'     => 'alt_video',
+//        );
+//        $fields['alt_23'] = array(
+//            'name'        => 'Leadership Cells (23)',
+//            'description' => '',
+//            'type'        => 'alt_link',
+//            'default'     => '',
+//            'section'     => 'alt_video',
+//        );
+//        $fields['alt_24'] = array(
+//            'name'        => 'Non-Sequential (24)',
+//            'description' => '',
+//            'type'        => 'alt_link',
+//            'default'     => '',
+//            'section'     => 'alt_video',
+//        );
+//        $fields['alt_25'] = array(
+//            'name'        => 'Pace (25)',
+//            'description' => '',
+//            'type'        => 'alt_link',
+//            'default'     => '',
+//            'section'     => 'alt_video',
+//        );
+//        $fields['alt_26'] = array(
+//            'name'        => 'Part of Two Churches (26)',
+//            'description' => '',
+//            'type'        => 'alt_link',
+//            'default'     => '',
+//            'section'     => 'alt_video',
+//        );
+//        $fields['alt_27'] = array(
+//            'name'        => 'Completion of Training (27)',
+//            'description' => '',
+//            'type'        => 'alt_link',
+//            'default'     => '',
+//            'section'     => 'alt_video',
+//        );
+//        $fields['alt_28'] = array(
+//            'name'        => 'Coaching Checklist (28)',
+//            'description' => '',
+//            'type'        => 'alt_link',
+//            'default'     => '',
+//            'section'     => 'alt_video',
+//        );
+//        $fields['alt_29'] = array(
+//            'name'        => 'Leadership in Networks (29)',
+//            'description' => '',
+//            'type'        => 'alt_link',
+//            'default'     => '',
+//            'section'     => 'alt_video',
+//        );
+//        $fields['alt_30'] = array(
+//            'name'        => 'Peer Mentoring (30)',
+//            'description' => '',
+//            'type'        => 'alt_link',
+//            'default'     => '',
+//            'section'     => 'alt_video',
+//        );
+//        $fields['alt_31'] = array(
+//            'name'        => 'Overview (31)',
+//            'description' => '',
+//            'type'        => 'alt_link',
+//            'default'     => '',
+//            'section'     => 'alt_video',
+//        );
+//        $fields['alt_32'] = array(
+//            'name'        => 'How Zume Works (32)',
+//            'description' => '',
+//            'type'        => 'alt_link',
+//            'default'     => '',
+//            'section'     => 'alt_video',
+//        );
 
 
         return apply_filters( 'zume_video_fields_settings', $fields );

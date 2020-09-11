@@ -4,6 +4,7 @@ Template Name: GMO - Welcome to Zúme
 */
 
 $current_language = zume_current_language();
+$alt_video = zume_alt_video( $current_language );
 ?>
 
 <!doctype html>
@@ -159,21 +160,40 @@ $current_language = zume_current_language();
                         <img src="<?php echo esc_url( get_stylesheet_directory_uri() ) ?>/assets/images/godlife-logo-small.png"  alt="God life logo" /><br>
                     </div>
                     <h1 class="primary-color-text center padding-bottom-1">
-                        <strong>Welcome to God’s family!</strong>
+                        <strong><?php esc_html_e("Welcome to God’s family!", 'zume' ) ?></strong>
                     </h1>
 
                     <div class="cell padding-bottom-1">
-                        <p>You’ve just made a decision to follow Jesus. Where do you go from here?</p>
-                        <p>We are Zúme, a GodLife Community. Through Zúme, we want to give you free resources to grow in your faith and connect you to a community of people all around the world striving to grow in knowledge and faith of the hope that Jesus gives us. Let’s get started! </p>
-                        <p>A great first step is this video that explains 4 relationships we all have with God, creation, others, and ourselves. We pray that as you watch that video God will lead you to think of several others who need to see it, and who will eventually join you in following Jesus. </p>
+                        <p><?php esc_html_e("You’ve just made a decision to follow Jesus. Where do you go from here?", 'zume' ) ?></p>
+                        <p><?php esc_html_e("We are Zúme, a GodLife Community. Through Zúme, we want to give you free resources to grow in your faith and connect you to a community of people all around the world striving to grow in knowledge and faith of the hope that Jesus gives us. Let’s get started!", 'zume' ) ?> </p>
+                        <p><?php esc_html_e("A great first step is this video that explains 4 relationships we all have with God, creation, others, and ourselves. We pray that as you watch that video God will lead you to think of several others who need to see it, and who will eventually join you in following Jesus.", 'zume' ) ?> </p>
                     </div>
-                    <div class="center small-video " style="border: 1px solid lightgrey">
-                        <iframe src="https://player.vimeo.com/video/403362200" width="640" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
-                    </div>
+                <div class="center small-video">
+                    <?php if ( $alt_video ) : ?>
+                        <div class="alt-video-section">
+                            <video style="border: 1px solid lightgrey;" controls>
+                                <source src="<?php echo esc_url( zume_mirror_url() . zume_current_language() ) . '/68.mp4' ?>" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                    <?php elseif ( ! empty( $url_68 = Zume_Course::get_video_by_key( '68' ) ) ) : ?>
+                        <iframe style="border: 1px solid lightgrey;"  src="<?php echo esc_url( Zume_Course::get_video_by_key( '68' ) ) ?>" width="640" height="360"
+                                frameborder="0"
+                                allow="autoplay; fullscreen"
+                                webkitallowfullscreen mozallowfullscreen allowfullscreen>
+                        </iframe>
+                    <?php else: ?>
+                        <iframe style="border: 1px solid lightgrey;"  src="<?php echo esc_url( Zume_Course::get_video_by_key( '10' ) ) ?>#t=1m" width="640" height="360"
+                                frameborder="0"
+                                allow="autoplay; fullscreen"
+                                webkitallowfullscreen mozallowfullscreen allowfullscreen>
+                        </iframe>
+                    <?php endif; ?>
+                </div>
 
                 <div class="cell  padding-top-1">
 
-                    <p>Next we have a collection of resources to help you follow Jesus. Bookmark, explore, and share these Biblical resources that are being used around the globe.</p>
+                    <p><?php esc_html_e("Next we have a collection of resources to help you follow Jesus. Bookmark, explore, and share these Biblical resources that are being used around the globe.", 'zume' ) ?></p>
 
                     <ul class="accordion" data-accordion>
 
