@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "Project-Id-Version: Zúme Project\n"
-"POT-Creation-Date: 2020-09-11 12:18-0600\n"
+"POT-Creation-Date: 2020-09-11 13:52-0600\n"
 "PO-Revision-Date: 2018-03-06 11:15-0700\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -38,15 +38,15 @@ msgid "Get Started"
 msgstr ""
 
 #: front-page.php:85 functions/enqueue-scripts.php:288
-#: functions/zume-gmo.php:202 functions/zume-v4-seo-strings.php:23
-#: parts/content-share.php:81 template-pieces-page.php:213
+#: functions/zume-gmo.php:207 functions/zume-v4-seo-strings.php:23
+#: parts/content-share.php:83 template-pieces-page.php:215
 #: template-zume-login.php:403 template-zume-login.php:470
 #: template-zume-login.php:498
 msgid "Login"
 msgstr ""
 
 #. Theme Name of the plugin/theme
-#: front-page.php:94 template-gmo.php:416 template-how-to-follow-jesus.php:344
+#: front-page.php:94 template-gmo.php:417 template-how-to-follow-jesus.php:347
 #: template-zume-training.php:125
 msgid "Zúme Training"
 msgstr ""
@@ -246,74 +246,74 @@ msgstr ""
 msgid "Name"
 msgstr ""
 
-#: functions/enqueue-scripts.php:216 template-gmo.php:207
-#: template-how-to-follow-jesus.php:135 template-zume-training.php:158
+#: functions/enqueue-scripts.php:216 template-gmo.php:208
+#: template-how-to-follow-jesus.php:138 template-zume-training.php:158
 msgid "God Uses Ordinary People"
 msgstr ""
 
-#: functions/enqueue-scripts.php:217 template-gmo.php:211
-#: template-how-to-follow-jesus.php:139 template-zume-training.php:172
+#: functions/enqueue-scripts.php:217 template-gmo.php:212
+#: template-how-to-follow-jesus.php:142 template-zume-training.php:172
 msgid "Simple Definition of Disciple and Church"
 msgstr ""
 
-#: functions/enqueue-scripts.php:218 template-gmo.php:236
-#: template-how-to-follow-jesus.php:164 template-zume-training.php:186
+#: functions/enqueue-scripts.php:218 template-gmo.php:237
+#: template-how-to-follow-jesus.php:167 template-zume-training.php:186
 msgid "Spiritual Breathing is Hearing and Obeying God"
 msgstr ""
 
-#: functions/enqueue-scripts.php:219 template-gmo.php:253
-#: template-how-to-follow-jesus.php:181 template-zume-training.php:199
+#: functions/enqueue-scripts.php:219 template-gmo.php:254
+#: template-how-to-follow-jesus.php:184 template-zume-training.php:199
 msgid "SOAPS Bible Reading"
 msgstr ""
 
 #: functions/enqueue-scripts.php:220 functions/zume-content.php:500
-#: template-gmo.php:270 template-how-to-follow-jesus.php:198
+#: template-gmo.php:271 template-how-to-follow-jesus.php:201
 #: template-zume-dashboard.php:342 template-zume-training.php:212
 msgid "Accountability Groups"
 msgstr ""
 
-#: functions/enqueue-scripts.php:221 template-gmo.php:229
-#: template-how-to-follow-jesus.php:157 template-zume-training.php:253
+#: functions/enqueue-scripts.php:221 template-gmo.php:230
+#: template-how-to-follow-jesus.php:160 template-zume-training.php:253
 msgid "Consumer vs Producer Lifestyle"
 msgstr ""
 
-#: functions/enqueue-scripts.php:222 template-gmo.php:240
-#: template-how-to-follow-jesus.php:168 template-zume-training.php:266
+#: functions/enqueue-scripts.php:222 template-gmo.php:241
+#: template-how-to-follow-jesus.php:171 template-zume-training.php:266
 msgid "How to Spend an Hour in Prayer"
 msgstr ""
 
-#: functions/enqueue-scripts.php:223 template-gmo.php:340
-#: template-how-to-follow-jesus.php:268
+#: functions/enqueue-scripts.php:223 template-gmo.php:341
+#: template-how-to-follow-jesus.php:271
 msgid "Relational Stewardship – List of 100"
 msgstr ""
 
-#: functions/enqueue-scripts.php:224 template-gmo.php:291
-#: template-how-to-follow-jesus.php:219 template-zume-training.php:332
+#: functions/enqueue-scripts.php:224 template-gmo.php:292
+#: template-how-to-follow-jesus.php:222 template-zume-training.php:332
 msgid "The Kingdom Economy"
 msgstr ""
 
-#: functions/enqueue-scripts.php:225 template-gmo.php:344
-#: template-how-to-follow-jesus.php:272 template-zume-training.php:351
+#: functions/enqueue-scripts.php:225 template-gmo.php:345
+#: template-how-to-follow-jesus.php:275 template-zume-training.php:351
 msgid "The Gospel and How to Share It"
 msgstr ""
 
-#: functions/enqueue-scripts.php:226 template-gmo.php:282
-#: template-how-to-follow-jesus.php:210 template-zume-training.php:370
+#: functions/enqueue-scripts.php:226 template-gmo.php:283
+#: template-how-to-follow-jesus.php:213 template-zume-training.php:370
 msgid "Baptism and How To Do It"
 msgstr ""
 
-#: functions/enqueue-scripts.php:227 template-gmo.php:348
-#: template-how-to-follow-jesus.php:276 template-zume-training.php:405
+#: functions/enqueue-scripts.php:227 template-gmo.php:349
+#: template-how-to-follow-jesus.php:279 template-zume-training.php:405
 msgid "Prepare Your 3-Minute Testimony"
 msgstr ""
 
-#: functions/enqueue-scripts.php:228 template-gmo.php:215
-#: template-how-to-follow-jesus.php:143 template-zume-training.php:424
+#: functions/enqueue-scripts.php:228 template-gmo.php:216
+#: template-how-to-follow-jesus.php:146 template-zume-training.php:424
 msgid "Vision Casting the Greatest Blessing"
 msgstr ""
 
-#: functions/enqueue-scripts.php:229 template-gmo.php:320
-#: template-how-to-follow-jesus.php:248
+#: functions/enqueue-scripts.php:229 template-gmo.php:321
+#: template-how-to-follow-jesus.php:251
 msgid "Duckling Discipleship – Leading Immediately"
 msgstr ""
 
@@ -325,54 +325,54 @@ msgstr ""
 msgid "The Lord's Supper and How To Lead It"
 msgstr ""
 
-#: functions/enqueue-scripts.php:232 template-gmo.php:361
-#: template-how-to-follow-jesus.php:289 template-zume-training.php:504
+#: functions/enqueue-scripts.php:232 template-gmo.php:362
+#: template-how-to-follow-jesus.php:292 template-zume-training.php:504
 msgid "Prayer Walking and How To Do It"
 msgstr ""
 
-#: functions/enqueue-scripts.php:233 template-gmo.php:357
-#: template-how-to-follow-jesus.php:285 template-zume-training.php:517
+#: functions/enqueue-scripts.php:233 template-gmo.php:358
+#: template-how-to-follow-jesus.php:288 template-zume-training.php:517
 msgid "A Person of Peace and How To Find One"
 msgstr ""
 
-#: functions/enqueue-scripts.php:234 template-gmo.php:244
-#: template-how-to-follow-jesus.php:172 template-zume-training.php:530
+#: functions/enqueue-scripts.php:234 template-gmo.php:245
+#: template-how-to-follow-jesus.php:175 template-zume-training.php:530
 msgid "The BLESS Prayer Pattern"
 msgstr ""
 
-#: functions/enqueue-scripts.php:235 template-gmo.php:257
-#: template-how-to-follow-jesus.php:185 template-zume-training.php:577
+#: functions/enqueue-scripts.php:235 template-gmo.php:258
+#: template-how-to-follow-jesus.php:188 template-zume-training.php:577
 msgid "Faithfulness is Better Than Knowledge"
 msgstr ""
 
-#: functions/enqueue-scripts.php:236 template-gmo.php:266
-#: template-how-to-follow-jesus.php:194 template-zume-training.php:590
+#: functions/enqueue-scripts.php:236 template-gmo.php:267
+#: template-how-to-follow-jesus.php:197 template-zume-training.php:590
 msgid "3/3 Group Meeting Pattern"
 msgstr ""
 
-#: functions/enqueue-scripts.php:237 template-gmo.php:324
-#: template-how-to-follow-jesus.php:252 template-zume-training.php:620
+#: functions/enqueue-scripts.php:237 template-gmo.php:325
+#: template-how-to-follow-jesus.php:255 template-zume-training.php:620
 msgid "Training Cycle for Maturing Disciples"
 msgstr ""
 
-#: functions/enqueue-scripts.php:238 template-gmo.php:386
-#: template-how-to-follow-jesus.php:314 template-zume-dashboard.php:542
+#: functions/enqueue-scripts.php:238 template-gmo.php:387
+#: template-how-to-follow-jesus.php:317 template-zume-dashboard.php:542
 #: template-zume-training.php:667
 msgid "Leadership Cells"
 msgstr ""
 
-#: functions/enqueue-scripts.php:239 template-gmo.php:328
-#: template-how-to-follow-jesus.php:256 template-zume-training.php:708
+#: functions/enqueue-scripts.php:239 template-gmo.php:329
+#: template-how-to-follow-jesus.php:259 template-zume-training.php:708
 msgid "Expect Non-Sequential Growth"
 msgstr ""
 
-#: functions/enqueue-scripts.php:240 template-gmo.php:332
-#: template-how-to-follow-jesus.php:260 template-zume-training.php:721
+#: functions/enqueue-scripts.php:240 template-gmo.php:333
+#: template-how-to-follow-jesus.php:263 template-zume-training.php:721
 msgid "Pace of Multiplication Matters"
 msgstr ""
 
-#: functions/enqueue-scripts.php:241 template-gmo.php:274
-#: template-how-to-follow-jesus.php:202 template-zume-training.php:734
+#: functions/enqueue-scripts.php:241 template-gmo.php:275
+#: template-how-to-follow-jesus.php:205 template-zume-training.php:734
 msgid "Always Part of Two Churches"
 msgstr ""
 
@@ -382,20 +382,20 @@ msgstr ""
 msgid "Three-Month Plan"
 msgstr ""
 
-#: functions/enqueue-scripts.php:243 template-gmo.php:382
-#: template-how-to-follow-jesus.php:310 template-zume-dashboard.php:598
+#: functions/enqueue-scripts.php:243 template-gmo.php:383
+#: template-how-to-follow-jesus.php:313 template-zume-dashboard.php:598
 #: template-zume-training.php:789
 msgid "Coaching Checklist"
 msgstr ""
 
-#: functions/enqueue-scripts.php:244 template-gmo.php:390
-#: template-how-to-follow-jesus.php:318 template-zume-dashboard.php:606
+#: functions/enqueue-scripts.php:244 template-gmo.php:391
+#: template-how-to-follow-jesus.php:321 template-zume-dashboard.php:606
 #: template-zume-training.php:808
 msgid "Leadership in Networks"
 msgstr ""
 
 #: functions/enqueue-scripts.php:245 functions/zume-content.php:3658
-#: template-gmo.php:378 template-how-to-follow-jesus.php:306
+#: template-gmo.php:379 template-how-to-follow-jesus.php:309
 #: template-zume-training.php:821
 msgid "Peer Mentoring Groups"
 msgstr ""
@@ -547,38 +547,38 @@ msgstr ""
 msgid "Welcome to Session"
 msgstr ""
 
-#: functions/enqueue-scripts.php:281 functions/zume-gmo.php:191
-#: parts/content-share.php:70 template-pieces-page.php:202
+#: functions/enqueue-scripts.php:281 functions/zume-gmo.php:196
+#: parts/content-share.php:72 template-pieces-page.php:204
 msgid "You're missing out."
 msgstr ""
 
-#: functions/enqueue-scripts.php:282 functions/zume-gmo.php:191
-#: parts/content-share.php:70 template-pieces-page.php:202
+#: functions/enqueue-scripts.php:282 functions/zume-gmo.php:196
+#: parts/content-share.php:72 template-pieces-page.php:204
 msgid "Register Now!"
 msgstr ""
 
-#: functions/enqueue-scripts.php:283 functions/zume-gmo.php:194
-#: parts/content-share.php:73 template-pieces-page.php:205
+#: functions/enqueue-scripts.php:283 functions/zume-gmo.php:199
+#: parts/content-share.php:75 template-pieces-page.php:207
 msgid "track your personal training progress"
 msgstr ""
 
-#: functions/enqueue-scripts.php:284 functions/zume-gmo.php:195
-#: parts/content-share.php:74 template-pieces-page.php:206
+#: functions/enqueue-scripts.php:284 functions/zume-gmo.php:200
+#: parts/content-share.php:76 template-pieces-page.php:208
 msgid "access group planning tools"
 msgstr ""
 
-#: functions/enqueue-scripts.php:285 functions/zume-gmo.php:196
-#: parts/content-share.php:75 template-pieces-page.php:207
+#: functions/enqueue-scripts.php:285 functions/zume-gmo.php:201
+#: parts/content-share.php:77 template-pieces-page.php:209
 msgid "connect with a coach"
 msgstr ""
 
-#: functions/enqueue-scripts.php:286 functions/zume-gmo.php:197
-#: parts/content-share.php:76 template-pieces-page.php:208
+#: functions/enqueue-scripts.php:286 functions/zume-gmo.php:202
+#: parts/content-share.php:78 template-pieces-page.php:210
 msgid "add your effort to the global vision!"
 msgstr ""
 
-#: functions/enqueue-scripts.php:287 functions/zume-gmo.php:201
-#: parts/content-share.php:80 template-pieces-page.php:212
+#: functions/enqueue-scripts.php:287 functions/zume-gmo.php:206
+#: parts/content-share.php:82 template-pieces-page.php:214
 msgid "Register for Free"
 msgstr ""
 
@@ -665,27 +665,27 @@ msgstr ""
 msgid "32 Tools and Concepts"
 msgstr ""
 
-#: functions/enqueue-scripts.php:310 functions/zume-gmo.php:145
+#: functions/enqueue-scripts.php:310 functions/zume-gmo.php:148
 #: parts/content-share.php:19 template-pieces-page.php:155
 msgid "Heard"
 msgstr ""
 
-#: functions/enqueue-scripts.php:311 functions/zume-gmo.php:149
+#: functions/enqueue-scripts.php:311 functions/zume-gmo.php:152
 #: parts/content-share.php:23 template-pieces-page.php:159
 msgid "Obeyed"
 msgstr ""
 
-#: functions/enqueue-scripts.php:312 functions/zume-gmo.php:153
+#: functions/enqueue-scripts.php:312 functions/zume-gmo.php:156
 #: parts/content-share.php:27 template-pieces-page.php:163
 msgid "Shared"
 msgstr ""
 
-#: functions/enqueue-scripts.php:313 functions/zume-gmo.php:157
+#: functions/enqueue-scripts.php:313 functions/zume-gmo.php:160
 #: parts/content-share.php:31 template-pieces-page.php:167
 msgid "Trained"
 msgstr ""
 
-#: functions/enqueue-scripts.php:314 functions/zume-gmo.php:167
+#: functions/enqueue-scripts.php:314 functions/zume-gmo.php:170
 #: functions/zume-v4-seo-strings.php:15 parts/content-share.php:41
 #: template-pieces-page.php:177 template-zume-training.php:97
 msgid "Checklist"
@@ -1421,8 +1421,8 @@ msgid ""
 "everyday followers more like Jesus:"
 msgstr ""
 
-#: functions/zume-content.php:733 template-gmo.php:233
-#: template-how-to-follow-jesus.php:161
+#: functions/zume-content.php:733 template-gmo.php:234
+#: template-how-to-follow-jesus.php:164
 msgid "Prayer"
 msgstr ""
 
@@ -3008,53 +3008,53 @@ msgstr ""
 msgid "GeoCoded IP"
 msgstr ""
 
-#: functions/zume-gmo.php:73 template-pieces-page.php:83
+#: functions/zume-gmo.php:76 template-pieces-page.php:83
 msgid "Listen and Read Along"
 msgstr ""
 
-#: functions/zume-gmo.php:77 template-pieces-page.php:87
+#: functions/zume-gmo.php:80 template-pieces-page.php:87
 msgid "Download Free Guidebook"
 msgstr ""
 
-#: functions/zume-gmo.php:80 template-pieces-page.php:90
+#: functions/zume-gmo.php:83 template-pieces-page.php:90
 msgid "Watch This Video"
 msgstr ""
 
-#: functions/zume-gmo.php:111 template-pieces-page.php:121
+#: functions/zume-gmo.php:114 template-pieces-page.php:121
 msgid "Ask Yourself"
 msgstr ""
 
-#: functions/zume-gmo.php:139 parts/content-share.php:13
+#: functions/zume-gmo.php:142 parts/content-share.php:13
 #: template-pieces-page.php:149
 msgid "Great job! Here's your progress with this concept"
 msgstr ""
 
-#: functions/zume-gmo.php:165 functions/zume-v4-seo-strings.php:13
-#: parts/content-share.php:39 template-pieces-page.php:175
+#: functions/zume-gmo.php:168 functions/zume-v4-seo-strings.php:13
+#: parts/content-share.php:39 template-gmo.php:424 template-pieces-page.php:175
 #: template-zume-training.php:85
 msgid "Course Overview"
 msgstr ""
 
-#: functions/zume-gmo.php:166 functions/zume-v4-seo-strings.php:14
+#: functions/zume-gmo.php:169 functions/zume-v4-seo-strings.php:14
 #: parts/content-share.php:40 template-pieces-page.php:176
 #: template-zume-training.php:91
 msgid "Groups"
 msgstr ""
 
-#: functions/zume-gmo.php:179 functions/zume-gmo.php:211
-#: parts/content-share.php:54 parts/content-share.php:90
-#: template-pieces-page.php:190 template-pieces-page.php:222
+#: functions/zume-gmo.php:184 functions/zume-gmo.php:216
+#: parts/content-share.php:56 parts/content-share.php:92
+#: template-pieces-page.php:192 template-pieces-page.php:224
 msgid "Zúme Training is freely offered as part of larger Zúme Vision."
 msgstr ""
 
-#: functions/zume-gmo.php:180 functions/zume-gmo.php:212
-#: parts/content-share.php:55 parts/content-share.php:91
-#: template-pieces-page.php:191 template-pieces-page.php:223
+#: functions/zume-gmo.php:185 functions/zume-gmo.php:217
+#: parts/content-share.php:57 parts/content-share.php:93
+#: template-pieces-page.php:193 template-pieces-page.php:225
 msgid "Learn more about the Zúme.Vision"
 msgstr ""
 
-#: functions/zume-gmo.php:206 parts/content-share.php:85 template-gmo.php:421
-#: template-how-to-follow-jesus.php:349 template-pieces-page.php:217
+#: functions/zume-gmo.php:211 parts/content-share.php:87 template-gmo.php:422
+#: template-how-to-follow-jesus.php:352 template-pieces-page.php:219
 #: template-zume-about.php:51 template-zume-about.php:68
 #: template-zume-faq.php:199 template-zume-privacy-policy.php:186
 #: template-zume-progress.php:119
@@ -3064,8 +3064,8 @@ msgid ""
 "processes, and practices."
 msgstr ""
 
-#: functions/zume-gmo.php:207 parts/content-share.php:86
-#: template-pieces-page.php:218
+#: functions/zume-gmo.php:212 parts/content-share.php:88
+#: template-pieces-page.php:220
 msgid "See Entire Training"
 msgstr ""
 
@@ -3242,15 +3242,15 @@ msgstr ""
 msgid "Pages:"
 msgstr ""
 
-#: template-gmo.php:163
+#: template-gmo.php:164
 msgid "Welcome to God’s family!"
 msgstr ""
 
-#: template-gmo.php:167
+#: template-gmo.php:168
 msgid "You’ve just made a decision to follow Jesus. Where do you go from here?"
 msgstr ""
 
-#: template-gmo.php:168
+#: template-gmo.php:169
 msgid ""
 "We are Zúme, a GodLife Community. Through Zúme, we want to give you free "
 "resources to grow in your faith and connect you to a community of people all "
@@ -3258,7 +3258,7 @@ msgid ""
 "Jesus gives us. Let’s get started!"
 msgstr ""
 
-#: template-gmo.php:169
+#: template-gmo.php:170
 msgid ""
 "A great first step is this video that explains 4 relationships we all have "
 "with God, creation, others, and ourselves. We pray that as you watch that "
@@ -3266,87 +3266,87 @@ msgid ""
 "who will eventually join you in following Jesus."
 msgstr ""
 
-#: template-gmo.php:196
+#: template-gmo.php:197
 msgid ""
 "Next we have a collection of resources to help you follow Jesus. Bookmark, "
 "explore, and share these Biblical resources that are being used around the "
 "globe."
 msgstr ""
 
-#: template-gmo.php:202 template-how-to-follow-jesus.php:130
+#: template-gmo.php:203 template-how-to-follow-jesus.php:133
 msgid "What is a follower of Jesus?"
 msgstr ""
 
-#: template-gmo.php:208 template-how-to-follow-jesus.php:136
+#: template-gmo.php:209 template-how-to-follow-jesus.php:139
 #: template-zume-training.php:164
 msgid ""
 "You'll see how God uses ordinary people doing simple things to make a big "
 "impact."
 msgstr ""
 
-#: template-gmo.php:212 template-how-to-follow-jesus.php:140
+#: template-gmo.php:213 template-how-to-follow-jesus.php:143
 #: template-zume-training.php:178
 msgid ""
 "Discover the essence of being a disciple, making a disciple, and what is the "
 "church."
 msgstr ""
 
-#: template-gmo.php:216 template-how-to-follow-jesus.php:144
+#: template-gmo.php:217 template-how-to-follow-jesus.php:147
 #: template-zume-training.php:429
 msgid ""
 "Learn a simple pattern of making not just one follower of Jesus but entire "
 "spiritual families who multiply for generations to come."
 msgstr ""
 
-#: template-gmo.php:225 template-how-to-follow-jesus.php:153
+#: template-gmo.php:226 template-how-to-follow-jesus.php:156
 msgid "What are the activities of a follower of Jesus?"
 msgstr ""
 
-#: template-gmo.php:230 template-how-to-follow-jesus.php:158
+#: template-gmo.php:231 template-how-to-follow-jesus.php:161
 #: template-zume-training.php:258
 msgid ""
 "You'll discover the four main ways God makes everyday followers more like "
 "Jesus."
 msgstr ""
 
-#: template-gmo.php:237 template-how-to-follow-jesus.php:165
+#: template-gmo.php:238 template-how-to-follow-jesus.php:168
 #: template-zume-training.php:191
 msgid "Being a disciple means we hear from God and we obey God."
 msgstr ""
 
-#: template-gmo.php:241 template-how-to-follow-jesus.php:169
+#: template-gmo.php:242 template-how-to-follow-jesus.php:172
 #: template-zume-training.php:271
 msgid "See how easy it is to spend an hour in prayer."
 msgstr ""
 
-#: template-gmo.php:245 template-how-to-follow-jesus.php:173
+#: template-gmo.php:246 template-how-to-follow-jesus.php:176
 #: template-zume-training.php:535
 msgid "Practice a simple mnemonic to remind you of ways to pray for others."
 msgstr ""
 
-#: template-gmo.php:250 template-how-to-follow-jesus.php:178
+#: template-gmo.php:251 template-how-to-follow-jesus.php:181
 msgid "Bible Reading"
 msgstr ""
 
-#: template-gmo.php:254 template-how-to-follow-jesus.php:182
+#: template-gmo.php:255 template-how-to-follow-jesus.php:185
 #: template-zume-training.php:204
 msgid ""
 "A tool for daily Bible study that helps you understand, obey, and share "
 "God’s Word."
 msgstr ""
 
-#: template-gmo.php:258 template-how-to-follow-jesus.php:186
+#: template-gmo.php:259 template-how-to-follow-jesus.php:189
 #: template-zume-training.php:582
 msgid ""
 "It's important what disciples know — but it's much more important what they "
 "DO with what they know."
 msgstr ""
 
-#: template-gmo.php:263 template-how-to-follow-jesus.php:191
+#: template-gmo.php:264 template-how-to-follow-jesus.php:194
 msgid "Community"
 msgstr ""
 
-#: template-gmo.php:267 template-how-to-follow-jesus.php:195
+#: template-gmo.php:268 template-how-to-follow-jesus.php:198
 #: template-zume-training.php:595
 msgid ""
 "A 3/3 Group is a way for followers of Jesus to meet, pray, learn, grow, "
@@ -3354,7 +3354,7 @@ msgid ""
 "way, a 3/3 Group is not just a small group but a Simple Church."
 msgstr ""
 
-#: template-gmo.php:271 template-how-to-follow-jesus.php:199
+#: template-gmo.php:272 template-how-to-follow-jesus.php:202
 #: template-zume-training.php:217
 msgid ""
 "A tool for two or three people of the same gender to meet weekly and "
@@ -3362,23 +3362,23 @@ msgid ""
 "correction."
 msgstr ""
 
-#: template-gmo.php:275 template-how-to-follow-jesus.php:203
+#: template-gmo.php:276 template-how-to-follow-jesus.php:206
 #: template-zume-training.php:739
 msgid "Learn how to obey Jesus' commands by going AND staying."
 msgstr ""
 
-#: template-gmo.php:278 template-how-to-follow-jesus.php:206
+#: template-gmo.php:279 template-how-to-follow-jesus.php:209
 msgid "The Lord’s Supper and How To Lead It"
 msgstr ""
 
-#: template-gmo.php:279 template-how-to-follow-jesus.php:207
+#: template-gmo.php:280 template-how-to-follow-jesus.php:210
 #: template-zume-training.php:468
 msgid ""
 "It’s a simple way to celebrate our intimate connection and ongoing "
 "relationship with Jesus. Learn a simple way to celebrate."
 msgstr ""
 
-#: template-gmo.php:283 template-how-to-follow-jesus.php:211
+#: template-gmo.php:284 template-how-to-follow-jesus.php:214
 #: template-zume-training.php:375
 msgid ""
 "Jesus said, “Go and make disciples of all nations, BAPTIZING them in the "
@@ -3386,33 +3386,33 @@ msgid ""
 "this into practice."
 msgstr ""
 
-#: template-gmo.php:288 template-how-to-follow-jesus.php:216
+#: template-gmo.php:289 template-how-to-follow-jesus.php:219
 msgid "Sacrifice and Suffering"
 msgstr ""
 
-#: template-gmo.php:292 template-how-to-follow-jesus.php:220
+#: template-gmo.php:293 template-how-to-follow-jesus.php:223
 #: template-zume-training.php:337
 msgid ""
 "Learn how God's economy is different from the world's. God invests more in "
 "those who are faithful with what they've already been given."
 msgstr ""
 
-#: template-gmo.php:295 template-how-to-follow-jesus.php:223
+#: template-gmo.php:296 template-how-to-follow-jesus.php:226
 msgid "Eyes to See Where The Kingdom Isn’t"
 msgstr ""
 
-#: template-gmo.php:296 template-how-to-follow-jesus.php:224
+#: template-gmo.php:297 template-how-to-follow-jesus.php:227
 #: template-zume-training.php:455
 msgid ""
 "Begin to see where God’s Kingdom isn’t. These are usually the places where "
 "God wants to work the most."
 msgstr ""
 
-#: template-gmo.php:307 template-how-to-follow-jesus.php:235
+#: template-gmo.php:308 template-how-to-follow-jesus.php:238
 msgid "How do I obey Jesus and help others become followers with me?"
 msgstr ""
 
-#: template-gmo.php:311 template-how-to-follow-jesus.php:239
+#: template-gmo.php:312 template-how-to-follow-jesus.php:242
 msgid ""
 "Then Jesus came to them and said, \"All authority in heaven and on earth has "
 "been given to me. Therefore go and make disciples of all nations, baptizing "
@@ -3421,83 +3421,83 @@ msgid ""
 "you always, to the very end of the age.\""
 msgstr ""
 
-#: template-gmo.php:312 template-how-to-follow-jesus.php:240
+#: template-gmo.php:313 template-how-to-follow-jesus.php:243
 msgid "Matthew 28:18-20"
 msgstr ""
 
-#: template-gmo.php:316 template-how-to-follow-jesus.php:244
+#: template-gmo.php:317 template-how-to-follow-jesus.php:247
 msgid "Teaching others to obey and follow Jesus with you"
 msgstr ""
 
-#: template-gmo.php:321 template-how-to-follow-jesus.php:249
+#: template-gmo.php:322 template-how-to-follow-jesus.php:252
 msgid "Learn what ducklings have to do with disciple-making"
 msgstr ""
 
-#: template-gmo.php:325 template-how-to-follow-jesus.php:253
+#: template-gmo.php:326 template-how-to-follow-jesus.php:256
 #: template-zume-training.php:625
 msgid ""
 "Learn the training cycle and consider how it applies to disciple making."
 msgstr ""
 
-#: template-gmo.php:329 template-how-to-follow-jesus.php:257
+#: template-gmo.php:330 template-how-to-follow-jesus.php:260
 #: template-zume-training.php:713
 msgid ""
 "See how disciple making doesn't have to be linear. Multiple things can "
 "happen at the same time."
 msgstr ""
 
-#: template-gmo.php:333 template-how-to-follow-jesus.php:261
+#: template-gmo.php:334 template-how-to-follow-jesus.php:264
 #: template-zume-training.php:726
 msgid ""
 "Multiplying matters and multiplying quickly matters even more. See why pace "
 "matters."
 msgstr ""
 
-#: template-gmo.php:337 template-how-to-follow-jesus.php:265
+#: template-gmo.php:338 template-how-to-follow-jesus.php:268
 msgid "Speaking to people YOU KNOW about Jesus"
 msgstr ""
 
-#: template-gmo.php:341 template-how-to-follow-jesus.php:269
+#: template-gmo.php:342 template-how-to-follow-jesus.php:272
 #: template-zume-training.php:296
 msgid "A tool designed to help you be a good steward of your relationships."
 msgstr ""
 
-#: template-gmo.php:345 template-how-to-follow-jesus.php:273
+#: template-gmo.php:346 template-how-to-follow-jesus.php:276
 #: template-zume-training.php:356
 msgid ""
 "Learn a way to share God’s Good News from the beginning of humanity all the "
 "way to the end of this age."
 msgstr ""
 
-#: template-gmo.php:349 template-how-to-follow-jesus.php:277
+#: template-gmo.php:350 template-how-to-follow-jesus.php:280
 #: template-zume-training.php:410
 msgid ""
 "Learn how to share your testimony in three minutes by sharing how Jesus has "
 "impacted your life."
 msgstr ""
 
-#: template-gmo.php:354 template-how-to-follow-jesus.php:282
+#: template-gmo.php:355 template-how-to-follow-jesus.php:285
 msgid "Speaking to people YOU DON'T KNOW about Jesus"
 msgstr ""
 
-#: template-gmo.php:358 template-how-to-follow-jesus.php:286
+#: template-gmo.php:359 template-how-to-follow-jesus.php:289
 #: template-zume-training.php:522
 msgid ""
 "Learn who a person of peace might be and how to know when you've found one."
 msgstr ""
 
-#: template-gmo.php:362 template-how-to-follow-jesus.php:290
+#: template-gmo.php:363 template-how-to-follow-jesus.php:293
 #: template-zume-training.php:509
 msgid ""
 "It’s a simple way to obey God’s command to pray for others. And it's just "
 "what it sounds like — praying to God while walking around!"
 msgstr ""
 
-#: template-gmo.php:373 template-how-to-follow-jesus.php:301
+#: template-gmo.php:374 template-how-to-follow-jesus.php:304
 msgid "What if many friends, family, and others start following Jesus with me?"
 msgstr ""
 
-#: template-gmo.php:379 template-how-to-follow-jesus.php:307
+#: template-gmo.php:380 template-how-to-follow-jesus.php:310
 #: template-zume-training.php:826
 msgid ""
 "This is a group that consists of people who are leading and starting 3/3 "
@@ -3505,28 +3505,28 @@ msgid ""
 "spiritual health of God’s work in your area."
 msgstr ""
 
-#: template-gmo.php:383 template-how-to-follow-jesus.php:311
+#: template-gmo.php:384 template-how-to-follow-jesus.php:314
 #: template-zume-training.php:794
 msgid ""
 "A powerful tool you can use to quickly assess your own strengths and "
 "vulnerabilities when it comes to making disciples who multiply."
 msgstr ""
 
-#: template-gmo.php:387 template-how-to-follow-jesus.php:315
+#: template-gmo.php:388 template-how-to-follow-jesus.php:318
 #: template-zume-training.php:672
 msgid ""
 "A Leadership Cell is a way someone who feels called to lead can develop "
 "their leadership by practicing serving."
 msgstr ""
 
-#: template-gmo.php:391 template-how-to-follow-jesus.php:319
+#: template-gmo.php:392 template-how-to-follow-jesus.php:322
 #: template-zume-training.php:813
 msgid ""
 "Learn how multiplying churches stay connected and live life together as an "
 "extended, spiritual family."
 msgstr ""
 
-#: template-gmo.php:418 template-how-to-follow-jesus.php:346
+#: template-gmo.php:419 template-how-to-follow-jesus.php:349
 #: template-zume-about.php:65 template-zume-faq.php:196
 #: template-zume-privacy-policy.php:183 template-zume-progress.php:116
 msgid ""
@@ -3539,20 +3539,20 @@ msgid ""
 msgstr ""
 
 #. Template Name of the plugin/theme
-#: template-how-to-follow-jesus.php:91
+#: template-how-to-follow-jesus.php:94
 msgid "How to Follow Jesus"
 msgstr ""
 
-#: template-how-to-follow-jesus.php:95
+#: template-how-to-follow-jesus.php:98
 msgid ""
 "Watch this important video explaining the 4 relationships of your new life."
 msgstr ""
 
-#: template-how-to-follow-jesus.php:122
+#: template-how-to-follow-jesus.php:125
 msgid "Bookmark this page as a future resource!"
 msgstr ""
 
-#: template-how-to-follow-jesus.php:124
+#: template-how-to-follow-jesus.php:127
 msgid ""
 "The sections below, will teach you what it means to be a follower (disciple) "
 "of Jesus."
