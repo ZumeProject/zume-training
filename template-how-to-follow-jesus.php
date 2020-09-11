@@ -39,12 +39,13 @@ $alt_video = zume_alt_video( $current_language );
     jQuery(document).ready(function() {
         let open_modal = function( id ) {
             let pieces = jQuery('#pieces-content')
+            let lang = '<?php echo esc_attr( $current_language ) ?>'
             pieces.html(`<span><img src="<?php echo esc_url( get_stylesheet_directory_uri() ) . '/spinner.svg' ?>" width="30px;"></span>`)
 
             jQuery.ajax({
                 type: "GET",
                 contentType: "application/json; charset=utf-8",
-                url: '<?php echo esc_url_raw( rest_url() ) ?>zume/v4/piece/' + id,
+                url: '<?php echo esc_url_raw( rest_url() ) ?>zume/v4/piece/' + id + '/' + lang,
                 beforeSend: function(xhr) {
                     xhr.setRequestHeader('X-WP-Nonce', '<?php echo esc_attr( wp_create_nonce( 'wp_rest' ) ) ?>' );
                 },

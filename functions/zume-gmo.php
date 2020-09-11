@@ -1,6 +1,9 @@
 <?php
 
-function get_gmo_content( $postid ) {
+function get_gmo_content( $postid, $lang ) {
+    if ( 'en' !== $lang ){
+        $postid = zume_get_translation( $postid, $lang );
+    }
 
     $meta = get_post_meta( $postid );
     $tool_number = $meta['zume_piece'][0] ?? 0;
