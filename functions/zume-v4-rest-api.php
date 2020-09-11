@@ -476,7 +476,7 @@ class Zume_V4_REST_API {
             return new WP_Error( "log_param_error", "Missing parameters", array( 'status' => 400 ) );
         }
         $lang = 'en';
-        if ( ! isset( $params['lang'] ) ) {
+        if ( isset( $params['lang'] ) ) {
             $lang = sanitize_text_field( wp_unslash( $params['lang'] ) );
         }
 
