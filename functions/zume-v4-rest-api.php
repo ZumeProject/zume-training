@@ -113,9 +113,9 @@ class Zume_V4_REST_API {
 
             ),
         ) );
-        register_rest_route( $namespace, '/piece/(?P<id>\d+)/(?P<lang>\d+)', array(
+        register_rest_route( $namespace, '/piece', array(
             array(
-                'methods'         => WP_REST_Server::READABLE,
+                'methods'         => WP_REST_Server::CREATABLE,
                 'callback'        => array( $this, 'piece_content' ),
             ),
         ) );
