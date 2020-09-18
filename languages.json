@@ -91,13 +91,6 @@
     "rtl": false
   },
   {
-    "enDisplayName": "Japanese",
-    "code": "ja",
-    "locale": "ja",
-    "nativeName": "日本語 (にほんご)",
-    "rtl": false
-  },
-  {
     "enDisplayName": "Kannada",
     "code": "kn",
     "locale": "kn",
