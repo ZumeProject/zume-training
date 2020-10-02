@@ -211,10 +211,12 @@ function zume_landing_list_template( $list_template = 'full' ){
 
                     <div class="accordion-content" data-tab-content>
                         <div class="inset">
+                            <strong><?php esc_html_e( 'Principles','zume') ?></strong>
                             <p>
                                 <strong><a data-value="20737" data-tool="6"  class="open-modal"><?php esc_html_e( "Consumer vs Producer Lifestyle", 'zume' ) ?></a></strong><br>
                                 <?php esc_html_e( "You'll discover the four main ways God makes everyday followers more like Jesus.", 'zume' ) ?>
                             </p>
+                            <strong><?php esc_html_e( 'Practices','zume') ?></strong>
                             <p>
                                 <strong><a data-value="20733" data-tool="4" class="open-modal"><?php esc_html_e( "SOAPS Bible Reading", 'zume' ) ?></a></strong><br>
                                 <?php esc_html_e( "A tool for daily Bible study that helps you understand, obey, and share God’s Word.", 'zume' ) ?>
@@ -223,16 +225,18 @@ function zume_landing_list_template( $list_template = 'full' ){
                     </div>
                 </li>
 
-                <li class="accordion-item is-active" data-accordion-item>
+                <li class="accordion-item" data-accordion-item>
                     <a href="#" class="accordion-title" style="text-decoration: none !important;"><h3><?php esc_html_e( "Leading Your Group", 'zume' ) ?></h3></a>
 
                     <div class="accordion-content" data-tab-content>
 
                         <div class="inset">
+                            <strong><?php esc_html_e( 'Principles','zume') ?></strong>
                             <p>
                                 <strong><a  data-value="20751" data-tool="20" class="open-modal"><?php esc_html_e( "Faithfulness is Better Than Knowledge", 'zume' ) ?></a></strong><br>
                                 <?php esc_html_e( "It's important what disciples know — but it's much more important what they DO with what they know.", 'zume' ) ?>
                             </p>
+                            <strong><?php esc_html_e( 'Practices','zume') ?></strong>
                             <p>
                                 <strong><a data-value="20752" data-tool="21" class="open-modal"><?php esc_html_e( "3/3 Group Meeting Pattern", 'zume' ) ?></a></strong><br>
                                 <?php esc_html_e( "A 3/3 Group is a way for followers of Jesus to meet, pray, learn, grow, fellowship and practice obeying and sharing what they've learned. In this way, a 3/3 Group is not just a small group but a Simple Church.", 'zume' ) ?>
@@ -244,15 +248,17 @@ function zume_landing_list_template( $list_template = 'full' ){
                 </li>
 
 
-                <li class="accordion-item is-active" data-accordion-item>
+                <li class="accordion-item " data-accordion-item>
                     <a href="#" class="accordion-title" style="text-decoration: none !important;"><h3><?php esc_html_e( "Leading Your Group Leaders", 'zume' ) ?></h3></a>
 
                     <div class="accordion-content" data-tab-content>
                         <div class="inset">
+                            <strong><?php esc_html_e( 'Principles','zume') ?></strong>
                             <p>
                                 <strong><a data-value="20753" data-tool="22" class="open-modal"><?php esc_html_e( "Training Cycle for Maturing Disciples", 'zume' ) ?></a></strong><br>
                                 <?php esc_html_e( "Learn the training cycle and consider how it applies to disciple making.", 'zume' ) ?>
                             </p>
+                            <strong><?php esc_html_e( 'Practices','zume') ?></strong>
                             <p>
                                 <strong><a data-value="20759" data-tool="28" class="open-modal"><?php esc_html_e( "Coaching Checklist", 'zume' ) ?></a></strong><br>
                                 <?php esc_html_e( "A powerful tool you can use to quickly assess your own strengths and vulnerabilities when it comes to making disciples who multiply.", 'zume' ) ?>
@@ -262,15 +268,17 @@ function zume_landing_list_template( $list_template = 'full' ){
                 </li>
 
 
-                <li class="accordion-item is-active" data-accordion-item>
+                <li class="accordion-item" data-accordion-item>
                     <a href="#" class="accordion-title" style="text-decoration: none !important;"><h3><?php esc_html_e( "Leading Your Community Leaders", 'zume' ) ?></h3></a>
 
                     <div class="accordion-content" data-tab-content>
                         <div class="inset">
+                            <strong><?php esc_html_e( 'Principles','zume') ?></strong>
                             <p>
                                 <strong><a data-value="20757" data-tool="25" class="open-modal"><?php esc_html_e( "Pace of Multiplication Matters", 'zume' ) ?></a></strong><br>
                                 <?php esc_html_e( "Multiplying matters and multiplying quickly matters even more. See why pace matters.", 'zume' ) ?>
                             </p>
+                            <strong><?php esc_html_e( 'Practices','zume') ?></strong>
                             <p>
                                 <strong><a  data-value="20761" data-tool="30" class="open-modal"><?php esc_html_e( "Peer Mentoring Groups", 'zume' ) ?></a></strong><br>
                                 <?php esc_html_e( "This is a group that consists of people who are leading and starting 3/3 Groups. It also follows a 3/3 format and is a powerful way to assess the spiritual health of God’s work in your area.", 'zume' ) ?>
