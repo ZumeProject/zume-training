@@ -22,6 +22,7 @@ require_once( 'functions/post-types/video-post-type.php' );
 require_once( 'functions/post-types/pdf-download-post-type.php' );
 if ( is_admin() ) {
     require_once( 'functions/post-types/pieces-page-metabox.php' );
+    require_once( 'functions/post-types/landing-template-metaboxes.php' );
 }
 
 // Language Files
