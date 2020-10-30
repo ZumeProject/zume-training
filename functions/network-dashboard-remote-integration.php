@@ -39,7 +39,7 @@ function zume_movement_log_pieces( $args = [
             jQuery(document).scroll(function() {
                 if (jQuery(document).scrollTop() >= 200 && has_scrolled === false ) {
                     window.movement_logging({
-                        "action": "<?php echo esc_attr( $args['tool'] ) ?>",
+                        "action": 'studying_' + "<?php echo esc_attr( $args['tool'] ) ?>",
                         "category": "studying",
                         "data-language_code": "<?php echo esc_attr( $args['language'] ) ?>",
                         "data-language_name": "<?php echo esc_html( zume_get_english_language_name( $args['language'] ) ) ?>",
@@ -68,7 +68,7 @@ function zume_movement_log_course( $args = [
         jQuery(document).ready(function(){
             if (typeof window.movement_logging !== "undefined") {
                 window.movement_logging({
-                    "action": "<?php echo esc_attr( $args['session'] ) ?>",
+                    "action": 'studying_' + "<?php echo esc_attr( $args['session'] ) ?>",
                     "category": "leading",
                     "data-language_code": "<?php echo esc_attr( $args['language'] ) ?>",
                     "data-language_name": "<?php echo esc_html( zume_get_english_language_name( $args['language'] ) ) ?>",

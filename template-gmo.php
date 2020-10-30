@@ -127,7 +127,7 @@ $alt_video = zume_alt_video( $current_language );
             let title = selection.html()
             let action = selection.data('tool')
             window.movement_logging({
-                "action": action,
+                "action": 'studying_' + action,
                 "category": "studying",
                 "data-language_code": "<?php echo esc_attr( $current_language ) ?>",
                 "data-language_name": "<?php echo esc_html( zume_get_english_language_name( $current_language ) ) ?>",
@@ -137,7 +137,6 @@ $alt_video = zume_alt_video( $current_language );
                 "data-group_size": "1",
                 "data-note": "is studying"
             })
-
 
             jQuery('#pieces-wrapper').foundation('open')
 
