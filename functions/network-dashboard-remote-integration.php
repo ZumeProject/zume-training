@@ -68,7 +68,7 @@ function zume_movement_log_course( $args = [
         jQuery(document).ready(function(){
             if (typeof window.movement_logging !== "undefined") {
                 window.movement_logging({
-                    "action": 'studying_' + "<?php echo esc_attr( $args['session'] ) ?>",
+                    "action": 'leading_' + "<?php echo esc_attr( $args['session'] ) ?>",
                     "category": "leading",
                     "data-language_code": "<?php echo esc_attr( $args['language'] ) ?>",
                     "data-language_name": "<?php echo esc_html( zume_get_english_language_name( $args['language'] ) ) ?>",
