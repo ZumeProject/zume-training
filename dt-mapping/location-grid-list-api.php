@@ -7,7 +7,6 @@
  */
 
 // @todo may not be needed. Should be able to just use the disciple tools geocoder and ditch this one.
-// @todo not sure we can mimic the speed of this pages technique for the area maps. They cast a query to this file on every user zoom movement.
 
 if ( defined( 'ABSPATH' ) ) { exit; }
 /**

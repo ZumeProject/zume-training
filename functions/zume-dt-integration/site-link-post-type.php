@@ -701,7 +701,6 @@ if ( ! class_exists( 'Site_Link_System' ) ) {
                     delete_post_meta( $post_id, 'site1' );
                     delete_post_meta( $post_id, 'site2' );
                     delete_post_meta( $post_id, 'site_key' );
-                    delete_post_meta( $post_id, 'token' );
                     delete_post_meta( $post_id, 'approved_ip_address' );
 
                     $this->build_cached_option(); // rebuilds cache for options
