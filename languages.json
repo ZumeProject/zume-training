@@ -175,6 +175,13 @@
     "rtl": false
   },
   {
+    "enDisplayName": "Slovenian",
+    "code": "sl",
+    "locale": "sl_Sl",
+    "nativeName": "Slovenščina",
+    "rtl": false
+  },
+  {
     "enDisplayName": "Spanish",
     "code": "es",
     "locale": "es",
