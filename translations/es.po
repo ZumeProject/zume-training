@@ -3568,12 +3568,12 @@ msgstr "Check-in, oración, descripción general"
 #: template-gmo.php:230 template-how-to-follow-jesus.php:158
 #: template-zume-training.php:258
 msgid "You'll discover the four main ways God makes everyday followers more like Jesus."
-msgstr "Descubrirá las cuatro formas principales en que Dios hace que los seguidores cotidianos se parezcan más a Jesús."
+msgstr "Descubrirás las cuatro formas principales en que Dios guía a los seguidores cotidianos a que se parezcan más a Jesús."
 
 #: template-gmo.php:241 template-how-to-follow-jesus.php:169
 #: template-zume-training.php:271
 msgid "See how easy it is to spend an hour in prayer."
-msgstr "Vea lo fácil que es pasar una hora en oración."
+msgstr "Lee acerca de lo fácil que es pasar una hora en oración."
 
 #: template-zume-training.php:277
 msgid "Practice - Prayer Cycle"
@@ -3604,7 +3604,7 @@ msgstr "30 minutos"
 #: template-gmo.php:292 template-how-to-follow-jesus.php:220
 #: template-zume-training.php:337
 msgid "Learn how God's economy is different from the world's. God invests more in those who are faithful with what they've already been given."
-msgstr "Aprenda cómo la economía de Dios es diferente de la del mundo. Dios invierte más en aquellos que son fieles con lo que ya se les ha dado."
+msgstr "Aprende cómo la economía de Dios es diferente de la del mundo. Dios invierte más en aquellos que son fieles con lo que ya se les ha dado."
 
 #: template-zume-training.php:343
 msgid "Discuss - Should every disciple share?"
@@ -3675,7 +3675,7 @@ msgstr "Aprenda acerca de quién podría ser una persona de paz y cómo saber cu
 #: template-gmo.php:245 template-how-to-follow-jesus.php:173
 #: template-zume-training.php:535
 msgid "Practice a simple mnemonic to remind you of ways to pray for others."
-msgstr "Practica una simple mnemotecnia para recordarte formas de orar por los demás."
+msgstr "Practica una simple nemotecnia para recordarte formas de orar por los demás."
 
 #: template-zume-training.php:541
 msgid "Practice - BLESS Prayer"
@@ -3725,12 +3725,12 @@ msgstr "Una célula de liderazgo es una forma en que alguien que se siente llama
 #: template-gmo.php:329 template-how-to-follow-jesus.php:257
 #: template-zume-training.php:713
 msgid "See how disciple making doesn't have to be linear. Multiple things can happen at the same time."
-msgstr "Vea cómo hacer discípulos no tiene que ser lineal. Pueden suceder varias cosas al mismo tiempo."
+msgstr "Lee acerca de cómo hacer discípulos no tiene que ser lineal. Pueden suceder varias cosas al mismo tiempo."
 
 #: template-gmo.php:333 template-how-to-follow-jesus.php:261
 #: template-zume-training.php:726
 msgid "Multiplying matters and multiplying quickly matters even more. See why pace matters."
-msgstr "Multiplicar las cosas y multiplicar rápidamente importa aún más. Vea por qué el ritmo importa."
+msgstr "Multiplicar las cosas y multiplicar rápidamente importa aún más. Lee acerca del por qué el ritmo importa."
 
 #: template-gmo.php:275 template-how-to-follow-jesus.php:203
 #: template-zume-training.php:739
@@ -3877,7 +3877,7 @@ msgstr "El evangelio y cómo compartirlo"
 #: functions/enqueue-scripts.php:226 template-gmo.php:282
 #: template-how-to-follow-jesus.php:210 template-zume-training.php:370
 msgid "Baptism and How To Do It"
-msgstr "Bautismo y como hacerlo"
+msgstr "Bautismo y cómo hacerlo"
 
 #: functions/enqueue-scripts.php:227 template-gmo.php:348
 #: template-how-to-follow-jesus.php:276 template-zume-training.php:405
@@ -3915,7 +3915,7 @@ msgstr "Una persona de paz y cómo encontrar uno"
 #: functions/enqueue-scripts.php:234 template-gmo.php:244
 #: template-how-to-follow-jesus.php:172 template-zume-training.php:530
 msgid "The BLESS Prayer Pattern"
-msgstr "El patrón de oración de BENDICION"
+msgstr "El patrón de oración de BENDICIÓN"
 
 #: functions/enqueue-scripts.php:235 template-gmo.php:257
 #: template-how-to-follow-jesus.php:185 template-zume-training.php:577
@@ -4532,7 +4532,7 @@ msgstr "Somos Zúme, Una comunidad de GodLife. Por medio de Zúme, queremos brin
 
 #: template-gmo.php:169
 msgid "A great first step is this video that explains 4 relationships we all have with God, creation, others, and ourselves. We pray that as you watch that video God will lead you to think of several others who need to see it, and who will eventually join you in following Jesus."
-msgstr "Un buen primer paso es este vido que explica las 4 relaciones que todos tenemos con Dios, la creación, los demás y con nosotros mismos. Oramos que a medida que ves el video, Dios te guiará a pensar en otros que necesitan verlo y que eventualmente  se unirán a ti para seguir a Jesús. "
+msgstr "Un buen primer paso es este video que explica las 4 relaciones que todos tenemos con Dios, la creación, los demás y con nosotros mismos. Oramos para que a medida que ves el video, Dios te guíe a pensar en otros que necesitan verlo y que eventualmente sigan a Jesús igual que tú. "
 
 #: template-gmo.php:196
 msgid "Next we have a collection of resources to help you follow Jesus. Bookmark, explore, and share these Biblical resources that are being used around the globe."
