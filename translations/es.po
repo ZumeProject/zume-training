@@ -3500,7 +3500,7 @@ msgstr "5 minutos"
 #: template-gmo.php:208 template-how-to-follow-jesus.php:136
 #: template-zume-training.php:164
 msgid "You'll see how God uses ordinary people doing simple things to make a big impact."
-msgstr "Verá cómo Dios usa a la gente común haciendo cosas simples para tener un gran impacto."
+msgstr "Verás cómo Dios usa a la gente común haciendo cosas simples para tener un gran impacto."
 
 #: template-zume-training.php:167 template-zume-training.php:181
 #: template-zume-training.php:194 template-zume-training.php:207
@@ -3627,7 +3627,7 @@ msgstr "Jesús dijo: \"Ve y haz discípulos de todas las naciones, BAUTIZANDO en
 #: template-gmo.php:349 template-how-to-follow-jesus.php:277
 #: template-zume-training.php:410
 msgid "Learn how to share your testimony in three minutes by sharing how Jesus has impacted your life."
-msgstr "Aprenda cómo compartir su testimonio en tres minutos compartiendo cómo Jesús ha impactado su vida."
+msgstr "Aprende a cómo compartir tu testimonio en tres minutos, compartiendo acerca de cómo Jesús ha impactado tu vida."
 
 #: template-zume-training.php:416
 msgid "Practice - Share your testimony"
@@ -3636,7 +3636,7 @@ msgstr "Practica: comparte tu testimonio"
 #: template-gmo.php:216 template-how-to-follow-jesus.php:144
 #: template-zume-training.php:429
 msgid "Learn a simple pattern of making not just one follower of Jesus but entire spiritual families who multiply for generations to come."
-msgstr "Aprenda un patrón simple de hacer no solo un seguidor de Jesús sino familias espirituales enteras que se multiplican para las generaciones venideras."
+msgstr "Aprende acerca de un patrón simple de hacer no solo un seguidor de Jesús sino familias espirituales enteras que se multiplican para las generaciones venideras."
 
 #: template-zume-training.php:442
 msgid "Learn what ducklings have to do with disciple-making."
@@ -3665,12 +3665,12 @@ msgstr "10 minutos"
 #: template-gmo.php:362 template-how-to-follow-jesus.php:290
 #: template-zume-training.php:509
 msgid "It’s a simple way to obey God’s command to pray for others. And it's just what it sounds like — praying to God while walking around!"
-msgstr "Es una manera simple de obedecer el mandato de Dios de orar por los demás. Y así es como suena: ¡orar a Dios mientras camina!"
+msgstr "Es una manera simple de obedecer el mandato de Dios de orar por los demás. Y así es como suena: ¡orar a Dios mientras caminas!"
 
 #: template-gmo.php:358 template-how-to-follow-jesus.php:286
 #: template-zume-training.php:522
 msgid "Learn who a person of peace might be and how to know when you've found one."
-msgstr "Aprenda quién podría ser una persona de paz y cómo saber cuándo ha encontrado una."
+msgstr "Aprenda acerca de quién podría ser una persona de paz y cómo saber cuándo ha encontrado una."
 
 #: template-gmo.php:245 template-how-to-follow-jesus.php:173
 #: template-zume-training.php:535
@@ -3760,7 +3760,7 @@ msgstr "20 minutos"
 #: template-gmo.php:383 template-how-to-follow-jesus.php:311
 #: template-zume-training.php:794
 msgid "A powerful tool you can use to quickly assess your own strengths and vulnerabilities when it comes to making disciples who multiply."
-msgstr "Una herramienta poderosa que puede usar para evaluar rápidamente sus propias fortalezas y vulnerabilidades cuando se trata de hacer discípulos que se multipliquen."
+msgstr "Una herramienta poderosa que puedes usar para evaluar rápidamente tus propias fortalezas y vulnerabilidades cuando se trata de hacer discípulos que se multipliquen."
 
 #: template-zume-training.php:800
 msgid "Practice - Coaching Checklist Self-Assessment"
@@ -3769,7 +3769,7 @@ msgstr "Práctica: autoevaluación de la lista de verificación de entrenamiento
 #: template-gmo.php:391 template-how-to-follow-jesus.php:319
 #: template-zume-training.php:813
 msgid "Learn how multiplying churches stay connected and live life together as an extended, spiritual family."
-msgstr "Aprenda cómo las iglesias multiplicadoras se mantienen conectadas y viven la vida juntas como una familia espiritual extendida."
+msgstr "Aprende acerca de cómo las iglesias multiplicadoras se mantienen conectadas y viven la vida juntas como una familia espiritual extendida."
 
 #: template-gmo.php:379 template-how-to-follow-jesus.php:307
 #: template-zume-training.php:826
@@ -3985,7 +3985,7 @@ msgstr "Mira este video"
 
 #: template-zume-about.php:22
 msgid "About Zúme Training"
-msgstr "Sobre Zúme Training"
+msgstr "Sobre el Entrenamiento de Zúme"
 
 #: template-zume-login.php:96
 msgid "Get new password"
@@ -4384,11 +4384,11 @@ msgstr "Aprende lo que los patitos tienen que ver con hacer discípulos"
 
 #: template-gmo.php:337 template-how-to-follow-jesus.php:265
 msgid "Speaking to people YOU KNOW about Jesus"
-msgstr "Hablando con personas que SABES acerca de Jesús"
+msgstr "Hablando con personas que CONOCES acerca de Jesús"
 
 #: template-gmo.php:354 template-how-to-follow-jesus.php:282
 msgid "Speaking to people YOU DON'T KNOW about Jesus"
-msgstr "Hablando con personas que NO SABES acerca de Jesús"
+msgstr "Hablando con personas que NO CONOCES acerca de Jesús"
 
 #: template-gmo.php:373 template-how-to-follow-jesus.php:301
 msgid "What if many friends, family, and others start following Jesus with me?"
@@ -4528,7 +4528,7 @@ msgstr "Acabas de tomar la decisión de seguir a Jesús. ¿Qué debes hacer ahor
 
 #: template-gmo.php:168
 msgid "We are Zúme, a GodLife Community. Through Zúme, we want to give you free resources to grow in your faith and connect you to a community of people all around the world striving to grow in knowledge and faith of the hope that Jesus gives us. Let’s get started!"
-msgstr "Somos Zúme, Una comunidad GodLife. Por medio de Zúme, queremos brindarte recursos gratuitos para que crezcas en tu fe y te conectes con una comunidad de personas en todo el mundo hambrientas por crecer en conocimiento y fe de la esperanza que Jesús nos da. ¡Comencemos! "
+msgstr "Somos Zúme, Una comunidad de GodLife. Por medio de Zúme, queremos brindarte recursos gratuitos para que crezcas en tu fe y te conectes con una comunidad de personas en todo el mundo hambrientas por crecer en conocimiento y fe de la esperanza que Jesús nos da. ¡Comencemos! "
 
 #: template-gmo.php:169
 msgid "A great first step is this video that explains 4 relationships we all have with God, creation, others, and ourselves. We pray that as you watch that video God will lead you to think of several others who need to see it, and who will eventually join you in following Jesus."
