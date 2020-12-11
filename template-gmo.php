@@ -399,6 +399,32 @@ $alt_video = zume_alt_video( $current_language );
 
             </div> <!-- center grid-->
 
+            <?php /** Not logged in */ if ( ! is_user_logged_in() ) : ?>
+
+                <div class="training margin-top-3 margin-bottom-3">
+                    <div class="grid-x padding-2 landing-part" style="border-color:lightgrey;">
+                        <div class="cell center"><h2><?php echo esc_html__( "You're missing out.", 'zume' ) ?> <?php echo esc_html__( "Register Now!", 'zume' ) ?></h2></div>
+                        <div class="cell list-reasons">
+                            <ul>
+                                <li><?php echo esc_html__( "connect with a coach", 'zume' ) ?></li>
+                                <li><?php echo esc_html__( "track your personal training progress", 'zume' ) ?></li>
+                                <li><?php echo esc_html__( "access group planning tools", 'zume' ) ?></li>
+                            </ul>
+                        </div>
+                        <div class="cell center">
+                            <a href="<?php echo esc_url( zume_register_url() ) ?>" class="button large secondary-button" id="pieces-registration" style="padding-right:2em;padding-left:2em;"><?php echo esc_html__( "Register for Free", 'zume' ) ?></a><br>
+                            <a href="<?php echo esc_url( zume_login_url() ) ?>" class="button clear" id="pieces-login"><?php echo esc_html__( "Login", 'zume' ) ?></a>
+                        </div>
+                        <div class="cell"><hr></div>
+                        <div class="cell center">
+                            <p style="max-width:500px; margin:1em auto;"><?php echo esc_html__( "Zúme uses an online training platform to equip participants in basic disciple-making and simple church planting multiplication principles, processes, and practices.", 'zume' ) ?></p>
+                            <p><a class="button primary-button-hollow large" id="pieces-see-training" href="<?php echo esc_url( zume_training_url() ) ?>"><?php echo esc_html__( "See Entire Training", 'zume' ) ?></a></p>
+                        </div>
+                    </div>
+                </div>
+
+            <?php endif; ?>
+
         </div> <!-- center column -->
 
         <div class="cell medium-2"></div>

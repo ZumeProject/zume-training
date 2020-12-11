@@ -1,6 +1,8 @@
 <?php
 /*
-Template Name: How to Follow Jesus
+Template Name: How to Follow Jesus (discontinue)
+
+@todo This template should not be used. Use template-zume-landing.php
 */
 $current_language = zume_current_language();
 $alt_video = zume_alt_video( $current_language );
@@ -306,7 +308,7 @@ $alt_video = zume_alt_video( $current_language );
                             <div class="accordion-content" data-tab-content>
                                 <div class="inset">
                                     <p>
-                                        <strong><a  data-value="20761" data-tool="30" id="peer-mentoring-group" class="gmo open-modal"><?php esc_html_e( "Peer Mentoring Groups", 'zume' ) ?></a></strong><br>
+                                        <strong><a data-value="20761" data-tool="30" id="peer-mentoring-group" class="gmo open-modal"><?php esc_html_e( "Peer Mentoring Groups", 'zume' ) ?></a></strong><br>
                                         <?php esc_html_e( "This is a group that consists of people who are leading and starting 3/3 Groups. It also follows a 3/3 format and is a powerful way to assess the spiritual health of God’s work in your area.", 'zume' ) ?>
                                     </p>
                                     <p>
