@@ -3271,6 +3271,7 @@ class Zume_Course_Content {
                     </div>
                     <!-- grid-x -->
 
+                    <?php if ( is_user_logged_in() ) : ?>
                     <!-- Inset Block -->
                     <div class="grid-x grid-margin-x grid-margin-y single">
                         <div class="cell auto"></div>
@@ -3291,6 +3292,7 @@ class Zume_Course_Content {
                         </div>
                         <div class="cell auto"></div>
                     </div> <!-- grid-x -->
+                    <?php endif; ?>
 
                     <!-- Activity Block -->
                     <div class="grid-x grid-margin-x grid-margin-y">
