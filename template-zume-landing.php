@@ -108,7 +108,7 @@ $values = get_post_custom( $post->ID );
                     <?php if ( empty( $values['zume_pre_video_content'][0] ?? false ) ) : ?>
                         <p><?php esc_html_e( "Watch this important video explaining the 4 relationships of your new life.", 'zume' ) ?></p>
                     <?php else: ?>
-                       <p><?php echo esc_html( nl2br( $values['zume_pre_video_content'][0] ) ) ?></p>
+                       <p><?php echo nl2br( esc_html( $values['zume_pre_video_content'][0] ) ) ?></p>
                     <?php endif; ?>
                     </div>
 
@@ -146,7 +146,7 @@ $values = get_post_custom( $post->ID );
 
                             <p><?php esc_html_e("The sections below, will teach you what it means to be a follower (disciple) of Jesus.", 'zume' ) ?></p>
                         <?php else: ?>
-                            <p><?php echo esc_html( nl2br( $values['zume_post_video_content'][0] ) ) ?></p>
+                            <p><?php echo nl2br( esc_html(  $values['zume_post_video_content'][0] ) ) ?></p>
                         <?php endif; ?>
                     </div>
 
