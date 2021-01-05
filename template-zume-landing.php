@@ -47,7 +47,7 @@ $values = get_post_custom( $post->ID );
 
             jQuery.ajax({
                 type: "POST",
-                data: JSON.stringify({id: id, lang: lang }),
+                data: JSON.stringify({id: id, lang: lang, strings: { wtv: '<?php esc_html_e( 'Watch This Video', 'zume' ) ?>', ay: '<?php esc_html_e( 'Ask Yourself', 'zume' ) ?>', d: '<?php esc_html_e( 'Download Free Guidebook', 'zume' ) ?>', lra: '<?php esc_html_e( "Listen and Read Along", 'zume' ) ?>' } }),
                 dataType: "json",
                 contentType: "application/json; charset=utf-8",
                 url: '<?php echo esc_url_raw( rest_url() ) ?>zume/v4/piece',
@@ -57,6 +57,9 @@ $values = get_post_custom( $post->ID );
             })
                 .done(function (data) {
                     pieces.html(data)
+
+                    let challenge_content = jQuery('#challenge-content').html()
+                    jQuery('#invitation-footer').append(challenge_content)
                 })
 
             let selection = jQuery('a[data-value='+id+']')
@@ -159,7 +162,7 @@ $values = get_post_custom( $post->ID );
 
             <?php /** Not logged in */ if ( ! is_user_logged_in() ) : ?>
 
-                <div class="training margin-top-3 margin-bottom-3">
+                <div class="training margin-top-3 margin-bottom-3" id="challenge-content">
                     <div class="grid-x padding-2 landing-part" style="border-color:lightgrey;">
                         <div class="cell center"><h2><?php echo esc_html__( "You're missing out.", 'zume' ) ?> <?php echo esc_html__( "Register Now!", 'zume' ) ?></h2></div>
                         <div class="cell list-reasons">

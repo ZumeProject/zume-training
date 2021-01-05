@@ -48,9 +48,14 @@ class Zume_Course {
     public function __construct() {
     } // End __construct()
 
-    public static function get_video_by_key( $meta_key, $player = true ) {
+    public static function get_video_by_key( $meta_key, $player = true, $lang = null ) {
         // get language
-        $current_lang = zume_current_language();
+        if ( empty( $lang ) ) {
+            $current_lang = zume_current_language();
+        } else {
+            $current_lang = $lang;
+        }
+
         // get custom post type by language title
         $page = get_page_by_title( $current_lang, OBJECT, 'zume_video' );
         if ( ! $page ) {
@@ -81,9 +86,13 @@ class Zume_Course {
         return $video_url;
     }
 
-    public static function get_download_by_key( $meta_key ) {
+    public static function get_download_by_key( $meta_key, $lang = null ) {
         // get language
-        $current_lang = zume_current_language();
+        if ( empty( $lang ) ) {
+            $current_lang = zume_current_language();
+        } else {
+            $current_lang = $lang;
+        }
         $current_mirror = zume_mirror_url();
         // get custom post type by language title
         $page = get_page_by_title( $current_lang, OBJECT, 'zume_download' );

@@ -442,28 +442,6 @@ class Zume_V4_REST_API {
                 "contact_id" => $body['ID'],
                 "date_transferred" => time()
             ] );
-        } else {
-            $data = array(
-                'payload'   => json_encode( array(
-                        "channel"       => '#errors',
-                        "text"          => 'Failed Coaching Request: ' . maybe_serialize( $body ) . ' --- ' . maybe_serialize( $fields ),
-                        "username"      => 'error-bot',
-                        "icon_emoji"    => 'ghost'
-                    )
-                )
-            );
-            // Post our data via the slack webhook endpoint using wp_remote_post
-            $posting_to_slack = wp_remote_post( 'https://hooks.slack.com/services/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', array(
-                    'method' => 'POST',
-                    'timeout' => 30,
-                    'redirection' => 5,
-                    'httpversion' => '1.0',
-                    'blocking' => true,
-                    'headers' => array(),
-                    'body' => $data,
-                    'cookies' => array()
-                )
-            );
         }
 
         return $result;
@@ -472,16 +450,18 @@ class Zume_V4_REST_API {
 
     public function piece_content( WP_REST_Request $request ) {
         $params = $request->get_params();
-        if ( ! isset( $params['id'] ) ) {
+        if ( ! isset( $params['id'], $params['lang'], $params['strings'] ) ) {
             return new WP_Error( "log_param_error", "Missing parameters", array( 'status' => 400 ) );
         }
         $lang = 'en';
-        if ( isset( $params['lang'] ) ) {
+        if ( ! empty( $params['lang'] ) ) {
             $lang = sanitize_text_field( wp_unslash( $params['lang'] ) );
         }
 
-        require_once( 'zume-gmo.php' );
-        return get_gmo_content( $params['id'], $lang );
+        $postid = sanitize_text_field( wp_unslash( $params['id'] ) );
+        $strings = dt_recursive_sanitize_array( $params['strings'] );
+
+        return get_modal_content( $postid, $lang, $strings );
     }
 
 }

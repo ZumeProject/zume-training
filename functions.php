@@ -63,6 +63,7 @@ require_once( 'functions/zume-v4-pieces.php' );
 require_once( 'functions/zume-v4-seo-strings.php' );
 require_once( 'functions/zume-content.php' );
 require_once( 'functions/zume-three-month-plan.php' );
+require_once( 'functions/zume-v4-modal-pieces-content.php' );
 //require_once( 'functions/logging/zume-logging.php' ); // zume logging of critical path actions
 
 require_once( 'functions/zume-functions.php' ); // general zume functions
@@ -108,6 +109,9 @@ function add_template_value( $column_name, $post_id ) {
 
 }
 
+
+
+
 /**
  * redirect all logins to the home page
  */
@@ -149,6 +153,20 @@ function zume_v4_ready_language() {
     $current = zume_current_language();
 
     return $ready[$current] ?? true;
+}
+
+if ( ! function_exists( 'dt_recursive_sanitize_array' ) ) {
+    function dt_recursive_sanitize_array( array $array ) : array {
+        foreach ( $array as $key => &$value ) {
+            if ( is_array( $value ) ) {
+                $value = dt_recursive_sanitize_array( $value );
+            }
+            else {
+                $value = sanitize_text_field( wp_unslash( $value ) );
+            }
+        }
+        return $array;
+    }
 }
 
 
