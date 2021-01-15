@@ -13,7 +13,7 @@ function zume_landing_box() {
             'zume_landing_content', // Function that prints box in wp-admin
             'page',              // Show box for posts, pages, custom, etc.
             'normal',            // Where on the page to show the box
-            'high' );            // Priority of box in display order
+        'high' );            // Priority of box in display order
     }
 
 }
@@ -63,29 +63,29 @@ function zume_landing_content( $post ) {
                 'label' => 'No'
             ]
         ];
-        foreach( $list as $value ){
+        foreach ( $list as $value ){
             $selected = '';
             if ( $values['zume_landing_show_video'][0] ?? '' === $value['key'] ){
                 $selected = ' selected';
             }
-            echo '<option value="'.$value['key'].'" '.$selected.'>'. $value['label'] . '</option>';
+            echo '<option value="'. esc_attr( $value['key'] ).'" '. esc_attr( $selected ).'>'. esc_html( $value['label'] ) . '</option>';
         }
         ?></select><br>
     <h3>Post Video</h3>
     <?php
-    $content = isset( $values['zume_post_video_content'][0] ) ? $values['zume_post_video_content'][0] : '';
+    $content = isset( $values['zume_post_video_content'][0] ) ? $values['zume_post_video_content'][0] : ''; // phpcs:ignore
     wp_editor( $content, 'zume_post_video_content', array( "media_buttons" => true ) );
     ?>
     <h3>List Template</h3>
     <select name="zume_landing_list_template">
     <?php
     $list = zume_landing_list_templates();
-    foreach( $list as $value ){
+    foreach ( $list as $value ){
         $selected = '';
         if ( isset( $values['zume_landing_list_template'][0] ) && $values['zume_landing_list_template'][0] === $value['key'] ){
             $selected = ' selected';
         }
-        echo '<option value="'.$value['key'].'" '.$selected.'>'. $value['label'] . '</option>';
+        echo '<option value="'.esc_attr( $value['key'] ).'" '. esc_attr( $selected ).'>'. esc_html( $value['label'] ) . '</option>'; // phpcs:ignore
     }
     ?></select><br>
     <?php

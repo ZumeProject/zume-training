@@ -45,7 +45,7 @@ $tool_number = $vars['tool_number'];
         <script>
             jQuery(document).ready(function(){
                 if ( typeof window.API !== 'undefined' ) {
-                    window.API.update_progress('<?php echo esc_attr($tool_number) ?>h', 'on')
+                    window.API.update_progress('<?php echo esc_attr( $tool_number ) ?>h', 'on')
                     load_progress()
                 }
             })

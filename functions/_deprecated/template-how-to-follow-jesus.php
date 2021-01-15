@@ -93,7 +93,7 @@ $alt_video = zume_alt_video( $current_language );
                 <div class="cell">
 
                     <h1 class="primary-color-text center padding-bottom-2">
-                        <strong><?php esc_html_e("How to Follow Jesus", 'zume' ) ?></strong>
+                        <strong><?php esc_html_e( "How to Follow Jesus", 'zume' ) ?></strong>
                     </h1>
 
                     <div class="center">
@@ -107,13 +107,13 @@ $alt_video = zume_alt_video( $current_language );
                                     Your browser does not support the video tag.
                                 </video>
                             </div>
-                        <?php elseif ( ! empty( $url_68 = Zume_Course::get_video_by_key( '68' ) ) ) : ?>
-                            <iframe style="border: 1px solid lightgrey;"  src="<?php echo esc_url( $url_68 ) ?>" width="640" height="360"
+                        <?php elseif ( ! empty( Zume_Course::get_video_by_key( '68' ) ) ) : ?>
+                            <iframe style="border: 1px solid lightgrey;"  src="<?php echo esc_url( Zume_Course::get_video_by_key( '68' ) ) ?>" width="640" height="360"
                                     frameborder="0"
                                     allow="autoplay; fullscreen"
                                     webkitallowfullscreen mozallowfullscreen allowfullscreen>
                             </iframe>
-                        <?php else: ?>
+                        <?php else : ?>
                             <iframe style="border: 1px solid lightgrey;"  src="<?php echo esc_url( Zume_Course::get_video_by_key( '10' ) ) ?>#t=1m" width="640" height="360"
                                     frameborder="0"
                                     allow="autoplay; fullscreen"
@@ -124,9 +124,9 @@ $alt_video = zume_alt_video( $current_language );
 
                     <br>
 
-                    <p class="center"><strong><?php esc_html_e("Bookmark this page as a future resource!", 'zume' ) ?></strong></p><br>
+                    <p class="center"><strong><?php esc_html_e( "Bookmark this page as a future resource!", 'zume' ) ?></strong></p><br>
 
-                    <p><?php esc_html_e("The sections below, will teach you what it means to be a follower (disciple) of Jesus.", 'zume' ) ?></p>
+                    <p><?php esc_html_e( "The sections below, will teach you what it means to be a follower (disciple) of Jesus.", 'zume' ) ?></p>
 
                     <ul class="accordion" data-accordion>
 
@@ -353,7 +353,7 @@ $alt_video = zume_alt_video( $current_language );
                 <p>
                     <?php esc_html_e( 'Zúme uses an online training platform to equip participants in basic disciple-making and simple church planting multiplication principles, processes, and practices.', 'zume' ) ?>
                 </p>
-                <p class="center"><br><a href="<?php echo esc_url( zume_training_url( $current_language ) ) ?>" class="button secondary-button large"><?php esc_html_e("About Zúme Training", 'zume' ) ?></a> </p>
+                <p class="center"><br><a href="<?php echo esc_url( zume_training_url( $current_language ) ) ?>" class="button secondary-button large"><?php esc_html_e( "About Zúme Training", 'zume' ) ?></a> </p>
             </div>
             <div class="medium-2 cell"></div>
         </div>

@@ -9,13 +9,13 @@ function get_modal_content( $postid, $lang, $strings ) {
         return '';
     }
 
-    switch_to_locale($lang);
+    switch_to_locale( $lang );
 
 
-    if ( ! is_textdomain_loaded( 'zume') ) {
+    if ( ! is_textdomain_loaded( 'zume' ) ) {
         load_theme_textdomain( 'zume', get_template_directory() .'/translations' );
     }
-    dt_write_log(is_textdomain_loaded( 'zume' ));
+    dt_write_log( is_textdomain_loaded( 'zume' ) );
 
     $meta = get_post_meta( (int) $postid );
 
@@ -88,14 +88,14 @@ function get_modal_content( $postid, $lang, $strings ) {
                     <div class="grid-x grid-margin-x grid-margin-y">
                         <div class="cell content-large center">
                             <?php if ( $audio ) :  ?>
-                                <h3><?php echo $strings['lra'] ?? '' ?></h3>
+                                <h3><?php echo esc_html( $strings['lra'] ) ?? '' ?></h3>
                                 <a class="button large text-uppercase"
                                    href="<?php echo esc_url( Zume_Course::get_download_by_key( '33', $lang ) ) ?>"
                                    target="_blank" rel="noopener noreferrer nofollow">
-                                    <?php echo $strings['d'] ?? '' ?>
+                                    <?php echo esc_html( $strings['d'] ) ?? '' ?>
                                 </a>
                             <?php else : ?>
-                                <h3 class="center"><?php echo $strings['wtv'] ?? '' ?></h3>
+                                <h3 class="center"><?php echo esc_html( $strings['wtv'] ) ?? '' ?></h3>
                             <?php endif; ?>
 
                             <div class="video-section">
@@ -126,7 +126,7 @@ function get_modal_content( $postid, $lang, $strings ) {
                 <!-- question block -->
                 <div class="grid-x grid-margin-x">
                     <div class="cell content-large center">
-                        <h3 class="center"><?php echo $strings['ay'] ?? '' ?></h3>
+                        <h3 class="center"><?php echo esc_html( $strings['ay'] ) ?? '' ?></h3>
                     </div>
                     <div class="cell content-large">
                         <?php echo wp_kses_post( wpautop( $ask_content ) ) ?>

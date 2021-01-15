@@ -98,19 +98,20 @@ $values = get_post_custom( $post->ID );
 
                     <!-- Logo -->
                     <div class="cell center padding-bottom-1">
-                        <?php echo get_the_post_thumbnail( $post->ID, [ 150, 300] ); ?>
+                        <?php echo get_the_post_thumbnail( $post->ID, [ 150, 300 ] ); ?>
                     </div>
 
                     <!-- title -->
                     <h1 class="primary-color-text center padding-bottom-2">
-                        <strong><?php echo ( isset( $values['zume_landing_h1'][0] ) && ! empty( $values['zume_landing_h1'][0] ) ) ? esc_html( $values['zume_landing_h1'][0] ) : esc_html__("How to Follow Jesus", 'zume' ) ?></strong>
+                        <strong><?php
+                            echo ( isset( $values['zume_landing_h1'][0] ) && ! empty( $values['zume_landing_h1'][0] ) ) ? esc_html( $values['zume_landing_h1'][0] ) : esc_html__( "How to Follow Jesus", 'zume' )  // phpcs:ignore ?></strong>
                     </h1>
 
                     <!-- pre video content -->
                     <div class="center">
                     <?php if ( empty( $values['zume_pre_video_content'][0] ?? false ) ) : ?>
                         <p><?php esc_html_e( "Watch this important video explaining the 4 relationships of your new life.", 'zume' ) ?></p>
-                    <?php else: ?>
+                    <?php else : ?>
                        <p><?php echo nl2br( esc_html( $values['zume_pre_video_content'][0] ) ) ?></p>
                     <?php endif; ?>
                     </div>
@@ -125,13 +126,13 @@ $values = get_post_custom( $post->ID );
                                         Your browser does not support the video tag.
                                     </video>
                                 </div>
-                            <?php elseif ( ! empty( $url_68 = Zume_Course::get_video_by_key( '68' ) ) ) : ?>
-                                <iframe style="border: 1px solid lightgrey;"  src="<?php echo esc_url( $url_68 ) ?>" width="640" height="360"
+                            <?php elseif ( ! empty( Zume_Course::get_video_by_key( '68' ) ) ) : ?>
+                                <iframe style="border: 1px solid lightgrey;"  src="<?php echo esc_url( Zume_Course::get_video_by_key( '68' ) ) ?>" width="640" height="360"
                                         frameborder="0"
                                         allow="autoplay; fullscreen"
                                         webkitallowfullscreen mozallowfullscreen allowfullscreen>
                                 </iframe>
-                            <?php else: ?>
+                            <?php else : ?>
                                 <iframe style="border: 1px solid lightgrey;"  src="<?php echo esc_url( Zume_Course::get_video_by_key( '10' ) ) ?>#t=1m" width="640" height="360"
                                         frameborder="0"
                                         allow="autoplay; fullscreen"
@@ -145,11 +146,11 @@ $values = get_post_custom( $post->ID );
                     <!-- post video content -->
                     <div class="center">
                         <?php if ( empty( $values['zume_post_video_content'][0] ?? false ) ) : ?>
-                            <p class="center"><strong><?php esc_html_e("Bookmark this page as a future resource!", 'zume' ) ?></strong></p><br>
+                            <p class="center"><strong><?php esc_html_e( "Bookmark this page as a future resource!", 'zume' ) ?></strong></p><br>
 
-                            <p><?php esc_html_e("The sections below, will teach you what it means to be a follower (disciple) of Jesus.", 'zume' ) ?></p>
-                        <?php else: ?>
-                            <p><?php echo nl2br( esc_html(  $values['zume_post_video_content'][0] ) ) ?></p>
+                            <p><?php esc_html_e( "The sections below, will teach you what it means to be a follower (disciple) of Jesus.", 'zume' ) ?></p>
+                        <?php else : ?>
+                            <p><?php echo nl2br( esc_html( $values['zume_post_video_content'][0] ) ) ?></p>
                         <?php endif; ?>
                     </div>
 
@@ -207,7 +208,7 @@ $values = get_post_custom( $post->ID );
                 <p>
                     <?php esc_html_e( 'Zúme uses an online training platform to equip participants in basic disciple-making and simple church planting multiplication principles, processes, and practices.', 'zume' ) ?>
                 </p>
-                <p class="center"><br><a href="<?php echo esc_url( zume_training_url( $current_language ) ) ?>" class="button secondary-button large"><?php esc_html_e("About Zúme Training", 'zume' ) ?></a> </p>
+                <p class="center"><br><a href="<?php echo esc_url( zume_training_url( $current_language ) ) ?>" class="button secondary-button large"><?php esc_html_e( "About Zúme Training", 'zume' ) ?></a> </p>
             </div>
             <div class="medium-2 cell"></div>
         </div>
@@ -230,7 +231,7 @@ $values = get_post_custom( $post->ID );
 
 
 function zume_landing_list_template( $list_template = 'full' ){
-    switch( $list_template ){
+    switch ( $list_template ){
         case 'leading_yourself':
             ?>
             <ul class="accordion" data-accordion data-multi-expand="true">
@@ -240,12 +241,12 @@ function zume_landing_list_template( $list_template = 'full' ){
 
                     <div class="accordion-content" data-tab-content>
                         <div class="inset">
-                            <strong><?php esc_html_e( 'Principles','zume') ?></strong>
+                            <strong><?php esc_html_e( 'Principles', 'zume' ) ?></strong>
                             <p>
                                 <strong><a data-value="20737" data-tool="6" id="consumer-vs-producer-lifestyle" class="open-modal"><?php esc_html_e( "Consumer vs Producer Lifestyle", 'zume' ) ?></a></strong><br>
                                 <?php esc_html_e( "You'll discover the four main ways God makes everyday followers more like Jesus.", 'zume' ) ?>
                             </p>
-                            <strong><?php esc_html_e( 'Practices','zume') ?></strong>
+                            <strong><?php esc_html_e( 'Practices', 'zume' ) ?></strong>
                             <p>
                                 <strong><a data-value="20733" data-tool="4" id="soaps-bible-reading" class="open-modal"><?php esc_html_e( "SOAPS Bible Reading", 'zume' ) ?></a></strong><br>
                                 <?php esc_html_e( "A tool for daily Bible study that helps you understand, obey, and share God’s Word.", 'zume' ) ?>
@@ -260,12 +261,12 @@ function zume_landing_list_template( $list_template = 'full' ){
                     <div class="accordion-content" data-tab-content>
 
                         <div class="inset">
-                            <strong><?php esc_html_e( 'Principles','zume') ?></strong>
+                            <strong><?php esc_html_e( 'Principles', 'zume' ) ?></strong>
                             <p>
                                 <strong><a data-value="20751" data-tool="20" id="faithfulness-is-better-than-knowledge" class="open-modal"><?php esc_html_e( "Faithfulness is Better Than Knowledge", 'zume' ) ?></a></strong><br>
                                 <?php esc_html_e( "It's important what disciples know — but it's much more important what they DO with what they know.", 'zume' ) ?>
                             </p>
-                            <strong><?php esc_html_e( 'Practices','zume') ?></strong>
+                            <strong><?php esc_html_e( 'Practices', 'zume' ) ?></strong>
                             <p>
                                 <strong><a data-value="20752" data-tool="21" id="3-3-group-meeting-pattern" class="open-modal"><?php esc_html_e( "3/3 Group Meeting Pattern", 'zume' ) ?></a></strong><br>
                                 <?php esc_html_e( "A 3/3 Group is a way for followers of Jesus to meet, pray, learn, grow, fellowship and practice obeying and sharing what they've learned. In this way, a 3/3 Group is not just a small group but a Simple Church.", 'zume' ) ?>
@@ -282,12 +283,12 @@ function zume_landing_list_template( $list_template = 'full' ){
 
                     <div class="accordion-content" data-tab-content>
                         <div class="inset">
-                            <strong><?php esc_html_e( 'Principles','zume') ?></strong>
+                            <strong><?php esc_html_e( 'Principles', 'zume' ) ?></strong>
                             <p>
                                 <strong><a data-value="20753" data-tool="22" id="training-cycle-for-maturing-disciples" class="open-modal"><?php esc_html_e( "Training Cycle for Maturing Disciples", 'zume' ) ?></a></strong><br>
                                 <?php esc_html_e( "Learn the training cycle and consider how it applies to disciple making.", 'zume' ) ?>
                             </p>
-                            <strong><?php esc_html_e( 'Practices','zume') ?></strong>
+                            <strong><?php esc_html_e( 'Practices', 'zume' ) ?></strong>
                             <p>
                                 <strong><a data-value="20759" data-tool="28" id="coaching-checklist" class="open-modal"><?php esc_html_e( "Coaching Checklist", 'zume' ) ?></a></strong><br>
                                 <?php esc_html_e( "A powerful tool you can use to quickly assess your own strengths and vulnerabilities when it comes to making disciples who multiply.", 'zume' ) ?>
@@ -302,12 +303,12 @@ function zume_landing_list_template( $list_template = 'full' ){
 
                     <div class="accordion-content" data-tab-content>
                         <div class="inset">
-                            <strong><?php esc_html_e( 'Principles','zume') ?></strong>
+                            <strong><?php esc_html_e( 'Principles', 'zume' ) ?></strong>
                             <p>
                                 <strong><a data-value="20757" data-tool="25" id="pace-of-multiplication-matters" class="open-modal"><?php esc_html_e( "Pace of Multiplication Matters", 'zume' ) ?></a></strong><br>
                                 <?php esc_html_e( "Multiplying matters and multiplying quickly matters even more. See why pace matters.", 'zume' ) ?>
                             </p>
-                            <strong><?php esc_html_e( 'Practices','zume') ?></strong>
+                            <strong><?php esc_html_e( 'Practices', 'zume' ) ?></strong>
                             <p>
                                 <strong><a data-value="20761" data-tool="30" id="peer-mentoring-group" class="open-modal"><?php esc_html_e( "Peer Mentoring Groups", 'zume' ) ?></a></strong><br>
                                 <?php esc_html_e( "This is a group that consists of people who are leading and starting 3/3 Groups. It also follows a 3/3 format and is a powerful way to assess the spiritual health of God’s work in your area.", 'zume' ) ?>

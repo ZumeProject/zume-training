@@ -313,11 +313,7 @@ function write_members_list( key, i ) {
   div.empty()
   jQuery.each( zumeTraining.groups[i].coleaders, function(ib,v) {
     if ( v !== undefined ) {
-      verified = ''
-      if ( _.indexOf( zumeTraining.groups[i].coleaders_accepted, v ) >= 0 ) {
-        verified = `<i class="fi-check secondary-color" title="${_.escape( i18n.str.x5 )/*Accepted invitation*/}"></i>`
-      }
-      div.append(`<div class="cell member">${_.escape( v )} ${verified} <span class="delete" onclick="delete_member_list_item( '${_.escape( key )}', ${_.escape( i )}, ${_.escape( ib )}, '${_.escape( v )}' )">${i18n.str.x95/*delete*/}</span></div>`)
+      div.append(`<div class="cell member">${_.escape( v )} <span class="delete" onclick="delete_member_list_item( '${_.escape( key )}', ${_.escape( i )}, ${_.escape( ib )}, '${_.escape( v )}' )">${i18n.str.x95/*delete*/}</span></div>`)
     }
   })
 }
