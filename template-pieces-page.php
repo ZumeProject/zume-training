@@ -125,21 +125,16 @@ if (have_posts()) :
                         </div>
                     </div>
 
-                </section>
 
-            </div>
-
-        </div> <!-- grid-x -->
 
 
         <!------------------------------------------------------------------------------------------------>
         <!-- Share section -->
         <!------------------------------------------------------------------------------------------------>
         <div class="grid-x ">
-            <div class="large-2 cell"></div><!-- Side spacer -->
 
             <!-- Center column -->
-            <div class="large-8 small-12 cell">
+            <div class="cell">
 
                 <?php /** Logged in */ if ( is_user_logged_in() ) : ?>
 
@@ -230,7 +225,12 @@ if (have_posts()) :
                 <?php endif; ?>
 
             </div>
-            <div class="large-2 cell"></div><!-- Side spacer -->
+        </div> <!-- grid-x -->
+
+                </section>
+
+            </div>
+
         </div> <!-- grid-x -->
 
         <?php get_template_part( "parts/content", "modal" ); ?>
