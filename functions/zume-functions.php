@@ -171,12 +171,12 @@ function zume_login_url( $current_language = null ) {
         $current_language = zume_current_language();
     }
     if ( 'en' === $current_language ) {
-        $url = site_url() . '/login';
+        $url = trailingslashit( site_url() ) . 'login';
     }
     else if ( empty( $current_language ) ) {
-        $url = site_url() . '/login';
+        $url = trailingslashit( site_url() ) . 'login';
     } else {
-        $url = zume_get_posts_translation_url( 'Login', $current_language );
+        $url = trailingslashit( zume_get_posts_translation_url( 'Login', $current_language ) );
     }
     return $url;
 }
@@ -186,9 +186,9 @@ function zume_lostpassword_url( $current_language = null ) {
         $current_language = zume_current_language();
     }
     if ( 'en' != $current_language && ! empty( $current_language ) ) {
-        $url = zume_get_posts_translation_url( 'Login', $current_language ) . '/?action=lostpassword';
+        $url = trailingslashit( zume_get_posts_translation_url( 'Login', $current_language ) ) . '?action=lostpassword';
     } else {
-        $url = site_url() . '/login/?action=lostpassword';
+        $url = trailingslashit( site_url() ) . 'login/?action=lostpassword';
     }
     return $url;
 }
@@ -200,12 +200,12 @@ function zume_register_url( $current_language = null ) {
     if ( 'en' != $current_language && ! empty( $current_language ) ) {
         $trans_url = zume_get_posts_translation_url( 'Login', $current_language );
         if ( empty( $trans_url ) || is_wp_error( $trans_url ) ) {
-            $url = site_url() . '/login/?action=register';
+            $url = trailingslashit( site_url() ) . '/login/?action=register';
         } else {
-            $url = zume_get_posts_translation_url( 'Login', $current_language ) . '/?action=register';
+            $url = trailingslashit( zume_get_posts_translation_url( 'Login', $current_language ) ) . '?action=register';
         }
     } else {
-        $url = site_url() . '/login/?action=register';
+        $url = trailingslashit( site_url() ) . 'login/?action=register';
     }
     return $url;
 }
