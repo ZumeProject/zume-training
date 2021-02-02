@@ -209,7 +209,11 @@ $alt_video = zume_alt_video( $zume_current_lang );
                 <div class="grid-x grid-margin-x grid-margin-y vertical-padding">
                     <div class="medium-2 small-1 cell"></div>
                     <div class="medium-8 small-10 cell center" >
+                    <?php if ( ! is_user_logged_in() ) : ?>
                         <a href="<?php echo esc_url( zume_register_url( zume_current_language() ) ); ?>" alt="Register" class="button large center " style="background:white; color:#323a68; font-family:'europa-regular'; padding:0.5em 2em"><?php esc_html_e( 'Get Started', 'zume' ) ?></a>
+                    <?php else : ?>
+                        <a href="<?php echo esc_url( zume_training_url( $zume_current_lang ) ) ?>" class="button primary-button-hollow large" ><?php esc_html_e( "Explore Training", 'zume' ) ?></a>
+                    <?php endif; ?>
                     </div>
                     <div class="medium-2 small-1 cell"></div>
                 </div>

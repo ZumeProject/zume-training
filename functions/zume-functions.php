@@ -197,10 +197,10 @@ function zume_register_url( $current_language = null ) {
     if ( is_null( $current_language ) ) {
         $current_language = zume_current_language();
     }
-    if ( 'en' != $current_language && ! empty( $current_language ) ) {
+    if ( 'en' !== $current_language && ! empty( $current_language ) ) {
         $trans_url = zume_get_posts_translation_url( 'Login', $current_language );
         if ( empty( $trans_url ) || is_wp_error( $trans_url ) ) {
-            $url = trailingslashit( site_url() ) . '/login/?action=register';
+            $url = trailingslashit( site_url() ) . 'login/?action=register';
         } else {
             $url = trailingslashit( zume_get_posts_translation_url( 'Login', $current_language ) ) . '?action=register';
         }
