@@ -97,6 +97,7 @@ class Zume_V4_REST_API {
             array(
                 'methods'         => WP_REST_Server::CREATABLE,
                 'callback'        => array( $this, 'coaching_request' ),
+                'permission_callback' => '__return_true'
             ),
         ) );
         register_rest_route( $namespace, '/update_profile', array(
@@ -359,6 +360,7 @@ class Zume_V4_REST_API {
             'phone' => sanitize_text_field( wp_unslash( $params['phone'] ) ),
             'email' => sanitize_text_field( wp_unslash( $params['email'] ) ),
             'preference' => sanitize_text_field( wp_unslash( $params['preference'] ) ),
+            'language_preference' => sanitize_text_field( wp_unslash( $params['language_preference'] ) ),
             'affiliation_key' => sanitize_text_field( wp_unslash( $params['affiliation_key'] ) ),
         );
         $notes = [
@@ -381,6 +383,7 @@ class Zume_V4_REST_API {
             "contact_email" => [
                 [ "value" => $args['email'] ],
             ],
+            'language_preference' => $args['language_preference'],
             'zume_training_id' => $user_id,
             'zume_foreign_key' => $zume_foreign_key,
             "notes" => $notes,
@@ -412,9 +415,9 @@ class Zume_V4_REST_API {
             $fields['location_grid_meta'] = [
                 "values" => [ $args['location_grid_meta'] ]
             ];
-            $fields['contact_address'] = [
-                [ "value" => $args['location_grid_meta']['label'] ],
-            ];
+//            $fields['contact_address'] = [
+//                [ "value" => $args['location_grid_meta']['label'] ],
+//            ];
         }
 
         $site = Site_Link_System::get_site_connection_vars( 20125 ); // @todo remove hardcoded

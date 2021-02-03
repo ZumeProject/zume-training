@@ -1330,18 +1330,23 @@ function write_request_form() {
     window.location = `${zumeTraining.site_urls.login}`
   } else { /* logged in */
 
-    let location_grid_meta_label = ''
-    if (fields.location_grid_meta) {
-      window.location_grid_meta = fields.location_grid_meta
-      window.mapbox_results = false
-      location_grid_meta_label = fields.location_grid_meta.label
-    } else {
-      window.location_grid_meta = false
-      window.mapbox_results = false
-      location_grid_meta_label = ''
-    }
+  let location_grid_meta_label = ''
+  if (fields.location_grid_meta) {
+    window.location_grid_meta = fields.location_grid_meta
+    window.mapbox_results = false
+    location_grid_meta_label = fields.location_grid_meta.label
+  } else {
+    window.location_grid_meta = false
+    window.mapbox_results = false
+    location_grid_meta_label = ''
+  }
 
-    jQuery('#form-container').empty().html(`
+  let languages = ''
+    jQuery.each( zumeTraining.languages, function( i, v ){
+      languages += '<option value="'+v.code+'">'+v.enDisplayName + ' - ' + v.nativeName+'</option>'
+    })
+
+  jQuery('#form-container').empty().html(`
   <form id="coaching-request-form" data-abide>
       <div data-abide-error class="alert callout" style="display: none;">
           <p><i class="fi-alert"></i> ${_.escape( i18n.str.x70 )/*There are some errors in your form.*/}</p>
@@ -1441,6 +1446,18 @@ function write_request_form() {
                       <input id="zume_contact_preference5" name="zume_contact_preference" class="zume_contact_preference" type="radio" value="other" data-abide-ignore>
                       <label for="zume_contact_preference6">${_.escape( i18n.str.x82 )/*Other*/}</label>
                   </fieldset>
+              </td>
+          </tr>
+          <tr>
+              <td style="vertical-align: top;">
+                  <label for="zume_affiliation_key">Language Preference</label>
+              </td>
+              <td>
+                  <select id="language_preference">
+                    <option value="${zumeTraining.current_language}">${zumeTraining.current_language_name}</option>
+                    <option disabled>----</option>
+                    ${languages}
+                  </select>
               </td>
           </tr>
           <tr>
@@ -1605,6 +1622,7 @@ function check_address(key) {
 
 
 function send_coaching_request() {
+  jQuery('#submit_request').prop('disabled', true )
   let spinner = jQuery('#request_spinner')
   spinner.html( `<img src="${zumeTraining.theme_uri}/assets/images/spinner.svg" style="width: 40px; vertical-align:top; margin-left: 5px;" alt="spinner" />` )
 
@@ -1612,6 +1630,7 @@ function send_coaching_request() {
   let phone = jQuery('#zume_phone_number').val()
   let email = jQuery('#user_email').val()
   let preference = jQuery('input.zume_contact_preference:checked').val()
+  let language_preference = jQuery('#language_preference').val()
   let affiliation_key = jQuery('#zume_affiliation_key').val()
 
   /**************/
@@ -1646,6 +1665,7 @@ function send_coaching_request() {
     "phone": phone,
     "email": email,
     "location_grid_meta": location_grid_meta,
+    "language_preference": language_preference,
     "preference": preference,
     "affiliation_key": affiliation_key
   }

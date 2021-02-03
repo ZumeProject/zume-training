@@ -145,6 +145,12 @@ function zume_site_scripts() {
 
         wp_enqueue_script( 'zumeTraining', get_template_directory_uri() . '/assets/scripts/training.js', array( 'jquery', 'lodash', 'wp-i18n' ), filemtime( get_theme_file_path() . '/assets/scripts/training.js' ), true );
         $current_language = zume_current_language();
+        $languages = file_get_contents( get_theme_file_path( 'languages.json') );
+        if ( ! empty( $languages ) ) {
+            $languages = json_decode( $languages, true );
+        } else {
+            $languages = [];
+        }
         wp_localize_script(
             "zumeTraining", "zumeTraining", array(
                 'root' => esc_url_raw( rest_url() ),
@@ -166,6 +172,7 @@ function zume_site_scripts() {
                 'map_key' => DT_Mapbox_API::get_key(),
                 "current_language" => $current_language,
                 "current_language_name" => zume_get_english_language_name( $current_language ),
+                "languages" => $languages,
                 "groups" => ( is_user_logged_in() ) ? Zume_V4_Groups::get_all_groups() : array(),
                 "progress" => ( is_user_logged_in() ) ? Zume_V4_Progress::get_user_progress() : array(),
                 "invitations" => ( is_user_logged_in() ) ? Zume_V4_Groups::get_colead_groups( 'waiting_acceptance_minimum' ) : array(),
