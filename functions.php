@@ -148,7 +148,7 @@ function zume_alt_video( $current_language = null ) {
 function zume_v4_ready_language() {
     $ready = array();
 
-    $ready['id'] = false;
+//    $ready['id'] = false;
 
     $current = zume_current_language();
 
