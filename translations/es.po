@@ -9,7 +9,7 @@ msgstr ""
 
 #: front-page.php:82 front-page.php:212
 msgid "Get Started"
-msgstr "Comienza"
+msgstr "Comenzar"
 
 #: front-page.php:85 functions/enqueue-scripts.php:288
 #: functions/zume-gmo.php:202 functions/zume-v4-seo-strings.php:23
@@ -26,7 +26,7 @@ msgstr "El Entrenamiento Zúme es una experiencia de aprendizaje en línea y en 
 
 #: front-page.php:114
 msgid "Zúme consists of 10 sessions, 2 hours each:"
-msgstr "Zúme consta en 10 sesiones, 2 horas cada una:"
+msgstr "Zúme consiste en 10 sesiones de 2 horas cada una:"
 
 #: front-page.php:122 template-zume-about.php:87
 msgid "Video and Audio to help your group understand basic principles of multiplying disciples."
@@ -183,15 +183,15 @@ msgstr "Las contraseñas no coinciden. Por favor vuelve a intentarlo."
 #: functions/login/zume-login.php:573 functions/zume-v4-seo-strings.php:24
 #: template-zume-login.php:358 template-zume-login.php:514
 msgid "Register"
-msgstr "Registro"
+msgstr "Registrarse"
 
 #: functions/login/zume-login.php:616
 msgid "Missing captcha response. How did you do that?"
-msgstr "Falta respuesta captcha. ¿Cómo haces eso?"
+msgstr "Falta respuesta captcha. ¿Cómo hiciste?"
 
 #: functions/login/zume-login.php:629
 msgid "Captcha failure. Try again, if you are human."
-msgstr "Error de Captcha. Intenta de nuevo, si eres humano."
+msgstr "Error de Captcha. Inténtalo de nuevo, si eres humano."
 
 #: functions/login/zume-login.php:635
 msgid "Missing email or password."
@@ -207,7 +207,7 @@ msgstr "Algo salió mal. Lo sentimos. ¿Puedes intentarlo de nuevo?"
 
 #: functions/login/zume-login.php:689
 msgid "No new user found."
-msgstr "Ningún nuevo usuario encontrado."
+msgstr "Ningún usuario nuevo encontrado."
 
 #: functions/login/zume-login.php:745 functions/login/zume-login.php:796
 msgid "Google"
@@ -215,7 +215,7 @@ msgstr "Google"
 
 #: functions/login/zume-login.php:790
 msgid "Link with Google"
-msgstr "Enlazar con Google"
+msgstr "Conectar con Google"
 
 #: functions/login/zume-login.php:929 functions/login/zume-login.php:1025
 msgid "Facebook"
