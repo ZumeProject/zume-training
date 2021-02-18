@@ -24,8 +24,8 @@ class Zume_Course_Content {
                     enableFinishButton: true,
                     // Disables the next and previous buttons (optional)
                     enablePagination: true,
-                    // Enables all steps from the begining
-                    enableAllSteps: false,
+                    // Enables all steps from the beginning
+                    enableAllSteps: true,
                     startIndex: startIndex,
                     headerTag: "h3",
                     bodyTag: "section",
