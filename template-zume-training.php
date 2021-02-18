@@ -142,7 +142,7 @@ $current_language = zume_current_language();
                             <!-- Session 1 -->
                             <div class="cell small-12 large-6 session">
                                 <div class="grid-x grid-padding-x">
-                                    <div class="cell medium-9 overview-title"><h2><?php echo esc_html__( 'Session 1', 'zume' ) ?></h2></div>
+                                    <div class="cell medium-9 overview-title"><a onclick="open_session( 1 )"><h2><?php echo esc_html__( 'Session 1', 'zume' ) ?></h2></a></div>
                                     <div class="cell medium-3 start">
                                         <a onclick="open_session( 1 )" class="button primary-button-hollow" id="start_session_1"><?php echo esc_html__( "Start", 'zume' ) ?></a>
                                     </div>
@@ -237,7 +237,7 @@ $current_language = zume_current_language();
                             <!-- Session 2 -->
                             <div class="cell small-12 large-6 session">
                                 <div class="grid-x grid-padding-x">
-                                    <div class="cell medium-9 overview-title"><h2><?php echo esc_html__( 'Session 2', 'zume' ) ?></h2></div>
+                                    <div class="cell medium-9 overview-title"><a onclick="open_session( 2 )"><h2><?php echo esc_html__( 'Session 2', 'zume' ) ?></h2></a></div>
                                     <div class="cell medium-3 start">
                                         <a onclick="open_session( 2 )" class="button primary-button-hollow" id="start_session_2"><?php echo esc_html__( "Start", 'zume' ) ?></a>
                                     </div>
@@ -316,7 +316,7 @@ $current_language = zume_current_language();
                             <!-- Session 3 -->
                             <div class="cell small-12 large-6 session">
                                 <div class="grid-x grid-padding-x">
-                                    <div class="cell medium-9 overview-title"><h2><?php echo esc_html__( 'Session 3', 'zume' ) ?></h2></div>
+                                    <div class="cell medium-9 overview-title"><a onclick="open_session( 3 )"><h2><?php echo esc_html__( 'Session 3', 'zume' ) ?></h2></a></div>
                                     <div class="cell medium-3 start">
                                         <a onclick="open_session( 3 )" class="button primary-button-hollow" id="start_session_3"><?php echo esc_html__( "Start", 'zume' ) ?></a>
                                     </div>
@@ -389,7 +389,7 @@ $current_language = zume_current_language();
                             <!-- Session 4 -->
                             <div class="cell small-12 large-6 session">
                                 <div class="grid-x grid-padding-x">
-                                    <div class="cell medium-9 overview-title"><h2><?php echo esc_html__( 'Session 4', 'zume' ) ?></h2></div>
+                                    <div class="cell medium-9 overview-title"><a onclick="open_session( 4 )"><h2><?php echo esc_html__( 'Session 4', 'zume' ) ?></h2></a></div>
                                     <div class="cell medium-3 start">
                                         <a onclick="open_session( 4 )" class="button primary-button-hollow" id="start_session_4"><?php echo esc_html__( "Start", 'zume' ) ?></a>
                                     </div>
@@ -488,7 +488,7 @@ $current_language = zume_current_language();
                             <!-- Session 5 -->
                             <div class="cell small-12 large-6 session">
                                 <div class="grid-x grid-padding-x">
-                                    <div class="cell medium-9 overview-title"><h2><?php echo esc_html__( 'Session 5', 'zume' ) ?></h2></div>
+                                    <div class="cell medium-9 overview-title"><a onclick="open_session( 5 )"><h2><?php echo esc_html__( 'Session 5', 'zume' ) ?></h2></a></div>
                                     <div class="cell medium-3 start">
                                         <a onclick="open_session( 5 )" class="button primary-button-hollow" id="start_session_5"><?php echo esc_html__( "Start", 'zume' ) ?></a>
                                     </div>
@@ -561,7 +561,7 @@ $current_language = zume_current_language();
                             <!-- Session 6 -->
                             <div class="cell small-12 large-6 session">
                                 <div class="grid-x grid-padding-x">
-                                    <div class="cell medium-9 overview-title"><h2><?php echo esc_html__( 'Session 6', 'zume' ) ?></h2></div>
+                                    <div class="cell medium-9 overview-title"><a onclick="open_session( 6 )"><h2><?php echo esc_html__( 'Session 6', 'zume' ) ?></h2></a></div>
                                     <div class="cell medium-3 start">
                                         <a onclick="open_session( 6 )" class="button primary-button-hollow" id="start_session_6"><?php echo esc_html__( "Start", 'zume' ) ?></a>
                                     </div>
@@ -610,7 +610,7 @@ $current_language = zume_current_language();
                             <!-- Session 7 -->
                             <div class="cell small-12 large-6 session">
                                 <div class="grid-x grid-padding-x">
-                                    <div class="cell medium-9 overview-title"><h2><?php echo esc_html__( 'Session 7', 'zume' ) ?></h2></div>
+                                    <div class="cell medium-9 overview-title"><a onclick="open_session( 7 )"><h2><?php echo esc_html__( 'Session 7', 'zume' ) ?></h2></a></div>
                                     <div class="cell medium-3 start">
                                         <a onclick="open_session( 7 )" class="button primary-button-hollow" id="start_session_7"><?php echo esc_html__( "Start", 'zume' ) ?></a>
                                     </div>
@@ -651,7 +651,7 @@ $current_language = zume_current_language();
                             <!-- Session 8 -->
                             <div class="cell small-12 large-6 session">
                                 <div class="grid-x grid-padding-x">
-                                    <div class="cell medium-9 overview-title"><h2><?php echo esc_html__( 'Session 8', 'zume' ) ?></h2></div>
+                                    <div class="cell medium-9 overview-title"><a onclick="open_session( 8 )"><h2><?php echo esc_html__( 'Session 8', 'zume' ) ?></h2></a></div>
                                     <div class="cell medium-3 start">
                                         <a onclick="open_session( 8 )" class="button primary-button-hollow" id="start_session_8"><?php echo esc_html__( "Start", 'zume' ) ?></a>
                                     </div>
@@ -692,9 +692,9 @@ $current_language = zume_current_language();
                             <!-- Session 9 -->
                             <div class="cell small-12 large-6 session">
                                 <div class="grid-x grid-padding-x">
-                                    <div class="cell medium-9 overview-title"><h2><?php echo esc_html__( 'Session 9', 'zume' ) ?></h2></div>
+                                    <div class="cell medium-9 overview-title"><a onclick="open_session( 9 )"><h2><?php echo esc_html__( 'Session 9', 'zume' ) ?></h2></a></div>
                                     <div class="cell medium-3 start">
-                                        <a onclick="open_session( 9 )"class="button primary-button-hollow" id="start_session_9"><?php echo esc_html__( "Start", 'zume' ) ?></a>
+                                        <a onclick="open_session( 9 )" class="button primary-button-hollow" id="start_session_9"><?php echo esc_html__( "Start", 'zume' ) ?></a>
                                     </div>
                                     <div class="cell small-9 medium-10 t-activities hide-extra">
                                         <?php echo esc_html__( "Check-in, Prayer, Overview", 'zume' ) ?>
@@ -773,7 +773,7 @@ $current_language = zume_current_language();
                             <!-- Session 10 -->
                             <div class="cell small-12 large-6 session">
                                 <div class="grid-x grid-padding-x">
-                                    <div class="cell medium-9 overview-title"><h2><?php echo esc_html__( 'Session 10', 'zume' ) ?></h2></div>
+                                    <div class="cell medium-9 overview-title"><a onclick="open_session( 10 )"><h2><?php echo esc_html__( 'Session 10', 'zume' ) ?></h2></a></div>
                                     <div class="cell medium-3 start">
                                         <a onclick="open_session( 10 )" class="button primary-button-hollow" id="start_session_10"><?php echo esc_html__( "Start", 'zume' ) ?></a>
                                     </div>
