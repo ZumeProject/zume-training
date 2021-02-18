@@ -60,6 +60,10 @@ jQuery(document).ready(function(){
  */
 // listeners
 jQuery(document).ready(function(){
+
+  jQuery('.hide-extra').show();
+  jQuery('#extra_button').removeClass('hollow')
+
   if ( getCookie( 'extra' ) === "on") {
     jQuery('#extra_button').removeClass('hollow')
     jQuery('.hide-extra').show();
