@@ -16,7 +16,7 @@ get_header();
         <div id="main" class="large-12 cell" role="main">
 
 
-            <ul id="accordion-course" class="accordion" data-accordion>
+            <ul id="accordion-course" class="accordion" data-accordion data-multi-expand="true" data-allow-all-closed="true">
                 <li class="accordion-item" data-accordion-item>
                     <!-- Accordion tab title -->
                     <a href="#" class="accordion-title">Session 1</a>
@@ -124,5 +124,19 @@ get_header();
         </div> <!-- end #main -->
     </div> <!-- end #inner-content -->
 </div><!-- end #content -->
+
+<script>
+    jQuery(document).ready(function($){
+        jQuery('.activity-description').hide()
+        jQuery('.activity-title').hide()
+        jQuery('.video-section').hide().next().hide()
+
+        jQuery('.step-title').on('click', function(e){
+            window.x = jQuery(this)
+            console.log(window.x)
+            window.x.parent().parent().find('div').show()
+        })
+    })
+</script>
 
 <?php get_footer(); ?>
