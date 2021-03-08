@@ -109,7 +109,9 @@ $values = get_post_custom( $post->ID );
 
                     <!-- pre video content -->
                     <div class="center">
-                    <?php if ( empty( $values['zume_pre_video_content'][0] ?? false ) ) : ?>
+                    <?php if ( isset( $values['zume_post_video_content'][0] ) && $values['zume_post_video_content'][0] !== 'remove' ) : ?>
+
+                    <?php elseif ( isset( $values['zume_post_video_content'][0] ) && empty( $values['zume_post_video_content'][0] ) ) : ?>
                         <p><?php esc_html_e( "Watch this important video explaining the 4 relationships of your new life.", 'zume' ) ?></p>
                     <?php else : ?>
                        <p><?php echo nl2br( esc_html( $values['zume_pre_video_content'][0] ) ) ?></p>
@@ -117,7 +119,7 @@ $values = get_post_custom( $post->ID );
                     </div>
 
                     <!-- video -->
-                    <?php if ( $values['zume_landing_show_video'][0] ?? 'yes' !== 'no' ) : ?>
+                    <?php if ( isset( $values['zume_landing_show_video'][0] ) && $values['zume_landing_show_video'][0] === 'yes' ) : ?>
                         <div class="center small-video">
                             <?php if ( $alt_video ) : ?>
                                 <div class="alt-video-section">
@@ -145,7 +147,9 @@ $values = get_post_custom( $post->ID );
 
                     <!-- post video content -->
                     <div class="center">
-                        <?php if ( empty( $values['zume_post_video_content'][0] ?? false ) ) : ?>
+                            <?php if ( isset( $values['zume_post_video_content'][0] ) && $values['zume_post_video_content'][0] !== 'remove' ) : ?>
+
+                            <?php elseif ( isset( $values['zume_post_video_content'][0] ) && empty( $values['zume_post_video_content'][0] ) ) : ?>
                             <p class="center"><strong><?php esc_html_e( "Bookmark this page as a future resource!", 'zume' ) ?></strong></p><br>
 
                             <p><?php esc_html_e( "The sections below, will teach you what it means to be a follower (disciple) of Jesus.", 'zume' ) ?></p>

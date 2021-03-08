@@ -35,6 +35,7 @@ function zume_landing_content( $post ) {
     wp_nonce_field( 'zume_landing_nonce'.get_current_user_id(), 'zume_landing_nonce' );
 
     $values = get_post_custom( $post->ID );
+    dt_write_log($values);
 
     ?>
     <p>Blank sections will go with defaults for template. Add logo to featured image.</p>
@@ -53,6 +54,13 @@ function zume_landing_content( $post ) {
     <h3>Show Video</h3>
     <select name="zume_landing_show_video">
         <?php
+
+        if ( isset( $values['zume_landing_show_video'][0] ) ){
+            echo '<option value="'. esc_attr( $values['zume_landing_show_video'][0] ).'" selected>'. esc_html( ucwords( $values['zume_landing_show_video'][0] ) ) . '</option>';
+            echo '<option disabled>----</option>';
+        }
+
+
         $list = [
             'yes' => [
                 'key' => 'yes',
@@ -64,11 +72,7 @@ function zume_landing_content( $post ) {
             ]
         ];
         foreach ( $list as $value ){
-            $selected = '';
-            if ( $values['zume_landing_show_video'][0] ?? '' === $value['key'] ){
-                $selected = ' selected';
-            }
-            echo '<option value="'. esc_attr( $value['key'] ).'" '. esc_attr( $selected ).'>'. esc_html( $value['label'] ) . '</option>';
+            echo '<option value="'. esc_attr( $value['key'] ).'">'. esc_html( $value['label'] ) . '</option>';
         }
         ?></select><br>
     <h3>Post Video</h3>
@@ -104,8 +108,8 @@ function zume_landing_save( $post_id ) {
     }
 
     // if our current user can't edit this post, bail
-    if ( !current_user_can( 'edit_post' ) ) { return;
-    }
+//    if ( !current_user_can( 'edit_post' ) ) { return;
+//    }
 
     if ( isset( $_POST['zume_landing_list_template'] ) ) {
         update_post_meta( $post_id, 'zume_landing_list_template', sanitize_text_field( wp_unslash( $_POST['zume_landing_list_template'] ) ) );
