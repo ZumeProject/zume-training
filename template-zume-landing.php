@@ -109,7 +109,7 @@ $values = get_post_custom( $post->ID );
 
                     <!-- pre video content -->
                     <div class="center">
-                    <?php if ( isset( $values['zume_post_video_content'][0] ) && $values['zume_post_video_content'][0] !== 'remove' ) : ?>
+                    <?php if ( isset( $values['zume_post_video_content'][0] ) && $values['zume_post_video_content'][0] === 'remove' ) : ?>
 
                     <?php elseif ( isset( $values['zume_post_video_content'][0] ) && empty( $values['zume_post_video_content'][0] ) ) : ?>
                         <p><?php esc_html_e( "Watch this important video explaining the 4 relationships of your new life.", 'zume' ) ?></p>
@@ -147,7 +147,7 @@ $values = get_post_custom( $post->ID );
 
                     <!-- post video content -->
                     <div class="center">
-                            <?php if ( isset( $values['zume_post_video_content'][0] ) && $values['zume_post_video_content'][0] !== 'remove' ) : ?>
+                            <?php if ( isset( $values['zume_post_video_content'][0] ) && $values['zume_post_video_content'][0] === 'remove' ) : ?>
 
                             <?php elseif ( isset( $values['zume_post_video_content'][0] ) && empty( $values['zume_post_video_content'][0] ) ) : ?>
                             <p class="center"><strong><?php esc_html_e( "Bookmark this page as a future resource!", 'zume' ) ?></strong></p><br>
