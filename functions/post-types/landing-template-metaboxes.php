@@ -35,7 +35,6 @@ function zume_landing_content( $post ) {
     wp_nonce_field( 'zume_landing_nonce'.get_current_user_id(), 'zume_landing_nonce' );
 
     $values = get_post_custom( $post->ID );
-    dt_write_log($values);
 
     ?>
     <p>Blank sections will go with defaults for template. Add logo to featured image.</p>
