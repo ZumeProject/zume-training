@@ -143,13 +143,16 @@ function get_location_grid_meta_array() {
  *
  * @return array
  */
-function zume_get_user_meta( $user_id = null ) {
-    if ( is_null( $user_id ) ) {
-        $user_id = get_current_user_id();
+if ( ! function_exists( 'zume_get_user_meta' ) ) {
+    function zume_get_user_meta( $user_id = null ) {
+        if ( is_null( $user_id ) ) {
+            $user_id = get_current_user_id();
+        }
+        return array_map( function ( $a ) { return $a[0];
+        }, get_user_meta( $user_id ) );
     }
-    return array_map( function ( $a ) { return $a[0];
-    }, get_user_meta( $user_id ) );
 }
+
 
 function zume_home_url( $current_language = null ) {
     if ( is_null( $current_language ) ) {
