@@ -35,6 +35,20 @@
     "rtl": false
   },
   {
+    "enDisplayName": "Bosnian",
+    "code": "bs",
+    "locale": "bs_BA",
+    "nativeName": "Bosanski",
+    "rtl": false
+  },
+  {
+    "enDisplayName": "Croatian",
+    "code": "hr",
+    "locale": "hr",
+    "nativeName": "Hrvatski",
+    "rtl": false
+  },
+  {
     "enDisplayName": "Farsi/Persian",
     "code": "fa",
     "locale": "fa_IR",
@@ -112,17 +126,24 @@
     "rtl": false
   },
   {
-    "enDisplayName": "Mandarin (Simplified)",
-    "code": "zhcn",
-    "locale": "zh_CN",
-    "nativeName": "简体中文",
+    "enDisplayName": "Mandarin (Cantonese)",
+    "code": "zhhk",
+    "locale": "zh_HK",
+    "nativeName": "中文 (香港)",
     "rtl": false
   },
   {
     "enDisplayName": "Mandarin (Traditional)",
     "code": "zhtw",
     "locale": "zh_TW",
-    "nativeName": "繁體中文",
+    "nativeName": "國語（繁體)",
+    "rtl": false
+  },
+  {
+    "enDisplayName": "Mandarin (Simplified)",
+    "code": "zhcn",
+    "locale": "zh_CN",
+    "nativeName": "国语（简体)",
     "rtl": false
   },
   {
