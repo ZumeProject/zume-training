@@ -8,8 +8,8 @@ function trigger_group_to_training_transfer( $user_id, $group_key, $group ) {
         "title" => $group['group_name'],
         "zume_group_id" => $group_key,
         "zume_public_key" => $group['public_key'],
-        "members" => $group['members'],
-        "leaders" => 1,
+        "member_count" => $group['members'],
+        "leader_count" => 1,
         "start_date" => strtotime( $group['created_date'] ),
         "status" => "new",
     ];
