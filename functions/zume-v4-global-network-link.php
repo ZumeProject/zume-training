@@ -7,12 +7,16 @@ function trigger_group_to_training_transfer( $user_id, $group_key, $group ) {
     $fields = [
         "title" => $group['group_name'],
         "zume_group_id" => $group_key,
-        "contact_count" => $group['members'],
-        "leader_count" => 1,
+        "members" => $group['members'],
+        "leaders" => 1,
         "start_date" => strtotime( $group['created_date'] ),
         "status" => "new",
     ];
 
+    if ( get_user_meta( $user_id, 'wp_3_corresponds_to_contact', true ) ) {
+        $fields['assigned_to'] = $user_id;
+    }
+    
     $site = Site_Link_System::get_site_connection_vars( 21116 ); // @todo remove hardcoded
     if ( ! $site ) {
         dt_write_log( __METHOD__ . ' FAILED TO GET SITE LINK TO GLOBAL ' );
