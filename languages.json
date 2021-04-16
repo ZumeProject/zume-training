@@ -126,10 +126,10 @@
     "rtl": false
   },
   {
-    "enDisplayName": "Mandarin (Cantonese)",
+    "enDisplayName": "Cantonese (Traditional)",
     "code": "zhhk",
     "locale": "zh_HK",
-    "nativeName": "中文 (香港)",
+    "nativeName": "粵語 (繁體)",
     "rtl": false
   },
   {
