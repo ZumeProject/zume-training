@@ -2799,7 +2799,7 @@ msgstr "歡迎來到「天國酵母」 ── 神如何使用平凡人去做簡�
 
 #: template-zume-overview.php:297
 msgid "TEACH THEM TO OBEY — Discover the essence of being a disciple, making a disciple, and what is the church."
-msgstr "教導他們遵守 ── 成為門徒﹑建立門徒的精髓意義為何？教會又是什麼？"
+msgstr "教導他們遵守 ── 何謂「成為門徒」﹑「建立門徒」？「教會」又是什麼？"
 
 #: template-zume-overview.php:308
 msgid "SPIRITUAL BREATHING — Being a disciple means we hear from God and we obey God."
@@ -3476,7 +3476,7 @@ msgstr "15 分鐘"
 #: template-gmo.php:212 template-how-to-follow-jesus.php:140
 #: template-zume-training.php:178
 msgid "Discover the essence of being a disciple, making a disciple, and what is the church."
-msgstr "成為門徒﹑建立門徒的精髓意義為何？教會又是什麼？"
+msgstr "何謂「成為門徒」﹑「建立門徒」？「教會」又是什麼？"
 
 #: template-gmo.php:237 template-how-to-follow-jesus.php:165
 #: template-zume-training.php:191
@@ -3539,7 +3539,7 @@ msgstr "60 分鐘"
 
 #: template-zume-training.php:283
 msgid "Discuss - Prayer Cycle"
-msgstr "討論 ── 禱告輪"
+msgstr "討論 ── 「禱告輪」"
 
 #: template-gmo.php:341 template-how-to-follow-jesus.php:269
 #: template-zume-training.php:296
@@ -3753,7 +3753,7 @@ msgstr "「天國酵母」課程 v4"
 
 #: front-page.php:99
 msgid "Explore Training"
-msgstr "訓練總覽"
+msgstr "了解訓練"
 
 #: template-zume-training.php:839
 msgid "The four fields diagnostic chart is a simple tool to be used by a leadership cell to reflect on the status of current efforts and the kingdom activity around them."
@@ -3922,7 +3922,7 @@ msgstr "了解更多關於「天國酵母」異象"
 
 #: template-pieces-page.php:51
 msgid "This concept is called \"%1$s\" in session %2$s of the Zúme Training"
-msgstr "這項概念是「天國酵母」門徒訓練中的第 %2$s 堂課的 \"%1$s\" "
+msgstr "\"%1$s\" 這個概念是在「天國酵母」門徒訓練中的第 %2$s 堂課。"
 
 #: functions/zume-gmo.php:73 template-pieces-page.php:83
 msgid "Listen and Read Along"
