@@ -910,11 +910,11 @@ msgstr "Transcriere Video Zume: Botezul"
 
 #: functions/zume-content.php:1379
 msgid "Have you ever baptized someone?"
-msgstr "Ai botezat vreodată pe cineva?"
+msgstr "Cum se face botezul în biserica din care faci parte?"
 
 #: functions/zume-content.php:1380
 msgid "Would you even consider it?"
-msgstr "Îl recunoașteți în principiu o așa posibilitate?"
+msgstr "În biserica primară au botezat doar apostolii, diaconii și păstorii? Cine o face în biserica ta?"
 
 #: functions/zume-content.php:1381
 msgid "If the Great Commission is for every follower of Jesus, does that mean every follower is allowed to baptize others? Why or why not?"
@@ -926,7 +926,7 @@ msgstr "NOTĂ IMPORTANTĂ - Tu ai fost botezat?"
 
 #: functions/zume-content.php:1397
 msgid "If not, then we encourage you to plan this before even one more session of this training. Invite your group to be a part of this important day when you celebrate saying \"yes\" to Jesus."
-msgstr "Dacă nu, atunci vă sfătuim să faceți acest lucru înainte de următoarea sesiune. Invitați-vă grupul să sărbătorească împreună cu tine ziua în care îi spui „Da” lui Isus."
+msgstr "Dacă nu, atunci te sfătuim să faci acest lucru  în conformitate cu tradiția și învățătura bisericii de care te alăturezi. Invită grupul să sărbătorească împreună cu tine ziua în care îi spui „Da” lui Isus."
 
 #: functions/zume-content.php:1418
 msgid "Congratulations on finishing Session 3! "
@@ -946,7 +946,7 @@ msgstr "Ce a fost deosebit la Zúme până acum din punctul tău de vedere ? Pov
 
 #: functions/zume-content.php:1472
 msgid "IMPORTANT REMINDER – Your group will be celebrating the Lord's Supper next session. Be sure to remember the supplies (bread and wine / juice)."
-msgstr "NOTĂ IMPORTANTĂ - Grupul dvs. va sărbători Cina Domnului în timpul  următoarei sesiuni.Nu uitați să faceți pregătirile necesare (pâine și vin / suc)."
+msgstr "NOTĂ IMPORTANTĂ - Grupul poate să sărbătorească Cina Domnului în timpul  următoarei sesiuni. Puteți face și în conformitate cu tradiția și învățătura bisericii  din care faci parte.Pregătiți cele necesare (pâine și vin/suc)."
 
 #: functions/zume-content.php:1505
 msgid "You were asked to share God’s Story with at least one person from your List of 100 that you marked as \"Unbeliever\" or \"Unknown.\""
@@ -1066,11 +1066,11 @@ msgstr "Transcriere Video Zúme: Cina Domnului"
 
 #: functions/zume-content.php:1916
 msgid "Practice the Lord's Supper (10min)"
-msgstr "Luați Cina Domnului (10 min)"
+msgstr "Puteți practica, Cina Domnului (10 min)"
 
 #: functions/zume-content.php:1926
 msgid "Spend the next 10 minutes celebrating The Lord's Supper with your group using the pattern on page 15 of your Zúme Guidebook."
-msgstr "Petreceți următoarele 10 minute sărbătorind Cina Domnului cu grupul dvs. folosind modelul de la pagina 15 din Ghidul dvs. Zúme."
+msgstr "Petreceți următoarele 10 minute sărbătorind Cina Domnului cu grupul, folosind modelul din Ghid ori cum e după tradiția bisericii voastre."
 
 #: functions/zume-content.php:1945
 msgid "Congratulations on finishing Session 4!"
@@ -4475,29 +4475,29 @@ msgstr "Depozitare"
 
 #: template-gmo.php:163
 msgid "Welcome to God’s family!"
-msgstr ""
+msgstr "Bine ați venit în familia lui Dumnezeu!"
 
 #: template-gmo.php:167
 msgid "You’ve just made a decision to follow Jesus. Where do you go from here?"
-msgstr ""
+msgstr "Tocmai ai luat o decizie de a-L urma pe Isus. Unde te duci de aici?"
 
 #: template-gmo.php:168
 msgid "We are Zúme, a GodLife Community. Through Zúme, we want to give you free resources to grow in your faith and connect you to a community of people all around the world striving to grow in knowledge and faith of the hope that Jesus gives us. Let’s get started!"
-msgstr ""
+msgstr "Suntem Zúme, o comunitate GodLife. Prin Zúme, vrem să vă oferim resurse gratuite pentru a crește în credința voastră și a vă conecta la o comunitate de oameni din întreaga lume care se străduiesc să crească în cunoașterea și credința speranței pe care ne-o dă Isus. Să începem!"
 
 #: template-gmo.php:169
 msgid "A great first step is this video that explains 4 relationships we all have with God, creation, others, and ourselves. We pray that as you watch that video God will lead you to think of several others who need to see it, and who will eventually join you in following Jesus."
-msgstr ""
+msgstr "Un prim pas minunat este acest videoclip care explică 4 relații pe care le avem cu toții cu Dumnezeu, cu creația, cu ceilalți și cu noi înșine. Ne rugăm ca, pe măsură ce urmăriți acel videoclip, Dumnezeu să vă conducă să vă gândiți la mai mulți alții care trebuie să-l vadă și care, în cele din urmă, să vă alăture în urmarea lui Isus."
 
 #: template-gmo.php:196
 msgid "Next we have a collection of resources to help you follow Jesus. Bookmark, explore, and share these Biblical resources that are being used around the globe."
-msgstr ""
+msgstr "În continuare avem o colecție de resurse pentru a vă ajuta să-l urmați pe Isus. Marcați, explorați și împărtășiți aceste resurse biblice care sunt utilizate în întreaga lume."
 
 #: template-how-to-follow-jesus.php:122
 msgid "Bookmark this page as a future resource!"
-msgstr ""
+msgstr "Marcați această pagină ca o resursă viitoare!"
 
 #: template-how-to-follow-jesus.php:124
 msgid "The sections below, will teach you what it means to be a follower (disciple) of Jesus."
-msgstr ""
+msgstr "Secțiunile de mai jos vă vor învăța ce înseamnă să fii urmaș (ucenic) al lui Isus."
 
