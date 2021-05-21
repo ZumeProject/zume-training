@@ -245,6 +245,13 @@
     "rtl": false
   },
   {
+    "enDisplayName": "Turkish",
+    "code": "tr",
+    "locale": "tr_TR",
+    "nativeName": "Türkçe",
+    "rtl": false
+  },
+  {
     "enDisplayName": "Vietnamese",
     "code": "vi",
     "locale": "vi",
