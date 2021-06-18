@@ -42,6 +42,13 @@
     "rtl": false
   },
   {
+    "enDisplayName": "Cantonese (Traditional)",
+    "code": "zhhk",
+    "locale": "zh_HK",
+    "nativeName": "粵語 (繁體)",
+    "rtl": false
+  },
+  {
     "enDisplayName": "Croatian",
     "code": "hr",
     "locale": "hr",
@@ -123,13 +130,6 @@
     "code": "lo",
     "locale": "lo",
     "nativeName": "ພາສາລາວ",
-    "rtl": false
-  },
-  {
-    "enDisplayName": "Cantonese (Traditional)",
-    "code": "zhhk",
-    "locale": "zh_HK",
-    "nativeName": "粵語 (繁體)",
     "rtl": false
   },
   {
@@ -242,6 +242,13 @@
     "code": "th",
     "locale": "th_TH",
     "nativeName": "ไทย",
+    "rtl": false
+  },
+  {
+    "enDisplayName": "Urdu",
+    "code": "ur",
+    "locale": "ur",
+    "nativeName": "اُردُو",
     "rtl": false
   },
   {
