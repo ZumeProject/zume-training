@@ -249,7 +249,7 @@
     "code": "ur",
     "locale": "ur",
     "nativeName": "اُردُو",
-    "rtl": false
+    "rtl": true
   },
   {
     "enDisplayName": "Vietnamese",
