@@ -98,7 +98,7 @@ $values = get_post_custom( $post->ID );
 
                     <!-- Logo -->
                     <div class="cell center padding-bottom-1">
-                        <?php echo get_the_post_thumbnail( $post->ID, [ 150, 300 ] ); ?>
+                        <img src="<?php the_post_thumbnail_url('full') ?>" style="max-height: 100px; max-width: 400px;" alt="logo" />
                     </div>
 
                     <!-- title -->
