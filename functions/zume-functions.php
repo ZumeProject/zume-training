@@ -110,13 +110,19 @@ function zume_update_user_ip_address_and_location( $user_id = null ) {
 
     $ip_results = DT_Ipstack_API::geocode_ip_address( $ip_address );
     if ( isset( $ip_results['ip'] ) ) {
-        update_user_meta( $user_id, 'zume_lng_from_ip', DT_Ipstack_API::parse_raw_result( $ip_results, 'longitude' ) );
-        update_user_meta( $user_id, 'zume_lat_from_ip', DT_Ipstack_API::parse_raw_result( $ip_results, 'latitude' ) );
         update_user_meta( $user_id, 'zume_raw_location_from_ip', $ip_results );
 
-        if ( class_exists( 'Location_Grid_Geocoder' ) ) {
-            $geocoder = new Location_Grid_Geocoder();
-            update_user_meta( $user_id, 'ip_location_grid_meta', Location_Grid_Meta::convert_ip_result_to_location_grid_meta( $ip_results ) );
+        if ( class_exists( 'DT_Ipstack_API' ) ) {
+            $country = DT_Ipstack_API::parse_raw_result( $ip_results, 'country_name' );
+            $region = DT_Ipstack_API::parse_raw_result( $ip_results, 'region_name' );
+            $city = DT_Ipstack_API::parse_raw_result( $ip_results, 'city' );
+
+            $address = $city . ', ' . $region . ', ' . $country;
+            update_user_meta( $user_id, 'zume_address_from_ip', $address ); // location grid id only
+
+            $location_grid_meta = DT_Ipstack_API::convert_ip_result_to_location_grid_meta( $ip_results );
+            update_user_meta( $user_id, 'zume_location_grid_meta_from_ip', $location_grid_meta ); // location grid meta array
+            update_user_meta( $user_id, 'zume_location_grid_from_ip', $location_grid_meta['grid_id'] ); // location grid id only
 
         }
     }
