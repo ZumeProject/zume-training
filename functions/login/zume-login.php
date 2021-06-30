@@ -128,7 +128,7 @@ class Zume_User_Registration
 
             add_user_meta( $user_id, 'zume_language', zume_current_language(), true );
             add_user_meta( $user_id, 'zume_phone_number', null, true );
-            add_user_meta( $user_id, 'zume_address', null, true );
+//            add_user_meta( $user_id, 'zume_address', null, true );
             add_user_meta( $user_id, 'zume_affiliation_key', null, true );
             add_user_meta( $user_id, 'location_grid_meta', get_location_grid_meta_array(), true );
 
@@ -350,7 +350,7 @@ class Zume_User_Registration
 
             add_user_meta( $user_id, 'zume_language', zume_current_language(), true );
             add_user_meta( $user_id, 'zume_phone_number', null, true );
-            add_user_meta( $user_id, 'zume_address', null, true );
+//            add_user_meta( $user_id, 'zume_address', null, true );
             add_user_meta( $user_id, 'zume_affiliation_key', null, true );
             add_user_meta( $user_id, 'location_grid_meta', get_location_grid_meta_array(), true );
 
@@ -670,7 +670,7 @@ class Zume_User_Registration
 
         add_user_meta( $user_id, 'zume_language', $current_language, true );
         add_user_meta( $user_id, 'zume_phone_number', null, true );
-        add_user_meta( $user_id, 'zume_address', null, true );
+//        add_user_meta( $user_id, 'zume_address', null, true );
         add_user_meta( $user_id, 'zume_affiliation_key', null, true );
         add_user_meta( $user_id, 'location_grid_meta', get_location_grid_meta_array(), true );
 

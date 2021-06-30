@@ -1182,7 +1182,10 @@ class Zume_V4_Groups {
             case 'geolocate':
             case 'click':
                 $mapbox_result = DT_Mapbox_API::reverse_lookup( $lng, $lat );
-                $label = DT_Mapbox_API::parse_raw_result( $mapbox_result, 'full_location_name', true );
+                $label = '';
+                if ( is_array( $mapbox_result ) ) {
+                    $label = DT_Mapbox_API::parse_raw_result( $mapbox_result, 'full_location_name', true );
+                }
                 $level = 'place';
                 break;
 
