@@ -64,16 +64,8 @@ class Zume_Integration_Menu
 
         $tab_bar = array(
             array(
-                'key' => 'zume_settings',
-                'label' =>'Settings',
-            ),
-            array(
                 'key' => 'third_party_keys',
                 'label' => 'API Keys',
-            ),
-            array(
-                'key' => 'languages',
-                'label' =>'Languages',
             )
         );
 
@@ -114,18 +106,18 @@ class Zume_Integration_Menu
             <?php
             switch ( $active_tab ) {
 
-                case "zume_settings":
-                    $this->tab_zume_settings();
-                    break;
+//                case "zume_settings":
+//                    $this->tab_zume_settings();
+//                    break;
                 case "third_party_keys":
                     $object = new Zume_Keys_Tab();
                     $object->content();
                     break;
-                case "languages":
-                    require_once( get_stylesheet_directory(). '/functions/zume-dt-integration/zume-languages-tab.php' );
-                    $object = new Zume_Languages_Tab();
-                    $object->content();
-                break;
+//                case "languages":
+//                    require_once( get_stylesheet_directory(). '/functions/zume-dt-integration/zume-languages-tab.php' );
+//                    $object = new Zume_Languages_Tab();
+//                    $object->content();
+//                break;
                 default:
                     break;
             }

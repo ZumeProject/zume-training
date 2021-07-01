@@ -73,7 +73,7 @@ require_once( 'functions/zume-v4-modal-pieces-content.php' );
 //require_once( 'functions/logging/zume-logging.php' ); // zume logging of critical path actions
 
 require_once( 'functions/zume-functions.php' ); // general zume functions
-require_once( 'functions/logging/zume-mailchimp.php' ); // zume logging of critical path actions
+require_once( 'functions/logging/zume-mailchimp.php' ); //
 
 
 // Zume - DT - Integration
