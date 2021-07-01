@@ -26,7 +26,7 @@ class Zume_Activator
 
     public static function create_tables( $version ) {
         global $wpdb;
-        require_once( ABSPATH . 'wp-admin/includes/upgrade.php' );
+        require_once(ABSPATH . 'wp-admin/includes/upgrade.php');
         /* Activity Log */
         $table_name = $wpdb->prefix . 'zume_logging';
         // @codingStandardsIgnoreLine

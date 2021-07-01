@@ -117,7 +117,17 @@ function zume_update_user_ip_address_and_location( $user_id = null ) {
             $region = DT_Ipstack_API::parse_raw_result( $ip_results, 'region_name' );
             $city = DT_Ipstack_API::parse_raw_result( $ip_results, 'city' );
 
-            $address = $city . ', ' . $region . ', ' . $country;
+            $address = '';
+            if( ! empty($country) ) {
+                $address = $country;
+            }
+            if( ! empty($region) ) {
+                $address = $region . ', ' . $address;
+            }
+            if( ! empty($city) ) {
+                $address = $city . ', ' . $address;
+            }
+
             update_user_meta( $user_id, 'zume_address_from_ip', $address ); // location grid id only
 
             $location_grid_meta = DT_Ipstack_API::convert_ip_result_to_location_grid_meta( $ip_results );
@@ -220,16 +230,7 @@ function zume_register_url( $current_language = null ) {
 }
 
 function zume_dashboard_url( $current_language = null ) {
-    if ( is_null( $current_language ) ) {
-        $current_language = zume_current_language();
-    }
-    $url = zume_get_posts_translation_url( 'dashboard', $current_language );
-    /** @todo temporary strategy until full 4.0 conversion */
-    /** v4.0 conversion */
-    if ( zume_v4_ready_language() ) {
-        $url = zume_training_url( $current_language );
-    }
-    return $url;
+    return zume_training_url( $current_language );
 }
 
 function zume_training_url( $current_language = null ) {
