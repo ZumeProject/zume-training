@@ -34,7 +34,9 @@ class Zume_V4_Groups {
      * @access  public
      * @since   0.1
      */
-    public function __construct() { } // End __construct()
+    public function __construct() {
+        add_action( 'zume_session_complete', [ $this, 'zume_session_complete' ] );
+    } // End __construct()
 
     /**
      * @version 4
@@ -1348,6 +1350,34 @@ class Zume_V4_Groups {
     public static function filter_last_modified_to_now( &$group ) : array {
         $group['last_modified_date'] = time();
         return $group;
+    }
+
+    /**
+     * If Session 9 and 10 completed, mark all user records as training completed. This marker serves the zume vision maps.
+     */
+    public function zume_session_complete( $group_key, $session_number, $group_owner, $current_user_id ) {
+        if ( '9' === $session_number || '10' === $session_number ) {
+            update_user_meta( $group_owner, 'zume_training_complete', $group_key );
+
+            $array = self::get_group_by_key( $group_key );
+            if ( isset( $array['coleaders'] ) &&  ! empty( $array['coleaders'] ) ) {
+                foreach( $array['coleaders'] as $email ) {
+                    $user = get_user_by('email', $email );
+
+                    if ( ! $user ) {
+                        continue;
+                    }
+
+                    if ( get_user_meta( $user->ID, 'zume_training_complete', true ) ) {
+                        continue;
+                    }
+
+                    update_user_meta( $user->ID, 'zume_training_complete', $group_key );
+
+                }
+
+            }
+        }
     }
 
 }
