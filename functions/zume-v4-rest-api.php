@@ -367,7 +367,7 @@ class Zume_V4_REST_API {
             'preference' => 'Requested contact method is: ' .$args['preference'],
             'affiliation' => 'Requested affiliation is: ' . $args['affiliation_key']
         ];
-        $zume_foreign_key = Zume_Integration::get_foreign_key( $user_id );
+        $zume_foreign_key = self::get_foreign_key( $user_id );
 
         // build fields for transfer
         $fields = [
@@ -465,6 +465,15 @@ class Zume_V4_REST_API {
         $strings = dt_recursive_sanitize_array( $params['strings'] );
 
         return get_modal_content( $postid, $lang, $strings );
+    }
+
+    public static function get_foreign_key( $user_id ) {
+        $key = get_user_meta( $user_id, 'zume_foreign_key', true );
+        if ( empty( $key ) ) {
+            $key = Site_Link_System::generate_token( 40 ); // forty bits equals 1.1 trillion combinations
+            update_user_meta( $user_id, 'zume_foreign_key', $key );
+        }
+        return $key;
     }
 
 }
