@@ -316,7 +316,7 @@ class Zume_Video_Post_Type
                         if ( v.id ) {
                             let cell = jQuery('#'+v.id)
                             cell.addClass('active-spinner')
-                            cell.html(`<img src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&color=323a68&data=${qr_link}${v.id}" title="${qr_raw_link}${v.id}" alt="${qr_raw_link}${v.id}" />`)
+                            cell.html(`<img src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&color=323a68&data=${qr_link}${v.id}" title="${qr_raw_link}${v.id}" alt="${qr_raw_link}${v.id}" /><br><a href="https://api.qrserver.com/v1/create-qr-code/?size=300x300&color=323a68&data=${qr_link}${v.id}">reload</a>`)
                         }
                     })
                 }
@@ -348,16 +348,6 @@ class Zume_Video_Post_Type
                     list.empty()
                     list.removeClass('active-spinner')
                 }
-            }
-            function show_video( block, id ) {
-                jQuery( '#' + block ).append(`<iframe src="https://player.vimeo.com/video/${id}" width="340" height="160" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-                        <p><a onclick="jQuery('#${block}').empty();">Close video</a></p>`)
-            }
-            function show_alt_video( block, id ) {
-                jQuery( '#' + block ).append(`<video width="960" height="540" style="border: 1px solid lightgrey;margin: 0 15%;" controls>
-                            <source src="${id}" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video><p><a onclick="jQuery('#${block}').empty();">Close video</a></p>`)
             }
         </script>
         <?php
