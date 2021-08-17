@@ -316,7 +316,7 @@ class Zume_Video_Post_Type
                         if ( v.id ) {
                             let cell = jQuery('#'+v.id)
                             cell.addClass('active-spinner')
-                            cell.html(`<img src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&color=323a68&data=${qr_link}${v.id}" title="${qr_raw_link}${v.id}" alt="${qr_raw_link}${v.id}" /><br><a href="https://api.qrserver.com/v1/create-qr-code/?size=300x300&color=323a68&data=${qr_link}${v.id}">reload</a>`)
+                            cell.html(`<img src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&color=323a68&data=${qr_link}${v.id}" title="${qr_raw_link}${v.id}" alt="${qr_raw_link}${v.id}" /><br><a href="https://api.qrserver.com/v1/create-qr-code/?size=300x300&color=323a68&data=${qr_link}${v.id}">direct link</a>`)
                         }
                     })
                 }
