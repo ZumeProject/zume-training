@@ -343,7 +343,7 @@ class Zume_Video_Post_Type
                             break;
                         case 'link':
                             $qr_raw_link = get_stylesheet_directory_uri() . '/video.php?id='  . esc_attr( $data );
-                            $qr_link = urlencode( get_stylesheet_directory_uri() . '/video-viewer.php?id='  . esc_attr( $data ) );
+                            $qr_link = urlencode( get_stylesheet_directory_uri() . '/video.php?id='  . esc_attr( $data ) );
                             echo '<tr valign="top"><th scope="row"><label for="' . esc_attr( $k ) . '">' . esc_html( $v['name'] ) . '</label></th>
                                 <td><input name="' . esc_attr( $k ) . '" type="text" id="' . esc_attr( $k ) . '" class="regular-text" value="' . esc_attr( $data ) . '" />' . "\n";
                             $video_id = esc_attr( $k ) .'video';
