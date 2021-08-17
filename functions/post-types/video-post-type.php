@@ -276,7 +276,6 @@ class Zume_Video_Post_Type
      */
     public function meta_box_setup() {
         add_meta_box( $this->post_type . '_scribes', 'Video Scribes', array( $this, 'load_video_meta_box' ), $this->post_type, 'normal', 'high' );
-//        add_meta_box( $this->post_type . '_alt_video', 'Alternate Videos', array( $this, 'load_alt_video_meta_box' ), $this->post_type, 'normal', 'high' );
     } // End meta_box_setup()
 
     /**
@@ -286,8 +285,82 @@ class Zume_Video_Post_Type
      * @since  0.1.0
      */
     public function load_video_meta_box() {
-        echo 'These numeric ids below refer to the unique Vimeo id. It should work with the url "https://player.vimeo.com/video/{put_video_id_here}". Use the "verify link" to check if the video loads correctly.<br><br>The page title above needs to be the two character language code.<br><hr>';
+        ?>
+        These numeric ids below refer to the unique Vimeo id. It should work with the url "https://player.vimeo.com/video/{put_video_id_here}". Use the "verify link" to check if the video loads correctly.<br>The page title above needs to be the two character language code.<br><br>
+        <a id="show-hide-qr" class="button" onclick="show_hide_qr()" data-state="off">Show/Hide QR Codes</a> <a id="show-hide-videos" class="button" onclick="show_hide_videos()" data-state="off">Show/Hide Videos</a>
+        <hr>
+        <?php
+
         $this->meta_box_content( 'scribe' ); // prints
+
+        ?>
+        <style>
+            .active-spinner {
+                background: url( "<?php echo get_stylesheet_directory_uri() ?>/spinner.svg") no-repeat;
+                background-size: 24px 24px;
+                background-position-x: 50%;
+                background-position-y: 50%;
+            }
+        </style>
+        <script>
+            function show_hide_qr() {
+                let qr_raw_link = '<?php echo get_stylesheet_directory_uri() . '/video.php?id='; ?>'
+                let qr_link = '<?php echo urlencode( get_stylesheet_directory_uri() . '/video.php?id=' ); ?>'
+                let button = jQuery('#show-hide-qr')
+                let state = button.data('state')
+                let list = jQuery('.viewer-cell')
+                if ( 'off' === state ) {
+                    // console.log('Turning on qr')
+                    button.data('state', 'on')
+                    jQuery.each(list, function(i,v){
+                        if ( v.id ) {
+                            let cell = jQuery('#'+v.id)
+                            cell.addClass('active-spinner')
+                            cell.html(`<img src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&color=323a68&data=${qr_link}${v.id}" title="${qr_raw_link}${v.id}" alt="${qr_raw_link}${v.id}" />`)
+                        }
+                    })
+                }
+                else {
+                    // console.log('Turning off qr')
+                    button.data('state', 'off')
+                    list.empty()
+                    list.removeClass('active-spinner')
+                }
+            }
+            function show_hide_videos() {
+                let button = jQuery('#show-hide-videos')
+                let state = button.data('state')
+                let list = jQuery('.viewer-cell')
+                if ( 'off' === state ) {
+                    // console.log('Turning on videos')
+                    button.data('state', 'on')
+                    jQuery.each(list, function(i,v){
+                        if ( v.id ) {
+                            let cell = jQuery('#'+v.id)
+                            cell.addClass('active-spinner')
+                            cell.html(`<iframe src="https://player.vimeo.com/video/${v.id}" width="340" height="160" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>`)
+                        }
+                    })
+                }
+                else {
+                    // console.log('Turning off videos')
+                    button.data('state', 'off')
+                    list.empty()
+                    list.removeClass('active-spinner')
+                }
+            }
+            function show_video( block, id ) {
+                jQuery( '#' + block ).append(`<iframe src="https://player.vimeo.com/video/${id}" width="340" height="160" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                        <p><a onclick="jQuery('#${block}').empty();">Close video</a></p>`)
+            }
+            function show_alt_video( block, id ) {
+                jQuery( '#' + block ).append(`<video width="960" height="540" style="border: 1px solid lightgrey;margin: 0 15%;" controls>
+                            <source src="${id}" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video><p><a onclick="jQuery('#${block}').empty();">Close video</a></p>`)
+            }
+        </script>
+        <?php
     }
 
     /**
@@ -333,27 +406,33 @@ class Zume_Video_Post_Type
                         case 'url':
                             echo '<tr valign="top"><th scope="row"><label for="' . esc_attr( $k ) . '">' . esc_html( $v['name'] ) . '</label></th><td><input name="' . esc_attr( $k ) . '" type="text" id="' . esc_attr( $k ) . '" class="regular-text" value="' . esc_attr( $data ) . '" />' . "\n";
                             echo '<p class="description">' . esc_html( $v['description'] ) . '</p>' . "\n";
+                            echo '</td><td>';
+                            echo '';
                             echo '</td><tr/>' . "\n";
                             break;
                         case 'text':
                             echo '<tr valign="top"><th scope="row"><label for="' . esc_attr( $k ) . '">' . esc_html( $v['name'] ) . '</label></th>
                                 <td><input name="' . esc_attr( $k ) . '" type="text" id="' . esc_attr( $k ) . '" class="regular-text" value="' . esc_attr( $data ) . '" />' . "\n";
                             echo '<p class="description">' . esc_html( $v['description'] ) . '</p>' . "\n";
+                            echo '</td><td>';
+                            echo '';
                             echo '</td><tr/>' . "\n";
                             break;
                         case 'link':
                             $qr_raw_link = get_stylesheet_directory_uri() . '/video.php?id='  . esc_attr( $data );
                             $qr_link = urlencode( get_stylesheet_directory_uri() . '/video.php?id='  . esc_attr( $data ) );
-                            echo '<tr valign="top"><th scope="row"><label for="' . esc_attr( $k ) . '">' . esc_html( $v['name'] ) . '</label></th>
-                                <td><input name="' . esc_attr( $k ) . '" type="text" id="' . esc_attr( $k ) . '" class="regular-text" value="' . esc_attr( $data ) . '" />' . "\n";
+                            echo '<tr style="vertical-align:top;"><th scope="row"><label for="' . esc_attr( $k ) . '">' . esc_html( $v['name'] ) . '</label></th>
+                                <td style="vertical-align:top;"><input name="' . esc_attr( $k ) . '" type="text" id="' . esc_attr( $k ) . '" class="regular-text" value="' . esc_attr( $data ) . '" />' . "\n";
                             $video_id = esc_attr( $k ) .'video';
-                            echo '<p class="description"><a onclick="show_video( \'' . esc_attr( $video_id ) . '\', \'' . esc_attr( $data ) . '\' )">verify video link</a><span id="'. esc_attr( $video_id ) .'"></span></p>' . "\n";
-                            if ( $data ) {
+
+                            if ( $data && false ) {
                                 echo 'QR Code for Independent Viewing<br>';
                                 echo '<img src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&color=323a68&data=' . $qr_link . '" name="' . esc_attr( $data ) . '" /><br>';
                                 echo 'Links To<br>';
                                 echo '<a href="' . $qr_raw_link . '">' . $qr_raw_link .'</a>';
                             }
+                            echo '</td><td id="'.esc_attr( $data ).'" class="viewer-cell" data-value="'.esc_attr( $data ).'">';
+                            echo '';
                             echo '</td><tr/>' . "\n";
                             break;
                         case 'alt_link':
@@ -361,6 +440,8 @@ class Zume_Video_Post_Type
                                 <td><input name="' . esc_attr( $k ) . '" type="text" id="' . esc_attr( $k ) . '" class="regular-text" value="' . esc_attr( $data ) . '" />' . "\n";
                             $video_id = esc_attr( $k ) .'video';
                             echo '<p class="description"><a onclick="show_alt_video( \'' . esc_attr( $video_id ) . '\', \'' . esc_attr( $data ) . '\' )">verify link</a><span id="'. esc_attr( $video_id ) .'"></span></p>' . "\n";
+                            echo '</td><td>';
+                            echo '';
                             echo '</td><tr/>' . "\n";
                             break;
                         case 'select':
@@ -378,6 +459,8 @@ class Zume_Video_Post_Type
                             }
                             echo '</select>' . "\n";
                             echo '<p class="description">' . esc_html( $v['description'] ) . '</p>' . "\n";
+                            echo '</td><td>';
+                            echo '';
                             echo '</td><tr/>' . "\n";
                             break;
 
@@ -388,17 +471,6 @@ class Zume_Video_Post_Type
             }
             echo '</tbody>' . "\n";
             echo '</table>' . "\n";
-            echo "<script>
-                    function show_video( block, id ) {
-                        jQuery( '#' + block ).append('<iframe src=\"https://player.vimeo.com/video/' + id + '\" width=\"340\" height=\"160\" frameborder=\"0\" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe><p><a onclick=\"jQuery(\'#' + block + '\').empty();\">Close video</a></p>')
-                    }
-                    function show_alt_video( block, id ) {
-                        jQuery( '#' + block ).append(`<video width=\"960\" height=\"540\" style=\"border: 1px solid lightgrey;margin: 0 15%;\" controls>
-                            <source src=\"`+id+`\" type=\"video/mp4\">
-                            Your browser does not support the video tag.
-                        </video><p><a onclick=\"jQuery('#`+block+`').empty();\">Close video</a></p>`)
-                    }
-                    </script>";
         }
     } // End meta_box_content()
 
