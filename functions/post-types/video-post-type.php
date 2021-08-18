@@ -337,7 +337,6 @@ class Zume_Video_Post_Type
                     jQuery.each(list, function(i,v){
                         if ( v.id ) {
                             let cell = jQuery('#'+v.id)
-                            cell.addClass('active-spinner')
                             cell.html(`<iframe src="https://player.vimeo.com/video/${v.id}" width="340" height="160" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>`)
                         }
                     })
