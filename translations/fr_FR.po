@@ -22,31 +22,31 @@ msgstr "Se connecter"
 #: front-page.php:95
 #, fuzzy
 msgid "Zúme Training is an on-line and in-life learning experience designed for small groups who follow Jesus to learn how to obey His Great Commission and make disciples who multiply."
-msgstr "La formation Zúme est une expérience d'apprentissage en ligne et dans la vie conçue pour de petits groupes qui suivent Jésus afin qu'ils apprennent à obéir à Sa Grande Commission et à faire des disciples qui se multiplient."
+msgstr "La formation Zúme est une expérience d'apprentissage en ligne conçue pour de petits groupes qui suivent Jésus afin qu'ils apprennent à obéir à son ordre missionnaire qui est de faire des disciples qui se multiplient."
 
 #: front-page.php:114
 msgid "Zúme consists of 10 sessions, 2 hours each:"
-msgstr "Zúme se compose de 10 séances de 2 heures chacune:"
+msgstr "Zúme se compose de 10 séances de 2 heures chacune, avec :"
 
 #: front-page.php:122 template-zume-about.php:87
 msgid "Video and Audio to help your group understand basic principles of multiplying disciples."
-msgstr "Vidéo et Audio pour aider votre groupe à comprendre les principes de base de la multiplication des disciples."
+msgstr "Des vidéo et des audios pour aider votre groupe à comprendre les principes de base de la multiplication des disciples."
 
 #: front-page.php:130 template-zume-about.php:88
 msgid "Group Discussions to help your group think through what’s being shared."
-msgstr "Discussions de groupe pour aider votre groupe à réfléchir à ce qui est partagé."
+msgstr "Des discussions de groupe pour les aider à réfléchir à ce qui est partagé."
 
 #: front-page.php:138 template-zume-about.php:89
 msgid "Simple Exercises to help your group put what you’re learning into practice."
-msgstr "Exercices simples pour aider votre groupe à mettre en pratique ce que vous apprenez."
+msgstr "Des exercices simples pour aider votre groupe à mettre en pratique ce qu'ils apprennent."
 
 #: front-page.php:146 template-zume-about.php:90
 msgid "Session Challenges to help your group keep learning and growing between sessions."
-msgstr "Défis de séance pour aider votre groupe à continuer d'apprendre et de grandir entre les séances."
+msgstr "Des défis dans chaque séance pour aider votre groupe à continuer à apprendre et à grandir semaine après semaine."
 
 #: front-page.php:159
 msgid "Want to start the training?"
-msgstr "Vous voulez commencer la formation?"
+msgstr "Voulez-vous commencer la formation Zúme ?"
 
 #: front-page.php:173
 msgid "It's as easy as 1-2-3"
@@ -62,7 +62,7 @@ msgstr "Inviter des amis"
 
 #: front-page.php:202
 msgid "Host a training"
-msgstr "Organiser la formation chez soi"
+msgstr "Organiser la formation chez soi et/où en ligne"
 
 #: front-page.php:246
 msgid "Find out more about Zúme"
@@ -84,7 +84,7 @@ msgstr "Annuler"
 
 #: functions/enqueue-scripts.php:83
 msgid "Current Step:"
-msgstr "Étape actuelle"
+msgstr "Étape actuelle :"
 
 #: functions/enqueue-scripts.php:85 translations/mobile-pwa-strings.php:35
 msgid "Finish"
@@ -123,11 +123,11 @@ msgstr "Plan sur 3 mois : Projet Zúme"
 
 #: functions/enqueue-scripts.php:70
 msgid "We got it!"
-msgstr "On a compris!"
+msgstr "On a compris !"
 
 #: functions/enqueue-scripts.php:71
 msgid "We're a volunteer network, so give us a few days. We'll reach out to you soon as possible!"
-msgstr "Nous sommes un réseau de bénévoles, donnez-nous donc quelques jours. Nous vous recontacterons dès que possible!"
+msgstr "Nous sommes un réseau de bénévoles, donnez-nous donc quelques jours. Nous vous recontacterons dès que possible !"
 
 #: functions/login/zume-login.php:97 functions/login/zume-login.php:320
 msgid "Email is a required permission for login and registration."
@@ -139,7 +139,7 @@ msgstr "Aucun utilisateur n'a été trouvé"
 
 #: functions/login/zume-login.php:284 functions/login/zume-login.php:413
 msgid "You are missing your sign-in token. Try signing in again."
-msgstr "Identification ratée. Essayer de se connecter à nouveau."
+msgstr "Identification ratée. Essayer de vous connecter à nouveau."
 
 #: functions/login/zume-login.php:294 functions/login/zume-login.php:423
 msgid "Failed to connect with Facebook. Try again."
@@ -309,7 +309,7 @@ msgstr "Bienvenue à la séance"
 
 #: functions/zume-content.php:121
 msgid "Which are you doing right now?"
-msgstr "Laquelle faites-vous en ce moment?"
+msgstr "Laquelle faites-vous en ce moment ?"
 
 #: functions/zume-content.php:122
 msgid "Facilitating a Group"
@@ -321,7 +321,7 @@ msgstr "Explorer le contenu de la séance"
 
 #: functions/zume-content.php:141
 msgid "How many are with you?"
-msgstr "Combien y en a-t-il avec vous ?"
+msgstr "Combien de personnes êtes-vous ?"
 
 #: functions/enqueue-scripts.php:289 functions/zume-content.php:156
 msgid "Continue"
@@ -329,7 +329,7 @@ msgstr "Continuer"
 
 #: functions/zume-content.php:177
 msgid "Welcome to Zúme"
-msgstr "Bienvenue chez Zúme"
+msgstr "Bienvenue à Zúme !"
 
 #: functions/zume-content.php:185 translations/mobile-pwa-strings.php:23
 msgid "Download"
@@ -351,7 +351,7 @@ msgstr "Prière en groupe (5 min)"
 #: functions/zume-content.php:219
 #, fuzzy
 msgid "Begin with prayer. Spiritual insight and transformation is not possible without the Holy Spirit. Take time as a group to invite Him to guide you over this session."
-msgstr "Commencer par la prière. La perspicacité spirituelle et la transformation ne sont pas possibles sans l'Esprit Saint. Prendre le temps en groupe de l'inviter à vous guider au cours de cette séance."
+msgstr "Commencez par la prière. La perspicacité spirituelle et la transformation ne sont pas possibles sans l'Esprit Saint. Prenez le temps en groupe de l'inviter à vous guider au cours de cette séance."
 
 #: functions/zume-content.php:233 functions/zume-content.php:291
 #: functions/zume-content.php:356 functions/zume-content.php:721
@@ -363,7 +363,7 @@ msgstr "Commencer par la prière. La perspicacité spirituelle et la transformat
 #: functions/zume-content.php:3116 functions/zume-content.php:3185
 #: functions/zume-content.php:3590
 msgid "Watch and Discuss (15min)"
-msgstr "Regarder et discuter (15 min)"
+msgstr "Regardez et discutez (15 min)"
 
 #: functions/zume-content.php:241 functions/zume-content.php:299
 #: functions/zume-content.php:364 functions/zume-content.php:728
@@ -379,11 +379,11 @@ msgstr "REGARDER"
 
 #: functions/zume-content.php:243
 msgid "God uses ordinary people doing simple things to make a big impact. Watch this video on how God works."
-msgstr "Dieu utilise des gens ordinaires qui font des choses simples pour avoir un grand impact. Regarder cette vidéo sur le fonctionnement de Dieu."
+msgstr "Dieu utilise des gens ordinaires qui font des choses simples pour avoir un grand impact. Regarder cette vidéo sur la manière d'agir de Dieu."
 
 #: functions/zume-content.php:273
 msgid "Zúme Video Scripts: Welcome"
-msgstr "Script vidéo de Zúme: Bienvenue"
+msgstr "Script vidéo de Zúme : Bienvenue !"
 
 #: functions/zume-content.php:279 functions/zume-content.php:339
 #: functions/zume-content.php:406 functions/zume-content.php:774
@@ -403,12 +403,12 @@ msgstr "DISCUTER"
 #: functions/zume-content.php:281
 #, fuzzy
 msgid "If Jesus intended every one of His followers to obey His Great Commission, why do so few actually make disciples?"
-msgstr "Si Jésus voulait que chacun de ses disciples obéisse à Sa Grande Commission, pourquoi si peu d'entre eux font-ils réellement des disciples?"
+msgstr "Si Jésus voulait que chacun de ses disciples obéisse à son ordre missionnaire, pourquoi si peu d'entre eux font-ils réellement des disciples ?"
 
 #: functions/zume-content.php:301
 #, fuzzy
 msgid "What is a disciple? And how do you make one? How do you teach a follower of Jesus to do what He told us in His Great Commission – to obey all of His commands?"
-msgstr "Qu'est-ce qu'un disciple ? Et comment en faire un ? Comment enseigner à un disciple de Jésus à faire ce qu'Il nous a dit dans Sa Grande Commission : obéir à tous ses commandements ?"
+msgstr "Qu'est-ce qu'un disciple ? Et comment en faire un ? Comment enseigner à un disciple de Jésus à faire ce qu'Il nous a dit dans son ordre missionnaire ? Comment obéir à tous ses commandements ?"
 
 #: functions/zume-content.php:333
 msgid "Zúme Video Scripts: Teach Them to Obey"
@@ -421,15 +421,15 @@ msgstr "Quand vous pensez à une église, qu'est-ce qui vous vient à l'esprit ?
 #: functions/zume-content.php:343
 #, fuzzy
 msgid "What's the difference between that picture and what's described in the video as a \"Simple Church\"?"
-msgstr "Quelle est la différence entre cette image et ce qui est décrit dans la vidéo comme une «Église simple»?"
+msgstr "Quelle est la différence entre notre conception de l'église et ce qui est décrit dans la vidéo comme étant un \"groupe de maison\" ou une \"église simple\"?"
 
 #: functions/zume-content.php:345
 msgid "Which one do you think would be easier to multiply and why?"
-msgstr "D'après vous, laquelle serait plus facile à multiplier et pourquoi?"
+msgstr "D'après vous, laquelle serait plus facile à multiplier et pourquoi ?"
 
 #: functions/zume-content.php:366
 msgid "We breathe in. We breathe out. We're alive. Spiritual Breathing is like that, too."
-msgstr "On inspire. On expire. On est en vie. La respiration spirituelle est comme ça aussi."
+msgstr "On inspire. On expire. On est en vie. La respiration spirituelle ressemble à cela aussi."
 
 #: functions/zume-content.php:399
 msgid "Zúme Video Scripts: Spiritual Breathing"
@@ -437,17 +437,17 @@ msgstr "Script vidéo de Zúme : Respiration spirituelle"
 
 #: functions/zume-content.php:409
 msgid "Why is it essential to learn to hear and recognize God's voice?"
-msgstr "Pourquoi est-il essentiel d'apprendre à entendre et à reconnaître la voix de Dieu?"
+msgstr "Pourquoi est-il essentiel d'apprendre à entendre et à reconnaître la voix de Dieu ?"
 
 #: functions/zume-content.php:410
 msgid "Is hearing and responding to the Lord really like breathing? Why or why not?"
-msgstr "Est-ce que entendre et répondre au Seigneur ressemble vraiment à la respiration? Pourquoi ou pourquoi pas ?"
+msgstr "Est-ce qu'entendre et répondre au Seigneur ressemble vraiment à la respiration ? Pourquoi ou pourquoi pas ?"
 
 #: functions/zume-content.php:421 functions/zume-content.php:489
 #: functions/zume-content.php:903 functions/zume-content.php:1543
 #: functions/zume-content.php:1846 functions/zume-content.php:3649
 msgid "Listen and Read Along (3min)"
-msgstr "Écouter et lire"
+msgstr "Écouter et lire (3mn)"
 
 #: functions/zume-content.php:429 functions/zume-content.php:497
 #: functions/zume-content.php:800 functions/zume-content.php:909
@@ -2837,11 +2837,11 @@ msgstr "BIENVENUE CHEZ ZÚME : Voir comment Dieu utilise les gens ordinaires fai
 
 #: template-zume-overview.php:297
 msgid "TEACH THEM TO OBEY — Discover the essence of being a disciple, making a disciple, and what is the church."
-msgstr "ENSEIGNEZ-LEUR À OBÉIR : Découvrir l'essence d'être disciple, de faire un disciple, et ce qu'est l'église."
+msgstr "ENSEIGNEZ-LEUR À OBÉIR : Découvrez l'essence d'être un disciple, de faire un disciple, et la définition de l'église."
 
 #: template-zume-overview.php:308
 msgid "SPIRITUAL BREATHING — Being a disciple means we hear from God and we obey God."
-msgstr "RESPIRATION SPIRITUELLE : Être disciple signifie que nous entendons Dieu parler et que nous obéissons à Dieu."
+msgstr "RESPIRATION SPIRITUELLE : Être disciple signifie que nous entendons Dieu parler et que nous lui obéissons."
 
 #: template-zume-overview.php:319 template-zume-overview.php:426
 #: template-zume-overview.php:561 template-zume-overview.php:683
@@ -3522,7 +3522,7 @@ msgstr "15 min"
 #: template-gmo.php:212 template-how-to-follow-jesus.php:140
 #: template-zume-training.php:178
 msgid "Discover the essence of being a disciple, making a disciple, and what is the church."
-msgstr "Découvrir l'essence d'être un disciple, de faire un disciple et de ce qu'est l'église."
+msgstr "Découvrez l'essence d'être un disciple, de faire un disciple, et la définition de l'église."
 
 #: template-gmo.php:237 template-how-to-follow-jesus.php:165
 #: template-zume-training.php:191
@@ -3841,7 +3841,7 @@ msgstr "Définition simple du disciple et de l'église"
 #: functions/enqueue-scripts.php:218 template-gmo.php:236
 #: template-how-to-follow-jesus.php:164 template-zume-training.php:186
 msgid "Spiritual Breathing is Hearing and Obeying God"
-msgstr "La respiration spirituelle, c'est entendre Dieu et lui obéir  "
+msgstr "La respiration spirituelle, c'est entendre Dieu et lui obéir"
 
 #: functions/enqueue-scripts.php:219 template-gmo.php:253
 #: template-how-to-follow-jesus.php:181 template-zume-training.php:199
