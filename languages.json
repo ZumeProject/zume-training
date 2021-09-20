@@ -21,6 +21,13 @@
     "rtl": true
   },
   {
+    "enDisplayName": "American Sign Language",
+    "code": "asl",
+    "locale": "asl",
+    "nativeName": "Sign Language",
+    "rtl": false
+  },
+  {
     "enDisplayName": "Bhojpuri",
     "code": "bho",
     "locale": "bho",
@@ -133,6 +140,13 @@
     "rtl": false
   },
   {
+    "enDisplayName": "Maithili",
+    "code": "mai",
+    "locale": "mai",
+    "nativeName": "\uD805\uDCA7\uD805\uDCBB\uD805\uDC9F\uD805\uDCB1\uD805\uDCAA\uD805\uDCB2",
+    "rtl": false
+  },
+  {
     "enDisplayName": "Mandarin (Traditional)",
     "code": "zhtw",
     "locale": "zh_TW",
@@ -146,6 +160,7 @@
     "nativeName": "国语（简体)",
     "rtl": false
   },
+
   {
     "enDisplayName": "Marathi",
     "code": "mr",
