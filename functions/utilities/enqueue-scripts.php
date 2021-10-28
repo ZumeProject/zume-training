@@ -361,7 +361,13 @@ function zume_site_scripts() {
                         'x93' => __( 'Add Group', 'zume' ),
                         'x94' => __( 'Group Name', 'zume' ),
                         'x95' => __( 'delete', 'zume' ),
-
+                        'x96' => __( 'How can we serve you?', 'zume' ),
+                        'x97' => __( 'I want to be coached', 'zume' ),
+                        'x98' => __( 'I need technical assistance', 'zume' ),
+                        'x99' => __( 'I\'ve gone through the training but need advice on implementation', 'zume' ),
+                        'x100' => __( 'I have a question about the content that I need to talk to somebody else about', 'zume' ),
+                        'x101' => __( 'I have a group started and need to know where do I go next', 'zume' ),
+                        'x102' => __( 'Other', 'zume' ),
                     )
                 )
             )

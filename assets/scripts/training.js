@@ -1477,6 +1477,21 @@ function write_request_form() {
                          name="zume_affiliation_key" placeholder="" />
               </td>
           </tr>
+          <tr style="display: none">
+            <td style="vertical-align: top;">
+                <label for="zume_coaching_preference">${_.escape( i18n.str.x96 )/*Affiliation Notes*/}</label>
+            </td>
+            <td>
+                <select id="zume_coaching_preference">
+                    <option value="coaching">${_.escape( i18n.str.x97 )/*I want to be coached.*/}</option>
+                    <option value="technical_assistance">${_.escape( i18n.str.x98 )/*I need technical assistance.*/}</option>
+                    <option value="advice_on_implementation">${_.escape( i18n.str.x99 )/*I've gone through the training but need advice on implementation.*/}</option>
+                    <option value="content_question">${_.escape( i18n.str.x100 )/*I have a question about the content that I need to talk to somebody else about.*/}</option>
+                    <option value="group_started">${_.escape( i18n.str.x101 )/*I have a group started and need to know where do I go next.*/}</option>
+                    <option value="other">${_.escape( i18n.str.x102 )/*Other*/}</option>
+                </select>
+            </td>
+        </tr>
       </table>
       <div data-abide-error  class="alert alert-box" style="display:none;" id="alert">
           <strong>${_.escape( i18n.str.x90 )/*Oh snap!*/}</strong>
@@ -1639,6 +1654,7 @@ function send_coaching_request() {
   let preference = jQuery('input.zume_contact_preference:checked').val()
   let language_preference = jQuery('#language_preference').val()
   let affiliation_key = jQuery('#zume_affiliation_key').val()
+  let coaching_preference = jQuery('#zume_coaching_preference option:selected').text()
 
   /**************/
   // Get address
@@ -1674,7 +1690,8 @@ function send_coaching_request() {
     "location_grid_meta": location_grid_meta,
     "language_preference": language_preference,
     "preference": preference,
-    "affiliation_key": affiliation_key
+    "affiliation_key": affiliation_key,
+    // "coaching_preference": coaching_preference,
   }
 
   API.coaching_request( data ).done( function(data) {
