@@ -4,7 +4,7 @@ const i18n = zumeTraining.translations;
 /**
  * PANEL LOADER
  */
-jQuery(document).ready(function(){
+jQuery(document).ready(function($){
 
   if( ! window.location.hash || '#panel1' === window.location.hash ) {
     console.log(zumeTraining)
@@ -1478,19 +1478,40 @@ function write_request_form() {
               </td>
           </tr>
           <tr style="display: none">
-            <td style="vertical-align: top;">
-                <label for="zume_coaching_preference">${_.escape( i18n.str.x96 )/*Affiliation Notes*/}</label>
-            </td>
-            <td>
-                <select id="zume_coaching_preference">
-                    <option value="coaching">${_.escape( i18n.str.x97 )/*I want to be coached.*/}</option>
-                    <option value="technical_assistance">${_.escape( i18n.str.x98 )/*I need technical assistance.*/}</option>
-                    <option value="advice_on_implementation">${_.escape( i18n.str.x99 )/*I've gone through the training but need advice on implementation.*/}</option>
-                    <option value="content_question">${_.escape( i18n.str.x100 )/*I have a question about the content that I need to talk to somebody else about.*/}</option>
-                    <option value="group_started">${_.escape( i18n.str.x101 )/*I have a group started and need to know where do I go next.*/}</option>
-                    <option value="other">${_.escape( i18n.str.x102 )/*Other*/}</option>
-                </select>
-            </td>
+              <td style="vertical-align: top;">
+                  <label for="zume_coaching_preference">${_.escape( i18n.str.x96 )/*Affiliation Notes*/}</label>
+              </td>
+              <td>
+                  <fieldset>
+                      <label>
+                          <input name="zume_coaching_preference" class="zume_coaching_preference" type="checkbox" value="coaching" checked data-abide-ignore>
+                          <span id="zume_coaching_preference_coaching">${_.escape( i18n.str.x97 )/*I want to be coached.*/}</span>
+                      </label>
+                      <label>
+                          <input name="zume_coaching_preference" class="zume_coaching_preference" type="checkbox" value="technical_assistance" data-abide-ignore>
+                          <span id="zume_coaching_preference_technical_assistance">${_.escape( i18n.str.x98 )/*I need technical assistance.*/}</span>
+                      </label>
+                      <label>
+                          <input name="zume_coaching_preference" class="zume_coaching_preference" type="checkbox" value="advice_on_implementation" data-abide-ignore>
+                          <span id="zume_coaching_preference_advice_on_implementation">${_.escape( i18n.str.x99 )/*I've gone through the training but need advice on implementation.*/}</span>
+                      </label>
+                      <label>
+                          <input name="zume_coaching_preference" class="zume_coaching_preference" type="checkbox" value="content_question" data-abide-ignore>
+                          <span id="zume_coaching_preference_content_question">${_.escape( i18n.str.x100 )/*I have a question about the content that I need to talk to somebody else about.*/}</span>
+                      </label>
+                      <label>
+                          <input name="zume_coaching_preference" class="zume_coaching_preference" type="checkbox" value="group_started" data-abide-ignore>
+                          <span id="zume_coaching_preference_group_started">${_.escape( i18n.str.x101 )/*I have a group started and need to know where do I go next.*/}</span>
+                      </label>
+                      <label style="display: flex; align-items:center">
+                          <input name="zume_coaching_preference" class="zume_coaching_preference" type="checkbox" value="other" data-abide-ignore style="margin-bottom:2px;margin-top:0">
+                          <div style="margin-inline-end:10px; margin-inline-start: 2px">
+                            <span id="zume_coaching_preference_other">${_.escape( i18n.str.x102 )/*Other.*/}:</span>
+                          </div>
+                          <input name="zume_coaching_preference_other_text" id="zume_coaching_preference_other_text" type="text" style="display:inline-block; margin-bottom: 0">
+                      </label>
+                  </fieldset>
+              </td>
         </tr>
       </table>
       <div data-abide-error  class="alert alert-box" style="display:none;" id="alert">
@@ -1654,7 +1675,15 @@ function send_coaching_request() {
   let preference = jQuery('input.zume_contact_preference:checked').val()
   let language_preference = jQuery('#language_preference').val()
   let affiliation_key = jQuery('#zume_affiliation_key').val()
-  let coaching_preference = jQuery('#zume_coaching_preference option:selected').text()
+  let coaching_preferences = [];
+  jQuery('.zume_coaching_preference:checked').each((i,v)=>{
+    let value = jQuery(v).val()
+    let text = jQuery('#zume_coaching_preference_' + value).text()
+    if ( value === "other"){
+       text += ' ' + jQuery('#zume_coaching_preference_other_text').val();
+    }
+    coaching_preferences.push( text )
+  })
 
   /**************/
   // Get address
@@ -1691,7 +1720,7 @@ function send_coaching_request() {
     "language_preference": language_preference,
     "preference": preference,
     "affiliation_key": affiliation_key,
-    // "coaching_preference": coaching_preference,
+    // "coaching_preference": coaching_preferences.join(',\n'),
   }
 
   API.coaching_request( data ).done( function(data) {

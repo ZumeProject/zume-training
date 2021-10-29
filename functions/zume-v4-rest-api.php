@@ -363,12 +363,12 @@ class Zume_V4_REST_API {
             'preference' => sanitize_text_field( wp_unslash( $params['preference'] ) ),
             'language_preference' => sanitize_text_field( wp_unslash( $params['language_preference'] ) ),
             'affiliation_key' => sanitize_text_field( wp_unslash( $params['affiliation_key'] ) ),
-            'coaching_preference' => sanitize_text_field( wp_unslash( $params['coaching_preference'] ?? "" ) ),
+            'coaching_preference' => wp_kses_post( $params['coaching_preference'] ?? "" ),
         );
         $notes = [
             'preference' => 'Requested contact method is: ' .$args['preference'],
             'affiliation' => 'Requested affiliation is: ' . $args['affiliation_key'],
-            "coaching_preference" => 'Coaching Preference is: ' . $args['coaching_preference'],
+            "coaching_preference" => "Coaching Preference is:\n" . $args['coaching_preference'],
         ];
         $zume_foreign_key = self::get_foreign_key( $user_id );
 
