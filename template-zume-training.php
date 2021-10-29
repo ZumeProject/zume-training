@@ -5,9 +5,11 @@ Template Name: Training
 
 
 get_header();
-
+$zendesk_enable = false;
+if ( is_user_logged_in() ) {
+    $zendesk_enable = true;
+}
 if ( isset( $_GET['iframe'] ) && ! empty( $_GET['iframe'] ) ) {
-    $zendesk_enable = false;
     ?>
     <style>
         #top-bar {
@@ -21,12 +23,9 @@ if ( isset( $_GET['iframe'] ) && ! empty( $_GET['iframe'] ) ) {
         }
     </style>
     <?php
-} else {
-    $zendesk_enable = true;
 }
 
 $current_language = zume_current_language();
-
 ?>
 
 <div class="training">

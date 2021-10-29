@@ -3,7 +3,11 @@
 Template Name: Zúme Dashboard
 */
 zume_force_login();
-$zendesk_enable = true;
+
+$zendesk_enable = false;
+if ( is_user_logged_in() ) {
+    $zendesk_enable = true;
+}
 
 if ( ! empty( $_POST ) ) { // test if post submitted
     // validate nonce
@@ -1029,7 +1033,7 @@ foreach ( $zume_user_meta as $zume_key => $v ) {
             <form data-abide method="post">
                 <?php wp_nonce_field( get_current_user_id(), 'zume_nonce' ) ?>
                 <h1><?php echo esc_html__( 'Edit Group', 'zume' ) ?></h1>
-                <p><?php esc_html_e('You are the owner of this group. All changes to the group details must be done through 
+                <p><?php esc_html_e('You are the owner of this group. All changes to the group details must be done through
                 you.', 'zume') ?></p>
                 <hr>
 
@@ -1233,8 +1237,8 @@ if ( ! empty( $zume_colead_groups ) ) : // reset variable without coleader data
                     <h1><?php echo esc_html__( 'View Group', 'zume' ) ?></h1>
 
                     <p>
-                        <?php esc_html_e( 'You are a participant or coleader of this group and can view the group 
-                        details and lead the group through a session, but cannot change the details of the group or add 
+                        <?php esc_html_e( 'You are a participant or coleader of this group and can view the group
+                        details and lead the group through a session, but cannot change the details of the group or add
                         participants. Please, make change requests through the group owner.', 'zume' ) ?>
                     </p>
                     <hr>
