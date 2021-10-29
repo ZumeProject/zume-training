@@ -4,6 +4,10 @@ Template Name: Pieces Page
 */
 get_header();
 
+$zendesk_enable = false;
+if ( is_user_logged_in() ) {
+    $zendesk_enable = true;
+}
 
 if (have_posts()) :
     while (have_posts()) : the_post();
