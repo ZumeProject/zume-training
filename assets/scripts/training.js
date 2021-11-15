@@ -1477,7 +1477,7 @@ function write_request_form() {
                          name="zume_affiliation_key" placeholder="" />
               </td>
           </tr>
-          <tr style="display: none">
+          <tr>
               <td style="vertical-align: top;">
                   <label for="zume_coaching_preference">${_.escape( i18n.str.x96 )/*Affiliation Notes*/}</label>
               </td>
@@ -1720,7 +1720,7 @@ function send_coaching_request() {
     "language_preference": language_preference,
     "preference": preference,
     "affiliation_key": affiliation_key,
-    // "coaching_preference": coaching_preferences.join(',\n'),
+    "coaching_preference": coaching_preferences.join(',\n'),
   }
 
   API.coaching_request( data ).done( function(data) {
