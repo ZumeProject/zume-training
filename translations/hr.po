@@ -1540,8 +1540,8 @@ msgid "COMPLETE"
 msgstr "ZAVRŠI"
 
 #: functions/zume-content.php:3332
-msgid "Use the rest of your time to complete the Three Month Plan worksheet. You can write it out on a piece of paper. If you are logged in to ZúmeProject.com you can fill out your form digitally and link it to your group. Once you login, you’ll find the Three Month Plan under Settings. You can also find the Three Month Plan on your Dashboard."
-msgstr "Upotrijebite ostatak vremena za popunjavanje Tromjesečnog plana. Možete to sastaviti na papiru. Ako ste prijavljeni na ZúmeProject.com, možete popuniti obrazac online i povezati ga sa svojom grupom. Jednom kada se prijavite, u postavkama ćete pronaći Tromjesečni plan. Tromjesečni plan možete pronaći i na svojoj Nadzornoj ploči."
+msgid "Use the rest of your time to complete the Three Month Plan worksheet. You can write it out on a piece of paper. If you are logged in to Zúme.Training you can fill out your form digitally and link it to your group. Once you login, you’ll find the Three Month Plan under Settings. You can also find the Three Month Plan on your Dashboard."
+msgstr "Upotrijebite ostatak vremena za popunjavanje Tromjesečnog plana. Možete to sastaviti na papiru. Ako ste prijavljeni na Zúme.Training, možete popuniti obrazac online i povezati ga sa svojom grupom. Jednom kada se prijavite, u postavkama ćete pronaći Tromjesečni plan. Tromjesečni plan možete pronaći i na svojoj Nadzornoj ploči."
 
 #: functions/zume-content.php:3335
 msgid "You do not have to commit to every item, and there is room for other items not already on the list. Do your best to align your commitments to what you have heard God reveal to you about His will."

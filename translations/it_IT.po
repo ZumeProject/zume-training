@@ -1584,8 +1584,8 @@ msgid "COMPLETE"
 msgstr "COMPLETARE"
 
 #: functions/zume-content.php:3332
-msgid "Use the rest of your time to complete the Three Month Plan worksheet. You can write it out on a piece of paper. If you are logged in to ZúmeProject.com you can fill out your form digitally and link it to your group. Once you login, you’ll find the Three Month Plan under Settings. You can also find the Three Month Plan on your Dashboard."
-msgstr "Usate il resto del tempo per completare il modulo del Piano Trimestrale. Potete trascriverlo su un foglio di carta. Se avete effettuato l'accesso a ZúmeProject.com potete compilare il modulo in formato digitale e collegarlo al vostro gruppo. Una volta effettuato l'accesso, troverete il Piano Trimestrale in Impostazioni. Potete anche trovare il Piano Trimestrale nella vostra Bacheca."
+msgid "Use the rest of your time to complete the Three Month Plan worksheet. You can write it out on a piece of paper. If you are logged in to Zúme.Training you can fill out your form digitally and link it to your group. Once you login, you’ll find the Three Month Plan under Settings. You can also find the Three Month Plan on your Dashboard."
+msgstr "Usate il resto del tempo per completare il modulo del Piano Trimestrale. Potete trascriverlo su un foglio di carta. Se avete effettuato l'accesso a Zúme.Training potete compilare il modulo in formato digitale e collegarlo al vostro gruppo. Una volta effettuato l'accesso, troverete il Piano Trimestrale in Impostazioni. Potete anche trovare il Piano Trimestrale nella vostra Bacheca."
 
 #: functions/zume-content.php:3335
 msgid "You do not have to commit to every item, and there is room for other items not already on the list. Do your best to align your commitments to what you have heard God reveal to you about His will."

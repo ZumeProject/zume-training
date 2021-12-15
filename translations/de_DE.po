@@ -1566,7 +1566,7 @@ msgstr "FERTIGSTELLEN"
 #. 
 #. https://zume.training/three-month-plan/
 #: functions/zume-content.php:3332
-msgid "Use the rest of your time to complete the Three Month Plan worksheet. You can write it out on a piece of paper. If you are logged in to ZúmeProject.com you can fill out your form digitally and link it to your group. Once you login, you’ll find the Three Month Plan under Settings. You can also find the Three Month Plan on your Dashboard."
+msgid "Use the rest of your time to complete the Three Month Plan worksheet. You can write it out on a piece of paper. If you are logged in to Zúme.Training you can fill out your form digitally and link it to your group. Once you login, you’ll find the Three Month Plan under Settings. You can also find the Three Month Plan on your Dashboard."
 msgstr "Nutzt den Rest der Zeit dafür, an eurem Dreimonatsplan zu arbeiten. Ihr könnt ihn auch zuerst von Hand erstellen. Wenn ihr auf der Zúme-Website eingeloggt seid, könnt ihr ihn unter https://zume.training/three-month-plan/ ins digitale Formular übertragen und ihn mit eurer Gruppe verknüpfen. Ihr findet den Dreimonatsplan auch unter > EINSTELLUNGEN oder auf dem Dashboard."
 
 #: functions/zume-content.php:3335

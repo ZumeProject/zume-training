@@ -1571,7 +1571,7 @@ msgid "COMPLETE"
 msgstr "ਪੂਰਾ ਕਰੋ"
 
 #: functions/zume-content.php:3332
-msgid "Use the rest of your time to complete the Three Month Plan worksheet. You can write it out on a piece of paper. If you are logged in to ZúmeProject.com you can fill out your form digitally and link it to your group. Once you login, you’ll find the Three Month Plan under Settings. You can also find the Three Month Plan on your Dashboard."
+msgid "Use the rest of your time to complete the Three Month Plan worksheet. You can write it out on a piece of paper. If you are logged in to Zúme.Training you can fill out your form digitally and link it to your group. Once you login, you’ll find the Three Month Plan under Settings. You can also find the Three Month Plan on your Dashboard."
 msgstr "ਆਪਣੇ ਬਾਕੀ ਦੇ ਸਮੇਂ ਨੂੰ ਆਪਣੀ ਤਿੰਨ ਮਹੀਨੇ ਦੀ ਯੋਜਨਾ ਵਰਕਸ਼ੀਟ ਨੂੰ ਪੂਰਾ ਕਰਨ ਲਈ ਖਰਚ ਕਰੋ। ਤੁਸੀਂ ਇਸ ਨੂੰ ਇੱਕ ਕਾਗਜ਼ ਦੇ ਟੁੱਕੜੇ ਤੇ ਲਿਖ ਸਕਦੇ ਹੋ। ਜੇਕਰ ਤੁਸੀਂ ZumeProject.com ਤੇ ਲੋਗਿਨ ਕੀਤਾ ਹੈ ਤੁਸੀਂ ਡੀਜ਼ੀਟਲ ਵੀ ਫਾਰਮ ਨੂੰ ਭਰ ਸਕਦੇ ਅਤੇ ਆਪਣੇ ਸਮੂਹ ਨੂੰ ਲਿੰਕ ਕਰ ਸਕਦੇ ਹੋ। ਇੱਕ ਵਾਰ ਜਦੋਂ ਤੁਸੀਂ ਲੋਗਿਨ ਕਰ ਲਿਆ, ਤਾਂ ਤੁਹਾਨੂੰ ਸੈਂਟਿੰਗ ਦੇ ਹੇਠਾਂ ਤਿੰਨ ਮਹੀਨੇ ਦੀ ਯੋਜਨਾ ਮਿਲੇਗੀ। ਤੁਸੀਂ ਆਪਣੇ ਡੈਸ਼ਬੋਰਡ ਤੇ ਵੀ ਤਿੰਨ ਮਹੀਨੇ ਦੀ ਯੋਜਨਾ ਨੂੰ ਪਾ ਸਕਦੇ ਹੋ।"
 
 #: functions/zume-content.php:3335

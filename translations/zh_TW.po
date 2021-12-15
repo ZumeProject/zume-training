@@ -1540,7 +1540,7 @@ msgid "COMPLETE"
 msgstr "總結"
 
 #: functions/zume-content.php:3332
-msgid "Use the rest of your time to complete the Three Month Plan worksheet. You can write it out on a piece of paper. If you are logged in to ZúmeProject.com you can fill out your form digitally and link it to your group. Once you login, you’ll find the Three Month Plan under Settings. You can also find the Three Month Plan on your Dashboard."
+msgid "Use the rest of your time to complete the Three Month Plan worksheet. You can write it out on a piece of paper. If you are logged in to Zúme.Training you can fill out your form digitally and link it to your group. Once you login, you’ll find the Three Month Plan under Settings. You can also find the Three Month Plan on your Dashboard."
 msgstr "用僅剩的時間完成個人的「三個月規劃表」﹐可以寫在一張紙上。如果你們已經登入ZumeProject.com﹐也可以在網路上填寫﹐然後連結到你自己的小組。登入網站之後﹐可以在設定裡面找到「三個月規劃表」﹐也可以在工具板裡面找到「三個月規劃表」。"
 
 #: functions/zume-content.php:3335

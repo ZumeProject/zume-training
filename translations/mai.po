@@ -1554,8 +1554,8 @@ msgid "COMPLETE"
 msgstr "पूरा करू"
 
 #: functions/zume-content.php:3332
-msgid "Use the rest of your time to complete the Three Month Plan worksheet. You can write it out on a piece of paper. If you are logged in to ZúmeProject.com you can fill out your form digitally and link it to your group. Once you login, you’ll find the Three Month Plan under Settings. You can also find the Three Month Plan on your Dashboard."
-msgstr "तीन माह कि योजना काज पत्रक कऽ पूर्ण करऽ केँ लेल अपन शेष समय उपयोग करू।अहाँ ई कागज केँ टुकड़ी पर लिख सकय छी। अगर अहाँ ज़ूमेप्रोजेक्टर.कॉम (ZúmeProject.com) मे लॉग इन सकय छी ते अहाँ  अपन हां अपन फार्म केँ डिजिटल रूप सँ भर सकय छी आ ई समूह सँ जुड़ सकय छी एक बेर जखन अहाँ लॉगिन भऽ जाय छी ,अहुँ केँ सेटिंग केँ तहत तीन महीने कि योजना मिल जायत।अहाँ अपन डैशबोर्ड पर तीन महीनेक योजना केँ भेट सकय यौ।"
+msgid "Use the rest of your time to complete the Three Month Plan worksheet. You can write it out on a piece of paper. If you are logged in to Zúme.Training you can fill out your form digitally and link it to your group. Once you login, you’ll find the Three Month Plan under Settings. You can also find the Three Month Plan on your Dashboard."
+msgstr "तीन माह कि योजना काज पत्रक कऽ पूर्ण करऽ केँ लेल अपन शेष समय उपयोग करू।अहाँ ई कागज केँ टुकड़ी पर लिख सकय छी। अगर अहाँ ज़ूमेप्रोजेक्टर.कॉम (Zúme.Training) मे लॉग इन सकय छी ते अहाँ  अपन हां अपन फार्म केँ डिजिटल रूप सँ भर सकय छी आ ई समूह सँ जुड़ सकय छी एक बेर जखन अहाँ लॉगिन भऽ जाय छी ,अहुँ केँ सेटिंग केँ तहत तीन महीने कि योजना मिल जायत।अहाँ अपन डैशबोर्ड पर तीन महीनेक योजना केँ भेट सकय यौ।"
 
 #: functions/zume-content.php:3335
 msgid "You do not have to commit to every item, and there is room for other items not already on the list. Do your best to align your commitments to what you have heard God reveal to you about His will."

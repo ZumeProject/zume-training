@@ -1573,8 +1573,8 @@ msgid "COMPLETE"
 msgstr "완성"
 
 #: functions/zume-content.php:3332
-msgid "Use the rest of your time to complete the Three Month Plan worksheet. You can write it out on a piece of paper. If you are logged in to ZúmeProject.com you can fill out your form digitally and link it to your group. Once you login, you’ll find the Three Month Plan under Settings. You can also find the Three Month Plan on your Dashboard."
-msgstr "아래 시간에는 3개월 계획표를 작성하십시오. 종이에  적어도 됩니다. ZúmeProject.com에 로그인을 한 경우, 디지털 양식을 작성하여 그룹과 연결할 수 있습니다. 로그인하면 설정 아래 부분에 있는 3 개월 계획이 보입니다.  3 개월 계획은 대시 보드에서도 찾아볼 수 있습니다."
+msgid "Use the rest of your time to complete the Three Month Plan worksheet. You can write it out on a piece of paper. If you are logged in to Zúme.Training you can fill out your form digitally and link it to your group. Once you login, you’ll find the Three Month Plan under Settings. You can also find the Three Month Plan on your Dashboard."
+msgstr "아래 시간에는 3개월 계획표를 작성하십시오. 종이에  적어도 됩니다. Zúme.Training에 로그인을 한 경우, 디지털 양식을 작성하여 그룹과 연결할 수 있습니다. 로그인하면 설정 아래 부분에 있는 3 개월 계획이 보입니다.  3 개월 계획은 대시 보드에서도 찾아볼 수 있습니다."
 
 #: functions/zume-content.php:3335
 msgid "You do not have to commit to every item, and there is room for other items not already on the list. Do your best to align your commitments to what you have heard God reveal to you about His will."

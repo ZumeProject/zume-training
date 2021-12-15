@@ -1618,7 +1618,7 @@ msgid "COMPLETE"
 msgstr "पूरा करी।"
 
 #: functions/zume-content.php:3332
-msgid "Use the rest of your time to complete the Three Month Plan worksheet. You can write it out on a piece of paper. If you are logged in to ZúmeProject.com you can fill out your form digitally and link it to your group. Once you login, you’ll find the Three Month Plan under Settings. You can also find the Three Month Plan on your Dashboard."
+msgid "Use the rest of your time to complete the Three Month Plan worksheet. You can write it out on a piece of paper. If you are logged in to Zúme.Training you can fill out your form digitally and link it to your group. Once you login, you’ll find the Three Month Plan under Settings. You can also find the Three Month Plan on your Dashboard."
 msgstr "तीन महीना के योजना के काम पूरा करे खातीर आपन बाकी समय लागू करी। रऊवा एकरा के एगो कागज के टुकड़ा \n"
 "पर लिख सकत बानी। जदीं रऊवा ज़ूमे प्रोजेक्ट काम में लॉन इनकइले बानी त रऊवा आपन फारम के डिजिटल तरीका से भर सकत बानी अऊर एकरा के समूह से जोड़ सकत बानी। एक बेर जब रऊवा लॉग इन हो जाई ला रऊवा के सेटिंग के जईसन तीन महिना के योजना मिल जाई। रऊवा आपन डैश बोर्ड पर भी तीन महिना के योजना के पा सकत बानी।"
 

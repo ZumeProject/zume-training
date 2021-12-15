@@ -1898,7 +1898,7 @@ msgstr "সমাপ্ত করুন"
 
 #: functions/zume-content.php:3332
 #, fuzzy
-msgid "Use the rest of your time to complete the Three Month Plan worksheet. You can write it out on a piece of paper. If you are logged in to ZúmeProject.com you can fill out your form digitally and link it to your group. Once you login, you’ll find the Three Month Plan under Settings. You can also find the Three Month Plan on your Dashboard."
+msgid "Use the rest of your time to complete the Three Month Plan worksheet. You can write it out on a piece of paper. If you are logged in to Zúme.Training you can fill out your form digitally and link it to your group. Once you login, you’ll find the Three Month Plan under Settings. You can also find the Three Month Plan on your Dashboard."
 msgstr "তিন মাসের পরিকল্পনার কার্যপত্রকটি শেষ করতে আপনার বাকী সময়টি ব্যবহার করুন। আপনি সেটি এক টুকরো কাগজে লিখতে পারেন। আপনি যদি www.ZumeProject.com-এ লগ করে থাকেন তাহলে সেখানেই আপনি ফর্ম পূরণ করে আপনার দলের সঙ্গে লিঙ্ক করতে পারেন। একবার আপনি যখন  লগইন করবেন, আপনি সেটিং-এর মধ্যে তিন মাসের পরিকল্পনা পাবেন। আপনি তিন মাসের পরিকল্পনা আপনার ড্যাশবোর্ডেও পেতে পারেন।"
 
 #: functions/zume-content.php:3335

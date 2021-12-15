@@ -1571,8 +1571,8 @@ msgid "COMPLETE"
 msgstr "DUKA"
 
 #: functions/zume-content.php:3332
-msgid "Use the rest of your time to complete the Three Month Plan worksheet. You can write it out on a piece of paper. If you are logged in to ZúmeProject.com you can fill out your form digitally and link it to your group. Once you login, you’ll find the Three Month Plan under Settings. You can also find the Three Month Plan on your Dashboard."
-msgstr "Yi amfani da sauran lokacinku dan kammala jerin takarda Tsarin Watanni Uku. Kuna iya rubuta shi akan takarda. Idan ka shiga ZúmeProject.com zaka iya cike fom ɗin naka cikin lambobi kuma danganta shi zuwa ga rukunin ku. Da zarar ka shiga, za ka ga Tsarin Watanni Uku a karkashin Saiti. Hakanan zaka iya samun Tsarin Watan Uku akan Dandalin."
+msgid "Use the rest of your time to complete the Three Month Plan worksheet. You can write it out on a piece of paper. If you are logged in to Zúme.Training you can fill out your form digitally and link it to your group. Once you login, you’ll find the Three Month Plan under Settings. You can also find the Three Month Plan on your Dashboard."
+msgstr "Yi amfani da sauran lokacinku dan kammala jerin takarda Tsarin Watanni Uku. Kuna iya rubuta shi akan takarda. Idan ka shiga Zúme.Training zaka iya cike fom ɗin naka cikin lambobi kuma danganta shi zuwa ga rukunin ku. Da zarar ka shiga, za ka ga Tsarin Watanni Uku a karkashin Saiti. Hakanan zaka iya samun Tsarin Watan Uku akan Dandalin."
 
 #: functions/zume-content.php:3335
 msgid "You do not have to commit to every item, and there is room for other items not already on the list. Do your best to align your commitments to what you have heard God reveal to you about His will."

@@ -1571,8 +1571,8 @@ msgid "COMPLETE"
 msgstr "ముగించండి"
 
 #: functions/zume-content.php:3332
-msgid "Use the rest of your time to complete the Three Month Plan worksheet. You can write it out on a piece of paper. If you are logged in to ZúmeProject.com you can fill out your form digitally and link it to your group. Once you login, you’ll find the Three Month Plan under Settings. You can also find the Three Month Plan on your Dashboard."
-msgstr "మూడు నెలల ప్రణాళికా పత్రమును పూర్తి చేయడం కొరకు మీ యొక్క మిగిలిన సమయాన్ని ఉపయోగించండి. దాన్ని కాగితం ముక్కపై రాసుకోవచ్చు. మీరు ZúmeProject.com లో లాగిన్ (ప్రవేశించితే) అయితే మీ పత్రాన్ని డిజిటల్ గా (కంప్యూటర్లోనే) నింపి మీ బృందముకు అనుసంధానించవచ్చు. మీరు లాగిన్ చేసిన (ప్రవేశించిన) తరువాత, సెట్టింగ్ లలో మూడు నెలల ప్రణాళికని మీరు కనుగొనవచ్చు. మీ డ్యాష్ బోర్డులో కూడా మీరు మూడు నెలల ప్రణాళికని కనుగొనవచ్చు."
+msgid "Use the rest of your time to complete the Three Month Plan worksheet. You can write it out on a piece of paper. If you are logged in to Zúme.Training you can fill out your form digitally and link it to your group. Once you login, you’ll find the Three Month Plan under Settings. You can also find the Three Month Plan on your Dashboard."
+msgstr "మూడు నెలల ప్రణాళికా పత్రమును పూర్తి చేయడం కొరకు మీ యొక్క మిగిలిన సమయాన్ని ఉపయోగించండి. దాన్ని కాగితం ముక్కపై రాసుకోవచ్చు. మీరు Zúme.Training లో లాగిన్ (ప్రవేశించితే) అయితే మీ పత్రాన్ని డిజిటల్ గా (కంప్యూటర్లోనే) నింపి మీ బృందముకు అనుసంధానించవచ్చు. మీరు లాగిన్ చేసిన (ప్రవేశించిన) తరువాత, సెట్టింగ్ లలో మూడు నెలల ప్రణాళికని మీరు కనుగొనవచ్చు. మీ డ్యాష్ బోర్డులో కూడా మీరు మూడు నెలల ప్రణాళికని కనుగొనవచ్చు."
 
 #: functions/zume-content.php:3335
 msgid "You do not have to commit to every item, and there is room for other items not already on the list. Do your best to align your commitments to what you have heard God reveal to you about His will."

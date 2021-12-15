@@ -1571,8 +1571,8 @@ msgid "COMPLETE"
 msgstr "पूर्ण करा"
 
 #: functions/zume-content.php:3332
-msgid "Use the rest of your time to complete the Three Month Plan worksheet. You can write it out on a piece of paper. If you are logged in to ZúmeProject.com you can fill out your form digitally and link it to your group. Once you login, you’ll find the Three Month Plan under Settings. You can also find the Three Month Plan on your Dashboard."
-msgstr "तुमचा उर्वरित वेळ तीन महिन्यांच्या योजनेची वर्कशीट पूर्ण करण्यासाठी वापरा. तुम्ही एखाद्या कागदावर हे लिहू शकता. जर तुम्ही ZúmeProject.com वर लॉग इन केले असेल तर तुम्ही तुमचा फॉर्म डिजीटली भरू शकता आणि त्याला तुमच्या गटाशी लिंक करू शकता. एकदा तुम्ही लॉगिन केले की, तुमच्या सेटिंग्ज अंतर्गत तीन महिन्यांची योजना मिळेल. तुम्हाला तुमच्या डॅशबोर्डवर देखील तीन महिन्यांची योजना मिळू शकेल."
+msgid "Use the rest of your time to complete the Three Month Plan worksheet. You can write it out on a piece of paper. If you are logged in to Zúme.Training you can fill out your form digitally and link it to your group. Once you login, you’ll find the Three Month Plan under Settings. You can also find the Three Month Plan on your Dashboard."
+msgstr "तुमचा उर्वरित वेळ तीन महिन्यांच्या योजनेची वर्कशीट पूर्ण करण्यासाठी वापरा. तुम्ही एखाद्या कागदावर हे लिहू शकता. जर तुम्ही Zúme.Training वर लॉग इन केले असेल तर तुम्ही तुमचा फॉर्म डिजीटली भरू शकता आणि त्याला तुमच्या गटाशी लिंक करू शकता. एकदा तुम्ही लॉगिन केले की, तुमच्या सेटिंग्ज अंतर्गत तीन महिन्यांची योजना मिळेल. तुम्हाला तुमच्या डॅशबोर्डवर देखील तीन महिन्यांची योजना मिळू शकेल."
 
 #: functions/zume-content.php:3335
 msgid "You do not have to commit to every item, and there is room for other items not already on the list. Do your best to align your commitments to what you have heard God reveal to you about His will."
