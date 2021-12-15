@@ -3,9 +3,13 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: POEditor.com\n"
+"X-Generator: Poedit 2.4.3\n"
 "Project-Id-Version: Zúme Project\n"
 "Language: hr\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
 
 #: front-page.php:82 front-page.php:212
 msgid "Get Started"
@@ -2405,7 +2409,8 @@ msgid "Edit Group"
 msgstr "Uredi grupu"
 
 #: template-zume-dashboard.php:1032
-msgid "You are the owner of this group. All changes to the group details must be done through \n"
+msgid ""
+"You are the owner of this group. All changes to the group details must be done through \n"
 "                you."
 msgstr "Vi ste vlasnik ove grupe. Sve promjene pojedinosti grupe moraju se izvršiti preko vas."
 
@@ -2443,10 +2448,12 @@ msgid "View Group"
 msgstr "Prikaz grupe"
 
 #: template-zume-dashboard.php:1236
-msgid "You are a participant or coleader of this group and can view the group \n"
+msgid ""
+"You are a participant or coleader of this group and can view the group \n"
 "                        details and lead the group through a session, but cannot change the details of the group or add \n"
 "                        participants. Please, make change requests through the group owner."
-msgstr "Sudionik ste ili suvoditelj ove grupe i možete pregledati\n"
+msgstr ""
+"Sudionik ste ili suvoditelj ove grupe i možete pregledati\n"
 "                         pojedinosti i voditi grupu kroz cjelinu, ali ne može promijeniti detalje o grupi ili dodavati\n"
 "                         sudionike. Zahtjeve za izmjenama pošaljite vlasniku grupe."
 
@@ -3139,62 +3146,50 @@ msgid "Language Translation Progress"
 msgstr "Napredak u prijevodu jezika"
 
 #. Author URI of the plugin/theme
-#: 
 msgid "https://github.com/ZumeProject"
 msgstr "https://github.com/ZumeProject"
 
 #. Template Name of the plugin/theme
-#: 
 msgid "Zume About"
 msgstr "O Zume projektu"
 
 #. Template Name of the plugin/theme
-#: 
 msgid "Zume Resources"
 msgstr "Zume resursi"
 
 #. Template Name of the plugin/theme
-#: 
 msgid "Zume Privacy Policy"
 msgstr "Politika privatnosti kompanije Zume"
 
 #. Template Name of the plugin/theme
-#: 
 msgid "Zúme Progress"
 msgstr "Zúme napredak"
 
 #. Template Name of the plugin/theme
-#: 
 msgid "Zume Login"
 msgstr "Zúme prijava"
 
 #. Template Name of the plugin/theme
-#: 
 msgid "Zume Profile"
 msgstr "Zúme profil"
 
 #. Template Name of the plugin/theme
-#: 
 msgid "Zúme Overview"
 msgstr "Zúme pregled"
 
 #. Template Name of the plugin/theme
-#: 
 msgid "Zúme FAQ"
 msgstr "Zúme najčešća pitanja"
 
 #. Template Name of the plugin/theme
-#: 
 msgid "Zúme Dashboard"
 msgstr "Zúme nadzorna ploča"
 
 #. Template Name of the plugin/theme
-#: 
 msgid "Full Width Home"
 msgstr "Početna s punom širinom"
 
 #. Template Name of the plugin/theme
-#: 
 msgid "Zúme Course"
 msgstr "Zúme tečaj"
 
@@ -3233,7 +3228,6 @@ msgstr "Izvršite samoprocjenu pomoću kontrolne liste."
 #: template-zume-faq.php:121
 msgid "The second phase focuses on coaching these Phase 1 churches through the reproduction process, as well as delivering the project in other major world languages. The project will start in the following languages: Amharic, Arabic, Bengali, Bhojpuri, Burmese, Chinese (Mandarin), Chinese (Cantonese), Farsi, French, German, Gujarati, Hausa, Hindi, Indonesian, Italian, Japanese, Kannada, Korean, Kurdish, Lao, Maithili, Malayalam, Marathi, Oriya, Panjabi (Eastern), Panjabi (Western), Portuguese, Russian, Somali, Spanish, Swahili, Tamil, Telugu, Thai, Turkish, Urdu, Vietnamese, Yoruba."
 msgstr "Druga faza usredotočena je na podučavanje ovih crkava iz Faze 1 kroz postupak reprodukcije, kao i na izvođenje projekta na drugim glavnim svjetskim jezicima. Projekt će započeti na sljedećim jezicima: amharski, arapski, bengalski, bhojpuri, burmanski, kineski (mandarinski), kineski (kantonski), farsi, francuski, njemački, gudžarati, hausa, hindski, indonezijski, talijanski, japanski, kanadski, korejski , kurdski, lao, maithili, malayalam, marathi, oriya, panjabi (istočni), panjabi (zapadni), portugalski, ruski, somalijski, španjolski, svahili, tamilski, telugu, tajlandski, turski, urdu, vijetnamski, joruba.\n"
-""
 
 #: template-zume-faq.php:140
 msgid "The project will start in the following languages and made available to those wishing to translate the training and tools into additional languages: Amharic, Arabic, Bengali, Bhojpuri, Burmese, Chinese (Mandarin), Chinese (Cantonese), Farsi, French, German, Gujarati, Hausa, Hindi, Indonesian, Italian, Japanese, Kannada, Korean, Kurdish, Lao, Maithili, Malayalam, Marathi, Oriya, Panjabi (Eastern), Panjabi (Western), Portuguese, Russian, Somali, Spanish, Swahili, Tamil, Telugu, Thai, Turkish, Urdu, Vietnamese, Yoruba."
@@ -3252,10 +3246,8 @@ msgid "See what data we've aggregated from your activities with us."
 msgstr "Pogledajte koje smo podatke prikupili iz vaših aktivnosti s nama."
 
 #. Template Name of the plugin/theme
-#: 
 msgid "Zúme One Page Course"
 msgstr "Zúme tečaj na jednoj stranici\n"
-""
 
 #: functions/zume-gmo.php:166 functions/zume-v4-seo-strings.php:14
 #: parts/content-share.php:40 template-pieces-page.php:176
@@ -3278,12 +3270,10 @@ msgstr "Facebook je već povezan s drugim računom."
 #: functions/login/zume-login.php:828 functions/login/zume-login.php:908
 msgid "Oops. Something went wrong."
 msgstr "Ups. Nešto je pošlo po zlu.\n"
-""
 
 #: functions/login/zume-login.php:1159
 msgid "Missing form verification. Refresh and try again."
 msgstr "Nedostaje potvrda obrasca. Osvježite i pokušajte ponovno.\n"
-""
 
 #: functions/login/zume-login.php:1201
 msgid "ERROR: Invalid username or email."
@@ -3748,7 +3738,6 @@ msgid "Training"
 msgstr "Trening"
 
 #. Template Name of the plugin/theme
-#: 
 msgid "Zúme Course v4"
 msgstr "Zúme tečaj v4"
 
@@ -3765,17 +3754,14 @@ msgid "Generation mapping is another simple tool to help leaders in a movement u
 msgstr "Mapiranje generacija je još jedan jednostavan alat koji pomaže vođama pokreta da shvate rast oko sebe."
 
 #. Theme URI of the plugin/theme
-#: 
 msgid "https://github.com/ZumeProject/zume-training"
 msgstr "https://github.com/ZumeProject/zume-training"
 
 #. Description of the plugin/theme
-#: 
 msgid "Zúme Training for multiplying disciples."
 msgstr "Zúme trening za umnažanje učenika."
 
 #. Author of the plugin/theme
-#: 
 msgid "Zume Training"
 msgstr "Trening Zume"
 
@@ -4078,14 +4064,13 @@ msgid "As the saying goes, \"Plan your trust, don't trust your plan\". We know i
 msgstr "Kao što se kaže, \"planirajte svoje povjerenje, ne vjerujte svom planu\". Znamo da Očevo srce želi imati obitelji vjernika na svakom jeziku, plemenu i naciji. Također nas je pozvao da budemo njegovi suradnici u pomirenju. Dakle, ovi ciljevi 1. treninga i dvije crkve dolaze iz našeg povjerenja u Onoga koji to može učiniti."
 
 #. Template Name of the plugin/theme
-#: 
 msgid "Pieces Page"
 msgstr "Dijelovi stranice"
 
 #. Template Name of the plugin/theme
-#: 
 msgid "Zúme Vision"
-msgstr "\n"
+msgstr ""
+"\n"
 "Zúme Vision"
 
 #: functions/zume-content.php:2116
@@ -4354,12 +4339,10 @@ msgid "Watch this important video explaining the 4 relationships of your new lif
 msgstr "Pogledajte ovaj važan video koji objašnjava 4 odnosa vašeg novog života."
 
 #. Template Name of the plugin/theme
-#: 
 msgid "GMO - Welcome to Zúme"
 msgstr "GMO - Dobrodošli u Zúme"
 
 #. Template Name of the plugin/theme
-#: 
 msgid "Redirect to Training"
 msgstr "Preusmjeri na trening"
 
@@ -4500,4 +4483,3 @@ msgstr "Spremite ovu stranicu kao budući resurs!"
 #: template-how-to-follow-jesus.php:124
 msgid "The sections below, will teach you what it means to be a follower (disciple) of Jesus."
 msgstr "Dijelovi u nastavku naučit će vas što znači biti Isusov sljedbenik (učenik)."
-
