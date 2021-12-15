@@ -250,7 +250,8 @@ if ( ! class_exists( 'Site_Link_System' ) ) {
             if ( ! empty( $connection_type ) ) {
                 self::add_capabilities_required_by_type( $connection_type, $site_link_label, $decrypted_key );
             }
-
+            global $wp_session;
+            $wp_session['logged_in_as_site_link'] = $keys[$decrypted_key];
             return true;
         }
 
@@ -413,7 +414,18 @@ if ( ! class_exists( 'Site_Link_System' ) ) {
                     'with_front' => false
                 ], /* you can specify its url slug */
                 'has_archive'         => false, /* you can rename the slug here */
-                'capability_type'     => 'post',
+                'capabilities'     => [
+                    "read_post" => "manage_dt",
+                    "edit_post" => "manage_dt",
+                    "delete_post" => "manage_dt",
+                    "edit_posts" => "manage_dt",
+                    "edit_others_posts" => "manage_dt",
+                    "publish_posts" => "manage_dt",
+                    "read_private_posts" => "manage_dt",
+                    "delete_others_posts" => "manage_dt",
+                    "delete_posts" => "manage_dt",
+                    "delete_published_posts" => "manage_dt",
+                ],
                 'hierarchical'        => false,
                 /* the next one is important, it tells what's enabled in the post editor */
                 'supports'            => [ 'title' ]
@@ -516,14 +528,12 @@ if ( ! class_exists( 'Site_Link_System' ) ) {
                 7  => sprintf( '%s saved.', $this->singular ),
                 8  => sprintf( '%1$s submitted. %2$s%3$s%4$s', $this->singular, strtolower( $this->singular ), '', '' ),
                 9  => sprintf(
-                    '%1$s scheduled for: %1$s. %2$s%2$s%3$6$s',
+                    '%1$s scheduled for: %2$s. %3$s',
                     $this->singular,
                     strtolower( $this->singular ),
                     // translators: Publish box date format, see http://php.net/date
                     '<strong>' . date_i18n( __( 'M j, Y @ G:i' ),
-                    strtotime( $post->post_date ) ) . '</strong>',
-                    '',
-                    ''
+                    strtotime( $post->post_date ) ) . '</strong>'
                 ),
                 10 => sprintf( '%1$s draft updated. %2$s%3$s%4$s', $this->singular, strtolower( $this->singular ), '', '' ),
             ];
@@ -795,7 +805,7 @@ if ( ! class_exists( 'Site_Link_System' ) ) {
 
             $fields['non_wp'] = [
                 'name'        => __( 'Disciple.Tools Site' ),
-                'description' => __( 'Is this connection to a Disciple Tools/Wordpress system.' ),
+                'description' => __( 'Is this connection to a Disciple.Tools/Wordpress system.' ),
                 'type'        => 'key_select',
                 'default'     => [
                     0 => __( 'Yes, connected to another Disciple.Tools site (default)' ),
@@ -906,7 +916,7 @@ if ( ! class_exists( 'Site_Link_System' ) ) {
             $this->meta_box_content( 'non_wp' );
             ?>
             <p id="description">
-                The site link system is built to easily connect Disciple Tools systems together, but can be extended to provide token validation
+                The site link system is built to easily connect Disciple.Tools systems together, but can be extended to provide token validation
                 for other system integrations. Please refer to our <a href="https://github.com/DiscipleTools/disciple-tools-theme/wiki">developer wiki</a> for more information.
             </p>
             <?php
@@ -1287,9 +1297,9 @@ if ( ! class_exists( 'Site_Link_System' ) ) {
                     if ( is_wp_error( $result ) ) {
                         // Second request failed too. Return appropriate error
                         $error_message = $result->get_error_message() ?? '';
-                        if (strpos( $error_message, 'not resolve' ) > -1 || strpos( $error_message, 'timed out' ) > -1) {
+                        if ( strpos( $error_message, 'not resolve' ) > -1 || strpos( $error_message, 'timed out' ) > -1 ) {
                             return new WP_Error( "site_check_error", $not_found, [ 'status' => 400 ] );
-                        } else if ( strpos( $error_message, 'SSL' ) > -1 || strpos( $error_message, 'HTTPS' ) > -1 || strpos( $error_message, 'certificate verification failed' ) > -1) {
+                        } else if ( strpos( $error_message, 'SSL' ) > -1 || strpos( $error_message, 'HTTPS' ) > -1 || strpos( $error_message, 'certificate verification failed' ) > -1 ) {
                             return new WP_Error( "site_check_error", $no_ssl, [ 'status' => 400 ] );
                         }
                         return $result;
@@ -1382,12 +1392,12 @@ if ( ! class_exists( 'Site_Link_System' ) ) {
          */
         public static function get_real_ip_address() {
             $ip = '';
-            if ( ! empty( $_SERVER['HTTP_CLIENT_IP'] ))   //check ip from share internet
+            if ( ! empty( $_SERVER['HTTP_CLIENT_IP'] ) )   //check ip from share internet
             {
                 // @codingStandardsIgnoreLine
                 $ip = $_SERVER['HTTP_CLIENT_IP'];
             }
-            elseif ( ! empty( $_SERVER['HTTP_X_FORWARDED_FOR'] ))   //to check ip is pass from proxy
+            elseif ( ! empty( $_SERVER['HTTP_X_FORWARDED_FOR'] ) )   //to check ip is pass from proxy
             {
                 // @codingStandardsIgnoreLine
                 $ip = $_SERVER['HTTP_X_FORWARDED_FOR'];
