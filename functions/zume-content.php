@@ -3331,7 +3331,7 @@ class Zume_Course_Content {
                         <div class="large-3 cell activity-title"><?php esc_html_e( 'COMPLETE', 'zume' ) ?></div>
                         <div class="large-9 cell activity-description">
                             <p>
-                                <?php esc_html_e( "Use the rest of your time to complete the Three Month Plan worksheet. You can write it out on a piece of paper. If you are logged in to ZúmeProject.com you can fill out your form digitally and link it to your group. Once you login, you’ll find the Three Month Plan under Settings. You can also find the Three Month Plan on your Dashboard.", 'zume' ) ?>
+                                <?php echo esc_html( str_replace( "ZúmeProject.com", "https://zume.training", __( "Use the rest of your time to complete the Three Month Plan worksheet. You can write it out on a piece of paper. If you are logged in to ZúmeProject.com you can fill out your form digitally and link it to your group. Once you login, you’ll find the Three Month Plan under Settings. You can also find the Three Month Plan on your Dashboard.", 'zume' ) ) ); ?>
                             </p>
                             <p>
                                 <?php esc_html_e( "You do not have to commit to every item, and there is room for other items not already on the list. Do your best to align your commitments to what you have heard God reveal to you about His will.", 'zume' ) ?>
