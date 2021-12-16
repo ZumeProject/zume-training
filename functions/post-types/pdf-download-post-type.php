@@ -252,8 +252,7 @@ class Zume_PDF_Download_Post_Type
             7  => sprintf( '%s saved.', $this->singular ),
             8  => sprintf( '%1$s submitted. %2$sPreview %3$s%4$s', $this->singular, strtolower( $this->singular ), '<a target="_blank" href="' . esc_url( add_query_arg( 'preview', 'true', get_permalink( $post->ID ) ) ) . '">', '</a>' ),
             9  => sprintf(
-                '%1$s scheduled for: %1$s. %2$sPreview %2$s%3$6$s',
-                $this->singular,
+                '%1$s scheduled for: %2$s. %3$sPreview %4$s',
                 strtolower( $this->singular ),
                 // translators: Publish box date format, see http://php.net/date
                 '<strong>' . date_i18n( 'M j, Y @ G:i',

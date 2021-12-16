@@ -131,9 +131,10 @@ function zume_update_user_ip_address_and_location( $user_id = null ) {
             update_user_meta( $user_id, 'zume_address_from_ip', $address ); // location grid id only
 
             $location_grid_meta = DT_Ipstack_API::convert_ip_result_to_location_grid_meta( $ip_results );
-            update_user_meta( $user_id, 'zume_location_grid_meta_from_ip', $location_grid_meta ); // location grid meta array
-            update_user_meta( $user_id, 'zume_location_grid_from_ip', $location_grid_meta['grid_id'] ); // location grid id only
-
+            if ( isset( $location_grid_meta['grid_id'] ) ) {
+                update_user_meta( $user_id, 'zume_location_grid_meta_from_ip', $location_grid_meta ); // location grid meta array
+                update_user_meta( $user_id, 'zume_location_grid_from_ip', $location_grid_meta['grid_id'] ); // location grid id only
+            }
         }
     }
 
