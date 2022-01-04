@@ -104,7 +104,7 @@ $values = get_post_custom( $post->ID );
                     <!-- Logo -->
                     <div class="cell center padding-bottom-1">
                         <?php if ( has_post_thumbnail( $post->ID ) ) : ?>
-                        <img src="<?php the_post_thumbnail_url('full') ?>" style="max-height: 100px; max-width: 400px;" alt="logo" />
+                        <img src="<?php the_post_thumbnail_url( 'full' ) ?>" style="max-height: 100px; max-width: 400px;" alt="logo" />
                         <?php endif; ?>
                     </div>
 

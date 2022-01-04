@@ -145,7 +145,7 @@ function zume_site_scripts() {
 
         wp_enqueue_script( 'zumeTraining', get_template_directory_uri() . '/assets/scripts/training.js', array( 'jquery', 'lodash', 'wp-i18n' ), filemtime( get_theme_file_path() . '/assets/scripts/training.js' ), true );
         $current_language = zume_current_language();
-        $languages = file_get_contents( get_theme_file_path( 'languages.json') );
+        $languages = file_get_contents( get_theme_file_path( 'languages.json' ) );
         if ( ! empty( $languages ) ) {
             $languages = json_decode( $languages, true );
         } else {

@@ -1360,9 +1360,9 @@ class Zume_V4_Groups {
             update_user_meta( $group_owner, 'zume_training_complete', $group_key );
 
             $array = self::get_group_by_key( $group_key );
-            if ( isset( $array['coleaders'] ) &&  ! empty( $array['coleaders'] ) ) {
-                foreach( $array['coleaders'] as $email ) {
-                    $user = get_user_by('email', $email );
+            if ( isset( $array['coleaders'] ) && ! empty( $array['coleaders'] ) ) {
+                foreach ( $array['coleaders'] as $email ) {
+                    $user = get_user_by( 'email', $email );
 
                     if ( ! $user ) {
                         continue;
@@ -1375,10 +1375,7 @@ class Zume_V4_Groups {
                     update_user_meta( $user->ID, 'zume_training_complete', $group_key );
 
                 }
-
             }
-
-
         }
     }
 

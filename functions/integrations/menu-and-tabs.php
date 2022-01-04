@@ -232,13 +232,13 @@ class Zume_Integration_Menu
                         <!-- Main Column -->
                         <?php
                         break;
-                case 'right_column':
-                    ?>
+                    case 'right_column':
+                        ?>
                     <!-- End Main Column -->
                     </div><!-- end post-body-content -->
                     <div id="postbox-container-1" class="postbox-container">
                     <!-- Right Column -->
-                    <?php
+                        <?php
                     break;
                     case 'end':
                         ?>

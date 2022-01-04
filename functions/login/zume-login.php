@@ -289,11 +289,11 @@ class Zume_User_Registration
         }
 
         try {
-            $fb = new \Facebook\Facebook(array(
+            $fb = new \Facebook\Facebook( array(
                 'app_id' => get_option( 'dt_facebook_sso_pub_key' ),
                 'app_secret' => get_option( 'dt_facebook_sso_sec_key' ),
                 'default_graph_version' => 'v3.2',
-            ));
+            ) );
         } catch ( Exception $exception ) {
             return new WP_Error( __METHOD__, __( 'Failed to connect with Facebook. Try again.', 'zume' ), $exception );
         }
@@ -418,11 +418,11 @@ class Zume_User_Registration
         }
 
         try {
-            $fb = new \Facebook\Facebook(array(
+            $fb = new \Facebook\Facebook( array(
                 'app_id' => get_option( 'dt_facebook_sso_pub_key' ),
                 'app_secret' => get_option( 'dt_facebook_sso_sec_key' ),
                 'default_graph_version' => 'v3.2',
-            ));
+            ) );
         } catch ( Exception $exception ) {
             return new WP_Error( __METHOD__, __( 'Failed to connect with Facebook. Try again.', 'zume' ), $exception );
         }

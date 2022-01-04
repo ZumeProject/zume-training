@@ -1073,7 +1073,8 @@ class Disciple_Tools_Mapping_Queries {
         if ( empty( $location_grids ) ){
             return $prepared;
         }
-        $location_grid_ids = array_map( function( $g ){ return $g["meta_value"]; }, $location_grids );
+        $location_grid_ids = array_map( function( $g ){ return $g["meta_value"];
+        }, $location_grids );
         $joined_location_grid_ids = dt_array_to_sql( $location_grid_ids );
         $location_grid_id_names = $wpdb->get_results("
                             SELECT grid_id, alt_name
@@ -1519,8 +1520,7 @@ class Disciple_Tools_Mapping_Queries {
                 AND " . $sql["where_sql"] . "
             ) as t5
             WHERE t5.admin5_grid_id = %d;
-            ", $post_type, $grid_id, $post_type, $grid_id, $post_type, $grid_id, $post_type, $grid_id, $post_type, $grid_id, $post_type, $grid_id ), ARRAY_A )
-        ;
+            ", $post_type, $grid_id, $post_type, $grid_id, $post_type, $grid_id, $post_type, $grid_id, $post_type, $grid_id, $post_type, $grid_id ), ARRAY_A );
         //phpcs:enable
 
         return $results;

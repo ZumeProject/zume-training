@@ -12,23 +12,23 @@ require_once( 'functions/post-types/video-post-type.php' );
 require_once( 'functions/post-types/pdf-download-post-type.php' );
 
 // Integrations Files
-require_once( 'functions/integrations/zume-polylang-integration.php'); // Adds support for multiple languages
-require_once( 'functions/integrations/network-dashboard-remote-integration.php');
-require_once( 'functions/integrations/yoast-integration.php');
+require_once( 'functions/integrations/zume-polylang-integration.php' ); // Adds support for multiple languages
+require_once( 'functions/integrations/network-dashboard-remote-integration.php' );
+require_once( 'functions/integrations/yoast-integration.php' );
 
 // Zume Theme Files
 require_once( 'functions/login/zume-login.php' ); // Customize the login page
 require_once( 'translations/translation.php' ); // Adds support for multiple languages
-require_once( 'functions/utilities/enqueue-scripts.php'); // Register scripts and stylesheets
+require_once( 'functions/utilities/enqueue-scripts.php' ); // Register scripts and stylesheets
 require_once( 'functions/utilities/theme-support.php' ); // Theme support options
 require_once( 'functions/utilities/cleanup.php' ); // WP Head and other cleanup functions
 require_once( 'functions/utilities/menu.php' ); // Register custom menus and menu walkers
 require_once( 'functions/multi-role/multi-role.php' ); // Adds multi role features
 
 // Rest
-require_once('functions/utilities/restrict-rest-api.php'); // Restricts the default REST API to logged in users
+require_once( 'functions/utilities/restrict-rest-api.php' ); // Restricts the default REST API to logged in users
 remove_action( 'rest_api_init', 'create_initial_rest_routes', 99 );
-require_once('functions/utilities/restrict-xml-rpc-pingback.php'); // Restricts RPC vulnerability
+require_once( 'functions/utilities/restrict-xml-rpc-pingback.php' ); // Restricts RPC vulnerability
 
 // Zume 3.0 Files to Deprecate after 4.0 upgrade
 require_once( 'functions/zume-course.php' ); // zume course
@@ -54,11 +54,10 @@ require_once( 'functions/zume-v4-modal-pieces-content.php' );
 require_once( 'functions/zume-functions.php' ); // general zume functions
 
 
-require_once( 'functions/logging/zume-mailchimp.php' ); //
-
+require_once( 'functions/logging/zume-mailchimp.php' );
 
 // Zume - DT - Integration
-require_once('functions/integrations/site-link-post-type.php');
+require_once( 'functions/integrations/site-link-post-type.php' );
 Site_Link_System::instance();
 require_once( 'functions/zume-v4-global-network-link.php' );
 
@@ -68,9 +67,9 @@ if ( is_admin() ) {
     require_once( 'functions/post-types/pieces-page-metabox.php' );
     require_once( 'functions/post-types/landing-template-metaboxes.php' );
 
-    require_once('functions/integrations/tab-keys.php');
-    require_once('functions/integrations/menu-and-tabs.php');
-    require_once('functions/post-types/zume-resource-metabox.php');
+    require_once( 'functions/integrations/tab-keys.php' );
+    require_once( 'functions/integrations/menu-and-tabs.php' );
+    require_once( 'functions/post-types/zume-resource-metabox.php' );
 //    require_once( 'functions/zume-dt-integration/system-check-metabox.php' );
 
     require_once( 'functions/utilities/tgm-config.php' );

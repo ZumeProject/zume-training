@@ -118,13 +118,13 @@ function zume_update_user_ip_address_and_location( $user_id = null ) {
             $city = DT_Ipstack_API::parse_raw_result( $ip_results, 'city' );
 
             $address = '';
-            if( ! empty($country) ) {
+            if ( ! empty( $country ) ) {
                 $address = $country;
             }
-            if( ! empty($region) ) {
+            if ( ! empty( $region ) ) {
                 $address = $region . ', ' . $address;
             }
-            if( ! empty($city) ) {
+            if ( ! empty( $city ) ) {
                 $address = $city . ', ' . $address;
             }
 

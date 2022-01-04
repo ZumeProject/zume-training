@@ -3,7 +3,7 @@
 // @codingStandardsIgnoreLine
 define( 'DOING_AJAX', true );
 define( 'SHORTINIT', true );
-require_once($_SERVER['DOCUMENT_ROOT'] . '/wp-load.php'); // loads the wp framework when called
+require_once( $_SERVER['DOCUMENT_ROOT'] . '/wp-load.php' ); // loads the wp framework when called
 $theme_path = $_SERVER['DOCUMENT_ROOT'] . '/wp-content/themes/zume-training/';
 
 global $wpdb;
@@ -11,14 +11,14 @@ $site_url  = $wpdb->get_var(
     "SELECT option_value
             FROM $wpdb->options o
             WHERE option_name = 'siteurl'"
- );
+);
 /**
  * Single video request
  */
 if ( isset( $_GET['id'] ) && ! empty( $_GET['id'] ) ) {
 
     if ( ! is_numeric( $_GET['id'] ) ) {
-        die('Not the correct id type');
+        die( 'Not the correct id type' );
     }
     $vimeo_id = sanitize_text_field( wp_unslash( $_GET['id'] ) );
     // https://zume.training/wp-content/themes/zume-training/video.php?id=551339739
@@ -34,7 +34,7 @@ if ( isset( $_GET['id'] ) && ! empty( $_GET['id'] ) ) {
         $vimeo_id
     ), ARRAY_A );
     if ( empty( $post ) ) {
-        die('Not a recognized id');
+        die( 'Not a recognized id' );
     }
 
     $post_id = $post['post_id'];
@@ -45,7 +45,7 @@ if ( isset( $_GET['id'] ) && ! empty( $_GET['id'] ) ) {
     $title = '';
     $page_id = zume_landing_page_post_id( $tool_number );
 
-    $title = $wpdb->get_var($wpdb->prepare( "SELECT post_title FROM $wpdb->posts WHERE ID = %s", $page_id ) );
+    $title = $wpdb->get_var( $wpdb->prepare( "SELECT post_title FROM $wpdb->posts WHERE ID = %s", $page_id ) );
 
     $languages = json_decode( file_get_contents( $theme_path . '/languages.json' ), true );
     foreach ( $languages as $language ){
@@ -102,7 +102,7 @@ if ( isset( $_GET['id'] ) && ! empty( $_GET['id'] ) ) {
     </body>
     </html>
 
-<?php
+    <?php
 }
 /**
  * Language List of QR Codes

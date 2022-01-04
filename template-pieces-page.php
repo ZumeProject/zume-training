@@ -52,7 +52,7 @@ if (have_posts()) :
                 <h1><?php echo esc_html( $h1_title ) ?></h1>
                 <span class="sub-caption">
                     <a onclick="open_session(<?php echo esc_attr( $session_number ); ?>)">
-                        <?php echo sprintf( esc_html__( 'This concept is called "%1$s" in session %2$s of the Zúme Training', 'zume' ), esc_html( $h1_title ), esc_attr( $session_number ) ) ?>
+                        <?php echo sprintf( __( 'This concept is called "%1$s" in session %2$s of the Zúme Training', 'zume' ), esc_html( $h1_title ), esc_attr( (string) $session_number ) ) ?>
                     </a>
                 </span>
             </div>
