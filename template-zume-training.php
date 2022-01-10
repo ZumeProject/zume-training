@@ -28,14 +28,8 @@ if ( isset( $_GET['iframe'] ) && ! empty( $_GET['iframe'] ) ) {
 
 $current_language = zume_current_language();
 
-if ( is_user_logged_in() ) {
-    if ( get_user_meta( get_current_user_id(), 'first_time_login', true ) ) {
-        delete_user_meta( get_current_user_id(), 'first_time_login' );
-        echo '<div id="user_has_just_registered"></div>';
-    }
-}
 ?>
-<div id="user_has_just_registered"></div>
+<span id="user_has_just_registered"></span>
 <div class="training">
     <div  id="inner-content" class="grid-x padding-top-1">
         <!-------------------------------------------------------------------------------------------------------------
