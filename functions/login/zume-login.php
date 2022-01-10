@@ -1410,7 +1410,9 @@ function zume_verify_user_pass( $user, $username, $password) {
 add_filter( 'authenticate', 'zume_verify_user_pass', 1, 3 );
 
 
-
+add_action( 'user_register', function( $user_id, $userdata) {
+    add_user_meta( $user_id, 'first_time_login', true );
+}, 100, 2);
 
 
 

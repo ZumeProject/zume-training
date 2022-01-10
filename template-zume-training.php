@@ -3,10 +3,11 @@
 Template Name: Training
 */
 
-
 get_header();
 $zendesk_enable = false;
-if ( is_user_logged_in() ) {
+$user = wp_get_current_user();
+
+if ( $user->exists() ) {
     $zendesk_enable = true;
 }
 if ( isset( $_GET['iframe'] ) && ! empty( $_GET['iframe'] ) ) {
@@ -923,5 +924,12 @@ $current_language = zume_current_language();
 <?php get_template_part( "parts/content", "modal" ); ?>
 
 <?php
+if ( is_user_logged_in() ) {
+    if ( get_user_meta( get_current_user_id(), 'first_time_login', true ) ) {
+        delete_user_meta( get_current_user_id(), 'first_time_login' );
+        echo '<div id="user_has_just_registered"></div>';
+    }
+}
+
 
 get_footer();
