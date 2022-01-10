@@ -922,7 +922,7 @@ $current_language = zume_current_language();
 </div> <!-- end #content -->
 
 <?php get_template_part( "parts/content", "modal" ); ?>
-
+    <div id="user_has_just_registered"></div>
 <?php
 if ( is_user_logged_in() ) {
     if ( get_user_meta( get_current_user_id(), 'first_time_login', true ) ) {
