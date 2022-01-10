@@ -21,11 +21,11 @@
         font-weight: 300;
     }
     .t-description {
-        color: $light-black;
+        color: $dark-gray;
         font-size: .9rem;
         line-height: 1rem;
         margin-bottom: .5rem;
-        font-weight: 100;
+        font-weight: 400;
 
         @media (max-width: $breakpoint-medium ) {
 
@@ -44,13 +44,13 @@
         }
     }
     .t-length {
-        color: $light-black;
+        color: $dark-gray;
         font-weight: 100;
         text-align: right;
     }
     .t-activities {
-        color: $light-black;
-        font-weight: 300;
+        color: $dark-gray;
+        font-weight: 400;
     }
     .start {
         text-align: right;
