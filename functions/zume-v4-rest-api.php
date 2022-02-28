@@ -414,10 +414,11 @@ class Zume_V4_REST_API {
 
         Location_Grid_Meta::validate_location_grid_meta( $args['location_grid_meta'] );
 
-        if ( $args['location_grid_meta'] ) {
+        if ( isset( $args['location_grid_meta'] ) ) {
             $fields['location_grid_meta'] = [
-                "values" => [ $args['location_grid_meta'] ]
+                "values" => []
             ];
+            $fields['location_grid_meta']['values'][] = $args['location_grid_meta'];
 //            $fields['contact_address'] = [
 //                [ "value" => $args['location_grid_meta']['label'] ],
 //            ];
