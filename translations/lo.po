@@ -7,13 +7,13 @@ msgstr ""
 "Project-Id-Version: Zúme Project\n"
 "Language: lo\n"
 
-#: front-page.php:82 front-page.php:212
+#: front-page.php:82 front-page.php:213
 msgid "Get Started"
 msgstr "​ເລີ່ມ​ລົງ​ມື"
 
-#: front-page.php:85 functions/enqueue-scripts.php:288
-#: functions/zume-gmo.php:202 functions/zume-v4-seo-strings.php:23
-#: parts/content-share.php:81 template-pieces-page.php:213
+#: front-page.php:85 functions/utilities/enqueue-scripts.php:295
+#: functions/zume-v4-seo-strings.php:23 parts/content-share.php:83
+#: template-pieces-page.php:210 template-zume-landing.php:184
 #: template-zume-login.php:403 template-zume-login.php:470
 #: template-zume-login.php:498
 msgid "Login"
@@ -63,7 +63,7 @@ msgstr "ເຊີນ​ຊວນ​ໝູ່​ເພື່ອນ"
 msgid "Host a training"
 msgstr "ເປັນ​ເຈົ້າ​ພາບ​ການ​ຝຶກ​ອົບ​ຮົມ"
 
-#: front-page.php:246
+#: front-page.php:250
 msgid "Find out more about Zúme"
 msgstr "ຫາ​ຂໍ້​ມູນ​ກ່ຽວ​ກັບ​ຊູ​ເມ້​ເພີ່ມ​ເຕີມ"
 
@@ -75,198 +75,202 @@ msgstr "​ຄູ​ຝຶກ​ສອນ"
 msgid "Coach Leader"
 msgstr "ຫົວ​ໜ້າ​ຄູຝຶກ​ສອນ"
 
-#: functions/enqueue-scripts.php:82 functions/enqueue-scripts.php:84
-#: functions/enqueue-scripts.php:268 template-zume-dashboard.php:1204
+#: functions/utilities/enqueue-scripts.php:82
+#: functions/utilities/enqueue-scripts.php:84
+#: functions/utilities/enqueue-scripts.php:275 template-zume-dashboard.php:1204
 #: template-zume-dashboard.php:1317
 msgid "Cancel"
 msgstr "ຍົກ​ເລີກ"
 
-#: functions/enqueue-scripts.php:83
+#: functions/utilities/enqueue-scripts.php:83
 msgid "Current Step:"
 msgstr "​ຂັ້ນ​ຕອນ​ປະ​ຈຸ​ບັນ:"
 
-#: functions/enqueue-scripts.php:85 translations/mobile-pwa-strings.php:35
+#: functions/utilities/enqueue-scripts.php:85
+#: translations/mobile-pwa-strings.php:35
 msgid "Finish"
 msgstr "ສຳ​ເລັດ"
 
-#: functions/enqueue-scripts.php:86 functions/utilities/menu.php:108
+#: functions/utilities/enqueue-scripts.php:86 functions/utilities/menu.php:108
 #: translations/mobile-pwa-strings.php:34
 msgid "Next"
 msgstr "​ອັນ​ຕໍ່​ໄປ"
 
-#: functions/enqueue-scripts.php:87 functions/utilities/menu.php:98
+#: functions/utilities/enqueue-scripts.php:87 functions/utilities/menu.php:98
 #: translations/mobile-pwa-strings.php:33
 msgid "Previous"
 msgstr "​ອັນ​ທີ່​ຜ່ານ​ມາ"
 
-#: functions/enqueue-scripts.php:88
+#: functions/utilities/enqueue-scripts.php:88
 msgid "Loading..."
 msgstr "​ກຳ​ລັງ​ດາວ​ໂຫຼດ..."
 
-#: functions/enqueue-scripts.php:66 template-zume-dashboard.php:1168
+#: functions/utilities/enqueue-scripts.php:66 template-zume-dashboard.php:1168
 #: template-zume-dashboard.php:1202 translations/mobile-pwa-strings.php:26
 msgid "Delete"
 msgstr "​ຕັດ​ອອກ"
 
-#: functions/enqueue-scripts.php:67
+#: functions/utilities/enqueue-scripts.php:67
 msgid "Failed to remove item."
 msgstr "ບໍ່​ສາ​ມາດ​ທຳ​ລາຍ​ການ​ຍ້າຍ​ສິ່ງນີ້​ອອກ​ໄປ​ໄດ້."
 
-#: functions/enqueue-scripts.php:68
+#: functions/utilities/enqueue-scripts.php:68
 msgid "Failed to change item."
 msgstr "ບໍ່​ສາ​ມາດ​ທຳ​ການ​ປ່ຽນ​ແປງ​ສິ່ງນີ້​ໄດ້."
 
-#: functions/enqueue-scripts.php:69
+#: functions/utilities/enqueue-scripts.php:69
 msgid "Three Month Plan - Zúme Project"
 msgstr "ແຜນ​ການ​ສາມ​ເດືອນ-ໂຄງ​ການ​ຊູ​ເມ້"
 
-#: functions/enqueue-scripts.php:70
+#: functions/utilities/enqueue-scripts.php:70
 msgid "We got it!"
 msgstr "ພວກເຮົາ​ໄດ້​ຮັບ​ແລ້ວ!"
 
-#: functions/enqueue-scripts.php:71
+#: functions/utilities/enqueue-scripts.php:71
 msgid "We're a volunteer network, so give us a few days. We'll reach out to you soon as possible!"
 msgstr "ພວກ​ເຮົາ​ເປັນ​ອາ​ສາ​ສະ​ໝັກ,ດັ່ງ​ນັ້ນ​ໃຫ້​ເວ​ລາ​ພວກ​ເຮົາ​ຈັກ 2-3 ນາ​ທີ  ແລ້ວ​ພວກ​ເຮົາ​ຈະ​ຕິດ​ຕໍ່​ກັບ​ໄປ​ຫາ​ທ່ານ​ໃຫ້​ໄວ​ທີ່​ສຸດ!"
 
-#: functions/login/zume-login.php:97 functions/login/zume-login.php:320
+#: functions/login/zume-login.php:102 functions/login/zume-login.php:325
 msgid "Email is a required permission for login and registration."
 msgstr "ອີ​ເມ​ວ​ເປັນ​ສິ່ງ​ຈຳ​ເປັນ​ສຳ​ລັບ​ການ​ເຂົ້າ​ສູ່​ລະ​ບົບ​ແລະ​ການສະໝັກສະມາຊິກ."
 
-#: functions/login/zume-login.php:448
+#: functions/login/zume-login.php:453
 msgid "No user found."
 msgstr "ບໍ່​ພົບ​ຜູ້​ໃຊ້."
 
-#: functions/login/zume-login.php:284 functions/login/zume-login.php:413
+#: functions/login/zume-login.php:289 functions/login/zume-login.php:418
 msgid "You are missing your sign-in token. Try signing in again."
 msgstr "ທ່ານບໍ່​ມີ​ເຄື່ອງ​ໝາຍ​ການ​ລົງ​ຊື່​ເຂົ້າ​ໃຊ້​ຂອງ​ທ່ານ, ລອງ​ລົງ​ຊື່​ເຂົ້າ​ໃຊ້​ອີກ​ຄັ້ງ​ໜຶ່ງ."
 
-#: functions/login/zume-login.php:294 functions/login/zume-login.php:423
+#: functions/login/zume-login.php:299 functions/login/zume-login.php:428
 msgid "Failed to connect with Facebook. Try again."
 msgstr "ບໍ່​ສາ​ມາດ​ເຊື່ອມ​ຕໍ່​ກັບ URL ທີ່​ໃຫ້​ໄວ້."
 
-#: functions/login/zume-login.php:313 functions/login/zume-login.php:439
+#: functions/login/zume-login.php:318 functions/login/zume-login.php:444
 msgid "Facebook user lookup error. Sorry for the inconvenience."
 msgstr "ພົບ​ຂໍ້​ຜິດ​ພາດ​ໃນ​ການ​ຄົ້ນ​ຫາ​ຜູ້​ໃຊ້ Facebook ຂໍ​ອະ​ໄພ​ໃນ​ຄວາມບໍ່​ສະ​ດວກ ."
 
-#: functions/login/zume-login.php:316 functions/login/zume-login.php:442
+#: functions/login/zume-login.php:321 functions/login/zume-login.php:447
 msgid "Error with looking up user with Facebook. Sorry for the inconvenience."
 msgstr "ເກີດ​ຂໍ້​ຜິດ​ພາດ​ໃນ​ການ​ຄົ້ນ​ຫາ​ຜູ້​ໃຊ້Facebook ຂໍ​ອະ​ໄພ​ໃນ​ຄວາມບໍ່​ສະ​ດວກ."
 
-#: functions/enqueue-scripts.php:331 functions/login/zume-login.php:543
+#: functions/login/zume-login.php:548
+#: functions/utilities/enqueue-scripts.php:338
 msgid "There are some errors in your form."
 msgstr "ມີ​ຂໍ້​ຜິດ​ພາດ​ບາງ​ຢ່າງ​ໃນ​ແບບ​ຟອມ​ຂອງ​ທ່ານ."
 
-#: functions/enqueue-scripts.php:119 functions/enqueue-scripts.php:335
-#: functions/login/zume-login.php:548 template-zume-dashboard.php:1420
+#: functions/login/zume-login.php:553
+#: functions/utilities/enqueue-scripts.php:119
+#: functions/utilities/enqueue-scripts.php:342 template-zume-dashboard.php:1420
 #: template-zume-dashboard.php:1471 template-zume-login.php:375
 msgid "Email"
 msgstr "ອີ​ເມວ"
 
-#: functions/login/zume-login.php:552 template-zume-login.php:261
+#: functions/login/zume-login.php:557 template-zume-login.php:261
 msgid "Password Required"
 msgstr "ຕ້ອງ​​ແຈ້ງລະ​ຫັດ​ຜ່ານ"
 
-#: functions/login/zume-login.php:555 template-zume-login.php:264
+#: functions/login/zume-login.php:560 template-zume-login.php:264
 msgid "Password required"
 msgstr "ຕ້ອງ​​ແຈ້ງ​ລະ​ຫັດ​ຜ່ານ"
 
-#: functions/login/zume-login.php:561 template-zume-login.php:271
+#: functions/login/zume-login.php:566 template-zume-login.php:271
 msgid "Re-enter Password"
 msgstr "​ກະ​ລຸ​ນາ​ພີມ​ລະ​ຫັດ​ຜ່ານ​ອີກ​ເທື່ອ​ໜຶ່ງ"
 
-#: functions/login/zume-login.php:564 template-zume-login.php:274
+#: functions/login/zume-login.php:569 template-zume-login.php:274
 msgid "Passwords do not match. Please, try again."
 msgstr "ລະ​ຫັດ​ຜ່ານບໍ່​ກົງ​ກັນ,ກະ​ລູ​ນາ​ພີມ​ໃໝ່."
 
-#: functions/login/zume-login.php:573 functions/zume-v4-seo-strings.php:24
+#: functions/login/zume-login.php:578 functions/zume-v4-seo-strings.php:24
 #: template-zume-login.php:358 template-zume-login.php:514
 msgid "Register"
 msgstr "ສະໝັກສະມາຊິກ"
 
-#: functions/login/zume-login.php:616
+#: functions/login/zume-login.php:621
 msgid "Missing captcha response. How did you do that?"
 msgstr "ບໍ່​ມີ​ການ​ຕອບ​ກັບ​ຂອງ ​ການ​ຮັກ​ສາຄວາມ​ປອດ​ໄພ. ​ທ່ານ​ເຮັດ​ໄດ້​ແນວ​ໃດ?"
 
-#: functions/login/zume-login.php:629
+#: functions/login/zume-login.php:634
 msgid "Captcha failure. Try again, if you are human."
 msgstr "ການ​ຮັກ​ສາຄວາມ​ປອດ​ໄພຜິດ​ພາດ, ກະ​ລຸ​ນາ​ລອງ​ອີກ​ເທື່ອ​ໜຶ່ງ,ຖ້າ​ທ່ານບໍ່​ແມ່ນ​ຫຸ່ນ​ຍົນ."
 
-#: functions/login/zume-login.php:635
+#: functions/login/zume-login.php:640
 msgid "Missing email or password."
 msgstr "ບໍ່​ພົບ​ອີ​ເມ​ວຫຼື​ລະ​ຫັດ​ຜ່ານ."
 
-#: functions/login/zume-login.php:654
+#: functions/login/zume-login.php:659
 msgid "Sorry. This email is already registered."
 msgstr "ຂໍ​ອະ​ໄພ,ອີ​ເມ​ວນີ້​ຖືກ​ໃຊ້​ສະ​ໝັກ​ສະ​ມາ​ຊິກ​ແລ້ວ."
 
-#: functions/login/zume-login.php:665
+#: functions/login/zume-login.php:670
 msgid "Something went wrong. Sorry. Could you try again?"
 msgstr "ມີ​ບາງ​ຢ່າງ​ຜິດ​ປົກ​ກະ​ຕິ​ກ່ຽວ​ກັບ​ສາຍ​ສຽບ API  ກະ​ລຸ​ນາ​ລອງ​ໃໝ່?"
 
-#: functions/login/zume-login.php:689
+#: functions/login/zume-login.php:694
 msgid "No new user found."
 msgstr "ບໍ່​ພົບ​ຜູ້​ໃຊ້​ໃໝ່."
 
-#: functions/login/zume-login.php:745 functions/login/zume-login.php:796
+#: functions/login/zume-login.php:750 functions/login/zume-login.php:801
 msgid "Google"
 msgstr "Google"
 
-#: functions/login/zume-login.php:790
+#: functions/login/zume-login.php:795
 msgid "Link with Google"
 msgstr "​ເຊື່ອມ​ຕໍ່​ກັບ Google"
 
-#: functions/login/zume-login.php:929 functions/login/zume-login.php:1025
+#: functions/login/zume-login.php:934 functions/login/zume-login.php:1030
 msgid "Facebook"
 msgstr "Facebook"
 
-#: functions/login/zume-login.php:1166
+#: functions/login/zume-login.php:1171
 msgid "Missing username or email address."
 msgstr "ບໍ່​ພົບອີ​ເມ​ລ​ຜູ້​ໃຊ້​ງານ."
 
-#: functions/login/zume-login.php:1172
+#: functions/login/zume-login.php:1177
 msgid "ERROR: Enter a username or email address."
 msgstr "ພົບ​ຂໍ້​ຜິດ​ພາດ: ພີມ​ຊື່​ຜູ້​ໃຊ້ງານຫຼື​ອີ​ເມ​ວ."
 
-#: functions/login/zume-login.php:1176
+#: functions/login/zume-login.php:1181
 msgid "ERROR: There is no user registered with that email address."
 msgstr "ພົບ​ຂໍ້​ຜິດ​ພາດ: ບໍ່​ມີ​ຜູ້​ໃຊ້​ທີ່​ສະ​ໝັກ​ກັບ​ອີ​ເມ​ວນັ້ນ."
 
-#: functions/login/zume-login.php:1181
+#: functions/login/zume-login.php:1186
 msgid "ERROR: There is no user registered with that username."
 msgstr "ພົບ​ຂໍ້​ຜິດ​ພາດ: ບໍ່​ມີ​ຜູ້​ໃຊ້​ທີ່​ສະ​ໝັກ​ກັບ​ຊື່​ຜູ້​ໃຊ້​ນັ້ນ."
 
-#: functions/login/zume-login.php:1226
+#: functions/login/zume-login.php:1231
 msgid "Someone has requested a password reset for the following account:"
 msgstr "ມີ​ຄົນ​ຂໍ​ການ​ຕັ້ງ​ຄ່າ​ລະ​ຫັດ​ຜ່ານໃໝ່ສຳ​ລັບ​ບັນ​ຊີ​ຕໍ່​ໄປ​ນີ້:"
 
 #. translators: %s: site name
-#: functions/login/zume-login.php:1228
+#: functions/login/zume-login.php:1233
 msgid "Site Name: %s"
 msgstr "​ຊື່​ເວບ​ໄຊ​ທ໌: %s"
 
 #. translators: %s: user login
-#: functions/login/zume-login.php:1230
+#: functions/login/zume-login.php:1235
 msgid "Username: %s"
 msgstr "ຊື່​ຜູ້​ໃຊ້: %s"
 
-#: functions/login/zume-login.php:1231
+#: functions/login/zume-login.php:1236
 msgid "If this was a mistake, just ignore this email and nothing will happen."
 msgstr "ຖ້າ​ຫາກ​ນີ້​ແມ່ນ​ຄວາມ​ຜິດ​ພາດ,ກະ​ລຸ​ນາ​ຖິ້ມ​ເອ​ເມ​ວ​ສະ​ບັບ​ນີ້ແລະ​ຈະ​ບໍ່ມີ​ຫຍັງ​ເກີດ​ຂຶ້ນ."
 
-#: functions/login/zume-login.php:1232
+#: functions/login/zume-login.php:1237
 msgid "To reset your password, visit the following address:"
 msgstr "ຫາກ​ຕ້ອງ​ການຕັ້ງ​ຄ່າ​ລະ​ຫັດ​ຜ່ານໃໝ່​ຂອງ​ທ່ານ​ກະ​ລຸ​ນາ​ໄປ​ທີ່​ຢູ່​ຕໍ່​ໄປ​ນີ້:"
 
 #. translators: Password reset email subject. %s: Site name
-#: functions/login/zume-login.php:1236
+#: functions/login/zume-login.php:1241
 msgid "[%s] Password Reset"
 msgstr "[%s] ລະ​ຫັດ​ຜ່ານຖືກ​ຕັ້ງ​ຄ່າ​ໃໝ່​ແລ້ວ"
 
-#: functions/login/zume-login.php:1266
+#: functions/login/zume-login.php:1271
 msgid "The email could not be sent."
 msgstr "ອີ​ເມ​ວບໍ່​ສາ​ມາດ​ສົ່ງ​ໄດ້."
 
-#: functions/login/zume-login.php:1266
+#: functions/login/zume-login.php:1271
 msgid "Possible reason: your host may have disabled the mail() function."
 msgstr "ສາ​ເຫດ​ທີ່​ເປັນ​ໄປ​ໄດ້:ຜູ້​ໃຫ້​ບໍ​ລິ​ການ​ຂອງ​ທ່ານ​ອາດ​ຈະ​ປິດ​ການ​ໃຊ້​ງານ​ຟັງ​ຊັນ​ນີ້ mail() function."
 
@@ -294,15 +298,15 @@ msgstr "ທຳອິດ"
 msgid "Last"
 msgstr "ສຸດທ້າຍ"
 
-#: functions/zume-v4-groups.php:282
+#: functions/zume-v4-groups.php:284
 msgid "( Key not available. Check dashboard. )"
 msgstr "(ບໍ່​ມີ​ລະ​ຫັດ ກະ​ລຸ​ນາ​ກວດ​ສອບ​ແຜງ​ຄວບ​ຄຸມ)"
 
-#: functions/enqueue-scripts.php:292 functions/zume-content.php:12
+#: functions/utilities/enqueue-scripts.php:299 functions/zume-content.php:12
 msgid "Session"
 msgstr "ບົດ​ຮຽນ"
 
-#: functions/enqueue-scripts.php:280 functions/zume-content.php:120
+#: functions/utilities/enqueue-scripts.php:287 functions/zume-content.php:120
 msgid "Welcome to Session"
 msgstr "ຕ້ອນ​ຮັບ​ເຂົ້າ​ສູ່ບົດ​ຮຽນ"
 
@@ -322,7 +326,7 @@ msgstr "ສຳຫຼວດ​ເນື້ອ​ຫາ​ຂອງບົດ​ຮ
 msgid "How many are with you?"
 msgstr "ທ່ານ​ມີ​ສະ​ມາ​ຊິກ​ຈັກ​ຄົນ​ໃນ​ຂະ​ນະ​ນີ້?"
 
-#: functions/enqueue-scripts.php:289 functions/zume-content.php:156
+#: functions/utilities/enqueue-scripts.php:296 functions/zume-content.php:156
 msgid "Continue"
 msgstr "ດຳ​ເນີນ​ຕໍ່​ໄປ"
 
@@ -359,7 +363,7 @@ msgstr "ກະ​ລຸ​ນາ​ເລີ່ມ​ຕົ້ນ​ດ້ວຍ
 #: functions/zume-content.php:2320 functions/zume-content.php:2575
 #: functions/zume-content.php:2813 functions/zume-content.php:3049
 #: functions/zume-content.php:3116 functions/zume-content.php:3185
-#: functions/zume-content.php:3590
+#: functions/zume-content.php:3592
 msgid "Watch and Discuss (15min)"
 msgstr "ເບິ່ງ​ແລະ​ໂອ້​ລົ​ມ​ກັນ(15ນາ​ທີ)"
 
@@ -371,7 +375,7 @@ msgstr "ເບິ່ງ​ແລະ​ໂອ້​ລົ​ມ​ກັນ(15ນ
 #: functions/zume-content.php:2326 functions/zume-content.php:2581
 #: functions/zume-content.php:2819 functions/zume-content.php:3057
 #: functions/zume-content.php:3124 functions/zume-content.php:3193
-#: functions/zume-content.php:3596 functions/zume-content.php:3774
+#: functions/zume-content.php:3598 functions/zume-content.php:3776
 msgid "WATCH"
 msgstr "ເບິ່ງ"
 
@@ -393,8 +397,8 @@ msgstr "ຕົ້ນ​ສະ​ບັບ​ວິ​ດີ​ໂອ​ຊູ​
 #: functions/zume-content.php:2443 functions/zume-content.php:2634
 #: functions/zume-content.php:2697 functions/zume-content.php:2875
 #: functions/zume-content.php:3101 functions/zume-content.php:3167
-#: functions/zume-content.php:3236 functions/zume-content.php:3368
-#: functions/zume-content.php:3560 functions/zume-content.php:3635
+#: functions/zume-content.php:3236 functions/zume-content.php:3370
+#: functions/zume-content.php:3562 functions/zume-content.php:3637
 msgid "DISCUSS"
 msgstr "ໂອ້​ລົມ​ກັນ"
 
@@ -440,7 +444,7 @@ msgstr "ການ​ຟັງ​ແລະ​ການ​ຕອບ​ສະ​ໜ
 
 #: functions/zume-content.php:421 functions/zume-content.php:489
 #: functions/zume-content.php:903 functions/zume-content.php:1543
-#: functions/zume-content.php:1846 functions/zume-content.php:3649
+#: functions/zume-content.php:1846 functions/zume-content.php:3651
 msgid "Listen and Read Along (3min)"
 msgstr "ຟັງ​ແລະ​ອ່ານ​ຕາມ(3ນາ​ທີ)"
 
@@ -449,7 +453,7 @@ msgstr "ຟັງ​ແລະ​ອ່ານ​ຕາມ(3ນາ​ທີ)"
 #: functions/zume-content.php:1188 functions/zume-content.php:1320
 #: functions/zume-content.php:1549 functions/zume-content.php:1852
 #: functions/zume-content.php:2043 functions/zume-content.php:2384
-#: functions/zume-content.php:3655
+#: functions/zume-content.php:3657
 msgid "READ"
 msgstr "ອ່ານ"
 
@@ -469,9 +473,9 @@ msgstr "ກະ​ລຸ​ນາ​ອ່ານ \"ວິ​ທີ​ສຶກ​
 msgid "Zúme Video Scripts: S.O.A.P.S."
 msgstr "ຕົ້ນ​ສະ​ບັບ​ວິ​ດີ​ໂອ​ຊູ​ເມ້:  ວິ​ທີ​ສຶກ​ສາ​ພ​ຣະ​ຄຳ​ພີ."
 
-#: functions/enqueue-scripts.php:220 functions/zume-content.php:500
-#: template-gmo.php:270 template-how-to-follow-jesus.php:198
-#: template-zume-dashboard.php:342 template-zume-training.php:212
+#: functions/utilities/enqueue-scripts.php:227 functions/zume-content.php:500
+#: template-zume-dashboard.php:342 template-zume-landing.php:406
+#: template-zume-training.php:212
 msgid "Accountability Groups"
 msgstr "​ກຸ່ມ​ທີ່​ມີ​ໜ້າ​ທີ່​ຮັບ​ຜິດ​ຊອບ"
 
@@ -503,8 +507,8 @@ msgstr "ແບ່ງ​​ເປັນ​ກຸ່ມ ກຸ່ມ​ລະ​�
 #: functions/zume-content.php:1037 functions/zume-content.php:1445
 #: functions/zume-content.php:1959 functions/zume-content.php:2244
 #: functions/zume-content.php:2495 functions/zume-content.php:2732
-#: functions/zume-content.php:2963 functions/zume-content.php:3357
-#: functions/zume-content.php:3405
+#: functions/zume-content.php:2963 functions/zume-content.php:3359
+#: functions/zume-content.php:3407
 msgid "SHARE"
 msgstr "​ແບ່ງ​ປັນ"
 
@@ -520,7 +524,7 @@ msgstr "​ຄູ່​ມື​ຊູ​ເມ້"
 #: functions/zume-content.php:1415 functions/zume-content.php:1942
 #: functions/zume-content.php:2231 functions/zume-content.php:2465
 #: functions/zume-content.php:2715 functions/zume-content.php:2946
-#: functions/zume-content.php:3386
+#: functions/zume-content.php:3388
 msgid "LOOKING FORWARD"
 msgstr "​ເບິ່ງ​ໄປ​ທາງ​ໜ້າ"
 
@@ -538,7 +542,7 @@ msgstr "ທາງ​ລຸ່ມນີ້​ຄື​ຂັ້ນ​ຕອນ​
 #: functions/zume-content.php:1438 functions/zume-content.php:1952
 #: functions/zume-content.php:2237 functions/zume-content.php:2488
 #: functions/zume-content.php:2725 functions/zume-content.php:2956
-#: functions/zume-content.php:3396
+#: functions/zume-content.php:3398
 msgid "OBEY"
 msgstr "​ເຊື່ອ​ຟັງ"
 
@@ -558,8 +562,8 @@ msgstr "ໃຊ້​ເວ​ລາ​ຖາມ​ພ​ຣະ​ເຈົ້າ
 #: functions/zume-content.php:2502 functions/zume-content.php:2553
 #: functions/zume-content.php:2739 functions/zume-content.php:2791
 #: functions/zume-content.php:2970 functions/zume-content.php:3028
-#: functions/zume-content.php:3297 functions/zume-content.php:3413
-#: functions/zume-content.php:3468
+#: functions/zume-content.php:3299 functions/zume-content.php:3415
+#: functions/zume-content.php:3470
 msgid "PRAY"
 msgstr "​ອະ​ທິ​ຖານ"
 
@@ -571,7 +575,7 @@ msgstr "ອະ​ທິ​ຖານ​ຂໍ​ພ​ຣະ​ ​ເຈົ້�
 #: functions/zume-content.php:1459 functions/zume-content.php:1973
 #: functions/zume-content.php:2258 functions/zume-content.php:2509
 #: functions/zume-content.php:2746 functions/zume-content.php:2977
-#: functions/zume-content.php:3421
+#: functions/zume-content.php:3423
 msgid "#ZumeProject"
 msgstr "#ໂຄງ​ການ​ຊູ​ເມ້"
 
@@ -599,13 +603,13 @@ msgstr "ດາວ​ໂຫຼດ​ຄູ່​ມື"
 #: functions/zume-content.php:1500 functions/zume-content.php:2001
 #: functions/zume-content.php:2285 functions/zume-content.php:2536
 #: functions/zume-content.php:2772 functions/zume-content.php:3006
-#: functions/zume-content.php:3449
+#: functions/zume-content.php:3451
 msgid "CHECK-IN"
 msgstr "​ກວດ​ກາ​ກັນ​ແລະ​ກັນ"
 
 #: functions/zume-content.php:692 functions/zume-content.php:1081
 #: functions/zume-content.php:2774 functions/zume-content.php:3010
-#: functions/zume-content.php:3451
+#: functions/zume-content.php:3453
 msgid "Before getting started, take some time to check-in."
 msgstr "ກ່ອນ​ລະ​ເລີ່ມ​ບົດ​ຮຽນ​ນີ້ ກະ​ລຸ​ນາ​ໃຊ້​ເວ​ລາ​ກວດ​ເບິ່ງ​ກັນ​ແລະ​ກັນ​ໜ້ອຍ​ໜຶ່ງ."
 
@@ -613,7 +617,7 @@ msgstr "ກ່ອນ​ລະ​ເລີ່ມ​ບົດ​ຮຽນ​ນີ
 #: functions/zume-content.php:1502 functions/zume-content.php:2004
 #: functions/zume-content.php:2287 functions/zume-content.php:2538
 #: functions/zume-content.php:2776 functions/zume-content.php:3012
-#: functions/zume-content.php:3453
+#: functions/zume-content.php:3455
 msgid "At the end of the last session, everyone in your group was challenged in two ways:"
 msgstr "ໃນ​ຊ່ວງ​ທ້າຍ​ບົດ​ຮຽນ​ທີ່​ຜ່ານ​ມາ ທຸກ​ຄົນ​ໃນ​ກຸ່ມ​ຂອງ​ທ່ານ​ໄດ້​ຮັບ​ການ​ທ້າ​ທາຍ​ສອງ​ຢ່າງ:"
 
@@ -640,8 +644,7 @@ msgstr "ກະ​ລຸ​ນາ​ຖາມ​ສະ​ມາ​ຊິກວ່
 msgid "If we want to make disciples who multiply – spiritual producers and not just consumers – then we need to learn and share four main ways God makes everyday followers more like Jesus:"
 msgstr "ຖ້າ​ຫາກ​ພວກ​ເຮົາ​ຕ້ອງ​ການ​ສ້າງ​ສາ​ວົກ​ຜູ້​ເພີ່ມ​ທະ​ວີ​ຈຳ​ນວນ-ສ້າງ​ເຂົາ​ໃຫ້​ເປັນ​ຜູ້​ຜະ​ລິດ​ຝ່າຍ​ວິນ​ຍານບໍ່​ແມ່ນ​ພຽງ​ແຕ່​ຜູ້​ຊົມ​ໃຊ້ ​ດັ່ງ​ນັ້ນ​ແລ້ວ ເຮົາ​ຈຳ​ເປັນ​ຕ້ອງຮຽນ​ຮູ້​ແລະ​ແບ່ງ​ປັນ​ວິ​ທີ​ການຫຼັກ​ສີ່​ວິ​ທີ​ທີ່​ພ​ຣະ​ເຈົ້າ​ຊົງ​ເຮັດ​ໃຫ້​ຜູ້​ເຊື່ອ​ກາຍ​ເປັນ​ເໝືອນ​ພ​ຣະ​ເຢ​ຊູເຈົ້າຫຼາຍ​ຍິ່ງ​ຂຶ້ນ:"
 
-#: functions/zume-content.php:733 template-gmo.php:233
-#: template-how-to-follow-jesus.php:161
+#: functions/zume-content.php:733 template-zume-landing.php:369
 msgid "Prayer"
 msgstr "​ການ​ອະ​ທິ​ຖານ"
 
@@ -806,7 +809,7 @@ msgstr "ອະ​ທິ​ຖານ​ຂອບ​ຄຸນ​ພ​ຣະ​ເ
 #: functions/zume-content.php:2023 functions/zume-content.php:2305
 #: functions/zume-content.php:2560 functions/zume-content.php:2798
 #: functions/zume-content.php:3036 functions/zume-content.php:3256
-#: functions/zume-content.php:3475
+#: functions/zume-content.php:3477
 msgid "OVERVIEW"
 msgstr "ພາບ​ລວມ"
 
@@ -1295,7 +1298,7 @@ msgid "Have your entire group spend the next 90 minutes practicing the 3/3 Group
 msgstr "ໃຫ້​ກຸ່ມ​ໃຊ້​ເວ​ລາ 90 ນາ​ທີ ຕໍ່​ຈາກນີ້​ຝຶກ​ຮູບ​ແບບ 3/3 ກະ​ລຸ​ນາ​ເບິ່ງ​ຄູ່​ມື​ຊູ​ເມ້​ຂອງ​ທ່ານ ຖ້າ​ຫາກ​ທ່າ​​ນຍັງ​ຈື່​ຮູບ​ແບບບໍ່​ໄດ້."
 
 #: functions/zume-content.php:2676 functions/zume-content.php:2916
-#: functions/zume-content.php:3740
+#: functions/zume-content.php:3742
 msgid "PRACTICE"
 msgstr "ຝຶກ​ຝົນ"
 
@@ -1503,273 +1506,273 @@ msgstr "ທ່ານ​ສາ​ມາດ​ໃຊ້​ຄູ່​ມື​ຊ
 msgid "Online \"Three Month Plan\""
 msgstr "ອອນ​ໄລ \"ແຜນ​ການ​ສາມ​ເດືອ​ນ\""
 
-#: functions/zume-content.php:3280
+#: functions/zume-content.php:3281
 msgid "Participants can access their own three month plan on the side column of their dashboard. They can connect their plan with this group by adding the following key:"
 msgstr "ສະມາຊິກກຸ່ມສາມາດເຂົ້າເຖິງແຜນສາມເດືອນຂອງຕົນເອງໄດ້ທີ່ຢູ່​ໃນ​ແຖວ​ທາງຂ້າງຂອງ​ແຜງ​ຄວບ​ຄຸມ. ພວກເຂົາສາມາດເຊື່ອມຕໍ່ແຜນການຂອງພວກເຂົາກັບກຸ່ມໂດຍການເພີ່ມປຸ່ມຕໍ່ໄປນີ້:"
 
-#: functions/zume-content.php:3300
+#: functions/zume-content.php:3302
 msgid "Ask God what He specifically wants you to do with the basic disciple-making tools and techniques you have learned over these last nine sessions. You can remember them in terms of the Greatest Blessing."
 msgstr "ຖາມ​ພ​ຣະ​ເຈົ້າ​ວ່າ​ພ​ຣະ​ອົງ​ຊົງ​ຢາກ​ໃຫ້​ທ່ານ​ເຮັດ​ຫຍັງ​ເປັນ​ພິ​ເສດ​ກັບ​ຊຸດ​ເຄື່ອງ​ມື​ພື້ນ​ຖານ​ແລະ​ການ​ສ້າງ​ສາ​ວົກ​ແລະ​ເທັກ​ນິກ​ຕ່າງໆ ທີ່​ທ່ານ​ໄດ້​ຮຽນ​ໄປ​ຈາກ 9 ບົດ​ຮຽນ​ນີ້. ກະ​ລຸ​ນາ​ຈື່​ພ​ຣະ​ຄຳ​ຂອງ​ພ​ຣະ​ອົງ​ໃນ​ເລື່ອງ​ກ່ຽວ​ກັບ​ຄວາມ​ສັດ​ຊື່."
 
-#: functions/zume-content.php:3304
+#: functions/zume-content.php:3306
 msgid "It's a Blessing to ... S.O.A.P.S. Bible Reading, Accountability Groups, Prayer Cycle"
 msgstr "ເປັນ​ພ​​ຣະ​ພອນ​ທີ່​ຈະ..ການ​ສຶກ​ສາ​ພ​ຣະ​ຄຳ​ພີ,ກຸ່ມ​ທີ່​ມີ​ໜ້າ​ທີ່​ຮັບ​ຜິດ​ຊອບ,ວົງ​ຈອນ​ການ​ອະ​ທິ​ຖານ"
 
-#: functions/zume-content.php:3307
+#: functions/zume-content.php:3309
 msgid "It's a Great Blessing to ... Share your 3-Minute Testimony and God's Story, Prayer Walking"
 msgstr "ເປັນ​ພ​ຣະ​ພອນ​ທີ່​ຍິ່ງ​ໃຫຍ່​ທີ່​ຈະ...ເລົ່າ​ຄຳ​ພະ​ຍານ 3 ນາ​ທີ​ຂອງ​ທ່ານ​ແລະ​ເລື່ອງ​ລາວ​ຂອງ​ພ​ຣະ​ເຈົ້າ,ການ​ຍ່າງ​ອະ​ທິ​ຖານ"
 
-#: functions/zume-content.php:3310
+#: functions/zume-content.php:3312
 msgid "It's a Greater Blessing to ... Start a 3/3rds Group"
 msgstr "ເປັນ​ພ​ຣະ​ພອນ​ທີ່​ຍິ່ງ​ໃຫຍ່ກວ່າ​ທີ່​ຈະ...​ເລີ່ມ​ເຮັດກຸ່ມ 3/3"
 
-#: functions/zume-content.php:3313
+#: functions/zume-content.php:3315
 msgid "It's the Greatest Blessing to ... Start a Zúme Group"
 msgstr "ເປັນ​ພ​ຣະ​ພອນ​ທີ່​ຍິ່ງ​ໃຫຍ່ທີ່​ສຸດ​ທີ່​ຈະ...​ເລີ່ມ​ເຮັດ​ກຸ່ມ​ຊູ​ເມ້"
 
-#: functions/zume-content.php:3321
+#: functions/zume-content.php:3323
 msgid "LISTEN"
 msgstr "​ຟັງ"
 
-#: functions/zume-content.php:3323
+#: functions/zume-content.php:3325
 msgid "Take at least 10 minutes to be as quiet as possible and listen intently to what God has to say and what He chooses to reveal. Make an effort to hear His voice."
 msgstr "ໃຊ້​ເວ​ລາ​ຢ່າງ​ໜ້ອຍ 10 ນາ​ທີ​ຢ່າງ​ສະ​ຫງົບ​ທີ່​ສຸດ​ເທົ່າ​ທີ່​ເຮັດ​ໄດ້​ແລະ​ຟັງ​ຢ່າງ​ຕັ້ງ​ໃຈ​ວ່າ​ພ​ຣະ​ເຈົ້າ​ຊົງ​ກ່າວ​ສິ່ງ​ໃດ​ແລະ​ພ​ຣະ​ອົງ​ຊົງ​ເລືອກ​ສຳ​ແດງ​ຫຍັງ​ແກ່​ທ່ານ ພະ​ຍາ​ຍາມ​ຟັງ​ສຽງ​ຂອງ​ພ​ຣະ​ອົງ."
 
-#: functions/zume-content.php:3329
+#: functions/zume-content.php:3331
 msgid "COMPLETE"
 msgstr "ເຮັດ​ໃຫ້​ສຳ​ເລັດ"
 
-#: functions/zume-content.php:3332
+#: functions/zume-content.php:3334
 msgid "Use the rest of your time to complete the Three Month Plan worksheet. You can write it out on a piece of paper. If you are logged in to ZúmeProject.com you can fill out your form digitally and link it to your group. Once you login, you’ll find the Three Month Plan under Settings. You can also find the Three Month Plan on your Dashboard."
 msgstr "ໃຊ້ເວລາສ່ວນທີ່ເຫຼືອຂອງທ່ານ​ຂຽນແຜນການສາມເດືອນໃຫ້​ແລ້ວ. ທ່ານສາມາດຂຽນໃນເຈ້ຍໄດ້. ຖ້າທ່ານ​ສະ​ໝັກໃນ ZmeProjectcom."
 
-#: functions/zume-content.php:3335
+#: functions/zume-content.php:3337
 msgid "You do not have to commit to every item, and there is room for other items not already on the list. Do your best to align your commitments to what you have heard God reveal to you about His will."
 msgstr "ທ່ານບໍ່ຈໍາເປັນຕ້ອງ​ສັນ​ຍາ​ຄົບ​ທຸກ​ຂໍ້​ໃນ​ນັ້ນ, ທ່ານສາມາດເຮັດສິ່ງອື່ນໆທີ່ບໍ່​ມີ​ໃນ​ລາຍ​ການ​ໄດ້​ເຊັ່ນ​ກັນ ກະລຸນາຈັດລຽງສັນຍາຕ່າງໆຂອງທ່ານຢ່າງທີ່ດີທີ່ສຸດ ເພື່ອໃຫ້ສອດຄ່ອງກັບສິ່ງທີ່ພຣະເຈົ້າໄດ້ເປີດ​ເຜີຍໃຫ້ທ່ານເຫັນກ່ຽວກັບຈຸດປະສົງຂອງພຣະອົງ."
 
-#: functions/zume-content.php:3350
+#: functions/zume-content.php:3352
 msgid "Share you Plan (30min)"
 msgstr "ເລົ່າ​ແຜນ​ຂອງ​ທ່ານ​ໃຫ້​ຟັງ(30 ນາ​ທີ)"
 
-#: functions/zume-content.php:3359
+#: functions/zume-content.php:3361
 msgid "In groups of two or three (15 minutes)"
 msgstr "​ໃນ​ກຸ່ມ​ສອງຫຼື​ສາມ​ຄົນ (15 ນາ​ທີ)"
 
-#: functions/zume-content.php:3361
+#: functions/zume-content.php:3363
 msgid "Take turns sharing your Three Month Plans with each other. Take time to ask questions about things you might not understand about plans and how the others will meet their commitments. Ask them to do the same for you and your plan. Find a training partner(s) that is willing to check in with you to report on progress and challenges and ask questions after 1, 2, 3, 4, 6, 8 and 12 weeks. Commit to doing the same for them."
 msgstr "ຈົ່ງ​ສະຫຼັບ​ກັນ​ເລົ່າແຜນການ 3 ເດືອນໃຫ້​ເຊິ່ງ​ກັນ​ແລະ​ກັນ​ຟັງ. ໃຊ້​ເວ​ລາ​ສອບ​ຖາມ​ແຜນ​ການ​ຂອງ​ໝູ່​ເພື່ອນຂອງທ່ານກ່ຽວກັບສິ່ງທີ່ທ່ານບໍ່ເຂົ້າໃຈຢ່າງຊັດເຈນ. ລວມທັງວິ​ທີ​ທີ່​ໝູ່ເພື່ອນ​ຈະເຮັດ​ໃຫ້​ຄຳ​ໝັ້ນ​ສັນ​ຍາເຫຼົ່ານີ້ສຳ​ເລັດໄດ້​ແນວ​ໃດ. ຂໍໃຫ້ເຂົາເຮັດເຊັ່ນດຽວກັນກັບທ່ານ. ຖາມກ່ຽວກັບແຜນຕ່າງໆ, ວິທີການເຮັດຂອງທ່ານ, ຈົ່ງ​ຫາ​ຄູ່​ເພື່ອ​ຝຶກ​ນຳ​ກັນ, ເຊິ່ງບຸກຄົນນີ້ຈະກວດກາກັບທ່ານເພື່ອລາຍງານຄວາມກ້າວໜ້າແລະສິ່ງທ້າທາຍທີ່ໄດ້ພົບ. ແລະໝັ່ນຖາມຄໍາຖາມ ຫຼັງຈາກອາທິດ​ທີ 1, 2, 3, 4, 5, 6, 8 ແລະ 12 ເຮັດເຊັ່ນກັນນີ້​ໃຫ້​ພວກເຂົາ​ຄື​ກັນ."
 
-#: functions/zume-content.php:3370
+#: functions/zume-content.php:3372
 msgid "In your full training Group (15 minutes)"
 msgstr "ເຮັດ​ວຽກກັບ​ກຸ່ມ​ເຂົ້າ​ຝຶກ​ອົບ​ຮົມ​ຢ່​າງ​ຄົບ​ຖ້ວນ (15 ນາ​ທີ)"
 
-#: functions/zume-content.php:3372
+#: functions/zume-content.php:3374
 msgid "Discuss and develop a group plan for starting at least two new 3/3 Groups or Zúme Training Groups in your area. Several of your group members may have just completed and saved your individual Three-Month Plans to your Zúme group. On this step, if no one from your group has filled out a digital copy on the website of your Three-Month Plan, it is highly recommended that you do this together now. Just go to the Three-Month Plan under Settings and link the form to your group."
 msgstr "ໂອ້​ລົມ​ກັນແລະສ້າງແຜນການ​ໜຶ່ງ​ຂຶ້ນ​ມາ​ເພື່ອເລີ່ມ​ຕັ້ງ 3/3 ​ກຸ່ມ​ໃໝ່ຢ່າງ​ໜ້ອຍ 2 ກຸ່ມຫຼື​ຕັ້ງກຸ່ມຝຶກອົບຮົມ​ຊູ​ເມ້ຢູ່ໃນພື້ນທີ່ຂອງທ່ານ. ສະມາຊິກຫຼາຍຄົນໃນກຸ່ມຂອງທ່ານອາດຈະ​ຫາກໍ່ສໍາເລັດການຝຶກອົບຮົມແລ້ວແລະກະລຸນາບັນທຶກແຜນການ 30 ເດືອນຂອງທ່ານ​ເອົາ​ໄວ້ໃນກຸ່ມຊູ​ເມ້ຂອງທ່ານ. ໃນຂັ້ນຕອນນີ້, ຖ້າ​ຍັງບໍ່ມີໃຜໃນກຸ່ມຂອງທ່ານໄດ້​ຂຽນ​ຂໍ້​ມູນແຜນການສາມເດືອນໃນເວັບໄຊທ໌ ຂໍ​ແນ​ະ​ນຳ​ແທ້ໆ​ວ່າ​​ໃຫ້ທ່ານເຮັດຮ່ວມກັນໃນເວລານີ້ເລີຍ. ພຽງແຕ່ເຂົ້າໄປໃນແຜນການສາມເດືອນພາຍໃຕ້ການຕັ້ງຄ່າແລະເຊື່ອມຕໍ່ແບບຟອມນີ້ໄປຫາກຸ່ມຂອງທ່ານ."
 
-#: functions/zume-content.php:3375
+#: functions/zume-content.php:3377
 msgid "Remember, your goal is to start Simple Churches that multiply. 3/3 Groups and Zúme Training Groups are two ways to do that. Discuss and decide whether these new Groups will be connected to an existing local church or network or whether you’ll start a new network out of your Zúme Training Group."
 msgstr "ກະລຸນາຈື່ວ່າເປົ້າໝາຍຂອງທ່ານແມ່ນເພື່ອກໍ່​ຕັ້ງ​ຄ​ຣິ​ສ​ຕະຈັກລຽບ​ງ່າຍທີ່ເພີ່ມ​ທະ​ວີ​ຈໍານວນ  ກຸ່ມ3/3 ແລະກຸ່ມການຝຶກອົບຮົມຊູ​ເມ້ແມ່ນສອງວິ​ທີໃນ​ການເຮັດ​ສິ່ງນັ້ນ. ໂອ້​ລົມ​ກັນແລະຕັດສິນໃຈວ່າກຸ່ມໃ​ໝ່ເຫຼົ່ານີ້ຈະເຊື່ອມຕໍ່ກັບ​ຄ​ຣິ​ສ​ຕະ​ຈັກ​ທ້ອງ​ຖິ່ນຫຼືເຄືອຂ່າຍທີ່​ມີ​ຢູ່​ແລ້ວໃນພື້ນທີ່​ໄດ້​ແນວ​ໃດ. ຫຼືທ່ານຄວນສ້າງເຄືອຂ່າຍໃ​ໝ່​ຂຶ້ນ​ມາຈາກກຸ່ມຝຶກອົບຮົມ​ຊູ​ເມ້ຂອງທ່ານ."
 
-#: functions/zume-content.php:3389
+#: functions/zume-content.php:3391
 msgid "Congratulations! You've completed Session 9."
 msgstr "ຂໍ​ສະ​ແດງ​ຄວາມ​ຍິນ​ດີ​ນຳ! ທ່ານ​ໄດ້​ເຮັດ​ບົດ​ຮຽນ​ທີ 9ສຳ​ເລັດ​ຮຽບ​ຮ້ອຍ​ແລ້ວ."
 
-#: functions/zume-content.php:3398
+#: functions/zume-content.php:3400
 msgid "You may not know it, but you now have more practical training on starting simple churches and making disciples who multiply than many pastors and missionaries around the world!"
 msgstr "ທ່ານອາດຈະບໍ່ຮູ້ ແຕ່​ຕອນນີ້ທ່ານໄດ້ຮັບການຝຶກອົບຮົມເລື່ອງການສ້າງຕັ້ງຄ​ຣິ​ສ​ຕະຈັກ​ຢ່າງເປັນທາງການຫຼາຍຍິ່ງກວ່າ​ສິດ​ຍາ​ພິ​ບານ​ສ່ວນຫຼາຍໃນທົ່ວໂລກ!"
 
-#: functions/zume-content.php:3399
+#: functions/zume-content.php:3401
 msgid "Set aside time on your calendar each week to continue to work on your Three Month Plan, and plan check-ins with your training partner at the end of week 1, 2, 3, 4, 6, 8, and 12. Each time you're together, ask about their results and share yours, making sure you're both working through your plans. Prayerfully consider continuing as an ongoing spiritual family committed to multiplying disciples."
 msgstr "ຈັດເວລາຂອງທ່ານໃນແຕ່ລະອາທິດລົງໃນປະຕິທິນຂອງທ່ານເພື່ອເຮັດແຜນການສາມເດືອນ. ແລະແຜນການກວດ​ກາກັບຄູ່ຝຶກຂອງທ່ານໃນຕອນທ້າຍຂອງອາທິດທີ 1, 2, 3, 4, 5, 6, 8 ແລະ 12 ​ໃນ​ແຕ່​ລະ​ຄັ້ງທີ່ທ່ານຢູ່ຮ່ວມກັນ. ສອບຖາມກ່ຽວກັບຜົນຕ່າງໆ ທີ່ໄດ້ຮັບແລະເລົ່າ​ຜົນ​ຂອງ​ທ່ານ​ໃຫ້​ເຂົາ​ຟັງ​ນຳເຊັ່ນກັນ  ເຮັດໃຫ້ແນ່ໃຈວ່າທ່ານທັງສອງປະຕິບັດຕາມແຜນຂອງທ່ານ. ຈົ່ງຄິດແລະອະທິຖານເພື່ອ​ການ​ເຮັດ​ສິ່ງນີ້​ຕໍ່​ໄປ, ໂດຍພິຈາລະນາວ່ານີ້ແມ່ນຄອບຄົວ​ຝ່າຍ​ຈິດວິນຍານທີ່ຈະສືບຕໍ່ຂະຫຍາຍຕົວໂດຍພະຍາຍາມ​ທີ່​ຈະເພີ່ມທະ​ວີຈໍານວນ​ສາ​ວົກ."
 
-#: functions/zume-content.php:3407
+#: functions/zume-content.php:3409
 msgid "Pray and ask God who He would have you share Zúme Training with by launching a Leadership Cell of future Zúme Training leaders."
 msgstr "ອະ​ທິ​ຖານ​ແລະ​ຂໍ​ພ​ຣະ​ເຈົ້າ​ວ່າ​ພ​ຣະ​ອົງ​ຢາກ​ໃຫ້​ທ່ານ​ເລົ່າ​ເລື່ອງ​ການ​ອົບ​ຮົມ​ຊູ​ເມ້​ໂດຍ​ການ​ຕັ້ງ​ກຸ່ມ​ຜູ້​ນຳ​ທີ່​ປະ​ກອບ​ດ້ວຍ​ຜູ້​ທີ່​ຈະ​ກາຍ​ເປັນ​ຜູ້​ນຳ​ການ​ອົບ​ຮົມ​ຊູ​ເມ້​ໃນ​ອະ​ນາ​ຄົດ​ໃຫ້​ໃຜຟັງ."
 
-#: functions/zume-content.php:3415
+#: functions/zume-content.php:3417
 msgid "Be sure to pray with your group before you end your time together. Thank God that He has created and gifted you with exactly the right talents to make a difference in His kingdom. Ask Him for wisdom to use the strengths He has given you and to find other followers who help cover your weaknesses. Pray that He would make you fruitful and multiply — this was His plan from the very beginning. Pray that God help you be obedient to Him and invite Him to work in you and those around you!"
 msgstr "ກະລຸນາເຮັດໃຫ້ແນ່ໃຈວ່າທ່ານ​ໄດ້ອະທິຖານກັບກຸ່ມກ່ອນທີ່ທ່ານຈະສິ້ນສຸດ​ການ​ໃຊ້​ເວ​ລາ​ຮ່ວມກັນ. ຂອບໃຈພຣະເຈົ້າທີ່ພຣະອົງໄດ້ສ້າງທ່ານໃຫ້ທ່ານມີຄວາມສາມາດພິເສດແລະໃຫ້ຂອງປະ​ທານ​ທີ່​ເໝາະ​ສົມ​ກັບ​ທ່ານ​ທີ່ສຸດເພື່ອສ້າງຄວາມແຕກຕ່າງໃນອານາຈັກຂອງ​ພ​ຣະ​ອົງ. ຂໍ​ສະ​ຕິ​ປັນ​ຍາ​ຈາກ​ພ​ຣະ​ອົງເພື່ອໃຊ້ອໍານາດທີ່ພຣະອົງໄດ້ມອບໃຫ້ທ່ານແລະເພື່ອພົບກັບຜູ້​ເຊື່ອ​ຄົນອື່ນໆ. ທີ່ຈະຊ່ວຍ​ເຫຼືອໃນຄວາມອ່ອນແອຂອງທ່ານ ​ໄດ້ຈົ່ງອະທິຖານ​ຂໍພຣະອົງໃຫ້ທ່ານ​ເກີດຜົນແລະເພີ່ມທະ​ວີຈໍານວນ - ນີ້ແມ່ນແຜນການຂອງພຣະ​ເຈົ້າ​ຕັ້ງ​ແຕ່​ທຳ​ອິດ​ເລີຍ. ອະທິຖານຂໍພຣະເຈົ້າຊ່ວຍເຫຼືອທ່ານໃຫ້ເຊື່ອຟັງພຣະອົງແລະຂໍ​ເຊີນພຣະອົງເຮັດວຽກຢູ່ໃນທ່ານແລະຜູ້ທີ່ຢູ່ອ້ອມຂ້າງທ່ານ!"
 
-#: functions/zume-content.php:3423
+#: functions/zume-content.php:3425
 msgid "Excited to help a new Zúme group get started? Share about Zúme on social media and let people know where they can get started."
 msgstr "ຕື່ນເຕັ້ນກັບ​ການຊ່ວຍສ້າງຕັ້ງກຸ່ມຊູ​ເມ້​ຂຶ້ນ​ມາ​ໃໝ່​ອີກ​ກຸ່ມ​ໜຶ່ງຫຼືບໍ່?  ແບ່ງ​ປັນເລື່ອງຊູ​ເມ້ກັບການສື່ສານສັງຄົມແລະໃຫ້​ໝູ່ເພື່ອນຮູ້ວ່າພວກເຂົາຈະເລີ່ມຕັ້ງກຸ່ມໄດ້​ແນວ​ໃດ."
 
-#: functions/zume-content.php:3442
+#: functions/zume-content.php:3444
 msgid "Looking Back"
 msgstr "ເບິ່ງ​ຍ້ອນ​ກັ​ບໄປ"
 
-#: functions/zume-content.php:3444
+#: functions/zume-content.php:3446
 msgid "Welcome back to Zúme Training!"
 msgstr "​ຍິນ​ດີ​ຕ້ອນ​ຮັບ​ເຂົ້າ​ສູ່​ຊູ​ເມ້​ອີກ​ຄັ້ງ​ໜຶ່ງ!"
 
-#: functions/zume-content.php:3457
+#: functions/zume-content.php:3459
 msgid "You were asked to prayerfully consider continuing as an ongoing spiritual family committed to multiplying disciples."
 msgstr "ທ່ານຖືກຂໍໃຫ້ຄິດແລະອະທິຖານກ່ຽວກັບການເຮັດ​ສິ່ງນີ້​ຕໍ່​ໄປໂດຍ ພິຈາລະນາວ່ານີ້ແມ່ນຄອບຄົວ​ຝ່າຍ​ຈິດວິນຍານທີ່ຈະສືບຕໍ່ຂະຫຍາຍຕົວໂດຍການພະຍາຍາມເພີ່ມທະ​ວີຈໍານວນ​ສາ​ວົກ."
 
-#: functions/zume-content.php:3460
+#: functions/zume-content.php:3462
 msgid "You were encouraged to share Zúme Training by launching a Leadership Cell of future Zúme Training leaders."
 msgstr "ທ່ານໄດ້ຮັບ​ການ​ໜຸນ​ໃຈໃຫ້ບອກເລົ່າກ່ຽວກັບການຝຶກອົບຮົມຊູ​ເມ້ໂດຍການສ້າງກຸ່ມເຊວຜູ້ນໍາທີ່ປະກອບດ້ວຍຜູ້ທີ່ຈະກາຍເປັນຜູ້ນໍາການ​ອົບ​ຮົມ​ຊູ​ເມ້ໃນອະນາຄົດ."
 
-#: functions/zume-content.php:3463
+#: functions/zume-content.php:3465
 msgid "Take a few moments to see how your group has been doing with these items and their Three Month Plans since you've last met."
 msgstr "ກ່ອນທີ່ພວກເຮົາຈະເລີ່ມຕົ້ນບົດຮຽນນີ້ ກະລຸນາໃຊ້ເວລາເພື່ອກວດກາເບິ່ງກັນແລະ​ກັນກ່ຽວກັບຫົວຂໍ້ເຫຼົ່ານີ້. ລວມທັງແຜນສາມເດືອນນັບຕັ້ງແຕ່​ທີ່ທ່ານໄດ້ພົບກັບ​ຄັ້ງ​ທີ່​ແລ້ວ."
 
-#: functions/zume-content.php:3470
+#: functions/zume-content.php:3472
 msgid "Pray and thank God that He is faithful to complete His good work in us. Ask Him to give your group clear heads and open hearts to the great things He wants to do in and through you. Ask the Holy Spirit to lead your time together and thank Him for His faithfulness, too. He got you through!"
 msgstr "ຈົ່ງອະທິຖານແລະຂໍຂອບໃຈພຣະເຈົ້າທີ່ຣະອົງ​ຊົງສັດຊື່ຕໍ່​ການດີງາມຂອງພຣະອົງທີ່​ຊົງເຮັດໃຫ້ສໍາເລັດໃນ​ຕົວເຮົາ. ຂໍພຣະອົງໃຫ້ຄວາມຄິດທີ່ຊັດເຈນແລະໃຫ້ກຸ່ມຂອງທ່ານມີຫົວໃຈທີ່ຈະເປີດຮັບສິ່ງທີ່ຍິ່ງໃຫຍ່ທີ່ພຣະອົງຕ້ອງການຈະເຮັດແລະ​ເຮັດຜ່ານທ່ານ. ຂໍພຣະວິນຍານບໍລິສຸດເຈົ້າຊົງນໍາເວລາທີ່​ທ່ານ​ໃຊ້​ຮ່ວມ​ກັນແລະຂໍຂອບໃຈພຣະເຈົ້າສໍາລັບຄວາມສັດຊື່ຂອງພຣະອົງ​ນຳ. ​ເພາະ​ຊົງຊ່ວຍທ່ານສໍາເລັດຜົນ!"
 
-#: functions/zume-content.php:3477
+#: functions/zume-content.php:3479
 msgid "In this advanced training session, you’ll take a look at how you can level-up your Coaching Strengths with a quick checklist assessment. You’ll learn how Leadership in Networks allows a growing group of small churches to work together to accomplish even more. And you’ll learn how to develop Peer Mentoring Groups that take leaders to a whole new level of growth."
 msgstr "ໃນການຝຶກອົບຮົມບົດຮຽນຂັ້ນ​ສູງນີ້ ພວກເຮົາຈະຮຽນຮູ້ວ່າພວກເຮົາ​ຈະສາມາດ​ຍົກ​ລະ​ດັບ​ການສອນຂອງພວກເຮົາ​ໃຫ້​ເຂັ້ມ​ແຂງ​ຂຶ້ນ​ໄດ້​ແນວ​ໃດໂດຍໃຊ້ການປະເມີນ​ຜົນສັ້ນໆ​ອັນ​ໜຶ່ງ. ພວກເຮົາຈະຮູ້ວ່າການເປັນຜູ້ນໍາໃນເຄືອຂ່າຍຈະຊ່ວຍໃຫ້​ຄ​ຣິ​ສ​ຕະ​ຈັກ​ຂະ​ໜາດນ້ອຍທີ່ກຳ​ລັງ​ເຕີບ​ໃຫ​ຍ່ ສາມາດມາເຮັດວຽກຮ່ວມກັນເພື່ອບັນລຸຜົນໄດ້ຫຼາຍຂຶ້ນ ແລະພວກເຮົາຈະຮຽນຮູ້ວ່າການພັດທະນາກຸ່ມໝູ່ເພື່ອນ-ພີ່​ລ້ຽງຄວນມີຜູ້ນໍາ​ເພື່ອໃຫ້​ມີ​ການເຕີບໂຕ​ກ້າວຂຶ້ນສູ່ລະດັບໃໝ່​ອີກ​ລະ​ດັບ​ໜຶ່ງ."
 
-#: functions/zume-content.php:3490
+#: functions/zume-content.php:3492
 msgid "Activity (10min)"
 msgstr "ຝຶກ​ຕົວ​ຈິງ(10ນາ​ທີ)"
 
-#: functions/zume-content.php:3497
+#: functions/zume-content.php:3499
 msgid "ASSESS"
 msgstr "ປະ​ເມີນ​ຜົນ"
 
-#: functions/zume-content.php:3499
+#: functions/zume-content.php:3501
 msgid "The Coaching Checklist is a powerful tool you can use to quickly assess your own strengths and vulnerabilities when it comes to making disciples who multiply. It's also a powerful tool you can use to help others – and others can use to help you."
 msgstr "ລາຍການກວດການສອນແມ່ນເຄື່ອງມືທີ່ມີປະສິດທິຜົນອັນ​ໜຶ່ງທີ່ຈະປະເມີນຄວາມເຂັ້ມແຂງແລະຈຸດອ່ອນ​ຕ່າງໆ​ຂອງ​ທ່ານ. ໃນ​ເລື່ອງ​ການ​ສ້າງ​ສາ​ວົກ​ຜູ້​ເພີ່ມ​ທະ​ວີ​ຈຳ​ນວນ ນີ້ແມ່ນເຄື່ອງມືທີ່ມີປະສິດທິຜົນທີ່ທ່ານສາມາດໃຊ້ເພື່ອຊ່ວຍ​ເຫຼືອຄົນອື່ນໄດ້ - ແລະຄົນອື່ນສາມາດໃຊ້ເພື່ອຊ່ວຍທ່ານ​ໄດ້ເຊັ່ນກັນ."
 
-#: functions/zume-content.php:3501
+#: functions/zume-content.php:3503
 msgid "Find the Coaching Checklist section in your Zúme Guidebook, and take this quick (5-minutes or less) self-assessment:"
 msgstr "ກະລຸນາອ່ານລາຍການກວດກາ​ການ​ສອນໃນປື້ມຄູ່ມືຂອງທ່ານແລະໃຊ້ເວລາ( 5 ນາທີ) ເພື່ອປະເມີນຕົນເອງ:"
 
-#: functions/zume-content.php:3504
+#: functions/zume-content.php:3506
 msgid "Read through the Disciple Training Tools in the far left column of the Checklist."
 msgstr "ອ່ານ​ຄູ່​ມື​ການ​ຝຶກ​ອົບ​ຮົມ​ສາ​ວົກ​ໃນ​ແຖວ​ຊ້າຍ​ສຸດ​ໃຫ້​ເຂົ້າ​ໃຈ."
 
-#: functions/zume-content.php:3505
+#: functions/zume-content.php:3507
 msgid "Mark each one of the Training Tools, using the following method:"
 msgstr "ກວດ​ກາ​ຊ່ອງ​ສຳ​ລັບ​ເຄື່ອງ​ມື​ແຕ່​ລະ​ອັນ​ໂດຍ​ວິ​ທີ​ດັ່ງ​ນີ້:"
 
-#: functions/zume-content.php:3507
+#: functions/zume-content.php:3509
 msgid "If you're unfamiliar or don't understand the Tool – check the BLACK column"
 msgstr "ຖ້າ​ຫາກ​ທ່ານບໍ່​ລຶ້ງ​ເຄີຍຫຼືບໍ່​ເຂົ້າ​ໃຈ​ເຄື່ອງ​ມືນີ້- ​ຈົ່ງກວດ​ກາ​ທີ່​ຊ່ອງ​ສີ​ດຳ"
 
-#: functions/zume-content.php:3510
+#: functions/zume-content.php:3512
 msgid "If you're somewhat familiar but still not sure about the Tool – check the RED column"
 msgstr "ຖ້າ​ຫາກ​ທ່ານພໍ​ຈະ​ເຂົ້າ​ໃຈ​ແຕ່​ຍັງ​ບໍ່​ທັນ​ແນ່​ໃຈ​ໃນ​ໃຈ​ເຄື່ອງ​ມືນີ້- ​ຈົ່ງກວດ​ກາ​ທີ່ຊ່ອງ​ສີແດງ"
 
-#: functions/zume-content.php:3513
+#: functions/zume-content.php:3515
 msgid "If you understand and can train the basics on the Tool – check the YELLOW column"
 msgstr "ຖ້າ​ຫາກ​ທ່ານເຂົ້າ​ໃຈ​ແລະ​ສາ​ມາດ​ສອນ​ພື້ນ​ຖານ​ຂອງ​ເຄື່ອງ​ມືນີ້ ​-ຈົ່ງກວດ​ກາ​ທີ່ຊ່ອງ​ສີເຫຼືອງ"
 
-#: functions/zume-content.php:3516
+#: functions/zume-content.php:3518
 msgid "If you feel confident and can effectively train the Tool – check the GREEN column"
 msgstr "ຖ້າ​ຫາກ​ທ່ານ​ໝັ້ນ​ໃຈ​ແລະ​ສາ​ມາດ​ສອນ​​ເຄື່ອງ​ມືນີ້ໄດ້​ຢ່າງ​ມີ​ປະ​ສິດ​ທິ​ຜົນ- ​ຈົ່ງກວດ​ກາ​ທີ່ຊ່ອງ​ສີ​ຂຽວ"
 
-#: functions/zume-content.php:3552
+#: functions/zume-content.php:3554
 msgid "Zúme Video Scripts: Coaching Checklist"
 msgstr "ຕົ້ນ​ສະ​ບັບ​ວິ​ດີ​ໂອ​ຊູ​ເມ້: ລາຍ​ການກວດ​ກາ​ການ​ສອນ"
 
-#: functions/zume-content.php:3563
+#: functions/zume-content.php:3565
 msgid "Which Training Tools did you feel you would be able to train well?"
 msgstr "ທ່ານ​ຄິດ​ວ່າ​ທ່ານ​ສາ​ມາດ​ນຳ​ເອົາ​ເຄື່ອງ​ມື​ອັນ​ໃດ​ໄປ​ໃຊ້​ຝຶກ​ອົບ​ຮົມ​ໄດ້​ເປັນ​ຢ່າງ​ດີ?"
 
-#: functions/zume-content.php:3564
+#: functions/zume-content.php:3566
 msgid "Which ones made you feel vulnerable as a trainer?"
 msgstr "ອັນ​ໃດ​ທີ່​ເຮັດ​ໃຫ້​ທ່ານບໍ່​ໝັ້ນ​ໃຈ​ໃນ​ຖາ​ນະ​ທີ່​ເປັນ​ຜູ້​ຝຶກ​ອົບ​ຮົມ?"
 
-#: functions/zume-content.php:3565
+#: functions/zume-content.php:3567
 msgid "Are there any Training Tools that you would add or subtract from the Checklist? Why?"
 msgstr "ມີ​ເຄື່ອງ​ມື​ການ​ຝຶ​ກອົບ​ຮົມ​ອັນ​ໃດ​ທີ່​ທ່ານ​ຢາກ​ເພີ່ມ​ເຕີມ​ເຂົ້າ​ມາຫຼື​ຕັດ​ອອ​ກ​ຈາກ​ລາຍ​ການ​ແດ່ຫຼືບໍ່? ຍ້ອນ​ຫຍັງ?"
 
-#: functions/zume-content.php:3574
+#: functions/zume-content.php:3576
 msgid "REMEMBER – Be sure to share your Coaching Checklist results with training partner or other mentor. If you're helping coach or mentor someone, use this tool to help you assess which areas need your attention and training."
 msgstr "ຂໍ້​ຄວນຈື່ - ເຮັດໃຫ້ແນ່ໃຈວ່າທ່ານມີຄູຝຶກ​ຊູ​ເມ້ແລະຄູ່ຮ່ວມງານຂອງທ່ານຫຼື​ພີ່​ລ້ຽງເພື່ອເບິ່ງຜົນການ​ປະ​ເມີນຂອງທ່ານນຳ. ຖ້າທ່ານກໍາລັງຝຶກອົບຮົມຫຼືເປັນ​ພີ່​ລ້ຽງ​ໃຫ້​ກັບ​ໃຜ​ບາງ​ຄົນ ກະລຸນາໃຊ້ເຄື່ອງມືນີ້ເພື່ອປະເມີນວ່າທ່ານຕ້ອງການເອົາໃຈໃສ່ແລະຝຶກ​ອົບ​ຮົມ​ເລື່ອງ​ໃດ​ໃຫ້ກັບ​ພວກ​ເຂົາ."
 
-#: functions/zume-content.php:3598
+#: functions/zume-content.php:3600
 msgid "What happens to churches as they grow and start new churches that start new churches? How do they stay connected and live life together as an extended, spiritual family? They become a network!"
 msgstr "ເກີດ​ຫຍັງ​ຂຶ້ນ​ກັບ​ຄ​ຣິ​ສ​ຕ​ະຈັດ​ເຫຼົ່າ​ນີ້​ໃນ​ຂະ​ນະ​ທີ່​ພວກ​ເຂົາ​ເຕີ​ບ​ໃຫຍ່​ແລະ​ຕັ້ງ​ຄ​ຣິ​ສ​ຕະ​ຈັກ​ໃໝ່​ອີກຫຼາຍ​ແຫ່ງ​ແລະ​ຄ​ຣິ​ສ​ຕະ​ຈັກ​ໃໝ່ຫຼາຍ​​ແຫ່ງ​ໄດ້​ຕັ້ງ​ຄ​ຣິ​ສ​ຕະ​ຈັກ​ໃໝ່​ອີກຫຼາຍ​ແຫ່ງ ພວກ​ເຂົາ​ເຊື່ອມ​ໂຍງ​ກັນ​ແນວ​ໃດ? ດຳ​ເນີນຊີ​ວິດ​ຄອບ​ຄົວ​ຝ່າຍ​ຈິດ​ວິນ​ຍານ​ແນວ​ໃດ? ພວກ​ເຂົາ​ກາຍ​ເປັນ​ເຄືອ​ຂ່າຍນັ້ນ​ເອງ!"
 
-#: functions/zume-content.php:3629
+#: functions/zume-content.php:3631
 msgid "Zúme Video Scripts: Leadership in Networks"
 msgstr "ຕົ້ນ​ສະ​ບັບ​ວິ​ດີ​ໂອ​ຊູ​ເມ້: ຄວາມເປັນຜູ້ນຳຂອງໃນເຄືອຂ່າຍຂອງຄອບຄົວຝ່າຍຈິດວິນຍານ"
 
-#: functions/zume-content.php:3637
+#: functions/zume-content.php:3639
 msgid "Are there advantages when networks of simple churches are connected by deep, personal relationships? What are some examples that come to mind?"
 msgstr "ເມື່ອ​ເຄືອ​ຂ່າຍ​ຄ​ຣິ​ສ​ຕະ​ຈັກ​ລຽບ​ງ່າຍຫຼາຍໆ​ແຫ່ງ​ມາ​ເຊື່ອມ​ໂຍງ​ກັນ​ໂດຍ​ມີ​ຄວາມ​ສຳ​ພັນ​ກັນ​ຢ່າງ​ແໜ້ນ​ແຟ້ນ ສິ່ງນີ້​ເຮັດ​ໃຫ້​ມີ​ປະ​ໂຫຍດແນວ​ໃດ​ແດ່? ມີ​ຕົວ​ຢ່າງ​ໃດ​ທີ່​ເຂົ້າ​ມາ​ໃນ​ໃຈ​ທ່ານ?"
 
-#: functions/enqueue-scripts.php:245 functions/zume-content.php:3658
-#: template-gmo.php:378 template-how-to-follow-jesus.php:306
+#: functions/utilities/enqueue-scripts.php:252 functions/zume-content.php:3660
+#: template-zume-landing.php:319 template-zume-landing.php:514
 #: template-zume-training.php:821
 msgid "Peer Mentoring Groups"
 msgstr "ກຸ່ມ​ພີ່​ລ້ຽງ​ໃຫ້​ຄຳ​ປຶກ​ສາ"
 
-#: functions/zume-content.php:3661
+#: functions/zume-content.php:3663
 msgid "Making disciples who make disciples means making leaders who make leaders. How do you develop stronger leaders? By teaching them how to love one another better. Peer Mentoring Groups help leaders love deeper."
 msgstr "ການສ້າງສາ​ວົກທີ່ເພີ່ມ​ທະ​ວີຈໍານວນ​ໝາຍຄວາມວ່າພວກເຮົາສ້າງຜູ້ນໍາທີ່​ຈະສ່າງຜູ້ນໍາ. ທ່ານຈະພັດທະນາຜູ້ນໍາທີ່ເຂັ້ມແຂງໄດ້ແນວໃດ? ທ່ານສາມາດເຮັດສິ່ງນີ້ໄດ້ໂດຍການສອນພວກເຂົາໃຫ້ມີຄວາມຮັກເຊິ່ງກັນແລະກັນ​ໃຫ້ຫຼາຍ​ຍິ່ງ​ຂຶ້ນ. ກຸ່ມ​ພີ່​ລ້ຽງ​ໃຫ້​ຄຳ​ປຶກ​ສາຊ່ວຍໃຫ້​ບັນ​ດາ​ຜູ້ນຳມີ​ຄວາມ​ຮັກ​ທີ່​ເລິກ​ເຊິ່ງ​ຍິ່ງ​ຂຶ້ນ."
 
-#: functions/zume-content.php:3664
+#: functions/zume-content.php:3666
 msgid "Find the Peer Mentoring Groups section in your Zúme Guidebook, and listen to the audio below."
 msgstr "ກະ​ລຸ​ນາ​ອ່ານ \"​ກຸ່ມພີ່​ລ້ຽງ​ໃຫ້​ຄຳ​ປຶກ​ສາ \" ໃນ​ຄູ່​ມື​ຊູ​ເມ້​ຂອງ​ທ່ານ​ແລະ​ຟັງ​ວິ​ດີໂອ​ສຽງ​ຂ້າງ​ລຸ່ມນີ້."
 
-#: functions/zume-content.php:3697
+#: functions/zume-content.php:3699
 msgid "Zúme Video Scripts: Peer Mentoring Groups"
 msgstr "ຕົ້ນ​ສະ​ບັບ​ວິ​ດີ​ໂອ​ຊູ​ເມ້: ກຸ່ມ​ພີ່​ລ້ຽງ​ໃຫ້​ຄຳ​ປຶກ​ສາ"
 
-#: functions/zume-content.php:3712
+#: functions/zume-content.php:3714
 msgid "Practice (60min)"
 msgstr "​ຝຶກ​ຝົນ(60ນາ​ທີ)"
 
-#: functions/zume-content.php:3720
+#: functions/zume-content.php:3722
 msgid "Find the Peer Mentoring Groups section in your Zúme Training Guide, and follow these steps."
 msgstr "ກະ​ລຸ​ນາ​ອ່ານຫົວ​ຂໍ້ \"​ກຸ່ມ​ພີ່​ລ້ຽງ​ໃຫ້​ຄຳ​ປຶກ​ສາ\" ໃນ​ຄູ່​ມື​ຊູ​ເມ້​ຂອງ​ທ່ານ​ແລະເຮັດ​ຕາມ​ຂັ້​ນຕອນ​ຕ່າງໆຂ້າງ​ລຸ່ມນີ້."
 
-#: functions/zume-content.php:3731
+#: functions/zume-content.php:3733
 msgid "GROUPS"
 msgstr "​ກຸ່ມ​ຕ່າງໆ"
 
-#: functions/zume-content.php:3735
+#: functions/zume-content.php:3737
 msgid "Break into groups of two or three and work through the 3/3 sections of the Peer Mentoring Group format. Peer Mentoring is something that happens once a month or once a quarter and takes some time for the whole group to participate, so you will not have time for everyone to experience the full mentoring process in this session."
 msgstr "ແບ່ງ​ເປັນ​ກຸ່ມ ກຸ່ມ​ລະ​ສອງ​ເຖິງ​ສາມ​ຄົນ​ແລະ​ຝຶກ​ຮູບ​ແບບ​ກຸ່ມ​ພີ່​ລ້ຽງ​ໃຫ້​ຄຳ​ປຶກ​ສາ​ແບບ3/3 . ກຸ່ມ​ພີ່​ລ້ຽງ​ໃຫ້​ຄຳ​ປຶກ​ສາ​ຈະ​ປະ​ຊຸມ​ກັນ​ເດືອນ​ລະ​ຄັ້ງຫຼື​ທຸກ​ສາມ​ເດືອນ​ແລະ​ໃຊ້​ເວ​ລາ​ເພື່ອ​ໃຫ້​ໝົດ​ທຸກ​ຄົນ​ໃນ​ກຸ່ມ​ມີ​ສ່ວນ​ຮ່ວມ ດັ່ງ​ນັ້ນ​ທ່ານ​ຈະ​ບໍ່​ມີ​ເວ​ລາ​ເພື່ອ​ເຮັດ​ໃຫ້​ທຸກ​ຄົນ​ໄດ້​ມີ​ປະ​ສົບ​ການ​ກັບ​ທຸກ​ຂັ້ນ​ຕອນ​ຂອງ​ການ​ເຮັດ​ກຸ່ມ​ພີ່​ລ້ຽງ​ໃຫ້​ຄຳ​ປຶກ​ສາ​ໃນ​ບົດ​ຮຽນ​ນີ້."
 
-#: functions/zume-content.php:3742
+#: functions/zume-content.php:3744
 msgid "To practice, choose one person in your group to be the \"mentee\" for this session and have the other members spend time acting as Peer Mentors by working through the suggested questions list and providing guidance and encouragement for the Mentee's work."
 msgstr "ໃນ​ການ​ຝຶກ​ຝົນ, ຈົ່ງ​ເລືອກ​ຄົນໜຶ່ງ​ໃນ​ກຸ່ມ​ຂອງ​ທ່ານ​ໃຫ້​ເປັນ \"ນ້ອງ​ລ້ຽງ\" ສຳ​ລັບ​ບົດ​ຮຽນ​ນີ້​ແລະ​ໃຫ້​ຄົນ​ອື່ນໆ​ໃນ​ກຸ່ມ​ສົມ​ມຸດ​ວ່າ​ເປັນ​ພີ່​ລ້ຽງ​ໃຫ້​ຄຳ​ປຶກ​ສາ​ໂດຍ​ໃຫ້​ພວກ​ເຂົາ​ໃຊ້​ລາຍ​ການ​ຄຳ​ຖາມ​ທີ່​ໃຫ້​ໄວ້​ແລະ​ໃຫ້​ແນວ​ທາງ​ປະ​ຕິ​ບັດ​ແກ່​ນ້ອງ​ລ້ຽງ​ ລ​ວມ​ເຖິງ​ໜຸນ​ໃຈ​ການ​ເຮັດ​ວຽກ​ຂອງ​ນ້ອງ​ລ້ຽງ​ນຳ."
 
-#: functions/zume-content.php:3744
+#: functions/zume-content.php:3746
 msgid "By the time you're finished, everyone should have a basic understanding of asking and answering."
 msgstr "ເມື່ອ​ທ່ານ​ເຮັດ​ສຳ​ເລັດ​ແລ້ວ,​ທຸກ​ຄົນ​ຄວນ​ຈະ​ມີ​ຄວາມ​ເຂົ້າ​ໃຈ​ຂັ້ນ​ພື້ນ​ຖານ​ທັງ​ໃນ​ການ​ຖາມ​ແລະ​ການ​ຕອບ."
 
-#: functions/zume-content.php:3753
+#: functions/zume-content.php:3755
 msgid "REMEMBER – Spend time studying the Four Fields Diagnostic Diagram and Generational Map in the Peer Mentoring Groups section of your Zúme Training Guide. Make sure everyone in your group has a basic understanding of these tools before asking the suggested questions."
 msgstr "ໝາຍເຫດ - ກະລຸນາໃຊ້ເວລາເພື່ອສຶກສາ​ຮູບ​ພາບດິນສີ່ຊະ​ນິດແລະຕາຕະລາງລຸ້ນ​ໃນ​ສ່ວນຂອງກຸ່ມ​ພີ່​ລ້ຽງ​ໃຫ້​ຄຳ​ປຶກ​ສາໃນ​ຄູ່​ມື​ຊູ​ເມ້​ຂອງ​ທ່ານ​ກ່ອນ.ເຮັດ​ໃຫ້ແນ່ໃຈວ່າທຸກຄົນໃນກຸ່ມຂອງທ່ານມີຄວາມເຂົ້າໃຈຂັ້ນພື້ນຖານຂອງເຄື່ອງມື​ຕ່າງໆເຫຼົ່ານີ້ກ່ອນທີ່ທ່ານຈະຂໍໃຫ້ຕອບຄໍາຖາມດ້ານລຸ່ມນີ້."
 
-#: functions/zume-content.php:3769
+#: functions/zume-content.php:3771
 msgid "CONGRATULATIONS ON COMPLETING ZÚME TRAINING!"
 msgstr "​ຂໍ​ສະ​ແດງ​ຄວາມ​ຍິນ​ດີ​ນຳ ທ່ານ​ຝຶກ​ອົບ​ຮົມ​ຊູ​ເມ້​ສຳ​ເລັດ​ແລ້ວ!"
 
-#: functions/zume-content.php:3776
+#: functions/zume-content.php:3778
 msgid "You and your group are now ready to take leadership to a new level! Here are a few more steps to help you KEEP growing!"
 msgstr "ທ່ານ​ແລະ​ກຸ່ມ​ຂອງ​ທ່ານ​ພ້ອມ​ແລ້ວ​ທີ່​ຈະ​ນຳ​ເອົາຄວາມ​ເປັນ​ຜູ້​ນຳ​ໄປ​ສູ່​ອີກ​ລະ​ດັບ​ໜຶ່ງ! ມີ​ຂັ້ນ​ຕອນ​ອີກ​ໜ້ອຍ​ໜຶ່ງ​ເພື່ອ​ຊ່ວຍ​ໃຫ້​ທ່ານ​ຮັກ​ສາ​ການ​ເຕີບ​ໃຫຍ່​ຕໍ່​ໄປ!"
 
-#: functions/zume-content.php:3806
+#: functions/zume-content.php:3808
 msgid "Zúme Video Scripts: Completion of Training"
 msgstr "ຕົ້ນ​ສະ​ບັບ​ວິ​ດີ​ໂອ​ຊູ​ເມ້:ການ​ຝຶກ​ອົບ​ຮົມ​ທາງວິ​ດີ​ໂອ​ສຳ​ເລັດ​ສົມ​ບູນ"
 
 #: functions/zume-dashboard.php:81 functions/zume-dashboard.php:112
-#: functions/zume-dashboard.php:208 functions/zume-v4-groups.php:77
-#: functions/zume-v4-groups.php:815 functions/zume-v4-groups.php:917
-#: functions/zume-v4-groups.php:1041
+#: functions/zume-dashboard.php:208 functions/zume-v4-groups.php:79
+#: functions/zume-v4-groups.php:817 functions/zume-v4-groups.php:919
+#: functions/zume-v4-groups.php:1043
 msgid "No Name"
 msgstr "​ບໍ່​ມີ​ຊື່"
 
-#: functions/enqueue-scripts.php:334 functions/zume-functions.php:414
+#: functions/utilities/enqueue-scripts.php:341 functions/zume-functions.php:424
 #: template-zume-dashboard.php:1405
 msgid "Phone Number"
 msgstr "ເບີ​ໂທ"
 
-#: functions/zume-functions.php:415
+#: functions/zume-functions.php:425
 msgid "User Address"
 msgstr "ອີ​ເມ​ວ​ຜູ້​ໃຊ້"
 
-#: functions/zume-functions.php:416
+#: functions/zume-functions.php:426
 msgid "GeoCoded IP"
 msgstr "GeoCoded IP"
 
@@ -1814,12 +1817,12 @@ msgid "Logout"
 msgstr "​ອອກ​ຈາກ​ລະ​​ບົບ"
 
 #. Template Name of the plugin/theme
-#: functions/enqueue-scripts.php:242 functions/zume-v4-seo-strings.php:25
-#: template-zume-training.php:745
+#: functions/utilities/enqueue-scripts.php:249
+#: functions/zume-v4-seo-strings.php:25 template-zume-training.php:745
 msgid "Three-Month Plan"
 msgstr "​ແຜນ​ການ​ສາມ​ເດືອນ"
 
-#: functions/enqueue-scripts.php:308 template-zume-progress.php:30
+#: functions/utilities/enqueue-scripts.php:315 template-zume-progress.php:30
 msgid "Progress"
 msgstr "​ຄວາມ​ກ້າວ​ໜ້າ"
 
@@ -1963,13 +1966,14 @@ msgstr "​ເຊື່ອ​ມ​ຕໍ່ໄປ​ທີ່"
 msgid "Unlink Group"
 msgstr "ບໍ່​ເຊື່ອມ​ຕໍ່​ກຸ່ມ"
 
-#: functions/enqueue-scripts.php:124 functions/enqueue-scripts.php:351
-#: template-zume-3plan.php:165 template-zume-dashboard.php:1497
+#: functions/utilities/enqueue-scripts.php:124
+#: functions/utilities/enqueue-scripts.php:358 template-zume-3plan.php:165
+#: template-zume-dashboard.php:1497
 msgid "Oh snap!"
 msgstr "ໂອ້ຍ!"
 
-#: functions/enqueue-scripts.php:125 functions/enqueue-scripts.php:267
-#: template-zume-3plan.php:167
+#: functions/utilities/enqueue-scripts.php:125
+#: functions/utilities/enqueue-scripts.php:274 template-zume-3plan.php:167
 msgid "Save"
 msgstr "​ບັນ​ທຶກ"
 
@@ -1993,10 +1997,10 @@ msgstr "​ພິມ"
 msgid "No plans linked to this group."
 msgstr "ບໍ່​ມີ​ແຜນ​ການ​​ເຊື່ອມ​ຕໍ່ໃດໆກັບ​ກຸ່ມນີ້."
 
-#: functions/zume-gmo.php:206 parts/content-share.php:85 template-gmo.php:421
-#: template-how-to-follow-jesus.php:349 template-pieces-page.php:217
+#: parts/content-share.php:87 template-pieces-page.php:214
 #: template-zume-about.php:51 template-zume-about.php:68
-#: template-zume-faq.php:199 template-zume-privacy-policy.php:186
+#: template-zume-faq.php:199 template-zume-landing.php:188
+#: template-zume-landing.php:215 template-zume-privacy-policy.php:186
 #: template-zume-progress.php:119
 msgid "Zúme uses an online training platform to equip participants in basic disciple-making and simple church planting multiplication principles, processes, and practices."
 msgstr "ຊູ​ເມ້ນໍາໃຊ້ເວທີການຝຶກອົບຮົມອອນໄລນ໌ເພື່ອໃຫ້ຜູ້ເຂົ້າຮ່ວມໃນການສ້າງສາວົກຂັ້ນພື້ນຖານແລະຫຼັກສູດການ​ເພີ່ມ​ທະ​ວີ​ຈຳ​ນວນຂອງຄຣິສຕະຈັກລຽບງ່າຍ, ​ຂັ້​ນ​ຕອນ​ການ​ເຮັດ​ວຽກແລະການລົງ​ມືປະຕິບັດ."
@@ -2006,9 +2010,9 @@ msgstr "ຊູ​ເມ້ນໍາໃຊ້ເວທີການຝຶກອົ
 msgid "Goals of the Zúme Project:"
 msgstr "​ເປົ້າ​ໝາຍ​ຕ່າງໆ​ຂອງ​ໂຄງ​ການ​ຊູ​ເມ້​:"
 
-#: template-gmo.php:418 template-how-to-follow-jesus.php:346
 #: template-zume-about.php:65 template-zume-faq.php:196
-#: template-zume-privacy-policy.php:183 template-zume-progress.php:116
+#: template-zume-landing.php:212 template-zume-privacy-policy.php:183
+#: template-zume-progress.php:116
 msgid "Zúme means yeast in Greek. In Matthew 13:33, Jesus is quoted as saying, \"The Kingdom of Heaven is like a woman who took yeast and mixed it into a large amount of flour until it was all leavened.\" This illustrates how ordinary people, using ordinary resources, can have an extraordinary impact for the Kingdom of God. Zúme aims to equip and empower ordinary believers to saturate the globe with multiplying disciples in our generation."
 msgstr "ຊູເມ້ໃນພາສາກຣີກແປວ່າ “ຢີດ” ໃນ​ມັດ​ທາຍ13:33 ໄດ້​ກ່າວເຖິງ​ຄຳ​​ອຸ​ປະ​ມາຂອງ​ພ​ຣະ​ເຢ​ຊູ​ໄວ້​ວ່າ“ລາ​ຊະ​ອາ​ນາ​ຈັກ​ສະຫວັນ​ປຽບ​ເໝືອນ​ເຊື້ອ​ແປ້ງ ທີ່​ຜູ້​ຍິງ​ຄົນ​ໜຶ່ງ​ເອົາ​ປົນ​ໃສ່​ໃນ​ແປ້ງ​ສາມ​ຜອງ ຈົນ​ແປ້ງ​ນັ້ນ​ຟູ​ຂຶ້ນ​ທັງ​ໝົດ.” ພາບນີ້​ສະ​ແດງ​ໃຫ້​ເຫັນ​ເຖິງ​ຄົນ​ທຳ​ມະ​ດາ​ທີ່​ໃຊ້​ສິ່ງ​ຂອງ​ທຳ​ມະ​ດາ​ແຕ່​ສາ​ມາດ​ສົ່ງ​ຜົນ​ກະ​ທົບ​ຍິ່ງ​ໃຫຍ່​ຕໍ່​ອາ​ນາ​ຈັກ​ຂອງ​ພ​ຣະ​ເຈົ້າ​ໄດ້ ຊູ​ເມ້​ໄດ້​ຕັ້ງ​ເປົ້າ​ໝາຍ​ໄປ​ທີ່​ຊ່ວຍ​ໃຫ້​ຜູ້​ເຊື່ອ​ທຳ​ມະ​ດາ​ຄົນ​ໜຶ່ງ​ມີ​ຄວາມ​ພ້ອມ​ແລະ​ມີ​ພະ​ລັງ​ທີ່​ຈະ​ອອກ​ໄປ​ທຸກໆ​ຊຸມ​ຊົນ​ເພື່ອ​ເພີ່ມ​ທະ​ວີ​ຈຳ​ນວນ​ສາ​ວົກໃນ​ຍຸກສະ​ໄໝ​ຂອງ​ພວກ​ເ​ຮົາ."
 
@@ -2097,7 +2101,7 @@ msgstr "​ເວ​ລາ​ປະ​ຊຸມ"
 msgid "Address"
 msgstr "​​ທີ່​ຢູ່"
 
-#: functions/enqueue-scripts.php:262 template-zume-dashboard.php:135
+#: functions/utilities/enqueue-scripts.php:269 template-zume-dashboard.php:135
 msgid "Members"
 msgstr "​ສະ​ມາ​ຊິກ"
 
@@ -2113,15 +2117,15 @@ msgstr "ເລີ່ມຮຽນ​ບົດ​ຮຽນ​ຕໍ່​ໄປ "
 msgid "Archive Group"
 msgstr "​ກຸ່ມ​ໃນ​ໜ່ວຍ​​ບັນ​ທຶກ​ຖາ​ວອນ"
 
-#: functions/enqueue-scripts.php:297 template-zume-dashboard.php:229
+#: functions/utilities/enqueue-scripts.php:304 template-zume-dashboard.php:229
 msgid "invites you to join"
 msgstr "​ເຊີນ​ທ່ານ​ໃຫ້​ເຂົ້າ​ຮ່ວມ"
 
-#: functions/enqueue-scripts.php:298 template-zume-dashboard.php:235
+#: functions/utilities/enqueue-scripts.php:305 template-zume-dashboard.php:235
 msgid "Accept"
 msgstr "ຍອມ​ຮັບ"
 
-#: functions/enqueue-scripts.php:299 template-zume-dashboard.php:237
+#: functions/utilities/enqueue-scripts.php:306 template-zume-dashboard.php:237
 msgid "Decline"
 msgstr "​ປະ​ຕິ​ເສດ"
 
@@ -2157,7 +2161,7 @@ msgstr "​ພາບ​ລວມ​ວິ​ດີ​ໂອ"
 msgid "How Zúme Works"
 msgstr "​ຊູ​ເມ້​ເຮັດ​ວຽກ​ແນວ​ໃດ"
 
-#: functions/enqueue-scripts.php:250 template-zume-dashboard.php:302
+#: functions/utilities/enqueue-scripts.php:257 template-zume-dashboard.php:302
 #: template-zume-one-page-course.php:30 template-zume-one-page-course.php:43
 #: template-zume-overview.php:92 template-zume-overview.php:214
 #: template-zume-training.php:145
@@ -2180,7 +2184,7 @@ msgstr "ລົມ​ຫາຍ​ໃຈ​ຝ່າຍ​ຈິດ​ວິນ​
 msgid "S.O.A.P.S Bible Reading"
 msgstr "​ວິ​ທີ​ການ​ສຶກ​ສາ​ພ​ຣະ​ຄຳ​ພີ"
 
-#: functions/enqueue-scripts.php:251 template-zume-dashboard.php:350
+#: functions/utilities/enqueue-scripts.php:258 template-zume-dashboard.php:350
 #: template-zume-one-page-course.php:31 template-zume-one-page-course.php:48
 #: template-zume-overview.php:102 template-zume-overview.php:215
 #: template-zume-training.php:240
@@ -2191,7 +2195,7 @@ msgstr "​ບົດ​ຮຽນ​ທີ 2"
 msgid "Producers vs Consumers"
 msgstr "ຜູ້​ຜະ​ລິດ VS ຜູ້​ຊົມ​ໃຊ້"
 
-#: functions/enqueue-scripts.php:252 template-zume-dashboard.php:382
+#: functions/utilities/enqueue-scripts.php:259 template-zume-dashboard.php:382
 #: template-zume-one-page-course.php:32 template-zume-one-page-course.php:53
 #: template-zume-overview.php:112 template-zume-overview.php:216
 #: template-zume-training.php:319
@@ -2202,7 +2206,7 @@ msgstr "​ບົດ​ຮຽນ​ທີ 3"
 msgid "Spiritual Economy"
 msgstr "ຫຼັກ​ການ​ຝ່າຍ​ຈິດ​ວິນ​ຍານ"
 
-#: functions/enqueue-scripts.php:253 template-zume-dashboard.php:414
+#: functions/utilities/enqueue-scripts.php:260 template-zume-dashboard.php:414
 #: template-zume-one-page-course.php:33 template-zume-one-page-course.php:58
 #: template-zume-overview.php:122 template-zume-overview.php:217
 #: template-zume-training.php:392
@@ -2229,7 +2233,7 @@ msgstr "​ຕາ​ທີ່​ເບິ່ງ​ເຫັນ"
 msgid "Lord's Supper"
 msgstr "​ພິ​ທີ​ມະ​ຫາ​ສະ​ໜິດ"
 
-#: functions/enqueue-scripts.php:254 template-zume-dashboard.php:462
+#: functions/utilities/enqueue-scripts.php:261 template-zume-dashboard.php:462
 #: template-zume-one-page-course.php:34 template-zume-one-page-course.php:63
 #: template-zume-overview.php:132 template-zume-overview.php:218
 #: template-zume-training.php:491
@@ -2240,7 +2244,7 @@ msgstr "​ບົດ​ຮຽນ​ທີ 5"
 msgid "Person of Peace"
 msgstr "ບຸກ​ຄົນ​ແຫ່ງ​ສັນ​ຕິ​ສຸກ"
 
-#: functions/enqueue-scripts.php:255 template-zume-dashboard.php:486
+#: functions/utilities/enqueue-scripts.php:262 template-zume-dashboard.php:486
 #: template-zume-one-page-course.php:35 template-zume-one-page-course.php:68
 #: template-zume-overview.php:143 template-zume-overview.php:219
 #: template-zume-training.php:564
@@ -2259,7 +2263,7 @@ msgstr "​ກຸ່ມ 3/3"
 msgid "3/3 Group Live"
 msgstr "ກຸ່ມ 3/3 ສົດ"
 
-#: functions/enqueue-scripts.php:256 template-zume-dashboard.php:518
+#: functions/utilities/enqueue-scripts.php:263 template-zume-dashboard.php:518
 #: template-zume-one-page-course.php:36 template-zume-one-page-course.php:73
 #: template-zume-overview.php:154 template-zume-overview.php:220
 #: template-zume-training.php:613
@@ -2270,20 +2274,19 @@ msgstr "​ບົດ​ຮຽນ​ທີ 7"
 msgid "Training Cycle"
 msgstr "ວົງ​ຈອນ​ການ​ຮຽນ​ຮູ້"
 
-#: functions/enqueue-scripts.php:257 template-zume-dashboard.php:534
+#: functions/utilities/enqueue-scripts.php:264 template-zume-dashboard.php:534
 #: template-zume-one-page-course.php:37 template-zume-one-page-course.php:78
 #: template-zume-overview.php:165 template-zume-overview.php:221
 #: template-zume-training.php:654
 msgid "Session 8"
 msgstr "​ບົດ​ຮຽນ​ທີ 8"
 
-#: functions/enqueue-scripts.php:238 template-gmo.php:386
-#: template-how-to-follow-jesus.php:314 template-zume-dashboard.php:542
-#: template-zume-training.php:667
+#: functions/utilities/enqueue-scripts.php:245 template-zume-dashboard.php:542
+#: template-zume-landing.php:522 template-zume-training.php:667
 msgid "Leadership Cells"
 msgstr "ກຸ່ມ​ສ້າງຜູ້​ນຳ"
 
-#: functions/enqueue-scripts.php:258 template-zume-dashboard.php:550
+#: functions/utilities/enqueue-scripts.php:265 template-zume-dashboard.php:550
 #: template-zume-one-page-course.php:38 template-zume-one-page-course.php:83
 #: template-zume-overview.php:176 template-zume-overview.php:222
 #: template-zume-training.php:695
@@ -2306,21 +2309,20 @@ msgstr "​ເປັນ​ສ່ວນ​ໜຶ່ງ​ຂອງ​ຄ​ຣິ
 msgid "Completion of Training"
 msgstr "​ການ​ຝຶກ​ອົບ​ຮົມສຳ​ເລັດ​"
 
-#: functions/enqueue-scripts.php:259 template-zume-dashboard.php:590
+#: functions/utilities/enqueue-scripts.php:266 template-zume-dashboard.php:590
 #: template-zume-one-page-course.php:39 template-zume-one-page-course.php:88
 #: template-zume-overview.php:223 template-zume-training.php:776
 msgid "Session 10"
 msgstr "​ບົດ​ຮຽນ​ທີ 10"
 
-#: functions/enqueue-scripts.php:243 template-gmo.php:382
-#: template-how-to-follow-jesus.php:310 template-zume-dashboard.php:598
+#: functions/utilities/enqueue-scripts.php:250 template-zume-dashboard.php:598
+#: template-zume-landing.php:299 template-zume-landing.php:518
 #: template-zume-training.php:789
 msgid "Coaching Checklist"
 msgstr "ລາຍ​ການກວດ​ກາ​ການ​ສອນ"
 
-#: functions/enqueue-scripts.php:244 template-gmo.php:390
-#: template-how-to-follow-jesus.php:318 template-zume-dashboard.php:606
-#: template-zume-training.php:808
+#: functions/utilities/enqueue-scripts.php:251 template-zume-dashboard.php:606
+#: template-zume-landing.php:526 template-zume-training.php:808
 msgid "Leadership in Networks"
 msgstr "​ຄວາມ​ເປັນ​ຜູ້​ນຳ​ໃນ​ເຄືອ​ຂ່າຍ​ຕ່າງໆ"
 
@@ -2332,7 +2334,7 @@ msgstr "​ກຸ່ມ​ພີ່​ລ້ຽງ​ໃຫ້​ຄຳ​ປຶ
 msgid "Session videos will be added as you complete sessions."
 msgstr "ວິ​ດີ​ໂອ​ຂອງ​ບົດ​ຮຽນ​ຕ່າງໆ​ຈະ​ຖືກ​ເພີ່ມ​ເຕີມ​ເຂົ້າ​ມາ ໃນຂະ​ນະ​ທີ່​ທ່ານ​ເຮັດ​ບົດ​ຮຽ​​ນຕ່າງໆ​ຄົບ​ຖ້ວນ​ແລ້ວ."
 
-#: functions/enqueue-scripts.php:304 template-zume-dashboard.php:714
+#: functions/utilities/enqueue-scripts.php:311 template-zume-dashboard.php:714
 #: template-zume-dashboard.php:845
 msgid "Archived Groups"
 msgstr "ກຸ່ມ​ຕ່າງໆ​ໃນ​ໜ່ວຍ​​ບັນ​ທຶກຖາ​ວອນ"
@@ -2362,9 +2364,9 @@ msgstr "​ເຄືອ​ຂ່າຍ"
 msgid "Create Group"
 msgstr "​ສ້າງ​ກຸ່ມ"
 
-#: functions/enqueue-scripts.php:295 functions/enqueue-scripts.php:355
-#: template-zume-dashboard.php:916 template-zume-dashboard.php:1052
-#: template-zume-dashboard.php:1249
+#: functions/utilities/enqueue-scripts.php:302
+#: functions/utilities/enqueue-scripts.php:362 template-zume-dashboard.php:916
+#: template-zume-dashboard.php:1052 template-zume-dashboard.php:1249
 msgid "Group Name"
 msgstr "​ຊື່​ກຸ່ມ"
 
@@ -2395,7 +2397,7 @@ msgstr "​ຜູ້​ນຳ​ຮ່ວມຫຼື​ສະ​ມາ​ຊິ
 msgid "Add"
 msgstr "​ເພີ່ມ"
 
-#: functions/enqueue-scripts.php:346 template-zume-dashboard.php:1006
+#: functions/utilities/enqueue-scripts.php:353 template-zume-dashboard.php:1006
 #: template-zume-dashboard.php:1500
 msgid "Submit"
 msgstr "​ສົ່ງ"
@@ -2429,8 +2431,8 @@ msgstr "ການເພີ່ມຜູ້ນໍາຮ່ວມຫຼືຜູ້
 msgid "Update"
 msgstr "ອັບ​ເດດ"
 
-#: functions/enqueue-scripts.php:279 functions/enqueue-scripts.php:353
-#: template-zume-dashboard.php:1166
+#: functions/utilities/enqueue-scripts.php:286
+#: functions/utilities/enqueue-scripts.php:360 template-zume-dashboard.php:1166
 msgid "Archive"
 msgstr "​ໜ່ວຍ​​ບັນ​ທຶກ​ຖາ​ວອນ"
 
@@ -2470,84 +2472,86 @@ msgstr "ເພື່ອ​ແກ້ໄຂ​ຄຳ​ສັ່ງ​ນີ້,�
 msgid "Remove"
 msgstr "ຍ້າຍ​ອອກ"
 
-#: functions/enqueue-scripts.php:322 template-zume-dashboard.php:1350
+#: functions/utilities/enqueue-scripts.php:329 template-zume-dashboard.php:1350
 msgid "Connect Me to a Coach"
 msgstr "​ເຊື່ອມ​ຕໍ່​ກັບ​ຜູ້​ຝຶກ"
 
-#: functions/enqueue-scripts.php:323 template-zume-dashboard.php:1361
+#: functions/utilities/enqueue-scripts.php:330 template-zume-dashboard.php:1361
 msgid "Coaches"
 msgstr "​ຄູຝຶກ​"
 
-#: functions/enqueue-scripts.php:324 template-zume-dashboard.php:1362
+#: functions/utilities/enqueue-scripts.php:331 template-zume-dashboard.php:1362
 msgid "Our network of volunteer coaches are people like you, people who are passionate about loving God, loving others, and obeying the Great Commission."
 msgstr "ເຄືອ​​ຂ່າຍຂອງ​ຄູ​ຝຶກ​​ຂອງ​ພວກ​ເຮົາ​ກໍ່​ເປັນ​ບຸກ​ຄົນ​ຄື​ກັບ​ທ່ານ, ຄົນ​ທີ່ຮັກ​ພ​ຣະ​ເຈົ້າ,ຮັກ​ຄົນ​ອື່ນ​ແລະ​ເຊື່ອ​ຟັງ​ພ​ຣະ​ມະ​ຫາ​ບັນ​ຊາ​ຂອງ​ພ​ຣະ​ເຈົ້າ."
 
-#: functions/enqueue-scripts.php:325 template-zume-dashboard.php:1367
+#: functions/utilities/enqueue-scripts.php:332 template-zume-dashboard.php:1367
 msgid "Advocates"
 msgstr "​ອັບ​ເດ​ດ"
 
-#: functions/enqueue-scripts.php:326 template-zume-dashboard.php:1368
+#: functions/utilities/enqueue-scripts.php:333 template-zume-dashboard.php:1368
 msgid "A coach is someone who will come alongside you as you implement the Zúme tools and training."
 msgstr "ຄູ​ຝຶກ​ແມ່ນ​ຄົນ​ທີ່​ຈະ​ມາ​ຄຽງ​ຂ້າງ​ທ່ານ​ໃນ​ຂະ​ນະ​ທີ່​ທ່ານ​ໃຊ້​ເຄື່ອງ​ມື​ຂອງ​ຊູ​ເມ້​ແລະການ​ຝຶກ​ອົບ​ຮົມ."
 
-#: functions/enqueue-scripts.php:327 template-zume-dashboard.php:1373
+#: functions/utilities/enqueue-scripts.php:334 template-zume-dashboard.php:1373
 msgid "Local"
 msgstr "​ທ້ອງ​ຖິ່ນ"
 
-#: functions/enqueue-scripts.php:328 functions/enqueue-scripts.php:345
-#: template-zume-dashboard.php:1374
+#: functions/utilities/enqueue-scripts.php:335
+#: functions/utilities/enqueue-scripts.php:352 template-zume-dashboard.php:1374
 msgid "On submitting this request, we will do our best to connect you with a coach near you."
 msgstr "ເມື່ອ​ສົ່ງ​ຄຳ​ຂໍ​ນີ້, ພວກ​ເຮົາ​ຈະ​ພະ​ຍາ​ຍາມ​ຢ່າງ​ດີ​ທີ່​ສຸດ​ໃນ​ການ​ເຊື່ອມ​ຕໍ່​ທ່ານ​ກັບ​ຄູຝຶກ​ສອນ​ທີ່​ຢູ່​ໃກ້​ທ່ານ."
 
-#: functions/enqueue-scripts.php:329 template-zume-dashboard.php:1379
+#: functions/utilities/enqueue-scripts.php:336 template-zume-dashboard.php:1379
 msgid "It's Free"
 msgstr "ໃຊ້​ງານ​ໄດ້​ຟ​ຣີ"
 
-#: functions/enqueue-scripts.php:330 template-zume-dashboard.php:1380
+#: functions/utilities/enqueue-scripts.php:337 template-zume-dashboard.php:1380
 msgid "Coaching is free. You can opt out at any time."
 msgstr "ການ​ຝຶກ​ອົບ​ຮົມ​ຟ​ຣີ,ທ່ານ​ສາ​ມາດ​ຍົກ​ເລີກ​ໄດ້​ຕະຫຼອດ​ເວ​ລາ."
 
-#: functions/enqueue-scripts.php:131 functions/enqueue-scripts.php:332
-#: template-zume-dashboard.php:1390
+#: functions/utilities/enqueue-scripts.php:131
+#: functions/utilities/enqueue-scripts.php:339 template-zume-dashboard.php:1390
 msgid "Name"
 msgstr "​ຊື່"
 
-#: functions/enqueue-scripts.php:117 functions/enqueue-scripts.php:333
-#: template-zume-dashboard.php:1394 template-zume-dashboard.php:1395
+#: functions/utilities/enqueue-scripts.php:117
+#: functions/utilities/enqueue-scripts.php:340 template-zume-dashboard.php:1394
+#: template-zume-dashboard.php:1395
 msgid "First and last name"
 msgstr "​ຊື່​ແລະ​ນາມ​ສະ​ກຸນ"
 
-#: functions/enqueue-scripts.php:336 template-zume-dashboard.php:1433
+#: functions/utilities/enqueue-scripts.php:343 template-zume-dashboard.php:1433
 msgid "Email is required."
 msgstr "ຕ້ອງ​ລະ​ບຸ​ລະ​ຫັດ​ຜ່ານ."
 
-#: functions/enqueue-scripts.php:121 functions/enqueue-scripts.php:337
-#: template-zume-dashboard.php:1441
+#: functions/utilities/enqueue-scripts.php:121
+#: functions/utilities/enqueue-scripts.php:344 template-zume-dashboard.php:1441
 msgid "City"
 msgstr "​ເມືອງ"
 
-#: functions/enqueue-scripts.php:339 template-zume-dashboard.php:1466
+#: functions/utilities/enqueue-scripts.php:346 template-zume-dashboard.php:1466
 msgid "How should we contact you?"
 msgstr "​ໃຫ້​ເລືອກວ່າ​ພວກ​ເຮົາ​ຈະ​ຕິດ​ຕໍ່​ທ່ານ​ໄດ້​ແນວ​ໃດ?"
 
-#: functions/enqueue-scripts.php:340 template-zume-dashboard.php:1473
+#: functions/utilities/enqueue-scripts.php:347 template-zume-dashboard.php:1473
 msgid "Text"
 msgstr "ຂໍ້​ຄວາມ"
 
-#: functions/enqueue-scripts.php:118 functions/enqueue-scripts.php:341
-#: template-zume-dashboard.php:1475
+#: functions/utilities/enqueue-scripts.php:118
+#: functions/utilities/enqueue-scripts.php:348 template-zume-dashboard.php:1475
 msgid "Phone"
 msgstr "​ເບີ​ໂທ"
 
-#: functions/enqueue-scripts.php:342 template-zume-dashboard.php:1477
+#: functions/utilities/enqueue-scripts.php:349 template-zume-dashboard.php:1477
 msgid "WhatsApp"
 msgstr "WhatsApp"
 
-#: functions/enqueue-scripts.php:343 template-zume-dashboard.php:1479
+#: functions/utilities/enqueue-scripts.php:350
+#: functions/utilities/enqueue-scripts.php:370 template-zume-dashboard.php:1479
 msgid "Other"
 msgstr "​ອື່ນໆ"
 
-#: functions/enqueue-scripts.php:123 template-zume-dashboard.php:1486
+#: functions/utilities/enqueue-scripts.php:123 template-zume-dashboard.php:1486
 msgid "Affiliation Key"
 msgstr "Affiliation Key"
 
@@ -3082,19 +3086,19 @@ msgstr "​ອັບ​ເດ​ດ"
 msgid "Our Privacy Policy may change from time to time and all updates will be posted on this page."
 msgstr "ນະ​ໂຍ​ບາຍ​ຄວາມ​ເປັນ​ສ່ວນ​ຕົວ​ຂອງ​ພວກ​ເຮົາ​ອາດ​ຈະ​ມີ​ການ​ປ່ຽນ​ແປງ​ເປັນ​ບາງ​ຄັ້ງ​ແລະ​ການ​ອັບ​ເດ​ດທັງ​ໝົດ​ຈະ​ຖືກ​ໂພດ​ໃນ​ໜ້ານີ້."
 
-#: functions/enqueue-scripts.php:116
+#: functions/utilities/enqueue-scripts.php:116
 msgid "Your Profile"
 msgstr "​ຂໍ້​ມູນ​ສ່ວນ​ຕົວ​ຂອງ​ທ່ານ"
 
-#: functions/enqueue-scripts.php:127
+#: functions/utilities/enqueue-scripts.php:127
 msgid "Linked Facebook Account"
 msgstr "​ບັນ​ຊີ Facebook ທີ່​ເຊື່ອມ​ຕໍ່"
 
-#: functions/enqueue-scripts.php:128
+#: functions/utilities/enqueue-scripts.php:128
 msgid "Unlink"
 msgstr "ຍົກ​ເລີກ​ການ​ເຊື່ອມ​ຕໍ່"
 
-#: functions/enqueue-scripts.php:129
+#: functions/utilities/enqueue-scripts.php:129
 msgid "Linked Google Account"
 msgstr "ບັນ​ຊີ Google ທີ່​ເຊື່ອມ​ຕໍ່"
 
@@ -3198,15 +3202,15 @@ msgstr "​ໜ້າກວ້າງ​ເຕັມ​ຈໍ"
 msgid "Zúme Course"
 msgstr "​ຊູ​ເມ້​ເຮັດ​ວຽກ​ແນວ​ໃດ"
 
-#: functions/login/zume-login.php:1312
+#: functions/login/zume-login.php:1317
 msgid "Password reset is not allowed for this user"
 msgstr "ຜູ້ໃຊ້ນີ້ບໍ່ອະນຸຍາດໃຫ້ຕັ້ງລະຫັດຜ່ານໃໝ່"
 
-#: functions/login/zume-login.php:1339
+#: functions/login/zume-login.php:1344
 msgid "Could not save password reset key to database."
 msgstr "ບໍ່ສາມາດບັນທຶກການຕັ້ງລະຫັດຜ່ານໃໝ່ໄປທີ່ຖານຂໍ້ມູນໄດ້"
 
-#: functions/restrict-rest-api.php:73
+#: functions/utilities/restrict-rest-api.php:73
 msgid "The Wordpress built in API is disabled."
 msgstr "Wordpress ໃນ API ຖືກປິດການໃຊ້ງານ"
 
@@ -3226,7 +3230,7 @@ msgstr "ໃນວິດີໂອຕໍ່ໄປນີ້, ທ່ານຈະໄ�
 msgid "Find the \"3/3 Group Format\" section in your Zúme Guidebook, and watch the video below."
 msgstr "ຊອກຫາພາກສ່ວນ \"ຮູບແບບໜ່ວຍສ້າງສາວົກ\" ໃນປຶ້ມຄູ່ມືຊູເມ້ຂອງທ່ານ,ແລະເບິ່ງວິດີໂອລຸ່ມນີ້"
 
-#: functions/zume-content.php:3492
+#: functions/zume-content.php:3494
 msgid "Assess yourself using the coaching checklist."
 msgstr "ປະເມີນຕົນເອງໂດຍໃຊ້ລາຍການກວດກາການສອນ."
 
@@ -3255,33 +3259,32 @@ msgstr "ເບິ່ງຂໍ້ມູນສິ່ງທີ່ພວກເຮົ
 msgid "Zúme One Page Course"
 msgstr "ຫຼັກສູດຊູເມ້ໜຶ່ງໜ້າ."
 
-#: functions/zume-gmo.php:166 functions/zume-v4-seo-strings.php:14
-#: parts/content-share.php:40 template-pieces-page.php:176
-#: template-zume-training.php:91
+#: functions/zume-v4-seo-strings.php:14 parts/content-share.php:40
+#: template-pieces-page.php:171 template-zume-training.php:91
 msgid "Groups"
 msgstr "ໜ່ວຍ"
 
-#: functions/login/zume-login.php:93
+#: functions/login/zume-login.php:98
 msgid "Failed Google Verification of User Token"
 msgstr "ການຢັ້ງຢືນເຄື່ອງໝາຍຂອງຜູ້ໃຊ້ Google ລົ້ມເຫຼວ"
 
-#: functions/login/zume-login.php:222 functions/login/zume-login.php:456
+#: functions/login/zume-login.php:227 functions/login/zume-login.php:461
 msgid "Facebook email already linked with another account. Login to this account or use forgot password tool to access account."
 msgstr "ອີເມວ Facebook ເຊື່ອມໂຍງກັບບັນຊີອື່ນຢູ່ແລ້ວ. ເຂົ້າສູ່ລະບົບບັນຊີນີ້ຫຼືໃຊ້ເຄື່ອງມືລະຫັດຜ່ານທີ່ລືມເພື່ອເຂົ້າເຖິງບັນຊີ."
 
-#: functions/login/zume-login.php:228 functions/login/zume-login.php:462
+#: functions/login/zume-login.php:233 functions/login/zume-login.php:467
 msgid "Facebook already linked with another account."
 msgstr "Facebook ມີການເຊື່ອມໂຍງກັບບັນຊີອື່ນຢູ່ແລ້ວ"
 
-#: functions/login/zume-login.php:828 functions/login/zume-login.php:908
+#: functions/login/zume-login.php:833 functions/login/zume-login.php:913
 msgid "Oops. Something went wrong."
 msgstr "ອຸ້ຍ,ມີບາງຢ່າງຜິດປົກກະຕິ."
 
-#: functions/login/zume-login.php:1159
+#: functions/login/zume-login.php:1164
 msgid "Missing form verification. Refresh and try again."
 msgstr "ການຢັ້ງຢືນແບບຟອມທີ່ຂາດໄປ.ໂຫຼດໜ້າຈໍຄືນແລະລອງໃໝ່ ອີກຄັ້ງ."
 
-#: functions/login/zume-login.php:1201
+#: functions/login/zume-login.php:1206
 msgid "ERROR: Invalid username or email."
 msgstr "ພົບຂໍ້ຜິດພາດ: ຊື່ຜູ້ໃຊ້ຫຼືອີເມວບໍ່ຖືກຕ້ອງ."
 
@@ -3301,89 +3304,87 @@ msgstr "ລະຫັດຜ່ານ"
 msgid "Remember Me"
 msgstr "ຈື່ຂ້ອຍ"
 
-#: functions/zume-gmo.php:111 template-pieces-page.php:121
+#: template-pieces-page.php:121 template-zume-landing.php:50
 msgid "Ask Yourself"
 msgstr "ຖາມຕົວທ່ານເອງ"
 
-#: functions/zume-gmo.php:139 parts/content-share.php:13
-#: template-pieces-page.php:149
+#: parts/content-share.php:13 template-pieces-page.php:144
 msgid "Great job! Here's your progress with this concept"
 msgstr "ດີຫຼາຍ! ນີ້ແມ່ນຄວາມກ້າວໜ້າຂອງທ່ານກັບແນວຄິດນີ້"
 
-#: functions/enqueue-scripts.php:310 functions/zume-gmo.php:145
-#: parts/content-share.php:19 template-pieces-page.php:155
+#: functions/utilities/enqueue-scripts.php:317 parts/content-share.php:19
+#: template-pieces-page.php:150
 msgid "Heard"
 msgstr "ໄດ້ຍິນ"
 
-#: functions/enqueue-scripts.php:311 functions/zume-gmo.php:149
-#: parts/content-share.php:23 template-pieces-page.php:159
+#: functions/utilities/enqueue-scripts.php:318 parts/content-share.php:23
+#: template-pieces-page.php:154
 msgid "Obeyed"
 msgstr "ເຊື່ອຟັງ"
 
-#: functions/enqueue-scripts.php:312 functions/zume-gmo.php:153
-#: parts/content-share.php:27 template-pieces-page.php:163
+#: functions/utilities/enqueue-scripts.php:319 parts/content-share.php:27
+#: template-pieces-page.php:158
 msgid "Shared"
 msgstr "ແບ່ງປັນ"
 
-#: functions/enqueue-scripts.php:313 functions/zume-gmo.php:157
-#: parts/content-share.php:31 template-pieces-page.php:167
+#: functions/utilities/enqueue-scripts.php:320 parts/content-share.php:31
+#: template-pieces-page.php:162
 msgid "Trained"
 msgstr "ຝຶກອົບຮົມ"
 
-#: functions/zume-gmo.php:165 functions/zume-v4-seo-strings.php:13
-#: parts/content-share.php:39 template-pieces-page.php:175
-#: template-zume-training.php:85
+#: functions/zume-v4-seo-strings.php:13 parts/content-share.php:39
+#: template-pieces-page.php:170 template-zume-training.php:85
 msgid "Course Overview"
 msgstr "ພາບລວມຂອງຫຼັກສູດ"
 
-#: functions/enqueue-scripts.php:314 functions/zume-gmo.php:167
+#: functions/utilities/enqueue-scripts.php:321
 #: functions/zume-v4-seo-strings.php:15 parts/content-share.php:41
-#: template-pieces-page.php:177 template-zume-training.php:97
+#: template-pieces-page.php:172 template-zume-training.php:97
 msgid "Checklist"
 msgstr "ລາຍການກວດກາ"
 
-#: parts/content-share.php:42 template-pieces-page.php:178
+#: parts/content-share.php:42 template-pieces-page.php:173
 #: translations/mobile-pwa-strings.php:30
 msgid "Start Session"
 msgstr "ເລີ່ມບົດຮຽນ"
 
-#: functions/enqueue-scripts.php:281 functions/zume-gmo.php:191
-#: parts/content-share.php:70 template-pieces-page.php:202
+#: functions/utilities/enqueue-scripts.php:288 parts/content-share.php:72
+#: template-pieces-page.php:199 template-zume-landing.php:174
 msgid "You're missing out."
 msgstr "ທ່ານກຳລັງພາດໄປ"
 
-#: functions/enqueue-scripts.php:282 functions/zume-gmo.php:191
-#: parts/content-share.php:70 template-pieces-page.php:202
+#: functions/utilities/enqueue-scripts.php:289 parts/content-share.php:72
+#: template-pieces-page.php:199 template-zume-landing.php:174
 msgid "Register Now!"
 msgstr "ສະໝັກຕອນນີ້!"
 
-#: functions/enqueue-scripts.php:283 functions/zume-gmo.php:194
-#: parts/content-share.php:73 template-pieces-page.php:205
+#: functions/utilities/enqueue-scripts.php:290 parts/content-share.php:75
+#: template-pieces-page.php:202 template-zume-landing.php:178
 msgid "track your personal training progress"
 msgstr "ຕິດຕາມຄວາມກ້າວໜ້າການຝຶກອົບຮົມສ່ວນຕົວຂອງທ່ານ"
 
-#: functions/enqueue-scripts.php:284 functions/zume-gmo.php:195
-#: parts/content-share.php:74 template-pieces-page.php:206
+#: functions/utilities/enqueue-scripts.php:291 parts/content-share.php:76
+#: template-pieces-page.php:203 template-zume-landing.php:179
 msgid "access group planning tools"
 msgstr "ເຄື່ອງມືການວາງແຜນການເຂົ້າເຖິງໜ່ວຍ"
 
-#: functions/enqueue-scripts.php:285 functions/zume-gmo.php:196
-#: parts/content-share.php:75 template-pieces-page.php:207
+#: functions/utilities/enqueue-scripts.php:292 parts/content-share.php:77
+#: template-pieces-page.php:204 template-zume-landing.php:177
 msgid "connect with a coach"
 msgstr "ຕິດຕໍ່ກັບຄູຝຶກສອນ"
 
-#: functions/enqueue-scripts.php:286 functions/zume-gmo.php:197
-#: parts/content-share.php:76 template-pieces-page.php:208
+#: functions/utilities/enqueue-scripts.php:293 parts/content-share.php:78
+#: template-pieces-page.php:205
 msgid "add your effort to the global vision!"
 msgstr "ເພີ່ມຄວາມພະຍາຍາມຂອງທ່ານສູ່ນິມິດລະດັບໂລກ!"
 
-#: functions/enqueue-scripts.php:287 functions/zume-gmo.php:201
-#: parts/content-share.php:80 template-pieces-page.php:212
+#: functions/utilities/enqueue-scripts.php:294 parts/content-share.php:82
+#: template-pieces-page.php:209 template-zume-landing.php:183
 msgid "Register for Free"
 msgstr "ສະໝັກໂດຍບໍ່ເສຍຄ່າ"
 
-#: functions/zume-gmo.php:207 parts/content-share.php:86
-#: template-pieces-page.php:218
+#: parts/content-share.php:88 template-pieces-page.php:215
+#: template-zume-landing.php:189
 msgid "See Entire Training"
 msgstr "ເບິ່ງການຝຶກອົບຮົມທັງໝົດ"
 
@@ -3404,7 +3405,7 @@ msgid "My Checklist"
 msgstr "ລາຍການກວດກາຂອງຂ້ອຍ"
 
 #. Theme Name of the plugin/theme
-#: front-page.php:94 template-gmo.php:416 template-how-to-follow-jesus.php:344
+#: front-page.php:94 template-zume-landing.php:210
 #: template-zume-training.php:125
 msgid "Zúme Training"
 msgstr "ການຝຶກອົບຮົມຊູເມ້"
@@ -3447,8 +3448,7 @@ msgstr "ອະທິຖານ,ພາບລວມ"
 msgid "5 min"
 msgstr "5 ນາທີ"
 
-#: template-gmo.php:208 template-how-to-follow-jesus.php:136
-#: template-zume-training.php:164
+#: template-zume-landing.php:344 template-zume-training.php:164
 msgid "You'll see how God uses ordinary people doing simple things to make a big impact."
 msgstr "ທ່ານຈະເຫັນວິທີທີ່ພຣະເຈົ້າໃຊ້ຄົນທຳມະດາເຮັດສິ່ງທີ່ລຽບງ່າຍເພື່ອສ້າງຜົນກະທົບທີ່ຍິ່ງໃຫຍ່."
 
@@ -3471,23 +3471,20 @@ msgstr "ທ່ານຈະເຫັນວິທີທີ່ພຣະເຈົ້
 msgid "15 min"
 msgstr "15 ນາທີ"
 
-#: template-gmo.php:212 template-how-to-follow-jesus.php:140
-#: template-zume-training.php:178
+#: template-zume-landing.php:348 template-zume-training.php:178
 msgid "Discover the essence of being a disciple, making a disciple, and what is the church."
 msgstr "ຄົ້ນພົບໃຈຄວາມສຳຄັນຂອງການເປັນສາວົກ,ການສ້າງສາວົກ, ແລະຄຣິສຕະຈັກແມ່ນຫຍັງ."
 
-#: template-gmo.php:237 template-how-to-follow-jesus.php:165
-#: template-zume-training.php:191
+#: template-zume-landing.php:373 template-zume-training.php:191
 msgid "Being a disciple means we hear from God and we obey God."
 msgstr "ການເປັນສາວົກໝາຍເຖິງພວກເຮົາໄດ້ຍິນຈາກພຣະເຈົ້າແລະພວກເຮົາເຊື່ອຟັງພຣະເຈົ້າ."
 
-#: template-gmo.php:254 template-how-to-follow-jesus.php:182
+#: template-zume-landing.php:258 template-zume-landing.php:390
 #: template-zume-training.php:204
 msgid "A tool for daily Bible study that helps you understand, obey, and share God’s Word."
 msgstr "ເຄື່ອງມືສຳລັບການສຶກສາພຣະຄຳພີປະຈຳວັນທີ່ຊ່ວຍໃຫ້ທ່ານເຂົ້າໃຈ,ເຊື່ອຟັງ,ແລະແບ່ງປັນພຣະຄຳຂອງພຣະເຈົ້າ."
 
-#: template-gmo.php:271 template-how-to-follow-jesus.php:199
-#: template-zume-training.php:217
+#: template-zume-landing.php:407 template-zume-training.php:217
 msgid "A tool for two or three people of the same gender to meet weekly and encourage each other in areas that are going well and reveal areas that need correction."
 msgstr "ເຄື່ອງມືສຳລັບສອງຫຼືສາມຄົນທີ່ເປັນເພດດຽວກັນເພື່ອພົບກັນທຸກໆອາທິດແລະໜຸນໃຈເຊິ່ງກັນແລະກັນໃນດ້ານທີ່ກຳລັງດຳເນີນໄປດ້ວຍດີແລະເປີດເຜີຍດ້ານຕ້ອງການແກ້ໄຂ."
 
@@ -3515,13 +3512,12 @@ msgstr "ເບິ່ງໄປໜ້າ"
 msgid "Check-in, Prayer, Overview"
 msgstr "ກວດກາກັນແລະກັນ,ອະທິຖານ,ພາບລວມ"
 
-#: template-gmo.php:230 template-how-to-follow-jesus.php:158
+#: template-zume-landing.php:253 template-zume-landing.php:366
 #: template-zume-training.php:258
 msgid "You'll discover the four main ways God makes everyday followers more like Jesus."
 msgstr "ທ່ານຈະຄົ້ນພົບສີ່ວິທີຫຼັກທີ່ພຣະເຈົ້າສ້າງບັນດາຜູ້ເຊື່ອໃຫ້ເປັນຄືກັບພຣະເຢຊູເຈົ້າຫຼາຍຂຶ້ນທຸກໆມື້."
 
-#: template-gmo.php:241 template-how-to-follow-jesus.php:169
-#: template-zume-training.php:271
+#: template-zume-landing.php:377 template-zume-training.php:271
 msgid "See how easy it is to spend an hour in prayer."
 msgstr "ມາເບິ່ງວ່າການໃຊ້ເວລາໜຶ່ງຊົ່ວໂມງໃນການອະທິຖານນັ້ນມັນງ່າຍແນວໃດ"
 
@@ -3538,8 +3534,7 @@ msgstr "60 ນາທີ"
 msgid "Discuss - Prayer Cycle"
 msgstr "ໂອ້ລົມກັນ-ວົງຈອນການອະທິຖານ"
 
-#: template-gmo.php:341 template-how-to-follow-jesus.php:269
-#: template-zume-training.php:296
+#: template-zume-landing.php:477 template-zume-training.php:296
 msgid "A tool designed to help you be a good steward of your relationships."
 msgstr "ເຄື່ອງມືທີ່ຖືກອອກແບບມາເພື່ອຊ່ວຍໃຫ້ທ່ານເປັນຜູ້ເບິ່ງແຍງທີ່ດີໃນຄວາມສຳພັນຂອງທ່ານ."
 
@@ -3551,8 +3546,7 @@ msgstr "ຝຶກຝົນ-ຂຽນລາຍຊື່ 100 ຄົນ"
 msgid "30 min"
 msgstr "30 ນາທີ"
 
-#: template-gmo.php:292 template-how-to-follow-jesus.php:220
-#: template-zume-training.php:337
+#: template-zume-landing.php:428 template-zume-training.php:337
 msgid "Learn how God's economy is different from the world's. God invests more in those who are faithful with what they've already been given."
 msgstr "ຮຽນຮູ້ວ່າຫຼັກການຂອງພຣະເຈົ້າແມ່ນແຕກຕ່າງຈາກຂອງໂລກແນວໃດ. ພຣະເຈົ້າລົງທືນຫຼາຍຂຶ້ນໃນຜູ້ທີ່ສັດຊື່ກັບສິ່ງທີ່ພວກເຂົາເຈົ້າໄດ້ຖືກມອບໃຫ້ແລ້ວ."
 
@@ -3560,8 +3554,7 @@ msgstr "ຮຽນຮູ້ວ່າຫຼັກການຂອງພຣະເຈ
 msgid "Discuss - Should every disciple share?"
 msgstr "ໂອ້ລົມກັນ-ສາວົກທຸກຄົນຈະແບ່ງປັນແນວໃດ?"
 
-#: template-gmo.php:345 template-how-to-follow-jesus.php:273
-#: template-zume-training.php:356
+#: template-zume-landing.php:481 template-zume-training.php:356
 msgid "Learn a way to share God’s Good News from the beginning of humanity all the way to the end of this age."
 msgstr "ຮຽນຮູ້ວິທີທີ່ຈະແບ່ງປັນຂ່າວປະເສີດຂອງພຣະເຈົ້າຕັ້ງແຕ່ຈຸດເລີ່ມຕົ້ນຂອງມວນມະນຸດໄປຈົນເຖິງຍຸກສຸດທ້າຍນີ້."
 
@@ -3569,13 +3562,11 @@ msgstr "ຮຽນຮູ້ວິທີທີ່ຈະແບ່ງປັນຂ່
 msgid "Practice - Sharing the Gospel"
 msgstr "ຝຶກຝົນ-ການເລົ່າເລື່ອງຂ່າວປະເສີດ"
 
-#: template-gmo.php:283 template-how-to-follow-jesus.php:211
-#: template-zume-training.php:375
+#: template-zume-landing.php:419 template-zume-training.php:375
 msgid "Jesus said, “Go and make disciples of all nations, BAPTIZING them in the name of the Father and of the Son and of the Holy Spirit…” Learn how to put this into practice."
 msgstr "ພຣະເຢຊູເຈົ້າກ່າວວ່າ “ພວກເຈົ້າຈົ່ງອອກໄປ ຈົ່ງເຮັດໃຫ້ຄົນທຸກຊາດເປັນລູກສິດ ໃຫ້ພວກເຂົາຮັບບັບຕິສະມາໃນພຣະນາມແຫ່ງພຣະບິດາ,ພຣະບຸດແລະພຣະວິນຍານບໍຣິສຸດເຈົ້າ...”ຮຽນຮູ້ວິທີການນຳເອົາສິ່ງນີ້ໄປຝຶກຝົນ."
 
-#: template-gmo.php:349 template-how-to-follow-jesus.php:277
-#: template-zume-training.php:410
+#: template-zume-landing.php:485 template-zume-training.php:410
 msgid "Learn how to share your testimony in three minutes by sharing how Jesus has impacted your life."
 msgstr "ຮຽນຮູ້ວິທີທີ່ຈະເລົ່າຄຳພະຍານຂອງທ່ານໃນ3ນາທີໂດຍແບ່ງປັນວ່າພຣະເຢຊູເຈົ້າໄດ້ສົ່ງຜົນກະທົບຕໍ່ຊີວິດຂອງທ່ານແນວໃດ."
 
@@ -3583,8 +3574,7 @@ msgstr "ຮຽນຮູ້ວິທີທີ່ຈະເລົ່າຄຳພະ
 msgid "Practice - Share your testimony"
 msgstr "ຝຶກຝົນ-ເລົ່າຄຳພະຍານຂອງທ່ານ"
 
-#: template-gmo.php:216 template-how-to-follow-jesus.php:144
-#: template-zume-training.php:429
+#: template-zume-landing.php:352 template-zume-training.php:429
 msgid "Learn a simple pattern of making not just one follower of Jesus but entire spiritual families who multiply for generations to come."
 msgstr "ຮຽນຮູ້ແບບແຜນທີ່ງ່າຍໆຂອງການສ້າງບໍ່ພຽງແຕ່ເປັນຜູ້ເຊື່ອ ພຣະເຢຊູເຈົ້າຄົນດຽວເທົ່ານັ້ນແຕ່ຍັງລວມເຖິງຄອບຄົວຝ່າຍວິນຍານທັງໝົດທີ່ເພີ່ມທະວີຈຳນວນເປັນຫຼາຍລຸ້ນຄົນຕໍ່ໆໄປ."
 
@@ -3592,13 +3582,11 @@ msgstr "ຮຽນຮູ້ແບບແຜນທີ່ງ່າຍໆຂອງກ
 msgid "Learn what ducklings have to do with disciple-making."
 msgstr "ຮຽນຮູ້ວ່າສິ່ງທີ່ເປັດນ້ອຍເຮັດກ່ຽວຂ້ອງກັບການສ້າງສາວົກແນວໃດ."
 
-#: template-gmo.php:296 template-how-to-follow-jesus.php:224
-#: template-zume-training.php:455
+#: template-zume-landing.php:432 template-zume-training.php:455
 msgid "Begin to see where God’s Kingdom isn’t. These are usually the places where God wants to work the most."
 msgstr "ເລີ່ມຕົ້ນທີ່ຈະເບິ່ງເຫັນວ່າອານາຈັກຂອງພຣະເຈົ້າຍັງບໍ່ໄດ້ມາຕັ້ງຢູ່ບ່ອນໃດ.ປົກກະຕິແລ້ວນີ້ແມ່ນສະຖານທີ່ທີ່ພຣະເຈົ້າຕ້ອງການເຮັດວຽກຫຼາຍທີ່ສຸດ"
 
-#: template-gmo.php:279 template-how-to-follow-jesus.php:207
-#: template-zume-training.php:468
+#: template-zume-landing.php:415 template-zume-training.php:468
 msgid "It’s a simple way to celebrate our intimate connection and ongoing relationship with Jesus. Learn a simple way to celebrate."
 msgstr "ມັນເປັນວິທີທີ່ງ່າຍດາຍທີ່ຈະສະຫຼອງຄວາມສຳພັນອັນໃກ້ຊິດແລະຄວາມສຳພັນທີ່ຕໍ່ເນື່ອງຂອງພວກເຮົາກັບພຣະເຢຊູເຈົ້າ. ຮຽນຮູ້ວິທີງ່າຍໆໃນການສະເຫຼີມສະຫຼອງ."
 
@@ -3612,18 +3600,15 @@ msgstr "ຝຶກຝົນ-ຮັບພິທີມະຫາສະໜິດຮ�
 msgid "10 min"
 msgstr "10 ນາທີ"
 
-#: template-gmo.php:362 template-how-to-follow-jesus.php:290
-#: template-zume-training.php:509
+#: template-zume-landing.php:498 template-zume-training.php:509
 msgid "It’s a simple way to obey God’s command to pray for others. And it's just what it sounds like — praying to God while walking around!"
 msgstr "ມັນເປັນວິທີງ່າຍໆທີ່ຈະເຊື່ອຟັງຄຳສັ່ງຂອງພຣະເຈົ້າທີ່ຈະອະທິຖານເພື່ອຄົນອື່ນ. ແລະມັນເປັນສິ່ງທີ່ຄືກັບວ່າ - ການອະທິຖານຕໍ່ພຣະເຈົ້າໃນຂະນະທີ່ຍ່າງອ້ອມຮອບ!"
 
-#: template-gmo.php:358 template-how-to-follow-jesus.php:286
-#: template-zume-training.php:522
+#: template-zume-landing.php:494 template-zume-training.php:522
 msgid "Learn who a person of peace might be and how to know when you've found one."
 msgstr "ຮຽນຮູ້ວ່າບຸກຄົນແຫ່ງສັນຕິສຸກແມ່ນໃຜແລະຈະຮູ້ໄດ້ແນວໃດວ່າທ່ານພົບລາວແລ້ວ"
 
-#: template-gmo.php:245 template-how-to-follow-jesus.php:173
-#: template-zume-training.php:535
+#: template-zume-landing.php:381 template-zume-training.php:535
 msgid "Practice a simple mnemonic to remind you of ways to pray for others."
 msgstr "ຝຶກຝົນຄວາມຈື່ຈຳງ່າຍໆເພື່ອເຕືອນທ່ານກ່ຽວກັບວິທີການອະທິຖານເພື່ອຄົນອື່ນ."
 
@@ -3640,12 +3625,12 @@ msgstr "ຝຶກຝົນ-ການຍ່າງອະທິຖານ"
 msgid "90 min"
 msgstr "90 ນາທີ"
 
-#: template-gmo.php:258 template-how-to-follow-jesus.php:186
+#: template-zume-landing.php:273 template-zume-landing.php:394
 #: template-zume-training.php:582
 msgid "It's important what disciples know — but it's much more important what they DO with what they know."
 msgstr "ມັນເປັນສິ່ງສຳຄັນທີ່ພວກສາວົກຮູ້-ແຕ່ມັນສຳຄັນກວ່າທີ່ພວກເຂົາຈະເຮັດຕາມສິ່ງທີ່ພວກເຂົາຮູ້."
 
-#: template-gmo.php:267 template-how-to-follow-jesus.php:195
+#: template-zume-landing.php:278 template-zume-landing.php:403
 #: template-zume-training.php:595
 msgid "A 3/3 Group is a way for followers of Jesus to meet, pray, learn, grow, fellowship and practice obeying and sharing what they've learned. In this way, a 3/3 Group is not just a small group but a Simple Church."
 msgstr "ໜ່ວຍສ້າງສາວົກແມ່ນວິທີການສຳລັບຜູ້ເຊື່ອພຣະເຢຊູເຈົ້າໃນການພົບກັນ,ອະທິຖານ,ຮຽນຮູ້,ເຕີບໃຫຍ່,ສາມັກຄີທຳກັນແລະຝຶກຝົນການເຊື່ອຟັງແລະແບ່ງປັນສິ່ງທີ່ພວກເຂົາໄດ້ຮຽນຮູ້. ດ້ວຍວິທີນີ້, ໜ່ວຍສ້າງສາວົກບໍ່ພຽງແຕ່ເປັນໜ່ວຍນ້ອຍໆເທົ່ານັ້ນ ແຕ່ຍັງເປັນຄຣິສຕະຈັກລຽບງ່າຍອີກດ້ວຍ."
@@ -3654,7 +3639,7 @@ msgstr "ໜ່ວຍສ້າງສາວົກແມ່ນວິທີການ
 msgid "75 min"
 msgstr "75 ນາທີ"
 
-#: template-gmo.php:325 template-how-to-follow-jesus.php:253
+#: template-zume-landing.php:295 template-zume-landing.php:461
 #: template-zume-training.php:625
 msgid "Learn the training cycle and consider how it applies to disciple making."
 msgstr "ຮຽນຮູ້ເລື່ອງວົງຈອນການຮຽນຮູ້ແລະພິຈາລະນາວ່າມັນໃຊ້ກັບການສ້າງສາວົກໄດ້ແນວໃດ."
@@ -3667,23 +3652,20 @@ msgstr "ຝຶກຝົນ-ໜ່ວຍສ້າງສາວົກ"
 msgid "Discuss - 3/3 Group Experience"
 msgstr "ໂອ້ລົມກັນ-ປະສົບການໜ່ວຍສ້າງສາວົກ"
 
-#: template-gmo.php:387 template-how-to-follow-jesus.php:315
-#: template-zume-training.php:672
+#: template-zume-landing.php:523 template-zume-training.php:672
 msgid "A Leadership Cell is a way someone who feels called to lead can develop their leadership by practicing serving."
 msgstr "ໜ່ວຍສ້າງເປັນຜູ້ນຳແມ່ນວິທີທີ່ຜູ້ໃດຜູ້ ໜຶ່ງ ຮູ້ສຶກຖືກເອີ້ນໃຫ້ເປັນຜູ້ນຳສາມາດພັດທະນາຄວາມເປັນຜູ້ນຳຂອງເຂົາເຈົ້າໂດຍການຝຶກຝົນການຮັບໃຊ້"
 
-#: template-gmo.php:329 template-how-to-follow-jesus.php:257
-#: template-zume-training.php:713
+#: template-zume-landing.php:465 template-zume-training.php:713
 msgid "See how disciple making doesn't have to be linear. Multiple things can happen at the same time."
 msgstr "ມາເບິ່ງວ່າການສ້າງສາວົກບໍ່ຈຳເປັນຕ້ອງເປັນເສັ້ນຊື່ຕາມຂັ້ນຕອນແນວໃດ. ການເພີ່ມທະວີຈຳນວນສາມາດເກີດຂື້ນໃນເວລາດຽວກັນໄດ້."
 
-#: template-gmo.php:333 template-how-to-follow-jesus.php:261
+#: template-zume-landing.php:315 template-zume-landing.php:469
 #: template-zume-training.php:726
 msgid "Multiplying matters and multiplying quickly matters even more. See why pace matters."
 msgstr "ການເພີ່ມທະວີຈຳນວນສາວົກສຳຄັນແລະການເພີ່ມທະວີຈຳນວນຢ່າງໄວວາເປັນເລື່ອງສຳຄັນຍິ່ງກວ່າ.ມາເບິ່ງວ່າເປັນຫຍັງການຂັບເຄື່ອນຈຶ່ງເປັນເລື່ອງສຳຄັນ"
 
-#: template-gmo.php:275 template-how-to-follow-jesus.php:203
-#: template-zume-training.php:739
+#: template-zume-landing.php:411 template-zume-training.php:739
 msgid "Learn how to obey Jesus' commands by going AND staying."
 msgstr "ຮຽນຮູ້ວິທີທີ່ຈະເຊື່ອຟັງຄຳສັ່ງຂອງພຣະເຢຊູເຈົ້າໂດຍການໄປແລະການຢູ່."
 
@@ -3707,7 +3689,7 @@ msgstr "ໂອ້ລົມກັນ-ແບ່ງປັນແຜນການ3ເ�
 msgid "20 min"
 msgstr "20 ນາທີ"
 
-#: template-gmo.php:383 template-how-to-follow-jesus.php:311
+#: template-zume-landing.php:300 template-zume-landing.php:519
 #: template-zume-training.php:794
 msgid "A powerful tool you can use to quickly assess your own strengths and vulnerabilities when it comes to making disciples who multiply."
 msgstr "ເຄື່ອງມືທີ່ມີປະສິດທິພາບທີ່ທ່ານສາມາດໃຊ້ເພື່ອປະເມີນຄວາມເຂັ້ມແຂງແລະຄວາມອ່ອນແອຂອງທ່ານເອງຢ່າງວ່ອງໄວເມື່ອເວົ້າເຖິງການສ້າງສາວົກທີ່ເພີ່ມທະວີຈຳນວນ"
@@ -3716,12 +3698,11 @@ msgstr "ເຄື່ອງມືທີ່ມີປະສິດທິພາບທ
 msgid "Practice - Coaching Checklist Self-Assessment"
 msgstr "ຝຶກຝົນ-ລາຍການກວດກາການສອນເພື່ອປະເມີນຕົນເອງ"
 
-#: template-gmo.php:391 template-how-to-follow-jesus.php:319
-#: template-zume-training.php:813
+#: template-zume-landing.php:527 template-zume-training.php:813
 msgid "Learn how multiplying churches stay connected and live life together as an extended, spiritual family."
 msgstr "ຮຽນຮູ້ວ່າຄຣິສຕະຈັກທີ່ເພີ່ມທະວີຈຳນວນເຊື່ອມຕໍ່ກັນແລະດຳ ລົງຊີວິດຮ່ວມກັນເປັນຄອບຄົວຝ່າຍວິນຍານທີ່ຂະຫຍາຍຕົວແນວໃດ."
 
-#: template-gmo.php:379 template-how-to-follow-jesus.php:307
+#: template-zume-landing.php:320 template-zume-landing.php:515
 #: template-zume-training.php:826
 msgid "This is a group that consists of people who are leading and starting 3/3 Groups. It also follows a 3/3 format and is a powerful way to assess the spiritual health of God’s work in your area."
 msgstr "ນີ້ແມ່ນໜ່ວຍທີ່ປະກອບດ້ວຍຄົນທີ່ເປັນຜູ້ນຳແລະເລີ່ມຕົ້ນໜ່ວຍສ້າງສາວົກ. ນອກຈາກນັ້ນຍັງໃຊ້ຮູບແບບໜ່ວຍສ້າງສາວົກແລະເປັນວິທີທີ່ມີປະສິດທິພາບໃນການປະເມີນຄວາມເຂັ້ມແຂງທາງວິນຍານຂອງວຽກຂອງພຣະເຈົ້າໃນພື້ນທີ່ຂອງທ່ານ"
@@ -3748,7 +3729,7 @@ msgstr "ການຝຶກອົບຮົມ"
 msgid "Zúme Course v4"
 msgstr "ຫຼັກສູດຊູເມ້ ທີ4"
 
-#: front-page.php:99
+#: front-page.php:99 front-page.php:215
 msgid "Explore Training"
 msgstr "ສຳຫຼວດການຝຶກອົບຮົມ"
 
@@ -3779,141 +3760,137 @@ msgstr "ການອົບຮົມຊູເມ້"
 msgid "Yes. There are no premium versions, no trial periods, no follow-on sales of products. Freely we've received. Freely we give."
 msgstr "ແມ່ນແລ້ວ. ບໍ່ມີລຸ້ນທີ່ນິຍົມ,ບໍ່ມີໄລຍະເວລາທົດລອງ,ບໍ່ມີການຂາຍສິນຄ້າຕາມຫຼັງ. ພວກເຮົາໄດ້ຮັບຟຣີໆ. ພວກເຮົາກໍມອບໃຫ້ຟຣີໆ."
 
-#: functions/enqueue-scripts.php:216 template-gmo.php:207
-#: template-how-to-follow-jesus.php:135 template-zume-training.php:158
+#: functions/utilities/enqueue-scripts.php:223 template-zume-landing.php:343
+#: template-zume-training.php:158
 msgid "God Uses Ordinary People"
 msgstr "ພຣະເຈົ້າໃຊ້ຄົນທຳມະດາ"
 
-#: functions/enqueue-scripts.php:217 template-gmo.php:211
-#: template-how-to-follow-jesus.php:139 template-zume-training.php:172
+#: functions/utilities/enqueue-scripts.php:224 template-zume-landing.php:347
+#: template-zume-training.php:172
 msgid "Simple Definition of Disciple and Church"
 msgstr "ຄຳນິຍາມງ່າຍໆຂອງສາວົກແລະຄຣິສຕະຈັກ"
 
-#: functions/enqueue-scripts.php:218 template-gmo.php:236
-#: template-how-to-follow-jesus.php:164 template-zume-training.php:186
+#: functions/utilities/enqueue-scripts.php:225 template-zume-landing.php:372
+#: template-zume-training.php:186
 msgid "Spiritual Breathing is Hearing and Obeying God"
 msgstr "ລົມຫາຍໃຈຝ່າຍຈິດວິນຍານແມ່ນການໄດ້ຍິນຈາກພຣະເຈົ້າແລະການເຊື່ອຟັງພຣະເຈົ້າ."
 
-#: functions/enqueue-scripts.php:219 template-gmo.php:253
-#: template-how-to-follow-jesus.php:181 template-zume-training.php:199
+#: functions/utilities/enqueue-scripts.php:226 template-zume-landing.php:257
+#: template-zume-landing.php:389 template-zume-training.php:199
 msgid "SOAPS Bible Reading"
 msgstr "ວິທີສຶກສາພຣະຄຳພີ"
 
-#: functions/enqueue-scripts.php:221 template-gmo.php:229
-#: template-how-to-follow-jesus.php:157 template-zume-training.php:253
+#: functions/utilities/enqueue-scripts.php:228 template-zume-landing.php:252
+#: template-zume-landing.php:365 template-zume-training.php:253
 msgid "Consumer vs Producer Lifestyle"
 msgstr "ຮູບແບບການດຳເນີນຊີວິດເປັນຜູ້ຜະລິດບໍ່ແມ່ນຜູ້ຊົມໃຊ້"
 
-#: functions/enqueue-scripts.php:222 template-gmo.php:240
-#: template-how-to-follow-jesus.php:168 template-zume-training.php:266
+#: functions/utilities/enqueue-scripts.php:229 template-zume-landing.php:376
+#: template-zume-training.php:266
 msgid "How to Spend an Hour in Prayer"
 msgstr "ວິທີໃຊ້ເວລາໜຶ່ງຊົ່ວໂມງໃນການອະທິຖານແນວໃດ"
 
-#: functions/enqueue-scripts.php:223 template-gmo.php:340
-#: template-how-to-follow-jesus.php:268
+#: functions/utilities/enqueue-scripts.php:230 template-zume-landing.php:476
 msgid "Relational Stewardship – List of 100"
 msgstr "ຜູ້ຮັບມອບໝາຍໃຫ້ເບິ່ງແຍງຄົນໃນສາຍສຳພັນ-ລາຍຊື່100ຄົນ"
 
-#: functions/enqueue-scripts.php:224 template-gmo.php:291
-#: template-how-to-follow-jesus.php:219 template-zume-training.php:332
+#: functions/utilities/enqueue-scripts.php:231 template-zume-landing.php:427
+#: template-zume-training.php:332
 msgid "The Kingdom Economy"
 msgstr "ຫຼັກການໃນອານາຈັກ"
 
-#: functions/enqueue-scripts.php:225 template-gmo.php:344
-#: template-how-to-follow-jesus.php:272 template-zume-training.php:351
+#: functions/utilities/enqueue-scripts.php:232 template-zume-landing.php:480
+#: template-zume-training.php:351
 msgid "The Gospel and How to Share It"
 msgstr "ຂ່າວປະເສີດແລະວິທີການເລົ່າຂ່າວປະເສີດ"
 
-#: functions/enqueue-scripts.php:226 template-gmo.php:282
-#: template-how-to-follow-jesus.php:210 template-zume-training.php:370
+#: functions/utilities/enqueue-scripts.php:233 template-zume-landing.php:418
+#: template-zume-training.php:370
 msgid "Baptism and How To Do It"
 msgstr "ບັບຕິສະມາແລະວິທີການໃຫ້ບັບຕິສະມາ"
 
-#: functions/enqueue-scripts.php:227 template-gmo.php:348
-#: template-how-to-follow-jesus.php:276 template-zume-training.php:405
+#: functions/utilities/enqueue-scripts.php:234 template-zume-landing.php:484
+#: template-zume-training.php:405
 msgid "Prepare Your 3-Minute Testimony"
 msgstr "ກະກຽມຄຳພະຍານ 3 ນາທີ ຂອງທ່ານ "
 
-#: functions/enqueue-scripts.php:228 template-gmo.php:215
-#: template-how-to-follow-jesus.php:143 template-zume-training.php:424
+#: functions/utilities/enqueue-scripts.php:235 template-zume-landing.php:351
+#: template-zume-training.php:424
 msgid "Vision Casting the Greatest Blessing"
 msgstr "ນິມິດການໃຫ້ພຣະພອນທີ່ຍິ່ງໃຫຍ່ທີ່ສຸດ"
 
-#: functions/enqueue-scripts.php:229 template-gmo.php:320
-#: template-how-to-follow-jesus.php:248
+#: functions/utilities/enqueue-scripts.php:236 template-zume-landing.php:456
 msgid "Duckling Discipleship – Leading Immediately"
 msgstr "ການສ້າງສາວົກແບບເປັດນ້ອຍ-ການເປັນຜູ້ນຳໃນທັນທີທັນໃດ"
 
-#: functions/enqueue-scripts.php:230
+#: functions/utilities/enqueue-scripts.php:237
 msgid "Eyes to See Where The Kingdom Isn't"
 msgstr "ຕາທີ່ເບິ່ງເຫັນບ່ອນທີ່ອານາຈັກຂອງພຣະເຈົ້າບໍ່ທັນມາຕັ້ງຢູ່"
 
-#: functions/enqueue-scripts.php:231
+#: functions/utilities/enqueue-scripts.php:238
 msgid "The Lord's Supper and How To Lead It"
 msgstr "ພິທີມະຫາສະໜິດແລະວິທີການນຳປະກອບພິທີນີ້"
 
-#: functions/enqueue-scripts.php:232 template-gmo.php:361
-#: template-how-to-follow-jesus.php:289 template-zume-training.php:504
+#: functions/utilities/enqueue-scripts.php:239 template-zume-landing.php:497
+#: template-zume-training.php:504
 msgid "Prayer Walking and How To Do It"
 msgstr "ການຍ່າງອະທິຖານແລະວິທີການ"
 
-#: functions/enqueue-scripts.php:233 template-gmo.php:357
-#: template-how-to-follow-jesus.php:285 template-zume-training.php:517
+#: functions/utilities/enqueue-scripts.php:240 template-zume-landing.php:493
+#: template-zume-training.php:517
 msgid "A Person of Peace and How To Find One"
 msgstr "ບຸກຄົນແຫ່ງສັນຕິສຸກແລະວິທີການຊອກຫາບຸກຄົນແຫ່ງສັນຕິສຸກ"
 
-#: functions/enqueue-scripts.php:234 template-gmo.php:244
-#: template-how-to-follow-jesus.php:172 template-zume-training.php:530
+#: functions/utilities/enqueue-scripts.php:241 template-zume-landing.php:380
+#: template-zume-training.php:530
 msgid "The BLESS Prayer Pattern"
 msgstr "ຮູບແບບການອະທິຖານຕາມຫົວຂໍ້ BLESS"
 
-#: functions/enqueue-scripts.php:235 template-gmo.php:257
-#: template-how-to-follow-jesus.php:185 template-zume-training.php:577
+#: functions/utilities/enqueue-scripts.php:242 template-zume-landing.php:272
+#: template-zume-landing.php:393 template-zume-training.php:577
 msgid "Faithfulness is Better Than Knowledge"
 msgstr "ຄວາມສັດຊື່ດີກວ່າຄວາມຮູ້"
 
-#: functions/enqueue-scripts.php:236 template-gmo.php:266
-#: template-how-to-follow-jesus.php:194 template-zume-training.php:590
+#: functions/utilities/enqueue-scripts.php:243 template-zume-landing.php:277
+#: template-zume-landing.php:402 template-zume-training.php:590
 msgid "3/3 Group Meeting Pattern"
 msgstr "ຮູບແບບການເຂົ້າຮ່ວມໜ່ວຍສ້າງສາວົກ"
 
-#: functions/enqueue-scripts.php:237 template-gmo.php:324
-#: template-how-to-follow-jesus.php:252 template-zume-training.php:620
+#: functions/utilities/enqueue-scripts.php:244 template-zume-landing.php:294
+#: template-zume-landing.php:460 template-zume-training.php:620
 msgid "Training Cycle for Maturing Disciples"
 msgstr "ວົງຈອນການຮຽນຮູ້ເພື່ອການເປັນສາວົກທີ່ເຕີບໃຫຍ່"
 
-#: functions/enqueue-scripts.php:239 template-gmo.php:328
-#: template-how-to-follow-jesus.php:256 template-zume-training.php:708
+#: functions/utilities/enqueue-scripts.php:246 template-zume-landing.php:464
+#: template-zume-training.php:708
 msgid "Expect Non-Sequential Growth"
 msgstr "ຄາດຫວັງການເຕີບໃຫຍ່ແບບບໍ່ເປັນຂັ້ນຕອນ"
 
-#: functions/enqueue-scripts.php:240 template-gmo.php:332
-#: template-how-to-follow-jesus.php:260 template-zume-training.php:721
+#: functions/utilities/enqueue-scripts.php:247 template-zume-landing.php:314
+#: template-zume-landing.php:468 template-zume-training.php:721
 msgid "Pace of Multiplication Matters"
 msgstr "ການຂັບເຄື່ອນໃນການເພີ່ມທະວີຈຳນວນເປັນເລື່ອງສຳຄັນ"
 
-#: functions/enqueue-scripts.php:241 template-gmo.php:274
-#: template-how-to-follow-jesus.php:202 template-zume-training.php:734
+#: functions/utilities/enqueue-scripts.php:248 template-zume-landing.php:410
+#: template-zume-training.php:734
 msgid "Always Part of Two Churches"
 msgstr "ການເປັນສ່ວນໜຶ່ງຂອງສອງຄຣິສຕະຈັກສະເໝີ"
 
-#: functions/enqueue-scripts.php:246 template-zume-training.php:834
+#: functions/utilities/enqueue-scripts.php:253 template-zume-training.php:834
 msgid "Four Fields Tool"
 msgstr "ເຄື່ອງມືດິນສີ່ປະເພດ"
 
-#: functions/enqueue-scripts.php:247 template-zume-training.php:847
+#: functions/utilities/enqueue-scripts.php:254 template-zume-training.php:847
 msgid "Generational Mapping"
 msgstr "ຕາຕະລາງສະແດງລຸ້ນ"
 
-#: functions/zume-gmo.php:179 functions/zume-gmo.php:211
-#: parts/content-share.php:54 parts/content-share.php:90
-#: template-pieces-page.php:190 template-pieces-page.php:222
+#: parts/content-share.php:56 parts/content-share.php:92
+#: template-pieces-page.php:187 template-pieces-page.php:219
 msgid "Zúme Training is freely offered as part of larger Zúme Vision."
 msgstr "ການຝຶກອົບຮົມຊູເມ້ແມ່ນສະໜອງໃຫ້ໂດຍບໍ່ເສຍຄ່າເປັນສ່ວນໜຶ່ງຂອງນິມິດຊູເມ້ທີ່ໃຫຍ່ຂຶ້ນ."
 
-#: functions/zume-gmo.php:180 functions/zume-gmo.php:212
-#: parts/content-share.php:55 parts/content-share.php:91
-#: template-pieces-page.php:191 template-pieces-page.php:223
+#: parts/content-share.php:57 parts/content-share.php:93
+#: template-pieces-page.php:188 template-pieces-page.php:220
 msgid "Learn more about the Zúme.Vision"
 msgstr "ຮຽນຮູ້ເພີ່ມເຕີມກ່ຽວກັບນິມິດຂອງຊູເມ້"
 
@@ -3921,19 +3898,19 @@ msgstr "ຮຽນຮູ້ເພີ່ມເຕີມກ່ຽວກັບນິ
 msgid "This concept is called \"%1$s\" in session %2$s of the Zúme Training"
 msgstr "ແນວຄວາມຄິດນີ້ເອີ້ນວ່າ\"%1$s\" ໃນຊ່ວງ %2$s ຂອງການຝຶກອົບຮົມຊູເມ້"
 
-#: functions/zume-gmo.php:73 template-pieces-page.php:83
+#: template-pieces-page.php:83 template-zume-landing.php:50
 msgid "Listen and Read Along"
 msgstr "ຟັງແລະອ່ານໄປພ້ອມກັນ"
 
-#: functions/zume-gmo.php:77 template-pieces-page.php:87
+#: template-pieces-page.php:87 template-zume-landing.php:50
 msgid "Download Free Guidebook"
 msgstr "ດາວໂຫຼດຄູ່ມືຟຣີ"
 
-#: functions/zume-gmo.php:80 template-pieces-page.php:90
+#: template-pieces-page.php:90 template-zume-landing.php:50
 msgid "Watch This Video"
 msgstr "ເບິ່ງວິດີໂອນີ້"
 
-#: template-zume-about.php:22
+#: template-zume-about.php:22 template-zume-landing.php:217
 msgid "About Zúme Training"
 msgstr "ກ່ຽວກັບການອົບຮົມຊູເມ້"
 
@@ -4087,175 +4064,177 @@ msgstr "ນິມິດຊູເມ້"
 msgid "Disciple-making can be rapidly advanced by finding a person of peace, even in a place where followers of Jesus are few and far between. How do you know when you have found a person of peace and what do you do when you find them?"
 msgstr "ການ​ສ້າງ​ສາ​ວົກ​ຈະ​ກ້າວ​ໜ້າ​ໄປ​ຢ່າງ​ໄວ​ວາ​ໄດ້​ດ້ວຍ​ການ​ຊອກ​ຫາ​ບຸກ​ຄົນ​ແຫ່ງ​ສັນ​ຕິ​ສຸກ​ຄົນ​ໜຶ່ງ ແມ່ນ​ແຕ່​ໃນ​ສະ​ຖານ​ທີ່​ໜຶ່ງ​ເຊິ່ງ​ມີ​ຜູ້​ເຊື່ອ​ພ​ຣະ​ເຢ​ຊູ​ໜ້ອຍ​ແລະຫ່າງ​ໄກ​ກໍ່​ຕາມ ທ່ານ​ຈະ​ຮູ້​ໄດ້​ແນວ​ໃດວ່າ​ພົບ​ບຸກ​ຄົນ​ແຫ່ງ​ສັນ​ຕິ​ສຸກ​ຄົນ​ໜຶ່ງ​ແລ້ວ​ແລະ​ທ່ານ​ຄວນ​ຈະ​ເຮັດ​ຫຍັງ​​ເມື່ອ​ທ່ານ​ພົບ​ເຂົາ?"
 
-#: functions/enqueue-scripts.php:120
+#: functions/utilities/enqueue-scripts.php:120
 msgid "This form is required."
 msgstr "ຕ້ອງຂຽນແບບຟອມນີ້."
 
-#: functions/enqueue-scripts.php:263
+#: functions/utilities/enqueue-scripts.php:270
 msgid "Members List (optional)"
 msgstr "ລາຍຊື່ສະມາຊິກ (ບໍ່ຈຳເປັນ)"
 
-#: functions/enqueue-scripts.php:264
+#: functions/utilities/enqueue-scripts.php:271
 msgid "Location"
 msgstr "ທີ່ຕັ້ງ"
 
-#: functions/enqueue-scripts.php:265
+#: functions/utilities/enqueue-scripts.php:272
 msgid "Connection to server failed. Try again."
 msgstr "ການເຊື່ອມຕໍ່ກັບເຊີບເວີລົ້ມເຫຼວ. ລອງອີກຄັ້ງ."
 
-#: functions/enqueue-scripts.php:266
+#: functions/utilities/enqueue-scripts.php:273
 msgid "Accepted invitation"
 msgstr "ຄຳເຊີນຖືກຍອມຮັບແລ້ວ"
 
-#: functions/enqueue-scripts.php:269
+#: functions/utilities/enqueue-scripts.php:276
 msgid "add"
 msgstr "ເພີ່ມ"
 
-#: functions/enqueue-scripts.php:270
+#: functions/utilities/enqueue-scripts.php:277
 msgid "Zoom, click, or search for your location."
 msgstr "ຂະຫຍາຍ, ກົດ, ຫຼືຄົ້ນຫາສະຖານທີ່ຂອງທ່ານ."
 
-#: functions/enqueue-scripts.php:271
+#: functions/utilities/enqueue-scripts.php:278
 msgid "find you current location"
 msgstr "ຊອກຫາທີ່ຢູ່ປະຈຸບັນ"
 
-#: functions/enqueue-scripts.php:272
+#: functions/utilities/enqueue-scripts.php:279
 msgid "Save Clicked Location"
 msgstr "ບັນທຶກສະຖານທີ່ທີ່ກົດ"
 
-#: functions/enqueue-scripts.php:273
+#: functions/utilities/enqueue-scripts.php:280
 msgid "Save Searched Location"
 msgstr "ບັນທຶກສະຖານທີ່ທີ່ຊອກຫາ"
 
-#: functions/enqueue-scripts.php:274
+#: functions/utilities/enqueue-scripts.php:281
 msgid "Save Current Location"
 msgstr "ບັນທຶກສະຖານທີ່ປະຈຸບັນ"
 
-#: functions/enqueue-scripts.php:275
+#: functions/utilities/enqueue-scripts.php:282
 msgid "You haven't selected anything yet. Click, search, or allow auto location."
 msgstr "ທ່ານຍັງບໍ່ໄດ້ເລືອກຫຍັງເທື່ອ. ກົດ,ຄົ້ນຫາຫຼືອະນຸຍາດສະຖານທີ່ອັດຕະໂນມັດ"
 
-#: functions/enqueue-scripts.php:276
+#: functions/utilities/enqueue-scripts.php:283
 msgid "update"
 msgstr "ປັບປຸງ"
 
-#: functions/enqueue-scripts.php:277
+#: functions/utilities/enqueue-scripts.php:284
 msgid "Course Complete"
 msgstr "ຈົບຫຼັກສູດ"
 
-#: functions/enqueue-scripts.php:278
+#: functions/utilities/enqueue-scripts.php:285
 msgid "Next Session"
 msgstr "ບົດຮຽນຕໍ່ໄປ"
 
-#: functions/enqueue-scripts.php:290
+#: functions/utilities/enqueue-scripts.php:297
 msgid "Not Leading a Group"
 msgstr "ບໍ່ແມ່ນການນຳໜ່ວຍ"
 
-#: functions/enqueue-scripts.php:291
+#: functions/utilities/enqueue-scripts.php:298
 msgid "Create New Group"
 msgstr "ສ້າງໜ່ວຍໃໝ່"
 
-#: functions/enqueue-scripts.php:293
+#: functions/utilities/enqueue-scripts.php:300
 msgid "Which group are you leading?"
 msgstr "ທ່ານເປັນຜູ້ນຳໜ່ວຍໃດ?"
 
-#: functions/enqueue-scripts.php:294
+#: functions/utilities/enqueue-scripts.php:301
 msgid "Number of Members"
 msgstr "ຈຳນວນສະມາຊິກ"
 
-#: functions/enqueue-scripts.php:296
+#: functions/utilities/enqueue-scripts.php:303
 msgid "Group addition failed. Try again."
 msgstr "ການເພີ່ມໜ່ວຍລົ້ມເຫລວ. ລອງອີກຄັ້ງ."
 
-#: functions/enqueue-scripts.php:300
+#: functions/utilities/enqueue-scripts.php:307
 msgid "Are you sure you want to archive this group?"
 msgstr "ທ່ານແນ່ໃຈບໍ່ວ່າທ່ານຕ້ອງການບັນທຶກໜ່ວຍນີ້?"
 
-#: functions/enqueue-scripts.php:301
+#: functions/utilities/enqueue-scripts.php:308
 msgid "Show Archived Groups"
 msgstr "ສະແດງໜ່ວຍທີ່ບັນທຶກຖາວອນ"
 
-#: functions/enqueue-scripts.php:302
+#: functions/utilities/enqueue-scripts.php:309
 msgid "Re-Activate"
 msgstr "ເປີດໃຊ້ງານໃໝ່"
 
-#: functions/enqueue-scripts.php:303 functions/enqueue-scripts.php:307
+#: functions/utilities/enqueue-scripts.php:310
+#: functions/utilities/enqueue-scripts.php:314
 msgid "Delete Forever"
 msgstr "ລຶບອອກຕະຫຼອດໄປ"
 
-#: functions/enqueue-scripts.php:305
+#: functions/utilities/enqueue-scripts.php:312
 msgid "Close"
 msgstr "ປິດ"
 
-#: functions/enqueue-scripts.php:306
+#: functions/utilities/enqueue-scripts.php:313
 msgid "Are you sure you want to delete this group?"
 msgstr "ທ່ານແນ່ໃຈບໍ່ວ່າທ່ານຕ້ອງການລຶບໜ່ວຍນີ້ອອກ?"
 
-#: functions/enqueue-scripts.php:309
+#: functions/utilities/enqueue-scripts.php:316
 msgid "32 Tools and Concepts"
 msgstr "32 ເຄື່ອງມືແລະແນວຄວາມຄິດ"
 
-#: functions/enqueue-scripts.php:315
+#: functions/utilities/enqueue-scripts.php:322
 msgid "Progress Overview"
 msgstr "ພາບລວມຄວາມກ້າວໜ້າ"
 
-#: functions/enqueue-scripts.php:316
+#: functions/utilities/enqueue-scripts.php:323
 msgid "There are 32 concepts and tools in Zúme training. Each concept or tool is intended to be practiced personally and trained into others. Use the progression of \"heard\", \"obeyed\", \"shared\", and \"trained\" as a way of tracking your mastery of the disciple-making training."
 msgstr "ມີ 32 ແນວຄິດແລະເຄື່ອງມືໃນການຝຶກອົບຮົມຊູເມ້. ແຕ່ລະແນວຄວາມຄິດຫຼືເຄື່ອງມືແຕ່ລະຢ່າງແມ່ນມີຈຸດປະສົງເພື່ອຝຶກຝົນເປັນສ່ວນຕົວແລະຝຶກອົບຮົມໃຫ້ຄົນອື່ນ. ໃຊ້ຂະບວນການຂອງການ \"ໄດ້ຍິນ\",\"ເຊື່ອຟັງ\", \"ແບ່ງປັນ\" ແລະ\"ຝຶກຝົນ\" ເປັນວິທີການຕິດຕາມຄວາມຊຳນານຂອງທ່ານໃນການຝຶກອົບຮົມການສ້າງສາວົກ"
 
-#: functions/enqueue-scripts.php:317
+#: functions/utilities/enqueue-scripts.php:324
 msgid "Definitions"
 msgstr "ຄຳນິຍາມ"
 
-#: functions/enqueue-scripts.php:318
+#: functions/utilities/enqueue-scripts.php:325
 msgid "\"Heard\" means you gained awareness. You have moved from not knowing about a tool or concept to knowing about it."
 msgstr "\"ໄດ້ຍິນ\" ໝາຍຄວາມວ່າທ່ານໄດ້ຮັບຄວາມຮັບຮູ້. ທ່ານໄດ້ປ່ຽນຈາກການບໍ່ຮູ້ກ່ຽວກັບເຄື່ອງມືຫຼືແນວຄວາມຄິດມາສູ່ການຮູ້ກ່ຽວກັບມັນ."
 
-#: functions/enqueue-scripts.php:319
+#: functions/utilities/enqueue-scripts.php:326
 msgid "\"Obeyed\" means you took personal action to practice or apply a concept or tool. Obeying with tools might look like beginning to use them with others, while obeying with concepts might look like changing thinking or priorities."
 msgstr "\"ເຊື່ອຟັງ\" ໝາຍຄວາມວ່າທ່ານໄດ້ລົງມືປະຕິບັດດ້ວຍຕົນເອງເພື່ອຝຶກຝົນຫຼືນຳໃຊ້ແນວຄວາມຄິດຫຼືເຄື່ອງມືຕ່າງໆ. ການເຊື່ອຟັງດ້ວຍເຄື່ອງມືອາດເບິ່ງຄືວ່າເລີ່ມຕົ້ນນຳໃຊ້ກັບຄົນອື່ນ, ໃນຂະນະທີ່ການເຊື່ອຟັງດ້ວຍແນວຄິດອາດຈະຄ້າຍຄືກັບການປ່ຽນແປງແນວຄິດຫຼືລຳດັບຄວາມສຳຄັນ."
 
-#: functions/enqueue-scripts.php:320
+#: functions/utilities/enqueue-scripts.php:327
 msgid "\"Shared\" means you helped someone else hear. This step is essential to truly understanding the concept or tool and preparing you to train others."
 msgstr "\"ການແບ່ງປັນ\" ໝາຍຄວາມວ່າທ່ານໄດ້ຊ່ວຍຄົນອື່ນໃຫ້ໄດ້ຍິນ. ຂັ້ນຕອນນີ້ແມ່ນຈຳເປັນທີ່ຈະເຂົ້າໃຈແນວຄວາມຄິດຫຼືເຄື່ອງມືຢ່າງແທ້ຈິງແລະການກຽມທ່ານໃຫ້ຝຶກອົບຮົມຄົນອື່ນ"
 
-#: functions/enqueue-scripts.php:321
+#: functions/utilities/enqueue-scripts.php:328
 msgid "\"Trained\" means you coached someone else to hear, obey and share. More than sharing knowledge with someone, you have helped them become a sharer of the tool or concept."
 msgstr "\"ການຝຶກອົບຮົມ\" ໝາຍຄວາມວ່າທ່ານໄດ້ສອນຄົນອື່ນໃຫ້ໄດ້ຍິນ, ເຊື່ອຟັງແລະແບ່ງປັນ. ຫຼາຍກ່ວາການແລກປ່ຽນຄວາມຮູ້ກັບຜູ້ໃດຜູ້ໜຶ່ງ, ທ່ານໄດ້ຊ່ວຍພວກເຂົາເຈົ້າໃຫ້ກາຍເປັນຜູ້ແບ່ງປັນເຄື່ອງມືຫຼືແນວຄິດ."
 
-#: functions/enqueue-scripts.php:338
+#: functions/utilities/enqueue-scripts.php:345
 msgid "What is your city or state or postal code?"
 msgstr "ເມືອງຫຼືແຂວງຫຼືລະຫັດໄປສະນີຂອງທ່ານແມ່ນຫຍັງ?"
 
-#: functions/enqueue-scripts.php:344
+#: functions/utilities/enqueue-scripts.php:351
 msgid "Affiliation Notes"
 msgstr "ໝາຍເຫດພັນທະມິດ"
 
-#: functions/enqueue-scripts.php:347
+#: functions/utilities/enqueue-scripts.php:354
 msgid "You have requested coaching."
 msgstr "ທ່ານໄດ້ຮຽກຮ້ອງການຝຶກສອນ."
 
-#: functions/enqueue-scripts.php:130 functions/enqueue-scripts.php:348
+#: functions/utilities/enqueue-scripts.php:130
+#: functions/utilities/enqueue-scripts.php:355
 msgid "No location matches found. Try a less specific address."
 msgstr "ບໍ່ພົບສະຖານທີ່ກົງກັນ. ທົດລອງໃຊ້ທີ່ຢູ່ສະເພາະເຈາະຈົງໜ້ອຍລົງ"
 
-#: functions/enqueue-scripts.php:349
+#: functions/utilities/enqueue-scripts.php:356
 msgid "Oops. Something went wrong. Try again!"
 msgstr "ອຸ່ຍ. ມີບາງຢ່າງຜິດປົກກະຕິ. ລອງອີກຄັ້ງ!"
 
-#: functions/enqueue-scripts.php:350
+#: functions/utilities/enqueue-scripts.php:357
 msgid "Zúme Network"
 msgstr "ເຄືອຂ່າຍຊູເມ້"
 
-#: functions/enqueue-scripts.php:352
+#: functions/utilities/enqueue-scripts.php:359
 msgid "Click the circles and check off your progress on each of the concepts."
 msgstr "ກົດວົງມົນແລະກວດເບິ່ງຄວາມຄືບໜ້າຂອງທ່ານໃນແຕ່ລະແນວຄິດ."
 
-#: functions/enqueue-scripts.php:354
+#: functions/utilities/enqueue-scripts.php:361
 msgid "Add Group"
 msgstr "ເພີ່ມໜ່ວຍ"
 
-#: functions/enqueue-scripts.php:356
+#: functions/utilities/enqueue-scripts.php:363
 msgid "delete"
 msgstr "ລຶບອອກ"
 
@@ -4271,11 +4250,11 @@ msgstr "ວິໄສທັດ"
 msgid "Mobile App"
 msgstr "App ມືຖື"
 
-#: functions/enqueue-scripts.php:122
+#: functions/utilities/enqueue-scripts.php:122
 msgid "example: Denver, CO 80120"
 msgstr "ຍົກຕົວຢ່າງ: Denver, CO 80120"
 
-#: functions/enqueue-scripts.php:126
+#: functions/utilities/enqueue-scripts.php:126
 msgid "Linked Accounts"
 msgstr "ບັນຊີທີ່ເຊື່ອມໂຍງ"
 
@@ -4284,67 +4263,67 @@ msgid "Welcome to God’s Family!"
 msgstr "ຍິນດີຕ້ອນຮັບສູ່ຄອບຄົວຂອງພຣະເຈົ້າ!"
 
 #. Template Name of the plugin/theme
-#: template-gmo.php:202 template-how-to-follow-jesus.php:130
+#: template-zume-landing.php:338
 msgid "What is a follower of Jesus?"
 msgstr "ສາວົກພຣະເຢຊູເຈົ້າແມ່ນຫຍັງ?"
 
-#: template-gmo.php:225 template-how-to-follow-jesus.php:153
+#: template-zume-landing.php:361
 msgid "What are the activities of a follower of Jesus?"
 msgstr "ກິດຈະກຳຂອງສາວົກພຣະເຢຊູເຈົ້າແມ່ນຫຍັງແດ່?"
 
-#: template-gmo.php:250 template-how-to-follow-jesus.php:178
+#: template-zume-landing.php:386
 msgid "Bible Reading"
 msgstr "ອ່ານພຣະຄຳພີ"
 
-#: template-gmo.php:263 template-how-to-follow-jesus.php:191
+#: template-zume-landing.php:399
 msgid "Community"
 msgstr "ການຮ່ວມກັນ"
 
-#: template-gmo.php:278 template-how-to-follow-jesus.php:206
+#: template-zume-landing.php:414
 msgid "The Lord’s Supper and How To Lead It"
 msgstr "ພິທີມະຫາສະໜິດແລະວິທີການນຳປະກອບພິທີ"
 
-#: template-gmo.php:288 template-how-to-follow-jesus.php:216
+#: template-zume-landing.php:424
 msgid "Sacrifice and Suffering"
 msgstr "ການເສຍສະລະແລະການທົນທຸກ"
 
-#: template-gmo.php:295 template-how-to-follow-jesus.php:223
+#: template-zume-landing.php:431
 msgid "Eyes to See Where The Kingdom Isn’t"
 msgstr "ຕາທີ່ເບິ່ງເຫັນບ່ອນທີ່ອານາຈັກຂອງພຣະເຈົ້າຍັງບໍ່ທັນມາຕັ້ງຢູ່"
 
-#: template-gmo.php:307 template-how-to-follow-jesus.php:235
+#: template-zume-landing.php:443
 msgid "How do I obey Jesus and help others become followers with me?"
 msgstr "ຂ້າພະເຈົ້າຈະເຊື່ອຟັງພຣະເຢຊູເຈົ້າແລະຊ່ວຍຄົນອື່ນໃຫ້ເປັນສາວົກກັບຂ້າພະເຈົ້າໄດ້ແນວໃດ?"
 
-#: template-gmo.php:311 template-how-to-follow-jesus.php:239
+#: template-zume-landing.php:447
 msgid "Then Jesus came to them and said, \"All authority in heaven and on earth has been given to me. Therefore go and make disciples of all nations, baptizing them in the name of the Father and of the Son and of the Holy Spirit, and teaching them to obey everything I have commanded you. And surely I am with you always, to the very end of the age.\""
 msgstr "ພຣະເຢຊູເຈົ້າຈຶ່ງໄດ້ຫຍັບເຂົ້າມາໃກ້ ແລ້ວຊົງກ່າວກັບພວກເພິ່ນວ່າ, “ອຳນາດທັງໝົດໃນສະຫວັນ ແລະທີ່ແຜ່ນດິນໂລກ ໄດ້ມອບໃຫ້ແກ່ເຮົາແລ້ວ. ເຫດສະນັ້ນ ພວກເຈົ້າຈົ່ງອອກໄປ ຈົ່ງເຮັດໃຫ້ຄົນທຸກຊາດເປັນລູກສິດ ໃຫ້ພວກເຂົາຮັບບັບຕິສະມາໃນພຣະນາມແຫ່ງພຣະບິດາ, ພຣະບຸດ ແລະ ພຣະວິນຍານບໍຣິສຸດເຈົ້າ ສັ່ງສອນພວກເຂົາໃຫ້ຖືຮັກສາທຸກໆສິ່ງທີ່ເຮົາໄດ້ສັ່ງພວກເຈົ້າໄວ້ແລ້ວນັ້ນ ນີ້ແຫຼະ ເຮົາຢູ່ກັບເຈົ້າທັງຫລາຍທຸກໆວັນຈົນສິ້ນໂລກນີ້.”"
 
-#: template-gmo.php:312 template-how-to-follow-jesus.php:240
+#: template-zume-landing.php:448
 msgid "Matthew 28:18-20"
 msgstr "ມັດທາຍ 28:18-20"
 
-#: template-gmo.php:316 template-how-to-follow-jesus.php:244
+#: template-zume-landing.php:452
 msgid "Teaching others to obey and follow Jesus with you"
 msgstr "ການສອນຄົນອື່ນໃຫ້ເຊື່ອຟັງແລະຕິດຕາມພຣະເຢຊູເຈົ້າກັບທ່ານ"
 
-#: template-gmo.php:321 template-how-to-follow-jesus.php:249
+#: template-zume-landing.php:457
 msgid "Learn what ducklings have to do with disciple-making"
 msgstr "ຮຽນຮູ້ສິ່ງທີ່ເປັດນ້ອຍຕ້ອງເຮັດກັບການສ້າງສາວົກ"
 
-#: template-gmo.php:337 template-how-to-follow-jesus.php:265
+#: template-zume-landing.php:473
 msgid "Speaking to people YOU KNOW about Jesus"
 msgstr "ການເວົ້າກັບຄົນທີ່ທ່ານຮູ້ຈັກກ່ຽວກັບພຣະເຢຊູເຈົ້າ"
 
-#: template-gmo.php:354 template-how-to-follow-jesus.php:282
+#: template-zume-landing.php:490
 msgid "Speaking to people YOU DON'T KNOW about Jesus"
 msgstr "ການເວົ້າກັບຄົນທີ່ທ່ານບໍ່ຮູ້ຈັກກ່ຽວກັບພຣະເຢຊູເຈົ້າ"
 
-#: template-gmo.php:373 template-how-to-follow-jesus.php:301
+#: template-zume-landing.php:509
 msgid "What if many friends, family, and others start following Jesus with me?"
 msgstr "ຈະເປັນແນວໃດຖ້າໝູ່ເພື່ອນ,ຄອບຄົວແລະຄົນອື່ນໆຫຼາຍຄົນເລີ່ມຕິດຕາມພຣະເຢຊູເຈົ້າກັບຂ້າພະເຈົ້າ?"
 
-#: template-how-to-follow-jesus.php:95
+#: template-zume-landing.php:117
 msgid "Watch this important video explaining the 4 relationships of your new life."
 msgstr "ເບິ່ງວິດີໂອທີ່ສຳຄັນນີ້ອະທິບາຍເຖິງຄວາມສຳພັນ 4 ປະເພດໃນຊີວິດໃໝ່ຂອງທ່ານ."
 
@@ -4460,7 +4439,7 @@ msgid "A new version of this app is available. Click to update this app."
 msgstr "ມີລຸ້ນ ໃໝ່ ຂອງແອັບນີ້. ກົດເພື່ອອັບເດດແອັບ this ນີ້."
 
 #. Template Name of the plugin/theme
-#: template-how-to-follow-jesus.php:91
+#: template-zume-landing.php:109
 msgid "How to Follow Jesus"
 msgstr "ວິທີທີ່ຈະຕິດຕາມພະເຍຊູ"
 
@@ -4488,11 +4467,61 @@ msgstr "ບາດກ້າວທຳອິດທີ່ສຳຄັນແມ່ນ
 msgid "Next we have a collection of resources to help you follow Jesus. Bookmark, explore, and share these Biblical resources that are being used around the globe."
 msgstr "ຕໍ່ໄປພວກເຮົາມີແຫຼ່ງຂໍ້ມູນທີ່ຈະຊ່ວຍທ່ານຕິດຕາມພຣະເຢຊູເຈົ້າ. ມີເຄື່ອງໝາຍໜ້າ, ການຊອກຫາແລະແບ່ງປັນຊັບຂໍ້ມູນໃນພຣະຄຳພີເຫຼົ່ານີ້ທີ່ຖືກນຳໃຊ້ທົ່ວໂລກ."
 
-#: template-how-to-follow-jesus.php:122
+#: template-zume-landing.php:155
 msgid "Bookmark this page as a future resource!"
 msgstr "ໝາຍໜ້ານີ້ໄວ້ເພື່ອເປັນແຫຼ່ງຂໍ້ມູນໃນອະນາຄົດ!"
 
-#: template-how-to-follow-jesus.php:124
+#: template-zume-landing.php:157
 msgid "The sections below, will teach you what it means to be a follower (disciple) of Jesus."
 msgstr "ໃນຫົວຂໍ້ຂ້າງລຸ່ມນີ້, ຈະສອນທ່ານກ່ຽວກັບຄວາມໝາຍຂອງການເປັນຜູ້ຕິດຕາມ(ສາວົກ)ຂອງພຣະເຢຊູເຈົ້າ."
+
+#: functions/utilities/enqueue-scripts.php:364
+msgid "How can we serve you?"
+msgstr ""
+
+#: functions/utilities/enqueue-scripts.php:365
+msgid "I want to be coached"
+msgstr ""
+
+#: functions/utilities/enqueue-scripts.php:366
+msgid "I need technical assistance"
+msgstr ""
+
+#: functions/utilities/enqueue-scripts.php:367
+msgid "I've gone through the training but need advice on implementation"
+msgstr ""
+
+#: functions/utilities/enqueue-scripts.php:368
+msgid "I have a question about the content that I need to talk to somebody else about"
+msgstr ""
+
+#: functions/utilities/enqueue-scripts.php:369
+msgid "I have a group started and need to know where do I go next"
+msgstr ""
+
+#: template-zume-landing.php:246
+msgid "Leading Yourself"
+msgstr ""
+
+#: template-zume-landing.php:250 template-zume-landing.php:270
+#: template-zume-landing.php:292 template-zume-landing.php:312
+msgid "Principles"
+msgstr ""
+
+#: template-zume-landing.php:255 template-zume-landing.php:275
+#: template-zume-landing.php:297 template-zume-landing.php:317
+msgid "Practices"
+msgstr ""
+
+#: template-zume-landing.php:265
+msgid "Leading Your Group"
+msgstr ""
+
+#: template-zume-landing.php:288
+msgid "Leading Your Group Leaders"
+msgstr ""
+
+#: template-zume-landing.php:308
+msgid "Leading Your Community Leaders"
+msgstr ""
 
