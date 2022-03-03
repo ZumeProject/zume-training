@@ -3933,7 +3933,7 @@ msgstr "ज़ूमे दर्शन के बारे मे बेसी 
 
 #: template-pieces-page.php:51
 msgid "This concept is called \"%1$s\" in session %2$s of the Zúme Training"
-msgstr "इ अवधारणक ज़ूमे प्रशिक्षणक 2%सत्रक 1% कहल जाइत अछि।"
+msgstr "इ अवधारणक ज़ूमे प्रशिक्षणक %2$s सत्रक %1$s कहल जाइत अछि।"
 
 #: template-pieces-page.php:83 template-zume-landing.php:50
 msgid "Listen and Read Along"
