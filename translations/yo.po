@@ -3944,7 +3944,7 @@ msgstr "Kọ ẹkọ diẹ sii nipa Zúme.Vision"
 
 #: template-pieces-page.php:51
 msgid "This concept is called \"%1$s\" in session %2$s of the Zúme Training"
-msgstr "A pe ero yii ni “% 1 $ s” ni igba% 2 $ s ti ikẹkọ Zúme"
+msgstr "A pe ero yii ni “%1$s” ni igba %2$s ti ikẹkọ Zúme"
 
 #: template-pieces-page.php:83 template-zume-landing.php:50
 msgid "Listen and Read Along"
