@@ -7,13 +7,13 @@ msgstr ""
 "Project-Id-Version: Zúme Project\n"
 "Language: ml\n"
 
-#: front-page.php:82 front-page.php:212
+#: front-page.php:82 front-page.php:213
 msgid "Get Started"
 msgstr "തുടങ്ങുക"
 
-#: front-page.php:85 functions/enqueue-scripts.php:288
-#: functions/zume-gmo.php:202 functions/zume-v4-seo-strings.php:23
-#: parts/content-share.php:81 template-pieces-page.php:213
+#: front-page.php:85 functions/utilities/enqueue-scripts.php:295
+#: functions/zume-v4-seo-strings.php:23 parts/content-share.php:83
+#: template-pieces-page.php:210 template-zume-landing.php:184
 #: template-zume-login.php:403 template-zume-login.php:470
 #: template-zume-login.php:498
 msgid "Login"
@@ -63,7 +63,7 @@ msgstr "ചില സ്നേഹിതരെ ക്ഷണിക്കുക"
 msgid "Host a training"
 msgstr "ഒരു പരിശീലനത്തിന് ആതിഥ്യം വഹിക്കുക"
 
-#: front-page.php:246
+#: front-page.php:250
 msgid "Find out more about Zúme"
 msgstr "Zume യെക്കുറിച്ചു കൂടുതലായി ഗ്രഹിക്കുക"
 
@@ -75,198 +75,202 @@ msgstr "പരിശീലകന്‍"
 msgid "Coach Leader"
 msgstr "പരിശീലകനേതാവ്"
 
-#: functions/enqueue-scripts.php:82 functions/enqueue-scripts.php:84
-#: functions/enqueue-scripts.php:268 template-zume-dashboard.php:1204
+#: functions/utilities/enqueue-scripts.php:82
+#: functions/utilities/enqueue-scripts.php:84
+#: functions/utilities/enqueue-scripts.php:275 template-zume-dashboard.php:1204
 #: template-zume-dashboard.php:1317
 msgid "Cancel"
 msgstr "റദ്ദാക്കുക"
 
-#: functions/enqueue-scripts.php:83
+#: functions/utilities/enqueue-scripts.php:83
 msgid "Current Step:"
 msgstr "ഇപ്പോഴത്തെ ചുവടുവയ്പ്:"
 
-#: functions/enqueue-scripts.php:85 translations/mobile-pwa-strings.php:35
+#: functions/utilities/enqueue-scripts.php:85
+#: translations/mobile-pwa-strings.php:35
 msgid "Finish"
 msgstr "അവസാനിപ്പിക്കുക"
 
-#: functions/enqueue-scripts.php:86 functions/utilities/menu.php:108
+#: functions/utilities/enqueue-scripts.php:86 functions/utilities/menu.php:108
 #: translations/mobile-pwa-strings.php:34
 msgid "Next"
 msgstr "അടുത്തത്"
 
-#: functions/enqueue-scripts.php:87 functions/utilities/menu.php:98
+#: functions/utilities/enqueue-scripts.php:87 functions/utilities/menu.php:98
 #: translations/mobile-pwa-strings.php:33
 msgid "Previous"
 msgstr "മുമ്പിലത്തേത്"
 
-#: functions/enqueue-scripts.php:88
+#: functions/utilities/enqueue-scripts.php:88
 msgid "Loading..."
 msgstr "ലോഡിങ്…"
 
-#: functions/enqueue-scripts.php:66 template-zume-dashboard.php:1168
+#: functions/utilities/enqueue-scripts.php:66 template-zume-dashboard.php:1168
 #: template-zume-dashboard.php:1202 translations/mobile-pwa-strings.php:26
 msgid "Delete"
 msgstr "മായ്ക്കുക"
 
-#: functions/enqueue-scripts.php:67
+#: functions/utilities/enqueue-scripts.php:67
 msgid "Failed to remove item."
 msgstr "നീക്കം ചെയ്യുന്നതില്‍ പരാജയപ്പെട്ടു."
 
-#: functions/enqueue-scripts.php:68
+#: functions/utilities/enqueue-scripts.php:68
 msgid "Failed to change item."
 msgstr "മാറ്റം വരുത്തുന്നതില്‍ പരാജയപ്പെട്ടു."
 
-#: functions/enqueue-scripts.php:69
+#: functions/utilities/enqueue-scripts.php:69
 msgid "Three Month Plan - Zúme Project"
 msgstr "മൂന്ന് മാസത്തെ പദ്ധതി... Zume പദ്ധതി"
 
-#: functions/enqueue-scripts.php:70
+#: functions/utilities/enqueue-scripts.php:70
 msgid "We got it!"
 msgstr "നമുക്കതു കിട്ടി!"
 
-#: functions/enqueue-scripts.php:71
+#: functions/utilities/enqueue-scripts.php:71
 msgid "We're a volunteer network, so give us a few days. We'll reach out to you soon as possible!"
 msgstr "ഞങ്ങള്‍ സന്നദ്ധസേവനശൃംഖലയാണ്. കുറച്ചു ദിവ സങ്ങള്‍ ഞങ്ങള്‍ക്കു തരൂ, ഞങ്ങള്‍ വേഗം. നിങ്ങളെ കണ്ടുമുട്ടാം!"
 
-#: functions/login/zume-login.php:97 functions/login/zume-login.php:320
+#: functions/login/zume-login.php:102 functions/login/zume-login.php:325
 msgid "Email is a required permission for login and registration."
 msgstr "ലോഗിന്‍ ചെയ്യാനും രജിസ്റ്റര്‍ ചെയ്യാനും ഇമെയ്ല്‍ ആവശ്യമുണ്ട്."
 
-#: functions/login/zume-login.php:448
+#: functions/login/zume-login.php:453
 msgid "No user found."
 msgstr "ഉപയോക്താവിനെ കണ്ടില്ല."
 
-#: functions/login/zume-login.php:284 functions/login/zume-login.php:413
+#: functions/login/zume-login.php:289 functions/login/zume-login.php:418
 msgid "You are missing your sign-in token. Try signing in again."
 msgstr "നിങ്ങളുടെ സൈന്‍ ഇന്‍ റ്റോക്കന്‍ കാണാനില്ല. ഒന്നു കൂടി സൈനിന്‍ ചെയ്യൂ."
 
-#: functions/login/zume-login.php:294 functions/login/zume-login.php:423
+#: functions/login/zume-login.php:299 functions/login/zume-login.php:428
 msgid "Failed to connect with Facebook. Try again."
 msgstr "ഫെയ്സ് ബുക്കുമായി ബന്ധം സ്ഥാപിക്കാന്‍ കഴിയു ന്നില്ല. വീണ്ടും ശ്രമിക്കുക."
 
-#: functions/login/zume-login.php:313 functions/login/zume-login.php:439
+#: functions/login/zume-login.php:318 functions/login/zume-login.php:444
 msgid "Facebook user lookup error. Sorry for the inconvenience."
 msgstr "ഫെയ്സ് ബുക്ക് ഉപയോക്താവ് ലുക്കപ് എറര്‍ കാണിക്കുന്നു. ബുദ്ധിമുട്ടില്‍ ഖേദിക്കുന്നു."
 
-#: functions/login/zume-login.php:316 functions/login/zume-login.php:442
+#: functions/login/zume-login.php:321 functions/login/zume-login.php:447
 msgid "Error with looking up user with Facebook. Sorry for the inconvenience."
 msgstr "ഫെയ്സ്ബുക്ക് ലുക്കിങ് അപ് ഉപയോക്താവുമായു ള്ള എറര്‍ കാണിക്കുന്നു. ബുദ്ധിമുട്ടില്‍ ഖേദിക്കുന്നു."
 
-#: functions/enqueue-scripts.php:331 functions/login/zume-login.php:543
+#: functions/login/zume-login.php:548
+#: functions/utilities/enqueue-scripts.php:338
 msgid "There are some errors in your form."
 msgstr "നിങ്ങളുടെ ഫോറത്തില്‍ ചില തെറ്റുകളുണ്ട്."
 
-#: functions/enqueue-scripts.php:119 functions/enqueue-scripts.php:335
-#: functions/login/zume-login.php:548 template-zume-dashboard.php:1420
+#: functions/login/zume-login.php:553
+#: functions/utilities/enqueue-scripts.php:119
+#: functions/utilities/enqueue-scripts.php:342 template-zume-dashboard.php:1420
 #: template-zume-dashboard.php:1471 template-zume-login.php:375
 msgid "Email"
 msgstr "ഇമെയ്ല്‍"
 
-#: functions/login/zume-login.php:552 template-zume-login.php:261
+#: functions/login/zume-login.php:557 template-zume-login.php:261
 msgid "Password Required"
 msgstr "പാസ്വേഡ് വേണം"
 
-#: functions/login/zume-login.php:555 template-zume-login.php:264
+#: functions/login/zume-login.php:560 template-zume-login.php:264
 msgid "Password required"
 msgstr "പാസ്വേഡ് വേണം"
 
-#: functions/login/zume-login.php:561 template-zume-login.php:271
+#: functions/login/zume-login.php:566 template-zume-login.php:271
 msgid "Re-enter Password"
 msgstr "പാസ് വേഡ് വീണ്ടും കൊടുക്കുക"
 
-#: functions/login/zume-login.php:564 template-zume-login.php:274
+#: functions/login/zume-login.php:569 template-zume-login.php:274
 msgid "Passwords do not match. Please, try again."
 msgstr "പാസ്വേഡ് യോജിക്കുന്നില്ല, വീണ്ടും ശ്രമിക്കുക."
 
-#: functions/login/zume-login.php:573 functions/zume-v4-seo-strings.php:24
+#: functions/login/zume-login.php:578 functions/zume-v4-seo-strings.php:24
 #: template-zume-login.php:358 template-zume-login.php:514
 msgid "Register"
 msgstr "രജിസ്റ്റര്‍ ചെയ്യുക"
 
-#: functions/login/zume-login.php:616
+#: functions/login/zume-login.php:621
 msgid "Missing captcha response. How did you do that?"
 msgstr "കാപ്ചാ പ്രതികരണം കാണുന്നില്ല. നിങ്ങള്‍ എങ്ങനെ യാണതു ചെയ്തത്?"
 
-#: functions/login/zume-login.php:629
+#: functions/login/zume-login.php:634
 msgid "Captcha failure. Try again, if you are human."
 msgstr "കാപ്ചാ പരാജയം? വീണ്ടും ശ്രമിക്കാം, മനുഷ്യനാണ ല്ലോ."
 
-#: functions/login/zume-login.php:635
+#: functions/login/zume-login.php:640
 msgid "Missing email or password."
 msgstr "ഇമെയ്ല്‍ / പാസ് വേഡ് കാണാനില്ല."
 
-#: functions/login/zume-login.php:654
+#: functions/login/zume-login.php:659
 msgid "Sorry. This email is already registered."
 msgstr "ക്ഷമിക്കണം. ഈ ഇമെയ്ല്‍ നേരത്തെ രജിസ്റ്റര്‍ ചെയ്തതാണ്."
 
-#: functions/login/zume-login.php:665
+#: functions/login/zume-login.php:670
 msgid "Something went wrong. Sorry. Could you try again?"
 msgstr "എന്തോ കുഴപ്പം പറ്റി. ഒന്നുകൂടി ശ്രമിക്കാമോ?"
 
-#: functions/login/zume-login.php:689
+#: functions/login/zume-login.php:694
 msgid "No new user found."
 msgstr "പുതിയ ഉപയോക്താവില്ല."
 
-#: functions/login/zume-login.php:745 functions/login/zume-login.php:796
+#: functions/login/zume-login.php:750 functions/login/zume-login.php:801
 msgid "Google"
 msgstr "ഗൂഗ്ള്‍"
 
-#: functions/login/zume-login.php:790
+#: functions/login/zume-login.php:795
 msgid "Link with Google"
 msgstr "ഗൂഗ്ളുമായി ലിങ്ക് ചെയ്യുക"
 
-#: functions/login/zume-login.php:929 functions/login/zume-login.php:1025
+#: functions/login/zume-login.php:934 functions/login/zume-login.php:1030
 msgid "Facebook"
 msgstr "ഫെയ്സ്ബുക്ക്"
 
-#: functions/login/zume-login.php:1166
+#: functions/login/zume-login.php:1171
 msgid "Missing username or email address."
 msgstr "കാണാതായ യൂസര്‍നാമവും ഇ മെയ്ല്‍ വിലാസവും."
 
-#: functions/login/zume-login.php:1172
+#: functions/login/zume-login.php:1177
 msgid "ERROR: Enter a username or email address."
 msgstr "തെറ്റ്: ഒരു യൂസര്‍നാമം / ഇമെയ്ല്‍ വിലാസം എന്‍റര്‍ ചെയ്യുക."
 
-#: functions/login/zume-login.php:1176
+#: functions/login/zume-login.php:1181
 msgid "ERROR: There is no user registered with that email address."
 msgstr "തെറ്റ്: ആ ഇ മെയ്ല്‍ വിലാസവുമായി രജിസ്റ്റര്‍ ചെയ്ത ഉപയോക്താവില്ല."
 
-#: functions/login/zume-login.php:1181
+#: functions/login/zume-login.php:1186
 msgid "ERROR: There is no user registered with that username."
 msgstr "തെറ്റ്: ആ ഇ മെയ്ല്‍ വിലാസവുമായി രജിസ്റ്റര്‍ ചെയ്ത ഉപയോക്താവില്ല."
 
-#: functions/login/zume-login.php:1226
+#: functions/login/zume-login.php:1231
 msgid "Someone has requested a password reset for the following account:"
 msgstr "താഴെപ്പറയുന്ന അക്കൗണ്ടിന്‍റെ പാസ്വേഡ് റീസെറ്റ് ചെയ്യാന്‍ ഒരാള്‍ ആവശ്യപ്പെട്ടിട്ടുണ്ട്:"
 
 #. translators: %s: site name
-#: functions/login/zume-login.php:1228
+#: functions/login/zume-login.php:1233
 msgid "Site Name: %s"
 msgstr "സൈറ്റിന്‍റെ പേര്: %s"
 
 #. translators: %s: user login
-#: functions/login/zume-login.php:1230
+#: functions/login/zume-login.php:1235
 msgid "Username: %s"
 msgstr "ഉപയോക്തൃനാമം: %s"
 
-#: functions/login/zume-login.php:1231
+#: functions/login/zume-login.php:1236
 msgid "If this was a mistake, just ignore this email and nothing will happen."
 msgstr "തെറ്റിപ്പോയെങ്കില്‍  ഈ ഇ മെയ്ല്‍ വിട്ടുകളയുക, കുഴപ്പമൊന്നുമുണ്ടാകില്ല."
 
-#: functions/login/zume-login.php:1232
+#: functions/login/zume-login.php:1237
 msgid "To reset your password, visit the following address:"
 msgstr "നിങ്ങളുടെ പാസ് വേഡ് റീസെറ്റ് ചെയ്യാന്‍ താഴെയുള്ള വിലാസം സന്ദര്‍ശിക്കുക."
 
 #. translators: Password reset email subject. %s: Site name
-#: functions/login/zume-login.php:1236
+#: functions/login/zume-login.php:1241
 msgid "[%s] Password Reset"
 msgstr "[%s] പാസ് വേഡ് റീസെറ്റ്"
 
-#: functions/login/zume-login.php:1266
+#: functions/login/zume-login.php:1271
 msgid "The email could not be sent."
 msgstr "ഇമെയ്ല്‍ അയയ്ക്കാന്‍ കഴിഞ്ഞില്ല."
 
-#: functions/login/zume-login.php:1266
+#: functions/login/zume-login.php:1271
 msgid "Possible reason: your host may have disabled the mail() function."
 msgstr "സാദ്ധ്യമായ കാരണം: നിങ്ങളുടെ ആതിഥേയന്‍ (host) മെയ്ല്‍ പ്രവര്‍ത്തനരഹിതമാക്കിയതാകാം."
 
@@ -294,15 +298,15 @@ msgstr "ഒന്നാമത്തെ"
 msgid "Last"
 msgstr "ഒടുവിലത്തെ"
 
-#: functions/zume-v4-groups.php:282
+#: functions/zume-v4-groups.php:284
 msgid "( Key not available. Check dashboard. )"
 msgstr "(കീ ലഭ്യമല്ല. ഡാഷ്ബോ(ര്‍)ഡ് പരിശോധിക്കുക.)"
 
-#: functions/enqueue-scripts.php:292 functions/zume-content.php:12
+#: functions/utilities/enqueue-scripts.php:299 functions/zume-content.php:12
 msgid "Session"
 msgstr "സെഷന്‍"
 
-#: functions/enqueue-scripts.php:280 functions/zume-content.php:120
+#: functions/utilities/enqueue-scripts.php:287 functions/zume-content.php:120
 msgid "Welcome to Session"
 msgstr "സെഷനിലേക്കു സ്വാഗതം"
 
@@ -322,7 +326,7 @@ msgstr "സെഷന്‍ ഉള്ളടക്ക വിശകലനം"
 msgid "How many are with you?"
 msgstr "നിങ്ങളോടൊപ്പം എത്രപേരുണ്ട്?"
 
-#: functions/enqueue-scripts.php:289 functions/zume-content.php:156
+#: functions/utilities/enqueue-scripts.php:296 functions/zume-content.php:156
 msgid "Continue"
 msgstr "തുടരുക"
 
@@ -359,7 +363,7 @@ msgstr "പ്രാര്‍ത്ഥനയോടെ ആരംഭിക്ക�
 #: functions/zume-content.php:2320 functions/zume-content.php:2575
 #: functions/zume-content.php:2813 functions/zume-content.php:3049
 #: functions/zume-content.php:3116 functions/zume-content.php:3185
-#: functions/zume-content.php:3590
+#: functions/zume-content.php:3592
 msgid "Watch and Discuss (15min)"
 msgstr "കാണുക, ചര്‍ച്ച ചെയ്യുക (15 മിനിറ്റ്)"
 
@@ -371,7 +375,7 @@ msgstr "കാണുക, ചര്‍ച്ച ചെയ്യുക (15 മി�
 #: functions/zume-content.php:2326 functions/zume-content.php:2581
 #: functions/zume-content.php:2819 functions/zume-content.php:3057
 #: functions/zume-content.php:3124 functions/zume-content.php:3193
-#: functions/zume-content.php:3596 functions/zume-content.php:3774
+#: functions/zume-content.php:3598 functions/zume-content.php:3776
 msgid "WATCH"
 msgstr "കാണുക"
 
@@ -393,8 +397,8 @@ msgstr "Zume വീഡിയോ സ്ക്രിപ്റ്റുകള്‍
 #: functions/zume-content.php:2443 functions/zume-content.php:2634
 #: functions/zume-content.php:2697 functions/zume-content.php:2875
 #: functions/zume-content.php:3101 functions/zume-content.php:3167
-#: functions/zume-content.php:3236 functions/zume-content.php:3368
-#: functions/zume-content.php:3560 functions/zume-content.php:3635
+#: functions/zume-content.php:3236 functions/zume-content.php:3370
+#: functions/zume-content.php:3562 functions/zume-content.php:3637
 msgid "DISCUSS"
 msgstr "ചര്‍ച്ച ചെയ്യുക"
 
@@ -440,7 +444,7 @@ msgstr "കര്‍ത്താവില്‍നിന്നു കേട്�
 
 #: functions/zume-content.php:421 functions/zume-content.php:489
 #: functions/zume-content.php:903 functions/zume-content.php:1543
-#: functions/zume-content.php:1846 functions/zume-content.php:3649
+#: functions/zume-content.php:1846 functions/zume-content.php:3651
 msgid "Listen and Read Along (3min)"
 msgstr "ശ്രദ്ധിക്കുക, ഒപ്പം വായിക്കുക (3 മിനിറ്റ്)"
 
@@ -449,7 +453,7 @@ msgstr "ശ്രദ്ധിക്കുക, ഒപ്പം വായിക്
 #: functions/zume-content.php:1188 functions/zume-content.php:1320
 #: functions/zume-content.php:1549 functions/zume-content.php:1852
 #: functions/zume-content.php:2043 functions/zume-content.php:2384
-#: functions/zume-content.php:3655
+#: functions/zume-content.php:3657
 msgid "READ"
 msgstr "വായിക്കുക"
 
@@ -469,9 +473,9 @@ msgstr "നിങ്ങളുടെ Zume ഗൈഡ്ബുബുക്കില
 msgid "Zúme Video Scripts: S.O.A.P.S."
 msgstr "Zume വീഡിയോ സ്ക്രിപ്റ്റ്സ്: S.O.A.P.S."
 
-#: functions/enqueue-scripts.php:220 functions/zume-content.php:500
-#: template-gmo.php:270 template-how-to-follow-jesus.php:198
-#: template-zume-dashboard.php:342 template-zume-training.php:212
+#: functions/utilities/enqueue-scripts.php:227 functions/zume-content.php:500
+#: template-zume-dashboard.php:342 template-zume-landing.php:406
+#: template-zume-training.php:212
 msgid "Accountability Groups"
 msgstr "കണക്കു കൊടുക്കല്‍ ഗ്രൂപ്പുകള്‍"
 
@@ -503,8 +507,8 @@ msgstr "രണ്ടു മൂന്നു പേര്‍ വീതമുള്
 #: functions/zume-content.php:1037 functions/zume-content.php:1445
 #: functions/zume-content.php:1959 functions/zume-content.php:2244
 #: functions/zume-content.php:2495 functions/zume-content.php:2732
-#: functions/zume-content.php:2963 functions/zume-content.php:3357
-#: functions/zume-content.php:3405
+#: functions/zume-content.php:2963 functions/zume-content.php:3359
+#: functions/zume-content.php:3407
 msgid "SHARE"
 msgstr "പങ്കിടുക"
 
@@ -520,7 +524,7 @@ msgstr "Zume ഗൈഡ് ബുക്ക്"
 #: functions/zume-content.php:1415 functions/zume-content.php:1942
 #: functions/zume-content.php:2231 functions/zume-content.php:2465
 #: functions/zume-content.php:2715 functions/zume-content.php:2946
-#: functions/zume-content.php:3386
+#: functions/zume-content.php:3388
 msgid "LOOKING FORWARD"
 msgstr "മുന്നോട്ടു നോക്കുക"
 
@@ -538,7 +542,7 @@ msgstr "അടുത്ത ഭാഗത്തിനുള്ള ഒരുക്�
 #: functions/zume-content.php:1438 functions/zume-content.php:1952
 #: functions/zume-content.php:2237 functions/zume-content.php:2488
 #: functions/zume-content.php:2725 functions/zume-content.php:2956
-#: functions/zume-content.php:3396
+#: functions/zume-content.php:3398
 msgid "OBEY"
 msgstr "അനുസരിക്കുക"
 
@@ -558,8 +562,8 @@ msgstr "ഈ ഭാഗത്തു നിങ്ങള്‍ പഠിച്ച �
 #: functions/zume-content.php:2502 functions/zume-content.php:2553
 #: functions/zume-content.php:2739 functions/zume-content.php:2791
 #: functions/zume-content.php:2970 functions/zume-content.php:3028
-#: functions/zume-content.php:3297 functions/zume-content.php:3413
-#: functions/zume-content.php:3468
+#: functions/zume-content.php:3299 functions/zume-content.php:3415
+#: functions/zume-content.php:3470
 msgid "PRAY"
 msgstr "പ്രാര്‍ത്ഥിക്കുക"
 
@@ -571,7 +575,7 @@ msgstr "ദൈവത്തെ അനുസരിക്കുന്നതിന�
 #: functions/zume-content.php:1459 functions/zume-content.php:1973
 #: functions/zume-content.php:2258 functions/zume-content.php:2509
 #: functions/zume-content.php:2746 functions/zume-content.php:2977
-#: functions/zume-content.php:3421
+#: functions/zume-content.php:3423
 msgid "#ZumeProject"
 msgstr "#Zume പദ്ധതി"
 
@@ -599,13 +603,13 @@ msgstr "ഗൈഡ് ബുക്ക് ഡൗണ്‍ലോഡ് ചെയ്
 #: functions/zume-content.php:1500 functions/zume-content.php:2001
 #: functions/zume-content.php:2285 functions/zume-content.php:2536
 #: functions/zume-content.php:2772 functions/zume-content.php:3006
-#: functions/zume-content.php:3449
+#: functions/zume-content.php:3451
 msgid "CHECK-IN"
 msgstr "പരിശോധിക്കുക"
 
 #: functions/zume-content.php:692 functions/zume-content.php:1081
 #: functions/zume-content.php:2774 functions/zume-content.php:3010
-#: functions/zume-content.php:3451
+#: functions/zume-content.php:3453
 msgid "Before getting started, take some time to check-in."
 msgstr "തുടങ്ങുന്നതിനു മുമ്പ് അല്പം സമയമെടുത്തു പരിശോധിക്കുക."
 
@@ -613,7 +617,7 @@ msgstr "തുടങ്ങുന്നതിനു മുമ്പ് അല്�
 #: functions/zume-content.php:1502 functions/zume-content.php:2004
 #: functions/zume-content.php:2287 functions/zume-content.php:2538
 #: functions/zume-content.php:2776 functions/zume-content.php:3012
-#: functions/zume-content.php:3453
+#: functions/zume-content.php:3455
 msgid "At the end of the last session, everyone in your group was challenged in two ways:"
 msgstr "കഴിഞ്ഞ ഭാഗത്തിന്‍റെ ഒടുവിലായി, ഗ്രൂപ്പിലുള്ളവര്‍ക്കെല്ലാം രണ്ടു തരത്തിലുള്ള വെല്ലുവിളികളുണ്ടായി:"
 
@@ -640,8 +644,7 @@ msgstr "ഗ്രൂപ്പിലെ അംഗങ്ങള്‍ക്കാ�
 msgid "If we want to make disciples who multiply – spiritual producers and not just consumers – then we need to learn and share four main ways God makes everyday followers more like Jesus:"
 msgstr "ശിഷ്യന്മാര്‍ (ആത്മീയഫലങ്ങളുടെ ഉല്പാദകര്‍, ഉപഭോക്താക്കളല്ല) പെരുകണമെങ്കില്‍, നാലു പ്രധാനകാര്യങ്ങള്‍ നാം പഠിച്ച് പങ്കു വയ്ക്കണം. ദൈവം, ശിഷ്യരെ ദിനമ്പ്രതി കൂടുതലായി യേശുവിനെപ്പോലെയാക്കിത്തീര്‍ക്കുന്നു:"
 
-#: functions/zume-content.php:733 template-gmo.php:233
-#: template-how-to-follow-jesus.php:161
+#: functions/zume-content.php:733 template-zume-landing.php:369
 msgid "Prayer"
 msgstr "പ്രാര്‍ത്ഥന"
 
@@ -808,7 +811,7 @@ msgstr "ഫലങ്ങള്‍ക്കായി ദൈവത്തിനു �
 #: functions/zume-content.php:2023 functions/zume-content.php:2305
 #: functions/zume-content.php:2560 functions/zume-content.php:2798
 #: functions/zume-content.php:3036 functions/zume-content.php:3256
-#: functions/zume-content.php:3475
+#: functions/zume-content.php:3477
 msgid "OVERVIEW"
 msgstr "അവലോകനം"
 
@@ -1299,7 +1302,7 @@ msgid "Have your entire group spend the next 90 minutes practicing the 3/3 Group
 msgstr "അടുത്ത 90 മിനിറ്റ് ഗ്രൂപ്പ് മുഴുവനുമായി 3/3 ഗ്രൂപ്പ് രീതി പരിശീലിക്കുക. മാതൃക വേണമെങ്കില്‍, Zúme ഗൈഡ് ബുക്ക് നോക്കാം."
 
 #: functions/zume-content.php:2676 functions/zume-content.php:2916
-#: functions/zume-content.php:3740
+#: functions/zume-content.php:3742
 msgid "PRACTICE"
 msgstr "പരിശീലിക്കുക"
 
@@ -1507,273 +1510,273 @@ msgstr "Zume ഗൈഡ് ബുക്ക് പ്രിന്‍റ് / ഓ�
 msgid "Online \"Three Month Plan\""
 msgstr "ഓണ്‍ലൈന്‍ \"മൂന്ന് മാസത്തെ പദ്ധതി\""
 
-#: functions/zume-content.php:3280
+#: functions/zume-content.php:3281
 msgid "Participants can access their own three month plan on the side column of their dashboard. They can connect their plan with this group by adding the following key:"
 msgstr "അംഗങ്ങള്‍ക്ക് അവരവരുടേതായ ത്രൈമാസപദ്ധതിയുണ്ടാക്കാം. അവരുടെ ഡാഷ് ബോ(ര്‍)ഡിന്‍റെ സൈഡ് കോളത്തിലെഴുതാം. താഴെയുളള കീ (key) ചേര്‍ത്തുകൊണ്ട് അവരുടെ പദ്ധതി, ഗ്രൂപ്പിനോടു ബന്ധിപ്പിക്കാം."
 
-#: functions/zume-content.php:3300
+#: functions/zume-content.php:3302
 msgid "Ask God what He specifically wants you to do with the basic disciple-making tools and techniques you have learned over these last nine sessions. You can remember them in terms of the Greatest Blessing."
 msgstr "ശിഷ്യരെ ഉളവാക്കുന്ന ഈ അടിസ്ഥാനോപാധികള്‍, കഴിഞ്ഞ ഒന്‍പതു സെഷനുകളിലായി നിങ്ങള്‍ പഠിച്ചു കഴിഞ്ഞു. നിങ്ങള്‍ അവ എങ്ങനെ ഉപയോഗിക്കണമെന്ന് ദൈവത്തോടു ചോദിക്കുക. വലിയ അനുഗ്രഹങ്ങളായി നിങ്ങള്‍ക്ക് അവ ഓര്‍ക്കാം."
 
-#: functions/zume-content.php:3304
+#: functions/zume-content.php:3306
 msgid "It's a Blessing to ... S.O.A.P.S. Bible Reading, Accountability Groups, Prayer Cycle"
 msgstr "S. O. A. P. S. വചനവായന, കണക്കു കൊടുക്കല്‍ ഗ്രൂപ്പ്, പ്രാര്‍ത്ഥനാ ചക്രം എന്നിവ അനുഗ്രഹമായിരുന്നു."
 
-#: functions/zume-content.php:3307
+#: functions/zume-content.php:3309
 msgid "It's a Great Blessing to ... Share your 3-Minute Testimony and God's Story, Prayer Walking"
 msgstr "നിങ്ങളുടെ 3 മിനിറ്റ് സാക്ഷ്യം... പറച്ചില്‍, സുവിശേഷം പങ്കിടല്‍, പ്രാര്‍ത്ഥനാ നടത്തം എന്നിവ അനുഗ്രഹമായിരുന്നു."
 
-#: functions/zume-content.php:3310
+#: functions/zume-content.php:3312
 msgid "It's a Greater Blessing to ... Start a 3/3rds Group"
 msgstr "ഒരു 3/3 ഗ്രൂപ് ആരംഭിക്കുന്നത്... അനുഗ്രഹമായിരുന്നു."
 
-#: functions/zume-content.php:3313
+#: functions/zume-content.php:3315
 msgid "It's the Greatest Blessing to ... Start a Zúme Group"
 msgstr "ഒരു Zume ഗ്രൂപ് ആരംഭിക്കുന്നത് അനുഗ്രഹമായിരുന്നു."
 
-#: functions/zume-content.php:3321
+#: functions/zume-content.php:3323
 msgid "LISTEN"
 msgstr "ശ്രദ്ധിക്കുക"
 
-#: functions/zume-content.php:3323
+#: functions/zume-content.php:3325
 msgid "Take at least 10 minutes to be as quiet as possible and listen intently to what God has to say and what He chooses to reveal. Make an effort to hear His voice."
 msgstr "കുറഞ്ഞതു 10 മിനിറ്റ് ശാന്തമായിരിക്കുക, ദൈവത്തിനു പറയാനുള്ളതും ദൈവം വെളിപ്പെടുത്താനിരിക്കുന്നതും എന്നെന്നു സൂക്ഷ്മമായി ശ്രദ്ധിക്കുക. ദൈവശബ്ദം കേള്‍ക്കാന്‍ മനസ്സു വയ്ക്കുക."
 
-#: functions/zume-content.php:3329
+#: functions/zume-content.php:3331
 msgid "COMPLETE"
 msgstr "പൂര്‍ത്തിയാക്കുക"
 
-#: functions/zume-content.php:3332
+#: functions/zume-content.php:3334
 msgid "Use the rest of your time to complete the Three Month Plan worksheet. You can write it out on a piece of paper. If you are logged in to ZúmeProject.com you can fill out your form digitally and link it to your group. Once you login, you’ll find the Three Month Plan under Settings. You can also find the Three Month Plan on your Dashboard."
 msgstr "ബാക്കിയുള്ള സമയം ത്രെെമാസപദ്ധതിയുടെ വിവരണം പൂര്‍ത്തിയാക്കുക. ഒരു കടലാസില്‍ അതെഴുതാം. Zumeproject.com ല്‍ പോയാല്‍, അതു ഡിജിറ്റലായി പൂരിപ്പിച്ച് നിങ്ങളുടെ ഗ്രൂപ്പുമായി ബന്ധിപ്പിക്കാം. ഒരിക്കല്‍ നിങ്ങള്‍ ലോഗിന്‍ ചെയ്താല്‍, ത്രെെമാസപദ്ധതി സെറ്റിങ്ങിലായി എന്നു കാണാം. നിങ്ങളുടെ ഡാഷ് ബോ(ര്‍)ഡിലും ത്രെെമാസപദ്ധതി കാണാവുന്നതാണ്."
 
-#: functions/zume-content.php:3335
+#: functions/zume-content.php:3337
 msgid "You do not have to commit to every item, and there is room for other items not already on the list. Do your best to align your commitments to what you have heard God reveal to you about His will."
 msgstr "ഓരോന്നിനും സമര്‍പ്പിക്കേണ്ടതില്ല, ലിസ്റ്റിലില്ലാത്ത വയ്ക്കു വേറെ സ്ഥലമുണ്ട്. ദൈവം നിങ്ങള്‍ക്കു വെളിപ്പെടുത്തുന്ന ദൈവഹിതത്തോടു യോജിക്കുന്നതിനായി നിങ്ങളെ സമര്‍പ്പിക്കാന്‍, കഴിയുന്നത്ര നന്നായി കാര്യങ്ങള്‍ ചെയ്യുക."
 
-#: functions/zume-content.php:3350
+#: functions/zume-content.php:3352
 msgid "Share you Plan (30min)"
 msgstr "നിങ്ങളുടെ പദ്ധതി പങ്കിടുക (30 മിനിറ്റ്)"
 
-#: functions/zume-content.php:3359
+#: functions/zume-content.php:3361
 msgid "In groups of two or three (15 minutes)"
 msgstr "രണ്ടോ മൂന്നോ പേരുള്ള ഗ്രൂപ്പുകളായി (15 മിനിറ്റ്)"
 
-#: functions/zume-content.php:3361
+#: functions/zume-content.php:3363
 msgid "Take turns sharing your Three Month Plans with each other. Take time to ask questions about things you might not understand about plans and how the others will meet their commitments. Ask them to do the same for you and your plan. Find a training partner(s) that is willing to check in with you to report on progress and challenges and ask questions after 1, 2, 3, 4, 6, 8 and 12 weeks. Commit to doing the same for them."
 msgstr "നിങ്ങളുടെ ത്രെെമാസപദ്ധതി പരസ്പരം പങ്കിടുക. പദ്ധതികളെക്കുറിച്ചു നിങ്ങള്‍ക്കു മനസ്സിലാകാത്തതു ചോദിക്കാനും, മറ്റുള്ളവര്‍ അവ എങ്ങനെ നടപ്പിലാക്കുമെന്നറിയാനും സമയമെടുക്കുക. നിങ്ങള്‍ ചെയ്തതുപോലെ അവരും ചെയ്യാന്‍ പറയുക. ഒന്നോ, അതിലധികമോ പരിശീലന പങ്കാളി (കളെ) യെ കണ്ടെത്തി, നിങ്ങളുടെ പുര ഗതിയും വെല്ലുവിളികളും റിപ്പോര്‍ട്ട് ചെയ്യാന്‍ പറയുക.1, 2, 3, 4, 6, 8, 12 ആഴ്ചകള്‍ക്കുശേഷം ചോദ്യങ്ങള്‍ ചോദിക്കുക. അവര്‍ക്കുവേണ്ടിയും ഇതു തന്നെ ചെയ്യുമെന്നു തീരുമാനിക്കുക."
 
-#: functions/zume-content.php:3370
+#: functions/zume-content.php:3372
 msgid "In your full training Group (15 minutes)"
 msgstr "ഗ്രൂപ്പ് മുഴുവനും (15 മിനിറ്റ്)"
 
-#: functions/zume-content.php:3372
+#: functions/zume-content.php:3374
 msgid "Discuss and develop a group plan for starting at least two new 3/3 Groups or Zúme Training Groups in your area. Several of your group members may have just completed and saved your individual Three-Month Plans to your Zúme group. On this step, if no one from your group has filled out a digital copy on the website of your Three-Month Plan, it is highly recommended that you do this together now. Just go to the Three-Month Plan under Settings and link the form to your group."
 msgstr "നിങ്ങളുടെ സ്ഥലത്ത് കുറഞ്ഞതു രണ്ടു 3/3 ഗ്രൂപ്പുകള്‍ / Zume ട്രെയ്നിങ് ഗ്രൂപ്പുകള്‍ എന്നിവ തുടങ്ങുന്ന കാര്യം ഗ്രൂപ്പില്‍ ചര്‍ച്ച ചെയ്യുക. നിങ്ങളുടെ ഗ്രൂപ്പ് അംഗങ്ങളില്‍ ഏറെപ്പേരും ത്രെെമാസപദ്ധതി പൂര്‍ത്തിയാക്കി, Zume ഗ്രൂപ്പിനോടു യോജിപ്പിച്ചുകാണും. ഇതിന്മേല്‍, നിങ്ങളുടെ ഗ്രൂപ്പിലുള്ളവരാരും തന്നെ ത്രെെമാസപദ്ധതി വെബ് സൈറ്റില്‍ ഡിജിറ്റലായി പൂരിപ്പിച്ചില്ലെങ്കില്‍, ഇപ്പോള്‍ എല്ലാവരും ഒരുമിച്ച് അതു ചെയ്യാനുളള സമയമാണ്. ത്രെെമാസപദ്ധതിയിലേക്കു പോയി (settings), നിങ്ങളുടെ ഗ്രൂപ്പിലേക്ക് ആ ഫോം ലിങ്ക് ചെയ്യുക."
 
-#: functions/zume-content.php:3375
+#: functions/zume-content.php:3377
 msgid "Remember, your goal is to start Simple Churches that multiply. 3/3 Groups and Zúme Training Groups are two ways to do that. Discuss and decide whether these new Groups will be connected to an existing local church or network or whether you’ll start a new network out of your Zúme Training Group."
 msgstr "ഓര്‍ക്കുക, പെരുകുന്ന സഭകള്‍ സ്ഥാപിക്കുകയെന്നതാണു നിങ്ങളുടെ ലക്ഷ്യം. 3/3 ഗ്രൂപ്പുകളും Zume ട്രെയ്നിങ് ഗ്രൂപ്പുകളും അതിനുളള മാര്‍ഗ്ഗങ്ങളാണ്. ഈ പുതിയ ഗ്രൂപ്പുകള്‍, നിലവിലുള്ള ഒരു സ്ഥലം സഭയുമായി ബന്ധിപ്പിക്കാമോയെന്നു ചര്‍ച്ച ചെയ്തു തീരുമാനിക്കുക. അതല്ലെങ്കില്‍, Zume ട്രെയ്നിങ് ഗ്രൂപ്പിനു വെളിയിലായി ഒരു പുതിയ നെറ്റ് വര്‍ക്ക് നിങ്ങള്‍ക്കു തുടങ്ങാമോയെന്നും ആലോചിക്കുക."
 
-#: functions/zume-content.php:3389
+#: functions/zume-content.php:3391
 msgid "Congratulations! You've completed Session 9."
 msgstr "അഭിനന്ദനങ്ങള്‍! നിങ്ങള്‍ ഭാഗം 9 പൂര്‍ത്തിയാക്കിക്കഴിഞ്ഞു."
 
-#: functions/zume-content.php:3398
+#: functions/zume-content.php:3400
 msgid "You may not know it, but you now have more practical training on starting simple churches and making disciples who multiply than many pastors and missionaries around the world!"
 msgstr "നിങ്ങള്‍ക്കറിയില്ലെന്നു വന്നാലും, ലോകമെമ്പാടുമുള്ള പല പാസ്റ്റര്‍മാരെയും മിഷനറിമാരെയുംകാള്‍ അധികമായി, പെരുകുന്ന ശിഷ്യന്മാരെ ഉളവാക്കാനും സഭകള്‍ തുടങ്ങാനുമുള്ള പരിശീലനം നിങ്ങള്‍ക്കു കിട്ടിക്കഴിഞ്ഞു!"
 
-#: functions/zume-content.php:3399
+#: functions/zume-content.php:3401
 msgid "Set aside time on your calendar each week to continue to work on your Three Month Plan, and plan check-ins with your training partner at the end of week 1, 2, 3, 4, 6, 8, and 12. Each time you're together, ask about their results and share yours, making sure you're both working through your plans. Prayerfully consider continuing as an ongoing spiritual family committed to multiplying disciples."
 msgstr "ഓരോ ആഴ്ചയും കലണ്ടര്‍ നോക്കി, നിങ്ങളുടെ ത്രെെമാസ പദ്ധതിക്കായി സമയം മാറ്റി വയ്ക്കുക. നിങ്ങളുടെ പരിശീലന പങ്കാളിയുമൊത്ത് 1, 2, 3, 4, 6, 8, 12 ആഴ്ചകള്‍ക്കൊടുവില്‍ കാര്യങ്ങള്‍ വിലയിരുത്തുക. ഓരോ തവണയും നിങ്ങള്‍ കൂടിവരുമ്പോള്‍, മറ്റുള്ളവരുടെ പ്രവര്‍ത്തനഫലങ്ങള്‍ ചോദിക്കുകയും നിങ്ങളുടേതു പങ്കു വയ്ക്കുകയും ചെയ്യുക. നിങ്ങള്‍ രണ്ടു കൂട്ടരും പ്ലാനനുസരിച്ചു പ്രവര്‍ത്തിക്കുന്നുവെന്ന് ഉറപ്പാക്കുക. ശിഷ്യരെ പെരുക്കുന്ന ഒരു കുടുംബമാണെന്ന സമര്‍പ്പണത്തില്‍ പ്രാര്‍ത്ഥനയോടെ മുന്നോട്ടു പോവുക."
 
-#: functions/zume-content.php:3407
+#: functions/zume-content.php:3409
 msgid "Pray and ask God who He would have you share Zúme Training with by launching a Leadership Cell of future Zúme Training leaders."
 msgstr "ഭാവിയില്‍ ഒരു Zume നേതൃത്വ പരിശീലനം ആരംഭിച്ചുകൊണ്ട് ആരുമായിട്ടാണ് ഈ പരിശീലന പദ്ധതി പങ്കു വയ്ക്കേണ്ടതെന്നറിയാന്‍ പ്രാര്‍ത്ഥിക്കുക."
 
-#: functions/zume-content.php:3415
+#: functions/zume-content.php:3417
 msgid "Be sure to pray with your group before you end your time together. Thank God that He has created and gifted you with exactly the right talents to make a difference in His kingdom. Ask Him for wisdom to use the strengths He has given you and to find other followers who help cover your weaknesses. Pray that He would make you fruitful and multiply — this was His plan from the very beginning. Pray that God help you be obedient to Him and invite Him to work in you and those around you!"
 msgstr "മീറ്റിങ് അവസാനിക്കുന്നതിനു മുമ്പ് പ്രാര്‍ത്ഥിക്കാന്‍ മറക്കരുത്. ദൈവരാജ്യത്തില്‍ ഒരു വ്യത്യാസമുളവാക്കുന്നതിനാവശ്യമായ താലന്തുകളോടെ ദൈവം നിങ്ങളെ സൃഷ്ടിച്ചതിനു നന്ദിയര്‍പ്പിക്കുക. ദൈവദത്തമായ കഴിവുകള്‍ ഉപയോഗിക്കുന്നതിനുള്ള ജ്ഞാനം നിങ്ങള്‍ക്കു ലഭിക്കാനായി പ്രാര്‍ത്ഥിക്കുക. നിങ്ങളുടെ ബലഹീനതകള്‍ മറയ്ക്കാന്‍ വേണ്ടുന്ന മറ്റു ദൈവമക്കളെ കണ്ടെത്തുക. നിങ്ങളെ ദൈവം ഫലമുള്ളവരാക്കി പെരുകുന്നതിനും പ്രാര്‍ത്ഥിക്കുക. ആരംഭത്തില്‍ത്തന്നെയുള്ള ദൈവികപദ്ധതിയായിരുന്നു അത്. ദൈവത്തെ അനുസരിക്കാന്‍ ദൈവം നിങ്ങളെ സഹായിക്കാനായി പ്രാര്‍ത്ഥിക്കുക. നിങ്ങളിലും നിങ്ങള്‍ക്കു ചുറ്റുമുള്ളവരിലും ദൈവം പ്രവര്‍ത്തിക്കാനായി ദൈവത്തെ ക്ഷണിക്കുക!"
 
-#: functions/zume-content.php:3423
+#: functions/zume-content.php:3425
 msgid "Excited to help a new Zúme group get started? Share about Zúme on social media and let people know where they can get started."
 msgstr "പുതിയ Zume ഗ്രൂപ്പ് ആരംഭിക്കുന്നതില്‍ സന്തോഷമാണോ? അതിനെക്കുറിച്ച് സമൂഹമാദ്ധ്യമത്തില്‍ പങ്കുവയ്ക്കുക. അങ്ങനെ എവിടെ അതു തുടങ്ങണമെന്ന് ആളുകള്‍ അറിയട്ടെ."
 
-#: functions/zume-content.php:3442
+#: functions/zume-content.php:3444
 msgid "Looking Back"
 msgstr "തിരിഞ്ഞുനോട്ടം"
 
-#: functions/zume-content.php:3444
+#: functions/zume-content.php:3446
 msgid "Welcome back to Zúme Training!"
 msgstr "Zume പരിശീലനത്തിലേക്കു വീണ്ടും സ്വാഗതം!"
 
-#: functions/zume-content.php:3457
+#: functions/zume-content.php:3459
 msgid "You were asked to prayerfully consider continuing as an ongoing spiritual family committed to multiplying disciples."
 msgstr "ശിഷ്യരെ പെരുക്കാന്‍ സമര്‍പ്പണത്തോടെ മുന്നേറ്റം തുടരാന്‍ നിങ്ങള്‍ പ്രാര്‍ത്ഥിക്കണമെന്ന് ആവശ്യപ്പെട്ടു."
 
-#: functions/zume-content.php:3460
+#: functions/zume-content.php:3462
 msgid "You were encouraged to share Zúme Training by launching a Leadership Cell of future Zúme Training leaders."
 msgstr "ഭാവിയില്‍ Zume നേതാക്കളെ പരിശീലിപ്പിക്കുന്നതിനുള്ള ഒരു ലീഡര്‍ഷിപ് സെല്‍ തുടങ്ങിക്കൊണ്ട് Zume പരിശീലനം പങ്കുവയ്ക്കാന്‍ നിങ്ങളെ പ്രോത്സാഹിപ്പിച്ചു."
 
-#: functions/zume-content.php:3463
+#: functions/zume-content.php:3465
 msgid "Take a few moments to see how your group has been doing with these items and their Three Month Plans since you've last met."
 msgstr "കഴിഞ്ഞ തവണ നിങ്ങള്‍ കൂടി വന്നപ്പോള്‍ മുതല്‍,നിങ്ങളുടെ ഗ്രൂപ്പ് ഇക്കാര്യങ്ങളും ത്രെെമാസപദ്ധതിയും എങ്ങനെ കൈകാര്യം ചെയ്യുന്നുവെന്നു കാണാന്‍ അല്പനേരം ചെലവഴിക്കുക."
 
-#: functions/zume-content.php:3470
+#: functions/zume-content.php:3472
 msgid "Pray and thank God that He is faithful to complete His good work in us. Ask Him to give your group clear heads and open hearts to the great things He wants to do in and through you. Ask the Holy Spirit to lead your time together and thank Him for His faithfulness, too. He got you through!"
 msgstr "നമ്മില്‍ ദൈവപ്രവൃത്തി പൂര്‍ത്തിയാക്കാന്‍ ദൈവം വിശ്വസ്തനാണ്. അതിനായി ദൈവത്തിനു നന്ദിയര്‍പ്പിച്ചു കൊണ്ടു പ്രാര്‍ത്ഥിക്കുക. ദൈവം നിങ്ങളിലൂടെ ചെയ്യാനാഗ്രഹിക്കുന്ന കാര്യങ്ങള്‍ ചെയ്യാനുള്ള നല്ല ബുദ്ധിയും തുറന്ന ഹൃദയവും നിങ്ങളുടെ ഗ്രൂപ്പ് അംഗങ്ങള്‍ക്കു നല്‍കാനായി പ്രാര്‍ത്ഥിക്കുക. നിങ്ങളെ ഒരുമിച്ചു നയിക്കാന്‍ പരിശുദ്ധാത്മാവിനോട് അപേക്ഷിക്കുക. ഇതു വരെയുള്ള വിശ്വസ്തതയ്ക്കായി നന്ദി കരേറ്റുക. ഇതുവരെ കര്‍ത്താവു നിങ്ങളെ സഹായിച്ചു!"
 
-#: functions/zume-content.php:3477
+#: functions/zume-content.php:3479
 msgid "In this advanced training session, you’ll take a look at how you can level-up your Coaching Strengths with a quick checklist assessment. You’ll learn how Leadership in Networks allows a growing group of small churches to work together to accomplish even more. And you’ll learn how to develop Peer Mentoring Groups that take leaders to a whole new level of growth."
 msgstr "ഈ പുരോഗമനപരിശീലനത്തില്‍, നിങ്ങളുടെ പരിശീലനനിലവാരം പെട്ടെന്ന് എങ്ങനെ ഉയര്‍ത്താമെന്നു പരിശോധിക്കാം. പരസ്പരബന്ധമുള്ള നേതൃത്വങ്ങള്‍, ചെറിയ സഭകളുടെ വളരുന്ന ഒരു ഗ്രൂപ്പ് ഒരുമിച്ചു പ്രവര്‍ത്തിക്കുമ്പോഴുണ്ടാകുന്ന വലിയ നേട്ടം നിങ്ങള്‍ പഠിക്കും. എങ്ങനെയാണു 'പീര്‍ മെന്‍ററിങ് ഗ്രൂപ്പുകള്‍',നേതാക്കന്മാരെ, വളര്‍ച്ചയുടെ പുതിയ ഒരു തലത്തിലേക്കെത്തിക്കുന്നത് എങ്ങനെയെന്നും നിങ്ങള്‍ ഗ്രഹിക്കും."
 
-#: functions/zume-content.php:3490
+#: functions/zume-content.php:3492
 msgid "Activity (10min)"
 msgstr "പ്രവര്‍ത്തനം (10 മിനിറ്റ്)"
 
-#: functions/zume-content.php:3497
+#: functions/zume-content.php:3499
 msgid "ASSESS"
 msgstr "വിലയിരുത്തല്‍"
 
-#: functions/zume-content.php:3499
+#: functions/zume-content.php:3501
 msgid "The Coaching Checklist is a powerful tool you can use to quickly assess your own strengths and vulnerabilities when it comes to making disciples who multiply. It's also a powerful tool you can use to help others – and others can use to help you."
 msgstr "ശിഷ്യന്മാരെ പെരുക്കുന്നതില്‍ നിങ്ങളുടെ ബലവും ബലഹീനതയും പെട്ടെന്നു വിലയിരുത്താനുള്ള ഒരു മികച്ച ഉപാധിയാണു കോച്ചിങ് ചെക്ക് ലിസ്റ്റ്. മറ്റുള്ളവരെ സഹായിക്കാനും മറ്റുള്ളവര്‍ക്കു നിങ്ങളെ സഹായിക്കാനും അതുകൊള്ളാം."
 
-#: functions/zume-content.php:3501
+#: functions/zume-content.php:3503
 msgid "Find the Coaching Checklist section in your Zúme Guidebook, and take this quick (5-minutes or less) self-assessment:"
 msgstr "നിങ്ങളുടെ Zume ഗൈഡ് ബുക്കില്‍ കോച്ചിങ് ചെക്ക് ലിസ്റ്റ് കാണുക. പെട്ടെന്നു (5 മിനിറ്റിനുള്ളില്‍) സ്വയം വിലയിരുത്തുക."
 
-#: functions/zume-content.php:3504
+#: functions/zume-content.php:3506
 msgid "Read through the Disciple Training Tools in the far left column of the Checklist."
 msgstr "ചെക്ക് ലിസ്റ്റിന്‍റെ ഇടത്തേയറ്റത്തെ കോളത്തിലുള്ള ശിഷ്യത്വപരിശീലനോപാധികള്‍ (tools) വായിക്കുക."
 
-#: functions/zume-content.php:3505
+#: functions/zume-content.php:3507
 msgid "Mark each one of the Training Tools, using the following method:"
 msgstr "താഴെപ്പറയുന്ന രീതിയില്‍ ഓരോ ഉപാധിയും (tool) അടയാളപ്പെടുത്തുക."
 
-#: functions/zume-content.php:3507
+#: functions/zume-content.php:3509
 msgid "If you're unfamiliar or don't understand the Tool – check the BLACK column"
 msgstr "നിങ്ങള്‍ക്കതു (tool) പരിചയമില്ലെങ്കില്‍ / മനസ്സിലാകുന്നില്ലെങ്കില്‍, കറുത്ത കോളം പരിശോധിക്കുക."
 
-#: functions/zume-content.php:3510
+#: functions/zume-content.php:3512
 msgid "If you're somewhat familiar but still not sure about the Tool – check the RED column"
 msgstr "നിങ്ങള്‍ക്കതു കുറച്ചൊക്കെ പരിചയമുണ്ട്, അപ്പോള്‍ത്തന്നെ അതിനെക്കുറിച്ചു തീര്‍ച്ചയില്ലെങ്കില്‍, ചുവന്ന കോളം നോക്കുക."
 
-#: functions/zume-content.php:3513
+#: functions/zume-content.php:3515
 msgid "If you understand and can train the basics on the Tool – check the YELLOW column"
 msgstr "നിങ്ങള്‍ക്കത് അറിയാം, അതിന്‍റെ അടിസ്ഥാനകാര്യങ്ങള്‍ പരിശീലിപ്പിക്കാനുമറിയാം. എങ്കില്‍ മഞ്ഞക്കോളം നോക്കുക."
 
-#: functions/zume-content.php:3516
+#: functions/zume-content.php:3518
 msgid "If you feel confident and can effectively train the Tool – check the GREEN column"
 msgstr "നിങ്ങള്‍ക്കതു പരിശീലിപ്പിക്കാമെന്നുള്ള ആത്മവിശ്വാസമുണ്ടെങ്കില്‍, പച്ചക്കോളം നോക്കുക."
 
-#: functions/zume-content.php:3552
+#: functions/zume-content.php:3554
 msgid "Zúme Video Scripts: Coaching Checklist"
 msgstr "Zume വീഡിയോ സ്ക്രിപ്റ്റുകള്‍: കോച്ചിങ് ചെക്ക് ലിസ്റ്റ്"
 
-#: functions/zume-content.php:3563
+#: functions/zume-content.php:3565
 msgid "Which Training Tools did you feel you would be able to train well?"
 msgstr "നിങ്ങള്‍ക്ക് ഏറ്റവും നന്നായി പരിശീലിപ്പിക്കാവുന്ന പരിശീലനോപാധി (tool) ഏതാണ്?"
 
-#: functions/zume-content.php:3564
+#: functions/zume-content.php:3566
 msgid "Which ones made you feel vulnerable as a trainer?"
 msgstr "ഒരു പരിശീലകനെന്ന നിലയില്‍ എന്തിലാണു (tool) നിങ്ങളുടെ ബലഹീനത?"
 
-#: functions/zume-content.php:3565
+#: functions/zume-content.php:3567
 msgid "Are there any Training Tools that you would add or subtract from the Checklist? Why?"
 msgstr "ഇവയോട് എന്തെങ്കിലും കൂട്ടിച്ചേര്‍ക്കാനോ, ഇവയില്‍നിന്ന് എന്തെങ്കിലും കുറയ്ക്കാക്കാനോ ഉണ്ടോ?"
 
-#: functions/zume-content.php:3574
+#: functions/zume-content.php:3576
 msgid "REMEMBER – Be sure to share your Coaching Checklist results with training partner or other mentor. If you're helping coach or mentor someone, use this tool to help you assess which areas need your attention and training."
 msgstr "ഓര്‍ക്കുക, നിങ്ങളുടെ കോച്ചിങ് ചെക്ക് ലിസ്റ്റ് ഫലങ്ങള്‍,നിങ്ങളുടെ പരിശീലനപങ്കാളി/ഉപദേഷ്ടാവ് എന്നിവരുമായി പങ്കുവയ്ക്കാന്‍ മറക്കരുത്. നിങ്ങള്‍ കോച്ചിനെ സഹായിക്കുകയോ, ആര്‍ക്കെങ്കിലും ഉപദേശം കൊടുക്കുകയോ (mentor) ചെയ്യുന്നെങ്കില്‍, ഈ ഉപാധി (tool) ഉപയോഗിച്ചുകൊണ്ട് നിങ്ങളുടെ ശ്രദ്ധയും പരിശീലനവും ആവശ്യമുള്ള മേഖലകള്‍ വിലയിരുത്തുക."
 
-#: functions/zume-content.php:3598
+#: functions/zume-content.php:3600
 msgid "What happens to churches as they grow and start new churches that start new churches? How do they stay connected and live life together as an extended, spiritual family? They become a network!"
 msgstr "സഭകള്‍ വളര്‍ന്ന് പുതിയ സഭകള്‍ ഉണ്ടായി, അവ വളര്‍ന്ന് പുതിയ സഭകള്‍ ഉണ്ടാകുമ്പോള്‍ എന്തു സംഭവിക്കുന്നു? അവ ഒരുമിച്ചുള്ള കുടുംബബന്ധം എങ്ങനെയാണു പുലര്‍ത്തുന്നത്? അവ പരസ്പരബന്ധമുള്ളതായിത്തീരുന്നു?"
 
-#: functions/zume-content.php:3629
+#: functions/zume-content.php:3631
 msgid "Zúme Video Scripts: Leadership in Networks"
 msgstr "Zume വീഡിയോ സ്ക്രിപ്റ്റുകള്‍: പരസ്പരബന്ധങ്ങളിലുള്ള നേതൃത്വങ്ങള്‍"
 
-#: functions/zume-content.php:3637
+#: functions/zume-content.php:3639
 msgid "Are there advantages when networks of simple churches are connected by deep, personal relationships? What are some examples that come to mind?"
 msgstr "ലളിതമായ സഭകള്‍, ആഴമായി അന്യോന്യം അടുത്തിടപഴകുമ്പോഴുള്ള നേട്ടങ്ങള്‍ എന്തെല്ലാമാണ്? നിങ്ങളുടെ ഓര്‍മ്മയിലുന്നു ചില ദൃഷ്ടാന്തങ്ങള്‍ ഏവ?"
 
-#: functions/enqueue-scripts.php:245 functions/zume-content.php:3658
-#: template-gmo.php:378 template-how-to-follow-jesus.php:306
+#: functions/utilities/enqueue-scripts.php:252 functions/zume-content.php:3660
+#: template-zume-landing.php:319 template-zume-landing.php:514
 #: template-zume-training.php:821
 msgid "Peer Mentoring Groups"
 msgstr "പീര്‍ മെന്‍ററിങ് ഗ്രൂപ്പുകള്‍"
 
-#: functions/zume-content.php:3661
+#: functions/zume-content.php:3663
 msgid "Making disciples who make disciples means making leaders who make leaders. How do you develop stronger leaders? By teaching them how to love one another better. Peer Mentoring Groups help leaders love deeper."
 msgstr "ശിഷ്യരാക്കുന്ന ശിഷ്യരെ ഉളവാക്കുകയെന്നു പറഞ്ഞാല്‍, നേതാക്കന്മാരാക്കുന്ന നേതാക്കളെ ഉളവാക്കുകയെന്നാണര്‍ത്ഥം. എങ്ങനെയാണു നിങ്ങള്‍ കരുത്തരായ നേതാക്കളെ വികസിപ്പിക്കുന്നത്? എങ്ങനെയാണ് അന്യോന്യം നന്നായി സ്നേഹിക്കുന്നതെന്നു പഠിപ്പിക്കുന്നതിലൂടെ. നേതാക്കന്മാര്‍ ആഴമായി അന്യോന്യം സ്നേഹിക്കാന്‍ പീര്‍ മെന്‍ററിങ് ഗ്രൂപ്പുകള്‍ സഹായിക്കുന്നു."
 
-#: functions/zume-content.php:3664
+#: functions/zume-content.php:3666
 msgid "Find the Peer Mentoring Groups section in your Zúme Guidebook, and listen to the audio below."
 msgstr "നിങ്ങളുടെ Zume ഗൈഡ് ബുക്കിലെ \"പീര്‍ മെന്‍ററിങ്  ഗ്രൂപ്പുകള്‍\" എന്ന ഭാഗം കാണുക. അതിനു താഴെയുള്ള ഓഡിയോ കേള്‍ക്കുക."
 
-#: functions/zume-content.php:3697
+#: functions/zume-content.php:3699
 msgid "Zúme Video Scripts: Peer Mentoring Groups"
 msgstr "Zume വീഡിയോ സ്ക്രിപ്റ്റുകള്‍: പീര്‍ മെന്‍ററിങ് ഗ്രൂപ്പുകള്‍"
 
-#: functions/zume-content.php:3712
+#: functions/zume-content.php:3714
 msgid "Practice (60min)"
 msgstr "പരിശീലിക്കുക (60 മിനിറ്റ്)"
 
-#: functions/zume-content.php:3720
+#: functions/zume-content.php:3722
 msgid "Find the Peer Mentoring Groups section in your Zúme Training Guide, and follow these steps."
 msgstr "Zume ഗൈഡ് ബുക്കിലെ പീര്‍ മെന്‍ററിങ് ഗ്രൂപ്പ് എന്ന ഭാഗം കാണുക. ഈ കാര്യങ്ങള്‍ അനുവര്‍ത്തിക്കുക."
 
-#: functions/zume-content.php:3731
+#: functions/zume-content.php:3733
 msgid "GROUPS"
 msgstr "ഗ്രൂപ്പുകള്‍"
 
-#: functions/zume-content.php:3735
+#: functions/zume-content.php:3737
 msgid "Break into groups of two or three and work through the 3/3 sections of the Peer Mentoring Group format. Peer Mentoring is something that happens once a month or once a quarter and takes some time for the whole group to participate, so you will not have time for everyone to experience the full mentoring process in this session."
 msgstr "രണ്ടു, മൂന്നു പേര്‍ വീതമുള്ള ഗ്രൂപ്പുകളായിത്തിരിഞ്ഞ് പീര്‍ മെന്‍ററിങ് ഗ്രൂപ്പ് മാതൃകയുടെ 3/3 ഭാഗം പരിശീലിക്കുക. മാസത്തിലൊരിക്കല്‍ / മൂന്നു മാസത്തിലൊരിക്കല്‍, മുഴുവന്‍ ഗ്രൂപ്പിനും പരിശീലനം നേടത്തക്ക നിലയില്‍ ഇതു നടക്കുന്നു. എല്ലാവരെയും പരിശീലിപ്പിക്കാനുളള സമയം ഈ ഒരു കൂടി വരവില്‍ ലഭിക്കുകയില്ലല്ലോ."
 
-#: functions/zume-content.php:3742
+#: functions/zume-content.php:3744
 msgid "To practice, choose one person in your group to be the \"mentee\" for this session and have the other members spend time acting as Peer Mentors by working through the suggested questions list and providing guidance and encouragement for the Mentee's work."
 msgstr "പരിശീലനത്തിന് ഒരാളെ, (മറ്റുള്ളവരെയും) ഉപദേശിക്കാനായി (mentee) തിരഞ്ഞെടുക്കുക. നിര്‍ദ്ദിഷ്ട ചോദ്യങ്ങള്‍ ഉപയോഗിച്ചുകൊണ്ട് മാര്‍ഗ്ഗനിര്‍ദ്ദേശം, പ്രോത്സാഹനം എന്നിവ നല്‍കിക്കൊണ്ട് ഉപദേശിക്കപ്പെടുന്നയാളിന്‍റെ (Mentee) പ്രവൃത്തി ചെയ്യുക."
 
-#: functions/zume-content.php:3744
+#: functions/zume-content.php:3746
 msgid "By the time you're finished, everyone should have a basic understanding of asking and answering."
 msgstr "നിങ്ങള്‍ ഇത് അവസാനിപ്പിക്കുമ്പോള്‍, എല്ലാവര്‍ക്കും ചോദ്യോത്തരങ്ങളെക്കുറിച്ച് ഒരു ധാരണ കിട്ടും."
 
-#: functions/zume-content.php:3753
+#: functions/zume-content.php:3755
 msgid "REMEMBER – Spend time studying the Four Fields Diagnostic Diagram and Generational Map in the Peer Mentoring Groups section of your Zúme Training Guide. Make sure everyone in your group has a basic understanding of these tools before asking the suggested questions."
 msgstr "ഓര്‍ക്കുക - നാലു നില രേഖാചിത്രവും തലമുറയുടെ ഭൂപടവും പഠിക്കുക. Zume ഗൈഡ് ബുക്കിലെ പീര്‍ മെന്‍ററിങ് ഗ്രൂപ്പ് എന്ന ഭാഗത്ത് അതുണ്ട്. നിര്‍ദ്ദിഷ്ട ചോദ്യങ്ങള്‍ ചോദിക്കുന്നതിനുമുമ്പ് ഉപാധികളെപ്പറ്റി (tools) ഒരു അടിസ്ഥാനധാരണ, ഗ്രൂപ്പ് അംഗങ്ങള്‍ക്കെല്ലാമുണ്ടെന്ന് ഉറപ്പു വരുത്തണം."
 
-#: functions/zume-content.php:3769
+#: functions/zume-content.php:3771
 msgid "CONGRATULATIONS ON COMPLETING ZÚME TRAINING!"
 msgstr "Zume പരിശീലനം പൂര്‍ത്തിയാക്കിയതിന് നിങ്ങള്‍ക്ക് അഭിനന്ദനങ്ങള്‍!"
 
-#: functions/zume-content.php:3776
+#: functions/zume-content.php:3778
 msgid "You and your group are now ready to take leadership to a new level! Here are a few more steps to help you KEEP growing!"
 msgstr "ഇപ്പോള്‍, നിങ്ങളും നിങ്ങളുടെ ഗ്രൂപ്പും നേതൃത്വത്തിന്‍റെ ഒരു പുതിയ തലത്തിലേക്കുള്ള തയ്യാറെടുപ്പിലാണ്! നിങ്ങളുടെ തുടര്‍ന്നുള്ള വളര്‍ച്ചയ്ക്കു സഹായകമായ കുറച്ചുകൂടി പടികള്‍ ഇതാ!"
 
-#: functions/zume-content.php:3806
+#: functions/zume-content.php:3808
 msgid "Zúme Video Scripts: Completion of Training"
 msgstr "Zume വീഡിയോ സ്ക്രിപ്റ്റുകള്‍: പരിശീലനത്തിന്‍റെ പൂര്‍ത്തീകരണം"
 
 #: functions/zume-dashboard.php:81 functions/zume-dashboard.php:112
-#: functions/zume-dashboard.php:208 functions/zume-v4-groups.php:77
-#: functions/zume-v4-groups.php:815 functions/zume-v4-groups.php:917
-#: functions/zume-v4-groups.php:1041
+#: functions/zume-dashboard.php:208 functions/zume-v4-groups.php:79
+#: functions/zume-v4-groups.php:817 functions/zume-v4-groups.php:919
+#: functions/zume-v4-groups.php:1043
 msgid "No Name"
 msgstr "പേരില്ല"
 
-#: functions/enqueue-scripts.php:334 functions/zume-functions.php:414
+#: functions/utilities/enqueue-scripts.php:341 functions/zume-functions.php:424
 #: template-zume-dashboard.php:1405
 msgid "Phone Number"
 msgstr "ഫോണ്‍ നമ്പര്‍"
 
-#: functions/zume-functions.php:415
+#: functions/zume-functions.php:425
 msgid "User Address"
 msgstr "മേല്‍വിലാസം"
 
-#: functions/zume-functions.php:416
+#: functions/zume-functions.php:426
 msgid "GeoCoded IP"
 msgstr "ജിയോ കോഡഡ് IP"
 
@@ -1818,12 +1821,12 @@ msgid "Logout"
 msgstr "ലോഗൗട്ട്"
 
 #. Template Name of the plugin/theme
-#: functions/enqueue-scripts.php:242 functions/zume-v4-seo-strings.php:25
-#: template-zume-training.php:745
+#: functions/utilities/enqueue-scripts.php:249
+#: functions/zume-v4-seo-strings.php:25 template-zume-training.php:745
 msgid "Three-Month Plan"
 msgstr "മൂന്ന് മാസത്തെ പദ്ധതി"
 
-#: functions/enqueue-scripts.php:308 template-zume-progress.php:30
+#: functions/utilities/enqueue-scripts.php:315 template-zume-progress.php:30
 msgid "Progress"
 msgstr "പുരോഗതി"
 
@@ -1967,13 +1970,14 @@ msgstr "നോട് യോജിപ്പിച്ചു"
 msgid "Unlink Group"
 msgstr "ഗ്രൂപ്പ് ബന്ധം വിടര്‍ത്തുക (unlink)"
 
-#: functions/enqueue-scripts.php:124 functions/enqueue-scripts.php:351
-#: template-zume-3plan.php:165 template-zume-dashboard.php:1497
+#: functions/utilities/enqueue-scripts.php:124
+#: functions/utilities/enqueue-scripts.php:358 template-zume-3plan.php:165
+#: template-zume-dashboard.php:1497
 msgid "Oh snap!"
 msgstr "ഫോട്ടോ! (Oh snap)"
 
-#: functions/enqueue-scripts.php:125 functions/enqueue-scripts.php:267
-#: template-zume-3plan.php:167
+#: functions/utilities/enqueue-scripts.php:125
+#: functions/utilities/enqueue-scripts.php:274 template-zume-3plan.php:167
 msgid "Save"
 msgstr "സേവ് ചെയ്യുക"
 
@@ -1997,10 +2001,10 @@ msgstr "പ്രിന്‍റെടുക്കുക"
 msgid "No plans linked to this group."
 msgstr "പദ്ധതികളൊന്നും ഈ ഗ്രൂപ്പിനോടു യോജിപ്പിച്ചില്ല."
 
-#: functions/zume-gmo.php:206 parts/content-share.php:85 template-gmo.php:421
-#: template-how-to-follow-jesus.php:349 template-pieces-page.php:217
+#: parts/content-share.php:87 template-pieces-page.php:214
 #: template-zume-about.php:51 template-zume-about.php:68
-#: template-zume-faq.php:199 template-zume-privacy-policy.php:186
+#: template-zume-faq.php:199 template-zume-landing.php:188
+#: template-zume-landing.php:215 template-zume-privacy-policy.php:186
 #: template-zume-progress.php:119
 msgid "Zúme uses an online training platform to equip participants in basic disciple-making and simple church planting multiplication principles, processes, and practices."
 msgstr "ശിഷ്യരാക്കുന്നതിന്‍റെയും ലളിതമായ സഭകള്‍ സ്ഥാപിക്കുന്നതിന്‍റെയും പെരുകുന്നതിന്‍റെയും പ്രക്രിയകളുടെയും പ്രയോഗങ്ങളുടെയും അടിത്തറയില്‍, പങ്കെടുക്കുന്നവരെ ഒരുക്കുന്നതിനുള്ള ഒരു ഓണ്‍ലൈന്‍ വേദിയാണു Zume ഉപയോഗിക്കുന്നത്."
@@ -2010,9 +2014,9 @@ msgstr "ശിഷ്യരാക്കുന്നതിന്‍റെയും
 msgid "Goals of the Zúme Project:"
 msgstr "Zume പ്രോജക്റ്റിന്‍റെ ലക്ഷ്യങ്ങള്‍:"
 
-#: template-gmo.php:418 template-how-to-follow-jesus.php:346
 #: template-zume-about.php:65 template-zume-faq.php:196
-#: template-zume-privacy-policy.php:183 template-zume-progress.php:116
+#: template-zume-landing.php:212 template-zume-privacy-policy.php:183
+#: template-zume-progress.php:116
 msgid "Zúme means yeast in Greek. In Matthew 13:33, Jesus is quoted as saying, \"The Kingdom of Heaven is like a woman who took yeast and mixed it into a large amount of flour until it was all leavened.\" This illustrates how ordinary people, using ordinary resources, can have an extraordinary impact for the Kingdom of God. Zúme aims to equip and empower ordinary believers to saturate the globe with multiplying disciples in our generation."
 msgstr "Zume എന്നതിന് പുളിപ്പ് (Yeast) എന്നാണു ഗ്രീക്കില്‍. മത്തായി 13:33 ല്‍, \"സ്വര്‍ഗ്ഗരാജ്യം പുളിച്ച മാവിനോടു സദൃശം; അത് ഒരു സ്ത്രീ എടുത്ത് മൂന്നു പറ മാവില്‍ എല്ലാം പുളിച്ചുവരുവോളം അടക്കിവച്ചു\" എന്ന് യേശു പറഞ്ഞു. സാധാരണക്കാര്‍ക്ക് സാധാരണമായ രീതികളില്‍, ദൈവരാജ്യത്തിനുവേണ്ടി അസാധാരണമായ പ്രവൃത്തികള്‍ എങ്ങനെ ചെയ്യാമെന്ന് ഇതു കാണിക്കുന്നു. സാധാരണക്കാരായ ദൈവമക്കളെ, പെരുകി ഭൂമിയില്‍ നിറയുന്നതിന് ഒരുക്കുക, ബലപ്പെടുത്തുക എന്നതാണു Zume യുടെ ലക്ഷ്യം."
 
@@ -2102,7 +2106,7 @@ msgstr "മീറ്റിങ്"
 msgid "Address"
 msgstr "അഭിസംബോധന (address)"
 
-#: functions/enqueue-scripts.php:262 template-zume-dashboard.php:135
+#: functions/utilities/enqueue-scripts.php:269 template-zume-dashboard.php:135
 msgid "Members"
 msgstr "അംഗങ്ങള്‍"
 
@@ -2118,15 +2122,15 @@ msgstr "പുതിയ ഭാഗം തുടങ്ങുക"
 msgid "Archive Group"
 msgstr "ആര്‍ക്കൈവ് ഗ്രൂപ്പ്"
 
-#: functions/enqueue-scripts.php:297 template-zume-dashboard.php:229
+#: functions/utilities/enqueue-scripts.php:304 template-zume-dashboard.php:229
 msgid "invites you to join"
 msgstr "നിങ്ങളെ ചേരാന്‍ ക്ഷണിക്കുന്നു"
 
-#: functions/enqueue-scripts.php:298 template-zume-dashboard.php:235
+#: functions/utilities/enqueue-scripts.php:305 template-zume-dashboard.php:235
 msgid "Accept"
 msgstr "സ്വീകരിക്കുക"
 
-#: functions/enqueue-scripts.php:299 template-zume-dashboard.php:237
+#: functions/utilities/enqueue-scripts.php:306 template-zume-dashboard.php:237
 msgid "Decline"
 msgstr "തിരസ്ക്കരിക്കുക"
 
@@ -2162,7 +2166,7 @@ msgstr "വീഡിയോ അവലോകനം"
 msgid "How Zúme Works"
 msgstr "Zume യുടെ പ്രവര്‍ത്തനം"
 
-#: functions/enqueue-scripts.php:250 template-zume-dashboard.php:302
+#: functions/utilities/enqueue-scripts.php:257 template-zume-dashboard.php:302
 #: template-zume-one-page-course.php:30 template-zume-one-page-course.php:43
 #: template-zume-overview.php:92 template-zume-overview.php:214
 #: template-zume-training.php:145
@@ -2185,7 +2189,7 @@ msgstr "ആത്മീയശ്വസനം"
 msgid "S.O.A.P.S Bible Reading"
 msgstr "S. O. A. P. S. ബൈബിള്‍ വായന"
 
-#: functions/enqueue-scripts.php:251 template-zume-dashboard.php:350
+#: functions/utilities/enqueue-scripts.php:258 template-zume-dashboard.php:350
 #: template-zume-one-page-course.php:31 template-zume-one-page-course.php:48
 #: template-zume-overview.php:102 template-zume-overview.php:215
 #: template-zume-training.php:240
@@ -2196,7 +2200,7 @@ msgstr "ഭാഗം 2"
 msgid "Producers vs Consumers"
 msgstr "ഉല്പാദകരും ഉപഭോക്താക്കളും"
 
-#: functions/enqueue-scripts.php:252 template-zume-dashboard.php:382
+#: functions/utilities/enqueue-scripts.php:259 template-zume-dashboard.php:382
 #: template-zume-one-page-course.php:32 template-zume-one-page-course.php:53
 #: template-zume-overview.php:112 template-zume-overview.php:216
 #: template-zume-training.php:319
@@ -2207,7 +2211,7 @@ msgstr "ഭാഗം 3"
 msgid "Spiritual Economy"
 msgstr "ആത്മീയ സമ്പദ് വ്യവസ്ഥ"
 
-#: functions/enqueue-scripts.php:253 template-zume-dashboard.php:414
+#: functions/utilities/enqueue-scripts.php:260 template-zume-dashboard.php:414
 #: template-zume-one-page-course.php:33 template-zume-one-page-course.php:58
 #: template-zume-overview.php:122 template-zume-overview.php:217
 #: template-zume-training.php:392
@@ -2234,7 +2238,7 @@ msgstr "കാണാനുള്ള കണ്ണുകള്‍"
 msgid "Lord's Supper"
 msgstr "കര്‍ത്തൃമേശ"
 
-#: functions/enqueue-scripts.php:254 template-zume-dashboard.php:462
+#: functions/utilities/enqueue-scripts.php:261 template-zume-dashboard.php:462
 #: template-zume-one-page-course.php:34 template-zume-one-page-course.php:63
 #: template-zume-overview.php:132 template-zume-overview.php:218
 #: template-zume-training.php:491
@@ -2245,7 +2249,7 @@ msgstr "ഭാഗം 5"
 msgid "Person of Peace"
 msgstr "സമാധാനവ്യക്തി"
 
-#: functions/enqueue-scripts.php:255 template-zume-dashboard.php:486
+#: functions/utilities/enqueue-scripts.php:262 template-zume-dashboard.php:486
 #: template-zume-one-page-course.php:35 template-zume-one-page-course.php:68
 #: template-zume-overview.php:143 template-zume-overview.php:219
 #: template-zume-training.php:564
@@ -2264,7 +2268,7 @@ msgstr "3/3 ഗ്രൂപ്പ്"
 msgid "3/3 Group Live"
 msgstr "3/3 സജീവ (live) ഗ്രൂപ്പ്"
 
-#: functions/enqueue-scripts.php:256 template-zume-dashboard.php:518
+#: functions/utilities/enqueue-scripts.php:263 template-zume-dashboard.php:518
 #: template-zume-one-page-course.php:36 template-zume-one-page-course.php:73
 #: template-zume-overview.php:154 template-zume-overview.php:220
 #: template-zume-training.php:613
@@ -2275,20 +2279,19 @@ msgstr "ഭാഗം 7"
 msgid "Training Cycle"
 msgstr "പരിശീലനചക്രം"
 
-#: functions/enqueue-scripts.php:257 template-zume-dashboard.php:534
+#: functions/utilities/enqueue-scripts.php:264 template-zume-dashboard.php:534
 #: template-zume-one-page-course.php:37 template-zume-one-page-course.php:78
 #: template-zume-overview.php:165 template-zume-overview.php:221
 #: template-zume-training.php:654
 msgid "Session 8"
 msgstr "ഭാഗം 8"
 
-#: functions/enqueue-scripts.php:238 template-gmo.php:386
-#: template-how-to-follow-jesus.php:314 template-zume-dashboard.php:542
-#: template-zume-training.php:667
+#: functions/utilities/enqueue-scripts.php:245 template-zume-dashboard.php:542
+#: template-zume-landing.php:522 template-zume-training.php:667
 msgid "Leadership Cells"
 msgstr "നേതൃത്വസെല്ലുകള്‍"
 
-#: functions/enqueue-scripts.php:258 template-zume-dashboard.php:550
+#: functions/utilities/enqueue-scripts.php:265 template-zume-dashboard.php:550
 #: template-zume-one-page-course.php:38 template-zume-one-page-course.php:83
 #: template-zume-overview.php:176 template-zume-overview.php:222
 #: template-zume-training.php:695
@@ -2311,21 +2314,20 @@ msgstr "രണ്ടു സഭകളുടെ ഭാഗം"
 msgid "Completion of Training"
 msgstr "പരിശീലനത്തിന്‍റെ പൂര്‍ത്തീകരണം"
 
-#: functions/enqueue-scripts.php:259 template-zume-dashboard.php:590
+#: functions/utilities/enqueue-scripts.php:266 template-zume-dashboard.php:590
 #: template-zume-one-page-course.php:39 template-zume-one-page-course.php:88
 #: template-zume-overview.php:223 template-zume-training.php:776
 msgid "Session 10"
 msgstr "ഭാഗം 10"
 
-#: functions/enqueue-scripts.php:243 template-gmo.php:382
-#: template-how-to-follow-jesus.php:310 template-zume-dashboard.php:598
+#: functions/utilities/enqueue-scripts.php:250 template-zume-dashboard.php:598
+#: template-zume-landing.php:299 template-zume-landing.php:518
 #: template-zume-training.php:789
 msgid "Coaching Checklist"
 msgstr "കോച്ചിങ് ചെക്ക് ലിസ്റ്റ്"
 
-#: functions/enqueue-scripts.php:244 template-gmo.php:390
-#: template-how-to-follow-jesus.php:318 template-zume-dashboard.php:606
-#: template-zume-training.php:808
+#: functions/utilities/enqueue-scripts.php:251 template-zume-dashboard.php:606
+#: template-zume-landing.php:526 template-zume-training.php:808
 msgid "Leadership in Networks"
 msgstr "പരസ്പരബന്ധങ്ങളിലെ നേതൃത്വം"
 
@@ -2337,7 +2339,7 @@ msgstr "പീര്‍ മെന്‍ററിങ്"
 msgid "Session videos will be added as you complete sessions."
 msgstr "ഭാഗങ്ങള്‍ നിങ്ങള്‍ പൂര്‍ത്തിയാക്കുന്ന മുറയ്ക്ക് വീഡിയോകള്‍ ലഭിക്കുന്നതായിരിക്കും."
 
-#: functions/enqueue-scripts.php:304 template-zume-dashboard.php:714
+#: functions/utilities/enqueue-scripts.php:311 template-zume-dashboard.php:714
 #: template-zume-dashboard.php:845
 msgid "Archived Groups"
 msgstr "ആര്‍ക്കൈവ് ചെയ്ത ഗ്രൂപ്പുകള്‍"
@@ -2367,9 +2369,9 @@ msgstr "പരസ്പരബന്ധങ്ങള്‍"
 msgid "Create Group"
 msgstr "ഗ്രൂപ്പ് ഉണ്ടാക്കുക"
 
-#: functions/enqueue-scripts.php:295 functions/enqueue-scripts.php:355
-#: template-zume-dashboard.php:916 template-zume-dashboard.php:1052
-#: template-zume-dashboard.php:1249
+#: functions/utilities/enqueue-scripts.php:302
+#: functions/utilities/enqueue-scripts.php:362 template-zume-dashboard.php:916
+#: template-zume-dashboard.php:1052 template-zume-dashboard.php:1249
 msgid "Group Name"
 msgstr "ഗ്രൂപ്പ് പേര്"
 
@@ -2400,7 +2402,7 @@ msgstr "സഹനേതാക്കള്‍ / അധികത്തില്‍
 msgid "Add"
 msgstr "കൂട്ടിച്ചേര്‍ക്കുക"
 
-#: functions/enqueue-scripts.php:346 template-zume-dashboard.php:1006
+#: functions/utilities/enqueue-scripts.php:353 template-zume-dashboard.php:1006
 #: template-zume-dashboard.php:1500
 msgid "Submit"
 msgstr "സമര്‍പ്പിക്കുക"
@@ -2435,8 +2437,8 @@ msgstr "ഒരു സഹലീഡറെ/ അധികത്തിലുള്ള
 msgid "Update"
 msgstr "അപ്ഡേറ്റ്"
 
-#: functions/enqueue-scripts.php:279 functions/enqueue-scripts.php:353
-#: template-zume-dashboard.php:1166
+#: functions/utilities/enqueue-scripts.php:286
+#: functions/utilities/enqueue-scripts.php:360 template-zume-dashboard.php:1166
 msgid "Archive"
 msgstr "ആർക്കൈവ്"
 
@@ -2476,84 +2478,86 @@ msgstr "ഇതിനു വിപരീതമായിട്ടു ചെയ്�
 msgid "Remove"
 msgstr "നീക്കം ചെയ്യുക"
 
-#: functions/enqueue-scripts.php:322 template-zume-dashboard.php:1350
+#: functions/utilities/enqueue-scripts.php:329 template-zume-dashboard.php:1350
 msgid "Connect Me to a Coach"
 msgstr "ഒരു കോച്ചുമായി എന്നെ ബന്ധപ്പെടുത്തുക"
 
-#: functions/enqueue-scripts.php:323 template-zume-dashboard.php:1361
+#: functions/utilities/enqueue-scripts.php:330 template-zume-dashboard.php:1361
 msgid "Coaches"
 msgstr "കോച്ചുകൾ"
 
-#: functions/enqueue-scripts.php:324 template-zume-dashboard.php:1362
+#: functions/utilities/enqueue-scripts.php:331 template-zume-dashboard.php:1362
 msgid "Our network of volunteer coaches are people like you, people who are passionate about loving God, loving others, and obeying the Great Commission."
 msgstr "നിങ്ങളെപ്പോലുള്ളവരാണു കോച്ചുകൾ.അവർക്ക് ദൈവസ്നേഹമുണ്ട്, അവർ മറ്റുള്ളവരെ സ്നേഹിക്കുന്നവരാണ്, അവർ മഹാനിയോഗം അനുസരിക്കുന്നവരാണ്."
 
-#: functions/enqueue-scripts.php:325 template-zume-dashboard.php:1367
+#: functions/utilities/enqueue-scripts.php:332 template-zume-dashboard.php:1367
 msgid "Advocates"
 msgstr "അഡ്വക്കേറ്റുകൾ"
 
-#: functions/enqueue-scripts.php:326 template-zume-dashboard.php:1368
+#: functions/utilities/enqueue-scripts.php:333 template-zume-dashboard.php:1368
 msgid "A coach is someone who will come alongside you as you implement the Zúme tools and training."
 msgstr "നിങ്ങൾ Zume പരിശീലിക്കുമ്പോൾ, നിങ്ങൾക്കൊപ്പമുളള ഒരാളാണു കോച്ച്."
 
-#: functions/enqueue-scripts.php:327 template-zume-dashboard.php:1373
+#: functions/utilities/enqueue-scripts.php:334 template-zume-dashboard.php:1373
 msgid "Local"
 msgstr "ലോക്കൽ"
 
-#: functions/enqueue-scripts.php:328 functions/enqueue-scripts.php:345
-#: template-zume-dashboard.php:1374
+#: functions/utilities/enqueue-scripts.php:335
+#: functions/utilities/enqueue-scripts.php:352 template-zume-dashboard.php:1374
 msgid "On submitting this request, we will do our best to connect you with a coach near you."
 msgstr "ഈ അഭ്യർത്ഥനയിന്മേൽ, നിങ്ങൾക്കു സമീപത്തുള്ള കോച്ചുമായി നിങ്ങളെ ബന്ധപ്പെടുത്താം."
 
-#: functions/enqueue-scripts.php:329 template-zume-dashboard.php:1379
+#: functions/utilities/enqueue-scripts.php:336 template-zume-dashboard.php:1379
 msgid "It's Free"
 msgstr "ഇതു സൗജന്യമാണ്"
 
-#: functions/enqueue-scripts.php:330 template-zume-dashboard.php:1380
+#: functions/utilities/enqueue-scripts.php:337 template-zume-dashboard.php:1380
 msgid "Coaching is free. You can opt out at any time."
 msgstr "കോച്ചിങ് സൗജന്യമാണ്. ഏതു സമയത്തും നിങ്ങൾക്കതു ലഭ്യമാണ്."
 
-#: functions/enqueue-scripts.php:131 functions/enqueue-scripts.php:332
-#: template-zume-dashboard.php:1390
+#: functions/utilities/enqueue-scripts.php:131
+#: functions/utilities/enqueue-scripts.php:339 template-zume-dashboard.php:1390
 msgid "Name"
 msgstr "പേര്"
 
-#: functions/enqueue-scripts.php:117 functions/enqueue-scripts.php:333
-#: template-zume-dashboard.php:1394 template-zume-dashboard.php:1395
+#: functions/utilities/enqueue-scripts.php:117
+#: functions/utilities/enqueue-scripts.php:340 template-zume-dashboard.php:1394
+#: template-zume-dashboard.php:1395
 msgid "First and last name"
 msgstr "ആദ്യപേര് അവസാനപേര്"
 
-#: functions/enqueue-scripts.php:336 template-zume-dashboard.php:1433
+#: functions/utilities/enqueue-scripts.php:343 template-zume-dashboard.php:1433
 msgid "Email is required."
 msgstr "ഇ-മെയ്ൽ വേണം."
 
-#: functions/enqueue-scripts.php:121 functions/enqueue-scripts.php:337
-#: template-zume-dashboard.php:1441
+#: functions/utilities/enqueue-scripts.php:121
+#: functions/utilities/enqueue-scripts.php:344 template-zume-dashboard.php:1441
 msgid "City"
 msgstr "പട്ടണം"
 
-#: functions/enqueue-scripts.php:339 template-zume-dashboard.php:1466
+#: functions/utilities/enqueue-scripts.php:346 template-zume-dashboard.php:1466
 msgid "How should we contact you?"
 msgstr "ഞങ്ങൾ എങ്ങനെ നിങ്ങളുമായി ബന്ധപ്പെടണം?"
 
-#: functions/enqueue-scripts.php:340 template-zume-dashboard.php:1473
+#: functions/utilities/enqueue-scripts.php:347 template-zume-dashboard.php:1473
 msgid "Text"
 msgstr "ടെക്സ്റ്റ്"
 
-#: functions/enqueue-scripts.php:118 functions/enqueue-scripts.php:341
-#: template-zume-dashboard.php:1475
+#: functions/utilities/enqueue-scripts.php:118
+#: functions/utilities/enqueue-scripts.php:348 template-zume-dashboard.php:1475
 msgid "Phone"
 msgstr "ഫോൺ"
 
-#: functions/enqueue-scripts.php:342 template-zume-dashboard.php:1477
+#: functions/utilities/enqueue-scripts.php:349 template-zume-dashboard.php:1477
 msgid "WhatsApp"
 msgstr "വാട്സാപ്പ്"
 
-#: functions/enqueue-scripts.php:343 template-zume-dashboard.php:1479
+#: functions/utilities/enqueue-scripts.php:350
+#: functions/utilities/enqueue-scripts.php:370 template-zume-dashboard.php:1479
 msgid "Other"
 msgstr "മറ്റുള്ളവ"
 
-#: functions/enqueue-scripts.php:123 template-zume-dashboard.php:1486
+#: functions/utilities/enqueue-scripts.php:123 template-zume-dashboard.php:1486
 msgid "Affiliation Key"
 msgstr "അഫിലിയേഷൻ കീ"
 
@@ -3088,19 +3092,19 @@ msgstr "പുതുക്കലുകൾ"
 msgid "Our Privacy Policy may change from time to time and all updates will be posted on this page."
 msgstr "കാലോചിതമായി ഞങ്ങളുടെ സ്വകാര്യതാ നിലപാടു മാറാം.എല്ലാ അപ്ഡേറ്റുകളും ഈ പേജിൽ പോസ്റ്റ് ചെയ്യും."
 
-#: functions/enqueue-scripts.php:116
+#: functions/utilities/enqueue-scripts.php:116
 msgid "Your Profile"
 msgstr "നിങ്ങളുടെ പ്രൊഫൈൽ"
 
-#: functions/enqueue-scripts.php:127
+#: functions/utilities/enqueue-scripts.php:127
 msgid "Linked Facebook Account"
 msgstr "FB അക്കൗണ്ടുമായി യോജിപ്പിച്ചു"
 
-#: functions/enqueue-scripts.php:128
+#: functions/utilities/enqueue-scripts.php:128
 msgid "Unlink"
 msgstr "യോജിപ്പിക്കാതിരിക്കുക (unlink)"
 
-#: functions/enqueue-scripts.php:129
+#: functions/utilities/enqueue-scripts.php:129
 msgid "Linked Google Account"
 msgstr "ഗൂഗിൾ അക്കൗണ്ടുമായി യോജിപ്പിക്കുക"
 
@@ -3204,15 +3208,15 @@ msgstr "ഫുൾ വിഡ്ത് ഹോം"
 msgid "Zúme Course"
 msgstr "Zume കോഴ്സ്"
 
-#: functions/login/zume-login.php:1312
+#: functions/login/zume-login.php:1317
 msgid "Password reset is not allowed for this user"
 msgstr "ഈ ഉപയോക്താവിന് പാസ് വേഡ് പുനഃക്രമീകരി ക്കാനുള്ള അനുവാദമില്ല"
 
-#: functions/login/zume-login.php:1339
+#: functions/login/zume-login.php:1344
 msgid "Could not save password reset key to database."
 msgstr "ഡാറ്റാ ബെയ്സിലേക്ക് പാസ് വേഡ് റീസെറ്റ് കീ സേവ് ചെയ്യാന്‍ കഴിഞ്ഞില്ല."
 
-#: functions/restrict-rest-api.php:73
+#: functions/utilities/restrict-rest-api.php:73
 msgid "The Wordpress built in API is disabled."
 msgstr "API ല്‍ നിര്‍മ്മിച്ച വേ(ര്‍)ഡ് പ്രസ്സ് ഡിസേബ്ള്‍ ആയി."
 
@@ -3232,7 +3236,7 @@ msgstr "താഴെയുള്ള വീഡിയോയില്‍, ഒരു
 msgid "Find the \"3/3 Group Format\" section in your Zúme Guidebook, and watch the video below."
 msgstr "നിങ്ങളുടെ Zume ഗൈഡ് ബുക്കിലെ \"3/3 ഗ്രൂപ്പ് മാതൃക\" എന്ന ഭാഗം കാണുക. പിന്നെ അതിനു താഴെപ്പറയുന്ന വീഡിയോ കാണുക."
 
-#: functions/zume-content.php:3492
+#: functions/zume-content.php:3494
 msgid "Assess yourself using the coaching checklist."
 msgstr "കോച്ചിങ് ചെക്ക് ലിസ്റ്റ് ഉപയോഗിച്ച് നിങ്ങളെത്തന്നെ വിലയിരുത്തുക."
 
@@ -3261,33 +3265,32 @@ msgstr "ഞങ്ങളോടൊപ്പമുള്ള നിങ്ങളു�
 msgid "Zúme One Page Course"
 msgstr "Zume ഒരു പേജ് കോഴ്സ്"
 
-#: functions/zume-gmo.php:166 functions/zume-v4-seo-strings.php:14
-#: parts/content-share.php:40 template-pieces-page.php:176
-#: template-zume-training.php:91
+#: functions/zume-v4-seo-strings.php:14 parts/content-share.php:40
+#: template-pieces-page.php:171 template-zume-training.php:91
 msgid "Groups"
 msgstr "ഗ്രൂപ്പുകൾ"
 
-#: functions/login/zume-login.php:93
+#: functions/login/zume-login.php:98
 msgid "Failed Google Verification of User Token"
 msgstr "യൂസർ റ്റോക്കണിന്റെ ഗൂഗിൾ വെരിഫിക്കേഷൻ പരാജയപ്പെട്ടു"
 
-#: functions/login/zume-login.php:222 functions/login/zume-login.php:456
+#: functions/login/zume-login.php:227 functions/login/zume-login.php:461
 msgid "Facebook email already linked with another account. Login to this account or use forgot password tool to access account."
 msgstr "ഫെയ്സ് ബുക്ക് ഇ മെയ്ൽ, അക്കൗണ്ട് ലിങ്കുമായി നേരത്തേ തന്നെ ബന്ധിപ്പിച്ചിട്ടുണ്ട്. ഈ അക്കൗണ്ടിലേക്കു ലോഗിൻ ചെയ്യുക/അല്ലെങ്കിൽ, മറന്നുപോയ പാസ് വേർഡ് റ്റൂൾ ഉപയോഗിക്കുക."
 
-#: functions/login/zume-login.php:228 functions/login/zume-login.php:462
+#: functions/login/zume-login.php:233 functions/login/zume-login.php:467
 msgid "Facebook already linked with another account."
 msgstr "മറ്റൊരു അക്കൗണ്ടുമായി ഫെയ്സ് ബുക്ക് നേരത്തേ ബന്ധിപ്പിച്ചു കഴിഞ്ഞു."
 
-#: functions/login/zume-login.php:828 functions/login/zume-login.php:908
+#: functions/login/zume-login.php:833 functions/login/zume-login.php:913
 msgid "Oops. Something went wrong."
 msgstr "ഓ. എന്തോ കുഴപ്പമുണ്ട്."
 
-#: functions/login/zume-login.php:1159
+#: functions/login/zume-login.php:1164
 msgid "Missing form verification. Refresh and try again."
 msgstr "ഫോം വെരിഫിക്കേഷൻ കാണാനില്ല. റിഫ്രഷ് ചെയ്ത് വീണ്ടും ശ്രമിക്കുക."
 
-#: functions/login/zume-login.php:1201
+#: functions/login/zume-login.php:1206
 msgid "ERROR: Invalid username or email."
 msgstr "തെറ്റ്. ഇൻ വാലിഡ് യൂസർ നാമം / ഇ മെയ്ൽ."
 
@@ -3307,89 +3310,87 @@ msgstr "പാസ് വേഡ്"
 msgid "Remember Me"
 msgstr "എന്നെ ഓർക്കുക"
 
-#: functions/zume-gmo.php:111 template-pieces-page.php:121
+#: template-pieces-page.php:121 template-zume-landing.php:50
 msgid "Ask Yourself"
 msgstr "നിങ്ങളോടു തന്നെ ചോദിക്കുക"
 
-#: functions/zume-gmo.php:139 parts/content-share.php:13
-#: template-pieces-page.php:149
+#: parts/content-share.php:13 template-pieces-page.php:144
 msgid "Great job! Here's your progress with this concept"
 msgstr "കൊള്ളാം! ഇതോടൊപ്പം നിങ്ങളുടെ പുരോഗതിയുമുണ്ട്."
 
-#: functions/enqueue-scripts.php:310 functions/zume-gmo.php:145
-#: parts/content-share.php:19 template-pieces-page.php:155
+#: functions/utilities/enqueue-scripts.php:317 parts/content-share.php:19
+#: template-pieces-page.php:150
 msgid "Heard"
 msgstr "കേട്ടു"
 
-#: functions/enqueue-scripts.php:311 functions/zume-gmo.php:149
-#: parts/content-share.php:23 template-pieces-page.php:159
+#: functions/utilities/enqueue-scripts.php:318 parts/content-share.php:23
+#: template-pieces-page.php:154
 msgid "Obeyed"
 msgstr "അനുസരിച്ചു"
 
-#: functions/enqueue-scripts.php:312 functions/zume-gmo.php:153
-#: parts/content-share.php:27 template-pieces-page.php:163
+#: functions/utilities/enqueue-scripts.php:319 parts/content-share.php:27
+#: template-pieces-page.php:158
 msgid "Shared"
 msgstr "പങ്കിട്ടു"
 
-#: functions/enqueue-scripts.php:313 functions/zume-gmo.php:157
-#: parts/content-share.php:31 template-pieces-page.php:167
+#: functions/utilities/enqueue-scripts.php:320 parts/content-share.php:31
+#: template-pieces-page.php:162
 msgid "Trained"
 msgstr "പരിശീലിച്ചു"
 
-#: functions/zume-gmo.php:165 functions/zume-v4-seo-strings.php:13
-#: parts/content-share.php:39 template-pieces-page.php:175
-#: template-zume-training.php:85
+#: functions/zume-v4-seo-strings.php:13 parts/content-share.php:39
+#: template-pieces-page.php:170 template-zume-training.php:85
 msgid "Course Overview"
 msgstr "കോഴ്സ് അവലോകനം"
 
-#: functions/enqueue-scripts.php:314 functions/zume-gmo.php:167
+#: functions/utilities/enqueue-scripts.php:321
 #: functions/zume-v4-seo-strings.php:15 parts/content-share.php:41
-#: template-pieces-page.php:177 template-zume-training.php:97
+#: template-pieces-page.php:172 template-zume-training.php:97
 msgid "Checklist"
 msgstr "ചെക്ക് ലിസ്റ്റ്"
 
-#: parts/content-share.php:42 template-pieces-page.php:178
+#: parts/content-share.php:42 template-pieces-page.php:173
 #: translations/mobile-pwa-strings.php:30
 msgid "Start Session"
 msgstr "സെഷൻ തുടങ്ങുക"
 
-#: functions/enqueue-scripts.php:281 functions/zume-gmo.php:191
-#: parts/content-share.php:70 template-pieces-page.php:202
+#: functions/utilities/enqueue-scripts.php:288 parts/content-share.php:72
+#: template-pieces-page.php:199 template-zume-landing.php:174
 msgid "You're missing out."
 msgstr "നിങ്ങളെ കാണാനില്ല."
 
-#: functions/enqueue-scripts.php:282 functions/zume-gmo.php:191
-#: parts/content-share.php:70 template-pieces-page.php:202
+#: functions/utilities/enqueue-scripts.php:289 parts/content-share.php:72
+#: template-pieces-page.php:199 template-zume-landing.php:174
 msgid "Register Now!"
 msgstr "ഉടൻ രജിസ്റ്റർ ചെയ്യുക!"
 
-#: functions/enqueue-scripts.php:283 functions/zume-gmo.php:194
-#: parts/content-share.php:73 template-pieces-page.php:205
+#: functions/utilities/enqueue-scripts.php:290 parts/content-share.php:75
+#: template-pieces-page.php:202 template-zume-landing.php:178
 msgid "track your personal training progress"
 msgstr "നിങ്ങളുടെ പരിശീലന പുരോഗതി ട്രാക്ക് ചെയ്യുക"
 
-#: functions/enqueue-scripts.php:284 functions/zume-gmo.php:195
-#: parts/content-share.php:74 template-pieces-page.php:206
+#: functions/utilities/enqueue-scripts.php:291 parts/content-share.php:76
+#: template-pieces-page.php:203 template-zume-landing.php:179
 msgid "access group planning tools"
 msgstr "ഗ്രൂപ്പിലേക്കു കയറാനുള്ള പ്ലാനിങ് ഉപാധികൾ (tools)"
 
-#: functions/enqueue-scripts.php:285 functions/zume-gmo.php:196
-#: parts/content-share.php:75 template-pieces-page.php:207
+#: functions/utilities/enqueue-scripts.php:292 parts/content-share.php:77
+#: template-pieces-page.php:204 template-zume-landing.php:177
 msgid "connect with a coach"
 msgstr "ഒരു കോച്ചുമായി ബന്ധപ്പെടുക"
 
-#: functions/enqueue-scripts.php:286 functions/zume-gmo.php:197
-#: parts/content-share.php:76 template-pieces-page.php:208
+#: functions/utilities/enqueue-scripts.php:293 parts/content-share.php:78
+#: template-pieces-page.php:205
 msgid "add your effort to the global vision!"
 msgstr "ആഗോള ദർശനത്തോട് നിങ്ങളുടെ യത്നം കൂട്ടിച്ചേർക്കുക!"
 
-#: functions/enqueue-scripts.php:287 functions/zume-gmo.php:201
-#: parts/content-share.php:80 template-pieces-page.php:212
+#: functions/utilities/enqueue-scripts.php:294 parts/content-share.php:82
+#: template-pieces-page.php:209 template-zume-landing.php:183
 msgid "Register for Free"
 msgstr "സൗജന്യമായി രജിസ്റ്റർ ചെയ്യുക"
 
-#: functions/zume-gmo.php:207 parts/content-share.php:86
-#: template-pieces-page.php:218
+#: parts/content-share.php:88 template-pieces-page.php:215
+#: template-zume-landing.php:189
 msgid "See Entire Training"
 msgstr "മുഴുവൻ പരിശീലനവും കാണുക"
 
@@ -3410,7 +3411,7 @@ msgid "My Checklist"
 msgstr "എന്റെ ചെക്ക് ലിസ്റ്റ്"
 
 #. Theme Name of the plugin/theme
-#: front-page.php:94 template-gmo.php:416 template-how-to-follow-jesus.php:344
+#: front-page.php:94 template-zume-landing.php:210
 #: template-zume-training.php:125
 msgid "Zúme Training"
 msgstr "Zume ട്രെയ്നിങ്"
@@ -3453,8 +3454,7 @@ msgstr "പ്രാർത്ഥന, അവലോകനം"
 msgid "5 min"
 msgstr "5 മിനിറ്റ്"
 
-#: template-gmo.php:208 template-how-to-follow-jesus.php:136
-#: template-zume-training.php:164
+#: template-zume-landing.php:344 template-zume-training.php:164
 msgid "You'll see how God uses ordinary people doing simple things to make a big impact."
 msgstr "ചെറിയ കാര്യങ്ങൾ ചെയ്യുന്ന സാധാരണക്കാരെക്കൊണ്ടു വലിയ സ്വാധീനത ചെലുത്തുന്നതിന് ദൈവം ഉപയോഗിക്കുന്നതെങ്ങനെയെന്നു നിങ്ങൾ കാണും."
 
@@ -3477,23 +3477,20 @@ msgstr "ചെറിയ കാര്യങ്ങൾ ചെയ്യുന്ന 
 msgid "15 min"
 msgstr "15 മിനിറ്റ്"
 
-#: template-gmo.php:212 template-how-to-follow-jesus.php:140
-#: template-zume-training.php:178
+#: template-zume-landing.php:348 template-zume-training.php:178
 msgid "Discover the essence of being a disciple, making a disciple, and what is the church."
 msgstr "ഒരു ശിഷ്യനായിരിക്കുന്നതിന്റെയും ശിഷ്യരാക്കുന്നതിന്റെയും ഒരു സഭയുടെയും സത്ത കണ്ടെത്തുക."
 
-#: template-gmo.php:237 template-how-to-follow-jesus.php:165
-#: template-zume-training.php:191
+#: template-zume-landing.php:373 template-zume-training.php:191
 msgid "Being a disciple means we hear from God and we obey God."
 msgstr "ഒരു ശിഷ്യനായിരിക്കുകയെന്നാൽ, ദൈവം പറയുന്നതു കേട്ട് ദൈവത്തെ അനുസരിക്കുകയെന്നാണ് അർത്ഥം."
 
-#: template-gmo.php:254 template-how-to-follow-jesus.php:182
+#: template-zume-landing.php:258 template-zume-landing.php:390
 #: template-zume-training.php:204
 msgid "A tool for daily Bible study that helps you understand, obey, and share God’s Word."
 msgstr "ദിനംപ്രതിയുള്ള വചനപഠനത്തിനായുള്ള ഒരു മാർഗ്ഗം (tool). നിങ്ങളെ അതു വചനം ഗ്രഹിക്കാനും അനുസരിക്കാനും ദൈവവചനം പങ്കിടാനും സഹായിക്കുന്നു."
 
-#: template-gmo.php:271 template-how-to-follow-jesus.php:199
-#: template-zume-training.php:217
+#: template-zume-landing.php:407 template-zume-training.php:217
 msgid "A tool for two or three people of the same gender to meet weekly and encourage each other in areas that are going well and reveal areas that need correction."
 msgstr "പുരുഷന്മാരും സ്ത്രീകളും പ്രത്യേകമായി, രണ്ടു മൂന്നു പേർ വീതം ആഴ്ചയിലൊരിക്കൽ ഒരുമി ച്ചുകൂടാൻ പ്രോത്സാഹിപ്പിക്കുക. ആവശ്യമായ തിരുത്തലുകൾ നടത്തുക."
 
@@ -3521,13 +3518,12 @@ msgstr "മുന്നോട്ടു നോക്കുക"
 msgid "Check-in, Prayer, Overview"
 msgstr "ചെക്ക് ഇൻ, പ്രാർത്ഥന, അവലോകനം"
 
-#: template-gmo.php:230 template-how-to-follow-jesus.php:158
+#: template-zume-landing.php:253 template-zume-landing.php:366
 #: template-zume-training.php:258
 msgid "You'll discover the four main ways God makes everyday followers more like Jesus."
 msgstr "അനുയായികളെ ദിനംപ്രതി യേശുവിനെപ്പോലെയായിത്തീരാൻ കൂടുതലായി ഉദ്യമിപ്പിക്കുന്ന ദൈവത്തിന്റെ നാലു പ്രധാന വഴികൾ നിങ്ങൾ കണ്ടെത്തും."
 
-#: template-gmo.php:241 template-how-to-follow-jesus.php:169
-#: template-zume-training.php:271
+#: template-zume-landing.php:377 template-zume-training.php:271
 msgid "See how easy it is to spend an hour in prayer."
 msgstr "ഒരു മണിക്കൂർ പ്രാർത്ഥിക്കുന്നത് എത്രയെളുപ്പമെന്നു കാണുക."
 
@@ -3544,8 +3540,7 @@ msgstr "60 മിനിറ്റ്"
 msgid "Discuss - Prayer Cycle"
 msgstr "ചർച്ച ചെയ്യുക - പ്രാർത്ഥനാ ചക്രം"
 
-#: template-gmo.php:341 template-how-to-follow-jesus.php:269
-#: template-zume-training.php:296
+#: template-zume-landing.php:477 template-zume-training.php:296
 msgid "A tool designed to help you be a good steward of your relationships."
 msgstr "ബന്ധങ്ങളുടെ നല്ലൊരു ഗൃഹ വിചാരകനായിരിക്കാൻ രൂപകല്പന ചെയ്ത ഒന്ന് (tool)."
 
@@ -3557,8 +3552,7 @@ msgstr "100 പേരുടെ ലിസ്റ്റ് പ്രാക്റ്
 msgid "30 min"
 msgstr "30 മിനിറ്റ്"
 
-#: template-gmo.php:292 template-how-to-follow-jesus.php:220
-#: template-zume-training.php:337
+#: template-zume-landing.php:428 template-zume-training.php:337
 msgid "Learn how God's economy is different from the world's. God invests more in those who are faithful with what they've already been given."
 msgstr "ലോകത്തിന്റെ സമ്പദ് വ്യവസ്ഥയെക്കാൾ ദൈവത്തിന്റെ സമ്പദ് വ്യവസ്ഥ എങ്ങനെ വ്യത്യസ്തമായിരിക്കുന്നുവെന്നു പഠിക്കുക. നേരത്തേ ലഭിച്ചതിൽ വിശ്വസ്തരായവരെ ദൈവം കൂടുതൽ ഭരമേല്പിക്കുന്നു."
 
@@ -3566,8 +3560,7 @@ msgstr "ലോകത്തിന്റെ സമ്പദ് വ്യവസ്�
 msgid "Discuss - Should every disciple share?"
 msgstr "ചർച്ച - ശിഷ്യന്മാരിൽ ഓരോരുത്തരും പങ്കുവയ്ക്കേണ്ടതുണ്ടോ?"
 
-#: template-gmo.php:345 template-how-to-follow-jesus.php:273
-#: template-zume-training.php:356
+#: template-zume-landing.php:481 template-zume-training.php:356
 msgid "Learn a way to share God’s Good News from the beginning of humanity all the way to the end of this age."
 msgstr "മനുഷ്യരാശിയുടെ ആരംഭം മുതൽ ഈ യുഗാവസാനംവരെയുള്ള കാര്യങ്ങളെല്ലാം ചേർത്ത് സുവിശേഷം പങ്കിടുന്ന രീതി പഠിക്കുക."
 
@@ -3575,13 +3568,11 @@ msgstr "മനുഷ്യരാശിയുടെ ആരംഭം മുതൽ 
 msgid "Practice - Sharing the Gospel"
 msgstr "സുവിശേഷം പങ്കിടൽ - പ്രാക്റ്റിസ് ചെയ്യുക"
 
-#: template-gmo.php:283 template-how-to-follow-jesus.php:211
-#: template-zume-training.php:375
+#: template-zume-landing.php:419 template-zume-training.php:375
 msgid "Jesus said, “Go and make disciples of all nations, BAPTIZING them in the name of the Father and of the Son and of the Holy Spirit…” Learn how to put this into practice."
 msgstr "യേശു പറഞ്ഞു, \"പോയി സകലജനതകളെയും ശിഷ്യരാക്കുവിൻ, പിതാവിന്റെയും പുത്രന്റെയും പരിശുദ്ധാത്മാവിന്റെയും നാമത്തിൽ അവരെ സ്നാനം കഴിപ്പിക്കുവിൻ.\" ഇതു പ്രായോഗികമാക്കുന്നതെങ്ങനെയെന്നു പഠിക്കുക."
 
-#: template-gmo.php:349 template-how-to-follow-jesus.php:277
-#: template-zume-training.php:410
+#: template-zume-landing.php:485 template-zume-training.php:410
 msgid "Learn how to share your testimony in three minutes by sharing how Jesus has impacted your life."
 msgstr "യേശു നിങ്ങളുടെ ജീവിതത്തെ സ്വാധീനിച്ചതെങ്ങനെയെന്നു പറയുന്നതിലൂടെ 3 മിനിറ്റുകൊണ്ട് നിങ്ങളുടെ സാക്ഷ്യം പങ്കു വയ്ക്കുക."
 
@@ -3589,8 +3580,7 @@ msgstr "യേശു നിങ്ങളുടെ ജീവിതത്തെ സ
 msgid "Practice - Share your testimony"
 msgstr "സാക്ഷ്യം പങ്കിടുക (പ്രാക്റ്റിസ്)"
 
-#: template-gmo.php:216 template-how-to-follow-jesus.php:144
-#: template-zume-training.php:429
+#: template-zume-landing.php:352 template-zume-training.php:429
 msgid "Learn a simple pattern of making not just one follower of Jesus but entire spiritual families who multiply for generations to come."
 msgstr "വെറും ഒരാളെ മാത്രം നേടാതെ, തലമുറകളായി പെരുകുന്ന കുടുംബങ്ങളെ മുഴുവൻ നേടാനുള്ള ലളിതമായ രീതി പഠിക്കുക."
 
@@ -3598,13 +3588,11 @@ msgstr "വെറും ഒരാളെ മാത്രം നേടാതെ, �
 msgid "Learn what ducklings have to do with disciple-making."
 msgstr "ശിഷ്യരാക്കുന്നതിൽ താറാവിൻ കുഞ്ഞുങ്ങൾക്കുള്ള പങ്കെന്തെന്നു പഠിക്കുക."
 
-#: template-gmo.php:296 template-how-to-follow-jesus.php:224
-#: template-zume-training.php:455
+#: template-zume-landing.php:432 template-zume-training.php:455
 msgid "Begin to see where God’s Kingdom isn’t. These are usually the places where God wants to work the most."
 msgstr "ദൈവരാജ്യമില്ലാത്തയിടം കണ്ടു തുടങ്ങുക. അവിടങ്ങളിലാണു ദൈവം കൂടുതലായി പ്രവർത്തിക്കാനാഗ്രഹിക്കുന്നത്."
 
-#: template-gmo.php:279 template-how-to-follow-jesus.php:207
-#: template-zume-training.php:468
+#: template-zume-landing.php:415 template-zume-training.php:468
 msgid "It’s a simple way to celebrate our intimate connection and ongoing relationship with Jesus. Learn a simple way to celebrate."
 msgstr "നമ്മുടെ ഉറ്റബന്ധവും യേശുവുമായുള്ള തുടർമാനമായ ബന്ധവും ആഘോഷിക്കാനുള്ള ലളിതമായ മാർഗ്ഗമാണത്. ആ മാർഗ്ഗം പഠിക്കുക."
 
@@ -3618,18 +3606,15 @@ msgstr "കർത്തൃമേശ - പ്രാക്റ്റിസ് ച�
 msgid "10 min"
 msgstr "10 മിനിറ്റ്"
 
-#: template-gmo.php:362 template-how-to-follow-jesus.php:290
-#: template-zume-training.php:509
+#: template-zume-landing.php:498 template-zume-training.php:509
 msgid "It’s a simple way to obey God’s command to pray for others. And it's just what it sounds like — praying to God while walking around!"
 msgstr "മറ്റുള്ളവർക്കുവേണ്ടി പ്രാർത്ഥിക്കണമെന്ന ദൈവകല്പന അനുസരിക്കാനുള്ള ലളിതമായ രീതി. ദൈവത്തോടു സംസാരിച്ചുകൊണ്ടു നടക്കുക, അത്ര തന്നെ!"
 
-#: template-gmo.php:358 template-how-to-follow-jesus.php:286
-#: template-zume-training.php:522
+#: template-zume-landing.php:494 template-zume-training.php:522
 msgid "Learn who a person of peace might be and how to know when you've found one."
 msgstr "ആരായിരിക്കും ഒരു സമാധാനവ്യക്തി, ഒരാളെ താങ്കൾ കണ്ടെത്തുമ്പോൾ, താങ്കൾക്കത് എങ്ങനെ ഗ്രഹിക്കാൻ കഴിയും എന്നു മനസ്സിലാക്കുക."
 
-#: template-gmo.php:245 template-how-to-follow-jesus.php:173
-#: template-zume-training.php:535
+#: template-zume-landing.php:381 template-zume-training.php:535
 msgid "Practice a simple mnemonic to remind you of ways to pray for others."
 msgstr "മറ്റുള്ളവർക്കുവേണ്ടി പ്രാർത്ഥിക്കാൻ നിങ്ങളെ ഓർമ്മിപ്പിക്കുന്ന കാര്യം പ്രാക്റ്റിസ് ചെയ്യുക."
 
@@ -3646,12 +3631,12 @@ msgstr "പ്രാർത്ഥനാ നടത്തം - പരിശീല�
 msgid "90 min"
 msgstr "90 മിനിറ്റ്"
 
-#: template-gmo.php:258 template-how-to-follow-jesus.php:186
+#: template-zume-landing.php:273 template-zume-landing.php:394
 #: template-zume-training.php:582
 msgid "It's important what disciples know — but it's much more important what they DO with what they know."
 msgstr "ശിഷ്യന്മാർക്ക് എന്തറിയാമെന്നതു പ്രധാനപ്പെട്ട കാര്യമാണ്. എന്നാൽ, അവർക്കറിയാവുന്നതുകൊണ്ട് അവർ എന്തു ചെയ്യുന്നുവെന്നത് അതിനെക്കാൾ പ്രധാനപ്പെട്ടതാണ്."
 
-#: template-gmo.php:267 template-how-to-follow-jesus.php:195
+#: template-zume-landing.php:278 template-zume-landing.php:403
 #: template-zume-training.php:595
 msgid "A 3/3 Group is a way for followers of Jesus to meet, pray, learn, grow, fellowship and practice obeying and sharing what they've learned. In this way, a 3/3 Group is not just a small group but a Simple Church."
 msgstr "ഒരു 3/3 ഗ്രൂപ്പ് എന്നു പറഞ്ഞാൽ, യേശുവിന്റെ അനുഗാമികൾക്ക് ഒരുമിച്ചുകൂടാനും പ്രാർത്ഥിക്കാനും പഠിക്കാനും, വളരാനും കൂട്ടായ്മയ്ക്കും പിന്നെ അവർ പഠിച്ചത് അനുസരിക്കാനും പങ്കിടാനുമുള്ള പരിശീലനത്തിനുമുള്ള ഒരു മാർഗ്ഗമാണ്. ഇതൊരു ചെറിയ ഗ്രൂപ്പ് അല്ല, മറിച്ച് ഇതൊരു ലളിതമായ സഭയാണ്."
@@ -3660,7 +3645,7 @@ msgstr "ഒരു 3/3 ഗ്രൂപ്പ് എന്നു പറഞ്ഞ�
 msgid "75 min"
 msgstr "75 മിനിറ്റ്"
 
-#: template-gmo.php:325 template-how-to-follow-jesus.php:253
+#: template-zume-landing.php:295 template-zume-landing.php:461
 #: template-zume-training.php:625
 msgid "Learn the training cycle and consider how it applies to disciple making."
 msgstr "പരിശീലനചക്രം പഠിക്കുക, ശിഷ്യരാക്കുന്നതിന് അത് എങ്ങനെ പ്രയോഗിക്കാമെന്നു പരിഗണിക്കുക."
@@ -3673,23 +3658,20 @@ msgstr "3/3 ഗ്രൂപ്പ് പ്രാക്റ്റിസ് ചെ
 msgid "Discuss - 3/3 Group Experience"
 msgstr "3/3 ഗ്രൂപ്പ് അനുഭവം ചർച്ച ചെയ്യുക"
 
-#: template-gmo.php:387 template-how-to-follow-jesus.php:315
-#: template-zume-training.php:672
+#: template-zume-landing.php:523 template-zume-training.php:672
 msgid "A Leadership Cell is a way someone who feels called to lead can develop their leadership by practicing serving."
 msgstr "നയിക്കാൻ വിളി ലഭിച്ചവർക്ക് അവരുടെ നേതൃഗുണം പ്രാക്റ്റിസിലൂടെ വികസിപ്പിക്കാനുള്ള വഴിയാണ് ലീഡർഷിപ്പ് സെൽ."
 
-#: template-gmo.php:329 template-how-to-follow-jesus.php:257
-#: template-zume-training.php:713
+#: template-zume-landing.php:465 template-zume-training.php:713
 msgid "See how disciple making doesn't have to be linear. Multiple things can happen at the same time."
 msgstr "ശിഷ്യരാക്കുന്നത് എങ്ങനെയാണു പരിധിക്കുള്ളിലാകാതിരിക്കുന്നതെന്നു കാണുക. പെരുകൽ ഒരേ സമയത്തു തന്നെ സംഭവിക്കാം."
 
-#: template-gmo.php:333 template-how-to-follow-jesus.php:261
+#: template-zume-landing.php:315 template-zume-landing.php:469
 #: template-zume-training.php:726
 msgid "Multiplying matters and multiplying quickly matters even more. See why pace matters."
 msgstr "പെരുകൽ വിഷയമാണ്, അത് വേഗത്തിലും അതിവേഗത്തിലും വിഷയമാണ്. ഗതി (Pace) എന്തുകൊണ്ടു വിഷയമാകുന്നുവെന്നു കാണുക."
 
-#: template-gmo.php:275 template-how-to-follow-jesus.php:203
-#: template-zume-training.php:739
+#: template-zume-landing.php:411 template-zume-training.php:739
 msgid "Learn how to obey Jesus' commands by going AND staying."
 msgstr "പോയി താമസിക്കുന്നതിലൂടെ എങ്ങനെയാണ് യേശുവിന്റെ കല്പനയനുസരിക്കുന്നതെന്നു പഠിക്കുക."
 
@@ -3713,7 +3695,7 @@ msgstr "ചർച്ച -  ഗ്രൂപ്പിൽ 3 മാസ പദ്ധ�
 msgid "20 min"
 msgstr "20 മിനിറ്റ്"
 
-#: template-gmo.php:383 template-how-to-follow-jesus.php:311
+#: template-zume-landing.php:300 template-zume-landing.php:519
 #: template-zume-training.php:794
 msgid "A powerful tool you can use to quickly assess your own strengths and vulnerabilities when it comes to making disciples who multiply."
 msgstr "ശിഷ്യരെ പെരുക്കുന്നതിൽ നിങ്ങളുടെ കരുത്തും കരുത്തില്ലായ്മയും നിർണ്ണയിക്കാനുള്ള ശക്തമായ ഒരു മാർഗ്ഗമാണിത്."
@@ -3722,12 +3704,11 @@ msgstr "ശിഷ്യരെ പെരുക്കുന്നതിൽ നി�
 msgid "Practice - Coaching Checklist Self-Assessment"
 msgstr "പ്രാക്റ്റിസ് - കോച്ചിങ് ചെക്ക് ലിസ്റ്റ്. സ്വയം വിലയിരുത്തൽ."
 
-#: template-gmo.php:391 template-how-to-follow-jesus.php:319
-#: template-zume-training.php:813
+#: template-zume-landing.php:527 template-zume-training.php:813
 msgid "Learn how multiplying churches stay connected and live life together as an extended, spiritual family."
 msgstr "പെരുകുന്ന സഭകൾ എങ്ങനെ ബന്ധം പുലർത്തി, ആത്മീയ കുടുംബമായി ഒരുമിച്ചു വ്യാപിച്ചു കഴിയുന്നു."
 
-#: template-gmo.php:379 template-how-to-follow-jesus.php:307
+#: template-zume-landing.php:320 template-zume-landing.php:515
 #: template-zume-training.php:826
 msgid "This is a group that consists of people who are leading and starting 3/3 Groups. It also follows a 3/3 format and is a powerful way to assess the spiritual health of God’s work in your area."
 msgstr "3/3 ഗ്രൂപ്പ് ആരംഭിക്കുകയും നയിക്കുകയും ചെയ്യുന്ന ആളുകളുടെ ഒരു ഗ്രൂപ്പ് ആണിത്. അതൊരു 3/3 മാതൃകയാണ് അവലംബിക്കുന്നത്. നിങ്ങളുടെ പ്രദേശത്തെ ദൈവ പ്രവൃത്തി അതു വിലയിരുത്തുകയും ചെയ്യുന്നു."
@@ -3754,7 +3735,7 @@ msgstr "പരിശീലനം"
 msgid "Zúme Course v4"
 msgstr "Zume കോഴ്സ് v 4"
 
-#: front-page.php:99
+#: front-page.php:99 front-page.php:215
 msgid "Explore Training"
 msgstr "പരിശീലനവിശകലനം (explore training)"
 
@@ -3785,141 +3766,137 @@ msgstr "Zume ട്രെയ്നിങ്"
 msgid "Yes. There are no premium versions, no trial periods, no follow-on sales of products. Freely we've received. Freely we give."
 msgstr "അതേ. വിലക്കൂടുതലുള്ള പതിപ്പുകളില്ല, പരീക്ഷണകാലയളവുകളില്ല, തുടർന്നുള്ള വില്പനവസ്തുക്കളില്ല. സൗജന്യമായി ഞങ്ങൾക്കു ലഭിച്ചതു സൗജന്യമായി ഞങ്ങൾ കൊടുക്കുന്നു."
 
-#: functions/enqueue-scripts.php:216 template-gmo.php:207
-#: template-how-to-follow-jesus.php:135 template-zume-training.php:158
+#: functions/utilities/enqueue-scripts.php:223 template-zume-landing.php:343
+#: template-zume-training.php:158
 msgid "God Uses Ordinary People"
 msgstr "ദൈവം സാധാരണക്കാരെ ഉപയോഗിക്കുന്നു"
 
-#: functions/enqueue-scripts.php:217 template-gmo.php:211
-#: template-how-to-follow-jesus.php:139 template-zume-training.php:172
+#: functions/utilities/enqueue-scripts.php:224 template-zume-landing.php:347
+#: template-zume-training.php:172
 msgid "Simple Definition of Disciple and Church"
 msgstr "ശിഷ്യന്റെയും സഭയുടെയും ലളിതമായ നിർവ്വചനം"
 
-#: functions/enqueue-scripts.php:218 template-gmo.php:236
-#: template-how-to-follow-jesus.php:164 template-zume-training.php:186
+#: functions/utilities/enqueue-scripts.php:225 template-zume-landing.php:372
+#: template-zume-training.php:186
 msgid "Spiritual Breathing is Hearing and Obeying God"
 msgstr "ദൈവം പറയുന്നതു കേട്ട് അനുസരിക്കുന്നതാണ് ആത്മീയശ്വാസോച്ഛ്വാസം"
 
-#: functions/enqueue-scripts.php:219 template-gmo.php:253
-#: template-how-to-follow-jesus.php:181 template-zume-training.php:199
+#: functions/utilities/enqueue-scripts.php:226 template-zume-landing.php:257
+#: template-zume-landing.php:389 template-zume-training.php:199
 msgid "SOAPS Bible Reading"
 msgstr "SOAPS വചനവായന"
 
-#: functions/enqueue-scripts.php:221 template-gmo.php:229
-#: template-how-to-follow-jesus.php:157 template-zume-training.php:253
+#: functions/utilities/enqueue-scripts.php:228 template-zume-landing.php:252
+#: template-zume-landing.php:365 template-zume-training.php:253
 msgid "Consumer vs Producer Lifestyle"
 msgstr "ഉപഭോക്താവും ഉല്പാദകനും തമ്മിലുള്ള ജീവിതശൈലി"
 
-#: functions/enqueue-scripts.php:222 template-gmo.php:240
-#: template-how-to-follow-jesus.php:168 template-zume-training.php:266
+#: functions/utilities/enqueue-scripts.php:229 template-zume-landing.php:376
+#: template-zume-training.php:266
 msgid "How to Spend an Hour in Prayer"
 msgstr "ഒരു മണിക്കൂർ പ്രാർത്ഥിക്കുന്നതെങ്ങനെ?"
 
-#: functions/enqueue-scripts.php:223 template-gmo.php:340
-#: template-how-to-follow-jesus.php:268
+#: functions/utilities/enqueue-scripts.php:230 template-zume-landing.php:476
 msgid "Relational Stewardship – List of 100"
 msgstr "ബന്ധങ്ങളുടെ കാര്യവിചാരകത്വം - 100 ന്റെ ലിസ്റ്റ്"
 
-#: functions/enqueue-scripts.php:224 template-gmo.php:291
-#: template-how-to-follow-jesus.php:219 template-zume-training.php:332
+#: functions/utilities/enqueue-scripts.php:231 template-zume-landing.php:427
+#: template-zume-training.php:332
 msgid "The Kingdom Economy"
 msgstr "ദൈവരാജ്യത്തിന്റെ സമ്പദ് വ്യവസ്ഥ"
 
-#: functions/enqueue-scripts.php:225 template-gmo.php:344
-#: template-how-to-follow-jesus.php:272 template-zume-training.php:351
+#: functions/utilities/enqueue-scripts.php:232 template-zume-landing.php:480
+#: template-zume-training.php:351
 msgid "The Gospel and How to Share It"
 msgstr "സുവിശേഷവും അതു പറയേണ്ടുന്ന വിധവും"
 
-#: functions/enqueue-scripts.php:226 template-gmo.php:282
-#: template-how-to-follow-jesus.php:210 template-zume-training.php:370
+#: functions/utilities/enqueue-scripts.php:233 template-zume-landing.php:418
+#: template-zume-training.php:370
 msgid "Baptism and How To Do It"
 msgstr "സ്നാനം അതു നടത്തുന്ന വിധം"
 
-#: functions/enqueue-scripts.php:227 template-gmo.php:348
-#: template-how-to-follow-jesus.php:276 template-zume-training.php:405
+#: functions/utilities/enqueue-scripts.php:234 template-zume-landing.php:484
+#: template-zume-training.php:405
 msgid "Prepare Your 3-Minute Testimony"
 msgstr "നിങ്ങളുടെ 3 മിനിറ്റ് സാക്ഷ്യം തയ്യാറാക്കുക"
 
-#: functions/enqueue-scripts.php:228 template-gmo.php:215
-#: template-how-to-follow-jesus.php:143 template-zume-training.php:424
+#: functions/utilities/enqueue-scripts.php:235 template-zume-landing.php:351
+#: template-zume-training.php:424
 msgid "Vision Casting the Greatest Blessing"
 msgstr "ഏറ്റവും വലിയ അനുഗ്രഹത്തിനായുള്ള ദർശനം"
 
-#: functions/enqueue-scripts.php:229 template-gmo.php:320
-#: template-how-to-follow-jesus.php:248
+#: functions/utilities/enqueue-scripts.php:236 template-zume-landing.php:456
 msgid "Duckling Discipleship – Leading Immediately"
 msgstr "താറാവിൻകുഞ്ഞിന്റെ ശിഷ്യത്വം - പെട്ടെന്നുള്ള നയിക്കൽ"
 
-#: functions/enqueue-scripts.php:230
+#: functions/utilities/enqueue-scripts.php:237
 msgid "Eyes to See Where The Kingdom Isn't"
 msgstr "ദൈവരാജ്യമില്ലാത്തയിടം കാണുന്ന കണ്ണുകൾ"
 
-#: functions/enqueue-scripts.php:231
+#: functions/utilities/enqueue-scripts.php:238
 msgid "The Lord's Supper and How To Lead It"
 msgstr "കർത്താവിന്റെ അത്താഴം. അതു ചെയ്യുന്ന വിധം"
 
-#: functions/enqueue-scripts.php:232 template-gmo.php:361
-#: template-how-to-follow-jesus.php:289 template-zume-training.php:504
+#: functions/utilities/enqueue-scripts.php:239 template-zume-landing.php:497
+#: template-zume-training.php:504
 msgid "Prayer Walking and How To Do It"
 msgstr "പ്രാർത്ഥനാ നടത്തം. അതു ചെയ്യുന്ന വിധം"
 
-#: functions/enqueue-scripts.php:233 template-gmo.php:357
-#: template-how-to-follow-jesus.php:285 template-zume-training.php:517
+#: functions/utilities/enqueue-scripts.php:240 template-zume-landing.php:493
+#: template-zume-training.php:517
 msgid "A Person of Peace and How To Find One"
 msgstr "സമാധാനവ്യക്തിത്വം. അത്തരമൊരാളെ കണ്ടെത്തുന്ന വിധം"
 
-#: functions/enqueue-scripts.php:234 template-gmo.php:244
-#: template-how-to-follow-jesus.php:172 template-zume-training.php:530
+#: functions/utilities/enqueue-scripts.php:241 template-zume-landing.php:380
+#: template-zume-training.php:530
 msgid "The BLESS Prayer Pattern"
 msgstr "B L E S S പ്രാർത്ഥനാ മാതൃക"
 
-#: functions/enqueue-scripts.php:235 template-gmo.php:257
-#: template-how-to-follow-jesus.php:185 template-zume-training.php:577
+#: functions/utilities/enqueue-scripts.php:242 template-zume-landing.php:272
+#: template-zume-landing.php:393 template-zume-training.php:577
 msgid "Faithfulness is Better Than Knowledge"
 msgstr "അറിവിനെക്കാൾ നല്ലതു വിശ്വസ്തതയാണ്"
 
-#: functions/enqueue-scripts.php:236 template-gmo.php:266
-#: template-how-to-follow-jesus.php:194 template-zume-training.php:590
+#: functions/utilities/enqueue-scripts.php:243 template-zume-landing.php:277
+#: template-zume-landing.php:402 template-zume-training.php:590
 msgid "3/3 Group Meeting Pattern"
 msgstr "3/3 ഗ്രൂപ്പ് മീറ്റിങ് മാതൃക"
 
-#: functions/enqueue-scripts.php:237 template-gmo.php:324
-#: template-how-to-follow-jesus.php:252 template-zume-training.php:620
+#: functions/utilities/enqueue-scripts.php:244 template-zume-landing.php:294
+#: template-zume-landing.php:460 template-zume-training.php:620
 msgid "Training Cycle for Maturing Disciples"
 msgstr "പക്വതയാർജിക്കുന്ന ശിഷ്യർക്കുള്ള ട്രെയ്നിങ്"
 
-#: functions/enqueue-scripts.php:239 template-gmo.php:328
-#: template-how-to-follow-jesus.php:256 template-zume-training.php:708
+#: functions/utilities/enqueue-scripts.php:246 template-zume-landing.php:464
+#: template-zume-training.php:708
 msgid "Expect Non-Sequential Growth"
 msgstr "തുടർച്ചയായിട്ടല്ലാത്ത വളർച്ച പ്രതീക്ഷിക്കുക"
 
-#: functions/enqueue-scripts.php:240 template-gmo.php:332
-#: template-how-to-follow-jesus.php:260 template-zume-training.php:721
+#: functions/utilities/enqueue-scripts.php:247 template-zume-landing.php:314
+#: template-zume-landing.php:468 template-zume-training.php:721
 msgid "Pace of Multiplication Matters"
 msgstr "പെരുകുന്നതിന്റെ ഗതിവേഗത്തിന്റെ വിഷയങ്ങൾ"
 
-#: functions/enqueue-scripts.php:241 template-gmo.php:274
-#: template-how-to-follow-jesus.php:202 template-zume-training.php:734
+#: functions/utilities/enqueue-scripts.php:248 template-zume-landing.php:410
+#: template-zume-training.php:734
 msgid "Always Part of Two Churches"
 msgstr "സദാ രണ്ടു സഭകളുടെ പങ്ക്"
 
-#: functions/enqueue-scripts.php:246 template-zume-training.php:834
+#: functions/utilities/enqueue-scripts.php:253 template-zume-training.php:834
 msgid "Four Fields Tool"
 msgstr "നാലു നിലങ്ങൾ (tool)"
 
-#: functions/enqueue-scripts.php:247 template-zume-training.php:847
+#: functions/utilities/enqueue-scripts.php:254 template-zume-training.php:847
 msgid "Generational Mapping"
 msgstr "തലമുറപരമായ ഭൂപടം"
 
-#: functions/zume-gmo.php:179 functions/zume-gmo.php:211
-#: parts/content-share.php:54 parts/content-share.php:90
-#: template-pieces-page.php:190 template-pieces-page.php:222
+#: parts/content-share.php:56 parts/content-share.php:92
+#: template-pieces-page.php:187 template-pieces-page.php:219
 msgid "Zúme Training is freely offered as part of larger Zúme Vision."
 msgstr "വിശാല Zume ദർശനത്തിന്റെ ഭാഗമായി Zume പരീശീലനം സൗജന്യമായാണു നൽകുന്നത്."
 
-#: functions/zume-gmo.php:180 functions/zume-gmo.php:212
-#: parts/content-share.php:55 parts/content-share.php:91
-#: template-pieces-page.php:191 template-pieces-page.php:223
+#: parts/content-share.php:57 parts/content-share.php:93
+#: template-pieces-page.php:188 template-pieces-page.php:220
 msgid "Learn more about the Zúme.Vision"
 msgstr "Zume ദർശനത്തെക്കുറിച്ചു കൂടുതൽ പഠിക്കുക"
 
@@ -3927,19 +3904,19 @@ msgstr "Zume ദർശനത്തെക്കുറിച്ചു കൂടു
 msgid "This concept is called \"%1$s\" in session %2$s of the Zúme Training"
 msgstr "ഈ ആശയത്തെ \"%1$\" എന്ന് Zume പരിശീലനത്തിന്റെ %2$ ൽ വിളിക്കുന്നു"
 
-#: functions/zume-gmo.php:73 template-pieces-page.php:83
+#: template-pieces-page.php:83 template-zume-landing.php:50
 msgid "Listen and Read Along"
 msgstr "ശ്രദ്ധിക്കുക, ഒപ്പം വായിക്കുക"
 
-#: functions/zume-gmo.php:77 template-pieces-page.php:87
+#: template-pieces-page.php:87 template-zume-landing.php:50
 msgid "Download Free Guidebook"
 msgstr "സൗജന്യ ഗൈഡ് ബുക്ക് ഡൗൺലോഡ് ചെയ്യുക"
 
-#: functions/zume-gmo.php:80 template-pieces-page.php:90
+#: template-pieces-page.php:90 template-zume-landing.php:50
 msgid "Watch This Video"
 msgstr "ഈ വീഡിയോ കാണുക"
 
-#: template-zume-about.php:22
+#: template-zume-about.php:22 template-zume-landing.php:217
 msgid "About Zúme Training"
 msgstr "Zume പരിശീലനത്തെക്കുറിച്ച്"
 
@@ -4093,175 +4070,177 @@ msgstr "Zume ദർശനം"
 msgid "Disciple-making can be rapidly advanced by finding a person of peace, even in a place where followers of Jesus are few and far between. How do you know when you have found a person of peace and what do you do when you find them?"
 msgstr "ഒരു സമാധാനപുരുഷനെ കണ്ടെത്തും വഴി, ശിഷ്യരാക്കലില്‍ വേഗം മുന്നേറാം. യേശുവിന്‍റെ അനുയായികള്‍ കുറച്ചുള്ള സ്ഥലങ്ങളിലും, ദൂരെയുള്ള ഇടങ്ങളിലും അതു സാധിക്കും. ഒരു സമാധാനപുരുഷനെ കണ്ടെത്തുമ്പോൾ, നിങ്ങൾക്കെങ്ങനെയറിയാം, കണ്ടെത്തുമ്പോൾ നിങ്ങളെന്തു ചെയ്യും?"
 
-#: functions/enqueue-scripts.php:120
+#: functions/utilities/enqueue-scripts.php:120
 msgid "This form is required."
 msgstr "ഈ ഫോം വേണം."
 
-#: functions/enqueue-scripts.php:263
+#: functions/utilities/enqueue-scripts.php:270
 msgid "Members List (optional)"
 msgstr "അംഗങ്ങളുടെ ലിസ്റ്റ് (വേറെ)"
 
-#: functions/enqueue-scripts.php:264
+#: functions/utilities/enqueue-scripts.php:271
 msgid "Location"
 msgstr "സ്ഥാനം (location)"
 
-#: functions/enqueue-scripts.php:265
+#: functions/utilities/enqueue-scripts.php:272
 msgid "Connection to server failed. Try again."
 msgstr "സെർവറിലേക്കുള്ള കണക്ഷൻ പോയി. വീണ്ടും ശ്രമിക്കുക."
 
-#: functions/enqueue-scripts.php:266
+#: functions/utilities/enqueue-scripts.php:273
 msgid "Accepted invitation"
 msgstr "ക്ഷണം സ്വീകരിച്ചു"
 
-#: functions/enqueue-scripts.php:269
+#: functions/utilities/enqueue-scripts.php:276
 msgid "add"
 msgstr "കൂട്ടിച്ചേർക്കുക"
 
-#: functions/enqueue-scripts.php:270
+#: functions/utilities/enqueue-scripts.php:277
 msgid "Zoom, click, or search for your location."
 msgstr "സൂം ചെയ്യുക, ക്ലിക്ക് ചെയ്യുക / നിങ്ങളുടെ ലൊക്കേഷൻ സേർച്ച് ചെയ്യുക."
 
-#: functions/enqueue-scripts.php:271
+#: functions/utilities/enqueue-scripts.php:278
 msgid "find you current location"
 msgstr "നിങ്ങളുടെ ഇപ്പോഴത്തെ ലൊക്കേഷൻ കണ്ടു പിടിക്കുക"
 
-#: functions/enqueue-scripts.php:272
+#: functions/utilities/enqueue-scripts.php:279
 msgid "Save Clicked Location"
 msgstr "ക്ലിക്ക് ചെയ്ത ലൊക്കേഷൻ സേവ് ചെയ്യുക"
 
-#: functions/enqueue-scripts.php:273
+#: functions/utilities/enqueue-scripts.php:280
 msgid "Save Searched Location"
 msgstr "സേർച്ച് ചെയ്ത ലൊക്കേഷൻ സേവ് ചെയ്യുക"
 
-#: functions/enqueue-scripts.php:274
+#: functions/utilities/enqueue-scripts.php:281
 msgid "Save Current Location"
 msgstr "ഇപ്പോഴത്തെ (current) ലൊക്കേഷൻ സേവ് ചെയ്യുക"
 
-#: functions/enqueue-scripts.php:275
+#: functions/utilities/enqueue-scripts.php:282
 msgid "You haven't selected anything yet. Click, search, or allow auto location."
 msgstr "താങ്കൾ ഇതുവരെ ഒന്നും തന്നെ സെലക്റ്റ് ചെയ്തിട്ടില്ല. ക്ലിക്ക് ചെയ്യുക, സേർച്ച് ചെയ്യുക / ഓട്ടോ ലൊക്കേഷൻ അനുവദിക്കുക."
 
-#: functions/enqueue-scripts.php:276
+#: functions/utilities/enqueue-scripts.php:283
 msgid "update"
 msgstr "അപ്ഡേറ്റ് ചെയ്യുക"
 
-#: functions/enqueue-scripts.php:277
+#: functions/utilities/enqueue-scripts.php:284
 msgid "Course Complete"
 msgstr "കോഴ്സ് പൂർത്തിയാക്കുക"
 
-#: functions/enqueue-scripts.php:278
+#: functions/utilities/enqueue-scripts.php:285
 msgid "Next Session"
 msgstr "അടുത്ത സെഷൻ"
 
-#: functions/enqueue-scripts.php:290
+#: functions/utilities/enqueue-scripts.php:297
 msgid "Not Leading a Group"
 msgstr "ഒരു ഗ്രൂപ്പ് നയിക്കുന്നതല്ല"
 
-#: functions/enqueue-scripts.php:291
+#: functions/utilities/enqueue-scripts.php:298
 msgid "Create New Group"
 msgstr "പുതിയ ഗ്രൂപ്പുണ്ടാക്കുക"
 
-#: functions/enqueue-scripts.php:293
+#: functions/utilities/enqueue-scripts.php:300
 msgid "Which group are you leading?"
 msgstr "നിങ്ങൾ നേതൃത്വം നൽകുന്ന ഗ്രൂപ്പ് ഏതാണ്?"
 
-#: functions/enqueue-scripts.php:294
+#: functions/utilities/enqueue-scripts.php:301
 msgid "Number of Members"
 msgstr "അംഗസംഖ്യ"
 
-#: functions/enqueue-scripts.php:296
+#: functions/utilities/enqueue-scripts.php:303
 msgid "Group addition failed. Try again."
 msgstr "ഗ്രൂപ്പ് കൂട്ടിച്ചേർക്കൽ ശരിയായില്ല. വീണ്ടും ശ്രമിക്കുക."
 
-#: functions/enqueue-scripts.php:300
+#: functions/utilities/enqueue-scripts.php:307
 msgid "Are you sure you want to archive this group?"
 msgstr "ഈ ഗ്രൂപ്പിനെ താങ്കൾക്ക് ആർക്കൈവ് ചെയ്യണോ?"
 
-#: functions/enqueue-scripts.php:301
+#: functions/utilities/enqueue-scripts.php:308
 msgid "Show Archived Groups"
 msgstr "ആർക്കൈവ് ചെയ്ത ഗ്രൂപ്പുകൾ കാണിക്കുക"
 
-#: functions/enqueue-scripts.php:302
+#: functions/utilities/enqueue-scripts.php:309
 msgid "Re-Activate"
 msgstr "റീ ആക്റ്റിവേറ്റ് ചെയ്യുക"
 
-#: functions/enqueue-scripts.php:303 functions/enqueue-scripts.php:307
+#: functions/utilities/enqueue-scripts.php:310
+#: functions/utilities/enqueue-scripts.php:314
 msgid "Delete Forever"
 msgstr "എന്നേക്കുമായി ഡിലീറ്റ് ചെയ്യുക"
 
-#: functions/enqueue-scripts.php:305
+#: functions/utilities/enqueue-scripts.php:312
 msgid "Close"
 msgstr "ക്ലോസ് ചെയ്യുക"
 
-#: functions/enqueue-scripts.php:306
+#: functions/utilities/enqueue-scripts.php:313
 msgid "Are you sure you want to delete this group?"
 msgstr "ഈ ഗ്രൂപ്പ് താങ്കൾക്കു ഡിലീറ്റ് ചെയ്യണോ?"
 
-#: functions/enqueue-scripts.php:309
+#: functions/utilities/enqueue-scripts.php:316
 msgid "32 Tools and Concepts"
 msgstr "32 ഉപാധികളും (tools) ആശയങ്ങളും (concepts)"
 
-#: functions/enqueue-scripts.php:315
+#: functions/utilities/enqueue-scripts.php:322
 msgid "Progress Overview"
 msgstr "പുരോഗതി അവലോകനം"
 
-#: functions/enqueue-scripts.php:316
+#: functions/utilities/enqueue-scripts.php:323
 msgid "There are 32 concepts and tools in Zúme training. Each concept or tool is intended to be practiced personally and trained into others. Use the progression of \"heard\", \"obeyed\", \"shared\", and \"trained\" as a way of tracking your mastery of the disciple-making training."
 msgstr "Zume ട്രെയ്നിങ്ങിൽ 32 ആശയങ്ങളും പ്രയോഗങ്ങളു(tools)മുണ്ട്.ഇവയോരോന്നും വ്യക്തിഗതമായി പരിശീലിച്ചിട്ട് മറ്റുള്ളവരെ പരിശീലിപ്പിക്കാനുള്ളതാണ്. \"കേട്ടു\", \"അനുസരിച്ചു\", \"പങ്കുവച്ചു\", ''പരിശീലിപ്പിച്ചു\" എന്ന രീതിയിലുള്ള വളർച്ച വേണം പ്രയോഗിക്കാൻ. അങ്ങനെ നിങ്ങൾക്കു ശിഷ്യരാക്കുന്ന ട്രെയ്നിങ്ങിൽ നൈപുണ്യം സമ്പാദിക്കാം."
 
-#: functions/enqueue-scripts.php:317
+#: functions/utilities/enqueue-scripts.php:324
 msgid "Definitions"
 msgstr "നിർവ്വചനങ്ങൾ"
 
-#: functions/enqueue-scripts.php:318
+#: functions/utilities/enqueue-scripts.php:325
 msgid "\"Heard\" means you gained awareness. You have moved from not knowing about a tool or concept to knowing about it."
 msgstr "\"കേട്ടു\" എന്നാൽ, നിങ്ങൾക്കു ഗൗരവമുണ്ടായിയെന്നാണ്. ആശയവും അതിന്റെ പ്രയോഗവും അറിയാത്തയാളെന്ന നിലയിൽനിന്ന് അത് അറിയാവുന്ന നിലയിലേക്കു നിങ്ങൾ മാറി."
 
-#: functions/enqueue-scripts.php:319
+#: functions/utilities/enqueue-scripts.php:326
 msgid "\"Obeyed\" means you took personal action to practice or apply a concept or tool. Obeying with tools might look like beginning to use them with others, while obeying with concepts might look like changing thinking or priorities."
 msgstr "\"അനുസരിച്ചു\" എന്നാൽ, ആ ആശയം / പ്രയോഗം (tool) നിങ്ങൾ ശീലിച്ചു എന്നാണർത്ഥം. മറ്റുള്ളവരുമായി അത് (tool) ഉപയോഗിക്കാൻ തുടങ്ങുമ്പോഴാണ് അനുസരണമുണ്ടാകുന്നത്. ആശയങ്ങൾ നടപ്പാക്കുന്നതിലുള്ള അനുസരണം, ചിന്തയ്ക്കും മുൻഗണനകൾക്കുമുള്ള മാറ്റങ്ങളാണ്."
 
-#: functions/enqueue-scripts.php:320
+#: functions/utilities/enqueue-scripts.php:327
 msgid "\"Shared\" means you helped someone else hear. This step is essential to truly understanding the concept or tool and preparing you to train others."
 msgstr "\"പങ്കു വച്ചു\" എന്നു പറഞ്ഞാൽ, മറ്റൊരാളെ കേൾപ്പിക്കുന്നതാണ്. മറ്റുള്ളവരെ പരിശീലിപ്പിക്കാൻ നിങ്ങളെ ഒരുക്കുന്നതിനും, ഈ ആശയവും (concept) പ്രയോഗവും (tool) ശരിയായി ഗ്രഹിക്കുന്നതിനും ഈ കാൽവയ്പ് അനിവാര്യമാണ്."
 
-#: functions/enqueue-scripts.php:321
+#: functions/utilities/enqueue-scripts.php:328
 msgid "\"Trained\" means you coached someone else to hear, obey and share. More than sharing knowledge with someone, you have helped them become a sharer of the tool or concept."
 msgstr "\"പരിശീലിപ്പിച്ചു\" എന്നാൽ, കേൾക്കാനും അനുസരിക്കാനും പങ്കുവയ്ക്കാനും നിങ്ങൾ ഒരാളെ പഠിപ്പിച്ചുവെന്നർത്ഥം. അറിവു പകർന്നുകൊടുക്കുകയെന്നതിലുപരി, അയാളെ, ഒരാശയം/ പ്രയോഗം പങ്കിടുന്നയാൾ എന്നായിത്തീരാൻ നിങ്ങൾ സഹായിച്ചു."
 
-#: functions/enqueue-scripts.php:338
+#: functions/utilities/enqueue-scripts.php:345
 msgid "What is your city or state or postal code?"
 msgstr "നിങ്ങളുടെ പട്ടണം / സംസ്ഥാനം / പിൻ കോഡ്?"
 
-#: functions/enqueue-scripts.php:344
+#: functions/utilities/enqueue-scripts.php:351
 msgid "Affiliation Notes"
 msgstr "അഫിലിയേഷൻ കുറിപ്പുകൾ"
 
-#: functions/enqueue-scripts.php:347
+#: functions/utilities/enqueue-scripts.php:354
 msgid "You have requested coaching."
 msgstr "നിങ്ങൾ കോച്ചിങ് ആവശ്യപ്പെട്ടു."
 
-#: functions/enqueue-scripts.php:130 functions/enqueue-scripts.php:348
+#: functions/utilities/enqueue-scripts.php:130
+#: functions/utilities/enqueue-scripts.php:355
 msgid "No location matches found. Try a less specific address."
 msgstr "ലൊക്കേഷൻ ചേർച്ചയൊന്നും കണ്ടില്ല. കുറച്ചു കൂടി വ്യക്തമായ മേൽവിലാസം നൽകുക."
 
-#: functions/enqueue-scripts.php:349
+#: functions/utilities/enqueue-scripts.php:356
 msgid "Oops. Something went wrong. Try again!"
 msgstr "ഓ! എന്തോ കുഴപ്പമുണ്ട്. വീണ്ടും ശ്രമിക്കുക!"
 
-#: functions/enqueue-scripts.php:350
+#: functions/utilities/enqueue-scripts.php:357
 msgid "Zúme Network"
 msgstr "Zume നെറ്റ്‌ വർക്ക്"
 
-#: functions/enqueue-scripts.php:352
+#: functions/utilities/enqueue-scripts.php:359
 msgid "Click the circles and check off your progress on each of the concepts."
 msgstr "ഓരോ ആശയത്തിലുമുളള നിങ്ങളുടെ പുരോഗതിയറിയാൻ വൃത്തങ്ങളിൽ ക്ലിക്ക് ചെയ്യുക."
 
-#: functions/enqueue-scripts.php:354
+#: functions/utilities/enqueue-scripts.php:361
 msgid "Add Group"
 msgstr "ഗ്രൂപ്പ് ചേർക്കുക"
 
-#: functions/enqueue-scripts.php:356
+#: functions/utilities/enqueue-scripts.php:363
 msgid "delete"
 msgstr "മായ്ക്കുക (delete)"
 
@@ -4277,11 +4256,11 @@ msgstr "ദർശനം (vision)"
 msgid "Mobile App"
 msgstr "മോബൈൽ ആപ് (app)"
 
-#: functions/enqueue-scripts.php:122
+#: functions/utilities/enqueue-scripts.php:122
 msgid "example: Denver, CO 80120"
 msgstr "ഉദാഹരണം: പത്തനംതിട്ട, കേരളം 689 693"
 
-#: functions/enqueue-scripts.php:126
+#: functions/utilities/enqueue-scripts.php:126
 msgid "Linked Accounts"
 msgstr "ലിങ്ക് ചെയ്ത അക്കൗണ്ടുകൾ"
 
@@ -4290,67 +4269,67 @@ msgid "Welcome to God’s Family!"
 msgstr "ദൈവത്തിന്റെ കുടുംബത്തിലേക്കു സ്വാഗതം!"
 
 #. Template Name of the plugin/theme
-#: template-gmo.php:202 template-how-to-follow-jesus.php:130
+#: template-zume-landing.php:338
 msgid "What is a follower of Jesus?"
 msgstr "യേശുവിന്റെ അനുഗാമി ആരാണ്?"
 
-#: template-gmo.php:225 template-how-to-follow-jesus.php:153
+#: template-zume-landing.php:361
 msgid "What are the activities of a follower of Jesus?"
 msgstr "അദ്ദേഹത്തിന്റെ പ്രവർത്തനങ്ങൾ എന്തെല്ലാമാണ്?"
 
-#: template-gmo.php:250 template-how-to-follow-jesus.php:178
+#: template-zume-landing.php:386
 msgid "Bible Reading"
 msgstr "വചനവായന"
 
-#: template-gmo.php:263 template-how-to-follow-jesus.php:191
+#: template-zume-landing.php:399
 msgid "Community"
 msgstr "സമൂഹം"
 
-#: template-gmo.php:278 template-how-to-follow-jesus.php:206
+#: template-zume-landing.php:414
 msgid "The Lord’s Supper and How To Lead It"
 msgstr "കർത്തൃമേശയും അതു നടത്തുന്ന വിധവും"
 
-#: template-gmo.php:288 template-how-to-follow-jesus.php:216
+#: template-zume-landing.php:424
 msgid "Sacrifice and Suffering"
 msgstr "ത്യാഗവും കഷ്ടതയും"
 
-#: template-gmo.php:295 template-how-to-follow-jesus.php:223
+#: template-zume-landing.php:431
 msgid "Eyes to See Where The Kingdom Isn’t"
 msgstr "ദൈവരാജ്യമില്ലാത്ത സ്ഥലം കാണാനുള്ള കണ്ണുകൾ"
 
-#: template-gmo.php:307 template-how-to-follow-jesus.php:235
+#: template-zume-landing.php:443
 msgid "How do I obey Jesus and help others become followers with me?"
 msgstr "യേശുവിനെ അനുഗമിക്കുന്നതെങ്ങനെ, യേശുവിന്റെ അനുഗമിക്കുന്നവരാകാൻ മറ്റുള്ളവരെ സഹായിക്കുന്നതെങ്ങനെ?"
 
-#: template-gmo.php:311 template-how-to-follow-jesus.php:239
+#: template-zume-landing.php:447
 msgid "Then Jesus came to them and said, \"All authority in heaven and on earth has been given to me. Therefore go and make disciples of all nations, baptizing them in the name of the Father and of the Son and of the Holy Spirit, and teaching them to obey everything I have commanded you. And surely I am with you always, to the very end of the age.\""
 msgstr "പിന്നെ യേശു അവരുടെയടുക്കൽ വന്ന് അവരോടു പറഞ്ഞു, \"സ്വർഗ്ഗത്തിലും ഭൂമിയിലും സകല അധികാരവും എനിക്കു നൽകിയിരിക്കുന്നു. ആകയാൽ, നിങ്ങൾ പുറപ്പെട്ട് സകലജനതകളെയും ശിഷ്യരാക്കുവിൻ;പിതാവിന്റെയും പുത്രന്റെയും പരിശുദ്ധാത്മാവിന്റെയും നാമത്തിൽ അവരെ സ്നാനം കഴിപ്പിക്കുവിൻ; ഞാൻ നിങ്ങളോടു കല്പിച്ചതൊക്കെയും പ്രമാണിക്കാൻ തക്കവിധം അവരെ ഉപദേശിക്കുവിൻ. ഞാനോ ലോകാവസാനത്തോളം എല്ലാ നാളും നിങ്ങളോടുകൂടെയുണ്ട്.\""
 
-#: template-gmo.php:312 template-how-to-follow-jesus.php:240
+#: template-zume-landing.php:448
 msgid "Matthew 28:18-20"
 msgstr "മത്തായി 28:18-20"
 
-#: template-gmo.php:316 template-how-to-follow-jesus.php:244
+#: template-zume-landing.php:452
 msgid "Teaching others to obey and follow Jesus with you"
 msgstr "നിങ്ങളാടൊപ്പം യേശുവിനെ അനുസരിക്കാനും അനുഗമിക്കാനും മറ്റുള്ളവരെ പഠിപ്പിക്കുക"
 
-#: template-gmo.php:321 template-how-to-follow-jesus.php:249
+#: template-zume-landing.php:457
 msgid "Learn what ducklings have to do with disciple-making"
 msgstr "ശിഷ്യരാക്കുന്നതിൽ താറാവിൻകുഞ്ഞുങ്ങൾക്കുള്ള പങ്കു ഗ്രഹിക്കുക"
 
-#: template-gmo.php:337 template-how-to-follow-jesus.php:265
+#: template-zume-landing.php:473
 msgid "Speaking to people YOU KNOW about Jesus"
 msgstr "നിങ്ങൾക്കറിയുന്നവരോട് യേശുവിനെക്കുറിച്ചു പറയുക"
 
-#: template-gmo.php:354 template-how-to-follow-jesus.php:282
+#: template-zume-landing.php:490
 msgid "Speaking to people YOU DON'T KNOW about Jesus"
 msgstr "നിങ്ങൾക്കറിയാത്തവരോട് യേശുവിനെക്കുറിച്ചു പറയുക"
 
-#: template-gmo.php:373 template-how-to-follow-jesus.php:301
+#: template-zume-landing.php:509
 msgid "What if many friends, family, and others start following Jesus with me?"
 msgstr "സുഹൃത്തുക്കൾ, കുടുംബം, മറ്റുള്ളവർ എന്നോടൊപ്പം യേശുവിനെ അനുഗമിക്കാൻ തുടങ്ങിയാലോ?"
 
-#: template-how-to-follow-jesus.php:95
+#: template-zume-landing.php:117
 msgid "Watch this important video explaining the 4 relationships of your new life."
 msgstr "നിങ്ങളുടെ പുതിയ ജീവിതത്തിന്റെ 4 ബന്ധങ്ങൾ വിശദീകരിക്കുന്ന വീഡിയോ കാണുക"
 
@@ -4466,7 +4445,7 @@ msgid "A new version of this app is available. Click to update this app."
 msgstr "ഈ അപ്ലിക്കേഷന്റെ പുതിയ പതിപ്പ് ലഭ്യമാണ്. ഈ അപ്ലിക്കേഷൻ അപ്‌ഡേറ്റുചെയ്യാൻ ക്ലിക്കുചെയ്യുക."
 
 #. Template Name of the plugin/theme
-#: template-how-to-follow-jesus.php:91
+#: template-zume-landing.php:109
 msgid "How to Follow Jesus"
 msgstr "യേശുവിനെ എങ്ങനെ പിന്തുടരാം"
 
@@ -4476,29 +4455,79 @@ msgstr "സംഭരണം"
 
 #: template-gmo.php:163
 msgid "Welcome to God’s family!"
-msgstr ""
+msgstr "ദൈവത്തിന്റെ കുടുംബത്തിലേക്ക് സ്വാഗതം!"
 
 #: template-gmo.php:167
 msgid "You’ve just made a decision to follow Jesus. Where do you go from here?"
-msgstr ""
+msgstr "യേശുവിനെ അനുഗമിക്കാനുള്ള തീരുമാനം നിങ്ങൾ എടുത്തിട്ടുണ്ട്. നിങ്ങൾ ഇവിടെ നിന്ന് എവിടെ പോകും?"
 
 #: template-gmo.php:168
 msgid "We are Zúme, a GodLife Community. Through Zúme, we want to give you free resources to grow in your faith and connect you to a community of people all around the world striving to grow in knowledge and faith of the hope that Jesus gives us. Let’s get started!"
-msgstr ""
+msgstr "ഞങ്ങൾ സോം, ഒരു ഗോഡ് ലൈഫ് കമ്മ്യൂണിറ്റി. നിങ്ങളുടെ വിശ്വാസത്തിൽ വളരുന്നതിനും ലോകമെമ്പാടുമുള്ള ആളുകളുടെ ഒരു സമൂഹവുമായി നിങ്ങളെ ബന്ധിപ്പിക്കുന്നതിനും, യേശു നമുക്കു നൽകുന്ന പ്രത്യാശയുടെ അറിവിലും വിശ്വാസത്തിലും വളരാൻ ശ്രമിക്കുന്ന സ Through മിലൂടെ, സ Through മിലൂടെ ഞങ്ങൾ ആഗ്രഹിക്കുന്നു. നമുക്ക് തുടങ്ങാം!"
 
 #: template-gmo.php:169
 msgid "A great first step is this video that explains 4 relationships we all have with God, creation, others, and ourselves. We pray that as you watch that video God will lead you to think of several others who need to see it, and who will eventually join you in following Jesus."
-msgstr ""
+msgstr "ദൈവത്തോടും സൃഷ്ടിയോടും മറ്റുള്ളവരോടും നമ്മുമായും ഉള്ള 4 ബന്ധങ്ങൾ വിശദീകരിക്കുന്ന ഈ വീഡിയോയാണ് ഒരു മികച്ച ആദ്യ പടി. നിങ്ങൾ ആ വീഡിയോ കാണുമ്പോൾ, അത് കാണേണ്ട മറ്റു പലരെയും ചിന്തിക്കാൻ ദൈവം നിങ്ങളെ നയിക്കുമെന്നും, ഒടുവിൽ യേശുവിനെ അനുഗമിക്കുന്നതിൽ നിങ്ങളോടൊപ്പം ചേരുമെന്നും ഞങ്ങൾ പ്രാർത്ഥിക്കുന്നു."
 
 #: template-gmo.php:196
 msgid "Next we have a collection of resources to help you follow Jesus. Bookmark, explore, and share these Biblical resources that are being used around the globe."
-msgstr ""
+msgstr "അടുത്തതായി, യേശുവിനെ അനുഗമിക്കാൻ നിങ്ങളെ സഹായിക്കുന്നതിനുള്ള വിഭവങ്ങളുടെ ഒരു ശേഖരം ഞങ്ങളുടെ പക്കലുണ്ട്. ലോകമെമ്പാടും ഉപയോഗിക്കുന്ന ഈ ബൈബിൾ വിഭവങ്ങൾ ബുക്ക്മാർക്ക് ചെയ്യുക, പര്യവേക്ഷണം ചെയ്യുക, പങ്കിടുക."
 
-#: template-how-to-follow-jesus.php:122
+#: template-zume-landing.php:155
 msgid "Bookmark this page as a future resource!"
+msgstr "ഭാവി ഉറവിടമായി ഈ പേജ് ബുക്ക്മാർക്ക് ചെയ്യുക!"
+
+#: template-zume-landing.php:157
+msgid "The sections below, will teach you what it means to be a follower (disciple) of Jesus."
+msgstr "യേശുവിന്റെ ഒരു അനുയായി (ശിഷ്യൻ) എന്നതിന്റെ അർത്ഥമെന്താണെന്ന് ചുവടെയുള്ള ഭാഗങ്ങൾ നിങ്ങളെ പഠിപ്പിക്കും."
+
+#: functions/utilities/enqueue-scripts.php:364
+msgid "How can we serve you?"
 msgstr ""
 
-#: template-how-to-follow-jesus.php:124
-msgid "The sections below, will teach you what it means to be a follower (disciple) of Jesus."
+#: functions/utilities/enqueue-scripts.php:365
+msgid "I want to be coached"
+msgstr ""
+
+#: functions/utilities/enqueue-scripts.php:366
+msgid "I need technical assistance"
+msgstr ""
+
+#: functions/utilities/enqueue-scripts.php:367
+msgid "I've gone through the training but need advice on implementation"
+msgstr ""
+
+#: functions/utilities/enqueue-scripts.php:368
+msgid "I have a question about the content that I need to talk to somebody else about"
+msgstr ""
+
+#: functions/utilities/enqueue-scripts.php:369
+msgid "I have a group started and need to know where do I go next"
+msgstr ""
+
+#: template-zume-landing.php:246
+msgid "Leading Yourself"
+msgstr ""
+
+#: template-zume-landing.php:250 template-zume-landing.php:270
+#: template-zume-landing.php:292 template-zume-landing.php:312
+msgid "Principles"
+msgstr ""
+
+#: template-zume-landing.php:255 template-zume-landing.php:275
+#: template-zume-landing.php:297 template-zume-landing.php:317
+msgid "Practices"
+msgstr ""
+
+#: template-zume-landing.php:265
+msgid "Leading Your Group"
+msgstr ""
+
+#: template-zume-landing.php:288
+msgid "Leading Your Group Leaders"
+msgstr ""
+
+#: template-zume-landing.php:308
+msgid "Leading Your Community Leaders"
 msgstr ""
 
