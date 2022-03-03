@@ -3946,7 +3946,7 @@ msgstr "Zúme.Vision에 대해 더 알아보기"
 
 #: template-pieces-page.php:51
 msgid "This concept is called \"%1$s\" in session %2$s of the Zúme Training"
-msgstr "이 개념은 줌 훈련 \"% 2 $ s\" 과정의 \"% 1 $ s\"입니다."
+msgstr "이 개념은 줌 훈련 %2$s 과정의 \"%1$s\" 입니다"
 
 #: template-pieces-page.php:83 template-zume-landing.php:50
 msgid "Listen and Read Along"
