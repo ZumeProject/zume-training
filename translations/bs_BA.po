@@ -3895,7 +3895,7 @@ msgstr "Saznajte više o Zúme.Vision"
 
 #: template-pieces-page.php:51
 msgid "This concept is called \"%1$s\" in session %2$s of the Zúme Training"
-msgstr "Ovaj koncept naziva se \"% 1 $ s\" u lekciji % 2 $  Zúme kursa"
+msgstr "Ovaj koncept naziva se \"%1$s\" u lekciji %2$s  Zúme kursa"
 
 #: template-pieces-page.php:83 template-zume-landing.php:50
 msgid "Listen and Read Along"
