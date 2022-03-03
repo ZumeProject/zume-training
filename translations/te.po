@@ -3944,7 +3944,7 @@ msgstr "జూమ్ దర్శనమును గురించి ఎక్
 
 #: template-pieces-page.php:51
 msgid "This concept is called \"%1$s\" in session %2$s of the Zúme Training"
-msgstr "ఈ భావనను జూమ్ తర్ఫీదు యొక్క సెషన్ %2$s లో \"% 1 $ s\" అంటారు"
+msgstr "ఈ భావనను జూమ్ తర్ఫీదు యొక్క సెషన్ %2$s లో \"%1$s\" అంటారు"
 
 #: template-pieces-page.php:83 template-zume-landing.php:50
 msgid "Listen and Read Along"
