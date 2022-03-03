@@ -3944,7 +3944,7 @@ msgstr "ஜூம் பயிற்சியின்  தொலைனோக்
 
 #: template-pieces-page.php:51
 msgid "This concept is called \"%1$s\" in session %2$s of the Zúme Training"
-msgstr "இந்த கருத்து ஜூம் பயிற்சியின் % 2 $ s அமர்வில் \"% 1 $ s\" என்று அழைக்கப்படுகிறது"
+msgstr "இந்த கருத்து ஜூம் பயிற்சியின் %2$s அமர்வில் \"%1$s\" என்று அழைக்கப்படுகிறது"
 
 #: template-pieces-page.php:83 template-zume-landing.php:50
 msgid "Listen and Read Along"
