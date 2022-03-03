@@ -7,13 +7,13 @@ msgstr ""
 "Project-Id-Version: Zúme Project\n"
 "Language: vi\n"
 
-#: front-page.php:82 front-page.php:212
+#: front-page.php:82 front-page.php:213
 msgid "Get Started"
 msgstr "Bắt Đầu"
 
-#: front-page.php:85 functions/enqueue-scripts.php:288
-#: functions/zume-gmo.php:202 functions/zume-v4-seo-strings.php:23
-#: parts/content-share.php:81 template-pieces-page.php:213
+#: front-page.php:85 functions/utilities/enqueue-scripts.php:295
+#: functions/zume-v4-seo-strings.php:23 parts/content-share.php:83
+#: template-pieces-page.php:210 template-zume-landing.php:184
 #: template-zume-login.php:403 template-zume-login.php:470
 #: template-zume-login.php:498
 msgid "Login"
@@ -63,7 +63,7 @@ msgstr "Mời một số người bạn"
 msgid "Host a training"
 msgstr "Mở khóa huấn luyện"
 
-#: front-page.php:246
+#: front-page.php:250
 msgid "Find out more about Zúme"
 msgstr "Tìm hiểu thêm về Zúme"
 
@@ -75,198 +75,202 @@ msgstr "Huấn luyện"
 msgid "Coach Leader"
 msgstr "Huấn luyện Lãnh đạo"
 
-#: functions/enqueue-scripts.php:82 functions/enqueue-scripts.php:84
-#: functions/enqueue-scripts.php:268 template-zume-dashboard.php:1204
+#: functions/utilities/enqueue-scripts.php:82
+#: functions/utilities/enqueue-scripts.php:84
+#: functions/utilities/enqueue-scripts.php:275 template-zume-dashboard.php:1204
 #: template-zume-dashboard.php:1317
 msgid "Cancel"
 msgstr "Hủy"
 
-#: functions/enqueue-scripts.php:83
+#: functions/utilities/enqueue-scripts.php:83
 msgid "Current Step:"
 msgstr "Giai đoạn hiện tại:"
 
-#: functions/enqueue-scripts.php:85 translations/mobile-pwa-strings.php:35
+#: functions/utilities/enqueue-scripts.php:85
+#: translations/mobile-pwa-strings.php:35
 msgid "Finish"
 msgstr "Hoàn tất"
 
-#: functions/enqueue-scripts.php:86 functions/utilities/menu.php:108
+#: functions/utilities/enqueue-scripts.php:86 functions/utilities/menu.php:108
 #: translations/mobile-pwa-strings.php:34
 msgid "Next"
 msgstr "Kế Tiếp"
 
-#: functions/enqueue-scripts.php:87 functions/utilities/menu.php:98
+#: functions/utilities/enqueue-scripts.php:87 functions/utilities/menu.php:98
 #: translations/mobile-pwa-strings.php:33
 msgid "Previous"
 msgstr "Về Trước"
 
-#: functions/enqueue-scripts.php:88
+#: functions/utilities/enqueue-scripts.php:88
 msgid "Loading..."
 msgstr "Đang xử lí…."
 
-#: functions/enqueue-scripts.php:66 template-zume-dashboard.php:1168
+#: functions/utilities/enqueue-scripts.php:66 template-zume-dashboard.php:1168
 #: template-zume-dashboard.php:1202 translations/mobile-pwa-strings.php:26
 msgid "Delete"
 msgstr "Xóa"
 
-#: functions/enqueue-scripts.php:67
+#: functions/utilities/enqueue-scripts.php:67
 msgid "Failed to remove item."
 msgstr "Không thể xóa."
 
-#: functions/enqueue-scripts.php:68
+#: functions/utilities/enqueue-scripts.php:68
 msgid "Failed to change item."
 msgstr "Thay đổi không thể thực hiện."
 
-#: functions/enqueue-scripts.php:69
+#: functions/utilities/enqueue-scripts.php:69
 msgid "Three Month Plan - Zúme Project"
 msgstr "Kế hoạch 3 tháng- Dự án Zúme"
 
-#: functions/enqueue-scripts.php:70
+#: functions/utilities/enqueue-scripts.php:70
 msgid "We got it!"
 msgstr "Chúng tôi đã hiểu!"
 
-#: functions/enqueue-scripts.php:71
+#: functions/utilities/enqueue-scripts.php:71
 msgid "We're a volunteer network, so give us a few days. We'll reach out to you soon as possible!"
 msgstr "Chúng tôi là mạng lưới tình nguyện viên, vì thế xin chờ chúng tôi vài ngày. Chúng tôi sẽ nhanh chóng liên hệ với bạn ngay!"
 
-#: functions/login/zume-login.php:97 functions/login/zume-login.php:320
+#: functions/login/zume-login.php:102 functions/login/zume-login.php:325
 msgid "Email is a required permission for login and registration."
 msgstr "Email cần được cho phép để đăng nhập và đăng kí."
 
-#: functions/login/zume-login.php:448
+#: functions/login/zume-login.php:453
 msgid "No user found."
 msgstr "Không tìm thấy người dùng."
 
-#: functions/login/zume-login.php:284 functions/login/zume-login.php:413
+#: functions/login/zume-login.php:289 functions/login/zume-login.php:418
 msgid "You are missing your sign-in token. Try signing in again."
 msgstr "Bạn đang bị mất dấu hiệu đăng nhập. Hãy thử đăng nhập lại."
 
-#: functions/login/zume-login.php:294 functions/login/zume-login.php:423
+#: functions/login/zume-login.php:299 functions/login/zume-login.php:428
 msgid "Failed to connect with Facebook. Try again."
 msgstr "Không thể kết nối với Facebook. Xin thử lại."
 
-#: functions/login/zume-login.php:313 functions/login/zume-login.php:439
+#: functions/login/zume-login.php:318 functions/login/zume-login.php:444
 msgid "Facebook user lookup error. Sorry for the inconvenience."
 msgstr "Lỗi tìm người dùng Facebook. Xin lỗi vì sự bất tiện này."
 
-#: functions/login/zume-login.php:316 functions/login/zume-login.php:442
+#: functions/login/zume-login.php:321 functions/login/zume-login.php:447
 msgid "Error with looking up user with Facebook. Sorry for the inconvenience."
 msgstr "Lỗi tìm người dùng qua Facebook. Xin lỗi vì sự bất tiện này."
 
-#: functions/enqueue-scripts.php:331 functions/login/zume-login.php:543
+#: functions/login/zume-login.php:548
+#: functions/utilities/enqueue-scripts.php:338
 msgid "There are some errors in your form."
 msgstr "Có một vài lỗi trong đơn của bạn."
 
-#: functions/enqueue-scripts.php:119 functions/enqueue-scripts.php:335
-#: functions/login/zume-login.php:548 template-zume-dashboard.php:1420
+#: functions/login/zume-login.php:553
+#: functions/utilities/enqueue-scripts.php:119
+#: functions/utilities/enqueue-scripts.php:342 template-zume-dashboard.php:1420
 #: template-zume-dashboard.php:1471 template-zume-login.php:375
 msgid "Email"
 msgstr "Email"
 
-#: functions/login/zume-login.php:552 template-zume-login.php:261
+#: functions/login/zume-login.php:557 template-zume-login.php:261
 msgid "Password Required"
 msgstr "Yêu cầu mật khẩu"
 
-#: functions/login/zume-login.php:555 template-zume-login.php:264
+#: functions/login/zume-login.php:560 template-zume-login.php:264
 msgid "Password required"
 msgstr "Yêu cầu mật khẩu"
 
-#: functions/login/zume-login.php:561 template-zume-login.php:271
+#: functions/login/zume-login.php:566 template-zume-login.php:271
 msgid "Re-enter Password"
 msgstr "Nhập lại mật khẩu"
 
-#: functions/login/zume-login.php:564 template-zume-login.php:274
+#: functions/login/zume-login.php:569 template-zume-login.php:274
 msgid "Passwords do not match. Please, try again."
 msgstr "Mật khẩu không trùng khớp. Xin thử lại."
 
-#: functions/login/zume-login.php:573 functions/zume-v4-seo-strings.php:24
+#: functions/login/zume-login.php:578 functions/zume-v4-seo-strings.php:24
 #: template-zume-login.php:358 template-zume-login.php:514
 msgid "Register"
 msgstr "Đăng kí"
 
-#: functions/login/zume-login.php:616
+#: functions/login/zume-login.php:621
 msgid "Missing captcha response. How did you do that?"
 msgstr "Phản hồi lỗi ký tự. Bạn đã gõ như thế nào?"
 
-#: functions/login/zume-login.php:629
+#: functions/login/zume-login.php:634
 msgid "Captcha failure. Try again, if you are human."
 msgstr "Lỗi gõ ký tự. Xin thử lại, nếu bạn không phải robot."
 
-#: functions/login/zume-login.php:635
+#: functions/login/zume-login.php:640
 msgid "Missing email or password."
 msgstr "Thiếu email hoặc password."
 
-#: functions/login/zume-login.php:654
+#: functions/login/zume-login.php:659
 msgid "Sorry. This email is already registered."
 msgstr "Xin lỗi. Email này đã được đăng ký."
 
-#: functions/login/zume-login.php:665
+#: functions/login/zume-login.php:670
 msgid "Something went wrong. Sorry. Could you try again?"
 msgstr "Lỗi xảy ra. Xin lỗi. Xin hãy thử lại?"
 
-#: functions/login/zume-login.php:689
+#: functions/login/zume-login.php:694
 msgid "No new user found."
 msgstr "Không tìm thấy người dùng mới."
 
-#: functions/login/zume-login.php:745 functions/login/zume-login.php:796
+#: functions/login/zume-login.php:750 functions/login/zume-login.php:801
 msgid "Google"
 msgstr "Google"
 
-#: functions/login/zume-login.php:790
+#: functions/login/zume-login.php:795
 msgid "Link with Google"
 msgstr "Liên kết với Google"
 
-#: functions/login/zume-login.php:929 functions/login/zume-login.php:1025
+#: functions/login/zume-login.php:934 functions/login/zume-login.php:1030
 msgid "Facebook"
 msgstr "Facebook"
 
-#: functions/login/zume-login.php:1166
+#: functions/login/zume-login.php:1171
 msgid "Missing username or email address."
 msgstr "Thiếu tên người dùng hoặc địa chỉ email."
 
-#: functions/login/zume-login.php:1172
+#: functions/login/zume-login.php:1177
 msgid "ERROR: Enter a username or email address."
 msgstr "LỖI: Nhập tên người dùng hoặc địa chỉ email."
 
-#: functions/login/zume-login.php:1176
+#: functions/login/zume-login.php:1181
 msgid "ERROR: There is no user registered with that email address."
 msgstr "LỖI: Không có người dùng đăng ký bằng địa chỉ email này."
 
-#: functions/login/zume-login.php:1181
+#: functions/login/zume-login.php:1186
 msgid "ERROR: There is no user registered with that username."
 msgstr "LỖI: Không có người dùng đăng ký bằng tên này."
 
-#: functions/login/zume-login.php:1226
+#: functions/login/zume-login.php:1231
 msgid "Someone has requested a password reset for the following account:"
 msgstr "Ai đó đã yêu cầu đặt lại mật khẩu cho tài khoản sau:"
 
 #. translators: %s: site name
-#: functions/login/zume-login.php:1228
+#: functions/login/zume-login.php:1233
 msgid "Site Name: %s"
 msgstr "Tên site: %s"
 
 #. translators: %s: user login
-#: functions/login/zume-login.php:1230
+#: functions/login/zume-login.php:1235
 msgid "Username: %s"
 msgstr "Tên người dùng: %s"
 
-#: functions/login/zume-login.php:1231
+#: functions/login/zume-login.php:1236
 msgid "If this was a mistake, just ignore this email and nothing will happen."
 msgstr "Nếu có lỗi xảy ra, bỏ qua email này và sẽ không có gì xảy ra."
 
-#: functions/login/zume-login.php:1232
+#: functions/login/zume-login.php:1237
 msgid "To reset your password, visit the following address:"
 msgstr "Để đặt lại mật khẩu, mở địa chỉ sau:"
 
 #. translators: Password reset email subject. %s: Site name
-#: functions/login/zume-login.php:1236
+#: functions/login/zume-login.php:1241
 msgid "[%s] Password Reset"
 msgstr "[%s]  Đặt lại mật khẩu"
 
-#: functions/login/zume-login.php:1266
+#: functions/login/zume-login.php:1271
 msgid "The email could not be sent."
 msgstr "Email không thể gửi đi."
 
-#: functions/login/zume-login.php:1266
+#: functions/login/zume-login.php:1271
 msgid "Possible reason: your host may have disabled the mail() function."
 msgstr "Trường hợp có thể xảy ra: máy chủ của bạn có thể đã tắt chức năng mail()."
 
@@ -294,15 +298,15 @@ msgstr "Đầu tiên"
 msgid "Last"
 msgstr "Cuối cùng"
 
-#: functions/zume-v4-groups.php:282
+#: functions/zume-v4-groups.php:284
 msgid "( Key not available. Check dashboard. )"
 msgstr "(Chìa khóa chưa sẵn sàng. Kiểm tra bảng điều khiển.)"
 
-#: functions/enqueue-scripts.php:292 functions/zume-content.php:12
+#: functions/utilities/enqueue-scripts.php:299 functions/zume-content.php:12
 msgid "Session"
 msgstr "Bài học"
 
-#: functions/enqueue-scripts.php:280 functions/zume-content.php:120
+#: functions/utilities/enqueue-scripts.php:287 functions/zume-content.php:120
 msgid "Welcome to Session"
 msgstr "Chào mừng đến với Bài học"
 
@@ -322,7 +326,7 @@ msgstr "Khám phá Nội dung Bài học"
 msgid "How many are with you?"
 msgstr "Có bao nhiêu người học với bạn?"
 
-#: functions/enqueue-scripts.php:289 functions/zume-content.php:156
+#: functions/utilities/enqueue-scripts.php:296 functions/zume-content.php:156
 msgid "Continue"
 msgstr "Tiếp tục"
 
@@ -359,7 +363,7 @@ msgstr "Bắt đầu bằng sự cầu nguyện. Sự thẩu hiểu và biến �
 #: functions/zume-content.php:2320 functions/zume-content.php:2575
 #: functions/zume-content.php:2813 functions/zume-content.php:3049
 #: functions/zume-content.php:3116 functions/zume-content.php:3185
-#: functions/zume-content.php:3590
+#: functions/zume-content.php:3592
 msgid "Watch and Discuss (15min)"
 msgstr "Quan sát và Thảo luận (15 phút)"
 
@@ -371,7 +375,7 @@ msgstr "Quan sát và Thảo luận (15 phút)"
 #: functions/zume-content.php:2326 functions/zume-content.php:2581
 #: functions/zume-content.php:2819 functions/zume-content.php:3057
 #: functions/zume-content.php:3124 functions/zume-content.php:3193
-#: functions/zume-content.php:3596 functions/zume-content.php:3774
+#: functions/zume-content.php:3598 functions/zume-content.php:3776
 msgid "WATCH"
 msgstr "QUAN SÁT"
 
@@ -393,8 +397,8 @@ msgstr "Kịch bản Video Zúme: Chào mừng"
 #: functions/zume-content.php:2443 functions/zume-content.php:2634
 #: functions/zume-content.php:2697 functions/zume-content.php:2875
 #: functions/zume-content.php:3101 functions/zume-content.php:3167
-#: functions/zume-content.php:3236 functions/zume-content.php:3368
-#: functions/zume-content.php:3560 functions/zume-content.php:3635
+#: functions/zume-content.php:3236 functions/zume-content.php:3370
+#: functions/zume-content.php:3562 functions/zume-content.php:3637
 msgid "DISCUSS"
 msgstr "THẢO LUẬN"
 
@@ -440,7 +444,7 @@ msgstr "Lắng nghe và đáp ứng với Đức Chúa Trời có thật sự gi
 
 #: functions/zume-content.php:421 functions/zume-content.php:489
 #: functions/zume-content.php:903 functions/zume-content.php:1543
-#: functions/zume-content.php:1846 functions/zume-content.php:3649
+#: functions/zume-content.php:1846 functions/zume-content.php:3651
 msgid "Listen and Read Along (3min)"
 msgstr "Lắng nghe và Đọc theo (3 phút)"
 
@@ -449,7 +453,7 @@ msgstr "Lắng nghe và Đọc theo (3 phút)"
 #: functions/zume-content.php:1188 functions/zume-content.php:1320
 #: functions/zume-content.php:1549 functions/zume-content.php:1852
 #: functions/zume-content.php:2043 functions/zume-content.php:2384
-#: functions/zume-content.php:3655
+#: functions/zume-content.php:3657
 msgid "READ"
 msgstr "ĐỌC"
 
@@ -469,9 +473,9 @@ msgstr "Tìm mục “Đọc Kinh thánh S.O.A.P.S.” trong Sách hướng dẫ
 msgid "Zúme Video Scripts: S.O.A.P.S."
 msgstr "Kịch bản Video Zúme: S.O.A.P.S."
 
-#: functions/enqueue-scripts.php:220 functions/zume-content.php:500
-#: template-gmo.php:270 template-how-to-follow-jesus.php:198
-#: template-zume-dashboard.php:342 template-zume-training.php:212
+#: functions/utilities/enqueue-scripts.php:227 functions/zume-content.php:500
+#: template-zume-dashboard.php:342 template-zume-landing.php:406
+#: template-zume-training.php:212
 msgid "Accountability Groups"
 msgstr "Các nhóm Trách nhiệm"
 
@@ -503,8 +507,8 @@ msgstr "Chia thành nhón từ 2 đến 3 người cùng giới tính."
 #: functions/zume-content.php:1037 functions/zume-content.php:1445
 #: functions/zume-content.php:1959 functions/zume-content.php:2244
 #: functions/zume-content.php:2495 functions/zume-content.php:2732
-#: functions/zume-content.php:2963 functions/zume-content.php:3357
-#: functions/zume-content.php:3405
+#: functions/zume-content.php:2963 functions/zume-content.php:3359
+#: functions/zume-content.php:3407
 msgid "SHARE"
 msgstr "CHIA SẺ"
 
@@ -520,7 +524,7 @@ msgstr "Sách hướng dẫn Zúme"
 #: functions/zume-content.php:1415 functions/zume-content.php:1942
 #: functions/zume-content.php:2231 functions/zume-content.php:2465
 #: functions/zume-content.php:2715 functions/zume-content.php:2946
-#: functions/zume-content.php:3386
+#: functions/zume-content.php:3388
 msgid "LOOKING FORWARD"
 msgstr "NHÌN VỀ PHÍA TRƯỚC"
 
@@ -538,7 +542,7 @@ msgstr "Dười đây là các bước tiếp theo cần chuẩn bị cho bài h
 #: functions/zume-content.php:1438 functions/zume-content.php:1952
 #: functions/zume-content.php:2237 functions/zume-content.php:2488
 #: functions/zume-content.php:2725 functions/zume-content.php:2956
-#: functions/zume-content.php:3396
+#: functions/zume-content.php:3398
 msgid "OBEY"
 msgstr "LÀM THEO"
 
@@ -558,8 +562,8 @@ msgstr "Dành thời gian cầu hỏi Đức Chúa Trời về người Ngài mu
 #: functions/zume-content.php:2502 functions/zume-content.php:2553
 #: functions/zume-content.php:2739 functions/zume-content.php:2791
 #: functions/zume-content.php:2970 functions/zume-content.php:3028
-#: functions/zume-content.php:3297 functions/zume-content.php:3413
-#: functions/zume-content.php:3468
+#: functions/zume-content.php:3299 functions/zume-content.php:3415
+#: functions/zume-content.php:3470
 msgid "PRAY"
 msgstr "CẦU NGUYỆN"
 
@@ -571,7 +575,7 @@ msgstr "Hãy cầu xin Chúa giúp bạn vâng lời Ngài và mời Ngài vận
 #: functions/zume-content.php:1459 functions/zume-content.php:1973
 #: functions/zume-content.php:2258 functions/zume-content.php:2509
 #: functions/zume-content.php:2746 functions/zume-content.php:2977
-#: functions/zume-content.php:3421
+#: functions/zume-content.php:3423
 msgid "#ZumeProject"
 msgstr "#ZumeProject"
 
@@ -599,13 +603,13 @@ msgstr "SÁCH HƯỚNG DẪN TẢI"
 #: functions/zume-content.php:1500 functions/zume-content.php:2001
 #: functions/zume-content.php:2285 functions/zume-content.php:2536
 #: functions/zume-content.php:2772 functions/zume-content.php:3006
-#: functions/zume-content.php:3449
+#: functions/zume-content.php:3451
 msgid "CHECK-IN"
 msgstr "ĐIỂM DANH"
 
 #: functions/zume-content.php:692 functions/zume-content.php:1081
 #: functions/zume-content.php:2774 functions/zume-content.php:3010
-#: functions/zume-content.php:3451
+#: functions/zume-content.php:3453
 msgid "Before getting started, take some time to check-in."
 msgstr "Trước khi bắt đầu, dành ít thời gian để điểm danh."
 
@@ -613,7 +617,7 @@ msgstr "Trước khi bắt đầu, dành ít thời gian để điểm danh."
 #: functions/zume-content.php:1502 functions/zume-content.php:2004
 #: functions/zume-content.php:2287 functions/zume-content.php:2538
 #: functions/zume-content.php:2776 functions/zume-content.php:3012
-#: functions/zume-content.php:3453
+#: functions/zume-content.php:3455
 msgid "At the end of the last session, everyone in your group was challenged in two ways:"
 msgstr "Khi kết thúc bài học cuối cùng, mọi người trong nhóm được thách thức bằng 2 cách:"
 
@@ -640,8 +644,7 @@ msgstr "Hỏi xem có ai trong nhóm có nhu cầu đặc biệt nào mà họ m
 msgid "If we want to make disciples who multiply – spiritual producers and not just consumers – then we need to learn and share four main ways God makes everyday followers more like Jesus:"
 msgstr "Nếu chúng ta muốn môn đồ hóa người nhân bội- những nhà sản xuất thuộc linh chứ không chỉ là người tiêu thụ- sau đó chúng ta cần biết và chia sẻ bốn phương cách chính mà Đức Chúa Trời hành động mỗi ngày để những ai làm theo sẽ trở nên giống Chúa Giê-xu hơn:"
 
-#: functions/zume-content.php:733 template-gmo.php:233
-#: template-how-to-follow-jesus.php:161
+#: functions/zume-content.php:733 template-zume-landing.php:369
 msgid "Prayer"
 msgstr "Cầu nguyện"
 
@@ -806,7 +809,7 @@ msgstr "Cầu nguyện và cảm tạ Chúa vì kết quả và mời Thánh Lin
 #: functions/zume-content.php:2023 functions/zume-content.php:2305
 #: functions/zume-content.php:2560 functions/zume-content.php:2798
 #: functions/zume-content.php:3036 functions/zume-content.php:3256
-#: functions/zume-content.php:3475
+#: functions/zume-content.php:3477
 msgid "OVERVIEW"
 msgstr "TỔNG QUAN"
 
@@ -1295,7 +1298,7 @@ msgid "Have your entire group spend the next 90 minutes practicing the 3/3 Group
 msgstr "Yêu cầu cả nhóm của bạn thực hành Hình thức Nhóm 3/3 trong 90 phút. Tham khảo Sách hướng dẫn Zúme nếu bạn cần nhớ lại mô hình."
 
 #: functions/zume-content.php:2676 functions/zume-content.php:2916
-#: functions/zume-content.php:3740
+#: functions/zume-content.php:3742
 msgid "PRACTICE"
 msgstr "THỰC HÀNH"
 
@@ -1503,273 +1506,273 @@ msgstr "Bạn có thể dùng bản in trong sách Hướng dẫn Zúme hoặc p
 msgid "Online \"Three Month Plan\""
 msgstr "“Kế hoạch 3 tháng” Online"
 
-#: functions/zume-content.php:3280
+#: functions/zume-content.php:3281
 msgid "Participants can access their own three month plan on the side column of their dashboard. They can connect their plan with this group by adding the following key:"
 msgstr "Người tham dự có thể truy cập kế hoạch 3 tháng của riêng họ trên cột bên cạnh bảng điều khiển. Họ có thể kết nối kế hoạch của mình với nhóm bằng cách thêm những từ khóa dưới đây:"
 
-#: functions/zume-content.php:3300
+#: functions/zume-content.php:3302
 msgid "Ask God what He specifically wants you to do with the basic disciple-making tools and techniques you have learned over these last nine sessions. You can remember them in terms of the Greatest Blessing."
 msgstr "Hãy hỏi Chúa những gì Ngài đặc biệt muốn bạn làm với các công cụ và kỹ thuật môn đồ hóa cơ bản mà bạn đã được học trong chín bài học vừa qua. Bạn có thể ghi nhớ những công cụ này bằng định nghĩa của Phước hạnh Lớn Nhất."
 
-#: functions/zume-content.php:3304
+#: functions/zume-content.php:3306
 msgid "It's a Blessing to ... S.O.A.P.S. Bible Reading, Accountability Groups, Prayer Cycle"
 msgstr "Thật Phước hạnh khi… S.O.A.P.S, Đọc Kinh Thánh, Các Nhóm Trách Nhiệm, Cầu Nguyện Dây Chuyền"
 
-#: functions/zume-content.php:3307
+#: functions/zume-content.php:3309
 msgid "It's a Great Blessing to ... Share your 3-Minute Testimony and God's Story, Prayer Walking"
 msgstr "Phước hạnh lớn lao khi … Chia sẻ Lời chứng 3 phút và Câu chuyện của Đức Chúa Trời, Cầu nguyện Tuần hành"
 
-#: functions/zume-content.php:3310
+#: functions/zume-content.php:3312
 msgid "It's a Greater Blessing to ... Start a 3/3rds Group"
 msgstr "Phước lớn hoen khi … Khởi dộng Nhóm 3/3"
 
-#: functions/zume-content.php:3313
+#: functions/zume-content.php:3315
 msgid "It's the Greatest Blessing to ... Start a Zúme Group"
 msgstr "Phước hạnh Lớn nhất khi… Khởi động Nhóm Zúme"
 
-#: functions/zume-content.php:3321
+#: functions/zume-content.php:3323
 msgid "LISTEN"
 msgstr "LẮNG NGHE"
 
-#: functions/zume-content.php:3323
+#: functions/zume-content.php:3325
 msgid "Take at least 10 minutes to be as quiet as possible and listen intently to what God has to say and what He chooses to reveal. Make an effort to hear His voice."
 msgstr "Hãy dành ít nhất 10 phút để thật im lặng nhất hết sức và chăm chú lắng nghe những gì Đức Chúa Trời muốn phán và điều gì Ngài chọn để tiết lộ. Hãy nỗ lực để nghe tiếng của Ngài."
 
-#: functions/zume-content.php:3329
+#: functions/zume-content.php:3331
 msgid "COMPLETE"
 msgstr "HOÀN THÀNH"
 
-#: functions/zume-content.php:3332
+#: functions/zume-content.php:3334
 msgid "Use the rest of your time to complete the Three Month Plan worksheet. You can write it out on a piece of paper. If you are logged in to ZúmeProject.com you can fill out your form digitally and link it to your group. Once you login, you’ll find the Three Month Plan under Settings. You can also find the Three Month Plan on your Dashboard."
 msgstr "Dùng khoảng thời gian còn lại để hoàn thành bản Kế hoạch 3 Tháng. Bạn có thể viết ra một tờ giấy nhỏ. Nếu bạn đã đăng nhập vào ZúmeProject.com, bạn có thể điền mẫu của bạn theo hình thức kỹ thuật số và liên kết với nhóm của mình. Mỗi khi bạn đăng nhập, bạn sẽ tìm thấy Kế hoạch 3 Tháng dưới mục Cài đặt. Bạn cũng có thể tìm thấy Kế hoạch 3 Tháng trong Bảng điều khiển của mình."
 
-#: functions/zume-content.php:3335
+#: functions/zume-content.php:3337
 msgid "You do not have to commit to every item, and there is room for other items not already on the list. Do your best to align your commitments to what you have heard God reveal to you about His will."
 msgstr "Bạn không cần phải cam kết hết tất cả, phải chừa chỗ cho những mục khác chưa có trong danh sách. Cố gắng hết sức để sắp xếp các cam kết của bạn phù hợp với điều bạn đã nghe Đức Chúa Trời bày ý muốn của Ngài cho bạn."
 
-#: functions/zume-content.php:3350
+#: functions/zume-content.php:3352
 msgid "Share you Plan (30min)"
 msgstr "Chia sẻ kế hoạch của bạn (30 phút)"
 
-#: functions/zume-content.php:3359
+#: functions/zume-content.php:3361
 msgid "In groups of two or three (15 minutes)"
 msgstr "Chia thành nhóm 2 hoặc 3 (15 phút)"
 
-#: functions/zume-content.php:3361
+#: functions/zume-content.php:3363
 msgid "Take turns sharing your Three Month Plans with each other. Take time to ask questions about things you might not understand about plans and how the others will meet their commitments. Ask them to do the same for you and your plan. Find a training partner(s) that is willing to check in with you to report on progress and challenges and ask questions after 1, 2, 3, 4, 6, 8 and 12 weeks. Commit to doing the same for them."
 msgstr "Thay phiên chia sẻ Kế hoạch 3 Tháng cho nhau. Dành thời gian hỏi đáp về điều bạn chưa hiểu trong kế hoạch và làm thế nào để mọi người có thể đáp ứng những cam kết của mình. Nhờ họ làm điều tương tự cho bạn và kế hoạch của bạn. Tìm một đối tác đào tạo sẵn sàng kiểm tra với bạn để báo cáo tiến trình, thách thức và hỏi đáp sau 1, 2, 3, 4, 6, 8 và 12 tuần. Cam kết giúp họ thực hiện tương tự."
 
-#: functions/zume-content.php:3370
+#: functions/zume-content.php:3372
 msgid "In your full training Group (15 minutes)"
 msgstr "Trong nhóm đào tạo đầy đủ của bạn (15 phút)"
 
-#: functions/zume-content.php:3372
+#: functions/zume-content.php:3374
 msgid "Discuss and develop a group plan for starting at least two new 3/3 Groups or Zúme Training Groups in your area. Several of your group members may have just completed and saved your individual Three-Month Plans to your Zúme group. On this step, if no one from your group has filled out a digital copy on the website of your Three-Month Plan, it is highly recommended that you do this together now. Just go to the Three-Month Plan under Settings and link the form to your group."
 msgstr "Thảo luận và phát triển một bản kế hoạch cho nhóm để bắt đầu ít nhất 2 Nhóm 3/3 mới hoặc các nhóm Huấn Luyện Zúme mới trong địa bản. Một số thành viên trong nhóm có thể vừa hoàn tất và đã lưu bản Kế hoạch 3 Thánh cho cá nhân họ vào nhóm Zúme của bạn. Ở giai đoạn này, nếu không có ai trong nhóm điền bản sao điện tử Kế hoạch 3 Tháng trên trang web thì chúng tôi khuyên bạn nên cùng nhau thực hiện điều này ngay. Chỉ cần vào mục Kế hoạch 3 Thánh dưới mục Cài đặt và liên kết biểu mẫu với nhóm của bạn."
 
-#: functions/zume-content.php:3375
+#: functions/zume-content.php:3377
 msgid "Remember, your goal is to start Simple Churches that multiply. 3/3 Groups and Zúme Training Groups are two ways to do that. Discuss and decide whether these new Groups will be connected to an existing local church or network or whether you’ll start a new network out of your Zúme Training Group."
 msgstr "Hãy nhớ, mục tiêu của bạn là mở ra những Hội thánh đơn giản biết nhân bội. Nhóm 3/3 và Nhóm Huấn luyện Zúme là 2 cách để thực hiện điều đó. Hãy thảo luận và quyết định những nhóm mới này sẽ kết nối với một Hội thánh địa phương hoặc mạng lưới đã có sẵn hay bạn sẽ mở một mạng lưới mới trong Nhóm Huấn luyện Zúme của mình."
 
-#: functions/zume-content.php:3389
+#: functions/zume-content.php:3391
 msgid "Congratulations! You've completed Session 9."
 msgstr "Xin chúc mừng! Bạn đã hoàn thành Bài 9."
 
-#: functions/zume-content.php:3398
+#: functions/zume-content.php:3400
 msgid "You may not know it, but you now have more practical training on starting simple churches and making disciples who multiply than many pastors and missionaries around the world!"
 msgstr "Có thể bạn chưa biết, nhưng giờ đây bạn đã được đào tạo thực tế hơn về việc bắt đầu các nhà thờ đơn giản và làm cho các môn đồ được nhân lên gấp bội so với nhiều mục sư và nhà truyền giáo trên khắp thế giới!"
 
-#: functions/zume-content.php:3399
+#: functions/zume-content.php:3401
 msgid "Set aside time on your calendar each week to continue to work on your Three Month Plan, and plan check-ins with your training partner at the end of week 1, 2, 3, 4, 6, 8, and 12. Each time you're together, ask about their results and share yours, making sure you're both working through your plans. Prayerfully consider continuing as an ongoing spiritual family committed to multiplying disciples."
 msgstr "Dành thời gian trong lịch trình của mình hàng tuần để tiếp tục thực hiện Kế hoạch ba tháng và lên kế hoạch đăng ký với đối tác đào tạo của bạn vào cuối tuần 1, 2, 3, 4, 6, 8 và 12. Mỗi khi gặp nhau, hãy hỏi về kết quả họ đạt được và chia sẻ kết quả của bạn, đảm bảo rằng cả hai bạn đang đi đúng các kế hoạch của mình. Cầu nguyện xem xét việc tiếp tục như một gia đình thuộc linh phát triển có cam kết môn đồ hóa."
 
-#: functions/zume-content.php:3407
+#: functions/zume-content.php:3409
 msgid "Pray and ask God who He would have you share Zúme Training with by launching a Leadership Cell of future Zúme Training leaders."
 msgstr "Cầu nguyện và xin Chúa chỉ cho bạn biết mình cần chia sẻ Huấn luyện Zúme với ai bằng cách ra mắt Lãnh đạo Tế bào cho các lãnh đạo Huấn luyện Zúme trong tương lai."
 
-#: functions/zume-content.php:3415
+#: functions/zume-content.php:3417
 msgid "Be sure to pray with your group before you end your time together. Thank God that He has created and gifted you with exactly the right talents to make a difference in His kingdom. Ask Him for wisdom to use the strengths He has given you and to find other followers who help cover your weaknesses. Pray that He would make you fruitful and multiply — this was His plan from the very beginning. Pray that God help you be obedient to Him and invite Him to work in you and those around you!"
 msgstr "Hãy chắc chắn cầu nguyện với nhóm trước khi bạn kết thúc thời gian với nhau. Cảm ơn Chúa vì Ngài đã tạo và ban tặng cho bạn những ân tứ chính xác để tạo nên sự khác biệt trong vương quốc của Ngài. Hãy cầu xin Ngài ban sự khôn ngoan để bạn sử dụng những điểm mạnh mà Ngài đã ban cho bạn và tìm những người theo Chúa giúp bạn che đi những khuyết điểm của mình. Hãy cầu nguyện xin Chúa cho bạn kết quả và nhân bội- đây là kế hoạch của Ngài ngay từ lúc ban đầu. Cầu nguyện xin Chúa giúp bạn biết vâng lời Ngài và mời Ngài hành động trong bạn và những người xung quanh bạn!"
 
-#: functions/zume-content.php:3423
+#: functions/zume-content.php:3425
 msgid "Excited to help a new Zúme group get started? Share about Zúme on social media and let people know where they can get started."
 msgstr "Bạn có hào hứng giúp bắt đầu một nhóm Zúme mới không? Hãy chia sẻ về Zúme trên mạng xã hội và cho mọi người biết họ phải bắt đầu từ đâu."
 
-#: functions/zume-content.php:3442
+#: functions/zume-content.php:3444
 msgid "Looking Back"
 msgstr "Nhìn lại"
 
-#: functions/zume-content.php:3444
+#: functions/zume-content.php:3446
 msgid "Welcome back to Zúme Training!"
 msgstr "Chào mừng bạn trở lại với khóa Huấn luyện Zúme!"
 
-#: functions/zume-content.php:3457
+#: functions/zume-content.php:3459
 msgid "You were asked to prayerfully consider continuing as an ongoing spiritual family committed to multiplying disciples."
 msgstr "Chúng ta phải tra xét bằng sự cầu nguyện để tiếp tục như một gia đình thuộc linh đang phát triển cam kết môn đồ hóa."
 
-#: functions/zume-content.php:3460
+#: functions/zume-content.php:3462
 msgid "You were encouraged to share Zúme Training by launching a Leadership Cell of future Zúme Training leaders."
 msgstr "Bạn được khích lệ để chia sẻ khóa Huấn Luyện Zúme bằng cách ra mắt nhóm Lãnh đạo Tế bào cho các lãnh đạo khóa Huấn luyện Zúme trong tương lai."
 
-#: functions/zume-content.php:3463
+#: functions/zume-content.php:3465
 msgid "Take a few moments to see how your group has been doing with these items and their Three Month Plans since you've last met."
 msgstr "Dành chút thời gian để xem xét nhóm của bạn đã thực hiện những hạng mục này và Kế hoạch 3 Tháng của họ như thế nào kể từ lần gặp mặt trước."
 
-#: functions/zume-content.php:3470
+#: functions/zume-content.php:3472
 msgid "Pray and thank God that He is faithful to complete His good work in us. Ask Him to give your group clear heads and open hearts to the great things He wants to do in and through you. Ask the Holy Spirit to lead your time together and thank Him for His faithfulness, too. He got you through!"
 msgstr "Cầu nguyện và tạ ơn Chúa vì Ngài đã thành tín hoàn tất công việc của Ngài trong chúng ta. Xin Chúa cho nhóm của bạn có một tâm trí sạch và tấm lòng đón nhận những điều tuyệt vời mà Ngài muốn thực hiện trong bạn và qua bạn. Xin Thánh Linh dẫn dắt thời gian nhóm lại và cũng tạ ơn vì sự thành tín của Ngài. Ngài giúp bạn vượt qua!"
 
-#: functions/zume-content.php:3477
+#: functions/zume-content.php:3479
 msgid "In this advanced training session, you’ll take a look at how you can level-up your Coaching Strengths with a quick checklist assessment. You’ll learn how Leadership in Networks allows a growing group of small churches to work together to accomplish even more. And you’ll learn how to develop Peer Mentoring Groups that take leaders to a whole new level of growth."
 msgstr "Trong buổi đào tạo nâng cao này, bạn sẽ xem xét cách bạn có thể nâng cấp Thế mạnh Huấn luyện của mình bằng phương pháp đánh giá bằng danh sách kiểm tra nhanh. Bạn sẽ học cách Lãnh đạo trong Mạng lưới cho phép một nhóm các Hội thánh nhỏ đang phát triển cùng làm việc để thành công hơn. Và bạn sẽ học cách phát triển các Nhóm Cố vấn Tương đồng giúp các lãnh đạo lên một cấp độ tăng trưởng hoàn toàn mới."
 
-#: functions/zume-content.php:3490
+#: functions/zume-content.php:3492
 msgid "Activity (10min)"
 msgstr "Hoạt động (10 phút)"
 
-#: functions/zume-content.php:3497
+#: functions/zume-content.php:3499
 msgid "ASSESS"
 msgstr "ĐÁNH GIÁ"
 
-#: functions/zume-content.php:3499
+#: functions/zume-content.php:3501
 msgid "The Coaching Checklist is a powerful tool you can use to quickly assess your own strengths and vulnerabilities when it comes to making disciples who multiply. It's also a powerful tool you can use to help others – and others can use to help you."
 msgstr "Danh sách Kiểm tra Huấn luyện là một công cụ mạnh mẽ giúp bạn đánh giá nhanh ưu khuyết điểm của chính mình khi nói đến việc tạo ra những môn đồ nhân bội. Đây cũng là một công cụ mạnh mẽ mà bạn có thể sử dụng để giúp đỡ người khác- và người khác cũng dùng nó để giúp bạn."
 
-#: functions/zume-content.php:3501
+#: functions/zume-content.php:3503
 msgid "Find the Coaching Checklist section in your Zúme Guidebook, and take this quick (5-minutes or less) self-assessment:"
 msgstr "Tìm bài Danh sách Kiểm tra Huấn luyện trong Sách hướng dẫn Zúme, và thực hiện đánh giá nhanh bản thân (5 phút trở xuống)"
 
-#: functions/zume-content.php:3504
+#: functions/zume-content.php:3506
 msgid "Read through the Disciple Training Tools in the far left column of the Checklist."
 msgstr "Đọc qua các Công cụ đào tạo môn đệ ở cột ngoài cùng bên trái của Danh sách kiểm tra."
 
-#: functions/zume-content.php:3505
+#: functions/zume-content.php:3507
 msgid "Mark each one of the Training Tools, using the following method:"
 msgstr "Đánh dấu từng công cụ trong kho Công cụ đào tạo, sử dụng phương pháp sau:"
 
-#: functions/zume-content.php:3507
+#: functions/zume-content.php:3509
 msgid "If you're unfamiliar or don't understand the Tool – check the BLACK column"
 msgstr "Nếu bạn không quen hoặc không hiểu Công cụ này - đánh cột ĐEN"
 
-#: functions/zume-content.php:3510
+#: functions/zume-content.php:3512
 msgid "If you're somewhat familiar but still not sure about the Tool – check the RED column"
 msgstr "Nếu bạn thấy hơi quen nhưng vẫn không chắc chắn về Công cụ này - đánh cột ĐỎ"
 
-#: functions/zume-content.php:3513
+#: functions/zume-content.php:3515
 msgid "If you understand and can train the basics on the Tool – check the YELLOW column"
 msgstr "Nếu bạn hiểu và có thể huấn luyện những điều cơ bản trên Công cụ này- đánh cột VÀNG"
 
-#: functions/zume-content.php:3516
+#: functions/zume-content.php:3518
 msgid "If you feel confident and can effectively train the Tool – check the GREEN column"
 msgstr "Nếu bạn cảm thấy tự tin và có thể huấn luyện hiệu quả công cụ này- đánh cột XANH"
 
-#: functions/zume-content.php:3552
+#: functions/zume-content.php:3554
 msgid "Zúme Video Scripts: Coaching Checklist"
 msgstr "Kịch bản Video Zúme: Danh sách Kiểm tra Huấn luyện"
 
-#: functions/zume-content.php:3563
+#: functions/zume-content.php:3565
 msgid "Which Training Tools did you feel you would be able to train well?"
 msgstr "Bạn cảm thấy mình có thể huấn luyện tốt hững công cụ đào tạo nào?"
 
-#: functions/zume-content.php:3564
+#: functions/zume-content.php:3566
 msgid "Which ones made you feel vulnerable as a trainer?"
 msgstr "Công cụ nào khiến bạn cảm thấy e ngại khi làm người huấn luyện?"
 
-#: functions/zume-content.php:3565
+#: functions/zume-content.php:3567
 msgid "Are there any Training Tools that you would add or subtract from the Checklist? Why?"
 msgstr "Có Công cụ đào tạo nào mà bạn sẽ thêm hoặc bớt khỏi Danh sách kiểm tra không? Tại sao?"
 
-#: functions/zume-content.php:3574
+#: functions/zume-content.php:3576
 msgid "REMEMBER – Be sure to share your Coaching Checklist results with training partner or other mentor. If you're helping coach or mentor someone, use this tool to help you assess which areas need your attention and training."
 msgstr "GHI NHỚ - Hãy nhớ chia sẻ kết quả Danh sách kiểm tra huấn luyện của bạn với đối tác đào tạo hoặc người cố vấn khác. Nếu bạn đang giúp huấn luyện hoặc cố vấn cho ai đó, hãy sử dụng công cụ này để giúp bạn đánh giá lĩnh vực nào cần bạn chú ý và huấn luyện."
 
-#: functions/zume-content.php:3598
+#: functions/zume-content.php:3600
 msgid "What happens to churches as they grow and start new churches that start new churches? How do they stay connected and live life together as an extended, spiritual family? They become a network!"
 msgstr "Điều gì xảy ra với các Hội thánh khi chúng phát triển và mở ra các Hội thánh mới sản sinh thêm Hội thánh mới? Làm thế nào để họ kết nối và sống với nhau như một gia đình thuộc linh lớn mạnh? Họ phải trở thành một mạng lưới!"
 
-#: functions/zume-content.php:3629
+#: functions/zume-content.php:3631
 msgid "Zúme Video Scripts: Leadership in Networks"
 msgstr "Kịch bản Video Zúme: Lãnh đạo các Mạng lưới"
 
-#: functions/zume-content.php:3637
+#: functions/zume-content.php:3639
 msgid "Are there advantages when networks of simple churches are connected by deep, personal relationships? What are some examples that come to mind?"
 msgstr "Có những lợi thế gì khi mạng lưới các Hội thánh đơn giản được kết nối bởi các mối quan hệ cá nhân sâu sắc không? Cho một vài ví dụ?"
 
-#: functions/enqueue-scripts.php:245 functions/zume-content.php:3658
-#: template-gmo.php:378 template-how-to-follow-jesus.php:306
+#: functions/utilities/enqueue-scripts.php:252 functions/zume-content.php:3660
+#: template-zume-landing.php:319 template-zume-landing.php:514
 #: template-zume-training.php:821
 msgid "Peer Mentoring Groups"
 msgstr "Các nhóm Cố vấn Tương đồng"
 
-#: functions/zume-content.php:3661
+#: functions/zume-content.php:3663
 msgid "Making disciples who make disciples means making leaders who make leaders. How do you develop stronger leaders? By teaching them how to love one another better. Peer Mentoring Groups help leaders love deeper."
 msgstr "Tạo ra những môn đồ biết môn đồ hóa nghĩa là tạo ra những lãnh đạo biết tạo lãnh đạo. Làm thế nào để bạn phát triển các lãnh đạo mạnh mẽ hơn? Bằng cách dạy dỗ họ cách yêu thương nhau nhiều hơn. Các nhóm Cố Vấn Tương đồng giúp các lãnh đạo yêu thương sâu sắc."
 
-#: functions/zume-content.php:3664
+#: functions/zume-content.php:3666
 msgid "Find the Peer Mentoring Groups section in your Zúme Guidebook, and listen to the audio below."
 msgstr "Tìm Các nhóm Cố vấn Tương đồng trong Sách hướng dẫn Zúme và nghe đoạn ghi âm dưới đây."
 
-#: functions/zume-content.php:3697
+#: functions/zume-content.php:3699
 msgid "Zúme Video Scripts: Peer Mentoring Groups"
 msgstr "Kịch bản Video Zúme: Các nhóm Cố vấn Tương đồng"
 
-#: functions/zume-content.php:3712
+#: functions/zume-content.php:3714
 msgid "Practice (60min)"
 msgstr "Thực hành (60 phút)"
 
-#: functions/zume-content.php:3720
+#: functions/zume-content.php:3722
 msgid "Find the Peer Mentoring Groups section in your Zúme Training Guide, and follow these steps."
 msgstr "Tìm Các nhóm Cố vấn Tương đồng trong Sách hướng dẫn Zúme và làm theo cách bước này."
 
-#: functions/zume-content.php:3731
+#: functions/zume-content.php:3733
 msgid "GROUPS"
 msgstr "NHÓM"
 
-#: functions/zume-content.php:3735
+#: functions/zume-content.php:3737
 msgid "Break into groups of two or three and work through the 3/3 sections of the Peer Mentoring Group format. Peer Mentoring is something that happens once a month or once a quarter and takes some time for the whole group to participate, so you will not have time for everyone to experience the full mentoring process in this session."
 msgstr "Chia thành nhóm 2 hoặc 3 và thực hiện bài 3/3 trong hình thức Nhóm Cố vấn Tương đồng. Cố vấn Tương đồng diễn ra một lần một tháng hoặc một lần một quý và cần có thời gian để cả nhóm cùng tham dự, vì vậy bạn sẽ không có thời gian để mọi người trải nghiệm toàn bộ quá trình cố vấn trong bài học này."
 
-#: functions/zume-content.php:3742
+#: functions/zume-content.php:3744
 msgid "To practice, choose one person in your group to be the \"mentee\" for this session and have the other members spend time acting as Peer Mentors by working through the suggested questions list and providing guidance and encouragement for the Mentee's work."
 msgstr "Thực hành bằng cách chọn một người trong nhóm của bạn làm “người cần được cố vấn” cho phiên này và để các thành viên khác dành thời gian làm Người cố vấn Tương đồng bằng cách làm việc thông qua danh sách câu hỏi được đề xuất và đem lại sự hướng dẫn đồng thời khuyến khích cho công việc của Người cần được cố vấn."
 
-#: functions/zume-content.php:3744
+#: functions/zume-content.php:3746
 msgid "By the time you're finished, everyone should have a basic understanding of asking and answering."
 msgstr "Khi kết thúc, mọi người nên có một sự hiểu biết cơ bản để hỏi và trả lời."
 
-#: functions/zume-content.php:3753
+#: functions/zume-content.php:3755
 msgid "REMEMBER – Spend time studying the Four Fields Diagnostic Diagram and Generational Map in the Peer Mentoring Groups section of your Zúme Training Guide. Make sure everyone in your group has a basic understanding of these tools before asking the suggested questions."
 msgstr "GHI NHỚ- Dành thời gian nghiên cứu Sơ đồ Chẩn đoán Bốn Lĩnh vực và Bản đồ thế hệ trong bài Nhóm Cố vấn Tương đồng trong Hướng dẫn Huấn luyện Zúme của bạn. Đảm bảo mọi người trong nhóm của bạn có hiểu biết cơ bản về các công cụ này trước khi đặt câu hỏi gợi ý."
 
-#: functions/zume-content.php:3769
+#: functions/zume-content.php:3771
 msgid "CONGRATULATIONS ON COMPLETING ZÚME TRAINING!"
 msgstr "CHÚC MỪNG BẠN ĐÃ HOÀN THÀNH KHÓA HUẤN LUYỆN ZÚME!"
 
-#: functions/zume-content.php:3776
+#: functions/zume-content.php:3778
 msgid "You and your group are now ready to take leadership to a new level! Here are a few more steps to help you KEEP growing!"
 msgstr "Bạn và nhóm của MÌNH đã sẵn sàng để nâng sự lãnh đạo lên một tầm cao mới! Dưới đây là một vài bước bổ sung giúp bạn GÌN GIỮ ngày càng phát triển!"
 
-#: functions/zume-content.php:3806
+#: functions/zume-content.php:3808
 msgid "Zúme Video Scripts: Completion of Training"
 msgstr "Kịch bản Video Zúme: Hoàn thành khóa Huấn luyện"
 
 #: functions/zume-dashboard.php:81 functions/zume-dashboard.php:112
-#: functions/zume-dashboard.php:208 functions/zume-v4-groups.php:77
-#: functions/zume-v4-groups.php:815 functions/zume-v4-groups.php:917
-#: functions/zume-v4-groups.php:1041
+#: functions/zume-dashboard.php:208 functions/zume-v4-groups.php:79
+#: functions/zume-v4-groups.php:817 functions/zume-v4-groups.php:919
+#: functions/zume-v4-groups.php:1043
 msgid "No Name"
 msgstr "Không có tên"
 
-#: functions/enqueue-scripts.php:334 functions/zume-functions.php:414
+#: functions/utilities/enqueue-scripts.php:341 functions/zume-functions.php:424
 #: template-zume-dashboard.php:1405
 msgid "Phone Number"
 msgstr "Số điện thoại"
 
-#: functions/zume-functions.php:415
+#: functions/zume-functions.php:425
 msgid "User Address"
 msgstr "Địa chỉ người dùng"
 
-#: functions/zume-functions.php:416
+#: functions/zume-functions.php:426
 msgid "GeoCoded IP"
 msgstr "GeoCoded IP"
 
@@ -1814,12 +1817,12 @@ msgid "Logout"
 msgstr "Đăng xuất"
 
 #. Template Name of the plugin/theme
-#: functions/enqueue-scripts.php:242 functions/zume-v4-seo-strings.php:25
-#: template-zume-training.php:745
+#: functions/utilities/enqueue-scripts.php:249
+#: functions/zume-v4-seo-strings.php:25 template-zume-training.php:745
 msgid "Three-Month Plan"
 msgstr "Kế hoạch 3 tháng"
 
-#: functions/enqueue-scripts.php:308 template-zume-progress.php:30
+#: functions/utilities/enqueue-scripts.php:315 template-zume-progress.php:30
 msgid "Progress"
 msgstr "Tiến độ"
 
@@ -1963,13 +1966,14 @@ msgstr "Liên kết với"
 msgid "Unlink Group"
 msgstr "Nhóm không thể liên kết"
 
-#: functions/enqueue-scripts.php:124 functions/enqueue-scripts.php:351
-#: template-zume-3plan.php:165 template-zume-dashboard.php:1497
+#: functions/utilities/enqueue-scripts.php:124
+#: functions/utilities/enqueue-scripts.php:358 template-zume-3plan.php:165
+#: template-zume-dashboard.php:1497
 msgid "Oh snap!"
 msgstr "Oh snap!"
 
-#: functions/enqueue-scripts.php:125 functions/enqueue-scripts.php:267
-#: template-zume-3plan.php:167
+#: functions/utilities/enqueue-scripts.php:125
+#: functions/utilities/enqueue-scripts.php:274 template-zume-3plan.php:167
 msgid "Save"
 msgstr "Lưu"
 
@@ -1993,10 +1997,10 @@ msgstr "In"
 msgid "No plans linked to this group."
 msgstr "Không có kế hoạch liên kết với nhóm này."
 
-#: functions/zume-gmo.php:206 parts/content-share.php:85 template-gmo.php:421
-#: template-how-to-follow-jesus.php:349 template-pieces-page.php:217
+#: parts/content-share.php:87 template-pieces-page.php:214
 #: template-zume-about.php:51 template-zume-about.php:68
-#: template-zume-faq.php:199 template-zume-privacy-policy.php:186
+#: template-zume-faq.php:199 template-zume-landing.php:188
+#: template-zume-landing.php:215 template-zume-privacy-policy.php:186
 #: template-zume-progress.php:119
 msgid "Zúme uses an online training platform to equip participants in basic disciple-making and simple church planting multiplication principles, processes, and practices."
 msgstr "Zúme sử dụng một nền tảng đào tạo trực tuyến để trang bị cho những người tham gia cách môn đồ hóa cơ bản và các nguyên tắc, quy trình và thực hành của Hội thánh đơn giản."
@@ -2006,9 +2010,9 @@ msgstr "Zúme sử dụng một nền tảng đào tạo trực tuyến để tr
 msgid "Goals of the Zúme Project:"
 msgstr "Những mục tiêu của Dự án Zúme:"
 
-#: template-gmo.php:418 template-how-to-follow-jesus.php:346
 #: template-zume-about.php:65 template-zume-faq.php:196
-#: template-zume-privacy-policy.php:183 template-zume-progress.php:116
+#: template-zume-landing.php:212 template-zume-privacy-policy.php:183
+#: template-zume-progress.php:116
 msgid "Zúme means yeast in Greek. In Matthew 13:33, Jesus is quoted as saying, \"The Kingdom of Heaven is like a woman who took yeast and mixed it into a large amount of flour until it was all leavened.\" This illustrates how ordinary people, using ordinary resources, can have an extraordinary impact for the Kingdom of God. Zúme aims to equip and empower ordinary believers to saturate the globe with multiplying disciples in our generation."
 msgstr "Zúme trong tiếng Hy lạp có nghĩa là men. Trong Ma-thi-ơ 13:33, Chúa Giê-xu có phán như vầy, “Vương quốc thiên đàng giống như men mà người phụ nữ kia lấy ủ vào ba đấu bột cho đến chừng bột dậy cả lên.” Điều này minh họa cách người bình thường, sử dụng tài nguyên thông thường, có thể tác động một cách phi thường đến Vương quốc của Đức Chúa Trời. Zúme hướng đến trang bị và trao quyền cho các tín đồ bình thường bão hòa toàn cầu bằng nhiều môn đồ nhân bội trong thế hệ chúng ta."
 
@@ -2097,7 +2101,7 @@ msgstr "Giờ nhóm"
 msgid "Address"
 msgstr "Địa chỉ"
 
-#: functions/enqueue-scripts.php:262 template-zume-dashboard.php:135
+#: functions/utilities/enqueue-scripts.php:269 template-zume-dashboard.php:135
 msgid "Members"
 msgstr "Các thành viên"
 
@@ -2113,15 +2117,15 @@ msgstr "Mở Bài học kế tiếp "
 msgid "Archive Group"
 msgstr "Nhóm đã lưu"
 
-#: functions/enqueue-scripts.php:297 template-zume-dashboard.php:229
+#: functions/utilities/enqueue-scripts.php:304 template-zume-dashboard.php:229
 msgid "invites you to join"
 msgstr "mời bạn tham gia"
 
-#: functions/enqueue-scripts.php:298 template-zume-dashboard.php:235
+#: functions/utilities/enqueue-scripts.php:305 template-zume-dashboard.php:235
 msgid "Accept"
 msgstr "Chấp nhận"
 
-#: functions/enqueue-scripts.php:299 template-zume-dashboard.php:237
+#: functions/utilities/enqueue-scripts.php:306 template-zume-dashboard.php:237
 msgid "Decline"
 msgstr "Từ chối"
 
@@ -2157,7 +2161,7 @@ msgstr "Video tổng quan"
 msgid "How Zúme Works"
 msgstr "Zúme hoạt động như thế nào"
 
-#: functions/enqueue-scripts.php:250 template-zume-dashboard.php:302
+#: functions/utilities/enqueue-scripts.php:257 template-zume-dashboard.php:302
 #: template-zume-one-page-course.php:30 template-zume-one-page-course.php:43
 #: template-zume-overview.php:92 template-zume-overview.php:214
 #: template-zume-training.php:145
@@ -2180,7 +2184,7 @@ msgstr "Hô hấp Thuộc linh"
 msgid "S.O.A.P.S Bible Reading"
 msgstr "Đọc Kinh thánh S.O.A.P.S"
 
-#: functions/enqueue-scripts.php:251 template-zume-dashboard.php:350
+#: functions/utilities/enqueue-scripts.php:258 template-zume-dashboard.php:350
 #: template-zume-one-page-course.php:31 template-zume-one-page-course.php:48
 #: template-zume-overview.php:102 template-zume-overview.php:215
 #: template-zume-training.php:240
@@ -2191,7 +2195,7 @@ msgstr "Bài 2"
 msgid "Producers vs Consumers"
 msgstr "Nhà sản xuất vs Người tiêu thụ"
 
-#: functions/enqueue-scripts.php:252 template-zume-dashboard.php:382
+#: functions/utilities/enqueue-scripts.php:259 template-zume-dashboard.php:382
 #: template-zume-one-page-course.php:32 template-zume-one-page-course.php:53
 #: template-zume-overview.php:112 template-zume-overview.php:216
 #: template-zume-training.php:319
@@ -2202,7 +2206,7 @@ msgstr "Bài 3"
 msgid "Spiritual Economy"
 msgstr "Kinh tế Thuộc linh"
 
-#: functions/enqueue-scripts.php:253 template-zume-dashboard.php:414
+#: functions/utilities/enqueue-scripts.php:260 template-zume-dashboard.php:414
 #: template-zume-one-page-course.php:33 template-zume-one-page-course.php:58
 #: template-zume-overview.php:122 template-zume-overview.php:217
 #: template-zume-training.php:392
@@ -2229,7 +2233,7 @@ msgstr "Đôi mắt để quan sát"
 msgid "Lord's Supper"
 msgstr "Bữa Tiệc Của Chúa"
 
-#: functions/enqueue-scripts.php:254 template-zume-dashboard.php:462
+#: functions/utilities/enqueue-scripts.php:261 template-zume-dashboard.php:462
 #: template-zume-one-page-course.php:34 template-zume-one-page-course.php:63
 #: template-zume-overview.php:132 template-zume-overview.php:218
 #: template-zume-training.php:491
@@ -2240,7 +2244,7 @@ msgstr "Bài 5"
 msgid "Person of Peace"
 msgstr "Người Bình An"
 
-#: functions/enqueue-scripts.php:255 template-zume-dashboard.php:486
+#: functions/utilities/enqueue-scripts.php:262 template-zume-dashboard.php:486
 #: template-zume-one-page-course.php:35 template-zume-one-page-course.php:68
 #: template-zume-overview.php:143 template-zume-overview.php:219
 #: template-zume-training.php:564
@@ -2259,7 +2263,7 @@ msgstr "Nhóm 3/3"
 msgid "3/3 Group Live"
 msgstr "Nhóm 3/3 trực tuyến"
 
-#: functions/enqueue-scripts.php:256 template-zume-dashboard.php:518
+#: functions/utilities/enqueue-scripts.php:263 template-zume-dashboard.php:518
 #: template-zume-one-page-course.php:36 template-zume-one-page-course.php:73
 #: template-zume-overview.php:154 template-zume-overview.php:220
 #: template-zume-training.php:613
@@ -2270,20 +2274,19 @@ msgstr "Bài 7"
 msgid "Training Cycle"
 msgstr "Chu kỳ Huấn luyện"
 
-#: functions/enqueue-scripts.php:257 template-zume-dashboard.php:534
+#: functions/utilities/enqueue-scripts.php:264 template-zume-dashboard.php:534
 #: template-zume-one-page-course.php:37 template-zume-one-page-course.php:78
 #: template-zume-overview.php:165 template-zume-overview.php:221
 #: template-zume-training.php:654
 msgid "Session 8"
 msgstr "Bài 8"
 
-#: functions/enqueue-scripts.php:238 template-gmo.php:386
-#: template-how-to-follow-jesus.php:314 template-zume-dashboard.php:542
-#: template-zume-training.php:667
+#: functions/utilities/enqueue-scripts.php:245 template-zume-dashboard.php:542
+#: template-zume-landing.php:522 template-zume-training.php:667
 msgid "Leadership Cells"
 msgstr "Lãnh đạo Các Tế Bào"
 
-#: functions/enqueue-scripts.php:258 template-zume-dashboard.php:550
+#: functions/utilities/enqueue-scripts.php:265 template-zume-dashboard.php:550
 #: template-zume-one-page-course.php:38 template-zume-one-page-course.php:83
 #: template-zume-overview.php:176 template-zume-overview.php:222
 #: template-zume-training.php:695
@@ -2306,21 +2309,20 @@ msgstr "Thuộc Hai Hội thánh"
 msgid "Completion of Training"
 msgstr "Hoàn tất Huấn luyện"
 
-#: functions/enqueue-scripts.php:259 template-zume-dashboard.php:590
+#: functions/utilities/enqueue-scripts.php:266 template-zume-dashboard.php:590
 #: template-zume-one-page-course.php:39 template-zume-one-page-course.php:88
 #: template-zume-overview.php:223 template-zume-training.php:776
 msgid "Session 10"
 msgstr "Bài 10"
 
-#: functions/enqueue-scripts.php:243 template-gmo.php:382
-#: template-how-to-follow-jesus.php:310 template-zume-dashboard.php:598
+#: functions/utilities/enqueue-scripts.php:250 template-zume-dashboard.php:598
+#: template-zume-landing.php:299 template-zume-landing.php:518
 #: template-zume-training.php:789
 msgid "Coaching Checklist"
 msgstr "Danh sách Kiểm tra Huấn luyện"
 
-#: functions/enqueue-scripts.php:244 template-gmo.php:390
-#: template-how-to-follow-jesus.php:318 template-zume-dashboard.php:606
-#: template-zume-training.php:808
+#: functions/utilities/enqueue-scripts.php:251 template-zume-dashboard.php:606
+#: template-zume-landing.php:526 template-zume-training.php:808
 msgid "Leadership in Networks"
 msgstr "Lãnh đạo các Mạng lưới"
 
@@ -2332,7 +2334,7 @@ msgstr "Cố Vấn Tương đồng"
 msgid "Session videos will be added as you complete sessions."
 msgstr "Các video bài học sẽ được bổ sung khi bạn hoàn thành các bài học."
 
-#: functions/enqueue-scripts.php:304 template-zume-dashboard.php:714
+#: functions/utilities/enqueue-scripts.php:311 template-zume-dashboard.php:714
 #: template-zume-dashboard.php:845
 msgid "Archived Groups"
 msgstr "Nhóm Lưu trữ"
@@ -2362,9 +2364,9 @@ msgstr "Các mạng lưới"
 msgid "Create Group"
 msgstr "Tạo nhóm"
 
-#: functions/enqueue-scripts.php:295 functions/enqueue-scripts.php:355
-#: template-zume-dashboard.php:916 template-zume-dashboard.php:1052
-#: template-zume-dashboard.php:1249
+#: functions/utilities/enqueue-scripts.php:302
+#: functions/utilities/enqueue-scripts.php:362 template-zume-dashboard.php:916
+#: template-zume-dashboard.php:1052 template-zume-dashboard.php:1249
 msgid "Group Name"
 msgstr "Tên nhóm"
 
@@ -2395,7 +2397,7 @@ msgstr "Người cùng dẫn dắt hoặc người tham gia bổ sung"
 msgid "Add"
 msgstr "Thêm"
 
-#: functions/enqueue-scripts.php:346 template-zume-dashboard.php:1006
+#: functions/utilities/enqueue-scripts.php:353 template-zume-dashboard.php:1006
 #: template-zume-dashboard.php:1500
 msgid "Submit"
 msgstr "Gửi"
@@ -2429,8 +2431,8 @@ msgstr "Thêm một người cùng dẫn dắt hoặc người tham gia bổ sun
 msgid "Update"
 msgstr "Cập nhật"
 
-#: functions/enqueue-scripts.php:279 functions/enqueue-scripts.php:353
-#: template-zume-dashboard.php:1166
+#: functions/utilities/enqueue-scripts.php:286
+#: functions/utilities/enqueue-scripts.php:360 template-zume-dashboard.php:1166
 msgid "Archive"
 msgstr "Lưu trữ"
 
@@ -2468,84 +2470,86 @@ msgstr "Để đảo ngược hành động này, chủ sở hữu của nhóm p
 msgid "Remove"
 msgstr "Xóa"
 
-#: functions/enqueue-scripts.php:322 template-zume-dashboard.php:1350
+#: functions/utilities/enqueue-scripts.php:329 template-zume-dashboard.php:1350
 msgid "Connect Me to a Coach"
 msgstr "Kết nối Tôi với Người Huấn luyện"
 
-#: functions/enqueue-scripts.php:323 template-zume-dashboard.php:1361
+#: functions/utilities/enqueue-scripts.php:330 template-zume-dashboard.php:1361
 msgid "Coaches"
 msgstr "Những người huấn luyện"
 
-#: functions/enqueue-scripts.php:324 template-zume-dashboard.php:1362
+#: functions/utilities/enqueue-scripts.php:331 template-zume-dashboard.php:1362
 msgid "Our network of volunteer coaches are people like you, people who are passionate about loving God, loving others, and obeying the Great Commission."
 msgstr "Mạng lưới huấn luyện viên tình nguyện của chúng tôi là những người như bạn, những người đam mê yêu Chúa, yêu người và làm theo Đại Mạng Lệnh."
 
-#: functions/enqueue-scripts.php:325 template-zume-dashboard.php:1367
+#: functions/utilities/enqueue-scripts.php:332 template-zume-dashboard.php:1367
 msgid "Advocates"
 msgstr "Ủng hộ"
 
-#: functions/enqueue-scripts.php:326 template-zume-dashboard.php:1368
+#: functions/utilities/enqueue-scripts.php:333 template-zume-dashboard.php:1368
 msgid "A coach is someone who will come alongside you as you implement the Zúme tools and training."
 msgstr "Huấn luyện viên là người sẽ đến bên cạnh bạn khi bạn thực hiện các công cụ và đào tạo Zúme."
 
-#: functions/enqueue-scripts.php:327 template-zume-dashboard.php:1373
+#: functions/utilities/enqueue-scripts.php:334 template-zume-dashboard.php:1373
 msgid "Local"
 msgstr "Địa phương"
 
-#: functions/enqueue-scripts.php:328 functions/enqueue-scripts.php:345
-#: template-zume-dashboard.php:1374
+#: functions/utilities/enqueue-scripts.php:335
+#: functions/utilities/enqueue-scripts.php:352 template-zume-dashboard.php:1374
 msgid "On submitting this request, we will do our best to connect you with a coach near you."
 msgstr "Khi gửi yêu cầu này, chúng tôi sẽ cố gắng hết sức để kết nối bạn với một huấn luyện viên gần bạn."
 
-#: functions/enqueue-scripts.php:329 template-zume-dashboard.php:1379
+#: functions/utilities/enqueue-scripts.php:336 template-zume-dashboard.php:1379
 msgid "It's Free"
 msgstr "Miễn phí"
 
-#: functions/enqueue-scripts.php:330 template-zume-dashboard.php:1380
+#: functions/utilities/enqueue-scripts.php:337 template-zume-dashboard.php:1380
 msgid "Coaching is free. You can opt out at any time."
 msgstr "Huấn luyện miễn phí. Bạn có thể chọn không tham gia bất cứ lúc nào."
 
-#: functions/enqueue-scripts.php:131 functions/enqueue-scripts.php:332
-#: template-zume-dashboard.php:1390
+#: functions/utilities/enqueue-scripts.php:131
+#: functions/utilities/enqueue-scripts.php:339 template-zume-dashboard.php:1390
 msgid "Name"
 msgstr "Tên"
 
-#: functions/enqueue-scripts.php:117 functions/enqueue-scripts.php:333
-#: template-zume-dashboard.php:1394 template-zume-dashboard.php:1395
+#: functions/utilities/enqueue-scripts.php:117
+#: functions/utilities/enqueue-scripts.php:340 template-zume-dashboard.php:1394
+#: template-zume-dashboard.php:1395
 msgid "First and last name"
 msgstr "Họ và Tên"
 
-#: functions/enqueue-scripts.php:336 template-zume-dashboard.php:1433
+#: functions/utilities/enqueue-scripts.php:343 template-zume-dashboard.php:1433
 msgid "Email is required."
 msgstr "Email cần thiết."
 
-#: functions/enqueue-scripts.php:121 functions/enqueue-scripts.php:337
-#: template-zume-dashboard.php:1441
+#: functions/utilities/enqueue-scripts.php:121
+#: functions/utilities/enqueue-scripts.php:344 template-zume-dashboard.php:1441
 msgid "City"
 msgstr "Thành phố"
 
-#: functions/enqueue-scripts.php:339 template-zume-dashboard.php:1466
+#: functions/utilities/enqueue-scripts.php:346 template-zume-dashboard.php:1466
 msgid "How should we contact you?"
 msgstr "Chúng tôi có thể liên hệ với bạn bằng cách nào?"
 
-#: functions/enqueue-scripts.php:340 template-zume-dashboard.php:1473
+#: functions/utilities/enqueue-scripts.php:347 template-zume-dashboard.php:1473
 msgid "Text"
 msgstr "Tin nhắn"
 
-#: functions/enqueue-scripts.php:118 functions/enqueue-scripts.php:341
-#: template-zume-dashboard.php:1475
+#: functions/utilities/enqueue-scripts.php:118
+#: functions/utilities/enqueue-scripts.php:348 template-zume-dashboard.php:1475
 msgid "Phone"
 msgstr "Số điện thoại"
 
-#: functions/enqueue-scripts.php:342 template-zume-dashboard.php:1477
+#: functions/utilities/enqueue-scripts.php:349 template-zume-dashboard.php:1477
 msgid "WhatsApp"
 msgstr "WhatsApp"
 
-#: functions/enqueue-scripts.php:343 template-zume-dashboard.php:1479
+#: functions/utilities/enqueue-scripts.php:350
+#: functions/utilities/enqueue-scripts.php:370 template-zume-dashboard.php:1479
 msgid "Other"
 msgstr "Khác"
 
-#: functions/enqueue-scripts.php:123 template-zume-dashboard.php:1486
+#: functions/utilities/enqueue-scripts.php:123 template-zume-dashboard.php:1486
 msgid "Affiliation Key"
 msgstr "Khóa liên kết"
 
@@ -3080,19 +3084,19 @@ msgstr "Cập nhật"
 msgid "Our Privacy Policy may change from time to time and all updates will be posted on this page."
 msgstr "Chính sách bảo mật của chúng tôi có thể thay đổi theo thời gian và tất cả các cập nhật sẽ được đăng tải trên trang này."
 
-#: functions/enqueue-scripts.php:116
+#: functions/utilities/enqueue-scripts.php:116
 msgid "Your Profile"
 msgstr "Hồ sơ của bạn"
 
-#: functions/enqueue-scripts.php:127
+#: functions/utilities/enqueue-scripts.php:127
 msgid "Linked Facebook Account"
 msgstr "Liên kết với Tài khoản Facebook"
 
-#: functions/enqueue-scripts.php:128
+#: functions/utilities/enqueue-scripts.php:128
 msgid "Unlink"
 msgstr "Hủy liên kết"
 
-#: functions/enqueue-scripts.php:129
+#: functions/utilities/enqueue-scripts.php:129
 msgid "Linked Google Account"
 msgstr "Liên kết với Tài khoản Google"
 
@@ -3196,15 +3200,15 @@ msgstr "Mở rộng trang chủ"
 msgid "Zúme Course"
 msgstr "Khóa học Zúme"
 
-#: functions/login/zume-login.php:1312
+#: functions/login/zume-login.php:1317
 msgid "Password reset is not allowed for this user"
 msgstr "Không cho phép người dùng đặt lại mật khẩu"
 
-#: functions/login/zume-login.php:1339
+#: functions/login/zume-login.php:1344
 msgid "Could not save password reset key to database."
 msgstr "Không thể lưu mật khẩu mới vào cơ sở dữ liệu."
 
-#: functions/restrict-rest-api.php:73
+#: functions/utilities/restrict-rest-api.php:73
 msgid "The Wordpress built in API is disabled."
 msgstr "Wordpress tính hợp trong API bị vô hiệu hóa."
 
@@ -3224,7 +3228,7 @@ msgstr "Trong video dưới đây, bạn sẽ được huấn luyện thông qua
 msgid "Find the \"3/3 Group Format\" section in your Zúme Guidebook, and watch the video below."
 msgstr "Tìm bài học “Hình thức Nhóm 3/3” trong sách Hướng dẫn Zúme, và xem video dưới đây."
 
-#: functions/zume-content.php:3492
+#: functions/zume-content.php:3494
 msgid "Assess yourself using the coaching checklist."
 msgstr "Đánh giá bản thân bằng cách sử dụng danh sách kiểm tra huấn luyện."
 
@@ -3253,33 +3257,32 @@ msgstr "Xem dữ liệu nào chúng tôi đã tổng hợp từ các hoạt đ�
 msgid "Zúme One Page Course"
 msgstr "Khóa học trong Một trang Zume"
 
-#: functions/zume-gmo.php:166 functions/zume-v4-seo-strings.php:14
-#: parts/content-share.php:40 template-pieces-page.php:176
-#: template-zume-training.php:91
+#: functions/zume-v4-seo-strings.php:14 parts/content-share.php:40
+#: template-pieces-page.php:171 template-zume-training.php:91
 msgid "Groups"
 msgstr "Các nhóm"
 
-#: functions/login/zume-login.php:93
+#: functions/login/zume-login.php:98
 msgid "Failed Google Verification of User Token"
 msgstr "Google xác minh mã thông báo người dùng không thành công"
 
-#: functions/login/zume-login.php:222 functions/login/zume-login.php:456
+#: functions/login/zume-login.php:227 functions/login/zume-login.php:461
 msgid "Facebook email already linked with another account. Login to this account or use forgot password tool to access account."
 msgstr "Email Facebook đã liên kết với tài khoản khác. Đăng nhập tài khoản này hoặc sử dụng công cụ quên mật khẩu để truy cập tài khoản."
 
-#: functions/login/zume-login.php:228 functions/login/zume-login.php:462
+#: functions/login/zume-login.php:233 functions/login/zume-login.php:467
 msgid "Facebook already linked with another account."
 msgstr "Facebook đã liên kết với tài khoản khác."
 
-#: functions/login/zume-login.php:828 functions/login/zume-login.php:908
+#: functions/login/zume-login.php:833 functions/login/zume-login.php:913
 msgid "Oops. Something went wrong."
 msgstr "Oops. Đã xảy ra lỗi."
 
-#: functions/login/zume-login.php:1159
+#: functions/login/zume-login.php:1164
 msgid "Missing form verification. Refresh and try again."
 msgstr "Thiếu xác minh mẫu. Hãy làm mới và thử lại."
 
-#: functions/login/zume-login.php:1201
+#: functions/login/zume-login.php:1206
 msgid "ERROR: Invalid username or email."
 msgstr "LỖI: Tên người dùng hoặc email không hợp lệ."
 
@@ -3299,89 +3302,87 @@ msgstr "Mật khẩu"
 msgid "Remember Me"
 msgstr "Hãy nhớ tôi"
 
-#: functions/zume-gmo.php:111 template-pieces-page.php:121
+#: template-pieces-page.php:121 template-zume-landing.php:50
 msgid "Ask Yourself"
 msgstr "Tự hỏi chính mình"
 
-#: functions/zume-gmo.php:139 parts/content-share.php:13
-#: template-pieces-page.php:149
+#: parts/content-share.php:13 template-pieces-page.php:144
 msgid "Great job! Here's your progress with this concept"
 msgstr "Bạn đã làm rất tốt! Đây là sự tiến bộ của bạn với khái niệm này"
 
-#: functions/enqueue-scripts.php:310 functions/zume-gmo.php:145
-#: parts/content-share.php:19 template-pieces-page.php:155
+#: functions/utilities/enqueue-scripts.php:317 parts/content-share.php:19
+#: template-pieces-page.php:150
 msgid "Heard"
 msgstr "Đã nghe"
 
-#: functions/enqueue-scripts.php:311 functions/zume-gmo.php:149
-#: parts/content-share.php:23 template-pieces-page.php:159
+#: functions/utilities/enqueue-scripts.php:318 parts/content-share.php:23
+#: template-pieces-page.php:154
 msgid "Obeyed"
 msgstr "Đã làm theo"
 
-#: functions/enqueue-scripts.php:312 functions/zume-gmo.php:153
-#: parts/content-share.php:27 template-pieces-page.php:163
+#: functions/utilities/enqueue-scripts.php:319 parts/content-share.php:27
+#: template-pieces-page.php:158
 msgid "Shared"
 msgstr "Đã chia sẻ"
 
-#: functions/enqueue-scripts.php:313 functions/zume-gmo.php:157
-#: parts/content-share.php:31 template-pieces-page.php:167
+#: functions/utilities/enqueue-scripts.php:320 parts/content-share.php:31
+#: template-pieces-page.php:162
 msgid "Trained"
 msgstr "Đã huấn luyện"
 
-#: functions/zume-gmo.php:165 functions/zume-v4-seo-strings.php:13
-#: parts/content-share.php:39 template-pieces-page.php:175
-#: template-zume-training.php:85
+#: functions/zume-v4-seo-strings.php:13 parts/content-share.php:39
+#: template-pieces-page.php:170 template-zume-training.php:85
 msgid "Course Overview"
 msgstr "Tổng quan Khóa học"
 
-#: functions/enqueue-scripts.php:314 functions/zume-gmo.php:167
+#: functions/utilities/enqueue-scripts.php:321
 #: functions/zume-v4-seo-strings.php:15 parts/content-share.php:41
-#: template-pieces-page.php:177 template-zume-training.php:97
+#: template-pieces-page.php:172 template-zume-training.php:97
 msgid "Checklist"
 msgstr "Danh sách kiểm tra"
 
-#: parts/content-share.php:42 template-pieces-page.php:178
+#: parts/content-share.php:42 template-pieces-page.php:173
 #: translations/mobile-pwa-strings.php:30
 msgid "Start Session"
 msgstr "Bắt đầu Bài học"
 
-#: functions/enqueue-scripts.php:281 functions/zume-gmo.php:191
-#: parts/content-share.php:70 template-pieces-page.php:202
+#: functions/utilities/enqueue-scripts.php:288 parts/content-share.php:72
+#: template-pieces-page.php:199 template-zume-landing.php:174
 msgid "You're missing out."
 msgstr "Bạn đang bỏ lỡ."
 
-#: functions/enqueue-scripts.php:282 functions/zume-gmo.php:191
-#: parts/content-share.php:70 template-pieces-page.php:202
+#: functions/utilities/enqueue-scripts.php:289 parts/content-share.php:72
+#: template-pieces-page.php:199 template-zume-landing.php:174
 msgid "Register Now!"
 msgstr "Đăng ký ngay!"
 
-#: functions/enqueue-scripts.php:283 functions/zume-gmo.php:194
-#: parts/content-share.php:73 template-pieces-page.php:205
+#: functions/utilities/enqueue-scripts.php:290 parts/content-share.php:75
+#: template-pieces-page.php:202 template-zume-landing.php:178
 msgid "track your personal training progress"
 msgstr "theo dõi tiến độ huấn luyện cá nhân của bạn"
 
-#: functions/enqueue-scripts.php:284 functions/zume-gmo.php:195
-#: parts/content-share.php:74 template-pieces-page.php:206
+#: functions/utilities/enqueue-scripts.php:291 parts/content-share.php:76
+#: template-pieces-page.php:203 template-zume-landing.php:179
 msgid "access group planning tools"
 msgstr "truy cập những công cụ lập kế hoạch nhóm"
 
-#: functions/enqueue-scripts.php:285 functions/zume-gmo.php:196
-#: parts/content-share.php:75 template-pieces-page.php:207
+#: functions/utilities/enqueue-scripts.php:292 parts/content-share.php:77
+#: template-pieces-page.php:204 template-zume-landing.php:177
 msgid "connect with a coach"
 msgstr "kết nối với một người huấn luyện"
 
-#: functions/enqueue-scripts.php:286 functions/zume-gmo.php:197
-#: parts/content-share.php:76 template-pieces-page.php:208
+#: functions/utilities/enqueue-scripts.php:293 parts/content-share.php:78
+#: template-pieces-page.php:205
 msgid "add your effort to the global vision!"
 msgstr "thêm sự cố gắng của bạn cho khải tượng toàn cầu!"
 
-#: functions/enqueue-scripts.php:287 functions/zume-gmo.php:201
-#: parts/content-share.php:80 template-pieces-page.php:212
+#: functions/utilities/enqueue-scripts.php:294 parts/content-share.php:82
+#: template-pieces-page.php:209 template-zume-landing.php:183
 msgid "Register for Free"
 msgstr "Đăng kí miễn phí"
 
-#: functions/zume-gmo.php:207 parts/content-share.php:86
-#: template-pieces-page.php:218
+#: parts/content-share.php:88 template-pieces-page.php:215
+#: template-zume-landing.php:189
 msgid "See Entire Training"
 msgstr "Xem toàn bộ khóa Huấn luyện"
 
@@ -3402,7 +3403,7 @@ msgid "My Checklist"
 msgstr "Danh sách kiểm tra của tôi"
 
 #. Theme Name of the plugin/theme
-#: front-page.php:94 template-gmo.php:416 template-how-to-follow-jesus.php:344
+#: front-page.php:94 template-zume-landing.php:210
 #: template-zume-training.php:125
 msgid "Zúme Training"
 msgstr "Khóa Huấn luyện Zúme"
@@ -3445,8 +3446,7 @@ msgstr "Cầu nguyện, Tổng quan"
 msgid "5 min"
 msgstr "5 phút"
 
-#: template-gmo.php:208 template-how-to-follow-jesus.php:136
-#: template-zume-training.php:164
+#: template-zume-landing.php:344 template-zume-training.php:164
 msgid "You'll see how God uses ordinary people doing simple things to make a big impact."
 msgstr "Bạn sẽ thấy cách Chúa sử dụng những người bình thường làm những việc đơn giản để tạo ra ảnh hưởng to lớn như thế nào."
 
@@ -3469,23 +3469,20 @@ msgstr "Bạn sẽ thấy cách Chúa sử dụng những người bình thườ
 msgid "15 min"
 msgstr "15 phút"
 
-#: template-gmo.php:212 template-how-to-follow-jesus.php:140
-#: template-zume-training.php:178
+#: template-zume-landing.php:348 template-zume-training.php:178
 msgid "Discover the essence of being a disciple, making a disciple, and what is the church."
 msgstr "Khám phá bản chất của việc trở thành môn đồ, môn đồ hóa và Hội thánh là gì."
 
-#: template-gmo.php:237 template-how-to-follow-jesus.php:165
-#: template-zume-training.php:191
+#: template-zume-landing.php:373 template-zume-training.php:191
 msgid "Being a disciple means we hear from God and we obey God."
 msgstr "Trở thành môn đồ nghĩa là chúng ta nghe và làm theo Lời Chúa."
 
-#: template-gmo.php:254 template-how-to-follow-jesus.php:182
+#: template-zume-landing.php:258 template-zume-landing.php:390
 #: template-zume-training.php:204
 msgid "A tool for daily Bible study that helps you understand, obey, and share God’s Word."
 msgstr "Một công cụ nghiên cứu Kinh thánh giúp bạn hiểu, làm theo và chia sẻ Lời Chúa."
 
-#: template-gmo.php:271 template-how-to-follow-jesus.php:199
-#: template-zume-training.php:217
+#: template-zume-landing.php:407 template-zume-training.php:217
 msgid "A tool for two or three people of the same gender to meet weekly and encourage each other in areas that are going well and reveal areas that need correction."
 msgstr "Một công cụ cho hai hoặc ba người cùng giới tính gặp nhau hàng tuần và khích lệ nhau trong các lĩnh vực đang diễn ra tốt đẹp và chỉ ra những lĩnh vực cần điều chỉnh."
 
@@ -3513,13 +3510,12 @@ msgstr "Nhìn về phía trước"
 msgid "Check-in, Prayer, Overview"
 msgstr "Điểm danh, Cầu nguyện, Tổng quan"
 
-#: template-gmo.php:230 template-how-to-follow-jesus.php:158
+#: template-zume-landing.php:253 template-zume-landing.php:366
 #: template-zume-training.php:258
 msgid "You'll discover the four main ways God makes everyday followers more like Jesus."
 msgstr "Bạn sẽ khám phá bốn phương cách chính mà Chúa dùng để làm cho những người theo Ngài mỗi ngày giống Chúa Giê-xu hơn."
 
-#: template-gmo.php:241 template-how-to-follow-jesus.php:169
-#: template-zume-training.php:271
+#: template-zume-landing.php:377 template-zume-training.php:271
 msgid "See how easy it is to spend an hour in prayer."
 msgstr "Biết cách dành một giờ cầu nguyện dễ dàng."
 
@@ -3536,8 +3532,7 @@ msgstr "60 phút"
 msgid "Discuss - Prayer Cycle"
 msgstr "Thảo luận- Chu kỳ Cầu nguyện"
 
-#: template-gmo.php:341 template-how-to-follow-jesus.php:269
-#: template-zume-training.php:296
+#: template-zume-landing.php:477 template-zume-training.php:296
 msgid "A tool designed to help you be a good steward of your relationships."
 msgstr "Một công cụ được thiết kế nhằm giúp bạn trở thành một người quản lý tốt các mối quan hệ của mình."
 
@@ -3549,8 +3544,7 @@ msgstr "Thực hành- Tạo Danh sách 100"
 msgid "30 min"
 msgstr "30 phút"
 
-#: template-gmo.php:292 template-how-to-follow-jesus.php:220
-#: template-zume-training.php:337
+#: template-zume-landing.php:428 template-zume-training.php:337
 msgid "Learn how God's economy is different from the world's. God invests more in those who are faithful with what they've already been given."
 msgstr "Tìm hiểu nền kinh tế của Đức Chúa Trời khác với thế gian như thế nào. Chúa đầu tư vào những người trung thành nhiều hơn so với những gì họ đã được ban cho."
 
@@ -3558,8 +3552,7 @@ msgstr "Tìm hiểu nền kinh tế của Đức Chúa Trời khác với thế 
 msgid "Discuss - Should every disciple share?"
 msgstr "Thảo luận - Mỗi môn đồ có nên chia sẻ không?"
 
-#: template-gmo.php:345 template-how-to-follow-jesus.php:273
-#: template-zume-training.php:356
+#: template-zume-landing.php:481 template-zume-training.php:356
 msgid "Learn a way to share God’s Good News from the beginning of humanity all the way to the end of this age."
 msgstr "Tìm hiểu cách chia sẻ Phúc âm của Chúa từ lúc bắt đầu có con người cho đến khi tận thế."
 
@@ -3567,13 +3560,11 @@ msgstr "Tìm hiểu cách chia sẻ Phúc âm của Chúa từ lúc bắt đầu
 msgid "Practice - Sharing the Gospel"
 msgstr "Thực hành - Chia sẻ Phúc âm"
 
-#: template-gmo.php:283 template-how-to-follow-jesus.php:211
-#: template-zume-training.php:375
+#: template-zume-landing.php:419 template-zume-training.php:375
 msgid "Jesus said, “Go and make disciples of all nations, BAPTIZING them in the name of the Father and of the Son and of the Holy Spirit…” Learn how to put this into practice."
 msgstr "Chúa Giê-xu phán, \"hãy đi khiến muôn dân trở nên môn đồ Ta, hãy nhân danh Đức Chúa Cha, Đức Chúa Con và Đức Thánh Linh LÀM BÁP-TÊM cho họ...\" Tìm hiểu cách thực hành điều này."
 
-#: template-gmo.php:349 template-how-to-follow-jesus.php:277
-#: template-zume-training.php:410
+#: template-zume-landing.php:485 template-zume-training.php:410
 msgid "Learn how to share your testimony in three minutes by sharing how Jesus has impacted your life."
 msgstr "Học cách chia sẻ lời chứng của bạn trong ba phút bằng việc chia sẻ cách Chúa Giê-xu đã tác động đến cuộc sống của bạn như thế nào."
 
@@ -3581,8 +3572,7 @@ msgstr "Học cách chia sẻ lời chứng của bạn trong ba phút bằng vi
 msgid "Practice - Share your testimony"
 msgstr "Thực hành - Chia sẻ lời chứng của bạn"
 
-#: template-gmo.php:216 template-how-to-follow-jesus.php:144
-#: template-zume-training.php:429
+#: template-zume-landing.php:352 template-zume-training.php:429
 msgid "Learn a simple pattern of making not just one follower of Jesus but entire spiritual families who multiply for generations to come."
 msgstr "Tìm hiểu một mô hình đơn giản không chỉ khiến một người theo Chúa Giê-xu mà toàn bộ các gia đình thuộc linh được nhân bội cho các thế hệ sau."
 
@@ -3590,13 +3580,11 @@ msgstr "Tìm hiểu một mô hình đơn giản không chỉ khiến một ngư
 msgid "Learn what ducklings have to do with disciple-making."
 msgstr "Học cách bầy vịt làm gì với môn đồ hóa."
 
-#: template-gmo.php:296 template-how-to-follow-jesus.php:224
-#: template-zume-training.php:455
+#: template-zume-landing.php:432 template-zume-training.php:455
 msgid "Begin to see where God’s Kingdom isn’t. These are usually the places where God wants to work the most."
 msgstr "Bắt đầu quan sát nơi nào chưa có Vương quốc Đức Chúa Trời. Đây thường là những nơi mà Chúa muốn hành động nhiều nhất."
 
-#: template-gmo.php:279 template-how-to-follow-jesus.php:207
-#: template-zume-training.php:468
+#: template-zume-landing.php:415 template-zume-training.php:468
 msgid "It’s a simple way to celebrate our intimate connection and ongoing relationship with Jesus. Learn a simple way to celebrate."
 msgstr "Có một cách đơn giản để kỷ niệm mối liên hệ mật thiết của chúng ta và mối quan hệ đang diễn ra với Chúa Giê-xu. Tìm hiểu cách kỷ niệm đơn giản."
 
@@ -3610,18 +3598,15 @@ msgstr "Thực hành - Bữa tiệc của Chúa"
 msgid "10 min"
 msgstr "10 phút"
 
-#: template-gmo.php:362 template-how-to-follow-jesus.php:290
-#: template-zume-training.php:509
+#: template-zume-landing.php:498 template-zume-training.php:509
 msgid "It’s a simple way to obey God’s command to pray for others. And it's just what it sounds like — praying to God while walking around!"
 msgstr "Cách đơn giản để làm theo mạng lệnh của Chúa là cầu thay cho người khác. Nghe cũng giống như việc- cầu nguyện với Chúa trong khi đi bộ xung quanh!"
 
-#: template-gmo.php:358 template-how-to-follow-jesus.php:286
-#: template-zume-training.php:522
+#: template-zume-landing.php:494 template-zume-training.php:522
 msgid "Learn who a person of peace might be and how to know when you've found one."
 msgstr "Học biết người bình an có thể là ai và làm thế nào bạn biết khi tìm thấy người đó."
 
-#: template-gmo.php:245 template-how-to-follow-jesus.php:173
-#: template-zume-training.php:535
+#: template-zume-landing.php:381 template-zume-training.php:535
 msgid "Practice a simple mnemonic to remind you of ways to pray for others."
 msgstr "Thực hành một cách ghi nhớ đơn giản nhắc nhở bạn về những cách cầu nguyện cho người khác."
 
@@ -3638,12 +3623,12 @@ msgstr "Thực hành - Cầu nguyện Tuần hành"
 msgid "90 min"
 msgstr "90 phút"
 
-#: template-gmo.php:258 template-how-to-follow-jesus.php:186
+#: template-zume-landing.php:273 template-zume-landing.php:394
 #: template-zume-training.php:582
 msgid "It's important what disciples know — but it's much more important what they DO with what they know."
 msgstr "Môn đồ biết gì rất quan trọng - nhưng LÀM gì vơi những gì họ biết còn quan trọng hơn nhiều."
 
-#: template-gmo.php:267 template-how-to-follow-jesus.php:195
+#: template-zume-landing.php:278 template-zume-landing.php:403
 #: template-zume-training.php:595
 msgid "A 3/3 Group is a way for followers of Jesus to meet, pray, learn, grow, fellowship and practice obeying and sharing what they've learned. In this way, a 3/3 Group is not just a small group but a Simple Church."
 msgstr "Nhóm 3/3 là cách để những người theo Chúa Giê-xu gặp gỡ, cầu nguyện, học hỏi, trưởng thành, thông công và thực hành vâng lời và chia sẻ những gì họ đã học. Nhờ đó, Nhóm 3/3 không chỉ là một nhóm nhỏ mà là một Hội thánh Đơn giản."
@@ -3652,7 +3637,7 @@ msgstr "Nhóm 3/3 là cách để những người theo Chúa Giê-xu gặp gỡ
 msgid "75 min"
 msgstr "75 phút"
 
-#: template-gmo.php:325 template-how-to-follow-jesus.php:253
+#: template-zume-landing.php:295 template-zume-landing.php:461
 #: template-zume-training.php:625
 msgid "Learn the training cycle and consider how it applies to disciple making."
 msgstr "Tìm hiểu chu kỳ huấn luyện và xem xét cách áp dụng vào môn đồ hóa."
@@ -3665,23 +3650,20 @@ msgstr "Thực hành - Nhóm 3/3"
 msgid "Discuss - 3/3 Group Experience"
 msgstr "Thảo luận - Kinh nghiệm nhóm 3/3"
 
-#: template-gmo.php:387 template-how-to-follow-jesus.php:315
-#: template-zume-training.php:672
+#: template-zume-landing.php:523 template-zume-training.php:672
 msgid "A Leadership Cell is a way someone who feels called to lead can develop their leadership by practicing serving."
 msgstr "Tế bào lãnh đạo là cách mà một người cảm thấy được kêu gọi lãnh đạo có thể phát triển khả năng lãnh đạo của họ bằng cách thực hành phục vụ."
 
-#: template-gmo.php:329 template-how-to-follow-jesus.php:257
-#: template-zume-training.php:713
+#: template-zume-landing.php:465 template-zume-training.php:713
 msgid "See how disciple making doesn't have to be linear. Multiple things can happen at the same time."
 msgstr "Nhận biết môn đồ hóa không nhất thiết phải kéo dài. Nhiều việc có thể diễn ra cùng một lúc."
 
-#: template-gmo.php:333 template-how-to-follow-jesus.php:261
+#: template-zume-landing.php:315 template-zume-landing.php:469
 #: template-zume-training.php:726
 msgid "Multiplying matters and multiplying quickly matters even more. See why pace matters."
 msgstr "Nhân bội là vấn đề nhưng nhân bội nhanh chóng thậm chí còn khó khăn hơn. Nhận biết vì sao tốc độ rất quan trọng."
 
-#: template-gmo.php:275 template-how-to-follow-jesus.php:203
-#: template-zume-training.php:739
+#: template-zume-landing.php:411 template-zume-training.php:739
 msgid "Learn how to obey Jesus' commands by going AND staying."
 msgstr "Học cách làm theo mạng lệnh của Chúa Giê-xu bằng cách đi VÀ ở lại."
 
@@ -3705,7 +3687,7 @@ msgstr "Thảo luận - Chia sẻ Kế hoạch 3 tháng với nhóm"
 msgid "20 min"
 msgstr "20 phút"
 
-#: template-gmo.php:383 template-how-to-follow-jesus.php:311
+#: template-zume-landing.php:300 template-zume-landing.php:519
 #: template-zume-training.php:794
 msgid "A powerful tool you can use to quickly assess your own strengths and vulnerabilities when it comes to making disciples who multiply."
 msgstr "Một công cụ mạnh mẽ mà bạn có thể sử dụng để nhanh chóng đánh giá điểm mạnh và điểm yếu của chính mình khi nói đến việc tạo ra những môn đồ nhân bội."
@@ -3714,12 +3696,11 @@ msgstr "Một công cụ mạnh mẽ mà bạn có thể sử dụng để nhanh
 msgid "Practice - Coaching Checklist Self-Assessment"
 msgstr "Thực hành - Tự đánh giá danh sách kiểm tra"
 
-#: template-gmo.php:391 template-how-to-follow-jesus.php:319
-#: template-zume-training.php:813
+#: template-zume-landing.php:527 template-zume-training.php:813
 msgid "Learn how multiplying churches stay connected and live life together as an extended, spiritual family."
 msgstr "Tìm hiểu cach để nhân bội các Hội thánh giữ sự kết nối và chung sống với nhau như một gia đình thuộc linh mở rộng."
 
-#: template-gmo.php:379 template-how-to-follow-jesus.php:307
+#: template-zume-landing.php:320 template-zume-landing.php:515
 #: template-zume-training.php:826
 msgid "This is a group that consists of people who are leading and starting 3/3 Groups. It also follows a 3/3 format and is a powerful way to assess the spiritual health of God’s work in your area."
 msgstr "Đây là một nhóm bao gồm những người đang lãnh đạo và mở mang các nhóm 3/3. Tuân theo hình thức 3/3 và là một cách mạnh mẽ để đánh giá sức khỏe tâm linh trong công việc của Đức Chúa Trời trong khu vực của bạn."
@@ -3746,7 +3727,7 @@ msgstr "Đào tạo"
 msgid "Zúme Course v4"
 msgstr "Khóa học Zúme v4"
 
-#: front-page.php:99
+#: front-page.php:99 front-page.php:215
 msgid "Explore Training"
 msgstr "Khám phá Chương trình Huấn luyện"
 
@@ -3777,141 +3758,137 @@ msgstr "Huấn luyện Zume"
 msgid "Yes. There are no premium versions, no trial periods, no follow-on sales of products. Freely we've received. Freely we give."
 msgstr "Đúng vậy. Không có phiên bản cao cấp, không có thời gian dùng thử, không có doanh số bán sản phẩm tiếp theo. Chúng tôi đã nhận miễn phí. Chúng tôi cho đi miễn phí."
 
-#: functions/enqueue-scripts.php:216 template-gmo.php:207
-#: template-how-to-follow-jesus.php:135 template-zume-training.php:158
+#: functions/utilities/enqueue-scripts.php:223 template-zume-landing.php:343
+#: template-zume-training.php:158
 msgid "God Uses Ordinary People"
 msgstr "Đức Chúa Trời sử dụng những người bình thường"
 
-#: functions/enqueue-scripts.php:217 template-gmo.php:211
-#: template-how-to-follow-jesus.php:139 template-zume-training.php:172
+#: functions/utilities/enqueue-scripts.php:224 template-zume-landing.php:347
+#: template-zume-training.php:172
 msgid "Simple Definition of Disciple and Church"
 msgstr "Định nghĩa đơn giản về Môn đồ và Hội thánh"
 
-#: functions/enqueue-scripts.php:218 template-gmo.php:236
-#: template-how-to-follow-jesus.php:164 template-zume-training.php:186
+#: functions/utilities/enqueue-scripts.php:225 template-zume-landing.php:372
+#: template-zume-training.php:186
 msgid "Spiritual Breathing is Hearing and Obeying God"
 msgstr "Hô hấp thuộc linh là Lắng nghe và Vâng phục Chúa"
 
-#: functions/enqueue-scripts.php:219 template-gmo.php:253
-#: template-how-to-follow-jesus.php:181 template-zume-training.php:199
+#: functions/utilities/enqueue-scripts.php:226 template-zume-landing.php:257
+#: template-zume-landing.php:389 template-zume-training.php:199
 msgid "SOAPS Bible Reading"
 msgstr "Đọc Kinh thánh SOAPS"
 
-#: functions/enqueue-scripts.php:221 template-gmo.php:229
-#: template-how-to-follow-jesus.php:157 template-zume-training.php:253
+#: functions/utilities/enqueue-scripts.php:228 template-zume-landing.php:252
+#: template-zume-landing.php:365 template-zume-training.php:253
 msgid "Consumer vs Producer Lifestyle"
 msgstr "Lối sống Người Tiêu Thụ và Nhà Sản Xuất"
 
-#: functions/enqueue-scripts.php:222 template-gmo.php:240
-#: template-how-to-follow-jesus.php:168 template-zume-training.php:266
+#: functions/utilities/enqueue-scripts.php:229 template-zume-landing.php:376
+#: template-zume-training.php:266
 msgid "How to Spend an Hour in Prayer"
 msgstr "Làm thế nào để dành một giờ Cầu nguyện"
 
-#: functions/enqueue-scripts.php:223 template-gmo.php:340
-#: template-how-to-follow-jesus.php:268
+#: functions/utilities/enqueue-scripts.php:230 template-zume-landing.php:476
 msgid "Relational Stewardship – List of 100"
 msgstr "Quản lý các mối quan hệ- Danh sách 100"
 
-#: functions/enqueue-scripts.php:224 template-gmo.php:291
-#: template-how-to-follow-jesus.php:219 template-zume-training.php:332
+#: functions/utilities/enqueue-scripts.php:231 template-zume-landing.php:427
+#: template-zume-training.php:332
 msgid "The Kingdom Economy"
 msgstr "Kinh tế Thiên Đàng"
 
-#: functions/enqueue-scripts.php:225 template-gmo.php:344
-#: template-how-to-follow-jesus.php:272 template-zume-training.php:351
+#: functions/utilities/enqueue-scripts.php:232 template-zume-landing.php:480
+#: template-zume-training.php:351
 msgid "The Gospel and How to Share It"
 msgstr "Phúc âm và Cách Chia sẻ"
 
-#: functions/enqueue-scripts.php:226 template-gmo.php:282
-#: template-how-to-follow-jesus.php:210 template-zume-training.php:370
+#: functions/utilities/enqueue-scripts.php:233 template-zume-landing.php:418
+#: template-zume-training.php:370
 msgid "Baptism and How To Do It"
 msgstr "Báp-têm và Cách thực hiện"
 
-#: functions/enqueue-scripts.php:227 template-gmo.php:348
-#: template-how-to-follow-jesus.php:276 template-zume-training.php:405
+#: functions/utilities/enqueue-scripts.php:234 template-zume-landing.php:484
+#: template-zume-training.php:405
 msgid "Prepare Your 3-Minute Testimony"
 msgstr "Chuẩn bị Lời Làm chứng 3 phút"
 
-#: functions/enqueue-scripts.php:228 template-gmo.php:215
-#: template-how-to-follow-jesus.php:143 template-zume-training.php:424
+#: functions/utilities/enqueue-scripts.php:235 template-zume-landing.php:351
+#: template-zume-training.php:424
 msgid "Vision Casting the Greatest Blessing"
 msgstr "Công bố Khải tượng Phước hạnh Lớn nhất"
 
-#: functions/enqueue-scripts.php:229 template-gmo.php:320
-#: template-how-to-follow-jesus.php:248
+#: functions/utilities/enqueue-scripts.php:236 template-zume-landing.php:456
 msgid "Duckling Discipleship – Leading Immediately"
 msgstr "Môn đồ hóa đàn vịt- Dẫn dắt Ngay lập tức"
 
-#: functions/enqueue-scripts.php:230
+#: functions/utilities/enqueue-scripts.php:237
 msgid "Eyes to See Where The Kingdom Isn't"
 msgstr "Đôi mắt nhìn thấy nơi chưa có Thiên đàng"
 
-#: functions/enqueue-scripts.php:231
+#: functions/utilities/enqueue-scripts.php:238
 msgid "The Lord's Supper and How To Lead It"
 msgstr "Tiệc thánh và Cách hướng dẫn"
 
-#: functions/enqueue-scripts.php:232 template-gmo.php:361
-#: template-how-to-follow-jesus.php:289 template-zume-training.php:504
+#: functions/utilities/enqueue-scripts.php:239 template-zume-landing.php:497
+#: template-zume-training.php:504
 msgid "Prayer Walking and How To Do It"
 msgstr "Cầu nguyện Tuần hành và cách thực hiện"
 
-#: functions/enqueue-scripts.php:233 template-gmo.php:357
-#: template-how-to-follow-jesus.php:285 template-zume-training.php:517
+#: functions/utilities/enqueue-scripts.php:240 template-zume-landing.php:493
+#: template-zume-training.php:517
 msgid "A Person of Peace and How To Find One"
 msgstr "Người Bình An và Cách tìm ra người đó"
 
-#: functions/enqueue-scripts.php:234 template-gmo.php:244
-#: template-how-to-follow-jesus.php:172 template-zume-training.php:530
+#: functions/utilities/enqueue-scripts.php:241 template-zume-landing.php:380
+#: template-zume-training.php:530
 msgid "The BLESS Prayer Pattern"
 msgstr "Mẫu Cầu nguyện BLESS"
 
-#: functions/enqueue-scripts.php:235 template-gmo.php:257
-#: template-how-to-follow-jesus.php:185 template-zume-training.php:577
+#: functions/utilities/enqueue-scripts.php:242 template-zume-landing.php:272
+#: template-zume-landing.php:393 template-zume-training.php:577
 msgid "Faithfulness is Better Than Knowledge"
 msgstr "Sự trung tín tốt hơn tri thức"
 
-#: functions/enqueue-scripts.php:236 template-gmo.php:266
-#: template-how-to-follow-jesus.php:194 template-zume-training.php:590
+#: functions/utilities/enqueue-scripts.php:243 template-zume-landing.php:277
+#: template-zume-landing.php:402 template-zume-training.php:590
 msgid "3/3 Group Meeting Pattern"
 msgstr "Mẫu buổi nhóm 3/3"
 
-#: functions/enqueue-scripts.php:237 template-gmo.php:324
-#: template-how-to-follow-jesus.php:252 template-zume-training.php:620
+#: functions/utilities/enqueue-scripts.php:244 template-zume-landing.php:294
+#: template-zume-landing.php:460 template-zume-training.php:620
 msgid "Training Cycle for Maturing Disciples"
 msgstr "Chu kỳ huấn luyện cho các môn đồ trưởng thành"
 
-#: functions/enqueue-scripts.php:239 template-gmo.php:328
-#: template-how-to-follow-jesus.php:256 template-zume-training.php:708
+#: functions/utilities/enqueue-scripts.php:246 template-zume-landing.php:464
+#: template-zume-training.php:708
 msgid "Expect Non-Sequential Growth"
 msgstr "Mong đợi sự tăng trưởng không liên tục"
 
-#: functions/enqueue-scripts.php:240 template-gmo.php:332
-#: template-how-to-follow-jesus.php:260 template-zume-training.php:721
+#: functions/utilities/enqueue-scripts.php:247 template-zume-landing.php:314
+#: template-zume-landing.php:468 template-zume-training.php:721
 msgid "Pace of Multiplication Matters"
 msgstr "Những vấn đề về tốc độ nhân bội"
 
-#: functions/enqueue-scripts.php:241 template-gmo.php:274
-#: template-how-to-follow-jesus.php:202 template-zume-training.php:734
+#: functions/utilities/enqueue-scripts.php:248 template-zume-landing.php:410
+#: template-zume-training.php:734
 msgid "Always Part of Two Churches"
 msgstr "Luôn là thành viên của hai Hội thánh"
 
-#: functions/enqueue-scripts.php:246 template-zume-training.php:834
+#: functions/utilities/enqueue-scripts.php:253 template-zume-training.php:834
 msgid "Four Fields Tool"
 msgstr "Công cụ 4 Lĩnh vực"
 
-#: functions/enqueue-scripts.php:247 template-zume-training.php:847
+#: functions/utilities/enqueue-scripts.php:254 template-zume-training.php:847
 msgid "Generational Mapping"
 msgstr "Bản đồ thế hệ"
 
-#: functions/zume-gmo.php:179 functions/zume-gmo.php:211
-#: parts/content-share.php:54 parts/content-share.php:90
-#: template-pieces-page.php:190 template-pieces-page.php:222
+#: parts/content-share.php:56 parts/content-share.php:92
+#: template-pieces-page.php:187 template-pieces-page.php:219
 msgid "Zúme Training is freely offered as part of larger Zúme Vision."
 msgstr "Khóa huấn luyện Zúme được cung cấp miễn phí vì là một phần trong Khải tượng lớn hơn của Zúme."
 
-#: functions/zume-gmo.php:180 functions/zume-gmo.php:212
-#: parts/content-share.php:55 parts/content-share.php:91
-#: template-pieces-page.php:191 template-pieces-page.php:223
+#: parts/content-share.php:57 parts/content-share.php:93
+#: template-pieces-page.php:188 template-pieces-page.php:220
 msgid "Learn more about the Zúme.Vision"
 msgstr "Tìm hiểu thêm về Khải tượng Zúme"
 
@@ -3919,19 +3896,19 @@ msgstr "Tìm hiểu thêm về Khải tượng Zúme"
 msgid "This concept is called \"%1$s\" in session %2$s of the Zúme Training"
 msgstr "Khái niệm này gọi là \"%1$s\" trong bài %2$s của khóa huấn luyện Zúme"
 
-#: functions/zume-gmo.php:73 template-pieces-page.php:83
+#: template-pieces-page.php:83 template-zume-landing.php:50
 msgid "Listen and Read Along"
 msgstr "Lắng nghe và Đọc theo"
 
-#: functions/zume-gmo.php:77 template-pieces-page.php:87
+#: template-pieces-page.php:87 template-zume-landing.php:50
 msgid "Download Free Guidebook"
 msgstr "Tải sách Hướng dẫn miễn phí"
 
-#: functions/zume-gmo.php:80 template-pieces-page.php:90
+#: template-pieces-page.php:90 template-zume-landing.php:50
 msgid "Watch This Video"
 msgstr "Xem Video này"
 
-#: template-zume-about.php:22
+#: template-zume-about.php:22 template-zume-landing.php:217
 msgid "About Zúme Training"
 msgstr "Về Khóa huấn luyện Zúme"
 
@@ -4085,175 +4062,177 @@ msgstr "Khải tượng của Zúme"
 msgid "Disciple-making can be rapidly advanced by finding a person of peace, even in a place where followers of Jesus are few and far between. How do you know when you have found a person of peace and what do you do when you find them?"
 msgstr "Môn đồ hóa có thể nhanh chóng xúc tiến bằng cách tìm một người bình an, ngay cả ở một nơi có ít người theo Chúa Giê-xu ở. Làm thế nào để bạn biết khi nào bạn tìm thấy một người bình an và bạn làm gì khi tìm thấy họ?"
 
-#: functions/enqueue-scripts.php:120
+#: functions/utilities/enqueue-scripts.php:120
 msgid "This form is required."
 msgstr "Hình thức này là bắt buộc."
 
-#: functions/enqueue-scripts.php:263
+#: functions/utilities/enqueue-scripts.php:270
 msgid "Members List (optional)"
 msgstr "Danh sách thành viên (tùy chọn)"
 
-#: functions/enqueue-scripts.php:264
+#: functions/utilities/enqueue-scripts.php:271
 msgid "Location"
 msgstr "Địa điểm"
 
-#: functions/enqueue-scripts.php:265
+#: functions/utilities/enqueue-scripts.php:272
 msgid "Connection to server failed. Try again."
 msgstr "Kết nối máy chủ không thành công. XIn thử lại."
 
-#: functions/enqueue-scripts.php:266
+#: functions/utilities/enqueue-scripts.php:273
 msgid "Accepted invitation"
 msgstr "Lời mời được chấp nhận"
 
-#: functions/enqueue-scripts.php:269
+#: functions/utilities/enqueue-scripts.php:276
 msgid "add"
 msgstr "Thêm"
 
-#: functions/enqueue-scripts.php:270
+#: functions/utilities/enqueue-scripts.php:277
 msgid "Zoom, click, or search for your location."
 msgstr "Phóng to, chọn, hoặc tìm kiếm địa điểm của bạn."
 
-#: functions/enqueue-scripts.php:271
+#: functions/utilities/enqueue-scripts.php:278
 msgid "find you current location"
 msgstr "tìm địa điểm hiện tại của bạn"
 
-#: functions/enqueue-scripts.php:272
+#: functions/utilities/enqueue-scripts.php:279
 msgid "Save Clicked Location"
 msgstr "Lưu địa điểm đã chọn"
 
-#: functions/enqueue-scripts.php:273
+#: functions/utilities/enqueue-scripts.php:280
 msgid "Save Searched Location"
 msgstr "Lưu địa điểm đã tìm kiếm"
 
-#: functions/enqueue-scripts.php:274
+#: functions/utilities/enqueue-scripts.php:281
 msgid "Save Current Location"
 msgstr "Lưu địa điểm hiện tại"
 
-#: functions/enqueue-scripts.php:275
+#: functions/utilities/enqueue-scripts.php:282
 msgid "You haven't selected anything yet. Click, search, or allow auto location."
 msgstr "Bạn chưa chọn gì cả. Chọn, tìm kiếm hoặc cho phép tự động cập nhật vị trí."
 
-#: functions/enqueue-scripts.php:276
+#: functions/utilities/enqueue-scripts.php:283
 msgid "update"
 msgstr "cập nhật"
 
-#: functions/enqueue-scripts.php:277
+#: functions/utilities/enqueue-scripts.php:284
 msgid "Course Complete"
 msgstr "Hoàn thành khóa học"
 
-#: functions/enqueue-scripts.php:278
+#: functions/utilities/enqueue-scripts.php:285
 msgid "Next Session"
 msgstr "Bài học tiếp theo"
 
-#: functions/enqueue-scripts.php:290
+#: functions/utilities/enqueue-scripts.php:297
 msgid "Not Leading a Group"
 msgstr "Không Dẫn dắt một nhóm"
 
-#: functions/enqueue-scripts.php:291
+#: functions/utilities/enqueue-scripts.php:298
 msgid "Create New Group"
 msgstr "Tạo nhóm mới"
 
-#: functions/enqueue-scripts.php:293
+#: functions/utilities/enqueue-scripts.php:300
 msgid "Which group are you leading?"
 msgstr "Bạn đang dẫn dắt nhóm nào?"
 
-#: functions/enqueue-scripts.php:294
+#: functions/utilities/enqueue-scripts.php:301
 msgid "Number of Members"
 msgstr "Số thành viên"
 
-#: functions/enqueue-scripts.php:296
+#: functions/utilities/enqueue-scripts.php:303
 msgid "Group addition failed. Try again."
 msgstr "Bổ sung nhóm thất bại. Xin thử lại."
 
-#: functions/enqueue-scripts.php:300
+#: functions/utilities/enqueue-scripts.php:307
 msgid "Are you sure you want to archive this group?"
 msgstr "Bạn có chắc chắn muốn hoàn thành nhóm này?"
 
-#: functions/enqueue-scripts.php:301
+#: functions/utilities/enqueue-scripts.php:308
 msgid "Show Archived Groups"
 msgstr "Hiển thị các nhóm đã hoàn thành"
 
-#: functions/enqueue-scripts.php:302
+#: functions/utilities/enqueue-scripts.php:309
 msgid "Re-Activate"
 msgstr "Kích hoạt lại"
 
-#: functions/enqueue-scripts.php:303 functions/enqueue-scripts.php:307
+#: functions/utilities/enqueue-scripts.php:310
+#: functions/utilities/enqueue-scripts.php:314
 msgid "Delete Forever"
 msgstr "Xóa vĩnh viễn"
 
-#: functions/enqueue-scripts.php:305
+#: functions/utilities/enqueue-scripts.php:312
 msgid "Close"
 msgstr "Đóng"
 
-#: functions/enqueue-scripts.php:306
+#: functions/utilities/enqueue-scripts.php:313
 msgid "Are you sure you want to delete this group?"
 msgstr "Bạn có chắc chắn muốn xóa nhóm này?"
 
-#: functions/enqueue-scripts.php:309
+#: functions/utilities/enqueue-scripts.php:316
 msgid "32 Tools and Concepts"
 msgstr "32 công cụ và khái niệm"
 
-#: functions/enqueue-scripts.php:315
+#: functions/utilities/enqueue-scripts.php:322
 msgid "Progress Overview"
 msgstr "Tổng quan về tiến độ"
 
-#: functions/enqueue-scripts.php:316
+#: functions/utilities/enqueue-scripts.php:323
 msgid "There are 32 concepts and tools in Zúme training. Each concept or tool is intended to be practiced personally and trained into others. Use the progression of \"heard\", \"obeyed\", \"shared\", and \"trained\" as a way of tracking your mastery of the disciple-making training."
 msgstr "Có 32 khái niệm và công cụ trong khóa huấn luyện Zúme. Mỗi khái niệm hoặc công cụ nhằm giúp bạn thực hành cá nhân và huấn luyện lại chongười khác. Áp dụng quá trình\"nghe\", \"làm theo\", \"chia sẻ\" và \"đã huấn luyện\" như một cách để theo dõi sự thành thạo của bạn trong việc môn đồ hóa"
 
-#: functions/enqueue-scripts.php:317
+#: functions/utilities/enqueue-scripts.php:324
 msgid "Definitions"
 msgstr "Định nghĩa"
 
-#: functions/enqueue-scripts.php:318
+#: functions/utilities/enqueue-scripts.php:325
 msgid "\"Heard\" means you gained awareness. You have moved from not knowing about a tool or concept to knowing about it."
 msgstr "\"Nghe\" có nghĩa là bạn đã có được nhận thức. Bạn đã chuyển từ việc không biết về một công cụ hoặc khái niệm nào đó thành biết về nó."
 
-#: functions/enqueue-scripts.php:319
+#: functions/utilities/enqueue-scripts.php:326
 msgid "\"Obeyed\" means you took personal action to practice or apply a concept or tool. Obeying with tools might look like beginning to use them with others, while obeying with concepts might look like changing thinking or priorities."
 msgstr "\"Tuân theo\" có nghĩa là bạn đã thực hiện hành động cá nhân để thực hành hoặc áp dụng một khái niệm hoặc công cụ. Việc tuân theo các công cụ có thể trông giống như bắt đầu sử dụng chúng với người khác, trong khi tuân theo các khái niệm có thể trông giống như thay đổi suy nghĩ hoặc ưu tiên."
 
-#: functions/enqueue-scripts.php:320
+#: functions/utilities/enqueue-scripts.php:327
 msgid "\"Shared\" means you helped someone else hear. This step is essential to truly understanding the concept or tool and preparing you to train others."
 msgstr "\"Chia sẻ\" có nghĩa là bạn đã giúp người khác nghe thấy. Bước này rất cần thiết phải thực sự hiểu về khái niệm hoặc công cụ đó và chuẩn bị để bạn huấn luyện cho người khác."
 
-#: functions/enqueue-scripts.php:321
+#: functions/utilities/enqueue-scripts.php:328
 msgid "\"Trained\" means you coached someone else to hear, obey and share. More than sharing knowledge with someone, you have helped them become a sharer of the tool or concept."
 msgstr "\"Đã huấn luyện\" có nghĩa là bạn đã huấn luyện người khác nghe, làm theo và chia sẻ. Hơn cả việc chia sẻ kiến thức với ai đó, bạn đã giúp họ trở thành một người chia sẻ công cụ hoặc khái niệm này."
 
-#: functions/enqueue-scripts.php:338
+#: functions/utilities/enqueue-scripts.php:345
 msgid "What is your city or state or postal code?"
 msgstr "Thành phố hoặc tiểu bang hoặc mã bưu chính của bạn là gì?"
 
-#: functions/enqueue-scripts.php:344
+#: functions/utilities/enqueue-scripts.php:351
 msgid "Affiliation Notes"
 msgstr "Ghi chú liên kết"
 
-#: functions/enqueue-scripts.php:347
+#: functions/utilities/enqueue-scripts.php:354
 msgid "You have requested coaching."
 msgstr "Bạn đã yêu cầu cố vấn."
 
-#: functions/enqueue-scripts.php:130 functions/enqueue-scripts.php:348
+#: functions/utilities/enqueue-scripts.php:130
+#: functions/utilities/enqueue-scripts.php:355
 msgid "No location matches found. Try a less specific address."
 msgstr "Không tìm thấy vị trí phù hợp. Hãy thử một địa chỉ ít cụ thể hơn."
 
-#: functions/enqueue-scripts.php:349
+#: functions/utilities/enqueue-scripts.php:356
 msgid "Oops. Something went wrong. Try again!"
 msgstr "Oops.. Đã xảy ra lỗi. Xin thử lại!"
 
-#: functions/enqueue-scripts.php:350
+#: functions/utilities/enqueue-scripts.php:357
 msgid "Zúme Network"
 msgstr "Mạng lưới Zúme"
 
-#: functions/enqueue-scripts.php:352
+#: functions/utilities/enqueue-scripts.php:359
 msgid "Click the circles and check off your progress on each of the concepts."
 msgstr "Nhấp vào vòng tròn và kiểm tra tiến trình của bạn trên từng khái niệm."
 
-#: functions/enqueue-scripts.php:354
+#: functions/utilities/enqueue-scripts.php:361
 msgid "Add Group"
 msgstr "Thêm nhóm"
 
-#: functions/enqueue-scripts.php:356
+#: functions/utilities/enqueue-scripts.php:363
 msgid "delete"
 msgstr "xóa bỏ"
 
@@ -4269,11 +4248,11 @@ msgstr "Khải tượng"
 msgid "Mobile App"
 msgstr "Ứng dụng di động"
 
-#: functions/enqueue-scripts.php:122
+#: functions/utilities/enqueue-scripts.php:122
 msgid "example: Denver, CO 80120"
 msgstr "ví dụ: Denver, CO 80120"
 
-#: functions/enqueue-scripts.php:126
+#: functions/utilities/enqueue-scripts.php:126
 msgid "Linked Accounts"
 msgstr "Tài khoản được liên kết"
 
@@ -4282,67 +4261,67 @@ msgid "Welcome to God’s Family!"
 msgstr "Chào mừng bạn đến với gia đình của Đức Chúa Trời!"
 
 #. Template Name of the plugin/theme
-#: template-gmo.php:202 template-how-to-follow-jesus.php:130
+#: template-zume-landing.php:338
 msgid "What is a follower of Jesus?"
 msgstr "Người theo Chúa Giê-xu là gì?"
 
-#: template-gmo.php:225 template-how-to-follow-jesus.php:153
+#: template-zume-landing.php:361
 msgid "What are the activities of a follower of Jesus?"
 msgstr "Các hoạt động của một người theo Chúa Giê-xu là gì?"
 
-#: template-gmo.php:250 template-how-to-follow-jesus.php:178
+#: template-zume-landing.php:386
 msgid "Bible Reading"
 msgstr "Đọc Kinh Thánh"
 
-#: template-gmo.php:263 template-how-to-follow-jesus.php:191
+#: template-zume-landing.php:399
 msgid "Community"
 msgstr "Cộng đồng"
 
-#: template-gmo.php:278 template-how-to-follow-jesus.php:206
+#: template-zume-landing.php:414
 msgid "The Lord’s Supper and How To Lead It"
 msgstr "Tiệc Thánh và Cách dẫn dắt"
 
-#: template-gmo.php:288 template-how-to-follow-jesus.php:216
+#: template-zume-landing.php:424
 msgid "Sacrifice and Suffering"
 msgstr "Hy sinh và Chịu khổ"
 
-#: template-gmo.php:295 template-how-to-follow-jesus.php:223
+#: template-zume-landing.php:431
 msgid "Eyes to See Where The Kingdom Isn’t"
 msgstr "Mắt nhìn thấy nơi chưa có Thiên đàng"
 
-#: template-gmo.php:307 template-how-to-follow-jesus.php:235
+#: template-zume-landing.php:443
 msgid "How do I obey Jesus and help others become followers with me?"
 msgstr "Làm thế nào để tôi vâng lời Chúa Giê-xu và giúp người khác trở thành những người theo tôi?"
 
-#: template-gmo.php:311 template-how-to-follow-jesus.php:239
+#: template-zume-landing.php:447
 msgid "Then Jesus came to them and said, \"All authority in heaven and on earth has been given to me. Therefore go and make disciples of all nations, baptizing them in the name of the Father and of the Son and of the Holy Spirit, and teaching them to obey everything I have commanded you. And surely I am with you always, to the very end of the age.\""
 msgstr "Đức Chúa Giê-xu đến và phán với họ rằng: “Tất cả thẩm quyền trên trời dưới đất đã giao cho Ta. Vậy, hãy đi khiến muôn dân trở nên môn đồ Ta, hãy nhân danh Đức Chúa Cha, Đức Chúa Con và Đức Thánh Linh làm báp-têm cho họ và dạy họ giữ mọi điều Ta đã truyền cho các con. Và nầy, Ta luôn ở với các con cho đến tận thế.”"
 
-#: template-gmo.php:312 template-how-to-follow-jesus.php:240
+#: template-zume-landing.php:448
 msgid "Matthew 28:18-20"
 msgstr "Ma-thi-ơ 28: 18-20"
 
-#: template-gmo.php:316 template-how-to-follow-jesus.php:244
+#: template-zume-landing.php:452
 msgid "Teaching others to obey and follow Jesus with you"
 msgstr "Dạy người khác vâng lời và theo Chúa Giê-xu với bạn"
 
-#: template-gmo.php:321 template-how-to-follow-jesus.php:249
+#: template-zume-landing.php:457
 msgid "Learn what ducklings have to do with disciple-making"
 msgstr "Học cách đàn bịt làm gì với việc môn đồ hóa"
 
-#: template-gmo.php:337 template-how-to-follow-jesus.php:265
+#: template-zume-landing.php:473
 msgid "Speaking to people YOU KNOW about Jesus"
 msgstr "Nói với những người BẠN BIẾT về Chúa Giê-xu"
 
-#: template-gmo.php:354 template-how-to-follow-jesus.php:282
+#: template-zume-landing.php:490
 msgid "Speaking to people YOU DON'T KNOW about Jesus"
 msgstr "Nói với người BẠN KHÔNG BIẾT về Chúa Giê-xu"
 
-#: template-gmo.php:373 template-how-to-follow-jesus.php:301
+#: template-zume-landing.php:509
 msgid "What if many friends, family, and others start following Jesus with me?"
 msgstr "Điều gì xảy ra nếu nhiều bạn bè, gia đình và những người khác bắt đầu theo Chúa Giê-xu với tôi?"
 
-#: template-how-to-follow-jesus.php:95
+#: template-zume-landing.php:117
 msgid "Watch this important video explaining the 4 relationships of your new life."
 msgstr "Xem video rất quan trọng này giải thích 4 mối quan hệ trong đời sống mới của bạn."
 
@@ -4458,7 +4437,7 @@ msgid "A new version of this app is available. Click to update this app."
 msgstr "Một phiên bản mới của ứng dụng này có sẵn. Nhấn vào đây để cập nhật ứng dụng này."
 
 #. Template Name of the plugin/theme
-#: template-how-to-follow-jesus.php:91
+#: template-zume-landing.php:109
 msgid "How to Follow Jesus"
 msgstr "Làm thế nào để theo Chúa Giêsu"
 
@@ -4468,29 +4447,79 @@ msgstr "Lưu trữ"
 
 #: template-gmo.php:163
 msgid "Welcome to God’s family!"
-msgstr ""
+msgstr "Chào mừng đến với gia đình của Chúa!"
 
 #: template-gmo.php:167
 msgid "You’ve just made a decision to follow Jesus. Where do you go from here?"
-msgstr ""
+msgstr "Bạn vừa quyết định theo Chúa Giê-su. Bạn đi đâu từ đây?"
 
 #: template-gmo.php:168
 msgid "We are Zúme, a GodLife Community. Through Zúme, we want to give you free resources to grow in your faith and connect you to a community of people all around the world striving to grow in knowledge and faith of the hope that Jesus gives us. Let’s get started!"
-msgstr ""
+msgstr "Chúng tôi là Zúme, một Cộng đồng GodLife. Thông qua Zúme, chúng tôi muốn cung cấp cho bạn các nguồn tài nguyên miễn phí để phát triển đức tin của bạn và kết nối bạn với cộng đồng mọi người trên khắp thế giới đang nỗ lực phát triển về kiến thức và niềm tin vào hy vọng mà Chúa Giê-su ban cho chúng ta. Bắt đầu nào!"
 
 #: template-gmo.php:169
 msgid "A great first step is this video that explains 4 relationships we all have with God, creation, others, and ourselves. We pray that as you watch that video God will lead you to think of several others who need to see it, and who will eventually join you in following Jesus."
-msgstr ""
+msgstr "Bước đầu tiên tuyệt vời là video này giải thích 4 mối quan hệ mà tất cả chúng ta đều có với Chúa, tạo vật, người khác và bản thân. Chúng tôi cầu nguyện rằng khi bạn xem video đó, Chúa sẽ dẫn dắt bạn nghĩ đến một số người khác cần xem video đó và những người cuối cùng sẽ cùng bạn đi theo Chúa Giê-su."
 
 #: template-gmo.php:196
 msgid "Next we have a collection of resources to help you follow Jesus. Bookmark, explore, and share these Biblical resources that are being used around the globe."
-msgstr ""
+msgstr "Tiếp theo, chúng tôi có một bộ sưu tập các tài nguyên để giúp bạn theo Chúa Giê-su. Đánh dấu trang, khám phá và chia sẻ các tài nguyên Kinh thánh này đang được sử dụng trên toàn cầu."
 
-#: template-how-to-follow-jesus.php:122
+#: template-zume-landing.php:155
 msgid "Bookmark this page as a future resource!"
+msgstr "Đánh dấu trang này như một tài nguyên trong tương lai!"
+
+#: template-zume-landing.php:157
+msgid "The sections below, will teach you what it means to be a follower (disciple) of Jesus."
+msgstr "Các phần dưới đây sẽ cho bạn biết ý nghĩa của việc trở thành một môn đồ (môn đồ) của Chúa Giê-su."
+
+#: functions/utilities/enqueue-scripts.php:364
+msgid "How can we serve you?"
 msgstr ""
 
-#: template-how-to-follow-jesus.php:124
-msgid "The sections below, will teach you what it means to be a follower (disciple) of Jesus."
+#: functions/utilities/enqueue-scripts.php:365
+msgid "I want to be coached"
+msgstr ""
+
+#: functions/utilities/enqueue-scripts.php:366
+msgid "I need technical assistance"
+msgstr ""
+
+#: functions/utilities/enqueue-scripts.php:367
+msgid "I've gone through the training but need advice on implementation"
+msgstr ""
+
+#: functions/utilities/enqueue-scripts.php:368
+msgid "I have a question about the content that I need to talk to somebody else about"
+msgstr ""
+
+#: functions/utilities/enqueue-scripts.php:369
+msgid "I have a group started and need to know where do I go next"
+msgstr ""
+
+#: template-zume-landing.php:246
+msgid "Leading Yourself"
+msgstr ""
+
+#: template-zume-landing.php:250 template-zume-landing.php:270
+#: template-zume-landing.php:292 template-zume-landing.php:312
+msgid "Principles"
+msgstr ""
+
+#: template-zume-landing.php:255 template-zume-landing.php:275
+#: template-zume-landing.php:297 template-zume-landing.php:317
+msgid "Practices"
+msgstr ""
+
+#: template-zume-landing.php:265
+msgid "Leading Your Group"
+msgstr ""
+
+#: template-zume-landing.php:288
+msgid "Leading Your Group Leaders"
+msgstr ""
+
+#: template-zume-landing.php:308
+msgid "Leading Your Community Leaders"
 msgstr ""
 
