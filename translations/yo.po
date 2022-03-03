@@ -7,13 +7,13 @@ msgstr ""
 "Project-Id-Version: Zúme Project\n"
 "Language: yo\n"
 
-#: front-page.php:82 front-page.php:212
+#: front-page.php:82 front-page.php:213
 msgid "Get Started"
 msgstr "Je ka bere"
 
-#: front-page.php:85 functions/enqueue-scripts.php:288
-#: functions/zume-gmo.php:202 functions/zume-v4-seo-strings.php:23
-#: parts/content-share.php:81 template-pieces-page.php:213
+#: front-page.php:85 functions/utilities/enqueue-scripts.php:295
+#: functions/zume-v4-seo-strings.php:23 parts/content-share.php:83
+#: template-pieces-page.php:210 template-zume-landing.php:184
 #: template-zume-login.php:403 template-zume-login.php:470
 #: template-zume-login.php:498
 msgid "Login"
@@ -64,7 +64,7 @@ msgstr "Mu awon ore wa"
 msgid "Host a training"
 msgstr "Gbalejo ikeko kan"
 
-#: front-page.php:246
+#: front-page.php:250
 msgid "Find out more about Zúme"
 msgstr "Sewadi die sii nipa Zume"
 
@@ -76,198 +76,202 @@ msgstr "Oluko"
 msgid "Coach Leader"
 msgstr "Oludari oluko"
 
-#: functions/enqueue-scripts.php:82 functions/enqueue-scripts.php:84
-#: functions/enqueue-scripts.php:268 template-zume-dashboard.php:1204
+#: functions/utilities/enqueue-scripts.php:82
+#: functions/utilities/enqueue-scripts.php:84
+#: functions/utilities/enqueue-scripts.php:275 template-zume-dashboard.php:1204
 #: template-zume-dashboard.php:1317
 msgid "Cancel"
 msgstr "Fagile"
 
-#: functions/enqueue-scripts.php:83
+#: functions/utilities/enqueue-scripts.php:83
 msgid "Current Step:"
 msgstr "Igbese lowolowo"
 
-#: functions/enqueue-scripts.php:85 translations/mobile-pwa-strings.php:35
+#: functions/utilities/enqueue-scripts.php:85
+#: translations/mobile-pwa-strings.php:35
 msgid "Finish"
 msgstr "Pari"
 
-#: functions/enqueue-scripts.php:86 functions/utilities/menu.php:108
+#: functions/utilities/enqueue-scripts.php:86 functions/utilities/menu.php:108
 #: translations/mobile-pwa-strings.php:34
 msgid "Next"
 msgstr "Okan"
 
-#: functions/enqueue-scripts.php:87 functions/utilities/menu.php:98
+#: functions/utilities/enqueue-scripts.php:87 functions/utilities/menu.php:98
 #: translations/mobile-pwa-strings.php:33
 msgid "Previous"
 msgstr "Ti tele"
 
-#: functions/enqueue-scripts.php:88
+#: functions/utilities/enqueue-scripts.php:88
 msgid "Loading..."
 msgstr "O jopo…"
 
-#: functions/enqueue-scripts.php:66 template-zume-dashboard.php:1168
+#: functions/utilities/enqueue-scripts.php:66 template-zume-dashboard.php:1168
 #: template-zume-dashboard.php:1202 translations/mobile-pwa-strings.php:26
 msgid "Delete"
 msgstr "Paare"
 
-#: functions/enqueue-scripts.php:67
+#: functions/utilities/enqueue-scripts.php:67
 msgid "Failed to remove item."
 msgstr "Kuna lati yo nkan kuro."
 
-#: functions/enqueue-scripts.php:68
+#: functions/utilities/enqueue-scripts.php:68
 msgid "Failed to change item."
 msgstr "Kuna lati yi nkan pada."
 
-#: functions/enqueue-scripts.php:69
+#: functions/utilities/enqueue-scripts.php:69
 msgid "Three Month Plan - Zúme Project"
 msgstr "Ero fun osu meta - ise agbese Zume"
 
-#: functions/enqueue-scripts.php:70
+#: functions/utilities/enqueue-scripts.php:70
 msgid "We got it!"
 msgstr "A ti gba!"
 
-#: functions/enqueue-scripts.php:71
+#: functions/utilities/enqueue-scripts.php:71
 msgid "We're a volunteer network, so give us a few days. We'll reach out to you soon as possible!"
 msgstr "A wa ni a ni netiwoki, nitorina e fun wa ni igba die. a ma fun yin ni esi!"
 
-#: functions/login/zume-login.php:97 functions/login/zume-login.php:320
+#: functions/login/zume-login.php:102 functions/login/zume-login.php:325
 msgid "Email is a required permission for login and registration."
 msgstr "Imeeli beere fun igbanilaaye fun iwole ati iforukosile."
 
-#: functions/login/zume-login.php:448
+#: functions/login/zume-login.php:453
 msgid "No user found."
 msgstr "Ko rii olumulo kan."
 
-#: functions/login/zume-login.php:284 functions/login/zume-login.php:413
+#: functions/login/zume-login.php:289 functions/login/zume-login.php:418
 msgid "You are missing your sign-in token. Try signing in again."
 msgstr "Ami sonu. Gbiyanju lati tun se."
 
-#: functions/login/zume-login.php:294 functions/login/zume-login.php:423
+#: functions/login/zume-login.php:299 functions/login/zume-login.php:428
 msgid "Failed to connect with Facebook. Try again."
 msgstr "Kuna lati so po mo ero aiyelujara. Gbiyanju leekan si."
 
-#: functions/login/zume-login.php:313 functions/login/zume-login.php:439
+#: functions/login/zume-login.php:318 functions/login/zume-login.php:444
 msgid "Facebook user lookup error. Sorry for the inconvenience."
 msgstr "Asise ero aiyelujara olumulo. abebe fun eleyi."
 
-#: functions/login/zume-login.php:316 functions/login/zume-login.php:442
+#: functions/login/zume-login.php:321 functions/login/zume-login.php:447
 msgid "Error with looking up user with Facebook. Sorry for the inconvenience."
 msgstr "Asise lati ma wo oniruru nkan lori ero aiyelujara."
 
-#: functions/enqueue-scripts.php:331 functions/login/zume-login.php:543
+#: functions/login/zume-login.php:548
+#: functions/utilities/enqueue-scripts.php:338
 msgid "There are some errors in your form."
 msgstr "Asise wa ninu iwe akosile re."
 
-#: functions/enqueue-scripts.php:119 functions/enqueue-scripts.php:335
-#: functions/login/zume-login.php:548 template-zume-dashboard.php:1420
+#: functions/login/zume-login.php:553
+#: functions/utilities/enqueue-scripts.php:119
+#: functions/utilities/enqueue-scripts.php:342 template-zume-dashboard.php:1420
 #: template-zume-dashboard.php:1471 template-zume-login.php:375
 msgid "Email"
 msgstr "Imeeli"
 
-#: functions/login/zume-login.php:552 template-zume-login.php:261
+#: functions/login/zume-login.php:557 template-zume-login.php:261
 msgid "Password Required"
 msgstr "An beere oro Igbaniwole"
 
-#: functions/login/zume-login.php:555 template-zume-login.php:264
+#: functions/login/zume-login.php:560 template-zume-login.php:264
 msgid "Password required"
 msgstr "An beere oro igbaniwole"
 
-#: functions/login/zume-login.php:561 template-zume-login.php:271
+#: functions/login/zume-login.php:566 template-zume-login.php:271
 msgid "Re-enter Password"
 msgstr "Tun-fii oro igbaniwole si"
 
-#: functions/login/zume-login.php:564 template-zume-login.php:274
+#: functions/login/zume-login.php:569 template-zume-login.php:274
 msgid "Passwords do not match. Please, try again."
 msgstr "Awon oro igbaniwole ko baamu. Ejo, gbiyanju leekannsi."
 
-#: functions/login/zume-login.php:573 functions/zume-v4-seo-strings.php:24
+#: functions/login/zume-login.php:578 functions/zume-v4-seo-strings.php:24
 #: template-zume-login.php:358 template-zume-login.php:514
 msgid "Register"
 msgstr "Forukosile"
 
-#: functions/login/zume-login.php:616
+#: functions/login/zume-login.php:621
 msgid "Missing captcha response. How did you do that?"
 msgstr "Ko si esi captcha. Bawo ni o se iyen?"
 
-#: functions/login/zume-login.php:629
+#: functions/login/zume-login.php:634
 msgid "Captcha failure. Try again, if you are human."
 msgstr "Ikuna Captcha. gbiyanju leekansi, ti oba je eniyan."
 
-#: functions/login/zume-login.php:635
+#: functions/login/zume-login.php:640
 msgid "Missing email or password."
 msgstr "Imeeli tabi oro igbaniwole ti sonu."
 
-#: functions/login/zume-login.php:654
+#: functions/login/zume-login.php:659
 msgid "Sorry. This email is already registered."
 msgstr "Mabinu. Imeeli re ti wa ni akosile."
 
-#: functions/login/zume-login.php:665
+#: functions/login/zume-login.php:670
 msgid "Something went wrong. Sorry. Could you try again?"
 msgstr "Mabinu nkan o lo dede."
 
-#: functions/login/zume-login.php:689
+#: functions/login/zume-login.php:694
 msgid "No new user found."
 msgstr "Ko rii olumulo tuntun kan."
 
-#: functions/login/zume-login.php:745 functions/login/zume-login.php:796
+#: functions/login/zume-login.php:750 functions/login/zume-login.php:801
 msgid "Google"
 msgstr "Google"
 
-#: functions/login/zume-login.php:790
+#: functions/login/zume-login.php:795
 msgid "Link with Google"
 msgstr "Ona asopo pelu Google"
 
-#: functions/login/zume-login.php:929 functions/login/zume-login.php:1025
+#: functions/login/zume-login.php:934 functions/login/zume-login.php:1030
 msgid "Facebook"
 msgstr "Facebook"
 
-#: functions/login/zume-login.php:1166
+#: functions/login/zume-login.php:1171
 msgid "Missing username or email address."
 msgstr "Oruko olumulo tabi adiresi imeeli ti sonu."
 
-#: functions/login/zume-login.php:1172
+#: functions/login/zume-login.php:1177
 msgid "ERROR: Enter a username or email address."
 msgstr "ASISE: te oruko olumulo tabi adresi imeeli."
 
-#: functions/login/zume-login.php:1176
+#: functions/login/zume-login.php:1181
 msgid "ERROR: There is no user registered with that email address."
 msgstr "ASISE: kosi olumulo ti o sajo pelu adiresi imeeli yen."
 
-#: functions/login/zume-login.php:1181
+#: functions/login/zume-login.php:1186
 msgid "ERROR: There is no user registered with that username."
 msgstr "ASISE: kosi olumulo ti o sajo pelu oruko olumulo."
 
-#: functions/login/zume-login.php:1226
+#: functions/login/zume-login.php:1231
 msgid "Someone has requested a password reset for the following account:"
 msgstr "Enikan ti beere fun atunto oro igbaniwole fun akoole atele:"
 
 #. translators: %s: site name
-#: functions/login/zume-login.php:1228
+#: functions/login/zume-login.php:1233
 msgid "Site Name: %s"
 msgstr "Oruko Aaye: %s"
 
 #. translators: %s: user login
-#: functions/login/zume-login.php:1230
+#: functions/login/zume-login.php:1235
 msgid "Username: %s"
 msgstr "Oruko Olumulo: %s"
 
-#: functions/login/zume-login.php:1231
+#: functions/login/zume-login.php:1236
 msgid "If this was a mistake, just ignore this email and nothing will happen."
 msgstr "Ti eyi ba je asise, kan foju imeeli yii, nkankan yoo sele."
 
-#: functions/login/zume-login.php:1232
+#: functions/login/zume-login.php:1237
 msgid "To reset your password, visit the following address:"
 msgstr "Lati se atunse oro isina, be awon adiresi yii wo:"
 
 #. translators: Password reset email subject. %s: Site name
-#: functions/login/zume-login.php:1236
+#: functions/login/zume-login.php:1241
 msgid "[%s] Password Reset"
 msgstr "[%s] Atunse Oro Isina"
 
-#: functions/login/zume-login.php:1266
+#: functions/login/zume-login.php:1271
 msgid "The email could not be sent."
 msgstr "Ale ran awon imeeli yii."
 
-#: functions/login/zume-login.php:1266
+#: functions/login/zume-login.php:1271
 msgid "Possible reason: your host may have disabled the mail() function."
 msgstr "Idi to seese: o je bi host re ti alaabo awon mail() function."
 
@@ -295,15 +299,15 @@ msgstr "Akoko"
 msgid "Last"
 msgstr "Ni pari"
 
-#: functions/zume-v4-groups.php:282
+#: functions/zume-v4-groups.php:284
 msgid "( Key not available. Check dashboard. )"
 msgstr "( Ko si botini. Sayewo dasibodu. )"
 
-#: functions/enqueue-scripts.php:292 functions/zume-content.php:12
+#: functions/utilities/enqueue-scripts.php:299 functions/zume-content.php:12
 msgid "Session"
 msgstr "Igba"
 
-#: functions/enqueue-scripts.php:280 functions/zume-content.php:120
+#: functions/utilities/enqueue-scripts.php:287 functions/zume-content.php:120
 msgid "Welcome to Session"
 msgstr "Kaabo sii Igba Yii"
 
@@ -323,7 +327,7 @@ msgstr "Sawari Igba Akoonu"
 msgid "How many are with you?"
 msgstr "Melo lowa pelu re?"
 
-#: functions/enqueue-scripts.php:289 functions/zume-content.php:156
+#: functions/utilities/enqueue-scripts.php:296 functions/zume-content.php:156
 msgid "Continue"
 msgstr "Te Siwaju"
 
@@ -361,7 +365,7 @@ msgstr "Bere pelu adua, emi ijinle pelu irapada lai si emi mimo."
 #: functions/zume-content.php:2320 functions/zume-content.php:2575
 #: functions/zume-content.php:2813 functions/zume-content.php:3049
 #: functions/zume-content.php:3116 functions/zume-content.php:3185
-#: functions/zume-content.php:3590
+#: functions/zume-content.php:3592
 msgid "Watch and Discuss (15min)"
 msgstr "Wo ki o Soro (15min)"
 
@@ -373,7 +377,7 @@ msgstr "Wo ki o Soro (15min)"
 #: functions/zume-content.php:2326 functions/zume-content.php:2581
 #: functions/zume-content.php:2819 functions/zume-content.php:3057
 #: functions/zume-content.php:3124 functions/zume-content.php:3193
-#: functions/zume-content.php:3596 functions/zume-content.php:3774
+#: functions/zume-content.php:3598 functions/zume-content.php:3776
 msgid "WATCH"
 msgstr "WO"
 
@@ -395,8 +399,8 @@ msgstr "Akosile fidio zume"
 #: functions/zume-content.php:2443 functions/zume-content.php:2634
 #: functions/zume-content.php:2697 functions/zume-content.php:2875
 #: functions/zume-content.php:3101 functions/zume-content.php:3167
-#: functions/zume-content.php:3236 functions/zume-content.php:3368
-#: functions/zume-content.php:3560 functions/zume-content.php:3635
+#: functions/zume-content.php:3236 functions/zume-content.php:3370
+#: functions/zume-content.php:3562 functions/zume-content.php:3637
 msgid "DISCUSS"
 msgstr "SALAYE"
 
@@ -445,7 +449,7 @@ msgstr "Ie gbigbo ati idahun si oro olohun je gege bi mimi. kini idi"
 
 #: functions/zume-content.php:421 functions/zume-content.php:489
 #: functions/zume-content.php:903 functions/zume-content.php:1543
-#: functions/zume-content.php:1846 functions/zume-content.php:3649
+#: functions/zume-content.php:1846 functions/zume-content.php:3651
 msgid "Listen and Read Along (3min)"
 msgstr "Feti Sile Ki o ka Pelu i"
 
@@ -454,7 +458,7 @@ msgstr "Feti Sile Ki o ka Pelu i"
 #: functions/zume-content.php:1188 functions/zume-content.php:1320
 #: functions/zume-content.php:1549 functions/zume-content.php:1852
 #: functions/zume-content.php:2043 functions/zume-content.php:2384
-#: functions/zume-content.php:3655
+#: functions/zume-content.php:3657
 msgid "READ"
 msgstr "AKORO"
 
@@ -474,9 +478,9 @@ msgstr "Wa idi S.O.A.P.S. kika bibeli ninu iwe itonisona zume ati lati feti sile
 msgid "Zúme Video Scripts: S.O.A.P.S."
 msgstr "Akosile fidio Zume"
 
-#: functions/enqueue-scripts.php:220 functions/zume-content.php:500
-#: template-gmo.php:270 template-how-to-follow-jesus.php:198
-#: template-zume-dashboard.php:342 template-zume-training.php:212
+#: functions/utilities/enqueue-scripts.php:227 functions/zume-content.php:500
+#: template-zume-dashboard.php:342 template-zume-landing.php:406
+#: template-zume-training.php:212
 msgid "Accountability Groups"
 msgstr "Egbe Isiro"
 
@@ -509,8 +513,8 @@ msgstr "Adehun sinu egbe meji tabi meta. "
 #: functions/zume-content.php:1037 functions/zume-content.php:1445
 #: functions/zume-content.php:1959 functions/zume-content.php:2244
 #: functions/zume-content.php:2495 functions/zume-content.php:2732
-#: functions/zume-content.php:2963 functions/zume-content.php:3357
-#: functions/zume-content.php:3405
+#: functions/zume-content.php:2963 functions/zume-content.php:3359
+#: functions/zume-content.php:3407
 msgid "SHARE"
 msgstr "IPIN"
 
@@ -526,7 +530,7 @@ msgstr "Iwe Itonisona Zume"
 #: functions/zume-content.php:1415 functions/zume-content.php:1942
 #: functions/zume-content.php:2231 functions/zume-content.php:2465
 #: functions/zume-content.php:2715 functions/zume-content.php:2946
-#: functions/zume-content.php:3386
+#: functions/zume-content.php:3388
 msgid "LOOKING FORWARD"
 msgstr "ITESIWAJU"
 
@@ -544,7 +548,7 @@ msgstr "Bi isale ni igbese lati fi gbiyanju igba mi."
 #: functions/zume-content.php:1438 functions/zume-content.php:1952
 #: functions/zume-content.php:2237 functions/zume-content.php:2488
 #: functions/zume-content.php:2725 functions/zume-content.php:2956
-#: functions/zume-content.php:3396
+#: functions/zume-content.php:3398
 msgid "OBEY"
 msgstr "GBORAN"
 
@@ -564,8 +568,8 @@ msgstr "Bere lowo Olohun eni ti yio bere egbe isiro pelu lilo ohun tio ti ko."
 #: functions/zume-content.php:2502 functions/zume-content.php:2553
 #: functions/zume-content.php:2739 functions/zume-content.php:2791
 #: functions/zume-content.php:2970 functions/zume-content.php:3028
-#: functions/zume-content.php:3297 functions/zume-content.php:3413
-#: functions/zume-content.php:3468
+#: functions/zume-content.php:3299 functions/zume-content.php:3415
+#: functions/zume-content.php:3470
 msgid "PRAY"
 msgstr "GBADURA"
 
@@ -577,7 +581,7 @@ msgstr "Gbadura pe ki Olohun ran o lowo, ki o je onigboran si, ki o si pe ki o s
 #: functions/zume-content.php:1459 functions/zume-content.php:1973
 #: functions/zume-content.php:2258 functions/zume-content.php:2509
 #: functions/zume-content.php:2746 functions/zume-content.php:2977
-#: functions/zume-content.php:3421
+#: functions/zume-content.php:3423
 msgid "#ZumeProject"
 msgstr "#ZumeProject"
 
@@ -605,13 +609,13 @@ msgstr "WA IWE ITONISONA"
 #: functions/zume-content.php:1500 functions/zume-content.php:2001
 #: functions/zume-content.php:2285 functions/zume-content.php:2536
 #: functions/zume-content.php:2772 functions/zume-content.php:3006
-#: functions/zume-content.php:3449
+#: functions/zume-content.php:3451
 msgid "CHECK-IN"
 msgstr "WOLE SINU"
 
 #: functions/zume-content.php:692 functions/zume-content.php:1081
 #: functions/zume-content.php:2774 functions/zume-content.php:3010
-#: functions/zume-content.php:3451
+#: functions/zume-content.php:3453
 msgid "Before getting started, take some time to check-in."
 msgstr "Ki a to bere, wa akoko die lati fi wole."
 
@@ -619,7 +623,7 @@ msgstr "Ki a to bere, wa akoko die lati fi wole."
 #: functions/zume-content.php:1502 functions/zume-content.php:2004
 #: functions/zume-content.php:2287 functions/zume-content.php:2538
 #: functions/zume-content.php:2776 functions/zume-content.php:3012
-#: functions/zume-content.php:3453
+#: functions/zume-content.php:3455
 msgid "At the end of the last session, everyone in your group was challenged in two ways:"
 msgstr "Ni igbeyin eko ta ko keyin,gbogbo eniyan lo dojuko ipenija ni ona meji:"
 
@@ -647,8 +651,7 @@ msgstr "Beere boya enikeni ninu ẹgbẹ naa ba ni awọn aini pataki ti wọn y
 msgid "If we want to make disciples who multiply – spiritual producers and not just consumers – then we need to learn and share four main ways God makes everyday followers more like Jesus:"
 msgstr "Ti a ba wa akeko pupo."
 
-#: functions/zume-content.php:733 template-gmo.php:233
-#: template-how-to-follow-jesus.php:161
+#: functions/zume-content.php:733 template-zume-landing.php:369
 msgid "Prayer"
 msgstr "Adua"
 
@@ -814,7 +817,7 @@ msgstr "Gbadura ki o dupe lowo olohun kio pe emi mimo lati to o sona. "
 #: functions/zume-content.php:2023 functions/zume-content.php:2305
 #: functions/zume-content.php:2560 functions/zume-content.php:2798
 #: functions/zume-content.php:3036 functions/zume-content.php:3256
-#: functions/zume-content.php:3475
+#: functions/zume-content.php:3477
 msgid "OVERVIEW"
 msgstr "AKOPO"
 
@@ -1316,7 +1319,7 @@ msgid "Have your entire group spend the next 90 minutes practicing the 3/3 Group
 msgstr "Se gbogbo egbe lo iseju yi lati se asa egbe na."
 
 #: functions/zume-content.php:2676 functions/zume-content.php:2916
-#: functions/zume-content.php:3740
+#: functions/zume-content.php:3742
 msgid "PRACTICE"
 msgstr "ÌSE Ṣiṣẹ"
 
@@ -1534,276 +1537,276 @@ msgstr "O le te iwe ikosile Zume."
 msgid "Online \"Three Month Plan\""
 msgstr "Eto Osu Meta."
 
-#: functions/zume-content.php:3280
+#: functions/zume-content.php:3281
 msgid "Participants can access their own three month plan on the side column of their dashboard. They can connect their plan with this group by adding the following key:"
 msgstr "Awon alabase le ni anfani osu meta ninu ise dasibodu."
 
-#: functions/zume-content.php:3300
+#: functions/zume-content.php:3302
 msgid "Ask God what He specifically wants you to do with the basic disciple-making tools and techniques you have learned over these last nine sessions. You can remember them in terms of the Greatest Blessing."
 msgstr "Bere lowo Olohun nipa nkan ti o fe se pelu awon Egbe ."
 
-#: functions/zume-content.php:3304
+#: functions/zume-content.php:3306
 msgid "It's a Blessing to ... S.O.A.P.S. Bible Reading, Accountability Groups, Prayer Cycle"
 msgstr "Ibukun nla ni S.O.A.P.S, kika bibeli, isiro egbe Pelu Adua ."
 
-#: functions/zume-content.php:3307
+#: functions/zume-content.php:3309
 msgid "It's a Great Blessing to ... Share your 3-Minute Testimony and God's Story, Prayer Walking"
 msgstr "Ibukun nla ni lati pin itan Olohun, Ati Adura."
 
-#: functions/zume-content.php:3310
+#: functions/zume-content.php:3312
 msgid "It's a Greater Blessing to ... Start a 3/3rds Group"
 msgstr "Ibukun nla ni."
 
-#: functions/zume-content.php:3313
+#: functions/zume-content.php:3315
 msgid "It's the Greatest Blessing to ... Start a Zúme Group"
 msgstr "Ibukun ni ki a darapo mo Egbe Zume."
 
-#: functions/zume-content.php:3321
+#: functions/zume-content.php:3323
 msgid "LISTEN"
 msgstr "Gbo."
 
-#: functions/zume-content.php:3323
+#: functions/zume-content.php:3325
 msgid "Take at least 10 minutes to be as quiet as possible and listen intently to what God has to say and what He chooses to reveal. Make an effort to hear His voice."
 msgstr "Ki a ma soro ti a ba fn iseju mewa ."
 
-#: functions/zume-content.php:3329
+#: functions/zume-content.php:3331
 msgid "COMPLETE"
 msgstr "ASEPE"
 
-#: functions/zume-content.php:3332
+#: functions/zume-content.php:3334
 msgid "Use the rest of your time to complete the Three Month Plan worksheet. You can write it out on a piece of paper. If you are logged in to ZúmeProject.com you can fill out your form digitally and link it to your group. Once you login, you’ll find the Three Month Plan under Settings. You can also find the Three Month Plan on your Dashboard."
 msgstr "Tun asiko re lati pari eto os meta ."
 
-#: functions/zume-content.php:3335
+#: functions/zume-content.php:3337
 msgid "You do not have to commit to every item, and there is room for other items not already on the list. Do your best to align your commitments to what you have heard God reveal to you about His will."
 msgstr "Aye wa fun awon eroja miran."
 
-#: functions/zume-content.php:3350
+#: functions/zume-content.php:3352
 msgid "Share you Plan (30min)"
 msgstr "Pin awon eto re. "
 
-#: functions/zume-content.php:3359
+#: functions/zume-content.php:3361
 msgid "In groups of two or three (15 minutes)"
 msgstr "Ninu egbe meji tabi meta. "
 
-#: functions/zume-content.php:3361
+#: functions/zume-content.php:3363
 msgid "Take turns sharing your Three Month Plans with each other. Take time to ask questions about things you might not understand about plans and how the others will meet their commitments. Ask them to do the same for you and your plan. Find a training partner(s) that is willing to check in with you to report on progress and challenges and ask questions after 1, 2, 3, 4, 6, 8 and 12 weeks. Commit to doing the same for them."
 msgstr "Pin ise re ni osu meta."
 
-#: functions/zume-content.php:3370
+#: functions/zume-content.php:3372
 msgid "In your full training Group (15 minutes)"
 msgstr "Ninu eko iseju meedoogun"
 
-#: functions/zume-content.php:3372
+#: functions/zume-content.php:3374
 msgid "Discuss and develop a group plan for starting at least two new 3/3 Groups or Zúme Training Groups in your area. Several of your group members may have just completed and saved your individual Three-Month Plans to your Zúme group. On this step, if no one from your group has filled out a digital copy on the website of your Three-Month Plan, it is highly recommended that you do this together now. Just go to the Three-Month Plan under Settings and link the form to your group."
 msgstr "Ṣe ijiroro ati dagbasoke eto ẹgbẹ kan fun bẹrẹ o kere ju meji Awọn ẹgbẹ 3/3 meji tabi Awọn ẹgbẹ Ikẹkọ Zúme ni agbegbe rẹ. Orisirisi awọn ọmọ ẹgbẹ ẹgbẹ rẹ le ti ṣẹṣẹ ṣe igbala awọn Eto Mẹtta Ọjọ mẹta si ẹgbẹ Zúme rẹ. Ni igbesẹ yii, ti ko ba si ẹnikan lati inu ẹgbẹ rẹ ti o daakọ ẹda oni-nọmba kan lori oju opo wẹẹbu ti Eto Oṣu Mẹta rẹ, o gba ọ niyanju pupọ pe ki o ṣe eyi lapapọ. Kan lọ si Eto Oṣu Mẹta naa labẹ Eto ki o so ọna kika pọ si ẹgbẹ rẹ."
 
-#: functions/zume-content.php:3375
+#: functions/zume-content.php:3377
 #, fuzzy
 msgid "Remember, your goal is to start Simple Churches that multiply. 3/3 Groups and Zúme Training Groups are two ways to do that. Discuss and decide whether these new Groups will be connected to an existing local church or network or whether you’ll start a new network out of your Zúme Training Group."
 msgstr "Ranti wipe ilepa re ninu siso soosi di pupo."
 
-#: functions/zume-content.php:3389
+#: functions/zume-content.php:3391
 msgid "Congratulations! You've completed Session 9."
 msgstr "O ku orire, oti pari igba kesan."
 
-#: functions/zume-content.php:3398
+#: functions/zume-content.php:3400
 msgid "You may not know it, but you now have more practical training on starting simple churches and making disciples who multiply than many pastors and missionaries around the world!"
 msgstr "Tio ba ni ilowo, yio je ki ise re ya!"
 
-#: functions/zume-content.php:3399
+#: functions/zume-content.php:3401
 msgid "Set aside time on your calendar each week to continue to work on your Three Month Plan, and plan check-ins with your training partner at the end of week 1, 2, 3, 4, 6, 8, and 12. Each time you're together, ask about their results and share yours, making sure you're both working through your plans. Prayerfully consider continuing as an ongoing spiritual family committed to multiplying disciples."
 msgstr "Se asiki kalenda losoose."
 
-#: functions/zume-content.php:3407
+#: functions/zume-content.php:3409
 msgid "Pray and ask God who He would have you share Zúme Training with by launching a Leadership Cell of future Zúme Training leaders."
 msgstr "Gbadura ki olohun ti o je ki o wa ninu egbe zume je olori ninu egbe to n bo."
 
-#: functions/zume-content.php:3415
+#: functions/zume-content.php:3417
 msgid "Be sure to pray with your group before you end your time together. Thank God that He has created and gifted you with exactly the right talents to make a difference in His kingdom. Ask Him for wisdom to use the strengths He has given you and to find other followers who help cover your weaknesses. Pray that He would make you fruitful and multiply — this was His plan from the very beginning. Pray that God help you be obedient to Him and invite Him to work in you and those around you!"
 msgstr "Gbiyanju lati gbadura pelu awon egbe re ki won to tuka. "
 
-#: functions/zume-content.php:3423
+#: functions/zume-content.php:3425
 msgid "Excited to help a new Zúme group get started? Share about Zúme on social media and let people know where they can get started."
 msgstr "Jade lati jeki egbe zume gbero, se afihan lori ero ayelujara."
 
-#: functions/zume-content.php:3442
+#: functions/zume-content.php:3444
 msgid "Looking Back"
 msgstr "Wo Pada"
 
-#: functions/zume-content.php:3444
+#: functions/zume-content.php:3446
 msgid "Welcome back to Zúme Training!"
 msgstr "Kaabo si eto Idanileko Zume!"
 
-#: functions/zume-content.php:3457
+#: functions/zume-content.php:3459
 msgid "You were asked to prayerfully consider continuing as an ongoing spiritual family committed to multiplying disciples."
 msgstr "Ko gbiyanju lati ma gbadura ki egbe le gbero si."
 
-#: functions/zume-content.php:3460
+#: functions/zume-content.php:3462
 msgid "You were encouraged to share Zúme Training by launching a Leadership Cell of future Zúme Training leaders."
 msgstr "Ka ni igbiyanju lati ni olori ninu Egbe Zume."
 
-#: functions/zume-content.php:3463
+#: functions/zume-content.php:3465
 msgid "Take a few moments to see how your group has been doing with these items and their Three Month Plans since you've last met."
 msgstr "Ninu asiko re wa bi egbe sen se lati igba keyin ti e ti rira."
 
-#: functions/zume-content.php:3470
+#: functions/zume-content.php:3472
 #, fuzzy
 msgid "Pray and thank God that He is faithful to complete His good work in us. Ask Him to give your group clear heads and open hearts to the great things He wants to do in and through you. Ask the Holy Spirit to lead your time together and thank Him for His faithfulness, too. He got you through!"
 msgstr "Kooshi."
 
-#: functions/zume-content.php:3477
+#: functions/zume-content.php:3479
 msgid "In this advanced training session, you’ll take a look at how you can level-up your Coaching Strengths with a quick checklist assessment. You’ll learn how Leadership in Networks allows a growing group of small churches to work together to accomplish even more. And you’ll learn how to develop Peer Mentoring Groups that take leaders to a whole new level of growth."
 msgstr "Ida nile ko kooshi."
 
-#: functions/zume-content.php:3490
+#: functions/zume-content.php:3492
 msgid "Activity (10min)"
 msgstr "Idanrawo"
 
-#: functions/zume-content.php:3497
+#: functions/zume-content.php:3499
 msgid "ASSESS"
 msgstr "SE AYEWO"
 
-#: functions/zume-content.php:3499
+#: functions/zume-content.php:3501
 msgid "The Coaching Checklist is a powerful tool you can use to quickly assess your own strengths and vulnerabilities when it comes to making disciples who multiply. It's also a powerful tool you can use to help others – and others can use to help you."
 msgstr "Kooshi"
 
-#: functions/zume-content.php:3501
+#: functions/zume-content.php:3503
 msgid "Find the Coaching Checklist section in your Zúme Guidebook, and take this quick (5-minutes or less) self-assessment:"
 msgstr "Wa eto ikoni ninu iwe ikoni Zume , se idanwo iseju marun."
 
-#: functions/zume-content.php:3504
+#: functions/zume-content.php:3506
 msgid "Read through the Disciple Training Tools in the far left column of the Checklist."
 msgstr "Ka Gbogbo Eroja ikoni."
 
-#: functions/zume-content.php:3505
+#: functions/zume-content.php:3507
 msgid "Mark each one of the Training Tools, using the following method:"
 msgstr "Mu ikokan ninu eroja ikoni."
 
-#: functions/zume-content.php:3507
+#: functions/zume-content.php:3509
 msgid "If you're unfamiliar or don't understand the Tool – check the BLACK column"
 msgstr "Ti eroja na o ba ye e."
 
-#: functions/zume-content.php:3510
+#: functions/zume-content.php:3512
 msgid "If you're somewhat familiar but still not sure about the Tool – check the RED column"
 msgstr "Ti o ba da e loju, o le mo awon eroja na."
 
-#: functions/zume-content.php:3513
+#: functions/zume-content.php:3515
 msgid "If you understand and can train the basics on the Tool – check the YELLOW column"
 msgstr "Tio ba da e loju, o le ko awon eroja na"
 
-#: functions/zume-content.php:3516
+#: functions/zume-content.php:3518
 msgid "If you feel confident and can effectively train the Tool – check the GREEN column"
 msgstr "Tio ba ni igboya to, o le ko awon eroja na"
 
-#: functions/zume-content.php:3552
+#: functions/zume-content.php:3554
 msgid "Zúme Video Scripts: Coaching Checklist"
 msgstr "Akosile Fidio Zume"
 
-#: functions/zume-content.php:3563
+#: functions/zume-content.php:3565
 msgid "Which Training Tools did you feel you would be able to train well?"
 msgstr "Awon eroja ikeko loro boya ole ko da da."
 
-#: functions/zume-content.php:3564
+#: functions/zume-content.php:3566
 msgid "Which ones made you feel vulnerable as a trainer?"
 msgstr "E wo loje ipalara fun o gege bi olukoni?"
 
-#: functions/zume-content.php:3565
+#: functions/zume-content.php:3567
 msgid "Are there any Training Tools that you would add or subtract from the Checklist? Why?"
 msgstr "Se irin se eto?"
 
-#: functions/zume-content.php:3574
+#: functions/zume-content.php:3576
 msgid "REMEMBER – Be sure to share your Coaching Checklist results with training partner or other mentor. If you're helping coach or mentor someone, use this tool to help you assess which areas need your attention and training."
 msgstr "RANTI- pe awon oludari eto re wa ."
 
-#: functions/zume-content.php:3598
+#: functions/zume-content.php:3600
 msgid "What happens to churches as they grow and start new churches that start new churches? How do they stay connected and live life together as an extended, spiritual family? They become a network!"
 msgstr "Kilo sele si awon soosi ti tio se bere"
 
-#: functions/zume-content.php:3629
+#: functions/zume-content.php:3631
 msgid "Zúme Video Scripts: Leadership in Networks"
 msgstr "Akosile Fidio Zume "
 
-#: functions/zume-content.php:3637
+#: functions/zume-content.php:3639
 #, fuzzy
 msgid "Are there advantages when networks of simple churches are connected by deep, personal relationships? What are some examples that come to mind?"
 msgstr "Se anfani wa ninu ise netiwoki ni soosi?"
 
-#: functions/enqueue-scripts.php:245 functions/zume-content.php:3658
-#: template-gmo.php:378 template-how-to-follow-jesus.php:306
+#: functions/utilities/enqueue-scripts.php:252 functions/zume-content.php:3660
+#: template-zume-landing.php:319 template-zume-landing.php:514
 #: template-zume-training.php:821
 msgid "Peer Mentoring Groups"
 msgstr "Egbe Olutoju Eni"
 
-#: functions/zume-content.php:3661
+#: functions/zume-content.php:3663
 msgid "Making disciples who make disciples means making leaders who make leaders. How do you develop stronger leaders? By teaching them how to love one another better. Peer Mentoring Groups help leaders love deeper."
 msgstr "Sise egbe lati ni oludari."
 
-#: functions/zume-content.php:3664
+#: functions/zume-content.php:3666
 msgid "Find the Peer Mentoring Groups section in your Zúme Guidebook, and listen to the audio below."
 msgstr "Wa egbe olutoju eni ninu iwe Akosile Zume."
 
-#: functions/zume-content.php:3697
+#: functions/zume-content.php:3699
 msgid "Zúme Video Scripts: Peer Mentoring Groups"
 msgstr "Akosile Fidio Zume"
 
-#: functions/zume-content.php:3712
+#: functions/zume-content.php:3714
 msgid "Practice (60min)"
 msgstr "Ilowo"
 
-#: functions/zume-content.php:3720
+#: functions/zume-content.php:3722
 msgid "Find the Peer Mentoring Groups section in your Zúme Training Guide, and follow these steps."
 msgstr "Wa egbe olutoju eni ninu ise Zume."
 
-#: functions/zume-content.php:3731
+#: functions/zume-content.php:3733
 msgid "GROUPS"
 msgstr "EGBE"
 
-#: functions/zume-content.php:3735
+#: functions/zume-content.php:3737
 msgid "Break into groups of two or three and work through the 3/3 sections of the Peer Mentoring Group format. Peer Mentoring is something that happens once a month or once a quarter and takes some time for the whole group to participate, so you will not have time for everyone to experience the full mentoring process in this session."
 msgstr "Pin pin egbe si iyana otooto"
 
-#: functions/zume-content.php:3742
+#: functions/zume-content.php:3744
 msgid "To practice, choose one person in your group to be the \"mentee\" for this session and have the other members spend time acting as Peer Mentors by working through the suggested questions list and providing guidance and encouragement for the Mentee's work."
 msgstr "Lati adase, yan eniyan kan ninu egbe re lati je omo ile-iwe fun igba yii ki o je ki awon omo egbe miiran lo akoko sise bi awon ibeere ti o ni imoran ati pese itosona ati iwuri fun ise awon omo ile-iwe.  "
 
-#: functions/zume-content.php:3744
+#: functions/zume-content.php:3746
 msgid "By the time you're finished, everyone should have a basic understanding of asking and answering."
 msgstr "Ta ba kpari, o ye ki gbogbo eniyan ni oye ipile ti ibeere ati idahun."
 
-#: functions/zume-content.php:3753
+#: functions/zume-content.php:3755
 msgid "REMEMBER – Spend time studying the Four Fields Diagnostic Diagram and Generational Map in the Peer Mentoring Groups section of your Zúme Training Guide. Make sure everyone in your group has a basic understanding of these tools before asking the suggested questions."
 msgstr "Ranti"
 
-#: functions/zume-content.php:3769
+#: functions/zume-content.php:3771
 msgid "CONGRATULATIONS ON COMPLETING ZÚME TRAINING!"
 msgstr "KU ORIRE FUN ASEYORI ZUME"
 
-#: functions/zume-content.php:3776
+#: functions/zume-content.php:3778
 msgid "You and your group are now ready to take leadership to a new level! Here are a few more steps to help you KEEP growing!"
 msgstr "Ewo ati awon"
 
-#: functions/zume-content.php:3806
+#: functions/zume-content.php:3808
 msgid "Zúme Video Scripts: Completion of Training"
 msgstr "Iwe Afowoko Fidio Zume: Ipari Ikeko"
 
 #: functions/zume-dashboard.php:81 functions/zume-dashboard.php:112
-#: functions/zume-dashboard.php:208 functions/zume-v4-groups.php:77
-#: functions/zume-v4-groups.php:815 functions/zume-v4-groups.php:917
-#: functions/zume-v4-groups.php:1041
+#: functions/zume-dashboard.php:208 functions/zume-v4-groups.php:79
+#: functions/zume-v4-groups.php:817 functions/zume-v4-groups.php:919
+#: functions/zume-v4-groups.php:1043
 msgid "No Name"
 msgstr "Kosi Oruko"
 
-#: functions/enqueue-scripts.php:334 functions/zume-functions.php:414
+#: functions/utilities/enqueue-scripts.php:341 functions/zume-functions.php:424
 #: template-zume-dashboard.php:1405
 msgid "Phone Number"
 msgstr "Nomba"
 
-#: functions/zume-functions.php:415
+#: functions/zume-functions.php:425
 msgid "User Address"
 msgstr "Adiresi Olumulo"
 
-#: functions/zume-functions.php:416
+#: functions/zume-functions.php:426
 msgid "GeoCoded IP"
 msgstr "GeoCoded IP"
 
@@ -1848,12 +1851,12 @@ msgid "Logout"
 msgstr "Iba jade"
 
 #. Template Name of the plugin/theme
-#: functions/enqueue-scripts.php:242 functions/zume-v4-seo-strings.php:25
-#: template-zume-training.php:745
+#: functions/utilities/enqueue-scripts.php:249
+#: functions/zume-v4-seo-strings.php:25 template-zume-training.php:745
 msgid "Three-Month Plan"
 msgstr "Eto Osu Meta "
 
-#: functions/enqueue-scripts.php:308 template-zume-progress.php:30
+#: functions/utilities/enqueue-scripts.php:315 template-zume-progress.php:30
 msgid "Progress"
 msgstr "Ilosiwaju"
 
@@ -1998,13 +2001,14 @@ msgstr "Ona asopo"
 msgid "Unlink Group"
 msgstr "Tu egbe "
 
-#: functions/enqueue-scripts.php:124 functions/enqueue-scripts.php:351
-#: template-zume-3plan.php:165 template-zume-dashboard.php:1497
+#: functions/utilities/enqueue-scripts.php:124
+#: functions/utilities/enqueue-scripts.php:358 template-zume-3plan.php:165
+#: template-zume-dashboard.php:1497
 msgid "Oh snap!"
 msgstr "Ha imolara!"
 
-#: functions/enqueue-scripts.php:125 functions/enqueue-scripts.php:267
-#: template-zume-3plan.php:167
+#: functions/utilities/enqueue-scripts.php:125
+#: functions/utilities/enqueue-scripts.php:274 template-zume-3plan.php:167
 msgid "Save"
 msgstr "Fi"
 
@@ -2028,10 +2032,10 @@ msgstr "Te"
 msgid "No plans linked to this group."
 msgstr "Kosi eto to sopo mo egbe yi."
 
-#: functions/zume-gmo.php:206 parts/content-share.php:85 template-gmo.php:421
-#: template-how-to-follow-jesus.php:349 template-pieces-page.php:217
+#: parts/content-share.php:87 template-pieces-page.php:214
 #: template-zume-about.php:51 template-zume-about.php:68
-#: template-zume-faq.php:199 template-zume-privacy-policy.php:186
+#: template-zume-faq.php:199 template-zume-landing.php:188
+#: template-zume-landing.php:215 template-zume-privacy-policy.php:186
 #: template-zume-progress.php:119
 #, fuzzy
 msgid "Zúme uses an online training platform to equip participants in basic disciple-making and simple church planting multiplication principles, processes, and practices."
@@ -2042,9 +2046,9 @@ msgstr "Zume lo awon ohun elo ayelujara."
 msgid "Goals of the Zúme Project:"
 msgstr "Ilepa Zume je ise Agbese:"
 
-#: template-gmo.php:418 template-how-to-follow-jesus.php:346
 #: template-zume-about.php:65 template-zume-faq.php:196
-#: template-zume-privacy-policy.php:183 template-zume-progress.php:116
+#: template-zume-landing.php:212 template-zume-privacy-policy.php:183
+#: template-zume-progress.php:116
 msgid "Zúme means yeast in Greek. In Matthew 13:33, Jesus is quoted as saying, \"The Kingdom of Heaven is like a woman who took yeast and mixed it into a large amount of flour until it was all leavened.\" This illustrates how ordinary people, using ordinary resources, can have an extraordinary impact for the Kingdom of God. Zúme aims to equip and empower ordinary believers to saturate the globe with multiplying disciples in our generation."
 msgstr "Itumo zume ni iwukara ni ede Giriki."
 
@@ -2133,7 +2137,7 @@ msgstr "Asiko Ipade"
 msgid "Address"
 msgstr "Adiresi"
 
-#: functions/enqueue-scripts.php:262 template-zume-dashboard.php:135
+#: functions/utilities/enqueue-scripts.php:269 template-zume-dashboard.php:135
 msgid "Members"
 msgstr "Egbe"
 
@@ -2149,15 +2153,15 @@ msgstr "Se Igba Miran"
 msgid "Archive Group"
 msgstr "Egbe Pamosi"
 
-#: functions/enqueue-scripts.php:297 template-zume-dashboard.php:229
+#: functions/utilities/enqueue-scripts.php:304 template-zume-dashboard.php:229
 msgid "invites you to join"
 msgstr "nkepe o lati darapo"
 
-#: functions/enqueue-scripts.php:298 template-zume-dashboard.php:235
+#: functions/utilities/enqueue-scripts.php:305 template-zume-dashboard.php:235
 msgid "Accept"
 msgstr "Gba"
 
-#: functions/enqueue-scripts.php:299 template-zume-dashboard.php:237
+#: functions/utilities/enqueue-scripts.php:306 template-zume-dashboard.php:237
 msgid "Decline"
 msgstr "Kiko"
 
@@ -2193,7 +2197,7 @@ msgstr "Akapo Fifio"
 msgid "How Zúme Works"
 msgstr "Ise Ti Zume Se"
 
-#: functions/enqueue-scripts.php:250 template-zume-dashboard.php:302
+#: functions/utilities/enqueue-scripts.php:257 template-zume-dashboard.php:302
 #: template-zume-one-page-course.php:30 template-zume-one-page-course.php:43
 #: template-zume-overview.php:92 template-zume-overview.php:214
 #: template-zume-training.php:145
@@ -2216,7 +2220,7 @@ msgstr "Ee Mi Mimis"
 msgid "S.O.A.P.S Bible Reading"
 msgstr "Kika Bibeli"
 
-#: functions/enqueue-scripts.php:251 template-zume-dashboard.php:350
+#: functions/utilities/enqueue-scripts.php:258 template-zume-dashboard.php:350
 #: template-zume-one-page-course.php:31 template-zume-one-page-course.php:48
 #: template-zume-overview.php:102 template-zume-overview.php:215
 #: template-zume-training.php:240
@@ -2227,7 +2231,7 @@ msgstr "Igba Keji"
 msgid "Producers vs Consumers"
 msgstr "O n se pelu Olumulo"
 
-#: functions/enqueue-scripts.php:252 template-zume-dashboard.php:382
+#: functions/utilities/enqueue-scripts.php:259 template-zume-dashboard.php:382
 #: template-zume-one-page-course.php:32 template-zume-one-page-course.php:53
 #: template-zume-overview.php:112 template-zume-overview.php:216
 #: template-zume-training.php:319
@@ -2238,7 +2242,7 @@ msgstr "Igba Keta"
 msgid "Spiritual Economy"
 msgstr "Aje Emi"
 
-#: functions/enqueue-scripts.php:253 template-zume-dashboard.php:414
+#: functions/utilities/enqueue-scripts.php:260 template-zume-dashboard.php:414
 #: template-zume-one-page-course.php:33 template-zume-one-page-course.php:58
 #: template-zume-overview.php:122 template-zume-overview.php:217
 #: template-zume-training.php:392
@@ -2265,7 +2269,7 @@ msgstr "Oju to Riran"
 msgid "Lord's Supper"
 msgstr "Emi Oluwa"
 
-#: functions/enqueue-scripts.php:254 template-zume-dashboard.php:462
+#: functions/utilities/enqueue-scripts.php:261 template-zume-dashboard.php:462
 #: template-zume-one-page-course.php:34 template-zume-one-page-course.php:63
 #: template-zume-overview.php:132 template-zume-overview.php:218
 #: template-zume-training.php:491
@@ -2276,7 +2280,7 @@ msgstr "Igba Elekarun"
 msgid "Person of Peace"
 msgstr "Alafia fun Eniyan"
 
-#: functions/enqueue-scripts.php:255 template-zume-dashboard.php:486
+#: functions/utilities/enqueue-scripts.php:262 template-zume-dashboard.php:486
 #: template-zume-one-page-course.php:35 template-zume-one-page-course.php:68
 #: template-zume-overview.php:143 template-zume-overview.php:219
 #: template-zume-training.php:564
@@ -2295,7 +2299,7 @@ msgstr "Ẹgbẹ 3/3"
 msgid "3/3 Group Live"
 msgstr "Ẹgbẹ 3/3 wa laaye"
 
-#: functions/enqueue-scripts.php:256 template-zume-dashboard.php:518
+#: functions/utilities/enqueue-scripts.php:263 template-zume-dashboard.php:518
 #: template-zume-one-page-course.php:36 template-zume-one-page-course.php:73
 #: template-zume-overview.php:154 template-zume-overview.php:220
 #: template-zume-training.php:613
@@ -2306,21 +2310,20 @@ msgstr "Igba elekeje"
 msgid "Training Cycle"
 msgstr "Ikeko Omo"
 
-#: functions/enqueue-scripts.php:257 template-zume-dashboard.php:534
+#: functions/utilities/enqueue-scripts.php:264 template-zume-dashboard.php:534
 #: template-zume-one-page-course.php:37 template-zume-one-page-course.php:78
 #: template-zume-overview.php:165 template-zume-overview.php:221
 #: template-zume-training.php:654
 msgid "Session 8"
 msgstr "Igba e le Kejo"
 
-#: functions/enqueue-scripts.php:238 template-gmo.php:386
-#: template-how-to-follow-jesus.php:314 template-zume-dashboard.php:542
-#: template-zume-training.php:667
+#: functions/utilities/enqueue-scripts.php:245 template-zume-dashboard.php:542
+#: template-zume-landing.php:522 template-zume-training.php:667
 #, fuzzy
 msgid "Leadership Cells"
 msgstr "Olori Seli"
 
-#: functions/enqueue-scripts.php:258 template-zume-dashboard.php:550
+#: functions/utilities/enqueue-scripts.php:265 template-zume-dashboard.php:550
 #: template-zume-one-page-course.php:38 template-zume-one-page-course.php:83
 #: template-zume-overview.php:176 template-zume-overview.php:222
 #: template-zume-training.php:695
@@ -2343,21 +2346,20 @@ msgstr "Apakan Ijo Meji"
 msgid "Completion of Training"
 msgstr "Ipari Ikeko"
 
-#: functions/enqueue-scripts.php:259 template-zume-dashboard.php:590
+#: functions/utilities/enqueue-scripts.php:266 template-zume-dashboard.php:590
 #: template-zume-one-page-course.php:39 template-zume-one-page-course.php:88
 #: template-zume-overview.php:223 template-zume-training.php:776
 msgid "Session 10"
 msgstr "Igba elekewa"
 
-#: functions/enqueue-scripts.php:243 template-gmo.php:382
-#: template-how-to-follow-jesus.php:310 template-zume-dashboard.php:598
+#: functions/utilities/enqueue-scripts.php:250 template-zume-dashboard.php:598
+#: template-zume-landing.php:299 template-zume-landing.php:518
 #: template-zume-training.php:789
 msgid "Coaching Checklist"
 msgstr "Oluko"
 
-#: functions/enqueue-scripts.php:244 template-gmo.php:390
-#: template-how-to-follow-jesus.php:318 template-zume-dashboard.php:606
-#: template-zume-training.php:808
+#: functions/utilities/enqueue-scripts.php:251 template-zume-dashboard.php:606
+#: template-zume-landing.php:526 template-zume-training.php:808
 msgid "Leadership in Networks"
 msgstr "Olori ninu Netiwoki"
 
@@ -2369,7 +2371,7 @@ msgstr "Egbe Ibojuwo"
 msgid "Session videos will be added as you complete sessions."
 msgstr "Igba Fidio"
 
-#: functions/enqueue-scripts.php:304 template-zume-dashboard.php:714
+#: functions/utilities/enqueue-scripts.php:311 template-zume-dashboard.php:714
 #: template-zume-dashboard.php:845
 msgid "Archived Groups"
 msgstr "Egbe Pamosi"
@@ -2399,9 +2401,9 @@ msgstr "Netiwoki"
 msgid "Create Group"
 msgstr "Seda Egbe"
 
-#: functions/enqueue-scripts.php:295 functions/enqueue-scripts.php:355
-#: template-zume-dashboard.php:916 template-zume-dashboard.php:1052
-#: template-zume-dashboard.php:1249
+#: functions/utilities/enqueue-scripts.php:302
+#: functions/utilities/enqueue-scripts.php:362 template-zume-dashboard.php:916
+#: template-zume-dashboard.php:1052 template-zume-dashboard.php:1249
 msgid "Group Name"
 msgstr "Oruko Egbe"
 
@@ -2432,7 +2434,7 @@ msgstr "Se afikun awon egbe"
 msgid "Add"
 msgstr "Fikun"
 
-#: functions/enqueue-scripts.php:346 template-zume-dashboard.php:1006
+#: functions/utilities/enqueue-scripts.php:353 template-zume-dashboard.php:1006
 #: template-zume-dashboard.php:1500
 msgid "Submit"
 msgstr "yonda"
@@ -2466,8 +2468,8 @@ msgstr "Ṣafikun alabaṣiṣẹpọ kan tabi awọn alabaṣepọ afikun yoo f
 msgid "Update"
 msgstr "Imudojuwon"
 
-#: functions/enqueue-scripts.php:279 functions/enqueue-scripts.php:353
-#: template-zume-dashboard.php:1166
+#: functions/utilities/enqueue-scripts.php:286
+#: functions/utilities/enqueue-scripts.php:360 template-zume-dashboard.php:1166
 msgid "Archive"
 msgstr "Pamosi"
 
@@ -2505,84 +2507,86 @@ msgstr "Lati da ise yi pada, yoo tun egbe na pin."
 msgid "Remove"
 msgstr "Yo"
 
-#: functions/enqueue-scripts.php:322 template-zume-dashboard.php:1350
+#: functions/utilities/enqueue-scripts.php:329 template-zume-dashboard.php:1350
 msgid "Connect Me to a Coach"
 msgstr "Dari mi si odo Oludari Kan "
 
-#: functions/enqueue-scripts.php:323 template-zume-dashboard.php:1361
+#: functions/utilities/enqueue-scripts.php:330 template-zume-dashboard.php:1361
 msgid "Coaches"
 msgstr "Olutonisona"
 
-#: functions/enqueue-scripts.php:324 template-zume-dashboard.php:1362
+#: functions/utilities/enqueue-scripts.php:331 template-zume-dashboard.php:1362
 msgid "Our network of volunteer coaches are people like you, people who are passionate about loving God, loving others, and obeying the Great Commission."
 msgstr "Netiwoki Atunniwa."
 
-#: functions/enqueue-scripts.php:325 template-zume-dashboard.php:1367
+#: functions/utilities/enqueue-scripts.php:332 template-zume-dashboard.php:1367
 msgid "Advocates"
 msgstr "Alagbwi"
 
-#: functions/enqueue-scripts.php:326 template-zume-dashboard.php:1368
+#: functions/utilities/enqueue-scripts.php:333 template-zume-dashboard.php:1368
 msgid "A coach is someone who will come alongside you as you implement the Zúme tools and training."
 msgstr "Olu dani leko ni eyan tio wa to sona nipa imo Zume."
 
-#: functions/enqueue-scripts.php:327 template-zume-dashboard.php:1373
+#: functions/utilities/enqueue-scripts.php:334 template-zume-dashboard.php:1373
 msgid "Local"
 msgstr "Agbegbe"
 
-#: functions/enqueue-scripts.php:328 functions/enqueue-scripts.php:345
-#: template-zume-dashboard.php:1374
+#: functions/utilities/enqueue-scripts.php:335
+#: functions/utilities/enqueue-scripts.php:352 template-zume-dashboard.php:1374
 msgid "On submitting this request, we will do our best to connect you with a coach near you."
 msgstr "Tio ba ti fohun sile, ao fi adani leko jinkin re."
 
-#: functions/enqueue-scripts.php:329 template-zume-dashboard.php:1379
+#: functions/utilities/enqueue-scripts.php:336 template-zume-dashboard.php:1379
 msgid "It's Free"
 msgstr "O fe Ni"
 
-#: functions/enqueue-scripts.php:330 template-zume-dashboard.php:1380
+#: functions/utilities/enqueue-scripts.php:337 template-zume-dashboard.php:1380
 msgid "Coaching is free. You can opt out at any time."
 msgstr "Ofe ni idani leko."
 
-#: functions/enqueue-scripts.php:131 functions/enqueue-scripts.php:332
-#: template-zume-dashboard.php:1390
+#: functions/utilities/enqueue-scripts.php:131
+#: functions/utilities/enqueue-scripts.php:339 template-zume-dashboard.php:1390
 msgid "Name"
 msgstr "Oruko"
 
-#: functions/enqueue-scripts.php:117 functions/enqueue-scripts.php:333
-#: template-zume-dashboard.php:1394 template-zume-dashboard.php:1395
+#: functions/utilities/enqueue-scripts.php:117
+#: functions/utilities/enqueue-scripts.php:340 template-zume-dashboard.php:1394
+#: template-zume-dashboard.php:1395
 msgid "First and last name"
 msgstr "Oruko akoko ati igbeyin"
 
-#: functions/enqueue-scripts.php:336 template-zume-dashboard.php:1433
+#: functions/utilities/enqueue-scripts.php:343 template-zume-dashboard.php:1433
 msgid "Email is required."
 msgstr "A ni lo emaili."
 
-#: functions/enqueue-scripts.php:121 functions/enqueue-scripts.php:337
-#: template-zume-dashboard.php:1441
+#: functions/utilities/enqueue-scripts.php:121
+#: functions/utilities/enqueue-scripts.php:344 template-zume-dashboard.php:1441
 msgid "City"
 msgstr "Ilu"
 
-#: functions/enqueue-scripts.php:339 template-zume-dashboard.php:1466
+#: functions/utilities/enqueue-scripts.php:346 template-zume-dashboard.php:1466
 msgid "How should we contact you?"
 msgstr "Bawo la se ba o?"
 
-#: functions/enqueue-scripts.php:340 template-zume-dashboard.php:1473
+#: functions/utilities/enqueue-scripts.php:347 template-zume-dashboard.php:1473
 msgid "Text"
 msgstr "Oro"
 
-#: functions/enqueue-scripts.php:118 functions/enqueue-scripts.php:341
-#: template-zume-dashboard.php:1475
+#: functions/utilities/enqueue-scripts.php:118
+#: functions/utilities/enqueue-scripts.php:348 template-zume-dashboard.php:1475
 msgid "Phone"
 msgstr "Ero ibaraeni soro"
 
-#: functions/enqueue-scripts.php:342 template-zume-dashboard.php:1477
+#: functions/utilities/enqueue-scripts.php:349 template-zume-dashboard.php:1477
 msgid "WhatsApp"
 msgstr "WhatsApp"
 
-#: functions/enqueue-scripts.php:343 template-zume-dashboard.php:1479
+#: functions/utilities/enqueue-scripts.php:350
+#: functions/utilities/enqueue-scripts.php:370 template-zume-dashboard.php:1479
 msgid "Other"
 msgstr "Miran"
 
-#: functions/enqueue-scripts.php:123 template-zume-dashboard.php:1486
+#: functions/utilities/enqueue-scripts.php:123 template-zume-dashboard.php:1486
 msgid "Affiliation Key"
 msgstr "Kokoro"
 
@@ -3128,19 +3132,19 @@ msgstr "Iseda"
 msgid "Our Privacy Policy may change from time to time and all updates will be posted on this page."
 msgstr "Awon imulo ipamo wa le yi pada nigba ku gba, a de ma se afihan re lori iwe yi."
 
-#: functions/enqueue-scripts.php:116
+#: functions/utilities/enqueue-scripts.php:116
 msgid "Your Profile"
 msgstr "Profaili Re"
 
-#: functions/enqueue-scripts.php:127
+#: functions/utilities/enqueue-scripts.php:127
 msgid "Linked Facebook Account"
 msgstr "Asopo pelu iroyin Facebook"
 
-#: functions/enqueue-scripts.php:128
+#: functions/utilities/enqueue-scripts.php:128
 msgid "Unlink"
 msgstr "Tu"
 
-#: functions/enqueue-scripts.php:129
+#: functions/utilities/enqueue-scripts.php:129
 msgid "Linked Google Account"
 msgstr "Asopo Pelu Iroyin Google"
 
@@ -3244,15 +3248,15 @@ msgstr "Iwon kunkun ile"
 msgid "Zúme Course"
 msgstr "Ise Zume"
 
-#: functions/login/zume-login.php:1312
+#: functions/login/zume-login.php:1317
 msgid "Password reset is not allowed for this user"
 msgstr "Atunse oro isina ko see se"
 
-#: functions/login/zume-login.php:1339
+#: functions/login/zume-login.php:1344
 msgid "Could not save password reset key to database."
 msgstr "Aile tun oro isina se."
 
-#: functions/restrict-rest-api.php:73
+#: functions/utilities/restrict-rest-api.php:73
 msgid "The Wordpress built in API is disabled."
 msgstr "Oro Ami "
 
@@ -3272,7 +3276,7 @@ msgstr "Ninu fidio yi, ao ko gbogbo ipin meteta yi."
 msgid "Find the \"3/3 Group Format\" section in your Zúme Guidebook, and watch the video below."
 msgstr "Wa ipin meteta ninun iwe ikosile zume."
 
-#: functions/zume-content.php:3492
+#: functions/zume-content.php:3494
 msgid "Assess yourself using the coaching checklist."
 msgstr "Se ayewo kooshi"
 
@@ -3301,33 +3305,32 @@ msgstr "Wo data ti a kojo nipase ibasepo re pelu wa."
 msgid "Zúme One Page Course"
 msgstr "Eko iwe kan zume"
 
-#: functions/zume-gmo.php:166 functions/zume-v4-seo-strings.php:14
-#: parts/content-share.php:40 template-pieces-page.php:176
-#: template-zume-training.php:91
+#: functions/zume-v4-seo-strings.php:14 parts/content-share.php:40
+#: template-pieces-page.php:171 template-zume-training.php:91
 msgid "Groups"
 msgstr "Awọn ẹgbẹ"
 
-#: functions/login/zume-login.php:93
+#: functions/login/zume-login.php:98
 msgid "Failed Google Verification of User Token"
 msgstr "Kuna google ayewo ti ami olumulo"
 
-#: functions/login/zume-login.php:222 functions/login/zume-login.php:456
+#: functions/login/zume-login.php:227 functions/login/zume-login.php:461
 msgid "Facebook email already linked with another account. Login to this account or use forgot password tool to access account."
 msgstr "Imeeli Facebook ti sopọ mọ tẹlẹ pẹlu akọọlẹ miiran. Buwolu wọle si iwe apamọ yii tabi lo ọpa ọrọ igbaniwọle gbagbe lati wọle si iwe ipamọ."
 
-#: functions/login/zume-login.php:228 functions/login/zume-login.php:462
+#: functions/login/zume-login.php:233 functions/login/zume-login.php:467
 msgid "Facebook already linked with another account."
 msgstr "Facebook ti sopọ mọ tẹlẹ pẹlu iroyin miiran."
 
-#: functions/login/zume-login.php:828 functions/login/zume-login.php:908
+#: functions/login/zume-login.php:833 functions/login/zume-login.php:913
 msgid "Oops. Something went wrong."
 msgstr "Oops. Nnkan o lo daadaa."
 
-#: functions/login/zume-login.php:1159
+#: functions/login/zume-login.php:1164
 msgid "Missing form verification. Refresh and try again."
 msgstr "Ijerisi fọọmu ti sonu. Sọ ki o tun gbiyanju lẹẹkansii."
 
-#: functions/login/zume-login.php:1201
+#: functions/login/zume-login.php:1206
 msgid "ERROR: Invalid username or email."
 msgstr "Aṣiṣe: Orukọ olumulo tabi imeeli imeeli ti ko tọna."
 
@@ -3347,91 +3350,89 @@ msgstr "Ọrọ aṣina"
 msgid "Remember Me"
 msgstr "Ranti mi"
 
-#: functions/zume-gmo.php:111 template-pieces-page.php:121
+#: template-pieces-page.php:121 template-zume-landing.php:50
 msgid "Ask Yourself"
 msgstr "Beere lọwọ ararẹ"
 
-#: functions/zume-gmo.php:139 parts/content-share.php:13
-#: template-pieces-page.php:149
+#: parts/content-share.php:13 template-pieces-page.php:144
 msgid "Great job! Here's your progress with this concept"
 msgstr "Ise nla! Eyi ni ilọsiwaju rẹ pẹlu ero yii"
 
-#: functions/enqueue-scripts.php:310 functions/zume-gmo.php:145
-#: parts/content-share.php:19 template-pieces-page.php:155
+#: functions/utilities/enqueue-scripts.php:317 parts/content-share.php:19
+#: template-pieces-page.php:150
 msgid "Heard"
 msgstr "Gbọ"
 
-#: functions/enqueue-scripts.php:311 functions/zume-gmo.php:149
-#: parts/content-share.php:23 template-pieces-page.php:159
+#: functions/utilities/enqueue-scripts.php:318 parts/content-share.php:23
+#: template-pieces-page.php:154
 msgid "Obeyed"
 msgstr "O gba igboran"
 
-#: functions/enqueue-scripts.php:312 functions/zume-gmo.php:153
-#: parts/content-share.php:27 template-pieces-page.php:163
+#: functions/utilities/enqueue-scripts.php:319 parts/content-share.php:27
+#: template-pieces-page.php:158
 msgid "Shared"
 msgstr "Pipin"
 
-#: functions/enqueue-scripts.php:313 functions/zume-gmo.php:157
-#: parts/content-share.php:31 template-pieces-page.php:167
+#: functions/utilities/enqueue-scripts.php:320 parts/content-share.php:31
+#: template-pieces-page.php:162
 msgid "Trained"
 msgstr "Oṣiṣẹ"
 
-#: functions/zume-gmo.php:165 functions/zume-v4-seo-strings.php:13
-#: parts/content-share.php:39 template-pieces-page.php:175
-#: template-zume-training.php:85
+#: functions/zume-v4-seo-strings.php:13 parts/content-share.php:39
+#: template-pieces-page.php:170 template-zume-training.php:85
 msgid "Course Overview"
 msgstr "Akopọ Dajudaju"
 
-#: functions/enqueue-scripts.php:314 functions/zume-gmo.php:167
+#: functions/utilities/enqueue-scripts.php:321
 #: functions/zume-v4-seo-strings.php:15 parts/content-share.php:41
-#: template-pieces-page.php:177 template-zume-training.php:97
+#: template-pieces-page.php:172 template-zume-training.php:97
 msgid "Checklist"
 msgstr "Akosile"
 
-#: parts/content-share.php:42 template-pieces-page.php:178
+#: parts/content-share.php:42 template-pieces-page.php:173
 #: translations/mobile-pwa-strings.php:30
 msgid "Start Session"
 msgstr "Bẹrẹ Igba"
 
-#: functions/enqueue-scripts.php:281 functions/zume-gmo.php:191
-#: parts/content-share.php:70 template-pieces-page.php:202
+#: functions/utilities/enqueue-scripts.php:288 parts/content-share.php:72
+#: template-pieces-page.php:199 template-zume-landing.php:174
 msgid "You're missing out."
 msgstr "O sonu."
 
-#: functions/enqueue-scripts.php:282 functions/zume-gmo.php:191
-#: parts/content-share.php:70 template-pieces-page.php:202
+#: functions/utilities/enqueue-scripts.php:289 parts/content-share.php:72
+#: template-pieces-page.php:199 template-zume-landing.php:174
 msgid "Register Now!"
 msgstr "Forukọsilẹ Bayi!"
 
-#: functions/enqueue-scripts.php:283 functions/zume-gmo.php:194
-#: parts/content-share.php:73 template-pieces-page.php:205
+#: functions/utilities/enqueue-scripts.php:290 parts/content-share.php:75
+#: template-pieces-page.php:202 template-zume-landing.php:178
 msgid "track your personal training progress"
 msgstr "orin ilọsiwaju ikẹkọ ti ara ẹni rẹ"
 
-#: functions/enqueue-scripts.php:284 functions/zume-gmo.php:195
-#: parts/content-share.php:74 template-pieces-page.php:206
+#: functions/utilities/enqueue-scripts.php:291 parts/content-share.php:76
+#: template-pieces-page.php:203 template-zume-landing.php:179
 msgid "access group planning tools"
 msgstr "wọle si awọn irinṣẹ igbaradi ẹgbẹ"
 
-#: functions/enqueue-scripts.php:285 functions/zume-gmo.php:196
-#: parts/content-share.php:75 template-pieces-page.php:207
+#: functions/utilities/enqueue-scripts.php:292 parts/content-share.php:77
+#: template-pieces-page.php:204 template-zume-landing.php:177
 msgid "connect with a coach"
 msgstr "sopọ pẹlu olukọ kan"
 
-#: functions/enqueue-scripts.php:286 functions/zume-gmo.php:197
-#: parts/content-share.php:76 template-pieces-page.php:208
+#: functions/utilities/enqueue-scripts.php:293 parts/content-share.php:78
+#: template-pieces-page.php:205
 msgid "add your effort to the global vision!"
 msgstr "ṣafikun ipa rẹ si iran agbaye!\n"
 "\n"
 "ṣafikun ipa rẹ iran akitiyan agbaye!"
 
-#: functions/enqueue-scripts.php:287 functions/zume-gmo.php:201
-#: parts/content-share.php:80 template-pieces-page.php:212
+#: functions/utilities/enqueue-scripts.php:294 parts/content-share.php:82
+#: template-pieces-page.php:209 template-zume-landing.php:183
 msgid "Register for Free"
 msgstr "Forukọsilẹ fun ọfẹ"
 
-#: functions/zume-gmo.php:207 parts/content-share.php:86
-#: template-pieces-page.php:218
+#: parts/content-share.php:88 template-pieces-page.php:215
+#: template-zume-landing.php:189
 msgid "See Entire Training"
 msgstr "Wo Gbogbo ikẹkọ"
 
@@ -3452,7 +3453,7 @@ msgid "My Checklist"
 msgstr "Akosile mi"
 
 #. Theme Name of the plugin/theme
-#: front-page.php:94 template-gmo.php:416 template-how-to-follow-jesus.php:344
+#: front-page.php:94 template-zume-landing.php:210
 #: template-zume-training.php:125
 msgid "Zúme Training"
 msgstr "Ikẹkọ Zúme"
@@ -3495,8 +3496,7 @@ msgstr "Adura, Akopọ"
 msgid "5 min"
 msgstr "Iṣẹju 5 “or” Iṣẹju marun"
 
-#: template-gmo.php:208 template-how-to-follow-jesus.php:136
-#: template-zume-training.php:164
+#: template-zume-landing.php:344 template-zume-training.php:164
 msgid "You'll see how God uses ordinary people doing simple things to make a big impact."
 msgstr "Iwọ yoo wo bi Ọlọrun ṣe nlo awọn eniyan lasan n ṣe awọn ohun ti o rọrun lati ni ipa nla."
 
@@ -3519,23 +3519,20 @@ msgstr "Iwọ yoo wo bi Ọlọrun ṣe nlo awọn eniyan lasan n ṣe awọn oh
 msgid "15 min"
 msgstr "iṣẹju 15 “or” iṣẹju mẹẹdogun"
 
-#: template-gmo.php:212 template-how-to-follow-jesus.php:140
-#: template-zume-training.php:178
+#: template-zume-landing.php:348 template-zume-training.php:178
 msgid "Discover the essence of being a disciple, making a disciple, and what is the church."
 msgstr "Ṣe afẹri ọrọ pataki ti jije ọmọ-ẹhin kan, ṣiṣe ọmọ-ẹhin kan, ati kini ijo naa."
 
-#: template-gmo.php:237 template-how-to-follow-jesus.php:165
-#: template-zume-training.php:191
+#: template-zume-landing.php:373 template-zume-training.php:191
 msgid "Being a disciple means we hear from God and we obey God."
 msgstr "Jije ọmọ-ẹhin tumọ si pe a gbọ lati ọdọ Ọlọrun a gbọràn sí Ọlọrun."
 
-#: template-gmo.php:254 template-how-to-follow-jesus.php:182
+#: template-zume-landing.php:258 template-zume-landing.php:390
 #: template-zume-training.php:204
 msgid "A tool for daily Bible study that helps you understand, obey, and share God’s Word."
 msgstr "Ọpa kan fun ikẹkọọ Bibeli lojoojumọ ti o ṣe iranlọwọ fun ọ lati ni oye, gbọràn, ki o pin Ọrọ Ọlọrun."
 
-#: template-gmo.php:271 template-how-to-follow-jesus.php:199
-#: template-zume-training.php:217
+#: template-zume-landing.php:407 template-zume-training.php:217
 msgid "A tool for two or three people of the same gender to meet weekly and encourage each other in areas that are going well and reveal areas that need correction."
 msgstr "Ọpa kan fun eniyan meji tabi mẹta ti akọ tabi abo kanna lati pade ni ọsẹ kọọkan ati lati fun ara wọn ni iyanju ni awọn agbegbe ti o nlọ daradara ati ṣafihan awọn agbegbe ti o nilo atunṣe."
 
@@ -3563,13 +3560,12 @@ msgstr "Nwa siwaju"
 msgid "Check-in, Prayer, Overview"
 msgstr "Ṣayẹwo, adura, Akopọ"
 
-#: template-gmo.php:230 template-how-to-follow-jesus.php:158
+#: template-zume-landing.php:253 template-zume-landing.php:366
 #: template-zume-training.php:258
 msgid "You'll discover the four main ways God makes everyday followers more like Jesus."
 msgstr "Iwọ yoo ṣe iwari awọn ọna akọkọ mẹrin ti Ọlọrun ṣe awọn ọmọ-ẹhin lojojumọ diẹ sii bi Jesu."
 
-#: template-gmo.php:241 template-how-to-follow-jesus.php:169
-#: template-zume-training.php:271
+#: template-zume-landing.php:377 template-zume-training.php:271
 msgid "See how easy it is to spend an hour in prayer."
 msgstr "Wo bi o ti rọrun to lati lo wakati kan ninu adura."
 
@@ -3586,8 +3582,7 @@ msgstr "iṣẹju 60 “or” iṣẹju ọgọta"
 msgid "Discuss - Prayer Cycle"
 msgstr "Jiroro - Adura jara"
 
-#: template-gmo.php:341 template-how-to-follow-jesus.php:269
-#: template-zume-training.php:296
+#: template-zume-landing.php:477 template-zume-training.php:296
 msgid "A tool designed to help you be a good steward of your relationships."
 msgstr "Ọpa ti a ṣe lati ran ọ lọwọ lati jẹ iriju to dara ti awọn ibatan rẹ."
 
@@ -3599,8 +3594,7 @@ msgstr "Iwaṣe - Ṣẹda Akojọ ti 100"
 msgid "30 min"
 msgstr "Iṣẹju 30"
 
-#: template-gmo.php:292 template-how-to-follow-jesus.php:220
-#: template-zume-training.php:337
+#: template-zume-landing.php:428 template-zume-training.php:337
 msgid "Learn how God's economy is different from the world's. God invests more in those who are faithful with what they've already been given."
 msgstr "Kọ ẹkọ bi ọrọ-aje Ọlọrun ṣe yatọ si agbaye. Ọlọrun ṣe idoko-owo diẹ sii ninu awọn ti o jẹ olõtọ pẹlu nkan ti wọn ti fun tẹlẹ."
 
@@ -3608,8 +3602,7 @@ msgstr "Kọ ẹkọ bi ọrọ-aje Ọlọrun ṣe yatọ si agbaye. Ọlọrun
 msgid "Discuss - Should every disciple share?"
 msgstr "Ṣe ijiroro - Ṣe o yẹ ki gbogbo ọmọ-ẹhin ṣe pin?"
 
-#: template-gmo.php:345 template-how-to-follow-jesus.php:273
-#: template-zume-training.php:356
+#: template-zume-landing.php:481 template-zume-training.php:356
 msgid "Learn a way to share God’s Good News from the beginning of humanity all the way to the end of this age."
 msgstr "Kọ ẹkọ kan lati ṣe alabapin Awọn iroyin Rere ti Ọlọrun lati ibẹrẹ eniyan ni gbogbo ọna titi de opin ọjọ-ori yii."
 
@@ -3617,13 +3610,11 @@ msgstr "Kọ ẹkọ kan lati ṣe alabapin Awọn iroyin Rere ti Ọlọrun lat
 msgid "Practice - Sharing the Gospel"
 msgstr "ÌSE Ṣiṣẹ - Pinpin Ihinrere"
 
-#: template-gmo.php:283 template-how-to-follow-jesus.php:211
-#: template-zume-training.php:375
+#: template-zume-landing.php:419 template-zume-training.php:375
 msgid "Jesus said, “Go and make disciples of all nations, BAPTIZING them in the name of the Father and of the Son and of the Holy Spirit…” Learn how to put this into practice."
 msgstr "Jésù sọ pé, “Ẹ lọ máa sọ àwọn orílẹ̀-èdè di ọmọ ẹ̀yìn, BẸ́RẸ wọn l’orukọ Baba, ati ti Ọmọ ati ti Ẹmi Mimọ…” Kọ ẹkọ bi o ṣe le ṣe eyi."
 
-#: template-gmo.php:349 template-how-to-follow-jesus.php:277
-#: template-zume-training.php:410
+#: template-zume-landing.php:485 template-zume-training.php:410
 msgid "Learn how to share your testimony in three minutes by sharing how Jesus has impacted your life."
 msgstr "Kọ ẹkọ bii o ṣe le pin ẹri rẹ ni iṣẹju mẹta nipa pinpin bi Jesu ti ṣe kan igbesi aye rẹ."
 
@@ -3631,8 +3622,7 @@ msgstr "Kọ ẹkọ bii o ṣe le pin ẹri rẹ ni iṣẹju mẹta nipa pinpi
 msgid "Practice - Share your testimony"
 msgstr "ÌSE Ṣiṣẹ - Pin ẹri rẹ"
 
-#: template-gmo.php:216 template-how-to-follow-jesus.php:144
-#: template-zume-training.php:429
+#: template-zume-landing.php:352 template-zume-training.php:429
 msgid "Learn a simple pattern of making not just one follower of Jesus but entire spiritual families who multiply for generations to come."
 msgstr "Kọ ẹkọ ti o rọrun ti ṣiṣe kii ṣe ọmọ-ẹhin Jesu nikan ṣugbọn gbogbo awọn idile ẹmí ti o pọ si fun awọn iran ti mbọ."
 
@@ -3640,13 +3630,11 @@ msgstr "Kọ ẹkọ ti o rọrun ti ṣiṣe kii ṣe ọmọ-ẹhin Jesu nikan
 msgid "Learn what ducklings have to do with disciple-making."
 msgstr "Kọ ẹkọ kini awọn ducklings ni ṣe pẹlu ṣiṣe ọmọ-ẹhin."
 
-#: template-gmo.php:296 template-how-to-follow-jesus.php:224
-#: template-zume-training.php:455
+#: template-zume-landing.php:432 template-zume-training.php:455
 msgid "Begin to see where God’s Kingdom isn’t. These are usually the places where God wants to work the most."
 msgstr "Bẹrẹ lati wo ibiti ijọba Ọlọrun ko si. Iwọnyi jẹ igbagbogbo awọn ibiti Ọlọrun fẹ lati ṣiṣẹ julọ."
 
-#: template-gmo.php:279 template-how-to-follow-jesus.php:207
-#: template-zume-training.php:468
+#: template-zume-landing.php:415 template-zume-training.php:468
 msgid "It’s a simple way to celebrate our intimate connection and ongoing relationship with Jesus. Learn a simple way to celebrate."
 msgstr "O jẹ ọna ti o rọrun lati ṣe ayẹyẹ isopọ wa ati ibatan ti nlọ lọwọ pẹlu Jesu. Kọ ẹkọ ọna ti o rọrun lati ṣe ayẹyẹ."
 
@@ -3660,18 +3648,15 @@ msgstr "ÌSE Ṣiṣẹ - Ounjẹ Oluwa"
 msgid "10 min"
 msgstr "iṣẹju 10"
 
-#: template-gmo.php:362 template-how-to-follow-jesus.php:290
-#: template-zume-training.php:509
+#: template-zume-landing.php:498 template-zume-training.php:509
 msgid "It’s a simple way to obey God’s command to pray for others. And it's just what it sounds like — praying to God while walking around!"
 msgstr "O jẹ ọna ti o rọrun lati gbọràn si aṣẹ Ọlọrun lati gbadura fun awọn miiran. Ati pe o kan ohun ti o dun bi - gbigbadura si Ọlọrun lakoko ti nrin ni ayika!"
 
-#: template-gmo.php:358 template-how-to-follow-jesus.php:286
-#: template-zume-training.php:522
+#: template-zume-landing.php:494 template-zume-training.php:522
 msgid "Learn who a person of peace might be and how to know when you've found one."
 msgstr "Kọ ẹkọ ti ẹnikan ti o le ni alafia ati bi o ṣe le mọ nigbati o ti rii ọkan."
 
-#: template-gmo.php:245 template-how-to-follow-jesus.php:173
-#: template-zume-training.php:535
+#: template-zume-landing.php:381 template-zume-training.php:535
 msgid "Practice a simple mnemonic to remind you of ways to pray for others."
 msgstr "Ṣe ikẹkọ akọsilẹ ti o rọrun lati leti fun ọ awọn ọna lati gbadura fun awọn miiran."
 
@@ -3688,12 +3673,12 @@ msgstr "ÌSE Ṣiṣẹ - Ririn nrin"
 msgid "90 min"
 msgstr "iṣẹju 90"
 
-#: template-gmo.php:258 template-how-to-follow-jesus.php:186
+#: template-zume-landing.php:273 template-zume-landing.php:394
 #: template-zume-training.php:582
 msgid "It's important what disciples know — but it's much more important what they DO with what they know."
 msgstr "O ṣe pataki ohun ti awọn ọmọ-ẹhin mọ - ṣugbọn o ṣe pataki diẹ sii ohun ti wọn ṣe pẹlu ohun ti wọn mọ."
 
-#: template-gmo.php:267 template-how-to-follow-jesus.php:195
+#: template-zume-landing.php:278 template-zume-landing.php:403
 #: template-zume-training.php:595
 msgid "A 3/3 Group is a way for followers of Jesus to meet, pray, learn, grow, fellowship and practice obeying and sharing what they've learned. In this way, a 3/3 Group is not just a small group but a Simple Church."
 msgstr "Ẹgbẹ 3/3 jẹ ọna fun awọn ọmọlẹhin Jesu lati pade, gbadura, kọ ẹkọ, dagba, idapọ ati iṣe adaṣe ati gbigbasilẹ ohun ti wọn kọ. Ni ọna yii, Ẹgbẹ 3/3 kii ṣe ẹgbẹ kekere nikan ṣugbọn Ijo ti o rọrun."
@@ -3702,7 +3687,7 @@ msgstr "Ẹgbẹ 3/3 jẹ ọna fun awọn ọmọlẹhin Jesu lati pade, gbadur
 msgid "75 min"
 msgstr "iṣẹju 75"
 
-#: template-gmo.php:325 template-how-to-follow-jesus.php:253
+#: template-zume-landing.php:295 template-zume-landing.php:461
 #: template-zume-training.php:625
 msgid "Learn the training cycle and consider how it applies to disciple making."
 msgstr "Kọ ẹkọ eto ikẹkọ ki o ronu bi o ṣe kan si ṣiṣe ọmọ-ẹhin."
@@ -3715,23 +3700,20 @@ msgstr "ÌSE Ṣiṣẹ - 3/3 Ẹgbẹ"
 msgid "Discuss - 3/3 Group Experience"
 msgstr "Ṣe ijiroro - 3/3 iriri Ẹgbẹ"
 
-#: template-gmo.php:387 template-how-to-follow-jesus.php:315
-#: template-zume-training.php:672
+#: template-zume-landing.php:523 template-zume-training.php:672
 msgid "A Leadership Cell is a way someone who feels called to lead can develop their leadership by practicing serving."
 msgstr "Ẹjẹ Alakoso jẹ ọna ti ẹnikan ti o rilara pe a darukọ lati ṣe idagbasoke idagbasoke wọn nipa adaṣe iṣẹ iranṣẹ."
 
-#: template-gmo.php:329 template-how-to-follow-jesus.php:257
-#: template-zume-training.php:713
+#: template-zume-landing.php:465 template-zume-training.php:713
 msgid "See how disciple making doesn't have to be linear. Multiple things can happen at the same time."
 msgstr "Wo bi o ko yẹ ki ṣiṣe ọmọ-ẹhin ṣe ila. Awọn ohun pupọ le ṣẹlẹ ni akoko kanna."
 
-#: template-gmo.php:333 template-how-to-follow-jesus.php:261
+#: template-zume-landing.php:315 template-zume-landing.php:469
 #: template-zume-training.php:726
 msgid "Multiplying matters and multiplying quickly matters even more. See why pace matters."
 msgstr "Isodipupo awọn ọrọ ati isodipupo awọn nkan iyara paapaa diẹ sii. Wo idi idi ọrọ Pace."
 
-#: template-gmo.php:275 template-how-to-follow-jesus.php:203
-#: template-zume-training.php:739
+#: template-zume-landing.php:411 template-zume-training.php:739
 msgid "Learn how to obey Jesus' commands by going AND staying."
 msgstr "Kọ ẹkọ bi o ṣe le ṣègbọràn si awọn aṣẹ Jesu nipa lilọ ATI duro."
 
@@ -3755,7 +3737,7 @@ msgstr "Ṣe ijiroro - Pin Eto Oṣu mẹta 3 pẹlu ẹgbẹ"
 msgid "20 min"
 msgstr "iṣẹju 20"
 
-#: template-gmo.php:383 template-how-to-follow-jesus.php:311
+#: template-zume-landing.php:300 template-zume-landing.php:519
 #: template-zume-training.php:794
 msgid "A powerful tool you can use to quickly assess your own strengths and vulnerabilities when it comes to making disciples who multiply."
 msgstr "Ọpa ti o lagbara ti o le lo lati ṣe ayẹwo awọn agbara ati awọn ailagbara rẹ ni kiakia nigbati o ba di ṣiṣe awọn ọmọ-ẹhin ti o ṣe isodipupo."
@@ -3764,12 +3746,11 @@ msgstr "Ọpa ti o lagbara ti o le lo lati ṣe ayẹwo awọn agbara ati awọn
 msgid "Practice - Coaching Checklist Self-Assessment"
 msgstr "ÌSE Ṣiṣẹ - iṣayẹwo Ikẹkọ Ṣiṣayẹwo Ikẹkọ"
 
-#: template-gmo.php:391 template-how-to-follow-jesus.php:319
-#: template-zume-training.php:813
+#: template-zume-landing.php:527 template-zume-training.php:813
 msgid "Learn how multiplying churches stay connected and live life together as an extended, spiritual family."
 msgstr "Kọ ẹkọ bii awọn ile-iṣẹ isodipupo ṣe sopọ si ati gbe igbesi aye pọ bi idile ti o gbooro, ti ẹmí."
 
-#: template-gmo.php:379 template-how-to-follow-jesus.php:307
+#: template-zume-landing.php:320 template-zume-landing.php:515
 #: template-zume-training.php:826
 msgid "This is a group that consists of people who are leading and starting 3/3 Groups. It also follows a 3/3 format and is a powerful way to assess the spiritual health of God’s work in your area."
 msgstr "Eyi jẹ ẹgbẹ kan ti o ni awọn eniyan ti o nṣe itọsọna ti o bẹrẹ Awọn ẹgbẹ 3/3. O tun tẹle ọna kika 3/3 ati pe o jẹ ọna ti o lagbara lati ṣe ayẹwo ilera ti iṣẹ Ọlọrun ni agbegbe rẹ."
@@ -3796,7 +3777,7 @@ msgstr "Ikẹkọ"
 msgid "Zúme Course v4"
 msgstr "Ẹkọ Zúme v4"
 
-#: front-page.php:99
+#: front-page.php:99 front-page.php:215
 msgid "Explore Training"
 msgstr "Ṣawakiri Ikẹkọ"
 
@@ -3827,141 +3808,137 @@ msgstr "Ikẹkọ Zume"
 msgid "Yes. There are no premium versions, no trial periods, no follow-on sales of products. Freely we've received. Freely we give."
 msgstr "Bẹẹni. Ko si awọn ẹya Ere, ko si awọn akoko idanwo, ko si atẹle-lori awọn ọja ti awọn ọja. Nigbagbogbo a ti gba. Nigbagbogbo a fun."
 
-#: functions/enqueue-scripts.php:216 template-gmo.php:207
-#: template-how-to-follow-jesus.php:135 template-zume-training.php:158
+#: functions/utilities/enqueue-scripts.php:223 template-zume-landing.php:343
+#: template-zume-training.php:158
 msgid "God Uses Ordinary People"
 msgstr "Ọlọrun Nlo Awọn eniyan arinrin"
 
-#: functions/enqueue-scripts.php:217 template-gmo.php:211
-#: template-how-to-follow-jesus.php:139 template-zume-training.php:172
+#: functions/utilities/enqueue-scripts.php:224 template-zume-landing.php:347
+#: template-zume-training.php:172
 msgid "Simple Definition of Disciple and Church"
 msgstr "Itumọ ti o rọrun ti ọmọ ẹ̀yìn ati Ijo"
 
-#: functions/enqueue-scripts.php:218 template-gmo.php:236
-#: template-how-to-follow-jesus.php:164 template-zume-training.php:186
+#: functions/utilities/enqueue-scripts.php:225 template-zume-landing.php:372
+#: template-zume-training.php:186
 msgid "Spiritual Breathing is Hearing and Obeying God"
 msgstr "Nípa tẹ̀mí mimi ni gbọ ati gbigbọran si Ọlọrun"
 
-#: functions/enqueue-scripts.php:219 template-gmo.php:253
-#: template-how-to-follow-jesus.php:181 template-zume-training.php:199
+#: functions/utilities/enqueue-scripts.php:226 template-zume-landing.php:257
+#: template-zume-landing.php:389 template-zume-training.php:199
 msgid "SOAPS Bible Reading"
 msgstr "SOAPS Bibeli kika"
 
-#: functions/enqueue-scripts.php:221 template-gmo.php:229
-#: template-how-to-follow-jesus.php:157 template-zume-training.php:253
+#: functions/utilities/enqueue-scripts.php:228 template-zume-landing.php:252
+#: template-zume-landing.php:365 template-zume-training.php:253
 msgid "Consumer vs Producer Lifestyle"
 msgstr "Alabara aye vs aṣelọpọ Igbesi aye"
 
-#: functions/enqueue-scripts.php:222 template-gmo.php:240
-#: template-how-to-follow-jesus.php:168 template-zume-training.php:266
+#: functions/utilities/enqueue-scripts.php:229 template-zume-landing.php:376
+#: template-zume-training.php:266
 msgid "How to Spend an Hour in Prayer"
 msgstr "Bi a ṣe le na Wakati ni Adura"
 
-#: functions/enqueue-scripts.php:223 template-gmo.php:340
-#: template-how-to-follow-jesus.php:268
+#: functions/utilities/enqueue-scripts.php:230 template-zume-landing.php:476
 msgid "Relational Stewardship – List of 100"
 msgstr "Ibatan iriju - Atokọ 100"
 
-#: functions/enqueue-scripts.php:224 template-gmo.php:291
-#: template-how-to-follow-jesus.php:219 template-zume-training.php:332
+#: functions/utilities/enqueue-scripts.php:231 template-zume-landing.php:427
+#: template-zume-training.php:332
 msgid "The Kingdom Economy"
 msgstr "Aje ti Ijọba Ọlọrun"
 
-#: functions/enqueue-scripts.php:225 template-gmo.php:344
-#: template-how-to-follow-jesus.php:272 template-zume-training.php:351
+#: functions/utilities/enqueue-scripts.php:232 template-zume-landing.php:480
+#: template-zume-training.php:351
 msgid "The Gospel and How to Share It"
 msgstr "Ihinrere ati Bii O ṣe le Pin"
 
-#: functions/enqueue-scripts.php:226 template-gmo.php:282
-#: template-how-to-follow-jesus.php:210 template-zume-training.php:370
+#: functions/utilities/enqueue-scripts.php:233 template-zume-landing.php:418
+#: template-zume-training.php:370
 msgid "Baptism and How To Do It"
 msgstr "Iribomi ati Bawo ni Lati Ṣe O"
 
-#: functions/enqueue-scripts.php:227 template-gmo.php:348
-#: template-how-to-follow-jesus.php:276 template-zume-training.php:405
+#: functions/utilities/enqueue-scripts.php:234 template-zume-landing.php:484
+#: template-zume-training.php:405
 msgid "Prepare Your 3-Minute Testimony"
 msgstr "Mura Ẹri 3-Iṣẹju Rẹ"
 
-#: functions/enqueue-scripts.php:228 template-gmo.php:215
-#: template-how-to-follow-jesus.php:143 template-zume-training.php:424
+#: functions/utilities/enqueue-scripts.php:235 template-zume-landing.php:351
+#: template-zume-training.php:424
 msgid "Vision Casting the Greatest Blessing"
 msgstr "Wiwo Iran si Nla Ibukun Nla julọ"
 
-#: functions/enqueue-scripts.php:229 template-gmo.php:320
-#: template-how-to-follow-jesus.php:248
+#: functions/utilities/enqueue-scripts.php:236 template-zume-landing.php:456
 msgid "Duckling Discipleship – Leading Immediately"
 msgstr "Ọmọ-ẹhin Duckling - Aṣáájú lẹsẹkẹsẹ"
 
-#: functions/enqueue-scripts.php:230
+#: functions/utilities/enqueue-scripts.php:237
 msgid "Eyes to See Where The Kingdom Isn't"
 msgstr "Oju lati Wo Nibiti Ijọba naa ko si"
 
-#: functions/enqueue-scripts.php:231
+#: functions/utilities/enqueue-scripts.php:238
 msgid "The Lord's Supper and How To Lead It"
 msgstr "Oúnjẹ Alẹ́ Olúwa àti Bí O Ṣe Le Ṣàṣáájú Rẹ"
 
-#: functions/enqueue-scripts.php:232 template-gmo.php:361
-#: template-how-to-follow-jesus.php:289 template-zume-training.php:504
+#: functions/utilities/enqueue-scripts.php:239 template-zume-landing.php:497
+#: template-zume-training.php:504
 msgid "Prayer Walking and How To Do It"
 msgstr "Nrin Adura ati Bii O Ṣe Le ṣe"
 
-#: functions/enqueue-scripts.php:233 template-gmo.php:357
-#: template-how-to-follow-jesus.php:285 template-zume-training.php:517
+#: functions/utilities/enqueue-scripts.php:240 template-zume-landing.php:493
+#: template-zume-training.php:517
 msgid "A Person of Peace and How To Find One"
 msgstr "Eniyan Alaafia ati bii O ṣe le Wa Kan"
 
-#: functions/enqueue-scripts.php:234 template-gmo.php:244
-#: template-how-to-follow-jesus.php:172 template-zume-training.php:530
+#: functions/utilities/enqueue-scripts.php:241 template-zume-landing.php:380
+#: template-zume-training.php:530
 msgid "The BLESS Prayer Pattern"
 msgstr "Apẹrẹ Ibukun Ibukun"
 
-#: functions/enqueue-scripts.php:235 template-gmo.php:257
-#: template-how-to-follow-jesus.php:185 template-zume-training.php:577
+#: functions/utilities/enqueue-scripts.php:242 template-zume-landing.php:272
+#: template-zume-landing.php:393 template-zume-training.php:577
 msgid "Faithfulness is Better Than Knowledge"
 msgstr "Igbagbọ jẹ Dara julọ ju Imọ lọ"
 
-#: functions/enqueue-scripts.php:236 template-gmo.php:266
-#: template-how-to-follow-jesus.php:194 template-zume-training.php:590
+#: functions/utilities/enqueue-scripts.php:243 template-zume-landing.php:277
+#: template-zume-landing.php:402 template-zume-training.php:590
 msgid "3/3 Group Meeting Pattern"
 msgstr "Ilana Ipade Ẹgbẹ 3/3"
 
-#: functions/enqueue-scripts.php:237 template-gmo.php:324
-#: template-how-to-follow-jesus.php:252 template-zume-training.php:620
+#: functions/utilities/enqueue-scripts.php:244 template-zume-landing.php:294
+#: template-zume-landing.php:460 template-zume-training.php:620
 msgid "Training Cycle for Maturing Disciples"
 msgstr "Ipilẹṣẹ Ikẹkọ fun Awọn ọmọ-ẹhin Maturing"
 
-#: functions/enqueue-scripts.php:239 template-gmo.php:328
-#: template-how-to-follow-jesus.php:256 template-zume-training.php:708
+#: functions/utilities/enqueue-scripts.php:246 template-zume-landing.php:464
+#: template-zume-training.php:708
 msgid "Expect Non-Sequential Growth"
 msgstr "Reti Idagbasoke Kii-So Koko-ọrọ"
 
-#: functions/enqueue-scripts.php:240 template-gmo.php:332
-#: template-how-to-follow-jesus.php:260 template-zume-training.php:721
+#: functions/utilities/enqueue-scripts.php:247 template-zume-landing.php:314
+#: template-zume-landing.php:468 template-zume-training.php:721
 msgid "Pace of Multiplication Matters"
 msgstr "Pace ti Awọn ọrọ Isodipupo"
 
-#: functions/enqueue-scripts.php:241 template-gmo.php:274
-#: template-how-to-follow-jesus.php:202 template-zume-training.php:734
+#: functions/utilities/enqueue-scripts.php:248 template-zume-landing.php:410
+#: template-zume-training.php:734
 msgid "Always Part of Two Churches"
 msgstr "Nigbagbogbo Apakan ti Awọn Ijo meji"
 
-#: functions/enqueue-scripts.php:246 template-zume-training.php:834
+#: functions/utilities/enqueue-scripts.php:253 template-zume-training.php:834
 msgid "Four Fields Tool"
 msgstr "Awọn irinṣẹ aaye mẹrin"
 
-#: functions/enqueue-scripts.php:247 template-zume-training.php:847
+#: functions/utilities/enqueue-scripts.php:254 template-zume-training.php:847
 msgid "Generational Mapping"
 msgstr "Iwadi iran"
 
-#: functions/zume-gmo.php:179 functions/zume-gmo.php:211
-#: parts/content-share.php:54 parts/content-share.php:90
-#: template-pieces-page.php:190 template-pieces-page.php:222
+#: parts/content-share.php:56 parts/content-share.php:92
+#: template-pieces-page.php:187 template-pieces-page.php:219
 msgid "Zúme Training is freely offered as part of larger Zúme Vision."
 msgstr "Ikẹkọ Zúme jẹ ọfẹ larọwọto bi apakan ti o tobi Zúme Vision."
 
-#: functions/zume-gmo.php:180 functions/zume-gmo.php:212
-#: parts/content-share.php:55 parts/content-share.php:91
-#: template-pieces-page.php:191 template-pieces-page.php:223
+#: parts/content-share.php:57 parts/content-share.php:93
+#: template-pieces-page.php:188 template-pieces-page.php:220
 msgid "Learn more about the Zúme.Vision"
 msgstr "Kọ ẹkọ diẹ sii nipa Zúme.Vision"
 
@@ -3969,19 +3946,19 @@ msgstr "Kọ ẹkọ diẹ sii nipa Zúme.Vision"
 msgid "This concept is called \"%1$s\" in session %2$s of the Zúme Training"
 msgstr "A pe ero yii ni “% 1 $ s” ni igba% 2 $ s ti ikẹkọ Zúme"
 
-#: functions/zume-gmo.php:73 template-pieces-page.php:83
+#: template-pieces-page.php:83 template-zume-landing.php:50
 msgid "Listen and Read Along"
 msgstr "Gbọ ki o Ka Ka pẹlú"
 
-#: functions/zume-gmo.php:77 template-pieces-page.php:87
+#: template-pieces-page.php:87 template-zume-landing.php:50
 msgid "Download Free Guidebook"
 msgstr "Ṣe igbasilẹ Iwe Itọsọna Ọfẹ"
 
-#: functions/zume-gmo.php:80 template-pieces-page.php:90
+#: template-pieces-page.php:90 template-zume-landing.php:50
 msgid "Watch This Video"
 msgstr "Wo Fidio yii"
 
-#: template-zume-about.php:22
+#: template-zume-about.php:22 template-zume-landing.php:217
 msgid "About Zúme Training"
 msgstr "Nipa Ikẹkọ Zúme"
 
@@ -4135,175 +4112,177 @@ msgstr "Iran Zúme"
 msgid "Disciple-making can be rapidly advanced by finding a person of peace, even in a place where followers of Jesus are few and far between. How do you know when you have found a person of peace and what do you do when you find them?"
 msgstr "Sisọ-ara ọmọ-ẹhin le ni ilọsiwaju ni iyara nipasẹ wiwa eniyan ti o ni alafia, paapaa ni aaye kan nibiti awọn ọmọlẹhin Jesu ko ni diẹ ati jinna laarin. Bawo ni o ṣe mọ nigbati o ba ti ri eniyan ti o ni alafia ati kini o ṣe nigbati o ri wọn?"
 
-#: functions/enqueue-scripts.php:120
+#: functions/utilities/enqueue-scripts.php:120
 msgid "This form is required."
 msgstr "Fọọmu yii nilo."
 
-#: functions/enqueue-scripts.php:263
+#: functions/utilities/enqueue-scripts.php:270
 msgid "Members List (optional)"
 msgstr "Akojọ awọn ọmọ ẹgbẹ (iyan)"
 
-#: functions/enqueue-scripts.php:264
+#: functions/utilities/enqueue-scripts.php:271
 msgid "Location"
 msgstr "Ipo"
 
-#: functions/enqueue-scripts.php:265
+#: functions/utilities/enqueue-scripts.php:272
 msgid "Connection to server failed. Try again."
 msgstr "Asopọ si olupin kuna. Tun gbiyanju lẹẹkan si."
 
-#: functions/enqueue-scripts.php:266
+#: functions/utilities/enqueue-scripts.php:273
 msgid "Accepted invitation"
 msgstr "Ifiwepe gba"
 
-#: functions/enqueue-scripts.php:269
+#: functions/utilities/enqueue-scripts.php:276
 msgid "add"
 msgstr "ṣafikun"
 
-#: functions/enqueue-scripts.php:270
+#: functions/utilities/enqueue-scripts.php:277
 msgid "Zoom, click, or search for your location."
 msgstr "Sun-un, tẹ, tabi wa ipo rẹ."
 
-#: functions/enqueue-scripts.php:271
+#: functions/utilities/enqueue-scripts.php:278
 msgid "find you current location"
 msgstr "ri ọ lọwọlọwọ ipo"
 
-#: functions/enqueue-scripts.php:272
+#: functions/utilities/enqueue-scripts.php:279
 msgid "Save Clicked Location"
 msgstr "Fipamọ ipo ti tẹ"
 
-#: functions/enqueue-scripts.php:273
+#: functions/utilities/enqueue-scripts.php:280
 msgid "Save Searched Location"
 msgstr "Fi ipo Wa kiri"
 
-#: functions/enqueue-scripts.php:274
+#: functions/utilities/enqueue-scripts.php:281
 msgid "Save Current Location"
 msgstr "Fipamọ lọwọlọwọ ipo"
 
-#: functions/enqueue-scripts.php:275
+#: functions/utilities/enqueue-scripts.php:282
 msgid "You haven't selected anything yet. Click, search, or allow auto location."
 msgstr "O ko yan ohunkohun sibẹsibẹ. Tẹ, wa, tabi gba ipo aifọwọyi."
 
-#: functions/enqueue-scripts.php:276
+#: functions/utilities/enqueue-scripts.php:283
 msgid "update"
 msgstr "imudojuiwọn"
 
-#: functions/enqueue-scripts.php:277
+#: functions/utilities/enqueue-scripts.php:284
 msgid "Course Complete"
 msgstr "Pari Ẹkọ Pari"
 
-#: functions/enqueue-scripts.php:278
+#: functions/utilities/enqueue-scripts.php:285
 msgid "Next Session"
 msgstr "Ipele T’okan"
 
-#: functions/enqueue-scripts.php:290
+#: functions/utilities/enqueue-scripts.php:297
 msgid "Not Leading a Group"
 msgstr "Kii ṣe Aṣakoso ẹgbẹ kan"
 
-#: functions/enqueue-scripts.php:291
+#: functions/utilities/enqueue-scripts.php:298
 msgid "Create New Group"
 msgstr "Ṣẹda Ẹgbẹ Tuntun"
 
-#: functions/enqueue-scripts.php:293
+#: functions/utilities/enqueue-scripts.php:300
 msgid "Which group are you leading?"
 msgstr "Egbe wo ni o n dari?"
 
-#: functions/enqueue-scripts.php:294
+#: functions/utilities/enqueue-scripts.php:301
 msgid "Number of Members"
 msgstr "Nọmba ti Awọn ọmọ ẹgbẹ"
 
-#: functions/enqueue-scripts.php:296
+#: functions/utilities/enqueue-scripts.php:303
 msgid "Group addition failed. Try again."
 msgstr "Afikun ẹgbẹ ko kuna. Tun gbiyanju lẹẹkan si."
 
-#: functions/enqueue-scripts.php:300
+#: functions/utilities/enqueue-scripts.php:307
 msgid "Are you sure you want to archive this group?"
 msgstr "Ṣe o da ọ loju pe o fẹ gbe akọọlẹ yii gbe?"
 
-#: functions/enqueue-scripts.php:301
+#: functions/utilities/enqueue-scripts.php:308
 msgid "Show Archived Groups"
 msgstr "Ṣe afihan Awọn ẹgbẹ ti a fipamọ"
 
-#: functions/enqueue-scripts.php:302
+#: functions/utilities/enqueue-scripts.php:309
 msgid "Re-Activate"
 msgstr "Tun-Mu ṣiṣẹ"
 
-#: functions/enqueue-scripts.php:303 functions/enqueue-scripts.php:307
+#: functions/utilities/enqueue-scripts.php:310
+#: functions/utilities/enqueue-scripts.php:314
 msgid "Delete Forever"
 msgstr "Paarẹ lailai"
 
-#: functions/enqueue-scripts.php:305
+#: functions/utilities/enqueue-scripts.php:312
 msgid "Close"
 msgstr "Pade"
 
-#: functions/enqueue-scripts.php:306
+#: functions/utilities/enqueue-scripts.php:313
 msgid "Are you sure you want to delete this group?"
 msgstr "Ṣe o da ọ loju pe o fẹ pa ẹgbẹ yii bi?"
 
-#: functions/enqueue-scripts.php:309
+#: functions/utilities/enqueue-scripts.php:316
 msgid "32 Tools and Concepts"
 msgstr "32 Awọn irinṣẹ ati Awọn Erongba"
 
-#: functions/enqueue-scripts.php:315
+#: functions/utilities/enqueue-scripts.php:322
 msgid "Progress Overview"
 msgstr "Akopọ Ilọsiwaju"
 
-#: functions/enqueue-scripts.php:316
+#: functions/utilities/enqueue-scripts.php:323
 msgid "There are 32 concepts and tools in Zúme training. Each concept or tool is intended to be practiced personally and trained into others. Use the progression of \"heard\", \"obeyed\", \"shared\", and \"trained\" as a way of tracking your mastery of the disciple-making training."
 msgstr "Awọn imọran ati awọn irinṣẹ 32 wa ni ikẹkọ Zúme. Ero kọọkan tabi ọpa jẹ ipinnu lati ṣe adaṣe ati ti ikẹkọ ni awọn omiiran. Lo lilọsiwaju ti “gbọ”, “gbọràn”, “pinpin”, ati “oṣiṣẹ” bi ọna titoju ọga rẹ ti ikẹkọ ọmọ-ẹhin."
 
-#: functions/enqueue-scripts.php:317
+#: functions/utilities/enqueue-scripts.php:324
 msgid "Definitions"
 msgstr "Awọn asọye"
 
-#: functions/enqueue-scripts.php:318
+#: functions/utilities/enqueue-scripts.php:325
 msgid "\"Heard\" means you gained awareness. You have moved from not knowing about a tool or concept to knowing about it."
 msgstr "“Gbọ” tumọ si pe o ni oye. O ti gbe lati ko mọ nipa ọpa tabi ero si mọ nipa rẹ."
 
-#: functions/enqueue-scripts.php:319
+#: functions/utilities/enqueue-scripts.php:326
 msgid "\"Obeyed\" means you took personal action to practice or apply a concept or tool. Obeying with tools might look like beginning to use them with others, while obeying with concepts might look like changing thinking or priorities."
 msgstr "“O gba igboran” tumọ si pe o ṣe igbese ti ara ẹni lati ṣe adaṣe tabi lo ero tabi ọpa kan. Gbígbọràn pẹlu awọn irinṣẹ le dabi ibẹrẹ lati lo wọn pẹlu awọn omiiran, lakoko ti igboran pẹlu awọn imọran le dabi iyipada ironu tabi awọn ohun pataki."
 
-#: functions/enqueue-scripts.php:320
+#: functions/utilities/enqueue-scripts.php:327
 msgid "\"Shared\" means you helped someone else hear. This step is essential to truly understanding the concept or tool and preparing you to train others."
 msgstr "“Pipin” tumọ si pe o ṣe iranlọwọ fun elomiran gbọ. Igbesẹ yii ṣe pataki lati ni oye ironu gidi tabi ọpa ati murasilẹ lati ṣe ikẹkọ awọn miiran."
 
-#: functions/enqueue-scripts.php:321
+#: functions/utilities/enqueue-scripts.php:328
 msgid "\"Trained\" means you coached someone else to hear, obey and share. More than sharing knowledge with someone, you have helped them become a sharer of the tool or concept."
 msgstr "“Ti olukọni” tumọ si pe o ṣe ẹlomiran lati gbọ, gbọràn ati pin. Diẹ sii ju pinpin imọ pẹlu ẹnikan, o ti ṣe iranlọwọ fun wọn lati di alajọpin ọpa tabi ero."
 
-#: functions/enqueue-scripts.php:338
+#: functions/utilities/enqueue-scripts.php:345
 msgid "What is your city or state or postal code?"
 msgstr "Kini ilu tabi ilu tabi koodu ifiweranse rẹ?"
 
-#: functions/enqueue-scripts.php:344
+#: functions/utilities/enqueue-scripts.php:351
 msgid "Affiliation Notes"
 msgstr "Awọn Akọsilẹ Alafaramo"
 
-#: functions/enqueue-scripts.php:347
+#: functions/utilities/enqueue-scripts.php:354
 msgid "You have requested coaching."
 msgstr "O ti beere ikẹkọ."
 
-#: functions/enqueue-scripts.php:130 functions/enqueue-scripts.php:348
+#: functions/utilities/enqueue-scripts.php:130
+#: functions/utilities/enqueue-scripts.php:355
 msgid "No location matches found. Try a less specific address."
 msgstr "Ko si awọn ibaamu ipo Gbiyanju adirẹsi kan pato ni pato."
 
-#: functions/enqueue-scripts.php:349
+#: functions/utilities/enqueue-scripts.php:356
 msgid "Oops. Something went wrong. Try again!"
 msgstr "Oops. Nnkan o lo daadaa. Tun gbiyanju!"
 
-#: functions/enqueue-scripts.php:350
+#: functions/utilities/enqueue-scripts.php:357
 msgid "Zúme Network"
 msgstr "Nẹtiwọọki Zúme"
 
-#: functions/enqueue-scripts.php:352
+#: functions/utilities/enqueue-scripts.php:359
 msgid "Click the circles and check off your progress on each of the concepts."
 msgstr "Tẹ awọn iyika ki o ṣayẹwo ilọsiwaju rẹ lori awọn imọran kọọkan."
 
-#: functions/enqueue-scripts.php:354
+#: functions/utilities/enqueue-scripts.php:361
 msgid "Add Group"
 msgstr "Fi Ẹgbẹ kun"
 
-#: functions/enqueue-scripts.php:356
+#: functions/utilities/enqueue-scripts.php:363
 msgid "delete"
 msgstr "paarẹ"
 
@@ -4319,11 +4298,11 @@ msgstr "Iran"
 msgid "Mobile App"
 msgstr "Alagbeka App"
 
-#: functions/enqueue-scripts.php:122
+#: functions/utilities/enqueue-scripts.php:122
 msgid "example: Denver, CO 80120"
 msgstr "apẹẹrẹ: Denver, CO 80120"
 
-#: functions/enqueue-scripts.php:126
+#: functions/utilities/enqueue-scripts.php:126
 msgid "Linked Accounts"
 msgstr "Ti a sopọ awọn iroyin"
 
@@ -4332,67 +4311,67 @@ msgid "Welcome to God’s Family!"
 msgstr "Kaabọ si Ìdílé Ọlọrun!"
 
 #. Template Name of the plugin/theme
-#: template-gmo.php:202 template-how-to-follow-jesus.php:130
+#: template-zume-landing.php:338
 msgid "What is a follower of Jesus?"
 msgstr "Kini ọmọ-ẹhin Jesu kan?"
 
-#: template-gmo.php:225 template-how-to-follow-jesus.php:153
+#: template-zume-landing.php:361
 msgid "What are the activities of a follower of Jesus?"
 msgstr "Kini awọn iṣẹ ṣiṣe ti ọmọlẹhin Jesu kan?"
 
-#: template-gmo.php:250 template-how-to-follow-jesus.php:178
+#: template-zume-landing.php:386
 msgid "Bible Reading"
 msgstr "Kika Bibeli"
 
-#: template-gmo.php:263 template-how-to-follow-jesus.php:191
+#: template-zume-landing.php:399
 msgid "Community"
 msgstr "Agbegbe"
 
-#: template-gmo.php:278 template-how-to-follow-jesus.php:206
+#: template-zume-landing.php:414
 msgid "The Lord’s Supper and How To Lead It"
 msgstr "Oúnjẹ Alẹ́ Olúwa àti Bí O Ṣe Le Ṣàṣeyọrí Rẹ"
 
-#: template-gmo.php:288 template-how-to-follow-jesus.php:216
+#: template-zume-landing.php:424
 msgid "Sacrifice and Suffering"
 msgstr "Ẹbọ àti Ìyà"
 
-#: template-gmo.php:295 template-how-to-follow-jesus.php:223
+#: template-zume-landing.php:431
 msgid "Eyes to See Where The Kingdom Isn’t"
 msgstr "Oju lati Wo Nibiti Ijọba naa ko si"
 
-#: template-gmo.php:307 template-how-to-follow-jesus.php:235
+#: template-zume-landing.php:443
 msgid "How do I obey Jesus and help others become followers with me?"
 msgstr "Báwo ni mo ṣe ṣègbọràn sí Jésù tí mo sì ran àwọn ẹlòmíràn lọ́wọ́ láti di ọmọlẹ́yìn pẹ̀lú mi?"
 
-#: template-gmo.php:311 template-how-to-follow-jesus.php:239
+#: template-zume-landing.php:447
 msgid "Then Jesus came to them and said, \"All authority in heaven and on earth has been given to me. Therefore go and make disciples of all nations, baptizing them in the name of the Father and of the Son and of the Holy Spirit, and teaching them to obey everything I have commanded you. And surely I am with you always, to the very end of the age.\""
 msgstr "Lẹhinna Jesu tọ wọn wá o si sọ pe, “Gbogbo agbara ni ọrun ati ni aye ni a ti fun mi. Nitorinaa lọ, ki o ṣe ọmọ-ẹhin gbogbo orilẹ-ede, ni i baptisi wọn li orukọ Baba ati Ọmọ, ati ti Ẹmi Mimọ, ati ẹ nkọ́ wọn lati ma ṣe gbogbo ohun ti mo palaṣẹ fun nyin: nitori emi wà pẹlu rẹ nigbagbogbo, titi de opin ọjọ."
 
-#: template-gmo.php:312 template-how-to-follow-jesus.php:240
+#: template-zume-landing.php:448
 msgid "Matthew 28:18-20"
 msgstr "Mátíù 28: 18-20"
 
-#: template-gmo.php:316 template-how-to-follow-jesus.php:244
+#: template-zume-landing.php:452
 msgid "Teaching others to obey and follow Jesus with you"
 msgstr "Kikọ awọn miiran lati gbọ ati tẹle Jesu pẹlu rẹ"
 
-#: template-gmo.php:321 template-how-to-follow-jesus.php:249
+#: template-zume-landing.php:457
 msgid "Learn what ducklings have to do with disciple-making"
 msgstr "Kọ ẹkọ kini awọn ducklings ni ṣe pẹlu ṣiṣe ọmọ-ẹhin"
 
-#: template-gmo.php:337 template-how-to-follow-jesus.php:265
+#: template-zume-landing.php:473
 msgid "Speaking to people YOU KNOW about Jesus"
 msgstr "Sọrọ si awọn eniyan O MO nipa Jesu"
 
-#: template-gmo.php:354 template-how-to-follow-jesus.php:282
+#: template-zume-landing.php:490
 msgid "Speaking to people YOU DON'T KNOW about Jesus"
 msgstr "Sọrọ si awọn eniyan O MAA ṢE MỌ nipa Jesu"
 
-#: template-gmo.php:373 template-how-to-follow-jesus.php:301
+#: template-zume-landing.php:509
 msgid "What if many friends, family, and others start following Jesus with me?"
 msgstr "Kini ti awọn ọrẹ, ẹbi, ati awọn miiran bẹrẹ tẹle Jesu pẹlu mi?"
 
-#: template-how-to-follow-jesus.php:95
+#: template-zume-landing.php:117
 msgid "Watch this important video explaining the 4 relationships of your new life."
 msgstr "Wo fidio pataki yii ti n ṣalaye awọn ibatan 4 ti igbesi aye tuntun rẹ."
 
@@ -4508,7 +4487,7 @@ msgid "A new version of this app is available. Click to update this app."
 msgstr "Ẹya tuntun ti app yii wa. Tẹ lati mu app yii dojuiwọn."
 
 #. Template Name of the plugin/theme
-#: template-how-to-follow-jesus.php:91
+#: template-zume-landing.php:109
 msgid "How to Follow Jesus"
 msgstr "Bi a ṣe le tẹle Jesu"
 
@@ -4518,29 +4497,79 @@ msgstr "Ibi ipamọ"
 
 #: template-gmo.php:163
 msgid "Welcome to God’s family!"
-msgstr ""
+msgstr "Kaabo si idile Ọlọrun!"
 
 #: template-gmo.php:167
 msgid "You’ve just made a decision to follow Jesus. Where do you go from here?"
-msgstr ""
+msgstr "O ṣẹṣẹ ṣe ipinnu lati tẹle Jesu. Nibo ni o lọ lati ibi?"
 
 #: template-gmo.php:168
 msgid "We are Zúme, a GodLife Community. Through Zúme, we want to give you free resources to grow in your faith and connect you to a community of people all around the world striving to grow in knowledge and faith of the hope that Jesus gives us. Let’s get started!"
-msgstr ""
+msgstr "A jẹ Zúme, Agbegbe ỌlọrunLife. Nipasẹ Zúme, a fẹ lati fun ọ ni awọn orisun ọfẹ lati dagba ninu igbagbọ rẹ ati lati sopọ mọ ọ si agbegbe ti awọn eniyan kaakiri agbaye ni ilakaka lati dagba ninu imọ ati igbagbọ ti ireti ti Jesu fun wa. Jẹ ki a bẹrẹ!"
 
 #: template-gmo.php:169
 msgid "A great first step is this video that explains 4 relationships we all have with God, creation, others, and ourselves. We pray that as you watch that video God will lead you to think of several others who need to see it, and who will eventually join you in following Jesus."
-msgstr ""
+msgstr "Igbesẹ akọkọ nla ni fidio yii ti o ṣalaye awọn ibatan 4 ti gbogbo wa ni pẹlu Ọlọrun, ẹda, awọn miiran, ati ara wa. A gbadura pe bi o ṣe n wo fidio naa Ọlọrun yoo mu ọ lọ lati ronu ọpọlọpọ awọn miiran ti o nilo lati rii, ati pe tani yoo darapọ mọ ọ ni atẹle Jesu."
 
 #: template-gmo.php:196
 msgid "Next we have a collection of resources to help you follow Jesus. Bookmark, explore, and share these Biblical resources that are being used around the globe."
-msgstr ""
+msgstr "Nigbamii ti a ni ikojọpọ awọn orisun lati ran ọ lọwọ lati tẹle Jesu. Ṣe bukumaaki, ṣawari, ki o pin awọn orisun Bibeli wọnyi ti o nlo ni agbaye."
 
-#: template-how-to-follow-jesus.php:122
+#: template-zume-landing.php:155
 msgid "Bookmark this page as a future resource!"
+msgstr "Ṣe bukumaaki oju-iwe yii bi orisun ọjọ iwaju!"
+
+#: template-zume-landing.php:157
+msgid "The sections below, will teach you what it means to be a follower (disciple) of Jesus."
+msgstr "Awọn abala isalẹ, yoo kọ ọ ohun ti o tumọ si lati jẹ ọmọlẹhin (ọmọ-ẹhin) Jesu."
+
+#: functions/utilities/enqueue-scripts.php:364
+msgid "How can we serve you?"
 msgstr ""
 
-#: template-how-to-follow-jesus.php:124
-msgid "The sections below, will teach you what it means to be a follower (disciple) of Jesus."
+#: functions/utilities/enqueue-scripts.php:365
+msgid "I want to be coached"
+msgstr ""
+
+#: functions/utilities/enqueue-scripts.php:366
+msgid "I need technical assistance"
+msgstr ""
+
+#: functions/utilities/enqueue-scripts.php:367
+msgid "I've gone through the training but need advice on implementation"
+msgstr ""
+
+#: functions/utilities/enqueue-scripts.php:368
+msgid "I have a question about the content that I need to talk to somebody else about"
+msgstr ""
+
+#: functions/utilities/enqueue-scripts.php:369
+msgid "I have a group started and need to know where do I go next"
+msgstr ""
+
+#: template-zume-landing.php:246
+msgid "Leading Yourself"
+msgstr ""
+
+#: template-zume-landing.php:250 template-zume-landing.php:270
+#: template-zume-landing.php:292 template-zume-landing.php:312
+msgid "Principles"
+msgstr ""
+
+#: template-zume-landing.php:255 template-zume-landing.php:275
+#: template-zume-landing.php:297 template-zume-landing.php:317
+msgid "Practices"
+msgstr ""
+
+#: template-zume-landing.php:265
+msgid "Leading Your Group"
+msgstr ""
+
+#: template-zume-landing.php:288
+msgid "Leading Your Group Leaders"
+msgstr ""
+
+#: template-zume-landing.php:308
+msgid "Leading Your Community Leaders"
 msgstr ""
 
