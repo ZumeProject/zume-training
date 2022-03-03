@@ -3943,7 +3943,7 @@ msgstr "Jifunze zaidi juu ya Maoni ya Zúme.V"
 
 #: template-pieces-page.php:51
 msgid "This concept is called \"%1$s\" in session %2$s of the Zúme Training"
-msgstr "Wazo hili linaitwa \"% 1 $ s\" katika kikao% 2 $ s ya Mafunzo ya Zúme"
+msgstr "Wazo hili linaitwa \"%1$s\" katika kikao %2$s ya Mafunzo ya Zúme"
 
 #: template-pieces-page.php:83 template-zume-landing.php:50
 msgid "Listen and Read Along"
