@@ -17,12 +17,9 @@ if ( is_user_logged_in() ) {
 
         <div id="main" role="main">
 
-            
-
-
             <div class="max-content-width grid-x grid-margin-x">
                 <div class="cell center">
-                    <h1 class="primary-color-text"><?php esc_html_e( 'Zúme Training Resources', 'zume' ) ?></h1>
+                    <h1 class="primary-color-text"><?php esc_html_e( 'Get a Coach', 'zume' ) ?></h1>
                 </div>
 
                 <div class="cell">
