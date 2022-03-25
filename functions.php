@@ -10,6 +10,7 @@ require_once( 'functions/utilities/global-functions.php' ); // debug logger used
 // Post Types
 require_once( 'functions/post-types/video-post-type.php' );
 require_once( 'functions/post-types/pdf-download-post-type.php' );
+require_once( 'functions/post-types/qr-meta-box.php' );
 
 // Integrations Files
 require_once( 'functions/integrations/zume-polylang-integration.php' ); // Adds support for multiple languages
