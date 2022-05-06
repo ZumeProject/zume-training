@@ -1839,7 +1839,7 @@ msgstr "Voi invita următoarele persoane să înceapă cu mine un grup de respon
 
 #: functions/zume-three-month-plan.php:82
 msgid "I will challenge the following people to begin their own Accountability Groups and train them how to do it:"
-msgstr "Voi provoca următorii oameni să înceapă propriile lor Grupuri de Responsabilitate și ]i voi instrui cum să o facă:"
+msgstr "Voi provoca următorii oameni să înceapă propriile lor Grupuri de Responsabilitate și voi instrui cum să o facă:"
 
 #: functions/zume-three-month-plan.php:83
 msgid "I will invite the following people to begin a 3/3 Group with me:"
