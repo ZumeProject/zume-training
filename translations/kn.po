@@ -4525,51 +4525,51 @@ msgstr "ಕೆಳಗಿನ ವಿಭಾಗಗಳು, ಯೇಸುವಿನ ಅ�
 
 #: functions/utilities/enqueue-scripts.php:364
 msgid "How can we serve you?"
-msgstr ""
+msgstr "ನಾವು ನಿಮಗೆ ಹೇಗೆ ಸೇವೆ ಸಲ್ಲಿಸಬಹುದು?"
 
 #: functions/utilities/enqueue-scripts.php:365
 msgid "I want to be coached"
-msgstr ""
+msgstr "ನಾನು ತರಬೇತಿ ಪಡೆಯಬೇಕೆಂದು ಬಯಸುತ್ತೇನೆ"
 
 #: functions/utilities/enqueue-scripts.php:366
 msgid "I need technical assistance"
-msgstr ""
+msgstr "ನನಗೆ ತಾಂತ್ರಿಕ ನೆರವು ಬೇಕು"
 
 #: functions/utilities/enqueue-scripts.php:367
 msgid "I've gone through the training but need advice on implementation"
-msgstr ""
+msgstr "ನಾನು ತರಬೇತಿಯ ಮೂಲಕ ಹೋಗಿದ್ದೇನೆ ಆದರೆ ಅನುಷ್ಠಾನಕ್ಕೆ ಸಲಹೆಯ ಅಗತ್ಯವಿದೆ"
 
 #: functions/utilities/enqueue-scripts.php:368
 msgid "I have a question about the content that I need to talk to somebody else about"
-msgstr ""
+msgstr "ನಾನು ಬೇರೆಯವರೊಂದಿಗೆ ಮಾತನಾಡಬೇಕಾದ ವಿಷಯದ ಕುರಿತು ನನಗೆ ಪ್ರಶ್ನೆಯಿದೆ"
 
 #: functions/utilities/enqueue-scripts.php:369
 msgid "I have a group started and need to know where do I go next"
-msgstr ""
+msgstr "ನಾನು ಒಂದು ಗುಂಪನ್ನು ಪ್ರಾರಂಭಿಸಿದ್ದೇನೆ ಮತ್ತು ನಾನು ಮುಂದೆ ಎಲ್ಲಿಗೆ ಹೋಗಬೇಕೆಂದು ತಿಳಿಯಬೇಕಾಗಿದೆ"
 
 #: template-zume-landing.php:246
 msgid "Leading Yourself"
-msgstr ""
+msgstr "ನಿಮ್ಮನ್ನು ಮುನ್ನಡೆಸುವುದು"
 
 #: template-zume-landing.php:250 template-zume-landing.php:270
 #: template-zume-landing.php:292 template-zume-landing.php:312
 msgid "Principles"
-msgstr ""
+msgstr "ತತ್ವಗಳು"
 
 #: template-zume-landing.php:255 template-zume-landing.php:275
 #: template-zume-landing.php:297 template-zume-landing.php:317
 msgid "Practices"
-msgstr ""
+msgstr "ಅಭ್ಯಾಸಗಳು"
 
 #: template-zume-landing.php:265
 msgid "Leading Your Group"
-msgstr ""
+msgstr "ನಿಮ್ಮ ಗುಂಪನ್ನು ಮುನ್ನಡೆಸುವುದು"
 
 #: template-zume-landing.php:288
 msgid "Leading Your Group Leaders"
-msgstr ""
+msgstr "ನಿಮ್ಮ ಗುಂಪಿನ ನಾಯಕರನ್ನು ಮುನ್ನಡೆಸುವುದು"
 
 #: template-zume-landing.php:308
 msgid "Leading Your Community Leaders"
-msgstr ""
+msgstr "ನಿಮ್ಮ ಸಮುದಾಯದ ನಾಯಕರನ್ನು ಮುನ್ನಡೆಸುವುದು"
 
