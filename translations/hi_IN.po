@@ -4636,27 +4636,27 @@ msgstr "मैंने एक समूह की शुरुआत की ह
 
 #: template-zume-landing.php:246
 msgid "Leading Yourself"
-msgstr ""
+msgstr "अपने आप को अग्रणी"
 
 #: template-zume-landing.php:250 template-zume-landing.php:270
 #: template-zume-landing.php:292 template-zume-landing.php:312
 msgid "Principles"
-msgstr ""
+msgstr "सिद्धांतों"
 
 #: template-zume-landing.php:255 template-zume-landing.php:275
 #: template-zume-landing.php:297 template-zume-landing.php:317
 msgid "Practices"
-msgstr ""
+msgstr "आचरण"
 
 #: template-zume-landing.php:265
 msgid "Leading Your Group"
-msgstr ""
+msgstr "अपने समूह का नेतृत्व करना"
 
 #: template-zume-landing.php:288
 msgid "Leading Your Group Leaders"
-msgstr ""
+msgstr "अपने समूह के नेताओं का नेतृत्व करना"
 
 #: template-zume-landing.php:308
 msgid "Leading Your Community Leaders"
-msgstr ""
+msgstr "अपने समुदाय के नेताओं का नेतृत्व करना"
 
