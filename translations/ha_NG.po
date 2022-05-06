@@ -4524,51 +4524,51 @@ msgstr "Sassan da ke ƙasa, za su koya maka abin da ake nufi da zama mai bi (alm
 
 #: functions/utilities/enqueue-scripts.php:364
 msgid "How can we serve you?"
-msgstr ""
+msgstr "Ta yaya za mu yi muku hidima?"
 
 #: functions/utilities/enqueue-scripts.php:365
 msgid "I want to be coached"
-msgstr ""
+msgstr "Ina so a horar da ni"
 
 #: functions/utilities/enqueue-scripts.php:366
 msgid "I need technical assistance"
-msgstr ""
+msgstr "Ina bukatan taimakon fasaha"
 
 #: functions/utilities/enqueue-scripts.php:367
 msgid "I've gone through the training but need advice on implementation"
-msgstr ""
+msgstr "Na yi ta horo amma ina bukatar shawara kan aiwatarwa"
 
 #: functions/utilities/enqueue-scripts.php:368
 msgid "I have a question about the content that I need to talk to somebody else about"
-msgstr ""
+msgstr "Ina da tambaya game da abubuwan da nake bukata in yi magana da wani"
 
 #: functions/utilities/enqueue-scripts.php:369
 msgid "I have a group started and need to know where do I go next"
-msgstr ""
+msgstr "Ina da ƙungiyar da aka fara kuma ina buƙatar sanin inda zan dosa na gaba"
 
 #: template-zume-landing.php:246
 msgid "Leading Yourself"
-msgstr ""
+msgstr "Jagoranci Kanku"
 
 #: template-zume-landing.php:250 template-zume-landing.php:270
 #: template-zume-landing.php:292 template-zume-landing.php:312
 msgid "Principles"
-msgstr ""
+msgstr "Ka'idoji"
 
 #: template-zume-landing.php:255 template-zume-landing.php:275
 #: template-zume-landing.php:297 template-zume-landing.php:317
 msgid "Practices"
-msgstr ""
+msgstr "Ayyuka"
 
 #: template-zume-landing.php:265
 msgid "Leading Your Group"
-msgstr ""
+msgstr "Jagorancin Rukuninku"
 
 #: template-zume-landing.php:288
 msgid "Leading Your Group Leaders"
-msgstr ""
+msgstr "Jagorancin Shugabannin Ku"
 
 #: template-zume-landing.php:308
 msgid "Leading Your Community Leaders"
-msgstr ""
+msgstr "Jagorancin Shugabannin Al'umma"
 
