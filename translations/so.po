@@ -4508,51 +4508,51 @@ msgstr "Qaybaha hoose, waxay ku bari doonaan waxa loola jeedo inaad raacdo (xer)
 
 #: functions/utilities/enqueue-scripts.php:364
 msgid "How can we serve you?"
-msgstr ""
+msgstr "Sideen kuugu adeegi karnaa?"
 
 #: functions/utilities/enqueue-scripts.php:365
 msgid "I want to be coached"
-msgstr ""
+msgstr "Waxaan rabaa in la ii tababaro"
 
 #: functions/utilities/enqueue-scripts.php:366
 msgid "I need technical assistance"
-msgstr ""
+msgstr "Waxaan u baahanahay caawimaad farsamo"
 
 #: functions/utilities/enqueue-scripts.php:367
 msgid "I've gone through the training but need advice on implementation"
-msgstr ""
+msgstr "Waxaan soo maray tababarka laakiin waxaan u baahanahay talo ku saabsan hirgelinta"
 
 #: functions/utilities/enqueue-scripts.php:368
 msgid "I have a question about the content that I need to talk to somebody else about"
-msgstr ""
+msgstr "Waxaan qabaa su'aal ku saabsan waxa ku jira oo aan u baahanahay inaan qof kale kala hadlo"
 
 #: functions/utilities/enqueue-scripts.php:369
 msgid "I have a group started and need to know where do I go next"
-msgstr ""
+msgstr "Waxaan leeyahay koox bilaabay waxaanan u baahanahay inaan ogaado meesha aan aado"
 
 #: template-zume-landing.php:246
 msgid "Leading Yourself"
-msgstr ""
+msgstr "Hogaaminta Naftaada"
 
 #: template-zume-landing.php:250 template-zume-landing.php:270
 #: template-zume-landing.php:292 template-zume-landing.php:312
 msgid "Principles"
-msgstr ""
+msgstr "Mabaadi'da"
 
 #: template-zume-landing.php:255 template-zume-landing.php:275
 #: template-zume-landing.php:297 template-zume-landing.php:317
 msgid "Practices"
-msgstr ""
+msgstr "Dhaqamada"
 
 #: template-zume-landing.php:265
 msgid "Leading Your Group"
-msgstr ""
+msgstr "Hogaaminta Kooxdaada"
 
 #: template-zume-landing.php:288
 msgid "Leading Your Group Leaders"
-msgstr ""
+msgstr "Hogaaminta Hogaamiyaasha Kooxdaada"
 
 #: template-zume-landing.php:308
 msgid "Leading Your Community Leaders"
-msgstr ""
+msgstr "Hoggaaminta Hogaamiyaasha Beeshaada"
 
