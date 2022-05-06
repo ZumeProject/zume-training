@@ -4531,51 +4531,51 @@ msgstr "Bagian di bawah ini akan mengajarkan Anda apa artinya menjadi pengikut/m
 
 #: functions/utilities/enqueue-scripts.php:364
 msgid "How can we serve you?"
-msgstr ""
+msgstr "Bagaimana kami bisa melayani Anda?"
 
 #: functions/utilities/enqueue-scripts.php:365
 msgid "I want to be coached"
-msgstr ""
+msgstr "Saya ingin dilatih"
 
 #: functions/utilities/enqueue-scripts.php:366
 msgid "I need technical assistance"
-msgstr ""
+msgstr "Saya butuh bantuan teknis"
 
 #: functions/utilities/enqueue-scripts.php:367
 msgid "I've gone through the training but need advice on implementation"
-msgstr ""
+msgstr "Saya telah mengikuti pelatihan tetapi membutuhkan saran tentang implementasi"
 
 #: functions/utilities/enqueue-scripts.php:368
 msgid "I have a question about the content that I need to talk to somebody else about"
-msgstr ""
+msgstr "Saya memiliki pertanyaan tentang konten yang perlu saya bicarakan dengan orang lain"
 
 #: functions/utilities/enqueue-scripts.php:369
 msgid "I have a group started and need to know where do I go next"
-msgstr ""
+msgstr "Saya memiliki grup yang dimulai dan perlu tahu ke mana saya harus pergi selanjutnya"
 
 #: template-zume-landing.php:246
 msgid "Leading Yourself"
-msgstr ""
+msgstr "Memimpin Diri Sendiri"
 
 #: template-zume-landing.php:250 template-zume-landing.php:270
 #: template-zume-landing.php:292 template-zume-landing.php:312
 msgid "Principles"
-msgstr ""
+msgstr "Prinsip"
 
 #: template-zume-landing.php:255 template-zume-landing.php:275
 #: template-zume-landing.php:297 template-zume-landing.php:317
 msgid "Practices"
-msgstr ""
+msgstr "Praktek"
 
 #: template-zume-landing.php:265
 msgid "Leading Your Group"
-msgstr ""
+msgstr "Memimpin Grup Anda"
 
 #: template-zume-landing.php:288
 msgid "Leading Your Group Leaders"
-msgstr ""
+msgstr "Memimpin Pemimpin Grup Anda"
 
 #: template-zume-landing.php:308
 msgid "Leading Your Community Leaders"
-msgstr ""
+msgstr "Memimpin Pemimpin Komunitas Anda"
 
