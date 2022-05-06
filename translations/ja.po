@@ -4483,51 +4483,51 @@ msgstr "以下のセクションでは、イエスの追随者（弟子）にな
 
 #: functions/utilities/enqueue-scripts.php:364
 msgid "How can we serve you?"
-msgstr ""
+msgstr "どのように私たちはあなたに仕えることができますか？"
 
 #: functions/utilities/enqueue-scripts.php:365
 msgid "I want to be coached"
-msgstr ""
+msgstr "指導を受けたい"
 
 #: functions/utilities/enqueue-scripts.php:366
 msgid "I need technical assistance"
-msgstr ""
+msgstr "技術支援が必要です"
 
 #: functions/utilities/enqueue-scripts.php:367
 msgid "I've gone through the training but need advice on implementation"
-msgstr ""
+msgstr "トレーニングを終えましたが、実装に関するアドバイスが必要です"
 
 #: functions/utilities/enqueue-scripts.php:368
 msgid "I have a question about the content that I need to talk to somebody else about"
-msgstr ""
+msgstr "他の人と話す必要のあるコンテンツについて質問があります"
 
 #: functions/utilities/enqueue-scripts.php:369
 msgid "I have a group started and need to know where do I go next"
-msgstr ""
+msgstr "私はグループを始めました、そして私が次にどこに行くべきかを知る必要があります"
 
 #: template-zume-landing.php:246
 msgid "Leading Yourself"
-msgstr ""
+msgstr "自分をリードする"
 
 #: template-zume-landing.php:250 template-zume-landing.php:270
 #: template-zume-landing.php:292 template-zume-landing.php:312
 msgid "Principles"
-msgstr ""
+msgstr "原則"
 
 #: template-zume-landing.php:255 template-zume-landing.php:275
 #: template-zume-landing.php:297 template-zume-landing.php:317
 msgid "Practices"
-msgstr ""
+msgstr "練習"
 
 #: template-zume-landing.php:265
 msgid "Leading Your Group"
-msgstr ""
+msgstr "あなたのグループをリードする"
 
 #: template-zume-landing.php:288
 msgid "Leading Your Group Leaders"
-msgstr ""
+msgstr "グループリーダーをリードする"
 
 #: template-zume-landing.php:308
 msgid "Leading Your Community Leaders"
-msgstr ""
+msgstr "コミュニティリーダーをリードする"
 
