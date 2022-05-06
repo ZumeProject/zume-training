@@ -4527,51 +4527,51 @@ msgstr "아래 섹션에서는 예수님의 제자 (제자)가된다는 것이 �
 
 #: functions/utilities/enqueue-scripts.php:364
 msgid "How can we serve you?"
-msgstr ""
+msgstr "우리는 어떻게 당신을 섬길 수 있습니까?"
 
 #: functions/utilities/enqueue-scripts.php:365
 msgid "I want to be coached"
-msgstr ""
+msgstr "코칭하고싶다"
 
 #: functions/utilities/enqueue-scripts.php:366
 msgid "I need technical assistance"
-msgstr ""
+msgstr "기술 지원이 필요합니다"
 
 #: functions/utilities/enqueue-scripts.php:367
 msgid "I've gone through the training but need advice on implementation"
-msgstr ""
+msgstr "교육을 받았지만 구현에 대한 조언이 필요합니다."
 
 #: functions/utilities/enqueue-scripts.php:368
 msgid "I have a question about the content that I need to talk to somebody else about"
-msgstr ""
+msgstr "다른 사람과 이야기해야 할 내용에 대해 질문이 있습니다."
 
 #: functions/utilities/enqueue-scripts.php:369
 msgid "I have a group started and need to know where do I go next"
-msgstr ""
+msgstr "그룹을 시작했는데 다음에 어디로 가야 하는지 알아야 합니다."
 
 #: template-zume-landing.php:246
 msgid "Leading Yourself"
-msgstr ""
+msgstr "자신을 이끌다"
 
 #: template-zume-landing.php:250 template-zume-landing.php:270
 #: template-zume-landing.php:292 template-zume-landing.php:312
 msgid "Principles"
-msgstr ""
+msgstr "원칙"
 
 #: template-zume-landing.php:255 template-zume-landing.php:275
 #: template-zume-landing.php:297 template-zume-landing.php:317
 msgid "Practices"
-msgstr ""
+msgstr "관행"
 
 #: template-zume-landing.php:265
 msgid "Leading Your Group"
-msgstr ""
+msgstr "그룹을 이끌다"
 
 #: template-zume-landing.php:288
 msgid "Leading Your Group Leaders"
-msgstr ""
+msgstr "그룹 리더를 이끌기"
 
 #: template-zume-landing.php:308
 msgid "Leading Your Community Leaders"
-msgstr ""
+msgstr "커뮤니티 리더를 이끌다"
 
