@@ -4505,27 +4505,27 @@ msgstr "我剛開始了一個新的小組，我想知道接下來應該怎麼做
 
 #: template-zume-landing.php:246
 msgid "Leading Yourself"
-msgstr ""
+msgstr "领导自己"
 
 #: template-zume-landing.php:250 template-zume-landing.php:270
 #: template-zume-landing.php:292 template-zume-landing.php:312
 msgid "Principles"
-msgstr ""
+msgstr "原则"
 
 #: template-zume-landing.php:255 template-zume-landing.php:275
 #: template-zume-landing.php:297 template-zume-landing.php:317
 msgid "Practices"
-msgstr ""
+msgstr "实践"
 
 #: template-zume-landing.php:265
 msgid "Leading Your Group"
-msgstr ""
+msgstr "领导你的团队"
 
 #: template-zume-landing.php:288
 msgid "Leading Your Group Leaders"
-msgstr ""
+msgstr "领导你的团队领导"
 
 #: template-zume-landing.php:308
 msgid "Leading Your Community Leaders"
-msgstr ""
+msgstr "领导你的社区领袖"
 
