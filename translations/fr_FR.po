@@ -30,15 +30,15 @@ msgstr "Zúme se compose de 10 séances de 2 heures chacune, avec :"
 
 #: front-page.php:122 template-zume-about.php:87
 msgid "Video and Audio to help your group understand basic principles of multiplying disciples."
-msgstr "Des vidéo et des audios pour aider votre groupe à comprendre les principes de base de la multiplication des disciples."
+msgstr "Des vidéos et des audios pour aider votre groupe à comprendre les principes de base de la multiplication de disciples."
 
 #: front-page.php:130 template-zume-about.php:88
 msgid "Group Discussions to help your group think through what’s being shared."
-msgstr "Des discussions de groupe pour les aider à réfléchir à ce qui est partagé."
+msgstr "Des discussions de groupe pour vous aider à réfléchir sur ce qui a été partagé."
 
 #: front-page.php:138 template-zume-about.php:89
 msgid "Simple Exercises to help your group put what you’re learning into practice."
-msgstr "Des exercices simples pour aider votre groupe à mettre en pratique ce qu'ils apprennent."
+msgstr "Des exercices simples pour aider votre groupe à mettre en pratique ce qu'ils ont appris."
 
 #: front-page.php:146 template-zume-about.php:90
 msgid "Session Challenges to help your group keep learning and growing between sessions."
@@ -2039,7 +2039,7 @@ msgstr "Aucun plan lié à ce groupe."
 #: template-zume-progress.php:119
 #, fuzzy
 msgid "Zúme uses an online training platform to equip participants in basic disciple-making and simple church planting multiplication principles, processes, and practices."
-msgstr "Zúme utilise une plate-forme de formation en ligne pour équiper les participants dans les principes, les processus et les pratiques de base de la fabrication de disciples et de l'implantation d'églises simples."
+msgstr "Zúme est une plate-forme de formation en ligne qui équipe les participants dans les principes, les processus et les pratiques de base de la formation de disciples et de l'implantation d'églises basées sur les groupes de maisons.Pour la langue française, elle est coordonnée par le collectif de Disciples.fr"
 
 #: template-zume-about.php:63 template-zume-faq.php:194
 #: template-zume-privacy-policy.php:181 template-zume-progress.php:114
@@ -2050,7 +2050,7 @@ msgstr "Objectifs du projet Zúme :"
 #: template-zume-landing.php:212 template-zume-privacy-policy.php:183
 #: template-zume-progress.php:116
 msgid "Zúme means yeast in Greek. In Matthew 13:33, Jesus is quoted as saying, \"The Kingdom of Heaven is like a woman who took yeast and mixed it into a large amount of flour until it was all leavened.\" This illustrates how ordinary people, using ordinary resources, can have an extraordinary impact for the Kingdom of God. Zúme aims to equip and empower ordinary believers to saturate the globe with multiplying disciples in our generation."
-msgstr "Zúme signifie levure en grec. Dans Matthieu 13:33, Jésus dit: \"Le Royaume des Cieux est comme une femme qui a pris la levure et l'a mélangée dans une grande quantité de farine jusqu'à ce que la pâte soit toute levée.\" Cela illustre comment les gens ordinaires, en utilisant des ressources ordinaires, peuvent avoir un impact extraordinaire pour le Royaume de Dieu. L'objectif de Zúme est d'équiper et d'habiliter les croyants ordinaires à saturer le monde en multipliant les disciples de notre génération."
+msgstr "Zúme signifie levure ou levain en grec. Dans Matthieu 13.33, Jésus a dit : \"Le royaume des cieux ressemble à du levain qu'une femme a pris et mis dans trois mesures de farine pour faire lever toute la pâte.\" Cela illustre comment des gens ordinaires, qui utilisent des ressources ordinaires, peuvent avoir un impact extraordinaire pour le Royaume de Dieu. L'objectif de Zúme est d'équiper et d'habiliter les croyants ordinaires à saturer le monde en multipliant les disciples de notre génération."
 
 #: template-zume-about.php:85
 msgid "Zúme consists of 10 sessions, 2 hours each"
@@ -2062,19 +2062,19 @@ msgstr "Comment commencer :"
 
 #: template-zume-about.php:104
 msgid "If you haven't created a login yet, please do so."
-msgstr "Si vous n'avez pas encore créé de connexion, veuillez le faire."
+msgstr "Si vous n'avez pas encore créé d'identifiant, veuillez le faire au préalable."
 
 #: template-zume-about.php:106
 msgid "Invite 3-11 friends. A minimum group of 3-4 is needed for the practice and elements of the training."
-msgstr "Inviter 3-11 amis. Un groupe de 3-4 personnes minimum est nécessaire pour la pratique et les éléments de la formation."
+msgstr "Invitez de 3 à 11 amis. Un groupe de 3/4 personnes est le minimum requis pour une bonne pratique des éléments de la formation Zúme. "
 
 #: template-zume-about.php:108
 msgid "Schedule a time to get together with your friends."
-msgstr "Planifier un moment pour vous réunir avec vos amis."
+msgstr "Planifiez des moments pour vous réunir avec vos amis, en présentiel et/ou en distanciel."
 
 #: template-zume-about.php:109
 msgid "Make sure you have access to an internet-enabled device."
-msgstr "S'assurer d'avoir accès à un appareil compatible avec Internet."
+msgstr "Assurez-vous d'avoir accès à un écran relié à Internet."
 
 #: template-zume-about.php:121
 msgid "Optional prep for your first meeting:"
@@ -2090,7 +2090,7 @@ msgstr "Si vous le souhaitez, vous pouvez imprimer des copies pour les membres d
 
 #: template-zume-about.php:125
 msgid "Consider connecting to a TV or projector so everyone in your group can view the content."
-msgstr "Envisager de vous connecter à un téléviseur ou à un projecteur afin que tous les membres de votre groupe puissent voir le contenu."
+msgstr "Envisager de vous connecter à un téléviseur ou à un vidéo-projecteur afin que tous les membres de votre groupe puissent voir le contenu."
 
 #: template-zume-course.php:8 template-zume-course.php:27
 msgid "Head back to your dashboard"
