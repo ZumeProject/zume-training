@@ -4553,27 +4553,27 @@ msgstr "Eu tenho um grupo iniciado e preciso saber para onde vou a seguir"
 
 #: template-zume-landing.php:246
 msgid "Leading Yourself"
-msgstr ""
+msgstr "Liderando a si mesmo"
 
 #: template-zume-landing.php:250 template-zume-landing.php:270
 #: template-zume-landing.php:292 template-zume-landing.php:312
 msgid "Principles"
-msgstr ""
+msgstr "Princípios"
 
 #: template-zume-landing.php:255 template-zume-landing.php:275
 #: template-zume-landing.php:297 template-zume-landing.php:317
 msgid "Practices"
-msgstr ""
+msgstr "Práticas"
 
 #: template-zume-landing.php:265
 msgid "Leading Your Group"
-msgstr ""
+msgstr "Liderando seu grupo"
 
 #: template-zume-landing.php:288
 msgid "Leading Your Group Leaders"
-msgstr ""
+msgstr "Liderando seus líderes de grupo"
 
 #: template-zume-landing.php:308
 msgid "Leading Your Community Leaders"
-msgstr ""
+msgstr "Liderando seus líderes comunitários"
 
