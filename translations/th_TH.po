@@ -4549,51 +4549,51 @@ msgstr "ด้านล่าง จะสอนคุณถึงความ�
 
 #: functions/utilities/enqueue-scripts.php:364
 msgid "How can we serve you?"
-msgstr ""
+msgstr "เราจะให้บริการคุณได้อย่างไร?"
 
 #: functions/utilities/enqueue-scripts.php:365
 msgid "I want to be coached"
-msgstr ""
+msgstr "อยากเป็นโค้ช"
 
 #: functions/utilities/enqueue-scripts.php:366
 msgid "I need technical assistance"
-msgstr ""
+msgstr "ฉันต้องการความช่วยเหลือด้านเทคนิค"
 
 #: functions/utilities/enqueue-scripts.php:367
 msgid "I've gone through the training but need advice on implementation"
-msgstr ""
+msgstr "ฉันผ่านการฝึกอบรมมาแล้ว แต่ต้องการคำแนะนำในการนำไปปฏิบัติ"
 
 #: functions/utilities/enqueue-scripts.php:368
 msgid "I have a question about the content that I need to talk to somebody else about"
-msgstr ""
+msgstr "ฉันมีคำถามเกี่ยวกับเนื้อหาที่ฉันต้องการพูดคุยกับคนอื่นเกี่ยวกับ"
 
 #: functions/utilities/enqueue-scripts.php:369
 msgid "I have a group started and need to know where do I go next"
-msgstr ""
+msgstr "ฉันมีกลุ่มที่เริ่มต้นแล้วและจำเป็นต้องรู้ว่าฉันจะไปที่ไหนต่อไป"
 
 #: template-zume-landing.php:246
 msgid "Leading Yourself"
-msgstr ""
+msgstr "เป็นผู้นำตัวเอง"
 
 #: template-zume-landing.php:250 template-zume-landing.php:270
 #: template-zume-landing.php:292 template-zume-landing.php:312
 msgid "Principles"
-msgstr ""
+msgstr "หลักการ"
 
 #: template-zume-landing.php:255 template-zume-landing.php:275
 #: template-zume-landing.php:297 template-zume-landing.php:317
 msgid "Practices"
-msgstr ""
+msgstr "แนวปฏิบัติ"
 
 #: template-zume-landing.php:265
 msgid "Leading Your Group"
-msgstr ""
+msgstr "เป็นผู้นำกลุ่มของคุณ"
 
 #: template-zume-landing.php:288
 msgid "Leading Your Group Leaders"
-msgstr ""
+msgstr "เป็นผู้นำผู้นำกลุ่มของคุณ"
 
 #: template-zume-landing.php:308
 msgid "Leading Your Community Leaders"
-msgstr ""
+msgstr "เป็นผู้นำผู้นำชุมชนของคุณ"
 
