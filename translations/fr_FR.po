@@ -341,7 +341,7 @@ msgstr "Télécharger"
 
 #: functions/zume-content.php:189
 msgid "You will be able to follow along on a digital PDF for this session, but please make sure that each member of your group has a printed copy of the materials for future sessions."
-msgstr "Vous serez en mesure de suivre cette séance sur un PDF numérique, mais veuillez vous assurer que chaque membre de votre groupe a une copie imprimée des documents pour les séances suivantes."
+msgstr "Vous serez en mesure de suivre cette séance sur un PDF numérique, mais veuillez vous assurer que chaque membre de votre groupe a une copie imprimée des documents pour les séances suivantes. Cette séance est longue, vous pouvez choisir de la faire en une ou deux fois."
 
 #: functions/zume-content.php:196 functions/zume-v4-seo-strings.php:17
 #: template-zume-dashboard.php:813 template-zume-resources.php:38
@@ -482,20 +482,20 @@ msgstr "Script vidéo de Zúme: C.R.E.P.E."
 #: template-zume-dashboard.php:342 template-zume-landing.php:406
 #: template-zume-training.php:212
 msgid "Accountability Groups"
-msgstr "Groupes d'encouragement mutuel"
+msgstr "Groupes de redevabilité"
 
 #: functions/zume-content.php:503
 #, fuzzy
 msgid "The Bible tells us that every follower of Jesus will one day be held accountable for what we do and say and think. Accountability Groups are a great way to get ready!"
-msgstr "La Bible nous dit que chaque disciple de Jésus sera un jour tenu responsable de ce qu'il fait, dit et pense. Les groupes d'encouragement mutuel sont un excellent moyen de se préparer!"
+msgstr "La Bible nous dit que chaque disciple de Jésus sera un jour tenu responsable de ce qu'il fait, dit et pense. Les groupes de redevabilité sont un excellent moyen de se préparer!"
 
 #: functions/zume-content.php:515
 msgid "Find the \"Accountability Groups\" section in your Zúme Guidebook, and listen to the audio below."
-msgstr "Trouver la section « Groupes d'encouragement mutuel » dans le guide Zúme et écouter l'audio ci-dessous."
+msgstr "Trouver la section « groupes de redevabilité » dans le guide Zúme et écouter l'audio ci-dessous."
 
 #: functions/zume-content.php:551
 msgid "Zúme Video Scripts: Accountability Groups"
-msgstr "Script vidéo de Zúme: Groupes d'encouragement mutuel"
+msgstr "Script vidéo de Zúme: Groupes de redevabilité"
 
 #: functions/zume-content.php:561
 msgid "Practice (45min)"
@@ -520,7 +520,7 @@ msgstr "PARTAGER"
 
 #: functions/zume-content.php:579
 msgid "Spend the next 45 minutes working together through Accountability Questions – List 2 in the \"Accountability Groups\" section of your"
-msgstr "Passer les 45 minutes suivantes à travailler ensemble sur la deuxième liste  de questions d'encouragement mutuel  de la section « Groupes d'encouragement mutuel » de votre"
+msgstr "Passer les 45 minutes suivantes à travailler ensemble sur la deuxième liste  de questions d'encouragement mutuel  de la section « groupes de redevabilité » de votre"
 
 #: functions/zume-content.php:583
 msgid "Zúme Guidebook"
@@ -981,7 +981,8 @@ msgstr "Témoignage de 3 minutes"
 
 #: functions/zume-content.php:1555
 msgid "As followers of Jesus, we are “witnesses\" for Him, because we “testify” about the impact Jesus has had on our lives. Your story of your relationship with God is called your Testimony. It's powerful, and it's something no one can share better than you."
-msgstr "En tant que disciples de Jésus, nous sommes des « témoins » pour Lui, parce que nous « témoignons » de l'impact que Jésus a eu sur nos vies. L'histoire de votre relation avec Dieu s'appelle votre Témoignage. C'est puissant, et c'est quelque chose que personne ne peut partager mieux que vous."
+msgstr "Cette session est longue. Vous pouvez la faire en une ou deux fois.\n"
+"En tant que disciples de Jésus, nous sommes des « témoins » pour Lui, parce que nous « témoignons » de l'impact que Jésus a eu sur nos vies. L'histoire de votre relation avec Dieu s'appelle votre Témoignage. C'est puissant, et c'est quelque chose que personne ne peut partager mieux que vous."
 
 #: functions/zume-content.php:1566
 msgid "Find the \"3-Minute Testimony\" section in your Zúme Guidebook, and listen to the audio below."
@@ -1547,7 +1548,7 @@ msgstr "Demander à Dieu ce qu'Il veut que vous fassiez spécifiquement avec les
 
 #: functions/zume-content.php:3306
 msgid "It's a Blessing to ... S.O.A.P.S. Bible Reading, Accountability Groups, Prayer Cycle"
-msgstr "C'est une bénédiction de faire ... la lecture de la Bible C.R.E.P.E., les groupes d'encouragement mutuel, la roue de prière"
+msgstr "C'est une bénédiction de faire ... la lecture de la Bible C.R.E.P.E., les groupes de redevabilité et la roue de prière"
 
 #: functions/zume-content.php:3309
 msgid "It's a Great Blessing to ... Share your 3-Minute Testimony and God's Story, Prayer Walking"
@@ -1870,7 +1871,7 @@ msgstr "J'inviterai les personnes suivantes à commencer un groupe d'encourageme
 
 #: functions/zume-three-month-plan.php:82
 msgid "I will challenge the following people to begin their own Accountability Groups and train them how to do it:"
-msgstr "Je mettrai au défi les personnes suivantes de commencer leurs propres groupes d'encouragement mutuel et je les formerai à la façon de le faire :"
+msgstr "Je mettrai au défi les personnes suivantes de commencer leurs propres groupes de redevabilité et je les formerai à la façon de le faire :"
 
 #: functions/zume-three-month-plan.php:83
 msgid "I will invite the following people to begin a 3/3 Group with me:"
@@ -2860,7 +2861,7 @@ msgstr "LECTURE DE LA BIBLE C.R.E.P.E. : Un outil d'étude quotidienne de la Bib
 
 #: template-zume-overview.php:341
 msgid "ACCOUNTABILITY GROUPS — a tool for two or three people of the same gender to meet weekly and encourage each other in areas that are going well and reveal areas that need correction."
-msgstr "GROUPES D'ENCOURAGEMENT MUTUEL : Un outil permettant à deux ou trois personnes du même sexe de se rencontrer chaque semaine et de s'encourager mutuellement dans des domaines qui vont bien et de révéler les domaines qui doivent être corrigés."
+msgstr "Groupes de redevabilité : Un outil permettant à deux ou trois personnes du même sexe de se rencontrer chaque semaine et de s'encourager mutuellement dans des domaines qui vont bien et de révéler les domaines qui doivent être corrigés."
 
 #: template-zume-overview.php:352 template-zume-overview.php:460
 #: template-zume-overview.php:582 template-zume-overview.php:716
@@ -2872,7 +2873,7 @@ msgstr "Activité"
 
 #: template-zume-overview.php:361
 msgid "ACCOUNTABILITY GROUPS — Break into groups of two or three people to work through the Accountability Questions. (45 minutes)"
-msgstr "GROUPES D'ENCOURAGEMENT MUTUEL :  Se répartir en groupes de deux ou trois personnes et répondre aux questions d'encouragement mutuel. (45 minutes)"
+msgstr "Groupes de redevabilité :  Se répartir en groupes de deux ou trois personnes et répondre aux questions d'encouragement mutuel. (45 minutes)"
 
 #: template-zume-overview.php:415
 #, fuzzy
@@ -3538,7 +3539,7 @@ msgstr "Un outil permettant à deux ou trois personnes du même sexe de se renco
 
 #: template-zume-training.php:223
 msgid "Practice - Accountability groups"
-msgstr "Activité : Groupes d'encouragement mutuel"
+msgstr "Activité : Groupes de redevabilité"
 
 #: template-zume-training.php:226 template-zume-training.php:365
 #: template-zume-training.php:419
@@ -3993,7 +3994,7 @@ msgstr "La vision derrière la formation Zúme "
 
 #: template-zume-vision.php:24
 msgid "to saturate the world with multiplying disciples"
-msgstr "Saturer le monde de disciples en les multipliant "
+msgstr "Saturer le monde de disciples qui se multiplient"
 
 #: template-zume-vision.php:24
 msgid "in our generation."
@@ -4001,7 +4002,7 @@ msgstr "dans notre génération."
 
 #: template-zume-vision.php:31
 msgid "Learn More @ Zúme.Vision"
-msgstr "En savoir plus sur Zúme.Vision"
+msgstr "Découvrez plus @ Zúme.Vision"
 
 #: template-zume-vision.php:42
 msgid "Our Core Strategy"
@@ -4009,15 +4010,15 @@ msgstr "Notre stratégie de base"
 
 #: template-zume-vision.php:43
 msgid "Holiness, Prayer, Training Saturation, Church Saturation"
-msgstr "Sainteté, prière, saturation de formation, saturation de l'église"
+msgstr "Sainteté, prière, saturer ce monde de formation, saturer ce monde d’églises"
 
 #: template-zume-vision.php:50
 msgid "Holiness, Obedience, and Love"
-msgstr "Sainteté, obéissance et amour"
+msgstr "Sainteté, Obéissance et Amour"
 
 #: template-zume-vision.php:51
 msgid "We need to be disciples worth multiplying."
-msgstr "Nous devons être des disciples qui méritent d'être multipliés."
+msgstr "Nous devons être des disciples dignes d'être multipliés."
 
 #: template-zume-vision.php:56
 msgid "Jesus is our measurement."
@@ -4025,35 +4026,35 @@ msgstr "Jésus est notre unité de mesure."
 
 #: template-zume-vision.php:57
 msgid "Not you. Not me. Not history. Not ideals. Not rituals. Jesus and Jesus alone."
-msgstr "Pas toi. Pas moi. Pas l'histoire. Pas des idéaux. Pas des rituels. Jésus, et Jésus seul."
+msgstr "Pas toi. Ni moi. Pas l'histoire. Pas des idéaux. Pas des rituels. Jésus et Jésus seul."
 
 #: template-zume-vision.php:58
 msgid "How he lived. What he said. How he loved. Everything. In this, we aspire to be marked by immediate, radical, costly obedience to Jesus, like the heroes of the faith that came before us."
-msgstr "Comment il a vécu. Ce qu'il a dit. Comment il aimait. Tout. En cela, nous aspirons à être marqués par une obéissance immédiate, radicale et coûteuse à Jésus, comme les héros de la foi qui nous ont précédés."
+msgstr "Comment il a vécu. Ce qu'il a dit. Comment il aimait. Tout. Ainsi, nous aspirons à vivre une obéissance immédiate, radicale et coûteuse envers Jésus, tout comme les héros de la foi qui nous ont précédés."
 
 #: template-zume-vision.php:59
 msgid "Jesus is both the measurement and His Spirit is our hope to become like Him. And the day we see kingdom fruit surrounding our lives and the loves of our friends, it will be because his Spirit has moved through us."
-msgstr "Jésus est à la fois la mesure et son Esprit est notre espoir de devenir comme lui. Et le jour où nous verrons le fruit du royaume entourer nos vies et les amours de nos amis, ce sera parce que son Esprit nous aura traversés."
+msgstr "Jésus est notre unité de mesure. Son Esprit est notre espoir de devenir comme Lui. Le jour où nous verrons les fruits du royaume imprégner nos vies et le cœur de nos amis, ce sera parce que son Esprit a été communiqué au travers de nous."
 
 #: template-zume-vision.php:80
 msgid "Extraordinary Prayer"
-msgstr "Prière extraordinaire"
+msgstr "Une prière extraordinaire"
 
 #: template-zume-vision.php:81
 msgid "Extraordinary prayer has proceeded every disciple making movement in history."
-msgstr "Une prière extraordinaire a permis chaque mouvement de formation de disciples historique."
+msgstr "Une prière extraordinaire a précédé chaque mouvement de disciples dans l'histoire."
 
 #: template-zume-vision.php:87
 msgid "You have not because you ask not (James 4:2). If we want to see movement, we need to ask for it."
-msgstr "Vous n'avez pas parce que vous ne le demandez pas (Jacques 4: 2). Si nous voulons voir du mouvement, nous devons le demander."
+msgstr "“Vous n'avez pas parce que vous ne demandez pas.” (Jacques 4.2). Si nous voulons vivre un mouvement, nous devons le demander à Dieu."
 
 #: template-zume-vision.php:106
 msgid "Training Saturation"
-msgstr "Saturation de formation"
+msgstr "Saturater le monde de formation"
 
 #: template-zume-vision.php:107
 msgid "(1 Training &#xF7; Population)"
-msgstr "(1 Formation & # xF7; Population)"
+msgstr "(1 Formation ÷ Population)"
 
 #: template-zume-vision.php:110
 msgid "1 Training"
@@ -4061,43 +4062,44 @@ msgstr "1 Formation"
 
 #: template-zume-vision.php:112 template-zume-vision.php:148
 msgid "Every 5,000 People (North America)"
-msgstr "Toutes les 5,000 personnes (Amérique du Nord)"
+msgstr "Pour 5,000 personnes (Amérique du Nord)"
 
 #: template-zume-vision.php:113 template-zume-vision.php:149
 msgid "Every 50,000 People (Globally)"
-msgstr "Toutes les 50,000 personnes (mondialement)"
+msgstr "Pour 50,000 personnes (Globalement)"
 
 #: template-zume-vision.php:119
 msgid "Disciple multiplication ideas are scriptural, but often missed. A simple training in multiplication principles can unlock even established believers from unfruitful lives."
-msgstr "Les idées de multiplication des disciples sont scripturaires, mais souvent manquées. Une simple formation aux principes de multiplication peut libérer, même les croyants établis, de vies stériles."
+msgstr "Le concept de multiplication de disciples est biblique, mais peu présent. Une simple formation aux principes de la multiplication peut libérer même des croyants établis dont la vie est jusque-là infructueuse."
 
 #: template-zume-vision.php:120
 msgid "Live trainings are often best. But the people who need trained, so vastly extends beyond the live trainings available. Zume.Training is an online, in-life, on-demand training for groups to get paradigm-shifting multiplication training."
-msgstr "Les formations en direct sont souvent les meilleures. Mais les personnes qui ont besoin de formation s'étendent tellement au-delà des formations en direct disponibles. La formation Zúme est une formation en ligne, qui s'intègre à nos vies quotidiennes, et à la demande pour des groupes qui veulent obtenir une formation à la multiplication qui change de paradigme."
+msgstr "Les formations en présentiel sont souvent les meilleures. Mais les personnes qui ont besoin de formation sont tellement plus nombreuses que les formations disponibles en présentiel. \n"
+"La formation Zúme est une formation en ligne, qui s'intègre à nos vies quotidiennes, pour des groupes qui veulent une formation d’aide à la multiplication, qui changera leurs modèles."
 
 #: template-zume-vision.php:121
 msgid "We suspect, especially in places where the church has been, we will need a training movement before we see a disciple making movement."
-msgstr "Nous soupçonnons, en particulier dans les endroits où l'église a déjà été présente, que nous aurons besoin d'un mouvement de formation avant de voir se développer un mouvement  de formation de disciple."
+msgstr "Dans nos pays francophones, il faudra un réel mouvement de formation avant de voir émerger un mouvement de disciples."
 
 #: template-zume-vision.php:142
 msgid "Simple Church Saturation"
-msgstr "Saturation de l'église simple"
+msgstr "Saturer le monde d’églises organiques"
 
 #: template-zume-vision.php:143
 msgid "(2 Simple Churches &#xF7; Population)"
-msgstr "(2 Églises simples et # xF7; Population)"
+msgstr "(2 églises organiques ÷ Population)"
 
 #: template-zume-vision.php:146
 msgid "2 Simple Churches"
-msgstr "2 Églises simples"
+msgstr "2 églises organiques"
 
 #: template-zume-vision.php:155
 msgid "Many churches in one place is a blessing, but many churches in many places is a greater blessing. And churches moving into places where there has never been a church one of the greatest blessings."
-msgstr "De nombreuses églises au même endroit sont une bénédiction, mais de nombreuses églises à de nombreux endroits sont une plus grande bénédiction. Et les églises se déplaçant dans des endroits où il n'y a jamais eu d'église sont l'une des plus grandes bénédictions."
+msgstr "De nombreuses églises présentes dans un même endroit, c'est une bénédiction. Mais de nombreuses églises dans de nombreux endroits différents, c’est une plus grande bénédiction. Et les églises qui déménagent dans des endroits où il n'y a jamais eu d'église sont l'une des plus grandes bénédictions !"
 
 #: template-zume-vision.php:156
 msgid "As the saying goes, \"Plan your trust, don't trust your plan\". We know it is the Father's heart to have families of believers in every tongue, tribe, and nation. He has also invited us to be his co-workers in reconciliation. So these goals of 1 training and 2 churches come from our trust in the one who can do it."
-msgstr "Comme le dit le proverbe: \"Planifiez votre confiance, ne faites pas confiance à votre plan\". Nous savons que le cœur du Père est d'avoir des familles de croyants dans chaque langue, tribu et nation. Il nous a également invités à être ses collègues de réconciliation. Donc, ces objectifs de 1 formation et 2 églises viennent de notre confiance en celui qui peut le faire."
+msgstr "Comme le dit le dicton, \"Planifiez votre confiance, ne faites pas confiance à votre plan\". Nous savons que c'est dans le cœur du Père d'avoir des familles de croyants dans chaque langue, tribu et nation. Il nous a également invités à être ses collaborateurs dans son œuvre de réconciliation. Donc ces objectifs d'1 formation et de 2 églises organiques viennent de notre confiance en celui qui peut le faire."
 
 #. Template Name of the plugin/theme
 #: 
