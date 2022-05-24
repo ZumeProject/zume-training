@@ -133,6 +133,13 @@
     "rtl": false
   },
   {
+    "enDisplayName": "Kurdish",
+    "code": "ku",
+    "locale": "ku",
+    "nativeName": "کوردی",
+    "rtl": true
+  },
+  {
     "enDisplayName": "Lao",
     "code": "lo",
     "locale": "lo",
