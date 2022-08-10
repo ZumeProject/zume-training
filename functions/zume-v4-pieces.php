@@ -216,7 +216,7 @@ class Zume_V4_Pieces {
 
         $data['tool_number'] = $tool_number;
         $data['session_number'] = $session_number;
-        $data['alt_video'] = false;
+        $data['alt_video'] =  zume_alt_video();
         $data['audio'] = $audio_array[$tool_number] ?? false; // determine if is an audio tool
         $data['has_video'] = $has_video[$tool_number];
         $data['video_id'] = $video_id[$tool_number] ?? 0;

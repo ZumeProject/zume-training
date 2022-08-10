@@ -94,18 +94,18 @@ if (have_posts()) :
                                     <h3 class="center"><?php esc_html_e( 'Watch This Video', 'zume' ) ?></h3>
                                 <?php endif; ?>
 
-                                <div class="video-section">
-                                    <?php if ( $alt_video ) : ?>
-                                        <video width="960" height="540" style="border: 1px solid lightgrey;margin: 0 15%;" controls>
-                                            <source src="<?php echo esc_url( Zume_Course::get_alt_video_by_key( 'alt_'.$video_id ) ) ?>" type="video/mp4">
-                                            Your browser does not support the video tag.
-                                        </video>
-                                    <?php else : ?>
+                                <?php if ( $alt_video ) : ?>
+                                    <video width="960" style="border: 1px solid lightgrey;max-width: 960px;width:100%;" controls>
+                                        <source src="<?php echo esc_url( zume_mirror_url() . zume_current_language() . '/'.$video_id.'.mp4' ) ?>" type="video/mp4" >
+                                        Your browser does not support the video tag.
+                                    </video>
+                                <?php else : ?>
+                                    <div class="video-section">
                                         <iframe style="border: 1px solid lightgrey;"  src="<?php echo esc_url( Zume_Course::get_video_by_key( $video_id ) ) ?>" width="560" height="315"
                                                 frameborder="1" webkitallowfullscreen mozallowfullscreen allowfullscreen>
                                         </iframe>
-                                    <?php endif; ?>
-                                </div>
+                                    </div>
+                                <?php endif; ?>
                             </div>
                         </div>
                     <?php endif; ?>
