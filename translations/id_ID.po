@@ -20,13 +20,12 @@ msgid "Login"
 msgstr "Masuk"
 
 #: front-page.php:95
-#, fuzzy
 msgid "Zúme Training is an on-line and in-life learning experience designed for small groups who follow Jesus to learn how to obey His Great Commission and make disciples who multiply."
-msgstr "Pelatihan Zúme adalah pengalaman belajar on-line dan kehidupan sehari-hari yang dirancang untuk kelompok-kelompok kecil yang mengikuti Yesus untuk belajar bagaimana mematuhi Amanat Agung-Nya dan menjadikan murid-murid yang berlipat ganda."
+msgstr "Pelatihan Zúme adalah pengalaman belajar online maupun dari kehidupan sehari-hari yang dirancang untuk kelompok-kelompok kecil yang mengikuti Yesus untuk belajar bagaimana cara mentaati Amanat Agung-Nya dan menghasilkan murid-murid yang berlipat ganda."
 
 #: front-page.php:114
 msgid "Zúme consists of 10 sessions, 2 hours each:"
-msgstr "Zúme terdiri dari 10 sesi, masing-masing 2 jam :"
+msgstr "Zúme terdiri dari 10 sesi, masing-masing 2 jam:"
 
 #: front-page.php:122 template-zume-about.php:87
 msgid "Video and Audio to help your group understand basic principles of multiplying disciples."
@@ -34,15 +33,15 @@ msgstr "Video dan Audio untuk membantu kelompok Anda memahami prinsip-prinsip da
 
 #: front-page.php:130 template-zume-about.php:88
 msgid "Group Discussions to help your group think through what’s being shared."
-msgstr "Diskusi kelompok untuk membantu kelompok Anda memikirkan apa yang sedang dibagi."
+msgstr "Diskusi kelompok untuk membantu kelompok Anda memahami kembali apa yang sedang dibagikan."
 
 #: front-page.php:138 template-zume-about.php:89
 msgid "Simple Exercises to help your group put what you’re learning into practice."
-msgstr "Latihan sederhana untuk membantu kelompok Anda mempraktekkan apa yang Anda pelajari."
+msgstr "Latihan sederhana untuk membantu kelompok Anda mempraktekkan apa yang sedang Anda pelajari."
 
 #: front-page.php:146 template-zume-about.php:90
 msgid "Session Challenges to help your group keep learning and growing between sessions."
-msgstr "Sesi tantangan untuk membantu kelompok Anda terus belajar dan bertumbuh di waktu antara sesi yang satu dengan sesi yang lain."
+msgstr "Tantangan di setiap sesi untuk membantu kelompok Anda terus belajar dan bertumbuh di antara sesi yang satu dengan sesi yang lainnya."
 
 #: front-page.php:159
 msgid "Want to start the training?"
@@ -50,7 +49,7 @@ msgstr "Ingin memulai pelatihan?"
 
 #: front-page.php:173
 msgid "It's as easy as 1-2-3"
-msgstr "Itu semudah 1-2-3"
+msgstr "Itu sama mudahnya dengan 1-2-3"
 
 #: front-page.php:182
 msgid "Sign up"
@@ -58,7 +57,7 @@ msgstr "Mendaftar"
 
 #: front-page.php:192
 msgid "Invite some friends"
-msgstr "Undang teman"
+msgstr "Undang teman yang lain"
 
 #: front-page.php:202
 msgid "Host a training"
@@ -70,11 +69,11 @@ msgstr "Cari tahu lebih jauh tentang Zume"
 
 #: functions/activator.php:55
 msgid "Coach"
-msgstr "Pembimbingan"
+msgstr "Pelatih"
 
 #: functions/activator.php:65
 msgid "Coach Leader"
-msgstr "Pemimpin Pembimbingan"
+msgstr "Pemimpin Pelatihan"
 
 #: functions/utilities/enqueue-scripts.php:82
 #: functions/utilities/enqueue-scripts.php:84
@@ -129,27 +128,27 @@ msgstr "Sudah diterima!"
 
 #: functions/utilities/enqueue-scripts.php:71
 msgid "We're a volunteer network, so give us a few days. We'll reach out to you soon as possible!"
-msgstr "Kami adalah jaringan sukarela, jadi beri kami waktu beberapa hari. Kami akan menghubungi Anda sesegera mungkin!"
+msgstr "Kami adalah jaringan pekerja sukarelawan, jadi berikan kami waktu beberapa hari. Kami akan menghubungi Anda secepat mungkin!"
 
 #: functions/login/zume-login.php:102 functions/login/zume-login.php:325
 msgid "Email is a required permission for login and registration."
-msgstr "Email diperlukan untuk masuk dan mendaftar."
+msgstr "Email membutuhkan izin untuk masuk dan mendaftar."
 
 #: functions/login/zume-login.php:453
 msgid "No user found."
-msgstr "Tidak ada pengguna yang ditemukan."
+msgstr "Tidak ada pengguna ditemukan."
 
 #: functions/login/zume-login.php:289 functions/login/zume-login.php:418
 msgid "You are missing your sign-in token. Try signing in again."
-msgstr "Anda kehilangan token masuk Anda. Coba masuk lagi."
+msgstr "Token masuk Anda tidak ditemukan. Cobalah untuk masuk lagi."
 
 #: functions/login/zume-login.php:299 functions/login/zume-login.php:428
 msgid "Failed to connect with Facebook. Try again."
-msgstr "Gagal menghubungkan dengan akun Facebook. Coba lagi."
+msgstr "Gagal menghubungkan dengan Facebook. Coba lagi."
 
 #: functions/login/zume-login.php:318 functions/login/zume-login.php:444
 msgid "Facebook user lookup error. Sorry for the inconvenience."
-msgstr "Kesalahan pencarian pengguna Facebook. Maaf untuk ketidaknyamanan."
+msgstr "Kesalahan pencarian pengguna Facebook. Maaf untuk ketidaknyamanannya."
 
 #: functions/login/zume-login.php:321 functions/login/zume-login.php:447
 msgid "Error with looking up user with Facebook. Sorry for the inconvenience."
@@ -158,7 +157,7 @@ msgstr "Kesalahan saat mencari pengguna dengan Facebook. Maaf untuk ketidaknyama
 #: functions/login/zume-login.php:548
 #: functions/utilities/enqueue-scripts.php:338
 msgid "There are some errors in your form."
-msgstr "Ada beberapa kesalahan dalam formulir Anda."
+msgstr "Terdapat beberapa kesalahan dalam formulir Anda."
 
 #: functions/login/zume-login.php:553
 #: functions/utilities/enqueue-scripts.php:119
@@ -190,7 +189,7 @@ msgstr "Mendaftar"
 
 #: functions/login/zume-login.php:621
 msgid "Missing captcha response. How did you do that?"
-msgstr "Respons captcha tidak ada. Bagaimana Anda melakukannya?"
+msgstr "Tidak ada respon dari Captcha. Bagaimana Anda melakukannya?"
 
 #: functions/login/zume-login.php:634
 msgid "Captcha failure. Try again, if you are human."
@@ -218,7 +217,7 @@ msgstr "Kunci Google"
 
 #: functions/login/zume-login.php:795
 msgid "Link with Google"
-msgstr "Tautan dengan Google"
+msgstr "Tautkan dengan Google"
 
 #: functions/login/zume-login.php:934 functions/login/zume-login.php:1030
 msgid "Facebook"
@@ -226,7 +225,7 @@ msgstr "Facebook"
 
 #: functions/login/zume-login.php:1171
 msgid "Missing username or email address."
-msgstr "Nama pengguna atau alamat email tidak ada."
+msgstr "Nama pengguna atau alamat email tidak ditemukan."
 
 #: functions/login/zume-login.php:1177
 msgid "ERROR: Enter a username or email address."
@@ -247,25 +246,25 @@ msgstr "Seseorang telah meminta pengaturan ulang kata sandi untuk akun berikut:"
 #. translators: %s: site name
 #: functions/login/zume-login.php:1233
 msgid "Site Name: %s"
-msgstr "Nama Situs:"
+msgstr "Nama Situs: %s"
 
 #. translators: %s: user login
 #: functions/login/zume-login.php:1235
 msgid "Username: %s"
-msgstr "Nama pengguna"
+msgstr "Nama pengguna: %s"
 
 #: functions/login/zume-login.php:1236
 msgid "If this was a mistake, just ignore this email and nothing will happen."
-msgstr "Jika ini suatu kesalahan, abaikan saja email ini dan tidak akan terjadi apa-apa."
+msgstr "Jika ini adalah kesalahan, abaikan saja email ini dan tidak akan terjadi apa-apa."
 
 #: functions/login/zume-login.php:1237
 msgid "To reset your password, visit the following address:"
-msgstr "Untuk mengatur ulang kata sandi Anda, kunjungi alamat berikut:"
+msgstr "Untuk mengatur ulang kata sandi Anda, kunjungi alamat berikut ini:"
 
 #. translators: Password reset email subject. %s: Site name
 #: functions/login/zume-login.php:1241
 msgid "[%s] Password Reset"
-msgstr "[% s] Atur ulang Kata Sandi"
+msgstr "[%s] Atur ulang Kata Sandi"
 
 #: functions/login/zume-login.php:1271
 msgid "The email could not be sent."
@@ -321,7 +320,7 @@ msgstr "Memfasilitasi sebuah Kelompok"
 
 #: functions/zume-content.php:126
 msgid "Exploring the Session Content"
-msgstr "Menjelajahi Isi Sesi"
+msgstr "Menjelajahi Isi dari Sesi"
 
 #: functions/zume-content.php:141
 msgid "How many are with you?"
@@ -341,7 +340,7 @@ msgstr "Unduh"
 
 #: functions/zume-content.php:189
 msgid "You will be able to follow along on a digital PDF for this session, but please make sure that each member of your group has a printed copy of the materials for future sessions."
-msgstr "Anda dapat mengikuti dengan PDF digital untuk sesi ini, tetapi pastikan bahwa setiap anggota kelompok Anda memiliki salinan bahan-bahan yang tercetak untuk sesi-sesi di masa depan."
+msgstr "Anda dapat mengikuti dengan PDF digital untuk sesi ini, tetapi pastikan bahwa setiap anggota kelompok Anda memiliki salinan bahan-bahan yang sudah dicetak untuk sesi-sesi di kemudian hari."
 
 #: functions/zume-content.php:196 functions/zume-v4-seo-strings.php:17
 #: template-zume-dashboard.php:813 template-zume-resources.php:38
@@ -350,12 +349,11 @@ msgstr "Unduh Buku Panduan"
 
 #: functions/zume-content.php:209
 msgid "Group Prayer (5min)"
-msgstr "Dia Kelompok (15min)"
+msgstr "Doa Kelompok (15min)"
 
 #: functions/zume-content.php:219
-#, fuzzy
 msgid "Begin with prayer. Spiritual insight and transformation is not possible without the Holy Spirit. Take time as a group to invite Him to guide you over this session."
-msgstr "Mulailah dengan doa. Wawasan rohani dan transformasi ini tidak mungkin tanpa Roh Kudus. Ambil waktu Bersama-sama untuk mengundang Dia untuk membimbing Anda melalui sesi ini."
+msgstr "Mulailah dengan doa. Wawasan rohani dan transformasi tidak memungkinkan tanpa ada nya Roh Kudus. Ambil waktu secara berkelompok untuk mengundang Dia untuk membimbing Anda selama sesi ini."
 
 #: functions/zume-content.php:233 functions/zume-content.php:291
 #: functions/zume-content.php:356 functions/zume-content.php:721
@@ -383,7 +381,7 @@ msgstr "TONTON"
 
 #: functions/zume-content.php:243
 msgid "God uses ordinary people doing simple things to make a big impact. Watch this video on how God works."
-msgstr "Allah menggunakan orang-orang biasa melakukan hal-hal sederhana untuk membuat dampak besar. Tontonvideo ini tentang bagaimana Allah bekerja."
+msgstr "Tuhan memakai orang-orang biasa yang melakukan hal-hal sederhana untuk membuat dampak besar. Tonton video berikut ini tentang bagaimana Tuhan bekerja."
 
 #: functions/zume-content.php:273
 msgid "Zúme Video Scripts: Welcome"
@@ -405,14 +403,12 @@ msgid "DISCUSS"
 msgstr "DISKUSIKAN"
 
 #: functions/zume-content.php:281
-#, fuzzy
 msgid "If Jesus intended every one of His followers to obey His Great Commission, why do so few actually make disciples?"
-msgstr "Jika Yesus ingin setiap pengikutnya untuk mematuhi AManat AgungNya, mengapa sedikit sekali yang benar-benar membuat murid?"
+msgstr "Jika Yesus menginginkan setiap pengikutNya untuk mematuhi Amanat Agung, lalu mengapa sedikit sekali yang benar-benar membuat murid?"
 
 #: functions/zume-content.php:301
-#, fuzzy
 msgid "What is a disciple? And how do you make one? How do you teach a follower of Jesus to do what He told us in His Great Commission – to obey all of His commands?"
-msgstr "Apa murid itu? Dan bagaimana Anda membuat murid? Bagaimana Anda mengajar pengikut Yesus untuk melakukan apa yang dikatakanNYa dalam Amanat AgungNya – untuk mematuhi semua perintah-Nya?"
+msgstr "Apa yang dimaksud dengan murid? Dan bagaimana cara Anda membuat murid? Bagaimana Anda mengajar pengikut Yesus untuk melakukan apa yang dikatakanNYa dalam Amanat AgungNya – untuk mematuhi semua perintah-Nya?"
 
 #: functions/zume-content.php:333
 msgid "Zúme Video Scripts: Teach Them to Obey"
@@ -420,20 +416,19 @@ msgstr "Naskah Video Zume: Ajarlah Mereka untuk Taat"
 
 #: functions/zume-content.php:342
 msgid "When you think of a church, what comes to mind?"
-msgstr "Waktu Anda berpikir tentang gereja, apa yang Anda pikirkan?"
+msgstr "Waktu Anda membayangkan sebuah gereja, apa yang Anda pikirkan?"
 
 #: functions/zume-content.php:343
-#, fuzzy
 msgid "What's the difference between that picture and what's described in the video as a \"Simple Church\"?"
-msgstr "Apa perbedaan antara gambar itu dengan apa yang digambarkan dalam video sebagai sebuah \"Gereja Sederhana\"?"
+msgstr "Apa perbedaan antara gambar itu dengan apa yang di jelaskan dalam video sebagai sebuah \"Gereja Sederhana\"?"
 
 #: functions/zume-content.php:345
 msgid "Which one do you think would be easier to multiply and why?"
-msgstr "Yang satu yang menurut Anda akan lebih mudah untuk berlipat ganda dan mengapa?"
+msgstr "Yang mana menurut Anda akan lebih mudah untuk berlipat ganda dan mengapa?"
 
 #: functions/zume-content.php:366
 msgid "We breathe in. We breathe out. We're alive. Spiritual Breathing is like that, too."
-msgstr "Kita menghirup napas. Kita mengeluarkan napas. Kita hidup. Pernapasan rohani seperti itu juga."
+msgstr "Kita menarik nafas. Kita mengeluarkan nafas. Kita hidup. Seperti itu juga hal nya dengan Pernapasan Rohani."
 
 #: functions/zume-content.php:399
 msgid "Zúme Video Scripts: Spiritual Breathing"
@@ -441,17 +436,17 @@ msgstr "Naskah Video Zume: Pernapasan Rohani"
 
 #: functions/zume-content.php:409
 msgid "Why is it essential to learn to hear and recognize God's voice?"
-msgstr "Mengapa penting untuk belajar mendengar dan mengenali suara Allah?"
+msgstr "Mengapa penting untuk belajar mendengar dan mengenal suara Tuhan?"
 
 #: functions/zume-content.php:410
 msgid "Is hearing and responding to the Lord really like breathing? Why or why not?"
-msgstr "APakah mendengar dan menanggapi Tuhan benar-benar seperti bernapas? Mengapa atau mengapa tidak?"
+msgstr "Apakah mendengar dan menanggapi Tuhan benar-benar seperti bernapas? Mengapa atau mengapa tidak demikian?"
 
 #: functions/zume-content.php:421 functions/zume-content.php:489
 #: functions/zume-content.php:903 functions/zume-content.php:1543
 #: functions/zume-content.php:1846 functions/zume-content.php:3651
 msgid "Listen and Read Along (3min)"
-msgstr "Dengarkan dan ikut membaca  (3 menit)"
+msgstr "Dengarkan dan Ikut Membaca  (3 menit)"
 
 #: functions/zume-content.php:429 functions/zume-content.php:497
 #: functions/zume-content.php:800 functions/zume-content.php:909
@@ -472,7 +467,7 @@ msgstr "Mendengar dari Allah secara teratur adalah unsur kunci dalam hubungan pr
 
 #: functions/zume-content.php:445
 msgid "Find the \"S.O.A.P.S. Bible Reading\" section in your Zúme Guidebook and listen to the audio overview."
-msgstr "Cari bagian \"Pembacaan Alkitab S.O.A.P.S.\" dalam buku panduan Zúme Anda dan mendengarkan audio Ikhtisar."
+msgstr "Cari bagian \"Pembacaan Alkitab S.O.A.P.S.\" dalam buku panduan Zúme Anda dan dengarkan peninjauan audio."
 
 #: functions/zume-content.php:479
 msgid "Zúme Video Scripts: S.O.A.P.S."
@@ -485,17 +480,16 @@ msgid "Accountability Groups"
 msgstr "Kelompok yang Saling Bertanggung Jawab"
 
 #: functions/zume-content.php:503
-#, fuzzy
 msgid "The Bible tells us that every follower of Jesus will one day be held accountable for what we do and say and think. Accountability Groups are a great way to get ready!"
-msgstr "Alkitab mengatakan bahwa setiap pengikut Yesus akan suatu hari bertanggung jawab untuk apa yang kita dan katakan dan berpikir. Kelompok-kelompok akuntabilitas adalah cara yang bagus untuk bersiap-siap!"
+msgstr "Alkitab mengatakan bahwa setiap pengikut Yesus suatu hari akan bertanggung jawab atas apa yang kita lakukan dan katakan dan pikirkan. Kelompok yang saling bertanggung jawab atas satu sama lain adalah cara yang tepat untuk bersiap-siap!"
 
 #: functions/zume-content.php:515
 msgid "Find the \"Accountability Groups\" section in your Zúme Guidebook, and listen to the audio below."
-msgstr "Cari bagian \"Akuntabilitas kelompok\" dalam buku panduan Zúme Anda, dan mendengarkan audio di bawah ini."
+msgstr "Cari bagian \"Akuntabilitas kelompok\" dalam buku panduan Zúme Anda, dan dengarkan audio di bawah ini."
 
 #: functions/zume-content.php:551
 msgid "Zúme Video Scripts: Accountability Groups"
-msgstr "Naskah Video Zume: Kelompok yang Saling Bertanggung Jawab"
+msgstr "Naskah Video Zume: Kelompok Akuntabilitas"
 
 #: functions/zume-content.php:561
 msgid "Practice (45min)"
@@ -507,7 +501,7 @@ msgstr "BAGI KE DALAM KELOMPOK"
 
 #: functions/zume-content.php:570
 msgid "Break into groups of two or three people of the same gender."
-msgstr "bAGI ke DALAM kelompok dua atau tiga orang dari jenis kelamin yang sama."
+msgstr "BAGI ke DALAM kelompok yang berisi dua atau tiga orang dengan jenis kelamin yang sama."
 
 #: functions/zume-content.php:576 functions/zume-content.php:628
 #: functions/zume-content.php:1037 functions/zume-content.php:1445
@@ -520,7 +514,7 @@ msgstr "BERBAGI"
 
 #: functions/zume-content.php:579
 msgid "Spend the next 45 minutes working together through Accountability Questions – List 2 in the \"Accountability Groups\" section of your"
-msgstr "Ambil waktu 45 menit berikutnya bekerja sama melalui Pertanyaan Pertanggung Jawaban - Daftar 2 di bagian \"Kelompok yang Saling Bertangggung Jawab\" "
+msgstr "Ambil waktu 45 menit berikutnya bekerja sama melalui Pertanyaan Pertanggung Jawaban - Daftar kedua di bagian \"Kelompok yang Saling Bertangggung Jawab\" "
 
 #: functions/zume-content.php:583
 msgid "Zúme Guidebook"
@@ -532,7 +526,7 @@ msgstr "Buku Panduan Zume"
 #: functions/zume-content.php:2715 functions/zume-content.php:2946
 #: functions/zume-content.php:3388
 msgid "LOOKING FORWARD"
-msgstr "MEMANDANG KE DEPAN"
+msgstr "MELIHAT KE DEPAN"
 
 #: functions/zume-content.php:599
 msgid "Congratulations! You've completed Session 1."
@@ -617,7 +611,7 @@ msgstr "MEMERIKSA"
 #: functions/zume-content.php:2774 functions/zume-content.php:3010
 #: functions/zume-content.php:3453
 msgid "Before getting started, take some time to check-in."
-msgstr "Sebelum memulai, luangkan waktu untuk saling memeriksa."
+msgstr "Sebelum memulai, luangkan waktu untuk memeriksa."
 
 #: functions/zume-content.php:694 functions/zume-content.php:1085
 #: functions/zume-content.php:1502 functions/zume-content.php:2004
@@ -625,7 +619,7 @@ msgstr "Sebelum memulai, luangkan waktu untuk saling memeriksa."
 #: functions/zume-content.php:2776 functions/zume-content.php:3012
 #: functions/zume-content.php:3455
 msgid "At the end of the last session, everyone in your group was challenged in two ways:"
-msgstr "Pada akhir sesi terakhir, semua orang dalam kelompok Anda ditantang dalam dua cara:"
+msgstr "Pada akhir dari sesi sebelumnya, semua orang dalam kelompok Anda ditantang dengan dua cara:"
 
 #: functions/zume-content.php:697
 msgid "You were asked to begin practicing the S.O.A.P.S. Bible reading method and keeping a daily journal."
@@ -633,23 +627,22 @@ msgstr "Anda diminta untuk mulai berlatih metode membaca Alkitab S.O.A.P.S. dan 
 
 #: functions/zume-content.php:699
 msgid "You were encouraged to reach out to someone about starting an Accountability Group."
-msgstr "Anda didorong untuk menjangkau seseorang untuk memulai sebuah kelompok yang saling bertanggung jawab."
+msgstr "Anda didorong untuk menjangkau seseorang untuk memulai sebuah Kelompok Akuntabilitas."
 
 #: functions/zume-content.php:701 functions/zume-content.php:1093
 #: functions/zume-content.php:1511 functions/zume-content.php:2011
 #: functions/zume-content.php:2293 functions/zume-content.php:2548
 #: functions/zume-content.php:2786 functions/zume-content.php:3021
 msgid "Take a few moments to see how your group did this week."
-msgstr "Ambil waktu untuk melihat bagaimana kelompok Anda melakukannya minggu ini."
+msgstr "Ambil beberapa saat untuk melihat bagaimana kelompok Anda melakukannya minggu ini."
 
 #: functions/zume-content.php:708
 msgid "Ask if anyone in the group has specific needs they would like the group to pray for. Ask someone to pray and ask God to help in the areas the group shared. Be sure to thank God that He promises in His Word to listen and act when His people pray. And, as always, ask God's Holy Spirit to lead your time, together."
-msgstr "Tanyakan apakah seseorang dalam kelompok memiliki kebutuhan khusus yang mereka ingin kelompok untuk mendoakannya. Minta seseorang untuk berdoa dan meminta Tuhan untuk membantu dalam bidang yang dibagikan kelompok Pastikan untuk berterima kasih kepada Allah karena Dia berjanji dalam Firman-Nya untuk mendengarkan dan bertindak ketika umat-Nya berdoa. Dan, seperti biasa, minta Roh Kudus Allah untuk memimpin waktu Anda, bersama-sama."
+msgstr "Tanyakan apakah seseorang dalam kelompok memiliki kebutuhan khusus dan mereka ingin di doakan oleh kelompok. Minta seseorang untuk berdoa dan meminta Tuhan untuk membantu dalam area yang dibagikan di kelompok Pastikan untuk berterima kasih kepada Tuhan karena Dia berjanji dalam Firman-Nya bahwa Dia mendengarkan dan bertindak ketika umat-Nya berdoa. Dan, seperti biasa, minta Roh Kudus untuk memimpin waktu Anda, bersama-sama."
 
 #: functions/zume-content.php:731
-#, fuzzy
 msgid "If we want to make disciples who multiply – spiritual producers and not just consumers – then we need to learn and share four main ways God makes everyday followers more like Jesus:"
-msgstr "Jika kita ingin membuat murid yang berlipat ganda - produsen rohani dan bukan hanya konsumen- maka kita perlu untuk belajar dan berbagi empat cara utama Allah membuat pengikut setiap hari menjadi lebih seperti Yesus:"
+msgstr "Jika kita ingin membuat murid yang berlipat ganda - produsen rohani dan bukan hanya konsumen- maka kita perlu untuk belajar dan berbagi empat cara utama Tuhan membuat pengikut menjadi lebih seperti Yesus setiap hari:"
 
 #: functions/zume-content.php:733 template-zume-landing.php:369
 msgid "Prayer"
@@ -665,7 +658,7 @@ msgstr "Kehidupan Tubuh"
 
 #: functions/zume-content.php:736
 msgid "Persecution and Suffering"
-msgstr "Penganiayaan dan Sengsara"
+msgstr "Penganiayaan dan Kesengsaraan"
 
 #: functions/zume-content.php:768
 msgid "Zúme Video Scripts: Producers vs Consumers"
@@ -673,19 +666,19 @@ msgstr "Naskah Video Zume: Produsen vs Konsumen"
 
 #: functions/zume-content.php:777
 msgid "Of the four areas detailed above (prayer, God's Word, etc.), which ones do you already practice?"
-msgstr "Dari empat bidang yang dijelaskan di atas (doa, Firman Tuhan, dll), mana yang sudah Anda lakukan?"
+msgstr "Dari empat bagian yang dijelaskan di atas (doa, Firman Tuhan, dll), yang mana yang sudah Anda lakukan?"
 
 #: functions/zume-content.php:779
 msgid "Which ones do you feel unsure about?"
-msgstr "Yang mana Anda merasa tidak yakin?"
+msgstr "Yang mana yang Anda masih merasa tidak yakin?"
 
 #: functions/zume-content.php:780
 msgid "How ready do you feel when it comes to training others?"
-msgstr "Seberapa siapkah Anda rasa untuk melatih orang lain?"
+msgstr "Seberapa siapkah Anda ketika dihadapkan untuk melatih orang lain?"
 
 #: functions/zume-content.php:793
 msgid "Listen and Read Along (2min)"
-msgstr "Dengar dan  Ikut Membaca (2min)"
+msgstr "Dengarkan dan kut Membaca (2min)"
 
 #: functions/zume-content.php:803 template-zume-dashboard.php:366
 msgid "Prayer Cycle"
@@ -709,7 +702,7 @@ msgstr "Praktekkan Siklus Doa (60min)"
 
 #: functions/zume-content.php:868
 msgid "LEAVE"
-msgstr "MELEPASKAN"
+msgstr "TINGGALKAN"
 
 #: functions/zume-content.php:870
 msgid "Spend the next 60 minutes in prayer individually, using the exercises in \"The Prayer Cycle\" section of the Zúme Guidebook as a guide."
@@ -721,7 +714,7 @@ msgstr "KEMBALI"
 
 #: functions/zume-content.php:877
 msgid "Set a time for the group to return and reconnect. Be sure to add a few extra minutes for everyone to both find a quiet place to pray and to make their way back to the group."
-msgstr "Tetapkan waktu untuk kelompok kembali dan bergabung kembali. Pastikan untuk menambahkan beberapa menit tambahan untuk semua orang untuk menemukan tempat yang tenang untuk berdoa dan untuk berjalan kembali ke grup."
+msgstr "Tentukan waktu untuk kelompok kembali dan menghubungkan kembali. Pastikan untuk menambahkan beberapa menit tambahan untuk semua orang untuk menemukan tempat yang tenang untuk berdoa dan unntuk kembali ke dalam kelompok"
 
 #: functions/zume-content.php:885
 msgid "What is your reaction to spending an hour in prayer?"
@@ -733,11 +726,11 @@ msgstr "Apa yang Anda rasakan?"
 
 #: functions/zume-content.php:887
 msgid "Did you learn or hear anything?"
-msgstr "Apakah Anda belajar atau mendengar apa-apa?"
+msgstr "Apakah Anda belajar atau mendengar sesuatu?"
 
 #: functions/zume-content.php:888
 msgid "What would life be like if you made this kind of prayer a regular habit?"
-msgstr "Seperti apa hidup Anda jika Anda membuat berdoa seperti ini menjadi kebiasaan rutin?"
+msgstr "Seperti apa hidup Anda jika Anda menjadikan doa seperti ini menjadi sebuah kebiasaan rutin?"
 
 #: functions/zume-content.php:912 template-zume-dashboard.php:374
 msgid "List of 100"
@@ -745,11 +738,11 @@ msgstr "Daftar 100"
 
 #: functions/zume-content.php:915
 msgid "God has already given us the relationships we need to “Go and make disciples.” These are our family, friends, neighbors, co-workers and classmates – people we’ve known all our lives or maybe just met."
-msgstr "Allah sudah memberikan hubungan yang kita perlukan untuk \"Pergi dan menjadikan murid.\" Ini adalah keluarga, teman, tetangga, rekan kerja dan teman-teman sekelas kita – orang-orang yang kita sudah kenal selama hidup kita atau mungkin yang baru bertemu."
+msgstr "Tuhan sudah memberikan orang-orang yang kita perlukan untuk \"Pergi dan menjadikan murid.\" Mereka adalah keluarga, teman, tetangga, rekan kerja dan teman-teman sekelas kita – orang-orang yang kita sudah kenal seumur hidup kita atau mungkin yang baru bertemu."
 
 #: functions/zume-content.php:918
 msgid "Being good stewards of these relationships is the first step in multiplying disciples. Start by making a list."
-msgstr "Menjadi pelayan yang baik dari hubungan ini adalah langkah pertama dalam mengalikan murid. Mulailah dengan membuat daftar."
+msgstr "Menjadi pelayan yang baik dari hubungan ini adalah langkah pertama dalam melipat gandakan murid. Mulailah dengan membuat daftar."
 
 #: functions/zume-content.php:929
 msgid "Find the \"List of 100\" section in your Zúme Guidebook, and listen to the audio below."
@@ -773,24 +766,24 @@ msgstr "Mintalah semua orang dalam kelompok mengambil waktu 30 menit berikutnya 
 
 #: functions/zume-content.php:1009
 msgid "Congratulations on finishing Session 2! "
-msgstr "Selamat Anda sudah  menyelesaikan sesi 2!"
+msgstr "Selamat karena sudah menyelesaikan sesi 2!"
 
 #: functions/zume-content.php:1032
 msgid "Spend time this week praying for five people from your List of 100 that you marked as an \"Unbeliever\" or \"Unknown.\" Ask God to prepare their hearts to be open to His story."
-msgstr "Ambil waktu minggu ini berdoa untuk lima orang dari daftar 100 yang Anda tandai sebagai \"Orang Belum Percaya\" atau \"Tidak diketahui.\" Minta Tuhan untuk mempersiapkan hati mereka bersikap terbuka untuk ceritaNya."
+msgstr "Ambil waktu minggu ini berdoa untuk lima orang dari daftar 100 yang Anda tandai sebagai \"Orang Yang Belum Percaya\" atau \"Tidak diketahui.\" Minta Tuhan untuk mempersiapkan hati mereka untuk terbuka terhadap ceritaNya."
 
 #: functions/zume-content.php:1039
 msgid "Ask God who He wants you to share the List of 100 tool with. Share this person's name with the group before you go and reach out to them before the next session."
-msgstr "Tanya Allah dengan siapa yang Dia ingin Anda berbagi  alat daftar 100. Berbagi nama orang ini dengan kelompok sebelum Anda pergi dan menjangkau mereka sebelum sesi berikutnya."
+msgstr "Tanya Tuhan dengan siapa Dia ingin Anda berbagi daftar 100 tersebut. Bagikan nama orang ini dengan kelompok sebelum Anda pergi dan menjangkau mereka sebelum sesi berikutnya."
 
 #: functions/zume-content.php:1046 functions/zume-content.php:1454
 #: functions/zume-content.php:1968
 msgid "Pray that God help you be obedient to Him and invite Him to work in you and those around you!"
-msgstr "Berdoa supaya Allah membantu Anda taat padaNya dan mengundang Dia untuk bekerja dalam diri Anda dan orang di sekitar Anda!"
+msgstr "Berdoa agar Tuhan membantu Anda taat padaNya dan mengundang Dia untuk bekerja dalam diri Anda dan orang di sekitar Anda!"
 
 #: functions/zume-content.php:1053
 msgid "Think others could use the 60-minute prayer tool? Share about it on social media."
-msgstr "Anda berpikir mungkin orang lain bisa menggunakan alat  doa 60 menit? Berbagi tentang hal itu di media sosial."
+msgstr "Apakah Anda berpikir orang lain mungkin bisa menggunakan sarana doa 60 menit? Bagikan tentang hal itu di media sosial."
 
 #: functions/zume-content.php:1072 functions/zume-content.php:1494
 #: functions/zume-content.php:1994 functions/zume-content.php:2279
@@ -801,17 +794,16 @@ msgstr "MEMANDANG KE BELAKANG"
 
 #: functions/zume-content.php:1089
 msgid "You were asked to pray for five people from your List of 100 that you marked as an \"Unbeliever\" or \"Unknown.\""
-msgstr "Anda diminta  berdoa untuk lima orang dari daftar 100 yang Anda tandai sebagai \"Orang Belum Percaya\" atau \"Tidak diketahui.\" "
+msgstr "Anda diminta  berdoa untuk lima orang dari daftar 100 yang Anda tandai sebagai \"Bukan Orang Percaya\" atau \"Tidak diketahui.\" "
 
 #: functions/zume-content.php:1090
 msgid "You were encouraged to share how to make a List of 100 with someone."
-msgstr "Anda didorong untuk berbagi bagaimana membuat daftar 100 dengan seseorang."
+msgstr "Anda didorong untuk berbagi bagaimana cara membuat Daftar 100 dengan seseorang."
 
 #: functions/zume-content.php:1100 functions/zume-content.php:1520
 #: functions/zume-content.php:2018
-#, fuzzy
 msgid "Pray and thank God for the results and invite His Holy Spirit to lead your time together."
-msgstr "Berdoa dan berterima kasih kepada allah  untuk hasilnya dan mengundang Roh Kudus-Nya untuk memimpin waktu Anda bersama-sama."
+msgstr "Berdoa dan berterima kasih kepada Tuhan untuk hasilnya dan undang Roh Kudus-Nya untuk memimpin waktu Anda bersama."
 
 #: functions/zume-content.php:1105 functions/zume-content.php:1525
 #: functions/zume-content.php:2023 functions/zume-content.php:2305
@@ -823,15 +815,15 @@ msgstr "TINJAUAN"
 
 #: functions/zume-content.php:1107
 msgid "In this session, you’ll learn how God’s Spiritual Economy works and how God invests more in those who are faithful with what they've already been given. You'll also learn two more tools for making disciples – sharing God’s Story from Creation to Judgement and Baptism."
-msgstr "Dalam sesi ini, you’ll belajar bagaimana cara kerja ekonomi rohani Allah dan bagaimana Allah berinvestasi lebih dalam diri mereka yang setia dengan apa yang sudah diberikan kepada mereka. Anda juga akan belajar dua alat untuk membuat murid-berbagi  cerita Allah dari penciptaan kepada penghakiman, dan Baptisan."
+msgstr "Dalam sesi ini, Anda akan belajar bagaimana cara kerja ekonomi rohani Tuhan dan bagaimana Tuhan berinvestasi lebih untuk mereka yang setia dengan apa yang sudah diberikan kepada mereka. Anda juga akan belajar dua alat untuk membuat murid- berbagi Kisah Allah mulai dari Penciptaan hingga Penghakiman, dan Baptisan."
 
 #: functions/zume-content.php:1109 functions/zume-content.php:1529
 msgid "Then, when you're ready, get started!"
-msgstr "Kemudian, ketika Anda siap, mulai!"
+msgstr "Kemudian, ketika Anda siap, mulailah!"
 
 #: functions/zume-content.php:1131
 msgid "In this broken world, people feel rewarded when they take, when they receive and when they gain more than those around them. But God's Spiritual Economy is different – God invests more in those who are faithful with what they've already been given."
-msgstr "Di dunia yang hancur ini, orang merasa dihargai ketika mereka mengambil, ketika mereka menerima dan ketika mereka mendapatkan lebih banyak daripada orang-orang di sekitar mereka. Tetapi Ekonomi Rohani Allah berbeda Allah berinvestasi lebih dalam diri mereka yang setia dengan apa yang sudah diberikan kepada mereka."
+msgstr "Di dunia yang hancur ini, orang merasa dihargai ketika mereka mengambil, ketika mereka menerima dan ketika mereka mendapatkan lebih banyak daripada orang-orang di sekitar mereka. Tetapi Ekonomi Rohani Allah berbeda- Tuhan berinvestasi lebih untuk mereka yang setia dengan apa yang sudah diberikan kepada mereka."
 
 #: functions/zume-content.php:1161
 msgid "Zúme Video Scripts: Spiritual Economy"
@@ -846,31 +838,28 @@ msgid "Read and Discuss (15min)"
 msgstr "Baca dan diskusikan (15min)"
 
 #: functions/zume-content.php:1191
-#, fuzzy
 msgid "Jesus said, “You will receive power when the Holy Spirit comes upon you. And you will be my witnesses, telling people about me everywhere – in Jerusalem, throughout Judea, in Samaria, and to the ends of the earth.”"
-msgstr "Isa berkata, \"Tetapi kamu akan menerima kuasa, kalau Roh Suci turun ke atas kamu, dan kamu akan menjadi saksi-Ku di Yerusalem dan di seluruh Yehuda dan Samaria dan sampai ke ujung bumi.\""
+msgstr "Yesus berkata, \"Tetapi kamu akan menerima kuasa, kalau Roh Kudus turun ke atas kamu, dan kamu akan menjadi saksi-Ku, memberitakan tentang Aku dimana-mana- di Yerusalem dan di seluruh Yudea dan Samaria dan sampai ke ujung bumi.\""
 
 #: functions/zume-content.php:1194
-#, fuzzy
 msgid "Jesus believed in His followers so much, He trusted them to tell His story. Then He sent them around the world to do it. Now, He’s sending us."
-msgstr "Yesus sangat percaya kepada pengikutnya, Dia mempercayakan kepada mereka untuk menceritakan kisahNya. Kemudian Dia mengutus mereka ke seluruh dunia untuk melakukannya. Sekarang, Dia mengutus kami."
+msgstr "Yesus sangat mempercayai para pengikutNya, Dia mempercayakan mereka untuk menceritakan kisahNya. Kemudian Dia mengutus mereka ke seluruh dunia untuk melakukannya. Sekarang, Dia mengutus kita."
 
 #: functions/zume-content.php:1197
 msgid "There’s no one “best way” to tell God’s story (also called The Gospel), because the best way will depend on who you’re sharing with. Every disciple should learn to tell God’s Story in a way that’s true to scripture and connects with the audience they’re sharing with."
-msgstr "Tidak ada \"cara terbaik\" untuk menceritakan kisah Allah [juga disebut Injil], karena cara terbaik akan bergantung pada kepada siapa Anda sedang berbagi. Setiap murid hendaknya belajar menceritakan Kisah Allah dengan cara yang sesuai dengan kitab suci dan pas/cocok dengan orang yang diajak berbagi."
+msgstr "Tidak ada satu \"cara terbaik\" untuk menceritakan Kisah Allah [juga disebut Injil], karena cara terbaik akan tergantung pada siapa Anda sedang berbagi. Setiap murid harus belajar menceritakan Kisah Allah dengan cara yang sesuai dengan Firman Tuhan dan terhubung dengan orang yang sedang Anda Injili."
 
 #: functions/zume-content.php:1206
 msgid "What comes to mind when you hear God's command to be His \"witness\" and to tell His story?"
-msgstr "Apa yang terlintas dalam pikiran ketika Anda mendengar perintah Allah untuk menjadi “saksi” -Nya dan menceritakan kisah-Nya?"
+msgstr "Apa yang terlintas dalam pikiran Anda ketika Anda mendengar perintah Tuhan untuk menjadi “saksi” -Nya dan menceritakan kisah-Nya?"
 
 #: functions/zume-content.php:1208
-#, fuzzy
 msgid "Why do you think Jesus chose ordinary people instead of some other way to share His Good News?"
-msgstr "Menurut Anda mengapa Isa memilih orang biasa daripada beberapa cara lain untuk membagikan Kabar Baik-Nya?"
+msgstr "Menurut Anda mengapa Yesus memilih orang biasa daripada cara lainnya untuk membagikan Kabar Baik-Nya?"
 
 #: functions/zume-content.php:1210
 msgid "What would it take for you to feel more comfortable sharing God's Story?"
-msgstr "Apa yang akan membuat Anda merasa lebih nyaman memberitakan Kisah Allah?"
+msgstr "Apa yang akan membuat Anda merasa lebih nyaman memberitakan Kisah?"
 
 #: functions/zume-content.php:1233 template-zume-dashboard.php:398
 msgid "The Gospel"
@@ -878,7 +867,7 @@ msgstr "Injil"
 
 #: functions/zume-content.php:1234
 msgid "One way to share God’s Good News is by telling God’s Story from Creation to Judgement – from the beginning of humankind all the way to the end of this age."
-msgstr "Salah satu cara untuk memberitakan Kabar Baik Allah adalah dengan menceritakan Kisah Allah dari Penciptaan sampai Penghakiman - sejak awal umat manusia sampai akhir zaman ini."
+msgstr "Salah satu cara untuk memberitakan Kabar Baik Allah adalah dengan menceritakan Kisah Allah dari Penciptaan sampai Penghakiman- sejak awal peradaban manusia sampai akhir zaman."
 
 #: functions/zume-content.php:1265
 msgid "Zúme Video Scripts: The Gospel"
@@ -886,7 +875,7 @@ msgstr "Naskah Video Zume: Injil"
 
 #: functions/zume-content.php:1274
 msgid "What do you learn about mankind from this story?"
-msgstr "Apa yang Anda pelajari tentang umat manusia  dari kisah ini?"
+msgstr "Apa yang Anda pelajari tentang umat manusia dari kisah ini?"
 
 #: functions/zume-content.php:1275
 msgid "What do you learn about God?"
@@ -894,24 +883,25 @@ msgstr "Apa yang Anda pelajari tentang Allah?"
 
 #: functions/zume-content.php:1276
 msgid "Do you think it would be easier or harder to share God's Story by telling a story like this?"
-msgstr "Menurut Anda apakah membagikan cerita seperti ini akan memudahkan atau malah menyulitkan pemberitaan Kisah Allah?"
+msgstr "Menurut Anda apakah membagikan cerita seperti ini akan memudahkan atau malah menyulitkan pemberitaan Kabar Baik?"
 
+#. GOD'S STORY is a specific meaning that must match the guidebook
 #: functions/zume-content.php:1289
 msgid "PRACTICE SHARING GOD'S STORY (45min)"
-msgstr "Praktek berbagi kisah  Allah (45min)"
+msgstr "LATIHAN MEMBERITAKAN CERITA ALLAH (45min)"
 
+#. We need to check what the Guide book says for "God's Story" to make sure they match
 #: functions/zume-content.php:1298
 msgid "Break into groups of two or three people and spend the next 45 minutes practicing telling God's Story. You can use the using the Activity instructions for \"God's Story\" found in your Zúme Guidebook."
-msgstr "Bagilah menjadi kelompok yang masing-masing terdiri dari dua atau tiga orang dan gunakan 45 menit ke depan untuk berlatih memberitakan Kisah Allah. Anda dapat menggunakan petunjuk Aktivitas untuk \"Kisah Allah\" yang ada dalam Buku Panduan Zúme."
+msgstr "Bagilah menjadi beberapa kelompok yang masing-masing terdiri dari dua atau tiga orang dan gunakan 45 menit ke depan untuk berlatih memberitakan Cerita Allah. Anda dapat menggunakan petunjuk Aktivitas untuk \"CERITA ALLAH\" yang terdadat dalam Buku Panduan Zúme."
 
 #: functions/zume-content.php:1323 template-zume-dashboard.php:406
 msgid "Baptism"
 msgstr "Baptisan"
 
 #: functions/zume-content.php:1326
-#, fuzzy
 msgid "Jesus said, “Go and make disciples of all nations, BAPTIZING them in the name of the Father and of the Son and of the Holy Spirit…”"
-msgstr "Isa berkata, \"Pergilah, jadikanlah semua bangsa murid-Ku, dan baptislah mereka dalam nama Bapa dan Anak dan Roh Suci…\""
+msgstr "Yesus berkata, \"Pergilah dan jadikanlah semua bangsa murid-Ku, dan BAPTISLAH mereka dalam nama Bapa dan Anak dan Roh Kudus…\""
 
 #: functions/zume-content.php:1337
 msgid "Find the \"Baptism\" section in your Zúme Guidebook, and listen to the audio below."
@@ -927,21 +917,19 @@ msgstr "Apakah Anda pernah membaptis seseorang?"
 
 #: functions/zume-content.php:1380
 msgid "Would you even consider it?"
-msgstr "Apakah Anda mempertimbangkan itu?"
+msgstr "Apakah Anda akan mempertimbangkan itu?"
 
 #: functions/zume-content.php:1381
-#, fuzzy
 msgid "If the Great Commission is for every follower of Jesus, does that mean every follower is allowed to baptize others? Why or why not?"
-msgstr "Jika Amanat Agung dimaksudkan untuk setiap pengikut Isa, apakah artinya setiap pengikut Isa diperbolehkan membaptis orang lain? Mengapa atau mengapa tidak?"
+msgstr "Jika Amanat Agung dimaksudkan untuk setiap pengikut Yesus, apakah artinya setiap pengikutNya diperbolehkan untuk membaptis orang lain? Mengapa atau mengapa tidak?"
 
 #: functions/zume-content.php:1394
 msgid "IMPORTANT REMINDER – Have you been baptized?"
 msgstr "PENGINGAT PENTING - Apakah Anda sudah dibaptis?"
 
 #: functions/zume-content.php:1397
-#, fuzzy
 msgid "If not, then we encourage you to plan this before even one more session of this training. Invite your group to be a part of this important day when you celebrate saying \"yes\" to Jesus."
-msgstr "Jika belum, maka kami mendorong Anda untuk merencanakan ini bahkan sebelum satu sesi lagi dari pelatihan ini. Undanglah kelompok Anda untuk menjadi bagian dari hari penting ini ketika Anda merayakan mengatakan \"ya\" kepada Isa."
+msgstr "Jika tidak, maka kami mendorong Anda untuk merencanakan ini bahkan sebelum satu sesi pelatihan ini lagi. Undanglah kelompok Anda untuk menjadi bagian dari hari penting ini ketika Anda merayakan mengatakan \"Ya\" kepada Yesus."
 
 #: functions/zume-content.php:1418
 msgid "Congratulations on finishing Session 3! "
@@ -965,7 +953,7 @@ msgstr "PENGINGAT PENTING-grup Anda akan merayakan Perjamuan Kudus sesi berikutn
 
 #: functions/zume-content.php:1505
 msgid "You were asked to share God’s Story with at least one person from your List of 100 that you marked as \"Unbeliever\" or \"Unknown.\""
-msgstr "Anda diminta untuk membahgikan Kisah Allah dengan setidaknya satu orang dari daftar 100 anda yang Anda ditandai sebagai \"orang belum percaya\" atau \"tidak diketahui.\""
+msgstr "Anda diminta untuk membahgikan Kisah Allah dengan setidaknya satu orang dari daftar 100 anda yang Anda ditandai sebagai \"Bukan Orang Percaya\" atau \"Tidak Diketahui.\""
 
 #: functions/zume-content.php:1508
 msgid "You were encouraged to train someone to use the Creation to Judgement story (or some other way to share God’s Story) with someone."
@@ -1004,7 +992,6 @@ msgid "What is God's greatest blessing for His children? Making disciples who mu
 msgstr "Apa berkat terbesar Allah untuk anak-anaknya? Membuat murid yang berlipatganda!"
 
 #: functions/zume-content.php:1650
-#, fuzzy
 msgid "What if you could learn a simple pattern for making not just one follower of Jesus but entire spiritual families who multiply for generations to come?"
 msgstr "Bagimana kalau Anda dapat belajar pola sederhana untuk membuat bukan hanya satu pengikut Yesus tetapi seluruh keluarga rohani yang berlipat ganda untuk generasi yang akan datang?"
 
@@ -1013,9 +1000,8 @@ msgid "Zúme Video Scripts: Greatest Blessing"
 msgstr "Naskah Video Zúme: Berkat Terbesar"
 
 #: functions/zume-content.php:1692
-#, fuzzy
 msgid "Is this the pattern you were taught when you first began to follow Jesus? If not, what was different?"
-msgstr "Apakah pola ini juga yang diajarkan ketika Anda pertama kali mulai mengikuti Yesus? Jika tidak, apa yang berbeda?"
+msgstr "Apakah ini pola yang juga diajarkan ketika Anda pertama kali mulai mengikut Yesus? Jika tidak, apa yang berbeda?"
 
 #: functions/zume-content.php:1694
 msgid "After you came to faith, how long was it before you began to disciple others?"
@@ -1070,9 +1056,8 @@ msgid "The Lord's Supper"
 msgstr "Perjamuan Kudus"
 
 #: functions/zume-content.php:1858
-#, fuzzy
 msgid "Jesus said, “I am the living bread that came down from heaven. Whoever eats this bread will live forever. This bread is my flesh, which I will give for the life of the world.”"
-msgstr "Isa berkata – (Yohanes 6:51[TB]) Akulah roti hidup yang telah turun dari sorga. Jikalau seseorang makan dari roti ini, ia akan hidup selama-lamanya, dan roti yang Kuberikan adalah daging-Ku, yang akan Kuberikan untuk hidup dunia."
+msgstr "Yesus berkata – “Akulah roti hidup yang telah turun dari sorga. Jikalau seseorang makan dari roti ini, ia akan hidup selama-lamanya, dan roti yang Kuberikan adalah daging-Ku, yang akan Kuberikan untuk hidup dunia.”"
 
 #: functions/zume-content.php:1869
 msgid "Find \"The Lord's Supper\" section in your Zúme Guidebook, and listen to the audio below."
@@ -1108,16 +1093,15 @@ msgstr "Apa hal terbaik yang Anda dapatkan hari ini? Berbagi tentang hal itu di 
 
 #: functions/zume-content.php:2007
 msgid "You were asked to share your 3-Minute Testimony with at least one person on your List of 100."
-msgstr "Anda diminta untuk berbagi kesaksian 3 menit Anda dengan setidaknya satu orang di daftar Anda 100."
+msgstr "Anda diminta untuk berbagi Kesaksian 3 Menit Anda dengan setidaknya satu orang di daftar 100 Anda."
 
 #: functions/zume-content.php:2009
 msgid "You were encouraged to train someone else with the 3-Minute Testimony tool."
-msgstr "Anda didorong untuk melatih orang lain dengan alat kesaksian 3 menit."
+msgstr "Anda didorong untuk melatih orang lain dengan sarana Kesaksian 3 Menit."
 
 #: functions/zume-content.php:2025
-#, fuzzy
 msgid "In this session, you’ll learn how Prayer Walking is a powerful way to prepare a neighborhood for Jesus, and you'll learn a simple but powerful pattern for prayer that will help you meet and make new disciples along the way."
-msgstr "Dalam sesi ini, kita akan belajar bagaimana Doa Keliling adalah suatu cara yang ampuh untuk mempersiapkan lingkungan bagi Isa, dan kita akan belajar pola sederhana namun kuat untuk berdoa yang akan membantu kita menemukan dan memuridkan murid baru di sepanjang jalan."
+msgstr "Dalam sesi ini, Anda akan belajar bagaimana Doa Keliling adalah suatu cara yang ampuh untuk mempersiapkan lingkungan bagi Yesus, dan Anda akan belajar pola sederhana namun efektif untuk berdoa yang akan membantu kita menemukan dan memuridkan murid baru di sepanjang perjalanan."
 
 #: functions/zume-content.php:2037
 msgid "Listen and Read Along (15min)"
@@ -1153,11 +1137,11 @@ msgstr "Apakah yang dimaksud dengan komunitas atau segmen masyarakat dekat Anda 
 
 #: functions/zume-content.php:2176
 msgid "Practice the B.L.E.S.S. Prayer (15min)"
-msgstr "Berlatih Doa BLESS (15min)"
+msgstr "Berlatih Doa B.L.E.S.S. (15min)"
 
 #: functions/zume-content.php:2186
 msgid "Break into groups of two or three and practicing the B.L.E.S.S. Prayer. The prayer pattern can be found in the Zúme Guidebook. Practice praying the five areas of the B.L.E.S.S. Prayer."
-msgstr "Bagi menjadi kelompok dua atau tiga orang dan berlatih doa B.L.E.S.S.. Pola doa dapat ditemukan dalam buku pedoman Zúme. Praktek berdoa lima wilayah doa B.L.E.S.S.."
+msgstr "Bagi menjadi kelompok-kelompok terdiri dari dua atau tiga orang dan berlatih doa B.L.E.S.S. Pola doa dapat ditemukan dalam Buku Panduan Zúme. Praktekan doa lima area dari doa B.L.E.S.S."
 
 #: functions/zume-content.php:2202
 msgid "Prayer Walking (60-90min)"
@@ -1205,12 +1189,11 @@ msgstr "Anda diminta untuk menghabiskan beberapa waktu melakukan Doa Keliling"
 
 #: functions/zume-content.php:2291
 msgid "You were encouraged to share the Prayer Walking tool with someone else."
-msgstr "Anda didorong untuk berbagi alat Doa Keliling dengan orang lain."
+msgstr "Anda didorong untuk berbagi sarana Doa Keliling dengan orang lain."
 
 #: functions/zume-content.php:2300
-#, fuzzy
 msgid "Pray and thank God for the results, ask Him to help when you find it hard to obey, and invite His Holy Spirit to lead your time together."
-msgstr "Berdoa dan bersyukur kepada Tuhan untuk hasil kegiatan, Minta Dia untuk membantu ketika Anda merasa sulit untuk taat, dan undang Roh Kudus untuk memimpin waktu Anda bersama."
+msgstr "Berdoa dan bersyukur kepada Tuhan untuk hasilnya, minta Dia untuk membantu ketika Anda mendapati sulit untuk taat, dan undang Roh Kudus untuk memimpin waktu Anda bersama."
 
 #: functions/zume-content.php:2307
 msgid "In this session, you’ll learn how God uses faithful followers – even if they're brand new – much more than ones with years of knowledge and training who just won't obey. And you'll get a first look at a way to meet together that helps disciples multiply even faster."
@@ -1222,7 +1205,7 @@ msgstr "Ketika kita membantu memperlipat gandakan murid, kita perlu memastikan k
 
 #: functions/zume-content.php:2359
 msgid "Zúme Video Scripts: Faithfulness"
-msgstr "Naskah Video Zume: Ketaatan"
+msgstr "Naskah Video Zume: Kesetiaan"
 
 #: functions/zume-content.php:2366
 msgid "Think about God's commands that you already know. How \"faithful\" are you in terms of obeying and sharing those things?"
@@ -1241,7 +1224,6 @@ msgid "Did you notice any differences between a 3/3 Group and a Bible Study or S
 msgstr "Apakah Anda melihat adanya perbedaan antara kelompok 3/3 dan Kelompok Studi Alkitab atau Kelompok Kecil dimana anda telah menjadi bagian dari (atau telah mendengar tentang) di masa lalu? Jika demikian, bagaimanakah perbedaan mereka mempengaruhi kelompok?"
 
 #: functions/zume-content.php:2450
-#, fuzzy
 msgid "Could a 3/3 Group be considered a Simple Church? Why or why not?"
 msgstr "Dapatkah Kelompok 3/3 dianggap sebagai Gereja Sederhana? Mengapa atau mengapa tidak?"
 
@@ -1251,7 +1233,7 @@ msgstr "Selamat telah menyelesaikan Sesi 6!"
 
 #: functions/zume-content.php:2490
 msgid "Spend time this week practicing Faithfulness by obeying and sharing at least one of God's commands that you already know."
-msgstr "Habiskan waktu minggu ini melatih Ketaatan dengan mematuhi dan berbagi setidaknya satu dari perintah Allah yang sudah Anda ketahui."
+msgstr "Luangkan waktu minggu ini melatih Kesetiaan dengan mentaati dan berbagi setidaknya satu dari perintah Allah yang sudah Anda ketahui."
 
 #: functions/zume-content.php:2497
 msgid "Think about what you have heard and learned about Faithfulness in this session, and ask God who He wants you to share it with. Share this person’s name with the group before you go."
@@ -1267,16 +1249,15 @@ msgstr "Punya saudara atau saudari Kristen yang mungkin menyukai Zúme? Berbagi 
 
 #: functions/zume-content.php:2542
 msgid "You were asked to practice Faithfulness by obeying and sharing one of God's commands."
-msgstr "Anda diminta untuk melatih Ketaatan dengan mematuhi dan berbagi salah satu perintah Allah."
+msgstr "Anda diminta untuk melatih kesetiaan dengan mentaati dan berbagi salah satu perintah Tuhan:"
 
 #: functions/zume-content.php:2545
 msgid "You were encouraged to share the importance of Faithfulness with someone else."
-msgstr "Anda didorong untuk berbagi pentingnya Ketaatan dengan orang lain."
+msgstr "Anda didorong untuk berbagi pentingnya Kesetiaan dengan orang lain."
 
 #: functions/zume-content.php:2555
-#, fuzzy
 msgid "Pray and thank God for the group's commitment to faithfully following Jesus and invite God's Holy Spirit to lead your time together."
-msgstr "Berdoa dan bersyukur kepada Allah untuk komitmen kelompok dalam setia mengikuti Yesus dan mengundang Roh Kudus Tuhan untuk memimpin waktu Anda bersama."
+msgstr "Berdoa dan mengucap syukur kepada Tuhan untuk komitmen kelompok untuk setia mengikut Yesus dan undang Allah Roh Kudus untuk memimpin waktu Anda bersama."
 
 #: functions/zume-content.php:2562
 msgid "In this session, you’ll learn a Training Cycle that helps disciples go from one to many and turns a mission into a movement. You'll also practice the 3/3 Groups Format and learn how the way you meet can impact the way you multiply."
@@ -1288,7 +1269,7 @@ msgstr "Apakah Anda pernah belajar bagaimana caranya mengendarai sepeda? Apakah 
 
 #: functions/zume-content.php:2595
 msgid "Find the \"Training Cycle\" section in your Zúme Guidebook. When you're ready, watch this video, and then discuss the questions below."
-msgstr "Cari bagian \"Siklus Pelatihan\" dalam Buku Panduan Zúme Anda, dan dengarkan audio di bawah ini."
+msgstr "Cari bagian \"Siklus Pelatihan\" dalam Buku Panduan Zúme Anda. Saat Anda siap, tonton video ini, dan kemudian diskusikan pertanyaan-pertanyaan di bawah ini."
 
 #: functions/zume-content.php:2629
 msgid "Zúme Video Scripts: Training Cycle"
@@ -1373,42 +1354,35 @@ msgstr "Anda diminta untuk berlatih mematuhi, melatih, dan berbagi berdasarkan k
 
 #: functions/zume-content.php:2783
 msgid "You were encouraged to share the 3/3 Group Format with someone else."
-msgstr "Anda didorong untuk berbagi format Kelompok 3/3 dengan orang lain."
+msgstr "Anda didorong untuk berbagi Format Kelompok 3/3 dengan orang lain."
 
 #: functions/zume-content.php:2793
-#, fuzzy
 msgid "Pray and thank God for giving your group the energy, the focus and the faithfulness to come so far in this training. Ask God to have His Holy Spirit remind everyone in the group that they can do nothing without Him!"
-msgstr "Berdoa dan berterima kasih kepada Allah untuk memberikan grup tenaga, fokus dan kesetiaan untuk sampai sejauh ini dalam pelatihan ini. Minta Allah untuk membuat Roh KudusNya mengingatkan semua orang dalam kelompok bahwa mereka tidak dapat melakukan apa-apa tanpa dia!"
+msgstr "Berdoa dan mengucap syukur kepada Tuhan untuk memberikan kelompok Anda kekuatan, fokus dan kesetiaan untuk sampai sejauh ini dalam pelatihan ini. Minta Tuhan supaya Roh KudusNya mengingatkan setiap orang dalam kelompok bahwa mereka tidak dapat melakukan apa-apa tanpa Dia!"
 
 #: functions/zume-content.php:2800
-#, fuzzy
 msgid "In this session, you’ll learn how Leadership Cells prepare followers in a short time to become leaders for a lifetime. You'll learn how serving others is Jesus' strategy for leadership. And you'll spend time practicing as a 3/3 Group, again."
-msgstr "Dalam sesi ini, Anda akan belajar bagaimana Sel-Sel Kepemimpinan mempersiapkan pengikut dalam waktu singkat untuk menjadi pemimpin untuk seumur hidup. Anda akan belajar bagaimana melayani orang lain adalah strategi Yesus dalam kepemimpinan. Dan Anda akan menghabiskan waktu berlatih sebagai 3/3 kelompok, lagi."
+msgstr "Dalam sesi ini, Anda akan belajar bagaimana Sel-Sel Kepemimpinan mempersiapkan pengikut dalam waktu singkat untuk menjadi pemimpin untuk seumur hidup. Anda akan belajar bagaimana melayani orang lain adalah strategi Yesus dalam kepemimpinan. Dan Anda akan meluangkan waktu untuk berlatih sebagai kelompok 3/3, lagi."
 
 #: functions/zume-content.php:2822
-#, fuzzy
 msgid "Jesus said, “Whoever wishes to become great among you shall be your servant.”"
-msgstr "Yesus berkata, “siapapun yang ingin menjadi besar di antara kalian haruslah hamba kalian. ”"
+msgstr "Yesus berkata, “Barangsiapa ingin menjadi besar di antara kamu, hendaklah ia menjadi pelayanmu.”"
 
 #: functions/zume-content.php:2825
-#, fuzzy
 msgid "Jesus radically reversed our understanding of leadership by teaching us that if we feel called to lead, then we are being called to serve. A Leadership Cell is a way someone who feels called to lead can develop their leadership by practicing serving."
-msgstr "Yesus secara radikal membalikkan pemahaman kita tentang kepemimpinan dengan mengajarkan kita bahwa jika kita merasa terpanggil untuk memimpin, maka kita dipanggil untuk melayani. Sel Kepemimpinan adalah cara seseorang yang merasa terpanggil untuk memimpin dapat mengembangkan kepemimpinan mereka dengan berlatih melayani."
+msgstr "Yesus secara radikal memutar balikkan pemahaman kita tentang kepemimpinan dengan mengajarkan kita bahwa jika kita merasa terpanggil untuk memimpin, maka kita dipanggil untuk melayani. Sel Kepemimpinan adalah suatu sarana untuk orang yang merasa terpanggil untuk memimpin dapat mengembangkan kepemimpinan mereka dengan berlatih melayani."
 
 #: functions/zume-content.php:2836
-#, fuzzy
 msgid "Find the \"Leadership Cells\" section in your Zúme Guidebook. When you're ready, watch and discuss this video."
-msgstr "Temukan bagian \"Sel-Sel kepemimpinan\" dalam Buku pPnduan Zúme. Saat Anda siap, tonton dan diskusikan video ini."
+msgstr "Temukan bagian \"Sel-Sel kepemimpinan\" dalam Buku Panduan Zúme. Saat Anda siap, tonton dan diskusikan video ini."
 
 #: functions/zume-content.php:2870
-#, fuzzy
 msgid "Zúme Video Scripts: Leadership Cells"
-msgstr "Naskah Video Zume: Sel Kepemimpinan"
+msgstr "Naskah Video Zume: Sel-Sel Kepemimpinan"
 
 #: functions/zume-content.php:2879
-#, fuzzy
 msgid "Is there a group of followers of Jesus you know that are already meeting or would be willing to meet and form a Leadership Cell to learn Zúme Training?"
-msgstr "Apakah ada sekelompok pengikut Yesus yang Anda tahu sudah melakukan pertemuan atau akan bersedia untuk bertemu dan membentuk sel kepemimpinan untuk belajar Pelatihan Zúme?"
+msgstr "Apakah ada sekelompok pengikut Yesus yang Anda tahu sudah melakukan pertemuan atau akan bersedia untuk bertemu dan membentuk Sel Kepemimpinan untuk belajar Pelatihan Zúme?"
 
 #: functions/zume-content.php:2881
 msgid "What would it take to bring them together?"
@@ -1447,22 +1421,20 @@ msgid "Pray and ask God who He wants you to share the Leadership Cell tool with 
 msgstr "Berdoa dan tanya kepada Tuhan siapa orang yang dia ingin Anda untuk berbagi alat sel kepemimpinan dengan sebelum kelompok Anda bertemu lagi. Berbagi nama person’s dengan kelompok sebelum Anda pergi."
 
 #: functions/zume-content.php:2972
-#, fuzzy
 msgid "Thank God for sending Jesus to show us that real leaders are real servants. Thank Jesus for showing us the greatest service possible is giving up our own lives for others."
-msgstr "Berterima kasih Tuhan karena mengutus Yesus untuk menunjukkan kepada kita bahwa pemimpin sejati adalah pelayan. Berterima kasih kepada Yesus karena menunjukkan kepada kita layanan terbesar adalah menyerahkan kehidupan kita sendiri bagi orang lain."
+msgstr "Bersyukur kepada Tuhan karena mengutus Yesus untuk menunjukkan kepada kita bahwa pemimpin sejati adalah pelayan sejati. Bersyukur kepada Yesus karena menunjukkan kepada kita pelayanan terbesar adalah menyerahkan hidup kita untuk orang lain."
 
 #: functions/zume-content.php:3015
 msgid "You were asked to practice Obeying, Training, and Sharing based on your commitments during last session's 3/3 Group practice."
-msgstr "Anda diminta untuk Mematuhi, Melatih, dan Berbagi berdasarkan komitmen Anda selama sesi terakhir praktek kelompok 3/3."
+msgstr "Anda diminta untuk Mentaati, Melatih, dan Berbagi berdasarkan komitmen Anda selama sesi terakhir praktek Kelompok 3/3."
 
 #: functions/zume-content.php:3018
 msgid "You were encouraged to share the Leadership Cells tool with someone else."
-msgstr "Anda didorong untuk berbagi alat sel-sel kepemimpinan dengan orang lain."
+msgstr "Anda didorong untuk berbagi sarana Sel Kepemimpinan dengan orang lain."
 
 #: functions/zume-content.php:3030
-#, fuzzy
 msgid "Pray and thank God that His ways are not our ways and His thoughts are not our thoughts. Ask Him to give each member of your group the mind of Christ — always focused on His Father's work. Ask the Holy Spirit to lead your time together and make it the best session yet."
-msgstr "Berdoa dan bersyukur kepada Tuhan bahwa caraNya bukan cara kita dan pikiranNya bukan pikiran kita. Mintalah Dia untuk memberikan masing-masing anggota grup Anda pikiran Kristus-selalu berfokus pada pekerjaan BapaNya. Mintalah Roh Kudus untuk memimpin waktu Anda bersama dan membuatnya sesi yang terbaik."
+msgstr "Berdoa dan bersyukur kepada Tuhan bahwa jalanNya bukan jalan kita dan pikiranNya bukan pikiran kita. Mintalah Dia untuk memberikan masing-masing anggota kelompok Anda pikiran Kristus-selalu berfokus pada pekerjaan BapaNya. Mintalah Roh Kudus untuk memimpin waktu Anda bersama dan membuatnya jadi sesi yang terbaik."
 
 #: functions/zume-content.php:3038
 msgid "In this session, you’ll learn how linear patterns hold back kingdom growth and how Non-Sequential thinking helps you multiply disciples. You'll discover how much time matters in disciple-making and how to accelerate Pace. You’ll learn how followers of Jesus can be a Part of Two Churches to help turn faithful, spiritual families into a growing city-wide body of believers. Finally, you'll learn how a simple Three Month Plan can focus your efforts and multiply your effectiveness in growing God's family exponentially."
@@ -1474,7 +1446,7 @@ msgstr "Ketika orang berpikir tentang melipat gandakan murid, mereka sering meng
 
 #: functions/zume-content.php:3093
 msgid "Zúme Video Scripts: Non-Sequential"
-msgstr "Naskah Video Zume: Non-sekuensial"
+msgstr "Naskah Video Zume: Tidak Berurutan"
 
 #: functions/zume-content.php:3104
 msgid "What is the most exciting idea you heard in this video? Why?"
@@ -1490,7 +1462,7 @@ msgstr "Berlipat ganda itu penting dan berlipat ganda dengan cepat lebih lag. Ke
 
 #: functions/zume-content.php:3159
 msgid "Zúme Video Scripts: Pace"
-msgstr "Naskah Video Zume: Kecepatan"
+msgstr "Naskah Video Zume: Langkah"
 
 #: functions/zume-content.php:3170
 msgid "Why is pace important?"
@@ -1505,9 +1477,8 @@ msgid "What is one thing you can do starting this week that will make a differen
 msgstr "Satu hal apa yang dapat Anda lakukan mulai minggu ini yang akan membuat suatu perubahan?"
 
 #: functions/zume-content.php:3195
-#, fuzzy
 msgid "Jesus taught us that we are to stay close — to live as a small, spiritual family, to love and give our lives to one another, to celebrate and suffer — together. However, Jesus also taught us to leave our homes and loved ones behind and be willing to go anywhere — and everywhere — to share and start new spiritual families. So how can we do both? When you're ready, watch the video below and discuss the question that follows."
-msgstr "Isa mengajar kita bahwa kita harus tinggal dekat—untuk hidup sebagai keluarga rohani yang kecil, untuk mencintai dan memberikan hidup kita kepada satu sama lain, untuk merayakan dan menderita-bersama-sama. Namun Isa juga mengajar kita untuk meninggalkan rumah kita dan orang-orang terkasih dan bersedia untuk pergi ke mana pun-dan ke mana-mana—untuk berbagi dan memulai keluarga rohani yang baru. Jadi bagaimana kita bisa melakukan keduanya? Bila Anda siap, tontonlah video di bawah ini dan mendiskusikan pertanyaan yang berikutnya."
+msgstr "Yesus mengajarkan kita bahwa kita harus tinggal dekat—untuk hidup sebagai keluarga rohani yang kecil, untuk mengasihi dan memberikan hidup kita kepada satu sama lain, untuk merayakan dan menderita- bersama-sama. Namun Yesus juga mengajar kita untuk meninggalkan rumah kita dan orang-orang terkasih dan bersedia untuk pergi ke mana pun- dan di mana pun—untuk berbagi dan memulai keluarga rohani yang baru. Jadi bagaimana kita bisa melakukan keduanya? Bila Anda siap, tontonlah video di bawah ini dan diskusikan pertanyaan yang ada."
 
 #: functions/zume-content.php:3228
 msgid "Zúme Video Scripts: Two Churches"
@@ -1531,7 +1502,7 @@ msgstr "Rencana 3-Bulan adalah alat yang dapat Anda gunakan untuk membantu memus
 
 #: functions/zume-content.php:3265
 msgid "You can use the printed version in your Zúme Guidebook or our online version."
-msgstr "Anda dapat menggunakan versi cetak dalam Buku Panduan Zúme atau versi online kami."
+msgstr "Anda dapat menggunakan versi cetak dalam Buku Panduan Zúme Anda atau versi online kami."
 
 #: functions/zume-content.php:3268
 msgid "Online \"Three Month Plan\""
@@ -1579,7 +1550,7 @@ msgstr "Gunakan sisa waktu Anda untuk menyelesaikan lembar kerja rencana tiga bu
 
 #: functions/zume-content.php:3337
 msgid "You do not have to commit to every item, and there is room for other items not already on the list. Do your best to align your commitments to what you have heard God reveal to you about His will."
-msgstr "Anda tidak perlu berkomitmen untuk setiap item, dan ada ruang untuk item lainnya yang belum dalam daftar. Lakukan yang terbaik untuk menyelaraskan komitmen Anda dengank apa yang  telah Anda dengar Allah ungkapkan kepada Anda tentang kehendaknya."
+msgstr "Anda tidak perlu berkomitmen untuk setiap item, dan ada ruang untuk item lainnya yang belum ada dalam daftar. Lakukan yang terbaik untuk menyelaraskan komitmen Anda dengan apa yang telah Anda dengar Tuhan ungkapkan kepada Anda mengenai kehendakNya."
 
 #: functions/zume-content.php:3352
 msgid "Share you Plan (30min)"
@@ -1602,9 +1573,8 @@ msgid "Discuss and develop a group plan for starting at least two new 3/3 Groups
 msgstr "Diskusikan dan kembangkan sebuah rencana kelompok untuk memulai setidaknya dua Kelompok 3/3 baru atau Kelompok Pelatihan Zúme di wilayah Anda. Beberapa anggota kelompok Anda mungkin baru saja selesai dan menyimpan rencana tiga bulan individual ke kelompok zúme Anda. Pada langkah ini, jika tidak ada satu dari kelompok Anda yang telah mengisi salinan digital Rencana Tiga BUlan Anda di situs, sangat dianjurkan agar Anda melakukan hal ini bersama sekarang. Pergi saja ke rencana tiga bulan di bawah Pengaturan dan tautkan formulir ke kelompok Anda."
 
 #: functions/zume-content.php:3377
-#, fuzzy
 msgid "Remember, your goal is to start Simple Churches that multiply. 3/3 Groups and Zúme Training Groups are two ways to do that. Discuss and decide whether these new Groups will be connected to an existing local church or network or whether you’ll start a new network out of your Zúme Training Group."
-msgstr "Ingat, tujuan Anda adalah memulai Gereja-Gereja Sederhana yang berlipat-ganda. Kelompok 3/3 dan Kelompok Pelatihan Zúme adalah dua cara untuk melakukannya. Diskusikan dan putuskan apakah Kelompok baru ini akan terhubung ke gereja atau jaringan lokal yang ada atau apakah Anda akan memulai jaringan baru dari Kelompok Pelatihan Zúme Anda."
+msgstr "Ingat, tujuan Anda adalah memulai Gereja-Gereja Sederhana yang berlipat ganda. Kelompok 3/3 dan Kelompok Pelatihan Zúme adalah dua cara untuk melakukannya. Diskusikan dan putuskan apakah Kelompok-kelompok baru ini akan terhubung ke gereja atau jaringan lokal yang sudah ada atau apakah Anda akan memulai jaringan baru dari Kelompok Pelatihan Zúme Anda."
 
 #: functions/zume-content.php:3391
 msgid "Congratulations! You've completed Session 9."
@@ -1612,7 +1582,7 @@ msgstr "Selamat! Anda telah menyelesaikan sesi 9."
 
 #: functions/zume-content.php:3400
 msgid "You may not know it, but you now have more practical training on starting simple churches and making disciples who multiply than many pastors and missionaries around the world!"
-msgstr "Anda mungkin tidak tahu, tapi Anda sekarang memiliki lebih banyak pelatihan praktis tentang gereja sederhana dan membuat murid yang mulai berlipat ganda daripada banyak pendeta dan misionaris di seluruh dunia!"
+msgstr "Anda mungkin tidak tahu, tapi Anda sekarang memiliki lebih banyak pelatihan praktis mengenai memulai gereja sederhana dan membuat murid yang berlipat ganda daripada banyak pendeta dan misionaris di seluruh dunia!"
 
 #: functions/zume-content.php:3401
 msgid "Set aside time on your calendar each week to continue to work on your Three Month Plan, and plan check-ins with your training partner at the end of week 1, 2, 3, 4, 6, 8, and 12. Each time you're together, ask about their results and share yours, making sure you're both working through your plans. Prayerfully consider continuing as an ongoing spiritual family committed to multiplying disciples."
@@ -1640,20 +1610,19 @@ msgstr "Selamat datang kembali ke Pelatihan Zúme!"
 
 #: functions/zume-content.php:3459
 msgid "You were asked to prayerfully consider continuing as an ongoing spiritual family committed to multiplying disciples."
-msgstr "Anda diminta untuk mempertimbangkan melanjutkan sebagai keluarga rohani yang berkomitmen untuk melipatgandakan murid."
+msgstr "Anda diminta untuk mempertimbangkan melanjutkan sebagai keluarga rohani yang berkomitmen untuk melipatgandakan murid secara berkelanjutan."
 
 #: functions/zume-content.php:3462
 msgid "You were encouraged to share Zúme Training by launching a Leadership Cell of future Zúme Training leaders."
-msgstr "Anda didorong untuk membagikan Pelatihan Zúme dengan meluncurkan Sel Kepemimpinan calon pemimpinan Pelatihan Zúme."
+msgstr "Anda didorong untuk membagikan Pelatihan Zúme dengan mengadakan Sel Kepemimpinan dari calon pemimpin Pelatihan Zúme di masa yang akan datang."
 
 #: functions/zume-content.php:3465
 msgid "Take a few moments to see how your group has been doing with these items and their Three Month Plans since you've last met."
 msgstr "Ambil beberapa saat untuk melihat bagaimana grup Anda telah melakukan dengan alat ini dan Rencana Tiga Bulan mereka sejak kalian telah terakhir bertemu."
 
 #: functions/zume-content.php:3472
-#, fuzzy
 msgid "Pray and thank God that He is faithful to complete His good work in us. Ask Him to give your group clear heads and open hearts to the great things He wants to do in and through you. Ask the Holy Spirit to lead your time together and thank Him for His faithfulness, too. He got you through!"
-msgstr "Berdoa dan bersyukur kepada Tuhan bahwa dia setia untuk menyelesaikan pekerjaan yang baik dalam diri kita. Meminta dia untuk memberikan kepala kelompok jelas dan membuka hati untuk hal-hal besar ia ingin lakukan di dan melalui Anda. Meminta Roh Kudus untuk memimpin waktu Anda bersama dan bersyukur kepadanya untuk kesetiaannya, juga. Dia punya Anda melalui!"
+msgstr "Berdoa dan bersyukur kepada Tuhan bahwa Dia setia untuk menyelesaikan pekerjaan yang baik dalam diri kita. Mintalah Dia untuk memberikan kelompok Anda pikiran yang jelas dan hati yang terbuka untuk hal-hal besar yang Dia ingin lakukan dalam dan melalui Anda. Minta Roh Kudus untuk memimpin waktu Anda bersama dan bersyukurlah juga kepadaNya atas kesetiaanNya. Dia akan menolong Anda!"
 
 #: functions/zume-content.php:3479
 msgid "In this advanced training session, you’ll take a look at how you can level-up your Coaching Strengths with a quick checklist assessment. You’ll learn how Leadership in Networks allows a growing group of small churches to work together to accomplish even more. And you’ll learn how to develop Peer Mentoring Groups that take leaders to a whole new level of growth."
@@ -1701,7 +1670,7 @@ msgstr "Jika anda merasa percaya diri dan dapat melatih Alat tersebut dengan efe
 
 #: functions/zume-content.php:3554
 msgid "Zúme Video Scripts: Coaching Checklist"
-msgstr "Naskah Video Zume: Daftar Periksa Pembimbingan"
+msgstr "Naskah Video Zume: Daftar Periksa Pelatihan"
 
 #: functions/zume-content.php:3565
 msgid "Which Training Tools did you feel you would be able to train well?"
@@ -1728,9 +1697,8 @@ msgid "Zúme Video Scripts: Leadership in Networks"
 msgstr "Naskah Video Zume: Kepemimpinan dalam Jaringan"
 
 #: functions/zume-content.php:3639
-#, fuzzy
 msgid "Are there advantages when networks of simple churches are connected by deep, personal relationships? What are some examples that come to mind?"
-msgstr "Apakah ada keuntungan ketika jaringan gereja sederhana terhubung dalam hubungan pribadi, yang mendalam, Apakah contoh yang terpikir?"
+msgstr "Apakah ada keuntungan ketika jaringan gereja sederhana terhubung dalam hubungan pribadi yang mendalam? Apakah contoh-contoh yang terlintas dalam pikiran?"
 
 #: functions/utilities/enqueue-scripts.php:252 functions/zume-content.php:3660
 #: template-zume-landing.php:319 template-zume-landing.php:514
@@ -1748,7 +1716,7 @@ msgstr "Temukan bagian Kelompok Pembimbingan Setaraf dalam Buku Panduan Zúme An
 
 #: functions/zume-content.php:3699
 msgid "Zúme Video Scripts: Peer Mentoring Groups"
-msgstr "Naskah Video Zume: Kelompok Pembimbingan Setaraf"
+msgstr "Naskah Video Zume: Kelompok Pendampingan Sebaya"
 
 #: functions/zume-content.php:3714
 msgid "Practice (60min)"
@@ -1862,7 +1830,7 @@ msgstr "Kemajuan"
 
 #: functions/zume-three-month-plan.php:80
 msgid "I will share My Story [Testimony] and God’s Story [the Gospel] with the following individuals:"
-msgstr "Saya akan berbagi Cerita Saya [Kesaksian] dan Cerita Allah [Injil] dengan individu berikut:"
+msgstr "Saya akan berbagi Kisah Saya [Kesaksian] dan Kisah Allah [Injil] dengan individu sebagai berikut:"
 
 #: functions/zume-three-month-plan.php:81
 msgid "I will invite the following people to begin an Accountability Group with me:"
@@ -1894,7 +1862,7 @@ msgstr "Saya akan melakukan Doa Keliling sekali setiap [hari/minggu/bulan]. "
 
 #: functions/zume-three-month-plan.php:88
 msgid "I will equip the following people to share their story and God’s Story and make a List of 100 of the people in their relational network:"
-msgstr "Saya akan membekali orang-orang berikut ini untuk membagikan cerita mereka dan Cerita Allah dan buatlah daftar 100 dari orang-orang di dalam jaringan relasional mereka:"
+msgstr "Saya akan membekali orang-orang berikut ini untuk membagikan cerita mereka dan Kisah Allah dan buatlah Daftar 100 dari orang-orang di dalam jaringan relasional mereka:"
 
 #: functions/zume-three-month-plan.php:89
 msgid "I will challenge the following people to use the Prayer Cycle tool on a periodic basis:"
@@ -1905,9 +1873,8 @@ msgid "I will use the Prayer Cycle tool once every [days / weeks / months]."
 msgstr "Saya akan menggunakan alat Siklus Doa sekali setiap [hari/minggu/bulan]."
 
 #: functions/zume-three-month-plan.php:91
-#, fuzzy
 msgid "I will invite the following people to be part of a Leadership Cell that I will lead:"
-msgstr "Saya akan mengundang orang berikut untuk menjadi bagian dari Sel Kepemimpinan yang saya akan pimpin:"
+msgstr "Saya akan mengundang orang-orang berikut ini untuk menjadi bagian dari Sel Kepemimpinan yang saya akan pimpin:"
 
 #: functions/zume-three-month-plan.php:92
 msgid "I will encourage the following people to go through this Zúme Training course:"
@@ -2037,9 +2004,8 @@ msgstr "Tidak ada rencana terkait dengan kelompok ini."
 #: template-zume-faq.php:199 template-zume-landing.php:188
 #: template-zume-landing.php:215 template-zume-privacy-policy.php:186
 #: template-zume-progress.php:119
-#, fuzzy
 msgid "Zúme uses an online training platform to equip participants in basic disciple-making and simple church planting multiplication principles, processes, and practices."
-msgstr "Zúme menggunakan platform pelatihan online untuk membekali peserta dalam dasar pembuatan-murid dan prinsip-prinsip, proses, dan latihan. penanaman gereja sederhana yang berlipat-ganda. "
+msgstr "Zúme menggunakan platform pelatihan online untuk peserta dalam dasar pembuatan-murid dan prinsip-prinsip, proses, dan latihan penanaman gereja sederhana yang berlipat-ganda."
 
 #: template-zume-about.php:63 template-zume-faq.php:194
 #: template-zume-privacy-policy.php:181 template-zume-progress.php:114
@@ -2050,7 +2016,7 @@ msgstr "Sasaran Proyek Zume"
 #: template-zume-landing.php:212 template-zume-privacy-policy.php:183
 #: template-zume-progress.php:116
 msgid "Zúme means yeast in Greek. In Matthew 13:33, Jesus is quoted as saying, \"The Kingdom of Heaven is like a woman who took yeast and mixed it into a large amount of flour until it was all leavened.\" This illustrates how ordinary people, using ordinary resources, can have an extraordinary impact for the Kingdom of God. Zúme aims to equip and empower ordinary believers to saturate the globe with multiplying disciples in our generation."
-msgstr "Zúme berarti ragi dalam Bahasa Yunani. Dalam Matius 13:33, Yesus berkata, ”Hal Kerajaan Sorga itu seumpama ragi yang diambil seorang perempuan dan diadukkan ke dalam tepung terigu tiga sukat sampai khamir seluruhnya.” Ini menggambarkan bagaimana orang-orang biasa, menggunakan bahan-bahan biasa, dapat memiliki dampak yang luar biasa kepada Kerajaan Allah. Zúme bertujuan untuk melengkapi dan memberdayakan orang-orang percaya biasa untuk mewarnai dunia dengan melipat gandakan murid-murid dalam generasi kita."
+msgstr "Zúme berarti ragi dalam Bahasa Yunani. Dalam Matius 13:33, Yesus berkata, ”Hal Kerajaan Sorga itu seumpama ragi yang diambil seorang perempuan dan diadukkan ke dalam tepung terigu tiga sukat sampai khamir seluruhnya.” Ini menggambarkan bagaimana orang-orang biasa, menggunakan sumber saya yang biasa, dapat memiliki dampak yang luar biasa untuk Kerajaan Allah. Zúme bertujuan untuk memperlengkapi dan memberdayakan orang-orang percaya biasa untuk memenuhi dunia dengan murid yang berlipat-ganda dalam generasi kita."
 
 #: template-zume-about.php:85
 msgid "Zúme consists of 10 sessions, 2 hours each"
@@ -2110,7 +2076,7 @@ msgstr "Anda kehilangan kelompok atau nomor sesi yang benar."
 
 #: template-zume-course.php:93
 msgid "You need a correctly formatted URL. This can happen if you came here from somewhere other than the dashboard."
-msgstr "Anda memerlukan URL dengan bentuk yang benar. Hal ini dapat terjadi jika Anda datang ke sini dari suatu tempat lain dari dasbor."
+msgstr "Anda memerlukan URL dengan format yang benar. Hal ini dapat terjadi jika Anda masuk ke sini dari tempat lain selain dari dasbor."
 
 #: template-zume-course.php:93
 msgid "Head back to your dashboard and try again."
@@ -2167,7 +2133,7 @@ msgstr "Tolak"
 
 #: template-zume-dashboard.php:256
 msgid "You have no active groups"
-msgstr "Anda tidak memiliki kelompok yang aktif"
+msgstr "Anda tidak memiliki kelompok-kelompok yang aktif"
 
 #: template-zume-dashboard.php:258
 msgid "We recommend at least 3-11 people for a group."
@@ -2175,7 +2141,7 @@ msgstr "Kami sarankan minimal 3-11 orang untuk satu kelompok."
 
 #: template-zume-dashboard.php:259
 msgid "You can join a current group when the group owner adds your email to the approved coleader/participant list. To start your own group, use the button below."
-msgstr "Anda dapat bergabung dengan kelompok saat ini ketika pemilik grup menambahkan email Anda kedalam daftar yang disetujui coleader/peserta. Untuk memulai grup Anda sendiri, gunakan tombol di bawah ini."
+msgstr "Anda dapat bergabung dengan kelompok saat ini ketika pemilik grup menambahkan email Anda kedalam daftar asisten/peserà yang disetujui. Untuk memulai grup Anda sendiri, gunakan tombol di bawah ini."
 
 #: template-zume-dashboard.php:267
 msgid "Start New Group"
@@ -2319,9 +2285,8 @@ msgstr "Sesi 8"
 
 #: functions/utilities/enqueue-scripts.php:245 template-zume-dashboard.php:542
 #: template-zume-landing.php:522 template-zume-training.php:667
-#, fuzzy
 msgid "Leadership Cells"
-msgstr "Sel Kepemimpinan"
+msgstr "Sel-Sel Kepemimpinan"
 
 #: functions/utilities/enqueue-scripts.php:265 template-zume-dashboard.php:550
 #: template-zume-one-page-course.php:38 template-zume-one-page-course.php:83
@@ -2520,11 +2485,11 @@ msgstr "Pembimbingan"
 
 #: functions/utilities/enqueue-scripts.php:331 template-zume-dashboard.php:1362
 msgid "Our network of volunteer coaches are people like you, people who are passionate about loving God, loving others, and obeying the Great Commission."
-msgstr "Jaringan pelatih sukarelawan kami adalah orang-orang seperti Anda, orang-orang yang bersemangat mencintai Tuhan, mencintai orang lain, dan mematuhi Amanat Agung."
+msgstr "Jaringan pelatih sukarelawan kami adalah orang-orang seperti Anda, orang-orang yang bergairah dalam mengasihi Tuhan, mengasihi orang lain, dan mentaati Amanat Agung."
 
 #: functions/utilities/enqueue-scripts.php:332 template-zume-dashboard.php:1367
 msgid "Advocates"
-msgstr "Advokat"
+msgstr "Menganjurkan"
 
 #: functions/utilities/enqueue-scripts.php:333 template-zume-dashboard.php:1368
 msgid "A coach is someone who will come alongside you as you implement the Zúme tools and training."
@@ -2587,7 +2552,7 @@ msgstr "WhatsApp"
 #: functions/utilities/enqueue-scripts.php:350
 #: functions/utilities/enqueue-scripts.php:370 template-zume-dashboard.php:1479
 msgid "Other"
-msgstr "Lain"
+msgstr "Lainnya"
 
 #: functions/utilities/enqueue-scripts.php:123 template-zume-dashboard.php:1486
 msgid "Affiliation Key"
@@ -2595,7 +2560,7 @@ msgstr "Kunci Afiliasi"
 
 #: template-zume-faq.php:20
 msgid "Zúme FAQs"
-msgstr "FAQs (Pertanyaa yang Sering Ditanyakan) Zúme "
+msgstr "FAQs (Pertanyaan yang Sering Ditanyakan) Zúme"
 
 #: template-zume-faq.php:30
 msgid "Is it really 100 percent free?"
@@ -2631,7 +2596,7 @@ msgstr "Apa isi pelatihan?"
 
 #: template-zume-faq.php:59
 msgid "You can view an overview of the content in the content section, or download the guidebook and review the course content, or login and start a group but at the first page of the session choose \"Exploring Session\". This will let you go through the course content without marking it as completed."
-msgstr "Anda dapat melihat rangkuman dari isi dalam bagian konten, atau men-download buku panduan dan meninjau isi kursus, atau login dan memulai grup tetapi pada halaman pertama dari sesi memilih \"Sesi Menjelajah\". Ini akan membiarkan Anda pergi melalui isi kursus tanpa menandainya saat selesai."
+msgstr "Anda dapat melihat tinjauan dari isi pada bagian konten, atau men-download buku panduan dan meninjau isi kursus, atau login dan memulai grup tetapi pada halaman pertama dari sesi pilih lah \"Sesi Menjelajah”. Ini akan memungkinkan Anda membaca konten kursus tanpa menandainya sebagai selesai."
 
 #: template-zume-faq.php:65
 msgid "I want to make copies of the manual (Guidebook) before the training. How can I do that?"
@@ -2678,9 +2643,8 @@ msgid "Who is the training appropriate for?"
 msgstr "Untuk siapa pelatihan ini tepat?"
 
 #: template-zume-faq.php:101
-#, fuzzy
 msgid "The training is appropriate for followers of Christ who are 13-years-old or older and who are able to read. In the future, there may be a version produced that is appropriate for non-literate people, but this is not that version. We believe every person who fits this profile should take the training."
-msgstr "Pelatihan ini sesuai untuk pengikut Kristus yang berusia 13-tahun atau lebih tua dan mampu membaca. Di masa depan, mungkin ada versi yang dihasilkan yang sesuai untuk orang yang tidak dapat membaca, tetapi ini bukan versi itu. Kami percaya setiap orang yang sesuai dengan profil ini harus mengikuti pelatihan ini."
+msgstr "Pelatihan ini sesuai untuk pengikut Kristus yang berusia 13-tahun atau lebih tua dan mampu membaca. Di masa yang akan datang, mungkin akan ada versi yang diciptakan untuk orang yang tidak dapat membaca, namun ini bukan versi itu. Kami percaya setiap orang yang sesuai dengan kriteria harus mengikuti pelatihan ini."
 
 #: template-zume-faq.php:107
 msgid "Who owns Zúme?"
@@ -2715,9 +2679,8 @@ msgid "PHASE 3"
 msgstr "FASE 3"
 
 #: template-zume-faq.php:126 template-zume-progress.php:102
-#, fuzzy
 msgid "The third phase focuses Phase 1 and Phase 2 churches to mobilize globally with a vision to make disciples in every place, among every people group. Zúme Project exists to saturate the globe with multiplying disciples in our generation. To accelerate our mission, we have developed and will deliver a mapping solution allowing teams to work strategically towards the goal of a Zúme training group and two simple churches among every 50,000 people outside the US."
-msgstr "Fasa ketiga berfokus pada jemaat fase 1 dan 2 untuk memobilisasi secara global dengan visi untuk membuat murid-murid di setiap tempat, di antara setiap orang kelompok. Proyek Zúme ada untuk memenuhi dunia dengan murid-murid yang berlipat ganda dalam generasi kita. Untuk mempercepat misi kami, kami telah mengembangkan dan akan memberikan solusi pemetaan yang memungkinkan tim untuk bekerja secara strategis menuju tujuan adanya kelompok pelatihan Zúme dan dua jemaat sederhana di antara setiap 50.000 orang di luar AS."
+msgstr "Tahap ketiga berfokus pada jemaat tahap pertama dan kedua untuk memobilisasi secara global dengan visi untuk membuat murid di setiap tempat, di tengah setiap suku-suku. Proyek Zúme ada untuk memenuhi dunia dengan murid-murid yang berlipat ganda dalam generasi kita. Untuk mempercepat misi kami, kami telah mengembangkan dan akan memberikan solusi pemetaan yang memungkinkan tim untuk bekerja secara strategis terhadap tujuan kelompok pelatihan Zúme dan dua gereja sederhana di antara setiap 50.000 orang di luar Amerika Serikat."
 
 #: template-zume-faq.php:133
 msgid "Why is it called Zúme?"
@@ -2725,7 +2688,7 @@ msgstr "Mengapa disebut Zúme?"
 
 #: template-zume-faq.php:134
 msgid "Zúme means yeast in Greek. In Matthew 13:33 Jesus is quoted as saying, “The Kingdom of Heaven is like a woman who took yeast and mixed it into a large amount of flour until it was all leavened.” This illustrates how ordinary people, using ordinary resources, can have an extraordinary impact for the Kingdom of God. Zúme aims to equip and empower ordinary believers to reach every neighborhood."
-msgstr "Zúme berarti ragi dalam bahasa Yunani. Dalam Matius 13:33 Isa dikutip mengatakan, “Kerajaan Surga adalah seperti seorang wanita yang mengambil ragi dan dicampur ke dalam sejumlah besar tepung sampai semuanya beragi.” Ini menggambarkan bagaimana orang-orang biasa, menggunakan sumber daya biasa, dapat memiliki dampak yang luar biasa untuk kerajaan Allah. Zúme bertujuan untuk memperlengkapi dan memberdayakan orang-orang percaya biasa untuk menjangkau setiap lingkungan."
+msgstr "Zúme berarti ragi dalam bahasa Yunani. Dalam Matius 13:33 Yesus mengatakan, “Kerajaan Surga adalah seperti seorang wanita yang mengambil ragi dan dicampur ke dalam sejumlah besar tepung sampai semuanya beragi.” Ini menggambarkan bagaimana orang-orang biasa, menggunakan sumber daya biasa, dapat memiliki dampak yang luar biasa untuk kerajaan Allah. Zúme bertujuan untuk memperlengkapi dan memberdayakan orang-orang percaya biasa untuk menjangkau setiap lingkungan."
 
 #: template-zume-faq.php:139
 msgid "What languages will the training be translated into?"
@@ -2736,9 +2699,8 @@ msgid "How are the groups started by trainees aligned or organized?"
 msgstr "Bagaimana kelompok yang dimulai oleh peserta pelatihan akan diselaraskan atau diorganisir?"
 
 #: template-zume-faq.php:148
-#, fuzzy
 msgid "It depends. If the trainees come out of a particular church or denomination or network then the most natural thing is for the newly formed groups to be connected with those existing churches, denomination, or network. If desired, however, a new network can be formed from the groups that start. A third alternative would be for the new groups to join with other already existing networks of simple churches. Many of the people involved in developing Zúme come from such networks so we can help arrange that if desired."
-msgstr "Hal ini tergantung. Jika peserta pelatihan keluar dari gereja atau denominasi tertentu atau jaringan maka hal yang paling alami adalah untuk kelompok yang baru dibentuk untuk dihubungkan dengan orang-orang dari denominasi gereja-gereja yang ada, atau jaringan. Namun kalua diinginkan, jaringan baru dapat dibentuk dari kelompok yang dimulai. Pilihan ketiga adalah kelompok-kelompok baru bergabung dengan jaringan gereja-gereja sederhana lain yang sudah ada. Banyak orang yang terlibat dalam mengembangkan Zúme berasal dari jaringan tersebut sehingga kami dapat membantu mengatur hal itu jika diinginkan."
+msgstr "Hal ini tergantung. Jika peserta pelatihan keluar dari gereja atau denominasi tertentu atau jaringan maka hal yang paling alami adalah untuk kelompok yang baru dibentuk agar terhubung dengan gereja-gereja yang ada, atau denominasi, atau jaringan. Namun, jika ingin, jaringan baru dapat dibentuk dari kelompok-kelompok yang dimulai. Adapun pilihan ketiga yaitu kelompok-kelompok yang baru bergabung dengan jaringan gereja-gereja sederhana lain yang sudah ada. Banyak orang yang terlibat dalam mengembangkan Zúme berasal dari jaringan tersebut sehingga kami dapat membantu mengatur hal itu jika diinginkan."
 
 #: template-zume-faq.php:152
 msgid "Who can see my Three-Month Plan?"
@@ -2876,9 +2838,8 @@ msgid "ACCOUNTABILITY GROUPS — Break into groups of two or three people to wor
 msgstr "KELOMPOK YANG SALING BERTANGGUNG JAWAB -- BAgilah  ke dalam  kelompok dua atau tiga orang untuk mengerjakan Pertanyaan Akuntabilitas. (45 menit)"
 
 #: template-zume-overview.php:415
-#, fuzzy
 msgid "PRODUCERS VS. CONSUMERS — You'll discover the four main ways God makes everyday followers more like Jesus."
-msgstr "PRODUCEN VS. KONSUMEN — Anda akan menemukan empat cara utama Allah membuat pengikut sehari-hari menjadi lebih seperti Yesus."
+msgstr "PRODUSEN VS. KONSUMEN — Anda akan menemukan empat cara utama Allah membuat pengikut sehari-hari menjadi lebih seperti Yesus."
 
 #: template-zume-overview.php:436
 msgid "PRAYER CYCLE — See how easy it is to spend an hour in prayer."
@@ -2905,18 +2866,16 @@ msgid "THE GOSPEL — Learn a way to share God’s Good News from the beginning 
 msgstr "INJIL — Pelajari cara untuk berbagi Kabar Baik dari awal penciptaan manusia sampai akhir jaman ini."
 
 #: template-zume-overview.php:571
-#, fuzzy
 msgid "BAPTISM — Jesus said, “Go and make disciples of all nations, BAPTIZING them in the name of the Father and of the Son and of the Holy Spirit…” Learn how to put this into practice."
-msgstr "BAPTISAN — Yesus berkata, “Pergilah dan jadikan murid-murid dari semua bangsa, BAPTISLAH mereka dalam nama Bapa dan Anak dan Roh Kudus … ” Pelajari bagaimana menerapkan ini."
+msgstr "BAPTISAN — Yesus berkata, “Karena itu pergilah, jadikanlah semua bangsa murid-Ku dan baptislah mereka dalam nama Bapa dan Anak dan Roh Kudus,” Pelajari bagaimana untuk menerapkan ini."
 
 #: template-zume-overview.php:592
 msgid "SHARE GOD’S STORY — Break into groups of two or three and practice sharing God’s Story. (45 minutes)"
-msgstr "BERBAGI CERITA ALLAH --Bagilah ke dalam kelompok dua atau tiga orang dan praktek berbagi Cerita Allah. (45 menit)"
+msgstr "BERBAGI CERITA ALLAH - Bagilah ke dalam kelompok-kelompok terdiri dari dua atau tiga orang dan berlatih berbagi Kisah Allah. (45 menit)"
 
 #: template-zume-overview.php:648
-#, fuzzy
 msgid "GREATEST BLESSING — Learn a simple pattern of making not just one follower of Jesus but entire spiritual families who multiply for generations to come."
-msgstr "Berkat terbesar—Pelajari pola sederhana bukan hanya untuk membuat satu pengikut Yesus tetapi seluruh keluarga rohani yang berlipat ganda untuk generasi yang akan datang."
+msgstr "BERKAT TERBESAR—Pelajari pola sederhana bukan hanya untuk membuat satu pengikut Yesus tetapi seluruh keluarga rohani yang berlipat ganda untuk generasi yang akan datang."
 
 #: template-zume-overview.php:660
 msgid "EYES TO SEE — Begin to see where God’s Kingdom isn’t. These are usually the places where God wants to work the most."
@@ -2931,9 +2890,8 @@ msgid "3-MINUTE TESTIMONY — Learn how to share your testimony in three minutes
 msgstr "KESAKSIAN 3 MENIT -- Pelajari cara untuk berbagi kesaksian Anda dalam tiga menit dengan berbagi bagaimana Yesus telah mempengaruhi hidup Anda."
 
 #: template-zume-overview.php:705
-#, fuzzy
 msgid "THE LORD'S SUPPER — It’s a simple way to celebrate our intimate connection and ongoing relationship with Jesus. Learn a simple way to celebrate."
-msgstr "PERJAMUAN KUDUS — Ini cara sederhana untuk merayakan hubungan kita yang akrab dan berkelanjutan dengan Yesus. Pelajari cara sederhana untuk merayakannya."
+msgstr "PERJAMUAN KUDUS — Ini cara sederhana untuk merayakan hubungan kita yang intim dan berkelanjutan dengan Yesus. Pelajari cara sederhana untuk merayakannya."
 
 #: template-zume-overview.php:726
 msgid "SHARING YOUR TESTIMONY — Break into groups of two or three and practice sharing your Testimony with others. (45 minutes)"
@@ -2964,9 +2922,8 @@ msgid "FAITHFULNESS — It's important what disciples know — but it's much mor
 msgstr "KETAATAN — Apa yang diketahui pengikut Isa itu penting — tapi jauh lebih penting apa yang mereka LAKUKAN dengan apa yang mereka ketahui."
 
 #: template-zume-overview.php:922
-#, fuzzy
 msgid "3/3 GROUP FORMAT — A 3/3 Group is a way for followers of Jesus to meet, pray, learn, grow, fellowship and practice obeying and sharing what they've learned. In this way, a 3/3 Group is not just a small group but a Simple Church. (80 minutes)"
-msgstr "FORMAT KELOMPOK 3/3 — Kelompok 3/3 merupakan cara bagi pengikut Yesus untuk bertemu, berdoa, belajar, bertumbuh, bersekutu dan praktek mematuhi dan berbagi apa yang telah mereka pelajari. Dengan demikian, kelompok 3/3 bukan hanya kelompok kecil tapi gereja sederhana. (80 menit)"
+msgstr "FORMAT KELOMPOK 3/3 — Kelompok 3/3 merupakan cara bagi pengikut Yesus untuk bertemu, berdoa, belajar, bertumbuh, bersekutu dan latihan mentaati dan berbagi apa yang telah mereka pelajari. Dengan demikian, kelompok 3/3 bukan hanya kelompok kecil tapi Gereja Sederhana. (80 menit)"
 
 #: template-zume-overview.php:977
 msgid "TRAINING CYCLE — Learn the training cycle and consider how it applies to disciple making."
@@ -2977,7 +2934,6 @@ msgid "3/3 GROUP — Your entire group will spend 90 minutes practicing the 3/3 
 msgstr "KELOMPOK 3/3 -  Seluruh kelompok Anda akan menggunakan 90 menit berlatih Format Kelompok 3/3."
 
 #: template-zume-overview.php:1055
-#, fuzzy
 msgid "LEADERSHIP CELLS — A Leadership Cell is a way someone who feels called to lead can develop their leadership by practicing serving."
 msgstr "SEL KEPEMIMPINAN  - Sel kepemimpinan adalah cara seseorang yang merasa terpanggil untuk memimpin dapat mengembangkan kepemimpinan mereka dengan berlatih melayani."
 
@@ -2990,9 +2946,8 @@ msgid "PACE — Multiplying matters and multiplying quickly matters even more. S
 msgstr "KECEPATAN — Berlipat ganda itu penting dan berlipat ganda dengan cepat bahkan lebih penting. Lihat Mengapa kecepatan itu penting."
 
 #: template-zume-overview.php:1156
-#, fuzzy
 msgid "PART OF TWO CHURCHES — Learn how to obey Jesus' commands by going AND staying."
-msgstr "BAGIAN DARI DUA GEREJA  - Pelajari cara untuk mematuhi perintah Yesus dengan pergi dan tinggal."
+msgstr "BAGIAN DARI DUA GEREJA  - Pelajari cara untuk mematuhi perintah Yesus dengan pergi DAN tinggal."
 
 #: template-zume-overview.php:1177
 msgid "3-MONTH PLAN — Create and share your plan for how you will implement the Zúme tools over the next three months. (60 minutes)"
@@ -3016,7 +2971,7 @@ msgstr "KELOMPOK PEMBIMBINGAN SETARAF  —  Bagilah ke dalam kelompok dua atau t
 
 #: template-zume-privacy-policy.php:23
 msgid "Zúme Privacy Policy"
-msgstr "Proyek Zume"
+msgstr "Kebijakan Privasi Zúme"
 
 #: template-zume-privacy-policy.php:33
 msgid "This privacy policy has been compiled to better serve those who are concerned with how their \"Personally Identifiable Information\" (PII) is being used online. PII, as described in US privacy law and information security, is information that can be used on its own or with other information to identify, contact, or locate a single person, or to identify an individual in context. Please read our privacy policy carefully to get a clear understanding of how we collect, use, protect or otherwise handle your Personally Identifiable Information in accordance with our website."
@@ -3024,11 +2979,11 @@ msgstr "Kebijakan privasi ini telah disusun untuk melayani dengan lebih baik mer
 
 #: template-zume-privacy-policy.php:39
 msgid "What permissions do the social sign-on logins ask for?"
-msgstr "Izin apa yang diminta oleh info masuk sosial?"
+msgstr "Izin apa saja yang diminta oleh social sign-on untuk masuk?"
 
 #: template-zume-privacy-policy.php:42
 msgid "Public Profile. This includes certain User’s Data such as id, name, picture, gender, and their locale."
-msgstr "Profil Publik. Ini termasuk Data Pengguna tertentu seperti id, nama, gambar, jenis kelamin, dan lokal mereka."
+msgstr "Profil Umum. Ini termasuk beberapa data dari Pengguna seperti kartu identitas, nama, foto, jenis kelamin, beserta alamat pengguna."
 
 #: template-zume-privacy-policy.php:45
 msgid "Email Address."
@@ -3036,7 +2991,7 @@ msgstr "Alamat email:"
 
 #: template-zume-privacy-policy.php:53
 msgid "What personal information do we collect from the people through our website?"
-msgstr "Informasi pribadi apa yang kami kumpulkan dari orang-orang melalui situs web kami?"
+msgstr "Informasi pribadi apa saja yang kami kumpulkan dari orang-orang melalui situs web kami?"
 
 #: template-zume-privacy-policy.php:56
 msgid "Information in the Basic Social Profile (if used) and email."
@@ -3044,11 +2999,11 @@ msgstr "Informasi dalam Profil Sosial Dasar (jika digunakan) dan email."
 
 #: template-zume-privacy-policy.php:59
 msgid "Session and course activity."
-msgstr "Sesi dan kegiatan kursus."
+msgstr "Sesi dan kegiatan pembelajaran."
 
 #: template-zume-privacy-policy.php:62
 msgid "General location telemetry, so we know in what countries our training is being used."
-msgstr "Telemetri lokasi umum, jadi kami tahu di negara mana pelatihan kami digunakan."
+msgstr "Informasi mengenai lokasi secara umum, jadi kami tahu di negara mana pelatihan kami digunakan."
 
 #: template-zume-privacy-policy.php:70
 msgid "When do we collect information?"
@@ -3072,11 +3027,11 @@ msgstr "Kami menggunakan informasi Anda untuk membuat akun pengguna di sistem zu
 
 #: template-zume-privacy-policy.php:90
 msgid "We will email you with basic transactional emails like password reset requests and other system notifications."
-msgstr "Kami akan mengirim email kepada Anda dengan email transaksional dasar seperti permintaan pengaturan ulang kata sandi dan pemberitahuan sistem lainnya."
+msgstr "Kami akan mengirim email kepada Anda dengan email personal yang umum seperti permintaan pengaturan ulang kata sandi dan pemberitahuan sistem lainnya."
 
 #: template-zume-privacy-policy.php:93
 msgid "We email occasional reminders and encouragements depending on your progress through the training."
-msgstr "Kami sesekali mengirim email pengingat dan dorongan tergantung pada kemajuan Anda melalui pelatihan."
+msgstr "Kami mengirim email pengingat sesekali dan memberikan semangat tergantung pada kemajuan Anda melalui pelatihan."
 
 #: template-zume-privacy-policy.php:101
 msgid "How do we protect your information?"
@@ -3088,15 +3043,15 @@ msgstr "Selain untuk melindungi informasi sensitif yang dikirimkan secara online
 
 #: template-zume-privacy-policy.php:106
 msgid "Your personal information is contained behind secured networks and is only accessible by a limited number of persons who have special access rights to such systems, and are required to keep the information confidential. In addition, all sensitive/credit information you supply is encrypted via Secure Socket Layer (SSL) technology."
-msgstr "Informasi pribadi Anda terlindung di balik jaringan aman dan hanya dapat diakses oleh beberapa orang yang memiliki hak akses khusus untuk sistem tersebut, dan diharuskan untuk menjaga kerahasiaan informasi tersebut. Selain itu, semua informasi sensitif / kredit yang Anda berikan dienkripsi melalui teknologi Secure Socket Layer (SSL)."
+msgstr "Informasi pribadi Anda terkandung di balik jaringan yang aman dan hanya dapat diakses oleh beberapa orang yang memiliki hak akses khusus untuk sistem tersebut, dan diharuskan untuk menjaga kerahasiaan informasi tersebut. Selain itu, semua informasi sensitif / kredit yang Anda berikan dienkripsi melalui teknologi Secure Socket Layer (SSL)."
 
 #: template-zume-privacy-policy.php:109
 msgid "We implement a variety of security measures when a user submits, or accesses their information to maintain the safety of your personal information."
-msgstr "Kami menerapkan berbagai tindakan pengamanan ketika pengguna mengirimkan, atau mengakses informasi mereka untuk menjaga keamanan informasi pribadi Anda."
+msgstr "Kami menerapkan berbagai pertimbangan keamanan ketika pengguna mengirimkan, atau mengakses informasi mereka untuk menjaga keamanan dari informasi pribadi Anda."
 
 #: template-zume-privacy-policy.php:116
 msgid "Do we use \"cookies\"?"
-msgstr "Apakah kita menggunakan \"cookies\"?"
+msgstr "Apakah kami menggunakan \"cookies\"? (Cookies: serangkaian teks yang disimpan pada komputer Anda oleh situs web yang Anda kunjungi)"
 
 #: template-zume-privacy-policy.php:118
 msgid "Any use of Cookies - or of other tracking tools - by this Application or by the owners of third party services used by this Application, unless stated otherwise, serves to identify Users and remember their preferences, for the sole purpose of providing the service required by the User."
@@ -3116,16 +3071,15 @@ msgstr "Anda dapat memilih keluar dari kontak kami di masa mendatang kapan saja.
 
 #: template-zume-privacy-policy.php:137
 msgid "Change/correct any data we have about you."
-msgstr "Ubah / koreksi data apa pun yang kami miliki tentang Anda."
+msgstr "Ubah / koreksi setiap data yang kami miliki mengenai Anda."
 
 #: template-zume-privacy-policy.php:140
 msgid "Have us delete any data we have about you."
-msgstr "Minta kami menghapus data apa pun yang kami miliki tentang Anda."
+msgstr "Minta kami menghapus data apa pun yang kami miliki mengenai Anda."
 
 #: template-zume-privacy-policy.php:143
-#, fuzzy
 msgid "Express any concern you have about our use of your data."
-msgstr "Sampaikan kepedulian Anda tentang penggunaan data Anda oleh kami."
+msgstr "Ungkapkan ke khawatiran Anda tentang penggunaan data Anda oleh kami."
 
 #: template-zume-privacy-policy.php:151
 msgid "Updates"
@@ -3141,7 +3095,7 @@ msgstr "Profil Anda"
 
 #: functions/utilities/enqueue-scripts.php:127
 msgid "Linked Facebook Account"
-msgstr "Akun Facebook yang ditautkan"
+msgstr "Akun Facebook di Tautkan"
 
 #: functions/utilities/enqueue-scripts.php:128
 msgid "Unlink"
@@ -3149,7 +3103,7 @@ msgstr "Lepaskan Tautan Kelompok"
 
 #: functions/utilities/enqueue-scripts.php:129
 msgid "Linked Google Account"
-msgstr "Akun Google yang ditautkan"
+msgstr "Akun Google di Tautkan"
 
 #: template-zume-progress.php:41
 msgid "Phase 1"
@@ -3214,7 +3168,7 @@ msgstr "Kebijakan Privasi Zume"
 #. Template Name of the plugin/theme
 #: 
 msgid "Zúme Progress"
-msgstr "Kemajuan Zume"
+msgstr "Kemajuan Zúme"
 
 #. Template Name of the plugin/theme
 #: 
@@ -3229,12 +3183,12 @@ msgstr "Profil Zume"
 #. Template Name of the plugin/theme
 #: 
 msgid "Zúme Overview"
-msgstr "Tinjuaan Zume"
+msgstr "Tinjauan Zume"
 
 #. Template Name of the plugin/theme
 #: 
 msgid "Zúme FAQ"
-msgstr "Pertanyaan yang Sering Ditanyakan tentang Zume"
+msgstr "FAQ (Pertanyaan yang Sering Ditanyakan) Zúme"
 
 #. Template Name of the plugin/theme
 #: 
@@ -3306,7 +3260,7 @@ msgstr "lihat data apa yang telah kami kumpulkan dari aktivitas Anda bersama kam
 #. Template Name of the plugin/theme
 #: 
 msgid "Zúme One Page Course"
-msgstr "Kursus Zume Satu Halaman"
+msgstr "Kursus Satu Halaman Zúme"
 
 #: functions/zume-v4-seo-strings.php:14 parts/content-share.php:40
 #: template-pieces-page.php:171 template-zume-training.php:91
@@ -3339,7 +3293,7 @@ msgstr "EROR :  nama pengguna atau email tidak valid."
 
 #: template-zume-login.php:125
 msgid "Your password reset email has been sent. Check your email or junk mail for the link to reset your password."
-msgstr "Email pengaturan ulang kata sandi Anda telah dikirim. periksa email atau email sampah Anda untuk mencari tautan untuk mengatur ulang kata sandi Anda."
+msgstr "Email pengaturan ulang kata sandi Anda telah dikirim. Periksa email atau email sampah Anda untuk mencari tautan untuk mengatur ulang kata sandi Anda."
 
 #: template-zume-login.php:476
 msgid "Username or password does not match. Try again."
@@ -3400,7 +3354,7 @@ msgstr "mamulai sesi"
 #: functions/utilities/enqueue-scripts.php:288 parts/content-share.php:72
 #: template-pieces-page.php:199 template-zume-landing.php:174
 msgid "You're missing out."
-msgstr "Anda ketinggalan"
+msgstr "Anda ketinggalan."
 
 #: functions/utilities/enqueue-scripts.php:289 parts/content-share.php:72
 #: template-pieces-page.php:199 template-zume-landing.php:174
@@ -3499,7 +3453,7 @@ msgstr "5 menit"
 
 #: template-zume-landing.php:344 template-zume-training.php:164
 msgid "You'll see how God uses ordinary people doing simple things to make a big impact."
-msgstr "Anda akan melihat bagaimana Tuhan menggunakan orang biasa untuk melakukan hal-hal sederhana untuk membuat dampak yang besar."
+msgstr "Anda akan melihat bagaimana Tuhan memakai orang biasa yang melakukan hal-hal sederhana untuk membuat dampak yang besar."
 
 #: template-zume-training.php:167 template-zume-training.php:181
 #: template-zume-training.php:194 template-zume-training.php:207
@@ -3564,7 +3518,7 @@ msgstr "Check-in, Doa, Gambaran Umum"
 #: template-zume-landing.php:253 template-zume-landing.php:366
 #: template-zume-training.php:258
 msgid "You'll discover the four main ways God makes everyday followers more like Jesus."
-msgstr "Anda akan menemukan empat cara utama Allah membuat murid-murid biasa lebih seperti Isa."
+msgstr "Anda akan menemukan empat cara utama Tuhan membuat pengikut setiap hari lebih seperti Yesus."
 
 #: template-zume-landing.php:377 template-zume-training.php:271
 msgid "See how easy it is to spend an hour in prayer."
@@ -3802,7 +3756,7 @@ msgstr "https://github.com/ZumeProject/zume-training"
 #. Description of the plugin/theme
 #: 
 msgid "Zúme Training for multiplying disciples."
-msgstr "Pelatihan Zume untuk pelipatgandaan pengikut."
+msgstr "Pelatihan Zúme untuk pelipat-gandaan murid."
 
 #. Author of the plugin/theme
 #: 
@@ -3940,7 +3894,7 @@ msgstr "Pemetaan Generasi"
 #: parts/content-share.php:56 parts/content-share.php:92
 #: template-pieces-page.php:187 template-pieces-page.php:219
 msgid "Zúme Training is freely offered as part of larger Zúme Vision."
-msgstr "Pelatihan Zume diberikan secara gratis sebagai bagian dari Visi Zume yang lebih besar."
+msgstr "Pelatihan Zúme diberikan secara gratis sebagai bagian dari Visi Zúme yang lebih besar."
 
 #: parts/content-share.php:57 parts/content-share.php:93
 #: template-pieces-page.php:188 template-pieces-page.php:220
@@ -3949,7 +3903,7 @@ msgstr "Pelajari lebih lanjut tentang Visi Zume"
 
 #: template-pieces-page.php:51
 msgid "This concept is called \"%1$s\" in session %2$s of the Zúme Training"
-msgstr "Konsep ini dinamakan \\\"%1$s\\\" dalam sesi %2$s Pelatihan Zume\n"
+msgstr "Konsep ini dinamakan \"%1$s\" dalam sesi %2$s dari Pelatihan Zúme\n"
 ""
 
 #: template-pieces-page.php:83 template-zume-landing.php:50
@@ -3974,7 +3928,7 @@ msgstr "Dapatkan kata sandi baru"
 
 #: template-zume-resources.php:76
 msgid "Zúme Training Resources"
-msgstr "Sumber-sumber Pelatihan Zume"
+msgstr "Sumber-sumber Pelatihan Zúme"
 
 #: template-zume-training.php:291
 msgid "Relational Stewardship - List of 100"
@@ -4050,7 +4004,7 @@ msgstr "Doa yang luar biasa telah menggerakan setiap gerakan pemuridan dalam sej
 
 #: template-zume-vision.php:87
 msgid "You have not because you ask not (James 4:2). If we want to see movement, we need to ask for it."
-msgstr "Kamu tidak memperoleh sesuatu sebab kamu tidak memintanya (Yakobus 4:2). Jika kita mau melihat gerakan, kita harus memintanya."
+msgstr "Kamu tidak memperoleh sebab kamu tidak meminta (Yakobus 4:2). Jika kita mau melihat kegerakan, kita harus memintanya."
 
 #: template-zume-vision.php:106
 msgid "Training Saturation"
@@ -4112,7 +4066,7 @@ msgstr "Halaman Bagian"
 #. Template Name of the plugin/theme
 #: 
 msgid "Zúme Vision"
-msgstr "Zúme Visi"
+msgstr "Visi Zúme"
 
 #: functions/zume-content.php:2116
 msgid "Disciple-making can be rapidly advanced by finding a person of peace, even in a place where followers of Jesus are few and far between. How do you know when you have found a person of peace and what do you do when you find them?"
@@ -4507,7 +4461,7 @@ msgstr "Selamat datang di Keluarga Allah!"
 
 #: template-gmo.php:167
 msgid "You’ve just made a decision to follow Jesus. Where do you go from here?"
-msgstr "Anda baru saja memutuskan untuk mengikut Isa Almasih. Bagaimana selanjutnya?"
+msgstr "Anda baru saja memutuskan untuk mengikut Yesus. Bagaimana selanjutnya?"
 
 #: template-gmo.php:168
 msgid "We are Zúme, a GodLife Community. Through Zúme, we want to give you free resources to grow in your faith and connect you to a community of people all around the world striving to grow in knowledge and faith of the hope that Jesus gives us. Let’s get started!"
@@ -4531,7 +4485,7 @@ msgstr "Bagian di bawah ini akan mengajarkan Anda apa artinya menjadi pengikut/m
 
 #: functions/utilities/enqueue-scripts.php:364
 msgid "How can we serve you?"
-msgstr "Bagaimana kami bisa melayani Anda?"
+msgstr "Bagaimana kami dapat melayani Anda?"
 
 #: functions/utilities/enqueue-scripts.php:365
 msgid "I want to be coached"
@@ -4543,15 +4497,15 @@ msgstr "Saya butuh bantuan teknis"
 
 #: functions/utilities/enqueue-scripts.php:367
 msgid "I've gone through the training but need advice on implementation"
-msgstr "Saya telah mengikuti pelatihan tetapi membutuhkan saran tentang implementasi"
+msgstr "Saya telah mengikuti pelatihan tetapi membutuhkan saran mengenai penerapannya."
 
 #: functions/utilities/enqueue-scripts.php:368
 msgid "I have a question about the content that I need to talk to somebody else about"
-msgstr "Saya memiliki pertanyaan tentang konten yang perlu saya bicarakan dengan orang lain"
+msgstr "Saya memiliki pertanyaan menenai isi dari pembelajaran yang perlu saya bicarakan dengan orang lain"
 
 #: functions/utilities/enqueue-scripts.php:369
 msgid "I have a group started and need to know where do I go next"
-msgstr "Saya memiliki grup yang dimulai dan perlu tahu ke mana saya harus pergi selanjutnya"
+msgstr "Saya memiliki kelompok yang baru dimulai dan perlu tahu ke mana saya harus pergi selanjutnya"
 
 #: template-zume-landing.php:246
 msgid "Leading Yourself"
@@ -4560,22 +4514,22 @@ msgstr "Memimpin Diri Sendiri"
 #: template-zume-landing.php:250 template-zume-landing.php:270
 #: template-zume-landing.php:292 template-zume-landing.php:312
 msgid "Principles"
-msgstr "Prinsip"
+msgstr "Prinsip-Prinsip"
 
 #: template-zume-landing.php:255 template-zume-landing.php:275
 #: template-zume-landing.php:297 template-zume-landing.php:317
 msgid "Practices"
-msgstr "Praktek"
+msgstr "Latihan"
 
 #: template-zume-landing.php:265
 msgid "Leading Your Group"
-msgstr "Memimpin Grup Anda"
+msgstr "Memimpin Kelompok Anda"
 
 #: template-zume-landing.php:288
 msgid "Leading Your Group Leaders"
-msgstr "Memimpin Pemimpin Grup Anda"
+msgstr "Memimpin Pemimpin-Pemimpin Kelompok Anda"
 
 #: template-zume-landing.php:308
 msgid "Leading Your Community Leaders"
-msgstr "Memimpin Pemimpin Komunitas Anda"
+msgstr "Memimpin Para Pemimpin Komunitas Anda"
 
