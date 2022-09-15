@@ -26,7 +26,24 @@ add_action( 'wp_head', 'zume_one_page_add_to_header' );
 get_header();
 
 ?>
+<style>
+    div.alt-video-section {
+        width:100% !important;
+        text-align: center;
+    }
+    div.alt-video-section video {
+        width:100% !important;
+    }
+   @media screen and ( max-width: 600px ) {
+       div.alt-video-section {
+           max-height: 250px;
+       }
 
+   }
+    iframe#launcher {
+        display:none;
+    }
+</style>
     <div id="content" class="max-content-width">
         <div id="inner-content" class="grid-x grid-margin-x">
             <div id="main" class="large-12 cell" role="main">

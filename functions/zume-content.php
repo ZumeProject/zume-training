@@ -249,7 +249,7 @@ class Zume_Course_Content {
                     <!-- 1 -->
                     <?php if ( $alt_video ) : ?>
                         <div class="alt-video-section">
-                            <video style="border: 1px solid lightgrey;" controls>
+                            <video style="border: 1px solid lightgrey;max-width:100%;" controls>
                                 <source src="<?php echo esc_url( zume_mirror_url() . zume_current_language() ) . '/1.mp4' ?>" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
@@ -309,7 +309,7 @@ class Zume_Course_Content {
                     <!-- 2 -->
                     <?php if ( $alt_video ) : ?>
                         <div class="alt-video-section">
-                            <video style="border: 1px solid lightgrey;" controls>
+                            <video style="border: 1px solid lightgrey;max-width:100%;" controls>
                                 <source src="<?php echo esc_url( zume_mirror_url() . zume_current_language() ) . '/2.mp4' ?>" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
@@ -376,7 +376,7 @@ class Zume_Course_Content {
                     <!-- 3 -->
                     <?php if ( $alt_video ) : ?>
                         <div class="alt-video-section">
-                            <video style="border: 1px solid lightgrey;" controls>
+                            <video style="border: 1px solid lightgrey;max-width:100%;" controls>
                                 <source src="<?php echo esc_url( zume_mirror_url() . zume_current_language() ) . '/3.mp4' ?>" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
@@ -457,7 +457,7 @@ class Zume_Course_Content {
                     <!-- 4 -->
                     <?php if ( $alt_video ) : ?>
                         <div class="alt-video-section">
-                            <video style="border: 1px solid lightgrey;" controls>
+                            <video style="border: 1px solid lightgrey;max-width:100%;" controls>
                                 <source src="<?php echo esc_url( zume_mirror_url() . zume_current_language() ) . '/4.mp4' ?>" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
@@ -528,7 +528,7 @@ class Zume_Course_Content {
                     <!-- 5 -->
                     <?php if ( $alt_video ) : ?>
                         <div class="alt-video-section">
-                            <video style="border: 1px solid lightgrey;" controls>
+                            <video style="border: 1px solid lightgrey;max-width:100%;" controls>
                                 <source src="<?php echo esc_url( zume_mirror_url() . zume_current_language() ) . '/5.mp4' ?>" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
@@ -745,7 +745,7 @@ class Zume_Course_Content {
                     <!-- 6 -->
                     <?php if ( $alt_video ) : ?>
                         <div class="alt-video-section">
-                            <video style="border: 1px solid lightgrey;" controls>
+                            <video style="border: 1px solid lightgrey;max-width:100%;" controls>
                                 <source src="<?php echo esc_url( zume_mirror_url() . zume_current_language() ) . '/6.mp4' ?>" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
@@ -826,7 +826,7 @@ class Zume_Course_Content {
                     <!-- 7 -->
                     <?php if ( $alt_video ) : ?>
                         <div class="alt-video-section">
-                            <video style="border: 1px solid lightgrey;" controls>
+                            <video style="border: 1px solid lightgrey;max-width:100%;" controls>
                                 <source src="<?php echo esc_url( zume_mirror_url() . zume_current_language() ) . '/7.mp4' ?>" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
@@ -941,7 +941,7 @@ class Zume_Course_Content {
                     <!-- 8 -->
                     <?php if ( $alt_video ) : ?>
                         <div class="alt-video-section">
-                            <video style="border: 1px solid lightgrey;" controls>
+                            <video style="border: 1px solid lightgrey;max-width:100%;" controls>
                                 <source src="<?php echo esc_url( zume_mirror_url() . zume_current_language() ) . '/8.mp4' ?>" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
@@ -1139,7 +1139,7 @@ class Zume_Course_Content {
                     <!-- 9 -->
                     <?php if ( $alt_video ) : ?>
                         <div class="alt-video-section">
-                            <video style="border: 1px solid lightgrey;" controls>
+                            <video style="border: 1px solid lightgrey;max-width:100%;" controls>
                                 <source src="<?php echo esc_url( zume_mirror_url() . zume_current_language() ) . '/9.mp4' ?>" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
@@ -1243,7 +1243,7 @@ class Zume_Course_Content {
                     <!-- 10 -->
                     <?php if ( $alt_video ) : ?>
                         <div class="alt-video-section">
-                            <video style="border: 1px solid lightgrey;" controls>
+                            <video style="border: 1px solid lightgrey;max-width:100%;" controls>
                                 <source src="<?php echo esc_url( zume_mirror_url() . zume_current_language() ) . '/10.mp4' ?>" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
@@ -1349,7 +1349,7 @@ class Zume_Course_Content {
                     <!-- 11 -->
                     <?php if ( $alt_video ) : ?>
                         <div class="alt-video-section">
-                            <video style="border: 1px solid lightgrey;" controls>
+                            <video style="border: 1px solid lightgrey;max-width:100%;" controls>
                                 <source src="<?php echo esc_url( zume_mirror_url() . zume_current_language() ) . '/11.mp4' ?>" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
@@ -1577,7 +1577,7 @@ class Zume_Course_Content {
                     <!-- 12 -->
                     <?php if ( $alt_video ) : ?>
                         <div class="alt-video-section">
-                            <video style="border: 1px solid lightgrey;" controls>
+                            <video style="border: 1px solid lightgrey;max-width:100%;" controls>
                                 <source src="<?php echo esc_url( zume_mirror_url() . zume_current_language() ) . '/12.mp4' ?>" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
@@ -1658,7 +1658,7 @@ class Zume_Course_Content {
                     <!-- 13 -->
                     <?php if ( $alt_video ) : ?>
                         <div class="alt-video-section">
-                            <video style="border: 1px solid lightgrey;" controls>
+                            <video style="border: 1px solid lightgrey;max-width:100%;" controls>
                                 <source src="<?php echo esc_url( zume_mirror_url() . zume_current_language() ) . '/13.mp4' ?>" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
@@ -1728,7 +1728,7 @@ class Zume_Course_Content {
                     <!-- 14 -->
                     <?php if ( $alt_video ) : ?>
                         <div class="alt-video-section">
-                            <video style="border: 1px solid lightgrey;" controls>
+                            <video style="border: 1px solid lightgrey;max-width:100%;" controls>
                                 <source src="<?php echo esc_url( zume_mirror_url() . zume_current_language() ) . '/14.mp4' ?>" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
@@ -1798,7 +1798,7 @@ class Zume_Course_Content {
                     <!-- 15 -->
                     <?php if ( $alt_video ) : ?>
                         <div class="alt-video-section">
-                            <video style="border: 1px solid lightgrey;" controls>
+                            <video style="border: 1px solid lightgrey;max-width:100%;" controls>
                                 <source src="<?php echo esc_url( zume_mirror_url() . zume_current_language() ) . '/15.mp4' ?>" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
@@ -1880,7 +1880,7 @@ class Zume_Course_Content {
                     <!-- 16 -->
                     <?php if ( $alt_video ) : ?>
                         <div class="alt-video-section">
-                            <video style="border: 1px solid lightgrey;" controls>
+                            <video style="border: 1px solid lightgrey;max-width:100%;" controls>
                                 <source src="<?php echo esc_url( zume_mirror_url() . zume_current_language() ) . '/16.mp4' ?>" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
@@ -2071,7 +2071,7 @@ class Zume_Course_Content {
                     <!-- 17 -->
                     <?php if ( $alt_video ) : ?>
                         <div class="alt-video-section">
-                            <video style="border: 1px solid lightgrey;" controls>
+                            <video style="border: 1px solid lightgrey;max-width:100%;" controls>
                                 <source src="<?php echo esc_url( zume_mirror_url() . zume_current_language() ) . '/17.mp4' ?>" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
@@ -2125,7 +2125,7 @@ class Zume_Course_Content {
                     <!-- 18 -->
                     <?php if ( $alt_video ) : ?>
                         <div class="alt-video-section">
-                            <video style="border: 1px solid lightgrey;" controls>
+                            <video style="border: 1px solid lightgrey;max-width:100%;" controls>
                                 <source src="<?php echo esc_url( zume_mirror_url() . zume_current_language() ) . '/18.mp4' ?>" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
@@ -2336,7 +2336,7 @@ class Zume_Course_Content {
                     <!-- 19 -->
                     <?php if ( $alt_video ) : ?>
                         <div class="alt-video-section">
-                            <video style="border: 1px solid lightgrey;" controls>
+                            <video style="border: 1px solid lightgrey;max-width:100%;" controls>
                                 <source src="<?php echo esc_url( zume_mirror_url() . zume_current_language() ) . '/19.mp4' ?>" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
@@ -2415,7 +2415,7 @@ class Zume_Course_Content {
                     <!-- 21 -->
                     <?php if ( $alt_video ) : ?>
                         <div class="alt-video-section">
-                            <video style="border: 1px solid lightgrey;" controls>
+                            <video style="border: 1px solid lightgrey;max-width:100%;" controls>
                                 <source src="<?php echo esc_url( zume_mirror_url() . zume_current_language() ) . '/21.mp4' ?>" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
@@ -2606,7 +2606,7 @@ class Zume_Course_Content {
                     <!-- 22 -->
                     <?php if ( $alt_video ) : ?>
                         <div class="alt-video-section">
-                            <video style="border: 1px solid lightgrey;" controls>
+                            <video style="border: 1px solid lightgrey;max-width:100%;" controls>
                                 <source src="<?php echo esc_url( zume_mirror_url() . zume_current_language() ) . '/22.mp4' ?>" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
@@ -2847,7 +2847,7 @@ class Zume_Course_Content {
                     <!-- 23 -->
                     <?php if ( $alt_video ) : ?>
                         <div class="alt-video-section">
-                            <video style="border: 1px solid lightgrey;" controls>
+                            <video style="border: 1px solid lightgrey;max-width:100%;" controls>
                                 <source src="<?php echo esc_url( zume_mirror_url() . zume_current_language() ) . '/23.mp4' ?>" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
@@ -3069,7 +3069,7 @@ class Zume_Course_Content {
                     <!-- 24 -->
                     <?php if ( $alt_video ) : ?>
                         <div class="alt-video-section">
-                            <video style="border: 1px solid lightgrey;" controls>
+                            <video style="border: 1px solid lightgrey;max-width:100%;" controls>
                                 <source src="<?php echo esc_url( zume_mirror_url() . zume_current_language() ) . '/24.mp4' ?>" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
@@ -3135,7 +3135,7 @@ class Zume_Course_Content {
                     <!-- 25 -->
                     <?php if ( $alt_video ) : ?>
                         <div class="alt-video-section">
-                            <video style="border: 1px solid lightgrey;" controls>
+                            <video style="border: 1px solid lightgrey;max-width:100%;" controls>
                                 <source src="<?php echo esc_url( zume_mirror_url() . zume_current_language() ) . '/25.mp4' ?>" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
@@ -3204,7 +3204,7 @@ class Zume_Course_Content {
                     <!-- 26 -->
                     <?php if ( $alt_video ) : ?>
                         <div class="alt-video-section">
-                            <video style="border: 1px solid lightgrey;" controls>
+                            <video style="border: 1px solid lightgrey;max-width:100%;" controls>
                                 <source src="<?php echo esc_url( zume_mirror_url() . zume_current_language() ) . '/26.mp4' ?>" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
@@ -3530,7 +3530,7 @@ class Zume_Course_Content {
                     <!-- 28 -->
                     <?php if ( $alt_video ) : ?>
                         <div class="alt-video-section">
-                            <video style="border: 1px solid lightgrey;" controls>
+                            <video style="border: 1px solid lightgrey;max-width:100%;" controls>
                                 <source src="<?php echo esc_url( zume_mirror_url() . zume_current_language() ) . '/28.mp4' ?>" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
@@ -3608,7 +3608,7 @@ class Zume_Course_Content {
                     <!-- 29 -->
                     <?php if ( $alt_video ) : ?>
                         <div class="alt-video-section">
-                            <video style="border: 1px solid lightgrey;" controls>
+                            <video style="border: 1px solid lightgrey;max-width:100%;" controls>
                                 <source src="<?php echo esc_url( zume_mirror_url() . zume_current_language() ) . '/29.mp4' ?>" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
@@ -3675,7 +3675,7 @@ class Zume_Course_Content {
                     <!-- 30 -->
                     <?php if ( $alt_video ) : ?>
                         <div class="alt-video-section">
-                            <video style="border: 1px solid lightgrey;" controls>
+                            <video style="border: 1px solid lightgrey;max-width:100%;" controls>
                                 <source src="<?php echo esc_url( zume_mirror_url() . zume_current_language() ) . '/30.mp4' ?>" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
@@ -3785,7 +3785,7 @@ class Zume_Course_Content {
                             <!-- 27 -->
                             <?php if ( $alt_video ) : ?>
                                 <div class="alt-video-section">
-                                    <video style="border: 1px solid lightgrey;" controls>
+                                    <video style="border: 1px solid lightgrey;max-width:100%;" controls>
                                         <source src="<?php echo esc_url( zume_mirror_url() . zume_current_language() ) . '/27.mp4' ?>" type="video/mp4">
                                         Your browser does not support the video tag.
                                     </video>
