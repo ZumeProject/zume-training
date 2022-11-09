@@ -22,9 +22,6 @@ if ( is_user_logged_in() ) {
     exit;
 }
 
-
-//add_action( 'wp_head', 'wp_no_robots' );
-
 nocache_headers();
 
 // Fix for page title
