@@ -238,7 +238,7 @@ function zume_training_url( $current_language = null ) {
     if ( is_null( $current_language ) ) {
         $current_language = zume_current_language();
     }
-    $url = zume_get_posts_translation_url( 'training', $current_language );
+    $url = zume_get_posts_translation_url( 'Training', $current_language );
     return $url;
 }
 
@@ -249,35 +249,35 @@ function zume_course_url() {
 
 function zume_three_month_plan_url() {
     $current_lang = zume_current_language();
-    return zume_get_posts_translation_url( 'three-month plan', $current_lang );
+    return zume_get_posts_translation_url( 'Three-Month Plan', $current_lang );
 }
 
 function zume_overview_url() {
     $current_lang = zume_current_language();
-    return zume_get_posts_translation_url( 'overview', $current_lang );
+    return zume_get_posts_translation_url( 'Overview', $current_lang );
 }
 
 function zume_guidebook_url() {
     $current_lang = zume_current_language();
-    $url = zume_get_posts_translation_url( 'guidebook', $current_lang );
+    $url = zume_get_posts_translation_url( 'Guidebook', $current_lang );
     return $url;
 }
 
 function zume_profile_url() {
     $current_lang = zume_current_language();
-    $url = zume_get_posts_translation_url( 'profile', $current_lang );
+    $url = zume_get_posts_translation_url( 'Profile', $current_lang );
     return $url;
 }
 
 function zume_about_url() {
     $current_lang = zume_current_language();
-    $url = zume_get_posts_translation_url( 'about', $current_lang );
+    $url = zume_get_posts_translation_url( 'About', $current_lang );
     return $url;
 }
 
 function zume_faq_url() {
     $current_lang = zume_current_language();
-    $url = zume_get_posts_translation_url( 'faq', $current_lang );
+    $url = zume_get_posts_translation_url( 'FAQ', $current_lang );
     return $url;
 }
 
