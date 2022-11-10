@@ -128,7 +128,8 @@ function zume_core_posts( $page_title ) {
         'Translation Progress' => 20716,
         'Training' => 20729,
     ];
-    return $ids[$page_title] ?? 0;
+    $lc = strtolower( $page_title );
+    return $ids[$page_title] ?? $ids[$lc] ?? 0;
 }
 function zume_language_relationships( $post_id ) {
     global $wpdb;
