@@ -69,34 +69,78 @@ function zume_get_translation( $post_id, $slug = 'en' ) {
  * @return string|\WP_Error
  */
 function zume_get_posts_translation_url( $page_title, $slug = 'en' ) {
+    $post_id = zume_core_posts( $page_title );
+    $list = zume_language_relationships( $post_id );
 
-    if ( function_exists( 'pll_the_languages' ) ) {
-        // find post by title
-        $post_id = get_page_by_title( $page_title, OBJECT, 'page' );
-
-        // get translation id by eng id
-        if ( empty( $slug ) ) {
-            $slug = 'en';
-        }
-
-        if ( isset( $post_id->ID ) && ! empty( $post_id->ID ) ) {
-            $trans_id = pll_get_post( $post_id->ID, $slug );
-            if ( ! $trans_id ) {
-                return '';
-            }
-        } else {
-            return '';
-        }
-
-        $trans_object = get_post( $trans_id, OBJECT );
-
-        $trans_url = site_url( '/' )  . $trans_object->post_name . '/';
-
-        return $trans_url;
+    if ( empty( $slug ) ) {
+        $slug = 'en';
     }
-    else {
-        return new WP_Error( 'Polylang_missing', 'Polylang plugin missing' );
-    }
+
+    $trans_id = $list[$slug] ?? $post_id;
+
+    $trans_object = get_post( $trans_id, OBJECT );
+    return site_url( '/' )  . $trans_object->post_name . '/';
+
+//    if ( function_exists( 'pll_the_languages' ) ) {
+//        // find post by title
+//
+//
+//        // get translation id by eng id
+//        if ( empty( $slug ) ) {
+//            $slug = 'en';
+//        }
+//
+//        if ( isset( $post_id->ID ) && ! empty( $post_id->ID ) ) {
+//            $trans_id = pll_get_post( $post_id->ID, $slug );
+//            if ( ! $trans_id ) {
+//                return '';
+//            }
+//        } else {
+//            return '';
+//        }
+//
+//        $trans_object = get_post( $trans_id, OBJECT );
+//
+//        $trans_url = site_url( '/' )  . $trans_object->post_name . '/';
+//
+//        return $trans_url;
+//    }
+//    else {
+//        return new WP_Error( 'Polylang_missing', 'Polylang plugin missing' );
+//    }
+}
+
+function zume_core_posts( $page_title ) {
+    $ids = [
+        'Dashboard' => 26,
+        'Overview' => 644,
+        'About' => 664,
+        'Resources' => 845,
+        'Profile' => 19684,
+        'FAQ' => 19708,
+        'Course' => 19720,
+        'Vision' => 19811,
+        'Three-Month Plan' => 19848,
+        'Home' => 19850,
+        'Login' => 20131,
+        'Privacy Policy' => 20203,
+        'One Page Course' => 20386,
+        'Translation Progress' => 20716,
+        'Training' => 20729,
+    ];
+    return $ids[$page_title];
+}
+function zume_language_relationships( $post_id ) {
+    global $wpdb;
+    $list = $wpdb->get_var( $wpdb->prepare(
+        "
+			SELECT description
+			FROM wp_term_taxonomy tr
+            WHERE tr.description LIKE %s AND tr.taxonomy = 'post_translations';
+		",
+        '%' . $wpdb->esc_like($post_id) . '%'
+    ) );
+    return maybe_unserialize( $list );
 }
 
 function zume_get_url_list( $page_id ) {

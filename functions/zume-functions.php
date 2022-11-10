@@ -244,20 +244,17 @@ function zume_training_url( $current_language = null ) {
 
 function zume_course_url() {
     $current_lang = zume_current_language();
-    $url = zume_get_posts_translation_url( 'course', $current_lang );
-    return $url;
+    return zume_get_posts_translation_url( 'Course', $current_lang );
 }
 
 function zume_three_month_plan_url() {
     $current_lang = zume_current_language();
-    $url = zume_get_posts_translation_url( 'three-month plan', $current_lang );
-    return $url;
+    return zume_get_posts_translation_url( 'three-month plan', $current_lang );
 }
 
 function zume_overview_url() {
     $current_lang = zume_current_language();
-    $url = zume_get_posts_translation_url( 'overview', $current_lang );
-    return $url;
+    return zume_get_posts_translation_url( 'overview', $current_lang );
 }
 
 function zume_guidebook_url() {
