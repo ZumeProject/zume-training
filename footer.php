@@ -5,8 +5,7 @@
 
             <p class="source-org copyright hide-for-small-only" style="padding-top:50px; opacity:.3;">
                 <span>
-                    <a href="https://www.facebook.com/zumeproject" target="_blank" rel="noopener"><img src="<?php echo esc_attr( get_template_directory_uri() ); ?>/assets/images/facebook-square.svg" style="height: 23px" title="Facebook"></a>
-                    <a href="https://twitter.com/zumeproject" target="_blank" rel="noopener"><img src="<?php echo esc_attr( get_template_directory_uri() ); ?>/assets/images/twitter-square.svg" style="height: 23px" title="Twitter"></a>
+                    <a href="https://www.facebook.com/zumemultiplyingdisciples" target="_blank" rel="noopener"><img src="<?php echo esc_attr( get_template_directory_uri() ); ?>/assets/images/facebook-square.svg" style="height: 23px" title="Facebook"></a>
                 </span> &copy; <?php echo esc_html( gmdate( 'Y' ) ); ?> Zúme
             </p>
             <br><br><br>
