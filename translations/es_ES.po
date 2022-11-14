@@ -3779,7 +3779,7 @@ msgstr "La respiración espiritual es escuchar y obedecer a Dios"
 #: functions/utilities/enqueue-scripts.php:226 template-zume-landing.php:257
 #: template-zume-landing.php:389 template-zume-training.php:199
 msgid "SOAPS Bible Reading"
-msgstr "JABONES Lectura de la Biblia"
+msgstr "Lectura Bíblica SOAPS"
 
 #: functions/utilities/enqueue-scripts.php:228 template-zume-landing.php:252
 #: template-zume-landing.php:365 template-zume-training.php:253
