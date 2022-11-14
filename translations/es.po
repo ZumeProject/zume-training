@@ -1165,7 +1165,7 @@ msgstr "Practica la Oración E.S.T.E.R. (15min)"
 #. ???
 #: functions/zume-content.php:2186
 msgid "Break into groups of two or three and practicing the B.L.E.S.S. Prayer. The prayer pattern can be found in the Zúme Guidebook. Practice praying the five areas of the B.L.E.S.S. Prayer."
-msgstr "Divídanse en grupos de dos o tres y practiquen la Oración B.L.E.S.S.. El patrón de la oración puede ser encontrado en la Guía Zúme. Practica orar las cinco áreas de la Oración E.S.T.E.R."
+msgstr "Divídanse en grupos de dos o tres y practiquen la Oración E.S.T.E.R. El patrón de la oración puede ser encontrado en la Guía Zúme. Practica orar las cinco áreas de la Oración E.S.T.E.R."
 
 #: functions/zume-content.php:2202
 msgid "Prayer Walking (60-90min)"
@@ -1558,7 +1558,7 @@ msgstr "Pregúntale a Dios qué es lo que quiere que hagas con las herramientas 
 
 #: functions/zume-content.php:3306
 msgid "It's a Blessing to ... S.O.A.P.S. Bible Reading, Accountability Groups, Prayer Cycle"
-msgstr "Lectura Bíblica S.O.A.P.S., Grupos de Rendición de Cuentas y el Ciclo de Oración… son una Bendición"
+msgstr "Lectura Bíblica S.O.P.A.S., Grupos de Rendición de Cuentas y el Ciclo de Oración… son una Bendición"
 
 #: functions/zume-content.php:3309
 msgid "It's a Great Blessing to ... Share your 3-Minute Testimony and God's Story, Prayer Walking"
@@ -3838,7 +3838,7 @@ msgstr "La respiración espiritual es escuchar y obedecer a Dios"
 #: functions/utilities/enqueue-scripts.php:226 template-zume-landing.php:257
 #: template-zume-landing.php:389 template-zume-training.php:199
 msgid "SOAPS Bible Reading"
-msgstr "JABONES Lectura de la Biblia"
+msgstr "Lectura Bíblica SOAPS"
 
 #: functions/utilities/enqueue-scripts.php:228 template-zume-landing.php:252
 #: template-zume-landing.php:365 template-zume-training.php:253
