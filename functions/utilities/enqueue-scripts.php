@@ -111,7 +111,6 @@ function zume_site_scripts() {
                     'google_sso_email' => $zume_user_meta['google_sso_email'] ?? false,
                 ],
                 'logged_in' => is_user_logged_in(),
-                'map_key' => DT_Mapbox_API::get_key(),
                 'translations' => [
                     'x1' => __( 'Your Profile', 'zume' ),
                     'x2' => __( 'First and last name', 'zume' ),
@@ -169,7 +168,6 @@ function zume_site_scripts() {
                     'zume_global_network' => ( is_user_logged_in() ) ? $zume_user_meta['zume_global_network'] ?? '' : false,
                 ],
                 'logged_in' => is_user_logged_in(),
-                'map_key' => DT_Mapbox_API::get_key(),
                 "current_language" => $current_language,
                 "current_language_name" => zume_get_english_language_name( $current_language ),
                 "languages" => $languages,

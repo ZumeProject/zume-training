@@ -38,9 +38,6 @@ require_once( 'functions/zume-dashboard.php' ); // zume dashboard
 require_once( 'functions/zume-rest-api.php' );
 // end 3.0
 
-// Mapping
-require_once( 'dt-mapping/loader.php' );
-new DT_Mapping_Module_Loader( 'theme' );
 
 // zume 4.0
 require_once( 'functions/zume-v4-rest-api.php' );
@@ -71,7 +68,6 @@ if ( is_admin() ) {
     require_once( 'functions/integrations/tab-keys.php' );
     require_once( 'functions/integrations/menu-and-tabs.php' );
     require_once( 'functions/post-types/zume-resource-metabox.php' );
-//    require_once( 'functions/zume-dt-integration/system-check-metabox.php' );
 
     require_once( 'functions/utilities/tgm-config.php' );
 
