@@ -1,5 +1,7 @@
 <?php
 
+// @todo remove
+
 /**
  * Zume_V4_REST_API
  *

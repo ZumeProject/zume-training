@@ -1,4 +1,7 @@
 <?php
+// @todo remove
+
+
 // Register menus
 register_nav_menus(
     array(

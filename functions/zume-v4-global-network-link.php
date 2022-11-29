@@ -1,4 +1,5 @@
 <?php
+// @todo remove
 
 add_action( 'zume_create_group', 'trigger_group_to_training_transfer', 10, 3 );
 function trigger_group_to_training_transfer( $user_id, $group_key, $group ) {

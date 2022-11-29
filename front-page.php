@@ -257,14 +257,8 @@ if ( is_user_logged_in() ) {
                 </div>
             </div>
 
-
-
-
-
-
             <?php } // end custom page if ?>
-
-
+            
         </div> <!-- end #main -->
 
     </div> <!-- end cell --><!-- content -->

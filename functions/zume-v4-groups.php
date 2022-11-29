@@ -1,5 +1,8 @@
 <?php
 
+// @todo remove
+// @todo DT_Mapbox no longer available
+
 /**
  * Class Zume_V4_Groups
  */

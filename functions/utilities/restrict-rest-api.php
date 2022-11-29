@@ -1,4 +1,6 @@
 <?php
+// @todo remove
+
 /**
  * Original Plugin Name: Disable REST API
  * Original Plugin URI: http://www.binarytemplar.com/disable-json-api

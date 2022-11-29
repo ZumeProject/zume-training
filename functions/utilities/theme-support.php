@@ -1,5 +1,7 @@
 <?php
 
+// @todo remove
+
 // Adding WP Functions & Theme Support
 function zume_theme_support() {
 

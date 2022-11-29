@@ -1,5 +1,7 @@
 <?php
 
+// todo move to the new navigation
+
 // Navigation Translation Strings for Menu Titles
 $zume_navigation_menu = array(
     __( 'Home', 'zume' ),
