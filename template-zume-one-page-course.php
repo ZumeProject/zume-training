@@ -4,11 +4,6 @@ Template Name: Zúme One Page Course
 */
 zume_force_login();
 
-$zendesk_enable = false;
-if ( is_user_logged_in() ) {
-    $zendesk_enable = true;
-}
-
 if ( ! user_can( get_current_user_id(), 'manage_options' ) ) {
     return;
 }

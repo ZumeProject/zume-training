@@ -1,4 +1,5 @@
 <?php
+// @todo remove
 /**
  * Template Name: Redirect to Training
  */
