@@ -5,6 +5,9 @@
 
 if ( ! defined( 'ABSPATH' ) ) { exit; } // Exit if accessed directly
 
+add_filter( 'login_redirect', function( $url, $query, $user ) {
+    return zume_dashboard_url();
+}, 10, 3 );
 
 
 /********************************************************************************************************************

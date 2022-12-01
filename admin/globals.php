@@ -4,6 +4,7 @@ function add_template_column( $cols ) {
     $cols['template'] = 'Template';
     return $cols;
 }
+add_filter( 'manage_pages_columns', 'add_template_column' );
 
 function add_template_value( $column_name, $post_id ) {
     if ( 'template' === $column_name ) {
@@ -14,5 +15,6 @@ function add_template_value( $column_name, $post_id ) {
             echo 'None';
         }
     }
-
 }
+add_action( 'manage_pages_custom_column', 'add_template_value', 10, 2 );
+

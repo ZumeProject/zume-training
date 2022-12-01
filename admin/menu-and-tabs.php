@@ -14,7 +14,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * Class DT_Webform_Menu
  */
-Zume_Integration_Menu::instance(); // Initialize class
+
 class Zume_Integration_Menu
 {
     public $token;
@@ -292,5 +292,5 @@ class Zume_Integration_Menu
         }
     }
 
-
 }
+Zume_Integration_Menu::instance();
