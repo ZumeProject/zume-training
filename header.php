@@ -51,12 +51,14 @@
 
         <div class="off-canvas-wrapper">
 
-            <?php get_template_part( 'parts/nav', 'offcanvas' ); ?>
+            <?php get_template_part( 'parts/content', 'offcanvas' ); ?>
 
             <div class="off-canvas-content" data-off-canvas-content>
 
                 <header class="header" role="banner">
 
-                    <?php get_template_part( 'parts/nav', 'header' ); ?>
+                     <!-- This navs will be applied to the topbar, above all content
+                          To see additional nav styles, visit the /parts directory -->
+                        <?php get_template_part( 'parts/nav', 'offcanvas-topbar' ); ?>
 
-                </header>
+                </header> <!-- end .header -->

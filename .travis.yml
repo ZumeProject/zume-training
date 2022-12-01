@@ -1,0 +1,22 @@
+language: php
+php:
+    - '7.0'
+    - '7.2'
+dist: trusty
+cache:
+  directories:
+    - "node_modules"
+    - $HOME/.composer/cache/files
+before_install:
+  - npm install -g gulp-cli
+  - npm install
+before_script:
+  - composer install --no-interaction
+script:
+  - ./functions/test/test_for_syntax_errors.sh
+  - ./functions/test/test_phpcs.sh
+  - gulp
+  - git diff --exit-code assets/
+  # If the previous command returns a non-zero exit code, that means gulp has
+  # modified some files in version control. This shouldn't happen, developers
+  # should remember to run gulp before committing.
