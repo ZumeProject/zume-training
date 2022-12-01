@@ -2,10 +2,7 @@
 /*
 Template Name: Zúme Vision
 */
-$zendesk_enable = false;
-if ( is_user_logged_in() ) {
-    $zendesk_enable = true;
-}
+
 get_header();
 
 ?>

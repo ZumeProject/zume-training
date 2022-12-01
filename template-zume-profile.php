@@ -5,11 +5,6 @@ Template Name: Zume Profile
 
 zume_force_login();
 
-$zendesk_enable = false;
-if ( is_user_logged_in() ) {
-    $zendesk_enable = true;
-}
-
 /* Process $_POST content */
 // We're not checking the nonce here because update_user_contact_info will
 // @codingStandardsIgnoreLine

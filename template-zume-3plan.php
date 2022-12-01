@@ -2,11 +2,6 @@
 /*
 Template Name: Three-Month Plan
 */
-zume_force_login();
-$zendesk_enable = false;
-if ( is_user_logged_in() ) {
-    $zendesk_enable = true;
-}
 
 /* Process $_POST content */
 $zume_error_message = '';

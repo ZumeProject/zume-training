@@ -6,10 +6,6 @@ Template Name: Full Width Home
 $zume_current_lang = zume_current_language();
 $alt_video = zume_alt_video( $zume_current_lang );
 
-$zendesk_enable = false;
-if ( is_user_logged_in() ) {
-    $zendesk_enable = true;
-}
 
 ?>
 <?php get_header(); ?>
@@ -257,13 +253,7 @@ if ( is_user_logged_in() ) {
                 </div>
             </div>
 
-
-
-
-
-
             <?php } // end custom page if ?>
-
 
         </div> <!-- end #main -->
 
