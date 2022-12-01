@@ -2,6 +2,10 @@
 /*
 Template Name: Zume Resources
 */
+$zendesk_enable = false;
+if ( is_user_logged_in() ) {
+    $zendesk_enable = true;
+}
 ?>
 
 <?php get_header(); ?>

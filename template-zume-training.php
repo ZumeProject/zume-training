@@ -4,8 +4,12 @@ Template Name: Training
 */
 
 get_header();
+$zendesk_enable = false;
 $user = wp_get_current_user();
 
+if ( $user->exists() ) {
+    $zendesk_enable = true;
+}
 if ( isset( $_GET['iframe'] ) && ! empty( $_GET['iframe'] ) ) {
     ?>
     <style>
