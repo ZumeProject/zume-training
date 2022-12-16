@@ -23,9 +23,6 @@ if ( isset( $_GET['group'] ) ) {
 }
 
 $zendesk_enable = false;
-if ( is_user_logged_in() ) {
-    $zendesk_enable = true;
-}
 ?>
 
 <?php get_header(); ?>
