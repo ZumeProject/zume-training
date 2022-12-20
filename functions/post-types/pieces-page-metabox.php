@@ -74,7 +74,7 @@ function zume_pieces_save( $post_id ) {
     }
 
     // if our current user can't edit this post, bail
-    if ( !current_user_can( 'edit_post' ) ) { return;
+    if ( !current_user_can( 'edit_posts' ) ) { return;
     }
 
     if ( isset( $_POST['zume_piece'] ) ) {
