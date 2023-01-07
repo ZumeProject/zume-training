@@ -183,6 +183,13 @@
     "rtl": false
   },
   {
+    "enDisplayName": "Nepali",
+    "code": "ne",
+    "locale": "ne_NP",
+    "nativeName": "नेपाली",
+    "rtl": false
+  },
+  {
     "enDisplayName": "Oriya",
     "code": "or",
     "locale": "or_IN",
