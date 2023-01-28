@@ -4,10 +4,7 @@ Template Name: Zúme Dashboard
 */
 zume_force_login();
 
-$zendesk_enable = false;
-if ( is_user_logged_in() ) {
-    $zendesk_enable = true;
-}
+$zendesk_enable = true;
 
 if ( ! empty( $_POST ) ) { // test if post submitted
     // validate nonce

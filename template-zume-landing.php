@@ -5,10 +5,7 @@ Template Name: Zúme - How to Follow Template
 $current_language = zume_current_language();
 $alt_video = zume_alt_video( $current_language );
 
-$zendesk_enable = false;
-if ( is_user_logged_in() ) {
-    $zendesk_enable = true;
-}
+$zendesk_enable = true;
 
 $values = get_post_custom( $post->ID );
 

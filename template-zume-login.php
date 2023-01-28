@@ -2,7 +2,7 @@
 /*
 Template Name: Zume Login
 */
-$zendesk_enable = false;
+$zendesk_enable = true;
 if ( is_user_logged_in() ) {
     $zendesk_enable = true;
 }

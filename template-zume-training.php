@@ -4,7 +4,7 @@ Template Name: Training
 */
 
 get_header();
-$zendesk_enable = false;
+$zendesk_enable = true;
 $user = wp_get_current_user();
 
 if ( $user->exists() ) {

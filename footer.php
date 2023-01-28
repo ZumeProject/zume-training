@@ -63,7 +63,7 @@
  * Enable Zendesk by setting this variable to true at the top of the template or page.
  */
 global $zendesk_enable;
-if ( ! empty( $zendesk_enable ) && ( is_user_logged_in() || 'template-zume-login.php' !== basename( get_page_template() ) ) ) : ?>
+if ( ! empty( $zendesk_enable ) ) : ?>
     <!-- Messenger Chat Plugin Code -->
     <div id="fb-root"></div>
 
