@@ -39,6 +39,8 @@
 
         <?php wp_head(); ?>
 
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+
     </head>
 
     <!-- Uncomment this line if using the Off-Canvas Menu -->
