@@ -274,6 +274,13 @@
     "rtl": false
   },
   {
+    "enDisplayName": "Turkish",
+    "code": "tr",
+    "locale": "tr_TR",
+    "nativeName": "Türkçe",
+    "rtl": false
+  },
+  {
     "enDisplayName": "Urdu",
     "code": "ur",
     "locale": "ur",
