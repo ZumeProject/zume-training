@@ -2236,7 +2236,7 @@ msgid "Spiritual Breathing"
 msgstr "ဝိညဉ်ရေးရာနှင့်ဆိုင်သောအသက်ရှင်ခြင်း"
 
 #: template-zume-dashboard.php:334
-msgid "S.O.A.P.S Bible Reading"
+msgid "S.O.A.P.S. Bible Reading"
 msgstr "ကျမ်းစာလေ့လာခြင်းအချက်(၅)ချက်ကိုဖတ်ခြင်း"
 
 #: functions/utilities/enqueue-scripts.php:258 template-zume-dashboard.php:350
@@ -3255,62 +3255,62 @@ msgid "Language Translation Progress"
 msgstr "ဘာသာပြန်ခြင်းတိုးတက်မှု"
 
 #. Author URI of the plugin/theme
-#: 
+#:
 msgid "https://github.com/ZumeProject"
 msgstr "https://github.com/ZumeProject (ဇူးမေအစီအစဉ်)"
 
 #. Template Name of the plugin/theme
-#: 
+#:
 msgid "Zume About"
 msgstr "ဇူးမေအကြောင်း"
 
 #. Template Name of the plugin/theme
-#: 
+#:
 msgid "Zume Resources"
 msgstr "ဇူးမေ၏အရင်းအမြစ်"
 
 #. Template Name of the plugin/theme
-#: 
+#:
 msgid "Zume Privacy Policy"
 msgstr "ဇူးမေ၏ဉပဒေ"
 
 #. Template Name of the plugin/theme
-#: 
+#:
 msgid "Zúme Progress"
 msgstr "ဇူးမေတိုးတက်မှု"
 
 #. Template Name of the plugin/theme
-#: 
+#:
 msgid "Zume Login"
 msgstr "ဇူးမေသို့ဝင်ရောက်မည်"
 
 #. Template Name of the plugin/theme
-#: 
+#:
 msgid "Zume Profile"
 msgstr "ဇူးမေအချက်အလက်"
 
 #. Template Name of the plugin/theme
-#: 
+#:
 msgid "Zúme Overview"
 msgstr "ဇူးမေ၏အကြောင်း"
 
 #. Template Name of the plugin/theme
-#: 
+#:
 msgid "Zúme FAQ"
 msgstr "ဇူးမေမေးခွန်း/အဖြေ"
 
 #. Template Name of the plugin/theme
-#: 
+#:
 msgid "Zúme Dashboard"
 msgstr "ဇူးမေကြည့်သောနေရာ"
 
 #. Template Name of the plugin/theme
-#: 
+#:
 msgid "Full Width Home"
 msgstr "အိမ်အပြည့်"
 
 #. Template Name of the plugin/theme
-#: 
+#:
 msgid "Zúme Course"
 msgstr "ဇူးမေသင်ခန်းစာ"
 
@@ -3371,7 +3371,7 @@ msgid "See what data we've aggregated from your activities with us."
 msgstr "အကျွန်ုပ်တို့နှင့်ဘယ်အစီအစဉ်၏အချက်အလက်များပေါင်းထားသည်ကိုကြည့်ရအောင်"
 
 #. Template Name of the plugin/theme
-#: 
+#:
 msgid "Zúme One Page Course"
 msgstr "ဇူးမေတစ်မျက်နှာသင်ခန်းစာ"
 
@@ -3846,7 +3846,7 @@ msgid "Training"
 msgstr "သင်တန်း"
 
 #. Template Name of the plugin/theme
-#: 
+#:
 msgid "Zúme Course v4"
 msgstr "ဇူးမေသင်တန်း၄ဘာသာရပ်"
 
@@ -3863,18 +3863,18 @@ msgid "Generation mapping is another simple tool to help leaders in a movement u
 msgstr "မျိုးရိုးစဉ်ဆက်မြေပုံသည်ရိုးရှင်းသောနည်းလမ်းတစ်ခုဖြစ်၍ခေါင်းဆောင်များအတွက်တိုးတက်မှုကိုနားလည်စေရန်ကူညီပေးသည်။"
 
 #. Theme URI of the plugin/theme
-#: 
+#:
 msgid "https://github.com/ZumeProject/zume-training"
 msgstr "\n"
 "အတ်တီတီပီအစ်://ဂျီအိုင်တီအတ်ယူဘီ.ကွန်/ဇူးမေစီမံကိန်း/ဇူးမေ-သင်တန်း"
 
 #. Description of the plugin/theme
-#: 
+#:
 msgid "Zúme Training for multiplying disciples."
 msgstr "ဇူးမေသင်တန်း-မြောက်များစွာသောတပည့်တော်မွေးထုတ်ခြင်း"
 
 #. Author of the plugin/theme
-#: 
+#:
 msgid "Zume Training"
 msgstr "ဇူးမေသင်တန်း"
 
@@ -4180,12 +4180,12 @@ msgid "As the saying goes, \"Plan your trust, don't trust your plan\". We know i
 msgstr "လူများပြောကြတာက\"သင်ရဲ့ယုံကြည်မှုကိုစီမံကိန်းချပါ၊သို့သော်သင်ရဲ့စီမံကိန်းကိုမယုံပါနဲ့။ဘုရားသခင်၏ချစ်ခြင်းနှလုံးသားတွင်ယုံကြည်သူများနေရာတိုင်း၊ဘာသာစကားတိုင်း၊လူမျိူးတိုင်းနှင့်နိုင်ငံတိုင်းတွင်ရှိစေခြင်သည်။သူသည်အကျွန်ုပ်တို့ကိုအမှုတော်ဆောင်ရန်ဖိတ်ခေါ်သည်။ထို့ကြောင် ၁ သင်တန်းနှင့်၂အသင်းတော်တည်ဆောက်ရန်ဖြစ်သည်။"
 
 #. Template Name of the plugin/theme
-#: 
+#:
 msgid "Pieces Page"
 msgstr "စာရွက်တချို့"
 
 #. Template Name of the plugin/theme
-#: 
+#:
 msgid "Zúme Vision"
 msgstr "ဇူးမေ၏မျှော်မှန်းချက်"
 
@@ -4460,12 +4460,12 @@ msgstr "သင်၏အသစ်သောအသက်တာအတွက်ရင
 "ဗီဒီယိုကိုကြည့်ပါ။"
 
 #. Template Name of the plugin/theme
-#: 
+#:
 msgid "GMO - Welcome to Zúme"
 msgstr "လူကြီးမင်း-ဇူးမေမှကြိုဆိုပါတယ်"
 
 #. Template Name of the plugin/theme
-#: 
+#:
 msgid "Redirect to Training"
 msgstr "သင်တန်းကိုပြန်လည်တဲ့မတ်အောင်လုပ်ပါ"
 

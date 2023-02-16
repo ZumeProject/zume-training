@@ -2219,7 +2219,7 @@ msgid "Spiritual Breathing"
 msgstr "영적 호흡"
 
 #: template-zume-dashboard.php:334
-msgid "S.O.A.P.S Bible Reading"
+msgid "S.O.A.P.S. Bible Reading"
 msgstr "S.O.A.P.S 성경 읽기"
 
 #: functions/utilities/enqueue-scripts.php:258 template-zume-dashboard.php:350
@@ -3192,62 +3192,62 @@ msgid "Language Translation Progress"
 msgstr "언어 번역 진행사항"
 
 #. Author URI of the plugin/theme
-#: 
+#:
 msgid "https://github.com/ZumeProject"
 msgstr "https://github.com/ZumeProject"
 
 #. Template Name of the plugin/theme
-#: 
+#:
 msgid "Zume About"
 msgstr "줌 알아보기"
 
 #. Template Name of the plugin/theme
-#: 
+#:
 msgid "Zume Resources"
 msgstr "줌 자원"
 
 #. Template Name of the plugin/theme
-#: 
+#:
 msgid "Zume Privacy Policy"
 msgstr "줌 개인 정보 보호 정책"
 
 #. Template Name of the plugin/theme
-#: 
+#:
 msgid "Zúme Progress"
 msgstr "줌 진행사항"
 
 #. Template Name of the plugin/theme
-#: 
+#:
 msgid "Zume Login"
 msgstr "줌 로그인"
 
 #. Template Name of the plugin/theme
-#: 
+#:
 msgid "Zume Profile"
 msgstr "줌 프로필"
 
 #. Template Name of the plugin/theme
-#: 
+#:
 msgid "Zúme Overview"
 msgstr "줌 소개"
 
 #. Template Name of the plugin/theme
-#: 
+#:
 msgid "Zúme FAQ"
 msgstr "줌 자주 묻는 질문"
 
 #. Template Name of the plugin/theme
-#: 
+#:
 msgid "Zúme Dashboard"
 msgstr "줌 대시 보드"
 
 #. Template Name of the plugin/theme
-#: 
+#:
 msgid "Full Width Home"
 msgstr "홈 전체"
 
 #. Template Name of the plugin/theme
-#: 
+#:
 msgid "Zúme Course"
 msgstr "줌 과정"
 
@@ -3304,7 +3304,7 @@ msgid "See what data we've aggregated from your activities with us."
 msgstr "당신과의 활동을 통해 집계한 데이터를 확인하십시오."
 
 #. Template Name of the plugin/theme
-#: 
+#:
 msgid "Zúme One Page Course"
 msgstr "줌 1 페이지 과정"
 
@@ -3775,7 +3775,7 @@ msgid "Training"
 msgstr "훈련"
 
 #. Template Name of the plugin/theme
-#: 
+#:
 msgid "Zúme Course v4"
 msgstr "줌 과정 v4"
 
@@ -3792,17 +3792,17 @@ msgid "Generation mapping is another simple tool to help leaders in a movement u
 msgstr "세대 매핑은 운동 가운데 있는 지도자가 주변의 성장을 이해하는데 도움을 주는 또 다른 간단한 방법입니다."
 
 #. Theme URI of the plugin/theme
-#: 
+#:
 msgid "https://github.com/ZumeProject/zume-training"
 msgstr "https://github.com/ZumeProject/zume-training"
 
 #. Description of the plugin/theme
-#: 
+#:
 msgid "Zúme Training for multiplying disciples."
 msgstr "제자 배가를 위한 줌 훈련"
 
 #. Author of the plugin/theme
-#: 
+#:
 msgid "Zume Training"
 msgstr "줌 훈련"
 
@@ -4101,12 +4101,12 @@ msgid "As the saying goes, \"Plan your trust, don't trust your plan\". We know i
 msgstr "\"당신의 믿음을 계획하되, 당신의 계획은 믿지 마십시오\"라는 말이 있습니다. 우리는 모든 언어, 민족 및 국가에서 신자들의 가족을 갖는 것이 아버지의 마음임을 알고 있습니다. 그분은 또한 우리를 화해의 동료로 초대했습니다. 따라서 하나의 훈련과 두 개의 교회의 이러한 목표는 그것을 하실 수 있는 한분에 대한 우리의 믿음에서 비롯된 것입니다. "
 
 #. Template Name of the plugin/theme
-#: 
+#:
 msgid "Pieces Page"
 msgstr "Pieces Page"
 
 #. Template Name of the plugin/theme
-#: 
+#:
 msgid "Zúme Vision"
 msgstr "줌 비전"
 
@@ -4378,12 +4378,12 @@ msgid "Watch this important video explaining the 4 relationships of your new lif
 msgstr "당신의 새로운 삶의 4가지 관계에 대해 설명한 다음 중요한 영상을 시청하세요. "
 
 #. Template Name of the plugin/theme
-#: 
+#:
 msgid "GMO - Welcome to Zúme"
 msgstr "GMO-줌에 온 것을 환영합니다"
 
 #. Template Name of the plugin/theme
-#: 
+#:
 msgid "Redirect to Training"
 msgstr "훈련으로 이동"
 

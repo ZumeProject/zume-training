@@ -2195,7 +2195,7 @@ msgid "Spiritual Breathing"
 msgstr "“التنفس الروحي”"
 
 #: template-zume-dashboard.php:334
-msgid "S.O.A.P.S Bible Reading"
+msgid "S.O.A.P.S. Bible Reading"
 msgstr "“درس الكتاب على طريقة .S.O.A.P.S”"
 
 #: functions/utilities/enqueue-scripts.php:258 template-zume-dashboard.php:350
@@ -3157,62 +3157,62 @@ msgid "Language Translation Progress"
 msgstr "تقدّم ترجمة اللّغة"
 
 #. Author URI of the plugin/theme
-#: 
+#:
 msgid "https://github.com/ZumeProject"
 msgstr "‫https://github.com/ZumeProject"
 
 #. Template Name of the plugin/theme
-#: 
+#:
 msgid "Zume About"
 msgstr "عن زومي"
 
 #. Template Name of the plugin/theme
-#: 
+#:
 msgid "Zume Resources"
 msgstr "‫موارد زومي"
 
 #. Template Name of the plugin/theme
-#: 
+#:
 msgid "Zume Privacy Policy"
 msgstr "السّياسة الخصوصيّة لزومي"
 
 #. Template Name of the plugin/theme
-#: 
+#:
 msgid "Zúme Progress"
 msgstr "تقدّم ‫زومي"
 
 #. Template Name of the plugin/theme
-#: 
+#:
 msgid "Zume Login"
 msgstr "تسجيل دخول زومي"
 
 #. Template Name of the plugin/theme
-#: 
+#:
 msgid "Zume Profile"
 msgstr "ملفّ زومي الشّخصي‫ّ"
 
 #. Template Name of the plugin/theme
-#: 
+#:
 msgid "Zúme Overview"
 msgstr "نظرة عامّة لزومي"
 
 #. Template Name of the plugin/theme
-#: 
+#:
 msgid "Zúme FAQ"
 msgstr "أسئلة زومي المتكرّرة"
 
 #. Template Name of the plugin/theme
-#: 
+#:
 msgid "Zúme Dashboard"
 msgstr "‫ لوحة معلومات زومي"
 
 #. Template Name of the plugin/theme
-#: 
+#:
 msgid "Full Width Home"
 msgstr "عرض كامل للصّفحة الرئيسيّة"
 
 #. Template Name of the plugin/theme
-#: 
+#:
 msgid "Zúme Course"
 msgstr "مقرّر زومي الدّراسي"
 
@@ -3269,7 +3269,7 @@ msgid "See what data we've aggregated from your activities with us."
 msgstr "تعرف على البيانات التي جمعناها من أنشطتك معنا."
 
 #. Template Name of the plugin/theme
-#: 
+#:
 msgid "Zúme One Page Course"
 msgstr "دورة زومي بصفحة واحدة"
 
@@ -3739,7 +3739,7 @@ msgid "Training"
 msgstr "تدريب"
 
 #. Template Name of the plugin/theme
-#: 
+#:
 msgid "Zúme Course v4"
 msgstr "مواد زومي v4"
 
@@ -3756,17 +3756,17 @@ msgid "Generation mapping is another simple tool to help leaders in a movement u
 msgstr "يُعد تخطيط الأجيال أداة بسيطة أخرى لمساعدة القادة في الحركة على فهم النمو من حولهم. "
 
 #. Theme URI of the plugin/theme
-#: 
+#:
 msgid "https://github.com/ZumeProject/zume-training"
 msgstr "https://github.com/ZumeProject/zume-training "
 
 #. Description of the plugin/theme
-#: 
+#:
 msgid "Zúme Training for multiplying disciples."
 msgstr "تدريب زومي لمضاعفة التلاميذ"
 
 #. Author of the plugin/theme
-#: 
+#:
 msgid "Zume Training"
 msgstr "تدريب زومي"
 
@@ -4065,12 +4065,12 @@ msgid "As the saying goes, \"Plan your trust, don't trust your plan\". We know i
 msgstr "كما يقول المثل، \"خطط ثقتك، لا تثق في خطتك\". نحن نعلم أنه من قلب الآب وجود أسر مؤمنة بكل لسان وقبيلة وأمة. كما دعانا إلى أن نكون زملاءه في المصالحة. لذلك فإن هذه الأهداف المتمثلة في تدريب 1 وكنيستين تأتي من ثقتنا في الشخص الذي يمكنه القيام بذلك. "
 
 #. Template Name of the plugin/theme
-#: 
+#:
 msgid "Pieces Page"
 msgstr "صفحة الأجزاء"
 
 #. Template Name of the plugin/theme
-#: 
+#:
 msgid "Zúme Vision"
 msgstr "رؤية زومي"
 
@@ -4342,12 +4342,12 @@ msgid "Watch this important video explaining the 4 relationships of your new lif
 msgstr "شاهد هذا الفيديو المهم الذي يشرح العلاقات الأربع في حياتك الجديدة. "
 
 #. Template Name of the plugin/theme
-#: 
+#:
 msgid "GMO - Welcome to Zúme"
 msgstr "GMO- أهلًا بك الى زومي "
 
 #. Template Name of the plugin/theme
-#: 
+#:
 msgid "Redirect to Training"
 msgstr "إعادة التوجيه الى التدريب"
 

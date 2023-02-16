@@ -332,7 +332,7 @@ do_action( 'zume_dashboard_header' );
                                             "column" => 1
                                             ),
                                             array(
-                                            "name" => esc_html__( 'S.O.A.P.S Bible Reading', 'zume' ),
+                                            "name" => esc_html__( 'S.O.A.P.S. Bible Reading', 'zume' ),
                                             "length" => "(3:22)",
                                             "key" => "4",
                                             "session" => 1,

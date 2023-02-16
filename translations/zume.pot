@@ -3489,7 +3489,7 @@ msgid "Spiritual Breathing"
 msgstr ""
 
 #: template-zume-dashboard.php:334
-msgid "S.O.A.P.S Bible Reading"
+msgid "S.O.A.P.S. Bible Reading"
 msgstr ""
 
 #: template-zume-dashboard.php:358

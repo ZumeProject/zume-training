@@ -2217,7 +2217,7 @@ msgid "Spiritual Breathing"
 msgstr "Ee Mi Mimis"
 
 #: template-zume-dashboard.php:334
-msgid "S.O.A.P.S Bible Reading"
+msgid "S.O.A.P.S. Bible Reading"
 msgstr "Kika Bibeli"
 
 #: functions/utilities/enqueue-scripts.php:258 template-zume-dashboard.php:350
@@ -3189,62 +3189,62 @@ msgid "Language Translation Progress"
 msgstr "Itesiwaju Itumo Ede"
 
 #. Author URI of the plugin/theme
-#: 
+#:
 msgid "https://github.com/ZumeProject"
 msgstr "https://github.com/ZumeProject"
 
 #. Template Name of the plugin/theme
-#: 
+#:
 msgid "Zume About"
 msgstr "Nipa Zume"
 
 #. Template Name of the plugin/theme
-#: 
+#:
 msgid "Zume Resources"
 msgstr "Awon Orisun Zume"
 
 #. Template Name of the plugin/theme
-#: 
+#:
 msgid "Zume Privacy Policy"
 msgstr "Imulo Ipamo Zume"
 
 #. Template Name of the plugin/theme
-#: 
+#:
 msgid "Zúme Progress"
 msgstr "Ilosiwaju Zume"
 
 #. Template Name of the plugin/theme
-#: 
+#:
 msgid "Zume Login"
 msgstr "Iwole zume"
 
 #. Template Name of the plugin/theme
-#: 
+#:
 msgid "Zume Profile"
 msgstr "Aworan Zume"
 
 #. Template Name of the plugin/theme
-#: 
+#:
 msgid "Zúme Overview"
 msgstr "Akopo Zume"
 
 #. Template Name of the plugin/theme
-#: 
+#:
 msgid "Zúme FAQ"
 msgstr "Awon ibere ati idahun nipa zume"
 
 #. Template Name of the plugin/theme
-#: 
+#:
 msgid "Zúme Dashboard"
 msgstr "Dasibodu Zume"
 
 #. Template Name of the plugin/theme
-#: 
+#:
 msgid "Full Width Home"
 msgstr "Iwon kunkun ile"
 
 #. Template Name of the plugin/theme
-#: 
+#:
 msgid "Zúme Course"
 msgstr "Ise Zume"
 
@@ -3301,7 +3301,7 @@ msgid "See what data we've aggregated from your activities with us."
 msgstr "Wo data ti a kojo nipase ibasepo re pelu wa."
 
 #. Template Name of the plugin/theme
-#: 
+#:
 msgid "Zúme One Page Course"
 msgstr "Eko iwe kan zume"
 
@@ -3773,7 +3773,7 @@ msgid "Training"
 msgstr "Ikẹkọ"
 
 #. Template Name of the plugin/theme
-#: 
+#:
 msgid "Zúme Course v4"
 msgstr "Ẹkọ Zúme v4"
 
@@ -3790,17 +3790,17 @@ msgid "Generation mapping is another simple tool to help leaders in a movement u
 msgstr "Iyaworan iran jẹ ohun elo miiran ti o rọrun lati ṣe iranlọwọ fun awọn oludari ni gbigbe kan ni oye idagba ni ayika wọn."
 
 #. Theme URI of the plugin/theme
-#: 
+#:
 msgid "https://github.com/ZumeProject/zume-training"
 msgstr "https://github.com/ZumeProject/zume-training"
 
 #. Description of the plugin/theme
-#: 
+#:
 msgid "Zúme Training for multiplying disciples."
 msgstr "Ikẹkọ Zúme fun awọn ọmọ-ẹhin pupọ."
 
 #. Author of the plugin/theme
-#: 
+#:
 msgid "Zume Training"
 msgstr "Ikẹkọ Zume"
 
@@ -4099,12 +4099,12 @@ msgid "As the saying goes, \"Plan your trust, don't trust your plan\". We know i
 msgstr "Bi ọrọ naa ti n lọ, “Gbero igbekele rẹ, maṣe gbekele ete rẹ”. A mọ pe o jẹ ọkan ti Baba lati ni awọn idile ti awọn onigbagbọ ni gbogbo ahọn, ẹya, ati orilẹ-ede. O tun pe wa lati jẹ alabaṣiṣẹpọ rẹ ni ilaja. Nitorinaa awọn ibi-afẹde wọnyi ti ikẹkọ 1 ati awọn ijọ meji wa lati igbẹkẹle wa ninu ẹniti o le ṣe."
 
 #. Template Name of the plugin/theme
-#: 
+#:
 msgid "Pieces Page"
 msgstr "Oju-iwe nkan"
 
 #. Template Name of the plugin/theme
-#: 
+#:
 msgid "Zúme Vision"
 msgstr "Iran Zúme"
 
@@ -4376,12 +4376,12 @@ msgid "Watch this important video explaining the 4 relationships of your new lif
 msgstr "Wo fidio pataki yii ti n ṣalaye awọn ibatan 4 ti igbesi aye tuntun rẹ."
 
 #. Template Name of the plugin/theme
-#: 
+#:
 msgid "GMO - Welcome to Zúme"
 msgstr "GMO - Kaabo si Zúme"
 
 #. Template Name of the plugin/theme
-#: 
+#:
 msgid "Redirect to Training"
 msgstr "Yipada si Ikẹkọ"
 

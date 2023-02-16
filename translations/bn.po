@@ -3557,7 +3557,7 @@ msgstr "আত্মিক শ্বাস প্রশ্বাস"
 
 #: template-zume-dashboard.php:333
 #, fuzzy
-msgid "S.O.A.P.S Bible Reading"
+msgid "S.O.A.P.S. Bible Reading"
 msgstr "এস ও এ পি এস বাইবেল পাঠ"
 
 #: template-zume-dashboard.php:349 template-zume-one-page-course.php:31

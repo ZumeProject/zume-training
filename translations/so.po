@@ -2202,7 +2202,7 @@ msgid "Spiritual Breathing"
 msgstr "Neefsashada Ruuxiga ah"
 
 #: template-zume-dashboard.php:334
-msgid "S.O.A.P.S Bible Reading"
+msgid "S.O.A.P.S. Bible Reading"
 msgstr "Akhrinta Baybalka ee S.O.A.P.S"
 
 #: functions/utilities/enqueue-scripts.php:258 template-zume-dashboard.php:350
@@ -3170,62 +3170,62 @@ msgid "Language Translation Progress"
 msgstr "Horumarka Tarjumaadda Luuqadda"
 
 #. Author URI of the plugin/theme
-#: 
+#:
 msgid "https://github.com/ZumeProject"
 msgstr "https://github.com/ZumeProject"
 
 #. Template Name of the plugin/theme
-#: 
+#:
 msgid "Zume About"
 msgstr "KuSaabsan Zume"
 
 #. Template Name of the plugin/theme
-#: 
+#:
 msgid "Zume Resources"
 msgstr "Ilaha Zume"
 
 #. Template Name of the plugin/theme
-#: 
+#:
 msgid "Zume Privacy Policy"
 msgstr "Siyaasadda UDegsan Zume"
 
 #. Template Name of the plugin/theme
-#: 
+#:
 msgid "Zúme Progress"
 msgstr "Horumarka Zúme"
 
 #. Template Name of the plugin/theme
-#: 
+#:
 msgid "Zume Login"
 msgstr "Gal Zume "
 
 #. Template Name of the plugin/theme
-#: 
+#:
 msgid "Zume Profile"
 msgstr "Cinwaanka Zume"
 
 #. Template Name of the plugin/theme
-#: 
+#:
 msgid "Zúme Overview"
 msgstr "Guudmarka Zume"
 
 #. Template Name of the plugin/theme
-#: 
+#:
 msgid "Zúme FAQ"
 msgstr "Zume SHJI"
 
 #. Template Name of the plugin/theme
-#: 
+#:
 msgid "Zúme Dashboard"
 msgstr "Muuqaalguud ee Zume"
 
 #. Template Name of the plugin/theme
-#: 
+#:
 msgid "Full Width Home"
 msgstr "Ballaca Buuxa Ee Hooyga"
 
 #. Template Name of the plugin/theme
-#: 
+#:
 msgid "Zúme Course"
 msgstr "Sida Zúme u Shaqeeyo"
 
@@ -3283,7 +3283,7 @@ msgid "See what data we've aggregated from your activities with us."
 msgstr "Arag cogta aan ka soo ururinnay waxqabadyadaada."
 
 #. Template Name of the plugin/theme
-#: 
+#:
 msgid "Zúme One Page Course"
 msgstr "Zúme Koorso Hal Bog ah"
 
@@ -3753,7 +3753,7 @@ msgid "Training"
 msgstr "Tababbar"
 
 #. Template Name of the plugin/theme
-#: 
+#:
 msgid "Zúme Course v4"
 msgstr "Koorsada Zúme v4"
 
@@ -3770,17 +3770,17 @@ msgid "Generation mapping is another simple tool to help leaders in a movement u
 msgstr "Jaantuska jiilku waa hab kale oo fudud oo hoggaamiyeyaasha dhaqdhaqaaqa ku jira ku caawinaya inay fahmaan koritaanka agahooda ka socda."
 
 #. Theme URI of the plugin/theme
-#: 
+#:
 msgid "https://github.com/ZumeProject/zume-training"
 msgstr "https://github.com/ZumeProject/zume-tababbar"
 
 #. Description of the plugin/theme
-#: 
+#:
 msgid "Zúme Training for multiplying disciples."
 msgstr "Tababbarka Zúme ee badinta xerta."
 
 #. Author of the plugin/theme
-#: 
+#:
 msgid "Zume Training"
 msgstr "Tababbarka Zume"
 
@@ -4081,12 +4081,12 @@ msgid "As the saying goes, \"Plan your trust, don't trust your plan\". We know i
 msgstr "Sida ereygu socdo, \"Qorshee aaminkaaga, ha aaminin qorshahaaga\". Waxaan ognahay inay tahay qalbiga aabaha inuu haysto qoysas rumeeysan oo ku qoran af kasta, qabiil iyo qaran kasta. Wuxuu sidoo kale nagu casuumay inaan ka wada shaqeyno dib-u-heshiisiinta. Marka hadafyadan 1 tababar iyo 2 kaniisadood waxay ka yimaadeen kalsoonida aan ku qabno kan sameyn kara."
 
 #. Template Name of the plugin/theme
-#: 
+#:
 msgid "Pieces Page"
 msgstr "Bogagga gogosha ah"
 
 #. Template Name of the plugin/theme
-#: 
+#:
 msgid "Zúme Vision"
 msgstr "Aragtida Zúme"
 
@@ -4359,12 +4359,12 @@ msgid "Watch this important video explaining the 4 relationships of your new lif
 msgstr "Daawo muuqaalkan muhiimka ah ee sharraxaya 4ta xidhiidh ee noloshaada cusub."
 
 #. Template Name of the plugin/theme
-#: 
+#:
 msgid "GMO - Welcome to Zúme"
 msgstr "GMO - Kusoo dhawoow Zúme"
 
 #. Template Name of the plugin/theme
-#: 
+#:
 msgid "Redirect to Training"
 msgstr "Dib ugu jihee Tababbarka"
 

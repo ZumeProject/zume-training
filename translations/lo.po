@@ -2181,7 +2181,7 @@ msgid "Spiritual Breathing"
 msgstr "ລົມ​ຫາຍ​ໃຈ​ຝ່າຍ​ຈິດ​ວິນ​ຍານ"
 
 #: template-zume-dashboard.php:334
-msgid "S.O.A.P.S Bible Reading"
+msgid "S.O.A.P.S. Bible Reading"
 msgstr "​ວິ​ທີ​ການ​ສຶກ​ສາ​ພ​ຣະ​ຄຳ​ພີ"
 
 #: functions/utilities/enqueue-scripts.php:258 template-zume-dashboard.php:350
@@ -3143,62 +3143,62 @@ msgid "Language Translation Progress"
 msgstr "​ຄວາມ​​ກ້າວໜ້າ​ຂອງ​ການ​ແປ​ພາ​ສາ"
 
 #. Author URI of the plugin/theme
-#: 
+#:
 msgid "https://github.com/ZumeProject"
 msgstr "https://github.com/ChasmSolutions"
 
 #. Template Name of the plugin/theme
-#: 
+#:
 msgid "Zume About"
 msgstr "​ກ່ຽວ​ກັບ"
 
 #. Template Name of the plugin/theme
-#: 
+#:
 msgid "Zume Resources"
 msgstr "​ແຫຼ່ງ​ຂໍ້​ມູນ"
 
 #. Template Name of the plugin/theme
-#: 
+#:
 msgid "Zume Privacy Policy"
 msgstr "​ນະ​ໂຍ​ບາຍ​ຄວາມ​ເປັນ​ສ່ວນ​ຕົວ​ຂອງ​ຊູ​ເມ້"
 
 #. Template Name of the plugin/theme
-#: 
+#:
 msgid "Zúme Progress"
 msgstr "​ໂຄງ​ການ​ຊູ​ເມ້"
 
 #. Template Name of the plugin/theme
-#: 
+#:
 msgid "Zume Login"
 msgstr "​ເຂົ້າ​ສູ່​ລະ​ບົບ​ຊູ​ເມ້"
 
 #. Template Name of the plugin/theme
-#: 
+#:
 msgid "Zume Profile"
 msgstr "​ຂໍ້​ມູນ​ສ່ວນ​ຕົວ​ຂອງ​ທ່ານ"
 
 #. Template Name of the plugin/theme
-#: 
+#:
 msgid "Zúme Overview"
 msgstr "​ພາບ​ລວມ"
 
 #. Template Name of the plugin/theme
-#: 
+#:
 msgid "Zúme FAQ"
 msgstr "​ຄຳ​ຖາມ​ທີ່​ພົບ​ເລື້ອຍໆ​ໃນ​ຊູ​ເມ້"
 
 #. Template Name of the plugin/theme
-#: 
+#:
 msgid "Zúme Dashboard"
 msgstr "​ແຜງ​ຄວບ​ຄຸມ"
 
 #. Template Name of the plugin/theme
-#: 
+#:
 msgid "Full Width Home"
 msgstr "​ໜ້າກວ້າງ​ເຕັມ​ຈໍ"
 
 #. Template Name of the plugin/theme
-#: 
+#:
 msgid "Zúme Course"
 msgstr "​ຊູ​ເມ້​ເຮັດ​ວຽກ​ແນວ​ໃດ"
 
@@ -3255,7 +3255,7 @@ msgid "See what data we've aggregated from your activities with us."
 msgstr "ເບິ່ງຂໍ້ມູນສິ່ງທີ່ພວກເຮົາໄດ້ລວບລວມຈາກກິດຈະກຳຂອງທ່ານກັບພວກເຮົາ."
 
 #. Template Name of the plugin/theme
-#: 
+#:
 msgid "Zúme One Page Course"
 msgstr "ຫຼັກສູດຊູເມ້ໜຶ່ງໜ້າ."
 
@@ -3725,7 +3725,7 @@ msgid "Training"
 msgstr "ການຝຶກອົບຮົມ"
 
 #. Template Name of the plugin/theme
-#: 
+#:
 msgid "Zúme Course v4"
 msgstr "ຫຼັກສູດຊູເມ້ ທີ4"
 
@@ -3742,17 +3742,17 @@ msgid "Generation mapping is another simple tool to help leaders in a movement u
 msgstr "ຕາຕະລາງສະແດງລຸ້ນແມ່ນເຄື່ອງມືທີ່ງ່າຍໆອີກຢ່າງໜຶ່ງ ເພື່ອຊ່ວຍຜູ້ນຳໃນຂະບວນການເຂົ້າໃຈການເຕີບໃຫຍ່ທີ່ຢູ່ອ້ອມຂ້າງພວກເພິ່ນ."
 
 #. Theme URI of the plugin/theme
-#: 
+#:
 msgid "https://github.com/ZumeProject/zume-training"
 msgstr "https://github.com/ໂຄງການຊູເມ້/ການອົບຮົມຊູເມ້"
 
 #. Description of the plugin/theme
-#: 
+#:
 msgid "Zúme Training for multiplying disciples."
 msgstr "ການອົບຮົມຊູເມ້ເພື່ອເພີ່ມທະວີຈຳນວນສາວົກ"
 
 #. Author of the plugin/theme
-#: 
+#:
 msgid "Zume Training"
 msgstr "ການອົບຮົມຊູເມ້"
 
@@ -4051,12 +4051,12 @@ msgid "As the saying goes, \"Plan your trust, don't trust your plan\". We know i
 msgstr "ຄືດັ່ງຄຳເວົ້າທີ່ວ່າ, \"ວາງແຜນຄວາມໄວ້ວາງໃຈຂອງທ່ານ,ຢ່າໄວ້ວາງໃຈແຜນການຂອງທ່ານ\". ພວກເຮົາຮູ້ວ່າມັນແມ່ນຫົວໃຈຂອງພຣະບິດາເຈົ້າທີ່ຈະມີຄອບຄົວຂອງຜູ້ເຊື່ອໃນທຸກພາສາ, ທຸກຊົນເຜົ່າ,ແລະທຸກຊາດ. ພຣະອົງຍັງໄດ້ເຊື້ອເຊີນພວກເຮົາໃຫ້ເປັນເພື່ອນຮ່ວມງານຂອງພຣະອົງໃນການຄືນດີ. ດັ່ງນັ້ນເປົ້າໝາຍເຫຼົ່ານີ້ຂອງ1ການຝຶກອົບຮົມແລະ2ຄຣິສຕະຈັກແມ່ນມາຈາກຄວາມໄວ້ວາງໃຈຂອງພວກເຮົາໃນຜູ້ທີ່ສາມາດເຮັດມັນໄດ້."
 
 #. Template Name of the plugin/theme
-#: 
+#:
 msgid "Pieces Page"
 msgstr "ໜ້າເຈ້ຍ"
 
 #. Template Name of the plugin/theme
-#: 
+#:
 msgid "Zúme Vision"
 msgstr "ນິມິດຊູເມ້"
 
@@ -4328,12 +4328,12 @@ msgid "Watch this important video explaining the 4 relationships of your new lif
 msgstr "ເບິ່ງວິດີໂອທີ່ສຳຄັນນີ້ອະທິບາຍເຖິງຄວາມສຳພັນ 4 ປະເພດໃນຊີວິດໃໝ່ຂອງທ່ານ."
 
 #. Template Name of the plugin/theme
-#: 
+#:
 msgid "GMO - Welcome to Zúme"
 msgstr "GMO - ຍິນດີຕ້ອນຮັບເຂົ້າສູ່ຊູເມ້"
 
 #. Template Name of the plugin/theme
-#: 
+#:
 msgid "Redirect to Training"
 msgstr "ປ່ຽນເສັ້ນທາງສູ່ການຝຶກອົບຮົມ"
 

@@ -2217,7 +2217,7 @@ msgid "Spiritual Breathing"
 msgstr "ଆଧ୍ୟାତ୍ମିକ ଶ୍ୱାସକ୍ରିୟା"
 
 #: template-zume-dashboard.php:334
-msgid "S.O.A.P.S Bible Reading"
+msgid "S.O.A.P.S. Bible Reading"
 msgstr "ଏସ୍.ଓ.ଏ.ପି.ଏସ୍‍ ବାଇବଲ୍ ପଠନ"
 
 #: functions/utilities/enqueue-scripts.php:258 template-zume-dashboard.php:350
@@ -3192,62 +3192,62 @@ msgid "Language Translation Progress"
 msgstr "ଭାଷା ଅନୁବାଦ ପ୍ରଗତି"
 
 #. Author URI of the plugin/theme
-#: 
+#:
 msgid "https://github.com/ZumeProject"
 msgstr "https://github.com/ZumeProject"
 
 #. Template Name of the plugin/theme
-#: 
+#:
 msgid "Zume About"
 msgstr "ଯୁମେ ବିଷୟରେ"
 
 #. Template Name of the plugin/theme
-#: 
+#:
 msgid "Zume Resources"
 msgstr "ଯୁମେ ସଂସାଧନ"
 
 #. Template Name of the plugin/theme
-#: 
+#:
 msgid "Zume Privacy Policy"
 msgstr "ଯୁମେ ଗୋପନୀୟତା ନୀତି"
 
 #. Template Name of the plugin/theme
-#: 
+#:
 msgid "Zúme Progress"
 msgstr "ଯୁମେ ପ୍ରଗତି"
 
 #. Template Name of the plugin/theme
-#: 
+#:
 msgid "Zume Login"
 msgstr "ଯୁମେ ଲଗିନ୍‌"
 
 #. Template Name of the plugin/theme
-#: 
+#:
 msgid "Zume Profile"
 msgstr "ଯୁମେ ପ୍ରୋଫାଇଲ୍‌"
 
 #. Template Name of the plugin/theme
-#: 
+#:
 msgid "Zúme Overview"
 msgstr "ଯୁମେ ସମୀକ୍ଷା"
 
 #. Template Name of the plugin/theme
-#: 
+#:
 msgid "Zúme FAQ"
 msgstr "ଯୁମେ ଏଫ୍ଏ‌କ୍ୟୁ"
 
 #. Template Name of the plugin/theme
-#: 
+#:
 msgid "Zúme Dashboard"
 msgstr "ଯୁମେ ଡ୍ୟାଶ୍‌ବୋର୍ଡ୍‌"
 
 #. Template Name of the plugin/theme
-#: 
+#:
 msgid "Full Width Home"
 msgstr "ପୁର୍ଣ୍ଣ ବିସ୍ତୃତ ମୂଳପୃଷ୍ଠା"
 
 #. Template Name of the plugin/theme
-#: 
+#:
 msgid "Zúme Course"
 msgstr "ଯୁମେ ପାଠ୍ୟକ୍ରମ"
 
@@ -3304,7 +3304,7 @@ msgid "See what data we've aggregated from your activities with us."
 msgstr "ଆମ ସହିତ ରହିଥିବା ଆପଣଙ୍କ କାର୍ଯ୍ୟକଳାପରୁ ଆମେ କିପ୍ରକାର ତ‍ଥ୍ୟ ସବୁ ସମଷ୍ଠି କରିଅଛୁ ଦେଖନ୍ତୁ | "
 
 #. Template Name of the plugin/theme
-#: 
+#:
 msgid "Zúme One Page Course"
 msgstr "ଯୁମେ ଗୋଟିଏ ପୃଷ୍ଠା ପାଠ୍ୟକ୍ରମ"
 
@@ -3774,7 +3774,7 @@ msgid "Training"
 msgstr "ପ୍ରଶିକ୍ଷଣ"
 
 #. Template Name of the plugin/theme
-#: 
+#:
 msgid "Zúme Course v4"
 msgstr "ଯୁମେ ପାଠ୍ୟକ୍ରମ   ସଂ-୪"
 
@@ -3791,17 +3791,17 @@ msgid "Generation mapping is another simple tool to help leaders in a movement u
 msgstr "ପୀଢ଼ିଗତ ମାନଚିତ୍ରକରଣ ଅନ୍ୟ ଏକ ସରଳ ଉପକରଣ ଅଟେ ଯାହା ଆନ୍ଦୋଳନରେ ଥିବା ଅଗ୍ରଣୀଙ୍କୁ ତାଙ୍କ ଚତୁଃପାର୍ଶ୍ୱରେ ଘଟୁଥିବା ବୃଦ୍ଧିକୁ ବୁଝିବାରେ ସହାୟକ ହୋଇଥାଏ |"
 
 #. Theme URI of the plugin/theme
-#: 
+#:
 msgid "https://github.com/ZumeProject/zume-training"
 msgstr "https://github.com/ZumeProject/zume-training"
 
 #. Description of the plugin/theme
-#: 
+#:
 msgid "Zúme Training for multiplying disciples."
 msgstr "ଶିଷ୍ୟମାନଙ୍କୁ ବହୁଗୁଣିତ କରିବା ପାଇଁ ଯୁମେ ପ୍ରଶିକ୍ଷଣ |"
 
 #. Author of the plugin/theme
-#: 
+#:
 msgid "Zume Training"
 msgstr "ଯୁମେ ପ୍ରଶିକ୍ଷଣ"
 
@@ -4100,12 +4100,12 @@ msgid "As the saying goes, \"Plan your trust, don't trust your plan\". We know i
 msgstr "ଯେମିତି କୁହାଯାଏ, \"ଆପଣଙ୍କ ଭରସାର ଯୋଜନା କରନ୍ତୁ, ଆପଣଙ୍କ ଯୋଜନାର ଭରସା କରନ୍ତୁ ନାହିଁ\" | ଆମେ ଜାଣୁ ଯେ ପ୍ରତ୍ୟେକ ଭାଷା, ଜାତି ଓ ଦେଶରୁ ବିଶ୍ୱାସୀମାନଙ୍କ ପରିବାର ରୁହନ୍ତୁ ବୋଲି ପିତାଙ୍କ ହୃଦୟରେ ରହିଛି | ସେ ମଧ୍ୟ ତାଙ୍କ ପୁନଃମିଳନ କାର୍ଯ୍ୟରେ ଆମକୁ ସହକର୍ମୀ ରୁପେ ଆମନ୍ତ୍ରଣ ଦେଇଛନ୍ତି | ସେହେତୁ ଆମର ୧ପ୍ରଶିକ୍ଷଣ ଓ ୨ମଣ୍ଡଳୀ ର ଲକ୍ଷ୍ୟ ଯିଏ ଏହାକୁ ସାଧ୍ୟ କରିପାରନ୍ତି ତାଙ୍କଠାରୁ ଆସେ |"
 
 #. Template Name of the plugin/theme
-#: 
+#:
 msgid "Pieces Page"
 msgstr "ପୃଷ୍ଠା ଭଗ୍ନାଂଶ"
 
 #. Template Name of the plugin/theme
-#: 
+#:
 msgid "Zúme Vision"
 msgstr "ଯୁମେ ଦର୍ଶନ"
 
@@ -4377,12 +4377,12 @@ msgid "Watch this important video explaining the 4 relationships of your new lif
 msgstr "ଆପଣଙ୍କ ନୂତନ ଜୀବନର ୪ଗୋଟି ସମ୍ପର୍କଗୁଡ଼ିକୁ ବର୍ଣ୍ଣନା କରୁଥିବା ଏହି ଗୁରୁତ୍ୱପୁର୍ଣ୍ଣ ଭିଡ଼ିଓଟି ଦେଖନ୍ତୁ |"
 
 #. Template Name of the plugin/theme
-#: 
+#:
 msgid "GMO - Welcome to Zúme"
 msgstr "ଜିଏମ୍‍ଓ - ଯୁମେ କୁ ସ୍ୱାଗତ"
 
 #. Template Name of the plugin/theme
-#: 
+#:
 msgid "Redirect to Training"
 msgstr "ପ୍ରଶିକ୍ଷଣକୁ ପୁନଃପ୍ରେଷିତ କର"
 
