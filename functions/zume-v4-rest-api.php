@@ -388,7 +388,9 @@ class Zume_V4_REST_API {
             ],
             'language_preference' => $args['language_preference'],
             'languages' => [
-                [ "value" => $args['language_preference'] ],
+                "values" => [
+                    [ "value" => $args['language_preference'] ],
+                ],
             ],
             'zume_training_id' => $user_id,
             'zume_foreign_key' => $zume_foreign_key,
