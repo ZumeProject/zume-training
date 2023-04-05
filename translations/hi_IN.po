@@ -2247,10 +2247,6 @@ msgstr "उन्हें आज्ञाओं का पालन करन�
 msgid "Spiritual Breathing"
 msgstr "आध्यात्मिक श्वास"
 
-#: template-zume-dashboard.php:334
-msgid "S.O.A.P.S. Bible Reading"
-msgstr "एस. ओ. ए. पी. एस (S.O.A.P.S) बाइबिल पठन"
-
 #: functions/utilities/enqueue-scripts.php:258 template-zume-dashboard.php:350
 #: template-zume-one-page-course.php:31 template-zume-one-page-course.php:48
 #: template-zume-overview.php:102 template-zume-overview.php:215
@@ -3277,63 +3273,63 @@ msgid "Language Translation Progress"
 msgstr "भाषा अनुवाद प्रगति"
 
 #. Author URI of the plugin/theme
-#:
+#: 
 msgid "https://github.com/ZumeProject"
 msgstr "https://github.com/ZumeProject"
 
 #. Template Name of the plugin/theme
-#:
+#: 
 msgid "Zume About"
 msgstr "Zume के बारे में"
 
 #. Template Name of the plugin/theme
-#:
+#: 
 msgid "Zume Resources"
 msgstr "Zume संसाधन"
 
 #. Template Name of the plugin/theme
-#:
+#: 
 #, fuzzy
 msgid "Zume Privacy Policy"
 msgstr "Zume गोपनीयता नीति"
 
 #. Template Name of the plugin/theme
-#:
+#: 
 msgid "Zúme Progress"
 msgstr "Zúme प्रगती"
 
 #. Template Name of the plugin/theme
-#:
+#: 
 msgid "Zume Login"
 msgstr "Zume लॉग-इन"
 
 #. Template Name of the plugin/theme
-#:
+#: 
 msgid "Zume Profile"
 msgstr "Zume प्रोफाइल"
 
 #. Template Name of the plugin/theme
-#:
+#: 
 msgid "Zúme Overview"
 msgstr "Zúme अवलोकन"
 
 #. Template Name of the plugin/theme
-#:
+#: 
 msgid "Zúme FAQ"
 msgstr "Zúme अक्सर पूछे गए प्रश्न"
 
 #. Template Name of the plugin/theme
-#:
+#: 
 msgid "Zúme Dashboard"
 msgstr "Zúme डैशबोर्ड"
 
 #. Template Name of the plugin/theme
-#:
+#: 
 msgid "Full Width Home"
 msgstr "पूर्ण चौड़ाई होम"
 
 #. Template Name of the plugin/theme
-#:
+#: 
 msgid "Zúme Course"
 msgstr "Zúme कोर्स"
 
@@ -3390,7 +3386,7 @@ msgid "See what data we've aggregated from your activities with us."
 msgstr "देखें कि हमने आपकी गतिविधियों से क्या डाटा संकलित किया है।"
 
 #. Template Name of the plugin/theme
-#:
+#: 
 msgid "Zúme One Page Course"
 msgstr "Zúme एक पेज कोस।"
 
@@ -3860,7 +3856,7 @@ msgid "Training"
 msgstr "प्रशिक्षण"
 
 #. Template Name of the plugin/theme
-#:
+#: 
 msgid "Zúme Course v4"
 msgstr "Zúme कोर्स 4"
 
@@ -3877,17 +3873,17 @@ msgid "Generation mapping is another simple tool to help leaders in a movement u
 msgstr "कुलपत्री नक्शा अगुवों को उनके आस-पास एक अंदौलन की वृद्धि को समझने में सहायता करने के लिए एक और साधारण साधन है।"
 
 #. Theme URI of the plugin/theme
-#:
+#: 
 msgid "https://github.com/ZumeProject/zume-training"
 msgstr "https://github.com/ZumeProject/zume-training"
 
 #. Description of the plugin/theme
-#:
+#: 
 msgid "Zúme Training for multiplying disciples."
 msgstr "गुणात्मक वृद्धि करने वाले चेलों के लिए Zúme प्रशिक्षण।"
 
 #. Author of the plugin/theme
-#:
+#: 
 msgid "Zume Training"
 msgstr "Zúme प्रशिक्षण"
 
@@ -4186,12 +4182,12 @@ msgid "As the saying goes, \"Plan your trust, don't trust your plan\". We know i
 msgstr "जैसे कि कहावत है, “अपने भरोसे की योजना बनाएं, अपनी योजना पर भरोसा ना करे।” हम जानते है कि यह पिता की इच्छा है कि हरेक भाषा, गोत्र, और देश में विश्वासियों का परिवार हो। उसने हमें मेल-मिलाप के सेवक होने के लिए बुलाया है। इसलिए 1 प्रशिक्षण और 2 कलीसियाओं के उद्देश्य हमारे उस पर भरोसे के साथ आते है जो इस को कर सकता है।"
 
 #. Template Name of the plugin/theme
-#:
+#: 
 msgid "Pieces Page"
 msgstr "पीसस पेज़"
 
 #. Template Name of the plugin/theme
-#:
+#: 
 msgid "Zúme Vision"
 msgstr "Zúme दर्शन"
 
@@ -4463,12 +4459,12 @@ msgid "Watch this important video explaining the 4 relationships of your new lif
 msgstr "आपके नए जीवन के 4 संबंधों की व्याख्या करते इस महत्वपूर्ण वीडियों को देखें।"
 
 #. Template Name of the plugin/theme
-#:
+#: 
 msgid "GMO - Welcome to Zúme"
 msgstr "GMO - Zúme में स्वागत है"
 
 #. Template Name of the plugin/theme
-#:
+#: 
 msgid "Redirect to Training"
 msgstr "प्रशिक्षण में वापस ले जाएं"
 
