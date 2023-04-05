@@ -2216,10 +2216,6 @@ msgstr "Учите их послушанию"
 msgid "Spiritual Breathing"
 msgstr "Духовное дыхание"
 
-#: template-zume-dashboard.php:334
-msgid "S.O.A.P.S. Bible Reading"
-msgstr "Изучение Библии методом пяти шагов"
-
 #: functions/utilities/enqueue-scripts.php:258 template-zume-dashboard.php:350
 #: template-zume-one-page-course.php:31 template-zume-one-page-course.php:48
 #: template-zume-overview.php:102 template-zume-overview.php:215
@@ -3190,62 +3186,62 @@ msgid "Language Translation Progress"
 msgstr "Прогресс перевода"
 
 #. Author URI of the plugin/theme
-#:
+#: 
 msgid "https://github.com/ZumeProject"
 msgstr "https://github.com/ZumeProject"
 
 #. Template Name of the plugin/theme
-#:
+#: 
 msgid "Zume About"
 msgstr "Про Zume"
 
 #. Template Name of the plugin/theme
-#:
+#: 
 msgid "Zume Resources"
 msgstr "Ресурсы Zume"
 
 #. Template Name of the plugin/theme
-#:
+#: 
 msgid "Zume Privacy Policy"
 msgstr "Политика конфиденциальности Zume"
 
 #. Template Name of the plugin/theme
-#:
+#: 
 msgid "Zúme Progress"
 msgstr "Прогресс Zúme"
 
 #. Template Name of the plugin/theme
-#:
+#: 
 msgid "Zume Login"
 msgstr "Логин Zume"
 
 #. Template Name of the plugin/theme
-#:
+#: 
 msgid "Zume Profile"
 msgstr "Профиль Zume"
 
 #. Template Name of the plugin/theme
-#:
+#: 
 msgid "Zúme Overview"
 msgstr "Краткий обзор Zume"
 
 #. Template Name of the plugin/theme
-#:
+#: 
 msgid "Zúme FAQ"
 msgstr "Вопросы-Ответы Zúme"
 
 #. Template Name of the plugin/theme
-#:
+#: 
 msgid "Zúme Dashboard"
 msgstr "Панель инструментов Zúme"
 
 #. Template Name of the plugin/theme
-#:
+#: 
 msgid "Full Width Home"
 msgstr "Полная ширина Домашней страницы"
 
 #. Template Name of the plugin/theme
-#:
+#: 
 msgid "Zúme Course"
 msgstr "Курс Zúme"
 
@@ -3302,7 +3298,7 @@ msgid "See what data we've aggregated from your activities with us."
 msgstr "Посмотрите, какие данные мы собрали из вашего взаимодействия с нами."
 
 #. Template Name of the plugin/theme
-#:
+#: 
 msgid "Zúme One Page Course"
 msgstr "Одностраничный курс Zúme"
 
@@ -3772,7 +3768,7 @@ msgid "Training"
 msgstr "Обучение"
 
 #. Template Name of the plugin/theme
-#:
+#: 
 msgid "Zúme Course v4"
 msgstr "Курс Zúme v4"
 
@@ -3789,17 +3785,17 @@ msgid "Generation mapping is another simple tool to help leaders in a movement u
 msgstr "Карта поколений – это еще один простой инструмент, помогающий лидерам движения отслеживать рост вокруг них."
 
 #. Theme URI of the plugin/theme
-#:
+#: 
 msgid "https://github.com/ZumeProject/zume-training"
 msgstr "https://github.com/ZumeProject/zume-training"
 
 #. Description of the plugin/theme
-#:
+#: 
 msgid "Zúme Training for multiplying disciples."
 msgstr "Курс Zúme для умножения учеников."
 
 #. Author of the plugin/theme
-#:
+#: 
 msgid "Zume Training"
 msgstr "Курс Zúme"
 
@@ -4098,13 +4094,13 @@ msgid "As the saying goes, \"Plan your trust, don't trust your plan\". We know i
 msgstr "Как говорится, «Планируй свое доверие, не доверяй своему плану». Мы знаем, что Отец желает, чтобы семьи верующих создавались в каждом языке, племени и нации. Он также пригласил нас быть его соработниками на ниве примирения. Итак, цели 1 обучения и 2 церквей основаны на доверии к тому, кто может это сделать."
 
 #. Template Name of the plugin/theme
-#:
+#: 
 #, fuzzy
 msgid "Pieces Page"
 msgstr "Страница частей"
 
 #. Template Name of the plugin/theme
-#:
+#: 
 msgid "Zúme Vision"
 msgstr "Видение Zúme"
 
@@ -4377,12 +4373,12 @@ msgid "Watch this important video explaining the 4 relationships of your new lif
 msgstr "Посмотрите это важное видео, объясняющее 4 вида отношений в вашей новой жизни."
 
 #. Template Name of the plugin/theme
-#:
+#: 
 msgid "GMO - Welcome to Zúme"
 msgstr "ГМО – Добро пожаловать в Zúme"
 
 #. Template Name of the plugin/theme
-#:
+#: 
 msgid "Redirect to Training"
 msgstr "Перенаправить на курс"
 
