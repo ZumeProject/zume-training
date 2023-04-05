@@ -2216,10 +2216,6 @@ msgstr "ତାଙ୍କୁ ଆଜ୍ଞାମାନିବାକୁ ଶିକ୍�
 msgid "Spiritual Breathing"
 msgstr "ଆଧ୍ୟାତ୍ମିକ ଶ୍ୱାସକ୍ରିୟା"
 
-#: template-zume-dashboard.php:334
-msgid "S.O.A.P.S. Bible Reading"
-msgstr "ଏସ୍.ଓ.ଏ.ପି.ଏସ୍‍ ବାଇବଲ୍ ପଠନ"
-
 #: functions/utilities/enqueue-scripts.php:258 template-zume-dashboard.php:350
 #: template-zume-one-page-course.php:31 template-zume-one-page-course.php:48
 #: template-zume-overview.php:102 template-zume-overview.php:215
@@ -3192,62 +3188,62 @@ msgid "Language Translation Progress"
 msgstr "ଭାଷା ଅନୁବାଦ ପ୍ରଗତି"
 
 #. Author URI of the plugin/theme
-#:
+#: 
 msgid "https://github.com/ZumeProject"
 msgstr "https://github.com/ZumeProject"
 
 #. Template Name of the plugin/theme
-#:
+#: 
 msgid "Zume About"
 msgstr "ଯୁମେ ବିଷୟରେ"
 
 #. Template Name of the plugin/theme
-#:
+#: 
 msgid "Zume Resources"
 msgstr "ଯୁମେ ସଂସାଧନ"
 
 #. Template Name of the plugin/theme
-#:
+#: 
 msgid "Zume Privacy Policy"
 msgstr "ଯୁମେ ଗୋପନୀୟତା ନୀତି"
 
 #. Template Name of the plugin/theme
-#:
+#: 
 msgid "Zúme Progress"
 msgstr "ଯୁମେ ପ୍ରଗତି"
 
 #. Template Name of the plugin/theme
-#:
+#: 
 msgid "Zume Login"
 msgstr "ଯୁମେ ଲଗିନ୍‌"
 
 #. Template Name of the plugin/theme
-#:
+#: 
 msgid "Zume Profile"
 msgstr "ଯୁମେ ପ୍ରୋଫାଇଲ୍‌"
 
 #. Template Name of the plugin/theme
-#:
+#: 
 msgid "Zúme Overview"
 msgstr "ଯୁମେ ସମୀକ୍ଷା"
 
 #. Template Name of the plugin/theme
-#:
+#: 
 msgid "Zúme FAQ"
 msgstr "ଯୁମେ ଏଫ୍ଏ‌କ୍ୟୁ"
 
 #. Template Name of the plugin/theme
-#:
+#: 
 msgid "Zúme Dashboard"
 msgstr "ଯୁମେ ଡ୍ୟାଶ୍‌ବୋର୍ଡ୍‌"
 
 #. Template Name of the plugin/theme
-#:
+#: 
 msgid "Full Width Home"
 msgstr "ପୁର୍ଣ୍ଣ ବିସ୍ତୃତ ମୂଳପୃଷ୍ଠା"
 
 #. Template Name of the plugin/theme
-#:
+#: 
 msgid "Zúme Course"
 msgstr "ଯୁମେ ପାଠ୍ୟକ୍ରମ"
 
@@ -3304,7 +3300,7 @@ msgid "See what data we've aggregated from your activities with us."
 msgstr "ଆମ ସହିତ ରହିଥିବା ଆପଣଙ୍କ କାର୍ଯ୍ୟକଳାପରୁ ଆମେ କିପ୍ରକାର ତ‍ଥ୍ୟ ସବୁ ସମଷ୍ଠି କରିଅଛୁ ଦେଖନ୍ତୁ | "
 
 #. Template Name of the plugin/theme
-#:
+#: 
 msgid "Zúme One Page Course"
 msgstr "ଯୁମେ ଗୋଟିଏ ପୃଷ୍ଠା ପାଠ୍ୟକ୍ରମ"
 
@@ -3774,7 +3770,7 @@ msgid "Training"
 msgstr "ପ୍ରଶିକ୍ଷଣ"
 
 #. Template Name of the plugin/theme
-#:
+#: 
 msgid "Zúme Course v4"
 msgstr "ଯୁମେ ପାଠ୍ୟକ୍ରମ   ସଂ-୪"
 
@@ -3791,17 +3787,17 @@ msgid "Generation mapping is another simple tool to help leaders in a movement u
 msgstr "ପୀଢ଼ିଗତ ମାନଚିତ୍ରକରଣ ଅନ୍ୟ ଏକ ସରଳ ଉପକରଣ ଅଟେ ଯାହା ଆନ୍ଦୋଳନରେ ଥିବା ଅଗ୍ରଣୀଙ୍କୁ ତାଙ୍କ ଚତୁଃପାର୍ଶ୍ୱରେ ଘଟୁଥିବା ବୃଦ୍ଧିକୁ ବୁଝିବାରେ ସହାୟକ ହୋଇଥାଏ |"
 
 #. Theme URI of the plugin/theme
-#:
+#: 
 msgid "https://github.com/ZumeProject/zume-training"
 msgstr "https://github.com/ZumeProject/zume-training"
 
 #. Description of the plugin/theme
-#:
+#: 
 msgid "Zúme Training for multiplying disciples."
 msgstr "ଶିଷ୍ୟମାନଙ୍କୁ ବହୁଗୁଣିତ କରିବା ପାଇଁ ଯୁମେ ପ୍ରଶିକ୍ଷଣ |"
 
 #. Author of the plugin/theme
-#:
+#: 
 msgid "Zume Training"
 msgstr "ଯୁମେ ପ୍ରଶିକ୍ଷଣ"
 
@@ -4100,12 +4096,12 @@ msgid "As the saying goes, \"Plan your trust, don't trust your plan\". We know i
 msgstr "ଯେମିତି କୁହାଯାଏ, \"ଆପଣଙ୍କ ଭରସାର ଯୋଜନା କରନ୍ତୁ, ଆପଣଙ୍କ ଯୋଜନାର ଭରସା କରନ୍ତୁ ନାହିଁ\" | ଆମେ ଜାଣୁ ଯେ ପ୍ରତ୍ୟେକ ଭାଷା, ଜାତି ଓ ଦେଶରୁ ବିଶ୍ୱାସୀମାନଙ୍କ ପରିବାର ରୁହନ୍ତୁ ବୋଲି ପିତାଙ୍କ ହୃଦୟରେ ରହିଛି | ସେ ମଧ୍ୟ ତାଙ୍କ ପୁନଃମିଳନ କାର୍ଯ୍ୟରେ ଆମକୁ ସହକର୍ମୀ ରୁପେ ଆମନ୍ତ୍ରଣ ଦେଇଛନ୍ତି | ସେହେତୁ ଆମର ୧ପ୍ରଶିକ୍ଷଣ ଓ ୨ମଣ୍ଡଳୀ ର ଲକ୍ଷ୍ୟ ଯିଏ ଏହାକୁ ସାଧ୍ୟ କରିପାରନ୍ତି ତାଙ୍କଠାରୁ ଆସେ |"
 
 #. Template Name of the plugin/theme
-#:
+#: 
 msgid "Pieces Page"
 msgstr "ପୃଷ୍ଠା ଭଗ୍ନାଂଶ"
 
 #. Template Name of the plugin/theme
-#:
+#: 
 msgid "Zúme Vision"
 msgstr "ଯୁମେ ଦର୍ଶନ"
 
@@ -4377,200 +4373,200 @@ msgid "Watch this important video explaining the 4 relationships of your new lif
 msgstr "ଆପଣଙ୍କ ନୂତନ ଜୀବନର ୪ଗୋଟି ସମ୍ପର୍କଗୁଡ଼ିକୁ ବର୍ଣ୍ଣନା କରୁଥିବା ଏହି ଗୁରୁତ୍ୱପୁର୍ଣ୍ଣ ଭିଡ଼ିଓଟି ଦେଖନ୍ତୁ |"
 
 #. Template Name of the plugin/theme
-#:
+#: 
 msgid "GMO - Welcome to Zúme"
 msgstr "ଜିଏମ୍‍ଓ - ଯୁମେ କୁ ସ୍ୱାଗତ"
 
 #. Template Name of the plugin/theme
-#:
+#: 
 msgid "Redirect to Training"
 msgstr "ପ୍ରଶିକ୍ଷଣକୁ ପୁନଃପ୍ରେଷିତ କର"
 
 #: translations/mobile-pwa-strings.php:9
 msgid "Yes"
-msgstr "Yes"
+msgstr "ହଁ"
 
 #: translations/mobile-pwa-strings.php:10
 msgid "No"
-msgstr "No"
+msgstr "ନାହିଁ"
 
 #: translations/mobile-pwa-strings.php:12
 msgid "Account"
-msgstr "Account"
+msgstr "ଖାତା"
 
 #: translations/mobile-pwa-strings.php:15
 msgid "Downloads"
-msgstr "Downloads"
+msgstr "ଡାଉନ୍‍‍ଲୋଡ୍ ଗୁଡ଼ିକ"
 
 #: footer.php:23 parts/nav-offcanvas-topbar.php:22
 #: translations/mobile-pwa-strings.php:16
 msgid "Language"
-msgstr "Language"
+msgstr "ଭାଷା"
 
 #: translations/mobile-pwa-strings.php:17
 msgid "Reset App"
-msgstr "Reset App"
+msgstr "ଆପ୍‍ ରିସେଟ୍ କରନ୍ତୁ"
 
 #: translations/mobile-pwa-strings.php:18
 msgid "Resetting the app will delete all app data. Are you sure you want to reset?"
-msgstr "Resetting the app will delete all app data. Are you sure you want to reset?"
+msgstr "ଆପ୍‍ କୁ ଡିଲିଟ୍‍ କରିବା ଦ୍ୱାରା ସମଗ୍ର ଆପ୍‍ ଡେଟା ଡିଲିଟ୍‍ ହୋଇଯିବ | ଆପଣ ରିସେଟ୍‍ କରିବାକୁ ନିଶ୍ଚିତ ଅଟନ୍ତି କି?"
 
 #: translations/mobile-pwa-strings.php:19
 msgid "Help"
-msgstr "Help"
+msgstr "ସହାୟତା"
 
 #: translations/mobile-pwa-strings.php:20
 msgid "Workbook"
-msgstr "Workbook"
+msgstr "କାର୍ଯ୍ୟପୁସ୍ତିକା"
 
 #: translations/mobile-pwa-strings.php:21
 msgid "Sign Out"
-msgstr "Sign Out"
+msgstr "ସାଇନ୍ ଆଉଟ୍"
 
 #: translations/mobile-pwa-strings.php:22
 msgid "Download all"
-msgstr "Download all"
+msgstr "ସମସ୍ତ ଡାଉନ୍‍‍ଲୋଡ୍ କରନ୍ତୁ"
 
 #: translations/mobile-pwa-strings.php:24
 msgid "Downloading"
-msgstr "Downloading"
+msgstr "ଡାଉନ୍‍‍ଲୋଡ୍ ହେଉଛି"
 
 #: translations/mobile-pwa-strings.php:25
 msgid "Queued"
-msgstr "Queued"
+msgstr "ଅପେକ୍ଷାରତ"
 
 #: translations/mobile-pwa-strings.php:27
 msgid "Do you want to clear these download errors?"
-msgstr "Do you want to clear these download errors?"
+msgstr "ଆପଣ ଏହି ଡାଉନ୍‌ଲୋଡ୍ ତ୍ରୁଟିଗୁଡ଼ିକ ପରିଷ୍କାର କରିବାକୁ ଚାହାଁନ୍ତି କି?"
 
 #: translations/mobile-pwa-strings.php:28
 msgid "Tap to persist"
-msgstr "Tap to persist"
+msgstr "ଲାଗି ରହିବାକୁ ଟ୍ୟାପ୍‌ କରନ୍ତୁ"
 
 #: translations/mobile-pwa-strings.php:29
 msgid "Select Language"
-msgstr "Select Language"
+msgstr "ଭାଷାର ଚୟନ କରନ୍ତୁ"
 
 #: translations/mobile-pwa-strings.php:31
 msgid "No sessions available"
-msgstr "No sessions available"
+msgstr "କୌଣସି ଅଧିବେଶନ ଉପଲବ୍ଧ ନାହିଁ"
 
 #: translations/mobile-pwa-strings.php:32
 msgid "Exit"
-msgstr "Exit"
+msgstr "ପ୍ରସ୍ଥାନ"
 
 #: translations/mobile-pwa-strings.php:36
 msgid "Share"
-msgstr "Share"
+msgstr "ସେୟାର୍ କରନ୍ତୁ"
 
 #: translations/mobile-pwa-strings.php:37
 msgid "Install"
-msgstr "Install"
+msgstr "ଇନ୍‌ଷ୍ଟାଲ୍‌ କରନ୍ତୁ"
 
 #: translations/mobile-pwa-strings.php:38
 msgid "This app can be installed to your device. Click to install this app"
-msgstr "This app can be installed to your device. Click to install this app"
+msgstr "ଏହି ଆପ୍ଲିକେସନ୍ ଆପଣଙ୍କ ଉପକରଣରେ ସଂସ୍ଥାପିତ ହୋଇପାରିବ। ଏହି ଆପ୍ ସଂସ୍ଥାପନା କରିବାକୁ କରିବାକୁ କ୍ଲିକ୍ କରନ୍ତୁ"
 
 #: translations/mobile-pwa-strings.php:39
 msgid "This app can be installed to your device. Please use the Chrome browser to do so."
-msgstr "This app can be installed to your device. Please use the Chrome browser to do so."
+msgstr "ଏହି ଆପ୍ଲିକେସନ୍ ଆପଣଙ୍କ ଉପକରଣରେ ସଂସ୍ଥାପିତ ହୋଇପାରିବ।ସେଇୟା କରିବାକୁ ଦୟାକରି କ୍ରୋମ୍‍ ବ୍ରାଉଜ୍‍ର୍‍ର ବ୍ୟବହାର କରନ୍ତୁ"
 
 #: translations/mobile-pwa-strings.php:40
 msgid "Learn more"
-msgstr "Learn more"
+msgstr "ଅଧିକ ଜାଣନ୍ତୁ"
 
 #: translations/mobile-pwa-strings.php:41
 msgid "Tap on Safari's share icon and tap 'Add to Home Screen' to install this app."
-msgstr "Tap on Safari's share icon and tap 'Add to Home Screen' to install this app."
+msgstr "ସଫାରିର ସେୟାର୍ ଆଇକନ୍ ରେ ଟ୍ୟାପ୍ କରନ୍ତୁ ଏବଂ ଏହି ଆପ୍ଲିକେସନ୍ ଇନ୍‌ଷ୍ଟାଲ୍ କରିବାକୁ 'ହୋମ୍ ସ୍କ୍ରିନ୍ କୁ ଯୋଡନ୍ତୁ' ଟ୍ୟାପ୍ କରନ୍ତୁ।"
 
 #: translations/mobile-pwa-strings.php:43
 msgid "A new version of this app is available. Click to update this app."
-msgstr "A new version of this app is available. Click to update this app."
+msgstr "ଏହି ଆପ୍ଲିକେସନ୍ ର ଏକ ନୂତନ ସଂସ୍କରଣ ଉପଲବ୍ଧ ଅଛି। ଏହି ଆପ୍ଲିକେସନ୍ ଅପଡେଟ୍ କରିବାକୁ କ୍ଲିକ୍ କରନ୍ତୁ।"
 
 #. Template Name of the plugin/theme
 #: template-zume-landing.php:109
 msgid "How to Follow Jesus"
-msgstr "How to Follow Jesus"
+msgstr "ଯୀଶୁଙ୍କୁ କିପରି ଅନୁସରଣ କରିବା"
 
 #: translations/mobile-pwa-strings.php:44
 msgid "Storage"
-msgstr "Storage"
+msgstr "ଷ୍ଟୋରେଜ୍"
 
 #: template-gmo.php:163
 msgid "Welcome to God’s family!"
-msgstr "Welcome to God’s family!"
+msgstr "ଈଶ୍ୱରଙ୍କ ପରିବାରକୁ ସ୍ୱାଗତ!"
 
 #: template-gmo.php:167
 msgid "You’ve just made a decision to follow Jesus. Where do you go from here?"
-msgstr "You’ve just made a decision to follow Jesus. Where do you go from here?"
+msgstr "ଆପଣ ଯେ ଏବେ ଯୀଶୁଙ୍କୁ ଅନୁସରଣ କରିବାକୁ ନିଷ୍ପତ୍ତି ନେଇଛନ୍ତି । ଆପଣ ଏଠାରୁ   କୋଉଠିକି  ଯିବେ?"
 
 #: template-gmo.php:168
 msgid "We are Zúme, a GodLife Community. Through Zúme, we want to give you free resources to grow in your faith and connect you to a community of people all around the world striving to grow in knowledge and faith of the hope that Jesus gives us. Let’s get started!"
-msgstr "We are Zúme, a GodLife Community. Through Zúme, we want to give you free resources to grow in your faith and connect you to a community of people all around the world striving to grow in knowledge and faith of the hope that Jesus gives us. Let’s get started!"
+msgstr "ଆମେ ଜୁମେ ଅଟୁ, ଏକ ଦୈବିକ ସମ୍ପ୍ରଦାୟ । ଜୁମେ ମାଧ୍ୟମରେ, ଆମେ ଆପଣଙ୍କୁ ଆପଣଙ୍କ ବିଶ୍ୱାସରେ ବଢିବା ପାଇଁ ମାଗଣା ସମ୍ବଳ ଦେବାକୁ ଚାହୁଁଛୁ ଏବଂ ଯୀଶୁ ଆମକୁ ଦେଉଥିବା ଆଶାର ଜ୍ଞାନ ଏବଂ ବିଶ୍ୱାସରେ ବୃଦ୍ଧି ପାଇବାକୁ ଚେଷ୍ଟା କରୁଥିବା ସମଗ୍ର ବିଶ୍ୱର ଲୋକଙ୍କ ଏକ ସମ୍ପ୍ରଦାୟ ସହିତ ଆପଣଙ୍କୁ ସଂଯୋଗ କରିବାକୁ ଚାହୁଁଛୁ | ଆସନ୍ତୁ ଆରମ୍ଭ କରିବା!"
 
 #: template-gmo.php:169
 msgid "A great first step is this video that explains 4 relationships we all have with God, creation, others, and ourselves. We pray that as you watch that video God will lead you to think of several others who need to see it, and who will eventually join you in following Jesus."
-msgstr "A great first step is this video that explains 4 relationships we all have with God, creation, others, and ourselves. We pray that as you watch that video God will lead you to think of several others who need to see it, and who will eventually join you in following Jesus."
+msgstr "ଏକ ଉତ୍ତମ ପ୍ରଥମ ପଦକ୍ଷେପ ହେଉଛି ଏହି ଭିଡିଓ ଯାହା ଈଶ୍ୱର, ସୃଷ୍ଟି, ଅନ୍ୟମାନଙ୍କ ଏବଂ ଆମ ନିଜ ସହିତ ଆମ ସମସ୍ତଙ୍କର ଏହି ୪ଟି ସମ୍ପର୍କକୁ ବ୍ୟାଖ୍ୟା କରେ | ଆମେ ପ୍ରାର୍ଥନା କରୁଛୁ ଯେ ଯେହେତୁ ଆପଣ ସେହି ଭିଡିଓ ଦେଖନ୍ତି ଈଶ୍ୱର ଆପଣଙ୍କୁ ଆହୁରି ଅନେକଙ୍କ ବିଷୟରେ ଚିନ୍ତା କରିବାକୁ ଆଗେଇ ନେବେ ଯେଉଁମାନେ ଏହାକୁ ଦେଖିବା ଆବଶ୍ୟକ କରନ୍ତି, ଏବଂ ଯିଏ ଶେଷରେ ଯୀଶୁଙ୍କୁ ଅନୁସରଣ କରିବାରେ ଆପଣଙ୍କ ସହିତ ଯୋଗ ଦେବେ |"
 
 #: template-gmo.php:196
 msgid "Next we have a collection of resources to help you follow Jesus. Bookmark, explore, and share these Biblical resources that are being used around the globe."
-msgstr "Next we have a collection of resources to help you follow Jesus. Bookmark, explore, and share these Biblical resources that are being used around the globe."
+msgstr "ପରବର୍ତ୍ତୀ ସମୟରେ ତୁମକୁ ଯୀଶୁଙ୍କୁ ଅନୁସରଣ କରିବାରେ ସାହାଯ୍ୟ କରିବା ପାଇଁ ଆମ ପାଖରେ ସମ୍ବଳର ଏକ ସଂଗ୍ରହ ଅଛି | ବୁକମାର୍କ, ଅନୁସନ୍ଧାନ, ଏବଂ ଏହି ବାଇବଲ ଉତ୍ସଗୁଡିକ ସେୟାର୍‌ କରନ୍ତୁ ଯାହା ସମଗ୍ର ବିଶ୍ୱରେ ବ୍ୟବହୃତ ହେଉଛି | "
 
 #: template-zume-landing.php:155
 msgid "Bookmark this page as a future resource!"
-msgstr "Bookmark this page as a future resource!"
+msgstr "ଭବିଷ୍ୟତର ସମ୍ଵଳ ଭାବରେ ଏହି ପୃଷ୍ଠାବୁକମାର୍କ କରନ୍ତୁ!"
 
 #: template-zume-landing.php:157
 msgid "The sections below, will teach you what it means to be a follower (disciple) of Jesus."
-msgstr "The sections below, will teach you what it means to be a follower (disciple) of Jesus."
+msgstr "ନିମ୍ନରେ ଥିବା ବିଭାଗଗୁଡ଼ିକ ଆପଣଙ୍କୁ ଯୀଶୁଙ୍କ ଅନୁଗାମୀ (ଶିଷ୍ୟ) ହେବାର ଅର୍ଥ କ'ଣ ତାହା ଶିଖାଇବ |\t"
 
 #: functions/utilities/enqueue-scripts.php:364
 msgid "How can we serve you?"
-msgstr "How can we serve you?"
+msgstr "ଆମେ ଆପଣଙ୍କୁ କିପରି ସେବା କରିପାରିବା?"
 
 #: functions/utilities/enqueue-scripts.php:365
 msgid "I want to be coached"
-msgstr "I want to be coached"
+msgstr "ମୁଁ ପ୍ରଶିକ୍ଷଣ ନେବାକୁ ଚାହୁଁଛି"
 
 #: functions/utilities/enqueue-scripts.php:366
 msgid "I need technical assistance"
-msgstr "I need technical assistance"
+msgstr "ମୋତେ ବୈଷୟିକ ସହାୟତା ଆବଶ୍ୟକ"
 
 #: functions/utilities/enqueue-scripts.php:367
 msgid "I've gone through the training but need advice on implementation"
-msgstr "I've gone through the training but need advice on implementation"
+msgstr "ମୁଁ ଏହି ତାଲିମ ଦେଇ ଗତି କରିଛି କିନ୍ତୁ ଏହାର କାର୍ଯ୍ୟକାରିତା ଉପରେ ପରାମର୍ଶ ଆବଶ୍ୟକ କରେ"
 
 #: functions/utilities/enqueue-scripts.php:368
 msgid "I have a question about the content that I need to talk to somebody else about"
-msgstr "I have a question about the content that I need to talk to somebody else about"
+msgstr "ବିଷୟବସ୍ତୁ ବିଷୟରେ ମୋର ଏକ ପ୍ରଶ୍ନ ଅଛି ଯାହା ବିଷୟରେ ମୁଁ ଅନ୍ୟ କାହା ସହିତ କଥା ହେବା ଆବଶ୍ୟକ କରେ |"
 
 #: functions/utilities/enqueue-scripts.php:369
 msgid "I have a group started and need to know where do I go next"
-msgstr "I have a group started and need to know where do I go next"
+msgstr "ମୋର ଏକ ଗୋଷ୍ଠୀ ଆରମ୍ଭ ହୋଇଛି ଏବଂ ମୁଁ ପରବର୍ତ୍ତୀ ସମୟରେ କେଉଁଠାକୁ ଯିବି ଜାଣିବା ଆବଶ୍ୟକ |"
 
 #: template-zume-landing.php:246
 msgid "Leading Yourself"
-msgstr "Leading Yourself"
+msgstr "ନିଜକୁ ନେତୄତ୍ୱ କରିବା"
 
 #: template-zume-landing.php:250 template-zume-landing.php:270
 #: template-zume-landing.php:292 template-zume-landing.php:312
 msgid "Principles"
-msgstr "Principles"
+msgstr "ନୀତିଗୁଡ଼ିକ"
 
 #: template-zume-landing.php:255 template-zume-landing.php:275
 #: template-zume-landing.php:297 template-zume-landing.php:317
 msgid "Practices"
-msgstr "Practices"
+msgstr "ଅଭ୍ୟାସଗୁଡ଼ିକ"
 
 #: template-zume-landing.php:265
 msgid "Leading Your Group"
-msgstr "Leading Your Group"
+msgstr "ଆପଣଙ୍କ ଗୋଷ୍ଠୀର ନେତୃତ୍ୱ କରିବା"
 
 #: template-zume-landing.php:288
 msgid "Leading Your Group Leaders"
-msgstr "Leading Your Group Leaders"
+msgstr "ଆପଣଙ୍କ ଗୋଷ୍ଠୀ ନେତାମାନଙ୍କ ନେତୃତ୍ୱ କରିବା"
 
 #: template-zume-landing.php:308
 msgid "Leading Your Community Leaders"
-msgstr "Leading Your Community Leaders"
+msgstr "ଆପଣଙ୍କ ସମ୍ପ୍ରଦାୟର ନେତାମାନଙ୍କ ନେତୃତ୍ୱ କରିବା"
 
