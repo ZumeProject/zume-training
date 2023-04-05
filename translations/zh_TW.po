@@ -2180,10 +2180,6 @@ msgstr "教導他們遵守"
 msgid "Spiritual Breathing"
 msgstr "屬靈的呼吸"
 
-#: template-zume-dashboard.php:334
-msgid "S.O.A.P.S. Bible Reading"
-msgstr "SOAPS香皂讀經法"
-
 #: functions/utilities/enqueue-scripts.php:258 template-zume-dashboard.php:350
 #: template-zume-one-page-course.php:31 template-zume-one-page-course.php:48
 #: template-zume-overview.php:102 template-zume-overview.php:215
@@ -3143,62 +3139,62 @@ msgid "Language Translation Progress"
 msgstr "語言翻譯進度"
 
 #. Author URI of the plugin/theme
-#:
+#: 
 msgid "https://github.com/ZumeProject"
 msgstr "https://github.com/ZumeProject"
 
 #. Template Name of the plugin/theme
-#:
+#: 
 msgid "Zume About"
 msgstr "「天國酵母」Zúme 相關事宜"
 
 #. Template Name of the plugin/theme
-#:
+#: 
 msgid "Zume Resources"
 msgstr "「天國酵母」Zúme 資源"
 
 #. Template Name of the plugin/theme
-#:
+#: 
 msgid "Zume Privacy Policy"
 msgstr "「天國酵母」Zúme 隱私權政策"
 
 #. Template Name of the plugin/theme
-#:
+#: 
 msgid "Zúme Progress"
 msgstr "「天國酵母」Zúme 進度"
 
 #. Template Name of the plugin/theme
-#:
+#: 
 msgid "Zume Login"
 msgstr "「天國酵母」Zúme 登入"
 
 #. Template Name of the plugin/theme
-#:
+#: 
 msgid "Zume Profile"
 msgstr "「天國酵母」Zúme 個人資料"
 
 #. Template Name of the plugin/theme
-#:
+#: 
 msgid "Zúme Overview"
 msgstr "「天國酵母」Zúme 概述簡介"
 
 #. Template Name of the plugin/theme
-#:
+#: 
 msgid "Zúme FAQ"
 msgstr "「天國酵母」Zúme 常見問題"
 
 #. Template Name of the plugin/theme
-#:
+#: 
 msgid "Zúme Dashboard"
 msgstr "「天國酵母」Zúme 工具板"
 
 #. Template Name of the plugin/theme
-#:
+#: 
 msgid "Full Width Home"
 msgstr "全寬度首頁"
 
 #. Template Name of the plugin/theme
-#:
+#: 
 msgid "Zúme Course"
 msgstr "「天國酵母」Zúme 課程"
 
@@ -3255,7 +3251,7 @@ msgid "See what data we've aggregated from your activities with us."
 msgstr "查看你的歷程記錄"
 
 #. Template Name of the plugin/theme
-#:
+#: 
 msgid "Zúme One Page Course"
 msgstr "「天國酵母」單張課程"
 
@@ -3727,7 +3723,7 @@ msgid "Training"
 msgstr "訓練"
 
 #. Template Name of the plugin/theme
-#:
+#: 
 msgid "Zúme Course v4"
 msgstr "Zúme「天國酵母」門徒訓練課程 v4"
 
@@ -3744,17 +3740,17 @@ msgid "Generation mapping is another simple tool to help leaders in a movement u
 msgstr "微型教會族譜是另一個簡單的工具，可以幫助當中的帶領者們了解小組教會的成長狀況。"
 
 #. Theme URI of the plugin/theme
-#:
+#: 
 msgid "https://github.com/ZumeProject/zume-training"
 msgstr "https://github.com/ZumeProject/zume-training"
 
 #. Description of the plugin/theme
-#:
+#: 
 msgid "Zúme Training for multiplying disciples."
 msgstr "「天國酵母」Zúme門徒倍增訓練"
 
 #. Author of the plugin/theme
-#:
+#: 
 msgid "Zume Training"
 msgstr "「天國酵母」Zúme 門徒訓練"
 
@@ -4054,12 +4050,12 @@ msgid "As the saying goes, \"Plan your trust, don't trust your plan\". We know i
 msgstr "「計畫信任神，但別信任你的計畫。」我們知道神的心意是在萬民、萬邦、萬族之中出現一群群的跟隨者，祂也邀請我們與祂同工，使人與祂和好。所以這些關於一個訓練、兩個教會的目標都出自於對那一位凡事都能的神之信任。"
 
 #. Template Name of the plugin/theme
-#:
+#: 
 msgid "Pieces Page"
 msgstr "分類頁面"
 
 #. Template Name of the plugin/theme
-#:
+#: 
 msgid "Zúme Vision"
 msgstr "「天國酵母」Zúme 異象"
 
@@ -4331,12 +4327,12 @@ msgid "Watch this important video explaining the 4 relationships of your new lif
 msgstr "觀賞這個重要的影片，學習你的新生命中將出現的四種關係。"
 
 #. Template Name of the plugin/theme
-#:
+#: 
 msgid "GMO - Welcome to Zúme"
 msgstr "GMO - 歡迎來到「天國酵母」Zúme"
 
 #. Template Name of the plugin/theme
-#:
+#: 
 msgid "Redirect to Training"
 msgstr "重新導向訓練"
 
