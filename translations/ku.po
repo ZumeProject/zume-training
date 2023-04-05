@@ -21,7 +21,7 @@ msgstr "بچۆ ژوورەوە"
 
 #: front-page.php:95
 msgid "Zúme Training is an on-line and in-life learning experience designed for small groups who follow Jesus to learn how to obey His Great Commission and make disciples who multiply."
-msgstr "ڕاهێنانی زومی کە ئەزمونێکی سەر ‌هێڵ و سەرانسەری ژیانە، دیزانیکراوە بۆئەو کۆمەڵە  بچوکادەکەون تا فێربن چۆن گوێ ڕایەڵی (ڕنەی شوێن عیسا اسپاردەی مەزن) ی  (ئەو) بن و ئەو قوتابیانە دروست بکەن کە زۆردەبن.   "
+msgstr "ڕاهێنانی زومی ئەزمونێکی فێربونە لەسەر هێڵی ئینتەرنێت و بۆژیان کە دیزاینکراوە بۆ ئەو کۆمەڵە بچوکانەی شوێن عیسا دەکەون تا فێربن چۆن گوێڕایەڵی (ڕاسپاردە مەزنەکەی) بن و ئەوقوتابیانە دروستبکەن کە زۆردەبن. "
 
 #: front-page.php:114
 msgid "Zúme consists of 10 sessions, 2 hours each:"
@@ -2181,10 +2181,6 @@ msgstr "فێریان بکە گوێ ڕایەڵ بن"
 msgid "Spiritual Breathing"
 msgstr "هەناسەدانی ڕۆحی"
 
-#: template-zume-dashboard.php:334
-msgid "S.O.A.P.S. Bible Reading"
-msgstr "ئێس ئۆ ئەی پی ئێسی خوێندنەوەی کتێبی پیرۆز"
-
 #: functions/utilities/enqueue-scripts.php:258 template-zume-dashboard.php:350
 #: template-zume-one-page-course.php:31 template-zume-one-page-course.php:48
 #: template-zume-overview.php:102 template-zume-overview.php:215
@@ -3142,62 +3138,62 @@ msgid "Language Translation Progress"
 msgstr "پێش کەوتنی وەرگێڕانی زمان"
 
 #. Author URI of the plugin/theme
-#:
+#: 
 msgid "https://github.com/ZumeProject"
 msgstr "https://github.com/ZumeProject"
 
 #. Template Name of the plugin/theme
-#:
+#: 
 msgid "Zume About"
 msgstr "زومی دەربارەی"
 
 #. Template Name of the plugin/theme
-#:
+#: 
 msgid "Zume Resources"
 msgstr "سەرچاوەکانی زومی"
 
 #. Template Name of the plugin/theme
-#:
+#: 
 msgid "Zume Privacy Policy"
 msgstr "پۆڵیسەی خۆیی زومی"
 
 #. Template Name of the plugin/theme
-#:
+#: 
 msgid "Zúme Progress"
 msgstr "پێش کەوتنی زومی"
 
 #. Template Name of the plugin/theme
-#:
+#: 
 msgid "Zume Login"
 msgstr "چوونە ژوورەوەی زومی"
 
 #. Template Name of the plugin/theme
-#:
+#: 
 msgid "Zume Profile"
 msgstr "پرۆفایلی زومی"
 
 #. Template Name of the plugin/theme
-#:
+#: 
 msgid "Zúme Overview"
 msgstr "تێڕوانینی گشتی زومی"
 
 #. Template Name of the plugin/theme
-#:
+#: 
 msgid "Zúme FAQ"
 msgstr "پرسیار و وەڵامی زومی"
 
 #. Template Name of the plugin/theme
-#:
+#: 
 msgid "Zúme Dashboard"
 msgstr "داشبۆردی زومی"
 
 #. Template Name of the plugin/theme
-#:
+#: 
 msgid "Full Width Home"
 msgstr "ماڵەوە بە پانتایی پڕ"
 
 #. Template Name of the plugin/theme
-#:
+#: 
 msgid "Zúme Course"
 msgstr "کۆرسی زومی "
 
@@ -3254,7 +3250,7 @@ msgid "See what data we've aggregated from your activities with us."
 msgstr "ببینە ئێمە چ داتایەکمان کەڵەکە کردووە لە چالاکیەکانی تۆ لەگەڵ ئێمەدا.  "
 
 #. Template Name of the plugin/theme
-#:
+#: 
 msgid "Zúme One Page Course"
 msgstr "کۆرسی یەک لاپەڕەیی زومی"
 
@@ -3724,7 +3720,7 @@ msgid "Training"
 msgstr "ڕاهێنان کردن"
 
 #. Template Name of the plugin/theme
-#:
+#: 
 msgid "Zúme Course v4"
 msgstr "کۆرسی زومی ڤی ٤"
 
@@ -3741,17 +3737,17 @@ msgid "Generation mapping is another simple tool to help leaders in a movement u
 msgstr "خشتەی نەوە ئامرازێکی سادەی ترە بۆ یارمەتیدانی ڕابەران لە بزوتنەوەیەکدا لە گەشەکردنی چواردەوریان تێبگەن.  "
 
 #. Theme URI of the plugin/theme
-#:
+#: 
 msgid "https://github.com/ZumeProject/zume-training"
 msgstr "https://github.com/ZumeProject/zume-training"
 
 #. Description of the plugin/theme
-#:
+#: 
 msgid "Zúme Training for multiplying disciples."
 msgstr "ڕاهێنانی زومی بۆ زۆرکردنی قوتابی "
 
 #. Author of the plugin/theme
-#:
+#: 
 msgid "Zume Training"
 msgstr "ڕاهێنانی زومی"
 
@@ -4050,12 +4046,12 @@ msgid "As the saying goes, \"Plan your trust, don't trust your plan\". We know i
 msgstr "وەک پەندەکە دەڵێت \" پلان بۆ متمانەکەت دابنێ، متمانە بەپلانەکەت مەکە.\"  ئێمە دەزانین ئەوە دڵی (باوک)ە خێزانی باوەڕدارانی هەبێت بەهەموو زمانێک و هۆزێک و نەتەوەیەک.  هەروەها ئەو ئێمەی بانگهێشت کرد بۆئەوەی ببین بە هاوکارانی (ئەو) لە ئاشت بوونەوەدا.  بۆیە ئەم ئامانجانەی ١ ڕاهێنان و ٢ کڵێسەیە لە متمانەی ئێمەوە دێت بەو یەکەی کەدەتوانێت ئەنجامی بدات.  "
 
 #. Template Name of the plugin/theme
-#:
+#: 
 msgid "Pieces Page"
 msgstr "بەشەکانی لاپەڕە"
 
 #. Template Name of the plugin/theme
-#:
+#: 
 msgid "Zúme Vision"
 msgstr "بینینی زومی "
 
@@ -4327,12 +4323,12 @@ msgid "Watch this important video explaining the 4 relationships of your new lif
 msgstr "تەماشای ئەم ڤیدیۆ گرنگە بکە کە ٤ پەیوەندیەکەی ژیانی نوێی تۆ ڕووندەکاتەوە.  "
 
 #. Template Name of the plugin/theme
-#:
+#: 
 msgid "GMO - Welcome to Zúme"
 msgstr "جی ئێم ئۆ - بەخێربێیت بۆ زومی"
 
 #. Template Name of the plugin/theme
-#:
+#: 
 msgid "Redirect to Training"
 msgstr "دووبارە ئاراستە کردن بکە بۆ ڕاهێنان "
 
