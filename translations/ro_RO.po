@@ -2183,10 +2183,6 @@ msgstr "Învățați-i să Asculte"
 msgid "Spiritual Breathing"
 msgstr "Respirația spirituală"
 
-#: template-zume-dashboard.php:334
-msgid "S.O.A.P.S. Bible Reading"
-msgstr "Studiul Biblic Devoțional în 5 pași"
-
 #: functions/utilities/enqueue-scripts.php:258 template-zume-dashboard.php:350
 #: template-zume-one-page-course.php:31 template-zume-one-page-course.php:48
 #: template-zume-overview.php:102 template-zume-overview.php:215
@@ -3148,62 +3144,62 @@ msgid "Language Translation Progress"
 msgstr "Progresul traducerii  "
 
 #. Author URI of the plugin/theme
-#:
+#: 
 msgid "https://github.com/ZumeProject"
 msgstr "https://github.com/ZumeProject"
 
 #. Template Name of the plugin/theme
-#:
+#: 
 msgid "Zume About"
 msgstr "Despre Zume "
 
 #. Template Name of the plugin/theme
-#:
+#: 
 msgid "Zume Resources"
 msgstr "Resurse Zume"
 
 #. Template Name of the plugin/theme
-#:
+#: 
 msgid "Zume Privacy Policy"
 msgstr "Politica de confidențialitate Zume"
 
 #. Template Name of the plugin/theme
-#:
+#: 
 msgid "Zúme Progress"
 msgstr "Progresul Zúme"
 
 #. Template Name of the plugin/theme
-#:
+#: 
 msgid "Zume Login"
 msgstr "Autentificare Zume"
 
 #. Template Name of the plugin/theme
-#:
+#: 
 msgid "Zume Profile"
 msgstr "Profilul Zume"
 
 #. Template Name of the plugin/theme
-#:
+#: 
 msgid "Zúme Overview"
 msgstr "Prezentare generală a Zúme"
 
 #. Template Name of the plugin/theme
-#:
+#: 
 msgid "Zúme FAQ"
 msgstr "Întrebări frecvente Zúme"
 
 #. Template Name of the plugin/theme
-#:
+#: 
 msgid "Zúme Dashboard"
 msgstr "Tabloul Principal Zúme"
 
 #. Template Name of the plugin/theme
-#:
+#: 
 msgid "Full Width Home"
 msgstr "Acasă. Lățime maximă"
 
 #. Template Name of the plugin/theme
-#:
+#: 
 msgid "Zúme Course"
 msgstr "Curs Zúme"
 
@@ -3260,7 +3256,7 @@ msgid "See what data we've aggregated from your activities with us."
 msgstr "Vedeți ce date am acumulat din activitățile dvs. cu noi."
 
 #. Template Name of the plugin/theme
-#:
+#: 
 msgid "Zúme One Page Course"
 msgstr "Curs Zúme O Pagină"
 
@@ -3730,7 +3726,7 @@ msgid "Training"
 msgstr "Training"
 
 #. Template Name of the plugin/theme
-#:
+#: 
 msgid "Zúme Course v4"
 msgstr "Cursul Zúme v4"
 
@@ -3747,17 +3743,17 @@ msgid "Generation mapping is another simple tool to help leaders in a movement u
 msgstr "Harta generațiilor este un alt instrument ușor pentru a ajuta liderii mișcării să urmărească creșterea în jurul lor."
 
 #. Theme URI of the plugin/theme
-#:
+#: 
 msgid "https://github.com/ZumeProject/zume-training"
 msgstr "https://github.com/ZumeProject/zume-training"
 
 #. Description of the plugin/theme
-#:
+#: 
 msgid "Zúme Training for multiplying disciples."
 msgstr "Trainingul Zúme pentru multiplicarea ucenicilor."
 
 #. Author of the plugin/theme
-#:
+#: 
 msgid "Zume Training"
 msgstr "Trainingul Zúme"
 
@@ -3957,7 +3953,7 @@ msgstr "în generația noastră."
 
 #: template-zume-vision.php:31
 msgid "Learn More @ Zúme.Vision"
-msgstr "Aflați mai multe @ Zúme.Viziune"
+msgstr "Aflați mai multe @ Zúme.Vision"
 
 #: template-zume-vision.php:42
 msgid "Our Core Strategy"
@@ -4056,12 +4052,12 @@ msgid "As the saying goes, \"Plan your trust, don't trust your plan\". We know i
 msgstr "După cum se spune, „Planificați-vă încrederea, nu aveți încredere în planul dvs.”. Știm că inima Tatălui este să avem familii de credincioși în fiecare limbă, trib și națiune. El ne-a invitat, de asemenea, să lucrăm cu El împreună şi ne-a încredinţat slujba împăcării. Deci, aceste obiective de (1) instruire și (2) biserici, provin din încrederea noastră în Cel care poate să o facă."
 
 #. Template Name of the plugin/theme
-#:
+#: 
 msgid "Pieces Page"
 msgstr "Piese pagină"
 
 #. Template Name of the plugin/theme
-#:
+#: 
 msgid "Zúme Vision"
 msgstr "Viziune Zúme"
 
@@ -4333,12 +4329,12 @@ msgid "Watch this important video explaining the 4 relationships of your new lif
 msgstr "Urmărește acest videoclip important explicând cele 4 relații ale noii tale vieți."
 
 #. Template Name of the plugin/theme
-#:
+#: 
 msgid "GMO - Welcome to Zúme"
 msgstr "GMO - Bine ați venit la Zúme"
 
 #. Template Name of the plugin/theme
-#:
+#: 
 msgid "Redirect to Training"
 msgstr "Redirecționare la Training"
 
@@ -4381,7 +4377,7 @@ msgstr "Workbook"
 
 #: translations/mobile-pwa-strings.php:21
 msgid "Sign Out"
-msgstr "Sign out"
+msgstr "Deconectați-vă"
 
 #: translations/mobile-pwa-strings.php:22
 msgid "Download all"
