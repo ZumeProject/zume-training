@@ -244,15 +244,21 @@ function zume_get_concept_translation_url( $page_title, $slug = 'en' ) {
 
     if ( function_exists( 'pll_the_languages' ) ) {
         // find post by title
-        $post_id = get_page_by_title( $page_title, OBJECT, 'page' );
+        global $wpdb;
+        $post_id = $wpdb->get_var( $wpdb->prepare(
+            "SELECT ID FROM $wpdb->posts
+                WHERE post_title = %s AND post_type = 'page' AND post_status = 'publish'
+                LIMIT 1",
+            $page_title
+        ) );
 
         // get translation id by eng id
         if ( empty( $slug ) ) {
             $slug = 'en';
         }
 
-        if ( isset( $post_id->ID ) && ! empty( $post_id->ID ) ) {
-            $trans_id = pll_get_post( $post_id->ID, $slug );
+        if ( isset( $post_id ) && ! empty( $post_id ) ) {
+            $trans_id = pll_get_post( $post_id, $slug );
             if ( ! $trans_id ) {
                 return '';
             }
@@ -282,13 +288,17 @@ function zume_get_home_translation_id( $page_title, $slug = 'en' ) {
 
     if ( function_exists( 'pll_the_languages' ) ) {
         // find post by title
-        $post_id = get_page_by_title( $page_title, OBJECT, 'page' );
-        if ( empty( $slug ) ) {
-            $slug = 'en';
-        }
+        global $wpdb;
+        $post_id = $wpdb->get_var( $wpdb->prepare(
+            "SELECT ID FROM $wpdb->posts
+                WHERE post_title = %s AND post_type = 'page' AND post_status = 'publish'
+                LIMIT 1",
+            $page_title
+        ) );
+
         // get translation id by eng id
-        if ( isset( $post_id->ID )){
-            $trans_id = pll_get_post( $post_id->ID, $slug );
+        if ( isset( $post_id )){
+            $trans_id = pll_get_post( $post_id, $slug );
             if ( ! $trans_id ) {
                 return '';
             }
