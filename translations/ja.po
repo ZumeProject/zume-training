@@ -2185,10 +2185,6 @@ msgstr "オベイにそれらを教えます"
 msgid "Spiritual Breathing"
 msgstr "スピリチュアル呼吸"
 
-#: template-zume-dashboard.php:334
-msgid "S.O.A.P.S. Bible Reading"
-msgstr "S.O.A.P.S聖書の読書"
-
 #: functions/utilities/enqueue-scripts.php:258 template-zume-dashboard.php:350
 #: template-zume-one-page-course.php:31 template-zume-one-page-course.php:48
 #: template-zume-overview.php:102 template-zume-overview.php:215
@@ -3149,62 +3145,62 @@ msgid "Language Translation Progress"
 msgstr "翻訳進捗状況"
 
 #. Author URI of the plugin/theme
-#:
+#: 
 msgid "https://github.com/ZumeProject"
 msgstr "https://github.com/ZumeProject"
 
 #. Template Name of the plugin/theme
-#:
+#: 
 msgid "Zume About"
 msgstr "Zume 約"
 
 #. Template Name of the plugin/theme
-#:
+#: 
 msgid "Zume Resources"
 msgstr "Zumeリソース"
 
 #. Template Name of the plugin/theme
-#:
+#: 
 msgid "Zume Privacy Policy"
 msgstr "Zumeプライバシーポリシー"
 
 #. Template Name of the plugin/theme
-#:
+#: 
 msgid "Zúme Progress"
 msgstr "Zúme進捗状況"
 
 #. Template Name of the plugin/theme
-#:
+#: 
 msgid "Zume Login"
 msgstr "Zumeログイン"
 
 #. Template Name of the plugin/theme
-#:
+#: 
 msgid "Zume Profile"
 msgstr "Zumeプロフィール"
 
 #. Template Name of the plugin/theme
-#:
+#: 
 msgid "Zúme Overview"
 msgstr "Zúme概要"
 
 #. Template Name of the plugin/theme
-#:
+#: 
 msgid "Zúme FAQ"
 msgstr "Zúmeよくある質問"
 
 #. Template Name of the plugin/theme
-#:
+#: 
 msgid "Zúme Dashboard"
 msgstr "Zúmeダッシュボード"
 
 #. Template Name of the plugin/theme
-#:
+#: 
 msgid "Full Width Home"
 msgstr "全幅ホーム"
 
 #. Template Name of the plugin/theme
-#:
+#: 
 msgid "Zúme Course"
 msgstr "Zúmeコース"
 
@@ -3261,7 +3257,7 @@ msgid "See what data we've aggregated from your activities with us."
 msgstr "私達は私達とあなたの活動から集約した内容のデータを参照してください。"
 
 #. Template Name of the plugin/theme
-#:
+#: 
 msgid "Zúme One Page Course"
 msgstr "Zúme1ページコース"
 
@@ -3731,7 +3727,7 @@ msgid "Training"
 msgstr "トレーニング"
 
 #. Template Name of the plugin/theme
-#:
+#: 
 msgid "Zúme Course v4"
 msgstr "ZúmeコースV4"
 
@@ -3748,17 +3744,17 @@ msgid "Generation mapping is another simple tool to help leaders in a movement u
 msgstr "世代マッピングは、それらの周りの成長を理解し、移動のヘルプリーダーに別のシンプルなツールです。"
 
 #. Theme URI of the plugin/theme
-#:
+#: 
 msgid "https://github.com/ZumeProject/zume-training"
 msgstr "https://github.com/ZumeProject/zume-training"
 
 #. Description of the plugin/theme
-#:
+#: 
 msgid "Zúme Training for multiplying disciples."
 msgstr "弟子たちを乗算するZúmeトレーニング。"
 
 #. Author of the plugin/theme
-#:
+#: 
 msgid "Zume Training"
 msgstr "Zumeトレーニング"
 
@@ -4057,12 +4053,12 @@ msgid "As the saying goes, \"Plan your trust, don't trust your plan\". We know i
 msgstr "諺にように、「あなたの信頼を計画し、あなたの計画を信用していません」。私たちは、すべての舌、部族、そして全国で信者の家族を持っている父の心を知っています。彼はまた、和解の彼の同僚であることを、私たちを招待しました。だから、1回のトレーニングと2つの教会のこれらの目標は、それを行うことができるもので、当社の信頼から来ます。"
 
 #. Template Name of the plugin/theme
-#:
+#: 
 msgid "Pieces Page"
 msgstr "小品ページ"
 
 #. Template Name of the plugin/theme
-#:
+#: 
 msgid "Zúme Vision"
 msgstr "Zúme ビジョン"
 
@@ -4334,12 +4330,12 @@ msgid "Watch this important video explaining the 4 relationships of your new lif
 msgstr "あなたの新しい人生の4人の関係を説明する、この重要なビデオを見ます。"
 
 #. Template Name of the plugin/theme
-#:
+#: 
 msgid "GMO - Welcome to Zúme"
 msgstr "GMO  - Zúmeへようこそ"
 
 #. Template Name of the plugin/theme
-#:
+#: 
 msgid "Redirect to Training"
 msgstr "トレーニングへのリダイレクト"
 
