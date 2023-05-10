@@ -53,6 +53,7 @@ require_once( 'functions/zume-content.php' );
 require_once( 'functions/zume-three-month-plan.php' );
 require_once( 'functions/zume-v4-modal-pieces-content.php' );
 require_once( 'functions/zume-functions.php' ); // general zume functions
+require_once( 'functions/report-log.php' );
 
 
 require_once( 'functions/logging/zume-mailchimp.php' );
