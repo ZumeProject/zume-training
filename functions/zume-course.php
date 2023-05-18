@@ -102,20 +102,18 @@ class Zume_Course {
         }
         $current_mirror = zume_mirror_url();
         // get custom post type by language title
-        global $wpdb;
-        $post_id = $wpdb->get_var( $wpdb->prepare(
-            "SELECT ID FROM $wpdb->posts
-                WHERE post_title = %s AND post_type = 'zume_video' AND post_status = 'publish'
-                LIMIT 1",
-            $current_lang
-        ) );
-        $video_id = get_post_meta( $post_id, $meta_key, true );
+        $page = get_page_by_title( $current_lang, OBJECT, 'zume_download' );
+        if ( ! $page ) {
+            return '';
+        }
+        $video_id = get_post_meta( $page->ID, $meta_key, true );
         if ( ! $video_id ) {
             return '';
         }
         if ( 'video_overview' == $meta_key ) {
             return $video_id;
         }
+//        return trailingslashit( get_stylesheet_directory_uri() ) . 'downloads/' . $current_lang . '/' . $video_id;
         return $current_mirror . $current_lang . '/' . $video_id;
     }
 
