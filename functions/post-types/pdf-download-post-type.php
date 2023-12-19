@@ -344,9 +344,22 @@ class Zume_PDF_Download_Post_Type
                             echo '</td><tr/>' . "\n";
                             break;
                         case 'link':
+                            $link = zume_mirror_url() . esc_attr( get_the_title( $post_id ) ) . '/' . esc_attr( $data );
+                            $redirect = 'https://zume.training/zume_app/qr?l='.esc_attr( get_the_title( $post_id ) ).'&d='.$k;
                             echo '<tr valign="top"><th scope="row"><label for="' . esc_attr( $k ) . '">' . esc_html( $v['name'] ) . '</label></th>
-                                <td><input name="' . esc_attr( $k ) . '" type="text" id="' . esc_attr( $k ) . '" class="regular-text" value="' . esc_attr( $data ) . '" />' . "\n";
-                            echo '<a href="'. esc_url( zume_mirror_url() ) .esc_attr( get_the_title( $post_id ) ).'/'.esc_attr( $data ).'" target="_blank">Check Link</a>';
+                                <td><input name="' . esc_attr( $k ) . '" type="text" id="' . esc_attr( $k ) . '" class="regular-text" value="' . esc_attr( $data ) . '" /><br><br>';
+                            echo 'Redirect: <a href="'. $redirect .'" target="_blank">'. $redirect .'</a><br>';
+                            if ( ! empty( $redirect )) {
+                                echo '<a href="https://api.qrserver.com/v1/create-qr-code/?size=1000x1000&data='.$redirect.'"><img src="https://api.qrserver.com/v1/create-qr-code/?size=1000x1000&data='.$redirect.'" style="width:250px;"/></a><br><br>';
+                            }
+                            echo 'Destination: <a href="'. $link .'" target="_blank">'. $link .'</a><br>';
+                            echo '</td><tr/>' . "\n";
+                            break;
+                        case 'rawlink':
+                            $link = esc_url( $data );
+                            echo '<tr valign="top"><th scope="row"><label for="' . esc_attr( $k ) . '">' . esc_html( $v['name'] ) . '</label></th>
+                                <td><input name="' . esc_attr( $k ) . '" type="text" id="' . esc_attr( $k ) . '" class="regular-text" value="' . esc_attr( $data ) . '" /><br>';
+                            echo '<a href="'. $link .'" target="_blank">'. $link .'</a><br>';
                             echo '</td><tr/>' . "\n";
                             break;
                         case 'select':
@@ -687,7 +700,7 @@ class Zume_PDF_Download_Post_Type
         $fields['video_overview'] = array(
             'name'        => 'Video Overview Download',
             'description' => 'This is the complete download link to download the video from Vimeo',
-            'type'        => 'link',
+            'type'        => 'rawlink',
             'default'     => 'https://player.vimeo.com/external/248149800.hd.mp4?s=3a6907fc2a263b3a7fa8050864dab149e498226b&profile_id=174&download=1',
             'section'     => 'links',
         );

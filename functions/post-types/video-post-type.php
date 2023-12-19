@@ -303,8 +303,9 @@ class Zume_Video_Post_Type
         </style>
         <script>
             function show_hide_qr() {
-                let qr_raw_link = '<?php echo get_stylesheet_directory_uri() . '/video.php?id='; ?>'
-                let qr_link = '<?php echo urlencode( get_stylesheet_directory_uri() . '/video.php?id=' ); ?>'
+                //let qr_raw_link = '<?php //echo get_stylesheet_directory_uri() . '/video.php?id='; ?>//'
+                //let qr_link = '<?php //echo urlencode( get_stylesheet_directory_uri() . '/video.php?id=' ); ?>//'
+                let qr_link = 'https://zume.training/zume_app/qr?v='
                 let button = jQuery('#show-hide-qr')
                 let state = button.data('state')
                 let list = jQuery('.viewer-cell')
@@ -315,7 +316,7 @@ class Zume_Video_Post_Type
                         if ( v.id ) {
                             let cell = jQuery('#'+v.id)
                             cell.addClass('active-spinner')
-                            cell.html(`<img src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&color=323a68&data=${qr_link}${v.id}" title="${qr_raw_link}${v.id}" alt="${qr_raw_link}${v.id}" /><br><a href="https://api.qrserver.com/v1/create-qr-code/?size=300x300&color=323a68&data=${qr_link}${v.id}">direct link</a>`)
+                            cell.html(`<img src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&color=323a68&data=${qr_link}${v.id}" title="${qr_link}${v.id}" alt="${qr_link}${v.id}" /><br><a href="https://api.qrserver.com/v1/create-qr-code/?size=300x300&color=323a68&data=${qr_link}${v.id}">direct link</a>`)
                         }
                     })
                 }
@@ -780,11 +781,19 @@ class Zume_Video_Post_Type
             'default'     => '248149797',
             'section'     => 'scribe',
         );
+
         $fields['68'] = array(
             'name'        => 'Four Relationships (68)',
             'description' => '',
             'type'        => 'link',
             'default'     => '',
+            'section'     => 'scribe',
+        );
+        $fields['69'] = array(
+            'name'        => '3-Circles',
+            'description' => '',
+            'type'        => 'link',
+            'default'     => '248149797',
             'section'     => 'scribe',
         );
 

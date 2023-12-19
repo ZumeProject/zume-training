@@ -30,7 +30,7 @@ function zume_pieces_content( $post ) {
     <select name="zume_piece">
         <option></option>
     <?php
-    for ($x = 1; $x <= 32; $x++) {
+    for ($x = 1; $x <= 33; $x++) {
         $selected = false;
         if ( $x == $number) {
             $selected = true;
