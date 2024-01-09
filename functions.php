@@ -8,8 +8,8 @@ require_once( 'functions/utilities/debugger-log.php' ); // debug logger used for
 require_once( 'functions/utilities/global-functions.php' ); // debug logger used for development.
 
 // Post Types
-require_once( 'functions/post-types/video-post-type.php' );
-require_once( 'functions/post-types/pdf-download-post-type.php' );
+//require_once( 'functions/post-types/video-post-type.php' );
+//require_once( 'functions/post-types/pdf-download-post-type.php' );
 require_once( 'functions/post-types/qr-meta-box.php' );
 
 // Integrations Files
