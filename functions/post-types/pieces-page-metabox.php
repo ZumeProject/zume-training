@@ -40,7 +40,26 @@ function zume_pieces_content( $post ) {
         <option value="<?php echo esc_attr( $x ) ?>" <?php echo ( $selected ) ? 'selected' : ''; ?> ><?php echo esc_attr( $x ) . ' - '; echo esc_html( get_the_title( $post_number ) ) ?></option>
         <?php
     }
-    ?></select><br>    <h3>Piece Title (override) for the &lt;h1&gt;</h3>
+    ?></select><br>
+
+    <h3>Language</h3>
+    <select name="zume_lang">
+        <option></option>
+        <?php
+        $zume_languages = zume_languages();
+        foreach( $zume_languages as $languages ) {
+            $selected = false;
+            if ( isset( $values['zume_lang'][0] ) && $languages['code'] == $values['zume_lang'][0] ) {
+                $selected = true;
+            }
+            ?>
+            <option value="<?php echo esc_attr( $languages['code'] ) ?>" <?php echo ( $selected ) ? 'selected' : ''; ?> ><?php echo esc_html( $languages['name'] ) ?></option>
+            <?php
+        }
+        ?>
+    </select><br>
+
+    <h3>Piece Title (override) for the &lt;h1&gt;</h3>
     <input name="zume_piece_h1" class="regular-text" id="zume_piece_h1" value="<?php echo esc_html( isset( $values['zume_piece_h1'] ) ? $values['zume_piece_h1'][0] : '' ) ?>" /><br><br>
         <hr>
     <h3>Pre-Video Content</h3>
@@ -79,6 +98,9 @@ function zume_pieces_save( $post_id ) {
 
     if ( isset( $_POST['zume_piece'] ) ) {
         update_post_meta( $post_id, 'zume_piece', sanitize_text_field( wp_unslash( $_POST['zume_piece'] ) ) );
+    }
+    if ( isset( $_POST['zume_lang'] ) ) {
+        update_post_meta( $post_id, 'zume_lang', sanitize_text_field( wp_unslash( $_POST['zume_lang'] ) ) );
     }
     if ( isset( $_POST['zume_piece_h1'] ) ) {
         update_post_meta( $post_id, 'zume_piece_h1', sanitize_text_field( wp_unslash( $_POST['zume_piece_h1'] ) ) );
