@@ -236,6 +236,10 @@ if ( ! function_exists('zume_get_landing_title') ) {
     {
 
         if (function_exists('pll_the_languages')) {
+            if ( apply_filters( 'zume_not_ready_pieces', $slug, false ) ) {
+                return;
+            }
+
             // find post by title
             $post_id = zume_landing_page_post_id($landing_id);
 

@@ -3,6 +3,31 @@
  * Zume Project
  */
 
+// This filter blockes pieces from displaying until they are ready.
+add_filter( 'zume_not_ready_pieces', function( $lang_code, $state ) {
+    return in_array( $lang_code, array(
+        'ar_jo',
+        'bho',
+        'bn',
+        'fa',
+        'ha',
+        'ko',
+        'ku',
+//        'lo',
+        'mai',
+        'ne',
+        'or',
+        'ro',
+        'so',
+        'swa',
+        'th',
+        'tr',
+        'ur',
+        'vi',
+        'yo',
+    ) );
+}, 10, 2 );
+
 // Debugging Functions
 require_once( 'functions/utilities/debugger-log.php' ); // debug logger used for development.
 require_once( 'functions/utilities/global-functions.php' ); // debug logger used for development.
@@ -153,7 +178,3 @@ if ( ! function_exists( 'dt_recursive_sanitize_array' ) ) {
         return $array;
     }
 }
-
-
-
-
