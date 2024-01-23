@@ -13,7 +13,7 @@ add_filter( 'zume_not_ready_pieces', function( $lang_code, $state ) {
         'ha',
         'ko',
         'ku',
-//        'lo',
+        'lo',
         'mai',
         'ne',
         'or',
