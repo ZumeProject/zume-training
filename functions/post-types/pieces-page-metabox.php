@@ -53,7 +53,7 @@ function zume_pieces_content( $post ) {
                 $selected = true;
             }
             ?>
-            <option value="<?php echo esc_attr( $languages['code'] ) ?>" <?php echo ( $selected ) ? 'selected' : ''; ?> ><?php echo esc_html( $languages['name'] ) ?></option>
+            <option value="<?php echo esc_attr( $languages['code'] ) ?>" <?php echo ( $selected ) ? 'selected' : ''; ?> ><?php echo esc_html( $languages['name'] ) ?> - <?php echo esc_html( $languages['nativeName'] ) ?></option>
             <?php
         }
         ?>

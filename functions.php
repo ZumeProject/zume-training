@@ -14,6 +14,7 @@ add_filter( 'zume_not_ready_pieces', function( $lang_code, $state ) {
         'ko',
         'ku',
         'lo',
+        'ja',
         'mai',
         'ne',
         'or',
@@ -27,6 +28,14 @@ add_filter( 'zume_not_ready_pieces', function( $lang_code, $state ) {
         'yo',
     ) );
 }, 10, 2 );
+
+function my_disable_post_revisions() {
+    $types = array( 'post', 'my-custom-type' );
+    foreach ( $types as $post_type ) {
+        remove_post_type_support( $post_type, 'revisions' );
+    }
+}
+add_action( 'init', 'my_disable_post_revisions', 999 );
 
 // Debugging Functions
 require_once( 'functions/utilities/debugger-log.php' ); // debug logger used for development.
