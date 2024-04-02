@@ -203,12 +203,13 @@ function zume_landing_page_post_id( int $number ) : int {
         24 => 20756, // non-sequential
         25 => 20757, // pace
         26 => 20758, // part of two churches
-        27 => 19848, // 3-month plan
+        27 => 19848, // post training plan
         28 => 20759, // coaching checklist
         29 => 20760, // leadership in networks
         30 => 20761, // peer mentoring groups
         31 => 20762, // four fields tool
         32 => 20763, // generation mapping
+        69 => 23797, // 3-circles
         20730 => 1, // God uses ordinary people
         20731 => 2, // teach them to obey
         20732 => 3, // spiritual breathing
@@ -235,12 +236,13 @@ function zume_landing_page_post_id( int $number ) : int {
         20756 => 24, // non-sequential
         20757 => 25, // pace
         20758 => 26, // part of two churches
-        19848 => 27, // 3-month plan
+        19848 => 27, // post training plan
         20759 => 28, // coaching checklist
         20760 => 29, // leadership in networks
         20761 => 30, // peer mentoring groups
         20762 => 31, // four fields tool
         20763 => 32, // generation mapping
+        23797 => 69, // 3-circles
 
     );
 

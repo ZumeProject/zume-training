@@ -3,13 +3,39 @@
  * Zume Project
  */
 
+// This filter blockes pieces from displaying until they are ready.
+add_filter( 'zume_not_ready_pieces', function( $lang_code, $state ) {
+    return in_array( $lang_code, array(
+        'ar_jo',
+        'bho',
+        'bn',
+        'fa',
+        'ha',
+        'ko',
+        'ku',
+        'lo',
+        'ja',
+        'mai',
+        'ne',
+        'or',
+        'ro',
+        'so',
+        'swa',
+        'th',
+        'tr',
+        'ur',
+        'vi',
+        'yo',
+    ) );
+}, 10, 2 );
+
 // Debugging Functions
 require_once( 'functions/utilities/debugger-log.php' ); // debug logger used for development.
 require_once( 'functions/utilities/global-functions.php' ); // debug logger used for development.
 
 // Post Types
-require_once( 'functions/post-types/video-post-type.php' );
-require_once( 'functions/post-types/pdf-download-post-type.php' );
+//require_once( 'functions/post-types/video-post-type.php' );
+//require_once( 'functions/post-types/pdf-download-post-type.php' );
 require_once( 'functions/post-types/qr-meta-box.php' );
 
 // Integrations Files
@@ -53,6 +79,7 @@ require_once( 'functions/zume-content.php' );
 require_once( 'functions/zume-three-month-plan.php' );
 require_once( 'functions/zume-v4-modal-pieces-content.php' );
 require_once( 'functions/zume-functions.php' ); // general zume functions
+require_once( 'functions/report-log.php' );
 
 
 require_once( 'functions/logging/zume-mailchimp.php' );
@@ -103,23 +130,28 @@ add_filter( 'login_redirect', function( $url, $query, $user ) {
     return zume_dashboard_url();
 }, 10, 3 );
 
-function zume_mirror_url(){
-    return 'https://storage.googleapis.com/zume-file-mirror/';
+if ( ! function_exists( 'zume_mirror_url' ) ) {
+    function zume_mirror_url(){
+        return 'https://storage.googleapis.com/zume-file-mirror/';
+    }
 }
 
-function zume_alt_video( $current_language = null ) {
-    $alt_video = false;
+if ( ! function_exists( 'zume_alt_video' ) ) {
+    function zume_alt_video( $current_language = null ) {
+        $alt_video = false;
 
-    if ( ! $current_language ) {
-        $current_language = zume_current_language();
+        if ( ! $current_language ) {
+            $current_language = zume_current_language();
+        }
+
+        if ( ! $alt_video ) {
+            $alt_video = ( 'id' === $current_language ); // @todo expand this if more than indonesian is a problem
+        }
+
+        return $alt_video;
     }
-
-    if ( ! $alt_video ) {
-        $alt_video = ( 'id' === $current_language ); // @todo expand this if more than indonesian is a problem
-    }
-
-    return $alt_video;
 }
+
 
 /**
  * @return bool|mixed
@@ -147,7 +179,3 @@ if ( ! function_exists( 'dt_recursive_sanitize_array' ) ) {
         return $array;
     }
 }
-
-
-
-

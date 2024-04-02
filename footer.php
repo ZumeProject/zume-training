@@ -41,6 +41,7 @@
         }
         ?>
     </table>
+    <div class="center language-selector" style="cursor:pointer;" data-url="<?php echo esc_url( trailingslashit( site_url() ) ) . 'language-progress/' ?>">More languages in progress</div>
     <script>
         jQuery(document).ready(function($){
             $('.language-selector').on('click', function(e){
