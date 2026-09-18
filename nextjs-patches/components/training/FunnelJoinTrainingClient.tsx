@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useCallback, useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { useTranslations } from "next-intl";
 import { Check } from "lucide-react";
@@ -9,12 +9,12 @@ import { Check } from "lucide-react";
 import { useAuth } from "@/components/auth/AuthProvider";
 import { buildLanguageUrl } from "@/lib/i18n/urls";
 import {
-  fetchPublicTrainingGroups,
   joinTrainingGroup,
   notifyMeTrainingGroups,
   type PublicTrainingGroup,
 } from "@/lib/training/public-groups";
-import { filterGroupsByPageLocale } from "@/lib/training/filter-groups-by-locale";
+import { fetchJoinableTrainingGroupsForLocale } from "@/lib/training/fetch-training-groups-for-locale";
+import { getTrainingLanguageApiValues } from "@/lib/training/locale-to-training-language";
 import { reportFunnelJoinTrainingCompleted } from "@/lib/funnel/analytics-join-training";
 
 type FunnelJoinTrainingClientProps = {
@@ -26,7 +26,7 @@ export function FunnelJoinTrainingClient({ locale }: FunnelJoinTrainingClientPro
   const router = useRouter();
   const { user, isAuthenticated, isLoading: authLoading } = useAuth();
 
-  const [allGroups, setAllGroups] = useState<PublicTrainingGroup[]>([]);
+  const [groups, setGroups] = useState<PublicTrainingGroup[]>([]);
   const [loading, setLoading] = useState(true);
   const [loadError, setLoadError] = useState<string | null>(null);
   const [joiningId, setJoiningId] = useState<string | null>(null);
@@ -38,19 +38,14 @@ export function FunnelJoinTrainingClient({ locale }: FunnelJoinTrainingClientPro
   const [notifySubmitting, setNotifySubmitting] = useState(false);
   const [notifySubmitted, setNotifySubmitted] = useState(false);
 
-  const groups = useMemo(
-    () => filterGroupsByPageLocale(allGroups, locale),
-    [allGroups, locale],
-  );
-
   const coachUrl = buildLanguageUrl(locale, "/go");
 
   const loadGroups = useCallback(async () => {
     setLoading(true);
     setLoadError(null);
     try {
-      const response = await fetchPublicTrainingGroups({ locale });
-      setAllGroups(response.groups);
+      const joinableGroups = await fetchJoinableTrainingGroupsForLocale(locale);
+      setGroups(joinableGroups);
     } catch (error) {
       setLoadError(
         error instanceof Error ? error.message : t("loadError"),
@@ -139,8 +134,15 @@ export function FunnelJoinTrainingClient({ locale }: FunnelJoinTrainingClientPro
     }
   };
 
+  const languageApiValues = getTrainingLanguageApiValues(locale).join(",");
+
   return (
-    <div className="space-y-6" data-testid="funnel-join-training-list">
+    <div
+      className="space-y-6"
+      data-testid="funnel-join-training-list"
+      data-locale={locale}
+      data-language-api-values={languageApiValues}
+    >
       {loadError && (
         <div className="rounded-lg border border-zume-error-border bg-zume-error-fade px-4 py-3 text-sm text-zume-error-dark">
           {loadError}

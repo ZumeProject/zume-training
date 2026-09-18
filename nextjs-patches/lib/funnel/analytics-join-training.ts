@@ -1,19 +1,19 @@
 import {
-  GOOGLE_ADS_ID,
   bindGtagQueue,
+  emitFunnelAdsConversion,
   getFunnelGaMeasurementId,
   getFunnelSessionStorage,
   isFunnelAnalyticsAllowed,
   readPrivacyConsentCookie,
 } from "@/lib/funnel/analytics";
 
-/** DOM event name for GTM dataLayer listeners (fires once per successful join). */
+/** DOM event for GTM — mirrors `zume-funnel-signup-completed` / `zume-funnel-coach-submitted`. */
 export const FUNNEL_JOIN_TRAINING_DOM_EVENT =
   "zume-funnel-join-training-completed";
 
 /**
- * Google Ads conversion label placeholder.
- * Parent creates the conversion action after deploy and sets this env var.
+ * Google Ads conversion label — parent creates the action after deploy.
+ * Same env-var pattern as coach/signup labels in the main analytics module.
  */
 export const JOIN_TRAINING_ADS_CONVERSION_SEND_TO =
   process.env.NEXT_PUBLIC_JOIN_TRAINING_ADS_CONVERSION_SEND_TO?.trim() ||
@@ -25,27 +25,10 @@ export type JoinTrainingConversionPayload = {
   groupName: string;
 };
 
-function markJoinTrainingConversionFired(sendTo: string, storage: Storage | null) {
-  if (!storage) return;
-  try {
-    storage.setItem(`zume-ads-conversion:${sendTo}`, "1");
-  } catch {
-    // ignore quota / private mode
-  }
-}
-
-function hasJoinTrainingConversionFired(
-  sendTo: string,
-  storage: Storage | null,
-): boolean {
-  if (!storage) return false;
-  try {
-    return storage.getItem(`zume-ads-conversion:${sendTo}`) === "1";
-  } catch {
-    return false;
-  }
-}
-
+/**
+ * Low-level emitter — called by FunnelGoogleAnalytics listener and report helper.
+ * Uses shared `emitFunnelAdsConversion` for session dedupe (same as /go Sign-up).
+ */
 export function emitFunnelJoinTrainingCompletedTracking(options?: {
   gtag?: (...args: unknown[]) => void;
   storage?: Storage | null;
@@ -65,20 +48,15 @@ export function emitFunnelJoinTrainingCompletedTracking(options?: {
     });
   }
 
-  const adsSendTo = JOIN_TRAINING_ADS_CONVERSION_SEND_TO;
-  if (
-    adsSendTo &&
-    typeof gtag === "function" &&
-    !hasJoinTrainingConversionFired(adsSendTo, storage)
-  ) {
-    gtag("event", "conversion", {
-      send_to: adsSendTo,
-      event_timeout: 2000,
+  if (JOIN_TRAINING_ADS_CONVERSION_SEND_TO && typeof gtag === "function") {
+    emitFunnelAdsConversion(JOIN_TRAINING_ADS_CONVERSION_SEND_TO, {
+      gtag,
+      storage,
     });
-    markJoinTrainingConversionFired(adsSendTo, storage);
   }
 }
 
+/** Public API — mirrors `reportFunnelSignupCompleted` / `reportFunnelCoachSubmitted`. */
 export function reportFunnelJoinTrainingCompleted(
   payload: JoinTrainingConversionPayload,
 ) {
